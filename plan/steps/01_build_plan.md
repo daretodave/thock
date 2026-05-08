@@ -20,7 +20,7 @@ the phase.
 - [ ] Phase 1 — Monorepo bootstrap (root install, `apps/web` Next.js, `packages/tokens`, `packages/ui`, `packages/tsconfig`, `apps/e2e`, Netlify deploy verified)
 - [ ] Phase 2 — `@thock/data` package (Zod schemas → JSON Schema, validate script, loaders for switches/keycap-sets/boards/vendors/group-buys/trends, 1 seed record per type)
 - [ ] Phase 3 — `@thock/content` package + seed articles (MDX loaders, frontmatter Zod, tags.json taxonomy, 6 seed articles across pillars, 3 seed group buys)
-- [ ] Phase 4 — URL contract scaffolding (every route from bearings exists with stub or real page; `@thock/seo` with buildMetadata + JSON-LD + canonicalUrl + siteConfig; sitemap.xml; robots.txt; global + per-pillar RSS feeds)
+- [ ] Phase 4 — URL contract + hermetic e2e infrastructure (every route from bearings exists with stub or real page; `@thock/seo` with buildMetadata + JSON-LD + canonicalUrl + siteConfig; sitemap.xml; robots.txt; global + per-pillar RSS feeds; **`canonical-urls` fixture**; **`page-reads` fixture**; **smoke walker over every canonical URL**; **mobile spec template**; **`pnpm verify` runs e2e against `next start` on `:4173` as a hard gate**)
 
 **Page families (phases 5–13):**
 - [ ] Phase 5 — Article page (canonical template — `/article/[slug]`)
@@ -89,7 +89,9 @@ for every loader. The home page from phase 1 is updated to render
 a list of articles to prove the pipeline (full home page is
 phase 6).
 
-### Phase 4 — URL contract scaffolding
+### Phase 4 — URL contract + hermetic e2e infrastructure
+
+**Substrate this phase ships once and every later phase reuses.**
 
 `@thock/seo` package: `buildMetadata`, `buildJsonLd`, `canonicalUrl`,
 `siteConfig`. `apps/web/src/app/sitemap.ts` enumerating every route
@@ -100,6 +102,42 @@ canonical pillar nav. Empty-but-valid pillar routes (each `/news`,
 sitemap + crawling work; full pillar UIs land in phases 7–11).
 `app/opengraph-image.tsx` site-default OG image (used as fallback
 when per-route OG isn't set).
+
+**Hermetic e2e infrastructure (the test harness every later phase
+inherits):**
+
+- `apps/e2e/src/fixtures/canonical-urls.ts` — single source of
+  truth listing every URL the site serves, derived programmatically
+  from `@thock/content` + `@thock/data` (so every article slug,
+  every tag slug, every active group buy gets included
+  automatically). The sitemap and the smoke walker both consume
+  this fixture.
+- `apps/e2e/src/fixtures/page-reads.ts` — a typed map keyed by URL
+  pattern (e.g. `/article/[slug]`) declaring what each page family
+  fetches and asserts (e.g. "renders H1, ≥1 tag chip, footer; no
+  console errors; no horizontal scroll at 375px"). Each later
+  page-family phase appends its entry; phase 4 ships the type and
+  the article + home + pillar entries (filled out as those phases
+  ship — phase 4 ships the empty registry + types).
+- `apps/e2e/tests/smoke.spec.ts` — walks every entry in
+  `canonical-urls.ts`, asserts the response is 200 + valid HTML +
+  no console errors. Target: full walk in under 60s. Runs against
+  `next start` on `:4173` (hermetic — the production build, no
+  external network).
+- `apps/e2e/tests/mobile/smoke.mobile.spec.ts` — same walk at
+  375×800 viewport asserting `scrollWidth - innerWidth ≤ 1` per
+  page.
+- `apps/e2e/playwright.config.ts` — `webServer` boots
+  `pnpm --filter @thock/web build && pnpm --filter @thock/web start
+  -p 4173` and waits for the port; `webServer.reuseExistingServer:
+  !CI`. Hermetic by design.
+- `pnpm verify` runs `typecheck → test:run → data:validate → build
+  → e2e`. **E2E is a hard gate** — a red e2e is a blocked push.
+  No `--no-verify`, no skipping.
+
+After phase 4, every page-family phase (5–13) ships its own
+`page-reads` entry + a per-family e2e spec; the smoke walker
+catches everything else for free.
 
 ### Phase 5 — Article page (canonical template)
 

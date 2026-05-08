@@ -1,14 +1,73 @@
 # agents.md
 
-> Tool-agnostic orientation for any AI agent landing in this repo
-> cold (Claude Code, Cursor, Aider, anything else). Treat this as
-> the entry point. After reading this, you'll know where to look
-> next.
+> The entry point for any AI agent landing in this repo cold
+> (Claude Code, Cursor, Aider, anything else). Read this top to
+> bottom; it's short, and the rules at the top are non-negotiable.
+
+## Standing rules
+
+These apply to every command, every skill, every session. They
+are not optional. The skill files repeat them; this is the
+canonical source.
+
+### 1. Commit and push. Always. As a single atomic act.
+
+Shipped work that isn't committed is rolled-back work waiting to
+happen. Shipped work that's committed but not pushed is invisible
+to Netlify and to future loop ticks. The autonomous loop assumes
+`origin/main` is the source of truth.
+
+Every shipping skill ends with `git commit` **immediately followed
+by** `git push origin main`. Don't leave commits unpushed between
+ticks. Don't leave the working tree dirty between ticks. If a tick
+can't ship cleanly, fall through to the skill's failure modes —
+don't half-commit.
+
+### 2. No `Co-Authored-By:` trailers. No emojis.
+
+Plain commit message bodies. **Never** add a `Co-Authored-By:`
+line, a "🤖 Generated with…" footer, or any emoji — in commits, in
+code, in content, in design notes. The site's voice is editorial
+restraint; the commit log mirrors it.
+
+### 3. The verify gate is non-negotiable.
+
+`pnpm verify` runs:
+
+```
+typecheck → test:run → data:validate → build → e2e
+```
+
+Every check is a hard gate. **Hermetic e2e is part of the gate** —
+it boots the production build (`next start`) on `:4173` and walks
+every canonical URL from `apps/e2e/src/fixtures/canonical-urls.ts`.
+A red e2e is a blocked push. Never `--no-verify`. Fix the root
+cause.
+
+### 4. No `--no-verify`. No force-push. No destructive resets.
+
+If a hook fails, fix the underlying issue. If `git pull` diverges,
+stop and report — don't blind-rebase. Tests alongside code, never
+"add tests later".
+
+### 5. Site name is lowercase `thock`. Always.
+
+In copy. In code (`siteConfig.name = "thock"`). In commit messages.
+In meta tags. The wordmark may render with custom weight but never
+with a capital T.
+
+### 6. Content stays in MDX. Data stays in `/data`.
+
+No hardcoded article copy in components. No hardcoded data records.
+Content goes through `@thock/content`; data goes through
+`@thock/data`. The repo is the database; that contract is forever.
+
+---
 
 ## Project
 
 **thock** /θɒk/ — an editorial content hub for mechanical keyboard
-enthusiasts. Lowercase always. Lives at https://thock.netlify.app.
+enthusiasts. Lives at https://thock.netlify.app.
 
 The product spec is `spec.md` at the repo root. It's the canonical
 description. Read it once.
@@ -17,7 +76,7 @@ description. Read it once.
 
 ```
 apps/web         Next.js 15 App Router site (the published product)
-apps/e2e         Playwright workspace
+apps/e2e         Playwright workspace (hermetic against next start :4173)
 packages/*       Shared TS packages (@thock/tokens, ui, content,
                  data, seo, tsconfig)
 data/            GitHub-as-DB — JSON records for switches, vendors,
@@ -64,7 +123,7 @@ procedure.
 ### Sub-agents
 
 When a skill needs research, prose, or schema-heavy data work, it
-delegates to a specialist sub-agent. Their definitions live at
+delegates to a specialist sub-agent. Definitions live at
 `.claude/agents/*.md`:
 
 | Agent | Use for | Does not do |
@@ -91,17 +150,6 @@ Spawn sub-agents aggressively for everything else.
 
 Read it before your first edit.
 
-## Hard rules (non-negotiable across all skills)
-
-1. **Tests alongside code** — never "add tests later".
-2. **No emojis, no `Co-Authored-By:`** in commits.
-3. **No `--no-verify`, no force-push, no destructive resets.**
-4. **Site name is lowercase `thock`** in copy and code, always.
-5. **Content stays in MDX** under `apps/web/src/content/articles/`.
-6. **Data stays in `/data/`** — typed JSON, schema-validated.
-7. **Every commit pushes** — Netlify auto-deploys. A red `main` is
-   a red site. Run `pnpm verify` before pushing.
-
 ## Where to look
 
 | If you need… | Read |
@@ -115,25 +163,14 @@ Read it before your first edit.
 | Latest known weaknesses | `plan/AUDIT.md`, `data/AUDIT.md` |
 | Backlog of pending data work | `data/BACKLOG.md` |
 
-## Verify gate
-
-Run before every commit:
-
-```bash
-pnpm verify
-```
-
-Which is `typecheck && test:run && data:validate && build && e2e`.
-The skill files won't let you push without it.
-
 ## Operational notes
 
-- Netlify is the host. `netlify.toml` at root pins the build.
+- **Netlify is the host.** `netlify.toml` at root pins the build.
   Every push to `main` deploys. Previews on PRs.
-- The repo is the database — there's no external CMS, no external
-  DB, no API keys. The autonomous loop is hermetic by design.
-- Schemas (Zod) live in `packages/data/src/schemas/`; generated
-  JSON Schema lives in `data/schemas/`. Edit the Zod source;
-  regenerate.
-- The user emits design exports asynchronously into `design/`. The
-  loop ships without them and integrates when they land.
+- **The repo is the database.** No external CMS, no external DB,
+  no API keys. The autonomous loop is hermetic by design.
+- **Schemas (Zod)** live in `packages/data/src/schemas/`;
+  generated JSON Schema lives in `data/schemas/`. Edit the Zod
+  source; regenerate.
+- **Design exports** land asynchronously in `design/`. The loop
+  ships without them and integrates when they appear.

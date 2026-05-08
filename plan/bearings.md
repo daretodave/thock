@@ -252,16 +252,58 @@ time you encounter a recurring class of design ambiguity.)
   capital T.
 - **Tagline (default):** "keyboards, deeply." — lowercase.
 
-## Hard rules (carry from `skills/ship-a-phase.md` §7)
+## Hard rules
 
-1. No `Co-Authored-By:` in commits.
-2. No emojis anywhere.
-3. No `--no-verify`, no force-push, no destructive resets.
-4. Tests alongside code — never "add tests later".
-5. Small focused components in folders; never jam-pack one file.
-6. Content stays in MDX — no hardcoded article copy in components.
-7. Never commit secrets. If a feature needs one, stop per failure modes.
-8. Every commit pushes (Netlify auto-deploys; broken main = broken site).
+These mirror `agents.md` (the canonical rule book). If a skill
+needs to add a rule, it adds it to `agents.md` first, then this
+file echoes it.
+
+1. **Commit and push as a single atomic act.** Every shipping skill
+   ends with `git commit` immediately followed by `git push origin
+   main`. Don't leave commits unpushed between ticks.
+2. **No `Co-Authored-By:` trailers.** No emojis — anywhere.
+3. **No `--no-verify`. No force-push. No destructive resets.**
+4. **The verify gate is non-negotiable** — see "Verify gate" below.
+5. **Tests alongside code** — never "add tests later".
+6. **Small focused components in folders** — never jam-pack one
+   file.
+7. **Content stays in MDX. Data stays in `/data`.** No hardcoded
+   article copy in components; no hardcoded data records.
+8. **Never commit secrets.** If a feature needs one, stop per the
+   relevant skill's failure modes.
+9. **Site name is lowercase `thock`** in copy and code, always.
+
+## Verify gate (hermetic, mandatory)
+
+Every shipping skill runs `pnpm verify` before commit. The gate is:
+
+```
+pnpm typecheck      # tsc --noEmit across all workspaces
+pnpm test:run       # vitest single-run across all workspaces
+pnpm data:validate  # every JSON in /data validates against its schema; cross-refs resolve
+pnpm build          # next build of @thock/web (the production bundle)
+pnpm e2e            # Playwright against next start on :4173 — hermetic
+```
+
+**The e2e leg is hermetic by design.** Phase 4 ships:
+
+- `apps/e2e/src/fixtures/canonical-urls.ts` — single source of
+  truth for every URL the site serves; derived from
+  `@thock/content` + `@thock/data` so new articles, tags, and
+  group buys join automatically.
+- `apps/e2e/src/fixtures/page-reads.ts` — typed assertions per
+  URL pattern (e.g. "/article/[slug] renders H1, ≥1 tag chip,
+  footer; no console errors; no horizontal scroll at 375px").
+  Each later page family appends its entry.
+- `apps/e2e/tests/smoke.spec.ts` + `mobile/smoke.mobile.spec.ts`
+  — walk every canonical URL at desktop and 375×800; assert 200
+  + valid HTML + page-reads contract.
+- `apps/e2e/playwright.config.ts` `webServer` boots the
+  production build on `:4173`. No external network. No flake from
+  live data.
+
+A red e2e is a red deploy. Don't push past it. **Fix the root
+cause** — that's the whole point of the gate.
 
 ## Useful commands (from repo root, after phase 1)
 

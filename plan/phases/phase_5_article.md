@@ -189,6 +189,38 @@ default tags (`a` → `<Link>`, `code` → `<Mono>`, `img` →
 | MDX components | each renders without crashing | n/a |
 | Mobile spec | n/a | hero stacks at 375px, no horizontal overflow, body type readable |
 
+## Hermetic e2e registration (every page family does this)
+
+Phase 4 shipped the harness. Phase 5 (and every later page family)
+appends its entry to `apps/e2e/src/fixtures/page-reads.ts`:
+
+```ts
+// apps/e2e/src/fixtures/page-reads.ts
+export const pageReads: PageReads = {
+  '/article/[slug]': {
+    sample: '/article/<a-real-seed-slug>',
+    assertions: [
+      'renders H1 from frontmatter.title',
+      'renders canonical link tag matching the URL',
+      'renders ≥1 <TagChip>',
+      'renders ≥1 related-article card OR no rail (graceful)',
+      'renders global footer',
+      'no console errors',
+      '375px viewport: scrollWidth - innerWidth ≤ 1',
+    ],
+  },
+  // … other families append here as they ship
+}
+```
+
+The `canonical-urls.ts` fixture from phase 4 already derives every
+real article URL from `@thock/content` — no manual updates needed.
+The smoke walker hits every URL; the per-page-pattern assertions in
+`page-reads.ts` provide the depth checks. Phase 5 also ships
+`apps/e2e/tests/article.spec.ts` for any article-specific
+interactivity (currently none — the smoke walker covers the static
+contract).
+
 ## Verify gate
 
 ```bash
