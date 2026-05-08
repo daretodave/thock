@@ -21,7 +21,8 @@
     "lint": "pnpm -r --no-bail lint",
     "format": "prettier --write .",
     "data:validate": "pnpm --filter @thock/data validate",
-    "verify": "pnpm typecheck && pnpm test:run && pnpm data:validate && pnpm build && pnpm e2e"
+    "verify": "pnpm typecheck && pnpm test:run && pnpm data:validate && pnpm build && pnpm e2e",
+    "deploy:check": "node scripts/deploy-check.mjs"
   },
   "devDependencies": {
     "prettier": "^3.3.3",

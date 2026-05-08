@@ -232,22 +232,36 @@ git add plan/AUDIT.md
 git commit -m "audit: finding [8.1] addressed"
 ```
 
-### Step 7 — Done
+### Step 7 — Confirm deploy
+
+```bash
+pnpm deploy:check
+```
+
+Same contract as `ship-a-phase` Step 12. A red deploy after an
+iterate fix is treated identically to a red verify gate: read the
+log, patch, push again. Up to 3 same-root-cause iterations.
+
+### Step 8 — Done
 
 Return cleanly. Loop's next tick re-audits and ships the new top.
 
 ## 6. Failure modes — when to stop
 
 1. **`pnpm verify` fails ≥3 times on the same root cause.**
-2. **A finding requires schema migration > 20 records.** Push it
+2. **`pnpm deploy:check` fails ≥3 times on the same root cause
+   after a fix shipped.** Read the log; if local + Netlify
+   diverge, that's worth surfacing.
+3. **`NETLIFY_AUTH_TOKEN` missing** (deploy:check exit 3). Stop.
+4. **A finding requires schema migration > 20 records.** Push it
    to `/plan-a-phase` instead.
-3. **A finding requires user judgment** (e.g. "should we cover
+5. **A finding requires user judgment** (e.g. "should we cover
    this controversial vendor?"). Surface to AUDIT.md as a
    `[needs-user-call]` row, skip it, ship the next finding.
-4. **Three loop ticks in a row find no actionable work** (top
+6. **Three loop ticks in a row find no actionable work** (top
    score < 3.0). Stop and report — the site is well-iterated;
    sleep until the user gives new direction.
-5. **`git pull` divergence.**
+7. **`git pull` divergence.**
 
 Everything else: decide, ship, document. The loop continues.
 

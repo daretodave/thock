@@ -32,7 +32,7 @@ restraint; the commit log mirrors it.
 
 ### 3. The verify gate is non-negotiable.
 
-`pnpm verify` runs:
+`pnpm verify` runs **before** every commit:
 
 ```
 typecheck → test:run → data:validate → build → e2e
@@ -44,23 +44,65 @@ every canonical URL from `apps/e2e/src/fixtures/canonical-urls.ts`.
 A red e2e is a blocked push. Never `--no-verify`. Fix the root
 cause.
 
-### 4. No `--no-verify`. No force-push. No destructive resets.
+### 4. The deploy gate runs **after** every push.
+
+`pnpm deploy:check` polls Netlify for the deploy matching the
+just-pushed commit. It prints `"Checking last deployment..."`,
+shows state transitions (`building → ready`), and exits non-zero
+on `error` / `failed` / timeout.
+
+Every shipping skill calls it as Step 12. A red deploy is treated
+identically to a red verify gate: read the log, patch the root
+cause, push again. **Never push past a red deploy.** Repeated
+failures escalate to the skill's failure modes (§10 of each
+skill).
+
+### 5. No `--no-verify`. No force-push. No destructive resets.
+
+### 5. No `--no-verify`. No force-push. No destructive resets.
 
 If a hook fails, fix the underlying issue. If `git pull` diverges,
 stop and report — don't blind-rebase. Tests alongside code, never
 "add tests later".
 
-### 5. Site name is lowercase `thock`. Always.
+### 6. Site name is lowercase `thock`. Always.
 
 In copy. In code (`siteConfig.name = "thock"`). In commit messages.
 In meta tags. The wordmark may render with custom weight but never
 with a capital T.
 
-### 6. Content stays in MDX. Data stays in `/data`.
+### 7. Content stays in MDX. Data stays in `/data`.
 
 No hardcoded article copy in components. No hardcoded data records.
 Content goes through `@thock/content`; data goes through
 `@thock/data`. The repo is the database; that contract is forever.
+
+---
+
+## Operational secrets
+
+The autonomous loop is hermetic by design. The **only** secret it
+needs is a Netlify personal access token used by `pnpm deploy:check`
+to read deploy state. Configure once per machine:
+
+1. Get a token at
+   https://app.netlify.com/user/applications#personal-access-tokens
+2. Copy `.env.example` to `.env` and fill in:
+   ```
+   NETLIFY_AUTH_TOKEN=nfp_...
+   ```
+3. `.env` is gitignored — **never commit it**.
+
+If `NETLIFY_AUTH_TOKEN` is missing, `pnpm deploy:check` exits with
+a clear error and a link to obtain a token. The shipping skills
+treat that as a blocked tick.
+
+Optional: `NETLIFY_SITE_NAME` (defaults to `thock`). Override only
+if you're running the loop against a fork or a different site.
+
+No other secrets are needed. If a feature ever requires one
+(Buttondown API, Plausible, etc.), the relevant skill stops at its
+failure-mode condition rather than inventing a placeholder.
 
 ---
 

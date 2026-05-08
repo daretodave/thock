@@ -180,7 +180,21 @@ git push origin main
 If the backlog had this row, flip its `[ ]` → `[x]` in `data/BACKLOG.md`
 in the same commit.
 
-### Step 8 — Done
+### Step 8 — Confirm deploy
+
+Same as `ship-a-phase` Step 12. Run:
+
+```bash
+pnpm deploy:check
+```
+
+Data-only commits still trip a Netlify rebuild (the site reads
+data at build time). A red deploy after a data ship is a real
+regression — read the log, patch (often: revert the data edit
+that broke validation in production), push again. Up to 3 same-
+root-cause iterations; otherwise stop per §9.
+
+### Step 9 — Done
 
 Return cleanly. Loop's next tick picks up the next backlog row.
 
@@ -260,11 +274,17 @@ one mega-commit; the loop can be interrupted between them safely.
 ## 9. Failure modes — when to stop
 
 1. **`pnpm data:validate` fails ≥3 times on the same root cause.**
-2. **Schema change requires migration of >20 existing records.**
+2. **`pnpm deploy:check` fails ≥3 times on the same root cause
+   after a data ship.** Often this means the data crossed a
+   schema boundary that local validate didn't catch; fetch the
+   deploy log and surface it.
+3. **`NETLIFY_AUTH_TOKEN` missing** (deploy:check exit 3). Stop
+   and ask the user to populate `.env`.
+4. **Schema change requires migration of >20 existing records.**
    That's a /plan-a-phase task; don't bundle into a ship-data tick.
-3. **A research task requires login or paid access.** Scout reports
+5. **A research task requires login or paid access.** Scout reports
    the gate; you stop and report.
-4. **`git pull` produces divergence.**
+6. **`git pull` produces divergence.**
 
 Everything else: decide and ship. The loop continues.
 

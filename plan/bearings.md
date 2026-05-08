@@ -273,9 +273,12 @@ file echoes it.
    relevant skill's failure modes.
 9. **Site name is lowercase `thock`** in copy and code, always.
 
-## Verify gate (hermetic, mandatory)
+## Verify gate (hermetic, mandatory) + deploy gate
 
-Every shipping skill runs `pnpm verify` before commit. The gate is:
+Every shipping skill runs **two** gates around a commit. They are
+both hard gates; never bypass.
+
+### Pre-commit: `pnpm verify`
 
 ```
 pnpm typecheck      # tsc --noEmit across all workspaces
@@ -302,8 +305,35 @@ pnpm e2e            # Playwright against next start on :4173 — hermetic
   production build on `:4173`. No external network. No flake from
   live data.
 
-A red e2e is a red deploy. Don't push past it. **Fix the root
-cause** — that's the whole point of the gate.
+### Post-push: `pnpm deploy:check`
+
+After `git push origin main`, every shipping skill runs:
+
+```
+pnpm deploy:check   # polls Netlify REST API for the deploy at HEAD
+```
+
+Output reads `"Checking last deployment for commit <sha>..."`,
+shows state transitions (`building → ready`), and exits:
+
+- `0` → deploy ready (site green at the just-pushed commit)
+- `1` → deploy errored / failed (read the log; patch; push again)
+- `2` → timeout
+- `3` → config / auth (NETLIFY_AUTH_TOKEN missing)
+
+Implementation: `scripts/deploy-check.mjs` (no CLI install
+required; uses Node 20+ built-in `fetch`).
+
+**A red deploy is a blocked tick.** The skill treats it identically
+to a red verify gate: read the log, patch the root cause, push
+again. Up to 3 iterations on the same root cause; otherwise the
+skill stops per its failure modes.
+
+> **Note:** Until phase 1 ships `apps/web/`, deploys are expected
+> to be red (Netlify can't build a workspace that doesn't exist).
+> The deploy:check script reports the failure clearly. Phase 1's
+> first green deploy clears the gate; from then on it's a real
+> regression detector.
 
 ## Useful commands (from repo root, after phase 1)
 
@@ -328,7 +358,11 @@ pnpm format                     # prettier --write
 - The Netlify Next.js plugin is pinned in `netlify.toml` to avoid
   silent runtime upgrades.
 - Auto-deploys: every push to `main` deploys; previews on PRs.
-- **A red main = a red site.** The verify gate is the
-  pre-flight; never push without `pnpm verify` passing.
-- If a deploy fails, fetch logs via Netlify UI; treat the failure
-  like a verify-gate failure (read log, patch, push).
+- **A red main = a red site.** Verify gate is pre-flight; deploy
+  gate (`pnpm deploy:check`) is post-flight.
+- The deploy gate reads the Netlify REST API. The only secret it
+  needs is `NETLIFY_AUTH_TOKEN`, set in `.env` (gitignored). See
+  `agents.md` "Operational secrets" for setup.
+- Auto-publishing stays **on**. Failed deploys until phase 1 ships
+  are expected and surface via `pnpm deploy:check` for the loop's
+  awareness.

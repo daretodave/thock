@@ -43,6 +43,14 @@ the phase.
 > gaps, data gaps, link rot, OG art, ongoing trend snapshots.
 > `/march` makes that transition automatic.
 
+> **Note on Netlify deploys before phase 1 ships:** auto-publishing
+> stays on; deploys will fail until `apps/web/` exists. The deploy
+> gate (`pnpm deploy:check`, run as Step 12 in every shipping
+> skill) reports the failure clearly. Phase 1's first push trips
+> it; the patch loop within phase 1 iterates to a green deploy.
+> From phase 2 onward, a red `deploy:check` is a real regression
+> requiring root-cause patching.
+
 ---
 
 ## Per-phase scope

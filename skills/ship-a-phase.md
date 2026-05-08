@@ -306,7 +306,33 @@ git push origin main
 If you generated a brief in step 2, that's a separate prior commit
 (subject `phases: brief for phase <N>`).
 
-### Step 12 — Done
+### Step 12 — Confirm deploy
+
+Print `"Checking last deployment..."` and run the deploy gate:
+
+```bash
+pnpm deploy:check
+```
+
+Outcomes:
+
+- **Exit 0 (ready)** — site is green at the pushed commit.
+  Continue to Step 13.
+- **Exit 1 (error)** — read the printed log + admin URL. Patch
+  the root cause. Re-run from Step 9 (verify) onward. Up to 3
+  iterations on the same root cause; otherwise stop per §10.
+- **Exit 2 (timeout)** — Netlify is slow but not failed. Surface
+  the timeout to the user (or the loop's tick log) and continue;
+  the next tick will re-check.
+- **Exit 3 (config)** — `NETLIFY_AUTH_TOKEN` is missing or the
+  site is unreachable. Stop per §10 and report.
+
+Until phase 1 ships, this gate **will** fail (Netlify can't build
+an empty workspace). Phase 1's commits will trip this and patch
+their way to the first green deploy. From phase 2 onward, a red
+deploy is a real regression.
+
+### Step 13 — Done
 
 Return cleanly. The loop's next tick picks up the next phase. If
 you ran outside the loop, summarize what shipped + what's next in
@@ -365,16 +391,18 @@ asking the user. Everything else: decide, ship, document.
 1. **`pnpm verify` fails ≥3 times on the same root cause.** Cite
    the check that failed (typecheck / unit / data:validate / build
    / e2e), the suspected root cause, and what you'd try next.
-2. **A required dependency would require a paid service or API
-   key.** Stop and report which env var is missing.
-3. **A `git pull` produces a divergence.** Don't `--rebase` blind;
+2. **`pnpm deploy:check` fails ≥3 times on the same root cause
+   after `pnpm verify` passes locally.** This means Netlify and
+   local diverge — fetch the deploy log, cite it, and stop.
+3. **`NETLIFY_AUTH_TOKEN` is missing or rejected** (deploy:check
+   exit 3). Stop and ask the user to populate `.env`.
+4. **A required dependency would require a paid service or other
+   API key.** Stop and report which env var is missing.
+5. **A `git pull` produces a divergence.** Don't `--rebase` blind;
    stop and report.
-4. **A Netlify deploy fails for an infrastructure reason** (env
-   var missing, plugin incompatibility) and the fix isn't local
-   code. Stop and report.
-5. **The design export and the URL contract conflict** in a way
+6. **The design export and the URL contract conflict** in a way
    you can't reconcile by trusting the URL contract.
-6. **Phase scope is genuinely ambiguous after reading step 01 +
+7. **Phase scope is genuinely ambiguous after reading step 01 +
    the brief + bearings + spec.md.** Rare — usually a sign the
    brief is underspecified; generate a more decisive one and
    proceed. If even that fails, stop.
