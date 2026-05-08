@@ -1,0 +1,74 @@
+/* thock — design tokens.
+ *
+ * Adopted from design/tokens.css verbatim with one mechanical rename:
+ *   --kh-* → --thock-*  (and `.kh-light` → `.thock-light`).
+ * The Google Fonts @import is dropped — apps load the same families
+ * via next/font to self-host them.
+ */
+
+:root {
+  /* ── DARK (primary) ────────────────────────────────────── */
+  --thock-bg:         oklch(0.175 0.006 250);   /* deep cool charcoal */
+  --thock-bg-2:       oklch(0.205 0.006 250);   /* page sections */
+  --thock-surface:    oklch(0.235 0.006 250);   /* cards */
+  --thock-surface-hi: oklch(0.275 0.006 250);   /* hover / elevated */
+  --thock-border:     oklch(0.305 0.007 250);
+  --thock-border-hi:  oklch(0.42  0.008 250);
+  --thock-text:       oklch(0.965 0.005 90);    /* warm bone */
+  --thock-text-2:     oklch(0.78  0.005 90);
+  --thock-text-3:     oklch(0.58  0.006 90);
+  --thock-text-4:     oklch(0.42  0.007 250);
+
+  /* Single restrained accent — warm brass / aged bronze */
+  --thock-accent:     oklch(0.80 0.135 75);
+  --thock-accent-hi:  oklch(0.88 0.14  78);
+  --thock-accent-mu:  oklch(0.50 0.07  75);
+
+  /* Trend semantics */
+  --thock-up:         oklch(0.78 0.115 145);
+  --thock-down:       oklch(0.68 0.135 25);
+  --thock-flat:       oklch(0.62 0.006 90);
+
+  /* Tag categories — matched L=0.74 C=0.085, hue varies. */
+  --thock-tag-switch:   oklch(0.78 0.10 75);    /* amber */
+  --thock-tag-layout:   oklch(0.74 0.085 225);  /* steel blue */
+  --thock-tag-brand:    oklch(0.76 0.085 155);  /* sage */
+  --thock-tag-material: oklch(0.74 0.085 325);  /* magenta */
+  --thock-tag-profile:  oklch(0.74 0.085 285);  /* iris */
+
+  /* Typography (CSS variables; concrete font stacks come from next/font) */
+  --thock-serif: 'Newsreader', 'Iowan Old Style', Georgia, serif;
+  --thock-sans:  'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+  --thock-mono:  'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace;
+
+  /* Spacing — 4px base */
+  --thock-1: 4px;  --thock-2: 8px;  --thock-3: 12px; --thock-4: 16px;
+  --thock-5: 24px; --thock-6: 32px; --thock-7: 48px; --thock-8: 64px; --thock-9: 96px;
+
+  /* Radii */
+  --thock-r-1: 2px; --thock-r-2: 4px; --thock-r-3: 8px; --thock-r-pill: 999px;
+
+  /* Type ramp */
+  --thock-display: 56px;
+  --thock-h1: 40px;
+  --thock-h2: 28px;
+  --thock-h3: 20px;
+  --thock-body: 16px;
+  --thock-small: 14px;
+  --thock-micro: 12px;
+}
+
+.thock-light {
+  --thock-bg:        oklch(0.965 0.004 85);
+  --thock-bg-2:      oklch(0.94  0.004 85);
+  --thock-surface:   #ffffff;
+  --thock-surface-hi:oklch(0.98  0.004 85);
+  --thock-border:    oklch(0.88  0.004 85);
+  --thock-border-hi: oklch(0.78  0.006 85);
+  --thock-text:      oklch(0.18  0.006 250);
+  --thock-text-2:    oklch(0.38  0.006 250);
+  --thock-text-3:    oklch(0.55  0.006 250);
+  --thock-text-4:    oklch(0.65  0.006 250);
+  --thock-accent:    oklch(0.55  0.13 60);
+  --thock-accent-hi: oklch(0.45  0.14 60);
+}

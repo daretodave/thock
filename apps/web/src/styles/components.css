@@ -1,0 +1,6 @@
+/* Reusable component-level patterns.
+ *
+ * Phase 5+ adds editorial atom classes here once a pattern recurs in
+ * three or more places. Phase 1 ships the file empty so later phases
+ * have a fixed home for these utilities.
+ */

@@ -8,6 +8,7 @@ out/
 dist/
 build/
 .turbo/
+*.tsbuildinfo
 
 # test outputs
 coverage/
