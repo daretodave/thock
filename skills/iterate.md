@@ -118,6 +118,20 @@ toward shipping cheap wins; the loop favors momentum.
   4. Schema migration = 1.
 - Score = `impact × ease / 10`, clamped 0–10.
 
+### User-set bias (from `/oversight`)
+
+Before scoring, check the top of `plan/AUDIT.md` for a line of the
+form:
+
+```
+> Bias: <category> (set via oversight <date>)
+```
+
+If present, **multiply the score of every finding in that category
+by 1.5** before ranking. The bias is sticky until removed; the user
+clears it by running `/oversight reset` (which prompts to drop the
+bias) or editing `AUDIT.md` directly.
+
 Top 1 finding wins. Tie-break by:
 1. Findings that unblock other findings (cascade).
 2. Older findings (don't let things rot in AUDIT.md).

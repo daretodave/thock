@@ -140,6 +140,9 @@ end-to-end.
 
 ### Skills (the verbs)
 
+Five autonomous shipping skills + one user-in-the-loop adjustment
+skill (`oversight`).
+
 | Skill | Source of truth | What it does |
 |---|---|---|
 | `ship-a-phase` | `skills/ship-a-phase.md` | Ship one phase from the build plan: code + tests + e2e + commit + push. The Netlify deploy follows. |
@@ -147,6 +150,7 @@ end-to-end.
 | `plan-a-phase` | `skills/plan-a-phase.md` | Refine the next phase brief without shipping code. Pre-flight for `ship-a-phase`. |
 | `iterate` | `skills/iterate.md` | Audit the site, pick the highest-impact weakness, ship one improvement. The post-build loop. |
 | `march` | `skills/march.md` | Outer dispatcher: pending phase → `ship-a-phase`; pending data → `ship-data`; else → `iterate`. The autonomous-beast endgame. |
+| `oversight` | `skills/oversight.md` | **User-in-the-loop.** Pause autonomy, brief the user, ask targeted questions, adjust the plan, push the adjustments. The only skill that asks the user anything. |
 
 ### Invocation (Claude Code-flavored)
 
@@ -156,6 +160,7 @@ end-to-end.
 /plan-a-phase                # refine next phase brief
 /iterate                     # audit + ship one improvement
 /march                       # do the right thing
+/oversight                   # course-correct (brief + questionnaire + adjustment)
 /loop 30m /march             # autonomous loop
 ```
 

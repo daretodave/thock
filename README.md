@@ -81,6 +81,22 @@ Use this with `/loop` for the autonomous-beast endgame.
 
 Source: [`skills/march.md`](./skills/march.md)
 
+### `/oversight`
+
+The **user-in-the-loop** command. Pause autonomy, get a tight briefing on current state (shipping velocity, pending phases, open audits, deploy state, working-tree state), answer a targeted questionnaire generated from what was found, and the skill applies your answers as plan adjustments — drop a stuck phase, bias the iterate loop, refresh a brief in light of new design, prune findings.
+
+The only skill that asks you anything. Everything else decides and ships.
+
+```
+/oversight                          # full audit + general questionnaire
+/oversight phase                    # bias toward phase progress
+/oversight content                  # bias toward /iterate findings
+/oversight deploy                   # bias toward Netlify / CI/CD
+/oversight reset                    # bias toward scope reduction
+```
+
+Source: [`skills/oversight.md`](./skills/oversight.md)
+
 ---
 
 ## Sub-agents

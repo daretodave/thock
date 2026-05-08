@@ -74,6 +74,8 @@ relies on these markers.
   code.
 - `skills/iterate.md` — audit + ship one improvement.
 - `skills/march.md` — outer dispatcher (used with `/loop`).
+- `skills/oversight.md` — user-in-the-loop adjustment (the only
+  skill that asks questions).
 
 ## Related sub-agents
 
