@@ -1,0 +1,1 @@
+window.EmptyStates = window.EmptyStates || (() => null);

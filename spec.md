@@ -1,8 +1,12 @@
-# Keyboard Hub — Product Spec
+# thock — Product Spec
+
+> **thock** /θɒk/ — *n.* the deep, satisfying sound of a well-tuned mechanical keyboard switch bottoming out. The site name is lowercase always.
+
+**Landing:** https://thock.netlify.app
 
 ## 1. Overview
 
-A web-based content and news hub for mechanical keyboard enthusiasts. The site aggregates and publishes editorial content about keyboard trends, new releases, group buys, build ideas, and the broader hobby. Readers come to discover what's happening in the scene, deepen their knowledge, and find inspiration for their next build.
+A web-based content and news hub for mechanical keyboard enthusiasts. thock aggregates and publishes editorial content about keyboard trends, new releases, group buys, build ideas, and the broader hobby. Readers come to discover what's happening in the scene, deepen their knowledge, and find inspiration for their next build.
 
 **One-line pitch:** *The Verge × r/MechanicalKeyboards — a curated home for keyboard culture, trends, and ideas.*
 

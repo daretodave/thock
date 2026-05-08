@@ -1,0 +1,169 @@
+/* Keyboard Hub — design tokens */
+
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,600&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* ── DARK (primary) ────────────────────────────────────── */
+  --kh-bg:        oklch(0.175 0.006 250);   /* deep cool charcoal */
+  --kh-bg-2:      oklch(0.205 0.006 250);   /* page sections */
+  --kh-surface:   oklch(0.235 0.006 250);   /* cards */
+  --kh-surface-hi:oklch(0.275 0.006 250);   /* hover / elevated */
+  --kh-border:    oklch(0.305 0.007 250);
+  --kh-border-hi: oklch(0.42  0.008 250);
+  --kh-text:      oklch(0.965 0.005 90);    /* warm bone */
+  --kh-text-2:    oklch(0.78  0.005 90);
+  --kh-text-3:    oklch(0.58  0.006 90);
+  --kh-text-4:    oklch(0.42  0.007 250);
+
+  /* Single restrained accent — warm brass / aged bronze */
+  --kh-accent:    oklch(0.80 0.135 75);
+  --kh-accent-hi: oklch(0.88 0.14  78);
+  --kh-accent-mu: oklch(0.50 0.07  75);     /* subdued accent for borders */
+
+  /* Trend semantics — distinct hues at matched lightness/chroma */
+  --kh-up:        oklch(0.78 0.115 145);
+  --kh-down:      oklch(0.68 0.135 25);
+  --kh-flat:      oklch(0.62 0.006 90);
+
+  /* Tag categories — ALL at L=0.74 C=0.085, hue varies; readable on dark surface */
+  --kh-tag-switch:   oklch(0.78 0.10 75);   /* amber */
+  --kh-tag-layout:   oklch(0.74 0.085 225); /* steel blue */
+  --kh-tag-brand:    oklch(0.76 0.085 155); /* sage */
+  --kh-tag-material: oklch(0.74 0.085 325); /* magenta */
+  --kh-tag-profile:  oklch(0.74 0.085 285); /* iris */
+
+  /* Typography */
+  --kh-serif: 'Newsreader', 'Iowan Old Style', Georgia, serif;
+  --kh-sans:  'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+  --kh-mono:  'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace;
+
+  /* Spacing — 4px base */
+  --kh-1: 4px;  --kh-2: 8px;  --kh-3: 12px; --kh-4: 16px;
+  --kh-5: 24px; --kh-6: 32px; --kh-7: 48px; --kh-8: 64px; --kh-9: 96px;
+
+  /* Radii — restrained */
+  --kh-r-1: 2px; --kh-r-2: 4px; --kh-r-3: 8px; --kh-r-pill: 999px;
+
+  /* Type ramp */
+  --kh-display: 56px;  /* hero headlines */
+  --kh-h1: 40px;
+  --kh-h2: 28px;
+  --kh-h3: 20px;
+  --kh-body: 16px;
+  --kh-small: 14px;
+  --kh-micro: 12px;
+}
+
+.kh-light {
+  --kh-bg:        oklch(0.965 0.004 85);
+  --kh-bg-2:      oklch(0.94  0.004 85);
+  --kh-surface:   #ffffff;
+  --kh-surface-hi:oklch(0.98  0.004 85);
+  --kh-border:    oklch(0.88  0.004 85);
+  --kh-border-hi: oklch(0.78  0.006 85);
+  --kh-text:      oklch(0.18  0.006 250);
+  --kh-text-2:    oklch(0.38  0.006 250);
+  --kh-text-3:    oklch(0.55  0.006 250);
+  --kh-text-4:    oklch(0.65  0.006 250);
+  --kh-accent:    oklch(0.55  0.13 60);
+  --kh-accent-hi: oklch(0.45  0.14 60);
+}
+
+/* Frame defaults — every artboard inherits this */
+.kh-frame {
+  background: var(--kh-bg);
+  color: var(--kh-text);
+  font-family: var(--kh-sans);
+  font-size: var(--kh-body);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: 'ss01', 'cv11';
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.kh-frame * { box-sizing: border-box; }
+
+.kh-frame h1, .kh-frame h2, .kh-frame h3, .kh-frame h4 {
+  font-family: var(--kh-serif);
+  font-weight: 500;
+  letter-spacing: -0.012em;
+  margin: 0;
+  color: var(--kh-text);
+  text-wrap: balance;
+}
+
+.kh-frame .mono { font-family: var(--kh-mono); }
+.kh-frame .serif { font-family: var(--kh-serif); }
+.kh-frame .sans  { font-family: var(--kh-sans); }
+
+/* Switch / SKU / firmware token — reusable inline accent */
+.kh-frame .tok {
+  font-family: var(--kh-mono);
+  font-size: 0.88em;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+  color: var(--kh-accent);
+  background: color-mix(in oklch, var(--kh-accent) 9%, transparent);
+  padding: 0.06em 0.42em;
+  border-radius: var(--kh-r-2);
+  white-space: nowrap;
+  border: 1px solid color-mix(in oklch, var(--kh-accent) 18%, transparent);
+}
+
+.kh-frame a { color: inherit; text-decoration: none; }
+
+/* Subtle scroll-strip hairline used at section breaks */
+.kh-rule { height: 1px; background: var(--kh-border); }
+
+/* Image-placeholder utility — striped SVG with monospace label */
+.kh-img {
+  position: relative;
+  background:
+    repeating-linear-gradient(135deg,
+      oklch(0.27 0.008 250) 0 14px,
+      oklch(0.23 0.006 250) 14px 28px);
+  display: flex; align-items: center; justify-content: center;
+  color: oklch(0.62 0.01 250);
+  font-family: var(--kh-mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+.kh-img::before {
+  content: '';
+  position: absolute; inset: 1px;
+  border: 1px dashed oklch(0.40 0.01 250);
+  pointer-events: none;
+}
+.kh-img > span { position: relative; z-index: 1; padding: 4px 10px; background: rgba(0,0,0,0.35); border-radius: 2px; }
+.kh-img.warm {
+  background:
+    repeating-linear-gradient(135deg,
+      oklch(0.34 0.04 60) 0 14px,
+      oklch(0.28 0.03 60) 14px 28px);
+}
+.kh-img.cool {
+  background:
+    repeating-linear-gradient(135deg,
+      oklch(0.30 0.04 240) 0 14px,
+      oklch(0.24 0.03 240) 14px 28px);
+}
+.kh-img.green {
+  background:
+    repeating-linear-gradient(135deg,
+      oklch(0.30 0.04 150) 0 14px,
+      oklch(0.24 0.03 150) 14px 28px);
+}
+.kh-img.dark {
+  background:
+    repeating-linear-gradient(135deg,
+      oklch(0.20 0.005 250) 0 14px,
+      oklch(0.16 0.005 250) 14px 28px);
+}
+
+/* Nice scroll behavior inside artboards (we mostly hide overflow though) */
+.kh-frame ::-webkit-scrollbar { width: 6px; height: 6px; }
+.kh-frame ::-webkit-scrollbar-thumb { background: var(--kh-border-hi); border-radius: 3px; }

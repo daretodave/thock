@@ -1,0 +1,1 @@
+window.GroupBuysPage = window.GroupBuysPage || (() => null);
