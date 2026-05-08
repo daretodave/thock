@@ -11,6 +11,7 @@ plan/
 ├── README.md                            # this file
 ├── bearings.md                          # standing context: stack, URL contract, defaults, sub-agents
 ├── AUDIT.md                             # latest /iterate audit (rewritten on each audit pass)
+├── CRITIQUE.md                          # external-observer findings (append-only via /critique)
 ├── steps/
 │   └── 01_build_plan.md                 # at-a-glance status block + per-phase scope
 └── phases/

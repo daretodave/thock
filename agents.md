@@ -140,16 +140,19 @@ end-to-end.
 
 ### Skills (the verbs)
 
-Five autonomous shipping skills + one user-in-the-loop adjustment
-skill (`oversight`).
+Six autonomous skills + one user-in-the-loop adjustment skill
+(`oversight`). One of the autonomous six (`critique`) doesn't
+ship code — it observes the live site and feeds findings into the
+iterate flywheel.
 
 | Skill | Source of truth | What it does |
 |---|---|---|
 | `ship-a-phase` | `skills/ship-a-phase.md` | Ship one phase from the build plan: code + tests + e2e + commit + push. The Netlify deploy follows. |
 | `ship-data` | `skills/ship-data.md` | Add or repair one record in `/data/`: validate schema, normalize cross-refs, commit, push. |
 | `plan-a-phase` | `skills/plan-a-phase.md` | Refine the next phase brief without shipping code. Pre-flight for `ship-a-phase`. |
-| `iterate` | `skills/iterate.md` | Audit the site, pick the highest-impact weakness, ship one improvement. The post-build loop. |
-| `march` | `skills/march.md` | Outer dispatcher: pending phase → `ship-a-phase`; pending data → `ship-data`; else → `iterate`. The autonomous-beast endgame. |
+| `iterate` | `skills/iterate.md` | Audit the site, pick the highest-impact weakness, ship one improvement. Drains the `/critique` Pending queue too. |
+| `critique` | `skills/critique.md` | External-observer pass — visit the live site as a stranger, file fresh-eyes findings to `plan/CRITIQUE.md`. The feedback half of the address loop. |
+| `march` | `skills/march.md` | Outer dispatcher: rate-limited `critique` → pending phase → pending data → `iterate`. The autonomous-beast endgame. |
 | `oversight` | `skills/oversight.md` | **User-in-the-loop.** Pause autonomy, brief the user, ask targeted questions, adjust the plan, push the adjustments. The only skill that asks the user anything. |
 
 ### Invocation (Claude Code-flavored)
@@ -159,9 +162,10 @@ skill (`oversight`).
 /ship-data                   # ship next data backlog row
 /plan-a-phase                # refine next phase brief
 /iterate                     # audit + ship one improvement
+/critique                    # external-observer pass (writes to CRITIQUE.md)
 /march                       # do the right thing
 /oversight                   # course-correct (brief + questionnaire + adjustment)
-/loop 30m /march             # autonomous loop
+/loop 30m /march             # autonomous loop (critique fires every 12+ commits)
 ```
 
 Other clients: read the skill file directly and follow its
@@ -169,15 +173,16 @@ procedure.
 
 ### Sub-agents
 
-When a skill needs research, prose, or schema-heavy data work, it
-delegates to a specialist sub-agent. Definitions live at
-`.claude/agents/*.md`:
+When a skill needs research, prose, schema-heavy data work, or a
+fresh-eyes pass, it delegates to a specialist sub-agent. Definitions
+live at `.claude/agents/*.md`:
 
 | Agent | Use for | Does not do |
 |---|---|---|
 | `scout` | Open-web research, sourcing facts, vendor URLs, trend signals | Write code. Write articles. |
 | `content-curator` | Drafting MDX articles in the editorial voice | Research the open web (delegates to scout). Modify code. |
 | `data-steward` | Schema additions, mass cross-ref repair, normalize passes | One-record-at-a-time additions (the main agent runs `ship-data` for those). |
+| `reader` | Fresh-eyes external observer of the live site (used by `/critique`) | Write code, content, or data. Returns observations only. |
 
 The main agent (you, when invoked at the top level) writes wiring
 code, makes architectural decisions, and runs the verify gate.

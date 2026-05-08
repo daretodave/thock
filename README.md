@@ -63,10 +63,25 @@ The post-build loop. Audit the site for the highest-impact weakness (content gap
 
 Source: [`skills/iterate.md`](./skills/iterate.md)
 
+### `/critique`
+
+The **external-observer** pass. Spawns the `reader` sub-agent to visit https://thock.netlify.app as a first-time reader would, take notes (visual, voice fidelity, mobile reflow, comprehension, navigation honesty), self-assess what was returned, and append the surviving findings to [`plan/CRITIQUE.md`](./plan/CRITIQUE.md). `/iterate` reads CRITIQUE.md as one of its audit sources — that's the **feedback address loop**.
+
+Rate-limited: only fires when there's a green deploy + ≥12 commits or ≥24h since the last pass. Caps at 6 filed findings per pass.
+
+```
+/critique                           # full pass — visits ~6 representative URLs
+/critique <url>                     # focused pass on one URL
+/critique mobile                    # 375x800 only
+```
+
+Source: [`skills/critique.md`](./skills/critique.md)
+
 ### `/march`
 
 The outer dispatcher. Picks the right thing to do automatically:
 
+- critique due (rate-limited) → behaves as `/critique`
 - pending phase → behaves as `/ship-a-phase`
 - pending data → behaves as `/ship-data`
 - else → behaves as `/iterate`
@@ -108,6 +123,7 @@ Each skill delegates aggressively to specialist sub-agents (definitions in [`.cl
 | `scout` | Open-web research — switch specs, vendor URLs, group-buy dates, trend signals. |
 | `content-curator` | Drafting MDX articles in thock's editorial voice. |
 | `data-steward` | Schema-heavy data work — new entity types, mass cross-ref repair, normalize passes. |
+| `reader` | Fresh-eyes external observer of the live site (used by `/critique`). |
 
 ---
 

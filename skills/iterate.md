@@ -54,6 +54,30 @@ toward shipping cheap wins; the loop favors momentum.
 
 ### Audit categories
 
+#### Z. External critique (highest priority when present)
+
+`plan/CRITIQUE.md` `## Pending` section is a finding source —
+fresh-eyes feedback from `/critique` that hasn't been addressed.
+
+- Each Pending row maps to a finding with category
+  `external-critique`.
+- Severity → impact:
+  - `[HIGH]` → impact 8–10
+  - `[MED]`  → impact 5–7
+  - `[LOW]`  → impact 2–4
+- Ease scored from suggested-fix complexity:
+  - one-line edit / token tweak → ease 9
+  - single-component change → ease 6
+  - cross-cutting (multiple files, new component) → ease 4
+  - design-rework or schema-touching → ease 2
+- When you ship a fix for a critique finding, **move the row from
+  `## Pending` to `## Done`** in `plan/CRITIQUE.md`, prefix with
+  `[x]`, and append the addressing commit hash. This is the
+  address-loop contract.
+
+These findings compete fairly with the rest below — a high-severity
+content gap can outrank a low-severity critique nitpick.
+
 #### A. Content gaps
 
 - Pillars with `< 5` articles → score by pillar prominence

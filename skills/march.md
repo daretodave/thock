@@ -10,14 +10,19 @@
 right-thing-to-do every tick:
 
 ```
-ANY pending phase  →  /ship-a-phase
-ELSE pending data  →  /ship-data
-ELSE               →  /iterate
+critique due (rate-limited)  →  /critique
+ELSE pending phase           →  /ship-a-phase
+ELSE pending data            →  /ship-data
+ELSE                         →  /iterate
 ```
 
 This means: an overnight run can take thock from "scaffolded" to
-"shipped, populated, iteratively polished" without a mode switch
-from the user.
+"shipped, populated, iteratively polished, critiqued and
+addressed" without a mode switch from the user.
+
+The critique check is rate-limited (≥12 commits + ≥24h spacing,
+green-deploy-only) so it complicates the loop without dominating
+it — see §3 Step 1.
 
 ## 2. Invocation
 
@@ -37,11 +42,44 @@ git pull --ff-only
 
 If divergence, stop per §5.
 
-### Step 1 — Dispatch
+### Step 1 — Critique gate (pre-dispatch check)
+
+Before dispatching to one of the three normal lanes, check whether
+a `/critique` pass is due. Read the metadata header at the top of
+`plan/CRITIQUE.md`:
+
+```
+> Last pass: <ISO-date> at commit <sha>
+> Pass count: <N>
+```
+
+Dispatch to `/critique` instead of the normal flow if **all three**
+hold:
+
+1. The current commit is at least **12 commits after** the `Last
+   pass` commit, OR `Last pass` is more than **24 hours ago**, OR
+   `Last pass` is "never" and at least one page-family phase has
+   shipped (phase 5+).
+2. `pnpm deploy:check` shows a green deploy (no point critiquing a
+   red site — the next tick will re-check).
+3. The next normal dispatch lane (1a/1b/1c below) wouldn't already
+   be addressing a `[HIGH]` critique finding — if `/iterate` is
+   about to drain a `[HIGH]` Pending row, let it; don't pile up
+   more before the existing high gets addressed.
+
+If all three hold:
+
+- Read `skills/critique.md`.
+- Execute its procedure (§5) end-to-end.
+- Return. (Next tick re-dispatches normally.)
+
+If any condition fails, fall through to Step 2.
+
+### Step 2 — Dispatch
 
 Read state in this order; first match wins.
 
-#### 1a. Pending phase?
+#### 2a. Pending phase?
 
 Open `plan/steps/01_build_plan.md`. If any `[ ]` row exists in
 the "Status (at-a-glance)" block:
@@ -50,7 +88,7 @@ the "Status (at-a-glance)" block:
 - Execute its procedure (§6 of that file) end-to-end.
 - Return.
 
-#### 1b. Pending data?
+#### 2b. Pending data?
 
 Open `data/BACKLOG.md`. If any `[ ]` row exists:
 
@@ -58,13 +96,13 @@ Open `data/BACKLOG.md`. If any `[ ]` row exists:
 - Execute its procedure (§5 of that file) end-to-end.
 - Return.
 
-#### 1c. Else — iterate.
+#### 2c. Else — iterate.
 
 - Read `skills/iterate.md`.
 - Execute its procedure (§5 of that file) end-to-end.
 - Return.
 
-### Step 2 — Done
+### Step 3 — Done
 
 Return cleanly. The loop's next tick re-dispatches.
 
