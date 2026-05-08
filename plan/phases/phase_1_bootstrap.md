@@ -189,7 +189,9 @@ across workspaces; no changes needed there.
 
 ## Tailwind theme extension (apps/web/tailwind.config.ts)
 
-Read CSS variables from `@thock/tokens/tokens.css`:
+Wire OKLCH variables from `tokens.css` (post `--kh-*` → `--thock-*`
+rename). Tailwind v3.4 supports CSS-variable-backed colors; OKLCH
+passes through fine.
 
 ```ts
 import type { Config } from 'tailwindcss'
@@ -199,23 +201,45 @@ const config: Config = {
     './src/**/*.{ts,tsx,mdx}',
     '../../packages/ui/src/**/*.{ts,tsx}',
   ],
-  darkMode: ['class', 'html:not(.light)'],
+  darkMode: ['class', '.thock-light'], // dark is default; light requires the class
   theme: {
     extend: {
       colors: {
-        bg:        'rgb(var(--color-bg) / <alpha-value>)',
-        surface:   'rgb(var(--color-surface) / <alpha-value>)',
-        fg:        'rgb(var(--color-fg) / <alpha-value>)',
-        muted:     'rgb(var(--color-muted) / <alpha-value>)',
-        hairline:  'rgb(var(--color-hairline) / <alpha-value>)',
-        accent:    'rgb(var(--color-accent) / <alpha-value>)',
-        'accent-up':   'rgb(var(--color-accent-up) / <alpha-value>)',
-        'accent-down': 'rgb(var(--color-accent-down) / <alpha-value>)',
+        bg:        'var(--thock-bg)',
+        'bg-2':    'var(--thock-bg-2)',
+        surface:   'var(--thock-surface)',
+        'surface-hi': 'var(--thock-surface-hi)',
+        border:    'var(--thock-border)',
+        'border-hi': 'var(--thock-border-hi)',
+        text:      'var(--thock-text)',
+        'text-2':  'var(--thock-text-2)',
+        'text-3':  'var(--thock-text-3)',
+        'text-4':  'var(--thock-text-4)',
+        accent:    'var(--thock-accent)',
+        'accent-hi': 'var(--thock-accent-hi)',
+        'accent-mu': 'var(--thock-accent-mu)',
+        up:        'var(--thock-up)',
+        down:      'var(--thock-down)',
+        flat:      'var(--thock-flat)',
+        'tag-switch':   'var(--thock-tag-switch)',
+        'tag-layout':   'var(--thock-tag-layout)',
+        'tag-brand':    'var(--thock-tag-brand)',
+        'tag-material': 'var(--thock-tag-material)',
+        'tag-profile':  'var(--thock-tag-profile)',
       },
       fontFamily: {
-        serif: ['var(--font-serif)', 'ui-serif', 'Georgia', 'serif'],
-        sans:  ['var(--font-sans)',  'ui-sans-serif', 'system-ui'],
-        mono:  ['var(--font-mono)',  'ui-monospace', 'SFMono-Regular'],
+        serif: ['var(--thock-serif)', 'Newsreader', 'Iowan Old Style', 'Georgia', 'serif'],
+        sans:  ['var(--thock-sans)',  'IBM Plex Sans', 'system-ui', 'sans-serif'],
+        mono:  ['var(--thock-mono)',  'JetBrains Mono', 'ui-monospace', 'monospace'],
+      },
+      fontSize: {
+        micro:   ['var(--thock-micro)',   { lineHeight: '1.4' }],
+        small:   ['var(--thock-small)',   { lineHeight: '1.45' }],
+        body:    ['var(--thock-body)',    { lineHeight: '1.55' }],
+        h3:      ['var(--thock-h3)',      { lineHeight: '1.3' }],
+        h2:      ['var(--thock-h2)',      { lineHeight: '1.2' }],
+        h1:      ['var(--thock-h1)',      { lineHeight: '1.1' }],
+        display: ['var(--thock-display)', { lineHeight: '1.02', letterSpacing: '-0.022em' }],
       },
     },
   },
@@ -224,41 +248,61 @@ const config: Config = {
 export default config
 ```
 
-## tokens.css (locked palette / type for v1)
+The Tailwind utilities then read `bg-bg`, `text-text-2`,
+`text-display`, `font-serif`, `bg-tag-switch` — names that reflect
+intent, not raw color values.
 
-```css
-:root {
-  --color-bg: 14 15 18;             /* #0e0f12 */
-  --color-surface: 26 28 32;        /* #1a1c20 */
-  --color-fg: 230 231 234;          /* #e6e7ea */
-  --color-muted: 154 160 170;       /* #9aa0aa */
-  --color-hairline: 50 54 60;       /* #32363c */
-  --color-accent: 229 162 58;       /* #e5a23a — warm amber */
-  --color-accent-up: 92 184 92;     /* #5cb85c */
-  --color-accent-down: 217 83 79;   /* #d9534f */
+## tokens.css — adopt from `design/tokens.css` verbatim
 
-  --font-serif: 'Source Serif 4', 'Fraunces', ui-serif;
-  --font-sans:  'Inter', ui-sans-serif;
-  --font-mono:  'JetBrains Mono', ui-monospace;
-}
+**Adopt `design/tokens.css` as the source.** Copy it to
+`packages/tokens/src/tokens.css`, with one mechanical change:
+rename CSS variables `--kh-*` → `--thock-*` (the design was
+exported under the old name). Keep the OKLCH palette, the three
+type families, the 4px spacing base, and the type ramp exactly
+as designed.
 
-html.light {
-  --color-bg: 250 250 251;
-  --color-surface: 255 255 255;
-  --color-fg: 18 19 22;
-  --color-muted: 95 100 110;
-  --color-hairline: 220 222 226;
-}
-```
+The tokens you'll have after this transfer (paraphrased — see
+`design/tokens.css` for exact values):
 
-Load fonts via `next/font` in `apps/web/src/app/layout.tsx`:
+- **Palette (OKLCH):** deep cool charcoal bg, surface stepped
+  +3% lightness, warm-bone text in three tiers, warm-brass accent.
+  Tag-category hues at matched L=0.74 C=0.085. Trend semantics
+  (up / down / flat) at matched lightness/chroma.
+- **Light mode:** `.thock-light` (renamed from `.kh-light`) —
+  warm paper background, intentionally undersaturated.
+- **Type:** Newsreader (serif), IBM Plex Sans (sans), JetBrains
+  Mono (mono).
+- **Spacing:** 4px base, `--thock-1` through `--thock-9` (4 / 8 /
+  12 / 16 / 24 / 32 / 48 / 64 / 96 px).
+- **Type ramp:** display 56 / h1 40 / h2 28 / h3 20 / body 16 /
+  small 14 / micro 12.
+
+Load fonts via `next/font/google` in `apps/web/src/app/layout.tsx`:
 
 ```ts
-import { Source_Serif_4, Inter, JetBrains_Mono } from 'next/font/google'
-const serif = Source_Serif_4({ subsets: ['latin'], variable: '--font-serif' })
-const sans  = Inter({ subsets: ['latin'], variable: '--font-sans' })
-const mono  = JetBrains_Mono({ subsets: ['latin'], variable: '--font-mono' })
+import { Newsreader, IBM_Plex_Sans, JetBrains_Mono } from 'next/font/google'
+
+const serif = Newsreader({
+  subsets: ['latin'],
+  variable: '--thock-serif',
+  weight: ['400', '500', '600', '700'],
+  style: ['normal', 'italic'],
+})
+const sans = IBM_Plex_Sans({
+  subsets: ['latin'],
+  variable: '--thock-sans',
+  weight: ['300', '400', '500', '600', '700'],
+})
+const mono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--thock-mono',
+  weight: ['400', '500', '600'],
+})
 ```
+
+Drop the `@import url('https://fonts.googleapis.com/...')` line at
+the top of `design/tokens.css` when copying — `next/font` self-hosts
+the same families.
 
 ## RootLayout shape (apps/web/src/app/layout.tsx)
 
@@ -345,11 +389,17 @@ The home page is fully replaced in phase 6.
 - **Test infra:** Vitest over Jest. Playwright over Cypress.
 - **Pkg mgr:** pnpm 9. Lockfile committed.
 - **Fonts:** `next/font/google` self-host. No CDN links.
-- **Light mode:** wired but not the default. Toggle UI is phase 16.
+- **Tokens:** adopt `design/tokens.css` verbatim (rename `--kh-*`
+  → `--thock-*`). Three families: Newsreader / IBM Plex Sans /
+  JetBrains Mono. OKLCH palette. 4px spacing base.
+- **Light mode:** wired but not the default. Class is
+  `.thock-light` on `<html>`. Toggle UI is phase 16.
 - **Search icon:** present and inert. Better to ship the visual
   rhythm now than rearrange the header in phase 14.
-- **Wordmark:** plain text `thock` in serif at this phase. The
-  custom mark / glyph waits for design.
+- **Wordmark:** read `design/brand.jsx` for the composition. The
+  design includes an accent dot on the H — adopt it. No bespoke
+  crest at this phase (`design/decisions.jsx` voted against:
+  "looked like every fintech logo").
 - **README:** the pristine project README at root (already shipped
   in the bootstrap scaffold). No per-package READMEs unless a
   package is non-obvious.
@@ -414,8 +464,11 @@ feat: bootstrap monorepo — phase 1
 - packages/tokens (CSS vars + TS), packages/ui (Wordmark, Mono,
   Container, Stack), packages/tsconfig (shared TS configs).
 - RootLayout with Header + Footer; / renders placeholder hero.
-- Tailwind theme extension reads design tokens.
-- Dark mode default; light mode via html.light class toggle.
+- packages/tokens adopts design/tokens.css verbatim (one mechanical
+  rename: --kh-* → --thock-*). Tailwind theme reads OKLCH vars.
+- Three font families wired via next/font/google: Newsreader,
+  IBM Plex Sans, JetBrains Mono.
+- Dark mode default; .thock-light class enables light mode.
 - Vitest unit tests across packages/ui and packages/tokens.
 - Playwright smoke spec for /; mobile + desktop viewports.
 - pnpm verify gate: typecheck + unit + build + e2e.
@@ -423,12 +476,13 @@ feat: bootstrap monorepo — phase 1
 
 Decisions:
 - Tailwind v3.4 (v4 deferred to avoid churn).
-- @thock/tokens exports tokens.css for direct import; TS object
-  is for runtime token access only.
+- @thock/tokens adopts design/tokens.css verbatim with --kh-* →
+  --thock-* rename; design intent is unchanged.
 - @thock/ui peers React to avoid duplicate React in the bundle.
 - E2E webServer on :4173 to keep :3000 free for dev.
-- Wordmark renders plain serif "thock" — custom mark waits for
-  design export.
+- Wordmark composition follows design/brand.jsx (lowercase
+  serif "thock" with accent dot on the H); no bespoke crest per
+  design/decisions.jsx push-back.
 EOF
 )"
 git push origin main

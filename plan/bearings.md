@@ -162,20 +162,41 @@ Z:/keyboard/                              # repo root (will be renamed by user)
 
 ## The `design/` folder
 
-The user emits design exports asynchronously into `design/<family>/`
-(e.g. `design/article/`, `design/home/`, `design/trends-tracker/`).
-Each export typically contains:
+The user emits design exports asynchronously from claude design
+into `design/` as **flat `*.jsx` files** (no subfolders). The
+authoritative map is `design/INDEX.md` — read it first whenever a
+phase touches a designed surface.
 
-- Mockups (PNG/SVG/JSX) — annotated where possible.
-- A `notes.md` with decisions, palette refs, copy.
-- Component specs (sizes, variants).
+Three files matter most:
 
-**The loop does not wait for design.** If `design/<family>/` is
-absent when shipping a page family, ship from the brief + canonical
-sibling + bearings style hints. The next phase that touches that
-surface integrates the design when it lands. Document in commit-body
-Decisions: "design export not yet present — implementation may be
-revisited when `design/<family>/` lands."
+- `design/tokens.css` — finalized design tokens (OKLCH palette,
+  typography, spacing, type ramp). **Phase 1 adopts these
+  verbatim** into `packages/tokens/`.
+- `design/decisions.jsx` — the design team's own AI-facing brief
+  (SETTLED / PUSHED-BACK / OPEN-QUESTIONS). **Decisions here win
+  over `bearings.md` on conflict** — bearings was authored before
+  the design landed.
+- `design/INDEX.md` — file → family mapping; tells the loop which
+  flat file to read for each phase.
+
+Per-family files: `design/page-<family>.jsx` (e.g.
+`page-article.jsx`, `page-trends-tracker.jsx`). Plus
+`atoms.jsx`, `primitives.jsx`, `brand.jsx` for component-level
+reference.
+
+**The loop does not wait for design.** Some `page-*.jsx` files
+may be 0 bytes (claude design hadn't reached them yet). When that
+happens, the phase ships from the canonical sibling + bearings,
+and a follow-up commit can integrate the design when it's
+re-exported. Document in commit-body Decisions:
+"`design/page-<family>.jsx` empty — implementation will be
+revisited after re-export."
+
+**Reading conventions:** the JSX files are structural reference,
+not drop-in code. Inline styles use `var(--kh-*)` from a previous
+naming round (the project was renamed thock after the design was
+exported). Translate `--kh-*` → `--thock-*` when adopting into
+`packages/tokens/`; the design intent is unchanged.
 
 ## The `data/` folder (GitHub-as-DB)
 
@@ -208,22 +229,44 @@ parallelize and protect main-agent context.
 The main agent does not write articles or research the open web
 itself. Delegate.
 
-## Visual & tonal defaults (until design lands)
+## Visual & tonal defaults
 
-These are the working defaults phase 1 establishes. The design
-export overrides them on a per-family basis when present.
+**These were placeholders until the design landed.** The real
+source of truth is now `design/tokens.css` (palette, type, spacing)
+and `design/decisions.jsx` (intent). The placeholders below are
+preserved for context; phase 1 adopts the design files verbatim.
 
-- **Dark mode default.** Light mode is a class toggle (`html.light`).
-- **Type:** Display serif (Source Serif 4) for H1 and pull-quotes.
-  Sans (Inter) for body and UI. Mono (JetBrains Mono) for switch
-  names, firmware refs, part SKUs — wrap in `<Mono>` atom.
-- **Palette:** Restrained dark surface (`#0e0f12` bg, `#1a1c20`
-  cards, `#e6e7ea` text, `#9aa0aa` muted). Accent warm amber
-  (`#e5a23a`).
-- **Hero photography is the star.** Generous image real estate;
-  cards quiet around it.
-- **Spacing scale:** Tailwind defaults; vertical rhythm in 8px
-  multiples.
+What the design landed on (read `design/tokens.css` for exact
+values):
+
+- **Dark first.** Background is a deep cool charcoal in OKLCH
+  (`oklch(0.175 0.006 250)`). Surfaces step lightness in 3%
+  increments. Light mode is warm paper, intentionally
+  undersaturated.
+- **Type, three families:** **Newsreader** for headlines (italic
+  ductus), **IBM Plex Sans** for body and UI, **JetBrains Mono**
+  for technical terms (switch names, firmware, SKUs — wrap in
+  `<Mono>`).
+- **Single restrained accent:** warm brass / aged bronze
+  (`oklch(0.80 0.135 75)`). Used sparingly — accent dot in the
+  wordmark, last 72 hours of a group buy, hover states.
+- **Tag color = category, not vibe.** Five categories (switch /
+  layout / brand / material / profile) at matched L=0.74,
+  C=0.085 with hue varying. Restrained on purpose — taxonomy,
+  not decoration.
+- **Trend semantics tokens:** distinct hues for up / down / flat
+  at matched lightness/chroma.
+- **Spacing:** 4px base (`--kh-1` … `--kh-9`).
+- **Type ramp:** 56 / 40 / 28 / 20 / 16 / 14 / 12 px.
+
+Earlier placeholder defaults (kept for historical reference; do
+not adopt over the design):
+
+- ~~Source Serif 4 / Inter / JetBrains Mono~~ — superseded by
+  Newsreader / IBM Plex Sans / JetBrains Mono.
+- ~~`#0e0f12` bg, `#1a1c20` surface, `#e5a23a` accent~~ —
+  superseded by OKLCH values in `design/tokens.css`.
+- ~~8px spacing base~~ — superseded by 4px base.
 
 ## Decisions standing for the autonomous loop
 

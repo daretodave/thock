@@ -183,19 +183,35 @@ separately first, then proceed).
 
 ### Step 3 — Read the design + the canonical sibling
 
-```bash
-# Design export (may not exist — that's OK)
-ls Z:/keyboard/design/                # browse what's there
-ls Z:/keyboard/design/<family>/       # family-specific export
+The design lives as flat files in `design/`. Read `design/INDEX.md`
+to map family → file. Authoritative reads:
 
-# Canonical sibling
+```bash
+# Always read these for any phase touching a designed surface
+cat design/INDEX.md                       # file → family map
+cat design/decisions.jsx                  # SETTLED / PUSHED-BACK / OPEN-Qs
+cat design/tokens.css                     # palette / type / spacing
+
+# Family-specific reference (per INDEX.md mapping)
+cat design/page-<family>.jsx              # e.g. page-article.jsx
+cat design/atoms.jsx                      # if family uses editorial atoms
+cat design/primitives.jsx                 # if family uses chart primitives
+
+# Canonical sibling — phase 5's article is the structural template
 ls Z:/keyboard/apps/web/src/app/article/
 ls Z:/keyboard/apps/web/src/components/article/
 ```
 
-If `design/<family>/` is empty or missing, proceed using the brief
-+ the canonical sibling. Note in commit-body Decisions that the
-design export was unavailable.
+If `design/page-<family>.jsx` is **0 bytes** (claude design hadn't
+reached it), proceed using the brief + canonical sibling +
+`design/atoms.jsx` + `design/decisions.jsx`. Note in commit-body
+Decisions: "`design/page-<family>.jsx` empty — implementation will
+be revisited after re-export."
+
+**Conflict resolution:** if `design/decisions.jsx` and
+`plan/bearings.md` disagree, the design wins. Bearings was authored
+before the design landed; the design file was authored *with* the
+bearings as input and can override.
 
 ### Step 4 — Build
 
@@ -418,7 +434,11 @@ brief, component that doesn't exist, copy that's not in the brief
 plan/steps/01_build_plan.md                 # status block + scope
 plan/phases/phase_<N>_<topic>.md            # brief
 plan/bearings.md                            # stack + conventions
-design/<family>/                            # design export (may be absent)
+design/INDEX.md                             # design file → family map
+design/decisions.jsx                        # design's own brief (wins on conflicts)
+design/tokens.css                           # palette / type / spacing
+design/page-<family>.jsx                    # family-specific design (may be empty)
+design/atoms.jsx, design/primitives.jsx     # component-level reference
 spec.md                                     # product spec
 apps/web/src/app/article/                   # canonical page-family template
 

@@ -32,11 +32,17 @@ Use it when:
 
 1. `plan/bearings.md` — stack, URL contract, standing decisions.
 2. `plan/steps/01_build_plan.md` — phase scope row.
-3. `plan/phases/phase_4_article.md` — canonical brief template.
-4. `design/<family>/` — design export, if present.
-5. `apps/web/src/app/<sibling-family>/` — closest already-shipped
+3. `plan/phases/phase_5_article.md` — canonical brief template.
+4. `design/INDEX.md` — file → family map.
+5. `design/decisions.jsx` — design's own brief; **wins over
+   bearings on conflict**.
+6. `design/page-<family>.jsx` — family-specific design (may be 0
+   bytes; not blocking).
+7. `design/atoms.jsx` / `primitives.jsx` / `tokens.css` — when
+   the brief touches editorial atoms, charts, or tokens.
+8. `apps/web/src/app/<sibling-family>/` — closest already-shipped
    sibling for code patterns.
-6. `spec.md` — only if the brief touches a surface the bearings
+9. `spec.md` — only if the brief touches a surface the bearings
    don't fully describe.
 
 ## 4. The brief format (`plan/phases/phase_<N>_<topic>.md`)
@@ -102,9 +108,17 @@ Walk the brief format (§4). For each section, derive content from
 the inputs. Make decisions; document them under "Decisions made
 upfront — DO NOT ASK".
 
-For Decisions, lean on `plan/bearings.md` "Decisions standing for
-the autonomous loop" first — those are project-wide. Add only
-phase-specific ones.
+Order of authority for Decisions:
+
+1. `design/decisions.jsx` SETTLED list (highest authority — locked
+   by the design pass).
+2. `plan/bearings.md` "Decisions standing for the autonomous loop"
+   (project-wide defaults).
+3. Phase-specific calls you make to resolve remaining ambiguity.
+
+If `decisions.jsx` and `bearings.md` disagree on a point, the
+design wins — and update `bearings.md` in a separate prior commit
+to keep the two coherent (`bearings: align with design/decisions.jsx`).
 
 ### Step 4 — Reality-check against `apps/web/`
 
