@@ -81,28 +81,51 @@ Content goes through `@thock/content`; data goes through
 
 ## Operational secrets
 
-The autonomous loop is hermetic by design. The **only** secret it
-needs is a Netlify personal access token used by `pnpm deploy:check`
-to read deploy state. Configure once per machine:
+The autonomous loop is hermetic for shipping; the awareness layer
+needs two tokens. Both live in `.env` (gitignored). Configure once
+per machine.
+
+### `NETLIFY_AUTH_TOKEN` — deploy gate
+
+Used by `pnpm deploy:check` to read deploy state after each push.
 
 1. Get a token at
    https://app.netlify.com/user/applications#personal-access-tokens
-2. Copy `.env.example` to `.env` and fill in:
+2. Add to `.env`:
    ```
    NETLIFY_AUTH_TOKEN=nfp_...
    ```
-3. `.env` is gitignored — **never commit it**.
 
-If `NETLIFY_AUTH_TOKEN` is missing, `pnpm deploy:check` exits with
-a clear error and a link to obtain a token. The shipping skills
-treat that as a blocked tick.
+Optional: `NETLIFY_SITE_NAME` (defaults to `thock`).
 
-Optional: `NETLIFY_SITE_NAME` (defaults to `thock`). Override only
-if you're running the loop against a fork or a different site.
+If missing, `pnpm deploy:check` exits with a clear error. Shipping
+skills treat that as a blocked tick.
 
-No other secrets are needed. If a feature ever requires one
-(Buttondown API, Plausible, etc.), the relevant skill stops at its
-failure-mode condition rather than inventing a placeholder.
+### `GH_TOKEN` — issue triage
+
+Used by `/triage` to review and label open GitHub issues. The `gh`
+CLI auto-reads `GH_TOKEN`.
+
+1. Get a fine-grained PAT at https://github.com/settings/tokens
+   scoped to the thock repo with `Issues: read+write`,
+   `Metadata: read`. (An all-access classic PAT works too.)
+2. Add to `.env`:
+   ```
+   GH_TOKEN=github_pat_...
+   ```
+
+Optional: `GH_REPO` (defaults to `daretodave/thock`).
+
+If missing, `/triage` exits at its failure-mode condition with a
+link to obtain a token. The loop continues — triage is rate-limited
+and non-blocking.
+
+### No other secrets
+
+The autonomous loop never authenticates against anything else. If
+a future feature requires a secret (Buttondown API, Plausible,
+etc.), the relevant skill stops at its failure-mode condition
+rather than inventing a placeholder.
 
 ---
 
@@ -140,19 +163,20 @@ end-to-end.
 
 ### Skills (the verbs)
 
-Six autonomous skills + one user-in-the-loop adjustment skill
-(`oversight`). One of the autonomous six (`critique`) doesn't
-ship code — it observes the live site and feeds findings into the
-iterate flywheel.
+Seven autonomous skills + one user-in-the-loop adjustment skill
+(`oversight`). Two of the autonomous seven (`critique`, `triage`)
+don't ship code — they read external signals (the live site, GitHub
+issues) and feed findings into the iterate flywheel.
 
 | Skill | Source of truth | What it does |
 |---|---|---|
 | `ship-a-phase` | `skills/ship-a-phase.md` | Ship one phase from the build plan: code + tests + e2e + commit + push. The Netlify deploy follows. |
 | `ship-data` | `skills/ship-data.md` | Add or repair one record in `/data/`: validate schema, normalize cross-refs, commit, push. |
 | `plan-a-phase` | `skills/plan-a-phase.md` | Refine the next phase brief without shipping code. Pre-flight for `ship-a-phase`. |
-| `iterate` | `skills/iterate.md` | Audit the site, pick the highest-impact weakness, ship one improvement. Drains the `/critique` Pending queue too. |
+| `iterate` | `skills/iterate.md` | Audit the site, pick the highest-impact weakness, ship one improvement. Drains the `/critique` and `/triage` queues too. Closes GitHub issues when it ships their fix. |
 | `critique` | `skills/critique.md` | External-observer pass — visit the live site as a stranger, file fresh-eyes findings to `plan/CRITIQUE.md`. The feedback half of the address loop. |
-| `march` | `skills/march.md` | Outer dispatcher: rate-limited `critique` → pending phase → pending data → `iterate`. The autonomous-beast endgame. |
+| `triage` | `skills/triage.md` | Issue review — read open GitHub issues, classify, label, comment, route to the right backlog. Cheap fast-exit when 0 unlabeled issues. |
+| `march` | `skills/march.md` | Outer dispatcher: triage → rate-limited critique → pending phase → pending data → iterate. The autonomous-beast endgame. |
 | `oversight` | `skills/oversight.md` | **User-in-the-loop.** Pause autonomy, brief the user, ask targeted questions, adjust the plan, push the adjustments. The only skill that asks the user anything. |
 
 ### Invocation (Claude Code-flavored)
@@ -163,9 +187,10 @@ iterate flywheel.
 /plan-a-phase                # refine next phase brief
 /iterate                     # audit + ship one improvement
 /critique                    # external-observer pass (writes to CRITIQUE.md)
-/march                       # do the right thing
+/triage                      # review unlabeled GitHub issues
+/march                       # do the right thing (dispatches all of the above)
 /oversight                   # course-correct (brief + questionnaire + adjustment)
-/loop 30m /march             # autonomous loop (critique fires every 12+ commits)
+/loop 30m /march             # autonomous loop
 ```
 
 Other clients: read the skill file directly and follow its

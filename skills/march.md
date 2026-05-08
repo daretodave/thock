@@ -10,19 +10,22 @@
 right-thing-to-do every tick:
 
 ```
-critique due (rate-limited)  →  /critique
+unlabeled issues exist       →  /triage
+ELSE critique due (rate-lim) →  /critique
 ELSE pending phase           →  /ship-a-phase
 ELSE pending data            →  /ship-data
 ELSE                         →  /iterate
 ```
 
 This means: an overnight run can take thock from "scaffolded" to
-"shipped, populated, iteratively polished, critiqued and
-addressed" without a mode switch from the user.
+"shipped, populated, iteratively polished, critiqued, addressed,
+and inbox-zero on issues" without a mode switch from the user.
 
-The critique check is rate-limited (≥12 commits + ≥24h spacing,
+The triage check is **cheap when idle** — one API call to count
+unlabeled issues; if zero, it falls through immediately. The
+critique check is rate-limited (≥12 commits + ≥24h spacing,
 green-deploy-only) so it complicates the loop without dominating
-it — see §3 Step 1.
+it — see §3.
 
 ## 2. Invocation
 
@@ -42,7 +45,34 @@ git pull --ff-only
 
 If divergence, stop per §5.
 
-### Step 1 — Critique gate (pre-dispatch check)
+### Step 1 — Triage gate (cheapest check)
+
+Load `GH_TOKEN` from `.env` and count unlabeled open issues:
+
+```bash
+export GH_TOKEN=$(awk -F= '/^GH_TOKEN=/ {sub(/^GH_TOKEN=/, ""); print; exit}' .env)
+export GH_REPO=$(awk -F= '/^GH_REPO=/ {sub(/^GH_REPO=/, ""); print; exit}' .env)
+GH_REPO=${GH_REPO:-daretodave/thock}
+
+unlabeled=$(gh issue list --repo "$GH_REPO" --state open \
+  --search "-label:triage:loop-queued -label:triage:needs-user -label:triage:closed -label:triage:reviewed" \
+  --json number --jq 'length')
+```
+
+If `unlabeled > 0`:
+
+- Read `skills/triage.md`.
+- Execute its procedure (§5) end-to-end.
+- Return.
+
+If `unlabeled == 0`, fall through to Step 2.
+
+If `gh` isn't installed or `GH_TOKEN` missing, **don't fail the
+march** — log a warning ("triage skipped: gh/token unavailable")
+and fall through. Triage is non-blocking by design; the loop
+continues.
+
+### Step 2 — Critique gate (pre-dispatch check)
 
 Before dispatching to one of the three normal lanes, check whether
 a `/critique` pass is due. Read the metadata header at the top of
@@ -73,13 +103,13 @@ If all three hold:
 - Execute its procedure (§5) end-to-end.
 - Return. (Next tick re-dispatches normally.)
 
-If any condition fails, fall through to Step 2.
+If any condition fails, fall through to Step 3.
 
-### Step 2 — Dispatch
+### Step 3 — Dispatch
 
 Read state in this order; first match wins.
 
-#### 2a. Pending phase?
+#### 3a. Pending phase?
 
 Open `plan/steps/01_build_plan.md`. If any `[ ]` row exists in
 the "Status (at-a-glance)" block:
@@ -88,7 +118,7 @@ the "Status (at-a-glance)" block:
 - Execute its procedure (§6 of that file) end-to-end.
 - Return.
 
-#### 2b. Pending data?
+#### 3b. Pending data?
 
 Open `data/BACKLOG.md`. If any `[ ]` row exists:
 
@@ -96,13 +126,13 @@ Open `data/BACKLOG.md`. If any `[ ]` row exists:
 - Execute its procedure (§5 of that file) end-to-end.
 - Return.
 
-#### 2c. Else — iterate.
+#### 3c. Else — iterate.
 
 - Read `skills/iterate.md`.
 - Execute its procedure (§5 of that file) end-to-end.
 - Return.
 
-### Step 3 — Done
+### Step 4 — Done
 
 Return cleanly. The loop's next tick re-dispatches.
 
@@ -137,9 +167,16 @@ Otherwise the failure modes are inherited from the dispatched skill.
 # State files
 plan/steps/01_build_plan.md          # pending phases
 data/BACKLOG.md                      # pending data work
+plan/CRITIQUE.md                     # critique queue + last-pass metadata
+
+# External signals
+gh issue list --repo $GH_REPO --search "-label:triage:..." --json number  # unlabeled count
+pnpm deploy:check                    # green-deploy condition for /critique
 
 # Skills it dispatches into
-skills/ship-a-phase.md
-skills/ship-data.md
-skills/iterate.md
+skills/triage.md                     # NEW — Step 1 (cheapest)
+skills/critique.md                   # Step 2 (rate-limited)
+skills/ship-a-phase.md               # Step 3a
+skills/ship-data.md                  # Step 3b
+skills/iterate.md                    # Step 3c
 ```

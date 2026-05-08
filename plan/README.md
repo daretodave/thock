@@ -73,7 +73,12 @@ relies on these markers.
   update.
 - `skills/plan-a-phase.md` — refine a phase brief without shipping
   code.
-- `skills/iterate.md` — audit + ship one improvement.
+- `skills/iterate.md` — audit + ship one improvement; closes
+  GitHub issues when their fix lands.
+- `skills/critique.md` — external-observer pass; writes to
+  `CRITIQUE.md`.
+- `skills/triage.md` — issue review; routes open issues into
+  `AUDIT.md` / `BACKLOG.md` / `01_build_plan.md`.
 - `skills/march.md` — outer dispatcher (used with `/loop`).
 - `skills/oversight.md` — user-in-the-loop adjustment (the only
   skill that asks questions).

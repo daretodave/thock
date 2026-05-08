@@ -241,6 +241,22 @@ Commit subject prefixes by category:
 Body lists the audit finding ID/score, the fix, and the verify
 result.
 
+**If the addressed finding came from `/triage` (an `[user-issue
+#N]`-prefixed row in AUDIT.md or a `(issue #N)` reference in
+BACKLOG.md), close the loop on GitHub** in the same flow:
+
+```bash
+# Trailer in commit body (GitHub auto-links + auto-closes when merged to main)
+# - Closes #42
+
+# After push + green deploy, post a follow-up comment
+gh issue comment 42 --repo "$GH_REPO" --body "Shipped in <commit-sha>. Live after deploy ready."
+# (Closing happens automatically via the "Closes #42" trailer in the commit body.)
+```
+
+Load `GH_TOKEN` and `GH_REPO` from `.env` first if they aren't
+already in the env (see `skills/triage.md` §3).
+
 ```bash
 git add <explicit files>
 git commit -m "$(cat <<'EOF'

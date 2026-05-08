@@ -77,10 +77,26 @@ Rate-limited: only fires when there's a green deploy + ≥12 commits or ≥24h s
 
 Source: [`skills/critique.md`](./skills/critique.md)
 
+### `/triage`
+
+The **issue review** loop. Reads open unlabeled issues at github.com/daretodave/thock, classifies each (bug, feature, content, data, docs, etc.), applies a `triage:*` label, posts a short comment, and routes actionable issues into the right backlog (`plan/AUDIT.md`, `data/BACKLOG.md`, or build plan). When there are zero unlabeled issues, exits in <1s — the loop hums on.
+
+`/iterate` and `/ship-data` close issues automatically when their addressing commits ship.
+
+```
+/triage                             # all unlabeled open issues
+/triage <issue-number>              # focused pass
+/triage all                         # re-evaluate every open issue
+/triage dry-run                     # classify + report, no labels/comments
+```
+
+Source: [`skills/triage.md`](./skills/triage.md)
+
 ### `/march`
 
 The outer dispatcher. Picks the right thing to do automatically:
 
+- unlabeled issues exist → behaves as `/triage`
 - critique due (rate-limited) → behaves as `/critique`
 - pending phase → behaves as `/ship-a-phase`
 - pending data → behaves as `/ship-data`
