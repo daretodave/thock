@@ -48,3 +48,6 @@ Thumbs.db
 # generated content indexes
 **/.content-index.json
 **/.search-index.json
+
+# session handoff scratchpad (not for sharing across machines)
+.agent/
