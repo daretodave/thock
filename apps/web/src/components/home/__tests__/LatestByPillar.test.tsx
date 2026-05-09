@@ -4,7 +4,7 @@ import { LatestByPillar, resolveLatestByPillar } from '../LatestByPillar'
 import { makeArticle } from './testFixtures'
 
 describe('resolveLatestByPillar', () => {
-  it('returns one article per pillar in the configured order', () => {
+  it('returns one article per pillar in the configured order (5 pillars including ideas)', () => {
     const news = makeArticle({
       slug: 'news-1',
       frontmatter: {
@@ -21,6 +21,15 @@ describe('resolveLatestByPillar', () => {
         slug: 'trends-1',
         pillar: 'trends',
         publishedAt: '2026-05-07T00:00:00.000Z',
+      },
+    })
+    const ideas = makeArticle({
+      slug: 'ideas-1',
+      frontmatter: {
+        ...makeArticle().frontmatter,
+        slug: 'ideas-1',
+        pillar: 'ideas',
+        publishedAt: '2026-05-06T12:00:00.000Z',
       },
     })
     const deep = makeArticle({
@@ -41,10 +50,14 @@ describe('resolveLatestByPillar', () => {
         publishedAt: '2026-05-05T00:00:00.000Z',
       },
     })
-    const picks = resolveLatestByPillar([trends, news, guides, deep])
+    const picks = resolveLatestByPillar([trends, news, guides, deep, ideas])
+    // Regression guard for /critique pass 3: header advertises 5 pillars,
+    // by-pillar grid was rendering 4. Ideas must appear in the slot order
+    // implied by HOME_PILLAR_SET (news, trends, ideas, deep-dives, guides).
     expect(picks.map((a) => a.slug)).toEqual([
       'news-1',
       'trends-1',
+      'ideas-1',
       'deep-1',
       'guides-1',
     ])

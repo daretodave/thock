@@ -9,13 +9,15 @@
 
 ## Pending
 
-### [MED] / — "By pillar" grid only renders 4 of the 5 pillars; Ideas is silently excluded
+### [x] [MED] / — "By pillar" grid only renders 4 of the 5 pillars; Ideas is silently excluded
+- addressed in: pending commit (this tick)
+- issue: [mirror-failed: 2026-05-09T18:36Z — loop-issue.mjs label-ensure 403]
 - pass: 3 (commit 11c0777)
 - viewport: desktop
 - category: content
-- observation: The header nav advertises five pillars (News, Trends, Ideas, Deep Dives, Guides) but the home page's "Latest · By pillar" grid only renders four cards (News, Trends, Deep Dives, Guides). Ideas is silently absent even though `/article/building-mode-sonnet-with-oil-kings` is a fresh featured Ideas piece. A reader scanning the grid for the pillar's most recent piece either never finds it, or thinks Ideas is dormant.
-- evidence: `apps/web/src/components/home/LatestByPillar.tsx` hard-codes `HOME_PILLAR_SET = ['news', 'trends', 'deep-dives', 'guides']` — Ideas is intentionally excluded. The phase-6 brief specified "latest by each pillar (one row per pillar with 3–4 cards)" so the original intent was five pillars. Reader confirmed live at refs 79/86/93/100 (4 cards) on https://thock-coral.vercel.app/.
-- suggested fix: add `'ideas'` to `HOME_PILLAR_SET` so the grid renders all five pillars in the order the header nav promises. Update the colocated `LatestByPillar.test.tsx` to expect the fifth card. If the design intent was 4-card composition (one row of 4 at desktop), either rename the section to "Selected pillars" or restructure the layout to fit five.
+- root cause: `apps/web/src/components/home/LatestByPillar.tsx` shipped phase 6 with `HOME_PILLAR_SET = ['news', 'trends', 'deep-dives', 'guides']` and a code comment "Drops `ideas` from the default set until phase 9 ships — ideas is the lowest-volume pillar in seed content." Phase 9 (the Ideas pillar) shipped in `5fa4ee4`-area work and the pillar now has at least one featured article (`building-mode-sonnet-with-oil-kings`), but the home set was never updated. The header nav rendered all 5 chips while the by-pillar grid silently rendered 4 — a discoverability hole on the highest-traffic surface.
+- fix: re-added `'ideas'` to `HOME_PILLAR_SET` in slot order matching the header nav (news → trends → ideas → deep-dives → guides). Updated the comment to record that the resolver's empty-pillar fallback handles low-volume pillars cleanly. Restructured the grid layout from `lg:grid-cols-4` → `lg:grid-cols-3 xl:grid-cols-5` so 5 cards lay out cleanly across breakpoints (3 cols at lg, 5 cols at xl) — chosen over option (a) "rename to Selected pillars" because the header nav source-of-truth is 5 pillars and the section heading should match.
+- regression guard: rewrote the colocated `LatestByPillar.test.tsx` first case to construct an Ideas article and assert the resolver returns 5 picks in the bumped pillar order (news, trends, ideas, deep-dives, guides). Comment in the test cites this critique row so future Tailwind/grid tweaks fail loud if Ideas is dropped again.
 
 ### [MED] / — Hero card and "By pillar" Trends slot both surface trends-tracker-preview, duplicating it above the fold
 - pass: 3 (commit 11c0777)

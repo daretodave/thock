@@ -3,9 +3,17 @@ import type { Article, Tag } from '@thock/content'
 import type { Pillar } from '@thock/seo'
 import { ArticleCard } from './ArticleCard'
 
+// Order matches the header nav ('news', 'trends', 'ideas', 'deep-dives',
+// 'guides'). Earlier ('phase 6) the set dropped 'ideas' "until phase 9
+// ships — ideas is the lowest-volume pillar in seed content." Critique
+// pass 3 caught the mismatch: header advertises 5 pillars, by-pillar
+// grid rendered 4. Ideas is back in the rotation; the resolver's
+// fallback already handles empty pillars by surfacing the next-newest
+// article from any other pillar.
 const HOME_PILLAR_SET: readonly Pillar[] = [
   'news',
   'trends',
+  'ideas',
   'deep-dives',
   'guides',
 ] as const
@@ -53,11 +61,12 @@ export function resolveLatestByPillar(
 }
 
 /**
- * 4-up grid of "latest by pillar" cards on the home page. Falls
+ * 5-up grid of "latest by pillar" cards on the home page. Falls
  * through to the newest article from any pillar when a slot is
- * empty (per `phase_6_home.md` decisions). Drops `ideas` from the
- * default set until phase 9 ships — ideas is the lowest-volume
- * pillar in seed content.
+ * empty (per `phase_6_home.md` decisions). The set covers all five
+ * pillars the header nav advertises (news, trends, ideas, deep-dives,
+ * guides). Critique pass 3 fixed the prior 4-pillar set that
+ * silently excluded ideas.
  */
 export function LatestByPillar({
   articles,
@@ -69,7 +78,7 @@ export function LatestByPillar({
   return (
     <div
       data-testid="latest-by-pillar"
-      className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4"
+      className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5"
     >
       {picks.map((article) => (
         <div
