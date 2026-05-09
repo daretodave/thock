@@ -157,21 +157,42 @@ gh workflow run march.yml
 Useful when you've just merged something locally and want the
 cloud to pick it up before the next scheduled firing.
 
+### The `Cloud-Run:` trailer convention
+
+Every commit shipped from the cloud loop ends with a single
+trailer:
+
+```
+Cloud-Run: https://github.com/daretodave/thock/actions/runs/<run-id>
+```
+
+This is the discriminator between cloud-shipped commits and
+your local work — both author as `daretodave`, but only cloud
+commits carry the trailer. The workflow's daily ceiling check
+counts trailer-bearing commits in the last 24h; the ceiling
+bounds *cloud volume*, not your local commit volume.
+
+The cloud-mode brief in the workflow makes the trailer
+mandatory. If you ever see a cloud-shipped commit without one,
+that's a bug — the agent broke its contract. Open an issue.
+
 ### Watching what shipped
 
 ```
 gh run list --workflow march.yml --limit 10
-git log --oneline -20
+
+# All cloud-shipped commits in the last 24h:
+git log --since='24 hours ago' --grep='Cloud-Run:' --oneline
+
+# All cloud-shipped commits, full history:
+git log --grep='Cloud-Run:' --oneline
+
+# Local commits only (everything sans cloud trailer):
+git log --invert-grep --grep='Cloud-Run:' --oneline
 ```
 
-Cloud and local commits both author as `daretodave` — that's the
-point. The signal that a commit was shipped from the cloud is
-the workflow run that produced it (visible in
-`gh run list --workflow march.yml`) and the timestamp pattern
-(cloud commits cluster on the cron schedule). If you want to
-explicitly mark cloud-shipped commits in the future, add a
-`Cloud-Run: <run-url>` trailer to the cloud agent's commit
-message template.
+`git log --grep='Cloud-Run:'` is the canonical filter once the
+convention is in place.
 
 ## Upgrading the model
 

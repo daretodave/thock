@@ -30,6 +30,13 @@ line, a "🤖 Generated with…" footer, or any emoji — in commits, in
 code, in content, in design notes. The site's voice is editorial
 restraint; the commit log mirrors it.
 
+**One carve-out:** commits shipped from the cloud loop
+(`.github/workflows/march.yml`) MUST end with a single trailer:
+`Cloud-Run: <run-url>`. The cloud ceiling check uses this
+trailer to distinguish cloud-shipped commits from local work
+(both author as `daretodave`). Nothing else is allowed in the
+footer. See `.github/CLOUD_LOOP.md` for the full convention.
+
 ### 3. The verify gate is non-negotiable.
 
 `pnpm verify` runs **before** every commit:

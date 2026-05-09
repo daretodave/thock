@@ -68,18 +68,18 @@ jobs:
 
       - name: Daily commit ceiling check
         id: ceiling
-        env:
-          GH_TOKEN: ${{ secrets.ACTIONS_PAT }}
         run: |
-          # Counts commits authored by daretodave in the last 24h via
-          # the GitHub API. Local commits and cloud commits both
-          # count toward the ceiling — the ceiling protects your Max
-          # quota, not "cloud-only" volume.
-          since=$(date -u -d '24 hours ago' +%Y-%m-%dT%H:%M:%SZ)
-          count=$(gh api "repos/${{ github.repository }}/commits?since=$since&author=daretodave" --jq 'length' 2>/dev/null || echo 0)
-          echo "Commits authored by daretodave in last 24h: $count"
+          # Cloud commits are identified by the `Cloud-Run:` trailer
+          # the agent appends to every commit message (the brief
+          # mandates it). Author is daretodave on both cloud AND
+          # local commits, so we distinguish via trailer instead of
+          # author. The ceiling bounds *cloud-shipped volume* in 24h;
+          # your local commits don't count.
+          since="$(date -u -d '24 hours ago' '+%Y-%m-%d %H:%M:%S')"
+          count=$(git log --since="$since" --grep='Cloud-Run:' --oneline | wc -l | tr -d ' ')
+          echo "Cloud-shipped commits in last 24h: $count"
           if [ "$count" -ge 12 ]; then
-            echo "Daily ceiling reached (12 commits / 24h). Exiting cleanly — no work this tick."
+            echo "Cloud ceiling reached (12 cloud-shipped commits / 24h). Exiting cleanly — no work this tick."
             echo "skip=true" >> "$GITHUB_OUTPUT"
           else
             echo "skip=false" >> "$GITHUB_OUTPUT"
@@ -131,8 +131,13 @@ jobs:
             2. Skip /critique. The reader sub-agent depends on a Chrome MCP that is not available on the runner. /critique stays a local-only ritual.
             3. /expand may run; candidates land in plan/PHASE_CANDIDATES.md. Promotion happens only via local /oversight — do not promote candidates from cloud.
             4. The verify gate (`pnpm verify`) and deploy gate (`pnpm deploy:check`) are non-negotiable. Same as local. NEVER --no-verify.
-            5. Commit author is github-actions[bot] (already configured by the workflow). Do not change it.
-            6. If the tick cannot ship cleanly (red verify, red deploy, blocked phase, no work to do, anything else), do NOT half-commit. Either:
+            5. Commit author is daretodave via ACTIONS_PAT (already configured by the workflow). Do not change it.
+            6. EVERY commit you ship in this tick MUST end with this exact trailer (a blank line before it, then the trailer as its own line):
+
+                  Cloud-Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+               This is how the next tick's ceiling check distinguishes cloud-shipped commits from the user's local work — both have the same author. If a commit lacks this trailer it does not count toward the cloud ceiling, which would let the loop run away. Treat the trailer as non-negotiable, like the verify gate. agents.md's "no Co-Authored-By trailers, plain commit message bodies" rule has an explicit carve-out for this single trailer; nothing else.
+            7. If the tick cannot ship cleanly (red verify, red deploy, blocked phase, no work to do, anything else), do NOT half-commit. Either:
                - exit cleanly with a one-line note in the action log explaining why no work shipped this tick, or
                - if there is a real failure to surface, open a GitHub issue with `gh issue create --title "Cloud march failed: <iso-date>" --label triage:cloud-failed --body "<context + run URL>"` and exit. The next scheduled tick picks it up via /triage.
 
