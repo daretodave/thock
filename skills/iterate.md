@@ -224,8 +224,22 @@ here — no fix shipped.
 
 For each category, default delegation:
 
-- **Content gaps** → `content-curator` sub-agent. Pass it the topic,
-  pillar, target word count, voice guidelines from `bearings.md`.
+- **Content gaps** → `content-curator` for the MDX prose, then
+  `brander` for the article's hero SVG. New articles ship as a single
+  bundle: prose at `apps/web/src/content/articles/<slug>.mdx` + hero
+  at `apps/web/public/hero-art/<slug>.svg` (per `plan/bearings.md` §
+  "Article hero art" — locked 2026-05-09) + provenance JSON sibling
+  + frontmatter `heroImage` and `heroImageAlt` set in the same
+  iterate commit. **Never commit a new article with `heroImage:
+  null`** — the audit's "articles missing `heroImage`" finding
+  (§4.A) exists to backfill *already-shipped* articles, not to let
+  new ones ship art-less. Pass content-curator the topic, pillar,
+  target word count, and voice guidelines from `bearings.md`. Pass
+  brander the article's pillar + a one-line subject mapping
+  (switch-deep-dive → cross-section, layout piece → silhouette,
+  build piece → keyboard outline + callout, trends piece →
+  sparkline, etc., per the directive's pillar examples) plus the
+  per-article splash hue.
 - **Data gaps** → follow `skills/ship-data.md` §5 inline (or
   effectively re-enter the ship-data flow within this tick).
 - **SEO / link integrity / a11y / tests** → main agent implements.

@@ -3,35 +3,59 @@
 > Latest findings from `/iterate audit` and `/oversight`. Open
 > items live here until a shipping skill drains them.
 
-> **POSTURE: brand-assets first** (set via `/oversight`
-> 2026-05-09T12:30Z). `/march` should not pick up phase 15+
-> until the brand-asset backlog drains via `/ship-asset`. The
-> autonomous loop has no `/ship-asset` lane — the user runs
-> `/ship-asset` directly until the backlog clears, then resumes
-> `/march`. Order: (1) favicon, (2) default OG template,
-> (3) per-pillar OG variants, (4) hero placeholders for the seed
-> articles. `/iterate` may still drain non-asset findings (e.g.
-> the open user-jot on /group-buys) without violating this
-> posture.
+> **POSTURE: drained 2026-05-09** — the brand-assets-first
+> posture set at 12:30Z is cleared. All four drain items shipped
+> the same day: (1) favicon — `apps/web/src/app/icon.svg` +
+> `apple-icon.tsx` wired via Next App Router auto-discovery
+> (`0e7c9fd`); (2) default OG — already in place at
+> `apps/web/src/app/opengraph-image.tsx` since phase 4 (`fc1b0b0`);
+> (3) per-pillar OG variants — five `apps/web/src/app/<pillar>/opengraph-image.tsx`
+> handlers + shared `<PillarOGContent>` template (`0dab0a8`);
+> (4) hero placeholders for the six seed articles — SVGs at
+> `apps/web/public/hero-art/<slug>.svg` + provenance JSON siblings
+> + frontmatter `heroImage`/`heroImageAlt` wiring (`0e7c9fd`).
+> `/march` resumes normal dispatch — phase 15 (Newsletter) is the
+> next pending phase.
 
-> **Iterate-bias category: brand-assets-first**. The next
-> `/iterate` tick that runs while the posture is in effect
-> should drain the user-jot on /group-buys (a one-record data
-> fix) but otherwise defer to /ship-asset.
+> **Iterate-bias category: cleared 2026-05-09** along with the
+> posture. Iterate scoring returns to category-neutral.
 
-> **Article hero art directive (locked 2026-05-09):** every
-> article (current and future) renders a colorful keyboard SVG
-> as its hero placeholder until real photography backfills.
-> Style: simple, single splash of color, line-drawing weight
-> consistent across articles, illustrative of the article's
-> subject (e.g. a switch cross-section for switch-deep-dives, a
-> keycap profile silhouette for keycap pieces, a keyboard
-> outline for build pieces). The `content-curator` and
-> `/ship-asset` agents are the producers. Hero SVGs land under
-> `apps/web/public/hero-art/<slug>.svg` and the article
-> frontmatter `heroImage` field references the path.
+> **Article hero art directive (locked 2026-05-09 — durable
+> after the posture drained):** every article (current and future)
+> renders a colorful keyboard SVG as its hero placeholder until
+> real photography backfills. Style: simple, single splash of
+> color, line-drawing weight consistent across articles,
+> illustrative of the article's subject (switch cross-section
+> for switch-deep-dives, keycap profile silhouette for keycap
+> pieces, keyboard outline + callout for build pieces, sparkline
+> for trends pieces, layout silhouette for ergonomic pieces).
+> Hero SVGs land under `apps/web/public/hero-art/<slug>.svg` with
+> a sibling `<slug>.svg.json` provenance file. The article
+> frontmatter `heroImage` field references the absolute path.
+>
+> **Forward-looking wiring (added 2026-05-09 same drain):** new
+> articles drafted by `/iterate` no longer ship art-less. The
+> iterate skill's content-gap delegation now bundles
+> `content-curator` (prose) + `brander` (hero SVG) + frontmatter
+> wiring as a single commit — see `skills/iterate.md` § Step 3.
+> The audit's "articles missing `heroImage`" finding (§4.A) is
+> reserved for backfilling already-shipped articles, not for
+> letting new ones slip through. Non-article asset findings
+> (broken favicon, missing OG variant, stale render) still go
+> through `/ship-asset` directly — that lane stays demand-pull
+> per `skills/ship-asset.md` §1.
 
 ## Drained findings (kept for audit-trail; do not re-open)
+
+### [x] Brand-assets-first posture — drain pass complete
+> Filed 2026-05-09T12:30Z by `/oversight` after six page-family
+> phases shipped on top of unshipped brand assets. Drained
+> 2026-05-09 in three commits: `0dab0a8` (per-pillar OG
+> handlers + shared `<PillarOGContent>` template), `0e7c9fd`
+> (favicon set + six seed-article hero SVGs + frontmatter
+> wiring + heroImage schema fix), and the same drain commit
+> that updated `skills/iterate.md` to bundle hero rendering
+> into new content shipping going forward. Phase 15+ unblocked.
 
 ### [x] [HIGH] Verification gap — `pnpm verify` doesn't exercise the production runtime
 > Filed 2026-05-08 by `/oversight`. Drained by phase 4b
