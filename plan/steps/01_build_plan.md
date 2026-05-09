@@ -35,7 +35,7 @@ the phase.
 - [x] Phase 13 — Group Buys (`/group-buys` + home widget retrofit) — `16380cd`
 
 **Cross-cutting (phases 14–17):**
-- [x] Phase 14 — Search (`/search` + header search affordance, MiniSearch index built at build time) — `<pending>`
+- [x] Phase 14 — Search (`/search` + header search affordance, MiniSearch index built at build time) — `aa46fed`
 - [ ] Phase 15 — Newsletter signup + RSS finalize (Buttondown embed, `/newsletter`, per-pillar feeds validated)
 - [ ] Phase 16 — Polish (`/404`, `/about`, `/sources`, footer, OG image templates per family, mobile menu, accessibility audit pass)
 - [ ] Phase 17 — Performance + meta (sitemap completeness, JSON-LD audit, lighthouse pass, image optimization audit, bundle size budget)
