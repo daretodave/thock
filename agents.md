@@ -198,6 +198,7 @@ calls go through `/oversight`, not a second interactive skill.
 | `triage` | `skills/triage.md` | Issue review — read open GitHub issues, classify, label, comment, route to the right backlog. Cheap fast-exit when 0 unlabeled issues. |
 | `expand` | `skills/expand.md` | Plan-expansion pass — read accumulated signals (audit, critique, triage, spec drift, design landings, data growth) and propose new phase candidates to `plan/PHASE_CANDIDATES.md`. **Posture: bold** (set in bearings); `/oversight` promotes. |
 | `march` | `skills/march.md` | Outer dispatcher: triage → critique → phase → data → expand → iterate. The autonomous-beast endgame. |
+| `jot` | `skills/jot.md` | **User-input quickfire.** You spotted something on the live site — drop a free-text observation; the skill writes one row to `plan/CRITIQUE.md`, commits, pushes, exits in seconds. Next `/iterate` tick scores it (with a `+0.5` user-source bump) against everything else and ships the fix. No questions back; same shape as `/ship-data add` — input via the slash argument. |
 | `oversight` | `skills/oversight.md` | **User-in-the-loop.** Pause autonomy, brief the user, ask targeted questions, adjust the plan, push the adjustments. **The only skill allowed to use `AskUserQuestion`.** Brand-setup taste calls (mood / accent / wordmark) are an `/oversight` topic too — the locked brief lands in `bearings.md` + `plan/AUDIT.md` rows that `/ship-asset` then drains. |
 | `ship-asset` *(adopt-by-need)* | `skills/ship-asset.md` | Render and ship one brand asset (OG image, favicon, social card, SVG → PNG, wordmark variant). Demand-pull only — drains findings filed by `/critique`, `/iterate`, or an `/oversight` brand pass. **Hard-gated on `Surface: site`/`hybrid`.** |
 
@@ -212,6 +213,7 @@ calls go through `/oversight`, not a second interactive skill.
 /triage                      # review unlabeled GitHub issues
 /expand                      # propose new phase candidates from accumulated signals
 /march                       # do the right thing (dispatches all of the above)
+/jot <text>                  # 5-second user-spotted note → plan/CRITIQUE.md → next /iterate picks it
 /oversight                   # course-correct (brief + questionnaire + adjustment); also the entry for brand taste calls
 /ship-asset                  # ship one brand asset (Surface-gated; demand-pull)
 /loop 30m /march             # autonomous loop

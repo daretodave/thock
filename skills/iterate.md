@@ -142,6 +142,24 @@ content gap can outrank a low-severity critique nitpick.
   4. Schema migration = 1.
 - Score = `impact × ease / 10`, clamped 0–10.
 
+### User-source bump (from `/jot`)
+
+Findings with `source: user` (filed via `/jot`) get a flat
+**`+0.5`** on their final score, capped at `10`. Apply this
+**after** `impact × ease / 10` and **before** the user-set
+bias multiplier below.
+
+Rationale: when the user has spotted something with their own
+eyes (footer padding, a confusing CTA, a stranded `<Mono>`
+span), it's almost always more valid than what the audit
+auto-detected. The flat add (rather than a multiplier) means
+high-severity user jots don't blow past everything; they just
+edge ahead of comparable auto-detected findings at the same
+severity. A user MED finding (default `/jot` severity) at
+ease 7 lands around `5×7/10 + 0.5 ≈ 4.0`, beating most
+ambient audit findings; a user HIGH lands around `8×7/10 +
+0.5 ≈ 6.1` and typically wins the next pass.
+
 ### User-set bias (from `/oversight`)
 
 Before scoring, check the top of `plan/AUDIT.md` for a line of the
@@ -154,7 +172,9 @@ form:
 If present, **multiply the score of every finding in that category
 by 1.5** before ranking. The bias is sticky until removed; the user
 clears it by running `/oversight reset` (which prompts to drop the
-bias) or editing `AUDIT.md` directly.
+bias) or editing `AUDIT.md` directly. Apply this **after** the
+user-source bump above (the multiplier sees the bumped score, but
+the cap at `10` still holds).
 
 Top 1 finding wins. Tie-break by:
 1. Findings that unblock other findings (cascade).
