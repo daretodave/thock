@@ -8,7 +8,12 @@ import { PartReference } from './PartReference'
 import { KeyboardImage } from './KeyboardImage'
 
 function SerifH2({ children }: { children?: ReactNode }): ReactElement {
-  return <h2 className="mt-12 mb-4 font-serif text-h2">{children}</h2>
+  // mt-16 (64px) — generous top margin so a preceding <Callout>
+  // (my-8 = 32px each side) or any other block element still leaves
+  // clear breathing room before the next section. User-jot 11d932d
+  // flagged H2s sitting flush with cheat-sheet Callouts when this
+  // was mt-12.
+  return <h2 className="mt-16 mb-4 font-serif text-h2">{children}</h2>
 }
 
 function SerifH3({ children }: { children?: ReactNode }): ReactElement {

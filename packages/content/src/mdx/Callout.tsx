@@ -19,7 +19,11 @@ export function Callout({
 }: CalloutProps): ReactElement {
   return (
     <aside
-      className={`my-6 border ${TONE[type]} bg-surface px-5 py-4 text-text-2`}
+      // my-8 (32px each side) — paired with SerifH2's mt-16 so a
+      // Callout block followed by an H2 has visible breathing room
+      // even after CSS margin-collapse picks the larger of the two.
+      // Was my-6; bumped per user-jot 11d932d.
+      className={`my-8 border ${TONE[type]} bg-surface px-5 py-4 text-text-2`}
       role="note"
     >
       {title && (

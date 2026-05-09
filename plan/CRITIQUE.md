@@ -128,15 +128,15 @@
 - source: user
 
 
-### [MED] /article/* — cheat-sheet / Callout block has no margin-bottom; next H2 collides (user jot)
+### [x] [MED] /article/* — cheat-sheet / Callout block has no margin-bottom; next H2 collides (user jot)
+- addressed in: pending commit (this tick)
 - pass: user-jot (commit 25ad482)
 - viewport: unspecified
 - auth_state: anonymous
 - category: visual
-- observation: on https://thock-coral.vercel.app/article/beginners-switch-buying-guide the content above "the three families" is butting directly with the header "the three families" — basically that cheat sheet has no margin bottom. This might be an issue for all cheat sheets. Worth noting. Same at https://thock-coral.vercel.app/article/mode-sonnet-r2-group-buy-coverage where "What's new in R2" needs a little room above the header.
-- evidence: user-spotted at 2026-05-09T18:57Z across two articles, suggesting a cross-article pattern (likely the `<Callout>` MDX component used in both, or the article body's H2 lacking sufficient `margin-top` on the prose-paragraph rules added during pass-1 drainage).
-- suggested fix: [user has not specified — iterate to determine. Likely root cause is `.thock-prose` H2 margin-top vs. the trailing-block margin-bottom in `apps/web/src/styles/components.css`. Either bump the H2 `mt-` token (cleanest — fixes every adjacency) or add `margin-bottom` to the Callout / cheat-sheet wrapper. Verify with the two articles cited above.]
-- source: user
+- root cause: `<Callout>` (`my-6` = 24px each side) followed directly by `<SerifH2>` (`mt-12` = 48px) collapses to a 48px gap per standard CSS margin-collapse. Visually the bordered, tinted Callout block reads as claiming more space than its 24px outer margin, so the 48px gap above the next H2 didn't feel like deliberate breathing room — the two blocks read as flush. User confirmed the symptom on both `/article/beginners-switch-buying-guide` (Callout "Cheat sheet" → H2 "The three families") and `/article/mode-sonnet-r2-group-buy-coverage` (Callout "Group-buy timing" → H2 "What's new in R2").
+- fix: bumped both sides of the boundary so any reader perceives clear separation: `packages/content/src/mdx/components.tsx` SerifH2 `mt-12` → `mt-16` (48px → 64px); `packages/content/src/mdx/Callout.tsx` `my-6` → `my-8` (24px → 32px each side). Margin-collapse picks the larger neighbour, so a Callout-followed-by-H2 now lands at max(32, 64) = 64px gap rather than 48px. The change is global across every article — addresses the user's "this might be an issue for all cheat sheets" implicit ask without per-instance edits.
+- regression guard: new `packages/content/src/__tests__/mdx/spacing.test.tsx` (2 tests) asserts (a) `<Callout>` carries `my-8` and not the legacy `my-6`, and (b) `mdxComponents.h2` carries `mt-16` and not the legacy `mt-12`. Future Tailwind-class tweaks will fail loud if the spacing regresses.
 
 
 ### [LOW] /trends/tracker — every editor's-note cell is a uniform em dash
