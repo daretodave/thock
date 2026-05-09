@@ -3,12 +3,12 @@
 > Latest findings from `/iterate audit` and `/oversight`. Open
 > items live here until a shipping skill drains them.
 
-> **Bias: external-critique (set via /oversight 2026-05-09).**
-> `/iterate` should weight `plan/CRITIQUE.md` Pending findings
-> over fresh audit signal until those are drained. `/march` should
-> dispatch to `/iterate` (or `/ship-asset` for branding) instead
-> of `/ship-a-phase` while critique HIGHs are pending — phase 9+
-> is paused until the queue clears.
+> **Bias: cleared 2026-05-09** (was external-critique, set 2026-05-09).
+> All HIGH critique findings drained across 4 ticks: prose styles,
+> PartReference resolver binding, title duplication, mobile nav,
+> tag-chip category prefix. The remaining MED is a /tag/[slug]
+> stub which phase 12 ships. `/march` can resume phase 9 (Ideas
+> pillar) on the next tick.
 
 > **Brand-asset backlog (set via /oversight 2026-05-09):** the
 > site has no favicon, no per-route OG art, and no hero image

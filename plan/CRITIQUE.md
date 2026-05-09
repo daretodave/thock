@@ -2,33 +2,34 @@
 
 > Last pass: 2026-05-09T00:10:00Z at commit 16b53c3
 > Pass count: 1
-> Iterate-bias category: external-critique  (set automatically by march; cleared by oversight)
+> Iterate-bias category: (cleared 2026-05-09 after queue drained — phase 9+ resumes next tick)
 
 > External-observer feedback for thock. Populated by `/critique`,
 > drained by `/iterate`. See `skills/critique.md` for the contract.
 
 ## Pending
 
-### [MED] /news — pillar advertises "1 article · newest first" but renders zero cards
-- pass: 1 (commit 16b53c3)
+### [MED] /tag/[slug] — pillar stub advertises "N articles" but renders zero cards
+- pass: 1 (commit 16b53c3 — narrowed to /tag from broader /news+/tag finding 2026-05-09)
 - viewport: both
 - category: navigation
-- observation: The news pillar landing claims "1 ARTICLE · NEWEST FIRST" and then renders only the "Lands in Phase 7" stub note — no card. The real Mode Sonnet R2 news article exists at `/article/mode-sonnet-r2-group-buy-coverage` and is shown on the home page, so a curious reader who clicks "News" from the header concludes the site is broken. Same shape on `/tag/linear` (advertises "3 articles" with no links).
-- evidence: Page text on `/news`: "pillar / news / Curated coverage… / 1 article · newest first / Lands in Phase 7". `/article/mode-sonnet-r2-group-buy-coverage` renders a real H1.
-- suggested fix: Either render the real article cards above the "Lands in Phase X" note (one-card stub is fine), or change the count line to "1 article — full pillar lands Phase 7" with the count linking to the slug, so a path out exists. Apply the same fix on `/tag/<slug>` stubs.
+- observation: The original critique paired /news and /tag/[slug] as the same root cause: stub pages advertising an article count with no card list below. Phase 7 shipped /news with a real lead + archive, so the /news leg is closed. The /tag/[slug] leg remains — phase 12 ships the tag-pages family with the article list and clickable `<TagChip>` cross-link retrofit. Until phase 12, /tag/[slug] keeps the PageStub.
+- suggested fix: ship phase 12 (tag pages), or — if the queue stalls — patch PageStub to render a "browse N articles tagged X" anchor list above the "Lands in Phase 12" copy.
 - source: browser
 
-### [MED] /trends/tracker — first row collides with the table header
-- pass: user-jot (commit 285e423)
-- viewport: unspecified
-- auth_state: anonymous
-- category: visual
-- observation: on the trends tracker page the rows e.g "01 Gateron Oil King" is colliding with the table header.
-- evidence: user-spotted at 2026-05-09T10:35:00Z
-- suggested_fix: [user has not specified — iterate to determine]
-- source: user
-
 ## Done
+
+### [x] [MED] /trends/tracker — first row collides with the table header (user jot)
+- addressed in: pending commit (this tick)
+- pass: user-jot (commit 285e423)
+- root cause: `<TrackerRow>` had `first:pt-0 first:border-t-0` to clean up standalone use, but inside `<TrackerTable>` the header row sits directly above the first body row. Zeroing the first row's top padding made "01 Gateron Oil King" sit flush against the header label cells with no breathing room.
+- fix: drop `first:pt-0` from the TrackerRow grid className. The first row now keeps its `py-4` (16px) top padding, giving clear separation from the header. `first:border-t-0` stays so the row's top border doesn't double up against the header's `border-b`.
+- regression guard: new e2e in `apps/e2e/tests/trends.spec.ts` asserts the first row's computed `padding-top` is greater than 8px at desktop width.
+
+### [x] [MED] /news — pillar advertises "1 article" but renders zero cards (resolved by phase 7)
+- addressed in: phase 7 (commit 80a0290)
+- pass: 1 (commit 16b53c3)
+- root cause: at filing time, `/news` was a phase-4 PageStub with no article list. Phase 7 replaced it with the canonical pillar landing (PillarHero + ArticleCard hero + PillarArchiveList). curl confirms `hero-card` testid renders. The /tag/[slug] half of this finding is split into a separate Pending row above; phase 12 closes it.
 
 ### [x] [HIGH] Tag chips like "#ALICE" read as person names to first-time visitors
 - addressed in: pending commit (this tick)

@@ -62,4 +62,24 @@ test.describe('trends tracker — phase 8', () => {
     expect(flat).toContain('"@type":"Dataset"')
     expect(flat).toContain('"@type":"CollectionPage"')
   })
+
+  test('first tracker row keeps top padding so it does not collide with the table header', async ({
+    page,
+  }) => {
+    // Regression guard for plan/CRITIQUE.md MED user-jot
+    // "first row collides with table header". TrackerRow's
+    // `first:pt-0` was zeroing out top padding on the first row,
+    // so "01 Gateron Oil King" sat flush against the header
+    // labels above it. Fix: drop first:pt-0 so every row keeps
+    // py-4 top spacing; first:border-t-0 stays to avoid doubling
+    // the border against the header's border-b.
+    await page.setViewportSize({ width: 1280, height: 900 })
+    await page.goto('/trends/tracker')
+    const firstRow = page.getByTestId('tracker-row').first()
+    const paddingTop = await firstRow.evaluate(
+      (el) => window.getComputedStyle(el).paddingTop,
+    )
+    const px = parseFloat(paddingTop)
+    expect(px).toBeGreaterThan(8)
+  })
 })

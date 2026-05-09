@@ -38,7 +38,7 @@ export function TrackerRow({
     <div
       data-testid="tracker-row"
       data-direction={row.direction}
-      className="grid grid-cols-[40px_1fr_auto] items-baseline gap-3 border-t border-border py-4 first:border-t-0 first:pt-0 md:grid-cols-[48px_minmax(0,1fr)_120px_120px_minmax(0,1.4fr)] md:items-center md:gap-6"
+      className="grid grid-cols-[40px_1fr_auto] items-baseline gap-3 border-t border-border py-4 first:border-t-0 md:grid-cols-[48px_minmax(0,1fr)_120px_120px_minmax(0,1.4fr)] md:items-center md:gap-6"
     >
       <span className="font-mono text-h3 text-text-3">{String(rank).padStart(2, '0')}</span>
       <div className="flex flex-col gap-1 md:gap-0">
