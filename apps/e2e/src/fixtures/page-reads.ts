@@ -45,7 +45,20 @@ export const pageReads: Record<string, PageRead> = {
       { kind: 'min-link-count', selector: '[data-testid="group-buy-row"]', min: 1 },
     ]),
   },
-  '/news': { pattern: '/news', ...html([{ kind: 'h1-matches', pattern: /news/i }]) },
+  '/news': {
+    pattern: '/news',
+    ...html([
+      { kind: 'h1-matches', pattern: /news/i },
+      // Phase 7: pillar landing always renders at least one card,
+      // either the hero pick or an archive row from the seed dataset.
+      {
+        kind: 'min-link-count',
+        selector:
+          '[data-testid="hero-card"], [data-testid="article-card-row"]',
+        min: 1,
+      },
+    ]),
+  },
   '/trends': {
     pattern: '/trends',
     ...html([{ kind: 'h1-matches', pattern: /trends/i }]),
