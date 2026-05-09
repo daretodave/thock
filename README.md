@@ -2,7 +2,16 @@
 
 > *thock* /θɒk/ — *n.* the deep, satisfying sound of a well-tuned mechanical keyboard switch bottoming out.
 
-An editorial content hub for mechanical keyboard enthusiasts. Lives at https://thock.netlify.app.
+[![march](https://github.com/daretodave/thock/actions/workflows/march.yml/badge.svg?branch=main)](https://github.com/daretodave/thock/actions/workflows/march.yml)
+[![site](https://img.shields.io/website?url=https%3A%2F%2Fthock.netlify.app&label=thock.netlify.app&up_message=live)](https://thock.netlify.app)
+[![built with](https://img.shields.io/badge/built%20with-claude%20code-d97757)](https://claude.com/claude-code)
+[![methodology: nexus](https://img.shields.io/badge/methodology-nexus-lightgrey)](https://github.com/daretodave/nexus)
+
+An editorial content hub for mechanical keyboard enthusiasts. Lives at [thock.netlify.app](https://thock.netlify.app).
+
+**This site is always being worked on.** An autonomous loop ships improvements 24/7 through a small set of slash commands — new content, broken-link fixes, schema updates, SEO catches, design landings. The cloud half ticks every 2h via [GitHub Actions](https://github.com/daretodave/thock/actions/workflows/march.yml); the local half runs on my laptop. No human in the per-commit loop, but every commit is gated by a hermetic verify (`typecheck → test → build → e2e`) and a post-push deploy gate.
+
+The methodology powering this is [**nexus**](https://github.com/daretodave/nexus) — a portable kit that turns any repo into an autonomous-loop project. If you want to do the same to your own repo, start there.
 
 The product spec is in [`spec.md`](./spec.md). The autonomous build loop is documented below.
 
