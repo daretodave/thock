@@ -93,7 +93,15 @@ export const pageReads: Record<string, PageRead> = {
   },
   '/deep-dives': {
     pattern: '/deep-dives',
-    ...html([{ kind: 'h1-matches', pattern: /deep dives/i }]),
+    ...html([
+      { kind: 'h1-matches', pattern: /deep dives/i },
+      {
+        kind: 'min-link-count',
+        selector:
+          '[data-testid="hero-card"], [data-testid="article-card-row"]',
+        min: 1,
+      },
+    ]),
   },
   '/guides': {
     pattern: '/guides',
