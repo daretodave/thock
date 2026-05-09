@@ -54,6 +54,11 @@
 - suggested fix: rename the archive heading to "More Trends pieces" (matching the actual content) across all four pillar pages — single string change per file. Alternative: include the hero in the archive list so the heading stays accurate; risk is the hero-card visually duplicating into the list immediately below. Renaming is the lower-friction fix and matches the bearings voice.
 - source: browser
 
+### [x] [LOW] / footer — newsletter form aria-label is "Newsletter signup placeholder"
+- addressed in: pending phase 15 commit
+- pass: 2 (commit e270ced) — filed as a low-priority observation worth noting but expected to drain naturally with phase 15 newsletter shipping.
+- note: this was reader's eighth raw observation; I curated it down to six during pass-2 self-assessment with the rationale "Phase 15 will replace the form entirely." Phase 15's footer retrofit (replacing the inert form with `<ButtondownForm variant="footer">`) drops the placeholder aria-label as expected. Closing inline with the phase-15 ship, no separate iterate tick required.
+
 ### [LOW] /trends/tracker — every editor's-note cell is a uniform em dash
 - pass: 2 (commit e270ced)
 - viewport: desktop

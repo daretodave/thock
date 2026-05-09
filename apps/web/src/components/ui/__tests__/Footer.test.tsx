@@ -8,11 +8,19 @@ describe('<Footer>', () => {
     expect(screen.getByText(/© 2026 thock/i)).toBeInTheDocument()
   })
 
-  it('renders the placeholder newsletter signup form', () => {
+  it('renders the Buttondown footer form (phase 15 retrofit)', () => {
     render(<Footer />)
-    expect(screen.getByRole('form', { name: /newsletter signup/i })).toBeInTheDocument()
-    expect(screen.getByLabelText(/join the newsletter/i)).toBeInTheDocument()
-    expect(screen.getByRole('button', { name: /subscribe/i })).toBeInTheDocument()
+    const form = screen.getByTestId('buttondown-form-footer')
+    expect(form).toHaveAttribute(
+      'action',
+      'https://buttondown.com/api/emails/embed-subscribe/thock',
+    )
+    expect(form).toHaveAttribute('method', 'post')
+    const submit = form.querySelector(
+      'input[type="submit"]',
+    ) as HTMLInputElement | null
+    expect(submit).not.toBeNull()
+    expect(submit!.value).toBe('Subscribe')
   })
 
   it('renders the four footer nav links', () => {

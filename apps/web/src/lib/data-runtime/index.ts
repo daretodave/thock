@@ -30,6 +30,7 @@ import type {
 import type {
   Article,
   ArticlePartReference,
+  Newsletter,
   Tag,
   Pillar,
 } from '@thock/content'
@@ -55,6 +56,7 @@ type Manifest = {
   groupBuys: GroupBuy[]
   trends: TrendSnapshot[]
   articles: Article[]
+  newsletters: Newsletter[]
   tags: Tag[]
   generatedAt: string
 }
@@ -159,6 +161,13 @@ export function getRelatedArticles(article: Article, n = 4): Article[] {
     })
 
   return scored.slice(0, n).map((s) => s.article)
+}
+
+export function getAllNewsletters(): Newsletter[] {
+  return manifest.newsletters
+}
+export function getNewsletterBySlug(slug: string): Newsletter | null {
+  return manifest.newsletters.find((n) => n.slug === slug) ?? null
 }
 
 export function getAllTags(): Tag[] {

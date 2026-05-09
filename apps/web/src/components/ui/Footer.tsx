@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { Container, Wordmark, Stack } from '@thock/ui'
+import { ButtondownForm } from '@/components/newsletter/ButtondownForm'
 
 const FOOTER_NAV = [
   { label: 'About', href: '/about' },
@@ -21,34 +22,7 @@ export function Footer() {
               </p>
             </Stack>
 
-            <form
-              method="get"
-              action="/newsletter"
-              aria-label="Newsletter signup placeholder"
-              className="flex flex-col gap-2 md:items-end"
-            >
-              <label
-                htmlFor="footer-email"
-                className="font-mono text-micro uppercase tracking-[0.08em] text-text-3"
-              >
-                join the newsletter
-              </label>
-              <div className="flex w-full max-w-sm gap-2 md:justify-end">
-                <input
-                  id="footer-email"
-                  type="email"
-                  name="email"
-                  placeholder="you@example.com"
-                  className="flex-1 border border-border bg-surface px-3 py-2 text-small text-text placeholder:text-text-4 focus:outline-none focus:border-border-hi"
-                />
-                <button
-                  type="submit"
-                  className="border border-border-hi px-4 py-2 font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text transition-colors"
-                >
-                  Subscribe
-                </button>
-              </div>
-            </form>
+            <ButtondownForm variant="footer" />
           </div>
 
           <div className="flex flex-wrap items-center justify-between gap-4 border-t border-border pt-6">

@@ -7,6 +7,10 @@ export {
   type ArticlePartReference,
 } from './schema/frontmatter'
 export {
+  NewsletterFrontmatterSchema,
+  type NewsletterFrontmatter,
+} from './schema/newsletter'
+export {
   TagsConfigSchema,
   TagSchema,
   TagCategorySchema,

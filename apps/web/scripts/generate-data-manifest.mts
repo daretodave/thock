@@ -25,7 +25,11 @@ import {
   getAllGroupBuys,
   getAllTrendSnapshots,
 } from '@thock/data'
-import { getAllArticles, getAllTags } from '@thock/content'
+import {
+  getAllArticles,
+  getAllNewsletters,
+  getAllTags,
+} from '@thock/content'
 
 const here = dirname(fileURLToPath(import.meta.url))
 const outDir = resolve(here, '..', 'src', 'lib', 'data-runtime')
@@ -39,6 +43,7 @@ const manifest = {
   groupBuys: getAllGroupBuys(),
   trends: getAllTrendSnapshots(),
   articles: getAllArticles(),
+  newsletters: getAllNewsletters(),
   tags: getAllTags(),
   generatedAt: new Date().toISOString(),
 } as const
@@ -47,11 +52,12 @@ mkdirSync(outDir, { recursive: true })
 writeFileSync(outFile, `${JSON.stringify(manifest, null, 2)}\n`, 'utf-8')
 
 console.log(`[manifest] wrote ${outFile}`)
-console.log(`  switches:   ${manifest.switches.length}`)
-console.log(`  keycapSets: ${manifest.keycapSets.length}`)
-console.log(`  boards:     ${manifest.boards.length}`)
-console.log(`  vendors:    ${manifest.vendors.length}`)
-console.log(`  groupBuys:  ${manifest.groupBuys.length}`)
-console.log(`  trends:     ${manifest.trends.length}`)
-console.log(`  articles:   ${manifest.articles.length}`)
-console.log(`  tags:       ${manifest.tags.length}`)
+console.log(`  switches:    ${manifest.switches.length}`)
+console.log(`  keycapSets:  ${manifest.keycapSets.length}`)
+console.log(`  boards:      ${manifest.boards.length}`)
+console.log(`  vendors:     ${manifest.vendors.length}`)
+console.log(`  groupBuys:   ${manifest.groupBuys.length}`)
+console.log(`  trends:      ${manifest.trends.length}`)
+console.log(`  articles:    ${manifest.articles.length}`)
+console.log(`  newsletters: ${manifest.newsletters.length}`)
+console.log(`  tags:        ${manifest.tags.length}`)

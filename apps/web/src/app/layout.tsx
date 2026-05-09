@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Newsreader, IBM_Plex_Sans, JetBrains_Mono } from 'next/font/google'
 import { Header } from '@/components/ui/Header'
 import { Footer } from '@/components/ui/Footer'
+import { GoogleTagManager } from '@/components/analytics/GoogleTagManager'
 import { siteConfig } from '@thock/seo'
 import './globals.css'
 
@@ -53,6 +54,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${serif.variable} ${sans.variable} ${mono.variable}`}
     >
       <body className="bg-bg text-text font-sans antialiased min-h-screen flex flex-col">
+        <GoogleTagManager />
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
