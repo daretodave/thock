@@ -5,12 +5,18 @@
   "scripts": {
     "e2e": "playwright test",
     "e2e:install": "playwright install --with-deps chromium",
+    "test": "vitest",
+    "test:run": "vitest run",
     "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@thock/seo": "workspace:*"
   },
   "devDependencies": {
     "@playwright/test": "^1.48.2",
     "@thock/tsconfig": "workspace:*",
     "@types/node": "^20.17.6",
-    "typescript": "^5.6.3"
+    "typescript": "^5.6.3",
+    "vitest": "^2.1.5"
   }
 }

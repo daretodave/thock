@@ -15,6 +15,7 @@
   "dependencies": {
     "@thock/content": "workspace:*",
     "@thock/data": "workspace:*",
+    "@thock/seo": "workspace:*",
     "@thock/tokens": "workspace:*",
     "@thock/ui": "workspace:*",
     "next": "^15.0.3",

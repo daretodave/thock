@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { Newsreader, IBM_Plex_Sans, JetBrains_Mono } from 'next/font/google'
 import { Header } from '@/components/ui/Header'
 import { Footer } from '@/components/ui/Footer'
-import { siteConfig } from '@/lib/siteConfig'
+import { siteConfig } from '@thock/seo'
 import './globals.css'
 
 const serif = Newsreader({

@@ -1,13 +1,6 @@
 import Link from 'next/link'
 import { Container, Wordmark } from '@thock/ui'
-
-const PILLARS = [
-  { label: 'News', href: '/news' },
-  { label: 'Trends', href: '/trends' },
-  { label: 'Ideas', href: '/ideas' },
-  { label: 'Deep Dives', href: '/deep-dives' },
-  { label: 'Guides', href: '/guides' },
-] as const
+import { PILLARS } from '@thock/seo'
 
 export function Header() {
   return (
@@ -20,7 +13,7 @@ export function Header() {
         <nav aria-label="Primary" className="hidden md:flex items-center gap-6">
           {PILLARS.map((pillar) => (
             <Link
-              key={pillar.href}
+              key={pillar.slug}
               href={pillar.href}
               className="font-sans text-small text-text-2 hover:text-text transition-colors"
             >

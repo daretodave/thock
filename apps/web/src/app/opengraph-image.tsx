@@ -1,5 +1,5 @@
 import { ImageResponse } from 'next/og'
-import { siteConfig } from '@/lib/siteConfig'
+import { siteConfig } from '@thock/seo'
 
 export const runtime = 'edge'
 export const alt = `${siteConfig.name} — ${siteConfig.tagline}`

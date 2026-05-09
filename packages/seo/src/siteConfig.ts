@@ -1,8 +1,6 @@
 /**
- * siteConfig — minimal, hand-edited canonical metadata.
- *
- * The full @thock/seo package lands in phase 4. Phase 1 ships just
- * enough for the page title, description, and Open Graph defaults.
+ * Canonical site metadata. Single source of truth — every consumer
+ * reads through `@thock/seo`, never hard-codes these values.
  */
 export const siteConfig = {
   name: 'thock',
@@ -10,6 +8,11 @@ export const siteConfig = {
   description:
     'Editorial content hub for mechanical keyboard enthusiasts — switches, keycaps, layouts, and the people who obsess over them.',
   tagline: 'keyboards, deeply.',
+  publisher: {
+    '@type': 'Organization' as const,
+    name: 'thock',
+    url: 'https://thock.netlify.app',
+  },
 } as const
 
 export type SiteConfig = typeof siteConfig

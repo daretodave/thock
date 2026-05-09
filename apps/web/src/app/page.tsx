@@ -1,7 +1,18 @@
 import { Container, Stack } from '@thock/ui'
 import { getAllArticles } from '@thock/content'
-import { siteConfig } from '@/lib/siteConfig'
+import {
+  buildMetadata,
+  buildWebSiteJsonLd,
+  JsonLd,
+  siteConfig,
+} from '@thock/seo'
 import { HomeArticleList } from '@/components/home/HomeArticleList'
+
+export const metadata = buildMetadata({
+  title: siteConfig.tagline,
+  description: siteConfig.description,
+  path: '/',
+})
 
 /**
  * Phase 3 home — minimal article list to prove the @thock/content
@@ -13,6 +24,7 @@ export default function HomePage() {
 
   return (
     <Container as="section" className="py-12 sm:py-16">
+      <JsonLd graph={buildWebSiteJsonLd()} />
       <Stack gap={6}>
         <header className="flex flex-col gap-4">
           <span className="font-mono uppercase tracking-[0.1em] text-text-3 text-micro">
