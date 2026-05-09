@@ -20,3 +20,4 @@ export {
 } from './schema/tags'
 export * from './loaders/index'
 export { computeReadTime } from './util/readTime'
+export { countSourceTags } from './util/sources'

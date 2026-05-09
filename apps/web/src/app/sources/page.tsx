@@ -1,10 +1,17 @@
+import type { ReactElement } from 'react'
 import {
   buildBreadcrumbListJsonLd,
   buildMetadata,
   buildWebSiteJsonLd,
   JsonLd,
 } from '@thock/seo'
-import { PageStub } from '@/components/page-stub/PageStub'
+import { Container, Stack } from '@thock/ui'
+import { countSourceTags } from '@thock/content'
+import { getAllArticles } from '@/lib/data-runtime'
+import {
+  SourceCounts,
+  type ArticleSourceCount,
+} from '@/components/sources/SourceCounts'
 
 const PATH = '/sources'
 const TITLE = 'Sources'
@@ -17,7 +24,13 @@ export const metadata = buildMetadata({
   path: PATH,
 })
 
-export default function SourcesPage() {
+export default function SourcesPage(): ReactElement {
+  const articles = getAllArticles()
+  const rows: ArticleSourceCount[] = articles.map((article) => ({
+    article,
+    sourceCount: countSourceTags(article.body),
+  }))
+
   return (
     <>
       <JsonLd
@@ -29,12 +42,37 @@ export default function SourcesPage() {
           ]),
         ]}
       />
-      <PageStub
-        eyebrow="references"
-        title="sources"
-        lede={LEDE}
-        deferredTo="Phase 16"
-      />
+
+      <Container as="section" className="py-12 sm:py-16">
+        <Stack gap={6}>
+          <div className="flex flex-col gap-3 max-w-[60ch]">
+            <span
+              data-testid="sources-eyebrow"
+              className="font-mono text-micro uppercase tracking-[0.12em] text-accent-mu"
+            >
+              sources
+            </span>
+            <h1 className="font-serif italic text-display text-text">
+              where we got the facts
+            </h1>
+            <p className="font-serif text-h3 text-text-2">{LEDE}</p>
+          </div>
+
+          <div className="thock-prose max-w-[60ch]">
+            <p>
+              thock cites external references inline using a{' '}
+              <code>&lt;Source&gt;</code> MDX component. Every link is editor-
+              applied — auto-flagged at render with{' '}
+              <code>rel=&quot;sponsored noopener&quot;</code> for vendor URLs
+              and surfaced here so a reader can audit which articles do their
+              homework. The full per-citation index (article + quote + URL) is
+              the next step; today this page lists the per-article tally.
+            </p>
+          </div>
+
+          <SourceCounts rows={rows} />
+        </Stack>
+      </Container>
     </>
   )
 }

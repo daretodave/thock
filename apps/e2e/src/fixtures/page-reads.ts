@@ -127,7 +127,7 @@ export const pageReads: Record<string, PageRead> = {
   },
   '/about': {
     pattern: '/about',
-    ...html([{ kind: 'h1-matches', pattern: /about/i }]),
+    ...html([{ kind: 'h1-matches', pattern: /who we are/i }]),
   },
   '/newsletter': {
     pattern: '/newsletter',
@@ -146,7 +146,7 @@ export const pageReads: Record<string, PageRead> = {
   },
   '/sources': {
     pattern: '/sources',
-    ...html([{ kind: 'h1-matches', pattern: /sources/i }]),
+    ...html([{ kind: 'h1-matches', pattern: /where we got the facts/i }]),
   },
   '/article/[slug]': {
     pattern: '/article/[slug]',

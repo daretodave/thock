@@ -1,10 +1,12 @@
+import type { ReactElement } from 'react'
 import {
   buildBreadcrumbListJsonLd,
   buildMetadata,
   buildWebSiteJsonLd,
   JsonLd,
 } from '@thock/seo'
-import { PageStub } from '@/components/page-stub/PageStub'
+import { Container, Stack } from '@thock/ui'
+import { AboutBody } from '@/components/about/AboutBody'
 
 const PATH = '/about'
 const TITLE = 'About'
@@ -17,7 +19,7 @@ export const metadata = buildMetadata({
   path: PATH,
 })
 
-export default function AboutPage() {
+export default function AboutPage(): ReactElement {
   return (
     <>
       <JsonLd
@@ -29,12 +31,25 @@ export default function AboutPage() {
           ]),
         ]}
       />
-      <PageStub
-        eyebrow="about"
-        title="about thock"
-        lede={LEDE}
-        deferredTo="Phase 16"
-      />
+
+      <Container as="section" className="py-12 sm:py-16">
+        <Stack gap={6}>
+          <div className="flex flex-col gap-3 max-w-[60ch]">
+            <span
+              data-testid="about-eyebrow"
+              className="font-mono text-micro uppercase tracking-[0.12em] text-accent-mu"
+            >
+              about
+            </span>
+            <h1 className="font-serif italic text-display text-text">
+              who we are
+            </h1>
+            <p className="font-serif text-h3 text-text-2">{LEDE}</p>
+          </div>
+
+          <AboutBody />
+        </Stack>
+      </Container>
     </>
   )
 }
