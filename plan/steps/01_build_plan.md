@@ -262,7 +262,7 @@ Buttondown form (footer + dedicated `/newsletter` page):
 
 ```html
 <form
-  action="https://buttondown.com/api/emails/embed-subscribe/thok"
+  action="https://buttondown.com/api/emails/embed-subscribe/thock"
   method="post"
   class="embeddable-buttondown-form"
 >
@@ -270,7 +270,7 @@ Buttondown form (footer + dedicated `/newsletter` page):
   <input type="email" name="email" id="bd-email" />
   <input type="submit" value="Subscribe" />
   <p>
-    <a href="https://buttondown.com/refer/thok" target="_blank">
+    <a href="https://buttondown.com/refer/thock" target="_blank">
       Powered by Buttondown.
     </a>
   </p>
@@ -278,9 +278,8 @@ Buttondown form (footer + dedicated `/newsletter` page):
 ```
 
 Notes for the implementer:
-- The Buttondown handle in the URL is `thok` as provided by the
-  user (NOT `thock`). Preserve verbatim — they may have
-  registered the handle that way intentionally.
+- The Buttondown handle in the URL is `thock` (the project name,
+  matching the lowercase wordmark). Preserve verbatim.
 - Style with Tailwind utility classes inside a thin wrapper
   component; do not change the form's `action`, `method`, or
   input `name` attributes.
