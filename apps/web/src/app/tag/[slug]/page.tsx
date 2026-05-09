@@ -114,9 +114,10 @@ export default async function TagPage({
           </p>
           <Link
             href="/"
+            data-testid="tag-page-back-link"
             className="font-mono text-small uppercase tracking-[0.08em] text-text-3 hover:text-text"
           >
-            ← all tags
+            ← home
           </Link>
         </Stack>
       </Container>
