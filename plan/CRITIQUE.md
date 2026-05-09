@@ -9,15 +9,15 @@
 
 ## Pending
 
-### [MED] /tag/[slug] — pillar stub advertises "N articles" but renders zero cards
-- pass: 1 (commit 16b53c3 — narrowed to /tag from broader /news+/tag finding 2026-05-09)
-- viewport: both
-- category: navigation
-- observation: The original critique paired /news and /tag/[slug] as the same root cause: stub pages advertising an article count with no card list below. Phase 7 shipped /news with a real lead + archive, so the /news leg is closed. The /tag/[slug] leg remains — phase 12 ships the tag-pages family with the article list and clickable `<TagChip>` cross-link retrofit. Until phase 12, /tag/[slug] keeps the PageStub.
-- suggested fix: ship phase 12 (tag pages), or — if the queue stalls — patch PageStub to render a "browse N articles tagged X" anchor list above the "Lands in Phase 12" copy.
-- source: browser
+(empty)
 
 ## Done
+
+### [x] [MED] /tag/[slug] — pillar stub advertises "N articles" but renders zero cards (resolved by phase 12)
+- addressed in: phase 12 (pending commit)
+- pass: 1 (commit 16b53c3 — narrowed to /tag from broader /news+/tag finding 2026-05-09)
+- root cause: at filing time, `/tag/[slug]` was a phase-4 stub with the count text but no article list. Phase 12 replaces the stub with the canonical tag page — categorical-tinted header + chronological article list + JSON-LD CollectionPage/ItemList. Empty tags now render a clear "no articles tagged X yet" panel rather than a misleading count.
+
 
 ### [x] [MED] /trends/tracker — first row collides with the table header (user jot)
 - addressed in: pending commit (this tick)

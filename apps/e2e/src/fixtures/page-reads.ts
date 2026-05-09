@@ -147,6 +147,9 @@ export const pageReads: Record<string, PageRead> = {
   },
   '/tag/[slug]': {
     pattern: '/tag/[slug]',
+    // Some tag slugs in the seed have zero articles; the smoke
+    // walker hits all of them, so we don't require an article-card
+    // here. Phase 12's tag.spec.ts covers the populated case.
     ...html([{ kind: 'h1-matches', pattern: /^#/ }]),
   },
   '/sitemap.xml': {
