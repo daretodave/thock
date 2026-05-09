@@ -111,4 +111,26 @@ test.describe('article page family — canonical template', () => {
       )
     }
   })
+
+  test('document <title> applies the "— thock" suffix exactly once', async ({
+    page,
+  }) => {
+    // Regression guard for plan/CRITIQUE.md MED "every page <title>
+    // duplicates the site name". buildMetadata used to suffix here,
+    // and the layout's title.template applied the suffix again →
+    // "<headline> — thock — thock". The fix returns the raw title
+    // and lets the template apply once.
+    for (const path of [
+      '/',
+      '/news',
+      SEED,
+      '/trends/tracker',
+      '/tag/linear',
+    ]) {
+      await page.goto(path)
+      const title = await page.title()
+      const matches = title.match(/— thock/g) ?? []
+      expect(matches.length, `${path}: <title>="${title}"`).toBe(1)
+    }
+  })
 })

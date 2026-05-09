@@ -19,25 +19,37 @@ export type BuildMetadataInput = {
   author?: string
 }
 
-const TITLE_TEMPLATE = (title: string): string =>
-  `${title} — ${siteConfig.name}`
+/**
+ * Page title with the site-name suffix applied exactly once. Used
+ * across the document `<title>`, the OG title, and the Twitter
+ * title.
+ *
+ * Returned via `title: { absolute }` so Next.js skips the parent
+ * layout's `title.template`. Without `absolute`, the template
+ * applies on every nested route (`<title>News — thock — thock`)
+ * but skips the root segment (`<title>keyboards, deeply.`),
+ * yielding inconsistent suffix counts. Filed as MED critique
+ * "every page `<title>` duplicates the site name".
+ */
+const SUFFIXED = (title: string): string => `${title} — ${siteConfig.name}`
 
 /**
  * Compose a Next.js Metadata object for one route. Centralizes
- * canonical URL, OG defaults, and the `<title>` template.
+ * canonical URL, OG defaults, and the document `<title>`.
  */
 export function buildMetadata(input: BuildMetadataInput): Metadata {
   const url = canonicalUrl(input.path)
   const isArticle = input.type === 'article'
+  const fullTitle = SUFFIXED(input.title)
 
   const meta: Metadata = {
-    title: TITLE_TEMPLATE(input.title),
+    title: { absolute: fullTitle },
     description: input.description,
     alternates: {
       canonical: url,
     },
     openGraph: {
-      title: TITLE_TEMPLATE(input.title),
+      title: fullTitle,
       description: input.description,
       url,
       siteName: siteConfig.name,
@@ -53,7 +65,7 @@ export function buildMetadata(input: BuildMetadataInput): Metadata {
     },
     twitter: {
       card: 'summary_large_image',
-      title: TITLE_TEMPLATE(input.title),
+      title: fullTitle,
       description: input.description,
       ...(input.ogImage ? { images: [input.ogImage] } : {}),
     },

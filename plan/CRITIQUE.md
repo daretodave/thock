@@ -27,15 +27,6 @@
 - suggested fix: Either render the real article cards above the "Lands in Phase X" note (one-card stub is fine), or change the count line to "1 article — full pillar lands Phase 7" with the count linking to the slug, so a path out exists. Apply the same fix on `/tag/<slug>` stubs.
 - source: browser
 
-### [MED] every page — `<title>` duplicates the site name
-- pass: 1 (commit 16b53c3)
-- viewport: both
-- category: meta
-- observation: Browser tab titles end with "— thock — thock" on every URL visited (home, articles, pillar landings, tag pages). The site-name suffix is being applied twice in the metadata pipeline.
-- evidence: Tab titles, verbatim: "Why the Gateron Oil King sounds the way it does — thock — thock", "News — thock — thock", "#linear — thock — thock", "keyboards, deeply. — thock — thock".
-- suggested fix: In `packages/seo/`, drop the second `— thock` suffix — most likely the per-page title already includes it, then `Metadata.title.template` adds it again. Switch one or the other off.
-- source: browser
-
 ### [HIGH] Tag chips like "#ALICE" read as person names to first-time visitors
 - pass: 1 (filed via /oversight 2026-05-09 from user observation)
 - viewport: both
@@ -46,6 +37,13 @@
 - source: user
 
 ## Done
+
+### [x] [MED] every page — `<title>` duplicates the site name
+- addressed in: pending commit (this tick)
+- pass: 1 (commit 16b53c3)
+- root cause: `packages/seo/src/buildMetadata.ts` was suffixing the title (`"News — thock"`) and `apps/web/src/app/layout.tsx` then applied its `title.template = "%s — thock"` on top, yielding `"News — thock — thock"`. The root segment (`/`) was inconsistent because Next.js skips the layout's template for the root page itself, so home rendered with a single suffix while every nested route doubled.
+- fix: switch buildMetadata to return `title: { absolute: "<title> — thock" }` so Next.js skips the template entirely. The suffix now appears exactly once on every route, root or nested. OG / Twitter title slots stay fully suffixed (the template never applied there).
+- regression guard: new e2e test in `apps/e2e/tests/article.spec.ts` walks `/`, `/news`, `/article/<slug>`, `/trends/tracker`, `/tag/<slug>` and asserts each `<title>` contains exactly one `— thock`. Updated unit test in `packages/seo/src/__tests__/buildMetadata.test.ts` checks the `{ absolute }` shape.
 
 ### [x] [HIGH] /article/gateron-oil-king-deep-dive — `[unknown part:oil-king]` placeholder leaks into article prose
 - addressed in: pending commit (this tick)

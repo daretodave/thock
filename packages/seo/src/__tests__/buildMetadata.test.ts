@@ -3,13 +3,32 @@ import { buildMetadata } from '../buildMetadata'
 import { siteConfig } from '../siteConfig'
 
 describe('buildMetadata', () => {
-  it('applies the site title template', () => {
+  it('returns title as { absolute } so the layout template applies exactly once', () => {
+    // Regression guard for plan/CRITIQUE.md MED "every page <title>
+    // duplicates the site name". The layout's `title.template`
+    // applies on nested routes but skips the root segment, so a
+    // raw string here yielded "Page — thock — thock" on /news but
+    // just "keyboards, deeply." on /. Using { absolute } skips the
+    // template entirely and produces consistent single-suffix
+    // titles on every page.
     const meta = buildMetadata({
       title: 'News',
       description: 'desc',
       path: '/news',
     })
-    expect(meta.title).toBe(`News — ${siteConfig.name}`)
+    expect(meta.title).toEqual({ absolute: `News — ${siteConfig.name}` })
+  })
+
+  it('matches the document title across openGraph and twitter slots', () => {
+    const meta = buildMetadata({
+      title: 'News',
+      description: 'desc',
+      path: '/news',
+    })
+    const og = meta.openGraph as { title?: string } | undefined
+    const tw = meta.twitter as { title?: string } | undefined
+    expect(og?.title).toBe(`News — ${siteConfig.name}`)
+    expect(tw?.title).toBe(`News — ${siteConfig.name}`)
   })
 
   it('sets canonical to the absolute url', () => {
