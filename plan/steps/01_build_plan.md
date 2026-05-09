@@ -21,6 +21,7 @@ the phase.
 - [x] Phase 2 — `@thock/data` package (Zod schemas → JSON Schema, validate script, loaders for switches/keycap-sets/boards/vendors/group-buys/trends, 1 seed record per type) — `fdc3489`
 - [x] Phase 3 — `@thock/content` package + seed articles (MDX loaders, frontmatter Zod, tags.json taxonomy, 6 seed articles across pillars, 3 seed group buys) — `21f153e`
 - [x] Phase 4 — URL contract + hermetic e2e infrastructure (every route from bearings exists with stub or real page; `@thock/seo` with buildMetadata + JSON-LD + canonicalUrl + siteConfig; sitemap.xml; robots.txt; global + per-pillar RSS feeds; **`canonical-urls` fixture**; **`page-reads` fixture**; **smoke walker over every canonical URL**; **mobile spec template**; **`pnpm verify` runs e2e against `next start` on `:4173` as a hard gate**) — `fc1b0b0`
+- [ ] Phase 4b — Production runtime hotfix + content cleanup (P0; prepended via `/oversight` 2026-05-08 after phase 4 deployed and every dynamic route returned HTTP 500 on Netlify — `/article/[slug]`, `/tag/[slug]`, `/sitemap.xml`, `/feed.xml`, `/feed/[pillar].xml`. Root cause: `@thock/data`'s `import.meta.url` + walk-for-`pnpm-workspace.yaml` doesn't resolve in Netlify's bundled lambda. Ship: loader fix (Approach A — pre-built manifests under `apps/web/.thock-data/` is the recommended path); new `pnpm deploy:smoke` post-push gate that hits one URL per pattern against the live site and exits non-zero on any non-2xx; nip the fabricated author names — replace `Mara Lin` / `Reza Patel` / `Tess Aoyama` with `thock` byline across all 6 seed articles. **Detailed brief: `phase_4b_runtime_fix.md`.**)
 
 **Page families (phases 5–13):**
 - [ ] Phase 5 — Article page (canonical template — `/article/[slug]`)
@@ -146,6 +147,27 @@ inherits):**
 After phase 4, every page-family phase (5–13) ships its own
 `page-reads` entry + a per-family e2e spec; the smoke walker
 catches everything else for free.
+
+### Phase 4b — Production runtime hotfix + content cleanup
+
+Prepended via `/oversight` 2026-05-08 after phase 4 deployed.
+The deploy went green but every dynamic route on the live site
+(`/article/[slug]`, `/tag/[slug]`, `/sitemap.xml`, `/feed.xml`,
+`/feed/[pillar].xml`) returned HTTP 500. Root cause: the
+`@thock/data` loader uses `import.meta.url` to walk up to
+`pnpm-workspace.yaml`, which doesn't resolve in Netlify's
+bundled lambda. The local `pnpm verify` passed because the e2e
+harness runs against `next start` with the full repo on disk;
+production runs in an isolated function. Phase 4b ships: (1) a
+loader fix that works in any runtime — recommended path is
+pre-built manifests under `apps/web/.thock-data/` consumed by
+the loaders; (2) a new `pnpm deploy:smoke` post-push gate that
+hits one URL per pattern against `https://thock.netlify.app`
+and exits non-zero on any non-2xx, closing the gap that let
+the regression through; (3) replacement of fabricated author
+bylines (`Mara Lin`, `Reza Patel`, `Tess Aoyama`) with
+`thock` across all 6 seed articles per user directive.
+**Detailed brief: `phase_4b_runtime_fix.md`.**
 
 ### Phase 5 — Article page (canonical template)
 
