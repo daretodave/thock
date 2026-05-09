@@ -18,6 +18,16 @@
 - suggested fix: Either render the real article cards above the "Lands in Phase X" note (one-card stub is fine), or change the count line to "1 article — full pillar lands Phase 7" with the count linking to the slug, so a path out exists. Apply the same fix on `/tag/<slug>` stubs.
 - source: browser
 
+### [MED] /trends/tracker — first row collides with the table header
+- pass: user-jot (commit 285e423)
+- viewport: unspecified
+- auth_state: anonymous
+- category: visual
+- observation: on the trends tracker page the rows e.g "01 Gateron Oil King" is colliding with the table header.
+- evidence: user-spotted at 2026-05-09T10:35:00Z
+- suggested_fix: [user has not specified — iterate to determine]
+- source: user
+
 ## Done
 
 ### [x] [HIGH] Tag chips like "#ALICE" read as person names to first-time visitors
