@@ -26,7 +26,7 @@ import {
 const PATH = '/trends/tracker'
 const BASE_TITLE = 'Trends Tracker'
 const LEDE =
-  'A weighted weekly score across community chatter, retail availability, and editorial mentions. Each row links to the deep dive that earned it.'
+  'A weighted weekly score across community chatter, retail availability, and editorial mentions. Row names link to their deep dive when one has been published.'
 
 export function generateMetadata() {
   const snapshot = getLatestTrendSnapshot()

@@ -42,7 +42,17 @@ export function TrackerRow({
     >
       <span className="font-mono text-h3 text-text-3">{String(rank).padStart(2, '0')}</span>
       <div className="flex flex-col gap-1 md:gap-0">
-        <span className="font-serif text-h3 text-text">{row.name}</span>
+        {noteHref ? (
+          <Link
+            data-testid="tracker-row-name-link"
+            href={noteHref}
+            className="font-serif text-h3 text-text hover:text-accent"
+          >
+            {row.name}
+          </Link>
+        ) : (
+          <span className="font-serif text-h3 text-text">{row.name}</span>
+        )}
         {noteHref && noteText && (
           <Link
             href={noteHref}

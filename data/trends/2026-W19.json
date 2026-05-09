@@ -8,7 +8,7 @@
       "direction": "up",
       "score": 42,
       "spark": [12, 18, 22, 28, 30, 35, 38, 42],
-      "articleSlug": null
+      "articleSlug": "gateron-oil-king-deep-dive"
     },
     {
       "name": "MT3 profile",
@@ -24,7 +24,7 @@
       "direction": "down",
       "score": -18,
       "spark": [-2, -5, -8, -10, -12, -15, -16, -18],
-      "articleSlug": null
+      "articleSlug": "alice-layout-decline"
     },
     {
       "name": "Mode Designs",
@@ -43,5 +43,5 @@
       "articleSlug": null
     }
   ],
-  "updatedAt": "2026-05-08T00:00:00.000Z"
+  "updatedAt": "2026-05-09T00:00:00.000Z"
 }

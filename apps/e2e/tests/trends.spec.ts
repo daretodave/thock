@@ -63,6 +63,34 @@ test.describe('trends tracker — phase 8', () => {
     expect(flat).toContain('"@type":"CollectionPage"')
   })
 
+  test('row names link to their deep dive when an article exists', async ({
+    page,
+  }) => {
+    // Regression guard for plan/CRITIQUE.md HIGH "lede claims rows
+    // link to deep dives, but no row links anywhere" (pass 2,
+    // commit 47a6363). After this fix, the seed snapshot's two
+    // rows whose name matches a published article (Gateron Oil
+    // King → gateron-oil-king-deep-dive, Alice layout →
+    // alice-layout-decline) render their name as a Link to the
+    // article. Other rows keep the plain-span treatment because
+    // no deep dive exists yet.
+    await page.setViewportSize({ width: 1280, height: 900 })
+    await page.goto('/trends/tracker')
+    const oilKing = page.getByRole('link', {
+      name: 'Gateron Oil King',
+      exact: true,
+    })
+    await expect(oilKing).toHaveAttribute(
+      'href',
+      '/article/gateron-oil-king-deep-dive',
+    )
+    const alice = page.getByRole('link', {
+      name: 'Alice layout',
+      exact: true,
+    })
+    await expect(alice).toHaveAttribute('href', '/article/alice-layout-decline')
+  })
+
   test('first tracker row keeps top padding so it does not collide with the table header', async ({
     page,
   }) => {

@@ -38,15 +38,48 @@ describe('<TrackerRow>', () => {
     render(
       <TrackerRow
         rank={1}
-        row={row({ articleSlug: 'oil-king-deep-dive' })}
+        row={row({ name: 'Oil King', articleSlug: 'oil-king-deep-dive' })}
         article={article}
       />,
     )
-    const link = screen
-      .getByTestId('tracker-row')
-      .querySelector('a[href="/article/oil-king-deep-dive"]')
-    expect(link).not.toBeNull()
-    expect(link).toHaveTextContent(/why the oil king/i)
+    const links = Array.from(
+      screen
+        .getByTestId('tracker-row')
+        .querySelectorAll('a[href="/article/oil-king-deep-dive"]'),
+    )
+    const noteLink = links.find((a) =>
+      /why the oil king/i.test(a.textContent ?? ''),
+    )
+    expect(noteLink).toBeDefined()
+  })
+
+  it('renders the row name as a link to /article/<slug> when an article resolves', () => {
+    const article = makeArticle({
+      slug: 'oil-king-deep-dive',
+      frontmatter: {
+        ...makeArticle().frontmatter,
+        slug: 'oil-king-deep-dive',
+        title: 'Why the Oil King',
+      },
+    })
+    render(
+      <TrackerRow
+        rank={1}
+        row={row({ name: 'Oil King', articleSlug: 'oil-king-deep-dive' })}
+        article={article}
+      />,
+    )
+    const nameLink = screen.getByTestId('tracker-row-name-link')
+    expect(nameLink).toHaveAttribute('href', '/article/oil-king-deep-dive')
+    expect(nameLink).toHaveTextContent('Oil King')
+  })
+
+  it('renders the row name as plain text when no article resolves', () => {
+    render(<TrackerRow rank={2} row={row({ name: 'Lonesome Switch' })} />)
+    expect(screen.queryByTestId('tracker-row-name-link')).toBeNull()
+    expect(screen.getByTestId('tracker-row')).toHaveTextContent(
+      'Lonesome Switch',
+    )
   })
 
   it('renders an em-dash when no article resolves', () => {
