@@ -22,18 +22,26 @@ export type LatestByPillarProps = {
   /** All articles, already sorted by publishedAt desc by the page. */
   articles: Article[]
   tagsBySlug?: Map<string, Tag>
+  /**
+   * Slugs to exclude from both the per-pillar match AND the fallback
+   * pool. Use case: home page passes the hero article's slug so the
+   * grid never duplicates the hero card surfaced above the fold
+   * (critique pass 3 [MED]).
+   */
+  excludeSlugs?: ReadonlySet<string>
 }
 
 /**
  * Resolve the latest article per home pillar. If a pillar has no
  * matching article, fall through to the next-newest article from
- * any other pillar (excluding ones already used).
+ * any other pillar (excluding ones already used or in `excludeSlugs`).
  *
  * Exported for testability — `<LatestByPillar>` consumes it.
  */
 export function resolveLatestByPillar(
   articles: Article[],
   pillars: readonly Pillar[] = HOME_PILLAR_SET,
+  excludeSlugs: ReadonlySet<string> = new Set(),
 ): Article[] {
   const sorted = [...articles].sort((a, b) =>
     b.frontmatter.publishedAt.localeCompare(a.frontmatter.publishedAt),
@@ -43,14 +51,19 @@ export function resolveLatestByPillar(
 
   for (const pillar of pillars) {
     const match = sorted.find(
-      (a) => !used.has(a.slug) && a.frontmatter.pillar === pillar,
+      (a) =>
+        !used.has(a.slug) &&
+        !excludeSlugs.has(a.slug) &&
+        a.frontmatter.pillar === pillar,
     )
     if (match) {
       used.add(match.slug)
       out.push(match)
       continue
     }
-    const fallback = sorted.find((a) => !used.has(a.slug))
+    const fallback = sorted.find(
+      (a) => !used.has(a.slug) && !excludeSlugs.has(a.slug),
+    )
     if (fallback) {
       used.add(fallback.slug)
       out.push(fallback)
@@ -71,8 +84,9 @@ export function resolveLatestByPillar(
 export function LatestByPillar({
   articles,
   tagsBySlug,
+  excludeSlugs,
 }: LatestByPillarProps): ReactElement | null {
-  const picks = resolveLatestByPillar(articles)
+  const picks = resolveLatestByPillar(articles, HOME_PILLAR_SET, excludeSlugs)
   if (picks.length === 0) return null
 
   return (

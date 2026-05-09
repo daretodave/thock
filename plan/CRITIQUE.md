@@ -19,13 +19,15 @@
 - fix: re-added `'ideas'` to `HOME_PILLAR_SET` in slot order matching the header nav (news → trends → ideas → deep-dives → guides). Updated the comment to record that the resolver's empty-pillar fallback handles low-volume pillars cleanly. Restructured the grid layout from `lg:grid-cols-4` → `lg:grid-cols-3 xl:grid-cols-5` so 5 cards lay out cleanly across breakpoints (3 cols at lg, 5 cols at xl) — chosen over option (a) "rename to Selected pillars" because the header nav source-of-truth is 5 pillars and the section heading should match.
 - regression guard: rewrote the colocated `LatestByPillar.test.tsx` first case to construct an Ideas article and assert the resolver returns 5 picks in the bumped pillar order (news, trends, ideas, deep-dives, guides). Comment in the test cites this critique row so future Tailwind/grid tweaks fail loud if Ideas is dropped again.
 
-### [MED] / — Hero card and "By pillar" Trends slot both surface trends-tracker-preview, duplicating it above the fold
+### [x] [MED] / — Hero card and "By pillar" Trends slot both surface trends-tracker-preview, duplicating it above the fold
+- addressed in: pending commit (this tick)
+- issue: [mirror-skipped: token lacks repo:labels write — same 403 path as 4b8c793]
 - pass: 3 (commit 11c0777)
 - viewport: desktop
 - category: content
-- observation: The home hero card promotes `Reading the Trends Tracker`. Two rows below, the "By pillar" grid's Trends slot picks the same article — same hero image, same headline. A reader sees the identical card twice in the first viewport, which reads as a sparse-content placeholder more than as deliberate curation.
-- evidence: Hero card link ref_32 → `/article/trends-tracker-preview`; "By pillar" Trends card link ref_86 → same URL with identical heading and hero image. Cause is `apps/web/src/app/page.tsx`'s `latestByPillar = articles` (the unfiltered list) feeding `resolveLatestByPillar`, which doesn't know about the hero pick made by `pickHomeHero`.
-- suggested fix: thread the hero article slug into `resolveLatestByPillar` (or filter it out of `latestByPillar` at the page level) so the "By pillar" grid always picks the *next-most-recent* article in any pillar that already supplied the hero. One-line page-level filter; the helper signature already accepts a `pillars` arg, just add an `excludeSlugs?: Set<string>`.
+- root cause: `apps/web/src/app/page.tsx` set `const latestByPillar = articles` (unfiltered) and fed it to `<LatestByPillar>`, which had no awareness of the hero pick. Both surfaces independently picked `trends-tracker-preview` — the hero because it's the newest article overall (via `pickHero`), and the by-pillar Trends slot because it's the newest in the `trends` pillar. Reader saw the identical card twice in the first viewport.
+- fix: shipped exactly the row's suggested-fix shape. Threaded an optional `excludeSlugs?: ReadonlySet<string>` through both `resolveLatestByPillar` (third param, default empty `Set`) and `<LatestByPillar>` (third prop). The exclusion filter applies to both the per-pillar match AND the fallback pool, so the hero slug can never resurface anywhere in the grid. Home page wires `heroExcludeSlugs = new Set([heroArticle.slug])` (or `undefined` when no hero — defensive against the empty-articles edge case). Comment at the call site cites this critique row.
+- regression guard: new `resolveLatestByPillar` unit test "excludes slugs in excludeSlugs from both per-pillar match and fallback" constructs a trends-hero / trends-runner-up / news triplet and asserts the runner-up wins the trends slot when the hero is excluded. 212 unit tests pass (was 211 — the new test adds 1).
 
 ### [MED] /sources — every cited article shows a uniform "1 cite" badge, reading as a placeholder
 - pass: 3 (commit 11c0777)

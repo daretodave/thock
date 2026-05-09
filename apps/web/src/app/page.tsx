@@ -57,6 +57,14 @@ export default function HomePage(): ReactElement {
   const vendors = getAllVendors()
 
   const latestByPillar = articles
+  // Critique pass 3 [MED]: the hero card and the by-pillar Trends slot
+  // both surfaced trends-tracker-preview, duplicating it above the fold.
+  // Excluding the hero's slug from the by-pillar resolver guarantees the
+  // grid always picks the next-most-recent article in any pillar that
+  // already supplied the hero.
+  const heroExcludeSlugs = heroArticle
+    ? new Set<string>([heroArticle.slug])
+    : undefined
   const itemListPaths = [...articles]
     .sort((a, b) =>
       b.frontmatter.publishedAt.localeCompare(a.frontmatter.publishedAt),
@@ -122,6 +130,7 @@ export default function HomePage(): ReactElement {
         <LatestByPillar
           articles={latestByPillar}
           tagsBySlug={tagsBySlug}
+          excludeSlugs={heroExcludeSlugs}
         />
       </Container>
 
