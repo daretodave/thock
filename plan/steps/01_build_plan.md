@@ -28,7 +28,7 @@ the phase.
 - [x] Phase 6 — Home (`/` — hero pick, trending, latest-by-pillar, group-buys widget) — `f41bdeb`
 - [x] Phase 7 — News pillar (`/news`) — `80a0290`
 - [x] Phase 8 — Trends pillar + Trends Tracker (`/trends`, `/trends/tracker`) — `accb74f`
-- [ ] Phase 9 — Ideas & Builds pillar (`/ideas`)
+- [x] Phase 9 — Ideas & Builds pillar (`/ideas`) — `5597401`
 - [ ] Phase 10 — Deep Dives pillar (`/deep-dives`)
 - [ ] Phase 11 — Guides pillar (`/guides`)
 - [ ] Phase 12 — Tag pages (`/tag/[slug]`)
