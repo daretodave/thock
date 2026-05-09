@@ -1,13 +1,67 @@
 # Critique log
 
-> Last pass: 2026-05-09T00:10:00Z at commit 16b53c3
-> Pass count: 1
-> Iterate-bias category: (cleared 2026-05-09 after queue drained — phase 9+ resumes next tick)
+> Last pass: 2026-05-09T16:50:00Z at commit e270ced
+> Pass count: 2
+> Iterate-bias category: external-critique (set 2026-05-09 by pass 2 — six findings filed; iterate should drain the highest-scoring rows first)
 
 > External-observer feedback for thock. Populated by `/critique`,
 > drained by `/iterate`. See `skills/critique.md` for the contract.
 
 ## Pending
+
+### [HIGH] /article/* — no hero art; locked directive not yet implemented
+- pass: 2 (commit e270ced)
+- viewport: both
+- category: visual
+- observation: Every article — including the freshly-published `/article/trends-tracker-preview` — renders only eyebrow + H1 + lede + byline at the top of the page. There is no figure, image, or SVG above (or beside) the H1, even though `plan/bearings.md` § "Article hero art" (locked 2026-05-09 via /oversight) makes per-article colorful keyboard SVGs a durable directive. The article page reads as if its art slot is missing rather than intentionally minimal.
+- evidence: On https://thock-coral.vercel.app/article/trends-tracker-preview the article banner contains a link "Trends", an h1 "Reading the Trends Tracker", a serif lede, and the "thock · May 8, 2026 · 5 min read" line — and nothing else above it. A network filter for `.svg` returns no requests scoped to the article surface; no `<img>` or `<svg>` element exists in the article tree. Same shape across the other five seed articles.
+- suggested fix: ship one hero SVG per seed article (six total) under `apps/web/public/article-hero/<slug>.svg` per the directive style guide (single accent + warm-bronze stroke, ~2px on 1200×750), wire `ArticleBanner` to render it above the eyebrow, and gate behind a frontmatter `heroArt: <path>` so future articles fail loud when missing. Loop-friendly: each asset is one /ship-asset call.
+- source: browser
+
+### [HIGH] /trends/tracker — lede claims rows link to deep dives, but no row links anywhere
+- pass: 2 (commit e270ced)
+- viewport: desktop
+- category: content
+- observation: The dashboard's lede reads "Each row links to the deep dive that earned it." A first-time reader scans the five tables looking for those links and finds none — every row name is plain text, and the desktop editor's-note column is uniformly an em dash. Either the lede or the data is lying, and on the page that the bearings call out as "the signature feature" the inconsistency is glaring.
+- evidence: `apps/web/src/app/trends/tracker/page.tsx:29` hard-codes the lede verbatim. `data/trends/2026-W19.json` ships every row with `"articleSlug": null`, so `TrackerRow` (`apps/web/src/components/tracker/TrackerRow.tsx:33-34`) computes `noteHref = null` for every row and renders "—" in the editor's-note column. At least two rows could resolve cleanly today: "Gateron Oil King" → `gateron-oil-king-deep-dive`, "Alice layout" → `alice-layout-decline`.
+- suggested fix: backfill `articleSlug` on the two rows where a seed article exists, and either (a) wrap the row name in a Link when an article resolves (so the lede claim becomes literally true) or (b) soften the lede to "Each row links to the deep dive that earned it, when one exists." Then add a tracker e2e that asserts the lede claim against the snapshot — if a future snapshot ships without any linked rows, the build fails before deploy.
+- source: browser
+
+### [MED] /tag/[slug] — "← all tags" affordance lies about its destination
+- pass: 2 (commit e270ced)
+- viewport: both
+- category: a11y
+- observation: Every `/tag/<slug>` page renders a small mono "← all tags" link in the header. A reader reaches it expecting an index of every tag (grouped by category, ideally). The href is `/`, dumping them on home — where there is no tag list at all. The link both teaches the wrong destination and signals a missing /tags route.
+- evidence: `apps/web/src/app/tag/[slug]/page.tsx:115-120` — the Link is `href="/"` with the literal text `← all tags`. Confirmed live on https://thock-coral.vercel.app/tag/gateron (ref_18 in the reader pass).
+- suggested fix: cheapest fix — relabel the back-link to `← home` so the destination matches the affordance, and file a follow-up to ship `/tags` as a real index page (simple list grouped by the five categories from `decisions.jsx`, links each chip to `/tag/<slug>`). Either change is one-file; the rename is a one-line edit, the index page is a half-day phase candidate.
+- source: browser
+
+### [MED] /group-buys + / — "Closing soon" framing applied to a buy with 37 days left
+- pass: 2 (commit e270ced)
+- viewport: desktop
+- category: voice
+- observation: Two surfaces show the same auto-generated mismatch. On `/group-buys`, the live section renders kicker "Live now" + heading "Closing soon" — and the only row underneath says "37d left". On `/`, the home group-buys widget shows "group buys · ending soon" + "Don't miss the close" with the same 37-day buy. Both contradict the bearings rule that brass urgency is reserved for the last 72 hours. Hype-bro voice on a knowledgeable-peer site.
+- evidence: `apps/web/src/app/group-buys/page.tsx:103` hard-codes `<HomeSectionHeading kicker="Live now" title="Closing soon" />` regardless of any row's window. `apps/web/src/components/home/GroupBuysWidget.tsx:54` hard-codes "group buys · ending soon" similarly. Seed buy `data/group-buys/cannonkeys-mode-sonnet-r2.json` has window 2026-05-01 → 2026-06-15; on 2026-05-09 the page renders 37d remaining.
+- suggested fix: drop "Closing soon" as the live heading entirely and use "Live now" (matching the kicker) — split a "Closing soon" sub-section that only renders when at least one row is inside a 72h window. Mirror the same logic in the home widget: when no live buy is <72h, replace "ending soon / don't miss the close" with neutral "live group buy" framing. The 72h check already exists in the seed-window math; reuse it for the headings.
+- source: browser
+
+### [MED] /trends — pillar archive labeled "All Trends pieces" but excludes the hero
+- pass: 2 (commit e270ced)
+- viewport: both
+- category: content
+- observation: The pillar lands the freshly-published "Reading the Trends Tracker" as its hero card and then renders an archive heading "All Trends pieces" — but the archive list contains only "The slow fade of Alice layouts." A reader sees the count and the cards disagree by exactly one (the hero), and the same pattern is present on every pillar (News, Deep Dives, Ideas) by code structure.
+- evidence: `apps/web/src/app/trends/page.tsx:44-45` deliberately splits `lead = all[0]; archive = all.slice(1)`, then renders the archive under title "All Trends pieces" (line 120). News/Ideas/Deep-Dives use the same shape. Live confirmation on https://thock-coral.vercel.app/trends.
+- suggested fix: rename the archive heading to "More Trends pieces" (matching the actual content) across all four pillar pages — single string change per file. Alternative: include the hero in the archive list so the heading stays accurate; risk is the hero-card visually duplicating into the list immediately below. Renaming is the lower-friction fix and matches the bearings voice.
+- source: browser
+
+### [LOW] /trends/tracker — every editor's-note cell is a uniform em dash
+- pass: 2 (commit e270ced)
+- viewport: desktop
+- category: data
+- observation: The desktop layout reserves a 1.4fr column on each tracker row for an editor's note (linking to a deep dive). Across all five categories every cell renders "—". The page advertises a dashboard but reads as a five-row stub waiting for content. This is the same root data gap as the [HIGH] above; filing separately because the right fix is a content backfill, not a code change.
+- evidence: `data/trends/2026-W19.json` ships every row with `articleSlug: null`. `TrackerRow.tsx:64-73` renders an em dash whenever `noteHref` is null, and the desktop column has `text-text-4` styling that only emphasizes the emptiness when every cell shares it.
+- suggested fix: backfill `articleSlug` on the rows that already have a matching article (Gateron Oil King, Alice layout). For categories where no article exists yet (MT3 profile, Mode Designs, Wuque Studio), commission a one-paragraph editorial note as a `note: string` field on the row schema — small additive schema change in `packages/data` — and render it as plain text when the slug doesn't resolve. That way no cell is ever a bare em dash.
+- source: browser
 
 ### [MED] /group-buys — seed CTA points at a 404 vendor URL (user jot)
 - pass: user-jot (commit 593b1f9)
