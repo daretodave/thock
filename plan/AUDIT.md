@@ -64,5 +64,38 @@ chain didn't catch it).
 
 ---
 
+### [MED] PageStub routes flake under parallel e2e load (React #418 hydration)
+
+> Recorded by `/iterate` on 2026-05-09 while draining the critique
+> queue.
+
+The smoke walker's "no console errors" assertion intermittently
+fails on `/about`, `/newsletter`, and `/search` with the minified
+React error #418 ("text content does not match server-rendered
+HTML"). Failures move between the three URLs run-over-run; serial
+playback of the same three URLs (`--workers=1`) passes 100% of
+the time.
+
+All three routes render `<PageStub>` (phase 4 stub for routes
+without their own family yet). Suspect cause is a hydration
+mismatch in `PageStub` — likely a server/client-divergent value
+(date string, random key, font-loading class on `<html>` racing
+with first paint). Could also be a Next 15 quirk with multiple
+concurrent route prerenders sharing an inconsistent layout
+snapshot.
+
+**Action:** read `apps/web/src/components/page-stub/PageStub.tsx`,
+look for any `Date.now()` / `Math.random()` / `useId()`-without-
+`'use client'` patterns. If clean, suspect the next/font race —
+the `${serif.variable}` etc. classes Next applies to `<html>` may
+swap between SSR and CSR. Phase 16 polish replaces every PageStub
+with a real route, so this finding self-resolves before then;
+mark as a transient `[MED]` until phase 16 ships.
+
+Score: **3.0** (intermittent, no user-facing impact yet, but
+muddies the verify gate).
+
+---
+
 (Older findings drained as they ship. Empty until other audit
 passes accumulate signals.)

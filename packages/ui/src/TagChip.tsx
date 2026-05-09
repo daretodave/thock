@@ -33,14 +33,30 @@ const TINT_BY_CATEGORY: Record<TagChipCategory, string> = {
   misc: 'border-border-hi text-text-3',
 }
 
+const CATEGORY_PREFIX: Record<TagChipCategory, string | null> = {
+  switch: 'switch',
+  layout: 'layout',
+  brand: 'brand',
+  material: 'material',
+  profile: 'profile',
+  misc: null,
+}
+
 const BASE_CLASSES =
   'inline-flex items-center gap-1.5 border px-2.5 py-1 font-mono text-micro uppercase tracking-[0.08em] transition-colors'
 
 /**
- * Categorical-color tag chip. Renders as a link to `/tag/<slug>` by
- * default; pass `static` for non-clickable display (e.g., when the
- * chip is rendered inside another link). Lives in packages/ui so
- * pillar pages, tag pages, and search results all share one truth.
+ * Categorical-color tag chip. Renders the category as a small
+ * leading prefix so first-time readers can decode unfamiliar
+ * tag names (e.g. `LAYOUT · ALICE` reads as a layout style, not a
+ * person's name). Filed as a HIGH critique by a user landing on
+ * the home page and asking "who's Alice?". Misc-category chips
+ * keep the legacy `#name` form since there's no useful prefix.
+ *
+ * Renders as a link to `/tag/<slug>` by default; pass `static`
+ * for non-clickable display (e.g., inside another link). Lives in
+ * packages/ui so pillar pages, tag pages, and search results all
+ * share one truth.
  */
 export function TagChip({
   slug,
@@ -53,12 +69,35 @@ export function TagChip({
   const className = `${BASE_CLASSES} ${tint} ${
     isStatic ? '' : 'hover:bg-surface'
   }`
+  const prefix = CATEGORY_PREFIX[category]
+  const ariaLabel = prefix ? `${prefix} tag: ${name}` : `tag: ${name}`
+
+  const inner = prefix ? (
+    <>
+      <span data-testid="tag-chip-category" className="opacity-70">
+        {prefix}
+      </span>
+      <span aria-hidden="true" className="opacity-50">
+        ·
+      </span>
+      <span data-testid="tag-chip-name">{name}</span>
+    </>
+  ) : (
+    <>
+      <span aria-hidden="true">#</span>
+      <span data-testid="tag-chip-name">{name}</span>
+    </>
+  )
 
   if (isStatic) {
     return (
-      <span className={className} data-testid="tag-chip">
-        <span aria-hidden="true">#</span>
-        {name}
+      <span
+        className={className}
+        data-testid="tag-chip"
+        data-category={category}
+        aria-label={ariaLabel}
+      >
+        {inner}
       </span>
     )
   }
@@ -68,9 +107,10 @@ export function TagChip({
       href={href ?? `/tag/${slug}`}
       className={className}
       data-testid="tag-chip"
+      data-category={category}
+      aria-label={ariaLabel}
     >
-      <span aria-hidden="true">#</span>
-      {name}
+      {inner}
     </a>
   )
 }

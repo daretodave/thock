@@ -18,16 +18,15 @@
 - suggested fix: Either render the real article cards above the "Lands in Phase X" note (one-card stub is fine), or change the count line to "1 article — full pillar lands Phase 7" with the count linking to the slug, so a path out exists. Apply the same fix on `/tag/<slug>` stubs.
 - source: browser
 
-### [HIGH] Tag chips like "#ALICE" read as person names to first-time visitors
-- pass: 1 (filed via /oversight 2026-05-09 from user observation)
-- viewport: both
-- category: content
-- observation: A reader landing on the home page sees "#ALICE" surfaced under the trending strip / latest-by-pillar without context. "Alice" is a layout style in the keyboard hobby (split body, centered B), but to a first-time visitor it reads as a person's name. The same chip appears at the bottom of `/article/trends-tracker-preview`. Several other tag chips have the same problem (chip text alone strips the categorical context that makes the term meaningful).
-- evidence: User-reported on `/` and on `/article/trends-tracker-preview`: "who's alice? get rid of these names/tags that don't mean anything." The chip renders as `#alice` (uppercase from CSS) with no kind/category visual cue; the page provides no glossary or tooltip.
-- suggested fix: One of (a) prefix tag chips with their category (`switch · linear`, `layout · alice`, `brand · gmk`), (b) attach a hover tooltip with the category, or (c) on the home page, suppress chips entirely for cards where the title doesn't already disambiguate. Prefer (a) — the categorical color is already present per `decisions.jsx` "tag color = category, not vibe" but the color alone isn't a glossary. Add a one-line glossary block to the article-page tag rail too.
-- source: user
-
 ## Done
+
+### [x] [HIGH] Tag chips like "#ALICE" read as person names to first-time visitors
+- addressed in: pending commit (this tick)
+- pass: 1 (filed via /oversight 2026-05-09 from user observation)
+- root cause: `<TagChip>` rendered just the slug (`#alice`) with no category context, so first-time readers saw a name-shaped string and had no way to know "alice" referenced a layout style, not a person.
+- fix: `packages/ui/src/TagChip.tsx` now prefixes typed-category chips with their category label (`layout · alice`, `switch · linear`, `brand · gmk`). Misc-category chips keep the legacy `#name` form since there's no useful prefix. The categorical color tint per `decisions.jsx` is unchanged. `aria-label` is set to a more legible `"layout tag: Alice"` format. A `data-category` attribute is exposed for downstream styling.
+- regression guard: updated unit suite in `packages/ui/src/__tests__/TagChip.test.tsx` (8 tests) covers the new prefix shape, the misc-category fallback, the data-category attribute, and the aria-label format. Existing ArticleTagRail test still passes — it grepped on `unknown-tag` substring which the new shape preserves for misc.
+- non-fix: tag-rail glossary block (the critique suggested a one-line tag-rail explainer) deferred — the prefix already clears up confusion at the chip level; a separate glossary would duplicate context and add visual noise.
 
 ### [x] [HIGH] mobile nav — primary links unreachable at 375px, no toggle
 - addressed in: pending commit (this tick)
