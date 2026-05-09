@@ -49,10 +49,15 @@ if (!TOKEN) {
 }
 
 const sha = execSync('git rev-parse HEAD', { encoding: 'utf-8' }).trim()
+const subject = execSync('git log -1 --pretty=%s', { encoding: 'utf-8' }).trim()
 const auth = { Authorization: `Bearer ${TOKEN}` }
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
 
-console.log(`Checking last deployment for commit ${sha.slice(0, 7)} on site "${SITE_NAME}"...`)
+// Netlify creates one deploy per push, keyed to the head commit. If you
+// pushed multiple commits at once, the deploy will resolve to the last
+// of them — the others ride along but aren't directly addressable. We
+// log HEAD's subject so the message reflects what shipped, not just a SHA.
+console.log(`Checking deploy for HEAD ${sha.slice(0, 7)} ("${subject}") on site "${SITE_NAME}"...`)
 
 // --- resolve site ---
 const sitesRes = await fetch(
@@ -109,6 +114,28 @@ while (Date.now() - start < TIMEOUT_MS) {
 
   if (match.state === 'ready') {
     console.log(`Deploy ready.`)
+    // Show the full commit range the deploy contains — useful when a
+    // push bundles multiple commits so the operator sees what actually
+    // landed in production, not just HEAD.
+    const previousReady = deploys.find(
+      (d) => d.state === 'ready' && d.commit_ref && d.commit_ref !== sha,
+    )
+    if (previousReady) {
+      try {
+        const range = execSync(
+          `git log ${previousReady.commit_ref}..${sha} --oneline --no-merges`,
+          { encoding: 'utf-8' },
+        ).trim()
+        if (range) {
+          const lines = range.split('\n')
+          console.log(`  Includes ${lines.length} commit${lines.length === 1 ? '' : 's'}:`)
+          for (const line of lines) console.log(`    ${line}`)
+        }
+      } catch {
+        // Previous-deploy SHA may not be in local history (shallow clone,
+        // squash-merged history, etc.) — skip the range silently.
+      }
+    }
     if (match.deploy_ssl_url) console.log(`  Permalink: ${match.deploy_ssl_url}`)
     if (match.ssl_url) console.log(`  Site:      ${match.ssl_url}`)
     process.exit(0)
