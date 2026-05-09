@@ -24,7 +24,7 @@ the phase.
 - [x] Phase 4b — Production runtime hotfix + content cleanup (P0; prepended via `/oversight` 2026-05-08 after phase 4 deployed and every dynamic route returned HTTP 500. Root cause: `@thock/data`'s `import.meta.url` + walk-for-`pnpm-workspace.yaml` didn't resolve in the bundled lambda. Shipped: pre-built data manifest under `apps/web/src/lib/data-runtime/manifest.generated.json` consumed by a thin adapter (all 15 apps/web call sites migrated); new `pnpm deploy:smoke` post-push gate; fabricated author bylines replaced with `thock`; host migrated from Netlify to Vercel after Netlify's free-tier credits ran out. All 10 production probes 2xx on `thock-coral.vercel.app`. **Detailed brief: `phase_4b_runtime_fix.md`.**) — `d0147cc` + `1b3944c`
 
 **Page families (phases 5–13):**
-- [ ] Phase 5 — Article page (canonical template — `/article/[slug]`)
+- [x] Phase 5 — Article page (canonical template — `/article/[slug]`) — hero/byline/body/tag-rail/mentioned-parts/related-articles components, JSON-LD Article + BreadcrumbList, MDX render via `next-mdx-remote/rsc`, dep bumped to v6 to clear Vercel's vulnerability gate — `e41499c` + `15e6617`
 - [ ] Phase 6 — Home (`/` — hero pick, trending, latest-by-pillar, group-buys widget)
 - [ ] Phase 7 — News pillar (`/news`)
 - [ ] Phase 8 — Trends pillar + Trends Tracker (`/trends`, `/trends/tracker`)
