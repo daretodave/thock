@@ -9,9 +9,15 @@
 
 ## Pending
 
-(empty)
+### [MED] /group-buys — seed CTA points at a 404 vendor URL (user jot)
+- pass: user-jot (commit 593b1f9)
+- viewport: both
+- category: data
+- auth_state: anonymous
+- observation: On https://thock-coral.vercel.app/group-buys the only seed group buy ("Mode Sonnet R2") renders a "view at vendor" CTA pointing to https://cannonkeys.com/products/mode-sonnet-r2 — which is not a valid product page on the vendor's site. First impressions of /group-buys break immediately when the user clicks the only available link.
+- suggested fix: open the seed record at `data/group-buys/cannonkeys-mode-sonnet-r2.json` and either (a) replace the `url` with a real CannonKeys product page (verify with a HEAD probe) or (b) reframe this seed as `status: announced` with no product URL until R2 actually drops. While we're in the file, audit the other URL fields (`imageUrl` is null — fine for now). Same audit pass should add a `data:link-rot` step to the smoke walker (post-MVP) so future seed entries can't ship a dead vendor URL silently.
+- source: user
 
-## Done
 
 ### [x] [MED] /tag/[slug] — pillar stub advertises "N articles" but renders zero cards (resolved by phase 12)
 - addressed in: phase 12 (pending commit)
