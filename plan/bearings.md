@@ -25,6 +25,26 @@ breathless hype.
 **Landing:** https://thock-coral.vercel.app (Vercel-hosted, repo
 auto-deploys on push to `main`).
 
+## Surface
+
+**Surface:** `site`
+
+thock is a content/news hub rendered for human readers — every
+URL in the contract below is a page someone reads. This single
+line is the hard gate for the opt-in branding capability
+(`/ship-asset` + the `brander` sub-agent — see
+`../nexus/customization/branding.md`). With `Surface: site`,
+the capability is enabled; OG images, favicons, social cards,
+and SVG → PNG conversions all flow through it. Brand-setup
+taste calls (mood / accent / wordmark style) go through
+`/oversight`, which captures the brief into this file's
+"Visual & tonal defaults" section + `plan/AUDIT.md` rows that
+`/ship-asset` then drains.
+
+There is no override flag. If thock's surface ever changes
+(e.g. a future API-only mode), update this line and the
+branding skill self-disables.
+
 ## Stack (locked — do not re-litigate)
 
 These were decided at project bootstrap to keep the autonomous loop
@@ -224,9 +244,11 @@ parallelize and protect main-agent context.
 | `scout` | Need an external fact, spec, vendor URL, group-buy date, trend signal | Structured findings with citations |
 | `content-curator` | Need a new MDX article drafted or an existing one polished | A complete MDX file written to `apps/web/src/content/articles/` |
 | `data-steward` | Schema-heavy work (new entity type, schema migration, mass cross-ref repair) | Modified Zod schemas + loaders + validator-passing records |
+| `reader` | Fresh-eyes critique of the live site | Structured JSON findings — drained by `/critique` |
+| `brander` | Render a brand asset (OG image, favicon, social card, SVG → PNG, wordmark variants). Spawned by `/ship-asset` (or inline by `/ship-a-phase` when a phase brief names an asset deliverable); never directly by the main agent | Rendered file paths + sibling provenance JSON |
 
-The main agent does not write articles or research the open web
-itself. Delegate.
+The main agent does not write articles, research the open web,
+or render images itself. Delegate.
 
 ## Visual & tonal defaults
 
