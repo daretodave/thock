@@ -3,66 +3,45 @@
 > Latest findings from `/iterate audit` and `/oversight`. Open
 > items live here until a shipping skill drains them.
 
-> **Bias: cleared 2026-05-09** (was external-critique, set 2026-05-09).
-> All HIGH critique findings drained across 4 ticks: prose styles,
-> PartReference resolver binding, title duplication, mobile nav,
-> tag-chip category prefix. The remaining MED is a /tag/[slug]
-> stub which phase 12 ships. `/march` can resume phase 9 (Ideas
-> pillar) on the next tick.
+> **POSTURE: brand-assets first** (set via `/oversight`
+> 2026-05-09T12:30Z). `/march` should not pick up phase 15+
+> until the brand-asset backlog drains via `/ship-asset`. The
+> autonomous loop has no `/ship-asset` lane — the user runs
+> `/ship-asset` directly until the backlog clears, then resumes
+> `/march`. Order: (1) favicon, (2) default OG template,
+> (3) per-pillar OG variants, (4) hero placeholders for the seed
+> articles. `/iterate` may still drain non-asset findings (e.g.
+> the open user-jot on /group-buys) without violating this
+> posture.
 
-> **Brand-asset backlog (set via /oversight 2026-05-09):** the
-> site has no favicon, no per-route OG art, and no hero image
-> content for articles or the home pick. Use `/ship-asset` to
-> drain — favicon first (smallest blast radius), OG default
-> second, then hero placeholders (colorful keyboard SVGs are
-> acceptable; real photography can backfill later). Phase 16
-> polish was the planned home for OG templates; pull this work
-> forward via `/ship-asset` so phase 16 stays scoped to the
-> remaining footer / mobile menu / a11y work.
+> **Iterate-bias category: brand-assets-first**. The next
+> `/iterate` tick that runs while the posture is in effect
+> should drain the user-jot on /group-buys (a one-record data
+> fix) but otherwise defer to /ship-asset.
+
+> **Article hero art directive (locked 2026-05-09):** every
+> article (current and future) renders a colorful keyboard SVG
+> as its hero placeholder until real photography backfills.
+> Style: simple, single splash of color, line-drawing weight
+> consistent across articles, illustrative of the article's
+> subject (e.g. a switch cross-section for switch-deep-dives, a
+> keycap profile silhouette for keycap pieces, a keyboard
+> outline for build pieces). The `content-curator` and
+> `/ship-asset` agents are the producers. Hero SVGs land under
+> `apps/web/public/hero-art/<slug>.svg` and the article
+> frontmatter `heroImage` field references the path.
+
+## Drained findings (kept for audit-trail; do not re-open)
+
+### [x] [HIGH] Verification gap — `pnpm verify` doesn't exercise the production runtime
+> Filed 2026-05-08 by `/oversight`. Drained by phase 4b
+> (`d0147cc` + `1b3944c`): replaced the lambda's filesystem
+> walk with a pre-built data manifest, added `pnpm
+> deploy:smoke` post-push gate, migrated host to Vercel.
+> Production probes 2xx across 10 patterns. Marked drained on
+> 2026-05-09T12:30Z during oversight pass.
 
 ## Open findings
-
-### [HIGH] Verification gap — `pnpm verify` doesn't exercise the production runtime
-
-> Recorded by `/oversight` on 2026-05-08 after phase 4 shipped.
-
-Phase 4's `pnpm verify` was fully green and `pnpm deploy:check`
-reported ready, yet every dynamic route on
-`https://thock-coral.vercel.app` returned HTTP 500 immediately after
-the push:
-
-- `/article/[slug]` (every seed)
-- `/tag/[slug]` (every seed)
-- `/sitemap.xml`
-- `/feed.xml`, `/feed/[pillar].xml`
-
-Static-prerendered routes (home, pillars, group-buys, about,
-newsletter, search, sources, robots) returned 200 — Next
-serialized them at build time so the lambda never re-evaluated
-the data loaders. The dynamic routes failed because the loaders
-called `findRepoRoot()` (walks up looking for
-`pnpm-workspace.yaml`), and that walk doesn't resolve to the
-right path inside Netlify's bundled function.
-
-**Why the loop missed it:**
-- The e2e walker runs against local `next start -p 4173`, which
-  has the full repo on disk. The bundled production lambda
-  doesn't.
-- `pnpm deploy:check` confirms the host reports `state=ready`,
-  which means the **build** succeeded — not that **routes serve
-  2xx**.
-
-**Action:** Phase 4b (production runtime hotfix) ships the loader
-fix and adds `pnpm deploy:smoke` — a post-push HTTP probe of one
-URL per pattern against the live site. The smoke becomes the new
-post-push gate every shipping skill must run after
-`deploy:check`. Update `bearings.md` "Verify gate" and the four
-shipping skills accordingly when the smoke lands.
-
-Score: **5.0** (production was broken for the user; the gate
-chain didn't catch it).
-
----
 
 ### [MED] PageStub routes flake under parallel e2e load (React #418 hydration)
 

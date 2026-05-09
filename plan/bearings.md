@@ -289,6 +289,41 @@ not adopt over the design):
   superseded by OKLCH values in `design/tokens.css`.
 - ~~8px spacing base~~ — superseded by 4px base.
 
+### Article hero art — colorful keyboard SVGs (locked 2026-05-09 via /oversight)
+
+Every article (current and future) renders a colorful keyboard
+SVG as its hero placeholder until real photography backfills.
+The directive is durable — `content-curator` and `/ship-asset`
+both read this section.
+
+**Style guide:**
+- Simple line drawing, single splash of color (one accent + the
+  warm-bronze theme accent — never a multi-color palette).
+- Stroke weight consistent across articles (~2px on a 1200×750
+  canvas).
+- Illustrative of the article's subject:
+  - switch-deep-dive → switch cross-section / housing exploded
+  - keycap piece → keycap profile silhouette (Cherry / OEM / SA)
+  - build / mod piece → keyboard outline with a mod callout
+  - news / vendor piece → vendor wordmark glyph or a layout
+    silhouette
+  - guide → a "how-to" arrow / annotated keycap row
+  - trends piece → a sparkline silhouette
+- Background transparent or warm-paper (light-mode safe).
+- Color taste: avoid stock blues/greens. The thock palette is
+  warm — bronze accent + a single splash like coral, dusty
+  rose, ochre, or muted terracotta. Never primary-bright.
+
+**Storage:** `apps/web/public/hero-art/<article-slug>.svg`. The
+article's frontmatter `heroImage` field references the
+absolute path (`/hero-art/<slug>.svg`); `heroImageAlt` is
+required when `heroImage` is set.
+
+**Delivery path:** the user runs `/ship-asset` to drain the
+backlog after each article ships, OR the `content-curator`
+agent emits an SVG draft alongside the prose for new articles
+and `/ship-asset` polishes it.
+
 ## Plan expansion posture
 
 **Mode: bold.**

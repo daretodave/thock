@@ -254,6 +254,58 @@ from `apps/web/src/content/newsletters/*.mdx` if any exist;
 otherwise empty state). Per-pillar RSS feeds finalized — every
 `/feed/<pillar>.xml` route validates against an RSS schema.
 
+**Locked embed snippets (provided by user via /oversight
+2026-05-09T12:30Z — embed verbatim, theme via Tailwind classes
+only, do NOT mutate the action / hidden field semantics):**
+
+Buttondown form (footer + dedicated `/newsletter` page):
+
+```html
+<form
+  action="https://buttondown.com/api/emails/embed-subscribe/throc"
+  method="post"
+  class="embeddable-buttondown-form"
+>
+  <label for="bd-email">Enter your email</label>
+  <input type="email" name="email" id="bd-email" />
+  <input type="submit" value="Subscribe" />
+  <p>
+    <a href="https://buttondown.com/refer/throc" target="_blank">
+      Powered by Buttondown.
+    </a>
+  </p>
+</form>
+```
+
+Notes for the implementer:
+- The Buttondown handle in the URL is `throc` as provided by the
+  user (NOT `thock`). Preserve verbatim — they may have
+  registered the handle that way intentionally.
+- Style with Tailwind utility classes inside a thin wrapper
+  component; do not change the form's `action`, `method`, or
+  input `name` attributes.
+- Show "Powered by Buttondown" attribution; small mono link in
+  the same accent color as the rest of the secondary chrome.
+
+Google Tag Manager (root-of-page; embed in `apps/web/src/app/layout.tsx`):
+
+```html
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-58T839ZD');</script>
+<!-- End Google Tag Manager -->
+```
+
+Notes for the implementer:
+- GTM container ID is `GTM-58T839ZD`. Wire via Next's `<Script>`
+  component with `strategy="afterInteractive"` to keep core
+  vitals clean. Drop into the root `layout.tsx` head block (or
+  near the top of `<body>` per Next/GTM convention).
+- No consent gate yet — thock collects no PII; GTM is page-level
+  pageview tracking only. If we add forms beyond Buttondown,
+  revisit and gate via the standard consent banner.
+- Add a `// per /oversight 2026-05-09 — GTM container locked`
+  comment so the next loop tick doesn't re-litigate the choice.
+
 ### Phase 16 — Polish
 
 - `/404` — branded not-found page with search box and pillar links.
