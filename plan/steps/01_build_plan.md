@@ -27,7 +27,7 @@ the phase.
 - [x] Phase 5 — Article page (canonical template — `/article/[slug]`) — hero/byline/body/tag-rail/mentioned-parts/related-articles components, JSON-LD Article + BreadcrumbList, MDX render via `next-mdx-remote/rsc`, dep bumped to v6 to clear Vercel's vulnerability gate — `e41499c` + `15e6617`
 - [x] Phase 6 — Home (`/` — hero pick, trending, latest-by-pillar, group-buys widget) — `f41bdeb`
 - [x] Phase 7 — News pillar (`/news`) — `80a0290`
-- [ ] Phase 8 — Trends pillar + Trends Tracker (`/trends`, `/trends/tracker`)
+- [x] Phase 8 — Trends pillar + Trends Tracker (`/trends`, `/trends/tracker`) — `accb74f`
 - [ ] Phase 9 — Ideas & Builds pillar (`/ideas`)
 - [ ] Phase 10 — Deep Dives pillar (`/deep-dives`)
 - [ ] Phase 11 — Guides pillar (`/guides`)
