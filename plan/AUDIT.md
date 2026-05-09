@@ -3,6 +3,23 @@
 > Latest findings from `/iterate audit` and `/oversight`. Open
 > items live here until a shipping skill drains them.
 
+> **Bias: external-critique (set via /oversight 2026-05-09).**
+> `/iterate` should weight `plan/CRITIQUE.md` Pending findings
+> over fresh audit signal until those are drained. `/march` should
+> dispatch to `/iterate` (or `/ship-asset` for branding) instead
+> of `/ship-a-phase` while critique HIGHs are pending — phase 9+
+> is paused until the queue clears.
+
+> **Brand-asset backlog (set via /oversight 2026-05-09):** the
+> site has no favicon, no per-route OG art, and no hero image
+> content for articles or the home pick. Use `/ship-asset` to
+> drain — favicon first (smallest blast radius), OG default
+> second, then hero placeholders (colorful keyboard SVGs are
+> acceptable; real photography can backfill later). Phase 16
+> polish was the planned home for OG templates; pull this work
+> forward via `/ship-asset` so phase 16 stays scoped to the
+> remaining footer / mobile menu / a11y work.
+
 ## Open findings
 
 ### [HIGH] Verification gap — `pnpm verify` doesn't exercise the production runtime

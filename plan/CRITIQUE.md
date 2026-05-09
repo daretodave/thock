@@ -54,6 +54,25 @@
 - suggested fix: In `packages/seo/`, drop the second `— thock` suffix — most likely the per-page title already includes it, then `Metadata.title.template` adds it again. Switch one or the other off.
 - source: browser
 
+### [HIGH] Tag chips like "#ALICE" read as person names to first-time visitors
+- pass: 1 (filed via /oversight 2026-05-09 from user observation)
+- viewport: both
+- category: content
+- observation: A reader landing on the home page sees "#ALICE" surfaced under the trending strip / latest-by-pillar without context. "Alice" is a layout style in the keyboard hobby (split body, centered B), but to a first-time visitor it reads as a person's name. The same chip appears at the bottom of `/article/trends-tracker-preview`. Several other tag chips have the same problem (chip text alone strips the categorical context that makes the term meaningful).
+- evidence: User-reported on `/` and on `/article/trends-tracker-preview`: "who's alice? get rid of these names/tags that don't mean anything." The chip renders as `#alice` (uppercase from CSS) with no kind/category visual cue; the page provides no glossary or tooltip.
+- suggested fix: One of (a) prefix tag chips with their category (`switch · linear`, `layout · alice`, `brand · gmk`), (b) attach a hover tooltip with the category, or (c) on the home page, suppress chips entirely for cards where the title doesn't already disambiguate. Prefer (a) — the categorical color is already present per `decisions.jsx` "tag color = category, not vibe" but the color alone isn't a glossary. Add a one-line glossary block to the article-page tag rail too.
+- source: user
+
+### [HIGH] /article/trends-tracker-preview — body content renders as walls of text where it should be lists
+- pass: 1 (filed via /oversight 2026-05-09 from user observation)
+- viewport: both
+- category: content
+- observation: Several sections of the trends-tracker-preview article render as undifferentiated paragraphs even though the prose is structured as a list. The "What we're tracking" section has no top margin from the heading above it, and the body reads `"Five columns, left to right. Name. The thing being tracked, written the way the community writes it. Gateron Oil King, not 'Gateron G Pro 3.0 Oil King v2.' If the community has settled on a shorthand, the tracker uses it."` — that's clearly meant to be a numbered or bulleted list of column descriptions, not a single paragraph. The "What this is not" section has the same problem.
+- evidence: `https://thock-coral.vercel.app/article/trends-tracker-preview` — visible body. Headings like "What we're tracking" and "What this is not" sit flush against the preceding paragraph; their bodies render as a single unbroken paragraph instead of a list.
+- suggested fix: Two fixes likely needed. (1) Edit `apps/web/src/content/articles/trends-tracker-preview.mdx` to use real markdown list syntax (`- Name —` etc.) and `##` headings with blank lines around them. (2) Audit `apps/web/src/styles/components.css` (or wherever the article body prose styles live) to ensure heading + adjacent paragraph spacing is correct (`h2 { margin-top: 2em }` or equivalent), and that adjacent `<li>` items render with the expected vertical rhythm. The first fix is content; the second may be needed across all articles.
+- suggested fix-2: While in this article, also audit for the `#ALICE` tag chip mentioned in the previous finding — the same chip surfaces here at the bottom and lacks context.
+- source: user
+
 ## Done
 
 (empty — first pass)

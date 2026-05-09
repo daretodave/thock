@@ -9,7 +9,27 @@
 
 ## Pending
 
-(empty — populated by `/expand` as signals accumulate)
+### [3.5] Brand-asset pass — favicon + default OG + hero placeholders
+- filed: 2026-05-09 via `/oversight` (user feedback)
+- signals: site has zero branding (no favicon → tabs show the
+  default globe; no per-route OG image art → social shares render
+  the wordmark on warm-black only; no hero image content for
+  articles or the home pick → placeholder divs everywhere).
+- delivery: shipped via `/ship-asset`, not a numbered phase. The
+  `ship-asset` skill is gated on `Surface: site` and already
+  exists in the toolbox. Order: (1) favicon, (2) default OG
+  template, (3) per-pillar OG variants, (4) hero placeholders for
+  the seed articles (colorful keyboard SVGs are fine; real
+  photography backfills later).
+- rationale: branding is the lowest-effort high-impact lift the
+  site has right now. A reader can land, recognize the site, and
+  share a link before phase 16 polish completes. Pull this work
+  forward instead of waiting for phase 16.
+- relationship to phase 16: phase 16 keeps the OG-template plumbing
+  scope but loses the asset-creation scope (`/ship-asset` ships
+  the actual files; phase 16 wires the per-route routes to read
+  them).
+
 
 ## Promoted
 
