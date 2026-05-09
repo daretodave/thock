@@ -61,7 +61,10 @@ jobs:
             playwright-${{ runner.os }}-
 
       - name: Install Playwright browsers (chromium only)
-        run: pnpm exec playwright install chromium --with-deps
+        # @playwright/test is only installed under apps/e2e in the
+        # workspace, so `pnpm exec playwright` from root can't find
+        # it. Run the e2e package's own install script instead.
+        run: pnpm --filter "@thock/e2e" e2e:install
 
       - name: Daily commit ceiling check
         id: ceiling
@@ -90,6 +93,20 @@ jobs:
           # by ACTIONS_PAT regardless.
           git config user.name  "daretodave"
           git config user.email "7341502+daretodave@users.noreply.github.com"
+
+      - name: Ensure triage:cloud-failed label exists
+        # Idempotent label create. Both the agent's `gh issue create`
+        # and the safety-net step below need this label to exist;
+        # ensuring it once per run is cheap and avoids the "could
+        # not add label: ... not found" failure path.
+        if: steps.ceiling.outputs.skip != 'true'
+        env:
+          GH_TOKEN: ${{ secrets.ACTIONS_PAT }}
+        run: |
+          gh label create "triage:cloud-failed" \
+            --color "d73a4a" \
+            --description "Cloud /march tick failed; next /triage tick picks it up" \
+            2>/dev/null || true
 
       - name: Run /march (cloud mode)
         if: steps.ceiling.outputs.skip != 'true'
