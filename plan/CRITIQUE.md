@@ -1,22 +1,69 @@
 # Critique log
 
-> Last pass: 2026-05-09T16:50:00Z at commit e270ced
-> Pass count: 2
-> Iterate-bias category: external-critique (set 2026-05-09 by pass 2 — six findings filed; iterate should drain the highest-scoring rows first)
+> Last pass: 2026-05-09T20:10:00Z at commit 11c0777
+> Pass count: 3
+> Iterate-bias category: external-critique (carried forward from pass 2 — pass 3 added 6 more findings against the post-phase-15/16 surface; iterate should drain the highest-scoring rows first)
 
 > External-observer feedback for thock. Populated by `/critique`,
 > drained by `/iterate`. See `skills/critique.md` for the contract.
 
 ## Pending
 
-### [HIGH] /article/* — no hero art; locked directive not yet implemented
+### [MED] / — "By pillar" grid only renders 4 of the 5 pillars; Ideas is silently excluded
+- pass: 3 (commit 11c0777)
+- viewport: desktop
+- category: content
+- observation: The header nav advertises five pillars (News, Trends, Ideas, Deep Dives, Guides) but the home page's "Latest · By pillar" grid only renders four cards (News, Trends, Deep Dives, Guides). Ideas is silently absent even though `/article/building-mode-sonnet-with-oil-kings` is a fresh featured Ideas piece. A reader scanning the grid for the pillar's most recent piece either never finds it, or thinks Ideas is dormant.
+- evidence: `apps/web/src/components/home/LatestByPillar.tsx` hard-codes `HOME_PILLAR_SET = ['news', 'trends', 'deep-dives', 'guides']` — Ideas is intentionally excluded. The phase-6 brief specified "latest by each pillar (one row per pillar with 3–4 cards)" so the original intent was five pillars. Reader confirmed live at refs 79/86/93/100 (4 cards) on https://thock-coral.vercel.app/.
+- suggested fix: add `'ideas'` to `HOME_PILLAR_SET` so the grid renders all five pillars in the order the header nav promises. Update the colocated `LatestByPillar.test.tsx` to expect the fifth card. If the design intent was 4-card composition (one row of 4 at desktop), either rename the section to "Selected pillars" or restructure the layout to fit five.
+
+### [MED] / — Hero card and "By pillar" Trends slot both surface trends-tracker-preview, duplicating it above the fold
+- pass: 3 (commit 11c0777)
+- viewport: desktop
+- category: content
+- observation: The home hero card promotes `Reading the Trends Tracker`. Two rows below, the "By pillar" grid's Trends slot picks the same article — same hero image, same headline. A reader sees the identical card twice in the first viewport, which reads as a sparse-content placeholder more than as deliberate curation.
+- evidence: Hero card link ref_32 → `/article/trends-tracker-preview`; "By pillar" Trends card link ref_86 → same URL with identical heading and hero image. Cause is `apps/web/src/app/page.tsx`'s `latestByPillar = articles` (the unfiltered list) feeding `resolveLatestByPillar`, which doesn't know about the hero pick made by `pickHomeHero`.
+- suggested fix: thread the hero article slug into `resolveLatestByPillar` (or filter it out of `latestByPillar` at the page level) so the "By pillar" grid always picks the *next-most-recent* article in any pillar that already supplied the hero. One-line page-level filter; the helper signature already accepts a `pillars` arg, just add an `excludeSlugs?: Set<string>`.
+
+### [MED] /sources — every cited article shows a uniform "1 cite" badge, reading as a placeholder
+- pass: 3 (commit 11c0777)
+- viewport: desktop
+- category: data
+- observation: The /sources page promises "honesty about where we got the facts" but every one of the six listed articles shows the same "1 cite" badge. Uniformity makes the count look stubbed rather than tallied. The page's value-add (which articles cite *more* sources) is invisible.
+- evidence: Verified: every seed article ships with exactly one `<Source>` tag (one citation each across `alice-layout-decline`, `beginners-switch-buying-guide`, `building-mode-sonnet-with-oil-kings`, `gateron-oil-king-deep-dive`, `mode-sonnet-r2-group-buy-coverage`, `trends-tracker-preview`). The aggregate is technically correct; the visual signal is meaningless.
+- suggested fix: ship the inline citation list per article (the [LOW 3.5] phase-16 follow-up audit row in `plan/AUDIT.md` already plans this — "/sources per-citation index"). Promote that audit row from LOW to MED since draining it directly addresses this critique. As an interim, hide the count badge when every visible row has the same value, and replace it with a "1 source linked" fallback chip so the badge stops looking auto-generated.
+
+### [MED] /trends/tracker — every category section renders exactly one row, so the table chrome dwarfs the data
+- pass: 3 (commit 11c0777)
+- viewport: desktop
+- category: data
+- observation: Each of the five movers tables (Switch / Keycap / Layout / Vendor / Brand) shows one row. The full Rank / Name / Score / 8-wk / Editor's-note column header reads as scaffolding wrapped around a single data point — the page promises "the signature feature" in its eyebrow and delivers a five-row total.
+- evidence: Switch movers (ref_60): one row Gateron Oil King. Keycap movers (ref_74): MT3. Layout (ref_86): Alice. Vendor (ref_100): Mode Designs. Brand (ref_112): Wuque Studio. `data/trends/2026-W19.json` carries the same five rows. Related to the open [LOW] em-dash finding (the *cells* are em-dashes for unlinked rows; this finding is about the *table dimensions* feeling sparse).
+- suggested fix: backfill the snapshot — `/iterate` `data-gaps` audit (§4.B in `skills/iterate.md`) should pick this up next tick. Target ≥ 3 rows per category, even if the trailing rows are flat-direction. Reader's secondary suggestion (collapse single-row sections into one combined table with a category column) is a fallback if backfill is slow; keep the per-category structure if real data lands within a couple of ticks.
+
+### [MED] /about + /newsletter — voice mismatches between editorial pages ("we" vs "I")
+- pass: 3 (commit 11c0777)
+- viewport: both
+- category: voice
+- observation: `/about` is titled "who we are" and consistently uses "we" ("What thock covers", "we do not currently have affiliate arrangements"). `/newsletter`'s empty-state copy switches to first-person singular ("I'll send you the first one when it ships"). The reader hops from "we" to "I" between two adjacent surfaces with no masthead reveal explaining either register. /about also promises "the people behind thock" but never names them.
+- evidence: `apps/web/src/components/about/AboutBody.tsx` uses "we" throughout. `apps/web/src/components/newsletter/NewsletterArchive.tsx` empty state: `"...Subscribe above and I'll send you the first one when it ships."`. /about lede `"Editorial standards, voice, and the people behind thock."` claims a masthead the page never delivers.
+- suggested fix: pick a single voice across editorial surfaces. Cheapest path: rewrite `NewsletterArchive` empty state to "we'll send you the first one" matching /about. Better path: a one-line masthead under /about's "who we are" heading naming the editor + a `mailto:` contact, and keep "we" everywhere; that lets first-person plural feel earned rather than evasive. The author byline locked in phase 4b (`author: thock`) implies a singular voice is also fine — pick one and apply it everywhere.
+
+### [LOW] /trends/tracker — linked rows expose two affordances pointing at the same URL
+- pass: 3 (commit 11c0777)
+- viewport: desktop
+- category: visual
+- observation: After the rows-not-links critique fix (commit `a7501af`) shipped, linked rows render the row name as a Link to the deep dive AND the editor's-note column as a Link to the same article. Tab order hits the same destination twice per linked row; mouse hover lights up two distinct affordances side-by-side that go to identical places.
+- evidence: Gateron Oil King row: name link to `/article/gateron-oil-king-deep-dive` + editor's-note CTA "Why the Gateron Oil King sounds the way it does →" to the same URL. Same shape on the Alice row. `apps/web/src/components/tracker/TrackerRow.tsx` lines 44-53 render both Links unconditionally when `noteHref` resolves.
+- suggested fix: differentiate the editor's-note copy from the article title — make the column a one-line editorial take (a sentence the editor wrote about *why* this row moved) instead of the article title. That keeps both Links useful: row name = "go read the article"; editor's note = "here's why I think this is moving." If editorial-note copy is too much work right now, drop the row-name Link and keep the explicit CTA — the rows still link via the editor's-note column, and the affordance becomes singular.
+
+### [x] [HIGH] /article/* — no hero art; locked directive not yet implemented
+- addressed in: commit 0e7c9fd (brand-assets posture drain, 2026-05-09)
 - pass: 2 (commit e270ced)
 - viewport: both
-- category: visual
-- observation: Every article — including the freshly-published `/article/trends-tracker-preview` — renders only eyebrow + H1 + lede + byline at the top of the page. There is no figure, image, or SVG above (or beside) the H1, even though `plan/bearings.md` § "Article hero art" (locked 2026-05-09 via /oversight) makes per-article colorful keyboard SVGs a durable directive. The article page reads as if its art slot is missing rather than intentionally minimal.
-- evidence: On https://thock-coral.vercel.app/article/trends-tracker-preview the article banner contains a link "Trends", an h1 "Reading the Trends Tracker", a serif lede, and the "thock · May 8, 2026 · 5 min read" line — and nothing else above it. A network filter for `.svg` returns no requests scoped to the article surface; no `<img>` or `<svg>` element exists in the article tree. Same shape across the other five seed articles.
-- suggested fix: ship one hero SVG per seed article (six total) under `apps/web/public/article-hero/<slug>.svg` per the directive style guide (single accent + warm-bronze stroke, ~2px on 1200×750), wire `ArticleBanner` to render it above the eyebrow, and gate behind a frontmatter `heroArt: <path>` so future articles fail loud when missing. Loop-friendly: each asset is one /ship-asset call.
-- source: browser
+- root cause: at filing time, the bearings directive (locked earlier the same morning) called for a colorful keyboard SVG hero per article but no asset had shipped — every article banner rendered eyebrow + H1 + lede + byline alone, with `heroImage: null` in every frontmatter and no SVGs under `apps/web/public/`.
+- fix: brand-assets-first posture drain rendered six hero SVGs via `brander` under `apps/web/public/hero-art/<slug>.svg` with provenance JSON siblings (per-article splash hue, single warm-bronze accent, 1200×750, ~2px stroke per the directive). Each MDX frontmatter wired `heroImage: /hero-art/<slug>.svg` + descriptive `heroImageAlt`. `packages/content/src/schema/frontmatter.ts` `heroImage` Zod refinement loosened from `.url()` to "absolute path or full URL" so the bearings-spec path format validates. `ArticleHero` already rendered `heroImage` via next/image when set — no component change needed.
+- forward-looking: `skills/iterate.md` Step 3 was updated in the same drain commit (97e1f6c) so future articles drafted by /iterate bundle prose + hero SVG + provenance + frontmatter wiring as a single commit. New articles can no longer ship art-less.
 
 ### [x] [HIGH] /trends/tracker — lede claims rows link to deep dives, but no row links anywhere
 - addressed in: pending commit (this tick)
