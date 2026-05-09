@@ -37,6 +37,7 @@ the phase.
 **Cross-cutting (phases 14–17):**
 - [x] Phase 14 — Search (`/search` + header search affordance, MiniSearch index built at build time) — `aa46fed`
 - [x] Phase 15 — Newsletter signup + RSS finalize (Buttondown embed at handle `thock`, `/newsletter` with empty-state archive, GTM `GTM-58T839ZD` wired via Next `<Script strategy="afterInteractive">`, handwritten RSS 2.0 validator + 6 e2e feeds, Footer retrofit drops the placeholder aria-label) — `5e46ae1` (brief) + `5fa4ee4` (ship)
+- [ ] Phase 15a — Loop issues mirror (inserted 2026-05-09 via /oversight: when `/iterate` picks a finding to ship, open a GitHub issue first; close via `Closes #N` commit trailer. Helper at `scripts/loop-issue.mjs`; updates to skills `iterate`, `jot`, `critique`, `triage`. Mirror at fix-time only — not at jot-time, no Projects v2 board. **Detailed brief: `phase_15a_loop_issues.md`.**)
 - [ ] Phase 16 — Polish (`/404`, `/about`, `/sources`, footer, OG image templates per family, mobile menu, accessibility audit pass)
 - [ ] Phase 17 — Performance + meta (sitemap completeness, JSON-LD audit, lighthouse pass, image optimization audit, bundle size budget)
 
