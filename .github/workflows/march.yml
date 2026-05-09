@@ -1,0 +1,150 @@
+name: march
+
+# Cloud half of the thock autonomous loop. One scheduled invocation =
+# one /march tick. State of truth is the repo on origin/main; every
+# tick reads it fresh, no memory between runs.
+#
+# See .github/CLOUD_LOOP.md for setup, debugging, and the upgrade path.
+
+on:
+  schedule:
+    # Every 2h between 18:00 and 06:00 ET (off-peak, US East).
+    # ET = UTC-5 standard / UTC-4 DST. We pick UTC slots that cover
+    # the off-peak window in both — 23, 01, 03, 05, 07, 09, 11 UTC =
+    # 18-06 ET in DST, 17-05 ET in standard. ~7 ticks/day.
+    - cron: '0 1,3,5,7,9,11,23 * * *'
+  workflow_dispatch:
+
+concurrency:
+  # Serialize ticks. A long-running tick blocks the next scheduled
+  # firing rather than racing the working tree. Acceptable.
+  group: march
+  cancel-in-progress: false
+
+jobs:
+  march:
+    runs-on: ubuntu-latest
+    # 6h is the GH-Actions hard limit; 5h leaves headroom. Most ticks
+    # finish in under 15min; the long tail is /ship-a-phase doing a
+    # full prerendered build.
+    timeout-minutes: 300
+    permissions:
+      contents: write   # push back to main
+      issues: write     # /triage labels + cloud-failed issue
+    steps:
+      - name: Checkout (full history for /march dispatch)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          # PAT (not GITHUB_TOKEN) so git push commits as you, not as
+          # github-actions[bot]. Token needs contents:write + issues:write.
+          token: ${{ secrets.ACTIONS_PAT }}
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Set up Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('apps/e2e/package.json', 'pnpm-lock.yaml') }}
+          restore-keys: |
+            playwright-${{ runner.os }}-
+
+      - name: Install Playwright browsers (chromium only)
+        run: pnpm exec playwright install chromium --with-deps
+
+      - name: Daily commit ceiling check
+        id: ceiling
+        env:
+          GH_TOKEN: ${{ secrets.ACTIONS_PAT }}
+        run: |
+          # Counts commits authored by daretodave in the last 24h via
+          # the GitHub API. Local commits and cloud commits both
+          # count toward the ceiling — the ceiling protects your Max
+          # quota, not "cloud-only" volume.
+          since=$(date -u -d '24 hours ago' +%Y-%m-%dT%H:%M:%SZ)
+          count=$(gh api "repos/${{ github.repository }}/commits?since=$since&author=daretodave" --jq 'length' 2>/dev/null || echo 0)
+          echo "Commits authored by daretodave in last 24h: $count"
+          if [ "$count" -ge 12 ]; then
+            echo "Daily ceiling reached (12 commits / 24h). Exiting cleanly — no work this tick."
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Configure git author for cloud commits
+        if: steps.ceiling.outputs.skip != 'true'
+        run: |
+          # Privacy-respecting noreply form. Swap to me@dave.blue or
+          # another email if you prefer. The push is authenticated
+          # by ACTIONS_PAT regardless.
+          git config user.name  "daretodave"
+          git config user.email "7341502+daretodave@users.noreply.github.com"
+
+      - name: Run /march (cloud mode)
+        if: steps.ceiling.outputs.skip != 'true'
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          # Sonnet 4.6 for the cloud loop. To upgrade to Opus 4.7,
+          # change the model below to "claude-opus-4-7" once you've
+          # measured a week of weekly-cap consumption and have
+          # confirmed headroom.
+          claude_args: |
+            {
+              "model": "claude-sonnet-4-6"
+            }
+          prompt: |
+            You are running thock's autonomous loop in CI (GitHub Actions).
+            Read agents.md first for the standing rules — they all apply.
+
+            Cloud-mode adjustments on top of agents.md:
+
+            1. Skip /oversight entirely. It is interactive and never runs in cloud.
+            2. Skip /critique. The reader sub-agent depends on a Chrome MCP that is not available on the runner. /critique stays a local-only ritual.
+            3. /expand may run; candidates land in plan/PHASE_CANDIDATES.md. Promotion happens only via local /oversight — do not promote candidates from cloud.
+            4. The verify gate (`pnpm verify`) and deploy gate (`pnpm deploy:check`) are non-negotiable. Same as local. NEVER --no-verify.
+            5. Commit author is github-actions[bot] (already configured by the workflow). Do not change it.
+            6. If the tick cannot ship cleanly (red verify, red deploy, blocked phase, no work to do, anything else), do NOT half-commit. Either:
+               - exit cleanly with a one-line note in the action log explaining why no work shipped this tick, or
+               - if there is a real failure to surface, open a GitHub issue with `gh issue create --title "Cloud march failed: <iso-date>" --label triage:cloud-failed --body "<context + run URL>"` and exit. The next scheduled tick picks it up via /triage.
+
+            The dispatch order is the standard /march order from skills/march.md: triage → critique (skipped) → ship-a-phase → ship-data → expand → iterate.
+
+            Begin. One tick. One commit-and-push (or no-op). Then exit.
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          # ACTIONS_PAT (not GITHUB_TOKEN) so the agent's `gh` calls
+          # and any direct git operations identify as you, not as
+          # the bot.
+          GH_TOKEN: ${{ secrets.ACTIONS_PAT }}
+
+      - name: Open cloud-failed issue if action crashed
+        # Safety net for the case where Claude Code itself crashed
+        # (auth error, runner OOM, etc.) before the agent could open
+        # the issue per its brief. Only fires on genuine non-zero exit.
+        if: failure() && steps.ceiling.outputs.skip != 'true'
+        env:
+          GH_TOKEN: ${{ secrets.ACTIONS_PAT }}
+        run: |
+          # Dedupe: only open if no open triage:cloud-failed issue
+          # already exists.
+          existing=$(gh issue list --label "triage:cloud-failed" --state open --json number --jq 'length')
+          if [ "$existing" -eq 0 ]; then
+            gh issue create \
+              --title "Cloud march tick crashed: $(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+              --label "triage:cloud-failed" \
+              --body "Action exited non-zero before the agent could file its own issue. Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          else
+            echo "An open triage:cloud-failed issue already exists — skipping dedupe."
+          fi
