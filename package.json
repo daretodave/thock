@@ -22,7 +22,8 @@
     "format": "prettier --write .",
     "data:validate": "pnpm --filter @thock/data validate",
     "verify": "pnpm typecheck && pnpm test:run && pnpm data:validate && pnpm build && pnpm e2e",
-    "deploy:check": "node scripts/deploy-check.mjs"
+    "deploy:check": "node scripts/deploy-check.mjs",
+    "deploy:smoke": "node scripts/deploy-smoke.mjs"
   },
   "devDependencies": {
     "prettier": "^3.3.3",

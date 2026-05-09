@@ -1,0 +1,577 @@
+{
+  "switches": [
+    {
+      "slug": "gateron-oil-king",
+      "name": "Gateron Oil King",
+      "vendorSlug": "cannonkeys",
+      "type": "linear",
+      "housingTop": "pc",
+      "housingBottom": "nylon",
+      "stem": "pom",
+      "springGrams": {
+        "actuation": 55,
+        "bottomOut": 65
+      },
+      "travelMm": 4,
+      "factoryLubed": true,
+      "releasedAt": "2022-08-01",
+      "status": "in-production",
+      "description": "Mid-weight linear with a heavily lubed POM stem in a polycarbonate over nylon housing. Voiced as deep and creamy out of the box; popular with builders looking for a low-effort thock without modding.",
+      "updatedAt": "2026-05-08T00:00:00.000Z"
+    }
+  ],
+  "keycapSets": [
+    {
+      "slug": "gmk-olivia",
+      "name": "GMK Olivia",
+      "vendorSlug": "cannonkeys",
+      "profile": "cherry",
+      "material": "abs",
+      "legendType": "doubleshot",
+      "designer": "Olivia",
+      "releasedAt": "2018-04-01",
+      "status": "discontinued",
+      "imageUrl": null,
+      "description": "Soft pink-and-cream Cherry-profile set with black accents. Designed by Olivia and produced by GMK. Often cited as the set that proved a non-traditional palette could anchor a community-favorite design.",
+      "updatedAt": "2026-05-08T00:00:00.000Z"
+    }
+  ],
+  "boards": [
+    {
+      "slug": "mode-sonnet",
+      "name": "Mode Sonnet",
+      "vendorSlug": "cannonkeys",
+      "layout": "65",
+      "caseMaterial": "aluminum",
+      "mountStyle": "gasket",
+      "hotswap": true,
+      "wireless": false,
+      "releasedAt": "2024-09-01",
+      "status": "in-stock",
+      "imageUrl": null,
+      "description": "65 percent gasket-mounted aluminum board from Mode Designs with hotswap PCBs and a soft, balanced typing feel. Mid-priced for the segment; ships with a brass weight option.",
+      "updatedAt": "2026-05-08T00:00:00.000Z"
+    }
+  ],
+  "vendors": [
+    {
+      "slug": "cannonkeys",
+      "name": "CannonKeys",
+      "url": "https://cannonkeys.com",
+      "countryCode": "US",
+      "description": "Boutique keyboard vendor based in the United States. Stocks switches, keycaps, and runs in-house and partnered group buys for boards and accessories.",
+      "status": "active",
+      "updatedAt": "2026-05-08T00:00:00.000Z"
+    }
+  ],
+  "groupBuys": [
+    {
+      "slug": "cannonkeys-mode-sonnet-r2",
+      "name": "Mode Sonnet R2",
+      "vendorSlug": "cannonkeys",
+      "productSlug": "mode-sonnet",
+      "productKind": "board",
+      "startDate": "2026-05-01",
+      "endDate": "2026-06-15",
+      "region": "global",
+      "url": "https://cannonkeys.com/products/mode-sonnet-r2",
+      "imageUrl": null,
+      "status": "live",
+      "description": "Second run of the Mode Sonnet 65 percent. Same gasket mount and hotswap PCB; new accent-weight color options.",
+      "updatedAt": "2026-05-08T00:00:00.000Z"
+    }
+  ],
+  "trends": [
+    {
+      "isoWeek": "2026-W19",
+      "publishedAt": "2026-05-08T00:00:00.000Z",
+      "rows": [
+        {
+          "name": "Gateron Oil King",
+          "category": "switch",
+          "direction": "up",
+          "score": 42,
+          "spark": [
+            12,
+            18,
+            22,
+            28,
+            30,
+            35,
+            38,
+            42
+          ],
+          "articleSlug": null
+        },
+        {
+          "name": "MT3 profile",
+          "category": "keycap",
+          "direction": "flat",
+          "score": 4,
+          "spark": [
+            2,
+            5,
+            3,
+            4,
+            6,
+            5,
+            4,
+            4
+          ],
+          "articleSlug": null
+        },
+        {
+          "name": "Alice layout",
+          "category": "layout",
+          "direction": "down",
+          "score": -18,
+          "spark": [
+            -2,
+            -5,
+            -8,
+            -10,
+            -12,
+            -15,
+            -16,
+            -18
+          ],
+          "articleSlug": null
+        },
+        {
+          "name": "Mode Designs",
+          "category": "vendor",
+          "direction": "up",
+          "score": 24,
+          "spark": [
+            10,
+            12,
+            15,
+            18,
+            20,
+            22,
+            23,
+            24
+          ],
+          "articleSlug": null
+        },
+        {
+          "name": "Wuque Studio",
+          "category": "brand",
+          "direction": "flat",
+          "score": 8,
+          "spark": [
+            6,
+            7,
+            9,
+            10,
+            8,
+            9,
+            8,
+            8
+          ],
+          "articleSlug": null
+        }
+      ],
+      "updatedAt": "2026-05-08T00:00:00.000Z"
+    }
+  ],
+  "articles": [
+    {
+      "slug": "trends-tracker-preview",
+      "frontmatter": {
+        "slug": "trends-tracker-preview",
+        "title": "Reading the Trends Tracker",
+        "lede": "thock's Trends Tracker is a weekly snapshot of what is rising, falling, or holding flat across the hobby — switches, keycaps, layouts, vendors, and brands, scored on a single -100 to 100 scale and updated every Friday. This is what the columns mean and what they do not.",
+        "author": "thock",
+        "pillar": "trends",
+        "tags": [
+          "trends-tracker",
+          "modding",
+          "alice",
+          "gateron",
+          "mode"
+        ],
+        "publishedAt": "2026-05-08T08:00:00.000Z",
+        "updatedAt": null,
+        "heroImage": null,
+        "heroImageAlt": null,
+        "featured": false,
+        "popularityScore": 30,
+        "guideSection": null,
+        "mentionedParts": []
+      },
+      "body": "\nThe Trends Tracker is the dashboard most readers ask about first and the one that needs the most explanation. Unlike a buying guide, it does not tell readers what to purchase. Unlike a popularity contest, it does not weight every vote the same. It is a calibrated read of where attention is moving in the hobby this week, expressed plainly enough that a reader can disagree with it.\n\nThis explainer covers the categories the tracker watches, the columns on every row, and — just as importantly — the things the tracker is not trying to be. <Source href=\"https://thock.netlify.app/trends/tracker\">The live tracker</Source> updates each Friday at 08:00 UTC, with the previous week archived under its ISO week label.\n\n## What we're tracking\n\nEvery row on the tracker belongs to one of five categories: <Mono>switches</Mono>, <Mono>keycaps</Mono>, <Mono>layouts</Mono>, <Mono>vendors</Mono>, and <Mono>brands</Mono>. The split is deliberate. A switch family like Gateron Oil King moves on different signals than a layout like Alice or a vendor like Mode Designs, and collapsing them into one ranking would flatten the texture that makes the hobby legible.\n\nSwitches and keycaps cover the consumable end — the parts that turn over fastest in a builder's rotation. Layouts move slowly and tend to ride macro waves (the gradual ascent of 65% over the last three years, the long thaw of ortho). Vendors and brands move on launches, restocks, and the occasional reputational shock. Keeping them in separate categories means a row can be small inside its bracket and still appear on the tracker, instead of being drowned by whichever category happens to be loud that week.\n\n## How to read a row\n\nFive columns, left to right.\n\n**Name.** The thing being tracked, written the way the community writes it. <Mono>Gateron Oil King</Mono>, not \"Gateron G Pro 3.0 Oil King v2.\" If the community has settled on a shorthand, the tracker uses it.\n\n**Category.** One of the five buckets above. Tag-color matches the same taxonomy used everywhere else on the site, so a switch row looks like a switch chip and a layout row looks like a layout chip.\n\n**Direction.** A glyph for up, down, or flat. The glyph is the headline; the score is the detail. A reader scanning the table on mobile should be able to read the direction column alone and walk away with a useful summary of the week.\n\n**Week score.** A signed integer between -100 and 100. Positive means the row's signal strengthened against its own four-week baseline; negative means it weakened. Zero is the resting line, and the tracker rounds to whole numbers because finer precision would imply confidence the underlying signals do not support.\n\n**Sparkline.** The last eight weeks of scores, drawn small. Sparklines exist to answer one question: is this week's number a continuation of a trend, or a single-week anomaly? A row at +20 with seven prior weeks all near zero is a different story than a row at +20 with a ladder underneath it.\n\nA current example. In <Mono>2026-W19</Mono>, <Mono>Gateron Oil King</Mono> sits at +42 with a clean ascending sparkline (the climb has been visible since W12, when it was at +12). <Mono>Alice layout</Mono> reads -18 with the slope still pointing down — eight weeks of softening interest after the last wave of group buys closed. <Mono>MT3 profile</Mono> is holding flat at +4, which is the boring-but-honest state of a profile that has settled into its catalog role. <Mono>Mode Designs</Mono> is up at +24 on the back of the Sonnet R2 opening, and <Mono>Wuque Studio</Mono> is flat at +8, neither shipping nor stalled.\n\n<PullQuote>The tracker reads signals; it does not predict prices. — thock editorial</PullQuote>\n\n## What this is not\n\nThe tracker is not a buying ranking. A row at +42 is not a recommendation, and a row at -18 is not a warning. Some of the best switches in the hobby spend most of their lives near zero because they are catalog staples; some of the loudest weekly movers are flashes that fade by the next snapshot.\n\nIt is not a popularity contest either. Raw mention counts would reward whichever launch happened to coincide with a slow news week. The week score is normalized against each row's own recent baseline, so a small-but-consistent vendor can post a meaningful move without being buried by the latest headline switch.\n\nIt is not a stock chart. The hobby is not a market, prices are not part of the input, and the sparkline is not a trade signal. Reading enthusiasm signals is a different exercise than reading prices, and the tracker is built for the first.\n\nWhat it is: a weekly read of where the hobby is paying attention, with enough structure to be argued with. Future weeks will add a row-level \"why this moved\" annotation when an editor can name the cause, and a per-category filter for readers who only want the switches view. The shape of the table will not change. Watch <Mono>2026-W20</Mono> for the first annotated rows.\n",
+      "readTime": 5,
+      "filePath": "Z:\\keyboard\\apps\\web\\src\\content\\articles\\trends-tracker-preview.mdx"
+    },
+    {
+      "slug": "building-mode-sonnet-with-oil-kings",
+      "frontmatter": {
+        "slug": "building-mode-sonnet-with-oil-kings",
+        "title": "Pairing Oil Kings with the Mode Sonnet",
+        "lede": "I've been threatening to do this build for months, and a free Sunday finally made it happen. The Sonnet is a soft 65 with a top-mount-leaf gasket, and Oil Kings are a heavy factory-lubed linear — together they hit a register I keep coming back to.",
+        "author": "thock",
+        "pillar": "ideas",
+        "tags": [
+          "65",
+          "gateron",
+          "linear",
+          "lubed",
+          "mode",
+          "build-of-the-week"
+        ],
+        "publishedAt": "2026-05-07T10:00:00.000Z",
+        "updatedAt": null,
+        "heroImage": null,
+        "heroImageAlt": null,
+        "featured": true,
+        "popularityScore": 34,
+        "guideSection": null,
+        "mentionedParts": [
+          {
+            "id": "sonnet",
+            "kind": "board",
+            "slug": "mode-sonnet"
+          },
+          {
+            "id": "oil-king",
+            "kind": "switch",
+            "slug": "gateron-oil-king"
+          }
+        ]
+      },
+      "body": "\nThe Sonnet has been sitting on my desk in a stack of unbuilt boards since the second batch shipped, and the Oil Kings have been in a parts bin since I pulled them out of an Endgame84 last winter. Both have been waiting for the other. <PartReference id=\"sonnet\" /> is the kind of board that punishes a bright switch — the polycarb plate option and the leaf gasket give it a softness that wants something with weight behind it. The <PartReference id=\"oil-king\" /> is exactly that switch.\n\n## Why this pairing\n\nThe Sonnet's mount is the interesting part. It's a top-mount with silicone leaves between the plate tabs and the case lip — Mode calls it a leaf-spring mount in their docs, and the deflection on it is genuinely noticeable when you press into a corner of the plate. That's wonderful for typing feel and a small problem for sound: a soft mount with a light switch tends to read as hollow, like the board is doing too much of the work.\n\nOil Kings fix that. They're a 55g bottom-out linear with a long-pole stem and what feels like an aggressive factory lube job — Gateron uses a thicker grease than I'd ever apply by hand, and the result is a switch that arrives at the bottom of its travel with a defined low-mid thock instead of a crack. Pair that landing with a plate that gives a millimeter under your finger, and the whole stack stops fighting itself. The plate absorbs the sharpness; the switch supplies the weight. It's the same trick that made <Mono>Linear Dreams</Mono> in a Bauer 2.0 work three years ago, only the Sonnet does it with less effort.\n\nThe other reason this pairing works is keycap clearance. Oil Kings have a slightly taller-than-MX housing, and the Sonnet's plate sits flush enough that I was worried about interference with deeper-profile caps. No issue — Cherry-profile clears comfortably, and there's room above the switch shoulders to add tape later if I want to play with that mod.\n\n<Callout type=\"note\" title=\"Build details\">\n- Plate: 1.5mm polycarbonate (the stock Mode option, not the FR4 swap)\n- Stabilizers: <Mono>Staebies V3</Mono>, clipped, holee-modded, lubed with <Mono>205g0</Mono> on the wire ends and a thin coat of <Mono>XHT-BDZ</Mono> in the housings\n- Foam: PE between plate and PCB, 2mm Poron under the PCB. Skipped case foam — the Sonnet's mount does enough damping on its own\n- Keycaps: GMK Striker R3 — Cherry-profile, doubleshot ABS. The high-pitched ABS edge actually balances the Oil King's low end better than the PBT set I tried first\n- Switches: 70x Gateron Oil King, no hand-lube, no filming\n</Callout>\n\n## Sound check, post-build\n\nIt's deeper than I expected, and that's saying something for a board I went into expecting depth. The bottom-out is a clean low thock with almost no reverb — the polycarb plate flexes enough to take the bite off the impact, and the Oil King's grease soaks up whatever's left. The top-out is the surprise: there's a small, defined click-back from the stem returning that I didn't notice in any of my previous Oil King builds. Probably the leaf mount letting more of that travel back out. It's not unpleasant, just present.\n\nStabs sound clean. The spacebar is the deepest key on the board by a noticeable margin — closer to a drum than a thock, which is either a feature or a problem depending on whose video you're modeling your taste after. I like it. Modifiers are tight and consistent, no rattle on the right shift even at typing speed.\n\nCompared to the same switches in a Bakeneko65 I built last summer, the Sonnet sounds about a half-octave lower and considerably less metallic. Compared to a Geon Frog with Oil Kings — which is the obvious comparison — the Sonnet is softer in feel and slightly muddier in sound. The Frog is more articulate; the Sonnet is more comfortable. I'm typing this article on the Sonnet and not switching back.\n\n## What I'd change\n\nTwo small things. First, I'd try the FR4 plate. The polycarb is doing a lot of work to soften the Oil King's impact, and I think there's a version of this build where a stiffer plate brings back some articulation without losing the depth — especially for anyone using a lighter switch alongside this same board.\n\nSecond, the Striker keycaps are great but ABS-shiny under three weeks of use is going to bother me by July. I have a set of <Mono>KAT Milkshake</Mono> coming for a different build, and I'm tempted to redirect them here just to see what a taller, thicker-walled profile does to the sound signature. Reports back if I do.\n\nThe Sonnet group buy is closed, but Mode runs them on rotation — keep an eye on the <Source href=\"https://modedesigns.com/sonnet\">Mode Designs Sonnet page</Source> if you want to be alerted on the next round. Oil Kings are stocked basically everywhere now. There's no reason not to try this combination if you have access to both.\n",
+      "readTime": 5,
+      "filePath": "Z:\\keyboard\\apps\\web\\src\\content\\articles\\building-mode-sonnet-with-oil-kings.mdx"
+    },
+    {
+      "slug": "mode-sonnet-r2-group-buy-coverage",
+      "frontmatter": {
+        "slug": "mode-sonnet-r2-group-buy-coverage",
+        "title": "Mode Sonnet R2 opens at CannonKeys",
+        "lede": "Mode has opened the second round of its 65% Sonnet board at CannonKeys. The group buy started 2026-05-01 and runs through 2026-06-15, with new accent-weight color options and global region availability through the same vendor.",
+        "author": "thock",
+        "pillar": "news",
+        "tags": [
+          "65",
+          "group-buy",
+          "mode",
+          "cannonkeys",
+          "aluminum"
+        ],
+        "publishedAt": "2026-05-06T14:00:00.000Z",
+        "updatedAt": null,
+        "heroImage": null,
+        "heroImageAlt": null,
+        "featured": false,
+        "popularityScore": 22,
+        "guideSection": null,
+        "mentionedParts": [
+          {
+            "id": "sonnet",
+            "kind": "board",
+            "slug": "mode-sonnet"
+          }
+        ]
+      },
+      "body": "\nThe second round of Mode's 65% board, the <PartReference id=\"sonnet\" />, is now live for order at CannonKeys. The group buy opened on 2026-05-01 and is scheduled to close 2026-06-15. CannonKeys is handling the global region directly, so there is no separate proxy for buyers in the US, EU, UK, or APAC.\n\nThe board returns with the same gasket-mount internals and aluminum case as the first round. The headline change in R2 is the accent-weight palette, not the chassis.\n\n<Callout type=\"info\" title=\"Group-buy timing\">\n  Round opens 2026-05-01 and closes 2026-06-15. Group-buy windows can shift, so check the vendor page before the final week if you are still on the fence.\n</Callout>\n\n## What's new in R2\n\nR2 keeps the original case profile and weight footprint but introduces a refreshed set of accent-weight color options. The vendor listing for <Mono>MODE Sonnet R2</Mono> shows the brass weight available in three finishes: polished, black PVD, and a new bronze PVD that was not offered in R1. The bronze finish is paired in product photography with the silver and graphite case colorways.\n\nMode has not changed the typing-angle, plate options, or the default polycarbonate plate inclusion. R1 buyers who want only the new weight finish should check the standalone accessory listing on the same page rather than re-ordering the full kit.\n\nLead time is listed as approximately Q4 2026, in line with R1 cadence. <Source href=\"https://cannonkeys.com/products/mode-sonnet-r2\">CannonKeys product page</Source> has the full configurator, including plate, weight, and PCB selection.\n\n## Buying notes\n\nThe R2 group buy is global through CannonKeys, with one checkout flow and one fulfillment timeline. There is no announced regional proxy in the EU or APAC for this round, so duty and shipping at delivery time will follow CannonKeys's standard outbound policy.\n\nA note on links: group-buy URLs published on thock are auto-flagged with `rel=\"sponsored noopener\"` at render time. That tag is applied by the site, not the editorial team, and applies whether or not thock has any commercial relationship with the vendor in question. In this case, thock has no affiliate arrangement with CannonKeys for the Sonnet R2.\n\nBuyers who missed R1 should treat the closing date as soft. Mode and CannonKeys have, in past rounds, extended deadlines by a week or two when configurator inventory allowed; they have also closed early when allocation filled. The safest read of 2026-06-15 is \"do not assume an extension.\"\n\nWhat to watch next: Mode typically follows a flagship round with a smaller accessory drop two to three months later. If the bronze PVD weight sells through quickly, expect a standalone weight restock before the boards themselves ship.\n",
+      "readTime": 3,
+      "filePath": "Z:\\keyboard\\apps\\web\\src\\content\\articles\\mode-sonnet-r2-group-buy-coverage.mdx"
+    },
+    {
+      "slug": "alice-layout-decline",
+      "frontmatter": {
+        "slug": "alice-layout-decline",
+        "title": "The slow fade of Alice layouts",
+        "lede": "Alice mounts had a clear moment between 2021 and 2023 — the splayed alphas, the angled bar, the promise of a typing posture that didn't twist your wrists. The thock trends snapshot for 2026-W19 pegs Alice movement at -18 and trending down. The layout still has loyal users, but the curve has bent.",
+        "author": "thock",
+        "pillar": "trends",
+        "tags": [
+          "alice",
+          "layout",
+          "deep-dive",
+          "modding"
+        ],
+        "publishedAt": "2026-05-05T12:00:00.000Z",
+        "updatedAt": null,
+        "heroImage": null,
+        "heroImageAlt": null,
+        "featured": false,
+        "popularityScore": 26,
+        "guideSection": null,
+        "mentionedParts": []
+      },
+      "body": "\nThere was a stretch where every other build photo on the high-end\nside of the hobby was an Alice. The TGR Alice clones, the\nKeebio Iris cousins, the inevitable rosegold-anodized take on\nthe splayed-alpha geometry — they were the look. Two and a half\nyears later, the look has changed. Alice boards still ship, but\nthe gravity has shifted, and the data is starting to make that\nshift hard to argue with.\n\n## What the data is showing\n\nThe thock trends snapshot for the week of 2026-W19 puts the\nAlice layout at a movement score of -18, with the trajectory\nunambiguously down across the eight-week window. That's not a\ncollapse; for context, the same snapshot has Mode Designs at +24\nand the <Mono>Gateron Oil King</Mono> at +42. Alice isn't being\nabandoned, it's being out-gravitated by other categories.\n\nCommunity-pulse signals back the read. Group-buy interest checks\non the major Alice-style projects of the last twelve months have\nlanded softer than the rosters from 2022. Used-board listings on\n<Source href=\"https://www.reddit.com/r/MechanicalKeyboards\">r/MechanicalKeyboards</Source>\nmecha-market threads are turning over more slowly for Alice\nboards than for comparable 65% and 75% layouts at similar price\ntiers. Review-channel pickup rate — the loose proxy for\n\"reviewers think their audience cares\" — has thinned noticeably\nsince late 2024.\n\nNone of those signals are decisive on their own. Together they\nform the same shape: enthusiasm cooling at the margins, while a\ncore of loyal users keeps building. The score isn't crashing.\nIt's draining.\n\n<PullQuote>\n  Alice didn't fail. It got out-competed by ergonomics with\n  fewer compromises, and by aesthetics that moved on.\n</PullQuote>\n\n## Why it's cooling\n\nThree forces are doing the work, and they reinforce each other.\n\nThe first is the ergonomic ceiling. Alice asks the user to\naccept a fixed splay angle and a fixed bar position chosen by\nthe designer, and to live with whatever that geometry does to\ntheir hands. For people whose neutral posture matches the\ntemplate, it's a revelation. For everyone else, it's a\ncompromise that costs as much as a fully tuned tray-mount and\ndelivers less ergonomic payoff than a true split. The layout\ncan't tune itself to the typist; the typist has to tune to it.\n\nThe second is positioning. Alice almost never shows up at the\nbudget tier. The geometry requires a custom plate and PCB, the\ncases tend to be premium aluminum, and the ecosystem inherited\ngroup-buy pricing from its enthusiast peak. A first-time\nergo-curious typist looking around in 2026 sees Alice boards at\n$400 and up, sees pre-built splits at $250–$350 with\nhot-swap and wireless, and makes the rational call. Alice has\npriced itself into a niche it can't grow out of.\n\nThe third is the alternative. Split keyboards have spent the\nlast three years going from fringe to merely uncommon. The\nLily58, Corne, Sofle, and the wave of pre-built Keebio and\nZSA-adjacent boards have all moved up in fit-and-finish.\nWireless ZMK builds with sane battery life are no longer a\nscience project. For someone whose interest in Alice was\nergonomic in the first place, a split is now a less-compromised\npurchase at a similar price. For someone whose interest was\naesthetic, the aesthetic has moved on — toward low-profile,\ntoward unibody-CNC 65%, toward the <Mono>gasket-mount</Mono>\nrevival in TKL.\n\nThere's a fourth factor worth flagging without overweighting:\nthe modding scene around Alice boards has gone quiet. The PE\nfoam, force-break, and tape-mod conversation that defined Alice\nbuild threads in 2022 has largely moved to other layouts. When\nthe modding cohort migrates, the build photos migrate, and the\nbuild photos are most of how a layout stays culturally alive in\nthis hobby.\n\n## What would reverse this\n\nA pre-built Alice at the $200 tier with hot-swap, wireless, and\na serious-but-not-precious aesthetic would probably do it.\nThat's the gap: nobody has tried to make Alice the answer for\nsomeone who isn't already deep in customs. A second possibility\nis a split-Alice hybrid that lets users adjust the splay\nangle — at that point Alice stops being a fixed geometry and\nbecomes a tunable one, which is most of what the splits are\nselling.\n\nNeither of those products is on the public roadmap of any\nmaker thock tracks closely. Until one shows up, the trend line\nis what it is. Alice isn't dying. It's just not the look\nanymore, and the data has caught up to what the build threads\nalready showed.\n",
+      "readTime": 4,
+      "filePath": "Z:\\keyboard\\apps\\web\\src\\content\\articles\\alice-layout-decline.mdx"
+    },
+    {
+      "slug": "gateron-oil-king-deep-dive",
+      "frontmatter": {
+        "slug": "gateron-oil-king-deep-dive",
+        "title": "Why the Gateron Oil King sounds the way it does",
+        "lede": "Few stock linears earn the word 'creamy' on first press. The Oil King does, and the reason is not a secret stem material or a proprietary lube — it is a careful pairing of housing resins and a factory tune that other linears under thirty cents tend to skip.",
+        "author": "thock",
+        "pillar": "deep-dives",
+        "tags": [
+          "linear",
+          "factory-lubed",
+          "gateron",
+          "pom",
+          "polycarbonate",
+          "deep-dive"
+        ],
+        "publishedAt": "2026-05-04T15:00:00.000Z",
+        "updatedAt": null,
+        "heroImage": null,
+        "heroImageAlt": null,
+        "featured": false,
+        "popularityScore": 38,
+        "guideSection": null,
+        "mentionedParts": [
+          {
+            "id": "oil-king",
+            "kind": "switch",
+            "slug": "gateron-oil-king"
+          }
+        ]
+      },
+      "body": "\nThe first time a builder drops a set of <PartReference id=\"oil-king\" /> into a polycarbonate-plate <Mono>NK87 v3</Mono> and types a paragraph, the reaction is usually the same: a pause, a re-read of the sound, and then a quiet \"huh.\" The switch is not loud, not dry, not buttery in the way a hand-tuned linear is buttery — it is round. The bottom-out lands as a low, contained pock rather than a click, and the top-out sits a half-step behind it. That acoustic signature is not an accident, and it is not the lube alone. It is the whole stack: a polycarbonate top housing, a nylon bottom housing, a POM stem, and a measured factory tune that arrives consistent across a tray of seventy.\n\n## The housing, in two halves\n\nGateron's choice to mix housing materials is the load-bearing decision in the Oil King's sound. <Source href=\"https://www.gateron.com/products/gateron-oil-king\">Gateron's product page</Source> lists a polycarbonate top, nylon bottom, and POM stem, and each of those resins carries a different acoustic job.\n\n### Polycarbonate on top: clarity without ring\n\nPolycarbonate is the brightest of the three resins by a wide margin. On its own, an all-PC housing — think of any of the older \"frosted\" linears — produces a sharper, higher-frequency top-out that some builders read as \"clacky\" and others read as \"thin.\" Gateron uses PC only on top, where it is doing two things at once: lighting up the upstroke just enough to give the switch an articulated return, and letting a hint of the spring's natural ping escape so the switch does not feel acoustically dead. PC top housings also tolerate factory lube on the rails better than nylon does — the resin is harder, so the lubricant film stays where it is laid down rather than getting wiped into the leaf.\n\n### Nylon on the bottom: the thock you hear\n\nAlmost all of the \"thock\" in the Oil King's signature comes from the bottom housing. Nylon is dense, absorbent, and acoustically lossy in the low-mid range — it dampens the impact of the stem rails into the housing floor and converts what would be a high-frequency \"tick\" into a lower, fatter \"pock.\" This is the same mechanism that makes nylon-bottom Cherry MX Blacks legendary among vintage-switch collectors and the same mechanism that makes a fully PC switch sound bright by comparison. Pair a nylon bottom with a heavier 60g or 65g spring and the bottom-out lands in a register the human ear reads as \"deep\" rather than \"sharp.\"\n\nThe genuine engineering decision is in the seam between the two halves. A pure-nylon switch sounds muffled and a pure-PC switch sounds glassy; the Oil King hits a register most builders describe as \"creamy\" because the top contributes presence and the bottom contributes weight. Nothing else in the under-thirty-cent linear bracket does this consistently — most competitors pick one resin and live with the trade-off.\n\n## The factory tune\n\nGateron's factory lubing on the Oil King is the second half of the answer, and it is the half most reviewers underweight.\n\n### POM stem geometry\n\nPOM is a self-lubricating thermoplastic — it has a low coefficient of friction against itself and against PC, which is why most premium linears since 2022 have converged on POM stems. The Oil King's stem is on the longer side of the linear-stem spectrum, which lengthens the rail contact area and gives the switch its slightly slower-feeling glide. Combined with a 20mm two-stage spring, the press feels weighted from the start of the travel rather than only at the bottom — there is no \"free fall\" zone where the stem is between rails.\n\n<PullQuote>The Oil King is the rare stock switch that does not get appreciably better after a hand-lube. That is either a compliment or a critique depending on which side of the modding hobby you live on. — Wuque Studio review notes</PullQuote>\n\n### What the factory lube actually does\n\nThe factory application is light — closer to a film than a coat — and it sits on the rails and the stem legs rather than in the housing wells. Two consequences follow. First, the switch sounds the same on press five hundred as it does on press five: there is no break-in valley where the lube redistributes and the switch turns scratchy for a week. Second, the switch responds poorly to additional hand-lube; piling Krytox 205g0 on top of the factory tune tends to mute the very top-out articulation that the PC top housing was placed there to produce. Builders running an <Mono>NK87 v3</Mono> on <Mono>QMK 0.24</Mono> with a polycarbonate plate routinely report that the stock Oil King outperforms their own attempts at improvement, which is not a sentence the modding community is comfortable saying out loud.\n\nFor builders who want to push further, the productive direction is not lube — it is plate material. Swapping a PC plate for FR4 trims a hair off the top-end and pushes the bottom-out a quarter-step deeper; swapping for POM does the opposite. The switch is sensitive to plate in a way it is not sensitive to lube, which tells you where its signature is being shaped.\n\n## What to listen for\n\nOn first press, listen for the gap between top-out and bottom-out — in a well-tuned linear that gap is a single fused sound, and in the Oil King it is two distinct events spaced about a quarter-second apart at typing speed. That separation is the polycarbonate top doing its job. Listen, too, for whether the bottom-out has any ring in it; if the switch sounds at all metallic in a gasket-mount build, the spring is the problem, not the housing. The Oil King will tell you what is wrong with the rest of the build before it tells you anything is wrong with itself, and that diagnostic honesty is most of what makes it worth the asking price.\n",
+      "readTime": 5,
+      "filePath": "Z:\\keyboard\\apps\\web\\src\\content\\articles\\gateron-oil-king-deep-dive.mdx"
+    },
+    {
+      "slug": "beginners-switch-buying-guide",
+      "frontmatter": {
+        "slug": "beginners-switch-buying-guide",
+        "title": "A beginner's guide to picking your first switch",
+        "lede": "Switches are the single biggest factor in how a keyboard feels and sounds, and the catalog has grown overwhelming. This guide narrows the entire market into three families, explains who each one is for, and gives a three-step path from curiosity to a confident first purchase. By the end, the reader can pick a category without second-guessing.",
+        "author": "thock",
+        "pillar": "guides",
+        "tags": [
+          "linear",
+          "tactile",
+          "clicky",
+          "silent",
+          "gateron",
+          "beginner"
+        ],
+        "publishedAt": "2026-04-30T09:00:00.000Z",
+        "updatedAt": null,
+        "heroImage": null,
+        "heroImageAlt": null,
+        "featured": false,
+        "popularityScore": 51,
+        "guideSection": "switches",
+        "mentionedParts": [
+          {
+            "id": "oil-king",
+            "kind": "switch",
+            "slug": "gateron-oil-king"
+          }
+        ]
+      },
+      "body": "\nThe hardest part of buying a first mechanical keyboard is not the board, the keycaps, or the firmware. It is the switches. There are now hundreds of them on the shelves of any well-stocked vendor, with names that range from the descriptive to the deliberately mysterious, and prices that swing from a few cents to several dollars per switch. The good news: nearly every switch on the market belongs to one of three families. Once a reader can name the family, the rest of the choice becomes manageable.\n\nThis guide is for someone who has never bought switches before, or who has bought one set, did not love it, and wants to do better the second time. It is not a buyer's list. It is a way of thinking about the question.\n\n<Callout type=\"info\" title=\"Cheat sheet\">\n  Three families: <Mono>linear</Mono> (smooth, no bump, quieter on average), <Mono>tactile</Mono> (a small bump partway down, the most \"typewriter-like\" of the three), and <Mono>clicky</Mono> (a bump plus an audible click, loud on purpose). Pick the family first; pick the specific switch second. Do not start with a 90-switch order.\n</Callout>\n\n## The three families\n\nEvery switch sold today is either linear, tactile, or clicky. The difference is what happens between the moment a finger starts pressing and the moment the key actuates.\n\nA **linear** switch travels in a straight line from rest to bottom-out, with no bump and no click. The whole press is one smooth motion. Linears tend to be the quietest of the three families on average, especially when factory-lubed, and they are the dominant choice in the enthusiast scene right now. They are good for people who want a calm, even feel and a sound profile that leans toward the deeper \"thock\" end of the spectrum. The <PartReference id=\"oil-king\" /> from <Mono>Gateron</Mono> is a representative modern linear: smooth out of the box, on the heavier side at around 55g actuation, and built to land with a deep bottom-out note rather than a sharp tap. Other common linears worth knowing by name are the Gateron Yellow, Gateron Milky Yellow, and the Cherry MX Red.\n\nA **tactile** switch has a small bump partway down the press. The finger feels the bump, then breaks past it, then continues to the bottom. The bump is the actuation cue: most typists learn very quickly to stop pressing the moment they feel it, which can reduce fatigue on long sessions. Tactiles are the closest modern equivalent to the feel of an old buckling-spring or a typewriter, though much quieter. Common starting points are the <Mono>Kailh</Mono> Box Brown, the Gateron Brown, the Holy Panda variants, and the increasingly popular Boba U4T from Gazzew. Tactiles have a wider range of bump shapes than linears do, so two tactiles from different makers can feel very different.\n\nA **clicky** switch is a tactile with an added mechanism that produces a sharp, audible click at the actuation point. The click is intentional. It is loud. Clickies are the smallest of the three families today, partly because the modern hobby has drifted toward quieter sound profiles, and partly because many shared workspaces simply will not tolerate them. The classic example is the Cherry MX Blue, with the Kailh Box White as a modern, smoother-sounding alternative. A clicky switch is a great choice in a private room and a poor choice in an open office.\n\n## What about silent switches?\n\nSilent is not a fourth family. It is a modifier. A silent switch is a linear or tactile with small dampening pads inside that soften the bottom-out and, on the way up, the top-out. The result is a noticeably quieter press, at the cost of a slightly mushier feel; the dampening pads also slightly reduce travel distance. Silents are worth considering for anyone sharing a desk, recording video calls, or living with a light sleeper. They are not a free upgrade. The trade-off in feel is real, and some typists who try silents end up returning to a normal switch with foam-modded keycaps instead.\n\n## Where to actually start\n\nThree steps, in order. Do not skip ahead.\n\n**Step one: buy a switch tester, not a keyboard's worth of switches.** A switch tester is a small acrylic or plastic block with somewhere between nine and thirty-six switches mounted in it, each of a different model. Most major vendors sell their own tester; some are themed around a single brand, others span the catalog. The point is to put a finger on three or four candidates from each family, in person, before committing. A tester costs roughly the same as ten loose switches and saves the cost of a full-board mistake. It will not perfectly replicate how a switch sounds in a real case, but it will tell a beginner whether they prefer linear or tactile, and that is the question that matters most at this stage.\n\n**Step two: pick a single family, and a single switch within it.** Resist the urge to order three different sets to compare. Comparing is what step one was for. Once a family is chosen, pick one well-reviewed switch in that family at a moderate price, and order enough for a full board plus five or six spares. Stay with mainstream brands for a first purchase. <Mono>Gateron</Mono>, <Mono>Kailh</Mono>, and <Mono>Cherry</Mono> all have strong entry-level options, and their quality control is consistent enough that a beginner will not be diagnosing a wobbly stem on day one.\n\n**Step three: actually use the keyboard for at least a month before changing anything.** The first week with a new switch is misleading. Hands adapt. A switch that felt too heavy on day one often feels correct by day ten, and a switch that felt perfect for the first hour can become tiring by the end of the week. Give it a month of real typing before deciding the switch was wrong. When that month is up, and only then, is it worth going down the rabbit hole of lubing, filming, and reading detailed reviewers like <Source href=\"https://www.theremingoat.com\">TheRemingoat reviews</Source> for the next, more specific upgrade. Starting with reviewer rabbit holes before knowing one's own preference is how a beginner ends up with three drawers of unused switches.\n\nThe honest truth: most people who go through these three steps end up happy with a mid-range linear or a mid-range tactile and never need to look further. The hobby goes very deep, but it does not have to. A first switch only needs to be the right family, in working order, and given a fair month to prove itself. Everything after that is optional.\n",
+      "readTime": 6,
+      "filePath": "Z:\\keyboard\\apps\\web\\src\\content\\articles\\beginners-switch-buying-guide.mdx"
+    }
+  ],
+  "tags": [
+    {
+      "slug": "60",
+      "name": "60%",
+      "category": "layout"
+    },
+    {
+      "slug": "65",
+      "name": "65%",
+      "category": "layout"
+    },
+    {
+      "slug": "75",
+      "name": "75%",
+      "category": "layout"
+    },
+    {
+      "slug": "abs",
+      "name": "ABS",
+      "category": "material"
+    },
+    {
+      "slug": "alice",
+      "name": "Alice",
+      "category": "layout"
+    },
+    {
+      "slug": "aluminum",
+      "name": "Aluminum",
+      "category": "material"
+    },
+    {
+      "slug": "beginner",
+      "name": "Beginner",
+      "category": "misc"
+    },
+    {
+      "slug": "build-of-the-week",
+      "name": "Build of the week",
+      "category": "misc"
+    },
+    {
+      "slug": "cannonkeys",
+      "name": "CannonKeys",
+      "category": "brand"
+    },
+    {
+      "slug": "cherry",
+      "name": "Cherry",
+      "category": "brand"
+    },
+    {
+      "slug": "cherry-profile",
+      "name": "Cherry profile",
+      "category": "profile"
+    },
+    {
+      "slug": "clicky",
+      "name": "Clicky",
+      "category": "switch"
+    },
+    {
+      "slug": "deep-dive",
+      "name": "Deep dive",
+      "category": "misc"
+    },
+    {
+      "slug": "drop",
+      "name": "Drop",
+      "category": "brand"
+    },
+    {
+      "slug": "factory-lubed",
+      "name": "Factory-lubed",
+      "category": "switch"
+    },
+    {
+      "slug": "full",
+      "name": "Full-size",
+      "category": "layout"
+    },
+    {
+      "slug": "gateron",
+      "name": "Gateron",
+      "category": "brand"
+    },
+    {
+      "slug": "gmk",
+      "name": "GMK",
+      "category": "brand"
+    },
+    {
+      "slug": "group-buy",
+      "name": "Group buy",
+      "category": "misc"
+    },
+    {
+      "slug": "kailh",
+      "name": "Kailh",
+      "category": "brand"
+    },
+    {
+      "slug": "layout",
+      "name": "Layout",
+      "category": "layout"
+    },
+    {
+      "slug": "linear",
+      "name": "Linear",
+      "category": "switch"
+    },
+    {
+      "slug": "lubed",
+      "name": "Lubed",
+      "category": "switch"
+    },
+    {
+      "slug": "modding",
+      "name": "Modding",
+      "category": "misc"
+    },
+    {
+      "slug": "mode",
+      "name": "Mode",
+      "category": "brand"
+    },
+    {
+      "slug": "mt3",
+      "name": "MT3",
+      "category": "profile"
+    },
+    {
+      "slug": "novelkeys",
+      "name": "NovelKeys",
+      "category": "brand"
+    },
+    {
+      "slug": "oem-profile",
+      "name": "OEM profile",
+      "category": "profile"
+    },
+    {
+      "slug": "ortho",
+      "name": "Ortho",
+      "category": "layout"
+    },
+    {
+      "slug": "pbt",
+      "name": "PBT",
+      "category": "material"
+    },
+    {
+      "slug": "polycarbonate",
+      "name": "Polycarbonate",
+      "category": "material"
+    },
+    {
+      "slug": "pom",
+      "name": "POM",
+      "category": "material"
+    },
+    {
+      "slug": "sa",
+      "name": "SA",
+      "category": "profile"
+    },
+    {
+      "slug": "silent",
+      "name": "Silent",
+      "category": "switch"
+    },
+    {
+      "slug": "split",
+      "name": "Split",
+      "category": "layout"
+    },
+    {
+      "slug": "tactile",
+      "name": "Tactile",
+      "category": "switch"
+    },
+    {
+      "slug": "tkl",
+      "name": "TKL",
+      "category": "layout"
+    },
+    {
+      "slug": "trends-tracker",
+      "name": "Trends Tracker",
+      "category": "misc"
+    },
+    {
+      "slug": "wuque",
+      "name": "Wuque Studio",
+      "category": "brand"
+    }
+  ],
+  "generatedAt": "2026-05-09T02:27:23.844Z"
+}

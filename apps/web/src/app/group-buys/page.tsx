@@ -1,4 +1,4 @@
-import { getActiveGroupBuys } from '@thock/data'
+import { getActiveGroupBuys } from '@/lib/data-runtime'
 import {
   buildBreadcrumbListJsonLd,
   buildCollectionPageJsonLd,

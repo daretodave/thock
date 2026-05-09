@@ -1,4 +1,4 @@
-import { getArticlesByPillar } from '@thock/content'
+import { getArticlesByPillar } from '@/lib/data-runtime'
 import {
   buildBreadcrumbListJsonLd,
   buildCollectionPageJsonLd,

@@ -1,4 +1,4 @@
-import { getAllArticles } from '@thock/content'
+import { getAllArticles } from '@/lib/data-runtime'
 import { canonicalUrl, siteConfig } from '@thock/seo'
 import { buildRssXml, RSS_CONTENT_TYPE } from '@/lib/rss/buildRss'
 

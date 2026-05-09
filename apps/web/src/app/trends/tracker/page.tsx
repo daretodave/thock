@@ -1,4 +1,4 @@
-import { getLatestTrendSnapshot } from '@thock/data'
+import { getLatestTrendSnapshot } from '@/lib/data-runtime'
 import {
   buildBreadcrumbListJsonLd,
   buildCollectionPageJsonLd,

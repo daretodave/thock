@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
 import { Container, Stack } from '@thock/ui'
-import { getArticlesByTag, getTagBySlug } from '@thock/content'
+import { getArticlesByTag, getTagBySlug } from '@/lib/data-runtime'
 import {
   buildBreadcrumbListJsonLd,
   buildCollectionPageJsonLd,

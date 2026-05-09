@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import type { Article } from '@thock/content'
-import { getAllTags, type Tag } from '@thock/content'
+import type { Article, Tag } from '@thock/content'
+import { getAllTags } from '@/lib/data-runtime'
 
 const PILLAR_LABEL: Record<Article['frontmatter']['pillar'], string> = {
   news: 'News',

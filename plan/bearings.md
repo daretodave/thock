@@ -378,16 +378,17 @@ pnpm e2e            # Playwright against next start on :4173 — hermetic
   production build on `:4173`. No external network. No flake from
   live data.
 
-### Post-push: `pnpm deploy:check`
+### Post-push: `pnpm deploy:check` then `pnpm deploy:smoke`
 
-After `git push origin main`, every shipping skill runs:
+After `git push origin main`, every shipping skill runs **two**
+post-push gates in sequence:
 
 ```
 pnpm deploy:check   # polls Netlify REST API for the deploy at HEAD
+pnpm deploy:smoke   # GETs one URL per pattern against the live site
 ```
 
-Output reads `"Checking last deployment for commit <sha>..."`,
-shows state transitions (`building → ready`), and exits:
+**`pnpm deploy:check`** — confirms the deploy *built*:
 
 - `0` → deploy ready (site green at the just-pushed commit)
 - `1` → deploy errored / failed (read the log; patch; push again)
@@ -397,10 +398,29 @@ shows state transitions (`building → ready`), and exits:
 Implementation: `scripts/deploy-check.mjs` (no CLI install
 required; uses Node 20+ built-in `fetch`).
 
-**A red deploy is a blocked tick.** The skill treats it identically
-to a red verify gate: read the log, patch the root cause, push
-again. Up to 3 iterations on the same root cause; otherwise the
-skill stops per its failure modes.
+**`pnpm deploy:smoke`** — confirms the deploy *serves*:
+
+- `0` → every probe returned 2xx (home, pillar, tracker,
+  article, tag, group-buys, sitemap, robots, global feed,
+  pillar feed)
+- `1` → at least one probe returned non-2xx; print per-URL,
+  patch the runtime, push again
+
+Implementation: `scripts/deploy-smoke.mjs` — minimal HTTP probe,
+one URL per pattern, parallelized.
+
+**Why two gates:** phase 4 shipped with `verify` green and
+`deploy:check` ready, yet `/article/[slug]` and every other
+dynamic route returned HTTP 500 in the bundled Netlify lambda.
+The local e2e walker hits `next start` with the full repo on
+disk; the lambda has neither `pnpm-workspace.yaml` nor `/data`
+on its filesystem. `deploy:smoke` is the post-push contract
+that catches that class of regression.
+
+**A red deploy or a failed smoke is a blocked tick.** The skill
+treats either identically to a red verify gate: read the log,
+patch the root cause, push again. Up to 3 iterations on the same
+root cause; otherwise the skill stops per its failure modes.
 
 > **Note:** Until phase 1 ships `apps/web/`, deploys are expected
 > to be red (Netlify can't build a workspace that doesn't exist).

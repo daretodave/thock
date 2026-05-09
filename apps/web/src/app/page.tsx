@@ -1,5 +1,5 @@
 import { Container, Stack } from '@thock/ui'
-import { getAllArticles } from '@thock/content'
+import { getAllArticles } from '@/lib/data-runtime'
 import {
   buildMetadata,
   buildWebSiteJsonLd,

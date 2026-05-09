@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import sitemap from '../sitemap'
 import { canonicalUrl, PILLARS } from '@thock/seo'
-import { getAllArticles, getAllTags } from '@thock/content'
+import { getAllArticles, getAllTags } from '@/lib/data-runtime'
 
 describe('sitemap', () => {
   const map = sitemap()
