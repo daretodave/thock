@@ -1,0 +1,120 @@
+{
+  "$ref": "#/definitions/board",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "board": {
+      "additionalProperties": false,
+      "properties": {
+        "caseMaterial": {
+          "enum": [
+            "aluminum",
+            "polycarbonate",
+            "wood",
+            "fr4",
+            "plastic",
+            "mixed"
+          ],
+          "type": "string"
+        },
+        "description": {
+          "maxLength": 800,
+          "minLength": 20,
+          "type": "string"
+        },
+        "hotswap": {
+          "type": "boolean"
+        },
+        "imageUrl": {
+          "anyOf": [
+            {
+              "format": "uri",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "layout": {
+          "enum": [
+            "tkl",
+            "60",
+            "65",
+            "75",
+            "full",
+            "alice",
+            "split",
+            "ortho",
+            "other"
+          ],
+          "type": "string"
+        },
+        "mountStyle": {
+          "enum": [
+            "gasket",
+            "top-mount",
+            "tray-mount",
+            "integrated-plate",
+            "leaf-spring",
+            "pcb-mount"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "minLength": 2,
+          "type": "string"
+        },
+        "releasedAt": {
+          "anyOf": [
+            {
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "slug": {
+          "minLength": 2,
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "in-stock",
+            "group-buy",
+            "discontinued"
+          ],
+          "type": "string"
+        },
+        "updatedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "vendorSlug": {
+          "$ref": "#/definitions/board/properties/slug"
+        },
+        "wireless": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "slug",
+        "name",
+        "vendorSlug",
+        "layout",
+        "caseMaterial",
+        "mountStyle",
+        "hotswap",
+        "wireless",
+        "releasedAt",
+        "status",
+        "imageUrl",
+        "description",
+        "updatedAt"
+      ],
+      "type": "object"
+    }
+  }
+}

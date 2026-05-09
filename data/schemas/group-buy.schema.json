@@ -1,0 +1,108 @@
+{
+  "$ref": "#/definitions/group-buy",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "group-buy": {
+      "additionalProperties": false,
+      "properties": {
+        "description": {
+          "maxLength": 800,
+          "minLength": 20,
+          "type": "string"
+        },
+        "endDate": {
+          "$ref": "#/definitions/group-buy/properties/startDate"
+        },
+        "imageUrl": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/group-buy/properties/url"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "name": {
+          "minLength": 2,
+          "type": "string"
+        },
+        "productKind": {
+          "enum": [
+            "board",
+            "keycap-set",
+            "switch",
+            "other"
+          ],
+          "type": "string"
+        },
+        "productSlug": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/group-buy/properties/slug"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "region": {
+          "enum": [
+            "global",
+            "us",
+            "eu",
+            "asia",
+            "oceania",
+            "mena"
+          ],
+          "type": "string"
+        },
+        "slug": {
+          "minLength": 2,
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+          "type": "string"
+        },
+        "startDate": {
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "announced",
+            "live",
+            "closed",
+            "shipped"
+          ],
+          "type": "string"
+        },
+        "updatedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "url": {
+          "format": "uri",
+          "type": "string"
+        },
+        "vendorSlug": {
+          "$ref": "#/definitions/group-buy/properties/slug"
+        }
+      },
+      "required": [
+        "slug",
+        "name",
+        "vendorSlug",
+        "productSlug",
+        "productKind",
+        "startDate",
+        "endDate",
+        "region",
+        "url",
+        "imageUrl",
+        "status",
+        "description",
+        "updatedAt"
+      ],
+      "type": "object"
+    }
+  }
+}

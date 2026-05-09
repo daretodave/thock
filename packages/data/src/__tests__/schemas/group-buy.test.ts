@@ -1,0 +1,51 @@
+import { describe, expect, it } from 'vitest'
+import { GroupBuySchema } from '../../schemas/group-buy'
+
+const VALID = {
+  slug: 'cannonkeys-mode-sonnet-r2',
+  name: 'Mode Sonnet R2',
+  vendorSlug: 'cannonkeys',
+  productSlug: 'mode-sonnet',
+  productKind: 'board' as const,
+  startDate: '2026-05-01',
+  endDate: '2026-06-15',
+  region: 'global' as const,
+  url: 'https://cannonkeys.com/products/mode-sonnet-r2',
+  imageUrl: null,
+  status: 'live' as const,
+  description: 'Second run of the Mode Sonnet 65 percent.',
+  updatedAt: '2026-05-08T00:00:00.000Z',
+}
+
+describe('GroupBuySchema', () => {
+  it('accepts a valid record', () => {
+    expect(GroupBuySchema.safeParse(VALID).success).toBe(true)
+  })
+
+  it('rejects endDate before startDate', () => {
+    const result = GroupBuySchema.safeParse({
+      ...VALID,
+      startDate: '2026-06-15',
+      endDate: '2026-05-01',
+    })
+    expect(result.success).toBe(false)
+  })
+
+  it("rejects productKind 'other' with a non-null productSlug", () => {
+    const result = GroupBuySchema.safeParse({
+      ...VALID,
+      productKind: 'other',
+      productSlug: 'something',
+    })
+    expect(result.success).toBe(false)
+  })
+
+  it("accepts productKind 'other' with a null productSlug", () => {
+    const result = GroupBuySchema.safeParse({
+      ...VALID,
+      productKind: 'other',
+      productSlug: null,
+    })
+    expect(result.success).toBe(true)
+  })
+})

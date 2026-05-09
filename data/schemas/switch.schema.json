@@ -1,0 +1,131 @@
+{
+  "$ref": "#/definitions/switch",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "switch": {
+      "additionalProperties": false,
+      "properties": {
+        "description": {
+          "maxLength": 800,
+          "minLength": 20,
+          "type": "string"
+        },
+        "factoryLubed": {
+          "type": "boolean"
+        },
+        "housingBottom": {
+          "$ref": "#/definitions/switch/properties/housingTop"
+        },
+        "housingTop": {
+          "enum": [
+            "pc",
+            "pom",
+            "nylon",
+            "pa66",
+            "lcp",
+            "mixed",
+            "unknown"
+          ],
+          "type": "string"
+        },
+        "name": {
+          "minLength": 2,
+          "type": "string"
+        },
+        "releasedAt": {
+          "anyOf": [
+            {
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "slug": {
+          "minLength": 2,
+          "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+          "type": "string"
+        },
+        "springGrams": {
+          "additionalProperties": false,
+          "properties": {
+            "actuation": {
+              "exclusiveMinimum": 0,
+              "maximum": 200,
+              "type": "number"
+            },
+            "bottomOut": {
+              "exclusiveMinimum": 0,
+              "maximum": 200,
+              "type": "number"
+            }
+          },
+          "required": [
+            "actuation",
+            "bottomOut"
+          ],
+          "type": "object"
+        },
+        "status": {
+          "enum": [
+            "in-production",
+            "discontinued",
+            "limited"
+          ],
+          "type": "string"
+        },
+        "stem": {
+          "enum": [
+            "pom",
+            "pc",
+            "lcp",
+            "mixed",
+            "unknown"
+          ],
+          "type": "string"
+        },
+        "travelMm": {
+          "exclusiveMinimum": 0,
+          "maximum": 10,
+          "type": "number"
+        },
+        "type": {
+          "enum": [
+            "linear",
+            "tactile",
+            "clicky",
+            "silent-linear",
+            "silent-tactile"
+          ],
+          "type": "string"
+        },
+        "updatedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "vendorSlug": {
+          "$ref": "#/definitions/switch/properties/slug"
+        }
+      },
+      "required": [
+        "slug",
+        "name",
+        "vendorSlug",
+        "type",
+        "housingTop",
+        "housingBottom",
+        "stem",
+        "springGrams",
+        "travelMm",
+        "factoryLubed",
+        "releasedAt",
+        "status",
+        "description",
+        "updatedAt"
+      ],
+      "type": "object"
+    }
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "$ref": "#/definitions/trend",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "trend": {
+      "additionalProperties": false,
+      "properties": {
+        "isoWeek": {
+          "pattern": "^\\d{4}-W(0[1-9]|[1-4]\\d|5[0-3])$",
+          "type": "string"
+        },
+        "publishedAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "rows": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "articleSlug": {
+                "anyOf": [
+                  {
+                    "minLength": 2,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
+              "category": {
+                "enum": [
+                  "switch",
+                  "keycap",
+                  "layout",
+                  "vendor",
+                  "brand"
+                ],
+                "type": "string"
+              },
+              "direction": {
+                "enum": [
+                  "up",
+                  "down",
+                  "flat"
+                ],
+                "type": "string"
+              },
+              "name": {
+                "maxLength": 80,
+                "minLength": 2,
+                "type": "string"
+              },
+              "score": {
+                "maximum": 100,
+                "minimum": -100,
+                "type": "number"
+              },
+              "spark": {
+                "items": {
+                  "type": "number"
+                },
+                "maxItems": 16,
+                "minItems": 2,
+                "type": "array"
+              }
+            },
+            "required": [
+              "name",
+              "category",
+              "direction",
+              "score",
+              "spark",
+              "articleSlug"
+            ],
+            "type": "object"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "updatedAt": {
+          "$ref": "#/definitions/trend/properties/publishedAt"
+        }
+      },
+      "required": [
+        "isoWeek",
+        "publishedAt",
+        "rows",
+        "updatedAt"
+      ],
+      "type": "object"
+    }
+  }
+}
