@@ -59,6 +59,17 @@
 - pass: 2 (commit e270ced) — filed as a low-priority observation worth noting but expected to drain naturally with phase 15 newsletter shipping.
 - note: this was reader's eighth raw observation; I curated it down to six during pass-2 self-assessment with the rationale "Phase 15 will replace the form entirely." Phase 15's footer retrofit (replacing the inert form with `<ButtondownForm variant="footer">`) drops the placeholder aria-label as expected. Closing inline with the phase-15 ship, no separate iterate tick required.
 
+### [MED] /article/* — cheat-sheet / Callout block has no margin-bottom; next H2 collides (user jot)
+- pass: user-jot (commit 25ad482)
+- viewport: unspecified
+- auth_state: anonymous
+- category: visual
+- observation: on https://thock-coral.vercel.app/article/beginners-switch-buying-guide the content above "the three families" is butting directly with the header "the three families" — basically that cheat sheet has no margin bottom. This might be an issue for all cheat sheets. Worth noting. Same at https://thock-coral.vercel.app/article/mode-sonnet-r2-group-buy-coverage where "What's new in R2" needs a little room above the header.
+- evidence: user-spotted at 2026-05-09T18:57Z across two articles, suggesting a cross-article pattern (likely the `<Callout>` MDX component used in both, or the article body's H2 lacking sufficient `margin-top` on the prose-paragraph rules added during pass-1 drainage).
+- suggested fix: [user has not specified — iterate to determine. Likely root cause is `.thock-prose` H2 margin-top vs. the trailing-block margin-bottom in `apps/web/src/styles/components.css`. Either bump the H2 `mt-` token (cleanest — fixes every adjacency) or add `margin-bottom` to the Callout / cheat-sheet wrapper. Verify with the two articles cited above.]
+- source: user
+
+
 ### [LOW] /trends/tracker — every editor's-note cell is a uniform em dash
 - pass: 2 (commit e270ced)
 - viewport: desktop
