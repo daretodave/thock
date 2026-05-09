@@ -278,7 +278,7 @@ one mega-commit; the loop can be interrupted between them safely.
    after a data ship.** Often this means the data crossed a
    schema boundary that local validate didn't catch; fetch the
    deploy log and surface it.
-3. **`NETLIFY_AUTH_TOKEN` missing** (deploy:check exit 3). Stop
+3. **`VERCEL_TOKEN` missing** (deploy:check exit 3). Stop
    and ask the user to populate `.env`.
 4. **Schema change requires migration of >20 existing records.**
    That's a /plan-a-phase task; don't bundle into a ship-data tick.

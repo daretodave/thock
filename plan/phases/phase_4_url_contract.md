@@ -117,13 +117,13 @@ detail pages are out of scope; group buys are listed only on
 // siteConfig.ts — single source of truth
 export const siteConfig = {
   name: 'thock',
-  url: 'https://thock.netlify.app',
+  url: 'https://thock-coral.vercel.app',
   description: '…',
   tagline: 'keyboards, deeply.',
   publisher: {
     '@type': 'Organization',
     name: 'thock',
-    url: 'https://thock.netlify.app',
+    url: 'https://thock-coral.vercel.app',
   },
 } as const
 

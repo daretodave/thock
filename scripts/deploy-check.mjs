@@ -3,20 +3,24 @@
 //
 // "Checking last deployment" — the post-push gate.
 //
-// Polls the Netlify REST API for the deploy matching HEAD's commit SHA
-// and exits when the deploy reaches a terminal state.
+// Polls the Vercel REST API for the deployment matching HEAD's commit SHA
+// and exits when the deployment reaches a terminal state.
 //
 //   exit 0  →  deploy ready (site is green at the just-pushed commit)
-//   exit 1  →  deploy errored or failed (read the log; do not push past)
-//   exit 2  →  timeout (deploy never reached terminal state)
-//   exit 3  →  config / auth failure (token missing, site unknown, 4xx)
+//   exit 1  →  deploy errored, failed, or canceled (read the log; do not push past)
+//   exit 2  →  timeout (deployment never reached terminal state)
+//   exit 3  →  config / auth failure (token missing, project unknown, 4xx)
 //
 // Usage:
 //   pnpm deploy:check
 //
 // Required env (from .env or shell):
-//   NETLIFY_AUTH_TOKEN   personal access token
-//   NETLIFY_SITE_NAME    optional, defaults to "thock"
+//   VERCEL_TOKEN          personal access token
+//   VERCEL_PROJECT_NAME   optional, defaults to "thock" (the project's name —
+//                         the public alias is thock-coral.vercel.app)
+//   VERCEL_TEAM_ID        required for this repo (project is team-scoped,
+//                         not personal). See agents.md "Operational secrets"
+//                         for the lookup command.
 //
 // The shipping skills (ship-a-phase, ship-data, iterate) run this as
 // Step 12 ("Confirm deploy"). A red exit is treated identically to a
@@ -35,15 +39,16 @@ if (fs.existsSync('.env')) {
   }
 }
 
-const TOKEN = process.env.NETLIFY_AUTH_TOKEN
-const SITE_NAME = process.env.NETLIFY_SITE_NAME ?? 'thock'
-const TIMEOUT_MS = 10 * 60 * 1000   // 10 min — Netlify Next.js builds can take 5+ min cold
+const TOKEN = process.env.VERCEL_TOKEN
+const PROJECT_NAME = process.env.VERCEL_PROJECT_NAME ?? 'thock'
+const TEAM_ID = process.env.VERCEL_TEAM_ID ?? ''
+const TIMEOUT_MS = 10 * 60 * 1000 // 10 min — Vercel Next.js builds can take a few minutes cold
 const POLL_MS = 5 * 1000
 
 if (!TOKEN) {
-  console.error('NETLIFY_AUTH_TOKEN is not set.')
-  console.error('  • Get a token at https://app.netlify.com/user/applications#personal-access-tokens')
-  console.error('  • Add to .env as: NETLIFY_AUTH_TOKEN=nfp_...')
+  console.error('VERCEL_TOKEN is not set.')
+  console.error('  • Get a token at https://vercel.com/account/tokens')
+  console.error('  • Add to .env as: VERCEL_TOKEN=...')
   console.error('  • .env is gitignored; never commit it.')
   process.exit(3)
 }
@@ -52,34 +57,21 @@ const sha = execSync('git rev-parse HEAD', { encoding: 'utf-8' }).trim()
 const subject = execSync('git log -1 --pretty=%s', { encoding: 'utf-8' }).trim()
 const auth = { Authorization: `Bearer ${TOKEN}` }
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
+const teamQuery = TEAM_ID ? `&teamId=${encodeURIComponent(TEAM_ID)}` : ''
 
-// Netlify creates one deploy per push, keyed to the head commit. If you
-// pushed multiple commits at once, the deploy will resolve to the last
-// of them — the others ride along but aren't directly addressable. We
-// log HEAD's subject so the message reflects what shipped, not just a SHA.
-console.log(`Checking deploy for HEAD ${sha.slice(0, 7)} ("${subject}") on site "${SITE_NAME}"...`)
-
-// --- resolve site ---
-const sitesRes = await fetch(
-  `https://api.netlify.com/api/v1/sites?name=${encodeURIComponent(SITE_NAME)}`,
-  { headers: auth },
+console.log(
+  `Checking deploy for HEAD ${sha.slice(0, 7)} ("${subject}") on Vercel project "${PROJECT_NAME}"...`,
 )
-if (!sitesRes.ok) {
-  console.error(`Netlify API error fetching sites: ${sitesRes.status} ${sitesRes.statusText}`)
-  if (sitesRes.status === 401) {
-    console.error('  Token rejected — check NETLIFY_AUTH_TOKEN.')
-  }
-  process.exit(3)
-}
-const sites = await sitesRes.json()
-const site = sites.find((s) => s.name === SITE_NAME) ?? sites[0]
-if (!site) {
-  console.error(`No Netlify site found for name "${SITE_NAME}".`)
-  console.error('  Override with NETLIFY_SITE_NAME=<name> in .env.')
-  process.exit(3)
-}
 
-// --- poll deploys ---
+// --- poll deployments ---
+//
+// Vercel `GET /v6/deployments?app=<project>&limit=20` returns the most
+// recent deployments, newest first. We filter by `meta.githubCommitSha`
+// to find the one matching the just-pushed HEAD.
+//
+// Possible deployment states: QUEUED, INITIALIZING, BUILDING, UPLOADING,
+// READY, ERROR, CANCELED.
+
 const start = Date.now()
 let lastReportedState = null
 let waitedForIngest = false
@@ -87,20 +79,34 @@ let waitedForIngest = false
 while (Date.now() - start < TIMEOUT_MS) {
   const elapsed = Math.round((Date.now() - start) / 1000)
   const res = await fetch(
-    `https://api.netlify.com/api/v1/sites/${site.id}/deploys?per_page=10`,
+    `https://api.vercel.com/v6/deployments?app=${encodeURIComponent(PROJECT_NAME)}&limit=20${teamQuery}`,
     { headers: auth },
   )
   if (!res.ok) {
-    console.error(`Netlify API error fetching deploys: ${res.status} (retrying in ${POLL_MS / 1000}s)`)
+    if (res.status === 401 || res.status === 403) {
+      console.error(`Vercel API auth error: ${res.status} ${res.statusText}`)
+      console.error('  Token rejected — check VERCEL_TOKEN in .env.')
+      process.exit(3)
+    }
+    if (res.status === 404) {
+      console.error(`Vercel project "${PROJECT_NAME}" not found (404).`)
+      console.error('  Override with VERCEL_PROJECT_NAME=<slug> in .env.')
+      console.error('  If the project is in a team scope, also set VERCEL_TEAM_ID.')
+      process.exit(3)
+    }
+    console.error(
+      `Vercel API error fetching deployments: ${res.status} (retrying in ${POLL_MS / 1000}s)`,
+    )
     await sleep(POLL_MS)
     continue
   }
-  const deploys = await res.json()
-  const match = deploys.find((d) => d.commit_ref === sha)
+  const body = await res.json()
+  const deployments = body.deployments ?? []
+  const match = deployments.find((d) => d.meta?.githubCommitSha === sha)
 
   if (!match) {
     if (!waitedForIngest) {
-      console.log(`Netlify hasn't ingested commit ${sha.slice(0, 7)} yet (waiting...)`)
+      console.log(`Vercel hasn't ingested commit ${sha.slice(0, 7)} yet (waiting...)`)
       waitedForIngest = true
     }
     await sleep(POLL_MS)
@@ -108,27 +114,34 @@ while (Date.now() - start < TIMEOUT_MS) {
   }
 
   if (match.state !== lastReportedState) {
-    console.log(`Deploy ${match.id.slice(0, 8)}: state=${match.state} (${elapsed}s elapsed)`)
+    console.log(
+      `Deployment ${match.uid.slice(0, 12)}: state=${match.state} (${elapsed}s elapsed)`,
+    )
     lastReportedState = match.state
   }
 
-  if (match.state === 'ready') {
-    console.log(`Deploy ready.`)
+  if (match.state === 'READY') {
+    console.log('Deploy ready.')
     // Show the full commit range the deploy contains — useful when a
     // push bundles multiple commits so the operator sees what actually
     // landed in production, not just HEAD.
-    const previousReady = deploys.find(
-      (d) => d.state === 'ready' && d.commit_ref && d.commit_ref !== sha,
+    const previousReady = deployments.find(
+      (d) =>
+        d.state === 'READY' &&
+        d.meta?.githubCommitSha &&
+        d.meta.githubCommitSha !== sha,
     )
-    if (previousReady) {
+    if (previousReady?.meta?.githubCommitSha) {
       try {
         const range = execSync(
-          `git log ${previousReady.commit_ref}..${sha} --oneline --no-merges`,
+          `git log ${previousReady.meta.githubCommitSha}..${sha} --oneline --no-merges`,
           { encoding: 'utf-8' },
         ).trim()
         if (range) {
           const lines = range.split('\n')
-          console.log(`  Includes ${lines.length} commit${lines.length === 1 ? '' : 's'}:`)
+          console.log(
+            `  Includes ${lines.length} commit${lines.length === 1 ? '' : 's'}:`,
+          )
           for (const line of lines) console.log(`    ${line}`)
         }
       } catch {
@@ -136,26 +149,24 @@ while (Date.now() - start < TIMEOUT_MS) {
         // squash-merged history, etc.) — skip the range silently.
       }
     }
-    if (match.deploy_ssl_url) console.log(`  Permalink: ${match.deploy_ssl_url}`)
-    if (match.ssl_url) console.log(`  Site:      ${match.ssl_url}`)
+    const aliasUrl =
+      match.alias?.find((a) => a.endsWith('.vercel.app')) ??
+      match.alias?.[0] ??
+      null
+    if (match.url) console.log(`  Permalink: https://${match.url}`)
+    if (aliasUrl) console.log(`  Site:      https://${aliasUrl}`)
+    if (match.inspectorUrl) console.log(`  Inspect:   ${match.inspectorUrl}`)
     process.exit(0)
   }
 
-  if (match.state === 'error' || match.state === 'failed') {
-    console.error(`DEPLOY FAILED.`)
-    if (match.error_message) console.error(`  Error: ${match.error_message}`)
-    if (match.title) console.error(`  Title: ${match.title}`)
-    if (match.summary?.messages?.length) {
-      console.error(`  Summary:`)
-      for (const msg of match.summary.messages.slice(0, 5)) {
-        console.error(`    - ${msg.title}${msg.description ? `: ${msg.description}` : ''}`)
-      }
-    }
-    console.error(`  Admin URL: ${match.admin_url}`)
-    console.error(`  Full log:  ${match.log_access_attributes?.url ?? 'see admin URL'}`)
-    console.error(``)
-    console.error(`Read the log, patch the root cause, push again.`)
-    console.error(`Do not push past this gate. (--no-verify is forbidden.)`)
+  if (match.state === 'ERROR' || match.state === 'CANCELED') {
+    console.error(`DEPLOY ${match.state}.`)
+    if (match.errorMessage) console.error(`  Error: ${match.errorMessage}`)
+    if (match.errorCode) console.error(`  Code:  ${match.errorCode}`)
+    if (match.inspectorUrl) console.error(`  Inspect:   ${match.inspectorUrl}`)
+    console.error('')
+    console.error('Read the log, patch the root cause, push again.')
+    console.error('Do not push past this gate. (--no-verify is forbidden.)')
     process.exit(1)
   }
 
@@ -163,5 +174,5 @@ while (Date.now() - start < TIMEOUT_MS) {
 }
 
 console.error(`Deploy still pending after ${TIMEOUT_MS / 1000}s.`)
-console.error(`  Check Netlify UI: https://app.netlify.com/sites/${SITE_NAME}/deploys`)
+console.error(`  Check Vercel UI: https://vercel.com/dashboard`)
 process.exit(2)

@@ -92,18 +92,28 @@ The autonomous loop is hermetic for shipping; the awareness layer
 needs two tokens. Both live in `.env` (gitignored). Configure once
 per machine.
 
-### `NETLIFY_AUTH_TOKEN` — deploy gate
+### `VERCEL_TOKEN` — deploy gate
 
 Used by `pnpm deploy:check` to read deploy state after each push.
 
-1. Get a token at
-   https://app.netlify.com/user/applications#personal-access-tokens
+1. Get a token at https://vercel.com/account/tokens
 2. Add to `.env`:
    ```
-   NETLIFY_AUTH_TOKEN=nfp_...
+   VERCEL_TOKEN=...
    ```
 
-Optional: `NETLIFY_SITE_NAME` (defaults to `thock`).
+`VERCEL_TEAM_ID` is **required** for this repo because the
+Vercel project lives under a team scope (not a personal
+account). Look it up once with the token in hand:
+
+```
+curl -H "Authorization: Bearer $VERCEL_TOKEN" \
+  https://api.vercel.com/v2/teams | jq '.teams[] | {id, slug}'
+```
+
+Pick the right `id` (starts with `team_…`) and add to `.env`.
+`VERCEL_PROJECT_NAME` defaults to `thock` (the project name —
+the public alias is `thock-coral.vercel.app`).
 
 If missing, `pnpm deploy:check` exits with a clear error. Shipping
 skills treat that as a blocked tick.
@@ -139,7 +149,7 @@ rather than inventing a placeholder.
 ## Project
 
 **thock** /θɒk/ — an editorial content hub for mechanical keyboard
-enthusiasts. Lives at https://thock.netlify.app.
+enthusiasts. Lives at https://thock-coral.vercel.app.
 
 The product spec is `spec.md` at the repo root. It's the canonical
 description. Read it once.
@@ -251,8 +261,8 @@ Read it before your first edit.
 
 ## Operational notes
 
-- **Netlify is the host.** `netlify.toml` at root pins the build.
-  Every push to `main` deploys. Previews on PRs.
+- **Vercel is the host.** Vercel auto-detects Next.js — no in-repo
+  config needed. Every push to `main` deploys. Previews on PRs.
 - **The repo is the database.** No external CMS, no external DB,
   no API keys. The autonomous loop is hermetic by design.
 - **Schemas (Zod)** live in `packages/data/src/schemas/`;

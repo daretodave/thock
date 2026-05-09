@@ -4,14 +4,14 @@
  */
 export const siteConfig = {
   name: 'thock',
-  url: 'https://thock.netlify.app',
+  url: 'https://thock-coral.vercel.app',
   description:
     'Editorial content hub for mechanical keyboard enthusiasts — switches, keycaps, layouts, and the people who obsess over them.',
   tagline: 'keyboards, deeply.',
   publisher: {
     '@type': 'Organization' as const,
     name: 'thock',
-    url: 'https://thock.netlify.app',
+    url: 'https://thock-coral.vercel.app',
   },
 } as const
 

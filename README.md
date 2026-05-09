@@ -3,11 +3,11 @@
 > *thock* /θɒk/ — *n.* the deep, satisfying sound of a well-tuned mechanical keyboard switch bottoming out.
 
 [![march](https://github.com/daretodave/thock/actions/workflows/march.yml/badge.svg?branch=main)](https://github.com/daretodave/thock/actions/workflows/march.yml)
-[![site](https://img.shields.io/website?url=https%3A%2F%2Fthock.netlify.app&label=thock.netlify.app&up_message=live)](https://thock.netlify.app)
+[![site](https://img.shields.io/website?url=https%3A%2F%2Fthock-coral.vercel.app&label=thock-coral.vercel.app&up_message=live)](https://thock-coral.vercel.app)
 [![built with](https://img.shields.io/badge/built%20with-claude%20code-d97757)](https://claude.com/claude-code)
 [![methodology: nexus](https://img.shields.io/badge/methodology-nexus-lightgrey)](https://github.com/daretodave/nexus)
 
-An editorial content hub for mechanical keyboard enthusiasts. Lives at [thock.netlify.app](https://thock.netlify.app).
+An editorial content hub for mechanical keyboard enthusiasts. Lives at [thock-coral.vercel.app](https://thock-coral.vercel.app).
 
 **This site is always being worked on.** An autonomous loop ships improvements 24/7 through a small set of slash commands — new content, broken-link fixes, schema updates, SEO catches, design landings. The cloud half ticks every 2h via [GitHub Actions](https://github.com/daretodave/thock/actions/workflows/march.yml); the local half runs on my laptop. No human in the per-commit loop, but every commit is gated by a hermetic verify (`typecheck → test → build → e2e`) and a post-push deploy gate.
 
@@ -23,7 +23,7 @@ This project is shipped by a small set of autonomous skills, each invoked as a C
 
 ### `/ship-a-phase`
 
-Ship the next pending phase of the [build plan](./plan/steps/01_build_plan.md) end-to-end: code, unit tests, e2e tests, commit, push. The Netlify deploy follows automatically.
+Ship the next pending phase of the [build plan](./plan/steps/01_build_plan.md) end-to-end: code, unit tests, e2e tests, commit, push. The Vercel deploy follows automatically.
 
 ```
 /ship-a-phase                       # next [ ] phase
@@ -74,7 +74,7 @@ Source: [`skills/iterate.md`](./skills/iterate.md)
 
 ### `/critique`
 
-The **external-observer** pass. Spawns the `reader` sub-agent to visit https://thock.netlify.app as a first-time reader would, take notes (visual, voice fidelity, mobile reflow, comprehension, navigation honesty), self-assess what was returned, and append the surviving findings to [`plan/CRITIQUE.md`](./plan/CRITIQUE.md). `/iterate` reads CRITIQUE.md as one of its audit sources — that's the **feedback address loop**.
+The **external-observer** pass. Spawns the `reader` sub-agent to visit https://thock-coral.vercel.app as a first-time reader would, take notes (visual, voice fidelity, mobile reflow, comprehension, navigation honesty), self-assess what was returned, and append the surviving findings to [`plan/CRITIQUE.md`](./plan/CRITIQUE.md). `/iterate` reads CRITIQUE.md as one of its audit sources — that's the **feedback address loop**.
 
 Rate-limited: only fires when there's a green deploy + ≥12 commits or ≥24h since the last pass. Caps at 6 filed findings per pass.
 
@@ -146,7 +146,7 @@ The only skill that asks you anything. Everything else decides and ships.
 /oversight                          # full audit + general questionnaire
 /oversight phase                    # bias toward phase progress
 /oversight content                  # bias toward /iterate findings
-/oversight deploy                   # bias toward Netlify / CI/CD
+/oversight deploy                   # bias toward Vercel / CI/CD
 /oversight reset                    # bias toward scope reduction
 ```
 

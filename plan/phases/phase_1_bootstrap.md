@@ -19,7 +19,7 @@ rooms:
   `next.json`).
 - Root install works (`pnpm install` clean), `pnpm verify` passes,
   the dev server runs, push triggers a green Netlify deploy at
-  https://thock.netlify.app.
+  https://thock-coral.vercel.app.
 
 Per-package SEO / content / data work is **deferred**:
 - `@thock/seo` — phase 4.

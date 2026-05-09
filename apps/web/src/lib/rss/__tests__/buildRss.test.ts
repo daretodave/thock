@@ -30,7 +30,7 @@ describe('buildRssXml', () => {
   it('produces an RSS 2.0 envelope with channel + items', () => {
     const xml = buildRssXml({
       title: 'thock',
-      link: 'https://thock.netlify.app',
+      link: 'https://thock-coral.vercel.app',
       description: 'desc',
       articles: [makeArticle()],
     })
@@ -44,7 +44,7 @@ describe('buildRssXml', () => {
     expect(xml).toContain('<title>Foo &amp; bar</title>')
     expect(xml).toContain('<description>&lt;one&gt; &quot;two&quot;</description>')
     expect(xml).toContain(
-      '<link>https://thock.netlify.app/article/foo</link>',
+      '<link>https://thock-coral.vercel.app/article/foo</link>',
     )
     expect(xml).toContain('<guid isPermaLink="true">')
     expect(xml).toContain('<pubDate>')

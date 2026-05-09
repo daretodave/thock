@@ -132,7 +132,7 @@ jobs:
 
             Begin. One tick. One commit-and-push (or no-op). Then exit.
         env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           # ACTIONS_PAT (not GITHUB_TOKEN) so the agent's `gh` calls
           # and any direct git operations identify as you, not as
           # the bot.

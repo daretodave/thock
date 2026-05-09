@@ -111,7 +111,7 @@ Default to §3. Adjust based on:
 ```
 Agent({
   subagent_type: "reader",
-  prompt: "Visit these URLs of https://thock.netlify.app: [list].
+  prompt: "Visit these URLs of https://thock-coral.vercel.app: [list].
            Voice cue from plan/bearings.md: <quote relevant section>.
            Already-addressed findings (skip these): <Done section
            from plan/CRITIQUE.md>.

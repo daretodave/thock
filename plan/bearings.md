@@ -22,7 +22,7 @@ breathless hype.
 
 **Site name is lowercase, always.** "thock", not "Thock".
 
-**Landing:** https://thock.netlify.app (Netlify-hosted, repo
+**Landing:** https://thock-coral.vercel.app (Vercel-hosted, repo
 auto-deploys on push to `main`).
 
 ## Stack (locked — do not re-litigate)
@@ -49,7 +49,7 @@ and ask.
 | Test (e2e) | **Playwright** | Standard |
 | Lint | **ESLint** (Next config) + **Prettier** + `prettier-plugin-tailwindcss` | Default |
 | Pkg mgr | **pnpm 9** | Lockfile committed |
-| Hosting | **Netlify** with `@netlify/plugin-nextjs` | Auto-deploys; config in `netlify.toml` |
+| Hosting | **Vercel** (Hobby tier) | Native Next.js host, auto-deploys on push, generous free tier |
 | Analytics | **Plausible** (script tag, eventual) | Privacy-respecting |
 | Newsletter | **Buttondown** form embed (eventual) | No SDK / secret needed |
 
@@ -94,7 +94,6 @@ Z:/keyboard/                              # repo root (will be renamed by user)
 ├── pnpm-workspace.yaml
 ├── pnpm-lock.yaml
 ├── tsconfig.base.json
-├── netlify.toml                          # build config for thock.netlify.app
 ├── .nvmrc                                # node 20
 ├── .editorconfig
 ├── .prettierrc
@@ -393,10 +392,12 @@ pnpm deploy:smoke   # GETs one URL per pattern against the live site
 - `0` → deploy ready (site green at the just-pushed commit)
 - `1` → deploy errored / failed (read the log; patch; push again)
 - `2` → timeout
-- `3` → config / auth (NETLIFY_AUTH_TOKEN missing)
+- `3` → config / auth (VERCEL_TOKEN missing)
 
 Implementation: `scripts/deploy-check.mjs` (no CLI install
-required; uses Node 20+ built-in `fetch`).
+required; uses Node 20+ built-in `fetch`). Polls
+`https://api.vercel.com/v6/deployments` and matches by
+`meta.githubCommitSha`.
 
 **`pnpm deploy:smoke`** — confirms the deploy *serves*:
 
@@ -411,22 +412,25 @@ one URL per pattern, parallelized.
 
 **Why two gates:** phase 4 shipped with `verify` green and
 `deploy:check` ready, yet `/article/[slug]` and every other
-dynamic route returned HTTP 500 in the bundled Netlify lambda.
-The local e2e walker hits `next start` with the full repo on
-disk; the lambda has neither `pnpm-workspace.yaml` nor `/data`
-on its filesystem. `deploy:smoke` is the post-push contract
-that catches that class of regression.
+dynamic route returned HTTP 500 in the bundled Netlify lambda
+(this was on the prior Netlify host; phase 4b's manifest fix
+makes the bundle runtime-agnostic). The local e2e walker hits
+`next start` with the full repo on disk; the bundled lambda has
+neither `pnpm-workspace.yaml` nor `/data` on its filesystem.
+`deploy:smoke` is the post-push contract that catches that
+class of regression on any host.
 
 **A red deploy or a failed smoke is a blocked tick.** The skill
 treats either identically to a red verify gate: read the log,
 patch the root cause, push again. Up to 3 iterations on the same
 root cause; otherwise the skill stops per its failure modes.
 
-> **Note:** Until phase 1 ships `apps/web/`, deploys are expected
-> to be red (Netlify can't build a workspace that doesn't exist).
-> The deploy:check script reports the failure clearly. Phase 1's
-> first green deploy clears the gate; from then on it's a real
-> regression detector.
+> **Historical note:** thock originally deployed to Netlify
+> (`thock.netlify.app`); the project moved to Vercel after the
+> free-tier build credits were exhausted mid-phase-4 and the
+> Netlify-bundled lambda independently revealed the
+> `import.meta.url` regression that phase 4b fixed. The deploy
+> gate's contract is unchanged across hosts.
 
 ## Useful commands (from repo root, after phase 1)
 
@@ -443,19 +447,20 @@ pnpm lint                       # eslint
 pnpm format                     # prettier --write
 ```
 
-## Netlify operational notes
+## Vercel operational notes
 
-- Site name: `thock` → `https://thock.netlify.app`.
-- Build pinned in `netlify.toml`; the user does not need to set
-  build commands in the Netlify UI (but can override there).
-- The Netlify Next.js plugin is pinned in `netlify.toml` to avoid
-  silent runtime upgrades.
+- Vercel **project name**: `thock`. Public **alias**:
+  `https://thock-coral.vercel.app`. The two differ — the API
+  takes the project name; the user types the alias.
+- The project is team-scoped on Vercel, so `VERCEL_TEAM_ID` is
+  **required** in `.env` for `pnpm deploy:check` to find it.
+  See `agents.md` "Operational secrets" for the lookup command.
+- No build config needed in repo: Vercel auto-detects Next.js,
+  runs `pnpm build` (which runs `prebuild` → `build:manifest`
+  → `next build`), and deploys.
 - Auto-deploys: every push to `main` deploys; previews on PRs.
-- **A red main = a red site.** Verify gate is pre-flight; deploy
-  gate (`pnpm deploy:check`) is post-flight.
-- The deploy gate reads the Netlify REST API. The only secret it
-  needs is `NETLIFY_AUTH_TOKEN`, set in `.env` (gitignored). See
-  `agents.md` "Operational secrets" for setup.
-- Auto-publishing stays **on**. Failed deploys until phase 1 ships
-  are expected and surface via `pnpm deploy:check` for the loop's
-  awareness.
+- **A red main = a red site.** Verify gate is pre-flight;
+  `pnpm deploy:check` then `pnpm deploy:smoke` are post-flight.
+- The deploy gate reads the Vercel REST API. The secrets it
+  needs are `VERCEL_TOKEN` and `VERCEL_TEAM_ID`, both in `.env`
+  (gitignored). See `agents.md` "Operational secrets" for setup.

@@ -243,7 +243,7 @@ In the shipping commit body:
 After push, the shipping skill posts a follow-up comment:
 
 ```bash
-gh issue comment 42 --repo "$GH_REPO" --body "Shipped in <commit>. Live at https://thock.netlify.app after deploy ready (~5 min)."
+gh issue comment 42 --repo "$GH_REPO" --body "Shipped in <commit>. Live at https://thock-coral.vercel.app after deploy ready (~5 min)."
 gh issue close 42 --repo "$GH_REPO"
 ```
 

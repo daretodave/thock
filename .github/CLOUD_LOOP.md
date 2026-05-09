@@ -83,15 +83,22 @@ gh secret set ACTIONS_PAT
 If you already have this PAT in `.env` for local use, just copy
 the same value into the secret — they're interchangeable.
 
-### 3. `NETLIFY_AUTH_TOKEN` — deploy gate
+### 3. `VERCEL_TOKEN` — deploy gate
 
 The cloud agent runs `pnpm deploy:check` after every push,
 identical to your local loop. Same token you have in `.env`:
 
 ```
-gh secret set NETLIFY_AUTH_TOKEN
-# paste your nfp_... token from
-# https://app.netlify.com/user/applications#personal-access-tokens
+gh secret set VERCEL_TOKEN
+# paste your token from https://vercel.com/account/tokens
+```
+
+If your Vercel project name differs from the default
+(`thock-coral`) or lives under a team scope, also set:
+
+```
+gh secret set VERCEL_PROJECT_NAME    # e.g. "thock-coral"
+gh secret set VERCEL_TEAM_ID         # only for team-scoped projects
 ```
 
 ### 4. Validate with a manual run

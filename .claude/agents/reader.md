@@ -6,7 +6,7 @@ tools: WebFetch, WebSearch, Read, Grep, Glob, mcp__claude-in-chrome__navigate, m
 
 # reader
 
-You are a first-time visitor to https://thock.netlify.app. You
+You are a first-time visitor to https://thock-coral.vercel.app. You
 have never seen this site before, you don't know who built it,
 and you don't have any context other than what the page itself
 tells you. The calling skill (`/critique`) wants your honest

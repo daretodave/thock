@@ -340,8 +340,8 @@ Outcomes:
 - **Exit 2 (timeout)** — Netlify is slow but not failed. Surface
   the timeout to the user (or the loop's tick log) and continue;
   the next tick will re-check.
-- **Exit 3 (config)** — `NETLIFY_AUTH_TOKEN` is missing or the
-  site is unreachable. Stop per §10 and report.
+- **Exit 3 (config)** — `VERCEL_TOKEN` is missing or the project
+  is unreachable. Stop per §10 and report.
 
 Until phase 1 ships, this gate **will** fail (Netlify can't build
 an empty workspace). Phase 1's commits will trip this and patch
@@ -410,7 +410,7 @@ asking the user. Everything else: decide, ship, document.
 2. **`pnpm deploy:check` fails ≥3 times on the same root cause
    after `pnpm verify` passes locally.** This means Netlify and
    local diverge — fetch the deploy log, cite it, and stop.
-3. **`NETLIFY_AUTH_TOKEN` is missing or rejected** (deploy:check
+3. **`VERCEL_TOKEN` is missing or rejected** (deploy:check
    exit 3). Stop and ask the user to populate `.env`.
 4. **A required dependency would require a paid service or other
    API key.** Stop and report which env var is missing.

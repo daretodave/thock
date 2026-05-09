@@ -11,7 +11,7 @@
 
 Phase 4's `pnpm verify` was fully green and `pnpm deploy:check`
 reported ready, yet every dynamic route on
-`https://thock.netlify.app` returned HTTP 500 immediately after
+`https://thock-coral.vercel.app` returned HTTP 500 immediately after
 the push:
 
 - `/article/[slug]` (every seed)
@@ -31,7 +31,7 @@ right path inside Netlify's bundled function.
 - The e2e walker runs against local `next start -p 4173`, which
   has the full repo on disk. The bundled production lambda
   doesn't.
-- `pnpm deploy:check` confirms Netlify reports `state=ready`,
+- `pnpm deploy:check` confirms the host reports `state=ready`,
   which means the **build** succeeded — not that **routes serve
   2xx**.
 

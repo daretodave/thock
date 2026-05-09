@@ -12,8 +12,10 @@ Phase 4 shipped the URL contract end-to-end. `pnpm verify` was
 green, `pnpm deploy:check` reported ready, and the local e2e
 walker hit 200 on every canonical URL.
 
-In production at `https://thock.netlify.app`, the following return
-HTTP 500 immediately after the phase 4 deploy:
+In production at `https://thock-coral.vercel.app` (originally
+shipped to `thock.netlify.app`; host migrated mid-phase-4b after
+Netlify's free-tier credits were exhausted), the following
+return HTTP 500 immediately after the phase 4 deploy:
 
 - `/article/<any-seed-slug>`
 - `/tag/<any-seed-slug>`

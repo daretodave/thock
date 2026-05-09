@@ -70,8 +70,8 @@ footer, `packages/tokens` exports the design-token CSS + TS,
 `packages/ui` exports `<Wordmark>`, `<Mono>`, `<Container>`,
 `packages/tsconfig` provides shared TS configs, `apps/e2e` runs a
 single Playwright spec against the dev server. `pnpm verify` runs
-clean. Push triggers a Netlify build to thock.netlify.app and the
-deploy is green. **Detailed brief: `phase_1_bootstrap.md`.**
+clean. Push triggers a host build to thock-coral.vercel.app and
+the deploy is green. **Detailed brief: `phase_1_bootstrap.md`.**
 
 ### Phase 2 — `@thock/data` package
 
@@ -162,7 +162,7 @@ production runs in an isolated function. Phase 4b ships: (1) a
 loader fix that works in any runtime — recommended path is
 pre-built manifests under `apps/web/.thock-data/` consumed by
 the loaders; (2) a new `pnpm deploy:smoke` post-push gate that
-hits one URL per pattern against `https://thock.netlify.app`
+hits one URL per pattern against `https://thock-coral.vercel.app`
 and exits non-zero on any non-2xx, closing the gap that let
 the regression through; (3) replacement of fabricated author
 bylines (`Mara Lin`, `Reza Patel`, `Tess Aoyama`) with

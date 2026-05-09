@@ -2,7 +2,7 @@
 
 > **thock** /θɒk/ — *n.* the deep, satisfying sound of a well-tuned mechanical keyboard switch bottoming out. The site name is lowercase always.
 
-**Landing:** https://thock.netlify.app
+**Landing:** https://thock-coral.vercel.app
 
 ## 1. Overview
 

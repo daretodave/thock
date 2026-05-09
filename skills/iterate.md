@@ -304,9 +304,9 @@ Return cleanly. Loop's next tick re-audits and ships the new top.
 
 1. **`pnpm verify` fails ≥3 times on the same root cause.**
 2. **`pnpm deploy:check` fails ≥3 times on the same root cause
-   after a fix shipped.** Read the log; if local + Netlify
+   after a fix shipped.** Read the log; if local + Vercel
    diverge, that's worth surfacing.
-3. **`NETLIFY_AUTH_TOKEN` missing** (deploy:check exit 3). Stop.
+3. **`VERCEL_TOKEN` missing** (deploy:check exit 3). Stop.
 4. **A finding requires schema migration > 20 records.** Push it
    to `/plan-a-phase` instead.
 5. **A finding requires user judgment** (e.g. "should we cover

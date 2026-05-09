@@ -21,10 +21,9 @@
 //   THOCK_SITE_URL    overrides the default `https://thock.netlify.app`
 //                     (useful for branch deploys or local previews).
 
-const SITE_URL = (process.env.THOCK_SITE_URL ?? 'https://thock.netlify.app').replace(
-  /\/+$/,
-  '',
-)
+const SITE_URL = (
+  process.env.THOCK_SITE_URL ?? 'https://thock-coral.vercel.app'
+).replace(/\/+$/, '')
 
 // One URL per pattern. The full canonical-URLs walker is local-only;
 // this is a minimal post-push contract — every shape the contract
