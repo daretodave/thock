@@ -4,72 +4,72 @@
 
   <!-- Splash: ochre wash under the sparkline path — the focal teaching object -->
   <path
-    d="M 180 420 L 1020 420 L 1020 540 L 180 540 Z"
+    d="M 70 210 L 1130 210 L 1130 670 L 70 670 Z"
     fill="oklch(0.78 0.115 75 / 0.10)" stroke="none"/>
 
   <!-- Subtle wash that follows the rising trend (low-fill region beneath the line),
        single splash hue only — same ochre at slightly higher alpha -->
   <path
     d="
-      M 200 470
-      L 320 455
-      L 440 478
-      L 560 432
-      L 680 410
-      L 800 388
-      L 920 360
-      L 1000 330
-      L 1000 540
-      L 200 540
+      M 90 483
+      L 236 443
+      L 381 505
+      L 527 382
+      L 673 323
+      L 818 265
+      L 964 190
+      L 1110 110
+      L 1110 670
+      L 90 670
       Z"
     fill="oklch(0.78 0.115 75 / 0.18)" stroke="none"/>
 
   <!-- Baseline -->
-  <line x1="200" y1="540" x2="1000" y2="540" stroke-opacity="0.55"/>
+  <line x1="90" y1="670" x2="1110" y2="670" stroke-opacity="0.55"/>
 
   <!-- Faint vertical guide ticks on the baseline (one per data point) -->
   <g stroke-opacity="0.35">
-    <line x1="200" y1="540" x2="200" y2="548"/>
-    <line x1="320" y1="540" x2="320" y2="548"/>
-    <line x1="440" y1="540" x2="440" y2="548"/>
-    <line x1="560" y1="540" x2="560" y2="548"/>
-    <line x1="680" y1="540" x2="680" y2="548"/>
-    <line x1="800" y1="540" x2="800" y2="548"/>
-    <line x1="920" y1="540" x2="920" y2="548"/>
-    <line x1="1000" y1="540" x2="1000" y2="548"/>
+    <line x1="90" y1="670" x2="90" y2="678"/>
+    <line x1="236" y1="670" x2="236" y2="678"/>
+    <line x1="381" y1="670" x2="381" y2="678"/>
+    <line x1="527" y1="670" x2="527" y2="678"/>
+    <line x1="673" y1="670" x2="673" y2="678"/>
+    <line x1="818" y1="670" x2="818" y2="678"/>
+    <line x1="964" y1="670" x2="964" y2="678"/>
+    <line x1="1110" y1="670" x2="1110" y2="678"/>
   </g>
 
   <!-- The sparkline itself — single continuous polyline, upward trend, 8 points -->
   <polyline
     points="
-      200,470
-      320,455
-      440,478
-      560,432
-      680,410
-      800,388
-      920,360
-      1000,330" />
+      90,483
+      236,443
+      381,505
+      527,382
+      673,323
+      818,265
+      964,190
+      1110,110" />
 
   <!-- Subtle dot markers at each interior data point (line-only intent — small open circles) -->
   <g>
-    <circle cx="200" cy="470" r="4"/>
-    <circle cx="320" cy="455" r="4"/>
-    <circle cx="440" cy="478" r="4"/>
-    <circle cx="560" cy="432" r="4"/>
-    <circle cx="680" cy="410" r="4"/>
-    <circle cx="800" cy="388" r="4"/>
-    <circle cx="920" cy="360" r="4"/>
+    <circle cx="90" cy="483" r="4"/>
+    <circle cx="236" cy="443" r="4"/>
+    <circle cx="381" cy="505" r="4"/>
+    <circle cx="527" cy="382" r="4"/>
+    <circle cx="673" cy="323" r="4"/>
+    <circle cx="818" cy="265" r="4"/>
+    <circle cx="964" cy="190" r="4"/>
   </g>
 
   <!-- The latest point — focal cursor in brass-bronze theme accent -->
-  <circle cx="1000" cy="330" r="9" fill="oklch(0.80 0.135 75 / 0.95)" stroke="oklch(0.80 0.135 75)"/>
-  <circle cx="1000" cy="330" r="16" stroke="oklch(0.80 0.135 75)" stroke-opacity="0.45" fill="none"/>
+  <circle cx="1110" cy="110" r="9" fill="oklch(0.80 0.135 75 / 0.95)" stroke="oklch(0.80 0.135 75)"/>
+  <circle cx="1110" cy="110" r="16" stroke="oklch(0.80 0.135 75)" stroke-opacity="0.45" fill="none"/>
 
   <!-- A faint annotation: small horizontal lead-in and tick at the cursor's y-level on the right.
        Reads as "this value, now." Stays on-palette by using the same warm grey stroke. -->
   <g stroke-opacity="0.45">
-    <line x1="1018" y1="330" x2="1042" y2="330"/>
-    <line x1="1042" y1="320" x2="1042" y2="340"/>
+    <line x1="1128" y1="110" x2="1152" y2="110"/>
+    <line x1="1152" y1="100" x2="1152" y2="120"/>
   </g>
 </svg>

@@ -8,7 +8,10 @@
   "splash_color": "oklch(0.78 0.115 75)",
   "stroke_color": "oklch(0.78 0.005 90)",
   "fonts": [],
+  "prompt": "Re-scale the sparkline geometry so the inked content dominates the canvas at every form factor. Baseline runs x=90→1110 (~85% width, ~7.5% padding each side). Peak data point at (1110, 110); baseline at y=670 (~75% height with ~15% top margin and ~10% bottom). Cursor outer ring extends a few pixels above the peak data point, which the brief explicitly permits. Keep the existing didactic moves intact: same ochre/brass splash hue, same warm-grey 2px stroke, same 8-point upward-trending shape, same focal cursor (filled dot + outer ring) on the rightmost point, same right-side annotation tick, same baseline + 8 vertical guide ticks, same low-fill area sweep beneath the line, same ochre wash band behind the chart. Rescaling, not redesigning.",
+  "revision": 2,
+  "revisionReason": "User-jot 2026-05-09 (CRITIQUE.md commit 40fefe2): the previous geometry left the chart sitting in the lower third (sparkline filled ~67% width, ~28% height) which read small on mobile and underwhelming on desktop. This revision tightens padding so the chart fills the canvas — sparkline now ~85% width and ~75% height — while preserving every didactic element of the original (\"i love the hero art ... can we nip the padding so the chart appears bigger across the form factors\").",
   "generated_by": "brander (sub-agent)",
   "generated_at": "2026-05-09",
-  "commit_at_render": "0dab0a8"
+  "commit_at_render": "e3231ca"
 }
