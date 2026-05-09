@@ -30,7 +30,7 @@ the phase.
 - [x] Phase 8 — Trends pillar + Trends Tracker (`/trends`, `/trends/tracker`) — `accb74f`
 - [x] Phase 9 — Ideas & Builds pillar (`/ideas`) — `5597401`
 - [x] Phase 10 — Deep Dives pillar (`/deep-dives`) — `cea650a`
-- [ ] Phase 11 — Guides pillar (`/guides`)
+- [x] Phase 11 — Guides pillar (`/guides`) — `<pending>`
 - [ ] Phase 12 — Tag pages (`/tag/[slug]`)
 - [ ] Phase 13 — Group Buys (`/group-buys` + home widget retrofit)
 

@@ -105,7 +105,14 @@ export const pageReads: Record<string, PageRead> = {
   },
   '/guides': {
     pattern: '/guides',
-    ...html([{ kind: 'h1-matches', pattern: /guides/i }]),
+    ...html([
+      { kind: 'h1-matches', pattern: /guides/i },
+      {
+        kind: 'min-link-count',
+        selector: '[data-testid="article-card-row"]',
+        min: 1,
+      },
+    ]),
   },
   '/group-buys': {
     pattern: '/group-buys',
