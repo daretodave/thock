@@ -59,6 +59,17 @@
 - pass: 2 (commit e270ced) — filed as a low-priority observation worth noting but expected to drain naturally with phase 15 newsletter shipping.
 - note: this was reader's eighth raw observation; I curated it down to six during pass-2 self-assessment with the rationale "Phase 15 will replace the form entirely." Phase 15's footer retrofit (replacing the inert form with `<ButtondownForm variant="footer">`) drops the placeholder aria-label as expected. Closing inline with the phase-15 ship, no separate iterate tick required.
 
+### [MED] /article/trends-tracker-preview — hero-art sparkline has too much padding; reads small at every form factor (user jot)
+- pass: user-jot (commit 40fefe2)
+- viewport: both
+- auth_state: anonymous
+- category: visual
+- observation: i love the hero art for the "reading the trends" tracker but it has too much padding. makes it look small on mobile and on desktop it sorta doesn't jump out enough to me. can we nip the padding so the chart appears bigger across the form factors (for the hero art)
+- evidence: user-spotted at 2026-05-09T19:00Z. The hero SVG at apps/web/public/hero-art/trends-tracker-preview.svg was rendered by brander to fill a 1200x750 viewBox, but the sparkline content sits inside generous internal margins. Combined with ArticleHero's aspect-[16/9] container + object-cover, the visible sparkline ends up small relative to its frame. User likes the art but wants it to dominate.
+- suggested fix: [user has not specified — iterate to determine. Two paths: (1) re-render the SVG via brander with a tighter inner-margin brief — sparkline should fill ~80% of the canvas width and ~70% of the height, with the warm-bronze cursor anchor and area-fill scaled accordingly. (2) Or keep the SVG and instead style the hero `<Image>` container with `object-contain` for SVGs (no crop) and trim the surrounding section padding. Path (1) fixes only this article; path (2) would help every hero-art article. Recommend path (1) for the immediate user complaint plus a follow-up audit on the other five hero SVGs to see which need the same nip.]
+- source: user
+
+
 ### [MED] /group-buys — Mode Sonnet R2 is fictional; seed needs real vendor data (user jot)
 - pass: user-jot (commit e56989c)
 - viewport: unspecified
