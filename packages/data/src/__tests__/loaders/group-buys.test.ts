@@ -19,13 +19,13 @@ describe('group-buys loader', () => {
   })
 
   it('includes the seed in active list when end-date is in the future', () => {
-    // Seed endDate is 2026-06-15. As of "now" relative to 2026-05-08, it's active.
+    // Seed endDate is 2026-07-15 (status: announced after the user-jot fix).
     const active = getActiveGroupBuys(new Date('2026-05-10T00:00:00Z'))
     expect(active.map((g) => g.slug)).toContain('cannonkeys-mode-sonnet-r2')
   })
 
   it('excludes the seed from active list once end-date is past', () => {
-    const active = getActiveGroupBuys(new Date('2026-07-01T00:00:00Z'))
+    const active = getActiveGroupBuys(new Date('2026-08-01T00:00:00Z'))
     expect(active.map((g) => g.slug)).not.toContain('cannonkeys-mode-sonnet-r2')
   })
 })
