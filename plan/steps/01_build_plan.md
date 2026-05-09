@@ -20,7 +20,7 @@ the phase.
 - [x] Phase 1 — Monorepo bootstrap (root install, `apps/web` Next.js, `packages/tokens`, `packages/ui`, `packages/tsconfig`, `apps/e2e`, Netlify deploy verified) — `3ffa51c`
 - [x] Phase 2 — `@thock/data` package (Zod schemas → JSON Schema, validate script, loaders for switches/keycap-sets/boards/vendors/group-buys/trends, 1 seed record per type) — `fdc3489`
 - [x] Phase 3 — `@thock/content` package + seed articles (MDX loaders, frontmatter Zod, tags.json taxonomy, 6 seed articles across pillars, 3 seed group buys) — `21f153e`
-- [ ] Phase 4 — URL contract + hermetic e2e infrastructure (every route from bearings exists with stub or real page; `@thock/seo` with buildMetadata + JSON-LD + canonicalUrl + siteConfig; sitemap.xml; robots.txt; global + per-pillar RSS feeds; **`canonical-urls` fixture**; **`page-reads` fixture**; **smoke walker over every canonical URL**; **mobile spec template**; **`pnpm verify` runs e2e against `next start` on `:4173` as a hard gate**)
+- [x] Phase 4 — URL contract + hermetic e2e infrastructure (every route from bearings exists with stub or real page; `@thock/seo` with buildMetadata + JSON-LD + canonicalUrl + siteConfig; sitemap.xml; robots.txt; global + per-pillar RSS feeds; **`canonical-urls` fixture**; **`page-reads` fixture**; **smoke walker over every canonical URL**; **mobile spec template**; **`pnpm verify` runs e2e against `next start` on `:4173` as a hard gate**) — `fc1b0b0`
 
 **Page families (phases 5–13):**
 - [ ] Phase 5 — Article page (canonical template — `/article/[slug]`)
@@ -269,3 +269,4 @@ phases with linked notes here.)
 phase 1 — 3ffa51c — monorepo bootstrap; apps/web (Next 15), apps/e2e (Playwright), packages/{tokens,ui,tsconfig,data-stub}; pnpm verify green.
 phase 2 — fdc3489 — @thock/data: 6 Zod schemas + JSON Schema generation + 6 loaders + validate CLI w/ cross-refs; 1 seed record per entity (cannonkeys, gateron-oil-king, gmk-olivia, mode-sonnet, mode-sonnet-r2 GB, 2026-W19 trends); 32 new unit tests.
 phase 3 — 21f153e — @thock/content: frontmatter schema + tag taxonomy (38 tags) + loaders + MDX component registry; 6 curator-drafted seed articles (one per pillar + Trends Tracker preview) cross-referencing the phase-2 data seeds; phase-1 home replaced with HomeArticleList; +27 unit tests, 65 total.
+phase 4 — fc1b0b0 — @thock/seo (siteConfig + canonicalUrl + buildMetadata + buildJsonLd + PILLARS + JsonLd); every URL-contract route shipped as a stub or real page (12 stubs + 2 dynamic stubs + sitemap + robots + global + per-pillar RSS); shared <PageStub>; hermetic e2e walker over every canonical URL (desktop + 375px mobile) wired into `pnpm verify` as the canonical harness; +27 seo tests, +21 web tests, +6 e2e fixture tests, 123 e2e tests across desktop + mobile.
