@@ -1,11 +1,17 @@
-import { getActiveGroupBuys } from '@/lib/data-runtime'
+import type { ReactElement } from 'react'
+import { Container, Stack } from '@thock/ui'
 import {
   buildBreadcrumbListJsonLd,
   buildCollectionPageJsonLd,
+  buildItemListJsonLd,
   buildMetadata,
   JsonLd,
 } from '@thock/seo'
-import { PageStub } from '@/components/page-stub/PageStub'
+import type { GroupBuy, Vendor } from '@thock/data'
+import { getAllGroupBuys, getAllVendors } from '@/lib/data-runtime'
+import { HomeSectionHeading } from '@/components/home/HomeSectionHeading'
+import { GroupBuyRow } from '@/components/group-buys/GroupBuyRow'
+import { partitionGroupBuys } from './helpers'
 
 const PATH = '/group-buys'
 const TITLE = 'Group buys'
@@ -18,32 +24,141 @@ export const metadata = buildMetadata({
   path: PATH,
 })
 
-export default function GroupBuysPage() {
-  const active = getActiveGroupBuys()
+/**
+ * Phase 13 — canonical group-buys index. Live now + Announced +
+ * Recently ended sections, sorted per the brief. Pulls every group
+ * buy and partitions in-memory; the home widget keeps its own
+ * `getActiveGroupBuys()` read for compactness.
+ */
+export default function GroupBuysPage(): ReactElement {
+  const now = new Date()
+  const all = getAllGroupBuys()
+  const { live, announced, ended } = partitionGroupBuys(all, now)
+  const vendors: Vendor[] = getAllVendors()
+  const vendorBySlug = new Map<string, Vendor>(
+    vendors.map((v) => [v.slug, v]),
+  )
+
+  const itemListItems = [...live, ...announced].map((gb) => ({
+    name: gb.name,
+    url: gb.url,
+  }))
+
+  const totalActive = live.length + announced.length
 
   return (
     <>
       <JsonLd
         graph={[
-          buildCollectionPageJsonLd({ name: TITLE, description: LEDE, path: PATH }),
+          buildCollectionPageJsonLd({
+            name: TITLE,
+            description: LEDE,
+            path: PATH,
+          }),
           buildBreadcrumbListJsonLd([
             { name: 'Home', path: '/' },
             { name: TITLE, path: PATH },
           ]),
+          buildItemListJsonLd({
+            name: `${TITLE} — active`,
+            items: itemListItems,
+          }),
         ]}
       />
-      <PageStub
-        eyebrow="curated"
-        title="group buys"
-        lede={LEDE}
-        deferredTo="Phase 13"
-      >
-        <span className="font-mono text-micro uppercase tracking-[0.08em] text-text-3">
-          {active.length}{' '}
-          {active.length === 1 ? 'active group buy' : 'active group buys'} ·
-          full index lands phase 13
-        </span>
-      </PageStub>
+
+      <Container as="header" className="py-12 sm:py-16">
+        <Stack gap={4}>
+          <span className="font-mono uppercase tracking-[0.12em] text-micro text-accent">
+            curated
+          </span>
+          <h1 className="font-serif italic text-h1 sm:text-display text-text">
+            Group buys
+          </h1>
+          <p className="max-w-[60ch] font-serif text-h3 text-text-2">{LEDE}</p>
+          <div className="font-mono uppercase tracking-[0.08em] text-micro text-text-3">
+            {live.length} live · {announced.length} announced · {ended.length}{' '}
+            recently ended
+          </div>
+        </Stack>
+      </Container>
+
+      {totalActive === 0 && ended.length === 0 ? (
+        <Container as="section" className="pb-16">
+          <Stack gap={4}>
+            <span className="font-mono uppercase tracking-[0.12em] text-micro text-text-3">
+              quiet week
+            </span>
+            <h2 className="font-serif text-h2 text-text">
+              No active group buys right now.
+            </h2>
+            <p className="max-w-[60ch] font-serif text-h3 text-text-2">
+              Check back weekly. We track every credible vendor.
+            </p>
+          </Stack>
+        </Container>
+      ) : null}
+
+      {live.length > 0 && (
+        <Container as="section" className="pb-12 sm:pb-16">
+          <HomeSectionHeading kicker="Live now" title="Closing soon" />
+          <SectionStack
+            items={live}
+            variant="live"
+            now={now}
+            vendorBySlug={vendorBySlug}
+          />
+        </Container>
+      )}
+
+      {announced.length > 0 && (
+        <Container as="section" className="pb-12 sm:pb-16">
+          <HomeSectionHeading kicker="Announced" title="On the horizon" />
+          <SectionStack
+            items={announced}
+            variant="announced"
+            now={now}
+            vendorBySlug={vendorBySlug}
+          />
+        </Container>
+      )}
+
+      {ended.length > 0 && (
+        <Container as="section" className="pb-12 sm:pb-16">
+          <HomeSectionHeading kicker="Recently ended" title="Just closed" />
+          <SectionStack
+            items={ended}
+            variant="ended"
+            now={now}
+            vendorBySlug={vendorBySlug}
+          />
+        </Container>
+      )}
     </>
+  )
+}
+
+function SectionStack({
+  items,
+  variant,
+  now,
+  vendorBySlug,
+}: {
+  items: GroupBuy[]
+  variant: 'live' | 'announced' | 'ended'
+  now: Date
+  vendorBySlug: Map<string, Vendor>
+}): ReactElement {
+  return (
+    <div className="flex flex-col">
+      {items.map((gb) => (
+        <GroupBuyRow
+          key={gb.slug}
+          groupBuy={gb}
+          vendor={vendorBySlug.get(gb.vendorSlug) ?? null}
+          variant={variant}
+          now={now}
+        />
+      ))}
+    </div>
   )
 }

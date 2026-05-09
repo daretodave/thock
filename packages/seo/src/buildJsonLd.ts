@@ -93,7 +93,15 @@ export function buildCollectionPageJsonLd(
   }
 }
 
-export type ItemListEntry = { name: string; path: string }
+/**
+ * One ItemList entry. Provide either `path` (a site-relative path
+ * canonicalized against `siteConfig.url`) or `url` (an absolute URL
+ * passed through unchanged — used for outbound items like group
+ * buys with no on-site detail page).
+ */
+export type ItemListEntry =
+  | { name: string; path: string; url?: never }
+  | { name: string; url: string; path?: never }
 export type BuildItemListJsonLdInput = {
   name?: string
   items: ItemListEntry[]
@@ -110,7 +118,7 @@ export function buildItemListJsonLd(
       '@type': 'ListItem',
       position: i + 1,
       name: entry.name,
-      url: canonicalUrl(entry.path),
+      url: entry.url ?? canonicalUrl(entry.path as string),
     })),
   }
 }

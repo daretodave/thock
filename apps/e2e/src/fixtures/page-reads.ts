@@ -116,7 +116,14 @@ export const pageReads: Record<string, PageRead> = {
   },
   '/group-buys': {
     pattern: '/group-buys',
-    ...html([{ kind: 'h1-matches', pattern: /group buys/i }]),
+    ...html([
+      { kind: 'h1-matches', pattern: /group buys/i },
+      {
+        kind: 'min-link-count',
+        selector: '[data-testid="group-buy-row"]',
+        min: 1,
+      },
+    ]),
   },
   '/about': {
     pattern: '/about',
