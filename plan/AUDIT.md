@@ -88,6 +88,20 @@
 >
 > Score: **3.5** (real but cosmetic with the current article count of 6).
 
+### [MED] Lighthouse CI — phase 17 follow-up
+> Filed 2026-05-09 by phase 17 brief. The build-plan row for phase 17 listed a Lighthouse pass at ≥95 on `/` and `/article/[slug]`. Real lighthouse-ci wiring crosses a tooling boundary (paid runner, or local Chrome + a runner) that warrants `/oversight` rather than an autonomous decision. The bundle-size budget shipped this phase covers the JS-weight axis on its own.
+>
+> **Action:** `/oversight` picks a runner (Vercel preview comments via lighthouse-ci action, or a self-hosted runner). Once the runner is decided, ship the GitHub Actions workflow + budget config + artifact upload.
+>
+> Score: **5.0** (real signal but real setup cost; baseline bundle is small enough that scores are likely good already).
+
+### [LOW] Tighten homepage bundle-size budget from 250 KB → 200 KB
+> Filed 2026-05-09 by phase 17 brief. The bearings target is 200 KB gzipped for the homepage; phase 17 set the gate at 250 KB to leave one or two iterate ticks of headroom. After the loop drains any obvious chunk waste (lucide-react, large MDX shims, unused tag taxonomies), tighten the budget to 200 KB to match the bearings.
+>
+> **Action:** edit `apps/web/scripts/measure-bundle.mts` `DEFAULT_MAX_KB` to 200, or pass `--max=200` via the verify wiring in root `package.json`.
+>
+> Score: **2.5** (cosmetic until the chunk audit runs; chunk audit is the real work).
+
 ### [MED] PageStub routes flake under parallel e2e load (React #418 hydration)
 
 > Recorded by `/iterate` on 2026-05-09 while draining the critique
