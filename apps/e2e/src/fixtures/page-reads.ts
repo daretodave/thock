@@ -135,7 +135,14 @@ export const pageReads: Record<string, PageRead> = {
   },
   '/search': {
     pattern: '/search',
-    ...html([{ kind: 'h1-matches', pattern: /search/i }]),
+    ...html([
+      { kind: 'h1-matches', pattern: /search/i },
+      {
+        kind: 'min-link-count',
+        selector: 'input[type="search"]',
+        min: 1,
+      },
+    ]),
   },
   '/sources': {
     pattern: '/sources',

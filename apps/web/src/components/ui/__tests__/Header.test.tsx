@@ -18,10 +18,9 @@ describe('<Header>', () => {
     }
   })
 
-  it('includes a (currently inert) search affordance', () => {
+  it('links the search affordance to /search', () => {
     render(<Header />)
-    const search = screen.getByRole('button', { name: /search/i })
-    expect(search).toBeInTheDocument()
-    expect(search).toBeDisabled()
+    const search = screen.getByRole('link', { name: /search/i })
+    expect(search).toHaveAttribute('href', '/search')
   })
 })

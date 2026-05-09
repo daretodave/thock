@@ -5,12 +5,13 @@
   "scripts": {
     "dev": "next dev -p 3000",
     "build:manifest": "tsx scripts/generate-data-manifest.mts",
-    "prebuild": "pnpm build:manifest",
+    "build:search": "tsx scripts/generate-search-index.mts",
+    "prebuild": "pnpm build:manifest && pnpm build:search",
     "build": "next build",
     "start": "next start",
     "start:e2e": "next start -p 4173",
     "typecheck": "tsc --noEmit",
-    "pretest:run": "pnpm build:manifest",
+    "pretest:run": "pnpm build:manifest && pnpm build:search",
     "test": "vitest",
     "test:run": "vitest run",
     "lint": "next lint"
@@ -21,6 +22,7 @@
     "@thock/seo": "workspace:*",
     "@thock/tokens": "workspace:*",
     "@thock/ui": "workspace:*",
+    "minisearch": "^7.2.0",
     "next": "^15.0.3",
     "next-mdx-remote": "^6.0.0",
     "react": "^19.0.0",

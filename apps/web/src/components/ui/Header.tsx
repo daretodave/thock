@@ -24,11 +24,11 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <button
-            type="button"
+          <Link
+            href="/search"
             aria-label="Search"
+            data-testid="header-search-link"
             className="inline-flex h-9 w-9 items-center justify-center border border-border text-text-3 hover:text-text hover:border-border-hi transition-colors"
-            disabled
           >
             <svg
               width="16"
@@ -44,7 +44,7 @@ export function Header() {
               <circle cx="11" cy="11" r="7" />
               <path d="m20 20-3.5-3.5" />
             </svg>
-          </button>
+          </Link>
           <MobileNav />
         </div>
       </Container>
