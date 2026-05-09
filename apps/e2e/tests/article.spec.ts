@@ -45,4 +45,44 @@ test.describe('article page family — canonical template', () => {
       .getAttribute('href')
     expect(href).toMatch(new RegExp(`${SEED}$`))
   })
+
+  test('body paragraphs have non-zero bottom margin (prose styles applied)', async ({
+    page,
+  }) => {
+    // Regression guard for plan/CRITIQUE.md HIGH "wall-of-text" finding.
+    // Without .thock-prose styles, Tailwind preflight resets `p { margin: 0 }`
+    // and adjacent paragraphs collapse into one visual block. We only need to
+    // assert one paragraph has a real bottom margin — the same rule covers
+    // every <p> inside .thock-prose.
+    await page.goto('/article/trends-tracker-preview')
+    const body = page.getByTestId('article-body')
+    const firstP = body.locator('p').first()
+    const margin = await firstP.evaluate(
+      (el) => window.getComputedStyle(el).marginBottom,
+    )
+    const px = parseFloat(margin)
+    expect(px).toBeGreaterThan(8)
+  })
+
+  test('inline <Mono> tokens render inside their surrounding paragraph', async ({
+    page,
+  }) => {
+    // Regression guard for plan/CRITIQUE.md HIGH "inline Mono renders as
+    // block siblings". The Mono tokens listing the five categories must
+    // sit inside a single <p> with the running prose, not as sibling
+    // block elements.
+    await page.goto('/article/trends-tracker-preview')
+    const para = page
+      .locator('p', {
+        hasText: 'Every row on the tracker belongs to one of five categories',
+      })
+      .first()
+    await expect(para).toContainText('switches')
+    await expect(para).toContainText('keycaps')
+    await expect(para).toContainText('layouts')
+    await expect(para).toContainText('vendors')
+    await expect(para).toContainText('brands')
+    const monoCount = await para.locator('span.font-mono').count()
+    expect(monoCount).toBeGreaterThanOrEqual(5)
+  })
 })

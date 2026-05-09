@@ -4,3 +4,64 @@
  * three or more places. Phase 1 ships the file empty so later phases
  * have a fixed home for these utilities.
  */
+
+/* Article-body prose styles.
+ *
+ * Tailwind's preflight sets every margin to 0. The MDX body renders
+ * a stream of <p>, <ul>, <ol>, <hr>, <li>, <blockquote> elements
+ * which then collapse against each other with zero vertical rhythm
+ * — readers experience this as "walls of text" because list-shaped
+ * paragraphs (e.g. bold-led `**Name.**` rows) sit flush against
+ * their neighbors. Filed in plan/CRITIQUE.md as two HIGHs against
+ * /article/trends-tracker-preview and /article/* generally; both
+ * resolve here. h2 / h3 already get vertical rhythm from
+ * mdxComponents.tsx via `mt-12 mb-4` Tailwind classes — we do NOT
+ * re-style them here.
+ */
+.thock-prose p {
+  margin: 0 0 1.25em;
+}
+
+.thock-prose p:last-child {
+  margin-bottom: 0;
+}
+
+.thock-prose ul,
+.thock-prose ol {
+  margin: 1.25em 0;
+  padding-left: 1.5em;
+}
+
+.thock-prose ul {
+  list-style: disc;
+}
+
+.thock-prose ol {
+  list-style: decimal;
+}
+
+.thock-prose li {
+  margin: 0.5em 0;
+}
+
+.thock-prose li > p {
+  margin: 0.25em 0;
+}
+
+.thock-prose blockquote {
+  margin: 1.5em 0;
+  padding-left: 1em;
+  border-left: 2px solid var(--thock-border-hi);
+  color: var(--thock-text-2);
+}
+
+.thock-prose hr {
+  margin: 2em 0;
+  border: 0;
+  border-top: 1px solid var(--thock-border);
+}
+
+.thock-prose strong {
+  color: var(--thock-text);
+  font-weight: 600;
+}

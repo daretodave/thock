@@ -18,15 +18,6 @@
 - suggested fix: Either rename the article slug refs to match the real `gateron-oil-king` data slug, or extend the part resolver to alias short slugs to their canonical record. Add a build-time check that fails if any `<MentionedPart>` slug doesn't resolve.
 - source: browser
 
-### [HIGH] /article/* — inline `<Mono>` spans render as block siblings, stranding sentence text
-- pass: 1 (commit 16b53c3)
-- viewport: desktop
-- category: visual
-- observation: Inline mono terms (switch names, layout tokens, week labels) render outside their surrounding paragraph, so the running prose has comma-stranded gaps where the technical token should sit. Same root cause across at least two articles — the trends-tracker preview and the beginners' guide.
-- evidence: Rendered text on `/article/trends-tracker-preview`: "Every row on the tracker belongs to one of five categories: , , , , and . The split is deliberate." On `/article/beginners-switch-buying-guide`: "A switch travels in a straight line from rest to bottom-out…" with the leading 'linear' token dangling as an adjacent sibling instead of being inlined.
-- suggested fix: In `packages/content/src/mdx/`, ensure the `Mono` (or whichever inline component is being used) is registered in the mdxComponents map as inline (`span`-rooted) and not block-rooted. Verify with a single MDX paragraph mixing prose and `<Mono>` in a unit test.
-- source: browser
-
 ### [HIGH] mobile nav — primary links unreachable at 375px, no toggle
 - pass: 1 (commit 16b53c3)
 - viewport: mobile
@@ -63,16 +54,15 @@
 - suggested fix: One of (a) prefix tag chips with their category (`switch · linear`, `layout · alice`, `brand · gmk`), (b) attach a hover tooltip with the category, or (c) on the home page, suppress chips entirely for cards where the title doesn't already disambiguate. Prefer (a) — the categorical color is already present per `decisions.jsx` "tag color = category, not vibe" but the color alone isn't a glossary. Add a one-line glossary block to the article-page tag rail too.
 - source: user
 
-### [HIGH] /article/trends-tracker-preview — body content renders as walls of text where it should be lists
-- pass: 1 (filed via /oversight 2026-05-09 from user observation)
-- viewport: both
-- category: content
-- observation: Several sections of the trends-tracker-preview article render as undifferentiated paragraphs even though the prose is structured as a list. The "What we're tracking" section has no top margin from the heading above it, and the body reads `"Five columns, left to right. Name. The thing being tracked, written the way the community writes it. Gateron Oil King, not 'Gateron G Pro 3.0 Oil King v2.' If the community has settled on a shorthand, the tracker uses it."` — that's clearly meant to be a numbered or bulleted list of column descriptions, not a single paragraph. The "What this is not" section has the same problem.
-- evidence: `https://thock-coral.vercel.app/article/trends-tracker-preview` — visible body. Headings like "What we're tracking" and "What this is not" sit flush against the preceding paragraph; their bodies render as a single unbroken paragraph instead of a list.
-- suggested fix: Two fixes likely needed. (1) Edit `apps/web/src/content/articles/trends-tracker-preview.mdx` to use real markdown list syntax (`- Name —` etc.) and `##` headings with blank lines around them. (2) Audit `apps/web/src/styles/components.css` (or wherever the article body prose styles live) to ensure heading + adjacent paragraph spacing is correct (`h2 { margin-top: 2em }` or equivalent), and that adjacent `<li>` items render with the expected vertical rhythm. The first fix is content; the second may be needed across all articles.
-- suggested fix-2: While in this article, also audit for the `#ALICE` tag chip mentioned in the previous finding — the same chip surfaces here at the bottom and lacks context.
-- source: user
-
 ## Done
 
-(empty — first pass)
+### [x] [HIGH] /article/* — inline `<Mono>` spans render as block siblings (root cause: missing prose styles)
+- addressed in: pending commit (this tick)
+- pass: 1 (commit 16b53c3)
+- root cause (revised): the live HTML actually rendered `<span class="font-mono">` correctly inline within `<p>`. The visual was caused by Tailwind preflight resetting `p { margin: 0 }` and `.thock-prose` having zero declared rules — adjacent paragraphs collapsed against each other, which made surrounding mono tokens appear stranded. Fix: declare `.thock-prose p` margin in `apps/web/src/styles/components.css` plus matching rules for `ul`, `ol`, `li`, `blockquote`, `hr`, `strong`. New regression-guard e2e (`article.spec.ts`) asserts (a) first body `<p>` has `margin-bottom > 8px` and (b) the "five categories" paragraph contains all five mono tokens within the same `<p>`.
+
+### [x] [HIGH] /article/trends-tracker-preview — body content renders as walls of text where it should be lists
+- addressed in: pending commit (this tick) — same root cause as the inline-Mono finding
+- pass: 1 (filed via /oversight 2026-05-09 from user observation)
+- root cause: identical to the [x] above — `.thock-prose` had no styles, so bold-led paragraphs (`**Name.** ...`, `**Type.** ...`) collapsed into a single visual block. Fix: prose-paragraph margin in components.css. The "What we're tracking" h2's mt-12 was already in place via the SerifH2 mdxComponent — what the user perceived as "no top margin" was actually the wall-of-text effect immediately below it making the heading look glued to the next paragraph.
+- follow-up: the user's #ALICE-tag-chip-confusion observation (HIGH, separate finding above) still stands; addressed in a future tick.
