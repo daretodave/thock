@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — switch cross-section, exploded didactic view</title>
+
+  <!-- Splash: ochre wash centered around the stem (foundational, brass-adjacent) -->
+  <ellipse cx="600" cy="400" rx="210" ry="140" fill="oklch(0.78 0.115 75 / 0.16)" stroke="none"/>
+
+  <!-- ── TOP HOUSING (lifted up by the explode) ─────────────────────────── -->
+  <g>
+    <!-- Outer top-housing trapezoid -->
+    <path d="
+      M 470 145
+      L 730 145
+      L 760 230
+      L 440 230
+      Z" />
+    <!-- Top opening (where stem pokes through) -->
+    <path d="
+      M 555 145
+      L 645 145
+      L 655 175
+      L 545 175
+      Z" />
+    <!-- Inner ribs — dashed look, didactic -->
+    <line x1="470" y1="190" x2="535" y2="190" stroke-opacity="0.45"/>
+    <line x1="665" y1="190" x2="730" y2="190" stroke-opacity="0.45"/>
+  </g>
+
+  <!-- Explode gap divider (faint dashes across the canvas) -->
+  <line x1="430" y1="255" x2="770" y2="255" stroke-dasharray="4 6" stroke-opacity="0.35"/>
+
+  <!-- ── STEM (the cruciform — the article's hero) ───────────────────────── -->
+  <g>
+    <!-- Stem body (roughly a small block with cruciform top) -->
+    <path d="
+      M 565 290
+      L 635 290
+      L 635 380
+      L 565 380
+      Z" />
+    <!-- Cruciform top -->
+    <path d="
+      M 588 268
+      L 612 268
+      L 612 280
+      L 624 280
+      L 624 290
+      L 576 290
+      L 576 280
+      L 588 280
+      Z" />
+    <!-- Stem leg cutout (inner detail) -->
+    <line x1="600" y1="305" x2="600" y2="370" stroke-opacity="0.5"/>
+  </g>
+
+  <!-- Explode gap divider 2 -->
+  <line x1="430" y1="400" x2="770" y2="400" stroke-dasharray="4 6" stroke-opacity="0.35"/>
+
+  <!-- ── SPRING (coil) ───────────────────────────────────────────────────── -->
+  <g>
+    <!-- 8 coils, drawn as overlapping ovals -->
+    <ellipse cx="600" cy="430" rx="38" ry="7"/>
+    <ellipse cx="600" cy="442" rx="38" ry="7"/>
+    <ellipse cx="600" cy="454" rx="38" ry="7"/>
+    <ellipse cx="600" cy="466" rx="38" ry="7"/>
+    <ellipse cx="600" cy="478" rx="38" ry="7"/>
+    <ellipse cx="600" cy="490" rx="38" ry="7"/>
+    <ellipse cx="600" cy="502" rx="38" ry="7"/>
+    <ellipse cx="600" cy="514" rx="38" ry="7"/>
+  </g>
+
+  <!-- Explode gap divider 3 -->
+  <line x1="430" y1="540" x2="770" y2="540" stroke-dasharray="4 6" stroke-opacity="0.35"/>
+
+  <!-- ── BOTTOM HOUSING ──────────────────────────────────────────────────── -->
+  <g>
+    <!-- Outer bottom housing -->
+    <path d="
+      M 440 565
+      L 760 565
+      L 740 670
+      L 460 670
+      Z" />
+    <!-- Center spring well -->
+    <path d="
+      M 555 565
+      L 645 565
+      L 640 615
+      L 560 615
+      Z" stroke-opacity="0.6"/>
+    <!-- Pin holes (PCB contact points) -->
+    <circle cx="490" cy="640" r="5" />
+    <circle cx="710" cy="640" r="5" />
+    <!-- Center mount post -->
+    <circle cx="600" cy="640" r="6" stroke-opacity="0.6"/>
+  </g>
+
+  <!-- Brass-bronze accent: single hit on the cruciform stem top -->
+  <rect x="588" y="268" width="24" height="12" rx="1" fill="oklch(0.80 0.135 75 / 0.85)" stroke="oklch(0.80 0.135 75)"/>
+
+  <!-- Quiet didactic guide rule (left edge tick marks) -->
+  <g stroke-opacity="0.3">
+    <line x1="370" y1="145" x2="380" y2="145"/>
+    <line x1="370" y1="278" x2="380" y2="278"/>
+    <line x1="370" y1="430" x2="380" y2="430"/>
+    <line x1="370" y1="565" x2="380" y2="565"/>
+  </g>
+</svg>

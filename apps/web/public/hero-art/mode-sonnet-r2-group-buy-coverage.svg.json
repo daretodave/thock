@@ -1,0 +1,14 @@
+{
+  "kind": "hero-art",
+  "target": "Z:/keyboard/apps/web/public/hero-art/mode-sonnet-r2-group-buy-coverage.svg",
+  "source": "plan/bearings.md § Article hero art — colorful keyboard SVGs",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject",
+  "size": [1200, 750],
+  "subject": "65% keyboard top-down silhouette with chamfered case corners (Mode Sonnet R2); single brass-dot accent on the case to nod at the new accent-weight finish",
+  "splash_color": "oklch(0.80 0.135 75)",
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": [],
+  "generated_by": "brander (sub-agent)",
+  "generated_at": "2026-05-09",
+  "commit_at_render": "0dab0a8"
+}

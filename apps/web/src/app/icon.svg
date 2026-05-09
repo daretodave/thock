@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" fill="oklch(0.175 0.006 250)" rx="8"/>
+  <text x="50%" y="56%" text-anchor="middle" font-family="Newsreader, Georgia, serif" font-size="40" font-weight="500" fill="oklch(0.965 0.005 90)" dominant-baseline="middle">t</text>
+  <circle cx="46" cy="20" r="4" fill="oklch(0.80 0.135 75)"/>
+</svg>

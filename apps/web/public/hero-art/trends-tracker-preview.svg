@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — Trends Tracker, didactic sparkline</title>
+
+  <!-- Splash: ochre wash under the sparkline path — the focal teaching object -->
+  <path
+    d="M 180 420 L 1020 420 L 1020 540 L 180 540 Z"
+    fill="oklch(0.78 0.115 75 / 0.10)" stroke="none"/>
+
+  <!-- Subtle wash that follows the rising trend (low-fill region beneath the line),
+       single splash hue only — same ochre at slightly higher alpha -->
+  <path
+    d="
+      M 200 470
+      L 320 455
+      L 440 478
+      L 560 432
+      L 680 410
+      L 800 388
+      L 920 360
+      L 1000 330
+      L 1000 540
+      L 200 540
+      Z"
+    fill="oklch(0.78 0.115 75 / 0.18)" stroke="none"/>
+
+  <!-- Baseline -->
+  <line x1="200" y1="540" x2="1000" y2="540" stroke-opacity="0.55"/>
+
+  <!-- Faint vertical guide ticks on the baseline (one per data point) -->
+  <g stroke-opacity="0.35">
+    <line x1="200" y1="540" x2="200" y2="548"/>
+    <line x1="320" y1="540" x2="320" y2="548"/>
+    <line x1="440" y1="540" x2="440" y2="548"/>
+    <line x1="560" y1="540" x2="560" y2="548"/>
+    <line x1="680" y1="540" x2="680" y2="548"/>
+    <line x1="800" y1="540" x2="800" y2="548"/>
+    <line x1="920" y1="540" x2="920" y2="548"/>
+    <line x1="1000" y1="540" x2="1000" y2="548"/>
+  </g>
+
+  <!-- The sparkline itself — single continuous polyline, upward trend, 8 points -->
+  <polyline
+    points="
+      200,470
+      320,455
+      440,478
+      560,432
+      680,410
+      800,388
+      920,360
+      1000,330" />
+
+  <!-- Subtle dot markers at each interior data point (line-only intent — small open circles) -->
+  <g>
+    <circle cx="200" cy="470" r="4"/>
+    <circle cx="320" cy="455" r="4"/>
+    <circle cx="440" cy="478" r="4"/>
+    <circle cx="560" cy="432" r="4"/>
+    <circle cx="680" cy="410" r="4"/>
+    <circle cx="800" cy="388" r="4"/>
+    <circle cx="920" cy="360" r="4"/>
+  </g>
+
+  <!-- The latest point — focal cursor in brass-bronze theme accent -->
+  <circle cx="1000" cy="330" r="9" fill="oklch(0.80 0.135 75 / 0.95)" stroke="oklch(0.80 0.135 75)"/>
+  <circle cx="1000" cy="330" r="16" stroke="oklch(0.80 0.135 75)" stroke-opacity="0.45" fill="none"/>
+
+  <!-- A faint annotation: small horizontal lead-in and tick at the cursor's y-level on the right.
+       Reads as "this value, now." Stays on-palette by using the same warm grey stroke. -->
+  <g stroke-opacity="0.45">
+    <line x1="1018" y1="330" x2="1042" y2="330"/>
+    <line x1="1042" y1="320" x2="1042" y2="340"/>
+  </g>
+</svg>

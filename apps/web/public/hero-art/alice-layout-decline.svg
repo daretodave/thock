@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — Alice layout, top-down silhouette</title>
+
+  <!-- Splash: a soft, fading dusty-rose wash behind the right-hand cluster. Composure, not energy. -->
+  <ellipse cx="820" cy="395" rx="170" ry="105" fill="oklch(0.72 0.082 25 / 0.18)" stroke="none"/>
+
+  <!-- Case outline — split-symmetry Alice silhouette.
+       Left half mirrors right around x=600. Top edge angles outward (~9°)
+       from the centerline, classic Alice. -->
+  <g>
+    <!-- Outer case path -->
+    <path d="
+      M 230 270
+      L 580 230
+      L 600 232
+      L 620 230
+      L 970 270
+      L 1000 290
+      L 1000 470
+      L 970 510
+      L 230 510
+      L 200 470
+      L 200 290
+      Z" />
+
+    <!-- Inner bezel inset (top plate edge) -->
+    <path d="
+      M 250 295
+      L 585 258
+      L 600 260
+      L 615 258
+      L 950 295
+      L 970 308
+      L 970 460
+      L 950 488
+      L 250 488
+      L 230 460
+      L 230 308
+      Z" stroke-opacity="0.55"/>
+
+    <!-- Center seam (the split-symmetry reveal) -->
+    <line x1="600" y1="260" x2="600" y2="488" stroke-opacity="0.4"/>
+  </g>
+
+  <!-- Left cluster: 2 columns of 6 keys (top row 6 keys offset diagonally per Alice) -->
+  <g>
+    <!-- Row 1 (numbers row) — 6 keys, angled -->
+    <g>
+      <rect x="282" y="285" width="42" height="42" rx="4" transform="rotate(-9 303 306)"/>
+      <rect x="332" y="277" width="42" height="42" rx="4" transform="rotate(-9 353 298)"/>
+      <rect x="382" y="269" width="42" height="42" rx="4" transform="rotate(-9 403 290)"/>
+      <rect x="432" y="261" width="42" height="42" rx="4" transform="rotate(-9 453 282)"/>
+      <rect x="482" y="253" width="42" height="42" rx="4" transform="rotate(-9 503 274)"/>
+      <rect x="532" y="245" width="42" height="42" rx="4" transform="rotate(-9 553 266)"/>
+    </g>
+    <!-- Row 2 (qwerty row), still angled -->
+    <g>
+      <rect x="290" y="335" width="42" height="42" rx="4" transform="rotate(-9 311 356)"/>
+      <rect x="340" y="327" width="42" height="42" rx="4" transform="rotate(-9 361 348)"/>
+      <rect x="390" y="319" width="42" height="42" rx="4" transform="rotate(-9 411 340)"/>
+      <rect x="440" y="311" width="42" height="42" rx="4" transform="rotate(-9 461 332)"/>
+      <rect x="490" y="303" width="42" height="42" rx="4" transform="rotate(-9 511 324)"/>
+      <rect x="540" y="295" width="42" height="42" rx="4" transform="rotate(-9 561 316)"/>
+    </g>
+    <!-- Rows 3-5 (home, bottom rows) — flatter angle for Alice typical layouts -->
+    <g>
+      <rect x="298" y="385" width="42" height="42" rx="4" transform="rotate(-5 319 406)"/>
+      <rect x="348" y="381" width="42" height="42" rx="4" transform="rotate(-5 369 402)"/>
+      <rect x="398" y="377" width="42" height="42" rx="4" transform="rotate(-5 419 398)"/>
+      <rect x="448" y="373" width="42" height="42" rx="4" transform="rotate(-5 469 394)"/>
+      <rect x="498" y="369" width="42" height="42" rx="4" transform="rotate(-5 519 390)"/>
+      <rect x="548" y="365" width="42" height="42" rx="4" transform="rotate(-5 569 386)"/>
+    </g>
+    <g>
+      <rect x="306" y="430" width="42" height="42" rx="4"/>
+      <rect x="356" y="430" width="42" height="42" rx="4"/>
+      <rect x="406" y="430" width="42" height="42" rx="4"/>
+      <rect x="456" y="430" width="42" height="42" rx="4"/>
+      <rect x="506" y="430" width="42" height="42" rx="4"/>
+      <rect x="556" y="430" width="42" height="42" rx="4"/>
+    </g>
+
+    <!-- Left split spacebar (3u-ish) -->
+    <rect x="380" y="478" width="160" height="38" rx="4"/>
+  </g>
+
+  <!-- Right cluster: mirror -->
+  <g>
+    <g>
+      <rect x="626" y="245" width="42" height="42" rx="4" transform="rotate(9 647 266)"/>
+      <rect x="676" y="253" width="42" height="42" rx="4" transform="rotate(9 697 274)"/>
+      <rect x="726" y="261" width="42" height="42" rx="4" transform="rotate(9 747 282)"/>
+      <rect x="776" y="269" width="42" height="42" rx="4" transform="rotate(9 797 290)"/>
+      <rect x="826" y="277" width="42" height="42" rx="4" transform="rotate(9 847 298)"/>
+      <rect x="876" y="285" width="42" height="42" rx="4" transform="rotate(9 897 306)"/>
+    </g>
+    <g>
+      <rect x="618" y="295" width="42" height="42" rx="4" transform="rotate(9 639 316)"/>
+      <rect x="668" y="303" width="42" height="42" rx="4" transform="rotate(9 689 324)"/>
+      <rect x="718" y="311" width="42" height="42" rx="4" transform="rotate(9 739 332)"/>
+      <rect x="768" y="319" width="42" height="42" rx="4" transform="rotate(9 789 340)"/>
+      <rect x="818" y="327" width="42" height="42" rx="4" transform="rotate(9 839 348)"/>
+      <rect x="868" y="335" width="42" height="42" rx="4" transform="rotate(9 889 356)"/>
+    </g>
+    <g>
+      <rect x="610" y="365" width="42" height="42" rx="4" transform="rotate(5 631 386)"/>
+      <rect x="660" y="369" width="42" height="42" rx="4" transform="rotate(5 681 390)"/>
+      <rect x="710" y="373" width="42" height="42" rx="4" transform="rotate(5 731 394)"/>
+      <rect x="760" y="377" width="42" height="42" rx="4" transform="rotate(5 781 398)"/>
+      <rect x="810" y="381" width="42" height="42" rx="4" transform="rotate(5 831 402)"/>
+      <rect x="860" y="385" width="42" height="42" rx="4" transform="rotate(5 881 406)"/>
+    </g>
+    <g>
+      <rect x="602" y="430" width="42" height="42" rx="4"/>
+      <rect x="652" y="430" width="42" height="42" rx="4"/>
+      <rect x="702" y="430" width="42" height="42" rx="4"/>
+      <rect x="752" y="430" width="42" height="42" rx="4"/>
+      <rect x="802" y="430" width="42" height="42" rx="4"/>
+      <rect x="852" y="430" width="42" height="42" rx="4"/>
+    </g>
+
+    <!-- Right split spacebar -->
+    <rect x="660" y="478" width="160" height="38" rx="4"/>
+  </g>
+
+  <!-- Brass-bronze accent: a single keycap on the right cluster, theme dot -->
+  <rect x="852" y="430" width="42" height="42" rx="4" fill="oklch(0.80 0.135 75 / 0.85)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

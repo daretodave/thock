@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — Mode Sonnet R2, 65% top-down with accent-weight finish</title>
+
+  <!-- Splash: warm bronze wash framing the case (the article's subject is the finish) -->
+  <ellipse cx="600" cy="395" rx="490" ry="200" fill="oklch(0.80 0.135 75 / 0.16)" stroke="none"/>
+
+  <!-- 65% case outline — slightly chamfered corners to nod at the Sonnet's case profile -->
+  <g>
+    <path d="
+      M 200 240
+      L 990 240
+      L 1010 260
+      L 1010 540
+      L 990 560
+      L 200 560
+      L 180 540
+      L 180 260
+      Z" />
+    <!-- Inner bezel -->
+    <path d="
+      M 215 258
+      L 985 258
+      L 1000 273
+      L 1000 527
+      L 985 542
+      L 215 542
+      L 200 527
+      L 200 273
+      Z" stroke-opacity="0.5"/>
+    <!-- Side weight separation line — hints at the accent-weight piece -->
+    <line x1="200" y1="540" x2="990" y2="540" stroke-opacity="0.45"/>
+    <line x1="200" y1="555" x2="990" y2="555" stroke-opacity="0.35"/>
+  </g>
+
+  <!-- 65% layout (same skeleton as the build piece, repositioned) -->
+  <g>
+    <!-- Row 1 — 16 keys -->
+    <g>
+      <rect x="232" y="278" width="42" height="42" rx="3"/>
+      <rect x="278" y="278" width="42" height="42" rx="3"/>
+      <rect x="324" y="278" width="42" height="42" rx="3"/>
+      <rect x="370" y="278" width="42" height="42" rx="3"/>
+      <rect x="416" y="278" width="42" height="42" rx="3"/>
+      <rect x="462" y="278" width="42" height="42" rx="3"/>
+      <rect x="508" y="278" width="42" height="42" rx="3"/>
+      <rect x="554" y="278" width="42" height="42" rx="3"/>
+      <rect x="600" y="278" width="42" height="42" rx="3"/>
+      <rect x="646" y="278" width="42" height="42" rx="3"/>
+      <rect x="692" y="278" width="42" height="42" rx="3"/>
+      <rect x="738" y="278" width="42" height="42" rx="3"/>
+      <rect x="784" y="278" width="42" height="42" rx="3"/>
+      <rect x="830" y="278" width="88" height="42" rx="3"/>
+      <rect x="922" y="278" width="42" height="42" rx="3"/>
+      <rect x="968" y="278" width="42" height="42" rx="3"/>
+    </g>
+    <!-- Row 2 -->
+    <g>
+      <rect x="232" y="324" width="64" height="42" rx="3"/>
+      <rect x="300" y="324" width="42" height="42" rx="3"/>
+      <rect x="346" y="324" width="42" height="42" rx="3"/>
+      <rect x="392" y="324" width="42" height="42" rx="3"/>
+      <rect x="438" y="324" width="42" height="42" rx="3"/>
+      <rect x="484" y="324" width="42" height="42" rx="3"/>
+      <rect x="530" y="324" width="42" height="42" rx="3"/>
+      <rect x="576" y="324" width="42" height="42" rx="3"/>
+      <rect x="622" y="324" width="42" height="42" rx="3"/>
+      <rect x="668" y="324" width="42" height="42" rx="3"/>
+      <rect x="714" y="324" width="42" height="42" rx="3"/>
+      <rect x="760" y="324" width="42" height="42" rx="3"/>
+      <rect x="806" y="324" width="42" height="42" rx="3"/>
+      <rect x="852" y="324" width="66" height="42" rx="3"/>
+      <rect x="922" y="324" width="42" height="42" rx="3"/>
+      <rect x="968" y="324" width="42" height="42" rx="3"/>
+    </g>
+    <!-- Row 3 -->
+    <g>
+      <rect x="232" y="370" width="76" height="42" rx="3"/>
+      <rect x="312" y="370" width="42" height="42" rx="3"/>
+      <rect x="358" y="370" width="42" height="42" rx="3"/>
+      <rect x="404" y="370" width="42" height="42" rx="3"/>
+      <rect x="450" y="370" width="42" height="42" rx="3"/>
+      <rect x="496" y="370" width="42" height="42" rx="3"/>
+      <rect x="542" y="370" width="42" height="42" rx="3"/>
+      <rect x="588" y="370" width="42" height="42" rx="3"/>
+      <rect x="634" y="370" width="42" height="42" rx="3"/>
+      <rect x="680" y="370" width="42" height="42" rx="3"/>
+      <rect x="726" y="370" width="42" height="42" rx="3"/>
+      <rect x="772" y="370" width="42" height="42" rx="3"/>
+      <rect x="818" y="370" width="42" height="42" rx="3"/>
+      <rect x="864" y="370" width="100" height="42" rx="3"/>
+      <rect x="968" y="370" width="42" height="42" rx="3"/>
+    </g>
+    <!-- Row 4 -->
+    <g>
+      <rect x="232" y="416" width="98" height="42" rx="3"/>
+      <rect x="334" y="416" width="42" height="42" rx="3"/>
+      <rect x="380" y="416" width="42" height="42" rx="3"/>
+      <rect x="426" y="416" width="42" height="42" rx="3"/>
+      <rect x="472" y="416" width="42" height="42" rx="3"/>
+      <rect x="518" y="416" width="42" height="42" rx="3"/>
+      <rect x="564" y="416" width="42" height="42" rx="3"/>
+      <rect x="610" y="416" width="42" height="42" rx="3"/>
+      <rect x="656" y="416" width="42" height="42" rx="3"/>
+      <rect x="702" y="416" width="42" height="42" rx="3"/>
+      <rect x="748" y="416" width="42" height="42" rx="3"/>
+      <rect x="794" y="416" width="42" height="42" rx="3"/>
+      <rect x="840" y="416" width="78" height="42" rx="3"/>
+      <rect x="922" y="416" width="42" height="42" rx="3"/>
+      <rect x="968" y="416" width="42" height="42" rx="3"/>
+    </g>
+    <!-- Row 5 -->
+    <g>
+      <rect x="232" y="462" width="56" height="42" rx="3"/>
+      <rect x="292" y="462" width="56" height="42" rx="3"/>
+      <rect x="352" y="462" width="56" height="42" rx="3"/>
+      <rect x="412" y="462" width="288" height="42" rx="3"/>
+      <rect x="704" y="462" width="56" height="42" rx="3"/>
+      <rect x="764" y="462" width="56" height="42" rx="3"/>
+      <rect x="824" y="462" width="56" height="42" rx="3"/>
+      <rect x="884" y="462" width="34" height="42" rx="3"/>
+      <rect x="922" y="462" width="42" height="42" rx="3"/>
+      <rect x="968" y="462" width="42" height="42" rx="3"/>
+    </g>
+  </g>
+
+  <!-- Brass-dot accent on the case (the new accent-weight finish the R2 introduces).
+       Single hit on the case bottom-right. -->
+  <circle cx="950" cy="595" r="9" fill="oklch(0.80 0.135 75 / 0.95)" stroke="oklch(0.80 0.135 75)"/>
+  <circle cx="950" cy="595" r="14" stroke-opacity="0.5" stroke="oklch(0.80 0.135 75)" fill="none"/>
+</svg>

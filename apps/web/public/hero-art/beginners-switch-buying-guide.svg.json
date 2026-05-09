@@ -1,0 +1,14 @@
+{
+  "kind": "hero-art",
+  "target": "Z:/keyboard/apps/web/public/hero-art/beginners-switch-buying-guide.svg",
+  "source": "plan/bearings.md § Article hero art — colorful keyboard SVGs",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject",
+  "size": [1200, 750],
+  "subject": "MX-style switch exploded cross-section — top housing, cruciform stem, coil spring, bottom housing stacked vertically with didactic guide ticks; cruciform top filled in bronze theme accent",
+  "splash_color": "oklch(0.78 0.115 75)",
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": [],
+  "generated_by": "brander (sub-agent)",
+  "generated_at": "2026-05-09",
+  "commit_at_render": "0dab0a8"
+}

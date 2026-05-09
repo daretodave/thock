@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — Mode Sonnet 65%, Oil Kings switch-row callout</title>
+
+  <!-- Splash: muted terracotta wash under the switch row that's being annotated -->
+  <ellipse cx="600" cy="395" rx="350" ry="56" fill="oklch(0.66 0.11 35 / 0.18)" stroke="none"/>
+
+  <!-- 65% case outline (rounded rectangle) -->
+  <g>
+    <rect x="180" y="230" width="840" height="320" rx="14"/>
+    <!-- Inner bezel -->
+    <rect x="200" y="250" width="800" height="280" rx="8" stroke-opacity="0.5"/>
+  </g>
+
+  <!-- 65% layout: 5 rows × 16 columns (with the right column being the nav strip) -->
+  <!-- Use a uniform 1u = 46px grid; key size 42 with 4px gap -->
+  <g>
+    <!-- Row 1: 14 keys + 2 nav (numbers + backspace + ins/del) — 65% has 16 keys here -->
+    <g>
+      <rect x="218" y="268" width="42" height="42" rx="3"/>
+      <rect x="264" y="268" width="42" height="42" rx="3"/>
+      <rect x="310" y="268" width="42" height="42" rx="3"/>
+      <rect x="356" y="268" width="42" height="42" rx="3"/>
+      <rect x="402" y="268" width="42" height="42" rx="3"/>
+      <rect x="448" y="268" width="42" height="42" rx="3"/>
+      <rect x="494" y="268" width="42" height="42" rx="3"/>
+      <rect x="540" y="268" width="42" height="42" rx="3"/>
+      <rect x="586" y="268" width="42" height="42" rx="3"/>
+      <rect x="632" y="268" width="42" height="42" rx="3"/>
+      <rect x="678" y="268" width="42" height="42" rx="3"/>
+      <rect x="724" y="268" width="42" height="42" rx="3"/>
+      <rect x="770" y="268" width="42" height="42" rx="3"/>
+      <rect x="816" y="268" width="88" height="42" rx="3"/>
+      <rect x="908" y="268" width="42" height="42" rx="3"/>
+      <rect x="954" y="268" width="42" height="42" rx="3"/>
+    </g>
+    <!-- Row 2: tab + 12 + backslash + nav -->
+    <g>
+      <rect x="218" y="314" width="64" height="42" rx="3"/>
+      <rect x="286" y="314" width="42" height="42" rx="3"/>
+      <rect x="332" y="314" width="42" height="42" rx="3"/>
+      <rect x="378" y="314" width="42" height="42" rx="3"/>
+      <rect x="424" y="314" width="42" height="42" rx="3"/>
+      <rect x="470" y="314" width="42" height="42" rx="3"/>
+      <rect x="516" y="314" width="42" height="42" rx="3"/>
+      <rect x="562" y="314" width="42" height="42" rx="3"/>
+      <rect x="608" y="314" width="42" height="42" rx="3"/>
+      <rect x="654" y="314" width="42" height="42" rx="3"/>
+      <rect x="700" y="314" width="42" height="42" rx="3"/>
+      <rect x="746" y="314" width="42" height="42" rx="3"/>
+      <rect x="792" y="314" width="42" height="42" rx="3"/>
+      <rect x="838" y="314" width="66" height="42" rx="3"/>
+      <rect x="908" y="314" width="42" height="42" rx="3"/>
+      <rect x="954" y="314" width="42" height="42" rx="3"/>
+    </g>
+    <!-- Row 3 (HOME ROW — this is what we'll annotate as the Oil Kings row) -->
+    <g>
+      <rect x="218" y="360" width="76" height="42" rx="3"/>
+      <rect x="298" y="360" width="42" height="42" rx="3"/>
+      <rect x="344" y="360" width="42" height="42" rx="3"/>
+      <rect x="390" y="360" width="42" height="42" rx="3"/>
+      <rect x="436" y="360" width="42" height="42" rx="3"/>
+      <rect x="482" y="360" width="42" height="42" rx="3"/>
+      <rect x="528" y="360" width="42" height="42" rx="3"/>
+      <rect x="574" y="360" width="42" height="42" rx="3"/>
+      <rect x="620" y="360" width="42" height="42" rx="3"/>
+      <rect x="666" y="360" width="42" height="42" rx="3"/>
+      <rect x="712" y="360" width="42" height="42" rx="3"/>
+      <rect x="758" y="360" width="42" height="42" rx="3"/>
+      <rect x="804" y="360" width="42" height="42" rx="3"/>
+      <rect x="850" y="360" width="100" height="42" rx="3"/>
+      <rect x="954" y="360" width="42" height="42" rx="3"/>
+    </g>
+    <!-- Row 4 -->
+    <g>
+      <rect x="218" y="406" width="98" height="42" rx="3"/>
+      <rect x="320" y="406" width="42" height="42" rx="3"/>
+      <rect x="366" y="406" width="42" height="42" rx="3"/>
+      <rect x="412" y="406" width="42" height="42" rx="3"/>
+      <rect x="458" y="406" width="42" height="42" rx="3"/>
+      <rect x="504" y="406" width="42" height="42" rx="3"/>
+      <rect x="550" y="406" width="42" height="42" rx="3"/>
+      <rect x="596" y="406" width="42" height="42" rx="3"/>
+      <rect x="642" y="406" width="42" height="42" rx="3"/>
+      <rect x="688" y="406" width="42" height="42" rx="3"/>
+      <rect x="734" y="406" width="42" height="42" rx="3"/>
+      <rect x="780" y="406" width="42" height="42" rx="3"/>
+      <rect x="826" y="406" width="78" height="42" rx="3"/>
+      <rect x="908" y="406" width="42" height="42" rx="3"/>
+      <rect x="954" y="406" width="42" height="42" rx="3"/>
+    </g>
+    <!-- Row 5: bottom modifiers + spacebar + arrow cluster nub -->
+    <g>
+      <rect x="218" y="452" width="56" height="42" rx="3"/>
+      <rect x="278" y="452" width="56" height="42" rx="3"/>
+      <rect x="338" y="452" width="56" height="42" rx="3"/>
+      <rect x="398" y="452" width="288" height="42" rx="3"/>
+      <rect x="690" y="452" width="56" height="42" rx="3"/>
+      <rect x="750" y="452" width="56" height="42" rx="3"/>
+      <rect x="810" y="452" width="56" height="42" rx="3"/>
+      <rect x="870" y="452" width="34" height="42" rx="3"/>
+      <rect x="908" y="452" width="42" height="42" rx="3"/>
+      <rect x="954" y="452" width="42" height="42" rx="3"/>
+    </g>
+  </g>
+
+  <!-- ── CALLOUT: arrow + label pointing at the home (Oil Kings) row ─────── -->
+  <g stroke="oklch(0.66 0.11 35)" stroke-width="2">
+    <!-- Annotation leader: from upper-right out to the row -->
+    <path d="M 1060 180 L 1060 280 L 980 280 L 920 360" fill="none"/>
+    <!-- Arrowhead at the row -->
+    <path d="M 920 360 L 932 348 M 920 360 L 928 366" fill="none"/>
+  </g>
+
+  <!-- Callout label dot — bronze theme accent -->
+  <circle cx="1060" cy="180" r="5" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+
+  <!-- Tiny ornamental tick stack hinting "switches live here" — three dots above the home row -->
+  <g fill="oklch(0.66 0.11 35 / 0.7)" stroke="none">
+    <circle cx="500" cy="395" r="3"/>
+    <circle cx="600" cy="395" r="3"/>
+    <circle cx="700" cy="395" r="3"/>
+  </g>
+</svg>

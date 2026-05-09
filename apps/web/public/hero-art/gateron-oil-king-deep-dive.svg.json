@@ -1,0 +1,14 @@
+{
+  "kind": "hero-art",
+  "target": "Z:/keyboard/apps/web/public/hero-art/gateron-oil-king-deep-dive.svg",
+  "source": "plan/bearings.md § Article hero art — colorful keyboard SVGs",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject",
+  "size": [1200, 750],
+  "subject": "Detailed switch cut-away — top housing with LED notch, cruciform stem with skirt rails, 11-coil spring with axis, and bottom housing with pin contacts and mount post; LED notch filled in bronze theme accent",
+  "splash_color": "oklch(0.71 0.135 30)",
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": [],
+  "generated_by": "brander (sub-agent)",
+  "generated_at": "2026-05-09",
+  "commit_at_render": "0dab0a8"
+}

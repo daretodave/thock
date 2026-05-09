@@ -26,7 +26,15 @@ export const ArticleFrontmatterSchema = z.object({
   tags: z.array(z.string()).min(1).max(8),
   publishedAt: IsoDateSchema,
   updatedAt: IsoDateSchema.nullable().default(null),
-  heroImage: z.string().url().nullable().default(null),
+  heroImage: z
+    .string()
+    .min(1)
+    .refine(
+      (v) => v.startsWith('/') || /^https?:\/\//.test(v),
+      'heroImage must be an absolute path (starts with /) or a full URL',
+    )
+    .nullable()
+    .default(null),
   heroImageAlt: z.string().min(2).nullable().default(null),
   featured: z.boolean().default(false),
   popularityScore: z.number().min(0).max(100).default(0),

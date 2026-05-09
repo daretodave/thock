@@ -1,0 +1,14 @@
+{
+  "kind": "hero-art",
+  "target": "Z:/keyboard/apps/web/public/hero-art/trends-tracker-preview.svg",
+  "source": "plan/bearings.md § Article hero art — colorful keyboard SVGs",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject",
+  "size": [1200, 750],
+  "subject": "Upward-trending sparkline (8 data points) on a baseline with vertical tick guides and faint area-fill beneath; latest data point rendered as a focal cursor dot in bronze theme accent",
+  "splash_color": "oklch(0.78 0.115 75)",
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": [],
+  "generated_by": "brander (sub-agent)",
+  "generated_at": "2026-05-09",
+  "commit_at_render": "0dab0a8"
+}

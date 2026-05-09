@@ -63,4 +63,31 @@ describe('ArticleFrontmatterSchema', () => {
       false,
     )
   })
+
+  it('accepts heroImage as an absolute path under /hero-art/', () => {
+    const result = ArticleFrontmatterSchema.safeParse({
+      ...VALID,
+      heroImage: '/hero-art/beginners-switch-buying-guide.svg',
+      heroImageAlt: 'Switch cross-section with exploded housing.',
+    })
+    expect(result.success).toBe(true)
+  })
+
+  it('accepts heroImage as a full https URL', () => {
+    const result = ArticleFrontmatterSchema.safeParse({
+      ...VALID,
+      heroImage: 'https://example.com/some/photo.jpg',
+      heroImageAlt: 'A photograph of a keyboard build.',
+    })
+    expect(result.success).toBe(true)
+  })
+
+  it('rejects heroImage that is neither a path nor a URL', () => {
+    const result = ArticleFrontmatterSchema.safeParse({
+      ...VALID,
+      heroImage: 'just-a-bare-string.svg',
+      heroImageAlt: 'Some alt text.',
+    })
+    expect(result.success).toBe(false)
+  })
 })

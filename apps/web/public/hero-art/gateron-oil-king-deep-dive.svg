@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — Gateron Oil King switch, detailed cut-away</title>
+
+  <!-- Splash: coral wash centered on the spring + stem — sound origin -->
+  <ellipse cx="600" cy="400" rx="240" ry="160" fill="oklch(0.71 0.135 30 / 0.18)" stroke="none"/>
+
+  <!-- ── TOP HOUSING (cut-away half) ─────────────────────────────────────── -->
+  <g>
+    <!-- Outer top-housing -->
+    <path d="
+      M 410 130
+      L 790 130
+      L 820 220
+      L 380 220
+      Z" />
+    <!-- Stem hole -->
+    <path d="
+      M 540 130
+      L 660 130
+      L 670 165
+      L 530 165
+      Z" />
+    <!-- Inner cavity ribs (left + right wall sections) -->
+    <line x1="410" y1="180" x2="525" y2="180" stroke-opacity="0.45"/>
+    <line x1="675" y1="180" x2="790" y2="180" stroke-opacity="0.45"/>
+    <!-- LED window (small notch on top edge) -->
+    <path d="M 580 130 L 620 130 L 615 138 L 585 138 Z" stroke-opacity="0.55"/>
+  </g>
+
+  <!-- Faint explode line -->
+  <line x1="370" y1="245" x2="830" y2="245" stroke-dasharray="4 6" stroke-opacity="0.35"/>
+
+  <!-- ── STEM (cruciform, detailed) ──────────────────────────────────────── -->
+  <g>
+    <!-- Body -->
+    <path d="M 555 285 L 645 285 L 645 395 L 555 395 Z" />
+    <!-- Cruciform head -->
+    <path d="
+      M 580 258
+      L 620 258
+      L 620 273
+      L 632 273
+      L 632 285
+      L 568 285
+      L 568 273
+      L 580 273
+      Z" />
+    <!-- Stem vertical detail line -->
+    <line x1="600" y1="295" x2="600" y2="385" stroke-opacity="0.5"/>
+    <!-- Stem 'pole' (where the spring slot lives) -->
+    <line x1="582" y1="395" x2="582" y2="430" stroke-opacity="0.5"/>
+    <line x1="618" y1="395" x2="618" y2="430" stroke-opacity="0.5"/>
+    <!-- Skirt (linear rails on the side of stem) -->
+    <line x1="555" y1="320" x2="540" y2="320" stroke-opacity="0.5"/>
+    <line x1="555" y1="360" x2="540" y2="360" stroke-opacity="0.5"/>
+    <line x1="645" y1="320" x2="660" y2="320" stroke-opacity="0.5"/>
+    <line x1="645" y1="360" x2="660" y2="360" stroke-opacity="0.5"/>
+  </g>
+
+  <!-- ── SPRING (long, the Oil King uses a longer 20mm-feel spring) ──────── -->
+  <g>
+    <!-- 11 coils, drawn as overlapping ovals; centerline shown -->
+    <ellipse cx="600" cy="445" rx="44" ry="7"/>
+    <ellipse cx="600" cy="457" rx="44" ry="7"/>
+    <ellipse cx="600" cy="469" rx="44" ry="7"/>
+    <ellipse cx="600" cy="481" rx="44" ry="7"/>
+    <ellipse cx="600" cy="493" rx="44" ry="7"/>
+    <ellipse cx="600" cy="505" rx="44" ry="7"/>
+    <ellipse cx="600" cy="517" rx="44" ry="7"/>
+    <ellipse cx="600" cy="529" rx="44" ry="7"/>
+    <ellipse cx="600" cy="541" rx="44" ry="7"/>
+    <ellipse cx="600" cy="553" rx="44" ry="7"/>
+    <ellipse cx="600" cy="565" rx="44" ry="7"/>
+    <!-- Spring axis -->
+    <line x1="600" y1="438" x2="600" y2="572" stroke-opacity="0.35" stroke-dasharray="2 4"/>
+  </g>
+
+  <!-- Faint explode line -->
+  <line x1="370" y1="595" x2="830" y2="595" stroke-dasharray="4 6" stroke-opacity="0.35"/>
+
+  <!-- ── BOTTOM HOUSING ──────────────────────────────────────────────────── -->
+  <g>
+    <!-- Outer bottom housing -->
+    <path d="M 380 615 L 820 615 L 800 705 L 400 705 Z" />
+    <!-- Inner well -->
+    <path d="M 540 615 L 660 615 L 655 660 L 545 660 Z" stroke-opacity="0.6"/>
+    <!-- Pin contacts -->
+    <circle cx="450" cy="680" r="5"/>
+    <circle cx="750" cy="680" r="5"/>
+    <!-- Center post -->
+    <circle cx="600" cy="680" r="6" stroke-opacity="0.6"/>
+    <!-- Side rail mount nubs -->
+    <line x1="500" y1="615" x2="500" y2="630" stroke-opacity="0.5"/>
+    <line x1="700" y1="615" x2="700" y2="630" stroke-opacity="0.5"/>
+  </g>
+
+  <!-- Brass-bronze accent: the LED window — single hit -->
+  <path d="M 580 130 L 620 130 L 615 138 L 585 138 Z" fill="oklch(0.80 0.135 75 / 0.85)" stroke="oklch(0.80 0.135 75)"/>
+
+  <!-- Subtle measurement tick marks, didactic -->
+  <g stroke-opacity="0.3">
+    <line x1="320" y1="130" x2="330" y2="130"/>
+    <line x1="320" y1="270" x2="330" y2="270"/>
+    <line x1="320" y1="445" x2="330" y2="445"/>
+    <line x1="320" y1="615" x2="330" y2="615"/>
+  </g>
+</svg>
