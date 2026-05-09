@@ -149,12 +149,15 @@ while (Date.now() - start < TIMEOUT_MS) {
         // squash-merged history, etc.) — skip the range silently.
       }
     }
-    const aliasUrl =
-      match.alias?.find((a) => a.endsWith('.vercel.app')) ??
-      match.alias?.[0] ??
-      null
-    if (match.url) console.log(`  Permalink: https://${match.url}`)
-    if (aliasUrl) console.log(`  Site:      https://${aliasUrl}`)
+    // Prefer the project's canonical alias (e.g. thock-coral.vercel.app)
+    // over Vercel's auto-generated <project>-<hash>-<team>.vercel.app
+    // permanent URL — the latter leaks the team slug into logs.
+    const canonicalAlias = match.alias?.find(
+      (a) => !a.includes('-') || a.endsWith('-git-main.vercel.app'),
+    )
+    if (canonicalAlias) {
+      console.log(`  Site:      https://${canonicalAlias}`)
+    }
     if (match.inspectorUrl) console.log(`  Inspect:   ${match.inspectorUrl}`)
     process.exit(0)
   }
