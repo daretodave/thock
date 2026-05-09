@@ -32,7 +32,7 @@ the phase.
 - [x] Phase 10 — Deep Dives pillar (`/deep-dives`) — `cea650a`
 - [x] Phase 11 — Guides pillar (`/guides`) — `dbb8323`
 - [x] Phase 12 — Tag pages (`/tag/[slug]`) — `4612d9b`
-- [x] Phase 13 — Group Buys (`/group-buys` + home widget retrofit) — `<pending>`
+- [x] Phase 13 — Group Buys (`/group-buys` + home widget retrofit) — `16380cd`
 
 **Cross-cutting (phases 14–17):**
 - [ ] Phase 14 — Search (`/search` + header search affordance, MiniSearch index built at build time)
