@@ -5,6 +5,7 @@ import {
   getArticlesByPillar,
   getArticlesByTag,
   getRelatedArticles,
+  getReferencedParts,
   getAllTags,
   getTagBySlug,
   getActiveGroupBuys,
@@ -76,6 +77,33 @@ describe('data-runtime adapter', () => {
     const snap = getLatestTrendSnapshot()
     expect(snap).not.toBeNull()
     expect(snap!.isoWeek).toMatch(/^\d{4}-W\d{2}$/)
+  })
+
+  it('resolves mentioned parts against the manifest', () => {
+    const article = getAllArticles().find(
+      (a) => a.frontmatter.mentionedParts.length > 0,
+    )
+    if (!article) return // skip when no seed article references parts
+    const parts = getReferencedParts(article)
+    expect(parts.length).toBeGreaterThanOrEqual(1)
+    for (const p of parts) {
+      expect(['switch', 'keycap-set', 'board']).toContain(p.kind)
+      expect(p.record).toBeTruthy()
+    }
+  })
+
+  it('drops mentioned parts whose slug does not resolve', () => {
+    const article = getAllArticles()[0]!
+    const fakeArticle = {
+      ...article,
+      frontmatter: {
+        ...article.frontmatter,
+        mentionedParts: [
+          { id: 'fake', kind: 'switch' as const, slug: 'this-does-not-exist' },
+        ],
+      },
+    }
+    expect(getReferencedParts(fakeArticle)).toEqual([])
   })
 
   it('manifestGeneratedAt is an ISO timestamp', () => {

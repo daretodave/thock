@@ -78,7 +78,14 @@ export const pageReads: Record<string, PageRead> = {
   },
   '/article/[slug]': {
     pattern: '/article/[slug]',
-    ...html([]),
+    ...html([
+      // The hero, byline, body, and tag rail are the canonical-template
+      // assertions every article inherits as of phase 5.
+      { kind: 'min-link-count', selector: '[data-testid="article-hero"]', min: 1 },
+      { kind: 'min-link-count', selector: '[data-testid="article-byline"]', min: 1 },
+      { kind: 'min-link-count', selector: '[data-testid="article-body"]', min: 1 },
+      { kind: 'min-link-count', selector: '[data-testid="tag-chip"]', min: 1 },
+    ]),
   },
   '/tag/[slug]': {
     pattern: '/tag/[slug]',

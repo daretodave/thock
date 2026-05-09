@@ -1,14 +1,23 @@
 import { notFound } from 'next/navigation'
-import { Container, Stack } from '@thock/ui'
-import { getArticleBySlug } from '@/lib/data-runtime'
 import {
   buildArticleJsonLd,
   buildBreadcrumbListJsonLd,
   buildMetadata,
   JsonLd,
-  pillarLabel,
   pillarHref,
+  pillarLabel,
 } from '@thock/seo'
+import {
+  getAllTags,
+  getArticleBySlug,
+  getReferencedParts,
+  getRelatedArticles,
+} from '@/lib/data-runtime'
+import { ArticleHero } from '@/components/article/ArticleHero'
+import { ArticleBody } from '@/components/article/ArticleBody'
+import { ArticleTagRail } from '@/components/article/ArticleTagRail'
+import { MentionedPartsRail } from '@/components/article/MentionedPartsRail'
+import { RelatedArticlesRail } from '@/components/article/RelatedArticlesRail'
 
 export async function generateMetadata({
   params,
@@ -34,10 +43,11 @@ export async function generateMetadata({
 }
 
 /**
- * Phase 4 stub — minimal article page so the URL exists, the
- * canonical link tag is correct, and the JSON-LD `Article` graph is
- * already valid. Phase 5 ships the canonical template (hero, body
- * MDX, tag rail, related-articles rail, mentioned-parts rail).
+ * Phase 5 — canonical article template. Hero + MDX body + tag rail
+ * + mentioned-parts rail + related-articles rail. Every later
+ * page-family phase mirrors this triple
+ * (apps/web/src/app/<family>/, apps/web/src/components/<family>/,
+ * apps/web/src/lib/<family>/).
  */
 export default async function ArticlePage({
   params,
@@ -49,11 +59,15 @@ export default async function ArticlePage({
   if (!article) notFound()
 
   const fm = article.frontmatter
-  const pillar = fm.pillar
   const path = `/article/${article.slug}`
 
+  const allTags = getAllTags()
+  const tagsBySlug = new Map(allTags.map((t) => [t.slug, t]))
+  const parts = getReferencedParts(article)
+  const related = getRelatedArticles(article, 4)
+
   return (
-    <Container as="article" className="py-12 sm:py-16">
+    <article>
       <JsonLd
         graph={[
           buildArticleJsonLd({
@@ -67,26 +81,30 @@ export default async function ArticlePage({
           }),
           buildBreadcrumbListJsonLd([
             { name: 'Home', path: '/' },
-            { name: pillarLabel(pillar), path: pillarHref(pillar) },
+            { name: pillarLabel(fm.pillar), path: pillarHref(fm.pillar) },
             { name: fm.title, path },
           ]),
         ]}
       />
-      <Stack gap={5}>
-        <span className="font-mono uppercase tracking-[0.12em] text-micro text-accent-mu">
-          <a href={pillarHref(pillar)} className="hover:text-accent">
-            {pillarLabel(pillar)}
-          </a>
-        </span>
-        <h1 className="font-serif text-h1 sm:text-display text-text">
-          {fm.title}
-        </h1>
-        <p className="max-w-[60ch] font-serif text-h3 text-text-2">{fm.lede}</p>
-        <div className="font-mono text-micro uppercase tracking-[0.08em] text-text-3">
-          {fm.author} · {article.readTime} min read · phase 4 stub —
-          canonical template ships in phase 5
-        </div>
-      </Stack>
-    </Container>
+
+      <ArticleHero
+        pillar={fm.pillar}
+        title={fm.title}
+        lede={fm.lede}
+        author={fm.author}
+        publishedAt={fm.publishedAt}
+        readTime={article.readTime}
+        heroImage={fm.heroImage}
+        heroImageAlt={fm.heroImageAlt}
+      />
+
+      <ArticleBody body={article.body} />
+
+      <ArticleTagRail tagSlugs={fm.tags} tagsBySlug={tagsBySlug} />
+
+      <MentionedPartsRail parts={parts} />
+
+      <RelatedArticlesRail articles={related} />
+    </article>
   )
 }
