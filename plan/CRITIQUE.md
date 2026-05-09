@@ -9,15 +9,6 @@
 
 ## Pending
 
-### [HIGH] mobile nav — primary links unreachable at 375px, no toggle
-- pass: 1 (commit 16b53c3)
-- viewport: mobile
-- category: navigation
-- observation: At 375×800 the five pillar links in the header (News / Trends / Ideas / Deep Dives / Guides) exist in the DOM but are clipped or hidden, and no hamburger / menu toggle is rendered. A mobile reader who lands on an article cannot reach any other section. This is a fundamental UX failure for a content site.
-- evidence: On the deep-dive article at 375×800, only `[thock home, Search, Deep Dives]` register as interactive. No element matches "hamburger menu button or mobile nav toggle".
-- suggested fix: Add a mobile menu toggle that exposes the full primary nav at <640px. Phase 16 (Polish) lists this as scope, but the gap is acute enough on real-content phases (5+) that it shouldn't wait for 16.
-- source: browser
-
 ### [MED] /news — pillar advertises "1 article · newest first" but renders zero cards
 - pass: 1 (commit 16b53c3)
 - viewport: both
@@ -37,6 +28,13 @@
 - source: user
 
 ## Done
+
+### [x] [HIGH] mobile nav — primary links unreachable at 375px, no toggle
+- addressed in: pending commit (this tick)
+- pass: 1 (commit 16b53c3)
+- root cause: the desktop nav was `hidden md:flex` and there was no `<md` toggle, so the 5 pillar links were entirely unreachable on phones. Phase 16 listed this as polish scope; pulled forward at user direction.
+- fix: new client component `apps/web/src/components/ui/MobileNav.tsx` renders a hamburger toggle visible only at `<md` and a slide-down drawer holding the 5 pillar links. Drawer closes on link click, on Escape, and when the viewport widens past `md`. `Header.tsx` stays a server component and embeds the client `<MobileNav />` next to the search affordance; the desktop nav is unchanged.
+- regression guard: new mobile e2e at `apps/e2e/tests/mobile/nav.mobile.spec.ts` opens the drawer at 375px, verifies all 5 pillar links are present, and asserts clicking one routes to `/news`. Five unit tests in `apps/web/src/components/ui/__tests__/MobileNav.test.tsx` cover the open/close state, link rendering, and toggle aria-expanded.
 
 ### [x] [MED] every page — `<title>` duplicates the site name
 - addressed in: pending commit (this tick)

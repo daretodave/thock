@@ -1,10 +1,11 @@
 import Link from 'next/link'
 import { Container, Wordmark } from '@thock/ui'
 import { PILLARS } from '@thock/seo'
+import { MobileNav } from './MobileNav'
 
 export function Header() {
   return (
-    <header className="border-b border-border bg-bg">
+    <header className="relative border-b border-border bg-bg">
       <Container as="div" className="flex items-center justify-between gap-6 py-4">
         <Link href="/" aria-label="thock — home" className="shrink-0">
           <Wordmark size="md" />
@@ -44,6 +45,7 @@ export function Header() {
               <path d="m20 20-3.5-3.5" />
             </svg>
           </button>
+          <MobileNav />
         </div>
       </Container>
     </header>
