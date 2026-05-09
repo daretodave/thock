@@ -31,6 +31,7 @@ jobs:
     permissions:
       contents: write   # push back to main
       issues: write     # /triage labels + cloud-failed issue
+      id-token: write   # Claude Code Action's OIDC handshake
     steps:
       - name: Checkout (full history for /march dispatch)
         uses: actions/checkout@v4
@@ -94,20 +95,6 @@ jobs:
           git config user.name  "daretodave"
           git config user.email "7341502+daretodave@users.noreply.github.com"
 
-      - name: Ensure triage:cloud-failed label exists
-        # Idempotent label create. Both the agent's `gh issue create`
-        # and the safety-net step below need this label to exist;
-        # ensuring it once per run is cheap and avoids the "could
-        # not add label: ... not found" failure path.
-        if: steps.ceiling.outputs.skip != 'true'
-        env:
-          GH_TOKEN: ${{ secrets.ACTIONS_PAT }}
-        run: |
-          gh label create "triage:cloud-failed" \
-            --color "d73a4a" \
-            --description "Cloud /march tick failed; next /triage tick picks it up" \
-            2>/dev/null || true
-
       - name: Run /march (cloud mode)
         if: steps.ceiling.outputs.skip != 'true'
         uses: anthropics/claude-code-action@v1
@@ -139,7 +126,7 @@ jobs:
                This is how the next tick's ceiling check distinguishes cloud-shipped commits from the user's local work — both have the same author. If a commit lacks this trailer it does not count toward the cloud ceiling, which would let the loop run away. Treat the trailer as non-negotiable, like the verify gate. agents.md's "no Co-Authored-By trailers, plain commit message bodies" rule has an explicit carve-out for this single trailer; nothing else.
             7. If the tick cannot ship cleanly (red verify, red deploy, blocked phase, no work to do, anything else), do NOT half-commit. Either:
                - exit cleanly with a one-line note in the action log explaining why no work shipped this tick, or
-               - if there is a real failure to surface, open a GitHub issue with `gh issue create --title "Cloud march failed: <iso-date>" --label triage:cloud-failed --body "<context + run URL>"` and exit. The next scheduled tick picks it up via /triage.
+               - if there is a real failure to surface, open a GitHub issue with `gh issue create --title "Cloud march failed: <iso-date>" --body "<context + run URL>"` and exit. Do not pass `--label` — the issue lands unlabeled and the next scheduled tick's /triage classifies and labels it appropriately.
 
             The dispatch order is the standard /march order from skills/march.md: triage → critique (skipped) → ship-a-phase → ship-data → expand → iterate.
 
@@ -159,14 +146,16 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.ACTIONS_PAT }}
         run: |
-          # Dedupe: only open if no open triage:cloud-failed issue
-          # already exists.
-          existing=$(gh issue list --label "triage:cloud-failed" --state open --json number --jq 'length')
+          # Dedupe by title prefix instead of label — labels need
+          # an extra PAT scope (Issues:write at label-management
+          # level) that the user's existing PAT might not have.
+          # Issue creation only needs Issues:write at content level.
+          # The next /triage tick will label these naturally.
+          existing=$(gh issue list --search 'in:title "Cloud march tick crashed" state:open' --json number --jq 'length')
           if [ "$existing" -eq 0 ]; then
             gh issue create \
               --title "Cloud march tick crashed: $(date -u +%Y-%m-%dT%H:%M:%SZ)" \
-              --label "triage:cloud-failed" \
               --body "Action exited non-zero before the agent could file its own issue. Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           else
-            echo "An open triage:cloud-failed issue already exists — skipping dedupe."
+            echo "An open 'Cloud march tick crashed' issue already exists — skipping dedupe."
           fi

@@ -131,8 +131,10 @@ Each tick:
 3. Runs `/march` in cloud mode (skips `/oversight` and `/critique`).
 4. The agent ships a phase, a data update, an iterate finding, or
    nothing — depending on what's queued.
-5. If anything goes red, opens a `triage:cloud-failed` issue and
-   exits. The next tick picks it up via `/triage`.
+5. If anything goes red, opens an unlabeled GitHub issue
+   titled "Cloud march tick crashed: …" with the run URL, and
+   exits. The next tick's `/triage` classifies and labels it
+   naturally.
 
 ### Pausing the cloud loop
 
