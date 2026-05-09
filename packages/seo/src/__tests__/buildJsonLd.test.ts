@@ -3,6 +3,7 @@ import {
   buildArticleJsonLd,
   buildBreadcrumbListJsonLd,
   buildCollectionPageJsonLd,
+  buildItemListJsonLd,
   buildWebSiteJsonLd,
 } from '../buildJsonLd'
 import { siteConfig } from '../siteConfig'
@@ -85,5 +86,30 @@ describe('buildCollectionPageJsonLd', () => {
     expect(ld['@type']).toBe('CollectionPage')
     expect(ld.url).toBe(`${siteConfig.url}/news`)
     expect((ld.isPartOf as Record<string, unknown>)['@type']).toBe('WebSite')
+  })
+})
+
+describe('buildItemListJsonLd', () => {
+  it('emits a numbered ListItem for each entry with absolute urls', () => {
+    const ld = buildItemListJsonLd({
+      name: 'Latest by pillar',
+      items: [
+        { name: 'A', path: '/article/a' },
+        { name: 'B', path: '/article/b' },
+      ],
+    })
+    expect(ld['@type']).toBe('ItemList')
+    expect(ld.name).toBe('Latest by pillar')
+    const items = ld.itemListElement as Array<Record<string, unknown>>
+    expect(items.map((i) => i['position'])).toEqual([1, 2])
+    expect(items[0]?.['url']).toBe(`${siteConfig.url}/article/a`)
+    expect(items[1]?.['name']).toBe('B')
+  })
+
+  it('omits the name field when not provided', () => {
+    const ld = buildItemListJsonLd({
+      items: [{ name: 'Only', path: '/only' }],
+    })
+    expect(ld.name).toBeUndefined()
   })
 })

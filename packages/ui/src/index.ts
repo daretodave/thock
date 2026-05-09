@@ -8,3 +8,10 @@ export { Stack } from './Stack'
 export type { StackProps } from './Stack'
 export { TagChip } from './TagChip'
 export type { TagChipProps, TagChipCategory } from './TagChip'
+export { Sparkline } from './Sparkline'
+export type { SparklineProps, SparklineDirection } from './Sparkline'
+export { TrendDirectionGlyph } from './TrendDirectionGlyph'
+export type {
+  TrendDirectionGlyphProps,
+  TrendDirection,
+} from './TrendDirectionGlyph'

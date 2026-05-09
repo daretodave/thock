@@ -33,7 +33,17 @@ const html = (assertions: PageAssertion[]): Pick<PageRead, 'isHtml' | 'assertion
 export const pageReads: Record<string, PageRead> = {
   '/': {
     pattern: '/',
-    ...html([{ kind: 'h1-matches', pattern: /thock/i }]),
+    ...html([
+      // Phase 6: hero pick is the only h1 in the page; we no longer
+      // brand-anchor the heading text since the hero swaps with the
+      // newest published article. Trending tiles + at least one
+      // latest-by-pillar card + at least one group-buy row carry the
+      // composition coverage.
+      { kind: 'min-link-count', selector: '[data-testid="hero-card"]', min: 1 },
+      { kind: 'min-link-count', selector: '[data-testid="trending-tile"]', min: 1 },
+      { kind: 'min-link-count', selector: '[data-testid="latest-by-pillar-card"]', min: 1 },
+      { kind: 'min-link-count', selector: '[data-testid="group-buy-row"]', min: 1 },
+    ]),
   },
   '/news': { pattern: '/news', ...html([{ kind: 'h1-matches', pattern: /news/i }]) },
   '/trends': {

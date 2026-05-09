@@ -11,6 +11,7 @@ export type WebSiteLd = JsonLd<'WebSite'>
 export type ArticleLd = JsonLd<'Article'>
 export type BreadcrumbListLd = JsonLd<'BreadcrumbList'>
 export type CollectionPageLd = JsonLd<'CollectionPage'>
+export type ItemListLd = JsonLd<'ItemList'>
 
 export function buildWebSiteJsonLd(): WebSiteLd {
   return {
@@ -89,5 +90,27 @@ export function buildCollectionPageJsonLd(
       name: siteConfig.name,
       url: siteConfig.url,
     },
+  }
+}
+
+export type ItemListEntry = { name: string; path: string }
+export type BuildItemListJsonLdInput = {
+  name?: string
+  items: ItemListEntry[]
+}
+
+export function buildItemListJsonLd(
+  input: BuildItemListJsonLdInput,
+): ItemListLd {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    ...(input.name ? { name: input.name } : {}),
+    itemListElement: input.items.map((entry, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: entry.name,
+      url: canonicalUrl(entry.path),
+    })),
   }
 }

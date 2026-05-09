@@ -6,13 +6,17 @@ export {
   buildArticleJsonLd,
   buildBreadcrumbListJsonLd,
   buildCollectionPageJsonLd,
+  buildItemListJsonLd,
   type WebSiteLd,
   type ArticleLd,
   type BreadcrumbListLd,
   type CollectionPageLd,
+  type ItemListLd,
   type BuildArticleJsonLdInput,
   type BreadcrumbInput,
   type BuildCollectionPageJsonLdInput,
+  type BuildItemListJsonLdInput,
+  type ItemListEntry,
 } from './buildJsonLd'
 export { JsonLd } from './JsonLd'
 export {
