@@ -59,6 +59,17 @@
 - pass: 2 (commit e270ced) — filed as a low-priority observation worth noting but expected to drain naturally with phase 15 newsletter shipping.
 - note: this was reader's eighth raw observation; I curated it down to six during pass-2 self-assessment with the rationale "Phase 15 will replace the form entirely." Phase 15's footer retrofit (replacing the inert form with `<ButtondownForm variant="footer">`) drops the placeholder aria-label as expected. Closing inline with the phase-15 ship, no separate iterate tick required.
 
+### [MED] /group-buys — Mode Sonnet R2 is fictional; seed needs real vendor data (user jot)
+- pass: user-jot (commit e56989c)
+- viewport: unspecified
+- auth_state: anonymous
+- category: content
+- observation: Mode Sonnet R2 on https://thock-coral.vercel.app/group-buys is not present at cannonkeys. Can an agent actually populate with some valid groupbuys?
+- evidence: user-spotted at 2026-05-09T18:58Z. Confirms: the seed at `data/group-buys/cannonkeys-mode-sonnet-r2.json` is fictional content from the phase-2 seed pass. The earlier `/jot` on this same record (commit 593b1f9) was about the dead vendor URL, drained at 9255abe by reframing the row as `status: announced` with the vendor homepage as the CTA — that fixed the 404 but didn't address the deeper concern that the *product* is made up.
+- suggested fix: [user has not specified — iterate to determine. Ship-data flow with the `scout` agent: scout researches current real group buys at CannonKeys / NovelKeys / Wuque / Mode Designs etc. (vendor pages, group-buy aggregators like geekhack), returns a structured set of candidate records with start/end/region/url verified by HEAD probe. Then ship-data drops each as a `data/group-buys/<vendor>-<slug>.json` record. Retire the fictional Mode Sonnet R2 record (or move to `data/group-buys/_archive/` if we want to keep it as test fixture; otherwise just delete). Two-tick path: tick 1 = scout research + 2-3 record commits; tick 2 = retire the fictional row. The same pattern can backfill switches/keycap-sets/boards/vendors.]
+- source: user
+
+
 ### [MED] /article/* — cheat-sheet / Callout block has no margin-bottom; next H2 collides (user jot)
 - pass: user-jot (commit 25ad482)
 - viewport: unspecified
