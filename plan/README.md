@@ -9,9 +9,10 @@ The build plan for thock. Read by every shipping skill
 ```
 plan/
 ├── README.md                            # this file
-├── bearings.md                          # standing context: stack, URL contract, defaults, sub-agents
+├── bearings.md                          # standing context: stack, URL contract, defaults, sub-agents, posture
 ├── AUDIT.md                             # latest /iterate audit (rewritten on each audit pass)
 ├── CRITIQUE.md                          # external-observer findings (append-only via /critique)
+├── PHASE_CANDIDATES.md                  # phase candidates from /expand, gated by /oversight
 ├── steps/
 │   └── 01_build_plan.md                 # at-a-glance status block + per-phase scope
 └── phases/
@@ -79,9 +80,12 @@ relies on these markers.
   `CRITIQUE.md`.
 - `skills/triage.md` — issue review; routes open issues into
   `AUDIT.md` / `BACKLOG.md` / `01_build_plan.md`.
+- `skills/expand.md` — plan-expansion pass; proposes phase
+  candidates to `PHASE_CANDIDATES.md`. Posture set to **bold**
+  in bearings.
 - `skills/march.md` — outer dispatcher (used with `/loop`).
 - `skills/oversight.md` — user-in-the-loop adjustment (the only
-  skill that asks questions).
+  skill that asks questions). Promotes phase candidates.
 
 ## Related sub-agents
 

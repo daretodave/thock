@@ -312,9 +312,15 @@ Return cleanly. Loop's next tick re-audits and ships the new top.
 5. **A finding requires user judgment** (e.g. "should we cover
    this controversial vendor?"). Surface to AUDIT.md as a
    `[needs-user-call]` row, skip it, ship the next finding.
-6. **Three loop ticks in a row find no actionable work** (top
-   score < 3.0). Stop and report — the site is well-iterated;
-   sleep until the user gives new direction.
+6. **No actionable iterate work** (top score < 3.0). Read
+   `plan/bearings.md` "Plan expansion posture":
+   - **bold** or **autonomous** (thock's default is bold) →
+     dispatch to `/expand` instead of stopping. "Make things
+     brilliant when delivery is not." Log "no actionable
+     iterate work — handing to expand" and execute
+     `skills/expand.md` procedure end-to-end.
+   - **strict** posture → stop and report. Site is
+     well-iterated; sleep until the user gives new direction.
 7. **`git pull` divergence.**
 
 Everything else: decide, ship, document. The loop continues.

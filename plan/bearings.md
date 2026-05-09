@@ -268,6 +268,36 @@ not adopt over the design):
   superseded by OKLCH values in `design/tokens.css`.
 - ~~8px spacing base~~ — superseded by 4px base.
 
+## Plan expansion posture
+
+**Mode: bold.**
+
+`/expand` reads accumulated signals (audit findings, critique
+findings, GH issues, spec drift, design landings, data growth)
+and proposes new phase candidates to
+`plan/PHASE_CANDIDATES.md`. `/oversight` promotes them to the
+build plan (or rejects).
+
+Why bold for thock:
+
+- The spec is real but young. Reality (data growth, real
+  reader feedback, design re-exports) will reshape it.
+- The user has explicitly invited the loop to "be bold but
+  stay on track for deliverables, and when delivery is not,
+  work on making things brilliant."
+- `/march`'s dispatch order keeps deliveries first: pending
+  phases ship before `/expand` ever runs. Expand fires only
+  when the rate-limit window opens (≥20 commits or ≥48h) AND
+  there's no pending phase, OR when `/iterate` has nothing to
+  do (no findings score ≥ 3.0).
+- Promotion is gated by `/oversight`; the loop doesn't
+  unilaterally rewrite the build plan.
+
+If boldness becomes friction at any point, change this
+section to `Mode: strict` and `/expand` becomes a no-op. The
+build plan then grows only via manual `/plan-a-phase` or
+`/oversight` from then on.
+
 ## Decisions standing for the autonomous loop
 
 (These exist so the loop never asks the user. Add to this list any

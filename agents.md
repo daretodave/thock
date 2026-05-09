@@ -176,7 +176,8 @@ issues) and feed findings into the iterate flywheel.
 | `iterate` | `skills/iterate.md` | Audit the site, pick the highest-impact weakness, ship one improvement. Drains the `/critique` and `/triage` queues too. Closes GitHub issues when it ships their fix. |
 | `critique` | `skills/critique.md` | External-observer pass — visit the live site as a stranger, file fresh-eyes findings to `plan/CRITIQUE.md`. The feedback half of the address loop. |
 | `triage` | `skills/triage.md` | Issue review — read open GitHub issues, classify, label, comment, route to the right backlog. Cheap fast-exit when 0 unlabeled issues. |
-| `march` | `skills/march.md` | Outer dispatcher: triage → rate-limited critique → pending phase → pending data → iterate. The autonomous-beast endgame. |
+| `expand` | `skills/expand.md` | Plan-expansion pass — read accumulated signals (audit, critique, triage, spec drift, design landings, data growth) and propose new phase candidates to `plan/PHASE_CANDIDATES.md`. **Posture: bold** (set in bearings); `/oversight` promotes. |
+| `march` | `skills/march.md` | Outer dispatcher: triage → critique → phase → data → expand → iterate. The autonomous-beast endgame. |
 | `oversight` | `skills/oversight.md` | **User-in-the-loop.** Pause autonomy, brief the user, ask targeted questions, adjust the plan, push the adjustments. The only skill that asks the user anything. |
 
 ### Invocation (Claude Code-flavored)
@@ -188,6 +189,7 @@ issues) and feed findings into the iterate flywheel.
 /iterate                     # audit + ship one improvement
 /critique                    # external-observer pass (writes to CRITIQUE.md)
 /triage                      # review unlabeled GitHub issues
+/expand                      # propose new phase candidates from accumulated signals
 /march                       # do the right thing (dispatches all of the above)
 /oversight                   # course-correct (brief + questionnaire + adjustment)
 /loop 30m /march             # autonomous loop

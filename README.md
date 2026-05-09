@@ -92,6 +92,20 @@ The **issue review** loop. Reads open unlabeled issues at github.com/daretodave/
 
 Source: [`skills/triage.md`](./skills/triage.md)
 
+### `/expand`
+
+The **plan-expansion** pass. Reads accumulated signals (audit findings, critique findings, GH issues, spec drift, design landings, data growth) and proposes new phase candidates to [`plan/PHASE_CANDIDATES.md`](./plan/PHASE_CANDIDATES.md). `/oversight` reviews and promotes — the build plan grows when reality demands it, but never without a human gate.
+
+Posture is set to **bold** in `bearings.md`. Rate-limited (≥20 commits or ≥48h between passes). Caps at 3 candidates per pass — boldness is not flooding.
+
+```
+/expand                             # full pass — read signals, file candidates
+/expand audit | spec | design       # bias toward one signal source
+/expand dry-run                     # report candidates; do not commit
+```
+
+Source: [`skills/expand.md`](./skills/expand.md)
+
 ### `/march`
 
 The outer dispatcher. Picks the right thing to do automatically:
@@ -100,6 +114,7 @@ The outer dispatcher. Picks the right thing to do automatically:
 - critique due (rate-limited) → behaves as `/critique`
 - pending phase → behaves as `/ship-a-phase`
 - pending data → behaves as `/ship-data`
+- expand due + bold posture → behaves as `/expand`
 - else → behaves as `/iterate`
 
 Use this with `/loop` for the autonomous-beast endgame.
