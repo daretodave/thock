@@ -1,29 +1,31 @@
-import Link from 'next/link'
 import { Container, Stack } from '@thock/ui'
+import { getAllArticles } from '@thock/content'
 import { siteConfig } from '@/lib/siteConfig'
+import { HomeArticleList } from '@/components/home/HomeArticleList'
 
 /**
- * Phase 1 placeholder home. The full home page (hero pick, trending,
- * latest-by-pillar, group-buys widget) lands in phase 6.
+ * Phase 3 home — minimal article list to prove the @thock/content
+ * pipeline. Phase 6 replaces this with the full home composition
+ * (hero pick, trending row, latest-by-pillar, group-buys widget).
  */
 export default function HomePage() {
+  const articles = getAllArticles()
+
   return (
-    <Container as="section" className="py-16 sm:py-24">
-      <Stack gap={5}>
-        <span className="font-mono uppercase tracking-[0.1em] text-text-3 text-micro">
-          phase 1 · bootstrap
-        </span>
-        <h1 className="font-serif text-display text-text">{siteConfig.name}</h1>
-        <p className="max-w-[60ch] text-text-2 text-h3 font-serif">
-          {siteConfig.description}
-        </p>
-        <div>
-          <Link
-            href="/about"
-            className="inline-block border border-border-hi px-4 py-2 font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:bg-surface hover:text-text transition-colors"
-          >
-            Read the spec
-          </Link>
+    <Container as="section" className="py-12 sm:py-16">
+      <Stack gap={6}>
+        <header className="flex flex-col gap-4">
+          <span className="font-mono uppercase tracking-[0.1em] text-text-3 text-micro">
+            phase 3 · pipeline preview
+          </span>
+          <h1 className="font-serif text-display text-text">{siteConfig.name}</h1>
+          <p className="max-w-[60ch] text-text-2 text-h3 font-serif">
+            {siteConfig.description}
+          </p>
+        </header>
+
+        <div className="border-t border-border pt-2">
+          <HomeArticleList articles={articles} />
         </div>
       </Stack>
     </Container>

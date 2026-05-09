@@ -1,0 +1,53 @@
+---
+slug: trends-tracker-preview
+title: "Reading the Trends Tracker"
+lede: "thock's Trends Tracker is a weekly snapshot of what is rising, falling, or holding flat across the hobby — switches, keycaps, layouts, vendors, and brands, scored on a single -100 to 100 scale and updated every Friday. This is what the columns mean and what they do not."
+author: "Mara Lin"
+pillar: trends
+tags: [trends-tracker, modding, alice, gateron, mode]
+publishedAt: '2026-05-08T08:00:00.000Z'
+updatedAt: null
+heroImage: null
+heroImageAlt: null
+featured: false
+popularityScore: 30
+mentionedParts: []
+---
+
+The Trends Tracker is the dashboard most readers ask about first and the one that needs the most explanation. Unlike a buying guide, it does not tell readers what to purchase. Unlike a popularity contest, it does not weight every vote the same. It is a calibrated read of where attention is moving in the hobby this week, expressed plainly enough that a reader can disagree with it.
+
+This explainer covers the categories the tracker watches, the columns on every row, and — just as importantly — the things the tracker is not trying to be. <Source href="https://thock.netlify.app/trends/tracker">The live tracker</Source> updates each Friday at 08:00 UTC, with the previous week archived under its ISO week label.
+
+## What we're tracking
+
+Every row on the tracker belongs to one of five categories: <Mono>switches</Mono>, <Mono>keycaps</Mono>, <Mono>layouts</Mono>, <Mono>vendors</Mono>, and <Mono>brands</Mono>. The split is deliberate. A switch family like Gateron Oil King moves on different signals than a layout like Alice or a vendor like Mode Designs, and collapsing them into one ranking would flatten the texture that makes the hobby legible.
+
+Switches and keycaps cover the consumable end — the parts that turn over fastest in a builder's rotation. Layouts move slowly and tend to ride macro waves (the gradual ascent of 65% over the last three years, the long thaw of ortho). Vendors and brands move on launches, restocks, and the occasional reputational shock. Keeping them in separate categories means a row can be small inside its bracket and still appear on the tracker, instead of being drowned by whichever category happens to be loud that week.
+
+## How to read a row
+
+Five columns, left to right.
+
+**Name.** The thing being tracked, written the way the community writes it. <Mono>Gateron Oil King</Mono>, not "Gateron G Pro 3.0 Oil King v2." If the community has settled on a shorthand, the tracker uses it.
+
+**Category.** One of the five buckets above. Tag-color matches the same taxonomy used everywhere else on the site, so a switch row looks like a switch chip and a layout row looks like a layout chip.
+
+**Direction.** A glyph for up, down, or flat. The glyph is the headline; the score is the detail. A reader scanning the table on mobile should be able to read the direction column alone and walk away with a useful summary of the week.
+
+**Week score.** A signed integer between -100 and 100. Positive means the row's signal strengthened against its own four-week baseline; negative means it weakened. Zero is the resting line, and the tracker rounds to whole numbers because finer precision would imply confidence the underlying signals do not support.
+
+**Sparkline.** The last eight weeks of scores, drawn small. Sparklines exist to answer one question: is this week's number a continuation of a trend, or a single-week anomaly? A row at +20 with seven prior weeks all near zero is a different story than a row at +20 with a ladder underneath it.
+
+A current example. In <Mono>2026-W19</Mono>, <Mono>Gateron Oil King</Mono> sits at +42 with a clean ascending sparkline (the climb has been visible since W12, when it was at +12). <Mono>Alice layout</Mono> reads -18 with the slope still pointing down — eight weeks of softening interest after the last wave of group buys closed. <Mono>MT3 profile</Mono> is holding flat at +4, which is the boring-but-honest state of a profile that has settled into its catalog role. <Mono>Mode Designs</Mono> is up at +24 on the back of the Sonnet R2 opening, and <Mono>Wuque Studio</Mono> is flat at +8, neither shipping nor stalled.
+
+<PullQuote>The tracker reads signals; it does not predict prices. — thock editorial</PullQuote>
+
+## What this is not
+
+The tracker is not a buying ranking. A row at +42 is not a recommendation, and a row at -18 is not a warning. Some of the best switches in the hobby spend most of their lives near zero because they are catalog staples; some of the loudest weekly movers are flashes that fade by the next snapshot.
+
+It is not a popularity contest either. Raw mention counts would reward whichever launch happened to coincide with a slow news week. The week score is normalized against each row's own recent baseline, so a small-but-consistent vendor can post a meaningful move without being buried by the latest headline switch.
+
+It is not a stock chart. The hobby is not a market, prices are not part of the input, and the sparkline is not a trade signal. Reading enthusiasm signals is a different exercise than reading prices, and the tracker is built for the first.
+
+What it is: a weekly read of where the hobby is paying attention, with enough structure to be argued with. Future weeks will add a row-level "why this moved" annotation when an editor can name the cause, and a per-category filter for readers who only want the switches view. The shape of the table will not change. Watch <Mono>2026-W20</Mono> for the first annotated rows.

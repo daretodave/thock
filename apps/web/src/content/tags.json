@@ -1,0 +1,48 @@
+{
+  "tags": [
+    { "slug": "linear", "name": "Linear", "category": "switch" },
+    { "slug": "tactile", "name": "Tactile", "category": "switch" },
+    { "slug": "clicky", "name": "Clicky", "category": "switch" },
+    { "slug": "silent", "name": "Silent", "category": "switch" },
+    { "slug": "lubed", "name": "Lubed", "category": "switch" },
+    { "slug": "factory-lubed", "name": "Factory-lubed", "category": "switch" },
+
+    { "slug": "60", "name": "60%", "category": "layout" },
+    { "slug": "65", "name": "65%", "category": "layout" },
+    { "slug": "75", "name": "75%", "category": "layout" },
+    { "slug": "tkl", "name": "TKL", "category": "layout" },
+    { "slug": "full", "name": "Full-size", "category": "layout" },
+    { "slug": "alice", "name": "Alice", "category": "layout" },
+    { "slug": "split", "name": "Split", "category": "layout" },
+    { "slug": "ortho", "name": "Ortho", "category": "layout" },
+    { "slug": "layout", "name": "Layout", "category": "layout" },
+
+    { "slug": "gateron", "name": "Gateron", "category": "brand" },
+    { "slug": "kailh", "name": "Kailh", "category": "brand" },
+    { "slug": "cherry", "name": "Cherry", "category": "brand" },
+    { "slug": "gmk", "name": "GMK", "category": "brand" },
+    { "slug": "novelkeys", "name": "NovelKeys", "category": "brand" },
+    { "slug": "mode", "name": "Mode", "category": "brand" },
+    { "slug": "wuque", "name": "Wuque Studio", "category": "brand" },
+    { "slug": "cannonkeys", "name": "CannonKeys", "category": "brand" },
+    { "slug": "drop", "name": "Drop", "category": "brand" },
+
+    { "slug": "abs", "name": "ABS", "category": "material" },
+    { "slug": "pbt", "name": "PBT", "category": "material" },
+    { "slug": "pom", "name": "POM", "category": "material" },
+    { "slug": "polycarbonate", "name": "Polycarbonate", "category": "material" },
+    { "slug": "aluminum", "name": "Aluminum", "category": "material" },
+
+    { "slug": "cherry-profile", "name": "Cherry profile", "category": "profile" },
+    { "slug": "oem-profile", "name": "OEM profile", "category": "profile" },
+    { "slug": "mt3", "name": "MT3", "category": "profile" },
+    { "slug": "sa", "name": "SA", "category": "profile" },
+
+    { "slug": "group-buy", "name": "Group buy", "category": "misc" },
+    { "slug": "beginner", "name": "Beginner", "category": "misc" },
+    { "slug": "build-of-the-week", "name": "Build of the week", "category": "misc" },
+    { "slug": "deep-dive", "name": "Deep dive", "category": "misc" },
+    { "slug": "modding", "name": "Modding", "category": "misc" },
+    { "slug": "trends-tracker", "name": "Trends Tracker", "category": "misc" }
+  ]
+}

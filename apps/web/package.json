@@ -13,6 +13,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@thock/content": "workspace:*",
+    "@thock/data": "workspace:*",
     "@thock/tokens": "workspace:*",
     "@thock/ui": "workspace:*",
     "next": "^15.0.3",
