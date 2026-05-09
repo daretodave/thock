@@ -61,11 +61,23 @@ export const pageReads: Record<string, PageRead> = {
   },
   '/trends': {
     pattern: '/trends',
-    ...html([{ kind: 'h1-matches', pattern: /trends/i }]),
+    ...html([
+      { kind: 'h1-matches', pattern: /trends/i },
+      {
+        kind: 'min-link-count',
+        selector:
+          '[data-testid="hero-card"], [data-testid="article-card-row"]',
+        min: 1,
+      },
+      { kind: 'min-link-count', selector: '[data-testid="pillar-hero-tracker"]', min: 1 },
+    ]),
   },
   '/trends/tracker': {
     pattern: '/trends/tracker',
-    ...html([{ kind: 'h1-matches', pattern: /trends tracker/i }]),
+    ...html([
+      { kind: 'h1-matches', pattern: /rising/i },
+      { kind: 'min-link-count', selector: '[data-testid="tracker-row"]', min: 1 },
+    ]),
   },
   '/ideas': {
     pattern: '/ideas',

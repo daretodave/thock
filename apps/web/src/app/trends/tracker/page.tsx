@@ -1,55 +1,149 @@
-import { getLatestTrendSnapshot } from '@/lib/data-runtime'
+import Link from 'next/link'
+import type { ReactElement } from 'react'
+import { Container, Stack } from '@thock/ui'
 import {
   buildBreadcrumbListJsonLd,
   buildCollectionPageJsonLd,
   buildMetadata,
   JsonLd,
+  canonicalUrl,
+  siteConfig,
 } from '@thock/seo'
-import { PageStub } from '@/components/page-stub/PageStub'
+import type { Article } from '@thock/content'
+import {
+  getAllArticles,
+  getLatestTrendSnapshot,
+} from '@/lib/data-runtime'
+import { TrackerHeader } from '@/components/tracker/TrackerHeader'
+import { TrackerSummaryGrid } from '@/components/tracker/TrackerSummaryGrid'
+import { TrackerCategorySection } from '@/components/tracker/TrackerCategorySection'
+import {
+  groupByCategory,
+  presentCategories,
+  weekKicker,
+} from '@/lib/tracker'
 
 const PATH = '/trends/tracker'
-const TITLE = 'Trends Tracker'
+const BASE_TITLE = 'Trends Tracker'
 const LEDE =
-  'A weekly read of the meta — switches, keycaps, layouts, vendors. Table-first; sparklines support, never lead.'
+  'A weighted weekly score across community chatter, retail availability, and editorial mentions. Each row links to the deep dive that earned it.'
 
-export const metadata = buildMetadata({
-  title: TITLE,
-  description: LEDE,
-  path: PATH,
-})
-
-export default function TrendsTrackerPage() {
+export function generateMetadata() {
   const snapshot = getLatestTrendSnapshot()
-  const week = snapshot?.isoWeek ?? 'no snapshot yet'
-  const rowCount = snapshot?.rows.length ?? 0
+  const wk = snapshot ? weekKicker(snapshot.isoWeek) : null
+  const title = wk
+    ? `${BASE_TITLE} — Week ${wk.week}, ${wk.year}`
+    : BASE_TITLE
+  return buildMetadata({
+    title,
+    description: LEDE,
+    path: PATH,
+  })
+}
+
+function buildDatasetJsonLd(snapshot: NonNullable<
+  ReturnType<typeof getLatestTrendSnapshot>
+>) {
+  return {
+    '@context': 'https://schema.org' as const,
+    '@type': 'Dataset' as const,
+    name: BASE_TITLE,
+    description: LEDE,
+    url: canonicalUrl(PATH),
+    temporalCoverage: snapshot.isoWeek,
+    dateModified: snapshot.publishedAt,
+    publisher: siteConfig.publisher,
+  }
+}
+
+/**
+ * Phase 8 — Trends Tracker dashboard. Header strip with week
+ * number, top-movers summary grid, per-category tables. Reads from
+ * `getLatestTrendSnapshot()` and resolves `articleSlug` references
+ * against the article manifest for editor's-note links.
+ */
+export default function TrendsTrackerPage(): ReactElement {
+  const snapshot = getLatestTrendSnapshot()
+
+  const baseGraph = [
+    buildCollectionPageJsonLd({
+      name: BASE_TITLE,
+      description: LEDE,
+      path: PATH,
+    }),
+    buildBreadcrumbListJsonLd([
+      { name: 'Home', path: '/' },
+      { name: 'Trends', path: '/trends' },
+      { name: 'Tracker', path: PATH },
+    ]),
+  ]
+
+  if (!snapshot) {
+    return (
+      <>
+        <JsonLd graph={baseGraph} />
+        <TrackerHeader snapshot={null} lede={LEDE} />
+        <Container as="section" className="py-16">
+          <Stack gap={4}>
+            <span className="font-mono uppercase tracking-[0.12em] text-micro text-text-3">
+              tracker · empty
+            </span>
+            <h2 className="font-serif text-h2 text-text">
+              No tracker snapshot has shipped yet.
+            </h2>
+            <p className="max-w-[60ch] font-serif text-h3 text-text-2">
+              Check back next Monday at 09:00 EST.
+            </p>
+            <Link
+              href="/trends"
+              className="font-mono text-small uppercase tracking-[0.08em] text-accent hover:text-accent-hi"
+            >
+              ← Trends pillar
+            </Link>
+          </Stack>
+        </Container>
+      </>
+    )
+  }
+
+  const grouped = groupByCategory(snapshot.rows)
+  const categories = presentCategories(snapshot)
+
+  const articlesBySlug = new Map<string, Article>(
+    getAllArticles().map((a) => [a.slug, a]),
+  )
 
   return (
     <>
-      <JsonLd
-        graph={[
-          buildCollectionPageJsonLd({
-            name: TITLE,
-            description: LEDE,
-            path: PATH,
-          }),
-          buildBreadcrumbListJsonLd([
-            { name: 'Home', path: '/' },
-            { name: 'Trends', path: '/trends' },
-            { name: 'Tracker', path: PATH },
-          ]),
-        ]}
-      />
-      <PageStub
-        eyebrow="signature feature"
-        title="trends tracker"
-        lede={LEDE}
-        deferredTo="Phase 8"
-      >
-        <span className="font-mono text-micro uppercase tracking-[0.08em] text-text-3">
-          latest snapshot: {week} · {rowCount}{' '}
-          {rowCount === 1 ? 'row' : 'rows'}
-        </span>
-      </PageStub>
+      <JsonLd graph={[...baseGraph, buildDatasetJsonLd(snapshot)]} />
+      <TrackerHeader snapshot={snapshot} lede={LEDE} />
+
+      {snapshot.rows.length > 0 ? (
+        <Container as="section" className="py-12 sm:py-16">
+          <TrackerSummaryGrid snapshot={snapshot} />
+        </Container>
+      ) : (
+        <Container as="section" className="py-16">
+          <Stack gap={3}>
+            <span className="font-mono uppercase tracking-[0.12em] text-micro text-text-3">
+              snapshot · zero rows
+            </span>
+            <p className="max-w-[60ch] font-serif text-h3 text-text-2">
+              The latest snapshot has no rows. The next issue should
+              fix that.
+            </p>
+          </Stack>
+        </Container>
+      )}
+
+      {categories.map((category) => (
+        <TrackerCategorySection
+          key={category}
+          category={category}
+          rows={grouped.get(category) ?? []}
+          articlesBySlug={articlesBySlug}
+        />
+      ))}
     </>
   )
 }
