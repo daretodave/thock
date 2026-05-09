@@ -9,15 +9,6 @@
 
 ## Pending
 
-### [HIGH] /article/gateron-oil-king-deep-dive — `[unknown part:oil-king]` placeholder leaks into article prose
-- pass: 1 (commit 16b53c3)
-- viewport: both
-- category: content
-- observation: Two real articles render literal `[unknown part:<slug>]` text inside body paragraphs where the part-mention component should resolve to a linked chip. A first-time reader sees an obvious data error in the opening sentence of a flagship deep-dive and again inside the beginners' guide.
-- evidence: Visible prose on `/article/gateron-oil-king-deep-dive`: "The first time a builder drops a set of [unknown part:oil-king] into a polycarbonate-plate NK87 v3…". Same fallback string appears on `/article/beginners-switch-buying-guide`: "The [unknown part:oil-king] from Gateron is a representative modern linear…".
-- suggested fix: Either rename the article slug refs to match the real `gateron-oil-king` data slug, or extend the part resolver to alias short slugs to their canonical record. Add a build-time check that fails if any `<MentionedPart>` slug doesn't resolve.
-- source: browser
-
 ### [HIGH] mobile nav — primary links unreachable at 375px, no toggle
 - pass: 1 (commit 16b53c3)
 - viewport: mobile
@@ -55,6 +46,13 @@
 - source: user
 
 ## Done
+
+### [x] [HIGH] /article/gateron-oil-king-deep-dive — `[unknown part:oil-king]` placeholder leaks into article prose
+- addressed in: pending commit (this tick)
+- pass: 1 (commit 16b53c3)
+- root cause: `PartReference` (`packages/content/src/mdx/PartReference.tsx`) resolves an article's `mentionedParts` via `parts ?? (article ? getReferencedParts(article) : [])`. The shared `mdxComponents` map registered the component with neither prop bound, so `parts` was always undefined and `article` was always undefined — every `<PartReference id="…">` fell through to the `[unknown part:<id>]` fallback. The seed article frontmatters did contain the right `mentionedParts` rows; the resolver just never saw them.
+- fix: `apps/web/src/components/article/ArticleBody.tsx` now accepts a `parts: ResolvedPart[]` prop and builds a per-render components map that wraps `PartReference` with the parts list closured in. The article page route already computes `parts = getReferencedParts(article)` for the MentionedPartsRail; piping the same list to ArticleBody costs nothing extra.
+- regression guard: new e2e test in `apps/e2e/tests/article.spec.ts` walks both `/article/gateron-oil-king-deep-dive` and `/article/beginners-switch-buying-guide`, asserts the body never contains the literal string `"[unknown part:"`, and confirms the resolved part name (`Oil King`) appears in the prose.
 
 ### [x] [HIGH] /article/* — inline `<Mono>` spans render as block siblings (root cause: missing prose styles)
 - addressed in: pending commit (this tick)

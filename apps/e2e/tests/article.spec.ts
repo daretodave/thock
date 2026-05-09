@@ -85,4 +85,30 @@ test.describe('article page family — canonical template', () => {
     const monoCount = await para.locator('span.font-mono').count()
     expect(monoCount).toBeGreaterThanOrEqual(5)
   })
+
+  test('PartReference resolves and does NOT leak the [unknown part:...] fallback', async ({
+    page,
+  }) => {
+    // Regression guard for plan/CRITIQUE.md HIGH "[unknown part:oil-king]
+    // placeholder leaks". When ArticleBody fails to bind resolved parts
+    // into the per-article mdxComponents map, every <PartReference id />
+    // falls through to the literal "[unknown part:<id>]" string. Two
+    // seed articles use this token in their opening paragraphs.
+    for (const path of [
+      '/article/gateron-oil-king-deep-dive',
+      '/article/beginners-switch-buying-guide',
+    ]) {
+      await page.goto(path)
+      const body = await page.getByTestId('article-body').textContent()
+      expect(
+        body,
+        `${path} body must not contain "[unknown part:"`,
+      ).not.toMatch(/\[unknown part:/)
+      // The resolved part record name renders as a Mono token in body
+      // prose. The Oil King appears in both seed articles.
+      expect(body, `${path} body should mention the part by name`).toMatch(
+        /Oil King/i,
+      )
+    }
+  })
 })

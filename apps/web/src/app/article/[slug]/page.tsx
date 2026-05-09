@@ -98,7 +98,7 @@ export default async function ArticlePage({
         heroImageAlt={fm.heroImageAlt}
       />
 
-      <ArticleBody body={article.body} />
+      <ArticleBody body={article.body} parts={parts} />
 
       <ArticleTagRail tagSlugs={fm.tags} tagsBySlug={tagsBySlug} />
 
