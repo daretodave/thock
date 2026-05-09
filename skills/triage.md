@@ -81,6 +81,16 @@ These already exist as standard GitHub labels in most repos. If
 they don't exist on the repo yet, create them on first encounter
 via `gh label create`.
 
+**Provenance label (phase 15a):** `loop:opened` is a separate
+label applied by `scripts/loop-issue.mjs open` to issues the
+autonomous loop opens on itself. It is **not** a `triage:*`
+state label — it marks "this issue's lifecycle is owned by
+`/iterate`, not `/triage`." Triage's candidate query above filters
+out `loop:opened` issues for this reason. A loop-opened issue
+that somehow needs human triage (e.g., the loop opened it but
+then got stuck and never closed it) can be hand-labeled with a
+`triage:*` label, which `/triage all` will then pick up.
+
 ## 5. The procedure
 
 ### Step 0 — Pre-flight
@@ -94,10 +104,16 @@ Load env, verify auth (§3). If `gh` isn't installed or
 gh issue list \
   --repo "$GH_REPO" \
   --state open \
-  --search "-label:triage:loop-queued -label:triage:needs-user -label:triage:closed -label:triage:reviewed" \
+  --search "-label:triage:loop-queued -label:triage:needs-user -label:triage:closed -label:triage:reviewed -label:loop:opened" \
   --json number,title,body,labels,author,createdAt,updatedAt,comments \
   --limit 50
 ```
+
+The `-label:loop:opened` clause excludes issues the loop opened
+on itself (phase 15a — `/iterate` Step 2.5). Loop-opened issues
+already have a known provenance (`source:user|reader|audit|external`)
+and are about to auto-close via a `Closes #N` commit trailer; they
+do not need `/triage` labeling.
 
 If the result is `[]` (empty array): print
 `"triage: 0 unlabeled open issues — humming on."` and exit 0
@@ -316,8 +332,8 @@ export GH_TOKEN=$(awk -F= '/^GH_TOKEN=/ {sub(/^GH_TOKEN=/, ""); print; exit}' .e
 export GH_REPO=$(awk -F= '/^GH_REPO=/ {sub(/^GH_REPO=/, ""); print; exit}' .env)
 GH_REPO=${GH_REPO:-daretodave/thock}
 
-# List
-gh issue list --repo "$GH_REPO" --state open --search "-label:triage:loop-queued ..." --json number,title,body,labels --limit 50
+# List (excludes loop-opened issues per phase 15a)
+gh issue list --repo "$GH_REPO" --state open --search "-label:triage:loop-queued -label:triage:needs-user -label:triage:closed -label:triage:reviewed -label:loop:opened" --json number,title,body,labels --limit 50
 
 # Label
 gh issue edit <N> --repo "$GH_REPO" --add-label "triage:loop-queued,bug"

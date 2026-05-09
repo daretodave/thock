@@ -158,9 +158,21 @@ Exit cleanly.
 /iterate (autonomous)     ←────────────┘
   ├─ scores all findings (user-source +0.5 bump)
   ├─ picks top
-  ├─ ships fix
-  └─ moves CRITIQUE.md row Pending → Done
+  ├─ opens GitHub issue (phase 15a — at fix-time, not at jot-time)
+  ├─ ships fix (commit body has `Closes #N`)
+  ├─ deploy:check → posts close-comment with deploy URL
+  └─ moves CRITIQUE.md row Pending → Done (carrying `issue: #N`)
 ```
+
+**Phase 15a contract — the issue opens at fix-time, not at
+jot-time.** A `/jot` does not open a GitHub issue immediately;
+that would dilute the issues tab into a noise feed of every
+spotted thing. The issue opens when `/iterate` (or `/march`) picks
+the jot to ship, and auto-closes via the fix commit's `Closes #N`
+trailer. To watch a jot land in real time on the issues tab:
+`/jot ...`, then `/iterate`, then watch
+https://github.com/daretodave/thock/issues — the issue appears as
+the fix begins and disappears (closed) as the fix lands.
 
 **No `/oversight` needed.** thock's address loop already
 drains `plan/CRITIQUE.md` autonomously — the user-source +0.5

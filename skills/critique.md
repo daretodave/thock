@@ -278,6 +278,15 @@ This means **critique findings compete fairly** with other audit
 sources. A high-severity content gap can outrank a low-severity
 critique nitpick — and vice versa. The loop self-balances.
 
+**Phase 15a contract — public mirror at fix-time.** `/critique`
+itself does **not** open GitHub issues. Reader findings stay
+private in `plan/CRITIQUE.md` until `/iterate` picks one to ship,
+at which point Step 2.5 of `skills/iterate.md` opens the issue
+with `--source reader`. The fix commit's `Closes #N` trailer
+auto-closes when pushed. This keeps the issues tab a record of
+*work the loop is doing*, not a backlog of every observed
+nitpick.
+
 ## 9. When `/march` invokes `/critique`
 
 `/march` reads the metadata header at the top of
