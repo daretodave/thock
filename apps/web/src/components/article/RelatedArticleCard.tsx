@@ -9,6 +9,7 @@ export type RelatedArticleCardProps = {
 
 const PUBLISHED_FORMATTER = new Intl.DateTimeFormat('en-US', {
   dateStyle: 'long',
+  timeZone: 'UTC',
 })
 
 /**

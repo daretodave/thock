@@ -18,6 +18,7 @@ export type ArticleCardProps = {
 
 const PUBLISHED_FORMATTER = new Intl.DateTimeFormat('en-US', {
   dateStyle: 'medium',
+  timeZone: 'UTC',
 })
 
 const HERO_IMAGE_TONE_CLASS = 'bg-bg-2 border border-border'
