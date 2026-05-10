@@ -1,0 +1,31 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-10T00:00:00Z",
+  "commit": "57e529a5065b8f6ccd0e12e9e4579e4fd1661319",
+  "kind": "hero-art",
+  "article_slug": "zmk-mainstream-shift",
+  "article_pillar": "trends",
+  "brief_summary": "Hero art for the Trends pillar piece on ZMK firmware crossing from DIY into mainstream prebuilts: a 2px warm-grey 75% Q Ultra silhouette with a firmware code-file stack overlay at upper-left and a coral wireless radio motif (three concentric arcs + Bluetooth glyph + dot) rising from the MCU position on the top edge of the case, with warm-bronze accents on the top and bottom case edges.",
+  "target": "apps/web/public/hero-art/zmk-mainstream-shift.svg",
+  "source": "plan/bearings.md § Article hero art — colorful keyboard SVGs (locked 2026-05-09)",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject",
+  "size": [1200, 750],
+  "subject": "Top-down silhouette of a 75% prebuilt keyboard (Q Ultra family archetype) rendered in 2px warm-grey stroke, with a stylized three-card firmware code-file stack overlaid above the upper-left of the case (internal lines reading as source code without legible text), a coral wireless radio motif (three concentric arcs) rising from the top edge of the case near the MCU position, and a coral Bluetooth glyph plus solid coral dot at the radio origin. Warm-bronze theme accent on the top and bottom case edges; transparent background.",
+  "splash_color": {
+    "name": "coral",
+    "oklch": "oklch(0.68 0.165 28)",
+    "hex_approx": "#e07a5f"
+  },
+  "accent_color": {
+    "name": "warm-bronze (theme accent)",
+    "oklch": "oklch(0.80 0.135 75)"
+  },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": [],
+  "outputs": [
+    "apps/web/public/hero-art/zmk-mainstream-shift.svg"
+  ],
+  "warnings": []
+}

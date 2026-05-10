@@ -1,0 +1,204 @@
+---
+slug: zmk-mainstream-shift
+title: "ZMK is becoming the wireless default for premium prebuilts"
+lede: "A five-board flagship lineup running ZMK isn't a niche move; it's a market signal that an open-source firmware that lived in DIY-wireless territory for half a decade has crossed into mainstream-prebuilt anchor status. The vendor side has finally caught up with where the cohort already was."
+author: thock
+pillar: trends
+tags: [zmk, wireless, firmware, trends-2026, prebuilt, keychron]
+publishedAt: '2026-04-15T14:00:00.000Z'
+updatedAt: null
+heroImage: /hero-art/zmk-mainstream-shift.svg
+heroImageAlt: "Stylized firmware-stack silhouette rendered as three layered horizontal slabs in 2px warm-grey stroke on a 1200x750 transparent canvas, with a coral wireless-signal arc radiating from the top slab and a warm-bronze board-edge highlight running along the lower edge of the bottom slab — accent dot at the apex of the coral arc."
+featured: false
+popularityScore: 0
+mentionedParts: []
+---
+
+For most of the last five years, the honest read on <Mono>ZMK</Mono>
+was that it was the firmware DIY-wireless people used and everyone
+else used <Mono>QMK/VIA</Mono>. The Glove80 shipped on it. The
+Voyager shipped on it. Corne wireless variants and the Sweep
+family ran it because someone with the patience to flash a
+devicetree file wanted Bluetooth and good battery life out of an
+open-source codebase, and ZMK was the codebase that had both. That
+read held cleanly through 2024. It started softening through 2025.
+At CES 2026, Keychron picked ZMK as the firmware platform for a
+five-board flagship line, and the read flipped. The firmware that
+served the DIY-wireless cohort for half a decade is now the
+firmware a Tier-1 vendor anchors a premium prebuilt lineup on.
+The line has been crossed.
+
+## The signal: a five-board flagship line, not a single SKU
+
+A single Tier-1 wireless board on ZMK could be filed as a vendor
+hedging a bet — interesting, possibly a one-off, not yet a signal.
+Five is structural. The
+[Q Ultra series](/article/keychron-q-ultra-zmk) Keychron announced
+at CES 2026 spans Q1 through Q6: 75%, 65%, TKL, 96%, and
+full-size, the same size ladder the wired Q line has been
+iterating on for three years. Every one of them runs
+<Mono>ZMK</Mono> rather than the <Mono>QMK/VIA</Mono> stack the
+existing Q line ships with. The headline number in the press
+release is the 660-hour battery claim and the 8K polling ceiling,
+but those numbers are downstream of the firmware decision. ZMK is
+what makes the power profile plausible at 8K polling on Bluetooth
+in the first place. The vendor didn't pick the firmware to fit
+the spec sheet; the firmware is what allowed the spec sheet to
+exist.
+
+The other signal worth holding in mind is which SKU landed in
+reviewer hands first. The <Mono>Q1 HE 8K Marble</Mono> — the
+Hall-effect variant that anchors the polling story — reached
+reviewers in April, ahead of the mechanical variants of the same
+chassis. That ordering is not accidental, and it puts the Q Ultra
+launch at the exact intersection of two trends thock has been
+tracking in parallel. The
+[Hall-effect-into-mid-premium piece](/article/hall-effect-mainstream)
+this week called the mid-premium tier the slot HE has settled
+into; the Q1 HE 8K Marble is the SKU where the HE-mainstream trend
+and the ZMK-mainstream trend collide on a single board. Two trend
+lines, one product, one firmware platform underneath both. That's
+the shape of a category transition that's actually moving rather
+than a marketing one.
+
+## Where the demand floor came from
+
+The vendor side moves last. The cohort that drove ZMK adoption did
+so years before Keychron noticed, and the
+[split/ergo grown-up piece](/article/split-ergo-cohort) covers
+that history at length. ZSA's Voyager has shipped on
+<Mono>ZMK</Mono> since 2022, anchoring the low-profile split slot
+with battery-life numbers that QMK's wireless story couldn't
+match at the time. MoErgo's Glove80 is the column-staggered,
+sculpted-well counterpart and runs on the same firmware platform.
+Foostan's Corne, the open-hardware split that more readers have
+built than any other DIY board in the last five years, has had
+wireless variants on ZMK for long enough that the configuration
+is documented in beginner guides rather than expert forums. None
+of those products got to flagship-prebuilt volume, but together
+they built a demand floor — a cohort of typists who already had
+ZMK boards on their desks, already understood the keymap-as-code
+workflow, and already trusted the firmware's power profile.
+
+That floor is what made the Q Ultra decision financeable. A vendor
+investing in ZMK firmware engineering in 2026 is investing into
+an ecosystem that has documentation, working hardware, a
+configurator effort in flight, and an installed base that will
+identify a regression and file it within hours. The same vendor
+making the same decision in 2022 would have been investing into a
+project that hadn't yet reached that maturity. The cohort did the
+work of getting the firmware to the line; the vendors are now
+crossing it.
+
+<Callout type="note" title="ZMK vs QMK/VIA in one paragraph">
+  Both are open-source keyboard firmwares. <Mono>QMK</Mono> is the
+  older and broader project — every keyboard layout you've heard
+  of has a QMK keymap somewhere, and <Mono>VIA</Mono> is the
+  graphical configurator most readers actually interact with.
+  <Mono>ZMK</Mono> is the wireless-native sibling: built around
+  the Zephyr RTOS, designed from the start for Bluetooth and
+  battery life rather than retrofitted for them, with a
+  keymap-as-code workflow that historically lacked a comparable
+  graphical configurator. ZMK Studio is the project's answer to
+  that gap and is in active development. The canonical reference
+  is <Source href="https://zmk.dev">the project's own
+  documentation</Source>.
+</Callout>
+
+## The strengths the vendor side is buying
+
+Two things ZMK does well are exactly the two things a wireless
+prebuilt sells on. The first is the power profile. ZMK was
+architected around low-power Bluetooth from the first commit, and
+the engineering decisions that follow from that — event-driven
+scanning, aggressive sleep states, a Zephyr-native BLE stack —
+compound into battery numbers that QMK's wireless implementations
+have never matched at parity. Keychron's 660-hour claim is the
+flag the lineup is planted on, and even if the reviewer-measured
+number lands at half that figure, half of 660 is still a multiple
+of what a QMK wireless board would deliver under the same usage.
+The firmware decision is what permits that headline.
+
+The second is Bluetooth maturity. The wireless DIY cohort spent
+five years shaking the protocol-level bugs out of ZMK's BLE stack
+on real hardware — multi-device profiles that switch without
+fighting the host, sleep/wake transitions that don't lose the
+first keystroke, keepalive intervals that survive a Linux
+laptop's WiFi card aggressively reclaiming the 2.4GHz band. None
+of that work shows up on a spec sheet. All of it shows up in the
+reviews that determine whether a wireless prebuilt is a flagship
+or a return. A vendor shipping a wireless flagship in 2026 is
+not in a position to bet against five years of that field
+testing.
+
+## The weaknesses they're inheriting
+
+The honest case against ZMK as a mainstream prebuilt platform is
+the same case it's had for years, and the pattern named in the
+[vendor-first customs piece](/article/vendor-first-customs)
+applies here too — a vendor that takes a position on firmware
+inherits the firmware's reputation, and ZMK's reputation in two
+specific areas is still under construction. The first is the
+configurator. QMK has VIA. VIA is the reason a reader who has
+never touched a keymap-as-code workflow can remap caps lock to
+control on their second day with a Q3. ZMK's answer is ZMK
+Studio, which is in active development and showing real progress,
+but is not yet the drop-in equivalent VIA has been for
+QMK-stack boards. A Q Ultra owner who wants to swap a key in the
+first week needs a workflow that hides the devicetree file the
+historical ZMK setup exposes. If Keychron's fork doesn't ship
+that workflow at launch, the line will lose readers who came in
+on the wired Q line's VIA-flattened customization curve.
+
+The second is feature parity on advanced macros and combos. QMK's
+combo and macro infrastructure has accumulated a decade of
+community-driven features — Tap Dance, Layer Lock, Mod-Tap nuance
+the elder statesmen of the bench have opinions about. ZMK has
+implementations of most of those concepts, but not always at the
+same maturity, and the documentation gap between "the feature
+exists" and "the feature is the obvious right call" is the gap
+the configurator question really lives inside. A reader migrating
+from a Q1 with a complex QMK keymap to a Q1 Ultra on ZMK should
+not be the one carrying the cost of that gap. The Q Ultra's
+reception in the first month of reviews will be downstream of how
+that migration feels.
+
+## What we're watching
+
+Three threads. The first is the configurator question. ZMK Studio
+needs to ship a workflow that a wired-Q owner recognizes as a
+sibling of VIA, not a flat replacement that demands re-learning.
+The Q Ultra is the largest single product release ZMK Studio will
+have to support; whether it ships ready or lands a quarter behind
+the hardware is the most consequential firmware deliverable of the
+year. If it ships ready, the configurator-gravity case against
+ZMK softens substantially. If it doesn't, the gap becomes the
+review story rather than the launch story.
+
+The second is which Tier-1 vendor follows Keychron. The
+[Cherry MX2A retrospective](/article/cherry-mx2a-revision) traced
+how a mainstream-performance tier moves when the incumbent stops
+defending it; firmware platforms are subject to the same dynamic.
+QMK's position as the prebuilt default is structural — every
+existing Tier-1 wireless board in 2026 still ships on it — but
+structural defaults are stable until they're not. The question is
+whether the next flagship wireless announcement from a major
+prebuilt vendor lists QMK as the firmware platform or quietly
+adopts ZMK without making it the headline. The second pattern is
+the one to watch for. A firmware migration that stops being a
+story is the firmware migration that has actually won.
+
+The third is feature parity on advanced macros. If the boutique
+custom side — the readers who run six-layer keymaps with combos
+and home-row mods — files real friction with ZMK at flagship
+hardware, the trend tightens around mid-premium prebuilts and
+softens at the enthusiast tier. If they don't, the firmware
+ceiling that limited ZMK adoption is essentially gone. The live
+[Trends Tracker](/trends/tracker) has the ZMK row sloping up and
+the wireless-firmware sub-thread sloping up alongside it; neither
+line has spiked, both are climbing on the cadence of a category
+settling into a default slot. That's the shape this piece is
+calling. The Q Ultra launch is the test case. The next twelve
+months tell us whether QMK keeps the wired prebuilt tier and
+cedes the wireless one, or whether the firmware question stops
+being a binary altogether.

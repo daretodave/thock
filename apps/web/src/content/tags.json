@@ -61,6 +61,7 @@
     { "slug": "polling-rate", "name": "Polling rate", "category": "misc" },
     { "slug": "prebuilt", "name": "Prebuilt", "category": "misc" },
     { "slug": "hall-effect", "name": "Hall-effect", "category": "switch" },
-    { "slug": "magnetic", "name": "Magnetic", "category": "switch" }
+    { "slug": "magnetic", "name": "Magnetic", "category": "switch" },
+    { "slug": "firmware", "name": "Firmware", "category": "misc" }
   ]
 }

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — ZMK firmware crossing into mainstream prebuilts: 75% board silhouette with a firmware code stack overlay and coral wireless radio waves rising from the MCU position</title>
+
+  <!-- Soft coral wash above the case, anchoring the radio motif as the focal element -->
+  <ellipse cx="780" cy="170" rx="280" ry="120" fill="oklch(0.68 0.165 28 / 0.10)" stroke="none"/>
+
+  <!-- 75 percent case outline (Keychron Q Ultra family archetype the article centers on). -->
+  <!-- Rectilinear with lightly chamfered corners, reading as a CNC aluminum block top-down. -->
+  <g>
+    <!-- Outer case -->
+    <path d="
+      M 168 280
+      L 1018 280
+      L 1032 294
+      L 1032 626
+      L 1018 640
+      L 168 640
+      L 154 626
+      L 154 294
+      Z" />
+    <!-- Inner bezel -->
+    <path d="
+      M 184 300
+      L 1012 300
+      L 1020 308
+      L 1020 612
+      L 1012 620
+      L 184 620
+      L 176 612
+      L 176 308
+      Z" stroke-opacity="0.5"/>
+    <!-- Warm-bronze accent on the top and bottom case edges (sparingly, per brief) -->
+    <line x1="168" y1="280" x2="1018" y2="280" stroke="oklch(0.80 0.135 75)" stroke-width="2.5" stroke-opacity="0.85"/>
+    <line x1="168" y1="640" x2="1018" y2="640" stroke="oklch(0.80 0.135 75)" stroke-width="2.5" stroke-opacity="0.85"/>
+    <!-- Side weight separation, hinting at the CNC profile -->
+    <line x1="168" y1="626" x2="1018" y2="626" stroke-opacity="0.4"/>
+  </g>
+
+  <!-- 75 percent layout. Function row plus five main rows, right-hand nav column. -->
+  <!-- Row pitch 42 px keys with 4 px gutters; origin x=204, y=318. -->
+
+  <!-- Function row, compressed height -->
+  <g>
+    <rect x="204" y="318" width="42" height="30" rx="3"/>
+    <rect x="250" y="318" width="42" height="30" rx="3"/>
+    <rect x="296" y="318" width="42" height="30" rx="3"/>
+    <rect x="342" y="318" width="42" height="30" rx="3"/>
+    <rect x="388" y="318" width="42" height="30" rx="3"/>
+    <rect x="434" y="318" width="42" height="30" rx="3"/>
+    <rect x="480" y="318" width="42" height="30" rx="3"/>
+    <rect x="526" y="318" width="42" height="30" rx="3"/>
+    <rect x="572" y="318" width="42" height="30" rx="3"/>
+    <rect x="618" y="318" width="42" height="30" rx="3"/>
+    <rect x="664" y="318" width="42" height="30" rx="3"/>
+    <rect x="710" y="318" width="42" height="30" rx="3"/>
+    <rect x="756" y="318" width="42" height="30" rx="3"/>
+    <rect x="802" y="318" width="42" height="30" rx="3"/>
+    <rect x="848" y="318" width="42" height="30" rx="3"/>
+    <rect x="894" y="318" width="42" height="30" rx="3"/>
+    <rect x="940" y="318" width="42" height="30" rx="3"/>
+  </g>
+
+  <!-- Row 1, number row, 15 keys plus 2 nav col -->
+  <g>
+    <rect x="204" y="358" width="42" height="42" rx="3"/>
+    <rect x="250" y="358" width="42" height="42" rx="3"/>
+    <rect x="296" y="358" width="42" height="42" rx="3"/>
+    <rect x="342" y="358" width="42" height="42" rx="3"/>
+    <rect x="388" y="358" width="42" height="42" rx="3"/>
+    <rect x="434" y="358" width="42" height="42" rx="3"/>
+    <rect x="480" y="358" width="42" height="42" rx="3"/>
+    <rect x="526" y="358" width="42" height="42" rx="3"/>
+    <rect x="572" y="358" width="42" height="42" rx="3"/>
+    <rect x="618" y="358" width="42" height="42" rx="3"/>
+    <rect x="664" y="358" width="42" height="42" rx="3"/>
+    <rect x="710" y="358" width="42" height="42" rx="3"/>
+    <rect x="756" y="358" width="42" height="42" rx="3"/>
+    <rect x="802" y="358" width="88" height="42" rx="3"/>
+    <rect x="894" y="358" width="42" height="42" rx="3"/>
+    <rect x="940" y="358" width="42" height="42" rx="3"/>
+  </g>
+
+  <!-- Row 2, qwerty row, tab plus 13 plus nav -->
+  <g>
+    <rect x="204" y="404" width="64" height="42" rx="3"/>
+    <rect x="272" y="404" width="42" height="42" rx="3"/>
+    <rect x="318" y="404" width="42" height="42" rx="3"/>
+    <rect x="364" y="404" width="42" height="42" rx="3"/>
+    <rect x="410" y="404" width="42" height="42" rx="3"/>
+    <rect x="456" y="404" width="42" height="42" rx="3"/>
+    <rect x="502" y="404" width="42" height="42" rx="3"/>
+    <rect x="548" y="404" width="42" height="42" rx="3"/>
+    <rect x="594" y="404" width="42" height="42" rx="3"/>
+    <rect x="640" y="404" width="42" height="42" rx="3"/>
+    <rect x="686" y="404" width="42" height="42" rx="3"/>
+    <rect x="732" y="404" width="42" height="42" rx="3"/>
+    <rect x="778" y="404" width="42" height="42" rx="3"/>
+    <rect x="824" y="404" width="66" height="42" rx="3"/>
+    <rect x="894" y="404" width="42" height="42" rx="3"/>
+    <rect x="940" y="404" width="42" height="42" rx="3"/>
+  </g>
+
+  <!-- Row 3, caps row, caps plus 12 plus enter -->
+  <g>
+    <rect x="204" y="450" width="76" height="42" rx="3"/>
+    <rect x="284" y="450" width="42" height="42" rx="3"/>
+    <rect x="330" y="450" width="42" height="42" rx="3"/>
+    <rect x="376" y="450" width="42" height="42" rx="3"/>
+    <rect x="422" y="450" width="42" height="42" rx="3"/>
+    <rect x="468" y="450" width="42" height="42" rx="3"/>
+    <rect x="514" y="450" width="42" height="42" rx="3"/>
+    <rect x="560" y="450" width="42" height="42" rx="3"/>
+    <rect x="606" y="450" width="42" height="42" rx="3"/>
+    <rect x="652" y="450" width="42" height="42" rx="3"/>
+    <rect x="698" y="450" width="42" height="42" rx="3"/>
+    <rect x="744" y="450" width="42" height="42" rx="3"/>
+    <rect x="790" y="450" width="42" height="42" rx="3"/>
+    <rect x="836" y="450" width="100" height="42" rx="3"/>
+    <rect x="940" y="450" width="42" height="42" rx="3"/>
+  </g>
+
+  <!-- Row 4, shift row, shift plus 11 plus shift plus up arrow plus nav -->
+  <g>
+    <rect x="204" y="496" width="98" height="42" rx="3"/>
+    <rect x="306" y="496" width="42" height="42" rx="3"/>
+    <rect x="352" y="496" width="42" height="42" rx="3"/>
+    <rect x="398" y="496" width="42" height="42" rx="3"/>
+    <rect x="444" y="496" width="42" height="42" rx="3"/>
+    <rect x="490" y="496" width="42" height="42" rx="3"/>
+    <rect x="536" y="496" width="42" height="42" rx="3"/>
+    <rect x="582" y="496" width="42" height="42" rx="3"/>
+    <rect x="628" y="496" width="42" height="42" rx="3"/>
+    <rect x="674" y="496" width="42" height="42" rx="3"/>
+    <rect x="720" y="496" width="42" height="42" rx="3"/>
+    <rect x="766" y="496" width="42" height="42" rx="3"/>
+    <rect x="812" y="496" width="78" height="42" rx="3"/>
+    <rect x="894" y="496" width="42" height="42" rx="3"/>
+    <rect x="940" y="496" width="42" height="42" rx="3"/>
+  </g>
+
+  <!-- Row 5, bottom row, mods, spacebar, mods, arrows -->
+  <g>
+    <rect x="204" y="542" width="56" height="42" rx="3"/>
+    <rect x="264" y="542" width="56" height="42" rx="3"/>
+    <rect x="324" y="542" width="56" height="42" rx="3"/>
+    <rect x="384" y="542" width="288" height="42" rx="3"/>
+    <rect x="676" y="542" width="56" height="42" rx="3"/>
+    <rect x="736" y="542" width="56" height="42" rx="3"/>
+    <rect x="796" y="542" width="56" height="42" rx="3"/>
+    <rect x="856" y="542" width="42" height="42" rx="3"/>
+    <rect x="894" y="542" width="42" height="42" rx="3"/>
+    <rect x="940" y="542" width="42" height="42" rx="3"/>
+  </g>
+
+  <!-- FIRMWARE STACK OVERLAY. -->
+  <!-- Upper-left of the keyboard, signaling "the firmware is the story, not the chassis". -->
+  <!-- Three stacked rectangles (a code-file stack), each with internal code-line marks -->
+  <!-- so they read as source files without rendering legible text. Stroke matches the -->
+  <!-- keyboard treatment (2 px warm-grey) so it ties into the line drawing. -->
+  <g>
+    <!-- Back card -->
+    <rect x="218" y="156" width="172" height="118" rx="6" stroke-opacity="0.55"/>
+    <!-- Middle card -->
+    <rect x="206" y="172" width="172" height="118" rx="6" stroke-opacity="0.8"/>
+    <!-- Front card (the active "file") -->
+    <rect x="192" y="188" width="172" height="118" rx="6"/>
+
+    <!-- Internal code-line marks on the front card. Varying lengths to read as code, not paragraphs. -->
+    <line x1="208" y1="208" x2="242" y2="208" stroke-opacity="0.7"/>
+    <line x1="248" y1="208" x2="298" y2="208" stroke-opacity="0.7"/>
+    <line x1="208" y1="224" x2="218" y2="224" stroke-opacity="0.7"/>
+    <line x1="224" y1="224" x2="288" y2="224" stroke-opacity="0.7"/>
+    <line x1="294" y1="224" x2="334" y2="224" stroke-opacity="0.7"/>
+    <line x1="218" y1="240" x2="262" y2="240" stroke-opacity="0.7"/>
+    <line x1="268" y1="240" x2="320" y2="240" stroke-opacity="0.7"/>
+    <line x1="218" y1="256" x2="276" y2="256" stroke-opacity="0.7"/>
+    <line x1="208" y1="272" x2="252" y2="272" stroke-opacity="0.7"/>
+    <line x1="258" y1="272" x2="308" y2="272" stroke-opacity="0.7"/>
+    <line x1="208" y1="288" x2="244" y2="288" stroke-opacity="0.7"/>
+
+    <!-- A small filename-tab notch on the front card top-left, reinforcing "file" semantics -->
+    <path d="M 192 188 L 192 200 L 230 200" stroke-opacity="0.55"/>
+  </g>
+
+  <!-- WIRELESS RADIO MOTIF. -->
+  <!-- Origin: a point on the top edge of the keyboard near the right-of-center MCU position. -->
+  <!-- Three concentric arcs rise upward; the whole motif carries the coral splash. -->
+  <g stroke="oklch(0.68 0.165 28)" stroke-width="2.5">
+    <!-- Inner arc -->
+    <path d="M 720 220 A 60 60 0 0 1 840 220" fill="none"/>
+    <!-- Middle arc -->
+    <path d="M 690 200 A 90 90 0 0 1 870 200" fill="none" stroke-opacity="0.78"/>
+    <!-- Outer arc -->
+    <path d="M 660 180 A 120 120 0 0 1 900 180" fill="none" stroke-opacity="0.58"/>
+  </g>
+
+  <!-- Bluetooth glyph at the radio origin (single dot ringed by the classic BT rune). -->
+  <!-- The dot is the focal coral point; the rune sits inside the dot's halo. -->
+  <g>
+    <!-- Halo ring around the BT glyph, anchoring the radio waves to the board -->
+    <circle cx="780" cy="262" r="22"
+            fill="oklch(0.68 0.165 28 / 0.12)"
+            stroke="oklch(0.68 0.165 28 / 0.85)" stroke-width="2"/>
+    <!-- Classic Bluetooth rune: vertical bar crossed by two diagonals forming a bow-tie -->
+    <path d="M 780 250 L 780 274 L 790 268 L 770 256 L 790 256 L 780 268 L 780 280"
+          stroke="oklch(0.68 0.165 28)" stroke-width="2.5"
+          fill="none" stroke-linejoin="round"/>
+    <!-- Single solid coral dot, sitting on the top edge of the case at the MCU position -->
+    <circle cx="780" cy="280" r="5" fill="oklch(0.68 0.165 28)" stroke="none"/>
+  </g>
+</svg>
