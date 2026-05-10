@@ -10,12 +10,12 @@ test.describe('group-buys index — phase 13', () => {
     await expect(page.locator('text=/live/i').first()).toBeVisible()
   })
 
-  test('lists at least one group-buy-row matching the seed', async ({
+  test('lists at least four group-buy-rows from the backfill', async ({
     page,
   }) => {
     await page.goto('/group-buys')
     const rows = page.locator('[data-testid="group-buy-row"]')
-    expect(await rows.count()).toBeGreaterThanOrEqual(1)
+    expect(await rows.count()).toBeGreaterThanOrEqual(4)
   })
 
   test('every CTA carries rel="sponsored noopener" target="_blank"', async ({

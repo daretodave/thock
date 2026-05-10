@@ -108,10 +108,12 @@ describe('checkCrossRefs', () => {
     ).toBeDefined()
   })
 
-  it('flags productKind != other with a null productSlug', () => {
+  it('permits a null productSlug on a board/keycap-set/switch group buy when no matching product record exists yet', () => {
+    // Phase 18 backfilled real GBs ahead of phase 20's product backfill,
+    // so a non-'other' kind with null productSlug is valid until the
+    // matching board/keycap-set/switch records land.
     const records = baseRecords()
     records.groupBuys.push(groupBuy({ productSlug: null }))
-    const errors = checkCrossRefs(records)
-    expect(errors.find((e) => e.message.includes('must not be null'))).toBeDefined()
+    expect(checkCrossRefs(records)).toEqual([])
   })
 })

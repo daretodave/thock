@@ -2,19 +2,19 @@ import { describe, expect, it } from 'vitest'
 import { GroupBuySchema } from '../../schemas/group-buy'
 
 const VALID = {
-  slug: 'cannonkeys-mode-sonnet-r2',
-  name: 'Mode Sonnet R2',
+  slug: 'cannonkeys-nyawice',
+  name: 'Nyawice',
   vendorSlug: 'cannonkeys',
-  productSlug: 'mode-sonnet',
+  productSlug: null,
   productKind: 'board' as const,
-  startDate: '2026-05-01',
-  endDate: '2026-06-15',
+  startDate: '2026-04-17',
+  endDate: '2026-05-17',
   region: 'global' as const,
-  url: 'https://cannonkeys.com/products/mode-sonnet-r2',
+  url: 'https://cannonkeys.com/products/nyawice',
   imageUrl: null,
   status: 'live' as const,
-  description: 'Second run of the Mode Sonnet 65 percent.',
-  updatedAt: '2026-05-08T00:00:00.000Z',
+  description: 'Alice-layout board with leaf-spring F1 mount and 9-degree typing angle.',
+  updatedAt: '2026-05-09T20:00:00.000Z',
 }
 
 describe('GroupBuySchema', () => {

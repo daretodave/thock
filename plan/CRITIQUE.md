@@ -185,14 +185,16 @@
 - source: user
 
 
-### [MED] /group-buys — Mode Sonnet R2 is fictional; seed needs real vendor data (user jot)
+### [x] [MED] /group-buys — Mode Sonnet R2 is fictional; seed needs real vendor data (user jot)
+- addressed in: pending commit (this tick — phase 18 ship)
+- issue: [mirror-skipped: token lacks repo:labels write — same 403 path as 4b8c793]
 - pass: user-jot (commit e56989c)
 - viewport: unspecified
 - auth_state: anonymous
 - category: content
 - observation: Mode Sonnet R2 on https://thock-coral.vercel.app/group-buys is not present at cannonkeys. Can an agent actually populate with some valid groupbuys?
 - evidence: user-spotted at 2026-05-09T18:58Z. Confirms: the seed at `data/group-buys/cannonkeys-mode-sonnet-r2.json` is fictional content from the phase-2 seed pass. The earlier `/jot` on this same record (commit 593b1f9) was about the dead vendor URL, drained at 9255abe by reframing the row as `status: announced` with the vendor homepage as the CTA — that fixed the 404 but didn't address the deeper concern that the *product* is made up.
-- suggested fix: [user has not specified — iterate to determine. Ship-data flow with the `scout` agent: scout researches current real group buys at CannonKeys / NovelKeys / Wuque / Mode Designs etc. (vendor pages, group-buy aggregators like geekhack), returns a structured set of candidate records with start/end/region/url verified by HEAD probe. Then ship-data drops each as a `data/group-buys/<vendor>-<slug>.json` record. Retire the fictional Mode Sonnet R2 record (or move to `data/group-buys/_archive/` if we want to keep it as test fixture; otherwise just delete). Two-tick path: tick 1 = scout research + 2-3 record commits; tick 2 = retire the fictional row. The same pattern can backfill switches/keycap-sets/boards/vendors.]
+- fix: shipped phase 18 (group-buys backfill) per `plan/phases/phase_18_group_buys_backfill.md`. Spawned the `scout` sub-agent against the six-vendor priority list (CannonKeys, NovelKeys, Mode Designs, Wuque Studio, KBDfans, GeekHack); scout HEAD-probed every candidate URL and returned 6 verified records: 5 live (CannonKeys Nyawice, KBDfans GMK CYL King of the Seas, KBDfans GMK CYL GREG 2, KBDfans GSK Sweet Nightmare, KBDfans GMK CYL Ishtar R2 — closing edge 2026-05-10) + 1 recently closed (Wuque Studio Paper80 x Whatever Studio, closed 2026-04-14). All 6 written to `data/group-buys/<slug>.json`; `data/group-buys/cannonkeys-mode-sonnet-r2.json` deleted via `git rm` per /oversight 2026-05-09 lock-in (delete, not archive). Two new vendor records (kbdfans, wuque-studio) written to `data/vendors/`. Manifest regenerated; the e2e min-row assertion at `apps/e2e/src/fixtures/page-reads.ts` and the `apps/e2e/tests/group-buys.spec.ts` "at least one row" test both bumped from 1 to 4 so future regressions in the data set fail loud. Scout's rejection list is preserved in the commit body for audit (NovelKeys + Mode Designs had no GB endpoints with verifiable absolute dates; GeekHack candidates were ICs not vendor-hosted GBs; the original brief's `/collections/group-buys` URL was 404 at CannonKeys — actual path is `/collections/group-buy` singular).
 - source: user
 
 

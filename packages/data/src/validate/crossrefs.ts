@@ -61,15 +61,7 @@ export function checkCrossRefs(records: RecordSet): CrossRefError[] {
       }
       continue
     }
-    if (gb.productSlug === null) {
-      errors.push({
-        kind: 'groupBuys',
-        slug: gb.slug,
-        field: 'productSlug',
-        message: `productSlug must not be null when productKind is "${gb.productKind}"`,
-      })
-      continue
-    }
+    if (gb.productSlug === null) continue
     const pool =
       gb.productKind === 'board'
         ? boardSlugs

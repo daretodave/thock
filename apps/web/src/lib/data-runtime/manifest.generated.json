@@ -62,23 +62,116 @@
       "description": "Boutique keyboard vendor based in the United States. Stocks switches, keycaps, and runs in-house and partnered group buys for boards and accessories.",
       "status": "active",
       "updatedAt": "2026-05-08T00:00:00.000Z"
+    },
+    {
+      "slug": "kbdfans",
+      "name": "KBDfans",
+      "url": "https://kbdfans.com",
+      "countryCode": "CN",
+      "description": "China-based mechanical keyboard vendor with a long-running storefront for boards, switches, keycaps, and accessories; hosts a large slate of GMK and in-house group buys with multi-region proxies.",
+      "status": "active",
+      "updatedAt": "2026-05-09T20:00:00.000Z"
+    },
+    {
+      "slug": "wuque-studio",
+      "name": "Wuque Studio",
+      "url": "https://shop.wuquestudio.com",
+      "countryCode": "CN",
+      "description": "China-based design studio and vendor known for in-house boards (Mammoth, Ikki68, Promise) and partnered group buys, sold direct from shop.wuquestudio.com with regional proxies.",
+      "status": "active",
+      "updatedAt": "2026-05-09T20:00:00.000Z"
     }
   ],
   "groupBuys": [
     {
-      "slug": "cannonkeys-mode-sonnet-r2",
-      "name": "Mode Sonnet R2",
+      "slug": "cannonkeys-nyawice",
+      "name": "Nyawice",
       "vendorSlug": "cannonkeys",
-      "productSlug": "mode-sonnet",
+      "productSlug": null,
       "productKind": "board",
-      "startDate": "2026-06-01",
-      "endDate": "2026-07-15",
+      "startDate": "2026-04-17",
+      "endDate": "2026-05-17",
       "region": "global",
-      "url": "https://cannonkeys.com",
+      "url": "https://cannonkeys.com/products/nyawice",
       "imageUrl": null,
-      "status": "announced",
-      "description": "Second run of the Mode Sonnet 65 percent. Same gasket mount and hotswap PCB; new accent-weight color options. Watch the CannonKeys storefront for launch — R2 has not yet opened to checkout.",
-      "updatedAt": "2026-05-09T00:00:00.000Z"
+      "status": "live",
+      "description": "Alice-layout board with a leaf-spring F1 mount and 9-degree typing angle, run with friction-fit silicone cat ears and nose in orange, pink, baby blue, and lilac; hotswap PCB optional.",
+      "updatedAt": "2026-05-09T20:00:00.000Z"
+    },
+    {
+      "slug": "kbdfans-gmk-cyl-greg-2",
+      "name": "GMK CYL GREG 2",
+      "vendorSlug": "kbdfans",
+      "productSlug": null,
+      "productKind": "keycap-set",
+      "startDate": "2026-05-01",
+      "endDate": "2026-05-29",
+      "region": "global",
+      "url": "https://kbdfans.com/products/gmk-cyl-greg-2",
+      "imageUrl": null,
+      "status": "live",
+      "description": "Second round of GMK CYL GREG, a doubleshot ABS Cherry-clone set in CYL profile, run on KBDfans through May.",
+      "updatedAt": "2026-05-09T20:00:00.000Z"
+    },
+    {
+      "slug": "kbdfans-gmk-cyl-ishtar-r2",
+      "name": "GMK CYL Ishtar R2",
+      "vendorSlug": "kbdfans",
+      "productSlug": null,
+      "productKind": "keycap-set",
+      "startDate": "2026-04-17",
+      "endDate": "2026-05-10",
+      "region": "global",
+      "url": "https://kbdfans.com/products/gmk-cyl-ishtar-r2",
+      "imageUrl": null,
+      "status": "live",
+      "description": "Second round of GMK CYL Ishtar, a Mesopotamia-themed Cherry-profile doubleshot ABS set with multi-region proxies; estimated Q4 2026 delivery.",
+      "updatedAt": "2026-05-09T20:00:00.000Z"
+    },
+    {
+      "slug": "kbdfans-gmk-cyl-king-of-the-seas",
+      "name": "GMK CYL King of the Seas",
+      "vendorSlug": "kbdfans",
+      "productSlug": null,
+      "productKind": "keycap-set",
+      "startDate": "2026-04-28",
+      "endDate": "2026-05-31",
+      "region": "global",
+      "url": "https://kbdfans.com/products/gmk-cyl-king-of-the-seas",
+      "imageUrl": null,
+      "status": "live",
+      "description": "GMK CYL doubleshot ABS set by MiKeyDigit in two colorways: The Sovereign in deep ocean blues and The Mutation in electric pink.",
+      "updatedAt": "2026-05-09T20:00:00.000Z"
+    },
+    {
+      "slug": "kbdfans-gsk-sweet-nightmare",
+      "name": "GSK Sweet Nightmare",
+      "vendorSlug": "kbdfans",
+      "productSlug": null,
+      "productKind": "keycap-set",
+      "startDate": "2026-05-08",
+      "endDate": "2026-05-11",
+      "region": "us",
+      "url": "https://kbdfans.com/products/gsk-sweet-nightmare",
+      "imageUrl": null,
+      "status": "live",
+      "description": "Goldenstar resin keycap run with four colorway options (Bimorphis, Shigan, Eviscera, Optigon) in Kawa and Guro finishes, on a tight four-day window.",
+      "updatedAt": "2026-05-09T20:00:00.000Z"
+    },
+    {
+      "slug": "wuque-studio-paper80-whatever-studio",
+      "name": "Paper80 x Whatever Studio",
+      "vendorSlug": "wuque-studio",
+      "productSlug": null,
+      "productKind": "board",
+      "startDate": "2026-03-31",
+      "endDate": "2026-04-14",
+      "region": "global",
+      "url": "https://shop.wuquestudio.com/products/gb-paper-80-whatever-studio",
+      "imageUrl": null,
+      "status": "closed",
+      "description": "80-percent aluminum board with lock-hole gasket mount and a paper-airplane-inspired mid-case fold, supporting ANSI/ISO and PC or aluminum plates; GB has wrapped, with limited follow-on stock.",
+      "updatedAt": "2026-05-09T20:00:00.000Z"
     }
   ],
   "trends": [
@@ -574,5 +667,5 @@
       "category": "brand"
     }
   ],
-  "generatedAt": "2026-05-10T01:22:14.767Z"
+  "generatedAt": "2026-05-10T01:49:40.201Z"
 }

@@ -121,7 +121,7 @@ export const pageReads: Record<string, PageRead> = {
       {
         kind: 'min-link-count',
         selector: '[data-testid="group-buy-row"]',
-        min: 1,
+        min: 4,
       },
     ]),
   },
