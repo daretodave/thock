@@ -45,6 +45,9 @@
     { "slug": "modding", "name": "Modding", "category": "misc" },
     { "slug": "trends-tracker", "name": "Trends Tracker", "category": "misc" },
     { "slug": "trends-2026", "name": "Trends 2026", "category": "misc" },
-    { "slug": "qwertykeys", "name": "Qwertykeys", "category": "brand" }
+    { "slug": "qwertykeys", "name": "Qwertykeys", "category": "brand" },
+    { "slug": "ergo", "name": "Ergo", "category": "layout" },
+    { "slug": "voyager", "name": "Voyager", "category": "brand" },
+    { "slug": "glove80", "name": "Glove80", "category": "brand" }
   ]
 }

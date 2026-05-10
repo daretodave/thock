@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — split/ergo cohort, two halves with rising sparkline</title>
+
+  <!-- Splash band: faint sage-green wash setting the stage -->
+  <path
+    d="M 70 90 L 1130 90 L 1130 660 L 70 660 Z"
+    fill="oklch(0.74 0.10 145 / 0.08)" stroke="none"/>
+
+  <!-- ============ LEFT HALF ============
+       Top-down silhouette of the left split keyboard half.
+       Case x=90→540 (~37.5% canvas width), main body y=300→560.
+       5 columns × 4 rows main field + 3-key thumb cluster tucked below.
+       Slight inward tilt at right edge to suggest column-stagger ergonomics. -->
+
+  <!-- Left half outer case: rounded shape with angled inner edge -->
+  <path
+    d="
+      M 104 300
+      L 526 300
+      L 540 332
+      L 540 528
+      L 460 560
+      L 104 560
+      Q 90 560 90 546
+      L 90 314
+      Q 90 300 104 300
+      Z"/>
+
+  <!-- Left half inset bezel hint -->
+  <path
+    d="
+      M 110 316
+      L 522 316
+      L 524 334
+      L 524 522
+      L 456 544
+      L 110 544
+      Q 106 544 106 540
+      L 106 320
+      Q 106 316 110 316
+      Z"
+    stroke-opacity="0.35"/>
+
+  <!-- Left half: 5 columns × 4 rows, column-staggered (each column offset slightly in y).
+       Column x positions evenly spaced; row y positions vary per column to imply ergo stagger. -->
+  <g stroke-opacity="0.7">
+    <!-- Column 1 (pinky, lowest) -->
+    <circle cx="146" cy="346" r="3"/>
+    <circle cx="146" cy="396" r="3"/>
+    <circle cx="146" cy="446" r="3"/>
+    <circle cx="146" cy="496" r="3"/>
+    <!-- Column 2 (ring, slightly higher) -->
+    <circle cx="226" cy="338" r="3"/>
+    <circle cx="226" cy="388" r="3"/>
+    <circle cx="226" cy="438" r="3"/>
+    <circle cx="226" cy="488" r="3"/>
+    <!-- Column 3 (middle, highest — classic ergo stagger) -->
+    <circle cx="306" cy="332" r="3"/>
+    <circle cx="306" cy="382" r="3"/>
+    <circle cx="306" cy="432" r="3"/>
+    <circle cx="306" cy="482" r="3"/>
+    <!-- Column 4 (index, slightly lower than middle) -->
+    <circle cx="386" cy="338" r="3"/>
+    <circle cx="386" cy="388" r="3"/>
+    <circle cx="386" cy="438" r="3"/>
+    <circle cx="386" cy="488" r="3"/>
+    <!-- Column 5 (inner index, lower again) -->
+    <circle cx="466" cy="346" r="3"/>
+    <circle cx="466" cy="396" r="3"/>
+    <circle cx="466" cy="446" r="3"/>
+    <circle cx="466" cy="496" r="3"/>
+  </g>
+
+  <!-- Left thumb cluster: 3 keys angled inward toward the gap, tucked below the main body -->
+  <g stroke-opacity="0.85">
+    <rect x="380" y="582" width="32" height="24" rx="3" ry="3" transform="rotate(-12 396 594)"/>
+    <rect x="420" y="592" width="32" height="24" rx="3" ry="3" transform="rotate(-12 436 604)"/>
+    <rect x="460" y="602" width="32" height="24" rx="3" ry="3" transform="rotate(-12 476 614)"/>
+  </g>
+
+  <!-- Faint column guide lines on left half -->
+  <g stroke-opacity="0.18">
+    <line x1="186" y1="320" x2="186" y2="540"/>
+    <line x1="266" y1="320" x2="266" y2="540"/>
+    <line x1="346" y1="320" x2="346" y2="540"/>
+    <line x1="426" y1="320" x2="426" y2="540"/>
+  </g>
+
+  <!-- ============ RIGHT HALF ============
+       Mirror of the left. Case x=660→1110, main body y=300→560.
+       5 columns × 4 rows + 3-key thumb cluster, mirrored stagger. -->
+
+  <!-- Right half outer case: mirror of left -->
+  <path
+    d="
+      M 1096 300
+      L 674 300
+      L 660 332
+      L 660 528
+      L 740 560
+      L 1096 560
+      Q 1110 560 1110 546
+      L 1110 314
+      Q 1110 300 1096 300
+      Z"/>
+
+  <!-- Right half inset bezel hint -->
+  <path
+    d="
+      M 1090 316
+      L 678 316
+      L 676 334
+      L 676 522
+      L 744 544
+      L 1090 544
+      Q 1094 544 1094 540
+      L 1094 320
+      Q 1094 316 1090 316
+      Z"
+    stroke-opacity="0.35"/>
+
+  <!-- Right half: 5 columns × 4 rows, column-staggered (mirror of left) -->
+  <g stroke-opacity="0.7">
+    <!-- Column 1 (inner index, mirror of left col 5) -->
+    <circle cx="734" cy="346" r="3"/>
+    <circle cx="734" cy="396" r="3"/>
+    <circle cx="734" cy="446" r="3"/>
+    <circle cx="734" cy="496" r="3"/>
+    <!-- Column 2 (index) -->
+    <circle cx="814" cy="338" r="3"/>
+    <circle cx="814" cy="388" r="3"/>
+    <circle cx="814" cy="438" r="3"/>
+    <circle cx="814" cy="488" r="3"/>
+    <!-- Column 3 (middle, highest) -->
+    <circle cx="894" cy="332" r="3"/>
+    <circle cx="894" cy="382" r="3"/>
+    <circle cx="894" cy="432" r="3"/>
+    <circle cx="894" cy="482" r="3"/>
+    <!-- Column 4 (ring) -->
+    <circle cx="974" cy="338" r="3"/>
+    <circle cx="974" cy="388" r="3"/>
+    <circle cx="974" cy="438" r="3"/>
+    <circle cx="974" cy="488" r="3"/>
+    <!-- Column 5 (pinky, lowest) -->
+    <circle cx="1054" cy="346" r="3"/>
+    <circle cx="1054" cy="396" r="3"/>
+    <circle cx="1054" cy="446" r="3"/>
+    <circle cx="1054" cy="496" r="3"/>
+  </g>
+
+  <!-- Right thumb cluster: 3 keys angled inward (mirrored, +12deg) -->
+  <g stroke-opacity="0.85">
+    <rect x="708" y="602" width="32" height="24" rx="3" ry="3" transform="rotate(12 724 614)"/>
+    <rect x="748" y="592" width="32" height="24" rx="3" ry="3" transform="rotate(12 764 604)"/>
+    <rect x="788" y="582" width="32" height="24" rx="3" ry="3" transform="rotate(12 804 594)"/>
+  </g>
+
+  <!-- Faint column guide lines on right half -->
+  <g stroke-opacity="0.18">
+    <line x1="774" y1="320" x2="774" y2="540"/>
+    <line x1="854" y1="320" x2="854" y2="540"/>
+    <line x1="934" y1="320" x2="934" y2="540"/>
+    <line x1="1014" y1="320" x2="1014" y2="540"/>
+  </g>
+
+  <!-- ============ SPARKLINE ============
+       Travels lower-left of left half, dips into the center gap (the split itself),
+       then rises sharply through and above the right half. Sage-green splash hue. -->
+
+  <!-- Faint area fill beneath the sparkline — single splash hue -->
+  <path
+    d="
+      M 90 540
+      L 200 522
+      L 320 506
+      L 440 514
+      L 540 542
+      L 600 564
+      L 660 540
+      L 760 460
+      L 870 360
+      L 990 240
+      L 1110 110
+      L 1110 660
+      L 90 660
+      Z"
+    fill="oklch(0.74 0.10 145 / 0.16)" stroke="none"/>
+
+  <!-- The sparkline trend curve — 11 points, dips through the center gap, rises through right half -->
+  <polyline
+    points="
+      90,540
+      200,522
+      320,506
+      440,514
+      540,542
+      600,564
+      660,540
+      760,460
+      870,360
+      990,240
+      1110,110"
+    stroke="oklch(0.74 0.10 145)" stroke-width="2.5"/>
+
+  <!-- Subtle interior data-point dots on the sparkline (warm-grey, low-key) -->
+  <g stroke-opacity="0.55">
+    <circle cx="90"   cy="540" r="3.5"/>
+    <circle cx="200"  cy="522" r="3.5"/>
+    <circle cx="320"  cy="506" r="3.5"/>
+    <circle cx="440"  cy="514" r="3.5"/>
+    <circle cx="540"  cy="542" r="3.5"/>
+    <circle cx="600"  cy="564" r="3.5"/>
+    <circle cx="660"  cy="540" r="3.5"/>
+    <circle cx="760"  cy="460" r="3.5"/>
+    <circle cx="870"  cy="360" r="3.5"/>
+    <circle cx="990"  cy="240" r="3.5"/>
+  </g>
+
+  <!-- Focal accent dot at the sparkline peak — sage-green,
+       filled core + soft outer ring (mirrors series convention) -->
+  <circle cx="1110" cy="110" r="9"  fill="oklch(0.74 0.10 145 / 0.95)" stroke="oklch(0.74 0.10 145)"/>
+  <circle cx="1110" cy="110" r="16" stroke="oklch(0.74 0.10 145)" stroke-opacity="0.45" fill="none"/>
+</svg>
