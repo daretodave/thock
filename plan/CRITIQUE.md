@@ -1,8 +1,9 @@
 # Critique log
 
-> Last pass: 2026-05-10T08:30:00Z at commit e3de21d
-> Pass count: 7
-> Iterate-bias category: external-critique (pass 7 fired 12 commits after pass 6, after a heavy iterate run that drained pass-4/5/6 + 2 audit rows + shipped 2 corpus-growth articles. Reader's fresh visit confirmed 8 prior critique fixes landed cleanly (Build sheet, R2 lede, /sources jargon, Group-buys urgent body, related-rail thinness, /tag title-match) and surfaced 6 fresh findings: [HIGH] every dynamic-data page has its content rendering OUTSIDE `<main>` (a11y / landmark hole — `<main>` only contains a "loading…" shell after streaming hydration); [HIGH] /about body prose is broken around inline-link rendering (multiple sentences end mid-word with the link text extracted to a sibling); [MED] /sources intro shares the same broken-prose root cause as /about; [MED] /trends/tracker rows expose editor's-note text twice in the a11y tree (mobile-stacked + desktop-column both render at desktop without `aria-hidden`); [LOW] /group-buys Sweet Nightmare card missing region chip while siblings have GLOBAL; [LOW] /tag/gateron date format inconsistent ("May 8, 2026" vs "Apr 30, 2026"). Reader's positive observation on /article/typing-tests-lie ("opinionated voice + 4 well-matched related-rail tiles") not filed — closure signal, not a finding. The two HIGH findings are the kind the loop's been blind to: framework-level a11y regressions and template-level prose corruption that wouldn't show up in a smoke walker's `200 + contract` checks but absolutely show up in stranger reads.)
+> Last pass: 2026-05-10T14:00:00Z at commit d34580c
+> Pass count: 8
+> Iterate-bias category: external-critique (pass 8 fired 12 commits after pass 7, after a heavy iterate drain that shipped pass-7's #25 [MED] /trends/tracker double-announce, classified pass-7's #23/#24/#26/#27 as phantom-confirmed (reader-tool extraction artifacts), shipped the user-jot e2e-GA gate (#28), drained the [MED] a11y audit-pass row (filing 2 new [a11y] rows in plan/AUDIT.md), and absorbed a fresh user-jot on aside→h2 spacing on /article/*. Reader's pass 8 visited 6 URLs (/, /article/keychron-q-ultra-zmk, /trends, /trends/tracker, /group-buys, /tag/linear) and surfaced 6 candidates; self-assessment kept 5 (1 dup-dropped). Filed: [needs-user-call] [MED] / — production GA returns 503 on `/g/collect` (out-of-codebase: GA console verification needed); [MED] /article/* — `<aside>` callout title renders as a generic, not a heading (a11y document-outline hole; companion to the user-jot's spacing finding on the same component); [LOW] /trends — pillar card density inconsistent (hero has chips, archive doesn't); [LOW] /trends/tracker — mover-table rows with no article have no visual cue distinguishing them from linked rows (3 of 14 unlinked, identical chrome); [LOW] /tag/linear — H1 reads "#linear" but lede capitalizes "Linear" (drift). Dropped: reader's HIGH on streaming `<main>` is a duplicate of existing pass-7 [needs-user-call] [HIGH] row #22 (architectural Next 15 Suspense trade-off). Reader-tool artifact rate: 0% this pass — applied pass-7's lesson (verify visual-detail findings against rendered HTML before filing) and the 6 raw findings all hold up to curl-grep verification.)
+> Pass 7 last pass: 2026-05-10T08:30:00Z at commit e3de21d
 > Pass 6 last pass: 2026-05-10T07:30:00Z at commit dfa5596
 > Pass 5 last pass: 2026-05-10T02:45:00Z at commit 790b415
 
@@ -10,6 +11,52 @@
 > drained by `/iterate`. See `skills/critique.md` for the contract.
 
 ## Pending
+
+### [needs-user-call] [MED] / — production GA `/g/collect` beacons returning HTTP 503
+- pass: 8 (commit d34580c)
+- viewport: desktop
+- category: performance
+- observation: On a fresh load of `/`, the GA4 collect endpoint is returning 503 Service Unavailable to the page's beacon POSTs. GTM's container script + gtag JS bundles load fine (200 OK), but the actual `/g/collect` calls that report pageview + scroll events are 503ing server-side. If this is persistent (not just reader's session), the editorial team is silently losing the analytics signal trends decisions ride on.
+- evidence: reader sub-agent's `read_network_requests` on / captured: POST `https://www.google-analytics.com/g/collect?...&en=scroll` → status 503; POST `https://www.google-analytics.com/g/collect?...&en=page_view` → status 503. Both fired right after page hydration. The GA4 measurement ID embedded in the requests is `G-5R4DKQ02GV` (downstream of GTM container `GTM-58T839ZD`).
+- suggested fix: needs out-of-codebase verification. (1) Open the GA4 admin for property `G-5R4DKQ02GV` — confirm the property is active, not over its sample-rate, and that data is arriving from the production hostname. (2) Cross-check from a different network / clean browser session to rule out reader's specific session being rate-limited. (3) If 503 is persistent and Google-side, evaluate swapping the beacon to a self-hosted plausible/umami runner (the existing `<GoogleTagManager>` Server Component already has the env-gate scaffolding; another runner can slot in alongside).
+- needs-user-call: the analytics property + GTM-tag config sit outside the repo; the loop can't autonomously verify or reconfigure them. Surfacing for `/oversight`.
+- source: browser
+
+### [MED] /article/keychron-q-ultra-zmk (and likely all `<aside>` callouts) — aside title renders as a generic, not a heading
+- pass: 8 (commit d34580c)
+- viewport: desktop
+- category: a11y
+- observation: The `<aside>` "What's confirmed and what isn't" callout on /article/keychron-q-ultra-zmk uses a non-heading element for its title — the title text renders as a plain generic, while every body section heading ("What's in the line", "ZMK as the platform", "The polling and HE story", "What we're watching") uses heading role. A screen-reader user navigating by heading skips past the aside entirely; the document outline misses the callout. This is the a11y companion to today's user-jot on the same component — user spotted spacing; reader spotted heading-role. Same fix surface (the aside template), distinct fixes.
+- evidence: reader's `read_page` on /article/keychron-q-ultra-zmk shows note[ref_42] → generic "What's confirmed and what isn't" [ref_43] → generic body[ref_44]; compare ref_45 heading "What's in the line" as a true heading sibling. Likely affects every `<aside>` MDX usage across articles, since the template is shared.
+- suggested fix: promote the aside title to a heading inside the aside (e.g. `<h3>` if the surrounding article body uses h2 for sections; use `<h2>` if the aside is logically peer-level). Investigate the aside MDX component (search `apps/web/src/components/article/` or the shared MDX-component map) and add a heading element for the title prop. Companion fix: pair with the user-jot's margin/spacing fix in the same iterate tick — both edits land in one file.
+- source: browser
+
+### [LOW] /trends — pillar card density inconsistent (hero has chips, archive doesn't)
+- pass: 8 (commit d34580c)
+- viewport: desktop
+- category: visual
+- observation: Card density jumps between the hero pick and the archive list on /trends. The hero "When customs became vendor-first" carries three tag chips (Vendor / Configurator / Mode) below the byline, giving the card a thick metadata footer. The four archive cards directly below ("The split/ergo cohort grew up", "75% became the default custom layout", "Reading the Trends Tracker", "The slow fade of Alice layouts") carry zero tag chips — only byline + date + read-time. Same card component, two different metadata densities; the cascade reads as inconsistent rather than intentional.
+- evidence: reader's `read_page` on /trends — ref_44 hero link contains ref_49/51/53 chips; ref_62/70/78/86 archive links have no chip rail.
+- suggested fix: design judgment call. Either render chips on archive cards too (adds visual noise but signals tag faceting), or strip them from the hero (hero already gets size + position emphasis). The latter is the smaller diff. If the chip rail on the hero IS intentional editorial signal, reframe the hero card layout so the difference reads as a deliberate emphasis rather than a missing element on the archive.
+- source: browser
+
+### [LOW] /trends/tracker — unlinked mover-table rows have no visual cue distinguishing them from linked rows
+- pass: 8 (commit d34580c)
+- viewport: desktop
+- category: navigation
+- observation: Mover-table rows have inconsistent click affordance with no visual differentiator. Of 14 rows across the 5 mover tables (Switches, Keycaps, Layouts, Vendors, Brands), 11 are linked anchors and 3 are not (Keycaps: "DCS Olivetti", "MT3 profile"; Brands: "Wuque Studio"). Unlinked rows render identically to linked ones — same row layout, same name styling, same trend column — so a reader who clicks one row expecting a deep dive and finds nothing happens, then tries the next row and lands on an article, comes away with the rows feeling arbitrary.
+- evidence: reader's `read_page` on /trends/tracker: ref_68 link "Gateron Oil King", ref_74 link "HMX Cloud", ref_80 link "Cherry MX2A revisions" (Switches all linked), but ref_100 "DCS Olivetti" and ref_106 "MT3 profile" are plain generics, ref_178 "Wuque Studio" also plain generic.
+- suggested fix: pick the cheaper visual-cue path: add an underline-on-hover (or chevron glyph) on linked rows only so unlinked rows visually opt out. Alternative: backfill stub deep-dive articles for the 3 unlinked entries (DCS Olivetti, MT3 profile, Wuque Studio) so every row links. Cheap UX path is the visual cue; durable content path is the backfill. Both are valid; pick what the next iterate tick prefers.
+- source: browser
+
+### [LOW] /tag/linear — H1 reads `#linear` (lowercase) but the lede capitalizes "Linear"
+- pass: 8 (commit d34580c)
+- viewport: desktop
+- category: voice
+- observation: Capitalization drift on the tag page. The H1 reads "#linear" (lowercase, matching the tag-chip convention site-wide), but the lede directly under it says "5 articles tagged Linear." (capital L). The heading and lede contradict each other on a single screen; reader briefly registered them as referring to two different things (a "linear" facet vs. a "Linear" brand) before resolving. Likely the same bug affects every /tag/<slug> page where the slug is a single common word — wherever the lede titles the tag instead of treating it as an opaque slug.
+- evidence: reader's `read_page` on /tag/linear: heading[ref_34] "#linear", generic[ref_35] "5 articles tagged Linear.".
+- suggested fix: lowercase the tag in the lede so it matches the H1 + the chips elsewhere — `<X> articles tagged ${tag}.` (where `${tag}` is the raw slug, not Title-Cased). One-line edit in `apps/web/src/app/tag/[slug]/page.tsx` (or wherever the lede renders); add a snapshot test for /tag/linear's lede string.
+- source: browser
 
 ### [MED] /article/* (and other surfaces) — `<aside>` block sits almost on top of the next `<h2>`
 - pass: user-jot (commit d269094)
