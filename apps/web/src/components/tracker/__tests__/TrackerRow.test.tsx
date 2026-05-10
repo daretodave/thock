@@ -26,7 +26,7 @@ describe('<TrackerRow>', () => {
     expect(screen.getByTestId('sparkline')).toBeInTheDocument()
   })
 
-  it('renders the editor’s-note as a link to /article/<slug> when an article resolves', () => {
+  it('renders the article title as descriptive text (no link) in the editor’s-note column when an article resolves but no note is set', () => {
     const article = makeArticle({
       slug: 'oil-king-deep-dive',
       frontmatter: {
@@ -42,15 +42,19 @@ describe('<TrackerRow>', () => {
         article={article}
       />,
     )
-    const links = Array.from(
+    // The row name is the single click target; the editor's-note
+    // column now renders the article title as descriptive text.
+    const titleSpans = screen.getAllByTestId('tracker-row-note-text')
+    expect(titleSpans.length).toBeGreaterThan(0)
+    expect(titleSpans[0]).toHaveTextContent(/why the oil king/i)
+    // The only anchor in the row points at the article via the row
+    // name; the column text is not an anchor.
+    const anchors = Array.from(
       screen
         .getByTestId('tracker-row')
         .querySelectorAll('a[href="/article/oil-king-deep-dive"]'),
     )
-    const noteLink = links.find((a) =>
-      /why the oil king/i.test(a.textContent ?? ''),
-    )
-    expect(noteLink).toBeDefined()
+    expect(anchors).toHaveLength(1)
   })
 
   it('renders the row name as a link to /article/<slug> when an article resolves', () => {
@@ -87,7 +91,7 @@ describe('<TrackerRow>', () => {
     expect(screen.getByTestId('tracker-row')).toHaveTextContent('—')
   })
 
-  it('renders the editor’s note as the linked text when both article and note are set', () => {
+  it('renders the editor’s note as descriptive text and keeps a single click target on the row name when both article and note are set', () => {
     const article = makeArticle({
       slug: 'oil-king-deep-dive',
       frontmatter: {
@@ -107,21 +111,28 @@ describe('<TrackerRow>', () => {
         article={article}
       />,
     )
-    const links = Array.from(
+    // Row name is the only click target.
+    const nameLink = screen.getByTestId('tracker-row-name-link')
+    expect(nameLink).toHaveAttribute('href', '/article/oil-king-deep-dive')
+    expect(nameLink).toHaveTextContent('Oil King')
+    // The note text renders as a descriptive span on both the
+    // mobile-stacked and desktop-column branches.
+    const noteSpans = screen.getAllByTestId('tracker-row-note-text')
+    expect(noteSpans.length).toBeGreaterThan(0)
+    expect(noteSpans[0]).toHaveTextContent(/secondhand demand/i)
+    // Single anchor per linked row — the previous duplicate-anchor
+    // a11y regression is closed.
+    const anchors = Array.from(
       screen
         .getByTestId('tracker-row')
         .querySelectorAll('a[href="/article/oil-king-deep-dive"]'),
     )
-    const noteLink = links.find((a) =>
-      /secondhand demand/i.test(a.textContent ?? ''),
-    )
-    expect(noteLink).toBeDefined()
-    // The article title must NOT appear as link text — that's the
-    // duplicate-link finding this branch closes.
-    const titleLink = links.find((a) =>
-      /why the oil king/i.test(a.textContent ?? ''),
-    )
-    expect(titleLink).toBeUndefined()
+    expect(anchors).toHaveLength(1)
+    // The article title must not leak into any anchor text — the
+    // note differentiation from phase 19 stays intact, but now via
+    // descriptive text rather than dual-link copy.
+    const anchorText = anchors.map((a) => a.textContent ?? '').join(' ')
+    expect(anchorText).not.toMatch(/why the oil king/i)
   })
 
   it('renders the note as plain text in the editor’s-note column when no article resolves', () => {

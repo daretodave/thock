@@ -20,9 +20,11 @@ const TONE_CLASS: Record<TrendRow['direction'], string> = {
 
 /**
  * One row in a tracker table. Renders rank, name, score with glyph,
- * sparkline, and an editor's-note column linking to the row's
- * article when one resolves. Mobile drops the editor's-note column
- * — the link surfaces under the row title via stacked layout.
+ * sparkline, and an editor's-note column. The row name is the
+ * single click target when an article resolves; the editor's-note
+ * text is descriptive copy on both viewports (mobile renders it
+ * stacked below the row name; desktop renders it in its own
+ * column). Single anchor per row keeps the a11y tree clean.
  */
 export function TrackerRow({
   rank,
@@ -54,20 +56,12 @@ export function TrackerRow({
         ) : (
           <span className="font-serif text-h3 text-text">{row.name}</span>
         )}
-        {noteHref && noteText && (
-          <Link
-            href={noteHref}
-            className="text-small text-text-2 hover:text-accent md:hidden"
-          >
-            {noteText} →
-          </Link>
-        )}
-        {!noteHref && editorialNote && (
+        {noteText && (
           <span
             data-testid="tracker-row-note-text"
             className="text-small text-text-2 md:hidden"
           >
-            {editorialNote}
+            {noteText}
           </span>
         )}
       </div>
@@ -81,13 +75,9 @@ export function TrackerRow({
         <Sparkline values={row.spark} tone={row.direction} w={110} h={24} />
       </span>
       <span className="hidden text-small md:block">
-        {noteHref && noteText ? (
-          <Link href={noteHref} className="text-text-2 hover:text-accent">
-            {noteText} →
-          </Link>
-        ) : editorialNote ? (
+        {noteText ? (
           <span data-testid="tracker-row-note-text" className="text-text-2">
-            {editorialNote}
+            {noteText}
           </span>
         ) : (
           <span aria-hidden="true" className="text-text-4">
