@@ -99,11 +99,12 @@ export function GroupBuyCountdownRow({
         </span>
       </div>
       <span
+        data-testid="group-buy-countdown"
         className={`font-mono text-micro ${
           isUrgent ? 'text-accent' : 'text-text-2'
         }`}
       >
-        {left}d
+        {left === 0 ? 'today' : `${left}d`}
       </span>
       <div
         aria-hidden="true"

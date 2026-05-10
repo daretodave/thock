@@ -94,4 +94,42 @@ describe('<GroupBuyCountdownRow>', () => {
       'unknown-vendor',
     )
   })
+
+  it('renders "today" (not "0d") on closing day so urgency reads unambiguously', () => {
+    // Regression guard for plan/CRITIQUE.md pass 10 [MED]:
+    // "0d" was ambiguous (closed? closes end-of-day?) and mismatched
+    // /group-buys "closes today" copy on the same buy. The dense
+    // home rail uses "today" instead of "closes today" to fit the
+    // tight right-column width without breaking the 4-up layout.
+    const gb = makeGroupBuy({
+      startDate: '2026-05-01',
+      endDate: '2026-05-10',
+    })
+    render(
+      <GroupBuyCountdownRow
+        groupBuy={gb}
+        vendor={makeVendor()}
+        now={new Date('2026-05-10T00:00:00Z')}
+      />,
+    )
+    const countdown = screen.getByTestId('group-buy-countdown')
+    expect(countdown).toHaveTextContent('today')
+    expect(countdown.textContent).not.toContain('0d')
+  })
+
+  it('renders the N-day countdown ({N}d) for non-zero days', () => {
+    const gb = makeGroupBuy({
+      startDate: '2026-05-01',
+      endDate: '2026-05-12',
+    })
+    render(
+      <GroupBuyCountdownRow
+        groupBuy={gb}
+        vendor={makeVendor()}
+        now={new Date('2026-05-10T00:00:00Z')}
+      />,
+    )
+    const countdown = screen.getByTestId('group-buy-countdown')
+    expect(countdown).toHaveTextContent('2d')
+  })
 })
