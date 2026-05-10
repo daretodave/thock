@@ -31,14 +31,12 @@ export function GroupBuysWidget({
   if (groupBuys.length === 0) return null
 
   const todayIso = now.toISOString().slice(0, 10)
-  const sorted = [...groupBuys]
-    .sort((a, b) => {
-      const aLeft = Date.parse(`${a.endDate}T00:00:00Z`)
-      const bLeft = Date.parse(`${b.endDate}T00:00:00Z`)
-      if (aLeft !== bLeft) return aLeft - bLeft
-      return a.name.localeCompare(b.name)
-    })
-    .slice(0, max)
+  const sortedAll = [...groupBuys].sort((a, b) => {
+    const aLeft = Date.parse(`${a.endDate}T00:00:00Z`)
+    const bLeft = Date.parse(`${b.endDate}T00:00:00Z`)
+    if (aLeft !== bLeft) return aLeft - bLeft
+    return a.name.localeCompare(b.name)
+  })
 
   const vendorBySlug = new Map(vendors.map((v) => [v.slug, v]))
 
@@ -48,9 +46,20 @@ export function GroupBuysWidget({
   // contradicts the row-level signal (rows <72h render in accent;
   // rows ≥72h render neutral). Critique pass 2 [MED] flagged this as
   // hype-bro voice on a knowledgeable-peer site.
-  const anyUrgent = sorted.some(
+  //
+  // When an urgent buy exists, the rail body filters to urgent-only
+  // rows so the heading and the body agree (critique pass 6 [LOW]
+  // drain): "Don't miss the close" should not be followed by a row
+  // that is 19 days out. When no buy is urgent, the rail shows the
+  // full sorted list capped at `max`.
+  const anyUrgent = sortedAll.some(
     (gb) => daysLeft(gb.endDate, todayIso) <= URGENT_THRESHOLD_DAYS,
   )
+  const sorted = anyUrgent
+    ? sortedAll
+        .filter((gb) => daysLeft(gb.endDate, todayIso) <= URGENT_THRESHOLD_DAYS)
+        .slice(0, max)
+    : sortedAll.slice(0, max)
   const kicker = anyUrgent
     ? 'group buys · ending soon'
     : 'group buys · open now'

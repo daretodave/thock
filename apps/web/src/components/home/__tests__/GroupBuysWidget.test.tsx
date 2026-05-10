@@ -48,10 +48,13 @@ describe('<GroupBuysWidget>', () => {
   })
 
   it('renders up to four rows in end-date order', () => {
+    // All buys are well outside the 72h urgent band so the rail body
+    // filter (pass 6 [LOW] drain) doesn't kick in — this test covers
+    // the non-urgent cap behavior.
     const items = Array.from({ length: 6 }, (_, i) =>
       makeGroupBuy({
         slug: `s${i}`,
-        endDate: `2026-05-${String(10 + i).padStart(2, '0')}`,
+        endDate: `2026-06-${String(10 + i).padStart(2, '0')}`,
         name: `S${i}`,
       }),
     )
@@ -122,5 +125,58 @@ describe('<GroupBuysWidget>', () => {
     )
     expect(screen.getByText(/group buys · ending soon/i)).toBeTruthy()
     expect(screen.getByText(/Don't miss the close/i)).toBeTruthy()
+  })
+
+  // Regression guard for /critique pass 6 [LOW] #17: when the urgent
+  // heading fires, the rail body should filter to urgent rows only —
+  // a 19-day-out row sitting under "Don't miss the close" reads as a
+  // half-true label.
+  it('filters the rail body to urgent rows only when the urgent heading fires', () => {
+    const tomorrow = makeGroupBuy({
+      slug: 'tomorrow',
+      endDate: '2026-05-10',
+      name: 'Tomorrow GB',
+    })
+    const month = makeGroupBuy({
+      slug: 'month',
+      endDate: '2026-06-15',
+      name: 'Month GB',
+    })
+    const farther = makeGroupBuy({
+      slug: 'farther',
+      endDate: '2026-07-01',
+      name: 'Farther GB',
+    })
+    render(
+      <GroupBuysWidget
+        groupBuys={[tomorrow, month, farther]}
+        vendors={[makeVendor()]}
+        now={new Date('2026-05-09T00:00:00Z')}
+      />,
+    )
+    const rows = screen.getAllByTestId('group-buy-row')
+    expect(rows).toHaveLength(1)
+    expect(screen.queryByText(/Month GB/i)).toBeNull()
+    expect(screen.queryByText(/Farther GB/i)).toBeNull()
+    expect(screen.getByText(/Tomorrow GB/i)).toBeTruthy()
+  })
+
+  it('shows the full sorted list (capped at max) when no buy is urgent', () => {
+    const items = Array.from({ length: 5 }, (_, i) =>
+      makeGroupBuy({
+        slug: `s${i}`,
+        endDate: `2026-06-${String(10 + i).padStart(2, '0')}`,
+        name: `S${i}`,
+      }),
+    )
+    render(
+      <GroupBuysWidget
+        groupBuys={items}
+        vendors={[makeVendor()]}
+        now={new Date('2026-05-09T00:00:00Z')}
+      />,
+    )
+    const rows = screen.getAllByTestId('group-buy-row')
+    expect(rows).toHaveLength(4)
   })
 })
