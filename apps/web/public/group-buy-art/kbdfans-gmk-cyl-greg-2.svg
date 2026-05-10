@@ -20,7 +20,7 @@
          - scoop highlight (a single arc inside the top)
        ============================================================ -->
 
-  <!-- ---------------- Row 1 (back row, three 1u caps) ---------------- -->
+  <!-- ================ Row 1 (back row, three 1u caps) ================ -->
 
   <!-- Cap 1 — back-left -->
   <g transform="translate(295 235)">
@@ -46,7 +46,7 @@
     <path d="M 38 102 Q 88 90 138 102" stroke-opacity="0.3"/>
   </g>
 
-  <!-- ---------------- Row 2 (front row, three 1u caps, shifted half a cap) ---------------- -->
+  <!-- ================ Row 2 (front row, three 1u caps, shifted half a cap) ================ -->
 
   <!-- Cap 4 — front-left -->
   <g transform="translate(405 435)">

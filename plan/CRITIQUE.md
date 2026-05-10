@@ -12,14 +12,16 @@
 
 ## Pending
 
-### [HIGH] /article/gmk-cyl-prussian-alert + / (latest-by-pillar Keycaps slot) — hero SVG renders broken
+### [x] [HIGH] /article/gmk-cyl-prussian-alert + / (latest-by-pillar Keycaps slot) — hero SVG renders broken
+- addressed in: pending commit (this tick — user-reported follow-on to phase 23)
 - pass: user-jot (commit 3955686, via /oversight 2026-05-10T14:18Z)
 - viewport: unspecified
 - auth_state: anonymous
 - category: visual
 - observation: /article/gmk-cyl-prussian-alert has a broken image; on the home page the link to that article surfaces the same broken image in its card.
-- evidence: user-spotted at 2026-05-10T14:18:00Z. Diagnosed during oversight: file exists at `apps/web/public/hero-art/gmk-cyl-prussian-alert.svg` (5688 bytes, 31 path/shape elements); prod serves it 200 at `https://thock-coral.vercel.app/hero-art/gmk-cyl-prussian-alert.svg` with byte-identical content; article HTML references `src="/hero-art/gmk-cyl-prussian-alert.svg"` correctly. So the wiring is fine — the bug is **inside the SVG content**: paths are malformed, viewBox/coordinate mismatch, or a stroke-only "fill: none" graphic with paths that don't actually draw the cap cluster. Compare to known-good `cherry-mx2a-revision.svg` (7652 bytes, 58 path elements) — Prussian Alert is roughly half the path density, suggesting the SVG was generated incomplete or some paths were elided.
-- suggested fix: `/ship-asset` brander re-renders the hero from a fresh prompt. Keycap piece per the bearings hero-art directive: top-down profile silhouette of 6 GMK CYL keycaps, deep-Prussian-red focal cap centered, warm-bronze stroke on the rest. Existing `heroImageAlt` is good — reuse it. Replace the SVG + provenance JSON at the same path. Iterate ticks the row [x] post-deploy.
+- evidence: user-spotted at 2026-05-10T14:18:00Z. Initial oversight diagnosis suspected malformed paths or viewBox issues — that was wrong. Real root cause surfaced after Phase 23 shipped and the user reported the SAME XML-parser-error message ("error on line 23 at column 8: Double hyphen within comment: <!-- ") on three of the new group-buy hero SVGs (greg-2, sweet-nightmare) plus the Prussian Alert hero. The shared root cause: brander-emitted SVGs use `<!-- ---------------- Section Title ---------------- -->` style separator comments, and runs of `--` inside an XML comment violate the XML well-formedness rule (only `-->` is permitted as a `--` sequence, and only as the closing token). Browsers serve the file 200 OK but the XML parser that handles `<svg>` referenced via `<img src=...>` rejects it as malformed, producing a broken-image icon. King-of-the-Seas had the same bug but the user didn't flag it — caught by the new validity gate.
+- fix: applied a perl regex pass over all 4 affected SVGs (gmk-cyl-prussian-alert, kbdfans-gmk-cyl-greg-2, kbdfans-gmk-cyl-king-of-the-seas, kbdfans-gsk-sweet-nightmare). Inside each `<!-- ... -->` block, runs of 2+ `-` characters are replaced with the same number of `=` characters. Visual length of the separator preserved; XML well-formedness restored.
+- regression guard: new vitest at `apps/web/src/__tests__/svg-validity.test.ts` walks every SVG under `apps/web/public/{hero-art,group-buy-art}/` and asserts each comment block's interior contains no `--`. Future brander outputs (or hand-edits) that re-introduce the bug fail at `pnpm verify` time before they can land. New directories the loop ships SVGs to should be added to the test's `SVG_DIRS` list.
 - source: user
 
 ### [needs-user-call] [MED] / — production GA `/g/collect` beacons returning HTTP 503
