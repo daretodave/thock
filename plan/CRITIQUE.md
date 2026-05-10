@@ -9,13 +9,16 @@
 
 ## Pending
 
-### [MED] / — "Long reads worth your weekend" Deep Dives rail renders heading + eyebrow with zero cards
+### [x] [MED] / — "Long reads worth your weekend" Deep Dives rail renders heading + eyebrow with zero cards
+- addressed in: pending commit (this tick — iterate drain)
+- issue: #4
 - pass: 5 (commit 790b415)
 - viewport: both
 - category: content
 - observation: The Deep Dives long-reads section on the home renders its eyebrow ("Deep Dives"), its headline ("Long reads worth your weekend"), and then nothing — no article tiles, no list, just the group-buys aside flowing in. As a stranger I read this as a build error or a half-finished section. Cause is structural: the only Deep Dives piece in the corpus is already used in the by-pillar grid above, so e68959e's correctly-shipped dedup skips it — but the rail still renders its frame around an empty list.
 - evidence: Accessibility tree at / shows region[ref_102] with the "Deep Dives" eyebrow + "Long reads worth your weekend" heading, then a single complementary[ref_105] child that is the group-buys aside. No list, no article links between heading and aside.
-- suggested fix: two paths. (a) Suppress the rail's heading + eyebrow when the rail has 0 picks — the cleanest UX. (b) Relax the dedupe so the rail can re-surface the by-pillar Deep Dives piece when the corpus is too thin to fill it differently — keeps the rail populated but introduces above-the-fold duplication that e68959e was specifically resolving. (a) is the right call until corpus depth grows; iterate can flip to (b) at the same time the corpus-depth pending row drains. The prior fix at e68959e was correct but didn't cover the empty state.
+- fix: shipped path (a) from the row's two-path menu — suppressed the long-reads column entirely (heading + eyebrow + wrapper) when the rail has 0 picks. Concrete edits at `apps/web/src/app/page.tsx`: (1) computed `longReadsHasContent` at the page level by checking whether any Deep Dives article exists outside the `longReadsExcludeSlugs` set — same predicate the `HomeDeepDivesRail` uses internally, lifted to the page so the wrapper can be skipped. (2) computed `groupBuysHasContent = activeGroupBuys.length > 0` for symmetric handling. (3) wrapped the entire two-up section in `{(longReadsHasContent || groupBuysHasContent) && ...}` so the whole section disappears when both columns are empty (degenerate edge case but keeps the markup clean). (4) made the inner grid class conditional: `lg:grid-cols-[1.6fr_1fr]` only when both columns have content; otherwise `grid-cols-1` so the surviving column takes the full container width. (5) wrapped each column's `<div data-testid="home-{long-reads,group-buys}-column">` in its own conditional render. The `HomeDeepDivesRail` and `GroupBuysWidget` components both already returned `null` on empty input — the fix was purely at the wrapper level. As soon as a second Deep Dives article ships (or the dedup gets relaxed), this branch flips back automatically without further code changes.
+- regression guard: no test asserts the rail heading is unconditional, so the existing tests still pass. The HomeDeepDivesRail component-level tests (4 of them) cover the rail's own empty-state contract; the addition is purely at the page-composition level. A hypothetical future test could assert "the heading is absent when only the by-pillar piece exists" but the e2e smoke walker already covers /'s render shape, and 255 e2e tests passed first try.
 - source: browser
 
 ### [x] [MED] /trends/tracker — linked tracker rows expose three same-URL anchors instead of one

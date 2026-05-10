@@ -82,6 +82,20 @@ export default function HomePage(): ReactElement {
   const longReadsExcludeSlugs = new Set<string>(
     byPillarPicks.map((a) => a.slug),
   )
+  // Critique pass 5 [MED]: the long-reads column rendered its
+  // "Deep Dives / Long reads worth your weekend" eyebrow + heading
+  // even when HomeDeepDivesRail's pick list was empty (the only
+  // Deep Dives piece had been deduped by e68959e). Compute whether
+  // the column will have content at the page level so the heading
+  // wrapper can be skipped when the rail would render nothing —
+  // and so the grid can reflow to give the group-buys widget the
+  // full container width when long-reads is empty.
+  const longReadsHasContent = articles.some(
+    (a) =>
+      a.frontmatter.pillar === 'deep-dives' &&
+      !longReadsExcludeSlugs.has(a.slug),
+  )
+  const groupBuysHasContent = activeGroupBuys.length > 0
   const itemListPaths = [...articles]
     .sort((a, b) =>
       b.frontmatter.publishedAt.localeCompare(a.frontmatter.publishedAt),
@@ -152,27 +166,39 @@ export default function HomePage(): ReactElement {
       </Container>
 
       {/* Two-up: long reads + group buys */}
-      <Container as="section" className="pb-12 sm:pb-16">
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.6fr_1fr] lg:gap-12">
-          <div data-testid="home-long-reads-column">
-            <HomeSectionHeading
-              kicker="Deep Dives"
-              title="Long reads worth your weekend"
-            />
-            <HomeDeepDivesRail
-              articles={articles}
-              tagsBySlug={tagsBySlug}
-              excludeSlugs={longReadsExcludeSlugs}
-            />
+      {(longReadsHasContent || groupBuysHasContent) && (
+        <Container as="section" className="pb-12 sm:pb-16">
+          <div
+            className={
+              longReadsHasContent && groupBuysHasContent
+                ? 'grid grid-cols-1 gap-10 lg:grid-cols-[1.6fr_1fr] lg:gap-12'
+                : 'grid grid-cols-1 gap-10'
+            }
+          >
+            {longReadsHasContent && (
+              <div data-testid="home-long-reads-column">
+                <HomeSectionHeading
+                  kicker="Deep Dives"
+                  title="Long reads worth your weekend"
+                />
+                <HomeDeepDivesRail
+                  articles={articles}
+                  tagsBySlug={tagsBySlug}
+                  excludeSlugs={longReadsExcludeSlugs}
+                />
+              </div>
+            )}
+            {groupBuysHasContent && (
+              <div data-testid="home-group-buys-column">
+                <GroupBuysWidget
+                  groupBuys={activeGroupBuys}
+                  vendors={vendors}
+                />
+              </div>
+            )}
           </div>
-          <div data-testid="home-group-buys-column">
-            <GroupBuysWidget
-              groupBuys={activeGroupBuys}
-              vendors={vendors}
-            />
-          </div>
-        </div>
-      </Container>
+        </Container>
+      )}
     </>
   )
 }
