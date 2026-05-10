@@ -43,7 +43,7 @@ the phase.
 
 **Real-data backfill (phases 18–20, promoted via /oversight 2026-05-09 from PHASE_CANDIDATES expand pass 1 score 8.0):**
 - [x] Phase 18 — Group buys backfill (scout researches active/announced group buys at CannonKeys, NovelKeys, Mode Designs, Wuque Studio, KBDfans; HEAD-probes vendor URLs; ship-data drops 4–6 records under `data/group-buys/<vendor>-<slug>.json`; **deletes** the fictional `cannonkeys-mode-sonnet-r2.json`; refreshes `data/vendors/` for any new vendors. Drains user-jot 40fefe2. **Detailed brief: `phase_18_group_buys_backfill.md`.**) — `e3dbac8`
-- [ ] Phase 19 — Trends backfill + schema additive (scout researches last-8-week movement; adds `note: string?` field to trends row schema in `packages/data`; backfills `data/trends/2026-W19.json` to ≥3 rows per category; renders `note` plain-text in `<TrackerRow>` when slug is null. Drains pass-3 MED single-row, pass-2 LOW em-dash, pass-3 LOW duplicate-link.)
+- [x] Phase 19 — Trends backfill + schema additive (scout researches last-8-week movement; adds `note: string?` field to trends row schema in `packages/data`; backfills `data/trends/2026-W19.json` to ≥3 rows per category; renders `note` plain-text in `<TrackerRow>` when slug is null. Drains pass-3 MED single-row, pass-2 LOW em-dash, pass-3 LOW duplicate-link.) — `9a0d19e`
 - [ ] Phase 20 — Switches / keycap-sets / boards backfill (scout researches 6–8 popular switches, 4–5 keycap sets, 3–4 boards; ship-data drops records. Updates ripple into `/sources` cite counts and `/by-pillar` densities; resolves pass-3 MED `/sources` "1 cite" uniformity.)
 
 > **After phase 20:** the loop transitions back to `/iterate` —
