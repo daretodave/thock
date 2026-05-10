@@ -1,13 +1,62 @@
 # Critique log
 
-> Last pass: 2026-05-09T20:10:00Z at commit 11c0777
-> Pass count: 3
-> Iterate-bias category: external-critique (carried forward from pass 2 — pass 3 added 6 more findings against the post-phase-15/16 surface; iterate should drain the highest-scoring rows first)
+> Last pass: 2026-05-09T21:05:00Z at commit b2692ac
+> Pass count: 4
+> Iterate-bias category: external-critique (carried forward — pass 4 added 6 more findings after iterate drained 7 rows from passes 2/3 + 3 user-jots since pass 3; iterate should drain the highest-scoring rows first, with the [HIGH] Mode Sonnet R2 date inconsistency at the top)
 
 > External-observer feedback for thock. Populated by `/critique`,
 > drained by `/iterate`. See `skills/critique.md` for the contract.
 
 ## Pending
+
+### [HIGH] /group-buys + /article/mode-sonnet-r2-group-buy-coverage + / — Mode Sonnet R2 buy dates contradict across three surfaces
+- pass: 4 (commit b2692ac)
+- viewport: both
+- category: data
+- observation: Three surfaces show three different timelines for the same product. /group-buys lists `2026-06-01 → 2026-07-15 / OPENS IN 22D`. The article body and its JSON-LD say the buy `opened on 2026-05-01 and is scheduled to close 2026-06-15` (37 days from today). The homepage "Don't miss the close" card shows `66d`. A reader who clicks through any pair of the three surfaces is told the buy is in three different states (announced future, currently open, closing-soon).
+- evidence: `data/group-buys/cannonkeys-mode-sonnet-r2.json` ships with `status: announced`, `startDate: 2026-06-01`, `endDate: 2026-07-15` (post-9255abe reframe to fix the prior 404 jot). `apps/web/src/content/articles/mode-sonnet-r2-group-buy-coverage.mdx` body still references the original 2026-05-01 → 2026-06-15 dates verbatim. `<GroupBuysWidget>` and `<HomeGroupBuysCard>` compute their countdowns from the JSON file, but the article copy + its JSON-LD `Event` was never updated when the data file was reframed. The 9255abe drain note acknowledged "the mode-sonnet-r2 article keeps its prior dates as historical news coverage" — but the result is editorial whiplash for any reader cross-referencing them.
+- suggested fix: single-source the buy timeline. Either (a) update `mode-sonnet-r2-group-buy-coverage.mdx` body + JSON-LD to match the data file (announced 2026-06-01 → 2026-07-15) and reframe the article as forward-looking coverage of an upcoming buy, or (b) revert the data file to `live` 2026-05-01 → 2026-06-15 if the user judges that the original article is the source of truth — and back-port the Mode Sonnet R2 row's `articleSlug` link so /trends/tracker can de-em-dash it. Path (a) is honest about the post-jot reframe; path (b) restores the original editorial intent. /oversight should pick.
+- source: browser
+
+### [MED] /article/building-mode-sonnet-with-oil-kings — first-person "I" breaks the unified "we" voice
+- pass: 4 (commit b2692ac)
+- viewport: both
+- category: voice
+- observation: Article body is written entirely in first-person singular: "I've been threatening to do this build for months", "sitting on my desk", "I'd try the FR4 plate", "I'm typing this article on the Sonnet". `bearings.md` says "First-person plural 'we' is the unified voice across editorial surfaces" — and the byline is `author: thock` (the org), so "I" breaks the institutional voice the iterate tick at commit 168e5c7 just unified for /about and /newsletter. Pass-3 caught the /about-vs-/newsletter mismatch but didn't sweep the article bodies.
+- evidence: Lede: "I've been threatening to do this build for months, and a free Sunday finally made it happen." H2 "What I'd change" uses "I" four more times in two paragraphs. Build-of-the-week framing carries the same drift in /article/beginners-switch-buying-guide (less aggressively) and the closing paragraphs of mode-sonnet-r2-group-buy-coverage.
+- suggested fix: rewrite the Ideas-pillar build-of-the-week articles to "we"/"our build" framing — same shape as 168e5c7's /about + /newsletter unification. Cheapest path is a content-curator pass over the affected article bodies; targeted scope avoids re-litigating tone for every article. If the user wants to keep first-person personality on Ideas pieces specifically, surface that as an /oversight call to add a contributor-byline model so "I" is honest (currently every article ships with `author: thock`).
+
+### [MED] /trends — pillar archive shows exactly one piece after the hero (data sparsity)
+- pass: 4 (commit b2692ac)
+- viewport: both
+- category: content
+- observation: Trends pillar's "More Trends pieces" archive renders exactly one card (Alice fade) after the hero. The pillar reads as "tracker plus one supporting essay" — a thin slice for the project's signature pillar. /news, /ideas, /deep-dives likely fan into the same one-card archive given identical content depth. The b2692ac heading rename ("More" not "All") fixed the literal-falsehood; the underlying density is the next layer.
+- evidence: Live /trends body: hero card `Reading the Trends Tracker`, then `Archive / More Trends pieces` with one card `The slow fade of Alice layouts` and nothing after. `apps/web/src/lib/data-runtime/manifest.generated.json` confirms only 2 trends-pillar articles exist.
+- suggested fix: this is the data-sparsity finding adjacent to the open `/sources uniform "1 cite"` and `/trends/tracker single-row` rows — all three resolve once the **Real-data backfill** phase candidate (PHASE_CANDIDATES at f64f06e, score 8.0) ships its Phase A + B work plus 2-3 new Trends pieces. As an interim, collapse the "More Trends pieces" section header when count ≤ 1 and surface the tracker preview card in its place. Symmetric collapse rule for /news, /ideas, /deep-dives.
+
+### [MED] /article/building-mode-sonnet-with-oil-kings — "Mentioned in this article" lists 2 of 10 named parts
+- pass: 4 (commit b2692ac)
+- viewport: both
+- category: content
+- observation: The "Mentioned in this article" index lists Mode Sonnet (board) and Gateron Oil King (switch). Body specifically names eight other parts the reader might want to look up: Staebies V3, GMK Striker R3, KAT Milkshake, Bakeneko65, Geon Frog, Endgame84, 205g0 lube, XHT-BDZ. The index promises a key reference and underdelivers, which makes the section feel decorative rather than functional.
+- evidence: Build-details list mentions `Staebies V3` (mono span), `205g0`, `XHT-BDZ`, `GMK Striker R3`. Body comparisons: "Bakeneko65 I built last summer", "compared to a Geon Frog with Oil Kings". None appear under "Mentioned in this article" — only the front-matter `mentionedParts` slugs render.
+- suggested fix: two paths. (a) Auto-extract part mentions from `<PartReference>` MDX usage AND mono spans matching known part slugs in `data/{switches,keycap-sets,boards}/`, and surface the union under the index. (b) Relabel the section to `Featured products` or `Build sheet` and accept the curated 2-item shape — but mark the un-indexed body mentions explicitly. (a) needs an MDX walker (similar shape to the per-citation source extractor in /sources audit row); (b) is a 1-line title rename. (b) ships now; (a) is phase-shaped.
+
+### [LOW] / — Deep Dives long-reads card duplicates the by-pillar Deep Dives card
+- pass: 4 (commit b2692ac)
+- viewport: desktop
+- category: content
+- observation: Home "Long reads worth your weekend" rail surfaces the exact same Oil King deep-dive card that appeared two scroll-lengths up under "By pillar / Deep Dives". By the time the visitor reaches the group-buys footer they've seen the same headline + lede + hero image twice on the same screen. Same root pattern as the recently-drained hero+by-pillar duplicate (commit e10a8b6) — a different slot but the same multi-surface independent-pick problem.
+- evidence: "By pillar" Deep Dives card: "Why the Gateron Oil King sounds the way it does" (May 4, 5 min read). "Long reads worth your weekend" card immediately below: same headline, same byline, same dek snippet. `apps/web/src/components/home/HomeDeepDivesRail.tsx` picks the newest deep-dive article from the unfiltered list; `<LatestByPillar>` separately picks the same article for its Deep Dives slot.
+- suggested fix: thread `excludeSlugs` from `<LatestByPillar>`'s resolved picks into `<HomeDeepDivesRail>` (same pattern as the e10a8b6 fix). One-liner at the home page: compute `byPillarPickSlugs = new Set(resolveLatestByPillar(...).map(a => a.slug))` and pass it as `excludeSlugs` to the deep-dives rail. Or — alternative — seed a second deep-dive piece so the long-reads rail naturally has its own pick (overlaps with the data-sparsity backfill phase).
+
+### [LOW] /tag/gateron — latest-first sort weights peripheral tag mentions above core articles
+- pass: 4 (commit b2692ac)
+- viewport: both
+- category: navigation
+- observation: Tag page promises "4 articles tagged Gateron" but the top result is "Reading the Trends Tracker" — a methodology explainer that mentions Gateron only because Oil King is on the tracker that week. Sorting by latest puts a tangentially-tagged article above the two articles that are actually about Gateron switches.
+- evidence: Header reads "#gateron / 4 articles tagged Gateron". First card: "Trends / Reading the Trends Tracker" (May 8). Second: "Ideas / Pairing Oil Kings with the Mode Sonnet" (May 7). Third: "Deep Dives / Why the Gateron Oil King sounds the way it does" (May 4) — the article most directly about the tag. Sort is `publishedAt desc`.
+- suggested fix: relevance signal for tag pages is hard without analytics. Two cheap options. (a) Downweight peripheral tag mentions: when an article references a tag only inside `<PartReference>` (not as a primary `tags` frontmatter entry), exclude it from the tag's article list. (b) Expose a "most relevant" default sort with "latest first" as a toggle — relevance computed from frontmatter primary-tag presence + body-mention density. (a) is the lighter-touch fix and matches the data model (tags vs. mentioned-parts already distinguishes intent).
 
 ### [x] [MED] / — "By pillar" grid only renders 4 of the 5 pillars; Ideas is silently excluded
 - addressed in: pending commit (this tick)
