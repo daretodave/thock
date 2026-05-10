@@ -1,0 +1,16 @@
+{
+  "kind": "hero-art",
+  "target": "Z:/keyboard/apps/web/public/hero-art/cherry-mx2a-revision.svg",
+  "source": "plan/bearings.md § Article hero art — colorful keyboard SVGs",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject",
+  "size": [1200, 750],
+  "subject": "Cherry MX2A switch cross-section, side view — top housing with stem hole, cruciform-mount POM stem column drawn in cherry-red splash, 5-coil spring, bent-leaf contact, and bottom housing with pin contacts; a thin dashed callout traces from the stem-housing interface to a magnified circular inset showing the new factory grease ring with scattered lube dots",
+  "splash_color": "oklch(0.6 0.19 30)",
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": [],
+  "prompt": "Mirror the Gateron Oil King deep-dive's visual rhythm: warm-grey 2px stroke, single coherent cross-section reading as one diagram with subdued didactic ticks. The composition occupies ~85% of canvas width and ~75% of height. The stem column is the focal 'what changed' element so the cherry-red splash lands there (cruciform mount + body fill with a translucent wash, plus a same-hue centerline). The MX2A revision's claim-to-fame is factory lube on the stem-rail interface, so the top-right magnified inset isolates that grease ring at 1:1 attention — the inset is itself a small cherry-red disc with scattered dots, making the article's thesis legible at thumbnail size. Housing halves and the leaf contact stay in stroke-only treatment, so the eye is led from the colored stem through the seam line to the colored inset.",
+  "revision": 1,
+  "generated_by": "brander (sub-agent)",
+  "generated_at": "2026-05-10",
+  "commit_at_render": "pending"
+}

@@ -497,7 +497,7 @@
             -20,
             -22
           ],
-          "articleSlug": null,
+          "articleSlug": "cherry-mx2a-revision",
           "note": "Enthusiast threads still rate MX2A as 'fine, not exciting'; with HMX and Gateron eating the mid-tier linear slot, the MX2A discourse has gone quiet."
         },
         {
@@ -713,7 +713,7 @@
             -13,
             -14
           ],
-          "articleSlug": null,
+          "articleSlug": "cherry-mx2a-revision",
           "note": "MX2A buzz has cooled and the top esports keyboards moved to Hall-effect/optical (Wooting, Razer V3 Pro); Cherry's relevance now lives mostly through GMK doubleshot runs."
         }
       ],
@@ -721,6 +721,60 @@
     }
   ],
   "articles": [
+    {
+      "slug": "cherry-mx2a-revision",
+      "frontmatter": {
+        "slug": "cherry-mx2a-revision",
+        "title": "What Cherry's MX2A revision actually changed",
+        "lede": "Cherry's MX2A landed in 2023 with a real engineering update — factory lube, tighter tolerances, the same 100M-press lifespan. The reason the discourse cooled isn't that the switch failed; it's that the enthusiast slot it aimed at was already claimed by the time it arrived.",
+        "author": "thock",
+        "pillar": "deep-dives",
+        "tags": [
+          "cherry",
+          "mx2a",
+          "switches",
+          "deep-dive",
+          "linear"
+        ],
+        "publishedAt": "2026-05-10T19:00:00.000Z",
+        "updatedAt": null,
+        "heroImage": "/hero-art/cherry-mx2a-revision.svg",
+        "heroImageAlt": "Cherry MX2A switch cross-section, side view — top housing with stem hole, cruciform-mount POM stem column drawn in cherry-red splash, 5-coil spring, bent-leaf contact, and bottom housing with pin contacts; a thin dashed callout traces from the stem-housing interface to a magnified circular inset showing the new factory grease ring with scattered lube dots.",
+        "featured": false,
+        "popularityScore": 0,
+        "guideSection": null,
+        "mentionedParts": [
+          {
+            "id": "mx2a-red",
+            "kind": "switch",
+            "slug": "cherry-mx2a-red"
+          },
+          {
+            "id": "mx2a-silent",
+            "kind": "switch",
+            "slug": "cherry-mx2a-silent-black"
+          },
+          {
+            "id": "hmx-cloud",
+            "kind": "switch",
+            "slug": "hmx-cloud"
+          },
+          {
+            "id": "gat-pro-3",
+            "kind": "switch",
+            "slug": "gateron-pro-3-yellow"
+          },
+          {
+            "id": "sapphire",
+            "kind": "switch",
+            "slug": "tecsee-sapphire-v2"
+          }
+        ]
+      },
+      "body": "\nCherry's MX2A revision was announced on 2023-08-24 with the kind of plainspoken press copy that the enthusiast scene almost never reads charitably: a redesigned stem geometry, a factory grease ring, and the same nominal weights and lifespans the MX line has shipped since the 1980s. Two-and-a-half years later, the live <a href=\"/trends/tracker\">Trends Tracker</a> has the MX2A line slipping at score −22 and Cherry-as-a-brand at −14, and the r/mk consensus has cooled to a polite shrug. The interesting question isn't whether the MX2A is good. It is, on its own terms. The question is what slot it was aimed at, and what was already sitting in that slot when it arrived.\n\n## What MX2A actually changed\n\nThe MX2A is the first end-to-end housing revision Cherry has shipped to its core MX line in roughly thirty years. Three things moved. First, the stem and housing rails were retooled with tighter tolerances, which is the material reason the switch comes out of the bag with less stem wobble than legacy MX. Second, Cherry introduced a factory grease ring around the stem rails — chemically similar to Krytox 205g0 in the descriptions that builders have published, applied as a film rather than a paste. Third, the spring was retuned for the new internal geometry; the published 45g actuation and 75g bottom-out on <PartReference id=\"mx2a-red\" /> read heavier in the hand than the numbers suggest, but the curve itself is closer to even than the old MX Red's progressive feel. The 100M-press lifespan claim is the same one Cherry has carried for decades, and on the bench measurements it survives.\n\n<Source href=\"https://www.cherry-world.com/cherry-mx-2a\">Cherry's MX2A product page</Source> is unfussy about all of this. The marketing copy doesn't promise enthusiast-tier feel; it promises a smoother, quieter MX. That's what shipped.\n\n## The enthusiast slot was already taken\n\nThe trouble for the MX2A was not the engineering. It was the calendar. By the time the revision shipped in late 2023, the under-thirty-cent linear bracket had already been settled by makers who treated factory lube and tolerance tightening as table stakes rather than as headline features. The <PartReference id=\"hmx-cloud\" /> arrived weeks after the MX2A and immediately occupied the budget linear slot — light 42g actuation, an LY stem in PA12-over-PA2.0 housings, and a clack-forward voicing that builders chasing a poppy top-out preferred over Cherry's deeper, more conservative tune. <PartReference id=\"gat-pro-3\" /> had already retuned the workhorse linear pitch around a PC-top, nylon-bottom, POM-stem stack — the same housing pairing that <a href=\"/article/gateron-oil-king-deep-dive\">the Oil King uses to sound the way it sounds</a>, applied to a $0.30 switch. Cherry's all-nylon MX2A housing, by contrast, lands in a single register; it doesn't have the seam between two resins that gives the Pro 3.0 its acoustic articulation.\n\nFor the boutique tactile crowd the gap is wider still. <PartReference id=\"sapphire\" /> is the kind of switch the scene compares all other tactiles against: UHMWPE stem, sparkly PC housings, a bump sitting at the top of the stroke. Cherry doesn't have a tactile in the MX2A line that competes at that bench — and that isn't really what Cherry was trying to do.\n\n## How the spec sheet reads against the field\n\nRead the spec sheets side-by-side and the picture is consistent. The MX2A Red sits at 45g/75g with nylon-on-nylon and a POM stem; the Pro 3.0 Yellow at 50g/67g with PC-top, nylon-bottom, POM stem; HMX Cloud at 42g/50g with nylon-on-nylon and a mixed-material stem. Travel is 4.0mm across the field except for HMX at 3.9mm. All are factory-lubed.\n\n<Callout type=\"note\" title=\"The bottom-out number reads heavy\">\n  Cherry's published 75g bottom-out on the MX2A Red surprised reviewers — that's a real spec, not a typo. Force curves measured by community testers track Cherry's number within a couple of grams; the switch genuinely sits in a heavier register than its 45g actuation might suggest. It's part of why the MX2A reads as \"firm, conservative\" against the lighter, poppier voicings of HMX or the mid-weight clean of the Pro 3.0.\n</Callout>\n\nWhat jumps out is how narrow the differentiation has become. The MX2A is not bad on any axis. It is also not first on any axis — not lightest, not crispest, not the deepest thock. The <PartReference id=\"mx2a-silent\" /> line is the one place where Cherry retains a real edge, because rubber-dampened silent linears are a smaller and more demanding category and Cherry's tolerance work translates more cleanly into a quieter switch than into a more interesting one.\n\n## Where the discourse cooled\n\nThe cool-down isn't anger; it's diminished urgency. The pattern in r/mk threads and on Geekhack across late 2024 and through 2025 is consistent: an MX2A first-impressions post will earn a few thoughtful replies — usually \"smoother than legacy MX, fine, nothing wrong with it\" — and then drop off the front page. There are no MX2A-vs-the-world bracket threads of the kind that ran for HMX in 2024 or for Tecsee through most of 2025, and no MX2A entry on the build-of-the-week rotation among the larger keyboard YouTube channels. The switch hasn't been rejected. It has been catalogued.\n\nThat's a particular kind of cool. It's the cool a product earns when it does the job it set out to do but the job has been redefined while the product was being shipped. The MX2A is what an MX should be in 2026. The enthusiast bar moved to what an MX could be — and other makers got there first.\n\n## Cherry through GMK\n\nNone of this is a story about Cherry being out of the hobby. The opposite. Cherry GmbH remains the manufacturer behind GMK doubleshot keycap sets, and GMK doubleshot is still the highest-cachet keycap product the scene buys; every group buy of any consequence on the keycap side is rendered in Cherry's resin and on Cherry's tooling. A reader who hasn't owned a Cherry switch in five years has almost certainly typed on Cherry plastic in the last week. The brand's center of gravity moved from switches to keycap manufacturing some time around the MX2A's arrival, and the move is durable. The hot-swap socket on a builder's $700 custom may hold a Gateron or an HMX, but the legend layer above it is overwhelmingly Cherry's.\n\nThe MX2A is best read in that light. It's the switch Cherry ships to keep the MX line current for OEM contracts, esports prebuilts, and the office-keyboard market — the markets where 100M presses, predictable supply, and a recognized name still close deals. Those markets are large. They are not the markets the enthusiast scene watches.\n\n## What we're watching\n\nTwo threads. The first is whether Cherry ships a third-tier MX2A variant aimed at the enthusiast bench — a heavier-spring or PC-housing experiment that takes the new tolerance work and points it at something with a more distinctive voicing. The patent filings haven't surfaced anything along those lines, but the tooling for the variant exists. The second is the slow displacement of mechanical Cherry from the high-performance esports tier by Hall-effect and optical switches; Wooting, Razer's V3 Pro line, and the analog-input crowd have moved off mechanical Cherry entirely, and the question is whether that displacement reaches the office-prebuilt tier before the next MX revision lands.\n\nUntil either thread tightens, the read is steady. The MX2A is a fine switch. Cherry is a load-bearing supplier to the hobby through GMK. The discourse cooled because the bar moved, not because the switch failed — and the next time it heats up will be the next time Cherry decides to chase the bar instead of meeting the brief.\n",
+      "readTime": 7,
+      "filePath": "Z:\\keyboard\\apps\\web\\src\\content\\articles\\cherry-mx2a-revision.mdx"
+    },
     {
       "slug": "gmk-cyl-prussian-alert",
       "frontmatter": {
@@ -1196,6 +1250,11 @@
       "category": "profile"
     },
     {
+      "slug": "mx2a",
+      "name": "MX2A",
+      "category": "switch"
+    },
+    {
       "slug": "novelkeys",
       "name": "NovelKeys",
       "category": "brand"
@@ -1246,6 +1305,11 @@
       "category": "layout"
     },
     {
+      "slug": "switches",
+      "name": "Switches",
+      "category": "misc"
+    },
+    {
       "slug": "tactile",
       "name": "Tactile",
       "category": "switch"
@@ -1276,5 +1340,5 @@
       "category": "brand"
     }
   ],
-  "generatedAt": "2026-05-10T04:43:20.846Z"
+  "generatedAt": "2026-05-10T05:01:59.871Z"
 }
