@@ -13,13 +13,16 @@
 
 ## Pending
 
-### [MED] / — Trending "what's moving on the tracker" rail includes a `flat` tile (framing dilution)
+### [x] [MED] / — Trending "what's moving on the tracker" rail includes a `flat` tile (framing dilution)
+- addressed in: bb70360 (this tick — iterate drain)
+- issue: #34
 - pass: 9 (commit 40b2e55)
 - viewport: desktop
 - category: copy
 - observation: The home-page trending rail is headed "Trending — what's moving on the tracker" (Week 19) and contains a tile for MT3 profile labeled `flat`. A flat item is by definition not moving. Within a six-tile preview rail, dedicating a slot to a non-mover dilutes the rail's promise and reads as filler — a first-time reader scanning to learn what's hot this week sees one tile that contradicts the framing. The rail's heading commits to movement; the tile delivers stasis.
 - evidence: `curl -s https://thock-coral.vercel.app/ | grep` → rendered text `<h2>Trending — what's moving on the tracker</h2>` and tile rendered with `data-testid="trending-tile"` `data-dir="flat"` for "MT3 profile".
-- suggested fix: filter the home-page trending rail to non-flat rows only (only `up` / `down` / `breakout` / `faller` directions belong under "what's moving"), OR rename the rail to "This week's tracker" so flat entries don't violate the framing. Probably one-line edit in the home-page trending rail selector. Add a unit test asserting the rail excludes `direction === 'flat'` rows.
+- fix: chained `.filter(row => row.direction !== 'flat')` before the existing `.slice(0, 6)` in `apps/web/src/components/home/TrendingStrip.tsx`. The strip now also hides itself entirely if every snapshot row is flat (extends the existing null/empty contract). On W19 data the MT3 profile flat tile is replaced by Alice layout (down -18%) — 13 of 15 W19 rows are non-flat so the rail still fills 6 tiles. Two new unit tests in TrendingStrip.test.tsx lock in: (1) mixed up+flat input yields only the up tile; (2) all-flat snapshot hides the strip. Considered (rejected) the alt suggestion of renaming the rail header to "This week's tracker" — the existing copy is editorially stronger (commits to movement) and the filter cleanly preserves it.
+- verify note: 409 e2e green parallel — no #418 flake this run.
 - source: browser
 
 ### [MED] /trends/tracker — Sleeper summary card highlights a row whose own editor's note says nothing's moving
