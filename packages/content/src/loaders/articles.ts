@@ -74,9 +74,24 @@ export function getArticlesByTag(tagSlug: string): Article[] {
 }
 
 /**
- * Related: same pillar OR ≥2 shared tags. Weight = sharedTags*2 +
- * (samePillar ? 3 : 0). Sort weight desc then publishedAt desc.
- * Excludes self. Caps at `n`.
+ * Related-articles ranking with a tag-overlap fallback.
+ *
+ * Weight = sharedTags*2 + (samePillar ? 3 : 0). Higher weight =
+ * stronger relation. Sort weight desc, then publishedAt desc.
+ *
+ * Two-tier filter (critique pass 5 [LOW] drain — the
+ * `/article/<news>/Keep reading rail thins to a single tile`
+ * row at line 47 of plan/CRITIQUE.md):
+ *
+ * 1. **Strict tier:** same pillar OR shared ≥ 2 tags. The original
+ *    contract — strong relations get top placement.
+ * 2. **Loose tier (fallback):** any article with shared ≥ 1 tag.
+ *    Used to backfill remaining slots when the strict tier
+ *    returns fewer than `n` picks.
+ *
+ * Excludes self. Caps at `n`. The return order surfaces strict
+ * picks first, then loose backfill — both already sorted by
+ * weight + publishedAt within their tier.
  */
 export function getRelatedArticles(article: Article, n = 4): Article[] {
   const candidates = getAllArticles().filter((a) => a.slug !== article.slug)
@@ -89,7 +104,6 @@ export function getRelatedArticles(article: Article, n = 4): Article[] {
       const weight = shared * 2 + (samePillar ? 3 : 0)
       return { article: a, weight, shared, samePillar }
     })
-    .filter((s) => s.samePillar || s.shared >= 2)
     .sort((a, b) => {
       if (b.weight !== a.weight) return b.weight - a.weight
       return b.article.frontmatter.publishedAt.localeCompare(
@@ -97,5 +111,12 @@ export function getRelatedArticles(article: Article, n = 4): Article[] {
       )
     })
 
-  return scored.slice(0, n).map((s) => s.article)
+  const strict = scored.filter((s) => s.samePillar || s.shared >= 2)
+  if (strict.length >= n) return strict.slice(0, n).map((s) => s.article)
+
+  const strictSlugs = new Set(strict.map((s) => s.article.slug))
+  const loose = scored.filter(
+    (s) => !strictSlugs.has(s.article.slug) && s.shared >= 1,
+  )
+  return [...strict, ...loose].slice(0, n).map((s) => s.article)
 }

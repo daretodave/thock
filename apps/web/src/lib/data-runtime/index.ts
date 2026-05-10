@@ -137,9 +137,15 @@ export function getArticlesByTag(tagSlug: string): Article[] {
 
 /**
  * Same scoring as `@thock/content`'s `getRelatedArticles`:
- * weight = sharedTags*2 + (samePillar ? 3 : 0); filter to
- * samePillar OR ≥2 shared tags; sort weight desc, then
- * publishedAt desc; cap at n.
+ * weight = sharedTags*2 + (samePillar ? 3 : 0); two-tier filter
+ * (strict: samePillar OR shared ≥ 2 → loose backfill: shared ≥ 1)
+ * to keep the rail from thinning to a single tile when the strict
+ * tier returns fewer than `n`. Sort weight desc, then publishedAt
+ * desc within each tier. Cap at n.
+ *
+ * Critique pass 5 [LOW] drain (line 47 of plan/CRITIQUE.md): news
+ * articles with thin same-pillar siblings + low cross-pillar
+ * tag overlap stranded the "Keep reading" rail at 1 tile.
  */
 export function getRelatedArticles(article: Article, n = 4): Article[] {
   const candidates = manifest.articles.filter((a) => a.slug !== article.slug)
@@ -152,7 +158,6 @@ export function getRelatedArticles(article: Article, n = 4): Article[] {
       const weight = shared * 2 + (samePillar ? 3 : 0)
       return { article: a, weight, shared, samePillar }
     })
-    .filter((s) => s.samePillar || s.shared >= 2)
     .sort((a, b) => {
       if (b.weight !== a.weight) return b.weight - a.weight
       return b.article.frontmatter.publishedAt.localeCompare(
@@ -160,7 +165,14 @@ export function getRelatedArticles(article: Article, n = 4): Article[] {
       )
     })
 
-  return scored.slice(0, n).map((s) => s.article)
+  const strict = scored.filter((s) => s.samePillar || s.shared >= 2)
+  if (strict.length >= n) return strict.slice(0, n).map((s) => s.article)
+
+  const strictSlugs = new Set(strict.map((s) => s.article.slug))
+  const loose = scored.filter(
+    (s) => !strictSlugs.has(s.article.slug) && s.shared >= 1,
+  )
+  return [...strict, ...loose].slice(0, n).map((s) => s.article)
 }
 
 export function getAllNewsletters(): Newsletter[] {
