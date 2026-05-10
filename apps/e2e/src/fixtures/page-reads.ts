@@ -170,6 +170,27 @@ export const pageReads: Record<string, PageRead> = {
     // here. Phase 12's tag.spec.ts covers the populated case.
     ...html([{ kind: 'h1-matches', pattern: /^#/ }]),
   },
+  '/part/[kind]': {
+    pattern: '/part/[kind]',
+    ...html([
+      // Phase 21: kind-index pages carry their per-kind heading and
+      // at least one part row.
+      { kind: 'h1-matches', pattern: /(switches|keycap sets|boards)/i },
+      {
+        kind: 'min-link-count',
+        selector: '[data-testid="part-index-card"]',
+        min: 1,
+      },
+    ]),
+  },
+  '/part/[kind]/[slug]': {
+    pattern: '/part/[kind]/[slug]',
+    ...html([
+      // Phase 21: detail page carries the part name as h1, plus the
+      // spec list and either an article rail or the empty state.
+      { kind: 'h1-present' },
+    ]),
+  },
   '/sitemap.xml': {
     pattern: '/sitemap.xml',
     isHtml: false,

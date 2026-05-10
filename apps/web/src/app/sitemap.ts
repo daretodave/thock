@@ -1,5 +1,11 @@
 import type { MetadataRoute } from 'next'
-import { getAllArticles, getAllTags } from '@/lib/data-runtime'
+import {
+  getAllArticles,
+  getAllBoards,
+  getAllKeycapSets,
+  getAllSwitches,
+  getAllTags,
+} from '@/lib/data-runtime'
 import { canonicalUrl, PILLARS } from '@thock/seo'
 
 /**
@@ -47,5 +53,41 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.5,
   }))
 
-  return [...staticEntries, ...articleEntries, ...tagEntries]
+  const partKindEntries: MetadataRoute.Sitemap = [
+    { url: canonicalUrl('/part/switch'), lastModified: now, priority: 0.6 },
+    {
+      url: canonicalUrl('/part/keycap-set'),
+      lastModified: now,
+      priority: 0.6,
+    },
+    { url: canonicalUrl('/part/board'), lastModified: now, priority: 0.6 },
+  ]
+
+  const switchEntries: MetadataRoute.Sitemap = getAllSwitches().map((s) => ({
+    url: canonicalUrl(`/part/switch/${s.slug}`),
+    lastModified: s.updatedAt,
+    priority: 0.6,
+  }))
+  const keycapSetEntries: MetadataRoute.Sitemap = getAllKeycapSets().map(
+    (k) => ({
+      url: canonicalUrl(`/part/keycap-set/${k.slug}`),
+      lastModified: k.updatedAt,
+      priority: 0.6,
+    }),
+  )
+  const boardEntries: MetadataRoute.Sitemap = getAllBoards().map((b) => ({
+    url: canonicalUrl(`/part/board/${b.slug}`),
+    lastModified: b.updatedAt,
+    priority: 0.6,
+  }))
+
+  return [
+    ...staticEntries,
+    ...articleEntries,
+    ...tagEntries,
+    ...partKindEntries,
+    ...switchEntries,
+    ...keycapSetEntries,
+    ...boardEntries,
+  ]
 }

@@ -216,6 +216,29 @@ export function getReferencedParts(article: Article): ResolvedPart[] {
   return out
 }
 
+/**
+ * Articles whose `frontmatter.mentionedParts` references a given
+ * (kind, slug) part. Returns publishedAt-desc order.
+ *
+ * Used by per-part pages (phase 21) to render the "Mentioned in"
+ * rail for each surface.
+ */
+export function getArticlesMentioningPart(
+  kind: ResolvedPart['kind'],
+  slug: string,
+): Article[] {
+  const matches = manifest.articles.filter((article) => {
+    const refs = article.frontmatter
+      .mentionedParts as ArticlePartReference[]
+    return refs.some((ref) => ref.kind === kind && ref.slug === slug)
+  })
+  return matches.sort(
+    (a, b) =>
+      new Date(b.frontmatter.publishedAt).getTime() -
+      new Date(a.frontmatter.publishedAt).getTime(),
+  )
+}
+
 /** Manifest build timestamp — useful for debugging staleness. */
 export function manifestGeneratedAt(): string {
   return manifest.generatedAt

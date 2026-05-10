@@ -26,16 +26,17 @@ describe('<MentionedPartsRail>', () => {
     expect(container.firstChild).toBeNull()
   })
 
-  // Regression guard for /critique pass 6 [MED] #15: items render
-  // as plain `<li>` descriptive entries — no `<a>` descendant, no
-  // bordered card chrome — so the visual treatment matches the
-  // (currently) non-interactive nature of the rail. When per-part
-  // pages ship, this assertion gets relaxed to permit anchors.
-  it('renders items as plain <li> with no anchor descendant', () => {
+  // Phase 21 — items wrap in a `<Link>` to /part/<kind>/<slug>.
+  // (Previously, /critique pass 6 [MED] #15 stripped the card chrome
+  // because there were no per-part destinations; phase 21 ships the
+  // destinations so the items become real anchors.)
+  it('wraps each item in a <Link> to /part/<kind>/<slug>', () => {
     render(<MentionedPartsRail parts={[FAKE_SWITCH]} />)
     const rail = screen.getByTestId('mentioned-parts-rail')
     const item = rail.children[0] as HTMLElement
     expect(item.tagName).toBe('LI')
-    expect(item.querySelector('a')).toBeNull()
+    const anchor = item.querySelector('a')
+    expect(anchor).not.toBeNull()
+    expect(anchor!.getAttribute('href')).toBe('/part/switch/gateron-oil-king')
   })
 })

@@ -30,6 +30,9 @@ const STATIC: CanonicalUrl[] = [
   { path: '/newsletter', pattern: '/newsletter', kind: 'html' },
   { path: '/search', pattern: '/search', kind: 'html' },
   { path: '/sources', pattern: '/sources', kind: 'html' },
+  { path: '/part/switch', pattern: '/part/[kind]', kind: 'html' },
+  { path: '/part/keycap-set', pattern: '/part/[kind]', kind: 'html' },
+  { path: '/part/board', pattern: '/part/[kind]', kind: 'html' },
   { path: '/sitemap.xml', pattern: '/sitemap.xml', kind: 'xml' },
   { path: '/robots.txt', pattern: '/robots.txt', kind: 'text' },
   { path: '/feed.xml', pattern: '/feed.xml', kind: 'xml' },
@@ -73,6 +76,18 @@ function listTagSlugs(root: string): string[] {
   return parsed.tags.map((t) => t.slug).sort()
 }
 
+function listPartSlugs(
+  root: string,
+  kind: 'switches' | 'keycap-sets' | 'boards',
+): string[] {
+  const dir = resolve(root, `data/${kind}`)
+  if (!existsSync(dir)) return []
+  return readdirSync(dir)
+    .filter((f) => f.endsWith('.json'))
+    .map((f) => f.replace(/\.json$/, ''))
+    .sort()
+}
+
 /**
  * Single source of truth for every URL the site serves. Static
  * landings + dynamic articles + tags + per-pillar feeds. Adding a
@@ -94,6 +109,27 @@ export function getCanonicalUrls(): CanonicalUrl[] {
     dynamic.push({
       path: `/tag/${slug}`,
       pattern: '/tag/[slug]',
+      kind: 'html',
+    })
+  }
+  for (const slug of listPartSlugs(root, 'switches')) {
+    dynamic.push({
+      path: `/part/switch/${slug}`,
+      pattern: '/part/[kind]/[slug]',
+      kind: 'html',
+    })
+  }
+  for (const slug of listPartSlugs(root, 'keycap-sets')) {
+    dynamic.push({
+      path: `/part/keycap-set/${slug}`,
+      pattern: '/part/[kind]/[slug]',
+      kind: 'html',
+    })
+  }
+  for (const slug of listPartSlugs(root, 'boards')) {
+    dynamic.push({
+      path: `/part/board/${slug}`,
+      pattern: '/part/[kind]/[slug]',
       kind: 'html',
     })
   }
