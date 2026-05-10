@@ -1,0 +1,37 @@
+---
+slug: keychron-q-ultra-zmk
+title: "Keychron's Q Ultra ZMK series brings 660h battery to the prebuilt-premium tier"
+lede: "Keychron used CES 2026 to announce the Q Ultra line — Q1 through Q6 prebuilts running ZMK rather than QMK/VIA. The 660h battery claim is the headline; the firmware swap is the actual story."
+author: thock
+pillar: news
+tags: [keychron, zmk, wireless, polling-rate, prebuilt]
+publishedAt: '2026-05-10T21:00:00.000Z'
+updatedAt: null
+heroImage: /hero-art/keychron-q-ultra-zmk.svg
+heroImageAlt: "Top-down silhouette of a 75 percent prebuilt keyboard (Keychron Q Ultra family — function row plus five main rows with a right-hand navigation column) in 2px warm-grey stroke, with a vivid-blue wireless and full-battery indicator badge (Bluetooth glyph and three-segment battery) cradled above the upper-right corner of the case as the focal accent."
+featured: false
+popularityScore: 0
+mentionedParts: []
+---
+
+Keychron used its CES 2026 slot to announce the Q Ultra series — wireless versions of the Q1, Q2, Q3, Q5, and Q6 prebuilts, running ZMK firmware rather than the QMK/VIA stack the existing Q line ships with. The headline number is Keychron's published battery claim of up to 660 hours per charge alongside an 8K polling-rate ceiling. The Q1 HE 8K Marble — the Hall-effect variant that anchors the polling story — reached reviewers in April. <Source href="https://www.tomshardware.com/peripherals/keyboards/keychron-launches-wireless-q-ultra-keyboard-series-with-up-to-660-hours-of-battery-life-with-8k-polling-thanks-to-zmk-firmware">Tom's Hardware's CES coverage</Source> has the full announcement spec sheet.
+
+<Callout type="note" title="What's confirmed and what isn't">
+  Keychron has named the lineup, the firmware platform, the 8K polling ceiling, and the 660h battery figure. Final retail pricing across the five sizes, regional availability windows, and reviewer-verified battery numbers under realistic use are not yet locked. Treat the 660h figure as Keychron's stated claim, not a measured result.
+</Callout>
+
+## What's in the line
+
+The Q Ultra series mirrors the existing Q-line size ladder: Q1 (75%), Q2 (65%), Q3 (TKL), Q5 (96%), and Q6 (full-size). Each is a wireless variant of its wired counterpart — the same gasket-mounted aluminum chassis Keychron has been iterating on for three years, now with a battery cavity, Bluetooth radio, and a charging path. The Q1 HE 8K Marble is the headline SKU and the one reviewers received first; it pairs the chassis with magnetic Hall-effect switches and is the variant Keychron is using to anchor the polling-rate claim. Approximate pricing for the Q1 HE 8K has been quoted around the $230 mark in early coverage, but ranges across the rest of the line are not yet finalized.
+
+## ZMK as the platform
+
+The interesting line in the press release is the firmware footnote. The Q Ultra runs <Mono>ZMK</Mono> rather than QMK/VIA — the open-source firmware stack that has been the dominant choice for wireless DIY builds (Glove80, Corne wireless variants, the Voyager) but has not, until now, anchored a flagship prebuilt from a Tier-1 vendor. ZMK's strengths are battery-life management and Bluetooth maturity; its historical weak spots are configurator tooling and feature parity with QMK on advanced macros. <Source href="https://zmk.dev">The project's documentation</Source> is the canonical reference. Keychron picking ZMK as the platform for a five-board flagship line is the most concrete signal yet that the firmware has moved out of niche-DIY into mainstream-prebuilt territory.
+
+## The polling and HE story
+
+The 8K polling claim slots into a wider shift the scene has been tracking for two years. Mechanical Cherry has been steadily displaced from the high-performance tier by Hall-effect and optical switches — Wooting, Razer's V3 Pro line, and the analog-input cohort have moved off mechanical entirely, a thread covered in detail in [the Cherry MX2A retrospective](/article/cherry-mx2a-revision). Keychron's HE variant lands directly in that conversation. 8K polling is the spec sheet number; the more meaningful detail is that an enthusiast-leaning prebuilt vendor — not a peripheral OEM — is shipping a Hall-effect board into the slot esports buyers used to fill with Wooting. The Q1 HE 8K Marble is the test case for whether Keychron can compete in that bracket on feel and configurator quality, not just on price.
+
+## What we're watching
+
+Three threads. First: how reviewer-measured battery life lands against the 660h claim. ZMK's power profile is genuinely strong, but published peak numbers usually assume backlight off, polling throttled, and conservative scan rates — the gap between best-case and typical-case is the number to watch. Second: whether Keychron's ZMK fork ships a configurator that hides the keymap-as-code workflow ZMK has historically required. The Q line's appeal has been that VIA flattens the customization curve; if Q Ultra owners drop into a devicetree file to remap a key, the line will lose half its addressable audience. Third: where the brand sits on the live [/trends/tracker](/trends/tracker) board four weeks from now. Keychron is currently up at +30, and a successful Q Ultra launch is the kind of release that either consolidates that lead or exposes it. Reviews are landing this month.

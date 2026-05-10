@@ -1,0 +1,16 @@
+{
+  "kind": "hero-art",
+  "target": "Z:/keyboard/apps/web/public/hero-art/keychron-q-ultra-zmk.svg",
+  "source": "plan/bearings.md § Article hero art — colorful keyboard SVGs",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject",
+  "size": [1200, 750],
+  "subject": "Top-down silhouette of a 75% prebuilt keyboard (Keychron Q Ultra family — function row plus five main rows with a right-hand navigation column) rendered in 2px warm-grey stroke, with a wireless / battery indicator badge (Bluetooth glyph plus three-segment full battery) in vivid blue cradled above the upper-right of the case as the focal accent",
+  "splash_color": "oklch(0.7 0.13 240)",
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": [],
+  "prompt": "Match the visual rhythm of mode-sonnet-r2-group-buy-coverage.svg and gmk-cyl-prussian-alert.svg — 2px warm-grey stroke, single-color splash, soft elliptical wash behind the subject, single splash-hue dot near the case lower-right echoing the Sonnet's brass-dot move. The article isn't about a keycap set, so per the news-pillar directive the headline shape is a board silhouette, not a cap cluster: a 75% Q Ultra layout fills ~85% width × ~75% height with the case in stroke-only treatment. The focal accent is a wireless-and-battery indicator badge floated above the upper-right corner of the case — Bluetooth rune cradled in a thin ring next to a horizontal battery pill with three full segments, the whole indicator carrying the splash hue. Splash is vivid blue (oklch 0.7 0.13 240) — distinct from the Sonnet's warm bronze and the Prussian Alert's deep red, signaling wireless / digital and reading clearly against the dark site background. The lone case-LED dot at the lower-right closes the series-feel triangle with the other two News heroes.",
+  "revision": 1,
+  "generated_by": "brander (sub-agent)",
+  "generated_at": "2026-05-10",
+  "commit_at_render": "pending"
+}

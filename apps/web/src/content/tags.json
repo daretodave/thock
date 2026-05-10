@@ -54,6 +54,11 @@
     { "slug": "mx2a", "name": "MX2A", "category": "switch" },
     { "slug": "switches", "name": "Switches", "category": "misc" },
     { "slug": "vendor", "name": "Vendor", "category": "misc" },
-    { "slug": "configurator", "name": "Configurator", "category": "misc" }
+    { "slug": "configurator", "name": "Configurator", "category": "misc" },
+    { "slug": "keychron", "name": "Keychron", "category": "brand" },
+    { "slug": "zmk", "name": "ZMK", "category": "misc" },
+    { "slug": "wireless", "name": "Wireless", "category": "misc" },
+    { "slug": "polling-rate", "name": "Polling rate", "category": "misc" },
+    { "slug": "prebuilt", "name": "Prebuilt", "category": "misc" }
   ]
 }
