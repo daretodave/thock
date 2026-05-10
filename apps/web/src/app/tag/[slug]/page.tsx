@@ -17,7 +17,7 @@ import {
 } from '@/lib/data-runtime'
 import { ArticleCard } from '@/components/home/ArticleCard'
 import { HomeSectionHeading } from '@/components/home/HomeSectionHeading'
-import { sortArticlesForArchive } from '@/components/pillar/PillarArchiveList'
+import { sortArticlesForTagArchive } from '@/components/pillar/PillarArchiveList'
 
 const CATEGORY_TINT: Record<Tag['category'], string> = {
   switch: 'text-tag-switch',
@@ -63,7 +63,7 @@ export default async function TagPage({
   const tag = getTagBySlug(slug)
   if (!tag) notFound()
 
-  const articles = sortArticlesForArchive(getArticlesByTag(tag.slug))
+  const articles = sortArticlesForTagArchive(getArticlesByTag(tag.slug), tag)
   const path = `/tag/${tag.slug}`
   const allTags = getAllTags()
   const tagsBySlug = new Map<string, Tag>(allTags.map((t) => [t.slug, t]))

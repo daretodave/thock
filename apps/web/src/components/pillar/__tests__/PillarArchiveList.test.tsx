@@ -3,6 +3,7 @@ import { render, screen } from '@testing-library/react'
 import {
   PillarArchiveList,
   sortArticlesForArchive,
+  sortArticlesForTagArchive,
 } from '../PillarArchiveList'
 import { makeArticle } from '@/components/home/__tests__/testFixtures'
 
@@ -34,6 +35,103 @@ describe('sortArticlesForArchive', () => {
     expect(
       sortArticlesForArchive([a, b]).map((article) => article.slug),
     ).toEqual(['aaa', 'zzz'])
+  })
+})
+
+// Regression guard for /critique pass 4 [LOW] (line 163 of plan/CRITIQUE.md):
+// /tag/gateron put the trends-tracker article (which mentions Gateron Oil
+// King in the rotation) above the Gateron Oil King deep-dive piece. The
+// title-match heuristic separates "primary topic" from "secondary mention."
+describe('sortArticlesForTagArchive', () => {
+  function tagged(slug: string, title: string, publishedAt: string) {
+    return makeArticle({
+      slug,
+      frontmatter: {
+        ...makeArticle().frontmatter,
+        slug,
+        title,
+        pillar: 'news',
+        publishedAt,
+      },
+    })
+  }
+
+  it('puts title-match articles above non-title-match even when the latter is newer', () => {
+    const tracker = tagged(
+      'trends-tracker-preview',
+      'Reading the Trends Tracker',
+      '2026-05-08T00:00:00.000Z',
+    )
+    const oilKing = tagged(
+      'gateron-oil-king-deep-dive',
+      'Why the Gateron Oil King sounds the way it does',
+      '2026-05-04T00:00:00.000Z',
+    )
+    const sorted = sortArticlesForTagArchive([tracker, oilKing], {
+      slug: 'gateron',
+      name: 'Gateron',
+    })
+    expect(sorted.map((a) => a.slug)).toEqual([
+      'gateron-oil-king-deep-dive',
+      'trends-tracker-preview',
+    ])
+  })
+
+  it('sorts by publishedAt desc within each tier', () => {
+    const a = tagged(
+      'gateron-recent',
+      'Gateron new release',
+      '2026-05-08T00:00:00.000Z',
+    )
+    const b = tagged(
+      'gateron-older',
+      'Gateron deep dive',
+      '2026-04-01T00:00:00.000Z',
+    )
+    const c = tagged(
+      'tracker',
+      'Reading the Trends Tracker',
+      '2026-05-09T00:00:00.000Z',
+    )
+    const sorted = sortArticlesForTagArchive([c, b, a], {
+      slug: 'gateron',
+      name: 'Gateron',
+    })
+    expect(sorted.map((article) => article.slug)).toEqual([
+      'gateron-recent',
+      'gateron-older',
+      'tracker',
+    ])
+  })
+
+  it('matches the tag slug as well as the display name', () => {
+    // Tag with a multi-word slug — name is "Group buys", slug is
+    // "group-buy". Both forms should produce a title match.
+    const a = tagged(
+      'group-buy-explainer',
+      'How a Group Buy Works',
+      '2026-05-08T00:00:00.000Z',
+    )
+    const b = tagged(
+      'unrelated',
+      'Switch deep dive',
+      '2026-05-09T00:00:00.000Z',
+    )
+    const sorted = sortArticlesForTagArchive([b, a], {
+      slug: 'group-buy',
+      name: 'Group buys',
+    })
+    expect(sorted[0]!.slug).toBe('group-buy-explainer')
+  })
+
+  it('falls back to publishedAt-desc when no article matches the tag in title', () => {
+    const a = tagged('a', 'First piece', '2026-04-01T00:00:00.000Z')
+    const b = tagged('b', 'Second piece', '2026-05-08T00:00:00.000Z')
+    const sorted = sortArticlesForTagArchive([a, b], {
+      slug: 'gateron',
+      name: 'Gateron',
+    })
+    expect(sorted.map((article) => article.slug)).toEqual(['b', 'a'])
   })
 })
 
