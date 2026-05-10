@@ -13,8 +13,16 @@ const KIND_LABEL: Record<ResolvedPart['kind'], string> = {
 }
 
 /**
- * "Mentioned in this article" rail. Renders one card per resolved
- * part — name, kind label, brief context. Hides when empty.
+ * "Build sheet" rail. Renders one card per resolved part — name,
+ * kind label, brief context. Hides when empty.
+ *
+ * Heading is "Build sheet" rather than "Mentioned in this article"
+ * (critique pass 4 [MED] drain): the rail surfaces only
+ * `frontmatter.mentionedParts`, which is curated by the editor
+ * rather than auto-extracted from prose. Reframing the heading
+ * matches that curated 2-item shape honestly without overpromising
+ * exhaustiveness against every part the body names. The
+ * auto-extract path (MDX walker) stays as a phase-shaped audit row.
  *
  * Phase 5 ships the basic card; phase 13 (group buys) and later
  * polish passes layer in pricing, vendor links, and stock state.
@@ -28,7 +36,7 @@ export function MentionedPartsRail({
     <Container as="section" className="py-10">
       <div className="flex flex-col gap-5">
         <h2 className="font-mono uppercase tracking-[0.12em] text-micro text-text-3">
-          Mentioned in this article
+          Build sheet
         </h2>
         <ul
           data-testid="mentioned-parts-rail"
