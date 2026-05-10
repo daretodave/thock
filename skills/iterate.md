@@ -80,13 +80,32 @@ content gap can outrank a low-severity critique nitpick.
 
 #### A. Content gaps
 
-- Pillars with `< 5` articles → score by pillar prominence
-  (Trends > News > Ideas > Deep Dives > Guides).
+The four content-velocity rules in `plan/bearings.md` "Content
+velocity & editorial cadence" (locked 2026-05-10 via /oversight)
+are the primary audit signals here. Surface as findings:
+
+- **Rule 1 — Pillar quota.** Pillars with `< 8` articles → content-gap
+  finding. Score by pillar prominence: Trends=9, News=8, Ideas=7,
+  Deep Dives=7, Guides=6 impact; ease=5 (one new article per tick).
+  Replaces the prior `< 5` soft threshold.
+- **Rule 2 — Tracker linkage.** Non-flat `data/trends/<week>.json`
+  rows older than 14 days with no `articleSlug` → content-gap
+  finding. Impact 6, ease 5.
+- **Rule 3 — Group-buy companion.** `data/group-buys/<slug>.json`
+  records with `status ∈ {live, announced}` and no companion
+  editorial article → content-gap finding. Impact 7, ease 5.
+- **Rule 4 — publishedAt staggering.** When picking a publish
+  date for a newly-shipped article, `content-curator` reads the
+  current `publishedAt` distribution across the rolling 30-day
+  window and fills the largest gap (NOT "today"). Group-buy
+  coverage pieces are exempt — date matches the buy's start /
+  announce.
+
+Plus the prior catch-all signals (still active):
 - Tags with `< 3` articles but high cross-link count → score high.
 - Articles with `wordCount < 600` → flag for expansion (delegate
   to `content-curator`).
 - Articles missing `heroImage` → flag (or defer to design pass).
-- "Trend Tracker" rows lacking a linked deep-dive article.
 
 #### B. Data gaps
 

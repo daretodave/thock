@@ -3,6 +3,15 @@
 > Latest findings from `/iterate audit` and `/oversight`. Open
 > items live here until a shipping skill drains them.
 
+> Bias: content-gaps (set via oversight 2026-05-10) — `/iterate`
+> multiplies content-gap finding scores by 1.5 until cleared.
+> Drives the loop toward the four content-velocity rules in
+> `plan/bearings.md` "Content velocity & editorial cadence":
+> pillar quota ≥8, tracker linkage within 14 days, group-buy
+> companion, publishedAt gap-fill. Clears when corpus hits
+> quota (≥8/pillar) and the audit no longer surfaces
+> content-gap rows scoring above 5.0, OR via `/oversight reset`.
+
 > **POSTURE: drained 2026-05-09** — the brand-assets-first
 > posture set at 12:30Z is cleared. All four drain items shipped
 > the same day: (1) favicon — `apps/web/src/app/icon.svg` +

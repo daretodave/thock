@@ -369,6 +369,115 @@ renders a coral-tinted placeholder block — never a broken
 image. The fallback is intentionally distinguishable from a
 real hero so missing art is observable in QA.
 
+## Content velocity & editorial cadence (locked 2026-05-10 via /oversight)
+
+The autonomous loop is good at shipping individual articles when
+`/iterate` finds a content-gap row. It is bad at *generating* the
+audit rows that turn idle ticks into content ticks. This section
+codifies four hard rules so `/iterate`'s audit perpetually
+surfaces content work, making the loop a content-explosion
+engine rather than a polish-the-existing-corpus engine.
+
+### Rule 1 — Pillar quota (≥8 articles per pillar)
+
+Each of the five pillars (`news`, `trends`, `ideas`, `deep-dives`,
+`guides`) maintains **at least 8 published articles**. The
+`/iterate` audit treats `pillarCount < 8` as a content-gap
+finding scored by pillar prominence (Trends > News > Ideas >
+Deep Dives > Guides per the editorial rhythm) — each ship is one
+audit row. Replaces the prior soft threshold of `< 5` in
+`skills/iterate.md` §4.A.
+
+**Current state (2026-05-10):** news 3, trends 5, ideas 2,
+deep-dives 3, guides 2 → 25 articles below quota. The directive
+turns those 25 into 25 audit-finding rows; the loop drains them
+across iterate ticks.
+
+### Rule 2 — Tracker linkage (non-flat row → linked deep-dive within 2 weeks)
+
+Every `data/trends/<YYYY-WNN>.json` row with `direction !== 'flat'`
+must have its `articleSlug` populated within **2 calendar weeks**
+of first appearing in any snapshot. The audit treats an unlinked
+non-flat row older than 2 weeks as a content-gap finding scored
+at impact 6 (the row is already editorially curated — a
+companion piece is high-leverage, low-friction).
+
+**Current state:** W19 has 13 non-flat rows; 12 linked, 1
+unlinked (DCS Olivetti, +18 up, week-old). Threshold not yet
+breached for DCS Olivetti, but the rule fires automatically
+when it crosses 2 weeks.
+
+### Rule 3 — Group-buy companion piece
+
+Every `data/group-buys/<vendor>-<slug>.json` record with `status:
+live` or `status: announced` has a companion editorial piece
+(News or Ideas pillar — never Guides; build-the-anticipation
+framing). The audit treats a live/announced group buy without a
+companion article as a content-gap finding scored at impact 7
+(time-sensitive, reader-visible on /group-buys cards). Group
+buys with `status: closed` or `status: shipped` are exempt — the
+finding is forward-looking, not retroactive.
+
+**Current state:** 5 live + 1 closed group buys; companions
+already shipped for 1 (Mode Sonnet R2 → /article/mode-sonnet-r2-group-buy-coverage).
+The other 5 live (Nyawice, GMK CYL GREG 2, GMK CYL Ishtar R2,
+GMK CYL King of the Seas, GSK Sweet Nightmare) each generate
+one audit row.
+
+### Rule 4 — Article date staggering (publishedAt across a rolling 30-day window)
+
+`publishedAt` across the article corpus must spread across a
+**rolling 30-day window** ending today. When `/iterate` ships a
+new article it picks a publish date that fills the **largest
+gap** in the existing distribution, not "today." This prevents
+the bulk-publish artifact filed in critique pass 9 [MED] (six
+of seven "By pillar" home tiles dated 2026-05-10).
+
+**Exception (locked by user 2026-05-10):** group-buy coverage
+pieces are exempt — their `publishedAt` matches the **earliest
+date the group-buy story breaks** (typically `startDate`,
+sometimes the IC-announce date a week before). This preserves
+the editorial timeline a reader expects: a piece announcing
+GREG 2 dated weeks before the buy opens reads wrong; dated the
+day of the announcement reads right.
+
+**Current state:** 9 of 15 articles dated 2026-05-10 (bulk
+publish day). The directive doesn't retroactively restamp the
+existing corpus — too lossy without external memory — but
+**every new article the loop ships from this point** picks a
+date that fills the gap. The existing-corpus restamp can be a
+separate `/iterate` data-edit tick that user-jots or the audit
+surfaces if the gap on /  By-pillar persists past 5 new articles
+shipped.
+
+### How `/iterate` audit consumes these rules
+
+`skills/iterate.md` §4.A (content gaps) is amended to include:
+- `pillarArticleCount < 8` → content-gap finding, impact = pillar
+  prominence ramp (Trends=9, News=8, Ideas=7, Deep Dives=7,
+  Guides=6).
+- `unlinkedNonFlatTrackerRow.firstSeen ≤ now - 14d` →
+  content-gap finding, impact 6, ease 5 (one article fills it).
+- `liveOrAnnouncedGroupBuy.companionArticle == null` →
+  content-gap finding, impact 7, ease 5.
+
+When `/iterate` ships an article addressing one of these rows,
+`content-curator` reads this section to pick the article's
+`publishedAt`: rule 4 sets the date (gap-fill), the audit row
+sets the topic, `bearings.md` "Article hero art" sets the
+brander brief.
+
+### Velocity expectations
+
+With all 4 rules live, the autonomous loop has **~30+
+content-shaped audit rows** at any moment until the corpus
+catches up to quota. Each `/iterate` tick takes ~3 min of
+shipping + verify-gate time. A focused weekend `/loop /march`
+run can plausibly ship 20+ articles. The constraints are now
+editorial quality (caught by `/critique` post-publish) and
+brander throughput (one SVG per article), not "what should we
+write?"
+
 ## Plan expansion posture
 
 **Mode: bold.**
