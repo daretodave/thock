@@ -77,12 +77,23 @@
 >
 > **Resolved (2026-05-10):** Shipped a `<SuggestedArticles>` Server Component at `apps/web/src/components/not-found/SuggestedArticles.tsx` that takes a slug, calls `searchArticles(slugAsQuery, 3)` from the phase-14 runtime, and renders 0–3 hits with pillar eyebrow + title + publishedAt. New `apps/web/src/middleware.ts` forwards `request.nextUrl.pathname` into an `x-pathname` header so Server Components can recover the slug (Next 15 doesn't pass route params to `not-found.tsx`). Both per-route not-found pages now read the header, derive the slug via a `pathnameToSlug` helper, and render the suggestions rail (article variant uses "did you mean", tag variant uses "articles touching that topic"). The slug-to-query transform replaces hyphens/underscores with spaces; empty slugs short-circuit to `null` so the 404 stays clean when no overlap exists. New e2e in `apps/e2e/tests/polish.spec.ts` covers the catalog-overlap + no-overlap + tag-fallback cases. Unit test for `pathnameToSlug` covers the `null` / root / trailing-slash edge cases. 324 e2e green on first parallel attempt — clean run, no #418 hydration flake.
 
-### [MED] Accessibility audit pass — phase 16 follow-up
+### [x] [MED] Accessibility audit pass — phase 16 follow-up — addressed in pending commit (this tick)
 > Filed 2026-05-09 by phase 16 brief. Phase 16's polish scope listed an a11y pass: contrast against the OKLCH tokens, focus rings on every interactive, alt text on every `<img>`, heading order, keyboard nav. Deferred from the page-shipping tick because the audit itself wants its own structured pass with a checklist + per-finding fixes.
 >
 > **Action:** new audit pass that walks every canonical URL, runs axe-core (or a hand checklist) at desktop + mobile, files individual `[a11y]` rows here for each violation. Drain on subsequent /iterate ticks.
 >
 > Score: **5.5** (aggregate of many small issues; each fix is cheap but the discovery is the work).
+>
+> **Resolved (2026-05-10):** Hand-audit pass walked 8 canonical URLs (/, /article/gateron-oil-king-deep-dive, /trends/tracker, /group-buys, /search, /about, /sources, /tag/gateron) by curling rendered HTML and grepping for the 9-pattern checklist below. The site is in remarkably good a11y shape — only **2 findings** filed:
+>
+> - **[MED] /trends/tracker — heading level skipped (h1 → h3)** filed below
+> - **[LOW] all pages — no skip-to-main-content link** filed below
+>
+> What was checked clean across all 8 URLs (audit-trail for the next pass): (1) `<img alt>` — 13 images, 100% have descriptive alt text. (2) `<button>` accessible names — zero empty/unlabeled. (3) `<a>` accessible names — zero empty/unlabeled, zero `href="#"` placeholders. (4) `<input>` labels — only the footer newsletter input renders SSR (has matching `<label for>`); /search input is client-rendered → flagged for a separate browser-based pass once a real-browser tooling decision lands. (5) `<svg>` decorative gating — 66 SVGs total (40 on /trends/tracker sparklines), 100% have `aria-hidden="true"`, `role="img"`, `aria-label`, or `<title>`. (6) heading order — 7 of 8 pages clean, single h1 each; only /trends/tracker has the skip noted above. (7) `tabindex` — zero across all 8 pages, no focus-trap smells. (8) `role="button"` on non-`<button>` — zero. (9) `<html lang="en">` — present on every page.
+>
+> Color-contrast was not checked per the brief (can't be hand-checked from HTML alone — needs a real-browser pass with the OKLCH-token computed values). Filed as a known limitation, not as a finding. /search's client-rendered shell is the same: needs browser pass for input/listbox/aria-live coverage. Both deferred to a future axe-core / playwright-axe wiring decision (which the loop should propose via `/expand` if the next two iterate ticks find more pattern-class limits to the hand checklist).
+>
+> The 2 filed findings drain in subsequent /iterate ticks. The [MED] heading-skip is the cheapest concrete win; the [LOW] skip-link is a one-time root-layout edit that touches every route.
 
 ### [x] [LOW] /sources per-citation index — phase 16 follow-up — addressed in pending commit (this tick)
 - issue: #19
@@ -109,6 +120,28 @@
 > Score: **2.5** (cosmetic until the chunk audit runs; chunk audit is the real work).
 >
 > **Resolved (2026-05-10):** No chunk-audit needed — current homepage bundle measures 108.7 KB gzipped (per `pnpm --filter @thock/web run size`), well under both the 250 KB phase-17 budget and the 200 KB bearings target. The corpus growth + iterate ticks since phase 17 added no meaningful bundle weight (article body weight is build-time-rendered MDX, not client JS). Bumped `DEFAULT_MAX_KB` from 250 → 200 in `apps/web/scripts/measure-bundle.mts:31` to match bearings; updated the script docblock to reflect the rationale + current baseline. The verify gate now enforces the bearings target directly. No remaining headroom needs a chunk-audit; that work fires only if a future phase pushes bundle weight back toward the 200 KB ceiling. 330 e2e green first parallel attempt.
+
+### [MED] [a11y] /trends/tracker — heading level skipped (h1 → h3 with no h2)
+> Filed 2026-05-10 by /iterate audit pass (resolves the [MED] Accessibility audit pass row above).
+>
+> **Observation:** /trends/tracker's heading sequence is `h1 h3 h3 h3 h3 h2 h2 h2 h2 h2`. The h1 "What's actually rising this week" (offset 10804 in rendered HTML) is followed directly by four h3 cards ("Gateron Oil King", "Cherry MX2A revisions", "HMX Cloud", "Wuque Studio") at offsets 11947–15171, then later switch/keycap/layout/vendor/brand "movers" h2 sections. The h3-after-h1-without-h2 is a heading-level skip — screen-reader users navigating by heading jumps will perceive the rising cards as belonging to a missing or implied h2 section.
+>
+> **WCAG:** 1.3.1 Info and Relationships (AA).
+>
+> **Action:** likely the cleanest fix is to wrap the four "rising this week" card titles under a real h2 sub-section heading (e.g. an h2 "Top movers this week" right after the h1) so the structure becomes `h1 → h2 → h3*4 → h2*5`. Alternative: promote the four card titles from h3 to h2, joining the existing five movers h2 sections — but that loses the visual subordination of "preview cards" vs "category tables." Probably the wrap-with-h2 path is right; component is `apps/web/src/components/tracker/<RisingThisWeek?>` (search the codebase to find the actual file).
+>
+> Score: **4.0** (impact 5 — single page, real but narrow audience of heading-nav screen-reader users; ease 8 — one component edit + one e2e to lock the order).
+
+### [LOW] [a11y] all pages — no "skip to main content" link
+> Filed 2026-05-10 by /iterate audit pass (resolves the [MED] Accessibility audit pass row above).
+>
+> **Observation:** zero `href="#main"` (or equivalent) skip-link anchors exist across the rendered HTML of all 8 audited URLs. `<main>` is present and singular on every page (good — landmark structure is correct), but it is not addressable via a keyboard-first bypass control. Sighted keyboard users and screen-reader users who skip past the header have to tab through every header link + mobile-nav-toggle on every page navigation.
+>
+> **WCAG:** 2.4.1 Bypass Blocks (A).
+>
+> **Action:** add a visually-hidden-until-focused `<a href="#main" class="skip-link">Skip to main content</a>` as the first child of `<body>` in `apps/web/src/app/layout.tsx`, plus `id="main"` on the existing `<main>` element. One-time layout component change, applies to all routes. CSS for the skip-link's focus-reveal goes in `apps/web/src/app/globals.css` (or as Tailwind classes inline). Test: e2e visits `/`, focuses the skip link via Tab, asserts it becomes visible and that activating it moves focus to `<main>`.
+>
+> Score: **2.8** (impact 4 — keyboard users on every page; ease 7 — one layout edit + one global CSS rule + one e2e).
 
 ### [MED] PageStub routes flake under parallel e2e load (React #418 hydration)
 
