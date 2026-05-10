@@ -361,6 +361,7 @@
       "region": "global",
       "url": "https://cannonkeys.com/products/nyawice",
       "imageUrl": null,
+      "heroImage": "/group-buy-art/cannonkeys-nyawice.svg",
       "status": "live",
       "description": "Alice-layout board with a leaf-spring F1 mount and 9-degree typing angle, run with friction-fit silicone cat ears and nose in orange, pink, baby blue, and lilac; hotswap PCB optional.",
       "updatedAt": "2026-05-09T20:00:00.000Z"
@@ -376,6 +377,7 @@
       "region": "global",
       "url": "https://kbdfans.com/products/gmk-cyl-greg-2",
       "imageUrl": null,
+      "heroImage": "/group-buy-art/kbdfans-gmk-cyl-greg-2.svg",
       "status": "live",
       "description": "Second round of GMK CYL GREG, a doubleshot ABS Cherry-clone set in CYL profile, run on KBDfans through May.",
       "updatedAt": "2026-05-09T20:00:00.000Z"
@@ -391,6 +393,7 @@
       "region": "global",
       "url": "https://kbdfans.com/products/gmk-cyl-ishtar-r2",
       "imageUrl": null,
+      "heroImage": "/group-buy-art/kbdfans-gmk-cyl-ishtar-r2.svg",
       "status": "live",
       "description": "Second round of GMK CYL Ishtar, a Mesopotamia-themed Cherry-profile doubleshot ABS set with multi-region proxies; estimated Q4 2026 delivery.",
       "updatedAt": "2026-05-09T20:00:00.000Z"
@@ -406,6 +409,7 @@
       "region": "global",
       "url": "https://kbdfans.com/products/gmk-cyl-king-of-the-seas",
       "imageUrl": null,
+      "heroImage": "/group-buy-art/kbdfans-gmk-cyl-king-of-the-seas.svg",
       "status": "live",
       "description": "GMK CYL doubleshot ABS set by MiKeyDigit in two colorways: The Sovereign in deep ocean blues and The Mutation in electric pink.",
       "updatedAt": "2026-05-09T20:00:00.000Z"
@@ -421,6 +425,7 @@
       "region": "us",
       "url": "https://kbdfans.com/products/gsk-sweet-nightmare",
       "imageUrl": null,
+      "heroImage": "/group-buy-art/kbdfans-gsk-sweet-nightmare.svg",
       "status": "live",
       "description": "Goldenstar resin keycap run with four colorway options (Bimorphis, Shigan, Eviscera, Optigon) in Kawa and Guro finishes, on a tight four-day window.",
       "updatedAt": "2026-05-09T20:00:00.000Z"
@@ -436,6 +441,7 @@
       "region": "global",
       "url": "https://shop.wuquestudio.com/products/gb-paper-80-whatever-studio",
       "imageUrl": null,
+      "heroImage": "/group-buy-art/wuque-studio-paper80-whatever-studio.svg",
       "status": "closed",
       "description": "80-percent aluminum board with lock-hole gasket mount and a paper-airplane-inspired mid-case fold, supporting ANSI/ISO and PC or aluminum plates; GB has wrapped, with limited follow-on stock.",
       "updatedAt": "2026-05-09T20:00:00.000Z"
@@ -1567,5 +1573,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-05-10T10:35:17.563Z"
+  "generatedAt": "2026-05-10T18:27:48.496Z"
 }
