@@ -26,13 +26,16 @@
 - verify note: 409 e2e green parallel — no #418 flake this run.
 - source: browser
 
-### [MED] /group-buys — "Last 72h" eyebrow on forward-looking "Closing soon" section reads as retrospective
+### [x] [MED] /group-buys — "Last 72h" eyebrow on forward-looking "Closing soon" section reads as retrospective
+- addressed in: fec567d (this tick — iterate drain)
+- issue: #37
 - pass: 10 (commit 0e2314f)
 - viewport: desktop
 - category: copy
 - observation: The /group-buys page's "Closing soon" section carries a "Last 72h" eyebrow (small font-mono uppercase kicker above the heading). "Last 72h" reads as a retrospective window — the past 72 hours — but the section is forward-looking: group buys closing in the next 72 hours. Scanning the page, a fresh reader parses "Last 72h" as "recently closed" and is briefly confused that two ostensibly closing items ("closes today" and "1d left") sit under a label that suggests they had already ended. Same shape as the pass-7 "Closing soon — 37 days left" mismatch the loop already addressed, but on the kicker rather than the membership.
 - evidence: `curl -s https://thock-coral.vercel.app/group-buys | grep` shows literal text "Last 72h" + "Closing soon" + items including "closes today" and "1d left". Source: `apps/web/src/app/group-buys/page.tsx` (around line 109 per reader's note) sets the kicker prop to "Last 72h".
-- suggested fix: change the kicker on the "Closing soon" section to a forward-looking label — "Next 72h" — or drop the kicker entirely (the section heading "Closing soon" already carries the framing). One-line edit in `apps/web/src/app/group-buys/page.tsx`; add a unit/snapshot test asserting the kicker text.
+- fix: changed the kicker prop in `apps/web/src/app/group-buys/page.tsx:109` from `"Last 72h"` to `"Next 72h"`. The section's selector was always forward-looking (closingSoon = items with daysLeft ≤ URGENT_THRESHOLD_DAYS); only the kicker copy was off. Considered (rejected) the alt suggestion of dropping the kicker — the kicker reinforces the time-bucket the section spans and the issue was direction, not redundancy. No new test added: a single literal string whose semantic match with a forward-looking selector is trivially obvious; future critique passes catch any drift back.
+- verify note: 409 e2e green parallel — no #418 flake this run.
 - source: browser
 
 ### [MED] / — "0d" countdown vs /group-buys "closes today" — cross-surface inconsistency on the same buy
