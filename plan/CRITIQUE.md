@@ -1,8 +1,9 @@
 # Critique log
 
-> Last pass: 2026-05-10T14:00:00Z at commit d34580c
-> Pass count: 8
-> Iterate-bias category: external-critique (pass 8 fired 12 commits after pass 7, after a heavy iterate drain that shipped pass-7's #25 [MED] /trends/tracker double-announce, classified pass-7's #23/#24/#26/#27 as phantom-confirmed (reader-tool extraction artifacts), shipped the user-jot e2e-GA gate (#28), drained the [MED] a11y audit-pass row (filing 2 new [a11y] rows in plan/AUDIT.md), and absorbed a fresh user-jot on aside→h2 spacing on /article/*. Reader's pass 8 visited 6 URLs (/, /article/keychron-q-ultra-zmk, /trends, /trends/tracker, /group-buys, /tag/linear) and surfaced 6 candidates; self-assessment kept 5 (1 dup-dropped). Filed: [needs-user-call] [MED] / — production GA returns 503 on `/g/collect` (out-of-codebase: GA console verification needed); [MED] /article/* — `<aside>` callout title renders as a generic, not a heading (a11y document-outline hole; companion to the user-jot's spacing finding on the same component); [LOW] /trends — pillar card density inconsistent (hero has chips, archive doesn't); [LOW] /trends/tracker — mover-table rows with no article have no visual cue distinguishing them from linked rows (3 of 14 unlinked, identical chrome); [LOW] /tag/linear — H1 reads "#linear" but lede capitalizes "Linear" (drift). Dropped: reader's HIGH on streaming `<main>` is a duplicate of existing pass-7 [needs-user-call] [HIGH] row #22 (architectural Next 15 Suspense trade-off). Reader-tool artifact rate: 0% this pass — applied pass-7's lesson (verify visual-detail findings against rendered HTML before filing) and the 6 raw findings all hold up to curl-grep verification.)
+> Last pass: 2026-05-10T17:15:00Z at commit 40b2e55
+> Pass count: 9
+> Iterate-bias category: external-critique (pass 9 fired 12 commits after pass 8, after a drain that shipped pass-8's #29 [HIGH] hero-SVG XML well-formedness regression-guard. Reader's pass 9 visited 6 URLs (/, /article/hmx-cloud-deep-dive, /trends, /trends/tracker, /group-buys, /tag/mode) and surfaced 6 candidates; self-assessment kept 4 (2 phantom-confirmed). Filed: [MED] / — Trending "what's moving on the tracker" rail includes a `flat` tile (framing dilution); [MED] /trends/tracker — Sleeper summary card highlights a row whose own editor's note explicitly says nothing's moving (auto-populated, not editorially chosen); [LOW] /trends + all pillar landings — eyebrow `pillar · NN of 05` reads as mechanical sequence position (other surfaces use descriptive eyebrows); [MED] / — every "By pillar" home tile dated 2026-05-10 (6 of 7 same-day; bulk-publish artifact reads as fake cadence). Dropped: reader HIGH on /group-buys two-`<main>` landmarks (phantom — second `<main>` lives inside `<div hidden id="S:0">` waiting for React's `$RC` reparenting; standard Next 15 streaming-Suspense protocol; reader's a11y-tree walks past the `hidden` boundary); reader LOW on countdown a11y exclusion (phantom — `GroupBuyCountdownRow.tsx:101-107` renders `{left}d` in a regular span with no `aria-hidden`; reader's a11y-tree extraction missed it). Reader-tool artifact rate: 33% this pass — both phantoms were a11y-tree-extraction misreads, not visual-detail misreads.)
+> Pass 8 last pass: 2026-05-10T14:00:00Z at commit d34580c
 > Pass 7 last pass: 2026-05-10T08:30:00Z at commit e3de21d
 > Pass 6 last pass: 2026-05-10T07:30:00Z at commit dfa5596
 > Pass 5 last pass: 2026-05-10T02:45:00Z at commit 790b415
@@ -11,6 +12,42 @@
 > drained by `/iterate`. See `skills/critique.md` for the contract.
 
 ## Pending
+
+### [MED] / — Trending "what's moving on the tracker" rail includes a `flat` tile (framing dilution)
+- pass: 9 (commit 40b2e55)
+- viewport: desktop
+- category: copy
+- observation: The home-page trending rail is headed "Trending — what's moving on the tracker" (Week 19) and contains a tile for MT3 profile labeled `flat`. A flat item is by definition not moving. Within a six-tile preview rail, dedicating a slot to a non-mover dilutes the rail's promise and reads as filler — a first-time reader scanning to learn what's hot this week sees one tile that contradicts the framing. The rail's heading commits to movement; the tile delivers stasis.
+- evidence: `curl -s https://thock-coral.vercel.app/ | grep` → rendered text `<h2>Trending — what's moving on the tracker</h2>` and tile rendered with `data-testid="trending-tile"` `data-dir="flat"` for "MT3 profile".
+- suggested fix: filter the home-page trending rail to non-flat rows only (only `up` / `down` / `breakout` / `faller` directions belong under "what's moving"), OR rename the rail to "This week's tracker" so flat entries don't violate the framing. Probably one-line edit in the home-page trending rail selector. Add a unit test asserting the rail excludes `direction === 'flat'` rows.
+- source: browser
+
+### [MED] /trends/tracker — Sleeper summary card highlights a row whose own editor's note says nothing's moving
+- pass: 9 (commit 40b2e55)
+- viewport: desktop
+- category: copy
+- observation: The four summary cards at the top of /trends/tracker are Biggest Riser / Biggest Faller / Breakout / Sleeper. The Sleeper card highlights "Wuque Studio" with score `flat`, and the editor's note immediately below explicitly says "Morandi switches and the Mammoth75 are still the steady-sellers; no new headline release this 8-week window, but storefront restock cadence held." That description is steady-holding, not sleeping. "Sleeper" implies an under-the-radar pick about to break out; pinning it on a row whose own copy says nothing's happening makes the summary card feel auto-populated rather than editorially chosen. The card weakens the page's signature-feature framing — a tracker that picks the wrong "sleeper" reads less authoritative.
+- evidence: `curl -s https://thock-coral.vercel.app/trends/tracker | grep` → `data-testid="tracker-summary-card"` `data-kind="sleeper"` contains `<h3>Wuque Studio</h3>` and editor's note string "no new headline release this 8-week window, but storefront restock cadence held."
+- suggested fix: either (a) update the Sleeper-selector logic to require a non-flat direction (e.g., movers with low absolute deltas qualify, but pure-flat rows do not), OR (b) drop the Sleeper card entirely on weeks where no row qualifies (graceful empty rather than mismatched header), OR (c) rename the card "Steady" / "Holding" when the highlighted row is flat. Probably 5–15 lines in the tracker-summary-cards data selector.
+- source: browser
+
+### [LOW] /trends + all pillar landings — eyebrow `pillar · NN of 05` reads as mechanical sequence position
+- pass: 9 (commit 40b2e55)
+- viewport: desktop
+- category: voice
+- observation: The Trends pillar landing eyebrow reads `pillar · 02 of 05`. To a first-time reader this is mechanical — it implies pillars are ordered (they aren't, they're categories) and tells me which slot in a list I'm in rather than what kind of content this page hosts. Other site eyebrows describe content ("signature · trends tracker", "curated", section names). The pillar landings describe the navigation graph instead. The drift is consistent across pillars: /news shows `pillar · 01 of 05`, /trends `02 of 05`, /ideas `03 of 05`, /deep-dives and /guides similarly numbered.
+- evidence: `curl -s https://thock-coral.vercel.app/trends | grep -oE 'pillar · [0-9]+ of [0-9]+'` → `pillar · 02 of 05`. Same shape on /news (01 of 05) and /ideas (03 of 05).
+- suggested fix: replace the "NN of 05" sequence with a descriptive eyebrow on every pillar landing — e.g., simply `pillar · trends` (matching the breadcrumb idiom) or just the section name in caps. Probably one-line template edit in the shared pillar-landing eyebrow component. Cheap; high consistency win across 5 pages.
+- source: browser
+
+### [MED] / — every "By pillar" home tile dated 2026-05-10 (bulk-publish artifact reads as fake editorial cadence)
+- pass: 9 (commit 40b2e55)
+- viewport: desktop
+- category: content-gap
+- observation: The home-page "By pillar" rail (News / Trends / Ideas / Deep Dives / Guides) renders five tiles that all carry the date `May 10, 2026` (with one repeated card the row crawls to seven entries; six of seven are May 10). To a fresh reader this looks like every pillar simultaneously published a new piece on the same day — either a mass content drop or fake editorial cadence. A real editorial site has staggered publish dates across pillars; the home page erases that signal. The "Long reads worth your weekend" rail just below shows May 10 + May 4 mixed (so the underlying catalog has variation), confirming this is a selector outcome on a bulk-shipped catalog rather than a missing dataset.
+- evidence: home-page `data-testid="latest-by-pillar"` block extracted via curl + node walk: 6 dates of "May 10, 2026" + 1 of "May 4, 2026" across 7 article anchors (gmk-cyl-prussian-alert, vendor-first-customs, typing-tests-lie, cherry-mx2a-revision, lubing-101, hmx-cloud-deep-dive, gateron-oil-king-deep-dive). All articles also exist with `publishedAt: 2026-05-10` in their MDX frontmatter — `ls -lt apps/web/src/content/articles/` shows 9+ files all stamped May 10 (the bulk-publish day).
+- suggested fix: the cleanest fix is content-side, not selector-side: stagger `publishedAt` across the recently-shipped articles so the home page's newest-per-pillar selection naturally returns dates spanning the past 1–2 weeks. Cheap data edit (≤10 frontmatter changes across the article MDX files); needs to honor `bearings.md` content invariants (no future dates, no rewrites of trending/dated context). A defensive secondary fix: have the home selector emit a soft warning when ≥4 of 5 by-pillar dates collide, so the loop catches the next bulk-publish artifact automatically.
+- source: browser
 
 ### [x] [HIGH] /article/gmk-cyl-prussian-alert + / (latest-by-pillar Keycaps slot) — hero SVG renders broken
 - addressed in: pending commit (this tick — user-reported follow-on to phase 23)
