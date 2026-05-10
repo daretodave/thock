@@ -14,13 +14,16 @@
 
 ## Pending
 
-### [HIGH] /article/lubing-101 — malformed sentence in "Touching the leaves" paragraph
+### [x] [HIGH] /article/lubing-101 — malformed sentence in "Touching the leaves" paragraph
+- addressed in: e4e2d0d (this tick — iterate drain)
+- issue: #36
 - pass: 10 (commit 0e2314f)
 - viewport: both
 - category: copy
 - observation: Body of /article/lubing-101 contains the sentence "Brushes drift; this is why brushes drift toward the leaves matters." The clause repeats "brushes drift" and the verb "matters" is left dangling — it reads like a stray edit-pass artifact. As a fresh reader I had to read it twice and gave up parsing it; the surrounding paragraph is otherwise the cleanest in the piece, so this stands out as a typo / edit miss in an article that is otherwise well-tuned (1700-word Guides flagship). High because the article is a Guides pillar piece and its body prose is the entire offering — a malformed sentence in mid-paragraph is the kind of thing a builder reading a how-to would screenshot to a friend with "is this site reliable?"
 - evidence: rendered body on /article/lubing-101 paragraph beginning `**Touching the leaves.**`; source `apps/web/src/content/articles/lubing-101.mdx:55`. Verified by `grep -n "Brushes drift" apps/web/src/content/articles/lubing-101.mdx` → the literal string is present.
-- suggested fix: rewrite the clause to e.g. "Brushes drift; that is why watching where the brush goes matters." Single MDX edit; no schema or component touch.
+- fix: rewrote the clause to "Brushes drift; that is why watching where the brush goes matters." Also dropped the now-redundant "Watch the brush." that followed (the new lead-in already says it). One MDX edit at line 55 of `apps/web/src/content/articles/lubing-101.mdx`; no schema, component, or test touches.
+- verify note: 409 e2e green parallel — no #418 flake this run.
 - source: browser
 
 ### [MED] /group-buys — "Last 72h" eyebrow on forward-looking "Closing soon" section reads as retrospective
