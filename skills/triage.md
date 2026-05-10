@@ -313,7 +313,7 @@ the cheapest gate. The check:
 
 ```bash
 gh issue list --repo "$GH_REPO" --state open \
-  --search "-label:triage:loop-queued -label:triage:needs-user -label:triage:closed -label:triage:reviewed" \
+  --search "-label:triage:loop-queued -label:triage:needs-user -label:triage:closed -label:triage:reviewed -label:loop:opened" \
   --json number --jq 'length'
 ```
 
