@@ -37,36 +37,26 @@
 - needs-user-call: the fix involves restructuring how Suspense boundaries are used (e.g., moving `<main>` inside each route's `page.tsx` rather than the layout's, or eliminating the per-route `loading.tsx` files and relying on the static parts to render immediately). Either approach is a layout-level architectural change with second-order effects (different streaming behavior, possibly different perceived loading speed). Surfacing for `/oversight` rather than autonomous fix — the trade-off between a11y-rigor and streaming-perf isn't an autonomous call.
 - source: browser
 
-### [phantom] [HIGH] /about — body prose is broken around inline-link rendering — DROPPED ON SELF-ASSESSMENT
-- issue: #23 (closing as phantom-finding)
-- pass: 7 (commit e3de21d)
-- root cause: reader's accessibility-tree-based text extraction (`mcp__claude-in-chrome__get_page_text`) DROPS link element content when serializing prose, producing "broken" sentences like "The scores switches..." (where "Trends Tracker" is a `<Link>` between "The" and "scores"). Verified by `curl https://thock-coral.vercel.app/about | grep` — the rendered HTML correctly contains the full prose with link text inlined: `"The"\,"$L10"," ","scores switches..."` where `$L10` resolves to the `<Link>Trends Tracker</Link>` element. A real screen reader correctly announces the inlined link text as part of the surrounding sentence; the reader's tool just doesn't.
-- finding: not a real bug; reader-tool extraction artifact. /about prose renders correctly to humans and to actual screen readers.
-
-### [phantom] [MED] /sources — intro trails off mid-sentence — DROPPED ON SELF-ASSESSMENT
-- issue: #24 (closing as phantom-finding)
-- pass: 7 (commit e3de21d)
-- root cause: same as #23 — reader's `get_page_text` extraction drops link/code element content. The actual rendered HTML at /sources contains the full prose ("...so a reader can audit which articles do their homework. The full per-citation index — article, quote, URL — is the next step; today this page lists the per-article tally.") inlined correctly in the DOM. Verified post-tick.
-- finding: not a real bug; reader-tool extraction artifact.
-
-### [HIGH] /about — body prose is broken around inline-link rendering; sentences end mid-word
-- issue: #23
+### [x] [phantom-confirmed] /about — body prose is broken around inline-link rendering; sentences end mid-word
+- issue: #23 (CLOSED on GitHub)
 - pass: 7 (commit e3de21d)
 - viewport: both
 - category: content
-- observation: Multiple body sentences on /about are missing words around their inline links — they read as broken/truncated copy. /about is a stranger-facing trust surface; broken prose with mid-word truncation reads as either a half-finished site or a corrupted deploy. The page passes the smoke walker because the H1 and section testIds render fine; it's the body prose that's mis-composed.
-- evidence: Verbatim from rendered page — "The scores switches, keycaps, layouts, vendors, and brands on a single −100 to 100 scale, updated w." (ends mid-word; missing "Trends Tracker" link text + "weekly"); "Read the for the full methodology." (missing noun before "for"); "Group-buy URLs published on thock are auto-flagged with at render time. That tag is applied by the ." (two missing nouns/links); "Citations across articles surface on the page so the reader can audit where the facts came from." (missing "Sources" before "page").
-- suggested fix: audit `apps/web/src/components/about/AboutBody.tsx` (and any helper that renders inline links inside paragraphs) for the rendering pattern that's extracting link text from prose. Suspect: a JSX template that puts the link's anchor text in a sibling element rather than inside the surrounding `<p>`. Each sentence with a broken link needs the text completed: "updated weekly on the [Trends Tracker]" / "Read the [Sources page] for the full methodology" / etc. Pair the diagnosis with the /sources finding (#24) — likely the same root cause.
+- observation: Multiple body sentences on /about appeared in the reader's accessibility-tree capture as missing words around their inline links — read as broken/truncated copy. /about is a stranger-facing trust surface; broken prose with mid-word truncation reads as either a half-finished site or a corrupted deploy. The page passes the smoke walker because the H1 and section testIds render fine; it's the body prose that *appeared* mis-composed in the reader's extraction.
+- evidence (as captured by reader): Verbatim from accessibility-tree extraction — "The scores switches, keycaps, layouts, vendors, and brands on a single −100 to 100 scale, updated w." (appeared to end mid-word; missing "Trends Tracker" link text + "weekly"); "Read the for the full methodology." (missing noun before "for"); "Group-buy URLs published on thock are auto-flagged with at render time. That tag is applied by the ." (two missing nouns/links); "Citations across articles surface on the page so the reader can audit where the facts came from." (missing "Sources" before "page").
+- root cause (phantom resolution): reader's `mcp__claude-in-chrome__get_page_text` accessibility-tree extraction tool DROPS link element content when serializing prose. Verified by `curl https://thock-coral.vercel.app/about | grep` — the rendered HTML correctly contains the full prose with link text inlined: `"The"\,"$L10"," ","scores switches..."` where `$L10` resolves to the `<Link>Trends Tracker</Link>` element. A real screen reader correctly announces the inlined link text as part of the surrounding sentence; the reader's tool just doesn't.
+- finding: NOT a real bug; reader-tool extraction artifact. /about prose renders correctly to humans and to actual screen readers. Future critique passes verify visual-detail findings against rendered HTML before promoting to Pending.
 - source: browser
 
-### [MED] /sources — intro trails off mid-sentence after the `rel="sponsored"` inline (same root cause as /about)
-- issue: #24
+### [x] [phantom-confirmed] /sources — intro trails off mid-sentence after the `rel="sponsored"` inline (same root cause as /about)
+- issue: #24 (CLOSED on GitHub)
 - pass: 7 (commit e3de21d)
 - viewport: both
 - category: content
-- observation: The /sources intro paragraph trails off mid-sentence after the `rel="sponsored"` inline. Same broken-prose root cause as /about (#23). This is suspicious because the prose I shipped at `apps/web/src/app/sources/page.tsx:62-70` (commit ec00178) includes the full text — the rendered DOM is dropping it.
-- evidence: Reader's accessibility tree capture shows the rendered text ending at "Vendor links are auto-flagged with `rel=\"sponsored\"` so a reader." — the rest of the sentence ("...can audit which articles do their homework. The full per-citation index — article, quote, URL — is the next step; today this page lists the per-article tally.") doesn't render in the accessibility tree.
-- suggested fix: diagnose alongside #23. If the cause is prose extraction in editorial-page templates, the /about fix should automatically cover this surface. Bumps to HIGH if the diagnosis confirms a single underlying cause across both surfaces.
+- observation: In the reader's accessibility-tree capture, the /sources intro paragraph appeared to trail off mid-sentence after the `rel="sponsored"` inline. Suspicious at the time because the prose shipped at `apps/web/src/app/sources/page.tsx:62-70` (commit ec00178) includes the full text — the rendered DOM was *appearing* to drop it.
+- evidence (as captured by reader): Reader's accessibility tree capture showed the rendered text ending at "Vendor links are auto-flagged with `rel=\"sponsored\"` so a reader." — the rest of the sentence ("...can audit which articles do their homework. The full per-citation index — article, quote, URL — is the next step; today this page lists the per-article tally.") didn't appear in the accessibility tree.
+- root cause (phantom resolution): same as #23 — reader's `get_page_text` extraction drops link/code element content. The actual rendered HTML at /sources contains the full prose ("...so a reader can audit which articles do their homework. The full per-citation index — article, quote, URL — is the next step; today this page lists the per-article tally.") inlined correctly in the DOM. Verified post-tick via curl.
+- finding: NOT a real bug; reader-tool extraction artifact.
 - source: browser
 
 ### [x] [MED] /trends/tracker — editor's-note text duplicated in the a11y tree (every note read twice by screen readers)
@@ -82,17 +72,17 @@
 - verify note: 330 e2e green serially; first parallel run hit three #418 flakes on /deep-dives + /search + /tag/zmk (audit row 105 / expand pass-2 candidate, separately tracked).
 - source: browser
 
-### [phantom] [LOW] /group-buys — Sweet Nightmare card missing region chip — DROPPED ON SELF-ASSESSMENT
-- issue: #26 (closing as phantom-finding)
+### [x] [phantom-confirmed] /group-buys — Sweet Nightmare card missing region chip
+- issue: #26 (CLOSED on GitHub)
 - pass: 7 (commit e3de21d)
 - root cause: Sweet Nightmare's data record (`data/group-buys/kbdfans-gsk-sweet-nightmare.json`) DOES have `"region": "us"` — verified post-tick. The actual rendered HTML on /group-buys contains `<span ...>US</span>` directly before the `<h3>GSK Sweet Nightmare</h3>` heading. The reader's accessibility-tree extraction missed the US chip while seeing the GLOBAL chip on the sibling Ishtar R2 row, likely because `US` is a 2-letter generic-element label that adjacent-element collapse can elide in a11y-tree serialization.
-- finding: not a real bug; reader-tool extraction artifact.
+- finding: NOT a real bug; reader-tool extraction artifact.
 
-### [phantom] [LOW] /tag/<slug> — date format inconsistent — DROPPED ON SELF-ASSESSMENT
-- issue: #27 (closing as phantom-finding)
+### [x] [phantom-confirmed] /tag/<slug> — date format inconsistent
+- issue: #27 (CLOSED on GitHub)
 - pass: 7 (commit e3de21d)
 - root cause: all card-surface dates render via `Intl.DateTimeFormat('en-US', { dateStyle: 'medium', timeZone: 'UTC' })` — verified by `curl https://thock-coral.vercel.app/tag/gateron | grep`. The four observed dates are "Apr 30, 2026", "May 4, 2026", "May 7, 2026", "May 8, 2026" — all `medium` format. The reader misread "May 8" as the long-format because the month name "May" doesn't shorten between medium and long (it's the same 3 characters); only April/September/etc. visibly differ. Apparent inconsistency was a reader perception artifact from a homogeneous May-dominated catalog week.
-- finding: not a real bug; reader misread `dateStyle: 'medium'` as inconsistent because May happens to render identically in both medium and long.
+- finding: NOT a real bug; reader misread `dateStyle: 'medium'` as inconsistent because May happens to render identically in both medium and long.
 
 ### Pass-7 self-assessment summary
 4 of 6 reader findings turned out to be phantoms or non-autonomous after self-assessment:
