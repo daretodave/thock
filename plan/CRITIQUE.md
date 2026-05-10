@@ -11,6 +11,16 @@
 
 ## Pending
 
+### [MED] /article/* (and other surfaces) — `<aside>` block sits almost on top of the next `<h2>`
+- pass: user-jot (commit d269094)
+- viewport: unspecified
+- auth_state: anonymous
+- category: visual
+- observation: aside need a margin bottom or the h2's under them need a margin top. they are way too close (almost on top of eachother. eg: https://thock-coral.vercel.app/article/keychron-q-ultra-zmk -- but also other places)
+- evidence: user-spotted at 2026-05-10T13:55:17Z
+- suggested_fix: [user has not specified — iterate to determine]
+- source: user
+
 ### [x] [MED] general — e2e tests fire google analytics, polluting prod GA with bot traffic
 - addressed in: pending commit (this tick — iterate drain)
 - issue: #28
