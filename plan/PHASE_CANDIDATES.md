@@ -11,36 +11,6 @@
 
 ## Pending
 
-### [score 5.5] Streaming `<main>` landmark architectural call — restructure Suspense boundaries OR drop per-route loading.tsx files
-- proposed: 2026-05-10, expand pass 3
-- source signals:
-  - `plan/CRITIQUE.md` pass-7 [HIGH] #22 marked `[needs-user-call]`: every dynamic-data page (/, /trends, /trends/tracker, /group-buys, /sources, /tag/<slug>, /article/<slug>) renders content as a `$RC`-reparented sibling of `<main>` in the SSR'd HTML. `<main>` itself only contains the `loading.tsx` placeholder shell. Verified via `curl https://thock-coral.vercel.app/trends/tracker | grep` — `<main>` element occupies bytes 5595-6470 (875 bytes, just the loading shell); real content (`signature · trends tracker` eyebrow, page H1, all five tracker tables) starts at byte 10770+, OUTSIDE the closed `<main>` tag.
-  - Static pages (/about, 404) render content correctly inside `<main>` because they have no `loading.tsx` Suspense boundary. The pattern correlates 1:1 with `loading.tsx` presence per route.
-  - Real impact is bounded — JS-disabled screen-reader users see the broken landmark structure; JS-enabled users see post-hydration DOM that is correct (`$RC` reparenting moves content into `<main>` client-side). But strict A11y conformance assumes the SSR'd a11y tree is navigable.
-- rationale: this is the textbook §4A "audit findings too big to be fixes" — high-impact a11y observation (every dynamic-data page) with low-ease fix scope (layout-level architectural change with second-order trade-offs against streaming-perf). Iterate can't drain it in one tick. Two viable fix shapes are mutually exclusive: (a) move `<main>` from the layout to each route's `page.tsx` so each segment owns its landmark — restructures every page, requires e2e verification to confirm `<main>` count stays at 1 per page; (b) drop the per-route `loading.tsx` files and rely on the static parts of each page (header, layout chrome) rendering immediately, with route-content streaming in inside `<main>` — loses the per-route loading skeleton's perceived-speed benefit. /oversight call: which trade-off? a11y-rigor vs streaming-perf. Either path is a cohesive 1-phase scope.
-- proposed scope: 1 phase, scoped at /oversight time.
-  - **Path (a) — per-route `<main>`:** remove `<main>` from `apps/web/src/app/layout.tsx`; each `page.tsx` wraps its returned tree in `<main>`. Each `loading.tsx` also wraps its skeleton in `<main>`. Update e2e to assert exactly one `<main>` per route via `await expect(page.locator('main')).toHaveCount(1)`.
-  - **Path (b) — drop loading.tsx:** delete every `apps/web/src/app/**/loading.tsx`. The layout's `<main>` then directly hosts the streaming content. Loses the loading-skeleton UX; gains direct `<main>` ownership.
-- estimated phases: 1
-- conflicts: none with `bearings.md` directly. Path (a) is the standard Next 15 + App Router pattern for routes that own their layout; path (b) accepts a paint-time regression for landmark cleanliness.
-- promotion path: /oversight picks (a) vs (b). The decision is design-trade-off shaped, not autonomous. Implementation is bounded once chosen — single ship-a-phase tick.
-
-### [score 7.5] Per-part pages `/part/[slug]` — turn the parts catalog into navigable surfaces
-- proposed: 2026-05-10, expand pass 2
-- source signals:
-  - `plan/CRITIQUE.md` pass-6 [MED] #15 (`/article/* — Build sheet cards style as clickable but render no anchors`): the row's own suggested-fix path (a) named "wait for phase 4 to ship per-part pages at `/part/[slug]`" — turned out phase 4 was URL contract / e2e infra, not per-part pages. The drain at `7c9a128` shipped path (b) (strip the card chrome) as an interim affordance fix, but the durable fix is real per-part surfaces. Until they exist, the rail is a labeled list with no click-through despite naming 4-7 parts per article.
-  - Phase 20 (`data/switches/`, `data/keycap-sets/`, `data/boards/` backfill, shipped at the f6a23ac promote) populated 13+ entity records that live as JSON but have no detail surface. Sitemap walks none of them.
-  - Implicit: every article that uses `mentionedParts` (currently 7 of 12) names parts the reader can't click through to. As the article catalog grows, the navigation hole grows with it.
-- rationale: the parts data layer is fully populated post-phase-20 and the rail is the most-named "what's this part" affordance on the site. Two independent signals (drain-by-band-aid critique row + populated-but-unsurfaced data) point at the same shape: the missing detail page. Cheap once the patterns from phases 7/12 (per-pillar / per-tag) are reused; the work is ~95% structural and ~5% fresh design.
-- proposed scope: 1 phase.
-  - New routes `apps/web/src/app/part/[kind]/[slug]/page.tsx` for `kind ∈ {switch, keycap-set, board}` (or single `[slug]` if kind can be derived from the slug; design call). Render entity record's name, manufacturer, type spec, brief context, and a "mentioned in" rail showing every article whose `mentionedParts` lists this slug.
-  - New e2e in `apps/e2e/tests/parts.spec.ts`: index walker over every part slug, status 200, JSON-LD shape, mentioned-in rail renders.
-  - `MentionedPartsRail` items become anchors. The pass-6 #15 regression-guard test ("renders items as plain `<li>` with no anchor descendant") relaxes naturally — the test relaxes via a 1-line edit when the rail wraps in `<Link>`.
-  - Sitemap entries; CollectionPage / Thing JSON-LD.
-- estimated phases: 1
-- conflicts: none. Aligns with `bearings.md` URL contract (canonical paths). The `/part/[slug]` route family is anticipated by `bearings.md` design-decisions but not yet built.
-- promotion path: ship-a-phase autonomous. Same shape as phases 7 (pillar) and 12 (tag).
-
 ### [score 6.5] React #418 hydration flake — dedicated investigation phase
 - proposed: 2026-05-10, expand pass 2
 - source signals:
@@ -108,6 +78,43 @@
   1. **Phase 18 (was A) — group-buys backfill (scout-driven).** Scout researches active/announced group buys at CannonKeys, NovelKeys, Mode Designs, Wuque Studio, KBDfans, GeekHack aggregator. HEAD-probes URLs. Returns a candidate set with vendor/window/url/region. ship-data drops 4–6 new `data/group-buys/<vendor>-<slug>.json` records. Delete the fictional Mode Sonnet R2 record. Same phase: refresh `data/vendors/` if scout's candidate vendors aren't in the registry.
   2. **Phase 19 (was B) — trends backfill + schema additive.** Scout researches what's actually moving in the last 8 weeks (switch popularity, keycap-set GBs, layout adoption shifts). Add a `note: string?` field to the trends row schema in `packages/data`. Backfill `data/trends/2026-W19.json` to ≥3 rows per category. Render `note` plain-text in `TrackerRow` when slug is null. Drains the LOW em-dash + MED single-row + LOW duplicate-link findings simultaneously.
   3. **Phase 20 (was C) — switches / keycap-sets / boards backfill.** Scout researches: 6–8 currently-popular switches (real specs from manufacturer pages), 4–5 active keycap sets (profile, designer, status), 3–4 boards (the Mode-Sonnet-vs-Bakeneko-vs-Cycle7 archetypes). ship-data drops records. Updates ripple into `/sources` cite counts and `/by-pillar` densities.
+
+### [score 7.5] Per-part pages `/part/[slug]` — turn the parts catalog into navigable surfaces
+- promoted: 2026-05-10 via `/oversight` (this commit)
+- assigned phase: **21**
+- promotion decisions (locked at /oversight time):
+  - **Route shape**: `/part/[kind]/[slug]` with `kind ∈ {switch, keycap-set, board}`. Three explicit kinds (not a single dynamic `[slug]`) so the URL is self-documenting and the loader doesn't need a kind-discovery step.
+  - **Brief drafting**: drafted on-demand by `/ship-a-phase` (or pre-warmed by `/plan-a-phase phase 21`).
+- original signals + scope: see `## Pending` row that was moved here on promotion. Critique-row hooks: relaxes the pass-6 #15 stripped-chrome regression guard; surfaces the 13+ part records shipped in phases 18-20.
+- original proposed scope:
+  - New routes `apps/web/src/app/part/[kind]/[slug]/page.tsx` for `kind ∈ {switch, keycap-set, board}`. Render entity record's name, manufacturer, type spec, brief context, and a "mentioned in" rail showing every article whose `mentionedParts` lists this slug.
+  - New e2e in `apps/e2e/tests/parts.spec.ts`: index walker over every part slug, status 200, JSON-LD shape, mentioned-in rail renders.
+  - `MentionedPartsRail` items become anchors. The pass-6 #15 regression-guard test relaxes via a 1-line edit when the rail wraps in `<Link>`.
+  - Sitemap entries; CollectionPage / Thing JSON-LD.
+
+### [score 5.5] Streaming `<main>` landmark architectural call — Path (a) per-route `<main>` ownership
+- promoted: 2026-05-10 via `/oversight` (this commit)
+- assigned phase: **22**
+- promotion decisions (locked at /oversight time):
+  - **Path (a) locked**: move `<main>` from `apps/web/src/app/layout.tsx` to each route's `page.tsx`. Each `loading.tsx` also wraps its skeleton in `<main>`. Standard Next 15 + App Router pattern; preserves the per-route loading-skeleton UX while restoring SSR a11y-tree integrity.
+  - **Why not Path (b)**: dropping `loading.tsx` files would lose the per-route perceived-speed win; restructuring per-route ownership has no downside trade-off in thock's footprint.
+  - **Verify gate**: e2e adds `await expect(page.locator('main')).toHaveCount(1)` per canonical URL after the move. The smoke walker's existing `<h1>` assertion should be unaffected.
+  - **Brief drafting**: drafted on-demand by `/ship-a-phase` (or pre-warmed by `/plan-a-phase phase 22`).
+- original signals + scope: see `## Pending` row that was moved here on promotion. Closes the [needs-user-call] [HIGH] CRITIQUE row #22 from pass 7 (now reclassified `[x]` with promotion pointer).
+
+### [score 7.0] Group-buy hero art — schema additive + retrofit + durable shipping rule
+- promoted: 2026-05-10 via `/oversight` (this commit, in response to user observation)
+- assigned phase: **23**
+- promotion decisions (locked at /oversight time):
+  - **Mirror the article hero-art directive**: every group buy (current and future) gets a hero SVG generated by `brander`, stored under `apps/web/public/group-buy-art/<vendor>-<slug>.svg`, with a sibling `<vendor>-<slug>.svg.json` provenance file. The `bearings.md` "Article hero art" section gets a sibling subsection "Group-buy hero art" that codifies this as a durable rule (this commit ships that section update).
+  - **Schema additive**: `packages/data/src/schemas/group-buy.ts` gets a `heroImage: string?` field (Zod additive, optional). The existing `imageUrl` field stays — that's vendor-supplied product imagery, not the loop-generated hero. `heroImage` is the loop's editorial illustration.
+  - **Render surfaces**: `/group-buys` cards, home `<GroupBuysWidget>` rows, and any `<TrackerRow>` that tags a group buy. All three render `heroImage` if present; fall back to a coral-tinted placeholder block if absent (so a partial backfill doesn't leave broken-image holes).
+  - **Backfill scope**: 6 existing records in `data/group-buys/` need hero art (cannonkeys-nyawice, kbdfans-gmk-cyl-greg-2, kbdfans-gmk-cyl-ishtar-r2, kbdfans-gmk-cyl-king-of-the-seas, kbdfans-gsk-sweet-nightmare, wuque-studio-paper80-whatever-studio). `brander` renders 6 SVGs; subject mapping per kind (board → keyboard outline; keycap-set → keycap profile silhouette; switch → switch cross-section if a future GB targets one).
+  - **Going-forward rule**: `skills/ship-data.md` gets a one-liner amendment so any new group-buy record committed via `/ship-data` bundles a `brander` invocation in the same commit, with `heroImage` set in the JSON. This mirrors the article-hero rule from phases 5+ (content-curator + brander as one bundle). Phase 23 ships the amendment as part of the brief execution.
+  - **Brief drafting**: drafted on-demand by `/ship-a-phase` (or pre-warmed by `/plan-a-phase phase 23`).
+- source signal: user-spotted via `/oversight` 2026-05-10T14:18Z — "all group bys on /group-buys need to show an image" + "generate hero art per group by when they are added ALWAYS just like we do for other content (make this a rule in your shipping)".
+- estimated phases: 1
+- conflicts: none with `bearings.md` (extends the existing hero-art directive); none with the URL contract (no new routes); the schema additive is additive (nullable field, backwards-compatible).
 
 ## Rejected
 

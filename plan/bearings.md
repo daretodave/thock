@@ -324,6 +324,51 @@ backlog after each article ships, OR the `content-curator`
 agent emits an SVG draft alongside the prose for new articles
 and `/ship-asset` polishes it.
 
+### Group-buy hero art — colorful SVGs (locked 2026-05-10 via /oversight)
+
+Every group buy (current and future) renders a colorful SVG as
+its hero placeholder until vendor photography backfills. The
+directive is durable — `brander` and `/ship-asset` both read
+this section, and `/ship-data` bundles a `brander` invocation
+in the same commit when adding a new group-buy record.
+
+**Style guide:** mirrors the article hero-art rule above —
+simple line drawing, single splash of color (one accent + the
+warm-bronze theme accent — never multi-color), stroke weight
+~2px on a 1200×750 canvas. Subject mapped from group-buy kind:
+- `productKind: "board"` → keyboard outline silhouette,
+  optional layout callout.
+- `productKind: "keycap-set"` → keycap profile silhouette
+  (Cherry / OEM / SA), 4–6 caps in cluster.
+- `productKind: "switch"` → switch cross-section / housing
+  exploded view (when group buys for switches happen).
+- `productKind: null` (mixed kits) → fall back to a stylized
+  vendor wordmark glyph + a layout silhouette.
+
+Color taste: avoid stock blues/greens. Bronze accent + a
+single splash like coral, dusty rose, ochre, or muted
+terracotta — pick the splash from the group-buy's product
+character (e.g., a bright accent kit gets coral; an earthy
+designer set gets ochre). Background transparent or
+warm-paper.
+
+**Storage:** `apps/web/public/group-buy-art/<vendor>-<slug>.svg`
+with a sibling `<vendor>-<slug>.svg.json` provenance file.
+The data record's `heroImage` field references the absolute
+path (`/group-buy-art/<vendor>-<slug>.svg`). Schema additive
+landed in phase 23.
+
+**Delivery path:** new group-buy records ship via `/ship-data`
+which bundles a `brander` invocation in the same commit
+(mirrors the article-hero rule for new articles). Backfill of
+the existing 6 records lands as part of phase 23.
+
+**Render fallback:** if a record's `heroImage` is null at
+render time (e.g., partial backfill in flight), the card
+renders a coral-tinted placeholder block — never a broken
+image. The fallback is intentionally distinguishable from a
+real hero so missing art is observable in QA.
+
 ## Plan expansion posture
 
 **Mode: bold.**

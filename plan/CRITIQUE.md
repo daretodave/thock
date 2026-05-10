@@ -12,6 +12,16 @@
 
 ## Pending
 
+### [HIGH] /article/gmk-cyl-prussian-alert + / (latest-by-pillar Keycaps slot) — hero SVG renders broken
+- pass: user-jot (commit 3955686, via /oversight 2026-05-10T14:18Z)
+- viewport: unspecified
+- auth_state: anonymous
+- category: visual
+- observation: /article/gmk-cyl-prussian-alert has a broken image; on the home page the link to that article surfaces the same broken image in its card.
+- evidence: user-spotted at 2026-05-10T14:18:00Z. Diagnosed during oversight: file exists at `apps/web/public/hero-art/gmk-cyl-prussian-alert.svg` (5688 bytes, 31 path/shape elements); prod serves it 200 at `https://thock-coral.vercel.app/hero-art/gmk-cyl-prussian-alert.svg` with byte-identical content; article HTML references `src="/hero-art/gmk-cyl-prussian-alert.svg"` correctly. So the wiring is fine — the bug is **inside the SVG content**: paths are malformed, viewBox/coordinate mismatch, or a stroke-only "fill: none" graphic with paths that don't actually draw the cap cluster. Compare to known-good `cherry-mx2a-revision.svg` (7652 bytes, 58 path elements) — Prussian Alert is roughly half the path density, suggesting the SVG was generated incomplete or some paths were elided.
+- suggested fix: `/ship-asset` brander re-renders the hero from a fresh prompt. Keycap piece per the bearings hero-art directive: top-down profile silhouette of 6 GMK CYL keycaps, deep-Prussian-red focal cap centered, warm-bronze stroke on the rest. Existing `heroImageAlt` is good — reuse it. Replace the SVG + provenance JSON at the same path. Iterate ticks the row [x] post-deploy.
+- source: user
+
 ### [needs-user-call] [MED] / — production GA `/g/collect` beacons returning HTTP 503
 - pass: 8 (commit d34580c)
 - viewport: desktop
@@ -82,7 +92,8 @@
 - verify note: 333 e2e green on serial run (`--workers=1`); first parallel attempt hit four #418 hydration flakes on /search, /deep-dives, /tag/mt3, /trends per AUDIT.md row 113 (different routes per run, classic parallel-load symptom). Same root cause as prior /iterate ticks; serial-fallback remains the per-tick mitigation until #418 root cause lands.
 - source: user
 
-### [needs-user-call] [HIGH] /* (every dynamic-data page) — `<main>` landmark contains only the "loading…" shell; real content renders outside the landmark
+### [x] [HIGH] /* (every dynamic-data page) — `<main>` landmark contains only the "loading…" shell; real content renders outside the landmark
+- resolution: promoted to Phase 22 via /oversight 2026-05-10. Path (a) locked: move `<main>` from `apps/web/src/app/layout.tsx` to each route's `page.tsx` and `loading.tsx`. Each segment owns its landmark; `<main>` always wraps streamed content. e2e adds `await expect(page.locator('main')).toHaveCount(1)` per canonical URL. No longer needs-user-call — implementation is bounded.
 - issue: #22 (open — investigation continuing)
 - pass: 7 (commit e3de21d)
 - viewport: both
