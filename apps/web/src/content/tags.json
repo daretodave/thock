@@ -43,6 +43,8 @@
     { "slug": "build-of-the-week", "name": "Build of the week", "category": "misc" },
     { "slug": "deep-dive", "name": "Deep dive", "category": "misc" },
     { "slug": "modding", "name": "Modding", "category": "misc" },
-    { "slug": "trends-tracker", "name": "Trends Tracker", "category": "misc" }
+    { "slug": "trends-tracker", "name": "Trends Tracker", "category": "misc" },
+    { "slug": "trends-2026", "name": "Trends 2026", "category": "misc" },
+    { "slug": "qwertykeys", "name": "Qwertykeys", "category": "brand" }
   ]
 }

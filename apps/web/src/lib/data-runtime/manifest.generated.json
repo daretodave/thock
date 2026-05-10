@@ -605,7 +605,7 @@
             27,
             28
           ],
-          "articleSlug": null,
+          "articleSlug": "75-percent-default",
           "note": "Sonnet 2026, QK75, and Rainy 75 sustaining 75% as the default custom-board pitch; the format is absorbing former 65% buyers who want an F-row back."
         },
         {
@@ -721,6 +721,55 @@
     }
   ],
   "articles": [
+    {
+      "slug": "75-percent-default",
+      "frontmatter": {
+        "slug": "75-percent-default",
+        "title": "How 75 percent became the default custom layout",
+        "lede": "Two years ago a custom-board recommendation defaulted to 65% with a polite note about 75% as the next step up. The Sonnet 2026 refresh, the QK75, and a crowded mid-tier have flipped that order. 75% is now the layout customs reach for first.",
+        "author": "thock",
+        "pillar": "trends",
+        "tags": [
+          "75",
+          "layout",
+          "trends-2026",
+          "mode",
+          "qwertykeys"
+        ],
+        "publishedAt": "2026-05-10T16:00:00.000Z",
+        "updatedAt": null,
+        "heroImage": "/hero-art/75-percent-default.svg",
+        "heroImageAlt": "Top-down line silhouette of a 75 percent keyboard layout — case outline, low-detail dot grid hinting at five rows of keys, right-side nav column, and bottom-right arrow cluster — with a steel-blue sparkline trend curve crossing from lower-left to upper-right, peaking above the case at top-right with a focal steel-blue accent dot.",
+        "featured": false,
+        "popularityScore": 0,
+        "guideSection": null,
+        "mentionedParts": [
+          {
+            "id": "sonnet",
+            "kind": "board",
+            "slug": "mode-sonnet"
+          },
+          {
+            "id": "qk75",
+            "kind": "board",
+            "slug": "qk75"
+          },
+          {
+            "id": "bakeneko",
+            "kind": "board",
+            "slug": "bakeneko65"
+          },
+          {
+            "id": "mammoth",
+            "kind": "board",
+            "slug": "mammoth75"
+          }
+        ]
+      },
+      "body": "\nFor a stretch running from roughly 2022 through early 2024, the\nhonest answer to \"which layout should a first custom be?\" was 65%,\nwith 75% offered as the upsell for typists who missed the F-row.\nThat order has reversed. Walk through the configurator pages of\nthe vendors thock tracks weekly and the default tile — the one\nloaded first, the one the marketing photography is built\naround — is now a 75. The shift didn't happen in a single quarter,\nand no single board tipped it. It's a balance-of-supply story, and\nthe balance is finally in.\n\n## The configurator default shifted\n\nThe clearest signal is what gets photographed first. The\n<PartReference id=\"sonnet\" /> refresh that Mode shipped to its\nconfigurator on 2026-03-04 ties Mode's flagship pitch directly to\nthe 75% format — the landing photography, the colorway palette,\nand the accent-weight options are all framed around the 75\nchassis rather than presented as a sibling SKU to a 65 lead.\n<Source href=\"https://modedesigns.com/products/sonnet\">Mode's\nSonnet product page</Source> reads like a brand statement, not a\ncatalog listing, and the statement is that 75% is what Mode makes\nby default now.\n\nMode is the loudest example, but it's not alone. The week-by-week\nread from the <Source href=\"https://thock-coral.vercel.app/trends/tracker\">live\nTrends Tracker</Source> has the 75% layout sitting at score +28\nand direction up across the eight-week window through 2026-W19,\nwith the editor note pointing to Sonnet 2026, QK75, and the Rainy\n75 as the boards holding the format aloft. It's a slow climb, not\na spike — exactly the shape of a layout settling into a default\nslot.\n\n## QK75 as the mid-tier anchor\n\nA default needs a mid-tier or it stays a niche, and the\n<PartReference id=\"qk75\" /> is what filled the gap. Qwertykeys's\n75 entry pairs wireless and hot-swap with a price band that lands\nbetween the entry pre-built and the full custom group buy — the\nsame architectural slot that the Bakeneko once owned for 65, but\nspecced for 2026 expectations rather than 2022 ones. The board\nships with a plate-or-plateless option that gives builders a\ngenuine feel choice without committing to a second purchase, and\nthe wireless story works without a science-project battery\ncaveat.\n\nWhat QK75 unlocked is reach. A reader who sees the Sonnet 2026\nphotography, gets interested, and balks at the configurator price\nnow has a 75 to land on at $300 instead of bouncing back to a\ndifferent layout. That's the supply pattern that turns a strong\nlayout into a default one — not the headline board, but the next\none down.\n\n## What 65 percent became instead\n\n65% didn't lose. It found a different role. The\n<PartReference id=\"bakeneko\" /> remains the answer thock gives\nwhen a reader asks for a first custom under $200, and the\nbroader Bakeneko-pattern ecosystem — the unibody-CNC clones, the\nTofu60-adjacent budget builds — sustains 65 as the gateway tier\nin a way 75 hasn't tried to compete with. The category that\nmoved was the upper end. Builders whose second or third board\nused to be a 65 with nicer materials are now buying a 75 with\nthose materials instead, because the F-row reads as table-stakes\nonce the budget clears the entry tier.\n\n<Callout type=\"note\" title=\"Build-shape watch\">\n  The 75% boards moving in 2026 have settled on a tighter shape\n  than the format used to allow: exploded arrow clusters,\n  F-row-aligned right column, gasket-mount internals as default\n  rather than option. The Mammoth75 magnetic knob is the loudest\n  variant flag, but the chassis intent is converging.\n</Callout>\n\nThat convergence matters. A \"default\" layout is a layout where a\nbuyer can pick a board sight-unseen and know roughly what the\ntyping geometry will be. 65 hit that point years ago. 75 is\nhitting it now, and the boards arriving in 2026 are honoring the\nshape rather than experimenting with it.\n\n## The supply side caught up\n\nThe <PartReference id=\"mammoth\" /> is in group-buy state at Wuque\nStudio and brings the magnetic-knob crowd back into the 75\nconversation. The Rainy 75 keeps a value-tier 75 on shelf for\nbuyers who don't want to wait through an interest check. The\nSonnet 2026 covers the flagship band. QK75 covers the wireless\nmid-tier. Each price tier has at least one in-stock or\nnear-in-stock 75 option, which is the actual prerequisite for a\nlayout to be a default — not the existence of a flagship, but the\nabsence of holes in the ladder.\n\nCompare that to the same audit twelve months ago. In 2025 a buyer\nlooking for a 75 at the $300 wireless tier had to either wait for\na group buy to open or stretch the budget to a full custom. The\nladder had a missing rung, and missing rungs are how layouts stay\nsecondary. The rung is now there.\n\n## What we're watching\n\nTwo questions for the next two quarters. The first is whether 65%\ngives up any more upper-tier ground or holds the gateway role as\na stable floor; the Bakeneko ecosystem has a long evergreen tail,\nbut the next-tier-up 65 launches have gone quiet relative to\ntheir 75 counterparts. The second is whether any of the converging\n75 boards breaks the chassis pattern — a serious low-profile 75,\na true split 75, a wireless tray-mount that prices under the QK75\nband. A default is most defaultest right before something\ninteresting cracks it open.\n\nUntil then, the recommendation order is reversed. A first custom\nin 2026 is a 75% with the F-row a reader can see; the 65% is the\nbudget pick or the deliberate aesthetic choice. The configurators\nhave already made the call. The trend line caught up.\n",
+      "readTime": 5,
+      "filePath": "Z:\\keyboard\\apps\\web\\src\\content\\articles\\75-percent-default.mdx"
+    },
     {
       "slug": "trends-tracker-preview",
       "frontmatter": {
@@ -1084,6 +1133,11 @@
       "category": "material"
     },
     {
+      "slug": "qwertykeys",
+      "name": "Qwertykeys",
+      "category": "brand"
+    },
+    {
       "slug": "sa",
       "name": "SA",
       "category": "profile"
@@ -1109,6 +1163,11 @@
       "category": "layout"
     },
     {
+      "slug": "trends-2026",
+      "name": "Trends 2026",
+      "category": "misc"
+    },
+    {
       "slug": "trends-tracker",
       "name": "Trends Tracker",
       "category": "misc"
@@ -1119,5 +1178,5 @@
       "category": "brand"
     }
   ],
-  "generatedAt": "2026-05-10T03:56:03.454Z"
+  "generatedAt": "2026-05-10T04:14:08.315Z"
 }

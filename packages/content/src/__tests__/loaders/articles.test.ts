@@ -10,9 +10,12 @@ import { __resetForTests } from '../../loaders/memo'
 describe('articles loader', () => {
   afterEach(() => __resetForTests())
 
-  it('reads the six seed articles', () => {
+  it('reads the seed articles plus any iterate-shipped pieces', () => {
     const all = getAllArticles()
-    expect(all.length).toBe(6)
+    // 6 seed articles + N iterate-shipped pieces (Trends 75-percent-default
+    // landed via /iterate 2026-05-10). Use a floor rather than a hard count
+    // so future iterate ticks don't keep flipping this assertion.
+    expect(all.length).toBeGreaterThanOrEqual(6)
   })
 
   it('sorts by publishedAt descending', () => {

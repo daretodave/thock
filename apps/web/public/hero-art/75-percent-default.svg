@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — 75% default, layout silhouette as sparkline</title>
+
+  <!-- Splash band: faint steel-blue wash setting the stage for the sparkline -->
+  <path
+    d="M 70 90 L 1130 90 L 1130 660 L 70 660 Z"
+    fill="oklch(0.74 0.085 215 / 0.08)" stroke="none"/>
+
+  <!-- 75% layout silhouette — top-down outline, ~85% width × ~44% height,
+       seated in the lower-mid canvas. Proportions echo a real 75%
+       (~15.5u wide × 5 rows tall). -->
+
+  <!-- Outer case profile: rounded rectangle, 2px stroke -->
+  <rect x="90" y="304" width="1020" height="329" rx="14" ry="14"/>
+
+  <!-- Inset bezel hint: thin secondary line just inside the case -->
+  <rect x="106" y="320" width="988" height="297" rx="9" ry="9" stroke-opacity="0.35"/>
+
+  <!-- Key cluster grid — low-detail dots hinting at rows. Five rows:
+       row 1 = function row (smaller dots, evenly spaced, gap before nav column),
+       rows 2–5 = main alpha block + arrow cluster on right.
+       8 columns × 5 rows — abstracted, NOT 1:1 with the real key count. -->
+
+  <!-- Row 1 (F-row) — small dots, slightly recessed -->
+  <g stroke-opacity="0.55">
+    <circle cx="158" cy="356" r="2.5"/>
+    <circle cx="278" cy="356" r="2.5"/>
+    <circle cx="398" cy="356" r="2.5"/>
+    <circle cx="518" cy="356" r="2.5"/>
+    <circle cx="638" cy="356" r="2.5"/>
+    <circle cx="758" cy="356" r="2.5"/>
+    <circle cx="878" cy="356" r="2.5"/>
+    <circle cx="998" cy="356" r="2.5"/>
+  </g>
+
+  <!-- Rows 2–5 (alpha block) — slightly larger dots -->
+  <g stroke-opacity="0.7">
+    <!-- Row 2 (number row) -->
+    <circle cx="158" cy="426" r="3"/>
+    <circle cx="278" cy="426" r="3"/>
+    <circle cx="398" cy="426" r="3"/>
+    <circle cx="518" cy="426" r="3"/>
+    <circle cx="638" cy="426" r="3"/>
+    <circle cx="758" cy="426" r="3"/>
+    <circle cx="878" cy="426" r="3"/>
+    <circle cx="998" cy="426" r="3"/>
+
+    <!-- Row 3 (top alpha) -->
+    <circle cx="158" cy="486" r="3"/>
+    <circle cx="278" cy="486" r="3"/>
+    <circle cx="398" cy="486" r="3"/>
+    <circle cx="518" cy="486" r="3"/>
+    <circle cx="638" cy="486" r="3"/>
+    <circle cx="758" cy="486" r="3"/>
+    <circle cx="878" cy="486" r="3"/>
+    <circle cx="998" cy="486" r="3"/>
+
+    <!-- Row 4 (home row) -->
+    <circle cx="158" cy="546" r="3"/>
+    <circle cx="278" cy="546" r="3"/>
+    <circle cx="398" cy="546" r="3"/>
+    <circle cx="518" cy="546" r="3"/>
+    <circle cx="638" cy="546" r="3"/>
+    <circle cx="758" cy="546" r="3"/>
+    <circle cx="878" cy="546" r="3"/>
+    <circle cx="998" cy="546" r="3"/>
+
+    <!-- Row 5 (bottom row) -->
+    <circle cx="158" cy="600" r="3"/>
+    <circle cx="278" cy="600" r="3"/>
+    <circle cx="398" cy="600" r="3"/>
+    <circle cx="518" cy="600" r="3"/>
+    <circle cx="638" cy="600" r="3"/>
+    <circle cx="758" cy="600" r="3"/>
+    <circle cx="878" cy="600" r="3"/>
+    <circle cx="998" cy="600" r="3"/>
+  </g>
+
+  <!-- Faint vertical column guides — five short dashes across the alpha block,
+       reading like row separators / chart gridlines hybrid -->
+  <g stroke-opacity="0.18">
+    <line x1="218" y1="335" x2="218" y2="617"/>
+    <line x1="338" y1="335" x2="338" y2="617"/>
+    <line x1="458" y1="335" x2="458" y2="617"/>
+    <line x1="578" y1="335" x2="578" y2="617"/>
+    <line x1="698" y1="335" x2="698" y2="617"/>
+    <line x1="818" y1="335" x2="818" y2="617"/>
+    <line x1="938" y1="335" x2="938" y2="617"/>
+  </g>
+
+  <!-- Arrow cluster — the 75%'s defining tell on the right-bottom.
+       Four small rounded squares: up above, left/down/right beneath. -->
+  <g stroke-opacity="0.85">
+    <!-- Up -->
+    <rect x="990" y="546" width="22" height="22" rx="3" ry="3"/>
+    <!-- Left -->
+    <rect x="962" y="574" width="22" height="22" rx="3" ry="3"/>
+    <!-- Down -->
+    <rect x="990" y="574" width="22" height="22" rx="3" ry="3"/>
+    <!-- Right -->
+    <rect x="1018" y="574" width="22" height="22" rx="3" ry="3"/>
+  </g>
+
+  <!-- Right-side nav column hint (3 small keys: PgUp/PgDn-ish) — lifts the silhouette toward "75%" -->
+  <g stroke-opacity="0.6">
+    <rect x="1042" y="424" width="48" height="18" rx="3" ry="3"/>
+    <rect x="1042" y="450" width="48" height="18" rx="3" ry="3"/>
+    <rect x="1042" y="476" width="48" height="18" rx="3" ry="3"/>
+  </g>
+
+  <!-- Faint area fill beneath the sparkline — single splash hue,
+       sweeps from lower-left up to peak, mirroring the canonical Trends hero -->
+  <path
+    d="
+      M 90 560
+      L 236 524
+      L 381 538
+      L 527 472
+      L 673 388
+      L 818 304
+      L 964 210
+      L 1110 110
+      L 1110 660
+      L 90 660
+      Z"
+    fill="oklch(0.74 0.085 215 / 0.16)" stroke="none"/>
+
+  <!-- The sparkline trend curve — single continuous polyline crossing the
+       layout silhouette from lower-left to upper-right. 8 points, peaks at right.
+       Colored in the per-article splash hue (steel-blue), 2.5px stroke for emphasis. -->
+  <polyline
+    points="
+      90,560
+      236,524
+      381,538
+      527,472
+      673,388
+      818,304
+      964,210
+      1110,110"
+    stroke="oklch(0.74 0.085 215)" stroke-width="2.5"/>
+
+  <!-- Subtle interior data-point dots on the sparkline (warm-grey, low-key) -->
+  <g stroke-opacity="0.55">
+    <circle cx="90"  cy="560" r="3.5"/>
+    <circle cx="236" cy="524" r="3.5"/>
+    <circle cx="381" cy="538" r="3.5"/>
+    <circle cx="527" cy="472" r="3.5"/>
+    <circle cx="673" cy="388" r="3.5"/>
+    <circle cx="818" cy="304" r="3.5"/>
+    <circle cx="964" cy="210" r="3.5"/>
+  </g>
+
+  <!-- Focal accent dot at the sparkline peak — steel-blue,
+       filled core + soft outer ring (mirrors canonical Trends cursor) -->
+  <circle cx="1110" cy="110" r="9"  fill="oklch(0.74 0.085 215 / 0.95)" stroke="oklch(0.74 0.085 215)"/>
+  <circle cx="1110" cy="110" r="16" stroke="oklch(0.74 0.085 215)" stroke-opacity="0.45" fill="none"/>
+</svg>

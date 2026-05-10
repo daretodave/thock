@@ -1,0 +1,16 @@
+{
+  "kind": "hero-art",
+  "target": "Z:/keyboard/apps/web/public/hero-art/75-percent-default.svg",
+  "source": "plan/bearings.md § Article hero art — colorful keyboard SVGs",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject",
+  "size": [1200, 750],
+  "subject": "Top-down silhouette of a 75 percent keyboard layout (case outline, low-detail dot grid hinting at five rows of keys, right-side nav column, and bottom-right arrow cluster) with a single rising sparkline trend curve crossing from lower-left to upper-right and peaking just above the case at top-right; focal steel-blue accent dot at the peak.",
+  "splash_color": "oklch(0.74 0.085 215)",
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": [],
+  "prompt": "Trends pillar = sparkline subject template. For the 75% piece I fused the two halves of the brief into one didactic frame: the 75% layout silhouette IS the chart's playing field, and the sparkline literally rises up out of it. Outer case at x=90→1110, y=304→633 (~85% width × ~44% height, true 75% proportions ~15.5u × 5u). Five rows of dots — F-row recessed (smaller, lower opacity), four alpha rows at full weight — establish keyboard-ness without drawing every key. Right-side three-key nav column and the four-square arrow cluster (up above, left/down/right beneath) are the 75%'s defining tells; both included so the silhouette is unambiguous at thumbnail size. Faint vertical guides between columns double as both row separators and chart gridlines, bridging the keyboard and chart readings. The sparkline (8 points) starts at (90, 560) — inside the case's lower-left — sweeps across the silhouette, and peaks at (1110, 110), well above the case, implying 75% trending up. Splash hue is steel-blue oklch(0.74 0.085 215), deliberately cooler than the canonical Trends hero's ochre/brass so the two pieces sit as siblings without collision. Single-color splash convention preserved: low-fill area beneath the sparkline in the same hue at 0.16 alpha, splash band wash at 0.08, sparkline stroke at full chroma with 2.5px width for emphasis, focal cursor (filled core + outer ring) at the peak. Warm-grey 2px stroke for everything else mirrors the canonical Trends hero's voice.",
+  "revision": 1,
+  "generated_by": "brander (sub-agent)",
+  "generated_at": "2026-05-10",
+  "commit_at_render": "pending"
+}
