@@ -48,6 +48,8 @@
     { "slug": "qwertykeys", "name": "Qwertykeys", "category": "brand" },
     { "slug": "ergo", "name": "Ergo", "category": "layout" },
     { "slug": "voyager", "name": "Voyager", "category": "brand" },
-    { "slug": "glove80", "name": "Glove80", "category": "brand" }
+    { "slug": "glove80", "name": "Glove80", "category": "brand" },
+    { "slug": "kbdfans", "name": "KBDfans", "category": "brand" },
+    { "slug": "keycaps", "name": "Keycaps", "category": "misc" }
   ]
 }

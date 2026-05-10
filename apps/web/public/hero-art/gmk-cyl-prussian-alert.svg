@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — GMK CYL Prussian Alert, 6 cylindrical keycaps laid out with one focal cap in deep Prussian red</title>
+
+  <!-- Splash: a soft cream/parchment wash framing the cap cluster (the article body
+       reads the set as deep red over parchment, Bauhaus-leaning). -->
+  <ellipse cx="600" cy="395" rx="510" ry="220" fill="oklch(0.92 0.025 85 / 0.18)" stroke="none"/>
+
+  <!-- ============================================================
+       6 GMK CYL keycaps, near-top-down with a hint of 3/4 to read
+       the cylindrical scoop. Layout: two rows of three, lightly
+       offset like a freshly-tipped tray. Focal cap = top-row middle.
+       Each cap is built as:
+         - outer cap silhouette (the base footprint)
+         - top surface (slightly inset, with the CYL scoop curve)
+         - scoop highlight (a single arc inside the top)
+       ============================================================ -->
+
+  <!-- ---------------- Row 1 (back row) ---------------- -->
+
+  <!-- Cap 1 — back-left -->
+  <g transform="translate(295 235)">
+    <!-- footprint -->
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"/>
+    <!-- top surface (inset, tapered toward the back to suggest tilt) -->
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z" stroke-opacity="0.7"/>
+    <!-- CYL scoop arc — a gentle dish across the top -->
+    <path d="M 38 90 Q 88 76 138 90" stroke-opacity="0.45"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke-opacity="0.3"/>
+  </g>
+
+  <!-- Cap 2 — back-middle (FOCAL — Prussian red splash) -->
+  <g transform="translate(515 215)">
+    <!-- focal fill: deep Prussian red, low alpha for the cap body -->
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"
+          fill="oklch(0.5 0.16 22 / 0.92)" stroke="oklch(0.5 0.16 22)"/>
+    <!-- top surface — slightly lighter Prussian wash so the scoop reads -->
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          fill="oklch(0.55 0.16 22 / 0.85)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55"/>
+    <!-- CYL scoop arc — drawn in warm-grey on the red top so it still reads -->
+    <path d="M 38 90 Q 88 74 138 90" stroke="oklch(0.92 0.025 85)" stroke-opacity="0.55"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke="oklch(0.92 0.025 85)" stroke-opacity="0.35"/>
+  </g>
+
+  <!-- Cap 3 — back-right -->
+  <g transform="translate(735 235)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z" stroke-opacity="0.7"/>
+    <path d="M 38 90 Q 88 76 138 90" stroke-opacity="0.45"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke-opacity="0.3"/>
+  </g>
+
+  <!-- ---------------- Row 2 (front row, shifted half a cap) ---------------- -->
+
+  <!-- Cap 4 — front-left -->
+  <g transform="translate(205 425)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z" stroke-opacity="0.7"/>
+    <path d="M 38 90 Q 88 76 138 90" stroke-opacity="0.45"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke-opacity="0.3"/>
+  </g>
+
+  <!-- Cap 5 — front-middle -->
+  <g transform="translate(425 425)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z" stroke-opacity="0.7"/>
+    <path d="M 38 90 Q 88 76 138 90" stroke-opacity="0.45"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke-opacity="0.3"/>
+  </g>
+
+  <!-- Cap 6 — front-right (1.25u — a modifier-width cap, to suggest the kit's spread) -->
+  <g transform="translate(645 425)">
+    <!-- 1.25u footprint: 220 wide instead of 176 -->
+    <path d="M 8 14 Q 0 8 14 4 L 206 4 Q 220 8 212 14 L 212 154 Q 220 160 206 164 L 14 164 Q 0 160 8 154 Z"/>
+    <path d="M 30 28 Q 24 22 36 20 L 184 20 Q 196 22 190 28 L 190 138 Q 196 144 184 146 L 36 146 Q 24 144 30 138 Z" stroke-opacity="0.7"/>
+    <path d="M 38 90 Q 110 76 188 90" stroke-opacity="0.45"/>
+    <path d="M 38 102 Q 110 90 188 102" stroke-opacity="0.3"/>
+  </g>
+
+  <!-- Cap 7 — front far-right (a small accent cap, 1u, sitting slightly forward like
+       a stray from the kit) -->
+  <g transform="translate(905 455)">
+    <!-- 1u: 132 wide -->
+    <path d="M 8 14 Q 0 8 14 4 L 118 4 Q 132 8 124 14 L 124 154 Q 132 160 118 164 L 14 164 Q 0 160 8 154 Z"/>
+    <path d="M 30 28 Q 24 22 36 20 L 96 20 Q 108 22 102 28 L 102 138 Q 108 144 96 146 L 36 146 Q 24 144 30 138 Z" stroke-opacity="0.7"/>
+    <path d="M 38 90 Q 66 76 100 90" stroke-opacity="0.45"/>
+    <path d="M 38 102 Q 66 90 100 102" stroke-opacity="0.3"/>
+  </g>
+
+  <!-- A single deep-red dot near the focal cap's lower-right — the "alert"
+       pip, the same conceptual move as the brass dot on the Sonnet hero. -->
+  <circle cx="690" cy="385" r="7" fill="oklch(0.5 0.16 22 / 0.95)" stroke="oklch(0.5 0.16 22)"/>
+  <circle cx="690" cy="385" r="12" stroke-opacity="0.45" stroke="oklch(0.5 0.16 22)" fill="none"/>
+</svg>

@@ -1,0 +1,16 @@
+{
+  "kind": "hero-art",
+  "target": "Z:/keyboard/apps/web/public/hero-art/gmk-cyl-prussian-alert.svg",
+  "source": "plan/bearings.md § Article hero art — colorful keyboard SVGs",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject",
+  "size": [1200, 750],
+  "subject": "Top-down cluster of six GMK CYL keycaps laid out as if just tipped from a kit (two staggered rows, with a 1.25u modifier and a stray 1u accent cap), with the centered back-row cap painted deep Prussian red as the focal 'alert' piece",
+  "splash_color": "oklch(0.5 0.16 22)",
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": [],
+  "prompt": "Match the visual rhythm of mode-sonnet-r2-group-buy-coverage.svg — 2px warm-grey stroke, single-color splash, soft elliptical wash behind the subject. Subject for a keycap-set GB news piece is a stacked-cap silhouette per the news pillar's headline-shape directive. Six caps in CYL profile (slightly inset top surface plus a gentle scoop arc to read the cylindrical dish), arranged as two staggered rows so the cluster fills ~85% width × ~75% height. The focal back-row middle cap takes the deep Prussian red splash; a small alert-pip echo sits just outside it, mirroring the Sonnet hero's brass-dot move. Splash hue is the muted Prussian variant (oklch 0.5 0.16 22) rather than cherry red, to honor the article's Bauhaus / parchment-and-deep-red read.",
+  "revision": 1,
+  "generated_by": "brander (sub-agent)",
+  "generated_at": "2026-05-10",
+  "commit_at_render": "pending"
+}
