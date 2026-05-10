@@ -13,19 +13,23 @@ const KIND_LABEL: Record<ResolvedPart['kind'], string> = {
 }
 
 /**
- * "Build sheet" rail. Renders one card per resolved part — name,
- * kind label, brief context. Hides when empty.
+ * "Build sheet" rail. Renders one descriptive entry per resolved
+ * part — kind label + name. Flat list shape, no interactive
+ * styling. Hides when empty.
  *
  * Heading is "Build sheet" rather than "Mentioned in this article"
  * (critique pass 4 [MED] drain): the rail surfaces only
  * `frontmatter.mentionedParts`, which is curated by the editor
  * rather than auto-extracted from prose. Reframing the heading
  * matches that curated 2-item shape honestly without overpromising
- * exhaustiveness against every part the body names. The
- * auto-extract path (MDX walker) stays as a phase-shaped audit row.
+ * exhaustiveness against every part the body names.
  *
- * Phase 5 ships the basic card; phase 13 (group buys) and later
- * polish passes layer in pricing, vendor links, and stock state.
+ * Visual treatment is flat (no border, no hover, no card chrome)
+ * because there's no per-part page to link to yet — bordered cards
+ * with hover transitions read as clickable, and a reader who
+ * hovers expecting a click-through is mis-led (critique pass 6
+ * [MED] drain). When per-part pages ship, the items become anchors
+ * and the card chrome can return.
  */
 export function MentionedPartsRail({
   parts,
@@ -40,19 +44,17 @@ export function MentionedPartsRail({
         </h2>
         <ul
           data-testid="mentioned-parts-rail"
-          className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3"
+          className="grid gap-x-8 gap-y-4 sm:grid-cols-2 lg:grid-cols-3"
         >
           {parts.map((part) => (
             <li
               key={`${part.kind}:${part.slug}`}
-              className="border border-border bg-surface p-4 transition-colors hover:border-border-hi"
+              className="flex flex-col gap-1"
             >
-              <div className="flex flex-col gap-1.5">
-                <span className="font-mono uppercase tracking-[0.08em] text-micro text-accent-mu">
-                  {KIND_LABEL[part.kind]}
-                </span>
-                <Mono className="text-body text-text">{part.record.name}</Mono>
-              </div>
+              <span className="font-mono uppercase tracking-[0.08em] text-micro text-accent-mu">
+                {KIND_LABEL[part.kind]}
+              </span>
+              <Mono className="text-body text-text">{part.record.name}</Mono>
             </li>
           ))}
         </ul>

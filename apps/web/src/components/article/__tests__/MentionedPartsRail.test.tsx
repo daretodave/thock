@@ -13,7 +13,7 @@ const FAKE_SWITCH = {
 } as unknown as ResolvedPart
 
 describe('<MentionedPartsRail>', () => {
-  it('renders one card per resolved part', () => {
+  it('renders one item per resolved part', () => {
     render(<MentionedPartsRail parts={[FAKE_SWITCH]} />)
     const rail = screen.getByTestId('mentioned-parts-rail')
     expect(rail.children).toHaveLength(1)
@@ -24,5 +24,18 @@ describe('<MentionedPartsRail>', () => {
   it('hides itself when there are zero parts', () => {
     const { container } = render(<MentionedPartsRail parts={[]} />)
     expect(container.firstChild).toBeNull()
+  })
+
+  // Regression guard for /critique pass 6 [MED] #15: items render
+  // as plain `<li>` descriptive entries — no `<a>` descendant, no
+  // bordered card chrome — so the visual treatment matches the
+  // (currently) non-interactive nature of the rail. When per-part
+  // pages ship, this assertion gets relaxed to permit anchors.
+  it('renders items as plain <li> with no anchor descendant', () => {
+    render(<MentionedPartsRail parts={[FAKE_SWITCH]} />)
+    const rail = screen.getByTestId('mentioned-parts-rail')
+    const item = rail.children[0] as HTMLElement
+    expect(item.tagName).toBe('LI')
+    expect(item.querySelector('a')).toBeNull()
   })
 })
