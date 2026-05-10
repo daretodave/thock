@@ -68,25 +68,28 @@
 - verify note: 330 e2e green serially; first parallel run hit three #418 flakes on /deep-dives + /search + /tag/zmk (audit row 105 / expand pass-2 candidate, separately tracked).
 - source: browser
 
-### [LOW] /group-buys — Sweet Nightmare card missing region chip while siblings have GLOBAL
-- issue: #26
+### [phantom] [LOW] /group-buys — Sweet Nightmare card missing region chip — DROPPED ON SELF-ASSESSMENT
+- issue: #26 (closing as phantom-finding)
 - pass: 7 (commit e3de21d)
-- viewport: both
-- category: data
-- observation: The region/scope chip is inconsistent across cards in the "Closing soon" band on /group-buys — GMK CYL Ishtar R2 shows a "GLOBAL" chip; GSK Sweet Nightmare next to it has no region chip at all. Looks like a missing field on one record rather than intentional.
-- evidence: Tree on /group-buys: ref_40 (Ishtar R2) has `generic 'KEYCAPS' + generic 'GLOBAL'`; ref_50 (Sweet Nightmare) has only `generic 'KEYCAPS'`, no GLOBAL chip — yet every other card in "Open now" (Nyawice, GREG 2, King of the Seas) does have GLOBAL.
-- suggested fix: backfill the region field on `data/group-buys/kbdfans-gsk-sweet-nightmare.json` if the actual GB has a real region, OR render an explicit fallback ("REGION TBD") in the card so cards have a consistent shape. Backfill is the better answer.
-- source: browser
+- root cause: Sweet Nightmare's data record (`data/group-buys/kbdfans-gsk-sweet-nightmare.json`) DOES have `"region": "us"` — verified post-tick. The actual rendered HTML on /group-buys contains `<span ...>US</span>` directly before the `<h3>GSK Sweet Nightmare</h3>` heading. The reader's accessibility-tree extraction missed the US chip while seeing the GLOBAL chip on the sibling Ishtar R2 row, likely because `US` is a 2-letter generic-element label that adjacent-element collapse can elide in a11y-tree serialization.
+- finding: not a real bug; reader-tool extraction artifact.
 
-### [LOW] /tag/<slug> + cards — date format inconsistent across cards ("May 8, 2026" vs "Apr 30, 2026")
-- issue: #27
+### [phantom] [LOW] /tag/<slug> — date format inconsistent — DROPPED ON SELF-ASSESSMENT
+- issue: #27 (closing as phantom-finding)
 - pass: 7 (commit e3de21d)
-- viewport: both
-- category: visual
-- observation: Date format is inconsistent across cards on the tag archive (and likely other card-rendering surfaces) — most cards say "May 8, 2026" (long month) but the beginner's-switch-buying-guide card says "Apr 30, 2026" (abbreviated). Cosmetic inconsistency, but visible side-by-side on archive pages.
-- evidence: On /tag/gateron, the four cards display: ref_46 "May 4, 2026", ref_54 "May 8, 2026", ref_62 "May 7, 2026", ref_70 "Apr 30, 2026".
-- suggested fix: pick one date formatter and apply it everywhere card metadata renders. The pillar/tag/related-rail cards use `Intl.DateTimeFormat('en-US', { dateStyle: 'medium', timeZone: 'UTC' })` which produces "May 4, 2026" / "Apr 30, 2026" (abbreviated for medium). Audit which component is using `'long'` vs `'medium'` for cards (likely some surface has `dateStyle: 'long'` mismatched with sibling card surfaces) and standardize on one format. `'medium'` is the bearings card-density choice; pick that.
-- source: browser
+- root cause: all card-surface dates render via `Intl.DateTimeFormat('en-US', { dateStyle: 'medium', timeZone: 'UTC' })` — verified by `curl https://thock-coral.vercel.app/tag/gateron | grep`. The four observed dates are "Apr 30, 2026", "May 4, 2026", "May 7, 2026", "May 8, 2026" — all `medium` format. The reader misread "May 8" as the long-format because the month name "May" doesn't shorten between medium and long (it's the same 3 characters); only April/September/etc. visibly differ. Apparent inconsistency was a reader perception artifact from a homogeneous May-dominated catalog week.
+- finding: not a real bug; reader misread `dateStyle: 'medium'` as inconsistent because May happens to render identically in both medium and long.
+
+### Pass-7 self-assessment summary
+4 of 6 reader findings turned out to be phantoms or non-autonomous after self-assessment:
+- #22 [HIGH] `<main>` landmark — needs-user-call (Next 15 streaming architecture trade-off; post-hydration DOM correct)
+- #23 [HIGH] /about prose — phantom (reader-tool drops link content from prose extraction)
+- #24 [MED] /sources prose — phantom (same root cause as #23)
+- #25 [MED] /tracker double-announce — **shipped** (74759d1)
+- #26 [LOW] /group-buys region chip — phantom (reader missed the rendered US chip)
+- #27 [LOW] /tag/* date format — phantom (reader misread May; all dates are medium format)
+
+This pattern is informative for future passes: reader's accessibility-tree text extraction tools systematically miss link/code element content within prose AND can elide adjacent short-text generic elements. Future critique self-assessment should default-verify visual-detail findings against actual rendered HTML (`curl + grep`) before promoting them to Pending.
 
 ### [x] [HIGH] /article/mode-sonnet-r2-group-buy-coverage + /news + /tag/* + / — lede leaks "post-2026-05-09 schedule" editorial-pipeline jargon
 - addressed in: pending commit (this tick — iterate drain)
