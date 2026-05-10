@@ -8,12 +8,14 @@ import { PartReference } from './PartReference'
 import { KeyboardImage } from './KeyboardImage'
 
 function SerifH2({ children }: { children?: ReactNode }): ReactElement {
-  // mt-16 (64px) — generous top margin so a preceding <Callout>
+  // mt-20 (80px) — generous top margin so a preceding <Callout>
   // (my-8 = 32px each side) or any other block element still leaves
-  // clear breathing room before the next section. User-jot 11d932d
-  // flagged H2s sitting flush with cheat-sheet Callouts when this
-  // was mt-12.
-  return <h2 className="mt-16 mb-4 font-serif text-h2">{children}</h2>
+  // clear breathing room before the next section. After CSS
+  // margin-collapse with Callout's my-8, visible gap = 80px.
+  // User-jot 11d932d (May 9) bumped mt-12 → mt-16; user-jot d269094
+  // (May 10, issue #32) flagged that mt-16 still read as too tight
+  // and bumped mt-16 → mt-20.
+  return <h2 className="mt-20 mb-4 font-serif text-h2">{children}</h2>
 }
 
 function SerifH3({ children }: { children?: ReactNode }): ReactElement {
