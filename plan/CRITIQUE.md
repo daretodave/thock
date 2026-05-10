@@ -1,13 +1,54 @@
 # Critique log
 
-> Last pass: 2026-05-10T02:45:00Z at commit 790b415
-> Pass count: 5
-> Iterate-bias category: external-critique (pass 5 fired against the post-phase-20 site; reader confirmed the two pending corpus-depth rows from earlier passes still apply — they're cross-pillar and cross-article, not isolated. Filed 4 fresh findings: [MED] Long-reads rail empty-state leak on /, [MED] linked tracker rows expose 3 same-URL anchors per row, [MED] listing surfaces parrot stale Mode Sonnet R2 dates the article body retracts, [LOW] /article/<news> "Keep reading" rail thins to one tile. Phase 18/19/20 backfills clearly raised the floor on /trends/tracker + /group-buys per reader's positive note; remaining thinness is editorial corpus depth, not data scaffolding.)
+> Last pass: 2026-05-10T07:30:00Z at commit dfa5596
+> Pass count: 6
+> Iterate-bias category: external-critique (pass 6 fired ~5 commits after the phase-18/19/20 backfill ships and the post-pass-5 iterate drain — reader confirmed the corpus-depth + content trims have meaningfully raised the floor; filed 4 fresh findings: [HIGH] /article/mode-sonnet-r2 lede leaks "post-2026-05-09 schedule" editorial-pipeline jargon — self-inflicted regression from the pass-5 iterate drain at 4fcb463; [MED] /article/* Build sheet cards style as clickable but render no anchors — pre-phase-4 affordance leak; [MED] /sources intro leaks "<Source> MDX component" implementation jargon — stranger-facing trust surface mis-framed; [LOW] / Group-buys rail body mixes urgent and non-urgent rows when urgent heading fires. Reader's positive corpus-growth + rail-empty-state-fix closure notes confirm pass-5 drain landed cleanly. Three reader-flagged items dropped during self-assessment: (a) /article/cherry-mx2a-revision Keep-reading rail at 1 tile — duplicates the existing pending row at line 47; (b) /trends three cards sharing May 10 date — not actionable below the noise floor; (c) corpus-growth positive note — closure signal not a finding.)
+> Pass 5 last pass: 2026-05-10T02:45:00Z at commit 790b415
 
 > External-observer feedback for thock. Populated by `/critique`,
 > drained by `/iterate`. See `skills/critique.md` for the contract.
 
 ## Pending
+
+### [HIGH] /article/mode-sonnet-r2-group-buy-coverage + /news + /tag/* + / — lede leaks "post-2026-05-09 schedule" editorial-pipeline jargon
+- issue: #14
+- pass: 6 (commit dfa5596)
+- viewport: both
+- category: content
+- observation: The lede now reads "Mode has announced the second round of its 65% Sonnet board at CannonKeys. The buy is now scheduled for 2026-06-01 through 2026-07-15 — see the in-article update callout for the dates and accent-weight color options under the post-2026-05-09 schedule." The phrase "under the post-2026-05-09 schedule" is editorial-pipeline jargon — it refers to *when we updated the article* (the eac866a amendment landed 2026-05-09) rather than anything about the product. A first-time reader has no idea what "the post-2026-05-09 schedule" refers to and reads it as proprietary jargon. Self-inflicted regression from the pass-5 iterate drain at 4fcb463 that fixed the original "started 2026-05-01 and runs through 2026-06-15" framing — the rewrite leaked the editorial-process timestamp. The lede appears on the article page itself, on /news, on /tag/cannonkeys + /tag/mode + /tag/group-buy + /tag/65 + /tag/aluminum, and on / via the latest-by-pillar grid (news pillar slot).
+- evidence: `apps/web/src/content/articles/mode-sonnet-r2-group-buy-coverage.mdx:4` lede string contains literal "under the post-2026-05-09 schedule"; rendered verbatim on /article/mode-sonnet-r2-group-buy-coverage, /news first card, /tag/{cannonkeys,mode,group-buy,65,aluminum} listings, and / by-pillar news slot.
+- suggested fix: rewrite the lede to drop "under the post-2026-05-09 schedule" without losing the date-correction context. One viable shape: "Mode has announced the second round of its 65% Sonnet board at CannonKeys, now scheduled for 2026-06-01 through 2026-07-15 after a vendor-side timeline shift. See the in-article update for the new dates and accent-weight color options." Single-line edit at `mode-sonnet-r2-group-buy-coverage.mdx:4`; all listing surfaces re-derive automatically since they read frontmatter.lede via the article loader.
+- source: browser
+
+### [MED] /article/* — Build sheet cards style as clickable but render no anchors
+- issue: #15
+- pass: 6 (commit dfa5596)
+- viewport: both
+- category: content
+- observation: The "Build sheet" rail (renamed from "Mentioned in this article" at 59f511a) renders 3+ part cards with `border border-border bg-surface p-4` styling and a `hover:border-border-hi` transition. The styling reads as clickable — bordered cards with a hover state are conventionally interactive. But none of the cards are anchors; they're plain `<li>` elements with no `<Link>` or `<a>` inside (`apps/web/src/components/article/MentionedPartsRail.tsx:46-57`). A reader hovers expecting to click through to a part page, gets the visual feedback, and is confused when nothing happens. Visible on every article that uses `mentionedParts` (currently 7 of 12 articles). The pass-4 drain at 59f511a resolved the *labelling* honesty issue ("Build sheet" doesn't over-promise exhaustiveness as "Mentioned in this article" did). Today's finding is the next layer: visual treatment continues to suggest clickability without actually being clickable.
+- evidence: /article/cherry-mx2a-revision shows 4+ part cards with hover transition; cards render as `<li>` with no nested `<a>`/`<Link>`. Same pattern on /article/75-percent-default and /article/vendor-first-customs.
+- suggested fix: two paths. (a) Make cards links — phase 4 ships per-part pages at `/part/[slug]`; once those land, wrap each card in `<Link href={`/part/${part.slug}`}>`. Until then, cards could link to the closest tag page but the slug-to-tag mapping is brittle. Wait for phase 4 instead. (b) Strip the interactive styling — drop `border` + `hover:border-border-hi` so cards read as descriptive labels rather than tiles. Use a flat `<dl>` or comma-separated inline list under the heading. Cheap, ships now, but reduces the section's visual weight. Phase 4 (per-part pages) is the durable fix; (b) is the interim if phase 4 is more than 2-3 ticks out.
+- source: browser
+
+### [MED] /sources — intro leaks "<Source> MDX component" implementation jargon
+- issue: #16
+- pass: 6 (commit dfa5596)
+- viewport: both
+- category: content
+- observation: The /sources page intro paragraph reads "thock cites external references inline using a `<Source>` MDX component. Every link is editor-applied — auto-flagged at render with `rel=\"sponsored noopener\"` for vendor URLs and surfaced here so a reader can audit which articles do their homework." The `<Source>` MDX component name is the implementation detail of how editors author citations in the MDX source files; it has no meaning to a stranger who never opens the repo. A reader who has never used MDX (~95%+ of readers) parses "MDX component" as meaningless tooling jargon and the page reads as if it's documentation for editors rather than a public sources index. The /sources page is a stranger-facing trust surface — the whole point is "honesty about where we got the facts" — and the leading paragraph leaks technical implementation details that undermine the editorial voice.
+- evidence: `apps/web/src/app/sources/page.tsx:62-70` paragraph contains literal "uses a `<code>&lt;Source&gt;</code> MDX component" and "rel=\"sponsored noopener\"". Same prose renders on /sources beneath the H1.
+- suggested fix: rewrite the intro paragraph in editorial voice. One viable shape: "thock cites external references inline as citations. Vendor links are auto-flagged with `rel=\"sponsored\"` so a reader can audit which articles do their homework. The full per-citation index — article, quote, URL — is the next step; today this page lists the per-article tally." Drops the `<Source>` MDX component name and the `noopener` flag detail, both of which are noise to a non-engineer reader. Keeps the substance (auto-flagging, sponsored marker, per-article tally as today's surface, full index as future). Concrete edit at `apps/web/src/app/sources/page.tsx:62-70`.
+- source: browser
+
+### [LOW] / — "Don't miss the close" rail body mixes urgent and non-urgent rows when urgent heading fires
+- issue: #17
+- pass: 6 (commit dfa5596)
+- viewport: both
+- category: content
+- observation: The home-page GroupBuysWidget renders heading "Don't miss the close" with kicker "group buys · ending soon" — the urgent framing, correctly applied because at least one buy is inside the 72h band (per the bearings rule fix at 993fd4f / pass 5 drain). But the rail body lists 4 buys including one that is 19+ days out (`mode-sonnet-r2`, scheduled to close 2026-06-01 at earliest per the b2692ac update). A reader sees "Don't miss the close" then scrolls a list with mixed close dates and reads the heading as a half-true label. Distinct from the 993fd4f fix — that fix made the *heading* conditional on `anyUrgent`. This is about the rail *body*: today the body is unfiltered (sorted by endDate ascending, capped at 4) regardless of which heading fires.
+- evidence: `apps/web/src/components/home/GroupBuysWidget.tsx:51-57` flips heading + kicker when `anyUrgent` but the `sorted.slice(0, max)` body cap is unconditional. Live render shows heading "Don't miss the close" + 4 rows where row 1 is days-left ≤ 3 and rows 2-4 are days-left > 3.
+- suggested fix: two paths. (a) Filter rail body when urgent heading fires — when `anyUrgent` is true, slice to rows with `daysLeft ≤ URGENT_THRESHOLD_DAYS` only; keep the cap at 4 but allow fewer. Rail shrinks from 4 rows to 1-2 rows on most days. Risk: rail reads as too small. (b) Soften the heading to "Closing this week" or "Active group buys" with the urgent-row's accent treatment doing urgency at row level rather than rail level. Loses brass-urgency framing the bearings rule wanted. Either fine. (a) preserves bearings rule; (b) preserves rail composition. Minor — defer to a future iterate tick.
+- source: browser
 
 ### [x] [MED] / — "Long reads worth your weekend" Deep Dives rail renders heading + eyebrow with zero cards
 - addressed in: pending commit (this tick — iterate drain)
