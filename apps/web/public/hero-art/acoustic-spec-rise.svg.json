@@ -1,0 +1,31 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-10T00:00:00Z",
+  "commit": "d12dbe67e40b3e4566723ca636d35701daf73aad",
+  "kind": "hero-art",
+  "article_slug": "acoustic-spec-rise",
+  "article_pillar": "trends",
+  "brief_summary": "Hero art for the Trends pillar piece on acoustic engineering — thock as engineering spec rather than happy accident: a 2px warm-grey keyboard side-profile silhouette with a 10-cap row on top, subtle plate + foam-stack internal layering, three concentric coral sound-wave arcs emanating from a single keycap, a coral origin dot with a tiny sine-wave glyph, and warm-bronze accents on the top and bottom case edges.",
+  "target": "apps/web/public/hero-art/acoustic-spec-rise.svg",
+  "source": "plan/bearings.md § Article hero art — colorful keyboard SVGs (locked 2026-05-09)",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject",
+  "size": [1200, 750],
+  "subject": "Keyboard side-profile silhouette (case + plate + foam stack + 10-cap row) with three coral sound-wave arcs emanating from a single keycap on top of the case, a coral filled origin dot with a small sine-wave glyph, and warm-bronze edge accents on the top and bottom of the case profile.",
+  "splash_color": {
+    "name": "coral",
+    "oklch": "oklch(0.68 0.165 28)",
+    "hex_approx": "#e07a5f"
+  },
+  "accent_color": {
+    "name": "warm-bronze (theme accent)",
+    "oklch": "oklch(0.80 0.135 75)"
+  },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": [],
+  "outputs": [
+    "apps/web/public/hero-art/acoustic-spec-rise.svg"
+  ],
+  "warnings": []
+}

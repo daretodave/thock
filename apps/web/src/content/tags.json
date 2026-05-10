@@ -62,6 +62,7 @@
     { "slug": "prebuilt", "name": "Prebuilt", "category": "misc" },
     { "slug": "hall-effect", "name": "Hall-effect", "category": "switch" },
     { "slug": "magnetic", "name": "Magnetic", "category": "switch" },
-    { "slug": "firmware", "name": "Firmware", "category": "misc" }
+    { "slug": "firmware", "name": "Firmware", "category": "misc" },
+    { "slug": "acoustic", "name": "Acoustic", "category": "misc" }
   ]
 }

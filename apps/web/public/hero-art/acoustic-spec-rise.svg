@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — keyboard side-profile silhouette with three coral sound-wave arcs emanating from a single keycap</title>
+
+  <!-- Soft coral wash behind the wave origin, signaling the sounding region -->
+  <ellipse cx="540" cy="350" rx="280" ry="170" fill="oklch(0.68 0.165 28 / 0.08)" stroke="none"/>
+
+  <!-- KEYBOARD CASE (side profile, low trapezoid silhouette running left to right) -->
+  <g>
+    <!-- Outer case shell. Slight chamfer at front (right) for typing-angle realism. -->
+    <path d="
+      M 240 460
+      L 940 460
+      L 960 540
+      L 260 540
+      Z" />
+    <!-- Warm-bronze accent on the top case edge (sparing) -->
+    <path d="M 240 460 L 940 460" stroke="oklch(0.80 0.135 75)" stroke-opacity="0.85" stroke-width="2.5"/>
+    <!-- Warm-bronze accent on the bottom case edge (mirrors top) -->
+    <path d="M 260 540 L 960 540" stroke="oklch(0.80 0.135 75)" stroke-opacity="0.70" stroke-width="2.5"/>
+    <!-- Internal layering: plate line just below top of case -->
+    <line x1="262" y1="482" x2="936" y2="482" stroke-opacity="0.50"/>
+    <!-- Internal layering: foam / silicone dampening stack mid-case -->
+    <line x1="266" y1="510" x2="952" y2="510" stroke-opacity="0.35" stroke-dasharray="5 5"/>
+    <!-- Feet hint (front + back, very small) -->
+    <line x1="290" y1="540" x2="290" y2="554" stroke-opacity="0.55"/>
+    <line x1="930" y1="540" x2="930" y2="554" stroke-opacity="0.55"/>
+  </g>
+
+  <!-- KEYCAP ROW (side-profile silhouette of 10 keycaps sitting on top of the case) -->
+  <g>
+    <!-- Each cap: small trapezoid 60w x 30h, base at y=460, top at y=430. -->
+    <!-- Cap 1 -->
+    <path d="M 270 460 L 280 432 L 320 432 L 330 460 Z"/>
+    <!-- Cap 2 -->
+    <path d="M 340 460 L 350 432 L 390 432 L 400 460 Z"/>
+    <!-- Cap 3 -->
+    <path d="M 410 460 L 420 432 L 460 432 L 470 460 Z"/>
+    <!-- Cap 4 -->
+    <path d="M 480 460 L 490 432 L 530 432 L 540 460 Z"/>
+    <!-- Cap 5 (the sounding cap — gets a coral-tinted top edge) -->
+    <path d="M 550 460 L 560 432 L 600 432 L 610 460 Z"/>
+    <path d="M 560 432 L 600 432" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.85" stroke-width="2.5"/>
+    <!-- Cap 6 -->
+    <path d="M 620 460 L 630 432 L 670 432 L 680 460 Z"/>
+    <!-- Cap 7 -->
+    <path d="M 690 460 L 700 432 L 740 432 L 750 460 Z"/>
+    <!-- Cap 8 -->
+    <path d="M 760 460 L 770 432 L 810 432 L 820 460 Z"/>
+    <!-- Cap 9 -->
+    <path d="M 830 460 L 840 432 L 880 432 L 890 460 Z"/>
+    <!-- Cap 10 -->
+    <path d="M 900 460 L 910 432 L 940 432 L 940 460 Z"/>
+  </g>
+
+  <!-- SOUND-WAVE ARCS (three concentric arcs opening upward from the sounding keycap top) -->
+  <g stroke="oklch(0.68 0.165 28)" fill="none" stroke-linecap="round">
+    <!-- Origin at the top of cap 5: x=580, y=432 -->
+    <!-- Innermost arc -->
+    <path d="M 510 412 A 80 70 0 0 1 650 412" stroke-opacity="0.90" stroke-width="2.5"/>
+    <!-- Middle arc -->
+    <path d="M 450 388 A 145 125 0 0 1 710 388" stroke-opacity="0.65" stroke-width="2.5"/>
+    <!-- Outermost arc -->
+    <path d="M 380 360 A 220 195 0 0 1 780 360" stroke-opacity="0.40" stroke-width="2.5"/>
+  </g>
+
+  <!-- WAVE-ORIGIN MARKER (small coral dot + tiny wave glyph reinforcing the sound framing) -->
+  <g>
+    <!-- Filled coral dot at the strike point -->
+    <circle cx="580" cy="432" r="5"
+      fill="oklch(0.68 0.165 28)"
+      stroke="oklch(0.68 0.165 28)"
+      stroke-width="2"/>
+    <!-- Tiny sine-wave glyph just above the dot, between dot and innermost arc -->
+    <path d="M 564 420 Q 572 414 580 420 T 596 420"
+      stroke="oklch(0.68 0.165 28)" stroke-opacity="0.80" stroke-width="2" fill="none"/>
+  </g>
+
+  <!-- Subtle didactic measurement ticks on left margin (matches sibling hero rhythm) -->
+  <g stroke-opacity="0.3">
+    <line x1="200" y1="432" x2="210" y2="432"/>
+    <line x1="200" y1="460" x2="210" y2="460"/>
+    <line x1="200" y1="510" x2="210" y2="510"/>
+    <line x1="200" y1="540" x2="210" y2="540"/>
+  </g>
+</svg>

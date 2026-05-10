@@ -1295,6 +1295,34 @@
       "filePath": "Z:\\keyboard\\apps\\web\\src\\content\\articles\\beginners-switch-buying-guide.mdx"
     },
     {
+      "slug": "acoustic-spec-rise",
+      "frontmatter": {
+        "slug": "acoustic-spec-rise",
+        "title": "How 'thock' became an acoustic spec, not an accident",
+        "lede": "A decade ago a thocky board was the win condition of a $300 custom — the payoff for the right switches, the right lube job, the right patience. In 2026 the same sound is table-stakes for a $150 prebuilt: factory-lubed switches, silicone dampening, gasket-mounted plates, PBT doubleshot. The stack that used to be enthusiast-only is now what mid-tier vendors design toward from day one.",
+        "author": "thock",
+        "pillar": "trends",
+        "tags": [
+          "modding",
+          "lubed",
+          "factory-lubed",
+          "trends-2026",
+          "acoustic"
+        ],
+        "publishedAt": "2026-04-26T14:00:00.000Z",
+        "updatedAt": null,
+        "heroImage": "/hero-art/acoustic-spec-rise.svg",
+        "heroImageAlt": "Side-profile line silhouette of a tray-mount keyboard cross-section showing layered internals — plate, gasket socks, silicone dampening pad, PCB, bottom-case foam — with a single dusty-rose splash washing the dampening layer and a brass-accent dot marking a factory-lubed switch stem above the plate.",
+        "featured": false,
+        "popularityScore": 0,
+        "guideSection": null,
+        "mentionedParts": []
+      },
+      "body": "\nThe word used to describe an outcome. A builder would finish a tray\nmount, drop in a set of switches they'd spent two hours lubing with\na 1mm brush, and discover — sometimes — that the board they'd built\nsounded the way the forum threads had promised. The sound was the\nreward, and the reward wasn't guaranteed. A decade later the\nlanguage has flipped. \"Thock\" isn't what a well-built keyboard\nhappens to do anymore; it's what a $150 prebuilt is engineered to\ndo at the factory, before a single enthusiast touches it.\n\n## From discovery to specification\n\nIn 2016 a thocky board was a sentence with caveats. Owners\ndescribed the lube job, the case foam they'd improvised from craft\nfelt, the plate material they'd swapped after a week of A/B\ntesting. The sound was downstream of decisions a builder made by\nhand, in private, and the relationship between any one decision\nand the final acoustic profile was something the hobby was still\nworking out in long forum threads. Two builders with nominally\nidentical parts lists would end up with audibly different boards,\nand the gap between them was where the craft lived.\n\nThe vendor pitches of the era reflected that. Group-buy interest\nchecks led with the case design, the plate options, the colorway.\nSound was implied — the way a high-end speaker brand implies\nfidelity — but the brand didn't underwrite it. The builder did.\nBoards shipped, the builder did the work, and the sound was the\nbuilder's outcome to chase.\n\nIn 2026 the same pitch leads with the acoustics. The product page\nfor a midweight prebuilt now itemizes the dampening stack, names\nthe switches as factory-lubed by SKU, calls out the plate\nmaterial and the gasket geometry by spec, and — increasingly —\nhosts a sound test in the page header before the photography of\nthe case finishes loading. The vendor is asserting the acoustic\nresult, not implying it. That's an industrial shift, not a\nmarketing one. The vendor can only assert what the factory can\ndeliver consistently.\n\n## The four-layer stack went standard\n\nFour moves stacked on top of each other to make that assertion\ndefensible.\n\nThe first is at the switch. Factory lubing went from a\nsometimes-it's-there, sometimes-it's-uneven curiosity to a\nquality bar that mid-tier brands now compete on. The thock\n[lubing-101 guide](/article/lubing-101) covers what hand-lubing\nbuys a builder; what changed in the last two years is how much of\nthat gap factory work now closes. Brands that built their\nreputation on the discipline — most visibly HMX, whose [Cloud\ndeep-dive](/article/hmx-cloud-deep-dive) argues that HMX's edge\nisn't material novelty but rather the boring industrial answer of\n\"do the lubing well, at volume, every time\" — are now what readers\nrecommend by default for a builder who doesn't want to lube. The\n<Mono>Gateron Oil King</Mono> is the linear-sound exhibit B: its\nsignature acoustic profile is an engineered outcome of a specific\nfactory-lube viscosity matched to a specific housing tolerance,\nnot a happy accident that hobbyists discovered after the fact.\nThe [Oil King deep-dive](/article/gateron-oil-king-deep-dive)\nwalks through how deliberate that pairing is. Even Cherry, the\nincumbent whose decade-long reputation for dry, scratchy stock\nswitches had become a running joke, shipped MX2A specifically to\nclose the factory-lube gap — the\n[MX2A revision piece](/article/cherry-mx2a-revision) is the\nclearest sign that the rest of the industry has redefined the\nbaseline.\n\nThe second is at the plate and case interface. Gasket mount\nmoved from a high-end custom flex into a mid-tier default,\nwhich means the plate's interaction with the case isn't being\nleft to the builder anymore. The vendor picks the gasket\nmaterial, the compression height, and the plate flex profile,\nand stamps a spec on it. The builder receives a sound the\nvendor underwrote.\n\nThe third is dampening as a stack rather than a single layer.\nThe current generation of mid-tier prebuilts ships with a\nsilicone pad in the bottom case, foam tape between PCB and\nplate, and a poron strip lining the case walls — three layers\nchosen for what each one absorbs. The [Mode Sonnet build\npiece](/article/building-mode-sonnet-with-oil-kings) walks\nthrough what that looks like when a builder assembles it\ndeliberately; the new thing in 2026 is that a prebuilt at half\nthe price ships the same architecture out of the box, just with\nthe gasket count and the plate alloy ticked down a grade.\n\nThe fourth is the keycap default. PBT doubleshot is now the\nkeycap a mid-tier vendor ships stock. The contribution to the\nsound is real but is often the least-discussed: doubleshot PBT\nat 1.5mm wall thickness has an acoustic footprint distinct from\nABS at 1.2mm, and the shift in stock keycaps is part of why\nprebuilts at the $150 tier sound the way they do without any\nkeycap swap.\n\n<Callout type=\"note\" title=\"The vocabulary settled\">\n  \"Thock\" is the deep, full-bodied bottom-out — the sound the\n  hobby chases. \"Clack\" is brighter and higher in the spectrum,\n  typically from a thinner plate, a stiffer case, or shallower\n  switches. \"Marble\" is the rounded, mid-pitched profile some\n  COPE-foam stacks generate. \"Popcorn\" is the loose, uneven\n  acoustic where individual key sounds don't sit on a shared\n  pitch. The four words used to be interchangeable in\n  enthusiast hands; the vendor-spec era has needed them to mean\n  separable things, and they now mostly do.\n</Callout>\n\n## What changes when the win condition becomes the floor\n\nThe interesting consequence isn't that more boards sound good.\nIt's what happens to the rest of the buying decision when the\nacoustic outcome is no longer the variable. A reader picking a\n$150 prebuilt in 2022 was effectively also picking how much\nmodding time they were signing up for; in 2026 that's largely\npriced into the SKU. The decision compresses onto layout,\ntyping feel (gasket density, plate flex, switch character), and\naesthetics. That's a healthier shape for the hobby's gateway\ntier — readers who used to bounce off the modding step now stay,\nand the modders who used to differentiate on sound are now\ndifferentiating further up the stack.\n\nThe shift also reframes the customs side. A $300 custom build\nin 2026 isn't competing with the $150 prebuilt on whether it\nsounds good — both will. It's competing on whether it sounds\nspecific. The mid-tier delivers a defensibly good thock at a\ndefensibly low variance; the high end's pitch is that it\ndelivers a particular thock the builder chose, which is a\ndifferent value proposition. Some of the old customs market has\nto recompose itself around that. Not all of it will.\n\n## What we're watching\n\nThree threads run from here.\n\nThe first is the sub-$100 tier. Most of the four-layer stack is\nshipping at $130–$180 now; the question is when, and from\nwhom, it reaches $90. The bottleneck is probably the gasket\nmount — the others are already cheap at volume. A wired,\nplastic-cased gasket-mount prebuilt with factory-lubed\nswitches and a foam stack at $99 would close the last gap in\nthe ladder. Several Chinese OEMs are within striking distance;\nnone has shipped one yet.\n\nThe second is whether plate and case materials become the next\ndesign lever now that switches are figured out. If the switch\nquestion is settled at the factory, the differentiation moves\nto the structure around it — polycarbonate plates with\nspecified flex curves, FR4 layups, multi-layer aluminum-with-\nbrass-insert constructions. Some of this is already happening\non the customs side; what mid-tier picks up from it will tell\nus where the next round of acoustic competition lands.\n\nThe third is what happens to the high-end's acoustic edge if\nthe mid-tier keeps closing the gap. A $600 group-buy custom\ncan't sustainably sell on \"sounds better than the $150\nprebuilt\" if the gap is small enough that a blind listener\nstruggles to call it. The customs side has options — typing\nfeel, fit and finish, material storytelling, the social\ncontract of a group buy — and most of them are real value. But\nthe marketing line that customs sound better will have to\nretire, and what replaces it isn't fully written yet.\n\nThe trend that runs under all three is the same one: acoustics\nmoved from a builder's outcome to a vendor's spec, and once\nsomething becomes a spec the competition shifts to whatever\nisn't specced yet. The [Trends Tracker](/trends/tracker) will\nwatch which lever the industry picks up next.\n",
+      "readTime": 7,
+      "filePath": "Z:\\keyboard\\apps\\web\\src\\content\\articles\\acoustic-spec-rise.mdx"
+    },
+    {
       "slug": "hall-effect-mainstream",
       "frontmatter": {
         "slug": "hall-effect-mainstream",
@@ -1374,6 +1402,11 @@
       "slug": "abs",
       "name": "ABS",
       "category": "material"
+    },
+    {
+      "slug": "acoustic",
+      "name": "Acoustic",
+      "category": "misc"
     },
     {
       "slug": "alice",
@@ -1646,5 +1679,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-05-10T23:14:54.334Z"
+  "generatedAt": "2026-05-10T23:52:11.044Z"
 }
