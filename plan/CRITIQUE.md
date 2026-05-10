@@ -107,14 +107,17 @@
 - suggested fix: lowercase the tag in the lede so it matches the H1 + the chips elsewhere — `<X> articles tagged ${tag}.` (where `${tag}` is the raw slug, not Title-Cased). One-line edit in `apps/web/src/app/tag/[slug]/page.tsx` (or wherever the lede renders); add a snapshot test for /tag/linear's lede string.
 - source: browser
 
-### [MED] /article/* (and other surfaces) — `<aside>` block sits almost on top of the next `<h2>`
+### [x] [MED] /article/* (and other surfaces) — `<aside>` block sits almost on top of the next `<h2>`
+- addressed in: a0fdaa8 (this tick — iterate drain)
+- issue: #32
 - pass: user-jot (commit d269094)
 - viewport: unspecified
 - auth_state: anonymous
 - category: visual
 - observation: aside need a margin bottom or the h2's under them need a margin top. they are way too close (almost on top of eachother. eg: https://thock-coral.vercel.app/article/keychron-q-ultra-zmk -- but also other places)
 - evidence: user-spotted at 2026-05-10T13:55:17Z
-- suggested_fix: [user has not specified — iterate to determine]
+- fix: bumped SerifH2 in `packages/content/src/mdx/components.tsx` from `mt-16 mb-4` to `mt-20 mb-4`. The Callout has `my-8` (32px each side); after CSS margin-collapse with h2's mt-20 (80px), the visible gap is now 80px (was 64px). Side effect: every h2 in article prose gets +16px top margin overall — reads as slightly more spacious editorial rhythm, not a regression. The prior fix at 3b5bb31 (May 9, user-jot 11d932d) bumped from mt-12 → mt-16; this is the second bump on the same dial. Updated regression test `spacing.test.tsx` to assert mt-20 with explicit exclusions on mt-16 + mt-12. Considered (rejected) alternative: a CSS sibling-selector rule (`.thock-prose aside + h2`) targeting only the post-aside case — surgical but adds CSS surface area; the global mt-20 bump reads cleanly editorial-wide.
+- verify note: 408 e2e green serially (`--workers=1`); first parallel attempt hit one ECONNRESET flake on `/feed/deep-dives.xml` matching the #418-style parallel-load pattern at AUDIT.md row 113. Same root cause; serial-fallback the established per-tick mitigation.
 - source: user
 
 ### [x] [MED] general — e2e tests fire google analytics, polluting prod GA with bot traffic
