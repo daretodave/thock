@@ -106,7 +106,7 @@ export default function GroupBuysPage(): ReactElement {
 
       {closingSoon.length > 0 && (
         <Container as="section" className="pb-12 sm:pb-16">
-          <HomeSectionHeading kicker="Last 72h" title="Closing soon" />
+          <HomeSectionHeading kicker="Next 72h" title="Closing soon" />
           <SectionStack
             items={closingSoon}
             variant="live"
