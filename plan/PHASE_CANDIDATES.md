@@ -9,23 +9,6 @@
 
 ## Pending
 
-### [score 8.0] Real-data backfill — scout-driven seed expansion across vendors / switches / keycap-sets
-- proposed: 2026-05-09, expand pass 1
-- source signals:
-  - `plan/CRITIQUE.md` user jot (commit 40fefe2): "Mode Sonnet R2 on /group-buys is not present at cannonkeys. Can an agent actually populate with some valid groupbuys?" — the user is asking explicitly for this work.
-  - `plan/CRITIQUE.md` MED (pass 3, commit 11c0777): /trends/tracker single-row sections — "the page promises 'the signature feature' in its eyebrow and delivers a five-row total."
-  - `plan/CRITIQUE.md` MED (pass 3, commit 11c0777): /sources uniform "1 cite" badge — "every one of the six listed articles shows the same '1 cite' badge."
-  - `plan/CRITIQUE.md` LOW (pass 2, commit e270ced): /trends/tracker uniform em-dash — `data/trends/2026-W19.json` ships every row with `articleSlug: null`.
-  - Data growth: `data/{boards,group-buys,keycap-sets,switches,vendors}` each carry exactly 1 record. The scarcity is the root cause of multiple critique findings.
-- rationale: five separate findings (one user jot + three browser critiques + an audit-trail data-sparsity signal) cluster around the same root cause: thock has the schema and surfaces but only 1 record per entity. Iterate can't drain these one-by-one because the fix isn't code — it's research. Scout is the right tool for the lookup work; ship-data is the right tool for the writes; an `/expand`-promoted phase is the right shape for a multi-tick research-then-ship pass.
-- proposed scope: 3-phase mini-plan.
-  1. **Phase A — group-buys backfill (scout-driven).** Scout researches active/announced group buys at CannonKeys, NovelKeys, Mode Designs, Wuque Studio, KBDfans, GeekHack aggregator. HEAD-probes URLs. Returns a candidate set with vendor/window/url/region. ship-data drops 4–6 new `data/group-buys/<vendor>-<slug>.json` records. Retire the fictional Mode Sonnet R2 record (or move to `data/group-buys/_archive/` with a README note). Same tick: refresh `data/vendors/` if scout's candidate vendors aren't in the registry.
-  2. **Phase B — trends backfill + schema additive.** Scout researches what's actually moving in the last 8 weeks (switch popularity, keycap-set GBs, layout adoption shifts). Add a `note: string?` field to the trends row schema in `packages/data` so non-article rows can carry editor's-note text instead of em-dash placeholders. Backfill `data/trends/2026-W19.json` to ≥3 rows per category with `articleSlug` where an article exists, `note` where one doesn't. Render `note` plain-text in `TrackerRow` when slug is null. Drains the LOW em-dash + MED single-row + LOW duplicate-link findings simultaneously.
-  3. **Phase C — switches / keycap-sets / boards backfill.** Scout researches: 6–8 currently-popular switches (real specs from manufacturer pages), 4–5 active keycap sets (profile, designer, status), 3–4 boards (the Mode-Sonnet-vs-Bakeneko-vs-Cycle7 archetypes). ship-data drops records. Updates ripple into `/sources` cite counts (more articles will reference more parts) and `/by-pillar` densities.
-- estimated phases: 3
-- conflicts: none with `spec.md` non-goals — spec is silent on data scarcity, and `data/` was always intended to grow. Bearings § "Phase A pattern" already explicitly endorses this exact lane.
-- promotion path: `/oversight` should pre-flight Phase A — confirm scout has WebFetch budget, decide whether retired records archive or delete. Phases B/C can ship autonomously once A's pattern lands.
-
 ### [score 6.5] Accessibility audit pass — discovery-driven multi-tick drain (promote audit row to phase)
 - proposed: 2026-05-09, expand pass 1
 - source signals:
@@ -65,8 +48,18 @@
 
 ## Promoted
 
-(empty — populated as `/oversight` promotes candidates to the
-build plan)
+### [score 8.0] Real-data backfill — scout-driven seed expansion across vendors / switches / keycap-sets
+- promoted: 2026-05-09 via `/oversight` (commit pending)
+- assigned phases: **18 (group buys), 19 (trends + schema additive), 20 (switches / keycap-sets / boards)**
+- promotion decisions (locked at /oversight time):
+  - **Mode Sonnet R2 retirement**: **delete** `data/group-buys/cannonkeys-mode-sonnet-r2.json` once real seeds land (not archived to `_archive/`, not moved to fixtures). The article at `/article/mode-sonnet-r2-group-buy-coverage` stays as-is (the eac846a 2026-05-09 update callout already handles the timeline-mismatch tombstone framing).
+  - **Promotion order**: contiguous 18 → 19 → 20. Phase 18 ships in autonomous `/march` mode; phases 19 + 20 follow once 18's pattern lands.
+  - **Brief drafting**: phase 18 brief drafted inline as part of this oversight pass at `plan/phases/phase_18_group_buys_backfill.md`. Phases 19/20 briefs are drafted on-demand by `/ship-a-phase` (or pre-warmed by `/plan-a-phase` once 18 ships).
+- original signals + scope: see `## Pending` row above (moved here on promotion). Critique-row hooks: drains user-jot 40fefe2 (Mode Sonnet R2 fictional), pass-3 MED `/sources` "1 cite", pass-3 MED `/trends/tracker` single-row, pass-2 LOW `/trends/tracker` em-dash, and the data-sparsity signal across all 5 entity dirs.
+- original proposed scope:
+  1. **Phase 18 (was A) — group-buys backfill (scout-driven).** Scout researches active/announced group buys at CannonKeys, NovelKeys, Mode Designs, Wuque Studio, KBDfans, GeekHack aggregator. HEAD-probes URLs. Returns a candidate set with vendor/window/url/region. ship-data drops 4–6 new `data/group-buys/<vendor>-<slug>.json` records. Delete the fictional Mode Sonnet R2 record. Same phase: refresh `data/vendors/` if scout's candidate vendors aren't in the registry.
+  2. **Phase 19 (was B) — trends backfill + schema additive.** Scout researches what's actually moving in the last 8 weeks (switch popularity, keycap-set GBs, layout adoption shifts). Add a `note: string?` field to the trends row schema in `packages/data`. Backfill `data/trends/2026-W19.json` to ≥3 rows per category. Render `note` plain-text in `TrackerRow` when slug is null. Drains the LOW em-dash + MED single-row + LOW duplicate-link findings simultaneously.
+  3. **Phase 20 (was C) — switches / keycap-sets / boards backfill.** Scout researches: 6–8 currently-popular switches (real specs from manufacturer pages), 4–5 active keycap sets (profile, designer, status), 3–4 boards (the Mode-Sonnet-vs-Bakeneko-vs-Cycle7 archetypes). ship-data drops records. Updates ripple into `/sources` cite counts and `/by-pillar` densities.
 
 ## Rejected
 
