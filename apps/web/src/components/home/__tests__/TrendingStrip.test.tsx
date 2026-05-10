@@ -38,4 +38,32 @@ describe('<TrendingStrip>', () => {
     expect(tiles[0]).toHaveTextContent('Alpha')
     expect(tiles[1]).toHaveTextContent('Beta')
   })
+
+  it('excludes rows with direction `flat` (rail header commits to movement)', () => {
+    // Regression guard for plan/CRITIQUE.md pass 9 #7 [MED]:
+    // /  — Trending "what's moving on the tracker" rail surfaced an
+    // MT3 profile flat tile, contradicting the rail's framing.
+    const snapshot = makeTrendSnapshot()
+    const upRow = { ...snapshot.rows[0]!, name: 'Mover', direction: 'up' as const }
+    const flatRow = {
+      ...snapshot.rows[0]!,
+      name: 'Holding',
+      direction: 'flat' as const,
+    }
+    snapshot.rows = [upRow, flatRow]
+    render(<TrendingStrip snapshot={snapshot} />)
+    const tiles = screen.getAllByTestId('trending-tile')
+    expect(tiles).toHaveLength(1)
+    expect(tiles[0]).toHaveTextContent('Mover')
+  })
+
+  it('hides itself when every row is flat (no movement to report)', () => {
+    const snapshot = makeTrendSnapshot()
+    snapshot.rows = snapshot.rows.map((r) => ({
+      ...r,
+      direction: 'flat' as const,
+    }))
+    const { container } = render(<TrendingStrip snapshot={snapshot} />)
+    expect(container.firstChild).toBeNull()
+  })
 })

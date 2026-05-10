@@ -8,16 +8,22 @@ export type TrendingStripProps = {
 
 /**
  * Six-tile trending strip on the home page. Reads from the most
- * recent `TrendSnapshot` and renders rank 1–6 as `<TrendingTile>`s.
- * Hidden entirely when the snapshot is null or empty — matches
- * `phase_6_home.md` "No latest trend snapshot" empty state.
+ * recent `TrendSnapshot` and renders the top 6 actively-moving rows
+ * (direction `up` or `down`) as `<TrendingTile>`s. Hidden entirely
+ * when the snapshot is null/empty or contains zero moving rows —
+ * matches `phase_6_home.md` "No latest trend snapshot" empty state
+ * and respects the rail's "what's moving on the tracker" framing
+ * (critique pass 9 #7).
  */
 export function TrendingStrip({
   snapshot,
 }: TrendingStripProps): ReactElement | null {
   if (!snapshot || snapshot.rows.length === 0) return null
 
-  const tiles = snapshot.rows.slice(0, 6)
+  const tiles = snapshot.rows
+    .filter((row) => row.direction !== 'flat')
+    .slice(0, 6)
+  if (tiles.length === 0) return null
 
   return (
     <div
