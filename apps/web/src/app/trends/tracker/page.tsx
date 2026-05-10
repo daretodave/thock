@@ -120,6 +120,15 @@ export default function TrendsTrackerPage(): ReactElement {
 
       {snapshot.rows.length > 0 ? (
         <Container as="section" className="py-12 sm:py-16">
+          {/* h2 wrapper restores the heading sequence from h1 → h3*4
+           * (skip) to h1 → h2 → h3*4. WCAG 1.3.1 (AA). Closes the
+           * a11y audit-pass row filed at this commit's predecessor. */}
+          <h2
+            data-testid="tracker-summary-heading"
+            className="mb-6 font-serif text-h2 text-text"
+          >
+            This week at a glance
+          </h2>
           <TrackerSummaryGrid snapshot={snapshot} />
         </Container>
       ) : (

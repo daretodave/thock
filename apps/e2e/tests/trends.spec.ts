@@ -51,6 +51,44 @@ test.describe('trends tracker — phase 8', () => {
     expect(await rows.count()).toBeGreaterThanOrEqual(1)
   })
 
+  test('heading sequence does not skip h1 → h3 (a11y, WCAG 1.3.1)', async ({
+    page,
+  }) => {
+    // Regression guard for plan/AUDIT.md "[MED] [a11y] /trends/tracker
+    // — heading level skipped (h1 → h3 with no h2)". Pre-fix, the
+    // sequence was h1 (TrackerHeader) followed directly by 4× h3
+    // (TrackerSummaryCard titles) with no intervening h2 — a heading
+    // skip that breaks screen-reader heading-jump navigation. The
+    // fix wraps the summary grid under an h2 ("This week at a
+    // glance"), making the sequence h1 → h2 → h3*4 → h2*5.
+    await page.setViewportSize({ width: 1280, height: 900 })
+    await page.goto('/trends/tracker')
+    const heading = page.getByTestId('tracker-summary-heading')
+    await expect(heading).toBeVisible()
+    await expect(heading).toHaveText('This week at a glance')
+    // Walk every heading in document order; assert no level jumps
+    // by more than 1 going down (h1 → h3 = jump of 2 = skip).
+    const levels = await page
+      .locator('h1, h2, h3, h4, h5, h6')
+      .evaluateAll((els) =>
+        els.map((el) => Number(el.tagName.slice(1))),
+      )
+    expect(levels.length).toBeGreaterThan(0)
+    expect(levels[0]).toBe(1)
+    for (let i = 1; i < levels.length; i++) {
+      const prev = levels[i - 1] ?? 1
+      const curr = levels[i] ?? 1
+      // Going up (curr > prev): only one level at a time.
+      // Going same/down: any drop is fine.
+      if (curr > prev) {
+        expect(
+          curr - prev,
+          `heading skip at index ${i}: h${prev} → h${curr}`,
+        ).toBeLessThanOrEqual(1)
+      }
+    }
+  })
+
   test('renders at least three rows in every category section after the phase 19 backfill', async ({
     page,
   }) => {
