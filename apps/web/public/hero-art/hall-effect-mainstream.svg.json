@@ -1,0 +1,31 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-10T00:00:00Z",
+  "commit": "8b77823bb19bf89c66b0a98ef9b56a51549f3437",
+  "kind": "hero-art",
+  "article_slug": "hall-effect-mainstream",
+  "article_pillar": "trends",
+  "brief_summary": "Hero art for the Trends pillar piece on Hall-effect switches going mid-premium-default: a 2px warm-grey switch cross-section with a coral magnet at the stem base, 4 coral elliptical field lines radiating outward, a coral Hall-sensor dot on the PCB plane, and warm-bronze accents on the top/bottom housing edges.",
+  "target": "apps/web/public/hero-art/hall-effect-mainstream.svg",
+  "source": "plan/bearings.md § Article hero art — colorful keyboard SVGs (locked 2026-05-09)",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject",
+  "size": [1200, 750],
+  "subject": "Cherry-style switch cross-section (top housing, cruciform stem, bottom housing) with a coral magnet at the stem base, four coral elliptical magnetic-field lines emanating outward, and a coral Hall-sensor dot on the PCB plane below the stem; warm-bronze edge accents on the top and bottom housing.",
+  "splash_color": {
+    "name": "coral",
+    "oklch": "oklch(0.68 0.165 28)",
+    "hex_approx": "#e07a5f"
+  },
+  "accent_color": {
+    "name": "warm-bronze (theme accent)",
+    "oklch": "oklch(0.80 0.135 75)"
+  },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": [],
+  "outputs": [
+    "apps/web/public/hero-art/hall-effect-mainstream.svg"
+  ],
+  "warnings": []
+}

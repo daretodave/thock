@@ -59,6 +59,8 @@
     { "slug": "zmk", "name": "ZMK", "category": "misc" },
     { "slug": "wireless", "name": "Wireless", "category": "misc" },
     { "slug": "polling-rate", "name": "Polling rate", "category": "misc" },
-    { "slug": "prebuilt", "name": "Prebuilt", "category": "misc" }
+    { "slug": "prebuilt", "name": "Prebuilt", "category": "misc" },
+    { "slug": "hall-effect", "name": "Hall-effect", "category": "switch" },
+    { "slug": "magnetic", "name": "Magnetic", "category": "switch" }
   ]
 }

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — Hall-effect switch cross-section with magnetic field lines emanating from stem</title>
+
+  <!-- Soft coral wash beneath the stem, signaling the magnetic field region -->
+  <ellipse cx="600" cy="540" rx="220" ry="120" fill="oklch(0.68 0.165 28 / 0.10)" stroke="none"/>
+
+  <!-- TOP HOUSING (Cherry-style profile, side cut-away) -->
+  <g>
+    <!-- Outer top housing shell -->
+    <path d="
+      M 460 230
+      L 740 230
+      L 760 320
+      L 440 320
+      Z" />
+    <!-- Stem aperture at top -->
+    <path d="
+      M 560 230
+      L 640 230
+      L 645 263
+      L 555 263
+      Z" />
+    <!-- Inner cavity ribs (subtle) -->
+    <line x1="460" y1="280" x2="552" y2="280" stroke-opacity="0.45"/>
+    <line x1="648" y1="280" x2="740" y2="280" stroke-opacity="0.45"/>
+    <!-- Mounting clip nubs -->
+    <line x1="460" y1="260" x2="450" y2="260" stroke-opacity="0.5"/>
+    <line x1="740" y1="260" x2="750" y2="260" stroke-opacity="0.5"/>
+    <!-- Warm-bronze accent on the top-housing leading edge (sparing) -->
+    <path d="M 460 230 L 740 230" stroke="oklch(0.80 0.135 75)" stroke-opacity="0.85" stroke-width="2.5"/>
+  </g>
+
+  <!-- HOUSING SEAM (dashed mid-line, top half meets bottom half) -->
+  <line x1="430" y1="320" x2="770" y2="320" stroke-dasharray="4 6" stroke-opacity="0.55"/>
+  <line x1="420" y1="320" x2="428" y2="320" stroke-opacity="0.4"/>
+  <line x1="772" y1="320" x2="780" y2="320" stroke-opacity="0.4"/>
+
+  <!-- STEM (vertical column with cruciform mount; magnet implied at base) -->
+  <g>
+    <!-- Cruciform mount peeking above the housing -->
+    <path d="
+      M 580 203
+      L 620 203
+      L 620 215
+      L 630 215
+      L 630 230
+      L 570 230
+      L 570 215
+      L 580 215
+      Z" />
+    <!-- Stem body -->
+    <path d="
+      M 570 263
+      L 630 263
+      L 630 510
+      L 570 510
+      Z" />
+    <!-- Subtle vertical guide line -->
+    <line x1="600" y1="270" x2="600" y2="505" stroke-opacity="0.4"/>
+    <!-- Stem skirt rail ticks -->
+    <line x1="570" y1="310" x2="555" y2="310" stroke-opacity="0.5"/>
+    <line x1="570" y1="370" x2="555" y2="370" stroke-opacity="0.5"/>
+    <line x1="570" y1="430" x2="555" y2="430" stroke-opacity="0.5"/>
+    <line x1="630" y1="310" x2="645" y2="310" stroke-opacity="0.5"/>
+    <line x1="630" y1="370" x2="645" y2="370" stroke-opacity="0.5"/>
+    <line x1="630" y1="430" x2="645" y2="430" stroke-opacity="0.5"/>
+  </g>
+
+  <!-- MAGNET (at stem base, drawn as a small rectangle in coral splash) -->
+  <g>
+    <rect x="572" y="478" width="56" height="32"
+      fill="oklch(0.68 0.165 28 / 0.32)"
+      stroke="oklch(0.68 0.165 28)"
+      stroke-width="2"/>
+    <!-- Polarity midline inside magnet (subtle) -->
+    <line x1="600" y1="478" x2="600" y2="510" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.55"/>
+  </g>
+
+  <!-- MAGNETIC FIELD LINES (coral ellipses radiating from stem base; the article's thesis at thumbnail size) -->
+  <g stroke="oklch(0.68 0.165 28)" fill="none" stroke-linecap="round">
+    <!-- Innermost loop -->
+    <ellipse cx="600" cy="555" rx="90" ry="55" stroke-opacity="0.85" stroke-width="2"/>
+    <!-- Second loop -->
+    <ellipse cx="600" cy="570" rx="150" ry="92" stroke-opacity="0.65" stroke-width="2"/>
+    <!-- Third loop -->
+    <ellipse cx="600" cy="585" rx="215" ry="130" stroke-opacity="0.45" stroke-width="2"/>
+    <!-- Outermost loop -->
+    <ellipse cx="600" cy="595" rx="285" ry="170" stroke-opacity="0.28" stroke-width="2"/>
+  </g>
+
+  <!-- HALL SENSOR (small dot at base, directly under stem on PCB plane) -->
+  <g>
+    <!-- Sensor body -->
+    <circle cx="600" cy="660" r="7"
+      fill="oklch(0.68 0.165 28 / 0.55)"
+      stroke="oklch(0.68 0.165 28)"
+      stroke-width="2"/>
+    <!-- Faint outer halo to read as "sensing region" -->
+    <circle cx="600" cy="660" r="14" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.35" stroke-width="1.5"/>
+  </g>
+
+  <!-- BOTTOM HOUSING (PCB-mount plane) -->
+  <g>
+    <!-- Outer bottom housing -->
+    <path d="M 440 620 L 760 620 L 745 710 L 455 710 Z" />
+    <!-- Warm-bronze accent on bottom-housing edge (sparing, mirrors top) -->
+    <path d="M 455 710 L 745 710" stroke="oklch(0.80 0.135 75)" stroke-opacity="0.75" stroke-width="2.5"/>
+    <!-- Inner well surrounding the sensor -->
+    <path d="M 555 620 L 645 620 L 642 678 L 558 678 Z" stroke-opacity="0.5"/>
+    <!-- PCB pads on the underside (no leaf contact — Hall-effect has no metal contacts) -->
+    <line x1="500" y1="690" x2="530" y2="690" stroke-opacity="0.6"/>
+    <line x1="670" y1="690" x2="700" y2="690" stroke-opacity="0.6"/>
+    <!-- Center mount post -->
+    <circle cx="600" cy="690" r="5" stroke-opacity="0.55"/>
+  </g>
+
+  <!-- Subtle didactic measurement ticks on left margin (matches sibling hero rhythm) -->
+  <g stroke-opacity="0.3">
+    <line x1="380" y1="230" x2="390" y2="230"/>
+    <line x1="380" y1="320" x2="390" y2="320"/>
+    <line x1="380" y1="510" x2="390" y2="510"/>
+    <line x1="380" y1="620" x2="390" y2="620"/>
+  </g>
+</svg>
