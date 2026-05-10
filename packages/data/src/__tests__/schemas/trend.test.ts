@@ -39,4 +39,46 @@ describe('TrendSnapshotSchema', () => {
     })
     expect(result.success).toBe(false)
   })
+
+  it('accepts a row with a `note` string in [20, 280] chars', () => {
+    const result = TrendSnapshotSchema.safeParse({
+      ...VALID,
+      rows: [
+        {
+          ...VALID.rows[0],
+          note: 'Holy Pandas 2 R3 GB closed in March; secondhand demand kept rising.',
+        },
+      ],
+    })
+    expect(result.success).toBe(true)
+  })
+
+  it('accepts a row with `note: null` (explicit no-take signal)', () => {
+    const result = TrendSnapshotSchema.safeParse({
+      ...VALID,
+      rows: [{ ...VALID.rows[0], note: null }],
+    })
+    expect(result.success).toBe(true)
+  })
+
+  it('accepts a row with `note` absent (legacy / pre-phase-19 shape)', () => {
+    const result = TrendSnapshotSchema.safeParse(VALID)
+    expect(result.success).toBe(true)
+  })
+
+  it('rejects a `note` shorter than 20 chars', () => {
+    const result = TrendSnapshotSchema.safeParse({
+      ...VALID,
+      rows: [{ ...VALID.rows[0], note: 'too short' }],
+    })
+    expect(result.success).toBe(false)
+  })
+
+  it('rejects a `note` longer than 280 chars', () => {
+    const result = TrendSnapshotSchema.safeParse({
+      ...VALID,
+      rows: [{ ...VALID.rows[0], note: 'x'.repeat(281) }],
+    })
+    expect(result.success).toBe(false)
+  })
 })

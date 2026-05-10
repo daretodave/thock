@@ -51,6 +51,25 @@ test.describe('trends tracker — phase 8', () => {
     expect(await rows.count()).toBeGreaterThanOrEqual(1)
   })
 
+  test('renders at least three rows in every category section after the phase 19 backfill', async ({
+    page,
+  }) => {
+    // Regression guard for plan/CRITIQUE.md MED single-row table
+    // chrome (pass 3, line 95). After phase 19 the snapshot ships
+    // ≥3 rows per category (switch / keycap / layout / vendor /
+    // brand) so each category table no longer renders the chrome
+    // wrapped around a single data point.
+    await page.setViewportSize({ width: 1280, height: 900 })
+    await page.goto('/trends/tracker')
+    const sections = page.getByTestId('tracker-category-section')
+    const sectionCount = await sections.count()
+    expect(sectionCount).toBeGreaterThanOrEqual(5)
+    for (let i = 0; i < sectionCount; i++) {
+      const rows = sections.nth(i).getByTestId('tracker-row')
+      expect(await rows.count()).toBeGreaterThanOrEqual(3)
+    }
+  })
+
   test('emits Dataset JSON-LD in addition to CollectionPage', async ({
     page,
   }) => {

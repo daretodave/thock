@@ -25,7 +25,12 @@ export function TrackerCategorySection({
   const label = CATEGORY_LABEL[category]
 
   return (
-    <Container as="section" className="pb-12 sm:pb-16">
+    <Container
+      as="section"
+      data-testid="tracker-category-section"
+      data-category={category}
+      className="pb-12 sm:pb-16"
+    >
       <HomeSectionHeading
         kicker={label.plural}
         title={`${label.single} movers`}

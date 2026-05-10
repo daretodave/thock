@@ -32,7 +32,8 @@ export function TrackerRow({
   const delta = formatDelta(row.score, row.direction)
   const noteHref =
     article && row.articleSlug ? `/article/${row.articleSlug}` : null
-  const noteText = article?.frontmatter.title ?? null
+  const editorialNote = row.note ?? null
+  const noteText = editorialNote ?? article?.frontmatter.title ?? null
 
   return (
     <div
@@ -61,6 +62,14 @@ export function TrackerRow({
             {noteText} →
           </Link>
         )}
+        {!noteHref && editorialNote && (
+          <span
+            data-testid="tracker-row-note-text"
+            className="text-small text-text-2 md:hidden"
+          >
+            {editorialNote}
+          </span>
+        )}
       </div>
       <span
         className={`flex items-center gap-2 font-mono text-small md:justify-self-start ${TONE_CLASS[row.direction]}`}
@@ -76,6 +85,10 @@ export function TrackerRow({
           <Link href={noteHref} className="text-text-2 hover:text-accent">
             {noteText} →
           </Link>
+        ) : editorialNote ? (
+          <span data-testid="tracker-row-note-text" className="text-text-2">
+            {editorialNote}
+          </span>
         ) : (
           <span aria-hidden="true" className="text-text-4">
             —

@@ -8,6 +8,7 @@ export const TrendRowSchema = z.object({
   score: z.number().min(-100).max(100),
   spark: z.array(z.number()).min(2).max(16),
   articleSlug: z.string().min(2).nullable(),
+  note: z.string().min(20).max(280).nullable().optional(),
 })
 
 export const TrendSnapshotSchema = z.object({

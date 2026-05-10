@@ -92,13 +92,15 @@
 - evidence: Verified: every seed article ships with exactly one `<Source>` tag (one citation each across `alice-layout-decline`, `beginners-switch-buying-guide`, `building-mode-sonnet-with-oil-kings`, `gateron-oil-king-deep-dive`, `mode-sonnet-r2-group-buy-coverage`, `trends-tracker-preview`). The aggregate is technically correct; the visual signal is meaningless.
 - suggested fix: ship the inline citation list per article (the [LOW 3.5] phase-16 follow-up audit row in `plan/AUDIT.md` already plans this — "/sources per-citation index"). Promote that audit row from LOW to MED since draining it directly addresses this critique. As an interim, hide the count badge when every visible row has the same value, and replace it with a "1 source linked" fallback chip so the badge stops looking auto-generated.
 
-### [MED] /trends/tracker — every category section renders exactly one row, so the table chrome dwarfs the data
+### [x] [MED] /trends/tracker — every category section renders exactly one row, so the table chrome dwarfs the data
+- addressed in: pending commit (this tick — phase 19 ship)
+- issue: [mirror-skipped: token lacks repo:labels write — same 403 path as 4b8c793]
 - pass: 3 (commit 11c0777)
 - viewport: desktop
 - category: data
 - observation: Each of the five movers tables (Switch / Keycap / Layout / Vendor / Brand) shows one row. The full Rank / Name / Score / 8-wk / Editor's-note column header reads as scaffolding wrapped around a single data point — the page promises "the signature feature" in its eyebrow and delivers a five-row total.
 - evidence: Switch movers (ref_60): one row Gateron Oil King. Keycap movers (ref_74): MT3. Layout (ref_86): Alice. Vendor (ref_100): Mode Designs. Brand (ref_112): Wuque Studio. `data/trends/2026-W19.json` carries the same five rows. Related to the open [LOW] em-dash finding (the *cells* are em-dashes for unlinked rows; this finding is about the *table dimensions* feeling sparse).
-- suggested fix: backfill the snapshot — `/iterate` `data-gaps` audit (§4.B in `skills/iterate.md`) should pick this up next tick. Target ≥ 3 rows per category, even if the trailing rows are flat-direction. Reader's secondary suggestion (collapse single-row sections into one combined table with a category column) is a fallback if backfill is slow; keep the per-category structure if real data lands within a couple of ticks.
+- fix: shipped phase 19 (trends backfill) per `plan/phases/phase_19_trends_backfill.md`. Spawned the `scout` sub-agent to research 8 weeks of mechanical-keyboard movement (2026-W11 through 2026-W19); scout returned 15 rows total, exactly 3 per category. New rows added: HMX Cloud + Cherry MX2A revisions (switch); GMK CYL Prussian Alert + DCS Olivetti (keycap); Split/ergo (Voyager, Glove80) + 75% layout (layout); CannonKeys + Prototypist (vendor); Keychron + Cherry (GMK manufacturer) (brand). Each of the 5 category tables now reads as a real top-3 dashboard rather than table chrome wrapped around a single data point. The scout's 1-paragraph methodology + sources are preserved in the commit body for audit. New e2e in `apps/e2e/tests/trends.spec.ts` ("renders at least three rows in every category section after the phase 19 backfill") asserts ≥3 rows in every category section so a future row-pruning regression fails loud. The `apps/e2e/src/fixtures/page-reads.ts` `min-link-count` floor for `[data-testid="tracker-row"]` bumps from 1 to 15.
 
 ### [x] [MED] /about + /newsletter — voice mismatches between editorial pages ("we" vs "I")
 - addressed in: pending commit (this tick)
@@ -110,13 +112,15 @@
 - fix: shipped the cheapest path from the row's two-path menu — unified to first-person plural "we" across both surfaces. Concrete edits: (1) `NewsletterArchive.tsx` empty-state copy `I'll send you` → `we'll send you`. (2) `apps/web/src/app/about/page.tsx` `LEDE` constant: dropped the "people behind thock" claim (which would have required a masthead with editor names — the user has not authorized this) in favour of `"Editorial standards, voice, and how we cover the hobby. Knowledgeable peer, never breathless hype."` — same length, same eyebrow-shape, and now the lede promises only what the body delivers. Deferred the "better path" (named masthead + mailto:) since that needs user input on naming; surfaced as a `[needs-user-call]` candidate for `/oversight` rather than a unilateral edit.
 - regression guard: no test assertions reference either string literal — the phase 15 brief at `plan/phases/phase_15_newsletter_rss.md:136` carries the original "I'll send you" copy as a point-in-time spec snapshot and is intentionally left alone. Subsequent voice slips will surface in the next /critique pass — the bias is now externally observable.
 
-### [LOW] /trends/tracker — linked rows expose two affordances pointing at the same URL
+### [x] [LOW] /trends/tracker — linked rows expose two affordances pointing at the same URL
+- addressed in: pending commit (this tick — phase 19 ship)
+- issue: [mirror-skipped: token lacks repo:labels write — same 403 path as 4b8c793]
 - pass: 3 (commit 11c0777)
 - viewport: desktop
 - category: visual
 - observation: After the rows-not-links critique fix (commit `a7501af`) shipped, linked rows render the row name as a Link to the deep dive AND the editor's-note column as a Link to the same article. Tab order hits the same destination twice per linked row; mouse hover lights up two distinct affordances side-by-side that go to identical places.
 - evidence: Gateron Oil King row: name link to `/article/gateron-oil-king-deep-dive` + editor's-note CTA "Why the Gateron Oil King sounds the way it does →" to the same URL. Same shape on the Alice row. `apps/web/src/components/tracker/TrackerRow.tsx` lines 44-53 render both Links unconditionally when `noteHref` resolves.
-- suggested fix: differentiate the editor's-note copy from the article title — make the column a one-line editorial take (a sentence the editor wrote about *why* this row moved) instead of the article title. That keeps both Links useful: row name = "go read the article"; editor's note = "here's why I think this is moving." If editorial-note copy is too much work right now, drop the row-name Link and keep the explicit CTA — the rows still link via the editor's-note column, and the affordance becomes singular.
+- fix: took the suggested-fix's "differentiate the editor's-note copy from the article title" path. Phase 19 added `note: z.string().min(20).max(280).nullable().optional()` to `TrendRowSchema` and a render branch in `TrackerRow.tsx`: when both `articleSlug` and `note` are set, the editor's-note column (and the mobile sub-link) render the `note` text instead of the article title. The row name still Links to the article, the editor's-note column still Links to the same article — but the two affordances now carry different copy ("go read the piece" vs "here's why I think this is moving"). Concrete proof: Gateron Oil King row name still links to `/article/gateron-oil-king-deep-dive`; the editor's-note column on the same row now reads "Mode Sonnet 2026 builds and r/mk sound tests put Oil Kings in the typing-test rotation; vendor stock turning over weekly at NK and CK." instead of duplicating the article title. Same shape on Alice. New TrackerRow unit test ("renders the editor's note as the linked text when both article and note are set") asserts the column Link's text is the `note`, AND that the article title does NOT render as link text — regression-locks the duplicate-link surface from coming back.
 
 ### [x] [HIGH] /article/* — no hero art; locked directive not yet implemented
 - addressed in: commit 0e7c9fd (brand-assets posture drain, 2026-05-09)
@@ -209,13 +213,15 @@
 - regression guard: new `packages/content/src/__tests__/mdx/spacing.test.tsx` (2 tests) asserts (a) `<Callout>` carries `my-8` and not the legacy `my-6`, and (b) `mdxComponents.h2` carries `mt-16` and not the legacy `mt-12`. Future Tailwind-class tweaks will fail loud if the spacing regresses.
 
 
-### [LOW] /trends/tracker — every editor's-note cell is a uniform em dash
+### [x] [LOW] /trends/tracker — every editor's-note cell is a uniform em dash
+- addressed in: pending commit (this tick — phase 19 ship)
+- issue: [mirror-skipped: token lacks repo:labels write — same 403 path as 4b8c793]
 - pass: 2 (commit e270ced)
 - viewport: desktop
 - category: data
 - observation: The desktop layout reserves a 1.4fr column on each tracker row for an editor's note (linking to a deep dive). Across all five categories every cell renders "—". The page advertises a dashboard but reads as a five-row stub waiting for content. This is the same root data gap as the [HIGH] above; filing separately because the right fix is a content backfill, not a code change.
 - evidence: `data/trends/2026-W19.json` ships every row with `articleSlug: null`. `TrackerRow.tsx:64-73` renders an em dash whenever `noteHref` is null, and the desktop column has `text-text-4` styling that only emphasizes the emptiness when every cell shares it.
-- suggested fix: backfill `articleSlug` on the rows that already have a matching article (Gateron Oil King, Alice layout). For categories where no article exists yet (MT3 profile, Mode Designs, Wuque Studio), commission a one-paragraph editorial note as a `note: string` field on the row schema — small additive schema change in `packages/data` — and render it as plain text when the slug doesn't resolve. That way no cell is ever a bare em dash.
+- fix: shipped exactly the suggested-fix's path. Phase 19 added the `note: z.string().min(20).max(280).nullable().optional()` schema additive in `packages/data/src/schemas/trend.ts`. `TrackerRow.tsx` got a new render branch: when `note` is set and no article resolves, the desktop editor's-note column renders the `note` as plain `<span>` text (no Link, no em dash). When `note` is set AND an article resolves, the `note` becomes the linked text. Every one of the 15 rows in the backfilled snapshot ships with a `note`, so the bare em dash no longer appears anywhere in the live tracker. Two new TrackerRow unit tests cover the "note + no article -> plain text" and "note + article -> linked note text" branches; the legacy "em dash when no article and no note" test still passes (regression-locks the fallback). Drains alongside the duplicate-link finding above — both were closed by the same `note` field.
 - source: browser
 
 ### [x] [MED] /group-buys — seed CTA points at a 404 vendor URL (user jot)

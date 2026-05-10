@@ -1,6 +1,6 @@
-import type { ReactElement, ReactNode } from 'react'
+import type { HTMLAttributes, ReactElement, ReactNode } from 'react'
 
-export type ContainerProps = {
+export type ContainerProps = HTMLAttributes<HTMLElement> & {
   children: ReactNode
   className?: string
   as?: 'div' | 'section' | 'header' | 'footer' | 'main' | 'article'
@@ -14,10 +14,14 @@ export function Container({
   children,
   className = '',
   as = 'div',
+  ...rest
 }: ContainerProps): ReactElement {
   const Tag = as as 'div'
   return (
-    <Tag className={`mx-auto w-full max-w-[1280px] px-6 sm:px-10 ${className}`.trim()}>
+    <Tag
+      {...rest}
+      className={`mx-auto w-full max-w-[1280px] px-6 sm:px-10 ${className}`.trim()}
+    >
       {children}
     </Tag>
   )

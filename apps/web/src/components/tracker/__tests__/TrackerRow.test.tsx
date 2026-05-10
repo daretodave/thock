@@ -82,9 +82,63 @@ describe('<TrackerRow>', () => {
     )
   })
 
-  it('renders an em-dash when no article resolves', () => {
+  it('renders an em-dash when no article resolves and no note is set', () => {
     render(<TrackerRow rank={2} row={row()} />)
     expect(screen.getByTestId('tracker-row')).toHaveTextContent('—')
+  })
+
+  it('renders the editor’s note as the linked text when both article and note are set', () => {
+    const article = makeArticle({
+      slug: 'oil-king-deep-dive',
+      frontmatter: {
+        ...makeArticle().frontmatter,
+        slug: 'oil-king-deep-dive',
+        title: 'Why the Oil King',
+      },
+    })
+    render(
+      <TrackerRow
+        rank={1}
+        row={row({
+          name: 'Oil King',
+          articleSlug: 'oil-king-deep-dive',
+          note: 'GB closed in March; secondhand demand kept rising on r/mechmarket.',
+        })}
+        article={article}
+      />,
+    )
+    const links = Array.from(
+      screen
+        .getByTestId('tracker-row')
+        .querySelectorAll('a[href="/article/oil-king-deep-dive"]'),
+    )
+    const noteLink = links.find((a) =>
+      /secondhand demand/i.test(a.textContent ?? ''),
+    )
+    expect(noteLink).toBeDefined()
+    // The article title must NOT appear as link text — that's the
+    // duplicate-link finding this branch closes.
+    const titleLink = links.find((a) =>
+      /why the oil king/i.test(a.textContent ?? ''),
+    )
+    expect(titleLink).toBeUndefined()
+  })
+
+  it('renders the note as plain text in the editor’s-note column when no article resolves', () => {
+    render(
+      <TrackerRow
+        rank={2}
+        row={row({
+          name: 'MT3 profile',
+          note: 'Backstock at NovelKeys steadier than last quarter; price holding.',
+        })}
+      />,
+    )
+    const noteText = screen.getAllByTestId('tracker-row-note-text')
+    expect(noteText.length).toBeGreaterThan(0)
+    expect(noteText[0]).toHaveTextContent(/backstock at novelkeys/i)
+    // No em dash should render when note covers the column.
+    expect(screen.queryByText('—')).toBeNull()
   })
 
   it('exposes direction via a data attribute', () => {

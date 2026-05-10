@@ -51,6 +51,18 @@
                 "minLength": 2,
                 "type": "string"
               },
+              "note": {
+                "anyOf": [
+                  {
+                    "maxLength": 280,
+                    "minLength": 20,
+                    "type": "string"
+                  },
+                  {
+                    "type": "null"
+                  }
+                ]
+              },
               "score": {
                 "maximum": 100,
                 "minimum": -100,

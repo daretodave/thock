@@ -194,7 +194,44 @@
             38,
             42
           ],
-          "articleSlug": "gateron-oil-king-deep-dive"
+          "articleSlug": "gateron-oil-king-deep-dive",
+          "note": "Mode Sonnet 2026 builds and r/mk sound tests put Oil Kings in the typing-test rotation; vendor stock turning over weekly at NK and CK."
+        },
+        {
+          "name": "HMX Cloud",
+          "category": "switch",
+          "direction": "up",
+          "score": 36,
+          "spark": [
+            8,
+            12,
+            16,
+            22,
+            26,
+            30,
+            33,
+            36
+          ],
+          "articleSlug": "beginners-switch-buying-guide",
+          "note": "HMX restocked late January and Cloud kept moving through April on KeebFinder's best-seller charts; the POK-stem profile is filtering into more $100-150 pre-builts."
+        },
+        {
+          "name": "Cherry MX2A revisions",
+          "category": "switch",
+          "direction": "down",
+          "score": -22,
+          "spark": [
+            -4,
+            -8,
+            -10,
+            -14,
+            -16,
+            -18,
+            -20,
+            -22
+          ],
+          "articleSlug": null,
+          "note": "Enthusiast threads still rate MX2A as 'fine, not exciting'; with HMX and Gateron eating the mid-tier linear slot, the MX2A discourse has gone quiet."
         },
         {
           "name": "MT3 profile",
@@ -211,7 +248,44 @@
             4,
             4
           ],
-          "articleSlug": null
+          "articleSlug": null,
+          "note": "Drop's MT3 catalog ticking along on Susuwatari and Black-on-White restocks; no breakout sets, but the profile holds its niche on retro builds."
+        },
+        {
+          "name": "GMK CYL Prussian Alert",
+          "category": "keycap",
+          "direction": "up",
+          "score": 38,
+          "spark": [
+            10,
+            14,
+            18,
+            22,
+            28,
+            32,
+            35,
+            38
+          ],
+          "articleSlug": null,
+          "note": "Top GeekHack IC by view count (>121k) heading into the May 15 GB; Bauhaus-leaning red-on-cream palette is doing what Olivetti did in 2024."
+        },
+        {
+          "name": "DCS Olivetti",
+          "category": "keycap",
+          "direction": "up",
+          "score": 18,
+          "spark": [
+            4,
+            6,
+            9,
+            12,
+            14,
+            16,
+            17,
+            18
+          ],
+          "articleSlug": null,
+          "note": "March 27-April 13 GB closed strong; DCS coming back into rotation alongside Cherry signals a small rebellion against the Cherry-only orthodoxy."
         },
         {
           "name": "Alice layout",
@@ -228,7 +302,44 @@
             -16,
             -18
           ],
-          "articleSlug": "alice-layout-decline"
+          "articleSlug": "alice-layout-decline",
+          "note": "GeekHack Alice ICs that posted in 2025 are stalled at sub-50 reply counts; community attention is migrating toward split and 75% formats instead."
+        },
+        {
+          "name": "Split / ergo (Voyager, Glove80)",
+          "category": "layout",
+          "direction": "up",
+          "score": 32,
+          "spark": [
+            12,
+            15,
+            18,
+            22,
+            25,
+            28,
+            30,
+            32
+          ],
+          "articleSlug": null,
+          "note": "ZSA Voyager and Glove80 continue showing up in r/mk transition posts and developer blogs; the ergo-curious cohort is now big enough to be its own demographic."
+        },
+        {
+          "name": "75% layout",
+          "category": "layout",
+          "direction": "up",
+          "score": 28,
+          "spark": [
+            10,
+            13,
+            17,
+            20,
+            22,
+            25,
+            27,
+            28
+          ],
+          "articleSlug": null,
+          "note": "Sonnet 2026, QK75, and Rainy 75 sustaining 75% as the default custom-board pitch; the format is absorbing former 65% buyers who want an F-row back."
         },
         {
           "name": "Mode Designs",
@@ -245,7 +356,44 @@
             23,
             24
           ],
-          "articleSlug": null
+          "articleSlug": null,
+          "note": "Sonnet 2026 refresh shipped on configurator on March 4 and Encore caught the same wave; coverage by Alex Otos and Tom's Hardware kept the storefront ranking through April."
+        },
+        {
+          "name": "CannonKeys",
+          "category": "vendor",
+          "direction": "up",
+          "score": 18,
+          "spark": [
+            4,
+            7,
+            10,
+            13,
+            15,
+            17,
+            18,
+            18
+          ],
+          "articleSlug": null,
+          "note": "GMK CYL lineup (Vintage Keys, Monochrome Dolch shipping wave) keeps the storefront active; Bakeneko/Satisfaction restocks landing on schedule through April."
+        },
+        {
+          "name": "Prototypist",
+          "category": "vendor",
+          "direction": "up",
+          "score": 14,
+          "spark": [
+            4,
+            6,
+            8,
+            10,
+            11,
+            13,
+            14,
+            14
+          ],
+          "articleSlug": null,
+          "note": "EU-side fulfillment for GMK Dolch R5X and other CYL runs gave them a March-April surge as US buyers routed around Oblotzky waitlists."
         },
         {
           "name": "Wuque Studio",
@@ -262,10 +410,47 @@
             8,
             8
           ],
-          "articleSlug": null
+          "articleSlug": null,
+          "note": "Morandi switches and the Mammoth75 are still the steady-sellers; no new headline release this 8-week window, but storefront restock cadence held."
+        },
+        {
+          "name": "Keychron",
+          "category": "brand",
+          "direction": "up",
+          "score": 30,
+          "spark": [
+            12,
+            16,
+            20,
+            23,
+            26,
+            28,
+            29,
+            30
+          ],
+          "articleSlug": null,
+          "note": "Q Ultra ZMK series with 660h battery announced at CES is now reaching reviewers; Q1 HE 8K Marble in April pushed Keychron deeper into the prebuilt-premium tier."
+        },
+        {
+          "name": "Cherry (GMK manufacturer)",
+          "category": "brand",
+          "direction": "down",
+          "score": -14,
+          "spark": [
+            -2,
+            -4,
+            -6,
+            -8,
+            -10,
+            -12,
+            -13,
+            -14
+          ],
+          "articleSlug": null,
+          "note": "MX2A buzz has cooled and the top esports keyboards moved to Hall-effect/optical (Wooting, Razer V3 Pro); Cherry's relevance now lives mostly through GMK doubleshot runs."
         }
       ],
-      "updatedAt": "2026-05-09T00:00:00.000Z"
+      "updatedAt": "2026-05-10T01:30:00.000Z"
     }
   ],
   "articles": [
@@ -667,5 +852,5 @@
       "category": "brand"
     }
   ],
-  "generatedAt": "2026-05-10T01:49:40.201Z"
+  "generatedAt": "2026-05-10T02:13:07.232Z"
 }
