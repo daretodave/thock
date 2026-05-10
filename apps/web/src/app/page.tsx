@@ -18,7 +18,10 @@ import { ArticleCard } from '@/components/home/ArticleCard'
 import { GroupBuysWidget } from '@/components/home/GroupBuysWidget'
 import { HomeDeepDivesRail } from '@/components/home/HomeDeepDivesRail'
 import { HomeSectionHeading } from '@/components/home/HomeSectionHeading'
-import { LatestByPillar } from '@/components/home/LatestByPillar'
+import {
+  LatestByPillar,
+  resolveLatestByPillar,
+} from '@/components/home/LatestByPillar'
 import { TrendingStrip } from '@/components/home/TrendingStrip'
 import type { Article, Tag } from '@thock/content'
 
@@ -65,6 +68,20 @@ export default function HomePage(): ReactElement {
   const heroExcludeSlugs = heroArticle
     ? new Set<string>([heroArticle.slug])
     : undefined
+  // Critique pass 4 [LOW]: the "Long reads worth your weekend" rail
+  // independently picks the newest deep-dive while <LatestByPillar>
+  // also picks one for its Deep Dives slot — readers saw the same
+  // card twice on the same screen. Resolve the by-pillar picks once
+  // and exclude them from the long-reads rail (same pattern as the
+  // e10a8b6 hero/by-pillar dedup, one slot deeper).
+  const byPillarPicks = resolveLatestByPillar(
+    latestByPillar,
+    undefined,
+    heroExcludeSlugs,
+  )
+  const longReadsExcludeSlugs = new Set<string>(
+    byPillarPicks.map((a) => a.slug),
+  )
   const itemListPaths = [...articles]
     .sort((a, b) =>
       b.frontmatter.publishedAt.localeCompare(a.frontmatter.publishedAt),
@@ -145,6 +162,7 @@ export default function HomePage(): ReactElement {
             <HomeDeepDivesRail
               articles={articles}
               tagsBySlug={tagsBySlug}
+              excludeSlugs={longReadsExcludeSlugs}
             />
           </div>
           <div data-testid="home-group-buys-column">

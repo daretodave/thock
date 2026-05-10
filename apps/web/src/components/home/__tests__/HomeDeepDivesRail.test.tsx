@@ -43,4 +43,23 @@ describe('<HomeDeepDivesRail>', () => {
     render(<HomeDeepDivesRail articles={[a, b, c]} max={2} />)
     expect(screen.getAllByTestId('article-card-row')).toHaveLength(2)
   })
+
+  it('excludes slugs in excludeSlugs (regression guard for /critique pass 4)', () => {
+    // The home page passes the by-pillar grid's resolved picks so the
+    // long-reads rail never re-surfaces the same Deep Dives card.
+    const a = deepDive('alpha', '2026-05-08T00:00:00.000Z')
+    const b = deepDive('beta', '2026-05-07T00:00:00.000Z')
+    const c = deepDive('gamma', '2026-05-06T00:00:00.000Z')
+    render(
+      <HomeDeepDivesRail
+        articles={[a, b, c]}
+        excludeSlugs={new Set(['alpha'])}
+      />,
+    )
+    const hrefs = screen
+      .getAllByTestId('article-card-row')
+      .map((r) => r.getAttribute('href'))
+    expect(hrefs).not.toContain('/article/alpha')
+    expect(hrefs).toEqual(['/article/beta', '/article/gamma'])
+  })
 })

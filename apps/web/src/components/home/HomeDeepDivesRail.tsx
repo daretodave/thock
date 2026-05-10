@@ -8,6 +8,13 @@ export type HomeDeepDivesRailProps = {
   tagsBySlug?: Map<string, Tag>
   /** Cap at 3 by default — matches the design composition. */
   max?: number
+  /**
+   * Slugs to exclude from the rail. Use case: home page passes the
+   * by-pillar grid's resolved picks so the long-reads rail never
+   * surfaces the exact card a reader just saw under "By pillar /
+   * Deep Dives" two scroll-lengths up (critique pass 4 [LOW]).
+   */
+  excludeSlugs?: ReadonlySet<string>
 }
 
 /**
@@ -19,9 +26,11 @@ export function HomeDeepDivesRail({
   articles,
   tagsBySlug,
   max = 3,
+  excludeSlugs,
 }: HomeDeepDivesRailProps): ReactElement | null {
   const picks = articles
     .filter((a) => a.frontmatter.pillar === 'deep-dives')
+    .filter((a) => !excludeSlugs || !excludeSlugs.has(a.slug))
     .sort((a, b) =>
       b.frontmatter.publishedAt.localeCompare(a.frontmatter.publishedAt),
     )
