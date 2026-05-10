@@ -11,6 +11,16 @@
 
 ## Pending
 
+### [MED] general — e2e tests fire google analytics, polluting prod GA with bot traffic
+- pass: user-jot (commit fe78fc3)
+- viewport: unspecified
+- auth_state: anonymous
+- category: bug
+- observation: e2e tests are firing the google analytics -- can you nip that?
+- evidence: user-spotted at 2026-05-10T12:00:00Z
+- suggested_fix: [user has not specified — iterate to determine]
+- source: user
+
 ### [needs-user-call] [HIGH] /* (every dynamic-data page) — `<main>` landmark contains only the "loading…" shell; real content renders outside the landmark
 - issue: #22 (open — investigation continuing)
 - pass: 7 (commit e3de21d)
