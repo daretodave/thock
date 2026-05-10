@@ -60,13 +60,12 @@ export default function SourcesPage(): ReactElement {
 
           <div className="thock-prose max-w-[60ch]">
             <p>
-              thock cites external references inline using a{' '}
-              <code>&lt;Source&gt;</code> MDX component. Every link is editor-
-              applied — auto-flagged at render with{' '}
-              <code>rel=&quot;sponsored noopener&quot;</code> for vendor URLs
-              and surfaced here so a reader can audit which articles do their
-              homework. The full per-citation index (article + quote + URL) is
-              the next step; today this page lists the per-article tally.
+              thock cites external references inline as citations. Vendor
+              links are auto-flagged with{' '}
+              <code>rel=&quot;sponsored&quot;</code> so a reader can audit
+              which articles do their homework. The full per-citation index —
+              article, quote, URL — is the next step; today this page lists
+              the per-article tally.
             </p>
           </div>
 
