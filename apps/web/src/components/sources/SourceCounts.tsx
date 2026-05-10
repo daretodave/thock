@@ -25,6 +25,12 @@ const PILLAR_LABEL: Record<Pillar, string> = {
  * `<Source>` tags are omitted so the page surfaces only what's
  * actually cited. Rows are grouped by pillar to mirror the rest
  * of the site's information architecture.
+ *
+ * When every visible row has the same `sourceCount`, the page
+ * loses the value-add of "which articles cite more" — the badge
+ * reads as auto-generated. In that case (critique pass 3 [MED])
+ * we swap to a "Source linked" / "Sources linked" chip that does
+ * not tease a count, so uniform tallies don't look like a stub.
  */
 export function SourceCounts({ rows }: SourceCountsProps): ReactElement {
   const cited = rows.filter((r) => r.sourceCount > 0)
@@ -45,6 +51,10 @@ export function SourceCounts({ rows }: SourceCountsProps): ReactElement {
       </div>
     )
   }
+
+  const uniqueCounts = new Set(cited.map((r) => r.sourceCount))
+  const isUniform = uniqueCounts.size === 1
+  const uniformValue = isUniform ? cited[0]!.sourceCount : null
 
   const byPillar = new Map<Pillar, ArticleSourceCount[]>()
   for (const row of cited) {
@@ -88,8 +98,14 @@ export function SourceCounts({ rows }: SourceCountsProps): ReactElement {
                   >
                     {article.frontmatter.title}
                   </Link>
-                  <span className="font-mono text-small uppercase tracking-[0.08em] text-text-3 shrink-0">
-                    {sourceCount} cite{sourceCount === 1 ? '' : 's'}
+                  <span
+                    data-testid="source-counts-badge"
+                    data-uniform={isUniform ? 'true' : 'false'}
+                    className="font-mono text-small uppercase tracking-[0.08em] text-text-3 shrink-0"
+                  >
+                    {isUniform
+                      ? `Source${uniformValue === 1 ? '' : 's'} linked`
+                      : `${sourceCount} cite${sourceCount === 1 ? '' : 's'}`}
                   </span>
                 </li>
               ))}

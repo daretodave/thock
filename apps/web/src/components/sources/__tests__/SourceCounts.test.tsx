@@ -69,7 +69,7 @@ describe('<SourceCounts>', () => {
     ).toBeInTheDocument()
   })
 
-  it('renders cite count with correct singular/plural form', () => {
+  it('renders cite count with correct singular/plural form when counts vary', () => {
     const rows: ArticleSourceCount[] = [
       { article: fixture({ slug: 'a', title: 'Single' }), sourceCount: 1 },
       { article: fixture({ slug: 'b', title: 'Multi' }), sourceCount: 4 },
@@ -77,6 +77,44 @@ describe('<SourceCounts>', () => {
     render(<SourceCounts rows={rows} />)
     expect(screen.getByText(/^1 cite$/i)).toBeInTheDocument()
     expect(screen.getByText(/^4 cites$/i)).toBeInTheDocument()
+    // Non-uniform → badges expose the actual count.
+    const badges = screen.getAllByTestId('source-counts-badge')
+    expect(badges.every((b) => b.getAttribute('data-uniform') === 'false')).toBe(
+      true,
+    )
+  })
+
+  it('renders the count-free "Source linked" chip when every visible row has the same sourceCount', () => {
+    // Critique pass-3 [MED] drain: when every article shows
+    // `1 cite` the badge reads as a placeholder; swap to a
+    // count-free chip so uniform tallies don't tease a stat.
+    const rows: ArticleSourceCount[] = [
+      { article: fixture({ slug: 'a', title: 'A piece' }), sourceCount: 1 },
+      { article: fixture({ slug: 'b', title: 'B piece' }), sourceCount: 1 },
+      { article: fixture({ slug: 'c', title: 'C piece' }), sourceCount: 1 },
+    ]
+    render(<SourceCounts rows={rows} />)
+    const badges = screen.getAllByTestId('source-counts-badge')
+    expect(badges).toHaveLength(3)
+    for (const b of badges) {
+      expect(b).toHaveAttribute('data-uniform', 'true')
+      expect(b.textContent).toMatch(/^source linked$/i)
+    }
+    // The legacy "1 cite" copy must NOT appear when the set is uniform.
+    expect(screen.queryByText(/cite/i)).toBeNull()
+  })
+
+  it('uses the plural "Sources linked" chip when uniform count is greater than 1', () => {
+    const rows: ArticleSourceCount[] = [
+      { article: fixture({ slug: 'a', title: 'A piece' }), sourceCount: 3 },
+      { article: fixture({ slug: 'b', title: 'B piece' }), sourceCount: 3 },
+    ]
+    render(<SourceCounts rows={rows} />)
+    const badges = screen.getAllByTestId('source-counts-badge')
+    expect(badges).toHaveLength(2)
+    for (const b of badges) {
+      expect(b.textContent).toMatch(/^sources linked$/i)
+    }
   })
 
   it('renders each row as a link to /article/<slug>', () => {
