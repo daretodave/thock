@@ -1,8 +1,9 @@
 # Critique log
 
-> Last pass: 2026-05-10T17:15:00Z at commit 40b2e55
-> Pass count: 9
-> Iterate-bias category: external-critique (pass 9 fired 12 commits after pass 8, after a drain that shipped pass-8's #29 [HIGH] hero-SVG XML well-formedness regression-guard. Reader's pass 9 visited 6 URLs (/, /article/hmx-cloud-deep-dive, /trends, /trends/tracker, /group-buys, /tag/mode) and surfaced 6 candidates; self-assessment kept 4 (2 phantom-confirmed). Filed: [MED] / — Trending "what's moving on the tracker" rail includes a `flat` tile (framing dilution); [MED] /trends/tracker — Sleeper summary card highlights a row whose own editor's note explicitly says nothing's moving (auto-populated, not editorially chosen); [LOW] /trends + all pillar landings — eyebrow `pillar · NN of 05` reads as mechanical sequence position (other surfaces use descriptive eyebrows); [MED] / — every "By pillar" home tile dated 2026-05-10 (6 of 7 same-day; bulk-publish artifact reads as fake cadence). Dropped: reader HIGH on /group-buys two-`<main>` landmarks (phantom — second `<main>` lives inside `<div hidden id="S:0">` waiting for React's `$RC` reparenting; standard Next 15 streaming-Suspense protocol; reader's a11y-tree walks past the `hidden` boundary); reader LOW on countdown a11y exclusion (phantom — `GroupBuyCountdownRow.tsx:101-107` renders `{left}d` in a regular span with no `aria-hidden`; reader's a11y-tree extraction missed it). Reader-tool artifact rate: 33% this pass — both phantoms were a11y-tree-extraction misreads, not visual-detail misreads.)
+> Last pass: 2026-05-10T18:55:00Z at commit 0e2314f
+> Pass count: 10
+> Iterate-bias category: external-critique (pass 10 fired 12 commits after pass 9, after a drain that shipped pass-9's [MED] aside-spacing user-jot (#32, a0fdaa8), [MED] /trends/tracker heading-skip a11y (#33, f70b1f3), [MED] / Trending rail flat tile (#34, bb70360), and [MED] /trends/tracker Sleeper card on flat row (#35, bdc2082) — all four pass-9 [MED] findings drained in 4 consecutive iterate ticks. Reader's pass 10 visited 6 URLs (/, /article/lubing-101, /trends, /trends/tracker, /group-buys, /tag/modding) and surfaced 6 candidates; self-assessment kept 6 (none dropped — every reader finding verified against rendered HTML / source). Filed: [HIGH] /article/lubing-101 — malformed sentence "Brushes drift; this is why brushes drift toward the leaves matters." (real copy bug, mdx line 55, surfaces in body prose); [MED] /group-buys — "Last 72h" eyebrow on forward-looking "Closing soon" section reads retrospective; [MED] / — "0d" countdown vs /group-buys "closes today" cross-surface inconsistency on the same buy; [MED] /tag/modding — "TAG · MISC" eyebrow undersells modding (taxonomy gap; same shape will hit /tag/lubing, /tag/firmware); [LOW] /group-buys — "0 announced" segment names a bucket with no corresponding section; [LOW] /trends/tracker — "SIGNATURE" eyebrow reads as in-house marketing voice. Reader-tool artifact rate: 0% this pass — every finding holds up under curl-grep verification.)
+> Pass 9 last pass: 2026-05-10T17:15:00Z at commit 40b2e55
 > Pass 8 last pass: 2026-05-10T14:00:00Z at commit d34580c
 > Pass 7 last pass: 2026-05-10T08:30:00Z at commit e3de21d
 > Pass 6 last pass: 2026-05-10T07:30:00Z at commit dfa5596
@@ -12,6 +13,60 @@
 > drained by `/iterate`. See `skills/critique.md` for the contract.
 
 ## Pending
+
+### [HIGH] /article/lubing-101 — malformed sentence in "Touching the leaves" paragraph
+- pass: 10 (commit 0e2314f)
+- viewport: both
+- category: copy
+- observation: Body of /article/lubing-101 contains the sentence "Brushes drift; this is why brushes drift toward the leaves matters." The clause repeats "brushes drift" and the verb "matters" is left dangling — it reads like a stray edit-pass artifact. As a fresh reader I had to read it twice and gave up parsing it; the surrounding paragraph is otherwise the cleanest in the piece, so this stands out as a typo / edit miss in an article that is otherwise well-tuned (1700-word Guides flagship). High because the article is a Guides pillar piece and its body prose is the entire offering — a malformed sentence in mid-paragraph is the kind of thing a builder reading a how-to would screenshot to a friend with "is this site reliable?"
+- evidence: rendered body on /article/lubing-101 paragraph beginning `**Touching the leaves.**`; source `apps/web/src/content/articles/lubing-101.mdx:55`. Verified by `grep -n "Brushes drift" apps/web/src/content/articles/lubing-101.mdx` → the literal string is present.
+- suggested fix: rewrite the clause to e.g. "Brushes drift; that is why watching where the brush goes matters." Single MDX edit; no schema or component touch.
+- source: browser
+
+### [MED] /group-buys — "Last 72h" eyebrow on forward-looking "Closing soon" section reads as retrospective
+- pass: 10 (commit 0e2314f)
+- viewport: desktop
+- category: copy
+- observation: The /group-buys page's "Closing soon" section carries a "Last 72h" eyebrow (small font-mono uppercase kicker above the heading). "Last 72h" reads as a retrospective window — the past 72 hours — but the section is forward-looking: group buys closing in the next 72 hours. Scanning the page, a fresh reader parses "Last 72h" as "recently closed" and is briefly confused that two ostensibly closing items ("closes today" and "1d left") sit under a label that suggests they had already ended. Same shape as the pass-7 "Closing soon — 37 days left" mismatch the loop already addressed, but on the kicker rather than the membership.
+- evidence: `curl -s https://thock-coral.vercel.app/group-buys | grep` shows literal text "Last 72h" + "Closing soon" + items including "closes today" and "1d left". Source: `apps/web/src/app/group-buys/page.tsx` (around line 109 per reader's note) sets the kicker prop to "Last 72h".
+- suggested fix: change the kicker on the "Closing soon" section to a forward-looking label — "Next 72h" — or drop the kicker entirely (the section heading "Closing soon" already carries the framing). One-line edit in `apps/web/src/app/group-buys/page.tsx`; add a unit/snapshot test asserting the kicker text.
+- source: browser
+
+### [MED] / — "0d" countdown vs /group-buys "closes today" — cross-surface inconsistency on the same buy
+- pass: 10 (commit 0e2314f)
+- viewport: both
+- category: affordance
+- observation: The home "Don't miss the close" rail abbreviates the most-urgent state to `0d`, while the /group-buys landing renders the same state as `closes today` for the SAME group buy (GMK CYL Ishtar R2). `0d` reads ambiguously — zero days, has it already closed, or does it close at end of day? This is the tile most worth getting right since it's the entry point for the highest-urgency CTA on the home page, and the two surfaces should agree on the closing-day label. The /group-buys component already has the cleaner "closes today" copy logic (`GroupBuyRow.tsx:72`); only the home `<GroupBuyCountdownRow>` renders the terse `${left}d` form regardless of urgency.
+- evidence: `curl -s https://thock-coral.vercel.app/ | grep` shows home rendered text `GMK CYL Ishtar R2 / 0d`; `curl -s https://thock-coral.vercel.app/group-buys | grep` shows same buy rendered with `closes today`. Source: `apps/web/src/components/home/GroupBuyCountdownRow.tsx:106` emits `{left}d`; `apps/web/src/components/group-buys/GroupBuyRow.tsx:72` emits `closes today` when days===0.
+- suggested fix: add a `days === 0 ? 'closes today' : `${days}d left`` ternary in `GroupBuyCountdownRow` (mirror the existing `GroupBuyRow` logic — the constant is already factored in `lib/tracker` formatDelta-style if useful, or can be inlined). Update the existing `GroupBuyCountdownRow.test.tsx` to lock in the days===0 case explicitly.
+- source: browser
+
+### [MED] /tag/modding — "TAG · MISC" eyebrow undersells a first-class topic; taxonomy gap
+- pass: 10 (commit 0e2314f)
+- viewport: both
+- category: content-gap
+- observation: The /tag/modding page eyebrow categorizes #modding as `tag · misc`. For a site whose Guides pillar includes a 1700-word Lubing 101 piece, whose Ideas pillar includes build-method content, and whose lede positions the audience as builders/modders, modding is a first-class topic — not miscellaneous. The "MISC" label undersells one of the site's strongest tag landings and signals to a fresh reader that the taxonomy is sloppy. Same shape will hit `/tag/lubing`, `/tag/firmware`, `/tag/build-of-the-week`, and any other practice/topic-shaped tag — anything that isn't a vendor / part / layout / profile / community gets dumped in `misc`.
+- evidence: rendered text on /tag/modding shows `<span class="font-mono uppercase tracking-[0.12em] text-micro text-text-3">tag · <!-- -->misc</span>`. Source: `packages/data/src/schemas/tag.ts` (or wherever the tag-category enum lives) — the enum is currently `vendor | part | layout | profile | community | misc`; modding/lubing/firmware all fall through to misc.
+- suggested fix: add a `topic` (or `practice`) tag category to the enum + tag-category palette, reclassify modding/lubing/firmware/build-of-the-week into it. Touches `tags.json`, the schema, and the eyebrow palette in `apps/web/src/app/tag/[slug]/page.tsx`. Or, narrower: just rename the existing `misc` bucket to `topic` (one-line palette label change) — same fix shape but no schema migration. The latter is the cheapest path and probably the right call.
+- source: browser
+
+### [LOW] /group-buys — "0 announced" segment names a bucket with no corresponding section
+- pass: 10 (commit 0e2314f)
+- viewport: desktop
+- category: copy
+- observation: The /group-buys page summary eyebrow reads `5 live · 0 announced · 1 recently ended`. The `0 announced` segment names a bucket that has no corresponding region anywhere on the page — there are "Closing soon", "Open now", and "Just closed" regions, but no "Announced" band. As a fresh reader I scrolled looking for the section the count was promising and it isn't there. Either the count should disappear when zero, or there should be a small empty-state band ("Announced — none scheduled yet") so the eyebrow's bucket map is honest.
+- evidence: rendered text on /group-buys shows `5 live · 0 announced · 1 recently ended` in the page header; the page body contains "Closing soon", "Open now", "Just closed" sections but no "Announced" band.
+- suggested fix: drop the `0 announced` segment from the summary line when the count is zero (cleanest), OR surface a small "Announced — none scheduled yet" band beneath "Closing soon" (more informative). One-line conditional in the page-summary component for the cheaper option.
+- source: browser
+
+### [LOW] /trends/tracker — "SIGNATURE" eyebrow reads as in-house marketing voice
+- pass: 10 (commit 0e2314f)
+- viewport: desktop
+- category: voice
+- observation: The page eyebrow on /trends/tracker is `signature · trends tracker`. "Signature" reads as in-house marketing copy — the kind of word a brand uses about itself ("our signature dish"). The voice elsewhere on the site is plainer; pillars are labeled by what they are (NEWS, TRENDS, GUIDES). "Signature" is the only place that label appears and it lands as voice drift toward breathless framing on the page that should be the most data-forward. The label literally encodes `bearings.md` "signature feature" architecture-speak — the bearings call it that internally, and the eyebrow pipes the internal label to the user-facing chrome.
+- evidence: rendered text on /trends/tracker top eyebrow `SIGNATURE · TRENDS TRACKER`. Source: `apps/web/src/components/tracker/TrackerHeader.tsx:56` `eyebrow="signature · trends tracker"`.
+- suggested fix: replace `signature` with a plainer category label — `dashboard`, `weekly`, or just `trends · tracker` (mirror pillar labelling). One-line edit in `TrackerHeader.tsx`. The bearings "signature feature" framing is an internal architectural label — keep it in `bearings.md`; don't expose it as eyebrow chrome.
+- source: browser
 
 ### [x] [MED] / — Trending "what's moving on the tracker" rail includes a `flat` tile (framing dilution)
 - addressed in: bb70360 (this tick — iterate drain)
