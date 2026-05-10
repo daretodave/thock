@@ -13,6 +13,12 @@
         "endDate": {
           "$ref": "#/definitions/group-buy/properties/startDate"
         },
+        "heroImage": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
         "imageUrl": {
           "anyOf": [
             {
@@ -98,6 +104,7 @@
         "region",
         "url",
         "imageUrl",
+        "heroImage",
         "status",
         "description",
         "updatedAt"
