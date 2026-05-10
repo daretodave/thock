@@ -1,0 +1,58 @@
+---
+slug: typing-tests-lie
+title: "Why typing tests lie"
+lede: "Monkeytype scores reward fast and forgiving. A daily driver needs comfortable and honest. Optimizing a build for the test selects for the wrong things — and the gap shows up around hour two, not in the leaderboard."
+author: thock
+pillar: ideas
+tags: [switches, modding, beginner, ergo]
+publishedAt: '2026-05-10T08:30:00.000Z'
+updatedAt: null
+heroImage: /hero-art/typing-tests-lie.svg
+heroImageAlt: "Two diverging line curves on a near-monochrome dark background; the upper curve climbs steeply with a single teal accent dot at the peak, the lower curve plateaus and gently dips, and a faint teal ribbon fills the widening gap between them."
+featured: false
+mentionedParts: []
+---
+
+There is a category error sitting at the center of the way most builders pick switches. A reader pulls up <Mono>monkeytype</Mono>, runs a sixty-second test on the new build, watches the WPM tick up two points over the old daily, and books the result as evidence the new switch is better. It is evidence of something. It is not evidence of that.
+
+The test the test runs is not the test the keyboard has to pass. A daily driver gets eight hours, not sixty seconds. It gets fatigue, micro-sorenesses, the slow accumulation of a slightly-too-stiff spring across thirty thousand keystrokes. It gets prose, not <Mono>quick brown fox</Mono> word lists drawn from a 200-word top set with no punctuation, no numbers, and no proper nouns the typist has to think about. The thing the test selects for and the thing the keyboard has to do diverge almost everywhere it counts.
+
+## What the test actually measures
+
+A typing test is a short-burst accuracy-and-throughput benchmark on a low-entropy text source. That phrasing is dry on purpose, because the marketing around the tests obscures it. <Mono>monkeytype</Mono>'s default mode draws from a frequency-ranked English word list, no capitalization, no punctuation, sixty seconds. The optimal strategy is to type at the highest rate the typist can sustain without crossing into a correction cascade — because corrections cost more than the keystrokes they fix. The build that wins this game is the one that lets the typist hit keys faster with marginally fewer mistakes than the build before it.
+
+That sentence is doing a lot of hidden work. "Faster with marginally fewer mistakes" is not what a comfortable keyboard feels like. It is what an over-actuated keyboard feels like — a light spring, a short pre-travel, a switch that registers before the typist's finger has fully committed. The test rewards the build that lets the typist outrun the build's resistance, which is a different goal from a build that holds up the typist's finger honestly across a workday.
+
+## Tests don't punish micro-soreness
+
+The most expensive thing a daily driver does to the typist is invisible at sixty seconds. A 67g spring on a long-pole linear feels punchy in a one-minute sprint and feels like a forearm complaint by 4 PM on a Wednesday. A scratchy bottom-out doesn't show up in the WPM column; it shows up in the typist's right index finger after two hours of <Mono>code review</Mono>. A board with a hard mount and an aluminum plate reads as crisp on the test and reads as a low-grade tension headache by the back half of the afternoon.
+
+None of this surfaces in the test results because the test ends before the body has time to complain. The body's complaint is the actual signal.
+
+## Tests reward typing the daily driver hates
+
+Run a typing test on a soft gasket-mount board with a 45g linear and the test will return a perfectly fine number. Run it on a tray-mount with a 60g tactile and it will, for many typists, return a slightly higher number. The tactile gives a clearer registration cue, the heavier spring pushes back faster, and short bursts respond well to both. The test wants a switch that tells the typist when it has fired, and tells loudly.
+
+A daily driver wants close to the opposite. The kind of typing that fills an actual workday — drafting prose, writing in a notebook app, editing existing text — wants a switch that disappears. The typist should not be aware of the actuation point on every keystroke; awareness of the actuation point is a thing the brain spends attention on, and attention is the limited resource. The switches that score best for hours of real typing tend to be the ones with the least personality on a benchmark — light, even, slightly under-bumped, more thock than crack.
+
+The test is selecting for switches that announce themselves. The day is selecting for switches that don't.
+
+<Callout type="note" title="Where the gap surfaces fastest">
+  The clearest place the test-build and the daily-build diverge is on tactile bumps. A pronounced bump scores well in burst tests because the registration cue is unmistakable. The same bump, hit forty thousand times in a workday, becomes a small repeated impact the finger learns to brace against. Most typists who chase tactile-bump intensity in tests end up reaching for a calmer tactile — or a linear — once the build stops being new.
+</Callout>
+
+## Tests time short bursts and hide endurance fade
+
+A sixty-second test ends before the typist's typing posture has degraded. The shoulders are still down. The wrists are still neutral. The right pinky has not yet started doing a small involuntary lift between the enter and the right shift. The test cannot see endurance fade because the test is shorter than the fade.
+
+A keyboard that slowly degrades the typist's posture across an hour will return identical numbers to a keyboard that doesn't, on the test. The first will leave the typist with a stiff trapezius at 6 PM. The second won't. The choice between them is the entire point of buying a custom in the first place — the body cares about that difference even when the leaderboard can't see it.
+
+This is also where the ergo split crowd has been quietly correct for years. The improvement from a properly-tented split is almost invisible at sixty seconds and almost undeniable at three hours. Anyone who has tried to A/B a split against a row-staggered on a typing test has watched the test fail to render the actual benefit. The benefit is real; the measurement instrument is wrong.
+
+## What to optimize for instead
+
+There is a counter-test, and it is not complicated. Type real prose for ninety minutes — a draft of something, not exercises — on the build under evaluation. Then notice three things. Notice the forearm. Notice the right pinky. Notice whether the typist wants to keep going at minute ninety-one or wants to stop. That is the test. WPM is irrelevant; finishing-feel is everything.
+
+A few rules of thumb that fall out of taking the ninety-minute test seriously. Heavier springs feel better in the first ten minutes and worse in the last ten — bias lighter than the test suggests. Pronounced tactility scores better than it sustains; calmer bumps and clean linears tend to win endurance. Soft mounts and softer plates are quieter on the test and gentler on the body; the test does not reward this and the daily driver does. Travel matters more than actuation point — a 4mm travel that lands honestly is doing more work for the typist than a short pre-travel that the test loves.
+
+The practical take is small and pointed. Run typing tests if the typist enjoys them, the same way a reader enjoys a crossword. Do not let the result decide what switches go in the build that has to last all year. The test is a sprint dressed up as a marathon, and the daily driver is a marathon all the way down.

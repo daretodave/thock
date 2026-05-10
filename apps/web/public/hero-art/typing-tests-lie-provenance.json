@@ -1,0 +1,18 @@
+{
+  "kind": "hero-art",
+  "target": "Z:/keyboard/apps/web/public/hero-art/typing-tests-lie.svg",
+  "source": "plan/bearings.md § Article hero art — colorful keyboard SVGs",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject",
+  "size": [1200, 750],
+  "pillar": "ideas",
+  "subject": "Two diverging line curves on a near-monochrome dark field — both start coincident at lower-left, then the upper curve climbs steeply to peak at upper-right (the typing-test WPM trajectory) carrying the teal splash with a focal filled-core-plus-outer-ring cursor at the peak; the lower curve plateaus and gently dips across the canvas in warm-grey (real-world daily comfort). A faint teal divergence ribbon fills the widening gap between the two curves, literally naming the article's thesis. Small open warm-grey circle marks the coincident origin where the two stories part ways. Single brass-bronze theme dot tucked at the upper-right margin as the family-convention anchor.",
+  "splash_color": "oklch(0.74 0.085 195)",
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": [],
+  "alt": "Two diverging line curves on a near-monochrome dark background; the upper curve climbs steeply with a single teal accent dot at the peak, the lower curve plateaus and gently dips, and a faint teal ribbon fills the widening gap between them.",
+  "prompt": "Ideas-pillar piece on why typing tests (monkeytype, keybr WPM charts) select for the wrong things — speed over comfort, short bursts over endurance. Per bearings hero-art directive, Ideas pieces lean conceptual / editorial; the chosen subject is two diverging curves so the visual literally states 'the metric does not match the experience.' Splash hue is muted teal oklch(0.74 0.085 195) — chosen as a fresh entry distinct from the existing pillar palette: closest neighbor on the wheel is steel-blue 215 (75-percent-default), 20 hue-degrees away; sage 145 sits 50 degrees off; the warm-bronze 75 family is a full 120 degrees away. Teal carries a faint 'measurement / instrument' connotation that suits a piece arguing the instrument is wrong. The prior Ideas piece (building-mode-sonnet-with-oil-kings) used warm bronze terracotta 35; teal at 195 is 160 hue-degrees clear of it, no collision. Composition follows the family rhythm: 1200x750 canvas, ~85% width inked content (x=90 to x=1110), full chart envelope y=110 (peak) to y=670 (baseline) for ~75% height. Family-canonical 2px warm-grey stroke for the secondary curve, 2.5px splash stroke for the focal climbing curve, splash band wash at 0.07 alpha, divergence ribbon at 0.14 alpha, focal cursor (filled core r=9 + outer ring r=16) on the peak. Eight baseline guide ticks mirror the trends-tracker / 75-percent-default rhythm. The lower curve uses three sparse open dots (start, middle, end) to match the family's didactic-but-sparse marker convention; the upper curve carries four splash-tinted dots at its inflection points. The article's thesis is rendered didactically by the divergence ribbon — both curves use the same teal hue (single-splash convention preserved strictly), with the ribbon at the lowest alpha so it reads as 'gap between' rather than as a third element. A single brass-bronze theme dot at (1148, 184) anchors the piece in the thock family palette without competing with the focal teal at (1110, 110).",
+  "revision": 1,
+  "generated_by": "brander (sub-agent)",
+  "generated_at": "2026-05-10",
+  "commit_at_render": "fc8abcf"
+}

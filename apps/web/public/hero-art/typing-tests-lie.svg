@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — typing tests lie, two diverging curves</title>
+
+  <!-- Splash band wash — full-width teal at very low alpha, anchors the chart field -->
+  <path
+    d="M 70 210 L 1130 210 L 1130 670 L 70 670 Z"
+    fill="oklch(0.74 0.085 195 / 0.07)" stroke="none"/>
+
+  <!-- Divergence ribbon — fills the gap between the two curves, naming the article's claim.
+       Single splash hue only; same teal at low alpha so the eye reads "the metric pulls away." -->
+  <path
+    d="
+      M 90 540
+      C 220 532, 340 510, 458 470
+      C 576 430, 690 360, 808 290
+      C 920 224, 1018 168, 1110 110
+      L 1110 552
+      C 1018 552, 920 552, 808 554
+      C 690 556, 576 558, 458 558
+      C 340 558, 220 552, 90 552
+      Z"
+    fill="oklch(0.74 0.085 195 / 0.14)" stroke="none"/>
+
+  <!-- Baseline -->
+  <line x1="90" y1="670" x2="1110" y2="670" stroke-opacity="0.55"/>
+
+  <!-- Faint vertical guide ticks on the baseline — eight, matching the family rhythm -->
+  <g stroke-opacity="0.35">
+    <line x1="90"   y1="670" x2="90"   y2="678"/>
+    <line x1="236"  y1="670" x2="236"  y2="678"/>
+    <line x1="381"  y1="670" x2="381"  y2="678"/>
+    <line x1="527"  y1="670" x2="527"  y2="678"/>
+    <line x1="673"  y1="670" x2="673"  y2="678"/>
+    <line x1="818"  y1="670" x2="818"  y2="678"/>
+    <line x1="964"  y1="670" x2="964"  y2="678"/>
+    <line x1="1110" y1="670" x2="1110" y2="678"/>
+  </g>
+
+  <!-- ── LOWER CURVE — real-world comfort / endurance — warm grey, plateaus then dips ── -->
+  <path
+    d="
+      M 90 545
+      C 200 540, 310 535, 420 538
+      C 530 541, 640 548, 750 552
+      C 860 556, 970 560, 1110 552"
+    stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-opacity="0.85" fill="none"/>
+
+  <!-- Small open dot markers along the lower curve (sparse, didactic) -->
+  <g stroke-opacity="0.7">
+    <circle cx="90"   cy="545" r="3.5"/>
+    <circle cx="420"  cy="538" r="3.5"/>
+    <circle cx="750"  cy="552" r="3.5"/>
+  </g>
+
+  <!-- Tiny annotation at the right end of the lower curve — a lead-in tick that reads
+       "comfort holds flat, even slightly down." Same warm grey, low chroma. -->
+  <g stroke-opacity="0.45">
+    <line x1="1128" y1="552" x2="1152" y2="552"/>
+    <line x1="1152" y1="544" x2="1152" y2="560"/>
+  </g>
+
+  <!-- ── UPPER CURVE — the typing-test WPM trajectory — teal splash, climbs aggressively ── -->
+  <path
+    d="
+      M 90 540
+      C 220 532, 340 510, 458 470
+      C 576 430, 690 360, 808 290
+      C 920 224, 1018 168, 1110 110"
+    stroke="oklch(0.74 0.085 195)" stroke-width="2.5" fill="none"/>
+
+  <!-- Subtle dot markers along the upper curve, in the splash hue at lower alpha -->
+  <g fill="oklch(0.74 0.085 195 / 0.85)" stroke="none">
+    <circle cx="220" cy="532" r="3"/>
+    <circle cx="458" cy="470" r="3"/>
+    <circle cx="690" cy="360" r="3"/>
+    <circle cx="920" cy="224" r="3"/>
+  </g>
+
+  <!-- Focal cursor at the peak — filled core + outer ring (family convention) -->
+  <circle cx="1110" cy="110" r="9" fill="oklch(0.74 0.085 195 / 0.95)" stroke="oklch(0.74 0.085 195)"/>
+  <circle cx="1110" cy="110" r="16" stroke="oklch(0.74 0.085 195)" stroke-opacity="0.45" fill="none"/>
+
+  <!-- Small annotation tick beside the peak — reads "this number, climbing." -->
+  <g stroke="oklch(0.74 0.085 195)" stroke-opacity="0.55">
+    <line x1="1128" y1="110" x2="1152" y2="110"/>
+    <line x1="1152" y1="100" x2="1152" y2="120"/>
+  </g>
+
+  <!-- Coincident origin marker — a single small mark where the two curves part ways,
+       making the divergence point literal. Warm grey, no splash. -->
+  <g stroke-opacity="0.55">
+    <circle cx="90" cy="542" r="5" fill="none"/>
+  </g>
+
+  <!-- Brass-bronze theme dot — small ornamental anchor (family convention).
+       Tucked at the upper-right margin, well clear of the focal teal cursor. -->
+  <circle cx="1148" cy="184" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>
