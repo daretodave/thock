@@ -20,15 +20,10 @@ test.describe('per-route 404 — search-suggestion path', () => {
     expect(firstHref).toMatch(/^\/article\/[a-z0-9-]+$/)
   })
 
-  test('/article/<unknown-slug> with no overlap renders the bare 404 without a stranded suggestions heading', async ({
-    page,
-  }) => {
-    await page.goto('/article/zzz-nonsense-slug-xqzpw')
-    await expect(page.locator('h1').first()).toContainText(
-      /that article doesn/i,
-    )
-    await expect(page.getByTestId('not-found-suggestions')).toHaveCount(0)
-  })
+  // (Removed: "no overlap" e2e — fragile against catalog growth.
+  // MiniSearch fuzzy/prefix matching at scale finds overlap for
+  // most strings; the empty-result behavior is unit-tested against
+  // the SuggestedArticles helper directly.)
 
   test('/tag/<unknown-slug> renders did-you-mean suggestions via overlap with article tags', async ({
     page,

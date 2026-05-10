@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — lubing 101, switch cross-section with lubable surfaces highlighted</title>
+
+  <!-- Splash: warm-amber wash centered on the switch interior, evoking 205g0's faint amber tint -->
+  <ellipse cx="600" cy="430" rx="240" ry="170" fill="oklch(0.78 0.10 80 / 0.13)" stroke="none"/>
+
+  <!-- Faint baseline beneath the switch — the PCB-line, family rhythm anchor -->
+  <line x1="90" y1="690" x2="1110" y2="690" stroke-opacity="0.55"/>
+
+  <!-- Faint vertical guide ticks on the baseline — eight, matching the family rhythm -->
+  <g stroke-opacity="0.35">
+    <line x1="90"   y1="690" x2="90"   y2="698"/>
+    <line x1="236"  y1="690" x2="236"  y2="698"/>
+    <line x1="381"  y1="690" x2="381"  y2="698"/>
+    <line x1="527"  y1="690" x2="527"  y2="698"/>
+    <line x1="673"  y1="690" x2="673"  y2="698"/>
+    <line x1="818"  y1="690" x2="818"  y2="698"/>
+    <line x1="964"  y1="690" x2="964"  y2="698"/>
+    <line x1="1110" y1="690" x2="1110" y2="698"/>
+  </g>
+
+  <!-- ── SIDE-PROFILE CROSS-SECTION OF AN MX-STYLE SWITCH ─────────────────────
+       Centered around x=600, viewed from the side. Cross-section convention:
+       outer wall solid, inner cavity dashed lightly. The two lubable surfaces
+       — stem rails (sliding contacts on the stem flank) and the lower-housing
+       rim (where the stem skirt rides) — are drawn in dotted-outline strokes
+       in the warm-amber splash hue. Everything else stays warm-grey, so the
+       eye is pulled to "where lube actually goes." -->
+
+  <!-- Outer keycap mount post (pokes up above top housing) -->
+  <g>
+    <path d="
+      M 580 195
+      L 620 195
+      L 620 225
+      L 580 225
+      Z" stroke-opacity="0.85"/>
+    <!-- Cruciform notch hint on top of the post -->
+    <line x1="600" y1="195" x2="600" y2="215" stroke-opacity="0.45"/>
+  </g>
+
+  <!-- ── TOP HOUSING ──────────────────────────────────────────────────────── -->
+  <g>
+    <!-- Outer top-housing trapezoid (cross-section: walls + roof) -->
+    <path d="
+      M 470 225
+      L 730 225
+      L 730 250
+      L 760 340
+      L 440 340
+      L 470 250
+      Z"/>
+    <!-- Top opening (slot where the stem post emerges) -->
+    <path d="
+      M 565 225
+      L 635 225
+      L 635 245
+      L 565 245
+      Z" stroke-opacity="0.55"/>
+    <!-- Inner cavity hint — faint dashed line tracing the inside of the top housing -->
+    <path d="
+      M 480 260
+      L 480 332
+      M 720 260
+      L 720 332" stroke-dasharray="3 5" stroke-opacity="0.4"/>
+  </g>
+
+  <!-- ── STEM (cross-section, sliding inside the top housing) ───────────────
+       The stem flanks are the canonical "rail" surface. Drawn in warm-grey
+       solid for the body, with the rail flanks themselves picked out in the
+       splash dotted-outline below. -->
+  <g>
+    <!-- Stem body — narrow rectangle riding inside the housing throat -->
+    <path d="
+      M 565 245
+      L 635 245
+      L 635 470
+      L 565 470
+      Z"/>
+    <!-- Inner stem detail: vertical centerline (legs / hollow) -->
+    <line x1="600" y1="265" x2="600" y2="455" stroke-opacity="0.4"/>
+    <!-- Stem skirt flare at bottom (where it widens to ride the lower housing rim) -->
+    <path d="
+      M 565 450
+      L 545 478
+      L 545 510
+      L 655 510
+      L 655 478
+      L 635 450" stroke-opacity="0.85"/>
+  </g>
+
+  <!-- ── LUBABLE SURFACE 1: STEM RAILS ─────────────────────────────────────
+       Dotted-outline highlight in the warm-amber splash on both stem flanks
+       — the sliding contact surface where lube actually matters. These are
+       the rails. -->
+  <g stroke="oklch(0.78 0.10 80)" stroke-width="2.5" stroke-dasharray="1 4" stroke-opacity="0.95">
+    <line x1="565" y1="260" x2="565" y2="445"/>
+    <line x1="635" y1="260" x2="635" y2="445"/>
+  </g>
+
+  <!-- Small annotation tick + lead-in beside the left rail — reads "this surface" -->
+  <g stroke="oklch(0.78 0.10 80)" stroke-opacity="0.55">
+    <line x1="540" y1="350" x2="520" y2="350"/>
+    <line x1="520" y1="340" x2="520" y2="360"/>
+  </g>
+
+  <!-- ── SPRING (coil cross-section, inside the lower housing well) ──────── -->
+  <g stroke-opacity="0.7">
+    <ellipse cx="600" cy="525" rx="32" ry="6"/>
+    <ellipse cx="600" cy="538" rx="32" ry="6"/>
+    <ellipse cx="600" cy="551" rx="32" ry="6"/>
+    <ellipse cx="600" cy="564" rx="32" ry="6"/>
+    <ellipse cx="600" cy="577" rx="32" ry="6"/>
+    <ellipse cx="600" cy="590" rx="32" ry="6"/>
+  </g>
+
+  <!-- ── LOWER HOUSING ────────────────────────────────────────────────────── -->
+  <g>
+    <!-- Outer lower housing -->
+    <path d="
+      M 440 510
+      L 760 510
+      L 745 645
+      L 455 645
+      Z"/>
+    <!-- Center spring well opening (where the stem skirt seats) -->
+    <path d="
+      M 545 510
+      L 655 510
+      L 650 605
+      L 550 605
+      Z" stroke-opacity="0.55"/>
+    <!-- PCB pin holes (mount posts poking down from the bottom of the housing) -->
+    <line x1="490" y1="645" x2="490" y2="675" stroke-opacity="0.6"/>
+    <line x1="710" y1="645" x2="710" y2="675" stroke-opacity="0.6"/>
+    <!-- Center mount post -->
+    <line x1="600" y1="645" x2="600" y2="680" stroke-opacity="0.6"/>
+  </g>
+
+  <!-- ── LUBABLE SURFACE 2: LOWER HOUSING RIM ──────────────────────────────
+       Dotted-outline highlight on the rim of the lower housing well — the
+       second canonical lubable surface where the stem skirt rides. Same
+       splash hue, same dotted treatment. -->
+  <g stroke="oklch(0.78 0.10 80)" stroke-width="2.5" stroke-dasharray="1 4" stroke-opacity="0.95">
+    <path d="
+      M 545 510
+      L 655 510"/>
+    <!-- The two short interior rim walls where the skirt seats -->
+    <line x1="545" y1="510" x2="550" y2="540"/>
+    <line x1="655" y1="510" x2="650" y2="540"/>
+  </g>
+
+  <!-- Small annotation tick + lead-in below the rim — second "this surface" callout -->
+  <g stroke="oklch(0.78 0.10 80)" stroke-opacity="0.55">
+    <line x1="680" y1="510" x2="700" y2="510"/>
+    <line x1="700" y1="500" x2="700" y2="520"/>
+  </g>
+
+  <!-- Quiet didactic guide rule (left edge tick marks aligned with each layer) -->
+  <g stroke-opacity="0.3">
+    <line x1="380" y1="225" x2="395" y2="225"/>
+    <line x1="380" y1="350" x2="395" y2="350"/>
+    <line x1="380" y1="510" x2="395" y2="510"/>
+    <line x1="380" y1="645" x2="395" y2="645"/>
+  </g>
+
+  <!-- Focal accent dot at the top of the stem post — warm-amber, the
+       canonical "where it matters" anchor. Filled core + outer ring,
+       family-convention focal cursor. -->
+  <circle cx="600" cy="195" r="9"  fill="oklch(0.78 0.10 80 / 0.95)" stroke="oklch(0.78 0.10 80)"/>
+  <circle cx="600" cy="195" r="16" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.45" fill="none"/>
+
+  <!-- Brass-bronze theme dot — small ornamental anchor (family convention).
+       Tucked at the upper-right margin, well clear of the focal amber cursor. -->
+  <circle cx="1148" cy="184" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>
