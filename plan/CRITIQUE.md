@@ -38,13 +38,16 @@
 - verify note: 409 e2e green parallel — no #418 flake this run.
 - source: browser
 
-### [MED] / — "0d" countdown vs /group-buys "closes today" — cross-surface inconsistency on the same buy
+### [x] [MED] / — "0d" countdown vs /group-buys "closes today" — cross-surface inconsistency on the same buy
+- addressed in: 6a4fcf2 (this tick — iterate drain)
+- issue: #38
 - pass: 10 (commit 0e2314f)
 - viewport: both
 - category: affordance
 - observation: The home "Don't miss the close" rail abbreviates the most-urgent state to `0d`, while the /group-buys landing renders the same state as `closes today` for the SAME group buy (GMK CYL Ishtar R2). `0d` reads ambiguously — zero days, has it already closed, or does it close at end of day? This is the tile most worth getting right since it's the entry point for the highest-urgency CTA on the home page, and the two surfaces should agree on the closing-day label. The /group-buys component already has the cleaner "closes today" copy logic (`GroupBuyRow.tsx:72`); only the home `<GroupBuyCountdownRow>` renders the terse `${left}d` form regardless of urgency.
 - evidence: `curl -s https://thock-coral.vercel.app/ | grep` shows home rendered text `GMK CYL Ishtar R2 / 0d`; `curl -s https://thock-coral.vercel.app/group-buys | grep` shows same buy rendered with `closes today`. Source: `apps/web/src/components/home/GroupBuyCountdownRow.tsx:106` emits `{left}d`; `apps/web/src/components/group-buys/GroupBuyRow.tsx:72` emits `closes today` when days===0.
-- suggested fix: add a `days === 0 ? 'closes today' : `${days}d left`` ternary in `GroupBuyCountdownRow` (mirror the existing `GroupBuyRow` logic — the constant is already factored in `lib/tracker` formatDelta-style if useful, or can be inlined). Update the existing `GroupBuyCountdownRow.test.tsx` to lock in the days===0 case explicitly.
+- fix: home countdown row in `apps/web/src/components/home/GroupBuyCountdownRow.tsx` now emits `left === 0 ? 'today' : `${left}d`` (instead of the prior unconditional `${left}d`). The countdown span also carries a `data-testid="group-buy-countdown"` mirroring `GroupBuyRow`'s testid so future tests can target it directly. Considered (rejected) "closes today" verbatim from /group-buys — the dense 4-up home rail's right column can't take 12 chars without disrupting the layout; "today" (5 chars) is unambiguously urgent and semantically matches. Two new tests in GroupBuyCountdownRow.test.tsx lock in: (1) "today" on closing day (not "0d"), (2) "{N}d" preserved for non-zero days.
+- verify note: 409 e2e green parallel — no #418 flake this run.
 - source: browser
 
 ### [MED] /tag/modding — "TAG · MISC" eyebrow undersells a first-class topic; taxonomy gap
