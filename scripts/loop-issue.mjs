@@ -2,7 +2,15 @@
 // scripts/loop-issue.mjs
 //
 // "Loop issue mirror" — opens / closes GitHub issues that mirror
-// /iterate's pick-and-ship cycle. Phase 15a contract.
+// the autonomous loop's work. Two flavors:
+//
+//   1) /iterate findings (one issue per finding — "open" + "close-comment").
+//      Phase 15a contract.
+//
+//   2) Phases (one issue per phase, find-or-create-or-reopen — "phase-open"
+//      + "phase-close"). Idempotent across ticks: if an issue with the
+//      phase title prefix already exists open, reuse it; if closed,
+//      reopen and log a "phase work resumed" comment; if none, create.
 //
 // Subcommands:
 //
@@ -26,6 +34,24 @@
 //     issue when pushed to main; no explicit `gh issue close`
 //     is required. Failures are warnings, not blockers — the
 //     fix has already shipped.
+//
+//   phase-open --phase <id>
+//              --title "<title>"
+//              --body-file <path>
+//
+//     Find-or-create-or-reopen the phase mirror. Idempotent:
+//       * existing open issue with matching title prefix → reuse,
+//       * latest closed issue with matching title prefix → reopen,
+//                                                          comment,
+//       * none → create.
+//     Echoes the issue number on stdout. Best-effort on failure.
+//
+//   phase-close --phase <id>
+//               --commit <sha>
+//               --deploy-url <url>
+//
+//     Posts a "phase shipped" comment. The commit's `Closes #N`
+//     trailer auto-closes the issue. Best-effort.
 //
 // Required env (from .env or shell):
 //   GH_TOKEN    repo-scoped PAT
@@ -64,6 +90,7 @@ const VALID_CATEGORY = new Set([
 // Created idempotently on first encounter via `gh label create`.
 const LABEL_PALETTE = {
   'loop:opened': { color: '5319e7', description: 'Opened by the autonomous loop' },
+  'loop:phase': { color: '0e8a16', description: 'Phase mirror — opens at phase start, closes on ship' },
   'severity:high': { color: 'b60205', description: 'High severity finding' },
   'severity:med': { color: 'fbca04', description: 'Medium severity finding' },
   'severity:low': { color: 'c5def5', description: 'Low severity finding' },
@@ -141,6 +168,66 @@ function parseIssueNumber(stdout) {
     if (m) return Number(m[1])
   }
   return null
+}
+
+// Build the phase title prefix used to find-or-create the phase
+// mirror. Using prefix-match keeps `/triage` from rewriting titles
+// and breaking the lookup; rename the issue body, not the title
+// prefix.
+export function phaseTitlePrefix(phaseId) {
+  return `Phase ${phaseId} — `
+}
+
+function isPhaseMatch(title, phaseId) {
+  // Anchored prefix so `Phase 15` does not collide with `Phase 15a`.
+  return title.startsWith(phaseTitlePrefix(phaseId))
+}
+
+// Search GitHub for any issue (open or closed) tagged `loop:phase`
+// whose title prefix matches the phase id. Returns
+// { number, state } | null.
+//
+// We deliberately do NOT use `--search "<prefix>" in:title` here:
+// GitHub's text-search index is eventually-consistent, so a phase
+// issue created seconds ago may not surface in a follow-up search
+// for several minutes. The `--label loop:phase` filter goes through
+// the issues REST API, which is read-your-writes consistent — every
+// issue tagged with that label appears immediately. We pull all
+// loop:phase issues (both states) and prefix-match the title
+// client-side, which makes find-or-reuse robust across rapid
+// successive ticks.
+function findPhaseIssue(phaseId, repo) {
+  const r = ghCall([
+    'issue',
+    'list',
+    '--repo',
+    repo,
+    '--state',
+    'all',
+    '--label',
+    'loop:phase',
+    '--json',
+    'number,title,state',
+    '--limit',
+    '200',
+  ])
+  if (r.status !== 0) {
+    return { error: r.stderr.trim() || `gh issue list exited ${r.status}` }
+  }
+  let arr
+  try {
+    arr = JSON.parse(r.stdout || '[]')
+  } catch (e) {
+    return { error: `gh issue list returned non-JSON: ${e.message}` }
+  }
+  const matches = arr.filter((row) => isPhaseMatch(row.title ?? '', phaseId))
+  if (matches.length === 0) return null
+  // Prefer an OPEN match; fall back to the most-recent CLOSED. gh
+  // returns issues newest-first, so matches[0] is already the most
+  // recent for the all-closed case.
+  const open = matches.find((row) => String(row.state).toUpperCase() === 'OPEN')
+  if (open) return { number: open.number, state: 'OPEN' }
+  return { number: matches[0].number, state: 'CLOSED' }
 }
 
 // --- subcommands ------------------------------------------------------
@@ -253,6 +340,175 @@ export function buildCloseCommentBody({ commit, deployUrl }) {
   ].join('\n')
 }
 
+function cmdPhaseOpen(flags) {
+  const phaseId = flags.phase
+  const title = flags.title
+  const bodyFile = flags['body-file']
+  const repo = process.env.GH_REPO
+
+  if (!process.env.GH_TOKEN) {
+    process.stderr.write('loop-issue: GH_TOKEN missing from env (.env not loaded?)\n')
+    process.exit(1)
+  }
+  if (!repo) {
+    process.stderr.write('loop-issue: GH_REPO missing (set in .env)\n')
+    process.exit(1)
+  }
+  if (!phaseId) {
+    process.stderr.write('loop-issue: --phase is required\n')
+    process.exit(1)
+  }
+  if (!title || !bodyFile) {
+    process.stderr.write('loop-issue: --title and --body-file are required\n')
+    process.exit(1)
+  }
+  if (!fs.existsSync(bodyFile)) {
+    process.stderr.write(`loop-issue: body file not found: ${bodyFile}\n`)
+    process.exit(1)
+  }
+  if (!isPhaseMatch(title, phaseId)) {
+    process.stderr.write(
+      `loop-issue: --title must start with "${phaseTitlePrefix(phaseId)}" so reuse-by-prefix works\n`,
+    )
+    process.exit(1)
+  }
+
+  // Make sure the phase + provenance labels exist.
+  for (const name of ['loop:phase', 'loop:opened']) {
+    const r = ensureLabel(name, repo)
+    if (r.error) {
+      process.stderr.write(`loop-issue: label ensure failed for ${name}: ${r.error}\n`)
+      process.exit(1)
+    }
+  }
+
+  const found = findPhaseIssue(phaseId, repo)
+  if (found && found.error) {
+    process.stderr.write(`loop-issue: phase lookup failed: ${found.error}\n`)
+    process.exit(1)
+  }
+
+  if (found && found.state === 'OPEN') {
+    // Reuse — no new issue, no comment churn.
+    process.stdout.write(`${found.number}\n`)
+    return
+  }
+
+  if (found && found.state === 'CLOSED') {
+    // Re-open + log a resume comment.
+    const reopen = ghCall(['issue', 'reopen', String(found.number), '--repo', repo])
+    if (reopen.status !== 0) {
+      process.stderr.write(
+        `loop-issue: phase reopen failed for #${found.number} (status ${reopen.status})\n${reopen.stderr}\n`,
+      )
+      process.exit(1)
+    }
+    const comment = ghCall([
+      'issue',
+      'comment',
+      String(found.number),
+      '--repo',
+      repo,
+      '--body',
+      buildPhaseResumeCommentBody({ phaseId }),
+    ])
+    if (comment.status !== 0) {
+      // Non-fatal: the reopen succeeded, the comment is polish.
+      process.stderr.write(
+        `loop-issue: phase resume comment failed for #${found.number} (status ${comment.status})\n${comment.stderr}\n`,
+      )
+    }
+    process.stdout.write(`${found.number}\n`)
+    return
+  }
+
+  // Create from scratch.
+  const r = ghCall([
+    'issue',
+    'create',
+    '--repo',
+    repo,
+    '--title',
+    title,
+    '--body-file',
+    path.resolve(bodyFile),
+    '--label',
+    'loop:phase,loop:opened',
+  ])
+  if (r.status !== 0) {
+    process.stderr.write(`loop-issue: gh issue create (phase) failed (${r.status})\n${r.stderr}\n`)
+    process.exit(1)
+  }
+  const number = parseIssueNumber(r.stdout)
+  if (!number) {
+    process.stderr.write(`loop-issue: could not parse issue number from gh stdout:\n${r.stdout}\n`)
+    process.exit(1)
+  }
+  process.stdout.write(`${number}\n`)
+}
+
+function cmdPhaseClose(flags) {
+  const phaseId = flags.phase
+  const commit = flags.commit
+  const deployUrl = flags['deploy-url']
+  const number = flags.number // optional override
+  const repo = process.env.GH_REPO
+
+  if (!process.env.GH_TOKEN || !repo) {
+    process.stderr.write('loop-issue: GH_TOKEN/GH_REPO missing — skipping phase close\n')
+    return // best-effort
+  }
+  if (!commit || !deployUrl) {
+    process.stderr.write('loop-issue: --commit and --deploy-url required\n')
+    return
+  }
+  if (!number && !phaseId) {
+    process.stderr.write('loop-issue: pass --number or --phase\n')
+    return
+  }
+
+  let target = number ? Number(number) : null
+  if (!target) {
+    const found = findPhaseIssue(phaseId, repo)
+    if (found && found.error) {
+      process.stderr.write(`loop-issue: phase lookup failed: ${found.error}\n`)
+      return
+    }
+    if (!found) {
+      process.stderr.write(`loop-issue: no phase issue found for ${phaseId} — nothing to close\n`)
+      return
+    }
+    target = found.number
+  }
+
+  const body = buildPhaseShippedCommentBody({ phaseId, commit, deployUrl })
+  const r = ghCall(['issue', 'comment', String(target), '--repo', repo, '--body', body])
+  if (r.status !== 0) {
+    process.stderr.write(
+      `loop-issue: phase comment failed for #${target} (status ${r.status})\n${r.stderr}\n`,
+    )
+    return
+  }
+}
+
+export function buildPhaseResumeCommentBody({ phaseId }) {
+  return [
+    `Phase ${phaseId} work resumed at ${new Date().toISOString()}.`,
+    '',
+    '_Reopened by the autonomous loop. The original issue stayed closed too long for the next ship; this run reuses the same number to keep the public timeline consistent._',
+  ].join('\n')
+}
+
+export function buildPhaseShippedCommentBody({ phaseId, commit, deployUrl }) {
+  return [
+    `Phase ${phaseId} shipped in ${commit}.`,
+    '',
+    `Live at ${deployUrl} after deploy ready.`,
+    '',
+    '_The autonomous loop closes this issue via the commit\'s `Closes #N` trailer; no manual close is required._',
+  ].join('\n')
+}
+
 // --- entry point ------------------------------------------------------
 
 function main(argv) {
@@ -263,6 +519,10 @@ function main(argv) {
       return cmdOpen(flags)
     case 'close-comment':
       return cmdCloseComment(flags)
+    case 'phase-open':
+      return cmdPhaseOpen(flags)
+    case 'phase-close':
+      return cmdPhaseClose(flags)
     case '--help':
     case '-h':
     case 'help':
@@ -277,7 +537,7 @@ function main(argv) {
 }
 
 function printHelp() {
-  process.stdout.write(`loop-issue.mjs — phase 15a issue mirror helper
+  process.stdout.write(`loop-issue.mjs — autonomous-loop issue mirror
 
 Usage:
   node scripts/loop-issue.mjs open --severity <high|med|low> \\
@@ -290,6 +550,15 @@ Usage:
       --commit <sha> --deploy-url <url>
       → posts a follow-up comment; the Closes #N commit trailer auto-closes
 
+  node scripts/loop-issue.mjs phase-open --phase <id> \\
+      --title "Phase <id> — <topic>" --body-file <path>
+      → find-or-create-or-reopen; echoes the issue number
+
+  node scripts/loop-issue.mjs phase-close --phase <id> \\
+      --commit <sha> --deploy-url <url>
+      → posts a "phase shipped" comment; commit's Closes #N auto-closes
+      (alternatively pass --number <N> to skip the lookup)
+
 Env (from .env or shell):
   GH_TOKEN, GH_REPO
 `)
@@ -300,6 +569,10 @@ export const __test = {
   parseArgs,
   parseIssueNumber,
   buildCloseCommentBody,
+  buildPhaseResumeCommentBody,
+  buildPhaseShippedCommentBody,
+  phaseTitlePrefix,
+  isPhaseMatch,
   LABEL_PALETTE,
   VALID_SEVERITY,
   VALID_CATEGORY,

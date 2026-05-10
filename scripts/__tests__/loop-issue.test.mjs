@@ -13,8 +13,19 @@ import assert from 'node:assert/strict'
 
 import { __test } from '../loop-issue.mjs'
 
-const { parseArgs, parseIssueNumber, buildCloseCommentBody, LABEL_PALETTE, VALID_SEVERITY, VALID_CATEGORY, VALID_SOURCE } =
-  __test
+const {
+  parseArgs,
+  parseIssueNumber,
+  buildCloseCommentBody,
+  buildPhaseResumeCommentBody,
+  buildPhaseShippedCommentBody,
+  phaseTitlePrefix,
+  isPhaseMatch,
+  LABEL_PALETTE,
+  VALID_SEVERITY,
+  VALID_CATEGORY,
+  VALID_SOURCE,
+} = __test
 
 test('parseArgs parses standard flag/value pairs', () => {
   const out = parseArgs(['--severity', 'high', '--category', 'a11y', '--title', 'a quick fix'])
@@ -68,11 +79,45 @@ test('buildCloseCommentBody includes commit + deploy URL + closure note', () => 
   assert.match(body, /Closes #N/)
 })
 
-test('LABEL_PALETTE has every label the open path applies', () => {
-  // Every label that cmdOpen builds must have a palette entry so
-  // ensureLabel can create it on first encounter.
+test('phaseTitlePrefix uses an em-dash + trailing space so prefix matches are exact', () => {
+  assert.equal(phaseTitlePrefix('15a'), 'Phase 15a — ')
+  assert.equal(phaseTitlePrefix(16), 'Phase 16 — ')
+})
+
+test('isPhaseMatch is anchored — "Phase 15" does not collide with "Phase 15a"', () => {
+  assert.equal(isPhaseMatch('Phase 15 — newsletter', '15'), true)
+  assert.equal(isPhaseMatch('Phase 15 — newsletter', '15a'), false)
+  assert.equal(isPhaseMatch('Phase 15a — loop issues', '15a'), true)
+  assert.equal(isPhaseMatch('Phase 15a — loop issues', '15'), false)
+  assert.equal(isPhaseMatch('Phase 1 — bootstrap', '1'), true)
+  assert.equal(isPhaseMatch('Phase 1 — bootstrap', '11'), false)
+})
+
+test('buildPhaseResumeCommentBody mentions the phase id + ISO timestamp', () => {
+  const body = buildPhaseResumeCommentBody({ phaseId: '15a' })
+  assert.match(body, /Phase 15a/)
+  assert.match(body, /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}/) // rough ISO check
+  assert.match(body, /resumed/i)
+})
+
+test('buildPhaseShippedCommentBody includes phase id, commit, deploy URL, and Closes-trailer note', () => {
+  const body = buildPhaseShippedCommentBody({
+    phaseId: '15a',
+    commit: 'deadbee',
+    deployUrl: 'https://thock-coral.vercel.app',
+  })
+  assert.match(body, /Phase 15a/)
+  assert.match(body, /deadbee/)
+  assert.match(body, /thock-coral\.vercel\.app/)
+  assert.match(body, /Closes #N/)
+})
+
+test('LABEL_PALETTE has every label the open + phase-open paths apply', () => {
+  // Every label that cmdOpen / cmdPhaseOpen creates must have a
+  // palette entry so ensureLabel can create it on first encounter.
   const required = [
     'loop:opened',
+    'loop:phase',
     'severity:high',
     'severity:med',
     'severity:low',
