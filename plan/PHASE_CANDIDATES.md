@@ -1,8 +1,9 @@
 # Phase candidates
 
-> Last pass: 2026-05-10 at commit 3f1a37b
-> Pass count: 3
+> Last pass: 2026-05-10 at commit 941c8a5
+> Pass count: 4
 > Posture: bold
+> Pass 4 notes: 21 commits since pass 3 (also 21 commits in <12h — heaviest shipping window the loop has had). Phases 21, 22, 23 all `[x]` (per-part pages, streaming `<main>`, group-buy hero art). Pass-3's [5.5] streaming `<main>` candidate promoted + shipped as phase 22. Pass-2's [7.5] per-part candidate promoted + shipped as phase 21. New oversight-driven candidate ([7.0] group-buy hero art) promoted + shipped as phase 23. Critique passes 8 + 9 fired (combined 9 findings filed, 0 [HIGH] active). Hero-SVG XML well-formedness fix at 40b2e55 caught a brander-output bug pattern. Remaining Pending: [6.5] #418 hydration flake investigation, [6.5] a11y audit pass, [5.5] /tags index. Pass 4 files 1 new candidate (Trends Tracker weekly cadence + archive surface) + 2 Considered-below-threshold notes (tracker direction-aware framing — iterate-shaped; brander output validation generalization — iterate-shaped, partially shipped at 40b2e55).
 > Pass 3 notes: 14 commits since pass 2. Critique pass 7 fired and surfaced one architectural finding worth promoting (the streaming `<main>` landmark issue) plus four phantoms and a meta-observation about reader sub-agent text-extraction reliability. Pass 2's two candidates ([7.5] per-part pages, [6.5] #418 investigation) remain Pending; pass-1's ([6.5] a11y audit, [5.5] /tags index) also remain Pending. The /418 investigation gained partial diagnostic findings inline at the critique-row verify-note level (TZ ruled out, PageStub stale, Server-Component `new Date()` ruled out — remaining suspects are next/font race + Suspense streaming protocol). Pass 3 files 1 new candidate. Meta: pass-7's 4-of-6 phantom-finding rate revealed that reader sub-agent's accessibility-tree text extraction systematically drops link/code element content from prose AND elides adjacent short-text generic elements; future critique passes should default-verify visual-detail findings against rendered HTML before promoting to Pending. Documented in plan/CRITIQUE.md pass-7 self-assessment summary.
 > Pass 2 notes: 38 commits since pass 1. Fresh signals — phase 18/19/20 real-data backfill landed (parts catalog grew substantially across switches / keycap-sets / boards / vendors) and the React #418 hydration flake originally predicted to self-resolve by phase 16 has not. Pass 2 files 2 candidates derived from those signals; the 2 pass-1 candidates ([6.5] a11y audit, [5.5] /tags index) remain Pending awaiting `/oversight`. The original promotion ([8.0] real-data backfill) shipped clean — phases 18–20 all `[x]`.
 
@@ -10,6 +11,25 @@
 > `/oversight`. See `skills/expand.md` for the contract.
 
 ## Pending
+
+### [score 6.0] Trends Tracker weekly cadence + multi-week archive surface (`/trends/tracker/[week]`)
+- proposed: 2026-05-10, expand pass 4
+- source signals:
+  - `data/trends/` contains exactly 1 file (`2026-W19.json`); `apps/web/src/app/trends/tracker/page.tsx` calls `getLatestTrendSnapshot()` so as soon as week 2 ships there is no surface to view week 1 — the archive gap is real, not speculative.
+  - `plan/bearings.md` describes the Trends Tracker as the "**Signature feature**: a weekly Trends Tracker dashboard." A signature feature with no archive shape is data-sparse by design and reads less authoritative as the corpus accumulates.
+  - `plan/CRITIQUE.md` pass 9 [MED] /trends/tracker — Sleeper summary card highlights a flat row whose own editor's note says "no new headline release this 8-week window" (auto-populated, not editorially chosen). The discipline gap that produces this auto-population is the same gap that an undefined cadence produces: when no human author commits to a weekly snapshot, the tracker selectors fall back to "rank everything we have."
+  - `plan/CRITIQUE.md` pass 9 [MED] / Trending rail surfaces a `flat` MT3 tile under "what's moving" framing — same root: a cadence-discipline gap forces summary chrome to overrender stale rows.
+  - Phase 19 backfilled 2026-W19 once but did not lock in the recurring cadence. The build plan ("Note after phase 23: ongoing trend snapshots") gestures at it but assigns no skill.
+- rationale: this is a discovery-shaped problem in the §4A "audit row scoring `impact ≥ 8, ease ≤ 4`" sense — the archive route is one phase, but the cadence question (which agent / skill / cron owns the weekly snapshot?) has a `/schedule` angle that needs `/oversight` to lock the path. Drainable as one iterate fix only by making both decisions implicitly. Better to surface as candidate.
+- proposed scope: 2-phase mini-plan.
+  1. **Phase A — multi-week archive surface.** New route `apps/web/src/app/trends/tracker/[week]/page.tsx` rendering any `data/trends/<YYYY-WNN>.json`. Update `apps/web/src/app/trends/tracker/page.tsx` (the canonical "latest" view) to add a small `← older weeks` affordance + sparkline strip showing the last 4–8 weeks of category-direction signal. New `getAllTrendSnapshots()` loader; sitemap entries; CollectionPage JSON-LD per week. e2e in `apps/e2e/tests/tracker-archive.spec.ts`: walks every week JSON, asserts 200 + summary-card grid + JSON-LD shape. The latest-page deferral pattern mirrors what `/news` and `/trends` already do (pillar landings → archive tail).
+  2. **Phase B — recurring snapshot cadence (path locked at /oversight).** Two viable paths; oversight chooses:
+     - **(a)** `/schedule` cloud routine — weekly auto-fire (cron `0 14 * * 1` Monday 14:00 UTC) of a `weekly-trend-snapshot` routine that runs scout for delta research, ship-data for the JSON drop, and content-curator for editorial qualification. Cadence runs in cloud regardless of session state. Best for "pretend the loop is a real publication."
+     - **(b)** `skills/march.md` amendment — when the current ISO week has no `data/trends/<YYYY-WNN>.json`, dispatch `/ship-data trend-snapshot` before the normal flow. Fires only when user has `/loop /march` running. Best for "loop owns its own discipline."
+  Phase B's brief lists the path-(a) vs path-(b) trade-offs (cloud cost vs local-only) and locks the choice via /oversight.
+- estimated phases: 2
+- conflicts: none with `bearings.md` (extends the signature-feature framing); none with the URL contract (sub-route under `/trends/tracker` fits existing pillar archive shape, e.g. `/news/[slug]`); the schema additive is zero — no new fields, just multi-record handling.
+- promotion path: ship-a-phase autonomous for Phase A. Phase B requires `/oversight` to choose path (a) vs (b). Phase A blocks Phase B (the archive surface is needed before the cadence can do anything visible), so they're contiguous.
 
 ### [score 6.5] React #418 hydration flake — dedicated investigation phase
 - proposed: 2026-05-10, expand pass 2
@@ -62,6 +82,9 @@
 - [score 3.5] Home above-fold composition (`/` "By pillar" excludes Ideas + hero/by-pillar duplicate). Two MED critique findings on the same surface, both 1-line fixes (`HOME_PILLAR_SET.push('ideas')`, thread an `excludeSlugs` arg through `resolveLatestByPillar`). Iterate ticks own this.
 - [score 3.0] Lighthouse CI runner. Already audit-flagged at MED 5.0 but explicitly blocked on `/oversight` runner choice (paid runner vs self-hosted). Not autonomously schedulable; not an `/expand` candidate.
 - [score 2.5] Bundle tighten 250 → 200 KB. Already audit-flagged at LOW 2.5; cosmetic until a chunk audit runs. Iterate when other bundle work surfaces a real-savings target.
+- [score 4.5] Tracker editorial discipline — direction-aware filtering across summary chrome (pass-4 expand). Pass-9 filed two MED findings clustering around "flat-direction rows surface in summary contexts where they shouldn't" (home Trending rail flat MT3 tile + /trends/tracker Sleeper card on a flat Wuque Studio row); pass-8 filed a [LOW] companion on /trends/tracker mover-table rows with no article having no visual cue distinguishing them from linked rows. All three are drainable in 1-2 iterate ticks: a `filterMoversForRail()` helper that excludes `direction === 'flat'` rows + a Sleeper-card empty-state when no qualifying row exists + a subtle "—" muted-CTA on unlinked rows. Component-level fix; not phase-shaped.
+- [score 4.0] Brander output validation gate generalization — extend the 40b2e55 XML well-formedness test from `apps/web/public/{hero-art,group-buy-art}/` to all brander-emitted SVGs (OG family, social cards, wordmark variants). Add a brander-side post-render hook that runs the validity check before writing the file (catches the bug before commit, not after). The current test catches at `pnpm verify` time which is the right gate; generalization is iterate-shaped (extend `SVG_DIRS` array as new brander destinations emerge).
+- [score 3.5] Editorial date-staggering across the article catalog — pass-9 filed [MED] / "By pillar" home tile dates all 2026-05-10. Drainable as a single data-side iterate tick that adjusts `publishedAt` across 5–10 article MDX frontmatter files to spread across the past 1–2 weeks. Defensive secondary fix (selector emits warning when ≥4 of 5 by-pillar dates collide) is a separate small iterate. Not phase-shaped.
 
 
 ## Promoted
