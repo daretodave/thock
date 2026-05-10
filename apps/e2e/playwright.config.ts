@@ -38,5 +38,11 @@ export default defineConfig({
     timeout: 180_000,
     stdout: 'pipe',
     stderr: 'pipe',
+    env: {
+      // Suppress GTM/GA in e2e builds — `<GoogleTagManager>` reads
+      // this at SSR time and renders null when set, so Playwright
+      // navigation never fires pageviews to the prod GA property.
+      DISABLE_ANALYTICS: '1',
+    },
   },
 })

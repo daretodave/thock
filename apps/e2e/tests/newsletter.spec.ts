@@ -63,15 +63,22 @@ test.describe('footer Buttondown form — phase 15 retrofit', () => {
   })
 })
 
-test.describe('Google Tag Manager — phase 15', () => {
-  test('GTM loader script is present on every route via the root layout', async ({
+test.describe('Google Tag Manager — analytics gate (#28)', () => {
+  test('GTM loader is suppressed in the e2e build (DISABLE_ANALYTICS=1)', async ({
     page,
   }) => {
+    // The webServer in playwright.config.ts builds with
+    // DISABLE_ANALYTICS=1, so <GoogleTagManager> renders null and
+    // the GTM container ID + script source never make it into the
+    // SSR'd HTML. This guards against e2e runs polluting the prod
+    // GA property with bot traffic.
     for (const path of ['/', '/news', '/article/gateron-oil-king-deep-dive']) {
       await page.goto(path)
       const html = await page.content()
-      expect(html, `GTM container ID on ${path}`).toContain('GTM-58T839ZD')
-      expect(html, `GTM source URL on ${path}`).toContain(
+      expect(html, `GTM container ID absent on ${path}`).not.toContain(
+        'GTM-58T839ZD',
+      )
+      expect(html, `GTM source URL absent on ${path}`).not.toContain(
         'googletagmanager.com/gtm.js',
       )
     }

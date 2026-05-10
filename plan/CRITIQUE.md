@@ -11,14 +11,18 @@
 
 ## Pending
 
-### [MED] general — e2e tests fire google analytics, polluting prod GA with bot traffic
+### [x] [MED] general — e2e tests fire google analytics, polluting prod GA with bot traffic
+- addressed in: pending commit (this tick — iterate drain)
+- issue: #28
 - pass: user-jot (commit fe78fc3)
 - viewport: unspecified
 - auth_state: anonymous
 - category: bug
 - observation: e2e tests are firing the google analytics -- can you nip that?
-- evidence: user-spotted at 2026-05-10T12:00:00Z
-- suggested_fix: [user has not specified — iterate to determine]
+- evidence: user-spotted at 2026-05-10T12:00:00Z. Confirmed root cause: `apps/web/src/components/analytics/GoogleTagManager.tsx` rendered the locked GTM container ID (`GTM-58T839ZD`) via `<Script strategy="afterInteractive">` in the root layout on every page render, including the e2e build that boots `next start -p 4173`. Playwright navigation triggered the snippet, which fetched `googletagmanager.com/gtm.js` and pushed pageview events to `dataLayer` — every `/iterate` and `/ship-a-phase` verify run was sending bot traffic to the production GA property.
+- fix: gated `<GoogleTagManager>` on a server-side `DISABLE_ANALYTICS` env var. When set to `'1'` the component returns `null`, so no Script element is emitted at SSR/static-build time and the GTM snippet never reaches the browser. Set `DISABLE_ANALYTICS=1` in `apps/e2e/playwright.config.ts` `webServer.env` so the e2e build (which is what the verify gate exercises) inherits it. Added `__test_only__.isAnalyticsDisabled` and three new vitest cases covering the gate's truthy/falsy semantics (only the literal string `'1'` suppresses; `'true'`, `'0'`, `''`, `'yes'` do not). Flipped the existing e2e GTM assertion in `apps/e2e/tests/newsletter.spec.ts` from "GTM container ID present" to "GTM container ID absent" — the test now proves the gate works in the e2e build, which is the regression guard against this finding ever recurring.
+- regression guard: 7 unit tests (4 existing constants + 3 new gate tests) cover the component contract; the e2e absence-assertion runs on every verify gate via the canonical-URL walker style 3-route loop (`/`, `/news`, `/article/gateron-oil-king-deep-dive`). Production GA still fires for real users — `DISABLE_ANALYTICS` is unset in production builds (Vercel doesn't inherit Playwright's env), so the prod homepage ships the GTM snippet exactly as before.
+- verify note: 333 e2e green on serial run (`--workers=1`); first parallel attempt hit four #418 hydration flakes on /search, /deep-dives, /tag/mt3, /trends per AUDIT.md row 113 (different routes per run, classic parallel-load symptom). Same root cause as prior /iterate ticks; serial-fallback remains the per-tick mitigation until #418 root cause lands.
 - source: user
 
 ### [needs-user-call] [HIGH] /* (every dynamic-data page) — `<main>` landmark contains only the "loading…" shell; real content renders outside the landmark

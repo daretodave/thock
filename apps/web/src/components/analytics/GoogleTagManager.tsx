@@ -10,11 +10,17 @@ const GTM_SNIPPET = `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':n
  * fetch doesn't block first paint or hurt core vitals. Lives in
  * `apps/web/src/app/layout.tsx` so every route gets it.
  *
+ * Gated on the `DISABLE_ANALYTICS` env var (read at SSR time, not
+ * `NEXT_PUBLIC_*`). Set `DISABLE_ANALYTICS=1` for e2e builds and
+ * other automated traffic so the prod GA property doesn't ingest
+ * bot pageviews — see `apps/e2e/playwright.config.ts`.
+ *
  * No consent gate yet — thock collects no PII; GTM is page-level
  * pageview tracking only. Revisit when forms beyond Buttondown
  * ship.
  */
 export function GoogleTagManager() {
+  if (isAnalyticsDisabled()) return null
   return (
     <Script
       id="gtm-loader"
@@ -26,4 +32,12 @@ export function GoogleTagManager() {
   )
 }
 
-export const __test_only__ = { GTM_CONTAINER_ID, GTM_SNIPPET }
+function isAnalyticsDisabled(): boolean {
+  return process.env['DISABLE_ANALYTICS'] === '1'
+}
+
+export const __test_only__ = {
+  GTM_CONTAINER_ID,
+  GTM_SNIPPET,
+  isAnalyticsDisabled,
+}
