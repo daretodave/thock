@@ -1,13 +1,51 @@
 # Critique log
 
-> Last pass: 2026-05-09T21:05:00Z at commit b2692ac
-> Pass count: 4
-> Iterate-bias category: external-critique (carried forward — pass 4 added 6 more findings after iterate drained 7 rows from passes 2/3 + 3 user-jots since pass 3; iterate should drain the highest-scoring rows first, with the [HIGH] Mode Sonnet R2 date inconsistency at the top)
+> Last pass: 2026-05-10T02:45:00Z at commit 790b415
+> Pass count: 5
+> Iterate-bias category: external-critique (pass 5 fired against the post-phase-20 site; reader confirmed the two pending corpus-depth rows from earlier passes still apply — they're cross-pillar and cross-article, not isolated. Filed 4 fresh findings: [MED] Long-reads rail empty-state leak on /, [MED] linked tracker rows expose 3 same-URL anchors per row, [MED] listing surfaces parrot stale Mode Sonnet R2 dates the article body retracts, [LOW] /article/<news> "Keep reading" rail thins to one tile. Phase 18/19/20 backfills clearly raised the floor on /trends/tracker + /group-buys per reader's positive note; remaining thinness is editorial corpus depth, not data scaffolding.)
 
 > External-observer feedback for thock. Populated by `/critique`,
 > drained by `/iterate`. See `skills/critique.md` for the contract.
 
 ## Pending
+
+### [MED] / — "Long reads worth your weekend" Deep Dives rail renders heading + eyebrow with zero cards
+- pass: 5 (commit 790b415)
+- viewport: both
+- category: content
+- observation: The Deep Dives long-reads section on the home renders its eyebrow ("Deep Dives"), its headline ("Long reads worth your weekend"), and then nothing — no article tiles, no list, just the group-buys aside flowing in. As a stranger I read this as a build error or a half-finished section. Cause is structural: the only Deep Dives piece in the corpus is already used in the by-pillar grid above, so e68959e's correctly-shipped dedup skips it — but the rail still renders its frame around an empty list.
+- evidence: Accessibility tree at / shows region[ref_102] with the "Deep Dives" eyebrow + "Long reads worth your weekend" heading, then a single complementary[ref_105] child that is the group-buys aside. No list, no article links between heading and aside.
+- suggested fix: two paths. (a) Suppress the rail's heading + eyebrow when the rail has 0 picks — the cleanest UX. (b) Relax the dedupe so the rail can re-surface the by-pillar Deep Dives piece when the corpus is too thin to fill it differently — keeps the rail populated but introduces above-the-fold duplication that e68959e was specifically resolving. (a) is the right call until corpus depth grows; iterate can flip to (b) at the same time the corpus-depth pending row drains. The prior fix at e68959e was correct but didn't cover the empty state.
+- source: browser
+
+### [MED] /trends/tracker — linked tracker rows expose three same-URL anchors instead of one
+- pass: 5 (commit 790b415)
+- viewport: both
+- category: a11y
+- observation: The Gateron Oil King row in Switch movers, the HMX Cloud row, and the Alice layout row each expose three distinct anchor elements pointing at the same article URL: the row name, the desktop editor's-note column, and what reads as a duplicate of the editor's-note text. Tab navigation hits the article three times per linked row. Unlinked rows render the editor's-note text without duplication, which proves the duplication is linked-row-specific. This is a fresh finding distinct from the previously-resolved "two affordances → same URL" row (line 115) — that row was about *text* overlap (two links saying the article title); phase 19's note differentiation killed the text duplicate. The new finding is about anchor *count* in the a11y tree.
+- evidence: On /trends/tracker at 1280×800, ref_50 link "Gateron Oil King" → /article/gateron-oil-king-deep-dive, ref_51 link (editor's-note text) → same URL, ref_55 link (same editor's-note text again) → same URL. Cherry MX2A row at ref_62/63 has no anchor duplication because the row itself is unlinked.
+- suggested fix: most likely the desktop editor's-note column Link AND the mobile sub-link are both rendering into the a11y tree even though one is `display: none` per Tailwind's `md:hidden` / `hidden md:block` pattern. Verify by inspecting `apps/web/src/components/tracker/TrackerRow.tsx` lines 56-63 (mobile sub-link, `md:hidden`) and lines 75-80 (desktop column Link, `hidden md:block`). Two paths: (a) gate the alternate layout with a CSS query that fully removes one branch from the DOM rather than just hiding it (e.g. ssr-decide via headers, or a single render path with responsive styling on the same Link). (b) keep both branches but add `aria-hidden="true"` to whichever is the off-viewport one — also drops it out of tab order. (b) is one-line; (a) is structural. Default to (b) unless the duplication has rendering-cost implications too.
+- source: browser
+
+### [MED] /news + /tag/* + / — listing surfaces parrot stale Mode Sonnet R2 dates the article body has retracted
+- pass: 5 (commit 790b415)
+- viewport: both
+- category: data
+- observation: The article body for Mode Sonnet R2 now carries a 2026-05-09 update callout (shipped at eac846a) that explicitly retracts the original 2026-05-01 → 2026-06-15 window in favor of 2026-06-01 → 2026-07-15. But the dek/excerpt rendered on /news (and on the home, and on every tag page that surfaces this piece) still reads "The group buy started 2026-05-01 and runs through 2026-06-15". A reader scanning /news sees the wrong window and never reaches the corrected callout. The HIGH critique row at line 12 (resolved at b2692ac) closed the article-body half of the contradiction; this finding is the listing-surface half that the b2692ac drain didn't cover.
+- evidence: /news rendered text: "Mode has opened the second round of its 65% Sonnet board at CannonKeys. The group buy started 2026-05-01 and runs through 2026-06-15...". The article's own update callout at /article/mode-sonnet-r2-group-buy-coverage contradicts that window. Same dek text shows up on /tag/cannonkeys and the / hero pick.
+- suggested fix: two paths. (a) Update the article's frontmatter `excerpt` to reflect the post-correction window (or drop the date specifics entirely from the excerpt — the body callout carries the dates). All listings re-derive automatically; 1-line edit. (b) Have listings programmatically detect an `updatedAt` newer than `publishedAt` and use a different teaser shape ("Updated 2026-05-09 — see article for current dates"). (a) is the cheaper drain; (b) is structural and pays off across future updates. Default to (a).
+- source: browser
+
+### [LOW] /article/<news-piece> — "Keep reading" rail thins to a single related tile on a 3-min news read
+- pass: 5 (commit 790b415)
+- viewport: desktop
+- category: content
+- observation: At the bottom of /article/mode-sonnet-r2-group-buy-coverage the "Keep reading" rail offers exactly one related article ("Pairing Oil Kings with the Mode Sonnet"). For a hub that has 6 published pieces — at least 3 of which touch on Mode, CannonKeys, or 65% boards — surfacing only one feels stingy. A reader who finishes a 3-min news piece is the most likely to keep clicking; this is the wrong moment to thin the funnel. Distinct from the corpus-depth pending row (line 33) — that row is about pillar-landing density; this row is about article-bottom rail density and the related-articles algorithm's tag-overlap fallback when explicit relations are sparse.
+- evidence: Section ref_72 "Keep reading" contains one listitem (ref_75) linking to /article/building-mode-sonnet-with-oil-kings. No second or third tile, despite the Oil King deep dive (sound profile of the switch most-paired with Sonnet), the Alice-decline trends piece (layout context), and the trends-tracker preview (Mode Designs in vendors movers) all being reasonable companions on tag overlap.
+- suggested fix: bump the rail target to 2-3 picks. The `getRelatedArticles` helper at packages/content already takes a count param; the article-page caller may pass a low cap. Add a tag-overlap fallback: when explicit relations return < 2 picks, fill from the shared-pillar pool sorted by tag-overlap with the host article. Cap at 3.
+- source: browser
+
+
 
 ### [x] [HIGH] /group-buys + /article/mode-sonnet-r2-group-buy-coverage + / — Mode Sonnet R2 buy dates contradict across three surfaces
 - addressed in: pending commit (this tick)
