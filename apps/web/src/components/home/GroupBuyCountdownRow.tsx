@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import type { ReactElement } from 'react'
 import type { GroupBuy, Vendor } from '@thock/data'
 
@@ -64,8 +65,28 @@ export function GroupBuyCountdownRow({
     <div
       data-testid="group-buy-row"
       data-urgent={isUrgent ? 'true' : 'false'}
-      className="grid grid-cols-[1fr_auto] items-baseline gap-1.5 border-t border-border py-3 first:border-t-0 first:pt-0"
+      className="grid grid-cols-[1fr_auto] items-baseline gap-1.5 border-t border-border py-3 first:border-t-0 first:pt-0 sm:grid-cols-[40px_1fr_auto] sm:gap-x-3"
     >
+      {groupBuy.heroImage ? (
+        <div
+          data-testid="group-buy-row-hero"
+          className="relative hidden aspect-[4/3] overflow-hidden border border-border self-center sm:block"
+        >
+          <Image
+            src={groupBuy.heroImage}
+            alt=""
+            fill
+            sizes="40px"
+            className="object-cover"
+          />
+        </div>
+      ) : (
+        <div
+          aria-hidden="true"
+          data-testid="group-buy-row-hero-placeholder"
+          className="hidden aspect-[4/3] border border-border bg-accent-mu/20 self-center sm:block"
+        />
+      )}
       <div className="flex flex-col gap-0.5">
         <span className="text-small font-medium text-text">
           {groupBuy.name}
@@ -86,7 +107,7 @@ export function GroupBuyCountdownRow({
       </span>
       <div
         aria-hidden="true"
-        className="col-span-2 mt-1 h-0.5 rounded-sm bg-border"
+        className="col-span-2 mt-1 h-0.5 rounded-sm bg-border sm:col-span-3"
       >
         <div
           className={`h-full rounded-sm ${

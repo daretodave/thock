@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock group-buy hero — GSK Sweet Nightmare, four sculpted resin keycaps with one focal dusty-rose cap and a candy-twist motif</title>
+
+  <!-- Splash wash: a soft dusty-rose ellipse framing the 2x2 cluster. KBDfans
+       GSK Sweet Nightmare is a candy-themed Goldenstar resin run with four
+       colorways (Bimorphis / Shigan / Eviscera / Optigon) in Kawa and Guro
+       finishes. We honor the single-splash convention by tinting only this
+       background wash, the one focal (top-right) cap, and the small
+       candy-twist motif — all in the same dusty-rose hue. The other three
+       caps stay in warm-grey stroke. -->
+  <ellipse cx="600" cy="395" rx="500" ry="240" fill="oklch(0.66 0.10 10 / 0.13)" stroke="none"/>
+
+  <!-- ============================================================
+       4 GSK Sweet Nightmare resin keycaps in a 2x2 grid, top-down
+       with a hint of 3/4 to read the sculpted dome.
+       Resin caps differ from injection-molded plastic caps:
+         - larger, rounder silhouette (more "sculpted candy" mass)
+         - slight asymmetry / hand-poured irregularity to the edges
+         - faceted facets read as soft chamfers on the top surface
+         - no traditional cylindrical/spherical scoop — a domed cap
+       Each cap is built as:
+         - outer cap silhouette (sculpted footprint, slight wobble)
+         - top facet (an inset, slightly off-center polygonal dome)
+         - one or two soft facet ridges to suggest the resin pour
+       Cap footprint: ~220 wide x ~220 deep, deliberately oversized
+       relative to a 1u kit cap to read as "resin / artisan."
+       Grid centers: top-left (340, 200), top-right (760, 200),
+                     bottom-left (340, 410), bottom-right (760, 410).
+       Focal = top-right (Eviscera Kawa, dusty-rose splash).
+       ============================================================ -->
+
+  <!-- ---------------- Top-left cap (Bimorphis) ---------------- -->
+  <!-- Sculpted resin silhouette: a softly squarish bubble, slight tilt right -->
+  <g transform="translate(340 200)">
+    <!-- footprint — irregular sculpted edge, faintly hand-poured -->
+    <path d="M 22 12 Q 6 18 8 38 L 4 178 Q 8 200 26 206 L 188 210 Q 212 206 216 184 L 220 44 Q 216 18 198 12 Z"/>
+    <!-- top facet — inset dome, polygonal to read as a faceted cut -->
+    <path d="M 50 44 Q 38 52 44 70 L 42 162 Q 48 178 64 182 L 168 184 Q 188 180 190 162 L 192 70 Q 188 50 174 44 Z" stroke-opacity="0.7"/>
+    <!-- soft facet ridge — a single curve to suggest the dome highlight -->
+    <path d="M 60 110 Q 116 96 178 110" stroke-opacity="0.4"/>
+    <!-- secondary ridge — barely-there second pour-line -->
+    <path d="M 64 130 Q 116 122 174 130" stroke-opacity="0.25"/>
+  </g>
+
+  <!-- ---------------- Top-right cap (FOCAL — Eviscera, dusty-rose splash) ---------------- -->
+  <!-- Slightly larger / more pronounced sculpt; this is the focal piece. -->
+  <g transform="translate(760 192)">
+    <!-- focal fill: dusty rose, low alpha for the cap body -->
+    <path d="M 20 14 Q 4 22 6 42 L 4 184 Q 10 206 30 212 L 192 214 Q 216 208 220 186 L 222 46 Q 216 18 196 12 Z"
+          fill="oklch(0.66 0.10 10 / 0.92)" stroke="oklch(0.66 0.10 10)"/>
+    <!-- top facet — slightly lighter dusty-rose wash so the dome reads -->
+    <path d="M 48 46 Q 36 54 42 72 L 40 164 Q 46 180 62 184 L 168 186 Q 188 182 192 164 L 194 72 Q 188 50 174 44 Z"
+          fill="oklch(0.74 0.09 10 / 0.78)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55"/>
+    <!-- dome highlight ridge — drawn in warm-cream on the rose top so it still reads -->
+    <path d="M 58 110 Q 116 92 178 110" stroke="oklch(0.92 0.025 85)" stroke-opacity="0.6"/>
+    <path d="M 62 132 Q 116 122 174 132" stroke="oklch(0.92 0.025 85)" stroke-opacity="0.4"/>
+
+    <!-- Candy-twist motif: a curving ribbon loop overlaid on the focal cap.
+         Two sympathetic arcs that read as a wrapped twist of candy paper,
+         the conceptual nod to "Sweet Nightmare." Same dusty-rose hue,
+         drawn at slightly heavier weight than 2px to register at thumbnail. -->
+    <g stroke="oklch(0.66 0.10 10)" stroke-width="2.6" stroke-opacity="0.95" fill="none">
+      <!-- main loop: a soft figure-of-eight ribbon centered on the dome -->
+      <path d="M 80 96 Q 100 80 116 100 Q 132 120 152 104 Q 170 88 152 72"/>
+      <!-- closing curl that returns the ribbon to suggest a wrap -->
+      <path d="M 80 96 Q 70 110 88 122 Q 110 130 116 116"/>
+      <!-- tiny tail flick to read as a wrapper twist -->
+      <path d="M 152 72 Q 162 64 158 56" stroke-opacity="0.7"/>
+    </g>
+  </g>
+
+  <!-- ---------------- Bottom-left cap (Shigan) ---------------- -->
+  <g transform="translate(340 410)">
+    <path d="M 18 14 Q 4 20 6 40 L 6 178 Q 10 200 28 208 L 190 212 Q 214 206 218 186 L 220 46 Q 214 16 196 12 Z"/>
+    <path d="M 48 46 Q 36 54 42 72 L 42 162 Q 48 178 64 182 L 168 184 Q 188 180 190 162 L 192 72 Q 188 50 174 44 Z" stroke-opacity="0.7"/>
+    <path d="M 58 110 Q 116 96 178 110" stroke-opacity="0.4"/>
+    <path d="M 62 130 Q 116 122 174 130" stroke-opacity="0.25"/>
+  </g>
+
+  <!-- ---------------- Bottom-right cap (Optigon) ---------------- -->
+  <g transform="translate(760 414)">
+    <path d="M 22 12 Q 6 18 8 38 L 4 180 Q 8 202 26 208 L 188 210 Q 212 204 218 184 L 220 44 Q 214 18 198 12 Z"/>
+    <path d="M 50 44 Q 38 52 44 70 L 42 162 Q 48 178 64 182 L 168 184 Q 188 180 190 162 L 192 70 Q 188 50 174 44 Z" stroke-opacity="0.7"/>
+    <path d="M 60 110 Q 116 96 178 110" stroke-opacity="0.4"/>
+    <path d="M 64 130 Q 116 122 174 130" stroke-opacity="0.25"/>
+  </g>
+
+  <!-- A small dusty-rose accent pip just outside the focal cap's lower-right —
+       echoes the conceptual move on the matched group-buy heroes. Keeps the
+       single-splash convention. -->
+  <circle cx="1010" cy="408" r="7" fill="oklch(0.66 0.10 10 / 0.95)" stroke="oklch(0.66 0.10 10)"/>
+  <circle cx="1010" cy="408" r="12" stroke-opacity="0.45" stroke="oklch(0.66 0.10 10)" fill="none"/>
+</svg>

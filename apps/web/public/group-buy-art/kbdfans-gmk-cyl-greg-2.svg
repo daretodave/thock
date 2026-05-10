@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock group-buy hero — GMK CYL GREG 2, six CYL-profile keycaps with one focal ochre cap</title>
+
+  <!-- Splash wash: a soft ochre-tinted ellipse framing the cluster. The KBDfans
+       GMK CYL GREG 2 set leans khaki/olive ("Greg" meme palette); we honor the
+       single-splash convention by tinting only this background wash and the one
+       focal cap in the same ochre hue (oklch 0.72 0.10 75). Everything else
+       stays in warm-grey stroke. -->
+  <ellipse cx="600" cy="395" rx="520" ry="225" fill="oklch(0.72 0.10 75 / 0.14)" stroke="none"/>
+
+  <!-- ============================================================
+       6 GMK CYL GREG 2 keycaps, near-top-down with a hint of 3/4
+       to read the cylindrical scoop. Two staggered rows of three,
+       lightly offset like a freshly-tipped tray. Focal cap = front
+       row middle (mid-row, centered) per the brief.
+       Each cap is built as:
+         - outer cap silhouette (the base footprint)
+         - top surface (slightly inset, with the CYL scoop curve)
+         - scoop highlight (a single arc inside the top)
+       ============================================================ -->
+
+  <!-- ---------------- Row 1 (back row, three 1u caps) ---------------- -->
+
+  <!-- Cap 1 — back-left -->
+  <g transform="translate(295 235)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z" stroke-opacity="0.7"/>
+    <path d="M 38 90 Q 88 76 138 90" stroke-opacity="0.45"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke-opacity="0.3"/>
+  </g>
+
+  <!-- Cap 2 — back-middle -->
+  <g transform="translate(515 235)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z" stroke-opacity="0.7"/>
+    <path d="M 38 90 Q 88 76 138 90" stroke-opacity="0.45"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke-opacity="0.3"/>
+  </g>
+
+  <!-- Cap 3 — back-right -->
+  <g transform="translate(735 235)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z" stroke-opacity="0.7"/>
+    <path d="M 38 90 Q 88 76 138 90" stroke-opacity="0.45"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke-opacity="0.3"/>
+  </g>
+
+  <!-- ---------------- Row 2 (front row, three 1u caps, shifted half a cap) ---------------- -->
+
+  <!-- Cap 4 — front-left -->
+  <g transform="translate(405 435)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z" stroke-opacity="0.7"/>
+    <path d="M 38 90 Q 88 76 138 90" stroke-opacity="0.45"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke-opacity="0.3"/>
+  </g>
+
+  <!-- Cap 5 — front-middle (FOCAL — ochre splash, mid-row centered) -->
+  <g transform="translate(625 435)">
+    <!-- focal fill: ochre, low alpha for the cap body -->
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"
+          fill="oklch(0.72 0.10 75 / 0.92)" stroke="oklch(0.72 0.10 75)"/>
+    <!-- top surface — slightly lighter ochre wash so the scoop reads -->
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          fill="oklch(0.78 0.10 75 / 0.85)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55"/>
+    <!-- CYL scoop arc — drawn in warm-grey on the ochre top so it still reads -->
+    <path d="M 38 90 Q 88 74 138 90" stroke="oklch(0.92 0.025 85)" stroke-opacity="0.6"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke="oklch(0.92 0.025 85)" stroke-opacity="0.4"/>
+  </g>
+
+  <!-- Cap 6 — front-right -->
+  <g transform="translate(845 435)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z" stroke-opacity="0.7"/>
+    <path d="M 38 90 Q 88 76 138 90" stroke-opacity="0.45"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke-opacity="0.3"/>
+  </g>
+
+  <!-- A single ochre dot just outside the focal cap's lower-right — the small
+       accent pip, mirroring the conceptual move on the matched Prussian-alert
+       hero. Keeps the single-splash convention. -->
+  <circle cx="800" cy="605" r="7" fill="oklch(0.72 0.10 75 / 0.95)" stroke="oklch(0.72 0.10 75)"/>
+  <circle cx="800" cy="605" r="12" stroke-opacity="0.45" stroke="oklch(0.72 0.10 75)" fill="none"/>
+</svg>

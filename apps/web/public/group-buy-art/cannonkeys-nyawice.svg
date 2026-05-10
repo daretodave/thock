@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock group-buy hero — Nyawice, Alice-layout custom with focal silicone cat ears</title>
+
+  <!-- ============================================================
+       Subject: Nyawice (CannonKeys group buy) — an Alice-layout
+       custom board fitted with friction-fit silicone cat ears on
+       the top edge of the case and a small silicone nose on the
+       front edge. The keyboard outline + suggested key dot grid
+       sit in warm-grey 2px stroke; the cat ears + nose are the
+       single coral splash (the focal element of the cohort).
+       ============================================================ -->
+
+  <!-- Case outline — split-symmetry Alice silhouette.
+       Top edge angles outward (~9°) from the centerline. The two
+       small dips on the top edge are seats where the silicone
+       cat-ear inserts friction-fit into the case. -->
+  <g>
+    <!-- Outer case path — top edge has two notches (ear seats) -->
+    <path d="
+      M 230 320
+      L 470 282
+      L 488 290
+      L 506 282
+      L 580 270
+      L 600 272
+      L 620 270
+      L 694 282
+      L 712 290
+      L 730 282
+      L 970 320
+      L 1000 340
+      L 1000 520
+      L 970 560
+      L 620 560
+      L 612 575
+      L 588 575
+      L 580 560
+      L 230 560
+      L 200 520
+      L 200 340
+      Z" />
+
+    <!-- Inner bezel inset (top plate edge) -->
+    <path d="
+      M 250 345
+      L 585 298
+      L 600 300
+      L 615 298
+      L 950 345
+      L 970 358
+      L 970 510
+      L 950 538
+      L 250 538
+      L 230 510
+      L 230 358
+      Z" stroke-opacity="0.55"/>
+
+    <!-- Center seam (the split-symmetry reveal) -->
+    <line x1="600" y1="300" x2="600" y2="538" stroke-opacity="0.35"/>
+
+    <!-- Front-edge nose-mount notch (small dip where silicone nose seats) -->
+    <path d="M 588 575 L 596 572 L 604 572 L 612 575" stroke-opacity="0.55"/>
+  </g>
+
+  <!-- ===== Suggested key clusters: row-dot grid, low detail =====
+       Editorial illustration: don't overdraw. Six dots per row,
+       splayed to match the Alice angle. Two rows of large dots
+       (alphas) + one row of smaller dots (numbers) per side. -->
+
+  <!-- Left cluster — splayed -9° -->
+  <g fill="oklch(0.78 0.005 90)" stroke="none">
+    <!-- numbers row (smaller) -->
+    <g transform="rotate(-9 430 332)">
+      <circle cx="305" cy="332" r="3"/>
+      <circle cx="355" cy="332" r="3"/>
+      <circle cx="405" cy="332" r="3"/>
+      <circle cx="455" cy="332" r="3"/>
+      <circle cx="505" cy="332" r="3"/>
+      <circle cx="555" cy="332" r="3"/>
+    </g>
+    <!-- qwerty row -->
+    <g transform="rotate(-9 430 388)">
+      <circle cx="313" cy="388" r="4"/>
+      <circle cx="363" cy="388" r="4"/>
+      <circle cx="413" cy="388" r="4"/>
+      <circle cx="463" cy="388" r="4"/>
+      <circle cx="513" cy="388" r="4"/>
+      <circle cx="563" cy="388" r="4"/>
+    </g>
+    <!-- home row (flatter angle) -->
+    <g transform="rotate(-5 430 442)">
+      <circle cx="321" cy="442" r="4"/>
+      <circle cx="371" cy="442" r="4"/>
+      <circle cx="421" cy="442" r="4"/>
+      <circle cx="471" cy="442" r="4"/>
+      <circle cx="521" cy="442" r="4"/>
+      <circle cx="571" cy="442" r="4"/>
+    </g>
+    <!-- bottom row -->
+    <g>
+      <circle cx="328" cy="492" r="4"/>
+      <circle cx="378" cy="492" r="4"/>
+      <circle cx="428" cy="492" r="4"/>
+      <circle cx="478" cy="492" r="4"/>
+      <circle cx="528" cy="492" r="4"/>
+      <circle cx="578" cy="492" r="4"/>
+    </g>
+  </g>
+
+  <!-- Left split spacebar (suggested) -->
+  <rect x="395" y="520" width="170" height="22" rx="3" stroke-opacity="0.7"/>
+
+  <!-- Right cluster — splayed +9°, mirrored -->
+  <g fill="oklch(0.78 0.005 90)" stroke="none">
+    <g transform="rotate(9 770 332)">
+      <circle cx="645" cy="332" r="3"/>
+      <circle cx="695" cy="332" r="3"/>
+      <circle cx="745" cy="332" r="3"/>
+      <circle cx="795" cy="332" r="3"/>
+      <circle cx="845" cy="332" r="3"/>
+      <circle cx="895" cy="332" r="3"/>
+    </g>
+    <g transform="rotate(9 770 388)">
+      <circle cx="637" cy="388" r="4"/>
+      <circle cx="687" cy="388" r="4"/>
+      <circle cx="737" cy="388" r="4"/>
+      <circle cx="787" cy="388" r="4"/>
+      <circle cx="837" cy="388" r="4"/>
+      <circle cx="887" cy="388" r="4"/>
+    </g>
+    <g transform="rotate(5 770 442)">
+      <circle cx="629" cy="442" r="4"/>
+      <circle cx="679" cy="442" r="4"/>
+      <circle cx="729" cy="442" r="4"/>
+      <circle cx="779" cy="442" r="4"/>
+      <circle cx="829" cy="442" r="4"/>
+      <circle cx="879" cy="442" r="4"/>
+    </g>
+    <g>
+      <circle cx="622" cy="492" r="4"/>
+      <circle cx="672" cy="492" r="4"/>
+      <circle cx="722" cy="492" r="4"/>
+      <circle cx="772" cy="492" r="4"/>
+      <circle cx="822" cy="492" r="4"/>
+      <circle cx="872" cy="492" r="4"/>
+    </g>
+  </g>
+
+  <!-- Right split spacebar (suggested) -->
+  <rect x="635" y="520" width="170" height="22" rx="3" stroke-opacity="0.7"/>
+
+  <!-- ============================================================
+       FOCAL: silicone cat ears + nose — the single coral splash.
+       Two triangular ears friction-fit into the top-edge notches
+       above each splayed cluster. One small rounded triangle nose
+       seats on the front-edge centerline. Solid coral fill, with
+       a darker coral inner-ear hint to read as silicone, not flat.
+       ============================================================ -->
+
+  <!-- Left silicone ear — outer triangle, anchored at notch x≈488 -->
+  <g>
+    <path d="
+      M 470 282
+      L 488 290
+      L 506 282
+      L 502 218
+      Q 490 200 478 218
+      Z"
+      fill="oklch(0.74 0.13 30)"
+      stroke="oklch(0.74 0.13 30)"
+      stroke-width="2"
+      stroke-linejoin="round"/>
+    <!-- inner-ear hint (slightly darker silicone shadow) -->
+    <path d="
+      M 484 268
+      L 492 268
+      L 491 234
+      Q 488 226 485 234
+      Z"
+      fill="oklch(0.62 0.13 28)"
+      stroke="none"/>
+  </g>
+
+  <!-- Right silicone ear — mirror across x=600, anchored at x≈712 -->
+  <g>
+    <path d="
+      M 694 282
+      L 712 290
+      L 730 282
+      L 722 218
+      Q 710 200 698 218
+      Z"
+      fill="oklch(0.74 0.13 30)"
+      stroke="oklch(0.74 0.13 30)"
+      stroke-width="2"
+      stroke-linejoin="round"/>
+    <path d="
+      M 708 268
+      L 716 268
+      L 715 234
+      Q 712 226 709 234
+      Z"
+      fill="oklch(0.62 0.13 28)"
+      stroke="none"/>
+  </g>
+
+  <!-- Silicone nose — small rounded triangle centered on the
+       front-edge notch at y=575, x=600 -->
+  <path d="
+    M 588 574
+    Q 600 568 612 574
+    Q 606 590 600 594
+    Q 594 590 588 574
+    Z"
+    fill="oklch(0.74 0.13 30)"
+    stroke="oklch(0.74 0.13 30)"
+    stroke-width="2"
+    stroke-linejoin="round"/>
+</svg>

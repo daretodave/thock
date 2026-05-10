@@ -1,0 +1,16 @@
+{
+  "kind": "group-buy-hero-art",
+  "target": "Z:/keyboard/apps/web/public/group-buy-art/kbdfans-gsk-sweet-nightmare.svg",
+  "source": "plan/bearings.md § Group-buy hero art — colorful SVGs",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject",
+  "size": [1200, 750],
+  "subject": "Four sculpted resin keycaps in 2×2 grid with one focal dusty-rose cap surfaced with a candy-twist motif",
+  "splash_color": "oklch(0.66 0.10 10)",
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": [],
+  "prompt": "GSK Sweet Nightmare is KBDfans' Goldenstar resin keycap run — four colorways (Bimorphis / Shigan / Eviscera / Optigon) in Kawa and Guro finishes, candy-themed dark-accent aesthetic, resin (not standard injection-molded plastic). The brief locks the bearings rule for group-buy hero art: 2px warm-grey stroke + a single splash of color (dusty rose at oklch(0.66 0.10 10)). Subject is a 2×2 grid of four sculpted resin caps spread across the 1200×750 canvas; resin caps read larger, rounder, and slightly irregular versus the precise extruded silhouettes of GMK / Cherry-profile caps, so each footprint is ~220×220 with a hand-poured wobble on the edges and a polygonal inset top facet rather than a true cylindrical scoop. Top-right cap is the focal Eviscera-Kawa piece, painted in dusty rose (cap body at 0.92 alpha, top facet at 0.78 alpha) with cream-tinted dome highlights so the sculpt still reads on the colored ground. The candy-twist motif sits over the focal cap as a small dusty-rose ribbon — a soft figure-of-eight with a closing curl and a tail flick to suggest a wrapper twist, drawn at slightly heavier weight (2.6px) so it registers at thumbnail size. The other three caps stay in pure warm-grey stroke. A tiny dusty-rose pip-and-ring sits outside the focal cap's lower-right, mirroring the accent move on the kbdfans-gmk-cyl-greg-2 and gmk-cyl-prussian-alert siblings. Editorial-illustration register, knowledgeable-peer voice — no breathless candy clichés.",
+  "revision": 1,
+  "generated_by": "brander (sub-agent)",
+  "generated_at": "2026-05-10",
+  "commit_at_render": "045f3e1e77ef0578d80bf4901d29ca7132c0be70"
+}

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import type { ReactElement } from 'react'
 import type { GroupBuy, Vendor } from '@thock/data'
 
@@ -87,10 +88,26 @@ export function GroupBuyRow({
         isMuted ? 'opacity-70' : ''
       }`}
     >
-      <div
-        aria-hidden="true"
-        className="aspect-[4/3] border border-border bg-surface"
-      />
+      {groupBuy.heroImage ? (
+        <div
+          data-testid="group-buy-hero"
+          className="relative aspect-[4/3] overflow-hidden border border-border"
+        >
+          <Image
+            src={groupBuy.heroImage}
+            alt={`thock hero — ${groupBuy.name}`}
+            fill
+            sizes="140px"
+            className="object-cover"
+          />
+        </div>
+      ) : (
+        <div
+          aria-hidden="true"
+          data-testid="group-buy-hero-placeholder"
+          className="aspect-[4/3] border border-border bg-accent-mu/20"
+        />
+      )}
       <div className="flex flex-col gap-2">
         <div className="flex flex-wrap items-center gap-2">
           <span className="font-mono text-micro uppercase tracking-[0.08em] text-text-3">

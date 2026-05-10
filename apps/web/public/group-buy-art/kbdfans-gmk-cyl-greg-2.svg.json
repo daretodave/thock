@@ -1,0 +1,16 @@
+{
+  "kind": "group-buy-hero-art",
+  "target": "Z:/keyboard/apps/web/public/group-buy-art/kbdfans-gmk-cyl-greg-2.svg",
+  "source": "plan/bearings.md § Group-buy hero art — colorful SVGs",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject",
+  "size": [1200, 750],
+  "subject": "Six CYL-profile keycaps in two staggered rows with one focal ochre cap (mid-row, centered)",
+  "splash_color": "oklch(0.72 0.10 75)",
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": [],
+  "prompt": "Match the visual rhythm of hero-art/gmk-cyl-prussian-alert.svg — 2px warm-grey stroke, single-color splash, soft elliptical wash behind the subject. Subject for a KBDfans GMK CYL GREG 2 group-buy hero is a stacked-cap silhouette per the news pillar's headline-shape directive. Six caps in CYL profile (slightly inset top surface plus a gentle scoop arc to read the cylindrical dish), arranged as two staggered rows of three (no spread modifiers — the brief locks 6 uniform 1u caps to keep the focal read clean). Cluster fills ~85% width × ~75% height. The focal front-row middle cap takes the ochre splash (oklch 0.72 0.10 75); a small accent pip sits just outside it to mirror the matched Prussian-alert hero's gesture. Splash hue is ochre rather than full khaki/olive saturation to keep the single-splash convention legible — the wash ellipse and focal cap share the one accent hue; everything else stays in warm-grey stroke. Voice: knowledgeable peer, not breathless hype — editorial illustration that reads at thumbnail.",
+  "revision": 1,
+  "generated_by": "brander (sub-agent)",
+  "generated_at": "2026-05-10",
+  "commit_at_render": "pending"
+}

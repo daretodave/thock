@@ -137,6 +137,32 @@ Use the schema. Slug convention: `kebab-case`, derived from the
 canonical name. No spaces, no underscores, no apostrophes (strip them
 or substitute with `-`).
 
+#### Step 4a — Bundle hero art when adding a group-buy record (phase 23 rule)
+
+When `<entity>` is `group-buys`, the new record's `heroImage`
+field MUST be set to a real SVG path under
+`apps/web/public/group-buy-art/<slug>.svg` — not left as
+`null`. Per the bearings.md "Group-buy hero art" durable rule
+(locked 2026-05-10):
+
+1. Spawn `brander` inline with a brief that maps the record's
+   `productKind` to a subject (board → keyboard outline,
+   keycap-set → cap cluster, switch → cross-section).
+2. Pass a single splash hue picked from the kit's character
+   (warm bronze + one accent — never multi-color).
+3. Brander writes the SVG + provenance JSON sibling at
+   `apps/web/public/group-buy-art/<slug>.svg`(.json).
+4. Set `heroImage: "/group-buy-art/<slug>.svg"` in the new
+   record. Bundle the SVG, the provenance JSON, and the
+   record into the same commit.
+
+This mirrors the article-hero rule from phase 5+ (where
+`content-curator` and `brander` ship together for new
+articles). The render surface (`<GroupBuyRow>` and
+`<GroupBuyCountdownRow>`) falls back to a coral-tinted
+placeholder when `heroImage` is null, but the rule is: don't
+ship null. New group buys ship with art.
+
 ### Step 5 — Validate
 
 ```bash

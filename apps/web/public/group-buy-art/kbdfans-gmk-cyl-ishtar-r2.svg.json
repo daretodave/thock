@@ -1,0 +1,16 @@
+{
+  "kind": "group-buy-hero-art",
+  "target": "Z:/keyboard/apps/web/public/group-buy-art/kbdfans-gmk-cyl-ishtar-r2.svg",
+  "source": "plan/bearings.md § Group-buy hero art — colorful SVGs",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject",
+  "size": [1200, 750],
+  "subject": "Six Cherry-profile keycaps in two staggered rows with two focal terracotta caps (one glyph-marked) hinting at Mesopotamian palette",
+  "splash_color": "oklch(0.62 0.13 35)",
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": [],
+  "prompt": "GMK CYL Ishtar R2 is KBDfans's Mesopotamia-themed Cherry-profile doubleshot ABS set in warm gold/red tones — the visual brief is 'designer keycap set, earthy palette' so the splash hue is muted terracotta rather than the bright cherry-red of the MX2A switch hero. Composition: two staggered rows of three caps, front row offset half a cap left, mirroring how a designer set's render shot reads at thumbnail. Each cap is drawn top-down with a slight trapezoidal sculpt — narrower front edge plus a thin front-lip band — to convey Cherry profile's lower-than-OEM, slightly-angled cap fronts without literal side-view geometry. Two focal caps land terracotta: back-row middle and front-row left, placing the splash on a balanced diagonal so the eye reads top-right then sweeps down-left to the glyph-marked cap. The glyph is a three-tier stepped ziggurat with a chevron crown — angular, Mesopotamian without being kitsch — sitting on the dish surface of the front-row focal cap. Warm-grey stroke at 2px on the four non-focal caps; row-sculpt centerline curves are dashed/faint so the splash stays dominant. A single dashed ground line and three margin ticks supply quiet editorial scaffolding without competing with the cluster. Voice: knowledgeable peer — the glyph is a subtle nod, not a costume.",
+  "revision": 1,
+  "generated_by": "brander (sub-agent)",
+  "generated_at": "2026-05-10",
+  "commit_at_render": "045f3e1e77ef0578d80bf4901d29ca7132c0be70"
+}

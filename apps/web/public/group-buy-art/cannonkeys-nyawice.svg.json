@@ -1,0 +1,16 @@
+{
+  "kind": "group-buy-hero-art",
+  "target": "Z:/keyboard/apps/web/public/group-buy-art/cannonkeys-nyawice.svg",
+  "source": "plan/bearings.md § Group-buy hero art — colorful SVGs",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject",
+  "size": [1200, 750],
+  "subject": "Top-down Alice-layout keyboard silhouette with focal silicone cat-ear silhouettes (coral splash) attached to the top edge of the case",
+  "splash_color": "oklch(0.74 0.13 30)",
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": [],
+  "prompt": "Reuse the established Alice silhouette family (split-symmetric case with ~9° splay, twin spacebars) so the Nyawice reads as 'Alice cousin' at thumbnail size. Strip the dense keycap rect grid down to row-dot suggestion — six dots per row, splayed to match — keeping the eye from competing with the focal silicone. The friction-fit silicone cat ears are the cohort's identity, so they get the only fill: two coral triangles seated into matched notches on the top edge above each cluster's peak, plus a small rounded nose on the front-edge centerline. A slightly darker coral inner-ear shadow keeps each ear reading as soft silicone rather than flat paper. Voice: knowledgeable peer — drawn so the cat ears land as a quietly-charming product feature, not a meme. Single-splash convention upheld: no bronze keycap accent here, the silicone IS the splash.",
+  "revision": 1,
+  "generated_by": "brander (sub-agent)",
+  "generated_at": "2026-05-10",
+  "commit_at_render": "045f3e1"
+}

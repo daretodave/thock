@@ -17,6 +17,7 @@ function gb(over: Partial<GroupBuy> = {}): GroupBuy {
     region: 'global',
     url: 'https://cannonkeys.com/products/mode-sonnet',
     imageUrl: null,
+    heroImage: null,
     status: 'live',
     description:
       'Second run of the Mode Sonnet 65 percent. Same gasket mount and hotswap PCB.',
@@ -109,5 +110,30 @@ describe('<GroupBuyRow>', () => {
       />,
     )
     expect(screen.getByText('mystery-vendor')).toBeInTheDocument()
+  })
+
+  it('renders the hero image when heroImage is set (phase 23)', () => {
+    render(
+      <GroupBuyRow
+        groupBuy={gb({ heroImage: '/group-buy-art/sonnet.svg' })}
+        vendor={vendor}
+        variant="live"
+        now={NOW}
+      />,
+    )
+    expect(screen.getByTestId('group-buy-hero')).toBeInTheDocument()
+    expect(
+      screen.queryByTestId('group-buy-hero-placeholder'),
+    ).not.toBeInTheDocument()
+  })
+
+  it('renders the placeholder block when heroImage is null (phase 23 fallback)', () => {
+    render(
+      <GroupBuyRow groupBuy={gb()} vendor={vendor} variant="live" now={NOW} />,
+    )
+    expect(
+      screen.getByTestId('group-buy-hero-placeholder'),
+    ).toBeInTheDocument()
+    expect(screen.queryByTestId('group-buy-hero')).not.toBeInTheDocument()
   })
 })

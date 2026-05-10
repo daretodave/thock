@@ -51,6 +51,7 @@ const groupBuy = (
   region: 'global',
   url: 'https://example.com/gb',
   imageUrl: null,
+  heroImage: null,
   status: 'live',
   description: 'A test group buy with enough copy to satisfy the schema.',
   updatedAt: NOW,

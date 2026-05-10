@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock group-buy hero — GMK CYL King of the Seas, six CYL-profile keycaps with one focal teal cap and a wave motif</title>
+
+  <!-- Splash backdrop: a soft muted-teal wash framing the cap cluster.
+       Same single-splash convention as the hero-art siblings — one accent
+       hue carried through the wash, focal cap fill, and wave motif. -->
+  <ellipse cx="600" cy="395" rx="510" ry="220" fill="oklch(0.55 0.085 215 / 0.14)" stroke="none"/>
+
+  <!-- ============================================================
+       6 GMK CYL keycaps, near-top-down with a hint of 3/4 to read
+       the cylindrical scoop. Layout: two rows of three, lightly
+       offset like a freshly-tipped tray. Focal cap = back-row middle.
+       Each cap is built as:
+         - outer cap silhouette (the base footprint)
+         - top surface (slightly inset, with the CYL scoop curve)
+         - scoop arcs (the dish)
+       ============================================================ -->
+
+  <!-- ---------------- Row 1 (back row) ---------------- -->
+
+  <!-- Cap 1 — back-left -->
+  <g transform="translate(295 235)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z" stroke-opacity="0.7"/>
+    <path d="M 38 90 Q 88 76 138 90" stroke-opacity="0.45"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke-opacity="0.3"/>
+  </g>
+
+  <!-- Cap 2 — back-middle (FOCAL — muted teal splash + wave motif) -->
+  <g transform="translate(515 215)">
+    <!-- focal fill: muted teal cap body -->
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"
+          fill="oklch(0.55 0.085 215 / 0.92)" stroke="oklch(0.55 0.085 215)"/>
+    <!-- top surface — slightly lighter teal wash so the scoop reads -->
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          fill="oklch(0.6 0.085 215 / 0.85)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55"/>
+    <!-- CYL scoop arcs — drawn in warm-grey on the teal top so they still read -->
+    <path d="M 38 60 Q 88 46 138 60" stroke="oklch(0.92 0.025 85)" stroke-opacity="0.5"/>
+    <path d="M 38 124 Q 88 138 138 124" stroke="oklch(0.92 0.025 85)" stroke-opacity="0.4"/>
+    <!-- Wave motif: one curving stroke that suggests an ocean wave, painted
+         across the centre of the focal cap's top surface in the same teal hue.
+         Drawn warmer (warm-grey) where it crosses the dark fill so it still
+         reads, then echoed faintly in teal underneath. -->
+    <path d="M 42 88 Q 64 70 86 88 T 132 88"
+          stroke="oklch(0.92 0.025 85)" stroke-opacity="0.85" stroke-width="2.4"/>
+    <path d="M 42 100 Q 64 84 86 100 T 132 100"
+          stroke="oklch(0.55 0.085 215)" stroke-opacity="0.55" stroke-width="1.6"/>
+  </g>
+
+  <!-- Cap 3 — back-right -->
+  <g transform="translate(735 235)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z" stroke-opacity="0.7"/>
+    <path d="M 38 90 Q 88 76 138 90" stroke-opacity="0.45"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke-opacity="0.3"/>
+  </g>
+
+  <!-- ---------------- Row 2 (front row, shifted half a cap) ---------------- -->
+
+  <!-- Cap 4 — front-left -->
+  <g transform="translate(405 425)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z" stroke-opacity="0.7"/>
+    <path d="M 38 90 Q 88 76 138 90" stroke-opacity="0.45"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke-opacity="0.3"/>
+  </g>
+
+  <!-- Cap 5 — front-middle -->
+  <g transform="translate(625 425)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z" stroke-opacity="0.7"/>
+    <path d="M 38 90 Q 88 76 138 90" stroke-opacity="0.45"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke-opacity="0.3"/>
+  </g>
+
+  <!-- Cap 6 — front-right -->
+  <g transform="translate(845 425)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z" stroke-opacity="0.7"/>
+    <path d="M 38 90 Q 88 76 138 90" stroke-opacity="0.45"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke-opacity="0.3"/>
+  </g>
+</svg>

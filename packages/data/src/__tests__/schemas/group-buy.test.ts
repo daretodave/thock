@@ -12,6 +12,7 @@ const VALID = {
   region: 'global' as const,
   url: 'https://cannonkeys.com/products/nyawice',
   imageUrl: null,
+  heroImage: '/group-buy-art/cannonkeys-nyawice.svg',
   status: 'live' as const,
   description: 'Alice-layout board with leaf-spring F1 mount and 9-degree typing angle.',
   updatedAt: '2026-05-09T20:00:00.000Z',
@@ -47,5 +48,29 @@ describe('GroupBuySchema', () => {
       productSlug: null,
     })
     expect(result.success).toBe(true)
+  })
+
+  it('accepts a null heroImage (phase 23 — partial backfill safe)', () => {
+    const result = GroupBuySchema.safeParse({
+      ...VALID,
+      heroImage: null,
+    })
+    expect(result.success).toBe(true)
+  })
+
+  it('accepts a string heroImage (phase 23)', () => {
+    const result = GroupBuySchema.safeParse({
+      ...VALID,
+      heroImage: '/group-buy-art/cannonkeys-nyawice.svg',
+    })
+    expect(result.success).toBe(true)
+  })
+
+  it('rejects a non-string non-null heroImage', () => {
+    const result = GroupBuySchema.safeParse({
+      ...VALID,
+      heroImage: 42,
+    })
+    expect(result.success).toBe(false)
   })
 })

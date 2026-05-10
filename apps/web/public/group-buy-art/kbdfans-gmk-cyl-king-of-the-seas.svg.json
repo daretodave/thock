@@ -1,0 +1,16 @@
+{
+  "kind": "group-buy-hero-art",
+  "target": "Z:/keyboard/apps/web/public/group-buy-art/kbdfans-gmk-cyl-king-of-the-seas.svg",
+  "source": "plan/bearings.md § Group-buy hero art — colorful SVGs",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject",
+  "size": [1200, 750],
+  "subject": "Six CYL-profile keycaps with one focal muted-teal cap surfaced with a wave-line motif",
+  "splash_color": "oklch(0.55 0.085 215)",
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": [],
+  "prompt": "Match the visual rhythm of the hero-art GMK CYL siblings (gmk-cyl-prussian-alert.svg in particular) — 2px warm-grey stroke, single-color splash, soft elliptical wash behind the cap cluster. Layout: 6 CYL-profile keycaps in two staggered rows of three; back-row middle is the focal piece, painted in muted teal (oklch 0.55 0.085 215) per the bearings 'Group-buy hero art' rule locked 2026-05-10 via /oversight. The focal cap also carries a single wave-line motif across its top surface, an ocean-wave curve drawn in warm-grey with a teal echo beneath, nodding to the kit's name 'King of the Seas' and its two-colorway 'Sovereign'/'Mutation' theme. The splash hue is the explicit one-time exception to the 'avoid stock blues' guideline — the kit is literally a deep-ocean keycap set, so a desaturated teal (low chroma 0.085) is allowed where vibrant primary blue would not be. Single-splash convention preserved: only the focal cap, wave motif, and backdrop wash use teal; the other five caps and all structural strokes remain warm-grey. KBDfans group buy, CYL-profile doubleshot ABS.",
+  "revision": 1,
+  "generated_by": "brander (sub-agent)",
+  "generated_at": "2026-05-10",
+  "commit_at_render": "045f3e1e77ef0578d80bf4901d29ca7132c0be70"
+}

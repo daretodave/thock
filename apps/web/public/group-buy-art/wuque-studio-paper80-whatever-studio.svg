@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock group-buy hero — Paper80 x Whatever Studio, 80% keyboard with focal paper-airplane fold in ochre</title>
+
+  <!-- Faint warm wash — sets the parchment stage without competing with the splash -->
+  <rect x="70" y="90" width="1060" height="570" fill="oklch(0.72 0.10 75 / 0.05)" stroke="none"/>
+
+  <!-- =====================================================================
+       80% (TKL) layout silhouette — top-down outline.
+       Case: ~85% canvas width × ~44% height.
+       Proportions echo a real 80%/TKL: ~17.25u wide × 6 rows.
+       Three clusters: alpha (15 cols × 5 rows incl. F-row),
+       nav cluster (3 cols × 2 rows, top-right), arrow cluster (bottom-right).
+       NO numpad — the defining 80% silhouette tell.
+       ===================================================================== -->
+
+  <!-- Outer case profile: rounded rectangle, 2px stroke. -->
+  <rect x="90" y="304" width="1020" height="329" rx="14" ry="14"/>
+
+  <!-- Inset bezel hint — thin secondary line just inside the case. -->
+  <rect x="106" y="320" width="988" height="297" rx="9" ry="9" stroke-opacity="0.35"/>
+
+  <!-- =====================================================================
+       Paper-airplane mid-case fold — single crease line running corner
+       to corner across the case, top-left → bottom-right. Below the line
+       (the lower-triangular half of the case) is filled with ochre,
+       suggesting the folded plane wing. This is the focal element.
+
+       Case interior corners (inside the inset bezel):
+         top-left      = (106, 320)
+         top-right     = (1094, 320)
+         bottom-right  = (1094, 617)
+         bottom-left   = (106, 617)
+
+       Lower triangle = top-left → bottom-right → bottom-left → close.
+       Clipped to the rounded inset bezel rect so the ochre never
+       bleeds past the case edge.
+       ===================================================================== -->
+  <defs>
+    <clipPath id="paper80-case-clip">
+      <rect x="106" y="320" width="988" height="297" rx="9" ry="9"/>
+    </clipPath>
+  </defs>
+
+  <!-- Ochre fill of the lower triangular half (the folded plane). -->
+  <g clip-path="url(#paper80-case-clip)">
+    <path
+      d="M 106 320 L 1094 617 L 106 617 Z"
+      fill="oklch(0.72 0.10 75 / 0.42)" stroke="none"/>
+  </g>
+
+  <!-- =====================================================================
+       Key dot grid — warm-grey at low opacity. Single-splash convention:
+       the dots stay neutral; only the fold triangle carries ochre.
+       Layout: 6 rows.
+         Row 0 (F-row)        : 15 dots, recessed (smaller, lower opacity).
+         Rows 1–5 (alpha)     : 15 dots each.
+       Alpha cluster spans x=140..1000 (15 columns, 60px pitch except
+       last col compressed to seat row 5 mods). Right of x=1010 is the
+       nav cluster band — handled below as small rectangles (the 80%
+       tell), so the dot grid stops at the alpha cluster's right edge.
+       ===================================================================== -->
+
+  <!-- Row 0 — F-row (smaller dots, lower opacity, slight gap before nav rectangles) -->
+  <g stroke-opacity="0.5">
+    <circle cx="146" cy="350" r="2.5"/>
+    <circle cx="206" cy="350" r="2.5"/>
+    <circle cx="266" cy="350" r="2.5"/>
+    <circle cx="326" cy="350" r="2.5"/>
+    <circle cx="386" cy="350" r="2.5"/>
+    <circle cx="446" cy="350" r="2.5"/>
+    <circle cx="506" cy="350" r="2.5"/>
+    <circle cx="566" cy="350" r="2.5"/>
+    <circle cx="626" cy="350" r="2.5"/>
+    <circle cx="686" cy="350" r="2.5"/>
+    <circle cx="746" cy="350" r="2.5"/>
+    <circle cx="806" cy="350" r="2.5"/>
+    <circle cx="866" cy="350" r="2.5"/>
+    <circle cx="926" cy="350" r="2.5"/>
+    <circle cx="986" cy="350" r="2.5"/>
+  </g>
+
+  <!-- Rows 1–5 (alpha block) — slightly larger dots, higher opacity. -->
+  <g stroke-opacity="0.65">
+    <!-- Row 1 (number row) -->
+    <circle cx="146" cy="408" r="3"/>
+    <circle cx="206" cy="408" r="3"/>
+    <circle cx="266" cy="408" r="3"/>
+    <circle cx="326" cy="408" r="3"/>
+    <circle cx="386" cy="408" r="3"/>
+    <circle cx="446" cy="408" r="3"/>
+    <circle cx="506" cy="408" r="3"/>
+    <circle cx="566" cy="408" r="3"/>
+    <circle cx="626" cy="408" r="3"/>
+    <circle cx="686" cy="408" r="3"/>
+    <circle cx="746" cy="408" r="3"/>
+    <circle cx="806" cy="408" r="3"/>
+    <circle cx="866" cy="408" r="3"/>
+    <circle cx="926" cy="408" r="3"/>
+    <circle cx="986" cy="408" r="3"/>
+
+    <!-- Row 2 (top alpha) -->
+    <circle cx="146" cy="458" r="3"/>
+    <circle cx="206" cy="458" r="3"/>
+    <circle cx="266" cy="458" r="3"/>
+    <circle cx="326" cy="458" r="3"/>
+    <circle cx="386" cy="458" r="3"/>
+    <circle cx="446" cy="458" r="3"/>
+    <circle cx="506" cy="458" r="3"/>
+    <circle cx="566" cy="458" r="3"/>
+    <circle cx="626" cy="458" r="3"/>
+    <circle cx="686" cy="458" r="3"/>
+    <circle cx="746" cy="458" r="3"/>
+    <circle cx="806" cy="458" r="3"/>
+    <circle cx="866" cy="458" r="3"/>
+    <circle cx="926" cy="458" r="3"/>
+    <circle cx="986" cy="458" r="3"/>
+
+    <!-- Row 3 (home row) -->
+    <circle cx="146" cy="508" r="3"/>
+    <circle cx="206" cy="508" r="3"/>
+    <circle cx="266" cy="508" r="3"/>
+    <circle cx="326" cy="508" r="3"/>
+    <circle cx="386" cy="508" r="3"/>
+    <circle cx="446" cy="508" r="3"/>
+    <circle cx="506" cy="508" r="3"/>
+    <circle cx="566" cy="508" r="3"/>
+    <circle cx="626" cy="508" r="3"/>
+    <circle cx="686" cy="508" r="3"/>
+    <circle cx="746" cy="508" r="3"/>
+    <circle cx="806" cy="508" r="3"/>
+    <circle cx="866" cy="508" r="3"/>
+    <circle cx="926" cy="508" r="3"/>
+    <circle cx="986" cy="508" r="3"/>
+
+    <!-- Row 4 (bottom alpha) -->
+    <circle cx="146" cy="558" r="3"/>
+    <circle cx="206" cy="558" r="3"/>
+    <circle cx="266" cy="558" r="3"/>
+    <circle cx="326" cy="558" r="3"/>
+    <circle cx="386" cy="558" r="3"/>
+    <circle cx="446" cy="558" r="3"/>
+    <circle cx="506" cy="558" r="3"/>
+    <circle cx="566" cy="558" r="3"/>
+    <circle cx="626" cy="558" r="3"/>
+    <circle cx="686" cy="558" r="3"/>
+    <circle cx="746" cy="558" r="3"/>
+    <circle cx="806" cy="558" r="3"/>
+    <circle cx="866" cy="558" r="3"/>
+    <circle cx="926" cy="558" r="3"/>
+    <circle cx="986" cy="558" r="3"/>
+
+    <!-- Row 5 (mod row) — fewer, wider hits (Ctrl, Win, Alt, Space, Alt, Fn, Ctrl) -->
+    <circle cx="146" cy="600" r="3"/>
+    <circle cx="206" cy="600" r="3"/>
+    <circle cx="266" cy="600" r="3"/>
+    <circle cx="566" cy="600" r="3"/>
+    <circle cx="806" cy="600" r="3"/>
+    <circle cx="866" cy="600" r="3"/>
+    <circle cx="926" cy="600" r="3"/>
+    <circle cx="986" cy="600" r="3"/>
+  </g>
+
+  <!-- Faint vertical column guides across the alpha block — function as
+       both column separators and a subtle paper-grid texture. -->
+  <g stroke-opacity="0.14">
+    <line x1="176" y1="335" x2="176" y2="617"/>
+    <line x1="236" y1="335" x2="236" y2="617"/>
+    <line x1="296" y1="335" x2="296" y2="617"/>
+    <line x1="356" y1="335" x2="356" y2="617"/>
+    <line x1="416" y1="335" x2="416" y2="617"/>
+    <line x1="476" y1="335" x2="476" y2="617"/>
+    <line x1="536" y1="335" x2="536" y2="617"/>
+    <line x1="596" y1="335" x2="596" y2="617"/>
+    <line x1="656" y1="335" x2="656" y2="617"/>
+    <line x1="716" y1="335" x2="716" y2="617"/>
+    <line x1="776" y1="335" x2="776" y2="617"/>
+    <line x1="836" y1="335" x2="836" y2="617"/>
+    <line x1="896" y1="335" x2="896" y2="617"/>
+    <line x1="956" y1="335" x2="956" y2="617"/>
+  </g>
+
+  <!-- =====================================================================
+       Nav cluster — the 80% TKL's defining tell on the right-top.
+       3 cols × 2 rows of small rounded squares (Ins/Home/PgUp top,
+       Del/End/PgDn bottom). Sits to the right of the alpha block,
+       above the arrow cluster.
+       ===================================================================== -->
+  <g stroke-opacity="0.85">
+    <!-- Top row: Ins / Home / PgUp -->
+    <rect x="1018" y="397" width="22" height="22" rx="3" ry="3"/>
+    <rect x="1046" y="397" width="22" height="22" rx="3" ry="3"/>
+    <rect x="1074" y="397" width="22" height="22" rx="3" ry="3"/>
+    <!-- Bottom row: Del / End / PgDn -->
+    <rect x="1018" y="425" width="22" height="22" rx="3" ry="3"/>
+    <rect x="1046" y="425" width="22" height="22" rx="3" ry="3"/>
+    <rect x="1074" y="425" width="22" height="22" rx="3" ry="3"/>
+  </g>
+
+  <!-- =====================================================================
+       Arrow cluster — bottom-right. Four small rounded squares:
+       up above, left/down/right beneath. Reinforces TKL silhouette.
+       ===================================================================== -->
+  <g stroke-opacity="0.85">
+    <!-- Up -->
+    <rect x="1046" y="556" width="22" height="22" rx="3" ry="3"/>
+    <!-- Left -->
+    <rect x="1018" y="584" width="22" height="22" rx="3" ry="3"/>
+    <!-- Down -->
+    <rect x="1046" y="584" width="22" height="22" rx="3" ry="3"/>
+    <!-- Right -->
+    <rect x="1074" y="584" width="22" height="22" rx="3" ry="3"/>
+  </g>
+
+  <!-- =====================================================================
+       Paper-airplane crease — the focal stroke. Drawn AFTER the dot grid
+       so it reads on top, but BEFORE the case re-stroke so the corners
+       feel cleanly pinned to the case profile. Slightly thicker (2.5px)
+       and rendered in the ochre splash hue at full chroma — this is
+       the single load-bearing accent line.
+       ===================================================================== -->
+  <line
+    x1="106" y1="320" x2="1094" y2="617"
+    stroke="oklch(0.72 0.10 75)" stroke-width="2.5"/>
+
+  <!-- Tiny lock-hole gasket-mount tells — four small ochre dots at the
+       case corners, evoking the Paper80's lock-hole gasket points.
+       Single-splash discipline: same hue as the fold, no new color. -->
+  <g fill="oklch(0.72 0.10 75 / 0.85)" stroke="none">
+    <circle cx="118" cy="332" r="3"/>
+    <circle cx="1082" cy="332" r="3"/>
+    <circle cx="118" cy="605" r="3"/>
+    <circle cx="1082" cy="605" r="3"/>
+  </g>
+</svg>
