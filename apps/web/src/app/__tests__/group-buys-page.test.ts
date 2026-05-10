@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import type { GroupBuy } from '@thock/data'
-import { partitionGroupBuys } from '../group-buys/helpers'
+import { partitionGroupBuys, splitLiveByUrgency } from '../group-buys/helpers'
 
 function gb(over: Partial<GroupBuy> & Pick<GroupBuy, 'slug'>): GroupBuy {
   const { slug, name, ...rest } = over
@@ -95,5 +95,40 @@ describe('partitionGroupBuys', () => {
     const result = partitionGroupBuys([expired], NOW)
     expect(result.live).toEqual([])
     expect(result.ended.map((g) => g.slug)).toEqual(['expired'])
+  })
+})
+
+describe('splitLiveByUrgency', () => {
+  // Regression guard for /critique pass 2 [MED]: "Closing soon" framing
+  // applied to a buy with 37 days left was hype-bro voice. Bearings
+  // rule: brass urgency reserved for the last 72h (3 days).
+  it('returns two empty buckets for empty input', () => {
+    expect(splitLiveByUrgency([], NOW)).toEqual({
+      closingSoon: [],
+      liveOpen: [],
+    })
+  })
+
+  it('routes ≤3-day endDate to closingSoon, >3-day to liveOpen', () => {
+    const tomorrow = gb({ slug: 'tomorrow', endDate: '2026-05-10' })
+    const threeDays = gb({ slug: 'three', endDate: '2026-05-12' })
+    const fourDays = gb({ slug: 'four', endDate: '2026-05-13' })
+    const month = gb({ slug: 'month', endDate: '2026-06-09' })
+    const result = splitLiveByUrgency(
+      [tomorrow, threeDays, fourDays, month],
+      NOW,
+    )
+    expect(result.closingSoon.map((g) => g.slug)).toEqual([
+      'tomorrow',
+      'three',
+    ])
+    expect(result.liveOpen.map((g) => g.slug)).toEqual(['four', 'month'])
+  })
+
+  it('treats today (0 days left) as closingSoon', () => {
+    const today = gb({ slug: 'today', endDate: '2026-05-09' })
+    const result = splitLiveByUrgency([today], NOW)
+    expect(result.closingSoon.map((g) => g.slug)).toEqual(['today'])
+    expect(result.liveOpen).toEqual([])
   })
 })

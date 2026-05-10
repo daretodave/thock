@@ -77,4 +77,50 @@ describe('<GroupBuysWidget>', () => {
     const link = screen.getByRole('link', { name: /all active group buys/i })
     expect(link.getAttribute('href')).toBe('/group-buys')
   })
+
+  // Regression guard for /critique pass 2 [MED]: hardcoded "ending soon
+  // / Don't miss the close" framing on a buy with 37 days left was
+  // hype-bro voice. Bearings rule: brass urgency is reserved for the
+  // last 72 hours.
+  it('uses neutral "open now / Currently running" framing when no buy is in the urgent band', () => {
+    const month = makeGroupBuy({
+      slug: 'month',
+      endDate: '2026-06-15',
+    })
+    const { container } = render(
+      <GroupBuysWidget
+        groupBuys={[month]}
+        vendors={[makeVendor()]}
+        now={new Date('2026-05-09T00:00:00Z')}
+      />,
+    )
+    expect(container.querySelector('aside')?.getAttribute('data-urgent')).toBe(
+      'false',
+    )
+    expect(screen.getByText(/group buys · open now/i)).toBeTruthy()
+    expect(screen.getByText(/Currently running/i)).toBeTruthy()
+  })
+
+  it('uses urgent "ending soon / Don\'t miss the close" framing when at least one buy is within 72h', () => {
+    const tomorrow = makeGroupBuy({
+      slug: 'tomorrow',
+      endDate: '2026-05-10',
+    })
+    const month = makeGroupBuy({
+      slug: 'month',
+      endDate: '2026-06-15',
+    })
+    const { container } = render(
+      <GroupBuysWidget
+        groupBuys={[tomorrow, month]}
+        vendors={[makeVendor()]}
+        now={new Date('2026-05-09T00:00:00Z')}
+      />,
+    )
+    expect(container.querySelector('aside')?.getAttribute('data-urgent')).toBe(
+      'true',
+    )
+    expect(screen.getByText(/group buys · ending soon/i)).toBeTruthy()
+    expect(screen.getByText(/Don't miss the close/i)).toBeTruthy()
+  })
 })

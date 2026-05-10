@@ -11,7 +11,7 @@ import type { GroupBuy, Vendor } from '@thock/data'
 import { getAllGroupBuys, getAllVendors } from '@/lib/data-runtime'
 import { HomeSectionHeading } from '@/components/home/HomeSectionHeading'
 import { GroupBuyRow } from '@/components/group-buys/GroupBuyRow'
-import { partitionGroupBuys } from './helpers'
+import { partitionGroupBuys, splitLiveByUrgency } from './helpers'
 
 const PATH = '/group-buys'
 const TITLE = 'Group buys'
@@ -34,6 +34,12 @@ export default function GroupBuysPage(): ReactElement {
   const now = new Date()
   const all = getAllGroupBuys()
   const { live, announced, ended } = partitionGroupBuys(all, now)
+  // Critique pass 2 [MED]: "Closing soon" framing applied to a buy with
+  // 37 days left was hype-bro voice. Split the live array so "Closing
+  // soon" only renders when at least one buy is inside the 72h band;
+  // the rest goes under a neutral "Open now" heading. Bearings rule:
+  // brass urgency is reserved for the last 72 hours.
+  const { closingSoon, liveOpen } = splitLiveByUrgency(live, now)
   const vendors: Vendor[] = getAllVendors()
   const vendorBySlug = new Map<string, Vendor>(
     vendors.map((v) => [v.slug, v]),
@@ -98,11 +104,23 @@ export default function GroupBuysPage(): ReactElement {
         </Container>
       ) : null}
 
-      {live.length > 0 && (
+      {closingSoon.length > 0 && (
         <Container as="section" className="pb-12 sm:pb-16">
-          <HomeSectionHeading kicker="Live now" title="Closing soon" />
+          <HomeSectionHeading kicker="Last 72h" title="Closing soon" />
           <SectionStack
-            items={live}
+            items={closingSoon}
+            variant="live"
+            now={now}
+            vendorBySlug={vendorBySlug}
+          />
+        </Container>
+      )}
+
+      {liveOpen.length > 0 && (
+        <Container as="section" className="pb-12 sm:pb-16">
+          <HomeSectionHeading kicker="Live now" title="Open now" />
+          <SectionStack
+            items={liveOpen}
             variant="live"
             now={now}
             vendorBySlug={vendorBySlug}

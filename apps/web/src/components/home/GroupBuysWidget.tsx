@@ -1,7 +1,9 @@
 import Link from 'next/link'
 import type { ReactElement } from 'react'
 import type { GroupBuy, Vendor } from '@thock/data'
-import { GroupBuyCountdownRow } from './GroupBuyCountdownRow'
+import { GroupBuyCountdownRow, daysLeft } from './GroupBuyCountdownRow'
+
+const URGENT_THRESHOLD_DAYS = 3
 
 export type GroupBuysWidgetProps = {
   /** Active group buys, already filtered by `getActiveGroupBuys()`. */
@@ -40,9 +42,24 @@ export function GroupBuysWidget({
 
   const vendorBySlug = new Map(vendors.map((v) => [v.slug, v]))
 
+  // Bearings rule: brass urgency is reserved for the last 72h. The
+  // "ending soon / Don't miss the close" framing is appropriate only
+  // when at least one buy is inside the urgent band; otherwise it
+  // contradicts the row-level signal (rows <72h render in accent;
+  // rows ≥72h render neutral). Critique pass 2 [MED] flagged this as
+  // hype-bro voice on a knowledgeable-peer site.
+  const anyUrgent = sorted.some(
+    (gb) => daysLeft(gb.endDate, todayIso) <= URGENT_THRESHOLD_DAYS,
+  )
+  const kicker = anyUrgent
+    ? 'group buys · ending soon'
+    : 'group buys · open now'
+  const heading = anyUrgent ? "Don't miss the close" : 'Currently running'
+
   return (
     <aside
       data-testid="group-buys-widget"
+      data-urgent={anyUrgent ? 'true' : 'false'}
       className="flex flex-col gap-3 border border-border bg-surface p-6"
     >
       <div className="flex items-center gap-2">
@@ -51,10 +68,10 @@ export function GroupBuysWidget({
           className="inline-block h-1.5 w-1.5 rounded-full bg-up shadow-[0_0_0_3px_rgba(120,180,120,0.18)]"
         />
         <span className="font-mono uppercase tracking-[0.1em] text-micro text-text-3">
-          group buys · ending soon
+          {kicker}
         </span>
       </div>
-      <h3 className="font-serif text-h3 text-text">Don&apos;t miss the close</h3>
+      <h3 className="font-serif text-h3 text-text">{heading}</h3>
       <div className="flex flex-col">
         {sorted.map((gb) => (
           <GroupBuyCountdownRow

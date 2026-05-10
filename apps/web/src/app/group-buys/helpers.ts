@@ -6,7 +6,13 @@ export type GroupBuyPartition = {
   ended: GroupBuy[]
 }
 
+export type LiveUrgencyPartition = {
+  closingSoon: GroupBuy[]
+  liveOpen: GroupBuy[]
+}
+
 const ENDED_CAP = 6
+const URGENT_THRESHOLD_DAYS = 3
 
 function todayIso(now: Date): string {
   return now.toISOString().slice(0, 10)
@@ -67,4 +73,30 @@ export function partitionGroupBuys(
   })
 
   return { live, announced, ended: ended.slice(0, ENDED_CAP) }
+}
+
+/**
+ * Split the `live` array into a "closing soon" bucket (endDate within
+ * URGENT_THRESHOLD_DAYS = 3 of `now`) and the rest. Bearings rule
+ * "brass urgency reserved for the last 72 hours" — used by the
+ * /group-buys page to split the previously-monolithic Live section
+ * into a conditional "Closing soon" sub-section + a neutral
+ * "Open now" main section. Critique pass 2 [MED] drain.
+ */
+export function splitLiveByUrgency(
+  live: GroupBuy[],
+  now: Date = new Date(),
+): LiveUrgencyPartition {
+  const today = todayIso(now)
+  const closingSoon: GroupBuy[] = []
+  const liveOpen: GroupBuy[] = []
+
+  for (const gb of live) {
+    const ms = Date.parse(`${gb.endDate}T00:00:00.000Z`) - Date.parse(`${today}T00:00:00.000Z`)
+    const daysLeft = Math.max(0, Math.ceil(ms / 86_400_000))
+    if (daysLeft <= URGENT_THRESHOLD_DAYS) closingSoon.push(gb)
+    else liveOpen.push(gb)
+  }
+
+  return { closingSoon, liveOpen }
 }
