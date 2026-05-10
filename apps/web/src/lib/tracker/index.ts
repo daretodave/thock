@@ -55,8 +55,12 @@ function sparkSlope(row: TrendRow): number {
  *  1. riser   = max-score row with direction='up' (else max-score row).
  *  2. faller  = min-score row with direction='down' (else min-score row).
  *  3. breakout = direction='up' row with the steepest spark slope.
- *  4. sleeper = direction='flat' row with the highest abs(score)
- *               (else any remaining row).
+ *  4. sleeper = smallest abs(score) non-flat row (under-the-radar mover);
+ *               drops the slot if no non-flat row remains. Critique
+ *               pass 9 #8: pinning Sleeper on a flat-direction row
+ *               whose editor's note says nothing's moving reads as
+ *               auto-populated rather than editorially chosen, so
+ *               flat-only fallback is removed.
  */
 export function pickSummarySlots(rows: readonly TrendRow[]): SummarySlot[] {
   if (rows.length === 0) return []
@@ -88,13 +92,11 @@ export function pickSummarySlots(rows: readonly TrendRow[]): SummarySlot[] {
     )
   }
   const pickSleeper = () => {
-    const candidates = remaining()
+    const candidates = remaining().filter((r) => r.direction !== 'flat')
     if (candidates.length === 0) return null
-    const flats = candidates.filter((r) => r.direction === 'flat')
-    const pool = flats.length > 0 ? flats : candidates
-    return pool.reduce(
-      (acc, r) => (Math.abs(r.score) > Math.abs(acc.score) ? r : acc),
-      pool[0]!,
+    return candidates.reduce(
+      (acc, r) => (Math.abs(r.score) < Math.abs(acc.score) ? r : acc),
+      candidates[0]!,
     )
   }
 

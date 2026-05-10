@@ -108,7 +108,7 @@ describe('pickSummarySlots', () => {
       row({ name: 'Up-A', direction: 'up', score: 30, spark: [1, 5, 10] }),
       row({ name: 'Up-B', direction: 'up', score: 12, spark: [1, 2, 18] }), // steepest
       row({ name: 'Down-A', direction: 'down', score: -22, spark: [10, 5, 1] }),
-      row({ name: 'Flat-A', direction: 'flat', score: 4, spark: [4, 4, 4] }),
+      row({ name: 'Up-C', direction: 'up', score: 6, spark: [3, 4, 6] }), // smallest-abs non-flat → sleeper
     ]
     const slots = pickSummarySlots(rows)
     expect(slots.map((s) => s.kind)).toEqual([
@@ -121,7 +121,7 @@ describe('pickSummarySlots', () => {
       'Up-A',
       'Down-A',
       'Up-B',
-      'Flat-A',
+      'Up-C',
     ])
   })
 
@@ -141,5 +141,41 @@ describe('pickSummarySlots', () => {
     const slots = pickSummarySlots(rows)
     expect(slots[0]?.kind).toBe('riser')
     expect(slots[0]?.row.name).toBe('B')
+  })
+
+  it('drops the sleeper slot when only flat rows remain (critique pass 9 #8)', () => {
+    // Pre-fix, the Sleeper slot fell back to the highest-abs flat
+    // row when no flats-or-anything remained — producing a
+    // mismatched-header card (e.g. /trends/tracker W19 surfaced
+    // Wuque Studio at flat with editor's note "no new headline
+    // release this 8-week window"). The fix requires non-flat for
+    // Sleeper and drops the slot rather than pretending.
+    const rows: TrendRow[] = [
+      row({ name: 'Up-A', direction: 'up', score: 30, spark: [1, 5, 10] }),
+      row({ name: 'Up-B', direction: 'up', score: 12, spark: [1, 2, 18] }),
+      row({ name: 'Down-A', direction: 'down', score: -22, spark: [10, 5, 1] }),
+      row({ name: 'Flat-A', direction: 'flat', score: 4, spark: [4, 4, 4] }),
+      row({ name: 'Flat-B', direction: 'flat', score: 8, spark: [8, 8, 8] }),
+    ]
+    const slots = pickSummarySlots(rows)
+    expect(slots.map((s) => s.kind)).toEqual(['riser', 'faller', 'breakout'])
+    // Confirm the dropped slot is sleeper specifically.
+    expect(slots.find((s) => s.kind === 'sleeper')).toBeUndefined()
+  })
+
+  it('picks the smallest-abs non-flat row for sleeper (under-the-radar mover)', () => {
+    const rows: TrendRow[] = [
+      row({ name: 'Up-Big', direction: 'up', score: 40, spark: [1, 10, 30] }),
+      row({ name: 'Up-Steep', direction: 'up', score: 15, spark: [1, 2, 25] }),
+      row({ name: 'Down-Big', direction: 'down', score: -30, spark: [30, 10, 1] }),
+      row({ name: 'Up-Small', direction: 'up', score: 5, spark: [3, 4, 5] }),
+      row({ name: 'Down-Small', direction: 'down', score: -3, spark: [5, 4, 3] }),
+    ]
+    const slots = pickSummarySlots(rows)
+    const sleeper = slots.find((s) => s.kind === 'sleeper')
+    // After riser/faller/breakout consume Up-Big, Down-Big, Up-Steep,
+    // remaining non-flat rows are Up-Small (abs=5) and Down-Small (abs=3).
+    // Smallest abs wins → Down-Small.
+    expect(sleeper?.row.name).toBe('Down-Small')
   })
 })
