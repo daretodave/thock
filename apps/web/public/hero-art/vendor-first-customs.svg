@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — vendor-first customs, hub-and-spoke configurator with rising sparkline</title>
+
+  <!-- Splash band: faint plum wash setting the stage -->
+  <path
+    d="M 70 90 L 1130 90 L 1130 660 L 70 660 Z"
+    fill="oklch(0.68 0.105 340 / 0.08)" stroke="none"/>
+
+  <!-- ============ VENDOR HUB ============
+       Centered horizontally, sitting in the upper-mid third of the canvas
+       so the variant arc and bottom sparkline both read clearly.
+       Hub center: (600, 280). Two-layer mark: outer keyboard-shaped node
+       (rounded rect with two key-dots) + inner diamond. Filled in splash hue. -->
+
+  <!-- Outer hub node: small keyboard-shaped capsule, splash-filled -->
+  <rect
+    x="552" y="252" width="96" height="56" rx="10" ry="10"
+    fill="oklch(0.68 0.105 340 / 0.92)" stroke="oklch(0.68 0.105 340)" stroke-width="2"/>
+
+  <!-- Inner diamond — the vendor mark, drawn in stroke against the splash fill -->
+  <path
+    d="M 600 264 L 624 280 L 600 296 L 576 280 Z"
+    stroke="oklch(0.78 0.005 90)" stroke-opacity="0.9" stroke-width="1.5" fill="none"/>
+
+  <!-- Two key-dot hints inside the hub capsule — keeps the keyboard reading -->
+  <circle cx="568" cy="280" r="2" fill="oklch(0.78 0.005 90 / 0.85)" stroke="none"/>
+  <circle cx="632" cy="280" r="2" fill="oklch(0.78 0.005 90 / 0.85)" stroke="none"/>
+
+  <!-- Soft outer halo on the hub -->
+  <rect
+    x="544" y="244" width="112" height="72" rx="14" ry="14"
+    stroke="oklch(0.68 0.105 340)" stroke-opacity="0.35" stroke-width="1.5" fill="none"/>
+
+  <!-- ============ VARIANT FAN ============
+       Five product variants arranged in an arc beneath the hub, fanning out
+       from ~120deg through 60deg. Each variant is a small board silhouette
+       (rounded rect with two interior dot-rows hinting at keys) sitting at
+       the end of an arrow drawn from the hub. Variants stay stroke-only —
+       the splash hue lives only on the hub + sparkline. -->
+
+  <!-- Arrow 1: leftmost — to far-left variant at (180, 470) -->
+  <g stroke-opacity="0.55">
+    <line x1="572" y1="306" x2="232" y2="448"/>
+    <!-- Arrowhead -->
+    <path d="M 232 448 L 246 442 M 232 448 L 240 458"/>
+  </g>
+
+  <!-- Arrow 2: left-mid — to (390, 510) -->
+  <g stroke-opacity="0.6">
+    <line x1="586" y1="312" x2="408" y2="488"/>
+    <path d="M 408 488 L 422 484 M 408 488 L 414 500"/>
+  </g>
+
+  <!-- Arrow 3: center — to (600, 530) -->
+  <g stroke-opacity="0.65">
+    <line x1="600" y1="316" x2="600" y2="498"/>
+    <path d="M 600 498 L 593 491 M 600 498 L 607 491"/>
+  </g>
+
+  <!-- Arrow 4: right-mid — to (810, 510) -->
+  <g stroke-opacity="0.6">
+    <line x1="614" y1="312" x2="792" y2="488"/>
+    <path d="M 792 488 L 778 484 M 792 488 L 786 500"/>
+  </g>
+
+  <!-- Arrow 5: rightmost — to (1020, 470) -->
+  <g stroke-opacity="0.55">
+    <line x1="628" y1="306" x2="968" y2="448"/>
+    <path d="M 968 448 L 954 442 M 968 448 L 960 458"/>
+  </g>
+
+  <!-- Variant 1: far-left — small board silhouette, ~96x44 -->
+  <g stroke-opacity="0.7">
+    <rect x="136" y="448" width="96" height="44" rx="6" ry="6"/>
+    <rect x="144" y="456" width="80" height="28" rx="3" ry="3" stroke-opacity="0.4"/>
+    <!-- Two faint key-dot rows -->
+    <circle cx="158" cy="466" r="1.5"/>
+    <circle cx="178" cy="466" r="1.5"/>
+    <circle cx="198" cy="466" r="1.5"/>
+    <circle cx="218" cy="466" r="1.5"/>
+    <circle cx="158" cy="478" r="1.5"/>
+    <circle cx="178" cy="478" r="1.5"/>
+    <circle cx="198" cy="478" r="1.5"/>
+    <circle cx="218" cy="478" r="1.5"/>
+    <!-- Tiny "config A" tag line beneath -->
+    <line x1="148" y1="504" x2="220" y2="504" stroke-opacity="0.35"/>
+    <line x1="148" y1="510" x2="194" y2="510" stroke-opacity="0.25"/>
+  </g>
+
+  <!-- Variant 2: left-mid — slightly wider, hinting at "different mount" -->
+  <g stroke-opacity="0.7">
+    <rect x="324" y="488" width="100" height="48" rx="7" ry="7"/>
+    <rect x="332" y="496" width="84" height="32" rx="3" ry="3" stroke-opacity="0.4"/>
+    <circle cx="346" cy="508" r="1.5"/>
+    <circle cx="366" cy="508" r="1.5"/>
+    <circle cx="386" cy="508" r="1.5"/>
+    <circle cx="406" cy="508" r="1.5"/>
+    <circle cx="346" cy="520" r="1.5"/>
+    <circle cx="366" cy="520" r="1.5"/>
+    <circle cx="386" cy="520" r="1.5"/>
+    <circle cx="406" cy="520" r="1.5"/>
+    <line x1="336" y1="548" x2="412" y2="548" stroke-opacity="0.35"/>
+    <line x1="336" y1="554" x2="384" y2="554" stroke-opacity="0.25"/>
+  </g>
+
+  <!-- Variant 3: center — square-ish, hinting at "different weight/material" -->
+  <g stroke-opacity="0.7">
+    <rect x="546" y="498" width="108" height="52" rx="7" ry="7"/>
+    <rect x="554" y="506" width="92" height="36" rx="3" ry="3" stroke-opacity="0.4"/>
+    <circle cx="570" cy="518" r="1.5"/>
+    <circle cx="592" cy="518" r="1.5"/>
+    <circle cx="614" cy="518" r="1.5"/>
+    <circle cx="636" cy="518" r="1.5"/>
+    <circle cx="570" cy="532" r="1.5"/>
+    <circle cx="592" cy="532" r="1.5"/>
+    <circle cx="614" cy="532" r="1.5"/>
+    <circle cx="636" cy="532" r="1.5"/>
+    <line x1="558" y1="562" x2="642" y2="562" stroke-opacity="0.35"/>
+    <line x1="558" y1="568" x2="612" y2="568" stroke-opacity="0.25"/>
+  </g>
+
+  <!-- Variant 4: right-mid — mirror of left-mid -->
+  <g stroke-opacity="0.7">
+    <rect x="776" y="488" width="100" height="48" rx="7" ry="7"/>
+    <rect x="784" y="496" width="84" height="32" rx="3" ry="3" stroke-opacity="0.4"/>
+    <circle cx="798" cy="508" r="1.5"/>
+    <circle cx="818" cy="508" r="1.5"/>
+    <circle cx="838" cy="508" r="1.5"/>
+    <circle cx="858" cy="508" r="1.5"/>
+    <circle cx="798" cy="520" r="1.5"/>
+    <circle cx="818" cy="520" r="1.5"/>
+    <circle cx="838" cy="520" r="1.5"/>
+    <circle cx="858" cy="520" r="1.5"/>
+    <line x1="788" y1="548" x2="864" y2="548" stroke-opacity="0.35"/>
+    <line x1="788" y1="554" x2="836" y2="554" stroke-opacity="0.25"/>
+  </g>
+
+  <!-- Variant 5: far-right — mirror of far-left -->
+  <g stroke-opacity="0.7">
+    <rect x="968" y="448" width="96" height="44" rx="6" ry="6"/>
+    <rect x="976" y="456" width="80" height="28" rx="3" ry="3" stroke-opacity="0.4"/>
+    <circle cx="990" cy="466" r="1.5"/>
+    <circle cx="1010" cy="466" r="1.5"/>
+    <circle cx="1030" cy="466" r="1.5"/>
+    <circle cx="1050" cy="466" r="1.5"/>
+    <circle cx="990" cy="478" r="1.5"/>
+    <circle cx="1010" cy="478" r="1.5"/>
+    <circle cx="1030" cy="478" r="1.5"/>
+    <circle cx="1050" cy="478" r="1.5"/>
+    <line x1="980" y1="504" x2="1056" y2="504" stroke-opacity="0.35"/>
+    <line x1="980" y1="510" x2="1028" y2="510" stroke-opacity="0.25"/>
+  </g>
+
+  <!-- ============ SPARKLINE ============
+       Travels along the bottom band of the canvas, rising left-to-right
+       to imply "configurator era trending up". 8 points, peaks at right.
+       Plum splash hue, 2.5px stroke. Sits below the variant fan so it
+       reads as a separate ground layer. -->
+
+  <!-- Faint area fill beneath the sparkline -->
+  <path
+    d="
+      M 90 624
+      L 236 612
+      L 381 608
+      L 527 596
+      L 673 580
+      L 818 552
+      L 964 510
+      L 1110 444
+      L 1110 660
+      L 90 660
+      Z"
+    fill="oklch(0.68 0.105 340 / 0.16)" stroke="none"/>
+
+  <!-- The sparkline trend curve -->
+  <polyline
+    points="
+      90,624
+      236,612
+      381,608
+      527,596
+      673,580
+      818,552
+      964,510
+      1110,444"
+    stroke="oklch(0.68 0.105 340)" stroke-width="2.5"/>
+
+  <!-- Subtle interior data-point dots on the sparkline -->
+  <g stroke-opacity="0.55">
+    <circle cx="90"   cy="624" r="3.5"/>
+    <circle cx="236"  cy="612" r="3.5"/>
+    <circle cx="381"  cy="608" r="3.5"/>
+    <circle cx="527"  cy="596" r="3.5"/>
+    <circle cx="673"  cy="580" r="3.5"/>
+    <circle cx="818"  cy="552" r="3.5"/>
+    <circle cx="964"  cy="510" r="3.5"/>
+  </g>
+
+  <!-- Focal accent dot at the sparkline peak — plum,
+       filled core + soft outer ring (mirrors series convention) -->
+  <circle cx="1110" cy="444" r="9"  fill="oklch(0.68 0.105 340 / 0.95)" stroke="oklch(0.68 0.105 340)"/>
+  <circle cx="1110" cy="444" r="16" stroke="oklch(0.68 0.105 340)" stroke-opacity="0.45" fill="none"/>
+</svg>

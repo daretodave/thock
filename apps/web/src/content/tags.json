@@ -52,6 +52,8 @@
     { "slug": "kbdfans", "name": "KBDfans", "category": "brand" },
     { "slug": "keycaps", "name": "Keycaps", "category": "misc" },
     { "slug": "mx2a", "name": "MX2A", "category": "switch" },
-    { "slug": "switches", "name": "Switches", "category": "misc" }
+    { "slug": "switches", "name": "Switches", "category": "misc" },
+    { "slug": "vendor", "name": "Vendor", "category": "misc" },
+    { "slug": "configurator", "name": "Configurator", "category": "misc" }
   ]
 }

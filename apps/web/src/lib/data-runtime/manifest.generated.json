@@ -623,7 +623,7 @@
             23,
             24
           ],
-          "articleSlug": null,
+          "articleSlug": "vendor-first-customs",
           "note": "Sonnet 2026 refresh shipped on configurator on March 4 and Encore caught the same wave; coverage by Alex Otos and Tom's Hardware kept the storefront ranking through April."
         },
         {
@@ -641,7 +641,7 @@
             18,
             18
           ],
-          "articleSlug": null,
+          "articleSlug": "vendor-first-customs",
           "note": "GMK CYL lineup (Vintage Keys, Monochrome Dolch shipping wave) keeps the storefront active; Bakeneko/Satisfaction restocks landing on schedule through April."
         },
         {
@@ -659,7 +659,7 @@
             14,
             14
           ],
-          "articleSlug": null,
+          "articleSlug": "vendor-first-customs",
           "note": "EU-side fulfillment for GMK Dolch R5X and other CYL runs gave them a March-April surge as US buyers routed around Oblotzky waitlists."
         },
         {
@@ -721,6 +721,56 @@
     }
   ],
   "articles": [
+    {
+      "slug": "vendor-first-customs",
+      "frontmatter": {
+        "slug": "vendor-first-customs",
+        "title": "When customs became vendor-first",
+        "lede": "From 2018 through 2022 the typical custom shipped through one host vendor and a fan of regional proxies; by 2026 the baseline custom is a configurator on a vendor's own storefront. Boards moved. Keycap group buys mostly didn't.",
+        "author": "thock",
+        "pillar": "trends",
+        "tags": [
+          "vendor",
+          "configurator",
+          "mode",
+          "cannonkeys",
+          "qwertykeys",
+          "trends-2026"
+        ],
+        "publishedAt": "2026-05-10T20:00:00.000Z",
+        "updatedAt": null,
+        "heroImage": "/hero-art/vendor-first-customs.svg",
+        "heroImageAlt": "Centered vendor hub — a plum-filled keyboard-shaped node with an inner diamond mark — in the upper-mid canvas, with five arrows fanning out beneath it to a low arc of five product-variant board silhouettes (each a small rounded-rect keyboard outline with faint key-dot rows and tiny config-tag lines beneath); a single plum sparkline rises left-to-right along the bottom of the canvas, peaking at the right edge with a focal dot.",
+        "featured": false,
+        "popularityScore": 0,
+        "guideSection": null,
+        "mentionedParts": [
+          {
+            "id": "bakeneko",
+            "kind": "board",
+            "slug": "bakeneko65"
+          },
+          {
+            "id": "qk75",
+            "kind": "board",
+            "slug": "qk75"
+          },
+          {
+            "id": "mammoth",
+            "kind": "board",
+            "slug": "mammoth75"
+          },
+          {
+            "id": "sonnet",
+            "kind": "board",
+            "slug": "mode-sonnet"
+          }
+        ]
+      },
+      "body": "\nA custom-board launch in 2020 looked like a designer with a render,\na host vendor, and three or four regional proxies; in 2026 it\nlooks like a configurator on the vendor's own storefront. The\nshape of how a custom reaches a buyer has flipped, and the flip\nhas been quiet enough that a reader returning to the hobby after\na couple of years away will notice the absence of proxy chatter\nbefore they notice what replaced it. The replacement is\nvendor-first: storefronts that build, stock, and ship their own\nboards on a configurator cadence rather than orchestrating a\nmulti-region group buy around someone else's design.\n\n## The proxy era, briefly\n\nThrough the 2018-to-2022 stretch, the default shape of a custom\nlaunch was an interest check on GeekHack, a host vendor for the\nglobal region, and a set of regional proxies — Oblotzky and\nMyKeyboard.eu for Europe, Cerakeys for Asia-Pacific, a rotating\ncast for South America. Designers shopped boards around for proxy\ncoverage; buyers picked routes based on shipping math and which\nproxy had the cleanest customs record. None of that was a flaw\nexactly — it was the supply chain a hobbyist scene built when\nunit volume was small, manufacturing risk was high, and trust\nwas distributed across people who had been running buys for\nyears.\n\nWhat it wasn't was instant. A buyer who decided in March that\nthey wanted a custom typically had a board in hand in November.\nThat latency was the cost of access, and for most of the era it\nwas the only cost on offer.\n\n## Mode set the configurator template\n\nThe clearest break from that template is what Mode does now. The\n<PartReference id=\"sonnet\" /> ships through Mode's own\nconfigurator at modedesigns.com — pick chassis color, accent\nweight, plate, PCB, and the order goes into the queue against\nin-house manufacturing slots rather than into a multi-region\nallocation pool. <Source href=\"https://modedesigns.com/pages/sonnet-2026\">Mode's\nSonnet 2026 landing page</Source> reads like a product page\nrather than an interest-check announcement, and the rest of\nMode's catalog has converged on the same shape.\n\nThat's a different supply story. There's no proxy. There's no\n\"check your region\" footnote. The configurator is the supply\nchain. Mode's [Phase-19 trends row](/trends/tracker) reflects\nthe consequence — vendor signal +24, direction up, on the back of\nconfigurator-shipping cadence rather than launch-event spikes.\nThe shift from launches to cadence is the actual thesis: a\nvendor that ships continuously stops needing the proxy\ninfrastructure that existed to absorb a single-month surge.\n\n## CannonKeys and Qwertykeys shipped in-house\n\nMode is the loudest example of the pattern, but not the only one.\nCannonKeys spent the proxy era hosting other people's boards and\nmoved into the in-house lane with the\n<PartReference id=\"bakeneko\" /> at $150 in stock — a direct-fulfillment\ncustom that the trends rows describe as the first-custom answer\nbecause it's actually on the shelf the day a reader asks. The\n[Phase-19 row for CannonKeys](/trends/tracker) reads +18, direction\nup, on roughly the same logic as Mode: a vendor whose own\ncatalog is the product.\n\nQwertykeys followed a parallel path. The <PartReference id=\"qk75\" />\nruns direct from Qwertykeys's storefront with wireless and\nhot-swap as standard configurator options, not as upsell tiers\non a group buy. Wuque Studio migrated its storefront to\nshop.wuquestudio.com in the same window, with the wuquestudio.com\nroot now redirecting — a small URL change that signals the same\nthesis. The vendor is the destination. The configurator is the\nshape of the visit.\n\n<Callout type=\"note\" title=\"What 'in-house' actually means\">\n  Vendor-first doesn't always mean vertically integrated. Most of\n  these boards are still manufactured at established CNC and\n  injection houses; the change is who carries the inventory risk\n  and runs the buyer-facing checkout. The proxy era distributed\n  that risk across a network. The configurator era concentrates\n  it on the vendor's balance sheet — which is why the pattern\n  works for vendors with retail muscle and not for one-board\n  designers.\n</Callout>\n\n## Where the GB era still lives\n\nThe proxy model didn't fail and it hasn't ended; it stopped being\nthe default for boards. Keycap group buys are the obvious place\nthe older shape persists, and the persistence is structural\nrather than nostalgic. GMK CYL runs like\n[Prussian Alert](/article/gmk-cyl-prussian-alert) and King of the\nSeas still ship as multi-month interest-check-to-fulfillment\nbuys with proxy-style routing, because the manufacturing cadence\nat GMK is a queue and a queue prices itself as a group buy.\nPrototypist's [Phase-19 row](/trends/tracker) — vendor signal\n+14, direction up — describes the proxy-era role explicitly:\nEU-side fulfillment for GMK Dolch R5X and other CYL runs.\n\nBoards retained that pattern in narrower bands. The\n<PartReference id=\"mammoth\" /> is the example worth holding in\nmind: Wuque shipped a configurator-first refresh on its mainline\nboards while keeping a separate group-buy lane for grail\nchassis like the Mammoth, which is the cleanest illustration of\nthe two patterns coexisting at one vendor. The grail tier still\nruns proxies. The mainline tier doesn't. The same vendor, two\nsupply chains, sorted by where unit volume actually wants to\nlive.\n\n## What we're watching\n\nTwo threads worth following over the next few quarters. The\nfirst is whether the configurator pattern reaches further down\nthe price ladder; the in-house customs sitting under $200 in\n2026 are still mostly evergreens like the Bakeneko, and the\nquestion is whether the next tier of vendors starts running\ntheir own configurator-first lineups instead of hosting other\ndesigners' buys. Mode's pattern only works because Mode runs the\nfactory relationship. The smaller storefronts that follow will\nbe the test of whether the pattern generalizes.\n\nThe second is keycaps. GMK's queue is unlikely to change shape,\nbut the dye-sub and cherry-clone houses moving units in 2026 are\nrunning closer to a configurator cadence than to a group-buy\none. If a CYL-grade alternative ships through a vendor-first\nflow at a price band that competes with GMK's run-of-the-mill\nsets, the proxy era loses its last default category. That's a\nbigger if than the boards story was, and it's also why the\n[/group-buys](/group-buys) board still exists as its own\nsurface — the shape of the keycap supply chain hasn't converged\nyet, and the convergence is the trend worth watching next.\n",
+      "readTime": 5,
+      "filePath": "Z:\\keyboard\\apps\\web\\src\\content\\articles\\vendor-first-customs.mdx"
+    },
     {
       "slug": "cherry-mx2a-revision",
       "frontmatter": {
@@ -1160,6 +1210,11 @@
       "category": "switch"
     },
     {
+      "slug": "configurator",
+      "name": "Configurator",
+      "category": "misc"
+    },
+    {
       "slug": "deep-dive",
       "name": "Deep dive",
       "category": "misc"
@@ -1330,6 +1385,11 @@
       "category": "misc"
     },
     {
+      "slug": "vendor",
+      "name": "Vendor",
+      "category": "misc"
+    },
+    {
       "slug": "voyager",
       "name": "Voyager",
       "category": "brand"
@@ -1340,5 +1400,5 @@
       "category": "brand"
     }
   ],
-  "generatedAt": "2026-05-10T05:01:59.871Z"
+  "generatedAt": "2026-05-10T05:37:04.280Z"
 }
