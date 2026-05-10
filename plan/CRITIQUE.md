@@ -25,13 +25,16 @@
 - verify note: 409 e2e green parallel — no #418 flake this run.
 - source: browser
 
-### [MED] /trends/tracker — Sleeper summary card highlights a row whose own editor's note says nothing's moving
+### [x] [MED] /trends/tracker — Sleeper summary card highlights a row whose own editor's note says nothing's moving
+- addressed in: bdc2082 (this tick — iterate drain)
+- issue: #35
 - pass: 9 (commit 40b2e55)
 - viewport: desktop
 - category: copy
 - observation: The four summary cards at the top of /trends/tracker are Biggest Riser / Biggest Faller / Breakout / Sleeper. The Sleeper card highlights "Wuque Studio" with score `flat`, and the editor's note immediately below explicitly says "Morandi switches and the Mammoth75 are still the steady-sellers; no new headline release this 8-week window, but storefront restock cadence held." That description is steady-holding, not sleeping. "Sleeper" implies an under-the-radar pick about to break out; pinning it on a row whose own copy says nothing's happening makes the summary card feel auto-populated rather than editorially chosen. The card weakens the page's signature-feature framing — a tracker that picks the wrong "sleeper" reads less authoritative.
 - evidence: `curl -s https://thock-coral.vercel.app/trends/tracker | grep` → `data-testid="tracker-summary-card"` `data-kind="sleeper"` contains `<h3>Wuque Studio</h3>` and editor's note string "no new headline release this 8-week window, but storefront restock cadence held."
-- suggested fix: either (a) update the Sleeper-selector logic to require a non-flat direction (e.g., movers with low absolute deltas qualify, but pure-flat rows do not), OR (b) drop the Sleeper card entirely on weeks where no row qualifies (graceful empty rather than mismatched header), OR (c) rename the card "Steady" / "Holding" when the highlighted row is flat. Probably 5–15 lines in the tracker-summary-cards data selector.
+- fix: combined options (a) and (b) of the suggested fix. Updated `pickSleeper` in `apps/web/src/lib/tracker/index.ts` to filter `direction !== 'flat'` and pick the smallest abs(score) non-flat row remaining (under-the-radar mover semantic), dropping the slot entirely if no non-flat row remains. Reduce comparator flipped from `>` to `<` (was max-abs flat, now min-abs non-flat). On W19 data this swaps Wuque Studio (flat, "no new headline release" note) for Prototypist (+14 up, "EU-side fulfillment surge" note — a real under-the-radar story). Existing helpers test updated to use Up-C (small non-flat) as the sleeper expectation; two new tests lock in: (1) sleeper-slot drops when only flat rows remain, (2) smallest-abs non-flat selection across mixed up/down inputs. Considered (rejected) suggested option (c) "rename to Steady/Holding when flat" — adds component-level conditional state; the semantic-tightening fix is cleaner.
+- verify note: 409 e2e green parallel — no #418 flake this run.
 - source: browser
 
 ### [LOW] /trends + all pillar landings — eyebrow `pillar · NN of 05` reads as mechanical sequence position
