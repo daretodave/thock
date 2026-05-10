@@ -123,7 +123,7 @@ export default function IdeasPage(): ReactElement {
 
       {archive.length > 0 && (
         <Container as="section" className="pb-12 sm:pb-16">
-          <HomeSectionHeading kicker="Archive" title="All Ideas pieces" />
+          <HomeSectionHeading kicker="Archive" title="More Ideas pieces" />
           <PillarArchiveList
             articles={archive}
             tagsBySlug={tagsBySlug}

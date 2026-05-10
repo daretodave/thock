@@ -99,13 +99,15 @@
 - suggested fix: drop "Closing soon" as the live heading entirely and use "Live now" (matching the kicker) — split a "Closing soon" sub-section that only renders when at least one row is inside a 72h window. Mirror the same logic in the home widget: when no live buy is <72h, replace "ending soon / don't miss the close" with neutral "live group buy" framing. The 72h check already exists in the seed-window math; reuse it for the headings.
 - source: browser
 
-### [MED] /trends — pillar archive labeled "All Trends pieces" but excludes the hero
+### [x] [MED] /trends — pillar archive labeled "All Trends pieces" but excludes the hero
+- addressed in: pending commit (this tick)
+- issue: [mirror-skipped: token lacks repo:labels write — same 403 path as 4b8c793]
 - pass: 2 (commit e270ced)
 - viewport: both
 - category: content
-- observation: The pillar lands the freshly-published "Reading the Trends Tracker" as its hero card and then renders an archive heading "All Trends pieces" — but the archive list contains only "The slow fade of Alice layouts." A reader sees the count and the cards disagree by exactly one (the hero), and the same pattern is present on every pillar (News, Deep Dives, Ideas) by code structure.
-- evidence: `apps/web/src/app/trends/page.tsx:44-45` deliberately splits `lead = all[0]; archive = all.slice(1)`, then renders the archive under title "All Trends pieces" (line 120). News/Ideas/Deep-Dives use the same shape. Live confirmation on https://thock-coral.vercel.app/trends.
-- suggested fix: rename the archive heading to "More Trends pieces" (matching the actual content) across all four pillar pages — single string change per file. Alternative: include the hero in the archive list so the heading stays accurate; risk is the hero-card visually duplicating into the list immediately below. Renaming is the lower-friction fix and matches the bearings voice.
+- root cause: every pillar page (`/trends`, `/news`, `/ideas`, `/deep-dives`) splits the article list into `lead = all[0]; archive = all.slice(1)` to surface the newest piece as a hero card, then renders the rest under `title="All <Pillar> pieces"`. The "All" claim disagreed with reality by exactly one (the hero) on every pillar — and the disagreement was most visible on /trends where the archive contained a single article ("The slow fade of Alice layouts") under "All Trends pieces" while the hero "Reading the Trends Tracker" sat right above it.
+- fix: shipped the row's lower-friction option (rename, not include-hero-in-archive). Renamed the heading from `"All <Pillar> pieces"` → `"More <Pillar> pieces"` across all four pillar pages: `apps/web/src/app/trends/page.tsx:120`, `news/page.tsx:109`, `ideas/page.tsx:126`, `deep-dives/page.tsx:106`. Also normalized `deep-dives` from "All Deep Dives" (missing the "pieces" suffix the other three carried) → "More Deep Dives" (matching the kicker rhythm without the suffix, which reads better for the two-word pillar name). Single string change per file.
+- regression guard: no test assertions reference these literal strings — only the design exemplar (`design/page-pillar.jsx:48`) and the phase 7 brief (`plan/phases/phase_7_news.md:26`) carry "All News pieces" as point-in-time snapshots and are intentionally left alone. Future pillar-shape changes that re-introduce "All" framing will fail loud at the next /critique pass.
 - source: browser
 
 ### [x] [LOW] / footer — newsletter form aria-label is "Newsletter signup placeholder"

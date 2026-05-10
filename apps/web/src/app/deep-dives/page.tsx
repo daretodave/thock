@@ -103,7 +103,7 @@ export default function DeepDivesPage(): ReactElement {
 
       {archive.length > 0 && (
         <Container as="section" className="pb-12 sm:pb-16">
-          <HomeSectionHeading kicker="Archive" title="All Deep Dives" />
+          <HomeSectionHeading kicker="Archive" title="More Deep Dives" />
           <PillarArchiveList
             articles={archive}
             tagsBySlug={tagsBySlug}

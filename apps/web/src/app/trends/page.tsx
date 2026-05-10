@@ -117,7 +117,7 @@ export default function TrendsPage(): ReactElement {
         <Container as="section" className="pb-12 sm:pb-16">
           <HomeSectionHeading
             kicker="Archive"
-            title="All Trends pieces"
+            title="More Trends pieces"
           />
           <PillarArchiveList
             articles={archive}

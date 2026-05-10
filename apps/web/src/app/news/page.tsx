@@ -106,7 +106,7 @@ export default function NewsPage(): ReactElement {
 
       {archive.length > 0 && (
         <Container as="section" className="pb-12 sm:pb-16">
-          <HomeSectionHeading kicker="Archive" title="All News pieces" />
+          <HomeSectionHeading kicker="Archive" title="More News pieces" />
           <PillarArchiveList
             articles={archive}
             tagsBySlug={tagsBySlug}
