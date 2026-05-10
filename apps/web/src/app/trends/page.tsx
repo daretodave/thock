@@ -50,7 +50,7 @@ export default function TrendsPage(): ReactElement {
   }))
 
   return (
-    <>
+    <main className="flex-1">
       <JsonLd
         graph={[
           buildCollectionPageJsonLd({
@@ -126,6 +126,6 @@ export default function TrendsPage(): ReactElement {
           />
         </Container>
       )}
-    </>
+    </main>
   )
 }

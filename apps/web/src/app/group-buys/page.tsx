@@ -53,7 +53,7 @@ export default function GroupBuysPage(): ReactElement {
   const totalActive = live.length + announced.length
 
   return (
-    <>
+    <main className="flex-1">
       <JsonLd
         graph={[
           buildCollectionPageJsonLd({
@@ -151,7 +151,7 @@ export default function GroupBuysPage(): ReactElement {
           />
         </Container>
       )}
-    </>
+    </main>
   )
 }
 

@@ -46,6 +46,23 @@ const runHtmlAssertion = async (
       expect(count, `${url.path} should have JSON-LD`).toBeGreaterThanOrEqual(1)
       return
     }
+    case 'main-count-one': {
+      // Phase 22 contract — every route segment owns exactly one
+      // visible <main> landmark, mounted as a direct body child.
+      // We scope to `body > main` because Next 15 streaming stages
+      // the resolved page tree inside a `<div hidden id="S:..."`>
+      // until the inline `$RV` script reparents it; that staging
+      // copy is also a `<main>` and counts against `locator('main')`
+      // before reparenting completes. The body-direct-child scope
+      // skips the hidden staging copy and only counts the landmark
+      // a screen reader would actually navigate to.
+      const count = await page.locator('body > main').count()
+      expect(
+        count,
+        `${url.path} should have exactly one body-level <main> element`,
+      ).toBe(1)
+      return
+    }
     case 'min-link-count': {
       const count = await page.locator(a.selector).count()
       expect(count, `${url.path} ${a.selector} count`).toBeGreaterThanOrEqual(

@@ -21,7 +21,7 @@ export const metadata = buildMetadata({
 
 export default function AboutPage(): ReactElement {
   return (
-    <>
+    <main className="flex-1">
       <JsonLd
         graph={[
           buildWebSiteJsonLd(),
@@ -50,6 +50,6 @@ export default function AboutPage(): ReactElement {
           <AboutBody />
         </Stack>
       </Container>
-    </>
+    </main>
   )
 }

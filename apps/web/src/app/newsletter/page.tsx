@@ -26,7 +26,7 @@ export default function NewsletterPage(): ReactElement {
   const newsletters = getAllNewsletters()
 
   return (
-    <>
+    <main className="flex-1">
       <JsonLd
         graph={[
           buildWebSiteJsonLd(),
@@ -67,6 +67,6 @@ export default function NewsletterPage(): ReactElement {
           <NewsletterArchive newsletters={newsletters} />
         </Stack>
       </Container>
-    </>
+    </main>
   )
 }

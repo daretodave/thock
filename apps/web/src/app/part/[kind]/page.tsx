@@ -113,7 +113,7 @@ export default async function PartIndexPage({
   const description = KIND_DESCRIPTION[kind]
 
   return (
-    <>
+    <main className="flex-1">
       <JsonLd
         graph={[
           buildCollectionPageJsonLd({
@@ -172,6 +172,6 @@ export default async function PartIndexPage({
           {parts.length === 1 ? `${kind}` : `${kind}s`} in the catalog.
         </p>
       </Container>
-    </>
+    </main>
   )
 }

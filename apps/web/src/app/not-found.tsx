@@ -15,5 +15,9 @@ export const metadata: Metadata = {
  * entity-specific copy; this page covers everything else.
  */
 export default function NotFound() {
-  return <RootNotFound />
+  return (
+    <main className="flex-1">
+      <RootNotFound />
+    </main>
+  )
 }

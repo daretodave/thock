@@ -48,7 +48,7 @@ export default function DeepDivesPage(): ReactElement {
   }))
 
   return (
-    <>
+    <main className="flex-1">
       <JsonLd
         graph={[
           buildCollectionPageJsonLd({
@@ -111,6 +111,6 @@ export default function DeepDivesPage(): ReactElement {
           />
         </Container>
       )}
-    </>
+    </main>
   )
 }

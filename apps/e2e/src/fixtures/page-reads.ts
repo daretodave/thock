@@ -9,6 +9,7 @@ export type PageAssertion =
   | { kind: 'h1-matches'; pattern: RegExp }
   | { kind: 'has-canonical-link' }
   | { kind: 'has-jsonld' }
+  | { kind: 'main-count-one' }
   | { kind: 'min-link-count'; selector: string; min: number }
   | { kind: 'response-content-type'; matcher: RegExp }
   | { kind: 'body-contains'; needle: string }
@@ -26,6 +27,10 @@ const html = (assertions: PageAssertion[]): Pick<PageRead, 'isHtml' | 'assertion
     { kind: 'h1-present' },
     { kind: 'has-canonical-link' },
     { kind: 'has-jsonld' },
+    // Phase 22 — every HTML route owns its own <main> landmark.
+    // Layout no longer wraps {children} in <main>; each
+    // page/loading/not-found/error must emit exactly one.
+    { kind: 'main-count-one' },
     ...assertions,
   ],
 })

@@ -3,6 +3,7 @@ import { Container, Stack } from '@thock/ui'
 
 export default function PartDetailNotFound() {
   return (
+    <main className="flex-1">
     <Container as="section" className="py-24">
       <Stack gap={6}>
         <div className="flex flex-col gap-4">
@@ -25,5 +26,6 @@ export default function PartDetailNotFound() {
         </Link>
       </Stack>
     </Container>
+    </main>
   )
 }

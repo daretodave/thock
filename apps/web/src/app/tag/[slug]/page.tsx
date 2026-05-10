@@ -75,7 +75,7 @@ export default async function TagPage({
   }))
 
   return (
-    <>
+    <main className="flex-1">
       <JsonLd
         graph={[
           buildCollectionPageJsonLd({
@@ -154,6 +154,6 @@ export default async function TagPage({
           </Stack>
         </Container>
       )}
-    </>
+    </main>
   )
 }

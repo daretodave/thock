@@ -99,7 +99,7 @@ export default async function PartDetailPage({
   const kindHuman = KIND_HUMAN[part.kind]
 
   return (
-    <>
+    <main className="flex-1">
       <JsonLd
         graph={[
           {
@@ -146,6 +146,6 @@ export default async function PartDetailPage({
         articles={articles}
         tagsBySlug={tagsBySlug}
       />
-    </>
+    </main>
   )
 }

@@ -50,7 +50,7 @@ export default function NewsPage(): ReactElement {
   }))
 
   return (
-    <>
+    <main className="flex-1">
       <JsonLd
         graph={[
           buildCollectionPageJsonLd({
@@ -114,6 +114,6 @@ export default function NewsPage(): ReactElement {
           />
         </Container>
       )}
-    </>
+    </main>
   )
 }

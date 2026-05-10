@@ -11,6 +11,7 @@ export default function GroupBuysError({
   reset: () => void
 }) {
   return (
+    <main className="flex-1">
     <Container as="section" className="py-24">
       <Stack gap={4}>
         <span className="font-mono uppercase tracking-[0.12em] text-micro text-down">
@@ -43,5 +44,6 @@ export default function GroupBuysError({
         </div>
       </Stack>
     </Container>
+    </main>
   )
 }

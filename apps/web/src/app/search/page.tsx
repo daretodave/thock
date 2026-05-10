@@ -35,7 +35,7 @@ export default function SearchPage(): ReactElement {
   const allTags = getAllTags()
 
   return (
-    <>
+    <main className="flex-1">
       <JsonLd
         graph={[
           buildWebSiteJsonLd(),
@@ -61,6 +61,6 @@ export default function SearchPage(): ReactElement {
       <Suspense fallback={null}>
         <SearchPanel allTags={allTags} />
       </Suspense>
-    </>
+    </main>
   )
 }

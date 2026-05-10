@@ -12,6 +12,7 @@ export default async function ArticleNotFound() {
   const slug = pathnameToSlug(pathname)
 
   return (
+    <main className="flex-1">
     <Container as="section" className="py-24">
       <Stack gap={6}>
         <div className="flex flex-col gap-4">
@@ -37,5 +38,6 @@ export default async function ArticleNotFound() {
         </Link>
       </Stack>
     </Container>
+    </main>
   )
 }

@@ -47,7 +47,7 @@ export default function SourcesPage(): ReactElement {
   const citationIndex = buildCitationIndex(pairs)
 
   return (
-    <>
+    <main className="flex-1">
       <JsonLd
         graph={[
           buildWebSiteJsonLd(),
@@ -98,6 +98,6 @@ export default function SourcesPage(): ReactElement {
           </section>
         </Stack>
       </Container>
-    </>
+    </main>
   )
 }

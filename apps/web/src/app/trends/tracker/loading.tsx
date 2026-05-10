@@ -2,7 +2,7 @@ import { Container, Stack } from '@thock/ui'
 
 export default function TrackerLoading() {
   return (
-    <>
+    <main className="flex-1">
       <Container as="header" className="py-12 sm:py-16">
         <Stack gap={4}>
           <span className="font-mono uppercase tracking-[0.12em] text-micro text-text-4">
@@ -22,6 +22,6 @@ export default function TrackerLoading() {
           ))}
         </div>
       </Container>
-    </>
+    </main>
   )
 }
