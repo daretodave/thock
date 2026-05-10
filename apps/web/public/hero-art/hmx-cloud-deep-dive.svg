@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — HMX Cloud, exploded-axonometric switch silhouette</title>
+
+  <!-- Splash: pale-cyan wash centered on the stem tier — the "Cloud" name + POK stem profile,
+       which is the article's load-bearing technical claim. Single splash, single hue. -->
+  <ellipse cx="600" cy="345" rx="220" ry="120" fill="oklch(0.78 0.085 235 / 0.15)" stroke="none"/>
+
+  <!-- Right-leaning axonometric skew: each tier's top edge is offset +18px to the right
+       relative to its bottom edge, giving every part a parallelogram silhouette. The
+       eye reads the stack as "lifted apart and tipped toward the viewer." -->
+
+  <!-- ── TIER 1 — TOP HOUSING (parallelogram silhouette, with stem hole + LED notch) ── -->
+  <g>
+    <!-- Outer top housing -->
+    <path d="
+      M 418 150
+      L 798 150
+      L 818 230
+      L 380 230
+      Z" />
+    <!-- Inner cavity edge — faint inner parallelogram showing wall thickness -->
+    <path d="
+      M 438 168
+      L 778 168
+      L 794 218
+      L 402 218
+      Z" stroke-opacity="0.4"/>
+    <!-- Stem hole (cruciform aperture, top face) -->
+    <path d="
+      M 552 150
+      L 668 150
+      L 672 162
+      L 660 162
+      L 660 168
+      L 644 168
+      L 644 162
+      L 576 162
+      L 576 168
+      L 560 168
+      L 560 162
+      L 548 162
+      Z" stroke-opacity="0.7"/>
+    <!-- LED notch on top edge -->
+    <path d="M 588 150 L 632 150 L 628 158 L 592 158 Z" stroke-opacity="0.55"/>
+    <!-- Mounting clip nubs on the side -->
+    <line x1="380" y1="208" x2="370" y2="208" stroke-opacity="0.5"/>
+    <line x1="818" y1="208" x2="828" y2="208" stroke-opacity="0.5"/>
+  </g>
+
+  <!-- Gap line 1 + explode marker -->
+  <line x1="370" y1="258" x2="830" y2="258" stroke-dasharray="4 6" stroke-opacity="0.35"/>
+  <circle cx="600" cy="258" r="2.5" stroke-opacity="0.55"/>
+
+  <!-- ── TIER 2 — STEM (POK, cruciform head + body) ── -->
+  <!-- The splash-cyan accent dot anchors at the cruciform head, naming HMX's POK profile. -->
+  <g>
+    <!-- Cruciform head (the + that the keycap mounts onto) -->
+    <path d="
+      M 580 295
+      L 620 295
+      L 620 308
+      L 632 308
+      L 632 322
+      L 568 322
+      L 568 308
+      L 580 308
+      Z" />
+    <!-- Stem body — parallelogram, axonometric -->
+    <path d="
+      M 558 322
+      L 642 322
+      L 654 392
+      L 546 392
+      Z" />
+    <!-- Stem vertical detail line (centerline) -->
+    <line x1="600" y1="328" x2="600" y2="386" stroke-opacity="0.5"/>
+    <!-- Skirt rails on either side of stem (linear ticks) -->
+    <line x1="558" y1="345" x2="544" y2="345" stroke-opacity="0.5"/>
+    <line x1="558" y1="370" x2="544" y2="370" stroke-opacity="0.5"/>
+    <line x1="642" y1="345" x2="656" y2="345" stroke-opacity="0.5"/>
+    <line x1="642" y1="370" x2="656" y2="370" stroke-opacity="0.5"/>
+    <!-- Stem pole stubs (where spring slots in) — bottom -->
+    <line x1="572" y1="392" x2="574" y2="408" stroke-opacity="0.5"/>
+    <line x1="628" y1="392" x2="626" y2="408" stroke-opacity="0.5"/>
+  </g>
+
+  <!-- Splash anchor — single pale-cyan accent dot at the cruciform head.
+       The "POK stem" focal point. Family convention: filled core + outer ring at the focal piece. -->
+  <circle cx="600" cy="295" r="6.5" fill="oklch(0.78 0.085 235 / 0.95)" stroke="oklch(0.78 0.085 235)"/>
+  <circle cx="600" cy="295" r="12" stroke="oklch(0.78 0.085 235)" stroke-opacity="0.45" fill="none"/>
+
+  <!-- Gap line 2 + explode marker -->
+  <line x1="370" y1="430" x2="830" y2="430" stroke-dasharray="4 6" stroke-opacity="0.35"/>
+  <circle cx="600" cy="430" r="2.5" stroke-opacity="0.55"/>
+
+  <!-- ── TIER 3 — SPRING (factory-lubed, the article's other load-bearing claim) ── -->
+  <g>
+    <!-- 9 coils, drawn as flat ovals; family-conventional simplification -->
+    <ellipse cx="600" cy="465" rx="42" ry="6.5"/>
+    <ellipse cx="600" cy="476" rx="42" ry="6.5"/>
+    <ellipse cx="600" cy="487" rx="42" ry="6.5"/>
+    <ellipse cx="600" cy="498" rx="42" ry="6.5"/>
+    <ellipse cx="600" cy="509" rx="42" ry="6.5"/>
+    <ellipse cx="600" cy="520" rx="42" ry="6.5"/>
+    <ellipse cx="600" cy="531" rx="42" ry="6.5"/>
+    <ellipse cx="600" cy="542" rx="42" ry="6.5"/>
+    <ellipse cx="600" cy="553" rx="42" ry="6.5"/>
+    <!-- Spring axis -->
+    <line x1="600" y1="458" x2="600" y2="560" stroke-opacity="0.35" stroke-dasharray="2 4"/>
+  </g>
+
+  <!-- Gap line 3 + explode marker -->
+  <line x1="370" y1="585" x2="830" y2="585" stroke-dasharray="4 6" stroke-opacity="0.35"/>
+  <circle cx="600" cy="585" r="2.5" stroke-opacity="0.55"/>
+
+  <!-- ── TIER 4 — BOTTOM HOUSING ── -->
+  <g>
+    <!-- Outer bottom housing — parallelogram (axonometric) -->
+    <path d="
+      M 388 610
+      L 822 610
+      L 802 700
+      L 408 700
+      Z" />
+    <!-- Inner well (where spring seats) -->
+    <path d="
+      M 552 610
+      L 660 610
+      L 654 652
+      L 558 652
+      Z" stroke-opacity="0.6"/>
+    <!-- Pin contacts on the underside -->
+    <circle cx="458" cy="675" r="5"/>
+    <circle cx="752" cy="675" r="5"/>
+    <!-- Center mount post -->
+    <circle cx="605" cy="675" r="6" stroke-opacity="0.6"/>
+    <!-- Side rail mount nubs (5-pin PCB-mount stubs) -->
+    <line x1="498" y1="610" x2="498" y2="624" stroke-opacity="0.5"/>
+    <line x1="708" y1="610" x2="708" y2="624" stroke-opacity="0.5"/>
+  </g>
+
+  <!-- Subtle measurement tick marks, didactic — left margin, one per tier (family convention) -->
+  <g stroke-opacity="0.3">
+    <line x1="320" y1="190" x2="330" y2="190"/>
+    <line x1="320" y1="345" x2="330" y2="345"/>
+    <line x1="320" y1="510" x2="330" y2="510"/>
+    <line x1="320" y1="655" x2="330" y2="655"/>
+  </g>
+
+  <!-- Brass-bronze theme dot — small ornamental anchor (family convention).
+       Tucked at the upper-right margin, well clear of the focal cyan accent. -->
+  <circle cx="1148" cy="160" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>
