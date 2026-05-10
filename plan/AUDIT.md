@@ -84,12 +84,15 @@
 >
 > Score: **5.5** (aggregate of many small issues; each fix is cheap but the discovery is the work).
 
-### [LOW] /sources per-citation index — phase 16 follow-up
+### [x] [LOW] /sources per-citation index — phase 16 follow-up — addressed in pending commit (this tick)
+- issue: #19
 > Filed 2026-05-09 by phase 16 brief. The /sources page currently surfaces the per-article aggregate count of `<Source>` tags. The full per-citation index (article → quote → URL) requires an MDX walker that parses every body, extracts each `<Source href= text= />` tuple, dedupes by href, and surfaces (article, quote, source) rows. Worth shipping but not phase-16 scope.
 >
 > **Action:** new helper `extractSourceCitations(body: string): Array<{ href, text, position }>` in `@thock/content/util/`; new section on `/sources` rendering the deduped citation list. Probably wants its own ship-data flow if the citation count grows large.
 >
 > Score: **3.5** (real but cosmetic with the current article count of 6).
+>
+> **Resolved (2026-05-10):** Shipped exactly the row's recommended action. Added `extractSourceCitations(body): SourceCitation[]` next to `countSourceTags` in `packages/content/src/util/sources.ts` — single regex matches both `<Source href="..." />` (self-closing) and `<Source href="...">text</Source>` (paired) forms, captures href + inner text + character offset; whitespace-collapses and trims the text content; skips tags missing an href attribute. Exported via `packages/content/src/index.ts`. Built `<CitationIndex>` + `buildCitationIndex` helper at `apps/web/src/components/sources/CitationIndex.tsx` that takes `(article, citation)` pairs, dedupes by href, sorts citing articles by publishedAt-desc per row, and sorts the final index by most-recent-citing-article. `/sources` page now renders the per-article tally first, then a "Citation index" section with the deduped per-citation list. Each row links to the external URL (with `rel="noopener" target="_blank"`), shows the host+path, and lists the citing articles. Mobile-safe: `break-all` on the host span and `break-words` on title links handle long URLs without horizontal overflow at 375px. New e2e in `apps/e2e/tests/polish.spec.ts` asserts the index renders with at least one row pointing at a real https URL. New unit tests in `packages/content/src/__tests__/util/sources.test.ts` cover the extractor's empty / paired / self-closing / order / whitespace-collapse / multi-line-attrs / missing-href edge cases. Article count is now 12 (not the 6 the audit row's score basis assumed); the catalog has 15 total citations across 12 articles, so the index is non-trivial. 325 e2e green serially; first parallel attempt hit two #418 flakes on / and /news (same root cause as expand pass-2 candidate).
 
 ### [MED] Lighthouse CI — phase 17 follow-up
 > Filed 2026-05-09 by phase 17 brief. The build-plan row for phase 17 listed a Lighthouse pass at ≥95 on `/` and `/article/[slug]`. Real lighthouse-ci wiring crosses a tooling boundary (paid runner, or local Chrome + a runner) that warrants `/oversight` rather than an autonomous decision. The bundle-size budget shipped this phase covers the JS-weight axis on its own.

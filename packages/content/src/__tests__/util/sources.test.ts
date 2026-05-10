@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { countSourceTags } from '../../util/sources'
+import { countSourceTags, extractSourceCitations } from '../../util/sources'
 
 describe('countSourceTags', () => {
   it('returns 0 when the body has no Source tags', () => {
@@ -47,5 +47,66 @@ describe('countSourceTags', () => {
         'The source of the data is the Source of truth — <Source href="x" /> matters.',
       ),
     ).toBe(1)
+  })
+})
+
+describe('extractSourceCitations', () => {
+  it('returns an empty array for a body with no Source tags', () => {
+    expect(extractSourceCitations('Just plain prose.')).toEqual([])
+  })
+
+  it('extracts href + text from a paired Source tag', () => {
+    const cites = extractSourceCitations(
+      'See <Source href="https://example.com">the spec</Source>.',
+    )
+    expect(cites).toHaveLength(1)
+    expect(cites[0]).toMatchObject({
+      href: 'https://example.com',
+      text: 'the spec',
+    })
+  })
+
+  it('returns null text when the tag is self-closing', () => {
+    const cites = extractSourceCitations(
+      'See <Source href="https://example.com" /> for more.',
+    )
+    expect(cites).toHaveLength(1)
+    expect(cites[0]?.href).toBe('https://example.com')
+    expect(cites[0]?.text).toBeNull()
+  })
+
+  it('preserves document order across multiple citations', () => {
+    const body = `
+      First <Source href="https://first.com">a</Source>,
+      then <Source href="https://second.com">b</Source>.
+    `
+    const cites = extractSourceCitations(body)
+    expect(cites.map((c) => c.href)).toEqual([
+      'https://first.com',
+      'https://second.com',
+    ])
+    expect(cites[0]!.position).toBeLessThan(cites[1]!.position)
+  })
+
+  it('collapses whitespace inside the text content', () => {
+    const body = `
+      <Source href="https://x.com">Mode's
+      newest board</Source>
+    `
+    const [cite] = extractSourceCitations(body)
+    expect(cite?.text).toBe("Mode's newest board")
+  })
+
+  it('handles attributes that span multiple lines', () => {
+    const body = `<Source\n  href="https://x.com"\n>label</Source>`
+    const [cite] = extractSourceCitations(body)
+    expect(cite?.href).toBe('https://x.com')
+    expect(cite?.text).toBe('label')
+  })
+
+  it('skips Source tags missing an href attribute', () => {
+    expect(
+      extractSourceCitations('<Source>orphan</Source>'),
+    ).toEqual([])
   })
 })

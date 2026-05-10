@@ -120,6 +120,18 @@ test.describe('/sources — phase 16', () => {
     expect(await rows.count()).toBeGreaterThanOrEqual(1)
   })
 
+  test('renders the per-citation index with at least one row pointing at a real URL', async ({
+    page,
+  }) => {
+    await page.goto('/sources')
+    const index = page.getByTestId('citation-index')
+    await expect(index).toBeVisible()
+    const rows = page.getByTestId('citation-index-row')
+    expect(await rows.count()).toBeGreaterThanOrEqual(1)
+    const firstHref = await rows.first().getAttribute('data-href')
+    expect(firstHref).toMatch(/^https?:\/\//)
+  })
+
   test('emits WebSite + BreadcrumbList JSON-LD', async ({ page }) => {
     await page.goto('/sources')
     const scripts = await page

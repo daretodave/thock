@@ -6,12 +6,20 @@ import {
   JsonLd,
 } from '@thock/seo'
 import { Container, Stack } from '@thock/ui'
-import { countSourceTags } from '@thock/content'
+import {
+  countSourceTags,
+  extractSourceCitations,
+  type SourceCitation,
+} from '@thock/content'
 import { getAllArticles } from '@/lib/data-runtime'
 import {
   SourceCounts,
   type ArticleSourceCount,
 } from '@/components/sources/SourceCounts'
+import {
+  CitationIndex,
+  buildCitationIndex,
+} from '@/components/sources/CitationIndex'
 
 const PATH = '/sources'
 const TITLE = 'Sources'
@@ -30,6 +38,13 @@ export default function SourcesPage(): ReactElement {
     article,
     sourceCount: countSourceTags(article.body),
   }))
+  const pairs: Array<{ article: typeof articles[number]; citation: SourceCitation }> = []
+  for (const article of articles) {
+    for (const citation of extractSourceCitations(article.body)) {
+      pairs.push({ article, citation })
+    }
+  }
+  const citationIndex = buildCitationIndex(pairs)
 
   return (
     <>
@@ -70,6 +85,17 @@ export default function SourcesPage(): ReactElement {
           </div>
 
           <SourceCounts rows={rows} />
+
+          <section className="flex flex-col gap-5">
+            <h2 className="font-mono text-micro uppercase tracking-[0.12em] text-text-3">
+              Citation index
+            </h2>
+            <p className="thock-prose max-w-[60ch] text-body text-text-2">
+              Every external URL cited across thock, deduped and grouped by
+              the articles that linked it.
+            </p>
+            <CitationIndex citations={citationIndex} />
+          </section>
         </Stack>
       </Container>
     </>
