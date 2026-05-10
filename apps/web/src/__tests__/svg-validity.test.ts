@@ -62,7 +62,7 @@ function findIllegalDoubleHyphen(source: string): string | null {
   const re = /<!--([\s\S]*?)-->/g
   let match: RegExpExecArray | null
   while ((match = re.exec(source))) {
-    const inner = match[1]
+    const inner = match[1] ?? ''
     if (inner.includes('--')) return match[0]
   }
   return null
