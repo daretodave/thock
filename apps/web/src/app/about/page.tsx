@@ -11,7 +11,7 @@ import { AboutBody } from '@/components/about/AboutBody'
 const PATH = '/about'
 const TITLE = 'About'
 const LEDE =
-  'Editorial standards, voice, and the people behind thock. Knowledgeable peer, never breathless hype.'
+  'Editorial standards, voice, and how we cover the hobby. Knowledgeable peer, never breathless hype.'
 
 export const metadata = buildMetadata({
   title: TITLE,

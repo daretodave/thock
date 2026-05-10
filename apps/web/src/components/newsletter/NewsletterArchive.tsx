@@ -26,7 +26,7 @@ export function NewsletterArchive({
           No digests yet.
         </p>
         <p className="mt-3 text-body text-text-3">
-          The first issue lands soon. Subscribe above and I&apos;ll send you
+          The first issue lands soon. Subscribe above and we&apos;ll send you
           the first one when it ships. Prefer feeds?{' '}
           <Link href="/feed.xml" className="text-accent hover:text-accent-hi">
             Grab the RSS
