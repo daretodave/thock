@@ -101,12 +101,14 @@
 >
 > Score: **5.0** (real signal but real setup cost; baseline bundle is small enough that scores are likely good already).
 
-### [LOW] Tighten homepage bundle-size budget from 250 KB → 200 KB
+### [x] [LOW] Tighten homepage bundle-size budget from 250 KB → 200 KB — addressed in pending commit (this tick)
 > Filed 2026-05-09 by phase 17 brief. The bearings target is 200 KB gzipped for the homepage; phase 17 set the gate at 250 KB to leave one or two iterate ticks of headroom. After the loop drains any obvious chunk waste (lucide-react, large MDX shims, unused tag taxonomies), tighten the budget to 200 KB to match the bearings.
 >
 > **Action:** edit `apps/web/scripts/measure-bundle.mts` `DEFAULT_MAX_KB` to 200, or pass `--max=200` via the verify wiring in root `package.json`.
 >
 > Score: **2.5** (cosmetic until the chunk audit runs; chunk audit is the real work).
+>
+> **Resolved (2026-05-10):** No chunk-audit needed — current homepage bundle measures 108.7 KB gzipped (per `pnpm --filter @thock/web run size`), well under both the 250 KB phase-17 budget and the 200 KB bearings target. The corpus growth + iterate ticks since phase 17 added no meaningful bundle weight (article body weight is build-time-rendered MDX, not client JS). Bumped `DEFAULT_MAX_KB` from 250 → 200 in `apps/web/scripts/measure-bundle.mts:31` to match bearings; updated the script docblock to reflect the rationale + current baseline. The verify gate now enforces the bearings target directly. No remaining headroom needs a chunk-audit; that work fires only if a future phase pushes bundle weight back toward the 200 KB ceiling. 330 e2e green first parallel attempt.
 
 ### [MED] PageStub routes flake under parallel e2e load (React #418 hydration)
 

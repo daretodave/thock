@@ -4,12 +4,15 @@
  * Reads `.next/app-build-manifest.json`, identifies the JS chunks
  * loaded by the homepage route ("/page" in App Router conventions),
  * gzips each via node:zlib, and sums the result. Fails non-zero if
- * the homepage's gzipped JS exceeds the budget (default 250 KB —
- * bearings target is 200 KB, current baseline ~120 KB so 250 KB
- * leaves one or two iterate ticks of headroom).
+ * the homepage's gzipped JS exceeds the budget (200 KB — the
+ * bearings target). Phase 17 shipped at 250 KB to leave iterate
+ * headroom; the iterate ticks since have not added meaningful
+ * bundle weight (current measured baseline is ~110 KB), so the
+ * budget tightens to 200 KB to match bearings — drains the LOW
+ * 2.5 audit row at plan/AUDIT.md:98.
  *
  * Usage: `pnpm --filter @thock/web size`
- *        `pnpm --filter @thock/web size -- --max=200`
+ *        `pnpm --filter @thock/web size -- --max=180`
  *
  * Wired into `pnpm verify` after `next build`. Reads from `.next/`,
  * does not invoke the build itself.
@@ -23,7 +26,7 @@ const here = dirname(fileURLToPath(import.meta.url))
 const webDir = resolve(here, '..')
 const manifestPath = resolve(webDir, '.next', 'app-build-manifest.json')
 
-const DEFAULT_MAX_KB = 250
+const DEFAULT_MAX_KB = 200
 const HOMEPAGE_KEY = '/page'
 
 type AppBuildManifest = {
