@@ -1,0 +1,15 @@
+{
+  "slug": "class80",
+  "name": "MM Studio Class80",
+  "vendorSlug": "cannonkeys",
+  "layout": "tkl",
+  "caseMaterial": "aluminum",
+  "mountStyle": "gasket",
+  "hotswap": false,
+  "wireless": false,
+  "releasedAt": "2022-09-01",
+  "status": "discontinued",
+  "imageUrl": null,
+  "description": "Retro-styled CNC aluminum TKL from MM Studio with thick bezels, a 3.5 kg unbuilt weight, and a choice of top mount, PCB gasket mount with plate, or plateless PCB gasket. R1 sold out; R2 succeeded it.",
+  "updatedAt": "2026-05-09T20:00:00.000Z"
+}

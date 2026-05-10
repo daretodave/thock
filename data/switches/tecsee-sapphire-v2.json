@@ -1,0 +1,19 @@
+{
+  "slug": "tecsee-sapphire-v2",
+  "name": "Tecsee Sapphire V2",
+  "vendorSlug": "cannonkeys",
+  "type": "tactile",
+  "housingTop": "pc",
+  "housingBottom": "pc",
+  "stem": "mixed",
+  "springGrams": {
+    "actuation": 55,
+    "bottomOut": 63.5
+  },
+  "travelMm": 3.8,
+  "factoryLubed": true,
+  "releasedAt": "2023-06-01",
+  "status": "in-production",
+  "description": "Mid-tactile with a UHMWPE stem and sparkly polycarbonate housings; the bump sits at the top of the stroke and rounds off into a softened bottom-out. Sound is muted and creamy rather than poppy.",
+  "updatedAt": "2026-05-09T20:00:00.000Z"
+}

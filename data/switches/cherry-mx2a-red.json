@@ -1,0 +1,19 @@
+{
+  "slug": "cherry-mx2a-red",
+  "name": "Cherry MX2A Red",
+  "vendorSlug": "cannonkeys",
+  "type": "linear",
+  "housingTop": "nylon",
+  "housingBottom": "nylon",
+  "stem": "pom",
+  "springGrams": {
+    "actuation": 45,
+    "bottomOut": 75
+  },
+  "travelMm": 4.0,
+  "factoryLubed": true,
+  "releasedAt": "2023-08-24",
+  "status": "in-production",
+  "description": "Cherry's redesigned MX Red with a factory grease ring chemically similar to Krytox 205g0 and tighter stem tolerances. Smoother and quieter than the legacy MX Red while keeping the same 45g actuation and 100M-actuation lifespan.",
+  "updatedAt": "2026-05-09T20:00:00.000Z"
+}

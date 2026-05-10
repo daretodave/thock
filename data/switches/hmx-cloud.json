@@ -1,0 +1,19 @@
+{
+  "slug": "hmx-cloud",
+  "name": "HMX Cloud Linear",
+  "vendorSlug": "cannonkeys",
+  "type": "linear",
+  "housingTop": "nylon",
+  "housingBottom": "nylon",
+  "stem": "mixed",
+  "springGrams": {
+    "actuation": 42,
+    "bottomOut": 50
+  },
+  "travelMm": 3.9,
+  "factoryLubed": true,
+  "releasedAt": "2023-09-01",
+  "status": "in-production",
+  "description": "Light linear with an LY stem in PA12 top and PA2.0 bottom housings. Voiced as a clacky, high-pitched poppy linear; popular as a budget pick for builders chasing a clean top-out without a deep thock.",
+  "updatedAt": "2026-05-09T20:00:00.000Z"
+}

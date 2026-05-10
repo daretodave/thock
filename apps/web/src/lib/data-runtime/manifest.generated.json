@@ -1,6 +1,82 @@
 {
   "switches": [
     {
+      "slug": "akko-v3-cream-blue-pro",
+      "name": "Akko V3 Cream Blue Pro",
+      "vendorSlug": "novelkeys",
+      "type": "tactile",
+      "housingTop": "pc",
+      "housingBottom": "nylon",
+      "stem": "pom",
+      "springGrams": {
+        "actuation": 45,
+        "bottomOut": 55
+      },
+      "travelMm": 3.3,
+      "factoryLubed": true,
+      "releasedAt": "2023-04-01",
+      "status": "in-production",
+      "description": "Light tactile with a sharp early bump and a 3.3 mm shortened travel. Akko's V3 Pro revision adds a dustproof stem, palladium-gold leaf, and lubed rails; common pick for budget tactile builds.",
+      "updatedAt": "2026-05-09T20:00:00.000Z"
+    },
+    {
+      "slug": "cherry-mx2a-red",
+      "name": "Cherry MX2A Red",
+      "vendorSlug": "cannonkeys",
+      "type": "linear",
+      "housingTop": "nylon",
+      "housingBottom": "nylon",
+      "stem": "pom",
+      "springGrams": {
+        "actuation": 45,
+        "bottomOut": 75
+      },
+      "travelMm": 4,
+      "factoryLubed": true,
+      "releasedAt": "2023-08-24",
+      "status": "in-production",
+      "description": "Cherry's redesigned MX Red with a factory grease ring chemically similar to Krytox 205g0 and tighter stem tolerances. Smoother and quieter than the legacy MX Red while keeping the same 45g actuation and 100M-actuation lifespan.",
+      "updatedAt": "2026-05-09T20:00:00.000Z"
+    },
+    {
+      "slug": "cherry-mx2a-silent-black",
+      "name": "Cherry MX2A Silent Black",
+      "vendorSlug": "cannonkeys",
+      "type": "silent-linear",
+      "housingTop": "nylon",
+      "housingBottom": "nylon",
+      "stem": "pom",
+      "springGrams": {
+        "actuation": 45,
+        "bottomOut": 60
+      },
+      "travelMm": 4,
+      "factoryLubed": true,
+      "releasedAt": "2023-08-24",
+      "status": "in-production",
+      "description": "Silent linear from Cherry's MX2A revision with rubber dampeners on the stem. Quiets bottom-out and top-out without losing the MX2A factory lube; office-friendly pick that doesn't fight the typist.",
+      "updatedAt": "2026-05-09T20:00:00.000Z"
+    },
+    {
+      "slug": "drop-holy-panda-x",
+      "name": "Drop Holy Panda X",
+      "vendorSlug": "drop",
+      "type": "tactile",
+      "housingTop": "pc",
+      "housingBottom": "nylon",
+      "stem": "pom",
+      "springGrams": {
+        "actuation": 60,
+        "bottomOut": 67
+      },
+      "travelMm": 3.4,
+      "factoryLubed": true,
+      "releasedAt": "2022-04-01",
+      "status": "in-production",
+      "description": "Gateron-manufactured tactile with a rounded bump and short 3.4 mm travel. Drop's in-house take on the Holy Panda lineage; available without modding, which is the whole point.",
+      "updatedAt": "2026-05-09T20:00:00.000Z"
+    },
+    {
       "slug": "gateron-oil-king",
       "name": "Gateron Oil King",
       "vendorSlug": "cannonkeys",
@@ -18,9 +94,80 @@
       "status": "in-production",
       "description": "Mid-weight linear with a heavily lubed POM stem in a polycarbonate over nylon housing. Voiced as deep and creamy out of the box; popular with builders looking for a low-effort thock without modding.",
       "updatedAt": "2026-05-08T00:00:00.000Z"
+    },
+    {
+      "slug": "gateron-pro-3-yellow",
+      "name": "Gateron G Pro 3.0 Yellow",
+      "vendorSlug": "kbdfans",
+      "type": "linear",
+      "housingTop": "pc",
+      "housingBottom": "nylon",
+      "stem": "pom",
+      "springGrams": {
+        "actuation": 50,
+        "bottomOut": 67
+      },
+      "travelMm": 4,
+      "factoryLubed": true,
+      "releasedAt": "2023-07-01",
+      "status": "in-production",
+      "description": "Third-gen Gateron Yellow with tighter housing tolerances, frosted light-guide top, and chunkier three-ply pins. Same medium-weight feel that made the Yellow line a workhorse, with cleaner factory lube.",
+      "updatedAt": "2026-05-09T20:00:00.000Z"
+    },
+    {
+      "slug": "hmx-cloud",
+      "name": "HMX Cloud Linear",
+      "vendorSlug": "cannonkeys",
+      "type": "linear",
+      "housingTop": "nylon",
+      "housingBottom": "nylon",
+      "stem": "mixed",
+      "springGrams": {
+        "actuation": 42,
+        "bottomOut": 50
+      },
+      "travelMm": 3.9,
+      "factoryLubed": true,
+      "releasedAt": "2023-09-01",
+      "status": "in-production",
+      "description": "Light linear with an LY stem in PA12 top and PA2.0 bottom housings. Voiced as a clacky, high-pitched poppy linear; popular as a budget pick for builders chasing a clean top-out without a deep thock.",
+      "updatedAt": "2026-05-09T20:00:00.000Z"
+    },
+    {
+      "slug": "tecsee-sapphire-v2",
+      "name": "Tecsee Sapphire V2",
+      "vendorSlug": "cannonkeys",
+      "type": "tactile",
+      "housingTop": "pc",
+      "housingBottom": "pc",
+      "stem": "mixed",
+      "springGrams": {
+        "actuation": 55,
+        "bottomOut": 63.5
+      },
+      "travelMm": 3.8,
+      "factoryLubed": true,
+      "releasedAt": "2023-06-01",
+      "status": "in-production",
+      "description": "Mid-tactile with a UHMWPE stem and sparkly polycarbonate housings; the bump sits at the top of the stroke and rounds off into a softened bottom-out. Sound is muted and creamy rather than poppy.",
+      "updatedAt": "2026-05-09T20:00:00.000Z"
     }
   ],
   "keycapSets": [
+    {
+      "slug": "gmk-bento-r2",
+      "name": "GMK Bentō R2",
+      "vendorSlug": "cannonkeys",
+      "profile": "cherry",
+      "material": "abs",
+      "legendType": "doubleshot",
+      "designer": "biip",
+      "releasedAt": "2021-03-01",
+      "status": "sold-out",
+      "imageUrl": null,
+      "description": "Cherry-profile doubleshot ABS set in white and dark blue with pink accents, designed by biip and inspired by Japanese bento boxes. R1 ran in 2019; R2 is the round most owners actually have, and the set that anchored biip's design reputation.",
+      "updatedAt": "2026-05-09T20:00:00.000Z"
+    },
     {
       "slug": "gmk-olivia",
       "name": "GMK Olivia",
@@ -34,9 +181,96 @@
       "imageUrl": null,
       "description": "Soft pink-and-cream Cherry-profile set with black accents. Designed by Olivia and produced by GMK. Often cited as the set that proved a non-traditional palette could anchor a community-favorite design.",
       "updatedAt": "2026-05-08T00:00:00.000Z"
+    },
+    {
+      "slug": "kat-drifter",
+      "name": "KAT Drifter",
+      "vendorSlug": "cannonkeys",
+      "profile": "kat",
+      "material": "pbt",
+      "legendType": "dye-sub",
+      "designer": "Emil",
+      "releasedAt": "2020-01-10",
+      "status": "discontinued",
+      "imageUrl": null,
+      "description": "PBT dye-sub KAT set inspired by the game Hyper Light Drifter. R1 was limited to 500 sets in 2020; the original DSA Drifter preceded it. Often cited as one of the sets that proved KAT's profile and dye-sub fidelity.",
+      "updatedAt": "2026-05-09T20:00:00.000Z"
+    },
+    {
+      "slug": "mt3-dasher",
+      "name": "Drop MT3 Dasher",
+      "vendorSlug": "drop",
+      "profile": "mt3",
+      "material": "abs",
+      "legendType": "doubleshot",
+      "designer": "MiTo",
+      "releasedAt": "2021-03-01",
+      "status": "in-stock",
+      "imageUrl": null,
+      "description": "Tall, scooped MT3-profile doubleshot ABS set in two-tone blue, inspired by the Data General Dasher terminal. One of the longest-running MT3 sets at Drop and a common pick for vintage-leaning builds.",
+      "updatedAt": "2026-05-09T20:00:00.000Z"
+    },
+    {
+      "slug": "mt3-devtty",
+      "name": "Drop + Matt3o MT3 /dev/tty",
+      "vendorSlug": "drop",
+      "profile": "mt3",
+      "material": "abs",
+      "legendType": "doubleshot",
+      "designer": "Matt3o",
+      "releasedAt": "2017-04-01",
+      "status": "in-stock",
+      "imageUrl": null,
+      "description": "Matt3o's original MT3 set: doubleshot ABS in cream and charcoal, modeled on IBM beamspring caps. The set that defined the MT3 profile and remains the reference build for tall, sculpted typing.",
+      "updatedAt": "2026-05-09T20:00:00.000Z"
     }
   ],
   "boards": [
+    {
+      "slug": "bakeneko65",
+      "name": "Bakeneko65",
+      "vendorSlug": "cannonkeys",
+      "layout": "65",
+      "caseMaterial": "aluminum",
+      "mountStyle": "gasket",
+      "hotswap": true,
+      "wireless": false,
+      "releasedAt": "2022-01-08",
+      "status": "in-stock",
+      "imageUrl": null,
+      "description": "Cast-aluminum 65% with an o-ring gasket mount, FR4 plate, and a hotswap QMK/VIA PCB. CannonKeys' evergreen budget pick at $150; the board most often recommended as a first custom.",
+      "updatedAt": "2026-05-09T20:00:00.000Z"
+    },
+    {
+      "slug": "class80",
+      "name": "MM Studio Class80",
+      "vendorSlug": "cannonkeys",
+      "layout": "tkl",
+      "caseMaterial": "aluminum",
+      "mountStyle": "gasket",
+      "hotswap": false,
+      "wireless": false,
+      "releasedAt": "2022-09-01",
+      "status": "discontinued",
+      "imageUrl": null,
+      "description": "Retro-styled CNC aluminum TKL from MM Studio with thick bezels, a 3.5 kg unbuilt weight, and a choice of top mount, PCB gasket mount with plate, or plateless PCB gasket. R1 sold out; R2 succeeded it.",
+      "updatedAt": "2026-05-09T20:00:00.000Z"
+    },
+    {
+      "slug": "mammoth75",
+      "name": "Mammoth75",
+      "vendorSlug": "wuque-studio",
+      "layout": "75",
+      "caseMaterial": "aluminum",
+      "mountStyle": "gasket",
+      "hotswap": true,
+      "wireless": true,
+      "releasedAt": "2023-05-01",
+      "status": "group-buy",
+      "imageUrl": null,
+      "description": "Wuque Studio's 75% with exploded arrows, a large magnetic knob, and aluminum or brass bottoms with mirror PVD or sandblasted finishes. Gasket mount with PORON dampening; ~2.0 kg unbuilt.",
+      "updatedAt": "2026-05-09T20:00:00.000Z"
+    },
     {
       "slug": "mode-sonnet",
       "name": "Mode Sonnet",
@@ -51,6 +285,21 @@
       "imageUrl": null,
       "description": "65 percent gasket-mounted aluminum board from Mode Designs with hotswap PCBs and a soft, balanced typing feel. Mid-priced for the segment; ships with a brass weight option.",
       "updatedAt": "2026-05-08T00:00:00.000Z"
+    },
+    {
+      "slug": "qk75",
+      "name": "QK75",
+      "vendorSlug": "cannonkeys",
+      "layout": "75",
+      "caseMaterial": "aluminum",
+      "mountStyle": "pcb-mount",
+      "hotswap": true,
+      "wireless": true,
+      "releasedAt": "2023-03-01",
+      "status": "in-stock",
+      "imageUrl": null,
+      "description": "Qwertykeys' PCB-mount 75% with a CNC aluminum case, swappable knob/badge, and PVD weight options. Wireless and wired hotswap PCBs; bouncy plate-or-plateless feel that ties to the wider 75% mainstreaming trend.",
+      "updatedAt": "2026-05-09T20:00:00.000Z"
     }
   ],
   "vendors": [
@@ -64,11 +313,29 @@
       "updatedAt": "2026-05-08T00:00:00.000Z"
     },
     {
+      "slug": "drop",
+      "name": "Drop",
+      "url": "https://drop.com",
+      "countryCode": "US",
+      "description": "US storefront and platform for community-driven keyboard, audio, and gaming products. Co-develops MT3 keycap profiles with Matt3o and runs in-house Drop-branded switches and boards.",
+      "status": "active",
+      "updatedAt": "2026-05-09T20:00:00.000Z"
+    },
+    {
       "slug": "kbdfans",
       "name": "KBDfans",
       "url": "https://kbdfans.com",
       "countryCode": "CN",
       "description": "China-based mechanical keyboard vendor with a long-running storefront for boards, switches, keycaps, and accessories; hosts a large slate of GMK and in-house group buys with multi-region proxies.",
+      "status": "active",
+      "updatedAt": "2026-05-09T20:00:00.000Z"
+    },
+    {
+      "slug": "novelkeys",
+      "name": "NovelKeys",
+      "url": "https://novelkeys.com",
+      "countryCode": "US",
+      "description": "Indianapolis-based vendor that runs in-house switches (Cream, Silk) and partners on group buys for keycaps and boards. One of the most-cited NA storefronts for enthusiast switch SKUs.",
       "status": "active",
       "updatedAt": "2026-05-09T20:00:00.000Z"
     },
@@ -852,5 +1119,5 @@
       "category": "brand"
     }
   ],
-  "generatedAt": "2026-05-10T02:13:07.232Z"
+  "generatedAt": "2026-05-10T02:33:40.456Z"
 }

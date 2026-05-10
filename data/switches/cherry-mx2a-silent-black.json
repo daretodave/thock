@@ -1,0 +1,19 @@
+{
+  "slug": "cherry-mx2a-silent-black",
+  "name": "Cherry MX2A Silent Black",
+  "vendorSlug": "cannonkeys",
+  "type": "silent-linear",
+  "housingTop": "nylon",
+  "housingBottom": "nylon",
+  "stem": "pom",
+  "springGrams": {
+    "actuation": 45,
+    "bottomOut": 60
+  },
+  "travelMm": 4.0,
+  "factoryLubed": true,
+  "releasedAt": "2023-08-24",
+  "status": "in-production",
+  "description": "Silent linear from Cherry's MX2A revision with rubber dampeners on the stem. Quiets bottom-out and top-out without losing the MX2A factory lube; office-friendly pick that doesn't fight the typist.",
+  "updatedAt": "2026-05-09T20:00:00.000Z"
+}

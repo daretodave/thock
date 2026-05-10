@@ -1,0 +1,15 @@
+{
+  "slug": "bakeneko65",
+  "name": "Bakeneko65",
+  "vendorSlug": "cannonkeys",
+  "layout": "65",
+  "caseMaterial": "aluminum",
+  "mountStyle": "gasket",
+  "hotswap": true,
+  "wireless": false,
+  "releasedAt": "2022-01-08",
+  "status": "in-stock",
+  "imageUrl": null,
+  "description": "Cast-aluminum 65% with an o-ring gasket mount, FR4 plate, and a hotswap QMK/VIA PCB. CannonKeys' evergreen budget pick at $150; the board most often recommended as a first custom.",
+  "updatedAt": "2026-05-09T20:00:00.000Z"
+}

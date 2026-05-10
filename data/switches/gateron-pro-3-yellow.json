@@ -1,0 +1,19 @@
+{
+  "slug": "gateron-pro-3-yellow",
+  "name": "Gateron G Pro 3.0 Yellow",
+  "vendorSlug": "kbdfans",
+  "type": "linear",
+  "housingTop": "pc",
+  "housingBottom": "nylon",
+  "stem": "pom",
+  "springGrams": {
+    "actuation": 50,
+    "bottomOut": 67
+  },
+  "travelMm": 4.0,
+  "factoryLubed": true,
+  "releasedAt": "2023-07-01",
+  "status": "in-production",
+  "description": "Third-gen Gateron Yellow with tighter housing tolerances, frosted light-guide top, and chunkier three-ply pins. Same medium-weight feel that made the Yellow line a workhorse, with cleaner factory lube.",
+  "updatedAt": "2026-05-09T20:00:00.000Z"
+}

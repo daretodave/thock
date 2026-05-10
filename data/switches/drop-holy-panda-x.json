@@ -1,0 +1,19 @@
+{
+  "slug": "drop-holy-panda-x",
+  "name": "Drop Holy Panda X",
+  "vendorSlug": "drop",
+  "type": "tactile",
+  "housingTop": "pc",
+  "housingBottom": "nylon",
+  "stem": "pom",
+  "springGrams": {
+    "actuation": 60,
+    "bottomOut": 67
+  },
+  "travelMm": 3.4,
+  "factoryLubed": true,
+  "releasedAt": "2022-04-01",
+  "status": "in-production",
+  "description": "Gateron-manufactured tactile with a rounded bump and short 3.4 mm travel. Drop's in-house take on the Holy Panda lineage; available without modding, which is the whole point.",
+  "updatedAt": "2026-05-09T20:00:00.000Z"
+}

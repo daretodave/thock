@@ -1,0 +1,19 @@
+{
+  "slug": "akko-v3-cream-blue-pro",
+  "name": "Akko V3 Cream Blue Pro",
+  "vendorSlug": "novelkeys",
+  "type": "tactile",
+  "housingTop": "pc",
+  "housingBottom": "nylon",
+  "stem": "pom",
+  "springGrams": {
+    "actuation": 45,
+    "bottomOut": 55
+  },
+  "travelMm": 3.3,
+  "factoryLubed": true,
+  "releasedAt": "2023-04-01",
+  "status": "in-production",
+  "description": "Light tactile with a sharp early bump and a 3.3 mm shortened travel. Akko's V3 Pro revision adds a dustproof stem, palladium-gold leaf, and lubed rails; common pick for budget tactile builds.",
+  "updatedAt": "2026-05-09T20:00:00.000Z"
+}
