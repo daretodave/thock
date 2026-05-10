@@ -1,14 +1,75 @@
 # Critique log
 
-> Last pass: 2026-05-10T07:30:00Z at commit dfa5596
-> Pass count: 6
-> Iterate-bias category: external-critique (pass 6 fired ~5 commits after the phase-18/19/20 backfill ships and the post-pass-5 iterate drain — reader confirmed the corpus-depth + content trims have meaningfully raised the floor; filed 4 fresh findings: [HIGH] /article/mode-sonnet-r2 lede leaks "post-2026-05-09 schedule" editorial-pipeline jargon — self-inflicted regression from the pass-5 iterate drain at 4fcb463; [MED] /article/* Build sheet cards style as clickable but render no anchors — pre-phase-4 affordance leak; [MED] /sources intro leaks "<Source> MDX component" implementation jargon — stranger-facing trust surface mis-framed; [LOW] / Group-buys rail body mixes urgent and non-urgent rows when urgent heading fires. Reader's positive corpus-growth + rail-empty-state-fix closure notes confirm pass-5 drain landed cleanly. Three reader-flagged items dropped during self-assessment: (a) /article/cherry-mx2a-revision Keep-reading rail at 1 tile — duplicates the existing pending row at line 47; (b) /trends three cards sharing May 10 date — not actionable below the noise floor; (c) corpus-growth positive note — closure signal not a finding.)
+> Last pass: 2026-05-10T08:30:00Z at commit e3de21d
+> Pass count: 7
+> Iterate-bias category: external-critique (pass 7 fired 12 commits after pass 6, after a heavy iterate run that drained pass-4/5/6 + 2 audit rows + shipped 2 corpus-growth articles. Reader's fresh visit confirmed 8 prior critique fixes landed cleanly (Build sheet, R2 lede, /sources jargon, Group-buys urgent body, related-rail thinness, /tag title-match) and surfaced 6 fresh findings: [HIGH] every dynamic-data page has its content rendering OUTSIDE `<main>` (a11y / landmark hole — `<main>` only contains a "loading…" shell after streaming hydration); [HIGH] /about body prose is broken around inline-link rendering (multiple sentences end mid-word with the link text extracted to a sibling); [MED] /sources intro shares the same broken-prose root cause as /about; [MED] /trends/tracker rows expose editor's-note text twice in the a11y tree (mobile-stacked + desktop-column both render at desktop without `aria-hidden`); [LOW] /group-buys Sweet Nightmare card missing region chip while siblings have GLOBAL; [LOW] /tag/gateron date format inconsistent ("May 8, 2026" vs "Apr 30, 2026"). Reader's positive observation on /article/typing-tests-lie ("opinionated voice + 4 well-matched related-rail tiles") not filed — closure signal, not a finding. The two HIGH findings are the kind the loop's been blind to: framework-level a11y regressions and template-level prose corruption that wouldn't show up in a smoke walker's `200 + contract` checks but absolutely show up in stranger reads.)
+> Pass 6 last pass: 2026-05-10T07:30:00Z at commit dfa5596
 > Pass 5 last pass: 2026-05-10T02:45:00Z at commit 790b415
 
 > External-observer feedback for thock. Populated by `/critique`,
 > drained by `/iterate`. See `skills/critique.md` for the contract.
 
 ## Pending
+
+### [HIGH] /* (every dynamic-data page) — `<main>` landmark contains only the "loading…" shell; real content renders outside the landmark
+- issue: #22
+- pass: 7 (commit e3de21d)
+- viewport: both
+- category: a11y
+- observation: On every dynamic-data page (/, /trends, /trends/tracker, /group-buys, /sources, /tag/<slug>, /article/<slug>), the actual content renders OUTSIDE the `<main>` landmark. `<main>` only contains a "loading · home" / "loading · pillar" / "loading · tracker" / "loading · tag" / "loading" placeholder shell. The real content tree (page H1, body, rails) renders as a sibling AFTER `<main>` and AFTER `<contentinfo>` (the footer). Screen-reader users navigating by landmarks land on the placeholder; "skip to main content" lands on "loading…". The smoke walker's `200 + contract` checks don't catch this because the rendered DOM eventually contains everything; it's the landmark *structure* that's broken.
+- evidence: Accessibility tree on /trends/tracker shows `main [ref_13] > banner [ref_14] > generic 'loading · tracker'` with the real `banner [ref_32]` (page title "What's actually rising this week") and all data regions rendered as siblings of `<main>`. Same pattern on home (`loading · home`), /group-buys (`loading · group buys`), /sources (`loading · home`), /tag/gateron (`loading · tag`), and article pages (`loading`). Static /about and the 404 page render content correctly inside `<main>`.
+- suggested fix: investigate the layout-level Suspense boundary structure. The Suspense fallback's `<main>` element and the streamed content's `<main>` element are likely siblings rather than the same element — when the fallback resolves, it leaves its empty `<main>` shell behind and appends the content elsewhere. The fix is either: (a) the streamed content should render inside the same `<main>` the fallback occupies (probably means moving Suspense INSIDE `<main>` rather than around it), or (b) the streamed content should NOT render its own `<main>` and trust the layout's. Option (a) is the standard Next 15 + App Router pattern.
+- source: browser
+
+### [HIGH] /about — body prose is broken around inline-link rendering; sentences end mid-word
+- issue: #23
+- pass: 7 (commit e3de21d)
+- viewport: both
+- category: content
+- observation: Multiple body sentences on /about are missing words around their inline links — they read as broken/truncated copy. /about is a stranger-facing trust surface; broken prose with mid-word truncation reads as either a half-finished site or a corrupted deploy. The page passes the smoke walker because the H1 and section testIds render fine; it's the body prose that's mis-composed.
+- evidence: Verbatim from rendered page — "The scores switches, keycaps, layouts, vendors, and brands on a single −100 to 100 scale, updated w." (ends mid-word; missing "Trends Tracker" link text + "weekly"); "Read the for the full methodology." (missing noun before "for"); "Group-buy URLs published on thock are auto-flagged with at render time. That tag is applied by the ." (two missing nouns/links); "Citations across articles surface on the page so the reader can audit where the facts came from." (missing "Sources" before "page").
+- suggested fix: audit `apps/web/src/components/about/AboutBody.tsx` (and any helper that renders inline links inside paragraphs) for the rendering pattern that's extracting link text from prose. Suspect: a JSX template that puts the link's anchor text in a sibling element rather than inside the surrounding `<p>`. Each sentence with a broken link needs the text completed: "updated weekly on the [Trends Tracker]" / "Read the [Sources page] for the full methodology" / etc. Pair the diagnosis with the /sources finding (#24) — likely the same root cause.
+- source: browser
+
+### [MED] /sources — intro trails off mid-sentence after the `rel="sponsored"` inline (same root cause as /about)
+- issue: #24
+- pass: 7 (commit e3de21d)
+- viewport: both
+- category: content
+- observation: The /sources intro paragraph trails off mid-sentence after the `rel="sponsored"` inline. Same broken-prose root cause as /about (#23). This is suspicious because the prose I shipped at `apps/web/src/app/sources/page.tsx:62-70` (commit ec00178) includes the full text — the rendered DOM is dropping it.
+- evidence: Reader's accessibility tree capture shows the rendered text ending at "Vendor links are auto-flagged with `rel=\"sponsored\"` so a reader." — the rest of the sentence ("...can audit which articles do their homework. The full per-citation index — article, quote, URL — is the next step; today this page lists the per-article tally.") doesn't render in the accessibility tree.
+- suggested fix: diagnose alongside #23. If the cause is prose extraction in editorial-page templates, the /about fix should automatically cover this surface. Bumps to HIGH if the diagnosis confirms a single underlying cause across both surfaces.
+- source: browser
+
+### [MED] /trends/tracker — editor's-note text duplicated in the a11y tree (every note read twice by screen readers)
+- issue: #25
+- pass: 7 (commit e3de21d)
+- viewport: both
+- category: a11y
+- observation: Every row in the Switch / Keycap / Layout / Vendor / Brand mover tables on /trends/tracker exposes its "Editor's note" text twice in the accessibility tree. Screen readers will read each note twice. Distinct from the pass-5 fix (anchor-count: that fix dropped two of the three same-URL anchors to `<span>`). This is text duplication: the mobile-only `md:hidden` branch and the desktop-only `hidden md:block` branch both render their note text. At desktop the mobile branch is `display: none` for sighted users, but the accessibility tree still sees both.
+- evidence: On /trends/tracker, each row pattern is `link <Name> + generic <note text> + generic <score> + img + img + generic <same note text again>` (e.g., the Gateron Oil King row at ref_68/ref_69/ref_70/ref_71/ref_72/ref_73 has the editor's note at both ref_69 and ref_73). The pattern repeats for every mover row across all five tables.
+- suggested fix: mark whichever responsive-hidden variant gets `display: none` with `aria-hidden="true"` so it isn't double-announced. Concrete edit in `apps/web/src/components/tracker/TrackerRow.tsx`: add `aria-hidden` to the inactive branch at each viewport, OR consolidate to a single rendered branch that uses CSS to control its visual position rather than two duplicate trees. The `aria-hidden` route is the cheaper fix.
+- source: browser
+
+### [LOW] /group-buys — Sweet Nightmare card missing region chip while siblings have GLOBAL
+- issue: #26
+- pass: 7 (commit e3de21d)
+- viewport: both
+- category: data
+- observation: The region/scope chip is inconsistent across cards in the "Closing soon" band on /group-buys — GMK CYL Ishtar R2 shows a "GLOBAL" chip; GSK Sweet Nightmare next to it has no region chip at all. Looks like a missing field on one record rather than intentional.
+- evidence: Tree on /group-buys: ref_40 (Ishtar R2) has `generic 'KEYCAPS' + generic 'GLOBAL'`; ref_50 (Sweet Nightmare) has only `generic 'KEYCAPS'`, no GLOBAL chip — yet every other card in "Open now" (Nyawice, GREG 2, King of the Seas) does have GLOBAL.
+- suggested fix: backfill the region field on `data/group-buys/kbdfans-gsk-sweet-nightmare.json` if the actual GB has a real region, OR render an explicit fallback ("REGION TBD") in the card so cards have a consistent shape. Backfill is the better answer.
+- source: browser
+
+### [LOW] /tag/<slug> + cards — date format inconsistent across cards ("May 8, 2026" vs "Apr 30, 2026")
+- issue: #27
+- pass: 7 (commit e3de21d)
+- viewport: both
+- category: visual
+- observation: Date format is inconsistent across cards on the tag archive (and likely other card-rendering surfaces) — most cards say "May 8, 2026" (long month) but the beginner's-switch-buying-guide card says "Apr 30, 2026" (abbreviated). Cosmetic inconsistency, but visible side-by-side on archive pages.
+- evidence: On /tag/gateron, the four cards display: ref_46 "May 4, 2026", ref_54 "May 8, 2026", ref_62 "May 7, 2026", ref_70 "Apr 30, 2026".
+- suggested fix: pick one date formatter and apply it everywhere card metadata renders. The pillar/tag/related-rail cards use `Intl.DateTimeFormat('en-US', { dateStyle: 'medium', timeZone: 'UTC' })` which produces "May 4, 2026" / "Apr 30, 2026" (abbreviated for medium). Audit which component is using `'long'` vs `'medium'` for cards (likely some surface has `dateStyle: 'long'` mismatched with sibling card surfaces) and standardize on one format. `'medium'` is the bearings card-density choice; pick that.
+- source: browser
 
 ### [x] [HIGH] /article/mode-sonnet-r2-group-buy-coverage + /news + /tag/* + / — lede leaks "post-2026-05-09 schedule" editorial-pipeline jargon
 - addressed in: pending commit (this tick — iterate drain)
