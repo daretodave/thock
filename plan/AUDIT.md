@@ -121,7 +121,7 @@
 >
 > **Resolved (2026-05-10):** No chunk-audit needed — current homepage bundle measures 108.7 KB gzipped (per `pnpm --filter @thock/web run size`), well under both the 250 KB phase-17 budget and the 200 KB bearings target. The corpus growth + iterate ticks since phase 17 added no meaningful bundle weight (article body weight is build-time-rendered MDX, not client JS). Bumped `DEFAULT_MAX_KB` from 250 → 200 in `apps/web/scripts/measure-bundle.mts:31` to match bearings; updated the script docblock to reflect the rationale + current baseline. The verify gate now enforces the bearings target directly. No remaining headroom needs a chunk-audit; that work fires only if a future phase pushes bundle weight back toward the 200 KB ceiling. 330 e2e green first parallel attempt.
 
-### [MED] [a11y] /trends/tracker — heading level skipped (h1 → h3 with no h2)
+### [x] [MED] [a11y] /trends/tracker — heading level skipped (h1 → h3 with no h2) — addressed in f70b1f3 (closes #33)
 > Filed 2026-05-10 by /iterate audit pass (resolves the [MED] Accessibility audit pass row above).
 >
 > **Observation:** /trends/tracker's heading sequence is `h1 h3 h3 h3 h3 h2 h2 h2 h2 h2`. The h1 "What's actually rising this week" (offset 10804 in rendered HTML) is followed directly by four h3 cards ("Gateron Oil King", "Cherry MX2A revisions", "HMX Cloud", "Wuque Studio") at offsets 11947–15171, then later switch/keycap/layout/vendor/brand "movers" h2 sections. The h3-after-h1-without-h2 is a heading-level skip — screen-reader users navigating by heading jumps will perceive the rising cards as belonging to a missing or implied h2 section.
@@ -131,6 +131,8 @@
 > **Action:** likely the cleanest fix is to wrap the four "rising this week" card titles under a real h2 sub-section heading (e.g. an h2 "Top movers this week" right after the h1) so the structure becomes `h1 → h2 → h3*4 → h2*5`. Alternative: promote the four card titles from h3 to h2, joining the existing five movers h2 sections — but that loses the visual subordination of "preview cards" vs "category tables." Probably the wrap-with-h2 path is right; component is `apps/web/src/components/tracker/<RisingThisWeek?>` (search the codebase to find the actual file).
 >
 > Score: **4.0** (impact 5 — single page, real but narrow audience of heading-nav screen-reader users; ease 8 — one component edit + one e2e to lock the order).
+>
+> **Resolved (2026-05-10):** wrapped `<TrackerSummaryGrid>` in `apps/web/src/app/trends/tracker/page.tsx` with a visible h2 "This week at a glance" right after the TrackerHeader's h1. Sequence is now `h1 → h2 → h3*4 → h2*5` (no skip). Wording chosen over the audit's suggested "Top movers this week" because the four cards include Sleeper (which is flat by design — see also pending [MED] critique #8) — "movers" framing dilutes the Sleeper kind. New e2e regression guard at `apps/e2e/tests/trends.spec.ts` walks every heading in document order and asserts no level jump > 1 going down — catches future skips automatically. Verify: 409 e2e green parallel (no #418 flake this run).
 
 ### [LOW] [a11y] all pages — no "skip to main content" link
 > Filed 2026-05-10 by /iterate audit pass (resolves the [MED] Accessibility audit pass row above).
