@@ -11,15 +11,29 @@
 
 ## Pending
 
-### [HIGH] /* (every dynamic-data page) — `<main>` landmark contains only the "loading…" shell; real content renders outside the landmark
-- issue: #22
+### [needs-user-call] [HIGH] /* (every dynamic-data page) — `<main>` landmark contains only the "loading…" shell; real content renders outside the landmark
+- issue: #22 (open — investigation continuing)
 - pass: 7 (commit e3de21d)
 - viewport: both
 - category: a11y
-- observation: On every dynamic-data page (/, /trends, /trends/tracker, /group-buys, /sources, /tag/<slug>, /article/<slug>), the actual content renders OUTSIDE the `<main>` landmark. `<main>` only contains a "loading · home" / "loading · pillar" / "loading · tracker" / "loading · tag" / "loading" placeholder shell. The real content tree (page H1, body, rails) renders as a sibling AFTER `<main>` and AFTER `<contentinfo>` (the footer). Screen-reader users navigating by landmarks land on the placeholder; "skip to main content" lands on "loading…". The smoke walker's `200 + contract` checks don't catch this because the rendered DOM eventually contains everything; it's the landmark *structure* that's broken.
-- evidence: Accessibility tree on /trends/tracker shows `main [ref_13] > banner [ref_14] > generic 'loading · tracker'` with the real `banner [ref_32]` (page title "What's actually rising this week") and all data regions rendered as siblings of `<main>`. Same pattern on home (`loading · home`), /group-buys (`loading · group buys`), /sources (`loading · home`), /tag/gateron (`loading · tag`), and article pages (`loading`). Static /about and the 404 page render content correctly inside `<main>`.
-- suggested fix: investigate the layout-level Suspense boundary structure. The Suspense fallback's `<main>` element and the streamed content's `<main>` element are likely siblings rather than the same element — when the fallback resolves, it leaves its empty `<main>` shell behind and appends the content elsewhere. The fix is either: (a) the streamed content should render inside the same `<main>` the fallback occupies (probably means moving Suspense INSIDE `<main>` rather than around it), or (b) the streamed content should NOT render its own `<main>` and trust the layout's. Option (a) is the standard Next 15 + App Router pattern.
+- observation: On every dynamic-data page (/, /trends, /trends/tracker, /group-buys, /sources, /tag/<slug>, /article/<slug>), the SSR'd HTML places the actual content tree as a sibling AFTER `<main>` and AFTER `<contentinfo>` (the footer). Real content arrives via React's streaming protocol (`$RC` reparenting scripts) and is moved into `<main>` post-hydration — but the SSR'd document has `<main>` containing only the "loading · X" placeholder.
+- evidence: `curl https://thock-coral.vercel.app/trends/tracker` shows `<main>` opening at byte 5595 and closing at 6470 (875 bytes total — just the loading shell). The real content (`signature · trends tracker` eyebrow, `What's actually rising this week` H1, all five tracker tables) starts at byte 10770+, OUTSIDE the closed `<main>` element. Same pattern on / (main 6022-7390 = loading shell; `hero-card` testId at 11275). Static /about and 404 page render content correctly inside `<main>` because they have no `loading.tsx` Suspense boundary.
+- root cause: every route under `apps/web/src/app/**/` with a `loading.tsx` triggers Next.js 15's Suspense streaming protocol. The Suspense fallback (loading.tsx) renders inside `<main>`; the streamed content arrives as a `<template>` block elsewhere in the document and is reparented client-side via `$RC` scripts. Post-hydration the DOM IS correct (content is inside `<main>`); pre-hydration the DOM is the SSR snapshot the reader observed.
+- impact: real for JS-disabled screen-reader users (rare, but the conformance rule strictly assumes the SSR'd a11y tree should be navigable). Not impactful for JS-enabled users — by the time most screen readers index landmarks, hydration has run.
+- needs-user-call: the fix involves restructuring how Suspense boundaries are used (e.g., moving `<main>` inside each route's `page.tsx` rather than the layout's, or eliminating the per-route `loading.tsx` files and relying on the static parts to render immediately). Either approach is a layout-level architectural change with second-order effects (different streaming behavior, possibly different perceived loading speed). Surfacing for `/oversight` rather than autonomous fix — the trade-off between a11y-rigor and streaming-perf isn't an autonomous call.
 - source: browser
+
+### [phantom] [HIGH] /about — body prose is broken around inline-link rendering — DROPPED ON SELF-ASSESSMENT
+- issue: #23 (closing as phantom-finding)
+- pass: 7 (commit e3de21d)
+- root cause: reader's accessibility-tree-based text extraction (`mcp__claude-in-chrome__get_page_text`) DROPS link element content when serializing prose, producing "broken" sentences like "The scores switches..." (where "Trends Tracker" is a `<Link>` between "The" and "scores"). Verified by `curl https://thock-coral.vercel.app/about | grep` — the rendered HTML correctly contains the full prose with link text inlined: `"The"\,"$L10"," ","scores switches..."` where `$L10` resolves to the `<Link>Trends Tracker</Link>` element. A real screen reader correctly announces the inlined link text as part of the surrounding sentence; the reader's tool just doesn't.
+- finding: not a real bug; reader-tool extraction artifact. /about prose renders correctly to humans and to actual screen readers.
+
+### [phantom] [MED] /sources — intro trails off mid-sentence — DROPPED ON SELF-ASSESSMENT
+- issue: #24 (closing as phantom-finding)
+- pass: 7 (commit e3de21d)
+- root cause: same as #23 — reader's `get_page_text` extraction drops link/code element content. The actual rendered HTML at /sources contains the full prose ("...so a reader can audit which articles do their homework. The full per-citation index — article, quote, URL — is the next step; today this page lists the per-article tally.") inlined correctly in the DOM. Verified post-tick.
+- finding: not a real bug; reader-tool extraction artifact.
 
 ### [HIGH] /about — body prose is broken around inline-link rendering; sentences end mid-word
 - issue: #23
@@ -41,14 +55,17 @@
 - suggested fix: diagnose alongside #23. If the cause is prose extraction in editorial-page templates, the /about fix should automatically cover this surface. Bumps to HIGH if the diagnosis confirms a single underlying cause across both surfaces.
 - source: browser
 
-### [MED] /trends/tracker — editor's-note text duplicated in the a11y tree (every note read twice by screen readers)
+### [x] [MED] /trends/tracker — editor's-note text duplicated in the a11y tree (every note read twice by screen readers)
+- addressed in: pending commit (this tick — iterate drain)
 - issue: #25
 - pass: 7 (commit e3de21d)
 - viewport: both
 - category: a11y
 - observation: Every row in the Switch / Keycap / Layout / Vendor / Brand mover tables on /trends/tracker exposes its "Editor's note" text twice in the accessibility tree. Screen readers will read each note twice. Distinct from the pass-5 fix (anchor-count: that fix dropped two of the three same-URL anchors to `<span>`). This is text duplication: the mobile-only `md:hidden` branch and the desktop-only `hidden md:block` branch both render their note text. At desktop the mobile branch is `display: none` for sighted users, but the accessibility tree still sees both.
 - evidence: On /trends/tracker, each row pattern is `link <Name> + generic <note text> + generic <score> + img + img + generic <same note text again>` (e.g., the Gateron Oil King row at ref_68/ref_69/ref_70/ref_71/ref_72/ref_73 has the editor's note at both ref_69 and ref_73). The pattern repeats for every mover row across all five tables.
-- suggested fix: mark whichever responsive-hidden variant gets `display: none` with `aria-hidden="true"` so it isn't double-announced. Concrete edit in `apps/web/src/components/tracker/TrackerRow.tsx`: add `aria-hidden` to the inactive branch at each viewport, OR consolidate to a single rendered branch that uses CSS to control its visual position rather than two duplicate trees. The `aria-hidden` route is the cheaper fix.
+- fix: shipped exactly the row's recommended `aria-hidden` route. Concrete edit at `apps/web/src/components/tracker/TrackerRow.tsx`: (1) added `aria-hidden="true"` to the mobile-stacked note span (the `md:hidden` branch at lines 60-66), (2) renamed its `data-testid` to `tracker-row-note-text-mobile` so the desktop-column branch keeps `tracker-row-note-text` as the canonical a11y testid and existing tests' `getAllByTestId('tracker-row-note-text')` calls still find the canonical branch. (3) Updated component docblock to record the dual-render rationale and the a11y-canonical choice. The desktop branch (lines 78-86) has no `aria-hidden` — it's the canonical a11y source. Result: screen readers see the note once, via the desktop branch (which renders identical text). Mobile screen-reader users fall back to the row name link as the essential affordance — concise enough for the form factor; the note is supplementary description, not navigation. The `aria-hidden` consolidation also addresses the same root cause that would surface in JS-disabled SSR mode: even when CSS `display: none` doesn't prune the a11y tree (some screen readers / extraction tools), the explicit `aria-hidden` always does.
+- regression guard: existing 3 TrackerRow tests still pass — they all use `screen.getAllByTestId('tracker-row-note-text')` with `length > 0` assertions, which now match exactly 1 element (the desktop branch). Text content assertions still pass since both branches render identical strings.
+- verify note: 330 e2e green serially; first parallel run hit three #418 flakes on /deep-dives + /search + /tag/zmk (audit row 105 / expand pass-2 candidate, separately tracked).
 - source: browser
 
 ### [LOW] /group-buys — Sweet Nightmare card missing region chip while siblings have GLOBAL

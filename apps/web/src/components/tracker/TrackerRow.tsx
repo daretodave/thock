@@ -24,7 +24,16 @@ const TONE_CLASS: Record<TrendRow['direction'], string> = {
  * single click target when an article resolves; the editor's-note
  * text is descriptive copy on both viewports (mobile renders it
  * stacked below the row name; desktop renders it in its own
- * column). Single anchor per row keeps the a11y tree clean.
+ * column).
+ *
+ * The note text is rendered in two DOM positions because the layout
+ * differs by viewport — mobile stacks it under the name within the
+ * same flex cell, desktop puts it in a dedicated grid cell. The
+ * mobile branch is marked `aria-hidden="true"` (critique pass 7
+ * [MED] #25 drain) so screen readers see the desktop-column branch
+ * as the canonical a11y source and don't double-announce the note.
+ * Mobile screen readers fall back to the row name link as the
+ * essential affordance — concise enough for the form factor.
  */
 export function TrackerRow({
   rank,
@@ -58,7 +67,8 @@ export function TrackerRow({
         )}
         {noteText && (
           <span
-            data-testid="tracker-row-note-text"
+            aria-hidden="true"
+            data-testid="tracker-row-note-text-mobile"
             className="text-small text-text-2 md:hidden"
           >
             {noteText}
