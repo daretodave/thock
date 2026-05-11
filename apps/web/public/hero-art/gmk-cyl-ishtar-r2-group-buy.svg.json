@@ -1,0 +1,71 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-11",
+  "commit": "52cee499759d078d7e41813a839c45dee2c42c1f",
+  "kind": "hero-art",
+  "article_slug": "gmk-cyl-ishtar-r2-group-buy",
+  "pillar": "news",
+  "target": "Z:/keyboard/apps/web/public/hero-art/gmk-cyl-ishtar-r2-group-buy.svg",
+  "source": "plan/bearings.md § Article hero art — locked 2026-05-09",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject",
+  "size": [1200, 750],
+  "subject": "Top-down silhouette of a 75% board. The lapis splash sits as a contiguous block across the left half of the alpha cluster (Q W E R on the top alpha row and A S D F on the home row), reading as the glazed-brickwork lapis of the Ishtar Gate. The spacebar is tinted sandstone — a warm cream/tan — as the secondary nod to the cream/sandstone reliefs of lions and aurochs on the original Babylonian gate. Warm-bronze hairlines on the top and bottom case edges only. No literal gate or animal motifs — silhouette + palette tells the story.",
+  "brief_summary": "Hero art for the news-pillar companion piece to the GMK CYL Ishtar R2 group-buy listing. R2 is the second round of the same Ishtar set; the palette is unchanged from the original — deep lapis blue with cream/sandstone reliefs. The composition mirrors the in-house GMK CYL hero language (top-down 75% silhouette, warm-bronze hairlines, single splash of color on the alpha cluster) but substitutes lapis for coral and adds a sandstone-tinted spacebar as a secondary accent — the only deviation from the strict 'single splash' rule, justified by the original set itself being a two-color story (lapis + cream) where the cream is structurally distinct from the lapis. Reads at a glance as 'a GMK CYL companion piece, but lapis-and-sandstone instead of coral.'",
+  "composition_decision": "single contiguous lapis block across QWER + ASDF (eight caps) as the primary splash, plus a sandstone-tinted spacebar as a quiet secondary accent for the cream-relief half of the Ishtar palette; both accents are abstract — no gate, no aurochs, no lions",
+  "splash_color": {
+    "name": "lapis",
+    "oklch": "oklch(0.42 0.115 255)",
+    "approx_hex": "#1F4E8C",
+    "fill_alpha": 0.86,
+    "border": "oklch(0.34 0.125 255)",
+    "inner_top_surface": "oklch(0.56 0.10 255 / 0.55)",
+    "rationale": "slightly-greenish-deep-blue keyed to lapis lazuli, not navy; matches the glazed-brickwork hue of the Ishtar Gate"
+  },
+  "secondary_accent": {
+    "name": "sandstone",
+    "oklch": "oklch(0.86 0.045 80)",
+    "approx_hex": "#D9C5A0",
+    "applied_to": "spacebar (6.25u, row 6)",
+    "fill_alpha": 0.68,
+    "border": "oklch(0.72 0.06 80)",
+    "inner_top_surface": "oklch(0.92 0.025 85 / 0.50)",
+    "rationale": "warm cream/tan nodding to the cream/sandstone reliefs of lions and aurochs on the original Ishtar Gate; isolated to the spacebar so it reads as a structural counterpoint to the lapis alpha block, not a second equal splash"
+  },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "bronze_accent": {
+    "name": "warm-bronze",
+    "oklch": "oklch(0.80 0.135 75)",
+    "usage": "1.5px hairlines on the top and bottom case edges only, 0.65 stroke opacity"
+  },
+  "palette": {
+    "primary": "lapis (oklch(0.42 0.115 255), ~#1F4E8C)",
+    "secondary": "sandstone (oklch(0.86 0.045 80), ~#D9C5A0)",
+    "outline": "warm-grey (oklch(0.78 0.005 90))",
+    "case_edge": "warm-bronze (oklch(0.80 0.135 75))"
+  },
+  "rationale": "GMK CYL Ishtar draws from the Ishtar Gate of Babylon — glazed lapis brickwork with cream sandstone reliefs. R2 reissues the same palette, so the hero treats Ishtar as a lapis-and-sandstone signature: lapis splash on a contiguous alpha block (Q W E R + A S D F) for the brickwork, sandstone-tinted spacebar for the cream reliefs. Both accents stay abstract; the composition language otherwise matches the King-of-the-Seas and GREG 2 companion pieces so the GMK CYL group-buy companion family reads as a coherent set differentiated only by colorway.",
+  "tokens_snapshot": "design/tokens.css — --kh-accent oklch(0.80 0.135 75); lapis and sandstone are bespoke to this hero, keyed to the original Ishtar set",
+  "fonts": [],
+  "outputs": [
+    "Z:/keyboard/apps/web/public/hero-art/gmk-cyl-ishtar-r2-group-buy.svg"
+  ],
+  "warnings": [],
+  "layout_choice": "75% — single committed layout, identical row geometry to the GREG 2 hero (case y=200, rows at y=232/282/346/410/474/538). 1020x410 case rectangle, six rows.",
+  "lapis_cluster": [
+    "Q (row 3, top alpha)",
+    "W (row 3, top alpha)",
+    "E (row 3, top alpha)",
+    "R (row 3, top alpha)",
+    "A (row 4, home row)",
+    "S (row 4, home row)",
+    "D (row 4, home row)",
+    "F (row 4, home row)"
+  ],
+  "sandstone_accent": [
+    "Spacebar (row 6, 6.25u)"
+  ],
+  "style_guide": "bearings.md § Article hero art (locked 2026-05-09): 2px warm-grey stroke throughout; primary splash on accent caps + warm-bronze accent on case edges only; transparent canvas. Ishtar-specific deviation: a single secondary sandstone tint on the spacebar to honor the two-color story of the source set without breaking the structural language.",
+  "xml_validity": "validated — no double-hyphen runs inside comments; parses as well-formed XML",
+  "revision": 1
+}

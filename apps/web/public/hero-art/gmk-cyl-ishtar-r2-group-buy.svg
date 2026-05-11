@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — GMK CYL Ishtar R2, top-down 75% board silhouette with a lapis-blue splash across the alpha cluster recalling the glazed brickwork of the Ishtar Gate, a sandstone-tinted spacebar nodding to the cream reliefs of the original set, warm-bronze hairlines on top and bottom case edges</title>
+
+  <!-- Editorial hook: the article is the GMK CYL Ishtar R2 group-buy
+       companion piece. Ishtar draws from the Ishtar Gate of Babylon —
+       glazed brickwork in deep lapis with cream sandstone reliefs of
+       lions and aurochs. R2 is the second round; palette unchanged.
+       The hero reads as "a CYL companion piece, but lapis-and-sandstone
+       instead of coral": lapis splash on a contiguous block of alphas
+       and the spacebar tinted sandstone for the secondary cream tone.
+       Warm-bronze hairlines hug the top and bottom case edges only.
+       Everything else is the project standard warm-grey stroke on a
+       transparent canvas. -->
+
+  <!-- ============================================================
+       BOARD OUTLINE — 75% top-down silhouette
+       Case rectangle 1020 x 410, rounded rx 14, with an inset bezel
+       hint at 0.35 stroke opacity.
+       ============================================================ -->
+
+  <!-- Outer case profile -->
+  <rect x="90" y="200" width="1020" height="410" rx="14" ry="14"/>
+
+  <!-- Inset bezel hint -->
+  <rect x="106" y="216" width="988" height="378" rx="9" ry="9" stroke-opacity="0.35"/>
+
+  <!-- Warm-bronze hairline on TOP case edge (sparing accent) -->
+  <line x1="118" y1="206" x2="1082" y2="206"
+        stroke="oklch(0.80 0.135 75)" stroke-opacity="0.65" stroke-width="1.5"/>
+
+  <!-- Warm-bronze hairline on BOTTOM case edge (sparing accent) -->
+  <line x1="118" y1="604" x2="1082" y2="604"
+        stroke="oklch(0.80 0.135 75)" stroke-opacity="0.65" stroke-width="1.5"/>
+
+  <!-- ============================================================
+       KEYCAP GRID — top-down CYL silhouettes
+       Coordinate plan:
+         Row 1 (F-row):    y 234, h 36
+         Row 2 (number):   y 282, h 56
+         Row 3 (top alpha):y 346, h 56
+         Row 4 (home):     y 410, h 56
+         Row 5 (bottom):   y 474, h 56
+         Row 6 (mods+spc): y 538, h 56
+       Column pitch ~64px starting x 118.
+       ============================================================ -->
+
+  <!-- ── ROW 1 — Function row (smaller caps) ── -->
+  <g stroke-opacity="0.85">
+    <rect x="118" y="232" width="56" height="36" rx="4" ry="4"/>
+    <rect x="124" y="240" width="44" height="20" rx="2" ry="2" stroke-opacity="0.45"/>
+    <rect x="180" y="232" width="56" height="36" rx="4" ry="4"/>
+    <rect x="186" y="240" width="44" height="20" rx="2" ry="2" stroke-opacity="0.45"/>
+    <rect x="242" y="232" width="56" height="36" rx="4" ry="4"/>
+    <rect x="248" y="240" width="44" height="20" rx="2" ry="2" stroke-opacity="0.45"/>
+    <rect x="304" y="232" width="56" height="36" rx="4" ry="4"/>
+    <rect x="310" y="240" width="44" height="20" rx="2" ry="2" stroke-opacity="0.45"/>
+    <rect x="366" y="232" width="56" height="36" rx="4" ry="4"/>
+    <rect x="372" y="240" width="44" height="20" rx="2" ry="2" stroke-opacity="0.45"/>
+    <rect x="446" y="232" width="56" height="36" rx="4" ry="4"/>
+    <rect x="452" y="240" width="44" height="20" rx="2" ry="2" stroke-opacity="0.45"/>
+    <rect x="508" y="232" width="56" height="36" rx="4" ry="4"/>
+    <rect x="514" y="240" width="44" height="20" rx="2" ry="2" stroke-opacity="0.45"/>
+    <rect x="570" y="232" width="56" height="36" rx="4" ry="4"/>
+    <rect x="576" y="240" width="44" height="20" rx="2" ry="2" stroke-opacity="0.45"/>
+    <rect x="632" y="232" width="56" height="36" rx="4" ry="4"/>
+    <rect x="638" y="240" width="44" height="20" rx="2" ry="2" stroke-opacity="0.45"/>
+    <rect x="712" y="232" width="56" height="36" rx="4" ry="4"/>
+    <rect x="718" y="240" width="44" height="20" rx="2" ry="2" stroke-opacity="0.45"/>
+    <rect x="774" y="232" width="56" height="36" rx="4" ry="4"/>
+    <rect x="780" y="240" width="44" height="20" rx="2" ry="2" stroke-opacity="0.45"/>
+    <rect x="836" y="232" width="56" height="36" rx="4" ry="4"/>
+    <rect x="842" y="240" width="44" height="20" rx="2" ry="2" stroke-opacity="0.45"/>
+    <rect x="898" y="232" width="56" height="36" rx="4" ry="4"/>
+    <rect x="904" y="240" width="44" height="20" rx="2" ry="2" stroke-opacity="0.45"/>
+    <rect x="978" y="232" width="56" height="36" rx="4" ry="4"/>
+    <rect x="984" y="240" width="44" height="20" rx="2" ry="2" stroke-opacity="0.45"/>
+  </g>
+
+  <!-- ── ROW 2 — Number row ── -->
+  <rect x="118" y="282" width="60" height="56" rx="5" ry="5"/>
+  <rect x="126" y="292" width="44" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <rect x="182" y="282" width="60" height="56" rx="5" ry="5"/>
+  <rect x="190" y="292" width="44" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <rect x="246" y="282" width="60" height="56" rx="5" ry="5"/>
+  <rect x="254" y="292" width="44" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <rect x="310" y="282" width="60" height="56" rx="5" ry="5"/>
+  <rect x="318" y="292" width="44" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <rect x="374" y="282" width="60" height="56" rx="5" ry="5"/>
+  <rect x="382" y="292" width="44" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <rect x="438" y="282" width="60" height="56" rx="5" ry="5"/>
+  <rect x="446" y="292" width="44" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <rect x="502" y="282" width="60" height="56" rx="5" ry="5"/>
+  <rect x="510" y="292" width="44" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <rect x="566" y="282" width="60" height="56" rx="5" ry="5"/>
+  <rect x="574" y="292" width="44" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <rect x="630" y="282" width="60" height="56" rx="5" ry="5"/>
+  <rect x="638" y="292" width="44" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <rect x="694" y="282" width="60" height="56" rx="5" ry="5"/>
+  <rect x="702" y="292" width="44" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <rect x="758" y="282" width="60" height="56" rx="5" ry="5"/>
+  <rect x="766" y="292" width="44" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <rect x="822" y="282" width="60" height="56" rx="5" ry="5"/>
+  <rect x="830" y="292" width="44" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <rect x="886" y="282" width="60" height="56" rx="5" ry="5"/>
+  <rect x="894" y="292" width="44" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <!-- Backspace 2u -->
+  <rect x="950" y="282" width="84" height="56" rx="5" ry="5"/>
+  <rect x="958" y="292" width="68" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+
+  <!-- ── ROW 3 — Top alpha (Q row) ── -->
+  <!-- Tab 1.5u -->
+  <rect x="118" y="346" width="92" height="56" rx="5" ry="5"/>
+  <rect x="126" y="356" width="76" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <!-- Q (lapis 1 of 8) -->
+  <rect x="214" y="346" width="60" height="56" rx="5" ry="5"
+        fill="oklch(0.42 0.115 255 / 0.86)" stroke="oklch(0.34 0.125 255)"/>
+  <rect x="222" y="356" width="44" height="36" rx="3" ry="3"
+        fill="oklch(0.56 0.10 255 / 0.55)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55"/>
+  <!-- W (lapis 2 of 8) -->
+  <rect x="278" y="346" width="60" height="56" rx="5" ry="5"
+        fill="oklch(0.42 0.115 255 / 0.86)" stroke="oklch(0.34 0.125 255)"/>
+  <rect x="286" y="356" width="44" height="36" rx="3" ry="3"
+        fill="oklch(0.56 0.10 255 / 0.55)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55"/>
+  <!-- E (lapis 3 of 8) -->
+  <rect x="342" y="346" width="60" height="56" rx="5" ry="5"
+        fill="oklch(0.42 0.115 255 / 0.86)" stroke="oklch(0.34 0.125 255)"/>
+  <rect x="350" y="356" width="44" height="36" rx="3" ry="3"
+        fill="oklch(0.56 0.10 255 / 0.55)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55"/>
+  <!-- R (lapis 4 of 8) -->
+  <rect x="406" y="346" width="60" height="56" rx="5" ry="5"
+        fill="oklch(0.42 0.115 255 / 0.86)" stroke="oklch(0.34 0.125 255)"/>
+  <rect x="414" y="356" width="44" height="36" rx="3" ry="3"
+        fill="oklch(0.56 0.10 255 / 0.55)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55"/>
+  <!-- T -->
+  <rect x="470" y="346" width="60" height="56" rx="5" ry="5"/>
+  <rect x="478" y="356" width="44" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <!-- Y -->
+  <rect x="534" y="346" width="60" height="56" rx="5" ry="5"/>
+  <rect x="542" y="356" width="44" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <!-- U -->
+  <rect x="598" y="346" width="60" height="56" rx="5" ry="5"/>
+  <rect x="606" y="356" width="44" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <!-- I -->
+  <rect x="662" y="346" width="60" height="56" rx="5" ry="5"/>
+  <rect x="670" y="356" width="44" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <!-- O -->
+  <rect x="726" y="346" width="60" height="56" rx="5" ry="5"/>
+  <rect x="734" y="356" width="44" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <!-- P -->
+  <rect x="790" y="346" width="60" height="56" rx="5" ry="5"/>
+  <rect x="798" y="356" width="44" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <!-- [ -->
+  <rect x="854" y="346" width="60" height="56" rx="5" ry="5"/>
+  <rect x="862" y="356" width="44" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <!-- ] -->
+  <rect x="918" y="346" width="60" height="56" rx="5" ry="5"/>
+  <rect x="926" y="356" width="44" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <!-- backslash 1.25u -->
+  <rect x="982" y="346" width="52" height="56" rx="5" ry="5"/>
+  <rect x="990" y="356" width="36" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+
+  <!-- ── ROW 4 — Home row (A row) ── -->
+  <!-- Caps 1.75u -->
+  <rect x="118" y="410" width="108" height="56" rx="5" ry="5"/>
+  <rect x="126" y="420" width="92" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <!-- A (lapis 5 of 8) -->
+  <rect x="230" y="410" width="60" height="56" rx="5" ry="5"
+        fill="oklch(0.42 0.115 255 / 0.86)" stroke="oklch(0.34 0.125 255)"/>
+  <rect x="238" y="420" width="44" height="36" rx="3" ry="3"
+        fill="oklch(0.56 0.10 255 / 0.55)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55"/>
+  <!-- S (lapis 6 of 8) -->
+  <rect x="294" y="410" width="60" height="56" rx="5" ry="5"
+        fill="oklch(0.42 0.115 255 / 0.86)" stroke="oklch(0.34 0.125 255)"/>
+  <rect x="302" y="420" width="44" height="36" rx="3" ry="3"
+        fill="oklch(0.56 0.10 255 / 0.55)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55"/>
+  <!-- D (lapis 7 of 8) -->
+  <rect x="358" y="410" width="60" height="56" rx="5" ry="5"
+        fill="oklch(0.42 0.115 255 / 0.86)" stroke="oklch(0.34 0.125 255)"/>
+  <rect x="366" y="420" width="44" height="36" rx="3" ry="3"
+        fill="oklch(0.56 0.10 255 / 0.55)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55"/>
+  <!-- F (lapis 8 of 8) -->
+  <rect x="422" y="410" width="60" height="56" rx="5" ry="5"
+        fill="oklch(0.42 0.115 255 / 0.86)" stroke="oklch(0.34 0.125 255)"/>
+  <rect x="430" y="420" width="44" height="36" rx="3" ry="3"
+        fill="oklch(0.56 0.10 255 / 0.55)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55"/>
+  <!-- G -->
+  <rect x="486" y="410" width="60" height="56" rx="5" ry="5"/>
+  <rect x="494" y="420" width="44" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <!-- H -->
+  <rect x="550" y="410" width="60" height="56" rx="5" ry="5"/>
+  <rect x="558" y="420" width="44" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <!-- J -->
+  <rect x="614" y="410" width="60" height="56" rx="5" ry="5"/>
+  <rect x="622" y="420" width="44" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <!-- K -->
+  <rect x="678" y="410" width="60" height="56" rx="5" ry="5"/>
+  <rect x="686" y="420" width="44" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <!-- L -->
+  <rect x="742" y="410" width="60" height="56" rx="5" ry="5"/>
+  <rect x="750" y="420" width="44" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <!-- ; -->
+  <rect x="806" y="410" width="60" height="56" rx="5" ry="5"/>
+  <rect x="814" y="420" width="44" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <!-- ' -->
+  <rect x="870" y="410" width="60" height="56" rx="5" ry="5"/>
+  <rect x="878" y="420" width="44" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <!-- Enter 2.25u -->
+  <rect x="934" y="410" width="100" height="56" rx="5" ry="5"/>
+  <rect x="942" y="420" width="84" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+
+  <!-- ── ROW 5 — Bottom alpha (Z row) ── -->
+  <!-- LShift 2.25u -->
+  <rect x="118" y="474" width="124" height="56" rx="5" ry="5"/>
+  <rect x="126" y="484" width="108" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <!-- Z -->
+  <rect x="246" y="474" width="60" height="56" rx="5" ry="5"/>
+  <rect x="254" y="484" width="44" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <!-- X -->
+  <rect x="310" y="474" width="60" height="56" rx="5" ry="5"/>
+  <rect x="318" y="484" width="44" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <!-- C -->
+  <rect x="374" y="474" width="60" height="56" rx="5" ry="5"/>
+  <rect x="382" y="484" width="44" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <!-- V -->
+  <rect x="438" y="474" width="60" height="56" rx="5" ry="5"/>
+  <rect x="446" y="484" width="44" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <!-- B -->
+  <rect x="502" y="474" width="60" height="56" rx="5" ry="5"/>
+  <rect x="510" y="484" width="44" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <!-- N -->
+  <rect x="566" y="474" width="60" height="56" rx="5" ry="5"/>
+  <rect x="574" y="484" width="44" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <!-- M -->
+  <rect x="630" y="474" width="60" height="56" rx="5" ry="5"/>
+  <rect x="638" y="484" width="44" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <!-- , -->
+  <rect x="694" y="474" width="60" height="56" rx="5" ry="5"/>
+  <rect x="702" y="484" width="44" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <!-- . -->
+  <rect x="758" y="474" width="60" height="56" rx="5" ry="5"/>
+  <rect x="766" y="484" width="44" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <!-- / -->
+  <rect x="822" y="474" width="60" height="56" rx="5" ry="5"/>
+  <rect x="830" y="484" width="44" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <!-- RShift 1.75u -->
+  <rect x="886" y="474" width="92" height="56" rx="5" ry="5"/>
+  <rect x="894" y="484" width="76" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <!-- Up arrow -->
+  <rect x="982" y="474" width="52" height="56" rx="5" ry="5"/>
+  <rect x="990" y="484" width="36" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+
+  <!-- ── ROW 6 — Bottom row (mods + spacebar) ── -->
+  <!-- LCtrl 1.25u -->
+  <rect x="118" y="538" width="76" height="56" rx="5" ry="5"/>
+  <rect x="126" y="548" width="60" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <!-- LWin 1.25u -->
+  <rect x="198" y="538" width="76" height="56" rx="5" ry="5"/>
+  <rect x="206" y="548" width="60" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <!-- LAlt 1.25u -->
+  <rect x="278" y="538" width="76" height="56" rx="5" ry="5"/>
+  <rect x="286" y="548" width="60" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <!-- Spacebar 6.25u — sandstone secondary accent
+       (cream/tan, nodding to the Ishtar Gate reliefs) -->
+  <rect x="358" y="538" width="392" height="56" rx="5" ry="5"
+        fill="oklch(0.86 0.045 80 / 0.68)" stroke="oklch(0.72 0.06 80)"/>
+  <rect x="366" y="548" width="376" height="36" rx="3" ry="3"
+        fill="oklch(0.92 0.025 85 / 0.50)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55"/>
+  <!-- RAlt 1u -->
+  <rect x="754" y="538" width="60" height="56" rx="5" ry="5"/>
+  <rect x="762" y="548" width="44" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <!-- Fn 1u -->
+  <rect x="818" y="538" width="60" height="56" rx="5" ry="5"/>
+  <rect x="826" y="548" width="44" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <!-- Left arrow -->
+  <rect x="918" y="538" width="60" height="56" rx="5" ry="5"/>
+  <rect x="926" y="548" width="44" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <!-- Down arrow -->
+  <rect x="982" y="538" width="52" height="56" rx="5" ry="5"/>
+  <rect x="990" y="548" width="36" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+  <!-- Right arrow -->
+  <rect x="1038" y="538" width="44" height="56" rx="5" ry="5"/>
+  <rect x="1046" y="548" width="28" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
+
+  <!-- Subtle CYL scoop arcs across each accent cap to reinforce the cylindrical
+       profile read. Drawn last so they sit on top. -->
+  <g stroke="oklch(0.92 0.025 85)" stroke-opacity="0.45" stroke-width="1.5">
+    <!-- Top-alpha lapis cluster scoops (Q W E R) -->
+    <path d="M 224 376 Q 244 370 264 376"/>
+    <path d="M 288 376 Q 308 370 328 376"/>
+    <path d="M 352 376 Q 372 370 392 376"/>
+    <path d="M 416 376 Q 436 370 456 376"/>
+    <!-- Home-row lapis cluster scoops (A S D F) -->
+    <path d="M 240 440 Q 260 434 280 440"/>
+    <path d="M 304 440 Q 324 434 344 440"/>
+    <path d="M 368 440 Q 388 434 408 440"/>
+    <path d="M 432 440 Q 452 434 472 440"/>
+    <!-- Spacebar sandstone scoop — single wide arc -->
+    <path d="M 372 568 Q 554 560 736 568"/>
+  </g>
+</svg>
