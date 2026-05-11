@@ -28,13 +28,16 @@
 - verify note: 433 e2e green parallel — no #418 flake this run.
 - source: browser
 
-### [HIGH] /group-buys — Ishtar R2 card under "Just closed" section carries a "LIVE" status pill (renderer leaks source status)
+### [x] [HIGH] /group-buys — Ishtar R2 card under "Just closed" section carries a "LIVE" status pill (renderer leaks source status)
+- addressed in: 478c952 (this tick — iterate drain)
+- issue: #44
 - pass: 11 (commit 931c8a7)
 - viewport: both
 - category: affordance
 - observation: In the /group-buys "Just closed" section, the GMK CYL Ishtar R2 card shows a status pill that reads "LIVE" while the sibling Paper80 card correctly reads "CLOSED." A fresh visitor sees a "LIVE" pill in the just-closed segment and reasonably believes the buy is still open — the header counter "4 live · 0 announced · 2 recently ended" already implies only two ended items, and the LIVE-pill leak creates a contradiction. The data record's `status` is `live` + `endDate: 2026-05-10` (today), and the section selector correctly places it under Just-closed by date, but the renderer pulls `STATUS_LABEL[record.status]` for the `variant='ended'` pill, leaking the stale source field into the closed-band visual chrome.
 - evidence: `curl -s https://thock-coral.vercel.app/group-buys` → "Just closed" section's countdown pill rendered as `<span data-testid="group-buy-countdown" class="...">LIVE</span>` on the Ishtar R2 row. Data: `data/group-buys/kbdfans-gmk-cyl-ishtar-r2.json` has `status: "live"` + `endDate: "2026-05-10"`. Renderer: `apps/web/src/components/group-buys/GroupBuyRow.tsx:76-78` falls through to `countdown = STATUS_LABEL[groupBuy.status]` for the non-live / non-announced variants.
-- suggested fix: in `GroupBuyRow.tsx`, override the countdown text for `variant === 'ended'` to render "CLOSED" (or `ended ${endDate}`) regardless of the `status` field's freshness. One-line edit. Add a unit test asserting Just-closed renders "CLOSED" on a record with `status: 'live'` + past `endDate`. The durable fix is renderer-side; the alternate data-edit (set Ishtar R2's status to `closed`) is a one-off that doesn't prevent the next `endDate`-passed live record from re-leaking.
+- fix: in `apps/web/src/components/group-buys/GroupBuyRow.tsx:76-86`, replaced the unconditional `STATUS_LABEL[groupBuy.status]` with a guarded ternary: `countdown = groupBuy.status === 'shipped' ? 'SHIPPED' : 'CLOSED'`. Forward-looking labels ('LIVE', 'ANNOUNCED') are now unreachable from `variant='ended'` regardless of source data freshness; 'SHIPPED' stays editorially distinct. Two new tests in `GroupBuyRow.test.tsx`: (1) the exact pass-11 scenario (ended + stale `status:'live'` → "CLOSED"), (2) ended + `status:'shipped'` → "SHIPPED" (preserves distinction). The data-edit alternative (set Ishtar R2's status to closed) would have been a one-off; the renderer-side fix is durable for every future `endDate`-passed-but-stale-status record.
+- verify note: 433 e2e green parallel — no #418 flake this run.
 - source: browser
 
 ### [MED] /tag/gmk — single article on a brand-tag landing that the corpus's GMK footprint should fill
