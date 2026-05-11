@@ -33,7 +33,7 @@ roughly:
 - Sonnet 4.6: ~$0.40–0.60/tick → ~$3–5/day at 7 ticks
 - Opus 4.7:   ~$2.00–3.00/tick → ~$15–20/day at 7 ticks
 
-The 12-commit/24h ceiling caps the worst case either way.
+The 24-commit/24h ceiling caps the worst case either way.
 
 ## Setup (one-time)
 
@@ -128,13 +128,13 @@ issues are:
 ### Normal operation
 
 The cron fires at `0 * * * *` UTC — hourly, 24/7. Up to ~24
-ticks/day in theory; bounded in practice by the daily commit
-ceiling (12 cloud-shipped commits / 24h), so the worst-case
-ship rate is ~12/day with no-op ticks absorbing the rest. You
-don't have to do anything.
+ticks/day. The daily commit ceiling (24 cloud-shipped commits
+/ 24h) matches the cadence — every tick can ship if there's
+work; no-op ticks absorb slots when nothing's queued. You don't
+have to do anything.
 
 Each tick:
-1. Runs the daily commit-ceiling check (12 cloud commits / 24h).
+1. Runs the daily commit-ceiling check (24 cloud commits / 24h).
    If reached, exits 0 with a log note — no work this tick.
 2. Configures git as `github-actions[bot]`.
 3. Runs `/march` in cloud mode (skips `/oversight` and `/critique`).

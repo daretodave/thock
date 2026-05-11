@@ -11,14 +11,15 @@ on:
     # Hourly, 24/7. Bumped 2026-05-11 from "every 2h off-peak ET"
     # (~7 ticks/day) to hourly (~24 ticks/day max) after the cloud
     # loop went genuinely operational. Bounded downstream by:
-    #   - the daily commit ceiling (12 cloud-shipped commits / 24h
+    #   - the daily commit ceiling (24 cloud-shipped commits / 24h
     #     — see "Daily commit ceiling check" step below). Past that
     #     point every tick exits cleanly with no work.
     #   - the concurrency group `march` (a long-running tick blocks
     #     the next firing instead of racing it).
     #   - the 5h timeout per tick.
-    # Net: up to ~12 commits/day in the worst case, with no-op ticks
-    # absorbing the remaining ~12 slots when nothing's queued.
+    # Net: up to ~24 commits/day in the worst case (matches the
+    # hourly cadence — every tick can ship if there's work). No-op
+    # ticks absorb slots when nothing's queued.
     - cron: '0 * * * *'
   workflow_dispatch:
 
@@ -86,8 +87,8 @@ jobs:
           since="$(date -u -d '24 hours ago' '+%Y-%m-%d %H:%M:%S')"
           count=$(git log --since="$since" --grep='Cloud-Run:' --oneline | wc -l | tr -d ' ')
           echo "Cloud-shipped commits in last 24h: $count"
-          if [ "$count" -ge 12 ]; then
-            echo "Cloud ceiling reached (12 cloud-shipped commits / 24h). Exiting cleanly — no work this tick."
+          if [ "$count" -ge 24 ]; then
+            echo "Cloud ceiling reached (24 cloud-shipped commits / 24h). Exiting cleanly — no work this tick."
             echo "skip=true" >> "$GITHUB_OUTPUT"
           else
             echo "skip=false" >> "$GITHUB_OUTPUT"
