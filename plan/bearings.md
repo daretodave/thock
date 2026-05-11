@@ -441,6 +441,17 @@ the editorial timeline a reader expects: a piece announcing
 GREG 2 dated weeks before the buy opens reads wrong; dated the
 day of the announcement reads right.
 
+**Sub-rule for group-buy companion prose (locked 2026-05-10 via
+/iterate drain of critique pass-11 issue #43):** when a piece is
+dated its buy's startDate, body prose phrases the window
+**absolutely**, never as relative time remaining. A static MDX
+file cannot do per-render-time math — "roughly one week left"
+written on the publish date is wrong on every reader visit
+except the last one. Use absolute phrasings: "a four-week buy,"
+"open through May 17," "the window runs 2026-04-17 through
+2026-05-17." The /group-buys page handles relative countdown
+chrome at render time; the article prose stays time-stable.
+
 **Current state:** 9 of 15 articles dated 2026-05-10 (bulk
 publish day). The directive doesn't retroactively restamp the
 existing corpus — too lossy without external memory — but
