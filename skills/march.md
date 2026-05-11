@@ -14,6 +14,7 @@ unlabeled issues exist          →  /triage
 ELSE critique due (rate-lim)    →  /critique
 ELSE pending phase              →  /ship-a-phase
 ELSE pending data               →  /ship-data
+ELSE content queue ≥ 3.0        →  /ship-content
 ELSE expand due + bold posture  →  /expand
 ELSE                            →  /iterate
 ```
@@ -134,6 +135,21 @@ Open `data/BACKLOG.md`. If any `[ ]` row exists:
 - Execute its procedure (§5 of that file) end-to-end.
 - Return.
 
+#### 3b.5. Content queue? (post-phase-24)
+
+Open `plan/AUDIT.md`. Collect all `Pending` content-gap findings
+(rows with `category: content-gaps`, not prefixed `[x]`). Apply
+the bias multiplier from the AUDIT.md header if present. If any
+row scores ≥ 3.0:
+
+- Read `skills/ship-content.md`.
+- Execute its procedure end-to-end.
+- Return.
+
+This lane fires before `/expand` and before the general `/iterate`
+pass, so content velocity is never deprioritized in favour of
+expansion planning when the quota is unmet.
+
 #### 3c. Expand due (rate-limited, posture-gated)?
 
 Read `plan/bearings.md` "Plan expansion posture" section. thock
@@ -217,15 +233,18 @@ Otherwise the failure modes are inherited from the dispatched skill.
 plan/steps/01_build_plan.md          # pending phases
 data/BACKLOG.md                      # pending data work
 plan/CRITIQUE.md                     # critique queue + last-pass metadata
+plan/AUDIT.md                        # content-gap queue (Step 3b.5)
 
 # External signals
 gh issue list --repo $GH_REPO --search "-label:triage:..." --json number  # unlabeled count
 pnpm deploy:check                    # green-deploy condition for /critique
 
 # Skills it dispatches into
-skills/triage.md                     # NEW — Step 1 (cheapest)
+skills/triage.md                     # Step 1 (cheapest)
 skills/critique.md                   # Step 2 (rate-limited)
 skills/ship-a-phase.md               # Step 3a
 skills/ship-data.md                  # Step 3b
-skills/iterate.md                    # Step 3c
+skills/ship-content.md               # Step 3b.5 (content queue)
+skills/expand.md                     # Step 3c
+skills/iterate.md                    # Step 3d
 ```

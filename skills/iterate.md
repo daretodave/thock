@@ -324,22 +324,17 @@ separately — keep tick churn low.
 
 For each category, default delegation:
 
-- **Content gaps** → `content-curator` for the MDX prose, then
-  `brander` for the article's hero SVG. New articles ship as a single
-  bundle: prose at `apps/web/src/content/articles/<slug>.mdx` + hero
-  at `apps/web/public/hero-art/<slug>.svg` (per `plan/bearings.md` §
-  "Article hero art" — locked 2026-05-09) + provenance JSON sibling
-  + frontmatter `heroImage` and `heroImageAlt` set in the same
-  iterate commit. **Never commit a new article with `heroImage:
-  null`** — the audit's "articles missing `heroImage`" finding
-  (§4.A) exists to backfill *already-shipped* articles, not to let
-  new ones ship art-less. Pass content-curator the topic, pillar,
-  target word count, and voice guidelines from `bearings.md`. Pass
-  brander the article's pillar + a one-line subject mapping
-  (switch-deep-dive → cross-section, layout piece → silhouette,
-  build piece → keyboard outline + callout, trends piece →
-  sparkline, etc., per the directive's pillar examples) plus the
-  per-article splash hue.
+- **Content gaps** → delegate to `/ship-content`. Read
+  `skills/ship-content.md` and execute its procedure. The audit row
+  is already selected — jump directly to Step 2 (publishedAt
+  computation), skipping `/ship-content`'s Step 1 queue-read. The
+  `/ship-content` skill owns the full bundle: content-curator (prose),
+  brander (hero SVG), tags.json extension, verify, commit, deploy.
+  Do **not** re-implement the pattern inline here.
+  **Never commit a new article with `heroImage: null`** — see
+  `skills/ship-content.md` §8 failure mode 5 for the only sanctioned
+  exception (brander fails after retry → `heroImage: null` + backfill
+  audit row).
 - **Data gaps** → follow `skills/ship-data.md` §5 inline (or
   effectively re-enter the ship-data flow within this tick).
 - **SEO / link integrity / a11y / tests** → main agent implements.
@@ -467,15 +462,21 @@ Return cleanly. Loop's next tick re-audits and ships the new top.
 5. **A finding requires user judgment** (e.g. "should we cover
    this controversial vendor?"). Surface to AUDIT.md as a
    `[needs-user-call]` row, skip it, ship the next finding.
-6. **No actionable iterate work** (top score < 3.0). Read
-   `plan/bearings.md` "Plan expansion posture":
-   - **bold** or **autonomous** (thock's default is bold) →
-     dispatch to `/expand` instead of stopping. "Make things
-     brilliant when delivery is not." Log "no actionable
-     iterate work — handing to expand" and execute
-     `skills/expand.md` procedure end-to-end.
-   - **strict** posture → stop and report. Site is
-     well-iterated; sleep until the user gives new direction.
+6. **No actionable iterate work** (top score < 3.0). Check in order:
+   - **Content-gap rows exist whose raw score ≥ 3.0** (before bias,
+     before bias multiplier was applied): dispatch to `/ship-content`
+     instead of stopping — these rows are ripe even if the bias
+     multiplier pushed everything below 3.0 after normalization.
+     Execute `skills/ship-content.md` procedure end-to-end.
+   - **No content queue either** → read `plan/bearings.md` "Plan
+     expansion posture":
+     - **bold** or **autonomous** (thock's default is bold) →
+       dispatch to `/expand` instead of stopping. "Make things
+       brilliant when delivery is not." Log "no actionable
+       iterate work — handing to expand" and execute
+       `skills/expand.md` procedure end-to-end.
+     - **strict** posture → stop and report. Site is
+       well-iterated; sleep until the user gives new direction.
 7. **`git pull` divergence.**
 
 Everything else: decide, ship, document. The loop continues.
