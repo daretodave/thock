@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — GSK Sweet Nightmare, off-the-board scattered artisan resin keycap arrangement with coral focal cap</title>
+
+  <!-- Editorial hook: an artisan resin run with an 8-variant matrix.
+       Composition is explicitly off-the-board: 5 keycaps in 3/4 top-down
+       view, scattered as if spilled from a tray or displayed on a velvet
+       card. One central cap carries the coral splash as the focal variant;
+       the other four are warm-grey outline only. A tiny coral sparkle
+       sits beside the focal cap for a touch of artisan flair.
+       Warm-bronze accent is rendered as a faint hairline frame at the
+       canvas perimeter since there is no case edge to host it. -->
+
+  <!-- Warm-bronze hairline frame, inset 32px from the canvas edge,
+       at 0.45 stroke opacity so it reads as a velvet-card border
+       rather than a hard rectangle. -->
+  <g stroke="oklch(0.80 0.135 75)" stroke-opacity="0.45" stroke-width="1">
+    <rect x="32" y="32" width="1136" height="686" rx="6"/>
+  </g>
+
+  <!-- Subtle floor shadow ellipses underneath each cap.
+       Very low opacity warm-grey to ground the scatter. -->
+  <g stroke="none" fill="oklch(0.65 0.005 90 / 0.10)">
+    <ellipse cx="285" cy="265" rx="98" ry="14"/>
+    <ellipse cx="940" cy="225" rx="98" ry="14"/>
+    <ellipse cx="600" cy="430" rx="118" ry="18"/>
+    <ellipse cx="245" cy="585" rx="98" ry="14"/>
+    <ellipse cx="900" cy="585" rx="98" ry="14"/>
+  </g>
+
+  <!-- ============================================================
+       Cap 1 — upper-left, slight CCW rotation, outline only.
+       3/4 top-down: outer keycap rim is a rounded square; inner
+       top surface inset to suggest sculpt; small homing-line at base.
+       ============================================================ -->
+  <g transform="rotate(-7 285 245)">
+    <!-- Outer rim -->
+    <rect x="215" y="180" width="140" height="130" rx="12"/>
+    <!-- Top surface inset -->
+    <rect x="232" y="195" width="106" height="98" rx="9" stroke-opacity="0.62"/>
+    <!-- Sculpt highlight hairline along the top edge -->
+    <line x1="240" y1="205" x2="330" y2="205" stroke-opacity="0.38"/>
+  </g>
+
+  <!-- ============================================================
+       Cap 2 — upper-right, slight CW rotation, outline only.
+       ============================================================ -->
+  <g transform="rotate(11 940 205)">
+    <rect x="870" y="140" width="140" height="130" rx="12"/>
+    <rect x="887" y="155" width="106" height="98" rx="9" stroke-opacity="0.62"/>
+    <line x1="895" y1="165" x2="985" y2="165" stroke-opacity="0.38"/>
+  </g>
+
+  <!-- ============================================================
+       Cap 3 — CENTER, the FOCAL cap. Slightly larger to read as
+       the showpiece. Coral splash on the top surface; coral border
+       on the rim. Inner pale-coral surface adds depth.
+       ============================================================ -->
+  <g transform="rotate(-3 600 410)">
+    <!-- Outer rim, coral-bordered, coral fill -->
+    <rect x="510" y="335" width="180" height="170" rx="14"
+          fill="oklch(0.74 0.16 30 / 0.92)"
+          stroke="oklch(0.66 0.17 30)"
+          stroke-width="2"/>
+    <!-- Top surface inset, paler coral to suggest sculpted dish -->
+    <rect x="532" y="354" width="136" height="128" rx="10"
+          fill="oklch(0.86 0.09 30 / 0.55)"
+          stroke="oklch(0.66 0.17 30)"
+          stroke-opacity="0.75"
+          stroke-width="1.5"/>
+    <!-- Sculpt highlight hairline along the top edge -->
+    <line x1="542" y1="367" x2="658" y2="367"
+          stroke="oklch(0.92 0.06 30 / 0.7)"
+          stroke-width="1.2"/>
+  </g>
+
+  <!-- ============================================================
+       Tiny coral sparkle/glyph — a small 4-point star just above
+       and right of the focal cap, the only other coral element.
+       Drawn as two crossed strokes for a discreet artisan flourish.
+       ============================================================ -->
+  <g stroke="oklch(0.66 0.17 30)" stroke-width="2" stroke-linecap="round">
+    <line x1="720" y1="325" x2="720" y2="355"/>
+    <line x1="705" y1="340" x2="735" y2="340"/>
+  </g>
+  <!-- Sparkle center dot, soft coral -->
+  <circle cx="720" cy="340" r="2.4" fill="oklch(0.74 0.16 30)" stroke="none"/>
+
+  <!-- ============================================================
+       Cap 4 — lower-left, gentle CW rotation, outline only.
+       ============================================================ -->
+  <g transform="rotate(8 245 565)">
+    <rect x="175" y="500" width="140" height="130" rx="12"/>
+    <rect x="192" y="515" width="106" height="98" rx="9" stroke-opacity="0.62"/>
+    <line x1="200" y1="525" x2="290" y2="525" stroke-opacity="0.38"/>
+  </g>
+
+  <!-- ============================================================
+       Cap 5 — lower-right, modest CCW rotation, outline only.
+       ============================================================ -->
+  <g transform="rotate(-9 900 565)">
+    <rect x="830" y="500" width="140" height="130" rx="12"/>
+    <rect x="847" y="515" width="106" height="98" rx="9" stroke-opacity="0.62"/>
+    <line x1="855" y1="525" x2="945" y2="525" stroke-opacity="0.38"/>
+  </g>
+</svg>

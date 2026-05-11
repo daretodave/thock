@@ -1,0 +1,76 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-10",
+  "commit": "e23b4d590aeccd825b1266317546aebaa2fd6cf0",
+  "kind": "hero-art",
+  "article_slug": "gsk-sweet-nightmare-group-buy",
+  "pillar": "news",
+  "target": "Z:/keyboard/apps/web/public/hero-art/gsk-sweet-nightmare-group-buy.svg",
+  "source": "plan/bearings.md § Article hero art — locked 2026-05-09",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject; this piece is off-the-board scattered artisan",
+  "size": [1200, 750],
+  "subject": "Off-the-board artisan-keycap scatter for the GSK Sweet Nightmare resin run. Five 3/4 top-down keycap silhouettes are hand-arranged across the canvas with slight per-cap rotation variation (between -9 and +11 degrees) so they read as spilled from a tray rather than CAD-snapped to a grid. The central cap is the focal variant: coral splash fill, coral border, paler coral inner top-surface, and a small coral 4-point sparkle glyph just above-right as artisan flourish. The four flanking caps remain warm-grey outline only. Subtle floor-shadow ellipses ground each cap. No board outline, no case edges, no keyboard chrome.",
+  "brief_summary": "Hero art for the news-pillar companion piece to the GSK Sweet Nightmare artisan-resin group-buy listing. The article covers an 8-variant matrix (4 colorways × 2 finishes) of artisan resin keycaps — explicitly an off-the-board artisan piece, not a full set on a board. Composition expresses that with a scattered hand-arranged keycap layout, single coral splash on the focal cap, and a tiny coral sparkle for artisan flair.",
+  "composition_decision": "scattered off-the-board arrangement — 5 keycaps, slight rotation variation, one central focal cap in coral, four warm-grey outline-only caps; no board, no case edges, no keyboard chrome",
+  "splash_color": {
+    "name": "coral",
+    "oklch": "oklch(0.74 0.16 30)",
+    "fill_alpha": 0.92,
+    "border": "oklch(0.66 0.17 30)",
+    "inner_top_surface": "oklch(0.86 0.09 30 / 0.55)",
+    "sparkle_stroke": "oklch(0.66 0.17 30)",
+    "sparkle_center_dot": "oklch(0.74 0.16 30)",
+    "applied_to": "central focal cap (cap 3) + tiny 4-point sparkle glyph above-right of the focal cap"
+  },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "stroke_width": 2,
+  "bronze_accent": {
+    "name": "warm-bronze",
+    "oklch": "oklch(0.80 0.135 75)",
+    "usage": "hairline (1px) frame inset 32px from canvas perimeter, rounded 6px corners, 0.45 stroke opacity",
+    "rationale": "no case edge exists on this off-the-board composition, so the bronze is reframed as an unobtrusive velvet-card-style perimeter hairline rather than skipped entirely; reads as a display surround rather than a hard rectangle"
+  },
+  "tokens_snapshot": "design/tokens.css sha 51fdae8368c1eee844850352ec620acd2f822555 — --kh-accent oklch(0.80 0.135 75); coral splash from canonical hero-art coral family",
+  "fonts": [],
+  "outputs": [
+    "Z:/keyboard/apps/web/public/hero-art/gsk-sweet-nightmare-group-buy.svg"
+  ],
+  "warnings": [],
+  "cap_inventory": {
+    "cap_1_upper_left": {
+      "center": [285, 245],
+      "rotation_deg": -7,
+      "treatment": "warm-grey outline only"
+    },
+    "cap_2_upper_right": {
+      "center": [940, 205],
+      "rotation_deg": 11,
+      "treatment": "warm-grey outline only"
+    },
+    "cap_3_center_FOCAL": {
+      "center": [600, 420],
+      "rotation_deg": -3,
+      "treatment": "coral splash fill + coral border + pale-coral inner top surface + sparkle highlight",
+      "size_bump": "180x170 vs 140x130 baseline — reads as the showpiece"
+    },
+    "cap_4_lower_left": {
+      "center": [245, 565],
+      "rotation_deg": 8,
+      "treatment": "warm-grey outline only"
+    },
+    "cap_5_lower_right": {
+      "center": [900, 565],
+      "rotation_deg": -9,
+      "treatment": "warm-grey outline only"
+    }
+  },
+  "sparkle_glyph": {
+    "shape": "4-point star (two crossed strokes) with soft coral center dot",
+    "position": "(720, 340) — above and right of the focal cap",
+    "scale": "~30px tall — deliberately small artisan flourish"
+  },
+  "style_guide": "bearings.md § Article hero art (locked 2026-05-09): 2px warm-grey stroke throughout; single splash (coral) on the focal cap + tiny coral sparkle glyph; warm-bronze used as a faint perimeter hairline frame in lieu of a case edge; no multi-color, no blues or greens; transparent canvas; no board outline, no case edges, no keyboard chrome.",
+  "xml_validity": "validated — no double-hyphen runs inside comments; parses as well-formed XML",
+  "revision": 1
+}
