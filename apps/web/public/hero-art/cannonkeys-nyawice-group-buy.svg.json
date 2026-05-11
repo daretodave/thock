@@ -1,0 +1,24 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-10T00:00:00Z",
+  "commit": "95978cbc78ffa7fc545f70f37ac55b488aedd660",
+  "kind": "hero-art",
+  "article_slug": "cannonkeys-nyawice-group-buy",
+  "pillar": "news",
+  "target": "apps/web/public/hero-art/cannonkeys-nyawice-group-buy.svg",
+  "source": "plan/bearings.md § Article hero art — colorful keyboard SVGs",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject",
+  "size": [1200, 750],
+  "subject": "Top-down silhouette of the CannonKeys Nyawice — split-spacebar Alice layout with two coral triangular cat-ear accents friction-fit on the top-rear of the case, a small coral nose between them, and warm-bronze hairlines on the top + bottom case edges.",
+  "brief_summary": "Alice-layout group-buy companion piece for the CannonKeys Nyawice: the editorial hook is the decorative cat-ears + Alice silhouette read together, not the (invisible from above) leaf-spring F1 mount.",
+  "splash_color": "oklch(0.74 0.16 30)",
+  "secondary_accent": "oklch(0.80 0.135 75)",
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "51fdae8368c1eee844850352ec620acd2f822555",
+  "fonts": [],
+  "outputs": [
+    "apps/web/public/hero-art/cannonkeys-nyawice-group-buy.svg"
+  ],
+  "warnings": []
+}
