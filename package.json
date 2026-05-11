@@ -21,7 +21,7 @@
     "lint": "pnpm -r --no-bail lint",
     "format": "prettier --write .",
     "data:validate": "pnpm --filter @thock/data validate",
-    "test:scripts": "node --test scripts/__tests__/",
+    "test:scripts": "node --test scripts/__tests__/*.mjs",
     "size": "pnpm --filter @thock/web size",
     "verify": "pnpm typecheck && pnpm test:run && pnpm test:scripts && pnpm data:validate && pnpm build && pnpm size && pnpm e2e",
     "deploy:check": "node scripts/deploy-check.mjs",

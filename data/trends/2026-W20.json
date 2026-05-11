@@ -1,0 +1,142 @@
+{
+  "isoWeek": "2026-W20",
+  "publishedAt": "2026-05-11T00:00:00.000Z",
+  "rows": [
+    {
+      "name": "Gateron Oil King",
+      "category": "switch",
+      "direction": "flat",
+      "score": 41,
+      "spark": [18, 22, 28, 30, 35, 38, 42, 41],
+      "articleSlug": "gateron-oil-king-deep-dive",
+      "note": "Oil Kings remain in vendor rotation at NK and CK with steady stock turnover; no restock announcement or new sound-test viral moment surfaced in the May 11–17 window."
+    },
+    {
+      "name": "HMX Cloud",
+      "category": "switch",
+      "direction": "flat",
+      "score": 35,
+      "spark": [12, 16, 22, 26, 30, 33, 36, 35],
+      "articleSlug": "beginners-switch-buying-guide",
+      "note": "HMX's next-generation lubrication system is in final validation per an April 2026 R&D update, with new components not expected until Q3–Q4 2026; no new W20 community event moved the needle."
+    },
+    {
+      "name": "Cherry MX2A revisions",
+      "category": "switch",
+      "direction": "down",
+      "score": -23,
+      "spark": [-8, -10, -14, -16, -18, -20, -22, -23],
+      "articleSlug": "cherry-mx2a-revision",
+      "note": "Enthusiast coverage continues to frame MX2A as a solid introductory option that will not displace HMX or Gateron in the mid-tier; coverage arguing for mechanical switches over Hall-effect still does not pick MX2A as the exemplar."
+    },
+    {
+      "name": "MT3 profile",
+      "category": "keycap",
+      "direction": "flat",
+      "score": 4,
+      "spark": [5, 3, 4, 6, 5, 4, 4, 4],
+      "articleSlug": null,
+      "note": "Drop's MT3 catalog holds its retro-build niche with no new set launch or major restock announced for this window; the profile ticks along on Susuwatari and Black-on-White steady sales."
+    },
+    {
+      "name": "GMK CYL Prussian Alert",
+      "category": "keycap",
+      "direction": "up",
+      "score": 46,
+      "spark": [14, 18, 22, 28, 32, 35, 38, 46],
+      "articleSlug": "gmk-cyl-prussian-alert",
+      "note": "Group buy opened May 15 on KBDfans with a global vendor network spanning EU, UK, US, Canada, Korea, Japan, Australia, and MENA; IC thread logged over 121,000 reads before the window opened."
+    },
+    {
+      "name": "DCS Olivetti",
+      "category": "keycap",
+      "direction": "flat",
+      "score": 16,
+      "spark": [6, 9, 12, 14, 16, 17, 18, 16],
+      "articleSlug": null,
+      "note": "GB closed April 13 and is in production with a Q3 2026 delivery estimate; momentum cooling naturally in the post-close window with no new community events to sustain it."
+    },
+    {
+      "name": "Alice layout",
+      "category": "layout",
+      "direction": "down",
+      "score": -19,
+      "spark": [-5, -8, -10, -12, -15, -16, -18, -19],
+      "articleSlug": "alice-layout-decline",
+      "note": "No new Alice ICs appeared on GeekHack during the May 11 window; community attention continues to migrate toward split and 75% formats as those categories sustain active group-buy pipelines."
+    },
+    {
+      "name": "Split / ergo (Voyager, Glove80)",
+      "category": "layout",
+      "direction": "up",
+      "score": 34,
+      "spark": [15, 18, 22, 25, 28, 30, 32, 34],
+      "articleSlug": "split-ergo-cohort",
+      "note": "Multiple 'best ergonomic keyboards 2026' roundups published this week continue to cite ZSA Voyager and Glove80 as the top two picks for programmers; the category is generating consistent evergreen search traffic as a distinct buying cohort."
+    },
+    {
+      "name": "75% layout",
+      "category": "layout",
+      "direction": "up",
+      "score": 30,
+      "spark": [13, 17, 20, 22, 25, 27, 28, 30],
+      "articleSlug": "75-percent-default",
+      "note": "KeebFinder's active group-buy filter shows multiple 75% keyboards in live windows this week including Zonex 75 at Prototypist; Mode Sonnet and Encore fulfillments sustain builder interest in the format."
+    },
+    {
+      "name": "Mode Designs",
+      "category": "vendor",
+      "direction": "up",
+      "score": 26,
+      "spark": [12, 15, 18, 20, 22, 23, 24, 26],
+      "articleSlug": "vendor-first-customs",
+      "note": "Encore 2026 pre-orders (open since April 16, shipping July) generate coverage alongside a teaser for the Prologue — a 98% full-size with a new Crown gasket mount system slated for summer 2026."
+    },
+    {
+      "name": "CannonKeys",
+      "category": "vendor",
+      "direction": "flat",
+      "score": 18,
+      "spark": [7, 10, 13, 15, 17, 18, 18, 18],
+      "articleSlug": "vendor-first-customs",
+      "note": "Multiple GMK CYL group buys (King of the Seas, Gonzales, Greg R2) remain live through the storefront; no new headline launch this week but transaction cadence is steady."
+    },
+    {
+      "name": "Prototypist",
+      "category": "vendor",
+      "direction": "up",
+      "score": 16,
+      "spark": [6, 8, 10, 11, 13, 14, 14, 16],
+      "articleSlug": "vendor-first-customs",
+      "note": "Prototypist carried 19 live group buys this week including Slate Zero and SWG Classic Blue (both closing May 18) and DCS Grass Valley — one of their densest active-window weeks of the year."
+    },
+    {
+      "name": "Wuque Studio",
+      "category": "brand",
+      "direction": "flat",
+      "score": 8,
+      "spark": [7, 9, 10, 8, 9, 8, 8, 8],
+      "articleSlug": null,
+      "note": "Morandi switch steady-seller status holds but no new product announcement or IC surfaced during the May 11–17 window; storefront restock cadence continues without a headline event."
+    },
+    {
+      "name": "Keychron",
+      "category": "brand",
+      "direction": "up",
+      "score": 32,
+      "spark": [16, 20, 23, 26, 28, 29, 30, 32],
+      "articleSlug": "keychron-q-ultra-zmk",
+      "note": "Q6 Ultra 8K and V5 Ultra 8K review cycle remains active at Tom's Hardware and AppleInsider into May; the ZMK wireless story draws 'first mass-produced ZMK keyboard' framing with no competitors matching the 660-hour battery claim."
+    },
+    {
+      "name": "Cherry (GMK manufacturer)",
+      "category": "brand",
+      "direction": "down",
+      "score": -15,
+      "spark": [-4, -6, -8, -10, -12, -13, -14, -15],
+      "articleSlug": "cherry-mx2a-revision",
+      "note": "A GeekHack IC for the YuRui HE switch posted May 10 signals new HE entrants beyond Cherry's orbit; Cherry's enthusiast footprint narrows to GMK manufacturing as MX2A stays categorized as an entry-level option."
+    }
+  ],
+  "updatedAt": "2026-05-11T12:00:00.000Z"
+}
