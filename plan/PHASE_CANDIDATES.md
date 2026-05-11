@@ -1,8 +1,9 @@
 # Phase candidates
 
-> Last pass: 2026-05-10 at commit 4260294
-> Pass count: 5
+> Last pass: 2026-05-11 at commit aeaa808
+> Pass count: 6
 > Posture: bold
+> Pass 6 notes: 20 commits since pass 5 (4260294). Pre-tick state: critique pass 11 fired (4 findings — 2 HIGH addressed in same-day ticks: Nyawice "one week left" MDX fix (12a818d) + /group-buys LIVE-pill renderer fix (478c952); 1 MED /tag/gmk self-fills via GMK CYL companion shipping; 1 LOW "W19 movement score" vocabulary in Nyawice body — iterate-shaped). Cloud loop proven operational: 9 articles shipped autonomously since pass 5 (4 News group-buy companions + 3 Trends + 1 Ideas + W20 trends snapshot), plus 3 ops(cloud-loop) CI patches resolved. React #418 flake has NOT appeared in the last 10+ consecutive parallel verify runs (all noting "433 e2e green parallel — no #418 flake this run") — likely self-resolved as phase-16 replaced every PageStub with a real page (the AUDIT.md prediction). Pass 6 files 2 candidates: [7.0] cloud autonomous content schedule — promoted from Considered (5.5 → 7.0) because cloud loop operational status removes the "unproven" risk; [5.5] group-buy archive surface `/group-buys/past` — new, editorial archive gap as 1+ buys close. Also adds a self-resolution status note to the [6.5] React #418 Pending candidate.
 > Pass 5 notes: 20 commits since pass 4. Pre-tick state: critique pass 10 fired (6 findings — 1 HIGH, 3 MED, 2 LOW); 4 of those drained in same-day ticks (lubing-101 copy bug, "Last 72h" kicker, home "0d" → "today", Sleeper-on-flat-row addressed in pass-9 drain). Massive signal at the top of the window: **user-directed /oversight 2026-05-10 locked the content-velocity directive in `bearings.md`** (pillar quota ≥8, tracker linkage 14d, group-buy companion, publishedAt gap-fill) + the AUDIT.md content-gaps bias. First content-velocity tick shipped immediately after at 4260294 (Trends piece "How Hall-effect quietly became the new mid-premium default", date-staggered to fill the 2026-04-10–2026-04-29 gap). Pass 5 files 1 new candidate ([6.5] /ship-content skill to codify the content-curator + brander + tags.json + verify-gate drain pattern that just proved out — the loop has 25+ content-gap rows to drain and the per-tick orchestration cost compounds) + 2 Considered-below-threshold notes (/schedule cloud cadence for weekly content runs — depends on /ship-content existing first; existing-corpus publishedAt restamp — iterate-shaped, 1 data-edit tick).
 > Pass 3 notes: 14 commits since pass 2. Critique pass 7 fired and surfaced one architectural finding worth promoting (the streaming `<main>` landmark issue) plus four phantoms and a meta-observation about reader sub-agent text-extraction reliability. Pass 2's two candidates ([7.5] per-part pages, [6.5] #418 investigation) remain Pending; pass-1's ([6.5] a11y audit, [5.5] /tags index) also remain Pending. The /418 investigation gained partial diagnostic findings inline at the critique-row verify-note level (TZ ruled out, PageStub stale, Server-Component `new Date()` ruled out — remaining suspects are next/font race + Suspense streaming protocol). Pass 3 files 1 new candidate. Meta: pass-7's 4-of-6 phantom-finding rate revealed that reader sub-agent's accessibility-tree text extraction systematically drops link/code element content from prose AND elides adjacent short-text generic elements; future critique passes should default-verify visual-detail findings against rendered HTML before promoting to Pending. Documented in plan/CRITIQUE.md pass-7 self-assessment summary.
 > Pass 2 notes: 38 commits since pass 1. Fresh signals — phase 18/19/20 real-data backfill landed (parts catalog grew substantially across switches / keycap-sets / boards / vendors) and the React #418 hydration flake originally predicted to self-resolve by phase 16 has not. Pass 2 files 2 candidates derived from those signals; the 2 pass-1 candidates ([6.5] a11y audit, [5.5] /tags index) remain Pending awaiting `/oversight`. The original promotion ([8.0] real-data backfill) shipped clean — phases 18–20 all `[x]`.
@@ -59,6 +60,7 @@
 - promotion path: ship-a-phase autonomous for Phase A. Phase B requires `/oversight` to choose path (a) vs (b). Phase A blocks Phase B (the archive surface is needed before the cadence can do anything visible), so they're contiguous.
 
 ### [score 6.5] React #418 hydration flake — dedicated investigation phase
+- **Status update (pass 6, 2026-05-11):** The flake has not been observed in 10+ consecutive parallel verify runs (all noting "433 e2e green parallel — no #418 flake this run"), consistent across the last 20 commits. Phase 16 replaced every PageStub route with a real page — the AUDIT.md prediction was "self-resolves before phase 16"; the fix arrived slightly after (phase 16 shipped, flake persisted briefly, then stopped). Recommend `/oversight` to review and archive this candidate as self-resolved. Leave as Pending until oversight confirms; do not promote to /ship-a-phase.
 - proposed: 2026-05-10, expand pass 2
 - source signals:
   - `plan/AUDIT.md` row line 105 ([MED] PageStub routes flake under parallel e2e load): originally filed 2026-05-09 with the prediction "phase 16 polish replaces every PageStub with a real route, so this finding self-resolves before then." Phase 16 shipped (`fc1b0b0`); the flake persists.
@@ -103,6 +105,40 @@
 - promotion path: ship-a-phase autonomous. Same shape as phases 7/12.
 
 
+### [score 7.0] Cloud autonomous content schedule — `/loop /march` on a weekly cloud cron once `/ship-content` exists
+- proposed: 2026-05-11, expand pass 6 (promoted from Considered 5.5, pass 5)
+- source signals:
+  - Cloud loop is now proven operational: 9 articles shipped via cloud CI ticks since pass 5 (4 News group-buy companions + 3 Trends pieces + 1 Ideas piece + W20 trends snapshot), plus 3 CI correctness patches (commit author, YAML parse, GH-issue routing) all resolved.
+  - The `/ship-content` candidate (6.5, pass 5) is Pending. If it ships, the cloud loop has a dedicated content-shipping verb — the final blocker is a cron trigger at a fixed weekly cadence.
+  - `bearings.md` content-velocity directive (Rule 1–4) creates a weekly obligation: ≥1 article per pillar per 14d, tracker linkage, group-buy companion. Without a cron, the obligation requires a user-initiated local `/loop` session. With a cron, it is autonomous.
+  - Pass-5 Considered note provisionally scored this at 5.5 and said "file as a follow-up phase candidate after /ship-content ships." The cloud loop's proven operational status changes the risk profile: the infrastructure is ready now; only the skill is missing.
+- rationale: two independent signals (content-velocity directive creating weekly rhythm + cloud loop proven operational) combine to make this more than idle automation. A weekly cloud schedule makes thock behave like a real publication — articles appear on a cadence set by the bearings rules, not by user session availability. This is the "loop-as-staff" vision from `agents.md` "autonomous-beast endgame." The prerequisite (/ship-content) is a separate pending candidate; this candidate gates on it.
+- proposed scope: 1 phase (contingent on /ship-content shipping first).
+  - New GitHub Actions workflow `march-weekly.yml` or extend the existing `march.yml` to include a scheduled trigger (`cron: '0 14 * * 1'` — Monday 14:00 UTC) in addition to the existing dispatch trigger.
+  - The workflow uses `/schedule` (or the existing cloud loop mechanism) to fire `/loop /march` on the cron trigger.
+  - `skills/march.md` Step 3 amendment: when dispatching content-gap rows, prefer `/ship-content` over `/iterate` (the same amendment `/ship-content` proposes, just confirmed here from the schedule perspective).
+  - `/schedule` sub-agent (or a new `schedule` skill reading `skills/schedule.md`) handles the cadence management if the CronCreate tool is the mechanism.
+  - Gate: passes verify (`pnpm verify`) + deploy check same as every other cloud tick. If the cron tick produces no content (all quotas met), it falls through to `/iterate` or `/expand` per the normal march order.
+- estimated phases: 1 (after /ship-content ships)
+- conflicts: none with spec or bearings. The cron is additive — local sessions still work. Cost: 1 extra CI run per week (cheap; the cloud loop already runs on-dispatch).
+- promotion path: `/oversight` confirms the schedule trigger form (GH Actions cron vs `/schedule` cloud routine vs hybrid) + the Monday 14:00 UTC window. Autonomous ship once path is chosen.
+
+### [score 5.5] Group-buy archive — `/group-buys/past` for closed buys aging out of the active view
+- proposed: 2026-05-11, expand pass 6
+- source signals:
+  - `data/group-buys/` now has 6 records; 1 closed today (kbdfans-gmk-cyl-ishtar-r2, endDate 2026-05-10). The "Just closed" band on `/group-buys` shows only the most-recently-closed buys; records that age further out are not reachable. The editorial narrative (how did the buy perform? what was the community response?) disappears from the surface.
+  - The 4 GMK CYL companion articles shipping this week (Greg 2, King of the Seas, Sweet Nightmare, Ishtar R2 close-day) create cross-reference demand: each article links to its group-buy record, but the group-buy record's page view (`/group-buys`) drops the record from the visible band as time passes. A `/group-buys/past` archive keeps those cross-references resolvable.
+  - Consistent with the editorial archive pattern that News/Trends/Guides already have — every content family has a "latest" view + archive tail. Group buys are the only content family without a historical view.
+- rationale: modest but real. As the content-velocity loop ships more group-buy companions (GMK CYL GREG 2, King of the Seas, Sweet Nightmare, and future KBDfans/CannonKeys buys), the group-buy catalog grows and the archive gap becomes more visible to a reader following a companion article's "group buy" back-link.
+- proposed scope: 1 phase.
+  - New loader `getAllClosedGroupBuys()` in `packages/content/src/lib/group-buys.ts` (or the runtime adapter equivalent), returning records whose `endDate` is in the past, sorted by `endDate` desc.
+  - New route `apps/web/src/app/group-buys/past/page.tsx` rendering the archive list with vendor, buy name, status pill ("CLOSED" / "SHIPPED"), close date, and a link to the companion article if `relatedArticle` is set in the record.
+  - Small "view past buys" affordance on `/group-buys` (e.g., a footer link or a "just closed" → "past" navigation hint).
+  - Sitemap entry + CollectionPage JSON-LD for the archive. e2e in `apps/e2e/tests/group-buys.spec.ts` asserts the archive page renders ≥1 closed row.
+- estimated phases: 1
+- conflicts: none with spec or URL contract (sub-route under `/group-buys`). The schema is already set (`endDate` exists; `status` exists).
+- promotion path: ship-a-phase autonomous. Same shape as phase 13 (group buys index) with a filter swap.
+
 ## Considered (below threshold)
 
 - [score 4.0] Editorial voice unification (`/about` "we" vs `/newsletter` "I"; `/group-buys` + `/` "Closing soon" / "ending soon" framing). Two critique findings cluster around editorial register mismatches. Drainable in ≤2 iterate ticks (one for the pronoun unify, one for the 72h-gate logic on the home widget + group-buys page). Iterate is the right shape, not a phase.
@@ -112,8 +148,8 @@
 - [score 4.5] Tracker editorial discipline — direction-aware filtering across summary chrome (pass-4 expand). Pass-9 filed two MED findings clustering around "flat-direction rows surface in summary contexts where they shouldn't" (home Trending rail flat MT3 tile + /trends/tracker Sleeper card on a flat Wuque Studio row); pass-8 filed a [LOW] companion on /trends/tracker mover-table rows with no article having no visual cue distinguishing them from linked rows. All three are drainable in 1-2 iterate ticks: a `filterMoversForRail()` helper that excludes `direction === 'flat'` rows + a Sleeper-card empty-state when no qualifying row exists + a subtle "—" muted-CTA on unlinked rows. Component-level fix; not phase-shaped.
 - [score 4.0] Brander output validation gate generalization — extend the 40b2e55 XML well-formedness test from `apps/web/public/{hero-art,group-buy-art}/` to all brander-emitted SVGs (OG family, social cards, wordmark variants). Add a brander-side post-render hook that runs the validity check before writing the file (catches the bug before commit, not after). The current test catches at `pnpm verify` time which is the right gate; generalization is iterate-shaped (extend `SVG_DIRS` array as new brander destinations emerge).
 - [score 3.5] Editorial date-staggering across the article catalog — pass-9 filed [MED] / "By pillar" home tile dates all 2026-05-10. Drainable as a single data-side iterate tick that adjusts `publishedAt` across 5–10 article MDX frontmatter files to spread across the past 1–2 weeks. Defensive secondary fix (selector emits warning when ≥4 of 5 by-pillar dates collide) is a separate small iterate. Not phase-shaped.
-- [score 5.5] Cloud `/schedule` cadence for weekly content runs — pass-5 expand candidate. Once `/ship-content` exists (pass-5 main candidate), a `/schedule` cloud routine could fire `/loop /march` (or directly `/ship-content`) on a weekly cadence (e.g., Tuesday 14:00 UTC) so the content-velocity drain continues even when the user isn't actively running the loop. Depends on `/ship-content` existing first — file as a follow-up phase candidate after `/ship-content` ships and proves its cadence. Score is provisional: jumps to 7+ once `/ship-content` is shipped and the user wants thock to behave like a real publication.
-- [score 5.0] Tag category 'topic' for modding/lubing/firmware (drains pass-10 [MED] /tag/modding "TAG · MISC") — could be either iterate-shaped (rename `misc` bucket label to `topic` — one-line palette change, ~3 file edits) or phase-shaped (add new `topic` category to the tag enum + reclassify 5–7 existing tags + ripple into tag-page palette + e2e). The cheap iterate path is enough to drain the critique row; the heavier phase is over-engineering for a [MED]. File as a Considered note rather than a Pending candidate.
+- [score 7.0] Cloud `/schedule` cadence for weekly content runs — promoted to Pending this pass (pass 6) at score 7.0. Cloud loop operational status removes the "unproven infrastructure" risk that kept this at Considered 5.5.
+- [score 5.0] Tag category 'topic' for modding/lubing/firmware (drains pass-10 [MED] /tag/modding "TAG · MISC") — could be either iterate-shaped (rename `misc` bucket label to `topic` — one-line palette change, ~3 file edits) or phase-shaped (add new `topic` category to the tag enum + reclassify 5–7 existing tags + ripple into tag-page palette + e2e). The cheap iterate path is enough to drain the critique row; the heavier phase is over-engineering for a [MED]. Pass 11 added one more signal (/tag/gmk low article count) but it self-fills via companion shipping — still below phase threshold.
 
 
 ## Promoted
@@ -171,8 +207,3 @@
 ## Rejected
 
 (empty — populated as `/oversight` rejects candidates)
-
-## Considered (below threshold)
-
-(empty — populated by `/expand` for candidates that scored
-below the cap-3 cutoff; re-examined on next pass)
