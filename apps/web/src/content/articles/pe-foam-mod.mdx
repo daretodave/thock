@@ -1,0 +1,98 @@
+---
+slug: pe-foam-mod
+title: "The PE foam mod: the two-dollar upgrade that actually works"
+pillar: ideas
+publishedAt: '2026-04-24T12:00:00.000Z'
+updatedAt: null
+author: thock
+lede: "PE foam is one of the most accessible mods in the hobby — a $2 sheet between your PCB and case can noticeably reduce hollow resonance. Here is what it actually does, when to use it, and when to skip it."
+heroImage: /hero-art/pe-foam-mod.svg
+heroImageAlt: "A keyboard with PE foam visible between the PCB and case bottom, coral line-drawing style"
+tags: [modding, acoustic, beginner]
+featured: false
+popularityScore: 20
+---
+
+A sheet of packaging foam, a pair of scissors, and two dollars: that is the entire material list. The PE foam mod is the mod that survives every round of "well, actually" because the physics behind it is simple and the results are consistent enough to have been replicated across hundreds of documented builds. It does not do everything. What it does, it does reliably.
+
+## What PE foam is
+
+Polyethylene foam — PE foam — is a closed-cell foam used in shipping packaging, the kind that lines boxes around electronics or wraps fragile tools. In the hobby it is usually sourced as thin craft sheets, 1–2mm thick, from art supply stores or Amazon. A standard A4 or letter-sized sheet costs roughly $1–2 in single-sheet quantities; a multipack for future experiments runs $5–8. The material has a slight give under pressure but does not compress into nothing — it holds its shape under the weight of a PCB and the assembled board above it.
+
+The keyboard application is simple: cut a sheet to match the footprint of your PCB, lay it in the bottom of the case before reassembly, and set the PCB on top of it. The foam sits between the bottom of the PCB and the inside of the case bottom.
+
+<Callout type="note" title="Craft foam vs. packing foam">
+  Dedicated craft foam sheets (sold in hobby and art supply stores) are the most consistent option — they have uniform thickness and no variable-density zones. Salvaged packing foam from a shipping box works but the density and thickness are harder to control, which makes the result harder to predict. Spend the two dollars on the real thing.
+</Callout>
+
+## What it actually does
+
+The mod targets one specific acoustic problem: case resonance. In a keyboard with an empty cavity between the PCB and the case bottom — common in budget boards, plastic cases, and mid-range aluminum boards with generous internal clearance — keystroke energy travels through the PCB, into the air gap, and sets the case walls vibrating. The result is a hollow, slightly boxy quality to the typing sound. The keystroke rings out rather than landing and stopping.
+
+PE foam interrupts that path. The foam couples the PCB to the case bottom through a compliant layer rather than leaving the air gap open. The cavity that was acting as a resonant chamber no longer resonates the same way — the foam absorbs the energy that was bouncing around in that space. The audible effect is a reduction in that hollow quality, a slight increase in low-end density, and a sound that feels like it lands rather than rings.
+
+It is a specific fix for a specific problem. What it is not is a general switch-quality improver, a lubing substitute, or a solution to anything above the PCB. The mod affects case resonance. It does not change what happens inside the switch housing, does not alter switch feel or actuation force, and does not touch the plate-level acoustics. A scratchy switch sounds just as scratchy after the mod. A <Mono>Krytox 205g0</Mono> application on the stem rails does something PE foam cannot; PE foam does something lube cannot. They address different layers of the acoustic stack.
+
+It also does not help much with high-pitched, clacky boards. If the primary character of a board is a bright clack from hard plastic keycaps hitting a stiff plate, that energy is originating above the PCB — at the switch top housing, the plate, and the keycap. PE foam below the PCB is not in the path of that energy. The fix for that problem is switch dampeners, plate foam, or different keycaps. PE foam targeting it would be like insulating the walls to fix a squeaky floor.
+
+<Callout type="note" title="One layer or two">
+  Most builders use a single 1–2mm sheet and find it sufficient. For boards with a particularly large cavity — full-size cases, some TKL designs with thick aluminum bottoms — a second layer stacked on top of the first is a reasonable experiment. There is a diminishing return past two layers, and at some point additional thickness starts affecting how the PCB seats, particularly in boards where PCB height is part of the plate-alignment geometry.
+</Callout>
+
+## What you need and how to do it
+
+The materials list is short:
+
+| Item | Where to get it | Cost |
+|---|---|---|
+| PE foam sheet, 1–2mm thick | Craft store, Amazon, or art supply | $1–3 per sheet |
+| Scissors or craft knife | Already owned | — |
+| Pencil or marker | Already owned | — |
+
+The process takes about ten minutes on a hot-swap board and roughly the same time on a soldered board if it is already disassembled.
+
+Open the board and remove the PCB from the case. Lay the PCB face-down on the foam sheet and trace the outline with a pencil. Cut along the traced line with scissors — precision here matters just enough to avoid foam overlapping the case walls or interfering with screw holes. Set the PCB aside, place the cut foam into the case bottom, and confirm it lies flat without bunching at the corners.
+
+For screw holes that pass through the PCB into the case: mark and cut small clearance holes in the foam, or cut notches at the edges where the screw columns sit. If the screws thread into standoffs that are taller than the foam is thick, the foam simply surrounds the standoff bases and the PCB seats normally. Check this before reassembly.
+
+Reassemble. That is the entire mod.
+
+<Callout type="warn" title="Hot-swap pins and foam interference">
+  On boards where the hot-swap sockets sit proud of the PCB bottom surface, confirm that the socket legs are not cutting into the foam during reassembly. The foam should compress slightly under the weight of the PCB without the socket legs punching through and creating an uneven seating surface. If this is a concern, a thin layer of masking tape over the socket area before placing the foam is an easy preventive measure.
+</Callout>
+
+## Which boards benefit most
+
+The mod has the most audible effect on boards where the air cavity below the PCB is large relative to the case volume. That typically means:
+
+**Budget plastic cases.** Thin-walled plastic resonates more easily than aluminum, and the internal geometry in entry-level boards rarely does anything to damp the cavity. PE foam on a board like a Keychron V-series or a KBDfans KBD67 Lite makes a noticeable difference that is immediately obvious on first keystroke.
+
+**Larger layouts.** A full-size board has roughly twice the internal volume of a 65%. More cavity means more resonance potential. TKL boards sit between those poles; even a modest TKL with a plastic case bottom is a good candidate.
+
+**Hot-swap boards.** The practical reason PE foam has spread so far as a first mod is that hot-swap boards make it trivially easy. There is no soldering to undo. Opening the case, placing the foam, and reassembling takes fifteen minutes. The zero-commitment nature of the mod on a hot-swap board is part of why it gets recommended so often as a starting point for acoustic tuning — the downside risk of "I don't like the result" ends with removing the foam.
+
+**Gasket-mount boards.** These already isolate the plate from the case through the gaskets. PE foam adds a second layer of isolation at the PCB-to-case interface. The result is incremental rather than transformative on a well-engineered gasket design, but on the budget gasket-mount boards where the gaskets are thin and not doing much work, the foam contribution is more audible.
+
+The boards that benefit least are those with heavy aluminum cases where the bottom is thick enough to be non-resonant on its own, and boards where the PCB sits directly on internal foam from the factory — those designs have already solved the same problem in manufacturing.
+
+## What it does not do
+
+Worth being direct about the limits:
+
+**It does not fix stabilizer rattle.** Rattle originates at the stabilizer wire ends in the housings. That is a separate problem solved by lubing the wire ends and optionally clipping the feet — PE foam is not in the mechanical path of that vibration.
+
+**It does not improve switch feel.** Actuation force, tactile bump, bottom-out travel — those are determined by the switch internals. PE foam below the PCB cannot reach them.
+
+**It does not make a mediocre switch sound better.** The mod removes hollow resonance. If the primary character of the board is a switch that sounds thin or scratchy, that character will still be there after the mod — just without the hollow overtone layered on top of it. In some builds that is enough of a change to feel transformative; in others the switch character is the dominant problem and PE foam cannot address it.
+
+**It does not replace plate foam.** Plate foam sits between the plate and the PCB and targets a different resonance path — the air between those two layers. PE foam and plate foam are complementary, not substitutes. Some builders run both; the order of operations is typically plate foam first, PE foam second, and evaluate after each addition.
+
+## Verdict
+
+On the right board, this is among the highest-value modifications in the hobby by any metric that matters: the cost is negligible, the installation is reversible and requires no skill, and the acoustic result is genuine. A $90 board with a resonant case bottom sounds meaningfully less hollow with PE foam in it. That improvement is real and not subtle.
+
+The risk is essentially zero. If the result is not to taste, the foam comes out in five minutes. No switches are damaged, no soldering is involved, and the board returns to its original state without evidence of modification.
+
+The honest scope of the mod is narrow: it addresses case resonance, one layer of the acoustic stack. Combine it with a careful switch lube job and properly tuned stabilizers and the three mods together cover the most common sources of acoustic dissatisfaction in a mid-range build. Each costs under ten dollars and an afternoon. There is no cheaper path to a board that sounds intentional rather than incidental.
+
+Watch for pre-cut PE foam kits sized to specific popular boards — a few vendors have started selling them alongside their board accessories. The markup is real, but the convenience of a pre-cut and pre-punched sheet is not trivial for builders who have not done the mod before. If the board you are modding has a kit available, the math might favor it over sourcing raw sheets.

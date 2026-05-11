@@ -1,0 +1,21 @@
+{
+  "generated_by": "brander",
+  "engine": "resvg",
+  "at": "2026-05-11T00:00:00.000Z",
+  "commit": "6242b425db7aad3887ab299c26b790ae5ae6e6fd",
+  "kind": "custom",
+  "source": "hand-authored SVG — keyboard cross-section with PE foam layer",
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": ["JetBrains Mono"],
+  "outputs": [
+    "apps/web/public/hero-art/pe-foam-mod.svg"
+  ],
+  "asset": "pe-foam-mod.svg",
+  "type": "article-hero",
+  "subject": "keyboard cross-section with PE foam layer callout",
+  "splashHue": "coral",
+  "canvas": "1200x750",
+  "generatedAt": "2026-04-24",
+  "sourceSkill": "ship-content",
+  "warnings": []
+}
