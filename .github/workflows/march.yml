@@ -8,11 +8,18 @@ name: march
 
 on:
   schedule:
-    # Every 2h between 18:00 and 06:00 ET (off-peak, US East).
-    # ET = UTC-5 standard / UTC-4 DST. We pick UTC slots that cover
-    # the off-peak window in both — 23, 01, 03, 05, 07, 09, 11 UTC =
-    # 18-06 ET in DST, 17-05 ET in standard. ~7 ticks/day.
-    - cron: '0 1,3,5,7,9,11,23 * * *'
+    # Hourly, 24/7. Bumped 2026-05-11 from "every 2h off-peak ET"
+    # (~7 ticks/day) to hourly (~24 ticks/day max) after the cloud
+    # loop went genuinely operational. Bounded downstream by:
+    #   - the daily commit ceiling (12 cloud-shipped commits / 24h
+    #     — see "Daily commit ceiling check" step below). Past that
+    #     point every tick exits cleanly with no work.
+    #   - the concurrency group `march` (a long-running tick blocks
+    #     the next firing instead of racing it).
+    #   - the 5h timeout per tick.
+    # Net: up to ~12 commits/day in the worst case, with no-op ticks
+    # absorbing the remaining ~12 slots when nothing's queued.
+    - cron: '0 * * * *'
   workflow_dispatch:
 
 concurrency:

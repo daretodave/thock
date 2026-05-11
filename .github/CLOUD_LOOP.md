@@ -127,9 +127,11 @@ issues are:
 
 ### Normal operation
 
-The cron fires at `0 1,3,5,7,9,11,23 * * *` UTC (every 2h between
-18:00 and 06:00 ET, off-peak). ~7 ticks/day. You don't have to do
-anything.
+The cron fires at `0 * * * *` UTC — hourly, 24/7. Up to ~24
+ticks/day in theory; bounded in practice by the daily commit
+ceiling (12 cloud-shipped commits / 24h), so the worst-case
+ship rate is ~12/day with no-op ticks absorbing the rest. You
+don't have to do anything.
 
 Each tick:
 1. Runs the daily commit-ceiling check (12 cloud commits / 24h).
@@ -251,7 +253,7 @@ underlying skill it dispatched to.
 | `triage:cloud-failed` issue open | Tick hit a real error | Read the issue body for the run URL; fix root cause; close issue |
 | Loop appears stuck | A previous tick is still running and concurrency group is holding | `gh run list --workflow march.yml --status in_progress`, cancel the stale one |
 | Repeated red deploys | Netlify-side regression | Check Netlify dashboard; root-cause as you would locally |
-| Quota pressure on Max | Cloud + heavy local work overlapping | Drop cloud cadence: change cron to every 4h instead of 2h |
+| Quota pressure on Max | Cloud + heavy local work overlapping | Drop cloud cadence: change cron from hourly (`0 * * * *`) to every 2h (`0 */2 * * *`) or every 4h (`0 */4 * * *`) |
 
 ## Why this is structured this way
 
