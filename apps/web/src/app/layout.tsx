@@ -54,6 +54,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${serif.variable} ${sans.variable} ${mono.variable}`}
     >
       <body className="bg-bg text-text font-sans antialiased min-h-screen flex flex-col">
+        <a href="#main" className="skip-link">
+          Skip to main content
+        </a>
         <GoogleTagManager />
         <Header />
         {children}

@@ -103,7 +103,7 @@ export default function HomePage(): ReactElement {
     .slice(0, 4)
 
   return (
-    <main className="flex-1">
+    <main id="main" className="flex-1">
       <JsonLd
         graph={[
           buildWebSiteJsonLd(),

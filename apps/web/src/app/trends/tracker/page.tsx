@@ -80,7 +80,7 @@ export default function TrendsTrackerPage(): ReactElement {
 
   if (!snapshot) {
     return (
-      <main className="flex-1">
+      <main id="main" className="flex-1">
         <JsonLd graph={baseGraph} />
         <TrackerHeader snapshot={null} lede={LEDE} />
         <Container as="section" className="py-16">
@@ -114,7 +114,7 @@ export default function TrendsTrackerPage(): ReactElement {
   )
 
   return (
-    <main className="flex-1">
+    <main id="main" className="flex-1">
       <JsonLd graph={[...baseGraph, buildDatasetJsonLd(snapshot)]} />
       <TrackerHeader snapshot={snapshot} lede={LEDE} />
 

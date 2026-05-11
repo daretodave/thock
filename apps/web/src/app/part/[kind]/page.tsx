@@ -113,7 +113,7 @@ export default async function PartIndexPage({
   const description = KIND_DESCRIPTION[kind]
 
   return (
-    <main className="flex-1">
+    <main id="main" className="flex-1">
       <JsonLd
         graph={[
           buildCollectionPageJsonLd({
