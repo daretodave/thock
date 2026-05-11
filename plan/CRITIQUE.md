@@ -16,13 +16,16 @@
 
 ## Pending
 
-### [HIGH] /article/cannonkeys-nyawice-group-buy — body says "roughly one week left" but the article is dated the day the buy opened (Apr 17)
+### [x] [HIGH] /article/cannonkeys-nyawice-group-buy — body says "roughly one week left" but the article is dated the day the buy opened (Apr 17)
+- addressed in: 12a818d (this tick — iterate drain)
+- issue: #43
 - pass: 11 (commit 931c8a7)
 - viewport: both
 - category: copy
 - observation: The article is bylined April 17, 2026 (the GB's startDate, per Rule 4 group-buy exemption) and states the buy window is 2026-04-17 through 2026-05-17 — a full month — yet the very next clause reads "roughly one week left as of this column." On the publication date the buy had four weeks left; only the present-tense reading state (today, 2026-05-10) is one-week-out. The content-curator wrote present-tense copy instead of publication-date-relative copy, internally undermining the editorial math on a time-sensitive group-buy piece. HIGH because the bylined-date and the lede-math contradict each other on a freshly-shipped piece — a fresh reader notices immediately.
 - evidence: rendered body in /article/cannonkeys-nyawice-group-buy paragraph 4: "The window is 2026-04-17 through 2026-05-17 — roughly one week left as of this column." Byline rendered "thock · April 17, 2026 · ~6 min read." Source: `apps/web/src/content/articles/cannonkeys-nyawice-group-buy.mdx:45`.
-- suggested fix: rewrite to "a four-week buy" or drop the relative-time-remaining phrase entirely ("The window is 2026-04-17 through 2026-05-17 — a four-week buy."). Group-buy companion pieces dated their startDate cannot use "X weeks left" relative phrasing without per-render-time math, which contradicts the static-MDX architecture. Codify in `bearings.md` "Content velocity" Rule 4: group-buy companion pieces dated their startDate phrase the window in absolute terms (not relative-time-remaining), since the lede ships with a date that's not "now."
+- fix: rewrote `cannonkeys-nyawice-group-buy.mdx:45` from "roughly one week left as of this column" to "a four-week buy, opening today" — absolute phrasing that doesn't decay across reads. Also amended `plan/bearings.md` "Content velocity & editorial cadence" Rule 4 with a new sub-rule locking the lesson: group-buy companion pieces dated their startDate use **absolute** window phrasing in prose, never relative-time-remaining. Static MDX cannot do per-render-time math. The bearings amendment guards against the next 4 GMK CYL companion ships hitting the same trap; content-curator briefs in future /iterate ticks pull from this section.
+- verify note: 433 e2e green parallel — no #418 flake this run.
 - source: browser
 
 ### [HIGH] /group-buys — Ishtar R2 card under "Just closed" section carries a "LIVE" status pill (renderer leaks source status)
