@@ -161,14 +161,24 @@
 >
 > Score: **2.8** (impact 4 — keyboard users on every page; ease 7 — one layout edit + one global CSS rule + one e2e).
 
-### [5.25] ideas pillar — 3 of 8 article quota (needs 5 more)
+### [x] [5.25] ideas pillar — 3 of 8 article quota (needs 5 more) — addressed in 1c08aa9 (closes #53)
 - category: content-gaps
 - impact: 7 (Ideas & Builds is the third-most-prominent pillar; 3/8 articles leaves the landing page sparse)
 - ease: 5 (one new article per tick via /ship-content)
 - rule: Rule 1 — pillar quota
-- shortfall: 5 articles (current 3, quota 8)
+- shortfall: 5 articles (current 3, quota 8) → now 4 of 8 (1 shipped)
 - next: /ship-content → ideas pillar article (topic from /iterate audit or gap heuristic)
 > Filed 2026-05-11 by phase 25 (content queue prime). Bias multiplier 1.5× applies → effective score 5.25. Drains one row per /ship-content tick; retire when ideas reaches 8 articles.
+> **Resolved (2026-05-11):** shipped "The PE foam mod: the two-dollar upgrade that actually works" at `/article/pe-foam-mod`, publishedAt 2026-04-24 (gap-fill). `1c08aa9`
+
+### [5.25] ideas pillar — 4 of 8 article quota (needs 4 more)
+- category: content-gaps
+- impact: 7 (Ideas & Builds is the third-most-prominent pillar; 4/8 articles is still below quota)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — pillar quota
+- shortfall: 4 articles (current 4, quota 8)
+- next: /ship-content → ideas pillar article (topic from /iterate audit or gap heuristic)
+> Continuation of the ideas-pillar queue after the first /ship-content tick. Bias multiplier 1.5× applies → effective score 5.25. Drains one row per tick; retire when ideas reaches 8 articles.
 
 ### [5.25] deep-dives pillar — 3 of 8 article quota (needs 5 more)
 - category: content-gaps
