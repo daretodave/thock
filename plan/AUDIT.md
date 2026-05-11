@@ -157,16 +157,44 @@
 - needs-user-call: GA admin + GTM tag config sit outside the repo; the loop can't autonomously verify or reconfigure them. User confirmed at /oversight 2026-05-11 they will verify GA admin (property active state, sample rate, hostname allowlist) out-of-band and report back. The loop must NOT attempt to drain this row — it is informational until the user reports back.
 - on-resolution: if persistent + Google-side, the candidate path is swapping to a self-hosted runner (Plausible/Umami) — the `<GoogleTagManager>` Server Component scaffolding already has the env-gate to host a second runner alongside. File as new phase candidate via `/expand` if that path is chosen.
 
-### [LOW] [a11y] all pages — no "skip to main content" link
-> Filed 2026-05-10 by /iterate audit pass (resolves the [MED] Accessibility audit pass row above).
+### [x] [LOW] [a11y] all pages — no "skip to main content" link — addressed in 7899462 (phase 26)
+> Filed 2026-05-10 by /iterate audit pass.
 >
-> **Observation:** zero `href="#main"` (or equivalent) skip-link anchors exist across the rendered HTML of all 8 audited URLs. `<main>` is present and singular on every page (good — landmark structure is correct), but it is not addressable via a keyboard-first bypass control. Sighted keyboard users and screen-reader users who skip past the header have to tab through every header link + mobile-nav-toggle on every page navigation.
->
-> **WCAG:** 2.4.1 Bypass Blocks (A).
->
-> **Action:** add a visually-hidden-until-focused `<a href="#main" class="skip-link">Skip to main content</a>` as the first child of `<body>` in `apps/web/src/app/layout.tsx`, plus `id="main"` on the existing `<main>` element. One-time layout component change, applies to all routes. CSS for the skip-link's focus-reveal goes in `apps/web/src/app/globals.css` (or as Tailwind classes inline). Test: e2e visits `/`, focuses the skip link via Tab, asserts it becomes visible and that activating it moves focus to `<main>`.
->
-> Score: **2.8** (impact 4 — keyboard users on every page; ease 7 — one layout edit + one global CSS rule + one e2e).
+> **Resolved (2026-05-11):** `apps/web/src/app/layout.tsx` now has a `.skip-link` as the first `<body>` child targeting `#main`. CSS in `globals.css` hides it at rest and reveals it on keyboard focus with an accent-bordered panel. All 43 route `<main>` elements received `id="main"` (16 page.tsx + 12 loading.tsx + 5 not-found.tsx + 10 error.tsx). Regression guard added to `apps/e2e/tests/a11y.spec.ts` (skip-link present, target resolves, link becomes visible on focus). `7899462`
+
+### [a11y] [3.5] color-contrast — text-accent-mu at small text sizes (pillar eyebrows, tag chips)
+- filed: 2026-05-11 by Phase 26 axe discovery pass
+- wcag: 1.4.3 Contrast (Minimum) AA — 4.5:1 for text <18px / <14px bold
+- axe impact: serious
+- pages: all pages that render pillar eyebrows or tag chips (/, /article/*, /tag/*, /group-buys, etc.)
+- elements: `<span class="... text-micro text-accent-mu">News</span>` (pillar eyebrow); `<span data-testid="tag-chip-name">ZMK</span>` (tag chip on dark background)
+- root cause: `text-accent-mu` (`oklch(0.50 0.07 75)`) is the "muted accent" — intentionally low-contrast to feel decorative rather than informational. At `text-micro` (12px), WCAG AA 4.5:1 is not met against `--thock-bg` (`oklch(0.175 0.006 250)`).
+- action: option (a) use `text-accent` (`oklch(0.80 0.135 75)`) for pillar eyebrows — lighter, still on-brand; option (b) bump eyebrow text to `text-small` (14px) which reduces the ratio requirement to 3:1 for normal text. Tag chip: check whether the chip's background color is the page background or a surface color — if on a surface, re-measure against that L.
+- note: design-level decision. Changing `text-accent-mu` across the site has cascade effects. Recommend /oversight review before touching the token; the iterate drain here is "use `text-accent` for eyebrow contexts where 12px muted text is decorative."
+- score: 3.5 (impact 5 — affects sighted users with color perception issues or low-contrast screens; ease 5 — one class substitution per component but design sign-off needed)
+- once fixed: add `expect(results.violations.filter(v => v.id === 'color-contrast')).toHaveLength(0)` assertion to a11y.spec.ts for the affected pages
+
+### [a11y] [3.0] color-contrast — text-text-3 at small text (tracker header metadata, back links)
+- filed: 2026-05-11 by Phase 26 axe discovery pass
+- wcag: 1.4.3 Contrast (Minimum) AA
+- axe impact: serious
+- pages: /trends/tracker (year label, "of 52"), /tag/[slug] (back link "← all tags")
+- elements: `<span class="... text-micro text-text-3">2026 · week</span>`, `<span class="... text-micro text-text-3">of 52</span>`, `<a class="... text-text-3 ...">← all tags</a>`
+- root cause: `text-text-3` (`oklch(0.58 0.006 90)`) against `--thock-bg` fails 4.5:1 at 12px. It passes for larger text but not micro.
+- action: for tracker header metadata, replace `text-text-3` with `text-text-2` (`oklch(0.78 0.005 90)`) — still clearly tertiary but passes at 12px. For the back link, same substitution plus keep `hover:text-text`. These are isolated elements; substitution won't break overall visual design.
+- score: 3.0 (impact 4 — narrow audience for the tracker header metadata; ease 7 — two class substitutions)
+- once fixed: add targeted contrast assertion to a11y.spec.ts
+
+### [a11y] [2.5] link-in-text-block — /about body links use color only (no underline or other non-color indicator)
+- filed: 2026-05-11 by Phase 26 axe discovery pass
+- wcag: 1.4.1 Use of Color (A) — links must not be distinguished from surrounding text by color alone
+- axe impact: serious
+- pages: /about
+- elements: inline links to /news, /trends, /ideas, /deep-dives, /guides within body prose
+- root cause: the global `a { text-decoration: none; color: inherit; }` rule in `globals.css` removes underlines from ALL links. For links that are inline within body-copy paragraphs, this is a Level A violation. The `/about` page body prose includes navigation links that readers may not recognize as interactive without non-color cues.
+- action: scoped fix — in `/about`'s body component, apply `underline` to inline prose links, OR add a `prose-a:underline` helper class on the prose wrapper. Do NOT remove `text-decoration: none` globally (other link contexts like nav, card titles, etc. rely on it). Targeted scope: `apps/web/src/components/about/AboutBody.tsx`.
+- score: 2.5 (impact 4 — users who rely on non-color cues to identify links; ease 7 — one component class addition)
+- once fixed: add link-in-text-block assertion to a11y.spec.ts for /about
 
 ### [x] [5.25] ideas pillar — 3 of 8 article quota (needs 5 more) — addressed in 1c08aa9 (closes #53)
 - category: content-gaps
