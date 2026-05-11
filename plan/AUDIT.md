@@ -181,12 +181,22 @@
 > Continuation of the ideas-pillar queue after the first /ship-content tick. Bias multiplier 1.5× applies → effective score 5.25. Drains one row per tick; retire when ideas reaches 8 articles.
 > **Resolved (2026-05-11):** shipped "Switch films: do they actually do anything?" at `/article/switch-films-worth-it`, publishedAt 2026-04-13 (gap-fill). `d1dec8b`
 
-### [5.25] ideas pillar — 5 of 8 article quota (needs 3 more)
+### [x] [5.25] ideas pillar — 5 of 8 article quota (needs 3 more) — addressed in 69c4307 (closes #55)
 - category: content-gaps
 - impact: 7 (Ideas & Builds is the third-most-prominent pillar; 5/8 articles is still below quota)
 - ease: 5 (one new article per tick via /ship-content)
 - rule: Rule 1 — pillar quota
 - shortfall: 3 articles (current 5, quota 8)
+- next: /ship-content → ideas pillar article (topic from /iterate audit or gap heuristic)
+> Continuation of the ideas-pillar queue. Bias multiplier 1.5× applies → effective score 5.25. Drains one row per tick; retire when ideas reaches 8 articles.
+> **Resolved (2026-05-11):** shipped "The tape mod: what one strip of Kapton actually does" at `/article/tape-mod`, publishedAt 2026-05-02 (gap-fill). `69c4307`
+
+### [5.25] ideas pillar — 6 of 8 article quota (needs 2 more)
+- category: content-gaps
+- impact: 7 (Ideas & Builds is the third-most-prominent pillar; 6/8 articles is still below quota)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — pillar quota
+- shortfall: 2 articles (current 6, quota 8)
 - next: /ship-content → ideas pillar article (topic from /iterate audit or gap heuristic)
 > Continuation of the ideas-pillar queue. Bias multiplier 1.5× applies → effective score 5.25. Drains one row per tick; retire when ideas reaches 8 articles.
 
