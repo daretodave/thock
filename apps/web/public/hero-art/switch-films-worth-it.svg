@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — MX-style switch cross-section with film layer highlighted</title>
+
+  <!-- ================================================================
+       Canvas: 1200 × 750   Stroke: 2px warm-bone   Fill: none (line art)
+       Splash: dusty rose  oklch(0.76 0.07 10) ≈ #d4a0a0
+       Accent: warm bronze oklch(0.80 0.135 75) ≈ #c8943a
+       Layout (exploded, top-to-bottom, centered near x=600):
+         Top housing     y 110 – 268
+         [explode gap]   y 268 – 318   ← film sits here, film center ~330
+         Film layer      y 318 – 344   (exaggerated ~26px for legibility)
+         [explode gap]   y 344 – 394
+         Bottom housing  y 394 – 598
+         Stem (inside)   y 210 – 480   (partially visible through housings)
+       ================================================================ -->
+
+  <!-- Dusty-rose glow wash around the film zone — very soft -->
+  <ellipse cx="600" cy="331" rx="310" ry="52"
+    fill="#d4a0a0" fill-opacity="0.10" stroke="none"/>
+
+  <!-- ── EXPLODE GUIDE LINES ──────────────────────────────────────── -->
+  <!-- Upper gap (between top housing and film) -->
+  <line x1="340" y1="295" x2="860" y2="295"
+    stroke-dasharray="5 7" stroke-opacity="0.28"/>
+  <!-- Lower gap (between film and bottom housing) -->
+  <line x1="340" y1="370" x2="860" y2="370"
+    stroke-dasharray="5 7" stroke-opacity="0.28"/>
+
+  <!-- ── TOP HOUSING ───────────────────────────────────────────────── -->
+  <g>
+    <!-- Outer profile: dome-rounded top, straight sides, flat bottom edge -->
+    <path d="
+      M 450 268
+      L 450 180
+      Q 450 110 530 110
+      L 670 110
+      Q 750 110 750 180
+      L 750 268
+      Z"
+      stroke-opacity="0.85"/>
+
+    <!-- Stem slot (centre slot on top face) -->
+    <path d="M 565 110 L 635 110 L 635 128 L 565 128 Z"
+      stroke-opacity="0.60"/>
+
+    <!-- LED window notch on front face (left side of dome) -->
+    <path d="M 450 195 L 430 195 L 430 215 L 450 215"
+      stroke-opacity="0.45"/>
+
+    <!-- Inner housing ridge (horizontal) — the rim that the film seats against -->
+    <line x1="462" y1="260" x2="738" y2="260"
+      stroke-opacity="0.40"/>
+
+    <!-- Inner cavity walls (faint, cut-away feel) -->
+    <line x1="492" y1="130" x2="492" y2="260" stroke-opacity="0.22"/>
+    <line x1="708" y1="130" x2="708" y2="260" stroke-opacity="0.22"/>
+
+    <!-- Retaining clip tabs (two small ears, one each side) -->
+    <path d="M 450 235 L 438 235 L 438 252 L 450 252" stroke-opacity="0.55"/>
+    <path d="M 750 235 L 762 235 L 762 252 L 750 252" stroke-opacity="0.55"/>
+  </g>
+
+  <!-- ── STEM (partially visible inside housings) ──────────────────── -->
+  <!-- Rendered behind/inside to suggest it lives inside the assembly -->
+  <g stroke-opacity="0.38">
+    <!-- Cruciform head (just visible at top of interior) -->
+    <path d="
+      M 580 155
+      L 620 155
+      L 620 168
+      L 630 168
+      L 630 180
+      L 570 180
+      L 570 168
+      L 580 168
+      Z"/>
+    <!-- Stem body column -->
+    <rect x="572" y="180" width="56" height="130" rx="2"/>
+    <!-- Centre detail line on stem -->
+    <line x1="600" y1="188" x2="600" y2="302" stroke-opacity="0.45"/>
+    <!-- Stem rails (two side rails) -->
+    <line x1="572" y1="218" x2="558" y2="218"/>
+    <line x1="572" y1="248" x2="558" y2="248"/>
+    <line x1="628" y1="218" x2="642" y2="218"/>
+    <line x1="628" y1="248" x2="642" y2="248"/>
+    <!-- Pole legs into spring zone -->
+    <line x1="586" y1="310" x2="586" y2="420"/>
+    <line x1="614" y1="310" x2="614" y2="420"/>
+  </g>
+
+  <!-- ── FILM LAYER (the hero element) ────────────────────────────── -->
+  <!-- Filled rectangle: dusty rose, slight opacity fill + full-opacity stroke -->
+  <rect x="448" y="318" width="304" height="26" rx="3"
+    fill="#d4a0a0" fill-opacity="0.28"
+    stroke="#d4a0a0" stroke-opacity="0.95" stroke-width="2"/>
+
+  <!-- Subtle texture lines inside the film (suggest thin POM laminate) -->
+  <g stroke="#d4a0a0" stroke-opacity="0.32" stroke-width="1">
+    <line x1="460" y1="327" x2="740" y2="327"/>
+    <line x1="460" y1="334" x2="740" y2="334"/>
+  </g>
+
+  <!-- Glow bloom on the film top edge -->
+  <line x1="448" y1="318" x2="752" y2="318"
+    stroke="#d4a0a0" stroke-opacity="0.18" stroke-width="8"/>
+
+  <!-- ── BOTTOM HOUSING ─────────────────────────────────────────────── -->
+  <g>
+    <!-- Outer shell: flat top edge, tapered to PCB pins, slightly narrower -->
+    <path d="
+      M 450 394
+      L 450 560
+      Q 450 598 490 598
+      L 710 598
+      Q 750 598 750 560
+      L 750 394
+      Z"
+      stroke-opacity="0.85"/>
+
+    <!-- Inner well (stem channel) -->
+    <path d="M 540 394 L 660 394 L 660 460 L 540 460 Z"
+      stroke-opacity="0.50"/>
+
+    <!-- Centre post (spring seat) -->
+    <circle cx="600" cy="540" r="8" stroke-opacity="0.55"/>
+
+    <!-- PCB pin contacts (two small filled circles) -->
+    <circle cx="510" cy="570" r="5" fill="oklch(0.78 0.005 90)" fill-opacity="0.70"/>
+    <circle cx="690" cy="570" r="5" fill="oklch(0.78 0.005 90)" fill-opacity="0.70"/>
+
+    <!-- Bottom rail tabs (two ear-like clips) -->
+    <path d="M 450 445 L 438 445 L 438 462 L 450 462" stroke-opacity="0.50"/>
+    <path d="M 750 445 L 762 445 L 762 462 L 750 462" stroke-opacity="0.50"/>
+
+    <!-- Inner bottom detail line -->
+    <line x1="464" y1="402" x2="736" y2="402" stroke-opacity="0.32"/>
+  </g>
+
+  <!-- ── SPRING (compressed suggestion, inside bottom housing) ──────── -->
+  <g stroke-opacity="0.32">
+    <ellipse cx="600" cy="468" rx="38" ry="6"/>
+    <ellipse cx="600" cy="479" rx="38" ry="6"/>
+    <ellipse cx="600" cy="490" rx="38" ry="6"/>
+    <ellipse cx="600" cy="501" rx="38" ry="6"/>
+    <ellipse cx="600" cy="512" rx="38" ry="6"/>
+    <ellipse cx="600" cy="523" rx="38" ry="6"/>
+    <!-- Spring axis -->
+    <line x1="600" y1="462" x2="600" y2="529"
+      stroke-dasharray="2 4" stroke-opacity="0.22"/>
+  </g>
+
+  <!-- ── BRONZE CALLOUT — leader line pointing to the film ─────────── -->
+  <!-- Leader: right side, elbow to film right edge -->
+  <g stroke="#c8943a" stroke-width="1.5" stroke-opacity="0.88" fill="none">
+    <path d="M 880 270 L 840 270 L 784 318"/>
+    <!-- Arrowhead at film edge -->
+    <path d="M 784 318 L 795 309 M 784 318 L 793 328"/>
+  </g>
+
+  <!-- Anchor dot on the callout baseline -->
+  <circle cx="880" cy="270" r="3.5" fill="#c8943a" stroke="none"/>
+
+  <!-- Callout label: "switch film" in JetBrains Mono -->
+  <text x="882" y="255"
+    font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace"
+    font-size="13" fill="#c8943a" fill-opacity="0.94"
+    letter-spacing="0.04em" text-anchor="start" stroke="none">switch</text>
+  <text x="882" y="271"
+    font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace"
+    font-size="13" fill="#c8943a" fill-opacity="0.94"
+    letter-spacing="0.04em" text-anchor="start" stroke="none">film</text>
+
+  <!-- Secondary left-margin bracket showing film sits between top + bottom housing -->
+  <g stroke="#c8943a" stroke-width="1.5" stroke-opacity="0.50" fill="none">
+    <!-- Tick at top housing bottom edge -->
+    <line x1="408" y1="268" x2="436" y2="268"/>
+    <!-- Tick at bottom housing top edge -->
+    <line x1="408" y1="394" x2="436" y2="394"/>
+    <!-- Spine -->
+    <line x1="408" y1="268" x2="408" y2="394"/>
+    <!-- Mid notch pointing right (at film center) -->
+    <line x1="408" y1="331" x2="424" y2="331"/>
+  </g>
+
+  <!-- ── MARGIN LABELS ─────────────────────────────────────────────── -->
+  <g font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace"
+     font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.30"
+     text-anchor="end" letter-spacing="0.04em" stroke="none">
+    <text x="388" y="196">top</text>
+    <text x="388" y="209">housing</text>
+    <text x="388" y="488">bottom</text>
+    <text x="388" y="501">housing</text>
+  </g>
+
+  <!-- Film label (dusty rose, left margin) -->
+  <text x="388" y="336"
+    font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace"
+    font-size="11" fill="#d4a0a0" fill-opacity="0.78"
+    text-anchor="end" letter-spacing="0.04em" stroke="none">film</text>
+
+  <!-- ── SUBTLE MEASUREMENT TICKS ──────────────────────────────────── -->
+  <g stroke-opacity="0.22">
+    <line x1="320" y1="110" x2="332" y2="110"/>
+    <line x1="320" y1="268" x2="332" y2="268"/>
+    <line x1="320" y1="318" x2="332" y2="318"/>
+    <line x1="320" y1="344" x2="332" y2="344"/>
+    <line x1="320" y1="394" x2="332" y2="394"/>
+    <line x1="320" y1="598" x2="332" y2="598"/>
+  </g>
+</svg>

@@ -1,0 +1,18 @@
+{
+  "generated_by": "brander",
+  "engine": "handcrafted-svg",
+  "at": "2026-05-11T00:00:00.000Z",
+  "commit": "edfaa0d360cf1a5ee0399dcc8d35177817298a4d",
+  "kind": "custom",
+  "slug": "switch-films-worth-it",
+  "subject": "switch cross-section with film layer highlighted",
+  "splashColor": "dusty-rose",
+  "canvas": "1200x750",
+  "source": "handcrafted — MX-style exploded switch cross-section",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["JetBrains Mono"],
+  "outputs": [
+    "apps/web/public/hero-art/switch-films-worth-it.svg"
+  ],
+  "warnings": []
+}

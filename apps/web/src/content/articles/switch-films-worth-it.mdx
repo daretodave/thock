@@ -1,0 +1,81 @@
+---
+slug: switch-films-worth-it
+title: "Switch films: do they actually do anything?"
+pillar: ideas
+publishedAt: '2026-04-13T14:00:00.000Z'
+updatedAt: null
+author: thock
+lede: "Thin POM shims between your switch housings cost five dollars and promise a tighter, better-sounding switch. The mechanism is real. Whether it matters on your specific switches is a separate question."
+heroImage: /hero-art/switch-films-worth-it.svg
+heroImageAlt: "Cross-section diagram of a switch housing showing where a film sits between top and bottom housing"
+tags: [linear, tactile, modding, switches, switch-films]
+mentionedParts:
+  - id: oil-king
+    kind: switch
+    slug: gateron-oil-king
+  - id: mx2a-red
+    kind: switch
+    slug: cherry-mx2a-red
+featured: false
+popularityScore: 0
+---
+
+A $5 bag of translucent shims arrives, the builder places one between each switch housing, and the keyboard sounds — maybe a little different. Maybe not. The hobby has been arguing about this since switch films arrived around 2018, and the argument has not resolved cleanly because both camps are right about different things.
+
+## What switch films are and what they claim to do
+
+Switch films are thin, flat shims — typically 0.1–0.15mm thick — that sit in the seam between the top housing and bottom housing of a MX-footprint switch. They are stamped or cut from POM (polyoxymethylene), PORON, or PE film stock, with a cutout for the stem and clearance for the LED and the leaf spring. Most packs contain 110–120 pieces, enough for a standard 65% to TKL build with some spares. <Source href="https://www.novelkeys.com/collections/switch-films">NovelKeys's switch film listing</Source> is representative of what the market looks like: $5–7 per 110-pack, usually two material options (POM or PORON), occasionally a thickness choice.
+
+The claim is straightforward: the top and bottom housing of a switch are injection-molded parts that clip together, and like any two molded parts, the gap at the seam varies. A looser fit means the top housing can rock slightly relative to the bottom — a motion called stem wobble when it originates at the stem itself, and housing wobble when it originates at the housing seam. Films close the gap at the seam, which, in theory, reduces housing wobble, tightens the sound, and changes the feel.
+
+The theory is correct. The practical effect depends on where you start.
+
+## Where the mechanism actually matters
+
+Housing wobble is measurable. Hold a switch between two fingers and press the top housing sideways while holding the bottom — some switches move meaningfully; others barely shift. Switches with tight-tolerance tooling, like Topre housings or the retooled <PartReference id="mx2a-red" />, have enough housing precision that the seam gap is already narrow. Films on a <Mono>Cherry MX2A Red</Mono> do very little because Cherry's revised tooling addressed the wobble problem directly. The housing fit is already tight; a 0.13mm shim is not closing a gap that isn't there.
+
+The switches that respond most to films are the ones with comparatively looser housing tolerances. Older-generation Gateron yellows and blacks, many Akko and Outemu-sourced switches, and particularly high-tactile switches where the stem geometry creates more lateral force on the housing — these are the candidates. The lateral force of a pronounced tactile bump is doing mechanical work against the housing seam on every keystroke; a film that reduces housing play is actually under load in a way it is not in a light linear where the stem travels mostly vertically.
+
+<PartReference id="oil-king" /> is an interesting middle case. The <Mono>Gateron Oil King</Mono> has reasonably consistent housing tolerances out of the factory, but the polycarbonate top housing is slightly more dimensionally variable than nylon across a 70-switch tray — PC has a wider thermal expansion coefficient than nylon, which means housing fit varies more with ambient temperature during molding. Builders running Oil Kings in humid, warm conditions sometimes report more improvement from films than builders in drier, cooler environments. The mechanism tracks.
+
+Topre-style switches — which include the electrostatic capacitive boards from HHKB and Leopold — do not accept films at all. The housing geometry is fundamentally different; there is no seam in the same location, and attempting to install films in a Topre switch is a non-starter.
+
+<Callout type="note" title="POM vs. PORON films">
+  POM films are rigid and dimensionally stable — they close the gap precisely and add no additional damping. PORON films (an open-cell polyurethane foam) are slightly compressible and add a small amount of acoustic damping at the seam on top of the gap-closing function. Builders who prefer PORON report a slightly softer bottom-out; builders who find PORON "mushy" prefer POM. Both are worth one tray of testing before committing.
+</Callout>
+
+## Does it actually change the sound or feel?
+
+For spring ping: no. Spring ping originates at the spring itself — the coil resonating inside the housing — and the seam between top and bottom housing is not in the acoustic path of that resonance. Films do not affect spring ping. If that is the primary issue, stem-side lubing or spring swapping is the fix.
+
+For bottom-out sound: a small but real difference on high-wobble switches. When the housing rocks during keystroke travel and snaps back on bottom-out, the seam contact produces a subtle secondary transient — a faint rattle or looseness layered under the switch's primary bottom-out. On switches where this is happening, films remove it and the bottom-out becomes more singular. The change is most audible on low-profile builds or builds with hard plates where other acoustic sources are already suppressed and the switch noise is unmasked.
+
+For feel: marginal but detectable on very wobbly switches. The feel change is about consistency more than it is about force or character. A switch that wobbles produces a keystroke that feels slightly different depending on the angle of finger contact; a filmed switch that no longer wobbles produces a more repeatable keystroke regardless of typing angle. For builders with a heavy lateral keystroke habit, the feel difference is real. For builders who hit keys straight down, the improvement is minimal.
+
+<Callout type="warn" title="Overly thick films can bind the switch">
+  Films that are too thick — typically anything over 0.15mm in a switch with already-tight housing tolerances — can prevent the top and bottom housing from closing fully. The switch will feel scratchy or will not latch closed, and the stem will bind against the housing. If a filmed switch feels noticeably stiffer or does not actuate smoothly, remove the film first before diagnosing anything else. This is most common with PORON films applied to tight-tolerance switches — the compressibility fools the builder into thinking the housing has closed when it has not fully seated.
+</Callout>
+
+## How to install them
+
+The installation process is simple but repetitive. Open each switch (a switch opener tool makes this a minute-per-switch operation rather than a three-minute one), set the bottom housing aside, place the film over the bottom housing so the cutouts align with the stem hole and the leaf spring channel, then clip the top housing back down. The film should be fully seated in the seam groove; if it is folding or bunching, it is either too thick for the switch or misaligned. Close the switch and confirm it actuates freely before moving on.
+
+For a 65-key build, plan for about two hours including desoldering if the board is not hot-swap. On a hot-swap board where the switches pull out easily, the same job runs faster — sixty to ninety minutes for a practiced builder.
+
+| Switch type | Film benefit | Recommended? |
+|---|---|---|
+| High-wobble linears (older Gateron, Akko, Outemu) | Audible seam rattle reduction, more consistent feel | Yes |
+| High-tactile switches (Holy Panda X, Boba U4T) | Reduced housing movement under lateral tactile force | Worth trying |
+| Gateron Oil King | Modest, depends on tray tolerances | Optional |
+| Cherry MX2A (either weight) | Minimal — tight tolerances already | Skip |
+| Topre / HHKB | Incompatible housing geometry | Not applicable |
+
+## The verdict
+
+Switch films do something real in the right context. The mechanism — closing housing seam gaps to reduce wobble — is physically valid, and on switches where that wobble is present and audible, the result is a more consistent, slightly cleaner bottom-out. At $5–7 per pack with material left over for the next build, the cost-to-try ratio is favorable.
+
+What they do not do is transform a mediocre switch into a premium one, address spring ping, or compensate for anything else in the acoustic stack. A scratchy switch is still scratchy after filming. A pinging spring still pings. The mod is narrow and honest about its scope in a way that many modifications are not.
+
+The practical guidance: buy one pack of POM films, pick the five or six switches in your tray with the most housing play, film them, compare them to unfilmed switches from the same tray. If the difference is audible or the feel improvement registers, film the rest. If it does not, the remaining 100 films will wait in the bag for the next project. The worst outcome is an afternoon's worth of switch opening with no payoff — that is the entire downside.
+
+Watch for materials development here. The next round of interesting work is in films made from harder elastomers rather than rigid POM — materials that close the gap while adding a controlled amount of acoustic damping. A few boutique vendors are shipping small batches of these variants and the early reception is positive on very clicky, high-housing-resonance switches. Whether that translates to a general recommendation depends on how the acoustic character sits across different plate materials and case designs. It is worth revisiting in six months when more build data exists.
