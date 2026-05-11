@@ -105,10 +105,20 @@ jobs:
           # change the model below to "claude-opus-4-7" once you've
           # measured a week of weekly-cap consumption and have
           # confirmed headroom.
+          #
+          # --dangerously-skip-permissions mirrors the user's local
+          # invocation. The runner is an ephemeral GitHub-hosted
+          # ubuntu container — its blast radius is bounded by the
+          # ACTIONS_PAT (thock-only, contents+issues write) and the
+          # VERCEL_TOKEN (deploy-scoped). The container itself dies
+          # at job end. Permission_denials_count was running at
+          # 30–40 per tick under the default (deny-by-default in
+          # scheduled mode), wasting turns on tool calls the agent
+          # would otherwise use productively — WebFetch for scout
+          # research, broader Bash forms for ops scripts, etc.
           claude_args: |
-            {
-              "model": "claude-sonnet-4-6"
-            }
+            --model claude-sonnet-4-6
+            --dangerously-skip-permissions
           prompt: |
             You are running thock's autonomous loop in CI (GitHub Actions).
             Read agents.md first for the standing rules — they all apply.
