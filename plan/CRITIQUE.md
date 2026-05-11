@@ -1,7 +1,9 @@
 # Critique log
 
-> Last pass: 2026-05-10T18:55:00Z at commit 0e2314f
-> Pass count: 10
+> Last pass: 2026-05-10T20:35:00Z at commit 931c8a7
+> Pass count: 11
+> Iterate-bias category: external-critique (pass 11 fired 12 commits after pass 10, after the content-velocity directive shipped + 4 new content pieces drained the pillar quotas — Trends now at quota 8/8, News 3→4, group-buy companions 5→4 missing. Reader's pass 11 visited 6 URLs (/, /article/cannonkeys-nyawice-group-buy, /trends, /trends/tracker, /group-buys, /tag/gmk) and surfaced 6 candidates; self-assessment kept 4 (1 duplicate of pass-9 date-staggering finding, 1 self-hedged %-unit nit). Filed: [HIGH] /article/cannonkeys-nyawice-group-buy — body says "roughly one week left as of this column" but the article is dated 2026-04-17 (the buy's startDate per Rule 4 group-buy exemption) and the window runs to 2026-05-17 (4 weeks from publish, not 1 — content-curator wrote present-tense reading-state copy instead of publication-date-relative copy); [HIGH] /group-buys "Just closed" section — Ishtar R2 card carries a "LIVE" status pill despite sitting under the Just-closed band (renderer pulls STATUS_LABEL[record.status] regardless of variant; the data has status:'live' + endDate today so the row's section placement is right but the pill text leaks); [MED] /tag/gmk — only 1 article (Prussian Alert) despite 3 unfinished GMK CYL group-buy companions in the live set; tag will self-fill as the loop ships those companions; [LOW] /article/cannonkeys-nyawice-group-buy — body uses "the W19 movement score" as a metric phrase, reads as internal-dashboard taxonomy. Reader-tool artifact rate: 0% — every finding verified against curl-grep or data inspection.)
+> Pass 10 last pass: 2026-05-10T18:55:00Z at commit 0e2314f
 > Iterate-bias category: external-critique (pass 10 fired 12 commits after pass 9, after a drain that shipped pass-9's [MED] aside-spacing user-jot (#32, a0fdaa8), [MED] /trends/tracker heading-skip a11y (#33, f70b1f3), [MED] / Trending rail flat tile (#34, bb70360), and [MED] /trends/tracker Sleeper card on flat row (#35, bdc2082) — all four pass-9 [MED] findings drained in 4 consecutive iterate ticks. Reader's pass 10 visited 6 URLs (/, /article/lubing-101, /trends, /trends/tracker, /group-buys, /tag/modding) and surfaced 6 candidates; self-assessment kept 6 (none dropped — every reader finding verified against rendered HTML / source). Filed: [HIGH] /article/lubing-101 — malformed sentence "Brushes drift; this is why brushes drift toward the leaves matters." (real copy bug, mdx line 55, surfaces in body prose); [MED] /group-buys — "Last 72h" eyebrow on forward-looking "Closing soon" section reads retrospective; [MED] / — "0d" countdown vs /group-buys "closes today" cross-surface inconsistency on the same buy; [MED] /tag/modding — "TAG · MISC" eyebrow undersells modding (taxonomy gap; same shape will hit /tag/lubing, /tag/firmware); [LOW] /group-buys — "0 announced" segment names a bucket with no corresponding section; [LOW] /trends/tracker — "SIGNATURE" eyebrow reads as in-house marketing voice. Reader-tool artifact rate: 0% this pass — every finding holds up under curl-grep verification.)
 > Pass 9 last pass: 2026-05-10T17:15:00Z at commit 40b2e55
 > Pass 8 last pass: 2026-05-10T14:00:00Z at commit d34580c
@@ -13,6 +15,42 @@
 > drained by `/iterate`. See `skills/critique.md` for the contract.
 
 ## Pending
+
+### [HIGH] /article/cannonkeys-nyawice-group-buy — body says "roughly one week left" but the article is dated the day the buy opened (Apr 17)
+- pass: 11 (commit 931c8a7)
+- viewport: both
+- category: copy
+- observation: The article is bylined April 17, 2026 (the GB's startDate, per Rule 4 group-buy exemption) and states the buy window is 2026-04-17 through 2026-05-17 — a full month — yet the very next clause reads "roughly one week left as of this column." On the publication date the buy had four weeks left; only the present-tense reading state (today, 2026-05-10) is one-week-out. The content-curator wrote present-tense copy instead of publication-date-relative copy, internally undermining the editorial math on a time-sensitive group-buy piece. HIGH because the bylined-date and the lede-math contradict each other on a freshly-shipped piece — a fresh reader notices immediately.
+- evidence: rendered body in /article/cannonkeys-nyawice-group-buy paragraph 4: "The window is 2026-04-17 through 2026-05-17 — roughly one week left as of this column." Byline rendered "thock · April 17, 2026 · ~6 min read." Source: `apps/web/src/content/articles/cannonkeys-nyawice-group-buy.mdx:45`.
+- suggested fix: rewrite to "a four-week buy" or drop the relative-time-remaining phrase entirely ("The window is 2026-04-17 through 2026-05-17 — a four-week buy."). Group-buy companion pieces dated their startDate cannot use "X weeks left" relative phrasing without per-render-time math, which contradicts the static-MDX architecture. Codify in `bearings.md` "Content velocity" Rule 4: group-buy companion pieces dated their startDate phrase the window in absolute terms (not relative-time-remaining), since the lede ships with a date that's not "now."
+- source: browser
+
+### [HIGH] /group-buys — Ishtar R2 card under "Just closed" section carries a "LIVE" status pill (renderer leaks source status)
+- pass: 11 (commit 931c8a7)
+- viewport: both
+- category: affordance
+- observation: In the /group-buys "Just closed" section, the GMK CYL Ishtar R2 card shows a status pill that reads "LIVE" while the sibling Paper80 card correctly reads "CLOSED." A fresh visitor sees a "LIVE" pill in the just-closed segment and reasonably believes the buy is still open — the header counter "4 live · 0 announced · 2 recently ended" already implies only two ended items, and the LIVE-pill leak creates a contradiction. The data record's `status` is `live` + `endDate: 2026-05-10` (today), and the section selector correctly places it under Just-closed by date, but the renderer pulls `STATUS_LABEL[record.status]` for the `variant='ended'` pill, leaking the stale source field into the closed-band visual chrome.
+- evidence: `curl -s https://thock-coral.vercel.app/group-buys` → "Just closed" section's countdown pill rendered as `<span data-testid="group-buy-countdown" class="...">LIVE</span>` on the Ishtar R2 row. Data: `data/group-buys/kbdfans-gmk-cyl-ishtar-r2.json` has `status: "live"` + `endDate: "2026-05-10"`. Renderer: `apps/web/src/components/group-buys/GroupBuyRow.tsx:76-78` falls through to `countdown = STATUS_LABEL[groupBuy.status]` for the non-live / non-announced variants.
+- suggested fix: in `GroupBuyRow.tsx`, override the countdown text for `variant === 'ended'` to render "CLOSED" (or `ended ${endDate}`) regardless of the `status` field's freshness. One-line edit. Add a unit test asserting Just-closed renders "CLOSED" on a record with `status: 'live'` + past `endDate`. The durable fix is renderer-side; the alternate data-edit (set Ishtar R2's status to `closed`) is a one-off that doesn't prevent the next `endDate`-passed live record from re-leaking.
+- source: browser
+
+### [MED] /tag/gmk — single article on a brand-tag landing that the corpus's GMK footprint should fill
+- pass: 11 (commit 931c8a7)
+- viewport: both
+- category: content-gap
+- observation: /tag/gmk renders "1 article tagged GMK" — Prussian Alert is the only one. For a fresh reader arriving from a Google search for "GMK Prussian Alert" or following a `#gmk` chip from the homepage trending strip, the tag page sets an expectation of a brand hub and delivers a stub. The corpus's actual GMK footprint includes 3 live GMK CYL group buys without companion articles (GREG 2, Ishtar R2, King of the Seas) — the brand-tag underrepresentation will self-resolve as the content-velocity loop ships those companions (each will carry `gmk` in the frontmatter tags). File as a "watch and drain via companion shipping" row; no immediate iterate action needed unless the loop wants to backfill `gmk` on the Mode Sonnet R2 companion or adjacent pieces.
+- evidence: rendered text on /tag/gmk: lede "1 article tagged GMK." Single archive card. Frontmatter grep across `apps/web/src/content/articles/*.mdx` for `gmk` in tags: only `gmk-cyl-prussian-alert.mdx`. `data/group-buys/` lists 3 GMK CYL records with `status: live`.
+- suggested fix: prefer GMK CYL group-buy companion shipping for the next 2–3 News pillar shipping ticks so /tag/gmk fills naturally to ≥4. No direct fix; track via this row.
+- source: browser
+
+### [LOW] /article/cannonkeys-nyawice-group-buy — body uses "the W19 movement score" (internal-dashboard taxonomy leak)
+- pass: 11 (commit 931c8a7)
+- viewport: both
+- category: voice
+- observation: The body references "the W19 movement score" as a metric phrase ("put the layout at -18 on the W19 movement score"). For a fresh reader who hasn't read the Trends Tracker methodology, "W19 movement score" lands as proprietary internal taxonomy — a term the in-house dashboard would use, not a knowledgeable peer in conversation. Other thock pieces phrase the same fact as "down 18 percent this week on the tracker." Same shape as the pass-7 [HIGH] "post-2026-05-09 schedule" editorial-pipeline jargon — internal-tooling vocabulary leaking into reader-facing prose.
+- evidence: rendered body on /article/cannonkeys-nyawice-group-buy paragraph 3: "the trends piece on the slow fade of Alice layouts put the layout at -18 on the W19 movement score." Source: `apps/web/src/content/articles/cannonkeys-nyawice-group-buy.mdx:33`.
+- suggested fix: rewrite to "down 18 percent on this week's tracker" — drop the "W19 movement score" chrome from prose. One MDX edit. Codify in content-curator's brief template: tracker references in prose use "down N% on this week's tracker" or "up N% on the tracker" rather than internal-dashboard column names.
+- source: browser
 
 ### [x] [HIGH] /article/lubing-101 — malformed sentence in "Touching the leaves" paragraph
 - addressed in: e4e2d0d (this tick — iterate drain)
