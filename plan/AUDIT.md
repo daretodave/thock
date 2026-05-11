@@ -150,6 +150,13 @@
 >
 > **Resolved (2026-05-10):** wrapped `<TrackerSummaryGrid>` in `apps/web/src/app/trends/tracker/page.tsx` with a visible h2 "This week at a glance" right after the TrackerHeader's h1. Sequence is now `h1 → h2 → h3*4 → h2*5` (no skip). Wording chosen over the audit's suggested "Top movers this week" because the four cards include Sleeper (which is flat by design — see also pending [MED] critique #8) — "movers" framing dilutes the Sleeper kind. New e2e regression guard at `apps/e2e/tests/trends.spec.ts` walks every heading in document order and asserts no level jump > 1 going down — catches future skips automatically. Verify: 409 e2e green parallel (no #418 flake this run).
 
+### [needs-user-call] [MED] / — production GA `/g/collect` beacons returning HTTP 503 (user verifying out-of-band)
+- pass: critique 8 (commit `d34580c`) → mirrored to AUDIT via /oversight 2026-05-11
+- evidence: reader sub-agent's `read_network_requests` on / captured `POST https://www.google-analytics.com/g/collect?...&en=scroll` → 503 and `POST .../g/collect?...&en=page_view` → 503, both fired right after page hydration. GA4 measurement ID `G-5R4DKQ02GV` (downstream of GTM container `GTM-58T839ZD`).
+- impact: if persistent (not just reader's session), the editorial team is silently losing the analytics signal trends decisions ride on.
+- needs-user-call: GA admin + GTM tag config sit outside the repo; the loop can't autonomously verify or reconfigure them. User confirmed at /oversight 2026-05-11 they will verify GA admin (property active state, sample rate, hostname allowlist) out-of-band and report back. The loop must NOT attempt to drain this row — it is informational until the user reports back.
+- on-resolution: if persistent + Google-side, the candidate path is swapping to a self-hosted runner (Plausible/Umami) — the `<GoogleTagManager>` Server Component scaffolding already has the env-gate to host a second runner alongside. File as new phase candidate via `/expand` if that path is chosen.
+
 ### [LOW] [a11y] all pages — no "skip to main content" link
 > Filed 2026-05-10 by /iterate audit pass (resolves the [MED] Accessibility audit pass row above).
 >
