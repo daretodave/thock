@@ -86,14 +86,14 @@ jobs:
             echo "skip=false" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Configure git author for cloud commits
-        if: steps.ceiling.outputs.skip != 'true'
-        run: |
-          # Privacy-respecting noreply form. Swap to me@dave.blue or
-          # another email if you prefer. The push is authenticated
-          # by ACTIONS_PAT regardless.
-          git config user.name  "daretodave"
-          git config user.email "7341502+daretodave@users.noreply.github.com"
+      # Git author identity is set via env vars on the action step
+      # below, NOT via `git config` in a separate workflow step. The
+      # action runs its own internal `git config user.name "claude[bot]"`
+      # AFTER any preceding workflow step (see input `bot_name` default
+      # in v1 action.yml), which overrides repo-local config silently.
+      # The only reliable override is the GIT_AUTHOR_* / GIT_COMMITTER_*
+      # env-var path — git checks env vars first when reading author
+      # identity at `git commit` time, before falling back to config.
 
       - name: Run /march (cloud mode)
         id: claude_run
@@ -129,7 +129,7 @@ jobs:
             2. Skip /critique. The reader sub-agent depends on a Chrome MCP that is not available on the runner. /critique stays a local-only ritual.
             3. /expand may run; candidates land in plan/PHASE_CANDIDATES.md. Promotion happens only via local /oversight — do not promote candidates from cloud.
             4. The verify gate (`pnpm verify`) and deploy gate (`pnpm deploy:check`) are non-negotiable. Same as local. NEVER --no-verify.
-            5. Commit author is daretodave via ACTIONS_PAT (already configured by the workflow). Do not change it.
+            5. Commit author is David Rehmat <me@dave.blue> via GIT_AUTHOR_* / GIT_COMMITTER_* env vars (already configured by the workflow). Do not run `git config user.*` to change it — the env vars take precedence anyway, but explicit overrides muddy the log.
             6. EVERY commit you ship in this tick MUST end with this exact trailer (a blank line before it, then the trailer as its own line):
 
                   Cloud-Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
@@ -148,6 +148,18 @@ jobs:
           # and any direct git operations identify as you, not as
           # the bot.
           GH_TOKEN: ${{ secrets.ACTIONS_PAT }}
+          # Git author identity. These four env vars take precedence
+          # over any `git config user.*` value at `git commit` time,
+          # including the action's own internal "Set git user as
+          # claude[bot]" step. Without these, commits author as
+          # claude[bot] (the action's default GitHub App identity);
+          # with them, commits attribute to the human user the way
+          # local commits do. Email matches the user's verified
+          # GitHub address so the avatar resolves on github.com.
+          GIT_AUTHOR_NAME:     "David Rehmat"
+          GIT_AUTHOR_EMAIL:    "me@dave.blue"
+          GIT_COMMITTER_NAME:  "David Rehmat"
+          GIT_COMMITTER_EMAIL: "me@dave.blue"
 
       - name: Upload Claude execution transcript
         # Run on success and failure both so we can post-mortem either.
