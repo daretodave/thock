@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — 65% keyboard top-down outline with space bar stabilizer contact-point callout</title>
+
+  <!-- ================================================================
+       Canvas:  1200 × 750
+       Layout:  top-down view, ~65% keyboard centered
+       Stroke:  warm charcoal  #3A3530  (~2px base)
+       Splash:  coral          #E87B5E
+       Accent:  warm bronze    #C8974A
+       Bg:      warm paper     #FAF6F0  (light-mode safe, transparent intent)
+
+       65% layout row structure (MX 19.05mm → 52px grid):
+         Key unit  = 52px wide  × 52px tall
+         Keyboard  = 15u wide main block + rightside cluster
+         Approx    x:170–1030  y:185–565  (board outline, 860×380)
+
+       Rows (top to bottom):
+         R0: Esc + F-row (15 keys, 1u each)             y=200
+         R1: number row  (14 keys, 1u + backspace 2u)   y=252
+         R2: Tab + QWERTY (13 keys + 1.75u bsp)         y=304
+         R3: Caps + home row (11 keys + 2.25u Enter)    y=356
+         R4: LShift(2.25u) + bottom alpha (10 + RShift) y=408
+         R5: modifiers + spacebar(6.25u) + nav cluster   y=460
+
+       Space bar stabilizer geometry:
+         Space bar footprint  x≈386–711  y=460–512   (6.25u = 325px)
+         Stab wire contacts   at ±2.25u from spacebar center
+         Left  contact  x≈468  (center-left wire foot)
+         Right contact  x≈630  (center-right wire foot)
+         PCB housing squares  18×18px centered on each contact point
+       ================================================================ -->
+
+  <!-- ── BACKGROUND ── -->
+  <rect width="1200" height="750" fill="#FAF6F0" stroke="none"/>
+
+  <!-- Faint warm grid lines — very subtle, suggests PCB layout discipline -->
+  <g stroke="#3A3530" stroke-opacity="0.04" stroke-width="1">
+    <line x1="170" y1="185" x2="170" y2="565"/>
+    <line x1="1030" y1="185" x2="1030" y2="565"/>
+    <line x1="170" y1="185" x2="1030" y2="185"/>
+    <line x1="170" y1="565" x2="1030" y2="565"/>
+  </g>
+
+  <!-- ── KEYBOARD BOARD OUTLINE (65% with nav cluster) ── -->
+  <!-- Outer case shell — rounded rectangle -->
+  <rect x="152" y="168" width="896" height="414" rx="14"
+    fill="#FAF6F0"
+    stroke="#3A3530" stroke-opacity="0.72" stroke-width="2"/>
+
+  <!-- Inner bezel line — suggests plate recess -->
+  <rect x="168" y="184" width="864" height="382" rx="8"
+    stroke="#3A3530" stroke-opacity="0.18" stroke-width="1"/>
+
+  <!-- ── MOUNTING HOLES (case screw positions, 65% typical) ── -->
+  <g stroke="#3A3530" stroke-opacity="0.30" stroke-width="1.5" fill="none">
+    <circle cx="200" cy="212" r="7"/>
+    <circle cx="200" cy="212" r="3" stroke-opacity="0.15"/>
+    <circle cx="1000" cy="212" r="7"/>
+    <circle cx="1000" cy="212" r="3" stroke-opacity="0.15"/>
+    <circle cx="200" cy="538" r="7"/>
+    <circle cx="200" cy="538" r="3" stroke-opacity="0.15"/>
+    <circle cx="1000" cy="538" r="7"/>
+    <circle cx="1000" cy="538" r="3" stroke-opacity="0.15"/>
+    <circle cx="600" cy="212" r="7"/>
+    <circle cx="600" cy="212" r="3" stroke-opacity="0.15"/>
+    <circle cx="600" cy="538" r="7"/>
+    <circle cx="600" cy="538" r="3" stroke-opacity="0.15"/>
+  </g>
+
+  <!-- ================================================================
+       KEY GRID  — 1u = 52px   gap = 4px   keycap corners rx=4
+       All rows share stroke "#3A3530" at opacity 0.52, stroke-width 1.5
+       ================================================================ -->
+  <g stroke="#3A3530" stroke-opacity="0.52" stroke-width="1.5" fill="#FAF6F0">
+
+    <!-- ── ROW 0: Esc + F-keys ── y=202, h=46 -->
+    <!-- Esc -->
+    <rect x="186" y="202" width="46" height="46" rx="4"/>
+    <!-- F1–F12 (slight gap after Esc) -->
+    <rect x="240" y="202" width="46" height="46" rx="4"/>
+    <rect x="290" y="202" width="46" height="46" rx="4"/>
+    <rect x="340" y="202" width="46" height="46" rx="4"/>
+    <rect x="390" y="202" width="46" height="46" rx="4"/>
+    <rect x="446" y="202" width="46" height="46" rx="4"/>
+    <rect x="496" y="202" width="46" height="46" rx="4"/>
+    <rect x="546" y="202" width="46" height="46" rx="4"/>
+    <rect x="596" y="202" width="46" height="46" rx="4"/>
+    <rect x="652" y="202" width="46" height="46" rx="4"/>
+    <rect x="702" y="202" width="46" height="46" rx="4"/>
+    <rect x="752" y="202" width="46" height="46" rx="4"/>
+    <rect x="802" y="202" width="46" height="46" rx="4"/>
+    <!-- Del / PgUp / PgDn — right nav cluster keys on R0 -->
+    <rect x="858" y="202" width="46" height="46" rx="4"/>
+    <rect x="908" y="202" width="46" height="46" rx="4"/>
+    <rect x="958" y="202" width="46" height="46" rx="4"/>
+
+    <!-- ── ROW 1: number row ── y=254, h=46 -->
+    <!-- ` 1 2 3 4 5 6 7 8 9 0 - = (13 × 1u) + Backspace (2u) -->
+    <rect x="186" y="254" width="46" height="46" rx="4"/>
+    <rect x="236" y="254" width="46" height="46" rx="4"/>
+    <rect x="286" y="254" width="46" height="46" rx="4"/>
+    <rect x="336" y="254" width="46" height="46" rx="4"/>
+    <rect x="386" y="254" width="46" height="46" rx="4"/>
+    <rect x="436" y="254" width="46" height="46" rx="4"/>
+    <rect x="486" y="254" width="46" height="46" rx="4"/>
+    <rect x="536" y="254" width="46" height="46" rx="4"/>
+    <rect x="586" y="254" width="46" height="46" rx="4"/>
+    <rect x="636" y="254" width="46" height="46" rx="4"/>
+    <rect x="686" y="254" width="46" height="46" rx="4"/>
+    <rect x="736" y="254" width="46" height="46" rx="4"/>
+    <rect x="786" y="254" width="46" height="46" rx="4"/>
+    <!-- Backspace 2u = 96px -->
+    <rect x="836" y="254" width="96" height="46" rx="4"/>
+
+    <!-- ── ROW 2: Tab + QWERTY ── y=306, h=46 -->
+    <!-- Tab 1.5u=78px -->
+    <rect x="186" y="306" width="74" height="46" rx="4"/>
+    <!-- Q–P (10 × 1u) -->
+    <rect x="264" y="306" width="46" height="46" rx="4"/>
+    <rect x="314" y="306" width="46" height="46" rx="4"/>
+    <rect x="364" y="306" width="46" height="46" rx="4"/>
+    <rect x="414" y="306" width="46" height="46" rx="4"/>
+    <rect x="464" y="306" width="46" height="46" rx="4"/>
+    <rect x="514" y="306" width="46" height="46" rx="4"/>
+    <rect x="564" y="306" width="46" height="46" rx="4"/>
+    <rect x="614" y="306" width="46" height="46" rx="4"/>
+    <rect x="664" y="306" width="46" height="46" rx="4"/>
+    <rect x="714" y="306" width="46" height="46" rx="4"/>
+    <!-- [ ] \ (three 1u) -->
+    <rect x="764" y="306" width="46" height="46" rx="4"/>
+    <rect x="814" y="306" width="46" height="46" rx="4"/>
+    <!-- Backslash 1.5u = 78px -->
+    <rect x="864" y="306" width="68" height="46" rx="4"/>
+
+    <!-- ── ROW 3: Caps Lock + home row ── y=358, h=46 -->
+    <!-- Caps 1.75u = 91px -->
+    <rect x="186" y="358" width="90" height="46" rx="4"/>
+    <!-- A–; (10 × 1u) -->
+    <rect x="280" y="358" width="46" height="46" rx="4"/>
+    <rect x="330" y="358" width="46" height="46" rx="4"/>
+    <rect x="380" y="358" width="46" height="46" rx="4"/>
+    <rect x="430" y="358" width="46" height="46" rx="4"/>
+    <rect x="480" y="358" width="46" height="46" rx="4"/>
+    <rect x="530" y="358" width="46" height="46" rx="4"/>
+    <rect x="580" y="358" width="46" height="46" rx="4"/>
+    <rect x="630" y="358" width="46" height="46" rx="4"/>
+    <rect x="680" y="358" width="46" height="46" rx="4"/>
+    <rect x="730" y="358" width="46" height="46" rx="4"/>
+    <!-- ' and Enter 2.25u = 117px -->
+    <rect x="780" y="358" width="46" height="46" rx="4"/>
+    <rect x="830" y="358" width="102" height="46" rx="4"/>
+
+    <!-- ── ROW 4: Shift row ── y=410, h=46 -->
+    <!-- LShift 2.25u = 117px -->
+    <rect x="186" y="410" width="90" height="46" rx="4"/>
+    <!-- Z–/ (10 × 1u) -->
+    <rect x="280" y="410" width="46" height="46" rx="4"/>
+    <rect x="330" y="410" width="46" height="46" rx="4"/>
+    <rect x="380" y="410" width="46" height="46" rx="4"/>
+    <rect x="430" y="410" width="46" height="46" rx="4"/>
+    <rect x="480" y="410" width="46" height="46" rx="4"/>
+    <rect x="530" y="410" width="46" height="46" rx="4"/>
+    <rect x="580" y="410" width="46" height="46" rx="4"/>
+    <rect x="630" y="410" width="46" height="46" rx="4"/>
+    <rect x="680" y="410" width="46" height="46" rx="4"/>
+    <rect x="730" y="410" width="46" height="46" rx="4"/>
+    <!-- RShift 2.75u = 143px -->
+    <rect x="780" y="410" width="152" height="46" rx="4"/>
+
+    <!-- ── ROW 5: bottom modifier row + spacebar + nav ── y=462, h=46 -->
+    <!-- LCtrl 1.25u = 65px -->
+    <rect x="186" y="462" width="60" height="46" rx="4"/>
+    <!-- Win / LAlt (each 1u) -->
+    <rect x="250" y="462" width="46" height="46" rx="4"/>
+    <rect x="300" y="462" width="46" height="46" rx="4"/>
+
+    <!-- SPACEBAR 6.25u = 325px  x=350..675 -->
+    <rect x="350" y="462" width="325" height="46" rx="4"/>
+
+    <!-- RAlt / Fn / RCtrl (each 1u) -->
+    <rect x="679" y="462" width="46" height="46" rx="4"/>
+    <rect x="729" y="462" width="46" height="46" rx="4"/>
+    <rect x="779" y="462" width="46" height="46" rx="4"/>
+    <!-- Arrow keys: left / down / right (1u each), up shares right-cluster position -->
+    <rect x="833" y="462" width="46" height="46" rx="4"/>
+    <rect x="883" y="462" width="46" height="46" rx="4"/>
+    <rect x="933" y="462" width="46" height="46" rx="4"/>
+  </g>
+
+  <!-- ── SPACEBAR REGION — coral callout zone ── -->
+  <!-- Coral fill wash over spacebar housing area (slightly larger than the key itself) -->
+  <rect x="342" y="454" width="341" height="62" rx="6"
+    fill="#E87B5E" fill-opacity="0.09" stroke="none"/>
+
+  <!-- Coral outline on spacebar key to draw the eye -->
+  <rect x="350" y="462" width="325" height="46" rx="4"
+    fill="none"
+    stroke="#E87B5E" stroke-opacity="0.85" stroke-width="2.5"/>
+
+  <!-- ── STABILIZER WIRE LINE (the horizontal crossbar) ── -->
+  <!-- Wire runs between the two housing contact points just below the spacebar -->
+  <!-- Contact points at 2.25u from center of 6.25u spacebar:
+       Spacebar center x = 350 + 325/2 = 512.5
+       Contact offset   = 2.25 × 52 = 117px
+       Left contact  x = 512.5 - 117 = 395.5  → 396
+       Right contact x = 512.5 + 117 = 629.5  → 630                    -->
+  <!-- Wire centerline (y = 485 = center of spacebar) -->
+  <line x1="396" y1="485" x2="630" y2="485"
+    stroke="#E87B5E" stroke-opacity="0.55" stroke-width="1.5" stroke-dasharray="6 4"/>
+
+  <!-- Stab wire end ticks (suggest the wire bends up into the housing) -->
+  <line x1="396" y1="476" x2="396" y2="498"
+    stroke="#E87B5E" stroke-opacity="0.70" stroke-width="2"/>
+  <line x1="630" y1="476" x2="630" y2="498"
+    stroke="#E87B5E" stroke-opacity="0.70" stroke-width="2"/>
+
+  <!-- ── STABILIZER HOUSING CONTACT POINTS — coral squares ── -->
+  <!-- Left housing foot (18×18px centered on x=396, y=485) -->
+  <rect x="378" y="467" width="18" height="18" rx="2"
+    fill="#E87B5E" fill-opacity="0.22"
+    stroke="#E87B5E" stroke-opacity="0.90" stroke-width="2"/>
+  <!-- Center dot -->
+  <circle cx="387" cy="476" r="3"
+    fill="#E87B5E" fill-opacity="0.80" stroke="none"/>
+
+  <!-- Right housing foot (18×18px centered on x=630, y=485) -->
+  <rect x="612" y="467" width="18" height="18" rx="2"
+    fill="#E87B5E" fill-opacity="0.22"
+    stroke="#E87B5E" stroke-opacity="0.90" stroke-width="2"/>
+  <!-- Center dot -->
+  <circle cx="621" cy="476" r="3"
+    fill="#E87B5E" fill-opacity="0.80" stroke="none"/>
+
+  <!-- ── CALLOUT: bronze leader from right housing contact to label ── -->
+  <!-- Elbow leader line: from label anchor, right and up, then down to right contact -->
+  <g stroke="#C8974A" stroke-width="1.5" stroke-opacity="0.88" fill="none">
+    <!-- Leader: right contact (x=630, y=476) → elbow at (730, 416) → text anchor -->
+    <path d="M 630 467 L 630 432 L 750 432"/>
+    <!-- Arrowhead at contact (pointing down) -->
+    <path d="M 630 467 L 622 455 M 630 467 L 638 455"/>
+  </g>
+  <!-- Label anchor dot -->
+  <circle cx="750" cy="432" r="3.5" fill="#C8974A" stroke="none"/>
+  <!-- Label text -->
+  <text x="758" y="428"
+    font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace"
+    font-size="12" fill="#C8974A" fill-opacity="0.92"
+    letter-spacing="0.04em" text-anchor="start" stroke="none">housing</text>
+  <text x="758" y="444"
+    font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace"
+    font-size="12" fill="#C8974A" fill-opacity="0.92"
+    letter-spacing="0.04em" text-anchor="start" stroke="none">contact</text>
+
+  <!-- ── SECONDARY CALLOUT: coral bracket on left, pointing to left contact ── -->
+  <g stroke="#C8974A" stroke-width="1.5" stroke-opacity="0.55" fill="none">
+    <!-- Left contact, elbow leader to left margin annotation -->
+    <path d="M 387 467 L 387 426 L 280 426"/>
+    <path d="M 387 467 L 379 455 M 387 467 L 395 455"/>
+  </g>
+  <circle cx="280" cy="426" r="3.5" fill="#C8974A" stroke="none"/>
+  <!-- Label text (right-aligned to dot at x=280) -->
+  <text x="272" y="422"
+    font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace"
+    font-size="12" fill="#C8974A" fill-opacity="0.92"
+    letter-spacing="0.04em" text-anchor="end" stroke="none">wire</text>
+  <text x="272" y="438"
+    font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace"
+    font-size="12" fill="#C8974A" fill-opacity="0.92"
+    letter-spacing="0.04em" text-anchor="end" stroke="none">foot</text>
+
+  <!-- ── SPACEBAR LABEL (coral, inside spacebar footprint) ── -->
+  <text x="512" y="489"
+    font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace"
+    font-size="11" fill="#E87B5E" fill-opacity="0.60"
+    letter-spacing="0.08em" text-anchor="middle" stroke="none">6.25u spacebar</text>
+
+  <!-- ── MARGIN ANNOTATION: "stab" label below the space row ── -->
+  <!-- Horizontal rule + label below the spacebar row, left edge -->
+  <line x1="342" y1="534" x2="683" y2="534"
+    stroke="#E87B5E" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="512" y="550"
+    font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace"
+    font-size="11" fill="#E87B5E" fill-opacity="0.55"
+    letter-spacing="0.06em" text-anchor="middle" stroke="none">stabilizer zone</text>
+
+  <!-- ── SUBTLE GLOW BLOOM under stabilizer housing squares ── -->
+  <rect x="375" y="463" width="24" height="26" rx="4"
+    fill="#E87B5E" fill-opacity="0.07" stroke="none"/>
+  <rect x="609" y="463" width="24" height="26" rx="4"
+    fill="#E87B5E" fill-opacity="0.07" stroke="none"/>
+
+  <!-- ── BOARD LABEL (upper right, faint) ── -->
+  <text x="994" y="560"
+    font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace"
+    font-size="10" fill="#3A3530" fill-opacity="0.22"
+    letter-spacing="0.06em" text-anchor="end" stroke="none">65%</text>
+</svg>

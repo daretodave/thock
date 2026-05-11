@@ -1,0 +1,20 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-11T00:00:00.000Z",
+  "commit": "9f76c8893b011e7ad2598a338c7d0016d68ecf18",
+  "kind": "custom",
+  "source": "template:keyboard-topdown-stab-callout",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["JetBrains Mono", "IBM Plex Mono"],
+  "outputs": [
+    "apps/web/public/hero-art/stabilizer-servicing-guide.svg"
+  ],
+  "warnings": [],
+  "slug": "stabilizer-servicing-guide",
+  "renderedAt": "2026-05-11T00:00:00.000Z",
+  "agent": "brander",
+  "motif": "keyboard outline with stabilizer contact-point callout",
+  "splashHue": "coral",
+  "canvas": "1200x750"
+}
