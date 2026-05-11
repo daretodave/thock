@@ -114,12 +114,19 @@
 >
 > **Resolved (2026-05-10):** Shipped exactly the row's recommended action. Added `extractSourceCitations(body): SourceCitation[]` next to `countSourceTags` in `packages/content/src/util/sources.ts` — single regex matches both `<Source href="..." />` (self-closing) and `<Source href="...">text</Source>` (paired) forms, captures href + inner text + character offset; whitespace-collapses and trims the text content; skips tags missing an href attribute. Exported via `packages/content/src/index.ts`. Built `<CitationIndex>` + `buildCitationIndex` helper at `apps/web/src/components/sources/CitationIndex.tsx` that takes `(article, citation)` pairs, dedupes by href, sorts citing articles by publishedAt-desc per row, and sorts the final index by most-recent-citing-article. `/sources` page now renders the per-article tally first, then a "Citation index" section with the deduped per-citation list. Each row links to the external URL (with `rel="noopener" target="_blank"`), shows the host+path, and lists the citing articles. Mobile-safe: `break-all` on the host span and `break-words` on title links handle long URLs without horizontal overflow at 375px. New e2e in `apps/e2e/tests/polish.spec.ts` asserts the index renders with at least one row pointing at a real https URL. New unit tests in `packages/content/src/__tests__/util/sources.test.ts` cover the extractor's empty / paired / self-closing / order / whitespace-collapse / multi-line-attrs / missing-href edge cases. Article count is now 12 (not the 6 the audit row's score basis assumed); the catalog has 15 total citations across 12 articles, so the index is non-trivial. 325 e2e green serially; first parallel attempt hit two #418 flakes on / and /news (same root cause as expand pass-2 candidate).
 
-### [MED] Lighthouse CI — phase 17 follow-up
-> Filed 2026-05-09 by phase 17 brief. The build-plan row for phase 17 listed a Lighthouse pass at ≥95 on `/` and `/article/[slug]`. Real lighthouse-ci wiring crosses a tooling boundary (paid runner, or local Chrome + a runner) that warrants `/oversight` rather than an autonomous decision. The bundle-size budget shipped this phase covers the JS-weight axis on its own.
+### [MED] Lighthouse CI — phase 17 follow-up (path locked 2026-05-11 via /oversight)
+> Filed 2026-05-09 by phase 17 brief. The build-plan row for phase 17 listed a Lighthouse pass at ≥95 on `/` and `/article/[slug]`. The bundle-size budget shipped this phase covers the JS-weight axis on its own; this row is for the full Lighthouse signal (perf + a11y + best-practices + SEO).
 >
-> **Action:** `/oversight` picks a runner (Vercel preview comments via lighthouse-ci action, or a self-hosted runner). Once the runner is decided, ship the GitHub Actions workflow + budget config + artifact upload.
+> **Path (locked 2026-05-11 via /oversight):** `lighthouse-ci` GitHub Action with Vercel-preview integration. Rationale: $0-marginal (matches the user's near-zero-cost preference) — the action runs on GH-hosted ubuntu using Chrome from npm, pings the Vercel-preview URL for the PR, asserts against `.lighthouserc.json` thresholds, and comments the score table on the PR. Free for public repos. The `treosh/lighthouse-ci-action@v12` action is the canonical choice; configuration lives in `.lighthouserc.json` at repo root.
 >
-> Score: **5.0** (real signal but real setup cost; baseline bundle is small enough that scores are likely good already).
+> **Action (drainable by `/iterate` or `/ship-a-phase`):**
+> 1. Add `.lighthouserc.json` with assertion thresholds (perf ≥90, a11y ≥95, best-practices ≥95, SEO ≥95, PWA optional). Start permissive; tighten via subsequent iterate ticks.
+> 2. Add `.github/workflows/lighthouse.yml` triggered on `pull_request` (no schedule needed — assertions run per-PR against the Vercel preview URL pulled from the deployment status event).
+> 3. `numberOfRuns: 3` median-of-3 to absorb single-run noise.
+> 4. URLs to walk: `/`, `/article/gateron-oil-king-deep-dive` (canonical article shape), `/trends/tracker` (data-heavy page), `/group-buys` (visual-heavy page).
+> 5. Artifact upload via the action's built-in `uploadArtifacts: true`.
+>
+> Score: **5.0** (path locked; runner choice no longer blocks. Real signal once it runs).
 
 ### [x] [LOW] Tighten homepage bundle-size budget from 250 KB → 200 KB — addressed in pending commit (this tick)
 > Filed 2026-05-09 by phase 17 brief. The bearings target is 200 KB gzipped for the homepage; phase 17 set the gate at 250 KB to leave one or two iterate ticks of headroom. After the loop drains any obvious chunk waste (lucide-react, large MDX shims, unused tag taxonomies), tighten the budget to 200 KB to match the bearings.
@@ -154,36 +161,10 @@
 >
 > Score: **2.8** (impact 4 — keyboard users on every page; ease 7 — one layout edit + one global CSS rule + one e2e).
 
-### [MED] PageStub routes flake under parallel e2e load (React #418 hydration)
-
-> Recorded by `/iterate` on 2026-05-09 while draining the critique
-> queue.
-
-The smoke walker's "no console errors" assertion intermittently
-fails on `/about`, `/newsletter`, and `/search` with the minified
-React error #418 ("text content does not match server-rendered
-HTML"). Failures move between the three URLs run-over-run; serial
-playback of the same three URLs (`--workers=1`) passes 100% of
-the time.
-
-All three routes render `<PageStub>` (phase 4 stub for routes
-without their own family yet). Suspect cause is a hydration
-mismatch in `PageStub` — likely a server/client-divergent value
-(date string, random key, font-loading class on `<html>` racing
-with first paint). Could also be a Next 15 quirk with multiple
-concurrent route prerenders sharing an inconsistent layout
-snapshot.
-
-**Action:** read `apps/web/src/components/page-stub/PageStub.tsx`,
-look for any `Date.now()` / `Math.random()` / `useId()`-without-
-`'use client'` patterns. If clean, suspect the next/font race —
-the `${serif.variable}` etc. classes Next applies to `<html>` may
-swap between SSR and CSR. Phase 16 polish replaces every PageStub
-with a real route, so this finding self-resolves before then;
-mark as a transient `[MED]` until phase 16 ships.
-
-Score: **3.0** (intermittent, no user-facing impact yet, but
-muddies the verify gate).
+### [x] [MED] PageStub routes flake under parallel e2e load (React #418 hydration) — self-resolved via phase 16
+> Filed 2026-05-09. Original prediction was "self-resolves before phase 16 ships" because phase 16's polish scope replaced every PageStub with a real route. Flake persisted briefly after `f3e5bac` shipped (one source of hydration mismatch was the formatter TZ issue, partially patched at `dfa5596`); the SECOND hydration source the TZ patch couldn't reach lived inside the PageStub itself and went away when every dynamic-data route got its own real page.
+>
+> **Resolved (confirmed 2026-05-11 via /oversight):** not observed in 10+ consecutive parallel verify runs (all noting "433 e2e green parallel — no #418 flake this run"). Serial-fallback (`--workers=1`) is no longer the established mitigation. Closing.
 
 ---
 

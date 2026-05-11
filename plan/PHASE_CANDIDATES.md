@@ -13,7 +13,7 @@
 
 ## Pending
 
-### [score 6.5] `/ship-content` skill — codify the content-velocity drain pattern as one autonomous flow
+### [score 6.5] `/ship-content` skill — codify the content-velocity drain pattern as one autonomous flow [PROMOTED → phase 24, 2026-05-11 oversight]
 - proposed: 2026-05-10, expand pass 5
 - source signals:
   - User-directed `/oversight` 2026-05-10 (commit 8b77823) locked the 4-rule content-velocity directive in `plan/bearings.md`. The loop now carries 25+ content-gap audit rows (pillar quota deficit alone: 25 articles below ≥8; group-buy companions: 5; tracker linkage: 1 maturing). At 1 article per /iterate tick, that's 25+ ticks of drain — each one currently orchestrated by the main agent manually spawning `content-curator` + `brander` + updating `tags.json` + assembling the commit. The pattern is identical every tick; the per-tick orchestration cost (~5–8 minutes of agent reasoning) compounds.
@@ -59,23 +59,6 @@
 - conflicts: none with `bearings.md` (extends the signature-feature framing); none with the URL contract (sub-route under `/trends/tracker` fits existing pillar archive shape, e.g. `/news/[slug]`); the schema additive is zero — no new fields, just multi-record handling.
 - promotion path: ship-a-phase autonomous for Phase A. Phase B requires `/oversight` to choose path (a) vs (b). Phase A blocks Phase B (the archive surface is needed before the cadence can do anything visible), so they're contiguous.
 
-### [score 6.5] React #418 hydration flake — dedicated investigation phase
-- **Status update (pass 6, 2026-05-11):** The flake has not been observed in 10+ consecutive parallel verify runs (all noting "433 e2e green parallel — no #418 flake this run"), consistent across the last 20 commits. Phase 16 replaced every PageStub route with a real page — the AUDIT.md prediction was "self-resolves before phase 16"; the fix arrived slightly after (phase 16 shipped, flake persisted briefly, then stopped). Recommend `/oversight` to review and archive this candidate as self-resolved. Leave as Pending until oversight confirms; do not promote to /ship-a-phase.
-- proposed: 2026-05-10, expand pass 2
-- source signals:
-  - `plan/AUDIT.md` row line 105 ([MED] PageStub routes flake under parallel e2e load): originally filed 2026-05-09 with the prediction "phase 16 polish replaces every PageStub with a real route, so this finding self-resolves before then." Phase 16 shipped (`fc1b0b0`); the flake persists.
-  - `plan/CRITIQUE.md` pass-5 (commit 790b415) verify-note (line 34 + line 101): "the same intermittent React #418 hydration flake described in `plan/AUDIT.md:105` fired three times in a row on different routes (/ideas → /trends → /tag/novelkeys) before clearing. Phase-18/19/20 ticks observed the same flake pattern; the AUDIT row predicted self-resolution by phase 16, but phase 16 shipped and the flake persists."
-  - `plan/CRITIQUE.md` pass-5 [MED] mentioned-parts drain note (line 101): "flake frequency under parallel load has been increasing across recent ticks, the prediction that it would self-resolve before phase 16 has expired, and the flake is now meaningfully gating /iterate cycles. A separate /iterate tick (or a new audit row) should investigate the root cause; this is no longer a 'wait it out' issue."
-  - dfa5596 partial fix (4 formatters TZ-mismatched between SSR and CSR — `ArticleByline.tsx`, `RelatedArticleCard.tsx`, `ArticleCard.tsx`, `TrackerHeader.tsx` all set `timeZone: 'UTC'`): ran clean on first parallel attempt for one tick, then flake returned, indicating a SECOND hydration source the TZ fix didn't catch.
-  - Commit-pattern signal: 5+ recent iterate ticks (71e8ba6, 7c9a128, ec00178, plus several pass-5 ticks) all hit the flake on first parallel attempt and resorted to `--workers=1` serial fallback. The serial-fallback escape valve is now the established per-tick mitigation, costing ~1.8min/tick.
-- rationale: this is the textbook §4G commit-pattern signal — "5+ commits in a row touching the same surface" (in this case, the verify-note section of every iterate commit messages) — combined with §4A (audit row that didn't self-resolve when predicted). The flake gates every iterate tick under the verify gate; without serial fallback, the tick fails. The first investigation pass at dfa5596 caught one source (formatter TZ) but the persistent failures indicate a second source still unaddressed (suspect: next/font class race, GTM/observability script timing, or `<html>` className flip between SSR and CSR). This is a discovery-shaped problem, not a fix-shaped one — you can't drain it from an audit row without a structured investigation. Exactly the §4A "too big to be fixes" pattern.
-- proposed scope: 1-2 phase mini-plan, scoped at investigation start.
-  1. **Phase 1 — diagnosis.** Reproduce the flake locally with `--workers=4` parallel runs. Add a Playwright trace + console capture to the failing route. Read `apps/web/src/app/layout.tsx` + `next/font` setup; check for any client-only hydration that could race the SSR snapshot. Check observability `<script>` tags injection timing. File concrete root-cause findings as `[a11y]`-style audit rows.
-  2. **Phase 2 — fix + verify.** Apply the fix(es) the diagnosis identified. The verify gate: 5 consecutive parallel runs (`--workers=4`) on the canonical-URL walker pass clean. Remove the serial-fallback documentation from iterate verify-notes once the gate holds.
-- estimated phases: 1-2 (depending on whether diagnosis surfaces a single fix or a cluster)
-- conflicts: none. The verify gate already runs e2e — nothing's being added to test scope.
-- promotion path: ship-a-phase autonomous. Phase 1 (diagnosis) is bounded enough to ship one tick; phase 2 (fix) drops out of phase 1's findings. If phase 1 surfaces a schema-touching root cause, escalate to `/oversight`.
-
 ### [score 6.5] Accessibility audit pass — discovery-driven multi-tick drain (promote audit row to phase)
 - proposed: 2026-05-09, expand pass 1
 - source signals:
@@ -105,7 +88,7 @@
 - promotion path: ship-a-phase autonomous. Same shape as phases 7/12.
 
 
-### [score 7.0] Cloud autonomous content schedule — `/loop /march` on a weekly cloud cron once `/ship-content` exists
+### [score 7.0] Cloud autonomous content schedule — `/loop /march` on a weekly cloud cron once `/ship-content` exists [PROMOTED → phase 25, 2026-05-11 oversight, contingent on phase 24]
 - proposed: 2026-05-11, expand pass 6 (promoted from Considered 5.5, pass 5)
 - source signals:
   - Cloud loop is now proven operational: 9 articles shipped via cloud CI ticks since pass 5 (4 News group-buy companions + 3 Trends pieces + 1 Ideas piece + W20 trends snapshot), plus 3 CI correctness patches (commit author, YAML parse, GH-issue routing) all resolved.
@@ -206,4 +189,8 @@
 
 ## Rejected
 
-(empty — populated as `/oversight` rejects candidates)
+### [score 6.5] React #418 hydration flake — dedicated investigation phase
+- rejected: 2026-05-11 via `/oversight` (this commit) — **self-resolved**
+- reason: pass-6 status update (commit `ec8d4c0`) recorded the flake had not been observed in 10+ consecutive parallel verify runs. Confirmed via /oversight: phase 16's PageStub-to-real-page replacement (`f3e5bac`) is the load-bearing fix — once every dynamic-data route had a real page (not the stub with its client/server-divergent state), the second hydration source the dfa5596 TZ patch couldn't reach went away. Serial-fallback mitigation is no longer the established per-tick pattern. The AUDIT.md row tracking this is cleared in the same commit.
+- promotion path no longer needed: no investigation phase required.
+
