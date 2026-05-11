@@ -1260,6 +1260,34 @@
       "filePath": "Z:\\keyboard\\apps\\web\\src\\content\\articles\\gateron-oil-king-deep-dive.mdx"
     },
     {
+      "slug": "gmk-cyl-greg-2-group-buy",
+      "frontmatter": {
+        "slug": "gmk-cyl-greg-2-group-buy",
+        "title": "GMK CYL GREG returns for round 2 at KBDfans",
+        "lede": "Round 2 of GMK CYL GREG opened at KBDfans on 2026-05-01 and runs through 2026-05-29. The four-week window sits on the longer end for GMK CYL R2s, and the round-2 cadence itself is becoming the more interesting story as sets prove out in R1 and accumulate latent demand.",
+        "author": "thock",
+        "pillar": "news",
+        "tags": [
+          "gmk",
+          "kbdfans",
+          "group-buy",
+          "cherry-profile",
+          "abs"
+        ],
+        "publishedAt": "2026-05-01T14:00:00.000Z",
+        "updatedAt": null,
+        "heroImage": "/hero-art/gmk-cyl-greg-2-group-buy.svg",
+        "heroImageAlt": "Top-down line silhouette of a keycap set laid out on a board, rendered in a 2px warm-grey stroke on a 1200x750 transparent canvas, with a single coral accent picked out across a small cluster of caps to stand in for the GREG colorway and a thin warm-bronze highlight tracing the case edge.",
+        "featured": false,
+        "popularityScore": 0,
+        "guideSection": null,
+        "mentionedParts": []
+      },
+      "body": "\nGMK CYL GREG is back at KBDfans for a second round. The buy opened on 2026-05-01 and runs through 2026-05-29 — a four-week window that lands on the longer side for a GMK CYL R2. The set itself is unchanged from R1 in profile, manufacturer, and material: <Mono>doubleshot ABS</Mono> in the <Mono>CYL</Mono> cylindrical sub-line that GMK has been running on selected sets for the past two years. The original GREG palette returns with it.\n\nThe headline editorially is not the colorway. It is the cadence.\n\n## The round-2 pattern, now a pattern\n\nA year ago a GMK CYL second round was an event. Today it is starting to read like a published schedule. KBDfans has been quietly running R2s on the CYL line at a tempo that, if it holds through the rest of 2026, will normalize round-2 as a reliable second chance rather than a rare reissue. GREG is the latest test of that pattern.\n\nThe mechanics behind the cadence are straightforward. A GMK CYL set proves out in R1 — the palette earns its corner of the GMK shelf, IC discussion keeps going past the close, and the people who missed the first run keep saying they would have bought it. Twelve to twenty-four months later, the vendor reads that residual demand off GeekHack and the Discord channels and runs R2. The volume on R2 is typically lower than R1, the configurator is usually tighter (fewer add-on kits, no novelty refresh), and the close is faster. The point of R2 is to convert latent want into a second wave, not to expand the set's footprint.\n\nWhat is new in 2026 is that the gap between R1 and R2 on GMK CYL specifically has compressed. Where the broader GMK community has historically waited years between rounds — sometimes long enough that R2 buyers are a different generation of the hobby than R1 — the CYL sub-line is running closer to an eighteen-month rhythm. GREG R2 fits inside that envelope.\n\n## What's actually in the run\n\nThe R2 configurator is the R1 set with the same kit logic underneath. The base kit is the original GREG palette in <Mono>doubleshot ABS</Mono>; the profile is <Mono>CYL</Mono>. KBDfans is hosting the buy as global, with a single checkout flow and a single fulfillment timeline. No regional proxy is listed for this round, which is consistent with how KBDfans has been handling its recent CYL runs.\n\n<Callout type=\"note\" title=\"What CYL is, briefly\">\n  <Mono>CYL</Mono> is GMK's cylindrical-top profile — a Cherry-profile clone in the same height family, with the same row sculpt, but tooled and molded by GMK rather than by Cherry. The geometry is close enough that buyers swap CYL and Cherry-profile caps between boards without a second thought, but the two are not identical. CYL caps tend to read slightly thicker in the hand and have a marginally different stem tolerance than the Cherry originals; the typing feel is in the same neighborhood, not the same room. Readers cross-shopping a CYL set against a Cherry-profile set should not assume the two will sound or measure the same on the same board.\n</Callout>\n\nCYL has been the less-trafficked member of the GMK profile family for most of its life. It exists in the same conversation as the broader Cherry-clone revival the [trends tracker](/trends/tracker) has been logging through 2026 — the DCS Olivetti row is on the same arc — but CYL is the one that is being run as a recurring program rather than a one-off project. That distinction matters when reading R2 cadence: a single-run profile cannot accumulate a round-2 pattern, and CYL is now demonstrably the one in the GMK catalog that can.\n\nGREG itself slots into the GMK CYL canon alongside [Prussian Alert](/article/gmk-cyl-prussian-alert) and the Olivetti runs the corpus has covered. The CYL ecosystem is consolidating in a way that the larger GMK Cherry-profile catalog is not. A buyer who has been tracking that consolidation will already know whether GREG's palette is for them; a buyer arriving fresh should treat R2 as the second and probably final shot at this set's specific colorway in <Mono>doubleshot ABS</Mono>.\n\n## Buying notes\n\nThe window is 2026-05-01 through 2026-05-29 — four weeks, opening at the start of May and closing at the end of it. Region is global through KBDfans. GMK lead times apply: long but predictable. The set is doubleshot ABS, not PBT, so the usual ABS caveats apply on shine timelines for heavy typists.\n\nThe vendor relationship sits in the same lane as the rest of KBDfans's recent CYL slate. The pattern of KBDfans-as-runner for the GMK CYL line has been one of the cleaner [vendor-led customs](/article/vendor-first-customs) arrangements in the hobby this year — single vendor, single configurator, single fulfillment SKU, no IC churn between announcement and open. R2 buyers benefit from that as a process matter even when they do not think about it.\n\nA note on links: group-buy URLs published on thock are auto-flagged with `rel=\"sponsored noopener\"` at render time. The tag is applied by the site, not the editorial team. thock has no affiliate arrangement with KBDfans for GMK CYL GREG.\n\nFull configurator and the current window are at <Source href=\"https://kbdfans.com/products/gmk-cyl-greg-2\">KBDfans's product page</Source>. The live entry alongside the rest of the open buys sits on [/group-buys](/group-buys).\n\n## What we're watching\n\nTwo questions ride on this run. The first is volume: a GMK CYL R2 that clears at or near R1 numbers would be the strongest single piece of evidence yet that the round-2 cadence is reproducible across the CYL catalog, not just a feature of the standout sets. A soft close inside the four-week window would say the opposite — that the latent-demand pool is shallower than the residual chatter suggests and that R2 is closer to a clearance mechanism than a second wave.\n\nThe second is whether the GMK CYL R2 rhythm gets formalized. KBDfans has not announced a published schedule for the line, and as long as R2s are read off Discord traffic rather than calendared up front, the cadence is informal. If GREG sells through clean enough to telegraph the next R2, expect the vendor to start naming the line's R2 slate ahead of time — the way some vendors have begun pre-announcing keyboard R2s during the R1 fulfillment window. That move, when it comes, will mark the moment GMK CYL R2 stops being a pattern enthusiasts notice and starts being a program the vendor advertises.\n\nGREG R2 closes 2026-05-29. We will revisit when the order numbers settle.\n",
+      "readTime": 6,
+      "filePath": "Z:\\keyboard\\apps\\web\\src\\content\\articles\\gmk-cyl-greg-2-group-buy.mdx"
+    },
+    {
       "slug": "beginners-switch-buying-guide",
       "frontmatter": {
         "slug": "beginners-switch-buying-guide",
@@ -1706,5 +1734,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-05-11T02:03:46.060Z"
+  "generatedAt": "2026-05-11T02:40:09.857Z"
 }

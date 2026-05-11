@@ -1,0 +1,45 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-10",
+  "commit": "73fa2bbe89ce57ae0fec703290cce1461d39b8ee",
+  "kind": "hero-art",
+  "article_slug": "gmk-cyl-greg-2-group-buy",
+  "pillar": "news",
+  "target": "Z:/keyboard/apps/web/public/hero-art/gmk-cyl-greg-2-group-buy.svg",
+  "source": "plan/bearings.md § Article hero art — locked 2026-05-09",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject",
+  "size": [1200, 750],
+  "subject": "Top-down silhouette of a 75% board with a full keycap set in CYL profile (rounded-rect caps with inset top surface). Six well-distributed caps take the coral splash as the GREG colorway accents: backtick, E, G, LAlt, Up arrow, Down arrow — picking out a representative base/accent set spread across modifiers, alphas, and the navigation cluster. Warm-bronze hairlines on the top and bottom case edges only.",
+  "brief_summary": "Hero art for the news-pillar companion piece to the GMK CYL GREG 2 group-buy listing: a top-down 75% board reads as the canvas, with six coral-splash caps distributed across the layout to suggest the GREG accent colorway sitting on a mostly warm-grey base set.",
+  "splash_color": {
+    "name": "coral",
+    "oklch": "oklch(0.74 0.16 30)",
+    "fill_alpha": 0.82,
+    "border": "oklch(0.66 0.17 30)",
+    "inner_top_surface": "oklch(0.86 0.09 30 / 0.55)"
+  },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "bronze_accent": {
+    "name": "warm-bronze",
+    "oklch": "oklch(0.80 0.135 75)",
+    "usage": "1.5px hairlines on the top and bottom case edges only, 0.65 stroke opacity"
+  },
+  "tokens_snapshot": "design/tokens.css — --kh-accent oklch(0.80 0.135 75); coral splash from canonical hero-art coral family",
+  "fonts": [],
+  "outputs": [
+    "Z:/keyboard/apps/web/public/hero-art/gmk-cyl-greg-2-group-buy.svg"
+  ],
+  "warnings": [],
+  "layout_choice": "75% — a single committed layout. 1020×410 case rectangle, six rows (F-row, number, top alpha, home, bottom alpha, modifier+spacebar), single right-side nav column tell.",
+  "coral_caps": [
+    "backtick (row 2, leftmost)",
+    "E (row 3, top alpha)",
+    "G (row 4, home row — the GREG 'G')",
+    "LAlt (row 6, modifier)",
+    "Up arrow (row 5, nav cluster)",
+    "Down arrow (row 6, nav cluster)"
+  ],
+  "style_guide": "bearings.md § Article hero art (locked 2026-05-09): 2px warm-grey stroke throughout; single splash (coral) on accent caps; warm-bronze accent on case edges only; no multi-color, no blues or greens; transparent canvas.",
+  "revision": 1
+}
