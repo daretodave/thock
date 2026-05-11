@@ -1,0 +1,59 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-10",
+  "commit": "cce9443d94a5ede78ed7511d60ac548a176debe8",
+  "kind": "hero-art",
+  "article_slug": "gmk-cyl-king-of-the-seas-group-buy",
+  "pillar": "news",
+  "target": "Z:/keyboard/apps/web/public/hero-art/gmk-cyl-king-of-the-seas-group-buy.svg",
+  "source": "plan/bearings.md § Article hero art — locked 2026-05-09",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject",
+  "size": [1200, 750],
+  "subject": "Top-down silhouette of a 75% board. Two distinct clusters of coral-splash caps are placed in opposing quadrants — a left cluster (Q, W, A, S) representing the Sovereign deep-ocean-blues colorway and a right cluster (O, P, L, ;) representing the Mutation electric-pink colorway. Both clusters render in the SAME coral hue; the dual-palette idea is conveyed through structural left/right separation rather than literal multi-color. A small coral anchor glyph sits above the top case edge as the King-of-the-Seas nautical nod. Warm-bronze hairlines on the top and bottom case edges only.",
+  "brief_summary": "Hero art for the news-pillar companion piece to the GMK CYL King of the Seas group-buy listing. Editorial decision captured here for audit: the set ships two concurrent colorways (Sovereign and Mutation), but bearings mandates a single coral splash, so the dual-palette read is structural — two coral clusters in mirrored quadrants (one per colorway thematically) instead of two literal colors. The article remains explicitly NOT painted blue despite Sovereign being a deep-ocean-blues colorway.",
+  "composition_decision": "two clusters, one color — structural separation across left and right halves of the board substitutes for the literal two-palette story; both clusters use identical coral so the bearings 'single splash' rule is honored",
+  "splash_color": {
+    "name": "coral",
+    "oklch": "oklch(0.74 0.16 30)",
+    "fill_alpha": 0.82,
+    "border": "oklch(0.66 0.17 30)",
+    "inner_top_surface": "oklch(0.86 0.09 30 / 0.55)",
+    "anchor_glyph_stroke": "oklch(0.66 0.17 30)"
+  },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "bronze_accent": {
+    "name": "warm-bronze",
+    "oklch": "oklch(0.80 0.135 75)",
+    "usage": "1.5px hairlines on the top and bottom case edges only, 0.65 stroke opacity"
+  },
+  "tokens_snapshot": "design/tokens.css — --kh-accent oklch(0.80 0.135 75); coral splash from canonical hero-art coral family",
+  "fonts": [],
+  "outputs": [
+    "Z:/keyboard/apps/web/public/hero-art/gmk-cyl-king-of-the-seas-group-buy.svg"
+  ],
+  "warnings": [],
+  "layout_choice": "75% — single committed layout. 1020×410 case rectangle, six rows (F-row, number, top alpha, home, bottom alpha, modifier+spacebar), single right-side nav column tell.",
+  "coral_clusters": {
+    "left_cluster_sovereign": [
+      "Q (row 3, top alpha)",
+      "W (row 3, top alpha)",
+      "A (row 4, home row)",
+      "S (row 4, home row)"
+    ],
+    "right_cluster_mutation": [
+      "O (row 3, top alpha)",
+      "P (row 3, top alpha)",
+      "L (row 4, home row)",
+      "; (row 4, home row)"
+    ]
+  },
+  "nautical_glyph": {
+    "shape": "anchor",
+    "position": "centered above the top case edge at (600, 150)",
+    "scale": "~56px tall — deliberately small to nod without dominating"
+  },
+  "style_guide": "bearings.md § Article hero art (locked 2026-05-09): 2px warm-grey stroke throughout; single splash (coral) on accent caps + tiny anchor glyph; warm-bronze accent on case edges only; no multi-color, no blues or greens; transparent canvas.",
+  "xml_validity": "validated — no double-hyphen runs inside comments; parses as well-formed XML",
+  "revision": 1
+}
