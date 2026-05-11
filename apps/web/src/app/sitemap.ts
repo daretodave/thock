@@ -5,6 +5,7 @@ import {
   getAllKeycapSets,
   getAllSwitches,
   getAllTags,
+  getAllTrendSnapshots,
 } from '@/lib/data-runtime'
 import { canonicalUrl, PILLARS } from '@thock/seo'
 
@@ -81,6 +82,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }))
 
+  const trackerWeekEntries: MetadataRoute.Sitemap = getAllTrendSnapshots().map(
+    (s) => ({
+      url: canonicalUrl(`/trends/tracker/${s.isoWeek}`),
+      lastModified: s.publishedAt,
+      priority: 0.7,
+    }),
+  )
+
   return [
     ...staticEntries,
     ...articleEntries,
@@ -89,5 +98,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...switchEntries,
     ...keycapSetEntries,
     ...boardEntries,
+    ...trackerWeekEntries,
   ]
 }

@@ -88,6 +88,14 @@ export const pageReads: Record<string, PageRead> = {
       },
     ]),
   },
+  '/trends/tracker/[week]': {
+    pattern: '/trends/tracker/[week]',
+    ...html([
+      // Phase 27: archive week page carries the same H1 as the
+      // latest view; week number block visible; at least one row.
+      { kind: 'h1-matches', pattern: /rising/i },
+    ]),
+  },
   '/ideas': {
     pattern: '/ideas',
     ...html([

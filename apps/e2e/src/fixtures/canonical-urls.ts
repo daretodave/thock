@@ -88,6 +88,21 @@ function listPartSlugs(
     .sort()
 }
 
+function listTrendWeeks(root: string): string[] {
+  const dir = resolve(root, 'data/trends')
+  if (!existsSync(dir)) return []
+  return readdirSync(dir)
+    .filter((f) => f.endsWith('.json'))
+    .map((f) => {
+      const raw = JSON.parse(
+        readFileSync(resolve(dir, f), 'utf-8'),
+      ) as { isoWeek?: string }
+      return raw.isoWeek ?? ''
+    })
+    .filter(Boolean)
+    .sort()
+}
+
 /**
  * Single source of truth for every URL the site serves. Static
  * landings + dynamic articles + tags + per-pillar feeds. Adding a
@@ -138,6 +153,13 @@ export function getCanonicalUrls(): CanonicalUrl[] {
       path: `/feed/${p.slug}.xml`,
       pattern: '/feed/[pillar].xml',
       kind: 'xml',
+    })
+  }
+  for (const week of listTrendWeeks(root)) {
+    dynamic.push({
+      path: `/trends/tracker/${week}`,
+      pattern: '/trends/tracker/[week]',
+      kind: 'html',
     })
   }
 

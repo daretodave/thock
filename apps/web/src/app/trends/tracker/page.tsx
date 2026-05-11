@@ -12,11 +12,13 @@ import {
 import type { Article } from '@thock/content'
 import {
   getAllArticles,
+  getAllTrendSnapshots,
   getLatestTrendSnapshot,
 } from '@/lib/data-runtime'
 import { TrackerHeader } from '@/components/tracker/TrackerHeader'
 import { TrackerSummaryGrid } from '@/components/tracker/TrackerSummaryGrid'
 import { TrackerCategorySection } from '@/components/tracker/TrackerCategorySection'
+import { TrackerArchiveStrip } from '@/components/tracker/TrackerArchiveStrip'
 import {
   groupByCategory,
   presentCategories,
@@ -64,6 +66,7 @@ function buildDatasetJsonLd(snapshot: NonNullable<
  */
 export default function TrendsTrackerPage(): ReactElement {
   const snapshot = getLatestTrendSnapshot()
+  const allSnapshots = getAllTrendSnapshots()
 
   const baseGraph = [
     buildCollectionPageJsonLd({
@@ -153,6 +156,16 @@ export default function TrendsTrackerPage(): ReactElement {
           articlesBySlug={articlesBySlug}
         />
       ))}
+
+      {/* Weekly archive strip — links to older snapshots */}
+      {allSnapshots.length > 1 && (
+        <Container as="section" className="py-12 border-t border-border">
+          <TrackerArchiveStrip
+            snapshots={allSnapshots}
+            currentWeek={snapshot.isoWeek}
+          />
+        </Container>
+      )}
     </main>
   )
 }
