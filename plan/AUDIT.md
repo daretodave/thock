@@ -191,12 +191,22 @@
 > Continuation of the ideas-pillar queue. Bias multiplier 1.5× applies → effective score 5.25. Drains one row per tick; retire when ideas reaches 8 articles.
 > **Resolved (2026-05-11):** shipped "The tape mod: what one strip of Kapton actually does" at `/article/tape-mod`, publishedAt 2026-05-02 (gap-fill). `69c4307`
 
-### [5.25] ideas pillar — 6 of 8 article quota (needs 2 more)
+### [x] [5.25] ideas pillar — 6 of 8 article quota (needs 2 more) — addressed in 3d1d7af (closes #56)
 - category: content-gaps
 - impact: 7 (Ideas & Builds is the third-most-prominent pillar; 6/8 articles is still below quota)
 - ease: 5 (one new article per tick via /ship-content)
 - rule: Rule 1 — pillar quota
 - shortfall: 2 articles (current 6, quota 8)
+- next: /ship-content → ideas pillar article (topic from /iterate audit or gap heuristic)
+> Continuation of the ideas-pillar queue. Bias multiplier 1.5× applies → effective score 5.25. Drains one row per tick; retire when ideas reaches 8 articles.
+> **Resolved (2026-05-11):** shipped "Stabilizer servicing: the one step most builders skip" at `/article/stabilizer-servicing-guide`, publishedAt 2026-04-20 (gap-fill). `3d1d7af`
+
+### [5.25] ideas pillar — 7 of 8 article quota (needs 1 more)
+- category: content-gaps
+- impact: 7 (Ideas & Builds is the third-most-prominent pillar; 7/8 articles is still below quota)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — pillar quota
+- shortfall: 1 article (current 7, quota 8)
 - next: /ship-content → ideas pillar article (topic from /iterate audit or gap heuristic)
 > Continuation of the ideas-pillar queue. Bias multiplier 1.5× applies → effective score 5.25. Drains one row per tick; retire when ideas reaches 8 articles.
 
