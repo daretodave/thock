@@ -1,0 +1,20 @@
+{
+  "generated_by": "brander",
+  "engine": "resvg",
+  "at": "2026-05-11T00:00:00.000Z",
+  "commit": "2d27763cb258de3e75b609b8bd8c3b00869954bf",
+  "kind": "custom",
+  "source": "hand-authored SVG",
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": ["JetBrains Mono"],
+  "outputs": [
+    "apps/web/public/hero-art/tape-mod.svg"
+  ],
+  "warnings": [],
+  "slug": "tape-mod",
+  "prompt": "Keyboard PCB outline with tape strip callout, coral accent, line-drawing style",
+  "hue": "coral",
+  "motif": "PCB outline + tape callout",
+  "canvas": "1200x750",
+  "generatedAt": "2026-05-11T00:00:00.000Z"
+}

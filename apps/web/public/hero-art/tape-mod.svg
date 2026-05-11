@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — keyboard PCB outline with Kapton tape strip callout, top-down view</title>
+
+  <!-- ================================================================
+       Canvas: 1200 × 750   Stroke: 2px warm-bone   Fill: none (line art)
+       Splash: coral  #E8604C
+       Accent: warm bronze #C4943A
+       Layout (top-down PCB view, board centered):
+         PCB board outline    x 180–1020  y 160–590
+         Switch hole grid     5 rows × 14 cols, spacing 58px
+         SMD components       scattered small rects
+         Tape strip           coral band across lower portion of board
+         Tape folded corners  upper-right and upper-left of strip
+         Callout lines        right-side leader to label "×3 layers"
+       ================================================================ -->
+
+  <!-- ── BACKGROUND ── -->
+  <rect width="1200" height="750" fill="#0E0E10" stroke="none"/>
+
+  <!-- Soft coral glow wash behind the tape region -->
+  <rect x="180" y="480" width="840" height="80" rx="6"
+    fill="#E8604C" fill-opacity="0.07" stroke="none"/>
+
+  <!-- ── PCB BOARD OUTLINE ── -->
+  <!-- Main board body — FR4 green suggestion through translucent fill -->
+  <rect x="180" y="160" width="840" height="430" rx="6"
+    fill="oklch(0.78 0.005 90 / 0.04)"
+    stroke="oklch(0.78 0.005 90)" stroke-opacity="0.82" stroke-width="2"/>
+
+  <!-- Inner board silkscreen rail (thin inner offset, suggests real PCB edge clearance) -->
+  <rect x="196" y="176" width="808" height="398" rx="4"
+    stroke="oklch(0.78 0.005 90)" stroke-opacity="0.16" stroke-width="1"/>
+
+  <!-- ── MOUNTING HOLES (corner + mid, large circles) ── -->
+  <g stroke="oklch(0.78 0.005 90)" stroke-opacity="0.48" stroke-width="1.5" fill="none">
+    <!-- Corners -->
+    <circle cx="220" cy="200" r="10"/>
+    <circle cx="980" cy="200" r="10"/>
+    <circle cx="220" cy="550" r="10"/>
+    <circle cx="980" cy="550" r="10"/>
+    <!-- Mid top + bottom -->
+    <circle cx="600" cy="200" r="10"/>
+    <circle cx="600" cy="550" r="10"/>
+    <!-- Inner ring (pad annular ring) -->
+    <circle cx="220" cy="200" r="5" stroke-opacity="0.28"/>
+    <circle cx="980" cy="200" r="5" stroke-opacity="0.28"/>
+    <circle cx="220" cy="550" r="5" stroke-opacity="0.28"/>
+    <circle cx="980" cy="550" r="5" stroke-opacity="0.28"/>
+    <circle cx="600" cy="200" r="5" stroke-opacity="0.28"/>
+    <circle cx="600" cy="550" r="5" stroke-opacity="0.28"/>
+  </g>
+
+  <!-- ── SWITCH FOOTPRINT GRID (5 rows × 14 cols, MX spacing 19.05mm → 58px) ── -->
+  <!-- Each footprint: outer circle (switch body) + inner circle (pin hole) -->
+  <g stroke="oklch(0.78 0.005 90)" stroke-opacity="0.50" stroke-width="1.5" fill="none">
+
+    <!-- Row 1 y=240 -->
+    <circle cx="252" cy="240" r="14"/><circle cx="252" cy="240" r="5" stroke-opacity="0.30"/>
+    <circle cx="310" cy="240" r="14"/><circle cx="310" cy="240" r="5" stroke-opacity="0.30"/>
+    <circle cx="368" cy="240" r="14"/><circle cx="368" cy="240" r="5" stroke-opacity="0.30"/>
+    <circle cx="426" cy="240" r="14"/><circle cx="426" cy="240" r="5" stroke-opacity="0.30"/>
+    <circle cx="484" cy="240" r="14"/><circle cx="484" cy="240" r="5" stroke-opacity="0.30"/>
+    <circle cx="542" cy="240" r="14"/><circle cx="542" cy="240" r="5" stroke-opacity="0.30"/>
+    <circle cx="600" cy="240" r="14"/><circle cx="600" cy="240" r="5" stroke-opacity="0.30"/>
+    <circle cx="658" cy="240" r="14"/><circle cx="658" cy="240" r="5" stroke-opacity="0.30"/>
+    <circle cx="716" cy="240" r="14"/><circle cx="716" cy="240" r="5" stroke-opacity="0.30"/>
+    <circle cx="774" cy="240" r="14"/><circle cx="774" cy="240" r="5" stroke-opacity="0.30"/>
+    <circle cx="832" cy="240" r="14"/><circle cx="832" cy="240" r="5" stroke-opacity="0.30"/>
+    <circle cx="890" cy="240" r="14"/><circle cx="890" cy="240" r="5" stroke-opacity="0.30"/>
+    <circle cx="948" cy="240" r="14"/><circle cx="948" cy="240" r="5" stroke-opacity="0.30"/>
+
+    <!-- Row 2 y=298 -->
+    <circle cx="252" cy="298" r="14"/><circle cx="252" cy="298" r="5" stroke-opacity="0.30"/>
+    <circle cx="310" cy="298" r="14"/><circle cx="310" cy="298" r="5" stroke-opacity="0.30"/>
+    <circle cx="368" cy="298" r="14"/><circle cx="368" cy="298" r="5" stroke-opacity="0.30"/>
+    <circle cx="426" cy="298" r="14"/><circle cx="426" cy="298" r="5" stroke-opacity="0.30"/>
+    <circle cx="484" cy="298" r="14"/><circle cx="484" cy="298" r="5" stroke-opacity="0.30"/>
+    <circle cx="542" cy="298" r="14"/><circle cx="542" cy="298" r="5" stroke-opacity="0.30"/>
+    <circle cx="600" cy="298" r="14"/><circle cx="600" cy="298" r="5" stroke-opacity="0.30"/>
+    <circle cx="658" cy="298" r="14"/><circle cx="658" cy="298" r="5" stroke-opacity="0.30"/>
+    <circle cx="716" cy="298" r="14"/><circle cx="716" cy="298" r="5" stroke-opacity="0.30"/>
+    <circle cx="774" cy="298" r="14"/><circle cx="774" cy="298" r="5" stroke-opacity="0.30"/>
+    <circle cx="832" cy="298" r="14"/><circle cx="832" cy="298" r="5" stroke-opacity="0.30"/>
+    <circle cx="890" cy="298" r="14"/><circle cx="890" cy="298" r="5" stroke-opacity="0.30"/>
+    <circle cx="948" cy="298" r="14"/><circle cx="948" cy="298" r="5" stroke-opacity="0.30"/>
+
+    <!-- Row 3 y=356 -->
+    <circle cx="252" cy="356" r="14"/><circle cx="252" cy="356" r="5" stroke-opacity="0.30"/>
+    <circle cx="310" cy="356" r="14"/><circle cx="310" cy="356" r="5" stroke-opacity="0.30"/>
+    <circle cx="368" cy="356" r="14"/><circle cx="368" cy="356" r="5" stroke-opacity="0.30"/>
+    <circle cx="426" cy="356" r="14"/><circle cx="426" cy="356" r="5" stroke-opacity="0.30"/>
+    <circle cx="484" cy="356" r="14"/><circle cx="484" cy="356" r="5" stroke-opacity="0.30"/>
+    <circle cx="542" cy="356" r="14"/><circle cx="542" cy="356" r="5" stroke-opacity="0.30"/>
+    <circle cx="600" cy="356" r="14"/><circle cx="600" cy="356" r="5" stroke-opacity="0.30"/>
+    <circle cx="658" cy="356" r="14"/><circle cx="658" cy="356" r="5" stroke-opacity="0.30"/>
+    <circle cx="716" cy="356" r="14"/><circle cx="716" cy="356" r="5" stroke-opacity="0.30"/>
+    <circle cx="774" cy="356" r="14"/><circle cx="774" cy="356" r="5" stroke-opacity="0.30"/>
+    <circle cx="832" cy="356" r="14"/><circle cx="832" cy="356" r="5" stroke-opacity="0.30"/>
+    <circle cx="890" cy="356" r="14"/><circle cx="890" cy="356" r="5" stroke-opacity="0.30"/>
+    <circle cx="948" cy="356" r="14"/><circle cx="948" cy="356" r="5" stroke-opacity="0.30"/>
+
+    <!-- Row 4 y=414 -->
+    <circle cx="252" cy="414" r="14"/><circle cx="252" cy="414" r="5" stroke-opacity="0.30"/>
+    <circle cx="310" cy="414" r="14"/><circle cx="310" cy="414" r="5" stroke-opacity="0.30"/>
+    <circle cx="368" cy="414" r="14"/><circle cx="368" cy="414" r="5" stroke-opacity="0.30"/>
+    <circle cx="426" cy="414" r="14"/><circle cx="426" cy="414" r="5" stroke-opacity="0.30"/>
+    <circle cx="484" cy="414" r="14"/><circle cx="484" cy="414" r="5" stroke-opacity="0.30"/>
+    <circle cx="542" cy="414" r="14"/><circle cx="542" cy="414" r="5" stroke-opacity="0.30"/>
+    <circle cx="600" cy="414" r="14"/><circle cx="600" cy="414" r="5" stroke-opacity="0.30"/>
+    <circle cx="658" cy="414" r="14"/><circle cx="658" cy="414" r="5" stroke-opacity="0.30"/>
+    <circle cx="716" cy="414" r="14"/><circle cx="716" cy="414" r="5" stroke-opacity="0.30"/>
+    <circle cx="774" cy="414" r="14"/><circle cx="774" cy="414" r="5" stroke-opacity="0.30"/>
+    <circle cx="832" cy="414" r="14"/><circle cx="832" cy="414" r="5" stroke-opacity="0.30"/>
+    <circle cx="890" cy="414" r="14"/><circle cx="890" cy="414" r="5" stroke-opacity="0.30"/>
+    <circle cx="948" cy="414" r="14"/><circle cx="948" cy="414" r="5" stroke-opacity="0.30"/>
+
+    <!-- Row 5 y=472 (partially overlapped by tape strip — still visible through it) -->
+    <circle cx="252" cy="472" r="14"/><circle cx="252" cy="472" r="5" stroke-opacity="0.30"/>
+    <circle cx="310" cy="472" r="14"/><circle cx="310" cy="472" r="5" stroke-opacity="0.30"/>
+    <circle cx="368" cy="472" r="14"/><circle cx="368" cy="472" r="5" stroke-opacity="0.30"/>
+    <circle cx="426" cy="472" r="14"/><circle cx="426" cy="472" r="5" stroke-opacity="0.30"/>
+    <circle cx="484" cy="472" r="14"/><circle cx="484" cy="472" r="5" stroke-opacity="0.30"/>
+    <circle cx="542" cy="472" r="14"/><circle cx="542" cy="472" r="5" stroke-opacity="0.30"/>
+    <circle cx="600" cy="472" r="14"/><circle cx="600" cy="472" r="5" stroke-opacity="0.30"/>
+    <circle cx="658" cy="472" r="14"/><circle cx="658" cy="472" r="5" stroke-opacity="0.30"/>
+    <circle cx="716" cy="472" r="14"/><circle cx="716" cy="472" r="5" stroke-opacity="0.30"/>
+    <circle cx="774" cy="472" r="14"/><circle cx="774" cy="472" r="5" stroke-opacity="0.30"/>
+    <circle cx="832" cy="472" r="14"/><circle cx="832" cy="472" r="5" stroke-opacity="0.30"/>
+    <circle cx="890" cy="472" r="14"/><circle cx="890" cy="472" r="5" stroke-opacity="0.30"/>
+    <circle cx="948" cy="472" r="14"/><circle cx="948" cy="472" r="5" stroke-opacity="0.30"/>
+  </g>
+
+  <!-- ── SMD COMPONENTS scattered on board ── -->
+  <!-- USB-C connector area — left edge -->
+  <g stroke="oklch(0.78 0.005 90)" stroke-opacity="0.38" stroke-width="1.5">
+    <rect x="180" y="358" width="14" height="36" rx="2"/>
+    <!-- Connector pin detail lines -->
+    <line x1="184" y1="364" x2="190" y2="364" stroke-width="1" stroke-opacity="0.50"/>
+    <line x1="184" y1="370" x2="190" y2="370" stroke-width="1" stroke-opacity="0.50"/>
+    <line x1="184" y1="376" x2="190" y2="376" stroke-width="1" stroke-opacity="0.50"/>
+    <line x1="184" y1="382" x2="190" y2="382" stroke-width="1" stroke-opacity="0.50"/>
+    <line x1="184" y1="388" x2="190" y2="388" stroke-width="1" stroke-opacity="0.50"/>
+  </g>
+
+  <!-- MCU chip (large IC, center-right area) -->
+  <g stroke="oklch(0.78 0.005 90)" stroke-opacity="0.34" stroke-width="1.5">
+    <rect x="680" y="190" width="52" height="52" rx="3"/>
+    <!-- Pin indicators on all four sides -->
+    <line x1="686" y1="190" x2="686" y2="184" stroke-width="1" stroke-opacity="0.45"/>
+    <line x1="698" y1="190" x2="698" y2="184" stroke-width="1" stroke-opacity="0.45"/>
+    <line x1="710" y1="190" x2="710" y2="184" stroke-width="1" stroke-opacity="0.45"/>
+    <line x1="722" y1="190" x2="722" y2="184" stroke-width="1" stroke-opacity="0.45"/>
+    <line x1="686" y1="242" x2="686" y2="248" stroke-width="1" stroke-opacity="0.45"/>
+    <line x1="698" y1="242" x2="698" y2="248" stroke-width="1" stroke-opacity="0.45"/>
+    <line x1="710" y1="242" x2="710" y2="248" stroke-width="1" stroke-opacity="0.45"/>
+    <line x1="722" y1="242" x2="722" y2="248" stroke-width="1" stroke-opacity="0.45"/>
+    <!-- Pin 1 marker dot -->
+    <circle cx="688" cy="198" r="2.5" fill="oklch(0.78 0.005 90)" fill-opacity="0.30" stroke="none"/>
+  </g>
+
+  <!-- Decoupling caps — tiny rectangles -->
+  <g stroke="oklch(0.78 0.005 90)" stroke-opacity="0.30" stroke-width="1">
+    <rect x="760" y="192" width="12" height="7" rx="1"/>
+    <rect x="760" y="204" width="12" height="7" rx="1"/>
+    <rect x="760" y="216" width="12" height="7" rx="1"/>
+    <rect x="396" y="195" width="10" height="6" rx="1"/>
+    <rect x="410" y="195" width="10" height="6" rx="1"/>
+  </g>
+
+  <!-- Crystal oscillator -->
+  <g stroke="oklch(0.78 0.005 90)" stroke-opacity="0.32" stroke-width="1.5">
+    <rect x="782" y="192" width="22" height="10" rx="2"/>
+    <line x1="788" y1="192" x2="788" y2="202" stroke-width="1" stroke-opacity="0.30"/>
+    <line x1="798" y1="192" x2="798" y2="202" stroke-width="1" stroke-opacity="0.30"/>
+  </g>
+
+  <!-- PCB trace lines (suggest routing, dashed) -->
+  <g stroke="oklch(0.78 0.005 90)" stroke-opacity="0.14" stroke-width="1" stroke-dasharray="6 8">
+    <path d="M 732 216 L 760 216"/>
+    <path d="M 420 209 L 680 209"/>
+    <path d="M 252 214 L 396 214"/>
+    <path d="M 460 530 L 540 530"/>
+    <path d="M 660 530 L 750 530"/>
+  </g>
+
+  <!-- ── TAPE STRIP (coral, semi-transparent band across PCB underside view) ── -->
+  <!-- Main tape band fill — semi-transparent coral -->
+  <rect x="180" y="490" width="840" height="68" rx="0"
+    fill="#E8604C" fill-opacity="0.18"
+    stroke="none"/>
+
+  <!-- Tape top edge — full opacity coral stroke (the peel boundary) -->
+  <line x1="180" y1="490" x2="1020" y2="490"
+    stroke="#E8604C" stroke-opacity="0.95" stroke-width="2.5"/>
+
+  <!-- Tape bottom edge -->
+  <line x1="180" y1="558" x2="1020" y2="558"
+    stroke="#E8604C" stroke-opacity="0.70" stroke-width="2"/>
+
+  <!-- Glow bloom on top tape edge -->
+  <line x1="180" y1="490" x2="1020" y2="490"
+    stroke="#E8604C" stroke-opacity="0.12" stroke-width="10"/>
+
+  <!-- Tape surface sheen (two subtle highlight lines suggesting glossy Kapton surface) -->
+  <line x1="196" y1="503" x2="1004" y2="503"
+    stroke="#E8604C" stroke-opacity="0.22" stroke-width="1"/>
+  <line x1="196" y1="514" x2="1004" y2="514"
+    stroke="#E8604C" stroke-opacity="0.12" stroke-width="1"/>
+
+  <!-- ── FOLDED CORNER DETAIL (top-right corner of tape strip) ── -->
+  <!-- Corner fold triangle — lighter fill suggesting the tape lifts -->
+  <path d="M 1020 490 L 978 490 L 1020 532 Z"
+    fill="#E8604C" fill-opacity="0.28"
+    stroke="#E8604C" stroke-opacity="0.75" stroke-width="1.5"
+    stroke-linejoin="round"/>
+  <!-- Fold crease line (diagonal) -->
+  <line x1="978" y1="490" x2="1020" y2="532"
+    stroke="#E8604C" stroke-opacity="0.55" stroke-width="1.5"/>
+
+  <!-- ── FOLDED CORNER DETAIL (top-left corner, smaller) ── -->
+  <path d="M 180 490 L 216 490 L 180 520 Z"
+    fill="#E8604C" fill-opacity="0.22"
+    stroke="#E8604C" stroke-opacity="0.65" stroke-width="1.5"
+    stroke-linejoin="round"/>
+  <line x1="216" y1="490" x2="180" y2="520"
+    stroke="#E8604C" stroke-opacity="0.45" stroke-width="1.5"/>
+
+  <!-- ── CALLOUT: right-side leader to "×3 layers" label ── -->
+  <!-- Leader line from label area, elbow, down to tape top edge -->
+  <g stroke="#C4943A" stroke-width="1.5" stroke-opacity="0.88" fill="none">
+    <path d="M 1110 430 L 1060 430 L 1060 490"/>
+    <!-- Arrowhead at tape top edge -->
+    <path d="M 1060 490 L 1050 478 M 1060 490 L 1070 478"/>
+  </g>
+
+  <!-- Anchor dot -->
+  <circle cx="1110" cy="430" r="3.5" fill="#C4943A" stroke="none"/>
+
+  <!-- Label: "Kapton" -->
+  <text x="1114" y="416"
+    font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace"
+    font-size="13" fill="#C4943A" fill-opacity="0.94"
+    letter-spacing="0.04em" text-anchor="start" stroke="none">Kapton</text>
+  <text x="1114" y="432"
+    font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace"
+    font-size="13" fill="#C4943A" fill-opacity="0.94"
+    letter-spacing="0.04em" text-anchor="start" stroke="none">tape</text>
+
+  <!-- Secondary callout: coral "×3 layers" annotation at right of tape band -->
+  <text x="1034" y="529"
+    font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace"
+    font-size="12" fill="#E8604C" fill-opacity="0.80"
+    letter-spacing="0.04em" text-anchor="start" stroke="none">×3 layers</text>
+
+  <!-- ── LEFT-MARGIN BRACKET showing tape sits below the switch grid ── -->
+  <g stroke="#C4943A" stroke-width="1.5" stroke-opacity="0.50" fill="none">
+    <!-- Tick at switch grid bottom (~row 5 center) -->
+    <line x1="148" y1="458" x2="172" y2="458"/>
+    <!-- Tick at tape bottom -->
+    <line x1="148" y1="558" x2="172" y2="558"/>
+    <!-- Spine -->
+    <line x1="148" y1="458" x2="148" y2="558"/>
+    <!-- Mid notch pointing right (at tape centerline) -->
+    <line x1="148" y1="508" x2="164" y2="508"/>
+  </g>
+
+  <!-- ── MARGIN LABELS ── -->
+  <g font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace"
+     font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.30"
+     text-anchor="end" letter-spacing="0.04em" stroke="none">
+    <text x="162" y="244">row 1</text>
+    <text x="162" y="360">row 3</text>
+    <text x="162" y="476">row 5</text>
+  </g>
+
+  <!-- Tape label in coral, left margin -->
+  <text x="134" y="512"
+    font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace"
+    font-size="11" fill="#E8604C" fill-opacity="0.78"
+    text-anchor="end" letter-spacing="0.04em" stroke="none">tape</text>
+
+  <!-- ── SUBTLE MEASUREMENT TICKS at board boundary ── -->
+  <g stroke="oklch(0.78 0.005 90)" stroke-opacity="0.20" stroke-width="1">
+    <line x1="100" y1="160" x2="116" y2="160"/>
+    <line x1="100" y1="490" x2="116" y2="490"/>
+    <line x1="100" y1="590" x2="116" y2="590"/>
+    <line x1="100" y1="160" x2="100" y2="590"/>
+  </g>
+</svg>
