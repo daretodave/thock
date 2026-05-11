@@ -255,18 +255,23 @@ jobs:
             transcript_line="**Transcript:** unavailable — action crashed before writing one."
           fi
 
-          body=$(cat <<EOF
-The cloud /march tick at ${RUN_URL} surfaced one or more execution issues.
-
-**Signals:**
-${REASONS}
-
-${transcript_line}
-
-The next /triage tick will classify and label this issue.
-EOF
-)
+          # Build the issue body via a temp file. A here-doc here would
+          # require the body lines to start at column 0 in this YAML,
+          # which terminates the surrounding `run: |` block scalar.
+          # Per-line echo into a file keeps every script line at the
+          # YAML scalar's indent level — no parse ambiguity.
+          body_file="$(mktemp)"
+          {
+            echo "The cloud /march tick at ${RUN_URL} surfaced one or more execution issues."
+            echo
+            echo "**Signals:**"
+            printf '%s\n' "${REASONS}"
+            echo
+            echo "${transcript_line}"
+            echo
+            echo "The next /triage tick will classify and label this issue."
+          } > "$body_file"
 
           gh issue create \
             --title "Cloud march execution had issues: $(date -u +%Y-%m-%dT%H:%M:%SZ)" \
-            --body "$body"
+            --body-file "$body_file"
