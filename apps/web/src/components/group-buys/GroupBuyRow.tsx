@@ -74,7 +74,14 @@ export function GroupBuyRow({
     const days = Math.max(0, dayDelta(todayIso, groupBuy.startDate))
     countdown = days === 0 ? 'opens today' : `opens in ${days}d`
   } else {
-    countdown = STATUS_LABEL[groupBuy.status]
+    // variant === 'ended': the section selector visually classifies
+    // this row as past. Never render forward-looking labels even if
+    // the source record's `status` field is stale (critique pass 11
+    // [HIGH] issue #44: Ishtar R2 had status:'live' + endDate today,
+    // leaking "LIVE" into the Just-closed section pill). Preserve
+    // 'SHIPPED' as editorially distinct; collapse everything else
+    // to 'CLOSED'.
+    countdown = groupBuy.status === 'shipped' ? 'SHIPPED' : 'CLOSED'
   }
 
   const ctaVisible = variant !== 'ended'

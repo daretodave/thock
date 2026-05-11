@@ -100,6 +100,38 @@ describe('<GroupBuyRow>', () => {
     )
   })
 
+  it('renders "CLOSED" (not "LIVE") on ended variant with stale source status (critique pass 11 issue #44)', () => {
+    // Regression guard: data record had status:'live' + endDate today,
+    // section selector banded it under Just-closed by date, but the
+    // pill leaked the stale source field — rendered "LIVE" in the
+    // just-closed section, contradicting the band heading.
+    render(
+      <GroupBuyRow
+        groupBuy={gb({ status: 'live', endDate: '2026-05-09' })}
+        vendor={vendor}
+        variant="ended"
+        now={NOW}
+      />,
+    )
+    const countdown = screen.getByTestId('group-buy-countdown')
+    expect(countdown).toHaveTextContent(/^CLOSED$/i)
+    expect(countdown).not.toHaveTextContent(/LIVE/i)
+  })
+
+  it('preserves "SHIPPED" as editorially distinct from "CLOSED" on ended variant', () => {
+    render(
+      <GroupBuyRow
+        groupBuy={gb({ status: 'shipped', endDate: '2026-04-01' })}
+        vendor={vendor}
+        variant="ended"
+        now={NOW}
+      />,
+    )
+    expect(screen.getByTestId('group-buy-countdown')).toHaveTextContent(
+      /shipped/i,
+    )
+  })
+
   it('falls back to vendorSlug when vendor is null', () => {
     render(
       <GroupBuyRow
