@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Newsreader, IBM_Plex_Sans, JetBrains_Mono } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/next'
 import { Header } from '@/components/ui/Header'
 import { Footer } from '@/components/ui/Footer'
 import { GoogleTagManager } from '@/components/analytics/GoogleTagManager'
@@ -58,6 +59,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   )
