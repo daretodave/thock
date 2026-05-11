@@ -96,6 +96,7 @@ jobs:
           git config user.email "7341502+daretodave@users.noreply.github.com"
 
       - name: Run /march (cloud mode)
+        id: claude_run
         if: steps.ceiling.outputs.skip != 'true'
         uses: anthropics/claude-code-action@v1
         with:
@@ -137,6 +138,22 @@ jobs:
           # and any direct git operations identify as you, not as
           # the bot.
           GH_TOKEN: ${{ secrets.ACTIONS_PAT }}
+
+      - name: Upload Claude execution transcript
+        # Run on success and failure both so we can post-mortem either.
+        # The action writes the transcript JSON to a temp path and
+        # exposes it via outputs.execution_file. Without this upload
+        # the file disappears with the runner — no way to inspect tool
+        # calls, permission denials, or the agent's reasoning after
+        # the fact. Skipped when the ceiling check vetoed the tick
+        # (the action never ran, so there's no transcript to upload).
+        if: always() && steps.ceiling.outputs.skip != 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: claude-execution-${{ github.run_id }}
+          path: ${{ steps.claude_run.outputs.execution_file }}
+          retention-days: 30
+          if-no-files-found: warn
 
       - name: Open cloud-failed issue if action crashed
         # Safety net for the case where Claude Code itself crashed
