@@ -1,0 +1,16 @@
+{
+  "kind": "hero-art",
+  "target": "apps/web/public/hero-art/plate-materials-explained.svg",
+  "source": "plan/bearings.md § Article hero art — colorful keyboard SVGs",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject",
+  "size": [1200, 750],
+  "subject": "Side-view cross-section of a keyboard's plate stack — five horizontal plate layers stacked vertically with thin gaps between them, each representing one common plate material (top-to-bottom: brass with fine diagonal scribed hatch, aluminium clean with chamfered edge ticks, FR4 / fibreglass with coarse cross-hatch weave, POM with sparse broken ticks and lighter outline, polycarbonate with thinnest outline and a single faint dashed seam); a stiffness-gradient annotation on the left margin (vertical dashed axis + per-plate ticks of varying length, brass longest and polycarbonate shortest, with the FR4 tick drawn in the splash hue) reinforces the ordering",
+  "splash_color": "oklch(0.66 0.13 45)",
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": [],
+  "prompt": "Mirror the visual rhythm of the existing deep-dive hero SVGs (gateron-oil-king-deep-dive, hmx-cloud-deep-dive, cherry-mx2a-revision): warm-grey 2px stroke, transparent background, single coherent diagram with subdued didactic ticks on the left margin, a small brass-bronze ornamental dot at the top-right, and a single hue of splash applied to one focal element. The composition occupies ~85% of canvas width and ~75% of height. The focal plate is FR4 / fibreglass (third from top) — that is the article's load-bearing claim (FR4 is the current default for compliant builds), so the terracotta splash lands there as a translucent fill across the plate plus a heavier same-hue outline (2.5px), a same-hue centerline, and a same-hue accent dot at plate centre with a halo ring. Material differentiation is purely textural: brass reads as a tight diagonal scribed hatch (the 'ring' character visualised), aluminium clean with chamfer ticks, FR4 a coarse cross-hatch weave in the splash hue, POM with sparse broken micro-ticks and a lighter 1.6px outline, polycarbonate with the thinnest 1.3px outline and a single near-invisible dashed seam to evoke transparency / no fibre structure. The left-margin tick row is repurposed as a stiffness-gradient indicator: a faint vertical dashed axis with a small upward arrowhead at the top, ticks of varying length per plate (brass longest, polycarbonate shortest), with the FR4 tick rendered in the splash hue to bind the annotation to the focal plate.",
+  "revision": 1,
+  "generated_by": "brander (sub-agent)",
+  "generated_at": "2026-05-12",
+  "commit_at_render": "pending"
+}

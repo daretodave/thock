@@ -1,0 +1,90 @@
+---
+slug: plate-materials-explained
+title: "Plate materials, explained: what brass, FR4, POM, and aluminium actually change"
+lede: "The plate is the cheapest variable in the build and the one builders argue about hardest. Most of the heat is misdirected — but a usable fraction of it is real, and the difference is worth pinning down."
+author: thock
+pillar: deep-dives
+tags: [deep-dive, modding, acoustic, polycarbonate, pom]
+publishedAt: '2026-05-09T14:00:00.000Z'
+updatedAt: null
+heroImage: /hero-art/plate-materials-explained.svg
+heroImageAlt: "Side-view of five stacked keyboard-plate cross-sections — brass, aluminium, FR4, POM, polycarbonate — drawn as parallel horizontal layers in muted tones with a single warm-terracotta splash on the FR4 band at the centre of the stack."
+featured: false
+popularityScore: 0
+---
+
+A reader who has built three boards has already heard the plate argument three different ways. The first board came with whatever plate the vendor shipped and sounded fine. The second build was a brass plate because a YouTube video said brass plate, and the board rang. The third was a POM plate because the forum said POM plate, and the board sounded muted in a way that read, on bad days, as dead. Somewhere across those three builds the question stopped being "which plate is best" and started being "what is the plate actually doing." That is the question worth answering, and it has a smaller answer than the discourse implies.
+
+## What the plate actually does
+
+The plate is a thin sheet — typically 1.5mm — that the switches snap into. Mechanically, it does three things. It constrains the top housing of each switch so the switch does not lift off the PCB during a key-press. It transmits a fraction of the bottom-out and top-out energy from the switch into whatever holds the plate (the case, the gaskets, the standoffs). And it acts as the structural shelf that determines how flat and how parallel the rows of switches sit relative to each other across the board.
+
+Everything plate material affects is downstream of those three jobs. A stiffer plate transmits more energy and constrains the switch more firmly. A more compliant plate flexes under the key-press, absorbs some of the bottom-out impact before it ever reaches the case, and lets each switch decouple acoustically from its neighbours by a small amount. The amount is small. It is also not zero, which is the whole reason builders bother.
+
+Two material properties matter and a third one matters less than people think. <Source href="https://www.matweb.com/search/DataSheet.aspx?MatGUID=d3bd4617903543ada92f4c101c2a20e5">Modulus of elasticity</Source> — how much the material resists bending under load — sets the stiffness. Internal damping — how quickly the material converts vibrational energy to heat instead of letting it ring out — sets how "alive" the plate sounds after a strike. Mass matters mostly as a tiebreaker, and mostly because brass has roughly three times the density of aluminium and that fact ends up audible.
+
+## The plate does not live alone
+
+Most of the plate argument goes wrong by treating the plate as a single variable. It isn't. The plate sits inside a mount system, and the mount system multiplies or cancels whatever the plate would have done on its own.
+
+A brass plate in a tray-mount $90 board screwed straight into PCB standoffs has nowhere to put its energy except into the case. That board rings. The same brass plate in a top-mount custom with a foam-lined case absorbs some of that ring before it leaves the plate, and the result is the "controlled brass" sound that the brass advocates were always pointing at. A POM plate in a stiff top-mount sounds a little softer than an aluminium plate would in the same shell — a small effect, mostly perceptible on the top-out — and a POM plate in a soft gasket-mount with a thick silicone gasket sounds genuinely muted because the compliance of the plate and the compliance of the mount are stacking.
+
+This is the lever that matters and the one most plate threads on Geekhack skip. The plate is a multiplier on the mount. Pick the mount first, pick the plate second, and the question stops being "what does brass sound like" and becomes "what does brass sound like in this case." The answers are different.
+
+<Callout type="note" title="The PCB and the foam stack are also in this conversation">
+  Plate-mount switches transmit energy into both the plate and the PCB; PCB-mount switches lean on the PCB for support. A board with case foam, switch-pad PE foam, and a foam-backed PCB has already damped most of what the plate would have rung out. On that board, plate material is a marginal choice. On a hollow, foamless 60% the plate is doing a much larger share of the acoustic work. Know which board the conversation is about.
+</Callout>
+
+## The material walk
+
+What follows is the bench, in roughly the order the scene actually reaches for them.
+
+**Aluminium.** The default. <Mono>6061-T6</Mono> aluminium is what nine of every ten prebuilts ship with, and it is the right call for nine of every ten prebuilts. Modulus around 69 GPa, density 2.7 g/cm³, modest internal damping. It is stiff enough to constrain the switch crisply, light enough not to dominate the case acoustically, and acoustically neutral enough that the rest of the build (switch choice, keycap profile, foam stack) reads as the dominant character. An aluminium plate is the plate the build sounds like when the build sounds like itself. That neutrality is a feature, not a flaw.
+
+**Brass.** Heavy and ringy. Density 8.5 g/cm³, modulus around 100 GPa, very low internal damping. A brass plate is louder than an aluminium plate in the same shell, with a brighter and longer-decaying sound. Builders who like brass say they like it for the "loud thock." They are half right and half wrong. What brass actually delivers is a higher fundamental frequency and a longer ring-out — the strike is sharper and the tail is longer. People say "thock" because it is the available word, but the acoustic event is closer to a small bell than a deep wood-block. Whether that reads as loud-and-good or loud-and-bad depends almost entirely on the foam stack in the case underneath. A brass plate in a foamed case with a PE-foam switch sheet sounds like a serious build. A brass plate in an empty $90 tray-mount sounds like a problem.
+
+**FR4 / fibreglass.** Modulus around 22 GPa, low density, moderate damping. The same material the PCB is made from, used as a plate. FR4 is the "clack-forward" plate — compliant enough that the bottom-out softens, but with a top-out that stays bright and articulated because the fibreglass weave does not damp high frequencies the way a thermoplastic does. <Source href="https://thockking.com/blogs/learn/plate-materials">Thock King's plate guide</Source> calls it "the plate for builders who want the switch to do the talking," which is a fair read. FR4 is the right answer for builds where the switch is the editorial choice — a Cloud build, an Oil King build, an HMX Macchiato build — and the plate's job is to get out of the way of the switch's voicing.
+
+**POM.** Modulus around 3 GPa, low density, high internal damping. The most compliant plate in common use, and the one with the most distinctive acoustic signature: a "marbly" character that builders describe as soft, rounded, and slightly muffled at the top. <Source href="https://www.theremingoat.com/blog/category/scientific+studies">Theremin Goat's studies of switch acoustics</Source> repeatedly note that the plate material with the largest measurable damping effect is POM, by a margin, and the perceptual effect tracks the measurement. A POM plate softens the bottom-out, mutes the top-out a touch, and decouples each switch from its neighbours more than any other common plate material. That sounds like a list of pure wins. It is not. POM plates can over-mute, particularly in already-damped builds, and the failure mode is a board that sounds quiet in the wrong way — present but inert, with no top-end snap.
+
+**Polycarbonate.** Modulus around 2.3 GPa, low density, moderate damping. Similar to POM in stiffness and lighter in damping; the result is a sound that sits between FR4's clack and POM's muffle. Polycarbonate is the safe-default compliant plate, and the one that most gasket-mount customs ship as their flagship option — the Mode lineup, the Bakeneko clones, most of the boutique 65%s that exist as a category. It is the right answer when the builder wants softness without losing the strike entirely. The colour-of-sound the scene calls "deep poppy thock" is mostly a polycarbonate-plate sound in a gasket-mount case with the right switch underneath.
+
+**Carbon fibre.** Stiff and light. Modulus 70–150 GPa depending on lay-up, density around 1.6 g/cm³, very low damping. Niche. A carbon-fibre plate is what you reach for when you want aluminium-grade stiffness at a fraction of the mass — typically because the case is small and light enough that aluminium would dominate it. In practice the only places carbon fibre shows up in the wild are 40% boards, some boutique splits, and the occasional travel keyboard. Acoustically it reads as a brighter, drier aluminium with less ring. Worth knowing about. Not worth chasing on a 75%.
+
+## What is actually changing under the hood
+
+Run the numbers and the story is simpler than the discourse. The two soft plates (POM, polycarbonate) sit at 2–3 GPa modulus. The metals (aluminium, brass) sit at 69–100 GPa. FR4 sits in between at around 22 GPa, closer to the soft plates than to the metals. Carbon fibre depends on the weave but lives in metal territory.
+
+So a builder asking "soft plate or stiff plate" is asking a question with five answers that cluster into two camps, plus one wildcard. The soft camp (POM, PC) flexes meaningfully under typing force and damps the strike. The stiff camp (aluminium, brass, carbon fibre) does not flex meaningfully and transmits the strike. FR4 is the practical middle: it flexes a little, damps a little, and stays out of the way.
+
+Mass is the second-order effect. Brass is the only common plate where mass is large enough to be audible on its own — the plate has enough inertia that the switch loses a non-trivial fraction of its top-out energy reversing the plate's tiny vertical motion, which the ear hears as a slightly delayed and louder strike. That is the "weighty" feel brass advocates point at, and it is real. It is also small, and it is the only material on the bench where the effect rises to the threshold of "obvious."
+
+Damping is the third-order effect, and the only place damping is large enough to dominate is POM. Every other plate is leaning on the foam stack and the case for damping, not on the plate itself.
+
+## Diminishing returns, honestly
+
+A plate swap moves the needle. It does not move the needle as far as a switch swap. It does not move the needle as far as a keycap-profile swap, on most builds. It does not move the needle nearly as far as putting a layer of PE foam between the plate and the PCB, which is a five-dollar mod that genuinely changes the acoustic signature. The plate is a tiebreaker on a build that is already mostly tuned.
+
+The order of operations a builder should adopt, roughly: pick a board with a mount style and case construction you trust. Pick a switch that voices the way you want the build to voice. Pick a keycap set in a profile that matches that voicing. Apply the cheap, well-understood acoustic mods (tape mod or PE foam sheet, stabiliser tuning, switch films if you are chasing wobble). Then, and only then, ask the plate question. The plate is the variable that decides between two builds that are both already good. It is not the variable that rescues a build that is wrong upstream.
+
+Brass is loud and people will tell you they like loud — they don't, they like consonant. A brass plate without the rest of the build tuned to absorb its ring is just a noisy keyboard. A POM plate without enough top-end signal underneath it is just a quiet one. The plate amplifies whatever choices the rest of the build has already made. Make the upstream choices first.
+
+## Pairing notes that hold up in practice
+
+A short bench of combinations that the scene has converged on, and a couple to avoid.
+
+Brass plate plus heavy case foam plus PE-foam switch sheet is the classic "controlled brass" build. The foam soaks up most of the ring; what's left is the higher fundamental and the slightly delayed, weightier strike that brass partisans are after. <Source href="https://www.cannonkeys.com/blogs/news">CannonKeys' build logs</Source> reach for this combination on roughly any board with a brass plate option, and the reason is that it works.
+
+FR4 plate plus a clack-forward switch (HMX Cloud, Macchiato, anything with a POK stem) plus a Cherry-profile keycap set is the "let the switch sing" build. The plate stays out of the way; the switch's top-out carries the character. A polycarbonate plate works here too, but slightly mutes the very brightness FR4 preserves.
+
+Polycarbonate plate plus gasket-mount plus a thock-forward switch (Oil King, MMD Princess, anything heavy and long-poled) is the "deep thock" default. It is the sound the boutique 65% category sells, and it is the right answer for most builders who say "I want it to sound like a Mode video."
+
+POM plate plus gasket-mount is the combination to be careful with. Both compliance variables are stacked, and the result on a mid-foam build can be a board that reads as dead — present, quiet, no top-end strike. POM plates work better on top-mount and bottom-mount cases where the mount itself is stiff and the plate is the only compliance in the system. On a gasket-mount the plate is fighting the gasket for the same job and one of the two will win in a way the builder did not plan for.
+
+Aluminium plate plus anything is the plate that does not require careful pairing. It is also the plate that does not produce a signature. That is the trade. It is a defensible trade for a daily-driver build that the owner is going to keep for years and stop tuning. <Source href="https://geekhack.org/index.php?topic=104025.0">Geekhack's long-running plate-material megathread</Source> circles back to this conclusion roughly every six months: the people who land on aluminium and stop swapping plates are the ones who finished the rest of the build correctly.
+
+## What to watch
+
+Two threads. The first is the gradual move toward "plate material as a configurable option" on mid-tier prebuilts — Mode has been doing it since the Sonnet, and the Wuque and Cannonkeys configurators have started offering FR4 alongside aluminium and PC. The variable is migrating from "advanced custom" to "checkbox at checkout," and that means more builders are going to make plate decisions without the context they would have absorbed from a forum thread. Expect the next two years of beginner builds to overcorrect into POM and underestimate aluminium.
+
+The second is the slow shift toward plateless mounts on the high end — designs where the switches sit directly in the PCB and there is no plate at all. The acoustic profile is different again (no transmission medium between switch and case other than the PCB), and the early plateless customs are voicing in a register that does not map cleanly onto any of the plate materials above. If the plateless category grows past niche, the next version of this piece is the comparison between "which plate" and "no plate." That argument has not arrived yet. It is arriving.
