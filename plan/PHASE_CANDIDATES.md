@@ -1,6 +1,7 @@
 # Phase candidates
 
 > Last pass: 2026-05-11 at commit aeaa808
+> Last oversight: 2026-05-11 at commit 7939291 — promoted all 4 pending candidates (a11y 6.5 → phase 26, trends archive 6.0 → phase 27, /tags 5.5 → phase 28, GB archive 5.5 → phase 29); filed new pending candidate [in-article inline visualizations] from user oversight feedback; moved /ship-content (phase 24) + cloud schedule (phase 25) rows to Promoted for hygiene.
 > Pass count: 6
 > Posture: bold
 > Pass 6 notes: 20 commits since pass 5 (4260294). Pre-tick state: critique pass 11 fired (4 findings — 2 HIGH addressed in same-day ticks: Nyawice "one week left" MDX fix (12a818d) + /group-buys LIVE-pill renderer fix (478c952); 1 MED /tag/gmk self-fills via GMK CYL companion shipping; 1 LOW "W19 movement score" vocabulary in Nyawice body — iterate-shaped). Cloud loop proven operational: 9 articles shipped autonomously since pass 5 (4 News group-buy companions + 3 Trends + 1 Ideas + W20 trends snapshot), plus 3 ops(cloud-loop) CI patches resolved. React #418 flake has NOT appeared in the last 10+ consecutive parallel verify runs (all noting "433 e2e green parallel — no #418 flake this run") — likely self-resolved as phase-16 replaced every PageStub with a real page (the AUDIT.md prediction). Pass 6 files 2 candidates: [7.0] cloud autonomous content schedule — promoted from Considered (5.5 → 7.0) because cloud loop operational status removes the "unproven" risk; [5.5] group-buy archive surface `/group-buys/past` — new, editorial archive gap as 1+ buys close. Also adds a self-resolution status note to the [6.5] React #418 Pending candidate.
@@ -13,114 +14,20 @@
 
 ## Pending
 
-### [score 6.5] `/ship-content` skill — codify the content-velocity drain pattern as one autonomous flow [PROMOTED → phase 24, 2026-05-11 oversight]
-- proposed: 2026-05-10, expand pass 5
+### [score 5.5] In-article inline visualizations — small purposeful diagrams in the hero-art theme
+- proposed: 2026-05-11, /oversight (user free-form)
 - source signals:
-  - User-directed `/oversight` 2026-05-10 (commit 8b77823) locked the 4-rule content-velocity directive in `plan/bearings.md`. The loop now carries 25+ content-gap audit rows (pillar quota deficit alone: 25 articles below ≥8; group-buy companions: 5; tracker linkage: 1 maturing). At 1 article per /iterate tick, that's 25+ ticks of drain — each one currently orchestrated by the main agent manually spawning `content-curator` + `brander` + updating `tags.json` + assembling the commit. The pattern is identical every tick; the per-tick orchestration cost (~5–8 minutes of agent reasoning) compounds.
-  - First content-velocity tick (commit 4260294, "How Hall-effect quietly became the new mid-premium default") proved out the flow end-to-end: main agent opened the GH issue, spawned content-curator + brander in parallel, hit a `tags.json` validation gap on first verify (new tags `hall-effect` + `magnetic` weren't registered — required mid-tick fix), re-ran verify, committed, pushed, closed the issue. The friction was the missed tags.json update — a skill would have known to check + update it as part of the autonomous flow.
-  - `bearings.md` "Content velocity & editorial cadence" Rule 4 (publishedAt gap-fill) requires per-tick date computation against the rolling 30-day distribution. Each tick currently runs the math in the main agent. A skill would centralize the heuristic (largest-gap selection) + the group-buy exemption.
-  - `skills/iterate.md` §4.A already references the four content-velocity rules — but `/iterate` is the audit + dispatch surface, not the article-shipping surface. The shipping surface deserves its own skill the same way `/ship-asset` is the brand-asset shipping surface even though `/iterate` could spawn `brander` directly.
-- rationale: this is the §4G commit-pattern signal in advance — "5+ commits in a row will touch the same surface" (we're 1 commit into a 25-deep content-shipping window). The discipline-shaped problem isn't "how to write an article" (content-curator owns that) — it's "how to bundle prose + hero SVG + tag-registry update + frontmatter + verify-gate + GH-issue-mirror as one autonomous unit without main-agent orchestration cost on every tick." Exactly the §4A "audit row scoring `impact ≥ 8, ease ≤ 4` heuristic" shape applied to a discipline-row rather than a code-row.
-- proposed scope: 1 phase.
-  - Read `skills/ship-asset.md` (the existing brand-asset shipping skill) as the canonical template — same shape, different deliverable.
-  - New skill at `skills/ship-content.md`. Procedure:
-    1. Sync (`git pull --ff-only`).
-    2. Read `plan/AUDIT.md` top content-gap finding; verify it matches one of the 4 bearings rules (pillar quota / tracker linkage / group-buy companion / publishedAt staggering); else exit (delegate to `/iterate` for non-content findings).
-    3. Compute `publishedAt` from the rolling-30-day gap algorithm; apply the group-buy-coverage exemption if the article is companion-piece-shaped.
-    4. Open GH issue mirroring the finding (Phase 15a contract). Step 2.5 of `iterate` applies verbatim.
-    5. Spawn `content-curator` + `brander` in parallel with the briefs.
-    6. After both return: validate tags.json contains every tag in the new article's frontmatter; ADD missing tags (skill picks `category` from a heuristic — switch / layout / brand / material / profile / misc — same set the existing tags.json uses).
-    7. `pnpm verify` (with #418 serial-fallback documented as established mitigation per AUDIT.md row).
-    8. Commit + push with `Closes #<N>` trailer.
-    9. `pnpm deploy:check` + `loop-issue.mjs close-comment`.
-  - Update `skills/march.md` Step 3 dispatcher: when the top audit finding is a content-gap row matching the 4 bearings rules, dispatch `/ship-content` instead of `/iterate`. `/iterate` continues to own non-content-gap drains (a11y, perf, link-rot, etc.).
-  - Update `skills/iterate.md` failure-mode 6 ("no actionable iterate work") to dispatch `/ship-content` (not `/expand`) when the top finding is content-gap-shaped.
-  - New e2e? No new component — the regression guard is the per-article verify-gate, which already runs. The skill is meta-orchestration.
-- estimated phases: 1
-- conflicts: none. The pattern is already used today; the skill just centralizes orchestration cost.
-- promotion path: ship-a-phase autonomous. No /oversight decisions to lock — every promotion-time question is already resolved by the bearings rules.
-
-### [score 6.0] Trends Tracker weekly cadence + multi-week archive surface (`/trends/tracker/[week]`)
-- proposed: 2026-05-10, expand pass 4
-- source signals:
-  - `data/trends/` contains exactly 1 file (`2026-W19.json`); `apps/web/src/app/trends/tracker/page.tsx` calls `getLatestTrendSnapshot()` so as soon as week 2 ships there is no surface to view week 1 — the archive gap is real, not speculative.
-  - `plan/bearings.md` describes the Trends Tracker as the "**Signature feature**: a weekly Trends Tracker dashboard." A signature feature with no archive shape is data-sparse by design and reads less authoritative as the corpus accumulates.
-  - `plan/CRITIQUE.md` pass 9 [MED] /trends/tracker — Sleeper summary card highlights a flat row whose own editor's note says "no new headline release this 8-week window" (auto-populated, not editorially chosen). The discipline gap that produces this auto-population is the same gap that an undefined cadence produces: when no human author commits to a weekly snapshot, the tracker selectors fall back to "rank everything we have."
-  - `plan/CRITIQUE.md` pass 9 [MED] / Trending rail surfaces a `flat` MT3 tile under "what's moving" framing — same root: a cadence-discipline gap forces summary chrome to overrender stale rows.
-  - Phase 19 backfilled 2026-W19 once but did not lock in the recurring cadence. The build plan ("Note after phase 23: ongoing trend snapshots") gestures at it but assigns no skill.
-- rationale: this is a discovery-shaped problem in the §4A "audit row scoring `impact ≥ 8, ease ≤ 4`" sense — the archive route is one phase, but the cadence question (which agent / skill / cron owns the weekly snapshot?) has a `/schedule` angle that needs `/oversight` to lock the path. Drainable as one iterate fix only by making both decisions implicitly. Better to surface as candidate.
-- proposed scope: 2-phase mini-plan.
-  1. **Phase A — multi-week archive surface.** New route `apps/web/src/app/trends/tracker/[week]/page.tsx` rendering any `data/trends/<YYYY-WNN>.json`. Update `apps/web/src/app/trends/tracker/page.tsx` (the canonical "latest" view) to add a small `← older weeks` affordance + sparkline strip showing the last 4–8 weeks of category-direction signal. New `getAllTrendSnapshots()` loader; sitemap entries; CollectionPage JSON-LD per week. e2e in `apps/e2e/tests/tracker-archive.spec.ts`: walks every week JSON, asserts 200 + summary-card grid + JSON-LD shape. The latest-page deferral pattern mirrors what `/news` and `/trends` already do (pillar landings → archive tail).
-  2. **Phase B — recurring snapshot cadence (path locked at /oversight).** Two viable paths; oversight chooses:
-     - **(a)** `/schedule` cloud routine — weekly auto-fire (cron `0 14 * * 1` Monday 14:00 UTC) of a `weekly-trend-snapshot` routine that runs scout for delta research, ship-data for the JSON drop, and content-curator for editorial qualification. Cadence runs in cloud regardless of session state. Best for "pretend the loop is a real publication."
-     - **(b)** `skills/march.md` amendment — when the current ISO week has no `data/trends/<YYYY-WNN>.json`, dispatch `/ship-data trend-snapshot` before the normal flow. Fires only when user has `/loop /march` running. Best for "loop owns its own discipline."
-  Phase B's brief lists the path-(a) vs path-(b) trade-offs (cloud cost vs local-only) and locks the choice via /oversight.
-- estimated phases: 2
-- conflicts: none with `bearings.md` (extends the signature-feature framing); none with the URL contract (sub-route under `/trends/tracker` fits existing pillar archive shape, e.g. `/news/[slug]`); the schema additive is zero — no new fields, just multi-record handling.
-- promotion path: ship-a-phase autonomous for Phase A. Phase B requires `/oversight` to choose path (a) vs (b). Phase A blocks Phase B (the archive surface is needed before the cadence can do anything visible), so they're contiguous.
-
-### [score 6.5] Accessibility audit pass — discovery-driven multi-tick drain (promote audit row to phase)
-- proposed: 2026-05-09, expand pass 1
-- source signals:
-  - `plan/AUDIT.md` MED 5.5 (filed by phase 16 brief): "Phase 16's polish scope listed an a11y pass: contrast against the OKLCH tokens, focus rings on every interactive, alt text on every `<img>`, heading order, keyboard nav. Deferred from the page-shipping tick because the audit itself wants its own structured pass."
-  - `plan/CRITIQUE.md` MED (pass 2, commit e270ced): /tag/[slug] back-link mislabeled `← all tags` going to `/` — categorized `a11y` in the critique row. Single observation but consistent with other unaudited interactive affordances.
-  - Implicit: 17 phases shipped without a structured a11y pass means contrast, focus, and keyboard-nav coverage have grown organically with no audit gate.
-- rationale: a11y findings are discovery-shaped, not fix-shaped — you can't iterate-drain them one row at a time without first walking every canonical URL with a checklist (or axe-core). Each fix downstream is cheap; the discovery is the work. That's exactly the shape `/expand` is meant to catch (audit row scoring 5.5 with `impact ≥ 8, ease ≤ 4` heuristic).
-- proposed scope: 2-phase mini-plan.
-  1. **Phase A — audit pass.** New script `apps/web/scripts/a11y-audit.mts` walks every canonical URL (10+ per `apps/e2e/tests/meta.spec.ts` sitemap completeness), runs axe-core or @axe-core/cli at desktop + mobile breakpoints, dumps findings to `plan/AUDIT.md` as `[a11y]` rows. Manual-checklist supplement for items axe doesn't catch (heading order, "← all tags" mislabel, decorative-vs-meaningful image distinction).
-  2. **Phase B — drain.** Iterate-style ticks drain the `[a11y]` rows. Most fixes are token / aria / focus-ring tweaks already at 1-line scope per row. Larger ones (PageStub keyboard-trap, mobile-drawer focus-loop) get phase-promoted on discovery.
-- estimated phases: 2
-- conflicts: none. Aligns with `bearings.md` accessibility hard rule.
-- promotion path: `/oversight` decides axe-core vs hand-checklist (cost: axe-core adds ~2MB devDep but covers 30+ rules autonomously). Phase A ships autonomously once that's chosen.
-
-### [score 5.5] /tags index page — replace "← all tags" mislabeled back-link with a real tag index
-- proposed: 2026-05-09, expand pass 1
-- source signals:
-  - `plan/CRITIQUE.md` MED (pass 2, commit e270ced): /tag/[slug] "← all tags" affordance lies — links to `/` where there is no tag list at all. The critique's own suggested-fix explicitly proposes `/tags` as a "half-day phase candidate".
-  - Implicit: phase 12 shipped `/tag/[slug]` but never created the parent index. Sitemap walks 10+ tag URLs but no parent surface to discover them from.
-- rationale: cheapest path to drain the critique row is a 1-line relabel of the back-link to `← home`. But the user-facing absence — "thock has 30+ tags and no way to browse them" — only goes away with a real index. Phase 12's design left this hole; expand catches it.
-- proposed scope: 1 phase.
-  - New route `apps/web/src/app/tags/page.tsx` rendering every tag from `articleAllTags(articles)` (helper exists in `@thock/content/util/`), grouped by the five categories from `design/decisions.jsx` (`vendor`, `part`, `layout`, `profile`, `community`). Each chip Links to `/tag/<slug>`. Categorical-tinted heading per group. CollectionPage + ItemList JSON-LD. Sitemap entry. Empty-category gracefully hidden.
-  - Update `/tag/[slug]` back-link to `← all tags` → `/tags` (relabel becomes truthful).
-  - New e2e in `apps/e2e/tests/tags.spec.ts`: index renders all tag chips, every chip's href resolves 200, back-link round-trips.
-- estimated phases: 1
-- conflicts: none. Sitemap policy already accepts new canonical entries.
-- promotion path: ship-a-phase autonomous. Same shape as phases 7/12.
-
-
-### [score 7.0] Cloud autonomous content schedule — `/loop /march` on a weekly cloud cron once `/ship-content` exists [PROMOTED → phase 25, 2026-05-11 oversight, contingent on phase 24]
-- proposed: 2026-05-11, expand pass 6 (promoted from Considered 5.5, pass 5)
-- source signals:
-  - Cloud loop is now proven operational: 9 articles shipped via cloud CI ticks since pass 5 (4 News group-buy companions + 3 Trends pieces + 1 Ideas piece + W20 trends snapshot), plus 3 CI correctness patches (commit author, YAML parse, GH-issue routing) all resolved.
-  - The `/ship-content` candidate (6.5, pass 5) is Pending. If it ships, the cloud loop has a dedicated content-shipping verb — the final blocker is a cron trigger at a fixed weekly cadence.
-  - `bearings.md` content-velocity directive (Rule 1–4) creates a weekly obligation: ≥1 article per pillar per 14d, tracker linkage, group-buy companion. Without a cron, the obligation requires a user-initiated local `/loop` session. With a cron, it is autonomous.
-  - Pass-5 Considered note provisionally scored this at 5.5 and said "file as a follow-up phase candidate after /ship-content ships." The cloud loop's proven operational status changes the risk profile: the infrastructure is ready now; only the skill is missing.
-- rationale: two independent signals (content-velocity directive creating weekly rhythm + cloud loop proven operational) combine to make this more than idle automation. A weekly cloud schedule makes thock behave like a real publication — articles appear on a cadence set by the bearings rules, not by user session availability. This is the "loop-as-staff" vision from `agents.md` "autonomous-beast endgame." The prerequisite (/ship-content) is a separate pending candidate; this candidate gates on it.
-- proposed scope: 1 phase (contingent on /ship-content shipping first).
-  - New GitHub Actions workflow `march-weekly.yml` or extend the existing `march.yml` to include a scheduled trigger (`cron: '0 14 * * 1'` — Monday 14:00 UTC) in addition to the existing dispatch trigger.
-  - The workflow uses `/schedule` (or the existing cloud loop mechanism) to fire `/loop /march` on the cron trigger.
-  - `skills/march.md` Step 3 amendment: when dispatching content-gap rows, prefer `/ship-content` over `/iterate` (the same amendment `/ship-content` proposes, just confirmed here from the schedule perspective).
-  - `/schedule` sub-agent (or a new `schedule` skill reading `skills/schedule.md`) handles the cadence management if the CronCreate tool is the mechanism.
-  - Gate: passes verify (`pnpm verify`) + deploy check same as every other cloud tick. If the cron tick produces no content (all quotas met), it falls through to `/iterate` or `/expand` per the normal march order.
-- estimated phases: 1 (after /ship-content ships)
-- conflicts: none with spec or bearings. The cron is additive — local sessions still work. Cost: 1 extra CI run per week (cheap; the cloud loop already runs on-dispatch).
-- promotion path: `/oversight` confirms the schedule trigger form (GH Actions cron vs `/schedule` cloud routine vs hybrid) + the Monday 14:00 UTC window. Autonomous ship once path is chosen.
-
-### [score 5.5] Group-buy archive — `/group-buys/past` for closed buys aging out of the active view
-- proposed: 2026-05-11, expand pass 6
-- source signals:
-  - `data/group-buys/` now has 6 records; 1 closed today (kbdfans-gmk-cyl-ishtar-r2, endDate 2026-05-10). The "Just closed" band on `/group-buys` shows only the most-recently-closed buys; records that age further out are not reachable. The editorial narrative (how did the buy perform? what was the community response?) disappears from the surface.
-  - The 4 GMK CYL companion articles shipping this week (Greg 2, King of the Seas, Sweet Nightmare, Ishtar R2 close-day) create cross-reference demand: each article links to its group-buy record, but the group-buy record's page view (`/group-buys`) drops the record from the visible band as time passes. A `/group-buys/past` archive keeps those cross-references resolvable.
-  - Consistent with the editorial archive pattern that News/Trends/Guides already have — every content family has a "latest" view + archive tail. Group buys are the only content family without a historical view.
-- rationale: modest but real. As the content-velocity loop ships more group-buy companions (GMK CYL GREG 2, King of the Seas, Sweet Nightmare, and future KBDfans/CannonKeys buys), the group-buy catalog grows and the archive gap becomes more visible to a reader following a companion article's "group buy" back-link.
-- proposed scope: 1 phase.
-  - New loader `getAllClosedGroupBuys()` in `packages/content/src/lib/group-buys.ts` (or the runtime adapter equivalent), returning records whose `endDate` is in the past, sorted by `endDate` desc.
-  - New route `apps/web/src/app/group-buys/past/page.tsx` rendering the archive list with vendor, buy name, status pill ("CLOSED" / "SHIPPED"), close date, and a link to the companion article if `relatedArticle` is set in the record.
-  - Small "view past buys" affordance on `/group-buys` (e.g., a footer link or a "just closed" → "past" navigation hint).
-  - Sitemap entry + CollectionPage JSON-LD for the archive. e2e in `apps/e2e/tests/group-buys.spec.ts` asserts the archive page renders ≥1 closed row.
-- estimated phases: 1
-- conflicts: none with spec or URL contract (sub-route under `/group-buys`). The schema is already set (`endDate` exists; `status` exists).
-- promotion path: ship-a-phase autonomous. Same shape as phase 13 (group buys index) with a filter swap.
+  - User free-form during oversight 2026-05-11: "i'm not sure when or how — but i'd like articles (past and new) to include small visualizations. the rule is it must be in the current theme we've done for all hero art. these visualations would perhaps break apart what is seemingly walls of text. they can be flow charts, they can be simple diagrams or they can be an exploded views with arrows. they must not be garbage or noise on the article, if they are included, they serve a purpose and they are beautiful (like the hero art)."
+  - The site has 13+ articles where body prose runs as continuous walls of text; the existing hero-art directive (commit `0e7c9fd`) proved that the line-drawing + coral-splash visual language reads beautifully at thumbnail scale. The same language at inline-diagram scale would carry the same brand weight inside the article body.
+  - `bearings.md` "Article hero art" section is the durable rule that locks the hero-art theme; this candidate extends that section with a sibling subsection for inline figures.
+  - `content-curator` already emits MDX; `brander` already emits theme-locked SVGs. The mechanism exists — the missing piece is the editorial discipline + the MDX component that wraps a figure with a caption inside an article.
+- rationale: this is a discovery-shaped + discipline-shaped problem in the §4A sense. The discovery is: which articles benefit from which figure shape (flow chart for guides, exploded view for parts/switch articles, diagram for layout pieces, sparkline-style for trends). The discipline is: how does the loop decide when an article needs a figure vs not, and how does it bundle the figure generation into the ship-content flow without bloating every article. The user's directive ("they must not be garbage or noise") is the editorial gate: this isn't a "every article gets 3 figures" rule, it's a "figures only when they earn their place."
+- proposed scope: 2-phase mini-plan, but probably 1 phase + iterate drain.
+  1. **Phase A — figure component + bearings rule + ship-content extension.** New MDX component `<Figure svg="..." caption="..." alt="..." />` exported from `@thock/content/mdx` that renders an SVG inline with caption + alt + optional `numbered={true}` for explicit figure numbering. New bearings subsection "Inline figures" codifying: theme matches hero art (single coral splash, line weight, no photographic detail), serves a specific narrative purpose (don't decorate, don't repeat what the text says), figure earns its place via a per-article editorial gate. `skills/ship-content.md` Step 5 amendment: content-curator briefs include "if this article has a section explaining a multi-step process, a parts decomposition, or a layout comparison, include a `<Figure>` MDX call with a brander brief in the same commit." Brander gets a new family rule for inline figures (smaller default viewBox, no rounded card framing).
+  2. **Phase B — backfill pass.** Iterate-style ticks walk existing 13+ articles, decide per-article whether a figure earns inclusion, ship one article at a time. Drainable as a discipline row; not a separate phase row.
+- estimated phases: 1 (Phase A); Phase B is iterate drain.
+- conflicts: none. The MDX registry already accepts new components. Brander already emits theme-locked SVGs. The directive is additive to `bearings.md`.
+- promotion path: `/oversight` decides component shape (single `<Figure>` vs `<FlowChart>`/`<ExplodedView>`/`<Diagram>` family). Recommend single `<Figure>` with kind variants to keep the MDX surface minimal; brander handles the kind-specific rendering. Lock at brief time.
 
 ## Considered (below threshold)
 
@@ -136,6 +43,47 @@
 
 
 ## Promoted
+
+### [score 6.5] /ship-content skill — codify the content-velocity drain pattern
+- promoted: 2026-05-11 via `/oversight` (this commit, hygiene cleanup — row originally tagged [PROMOTED] but left in `## Pending`)
+- assigned phase: **24** (shipped at `8b49296`)
+- promotion decisions (resolved at ship time): no /oversight calls; bearings rules resolved every promotion-time question. New skill at `skills/ship-content.md` codifies the 10-step content-velocity flow; `skills/march.md` Step 3b.5 + `skills/iterate.md` failure-mode 6 dispatch to it. See build-plan phase 24 row for shipped scope.
+
+### [score 7.0] Cloud autonomous content schedule — `/loop /march` weekly cloud cron
+- promoted: 2026-05-11 via `/oversight` (this commit, hygiene cleanup — row originally tagged [PROMOTED] but left in `## Pending`)
+- assigned phase: **25** (shipped at `1a26f56`)
+- promotion decisions (resolved at ship time): existing hourly cron already covers Monday 14:00 UTC; redundant cron entry would queue duplicate ticks in the march concurrency group. Instead, seed `plan/AUDIT.md` with Rule-1 content-gap rows so march Step 3b.5 dispatches `/ship-content` on every hourly tick. See build-plan phase 25 row for shipped scope.
+
+### [score 6.5] Accessibility audit pass — discovery walker (Phase A only) — drains via /iterate (Phase B)
+- promoted: 2026-05-11 via `/oversight` (this commit)
+- assigned phase: **26**
+- promotion decisions (locked at /oversight time):
+  - **Phase A only as a phase row**: Phase B (drain) is *not* a separate phase — it's the natural iterate loop that consumes the `[a11y]` rows Phase A files. Same pattern as the content-velocity bias.
+  - **Path lock (axe-core vs hand-checklist) deferred** to `/plan-a-phase phase 26` time. Recommend playwright-axe given playwright is already wired into `pnpm verify` (no devDep bloat — the axe-core npm dep is the only addition and it's <2MB). The hand-checklist work already ran inline at AUDIT row drain (commit `f70b1f3` + the [LOW] skip-link still open) and surfaced 2 findings; an automated regression-guard is what the next iteration earns. Final decision when the brief is drafted.
+  - **Brief drafting**: drafted on-demand by `/ship-a-phase` (or pre-warmed by `/plan-a-phase phase 26`).
+- original signals + scope: see expand pass 1 candidate row (was in `## Pending`). Critique-row hook: PageStub keyboard-trap pre-emption, mobile-drawer focus-loop discovery, contrast against OKLCH tokens.
+
+### [score 6.0] Trends Tracker multi-week archive surface — Phase A only
+- promoted: 2026-05-11 via `/oversight` (this commit)
+- assigned phase: **27**
+- promotion decisions (locked at /oversight time):
+  - **Phase A only as a phase row**: archive surface (`/trends/tracker/[week]`) ships autonomously. Phase B (recurring snapshot cadence) remains in `## Considered` until Phase A ships — the path lock between cloud `/schedule` cron (path a) vs `skills/march.md` amendment (path b) needs `/oversight` after the archive surface exists to test what the visible cadence feels like.
+  - **Brief drafting**: drafted on-demand by `/ship-a-phase` (or pre-warmed by `/plan-a-phase phase 27`).
+- original signals + scope: see expand pass 4 candidate row (was in `## Pending`). Critique-row hooks: pass-9 [MED] Sleeper card on flat row, pass-9 [MED] Trending rail flat MT3 tile.
+
+### [score 5.5] /tags index page — discovery surface + truthful back-link
+- promoted: 2026-05-11 via `/oversight` (this commit)
+- assigned phase: **28**
+- promotion decisions (locked at /oversight time):
+  - **Brief drafting**: drafted on-demand by `/ship-a-phase` (or pre-warmed by `/plan-a-phase phase 28`).
+- original signals + scope: see expand pass 1 candidate row (was in `## Pending`). Critique-row hook: pass-2 MED `/tag/[slug]` "← all tags" mislabel (e270ced) drains in same commit as the new index ships.
+
+### [score 5.5] Group-buy archive — `/group-buys/past` for closed buys
+- promoted: 2026-05-11 via `/oversight` (this commit)
+- assigned phase: **29**
+- promotion decisions (locked at /oversight time):
+  - **Brief drafting**: drafted on-demand by `/ship-a-phase` (or pre-warmed by `/plan-a-phase phase 29`).
+- original signals + scope: see expand pass 6 candidate row (was in `## Pending`). Companion-article cross-references stay resolvable; same shape as phase 13 with a filter swap.
 
 ### [score 8.0] Real-data backfill — scout-driven seed expansion across vendors / switches / keycap-sets
 - promoted: 2026-05-09 via `/oversight` (commit pending)

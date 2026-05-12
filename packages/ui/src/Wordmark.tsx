@@ -30,6 +30,7 @@ const DOT_STYLE: CSSProperties = {
 export function Wordmark({ size = 'md', className = '' }: WordmarkProps): ReactElement {
   return (
     <span
+      role="img"
       className={`font-serif font-medium leading-none tracking-tight text-text inline-flex items-baseline ${SIZE_CLASS[size]} ${className}`.trim()}
       aria-label="thock"
     >

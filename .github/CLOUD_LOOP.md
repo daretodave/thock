@@ -30,10 +30,11 @@ against your monthly cap.
 
 If you're authenticating via `ANTHROPIC_API_KEY` instead, expect
 roughly:
-- Sonnet 4.6: ~$0.40–0.60/tick → ~$3–5/day at 7 ticks
-- Opus 4.7:   ~$2.00–3.00/tick → ~$15–20/day at 7 ticks
+- Sonnet 4.6: ~$0.40–0.60/tick → ~$10–15/day at 24 ticks
+- Opus 4.7:   ~$2.00–3.00/tick → ~$48–72/day at 24 ticks
 
-The 24-commit/24h ceiling caps the worst case either way.
+The 30-commit/24h ceiling caps the worst case either way (no-op
+ticks don't count, so real cost tracks shipped volume).
 
 ## Setup (one-time)
 
@@ -128,13 +129,13 @@ issues are:
 ### Normal operation
 
 The cron fires at `0 * * * *` UTC — hourly, 24/7. Up to ~24
-ticks/day. The daily commit ceiling (24 cloud-shipped commits
-/ 24h) matches the cadence — every tick can ship if there's
-work; no-op ticks absorb slots when nothing's queued. You don't
-have to do anything.
+ticks/day. The daily commit ceiling (30 cloud-shipped commits
+/ 24h) sits 6 above the cadence cap, giving a little catch-up
+headroom for ticks that span firings; no-op ticks absorb slots
+when nothing's queued. You don't have to do anything.
 
 Each tick:
-1. Runs the daily commit-ceiling check (24 cloud commits / 24h).
+1. Runs the daily commit-ceiling check (30 cloud commits / 24h).
    If reached, exits 0 with a log note — no work this tick.
 2. Configures git as `github-actions[bot]`.
 3. Runs `/march` in cloud mode (skips `/oversight` and `/critique`).
@@ -205,28 +206,24 @@ git log --invert-grep --grep='Cloud-Run:' --oneline
 `git log --grep='Cloud-Run:'` is the canonical filter once the
 convention is in place.
 
-## Upgrading the model
+## Changing the model
 
-Default is Sonnet 4.6 because it's cheap-on-quota and fast enough
-for `/march`'s decision logic. To upgrade to Opus 4.7:
+Current default is Opus 4.7 (promoted 2026-05-12 from Sonnet 4.6
+to experiment with Opus quality on the autonomous tick). Opus is
+roughly 2x Sonnet's weight against the Max weekly cap, so watch
+`/cost` for a week of mixed usage.
 
-1. Watch your local `/cost` indicator for a week. Opus is roughly
-   2x Sonnet's weight against the Max weekly cap.
-2. If after a real week of mixed usage you've consumed <30% of
-   weekly cap, you have headroom for Opus.
-3. Edit `.github/workflows/march.yml`:
+To switch back to Sonnet 4.6 (cheap-on-quota, fast enough for
+`/march`'s decision logic), edit `.github/workflows/march.yml`:
 
-   ```yaml
-   claude_args: |
-     {
-       "model": "claude-opus-4-7"
-     }
-   ```
+```yaml
+claude_args: |
+  --model claude-sonnet-4-6
+  --dangerously-skip-permissions
+```
 
-4. Commit, push. Next tick uses Opus.
-
-If you ever hit weekly-cap pressure, drop back to Sonnet by
-reverting the model line. No other changes needed.
+Commit, push. Next tick uses the new model. No other changes
+needed.
 
 ## What the cloud agent will not do
 

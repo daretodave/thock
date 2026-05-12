@@ -75,7 +75,7 @@ export default async function TagPage({
   }))
 
   return (
-    <main className="flex-1">
+    <main id="main" className="flex-1">
       <JsonLd
         graph={[
           buildCollectionPageJsonLd({
@@ -113,11 +113,11 @@ export default async function TagPage({
             tagged {tag.name}.
           </p>
           <Link
-            href="/"
+            href="/tags"
             data-testid="tag-page-back-link"
             className="font-mono text-small uppercase tracking-[0.08em] text-text-3 hover:text-text"
           >
-            ← home
+            ← all tags
           </Link>
         </Stack>
       </Container>

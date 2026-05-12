@@ -2,7 +2,7 @@ import { Container, Stack } from '@thock/ui'
 
 export default function ArticleLoading() {
   return (
-    <main className="flex-1">
+    <main id="main" className="flex-1">
       <Container as="section" className="py-16">
       <Stack gap={5}>
         <span className="font-mono uppercase tracking-[0.12em] text-micro text-text-4">

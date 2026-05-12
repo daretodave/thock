@@ -67,7 +67,7 @@ export default async function ArticlePage({
   const related = getRelatedArticles(article, 4)
 
   return (
-    <main className="flex-1">
+    <main id="main" className="flex-1">
       <article>
       <JsonLd
         graph={[

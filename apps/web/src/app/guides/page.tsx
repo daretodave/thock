@@ -47,7 +47,7 @@ export default function GuidesPage(): ReactElement {
   )
 
   return (
-    <main className="flex-1">
+    <main id="main" className="flex-1">
       <JsonLd
         graph={[
           buildCollectionPageJsonLd({

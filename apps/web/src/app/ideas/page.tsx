@@ -65,7 +65,7 @@ export default function IdeasPage(): ReactElement {
   }))
 
   return (
-    <main className="flex-1">
+    <main id="main" className="flex-1">
       <JsonLd
         graph={[
           buildCollectionPageJsonLd({ name: TITLE, description: LEDE, path: PATH }),

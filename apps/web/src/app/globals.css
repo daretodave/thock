@@ -5,6 +5,38 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Skip-to-main-content link — WCAG 2.4.1 Bypass Blocks (A).
+ * Visually hidden at rest; revealed on keyboard focus so sighted
+ * keyboard users and screen-reader users can bypass the header. */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.skip-link:focus {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  z-index: 9999;
+  padding: 0.5rem 1rem;
+  background: var(--thock-bg);
+  color: var(--thock-text);
+  border: 2px solid var(--thock-accent);
+  border-radius: 4px;
+  font-family: var(--thock-mono);
+  font-size: var(--thock-small);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
 @layer base {
   html {
     color-scheme: dark;

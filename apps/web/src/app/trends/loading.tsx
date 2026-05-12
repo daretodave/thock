@@ -2,7 +2,7 @@ import { Container, Stack } from '@thock/ui'
 
 export default function TrendsLoading() {
   return (
-    <main className="flex-1">
+    <main id="main" className="flex-1">
       <Container as="header" className="py-12 sm:py-16">
         <Stack gap={4}>
           <span className="font-mono uppercase tracking-[0.12em] text-micro text-text-4">
