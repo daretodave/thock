@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="#d68a2b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — keycap materials compared, ABS vs PBT cross-sections side-by-side</title>
+
+  <!-- ────────────────────────────────────────────────────────────────────────
+       LAYOUT — two keycap cross-sections in side-profile, sharing one baseline:
+         baseline:        y = 555  (both caps seat here — wall-thickness contrast reads cleanly)
+         cap top:         y = 285  (both caps share the same outer height)
+         ABS cap (left):  centered at  x = 380, outer width 260, wall ~10px
+         PBT cap (right): centered at  x = 820, outer width 260, wall ~16px
+         labels:          y = 660  (small-caps, modest size, beneath each cap)
+       Single warm-ochre stroke throughout. No fills on cap bodies.
+  ──────────────────────────────────────────────────────────────────────── -->
+
+  <!-- Splash: low-alpha ochre wash anchoring the comparison band — family convention -->
+  <ellipse cx="600" cy="430" rx="500" ry="200" fill="#d68a2b" fill-opacity="0.09" stroke="none"/>
+
+  <!-- Baseline beneath the two caps — family rhythm anchor -->
+  <line x1="120" y1="555" x2="1080" y2="555" stroke-opacity="0.55"/>
+
+  <!-- Faint vertical guide ticks on the baseline — eight, family rhythm -->
+  <g stroke-opacity="0.35">
+    <line x1="120"  y1="555" x2="120"  y2="563"/>
+    <line x1="257"  y1="555" x2="257"  y2="563"/>
+    <line x1="394"  y1="555" x2="394"  y2="563"/>
+    <line x1="531"  y1="555" x2="531"  y2="563"/>
+    <line x1="669"  y1="555" x2="669"  y2="563"/>
+    <line x1="806"  y1="555" x2="806"  y2="563"/>
+    <line x1="943"  y1="555" x2="943"  y2="563"/>
+    <line x1="1080" y1="555" x2="1080" y2="563"/>
+  </g>
+
+  <!-- Faint horizontal reference at cap top — visual ruler for the comparison -->
+  <line x1="120" y1="285" x2="1080" y2="285" stroke-dasharray="3 6" stroke-opacity="0.22"/>
+
+  <!-- ── ABS CAP (LEFT) — thinner walls (~10 px), shiny top surface ─────────
+       Outer silhouette: a row-3 / OEM-ish profile shape, sides taper inward
+       slightly toward the top. Inner cavity walls drawn parallel to the
+       outer walls but offset inward by ~10 px (the canonical "thinner wall"
+       read). Cruciform stem hangs from the inner ceiling.
+
+       Outer outline corners:
+         top-left   (270, 285)
+         top-right  (490, 285)
+         base-right (510, 555)
+         base-left  (250, 555)
+   ─────────────────────────────────────────────────────────────────────── -->
+  <g>
+    <!-- Outer cap silhouette -->
+    <path d="
+      M 250 555
+      L 270 285
+      L 490 285
+      L 510 555
+      Z"/>
+
+    <!-- Top of cap — gentle dome curve (subtle scoop) -->
+    <path d="
+      M 270 285
+      Q 305 275 380 275
+      Q 455 275 490 285"/>
+
+    <!-- ── Inner cavity (thin-wall) ──
+         Inset ~10 px from each outer wall + ~10 px from the underside of the top.
+         This is the "thin walls" read for ABS.
+         Outer top runs roughly y=275..285; inner ceiling sits at y=295.
+         Outer base: y=555; inner cavity opens at y=555 (the cap is open at the bottom).
+         Side walls offset inward by 10px each. -->
+    <path d="
+      M 280 555
+      L 297 295
+      L 463 295
+      L 480 555"
+      stroke-opacity="0.6"/>
+
+    <!-- Cruciform stem — hangs from the inner ceiling, light strokes -->
+    <g stroke-opacity="0.7">
+      <!-- Stem column — small box, vertical strokes for the cross arms -->
+      <line x1="380" y1="295" x2="380" y2="365"/>
+      <line x1="370" y1="320" x2="390" y2="320"/>
+      <line x1="372" y1="365" x2="388" y2="365" stroke-opacity="0.5"/>
+    </g>
+
+    <!-- ── SHINE highlight on top surface ──
+         A short curved arc of dotted-outline strokes, sitting just inside the
+         top dome — reads as "gloss" / "shiny ABS surface."
+         Drawn in a stronger ochre stroke, dotted dash array. -->
+    <path d="
+      M 305 270
+      Q 345 260 410 262"
+      stroke="#d68a2b" stroke-width="2" stroke-dasharray="1 5" stroke-opacity="0.95"/>
+
+    <!-- A second, shorter inner-shine tick — subtle "specular" hint -->
+    <path d="
+      M 320 264
+      Q 345 258 380 258"
+      stroke="#d68a2b" stroke-width="1.5" stroke-dasharray="1 5" stroke-opacity="0.7"/>
+
+    <!-- Faint depth ticks at the corners of the cap (3D-from-side hint) -->
+    <line x1="250" y1="555" x2="256" y2="552" stroke-opacity="0.4"/>
+    <line x1="510" y1="555" x2="504" y2="552" stroke-opacity="0.4"/>
+
+    <!-- Wall-thickness annotation tick — small bracket on the left wall midspan -->
+    <g stroke-opacity="0.45" stroke-width="1.2">
+      <line x1="244" y1="430" x2="284" y2="430"/>
+      <line x1="244" y1="425" x2="244" y2="435"/>
+      <line x1="284" y1="425" x2="284" y2="435"/>
+    </g>
+  </g>
+
+  <!-- ── PBT CAP (RIGHT) — thicker walls (~16 px), matte top surface ────────
+       Same outer silhouette as the ABS cap so wall-thickness contrast reads
+       at-a-glance. Inner cavity walls offset inward by ~16 px (visibly more
+       material than the ABS twin). Cruciform stem hangs from inner ceiling.
+
+       Outer outline corners:
+         top-left   (710, 285)
+         top-right  (930, 285)
+         base-right (950, 555)
+         base-left  (690, 555)
+   ─────────────────────────────────────────────────────────────────────── -->
+  <g>
+    <!-- Outer cap silhouette — identical shape to the ABS cap -->
+    <path d="
+      M 690 555
+      L 710 285
+      L 930 285
+      L 950 555
+      Z"/>
+
+    <!-- Top of cap — same gentle dome -->
+    <path d="
+      M 710 285
+      Q 745 275 820 275
+      Q 895 275 930 285"/>
+
+    <!-- ── Inner cavity (thick-wall) ──
+         Inset ~16 px from each outer wall + ~16 px from the underside of the top.
+         This is the "thicker walls" read for PBT — more material visible. -->
+    <path d="
+      M 726 555
+      L 743 301
+      L 897 301
+      L 914 555"
+      stroke-opacity="0.6"/>
+
+    <!-- Cruciform stem — hangs from the inner ceiling -->
+    <g stroke-opacity="0.7">
+      <line x1="820" y1="301" x2="820" y2="365"/>
+      <line x1="810" y1="324" x2="830" y2="324"/>
+      <line x1="812" y1="365" x2="828" y2="365" stroke-opacity="0.5"/>
+    </g>
+
+    <!-- ── MATTE texture on top surface ──
+         A stippled / dashed band sitting just inside the top dome — reads as
+         "matte" / "textured PBT surface." Drawn as short evenly-spaced dashes
+         arcing along the top, in the same ochre. Distinctly different visual
+         language from the ABS shine arc — short-stipple vs long-curve.
+
+         Implemented as a row of short tick segments following the dome curve. -->
+    <g stroke="#d68a2b" stroke-opacity="0.9" stroke-width="2" stroke-linecap="round">
+      <line x1="745" y1="270" x2="751" y2="269"/>
+      <line x1="763" y1="266" x2="769" y2="265"/>
+      <line x1="781" y1="263" x2="787" y2="263"/>
+      <line x1="799" y1="261" x2="805" y2="261"/>
+      <line x1="817" y1="260" x2="823" y2="260"/>
+      <line x1="835" y1="261" x2="841" y2="261"/>
+      <line x1="853" y1="263" x2="859" y2="263"/>
+      <line x1="871" y1="265" x2="877" y2="266"/>
+      <line x1="889" y1="269" x2="895" y2="270"/>
+    </g>
+
+    <!-- A second, lower row of stipple ticks — the textured-surface band -->
+    <g stroke="#d68a2b" stroke-opacity="0.55" stroke-width="1.5" stroke-linecap="round">
+      <line x1="755" y1="278" x2="759" y2="278"/>
+      <line x1="775" y1="275" x2="779" y2="275"/>
+      <line x1="795" y1="273" x2="799" y2="273"/>
+      <line x1="815" y1="272" x2="819" y2="272"/>
+      <line x1="835" y1="272" x2="839" y2="272"/>
+      <line x1="855" y1="273" x2="859" y2="273"/>
+      <line x1="875" y1="275" x2="879" y2="275"/>
+    </g>
+
+    <!-- Faint depth ticks at the corners of the cap -->
+    <line x1="690" y1="555" x2="696" y2="552" stroke-opacity="0.4"/>
+    <line x1="950" y1="555" x2="944" y2="552" stroke-opacity="0.4"/>
+
+    <!-- Wall-thickness annotation tick — wider bracket than ABS, on the left wall midspan -->
+    <g stroke-opacity="0.45" stroke-width="1.2">
+      <line x1="678" y1="430" x2="730" y2="430"/>
+      <line x1="678" y1="425" x2="678" y2="435"/>
+      <line x1="730" y1="425" x2="730" y2="435"/>
+    </g>
+  </g>
+
+  <!-- ── LABELS — small-caps stroke text below each cap ─────────────────────
+       System sans-serif via ui-sans-serif stack. Modest ~30px size, wide
+       letter-spacing for an intentional, didactic feel. Same warm ochre as
+       the strokes — a single splash of color, end-to-end. -->
+  <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="30" fill="#d68a2b" stroke="none" letter-spacing="6" text-anchor="middle" font-weight="500">
+    <text x="383" y="660">ABS</text>
+    <text x="823" y="660">PBT</text>
+  </g>
+
+  <!-- Tiny height-callout ticks beneath each label — relative-scale read at a glance -->
+  <g stroke-opacity="0.45">
+    <line x1="345" y1="685" x2="415" y2="685"/>
+    <line x1="785" y1="685" x2="855" y2="685"/>
+  </g>
+
+  <!-- Quiet didactic left-edge layer ticks (family convention) — aligned to
+       cap-top, baseline, and the label band -->
+  <g stroke-opacity="0.3">
+    <line x1="85" y1="285" x2="100" y2="285"/>
+    <line x1="85" y1="555" x2="100" y2="555"/>
+    <line x1="85" y1="660" x2="100" y2="660"/>
+  </g>
+
+  <!-- Brass-bronze theme dot — small ornamental anchor (family convention).
+       Tucked at the upper-right margin. -->
+  <circle cx="1148" cy="184" r="3" fill="#b88a2e" stroke="#b88a2e"/>
+</svg>

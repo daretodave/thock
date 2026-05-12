@@ -1,0 +1,17 @@
+{
+  "slug": "keycap-materials-compared",
+  "pillar": "guides",
+  "subSection": "keycaps",
+  "subject": "Side-by-side cross-section comparison of two keycap materials — ABS (thinner walls, shinier top surface) on the left; PBT (thicker walls, matte top surface) on the right. Both caps share a baseline so the wall-thickness contrast reads at-a-glance; cruciform stems hang from each inner ceiling to mark the shapes as keycap cross-sections rather than generic silhouettes.",
+  "palette": {
+    "hue": "warm ochre",
+    "hex": "#d68a2b",
+    "background": "transparent (sits cleanly on the dark-mode charcoal #1d1f24 and on light paper)"
+  },
+  "motif": "two keycap cross-sections, ABS vs PBT, side-by-side",
+  "renderedAt": "2026-05-12T00:00:00.000Z",
+  "renderedBy": "brander",
+  "notes": "Single-splash warm-ochre line drawing — wall-thickness contrast (10 px ABS vs 16 px PBT inset from outer wall) carries the comparison; ABS top reads shiny via a long dotted-arc highlight, PBT top reads matte via a stipple-dash band. No interior fills, family-convention 2 px stroke weight, brass-bronze ornamental dot at upper-right per the hero set.",
+  "canvas": "1200x750",
+  "article": "/article/keycap-materials-compared"
+}
