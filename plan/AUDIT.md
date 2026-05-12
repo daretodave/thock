@@ -280,12 +280,23 @@
 >
 > **Resolved (2026-05-12):** Shipped "Keyboard firmware, compared: QMK, VIA, and VIAL" at `/article/keyboard-firmware-compared`, publishedAt 2026-04-29 (gap-fill midpoint of the 04-28→04-30 gap, closest 2-day gap to today). Fills the **firmware** guideSection — the third (and previously empty) enum value, joining `switches` + `keycaps`. Guides pillar now at **4 of 8**. `879bc51`
 
-### [4.5] guides pillar — 4 of 8 article quota (needs 4 more)
+### [x] [4.5] guides pillar — 4 of 8 article quota (needs 4 more) — addressed in ace19be (closes #66)
 - category: content-gaps
 - impact: 6 (Guides is the fifth pillar; 4/8 still half of quota)
 - ease: 5 (one new article per tick via /ship-content)
 - rule: Rule 1 — pillar quota
-- shortfall: 4 articles (current 4, quota 8)
+- shortfall: 4 articles (current 4, quota 8) → now 5 of 8 (1 shipped)
+- next: /ship-content → guides pillar article (topic from /iterate audit or gap heuristic)
+> Continuation of the guides-pillar queue. Bias multiplier 1.5× applies → effective score 4.5. Drains one row per /ship-content tick; retire when guides reaches 8 articles.
+>
+> **Resolved (2026-05-12):** Shipped "Sound dampening, compared: case foam, plate foam, PE foam, and the tape mod" at `/article/sound-dampening-compared`, publishedAt 2026-04-27 (gap-fill midpoint of the 04-26 → 04-28 gap, closest 2-day gap to today). Fills the **modding** guideSection — the fourth (and previously empty) enum value, completing the four-section coverage (switches + keycaps + firmware + modding). Guides pillar now at **5 of 8**. `ace19be`
+
+### [4.5] guides pillar — 5 of 8 article quota (needs 3 more)
+- category: content-gaps
+- impact: 6 (Guides is the fifth pillar; 5/8 still below quota)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — pillar quota
+- shortfall: 3 articles (current 5, quota 8)
 - next: /ship-content → guides pillar article (topic from /iterate audit or gap heuristic)
 > Continuation of the guides-pillar queue. Bias multiplier 1.5× applies → effective score 4.5. Drains one row per /ship-content tick; retire when guides reaches 8 articles.
 
