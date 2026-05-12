@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — keyboard firmware compared, top-down 75% layout with QMK / VIA / VIAL callouts</title>
+
+  <!-- Splash: low-alpha ochre wash arching over the keyboard, sitting behind the three callout labels.
+       Anchors the comparison band the same way the keycap-profiles ellipse anchors that row. -->
+  <ellipse cx="600" cy="220" rx="500" ry="120" fill="oklch(0.72 0.13 75 / 0.10)" stroke="none"/>
+
+  <!-- Faint baseline beneath the keyboard — family rhythm anchor -->
+  <line x1="90" y1="690" x2="1110" y2="690" stroke-opacity="0.55"/>
+
+  <!-- Eight vertical guide ticks on the baseline — family rhythm -->
+  <g stroke-opacity="0.35">
+    <line x1="90"   y1="690" x2="90"   y2="698"/>
+    <line x1="236"  y1="690" x2="236"  y2="698"/>
+    <line x1="381"  y1="690" x2="381"  y2="698"/>
+    <line x1="527"  y1="690" x2="527"  y2="698"/>
+    <line x1="673"  y1="690" x2="673"  y2="698"/>
+    <line x1="818"  y1="690" x2="818"  y2="698"/>
+    <line x1="964"  y1="690" x2="964"  y2="698"/>
+    <line x1="1110" y1="690" x2="1110" y2="698"/>
+  </g>
+
+  <!-- ── KEYBOARD SILHOUETTE — top-down 75% layout ─────────────────────────────
+       Outer case ~1020 wide × 290 tall, centered, seated low-mid canvas.
+       Five rows: F-row + four alpha rows. Right edge carries the 75%'s tell —
+       a tight arrow cluster plus a column of nav keys. -->
+
+  <!-- Outer case profile: rounded rectangle -->
+  <rect x="90" y="370" width="1020" height="290" rx="14" ry="14"/>
+
+  <!-- Inset bezel hint -->
+  <rect x="106" y="386" width="988" height="258" rx="9" ry="9" stroke-opacity="0.35"/>
+
+  <!-- Row 1 (F-row) — small dots, slightly recessed -->
+  <g stroke-opacity="0.55">
+    <circle cx="158" cy="416" r="2.5"/>
+    <circle cx="248" cy="416" r="2.5"/>
+    <circle cx="338" cy="416" r="2.5"/>
+    <circle cx="428" cy="416" r="2.5"/>
+    <circle cx="518" cy="416" r="2.5"/>
+    <circle cx="608" cy="416" r="2.5"/>
+    <circle cx="698" cy="416" r="2.5"/>
+    <circle cx="788" cy="416" r="2.5"/>
+    <circle cx="878" cy="416" r="2.5"/>
+    <circle cx="968" cy="416" r="2.5"/>
+  </g>
+
+  <!-- Rows 2–5 (alpha block) — slightly larger dots -->
+  <g stroke-opacity="0.7">
+    <!-- Row 2 (number row) -->
+    <circle cx="158" cy="466" r="3"/>
+    <circle cx="248" cy="466" r="3"/>
+    <circle cx="338" cy="466" r="3"/>
+    <circle cx="428" cy="466" r="3"/>
+    <circle cx="518" cy="466" r="3"/>
+    <circle cx="608" cy="466" r="3"/>
+    <circle cx="698" cy="466" r="3"/>
+    <circle cx="788" cy="466" r="3"/>
+    <circle cx="878" cy="466" r="3"/>
+    <circle cx="968" cy="466" r="3"/>
+
+    <!-- Row 3 (top alpha) -->
+    <circle cx="158" cy="516" r="3"/>
+    <circle cx="248" cy="516" r="3"/>
+    <circle cx="338" cy="516" r="3"/>
+    <circle cx="428" cy="516" r="3"/>
+    <circle cx="518" cy="516" r="3"/>
+    <circle cx="608" cy="516" r="3"/>
+    <circle cx="698" cy="516" r="3"/>
+    <circle cx="788" cy="516" r="3"/>
+    <circle cx="878" cy="516" r="3"/>
+    <circle cx="968" cy="516" r="3"/>
+
+    <!-- Row 4 (home row) -->
+    <circle cx="158" cy="566" r="3"/>
+    <circle cx="248" cy="566" r="3"/>
+    <circle cx="338" cy="566" r="3"/>
+    <circle cx="428" cy="566" r="3"/>
+    <circle cx="518" cy="566" r="3"/>
+    <circle cx="608" cy="566" r="3"/>
+    <circle cx="698" cy="566" r="3"/>
+    <circle cx="788" cy="566" r="3"/>
+    <circle cx="878" cy="566" r="3"/>
+    <circle cx="968" cy="566" r="3"/>
+
+    <!-- Row 5 (bottom row) -->
+    <circle cx="158" cy="616" r="3"/>
+    <circle cx="248" cy="616" r="3"/>
+    <circle cx="338" cy="616" r="3"/>
+    <circle cx="428" cy="616" r="3"/>
+    <circle cx="518" cy="616" r="3"/>
+    <circle cx="608" cy="616" r="3"/>
+    <circle cx="698" cy="616" r="3"/>
+    <circle cx="788" cy="616" r="3"/>
+    <circle cx="878" cy="616" r="3"/>
+    <circle cx="968" cy="616" r="3"/>
+  </g>
+
+  <!-- Arrow cluster (75%'s tell) — bottom-right -->
+  <g stroke-opacity="0.85">
+    <rect x="990" y="566" width="22" height="22" rx="3" ry="3"/>
+    <rect x="962" y="594" width="22" height="22" rx="3" ry="3"/>
+    <rect x="990" y="594" width="22" height="22" rx="3" ry="3"/>
+    <rect x="1018" y="594" width="22" height="22" rx="3" ry="3"/>
+  </g>
+
+  <!-- Right-side nav column (Del/PgUp/PgDn) — completes the 75% silhouette -->
+  <g stroke-opacity="0.6">
+    <rect x="1042" y="464" width="48" height="18" rx="3" ry="3"/>
+    <rect x="1042" y="490" width="48" height="18" rx="3" ry="3"/>
+    <rect x="1042" y="516" width="48" height="18" rx="3" ry="3"/>
+  </g>
+
+  <!-- ── THREE LAYER-CLUSTER MARKERS on the keyboard ─────────────────────────
+       Three rounded-rectangle "layer regions" overlaid on three clusters of
+       keys — each represents the region a given firmware controls / configures.
+       Drawn in the ochre splash hue with low-alpha fill + 2.5px outline,
+       so they sit clearly atop the warm-grey silhouette without overpowering it.
+       Each region is connected upward to its label by a dashed lead line. -->
+
+  <!-- QMK cluster — left third (rows 2–5, cols 1–3) — 'compile-and-flash, the root layer' -->
+  <g stroke="oklch(0.72 0.13 75)" stroke-width="2.5">
+    <rect x="128" y="446" width="240" height="190" rx="6" ry="6" fill="oklch(0.72 0.13 75 / 0.07)"/>
+  </g>
+
+  <!-- VIA cluster — middle third (rows 2–5, cols 4–6) — 'live remap, the working layer' -->
+  <g stroke="oklch(0.72 0.13 75)" stroke-width="2.5">
+    <rect x="398" y="446" width="240" height="190" rx="6" ry="6" fill="oklch(0.72 0.13 75 / 0.07)"/>
+  </g>
+
+  <!-- VIAL cluster — right third (rows 2–5, cols 7–10 + arrow + nav) — 'open variant, the device-stored layer' -->
+  <g stroke="oklch(0.72 0.13 75)" stroke-width="2.5">
+    <rect x="668" y="446" width="424" height="190" rx="6" ry="6" fill="oklch(0.72 0.13 75 / 0.07)"/>
+  </g>
+
+  <!-- ── LEAD LINES — faint dashed connectors from each label down to its cluster ─── -->
+  <g stroke="oklch(0.72 0.13 75)" stroke-width="1.5" stroke-dasharray="3 6" stroke-opacity="0.7">
+    <!-- QMK label (cx=248) → cluster top (cx=248, y=446) -->
+    <line x1="248" y1="262" x2="248" y2="446"/>
+    <!-- VIA label (cx=518) → cluster top (cx=518, y=446) -->
+    <line x1="518" y1="262" x2="518" y2="446"/>
+    <!-- VIAL label (cx=880) → cluster top (cx=880, y=446) -->
+    <line x1="880" y1="262" x2="880" y2="446"/>
+  </g>
+
+  <!-- Small lead-line landing ticks where each dashed lead meets the cluster -->
+  <g stroke="oklch(0.72 0.13 75)" stroke-opacity="0.85">
+    <line x1="240" y1="446" x2="256" y2="446"/>
+    <line x1="510" y1="446" x2="526" y2="446"/>
+    <line x1="872" y1="446" x2="888" y2="446"/>
+  </g>
+
+  <!-- ── THREE FIRMWARE CALLOUT LABELS ────────────────────────────────────────
+       Drawn as paths (no font dependency) — letterforms are small monospace-feel
+       glyphs built from straight segments and a single round 'O' / 'Q' bowl,
+       sized for ~36 px cap-height. Each label sits inside a rounded-rect chip
+       at the top of the canvas. All in the ochre splash hue. -->
+
+  <!-- ── QMK chip ─────────────────────────────────────────────────────────── -->
+  <g stroke="oklch(0.72 0.13 75)" stroke-width="2.5">
+    <!-- Chip outline -->
+    <rect x="148" y="186" width="200" height="64" rx="6" ry="6" fill="oklch(0.72 0.13 75 / 0.06)"/>
+
+    <!-- Letter Q (cx=188, cy=218, r=18) — circle + tail -->
+    <circle cx="188" cy="218" r="18"/>
+    <line x1="200" y1="230" x2="208" y2="238"/>
+
+    <!-- Letter M (x: 222→262, y: 200→236) — four-segment M -->
+    <polyline points="222,236 222,200 242,222 262,200 262,236"/>
+
+    <!-- Letter K (x: 278→308, y: 200→236) — vertical + two diagonals -->
+    <line x1="278" y1="200" x2="278" y2="236"/>
+    <line x1="278" y1="218" x2="308" y2="200"/>
+    <line x1="278" y1="218" x2="308" y2="236"/>
+  </g>
+
+  <!-- ── VIA chip ─────────────────────────────────────────────────────────── -->
+  <g stroke="oklch(0.72 0.13 75)" stroke-width="2.5">
+    <!-- Chip outline -->
+    <rect x="438" y="186" width="160" height="64" rx="6" ry="6" fill="oklch(0.72 0.13 75 / 0.06)"/>
+
+    <!-- Letter V (x: 462→494, y: 200→236) -->
+    <polyline points="462,200 478,236 494,200"/>
+
+    <!-- Letter I (x: 510, y: 200→236) — single vertical with serif ticks -->
+    <line x1="510" y1="200" x2="510" y2="236"/>
+    <line x1="502" y1="200" x2="518" y2="200" stroke-opacity="0.85"/>
+    <line x1="502" y1="236" x2="518" y2="236" stroke-opacity="0.85"/>
+
+    <!-- Letter A (x: 532→564, y: 200→236) — triangle with crossbar -->
+    <polyline points="532,236 548,200 564,236"/>
+    <line x1="538" y1="222" x2="558" y2="222"/>
+  </g>
+
+  <!-- ── VIAL chip ────────────────────────────────────────────────────────── -->
+  <g stroke="oklch(0.72 0.13 75)" stroke-width="2.5">
+    <!-- Chip outline (wider — 4 letters) -->
+    <rect x="780" y="186" width="200" height="64" rx="6" ry="6" fill="oklch(0.72 0.13 75 / 0.06)"/>
+
+    <!-- Letter V (x: 800→832) -->
+    <polyline points="800,200 816,236 832,200"/>
+
+    <!-- Letter I (x: 850) -->
+    <line x1="850" y1="200" x2="850" y2="236"/>
+    <line x1="842" y1="200" x2="858" y2="200" stroke-opacity="0.85"/>
+    <line x1="842" y1="236" x2="858" y2="236" stroke-opacity="0.85"/>
+
+    <!-- Letter A (x: 870→902) -->
+    <polyline points="870,236 886,200 902,236"/>
+    <line x1="876" y1="222" x2="896" y2="222"/>
+
+    <!-- Letter L (x: 916→944) -->
+    <polyline points="916,200 916,236 944,236"/>
+  </g>
+
+  <!-- ── ROLE SUB-LABELS — small descriptors under each chip ─────────────────
+       Hand-drawn tick-bar abstractions: three small horizontal bars under each
+       chip suggesting "and here's what this one does." Keeps the piece editorial,
+       avoids a wall of small type, reads at any size. -->
+  <g stroke="oklch(0.72 0.13 75)" stroke-opacity="0.45" stroke-width="1.5">
+    <!-- QMK: compile-and-flash → 3 short bars -->
+    <line x1="216" y1="270" x2="280" y2="270"/>
+    <line x1="208" y1="282" x2="288" y2="282"/>
+    <line x1="222" y1="294" x2="274" y2="294"/>
+
+    <!-- VIA: live remap → 3 short bars -->
+    <line x1="484" y1="270" x2="552" y2="270"/>
+    <line x1="476" y1="282" x2="560" y2="282"/>
+    <line x1="492" y1="294" x2="544" y2="294"/>
+
+    <!-- VIAL: open variant → 3 short bars -->
+    <line x1="848" y1="270" x2="912" y2="270"/>
+    <line x1="840" y1="282" x2="920" y2="282"/>
+    <line x1="854" y1="294" x2="906" y2="294"/>
+  </g>
+
+  <!-- Focal accent — small ochre dot at the centre of the middle (VIA) cluster's
+       top edge, mirroring family-convention focal cursor placement -->
+  <circle cx="518" cy="446" r="6" fill="oklch(0.72 0.13 75 / 0.95)" stroke="oklch(0.72 0.13 75)"/>
+  <circle cx="518" cy="446" r="11" stroke="oklch(0.72 0.13 75)" stroke-opacity="0.4" fill="none"/>
+
+  <!-- Quiet didactic left-edge layer ticks (family convention) — aligned to chip-row,
+       cluster-row top, keyboard baseline, and the canvas baseline -->
+  <g stroke-opacity="0.3">
+    <line x1="55" y1="218" x2="70" y2="218"/>
+    <line x1="55" y1="370" x2="70" y2="370"/>
+    <line x1="55" y1="446" x2="70" y2="446"/>
+    <line x1="55" y1="660" x2="70" y2="660"/>
+  </g>
+
+  <!-- Brass-bronze theme dot — family-conventional ornamental anchor, top-right margin -->
+  <circle cx="1148" cy="92" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

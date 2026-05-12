@@ -1,0 +1,86 @@
+---
+slug: keyboard-firmware-compared
+title: "Keyboard firmware, compared: QMK, VIA, and VIAL"
+lede: "A first-time builder finishes a beautiful board, sits down to remap right-shift to enter, and discovers the firmware question is the one nobody warned them about. The catalog has three serious answers and an opinion about each."
+author: thock
+pillar: guides
+tags: [firmware, qmk, via, vial, beginner]
+publishedAt: '2026-04-29T13:00:00.000Z'
+updatedAt: null
+heroImage: /hero-art/keyboard-firmware-compared.svg
+heroImageAlt: "Top-down silhouette of a 75% mechanical keyboard drawn in a single warm-grey stroke on warm paper, with three small ochre callout chips floating above the keys labeled QMK, VIA, and VIAL — each connected by a dashed lead line to a distinct cluster of keys it governs."
+featured: false
+popularityScore: 47
+guideSection: 'firmware'
+mentionedParts: []
+---
+
+A first-time builder spends a month on the board itself. They tune the switches, film the housings if they are that kind of builder, get the stabilizers quiet, find a keycap set that does what they want, and at the end of all of it they have a $400 keyboard that types beautifully and has a right-shift key where they want enter to be. They open a forum thread to ask how to remap it and the first reply tells them to edit `keymap.c` and run `qmk compile`. The second reply tells them to install VIA. The third reply tells them both of those are wrong and they should be using VIAL. It is one in the morning and they just want to type a return.
+
+Firmware is the layer most builders never touch and never need to think about. The board's microcontroller scans the matrix, decides which keys are pressed, and sends USB keycodes to the computer. That is the whole job. But the moment a builder wants to do anything beyond the layout the vendor shipped — remap a key, add a function layer, write a macro, set up a one-shot modifier — they meet the firmware ecosystem, and the ecosystem has three serious answers. This guide is for that builder. It will not turn anyone into a firmware engineer. It will tell a reader what to learn, in what order, for the kind of board they actually own.
+
+<Callout type="info" title="Cheat sheet">
+  Three firmwares cover almost every modern wired enthusiast board. <Mono>QMK</Mono> is the open-source C codebase the whole ecosystem is built on — total control, real learning curve. <Mono>VIA</Mono> is a desktop app that talks to a QMK-flashed board over USB so remaps happen instantly with no recompile. <Mono>VIAL</Mono> is a fork of that idea with more features and a more open ecosystem. Most builders should use whichever one their board shipped with.
+</Callout>
+
+## What firmware actually is
+
+Every mechanical keyboard has a small microcontroller — historically an ATmega32U4, now more commonly an RP2040 or an STM32 — and a C program flashed onto it. That program reads the matrix (which row-and-column intersection is being pressed), maps the result through a keymap, and sends the resulting keycode out over USB. The firmware is that program. Stock factory keyboards ship with proprietary firmware the buyer never sees. Enthusiast boards almost always ship with one of the three open-source firmwares below, partly because the codebases are mature and partly because the community expects to be able to remap things.
+
+Most builders interact with firmware exactly twice in a board's life: once when they decide what to remap, and once when something breaks and they need to reflash. The job of this guide is to make the first interaction easier. The second one is a separate article.
+
+## QMK
+
+QMK is the foundation. It started as a fork of an earlier firmware for the original Ergodox in 2015 and has since absorbed nearly every enthusiast keyboard the hobby produces — the supported-boards directory in the QMK repo has thousands of entries. It is an open-source C codebase. A builder who wants a custom keymap edits a C file, runs <Mono>qmk compile</Mono> with a flag identifying their board, and gets back a `.hex` or `.uf2` file that they then flash to the microcontroller with <Mono>qmk flash</Mono> or a vendor tool.
+
+The strength of QMK is that it does everything. Layers, tap-dance, Mod-Tap (a key that is shift when held and a letter when tapped), Combos (two keys pressed together producing a third action), Leader sequences, one-shot modifiers, dynamic macros, RGB control, OLED rendering, rotary-encoder handling, split-keyboard communication — all of it is in the codebase, all of it is documented, and all of it composes. A QMK keymap is a small C program, and what a builder can express in a small C program is more or less unbounded.
+
+The cost is the development loop. Every keymap change is a rebuild and a reflash. The build toolchain is a real toolchain — a Python wrapper around `avr-gcc` or `arm-none-eabi-gcc` with a `make`-based dependency graph — and getting it set up on a fresh machine is a thirty-minute exercise on a good day. The documentation is excellent, but it is reference documentation; the QMK docs assume the reader can read C and is comfortable in a terminal. A typist who has never compiled software before and just wants to swap caps-lock and escape will find QMK the slowest path to a one-line change.
+
+Who QMK is for: builders who want behavior that doesn't exist in a GUI — custom Combos, leader sequences with branching outcomes, OLED screens rendering live data, keymaps that change based on which host computer is connected. Also builders who already write code and find the C honest rather than intimidating. For everyone else, the rest of this guide is the answer.
+
+## VIA
+
+VIA is the layer that makes QMK usable without a compiler. It is a desktop application — Electron, runs on macOS, Windows, and Linux — that connects to a VIA-aware QMK firmware over raw HID and lets the builder edit the keymap in a GUI. Drag a keycode to a new position, the firmware applies it live, no rebuild, no reflash, the new keymap is persisted to the board's EEPROM. The first time a builder remaps a key in VIA after a week of fighting QMK's build system, it feels like cheating.
+
+The strengths are speed and approachability. Remapping is instant. The interface shows a visual representation of the board and a palette of keycodes, including the QMK-extended set — layer keys, Mod-Tap, basic macros, system keys, mouse keys. A typist who has never written a line of code can remap a board confidently in fifteen minutes. The board's keymap travels with it; plug the keyboard into a different computer and the remaps are still there because they live on the keyboard, not on the host.
+
+The weaknesses are real but bounded. VIA can only do what the firmware on the board supports, and that firmware has to ship with VIA hooks compiled in — a vendor choice made at manufacture time, not something the buyer turns on later. The macro support is shallower than QMK proper; there is no Combo editor, no tap-dance editor, no Leader sequences. The keycode set in the GUI is a subset of QMK's. The application itself is functional rather than friendly; the layout feels like a developer tool, because it is one. And historically there was a board-approval process — VIA maintained a registry of supported boards via a `via.json` definition, and getting a new board into that registry was a gated process that not every vendor pursued.
+
+Who VIA is for: builders whose board shipped with VIA support and who only want to remap, not to invent new behavior. The overwhelming majority of Keychron, Mode, GMMK, and Drop boards ship VIA-ready, and for the typist who just wants caps-lock to be control, that is the whole answer.
+
+## VIAL
+
+VIAL is what happens when someone forks VIA and decides to fix the limits. It is the same general idea — GUI desktop app, no recompile, edits land on the board's flash over USB — but with a noticeably richer feature set and a more permissive ecosystem. VIAL supports tap-dance editing in the GUI. It supports Combos. It supports more layers (up to 16 versus VIA's 4). It supports encoder mappings and QMK-style macro editing with full keycode support. The keymap state lives in dynamic keymaps in flash, which means the firmware doesn't need to be recompiled for every structural change the way a QMK-only keymap would.
+
+The other meaningful difference is the ecosystem model. VIA's `via.json` registry required vendor cooperation; VIAL's equivalent does not. Any board's firmware can ship with VIAL support without going through an approval gate. The practical result is that smaller designers and one-off builds are far more likely to ship VIAL-ready than VIA-ready, and the list of VIAL-supported boards has grown sharply over the last two years.
+
+The weaknesses are smaller-scale than VIA's. The installed base of VIAL-shipping boards is smaller than VIA's because VIA had a five-year head start, so a randomly picked off-the-shelf hotswap is still more likely to be VIA-ready than VIAL-ready. The desktop app on macOS occasionally hits WebHID driver friction depending on browser version when using the web client; the native app sidesteps that but is one more install. And because VIAL covers more of QMK's surface, the GUI is correspondingly busier — a builder who only wants to swap two keys may find VIA's narrower toolset less intimidating.
+
+Who VIAL is for: builders who want VIA's ease plus most of QMK's power-user features — Combos, tap-dance, deeper macros — without learning to compile firmware. For someone building a custom 40% or a split, VIAL is usually the sweet spot.
+
+## Choosing without overthinking it
+
+The decision is shorter than the catalog suggests.
+
+If the board shipped with VIA or VIAL pre-flashed, use whatever it shipped with. Switching firmware on a working board is rarely worth the friction unless a specific feature the builder wants is missing — and even then, the switch usually means reflashing the firmware from scratch, which is its own afternoon.
+
+If the board is a hotswap and the builder will only ever swap one or two keys, VIA is enough and probably already installed. If the builder wants real layers, tap-dance, or macros that do more than type a fixed string, VIAL is the right target. If the builder wants behavior that no GUI exposes — a Leader sequence, an OLED that renders the current layer, a keymap that branches on host OS — they are in QMK territory and the rest of the article will not save them from learning C.
+
+The honest framing is that QMK is the floor everything else stands on. VIA and VIAL are both QMK with a friendlier face. A builder who chooses VIA today and outgrows it next year is not starting over; the board is already running QMK, and the upgrade path is real.
+
+## Compatibility, honestly
+
+<Callout type="warning" title="Firmware support is a vendor choice, not a buyer choice">
+  A keyboard ships with whichever firmware family the vendor compiled in. Switching from one to another on an already-built board can mean a simple reflash on a modern RP2040 board with bootloader access, or it can mean unsoldering a Pro Micro and swapping the daughter board on an older design. Always check the vendor's product page before the build, not after. A board that doesn't list VIA or VIAL support in the spec sheet probably doesn't have it, and "QMK-compatible" alone doesn't imply either GUI works out of the box.
+</Callout>
+
+The other compatibility note is wireless. QMK's wireless story has been historically weak — it supports a handful of Bluetooth modules but was never designed around them — and VIA and VIAL inherit that limitation. Wireless boards usually run a fourth firmware, ZMK, which is its own project with its own configuration model (YAML-and-devicetree rather than C-and-Make) and its own ecosystem. ZMK is out of scope for this guide; the short version is that a builder shopping for a wireless split should look at ZMK support specifically and not assume the QMK/VIA/VIAL trichotomy applies.
+
+A reader who lands here from a wired hotswap board can mostly forget about ZMK. A reader building a Corne or a Kyria for Bluetooth use should treat ZMK as the default and the three firmwares above as the wired-only answer.
+
+## Closing
+
+Firmware is the part of the hobby that looks technical from the outside and turns out to be, for most builders, an afternoon's worth of choices. The right move for almost everyone is to use the firmware the board shipped with, remap whatever needs remapping, and get on with the typing. The wrong move is to assume QMK is the default because it is the loudest voice in the ecosystem — most readers do not need a C compiler in their build pipeline, and reaching for one when a GUI would do is the sort of friction that turns a finished build into an unfinished one.
+
+Pick the firmware that matches the depth of remapping actually wanted. Live with it for a month. If the board grows out of VIA into VIAL, or out of VIAL into hand-rolled QMK, the path is open and the keymaps mostly travel. The thock house take: firmware is a tool, not a tribe, and the best one is whichever one stops being a problem fastest.

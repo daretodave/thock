@@ -64,6 +64,9 @@
     { "slug": "magnetic", "name": "Magnetic", "category": "switch" },
     { "slug": "firmware", "name": "Firmware", "category": "misc" },
     { "slug": "acoustic", "name": "Acoustic", "category": "misc" },
-    { "slug": "switch-films", "name": "Switch films", "category": "misc" }
+    { "slug": "switch-films", "name": "Switch films", "category": "misc" },
+    { "slug": "qmk", "name": "QMK", "category": "misc" },
+    { "slug": "via", "name": "VIA", "category": "misc" },
+    { "slug": "vial", "name": "VIAL", "category": "misc" }
   ]
 }
