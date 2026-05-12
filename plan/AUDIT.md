@@ -247,14 +247,16 @@
 >
 > **Resolved (2026-05-12):** Shipped "Spring swaps: what swapping the spring actually changes" (`apps/web/src/content/articles/spring-swaps-explained.mdx`, ~1490 words, publishedAt 2026-05-11 via gap-fill). Ideas pillar now at **8 of 8 — quota met.** This row retires the ideas-pillar queue; deep-dives (3/8) and guides (2/8) remain in the content-gap queue.
 
-### [5.25] deep-dives pillar — 3 of 8 article quota (needs 5 more)
+### [x] [5.25] deep-dives pillar — 3 of 8 article quota (needs 5 more) — addressed in 3813c4d (closes #63)
 - category: content-gaps
 - impact: 7 (Deep Dives is the fourth-most-prominent pillar; long-form inventory at 3/8 is thin)
 - ease: 5 (one new article per tick via /ship-content)
 - rule: Rule 1 — pillar quota
-- shortfall: 5 articles (current 3, quota 8)
+- shortfall: 5 articles (current 3, quota 8) → now 4 of 8 (1 shipped)
 - next: /ship-content → deep-dives pillar article (topic from /iterate audit or gap heuristic)
 > Filed 2026-05-11 by phase 25 (content queue prime). Bias multiplier 1.5× applies → effective score 5.25. Drains one row per /ship-content tick; retire when deep-dives reaches 8 articles.
+>
+> **Resolved (2026-05-12):** Shipped "Plate materials, explained: what brass, FR4, POM, and aluminium actually change" at `/article/plate-materials-explained`, publishedAt 2026-05-09 (gap-fill midpoint closest to today). Deep-dives pillar now at **4 of 8**. `3813c4d`
 
 ### [4.5] guides pillar — 2 of 8 article quota (needs 6 more)
 - category: content-gaps
