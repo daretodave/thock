@@ -1,0 +1,14 @@
+{
+  "prompt": "Side-profile silhouette comparison of the four major keycap profiles (Cherry, OEM, SA, MT3) stacked horizontally in a row on a warm-paper field — a single stroke study reading left-to-right as ascending height with characteristic top shapes (Cherry low + subtle dome, OEM a notch taller with a touch more dome, SA tall + spherical, MT3 tall + deeply scooped dish + angular sides). Small-caps mono labels under each profile and a single ochre splash accent picking out each cap's defining surface.",
+  "style": {
+    "splash_hue": "ochre",
+    "splash_color": "#d99d2b",
+    "stroke_color": "#9c9286",
+    "stroke_weight": "2px",
+    "canvas": "1200x750",
+    "background": "warm-paper / transparent"
+  },
+  "agent": "brander",
+  "date": "2026-05-12",
+  "article": "/article/keycap-profiles-compared"
+}

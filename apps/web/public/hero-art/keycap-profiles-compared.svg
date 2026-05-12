@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="#9c9286" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — keycap profiles compared, side-profile silhouettes of Cherry, OEM, SA, MT3</title>
+
+  <!-- Splash: warm-ochre wash behind the row, low-alpha, anchors the comparison band -->
+  <ellipse cx="600" cy="455" rx="440" ry="160" fill="#d99d2b" fill-opacity="0.10" stroke="none"/>
+
+  <!-- Baseline beneath the row of keycaps — family rhythm anchor -->
+  <line x1="120" y1="555" x2="1080" y2="555" stroke-opacity="0.55"/>
+
+  <!-- Faint vertical guide ticks on the baseline — eight, matching the family rhythm -->
+  <g stroke-opacity="0.35">
+    <line x1="120"  y1="555" x2="120"  y2="563"/>
+    <line x1="257"  y1="555" x2="257"  y2="563"/>
+    <line x1="394"  y1="555" x2="394"  y2="563"/>
+    <line x1="531"  y1="555" x2="531"  y2="563"/>
+    <line x1="669"  y1="555" x2="669"  y2="563"/>
+    <line x1="806"  y1="555" x2="806"  y2="563"/>
+    <line x1="943"  y1="555" x2="943"  y2="563"/>
+    <line x1="1080" y1="555" x2="1080" y2="555.5"/>
+  </g>
+
+  <!-- Faint horizontal reference line at SA/MT3 max height — visual ruler for the comparison -->
+  <line x1="120" y1="425" x2="1080" y2="425" stroke-dasharray="3 6" stroke-opacity="0.25"/>
+
+  <!-- ── CHERRY PROFILE ────────────────────────────────────────────────────
+       Lowest of the four. Slightly sculpted top, gentle dome. Modest height.
+       Base sits centered around x=285. Width ~140. Height ~70.
+       Top is row-3 sculpt: a very subtle scoop with a low dome. -->
+  <g>
+    <!-- Footprint rectangle (base of the cap, sits on baseline) -->
+    <!-- Sides taper inward slightly toward the top, family-shape for a keycap silhouette -->
+    <path d="
+      M 215 555
+      L 230 485
+      L 340 485
+      L 355 555
+      Z"/>
+    <!-- Top of the cap — gentle scooped curve with a low dome -->
+    <path d="
+      M 230 485
+      Q 250 478 285 478
+      Q 320 478 340 485" stroke="#9c9286"/>
+    <!-- Subtle dome highlight stroke on top — accent in ochre -->
+    <path d="
+      M 245 482
+      Q 285 472 325 482" stroke="#d99d2b" stroke-width="2.5"/>
+    <!-- Faint front-face indication (a slight depth tick to suggest a 3D shape from side view) -->
+    <line x1="215" y1="555" x2="220" y2="552" stroke-opacity="0.4"/>
+    <line x1="355" y1="555" x2="350" y2="552" stroke-opacity="0.4"/>
+  </g>
+
+  <!-- ── OEM PROFILE ───────────────────────────────────────────────────────
+       A notch taller than Cherry. Similar slight scoop but more dome height.
+       Centered around x=435. Height ~85. -->
+  <g>
+    <path d="
+      M 365 555
+      L 380 470
+      L 490 470
+      L 505 555
+      Z"/>
+    <!-- Top of the cap — gentle scoop with slightly more pronounced dome -->
+    <path d="
+      M 380 470
+      Q 402 460 435 460
+      Q 468 460 490 470" stroke="#9c9286"/>
+    <!-- Dome accent in ochre, taller than Cherry's -->
+    <path d="
+      M 395 466
+      Q 435 452 475 466" stroke="#d99d2b" stroke-width="2.5"/>
+    <line x1="365" y1="555" x2="370" y2="552" stroke-opacity="0.4"/>
+    <line x1="505" y1="555" x2="500" y2="552" stroke-opacity="0.4"/>
+  </g>
+
+  <!-- ── SA PROFILE ────────────────────────────────────────────────────────
+       Tall, spherical top, deeply sculpted — the vintage typewriter silhouette.
+       Centered around x=585. Height ~125. Top is a clear spherical dome.
+       Sides angle inward more steeply (sculpted row 3 with high relief). -->
+  <g>
+    <!-- Base + steeply angled sides — narrows substantially toward the top -->
+    <path d="
+      M 515 555
+      L 540 430
+      L 630 430
+      L 655 555
+      Z"/>
+    <!-- Spherical top — pronounced dome curve -->
+    <path d="
+      M 540 430
+      Q 560 408 585 405
+      Q 610 408 630 430" stroke="#9c9286"/>
+    <!-- Inner spherical highlight stroke — the dish/dome interior -->
+    <path d="
+      M 552 425
+      Q 585 415 618 425" stroke="#9c9286" stroke-opacity="0.55"/>
+    <!-- Ochre accent — emphasizes the spherical crown -->
+    <path d="
+      M 548 418
+      Q 585 392 622 418" stroke="#d99d2b" stroke-width="2.5"/>
+    <line x1="515" y1="555" x2="522" y2="550" stroke-opacity="0.4"/>
+    <line x1="655" y1="555" x2="648" y2="550" stroke-opacity="0.4"/>
+  </g>
+
+  <!-- ── MT3 PROFILE ───────────────────────────────────────────────────────
+       Tall like SA but with a deeper scooped (dish-like) top and pronounced
+       angular sides. Centered around x=735. Height ~120.
+       The top is a deep concave dish — emphasize the scoop. -->
+  <g>
+    <!-- Angular, slab-sided base — straighter walls than SA, slightly inward taper -->
+    <path d="
+      M 665 555
+      L 685 435
+      L 785 435
+      L 805 555
+      Z"/>
+    <!-- Top rim of the cap — angular shoulders at top edges -->
+    <path d="
+      M 685 435
+      L 700 432
+      L 770 432
+      L 785 435" stroke="#9c9286"/>
+    <!-- Deep scooped dish — the defining MT3 silhouette element -->
+    <path d="
+      M 700 432
+      Q 735 472 770 432" stroke="#9c9286"/>
+    <!-- Ochre accent traces the dish floor — pulls the eye to the scoop -->
+    <path d="
+      M 706 437
+      Q 735 470 764 437" stroke="#d99d2b" stroke-width="2.5"/>
+    <!-- Inner dish shadow line — faint, suggests depth -->
+    <path d="
+      M 712 442
+      Q 735 462 758 442" stroke="#9c9286" stroke-opacity="0.45"/>
+    <line x1="665" y1="555" x2="672" y2="550" stroke-opacity="0.4"/>
+    <line x1="805" y1="555" x2="798" y2="550" stroke-opacity="0.4"/>
+  </g>
+
+  <!-- ── LABELS — small-caps stroke text below each profile ──────────────── -->
+  <g font-family="ui-monospace, 'JetBrains Mono', monospace" font-size="18" fill="#9c9286" stroke="none" letter-spacing="2.5" text-anchor="middle">
+    <text x="285" y="605">CHERRY</text>
+    <text x="435" y="605">OEM</text>
+    <text x="585" y="605">SA</text>
+    <text x="735" y="605">MT3</text>
+  </g>
+
+  <!-- Tiny height-callout ticks beneath each label — relative scale read at a glance -->
+  <g stroke-opacity="0.45">
+    <line x1="260" y1="625" x2="310" y2="625"/>
+    <line x1="410" y1="625" x2="460" y2="625"/>
+    <line x1="560" y1="625" x2="610" y2="625"/>
+    <line x1="710" y1="625" x2="760" y2="625"/>
+  </g>
+
+  <!-- Quiet left-edge layer ticks aligned to the cap-top of each profile (didactic guide) -->
+  <g stroke-opacity="0.3">
+    <line x1="85" y1="478" x2="100" y2="478"/>
+    <line x1="85" y1="460" x2="100" y2="460"/>
+    <line x1="85" y1="405" x2="100" y2="405"/>
+    <line x1="85" y1="432" x2="100" y2="432"/>
+    <line x1="85" y1="555" x2="100" y2="555"/>
+  </g>
+
+  <!-- Focal accent — small ochre cursor at the SA spherical crown, the visual high-point -->
+  <circle cx="585" cy="405" r="6" fill="#d99d2b" fill-opacity="0.9" stroke="#d99d2b"/>
+  <circle cx="585" cy="405" r="11" stroke="#d99d2b" stroke-opacity="0.4"/>
+
+  <!-- Brass-bronze theme dot — small ornamental anchor (family convention).
+       Tucked at the upper-right margin. -->
+  <circle cx="1148" cy="184" r="3" fill="#b88a2e" stroke="#b88a2e"/>
+</svg>
