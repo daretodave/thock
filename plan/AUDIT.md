@@ -258,14 +258,25 @@
 >
 > **Resolved (2026-05-12):** Shipped "Plate materials, explained: what brass, FR4, POM, and aluminium actually change" at `/article/plate-materials-explained`, publishedAt 2026-05-09 (gap-fill midpoint closest to today). Deep-dives pillar now at **4 of 8**. `3813c4d`
 
-### [4.5] guides pillar — 2 of 8 article quota (needs 6 more)
+### [x] [4.5] guides pillar — 2 of 8 article quota (needs 6 more) — addressed in 34e6216 (closes #64)
 - category: content-gaps
 - impact: 6 (Guides is the fifth pillar; 2/8 is the most severe absolute shortfall)
 - ease: 5 (one new article per tick via /ship-content)
 - rule: Rule 1 — pillar quota
-- shortfall: 6 articles (current 2, quota 8)
+- shortfall: 6 articles (current 2, quota 8) → now 3 of 8 (1 shipped)
 - next: /ship-content → guides pillar article (topic from /iterate audit or gap heuristic)
 > Filed 2026-05-11 by phase 25 (content queue prime). Bias multiplier 1.5× applies → effective score 4.5. Drains one row per /ship-content tick; retire when guides reaches 8 articles.
+>
+> **Resolved (2026-05-12):** Shipped "Keycap profiles, compared: Cherry, OEM, SA, and MT3" at `/article/keycap-profiles-compared`, publishedAt 2026-05-03 (gap-fill midpoint of the largest 2-day gap closest to today). Fills the **keycaps** guideSection (third sub-section, joining `switches` + `modding`). Guides pillar now at **3 of 8**. `34e6216`
+
+### [4.5] guides pillar — 3 of 8 article quota (needs 5 more)
+- category: content-gaps
+- impact: 6 (Guides is the fifth pillar; 3/8 still well below quota)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — pillar quota
+- shortfall: 5 articles (current 3, quota 8)
+- next: /ship-content → guides pillar article (topic from /iterate audit or gap heuristic)
+> Continuation of the guides-pillar queue. Bias multiplier 1.5× applies → effective score 4.5. Drains one row per /ship-content tick; retire when guides reaches 8 articles.
 
 ### [x] [MED] PageStub routes flake under parallel e2e load (React #418 hydration) — self-resolved via phase 16
 > Filed 2026-05-09. Original prediction was "self-resolves before phase 16 ships" because phase 16's polish scope replaced every PageStub with a real route. Flake persisted briefly after `f3e5bac` shipped (one source of hydration mismatch was the formatter TZ issue, partially patched at `dfa5596`); the SECOND hydration source the TZ patch couldn't reach lived inside the PageStub itself and went away when every dynamic-data route got its own real page.
