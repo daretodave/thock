@@ -269,12 +269,23 @@
 >
 > **Resolved (2026-05-12):** Shipped "Keycap profiles, compared: Cherry, OEM, SA, and MT3" at `/article/keycap-profiles-compared`, publishedAt 2026-05-03 (gap-fill midpoint of the largest 2-day gap closest to today). Fills the **keycaps** guideSection (third sub-section, joining `switches` + `modding`). Guides pillar now at **3 of 8**. `34e6216`
 
-### [4.5] guides pillar — 3 of 8 article quota (needs 5 more)
+### [x] [4.5] guides pillar — 3 of 8 article quota (needs 5 more) — addressed in 879bc51 (closes #65)
 - category: content-gaps
 - impact: 6 (Guides is the fifth pillar; 3/8 still well below quota)
 - ease: 5 (one new article per tick via /ship-content)
 - rule: Rule 1 — pillar quota
-- shortfall: 5 articles (current 3, quota 8)
+- shortfall: 5 articles (current 3, quota 8) → now 4 of 8 (1 shipped)
+- next: /ship-content → guides pillar article (topic from /iterate audit or gap heuristic)
+> Continuation of the guides-pillar queue. Bias multiplier 1.5× applies → effective score 4.5. Drains one row per /ship-content tick; retire when guides reaches 8 articles.
+>
+> **Resolved (2026-05-12):** Shipped "Keyboard firmware, compared: QMK, VIA, and VIAL" at `/article/keyboard-firmware-compared`, publishedAt 2026-04-29 (gap-fill midpoint of the 04-28→04-30 gap, closest 2-day gap to today). Fills the **firmware** guideSection — the third (and previously empty) enum value, joining `switches` + `keycaps`. Guides pillar now at **4 of 8**. `879bc51`
+
+### [4.5] guides pillar — 4 of 8 article quota (needs 4 more)
+- category: content-gaps
+- impact: 6 (Guides is the fifth pillar; 4/8 still half of quota)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — pillar quota
+- shortfall: 4 articles (current 4, quota 8)
 - next: /ship-content → guides pillar article (topic from /iterate audit or gap heuristic)
 > Continuation of the guides-pillar queue. Bias multiplier 1.5× applies → effective score 4.5. Drains one row per /ship-content tick; retire when guides reaches 8 articles.
 
