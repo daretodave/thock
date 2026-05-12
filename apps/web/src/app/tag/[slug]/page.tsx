@@ -113,11 +113,11 @@ export default async function TagPage({
             tagged {tag.name}.
           </p>
           <Link
-            href="/"
+            href="/tags"
             data-testid="tag-page-back-link"
             className="font-mono text-small uppercase tracking-[0.08em] text-text-3 hover:text-text"
           >
-            ← home
+            ← all tags
           </Link>
         </Stack>
       </Container>

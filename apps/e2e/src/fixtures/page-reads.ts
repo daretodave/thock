@@ -165,6 +165,14 @@ export const pageReads: Record<string, PageRead> = {
     pattern: '/sources',
     ...html([{ kind: 'h1-matches', pattern: /where we got the facts/i }]),
   },
+  '/tags': {
+    pattern: '/tags',
+    ...html([
+      // Phase 28: tags index groups all tags by category; H1 is "All tags".
+      { kind: 'h1-matches', pattern: /all tags/i },
+      { kind: 'min-link-count', selector: 'a[data-testid="tag-chip"]', min: 5 },
+    ]),
+  },
   '/article/[slug]': {
     pattern: '/article/[slug]',
     ...html([
