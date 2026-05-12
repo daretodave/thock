@@ -1,0 +1,27 @@
+{
+  "generated_by": "brander",
+  "agent": "brander",
+  "engine": "handcrafted-svg",
+  "at": "2026-05-12T00:00:00.000Z",
+  "createdAt": "2026-05-12T00:00:00.000Z",
+  "commit": "5d66f52ef2a069a1c8e66a4e029d645dccab32fb",
+  "kind": "custom",
+  "for": "article-hero",
+  "type": "article-hero",
+  "articleSlug": "spring-swaps-explained",
+  "slug": "spring-swaps-explained",
+  "pillar": "ideas",
+  "subject": "mechanical switch cross-section with spring as the focal element",
+  "motif": "switch-cross-section-spring-focal",
+  "splashHue": "coral",
+  "splashColor": "coral",
+  "splashHex": "#ef6a4a",
+  "canvas": "1200x750",
+  "source": "handcrafted — MX-style exploded switch cross-section with coral helical spring",
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": ["JetBrains Mono"],
+  "outputs": [
+    "apps/web/public/hero-art/spring-swaps-explained.svg"
+  ],
+  "warnings": []
+}

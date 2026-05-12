@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.32 0.012 250)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — mechanical switch cross-section with spring as the focal element</title>
+
+  <!-- ================================================================
+       Canvas: 1200 × 750   Stroke: 2px deep slate   Fill: none (line art)
+       Splash: coral        #ef6a4a (oklch(0.69 0.18 30))
+       Neutral: deep slate  oklch(0.32 0.012 250) ≈ #4a4f57
+                (works on dark charcoal AND on warm paper)
+       Layout (exploded cross-section, top-to-bottom, centered x=600):
+         Top housing     y  90 – 250   (lighter stroke, outline only)
+         [gap]           y 250 – 290
+         Stem            y 130 – 470   (neutral, partially behind/inside)
+         SPRING          y 290 – 600   (coral, FOCAL — large + dominant)
+         Bottom housing  y 470 – 640   (lighter stroke, outline only)
+         Baseplate / PCB y 640 – 680
+       ================================================================ -->
+
+  <!-- Soft coral wash behind the spring zone, very low opacity glow halo
+       — gives the focal element atmospheric presence at thumbnail size -->
+  <ellipse cx="600" cy="445" rx="240" ry="200"
+    fill="#ef6a4a" fill-opacity="0.07" stroke="none"/>
+
+  <!-- ── EXPLODE GUIDE LINES (very faint, suggest cross-section) ───── -->
+  <g stroke-dasharray="4 8" stroke-opacity="0.18">
+    <line x1="300" y1="270" x2="900" y2="270"/>
+    <line x1="300" y1="620" x2="900" y2="620"/>
+  </g>
+
+  <!-- ── TOP HOUSING (neutral, lighter weight) ─────────────────────── -->
+  <g stroke-opacity="0.55" stroke-width="1.6">
+    <!-- Outer dome profile -->
+    <path d="
+      M 440 250
+      L 440 150
+      Q 440 90 510 90
+      L 690 90
+      Q 760 90 760 150
+      L 760 250
+      Z"/>
+    <!-- Stem slot on top face -->
+    <path d="M 560 90 L 640 90 L 640 110 L 560 110 Z"/>
+    <!-- LED notch -->
+    <path d="M 440 175 L 420 175 L 420 200 L 440 200"/>
+    <!-- Inner cavity walls (cut-away hint) -->
+    <line x1="478" y1="110" x2="478" y2="250" stroke-opacity="0.30"/>
+    <line x1="722" y1="110" x2="722" y2="250" stroke-opacity="0.30"/>
+    <!-- Retaining clip ears -->
+    <path d="M 440 215 L 426 215 L 426 235 L 440 235"/>
+    <path d="M 760 215 L 774 215 L 774 235 L 760 235"/>
+    <!-- Bottom rim (where the explode separates) -->
+    <line x1="440" y1="250" x2="760" y2="250" stroke-opacity="0.70"/>
+  </g>
+
+  <!-- ── STEM (neutral, behind/through the spring) ─────────────────── -->
+  <g stroke-opacity="0.50" stroke-width="1.6">
+    <!-- Cruciform head visible at very top -->
+    <path d="
+      M 578 130
+      L 622 130
+      L 622 145
+      L 632 145
+      L 632 158
+      L 568 158
+      L 568 145
+      L 578 145
+      Z"/>
+    <!-- Stem upper body (inside top housing) -->
+    <rect x="572" y="158" width="56" height="112" rx="2"/>
+    <!-- Centre detail line -->
+    <line x1="600" y1="166" x2="600" y2="262" stroke-opacity="0.40"/>
+    <!-- Stem rails -->
+    <line x1="572" y1="196" x2="558" y2="196"/>
+    <line x1="572" y1="226" x2="558" y2="226"/>
+    <line x1="628" y1="196" x2="642" y2="196"/>
+    <line x1="628" y1="226" x2="642" y2="226"/>
+    <!-- Stem pole / pin that the spring rides on, descending through the spring's interior.
+         Drawn dashed where it would be hidden behind the coral spring coils to keep the
+         spring visually on top. -->
+    <line x1="600" y1="270" x2="600" y2="470" stroke-dasharray="3 6" stroke-opacity="0.32"/>
+    <!-- Stem foot / seat at base -->
+    <ellipse cx="600" cy="470" rx="14" ry="4" stroke-opacity="0.45"/>
+  </g>
+
+  <!-- ── SPRING (the focal element — coral, large, dominant) ──────── -->
+  <!-- Design notes:
+       The spring is rendered as a helical coil. To read clearly as a spring
+       at thumbnail size we use:
+         • a generous radius (rx ~ 90)
+         • 10 visible turns spaced ~30px apart
+         • each coil = an ellipse arc (front-of-coil) PLUS a dashed back-of-coil
+           arc to read as a 3D helix
+         • thicker stroke (3px) on the front arcs so the spring outweighs the housing
+         • coral fill at very low opacity to add mass
+  -->
+  <g stroke="#ef6a4a" fill="none">
+
+    <!-- Outer envelope cylinder (very faint, frames the coil mass) -->
+    <g stroke-opacity="0.18" stroke-width="1.5">
+      <line x1="510" y1="300" x2="510" y2="590"/>
+      <line x1="690" y1="300" x2="690" y2="590"/>
+    </g>
+
+    <!-- Top cap / end coil (slightly tightened, as real springs are) -->
+    <ellipse cx="600" cy="300" rx="90" ry="14"
+      stroke="#ef6a4a" stroke-width="3" stroke-opacity="0.95"
+      fill="#ef6a4a" fill-opacity="0.08"/>
+
+    <!-- Helical coils. Each turn:
+           • front arc:  bottom half of an ellipse  (solid, thick)
+           • back arc:   top half of an ellipse 15px lower (dashed, thinner)
+         centers descend in 30px steps, coil radius rx=90, ry=14. -->
+
+    <!-- Coil 1  centre y=330 -->
+    <path d="M 510 330 A 90 14 0 0 0 690 330"
+      stroke-width="3" stroke-opacity="0.95"/>
+    <path d="M 510 345 A 90 14 0 0 1 690 345"
+      stroke-width="1.6" stroke-opacity="0.55" stroke-dasharray="5 5"/>
+
+    <!-- Coil 2  centre y=360 -->
+    <path d="M 510 360 A 90 14 0 0 0 690 360"
+      stroke-width="3" stroke-opacity="0.95"/>
+    <path d="M 510 375 A 90 14 0 0 1 690 375"
+      stroke-width="1.6" stroke-opacity="0.55" stroke-dasharray="5 5"/>
+
+    <!-- Coil 3  centre y=390 -->
+    <path d="M 510 390 A 90 14 0 0 0 690 390"
+      stroke-width="3" stroke-opacity="0.95"/>
+    <path d="M 510 405 A 90 14 0 0 1 690 405"
+      stroke-width="1.6" stroke-opacity="0.55" stroke-dasharray="5 5"/>
+
+    <!-- Coil 4  centre y=420 -->
+    <path d="M 510 420 A 90 14 0 0 0 690 420"
+      stroke-width="3" stroke-opacity="0.95"/>
+    <path d="M 510 435 A 90 14 0 0 1 690 435"
+      stroke-width="1.6" stroke-opacity="0.55" stroke-dasharray="5 5"/>
+
+    <!-- Coil 5  centre y=450 -->
+    <path d="M 510 450 A 90 14 0 0 0 690 450"
+      stroke-width="3" stroke-opacity="0.95"/>
+    <path d="M 510 465 A 90 14 0 0 1 690 465"
+      stroke-width="1.6" stroke-opacity="0.55" stroke-dasharray="5 5"/>
+
+    <!-- Coil 6  centre y=480 -->
+    <path d="M 510 480 A 90 14 0 0 0 690 480"
+      stroke-width="3" stroke-opacity="0.95"/>
+    <path d="M 510 495 A 90 14 0 0 1 690 495"
+      stroke-width="1.6" stroke-opacity="0.55" stroke-dasharray="5 5"/>
+
+    <!-- Coil 7  centre y=510 -->
+    <path d="M 510 510 A 90 14 0 0 0 690 510"
+      stroke-width="3" stroke-opacity="0.95"/>
+    <path d="M 510 525 A 90 14 0 0 1 690 525"
+      stroke-width="1.6" stroke-opacity="0.55" stroke-dasharray="5 5"/>
+
+    <!-- Coil 8  centre y=540 -->
+    <path d="M 510 540 A 90 14 0 0 0 690 540"
+      stroke-width="3" stroke-opacity="0.95"/>
+    <path d="M 510 555 A 90 14 0 0 1 690 555"
+      stroke-width="1.6" stroke-opacity="0.55" stroke-dasharray="5 5"/>
+
+    <!-- Coil 9  centre y=570 -->
+    <path d="M 510 570 A 90 14 0 0 0 690 570"
+      stroke-width="3" stroke-opacity="0.95"/>
+    <path d="M 510 585 A 90 14 0 0 1 690 585"
+      stroke-width="1.6" stroke-opacity="0.55" stroke-dasharray="5 5"/>
+
+    <!-- Bottom cap / end coil (tightened, seats on bottom housing post) -->
+    <ellipse cx="600" cy="600" rx="90" ry="14"
+      stroke="#ef6a4a" stroke-width="3" stroke-opacity="0.95"
+      fill="#ef6a4a" fill-opacity="0.08"/>
+
+    <!-- Soft top-edge bloom on the spring — adds visual weight, reads at thumbnail -->
+    <ellipse cx="600" cy="300" rx="90" ry="14"
+      stroke="#ef6a4a" stroke-opacity="0.20" stroke-width="9" fill="none"/>
+  </g>
+
+  <!-- ── BOTTOM HOUSING (neutral, lighter weight) ──────────────────── -->
+  <g stroke-opacity="0.55" stroke-width="1.6">
+    <!-- Outer shell -->
+    <path d="
+      M 440 470
+      L 440 605
+      Q 440 640 480 640
+      L 720 640
+      Q 760 640 760 605
+      L 760 470
+      Z"/>
+    <!-- Top rim of bottom housing -->
+    <line x1="440" y1="470" x2="760" y2="470" stroke-opacity="0.70"/>
+    <!-- Inner well (stem channel) -->
+    <path d="M 540 470 L 660 470 L 660 525 L 540 525 Z" stroke-opacity="0.30"/>
+    <!-- Centre post (spring seat) -->
+    <circle cx="600" cy="600" r="7" stroke-opacity="0.55"/>
+    <!-- PCB pin contacts -->
+    <circle cx="500" cy="615" r="4.5" fill="oklch(0.32 0.012 250)" fill-opacity="0.55"/>
+    <circle cx="700" cy="615" r="4.5" fill="oklch(0.32 0.012 250)" fill-opacity="0.55"/>
+    <!-- Bottom rail tabs -->
+    <path d="M 440 500 L 426 500 L 426 520 L 440 520"/>
+    <path d="M 760 500 L 774 500 L 774 520 L 760 520"/>
+  </g>
+
+  <!-- ── BASEPLATE / PCB hint ──────────────────────────────────────── -->
+  <g stroke-opacity="0.30" stroke-width="1.4">
+    <line x1="380" y1="660" x2="820" y2="660"/>
+    <line x1="395" y1="668" x2="805" y2="668" stroke-opacity="0.18"/>
+  </g>
+
+  <!-- ── MARGIN LABELS (very subtle, neutral; spring label in coral) ── -->
+  <g font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace"
+     font-size="11" fill="oklch(0.32 0.012 250)" fill-opacity="0.42"
+     text-anchor="end" letter-spacing="0.04em" stroke="none">
+    <text x="400" y="170">top</text>
+    <text x="400" y="183">housing</text>
+    <text x="400" y="555">bottom</text>
+    <text x="400" y="568">housing</text>
+  </g>
+
+  <!-- Spring label — coral, slightly larger / heavier, anchoring the focal -->
+  <text x="800" y="448"
+    font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace"
+    font-size="13" fill="#ef6a4a" fill-opacity="0.92"
+    letter-spacing="0.06em" text-anchor="start" stroke="none">spring</text>
+
+  <!-- Tiny coral leader from label to spring's right envelope -->
+  <g stroke="#ef6a4a" stroke-width="1.4" stroke-opacity="0.78">
+    <line x1="700" y1="445" x2="788" y2="445"/>
+    <circle cx="700" cy="445" r="2.5" fill="#ef6a4a" stroke="none"/>
+  </g>
+
+  <!-- ── SUBTLE MEASUREMENT TICKS on left margin ──────────────────── -->
+  <g stroke-opacity="0.18">
+    <line x1="320" y1="90" x2="332" y2="90"/>
+    <line x1="320" y1="250" x2="332" y2="250"/>
+    <line x1="320" y1="300" x2="332" y2="300"/>
+    <line x1="320" y1="600" x2="332" y2="600"/>
+    <line x1="320" y1="640" x2="332" y2="640"/>
+  </g>
+</svg>
