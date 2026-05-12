@@ -302,12 +302,23 @@
 >
 > **Resolved (2026-05-12):** Shipped "Mounting styles, compared: gasket, top-mount, tray, and integrated plate" at `/article/mounting-styles-compared`, publishedAt 2026-04-25 (gap-fill midpoint of the 04-24 → 04-26 gap, closest 2-day gap to today). Fills out the **modding** guideSection (joining `sound-dampening-compared`), and complements the four existing comparison-style guides. Guides pillar now at **6 of 8**. `46fed09`
 
-### [4.5] guides pillar — 6 of 8 article quota (needs 2 more)
+### [x] [4.5] guides pillar — 6 of 8 article quota (needs 2 more) — addressed in 14ec217 (closes #68)
 - category: content-gaps
 - impact: 6 (Guides is the fifth pillar; 6/8 still below quota)
 - ease: 5 (one new article per tick via /ship-content)
 - rule: Rule 1 — pillar quota
-- shortfall: 2 articles (current 6, quota 8)
+- shortfall: 2 articles (current 6, quota 8) → now 7 of 8 (1 shipped)
+- next: /ship-content → guides pillar article (topic from /iterate audit or gap heuristic)
+> Continuation of the guides-pillar queue. Bias multiplier 1.5× applies → effective score 4.5. Drains one row per /ship-content tick; retire when guides reaches 8 articles.
+>
+> **Resolved (2026-05-12):** Shipped "Keycap materials, compared: ABS, PBT, and the rest" at `/article/keycap-materials-compared`, publishedAt 2026-04-23 (gap-fill midpoint of the 04-22 → 04-24 gap, closest 2-day gap to today). Fills out the **keycaps** guideSection (joining `keycap-profiles-compared` — together they cover the two big keycap-buying axes: shape and material). Guides pillar now at **7 of 8**. `14ec217`
+
+### [4.5] guides pillar — 7 of 8 article quota (needs 1 more)
+- category: content-gaps
+- impact: 6 (Guides is the fifth pillar; 7/8 just below quota)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — pillar quota
+- shortfall: 1 article (current 7, quota 8)
 - next: /ship-content → guides pillar article (topic from /iterate audit or gap heuristic)
 > Continuation of the guides-pillar queue. Bias multiplier 1.5× applies → effective score 4.5. Drains one row per /ship-content tick; retire when guides reaches 8 articles.
 
