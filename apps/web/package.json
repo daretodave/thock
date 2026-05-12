@@ -23,6 +23,7 @@
     "@thock/seo": "workspace:*",
     "@thock/tokens": "workspace:*",
     "@thock/ui": "workspace:*",
+    "@vercel/analytics": "^2.0.1",
     "minisearch": "^7.2.0",
     "next": "^15.0.3",
     "next-mdx-remote": "^6.0.0",

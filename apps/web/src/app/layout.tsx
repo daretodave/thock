@@ -3,6 +3,7 @@ import { Newsreader, IBM_Plex_Sans, JetBrains_Mono } from 'next/font/google'
 import { Header } from '@/components/ui/Header'
 import { Footer } from '@/components/ui/Footer'
 import { GoogleTagManager } from '@/components/analytics/GoogleTagManager'
+import { VercelAnalytics } from '@/components/analytics/VercelAnalytics'
 import { siteConfig } from '@thock/seo'
 import './globals.css'
 
@@ -61,6 +62,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         {children}
         <Footer />
+        <VercelAnalytics />
       </body>
     </html>
   )
