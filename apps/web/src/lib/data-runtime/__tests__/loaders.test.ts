@@ -9,6 +9,7 @@ import {
   getAllTags,
   getTagBySlug,
   getActiveGroupBuys,
+  getAllClosedGroupBuys,
   getAllGroupBuys,
   getLatestTrendSnapshot,
   manifestGeneratedAt,
@@ -70,6 +71,27 @@ describe('data-runtime adapter', () => {
     const active = getActiveGroupBuys(futureRef)
     for (const g of active) {
       expect(['closed', 'shipped']).not.toContain(g.status)
+    }
+  })
+
+  it('past group buys includes closed/shipped + lapsed-live, sorted endDate desc', () => {
+    // Pick a reference date far in the future so every record qualifies as past.
+    const farFuture = new Date('2099-12-31T00:00:00Z')
+    const past = getAllClosedGroupBuys(farFuture)
+    expect(past.length).toBeGreaterThanOrEqual(1)
+    expect(past.length).toBe(getAllGroupBuys().length)
+    for (let i = 1; i < past.length; i++) {
+      expect(
+        past[i - 1]!.endDate.localeCompare(past[i]!.endDate),
+      ).toBeGreaterThanOrEqual(0)
+    }
+  })
+
+  it('past group buys excludes future-dated live buys', () => {
+    const pastRef = new Date('2000-01-01T00:00:00Z')
+    const past = getAllClosedGroupBuys(pastRef)
+    for (const g of past) {
+      expect(['closed', 'shipped']).toContain(g.status)
     }
   })
 

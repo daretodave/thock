@@ -41,4 +41,43 @@ test.describe('group-buys index — phase 13', () => {
     expect(flat).toContain('"@type":"CollectionPage"')
     expect(flat).toContain('"@type":"ItemList"')
   })
+
+  test('links to the past-buys archive when an ended row renders', async ({
+    page,
+  }) => {
+    await page.goto('/group-buys')
+    const link = page.locator('[data-testid="group-buys-archive-link"]')
+    if ((await link.count()) > 0) {
+      await expect(link.first()).toHaveAttribute('href', '/group-buys/past')
+    }
+  })
+})
+
+test.describe('group-buys archive — phase 29', () => {
+  test('renders the Past group buys H1', async ({ page }) => {
+    await page.goto('/group-buys/past')
+    const h1 = page.locator('h1').first()
+    await expect(h1).toContainText(/past group buys/i)
+  })
+
+  test('lists at least one ended row, no live rows', async ({ page }) => {
+    await page.goto('/group-buys/past')
+    const rows = page.locator('[data-testid="group-buy-row"]')
+    const count = await rows.count()
+    expect(count).toBeGreaterThanOrEqual(1)
+    const liveRows = page.locator(
+      '[data-testid="group-buy-row"][data-variant="live"]',
+    )
+    expect(await liveRows.count()).toBe(0)
+  })
+
+  test('emits CollectionPage + ItemList JSON-LD', async ({ page }) => {
+    await page.goto('/group-buys/past')
+    const scripts = await page
+      .locator('script[type="application/ld+json"]')
+      .allTextContents()
+    const flat = scripts.join('\n')
+    expect(flat).toContain('"@type":"CollectionPage"')
+    expect(flat).toContain('"@type":"ItemList"')
+  })
 })

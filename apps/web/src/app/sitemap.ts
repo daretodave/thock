@@ -30,6 +30,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: canonicalUrl('/deep-dives'), lastModified: now, priority: 0.7 },
     { url: canonicalUrl('/guides'), lastModified: now, priority: 0.7 },
     { url: canonicalUrl('/group-buys'), lastModified: now, priority: 0.6 },
+    {
+      url: canonicalUrl('/group-buys/past'),
+      lastModified: now,
+      priority: 0.5,
+    },
     { url: canonicalUrl('/about'), lastModified: now, priority: 0.4 },
     { url: canonicalUrl('/newsletter'), lastModified: now, priority: 0.4 },
     { url: canonicalUrl('/search'), lastModified: now, priority: 0.4 },

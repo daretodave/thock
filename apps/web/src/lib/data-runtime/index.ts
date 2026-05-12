@@ -109,6 +109,29 @@ export function getActiveGroupBuys(now: Date = new Date()): GroupBuy[] {
     .sort((a, b) => a.endDate.localeCompare(b.endDate))
 }
 
+/**
+ * Past group buys — every record that has ended, in any status.
+ * Mirrors `isEnded()` in `apps/web/src/app/group-buys/helpers.ts`:
+ * `status` of `closed` / `shipped`, OR `status === 'live'` with
+ * `endDate` strictly before today. Sorted endDate desc, name asc
+ * tie-break. No cap — the `/group-buys/past` archive shows the full
+ * history; the live `/group-buys` page keeps its own 6-row "Just
+ * closed" rail.
+ */
+export function getAllClosedGroupBuys(now: Date = new Date()): GroupBuy[] {
+  const today = now.toISOString().slice(0, 10)
+  return manifest.groupBuys
+    .filter((g) => {
+      if (g.status === 'closed' || g.status === 'shipped') return true
+      if (g.status === 'live' && g.endDate < today) return true
+      return false
+    })
+    .sort((a, b) => {
+      if (a.endDate !== b.endDate) return b.endDate.localeCompare(a.endDate)
+      return a.name.localeCompare(b.name)
+    })
+}
+
 export function getAllTrendSnapshots(): TrendSnapshot[] {
   return manifest.trends
 }

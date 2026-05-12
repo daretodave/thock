@@ -142,6 +142,17 @@ export const pageReads: Record<string, PageRead> = {
       },
     ]),
   },
+  '/group-buys/past': {
+    pattern: '/group-buys/past',
+    ...html([
+      { kind: 'h1-matches', pattern: /past group buys/i },
+      {
+        kind: 'min-link-count',
+        selector: '[data-testid="group-buy-row"]',
+        min: 1,
+      },
+    ]),
+  },
   '/about': {
     pattern: '/about',
     ...html([{ kind: 'h1-matches', pattern: /who we are/i }]),
