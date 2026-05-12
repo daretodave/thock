@@ -145,13 +145,16 @@
 - verify note: 409 e2e green parallel — no #418 flake this run.
 - source: browser
 
-### [LOW] /trends + all pillar landings — eyebrow `pillar · NN of 05` reads as mechanical sequence position
+### [x] [LOW] /trends + all pillar landings — eyebrow `pillar · NN of 05` reads as mechanical sequence position
+- addressed in: f3d4324 (this tick — iterate drain)
+- issue: #70
 - pass: 9 (commit 40b2e55)
 - viewport: desktop
 - category: voice
 - observation: The Trends pillar landing eyebrow reads `pillar · 02 of 05`. To a first-time reader this is mechanical — it implies pillars are ordered (they aren't, they're categories) and tells me which slot in a list I'm in rather than what kind of content this page hosts. Other site eyebrows describe content ("signature · trends tracker", "curated", section names). The pillar landings describe the navigation graph instead. The drift is consistent across pillars: /news shows `pillar · 01 of 05`, /trends `02 of 05`, /ideas `03 of 05`, /deep-dives and /guides similarly numbered.
 - evidence: `curl -s https://thock-coral.vercel.app/trends | grep -oE 'pillar · [0-9]+ of [0-9]+'` → `pillar · 02 of 05`. Same shape on /news (01 of 05) and /ideas (03 of 05).
-- suggested fix: replace the "NN of 05" sequence with a descriptive eyebrow on every pillar landing — e.g., simply `pillar · trends` (matching the breadcrumb idiom) or just the section name in caps. Probably one-line template edit in the shared pillar-landing eyebrow component. Cheap; high consistency win across 5 pages.
+- fix: replaced the default eyebrow template `pillar · ${PILLAR_NUMBER[pillar]}` with `pillar · ${pillar}` (the descriptive slug — matches the breadcrumb idiom). The dead `PILLAR_NUMBER` constant and `PILLARS` import dropped. PillarHero.test.tsx asserts the new slug form for `news`, `trends`, `deep-dives` (the hyphenated edge case) AND that no `of 0?5` substring remains (regression guard against an accidental revert). The 4 pillar e2e specs (news/ideas/deep-dives/guides) flip from `NN of 05` to the slug form. Tracker's `signature · trends tracker` override path is untouched.
+- verify note: 541 e2e green on serial worker.
 - source: browser
 
 ### [MED] / — every "By pillar" home tile dated 2026-05-10 (bulk-publish artifact reads as fake editorial cadence)
