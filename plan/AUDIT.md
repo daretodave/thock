@@ -236,7 +236,7 @@
 > Continuation of the ideas-pillar queue. Bias multiplier 1.5× applies → effective score 5.25. Drains one row per tick; retire when ideas reaches 8 articles.
 > **Resolved (2026-05-11):** shipped "Stabilizer servicing: the one step most builders skip" at `/article/stabilizer-servicing-guide`, publishedAt 2026-04-20 (gap-fill). `3d1d7af`
 
-### [5.25] ideas pillar — 7 of 8 article quota (needs 1 more)
+### [x] [5.25] ideas pillar — 7 of 8 article quota (needs 1 more) — addressed in 012f600 (closes #62)
 - category: content-gaps
 - impact: 7 (Ideas & Builds is the third-most-prominent pillar; 7/8 articles is still below quota)
 - ease: 5 (one new article per tick via /ship-content)
@@ -244,6 +244,8 @@
 - shortfall: 1 article (current 7, quota 8)
 - next: /ship-content → ideas pillar article (topic from /iterate audit or gap heuristic)
 > Continuation of the ideas-pillar queue. Bias multiplier 1.5× applies → effective score 5.25. Drains one row per tick; retire when ideas reaches 8 articles.
+>
+> **Resolved (2026-05-12):** Shipped "Spring swaps: what swapping the spring actually changes" (`apps/web/src/content/articles/spring-swaps-explained.mdx`, ~1490 words, publishedAt 2026-05-11 via gap-fill). Ideas pillar now at **8 of 8 — quota met.** This row retires the ideas-pillar queue; deep-dives (3/8) and guides (2/8) remain in the content-gap queue.
 
 ### [5.25] deep-dives pillar — 3 of 8 article quota (needs 5 more)
 - category: content-gaps
