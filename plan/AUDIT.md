@@ -313,14 +313,16 @@
 >
 > **Resolved (2026-05-12):** Shipped "Keycap materials, compared: ABS, PBT, and the rest" at `/article/keycap-materials-compared`, publishedAt 2026-04-23 (gap-fill midpoint of the 04-22 → 04-24 gap, closest 2-day gap to today). Fills out the **keycaps** guideSection (joining `keycap-profiles-compared` — together they cover the two big keycap-buying axes: shape and material). Guides pillar now at **7 of 8**. `14ec217`
 
-### [4.5] guides pillar — 7 of 8 article quota (needs 1 more)
+### [x] [4.5] guides pillar — 7 of 8 article quota (needs 1 more) — addressed in 4e62877 (closes #69)
 - category: content-gaps
 - impact: 6 (Guides is the fifth pillar; 7/8 just below quota)
 - ease: 5 (one new article per tick via /ship-content)
 - rule: Rule 1 — pillar quota
-- shortfall: 1 article (current 7, quota 8)
+- shortfall: 1 article (current 7, quota 8) → now 8 of 8 (1 shipped)
 - next: /ship-content → guides pillar article (topic from /iterate audit or gap heuristic)
 > Continuation of the guides-pillar queue. Bias multiplier 1.5× applies → effective score 4.5. Drains one row per /ship-content tick; retire when guides reaches 8 articles.
+>
+> **Resolved (2026-05-12):** Shipped "Switch housings, compared: nylon, polycarbonate, POM, and the rest" at `/article/switch-housings-compared`, publishedAt 2026-04-21 (gap-fill midpoint of the equal-largest 2-day gap closest to today). Fills out the **switches** guideSection (joining `beginners-switch-buying-guide`), parallels `keycap-materials-compared` on the switch axis. Guides pillar now at **8 of 8 — quota met.** This row retires the guides-pillar content-gap queue; deep-dives (4/8) remains as the next pending content-gap row. `4e62877`
 
 ### [x] [MED] PageStub routes flake under parallel e2e load (React #418 hydration) — self-resolved via phase 16
 > Filed 2026-05-09. Original prediction was "self-resolves before phase 16 ships" because phase 16's polish scope replaced every PageStub with a real route. Flake persisted briefly after `f3e5bac` shipped (one source of hydration mismatch was the formatter TZ issue, partially patched at `dfa5596`); the SECOND hydration source the TZ patch couldn't reach lived inside the PageStub itself and went away when every dynamic-data route got its own real page.
