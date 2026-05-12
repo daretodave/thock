@@ -1,0 +1,17 @@
+{
+  "slug": "switch-housings-compared",
+  "pillar": "guides",
+  "subSection": "switches",
+  "subject": "Single MX-style mechanical switch in side-profile cross-section, three labelled anatomy layers stacked vertically — top housing (PC) with an LED window and mount-clip nub plus a faint inner-highlight stroke suggesting slight transparency; central cruciform stem mid-travel with two leader lines pointing to the rail surfaces where lube pools; bottom housing (nylon) with stippled hatching along its outer walls suggesting matte opacity, a thin metal leaf contact inside, two through-hole pin housings beneath the floor, and a quick zigzag spring coil filling the central cavity.",
+  "palette": {
+    "hue": "warm ochre",
+    "hex": "#d68a2b",
+    "background": "transparent (sits cleanly on the dark-mode charcoal #1d1f24 and on light paper)"
+  },
+  "motif": "MX-style switch cross-section, PC top vs nylon bottom labelled",
+  "renderedAt": "2026-05-12T00:00:00.000Z",
+  "renderedBy": "brander",
+  "notes": "Single-splash warm-ochre line drawing — material contrast carried by surface texture, not by separate cross-sections: top housing reads as PC via a faint inner-highlight stroke (transparency cue), bottom housing reads as nylon via short staggered stipple ticks along its outer walls (matte/grippy cue). Stem rail-lube leaders fan out left with a small mono caption; anatomy labels (PC top, stem, nylon bottom) sit to the right with thin leader lines. No interior fills, family-convention 2 px stroke weight, brass-bronze ornamental dot at upper-right per the hero set.",
+  "canvas": "1200x750",
+  "article": "/article/switch-housings-compared"
+}

@@ -67,6 +67,7 @@
     { "slug": "switch-films", "name": "Switch films", "category": "misc" },
     { "slug": "qmk", "name": "QMK", "category": "misc" },
     { "slug": "via", "name": "VIA", "category": "misc" },
-    { "slug": "vial", "name": "VIAL", "category": "misc" }
+    { "slug": "vial", "name": "VIAL", "category": "misc" },
+    { "slug": "nylon", "name": "Nylon", "category": "material" }
   ]
 }

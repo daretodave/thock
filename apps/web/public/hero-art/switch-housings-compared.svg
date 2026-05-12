@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="#d68a2b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — MX-style mechanical switch in side-profile cross-section, labelling PC top housing, stem, and nylon bottom housing</title>
+
+  <!-- ────────────────────────────────────────────────────────────────────────
+       LAYOUT — one centered switch, side-profile cross-section, vertically
+       stacked three-part anatomy:
+
+         top housing (PC):     y ≈ 130 → 295
+         stem (mid-travel):    y ≈ 220 → 430   (overlaps into top housing
+                                                cavity — stem sits inside it)
+         bottom housing (nyl): y ≈ 430 → 615
+         baseline:             y = 615
+
+       Switch centerline:  x = 540
+       Switch outer width: ~340 (x = 370 → 710)
+
+       Labels live to the right of the switch (x ≈ 820) and connect back
+       via thin leader lines. Two stem-rail lube leaders fan out left.
+
+       Single warm-ochre stroke throughout. No fills beyond the splash wash.
+  ──────────────────────────────────────────────────────────────────────── -->
+
+  <!-- Splash: low-alpha ochre wash anchoring the switch — family convention -->
+  <ellipse cx="540" cy="380" rx="380" ry="290" fill="#d68a2b" fill-opacity="0.09" stroke="none"/>
+
+  <!-- Baseline beneath the switch — family rhythm anchor -->
+  <line x1="120" y1="615" x2="1080" y2="615" stroke-opacity="0.55"/>
+
+  <!-- Faint vertical guide ticks on the baseline — eight, family rhythm -->
+  <g stroke-opacity="0.35">
+    <line x1="120"  y1="615" x2="120"  y2="623"/>
+    <line x1="257"  y1="615" x2="257"  y2="623"/>
+    <line x1="394"  y1="615" x2="394"  y2="623"/>
+    <line x1="531"  y1="615" x2="531"  y2="623"/>
+    <line x1="669"  y1="615" x2="669"  y2="623"/>
+    <line x1="806"  y1="615" x2="806"  y2="623"/>
+    <line x1="943"  y1="615" x2="943"  y2="623"/>
+    <line x1="1080" y1="615" x2="1080" y2="623"/>
+  </g>
+
+  <!-- Faint horizontal reference at switch top — visual ruler -->
+  <line x1="120" y1="130" x2="1080" y2="130" stroke-dasharray="3 6" stroke-opacity="0.22"/>
+
+  <!-- ── TOP HOUSING (PC) ──────────────────────────────────────────────
+       Upper plastic shell. Outer silhouette: a chunky stepped form with a
+       slight shoulder, a small LED window notched into the front-left of
+       the top face, and a small mount-clip nub jutting off the right wall.
+
+       Outer outline (going clockwise from bottom-left):
+         (385, 295)   bottom-left lip
+         (385, 220)   shoulder-left bottom
+         (395, 210)   shoulder-left bevel
+         (395, 165)   wall-left up
+         (405, 155)   top-left bevel
+         (460, 155)   top-face (before LED notch)
+         (465, 145)   LED notch step-up
+         (505, 145)   LED notch top
+         (510, 155)   LED notch step-down
+         (625, 155)   top-face right
+         (635, 165)   top-right bevel
+         (635, 210)   wall-right down
+         (645, 220)   shoulder-right bevel
+         (645, 280)   ... continues to mount-clip nub:
+         (660, 280)   clip nub step-out
+         (660, 290)   clip nub bottom
+         (645, 290)   clip nub return
+         (645, 295)   bottom-right lip
+         back to (385, 295)
+   ──────────────────────────────────────────────────────────────────── -->
+  <g>
+    <!-- Outer top-housing silhouette -->
+    <path d="
+      M 385 295
+      L 385 220
+      L 395 210
+      L 395 165
+      L 405 155
+      L 460 155
+      L 465 145
+      L 505 145
+      L 510 155
+      L 625 155
+      L 635 165
+      L 635 210
+      L 645 220
+      L 645 280
+      L 660 280
+      L 660 290
+      L 645 290
+      L 645 295
+      Z"/>
+
+    <!-- Inner-highlight stroke (PC transparency cue) — offset ~6px inside
+         the upper wall, faint, suggesting light passing through the shell. -->
+    <path d="
+      M 393 290
+      L 393 222
+      L 401 214
+      L 401 168
+      L 409 161
+      L 460 161
+      L 465 151
+      L 505 151
+      L 510 161
+      L 621 161
+      L 629 168
+      L 629 214
+      L 637 222
+      L 637 280"
+      stroke-opacity="0.42" stroke-width="1.4"/>
+
+    <!-- Small "LED window" detail inside the notch — a tiny square outline -->
+    <rect x="473" y="151" width="24" height="10" stroke-opacity="0.55" stroke-width="1.4"/>
+
+    <!-- Faint corner depth ticks (3D-from-side hint) -->
+    <line x1="385" y1="295" x2="391" y2="292" stroke-opacity="0.4"/>
+    <line x1="645" y1="295" x2="639" y2="292" stroke-opacity="0.4"/>
+  </g>
+
+  <!-- ── STEM (mid-travel) ──────────────────────────────────────────────
+       Central cross-shaped piece. In side-profile cross-section the stem
+       reads as a vertical bar with a small cross-arm near its top (the
+       cruciform's side wings) and a wider base "skirt" that rides the
+       housing rails. Mid-travel: the top of the stem peeks above the
+       top-housing top face by ~10 px; the skirt sits roughly between
+       the top-housing cavity and the bottom-housing rails.
+
+       Vertical axis at x = 515. Stem column width ~36 (x = 497 → 533).
+       Cross-arm wings at y ≈ 195: extend left/right by ~22 px.
+       Skirt at y ≈ 380 → 430: wider, ~64 px across.
+   ──────────────────────────────────────────────────────────────────── -->
+  <g stroke-opacity="0.92">
+    <!-- Stem column outline (with cross-arm wings near the top) -->
+    <path d="
+      M 497 135
+      L 497 188
+      L 475 188
+      L 475 208
+      L 497 208
+      L 497 380
+      L 481 380
+      L 481 430
+      L 549 430
+      L 549 380
+      L 533 380
+      L 533 208
+      L 555 208
+      L 555 188
+      L 533 188
+      L 533 135
+      Z"/>
+
+    <!-- Subtle interior centerline tick — gives the stem some interior weight -->
+    <line x1="515" y1="142" x2="515" y2="178" stroke-opacity="0.35" stroke-width="1.2"/>
+    <line x1="515" y1="220" x2="515" y2="370" stroke-opacity="0.30" stroke-width="1.2"/>
+  </g>
+
+  <!-- ── STEM RAIL LUBE LEADERS ─────────────────────────────────────────
+       Two thin leader lines pointing to the stem's left rail (~ x=497)
+       at the heights where lube canonically pools on the rail surfaces:
+       one mid-upper (y ≈ 250), one mid-lower (y ≈ 340). They peel out
+       to the left and terminate in a small "lube pools here" caption.
+   ──────────────────────────────────────────────────────────────────── -->
+  <g stroke-opacity="0.55" stroke-width="1.4">
+    <!-- Upper rail leader -->
+    <line x1="497" y1="250" x2="365" y2="250"/>
+    <line x1="365" y1="250" x2="335" y2="270"/>
+    <!-- Lower rail leader -->
+    <line x1="497" y1="340" x2="365" y2="340"/>
+    <line x1="365" y1="340" x2="335" y2="320"/>
+    <!-- Small tick at the rail contact point (upper) -->
+    <line x1="494" y1="246" x2="500" y2="254" stroke-opacity="0.75"/>
+    <!-- Small tick at the rail contact point (lower) -->
+    <line x1="494" y1="336" x2="500" y2="344" stroke-opacity="0.75"/>
+  </g>
+
+  <!-- Caption for the lube leaders — small mono-feeling text, left side -->
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="18" fill="#d68a2b" stroke="none" letter-spacing="1" text-anchor="end" font-weight="500">
+    <text x="328" y="297">lube pools</text>
+    <text x="328" y="297" dy="20" opacity="0.85">on rails</text>
+  </g>
+
+  <!-- ── BOTTOM HOUSING (nylon) ─────────────────────────────────────────
+       Lower base. Outer silhouette: a stepped form mirroring the top
+       housing's bottom lip — a small overhang at the top, walls down,
+       a wider foot near the baseline, and two pin housings hanging
+       below baseline (the through-hole legs).
+
+       Outer outline (clockwise from top-left):
+         (385, 295)   meets top housing lip (already drawn there)
+         (385, 305)   step down
+         (375, 315)   bevel out
+         (375, 595)   wall-left down to floor
+         (385, 605)   bevel in
+         (645, 605)   floor-right
+         (655, 595)   bevel up
+         (655, 315)   wall-right up
+         (645, 305)   step up
+         (645, 295)   meets top housing lip
+
+       Plus: pin housings (small rounded rectangles) hanging from the
+       floor at x ≈ 425 and x ≈ 595, between y = 605 → 615.
+
+       Texture: short stippled hatching marks along the outer left + right
+       walls — opacity / matte / nylon-grippy cue.
+   ──────────────────────────────────────────────────────────────────── -->
+  <g>
+    <!-- Outer bottom-housing silhouette -->
+    <path d="
+      M 385 295
+      L 385 305
+      L 375 315
+      L 375 595
+      L 385 605
+      L 645 605
+      L 655 595
+      L 655 315
+      L 645 305
+      L 645 295"/>
+
+    <!-- Pin housings (through-hole legs) — two small rounded stubs below floor -->
+    <rect x="418" y="605" width="20" height="10" rx="2" stroke-opacity="0.7"/>
+    <rect x="585" y="605" width="20" height="10" rx="2" stroke-opacity="0.7"/>
+
+    <!-- Metal leaf contact — a thin angled line inside the bottom housing,
+         hugging the right inner wall, suggesting the click-leaf -->
+    <path d="
+      M 632 470
+      L 605 500
+      L 632 530
+      L 605 555"
+      stroke-opacity="0.62" stroke-width="1.6"/>
+    <!-- Small terminal dot at the contact tip -->
+    <circle cx="605" cy="555" r="2.4" fill="#d68a2b" stroke="none" opacity="0.75"/>
+
+    <!-- Faint corner depth ticks (3D-from-side hint) -->
+    <line x1="375" y1="595" x2="381" y2="592" stroke-opacity="0.4"/>
+    <line x1="655" y1="595" x2="649" y2="592" stroke-opacity="0.4"/>
+  </g>
+
+  <!-- ── NYLON STIPPLE HATCHING ─────────────────────────────────────────
+       Short tick marks along the outer left + right walls of the bottom
+       housing. Two staggered columns per wall for a "matte grip" read.
+       Distinct visual language from the PC inner-highlight stroke above.
+   ──────────────────────────────────────────────────────────────────── -->
+  <g stroke="#d68a2b" stroke-opacity="0.78" stroke-width="1.8" stroke-linecap="round">
+    <!-- Left wall — outer ticks (slightly outside the wall) -->
+    <line x1="365" y1="345" x2="371" y2="345"/>
+    <line x1="365" y1="370" x2="371" y2="370"/>
+    <line x1="365" y1="395" x2="371" y2="395"/>
+    <line x1="365" y1="420" x2="371" y2="420"/>
+    <line x1="365" y1="445" x2="371" y2="445"/>
+    <line x1="365" y1="470" x2="371" y2="470"/>
+    <line x1="365" y1="495" x2="371" y2="495"/>
+    <line x1="365" y1="520" x2="371" y2="520"/>
+    <line x1="365" y1="545" x2="371" y2="545"/>
+    <line x1="365" y1="570" x2="371" y2="570"/>
+    <!-- Right wall — outer ticks -->
+    <line x1="659" y1="345" x2="665" y2="345"/>
+    <line x1="659" y1="370" x2="665" y2="370"/>
+    <line x1="659" y1="395" x2="665" y2="395"/>
+    <line x1="659" y1="420" x2="665" y2="420"/>
+    <line x1="659" y1="445" x2="665" y2="445"/>
+    <line x1="659" y1="470" x2="665" y2="470"/>
+    <line x1="659" y1="495" x2="665" y2="495"/>
+    <line x1="659" y1="520" x2="665" y2="520"/>
+    <line x1="659" y1="545" x2="665" y2="545"/>
+    <line x1="659" y1="570" x2="665" y2="570"/>
+  </g>
+  <!-- Second, fainter offset row — adds the textured/grippy density -->
+  <g stroke="#d68a2b" stroke-opacity="0.45" stroke-width="1.4" stroke-linecap="round">
+    <line x1="367" y1="358" x2="372" y2="358"/>
+    <line x1="367" y1="383" x2="372" y2="383"/>
+    <line x1="367" y1="408" x2="372" y2="408"/>
+    <line x1="367" y1="433" x2="372" y2="433"/>
+    <line x1="367" y1="458" x2="372" y2="458"/>
+    <line x1="367" y1="483" x2="372" y2="483"/>
+    <line x1="367" y1="508" x2="372" y2="508"/>
+    <line x1="367" y1="533" x2="372" y2="533"/>
+    <line x1="367" y1="558" x2="372" y2="558"/>
+    <line x1="658" y1="358" x2="663" y2="358"/>
+    <line x1="658" y1="383" x2="663" y2="383"/>
+    <line x1="658" y1="408" x2="663" y2="408"/>
+    <line x1="658" y1="433" x2="663" y2="433"/>
+    <line x1="658" y1="458" x2="663" y2="458"/>
+    <line x1="658" y1="483" x2="663" y2="483"/>
+    <line x1="658" y1="508" x2="663" y2="508"/>
+    <line x1="658" y1="533" x2="663" y2="533"/>
+    <line x1="658" y1="558" x2="663" y2="558"/>
+  </g>
+
+  <!-- ── SPRING (inside bottom housing) ────────────────────────────────
+       A quick zigzag suggesting the spring coil, sitting beneath the
+       stem skirt and inside the bottom housing's central cavity.
+       Vertical axis at x = 515. Zigzag from y = 440 → y = 590.
+   ──────────────────────────────────────────────────────────────────── -->
+  <g stroke-opacity="0.78" stroke-width="1.6">
+    <polyline points="
+      490,440
+      540,455
+      490,470
+      540,485
+      490,500
+      540,515
+      490,530
+      540,545
+      490,560
+      540,575
+      490,590"/>
+  </g>
+
+  <!-- ── LABELS — small-caps stroke text to the right of the switch ────
+       Two anatomy labels: `PC top` aligned to the top housing midspan,
+       `nylon bottom` aligned to the bottom housing midspan. Each label
+       sits at x ≈ 870 and connects back to its layer via a thin leader
+       line. Material identity (PC, nylon) carries the comparison.
+   ──────────────────────────────────────────────────────────────────── -->
+
+  <!-- Leader from top housing → PC top label -->
+  <g stroke-opacity="0.55" stroke-width="1.4">
+    <line x1="660" y1="220" x2="800" y2="220"/>
+    <line x1="800" y1="220" x2="830" y2="220"/>
+    <!-- terminal dot at housing -->
+    <circle cx="658" cy="220" r="2.2" fill="#d68a2b" stroke="none" opacity="0.85"/>
+  </g>
+
+  <!-- Leader from bottom housing → nylon bottom label -->
+  <g stroke-opacity="0.55" stroke-width="1.4">
+    <line x1="667" y1="460" x2="800" y2="460"/>
+    <line x1="800" y1="460" x2="830" y2="460"/>
+    <!-- terminal dot at housing -->
+    <circle cx="665" cy="460" r="2.2" fill="#d68a2b" stroke="none" opacity="0.85"/>
+  </g>
+
+  <!-- Leader from stem column → stem label (lighter, no caption density) -->
+  <g stroke-opacity="0.45" stroke-width="1.2">
+    <line x1="555" y1="198" x2="700" y2="160"/>
+    <circle cx="555" cy="198" r="2" fill="#d68a2b" stroke="none" opacity="0.7"/>
+  </g>
+
+  <!-- Label text -->
+  <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="30" fill="#d68a2b" stroke="none" letter-spacing="5" font-weight="500">
+    <text x="840" y="228">PC top</text>
+    <text x="840" y="468">nylon bottom</text>
+  </g>
+
+  <!-- Stem label — smaller, sans-serif italic-feeling lowercase via letter-spacing 2 -->
+  <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="22" fill="#d68a2b" stroke="none" letter-spacing="3" font-weight="500" opacity="0.85">
+    <text x="710" y="155">stem</text>
+  </g>
+
+  <!-- Tiny height-callout ticks beneath each label — relative-scale read -->
+  <g stroke-opacity="0.45">
+    <line x1="840" y1="248" x2="930" y2="248"/>
+    <line x1="840" y1="488" x2="980" y2="488"/>
+  </g>
+
+  <!-- Quiet didactic left-edge layer ticks (family convention) — aligned to
+       top-housing top, stem skirt, bottom-housing floor, and baseline -->
+  <g stroke-opacity="0.3">
+    <line x1="85" y1="145" x2="100" y2="145"/>
+    <line x1="85" y1="295" x2="100" y2="295"/>
+    <line x1="85" y1="430" x2="100" y2="430"/>
+    <line x1="85" y1="615" x2="100" y2="615"/>
+  </g>
+
+  <!-- Brass-bronze theme dot — small ornamental anchor (family convention).
+       Tucked at the upper-right margin. -->
+  <circle cx="1148" cy="184" r="3" fill="#b88a2e" stroke="#b88a2e"/>
+</svg>
