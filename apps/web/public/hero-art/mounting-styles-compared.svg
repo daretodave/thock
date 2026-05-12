@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="#9c9286" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — four keyboard mounting styles compared in side-profile cross-section: gasket, top-mount, tray-mount, integrated</title>
+
+  <!-- ────────────────────────────────────────────────────────────────────────
+       LAYOUT — four stacked rows, each a side-profile case cross-section.
+       Splash hue: muted terracotta (#B86547) — used for plate foam strips,
+       screws, standoffs, o-ring, and the single anchoring wash.
+       Row vertical centers: ~145, ~315, ~485, ~655.
+       Each row: case shell drawn left-edge x=200 → right-edge x=920,
+       leaving ~260px of right-margin for the mono caption.
+  ──────────────────────────────────────────────────────────────────────── -->
+
+  <!-- Terracotta splash — soft warm wash anchoring the stack, no stroke -->
+  <ellipse cx="560" cy="400" rx="500" ry="320" fill="#B86547" fill-opacity="0.07" stroke="none"/>
+
+  <!-- ============================================================
+       ROW 1 — GASKET-MOUNT
+       Case in two halves (top + bottom). Plate floats between them
+       with foam strips above and below.
+       y-range: 95 → 195
+       split between top and bottom case at y=140 / y=148
+  ============================================================ -->
+  <g>
+    <!-- Top case half — outline -->
+    <path d="
+      M 200 110
+      Q 200 95 215 95
+      L 905 95
+      Q 920 95 920 110
+      L 920 140
+      L 200 140
+      Z"
+      stroke-opacity="0.82"/>
+
+    <!-- Bottom case half — outline -->
+    <path d="
+      M 200 148
+      L 920 148
+      L 920 178
+      Q 920 195 905 195
+      L 215 195
+      Q 200 195 200 178
+      Z"
+      stroke-opacity="0.82"/>
+
+    <!-- Plate — thin rectangle floating between halves -->
+    <rect x="248" y="142" width="624" height="4" rx="1" stroke-opacity="0.85"/>
+
+    <!-- Foam strip ABOVE the plate (top-side gasket strip) — terracotta -->
+    <rect x="248" y="136" width="624" height="4" rx="2"
+      fill="#B86547" fill-opacity="0.32"
+      stroke="#B86547" stroke-opacity="0.80" stroke-width="1.6"/>
+
+    <!-- Foam strip BELOW the plate (bottom-side gasket strip) — terracotta -->
+    <rect x="248" y="148" width="624" height="4" rx="2"
+      fill="#B86547" fill-opacity="0.32"
+      stroke="#B86547" stroke-opacity="0.80" stroke-width="1.6"/>
+
+    <!-- Inner case wall hints (faint), suggesting cavity -->
+    <line x1="218" y1="110" x2="218" y2="135" stroke-opacity="0.30"/>
+    <line x1="902" y1="110" x2="902" y2="135" stroke-opacity="0.30"/>
+    <line x1="218" y1="153" x2="218" y2="180" stroke-opacity="0.30"/>
+    <line x1="902" y1="153" x2="902" y2="180" stroke-opacity="0.30"/>
+
+    <!-- Tiny "float" tick marks above + below the plate edges — didactic float cue -->
+    <g stroke="#B86547" stroke-opacity="0.55" stroke-width="1">
+      <line x1="252" y1="142" x2="252" y2="146"/>
+      <line x1="868" y1="142" x2="868" y2="146"/>
+    </g>
+  </g>
+
+  <!-- ROW 1 caption — right margin -->
+  <text x="950" y="148"
+    font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace"
+    font-size="16" fill="#9c9286" fill-opacity="0.95"
+    letter-spacing="0.04em" text-anchor="start" stroke="none">gasket</text>
+
+  <!-- ============================================================
+       ROW 2 — TOP-MOUNT
+       Case as a single piece. Plate is screwed directly to the top.
+       Short vertical tick / screw marks connect plate edges to case top.
+       y-range: 265 → 365
+  ============================================================ -->
+  <g>
+    <!-- Single-piece case shell — outline -->
+    <path d="
+      M 200 280
+      Q 200 265 215 265
+      L 905 265
+      Q 920 265 920 280
+      L 920 348
+      Q 920 365 905 365
+      L 215 365
+      Q 200 365 200 348
+      Z"
+      stroke-opacity="0.82"/>
+
+    <!-- Interior hint: the underside of the top case lip where the plate hangs -->
+    <line x1="218" y1="285" x2="902" y2="285" stroke-opacity="0.22"/>
+
+    <!-- Plate — screwed up against the underside of the top case -->
+    <rect x="248" y="298" width="624" height="6" rx="1" stroke-opacity="0.85"/>
+
+    <!-- Screw / tick marks connecting plate to case top (six points, evenly spaced) -->
+    <g stroke="#B86547" stroke-opacity="0.95" stroke-width="2">
+      <!-- left screw -->
+      <line x1="262" y1="285" x2="262" y2="298"/>
+      <!-- mid-left screw -->
+      <line x1="438" y1="285" x2="438" y2="298"/>
+      <!-- mid screw -->
+      <line x1="560" y1="285" x2="560" y2="298"/>
+      <!-- mid-right screw -->
+      <line x1="682" y1="285" x2="682" y2="298"/>
+      <!-- right screw -->
+      <line x1="858" y1="285" x2="858" y2="298"/>
+    </g>
+    <!-- Small screw-head dots at the top of each tick -->
+    <g fill="#B86547" fill-opacity="0.85" stroke="none">
+      <circle cx="262" cy="285" r="2.2"/>
+      <circle cx="438" cy="285" r="2.2"/>
+      <circle cx="560" cy="285" r="2.2"/>
+      <circle cx="682" cy="285" r="2.2"/>
+      <circle cx="858" cy="285" r="2.2"/>
+    </g>
+
+    <!-- Inner case wall hints -->
+    <line x1="218" y1="290" x2="218" y2="350" stroke-opacity="0.30"/>
+    <line x1="902" y1="290" x2="902" y2="350" stroke-opacity="0.30"/>
+  </g>
+
+  <!-- ROW 2 caption -->
+  <text x="950" y="318"
+    font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace"
+    font-size="16" fill="#9c9286" fill-opacity="0.95"
+    letter-spacing="0.04em" text-anchor="start" stroke="none">top-mount</text>
+
+  <!-- ============================================================
+       ROW 3 — TRAY-MOUNT
+       Case as a deep tray. PCB sits on standoffs (vertical posts)
+       coming up from the bottom of the case interior. Plate (if shown)
+       rests on the switches / PCB without attachment.
+       y-range: 435 → 535
+  ============================================================ -->
+  <g>
+    <!-- Tray case shell — outline (deep tray, walls hug interior) -->
+    <path d="
+      M 200 450
+      Q 200 435 215 435
+      L 905 435
+      Q 920 435 920 450
+      L 920 518
+      Q 920 535 905 535
+      L 215 535
+      Q 200 535 200 518
+      Z"
+      stroke-opacity="0.82"/>
+
+    <!-- Tray bottom interior line — the "floor" the standoffs rise from -->
+    <line x1="218" y1="520" x2="902" y2="520" stroke-opacity="0.42"/>
+
+    <!-- Standoffs — three short vertical posts rising from the case floor -->
+    <g stroke="#B86547" stroke-opacity="0.92" stroke-width="2">
+      <!-- left standoff -->
+      <rect x="278" y="498" width="8" height="22" rx="1"
+        fill="#B86547" fill-opacity="0.22"/>
+      <!-- center standoff -->
+      <rect x="556" y="498" width="8" height="22" rx="1"
+        fill="#B86547" fill-opacity="0.22"/>
+      <!-- right standoff -->
+      <rect x="834" y="498" width="8" height="22" rx="1"
+        fill="#B86547" fill-opacity="0.22"/>
+    </g>
+
+    <!-- PCB — resting on top of the standoffs -->
+    <rect x="248" y="492" width="624" height="6" rx="1" stroke-opacity="0.78"/>
+    <!-- Subtle trace hint on PCB -->
+    <g stroke-opacity="0.26" stroke-width="1">
+      <line x1="320" y1="495" x2="380" y2="495" stroke-dasharray="4 5"/>
+      <line x1="600" y1="495" x2="660" y2="495" stroke-dasharray="4 5"/>
+    </g>
+
+    <!-- Plate — resting just above the PCB, unattached, very faint -->
+    <rect x="248" y="478" width="624" height="4" rx="1" stroke-opacity="0.55"/>
+
+    <!-- Small "rest only" tick at the plate edges — no screw fill -->
+    <g stroke-opacity="0.35" stroke-width="1">
+      <line x1="252" y1="478" x2="252" y2="486"/>
+      <line x1="868" y1="478" x2="868" y2="486"/>
+    </g>
+
+    <!-- Inner case wall hints -->
+    <line x1="218" y1="460" x2="218" y2="520" stroke-opacity="0.30"/>
+    <line x1="902" y1="460" x2="902" y2="520" stroke-opacity="0.30"/>
+  </g>
+
+  <!-- ROW 3 caption -->
+  <text x="950" y="488"
+    font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace"
+    font-size="16" fill="#9c9286" fill-opacity="0.95"
+    letter-spacing="0.04em" text-anchor="start" stroke="none">tray-mount</text>
+
+  <!-- ============================================================
+       ROW 4 — INTEGRATED PLATE
+       Case as a single piece — the plate is machined as part of
+       the top of the case (no separate plate line). Small terracotta
+       o-rings sit around the perimeter where the upper section meets
+       the lower section ("burger" variant).
+       y-range: 605 → 705
+  ============================================================ -->
+  <g>
+    <!-- Upper section of the case — plate is one continuous stroke
+         with the top of the case (no separate plate line) -->
+    <path d="
+      M 200 620
+      Q 200 605 215 605
+      L 905 605
+      Q 920 605 920 620
+      L 920 650
+      L 200 650
+      Z"
+      stroke-opacity="0.82"/>
+
+    <!-- Lower section of the case -->
+    <path d="
+      M 200 660
+      L 920 660
+      L 920 690
+      Q 920 705 905 705
+      L 215 705
+      Q 200 705 200 690
+      Z"
+      stroke-opacity="0.82"/>
+
+    <!-- Tiny "machined" indication: faint inner reinforcement line
+         underside of the integrated top, where the plate-portion is
+         thickened/continuous with the case top. -->
+    <line x1="248" y1="644" x2="872" y2="644" stroke-opacity="0.30" stroke-dasharray="4 4"/>
+
+    <!-- O-rings — burger gasket sits between upper and lower halves,
+         along the perimeter (left + right edges of the section split) -->
+    <g fill="#B86547" fill-opacity="0.85" stroke="#B86547" stroke-opacity="0.95" stroke-width="1.4">
+      <circle cx="208" cy="655" r="3.5"/>
+      <circle cx="912" cy="655" r="3.5"/>
+    </g>
+    <!-- Faint dotted o-ring perimeter line running along the seam -->
+    <g stroke="#B86547" stroke-opacity="0.55" stroke-width="1" stroke-dasharray="3 5">
+      <line x1="216" y1="655" x2="904" y2="655"/>
+    </g>
+
+    <!-- Inner case wall hints -->
+    <line x1="218" y1="620" x2="218" y2="650" stroke-opacity="0.30"/>
+    <line x1="902" y1="620" x2="902" y2="650" stroke-opacity="0.30"/>
+    <line x1="218" y1="665" x2="218" y2="690" stroke-opacity="0.30"/>
+    <line x1="902" y1="665" x2="902" y2="690" stroke-opacity="0.30"/>
+  </g>
+
+  <!-- ROW 4 caption -->
+  <text x="950" y="658"
+    font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace"
+    font-size="16" fill="#9c9286" fill-opacity="0.95"
+    letter-spacing="0.04em" text-anchor="start" stroke="none">integrated</text>
+
+  <!-- ============================================================
+       Faint left-margin row markers — didactic vertical rhythm cue
+  ============================================================ -->
+  <g stroke-opacity="0.30">
+    <line x1="148" y1="145" x2="168" y2="145"/>
+    <line x1="148" y1="315" x2="168" y2="315"/>
+    <line x1="148" y1="485" x2="168" y2="485"/>
+    <line x1="148" y1="655" x2="168" y2="655"/>
+  </g>
+
+  <!-- ============================================================
+       Brass-bronze theme dot — family-conventional ornamental anchor
+  ============================================================ -->
+  <circle cx="1148" cy="92" r="3" fill="#b88a2e" stroke="#b88a2e"/>
+</svg>

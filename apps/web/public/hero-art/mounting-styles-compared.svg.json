@@ -1,0 +1,15 @@
+{
+  "prompt": "Side-profile cross-section silhouettes of four keyboard mounting styles stacked vertically — gasket (top + bottom case halves with the plate floating between thin foam strips), top-mount (single-piece case with the plate screwed directly to the top via five terracotta screw ticks), tray-mount (deep tray case with PCB resting on three short vertical standoffs rising from the case floor, plate resting unattached above), integrated (single-piece case where the plate is machined as part of the top — one continuous stroke — with terracotta o-rings around the perimeter where the upper section sits on the lower 'burger' section). Each row labeled to the right in lowercase JetBrains Mono. Single-stroke line-drawing weight on warm-paper field, with a soft terracotta wash anchoring the stack.",
+  "style": {
+    "splash_hue": "terracotta",
+    "splash_color": "#B86547",
+    "stroke_color": "#9c9286",
+    "stroke_weight": "2px",
+    "canvas": "1200x750",
+    "background": "warm-paper / transparent"
+  },
+  "description": "Four stacked side-profile cross-sections — gasket, top-mount, tray-mount, integrated — rendered as single-stroke silhouettes with muted-terracotta accents (foam strips, screws, standoffs, o-rings).",
+  "agent": "brander",
+  "date": "2026-05-12",
+  "article": "/article/mounting-styles-compared"
+}

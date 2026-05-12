@@ -1,0 +1,92 @@
+---
+slug: mounting-styles-compared
+title: "Mounting styles, compared: gasket, top-mount, tray, and integrated plate"
+lede: "A builder who has lubed switches and tuned stabilizers and chosen a keycap profile and still cannot place why their next board feels different from their last one is usually meeting the mount style. The plate's relationship to the case is the half of the typing feel that nobody discusses on a sound test."
+author: thock
+pillar: guides
+guideSection: 'modding'
+tags: [modding, acoustic, aluminum, polycarbonate, beginner]
+publishedAt: '2026-04-25T13:00:00.000Z'
+updatedAt: null
+heroImage: /hero-art/mounting-styles-compared.svg
+heroImageAlt: "Side-profile cross-section silhouettes of four mounting styles stacked vertically — gasket (foam strips between plate and case), top-mount (plate screwed to the top half of the case), tray-mount (PCB screwed to standoffs on the bottom case), integrated plate (plate machined as part of the case) — drawn in a single muted-terracotta stroke on warm paper, each labelled with a small mono caption."
+featured: false
+popularityScore: 0
+mentionedParts:
+  - id: mode-sonnet
+    kind: board
+    slug: mode-sonnet
+  - id: qk75
+    kind: board
+    slug: qk75
+---
+
+A builder finishes their second custom and notices, without quite being able to say why, that it feels different from the first. The switches are the same batch. The stabilizers are tuned. The keycaps moved over from the old board. The case material is the same aluminum the last one was. But the new board lands softer at the bottom of every press, the sound is rounder, the typing surface gives a millimeter under a heavy stroke. The thing that changed is the mount style — the mechanical relationship between the plate, the PCB, and the case shell — and it is the half of the typing feel that almost no review covers directly.
+
+Mount style is structural, not cosmetic. It decides how vibration from a keypress travels into the case, how much give the plate has under the finger, and whether the case acts as a rigid sounding board or a dampened one. The market has converged on four canonical styles, plus enough hybrids to keep the taxonomy honest. This guide walks each in turn, then closes on which to actually pick.
+
+<Callout type="info" title="Cheat sheet">
+  Four mount styles cover the spine of the market. **Gasket** floats the plate on foam strips — softest feel, deepest sound, the dominant 2024–2026 custom style. **Top-mount** screws the plate to the top case half — firm and direct, the classic high-end style. **Tray-mount** screws the PCB to standoffs on the bottom case — cheap to manufacture, the prebuilt default, hollow if unmodded. **Integrated plate** machines the plate as part of the case — most rigid, highest-pitched, the budget-friendly route to a tight sound.
+</Callout>
+
+## Gasket-mount
+
+Gasket-mount sandwiches strips of foam — usually <Mono>Poron</Mono>, sometimes silicone — between the plate and the case shell on both top and bottom. The plate does not touch the case directly. It rests on the foam strips, which compress slightly under every keypress and absorb the resulting energy before it reaches the aluminum or polycarbonate around them.
+
+The sound is the easiest signature to identify in a side-by-side. Gasket boards read as deeper, rounder, and more uniform across the board than any of the other three styles. Because the plate is decoupled from the case, the case stops contributing high-frequency ring to the signal — what comes out is mostly the switch and the keycap, dampened by the foam, with a low-end character the gasket strips themselves help shape.
+
+The feel is the more subtle change. A well-built gasket board gives perceptibly under a heavy keypress — not a lot, somewhere between half a millimeter and a millimeter and a half depending on the foam density and the strip placement — and a typist who comes off a top-mount or integrated board onto a gasket notices the give within a few keystrokes. Light typists may not notice at all. The "soft" reputation gasket boards have earned in the modern era is mostly accurate and mostly a function of the gasket compression rather than any quality of the plate material itself.
+
+<PartReference id="mode-sonnet" /> is a canonical modern example: a 65% aluminum case with the plate gasket-mounted top and bottom, shipping with hotswap PCBs and a brass weight option. The typing feel is the standard reference point for what gasket means in the current market — soft, uniform, low-pitched. Most enthusiast boards announced for group buy since 2023 are gasket-mounted, and the format has effectively become the default for new custom designs.
+
+The honest caveat with gasket is that execution matters more than the label. A board that calls itself gasket-mount but uses thin strips with poor compression behaves more like a top-mount with extra steps. The foam density, strip length, and the snugness of the case fit all have to land for the mount to deliver its advertised character. Builders evaluating a new design should look for actual compression specs in the announcement, not just the word "gasket" in the marketing copy.
+
+## Top-mount
+
+Top-mount screws the plate directly to standoffs on the inside of the top case half. The plate is bolted to the case; the PCB hangs off the plate through the switches; the bottom case half is structural but not mechanically connected to the typing surface. It is the classic high-end mount style, dominant in the customs of the late 2010s and early 2020s — the <Mono>Tofu</Mono> redux, the Bauer, the Mr. Suit, most of the early TGR boards.
+
+The sound is tighter, more focused, and slightly higher-pitched than a gasket equivalent. Because the plate is hard-coupled to the case, vibration travels into the shell and contributes to the signature. The result is a board that sounds more "alive" — more case character in the signal — which is exactly the quality some builders chase and exactly the quality others have moved away from in the gasket era. Top-mount boards are also the most prone to plate ping among the four styles, because the metal-to-metal contact between plate and standoff gives high-frequency vibration a clean path into the case.
+
+The feel is firmer and more direct. There is essentially no give. The plate flexes only as much as the plate material itself permits, and on a stiff aluminum or steel plate that is almost none. Heavy typists who like the sensation of "hitting something" often prefer top-mount over gasket for exactly this reason; light typists who type from the wrist often find top-mount fatiguing over a long session.
+
+Top-mount is the reference style most gasket boards are positioned against. A reader who has only typed on modern gasket customs and finds them too soft is usually looking for a top-mount, even if they would not phrase it that way. The classic feel is not gone from the market — designers like Cipulot and the smaller Korean custom houses still ship top-mount boards regularly — but the volume has shifted, and a builder shopping for top-mount in 2026 is shopping a thinner catalog than they would have been in 2020.
+
+## Tray-mount and the "no plate fixing" family
+
+Tray-mount is the budget default. The PCB screws directly to standoffs on the bottom case shell, and the plate — if there is one — clips into the switches with no mechanical link to either case half. There are no gaskets, no plate screws, no acoustic engineering at the case-to-plate seam. It is the cheapest mount style to manufacture, which is why it dominates the prebuilt end of the market: most Royal Kludge, GMMK, and entry-level Keychron boards ship tray-mounted whether or not the spec sheet says so.
+
+The sound is the most variable of the four styles. Because the only structural contact between the PCB and the case is at the standoff points, vibration travels into the case unevenly — keys above a standoff sound tighter and brighter, keys between standoffs sound looser and more hollow. The board's acoustic signature depends on where the keys are relative to the screws, which means a typist who lives mostly in the home row may hear something very different from a typist who lives in the modifier cluster.
+
+The feel inherits the same problem. The PCB and plate are stiffest at the standoff points and softer between them, so the give under a keypress is non-uniform. A typist who consistently presses a single key near a screw may not notice; a typist who roams across the board will feel keys "soften" as they move away from the screws. Tray-mount boards typically benefit the most from PE foam, plate foam, and the other acoustic mods covered in the sound-dampening guide — there is more raw hollowness in the case for those layers to absorb.
+
+A close cousin worth naming is **PCB-mount**, where the PCB sits on standoffs in the same tray-mount configuration but without a plate fastened to either the PCB or the case. <PartReference id="qk75" /> is a representative example: a CNC aluminum 75% from Qwertykeys with the PCB mounted to the bottom case and the plate either floating in the switches or omitted entirely (the board ships with a "plateless" option). The result is a looser, bouncier feel than tray-mount with a fixed plate — switches have nothing rigid behind them and rely on the PCB itself for backing. Builders who like the sensation describe it as "marshmallow"; builders who do not describe the same configuration as imprecise.
+
+Either way — tray-mount or PCB-mount — the family character is the same: cheap to build, sound varies across the layout, feel varies across the layout, responds well to the acoustic mod stack. The unmodded version is the prebuilt baseline. The modded version can sound and feel surprisingly good, but it takes more work than gasket or top-mount to reach the same finished state.
+
+## Integrated plate
+
+Integrated plate machines the plate as part of the case rather than as a separate piece. There is no plate-to-case seam to engineer because there is no separate plate. The switches snap into a milled cutout in the case top, the PCB sits below, and the whole assembly is mechanically continuous from switch to case shell.
+
+The sound is the most consistent of the four styles. There are no foam strips to compress unevenly, no standoffs creating zones of stiffness, no plate-screw torque variation across the board — every key sits in the same rigid environment. The character is also the highest-pitched and most case-dominant of the four. Because the plate is the case, the case material defines the acoustic signature directly: an aluminum integrated board reads as bright and tight, a polycarbonate integrated board reads as softer and a step deeper but still firmer than a polycarbonate gasket.
+
+The feel is the firmest of the four. Zero give, zero flex, zero margin — the typing surface is a solid block of metal or plastic. Heavy bottom-out typists tend to either love this or bounce off it within a week. There is no in-between.
+
+The variant most builders meet first is the **burger mount** — a name that comes from the original Bakeneko design, where the case clamshells around a single o-ring that runs the perimeter of the plate-PCB assembly. The o-ring functions as a kind of degenerate gasket: it isolates the assembly from the case shell but provides almost no compression, so the feel is closer to integrated than to gasket. Modern budget boards in the KBDFans QK series and similar designs use either true integrated plates or burger-style o-ring isolation to deliver a tight, consistent sound at a price point gasket-mount cannot reach.
+
+## How real boards blend these
+
+The four styles above are the canonical taxonomy. Real-world boards routinely blend them. Gasket-burger boards combine gasket strips with perimeter o-ring isolation. PCB-mount-with-case-foam boards effectively port the tray-mount geometry into a gasket-adjacent feel by foaming the cavity the standoffs leave. Some top-mount designs ship with optional gasket-mount adapter kits. The label on a vendor page is a useful starting hint, not a guarantee of feel.
+
+The practical move when evaluating a new board is to read past the one-word mount-style tag in the spec sheet. Look for the foam density on a gasket. Look for the standoff count on a tray-mount. Look for the o-ring durometer on a burger. The execution variables decide where on the spectrum a board actually lands, and two boards both calling themselves "gasket-mount" can sit a noticeable distance apart on every axis that matters.
+
+## What to actually pick
+
+If a builder wants the softest, deepest, most uniform sound and feel — and they are buying in the modern enthusiast custom market — they want gasket. The mode-sonnet and most of its contemporaries cover that space well, and the catalog is large enough that the only real question is which case material and which layout, not which mount.
+
+If a builder wants the firmer, more direct, more case-resonant feel that defined the late-2010s custom era, they want top-mount. The catalog is smaller and the prices are usually higher, but the boards exist and the character is real and distinct.
+
+If a builder is shopping at the prebuilt end of the market and willing to mod, tray-mount is what they are getting whether the listing says so or not. The PE-foam-and-tape-mod stack can take a tray-mount board most of the way to a satisfying sound, but the floor is lower than gasket and the ceiling is lower too.
+
+If a builder wants the tightest possible sound at the lowest possible price — and is willing to accept zero give in the typing surface — integrated plate or burger mount is the answer. The QK-series and Bakeneko-style designs deliver a sound character at $200 that gasket boards struggle to match at twice the price, with the trade-off paid entirely in firmness of feel.
+
+The honest closing note is that mount style interacts with everything else the builder has chosen. A linear switch on a gasket board with PE foam and a thick MT3 set produces one kind of sound; the same switch on a top-mount board with bare PCB and a Cherry-profile ABS set produces a different one. The mount is a layer, not a verdict. The thock house take: pick the mount that matches the typing feel wanted, not the sound — the sound can be tuned around the mount, but the feel under the finger cannot.
