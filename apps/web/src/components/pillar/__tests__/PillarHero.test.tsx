@@ -3,21 +3,28 @@ import { render, screen } from '@testing-library/react'
 import { PillarHero } from '../PillarHero'
 
 describe('<PillarHero>', () => {
-  it('renders eyebrow numbering matching the pillar order', () => {
+  it('renders eyebrow with the pillar slug as a descriptive label', () => {
     render(
       <PillarHero pillar="news" lede="Lede about news." />,
     )
     const eyebrow = screen.getByTestId('pillar-hero-eyebrow')
-    expect(eyebrow).toHaveTextContent(/01 of 05/i)
-    expect(eyebrow).toHaveTextContent(/pillar/i)
+    expect(eyebrow).toHaveTextContent(/pillar · news/i)
+    expect(eyebrow.textContent).not.toMatch(/of 0?5/i)
   })
 
-  it('renders the trends pillar with index 02', () => {
+  it('renders the trends pillar with the trends slug', () => {
     render(
       <PillarHero pillar="trends" lede="Lede about trends." />,
     )
     expect(screen.getByTestId('pillar-hero-eyebrow')).toHaveTextContent(
-      /02 of 05/i,
+      /pillar · trends/i,
+    )
+  })
+
+  it('renders the deep-dives pillar slug verbatim (hyphenated)', () => {
+    render(<PillarHero pillar="deep-dives" lede="Lede." />)
+    expect(screen.getByTestId('pillar-hero-eyebrow')).toHaveTextContent(
+      /pillar · deep-dives/i,
     )
   })
 

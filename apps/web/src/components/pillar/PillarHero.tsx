@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import type { ReactElement, ReactNode } from 'react'
 import { Container } from '@thock/ui'
-import { type Pillar, pillarLabel, PILLARS } from '@thock/seo'
+import { type Pillar, pillarLabel } from '@thock/seo'
 
 export type PillarHeroPill = {
   href: string
@@ -16,7 +16,7 @@ export type PillarHeroProps = {
   /** Lede paragraph rendered under the H1 inside a 60ch column. */
   lede: string
   /**
-   * Optional eyebrow override — defaults to `PILLAR · NN of 05`.
+   * Optional eyebrow override — defaults to `PILLAR · <slug>`.
    * Tracker passes a `SIGNATURE · TRENDS TRACKER` framing.
    */
   eyebrow?: string
@@ -44,20 +44,12 @@ export type PillarHeroProps = {
   rightRail?: ReactNode
 }
 
-const PILLAR_NUMBER: Record<Pillar, string> = (() => {
-  const out = {} as Record<Pillar, string>
-  PILLARS.forEach((p, i) => {
-    out[p.slug] = `${String(i + 1).padStart(2, '0')} of ${String(
-      PILLARS.length,
-    ).padStart(2, '0')}`
-  })
-  return out
-})()
-
 /**
- * Canonical pillar-landing hero. Eyebrow `PILLAR · NN of 05`,
- * italic display H1, lede paragraph, optional RSS pill on the right
- * rail at desktop. Stacks vertically on mobile.
+ * Canonical pillar-landing hero. Eyebrow `PILLAR · <slug>` — a
+ * descriptive label (matching the breadcrumb idiom) rather than a
+ * mechanical sequence position. Italic display H1, lede paragraph,
+ * optional RSS pill on the right rail at desktop. Stacks vertically
+ * on mobile.
  *
  * Lives in `apps/web/src/components/pillar/` and is the reusable
  * unit phases 8–11 import to ship the remaining four pillar
@@ -74,7 +66,7 @@ export function PillarHero({
 }: PillarHeroProps): ReactElement {
   const label = pillarLabel(pillar)
   const headingNode = heading ?? <em className="italic">{label}</em>
-  const eyebrowText = eyebrow ?? `pillar · ${PILLAR_NUMBER[pillar]}`
+  const eyebrowText = eyebrow ?? `pillar · ${pillar}`
 
   const resolvedPills: PillarHeroPill[] = pills ?? []
   if (resolvedPills.length === 0 && rssLink) {

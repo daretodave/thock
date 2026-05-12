@@ -1,13 +1,13 @@
 import { expect, test } from '@playwright/test'
 
 test.describe('deep-dives pillar — phase 10', () => {
-  test('renders pillar hero with eyebrow 04 of 05 and italic H1', async ({
+  test('renders pillar hero with descriptive eyebrow and italic H1', async ({
     page,
   }) => {
     await page.goto('/deep-dives')
     const eyebrow = page.getByTestId('pillar-hero-eyebrow')
     await expect(eyebrow).toBeVisible()
-    await expect(eyebrow).toContainText(/04 of 05/i)
+    await expect(eyebrow).toContainText(/pillar · deep-dives/i)
     const h1 = page.locator('h1').first()
     await expect(h1).toContainText(/deep dives/i)
   })

@@ -5,7 +5,7 @@ test.describe('news pillar — phase 7', () => {
     await page.goto('/news')
     const eyebrow = page.getByTestId('pillar-hero-eyebrow')
     await expect(eyebrow).toBeVisible()
-    await expect(eyebrow).toContainText(/01 of 05/i)
+    await expect(eyebrow).toContainText(/pillar · news/i)
     const h1 = page.locator('h1').first()
     await expect(h1).toContainText(/news/i)
   })
