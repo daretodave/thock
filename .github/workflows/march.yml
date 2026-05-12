@@ -8,18 +8,20 @@ name: march
 
 on:
   schedule:
-    # Hourly, 24/7. Bumped 2026-05-11 from "every 2h off-peak ET"
-    # (~7 ticks/day) to hourly (~24 ticks/day max) after the cloud
-    # loop went genuinely operational. Bounded downstream by:
-    #   - the daily commit ceiling (24 cloud-shipped commits / 24h
+    # Hourly, 24/7. History: started "every 2h off-peak ET"
+    # (~7 ticks/day); bumped 2026-05-11 to hourly (~24 ticks/day);
+    # briefly tried :00+:30 (~48 ticks/day) on 2026-05-12 before
+    # reverting same-day to hourly with a 30/24h ceiling to
+    # experiment under Opus 4.7. Bounded downstream by:
+    #   - the daily commit ceiling (30 cloud-shipped commits / 24h
     #     — see "Daily commit ceiling check" step below). Past that
     #     point every tick exits cleanly with no work.
     #   - the concurrency group `march` (a long-running tick blocks
     #     the next firing instead of racing it).
     #   - the 5h timeout per tick.
-    # Net: up to ~24 commits/day in the worst case (matches the
-    # hourly cadence — every tick can ship if there's work). No-op
-    # ticks absorb slots when nothing's queued.
+    # Net: up to ~24 commits/day from cadence, with 6 ticks of
+    # ceiling headroom for catch-up if a slow tick spans firings.
+    # No-op ticks absorb slots when nothing's queued.
     - cron: '0 * * * *'
   workflow_dispatch:
 
@@ -87,8 +89,8 @@ jobs:
           since="$(date -u -d '24 hours ago' '+%Y-%m-%d %H:%M:%S')"
           count=$(git log --since="$since" --grep='Cloud-Run:' --oneline | wc -l | tr -d ' ')
           echo "Cloud-shipped commits in last 24h: $count"
-          if [ "$count" -ge 24 ]; then
-            echo "Cloud ceiling reached (24 cloud-shipped commits / 24h). Exiting cleanly — no work this tick."
+          if [ "$count" -ge 30 ]; then
+            echo "Cloud ceiling reached (30 cloud-shipped commits / 24h). Exiting cleanly — no work this tick."
             echo "skip=true" >> "$GITHUB_OUTPUT"
           else
             echo "skip=false" >> "$GITHUB_OUTPUT"
@@ -109,10 +111,11 @@ jobs:
         uses: anthropics/claude-code-action@v1
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-          # Sonnet 4.6 for the cloud loop. To upgrade to Opus 4.7,
-          # change the model below to "claude-opus-4-7" once you've
-          # measured a week of weekly-cap consumption and have
-          # confirmed headroom.
+          # Opus 4.7 for the cloud loop. Promoted 2026-05-12 from
+          # Sonnet 4.6 to experiment with Opus quality on the
+          # autonomous tick. Roughly 2x weekly-cap weight vs Sonnet
+          # — watch /cost over a week; revert to "claude-sonnet-4-6"
+          # if weekly cap tightens.
           #
           # --dangerously-skip-permissions mirrors the user's local
           # invocation. The runner is an ephemeral GitHub-hosted
@@ -125,7 +128,7 @@ jobs:
           # would otherwise use productively — WebFetch for scout
           # research, broader Bash forms for ops scripts, etc.
           claude_args: |
-            --model claude-sonnet-4-6
+            --model claude-opus-4-7
             --dangerously-skip-permissions
           prompt: |
             You are running thock's autonomous loop in CI (GitHub Actions).
