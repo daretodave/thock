@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — keyboard case cross-section with four sound-dampening layers</title>
+
+  <!-- ────────────────────────────────────────────────────────────────────────
+       LAYOUT — stacked side-profile cross-section, bottom-up:
+         bottom case shell:  y 540 → 600
+         case foam:          y 504 → 538   (terracotta fill, 0.3)
+         tape mod:           y 494 → 502   (terracotta fill, thin strip, on PCB underside)
+         PCB:                y 458 → 492
+         PE foam:            y 444 → 456   (terracotta fill, thin)
+         plate:              y 410 → 442
+         plate foam:         y 396 → 408   (terracotta fill, thin)
+         switches (3):       y 330 → 396   (outline, sitting on plate top)
+         top case shell:     y 270 → 330  (frames the inner stack above plate)
+
+       Terracotta splash: #B86547 — distinct from the coral used in
+       tape-mod / pe-foam-mod heroes.
+  ──────────────────────────────────────────────────────────────────────── -->
+
+  <!-- ===== CASE SHELL — outer outline, single continuous side profile ===== -->
+  <!-- Top case (frames area above the plate where the switches sit) -->
+  <path d="
+    M 180 270
+    Q 180 258 192 258
+    L 1008 258
+    Q 1020 258 1020 270
+    L 1020 330
+    L 180 330
+    Z"
+    stroke-opacity="0.78"/>
+
+  <!-- Bottom case (holds the PCB + case foam stack) -->
+  <path d="
+    M 180 410
+    L 1020 410
+    L 1020 588
+    Q 1020 600 1008 600
+    L 192 600
+    Q 180 600 180 588
+    Z"
+    stroke-opacity="0.78"/>
+
+  <!-- Inner case walls — faint, indicate interior cavity -->
+  <line x1="200" y1="410" x2="200" y2="580" stroke-opacity="0.34"/>
+  <line x1="1000" y1="410" x2="1000" y2="580" stroke-opacity="0.34"/>
+
+  <!-- Inner bezel hint on the top-case interior -->
+  <line x1="200" y1="280" x2="1000" y2="280" stroke-opacity="0.22"/>
+
+  <!-- ===== SWITCHES — three outlines across, sitting on the plate ===== -->
+  <!-- Each switch ~ 90px wide, plate-mount style, side-profile MX silhouette -->
+  <g stroke-opacity="0.78">
+    <!-- Switch 1 — left -->
+    <path d="
+      M 360 396
+      L 360 360
+      L 370 350
+      L 410 350
+      L 420 360
+      L 420 396
+      Z"/>
+    <!-- Keycap mount post poking up -->
+    <rect x="385" y="332" width="10" height="20" rx="1.5" stroke-opacity="0.62"/>
+    <!-- Faint stem centerline -->
+    <line x1="390" y1="332" x2="390" y2="350" stroke-opacity="0.35"/>
+
+    <!-- Switch 2 — center -->
+    <path d="
+      M 555 396
+      L 555 360
+      L 565 350
+      L 605 350
+      L 615 360
+      L 615 396
+      Z"/>
+    <rect x="580" y="332" width="10" height="20" rx="1.5" stroke-opacity="0.62"/>
+    <line x1="585" y1="332" x2="585" y2="350" stroke-opacity="0.35"/>
+
+    <!-- Switch 3 — right -->
+    <path d="
+      M 750 396
+      L 750 360
+      L 760 350
+      L 800 350
+      L 810 360
+      L 810 396
+      Z"/>
+    <rect x="775" y="332" width="10" height="20" rx="1.5" stroke-opacity="0.62"/>
+    <line x1="780" y1="332" x2="780" y2="350" stroke-opacity="0.35"/>
+  </g>
+
+  <!-- Switch stem lines descending through the plate (very faint) -->
+  <g stroke-opacity="0.18" stroke-width="1">
+    <line x1="390" y1="396" x2="390" y2="420"/>
+    <line x1="585" y1="396" x2="585" y2="420"/>
+    <line x1="780" y1="396" x2="780" y2="420"/>
+  </g>
+
+  <!-- ===== PLATE FOAM (terracotta — between plate and switches) ===== -->
+  <rect x="210" y="396" width="780" height="12"
+    fill="#B86547" fill-opacity="0.30"
+    stroke="#B86547" stroke-opacity="0.78" stroke-width="2"/>
+
+  <!-- ===== PLATE (slim rectangle, outline only) ===== -->
+  <rect x="210" y="410" width="780" height="32" rx="2" stroke-opacity="0.82"/>
+  <!-- Switch mounting slot hints on plate -->
+  <g stroke-opacity="0.30" stroke-width="1.4">
+    <rect x="372" y="414" width="36" height="24" rx="1"/>
+    <rect x="567" y="414" width="36" height="24" rx="1"/>
+    <rect x="762" y="414" width="36" height="24" rx="1"/>
+  </g>
+
+  <!-- ===== PE FOAM (terracotta — between PCB and plate) ===== -->
+  <rect x="210" y="444" width="780" height="12"
+    fill="#B86547" fill-opacity="0.30"
+    stroke="#B86547" stroke-opacity="0.78" stroke-width="2"/>
+
+  <!-- ===== PCB (slim rectangle, outline only) ===== -->
+  <rect x="210" y="458" width="780" height="34" rx="2" stroke-opacity="0.62"/>
+  <!-- Subtle trace + SMD component hints on the PCB -->
+  <g stroke-opacity="0.26" stroke-width="1">
+    <line x1="262" y1="475" x2="332" y2="475" stroke-dasharray="5 7"/>
+    <line x1="540" y1="475" x2="620" y2="475" stroke-dasharray="5 7"/>
+    <line x1="820" y1="475" x2="900" y2="475" stroke-dasharray="5 7"/>
+  </g>
+  <g stroke-opacity="0.32" stroke-width="1">
+    <rect x="430" y="470" width="8" height="6" rx="1"/>
+    <rect x="700" y="470" width="8" height="6" rx="1"/>
+  </g>
+
+  <!-- ===== TAPE MOD (terracotta — thin strip on PCB underside) ===== -->
+  <rect x="234" y="494" width="732" height="8"
+    fill="#B86547" fill-opacity="0.30"
+    stroke="#B86547" stroke-opacity="0.78" stroke-width="2"/>
+
+  <!-- ===== CASE FOAM (terracotta — bottom of case interior) ===== -->
+  <rect x="210" y="504" width="780" height="34"
+    fill="#B86547" fill-opacity="0.30"
+    stroke="#B86547" stroke-opacity="0.78" stroke-width="2"/>
+  <!-- Foam texture hint: a row of faint open-cell dots -->
+  <g fill="#B86547" fill-opacity="0.32" stroke="none">
+    <circle cx="248" cy="521" r="3"/>
+    <circle cx="288" cy="521" r="3"/>
+    <circle cx="328" cy="521" r="3"/>
+    <circle cx="368" cy="521" r="3"/>
+    <circle cx="408" cy="521" r="3"/>
+    <circle cx="448" cy="521" r="3"/>
+    <circle cx="488" cy="521" r="3"/>
+    <circle cx="528" cy="521" r="3"/>
+    <circle cx="568" cy="521" r="3"/>
+    <circle cx="608" cy="521" r="3"/>
+    <circle cx="648" cy="521" r="3"/>
+    <circle cx="688" cy="521" r="3"/>
+    <circle cx="728" cy="521" r="3"/>
+    <circle cx="768" cy="521" r="3"/>
+    <circle cx="808" cy="521" r="3"/>
+    <circle cx="848" cy="521" r="3"/>
+    <circle cx="888" cy="521" r="3"/>
+    <circle cx="928" cy="521" r="3"/>
+    <circle cx="952" cy="521" r="3"/>
+  </g>
+
+  <!-- ====================================================================
+       CALLOUTS — four dotted-outline leader lines + lowercase mono labels
+       Each leader runs from a label anchor outside the case to the
+       terracotta layer it names.
+  ==================================================================== -->
+
+  <!-- ── CALLOUT 1: plate foam (top-left) ── -->
+  <g stroke="#B86547" stroke-opacity="0.85" stroke-width="1" stroke-dasharray="2 4" fill="none">
+    <path d="M 130 392 L 196 392 L 212 402"/>
+  </g>
+  <circle cx="130" cy="392" r="2.5" fill="#B86547" stroke="none"/>
+  <text x="124" y="378"
+    font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace"
+    font-size="14" fill="#B86547" fill-opacity="0.95"
+    letter-spacing="0.04em" text-anchor="start" stroke="none">plate foam</text>
+
+  <!-- ── CALLOUT 2: pe foam (top-right) ── -->
+  <g stroke="#B86547" stroke-opacity="0.85" stroke-width="1" stroke-dasharray="2 4" fill="none">
+    <path d="M 1070 440 L 1004 440 L 988 450"/>
+  </g>
+  <circle cx="1070" cy="440" r="2.5" fill="#B86547" stroke="none"/>
+  <text x="1076" y="426"
+    font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace"
+    font-size="14" fill="#B86547" fill-opacity="0.95"
+    letter-spacing="0.04em" text-anchor="end" stroke="none">pe foam</text>
+
+  <!-- ── CALLOUT 3: tape mod (bottom-left) ── -->
+  <g stroke="#B86547" stroke-opacity="0.85" stroke-width="1" stroke-dasharray="2 4" fill="none">
+    <path d="M 130 498 L 196 498 L 232 498"/>
+  </g>
+  <circle cx="130" cy="498" r="2.5" fill="#B86547" stroke="none"/>
+  <text x="124" y="514"
+    font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace"
+    font-size="14" fill="#B86547" fill-opacity="0.95"
+    letter-spacing="0.04em" text-anchor="start" stroke="none">tape mod</text>
+
+  <!-- ── CALLOUT 4: case foam (bottom-right) ── -->
+  <g stroke="#B86547" stroke-opacity="0.85" stroke-width="1" stroke-dasharray="2 4" fill="none">
+    <path d="M 1070 521 L 1004 521 L 988 521"/>
+  </g>
+  <circle cx="1070" cy="521" r="2.5" fill="#B86547" stroke="none"/>
+  <text x="1076" y="537"
+    font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace"
+    font-size="14" fill="#B86547" fill-opacity="0.95"
+    letter-spacing="0.04em" text-anchor="end" stroke="none">case foam</text>
+
+  <!-- ===== Quiet structural labels along the left margin (faint, didactic) ===== -->
+  <g font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace"
+     font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.30"
+     text-anchor="end" letter-spacing="0.04em" stroke="none">
+    <text x="172" y="304">top case</text>
+    <text x="172" y="427">plate</text>
+    <text x="172" y="478">pcb</text>
+    <text x="172" y="572">btm case</text>
+  </g>
+
+  <!-- ===== Brass-bronze theme dot — family-conventional ornamental anchor ===== -->
+  <circle cx="1148" cy="92" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

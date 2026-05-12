@@ -1,0 +1,87 @@
+---
+slug: sound-dampening-compared
+title: "Sound dampening, compared: case foam, plate foam, PE foam, and the tape mod"
+lede: "Four layers, four very different jobs. Here is what each sound mod actually changes, where it sits in the build stack, and the order to stack them in if you only have time for one or two."
+author: thock
+pillar: guides
+guideSection: 'modding'
+tags: [modding, acoustic, beginner]
+publishedAt: '2026-04-27T12:00:00.000Z'
+updatedAt: null
+heroImage: /hero-art/sound-dampening-compared.svg
+heroImageAlt: "Side-profile cross-section of a mechanical keyboard case on a dark field, with four warm-terracotta dotted-outline callouts labeling case foam (bottom of case), plate foam (between plate and PCB), PE foam (under PCB), and the tape mod (back of PCB) — the four sound-dampening layers an end-user can change."
+featured: false
+mentionedParts: []
+popularityScore: 65
+readingTime: 7
+---
+
+Case foam, plate foam, PE foam, and the tape mod share exactly one thing: each reshapes the acoustic signature of the case without touching the switch. The switch is still the switch. The keycap profile is still the keycap profile. What changes is the shell those parts vibrate inside of, and the air gaps that shell encloses.
+
+What these four mods do not share is a job description. They sit at different layers in the stack, absorb different frequency bands, and answer to different complaints about a board's sound. Treating them as interchangeable — the way some forum threads do — is the fastest way to spend an afternoon adding foam to a board that needed tape instead. The comparison only becomes legible once each layer is placed where it actually lives.
+
+## Where each layer sits in the stack
+
+Working from the bottom of the case upward, the four mods occupy four distinct spaces.
+
+**Case foam** sits at the bottom of the case interior, between the inside floor of the bottom shell and the underside of the PCB assembly. It fills empty volume — the air the case shell would otherwise resonate into. Coverage matters more than thickness; a 4mm sheet that wraps cleanly around battery wells and daughterboard cutouts outperforms a 6mm sheet with gaps around them.
+
+**Plate foam** sits in the sandwich between the switch plate and the PCB, occupying the gap that switch housings pass through. The cutouts are switch-shaped. It touches the underside of the plate and the top face of the PCB.
+
+**PE foam** sits one layer down — between the PCB and the plate in some kits, under the PCB in others (both names appear in vendor docs, which is half the confusion). The sheet is thin polyethylene, perforated to clear switch pins.
+
+**Tape mod** is the simplest geometry of the four: one to four strips of painter's tape applied to the back face of the PCB. No cutting, no fitting, no measurement that matters beyond covering the surface.
+
+## What each layer actually changes
+
+### Case foam
+
+Case foam targets the lowest band any of these mods touch — the lower-octave reverb that bounces inside an empty aluminum or polycarbonate shell. Without it, a board sounds hollow in the literal sense: the case is a small drum, and you are striking it indirectly through every keypress. Case foam absorbs that reverberation before it becomes part of the signal that leaves the board.
+
+Most stock prebuilts already include it. The Mode Sonnet, the Wuque IKKI68 Aurora, and the Keychron Q-series all ship with case foam from the factory, which is why none of them sound like an empty can out of the box. The mod is a baseline expectation more than an upgrade — the question on a modern build is what to layer on top of it, not whether to include it. Coverage is the variable that earns or wastes the effort; gaps under battery compartments or beside the daughterboard leak exactly the reverb the foam was installed to absorb.
+
+### Plate foam
+
+Plate foam is the most aggressive single dampener in the stack. It targets the high-frequency ring that travels through the thin air gap between the plate and the PCB — the brightest, most "ping"-y layer of a board's sound. With plate foam installed, that band drops sharply.
+
+Which is also why plate foam is the most divisive of the four. The same builders who love an open, bright top-end describe a plate-foamed board as dead, muted, lifeless. The builders who find a bare-gap board too clattery describe the same change as finally controlled. There is no neutral answer; the mod does what it does, and personal taste decides whether what it does is welcome. <Source href="https://www.theremingoat.com/blog" text="Theremin Goat's plate-foam comparisons" /> are the closest thing the hobby has to a controlled write-up of the effect.
+
+### PE foam
+
+PE foam is the highest-ROI single addition on a board that already has case foam. The thin polyethylene sheet routed around switch pins adds a soft, "poppy" character to bottom-out — the often-described "marbley" or "pop"-y note — without removing as much top-end energy as plate foam does. It became the dominant under-PCB mod sometime around 2023 to 2024, the period builders now call the "PE foam moment," and has effectively displaced the older o-ring-under-keycap mods for most builders.
+
+The reason for its popularity is its ratio. Plate foam removes a band; PE foam adds one. On a board whose top-end the builder likes, PE foam adds character without subtracting any of the character that was already there.
+
+### Tape mod
+
+The tape mod is the cheapest entry in the stack — one to four strips of painter's tape on the back of the PCB, costing roughly nothing. The effect is a low-mid resonance boost, the warmer end of what builders sometimes call a marmaladey or honeyed character. It is real, audible, and reaches diminishing returns fast.
+
+Two strips usually do more than one. Four strips rarely do more than two. Past that, the additional layers contribute almost nothing — the marginal effect collapses, and the mod has given everything it has to give.
+
+## Where each mod stops earning its keep
+
+The comparative payoff is honest about which mod justifies which build. Case foam earns its keep on any board with empty interior volume, which is most of them; the threshold for "worth doing" is essentially zero. PE foam earns its keep on a board that has already been case-foamed and still wants more low-mid character — the highest ROI single addition for a builder who is past the baseline. Plate foam is a coin flip whose direction depends entirely on whether the builder wants the bright top-end gone or wants to keep it. Tape mod is a no-cost experiment that pays off until enough other layers have been stacked that its marginal effect disappears underneath them.
+
+The first three of those statements describe physics. The fourth describes economics. All four matter when deciding what to put in a build.
+
+## The stacking order most builders converge on
+
+There is no canonical right answer here, and any builder claiming otherwise is selling a specific sound preference as a universal truth. But a default order exists, and most builds that arrive at a satisfying sound have stepped through it in roughly this sequence.
+
+Case foam first, because it changes the most baseline-level character and is already included on most prebuilts anyway. Tape mod second, because it is the cheapest possible next test — a roll of painter's tape and ten minutes of disassembly. PE foam third, replacing the tape mod's marginal layer with a more controlled version of a similar character. Plate foam last, if more dampening is still wanted at that point.
+
+A meaningful share of builders never add plate foam at all. The configuration "case foam plus PE foam plus tape mod" — three of the four — is closer to the modal modern build than the full four-layer stack. The "pinball" sound that builders chase in 2025 and 2026 build videos is mostly tape mod and PE foam together on a polycarbonate or POM plate, with the plate doing some of the dampening work that plate foam would otherwise be asked to do.
+
+## The mods that get conflated with these but aren't
+
+A few neighboring mods turn up in the same forum threads but answer to different problems. The force-break mod targets stabilizer rattle, not case acoustics — different goal, different layer, different fix. Switch films act at the switch itself, tightening the top and bottom housings against each other; they change the sound of the switch, not the sound of the case.
+
+Silicone case fill — pouring liquid silicone into the bottom of the case to set around the PCB and daughterboard — is an extreme, irreversible variant of case foam's job. It is genuinely effective and almost never the right choice for a builder who is still deciding what sound they want. Worth knowing the name so the conversation makes sense; not worth doing without conviction.
+
+## The honest version of "should I do all four?"
+
+Most stock prebuilts arrive with case foam already installed. The real question for almost every builder is not whether to do all four, but which one or two to layer on top of the foam the board came with.
+
+Most builders end at two. Case foam plus PE foam is the common landing point for builders who want a warmer, popped bottom-out. Case foam plus tape mod is the common landing point for builders working with a budget board or a board they do not want to disassemble more than once. The four-layer stack is for builders who have already decided what they want their board to sound like and are tuning the last ten percent. It is not the starting point and is rarely the destination — it is what a finished sound preference looks like after a year of iteration.
+
+The advantage of treating these four mods as a stack instead of a menu is that the order of operations stops mattering as a matter of taste. Case foam first. Then test. Then the next layer. Then test. The mod that fails the test is the one to skip.

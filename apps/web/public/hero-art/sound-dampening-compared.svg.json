@@ -1,0 +1,21 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored",
+  "at": "2026-05-12T00:00:00.000Z",
+  "commit": "",
+  "kind": "custom",
+  "source": "hand-authored SVG — keyboard case cross-section with four dampening layers callout",
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": ["JetBrains Mono"],
+  "outputs": [
+    "apps/web/public/hero-art/sound-dampening-compared.svg"
+  ],
+  "asset": "sound-dampening-compared.svg",
+  "type": "article-hero",
+  "subject": "keyboard case cross-section with four sound-dampening layers (case foam, plate foam, PE foam, tape mod)",
+  "splashHue": "muted terracotta",
+  "canvas": "1200x750",
+  "generatedAt": "2026-04-27",
+  "sourceSkill": "ship-content",
+  "warnings": []
+}
