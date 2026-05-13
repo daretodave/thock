@@ -94,13 +94,16 @@
 - verify note: 409 e2e green parallel — no #418 flake this run.
 - source: browser
 
-### [MED] /tag/modding — "TAG · MISC" eyebrow undersells a first-class topic; taxonomy gap
+### [x] [MED] /tag/modding — "TAG · MISC" eyebrow undersells a first-class topic; taxonomy gap
+- addressed in: 248ee57 (this tick — cloud /iterate drain)
+- issue: #72
 - pass: 10 (commit 0e2314f)
 - viewport: both
 - category: content-gap
 - observation: The /tag/modding page eyebrow categorizes #modding as `tag · misc`. For a site whose Guides pillar includes a 1700-word Lubing 101 piece, whose Ideas pillar includes build-method content, and whose lede positions the audience as builders/modders, modding is a first-class topic — not miscellaneous. The "MISC" label undersells one of the site's strongest tag landings and signals to a fresh reader that the taxonomy is sloppy. Same shape will hit `/tag/lubing`, `/tag/firmware`, `/tag/build-of-the-week`, and any other practice/topic-shaped tag — anything that isn't a vendor / part / layout / profile / community gets dumped in `misc`.
 - evidence: rendered text on /tag/modding shows `<span class="font-mono uppercase tracking-[0.12em] text-micro text-text-3">tag · <!-- -->misc</span>`. Source: `packages/data/src/schemas/tag.ts` (or wherever the tag-category enum lives) — the enum is currently `vendor | part | layout | profile | community | misc`; modding/lubing/firmware all fall through to misc.
-- suggested fix: add a `topic` (or `practice`) tag category to the enum + tag-category palette, reclassify modding/lubing/firmware/build-of-the-week into it. Touches `tags.json`, the schema, and the eyebrow palette in `apps/web/src/app/tag/[slug]/page.tsx`. Or, narrower: just rename the existing `misc` bucket to `topic` (one-line palette label change) — same fix shape but no schema migration. The latter is the cheapest path and probably the right call.
+- fix: picked the narrower path from the suggested fix — a display-label map in `apps/web/src/app/tag/[slug]/page.tsx` rather than a schema migration. New `CATEGORY_LABEL` constant maps the `misc` enum value to `topic` for the rendered eyebrow; every other category (switch / layout / brand / material / profile) renders unchanged. The schema enum, tags.json (21 misc-tagged records), and the existing `CATEGORY_TINT` palette are untouched. Regression guard: new e2e in `apps/e2e/tests/tag.spec.ts` visits /tag/modding, asserts the eyebrow contains "tag · topic" AND does NOT contain "misc". The existing /tag/linear test (`tag · switch`) continues to pass — the label for non-misc categories is a pass-through.
+- verify note: 543 e2e green on serial worker.
 - source: browser
 
 ### [LOW] /group-buys — "0 announced" segment names a bucket with no corresponding section
