@@ -357,6 +357,17 @@
 >
 > **Resolved (2026-05-13):** Shipped "How Topre's electrocapacitive switches actually work" at `/article/topre-electrocapacitive-deep-dive`, publishedAt 2026-04-16 (gap-fill midpoint of the 2026-04-15 → 2026-04-17 2-day gap; closest-to-today tiebreak among equal-largest 2-day gaps). Third-sensing-lineage piece — rubber-dome + conical-spring + capacitive PCB pad — frames Topre as parallel to MX-style contact switches and Hall-effect newcomers, not a legacy curiosity. Closes the architectural gap in the pillar (3 linears + 1 tactile + 1 clicky + 1 mounting + the architectural Topre piece). Deep-dives now at **7 of 8**. `8d97d97`
 
+### [x] [5.25] deep-dives pillar — 7 of 8 article quota (needs 1 more) — addressed in 702b8a9 (closes #76)
+- category: content-gaps
+- impact: 7 (Deep Dives is the fourth-most-prominent pillar; 7/8 articles is still below quota)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — pillar quota
+- shortfall: 1 article (current 7, quota 8) → now 8 of 8 (1 shipped) — quota reached
+- next: retire the deep-dives Rule-1 row chain — quota met; future deep-dives content-gap rows fire only if a piece is archived or a new sub-architecture surfaces
+> Filed 2026-05-13 by cloud /march tick (queue auto-refill — same pattern as the 4/8, 5/8, and 6/8 rows filed earlier in the week). Bias multiplier 1.5× applies → effective score 5.25. Existing deep-dives coverage at queue-file time: 3 linear pieces (Oil King, HMX Cloud, Cherry MX2A), 1 tactile (Holy Panda X), 1 clicky-architecture (clicky-switches), 1 mounting-architecture (plate materials), 1 capacitive-architecture (Topre). The architectural arc opened by the Topre piece (which explicitly frames Topre as "parallel to MX-style contact switches and the Hall-effect newcomers") leaves the Hall-effect / magnetic sensing lineage as the natural fourth-architecture closer — sensing-physics deep-dive, not the market-trajectory piece that already lives in Trends (`hall-effect-mainstream`).
+>
+> **Resolved (2026-05-13):** Shipped "How Hall-effect switches actually sense a keypress" at `/article/magnetic-switches-deep-dive`, publishedAt 2026-04-14 (gap-fill midpoint of the only 2-day gap in the rolling-30-day window, between 2026-04-13 and 2026-04-15 — sentinel-bounded). Fourth-sensing-lineage piece — stem-mounted magnet, Hall sensor on the PCB, analog voltage proportional to magnetic flux — frames magnetic switches as the lineage that closed the analog-output gap MX never had, with the tradeoffs (calibration drift, inter-switch interference, factory tolerance on magnet placement) the marketing pages don't lead with. Closes the architectural arc on the pillar (3 linears + 1 tactile + 1 clicky + 1 mounting + Topre + magnetic). Deep-dives now at **8 of 8 — quota met.** `702b8a9`
+
 ### [x] [MED] PageStub routes flake under parallel e2e load (React #418 hydration) — self-resolved via phase 16
 > Filed 2026-05-09. Original prediction was "self-resolves before phase 16 ships" because phase 16's polish scope replaced every PageStub with a real route. Flake persisted briefly after `f3e5bac` shipped (one source of hydration mismatch was the formatter TZ issue, partially patched at `dfa5596`); the SECOND hydration source the TZ patch couldn't reach lived inside the PageStub itself and went away when every dynamic-data route got its own real page.
 >
