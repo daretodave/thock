@@ -335,6 +335,17 @@
 >
 > **Resolved (2026-05-13):** Shipped "Why the Drop Holy Panda X feels the way it does" at `/article/drop-holy-panda-x-deep-dive`, publishedAt 2026-05-12 (gap-fill midpoint between 2026-05-11 and today sentinel; closest-to-today tiebreak among 2-day gaps). Tactile counterpart to the existing linear deep-dives (Oil King, HMX Cloud) plus the architecture piece (Plate materials); closes the tactile-coverage gap in the pillar. Deep-dives now at **5 of 8**. `d9f23ae`
 
+### [x] [5.25] deep-dives pillar — 5 of 8 article quota (needs 3 more) — addressed in e24508d (closes #74)
+- category: content-gaps
+- impact: 7 (Deep Dives is the fourth-most-prominent pillar; 5/8 articles is still below quota)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — pillar quota
+- shortfall: 3 articles (current 5, quota 8) → now 6 of 8 (1 shipped)
+- next: /ship-content → deep-dives pillar article (topic from /iterate audit or gap heuristic)
+> Filed 2026-05-13 by cloud /march tick (queue auto-refill — same pattern as the 4/8 row filed earlier today). Bias multiplier 1.5× applies → effective score 5.25. Drains one row per /ship-content tick; retire when deep-dives reaches 8 articles.
+>
+> **Resolved (2026-05-13):** Shipped "Why clicky switches still have a constituency" at `/article/clicky-switches-deep-dive`, publishedAt 2026-04-18 (gap-fill midpoint of the 2026-04-17 → 2026-04-19 2-day gap; closest-to-today tiebreak among equal-largest 2-day gaps in the rolling 30-day window). Click-jacket (Cherry MX Blue lineage) vs click-bar (Kailh Box family) framed as the load-bearing distinction; closes the clicky-coverage gap in the pillar (which previously held 3 linears + 1 tactile + 1 architecture piece). Deep-dives now at **6 of 8**. `e24508d`
+
 ### [x] [MED] PageStub routes flake under parallel e2e load (React #418 hydration) — self-resolved via phase 16
 > Filed 2026-05-09. Original prediction was "self-resolves before phase 16 ships" because phase 16's polish scope replaced every PageStub with a real route. Flake persisted briefly after `f3e5bac` shipped (one source of hydration mismatch was the formatter TZ issue, partially patched at `dfa5596`); the SECOND hydration source the TZ patch couldn't reach lived inside the PageStub itself and went away when every dynamic-data route got its own real page.
 >
