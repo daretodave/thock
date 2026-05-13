@@ -11,6 +11,18 @@ test.describe('tag pages — phase 12', () => {
     await expect(h1).toContainText('#linear')
   })
 
+  test('lede references the slug in #slug form (matches H1, not Title-Cased name)', async ({
+    page,
+  }) => {
+    // Critique pass 8 row: lede previously read "Linear" while the H1 reads
+    // "#linear", contradicting on a single screen. Lock the consistent
+    // hashtag-slug form so future renames can't reintroduce drift.
+    await page.goto('/tag/linear')
+    const lede = page.getByTestId('tag-page-lede')
+    await expect(lede).toContainText('tagged #linear')
+    await expect(lede).not.toContainText(/tagged Linear/)
+  })
+
   test('renders the misc category as "topic" in the eyebrow', async ({
     page,
   }) => {

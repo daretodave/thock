@@ -117,9 +117,12 @@ export default async function TagPage({
           >
             #{tag.slug}
           </h1>
-          <p className="max-w-[60ch] font-serif text-h3 text-text-2">
+          <p
+            data-testid="tag-page-lede"
+            className="max-w-[60ch] font-serif text-h3 text-text-2"
+          >
             {articles.length} {articles.length === 1 ? 'article' : 'articles'}{' '}
-            tagged {tag.name}.
+            tagged #{tag.slug}.
           </p>
           <Link
             href="/tags"
@@ -155,7 +158,7 @@ export default async function TagPage({
               empty tag
             </span>
             <h2 className="font-serif text-h2 text-text">
-              No articles tagged {tag.name} yet.
+              No articles tagged #{tag.slug} yet.
             </h2>
             <p className="max-w-[60ch] font-serif text-h3 text-text-2">
               When something lands under this tag, it shows up here first.
