@@ -162,7 +162,8 @@
 >
 > **Resolved (2026-05-11):** `apps/web/src/app/layout.tsx` now has a `.skip-link` as the first `<body>` child targeting `#main`. CSS in `globals.css` hides it at rest and reveals it on keyboard focus with an accent-bordered panel. All 43 route `<main>` elements received `id="main"` (16 page.tsx + 12 loading.tsx + 5 not-found.tsx + 10 error.tsx). Regression guard added to `apps/e2e/tests/a11y.spec.ts` (skip-link present, target resolves, link becomes visible on focus). `7899462`
 
-### [a11y] [3.5] color-contrast — text-accent-mu at small text sizes (pillar eyebrows, tag chips)
+### [x] [a11y] [3.5] color-contrast — text-accent-mu at small text sizes (pillar eyebrows) — addressed in pending commit (this tick — cloud /iterate drain)
+- issue: #79
 - filed: 2026-05-11 by Phase 26 axe discovery pass
 - wcag: 1.4.3 Contrast (Minimum) AA — 4.5:1 for text <18px / <14px bold
 - axe impact: serious
@@ -173,6 +174,7 @@
 - note: design-level decision. Changing `text-accent-mu` across the site has cascade effects. Recommend /oversight review before touching the token; the iterate drain here is "use `text-accent` for eyebrow contexts where 12px muted text is decorative."
 - score: 3.5 (impact 5 — affects sighted users with color perception issues or low-contrast screens; ease 5 — one class substitution per component but design sign-off needed)
 - once fixed: add `expect(results.violations.filter(v => v.id === 'color-contrast')).toHaveLength(0)` assertion to a11y.spec.ts for the affected pages
+> **Resolved (2026-05-13):** Took option (a) — swapped `text-accent-mu` → `text-accent` at all 16 12-px decorative eyebrow call sites under `apps/web/src/` (Article/Home/Related article cards, MentionedPartsRail, PartHero, PageStub, RootNotFound + SuggestedArticles, newsletter/sources/about pages, all four `not-found.tsx` eyebrows, and `/part/[kind]/page.tsx`). The `text-accent-mu` token itself stays untouched — only the eyebrow contexts that need the contrast lift get swapped. Tag-chip contrast is out of scope for this row: chips use categorical `text-tag-*` tints via `TINT_BY_CATEGORY` in `packages/ui/src/TagChip.tsx`, not `text-accent-mu`. A separate future audit pass can score the tag-chip contrast question on its own. Regression guard added to `apps/e2e/tests/a11y.spec.ts`: scoped `AxeBuilder.include('[data-testid="article-hero-eyebrow"]')` on `/article/gateron-oil-king-deep-dive` asserts zero `color-contrast` violations on the representative eyebrow context. Phase A docstring + inline comments updated to reflect that both Phase-26-filed serious color-contrast rows (text-text-3 + text-accent-mu) have targeted regression guards now. 567 e2e green on first attempt.
 
 ### [x] [a11y] [3.0] color-contrast — text-text-3 at small text (tracker header metadata, back links) — addressed in pending commit (this tick — cloud /iterate drain)
 - issue: #77
