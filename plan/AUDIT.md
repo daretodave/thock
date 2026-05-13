@@ -324,6 +324,17 @@
 >
 > **Resolved (2026-05-12):** Shipped "Switch housings, compared: nylon, polycarbonate, POM, and the rest" at `/article/switch-housings-compared`, publishedAt 2026-04-21 (gap-fill midpoint of the equal-largest 2-day gap closest to today). Fills out the **switches** guideSection (joining `beginners-switch-buying-guide`), parallels `keycap-materials-compared` on the switch axis. Guides pillar now at **8 of 8 — quota met.** This row retires the guides-pillar content-gap queue; deep-dives (4/8) remains as the next pending content-gap row. `4e62877`
 
+### [x] [5.25] deep-dives pillar — 4 of 8 article quota (needs 4 more) — addressed in d9f23ae (closes #73)
+- category: content-gaps
+- impact: 7 (Deep Dives is the fourth-most-prominent pillar; 4/8 articles is still half of quota)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — pillar quota
+- shortfall: 4 articles (current 4, quota 8) → now 5 of 8 (1 shipped)
+- next: /ship-content → deep-dives pillar article (topic from /iterate audit or gap heuristic)
+> Filed 2026-05-13 by cloud /march tick — fills the operational queue-refill gap expand pass 7 flagged (`a3f5653` left deep-dives at 4/8 with no Pending content-gap row, so the next /march tick fell through). Bias multiplier 1.5× applies → effective score 5.25. Drains one row per /ship-content tick; retire when deep-dives reaches 8 articles.
+>
+> **Resolved (2026-05-13):** Shipped "Why the Drop Holy Panda X feels the way it does" at `/article/drop-holy-panda-x-deep-dive`, publishedAt 2026-05-12 (gap-fill midpoint between 2026-05-11 and today sentinel; closest-to-today tiebreak among 2-day gaps). Tactile counterpart to the existing linear deep-dives (Oil King, HMX Cloud) plus the architecture piece (Plate materials); closes the tactile-coverage gap in the pillar. Deep-dives now at **5 of 8**. `d9f23ae`
+
 ### [x] [MED] PageStub routes flake under parallel e2e load (React #418 hydration) — self-resolved via phase 16
 > Filed 2026-05-09. Original prediction was "self-resolves before phase 16 ships" because phase 16's polish scope replaced every PageStub with a real route. Flake persisted briefly after `f3e5bac` shipped (one source of hydration mismatch was the formatter TZ issue, partially patched at `dfa5596`); the SECOND hydration source the TZ patch couldn't reach lived inside the PageStub itself and went away when every dynamic-data route got its own real page.
 >
