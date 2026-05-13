@@ -1,0 +1,23 @@
+{
+  "agent": "brander",
+  "renderedAt": "2026-05-13T00:00:00Z",
+  "slug": "magnetic-switches-deep-dive",
+  "subject": "Hall-effect magnetic switch cross-section — MX-style trapezoidal housing in profile (top housing with cruciform stem aperture and LED notch over a narrower bottom housing with PCB pin stubs), a stem descending into the cavity with a compression spring as flattened-ellipse stack, a small magnet mounted on the underside of the stem with a visible N/S pole division, a Hall-effect sensor pad mounted on a thin horizontal PCB substrate directly beneath the magnet, and a family of curved magnetic field lines arcing pole-to-pole through and around the sensor's plane — making legible at a glance that the switching event is a continuous voltage proportional to magnetic flux, not a contact closure or capacitance change",
+  "motif": "single-switch cross-section / labeled engineering sketch with dipole field overlay",
+  "splashHue": "muted terracotta",
+  "splashColor": "oklch(0.62 0.10 45)",
+  "canvas": "1200x750",
+  "strokeWeight": "2px",
+  "strokeColor": "oklch(0.78 0.005 90)",
+  "kind": "hero-art",
+  "engine": "hand-authored SVG (no raster pipeline)",
+  "commit": "8eadbfff0b6d396ab812b60fe9cc553b7ae671f2",
+  "tokens_snapshot": "f79eb6c04b4a9d2e0e3e083f8aeb6bc57586d849",
+  "fonts": [],
+  "notes": "Single-switch cross-section (not exploded — the Topre sibling already uses the vertical exploded stack motif, so this piece uses a tighter assembled profile to keep the gallery visually varied). Housing drawn as two stacked trapezoids in profile: top housing (y=200–332) with cruciform stem aperture and LED notch, bottom housing (y=340–480) with PCB pin stubs and a center mount post. Inside the housing: a cruciform stem head + body descending to y=380, a compression spring as a five-ellipse stack from y=392–432 (family convention for compression springs, cf. clicky-switches-deep-dive), and the diagnostic element — a small magnet (width 44, height 22) mounted on the stem's underside with a visible horizontal N/S pole division and tiny splash-hue N/S glyphs. Below the housing: a slim PCB substrate band (y=520–538) with a Hall-effect sensor pad (splash-hue filled rectangle, 44x10) sitting directly under the magnet, four pin leads dropping into the substrate, and didactic sense-trace pairs exiting left and right. The visual hook is six magnetic field arcs in the splash hue, leaving the magnet's south face and returning to the north face: two tight inner arcs hugging the magnet flanks (heavier stroke opacity), two mid-radius arcs sweeping outward, and two outer arcs breathing into the right-hand third of the canvas (the switch is offset left of center to give the field this room). Two tiny chevron arrowheads on the right-hand arcs indicate field-line direction (N to S externally). A faint dashed horizontal actuation reference line runs through the middle of the switch with a tiny tick marker, gesturing at the per-key configurable actuation threshold which is the article's downstream 'why this matters' beat. Splash-hue focal anchor (dot + outer ring + inward chevrons) at the magnet/sensor interface (460,455) marks the flux-sensing event without drawing a closure line. Splash hue muted terracotta oklch(0.62 0.10 45) sits at hue 45 — distinct from the immediately-prior rotation: Topre dusty rose (hue 20), hall-effect-mainstream coral (hue 28), Drop Holy Panda terracotta (hue 40), Oil King coral (hue 30), clicky ochre (hue 80). The chroma 0.10 keeps it muted vs. the brighter coral neighbours, per the bearings 'single splash, muted' directive. Brass-bronze ornamental dot at top-right (1148,92) and four left-margin didactic tier ticks (top housing, stem body, magnet, PCB) preserved per hero-art family convention. No textual labels beyond the tiny N/S pole glyphs; the article body supplies the explanation, the SVG carries the architecture. All XML comments use '====' separator runs (no '--' runs) per the svg-validity.test.ts regression guard at apps/web/src/__tests__/svg-validity.test.ts.",
+  "outputs": [
+    "apps/web/public/hero-art/magnetic-switches-deep-dive.svg",
+    "apps/web/public/hero-art/magnetic-switches-deep-dive.svg.json"
+  ],
+  "warnings": []
+}

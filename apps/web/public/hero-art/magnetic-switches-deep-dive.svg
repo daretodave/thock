@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — Hall-effect magnetic switch cross-section: stem-mounted magnet, Hall sensor pad on the PCB, magnetic field lines arcing pole-to-pole through the sensor's plane</title>
+
+  <!-- Splash: muted terracotta, applied as a soft horizontal wash beneath the magnet
+       and across the Hall sensor pad — the article's load-bearing claim is that the
+       switching event is a continuous voltage proportional to magnetic flux through
+       the sensor, not a closure event. Single splash, single hue.
+       Hue 45 sits between the existing deep-dives rotation: dusty rose (hue 20, Topre),
+       coral (hue 28, hall-effect-mainstream), Drop Holy Panda terracotta (hue 40),
+       and clicky ochre (hue 80) — close enough to terracotta to read as earth-tone,
+       far enough off coral to scan as a distinct piece in the gallery. -->
+  <ellipse cx="495" cy="540" rx="260" ry="58" fill="oklch(0.62 0.10 45 / 0.16)" stroke="none"/>
+
+  <!-- Composition: switch silhouette is offset slightly left of center (around x=460)
+       to leave the right two-fifths of the canvas open for the magnetic field arcs
+       to breathe outward and curve back to the south pole. Family convention is
+       a centered diagram; this piece breaks that intentionally because the field
+       geometry is the diagnostic shape, and it needs room. -->
+
+  <!-- ════════════════════════════════════════════════════════════════════════════
+       SWITCH HOUSING — MX-style trapezoidal silhouette, profile cut-away.
+       Wider at the stem-mount top, narrower toward the PCB-mount bottom.
+       Two stacked trapezoids: top housing (above the plate-mount waist) and
+       bottom housing (below). Roughly 280 px tall, from y=200 to y=480.
+       ════════════════════════════════════════════════════════════════════════════ -->
+
+  <!-- ── TOP HOUSING (stem-mount face) ───────────────────────────────────────── -->
+  <g>
+    <!-- Outer top housing trapezoid -->
+    <path d="
+      M 340 200
+      L 580 200
+      L 600 332
+      L 320 332
+      Z" />
+    <!-- Inner cavity edge (gives the wall thickness) -->
+    <path d="
+      M 354 215
+      L 566 215
+      L 584 325
+      L 336 325
+      Z" stroke-opacity="0.4"/>
+    <!-- Cruciform stem aperture at the top face -->
+    <path d="
+      M 432 200
+      L 488 200
+      L 492 211
+      L 478 211
+      L 478 220
+      L 462 220
+      L 462 211
+      L 458 211
+      L 458 220
+      L 442 220
+      L 442 211
+      L 428 211
+      Z" stroke-opacity="0.7"/>
+    <!-- LED notch on the top edge -->
+    <path d="M 380 200 L 416 200 L 412 209 L 384 209 Z" stroke-opacity="0.55"/>
+    <!-- Mounting clip nubs -->
+    <line x1="340" y1="312" x2="330" y2="312" stroke-opacity="0.5"/>
+    <line x1="580" y1="312" x2="590" y2="312" stroke-opacity="0.5"/>
+  </g>
+
+  <!-- ── PLATE-MOUNT WAIST + BOTTOM HOUSING ─────────────────────────────────── -->
+  <g>
+    <!-- Bottom housing trapezoid (narrower base, plate-mount nubs implicit at waist) -->
+    <path d="
+      M 320 340
+      L 600 340
+      L 580 480
+      L 340 480
+      Z" />
+    <!-- Inner cavity edge -->
+    <path d="
+      M 336 354
+      L 584 354
+      L 566 470
+      L 354 470
+      Z" stroke-opacity="0.4"/>
+    <!-- PCB pin stubs on the underside -->
+    <line x1="380" y1="480" x2="380" y2="500" stroke-opacity="0.6"/>
+    <line x1="540" y1="480" x2="540" y2="500" stroke-opacity="0.6"/>
+    <!-- Center mount post -->
+    <line x1="460" y1="480" x2="460" y2="498" stroke-opacity="0.45"/>
+    <!-- Side rail nubs on the bottom face -->
+    <line x1="370" y1="340" x2="370" y2="350" stroke-opacity="0.5"/>
+    <line x1="550" y1="340" x2="550" y2="350" stroke-opacity="0.5"/>
+  </g>
+
+  <!-- ════════════════════════════════════════════════════════════════════════════
+       STEM + SPRING + MAGNET — the moving assembly inside the housing.
+       The stem descends as the keycap is pressed; the magnet at the base of the
+       stem moves closer to the Hall sensor pad on the PCB, increasing the flux
+       through the sensor, changing the output voltage. No contact closure.
+       ════════════════════════════════════════════════════════════════════════════ -->
+
+  <!-- ── STEM (cruciform head + body) ───────────────────────────────────────── -->
+  <g>
+    <!-- Cruciform head (sits in the stem aperture) -->
+    <path d="
+      M 442 220
+      L 478 220
+      L 478 232
+      L 488 232
+      L 488 244
+      L 432 244
+      L 432 232
+      L 442 232
+      Z" />
+    <!-- Stem body — column descending from the cruciform head down into the
+         housing cavity, ending just above the bottom of the top housing. -->
+    <path d="
+      M 442 244
+      L 478 244
+      L 478 380
+      L 442 380
+      Z" />
+    <!-- Stem centerline -->
+    <line x1="460" y1="252" x2="460" y2="376" stroke-opacity="0.4" stroke-dasharray="2 4"/>
+  </g>
+
+  <!-- ── SPRING (compression coil between stem base and housing floor) ───────
+       Drawn as a tight stack of flattened ellipses, family convention for
+       compression springs (cf. clicky-switches-deep-dive). The spring sits
+       behind the magnet visually — the magnet is mounted on the stem's
+       bottom face and the spring wraps around the stem pole stub. -->
+  <g>
+    <ellipse cx="460" cy="392" rx="26" ry="5" stroke-opacity="0.7"/>
+    <ellipse cx="460" cy="402" rx="26" ry="5" stroke-opacity="0.7"/>
+    <ellipse cx="460" cy="412" rx="26" ry="5" stroke-opacity="0.7"/>
+    <ellipse cx="460" cy="422" rx="26" ry="5" stroke-opacity="0.7"/>
+    <ellipse cx="460" cy="432" rx="26" ry="5" stroke-opacity="0.7"/>
+    <line x1="460" y1="388" x2="460" y2="438" stroke-opacity="0.3" stroke-dasharray="2 4"/>
+  </g>
+
+  <!-- ── MAGNET (mounted on the underside of the stem) ──────────────────────
+       The magnet is the diagnostic element of this switch family. Drawn as a
+       small rectangle with a clear N/S split, in the splash hue so the eye
+       reads it as the source of the field lines. Positioned at the very base
+       of the stem column, just above the PCB. -->
+  <g>
+    <!-- Magnet body — wider than tall, sits flush against stem bottom -->
+    <rect x="438" y="380" width="44" height="22" fill="oklch(0.62 0.10 45 / 0.18)" stroke="oklch(0.62 0.10 45)" stroke-width="2"/>
+    <!-- Pole division line — horizontal mid-bar splitting N (top) from S (bottom).
+         The visual reading is: north pole faces up into the stem, south pole faces
+         down toward the sensor. The arcs in the field-line group below leave the
+         visible south face and curve back to the north face. -->
+    <line x1="438" y1="391" x2="482" y2="391" stroke="oklch(0.62 0.10 45)" stroke-opacity="0.65"/>
+    <!-- Tiny N / S pole markers — drawn as small splash-hue line glyphs.
+         These are the only letterforms in the piece; kept minimal. -->
+    <g stroke="oklch(0.62 0.10 45)" stroke-opacity="0.9" stroke-width="1.4">
+      <!-- N glyph (top half) -->
+      <path d="M 456 384 L 456 388 M 456 384 L 460 388 M 460 384 L 460 388"/>
+      <!-- S glyph (bottom half) -->
+      <path d="M 462 395 C 461 394, 459 394, 458 395 C 457 396, 458 397, 460 397 C 462 397, 463 398, 462 399 C 461 400, 459 400, 458 399"/>
+    </g>
+  </g>
+
+  <!-- ════════════════════════════════════════════════════════════════════════════
+       PCB + HALL-EFFECT SENSOR PAD
+       A slim horizontal substrate below the switch, with the Hall sensor pad
+       mounted on its top face directly under the magnet. The sensor is a small
+       splash-hue rectangle — the article's focal anchor.
+       ════════════════════════════════════════════════════════════════════════════ -->
+  <g>
+    <!-- PCB top edge -->
+    <line x1="220" y1="520" x2="780" y2="520"/>
+    <!-- PCB substrate band -->
+    <line x1="220" y1="520" x2="220" y2="538" stroke-opacity="0.55"/>
+    <line x1="780" y1="520" x2="780" y2="538" stroke-opacity="0.55"/>
+    <line x1="220" y1="538" x2="780" y2="538" stroke-opacity="0.55"/>
+    <!-- Internal copper plane hint -->
+    <line x1="230" y1="529" x2="770" y2="529" stroke-opacity="0.22" stroke-dasharray="2 6"/>
+
+    <!-- Hall sensor pad — small filled rectangle on top of the PCB, directly
+         beneath the magnet. Splash hue so it reads as the active sense element. -->
+    <rect x="438" y="510" width="44" height="10" fill="oklch(0.62 0.10 45 / 0.85)" stroke="oklch(0.62 0.10 45)"/>
+    <!-- Tiny pin leads exiting the sensor pad into the PCB substrate -->
+    <line x1="445" y1="520" x2="445" y2="530" stroke="oklch(0.62 0.10 45)" stroke-opacity="0.7"/>
+    <line x1="455" y1="520" x2="455" y2="530" stroke="oklch(0.62 0.10 45)" stroke-opacity="0.7"/>
+    <line x1="465" y1="520" x2="465" y2="530" stroke="oklch(0.62 0.10 45)" stroke-opacity="0.7"/>
+    <line x1="475" y1="520" x2="475" y2="530" stroke="oklch(0.62 0.10 45)" stroke-opacity="0.7"/>
+
+    <!-- Sense traces leaving the pad to the right toward the controller -->
+    <g stroke-opacity="0.5">
+      <line x1="482" y1="515" x2="540" y2="515"/>
+      <line x1="540" y1="515" x2="540" y2="544"/>
+      <line x1="540" y1="544" x2="640" y2="544"/>
+    </g>
+    <!-- A second trace exits to the left (power / ground pair, didactic) -->
+    <g stroke-opacity="0.5">
+      <line x1="438" y1="515" x2="380" y2="515"/>
+      <line x1="380" y1="515" x2="380" y2="544"/>
+      <line x1="380" y1="544" x2="280" y2="544"/>
+    </g>
+  </g>
+
+  <!-- ════════════════════════════════════════════════════════════════════════════
+       MAGNETIC FIELD LINES — the diagnostic motif of the piece.
+       Curved arcs leaving the magnet's south face (bottom), bending outward into
+       the surrounding space, and returning to the north face (top). Drawn in
+       the splash hue. The arcs closest to the sensor are tighter (more curvature)
+       — visualizing the higher flux density at the sensor location. The wider
+       outer arcs sweep into the empty right-hand third of the canvas, which is
+       why the switch was offset left.
+       ════════════════════════════════════════════════════════════════════════════ -->
+  <g stroke="oklch(0.62 0.10 45)" stroke-linecap="round" fill="none">
+
+    <!-- Arc 1 — innermost / tightest, hugs the magnet's right flank.
+         Leaves the south face near the right edge, arcs slightly right,
+         returns to the north face just above the magnet's right edge. -->
+    <path d="
+      M 480 401
+      C 510 410, 524 392, 524 374
+      C 524 360, 504 374, 482 384" stroke-opacity="0.95" stroke-width="2"/>
+
+    <!-- Arc 2 — mid-radius right -->
+    <path d="
+      M 480 402
+      C 540 420, 580 392, 580 358
+      C 580 320, 548 348, 482 380" stroke-opacity="0.85" stroke-width="2"/>
+
+    <!-- Arc 3 — outer radius right, sweeps into the open right-hand canvas -->
+    <path d="
+      M 480 402
+      C 600 440, 700 386, 700 322
+      C 700 250, 600 308, 482 380" stroke-opacity="0.7" stroke-width="2"/>
+
+    <!-- Arc 4 — widest right, the canvas's breathing arc -->
+    <path d="
+      M 480 402
+      C 700 480, 870 380, 870 290
+      C 870 180, 660 280, 482 380" stroke-opacity="0.5" stroke-width="2"/>
+
+    <!-- Arc 5 — mirrored left arc, gives the field its dipole symmetry without
+         crowding the left side where the switch housing lives. Tighter and
+         more contained on this side so the housing strokes stay legible. -->
+    <path d="
+      M 440 402
+      C 410 412, 396 392, 396 374
+      C 396 360, 416 374, 438 384" stroke-opacity="0.85" stroke-width="2"/>
+
+    <!-- Arc 6 — second left arc, slightly wider -->
+    <path d="
+      M 440 402
+      C 380 422, 340 392, 340 358
+      C 340 320, 372 348, 438 380" stroke-opacity="0.6" stroke-width="2"/>
+
+    <!-- Small directional arrowheads on a couple of the right-hand arcs,
+         indicating the field-line direction (N to S externally). Family
+         convention is no labels, but tiny chevrons read as physics not as text. -->
+    <g stroke-opacity="0.85" stroke-width="1.6">
+      <!-- Arrowhead on Arc 2, at its rightmost extent -->
+      <path d="M 576 358 L 580 354 L 578 360"/>
+      <!-- Arrowhead on Arc 3, at its rightmost extent -->
+      <path d="M 696 322 L 700 318 L 698 324"/>
+    </g>
+  </g>
+
+  <!-- ════════════════════════════════════════════════════════════════════════════
+       ACTUATION REFERENCE LINE — a faint dashed horizontal line through the
+       middle of the switch, indicating where the keypress crosses the actuation
+       threshold. Hall-effect switches let firmware pick this threshold per key,
+       which is part of the article's "why this matters" tail. Kept very faint;
+       didactic only.
+       ════════════════════════════════════════════════════════════════════════════ -->
+  <g stroke-opacity="0.35">
+    <line x1="260" y1="350" x2="420" y2="350" stroke-dasharray="3 5"/>
+    <line x1="500" y1="350" x2="660" y2="350" stroke-dasharray="3 5"/>
+    <!-- Tiny "actuation" tick marker on the right end of the line -->
+    <line x1="660" y1="346" x2="660" y2="354" stroke-opacity="0.5"/>
+  </g>
+
+  <!-- ── FOCAL ANCHOR — splash dot + outer ring centered at the magnet/sensor
+       interface (the literal location of the flux-sensing event). Family
+       convention across the deep-dives hero set. ─────────────────────────── -->
+  <circle cx="460" cy="455" r="6.5" fill="oklch(0.62 0.10 45 / 0.95)" stroke="oklch(0.62 0.10 45)"/>
+  <circle cx="460" cy="455" r="13" stroke="oklch(0.62 0.10 45)" stroke-opacity="0.5" fill="none"/>
+  <!-- Pair of small inward chevrons indicating the flux passes through the
+       sensor's plane (not a closure, a continuous reading). -->
+  <path d="M 440 455 L 446 451 M 440 455 L 446 459" stroke="oklch(0.62 0.10 45)" stroke-opacity="0.7"/>
+  <path d="M 480 455 L 474 451 M 480 455 L 474 459" stroke="oklch(0.62 0.10 45)" stroke-opacity="0.7"/>
+
+  <!-- ── DIDACTIC TIER TICKS on the left margin, family convention. One per
+       structural tier of the diagram. ─────────────────────────────────────── -->
+  <g stroke-opacity="0.3">
+    <!-- Top housing / stem aperture tier -->
+    <line x1="160" y1="232" x2="170" y2="232"/>
+    <!-- Stem body tier -->
+    <line x1="160" y1="312" x2="170" y2="312"/>
+    <!-- Magnet tier -->
+    <line x1="160" y1="391" x2="170" y2="391"/>
+    <!-- PCB / sensor tier -->
+    <line x1="160" y1="515" x2="170" y2="515"/>
+  </g>
+
+  <!-- ── Brass-bronze theme dot — family-conventional ornamental anchor,
+       top-right margin. Matches every other deep-dives hero. ─────────────── -->
+  <circle cx="1148" cy="92" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>
