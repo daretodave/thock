@@ -115,13 +115,14 @@
 - suggested fix: drop the `0 announced` segment from the summary line when the count is zero (cleanest), OR surface a small "Announced — none scheduled yet" band beneath "Closing soon" (more informative). One-line conditional in the page-summary component for the cheaper option.
 - source: browser
 
-### [LOW] /trends/tracker — "SIGNATURE" eyebrow reads as in-house marketing voice
+### [x] [LOW] /trends/tracker — "SIGNATURE" eyebrow reads as in-house marketing voice — addressed in f43be11 (closes #81)
+- issue: #81
 - pass: 10 (commit 0e2314f)
 - viewport: desktop
 - category: voice
 - observation: The page eyebrow on /trends/tracker is `signature · trends tracker`. "Signature" reads as in-house marketing copy — the kind of word a brand uses about itself ("our signature dish"). The voice elsewhere on the site is plainer; pillars are labeled by what they are (NEWS, TRENDS, GUIDES). "Signature" is the only place that label appears and it lands as voice drift toward breathless framing on the page that should be the most data-forward. The label literally encodes `bearings.md` "signature feature" architecture-speak — the bearings call it that internally, and the eyebrow pipes the internal label to the user-facing chrome.
 - evidence: rendered text on /trends/tracker top eyebrow `SIGNATURE · TRENDS TRACKER`. Source: `apps/web/src/components/tracker/TrackerHeader.tsx:56` `eyebrow="signature · trends tracker"`.
-- suggested fix: replace `signature` with a plainer category label — `dashboard`, `weekly`, or just `trends · tracker` (mirror pillar labelling). One-line edit in `TrackerHeader.tsx`. The bearings "signature feature" framing is an internal architectural label — keep it in `bearings.md`; don't expose it as eyebrow chrome.
+- fix: changed the eyebrow override in `apps/web/src/components/tracker/TrackerHeader.tsx:56` from `"signature · trends tracker"` to `"trends · tracker"` — the cheap, breadcrumb-style option from the suggested fix list (mirrors the pillar eyebrow's `pillar · <slug>` idiom; tracker is a sub-surface of trends, so `trends · tracker` reads as `<pillar> · <surface>`). The internal "signature feature" framing stays in `bearings.md`. Three test updates: (1) `TrackerHeader.test.tsx` flips the assertion to `/trends · tracker/i` AND adds a negative `not.toMatch(/signature/i)` regression guard against an accidental revert; (2) the e2e in `apps/e2e/tests/trends.spec.ts` does the same flip + `not.toContainText(/signature/i)` guard; (3) `PillarHeroPills.test.tsx`'s "custom eyebrow override" test uses the new string as its override example. The component's JSDoc references the new label too. No other code or content carries the old string.
 - source: browser
 
 ### [x] [MED] / — Trending "what's moving on the tracker" rail includes a `flat` tile (framing dilution)
