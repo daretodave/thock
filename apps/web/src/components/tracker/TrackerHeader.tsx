@@ -15,10 +15,10 @@ const PUBLISHED_FORMATTER = new Intl.DateTimeFormat('en-US', {
 })
 
 /**
- * Tracker dashboard header. Wraps `<PillarHero>` with a SIGNATURE
- * eyebrow, italic display H1, lede paragraph (with weave-in
- * `publishedAt`), and a right-rail block showing the big week
- * number — `2026 · WEEK / 19 / of 52`.
+ * Tracker dashboard header. Wraps `<PillarHero>` with a `trends ·
+ * tracker` breadcrumb-style eyebrow, italic display H1, lede
+ * paragraph (with weave-in `publishedAt`), and a right-rail block
+ * showing the big week number — `2026 · WEEK / 19 / of 52`.
  */
 export function TrackerHeader({
   snapshot,
@@ -53,7 +53,7 @@ export function TrackerHeader({
   return (
     <PillarHero
       pillar="trends"
-      eyebrow="signature · trends tracker"
+      eyebrow="trends · tracker"
       heading={heading}
       lede={`${lede} ${updatedCopy}`}
       {...(rightRail ? { rightRail } : {})}

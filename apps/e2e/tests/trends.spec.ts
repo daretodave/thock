@@ -30,12 +30,13 @@ test.describe('trends pillar — phase 8', () => {
 })
 
 test.describe('trends tracker — phase 8', () => {
-  test('renders SIGNATURE eyebrow + italic H1 + week-number block', async ({
+  test('renders trends · tracker eyebrow + italic H1 + week-number block', async ({
     page,
   }) => {
     await page.goto('/trends/tracker')
     const eyebrow = page.getByTestId('pillar-hero-eyebrow')
-    await expect(eyebrow).toContainText(/signature · trends tracker/i)
+    await expect(eyebrow).toContainText(/trends · tracker/i)
+    await expect(eyebrow).not.toContainText(/signature/i)
     const h1 = page.locator('h1').first()
     await expect(h1).toContainText(/rising/i)
     await expect(page.getByTestId('tracker-week-block')).toBeVisible()

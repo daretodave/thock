@@ -66,11 +66,11 @@ describe('<PillarHero> pills array', () => {
       <PillarHero
         pillar="trends"
         lede="Lede."
-        eyebrow="signature · trends tracker"
+        eyebrow="trends · tracker"
       />,
     )
     expect(screen.getByTestId('pillar-hero-eyebrow')).toHaveTextContent(
-      /signature · trends tracker/i,
+      /trends · tracker/i,
     )
   })
 })

@@ -4,16 +4,16 @@ import { TrackerHeader } from '../TrackerHeader'
 import { makeTrendSnapshot } from '@/components/home/__tests__/testFixtures'
 
 describe('<TrackerHeader>', () => {
-  it('renders the SIGNATURE eyebrow + italic H1', () => {
+  it('renders the trends · tracker eyebrow + italic H1', () => {
     render(
       <TrackerHeader
         snapshot={makeTrendSnapshot()}
         lede="A weekly tracker."
       />,
     )
-    expect(screen.getByTestId('pillar-hero-eyebrow')).toHaveTextContent(
-      /signature · trends tracker/i,
-    )
+    const eyebrow = screen.getByTestId('pillar-hero-eyebrow')
+    expect(eyebrow).toHaveTextContent(/trends · tracker/i)
+    expect(eyebrow.textContent ?? '').not.toMatch(/signature/i)
     const h1 = screen.getByRole('heading', { level: 1 })
     expect(h1).toHaveTextContent(/rising/i)
     expect(h1.querySelector('em')).not.toBeNull()
