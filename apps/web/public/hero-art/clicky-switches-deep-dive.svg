@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — clicky switch internals, paired diptych: click-jacket (left) vs click-bar (right)</title>
+
+  <!-- Splash: ochre wash, single hue, spanning both focal mechanisms.
+       The wash is a soft horizontal band at the mid-height where the click events
+       happen (jacket-jump on the left switch, bar-snap on the right switch).
+       Single splash = one accent fill family; the rest is monochrome line work. -->
+  <ellipse cx="600" cy="400" rx="430" ry="78" fill="oklch(0.72 0.13 80 / 0.16)" stroke="none"/>
+
+  <!-- Faint centerline gutter between the two switches — a subtle vertical dashed seam
+       so the diptych reads as two related diagrams, not a stretched single one. -->
+  <line x1="600" y1="120" x2="600" y2="720" stroke-dasharray="2 8" stroke-opacity="0.25"/>
+
+  <!-- ════════════════════════════════════════════════════════════════════════════
+       LEFT PANEL — CLICK-JACKET MECHANISM
+       The jacket is a separate plastic sleeve that rides on the stem. As the stem
+       descends past the leaf, the jacket catches on a ledge inside the housing,
+       briefly stalls, then snaps free — that "snap free" is the click.
+       ════════════════════════════════════════════════════════════════════════════ -->
+
+  <!-- ── LEFT: TOP HOUSING (cut-away) ─────────────────────────────────────────── -->
+  <g>
+    <!-- Outer top housing -->
+    <path d="
+      M 140 175
+      L 460 175
+      L 480 250
+      L 120 250
+      Z" />
+    <!-- Inner cavity edge -->
+    <path d="
+      M 156 190
+      L 444 190
+      L 462 242
+      L 138 242
+      Z" stroke-opacity="0.4"/>
+    <!-- Stem hole (cruciform aperture, top face) -->
+    <path d="
+      M 252 175
+      L 348 175
+      L 352 186
+      L 340 186
+      L 340 194
+      L 326 194
+      L 326 186
+      L 274 186
+      L 274 194
+      L 260 194
+      L 260 186
+      L 248 186
+      Z" stroke-opacity="0.7"/>
+    <!-- LED notch on top edge -->
+    <path d="M 282 175 L 318 175 L 314 183 L 286 183 Z" stroke-opacity="0.55"/>
+    <!-- Mounting clip nubs -->
+    <line x1="120" y1="232" x2="110" y2="232" stroke-opacity="0.5"/>
+    <line x1="480" y1="232" x2="490" y2="232" stroke-opacity="0.5"/>
+    <!-- Inner ledge that the jacket catches on — drawn as a small triangular shelf
+         inside the housing wall. Mechanically: this is where the click is born. -->
+    <path d="M 200 245 L 214 245 L 207 254 Z" stroke-opacity="0.65"/>
+    <path d="M 386 245 L 400 245 L 393 254 Z" stroke-opacity="0.65"/>
+  </g>
+
+  <!-- Faint explode line under the top housing -->
+  <line x1="115" y1="270" x2="485" y2="270" stroke-dasharray="4 6" stroke-opacity="0.35"/>
+  <circle cx="300" cy="270" r="2.5" stroke-opacity="0.55"/>
+
+  <!-- ── LEFT: STEM with CLICK-JACKET (focal piece) ──────────────────────────── -->
+  <g>
+    <!-- Cruciform head -->
+    <path d="
+      M 280 300
+      L 320 300
+      L 320 313
+      L 332 313
+      L 332 327
+      L 268 327
+      L 268 313
+      L 280 313
+      Z" />
+
+    <!-- Stem body — inner column. Slightly narrower than the housing so the
+         JACKET (drawn next) sits between stem and housing as a separate piece. -->
+    <path d="
+      M 282 327
+      L 318 327
+      L 318 480
+      L 282 480
+      Z" />
+    <!-- Stem centerline -->
+    <line x1="300" y1="335" x2="300" y2="472" stroke-opacity="0.5"/>
+    <!-- Stem pole stubs (spring socket) -->
+    <line x1="288" y1="480" x2="290" y2="498" stroke-opacity="0.5"/>
+    <line x1="312" y1="480" x2="310" y2="498" stroke-opacity="0.5"/>
+
+    <!-- THE CLICK-JACKET: a sleeve riding on the stem. Drawn as a separate piece
+         with a clear gap to the stem so the eye reads "two parts, one inside the
+         other." The jacket has a flared upper lip that catches on the housing
+         ledge. This is the focal mechanism for the left panel. -->
+    <g>
+      <!-- Left half of the jacket -->
+      <path d="
+        M 270 360
+        L 270 420
+        L 258 420
+        L 258 410
+        L 252 410
+        L 252 380
+        L 258 380
+        L 258 360
+        Z" />
+      <!-- Right half of the jacket — mirror -->
+      <path d="
+        M 330 360
+        L 330 420
+        L 342 420
+        L 342 410
+        L 348 410
+        L 348 380
+        L 342 380
+        L 342 360
+        Z" />
+      <!-- Faint inner-face line on each jacket half -->
+      <line x1="270" y1="365" x2="270" y2="418" stroke-opacity="0.4"/>
+      <line x1="330" y1="365" x2="330" y2="418" stroke-opacity="0.4"/>
+    </g>
+
+    <!-- Motion arrows — small chevrons indicating the jacket about to slip past
+         the housing ledge (where the click happens). Stroke-only, didactic. -->
+    <g stroke-opacity="0.6">
+      <path d="M 244 395 L 240 400 L 244 405"/>
+      <path d="M 356 395 L 360 400 L 356 405"/>
+    </g>
+  </g>
+
+  <!-- Splash anchor (LEFT): ochre accent dot + ring at the jacket-shelf interface,
+       the moment the click is born. Family convention: filled core + outer ring
+       at the focal piece. -->
+  <circle cx="252" cy="395" r="6.5" fill="oklch(0.72 0.13 80 / 0.95)" stroke="oklch(0.72 0.13 80)"/>
+  <circle cx="252" cy="395" r="12" stroke="oklch(0.72 0.13 80)" stroke-opacity="0.5" fill="none"/>
+  <circle cx="348" cy="395" r="6.5" fill="oklch(0.72 0.13 80 / 0.95)" stroke="oklch(0.72 0.13 80)"/>
+  <circle cx="348" cy="395" r="12" stroke="oklch(0.72 0.13 80)" stroke-opacity="0.5" fill="none"/>
+
+  <!-- ── LEFT: SPRING under the stem ─────────────────────────────────────────── -->
+  <g>
+    <ellipse cx="300" cy="512" rx="32" ry="6"/>
+    <ellipse cx="300" cy="523" rx="32" ry="6"/>
+    <ellipse cx="300" cy="534" rx="32" ry="6"/>
+    <ellipse cx="300" cy="545" rx="32" ry="6"/>
+    <ellipse cx="300" cy="556" rx="32" ry="6"/>
+    <ellipse cx="300" cy="567" rx="32" ry="6"/>
+    <ellipse cx="300" cy="578" rx="32" ry="6"/>
+    <ellipse cx="300" cy="589" rx="32" ry="6"/>
+    <ellipse cx="300" cy="600" rx="32" ry="6"/>
+    <line x1="300" y1="505" x2="300" y2="606" stroke-opacity="0.35" stroke-dasharray="2 4"/>
+  </g>
+
+  <!-- Faint explode line above the bottom housing -->
+  <line x1="115" y1="625" x2="485" y2="625" stroke-dasharray="4 6" stroke-opacity="0.35"/>
+  <circle cx="300" cy="625" r="2.5" stroke-opacity="0.55"/>
+
+  <!-- ── LEFT: BOTTOM HOUSING ────────────────────────────────────────────────── -->
+  <g>
+    <path d="M 120 640 L 480 640 L 462 712 L 138 712 Z" />
+    <!-- Inner well -->
+    <path d="M 250 640 L 350 640 L 346 678 L 254 678 Z" stroke-opacity="0.6"/>
+    <!-- Pin contacts -->
+    <circle cx="190" cy="694" r="5"/>
+    <circle cx="410" cy="694" r="5"/>
+    <!-- Center mount post -->
+    <circle cx="300" cy="694" r="6" stroke-opacity="0.6"/>
+    <!-- Side rail mount nubs -->
+    <line x1="225" y1="640" x2="225" y2="654" stroke-opacity="0.5"/>
+    <line x1="375" y1="640" x2="375" y2="654" stroke-opacity="0.5"/>
+  </g>
+
+  <!-- ════════════════════════════════════════════════════════════════════════════
+       RIGHT PANEL — CLICK-BAR MECHANISM
+       A small bent metal bar sits in the housing wall. As the stem descends, a
+       lobe on the stem flank trips the bar, the bar snaps against the housing,
+       and that strike is the click. Different acoustic origin than the jacket.
+       ════════════════════════════════════════════════════════════════════════════ -->
+
+  <!-- ── RIGHT: TOP HOUSING (cut-away) ───────────────────────────────────────── -->
+  <g>
+    <!-- Outer top housing -->
+    <path d="
+      M 740 175
+      L 1060 175
+      L 1080 250
+      L 720 250
+      Z" />
+    <!-- Inner cavity edge -->
+    <path d="
+      M 756 190
+      L 1044 190
+      L 1062 242
+      L 738 242
+      Z" stroke-opacity="0.4"/>
+    <!-- Stem hole -->
+    <path d="
+      M 852 175
+      L 948 175
+      L 952 186
+      L 940 186
+      L 940 194
+      L 926 194
+      L 926 186
+      L 874 186
+      L 874 194
+      L 860 194
+      L 860 186
+      L 848 186
+      Z" stroke-opacity="0.7"/>
+    <!-- LED notch -->
+    <path d="M 882 175 L 918 175 L 914 183 L 886 183 Z" stroke-opacity="0.55"/>
+    <!-- Mounting clip nubs -->
+    <line x1="720" y1="232" x2="710" y2="232" stroke-opacity="0.5"/>
+    <line x1="1080" y1="232" x2="1090" y2="232" stroke-opacity="0.5"/>
+    <!-- Bar mounting recesses inside the housing walls (where the click-bar lives) -->
+    <path d="M 800 242 L 810 242 L 810 254 L 800 254 Z" stroke-opacity="0.55"/>
+    <path d="M 990 242 L 1000 242 L 1000 254 L 990 254 Z" stroke-opacity="0.55"/>
+  </g>
+
+  <!-- Faint explode line -->
+  <line x1="715" y1="270" x2="1085" y2="270" stroke-dasharray="4 6" stroke-opacity="0.35"/>
+  <circle cx="900" cy="270" r="2.5" stroke-opacity="0.55"/>
+
+  <!-- ── RIGHT: STEM with FLANK LOBES + CLICK-BAR (focal piece) ─────────────── -->
+  <g>
+    <!-- Cruciform head -->
+    <path d="
+      M 880 300
+      L 920 300
+      L 920 313
+      L 932 313
+      L 932 327
+      L 868 327
+      L 868 313
+      L 880 313
+      Z" />
+
+    <!-- Stem body with a flank LOBE on each side — small bumps midway down that
+         trip the click-bar. The lobe is what mechanically defines this family. -->
+    <path d="
+      M 875 327
+      L 925 327
+      L 925 370
+      C 925 374, 928 378, 934 380
+      C 940 382, 940 388, 934 390
+      C 928 392, 925 396, 925 400
+      L 925 480
+      L 875 480
+      L 875 400
+      C 875 396, 872 392, 866 390
+      C 860 388, 860 382, 866 380
+      C 872 378, 875 374, 875 370
+      Z" />
+    <!-- Stem centerline -->
+    <line x1="900" y1="335" x2="900" y2="472" stroke-opacity="0.5"/>
+    <!-- Stem pole stubs (spring socket) -->
+    <line x1="888" y1="480" x2="890" y2="498" stroke-opacity="0.5"/>
+    <line x1="912" y1="480" x2="910" y2="498" stroke-opacity="0.5"/>
+  </g>
+
+  <!-- THE CLICK-BAR: a single bent metal element on the right side of the stem.
+       Drawn as a thin two-segment line in the gap between stem flank and housing
+       wall, anchored to the housing at top and bottom. The bar's bend sits in
+       the path of the stem lobe — that's where the strike happens. -->
+  <g>
+    <!-- Right-side bar — primary focal element on this panel -->
+    <path d="
+      M 1000 254
+      L 1000 380
+      L 945 392
+      L 1000 404
+      L 1000 530" stroke-opacity="0.9"/>
+    <!-- Mirror bar on the left wall, for symmetry-of-housing reading -->
+    <path d="
+      M 810 254
+      L 810 380
+      L 865 392
+      L 810 404
+      L 810 530" stroke-opacity="0.45"/>
+    <!-- Anchor pins at top and bottom of each bar -->
+    <circle cx="1000" cy="254" r="2.5" stroke-opacity="0.7"/>
+    <circle cx="1000" cy="530" r="2.5" stroke-opacity="0.7"/>
+    <circle cx="810" cy="254" r="2.5" stroke-opacity="0.35"/>
+    <circle cx="810" cy="530" r="2.5" stroke-opacity="0.35"/>
+  </g>
+
+  <!-- Splash anchor (RIGHT): ochre dot + ring at the click-bar bend, where the
+       strike against the housing produces the acoustic event. -->
+  <circle cx="945" cy="392" r="6.5" fill="oklch(0.72 0.13 80 / 0.95)" stroke="oklch(0.72 0.13 80)"/>
+  <circle cx="945" cy="392" r="12" stroke="oklch(0.72 0.13 80)" stroke-opacity="0.5" fill="none"/>
+
+  <!-- ── RIGHT: SPRING ───────────────────────────────────────────────────────── -->
+  <g>
+    <ellipse cx="900" cy="555" rx="32" ry="6"/>
+    <ellipse cx="900" cy="566" rx="32" ry="6"/>
+    <ellipse cx="900" cy="577" rx="32" ry="6"/>
+    <ellipse cx="900" cy="588" rx="32" ry="6"/>
+    <ellipse cx="900" cy="599" rx="32" ry="6"/>
+    <ellipse cx="900" cy="610" rx="32" ry="6"/>
+    <line x1="900" y1="548" x2="900" y2="616" stroke-opacity="0.35" stroke-dasharray="2 4"/>
+  </g>
+
+  <!-- Faint explode line -->
+  <line x1="715" y1="625" x2="1085" y2="625" stroke-dasharray="4 6" stroke-opacity="0.35"/>
+  <circle cx="900" cy="625" r="2.5" stroke-opacity="0.55"/>
+
+  <!-- ── RIGHT: BOTTOM HOUSING ───────────────────────────────────────────────── -->
+  <g>
+    <path d="M 720 640 L 1080 640 L 1062 712 L 738 712 Z" />
+    <!-- Inner well -->
+    <path d="M 850 640 L 950 640 L 946 678 L 854 678 Z" stroke-opacity="0.6"/>
+    <!-- Pin contacts -->
+    <circle cx="790" cy="694" r="5"/>
+    <circle cx="1010" cy="694" r="5"/>
+    <!-- Center mount post -->
+    <circle cx="900" cy="694" r="6" stroke-opacity="0.6"/>
+    <!-- Side rail mount nubs -->
+    <line x1="825" y1="640" x2="825" y2="654" stroke-opacity="0.5"/>
+    <line x1="975" y1="640" x2="975" y2="654" stroke-opacity="0.5"/>
+  </g>
+
+  <!-- Subtle measurement tick marks, didactic — left margin, one per tier
+       (family convention; aligned to LEFT panel tier midpoints) -->
+  <g stroke-opacity="0.3">
+    <line x1="60" y1="215" x2="70" y2="215"/>
+    <line x1="60" y1="395" x2="70" y2="395"/>
+    <line x1="60" y1="555" x2="70" y2="555"/>
+    <line x1="60" y1="675" x2="70" y2="675"/>
+  </g>
+
+  <!-- Brass-bronze theme dot — family-conventional ornamental anchor, top-right margin -->
+  <circle cx="1148" cy="92" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

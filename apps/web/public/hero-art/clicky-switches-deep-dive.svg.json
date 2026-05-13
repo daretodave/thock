@@ -1,0 +1,21 @@
+{
+  "agent": "brander",
+  "renderedAt": "2026-05-13T00:00:00Z",
+  "slug": "clicky-switches-deep-dive",
+  "subject": "Clicky-switch mechanisms — paired diptych of click-jacket (left switch) and click-bar (right switch) cross-sections, showing the two distinct acoustic origins of 'the click'",
+  "motif": "paired switch cross-section / housing exploded view, diptych",
+  "splashHue": "ochre",
+  "splashColor": "oklch(0.72 0.13 80)",
+  "canvas": "1200x750",
+  "strokeWeight": "2px",
+  "strokeColor": "oklch(0.78 0.005 90)",
+  "kind": "hero-art",
+  "engine": "hand-authored SVG (no raster pipeline)",
+  "commit": "c44ed4d512268183b67d87855af122f1c3191261",
+  "notes": "Paired diptych — left switch shows a click-jacket sleeve riding on the stem with a flared upper lip that catches on small triangular housing-wall ledges; small motion chevrons indicate the slip-past event where the click is born. Right switch shows the click-bar variant: a thin two-segment bent metal bar anchored to the housing wall, with stem-flank lobes drawn into the stem profile that trip the bar at its bend. Single ochre splash applied as a soft horizontal wash across the mid-height of both panels (the tier where both click events happen), plus accent dot+ring focal anchors at each mechanism's strike point — left jacket-shelf interface (mirrored, both sides) and right bar-bend (primary side bold, mirror side stroke-opacity reduced to keep the read 'one focal event per panel'). A faint dashed vertical gutter between the two switches signals diptych without partitioning hard. Composition stack mirrors family architecture per panel (top housing -> dashed seam -> stem -> spring -> bottom housing). No text labels; the article body names the mechanisms. No keyboard-overview shapes. Splash hue ochre oklch(0.72 0.13 80) chosen to vary from the immediately-previous deep-dives sibling (Drop Holy Panda X, muted terracotta oklch(0.55 0.105 40), published 2026-05-12) and from sibling-adjacent coral (Oil King, oklch(0.71 0.135 30)) and cherry-red (MX2A, oklch(0.6 0.19 30)) — sits at hue 80 well clear of the 30-45 angle band the rest of the warm rotation occupies, while still reading 'warm/illustrative' and avoiding stock blue/green. Brass-bronze ornamental dot at top-right and left-margin didactic tier ticks preserved per the hero-art family convention.",
+  "outputs": [
+    "apps/web/public/hero-art/clicky-switches-deep-dive.svg",
+    "apps/web/public/hero-art/clicky-switches-deep-dive.svg.json"
+  ],
+  "warnings": []
+}
