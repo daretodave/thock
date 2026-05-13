@@ -174,7 +174,8 @@
 - score: 3.5 (impact 5 — affects sighted users with color perception issues or low-contrast screens; ease 5 — one class substitution per component but design sign-off needed)
 - once fixed: add `expect(results.violations.filter(v => v.id === 'color-contrast')).toHaveLength(0)` assertion to a11y.spec.ts for the affected pages
 
-### [a11y] [3.0] color-contrast — text-text-3 at small text (tracker header metadata, back links)
+### [x] [a11y] [3.0] color-contrast — text-text-3 at small text (tracker header metadata, back links) — addressed in pending commit (this tick — cloud /iterate drain)
+- issue: #77
 - filed: 2026-05-11 by Phase 26 axe discovery pass
 - wcag: 1.4.3 Contrast (Minimum) AA
 - axe impact: serious
@@ -184,6 +185,7 @@
 - action: for tracker header metadata, replace `text-text-3` with `text-text-2` (`oklch(0.78 0.005 90)`) — still clearly tertiary but passes at 12px. For the back link, same substitution plus keep `hover:text-text`. These are isolated elements; substitution won't break overall visual design.
 - score: 3.0 (impact 4 — narrow audience for the tracker header metadata; ease 7 — two class substitutions)
 - once fixed: add targeted contrast assertion to a11y.spec.ts
+> **Resolved (2026-05-13):** Swapped `text-text-3` → `text-text-2` on the three specific elements the discovery pass identified: `apps/web/src/components/tracker/TrackerHeader.tsx:43` ("YYYY · week") and `:49` ("of 52") in the tracker week-block; `apps/web/src/app/tag/[slug]/page.tsx:127` ("← all tags" back link, `hover:text-text` preserved). The 25+ other `text-text-3 + text-micro` occurrences across the codebase were NOT in this row's scope — the discovery pass didn't flag them and any wider treatment is a separate audit-time decision. Two new regression-guard `test()`s in `apps/e2e/tests/a11y.spec.ts` run `AxeBuilder.include()` scoped to `[data-testid="tracker-week-block"]` and `[data-testid="tag-page-back-link"]` and assert zero `color-contrast` violations on each — locks the substitution in. Cloud /iterate drain.
 
 ### [a11y] [2.5] link-in-text-block — /about body links use color only (no underline or other non-color indicator)
 - filed: 2026-05-11 by Phase 26 axe discovery pass

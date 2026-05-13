@@ -119,6 +119,36 @@ test.describe('a11y — mobile (375px)', () => {
   })
 })
 
+// Regression guard: color-contrast on the two text-text-3 small-text elements
+// drained by audit row [a11y][3.0] — tracker week-block + /tag/[slug] back link.
+// Both elements were swapped to text-text-2 so the targeted axe color-contrast
+// pass should report zero violations on the specific selectors.
+test('color-contrast — tracker week-block (regression guard)', async ({ page }) => {
+  await page.goto('/trends/tracker')
+  await page.waitForLoadState('networkidle')
+
+  const results = await new AxeBuilder({ page })
+    .withTags(WCAG_TAGS)
+    .include('[data-testid="tracker-week-block"]')
+    .analyze()
+
+  const contrast = results.violations.filter((v) => v.id === 'color-contrast')
+  expect(contrast, formatViolations(contrast)).toHaveLength(0)
+})
+
+test('color-contrast — tag-page back link (regression guard)', async ({ page }) => {
+  await page.goto('/tag/linear')
+  await page.waitForLoadState('networkidle')
+
+  const results = await new AxeBuilder({ page })
+    .withTags(WCAG_TAGS)
+    .include('[data-testid="tag-page-back-link"]')
+    .analyze()
+
+  const contrast = results.violations.filter((v) => v.id === 'color-contrast')
+  expect(contrast, formatViolations(contrast)).toHaveLength(0)
+})
+
 // Regression guard: skip link is present and targets a valid id="main" element.
 // Phase A ships this as a hard assertion because the skip link is fixed in
 // the same commit (no longer needs Phase B discovery).

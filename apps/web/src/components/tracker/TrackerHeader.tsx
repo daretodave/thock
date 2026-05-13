@@ -40,13 +40,13 @@ export function TrackerHeader({
       data-testid="tracker-week-block"
       className="flex flex-col items-end gap-1"
     >
-      <span className="font-mono uppercase tracking-[0.08em] text-micro text-text-3">
+      <span className="font-mono uppercase tracking-[0.08em] text-micro text-text-2">
         {week.year} · week
       </span>
       <span className="font-serif text-display leading-none text-text">
         {String(week.week).padStart(2, '0')}
       </span>
-      <span className="font-mono text-micro text-text-3">of 52</span>
+      <span className="font-mono text-micro text-text-2">of 52</span>
     </div>
   ) : null
 
