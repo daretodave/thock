@@ -82,8 +82,15 @@ export default function GroupBuysPage(): ReactElement {
           </h1>
           <p className="max-w-[60ch] font-serif text-h3 text-text-2">{LEDE}</p>
           <div className="font-mono uppercase tracking-[0.08em] text-micro text-text-3">
-            {live.length} live · {announced.length} announced · {ended.length}{' '}
-            recently ended
+            {[
+              live.length > 0 ? `${live.length} live` : null,
+              announced.length > 0
+                ? `${announced.length} announced`
+                : null,
+              ended.length > 0 ? `${ended.length} recently ended` : null,
+            ]
+              .filter((segment): segment is string => segment !== null)
+              .join(' · ')}
           </div>
         </Stack>
       </Container>

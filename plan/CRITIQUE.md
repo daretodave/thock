@@ -109,13 +109,15 @@
 - verify note: 543 e2e green on serial worker.
 - source: browser
 
-### [LOW] /group-buys — "0 announced" segment names a bucket with no corresponding section
+### [x] [LOW] /group-buys — "0 announced" segment names a bucket with no corresponding section — addressed in pending commit (this tick — cloud /iterate drain)
+- issue: #83
 - pass: 10 (commit 0e2314f)
 - viewport: desktop
 - category: copy
 - observation: The /group-buys page summary eyebrow reads `5 live · 0 announced · 1 recently ended`. The `0 announced` segment names a bucket that has no corresponding region anywhere on the page — there are "Closing soon", "Open now", and "Just closed" regions, but no "Announced" band. As a fresh reader I scrolled looking for the section the count was promising and it isn't there. Either the count should disappear when zero, or there should be a small empty-state band ("Announced — none scheduled yet") so the eyebrow's bucket map is honest.
 - evidence: rendered text on /group-buys shows `5 live · 0 announced · 1 recently ended` in the page header; the page body contains "Closing soon", "Open now", "Just closed" sections but no "Announced" band.
-- suggested fix: drop the `0 announced` segment from the summary line when the count is zero (cleanest), OR surface a small "Announced — none scheduled yet" band beneath "Closing soon" (more informative). One-line conditional in the page-summary component for the cheaper option.
+- fix: took the cheaper option from the suggested fix list — drop a summary segment when its count is 0. `apps/web/src/app/group-buys/page.tsx:84-94` now builds the eyebrow from an array `[live, announced, ended]` with each segment present only when its count > 0, joined by ` · `. The page already conditionally renders the "Announced" *section* when `announced.length > 0`; the eyebrow now matches that contract. After the fix, the e2e walker rendered `3 live · 3 recently ended` on /group-buys (zero-announced state) — no orphan segment. The alternate empty-state band option was rejected: an "Announced — none scheduled yet" stub band adds visual weight to a non-state and grows section count from 3 to 4 on a page whose value is the live/closing-soon urgency hierarchy.
+- verify note: 568 e2e green on first attempt.
 - source: browser
 
 ### [x] [LOW] /trends/tracker — "SIGNATURE" eyebrow reads as in-house marketing voice — addressed in f43be11 (closes #81)
