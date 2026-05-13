@@ -3,16 +3,22 @@ import Image from 'next/image'
 import type { ReactElement } from 'react'
 import type { Article, Tag } from '@thock/content'
 import { pillarLabel } from '@thock/seo'
-import { TagChip } from '@thock/ui'
 
 export type ArticleCardVariant = 'hero' | 'large' | 'row' | 'compact'
 
 export type ArticleCardProps = {
   article: Article
   variant: ArticleCardVariant
-  /** Optional tag-by-slug map — drives the chip names + categories. */
+  /**
+   * Reserved — currently unused on every variant. Hero stopped
+   * rendering chips with critique pass-12 [LOW] drain (card-density
+   * mismatch vs. the chip-less archive `row` variant); other variants
+   * never rendered them. Kept in the type so callers don't churn;
+   * future variants can re-introduce a chip rail without a signature
+   * change.
+   */
   tagsBySlug?: Map<string, Tag>
-  /** How many tag chips to show. Default 3 on hero, 1 elsewhere. */
+  /** Reserved — see `tagsBySlug` above. */
   maxTags?: number
 }
 
@@ -53,7 +59,7 @@ function PlaceholderImage({
  * lifts to `packages/ui/` only when phase 7 (News pillar) needs it.
  *
  * - hero: full-width, large image (or placeholder) above title +
- *   lede + chips. Used as the home page H1.
+ *   lede + meta. Used as the home page H1.
  * - large: 4-up grid card — image on top, title below.
  * - row: horizontal card — image left, body right.
  * - compact: title + pillar + date only, no image.
@@ -61,14 +67,11 @@ function PlaceholderImage({
 export function ArticleCard({
   article,
   variant,
-  tagsBySlug,
-  maxTags,
 }: ArticleCardProps): ReactElement {
   const fm = article.frontmatter
   const path = `/article/${article.slug}`
   const formattedDate = PUBLISHED_FORMATTER.format(new Date(fm.publishedAt))
   const pillar = pillarLabel(fm.pillar)
-  const tagSlugs = fm.tags.slice(0, maxTags ?? (variant === 'hero' ? 3 : 1))
 
   const eyebrow = (
     <span className="font-mono uppercase tracking-[0.1em] text-micro text-accent">
@@ -85,26 +88,6 @@ export function ArticleCard({
       <span>{article.readTime} min read</span>
     </div>
   )
-
-  const tagRow =
-    tagSlugs.length > 0 ? (
-      <div className="flex flex-wrap gap-2">
-        {tagSlugs.map((slug) => {
-          const tag = tagsBySlug?.get(slug)
-          const name = tag?.name ?? slug
-          const category = tag?.category ?? 'misc'
-          return (
-            <TagChip
-              key={slug}
-              slug={slug}
-              name={name}
-              category={category}
-              static
-            />
-          )
-        })}
-      </div>
-    ) : null
 
   if (variant === 'hero') {
     return (
@@ -140,7 +123,6 @@ export function ArticleCard({
           <p className="text-h3 text-text-2 font-serif max-w-[60ch]">
             {fm.lede}
           </p>
-          {tagRow}
           {meta}
         </div>
       </Link>

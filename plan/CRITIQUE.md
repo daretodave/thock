@@ -211,13 +211,16 @@
 - verify note: 542 e2e green serial worker.
 - source: browser
 
-### [LOW] /trends — pillar card density inconsistent (hero has chips, archive doesn't)
+### [x] [LOW] /trends — pillar card density inconsistent (hero has chips, archive doesn't) — addressed in pending commit (this tick — cloud /iterate drain)
+- addressed in: pending commit (this tick — cloud /iterate drain)
+- issue: #86
 - pass: 8 (commit d34580c)
 - viewport: desktop
 - category: visual
 - observation: Card density jumps between the hero pick and the archive list on /trends. The hero "When customs became vendor-first" carries three tag chips (Vendor / Configurator / Mode) below the byline, giving the card a thick metadata footer. The four archive cards directly below ("The split/ergo cohort grew up", "75% became the default custom layout", "Reading the Trends Tracker", "The slow fade of Alice layouts") carry zero tag chips — only byline + date + read-time. Same card component, two different metadata densities; the cascade reads as inconsistent rather than intentional.
 - evidence: reader's `read_page` on /trends — ref_44 hero link contains ref_49/51/53 chips; ref_62/70/78/86 archive links have no chip rail.
-- suggested fix: design judgment call. Either render chips on archive cards too (adds visual noise but signals tag faceting), or strip them from the hero (hero already gets size + position emphasis). The latter is the smaller diff. If the chip rail on the hero IS intentional editorial signal, reframe the hero card layout so the difference reads as a deliberate emphasis rather than a missing element on the archive.
+- fix: took the smaller-diff path from the row — dropped the `{tagRow}` render from the hero variant in `apps/web/src/components/home/ArticleCard.tsx`, plus the now-dead `tagSlugs` / `tagRow` definitions and the `TagChip` import. Kept the `tagsBySlug` and `maxTags` props on the component type (with docstrings explaining they're reserved) so the five pillar landings + home + ideas callers don't churn — they still pass the maps harmlessly. Effect cascades: every page consuming `variant="hero"` (/, /trends, /news, /ideas, /deep-dives, /guides) now matches the archive density. The hero retains size + position emphasis without needing the chip rail to also signal weight. Unit-test regression guard added at `apps/web/src/components/home/__tests__/ArticleCard.test.tsx`: the hero variant rendered with three tags returns `screen.queryByTestId('tag-chip')` null. Considered (rejected) alternative: render chips on the row variant too — that adds visual noise to every archive card across five pillars, the opposite design direction the critique suggested.
+- verify note: 568 e2e green serial worker.
 - source: browser
 
 ### [LOW] /trends/tracker — unlinked mover-table rows have no visual cue distinguishing them from linked rows

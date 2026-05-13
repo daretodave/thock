@@ -32,6 +32,13 @@ describe('<ArticleCard>', () => {
     expect(card.getAttribute('href')).toBe('/article/foo')
   })
 
+  it('hero variant does not render tag chips (density-parity with archive rows)', () => {
+    const article = makeArticle()
+    article.frontmatter.tags = ['linear', 'gateron', 'vendor']
+    render(<ArticleCard article={article} variant="hero" tagsBySlug={TAGS} />)
+    expect(screen.queryByTestId('tag-chip')).toBeNull()
+  })
+
   it('large variant renders an h3 not an h1', () => {
     const article = makeArticle()
     render(<ArticleCard article={article} variant="large" tagsBySlug={TAGS} />)
