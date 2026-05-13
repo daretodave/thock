@@ -37,6 +37,12 @@ ready to ship.
   in `<Mono>`. ("Gateron Oil King" → `<Mono>Gateron Oil King</Mono>`)
 - Cite primary sources via `<Source href="...">…</Source>`.
 - Pull-quotes are rare — earn them.
+- Tracker references in prose use reader-friendly phrasing — "down
+  N percent on this week's tracker" or "up N percent on the tracker"
+  — never internal-dashboard column names like "W19 movement score"
+  or "movement score of -N". The tracker page itself owns its
+  methodology vocabulary; article prose phrases the same fact in
+  conversation.
 
 ## Frontmatter contract
 

@@ -49,13 +49,16 @@
 - suggested fix: prefer GMK CYL group-buy companion shipping for the next 2–3 News pillar shipping ticks so /tag/gmk fills naturally to ≥4. No direct fix; track via this row.
 - source: browser
 
-### [LOW] /article/cannonkeys-nyawice-group-buy — body uses "the W19 movement score" (internal-dashboard taxonomy leak)
+### [x] [LOW] /article/cannonkeys-nyawice-group-buy — body uses "the W19 movement score" (internal-dashboard taxonomy leak)
+- addressed in: pending commit (this tick — cloud /iterate drain)
+- issue: #82
 - pass: 11 (commit 931c8a7)
 - viewport: both
 - category: voice
 - observation: The body references "the W19 movement score" as a metric phrase ("put the layout at -18 on the W19 movement score"). For a fresh reader who hasn't read the Trends Tracker methodology, "W19 movement score" lands as proprietary internal taxonomy — a term the in-house dashboard would use, not a knowledgeable peer in conversation. Other thock pieces phrase the same fact as "down 18 percent this week on the tracker." Same shape as the pass-7 [HIGH] "post-2026-05-09 schedule" editorial-pipeline jargon — internal-tooling vocabulary leaking into reader-facing prose.
 - evidence: rendered body on /article/cannonkeys-nyawice-group-buy paragraph 3: "the trends piece on the slow fade of Alice layouts put the layout at -18 on the W19 movement score." Source: `apps/web/src/content/articles/cannonkeys-nyawice-group-buy.mdx:33`.
-- suggested fix: rewrite to "down 18 percent on this week's tracker" — drop the "W19 movement score" chrome from prose. One MDX edit. Codify in content-curator's brief template: tracker references in prose use "down N% on this week's tracker" or "up N% on the tracker" rather than internal-dashboard column names.
+- fix: rewrote the clause in `apps/web/src/content/articles/cannonkeys-nyawice-group-buy.mdx:33` from "put the layout at -18 on the W19 movement score" to "has the layout down 18 percent on this week's tracker" — reader-conversation phrasing that no longer leaks dashboard column names. Also fixed the deep-dive being linked: `apps/web/src/content/articles/alice-layout-decline.mdx:31-36` carried the same jargon pattern ("Alice layout at a movement score of -18"); rewrote that paragraph to "Alice is down 18 percent on this week's tracker" plus matching percent-phrasing for the comparator Mode Designs / Gateron Oil King numbers. Codified the rule in `.claude/agents/content-curator.md` Voice section: tracker references in prose use "down N percent on this week's tracker" or "up N percent on the tracker", never internal-dashboard column names. The tracker page itself owns its methodology vocabulary; article prose phrases the same fact in conversation. Guards the next content-curator brief against the same leak.
+- verify note: pending — verify gate runs after these edits.
 - source: browser
 
 ### [x] [HIGH] /article/lubing-101 — malformed sentence in "Touching the leaves" paragraph
