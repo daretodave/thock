@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — Topre electrocapacitive switch architecture, exploded vertical stack: keycap, rubber dome, conical spring, capacitive PCB with sense field</title>
+
+  <!-- Splash: dusty rose, applied as a soft horizontal wash beneath the conical spring,
+       across the PCB sense region — the article's load-bearing claim is that the switching
+       event happens here as a capacitance change, not as a metal-contact closure. Single
+       splash, single hue. Family convention: wash + dot/ring focal anchor at the same tier. -->
+  <ellipse cx="600" cy="618" rx="300" ry="46" fill="oklch(0.65 0.075 20 / 0.20)" stroke="none"/>
+
+  <!-- ── KEYCAP — silhouette at top, with a small "finger about to press" arrow ────────── -->
+  <g>
+    <!-- Keycap top profile (slight cylindrical concavity on the top face) -->
+    <path d="
+      M 488 120
+      L 712 120
+      C 716 120, 720 122, 720 126
+      L 720 162
+      C 720 168, 716 172, 710 172
+      L 490 172
+      C 484 172, 480 168, 480 162
+      L 480 126
+      C 480 122, 484 120, 488 120
+      Z" />
+    <!-- Concave dish on the top face (Topre keycaps are typically spherical-sculpted) -->
+    <path d="
+      M 510 130
+      C 560 142, 640 142, 690 130" stroke-opacity="0.45"/>
+    <!-- Keycap skirt / side walls dropping to the rim -->
+    <path d="
+      M 480 162
+      L 462 200
+      L 738 200
+      L 720 162" stroke-opacity="0.75"/>
+    <!-- Lower rim edge -->
+    <line x1="462" y1="200" x2="738" y2="200" stroke-opacity="0.55"/>
+    <!-- Cruciform-style under-mount slot, drawn lightly (Topre uses a non-MX slider but
+         the keycap silhouette reads as a generic cap to the reader) -->
+    <path d="
+      M 590 200
+      L 610 200
+      L 610 212
+      L 590 212
+      Z" stroke-opacity="0.5"/>
+
+    <!-- Small "finger about to press" arrow at the keycap centre, indicating the typing
+         vector. A short downward arrow with a "T" mark at its tail — "T" gestures toward
+         Topre without being a wordmark. -->
+    <g stroke-opacity="0.75">
+      <!-- "T" mark (top bar + vertical stem) -->
+      <line x1="588" y1="80" x2="612" y2="80"/>
+      <line x1="600" y1="80" x2="600" y2="100"/>
+      <!-- Downward arrow shaft -->
+      <line x1="600" y1="100" x2="600" y2="112"/>
+      <!-- Arrow head -->
+      <path d="M 594 108 L 600 116 L 606 108"/>
+    </g>
+  </g>
+
+  <!-- Explode line — between keycap and rubber dome -->
+  <line x1="380" y1="230" x2="820" y2="230" stroke-dasharray="4 6" stroke-opacity="0.32"/>
+  <circle cx="600" cy="230" r="2.5" stroke-opacity="0.5"/>
+
+  <!-- ── RUBBER DOME — the elastomer that supplies the tactile force ─────────────────── -->
+  <g>
+    <!-- Outer dome silhouette: hemispherical wall flaring to a wide flat base flange.
+         Drawn so the dome reads as a soft elastomer, not a metal-spring contact. -->
+    <path d="
+      M 462 322
+      C 462 268, 510 244, 600 244
+      C 690 244, 738 268, 738 322" />
+    <!-- Inner dome wall (gives it elastomer thickness) -->
+    <path d="
+      M 482 322
+      C 482 280, 520 262, 600 262
+      C 680 262, 718 280, 718 322" stroke-opacity="0.45"/>
+    <!-- Dome base flange (the gasket that seats on the housing plate) -->
+    <line x1="438" y1="322" x2="762" y2="322"/>
+    <line x1="438" y1="322" x2="438" y2="330" stroke-opacity="0.55"/>
+    <line x1="762" y1="322" x2="762" y2="330" stroke-opacity="0.55"/>
+    <line x1="438" y1="330" x2="762" y2="330" stroke-opacity="0.4"/>
+    <!-- A small puckered ring at the dome apex (the contact face that pushes the spring) -->
+    <ellipse cx="600" cy="262" rx="22" ry="4" stroke-opacity="0.55"/>
+
+    <!-- Architectural label — "rubber dome" set in dusty rose, single small callout.
+         Leader from the dome wall out to the right margin; label drawn as a tight
+         underline + word, single-color line work using the splash hue. -->
+    <g stroke="oklch(0.65 0.075 20)" stroke-opacity="0.95">
+      <!-- Leader -->
+      <line x1="730" y1="288" x2="826" y2="288" stroke-opacity="0.7"/>
+      <!-- Underline -->
+      <line x1="836" y1="298" x2="956" y2="298" stroke-opacity="0.55"/>
+    </g>
+    <!-- Label glyphs: "rubber dome" — drawn as small line-glyphs so we hold to the
+         "1-2 small architectural callouts" rule. Each letter is a short pen-stroke. -->
+    <g stroke="oklch(0.65 0.075 20)" stroke-opacity="0.95" stroke-width="1.6">
+      <!-- r -->
+      <path d="M 838 294 L 838 282 M 838 286 C 838 283, 841 282, 844 282"/>
+      <!-- u -->
+      <path d="M 850 282 L 850 290 C 850 293, 853 294, 856 294 L 856 282 M 856 294 L 856 282"/>
+      <!-- b -->
+      <path d="M 862 276 L 862 294 M 862 286 C 862 283, 865 282, 868 282 C 871 282, 873 285, 873 288 C 873 291, 871 294, 868 294 C 865 294, 862 293, 862 290"/>
+      <!-- b -->
+      <path d="M 879 276 L 879 294 M 879 286 C 879 283, 882 282, 885 282 C 888 282, 890 285, 890 288 C 890 291, 888 294, 885 294 C 882 294, 879 293, 879 290"/>
+      <!-- e -->
+      <path d="M 896 288 C 896 285, 899 282, 902 282 C 905 282, 907 285, 907 287 L 896 287 M 896 287 C 896 291, 899 294, 902 294 C 904 294, 906 293, 907 291"/>
+      <!-- space -->
+      <!-- d -->
+      <path d="M 924 276 L 924 294 M 924 286 C 924 283, 921 282, 918 282 C 915 282, 913 285, 913 288 C 913 291, 915 294, 918 294 C 921 294, 924 293, 924 290"/>
+      <!-- o -->
+      <path d="M 931 288 C 931 285, 934 282, 937 282 C 940 282, 942 285, 942 288 C 942 291, 940 294, 937 294 C 934 294, 931 291, 931 288 Z"/>
+      <!-- m -->
+      <path d="M 947 294 L 947 282 M 947 286 C 947 283, 950 282, 953 282 L 953 294 M 953 286 C 953 283, 956 282, 959 282 L 959 294"/>
+      <!-- e -->
+      <path d="M 965 288 C 965 285, 968 282, 971 282 C 974 282, 976 285, 976 287 L 965 287 M 965 287 C 965 291, 968 294, 971 294 C 973 294, 975 293, 976 291"/>
+    </g>
+  </g>
+
+  <!-- Explode line — between dome flange and conical spring -->
+  <line x1="380" y1="360" x2="820" y2="360" stroke-dasharray="4 6" stroke-opacity="0.32"/>
+  <circle cx="600" cy="360" r="2.5" stroke-opacity="0.5"/>
+
+  <!-- ── CONICAL SPRING — the load-bearing diagnostic shape of Topre architecture ────── -->
+  <!-- A 3-coil tapered spring drawing: top coil is narrow (sits inside dome apex),
+       bottom coil is broad (sits on the PCB sense pad). The taper is what tells the
+       reader "conical spring" at thumbnail size. -->
+  <g>
+    <!-- Top (narrow) coil -->
+    <ellipse cx="600" cy="392" rx="34" ry="8"/>
+    <!-- Middle coil -->
+    <ellipse cx="600" cy="428" rx="58" ry="11"/>
+    <!-- Bottom (broad) coil — broad base seats on the capacitive sense pad -->
+    <ellipse cx="600" cy="468" rx="84" ry="14"/>
+    <!-- Helical connecting strokes — left-side and right-side, suggesting wire continuity
+         from narrow top down to broad bottom. Two opposing diagonals per gap so the
+         coil reads as wound, not as stacked rings. -->
+    <g stroke-opacity="0.7">
+      <!-- Top to middle, left side -->
+      <path d="M 566 392 C 562 404, 552 414, 542 422"/>
+      <!-- Top to middle, right side -->
+      <path d="M 634 392 C 638 404, 648 414, 658 422"/>
+      <!-- Middle to bottom, left side -->
+      <path d="M 542 432 C 536 446, 524 458, 516 466"/>
+      <!-- Middle to bottom, right side -->
+      <path d="M 658 432 C 664 446, 676 458, 684 466"/>
+    </g>
+    <!-- Spring axis -->
+    <line x1="600" y1="384" x2="600" y2="482" stroke-opacity="0.32" stroke-dasharray="2 4"/>
+  </g>
+
+  <!-- ── PCB — flat horizontal substrate with a capacitive sense trace beneath the spring -->
+  <g>
+    <!-- PCB top edge -->
+    <line x1="280" y1="540" x2="920" y2="540"/>
+    <!-- PCB substrate thickness (a slim band) -->
+    <line x1="280" y1="540" x2="280" y2="558" stroke-opacity="0.55"/>
+    <line x1="920" y1="540" x2="920" y2="558" stroke-opacity="0.55"/>
+    <line x1="280" y1="558" x2="920" y2="558" stroke-opacity="0.55"/>
+    <!-- Internal copper-plane hint (a faint dashed mid-line in the substrate) -->
+    <line x1="290" y1="549" x2="910" y2="549" stroke-opacity="0.22" stroke-dasharray="2 6"/>
+
+    <!-- Capacitive sense PAD — a wide oblong copper patch directly under where the
+         spring's broad base sits. Drawn as a flat rounded rectangle so it reads as
+         a copper pad, not a contact dome. NOTE: no metal-contact bridge between
+         spring and pad; the gap is the article's whole point. -->
+    <g>
+      <path d="
+        M 516 530
+        L 684 530
+        C 690 530, 692 532, 692 536
+        L 692 540
+        L 508 540
+        L 508 536
+        C 508 532, 510 530, 516 530
+        Z" stroke-opacity="0.85"/>
+      <!-- Pad fill suggestion: a few thin horizontal hatch strokes (NOT a fill — line work) -->
+      <line x1="524" y1="535" x2="676" y2="535" stroke-opacity="0.35"/>
+    </g>
+
+    <!-- Sense traces leaving the pad to the right (toward the controller) -->
+    <g stroke-opacity="0.5">
+      <line x1="692" y1="536" x2="744" y2="536"/>
+      <line x1="744" y1="536" x2="744" y2="566"/>
+      <line x1="744" y1="566" x2="820" y2="566"/>
+    </g>
+    <!-- A second sense return trace leaving to the left, just for trace-pair believability -->
+    <g stroke-opacity="0.5">
+      <line x1="508" y1="536" x2="456" y2="536"/>
+      <line x1="456" y1="536" x2="456" y2="566"/>
+      <line x1="456" y1="566" x2="380" y2="566"/>
+    </g>
+  </g>
+
+  <!-- ── CAPACITIVE SENSE FIELD — a wavy / sine motif UNDER the spring, in the PCB band ──
+       This is the explanatory motif: the spring's proximity to the pad changes the
+       capacitance reading. Sine waves emanate from the pad downward into the PCB,
+       drawn in the splash hue so the eye reads "this is the event." -->
+  <g stroke="oklch(0.65 0.075 20)" stroke-opacity="0.9">
+    <!-- Primary sine wave centered under the pad -->
+    <path d="
+      M 504 600
+      C 524 580, 544 620, 564 600
+      C 584 580, 604 620, 624 600
+      C 644 580, 664 620, 684 600
+      C 698 586, 700 600, 696 608" stroke-opacity="0.85"/>
+    <!-- Secondary, lower-amplitude sine (lower line) -->
+    <path d="
+      M 504 626
+      C 524 612, 544 640, 564 626
+      C 584 612, 604 640, 624 626
+      C 644 612, 664 640, 684 626
+      C 696 616, 700 626, 696 632" stroke-opacity="0.6"/>
+    <!-- Tertiary, fainter sine (the "field tapering off" feel) -->
+    <path d="
+      M 514 650
+      C 530 642, 546 660, 562 650
+      C 578 642, 594 660, 610 650
+      C 626 642, 642 660, 658 650
+      C 670 644, 678 650, 678 654" stroke-opacity="0.35"/>
+  </g>
+
+  <!-- Splash focal anchor: filled dot + outer ring centered between spring base and pad —
+       the literal location of the capacitance event. Family convention. -->
+  <circle cx="600" cy="500" r="6.5" fill="oklch(0.65 0.075 20 / 0.95)" stroke="oklch(0.65 0.075 20)"/>
+  <circle cx="600" cy="500" r="13" stroke="oklch(0.65 0.075 20)" stroke-opacity="0.5" fill="none"/>
+  <!-- A pair of small inward chevrons either side of the dot, indicating the proximity-
+       change that the sensor reads. NO contact line, NO closure mark — the gap is intact. -->
+  <path d="M 580 500 L 586 496 M 580 500 L 586 504" stroke="oklch(0.65 0.075 20)" stroke-opacity="0.7"/>
+  <path d="M 620 500 L 614 496 M 620 500 L 614 504" stroke="oklch(0.65 0.075 20)" stroke-opacity="0.7"/>
+
+  <!-- Architectural callout #2 — "capacitive sensor", second small label, splash hue.
+       Leader from the splash anchor area out to a right-margin underline + word. -->
+  <g stroke="oklch(0.65 0.075 20)" stroke-opacity="0.75">
+    <!-- Leader from focal anchor outward and down to the pad/label region -->
+    <line x1="692" y1="535" x2="760" y2="535" stroke-opacity="0.6"/>
+    <line x1="760" y1="535" x2="836" y2="640" stroke-opacity="0.55"/>
+    <!-- Underline for label -->
+    <line x1="836" y1="650" x2="996" y2="650" stroke-opacity="0.55"/>
+  </g>
+  <!-- Label glyphs: "capacitive sensor" — single-color line work, short pen-strokes. -->
+  <g stroke="oklch(0.65 0.075 20)" stroke-opacity="0.95" stroke-width="1.6">
+    <!-- c -->
+    <path d="M 848 640 C 848 637, 845 634, 842 634 C 839 634, 836 637, 836 640 C 836 643, 839 646, 842 646 C 844 646, 846 645, 848 644"/>
+    <!-- a -->
+    <path d="M 852 640 C 852 637, 855 634, 858 634 C 861 634, 863 637, 863 640 L 863 646 M 863 640 C 863 643, 861 646, 858 646 C 855 646, 852 644, 852 642"/>
+    <!-- p -->
+    <path d="M 869 650 L 869 634 M 869 638 C 869 635, 872 634, 875 634 C 878 634, 880 637, 880 640 C 880 643, 878 646, 875 646 C 872 646, 869 645, 869 642"/>
+    <!-- a -->
+    <path d="M 884 640 C 884 637, 887 634, 890 634 C 893 634, 895 637, 895 640 L 895 646 M 895 640 C 895 643, 893 646, 890 646 C 887 646, 884 644, 884 642"/>
+    <!-- c -->
+    <path d="M 911 640 C 911 637, 908 634, 905 634 C 902 634, 899 637, 899 640 C 899 643, 902 646, 905 646 C 907 646, 909 645, 911 644"/>
+    <!-- i -->
+    <path d="M 916 634 L 916 646 M 916 630 L 916 631"/>
+    <!-- t -->
+    <path d="M 922 628 L 922 644 C 922 645, 924 646, 926 646 M 919 634 L 925 634"/>
+    <!-- i -->
+    <path d="M 930 634 L 930 646 M 930 630 L 930 631"/>
+    <!-- v -->
+    <path d="M 935 634 L 939 646 L 943 634"/>
+    <!-- e -->
+    <path d="M 957 640 C 957 637, 954 634, 951 634 C 948 634, 946 637, 946 640 C 946 643, 948 646, 951 646 C 953 646, 955 645, 957 644 M 946 640 L 957 640"/>
+
+    <!-- space -->
+
+    <!-- s -->
+    <path d="M 971 636 C 970 635, 968 634, 966 634 C 964 634, 962 635, 962 637 C 962 639, 964 640, 966 640 C 968 640, 970 641, 970 643 C 970 645, 968 646, 966 646 C 964 646, 962 645, 961 644"/>
+    <!-- e -->
+    <path d="M 985 640 C 985 637, 982 634, 979 634 C 976 634, 974 637, 974 640 C 974 643, 976 646, 979 646 C 981 646, 983 645, 985 644 M 974 640 L 985 640"/>
+    <!-- n -->
+    <path d="M 990 646 L 990 634 M 990 638 C 990 635, 993 634, 996 634 C 999 634, 1001 636, 1001 639 L 1001 646"/>
+    <!-- s -->
+    <path d="M 1015 636 C 1014 635, 1012 634, 1010 634 C 1008 634, 1006 635, 1006 637 C 1006 639, 1008 640, 1010 640 C 1012 640, 1014 641, 1014 643 C 1014 645, 1012 646, 1010 646 C 1008 646, 1006 645, 1005 644"/>
+    <!-- o -->
+    <path d="M 1019 640 C 1019 637, 1022 634, 1025 634 C 1028 634, 1030 637, 1030 640 C 1030 643, 1028 646, 1025 646 C 1022 646, 1019 643, 1019 640 Z"/>
+    <!-- r -->
+    <path d="M 1034 646 L 1034 634 M 1034 638 C 1034 635, 1037 634, 1040 634"/>
+  </g>
+
+  <!-- ── PCB explode line below, plus a final faint horizontal substrate-base line ──── -->
+  <line x1="380" y1="690" x2="820" y2="690" stroke-dasharray="4 6" stroke-opacity="0.32"/>
+  <circle cx="600" cy="690" r="2.5" stroke-opacity="0.5"/>
+
+  <!-- Subtle measurement tick marks, didactic — left margin, one per tier (family convention) -->
+  <g stroke-opacity="0.3">
+    <!-- Keycap tier -->
+    <line x1="320" y1="160" x2="330" y2="160"/>
+    <!-- Rubber dome tier -->
+    <line x1="320" y1="288" x2="330" y2="288"/>
+    <!-- Conical spring tier -->
+    <line x1="320" y1="430" x2="330" y2="430"/>
+    <!-- PCB / capacitive sense tier -->
+    <line x1="320" y1="540" x2="330" y2="540"/>
+    <!-- Sense-field tier -->
+    <line x1="320" y1="625" x2="330" y2="625"/>
+  </g>
+
+  <!-- Brass-bronze theme dot — family-conventional ornamental anchor, top-right margin -->
+  <circle cx="1148" cy="92" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

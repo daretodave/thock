@@ -1,0 +1,21 @@
+{
+  "agent": "brander",
+  "renderedAt": "2026-05-13T00:00:00Z",
+  "slug": "topre-electrocapacitive-deep-dive",
+  "subject": "Topre electrocapacitive switch architecture — vertical exploded stack (keycap, rubber dome, conical spring, PCB with capacitive sense pad and sine-wave sense field) making legible at a glance that the switching event is a capacitance change between the conical spring and a PCB pad, not a metal-contact closure",
+  "motif": "exploded vertical architecture diagram / labeled engineering sketch",
+  "splashHue": "dusty rose",
+  "splashColor": "oklch(0.65 0.075 20)",
+  "canvas": "1200x750",
+  "strokeWeight": "2px",
+  "strokeColor": "oklch(0.78 0.005 90)",
+  "kind": "hero-art",
+  "engine": "hand-authored SVG (no raster pipeline)",
+  "commit": "f8ec46fb2a41004d32ab77c4a8da5e386d86e4c2",
+  "notes": "Vertical exploded stack across four tiers separated by faint dashed explode lines: (1) keycap silhouette with a concave dish on the top face and a small 'T' mark + downward arrow above suggesting a typing finger about to press; (2) rubber-dome elastomer drawn with double-wall thickness and a flat base flange (so the eye reads 'soft elastomer over a plate', not a metal-spring assembly) — labeled 'rubber dome' in the splash hue on the right margin; (3) conical spring drawn as three stacked ellipses tapering from narrow at top (sits inside dome apex) to broad at base (seats on the capacitive pad), with helical connecting strokes so the coil reads as wound, not as stacked rings; (4) flat PCB substrate with a clear oblong copper sense pad directly under the spring's broad base, sense traces leaving left and right, and a capacitive sense field rendered as three nested splash-hue sine waves emanating downward into the substrate — labeled 'capacitive sensor' in the splash hue. Critically, NO contact bridge is drawn between the spring base and the pad; the visible air gap between them, marked with a splash-hue dot+ring and inward-pointing chevrons (proximity indicators, not closure), is the article's load-bearing claim. Splash hue dusty rose oklch(0.65 0.075 20) chosen for premium-and-warm Topre identity (muted, considered, slightly retro), and sits at hue ~20 — distinct from the immediately-prior deep-dives rotation: clicky-switches ochre (hue 80, 2026-05-13), Drop Holy Panda X muted terracotta (hue 40, 2026-05-12), Oil King coral (hue 30), MX2A cherry-red (hue 30 deeper) — and avoids stock blue/green per brief. Reduced chroma (0.075) is what gives the 'dusty' character vs. the brighter coral neighbours. Brass-bronze ornamental dot at top-right and left-margin didactic tier ticks (five tiers) preserved per hero-art family convention. No text beyond the two architectural callouts; the body of the article supplies the explanation, the SVG carries the architecture.",
+  "outputs": [
+    "apps/web/public/hero-art/topre-electrocapacitive-deep-dive.svg",
+    "apps/web/public/hero-art/topre-electrocapacitive-deep-dive.svg.json"
+  ],
+  "warnings": []
+}
