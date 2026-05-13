@@ -223,13 +223,14 @@
 - suggested fix: pick the cheaper visual-cue path: add an underline-on-hover (or chevron glyph) on linked rows only so unlinked rows visually opt out. Alternative: backfill stub deep-dive articles for the 3 unlinked entries (DCS Olivetti, MT3 profile, Wuque Studio) so every row links. Cheap UX path is the visual cue; durable content path is the backfill. Both are valid; pick what the next iterate tick prefers.
 - source: browser
 
-### [LOW] /tag/linear — H1 reads `#linear` (lowercase) but the lede capitalizes "Linear"
+### [x] [LOW] /tag/linear — H1 reads `#linear` (lowercase) but the lede capitalizes "Linear" — addressed in 4e9f6bf (closes #80)
 - pass: 8 (commit d34580c)
 - viewport: desktop
 - category: voice
+- issue: #80
 - observation: Capitalization drift on the tag page. The H1 reads "#linear" (lowercase, matching the tag-chip convention site-wide), but the lede directly under it says "5 articles tagged Linear." (capital L). The heading and lede contradict each other on a single screen; reader briefly registered them as referring to two different things (a "linear" facet vs. a "Linear" brand) before resolving. Likely the same bug affects every /tag/<slug> page where the slug is a single common word — wherever the lede titles the tag instead of treating it as an opaque slug.
 - evidence: reader's `read_page` on /tag/linear: heading[ref_34] "#linear", generic[ref_35] "5 articles tagged Linear.".
-- suggested fix: lowercase the tag in the lede so it matches the H1 + the chips elsewhere — `<X> articles tagged ${tag}.` (where `${tag}` is the raw slug, not Title-Cased). One-line edit in `apps/web/src/app/tag/[slug]/page.tsx` (or wherever the lede renders); add a snapshot test for /tag/linear's lede string.
+- fix: swapped `tag.name` → `#{tag.slug}` on both the lede paragraph and the empty-state copy in `apps/web/src/app/tag/[slug]/page.tsx`. Hashtag-slug form now matches H1 + tag chips site-wide. Page meta description keeps `tag.name` (head-only, no on-screen H1 to contradict). New `data-testid="tag-page-lede"` + tag.spec.ts assertion locks the convention.
 - source: browser
 
 ### [x] [MED] /article/* (and other surfaces) — `<aside>` block sits almost on top of the next `<h2>`
