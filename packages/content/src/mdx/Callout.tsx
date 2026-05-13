@@ -27,9 +27,9 @@ export function Callout({
       role="note"
     >
       {title && (
-        <div className="mb-2 font-mono text-micro uppercase tracking-[0.08em] text-text-3">
+        <h2 className="mb-2 font-mono text-micro uppercase tracking-[0.08em] text-text-3">
           {title}
-        </div>
+        </h2>
       )}
       <div className="text-body">{children}</div>
     </aside>

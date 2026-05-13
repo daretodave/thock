@@ -189,13 +189,16 @@
 - needs-user-call: the analytics property + GTM-tag config sit outside the repo; the loop can't autonomously verify or reconfigure them. Surfacing for `/oversight`.
 - source: browser
 
-### [MED] /article/keychron-q-ultra-zmk (and likely all `<aside>` callouts) — aside title renders as a generic, not a heading
+### [x] [MED] /article/keychron-q-ultra-zmk (and likely all `<aside>` callouts) — aside title renders as a generic, not a heading
+- addressed in: pending commit (this tick — cloud /iterate drain)
+- issue: #71
 - pass: 8 (commit d34580c)
 - viewport: desktop
 - category: a11y
 - observation: The `<aside>` "What's confirmed and what isn't" callout on /article/keychron-q-ultra-zmk uses a non-heading element for its title — the title text renders as a plain generic, while every body section heading ("What's in the line", "ZMK as the platform", "The polling and HE story", "What we're watching") uses heading role. A screen-reader user navigating by heading skips past the aside entirely; the document outline misses the callout. This is the a11y companion to today's user-jot on the same component — user spotted spacing; reader spotted heading-role. Same fix surface (the aside template), distinct fixes.
 - evidence: reader's `read_page` on /article/keychron-q-ultra-zmk shows note[ref_42] → generic "What's confirmed and what isn't" [ref_43] → generic body[ref_44]; compare ref_45 heading "What's in the line" as a true heading sibling. Likely affects every `<aside>` MDX usage across articles, since the template is shared.
-- suggested fix: promote the aside title to a heading inside the aside (e.g. `<h3>` if the surrounding article body uses h2 for sections; use `<h2>` if the aside is logically peer-level). Investigate the aside MDX component (search `apps/web/src/components/article/` or the shared MDX-component map) and add a heading element for the title prop. Companion fix: pair with the user-jot's margin/spacing fix in the same iterate tick — both edits land in one file.
+- fix: promoted the Callout title from `<div>` to `<h2>` in `packages/content/src/mdx/Callout.tsx`, preserving the existing eyebrow visual treatment (uppercase, micro, tracking, text-text-3) via the same Tailwind classes on the heading element. Picked h2 (not h3) so callouts that sit between the article hero h1 and the first `## section` don't introduce an h1 → h3 skip — h1 → h2 (callout) → h2 (section) is peer-clean. Unit tests in `packages/content/src/__tests__/mdx/spacing.test.tsx` added: title renders as `aside > h2`, no heading rendered when title is omitted, visual treatment classes preserved. E2e regression guard in `apps/e2e/tests/article.spec.ts` walks two real article paths (keychron-q-ultra-zmk + beginners-switch-buying-guide), asserts `aside[role="note"] > h2` is visible, and re-runs the heading-skip walk across the whole document to lock in no h{n} → h{n+2} upward jumps.
+- verify note: 542 e2e green serial worker.
 - source: browser
 
 ### [LOW] /trends — pillar card density inconsistent (hero has chips, archive doesn't)

@@ -32,3 +32,36 @@ describe('MDX prose spacing — Callout + h2', () => {
     expect(h2!.className).not.toContain('mt-12')
   })
 })
+
+// Regression guard for plan/CRITIQUE.md pass 8 "[MED]
+// /article/keychron-q-ultra-zmk (and likely all `<aside>` callouts)
+// — aside title renders as a generic, not a heading". The title prop
+// must render as a heading element so screen-reader heading-jump
+// navigation lands on the callout. h2 is chosen so callouts placed
+// between the article h1 and the first `## section` don't introduce
+// an h1 → h3 skip (WCAG 1.3.1).
+describe('MDX a11y — Callout title is a heading', () => {
+  it('renders the title prop as an h2 inside the aside', () => {
+    const { container } = render(
+      <Callout title="What's confirmed, what isn't">body</Callout>,
+    )
+    const heading = container.querySelector('aside > h2')
+    expect(heading).not.toBeNull()
+    expect(heading!.textContent).toBe("What's confirmed, what isn't")
+  })
+
+  it('omits any heading when no title is supplied', () => {
+    const { container } = render(<Callout>body without a title</Callout>)
+    expect(container.querySelector('aside > h2')).toBeNull()
+  })
+
+  it('preserves the eyebrow visual treatment on the heading', () => {
+    const { container } = render(<Callout title="Cheat sheet">body</Callout>)
+    const heading = container.querySelector('aside > h2')
+    expect(heading).not.toBeNull()
+    const cn = heading!.className
+    expect(cn).toContain('font-mono')
+    expect(cn).toContain('text-micro')
+    expect(cn).toContain('uppercase')
+  })
+})

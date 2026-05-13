@@ -112,6 +112,53 @@ test.describe('article page family — canonical template', () => {
     }
   })
 
+  test('Callout aside titles render as h2 headings (a11y, WCAG 1.3.1)', async ({
+    page,
+  }) => {
+    // Regression guard for plan/CRITIQUE.md pass 8 "[MED]
+    // /article/keychron-q-ultra-zmk (and likely all `<aside>` callouts)
+    // — aside title renders as a generic, not a heading". Pre-fix, the
+    // Callout title rendered inside a <div> so screen-reader users
+    // navigating by heading skipped past every callout. Promoted to
+    // an h2 inside <aside> so heading-nav lands on the title.
+    // h2 (not h3) avoids a h1 → h3 skip on articles whose first
+    // Callout sits between the article hero h1 and the first `##`.
+    const slugs = [
+      '/article/keychron-q-ultra-zmk',
+      '/article/beginners-switch-buying-guide',
+    ]
+    for (const slug of slugs) {
+      await page.goto(slug)
+      const calloutHeading = page
+        .locator('aside[role="note"] > h2')
+        .first()
+      await expect(
+        calloutHeading,
+        `${slug}: aside heading must exist`,
+      ).toBeVisible()
+      const text = (await calloutHeading.textContent())?.trim() ?? ''
+      expect(text.length, `${slug}: aside heading must have text`).toBeGreaterThan(0)
+      // Verify no heading-skip when walking the whole document.
+      const levels = await page
+        .locator('h1, h2, h3, h4, h5, h6')
+        .evaluateAll((els) =>
+          els.map((el) => Number(el.tagName.slice(1))),
+        )
+      expect(levels.length).toBeGreaterThan(0)
+      expect(levels[0]).toBe(1)
+      for (let i = 1; i < levels.length; i++) {
+        const prev = levels[i - 1] ?? 1
+        const curr = levels[i] ?? 1
+        if (curr > prev) {
+          expect(
+            curr - prev,
+            `${slug}: heading skip at index ${i}: h${prev} → h${curr}`,
+          ).toBeLessThanOrEqual(1)
+        }
+      }
+    }
+  })
+
   test('document <title> applies the "— thock" suffix exactly once', async ({
     page,
   }) => {
