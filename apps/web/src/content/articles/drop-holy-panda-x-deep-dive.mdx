@@ -1,0 +1,78 @@
+---
+slug: drop-holy-panda-x-deep-dive
+title: "Why the Drop Holy Panda X feels the way it does"
+lede: "The Holy Panda was a six-month frankenswitch project for most of its life. The Drop Holy Panda X is the first version where the geometry, the spring tune, the housing pairing, and the factory lube were the spec — not the mod."
+author: thock
+pillar: deep-dives
+tags: [tactile, drop, factory-lubed, deep-dive, modding]
+publishedAt: '2026-05-12T15:00:00.000Z'
+updatedAt: null
+heroImage: /hero-art/drop-holy-panda-x-deep-dive.svg
+heroImageAlt: "Side-view cross-section of a tactile switch — top housing, rounded-bump stem, spring, and bottom housing rendered in a single warm-grey stroke with a muted terracotta splash across the bump shoulder and a faint panda-style top/bottom contrast banding the housings."
+featured: false
+popularityScore: 0
+mentionedParts:
+  - id: drop-holy-panda-x
+    kind: switch
+    slug: drop-holy-panda-x
+---
+
+The Holy Panda lineage is the longest, most-argued tactile saga in the hobby. It started in the late 2010s as a frankenswitch — Invyr Panda housings (originally a clicky chassis whose tooling Invyr had retired) crossed with a Halo True stem from the older Massdrop Halo series, hand-assembled one tray at a time by builders who had sourced both halves second-hand. The result felt unlike anything Cherry or Gateron had shipped: a rounded, pronounced bump near the top of the travel, a confident bottom-out, and an acoustic signature that read as full rather than sharp. It was also scarce, expensive, and inconsistent. A "Holy Panda" build was a six-month project. Yok ran clones. Glorious ran a different clone. Drop's first cooperation with Gateron in 2019 produced a switch most builders politely called close-but-not-quite. The <PartReference id="drop-holy-panda-x" /> — the version on Drop's shelves today, the version factory-lubed and consistent across a tray of seventy — is the first iteration of this lineage where a typist can buy the feel off the shelf and not buy it back together piecewise.
+
+That sentence is the editorial premise. The interesting question is not whether the HPX matches the original frankenswitch on a force curve. The interesting question is what makes it feel the way it does, and how the engineering decisions on its spec sheet add up to a category of tactile that the corpus had, until now, only described in mods and rumours.
+
+## The rounded bump, geometrically
+
+"Tactile bump" is a category that covers four distinct shapes, and the discourse routinely flattens them into one. A Cherry MX Brown delivers what bench testers call a sharp bump: the stem leg crosses the contact leaf at a steep angle, the force-curve spike is narrow, and the perceived tactile event is brief and slightly fragile — present at low typing speeds, easy to type past at higher cadence. A Boba U4T or a Tecsee Sapphire delivers a D-shaped bump: a steep climb on the front edge, a long flat plateau across the top of the bump, and a steep drop on the back edge. The feel is "you are now in the bump" rather than "you crossed the bump."
+
+The Holy Panda lineage delivers neither. The rounded bump on a Halo-derived stem is a smooth, symmetric arc — gentler entry than the U4T, longer dwell than the Brown, and a fall-off that blends into the bottom-out rather than dropping off cleanly first. The bump sits high on the stroke, with the peak of the tactile event somewhere around 0.8mm of travel. What the geometry buys is delivery: because the bump's back edge does not collapse before the stem reaches the housing floor, the energy stored in compressing the leaf gets handed forward into the bottom-out rather than dissipating in the gap between the two events. The press feels like a single shaped motion — bump and bottom-out as halves of the same gesture — rather than two events separated by a quiet middle. That continuity is most of what the original Holy Panda partisans were pointing at when they said the switch "felt like a typewriter."
+
+The HPX preserves this geometry. The stem is POM, which lengthens the contact dwell against the leaf slightly versus the original Halo's nylon-blend stem (the original Halo was, on inspection, a hair scratchier and a hair noisier on the dry leaf contact), and the housing rails are tightened up to Gateron's current-generation tolerances. The shape of the event is what carries forward; the surface quality of the event is what got improved.
+
+## The spring — 60g into 67g
+
+The spec on the HPX reads 60g actuation, 67g bottom-out, factory-fitted. A 7-gram delta between actuation and bottom-out is light by current-generation standards — the <a href="/article/gateron-oil-king-deep-dive">Oil King</a> runs roughly 50g into 67g across its travel, and the heavier modern tactiles (Sapphire, MMD Lavender) typically push their delta past 15 grams. What a small delta delivers is a flatter back-half of the curve: once the bump is crossed, the spring is not asking the finger for meaningfully more force to reach the bottom of the stroke. The bottom-out lands close in weight to where the tactile event resolved, and the upstroke returns with the same modest delta in reverse.
+
+That tune is the load-bearing decision behind the HPX's "snappy return" character. A larger delta — the curve a Boba U4T runs — gives the switch a more emphatic reset, because the spring is doing meaningful work pushing the stem back through the bump on the way up. A smaller delta makes the return feel quicker, lighter, more typing-rhythm and less keystroke-by-keystroke deliberation. The HPX sits decisively on the small-delta side of that line, which is one of the reasons builders coming from a Cherry MX Brown describe it as "more usable" even though the absolute weight is higher: a 50g Brown with a 5-gram delta and a 60g HPX with a 7-gram delta read, in the hand, as broadly the same weight class for typing cadence, with the HPX delivering a meaningfully larger tactile event for the same effort.
+
+The 60g actuation is also the point at which the bump becomes inevitable rather than optional. Below roughly 55g actuation, a rounded-bump stem starts to feel like a linear with a hiccup — the bump is there but the surrounding spring weight is too light to let it land. Above 65g, the switch starts to fatigue typists on long sessions. 60g is the corridor the Halo always lived in, and the HPX keeping it is a refusal to chase either lighter or heavier tactility for its own sake.
+
+## The housing recipe — PC top, nylon bottom
+
+The HPX's housing pairing is the same recipe the Oil King uses, and for the same reasons — but the result lands in a different register because the input event is different. A polycarbonate top housing transmits and brightens; a nylon bottom housing absorbs and lowers. On a linear, the seam between the two resins produces the articulated top-out and contained bottom-out that the Oil King is built around. On a tactile, the same seam does double duty: the bump's leaf-contact event reads through the PC top with clarity (so the tactile event is audible as well as palpable), and the bottom-out lands in the nylon's lower, fatter register (so the strike does not turn sharp the way an all-PC tactile would).
+
+This pairing is the answer to a problem that all-nylon tactiles, including most of the Yok-era Holy Panda clones, never solved. An all-nylon housing dampens both halves of the event — the tactile bump comes through muffled, and the bottom-out lands with no presence. The switch reads as soft in a way that flattens its character. An all-PC housing, conversely, lets the bump ring out clearly but turns the bottom-out into a click — the strike sounds like a hit on a hard surface rather than a contained event. The PC-top / nylon-bottom split is a deliberate inheritance from Gateron's modern linear playbook, and applying it to a tactile is the engineering call that gives the HPX a sound the lineage's earlier versions struggled to deliver consistently.
+
+The POM stem is the third leg of the housing answer. POM has a low coefficient of friction against both PC and nylon, which keeps the stem rails quiet on travel — the scratch that earlier Panda clones were notorious for came mostly from a nylon stem rubbing against nylon housing rails, and the HPX bypasses that pairing entirely.
+
+<Callout type="aside" title="The Invyr / Yok history, in one paragraph">
+  The original Invyr Panda housing was tooled for a clicky switch and produced as a small run in 2018; when the run sold out, the tooling was retired. The Holy Panda frankenswitch was, mechanically, the result of builders realising that the Invyr housing's stem-rail geometry happened to pair well with the Halo True stem from the older Massdrop Halo series. Yok produced a clone of the Invyr housing in 2019 with the consent of the original tooling owner; Glorious produced an unrelated clone the same year that the scene largely ignored. Drop's first factory attempt at a Holy Panda — the original "Holy Panda" SKU on Massdrop, not the HPX — used a different stem geometry and was widely considered a miss. The HPX is the third Drop attempt and the first one the lineage's partisans signed off on.
+</Callout>
+
+## The travel — 3.4mm short
+
+Short-travel switches occupy their own acoustic and rhythmic category. The HPX's 3.4mm travel — versus the 4.0mm standard the rest of the MX-compatible field runs — does two things to the perceived feel. The first is rhythmic: the bottom-out arrives sooner, which compresses the typing event into a shorter time window. At a steady typing cadence, the finger is delivering and recovering 15% faster per keystroke than it would on a 4.0mm switch. That shortened cycle reads as "snappy" or "quick" in subjective reports, and it is the single largest difference between the HPX and the original frankenswitch (which used 4.0mm Invyr housings).
+
+The second effect is on the bump's prominence. With the tactile event sitting at roughly 0.8mm and the bottom-out at 3.4mm, the bump occupies a larger proportion of the total stroke than it would on a 4.0mm switch with the same bump-position spec. The press feels more uniformly tactile from top to bottom — less of the stroke is a quiet linear glide after the bump resolves. Builders coming from 4.0mm tactiles sometimes describe the HPX as "more tactile" than its bump shape strictly justifies, and the travel is most of why.
+
+The short travel is also the spec the original Holy Panda partisans most often point to when arguing the HPX is not the original. They are not wrong on the numbers. They are wrong on the conclusion. The original was 4.0mm because the Invyr housing was 4.0mm; the design intent of the lineage was the rounded bump, not the travel length. The HPX trades a half-millimetre of travel for a consistency and availability the original could never deliver, and the trade reads as defensible.
+
+## The factory lube — the engineering decision
+
+If the rounded-bump geometry is the headline, the factory lube is the load-bearing engineering decision. A tactile switch is harder to factory-lube than a linear, and most factory tactile attempts before 2022 either under-lubed (leaving a scratchy bump) or over-lubed (muting the bump out of existence). The HPX's factory tune solves the harder problem.
+
+The trick is asymmetry. The HPX is lubed light on the stem legs and the leaf-contact face — light enough that the tactile event is preserved with its full shape and acoustic presence — and slightly heavier on the rail contact between the stem and the housing. The rail lube kills the scratch that older Panda clones were notorious for; the light leaf-side lube preserves the bump. The two passes are doing different jobs and the factory line treats them as different operations. The result, out of the bag, is a switch where the bump reads exactly as crisp as the geometry promises and the surrounding travel reads as smooth as a hand-lubed linear.
+
+That asymmetry is most of what separates the HPX from the broader tactile field. A Cherry MX Brown is factory-lubed under the MX2A revision, but the lube is applied uniformly and lightly, which keeps the bump intact at the cost of leaving the rail scratch only partially resolved. A Boba U4T is famously not factory-lubed — the switch ships dry and is expected to be hand-lubed, which is part of why the U4T discourse always includes the "after lube" asterisk. The HPX ships with the asterisk already paid down.
+
+## Where the HPX sits on the corpus map
+
+The corpus already has two linear deep-dives staked at opposite ends of the linear spectrum: the <a href="/article/gateron-oil-king-deep-dive">Oil King</a> as the heavy, oily, deep-thock anchor and the <a href="/article/hmx-cloud-deep-dive">HMX Cloud</a> as the lighter, snappier, clack-forward counterpoint. The HPX completes the triangle as the tactile reference. It runs heavier than the Cloud (60g vs 42g actuation), lighter at bottom-out than the Oil King (67g vs 75g), and lands acoustically between the two — the PC-top brightness it shares with the Oil King against the shorter, more articulated bottom-out the short travel produces. The bump itself is the variable neither linear has. A reader who has built a Cloud board and an Oil King board has heard the two ends of the modern linear conversation. An HPX build is the third reference point — the tactile equivalent, voiced by the same housing logic, tuned to the same factory-discipline bar.
+
+## What changed for the hobby
+
+The frankenswitch era of the Holy Panda was, in retrospect, a workaround. Builders were chasing a feel the factories were not delivering, and they assembled it by hand because that was the only path. The HPX closes that loop. The same feel — rounded bump, confident bottom-out, light enough delta to type on for hours — is available factory-lubed, in stock, in a tray of seventy, at a price most builders working through their second or third board can absorb without flinching. The build no longer takes six months; it takes the time required to install switches.
+
+The shift is small in calendar terms and large in what it signals. The tactile category, the category the hobby spent five years treating as the place where modding mattered most, has finally arrived factory-spec. That is the editorial story. The geometry, the spring, the housing, the travel, and the lube are the engineering footnotes that make it true.
+
+What to watch next: whether Drop iterates the HPX with a heavier-spring variant (the rumour in the b-stock channels points at a 67g/75g version), and whether the rest of the factory-tactile field — Gateron's own boutique tactiles, Tecsee's Sapphire line, the smaller HMX tactile bench — converges on the same asymmetric-lube discipline the HPX got right first. The bar moved. The next two years will show who else can clear it.

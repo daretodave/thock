@@ -1,0 +1,21 @@
+{
+  "agent": "brander",
+  "renderedAt": "2026-05-13T00:00:00Z",
+  "slug": "drop-holy-panda-x-deep-dive",
+  "subject": "Drop Holy Panda X tactile switch — cross-section with rounded-bump stem emphasis",
+  "motif": "switch cross-section / housing exploded view",
+  "splashHue": "muted terracotta",
+  "splashColor": "oklch(0.55 0.105 40)",
+  "canvas": "1200x750",
+  "strokeWeight": "2px",
+  "strokeColor": "oklch(0.78 0.005 90)",
+  "kind": "hero-art",
+  "engine": "hand-authored SVG (no raster pipeline)",
+  "commit": "dafbaf25c0a74a4183f6be46b768f16a380b5636",
+  "notes": "Splash applied as a wash over the bottom housing (the article's 'warm body from nylon bottom' acoustic claim) plus a single accent dot+ring at the right-side bump apex of the stem — the focal mechanism. Stem is drawn with cubic-bezier outward-bowing skirt legs to make the rounded-bump geometry visually legible vs. a sharp-leg profile. Composition stack mirrors the family architecture (top housing → dashed seam → stem → spring → bottom housing), with the seam line drawn slightly heavier than a typical explode line because the white-top / black-bottom parting seam is the Holy-Panda visual identity. A small leaf-contact bend enters from the lower left and kisses the left bump apex, so the eye reads leaf → apex → bump curvature. A Δ7g bracket+label on the right margin names the 60→67g actuation-to-bottom-out delta in single-color line work (no splash). Brass-bronze ornamental dot at top-right and left-margin didactic ticks preserved per the hero-art family convention. Splash hue oklch(0.55 0.105 40) sits warmer/darker than Oil King's coral (0.71 0.135 30) and FR4's terracotta (0.66 0.13 45), distinct from MX2A's cherry-red and HMX Cloud's pale cyan — next slot in the family rotation.",
+  "outputs": [
+    "apps/web/public/hero-art/drop-holy-panda-x-deep-dive.svg",
+    "apps/web/public/hero-art/drop-holy-panda-x-deep-dive.svg.json"
+  ],
+  "warnings": []
+}

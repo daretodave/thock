@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — Drop Holy Panda X switch cross-section, with rounded-bump stem emphasis</title>
+
+  <!-- Splash: muted terracotta wash over the bottom housing — the "warm body from nylon bottom"
+       acoustic claim. Single splash, single hue. The bump-apex accent dot below reuses the
+       same hue as the focal anchor (family convention: wash + dot at the focal piece). -->
+  <ellipse cx="600" cy="660" rx="260" ry="80" fill="oklch(0.55 0.105 40 / 0.22)" stroke="none"/>
+
+  <!-- ── TOP HOUSING — the "white" panda half, cut-away ──────────────────────────────── -->
+  <g>
+    <!-- Outer top-housing -->
+    <path d="
+      M 410 130
+      L 790 130
+      L 820 220
+      L 380 220
+      Z" />
+    <!-- Inner cavity edge (wall thickness) -->
+    <path d="
+      M 426 145
+      L 774 145
+      L 800 212
+      L 400 212
+      Z" stroke-opacity="0.4"/>
+    <!-- Stem hole (cruciform aperture, top face) -->
+    <path d="
+      M 552 130
+      L 668 130
+      L 672 142
+      L 660 142
+      L 660 150
+      L 644 150
+      L 644 142
+      L 576 142
+      L 576 150
+      L 560 150
+      L 560 142
+      L 548 142
+      Z" stroke-opacity="0.7"/>
+    <!-- LED notch on top edge -->
+    <path d="M 586 130 L 622 130 L 618 138 L 590 138 Z" stroke-opacity="0.55"/>
+    <!-- Mounting clip nubs on the side -->
+    <line x1="380" y1="200" x2="370" y2="200" stroke-opacity="0.5"/>
+    <line x1="820" y1="200" x2="830" y2="200" stroke-opacity="0.5"/>
+  </g>
+
+  <!-- Housing seam line (parting seam between top "white" half and bottom "black" half — the
+       diagnostic line that names a Holy-Panda-style housing). Heavier than a normal explode
+       line because the seam is the visual identity. -->
+  <line x1="360" y1="245" x2="840" y2="245" stroke-dasharray="6 6" stroke-opacity="0.55"/>
+  <!-- Seam tick anchors -->
+  <line x1="350" y1="245" x2="358" y2="245" stroke-opacity="0.45"/>
+  <line x1="842" y1="245" x2="850" y2="245" stroke-opacity="0.45"/>
+  <circle cx="600" cy="245" r="2.5" stroke-opacity="0.55"/>
+
+  <!-- ── STEM — the focal piece: ROUNDED-BUMP TACTILE LEGS ───────────────────────────── -->
+  <!-- The Holy Panda X's load-bearing technical claim is the curvature of the bump legs
+       (rounded vs. sharp). The stem is drawn with visibly rounded skirt-leg profiles where
+       the legs cam against the leaf — that's what the splash anchor points at. -->
+  <g>
+    <!-- Cruciform head (the + that the keycap mounts onto) -->
+    <path d="
+      M 580 275
+      L 620 275
+      L 620 288
+      L 632 288
+      L 632 302
+      L 568 302
+      L 568 288
+      L 580 288
+      Z" />
+    <!-- Stem body with rounded tactile-bump legs.
+         Left and right flanks bow outward in a continuous arc — that's the rounded
+         geometry the article makes a point about. No straight-segment legs. -->
+    <path d="
+      M 568 302
+      L 632 302
+      L 632 326
+      C 650 340, 656 360, 656 380
+      C 656 400, 650 420, 632 434
+      L 632 458
+      L 568 458
+      L 568 434
+      C 550 420, 544 400, 544 380
+      C 544 360, 550 340, 568 326
+      Z" />
+    <!-- Stem vertical centerline -->
+    <line x1="600" y1="310" x2="600" y2="450" stroke-opacity="0.5"/>
+    <!-- Left and right inner ducts (the column that houses the spring socket) -->
+    <line x1="580" y1="310" x2="580" y2="450" stroke-opacity="0.35"/>
+    <line x1="620" y1="310" x2="620" y2="450" stroke-opacity="0.35"/>
+    <!-- Apex tick — small inward marks at the widest point of the curve (y ≈ 380),
+         the actuation-bump apex where leaf contact resolves. -->
+    <line x1="544" y1="380" x2="556" y2="380" stroke-opacity="0.6"/>
+    <line x1="644" y1="380" x2="656" y2="380" stroke-opacity="0.6"/>
+    <!-- Stem pole stubs (where spring slots in) — bottom -->
+    <line x1="582" y1="458" x2="584" y2="478" stroke-opacity="0.5"/>
+    <line x1="618" y1="458" x2="616" y2="478" stroke-opacity="0.5"/>
+  </g>
+
+  <!-- Splash anchor — terracotta accent dot at the right-side bump apex (the focal mechanism).
+       Family convention: filled core + outer ring at the focal piece. Right side chosen
+       because the leaf contact (below) approaches from the left, so the eye reads:
+       leaf → apex → bump curvature. -->
+  <circle cx="656" cy="380" r="6.5" fill="oklch(0.55 0.105 40 / 0.95)" stroke="oklch(0.55 0.105 40)"/>
+  <circle cx="656" cy="380" r="12" stroke="oklch(0.55 0.105 40)" stroke-opacity="0.5" fill="none"/>
+
+  <!-- ── LEAF CONTACT — small bent line entering from the left, kissing the bump apex ── -->
+  <g>
+    <!-- Leaf rising from bottom-left toward the left bump apex -->
+    <path d="
+      M 420 540
+      L 420 460
+      C 420 430, 460 408, 500 392
+      L 538 380" stroke-opacity="0.85"/>
+    <!-- Contact dimple at the touch point -->
+    <circle cx="540" cy="380" r="3" stroke-opacity="0.7"/>
+    <!-- Stationary leaf — the second contact -->
+    <path d="
+      M 446 540
+      L 446 472
+      C 446 446, 478 428, 506 416" stroke-opacity="0.45"/>
+  </g>
+
+  <!-- ── SPRING — coil silhouette beneath the stem ──────────────────────────────────── -->
+  <g>
+    <!-- 10 coils — drawn as flat ovals; family-conventional simplification -->
+    <ellipse cx="600" cy="495" rx="44" ry="7"/>
+    <ellipse cx="600" cy="507" rx="44" ry="7"/>
+    <ellipse cx="600" cy="519" rx="44" ry="7"/>
+    <ellipse cx="600" cy="531" rx="44" ry="7"/>
+    <ellipse cx="600" cy="543" rx="44" ry="7"/>
+    <ellipse cx="600" cy="555" rx="44" ry="7"/>
+    <ellipse cx="600" cy="567" rx="44" ry="7"/>
+    <ellipse cx="600" cy="579" rx="44" ry="7"/>
+    <ellipse cx="600" cy="591" rx="44" ry="7"/>
+    <ellipse cx="600" cy="603" rx="44" ry="7"/>
+    <!-- Spring axis -->
+    <line x1="600" y1="488" x2="600" y2="610" stroke-opacity="0.35" stroke-dasharray="2 4"/>
+  </g>
+
+  <!-- Δ7 g callout — the actuation-to-bottom-out delta (60 → 67 g) the article anchors on.
+       Same stroke weight as the cross-section; a leader line from the spring out to a
+       small bracket-and-label on the right margin. Single-color line work, no splash here. -->
+  <g stroke-opacity="0.7">
+    <!-- Leader from spring midpoint out to the bracket -->
+    <line x1="644" y1="549" x2="720" y2="549"/>
+    <!-- Vertical bracket showing the delta extent (60 g top, 67 g bottom of spring travel) -->
+    <line x1="720" y1="495" x2="720" y2="603"/>
+    <line x1="714" y1="495" x2="726" y2="495"/>
+    <line x1="714" y1="603" x2="726" y2="603"/>
+    <!-- Leader from bracket out to label -->
+    <line x1="720" y1="549" x2="780" y2="549"/>
+  </g>
+  <!-- Label glyph: "Δ7g" drawn as line work — triangle + "7" + "g" stroke shapes -->
+  <g stroke-opacity="0.85">
+    <!-- Δ (triangle) -->
+    <path d="M 790 558 L 800 540 L 810 558 Z"/>
+    <!-- "7" — diagonal stroke + top bar -->
+    <line x1="820" y1="540" x2="832" y2="540"/>
+    <line x1="832" y1="540" x2="824" y2="560"/>
+    <!-- "g" — small loop + descender -->
+    <path d="M 850 548 C 850 542, 856 540, 860 540 C 864 540, 868 542, 868 548 C 868 554, 864 556, 860 556 C 856 556, 850 554, 850 548 Z"/>
+    <path d="M 868 547 L 868 564 C 868 568, 864 570, 860 570 C 856 570, 853 568, 852 565"/>
+  </g>
+
+  <!-- Faint explode line above the bottom housing -->
+  <line x1="360" y1="630" x2="840" y2="630" stroke-dasharray="4 6" stroke-opacity="0.35"/>
+  <circle cx="600" cy="630" r="2.5" stroke-opacity="0.55"/>
+
+  <!-- ── BOTTOM HOUSING — the "black" panda half, washed in muted terracotta ─────────── -->
+  <g>
+    <!-- Outer bottom housing -->
+    <path d="M 380 645 L 820 645 L 800 720 L 400 720 Z" />
+    <!-- Inner well (where spring seats) -->
+    <path d="M 540 645 L 660 645 L 655 685 L 545 685 Z" stroke-opacity="0.6"/>
+    <!-- Pin contacts on the underside -->
+    <circle cx="450" cy="700" r="5"/>
+    <circle cx="750" cy="700" r="5"/>
+    <!-- Center mount post -->
+    <circle cx="600" cy="700" r="6" stroke-opacity="0.6"/>
+    <!-- Side rail mount nubs (5-pin PCB-mount stubs) -->
+    <line x1="500" y1="645" x2="500" y2="660" stroke-opacity="0.5"/>
+    <line x1="700" y1="645" x2="700" y2="660" stroke-opacity="0.5"/>
+    <!-- Material seam on the inner well rim — names the nylon-body acoustic claim -->
+    <line x1="548" y1="665" x2="652" y2="665" stroke-opacity="0.35" stroke-dasharray="3 5"/>
+  </g>
+
+  <!-- Subtle measurement tick marks, didactic — left margin, one per tier (family convention) -->
+  <g stroke-opacity="0.3">
+    <line x1="320" y1="175" x2="330" y2="175"/>
+    <line x1="320" y1="380" x2="330" y2="380"/>
+    <line x1="320" y1="549" x2="330" y2="549"/>
+    <line x1="320" y1="682" x2="330" y2="682"/>
+  </g>
+
+  <!-- Brass-bronze theme dot — family-conventional ornamental anchor, top-right margin -->
+  <circle cx="1148" cy="92" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>
