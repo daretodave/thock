@@ -346,6 +346,17 @@
 >
 > **Resolved (2026-05-13):** Shipped "Why clicky switches still have a constituency" at `/article/clicky-switches-deep-dive`, publishedAt 2026-04-18 (gap-fill midpoint of the 2026-04-17 → 2026-04-19 2-day gap; closest-to-today tiebreak among equal-largest 2-day gaps in the rolling 30-day window). Click-jacket (Cherry MX Blue lineage) vs click-bar (Kailh Box family) framed as the load-bearing distinction; closes the clicky-coverage gap in the pillar (which previously held 3 linears + 1 tactile + 1 architecture piece). Deep-dives now at **6 of 8**. `e24508d`
 
+### [x] [5.25] deep-dives pillar — 6 of 8 article quota (needs 2 more) — addressed in 8d97d97 (closes #75)
+- category: content-gaps
+- impact: 7 (Deep Dives is the fourth-most-prominent pillar; 6/8 articles is still below quota)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — pillar quota
+- shortfall: 2 articles (current 6, quota 8) → now 7 of 8 (1 shipped)
+- next: /ship-content → deep-dives pillar article (topic from /iterate audit or gap heuristic)
+> Filed 2026-05-13 by cloud /march tick (queue auto-refill — same pattern as the 4/8 and 5/8 rows filed earlier today). Bias multiplier 1.5× applies → effective score 5.25. Drains one row per /ship-content tick; retire when deep-dives reaches 8 articles. Existing deep-dives coverage: 3 linear pieces (Oil King, HMX Cloud, Cherry MX2A), 1 tactile (Holy Panda X), 1 clicky (clicky-switches architecture), 1 mounting-architecture (plate materials) — no electrocapacitive coverage despite Topre being mentioned as a load-bearing reference point in `switch-films-worth-it`. Topre is the natural next deep-dive: a third-architecture switch (rubber dome + capacitive PCB sensing) that explains why HHKB/Realforce feel survives at premium prices.
+>
+> **Resolved (2026-05-13):** Shipped "How Topre's electrocapacitive switches actually work" at `/article/topre-electrocapacitive-deep-dive`, publishedAt 2026-04-16 (gap-fill midpoint of the 2026-04-15 → 2026-04-17 2-day gap; closest-to-today tiebreak among equal-largest 2-day gaps). Third-sensing-lineage piece — rubber-dome + conical-spring + capacitive PCB pad — frames Topre as parallel to MX-style contact switches and Hall-effect newcomers, not a legacy curiosity. Closes the architectural gap in the pillar (3 linears + 1 tactile + 1 clicky + 1 mounting + the architectural Topre piece). Deep-dives now at **7 of 8**. `8d97d97`
+
 ### [x] [MED] PageStub routes flake under parallel e2e load (React #418 hydration) — self-resolved via phase 16
 > Filed 2026-05-09. Original prediction was "self-resolves before phase 16 ships" because phase 16's polish scope replaced every PageStub with a real route. Flake persisted briefly after `f3e5bac` shipped (one source of hydration mismatch was the formatter TZ issue, partially patched at `dfa5596`); the SECOND hydration source the TZ patch couldn't reach lived inside the PageStub itself and went away when every dynamic-data route got its own real page.
 >
