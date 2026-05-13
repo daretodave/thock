@@ -42,7 +42,7 @@ export default function NewsletterPage(): ReactElement {
           <div className="flex flex-col gap-3 max-w-[60ch]">
             <span
               data-testid="newsletter-eyebrow"
-              className="font-mono text-micro uppercase tracking-[0.12em] text-accent-mu"
+              className="font-mono text-micro uppercase tracking-[0.12em] text-accent"
             >
               newsletter
             </span>

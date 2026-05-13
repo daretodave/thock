@@ -57,7 +57,7 @@ export function MentionedPartsRail({
                 data-testid="mentioned-parts-rail-item"
                 className="group flex flex-col gap-1"
               >
-                <span className="font-mono uppercase tracking-[0.08em] text-micro text-accent-mu">
+                <span className="font-mono uppercase tracking-[0.08em] text-micro text-accent">
                   {KIND_LABEL[part.kind]}
                 </span>
                 <Mono className="text-body text-text group-hover:text-accent transition-colors">

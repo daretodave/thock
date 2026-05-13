@@ -63,7 +63,7 @@ export default function SourcesPage(): ReactElement {
           <div className="flex flex-col gap-3 max-w-[60ch]">
             <span
               data-testid="sources-eyebrow"
-              className="font-mono text-micro uppercase tracking-[0.12em] text-accent-mu"
+              className="font-mono text-micro uppercase tracking-[0.12em] text-accent"
             >
               sources
             </span>

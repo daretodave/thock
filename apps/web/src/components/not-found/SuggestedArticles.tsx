@@ -61,7 +61,7 @@ export function SuggestedArticles({
               data-slug={hit.slug}
               className="group flex flex-col gap-1 border-t border-border py-3 first:border-t-0 first:pt-0"
             >
-              <span className="font-mono uppercase tracking-[0.1em] text-micro text-accent-mu">
+              <span className="font-mono uppercase tracking-[0.1em] text-micro text-accent">
                 {pillarLabel(hit.pillar)}
               </span>
               <span className="font-serif text-h3 text-text group-hover:text-accent transition-colors">

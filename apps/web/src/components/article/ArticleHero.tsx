@@ -38,7 +38,7 @@ export function ArticleHero({
         <div className="flex flex-col gap-5 max-w-[60ch]">
           <div
             data-testid="article-hero-eyebrow"
-            className="font-mono uppercase tracking-[0.12em] text-micro text-accent-mu"
+            className="font-mono uppercase tracking-[0.12em] text-micro text-accent"
           >
             <Link href={pillarHref(pillar)} className="hover:text-accent">
               {pillarLabel(pillar)}

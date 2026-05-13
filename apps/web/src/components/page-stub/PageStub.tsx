@@ -31,7 +31,7 @@ export function PageStub({
         {eyebrow && (
           <span
             data-testid="page-stub-eyebrow"
-            className="font-mono uppercase tracking-[0.12em] text-micro text-accent-mu"
+            className="font-mono uppercase tracking-[0.12em] text-micro text-accent"
           >
             {eyebrow}
           </span>

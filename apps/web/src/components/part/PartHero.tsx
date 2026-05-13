@@ -37,7 +37,7 @@ export function PartHero({ part }: PartHeroProps): ReactElement {
       <Stack gap={4}>
         <span
           data-testid="part-hero-eyebrow"
-          className="font-mono uppercase tracking-[0.12em] text-micro text-accent-mu"
+          className="font-mono uppercase tracking-[0.12em] text-micro text-accent"
         >
           part · {KIND_LABEL[part.kind]}
         </span>

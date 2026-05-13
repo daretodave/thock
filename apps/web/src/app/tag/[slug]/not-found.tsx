@@ -16,7 +16,7 @@ export default async function TagNotFound() {
     <Container as="section" className="py-24">
       <Stack gap={6}>
         <div className="flex flex-col gap-4">
-          <span className="font-mono uppercase tracking-[0.12em] text-micro text-accent-mu">
+          <span className="font-mono uppercase tracking-[0.12em] text-micro text-accent">
             404 · tag
           </span>
           <h1 className="font-serif text-h1 sm:text-display text-text">

@@ -27,7 +27,7 @@ export function RelatedArticleCard({
       data-testid="related-article-card"
       className="group flex flex-col gap-2 border border-border p-4 transition-colors hover:border-border-hi"
     >
-      <span className="font-mono uppercase tracking-[0.1em] text-micro text-accent-mu">
+      <span className="font-mono uppercase tracking-[0.1em] text-micro text-accent">
         {pillarLabel(fm.pillar)}
       </span>
       <h3 className="font-serif text-h3 text-text group-hover:text-accent transition-colors">

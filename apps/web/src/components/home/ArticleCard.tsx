@@ -71,7 +71,7 @@ export function ArticleCard({
   const tagSlugs = fm.tags.slice(0, maxTags ?? (variant === 'hero' ? 3 : 1))
 
   const eyebrow = (
-    <span className="font-mono uppercase tracking-[0.1em] text-micro text-accent-mu">
+    <span className="font-mono uppercase tracking-[0.1em] text-micro text-accent">
       {pillar}
     </span>
   )

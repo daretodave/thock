@@ -139,7 +139,7 @@ export default async function PartIndexPage({
         <Stack gap={4}>
           <span
             data-testid="part-index-eyebrow"
-            className="font-mono uppercase tracking-[0.12em] text-micro text-accent-mu"
+            className="font-mono uppercase tracking-[0.12em] text-micro text-accent"
           >
             catalog · {kind}
           </span>

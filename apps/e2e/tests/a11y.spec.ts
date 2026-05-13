@@ -10,11 +10,10 @@
  *     ticks. As each violation drains, a specific hard assertion is added here
  *     so the spec becomes a full regression guard incrementally.
  *
- * Phase A hard-fail threshold is `critical` only because the site has
- * confirmed `serious` color-contrast violations at `text-text-3` /
- * `text-accent-mu` small-text contexts — these are design-level decisions
- * that require /oversight sign-off before changing the palette, not
- * autonomous loop fixes. Filed to AUDIT.md at Phase 26 ship time.
+ * Phase A hard-fail threshold is `critical` only. The two confirmed
+ * serious color-contrast rows filed at Phase 26 (`text-text-3` and
+ * `text-accent-mu` small-text contexts) drained in subsequent /iterate
+ * ticks; each has its own targeted regression guard below.
  */
 import { test, expect, type Page } from '@playwright/test'
 import AxeBuilder from '@axe-core/playwright'
@@ -60,8 +59,8 @@ async function runAxe(page: Page, url: string) {
   }
 
   // Phase A hard gate: ONLY critical violations block (keyboard traps, etc.)
-  // Serious violations include confirmed color-contrast issues at text-text-3 /
-  // text-accent-mu which are design decisions filed to AUDIT.md for Phase B.
+  // Serious violations still warn-only here; specific drained findings get
+  // targeted regression guards below (search "regression guard").
   if (critical.length > 0) {
     throw new Error(
       `[a11y] CRITICAL violations on ${url}:\n${formatViolations(critical)}`,
@@ -143,6 +142,23 @@ test('color-contrast — tag-page back link (regression guard)', async ({ page }
   const results = await new AxeBuilder({ page })
     .withTags(WCAG_TAGS)
     .include('[data-testid="tag-page-back-link"]')
+    .analyze()
+
+  const contrast = results.violations.filter((v) => v.id === 'color-contrast')
+  expect(contrast, formatViolations(contrast)).toHaveLength(0)
+})
+
+// Regression guard: color-contrast on the pillar-eyebrow context drained by
+// audit row [a11y][3.5] — text-accent-mu at 12px was swapped to text-accent.
+// Article hero eyebrow is the representative call site; the same class lives
+// on 16 12-px decorative eyebrow spans across the app.
+test('color-contrast — article hero eyebrow (regression guard)', async ({ page }) => {
+  await page.goto('/article/gateron-oil-king-deep-dive')
+  await page.waitForLoadState('networkidle')
+
+  const results = await new AxeBuilder({ page })
+    .withTags(WCAG_TAGS)
+    .include('[data-testid="article-hero-eyebrow"]')
     .analyze()
 
   const contrast = results.violations.filter((v) => v.id === 'color-contrast')
