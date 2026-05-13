@@ -11,6 +11,19 @@ test.describe('tag pages — phase 12', () => {
     await expect(h1).toContainText('#linear')
   })
 
+  test('renders the misc category as "topic" in the eyebrow', async ({
+    page,
+  }) => {
+    // /tag/modding (and the other 20 misc-categorized tags) should
+    // display "tag · topic" — the internal `misc` enum value never
+    // leaks to the eyebrow chrome.
+    await page.goto('/tag/modding')
+    const eyebrow = page.getByTestId('tag-page-eyebrow')
+    await expect(eyebrow).toBeVisible()
+    await expect(eyebrow).toContainText(/tag · topic/i)
+    await expect(eyebrow).not.toContainText(/misc/i)
+  })
+
   test('lists at least one article-card-row when seed has matches', async ({
     page,
   }) => {

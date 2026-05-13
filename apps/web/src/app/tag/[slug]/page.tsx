@@ -28,6 +28,15 @@ const CATEGORY_TINT: Record<Tag['category'], string> = {
   misc: 'text-text-3',
 }
 
+const CATEGORY_LABEL: Record<Tag['category'], string> = {
+  switch: 'switch',
+  layout: 'layout',
+  brand: 'brand',
+  material: 'material',
+  profile: 'profile',
+  misc: 'topic',
+}
+
 function describeTag(tag: Tag, count: number): string {
   const noun = count === 1 ? 'piece' : 'pieces'
   return `Articles tagged ${tag.name} on thock — ${count} ${noun}.`
@@ -100,7 +109,7 @@ export default async function TagPage({
             data-testid="tag-page-eyebrow"
             className={`font-mono uppercase tracking-[0.12em] text-micro ${tint}`}
           >
-            tag · {tag.category}
+            tag · {CATEGORY_LABEL[tag.category]}
           </span>
           <h1
             data-testid="tag-page-h1"
