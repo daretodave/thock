@@ -76,7 +76,10 @@ export function GroupBuysWidget({
           aria-hidden="true"
           className="inline-block h-1.5 w-1.5 rounded-full bg-up shadow-[0_0_0_3px_rgba(120,180,120,0.18)]"
         />
-        <span className="font-mono uppercase tracking-[0.1em] text-micro text-text-3">
+        <span
+          data-testid="widget-kicker"
+          className="font-mono uppercase tracking-[0.1em] text-micro text-text-2"
+        >
           {kicker}
         </span>
       </div>

@@ -357,6 +357,25 @@ test('color-contrast — mentioned parts heading (regression guard)', async ({
   expect(contrast, formatViolations(contrast)).toHaveLength(0)
 })
 
+// Regression guard: color-contrast on the GroupBuysWidget kicker drained by
+// audit row [a11y] issue #96 — widget kicker "group buys · ending soon / open now"
+// used text-micro text-text-3 (12px, fails WCAG AA 4.5:1); swapped to text-text-2.
+// Kicker renders on / whenever active group buys exist (widest home-page surface).
+test('color-contrast — group-buys widget kicker (regression guard)', async ({
+  page,
+}) => {
+  await page.goto('/')
+  await page.waitForLoadState('networkidle')
+
+  const results = await new AxeBuilder({ page })
+    .withTags(WCAG_TAGS)
+    .include('[data-testid="widget-kicker"]')
+    .analyze()
+
+  const contrast = results.violations.filter((v) => v.id === 'color-contrast')
+  expect(contrast, formatViolations(contrast)).toHaveLength(0)
+})
+
 // Regression guard: skip link is present and targets a valid id="main" element.
 // Phase A ships this as a hard assertion because the skip link is fixed in
 // the same commit (no longer needs Phase B discovery).
