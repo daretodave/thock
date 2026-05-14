@@ -3,14 +3,22 @@
 > Latest findings from `/iterate audit` and `/oversight`. Open
 > items live here until a shipping skill drains them.
 
-> Bias: content-gaps (set via oversight 2026-05-10) — `/iterate`
-> multiplies content-gap finding scores by 1.5 until cleared.
-> Drives the loop toward the four content-velocity rules in
-> `plan/bearings.md` "Content velocity & editorial cadence":
+> **Bias: content-gaps — auto-cleared 2026-05-14** (cloud /iterate
+> tick, reclassified mechanical per expand pass-8 note). The
+> 2026-05-10 oversight bias multiplied content-gap finding scores
+> by 1.5 to drive the loop toward the four content-velocity rules
+> in `plan/bearings.md` "Content velocity & editorial cadence":
 > pillar quota ≥8, tracker linkage within 14 days, group-buy
-> companion, publishedAt gap-fill. Clears when corpus hits
-> quota (≥8/pillar) and the audit no longer surfaces
-> content-gap rows scoring above 5.0, OR via `/oversight reset`.
+> companion, publishedAt gap-fill. Both auto-clear conditions are
+> now met: (1) corpus hits quota ≥8 across all five pillars
+> (trends + news + ideas + guides + deep-dives at 8/8 each, 40
+> articles total, milestone reached at `702b8a9` 2026-05-13);
+> (2) no Pending content-gap row survives above 5.0 — all 16
+> Rule-1 rows filed by phase 25 seed-prime + cloud auto-refill
+> are `[x]` drained. Iterate scoring returns to category-neutral.
+> Future content-gap rows (Rule 2 tracker-linkage, Rule 3
+> group-buy companion, Rule 4 publishedAt gap-fill) compete on
+> raw `impact × ease` against the rest of the queue.
 
 > **POSTURE: drained 2026-05-09** — the brand-assets-first
 > posture set at 12:30Z is cleared. All four drain items shipped
