@@ -3,22 +3,40 @@
 > Latest findings from `/iterate audit` and `/oversight`. Open
 > items live here until a shipping skill drains them.
 
-> **Bias: content-gaps — auto-cleared 2026-05-14** (cloud /iterate
-> tick, reclassified mechanical per expand pass-8 note). The
-> 2026-05-10 oversight bias multiplied content-gap finding scores
-> by 1.5 to drive the loop toward the four content-velocity rules
-> in `plan/bearings.md` "Content velocity & editorial cadence":
-> pillar quota ≥8, tracker linkage within 14 days, group-buy
-> companion, publishedAt gap-fill. Both auto-clear conditions are
-> now met: (1) corpus hits quota ≥8 across all five pillars
-> (trends + news + ideas + guides + deep-dives at 8/8 each, 40
-> articles total, milestone reached at `702b8a9` 2026-05-13);
-> (2) no Pending content-gap row survives above 5.0 — all 16
-> Rule-1 rows filed by phase 25 seed-prime + cloud auto-refill
-> are `[x]` drained. Iterate scoring returns to category-neutral.
-> Future content-gap rows (Rule 2 tracker-linkage, Rule 3
-> group-buy companion, Rule 4 publishedAt gap-fill) compete on
-> raw `impact × ease` against the rest of the queue.
+> **Rule 1 reframed 2026-05-14 — static pillar-quota replaced by
+> sliding-window freshness (see `plan/bearings.md` § Rule 1).** The
+> prior bias multiplied content-gap findings by 1.5 to drive the
+> loop toward the static `≥8 articles per pillar` milestone, which
+> was hit 2026-05-13 at `702b8a9`. The static rule then went silent
+> while the 40-article corpus aged in lockstep — every article
+> within ~10 days of every other, all destined to roll past 30d
+> simultaneously. The reframe converts Rule 1 into a rolling
+> window: each pillar carries ≥2 articles published within the
+> last 30 days, always. The rule is self-replenishing — articles
+> aging out generate new shortfalls without any external priming.
+>
+> Three states, codified in bearings.md and used by the audit-row
+> generator candidate (`scripts/content-gap-survey.mjs`, candidate
+> 7.0 in `plan/PHASE_CANDIDATES.md`):
+>
+> - **Comfortable** — every pillar ≥ 2 in 30d. No Rule-1 row files.
+> - **Hot pursuit** — one or more pillars at exactly 1 in 30d. Row
+>   files at score **7.0** for that pillar. Loop ships on next tick.
+> - **Critical hot pursuit** — one or more pillars at 0 in 30d. Row
+>   files at score **9.5**, above every other priority. Loop drops
+>   iterate / polish until the pillar recovers.
+>
+> Pillar selection when multiple are cold: oldest most-recent
+> publishedAt wins; tie-breaker is lowest count, then editorial
+> prominence (Trends > News > Ideas > Deep Dives > Guides).
+>
+> **Current state (2026-05-14):** all 40 articles aged 1–10 days,
+> all pillars at 8 in 30d → comfortable. First natural shortfall
+> arrives in ~20 days as the oldest articles cross the threshold.
+> No Rule-1 row to file yet.
+>
+> Rules 2 / 3 / 4 (tracker linkage, group-buy companion, publishedAt
+> gap-fill) are unchanged. They compete on raw `impact × ease`.
 
 > **POSTURE: drained 2026-05-09** — the brand-assets-first
 > posture set at 12:30Z is cleared. All four drain items shipped

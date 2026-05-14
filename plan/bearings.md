@@ -431,20 +431,65 @@ codifies four hard rules so `/iterate`'s audit perpetually
 surfaces content work, making the loop a content-explosion
 engine rather than a polish-the-existing-corpus engine.
 
-### Rule 1 — Pillar quota (≥8 articles per pillar)
+### Rule 1 — Sliding-window freshness (replaces static pillar quota, locked 2026-05-14 via /oversight)
 
 Each of the five pillars (`news`, `trends`, `ideas`, `deep-dives`,
-`guides`) maintains **at least 8 published articles**. The
-`/iterate` audit treats `pillarCount < 8` as a content-gap
-finding scored by pillar prominence (Trends > News > Ideas >
-Deep Dives > Guides per the editorial rhythm) — each ship is one
-audit row. Replaces the prior soft threshold of `< 5` in
-`skills/iterate.md` §4.A.
+`guides`) carries **≥2 articles published within the last 30 days**.
+Measured rolling — there is no "we hit the bar, we're done"
+finish line. As articles age past 30d they roll out of the
+window and the pillar's freshness count decrements.
 
-**Current state (2026-05-10):** news 3, trends 5, ideas 2,
-deep-dives 3, guides 2 → 25 articles below quota. The directive
-turns those 25 into 25 audit-finding rows; the loop drains them
-across iterate ticks.
+The prior rule was a static one-time milestone — ≥8 articles per
+pillar, ever. That bar was hit 2026-05-13 at commit `702b8a9`
+(40 articles total, 8/8 across all pillars). The static rule
+then went silent — and the corpus has no protection against
+aging out simultaneously when the 8-articles-in-one-month
+clustering rolls past 30d. The sliding window keeps the rule
+load-bearing forever: there is always a freshness shortfall to
+ship toward.
+
+**The three states:**
+
+- **Comfortable** — every pillar ≥ 2 articles in last 30d. No
+  Rule-1 row files. Loop ticks at normal cadence; content rows
+  fire only when Rules 2/3/4 demand.
+
+- **Hot pursuit** — one or more pillars at **exactly 1** article
+  in last 30d. The audit files a Rule-1 row for that pillar
+  scored at **7.0**, above almost any iterate / polish row. The
+  next `/march` tick dispatches `/ship-content` for that pillar.
+
+- **Critical hot pursuit** — one or more pillars at **0** articles
+  in last 30d. The audit files a Rule-1 row for that pillar
+  scored at **9.5**, above every other priority. The loop drops
+  iterate / polish entirely and ships content until the pillar
+  returns to ≥ 1. This is the "frozen pillar" emergency state.
+
+**Pillar selection when multiple are cold:** choose the pillar
+with the **oldest most-recent publishedAt** (the pillar that has
+gone longest without a new piece). Tie-breaker: lowest count in
+the window. Tie-breaker again: editorial prominence (Trends >
+News > Ideas > Deep Dives > Guides).
+
+**Why this works:** the rule is self-replenishing. Articles aging
+out of the window automatically generate new shortfalls; no
+external priming needed (which was the operational gap pass-7
+expand surfaced — the seed-primed Rule-1 queue exhausted itself
+at `702b8a9` and the cloud loop fell through to iterate-shaped
+polish instead of content velocity). With a 30-day window and a
+2-article floor, the steady-state cadence is roughly **1 article
+per pillar every 15 days** = **1 article every 3 days globally**,
+which is well within cloud-loop capacity.
+
+**Current state (2026-05-14):** all 40 articles published within
+the last 10 days; every pillar at 8 in 30d. Comfortable across
+the board. In ~20 days the first articles begin aging out; the
+rule will surface its first natural shortfall then.
+
+**Implementation:** the audit-row generator promoted as candidate
+[7.0] in `plan/PHASE_CANDIDATES.md` (`scripts/content-gap-survey.mjs`)
+computes the window counts and files the row. Until that helper
+ships, the rule is enforced by manual audit at `/oversight` time.
 
 ### Rule 2 — Tracker linkage (non-flat row → linked deep-dive within 2 weeks)
 
