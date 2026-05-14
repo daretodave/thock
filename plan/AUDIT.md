@@ -76,6 +76,15 @@
 
 ## Open findings
 
+### [x] [data] [3.6] GSK Sweet Nightmare GB `status: "live"` stale (endDate 3 days past) — addressed in 3443fe9 (closes #89)
+- category: data
+- filed: 2026-05-14 by cloud /iterate audit (this tick)
+- impact: 4 (source-of-truth field wrong; renderer-side guarded ternary at `GroupBuyRow.tsx:76` (shipped `478c952` as the pass-11 Ishtar R2 fix) absorbs the user-visible label leak — but `/group-buys/past` archive selection (Phase 29), RSS, JSON-LD, and any downstream consumer all see the stale field)
+- ease: 9 (one JSON field flip; schema enum already allows `"closed"`)
+- score: 3.6 (impact × ease / 10)
+- root cause: no automation refreshes group-buy `status` as `endDate` passes. Same drift pattern critique pass 11 caught on Ishtar R2 (`478c952` shipped the renderer-side guard; source data was later corrected on Ishtar R2). Sweet Nightmare was the remaining stale record from the same vintage of buys.
+> **Resolved (2026-05-14):** Flipped `status` from `"live"` to `"closed"` and bumped `updatedAt` to 2026-05-14T05:30Z on `data/group-buys/kbdfans-gsk-sweet-nightmare.json`. Generated manifest + search index refreshed by the verify gate's `data:validate` step. The renderer-side guard already protected `/group-buys` from leaking "LIVE" labels on the closed-band card; this fix aligns the source-of-truth data with the buy's actual state so `/group-buys/past` archive selection, RSS, JSON-LD, and any downstream consumer all see the correct field. Broader systemic-drift fix (status-refresher script or schema-time computation) deferred — this tick is the one-record correction. `3443fe9`
+
 ### [x] [MED] /404 soft fallback for unknown article + tag slugs (deferred from phase 16) — addressed in pending commit (this tick)
 - issue: #18
 > Filed 2026-05-09 by phase 16 brief. The global `app/not-found.tsx` ships in phase 16 with a search input + pillar nav. Article and tag routes have their own `not-found.tsx` (phases 5 + 12) but they don't suggest "Did you mean…?" matches. Spec from `plan/steps/01_build_plan.md` § Phase 16 calls for MiniSearch-powered suggestions on `/article/<unknown-slug>` and `/tag/<unknown-slug>`. Cheap once the search index already ships (phase 14): the not-found page can call `searchIndex.search(slug)` and surface the top 3 hits.
