@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Plate pairings that hold up in practice — and one to avoid</title>
+
+  <!-- Four pairing rows, each with plate + mount + switch + verdict -->
+  <!-- Row 1: Brass + foamed case + clack — "controlled brass" -->
+  <g transform="translate(0, 90)">
+    <text x="60" y="20" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none">brass</text>
+    <text x="60" y="40" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">100 GPa</text>
+    <text x="180" y="32" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">+</text>
+    <text x="220" y="32" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none">heavy case foam</text>
+    <text x="430" y="32" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">+</text>
+    <text x="470" y="32" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none">PE foam sheet</text>
+    <line x1="670" y1="28" x2="730" y2="28" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.6"/>
+    <path d="M 722 22 L 730 28 L 722 34" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.6"/>
+    <text x="750" y="25" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.62 0.13 25)" stroke="none" font-weight="500">controlled brass</text>
+    <text x="750" y="45" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">higher fundamental · ring absorbed</text>
+  </g>
+
+  <!-- Row 2: FR4 + Cherry profile + clack-forward switch — "let the switch sing" -->
+  <g transform="translate(0, 190)">
+    <text x="60" y="20" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none">FR4</text>
+    <text x="60" y="40" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">22 GPa</text>
+    <text x="180" y="32" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">+</text>
+    <text x="220" y="32" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none">clack-forward switch</text>
+    <text x="470" y="32" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">+</text>
+    <text x="510" y="32" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none">Cherry profile</text>
+    <line x1="670" y1="28" x2="730" y2="28" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.6"/>
+    <path d="M 722 22 L 730 28 L 722 34" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.6"/>
+    <text x="750" y="25" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.62 0.13 25)" stroke="none" font-weight="500">let the switch sing</text>
+    <text x="750" y="45" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">plate stays out · switch top-out carries</text>
+  </g>
+
+  <!-- Row 3: PC + gasket-mount + thock switch — "deep thock" default -->
+  <g transform="translate(0, 290)">
+    <text x="60" y="20" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none">PC</text>
+    <text x="60" y="40" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">2.3 GPa</text>
+    <text x="180" y="32" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">+</text>
+    <text x="220" y="32" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none">gasket-mount case</text>
+    <text x="450" y="32" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">+</text>
+    <text x="490" y="32" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none">thock switch</text>
+    <line x1="670" y1="28" x2="730" y2="28" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.6"/>
+    <path d="M 722 22 L 730 28 L 722 34" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.6"/>
+    <text x="750" y="25" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.62 0.13 25)" stroke="none" font-weight="500">deep thock</text>
+    <text x="750" y="45" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">the boutique 65% default · "Mode video sound"</text>
+  </g>
+
+  <!-- Row 4: POM + gasket-mount — AVOID, double compliance -->
+  <g transform="translate(0, 390)">
+    <text x="60" y="20" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">POM</text>
+    <text x="60" y="40" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">3 GPa</text>
+    <text x="180" y="32" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">+</text>
+    <text x="220" y="32" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">gasket-mount case</text>
+    <!-- caution X -->
+    <g stroke="oklch(0.62 0.13 25)" stroke-opacity="0.9" stroke-width="3" stroke-linecap="round">
+      <line x1="660" y1="20" x2="685" y2="45"/>
+      <line x1="685" y1="20" x2="660" y2="45"/>
+    </g>
+    <text x="750" y="25" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.62 0.13 25)" stroke="none" font-weight="500">be careful — dead board</text>
+    <text x="750" y="45" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">two compliances stack · POM works on top-mount, not gasket</text>
+  </g>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

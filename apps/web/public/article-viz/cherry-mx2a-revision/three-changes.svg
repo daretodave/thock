@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>What changed in Cherry's MX2A — tighter stem rails, factory grease ring, retuned spring</title>
+
+  <!-- Bordeaux wash anchoring the switch interior -->
+  <ellipse cx="600" cy="320" rx="200" ry="160" fill="oklch(0.62 0.13 25 / 0.08)" stroke="none"/>
+
+  <!-- Outer keycap mount post -->
+  <g>
+    <path d="M 580 100 L 620 100 L 620 130 L 580 130 Z" stroke-opacity="0.85"/>
+    <line x1="600" y1="100" x2="600" y2="120" stroke-opacity="0.4"/>
+  </g>
+
+  <!-- Top housing -->
+  <g>
+    <path d="M 470 130 L 730 130 L 730 155 L 760 245 L 440 245 L 470 155 Z"/>
+    <path d="M 565 130 L 635 130 L 635 150 L 565 150 Z" stroke-opacity="0.55"/>
+  </g>
+
+  <!-- Stem with rails — CHANGE 1 highlight -->
+  <g>
+    <path d="M 565 150 L 635 150 L 635 370 L 565 370 Z"/>
+    <line x1="600" y1="170" x2="600" y2="355" stroke-opacity="0.4"/>
+    <path d="M 565 350 L 545 378 L 545 410 L 655 410 L 655 378 L 635 350" stroke-opacity="0.85"/>
+  </g>
+
+  <!-- CHANGE 1: tighter stem rails (bordeaux dotted) -->
+  <g stroke="oklch(0.62 0.13 25)" stroke-width="2.5" stroke-dasharray="1 4" stroke-opacity="0.95">
+    <line x1="565" y1="165" x2="565" y2="345"/>
+    <line x1="635" y1="165" x2="635" y2="345"/>
+  </g>
+
+  <!-- Spring — CHANGE 3 -->
+  <g stroke-opacity="0.7">
+    <ellipse cx="600" cy="425" rx="32" ry="6"/>
+    <ellipse cx="600" cy="440" rx="32" ry="6"/>
+    <ellipse cx="600" cy="455" rx="32" ry="6"/>
+    <ellipse cx="600" cy="470" rx="32" ry="6"/>
+    <ellipse cx="600" cy="485" rx="32" ry="6"/>
+  </g>
+  <!-- Bordeaux tint on spring -->
+  <g stroke="oklch(0.62 0.13 25)" stroke-opacity="0.5" stroke-width="2">
+    <line x1="575" y1="418" x2="625" y2="418"/>
+    <line x1="575" y1="494" x2="625" y2="494"/>
+  </g>
+
+  <!-- Lower housing -->
+  <g>
+    <path d="M 440 410 L 760 410 L 745 530 L 455 530 Z"/>
+    <path d="M 545 410 L 655 410 L 650 490 L 550 490 Z" stroke-opacity="0.55"/>
+  </g>
+
+  <!-- CHANGE 2: factory grease ring at the stem-housing seam (bordeaux thin band) -->
+  <g stroke="oklch(0.62 0.13 25)" stroke-opacity="0.85" stroke-width="3">
+    <path d="M 545 410 L 655 410"/>
+  </g>
+  <g fill="oklch(0.62 0.13 25 / 0.9)" stroke="none">
+    <circle cx="555" cy="410" r="3"/>
+    <circle cx="585" cy="410" r="3"/>
+    <circle cx="615" cy="410" r="3"/>
+    <circle cx="645" cy="410" r="3"/>
+  </g>
+
+  <!-- Numbered call-outs on the right -->
+  <!-- 1: stem rails -->
+  <g stroke-opacity="0.55">
+    <line x1="640" y1="255" x2="840" y2="255"/>
+    <path d="M 832 249 L 840 255 L 832 261"/>
+  </g>
+  <circle cx="860" cy="255" r="20" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.85" stroke-width="2.5"/>
+  <text x="860" y="263" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle">1</text>
+  <text x="900" y="252" font-family="IBM Plex Sans, sans-serif" font-size="20" fill="oklch(0.78 0.005 90)" stroke="none">tighter stem rails</text>
+  <text x="900" y="275" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">stem wobble drops out of bag</text>
+
+  <!-- 2: factory grease ring -->
+  <g stroke-opacity="0.55">
+    <line x1="660" y1="410" x2="840" y2="410"/>
+    <path d="M 832 404 L 840 410 L 832 416"/>
+  </g>
+  <circle cx="860" cy="410" r="20" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.85" stroke-width="2.5"/>
+  <text x="860" y="418" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle">2</text>
+  <text x="900" y="407" font-family="IBM Plex Sans, sans-serif" font-size="20" fill="oklch(0.78 0.005 90)" stroke="none">factory grease ring</text>
+  <text x="900" y="430" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">light film, Krytox-205g0-like</text>
+
+  <!-- 3: retuned spring -->
+  <g stroke-opacity="0.55">
+    <line x1="640" y1="455" x2="840" y2="455"/>
+    <path d="M 832 449 L 840 455 L 832 461"/>
+  </g>
+  <circle cx="860" cy="495" r="20" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.85" stroke-width="2.5"/>
+  <text x="860" y="503" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle">3</text>
+  <text x="900" y="492" font-family="IBM Plex Sans, sans-serif" font-size="20" fill="oklch(0.78 0.005 90)" stroke="none">retuned spring</text>
+  <text x="900" y="515" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">45g actuation, 75g bottom-out</text>
+
+  <!-- Baseline + ticks -->
+  <line x1="90" y1="560" x2="1110" y2="560" stroke-opacity="0.45"/>
+  <g stroke-opacity="0.3">
+    <line x1="90" y1="560" x2="90" y2="568"/>
+    <line x1="600" y1="560" x2="600" y2="568"/>
+    <line x1="1110" y1="560" x2="1110" y2="568"/>
+  </g>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

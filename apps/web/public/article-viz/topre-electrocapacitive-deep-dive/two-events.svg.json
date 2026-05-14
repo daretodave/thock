@@ -1,0 +1,19 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T09:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "topre-electrocapacitive-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "why-the-feel-survives",
+  "brief_summary": "Time-axis sonic schematic for the H2 'Why the feel survives'. Top-of-travel anchor at left, bottom-out at right. Two events: a sharp bordeaux-emphasized spike at the top of travel ('dome collapse — sharp, audible, tactile') with a focal dot, followed by a dashed near-linear travel segment ('linear travel, progressive spring'), then a broad rounded crest with a bordeaux wash at the right end ('bottom-out — damped by dome flattening'). Caption strip: 'two acoustic events on a Topre press; only the first is sharp'.",
+  "target": "apps/web/public/article-viz/topre-electrocapacitive-deep-dive/two-events.svg",
+  "splash_color": { "name": "bordeaux", "oklch": "oklch(0.62 0.13 25)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "topre-electrocapacitive-deep-dive.mdx § 'Why the feel survives' — 'The dome collapses near the top of the press, well before the spring has compressed enough to actuate, and the collapse itself is sharper than the bump on a Boba U4T ... After the dome collapses, the remaining travel is essentially linear ... The bottom-out itself is then damped by the rubber dome ... There are two acoustic events on a Topre press and only one of them is sharp.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/topre-electrocapacitive-deep-dive/two-events.svg"],
+  "warnings": []
+}

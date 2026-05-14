@@ -17,6 +17,13 @@ A magnetic keyboard switch does not close a circuit. That is the architectural f
 
 ## How the Hall-effect sensor reads the press
 
+<InlineViz
+  src="/article-viz/magnetic-switches-deep-dive/hall-sensor.svg"
+  alt="Two-state side-by-side diagram. Left 'at rest': stem high in housing, magnet at top, sparse faint coral field lines, small coral voltage bar at the bottom labelled 'voltage'. Right 'pressed': stem descended, magnet near the Hall sensor pad on the PCB, dense coral field lines bending tightly into the sensor, tall coral voltage bar."
+  caption="The voltage rises with the magnet's proximity — continuous, not binary. That's the architectural fact every Hall-effect feature unwinds from."
+  accent="coral"
+/>
+
 The physics is older than the keyboard hobby by a wide margin. A Hall-effect sensor is a small semiconductor element that produces a voltage across one axis when current flows along the other and a magnetic field passes through it. The output voltage is proportional to the field strength at the sensor — in practical keyboard terms, in the millivolt range — and the relationship is close enough to linear within the operating window that firmware can treat the voltage as a direct readout of how strong the field is at that moment.
 
 A Hall-effect keyboard switch puts a small permanent magnet in the bottom of the stem and a Hall sensor on the PCB directly underneath. At rest, the magnet sits at the top of the switch travel, the field at the sensor is weak, and the voltage is low. As the user presses the keycap, the stem descends, the magnet approaches the sensor, the field at the sensor strengthens, and the output voltage rises. The microcontroller samples that voltage hundreds of times a second on every key position, compares the reading against a configured threshold, and emits an actuation when the reading crosses it. On the release stroke the magnet retreats, the field weakens, the voltage falls, and a second threshold — usually lower than the actuation threshold, to give the press some hysteresis — triggers the release event.
@@ -49,6 +56,13 @@ The third item is factory tolerance on the magnet. The magnet is a small permane
 The fourth item is firmware complexity. A magnetic-switch board is doing more work per key than an MX-lineage board — sampling an analog voltage, comparing against per-key thresholds, running release hysteresis, optionally streaming the curve to the host as a HID axis. The state per key is larger, the memory footprint is larger, and the surface area for firmware bugs is correspondingly larger. Early shipments in the category have had a higher rate of edge-case reports — sticky keys after rapid trigger configuration, calibration routines that fail on specific key positions, host-side configurator software that loses state on disconnect — than equivalent MX-lineage launches at comparable price points. The category is maturing; the historical reliability gap is closing; the gap has not yet closed.
 
 ## Where Hall-effect sits in the four-lineage taxonomy
+
+<InlineViz
+  src="/article-viz/magnetic-switches-deep-dive/four-lineages.svg"
+  alt="Four-panel taxonomy strip. Panel one MX: two leaves meeting with a contact dot, labelled 'contact closure / binary'. Panel two Topre: dome over a capacitive pad with a sense-wave underline, labelled 'electrocapacitive / analog to binary'. Panel three Hall-effect (coral-emphasized): magnet over a sensor pad with bending field lines, labelled 'magnetic field / analog exposed'. Panel four optical: LED with a dashed light beam interrupted by a blade, into a photodetector, labelled 'light-gate / mostly binary'."
+  caption="Four sensing lineages. Hall-effect is the only one shipping the analog curve to firmware — every other lineage thresholds at the switch."
+  accent="coral"
+/>
 
 The current generation of keyboards sits across four sensing lineages, and each one makes a different set of tradeoffs visible to the buyer.
 

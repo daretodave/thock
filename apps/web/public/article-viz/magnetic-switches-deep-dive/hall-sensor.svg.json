@@ -1,0 +1,19 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T09:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "magnetic-switches-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "how-the-hall-effect-sensor-reads-the-press",
+  "brief_summary": "Two-state diptych showing the Hall-effect sensing mechanism. Left state 'at rest': stem up, magnet high in housing, sparse faint coral field lines, low coral voltage bar. Right state 'pressed': stem descended, magnet near the Hall sensor pad on the PCB, dense saturated coral field lines bending tightly through the sensor, tall coral voltage bar.",
+  "target": "apps/web/public/article-viz/magnetic-switches-deep-dive/hall-sensor.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "magnetic-switches-deep-dive.mdx § 'How the Hall-effect sensor reads the press' — 'A Hall-effect keyboard switch puts a small permanent magnet in the bottom of the stem and a Hall sensor on the PCB directly underneath. At rest, the magnet sits at the top of the switch travel, the field at the sensor is weak, and the voltage is low. As the user presses the keycap, the stem descends, the magnet approaches the sensor, the field at the sensor strengthens, and the output voltage rises.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/magnetic-switches-deep-dive/hall-sensor.svg"],
+  "warnings": []
+}

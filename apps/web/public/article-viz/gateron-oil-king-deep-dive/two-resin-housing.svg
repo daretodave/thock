@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>The Oil King's two-resin housing — PC top brightens, nylon bottom contains, POM stem glides</title>
+
+  <!-- Coral wash backing the housing -->
+  <ellipse cx="600" cy="320" rx="200" ry="170" fill="oklch(0.68 0.165 28 / 0.08)" stroke="none"/>
+
+  <!-- Keycap mount post -->
+  <g>
+    <path d="M 580 100 L 620 100 L 620 130 L 580 130 Z" stroke-opacity="0.85"/>
+    <line x1="600" y1="100" x2="600" y2="120" stroke-opacity="0.4"/>
+  </g>
+
+  <!-- Top housing — PC (drawn with brighter outline + a "shine" mark) -->
+  <g>
+    <path d="M 470 130 L 730 130 L 730 155 L 760 245 L 440 245 L 470 155 Z" stroke-opacity="0.95" stroke-width="2.5"/>
+    <path d="M 565 130 L 635 130 L 635 150 L 565 150 Z" stroke-opacity="0.55"/>
+    <!-- "shine" hatching to suggest PC clarity -->
+    <g stroke-opacity="0.35">
+      <line x1="490" y1="175" x2="510" y2="195"/>
+      <line x1="510" y1="175" x2="530" y2="195"/>
+      <line x1="700" y1="175" x2="720" y2="195"/>
+      <line x1="680" y1="175" x2="700" y2="195"/>
+    </g>
+  </g>
+
+  <!-- Stem — POM -->
+  <g>
+    <path d="M 565 150 L 635 150 L 635 380 L 565 380 Z"/>
+    <line x1="600" y1="170" x2="600" y2="365" stroke-opacity="0.4"/>
+    <path d="M 565 360 L 545 388 L 545 420 L 655 420 L 655 388 L 635 360" stroke-opacity="0.85"/>
+  </g>
+
+  <!-- Spring (faint, abbreviated) -->
+  <g stroke-opacity="0.55">
+    <ellipse cx="600" cy="435" rx="32" ry="6"/>
+    <ellipse cx="600" cy="450" rx="32" ry="6"/>
+    <ellipse cx="600" cy="465" rx="32" ry="6"/>
+    <ellipse cx="600" cy="480" rx="32" ry="6"/>
+  </g>
+
+  <!-- Bottom housing — NYLON (drawn with damp shading) -->
+  <g>
+    <path d="M 440 420 L 760 420 L 745 530 L 455 530 Z" stroke-opacity="0.85"/>
+    <path d="M 545 420 L 655 420 L 650 500 L 550 500 Z" stroke-opacity="0.55"/>
+    <!-- nylon "damp" wash -->
+    <rect x="455" y="425" width="290" height="100" fill="oklch(0.78 0.005 90 / 0.06)" stroke="none"/>
+    <g stroke-opacity="0.3" stroke-dasharray="2 4">
+      <line x1="465" y1="440" x2="735" y2="440"/>
+      <line x1="465" y1="465" x2="735" y2="465"/>
+      <line x1="465" y1="490" x2="735" y2="490"/>
+    </g>
+  </g>
+
+  <!-- LEFT MARGIN: "PC top — clarity" -->
+  <g stroke="oklch(0.68 0.165 28)" stroke-opacity="0.55">
+    <line x1="430" y1="190" x2="200" y2="190"/>
+    <path d="M 208 184 L 200 190 L 208 196"/>
+  </g>
+  <text x="190" y="187" font-family="IBM Plex Sans, sans-serif" font-size="20" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end">PC top</text>
+  <text x="190" y="208" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="end" opacity="0.95">clarity · top-end</text>
+  <text x="190" y="225" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.6">harder, lube stays on rails</text>
+
+  <!-- RIGHT MARGIN: "POM stem — self-lubricating" -->
+  <g stroke="oklch(0.78 0.005 90)" stroke-opacity="0.45">
+    <line x1="660" y1="265" x2="900" y2="265"/>
+    <path d="M 892 259 L 900 265 L 892 271"/>
+  </g>
+  <text x="910" y="262" font-family="IBM Plex Sans, sans-serif" font-size="20" fill="oklch(0.78 0.005 90)" stroke="none">POM stem</text>
+  <text x="910" y="283" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">low friction · long rail dwell</text>
+  <text x="910" y="300" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">weighted from start of travel</text>
+
+  <!-- LEFT MARGIN: "nylon bottom — thock" -->
+  <g stroke="oklch(0.68 0.165 28)" stroke-opacity="0.55">
+    <line x1="430" y1="465" x2="200" y2="465"/>
+    <path d="M 208 459 L 200 465 L 208 471"/>
+  </g>
+  <text x="190" y="462" font-family="IBM Plex Sans, sans-serif" font-size="20" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end">nylon bottom</text>
+  <text x="190" y="483" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="end" opacity="0.95">thock · low-mid lossy</text>
+  <text x="190" y="500" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.6">tick → pock conversion</text>
+
+  <!-- The seam — coral horizontal line at the resin transition -->
+  <line x1="450" y1="280" x2="750" y2="280" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.4" stroke-width="2" stroke-dasharray="6 6"/>
+  <text x="785" y="284" font-family="Newsreader, serif" font-size="15" font-style="italic" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.85">the seam</text>
+
+  <!-- Baseline -->
+  <line x1="90" y1="570" x2="1110" y2="570" stroke-opacity="0.45"/>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

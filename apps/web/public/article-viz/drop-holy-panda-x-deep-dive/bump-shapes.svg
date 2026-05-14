@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Three tactile bump shapes — sharp (Cherry MX Brown), D-shaped (Boba U4T / Sapphire), rounded (Holy Panda lineage)</title>
+
+  <!-- Baseline -->
+  <line x1="80" y1="240" x2="1120" y2="240" stroke-opacity="0.4"/>
+
+  <!-- Vertical dividers -->
+  <line x1="420" y1="80" x2="420" y2="260" stroke-opacity="0.2"/>
+  <line x1="800" y1="80" x2="800" y2="260" stroke-opacity="0.2"/>
+
+  <!-- PANEL 1: sharp (Cherry MX Brown) -->
+  <g>
+    <!-- narrow, brief spike -->
+    <path d="M 140 240 L 240 240 L 250 165 L 260 240 L 360 240" stroke-width="2.5" stroke-opacity="0.95"/>
+  </g>
+  <text x="250" y="290" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">sharp</text>
+  <text x="250" y="315" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">narrow spike · brief event</text>
+  <text x="250" y="335" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">Cherry MX Brown</text>
+
+  <!-- PANEL 2: D-shaped (Boba U4T / Sapphire) -->
+  <g>
+    <!-- steep climb, plateau, steep drop -->
+    <path d="M 480 240 L 560 240 L 580 145 L 660 145 L 680 240 L 770 240" stroke-width="2.5" stroke-opacity="0.95"/>
+  </g>
+  <text x="625" y="290" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">D-shaped</text>
+  <text x="625" y="315" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">flat top · "you're in the bump"</text>
+  <text x="625" y="335" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">Boba U4T · Tecsee Sapphire</text>
+
+  <!-- PANEL 3: rounded (Holy Panda lineage) — BORDEAUX-emphasized -->
+  <g>
+    <!-- smooth symmetric arc that blends into bottom-out -->
+    <path d="M 860 240 C 905 240 920 160 970 160 C 1020 160 1040 200 1060 220 L 1100 240" stroke="oklch(0.62 0.13 25)" stroke-width="3" stroke-opacity="0.95"/>
+    <!-- Wash under the rounded bump -->
+    <path d="M 860 240 C 905 240 920 160 970 160 C 1020 160 1040 200 1060 220 L 1100 240 Z" fill="oklch(0.62 0.13 25 / 0.10)" stroke="none"/>
+    <!-- Focal dot at the peak -->
+    <circle cx="970" cy="160" r="5" fill="oklch(0.62 0.13 25)" stroke="oklch(0.62 0.13 25)"/>
+  </g>
+  <text x="975" y="290" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle">rounded</text>
+  <text x="975" y="315" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">smooth arc · blends into bottom-out</text>
+  <text x="975" y="335" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.9">Holy Panda lineage — Drop HPX</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

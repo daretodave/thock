@@ -1,0 +1,19 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T09:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "hmx-cloud-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "the-price-tier-hmx-defended",
+  "brief_summary": "Three-band price chart for the H2 'The price tier HMX defended'. Y-axis is per-switch price ($0 to $1+). Dashed faded band at the bottom ($0–$0.25) labelled 'utility — Akko CS · Outemu V3'. Bronze-emphasized solid band in the middle ($0.45–$0.55) labelled 'HMX — Cloud · Hyacinth · Macchiato' with a side note 'absorbs into $130 BOM'. Dashed faded band at the top ($1.00+) labelled 'enthusiast — Tecsee · Geon · small-batch'. Connecting hatches between tiers reinforce the deliberate choice not to chase the slots above or below.",
+  "target": "apps/web/public/article-viz/hmx-cloud-deep-dive/price-band.svg",
+  "splash_color": { "name": "bronze", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "hmx-cloud-deep-dive.mdx § 'The price tier HMX defended' — 'Cloud at $0.45 on CannonKeys at the time of writing, Hyacinth at $0.50, Macchiato at $0.55. The brand has not chased the $0.20 utility-tier slot ... nor ... the $1.00+ enthusiast tier ... Every public price across the catalog sits inside a 25-cent band.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/hmx-cloud-deep-dive/price-band.svg"],
+  "warnings": []
+}

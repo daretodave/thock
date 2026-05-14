@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Plate-material stiffness ladder — modulus of elasticity for POM, PC, FR4, aluminium, brass</title>
+
+  <!-- Y axis (modulus, GPa, log-ish) -->
+  <line x1="160" y1="80" x2="160" y2="420" stroke-opacity="0.6"/>
+  <text x="100" y="86" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7" text-anchor="end">100 GPa</text>
+  <text x="100" y="170" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7" text-anchor="end">69</text>
+  <text x="100" y="296" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7" text-anchor="end">22</text>
+  <text x="100" y="385" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7" text-anchor="end">3</text>
+  <text x="100" y="408" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7" text-anchor="end">2.3</text>
+
+  <!-- Ticks -->
+  <g stroke-opacity="0.45">
+    <line x1="152" y1="80" x2="168" y2="80"/>
+    <line x1="152" y1="166" x2="168" y2="166"/>
+    <line x1="152" y1="290" x2="168" y2="290"/>
+    <line x1="152" y1="380" x2="168" y2="380"/>
+    <line x1="152" y1="404" x2="168" y2="404"/>
+  </g>
+
+  <line x1="160" y1="420" x2="1080" y2="420" stroke-opacity="0.6"/>
+
+  <!-- Soft camp wash -->
+  <rect x="160" y="370" width="920" height="50" fill="oklch(0.62 0.13 25 / 0.06)" stroke="none"/>
+  <text x="1090" y="396" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.62 0.13 25)" stroke="none" opacity="0.85">soft</text>
+  <text x="1090" y="410" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.62 0.13 25)" stroke="none" opacity="0.85">camp</text>
+
+  <!-- Stiff camp wash -->
+  <rect x="160" y="80" width="920" height="120" fill="oklch(0.78 0.005 90 / 0.04)" stroke="none"/>
+  <text x="1090" y="100" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">stiff</text>
+  <text x="1090" y="114" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">camp</text>
+
+  <!-- POM (3 GPa) — bordeaux-emphasized (largest damping) -->
+  <g>
+    <rect x="220" y="380" width="80" height="40" stroke="oklch(0.62 0.13 25)" stroke-width="2.5" stroke-opacity="0.95"/>
+    <rect x="220" y="380" width="80" height="40" fill="oklch(0.62 0.13 25 / 0.18)" stroke="none"/>
+  </g>
+  <text x="260" y="450" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">POM</text>
+  <text x="260" y="470" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">3 GPa</text>
+  <text x="260" y="488" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.9">most damping</text>
+
+  <!-- PC (2.3 GPa) -->
+  <rect x="380" y="403" width="80" height="17" stroke-opacity="0.85"/>
+  <text x="420" y="450" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">PC</text>
+  <text x="420" y="470" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">2.3 GPa</text>
+  <text x="420" y="488" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">deep-poppy default</text>
+
+  <!-- FR4 (22 GPa) — middle -->
+  <rect x="540" y="290" width="80" height="130" stroke-opacity="0.85"/>
+  <text x="580" y="450" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">FR4</text>
+  <text x="580" y="470" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">22 GPa</text>
+  <text x="580" y="488" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">middle · clack-forward</text>
+
+  <!-- Aluminium (69 GPa) -->
+  <rect x="700" y="166" width="80" height="254" stroke-opacity="0.85"/>
+  <text x="740" y="450" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">aluminium</text>
+  <text x="740" y="470" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">69 GPa</text>
+  <text x="740" y="488" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">9/10 prebuilts · neutral</text>
+
+  <!-- Brass (100 GPa) -->
+  <rect x="860" y="80" width="80" height="340" stroke-opacity="0.85"/>
+  <text x="900" y="450" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">brass</text>
+  <text x="900" y="470" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">100 GPa</text>
+  <text x="900" y="488" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">heavy · ringy</text>
+
+  <!-- Axis label -->
+  <text x="85" y="250" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7" text-anchor="middle" transform="rotate(-90 85 250)">modulus of elasticity</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

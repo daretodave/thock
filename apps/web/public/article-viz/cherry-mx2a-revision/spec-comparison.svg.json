@@ -1,0 +1,20 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T09:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "cherry-mx2a-revision",
+  "article_pillar": "deep-dives",
+  "section_anchor": "how-the-spec-sheet-reads-against-the-field",
+  "brief_summary": "Three-column bar chart for the H2 'How the spec sheet reads against the field'. Force-y-axis (30g-75g). Bordeaux-emphasized MX2A Red column with actuation 45g + bottom-out 75g + housing recipe nylon/nylon/POM. HMX Cloud column at 42g/50g/nylon-nylon. Pro 3.0 Yellow at 50g/67g/PC-nylon. A bordeaux dashed line at 75g marks MX2A's 'heavier register' the article body specifically calls out.",
+  "target": "apps/web/public/article-viz/cherry-mx2a-revision/spec-comparison.svg",
+  "splash_color": { "name": "bordeaux", "oklch": "oklch(0.62 0.13 25)" },
+  "accent_color": { "name": "warm-bronze", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans"],
+  "data_sources": [
+    "cherry-mx2a-revision.mdx § 'How the spec sheet reads' — 'MX2A Red sits at 45g/75g with nylon-on-nylon and a POM stem; the Pro 3.0 Yellow at 50g/67g with PC-top, nylon-bottom, POM stem; HMX Cloud at 42g/50g with nylon-on-nylon and a mixed-material stem. Travel is 4.0mm across the field except for HMX at 3.9mm.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/cherry-mx2a-revision/spec-comparison.svg"],
+  "warnings": []
+}

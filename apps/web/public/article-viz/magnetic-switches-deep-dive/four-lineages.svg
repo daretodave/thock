@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Four sensing lineages — MX contact, Topre electrocapacitive, Hall-effect magnetic, optical light-gate</title>
+
+  <line x1="80" y1="260" x2="1120" y2="260" stroke-opacity="0.4"/>
+  <line x1="320" y1="80" x2="320" y2="280" stroke-opacity="0.2"/>
+  <line x1="600" y1="80" x2="600" y2="280" stroke-opacity="0.2"/>
+  <line x1="880" y1="80" x2="880" y2="280" stroke-opacity="0.2"/>
+
+  <!-- MX -->
+  <g>
+    <!-- two leaves coming together — binary -->
+    <path d="M 130 170 L 180 200 L 230 170" stroke-opacity="0.85"/>
+    <path d="M 130 230 L 180 200 L 230 230" stroke-opacity="0.85"/>
+    <circle cx="180" cy="200" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)"/>
+  </g>
+  <text x="180" y="310" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">MX</text>
+  <text x="180" y="335" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">contact closure</text>
+  <text x="180" y="355" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">binary</text>
+
+  <!-- Topre -->
+  <g>
+    <!-- dome compressing -->
+    <path d="M 420 220 C 440 220 450 160 460 160 C 470 160 480 220 500 220" stroke-opacity="0.85"/>
+    <!-- capacitive pad -->
+    <line x1="420" y1="230" x2="500" y2="230" stroke-opacity="0.55" stroke-width="2.5"/>
+    <!-- ~~~ wave indicating capacitive sense -->
+    <path d="M 430 248 Q 440 244 450 248 T 470 248 T 490 248" stroke-opacity="0.55"/>
+  </g>
+  <text x="460" y="310" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Topre</text>
+  <text x="460" y="335" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">electrocapacitive</text>
+  <text x="460" y="355" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">analog → binary</text>
+
+  <!-- Hall-effect — CORAL emphasized -->
+  <g stroke="oklch(0.68 0.165 28)" stroke-width="2.5" stroke-opacity="0.95">
+    <!-- magnet -->
+    <rect x="720" y="170" width="30" height="14" fill="oklch(0.68 0.165 28 / 0.85)"/>
+    <!-- field lines -->
+    <path d="M 715 184 C 700 200 700 220 720 230" fill="none"/>
+    <path d="M 755 184 C 770 200 770 220 750 230" fill="none"/>
+    <path d="M 730 184 C 728 200 728 220 730 230" fill="none"/>
+    <path d="M 740 184 C 742 200 742 220 740 230" fill="none"/>
+    <!-- sensor pad -->
+    <rect x="720" y="230" width="30" height="6" fill="oklch(0.68 0.165 28 / 0.4)"/>
+  </g>
+  <text x="735" y="310" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">Hall-effect</text>
+  <text x="735" y="335" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">magnetic field</text>
+  <text x="735" y="355" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.9">analog exposed</text>
+
+  <!-- Optical -->
+  <g>
+    <!-- LED -->
+    <circle cx="970" cy="200" r="8" stroke-opacity="0.85" fill="oklch(0.78 0.005 90 / 0.4)"/>
+    <!-- light beam -->
+    <line x1="978" y1="200" x2="1050" y2="200" stroke-opacity="0.7" stroke-dasharray="3 3"/>
+    <!-- photodetector -->
+    <path d="M 1052 192 L 1062 192 L 1062 208 L 1052 208 Z" stroke-opacity="0.85"/>
+    <!-- blade interrupting beam -->
+    <line x1="1010" y1="180" x2="1010" y2="225" stroke-opacity="0.6"/>
+  </g>
+  <text x="1015" y="310" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">optical</text>
+  <text x="1015" y="335" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">light-gate</text>
+  <text x="1015" y="355" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">mostly binary</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

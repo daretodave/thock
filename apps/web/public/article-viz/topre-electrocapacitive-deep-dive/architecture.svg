@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Topre's four-part vertical stack — slider, rubber dome, conical spring, capacitive PCB pad</title>
+
+  <!-- Bordeaux wash anchoring the spring-pad interface -->
+  <ellipse cx="600" cy="450" rx="240" ry="60" fill="oklch(0.62 0.13 25 / 0.10)" stroke="none"/>
+
+  <!-- MX-compatible stem at top -->
+  <g>
+    <path d="M 580 80 L 620 80 L 620 110 L 580 110 Z" stroke-opacity="0.85"/>
+  </g>
+  <text x="640" y="100" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">MX-compatible stem</text>
+
+  <!-- Layer 1: slider -->
+  <g>
+    <path d="M 540 120 L 660 120 L 660 200 L 540 200 Z" stroke-opacity="0.85"/>
+    <!-- vertical centre line -->
+    <line x1="600" y1="125" x2="600" y2="195" stroke-opacity="0.4"/>
+  </g>
+  <g stroke-opacity="0.55">
+    <line x1="500" y1="160" x2="200" y2="160"/>
+    <path d="M 208 154 L 200 160 L 208 166"/>
+  </g>
+  <text x="190" y="158" font-family="IBM Plex Sans, sans-serif" font-size="18" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end">1 — slider</text>
+  <text x="190" y="180" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.6">engages MX-style keycap</text>
+
+  <!-- Layer 2: rubber dome — moulded into a sheet that covers the whole board -->
+  <g>
+    <!-- Dome moulded shape -->
+    <path d="M 460 200 C 460 200 480 210 540 210 C 580 210 620 210 660 210 C 720 210 740 200 740 200" stroke-opacity="0.85" stroke-width="2.5"/>
+    <!-- Sheet extending to edges -->
+    <line x1="80" y1="240" x2="460" y2="240" stroke-opacity="0.55" stroke-dasharray="6 6"/>
+    <line x1="740" y1="240" x2="1120" y2="240" stroke-opacity="0.55" stroke-dasharray="6 6"/>
+    <!-- Dome itself -->
+    <path d="M 540 240 C 540 240 540 200 600 200 C 660 200 660 240 660 240 Z" stroke-opacity="0.95"/>
+    <path d="M 540 240 L 460 240 L 460 200 Z" stroke-opacity="0.55" fill="oklch(0.78 0.005 90 / 0.04)"/>
+    <path d="M 660 240 L 740 240 L 740 200 Z" stroke-opacity="0.55" fill="oklch(0.78 0.005 90 / 0.04)"/>
+  </g>
+  <g stroke-opacity="0.55">
+    <line x1="450" y1="220" x2="200" y2="220"/>
+    <path d="M 208 214 L 200 220 L 208 226"/>
+  </g>
+  <text x="190" y="218" font-family="IBM Plex Sans, sans-serif" font-size="18" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end">2 — rubber dome</text>
+  <text x="190" y="240" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.6">collapse = tactile event</text>
+  <text x="190" y="258" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="end" opacity="0.85">NOT the sensor</text>
+
+  <!-- Layer 3: conical spring (wider at bottom) -->
+  <g>
+    <!-- Spring drawn as descending elliptical coils, narrower at top -->
+    <ellipse cx="600" cy="270" rx="24" ry="5" stroke-opacity="0.8"/>
+    <ellipse cx="600" cy="295" rx="28" ry="5" stroke-opacity="0.8"/>
+    <ellipse cx="600" cy="320" rx="32" ry="5" stroke-opacity="0.8"/>
+    <ellipse cx="600" cy="345" rx="36" ry="5" stroke-opacity="0.8"/>
+    <ellipse cx="600" cy="370" rx="40" ry="5" stroke-opacity="0.8"/>
+    <ellipse cx="600" cy="395" rx="44" ry="5" stroke-opacity="0.8"/>
+    <!-- bordeaux highlight on bottom coil — where the sensing happens -->
+    <ellipse cx="600" cy="420" rx="48" ry="5" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.95" stroke-width="3"/>
+  </g>
+  <g stroke-opacity="0.55">
+    <line x1="555" y1="350" x2="200" y2="350"/>
+    <path d="M 208 344 L 200 350 L 208 356"/>
+  </g>
+  <text x="190" y="348" font-family="IBM Plex Sans, sans-serif" font-size="18" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end">3 — conical spring</text>
+  <text x="190" y="370" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.6">progressive force curve</text>
+
+  <!-- Layer 4: capacitive PCB pad (bordeaux highlighted) -->
+  <g>
+    <line x1="80" y1="440" x2="1120" y2="440" stroke-opacity="0.85" stroke-width="2.5"/>
+    <!-- Capacitive pad — a bordeaux circular trace -->
+    <circle cx="600" cy="440" r="50" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.95" stroke-width="3"/>
+    <circle cx="600" cy="440" r="50" fill="oklch(0.62 0.13 25 / 0.10)" stroke="none"/>
+    <!-- inner trace pattern -->
+    <circle cx="600" cy="440" r="38" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.5" stroke-width="1.5" stroke-dasharray="3 4"/>
+  </g>
+  <g stroke-opacity="0.55">
+    <line x1="545" y1="450" x2="200" y2="450"/>
+    <path d="M 208 444 L 200 450 L 208 456"/>
+  </g>
+  <text x="190" y="448" font-family="IBM Plex Sans, sans-serif" font-size="18" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end">4 — capacitive PCB pad</text>
+  <text x="190" y="470" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="end" opacity="0.9">the sensor — capacitance reading</text>
+
+  <!-- Right side: "no contact closure" callout -->
+  <text x="780" y="450" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.62 0.13 25)" stroke="none" opacity="0.85">no make, no break</text>
+  <text x="780" y="472" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">a number that crosses a threshold</text>
+
+  <!-- Baseline -->
+  <line x1="80" y1="560" x2="1120" y2="560" stroke-opacity="0.45"/>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

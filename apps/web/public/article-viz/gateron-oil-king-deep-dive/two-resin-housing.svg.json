@@ -1,0 +1,19 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T09:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "gateron-oil-king-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "the-housing-in-two-halves",
+  "brief_summary": "Switch cross-section diagram for the H2 'The housing, in two halves'. Top housing drawn with thicker stroke and shine-hatching to suggest PC clarity. Bottom housing with damp hatching wash to suggest nylon absorption. POM stem in the middle. Three margin callouts: left-top 'PC top — clarity / top-end / harder, lube stays on rails'; right-middle 'POM stem — low friction / long rail dwell'; left-bottom 'nylon bottom — thock / low-mid lossy / tick to pock conversion'. A coral dashed seam line marks the resin transition with the italic caption 'the seam'.",
+  "target": "apps/web/public/article-viz/gateron-oil-king-deep-dive/two-resin-housing.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "gateron-oil-king-deep-dive.mdx § 'The housing, in two halves' — 'polycarbonate top, nylon bottom, and POM stem ... Polycarbonate is the brightest of the three resins ... nylon is dense, absorbent, and acoustically lossy in the low-mid range ... POM is a self-lubricating thermoplastic ... The genuine engineering decision is in the seam between the two halves.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gateron-oil-king-deep-dive/two-resin-housing.svg"],
+  "warnings": []
+}

@@ -1,0 +1,19 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T09:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "hmx-cloud-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "restock-cadence-the-quiet-advantage",
+  "brief_summary": "Three-lane timeline chart for the H2 'Restock cadence — the quiet advantage'. Top lane is HMX at ~8 weeks (bronze-emphasized with 7 evenly-spaced restock ticks across a 52-week span, labelled 'sweet spot'). Middle lane is Gateron at quarterly cadence (4 sparser ticks). Bottom lane is Cherry as a continuous dashed line with a faint background wash, labelled 'always on, never news'. The visual argument matches the article body: 8 weeks is tight enough that vendors carry it as default but loose enough that each restock is news.",
+  "target": "apps/web/public/article-viz/hmx-cloud-deep-dive/restock-cadence.svg",
+  "splash_color": { "name": "bronze", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "hmx-cloud-deep-dive.mdx § 'Restock cadence — the quiet advantage' — 'HMX restocks at the major North American vendors on roughly an eight-week cycle ... Gateron's cadence on the Oil King and Pro 3.0 line runs closer to quarterly ... Cherry's cadence is functionally infinite — the MX2A is a production-line product and is always available.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/hmx-cloud-deep-dive/restock-cadence.svg"],
+  "warnings": []
+}

@@ -53,6 +53,13 @@ What follows is the bench, in roughly the order the scene actually reaches for t
 
 ## What is actually changing under the hood
 
+<InlineViz
+  src="/article-viz/plate-materials-explained/stiffness-ladder.svg"
+  alt="Five-bar stiffness ladder on a modulus-of-elasticity y-axis. POM at 3 GPa is bordeaux-emphasized with the note 'most damping'. PC at 2.3 GPa, FR4 at 22 GPa, aluminium at 69 GPa, brass at 100 GPa. Background washes mark a 'soft camp' (POM, PC) and a 'stiff camp' (aluminium, brass); FR4 sits between them."
+  caption="The numbers cluster into two camps plus a wildcard. POM and PC at the bottom (soft, compliant), aluminium and brass at the top (stiff, transmissive), FR4 in the middle."
+  accent="bordeaux"
+/>
+
 Run the numbers and the story is simpler than the discourse. The two soft plates (POM, polycarbonate) sit at 2–3 GPa modulus. The metals (aluminium, brass) sit at 69–100 GPa. FR4 sits in between at around 22 GPa, closer to the soft plates than to the metals. Carbon fibre depends on the weave but lives in metal territory.
 
 So a builder asking "soft plate or stiff plate" is asking a question with five answers that cluster into two camps, plus one wildcard. The soft camp (POM, PC) flexes meaningfully under typing force and damps the strike. The stiff camp (aluminium, brass, carbon fibre) does not flex meaningfully and transmits the strike. FR4 is the practical middle: it flexes a little, damps a little, and stays out of the way.
@@ -70,6 +77,13 @@ The order of operations a builder should adopt, roughly: pick a board with a mou
 Brass is loud and people will tell you they like loud — they don't, they like consonant. A brass plate without the rest of the build tuned to absorb its ring is just a noisy keyboard. A POM plate without enough top-end signal underneath it is just a quiet one. The plate amplifies whatever choices the rest of the build has already made. Make the upstream choices first.
 
 ## Pairing notes that hold up in practice
+
+<InlineViz
+  src="/article-viz/plate-materials-explained/pairing-map.svg"
+  alt="Four pairing rows. Each row reads plate name plus modulus + mount/foam + switch type, then an arrow to a bordeaux verdict. Row one: brass + heavy case foam + PE foam sheet → 'controlled brass'. Row two: FR4 + clack-forward switch + Cherry profile → 'let the switch sing'. Row three: PC + gasket-mount + thock switch → 'deep thock'. Row four: POM + gasket-mount marked with a warm-red X → 'be careful — dead board'."
+  caption="Three combinations that work and one to avoid. The plate is a multiplier on the mount — pick the mount first."
+  accent="bordeaux"
+/>
 
 A short bench of combinations that the scene has converged on, and a couple to avoid.
 

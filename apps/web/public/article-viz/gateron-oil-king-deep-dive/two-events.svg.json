@@ -1,0 +1,19 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T09:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "gateron-oil-king-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "what-to-listen-for",
+  "brief_summary": "Time-axis sonic schematic for the H2 'What to listen for'. Top lane shows the Oil King as two distinct sonic events ~0.25s apart: a tall narrow spike (top-out, PC voice) and a broad rounded crest with coral wash + focal dot (bottom-out, nylon voice). A dashed gap line between them is labelled '¼ second'. Bottom row shows 'most under-30¢ linears' as one fused asymmetric curve labelled 'one fused sound', for contrast.",
+  "target": "apps/web/public/article-viz/gateron-oil-king-deep-dive/two-events.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "gateron-oil-king-deep-dive.mdx § 'What to listen for' — 'in a well-tuned linear that gap is a single fused sound, and in the Oil King it is two distinct events spaced about a quarter-second apart at typing speed. That separation is the polycarbonate top doing its job.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gateron-oil-king-deep-dive/two-events.svg"],
+  "warnings": []
+}

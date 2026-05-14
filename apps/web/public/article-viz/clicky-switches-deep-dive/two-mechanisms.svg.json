@@ -1,0 +1,19 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T09:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "clicky-switches-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "click-jacket-the-cherry-inheritance",
+  "brief_summary": "Diptych cross-section comparing the two click mechanisms. Left panel: click-jacket — sleeve riding the stem, catches a ledge inside the housing, plastic tick on press only. Right panel: click-bar — horizontal metal leaf in the lower housing, tripped by a notch on the stem, metallic snap on press and release. Amber accent on the click element in each panel, with sound-strike indicators emanating from the click point.",
+  "target": "apps/web/public/article-viz/clicky-switches-deep-dive/two-mechanisms.svg",
+  "splash_color": { "name": "amber (article ochre)", "oklch": "oklch(0.78 0.10 80)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "clicky-switches-deep-dive.mdx § 'Click-jacket — the Cherry inheritance' and § 'Click-bar — the Kailh second wind' — 'a small plastic sleeve — the jacket — slides on the stem column inside the housing ... the sleeve striking the housing wall produces the click' / 'a thin metal leaf — the click-bar — is mounted horizontally inside the bottom housing ... the bar snaps against the housing wall'"
+  ],
+  "outputs": ["apps/web/public/article-viz/clicky-switches-deep-dive/two-mechanisms.svg"],
+  "warnings": []
+}

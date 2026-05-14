@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Two click mechanisms — click-jacket (sleeve on stem) versus click-bar (horizontal leaf)</title>
+
+  <!-- Vertical divider -->
+  <line x1="600" y1="80" x2="600" y2="500" stroke-opacity="0.2"/>
+
+  <!-- ═════ LEFT PANEL: CLICK-JACKET (Cherry lineage) ═════ -->
+  <text x="300" y="105" font-family="Newsreader, serif" font-size="24" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">click-jacket</text>
+  <text x="300" y="130" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">Cherry MX Blue · Gateron Blue</text>
+
+  <!-- Amber wash -->
+  <ellipse cx="300" cy="335" rx="160" ry="140" fill="oklch(0.78 0.10 80 / 0.07)" stroke="none"/>
+
+  <!-- Top housing -->
+  <path d="M 220 175 L 380 175 L 380 195 L 400 270 L 200 270 L 220 195 Z"/>
+  <!-- Stem -->
+  <path d="M 280 195 L 320 195 L 320 405 L 280 405 Z"/>
+  <line x1="300" y1="210" x2="300" y2="395" stroke-opacity="0.4"/>
+  <!-- The CLICK-JACKET sleeve riding on the stem (amber) -->
+  <g stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="2.5">
+    <path d="M 270 270 L 330 270 L 330 310 L 270 310 Z"/>
+  </g>
+  <text x="345" y="295" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none" opacity="0.95">sleeve</text>
+  <!-- Stem skirt + spring -->
+  <path d="M 280 395 L 260 420 L 260 450 L 340 450 L 340 420 L 320 395" stroke-opacity="0.85"/>
+  <g stroke-opacity="0.6">
+    <ellipse cx="300" cy="465" rx="22" ry="4"/>
+    <ellipse cx="300" cy="475" rx="22" ry="4"/>
+    <ellipse cx="300" cy="485" rx="22" ry="4"/>
+  </g>
+  <!-- Lower housing -->
+  <path d="M 200 450 L 400 450 L 390 530 L 210 530 Z"/>
+
+  <!-- click event indicator — amber strike between sleeve and ledge -->
+  <circle cx="330" cy="290" r="5" fill="oklch(0.78 0.10 80)" stroke="oklch(0.78 0.10 80)"/>
+  <g stroke="oklch(0.78 0.10 80)" stroke-opacity="0.55" stroke-width="2" stroke-linecap="round">
+    <path d="M 340 285 L 360 280"/>
+    <path d="M 340 295 L 360 300"/>
+  </g>
+
+  <!-- Description -->
+  <text x="300" y="565" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">sleeve slides on stem · catches ledge</text>
+  <text x="300" y="585" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">plastic tick · click on press only · tolerance-sensitive</text>
+
+  <!-- ═════ RIGHT PANEL: CLICK-BAR (Kailh Box) ═════ -->
+  <text x="900" y="105" font-family="Newsreader, serif" font-size="24" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">click-bar</text>
+  <text x="900" y="130" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">Kailh Box Jade · Box Navy</text>
+
+  <ellipse cx="900" cy="335" rx="160" ry="140" fill="oklch(0.78 0.10 80 / 0.07)" stroke="none"/>
+
+  <!-- Top housing -->
+  <path d="M 820 175 L 980 175 L 980 195 L 1000 270 L 800 270 L 820 195 Z"/>
+  <!-- Stem with a notch on the side -->
+  <path d="M 880 195 L 920 195 L 920 405 L 880 405 Z"/>
+  <line x1="900" y1="210" x2="900" y2="395" stroke-opacity="0.4"/>
+  <!-- Notch on stem side -->
+  <path d="M 920 320 L 940 330 L 940 360 L 920 370" stroke-opacity="0.6"/>
+
+  <!-- Stem skirt + spring -->
+  <path d="M 880 395 L 860 420 L 860 450 L 940 450 L 940 420 L 920 395" stroke-opacity="0.85"/>
+  <g stroke-opacity="0.6">
+    <ellipse cx="900" cy="465" rx="22" ry="4"/>
+    <ellipse cx="900" cy="475" rx="22" ry="4"/>
+    <ellipse cx="900" cy="485" rx="22" ry="4"/>
+  </g>
+  <!-- Lower housing with horizontal CLICK-BAR -->
+  <path d="M 800 450 L 1000 450 L 990 530 L 810 530 Z"/>
+  <!-- The click-bar — horizontal amber metal leaf inside lower housing -->
+  <g stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="3" stroke-linecap="round">
+    <line x1="830" y1="490" x2="970" y2="490"/>
+  </g>
+  <text x="985" y="494" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none" opacity="0.95">bar</text>
+
+  <!-- Snap indicator (sharper, brighter) -->
+  <circle cx="940" cy="345" r="5" fill="oklch(0.78 0.10 80)" stroke="oklch(0.78 0.10 80)"/>
+  <g stroke="oklch(0.78 0.10 80)" stroke-opacity="0.55" stroke-width="2" stroke-linecap="round">
+    <path d="M 950 340 L 970 330"/>
+    <path d="M 952 350 L 974 355"/>
+    <path d="M 945 360 L 962 372"/>
+  </g>
+
+  <text x="900" y="565" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">stem notch trips horizontal leaf</text>
+  <text x="900" y="585" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">metallic snap · click on press and release · consistent</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

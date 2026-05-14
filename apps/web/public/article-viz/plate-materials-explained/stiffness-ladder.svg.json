@@ -1,0 +1,19 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T09:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "plate-materials-explained",
+  "article_pillar": "deep-dives",
+  "section_anchor": "what-is-actually-changing-under-the-hood",
+  "brief_summary": "Five-bar stiffness ladder showing modulus of elasticity by plate material on a GPa y-axis. POM (3 GPa) is bordeaux-emphasized with the note 'most damping' since the article calls it out as the only plate where damping dominates. PC (2.3), FR4 (22), aluminium (69), brass (100). Two background washes mark the 'soft camp' and 'stiff camp' regions on the right margin.",
+  "target": "apps/web/public/article-viz/plate-materials-explained/stiffness-ladder.svg",
+  "splash_color": { "name": "bordeaux (article terracotta)", "oklch": "oklch(0.62 0.13 25)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "plate-materials-explained.mdx § 'What is actually changing under the hood' — 'The two soft plates (POM, polycarbonate) sit at 2–3 GPa modulus. The metals (aluminium, brass) sit at 69–100 GPa. FR4 sits in between at around 22 GPa.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/plate-materials-explained/stiffness-ladder.svg"],
+  "warnings": []
+}

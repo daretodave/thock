@@ -1,0 +1,19 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T09:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "magnetic-switches-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "where-hall-effect-sits-in-the-four-lineage-taxonomy",
+  "brief_summary": "Four-panel taxonomy strip showing each sensing lineage with a small mechanism glyph. MX: two leaves meeting with a contact dot ('contact closure / binary'). Topre: dome over a capacitive pad with sense waves ('electrocapacitive / analog to binary'). Hall-effect: coral-emphasized magnet over a sensor pad with bending field lines ('magnetic field / analog exposed'). Optical: LED → light beam → photodetector with a blade interrupting the beam ('light-gate / mostly binary').",
+  "target": "apps/web/public/article-viz/magnetic-switches-deep-dive/four-lineages.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "magnetic-switches-deep-dive.mdx § 'Where Hall-effect sits in the four-lineage taxonomy' — 'MX contact-closure is the default ... Topre electrocapacitive ... reads spring compression as a change in capacitance over a printed pad ... Hall-effect magnetic ... a magnet on the stem, a Hall sensor on the PCB, a continuous voltage available to the firmware ... Optical light-gate ... a beam of light from an LED ... interrupted by a blade or slot on the stem.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/magnetic-switches-deep-dive/four-lineages.svg"],
+  "warnings": []
+}

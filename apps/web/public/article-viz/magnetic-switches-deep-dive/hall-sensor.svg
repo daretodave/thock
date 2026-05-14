@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Hall-effect sensing — magnet in the stem descends past a Hall sensor on the PCB, voltage rises with field strength</title>
+
+  <!-- Two states, side by side -->
+  <line x1="600" y1="80" x2="600" y2="500" stroke-opacity="0.2"/>
+
+  <!-- ═════ LEFT: at rest (magnet up, field weak) ═════ -->
+  <text x="300" y="110" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">at rest</text>
+  <text x="300" y="132" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">field weak · voltage low</text>
+
+  <!-- Housing outline -->
+  <path d="M 220 165 L 380 165 L 380 410 L 220 410 Z" stroke-opacity="0.65"/>
+  <!-- Stem with magnet (high position) -->
+  <path d="M 270 180 L 330 180 L 330 280 L 270 280 Z" stroke-opacity="0.85"/>
+  <line x1="300" y1="195" x2="300" y2="265" stroke-opacity="0.4"/>
+  <!-- Magnet at stem bottom (small filled rect) -->
+  <rect x="282" y="263" width="36" height="14" fill="oklch(0.68 0.165 28 / 0.95)" stroke="oklch(0.68 0.165 28)"/>
+
+  <!-- PCB at bottom of housing -->
+  <line x1="220" y1="395" x2="380" y2="395" stroke-opacity="0.75" stroke-width="2.5"/>
+  <!-- Hall sensor pad -->
+  <rect x="282" y="397" width="36" height="8" stroke-opacity="0.85" stroke-width="2"/>
+  <text x="300" y="425" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">Hall sensor</text>
+
+  <!-- Weak field lines — sparse, faint -->
+  <g stroke="oklch(0.68 0.165 28)" stroke-opacity="0.35" stroke-width="1.5" fill="none">
+    <path d="M 285 277 C 270 320 270 360 290 395"/>
+    <path d="M 315 277 C 330 320 330 360 310 395"/>
+  </g>
+
+  <!-- Voltage indicator below — low -->
+  <text x="300" y="465" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">voltage</text>
+  <line x1="240" y1="485" x2="360" y2="485" stroke-opacity="0.5"/>
+  <rect x="240" y="478" width="35" height="14" fill="oklch(0.68 0.165 28 / 0.4)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.6"/>
+
+  <!-- ═════ RIGHT: pressed (magnet down, field strong) ═════ -->
+  <text x="900" y="110" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">pressed</text>
+  <text x="900" y="132" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.9">field strong · voltage rises</text>
+
+  <path d="M 820 165 L 980 165 L 980 410 L 820 410 Z" stroke-opacity="0.65"/>
+  <!-- Stem pressed down -->
+  <path d="M 870 220 L 930 220 L 930 360 L 870 360 Z" stroke-opacity="0.85"/>
+  <line x1="900" y1="235" x2="900" y2="345" stroke-opacity="0.4"/>
+  <!-- Magnet near sensor -->
+  <rect x="882" y="358" width="36" height="14" fill="oklch(0.68 0.165 28 / 0.95)" stroke="oklch(0.68 0.165 28)"/>
+
+  <line x1="820" y1="395" x2="980" y2="395" stroke-opacity="0.75" stroke-width="2.5"/>
+  <rect x="882" y="397" width="36" height="8" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.95" stroke-width="2.5"/>
+  <rect x="882" y="397" width="36" height="8" fill="oklch(0.68 0.165 28 / 0.25)" stroke="none"/>
+  <text x="900" y="425" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.85">Hall sensor</text>
+
+  <!-- Strong field lines — denser, more saturated, bending tightly -->
+  <g stroke="oklch(0.68 0.165 28)" stroke-opacity="0.85" stroke-width="2" fill="none">
+    <path d="M 884 371 C 870 380 870 390 880 397"/>
+    <path d="M 894 372 C 892 380 892 390 894 397"/>
+    <path d="M 906 372 C 908 380 908 390 906 397"/>
+    <path d="M 916 371 C 930 380 930 390 920 397"/>
+  </g>
+  <!-- Outer field bulge -->
+  <g stroke="oklch(0.68 0.165 28)" stroke-opacity="0.4" stroke-width="1.5" fill="none">
+    <path d="M 870 365 C 845 380 845 395 870 410"/>
+    <path d="M 930 365 C 955 380 955 395 930 410"/>
+  </g>
+
+  <!-- Voltage indicator below — high -->
+  <text x="900" y="465" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">voltage</text>
+  <line x1="840" y1="485" x2="960" y2="485" stroke-opacity="0.5"/>
+  <rect x="840" y="478" width="105" height="14" fill="oklch(0.68 0.165 28 / 0.55)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.85"/>
+
+  <!-- Caption strip -->
+  <text x="600" y="565" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.8">a continuous voltage available at every poll — firmware owns the actuation threshold, not the switch geometry</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

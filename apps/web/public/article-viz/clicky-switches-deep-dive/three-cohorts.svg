@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Three cohorts keep the clicky market durable — Model M veterans, mech-keyboard newcomers, streamers and specialty users</title>
+
+  <line x1="80" y1="320" x2="1120" y2="320" stroke-opacity="0.4"/>
+
+  <!-- Three circles representing relative cohort size -->
+  <!-- Veterans — large -->
+  <circle cx="290" cy="220" r="110" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.85" stroke-width="2.5"/>
+  <circle cx="290" cy="220" r="110" fill="oklch(0.78 0.10 80 / 0.08)" stroke="none"/>
+  <text x="290" y="190" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Model M</text>
+  <text x="290" y="215" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">veterans</text>
+  <text x="290" y="245" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">writers · programmers</text>
+  <text x="290" y="265" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">listening for the sound</text>
+
+  <!-- Mech newcomers — medium -->
+  <circle cx="610" cy="220" r="85" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.85" stroke-width="2.5"/>
+  <circle cx="610" cy="220" r="85" fill="oklch(0.78 0.10 80 / 0.08)" stroke="none"/>
+  <text x="610" y="195" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">first-time</text>
+  <text x="610" y="220" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">buyers</text>
+  <text x="610" y="248" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">"feels like a typewriter"</text>
+
+  <!-- Streamers — small but loudest -->
+  <circle cx="890" cy="220" r="60" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.85" stroke-width="2.5"/>
+  <circle cx="890" cy="220" r="60" fill="oklch(0.78 0.10 80 / 0.08)" stroke="none"/>
+  <text x="890" y="205" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">streamers</text>
+  <text x="890" y="230" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">+ specialty</text>
+  <text x="890" y="248" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">loudest in voice</text>
+
+  <!-- Caption -->
+  <text x="600" y="375" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">a small, durable market — enough for every major maker to ship multiple clicky SKUs in 2026</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

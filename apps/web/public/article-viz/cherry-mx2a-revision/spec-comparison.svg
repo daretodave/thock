@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>MX2A Red vs HMX Cloud vs Gateron Pro 3.0 Yellow — actuation force, bottom-out force, and housing recipe</title>
+
+  <!-- Y-axis (force grams) -->
+  <line x1="160" y1="80" x2="160" y2="400" stroke-opacity="0.6"/>
+  <g stroke-opacity="0.45">
+    <line x1="152" y1="100" x2="168" y2="100"/>
+    <line x1="152" y1="180" x2="168" y2="180"/>
+    <line x1="152" y1="260" x2="168" y2="260"/>
+    <line x1="152" y1="340" x2="168" y2="340"/>
+  </g>
+  <text x="140" y="106" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7" text-anchor="end">75g</text>
+  <text x="140" y="186" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7" text-anchor="end">60g</text>
+  <text x="140" y="266" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7" text-anchor="end">45g</text>
+  <text x="140" y="346" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7" text-anchor="end">30g</text>
+
+  <line x1="160" y1="400" x2="1080" y2="400" stroke-opacity="0.6"/>
+
+  <!-- Column A: MX2A Red — bordeaux highlighted -->
+  <g>
+    <!-- Actuation 45g (260px) → Bottom 75g (100px) -->
+    <path d="M 270 260 L 270 100" stroke-opacity="0" />
+    <path d="M 250 260 L 290 260 L 290 100 L 250 100 Z" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.9" stroke-width="2.5"/>
+    <rect x="250" y="100" width="40" height="160" fill="oklch(0.62 0.13 25 / 0.2)" stroke="none"/>
+    <text x="270" y="92" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.9">75g bottom</text>
+    <text x="270" y="278" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">45g actuate</text>
+  </g>
+  <text x="270" y="430" font-family="IBM Plex Sans, sans-serif" font-size="18" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">MX2A Red</text>
+  <text x="270" y="452" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">nylon · nylon · POM</text>
+  <text x="270" y="470" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">4.0mm travel</text>
+
+  <!-- Column B: HMX Cloud -->
+  <g>
+    <!-- Actuation 42g (~276) → Bottom 50g (~233) -->
+    <path d="M 580 276 L 620 276 L 620 233 L 580 233 Z" stroke-opacity="0.85"/>
+    <text x="600" y="225" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.8">50g bottom</text>
+    <text x="600" y="294" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">42g actuate</text>
+  </g>
+  <text x="600" y="430" font-family="IBM Plex Sans, sans-serif" font-size="18" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">HMX Cloud</text>
+  <text x="600" y="452" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">nylon · nylon · LY/POK</text>
+  <text x="600" y="470" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">3.9mm travel</text>
+
+  <!-- Column C: Pro 3.0 Yellow -->
+  <g>
+    <!-- Actuation 50g (~233) → Bottom 67g (~143) -->
+    <path d="M 910 233 L 950 233 L 950 143 L 910 143 Z" stroke-opacity="0.85"/>
+    <text x="930" y="135" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.8">67g bottom</text>
+    <text x="930" y="251" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">50g actuate</text>
+  </g>
+  <text x="930" y="430" font-family="IBM Plex Sans, sans-serif" font-size="18" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Pro 3.0 Yellow</text>
+  <text x="930" y="452" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">PC · nylon · POM</text>
+  <text x="930" y="470" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">4.0mm travel</text>
+
+  <!-- Axis labels -->
+  <text x="80" y="240" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7" text-anchor="middle" transform="rotate(-90 80 240)">force (grams)</text>
+
+  <!-- MX2A bordeaux-line marker — "heavier register" -->
+  <line x1="160" y1="100" x2="1080" y2="100" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.35" stroke-width="1.5" stroke-dasharray="6 6"/>
+  <text x="1090" y="105" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.62 0.13 25)" stroke="none" opacity="0.85">MX2A 75g</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

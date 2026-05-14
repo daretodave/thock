@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Restock cadence at major North American vendors — HMX 8 weeks, Gateron quarterly, Cherry continuous</title>
+
+  <!-- Three timeline lanes, each spans a "year" -->
+  <!-- HMX row (BRONZE emphasized) -->
+  <text x="60" y="115" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.80 0.135 75)" stroke="none">HMX</text>
+  <text x="60" y="138" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">~8 weeks</text>
+  <line x1="200" y1="110" x2="1100" y2="110" stroke-opacity="0.85" stroke-width="2.5"/>
+  <!-- 6-7 restock ticks across the year, evenly spaced -->
+  <g stroke="oklch(0.80 0.135 75)" stroke-opacity="0.9" stroke-width="3" stroke-linecap="round">
+    <line x1="240" y1="92" x2="240" y2="128"/>
+    <line x1="370" y1="92" x2="370" y2="128"/>
+    <line x1="500" y1="92" x2="500" y2="128"/>
+    <line x1="630" y1="92" x2="630" y2="128"/>
+    <line x1="760" y1="92" x2="760" y2="128"/>
+    <line x1="890" y1="92" x2="890" y2="128"/>
+    <line x1="1020" y1="92" x2="1020" y2="128"/>
+  </g>
+  <g fill="oklch(0.80 0.135 75)" stroke="none">
+    <circle cx="240" cy="110" r="5"/>
+    <circle cx="370" cy="110" r="5"/>
+    <circle cx="500" cy="110" r="5"/>
+    <circle cx="630" cy="110" r="5"/>
+    <circle cx="760" cy="110" r="5"/>
+    <circle cx="890" cy="110" r="5"/>
+    <circle cx="1020" cy="110" r="5"/>
+  </g>
+  <text x="1130" y="115" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.80 0.135 75)" stroke="none" opacity="0.95">sweet spot</text>
+
+  <!-- Gateron row -->
+  <text x="60" y="225" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none">Gateron</text>
+  <text x="60" y="248" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">quarterly</text>
+  <line x1="200" y1="220" x2="1100" y2="220" stroke-opacity="0.75"/>
+  <g stroke-opacity="0.8" stroke-width="2.5" stroke-linecap="round">
+    <line x1="280" y1="205" x2="280" y2="235"/>
+    <line x1="500" y1="205" x2="500" y2="235"/>
+    <line x1="720" y1="205" x2="720" y2="235"/>
+    <line x1="940" y1="205" x2="940" y2="235"/>
+  </g>
+
+  <!-- Cherry row -->
+  <text x="60" y="335" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none">Cherry</text>
+  <text x="60" y="358" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">continuous</text>
+  <line x1="200" y1="330" x2="1100" y2="330" stroke-opacity="0.55" stroke-dasharray="4 4"/>
+  <!-- Continuous = no discrete ticks, just a wash -->
+  <rect x="200" y="320" width="900" height="20" fill="oklch(0.78 0.005 90 / 0.08)" stroke="none"/>
+  <text x="1130" y="335" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">always on, never news</text>
+
+  <!-- X-axis label -->
+  <line x1="200" y1="400" x2="1100" y2="400" stroke-opacity="0.55"/>
+  <g stroke-opacity="0.4">
+    <line x1="200" y1="400" x2="200" y2="408"/>
+    <line x1="425" y1="400" x2="425" y2="408"/>
+    <line x1="650" y1="400" x2="650" y2="408"/>
+    <line x1="875" y1="400" x2="875" y2="408"/>
+    <line x1="1100" y1="400" x2="1100" y2="408"/>
+  </g>
+  <text x="200" y="425" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6" text-anchor="middle">week 0</text>
+  <text x="425" y="425" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6" text-anchor="middle">13</text>
+  <text x="650" y="425" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6" text-anchor="middle">26</text>
+  <text x="875" y="425" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6" text-anchor="middle">39</text>
+  <text x="1100" y="425" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6" text-anchor="middle">52</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

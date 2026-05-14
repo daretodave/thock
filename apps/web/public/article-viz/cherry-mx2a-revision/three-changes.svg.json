@@ -1,0 +1,20 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T09:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "cherry-mx2a-revision",
+  "article_pillar": "deep-dives",
+  "section_anchor": "what-mx2a-actually-changed",
+  "brief_summary": "Switch cross-section diagram for the H2 'What MX2A actually changed'. Three bordeaux-numbered callouts on the right margin point to the three internal changes: (1) tighter stem rails picked out in bordeaux dotted dashes, (2) factory grease ring at the stem-housing seam as a bordeaux dot-band, (3) retuned spring with bordeaux tinting on the end coils. Each callout includes the change name and a one-line note pulled directly from the article body.",
+  "target": "apps/web/public/article-viz/cherry-mx2a-revision/three-changes.svg",
+  "splash_color": { "name": "bordeaux", "oklch": "oklch(0.62 0.13 25)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "cherry-mx2a-revision.mdx § 'What MX2A actually changed' — 'stem and housing rails were retooled with tighter tolerances ... Cherry introduced a factory grease ring around the stem rails ... spring was retuned for the new internal geometry'"
+  ],
+  "outputs": ["apps/web/public/article-viz/cherry-mx2a-revision/three-changes.svg"],
+  "warnings": []
+}

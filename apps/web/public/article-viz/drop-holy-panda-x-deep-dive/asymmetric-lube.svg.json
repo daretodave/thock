@@ -1,0 +1,19 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T09:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "drop-holy-panda-x-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "the-factory-lube-the-engineering-decision",
+  "brief_summary": "Annotated cross-section for the H2 'The factory lube — the engineering decision'. Switch interior with two different lube treatments visible: sparse bordeaux dots on the bump face and stem legs (LIGHT), dense bordeaux dashed lines on the rail contacts (HEAVIER). Margin annotations explain each: 'LIGHT on bump face + stem legs / preserves tactile event' and 'HEAVIER on rail contacts / kills the Panda-clone scratch'. This is the asymmetry that makes the HPX work where older Pandas didn't.",
+  "target": "apps/web/public/article-viz/drop-holy-panda-x-deep-dive/asymmetric-lube.svg",
+  "splash_color": { "name": "bordeaux", "oklch": "oklch(0.62 0.13 25)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans"],
+  "data_sources": [
+    "drop-holy-panda-x-deep-dive.mdx § 'The factory lube — the engineering decision' — 'The HPX is lubed light on the stem legs and the leaf-contact face — light enough that the tactile event is preserved with its full shape and acoustic presence — and slightly heavier on the rail contact between the stem and the housing. The rail lube kills the scratch that older Panda clones were notorious for; the light leaf-side lube preserves the bump.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/drop-holy-panda-x-deep-dive/asymmetric-lube.svg"],
+  "warnings": []
+}

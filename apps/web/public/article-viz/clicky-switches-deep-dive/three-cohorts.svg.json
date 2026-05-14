@@ -1,0 +1,19 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T09:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "clicky-switches-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "the-constituency-that-did-not-move",
+  "brief_summary": "Three-circle proportional diagram for 'The constituency that did not move'. Three amber-outlined circles sized to roughly reflect cohort population. Largest: Model M veterans (writers, programmers). Medium: first-time buyers. Smallest: streamers + specialty. The caption underneath summarizes: 'a small, durable market — enough for every major maker to ship multiple clicky SKUs in 2026.'",
+  "target": "apps/web/public/article-viz/clicky-switches-deep-dive/three-cohorts.svg",
+  "splash_color": { "name": "amber (article ochre)", "oklch": "oklch(0.78 0.10 80)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "clicky-switches-deep-dive.mdx § 'The constituency that did not move' — 'Touch-typists who learned on IBM Model M buckling-springs ... Mechanical-keyboard newcomers are the second cohort ... Streamers and specialty users are the smallest cohort and the loudest in voice.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/clicky-switches-deep-dive/three-cohorts.svg"],
+  "warnings": []
+}

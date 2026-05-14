@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Topre's two-event press — sharp dome collapse near the top, damped bottom-out at the floor</title>
+
+  <!-- Time axis (downstroke) -->
+  <line x1="100" y1="300" x2="1100" y2="300" stroke-opacity="0.55"/>
+  <text x="100" y="335" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">top of travel</text>
+  <text x="1100" y="335" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6" text-anchor="end">bottom-out</text>
+
+  <!-- Event 1: sharp dome collapse near top of travel — bordeaux focal -->
+  <text x="300" y="120" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">dome collapse</text>
+  <text x="300" y="138" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.85">sharp · audible · tactile</text>
+  <!-- Spike (sharp) -->
+  <path d="M 240 200 L 285 160 L 300 145 L 315 160 L 360 200" stroke="oklch(0.62 0.13 25)" stroke-width="3" stroke-opacity="0.95"/>
+  <circle cx="300" cy="145" r="6" fill="oklch(0.62 0.13 25)" stroke="oklch(0.62 0.13 25)"/>
+  <!-- secondary slight ring -->
+  <path d="M 290 200 L 300 178 L 310 200" stroke-opacity="0.45"/>
+
+  <!-- The travel between events is largely linear (governed by the progressive spring) -->
+  <line x1="360" y1="200" x2="820" y2="200" stroke-opacity="0.35" stroke-dasharray="4 6"/>
+  <text x="590" y="195" font-family="Newsreader, serif" font-size="15" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">linear travel · progressive spring</text>
+
+  <!-- Event 2: damped bottom-out — broader, lower, contained -->
+  <text x="900" y="120" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">bottom-out</text>
+  <text x="900" y="138" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.85">damped by dome flattening</text>
+  <!-- Broad rounded crest (damped) -->
+  <path d="M 820 200 C 860 200 870 170 900 170 C 930 170 940 200 980 200" stroke-width="2.5" stroke-opacity="0.95"/>
+  <path d="M 820 200 C 860 200 870 170 900 170 C 930 170 940 200 980 200 Z" fill="oklch(0.62 0.13 25 / 0.08)" stroke="none"/>
+
+  <!-- Caption strip -->
+  <text x="600" y="380" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.8">two acoustic events on a Topre press; only the first is sharp</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

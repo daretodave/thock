@@ -1,0 +1,19 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T09:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "topre-electrocapacitive-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "the-architecture-precisely",
+  "brief_summary": "Four-layer Topre stack cross-section. Top to bottom: (1) slider engaging MX-compatible stem, (2) rubber dome moulded into a sheet (with bordeaux note 'NOT the sensor'), (3) conical spring with bottom coil bordeaux-emphasized, (4) capacitive PCB pad as a bordeaux circular trace. Numbered margin callouts on the left. Right-margin callout 'no make, no break / a number that crosses a threshold'.",
+  "target": "apps/web/public/article-viz/topre-electrocapacitive-deep-dive/architecture.svg",
+  "splash_color": { "name": "bordeaux (dusty-rose)", "oklch": "oklch(0.62 0.13 25)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "topre-electrocapacitive-deep-dive.mdx § 'The architecture, precisely' — 'A Topre key position has four parts stacked vertically. At the bottom is the PCB, with a printed circular trace at every key position that functions as one plate of a capacitor. Sitting on the PCB at each position is a small conical spring ... Above the spring is a rubber dome ... Above the dome is a plastic slider that engages a standard MX-compatible stem.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/topre-electrocapacitive-deep-dive/architecture.svg"],
+  "warnings": []
+}

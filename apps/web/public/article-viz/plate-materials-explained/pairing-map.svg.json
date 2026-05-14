@@ -1,0 +1,19 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T09:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "plate-materials-explained",
+  "article_pillar": "deep-dives",
+  "section_anchor": "pairing-notes-that-hold-up-in-practice",
+  "brief_summary": "Four-row pairing map showing plate combinations the article endorses (three) and one to avoid (POM + gasket-mount, marked with a bordeaux X). Each row reads: [plate name + modulus] + [mount/foam] + [switch type] → [verdict in bordeaux]. Rows: brass + foam + PE sheet → 'controlled brass'; FR4 + clack-forward switch + Cherry profile → 'let the switch sing'; PC + gasket-mount + thock switch → 'deep thock'; POM + gasket-mount → 'be careful — dead board'.",
+  "target": "apps/web/public/article-viz/plate-materials-explained/pairing-map.svg",
+  "splash_color": { "name": "bordeaux", "oklch": "oklch(0.62 0.13 25)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "plate-materials-explained.mdx § 'Pairing notes that hold up in practice' — 'Brass plate plus heavy case foam plus PE-foam switch sheet is the classic controlled brass build ... FR4 plate plus a clack-forward switch ... is the let the switch sing build ... Polycarbonate plate plus gasket-mount plus a thock-forward switch ... is the deep thock default ... POM plate plus gasket-mount is the combination to be careful with.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/plate-materials-explained/pairing-map.svg"],
+  "warnings": []
+}

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>The HPX's asymmetric factory lube — light on the bump face, slightly heavier on rail contacts</title>
+
+  <!-- Bordeaux wash inside the switch -->
+  <ellipse cx="600" cy="340" rx="200" ry="170" fill="oklch(0.62 0.13 25 / 0.07)" stroke="none"/>
+
+  <!-- Keycap mount post -->
+  <g>
+    <path d="M 580 130 L 620 130 L 620 160 L 580 160 Z" stroke-opacity="0.85"/>
+  </g>
+
+  <!-- Top housing -->
+  <g>
+    <path d="M 470 160 L 730 160 L 730 185 L 760 275 L 440 275 L 470 185 Z"/>
+    <path d="M 565 160 L 635 160 L 635 180 L 565 180 Z" stroke-opacity="0.55"/>
+  </g>
+
+  <!-- Stem with bump face on left flank -->
+  <g>
+    <path d="M 565 180 L 635 180 L 635 410 L 565 410 Z"/>
+    <line x1="600" y1="200" x2="600" y2="395" stroke-opacity="0.4"/>
+    <!-- bump face on left flank -->
+    <path d="M 565 290 C 555 295 555 315 565 320" stroke-opacity="0.8"/>
+    <!-- skirt -->
+    <path d="M 565 390 L 545 418 L 545 450 L 655 450 L 655 418 L 635 390" stroke-opacity="0.85"/>
+  </g>
+
+  <!-- LIGHT lube on stem legs + bump face (small bordeaux dots, sparse) -->
+  <g fill="oklch(0.62 0.13 25 / 0.7)" stroke="none">
+    <!-- on the bump face -->
+    <circle cx="558" cy="298" r="2"/>
+    <circle cx="558" cy="305" r="2"/>
+    <circle cx="558" cy="312" r="2"/>
+    <!-- on inner stem legs -->
+    <circle cx="595" cy="250" r="2"/>
+    <circle cx="605" cy="260" r="2"/>
+    <circle cx="595" cy="350" r="2"/>
+    <circle cx="605" cy="360" r="2"/>
+  </g>
+
+  <!-- HEAVIER lube on rail contacts (dense bordeaux dashed lines on stem flanks) -->
+  <g stroke="oklch(0.62 0.13 25)" stroke-opacity="0.95" stroke-width="3" stroke-dasharray="2 3">
+    <line x1="635" y1="190" x2="635" y2="385"/>
+    <line x1="565" y1="190" x2="565" y2="280"/>
+    <line x1="565" y1="335" x2="565" y2="385"/>
+  </g>
+
+  <!-- Spring -->
+  <g stroke-opacity="0.7">
+    <ellipse cx="600" cy="465" rx="32" ry="6"/>
+    <ellipse cx="600" cy="480" rx="32" ry="6"/>
+    <ellipse cx="600" cy="495" rx="32" ry="6"/>
+    <ellipse cx="600" cy="510" rx="32" ry="6"/>
+  </g>
+
+  <!-- Lower housing -->
+  <g>
+    <path d="M 440 450 L 760 450 L 745 555 L 455 555 Z"/>
+    <path d="M 545 450 L 655 450 L 650 525 L 550 525 Z" stroke-opacity="0.55"/>
+  </g>
+
+  <!-- LEFT MARGIN: "LIGHT on the bump face + legs" -->
+  <g stroke="oklch(0.62 0.13 25)" stroke-opacity="0.55">
+    <line x1="535" y1="305" x2="320" y2="305"/>
+    <path d="M 328 299 L 320 305 L 328 311"/>
+  </g>
+  <text x="310" y="280" font-family="IBM Plex Sans, sans-serif" font-size="18" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="end" font-weight="500">LIGHT</text>
+  <text x="310" y="302" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end">on bump face + stem legs</text>
+  <text x="310" y="323" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.65">preserves tactile event</text>
+
+  <!-- RIGHT MARGIN: "HEAVIER on rail contacts" -->
+  <g stroke="oklch(0.62 0.13 25)" stroke-opacity="0.55">
+    <line x1="660" y1="285" x2="870" y2="285"/>
+    <path d="M 862 279 L 870 285 L 862 291"/>
+  </g>
+  <text x="880" y="260" font-family="IBM Plex Sans, sans-serif" font-size="18" fill="oklch(0.62 0.13 25)" stroke="none" font-weight="500">HEAVIER</text>
+  <text x="880" y="282" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none">on rail contacts</text>
+  <text x="880" y="303" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">kills the Panda-clone scratch</text>
+
+  <!-- Theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

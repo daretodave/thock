@@ -21,6 +21,13 @@ That distinction has consequences in every part of the build, from the feel unde
 
 ## The architecture, precisely
 
+<InlineViz
+  src="/article-viz/topre-electrocapacitive-deep-dive/architecture.svg"
+  alt="Four-layer vertical cross-section of a Topre key position. Top: a small rectangular MX-compatible stem above a plastic slider (layer 1). Below the slider: a domed rubber sheet that extends to the housing edges (layer 2), labelled 'NOT the sensor' in bordeaux. Below the dome: a conical spring wound wider at the bottom (layer 3). Bottom: a circular bordeaux capacitive PCB pad with a concentric dashed inner trace (layer 4), labelled 'the sensor'. A right-margin callout reads 'no make, no break / a number that crosses a threshold'."
+  caption="Four parts, stacked. The dome is mechanical; the sensor is the spring-over-pad capacitive geometry. Calling Topre a 'rubber dome keyboard' confuses the two architectures."
+  accent="bordeaux"
+/>
+
 A Topre key position has four parts stacked vertically. At the bottom is the PCB, with a printed circular trace at every key position that functions as one plate of a capacitor. Sitting on the PCB at each position is a small conical spring — wound tighter at the bottom than at the top, which gives it its progressive force curve — and the bottom turn of the spring is in contact with the trace. Above the spring is a rubber dome, moulded into a sheet that covers the entire board; the dome collars over the spring and holds it upright. Above the dome is a plastic slider that engages a standard MX-compatible stem on the keycap side.
 
 When the user presses the keycap, the slider pushes the top of the rubber dome down. The dome resists, then collapses — the tactile event most Topre users describe as a "snap" near the top of the travel. With the dome collapsed, the slider is now pressing directly on the conical spring, which begins to compress against the PCB. As the spring compresses, the geometry of the wire coils sitting over the capacitive pad changes — more turns of wire are pressed closer to the pad, the local dielectric environment shifts, and the capacitance reading at that pad changes measurably. The controller scans every pad several hundred times a second, watches each reading, and reports an actuation when a reading crosses the per-board threshold.
@@ -28,6 +35,13 @@ When the user presses the keycap, the slider pushes the top of the rubber dome d
 The rubber dome is the part of this stack the casual reader gets wrong most often, because rubber domes are also what cheap membrane keyboards use, and the membrane-keyboard reputation drags the perception of Topre down with it. The two architectures share a part name and almost nothing else. A membrane keyboard's dome is the sensor — it carries a conductive pill on its underside that completes a circuit when the dome collapses. A Topre dome is not the sensor. It is a mechanical element: it holds the spring straight, it provides the tactile event, and it damps the bottom-out. The sensing happens below it, in the spring-and-pad capacitive geometry. Calling Topre a "rubber dome keyboard" is technically accurate and editorially misleading in roughly equal measure.
 
 ## Why the feel survives
+
+<InlineViz
+  src="/article-viz/topre-electrocapacitive-deep-dive/two-events.svg"
+  alt="Time-axis sonic schematic spanning top-of-travel to bottom-out. Near the top: a sharp bordeaux-emphasized spike with a focal dot, labelled 'dome collapse — sharp, audible, tactile'. A dashed near-linear segment across the middle labelled 'linear travel · progressive spring'. At the right end: a broad rounded crest with a bordeaux wash, labelled 'bottom-out — damped by dome flattening'."
+  caption="Two events per press, only the first sharp. The dome carries the tactile information; the spring's progressive curve resolves to a damped strike."
+  accent="bordeaux"
+/>
 
 The tactile event on a Topre sits earlier in the travel than on most MX tactiles. The dome collapses near the top of the press, well before the spring has compressed enough to actuate, and the collapse itself is sharper than the bump on a Boba U4T or a Holy Panda derivative — it is closer in character to a buckling-spring snap than to a rounded MX tactile bump. After the dome collapses, the remaining travel is essentially linear, governed by the conical spring's progressive force curve. That curve gets stiffer as the spring compresses, so the bottom-out is met by an increasing resistance rather than a wall.
 

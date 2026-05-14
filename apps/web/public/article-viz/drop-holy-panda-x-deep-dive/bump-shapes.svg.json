@@ -1,0 +1,19 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T09:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "drop-holy-panda-x-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "the-rounded-bump-geometrically",
+  "brief_summary": "Three-panel glyph strip for the H2 'The rounded bump, geometrically'. Each panel sketches one tactile bump shape on a baseline. Panel 1 'sharp' — narrow spike (Cherry MX Brown). Panel 2 'D-shaped' — steep climb, flat plateau, steep drop (Boba U4T, Tecsee Sapphire). Panel 3 'rounded' — bordeaux-emphasized smooth arc with a coral wash and focal dot, blending into a falling curve that meets the baseline at the bottom-out (Holy Panda lineage / Drop HPX). The visual argument matches the article body: the HPX is geometrically different, not just a spec variant.",
+  "target": "apps/web/public/article-viz/drop-holy-panda-x-deep-dive/bump-shapes.svg",
+  "splash_color": { "name": "bordeaux", "oklch": "oklch(0.62 0.13 25)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "drop-holy-panda-x-deep-dive.mdx § 'The rounded bump, geometrically' — 'A Cherry MX Brown delivers what bench testers call a sharp bump ... A Boba U4T or a Tecsee Sapphire delivers a D-shaped bump ... The Holy Panda lineage delivers neither. The rounded bump on a Halo-derived stem is a smooth, symmetric arc — gentler entry than the U4T, longer dwell than the Brown, and a fall-off that blends into the bottom-out rather than dropping off cleanly first.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/drop-holy-panda-x-deep-dive/bump-shapes.svg"],
+  "warnings": []
+}
