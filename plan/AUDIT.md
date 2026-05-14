@@ -196,7 +196,7 @@
 - elements: `<span className="font-mono uppercase tracking-[0.08em] text-micro text-text-3">{category}</span>` in `TrendingTile.tsx:74` — renders the category label (switch, keycap, layout, vendor, brand) at 12px with text-text-3 which fails 4.5:1 AA threshold
 - root cause: text-text-3 (`oklch(0.55 0.006 250)`) against `--thock-bg` (`oklch(0.175 0.006 250)`) fails WCAG AA at 12px. Same root cause as the recently-drained series (footer tagline, byline metadata, attribution link).
 
-### [a11y] [7.2] article page rail section headings — text-micro text-text-3 fails WCAG AA contrast (all article pages)
+### [x] [a11y] [7.2] article page rail section headings — text-micro text-text-3 fails WCAG AA contrast (all article pages) — addressed in 9f857d5 (closes #95)
 - issue: #95
 - category: a11y
 - filed: 2026-05-14 by cloud /iterate audit (Phase B drain)
@@ -208,6 +208,7 @@
 - pages: /article/* (all article pages)
 - elements: `<h2 className="font-mono uppercase tracking-[0.12em] text-micro text-text-3">Keep reading</h2>` in `RelatedArticlesRail.tsx:23`; `<h2 className="font-mono uppercase tracking-[0.12em] text-micro text-text-3">Build sheet</h2>` in `MentionedPartsRail.tsx:43`
 - root cause: text-text-3 (`oklch(0.55 0.006 250)`) fails WCAG AA 4.5:1 at 12px against `--thock-bg`. Same root cause as the previously-drained series (footer tagline, byline metadata, TrendingTile category label).
+> **Resolved (2026-05-14):** Swapped text-text-3 → text-text-2 on both h2 elements. Added data-testid="related-articles-heading" and data-testid="mentioned-parts-heading" for targeted regression guards. Two new guards in apps/e2e/tests/a11y.spec.ts assert zero color-contrast violations on both heading selectors on /article/gateron-oil-king-deep-dive. 580 e2e green (+2 from new guards). Remaining Phase B candidates noted in a11y Phase A warnings: figcaptions (text-small text-text-3), search label (text-micro text-text-3), GroupBuysWidget section label, TrackerArchiveStrip "latest" + flat count — deferred to subsequent ticks. `9f857d5`
 
 ### [MED] Lighthouse CI — phase 17 follow-up (path locked 2026-05-11 via /oversight; cloud-blocked on workflows-permission 2026-05-13)
 - issue: #85
