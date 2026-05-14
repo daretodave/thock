@@ -237,7 +237,7 @@
 - root cause: text-text-3 (`oklch(0.55 0.006 250)`) against `--thock-bg` fails WCAG AA 4.5:1 at 12px. Same root cause as the recently-drained series (#91–#95: footer tagline, byline metadata, attribution link, TrendingTile category label, rail section headings).
 > **Resolved (2026-05-14):** Swapped text-text-3 → text-text-2 on `GroupBuysWidget.tsx:79`. Added `data-testid="widget-kicker"` for targeted regression guard. New regression guard in `apps/e2e/tests/a11y.spec.ts` scopes `AxeBuilder.include('[data-testid="widget-kicker"]')` on `/` and asserts zero `color-contrast` violations. 581 e2e green (+1 guard). Remaining Phase B candidates: figcaptions (`text-small text-text-3`), search label (`text-micro text-text-3`), GroupBuyRow/group-buys-page metadata, TrackerTable column headers, TrackerArchiveStrip "latest" + flat count — deferred to subsequent ticks. `9cc6048`
 
-### [a11y] [7.2] article figcaptions — text-small text-text-3 fails WCAG AA contrast on all article pages with diagrams
+### [x] [a11y] [7.2] article figcaptions — text-small text-text-3 fails WCAG AA contrast on all article pages with diagrams — addressed in 531937e (closes #98)
 - issue: #98
 - category: a11y
 - filed: 2026-05-14 by cloud /iterate audit (Phase B drain — axe scan confirmed during verify gate run)
@@ -249,6 +249,7 @@
 - pages: /article/* (all article pages with InlineViz or KeyboardImage components with captions)
 - elements: `<figcaption class="mt-2 font-serif italic text-small text-text-3">` in both InlineViz.tsx:190 and KeyboardImage.tsx:35
 - root cause: text-text-3 (oklch(0.55 0.006 250)) against --thock-bg fails WCAG AA 4.5:1 at 14px (text-small). Same root cause as the recently-drained series (#91–#97). Axe surfaced this during the verify gate run for the Lighthouse CI attempt.
+> **Resolved (2026-05-14):** Swapped text-text-3 → text-text-2 on both figcaption elements (InlineViz.tsx:190 and KeyboardImage.tsx:35). Added data-testid="article-figcaption" to both for regression guard scoping. Regression guard in apps/e2e/tests/a11y.spec.ts asserts zero color-contrast violations on [data-testid="article-figcaption"] on /article/gateron-oil-king-deep-dive. 584 e2e green (+1 guard). Remaining Phase B candidates: search label (text-micro text-text-3 on /search), GroupBuyRow kind/region/metadata (text-micro text-text-3 on /group-buys + /group-buys/past), text-down on tracker sparklines, TagChip category opacity context. `531937e`
 
 ### [MED] Lighthouse CI — phase 17 follow-up (path locked 2026-05-11 via /oversight; cloud-blocked on workflows-permission 2026-05-13)
 - issue: #85
