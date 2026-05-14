@@ -87,17 +87,14 @@ export function ButtondownForm({
         />
       </div>
       <p
-        className={
-          isFooter
-            ? 'font-mono text-micro uppercase tracking-[0.08em] text-text-4'
-            : 'font-mono text-micro uppercase tracking-[0.08em] text-text-4'
-        }
+        data-testid="newsletter-form-attribution"
+        className="font-mono text-micro uppercase tracking-[0.08em] text-text-2"
       >
         <a
           href={REFER}
           target="_blank"
           rel="noopener"
-          className="hover:text-text-3"
+          className="hover:text-text"
         >
           Powered by Buttondown.
         </a>

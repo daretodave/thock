@@ -270,6 +270,40 @@ test('color-contrast — newsletter form label (regression guard)', async ({ pag
   expect(contrast, formatViolations(contrast)).toHaveLength(0)
 })
 
+// Regression guard: color-contrast on the "Powered by Buttondown." attribution
+// link drained by this tick — text-text-4 at text-micro (12px) swapped to
+// text-text-2. Scoped to data-testid="newsletter-form-attribution" on both
+// home (footer variant) and /newsletter (full variant).
+test('color-contrast — newsletter form attribution (footer, regression guard)', async ({
+  page,
+}) => {
+  await page.goto('/')
+  await page.waitForLoadState('networkidle')
+
+  const results = await new AxeBuilder({ page })
+    .withTags(WCAG_TAGS)
+    .include('[data-testid="newsletter-form-attribution"]')
+    .analyze()
+
+  const contrast = results.violations.filter((v) => v.id === 'color-contrast')
+  expect(contrast, formatViolations(contrast)).toHaveLength(0)
+})
+
+test('color-contrast — newsletter form attribution (full page, regression guard)', async ({
+  page,
+}) => {
+  await page.goto('/newsletter')
+  await page.waitForLoadState('networkidle')
+
+  const results = await new AxeBuilder({ page })
+    .withTags(WCAG_TAGS)
+    .include('[data-testid="newsletter-form-attribution"]')
+    .analyze()
+
+  const contrast = results.violations.filter((v) => v.id === 'color-contrast')
+  expect(contrast, formatViolations(contrast)).toHaveLength(0)
+})
+
 // Regression guard: skip link is present and targets a valid id="main" element.
 // Phase A ships this as a hard assertion because the skip link is fixed in
 // the same commit (no longer needs Phase B discovery).
