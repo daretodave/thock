@@ -192,7 +192,8 @@
 - once fixed: add targeted contrast assertion to a11y.spec.ts
 > **Resolved (2026-05-13):** Swapped `text-text-3` → `text-text-2` on the three specific elements the discovery pass identified: `apps/web/src/components/tracker/TrackerHeader.tsx:43` ("YYYY · week") and `:49` ("of 52") in the tracker week-block; `apps/web/src/app/tag/[slug]/page.tsx:127` ("← all tags" back link, `hover:text-text` preserved). The 25+ other `text-text-3 + text-micro` occurrences across the codebase were NOT in this row's scope — the discovery pass didn't flag them and any wider treatment is a separate audit-time decision. Two new regression-guard `test()`s in `apps/e2e/tests/a11y.spec.ts` run `AxeBuilder.include()` scoped to `[data-testid="tracker-week-block"]` and `[data-testid="tag-page-back-link"]` and assert zero `color-contrast` violations on each — locks the substitution in. Cloud /iterate drain.
 
-### [a11y] [2.5] link-in-text-block — /about body links use color only (no underline or other non-color indicator)
+### [x] [a11y] [2.5] link-in-text-block — /about body links use color only (no underline or other non-color indicator) — addressed in pending commit (this tick — cloud /iterate drain)
+- issue: #88
 - filed: 2026-05-11 by Phase 26 axe discovery pass
 - wcag: 1.4.1 Use of Color (A) — links must not be distinguished from surrounding text by color alone
 - axe impact: serious
@@ -202,6 +203,7 @@
 - action: scoped fix — in `/about`'s body component, apply `underline` to inline prose links, OR add a `prose-a:underline` helper class on the prose wrapper. Do NOT remove `text-decoration: none` globally (other link contexts like nav, card titles, etc. rely on it). Targeted scope: `apps/web/src/components/about/AboutBody.tsx`.
 - score: 2.5 (impact 4 — users who rely on non-color cues to identify links; ease 7 — one component class addition)
 - once fixed: add link-in-text-block assertion to a11y.spec.ts for /about
+> **Resolved (2026-05-14):** Added `underline decoration-accent/40 underline-offset-2 transition-colors hover:decoration-accent` to the 9 inline `<Link>` className strings in `apps/web/src/components/about/AboutBody.tsx` (single `replace_all` on the shared className pattern). The Tailwind utility overrides the global `a { text-decoration: none }` baseline. Subtle accent underline at 40% opacity + bumps to full accent on hover keeps the editorial restraint while restoring the non-color affordance. Two surfaces left untouched on purpose: nav, card titles, and other top-level link contexts that rely on the no-underline baseline. New regression guard in `apps/e2e/tests/a11y.spec.ts` scopes `AxeBuilder.include('[data-testid="about-body"]')` on `/about` and asserts zero `link-in-text-block` violations. 569 e2e green serially. Cloud /iterate drain.
 
 ### [x] [5.25] ideas pillar — 3 of 8 article quota (needs 5 more) — addressed in 1c08aa9 (closes #53)
 - category: content-gaps

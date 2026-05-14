@@ -165,6 +165,25 @@ test('color-contrast — article hero eyebrow (regression guard)', async ({ page
   expect(contrast, formatViolations(contrast)).toHaveLength(0)
 })
 
+// Regression guard: WCAG 1.4.1 link-in-text-block on /about body drained by
+// audit row [a11y][2.5] — inline body links gained `underline` so they no
+// longer rely on color alone. Scoped axe pass on the `about-body` container
+// asserts zero `link-in-text-block` violations.
+test('link-in-text-block — /about body links (regression guard)', async ({ page }) => {
+  await page.goto('/about')
+  await page.waitForLoadState('networkidle')
+
+  const results = await new AxeBuilder({ page })
+    .withTags(WCAG_TAGS)
+    .include('[data-testid="about-body"]')
+    .analyze()
+
+  const linkInText = results.violations.filter(
+    (v) => v.id === 'link-in-text-block',
+  )
+  expect(linkInText, formatViolations(linkInText)).toHaveLength(0)
+})
+
 // Regression guard: skip link is present and targets a valid id="main" element.
 // Phase A ships this as a hard assertion because the skip link is fixed in
 // the same commit (no longer needs Phase B discovery).
