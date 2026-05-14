@@ -40,13 +40,14 @@
 - verify note: 433 e2e green parallel — no #418 flake this run.
 - source: browser
 
-### [MED] /tag/gmk — single article on a brand-tag landing that the corpus's GMK footprint should fill
+### [x] [MED] /tag/gmk — single article on a brand-tag landing that the corpus's GMK footprint should fill — self-resolved (this tick — cloud /iterate audit close-out)
 - pass: 11 (commit 931c8a7)
 - viewport: both
 - category: content-gap
 - observation: /tag/gmk renders "1 article tagged GMK" — Prussian Alert is the only one. For a fresh reader arriving from a Google search for "GMK Prussian Alert" or following a `#gmk` chip from the homepage trending strip, the tag page sets an expectation of a brand hub and delivers a stub. The corpus's actual GMK footprint includes 3 live GMK CYL group buys without companion articles (GREG 2, Ishtar R2, King of the Seas) — the brand-tag underrepresentation will self-resolve as the content-velocity loop ships those companions (each will carry `gmk` in the frontmatter tags). File as a "watch and drain via companion shipping" row; no immediate iterate action needed unless the loop wants to backfill `gmk` on the Mode Sonnet R2 companion or adjacent pieces.
 - evidence: rendered text on /tag/gmk: lede "1 article tagged GMK." Single archive card. Frontmatter grep across `apps/web/src/content/articles/*.mdx` for `gmk` in tags: only `gmk-cyl-prussian-alert.mdx`. `data/group-buys/` lists 3 GMK CYL records with `status: live`.
 - suggested fix: prefer GMK CYL group-buy companion shipping for the next 2–3 News pillar shipping ticks so /tag/gmk fills naturally to ≥4. No direct fix; track via this row.
+- resolution: filled to 4 GMK-tagged articles per pass-11 quota target. Three GMK CYL companions shipped in the window after pass 11 (`931c8a7`, 2026-05-10): `cce9443` GREG 2 (2026-05-10), `e23b4d5` King of the Seas (2026-05-10), `5761a67` Ishtar R2 (2026-05-11) — each carries `gmk` in `tags:` frontmatter. Verified by `grep -lE "tags:\s*\[.*\bgmk\b" apps/web/src/content/articles/*.mdx | wc -l` → 4 (Prussian Alert + the 3 CYL companions). /tag/gmk now renders a brand hub, not a stub. No further companion shipping needed for this row; tracking complete.
 - source: browser
 
 ### [x] [LOW] /article/cannonkeys-nyawice-group-buy — body uses "the W19 movement score" (internal-dashboard taxonomy leak)
