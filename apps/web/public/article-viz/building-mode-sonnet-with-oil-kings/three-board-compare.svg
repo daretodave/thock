@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Oil Kings in three different cases — Bakeneko65, Geon Frog, and Mode Sonnet — on the feel-and-sound spectrum</title>
+
+  <!-- Spectrum -->
+  <line x1="150" y1="270" x2="1050" y2="270" stroke-opacity="0.5"/>
+  <path d="M 158 262 L 150 270 L 158 278" stroke-opacity="0.5"/>
+  <path d="M 1042 262 L 1050 270 L 1042 278" stroke-opacity="0.5"/>
+
+  <text x="150" y="298" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">brighter · more articulate</text>
+  <text x="1050" y="298" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">deeper · softer</text>
+
+  <!-- Bakeneko65 - left -->
+  <g>
+    <rect x="180" y="170" width="200" height="90" rx="8" stroke-opacity="0.65"/>
+    <text x="280" y="200" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Bakeneko65</text>
+    <text x="280" y="225" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">unibody integrated</text>
+    <text x="280" y="245" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">slightly metallic</text>
+    <circle cx="280" cy="270" r="8" fill="none" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.7" stroke-width="2.5"/>
+  </g>
+
+  <!-- Geon Frog - middle -->
+  <g>
+    <rect x="500" y="170" width="200" height="90" rx="8" stroke-opacity="0.65"/>
+    <text x="600" y="200" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Geon Frog</text>
+    <text x="600" y="225" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">stiffer top-mount</text>
+    <text x="600" y="245" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">more articulate</text>
+    <circle cx="600" cy="270" r="8" fill="none" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.7" stroke-width="2.5"/>
+  </g>
+
+  <!-- Sonnet — right, bordeaux emphasis -->
+  <g>
+    <rect x="820" y="170" width="200" height="90" rx="8" fill="oklch(0.62 0.13 25 / 0.12)" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.95" stroke-width="3"/>
+    <text x="920" y="200" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Mode Sonnet</text>
+    <text x="920" y="225" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">leaf gasket · soft mount</text>
+    <text x="920" y="245" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.95">deeper · half-octave lower</text>
+    <circle cx="920" cy="270" r="11" fill="oklch(0.62 0.13 25 / 0.25)" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.95" stroke-width="3"/>
+  </g>
+
+  <!-- Below the spectrum: feel notes -->
+  <text x="280" y="345" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">firm</text>
+  <text x="600" y="345" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">firm-to-medium</text>
+  <text x="920" y="345" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.95">softer · more comfortable</text>
+
+  <!-- Caption -->
+  <text x="600" y="430" font-family="Newsreader, serif" font-size="15" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">same switch, three different verdicts on the room</text>
+  <text x="600" y="460" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.95">the Sonnet is softer in feel and slightly muddier in sound — and more comfortable</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

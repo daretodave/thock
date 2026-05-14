@@ -1,0 +1,19 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T11:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "building-mode-sonnet-with-oil-kings",
+  "article_pillar": "ideas",
+  "section_anchor": "sound-check-post-build",
+  "brief_summary": "Three cards on a brighter-to-deeper sound spectrum, plotting the same Oil King switches in three different chassis. Left (warm-grey outline): Bakeneko65 (unibody integrated, slightly metallic). Middle: Geon Frog (stiffer top-mount, more articulate). Right (bordeaux-filled, focal): Mode Sonnet (leaf-gasket soft mount, deeper, half-octave lower). Spectrum dots scale with how far each lands toward the deeper end.",
+  "target": "apps/web/public/article-viz/building-mode-sonnet-with-oil-kings/three-board-compare.svg",
+  "splash_color": { "name": "bordeaux (terracotta)", "oklch": "oklch(0.62 0.13 25)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "building-mode-sonnet-with-oil-kings.mdx § 'Sound check, post-build' — 'Compared to the same switches in a Bakeneko65 built last summer, the Sonnet sounds about a half-octave lower and considerably less metallic. Compared to a Geon Frog with Oil Kings ... the Sonnet is softer in feel and slightly muddier in sound. The Frog is more articulate; the Sonnet is more comfortable.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/building-mode-sonnet-with-oil-kings/three-board-compare.svg"],
+  "warnings": []
+}

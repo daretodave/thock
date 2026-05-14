@@ -1,0 +1,20 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T11:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "switch-films-worth-it",
+  "article_pillar": "ideas",
+  "section_anchor": "where-the-mechanism-actually-matters",
+  "brief_summary": "Cross-section of a single MX-footprint switch with an amber-filled film band wedged into the seam between top and bottom housing. Stem visible internally; pins exiting the bottom. Bordeaux dashed wobble arrows on the top housing indicate the lateral play the film closes. Right-margin callout names the film material (POM 0.13mm or PORON). Caption: 'closes the seam · reduces wobble · changes nothing about the spring'.",
+  "target": "apps/web/public/article-viz/switch-films-worth-it/film-position.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "switch-films-worth-it.mdx § 'What switch films are and what they claim to do' — 'Switch films are thin, flat shims — typically 0.1–0.15mm thick — that sit in the seam between the top housing and bottom housing ... Films close the gap at the seam, which, in theory, reduces housing wobble, tightens the sound, and changes the feel.'",
+    "switch-films-worth-it.mdx § 'Does it actually change the sound or feel?' — 'For spring ping: no. Spring ping originates at the spring itself ... and the seam between top and bottom housing is not in the acoustic path of that resonance.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/switch-films-worth-it/film-position.svg"],
+  "warnings": []
+}

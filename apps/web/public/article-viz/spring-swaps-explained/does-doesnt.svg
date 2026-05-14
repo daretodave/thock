@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>What a spring swap controls and what it does not — three real levers versus four common misattributions</title>
+
+  <!-- Vertical divider -->
+  <line x1="600" y1="100" x2="600" y2="480" stroke-opacity="0.18"/>
+
+  <!-- LEFT: what it does -->
+  <text x="300" y="130" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">what the spring does control</text>
+
+  <g>
+    <rect x="90" y="160" width="420" height="80" rx="8" fill="oklch(0.68 0.165 28 / 0.10)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.95" stroke-width="2.5"/>
+    <text x="300" y="190" font-family="Newsreader, serif" font-size="17" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">initial force</text>
+    <text x="300" y="216" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">resistance at rest · what the finger first meets</text>
+  </g>
+
+  <g>
+    <rect x="90" y="260" width="420" height="80" rx="8" fill="oklch(0.68 0.165 28 / 0.10)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.95" stroke-width="2.5"/>
+    <text x="300" y="290" font-family="Newsreader, serif" font-size="17" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">bottom-out force</text>
+    <text x="300" y="316" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">total resistance at full compression</text>
+  </g>
+
+  <g>
+    <rect x="90" y="360" width="420" height="80" rx="8" fill="oklch(0.68 0.165 28 / 0.10)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.95" stroke-width="2.5"/>
+    <text x="300" y="390" font-family="Newsreader, serif" font-size="17" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">force curve shape</text>
+    <text x="300" y="416" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">linear · progressive · slow</text>
+  </g>
+
+  <!-- RIGHT: what it does not -->
+  <text x="900" y="130" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.95">what builders blame on the spring but isn't</text>
+
+  <!-- Each with a strikethrough -->
+  <g>
+    <rect x="690" y="160" width="420" height="60" rx="6" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.6" stroke-width="2" stroke-dasharray="5 5"/>
+    <text x="900" y="195" font-family="Newsreader, serif" font-size="16" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">smoothness</text>
+    <line x1="710" y1="195" x2="1090" y2="195" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.7" stroke-width="2"/>
+    <text x="900" y="215" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">stem rails · lube · housing fit</text>
+  </g>
+
+  <g>
+    <rect x="690" y="232" width="420" height="60" rx="6" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.6" stroke-width="2" stroke-dasharray="5 5"/>
+    <text x="900" y="267" font-family="Newsreader, serif" font-size="16" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">sound profile</text>
+    <line x1="710" y1="267" x2="1090" y2="267" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.7" stroke-width="2"/>
+    <text x="900" y="287" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">housing · stem · case stack</text>
+  </g>
+
+  <g>
+    <rect x="690" y="304" width="420" height="60" rx="6" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.6" stroke-width="2" stroke-dasharray="5 5"/>
+    <text x="900" y="339" font-family="Newsreader, serif" font-size="16" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">scratch</text>
+    <line x1="710" y1="339" x2="1090" y2="339" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.7" stroke-width="2"/>
+    <text x="900" y="359" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">always there — heavier spring just makes it audible</text>
+  </g>
+
+  <g>
+    <rect x="690" y="376" width="420" height="60" rx="6" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.6" stroke-width="2" stroke-dasharray="5 5"/>
+    <text x="900" y="411" font-family="Newsreader, serif" font-size="16" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">spring ping</text>
+    <line x1="710" y1="411" x2="1090" y2="411" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.7" stroke-width="2"/>
+    <text x="900" y="431" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">metallurgy + lube, not weight</text>
+  </g>
+
+  <!-- Caption -->
+  <text x="600" y="510" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">three real levers; everything else is something opening the switch did</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

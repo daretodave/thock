@@ -1,0 +1,20 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T11:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "spring-swaps-explained",
+  "article_pillar": "ideas",
+  "section_anchor": "when-the-swap-is-the-right-answer",
+  "brief_summary": "Two-column diagnosis ledger. Left (coral solid borders, 'three valid diagnoses'): bottom-out hardness mismatch, initial-force fatigue, unusual stock weight in beloved housing. Right (bordeaux dashed borders, 'three wrong diagnoses'): wanting a different sound, hoping to fix scratch, buying full board untested. Each row has a one-line corrective action.",
+  "target": "apps/web/public/article-viz/spring-swaps-explained/diagnosis-tree.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "spring-swaps-explained.mdx § 'When the swap is the right answer' — 'The first is bottom-out hardness mismatch ... The second is initial-force fatigue ... The third is an unusual stock weight on a switch the builder otherwise loves'",
+    "spring-swaps-explained.mdx § 'When the swap is the wrong answer' — 'The clearest wrong answer is \"I want this switch to sound different\" ... The second wrong answer is \"this switch feels scratchy and maybe a different spring will fix it\" ... The third wrong answer ... is swapping springs across a full board without testing on a few switches first.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/spring-swaps-explained/diagnosis-tree.svg"],
+  "warnings": []
+}

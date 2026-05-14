@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Which switches benefit from films and which do not — five categories ranked by film payoff</title>
+
+  <!-- Title -->
+  <text x="600" y="100" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">whether films matter depends entirely on the switch</text>
+
+  <!-- Rows -->
+  <!-- Row 1 — high-wobble linears: yes -->
+  <g>
+    <text x="450" y="170" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.85">high-wobble linears (older Gateron, Akko)</text>
+    <rect x="470" y="155" width="60" height="28" rx="6" fill="oklch(0.78 0.10 80 / 0.30)" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="2.5"/>
+    <text x="500" y="174" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.95">yes</text>
+    <text x="550" y="174" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">audible seam rattle reduction</text>
+  </g>
+
+  <!-- Row 2 — high-tactile: worth trying -->
+  <g>
+    <text x="450" y="215" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.85">high-tactile (Holy Panda X, Boba U4T)</text>
+    <rect x="470" y="200" width="120" height="28" rx="6" fill="oklch(0.78 0.10 80 / 0.20)" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.85" stroke-width="2"/>
+    <text x="530" y="219" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.85">worth trying</text>
+    <text x="610" y="219" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">lateral force makes seam work harder</text>
+  </g>
+
+  <!-- Row 3 — Oil King: optional -->
+  <g>
+    <text x="450" y="260" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.85">Gateron Oil King</text>
+    <rect x="470" y="245" width="90" height="28" rx="6" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.55" stroke-width="2" stroke-dasharray="3 3"/>
+    <text x="515" y="264" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">optional</text>
+    <text x="580" y="264" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">modest · depends on tray tolerances</text>
+  </g>
+
+  <!-- Row 4 — Cherry MX2A: skip -->
+  <g>
+    <text x="450" y="305" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.85">Cherry MX2A (either weight)</text>
+    <rect x="470" y="290" width="60" height="28" rx="6" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.6" stroke-width="2" stroke-dasharray="4 4"/>
+    <text x="500" y="309" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.85">skip</text>
+    <text x="550" y="309" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">retooled — tolerances already tight</text>
+  </g>
+
+  <!-- Row 5 — Topre: incompatible -->
+  <g>
+    <text x="450" y="350" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.85">Topre / HHKB</text>
+    <rect x="470" y="335" width="120" height="28" rx="6" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.6" stroke-width="2" stroke-dasharray="4 4"/>
+    <text x="530" y="354" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.85">not applicable</text>
+    <text x="610" y="354" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">no seam in the same location</text>
+  </g>
+
+  <!-- Caption -->
+  <text x="600" y="420" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">test five or six switches before filming the rest of the tray</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

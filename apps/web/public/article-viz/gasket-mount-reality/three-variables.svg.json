@@ -1,0 +1,19 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T11:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "gasket-mount-reality",
+  "article_pillar": "ideas",
+  "section_anchor": "the-three-variables-that-determine-the-result",
+  "brief_summary": "Three amber-bordered cards naming the under-specified variables behind every 'gasket mount' label. Card 1: plate material with four bars (PC, POM, FR4, brass) growing wider as stiffness increases. Card 2: gasket durometer × thickness with thick-40A vs thin-70A rectangles indicating deflection range. Card 3: attachment count with a 4-dot and an 8-dot plate diagram side by side. Caption: 'two boards, identical gasket-mount label — three variables apart'.",
+  "target": "apps/web/public/article-viz/gasket-mount-reality/three-variables.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "gasket-mount-reality.mdx § 'The three variables that determine the result' — 'Plate material ... A PC plate on a gasket mount produces ... a deep, slightly muted thock ... A brass plate on the same mount produces a completely different result — tighter, more articulate, heavier ... Gasket hardness and thickness. Silicone gaskets have a Shore A durometer rating. A 40A gasket gives substantially more than a 70A gasket ... Attachment point count. A board with four gasket pads ... A board with eight or ten contact points limits lateral movement, stiffens the effective deflection ... This is the variable that low-cost gasket-mount designs compress on first'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gasket-mount-reality/three-variables.svg"],
+  "warnings": []
+}

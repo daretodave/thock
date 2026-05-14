@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Two diverging satisfaction curves over time — the test-optimal build peaks fast and fades; the daily-driver build plateaus and holds</title>
+
+  <!-- Axes -->
+  <line x1="120" y1="420" x2="1080" y2="420" stroke-opacity="0.55"/>
+  <line x1="120" y1="140" x2="120" y2="420" stroke-opacity="0.4"/>
+
+  <!-- X-axis labels -->
+  <text x="180" y="450" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.62 0.10 200)" stroke="none" text-anchor="middle" opacity="0.95">60s</text>
+  <text x="380" y="450" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">30 min</text>
+  <text x="600" y="450" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">2 hours</text>
+  <text x="800" y="450" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">4 hours</text>
+  <text x="1020" y="450" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">workday end</text>
+
+  <text x="600" y="478" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">time at the keyboard</text>
+
+  <!-- Y-axis label -->
+  <text x="100" y="160" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.55">satisfaction</text>
+
+  <!-- Test-optimal build — high early, then drops -->
+  <g>
+    <path d="M 130 360 C 160 230 180 180 220 175 C 260 175 300 220 340 270 C 420 340 500 380 600 395 C 720 410 850 415 1050 418" stroke="oklch(0.62 0.10 200)" stroke-opacity="0.95" stroke-width="3"/>
+    <!-- peak dot -->
+    <circle cx="220" cy="175" r="7" fill="oklch(0.62 0.10 200)" stroke="oklch(0.62 0.10 200)" stroke-opacity="0.95"/>
+    <text x="230" y="160" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.62 0.10 200)" stroke="none" opacity="0.95">test-optimal</text>
+    <text x="230" y="178" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">light, punchy, announces itself</text>
+  </g>
+
+  <!-- Daily driver — gentle, sustained -->
+  <g>
+    <path d="M 130 320 C 220 300 320 285 460 280 C 600 278 750 285 900 290 C 980 293 1030 296 1050 297" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.95" stroke-width="3"/>
+    <circle cx="1050" cy="297" r="7" fill="oklch(0.78 0.005 90 / 0.25)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.95" stroke-width="2.5"/>
+    <text x="930" y="335" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">daily driver</text>
+    <text x="930" y="353" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">disappears under the hand</text>
+  </g>
+
+  <!-- Gap area between the two curves (faint teal fill) -->
+  <path d="M 130 360 C 160 230 180 180 220 175 C 260 175 300 220 340 270 C 420 340 500 380 600 395 C 720 410 850 415 1050 418 L 1050 297 C 980 293 900 290 750 285 C 600 278 460 280 320 285 C 220 300 130 320 130 320 Z" fill="oklch(0.62 0.10 200 / 0.06)" stroke="none"/>
+
+  <!-- 60s slice highlight -->
+  <line x1="180" y1="140" x2="180" y2="420" stroke="oklch(0.62 0.10 200)" stroke-opacity="0.55" stroke-width="2" stroke-dasharray="4 4"/>
+  <text x="190" y="155" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.62 0.10 200)" stroke="none" opacity="0.95">test ends here</text>
+
+  <!-- Title -->
+  <text x="600" y="100" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">the test ends before the body has time to complain</text>
+
+  <!-- Caption -->
+  <text x="600" y="510" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">a sprint dressed up as a marathon</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

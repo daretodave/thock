@@ -1,0 +1,20 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T11:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "tape-mod",
+  "article_pillar": "ideas",
+  "section_anchor": "what-the-mod-is",
+  "brief_summary": "Top-down view of the back of a PCB. Four coral-filled horizontal strips applied in an even grid pattern; faint warm-grey rectangles indicate hot-swap socket positions that the strips work around. Right-margin callouts: '3–5 strips · painter's, not Kapton' and 'leave clear around hot-swap sockets'. Caption: 'an even grid across the surface that vibrates most freely'.",
+  "target": "apps/web/public/article-viz/tape-mod/strip-grid.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "tape-mod.mdx § 'What the mod is' — 'Apply three to five strips of painter's tape in an even grid across the back of the PCB — the component side, not the switch side.'",
+    "tape-mod.mdx § Callout 'Tape and hot-swap socket clearance' — 'Tape strips around the socket area, leaving the sockets clear, is the safer approach on boards with tall hot-swap sockets.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/tape-mod/strip-grid.svg"],
+  "warnings": []
+}

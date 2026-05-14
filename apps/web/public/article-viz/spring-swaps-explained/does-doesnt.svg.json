@@ -1,0 +1,20 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T11:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "spring-swaps-explained",
+  "article_pillar": "ideas",
+  "section_anchor": "what-the-spring-actually-controls",
+  "brief_summary": "Two-column ledger. Left (coral filled, 'what the spring does control'): three real levers — initial force, bottom-out force, force curve shape — each in its own card with a short gloss. Right (bordeaux dashed with strikethrough): four common misattributions — smoothness, sound profile, scratch, spring ping — each crossed out with a bordeaux line, with the actual cause noted below.",
+  "target": "apps/web/public/article-viz/spring-swaps-explained/does-doesnt.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "spring-swaps-explained.mdx § 'What the spring actually controls' — 'Three things. That is the whole list. Initial force ... Bottom-out force ... Force curve shape'",
+    "spring-swaps-explained.mdx § 'What the spring does not control' — 'Smoothness ... Sound profile signature ... Scratch ... Spring ping' with each attribution corrected"
+  ],
+  "outputs": ["apps/web/public/article-viz/spring-swaps-explained/does-doesnt.svg"],
+  "warnings": []
+}

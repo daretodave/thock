@@ -1,0 +1,19 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T11:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "pe-foam-mod",
+  "article_pillar": "ideas",
+  "section_anchor": "what-it-actually-does",
+  "brief_summary": "Side-by-side cross-section diptych. Left ('before · empty cavity'): case with plate-PCB up top and a large empty air space below, with coral horizontal wave lines indicating cavity ring. Right ('after · PE foam interrupts the path'): same case with a coral-filled PE foam rectangle filling the same cavity space, labelled with the foam thickness and its closed-cell absorption note.",
+  "target": "apps/web/public/article-viz/pe-foam-mod/foam-position.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "pe-foam-mod.mdx § 'What it actually does' — 'In a keyboard with an empty cavity between the PCB and the case bottom ... keystroke energy travels through the PCB, into the air gap, and sets the case walls vibrating ... PE foam interrupts that path. The foam couples the PCB to the case bottom through a compliant layer rather than leaving the air gap open.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/pe-foam-mod/foam-position.svg"],
+  "warnings": []
+}

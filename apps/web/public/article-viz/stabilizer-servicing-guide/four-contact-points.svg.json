@@ -1,0 +1,21 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T11:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "stabilizer-servicing-guide",
+  "article_pillar": "ideas",
+  "section_anchor": "the-step-most-builders-skip",
+  "brief_summary": "Cross-section diagram of a stabilizer pair mounted to a PCB baseline. Two housing bodies with stems in bores, joined by a horizontal wire. Four numbered coral callouts identify the lubrication contact points: ① wire barrel, ② stem bore, ③ wire hook-in-slot, ④ housing feet — the feet are emphasized as the commonly skipped step. Each callout names the lube (dielectric grease vs GPL-205 G0) and the amount.",
+  "target": "apps/web/public/article-viz/stabilizer-servicing-guide/four-contact-points.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "stabilizer-servicing-guide.mdx § 'Why stabilizers rattle' — three sources: wire-into-barrel, stem-in-bore, wire-hook-in-stem-slot",
+    "stabilizer-servicing-guide.mdx § 'The step most builders skip' — fourth contact point: housing feet against PCB",
+    "stabilizer-servicing-guide.mdx § 'Lube selection' table — dielectric grease for barrel/hook/feet, GPL-205 G0 for stem bore and stem cylinder"
+  ],
+  "outputs": ["apps/web/public/article-viz/stabilizer-servicing-guide/four-contact-points.svg"],
+  "warnings": []
+}

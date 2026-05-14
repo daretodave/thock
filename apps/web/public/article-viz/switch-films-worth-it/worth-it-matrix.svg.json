@@ -1,0 +1,19 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T11:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "switch-films-worth-it",
+  "article_pillar": "ideas",
+  "section_anchor": "how-to-install-them",
+  "brief_summary": "Five-row payoff matrix. Each row pairs a switch category on the left with a small verdict chip on the right. Yes (amber, solid): high-wobble linears. Worth trying (amber, lighter): high-tactile switches. Optional (dashed amber): Oil King. Skip (bordeaux dashed): Cherry MX2A. Not applicable (bordeaux dashed): Topre / HHKB. Each row carries a short reason.",
+  "target": "apps/web/public/article-viz/switch-films-worth-it/worth-it-matrix.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "switch-films-worth-it.mdx § 'How to install them' (the recommendation table) — five rows: high-wobble linears (yes), high-tactile (worth trying), Oil King (optional), Cherry MX2A (skip), Topre/HHKB (not applicable)"
+  ],
+  "outputs": ["apps/web/public/article-viz/switch-films-worth-it/worth-it-matrix.svg"],
+  "warnings": []
+}

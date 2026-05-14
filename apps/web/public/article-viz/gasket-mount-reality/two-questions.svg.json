@@ -1,0 +1,20 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T11:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "gasket-mount-reality",
+  "article_pillar": "ideas",
+  "section_anchor": "what-to-look-for",
+  "brief_summary": "Two amber-bordered question cards side by side. Question 1: 'what's the gasket durometer?' (Shore A, 40 = soft, 70 = stiff). Question 2: 'how many attachment points?' (6+ is the floor worth the name). Captions surface the framing: a vendor that can't answer both is selling the category, not the implementation.",
+  "target": "apps/web/public/article-viz/gasket-mount-reality/two-questions.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "gasket-mount-reality.mdx § 'Where the label is doing marketing work' — 'The label is doing engineering work when the vendor can answer two questions: what is the gasket durometer, and how many attachment points does it use? Any vendor with an actual gasket-mount design has those numbers. A vendor that can't or won't provide them is selling the category rather than the implementation.'",
+    "gasket-mount-reality.mdx § 'What to look for' — 'A gasket-mount board worth the name has a PC or POM plate option, a gasket durometer the vendor will tell you, and at least six contact points.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gasket-mount-reality/two-questions.svg"],
+  "warnings": []
+}

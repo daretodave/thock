@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Where the tape mod helps and where it doesn't — three "yes" cases and three "no" cases</title>
+
+  <!-- Vertical divider -->
+  <line x1="600" y1="120" x2="600" y2="450" stroke-opacity="0.18"/>
+
+  <!-- LEFT: helps -->
+  <text x="300" y="140" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">helps most</text>
+
+  <g>
+    <rect x="90" y="170" width="420" height="70" rx="6" fill="oklch(0.68 0.165 28 / 0.10)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.95" stroke-width="2.5"/>
+    <text x="300" y="200" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.9">budget top-mount boards</text>
+    <text x="300" y="222" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">no gasket · no foam · plate sits on PCB</text>
+  </g>
+
+  <g>
+    <rect x="90" y="255" width="420" height="70" rx="6" fill="oklch(0.68 0.165 28 / 0.10)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.95" stroke-width="2.5"/>
+    <text x="300" y="285" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.9">first mod, before bigger investments</text>
+    <text x="300" y="307" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">baseline before PE foam, case foam, plate foam</text>
+  </g>
+
+  <g>
+    <rect x="90" y="340" width="420" height="70" rx="6" fill="oklch(0.68 0.165 28 / 0.10)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.95" stroke-width="2.5"/>
+    <text x="300" y="370" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.9">linears on hollow boards</text>
+    <text x="300" y="392" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">clean bottom-out lets the ring through</text>
+  </g>
+
+  <!-- RIGHT: doesn't help -->
+  <text x="900" y="140" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.95">doesn't help much</text>
+
+  <g>
+    <rect x="690" y="170" width="420" height="70" rx="6" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.6" stroke-width="2" stroke-dasharray="5 5"/>
+    <text x="900" y="200" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">gasket-mount boards</text>
+    <text x="900" y="222" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.95">isolation already in place</text>
+  </g>
+
+  <g>
+    <rect x="690" y="255" width="420" height="70" rx="6" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.6" stroke-width="2" stroke-dasharray="5 5"/>
+    <text x="900" y="285" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">already-foamed boards</text>
+    <text x="900" y="307" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.95">over-damping kills character</text>
+  </g>
+
+  <g>
+    <rect x="690" y="340" width="420" height="70" rx="6" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.6" stroke-width="2" stroke-dasharray="5 5"/>
+    <text x="900" y="370" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">polycarbonate or acrylic cases</text>
+    <text x="900" y="392" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.95">case material dominates the sound</text>
+  </g>
+
+  <!-- Caption -->
+  <text x="600" y="490" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">worth doing if you have tape and a hollow board · not worth buying tape for</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>When a spring swap is the right answer and when it isn't — three valid diagnoses and three wrong diagnoses</title>
+
+  <!-- Title -->
+  <text x="600" y="100" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">spring swap = a precision tool for one job</text>
+
+  <!-- Three right answers (coral) -->
+  <text x="300" y="155" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">three valid diagnoses</text>
+
+  <g>
+    <rect x="120" y="170" width="360" height="70" rx="6" fill="oklch(0.68 0.165 28 / 0.10)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.95" stroke-width="2.5"/>
+    <text x="300" y="197" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.9">bottom-out hardness mismatch</text>
+    <text x="300" y="220" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">fingertips ache by mid-afternoon → heavier or progressive</text>
+  </g>
+
+  <g>
+    <rect x="120" y="255" width="360" height="70" rx="6" fill="oklch(0.68 0.165 28 / 0.10)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.95" stroke-width="2.5"/>
+    <text x="300" y="282" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.9">initial-force fatigue</text>
+    <text x="300" y="305" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">first 30 fine, next 1000 a workout → lighter spring</text>
+  </g>
+
+  <g>
+    <rect x="120" y="340" width="360" height="70" rx="6" fill="oklch(0.68 0.165 28 / 0.10)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.95" stroke-width="2.5"/>
+    <text x="300" y="367" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.9">unusual stock weight in beloved housing</text>
+    <text x="300" y="390" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">return to conventional weight</text>
+  </g>
+
+  <!-- Three wrong answers (bordeaux, struck through) -->
+  <text x="900" y="155" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.95">three wrong diagnoses</text>
+
+  <g>
+    <rect x="720" y="170" width="360" height="70" rx="6" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.6" stroke-width="2" stroke-dasharray="5 5"/>
+    <text x="900" y="197" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">"I want this switch to sound different"</text>
+    <text x="900" y="220" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.95">tiny delta · housing is the lever, not the spring</text>
+  </g>
+
+  <g>
+    <rect x="720" y="255" width="360" height="70" rx="6" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.6" stroke-width="2" stroke-dasharray="5 5"/>
+    <text x="900" y="282" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">"a different spring might fix scratch"</text>
+    <text x="900" y="305" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.95">lube the rails or sell the switch</text>
+  </g>
+
+  <g>
+    <rect x="720" y="340" width="360" height="70" rx="6" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.6" stroke-width="2" stroke-dasharray="5 5"/>
+    <text x="900" y="367" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">"buy 110 of a new weight, untested"</text>
+    <text x="900" y="390" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.95">sample 8-10, type for days, then commit</text>
+  </g>
+
+  <!-- Caption -->
+  <text x="600" y="465" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">if the diagnosis is force, the swap is excellent — if it's anything else, time goes elsewhere</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

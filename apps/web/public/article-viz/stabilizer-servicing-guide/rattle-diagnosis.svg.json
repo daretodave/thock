@@ -1,0 +1,19 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T11:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "stabilizer-servicing-guide",
+  "article_pillar": "ideas",
+  "section_anchor": "diagnosing-rattle-after-servicing",
+  "brief_summary": "Three coral diagnosis cards for rattle that survives a service job. Card 1 (filled, 'most common'): housing feet skipped — fix is disassemble, grease feet, reinstall. Card 2 ('mechanical'): asymmetric wire legs — fix is flat-nose pliers to equalize legs. Card 3 ('lube quantity'): thin barrel application — fix is reapply just short of sluggish. Each card carries the symptom and the corrective action.",
+  "target": "apps/web/public/article-viz/stabilizer-servicing-guide/rattle-diagnosis.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "stabilizer-servicing-guide.mdx § 'Diagnosing rattle after servicing' — 'The housing feet were skipped. This is the most common cause of a subtle clunk that persists ... Wire leg length is asymmetric. One side of the key drops before the other ... Insufficient lube in the wire barrel. The dielectric grease can migrate away from the contact zone over time'"
+  ],
+  "outputs": ["apps/web/public/article-viz/stabilizer-servicing-guide/rattle-diagnosis.svg"],
+  "warnings": []
+}

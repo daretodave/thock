@@ -1,0 +1,20 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T11:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "building-mode-sonnet-with-oil-kings",
+  "article_pillar": "ideas",
+  "section_anchor": "why-this-pairing",
+  "brief_summary": "Exploded vertical stack of the build, top to bottom: GMK Striker R3 keycaps → 70× Oil King switches (bordeaux-filled, the focal layer) → polycarbonate plate → silicone leaf gasket (bordeaux strip) → PE foam → PCB with Staebies V3 → Poron foam → Mode Sonnet aluminum case. Right-margin contribution callouts ('supplies the weight', 'absorbs the sharpness'); left-margin balance callouts. Caption: 'plate absorbs the sharpness · switch supplies the weight'.",
+  "target": "apps/web/public/article-viz/building-mode-sonnet-with-oil-kings/build-stack.svg",
+  "splash_color": { "name": "bordeaux (terracotta)", "oklch": "oklch(0.62 0.13 25)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "building-mode-sonnet-with-oil-kings.mdx § 'Why this pairing' — 'The plate absorbs the sharpness; the switch supplies the weight ... the whole stack stops fighting itself.'",
+    "building-mode-sonnet-with-oil-kings.mdx § 'Build details' Callout — full layer-by-layer parts list: 1.5mm polycarbonate plate, Staebies V3 stabs, PE foam between plate and PCB, 2mm Poron under PCB, skipped case foam, GMK Striker R3 keycaps, 70× Oil King"
+  ],
+  "outputs": ["apps/web/public/article-viz/building-mode-sonnet-with-oil-kings/build-stack.svg"],
+  "warnings": []
+}

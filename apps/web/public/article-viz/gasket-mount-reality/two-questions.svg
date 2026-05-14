@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>The two questions any real gasket-mount vendor can answer — gasket durometer and attachment-point count</title>
+
+  <!-- Title -->
+  <text x="600" y="100" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">the two questions a real implementation can answer</text>
+
+  <!-- Question 1 -->
+  <g>
+    <rect x="120" y="160" width="460" height="180" rx="10" fill="oklch(0.78 0.10 80 / 0.10)" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="3"/>
+    <text x="350" y="200" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.95">question 1</text>
+    <text x="350" y="245" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">what's the gasket durometer?</text>
+    <text x="350" y="280" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">Shore A · 40 = soft · 70 = stiff</text>
+    <text x="350" y="305" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.95">an actual answer means an actual design</text>
+  </g>
+
+  <!-- Question 2 -->
+  <g>
+    <rect x="620" y="160" width="460" height="180" rx="10" fill="oklch(0.78 0.10 80 / 0.10)" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="3"/>
+    <text x="850" y="200" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.95">question 2</text>
+    <text x="850" y="245" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">how many attachment points?</text>
+    <text x="850" y="280" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">6+ is the floor worth the name</text>
+    <text x="850" y="305" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.95">below that, it's "softer than tray mount"</text>
+  </g>
+
+  <!-- Caption -->
+  <text x="600" y="390" font-family="Newsreader, serif" font-size="15" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">a vendor that can't answer both is selling the category, not the implementation</text>
+  <text x="600" y="420" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.95">PC or POM plate · durometer published · 6+ contact points</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

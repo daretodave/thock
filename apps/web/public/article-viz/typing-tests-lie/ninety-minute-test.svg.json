@@ -1,0 +1,19 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T11:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "typing-tests-lie",
+  "article_pillar": "ideas",
+  "section_anchor": "what-to-optimize-for-instead",
+  "brief_summary": "Left: clock face with teal hands marking the 90-minute setup, labelled 'real prose · not exercises'. Right: three teal-bordered cards listing the three things to notice — forearm condition, right pinky behavior, and the want-to-continue at minute 91. Caption: 'WPM is irrelevant · finishing-feel is everything'.",
+  "target": "apps/web/public/article-viz/typing-tests-lie/ninety-minute-test.svg",
+  "splash_color": { "name": "teal", "oklch": "oklch(0.62 0.10 200)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "typing-tests-lie.mdx § 'What to optimize for instead' — 'Type real prose for ninety minutes ... Then notice three things. Notice the forearm. Notice the right pinky. Notice whether the typist wants to keep going at minute ninety-one or wants to stop. That is the test. WPM is irrelevant; finishing-feel is everything.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/typing-tests-lie/ninety-minute-test.svg"],
+  "warnings": []
+}

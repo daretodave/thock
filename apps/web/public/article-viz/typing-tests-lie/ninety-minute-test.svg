@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>The counter-test — type real prose for ninety minutes and notice three things</title>
+
+  <!-- Title -->
+  <text x="600" y="100" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">the ninety-minute test</text>
+
+  <!-- Stopwatch / timer indicator -->
+  <g>
+    <circle cx="200" cy="280" r="80" stroke-opacity="0.6"/>
+    <path d="M 200 280 L 200 220" stroke="oklch(0.62 0.10 200)" stroke-opacity="0.95" stroke-width="3"/>
+    <path d="M 200 280 L 250 305" stroke="oklch(0.62 0.10 200)" stroke-opacity="0.95" stroke-width="2.5"/>
+    <text x="200" y="385" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.62 0.10 200)" stroke="none" text-anchor="middle" opacity="0.95">90 minutes</text>
+    <text x="200" y="405" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">real prose · not exercises</text>
+  </g>
+
+  <!-- Arrow → -->
+  <g stroke-opacity="0.5">
+    <line x1="300" y1="280" x2="380" y2="280"/>
+    <path d="M 372 272 L 380 280 L 372 288"/>
+  </g>
+
+  <!-- Three things to notice -->
+  <g>
+    <rect x="420" y="170" width="280" height="80" rx="8" fill="oklch(0.62 0.10 200 / 0.10)" stroke="oklch(0.62 0.10 200)" stroke-opacity="0.95" stroke-width="2.5"/>
+    <text x="560" y="200" font-family="Newsreader, serif" font-size="17" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">notice the forearm</text>
+    <text x="560" y="225" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">stiff? tense? sore?</text>
+  </g>
+
+  <g>
+    <rect x="420" y="260" width="280" height="80" rx="8" fill="oklch(0.62 0.10 200 / 0.10)" stroke="oklch(0.62 0.10 200)" stroke-opacity="0.95" stroke-width="2.5"/>
+    <text x="560" y="290" font-family="Newsreader, serif" font-size="17" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">notice the right pinky</text>
+    <text x="560" y="315" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">involuntary lift between enter and shift?</text>
+  </g>
+
+  <g>
+    <rect x="720" y="215" width="380" height="80" rx="8" fill="oklch(0.62 0.10 200 / 0.10)" stroke="oklch(0.62 0.10 200)" stroke-opacity="0.95" stroke-width="2.5"/>
+    <text x="910" y="245" font-family="Newsreader, serif" font-size="17" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">notice the want at minute 91</text>
+    <text x="910" y="270" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">keep going? or stop?</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="600" y="430" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.62 0.10 200)" stroke="none" text-anchor="middle" opacity="0.95">WPM is irrelevant · finishing-feel is everything</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Three common causes of stabilizer rattle that survive a full service job — and the fix for each</title>
+
+  <!-- Title -->
+  <text x="600" y="100" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">rattle still present? almost always one of three things</text>
+
+  <!-- Three diagnosis cards -->
+  <g>
+    <rect x="80" y="150" width="340" height="260" rx="10" fill="oklch(0.68 0.165 28 / 0.10)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.95" stroke-width="3"/>
+    <text x="250" y="185" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">most common</text>
+    <text x="250" y="220" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">housing feet skipped</text>
+    <text x="250" y="260" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">subtle clunk under the keystroke</text>
+    <text x="250" y="282" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">not on top of it</text>
+    <line x1="120" y1="320" x2="380" y2="320" stroke-opacity="0.25"/>
+    <text x="250" y="345" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">fix</text>
+    <text x="250" y="370" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.8">disassemble · grease feet · reinstall</text>
+    <text x="250" y="392" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">sound changes immediately</text>
+  </g>
+
+  <g>
+    <rect x="430" y="150" width="340" height="260" rx="10" fill="oklch(0.68 0.165 28 / 0.08)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.85" stroke-width="2.5"/>
+    <text x="600" y="185" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.85">mechanical</text>
+    <text x="600" y="220" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">asymmetric wire legs</text>
+    <text x="600" y="260" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">one side drops first</text>
+    <text x="600" y="282" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">rocking on every keystroke</text>
+    <line x1="470" y1="320" x2="730" y2="320" stroke-opacity="0.25"/>
+    <text x="600" y="345" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">fix</text>
+    <text x="600" y="370" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.8">flat-nose pliers · equalize legs</text>
+    <text x="600" y="392" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">tolerance is generous, not precise</text>
+  </g>
+
+  <g>
+    <rect x="780" y="150" width="340" height="260" rx="10" fill="oklch(0.68 0.165 28 / 0.08)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.85" stroke-width="2.5"/>
+    <text x="950" y="185" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.85">lube quantity</text>
+    <text x="950" y="220" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">thin barrel application</text>
+    <text x="950" y="260" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">grease migrated away</text>
+    <text x="950" y="282" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">from the contact zone</text>
+    <line x1="820" y1="320" x2="1080" y2="320" stroke-opacity="0.25"/>
+    <text x="950" y="345" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">fix</text>
+    <text x="950" y="370" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.8">reapply · just short of sluggish</text>
+    <text x="950" y="392" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">match-head per barrel as the floor</text>
+  </g>
+
+  <!-- Caption -->
+  <text x="600" y="470" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">after a correct service job, persistent rattle is not a switch problem</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

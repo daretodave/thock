@@ -1,0 +1,20 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T11:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "tape-mod",
+  "article_pillar": "ideas",
+  "section_anchor": "where-it-helps-most",
+  "brief_summary": "Two-column ledger. Left (coral solid, 'helps most'): budget top-mount boards, first mod before bigger investments, linears on hollow boards. Right (bordeaux dashed, 'doesn't help much'): gasket-mount boards, already-foamed boards, polycarbonate or acrylic cases. Each row carries the reason for its verdict.",
+  "target": "apps/web/public/article-viz/tape-mod/where-it-helps.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "tape-mod.mdx § 'Where it helps most' — 'Budget top-mount boards ... Stock boards before a bigger mod investment ... Linear switch builds where hollow resonance is unmasked'",
+    "tape-mod.mdx § 'Where it doesn't help much' — 'Gasket-mount boards ... Boards with extensive existing foam ... Fully polycarbonate or acrylic cases'"
+  ],
+  "outputs": ["apps/web/public/article-viz/tape-mod/where-it-helps.svg"],
+  "warnings": []
+}

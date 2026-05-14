@@ -1,0 +1,20 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T11:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "typing-tests-lie",
+  "article_pillar": "ideas",
+  "section_anchor": "tests-time-short-bursts-and-hide-endurance-fade",
+  "brief_summary": "Time-vs-satisfaction chart with two diverging curves. Teal: 'test-optimal' build peaks sharply at the 60-second mark and then drops away through 30 min, 2 hours, 4 hours, workday-end. Warm-grey: 'daily-driver' build starts a step lower but plateaus and holds across the day. A dashed teal vertical line marks where the typing test ends. Faint teal fill emphasizes the widening gap between the curves.",
+  "target": "apps/web/public/article-viz/typing-tests-lie/two-curves.svg",
+  "splash_color": { "name": "teal", "oklch": "oklch(0.62 0.10 200)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "typing-tests-lie.mdx § 'Tests don't punish micro-soreness' — 'A 67g spring on a long-pole linear feels punchy in a one-minute sprint and feels like a forearm complaint by 4 PM on a Wednesday'",
+    "typing-tests-lie.mdx § 'Tests time short bursts and hide endurance fade' — 'A sixty-second test ends before the typist's typing posture has degraded ... A keyboard that slowly degrades the typist's posture across an hour will return identical numbers to a keyboard that doesn't, on the test.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/typing-tests-lie/two-curves.svg"],
+  "warnings": []
+}

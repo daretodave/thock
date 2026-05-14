@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Which boards benefit most from PE foam — and which benefit least — ranked by the size of the audible delta</title>
+
+  <!-- Title -->
+  <text x="600" y="100" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">payoff varies by cavity</text>
+
+  <!-- Five horizontal rows showing benefit tier -->
+  <!-- Row 1: budget plastic — biggest benefit -->
+  <g>
+    <text x="320" y="170" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.85">budget plastic case</text>
+    <rect x="340" y="156" width="320" height="22" fill="oklch(0.68 0.165 28 / 0.40)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.95" stroke-width="2.5"/>
+    <text x="680" y="172" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.95">obvious on first keystroke</text>
+  </g>
+  <!-- Row 2: larger layouts -->
+  <g>
+    <text x="320" y="210" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.85">full-size / TKL with plastic bottom</text>
+    <rect x="340" y="196" width="260" height="22" fill="oklch(0.68 0.165 28 / 0.30)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.95" stroke-width="2.5"/>
+    <text x="620" y="212" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.95">more cavity = more payoff</text>
+  </g>
+  <!-- Row 3: hot-swap -->
+  <g>
+    <text x="320" y="250" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.85">hot-swap mid-range</text>
+    <rect x="340" y="236" width="220" height="22" fill="oklch(0.68 0.165 28 / 0.25)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.85" stroke-width="2"/>
+    <text x="580" y="252" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">zero-commitment to try</text>
+  </g>
+  <!-- Row 4: budget gasket -->
+  <g>
+    <text x="320" y="290" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.85">budget gasket-mount</text>
+    <rect x="340" y="276" width="160" height="22" fill="oklch(0.68 0.165 28 / 0.20)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.75" stroke-width="2"/>
+    <text x="520" y="292" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">adds a second isolation layer</text>
+  </g>
+  <!-- Row 5: well-engineered gasket / heavy aluminum -->
+  <g>
+    <text x="320" y="330" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.55">well-engineered gasket</text>
+    <rect x="340" y="316" width="60" height="22" fill="oklch(0.68 0.165 28 / 0.12)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.5" stroke-width="2" stroke-dasharray="3 3"/>
+    <text x="420" y="332" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">incremental at best</text>
+  </g>
+  <!-- Row 6: heavy aluminum -->
+  <g>
+    <text x="320" y="370" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.55">heavy aluminum, factory-foamed</text>
+    <rect x="340" y="356" width="30" height="22" fill="oklch(0.68 0.165 28 / 0.10)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.45" stroke-width="2" stroke-dasharray="3 3"/>
+    <text x="390" y="372" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.5">problem already solved in factory</text>
+  </g>
+
+  <!-- Axis -->
+  <line x1="340" y1="395" x2="680" y2="395" stroke-opacity="0.4"/>
+  <text x="510" y="420" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">→ audible delta (longer bar = bigger improvement)</text>
+
+  <!-- Caption -->
+  <text x="600" y="470" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">$2 mod · zero risk · reversible in five minutes</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

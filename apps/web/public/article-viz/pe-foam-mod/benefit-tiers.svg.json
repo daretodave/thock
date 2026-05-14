@@ -1,0 +1,19 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T11:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "pe-foam-mod",
+  "article_pillar": "ideas",
+  "section_anchor": "which-boards-benefit-most",
+  "brief_summary": "Six horizontal coral bars ranked by audible delta from biggest to smallest payoff: budget plastic case (longest, brightest coral) → full-size/TKL with plastic bottom → hot-swap mid-range → budget gasket-mount → well-engineered gasket (dashed, faint) → heavy aluminum factory-foamed (shortest, dashed). Each row carries a short qualifier. Caption: '$2 mod · zero risk · reversible in five minutes'.",
+  "target": "apps/web/public/article-viz/pe-foam-mod/benefit-tiers.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "pe-foam-mod.mdx § 'Which boards benefit most' — 'Budget plastic cases ... makes a noticeable difference that is immediately obvious on first keystroke. Larger layouts ... More cavity means more resonance potential. TKL boards sit between those poles ... Hot-swap boards ... zero-commitment ... Gasket-mount boards. These already isolate the plate from the case ... incremental rather than transformative on a well-engineered gasket design. The boards that benefit least are those with heavy aluminum cases ... and boards where the PCB sits directly on internal foam from the factory.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/pe-foam-mod/benefit-tiers.svg"],
+  "warnings": []
+}
