@@ -183,6 +183,19 @@
 - root cause: text-text-4 = oklch(0.40 0.004 250) — even lower luminance than text-text-3 (oklch(0.55 0.006 250)) which was already failing WCAG AA. Attribution <p> used an identical two-branch ternary with the same low-contrast class for both footer and full variants.
 > **Resolved (2026-05-14):** Swapped text-text-4 → text-text-2 on the attribution `<p>` wrapper in `ButtondownForm.tsx`. Collapsed the identical two-branch ternary to a single class string. Adjusted hover from `hover:text-text-3` (contrast retreat) to `hover:text-text` (contrast increase). Added `data-testid="newsletter-form-attribution"` on the `<p>` for targeted regression guards. Two regression guards in `apps/e2e/tests/a11y.spec.ts` scope AxeBuilder.include() to [data-testid="newsletter-form-attribution"] on / (footer variant) and /newsletter (full variant), each asserting zero color-contrast violations. 577 e2e green (+2 guards). Remaining Phase B candidates: home TrendingTile kind labels (text-micro text-text-3), MentionedPartsRail + RelatedArticlesRail section headings (text-micro text-text-3), article figcaptions (text-small text-text-3), TrackerTable column headers + TrackerArchiveStrip labels. `5753b7a`
 
+### [x] [a11y] [7.2] home TrendingTile kind label — text-text-3 at 12px fails WCAG AA contrast (all home-page visits) — addressed in dc99bef (closes #94)
+- issue: #94
+- category: a11y
+- filed: 2026-05-14 by cloud /iterate audit (Phase B drain)
+- impact: 8 (home page Trending strip renders on every visit; widest possible blast radius for a single-component fix)
+- ease: 9 (one class substitution + data-testid addition)
+- score: 7.2 (impact × ease / 10)
+- wcag: 1.4.3 Contrast (Minimum) AA — 4.5:1 for normal text at 12px
+- axe impact: serious
+- pages: / (home page)
+- elements: `<span className="font-mono uppercase tracking-[0.08em] text-micro text-text-3">{category}</span>` in `TrendingTile.tsx:74` — renders the category label (switch, keycap, layout, vendor, brand) at 12px with text-text-3 which fails 4.5:1 AA threshold
+- root cause: text-text-3 (`oklch(0.55 0.006 250)`) against `--thock-bg` (`oklch(0.175 0.006 250)`) fails WCAG AA at 12px. Same root cause as the recently-drained series (footer tagline, byline metadata, attribution link).
+
 ### [MED] Lighthouse CI — phase 17 follow-up (path locked 2026-05-11 via /oversight; cloud-blocked on workflows-permission 2026-05-13)
 - issue: #85
 > Filed 2026-05-09 by phase 17 brief. The build-plan row for phase 17 listed a Lighthouse pass at ≥95 on `/` and `/article/[slug]`. The bundle-size budget shipped this phase covers the JS-weight axis on its own; this row is for the full Lighthouse signal (perf + a11y + best-practices + SEO).
