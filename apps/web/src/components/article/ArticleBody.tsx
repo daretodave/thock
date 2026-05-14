@@ -46,7 +46,14 @@ export function ArticleBody({
     <Container as="div" className="py-10 sm:py-14">
       <div
         data-testid="article-body"
-        className="thock-prose font-serif text-body text-text leading-[1.7] max-w-[60ch] xl:relative"
+        // xl:relative — provides positioning context for floated InlineViz figures
+        //   (the figures themselves are also relative, but the body's relative
+        //   ensures the float context is consistent).
+        // xl:[display:flow-root] — establishes a block formatting context so
+        //   the float-right InlineViz figures don't escape the body's vertical
+        //   bounds. Without this, a tall float at the end of an article would
+        //   overflow below the article body and overlap the footer.
+        className="thock-prose font-serif text-body text-text leading-[1.7] max-w-[60ch] xl:relative xl:[display:flow-root]"
       >
         <MDXRemote source={body} components={components} />
       </div>
