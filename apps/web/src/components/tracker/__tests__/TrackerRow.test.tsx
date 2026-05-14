@@ -86,6 +86,30 @@ describe('<TrackerRow>', () => {
     )
   })
 
+  it('underlines linked row names so unlinked rows visually opt out (CRITIQUE pass 8 #87)', () => {
+    const article = makeArticle({
+      slug: 'oil-king-deep-dive',
+      frontmatter: {
+        ...makeArticle().frontmatter,
+        slug: 'oil-king-deep-dive',
+        title: 'Why the Oil King',
+      },
+    })
+    const { rerender } = render(
+      <TrackerRow
+        rank={1}
+        row={row({ name: 'Oil King', articleSlug: 'oil-king-deep-dive' })}
+        article={article}
+      />,
+    )
+    const linkedName = screen.getByTestId('tracker-row-name-link')
+    expect(linkedName.className).toMatch(/\bunderline\b/)
+
+    rerender(<TrackerRow rank={2} row={row({ name: 'Lonesome Switch' })} />)
+    const unlinkedName = screen.getByTestId('tracker-row-name-text')
+    expect(unlinkedName.className).not.toMatch(/\bunderline\b/)
+  })
+
   it('renders an em-dash when no article resolves and no note is set', () => {
     render(<TrackerRow rank={2} row={row()} />)
     expect(screen.getByTestId('tracker-row')).toHaveTextContent('—')

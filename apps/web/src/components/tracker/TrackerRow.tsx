@@ -58,12 +58,14 @@ export function TrackerRow({
           <Link
             data-testid="tracker-row-name-link"
             href={noteHref}
-            className="font-serif text-h3 text-text hover:text-accent"
+            className="font-serif text-h3 text-text underline decoration-border-hi underline-offset-4 transition-colors hover:text-accent hover:decoration-accent"
           >
             {row.name}
           </Link>
         ) : (
-          <span className="font-serif text-h3 text-text">{row.name}</span>
+          <span data-testid="tracker-row-name-text" className="font-serif text-h3 text-text">
+            {row.name}
+          </span>
         )}
         {noteText && (
           <span

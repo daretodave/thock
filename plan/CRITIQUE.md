@@ -224,13 +224,15 @@
 - verify note: 568 e2e green serial worker.
 - source: browser
 
-### [LOW] /trends/tracker — unlinked mover-table rows have no visual cue distinguishing them from linked rows
+### [x] [LOW] /trends/tracker — unlinked mover-table rows have no visual cue distinguishing them from linked rows — addressed in pending commit (this tick — cloud /iterate drain)
+- issue: #87
 - pass: 8 (commit d34580c)
 - viewport: desktop
 - category: navigation
 - observation: Mover-table rows have inconsistent click affordance with no visual differentiator. Of 14 rows across the 5 mover tables (Switches, Keycaps, Layouts, Vendors, Brands), 11 are linked anchors and 3 are not (Keycaps: "DCS Olivetti", "MT3 profile"; Brands: "Wuque Studio"). Unlinked rows render identically to linked ones — same row layout, same name styling, same trend column — so a reader who clicks one row expecting a deep dive and finds nothing happens, then tries the next row and lands on an article, comes away with the rows feeling arbitrary.
 - evidence: reader's `read_page` on /trends/tracker: ref_68 link "Gateron Oil King", ref_74 link "HMX Cloud", ref_80 link "Cherry MX2A revisions" (Switches all linked), but ref_100 "DCS Olivetti" and ref_106 "MT3 profile" are plain generics, ref_178 "Wuque Studio" also plain generic.
-- suggested fix: pick the cheaper visual-cue path: add an underline-on-hover (or chevron glyph) on linked rows only so unlinked rows visually opt out. Alternative: backfill stub deep-dive articles for the 3 unlinked entries (DCS Olivetti, MT3 profile, Wuque Studio) so every row links. Cheap UX path is the visual cue; durable content path is the backfill. Both are valid; pick what the next iterate tick prefers.
+- fix: in `apps/web/src/components/tracker/TrackerRow.tsx:57-67`, the linked Link gains `underline decoration-border-hi underline-offset-4 transition-colors hover:decoration-accent` (modeled after `apps/web/src/components/sources/CitationIndex.tsx:122`) so linked names carry a subtle at-rest underline; the unlinked `<span>` branch stays unchanged so it visually opts out. The hover state still amplifies to `text-accent` + `decoration-accent`. Picked the visual-cue path over the content-backfill alternative because it durably handles future unlinked rows (any sub-rule-1 row may temporarily lack an article without a stub-article backfill). New `data-testid="tracker-row-name-text"` on the unlinked span and one regression test in `TrackerRow.test.tsx` asserting linked names contain `underline` and unlinked names do not — locks the visual distinction.
+- verify note: pending — verify gate runs after these edits.
 - source: browser
 
 ### [x] [LOW] /tag/linear — H1 reads `#linear` (lowercase) but the lede capitalizes "Linear" — addressed in 4e9f6bf (closes #80)
