@@ -4,6 +4,7 @@ import { Header } from '@/components/ui/Header'
 import { Footer } from '@/components/ui/Footer'
 import { GoogleTagManager } from '@/components/analytics/GoogleTagManager'
 import { VercelAnalytics } from '@/components/analytics/VercelAnalytics'
+import { SpeedInsights } from '@/components/analytics/SpeedInsights'
 import { siteConfig } from '@thock/seo'
 import './globals.css'
 
@@ -63,6 +64,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         <Footer />
         <VercelAnalytics />
+        <SpeedInsights />
       </body>
     </html>
   )
