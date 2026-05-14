@@ -274,7 +274,8 @@
 
 ### [x] [HIGH] /* (every dynamic-data page) — `<main>` landmark contains only the "loading…" shell; real content renders outside the landmark
 - resolution: promoted to Phase 22 via /oversight 2026-05-10. Path (a) locked: move `<main>` from `apps/web/src/app/layout.tsx` to each route's `page.tsx` and `loading.tsx`. Each segment owns its landmark; `<main>` always wraps streamed content. e2e adds `await expect(page.locator('main')).toHaveCount(1)` per canonical URL. No longer needs-user-call — implementation is bounded.
-- issue: #22 (open — investigation continuing)
+- addressed in: b24be2f (phase 22 ship — 2026-05-10). The phase commit body said "Closes the pass-7 [HIGH] CRITIQUE row" and carried a `Closes #30` trailer (the phase-issue mirror), but did not also reference issue #22 (the iterate-mirror filed earlier in pass 7). Issue #22 stayed open as a result; this tick aligns the GitHub state with the already-`[x]` row by carrying a `Closes #22` trailer.
+- issue: #22
 - pass: 7 (commit e3de21d)
 - viewport: both
 - category: a11y
