@@ -426,9 +426,9 @@
       "url": "https://kbdfans.com/products/gsk-sweet-nightmare",
       "imageUrl": null,
       "heroImage": "/group-buy-art/kbdfans-gsk-sweet-nightmare.svg",
-      "status": "live",
+      "status": "closed",
       "description": "Goldenstar resin keycap run with four colorway options (Bimorphis, Shigan, Eviscera, Optigon) in Kawa and Guro finishes, on a tight four-day window.",
-      "updatedAt": "2026-05-09T20:00:00.000Z"
+      "updatedAt": "2026-05-14T05:30:00.000Z"
     },
     {
       "slug": "wuque-studio-paper80-whatever-studio",
@@ -2685,5 +2685,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-05-13T21:44:00.357Z"
+  "generatedAt": "2026-05-14T05:38:12.930Z"
 }
