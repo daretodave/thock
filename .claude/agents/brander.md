@@ -22,7 +22,7 @@ The calling skill hands you a JSON brief:
 
 ```json
 {
-  "kind": "og" | "favicon" | "social-card" | "svg2png" | "wordmark" | "custom",
+  "kind": "og" | "favicon" | "social-card" | "svg2png" | "wordmark" | "hero-art" | "inline-viz" | "custom",
   "target": "<output path under apps/web/public/ or apps/web/src/app/>",
   "source": "<source SVG/JSX path, or null if generating from template>",
   "template": "<template name from design/ or null>",
@@ -30,7 +30,11 @@ The calling skill hands you a JSON brief:
   "title": "<text content if applicable>",
   "subtitle": "<text content if applicable>",
   "tokens": "design/tokens.css",
-  "fonts": ["Newsreader", "IBM Plex Sans", "JetBrains Mono"]
+  "fonts": ["Newsreader", "IBM Plex Sans", "JetBrains Mono"],
+  "article_slug": "<required for hero-art and inline-viz>",
+  "article_pillar": "<required for hero-art and inline-viz>",
+  "splash_color": "<named alias or oklch — required for hero-art and inline-viz>",
+  "data_sources": ["<required for inline-viz — see inline-viz section>"]
 }
 ```
 
@@ -131,6 +135,73 @@ says so.
 
 One provenance JSON, all outputs listed.
 
+### `hero-art`
+
+Decorative article hero — the line-art SVG that sits above the
+article header. Hand-authored, family-locked visual language:
+
+- **Format:** SVG, `viewBox` 1200×750 (aspect 1.6 = 16/10).
+- **Stroke:** `oklch(0.78 0.005 90)` warm-grey, 2px, round caps.
+- **Splash:** one color per article (brief specifies). Typical
+  uses: coral `oklch(0.68 0.165 28)`, amber `oklch(0.78 0.10 80)`.
+  Applied as a low-opacity wash region + a focal dot at the
+  visual anchor point.
+- **Bronze theme dot:** small `oklch(0.80 0.135 75)` circle at
+  the upper-right margin — family ornamental anchor.
+- **Subject:** keyboard side-profile, switch cross-section, or
+  another keyboard-domain primitive that connects to the article's
+  thesis. Specified per-brief.
+
+Target: `apps/web/public/hero-art/<article-slug>.svg` + sibling
+`<article-slug>.svg.json` provenance.
+
+### `inline-viz`
+
+Data-grounded or conceptual diagram embedded inline in an article
+body via the `<InlineViz>` MDX component. Two-to-three per article
+is the standing rule (see content-curator.md). Same visual language
+family as hero-art with stricter discipline:
+
+- **Format:** SVG, `viewBox` 1200×N where N is chosen for the
+  viz's vertical density (typical 380–720).
+- **Stroke + splash + theme dot:** same family conventions as
+  hero-art.
+- **Labels:** IBM Plex Sans for sans labels, Newsreader italic
+  for serif callouts, JetBrains Mono for technical values.
+- **Caution color:** `oklch(0.62 0.13 25)` (warm-red, the `down`
+  token) for "never do this" / warning annotations.
+- **Data discipline:** every claim in the viz must be traceable
+  to a passage in the article body or a cited source. The brief's
+  `data_sources` array names the file + section + quoted phrase
+  the viz is grounded in. No fabricated numbers, no invented
+  benchmarks. If a number isn't already in the article, it doesn't
+  go in the viz.
+
+Target: `apps/web/public/article-viz/<article-slug>/<viz-slug>.svg`
++ sibling `<viz-slug>.svg.json` provenance. The directory is
+per-article — group all viz for one article together.
+
+Provenance schema (in addition to the standard fields):
+
+```json
+{
+  "kind": "inline-viz",
+  "article_slug": "<slug>",
+  "article_pillar": "<pillar>",
+  "section_anchor": "<H2 / Callout / paragraph the viz sits under>",
+  "splash_color": { "name": "<alias>", "oklch": "<value>" },
+  "data_sources": [
+    "<file>:<section> — '<quoted phrase or number>'"
+  ]
+}
+```
+
+The connector arm + dot rendered at desktop by the `<InlineViz>`
+component takes the splash color as its accent. The SVG itself
+should use the same splash for its data highlights so the on-page
+visual reads as one cohesive accent across the connector and the
+diagram interior.
+
 ### `custom`
 
 The brief specifies non-standard target / size / template.
@@ -199,7 +270,9 @@ the asset's text content.
    `apps/web/src/app/<route>/opengraph-image.tsx` (and the
    site-default `opengraph-image.tsx`), and the provenance
    JSONs. That's it. No edits to MDX, components, data,
-   tokens, or config.
+   tokens, or config. For `inline-viz` you write only the
+   SVG + provenance — the MDX `<InlineViz>` tag wiring is
+   the content-curator agent's job, not yours.
 2. **Never overwrite a file that lacks a sibling provenance
    JSON.** That file is hand-authored. Refuse and return an
    error — the calling skill will surface as

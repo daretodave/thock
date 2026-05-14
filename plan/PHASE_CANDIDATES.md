@@ -33,20 +33,31 @@
 - conflicts: none. The `/march` and `/ship-content` amendments are additive; the existing `[x]` rows stay as audit-trail. `bearings.md` "Content velocity" is the durable rule the helper implements — not a new policy.
 - promotion path: `/oversight` decides whether to (a) ship the helper as `scripts/` or as a `@thock/content` export, and (b) whether Rule 4 (gap-fill) should ever generate a *pillar-agnostic* row (any pillar still has room) or only fire as a tie-breaker between Rule-1 candidates. Recommend scripts/ + tie-breaker-only — keeps the helper minimal and the queue editorially coherent. Lock at brief time.
 
-### [score 5.5] In-article inline visualizations — small purposeful diagrams in the hero-art theme
-- proposed: 2026-05-11, /oversight (user free-form)
+### [score 7.5] InlineViz retrofit — bring 2–3 viz to every existing article (Phase A shipped inline 2026-05-14)
+- proposed: 2026-05-11, /oversight (user free-form). Re-scoped 2026-05-14 after Phase A shipped inline + bearings rule locked.
+- Phase A status (shipped inline, no separate phase row needed):
+  - `<InlineViz>` MDX component built and exported from `@thock/content/mdx`. Accent prop (named aliases `coral` / `amber` / `bronze` / `bordeaux` + raw CSS) maps to OKLCH tokens shared with hero-art.
+  - Desktop float treatment + `_/-` step-shape connector arm + accent dot, layout math in `apps/web/src/styles/components.css` under `.thock-inline-viz`. Mobile reflows to column-bound inline block.
+  - Bearings rule locked at the new `bearings.md` § "Inline-viz — 2–3 per article, no longer optional (locked 2026-05-14 via /oversight)".
+  - `.claude/agents/content-curator.md` updated with the standing rule, the component API, the visual-language family, the no-fabrication discipline, and the provenance schema.
+  - `.claude/agents/brander.md` updated to recognize `inline-viz` as a kind alongside `hero-art`.
+  - Two articles validated end-to-end with 5 viz total: `acoustic-spec-rise` (3 coral viz) + `lubing-101` (2 amber viz). All on `main` at commits `5f42c92` (viz + component) through `fd320b2` (hero refactor).
+- Phase B scope — retrofit the remaining 38 articles:
+  - 40 articles total in `apps/web/src/content/articles/`. 2 already have viz (acoustic-spec-rise + lubing-101). 38 articles remain.
+  - At 2–3 viz per article, the drain is 76–114 SVGs + 76–114 provenance JSONs + 38 MDX rewrites.
+  - The work is iterate-shaped (one article per tick) but the volume is high enough that it benefits from being a tracked phase-level priority rather than scattered iterate ticks.
 - source signals:
-  - User free-form during oversight 2026-05-11: "i'm not sure when or how — but i'd like articles (past and new) to include small visualizations. the rule is it must be in the current theme we've done for all hero art. these visualations would perhaps break apart what is seemingly walls of text. they can be flow charts, they can be simple diagrams or they can be an exploded views with arrows. they must not be garbage or noise on the article, if they are included, they serve a purpose and they are beautiful (like the hero art)."
-  - The site has 13+ articles where body prose runs as continuous walls of text; the existing hero-art directive (commit `0e7c9fd`) proved that the line-drawing + coral-splash visual language reads beautifully at thumbnail scale. The same language at inline-diagram scale would carry the same brand weight inside the article body.
-  - `bearings.md` "Article hero art" section is the durable rule that locks the hero-art theme; this candidate extends that section with a sibling subsection for inline figures.
-  - `content-curator` already emits MDX; `brander` already emits theme-locked SVGs. The mechanism exists — the missing piece is the editorial discipline + the MDX component that wraps a figure with a caption inside an article.
-- rationale: this is a discovery-shaped + discipline-shaped problem in the §4A sense. The discovery is: which articles benefit from which figure shape (flow chart for guides, exploded view for parts/switch articles, diagram for layout pieces, sparkline-style for trends). The discipline is: how does the loop decide when an article needs a figure vs not, and how does it bundle the figure generation into the ship-content flow without bloating every article. The user's directive ("they must not be garbage or noise") is the editorial gate: this isn't a "every article gets 3 figures" rule, it's a "figures only when they earn their place."
-- proposed scope: 2-phase mini-plan, but probably 1 phase + iterate drain.
-  1. **Phase A — figure component + bearings rule + ship-content extension.** New MDX component `<Figure svg="..." caption="..." alt="..." />` exported from `@thock/content/mdx` that renders an SVG inline with caption + alt + optional `numbered={true}` for explicit figure numbering. New bearings subsection "Inline figures" codifying: theme matches hero art (single coral splash, line weight, no photographic detail), serves a specific narrative purpose (don't decorate, don't repeat what the text says), figure earns its place via a per-article editorial gate. `skills/ship-content.md` Step 5 amendment: content-curator briefs include "if this article has a section explaining a multi-step process, a parts decomposition, or a layout comparison, include a `<Figure>` MDX call with a brander brief in the same commit." Brander gets a new family rule for inline figures (smaller default viewBox, no rounded card framing).
-  2. **Phase B — backfill pass.** Iterate-style ticks walk existing 13+ articles, decide per-article whether a figure earns inclusion, ship one article at a time. Drainable as a discipline row; not a separate phase row.
-- estimated phases: 1 (Phase A); Phase B is iterate drain.
-- conflicts: none. The MDX registry already accepts new components. Brander already emits theme-locked SVGs. The directive is additive to `bearings.md`.
-- promotion path: `/oversight` decides component shape (single `<Figure>` vs `<FlowChart>`/`<ExplodedView>`/`<Diagram>` family). Recommend single `<Figure>` with kind variants to keep the MDX surface minimal; brander handles the kind-specific rendering. Lock at brief time.
+  - User free-form 2026-05-11: "articles (past and new) to include small visualizations ... must not be garbage or noise."
+  - User 2026-05-14 after Phase A landed live on `acoustic-spec-rise` and `lubing-101`: "looks PERFECT. OK lock this in. and lets start with instructions for all future content to be BOLD above making data-viz in the formats we've established."
+  - The bearings rule now says 2–3 per article is the baseline. The audit can flag any article missing it.
+- proposed scope: 1 phase (the queue-drain mechanism) + iterate drain (the per-article work).
+  1. **Add an audit row generator**: `scripts/inline-viz-survey.mjs` (or extend `scripts/content-gap-survey.mjs` from candidate 7.0) that surveys every article MDX for the count of `<InlineViz>` tags and files `[content][inline-viz][<slug>]` audit rows in `plan/AUDIT.md` for any article below 2.
+  2. **Wire into `/iterate`**: rows scored ≥ 5.0 dispatch to the content-curator agent with a "retrofit this article — add 2–3 InlineViz pieces per the bearings rule" brief.
+  3. **Drain rate**: 1 article/tick at the cloud hourly cadence → 38 articles in ~38 ticks ≈ 38 hours of continuous run, but realistically ~1–2 weeks given mixed-priority cloud schedule. Acceptable.
+  4. **Verify gate**: existing `pnpm verify` covers the MDX compilation + SVG validity + e2e canonicals. No new test surface needed for the retrofit itself; the bearings rule is the regression guard for new articles.
+- estimated phases: 1 (the survey + dispatch mechanism); the rest is iterate drain.
+- conflicts: none. The component is shipped. The bearings rule is locked. The agents know the pattern. This phase is purely the orchestration to get the loop draining the backlog at hourly cadence.
+- promotion path: `/oversight` decides (a) whether the survey lives as `scripts/` or as a `@thock/content` export (recommend `scripts/` — matches the candidate-7.0 content-gap-survey shape); (b) whether to interleave InlineViz retrofit rows with content-velocity Rule-1/2/3/4 rows or run them as a separate parallel queue (recommend separate queue — different bias, different priority); (c) the cutoff score for promotion to active drain (recommend 5.0 to start, raise as the backlog shrinks). Lock at brief time.
 
 ## Considered (below threshold)
 

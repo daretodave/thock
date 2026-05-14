@@ -369,6 +369,59 @@ renders a coral-tinted placeholder block — never a broken
 image. The fallback is intentionally distinguishable from a
 real hero so missing art is observable in QA.
 
+### Inline-viz — 2–3 per article, no longer optional (locked 2026-05-14 via /oversight)
+
+Every article ships with 2–3 inline visualizations embedded
+inline in the body via the `<InlineViz>` MDX component. This
+is the editorial baseline. Be bold about it: any article with
+a comparison, a process, a layered structure, a price move,
+a timeline, a forecast, a categorization, or a mechanism is
+already carrying a viz inside it — the curator's job is to
+render it.
+
+**Renderer:** `<InlineViz src alt caption accent>` from
+`@thock/content/mdx`. Mobile renders as an inline 60ch block;
+desktop (xl ≥ 1280px) floats into the right-side whitespace,
+centered between the article column and the scrollbar, with
+an SVG step-shape connector arm tying the figure back to the
+column. Layout math lives in
+`apps/web/src/styles/components.css` under `.thock-inline-viz`.
+
+**Assets:** SVG at
+`apps/web/public/article-viz/<article-slug>/<viz-slug>.svg`
+with a sibling `.svg.json` provenance file (schema in
+`.claude/agents/content-curator.md` § "Provenance"). Family-
+locked visual language — same warm-grey stroke, splash color
+per article, brass-bronze theme dot as the article hero-art.
+
+**Splash color is load-bearing:** the `accent` prop on
+`<InlineViz>` must match the splash color used inside the SVG.
+The desktop connector arm + dot both render in that accent,
+visually tagging the viz to its data lineage. "The data has
+its own accent color."
+
+**No-fabrication discipline:** every number, label, and named
+surface in the viz must be traceable to the article body or
+to an already-cited source. The provenance JSON's
+`data_sources` array documents this — file + section + quoted
+phrase. A future ship-asset audit pass uses it to detect drift
+if the article body changes after the viz lands.
+
+**Two regimes — both apply:** data-bearing articles get
+charts (comparison ladders, timelines, glyph strips).
+Conceptual / no-numbers articles still get diagrams (process
+strips, cross-sections, layered stacks, do/don't maps). If
+after reading the brief the curator genuinely cannot find 2–3
+viz moments, that's a signal the article is too thin — flag
+it, don't pad the prose.
+
+**Delivery path:** new articles ship the MDX + viz SVGs + viz
+provenance JSONs in a single commit via the content-curator
+agent. Existing-article retrofits run via `/iterate` or a
+dedicated retrofit phase. The agent spawns `brander` for any
+viz it can't hand-author directly (multi-resolution,
+template-driven, etc.).
+
 ## Content velocity & editorial cadence (locked 2026-05-10 via /oversight)
 
 The autonomous loop is good at shipping individual articles when

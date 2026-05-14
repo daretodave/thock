@@ -86,8 +86,195 @@ doesn't have). Tags must exist in
   any switch / board / keycap-set; subsequent mentions use plain
   `<Mono>`. Every `id` must appear in `frontmatter.mentionedParts`.
 - `<Source href="...">…</Source>` inline for citations.
+- **2–3 `<InlineViz>` per article. Not optional.** See the next
+  section for the full discipline.
 - End with a **forecast or follow-up** — what to watch for next.
   Editorial pieces don't trail off.
+
+## Inline visualizations — the standing rule
+
+**Every article ships with 2–3 inline visualizations.** This is the
+new editorial baseline, not a stretch goal. Be bold about it: any
+article with a comparison, a process, a layered structure, a price
+move, a timeline, a forecast, a categorization, or a mechanism is
+already carrying a viz inside it — your job is to render it.
+
+If after reading the brief you genuinely cannot find 2–3 viz worth
+making, the article is probably too thin to ship. Flag that in your
+return summary instead of padding the prose.
+
+### What an InlineViz is
+
+A hand-authored SVG diagram or chart embedded inline in the article
+body via the `<InlineViz>` MDX component. Distinct from hero-art
+(decorative, atop) and `<KeyboardImage>` (photographs, bordered).
+
+The component:
+
+```mdx
+<InlineViz
+  src="/article-viz/<article-slug>/<viz-slug>.svg"
+  alt="Screen-reader description — what the diagram shows, not its decoration."
+  caption="Short italic figcaption rendered below the diagram. Earns its keep — no restating the alt."
+  accent="coral"
+/>
+```
+
+Props:
+
+- `src` — path to the SVG under
+  `apps/web/public/article-viz/<article-slug>/<viz-slug>.svg`.
+- `alt` — required. Describes the diagram for screen readers and
+  for build-time accessibility checks. Be specific — name the
+  shapes, the labels, the colors.
+- `caption` — optional. Short italic line that earns its place. If
+  it just restates the alt, drop it. The figure is allowed to speak
+  for itself.
+- `accent` — named alias (`coral`, `amber`, `bronze`, `bordeaux`)
+  or raw CSS color. **Must match the splash color used inside the
+  SVG.** This is the rule: the desktop connector arm and the dot
+  on the figure's left edge both render in this accent, visually
+  tagging the viz to its data lineage. "The data has its own accent
+  color."
+
+### What 2–3 viz look like — both regimes
+
+**Data-bearing articles** (trends, news, deep-dives with numbers):
+
+- A **comparison chart** — bars, ladder, or matrix of competing
+  options. Numbers come directly from the article body or a cited
+  source. No fabricated data.
+- A **timeline / progression** — before/now/forecast, or year-over-
+  year movement. Visual rhythm matches the article's argument.
+- A **breakdown / glyph strip** — taxonomy, vocabulary, or named
+  categories rendered as a strip of small per-category sketches.
+
+**Conceptual-only articles** (guides, ideas, no-numbers explainers):
+
+- A **process strip** — numbered panels showing the steps of a
+  technique (lube protocol, switch swap, key-by-key tape mod).
+- A **cross-section** — annotated cut-away of a switch / board /
+  stack with the relevant surfaces picked out in the article's
+  splash color.
+- A **layered diagram** — labelled stack showing the components of
+  a system (acoustic stack, firmware stack, mounting stack), with
+  brackets and labels in the margin.
+- A **do / don't map** — surfaces marked in the splash color for
+  "do this" and a caution color for "never do this."
+
+### The visual language family
+
+All inline-viz follow the same conventions as hero-art (see
+`apps/web/public/hero-art/` for the canonical references):
+
+- **Format:** hand-authored SVG, `viewBox` 1200×N (N usually
+  between 380 and 720 depending on the viz's vertical density).
+- **Stroke:** `oklch(0.78 0.005 90)` (warm-grey), `stroke-width="2"`,
+  round caps and joins.
+- **Splash color:** one per article, locked. Coral
+  `oklch(0.68 0.165 28)` is the trends default; amber
+  `oklch(0.78 0.10 80)` for lubing/factory-process pieces; pick
+  per article. Used for the focal accent and for any "data here"
+  highlight inside the viz.
+- **Theme dot:** small `oklch(0.80 0.135 75)` (warm-bronze) circle
+  at the upper-right margin — family ornamental anchor.
+- **Labels:** IBM Plex Sans for sans labels, Newsreader italic for
+  serif callouts, JetBrains Mono if a value needs to read as
+  technical.
+- **Caution color:** `oklch(0.62 0.13 25)` (warm-red, the `down`
+  token) when a "never do this" or "warning" annotation is needed.
+
+### The no-fabrication discipline
+
+**Every claim the viz makes must be traceable to the article body
+or to a `<Source>` already cited.** No invented numbers, no made-up
+benchmarks, no estimated trends. If a number isn't in the article,
+it doesn't go in the viz.
+
+For conceptual diagrams (layers, processes, mechanisms): every
+label and every part-name must appear in the article or in a
+canonical source the article links to.
+
+### Provenance — every SVG ships with a sibling .svg.json
+
+Schema:
+
+```json
+{
+  "generated_by": "main-agent-handauthored" | "brander",
+  "engine": "hand-authored-svg",
+  "at": "<ISO timestamp>",
+  "commit": "<git rev-parse HEAD>",
+  "kind": "inline-viz",
+  "article_slug": "<slug>",
+  "article_pillar": "<pillar>",
+  "section_anchor": "<the H2 / Callout the viz sits under>",
+  "brief_summary": "<2–3 sentences describing the viz's content and intent>",
+  "target": "apps/web/public/article-viz/<slug>/<viz-slug>.svg",
+  "splash_color": { "name": "<alias>", "oklch": "<value>" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "<file>:<section> — '<quoted phrase or number the viz visualizes>'"
+  ],
+  "outputs": ["<path>"],
+  "warnings": []
+}
+```
+
+The `data_sources` array is load-bearing — it documents the no-
+fabrication discipline. Each entry cites the file + section + the
+specific quoted phrase or number the viz is grounded in. A future
+ship-asset audit pass uses this to detect drift if the article
+body changes after the viz lands.
+
+### Placement in the MDX
+
+Insert each `<InlineViz>` directly under the H2 or Callout it
+illustrates. Authoring rhythm:
+
+```mdx
+## The four-layer stack went standard
+
+<InlineViz
+  src="/article-viz/acoustic-spec-rise/four-layer-stack.svg"
+  alt="..."
+  caption="..."
+  accent="coral"
+/>
+
+Four moves stacked on top of each other to make that assertion
+defensible.
+
+The first is at the switch. ...
+```
+
+The component handles desktop float / mobile inline reflow on its
+own. You don't have to think about layout — just place it at the
+section break.
+
+### Workflow when writing a new article
+
+1. Draft the prose first. The viz lands AROUND the argument, not
+   the other way around.
+2. After the draft, scan it: identify the 2–3 strongest moments
+   that benefit from a diagram. Comparisons, processes, layered
+   structures, timelines, vocabularies, mechanisms.
+3. For each, write a one-paragraph brief naming the viz: what
+   does it show, what shape, what data-sources, what splash color.
+4. Hand-author the SVG (the agent doing the article is also doing
+   the SVG, in the visual-language family above) and write the
+   sibling provenance JSON.
+5. Insert the `<InlineViz>` tags into the MDX at the right
+   section breaks.
+6. Return the article + the viz paths in your summary so the main
+   agent commits both in one shipping pass.
+
+If a brief calls for a viz family the agent can't render directly
+(complex CSS, dynamic data baking, multi-resolution PNGs), spawn
+the `brander` agent with a structured brief — same as for hero-art.
 
 ## Structure templates by pillar
 
@@ -140,10 +327,12 @@ Wrote apps/web/src/content/articles/<slug>.mdx
 - Tags: <list>
 - Parts referenced: <list>
 - Sources cited: <count>
+- InlineViz shipped: <count> at <viz paths>
 - Open issues (if any): <list>
 ```
 
-The main agent commits and pushes.
+The main agent commits and pushes. The viz SVGs and their
+provenance JSONs ship in the same commit as the MDX.
 
 ## Failure modes
 
@@ -154,3 +343,7 @@ The main agent commits and pushes.
    conflict in body if it's relevant; flag it in the return summary.
 3. **Tag taxonomy doesn't fit.** Add a new tag to `tags.json`
    (with category). The build will validate.
+4. **Cannot find 2–3 viz moments in the draft.** This is a signal
+   the article is too thin or too abstract to ship. Don't fabricate
+   data to fill a viz. Flag it in the return summary and let the
+   main agent decide whether to expand the brief or drop the piece.
