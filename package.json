@@ -30,5 +30,12 @@
   "devDependencies": {
     "prettier": "^3.3.3",
     "typescript": "^5.6.3"
+  },
+  "pnpm": {
+    "overrides": {
+      "esbuild@<0.25.0": ">=0.25.0",
+      "postcss@<8.5.10": ">=8.5.10",
+      "vite": "^6.4.2"
+    }
   }
 }
