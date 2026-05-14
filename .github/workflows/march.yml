@@ -111,11 +111,11 @@ jobs:
         uses: anthropics/claude-code-action@v1
         with:
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
-          # Opus 4.7 for the cloud loop. Promoted 2026-05-12 from
-          # Sonnet 4.6 to experiment with Opus quality on the
-          # autonomous tick. Roughly 2x weekly-cap weight vs Sonnet
-          # — watch /cost over a week; revert to "claude-sonnet-4-6"
-          # if weekly cap tightens.
+          # Sonnet 4.6 for the cloud loop. Reverted 2026-05-14 from
+          # Opus 4.7 — weekly-cap weight on Opus was ~2x Sonnet's,
+          # and the autonomous tick doesn't reliably justify the
+          # quality bump. Re-promote to "claude-opus-4-7" if a tick
+          # demands deeper reasoning and cap headroom is available.
           #
           # --dangerously-skip-permissions mirrors the user's local
           # invocation. The runner is an ephemeral GitHub-hosted
@@ -128,7 +128,7 @@ jobs:
           # would otherwise use productively — WebFetch for scout
           # research, broader Bash forms for ops scripts, etc.
           claude_args: |
-            --model claude-opus-4-7
+            --model claude-sonnet-4-6
             --dangerously-skip-permissions
           prompt: |
             You are running thock's autonomous loop in CI (GitHub Actions).
