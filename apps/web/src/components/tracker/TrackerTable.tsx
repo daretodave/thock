@@ -25,7 +25,7 @@ export function TrackerTable({
       data-testid="tracker-table"
       className="border border-border"
     >
-      <div className="hidden grid-cols-[48px_minmax(0,1fr)_120px_120px_minmax(0,1.4fr)] gap-6 border-b border-border px-5 py-3 font-mono uppercase tracking-[0.1em] text-micro text-text-3 md:grid">
+      <div data-testid="tracker-table-header" className="hidden grid-cols-[48px_minmax(0,1fr)_120px_120px_minmax(0,1.4fr)] gap-6 border-b border-border px-5 py-3 font-mono uppercase tracking-[0.1em] text-micro text-text-2 md:grid">
         <span>Rank</span>
         <span>Name</span>
         <span>Score</span>

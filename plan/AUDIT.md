@@ -210,6 +210,19 @@
 - root cause: text-text-3 (`oklch(0.55 0.006 250)`) fails WCAG AA 4.5:1 at 12px against `--thock-bg`. Same root cause as the previously-drained series (footer tagline, byline metadata, TrendingTile category label).
 > **Resolved (2026-05-14):** Swapped text-text-3 → text-text-2 on both h2 elements. Added data-testid="related-articles-heading" and data-testid="mentioned-parts-heading" for targeted regression guards. Two new guards in apps/e2e/tests/a11y.spec.ts assert zero color-contrast violations on both heading selectors on /article/gateron-oil-king-deep-dive. 580 e2e green (+2 from new guards). Remaining Phase B candidates noted in a11y Phase A warnings: figcaptions (text-small text-text-3), search label (text-micro text-text-3), GroupBuysWidget section label, TrackerArchiveStrip "latest" + flat count — deferred to subsequent ticks. `9f857d5`
 
+### [ ] [a11y] [7.2] Trends Tracker column headers + archive strip — text-micro text-text-3 fails WCAG AA contrast (all tracker visits)
+- issue: #97
+- category: a11y
+- filed: 2026-05-14 by cloud /iterate audit (Phase B drain)
+- impact: 8 (TrackerTable column headers render on every /trends/tracker AND /trends/tracker/[week] visit across 5 category tables; TrackerArchiveStrip "latest" label + flat count render on /trends/tracker — the signature feature)
+- ease: 9 (class substitutions + data-testid additions + 2 regression guards)
+- score: 7.2 (impact × ease / 10)
+- wcag: 1.4.3 Contrast (Minimum) AA — 4.5:1 for normal text at 12px
+- axe impact: serious
+- pages: /trends/tracker (all visits), /trends/tracker/[week] (for table headers)
+- elements: `TrackerTable.tsx:28` — column header div (Rank / Name / Score / 8-wk / Editor's note) at text-micro text-text-3; `TrackerArchiveStrip.tsx:68` — "latest" label at text-micro text-text-3; `TrackerArchiveStrip.tsx:75` — flat count span `{N}~` at text-text-3
+- root cause: text-text-3 (oklch(0.55 0.006 250)) against --thock-bg fails WCAG AA 4.5:1 at 12px. Same root cause as the recently-drained series (#91–#96).
+
 ### [x] [a11y] [7.2] home GroupBuysWidget kicker — text-micro text-text-3 fails WCAG AA contrast (all home-page visits) — addressed in 9cc6048 (closes #96)
 - issue: #96
 - category: a11y

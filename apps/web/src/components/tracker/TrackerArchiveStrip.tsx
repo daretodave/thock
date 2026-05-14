@@ -65,14 +65,14 @@ export function TrackerArchiveStrip({
                 {label}
               </span>
               {isCurrent && (
-                <span className="font-mono text-micro text-text-3">latest</span>
+                <span data-testid="tracker-archive-latest-label" className="font-mono text-micro text-text-2">latest</span>
               )}
               <div className="mt-auto flex gap-2 font-mono text-micro">
                 {counts.up > 0 && (
                   <span className="text-up">+{counts.up}</span>
                 )}
                 {counts.flat > 0 && (
-                  <span className="text-text-3">{counts.flat}~</span>
+                  <span data-testid="tracker-archive-flat-count" className="text-text-2">{counts.flat}~</span>
                 )}
                 {counts.down > 0 && (
                   <span className="text-down">-{counts.down}</span>

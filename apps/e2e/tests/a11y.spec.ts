@@ -376,6 +376,39 @@ test('color-contrast — group-buys widget kicker (regression guard)', async ({
   expect(contrast, formatViolations(contrast)).toHaveLength(0)
 })
 
+// Regression guards: color-contrast on Trends Tracker column headers and archive strip
+// labels drained by audit row [a11y] issue #97. TrackerTable header row used
+// text-micro text-text-3 (12px, fails WCAG AA 4.5:1); TrackerArchiveStrip "latest"
+// label and flat-count span used text-text-3 at text-micro. All three swapped to
+// text-text-2. Guards scoped to data-testids on /trends/tracker (the latest view).
+test('color-contrast — tracker table header (regression guard)', async ({ page }) => {
+  await page.goto('/trends/tracker')
+  await page.waitForLoadState('networkidle')
+
+  const results = await new AxeBuilder({ page })
+    .withTags(WCAG_TAGS)
+    .include('[data-testid="tracker-table-header"]')
+    .analyze()
+
+  const contrast = results.violations.filter((v) => v.id === 'color-contrast')
+  expect(contrast, formatViolations(contrast)).toHaveLength(0)
+})
+
+test('color-contrast — tracker archive latest label (regression guard)', async ({
+  page,
+}) => {
+  await page.goto('/trends/tracker')
+  await page.waitForLoadState('networkidle')
+
+  const results = await new AxeBuilder({ page })
+    .withTags(WCAG_TAGS)
+    .include('[data-testid="tracker-archive-latest-label"]')
+    .analyze()
+
+  const contrast = results.violations.filter((v) => v.id === 'color-contrast')
+  expect(contrast, formatViolations(contrast)).toHaveLength(0)
+})
+
 // Regression guard: skip link is present and targets a valid id="main" element.
 // Phase A ships this as a hard assertion because the skip link is fixed in
 // the same commit (no longer needs Phase B discovery).
