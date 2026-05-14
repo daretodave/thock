@@ -150,6 +150,35 @@ This lane fires before `/expand` and before the general `/iterate`
 pass, so content velocity is never deprioritized in favour of
 expansion planning when the quota is unmet.
 
+#### 3b.5a. Empty-queue refill (post-phase-30)
+
+If no `Pending` content-gap rows exist (or all score < 3.0), invoke
+the Rule-1 sliding-window helper before falling through:
+
+```bash
+node scripts/content-gap-survey.mjs --write
+```
+
+- If it writes a new row (prints "filed … row" confirmation),
+  commit the update and dispatch `/ship-content`:
+
+  ```bash
+  git add plan/AUDIT.md
+  git commit -m "audit: content-gap row auto-filed by content-gap-survey.mjs
+
+  Cloud-Run: <run-url>"
+  git push origin main
+  ```
+
+  Then re-enter Step 3b.5 (the new row now exists; dispatch
+  `/ship-content`).
+
+- If it prints "all pillars comfortable — no row filed", fall
+  through to Step 3c (expand).
+
+- If it exits non-zero, log the error and fall through to Step 3c.
+  The refill is best-effort; the loop continues.
+
 #### 3c. Expand due (rate-limited, posture-gated)?
 
 Read `plan/bearings.md` "Plan expansion posture" section. thock

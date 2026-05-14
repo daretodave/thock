@@ -296,8 +296,28 @@ The `Cloud-Run:` trailer is mandatory for every cloud-loop commit
 ### Step 8 — Tick the audit
 
 Flip the addressed finding to `[x]` in `plan/AUDIT.md` and append
-the commit hash to the finding row. Commit separately (keeps the
-article commit clean):
+the commit hash to the finding row.
+
+#### Step 8a — Auto-refill (post-drain, phase 30)
+
+Before staging the audit commit, invoke the queue-refill helper:
+
+```bash
+node scripts/content-gap-survey.mjs --write
+```
+
+- If it exits 0 and printed a "filed … row" confirmation, the new
+  row is now appended to `plan/AUDIT.md`. `git add plan/AUDIT.md`
+  will pick it up in the same audit commit automatically (no
+  separate `git add` needed — both the `[x]` tick and the new row
+  are in the same file).
+- If it prints "all pillars comfortable — no row filed", that is
+  normal. Skip the extra stage step.
+- If it exits non-zero, log the error and continue. The tick is
+  not blocked by refill failure.
+
+Commit the audit update (including any new refill row) as a single
+commit (keeps the article commit clean):
 
 ```bash
 git add plan/AUDIT.md
