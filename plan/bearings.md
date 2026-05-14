@@ -417,10 +417,12 @@ it, don't pad the prose.
 
 **Delivery path:** new articles ship the MDX + viz SVGs + viz
 provenance JSONs in a single commit via the content-curator
-agent. Existing-article retrofits run via `/iterate` or a
-dedicated retrofit phase. The agent spawns `brander` for any
-viz it can't hand-author directly (multi-resolution,
-template-driven, etc.).
+agent. The agent spawns `brander` for any viz it can't
+hand-author directly (multi-resolution, template-driven,
+etc.). The historical-article retrofit shipped 2026-05-14
+across all 40 articles (80 viz total) — see
+`PHASE_CANDIDATES.md` § Promoted. Going forward this rule is
+write-time only; there is no remaining backlog to drain.
 
 ## Content velocity & editorial cadence (locked 2026-05-10 via /oversight)
 

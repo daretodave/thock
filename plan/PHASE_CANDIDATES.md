@@ -35,31 +35,7 @@
 - conflicts: none. The `/march` and `/ship-content` amendments are additive; the existing `[x]` rows stay as audit-trail. `bearings.md` "Content velocity" is the durable rule the helper implements — not a new policy.
 - promotion path: `/oversight` decides whether to (a) ship the helper as `scripts/` or as a `@thock/content` export, and (b) whether Rule 4 (gap-fill) should ever generate a *pillar-agnostic* row (any pillar still has room) or only fire as a tie-breaker between Rule-1 candidates. Recommend scripts/ + tie-breaker-only — keeps the helper minimal and the queue editorially coherent. Lock at brief time.
 
-### [score 7.5] InlineViz retrofit — bring 2–3 viz to every existing article (Phase A shipped inline 2026-05-14)
-- proposed: 2026-05-11, /oversight (user free-form). Re-scoped 2026-05-14 after Phase A shipped inline + bearings rule locked.
-- Phase A status (shipped inline, no separate phase row needed):
-  - `<InlineViz>` MDX component built and exported from `@thock/content/mdx`. Accent prop (named aliases `coral` / `amber` / `bronze` / `bordeaux` + raw CSS) maps to OKLCH tokens shared with hero-art.
-  - Desktop float treatment + `_/-` step-shape connector arm + accent dot, layout math in `apps/web/src/styles/components.css` under `.thock-inline-viz`. Mobile reflows to column-bound inline block.
-  - Bearings rule locked at the new `bearings.md` § "Inline-viz — 2–3 per article, no longer optional (locked 2026-05-14 via /oversight)".
-  - `.claude/agents/content-curator.md` updated with the standing rule, the component API, the visual-language family, the no-fabrication discipline, and the provenance schema.
-  - `.claude/agents/brander.md` updated to recognize `inline-viz` as a kind alongside `hero-art`.
-  - Two articles validated end-to-end with 5 viz total: `acoustic-spec-rise` (3 coral viz) + `lubing-101` (2 amber viz). All on `main` at commits `5f42c92` (viz + component) through `fd320b2` (hero refactor).
-- Phase B scope — retrofit the remaining 38 articles:
-  - 40 articles total in `apps/web/src/content/articles/`. 2 already have viz (acoustic-spec-rise + lubing-101). 38 articles remain.
-  - At 2–3 viz per article, the drain is 76–114 SVGs + 76–114 provenance JSONs + 38 MDX rewrites.
-  - The work is iterate-shaped (one article per tick) but the volume is high enough that it benefits from being a tracked phase-level priority rather than scattered iterate ticks.
-- source signals:
-  - User free-form 2026-05-11: "articles (past and new) to include small visualizations ... must not be garbage or noise."
-  - User 2026-05-14 after Phase A landed live on `acoustic-spec-rise` and `lubing-101`: "looks PERFECT. OK lock this in. and lets start with instructions for all future content to be BOLD above making data-viz in the formats we've established."
-  - The bearings rule now says 2–3 per article is the baseline. The audit can flag any article missing it.
-- proposed scope: 1 phase (the queue-drain mechanism) + iterate drain (the per-article work).
-  1. **Add an audit row generator**: `scripts/inline-viz-survey.mjs` (or extend `scripts/content-gap-survey.mjs` from candidate 7.0) that surveys every article MDX for the count of `<InlineViz>` tags and files `[content][inline-viz][<slug>]` audit rows in `plan/AUDIT.md` for any article below 2.
-  2. **Wire into `/iterate`**: rows scored ≥ 5.0 dispatch to the content-curator agent with a "retrofit this article — add 2–3 InlineViz pieces per the bearings rule" brief.
-  3. **Drain rate**: 1 article/tick at the cloud hourly cadence → 38 articles in ~38 ticks ≈ 38 hours of continuous run, but realistically ~1–2 weeks given mixed-priority cloud schedule. Acceptable.
-  4. **Verify gate**: existing `pnpm verify` covers the MDX compilation + SVG validity + e2e canonicals. No new test surface needed for the retrofit itself; the bearings rule is the regression guard for new articles.
-- estimated phases: 1 (the survey + dispatch mechanism); the rest is iterate drain.
-- conflicts: none. The component is shipped. The bearings rule is locked. The agents know the pattern. This phase is purely the orchestration to get the loop draining the backlog at hourly cadence.
-- promotion path: `/oversight` decides (a) whether the survey lives as `scripts/` or as a `@thock/content` export (recommend `scripts/` — matches the candidate-7.0 content-gap-survey shape); (b) whether to interleave InlineViz retrofit rows with content-velocity Rule-1/2/3/4 rows or run them as a separate parallel queue (recommend separate queue — different bias, different priority); (c) the cutoff score for promotion to active drain (recommend 5.0 to start, raise as the backlog shrinks). Lock at brief time.
+_(moved to `## Promoted` below — InlineViz retrofit shipped 2026-05-14 across all 40 articles. The bearings rule is now write-time-only; there is no remaining backlog to drain.)_
 
 ## Considered (below threshold)
 
@@ -76,6 +52,18 @@
 
 
 ## Promoted
+
+### [score 7.5] InlineViz retrofit — full-library pass (shipped 2026-05-14)
+- promoted: 2026-05-14 inline (user-driven, no separate `/oversight` round). All 40 articles now carry 2 `<InlineViz>` each.
+- shipped across five pillar commits on `main`:
+  - deep-dives (8 articles, 16 viz) at `eb9d7f2`
+  - guides (7, 14) at `ddd1c0e`
+  - trends (7, 14) at `2eb8b3d`
+  - ideas (8, 16) at `9a22c54`
+  - news (8, 16) at `1c7e6e4`
+- net: 80 hand-authored SVGs + 80 sibling `.svg.json` provenance files + 40 MDX rewrites. Component + bearings rule were locked Phase-A on 2026-05-14 before the drain (commits `5f42c92` through `fd320b2`); the retrofit drain itself ran in one contiguous session rather than the originally-proposed `/iterate` ticks.
+- forward state: the bearings rule is **write-time only** going forward. There is no remaining backlog. New articles ship viz in the same commit via content-curator. No retrofit phase, no `scripts/inline-viz-survey.mjs`, no AUDIT-row drain needed — the bearings rule + content-curator brief is the regression guard.
+- original candidate row + scope rationale: see git history of this file at `1c7e6e4^` for the proposal text (the original [7.5] row described an `/iterate`-shaped drain that turned out to be unnecessary once the work ran inline).
 
 ### [score 6.5] /ship-content skill — codify the content-velocity drain pattern
 - promoted: 2026-05-11 via `/oversight` (this commit, hygiene cleanup — row originally tagged [PROMOTED] but left in `## Pending`)
