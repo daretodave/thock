@@ -1,0 +1,28 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T07:30:00.000Z",
+  "commit": "2a85e92",
+  "kind": "inline-viz",
+  "article_slug": "lubing-101",
+  "article_pillar": "guides",
+  "section_anchor": "the-minimum-that-gets-eighty-percent-of-the-benefit",
+  "brief_summary": "Inline four-step process diagram for the H2 'The minimum that gets eighty percent of the benefit'. Four side-by-side panels connected by short arrows: (1) open switch / pull stem — top housing shown lifting off with arrows + lower body with exposed stem; (2) brush 205g0 on stem rails — isolated stem cross-section with amber dotted rail highlight + tapered brush approaching from upper-left; (3) lay film on lower-housing rim — lower housing cross-section with central well, amber dotted rim highlight, brush approaching; (4) spring + GPL 105 in baggie — baggie outline with two coiled springs and amber droplets. Each panel gets a numbered amber chip overhead and a sans label below. Matches the body protocol verbatim — no fabricated steps.",
+  "target": "apps/web/public/article-viz/lubing-101/minimum-protocol.svg",
+  "splash_color": {
+    "name": "warm-amber (lube hue, article signature)",
+    "oklch": "oklch(0.78 0.10 80)"
+  },
+  "accent_color": {
+    "name": "warm-bronze (theme accent)",
+    "oklch": "oklch(0.80 0.135 75)"
+  },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "apps/web/src/content/articles/lubing-101.mdx — the four-step protocol is described verbatim in the body paragraph: 'Open the switch. Pull the stem. Apply 205g0 with a small brush ... to the four stem rails ... Lay a film along the rails of the lower housing ... Drop the spring into a baggie with two or three drops of GPL 105.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/lubing-101/minimum-protocol.svg"],
+  "warnings": []
+}

@@ -1,0 +1,28 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T07:30:00.000Z",
+  "commit": "2a85e92",
+  "kind": "inline-viz",
+  "article_slug": "acoustic-spec-rise",
+  "article_pillar": "trends",
+  "section_anchor": "callout-the-vocabulary-settled",
+  "brief_summary": "Inline glyph strip immediately after the 'The vocabulary settled' Callout. Four side-by-side panels divided by quiet verticals, each carrying a small acoustic-envelope sketch + a serif italic label + a sans subtitle drawn from the Callout verbatim: 'thock' (broad low crest with coral wash and focal dot), 'clack' (tall narrow spike with a faint secondary ring), 'marble' (symmetric mid-rounded envelope with mirrored inner curve), 'popcorn' (scattered warm-grey dots over a dashed broken envelope, no rhythm). Provides a visual anchor for the four words readers will reuse.",
+  "target": "apps/web/public/article-viz/acoustic-spec-rise/vocabulary-glyphs.svg",
+  "splash_color": {
+    "name": "coral",
+    "oklch": "oklch(0.68 0.165 28)"
+  },
+  "accent_color": {
+    "name": "warm-bronze (theme accent)",
+    "oklch": "oklch(0.80 0.135 75)"
+  },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "apps/web/src/content/articles/acoustic-spec-rise.mdx — Callout 'The vocabulary settled' (the four words and their definitions are quoted directly from the article body)"
+  ],
+  "outputs": ["apps/web/public/article-viz/acoustic-spec-rise/vocabulary-glyphs.svg"],
+  "warnings": []
+}

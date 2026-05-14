@@ -1,0 +1,32 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T07:30:00.000Z",
+  "commit": "ec94dae",
+  "kind": "inline-viz",
+  "article_slug": "lubing-101",
+  "article_pillar": "guides",
+  "section_anchor": "where-most-builders-go-wrong",
+  "brief_summary": "Inline annotated cross-section for the H2 'Where most builders go wrong'. A fuller switch cross-section (top housing + stem with visible tactile bump face on its left flank + spring + lower housing with two visible contact leaves), annotated on the left margin with three amber 'DO LUBE' labels (stem rails, housing rails, spring) and on the right margin with two warm-red 'NEVER LUBE' labels (tactile bump face, contact leaves). Warm-red X glyphs sit directly over the never-lube surfaces; amber dotted dashes mark the do-lube surfaces. Mirrors the three failure modes in the article body verbatim — no fabricated surfaces.",
+  "target": "apps/web/public/article-viz/lubing-101/lube-map.svg",
+  "splash_color": {
+    "name": "warm-amber (lube hue, article signature)",
+    "oklch": "oklch(0.78 0.10 80)"
+  },
+  "caution_color": {
+    "name": "warm-red (thock 'down' token)",
+    "oklch": "oklch(0.62 0.13 25)"
+  },
+  "accent_color": {
+    "name": "warm-bronze (theme accent)",
+    "oklch": "oklch(0.80 0.135 75)"
+  },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans"],
+  "data_sources": [
+    "apps/web/src/content/articles/lubing-101.mdx — three failure modes (lubing bump, touching leaves, lubing factory-lubed switches); minimum protocol surfaces (stem rails, housing rails, spring). All five labels quote the article's own surface names."
+  ],
+  "outputs": ["apps/web/public/article-viz/lubing-101/lube-map.svg"],
+  "warnings": []
+}

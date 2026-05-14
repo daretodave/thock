@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>The thock-quality price floor over time — 2016 $300 custom only, 2026 $150 prebuilt baseline, ~$99 forecast</title>
+
+  <!-- Coral wash band along the "thock floor" — the price below which acoustic quality is now table-stakes -->
+  <rect x="120" y="280" width="960" height="100" fill="oklch(0.68 0.165 28 / 0.07)" stroke="none"/>
+
+  <!-- Y-axis (price) — vertical guide on left -->
+  <line x1="140" y1="100" x2="140" y2="430" stroke-opacity="0.6"/>
+  <!-- Price tick marks -->
+  <g stroke-opacity="0.45">
+    <line x1="132" y1="120" x2="148" y2="120"/>
+    <line x1="132" y1="200" x2="148" y2="200"/>
+    <line x1="132" y1="280" x2="148" y2="280"/>
+    <line x1="132" y1="360" x2="148" y2="360"/>
+  </g>
+  <text x="100" y="126" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7" text-anchor="end">$300</text>
+  <text x="100" y="206" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7" text-anchor="end">$200</text>
+  <text x="100" y="286" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7" text-anchor="end">$150</text>
+  <text x="100" y="366" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7" text-anchor="end">$100</text>
+
+  <!-- X-axis (years) — horizontal guide at bottom -->
+  <line x1="140" y1="430" x2="1080" y2="430" stroke-opacity="0.6"/>
+
+  <!-- COLUMN A: 2016 — only $300+ customs delivered thock -->
+  <g>
+    <!-- Bar outline -->
+    <path d="M 280 120 L 380 120 L 380 430 L 280 430 Z" stroke-opacity="0.55"/>
+    <!-- Faded hatch to mark "rare / hand-crafted" -->
+    <g stroke-opacity="0.3">
+      <line x1="280" y1="160" x2="380" y2="120"/>
+      <line x1="280" y1="220" x2="380" y2="180"/>
+      <line x1="280" y1="280" x2="380" y2="240"/>
+      <line x1="280" y1="340" x2="380" y2="300"/>
+      <line x1="280" y1="400" x2="380" y2="360"/>
+      <line x1="294" y1="430" x2="380" y2="380"/>
+    </g>
+  </g>
+  <text x="330" y="460" font-family="IBM Plex Sans, sans-serif" font-size="18" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">2016</text>
+  <text x="330" y="482" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65" text-anchor="middle">custom-only territory</text>
+
+  <!-- COLUMN B: 2026 — $150 prebuilt baseline (the current bar — coral-emphasized) -->
+  <g>
+    <path d="M 540 280 L 660 280 L 660 430 L 540 430 Z" stroke-opacity="0.9" stroke-width="2.5"/>
+    <!-- Coral fill wash inside this bar to signal "current floor" -->
+    <rect x="540" y="280" width="120" height="150" fill="oklch(0.68 0.165 28 / 0.18)" stroke="none"/>
+    <!-- Bronze accent on the top edge — the spec-line vendors now underwrite -->
+    <line x1="540" y1="280" x2="660" y2="280" stroke="oklch(0.80 0.135 75)" stroke-opacity="0.85" stroke-width="3"/>
+  </g>
+  <text x="600" y="460" font-family="IBM Plex Sans, sans-serif" font-size="18" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">2026</text>
+  <text x="600" y="482" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65" text-anchor="middle">mid-tier prebuilt</text>
+
+  <!-- COLUMN C: forecast — ~$99 (dashed; not yet shipped) -->
+  <g stroke-dasharray="6 6" stroke-opacity="0.7">
+    <path d="M 820 365 L 940 365 L 940 430 L 820 430 Z"/>
+  </g>
+  <!-- Question mark glyph inside the forecast bar — small coral mark to read as "open question" -->
+  <text x="880" y="408" font-family="Newsreader, serif" font-size="32" font-style="italic" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.85">?</text>
+  <text x="880" y="460" font-family="IBM Plex Sans, sans-serif" font-size="18" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">$99?</text>
+  <text x="880" y="482" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65" text-anchor="middle">forecast — none shipped yet</text>
+
+  <!-- Trajectory arrow from 2016 bar top to forecast bar top -->
+  <g stroke="oklch(0.68 0.165 28)" stroke-opacity="0.55" stroke-width="2" stroke-linecap="round">
+    <path d="M 380 130 Q 600 220 880 360"/>
+    <!-- Arrowhead -->
+    <path d="M 868 350 L 880 360 L 866 365"/>
+  </g>
+
+  <!-- "thock floor" caption riding the coral wash -->
+  <text x="600" y="318" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.9" font-weight="500">— thock floor —</text>
+
+  <!-- Brass-bronze theme dot — family anchor -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

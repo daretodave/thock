@@ -1,0 +1,25 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T07:30:00.000Z",
+  "commit": "2a85e92",
+  "kind": "inline-viz",
+  "article_slug": "acoustic-spec-rise",
+  "article_pillar": "trends",
+  "section_anchor": "the-four-layer-stack-went-standard",
+  "brief_summary": "Inline diagram for the H2 'The four-layer stack went standard'. A right-bracketed exploded side view of a mid-tier prebuilt cross-section, top-down: PBT doubleshot keycap row → factory-lubed switch row (with coral dotted highlight on the lube zone of one stem) → plate + gasket compression socks → dampening triple-stack (foam tape, silicone pad with hatching, poron strip on case wall). Four numbered labels along the right margin; bronze accents on the plate edges and one keycap legend line; faint baseline + tick rhythm matching sibling hero-art.",
+  "target": "apps/web/public/article-viz/acoustic-spec-rise/four-layer-stack.svg",
+  "splash_color": {
+    "name": "coral",
+    "oklch": "oklch(0.68 0.165 28)"
+  },
+  "accent_color": {
+    "name": "warm-bronze (theme accent)",
+    "oklch": "oklch(0.80 0.135 75)"
+  },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans"],
+  "outputs": ["apps/web/public/article-viz/acoustic-spec-rise/four-layer-stack.svg"],
+  "warnings": []
+}

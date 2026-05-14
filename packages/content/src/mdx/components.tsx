@@ -6,6 +6,7 @@ import { Caption } from './Caption'
 import { Source } from './Source'
 import { PartReference } from './PartReference'
 import { KeyboardImage } from './KeyboardImage'
+import { InlineViz } from './InlineViz'
 
 function SerifH2({ children }: { children?: ReactNode }): ReactElement {
   // mt-20 (80px) — generous top margin so a preceding <Callout>
@@ -56,6 +57,7 @@ export const mdxComponents = {
   PartReference,
   Mono,
   KeyboardImage,
+  InlineViz,
   h2: SerifH2,
   h3: SerifH3,
   a: AutoLink,

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Four acoustic words — thock, clack, marble, popcorn — and the sonic shape each one names</title>
+
+  <!-- Faint baseline running across all four panels — family-rhythm anchor -->
+  <line x1="80" y1="240" x2="1120" y2="240" stroke-opacity="0.4"/>
+
+  <!-- Quiet vertical dividers between panels -->
+  <line x1="320" y1="80" x2="320" y2="260" stroke-opacity="0.2"/>
+  <line x1="600" y1="80" x2="600" y2="260" stroke-opacity="0.2"/>
+  <line x1="880" y1="80" x2="880" y2="260" stroke-opacity="0.2"/>
+
+  <!-- ══════ PANEL 1: thock ══════════════════════════════════════════════
+       Deep, full-bodied bottom-out. Low-frequency bias: a single broad,
+       smooth crest sitting low in the panel; small coral splash dot under
+       it as the canonical "this is what we mean" focal anchor. -->
+  <g>
+    <!-- Broad, smooth low-crest envelope -->
+    <path d="M 100 240 C 130 240 150 180 200 180 C 250 180 270 240 300 240" stroke-width="2.5" stroke-opacity="0.95"/>
+    <!-- Soft fill wash inside the crest -->
+    <path d="M 100 240 C 130 240 150 180 200 180 C 250 180 270 240 300 240 Z" fill="oklch(0.68 0.165 28 / 0.10)" stroke="none"/>
+    <!-- Coral focal dot at the crest peak -->
+    <circle cx="200" cy="180" r="5" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)"/>
+  </g>
+  <text x="200" y="300" font-family="Newsreader, serif" font-size="28" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">thock</text>
+  <text x="200" y="328" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">deep, full-bodied bottom-out</text>
+
+  <!-- ══════ PANEL 2: clack ══════════════════════════════════════════════
+       Brighter, higher in the spectrum. Tall narrow spike. -->
+  <g>
+    <!-- Tall thin spike -->
+    <path d="M 380 240 L 460 100 L 540 240" stroke-width="2.5" stroke-opacity="0.95"/>
+    <!-- Faint secondary spike (the metallic ring after the strike) -->
+    <path d="M 460 240 L 490 175 L 520 240" stroke-opacity="0.4"/>
+  </g>
+  <text x="460" y="300" font-family="Newsreader, serif" font-size="28" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">clack</text>
+  <text x="460" y="328" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">brighter, higher in the spectrum</text>
+
+  <!-- ══════ PANEL 3: marble ═════════════════════════════════════════════
+       Rounded, mid-pitched profile. A symmetric oval / lozenge shape. -->
+  <g>
+    <!-- Smooth symmetric mid-rounded envelope -->
+    <path d="M 660 240 C 700 240 700 150 740 150 C 780 150 780 240 820 240" stroke-width="2.5" stroke-opacity="0.95"/>
+    <!-- Mirrored inner curve to read as 'mid' rather than 'low' -->
+    <path d="M 690 240 C 720 240 720 195 740 195 C 760 195 760 240 790 240" stroke-opacity="0.45"/>
+  </g>
+  <text x="740" y="300" font-family="Newsreader, serif" font-size="28" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">marble</text>
+  <text x="740" y="328" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">rounded, mid-pitched</text>
+
+  <!-- ══════ PANEL 4: popcorn ════════════════════════════════════════════
+       Loose, uneven. No shared pitch. Scattered dots + a fragmented
+       broken-line envelope. -->
+  <g>
+    <!-- Scattered strike marks at different heights — no rhythm, no shared pitch -->
+    <circle cx="930" cy="195" r="3" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.85"/>
+    <circle cx="955" cy="155" r="3" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.85"/>
+    <circle cx="985" cy="215" r="3" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.85"/>
+    <circle cx="1010" cy="175" r="3" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.85"/>
+    <circle cx="1035" cy="200" r="3" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.85"/>
+    <circle cx="1060" cy="160" r="3" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.85"/>
+    <!-- Broken/fragmented envelope underneath — dashed -->
+    <path d="M 920 240 L 950 225 L 980 240 L 1010 220 L 1040 240 L 1070 230" stroke-dasharray="4 6" stroke-opacity="0.55" stroke-width="2"/>
+  </g>
+  <text x="1000" y="300" font-family="Newsreader, serif" font-size="28" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">popcorn</text>
+  <text x="1000" y="328" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">uneven — no shared pitch</text>
+
+  <!-- Brass-bronze theme dot — family anchor -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

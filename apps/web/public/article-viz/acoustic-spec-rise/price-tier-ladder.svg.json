@@ -1,0 +1,28 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T07:30:00.000Z",
+  "commit": "2a85e92",
+  "kind": "inline-viz",
+  "article_slug": "acoustic-spec-rise",
+  "article_pillar": "trends",
+  "section_anchor": "what-changes-when-the-win-condition-becomes-the-floor",
+  "brief_summary": "Inline chart for the H2 'What changes when the win condition becomes the floor'. Three vertical bars on a price y-axis (annotated $100/$150/$200/$300): a faded hatched 2016 bar at $300+ marked 'custom-only territory'; a coral-emphasized 2026 bar at $150 with a bronze top-edge line marking the now-shipping spec floor; a dashed forecast bar at ~$99 marked 'forecast — none shipped yet' with a coral italic '?' glyph inside. A coral trajectory arrow swoops from 2016 to the forecast. A coral '— thock floor —' caption rides a coral wash band across the chart at the $150 level. Numbers come directly from the article body and the 'What we're watching' forecast section — no fabricated data.",
+  "target": "apps/web/public/article-viz/acoustic-spec-rise/price-tier-ladder.svg",
+  "splash_color": {
+    "name": "coral",
+    "oklch": "oklch(0.68 0.165 28)"
+  },
+  "accent_color": {
+    "name": "warm-bronze (theme accent)",
+    "oklch": "oklch(0.80 0.135 75)"
+  },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "apps/web/src/content/articles/acoustic-spec-rise.mdx — '$300 custom' (paragraph: 'In 2016 a thocky board…'), '$150 prebuilt' (lede, body, 'reader picking a $150 prebuilt in 2022'), '$99 hypothetical' (forecast: 'A wired, plastic-cased gasket-mount prebuilt with factory-lubed switches and a foam stack at $99')"
+  ],
+  "outputs": ["apps/web/public/article-viz/acoustic-spec-rise/price-tier-ladder.svg"],
+  "warnings": []
+}

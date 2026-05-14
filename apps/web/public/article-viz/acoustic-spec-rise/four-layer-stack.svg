@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>The four-layer acoustic stack — factory-lubed switch, gasket compression, dampening triple-stack, PBT doubleshot keycap</title>
+
+  <!-- Coral splash behind the dampening band — the layer that does the heaviest acoustic lifting -->
+  <rect x="200" y="380" width="700" height="80" fill="oklch(0.68 0.165 28 / 0.09)" stroke="none"/>
+
+  <!-- ── LAYER 4: KEYCAP ROW (top) ─────────────────────────────────────── -->
+  <g>
+    <!-- Five PBT doubleshot keycaps in side profile, trapezoidal -->
+    <path d="M 220 180 L 240 140 L 320 140 L 340 180 Z"/>
+    <path d="M 360 180 L 380 140 L 460 140 L 480 180 Z"/>
+    <path d="M 500 180 L 520 140 L 600 140 L 620 180 Z"/>
+    <path d="M 640 180 L 660 140 L 740 140 L 760 180 Z"/>
+    <path d="M 780 180 L 800 140 L 880 140 L 900 180 Z"/>
+    <!-- Bronze accent on the doubleshot legend line of the centre cap -->
+    <line x1="520" y1="158" x2="600" y2="158" stroke="oklch(0.80 0.135 75)" stroke-opacity="0.7" stroke-width="2.5"/>
+  </g>
+
+  <!-- Layer 4 label + bracket on the right -->
+  <g stroke-opacity="0.55">
+    <line x1="940" y1="140" x2="960" y2="140"/>
+    <line x1="960" y1="140" x2="960" y2="180"/>
+    <line x1="940" y1="180" x2="960" y2="180"/>
+  </g>
+  <text x="980" y="155" font-family="IBM Plex Sans, sans-serif" font-size="20" fill="oklch(0.78 0.005 90)" stroke="none">4 — keycap</text>
+  <text x="980" y="178" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">PBT doubleshot, 1.5mm</text>
+
+  <!-- ── LAYER 3: SWITCH ROW (factory-lubed) ───────────────────────────── -->
+  <g>
+    <!-- Five switches in side profile, narrower trapezoids beneath the caps -->
+    <path d="M 240 230 L 250 200 L 310 200 L 320 230 Z"/>
+    <path d="M 380 230 L 390 200 L 450 200 L 460 230 Z"/>
+    <path d="M 520 230 L 530 200 L 590 200 L 600 230 Z"/>
+    <path d="M 660 230 L 670 200 L 730 200 L 740 230 Z"/>
+    <path d="M 800 230 L 810 200 L 870 200 L 880 230 Z"/>
+    <!-- Coral dotted accent inside one switch — the factory-lube zone (stem rails) -->
+    <line x1="540" y1="208" x2="540" y2="222" stroke="oklch(0.68 0.165 28)" stroke-dasharray="1 4" stroke-opacity="0.95" stroke-width="2.5"/>
+    <line x1="580" y1="208" x2="580" y2="222" stroke="oklch(0.68 0.165 28)" stroke-dasharray="1 4" stroke-opacity="0.95" stroke-width="2.5"/>
+  </g>
+
+  <g stroke-opacity="0.55">
+    <line x1="940" y1="200" x2="960" y2="200"/>
+    <line x1="960" y1="200" x2="960" y2="230"/>
+    <line x1="940" y1="230" x2="960" y2="230"/>
+  </g>
+  <text x="980" y="212" font-family="IBM Plex Sans, sans-serif" font-size="20" fill="oklch(0.78 0.005 90)" stroke="none">3 — switch</text>
+  <text x="980" y="235" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">factory-lubed by SKU</text>
+
+  <!-- ── LAYER 2: PLATE + GASKET COMPRESSION ───────────────────────────── -->
+  <g>
+    <!-- Plate, a thin horizontal -->
+    <line x1="220" y1="265" x2="900" y2="265" stroke-opacity="0.85" stroke-width="2.5"/>
+    <!-- Two gasket sock indicators between plate and case — short verticals + small ovals -->
+    <g stroke-opacity="0.7">
+      <ellipse cx="270" cy="285" rx="14" ry="6"/>
+      <ellipse cx="850" cy="285" rx="14" ry="6"/>
+      <line x1="270" y1="265" x2="270" y2="279"/>
+      <line x1="850" y1="265" x2="850" y2="279"/>
+    </g>
+    <!-- Bronze accent on plate edges (locked-spec material) -->
+    <line x1="220" y1="265" x2="240" y2="265" stroke="oklch(0.80 0.135 75)" stroke-opacity="0.75" stroke-width="2.5"/>
+    <line x1="880" y1="265" x2="900" y2="265" stroke="oklch(0.80 0.135 75)" stroke-opacity="0.75" stroke-width="2.5"/>
+  </g>
+
+  <g stroke-opacity="0.55">
+    <line x1="940" y1="260" x2="960" y2="260"/>
+    <line x1="960" y1="260" x2="960" y2="295"/>
+    <line x1="940" y1="295" x2="960" y2="295"/>
+  </g>
+  <text x="980" y="275" font-family="IBM Plex Sans, sans-serif" font-size="20" fill="oklch(0.78 0.005 90)" stroke="none">2 — gasket mount</text>
+  <text x="980" y="298" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">plate + compression sock</text>
+
+  <!-- ── LAYER 1: DAMPENING TRIPLE-STACK ───────────────────────────────── -->
+  <g>
+    <!-- Top of stack: foam tape between PCB and plate -->
+    <line x1="220" y1="320" x2="900" y2="320" stroke-dasharray="6 6" stroke-opacity="0.55"/>
+    <!-- PCB line -->
+    <line x1="220" y1="345" x2="900" y2="345" stroke-opacity="0.85" stroke-width="2.5"/>
+    <!-- Silicone pad — solid filled-look horizontal under the PCB, on the coral wash -->
+    <path d="M 220 400 L 900 400 L 900 440 L 220 440 Z" stroke-opacity="0.6"/>
+    <!-- Hatching inside the silicone band to read as material -->
+    <g stroke-opacity="0.35">
+      <line x1="260" y1="400" x2="240" y2="440"/>
+      <line x1="320" y1="400" x2="300" y2="440"/>
+      <line x1="380" y1="400" x2="360" y2="440"/>
+      <line x1="440" y1="400" x2="420" y2="440"/>
+      <line x1="500" y1="400" x2="480" y2="440"/>
+      <line x1="560" y1="400" x2="540" y2="440"/>
+      <line x1="620" y1="400" x2="600" y2="440"/>
+      <line x1="680" y1="400" x2="660" y2="440"/>
+      <line x1="740" y1="400" x2="720" y2="440"/>
+      <line x1="800" y1="400" x2="780" y2="440"/>
+      <line x1="860" y1="400" x2="840" y2="440"/>
+    </g>
+    <!-- Poron strip lining the inner case walls -->
+    <line x1="220" y1="460" x2="220" y2="510" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.55" stroke-width="2.5"/>
+    <line x1="900" y1="460" x2="900" y2="510" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.55" stroke-width="2.5"/>
+  </g>
+
+  <g stroke-opacity="0.55">
+    <line x1="940" y1="320" x2="960" y2="320"/>
+    <line x1="960" y1="320" x2="960" y2="510"/>
+    <line x1="940" y1="510" x2="960" y2="510"/>
+  </g>
+  <text x="980" y="408" font-family="IBM Plex Sans, sans-serif" font-size="20" fill="oklch(0.78 0.005 90)" stroke="none">1 — dampening</text>
+  <text x="980" y="430" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">foam · silicone · poron</text>
+
+  <!-- Outer case (bottom housing) — encloses the dampening stack -->
+  <path d="M 200 320 L 920 320 L 920 540 L 200 540 Z" stroke-opacity="0.65"/>
+
+  <!-- Faint baseline beneath the case — family-rhythm anchor -->
+  <line x1="90" y1="570" x2="1110" y2="570" stroke-opacity="0.45"/>
+  <g stroke-opacity="0.3">
+    <line x1="90"   y1="570" x2="90"   y2="578"/>
+    <line x1="345"  y1="570" x2="345"  y2="578"/>
+    <line x1="600"  y1="570" x2="600"  y2="578"/>
+    <line x1="855"  y1="570" x2="855"  y2="578"/>
+    <line x1="1110" y1="570" x2="1110" y2="578"/>
+  </g>
+
+  <!-- Brass-bronze theme dot — family ornamental anchor, upper-right margin -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>
