@@ -1,0 +1,19 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T11:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "keychron-q-ultra-zmk",
+  "article_pillar": "news",
+  "section_anchor": "zmk-as-the-platform",
+  "brief_summary": "Two-column ledger of the firmware bet. Left (electric-blue filled, 'ZMK strengths'): battery-life management (what permits 660h claim) and Bluetooth maturity (five years of DIY field testing). Right (bordeaux dashed, 'historical weaknesses'): configurator tooling (no VIA equivalent yet) and advanced macro parity (QMK has a decade). Caption: 'first Tier-1 vendor to anchor a flagship line on ZMK rather than QMK/VIA'.",
+  "target": "apps/web/public/article-viz/keychron-q-ultra-zmk/zmk-bet.svg",
+  "splash_color": { "name": "electric-blue", "oklch": "oklch(0.55 0.20 240)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "keychron-q-ultra-zmk.mdx § 'ZMK as the platform' — 'ZMK's strengths are battery-life management and Bluetooth maturity; its historical weak spots are configurator tooling and feature parity with QMK on advanced macros. ... Keychron picking ZMK as the platform for a five-board flagship line is the most concrete signal yet that the firmware has moved out of niche-DIY into mainstream-prebuilt territory.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/keychron-q-ultra-zmk/zmk-bet.svg"],
+  "warnings": []
+}

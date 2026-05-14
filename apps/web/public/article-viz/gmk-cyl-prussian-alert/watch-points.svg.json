@@ -1,0 +1,19 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T11:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "gmk-cyl-prussian-alert",
+  "article_pillar": "news",
+  "section_anchor": "what-were-watching",
+  "brief_summary": "Three Prussian-red watch cards naming the close-week signals. Card 1: single SKU vs. split fulfillment (single = tighter allocation, earlier close). Card 2: modifier-kit count (3 or fewer = tight pricing, sprawl = restock discounts). Card 3: deskmat and novelty handling (in-base or future round, signals run shape). Caption asks whether GMK CYL sustains a second strong year.",
+  "target": "apps/web/public/article-viz/gmk-cyl-prussian-alert/watch-points.svg",
+  "splash_color": { "name": "prussian-red", "oklch": "oklch(0.50 0.18 25)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "gmk-cyl-prussian-alert.mdx § 'What we're watching' — 'whether KBDfans posts a single global SKU or splits regional fulfillment — a single SKU usually means tighter allocation and an earlier close ... the modifier-kit count. CYL sets that ship with three or fewer kits tend to keep their pricing tight; sprawl correlates with deeper discounts at restock ... whether the deskmat and novelty kits run as add-ons to the base, or get held back'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gmk-cyl-prussian-alert/watch-points.svg"],
+  "warnings": []
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Mode Sonnet R2 group-buy window shift — original window (2026-05-01 to 2026-06-15) revised to 2026-06-01 to 2026-07-15</title>
+
+  <!-- Title -->
+  <text x="600" y="100" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">CannonKeys shifted the R2 window — one month later</text>
+
+  <!-- Original window — faded, struck through -->
+  <text x="120" y="170" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">originally announced</text>
+  <rect x="240" y="190" width="580" height="20" stroke-opacity="0.4" stroke-dasharray="4 4"/>
+  <line x1="240" y1="200" x2="820" y2="200" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.35" stroke-width="2"/>
+  <text x="240" y="230" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">2026-05-01</text>
+  <text x="820" y="230" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">2026-06-15</text>
+
+  <!-- Revised window — emphasized -->
+  <text x="120" y="290" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.80 0.135 75)" stroke="none" opacity="0.95">revised 2026-05-09</text>
+  <rect x="380" y="310" width="580" height="24" fill="oklch(0.80 0.135 75 / 0.20)" stroke="oklch(0.80 0.135 75)" stroke-opacity="0.95" stroke-width="3"/>
+  <text x="380" y="358" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.80 0.135 75)" stroke="none" text-anchor="middle" opacity="0.95">2026-06-01</text>
+  <text x="960" y="358" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.80 0.135 75)" stroke="none" text-anchor="middle" opacity="0.95">2026-07-15</text>
+
+  <!-- Caption -->
+  <text x="600" y="420" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">the closing date is soft — do not assume an extension</text>
+  <text x="600" y="445" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">CannonKeys handles global region directly · no regional proxy</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

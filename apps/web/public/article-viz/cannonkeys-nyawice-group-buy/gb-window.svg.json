@@ -1,0 +1,20 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T11:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "cannonkeys-nyawice-group-buy",
+  "article_pillar": "news",
+  "section_anchor": "buying-notes",
+  "brief_summary": "Horizontal group-buy timeline. Coral filled marker at 2026-04-17 ('opens'), coral filled bar spanning the four-week window, second coral marker at 2026-05-17 ('closes'). Below the timeline, three feature chips name the editorial-story attributes: leaf-spring F1 mount, 9° typing angle, friction-fit cat ears in 4 colorways.",
+  "target": "apps/web/public/article-viz/cannonkeys-nyawice-group-buy/gb-window.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "cannonkeys-nyawice-group-buy.mdx § 'Buying notes' — 'The buy is global through CannonKeys, with one checkout and one fulfillment timeline. The window is 2026-04-17 through 2026-05-17 — a four-week buy'",
+    "cannonkeys-nyawice-group-buy.mdx § 'The mount is the story' — 'a less-common leaf-spring F1 mount, a 9-degree typing angle ... friction-fit silicone cat ears and a nose in four colorways'"
+  ],
+  "outputs": ["apps/web/public/article-viz/cannonkeys-nyawice-group-buy/gb-window.svg"],
+  "warnings": []
+}

@@ -1,0 +1,19 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T11:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "gsk-sweet-nightmare-group-buy",
+  "article_pillar": "news",
+  "section_anchor": "four-colorways-two-finishes-half-a-week",
+  "brief_summary": "4×2 grid of variant cells. Four rows (Bimorphis, Shigan, Eviscera, Optigon) crossed against two columns (Kawa, Guro). Each cell is a fuchsia-tinted circle (Kawa lighter, Guro slightly darker) representing one discrete artisan variant. Footnote underlines that each cell is its own cast / pigment / QC pass. Caption: 'four days to commit · eight artisans to choose from'.",
+  "target": "apps/web/public/article-viz/gsk-sweet-nightmare-group-buy/eight-variant-matrix.svg",
+  "splash_color": { "name": "fuchsia", "oklch": "oklch(0.65 0.18 320)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "gsk-sweet-nightmare-group-buy.mdx § 'Four colorways, two finishes, half a week' — 'Bimorphis, Shigan, Eviscera, and Optigon are the colorways; Kawa and Guro are the finishes ... Each variant is a discrete artisan ... A resin artisan run amortizes nothing across the matrix — each colorway-finish combination is its own cast, its own pigment mix, its own QC pass.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gsk-sweet-nightmare-group-buy/eight-variant-matrix.svg"],
+  "warnings": []
+}

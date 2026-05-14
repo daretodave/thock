@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Sweet Nightmare's four-day buy shape — between a flash drop and a four-week formal group buy</title>
+
+  <!-- Title -->
+  <text x="600" y="100" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">a new buy shape · flash-drop tempo, formal-buy chrome</text>
+
+  <!-- Horizontal axis -->
+  <line x1="120" y1="290" x2="1080" y2="290" stroke-opacity="0.55"/>
+
+  <!-- Axis labels -->
+  <text x="120" y="320" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">minutes</text>
+  <text x="1080" y="320" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.55">weeks</text>
+
+  <!-- Flash drop -->
+  <g>
+    <line x1="220" y1="240" x2="220" y2="340" stroke-opacity="0.5"/>
+    <circle cx="220" cy="290" r="8" fill="none" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.65" stroke-width="2"/>
+    <text x="220" y="220" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">flash drop</text>
+    <text x="220" y="358" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">11 min · secondary sets price</text>
+  </g>
+
+  <!-- Sweet Nightmare four-day window — emphasized -->
+  <g>
+    <line x1="500" y1="240" x2="500" y2="340" stroke="oklch(0.65 0.18 320)" stroke-opacity="0.95" stroke-width="3"/>
+    <circle cx="500" cy="290" r="11" fill="oklch(0.65 0.18 320 / 0.25)" stroke="oklch(0.65 0.18 320)" stroke-opacity="0.95" stroke-width="3"/>
+    <text x="500" y="215" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.65 0.18 320)" stroke="none" text-anchor="middle" opacity="0.95">Sweet Nightmare</text>
+    <text x="500" y="358" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.65 0.18 320)" stroke="none" text-anchor="middle" opacity="0.95">4 days · vendor-hosted, fixed close</text>
+  </g>
+
+  <!-- Open-ended pre-order -->
+  <g>
+    <line x1="760" y1="240" x2="760" y2="340" stroke-opacity="0.5"/>
+    <circle cx="760" cy="290" r="8" fill="none" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.65" stroke-width="2"/>
+    <text x="760" y="220" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">open-ended pre-order</text>
+    <text x="760" y="358" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">floats until maker decides</text>
+  </g>
+
+  <!-- Formal GMK CYL group buy -->
+  <g>
+    <line x1="980" y1="240" x2="980" y2="340" stroke-opacity="0.5"/>
+    <circle cx="980" cy="290" r="8" fill="none" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.65" stroke-width="2"/>
+    <text x="980" y="220" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">formal GMK CYL GB</text>
+    <text x="980" y="358" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">4–5 weeks · vendor-hosted</text>
+  </g>
+
+  <!-- Caption -->
+  <text x="600" y="425" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">window sized to the cohort, not the cohort sized to the window</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

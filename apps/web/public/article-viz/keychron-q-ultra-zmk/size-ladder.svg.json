@@ -1,0 +1,20 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T11:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "keychron-q-ultra-zmk",
+  "article_pillar": "news",
+  "section_anchor": "whats-in-the-line",
+  "brief_summary": "Five cards across the size ladder. Q1 (75%) is electric-blue-filled and emphasized as the headline SKU with the HE 8K Marble variant labelled ~$230 and 'reviewer-first'. Q2 (65%), Q3 (TKL), Q5 (96%), and Q6 (full-size) each in warm-grey outline cards. Below, a blue platform bar reads: 'all five run ZMK · 8K polling · up to 660h battery (Keychron claim)'.",
+  "target": "apps/web/public/article-viz/keychron-q-ultra-zmk/size-ladder.svg",
+  "splash_color": { "name": "electric-blue", "oklch": "oklch(0.55 0.20 240)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "keychron-q-ultra-zmk.mdx § 'What's in the line' — 'The Q Ultra series mirrors the existing Q-line size ladder: Q1 (75%), Q2 (65%), Q3 (TKL), Q5 (96%), and Q6 (full-size) ... The Q1 HE 8K Marble is the headline SKU ... Approximate pricing for the Q1 HE 8K has been quoted around the $230 mark in early coverage'",
+    "keychron-q-ultra-zmk.mdx § lede — '8K polling-rate ceiling ... up to 660 hours per charge'"
+  ],
+  "outputs": ["apps/web/public/article-viz/keychron-q-ultra-zmk/size-ladder.svg"],
+  "warnings": []
+}

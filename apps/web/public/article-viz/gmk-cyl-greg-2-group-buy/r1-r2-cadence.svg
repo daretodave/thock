@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>The GMK CYL round-2 cadence — historical GMK R2 gaps versus the compressed ~18-month CYL rhythm</title>
+
+  <!-- Title -->
+  <text x="600" y="100" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">round-2 is becoming the more interesting story than the colorway</text>
+
+  <!-- Two parallel timelines -->
+  <!-- Top: historical GMK rhythm (slower) -->
+  <text x="120" y="180" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">broader GMK historically</text>
+  <line x1="120" y1="220" x2="1080" y2="220" stroke-opacity="0.45"/>
+  <g>
+    <circle cx="180" cy="220" r="11" fill="oklch(0.78 0.005 90 / 0.20)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.85" stroke-width="2.5"/>
+    <text x="180" y="200" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">R1</text>
+    <circle cx="980" cy="220" r="9" fill="oklch(0.78 0.005 90 / 0.20)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.7" stroke-width="2"/>
+    <text x="980" y="200" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">R2 · years later</text>
+  </g>
+  <line x1="180" y1="240" x2="980" y2="240" stroke-opacity="0.3" stroke-dasharray="3 5"/>
+  <text x="580" y="258" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">3-5 years · generation gap</text>
+
+  <!-- Bottom: GMK CYL compressed -->
+  <text x="120" y="335" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.95">GMK CYL line · 2026</text>
+  <line x1="120" y1="375" x2="1080" y2="375" stroke-opacity="0.55"/>
+  <g>
+    <circle cx="180" cy="375" r="11" fill="oklch(0.68 0.165 28 / 0.25)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.95" stroke-width="3"/>
+    <text x="180" y="355" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">R1</text>
+    <circle cx="540" cy="375" r="11" fill="oklch(0.68 0.165 28 / 0.25)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.95" stroke-width="3"/>
+    <text x="540" y="355" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">R2 · ~18 months later</text>
+  </g>
+  <line x1="180" y1="395" x2="540" y2="395" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.55" stroke-dasharray="3 5"/>
+  <text x="360" y="413" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">~18-month rhythm · GREG fits inside it</text>
+
+  <!-- Caption -->
+  <text x="600" y="470" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">if GREG R2 clears at R1 numbers, the cadence is reproducible across the catalog</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

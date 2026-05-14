@@ -1,0 +1,19 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T11:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "gsk-sweet-nightmare-group-buy",
+  "article_pillar": "news",
+  "section_anchor": "a-four-day-window-on-a-formal-group-buy",
+  "brief_summary": "Horizontal time axis with four buy-shape markers — flash drop (~11 min, left), Sweet Nightmare four-day window (fuchsia-emphasized, center-left), open-ended pre-order, and formal GMK CYL group buy (4-5 weeks, right). Each marker has a label above and a one-line description below. Caption: 'window sized to the cohort, not the cohort sized to the window'.",
+  "target": "apps/web/public/article-viz/gsk-sweet-nightmare-group-buy/window-shape.svg",
+  "splash_color": { "name": "fuchsia", "oklch": "oklch(0.65 0.18 320)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "gsk-sweet-nightmare-group-buy.mdx § 'A four-day window on a formal group buy' — 'Either they are flash drops — a maker posts on a Sunday, sells out in eleven minutes ... or they are open-ended pre-orders ... Sweet Nightmare sits in that middle, but at the tightest end of it. Four days is long enough to be a window rather than a drop ... A flash-drop genre is borrowing formal-group-buy chrome'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gsk-sweet-nightmare-group-buy/window-shape.svg"],
+  "warnings": []
+}

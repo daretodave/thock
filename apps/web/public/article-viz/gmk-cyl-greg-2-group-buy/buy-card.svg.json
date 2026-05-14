@@ -1,0 +1,20 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T11:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "gmk-cyl-greg-2-group-buy",
+  "article_pillar": "news",
+  "section_anchor": "buying-notes",
+  "brief_summary": "Five-chip horizontal buy card. Window: 2026-05-01 to 2026-05-29. Runner: KBDfans, single configurator. Profile: CYL (Cherry-clone family). Material: doubleshot ABS. Region: global, no regional proxy. All chips coral-bordered. Caption: 'second and probably final shot at this set's specific colorway in doubleshot ABS'.",
+  "target": "apps/web/public/article-viz/gmk-cyl-greg-2-group-buy/buy-card.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "gmk-cyl-greg-2-group-buy.mdx § 'Buying notes' — 'The window is 2026-05-01 through 2026-05-29 — four weeks ... Region is global through KBDfans. GMK lead times apply ... The set is doubleshot ABS, not PBT'",
+    "gmk-cyl-greg-2-group-buy.mdx § 'What's actually in the run' — 'The base kit is the original GREG palette in doubleshot ABS; the profile is CYL. KBDfans is hosting the buy as global, with a single checkout flow'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gmk-cyl-greg-2-group-buy/buy-card.svg"],
+  "warnings": []
+}

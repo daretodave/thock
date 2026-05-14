@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>GMK CYL King of the Seas buy window — 2026-04-28 through 2026-05-31 at KBDfans, global single configurator covering both palettes</title>
+
+  <!-- Title -->
+  <text x="600" y="100" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">five-week window · one configurator covers both palettes</text>
+
+  <!-- Timeline -->
+  <line x1="120" y1="240" x2="1080" y2="240" stroke-opacity="0.55"/>
+
+  <!-- Open marker -->
+  <g>
+    <line x1="220" y1="200" x2="220" y2="280" stroke="oklch(0.68 0.20 0)" stroke-opacity="0.95" stroke-width="3"/>
+    <circle cx="220" cy="240" r="10" fill="oklch(0.68 0.20 0 / 0.25)" stroke="oklch(0.68 0.20 0)" stroke-opacity="0.95" stroke-width="3"/>
+    <text x="220" y="195" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.20 0)" stroke="none" text-anchor="middle" opacity="0.95">opened</text>
+    <text x="220" y="310" font-family="Newsreader, serif" font-size="17" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">2026-04-28</text>
+  </g>
+
+  <!-- Open window bar (gradient-like via two stacked colored fills could be tricky in SVG without gradient; use solid mixed) -->
+  <rect x="220" y="232" width="760" height="16" fill="oklch(0.55 0.13 30 / 0.20)" stroke="oklch(0.68 0.20 0)" stroke-opacity="0.95" stroke-width="2.5"/>
+  <text x="600" y="220" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.20 0)" stroke="none" text-anchor="middle" opacity="0.95">both palettes available · single checkout</text>
+
+  <!-- Close marker -->
+  <g>
+    <line x1="980" y1="200" x2="980" y2="280" stroke="oklch(0.68 0.20 0)" stroke-opacity="0.95" stroke-width="3"/>
+    <circle cx="980" cy="240" r="10" fill="oklch(0.68 0.20 0 / 0.25)" stroke="oklch(0.68 0.20 0)" stroke-opacity="0.95" stroke-width="3"/>
+    <text x="980" y="195" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.20 0)" stroke="none" text-anchor="middle" opacity="0.95">closes</text>
+    <text x="980" y="310" font-family="Newsreader, serif" font-size="17" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">2026-05-31</text>
+  </g>
+
+  <!-- Bottom chips -->
+  <g>
+    <rect x="240" y="370" width="220" height="50" rx="6" stroke-opacity="0.6"/>
+    <text x="350" y="390" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.68 0.20 0)" stroke="none" text-anchor="middle" opacity="0.95">designer</text>
+    <text x="350" y="408" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">MiKeyDigit</text>
+
+    <rect x="490" y="370" width="220" height="50" rx="6" stroke-opacity="0.6"/>
+    <text x="600" y="390" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.68 0.20 0)" stroke="none" text-anchor="middle" opacity="0.95">profile · material</text>
+    <text x="600" y="408" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">CYL · doubleshot ABS</text>
+
+    <rect x="740" y="370" width="220" height="50" rx="6" stroke-opacity="0.6"/>
+    <text x="850" y="390" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.68 0.20 0)" stroke="none" text-anchor="middle" opacity="0.95">region</text>
+    <text x="850" y="408" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">global · KBDfans</text>
+  </g>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

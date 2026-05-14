@@ -1,0 +1,20 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T11:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "cannonkeys-nyawice-group-buy",
+  "article_pillar": "news",
+  "section_anchor": "the-mount-is-the-story",
+  "brief_summary": "Three mount-style cards side by side. Left (warm-grey outline, 'premium tier default'): gasket-mount with a mini cross-section showing plate-on-gaskets. Center (coral filled, 'the Nyawice pick'): leaf-spring F1 with mini cross-section showing plate suspended on metal leaves. Right (faded warm-grey, 'budget tier'): tray-mount with screws to bottom case. Caption: 'the mount is the editorial story'.",
+  "target": "apps/web/public/article-viz/cannonkeys-nyawice-group-buy/mount-context.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "cannonkeys-nyawice-group-buy.mdx § 'The mount is the story' — 'Most Alice boards in 2026 land on one of two mount families. Gasket-mount is the dominant choice on the premium tier; tray-mount survives at the budget tier ... The Nyawice picks a third, less-trafficked option: a leaf-spring F1 mount'",
+    "cannonkeys-nyawice-group-buy.mdx § Callout — 'Leaf-spring mounts suspend the plate on metal leaves rather than on silicone or poron gasket strips ... sharper, more uniform feedback at the cost of some of the cushioned-bottom-out character'"
+  ],
+  "outputs": ["apps/web/public/article-viz/cannonkeys-nyawice-group-buy/mount-context.svg"],
+  "warnings": []
+}

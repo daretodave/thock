@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 580" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Sweet Nightmare's eight-variant matrix — four colorways crossed against two finishes, all available inside the four-day window</title>
+
+  <!-- Title -->
+  <text x="600" y="100" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">four colorways × two finishes · eight discrete artisans</text>
+
+  <!-- Matrix headers -->
+  <text x="400" y="170" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.65 0.18 320)" stroke="none" text-anchor="middle" opacity="0.95">Kawa finish</text>
+  <text x="800" y="170" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.65 0.18 320)" stroke="none" text-anchor="middle" opacity="0.95">Guro finish</text>
+
+  <!-- Four rows of colorways -->
+  <!-- Bimorphis -->
+  <text x="180" y="230" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end">Bimorphis</text>
+  <circle cx="400" cy="225" r="22" fill="oklch(0.65 0.18 320 / 0.18)" stroke="oklch(0.65 0.18 320)" stroke-opacity="0.85" stroke-width="2.5"/>
+  <circle cx="800" cy="225" r="22" fill="oklch(0.65 0.18 320 / 0.30)" stroke="oklch(0.65 0.18 320)" stroke-opacity="0.95" stroke-width="2.5"/>
+
+  <!-- Shigan -->
+  <text x="180" y="290" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end">Shigan</text>
+  <circle cx="400" cy="285" r="22" fill="oklch(0.65 0.18 320 / 0.18)" stroke="oklch(0.65 0.18 320)" stroke-opacity="0.85" stroke-width="2.5"/>
+  <circle cx="800" cy="285" r="22" fill="oklch(0.65 0.18 320 / 0.30)" stroke="oklch(0.65 0.18 320)" stroke-opacity="0.95" stroke-width="2.5"/>
+
+  <!-- Eviscera -->
+  <text x="180" y="350" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end">Eviscera</text>
+  <circle cx="400" cy="345" r="22" fill="oklch(0.65 0.18 320 / 0.18)" stroke="oklch(0.65 0.18 320)" stroke-opacity="0.85" stroke-width="2.5"/>
+  <circle cx="800" cy="345" r="22" fill="oklch(0.65 0.18 320 / 0.30)" stroke="oklch(0.65 0.18 320)" stroke-opacity="0.95" stroke-width="2.5"/>
+
+  <!-- Optigon -->
+  <text x="180" y="410" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end">Optigon</text>
+  <circle cx="400" cy="405" r="22" fill="oklch(0.65 0.18 320 / 0.18)" stroke="oklch(0.65 0.18 320)" stroke-opacity="0.85" stroke-width="2.5"/>
+  <circle cx="800" cy="405" r="22" fill="oklch(0.65 0.18 320 / 0.30)" stroke="oklch(0.65 0.18 320)" stroke-opacity="0.95" stroke-width="2.5"/>
+
+  <!-- Grid lines -->
+  <g stroke-opacity="0.18" stroke-dasharray="3 6">
+    <line x1="220" y1="190" x2="980" y2="190"/>
+    <line x1="220" y1="255" x2="980" y2="255"/>
+    <line x1="220" y1="315" x2="980" y2="315"/>
+    <line x1="220" y1="375" x2="980" y2="375"/>
+    <line x1="220" y1="435" x2="980" y2="435"/>
+    <line x1="600" y1="190" x2="600" y2="435"/>
+  </g>
+
+  <!-- Footnote -->
+  <text x="600" y="480" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.65 0.18 320)" stroke="none" text-anchor="middle" opacity="0.95">each cell is its own cast · its own pigment mix · its own QC pass</text>
+  <text x="600" y="510" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">four days to commit · eight artisans to choose from</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>The Keychron Q Ultra size ladder — Q1 through Q6 running ZMK, with the Q1 HE 8K Marble as the headline SKU</title>
+
+  <!-- Title -->
+  <text x="600" y="100" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">five wireless prebuilts on one firmware platform</text>
+
+  <!-- Q1 — focal -->
+  <g>
+    <rect x="80" y="180" width="200" height="160" rx="8" fill="oklch(0.55 0.20 240 / 0.18)" stroke="oklch(0.55 0.20 240)" stroke-opacity="0.95" stroke-width="3"/>
+    <text x="180" y="215" font-family="Newsreader, serif" font-size="24" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Q1</text>
+    <text x="180" y="240" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">75%</text>
+    <text x="180" y="280" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.55 0.20 240)" stroke="none" text-anchor="middle" opacity="0.95">HE 8K Marble</text>
+    <text x="180" y="300" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">headline SKU · ~$230</text>
+    <text x="180" y="320" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">reviewer-first</text>
+  </g>
+
+  <!-- Q2 -->
+  <g>
+    <rect x="300" y="200" width="170" height="120" rx="8" stroke-opacity="0.55"/>
+    <text x="385" y="230" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Q2</text>
+    <text x="385" y="255" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">65%</text>
+  </g>
+
+  <!-- Q3 -->
+  <g>
+    <rect x="490" y="200" width="170" height="120" rx="8" stroke-opacity="0.55"/>
+    <text x="575" y="230" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Q3</text>
+    <text x="575" y="255" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">TKL</text>
+  </g>
+
+  <!-- Q5 -->
+  <g>
+    <rect x="680" y="200" width="170" height="120" rx="8" stroke-opacity="0.55"/>
+    <text x="765" y="230" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Q5</text>
+    <text x="765" y="255" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">96%</text>
+  </g>
+
+  <!-- Q6 -->
+  <g>
+    <rect x="870" y="200" width="170" height="120" rx="8" stroke-opacity="0.55"/>
+    <text x="955" y="230" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Q6</text>
+    <text x="955" y="255" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">full-size</text>
+  </g>
+
+  <!-- Common platform bar -->
+  <rect x="80" y="370" width="960" height="40" rx="6" fill="oklch(0.55 0.20 240 / 0.10)" stroke="oklch(0.55 0.20 240)" stroke-opacity="0.85" stroke-width="2.5"/>
+  <text x="560" y="395" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.55 0.20 240)" stroke="none" text-anchor="middle" opacity="0.95">all five run ZMK · 8K polling · up to 660h battery (Keychron claim)</text>
+
+  <!-- Caption -->
+  <text x="600" y="455" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">five boards is structural — not a vendor hedging a bet</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

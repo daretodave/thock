@@ -1,0 +1,20 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T11:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "gmk-cyl-prussian-alert",
+  "article_pillar": "news",
+  "section_anchor": "why-this-is-on-the-radar",
+  "brief_summary": "Three large Prussian-red stat blocks: 121k views / 141 replies on GeekHack IC, +38 direction up on the W19 trends tracker, and May 15 2026 open date at KBDfans (single global host). Footer surfaces the IC-position context ('ahead of Metro System and Selene') and the palette story ('red-on-cream Bauhaus · one ochre modifier accent').",
+  "target": "apps/web/public/article-viz/gmk-cyl-prussian-alert/ic-momentum.svg",
+  "splash_color": { "name": "prussian-red", "oklch": "oklch(0.50 0.18 25)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "gmk-cyl-prussian-alert.mdx § lede + 'Why this is on the radar' — 'the GeekHack interest-check thread cleared 121k views and 141 replies before a single base kit went up for order, putting it ahead of where Metro System and Selene were sitting ... Prussian Alert sits on this week's /trends/tracker board at +38, direction up'",
+    "gmk-cyl-prussian-alert.mdx § 'Timing' — 'The buy opens 2026-05-15 at KBDfans as the global host'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gmk-cyl-prussian-alert/ic-momentum.svg"],
+  "warnings": []
+}

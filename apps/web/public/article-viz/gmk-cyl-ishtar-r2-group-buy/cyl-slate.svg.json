@@ -1,0 +1,19 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T11:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "gmk-cyl-ishtar-r2-group-buy",
+  "article_pillar": "news",
+  "section_anchor": "the-cyl-line-in-2026",
+  "brief_summary": "Timeline strip with three KBDfans GMK CYL pieces above a shared timeline axis. Ishtar R2 (lapis-blue, filled, 04-17 → 05-10), King of the Seas (warm-grey outline, opens 04-28), Prussian Alert (warm-grey outline, opens 05-15). Footer line: 'all three: KBDfans · single configurator · global host · multi-region proxies underneath'.",
+  "target": "apps/web/public/article-viz/gmk-cyl-ishtar-r2-group-buy/cyl-slate.svg",
+  "splash_color": { "name": "lapis", "oklch": "oklch(0.55 0.13 270)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "gmk-cyl-ishtar-r2-group-buy.mdx § 'The CYL line in 2026' — 'GMK CYL King of the Seas opened at KBDfans on 2026-04-28 in a dual-colorway concurrent buy. GMK CYL Prussian Alert is set to open at KBDfans on 2026-05-15. Ishtar R2 sits in the same vendor pattern as both: single configurator, single checkout, global host at KBDfans'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gmk-cyl-ishtar-r2-group-buy/cyl-slate.svg"],
+  "warnings": []
+}

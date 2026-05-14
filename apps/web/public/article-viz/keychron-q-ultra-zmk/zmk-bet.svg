@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>The firmware bet — ZMK's strengths and historical weaknesses, set against what a Tier-1 flagship needs</title>
+
+  <!-- Title -->
+  <text x="600" y="100" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">ZMK chosen for the platform · firmware swap is the actual story</text>
+
+  <!-- Vertical divider -->
+  <line x1="600" y1="150" x2="600" y2="430" stroke-opacity="0.18"/>
+
+  <!-- Left: strengths -->
+  <text x="300" y="170" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.55 0.20 240)" stroke="none" text-anchor="middle" opacity="0.95">ZMK strengths</text>
+  <g>
+    <rect x="90" y="195" width="420" height="80" rx="8" fill="oklch(0.55 0.20 240 / 0.10)" stroke="oklch(0.55 0.20 240)" stroke-opacity="0.95" stroke-width="2.5"/>
+    <text x="300" y="225" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.9">battery-life management</text>
+    <text x="300" y="250" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.55 0.20 240)" stroke="none" text-anchor="middle" opacity="0.95">what permits the 660h claim</text>
+  </g>
+  <g>
+    <rect x="90" y="290" width="420" height="80" rx="8" fill="oklch(0.55 0.20 240 / 0.10)" stroke="oklch(0.55 0.20 240)" stroke-opacity="0.95" stroke-width="2.5"/>
+    <text x="300" y="320" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.9">Bluetooth maturity</text>
+    <text x="300" y="345" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.55 0.20 240)" stroke="none" text-anchor="middle" opacity="0.95">five years of DIY field testing</text>
+  </g>
+
+  <!-- Right: historical weaknesses -->
+  <text x="900" y="170" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.95">historical weaknesses</text>
+  <g>
+    <rect x="690" y="195" width="420" height="80" rx="8" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.6" stroke-width="2" stroke-dasharray="5 5"/>
+    <text x="900" y="225" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">configurator tooling</text>
+    <text x="900" y="250" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.95">no VIA equivalent yet</text>
+  </g>
+  <g>
+    <rect x="690" y="290" width="420" height="80" rx="8" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.6" stroke-width="2" stroke-dasharray="5 5"/>
+    <text x="900" y="320" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">advanced macro parity</text>
+    <text x="900" y="345" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.95">QMK has a decade of features</text>
+  </g>
+
+  <!-- Caption -->
+  <text x="600" y="465" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">first Tier-1 vendor to anchor a flagship line on ZMK rather than QMK/VIA</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

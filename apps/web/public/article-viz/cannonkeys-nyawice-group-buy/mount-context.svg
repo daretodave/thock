@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>The Nyawice's leaf-spring F1 mount in the context of how Alice boards usually land — gasket-mount on the premium tier and tray-mount on the budget tier</title>
+
+  <!-- Title -->
+  <text x="600" y="100" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">how Alice boards usually mount — and what the Nyawice picks instead</text>
+
+  <!-- Three mount cards in a row -->
+  <g>
+    <rect x="100" y="160" width="300" height="220" rx="10" stroke-opacity="0.55"/>
+    <text x="250" y="195" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">premium tier default</text>
+    <text x="250" y="230" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">gasket-mount</text>
+    <!-- Mini cross-section: plate floating on gasket pads -->
+    <g stroke-opacity="0.65">
+      <rect x="150" y="265" width="200" height="14"/>
+      <circle cx="170" cy="290" r="4" fill="oklch(0.78 0.005 90 / 0.3)" stroke-width="1.5"/>
+      <circle cx="250" cy="290" r="4" fill="oklch(0.78 0.005 90 / 0.3)" stroke-width="1.5"/>
+      <circle cx="330" cy="290" r="4" fill="oklch(0.78 0.005 90 / 0.3)" stroke-width="1.5"/>
+      <rect x="150" y="305" width="200" height="14"/>
+    </g>
+    <text x="250" y="345" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">soft · cushioned bottom-out</text>
+  </g>
+
+  <g>
+    <rect x="450" y="160" width="300" height="220" rx="10" fill="oklch(0.68 0.165 28 / 0.10)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.95" stroke-width="3"/>
+    <text x="600" y="195" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">the Nyawice pick</text>
+    <text x="600" y="230" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">leaf-spring F1</text>
+    <!-- Mini cross-section: plate on metal leaves -->
+    <g>
+      <rect x="500" y="265" width="200" height="14" stroke-opacity="0.65"/>
+      <!-- Leaf-spring representation -->
+      <path d="M 510 290 Q 530 280 550 290" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.95" stroke-width="2.5"/>
+      <path d="M 590 290 Q 610 280 630 290" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.95" stroke-width="2.5"/>
+      <path d="M 670 290 Q 690 280 700 290" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.95" stroke-width="2.5"/>
+      <rect x="500" y="305" width="200" height="14" stroke-opacity="0.65"/>
+    </g>
+    <text x="600" y="345" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">sharper · more uniform · tunable</text>
+  </g>
+
+  <g>
+    <rect x="800" y="160" width="300" height="220" rx="10" stroke-opacity="0.45"/>
+    <text x="950" y="195" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">budget tier · legacy designs</text>
+    <text x="950" y="230" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">tray-mount</text>
+    <!-- Mini cross-section -->
+    <g stroke-opacity="0.45">
+      <rect x="850" y="265" width="200" height="14"/>
+      <rect x="850" y="305" width="200" height="14"/>
+      <line x1="870" y1="319" x2="870" y2="330"/>
+      <line x1="950" y1="319" x2="950" y2="330"/>
+      <line x1="1030" y1="319" x2="1030" y2="330"/>
+    </g>
+    <text x="950" y="345" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">cheap · variable across layout</text>
+  </g>
+
+  <!-- Caption -->
+  <text x="600" y="440" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">the mount is the editorial story</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

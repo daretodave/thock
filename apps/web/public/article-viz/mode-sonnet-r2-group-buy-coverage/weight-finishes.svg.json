@@ -1,0 +1,19 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T11:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "mode-sonnet-r2-group-buy-coverage",
+  "article_pillar": "news",
+  "section_anchor": "whats-new-in-r2",
+  "brief_summary": "Three weight-finish cards side by side. Polished (warm-grey card, amber-tinted swatch, 'returning from R1'). Black PVD (warm-grey card, near-black swatch, 'returning from R1'). Bronze PVD (bronze-bordered focal card, bronze swatch, 'new in R2 · paired with silver + graphite cases'). Caption: 'R1 buyers can pick up the new weight as a standalone accessory'.",
+  "target": "apps/web/public/article-viz/mode-sonnet-r2-group-buy-coverage/weight-finishes.svg",
+  "splash_color": { "name": "bronze", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "mode-sonnet-r2-group-buy-coverage.mdx § 'What's new in R2' — 'the brass weight available in three finishes: polished, black PVD, and a new bronze PVD that was not offered in R1. The bronze finish is paired in product photography with the silver and graphite case colorways ... R1 buyers who want only the new weight finish should check the standalone accessory listing on the same page'"
+  ],
+  "outputs": ["apps/web/public/article-viz/mode-sonnet-r2-group-buy-coverage/weight-finishes.svg"],
+  "warnings": []
+}

@@ -1,0 +1,20 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T11:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "gmk-cyl-king-of-the-seas-group-buy",
+  "article_pillar": "news",
+  "section_anchor": "two-colorways-one-buy",
+  "brief_summary": "Two facing card panels representing the dual-palette mechanic. Left: The Sovereign in deep ocean blue with a row of 8 mini key tiles in the palette, label 'moody · desk-as-furniture'. Right: The Mutation in electric pink with the same 8-tile row, label 'electric · desk-as-instrument'. Central 'or' chip on a dashed divider. Caption: 'choose at checkout · not at IC · two MOQs to clear inside one window'.",
+  "target": "apps/web/public/article-viz/gmk-cyl-king-of-the-seas-group-buy/two-palettes.svg",
+  "splash_color": { "name": "dual: deep-ocean-blue + electric-pink", "oklch": "oklch(0.45 0.15 250) + oklch(0.68 0.20 0)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "gmk-cyl-king-of-the-seas-group-buy.mdx § 'Two colorways, one buy' — 'The Sovereign and The Mutation are both available for the duration of the window, and buyers choose at checkout rather than at IC. The mood split is wide on purpose — one moody, one electric ... The desk-as-instrument crowd has been pulling toward saturated synthetic palettes; the desk-as-furniture crowd has been pulling toward muted naturalistic ones.'",
+    "gmk-cyl-king-of-the-seas-group-buy.mdx § Callout — 'Each palette has to clear its own GMK minimum independently — they are separate tooling runs at the manufacturer'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gmk-cyl-king-of-the-seas-group-buy/two-palettes.svg"],
+  "warnings": []
+}

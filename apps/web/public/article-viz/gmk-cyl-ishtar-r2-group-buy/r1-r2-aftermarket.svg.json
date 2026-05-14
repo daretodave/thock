@@ -1,0 +1,20 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T11:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "gmk-cyl-ishtar-r2-group-buy",
+  "article_pillar": "news",
+  "section_anchor": "what-an-r2-actually-does",
+  "brief_summary": "Price/time chart in lapis-blue (plum-blue, oklch 0.55 0.13 270). MSRP and 2× MSRP horizontal guides. R1 close marker at MSRP, dashed aftermarket curve climbing past 2× MSRP, then a vertical arrow dropping back to MSRP at R2 close (2026-05-10). Faint outline marker at Q4 2026 fulfillment with the compression question. Caption: 'second-and-likely-last chance at MSRP'.",
+  "target": "apps/web/public/article-viz/gmk-cyl-ishtar-r2-group-buy/r1-r2-aftermarket.svg",
+  "splash_color": { "name": "lapis", "oklch": "oklch(0.55 0.13 270)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "gmk-cyl-ishtar-r2-group-buy.mdx § 'What an R2 actually does' — 'doubleshot ABS tooling is expensive ... buyers who missed the first round end up paying secondary-market premiums that have, on reference sets in the corpus, run double or higher relative to MSRP. The R2 is the editorial event because it interrupts that curve.'",
+    "gmk-cyl-ishtar-r2-group-buy.mdx § 'What we're watching' — 'whether the aftermarket premium on the original Ishtar collapses after R2 fulfillment lands in Q4 2026'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gmk-cyl-ishtar-r2-group-buy/r1-r2-aftermarket.svg"],
+  "warnings": []
+}

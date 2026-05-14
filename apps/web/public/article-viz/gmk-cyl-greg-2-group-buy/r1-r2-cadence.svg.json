@@ -1,0 +1,19 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T11:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "gmk-cyl-greg-2-group-buy",
+  "article_pillar": "news",
+  "section_anchor": "the-round-2-pattern-now-a-pattern",
+  "brief_summary": "Two stacked timelines comparing historical GMK round-2 cadence (warm-grey, 3-5 year gap between R1 and R2, 'generation gap') with the compressed GMK CYL line cadence (coral-emphasized, ~18 months between R1 and R2 — 'GREG fits inside it'). Caption frames the watch-point: if GREG R2 clears at R1 numbers, the cadence is reproducible.",
+  "target": "apps/web/public/article-viz/gmk-cyl-greg-2-group-buy/r1-r2-cadence.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "gmk-cyl-greg-2-group-buy.mdx § 'The round-2 pattern, now a pattern' — 'Where the broader GMK community has historically waited years between rounds — sometimes long enough that R2 buyers are a different generation of the hobby than R1 — the CYL sub-line is running closer to an eighteen-month rhythm. GREG R2 fits inside that envelope.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gmk-cyl-greg-2-group-buy/r1-r2-cadence.svg"],
+  "warnings": []
+}

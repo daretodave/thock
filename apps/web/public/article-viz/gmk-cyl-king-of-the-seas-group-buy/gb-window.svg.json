@@ -1,0 +1,20 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T11:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "gmk-cyl-king-of-the-seas-group-buy",
+  "article_pillar": "news",
+  "section_anchor": "buying-notes",
+  "brief_summary": "Buy-window timeline with electric-pink markers at 2026-04-28 (opens) and 2026-05-31 (closes), with a filled bar spanning the five-week window labelled 'both palettes available · single checkout'. Three chips below: designer (MiKeyDigit), profile · material (CYL · doubleshot ABS), and region (global · KBDfans).",
+  "target": "apps/web/public/article-viz/gmk-cyl-king-of-the-seas-group-buy/gb-window.svg",
+  "splash_color": { "name": "electric-pink", "oklch": "oklch(0.68 0.20 0)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "gmk-cyl-king-of-the-seas-group-buy.mdx § 'Buying notes' — 'The window is 2026-04-28 through 2026-05-31. Region is global through KBDfans, with a single configurator covering both palettes and a single checkout flow.'",
+    "gmk-cyl-king-of-the-seas-group-buy.mdx § 'MiKeyDigit and the legend layout' — designer credit"
+  ],
+  "outputs": ["apps/web/public/article-viz/gmk-cyl-king-of-the-seas-group-buy/gb-window.svg"],
+  "warnings": []
+}

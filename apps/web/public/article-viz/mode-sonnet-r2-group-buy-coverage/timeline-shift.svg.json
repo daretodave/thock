@@ -1,0 +1,20 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T11:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "mode-sonnet-r2-group-buy-coverage",
+  "article_pillar": "news",
+  "section_anchor": "buying-notes",
+  "brief_summary": "Two stacked windows showing the R2 timeline shift. Top: faded dashed bar for the originally-announced window 2026-05-01 to 2026-06-15 (struck through). Bottom: bronze-filled solid bar for the revised window 2026-06-01 to 2026-07-15. Caption: 'CannonKeys shifted the R2 window — one month later · the closing date is soft'.",
+  "target": "apps/web/public/article-viz/mode-sonnet-r2-group-buy-coverage/timeline-shift.svg",
+  "splash_color": { "name": "bronze", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "mode-sonnet-r2-group-buy-coverage.mdx § Update Callout — 'The buy is now announced for 2026-06-01 through 2026-07-15 rather than the originally-published 2026-05-01 through 2026-06-15 dates referenced below.'",
+    "mode-sonnet-r2-group-buy-coverage.mdx § 'Buying notes' — 'The safest read of 2026-06-15 is do not assume an extension.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/mode-sonnet-r2-group-buy-coverage/timeline-shift.svg"],
+  "warnings": []
+}
