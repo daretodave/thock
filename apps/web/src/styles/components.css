@@ -65,3 +65,71 @@
   color: var(--thock-text);
   font-weight: 600;
 }
+
+/* ─── InlineViz — desktop float treatment ──────────────────────────
+ * Below xl (1280px) the figure renders as a default block at full
+ * body width (mobile / tablet — no whitespace to float into).
+ *
+ * At xl+ the figure floats into the right whitespace and centers
+ * itself between the article column's right edge and the viewport's
+ * right edge. An SVG arm connects it back to the column.
+ *
+ * `float: right` + `clear: right` is deliberate: when two viz are
+ * placed close together in MDX, the second one stacks below the
+ * first instead of overlapping — the bug observed on the first pass
+ * with `position: absolute`.
+ *
+ * Position math (xl viewport, container at max 1280px, mx-auto):
+ *   body.right     = 50vw - 40px           (60ch + container padding)
+ *   midpoint       = (body.right + 100vw) / 2 = 75vw - 20px
+ *   viz.center.x   = midpoint              (centered in whitespace)
+ *   viz.right      = midpoint + width / 2
+ *   margin-right   = body.right - viz.right
+ *                  = (50vw - 40) - (75vw - 20 + width/2)
+ *                  = -25vw - 20 - width / 2
+ *
+ * Width clamps between 28rem (graceful at narrow xl) and 42rem
+ * (1.3× the prior 32rem at wide viewports including 4K). Preferred
+ * 40vw scales smoothly across the middle.
+ *
+ * Connector arm width spans EXACTLY the gap from body.right to
+ * viz.left — no bleed into the article column. The prior 80px
+ * bleed had the line overlapping article text, which broke the
+ * editorial reading flow.
+ *   arm.width      = viz.left - body.right
+ *                  = (75vw - 20 - width/2) - (50vw - 40)
+ *                  = 25vw + 20 - width / 2
+ *
+ * Both width and arm width derive from the same --thock-viz-width
+ * CSS variable so they stay in lockstep through the clamp.
+ */
+@media (min-width: 1280px) {
+  .thock-inline-viz {
+    --thock-viz-width: clamp(28rem, 40vw, 42rem);
+    float: right;
+    clear: right;
+    position: relative;
+    width: var(--thock-viz-width);
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    margin-left: 2rem;
+    margin-right: calc(-25vw - 20px - var(--thock-viz-width) / 2);
+  }
+  .thock-inline-viz-connector {
+    position: absolute;
+    right: 100%;
+    top: 0;
+    height: 100%;
+    width: calc(25vw + 20px - var(--thock-viz-width) / 2);
+    overflow: visible;
+  }
+  .thock-inline-viz-dot {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 1rem;
+    height: 1rem;
+    border-radius: 9999px;
+  }
+}

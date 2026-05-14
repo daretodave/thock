@@ -59,25 +59,19 @@ export type InlineVizProps = {
  * sitting on the page background with no chrome.
  *
  * **Desktop (≥ xl, 1280px):** figure floats into the right-side
- * whitespace via `float: right` + a viewport-responsive negative
- * `margin-right` (calc-pinned so the figure's right edge lands ~24px
- * from the viewport edge at any width including 4K). `clear-right`
- * stacks subsequent viz vertically — two viz placed close together
- * in the MDX don't overlap; the second one pushes down below the
- * first.
+ * whitespace, centered between the article column's right edge and
+ * the viewport's right edge. Width scales via clamp(28rem, 40vw,
+ * 42rem) — graceful at narrow xl, 1.3× the prior baseline at wide
+ * viewports including 4K. An SVG step-shape connector arm spans
+ * exactly the gap between the column edge and the figure's left edge
+ * (no bleed, so it never overlaps article text). The arm and a dot
+ * on the figure's left edge take the viz's accent color so each
+ * floated viz tags itself to its own data lineage.
  *
- * An SVG connector arm runs from the figure's natural inline-flow
- * row inside the article column out to a dot on the figure's left
- * edge. The connector is a three-segment step shape — flat, slope,
- * flat — that visually links the data to its place in the prose.
- * The arm width also adapts via calc, spanning the gap from the
- * article column's right edge to the figure's left edge regardless
- * of viewport.
- *
- * The article body container must have `xl:relative` so the SVG
- * `right: 100%` anchor lands correctly inside the figure's positioning
- * context, and `xl:[display:flow-root]` so the floats don't escape
- * the body height. Both are applied on `<ArticleBody>`.
+ * Desktop layout math lives in `apps/web/src/styles/components.css`
+ * under `.thock-inline-viz` — see that file for the derivation. The
+ * single `--thock-viz-width` CSS variable keeps the figure width and
+ * the connector-arm width in lockstep through the clamp.
  *
  * Assets live under `apps/web/public/article-viz/<slug>/<viz-slug>.svg`
  * with a sibling `.svg.json` provenance file. Family convention:
@@ -94,23 +88,12 @@ export function InlineViz({
   const accentColor = resolveAccent(accent)
   return (
     <figure
-      className="
-        my-10
-        xl:relative xl:my-12
-        xl:float-right xl:clear-right
-        xl:w-[32rem]
-        xl:ml-8
-        xl:mr-[calc(-50vw_-_16px)]
-      "
+      className="thock-inline-viz my-10"
       style={{ ['--thock-viz-accent' as string]: accentColor }}
     >
       {/* Desktop connector arm — _/- step shape, accent-colored.
-       *  - Sits absolutely to the LEFT of the figure (right edge of SVG = left edge of figure)
-       *  - Width adapts to viewport via calc so the arm always spans
-       *    the gap from the article column's right edge to the figure's
-       *    left edge, plus a few rem of bleed INTO the article column.
-       *  - vector-effect keeps the stroke width pixel-true through
-       *    the preserveAspectRatio="none" viewBox stretching.
+       *  Sized + positioned by `.thock-inline-viz-connector` in
+       *  components.css; here we just render the SVG and the polyline.
        *
        *  Path geometry (viewBox 0 0 100 100, stretched to actual w×h):
        *    (0, 8)    article-column anchor — slightly below the figure's top edge
@@ -118,17 +101,14 @@ export function InlineViz({
        *    (65, 50)  end of the diagonal ("/") — meets the dot's vertical center
        *    (100, 50) dot — figure's left edge, vertically centered
        *
-       *  SVG width formula (in viewport units, xl breakpoint = 1280):
-       *    figure.left = (100vw - 16) - 32rem   // right-pinned at viewport.right - 16px
-       *    body.right  = 50vw - 40              // body.left + 60ch with container centered
-       *    gap         = figure.left - body.right = 50vw - 488 + something
-       *    arm width   = gap + 80px bleed = calc(50vw - 408px)
+       *  vector-effect="non-scaling-stroke" keeps the stroke pixel-true
+       *  through preserveAspectRatio="none" viewBox stretching.
        */}
       <svg
         aria-hidden="true"
         viewBox="0 0 100 100"
         preserveAspectRatio="none"
-        className="thock-viz-connector hidden xl:block absolute right-full top-0 h-full w-[calc(50vw_-_408px)] overflow-visible"
+        className="thock-inline-viz-connector hidden xl:block"
       >
         <polyline
           points="0,8 35,8 65,50 100,50"
@@ -146,7 +126,7 @@ export function InlineViz({
        *  "the line ends in a dot embedded on the figure's edge." */}
       <span
         aria-hidden="true"
-        className="thock-viz-dot hidden xl:block absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 h-4 w-4 rounded-full"
+        className="thock-inline-viz-dot hidden xl:block"
         style={{ background: 'var(--thock-viz-accent)' }}
       />
 
