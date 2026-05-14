@@ -304,6 +304,24 @@ test('color-contrast — newsletter form attribution (full page, regression guar
   expect(contrast, formatViolations(contrast)).toHaveLength(0)
 })
 
+// Regression guard: color-contrast on the TrendingTile category label drained by
+// audit row [a11y] issue #94 — text-text-3 at text-micro (12px) on the home-page
+// Trending strip swapped to text-text-2. Scoped to data-testid="trending-tile-category".
+test('color-contrast — trending tile category label (regression guard)', async ({
+  page,
+}) => {
+  await page.goto('/')
+  await page.waitForLoadState('networkidle')
+
+  const results = await new AxeBuilder({ page })
+    .withTags(WCAG_TAGS)
+    .include('[data-testid="trending-tile-category"]')
+    .analyze()
+
+  const contrast = results.violations.filter((v) => v.id === 'color-contrast')
+  expect(contrast, formatViolations(contrast)).toHaveLength(0)
+})
+
 // Regression guard: skip link is present and targets a valid id="main" element.
 // Phase A ships this as a hard assertion because the skip link is fixed in
 // the same commit (no longer needs Phase B discovery).

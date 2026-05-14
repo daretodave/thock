@@ -71,7 +71,10 @@ export function TrendingTile({
           aria-hidden="true"
           className={`inline-block h-1.5 w-1.5 rounded-full ${CATEGORY_DOT[category]}`}
         />
-        <span className="font-mono uppercase tracking-[0.08em] text-micro text-text-3">
+        <span
+          data-testid="trending-tile-category"
+          className="font-mono uppercase tracking-[0.08em] text-micro text-text-2"
+        >
           {category}
         </span>
       </div>
