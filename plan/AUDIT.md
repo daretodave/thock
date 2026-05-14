@@ -169,6 +169,20 @@
 - root cause: text-text-3 fails WCAG AA contrast at 12px/14px in light mode; same root cause as the previous series of text-text-3 drains (byline, tracker metadata, about links). Footer/newsletter label contexts were explicitly noted as "Phase B candidates — deferred" in the d486ad5 commit that shipped the byline fix.
 > **Resolved (2026-05-14):** Swapped text-text-3 → text-text-2 on three footer elements: `Footer.tsx:20` (tagline, text-small + data-testid="footer-tagline"), `Footer.tsx:29` (copyright, text-micro + data-testid="footer-copyright"), `ButtondownForm.tsx:53` (both footer text-micro and full text-small label variants + data-testid="newsletter-form-label"). Three regression guards in `apps/e2e/tests/a11y.spec.ts` scope AxeBuilder.include() to the three new testids on /, /, and /newsletter respectively. 575 e2e green (+3 guards). Remaining Phase B candidates: "Powered by Buttondown" link (text-text-4 base — separate tick), home TrendingTile kind labels (text-micro text-text-3), article figcaptions (text-small text-text-3), tracker "latest" badge.
 
+### [x] [a11y] [7.2] newsletter attribution link — text-text-4 at 12px fails WCAG AA contrast on all pages — addressed in 5753b7a (closes #93)
+- issue: #93
+- category: a11y
+- filed: 2026-05-14 by cloud /iterate audit (Phase B drain)
+- impact: 8 (ButtondownForm renders in the shared footer on every canonical URL and as the full variant on /newsletter; widest possible blast radius for a single-component fix)
+- ease: 9 (one class substitution on <p> wrapper + ternary collapse + hover direction fix)
+- score: 7.2 (impact × ease / 10)
+- wcag: 1.4.3 Contrast (Minimum) AA — 4.5:1 for normal text at 12px
+- axe impact: serious
+- pages: all pages (shared footer) + /newsletter (full variant)
+- elements: `<p>` wrapper of "Powered by Buttondown." attribution `<a>` in `ButtondownForm.tsx:89-104` — text-text-4 at text-micro (12px), far below the 4.5:1 threshold. Hover state hover:text-text-3 further retreated contrast on interaction.
+- root cause: text-text-4 = oklch(0.40 0.004 250) — even lower luminance than text-text-3 (oklch(0.55 0.006 250)) which was already failing WCAG AA. Attribution <p> used an identical two-branch ternary with the same low-contrast class for both footer and full variants.
+> **Resolved (2026-05-14):** Swapped text-text-4 → text-text-2 on the attribution `<p>` wrapper in `ButtondownForm.tsx`. Collapsed the identical two-branch ternary to a single class string. Adjusted hover from `hover:text-text-3` (contrast retreat) to `hover:text-text` (contrast increase). Added `data-testid="newsletter-form-attribution"` on the `<p>` for targeted regression guards. Two regression guards in `apps/e2e/tests/a11y.spec.ts` scope AxeBuilder.include() to [data-testid="newsletter-form-attribution"] on / (footer variant) and /newsletter (full variant), each asserting zero color-contrast violations. 577 e2e green (+2 guards). Remaining Phase B candidates: home TrendingTile kind labels (text-micro text-text-3), MentionedPartsRail + RelatedArticlesRail section headings (text-micro text-text-3), article figcaptions (text-small text-text-3), TrackerTable column headers + TrackerArchiveStrip labels. `5753b7a`
+
 ### [MED] Lighthouse CI — phase 17 follow-up (path locked 2026-05-11 via /oversight; cloud-blocked on workflows-permission 2026-05-13)
 - issue: #85
 > Filed 2026-05-09 by phase 17 brief. The build-plan row for phase 17 listed a Lighthouse pass at ≥95 on `/` and `/article/[slug]`. The bundle-size budget shipped this phase covers the JS-weight axis on its own; this row is for the full Lighthouse signal (perf + a11y + best-practices + SEO).
