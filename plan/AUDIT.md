@@ -155,6 +155,20 @@
 - root cause: text-text-3 in light mode = oklch(0.55 0.006 250) — medium-dark blue-grey against #ffffff (white surface) — estimated contrast ≈ 3.5–4:1, below 4.5:1 for normal text at 14px. Axe Phase A flagged four canonical pages with serious violations on these elements.
 > **Resolved (2026-05-14):** Swapped text-text-3 → text-text-2 on four targeted element contexts: `ArticleByline.tsx:31` (container class — author span's text-text-2 override unchanged), `ArticleCard.tsx` (meta container + data-testid="article-card-meta" added for regression guards), `RelatedArticleCard.tsx:37` (meta container), `TrackerRow.tsx:55` (rank span). Same approach as the previous text-text-3 drain (tracker-week-block + tag back-link). Three new regression guards in `apps/e2e/tests/a11y.spec.ts`: AxeBuilder.include() scoped to [data-testid="article-byline"], [data-testid="article-card-meta"], and [data-testid="tracker-row"] on representative pages, each asserting zero color-contrast violations. 572 e2e green (+3 from new guards). Remaining text-text-3 usages in footer + newsletter label contexts (font-mono text-micro) are additional Phase B candidates — deferred.
 
+### [x] [a11y] [4.9] footer tagline, copyright, newsletter label — text-text-3 at small text (all pages) — addressed in 9998ae5 (closes #92)
+- issue: #92
+- category: a11y
+- filed: 2026-05-14 by cloud /iterate audit (Phase B drain)
+- impact: 7 (shared footer renders on every canonical URL; violations on /, /about, /tag/*, /search, /newsletter, all article pages — widest-surface a11y row to date)
+- ease: 7 (class substitution in 2 components + data-testid additions for regression guards)
+- score: 4.9 (impact × ease / 10)
+- wcag: 1.4.3 Contrast (Minimum) AA — 4.5:1 for normal text at 14px/12px
+- axe impact: serious
+- pages: all pages with shared footer (every canonical URL)
+- elements: `<p class="text-small text-text-3">editorial content hub...` (footer tagline); `<span class="font-mono text-micro text-text-3">© 2026 thock</span>` (copyright); `<label class="font-mono text-micro text-text-3">Enter your email</label>` (ButtondownForm footer + full variants)
+- root cause: text-text-3 fails WCAG AA contrast at 12px/14px in light mode; same root cause as the previous series of text-text-3 drains (byline, tracker metadata, about links). Footer/newsletter label contexts were explicitly noted as "Phase B candidates — deferred" in the d486ad5 commit that shipped the byline fix.
+> **Resolved (2026-05-14):** Swapped text-text-3 → text-text-2 on three footer elements: `Footer.tsx:20` (tagline, text-small + data-testid="footer-tagline"), `Footer.tsx:29` (copyright, text-micro + data-testid="footer-copyright"), `ButtondownForm.tsx:53` (both footer text-micro and full text-small label variants + data-testid="newsletter-form-label"). Three regression guards in `apps/e2e/tests/a11y.spec.ts` scope AxeBuilder.include() to the three new testids on /, /, and /newsletter respectively. 575 e2e green (+3 guards). Remaining Phase B candidates: "Powered by Buttondown" link (text-text-4 base — separate tick), home TrendingTile kind labels (text-micro text-text-3), article figcaptions (text-small text-text-3), tracker "latest" badge.
+
 ### [MED] Lighthouse CI — phase 17 follow-up (path locked 2026-05-11 via /oversight; cloud-blocked on workflows-permission 2026-05-13)
 - issue: #85
 > Filed 2026-05-09 by phase 17 brief. The build-plan row for phase 17 listed a Lighthouse pass at ≥95 on `/` and `/article/[slug]`. The bundle-size budget shipped this phase covers the JS-weight axis on its own; this row is for the full Lighthouse signal (perf + a11y + best-practices + SEO).
@@ -172,7 +186,7 @@
 >
 > **Unblock path locked 2026-05-14 via /oversight:** user is granting `workflows: write` to the Claude Code GitHub App installation out-of-band. Next cloud /iterate tick after the permission lands re-stages the prepared `.lighthouserc.json` + `.github/workflows/lighthouse.yml` from issue #85 and ships. No local fallback needed unless the perm grant gets blocked upstream.
 >
-> **Still blocked 2026-05-14 (this cloud tick):** Attempted to re-stage the fix. `git push` rejected again with the same error: `refusing to allow a GitHub App to create or update workflow without 'workflows' permission`. ACTIONS_PAT scope has not been updated yet. This tick shipped the byline a11y finding (#91) instead. Lighthouse row remains open; will retry on next cloud tick once the permission is confirmed.
+> **Still blocked 2026-05-14 (cloud tick 2):** Attempted re-stage again. `git push` rejected once more: `refusing to allow a GitHub App to create or update workflow without 'workflows' permission`. `workflows: write` permission still not granted. This tick shipped the footer a11y finding (#92) instead. Lighthouse row remains open; will retry on next cloud tick once the permission is confirmed.
 >
 > Score: **5.0** (path locked; runner choice no longer blocks. Real signal once it runs).
 
