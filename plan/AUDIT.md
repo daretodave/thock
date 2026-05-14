@@ -251,26 +251,9 @@
 - root cause: text-text-3 (oklch(0.55 0.006 250)) against --thock-bg fails WCAG AA 4.5:1 at 14px (text-small). Same root cause as the recently-drained series (#91–#97). Axe surfaced this during the verify gate run for the Lighthouse CI attempt.
 > **Resolved (2026-05-14):** Swapped text-text-3 → text-text-2 on both figcaption elements (InlineViz.tsx:190 and KeyboardImage.tsx:35). Added data-testid="article-figcaption" to both for regression guard scoping. Regression guard in apps/e2e/tests/a11y.spec.ts asserts zero color-contrast violations on [data-testid="article-figcaption"] on /article/gateron-oil-king-deep-dive. 584 e2e green (+1 guard). Remaining Phase B candidates: search label (text-micro text-text-3 on /search), GroupBuyRow kind/region/metadata (text-micro text-text-3 on /group-buys + /group-buys/past), text-down on tracker sparklines, TagChip category opacity context. `531937e`
 
-### [MED] Lighthouse CI — phase 17 follow-up (path locked 2026-05-11 via /oversight; cloud-blocked on workflows-permission 2026-05-13)
+### [x] [MED] Lighthouse CI — phase 17 follow-up — addressed in 5926ac7 (closes #84, #85)
 - issue: #85
-> Filed 2026-05-09 by phase 17 brief. The build-plan row for phase 17 listed a Lighthouse pass at ≥95 on `/` and `/article/[slug]`. The bundle-size budget shipped this phase covers the JS-weight axis on its own; this row is for the full Lighthouse signal (perf + a11y + best-practices + SEO).
->
-> **Path (locked 2026-05-11 via /oversight):** `lighthouse-ci` GitHub Action with Vercel-preview integration. Rationale: $0-marginal (matches the user's near-zero-cost preference) — the action runs on GH-hosted ubuntu using Chrome from npm, pings the Vercel-preview URL for the PR, asserts against `.lighthouserc.json` thresholds, and comments the score table on the PR. Free for public repos. The `treosh/lighthouse-ci-action@v12` action is the canonical choice; configuration lives in `.lighthouserc.json` at repo root.
->
-> **Action (drainable by `/iterate` or `/ship-a-phase`):**
-> 1. Add `.lighthouserc.json` with assertion thresholds (perf ≥90, a11y ≥95, best-practices ≥95, SEO ≥95, PWA optional). Start permissive; tighten via subsequent iterate ticks.
-> 2. Add `.github/workflows/lighthouse.yml` triggered on `pull_request` (no schedule needed — assertions run per-PR against the Vercel preview URL pulled from the deployment status event).
-> 3. `numberOfRuns: 3` median-of-3 to absorb single-run noise.
-> 4. URLs to walk: `/`, `/article/gateron-oil-king-deep-dive` (canonical article shape), `/trends/tracker` (data-heavy page), `/group-buys` (visual-heavy page).
-> 5. Artifact upload via the action's built-in `uploadArtifacts: true`.
->
-> **Cloud-blocked 2026-05-13:** the 2026-05-13T23:35Z cloud /march tick prepared this fix (`.lighthouserc.json` + `.github/workflows/lighthouse.yml` against `deployment_status`) and verify-gated it green, but `git push` rejected the commit: `refusing to allow a GitHub App to create or update workflow ".github/workflows/lighthouse.yml" without "workflows" permission`. The cloud agent runs under an installation token without `workflows: write`. Re-routed the tick to the next-best critique row (#86). To unblock from a future cloud tick: add `workflows: write` to the Claude Code GitHub App's installation permissions. Otherwise ship from a local /iterate tick (uses `ACTIONS_PAT`) or open a PR with the workflow on a feature branch. The prepared config is preserved in the issue #85 thread; whoever drains this re-stages it. See issue #85 comment trail for the exact files.
->
-> **Unblock path locked 2026-05-14 via /oversight:** user is granting `workflows: write` to the Claude Code GitHub App installation out-of-band. Next cloud /iterate tick after the permission lands re-stages the prepared `.lighthouserc.json` + `.github/workflows/lighthouse.yml` from issue #85 and ships. No local fallback needed unless the perm grant gets blocked upstream.
->
-> **Still blocked 2026-05-14 (cloud tick 2):** Attempted re-stage again. `git push` rejected once more: `refusing to allow a GitHub App to create or update workflow without 'workflows' permission`. `workflows: write` permission still not granted. This tick shipped the footer a11y finding (#92) instead. Lighthouse row remains open; will retry on next cloud tick once the permission is confirmed.
->
-> Score: **5.0** (path locked; runner choice no longer blocks. Real signal once it runs).
+> Filed 2026-05-09 by phase 17 brief. Blocked on `workflows: write` permission for cloud /march ticks through 2026-05-13. User granted the permission out-of-band (ACTIONS_PAT scope updated). Shipped at `5926ac7` with `.lighthouserc.json` (perf warn ≥0.90; a11y / best-practices / SEO hard errors ≥0.95; numberOfRuns: 3 median-of-3) and `.github/workflows/lighthouse.yml` (triggered on `deployment_status` filtered to Vercel Preview successes). Walks `/`, `/article/gateron-oil-king-deep-dive`, `/trends/tracker`, `/group-buys`. CLOUD_LOOP.md updated with `Workflows: read+write` PAT scope note at `047d2f2`. Row marked [x] in expand pass 10 commit.
 
 ### [x] [LOW] Tighten homepage bundle-size budget from 250 KB → 200 KB — addressed in pending commit (this tick)
 > Filed 2026-05-09 by phase 17 brief. The bearings target is 200 KB gzipped for the homepage; phase 17 set the gate at 250 KB to leave one or two iterate ticks of headroom. After the loop drains any obvious chunk waste (lucide-react, large MDX shims, unused tag taxonomies), tighten the budget to 200 KB to match the bearings.
