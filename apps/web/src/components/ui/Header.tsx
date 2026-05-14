@@ -7,7 +7,7 @@ export function Header() {
   return (
     <header className="relative border-b border-border bg-bg">
       <Container as="div" className="flex items-center justify-between gap-6 py-4">
-        <Link href="/" aria-label="thock — home" className="shrink-0">
+        <Link href="/" aria-label="thock — home" className="shrink-0 translate-y-[3px]">
           <Wordmark size="md" />
         </Link>
 
