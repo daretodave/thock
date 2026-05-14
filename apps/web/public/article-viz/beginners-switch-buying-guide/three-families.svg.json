@@ -1,0 +1,19 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T10:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "beginners-switch-buying-guide",
+  "article_pillar": "guides",
+  "section_anchor": "the-three-families",
+  "brief_summary": "Three-panel taxonomy strip showing the three switch families as small force-over-travel glyphs. Left: linear (clean diagonal). Center: tactile (curve with a single bump dot). Right: clicky (tactile shape plus a sharp click spike and small sound-wave marks). Each panel has its named exemplars below.",
+  "target": "apps/web/public/article-viz/beginners-switch-buying-guide/three-families.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "beginners-switch-buying-guide.mdx § 'The three families' — 'A linear switch travels in a straight line from rest to bottom-out, with no bump and no click ... A tactile switch has a small bump partway down the press ... A clicky switch is a tactile with an added mechanism that produces a sharp, audible click at the actuation point.' Exemplars listed in same section: Oil King, Gateron Yellow, MX Red (linear); Box Brown, Holy Panda, Boba U4T (tactile); MX Blue, Box White (clicky)."
+  ],
+  "outputs": ["apps/web/public/article-viz/beginners-switch-buying-guide/three-families.svg"],
+  "warnings": []
+}

@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T10:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "keycap-profiles-compared",
+  "article_pillar": "guides",
+  "section_anchor": "the-two-axes-that-actually-matter",
+  "brief_summary": "Four-cap side-profile silhouette strip showing relative height and top-scoop shape. Cherry (~8mm, gentle scoop), OEM (~11mm, sculpted), SA (~16-18mm spherical dish), MT3 (~16mm deep cylindrical scoop). All on a shared baseline labelled 'PCB'. Amber accent traces the scoop curve of each cap. Caption: 'two axes do most of the work: sculpt and height'.",
+  "target": "apps/web/public/article-viz/keycap-profiles-compared/profile-silhouettes.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "keycap-profiles-compared.mdx § 'The two axes that actually matter' — 'A low-profile cap like Cherry sits roughly 8mm tall at the front edge. A tall profile like SA or MT3 sits closer to 16mm'",
+    "keycap-profiles-compared.mdx § 'Cherry' — 'It is low ... gently scooped top'",
+    "keycap-profiles-compared.mdx § 'OEM' — 'sculpted like Cherry, but a few millimeters taller and with slightly steeper side walls'",
+    "keycap-profiles-compared.mdx § 'SA' — 'tall, sculpted, and spherical — the top of each cap is a small dished sphere ... SA's row-one cap can sit close to 18mm tall'",
+    "keycap-profiles-compared.mdx § 'MT3' — 'sculpted like SA, but the scoop on top of each cap is a deep cylindrical depression'"
+  ],
+  "outputs": ["apps/web/public/article-viz/keycap-profiles-compared/profile-silhouettes.svg"],
+  "warnings": ["OEM ~11mm is a representative midpoint, not an article-stated number — drawn between Cherry's 8mm and SA's 16mm to honor the article's 'a few millimeters taller than Cherry' framing"]
+}

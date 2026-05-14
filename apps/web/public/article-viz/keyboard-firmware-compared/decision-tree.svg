@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>A short decision tree for choosing keyboard firmware — ships-with check, then depth-of-remap, ending at QMK, VIA, or VIAL</title>
+
+  <!-- Root question -->
+  <rect x="450" y="60" width="300" height="80" rx="8" stroke-opacity="0.7"/>
+  <text x="600" y="92" font-family="Newsreader, serif" font-size="17" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">does the board ship</text>
+  <text x="600" y="115" font-family="Newsreader, serif" font-size="17" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">with VIA or VIAL flashed?</text>
+
+  <!-- Left branch: YES -->
+  <g stroke-opacity="0.55">
+    <path d="M 540 140 L 540 175 L 280 175 L 280 215"/>
+    <path d="M 272 207 L 280 215 L 288 207"/>
+  </g>
+  <text x="395" y="170" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.95">yes</text>
+
+  <!-- Outcome A: use whatever shipped -->
+  <rect x="160" y="220" width="240" height="80" rx="8" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="2.5" fill="oklch(0.78 0.10 80 / 0.08)"/>
+  <text x="280" y="252" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.95">use what shipped</text>
+  <text x="280" y="275" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">switching is rarely worth</text>
+  <text x="280" y="292" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">the friction</text>
+
+  <!-- Right branch: NO -->
+  <g stroke-opacity="0.55">
+    <path d="M 660 140 L 660 175 L 800 175 L 800 215"/>
+    <path d="M 792 207 L 800 215 L 808 207"/>
+  </g>
+  <text x="730" y="170" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.95">no, or want different</text>
+
+  <!-- Second question -->
+  <rect x="640" y="220" width="320" height="80" rx="8" stroke-opacity="0.7"/>
+  <text x="800" y="250" font-family="Newsreader, serif" font-size="17" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">how deep does the</text>
+  <text x="800" y="273" font-family="Newsreader, serif" font-size="17" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">remap need to go?</text>
+
+  <!-- Three depth branches -->
+  <g stroke-opacity="0.55">
+    <!-- swap one or two keys -->
+    <path d="M 680 300 L 680 330 L 480 330 L 480 365"/>
+    <path d="M 472 357 L 480 365 L 488 357"/>
+    <!-- layers, tap-dance, combos -->
+    <path d="M 800 300 L 800 365"/>
+    <path d="M 792 357 L 800 365 L 808 357"/>
+    <!-- leader, OLED, host-aware -->
+    <path d="M 920 300 L 920 330 L 1080 330 L 1080 365"/>
+    <path d="M 1072 357 L 1080 365 L 1088 357"/>
+  </g>
+
+  <!-- VIA outcome -->
+  <rect x="380" y="370" width="200" height="120" rx="8" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="2.5" fill="oklch(0.78 0.10 80 / 0.08)"/>
+  <text x="480" y="402" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">VIA</text>
+  <text x="480" y="430" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">one or two key swaps</text>
+  <text x="480" y="450" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">15 minutes, no code</text>
+
+  <!-- VIAL outcome -->
+  <rect x="700" y="370" width="200" height="120" rx="8" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="2.5" fill="oklch(0.78 0.10 80 / 0.08)"/>
+  <text x="800" y="402" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">VIAL</text>
+  <text x="800" y="430" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">layers, tap-dance, combos</text>
+  <text x="800" y="450" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">the sweet spot</text>
+
+  <!-- QMK outcome -->
+  <rect x="980" y="370" width="200" height="120" rx="8" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="2.5" fill="oklch(0.78 0.10 80 / 0.08)"/>
+  <text x="1080" y="402" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">QMK</text>
+  <text x="1080" y="430" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">leader · OLED · host-aware</text>
+  <text x="1080" y="450" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">learn C, run make</text>
+
+  <!-- Caption -->
+  <text x="600" y="530" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">pick the firmware that matches the depth of remapping actually wanted</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

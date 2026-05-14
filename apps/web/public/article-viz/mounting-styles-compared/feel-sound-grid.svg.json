@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T10:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "mounting-styles-compared",
+  "article_pillar": "guides",
+  "section_anchor": "what-to-actually-pick",
+  "brief_summary": "Two-axis map of the four mount styles. X: feel (softer → firmer). Y: sound (deeper → higher). Gasket bottom-left, top-mount upper-right, tray-mount centered with a dashed halo indicating its high key-to-key variance, integrated upper-right corner. Bordeaux fills, qualifier captions below each label. Recommendation strip: 'pick the mount that matches the typing feel wanted, not the sound'.",
+  "target": "apps/web/public/article-viz/mounting-styles-compared/feel-sound-grid.svg",
+  "splash_color": { "name": "bordeaux", "oklch": "oklch(0.62 0.13 25)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "mounting-styles-compared.mdx § 'Gasket-mount' — 'gasket boards read as deeper, rounder, and more uniform ... gives perceptibly under a heavy keypress'",
+    "mounting-styles-compared.mdx § 'Top-mount' — 'tighter, more focused, and slightly higher-pitched ... feel is firmer and more direct'",
+    "mounting-styles-compared.mdx § 'Tray-mount' — 'sound is the most variable of the four styles ... keys above a standoff sound tighter and brighter, keys between standoffs sound looser and more hollow'",
+    "mounting-styles-compared.mdx § 'Integrated plate' — 'the firmest of the four ... highest-pitched and most case-dominant'",
+    "mounting-styles-compared.mdx § Closing — 'pick the mount that matches the typing feel wanted, not the sound'"
+  ],
+  "outputs": ["apps/web/public/article-viz/mounting-styles-compared/feel-sound-grid.svg"],
+  "warnings": []
+}

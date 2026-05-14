@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>The three switch families — linear, tactile, clicky — shown as small force-over-travel glyphs</title>
+
+  <!-- Vertical dividers between the three panels -->
+  <line x1="400" y1="80" x2="400" y2="440" stroke-opacity="0.18"/>
+  <line x1="800" y1="80" x2="800" y2="440" stroke-opacity="0.18"/>
+
+  <!-- ═════ LINEAR ═════ -->
+  <text x="200" y="115" font-family="Newsreader, serif" font-size="28" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">linear</text>
+  <text x="200" y="140" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">smooth · no bump · no click</text>
+
+  <!-- Axes -->
+  <line x1="90" y1="320" x2="310" y2="320" stroke-opacity="0.45"/>
+  <line x1="90" y1="170" x2="90" y2="320" stroke-opacity="0.45"/>
+  <text x="200" y="345" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">travel</text>
+  <text x="80" y="245" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.5">force</text>
+  <!-- Linear curve — a clean diagonal rising toward bottom-out -->
+  <path d="M 90 300 L 310 195" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="3"/>
+  <text x="200" y="395" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">e.g. Oil King · Gateron Yellow · MX Red</text>
+
+  <!-- ═════ TACTILE ═════ -->
+  <text x="600" y="115" font-family="Newsreader, serif" font-size="28" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">tactile</text>
+  <text x="600" y="140" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">small bump · the actuation cue</text>
+
+  <line x1="490" y1="320" x2="710" y2="320" stroke-opacity="0.45"/>
+  <line x1="490" y1="170" x2="490" y2="320" stroke-opacity="0.45"/>
+  <text x="600" y="345" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">travel</text>
+  <text x="480" y="245" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.5">force</text>
+  <!-- Tactile curve — rises, bumps over a peak, dips, then rises again -->
+  <path d="M 490 305 C 510 290 530 240 550 230 C 565 222 575 245 590 252 C 615 263 640 245 660 230 L 710 200" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="3"/>
+  <!-- Bump marker -->
+  <circle cx="550" cy="230" r="5" fill="oklch(0.78 0.10 80)" stroke="oklch(0.78 0.10 80)"/>
+  <text x="558" y="218" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.10 80)" stroke="none" opacity="0.95">bump</text>
+  <text x="600" y="395" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">e.g. Box Brown · Holy Panda · Boba U4T</text>
+
+  <!-- ═════ CLICKY ═════ -->
+  <text x="1000" y="115" font-family="Newsreader, serif" font-size="28" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">clicky</text>
+  <text x="1000" y="140" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">bump · plus an audible click</text>
+
+  <line x1="890" y1="320" x2="1110" y2="320" stroke-opacity="0.45"/>
+  <line x1="890" y1="170" x2="890" y2="320" stroke-opacity="0.45"/>
+  <text x="1000" y="345" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">travel</text>
+  <text x="880" y="245" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.5">force</text>
+  <!-- Clicky curve — like tactile but bump is sharper, and there's a click marker -->
+  <path d="M 890 305 C 910 290 930 245 950 230 C 962 222 968 250 980 252 C 1000 256 1030 245 1050 230 L 1110 200" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="3"/>
+  <!-- Click spike -->
+  <path d="M 945 230 L 950 200 L 955 230" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="3"/>
+  <!-- Sound waves -->
+  <g stroke="oklch(0.78 0.10 80)" stroke-opacity="0.55" stroke-width="2" stroke-linecap="round">
+    <path d="M 960 195 L 980 188"/>
+    <path d="M 962 205 L 985 205"/>
+    <path d="M 960 215 L 980 222"/>
+  </g>
+  <text x="970" y="180" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.10 80)" stroke="none" opacity="0.95">click</text>
+  <text x="1000" y="395" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">e.g. MX Blue · Box White</text>
+
+  <!-- Caption -->
+  <text x="600" y="470" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">pick the family first; pick the specific switch second</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

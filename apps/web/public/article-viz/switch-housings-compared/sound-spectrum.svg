@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Switch housing materials placed on a sound-character spectrum — from deepest and most damped to brightest and most articulate</title>
+
+  <!-- Spectrum axis -->
+  <line x1="120" y1="280" x2="1080" y2="280" stroke-opacity="0.55"/>
+  <!-- arrowheads both ends -->
+  <path d="M 128 272 L 120 280 L 128 288" stroke-opacity="0.55"/>
+  <path d="M 1072 272 L 1080 280 L 1072 288" stroke-opacity="0.55"/>
+
+  <!-- Axis labels -->
+  <text x="120" y="305" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">deepest · most damped</text>
+  <text x="1080" y="305" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.6">brightest · most ring</text>
+
+  <!-- Materials plotted with tick marks -->
+  <!-- UPE — deepest -->
+  <g>
+    <line x1="200" y1="270" x2="200" y2="290" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="3"/>
+    <circle cx="200" cy="280" r="9" fill="oklch(0.78 0.10 80 / 0.20)" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="3"/>
+    <text x="200" y="245" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">UPE</text>
+    <text x="200" y="335" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">waxy · soft</text>
+  </g>
+
+  <!-- POM — deep, dense -->
+  <g>
+    <line x1="340" y1="270" x2="340" y2="290" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="3"/>
+    <circle cx="340" cy="280" r="9" fill="oklch(0.78 0.10 80 / 0.20)" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="3"/>
+    <text x="340" y="245" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">POM</text>
+    <text x="340" y="335" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">slick · dense</text>
+  </g>
+
+  <!-- Nylon — warm, muted -->
+  <g>
+    <line x1="500" y1="270" x2="500" y2="290" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="3"/>
+    <circle cx="500" cy="280" r="11" fill="oklch(0.78 0.10 80 / 0.20)" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="3"/>
+    <text x="500" y="245" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">nylon</text>
+    <text x="500" y="335" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">classic Cherry sound</text>
+  </g>
+
+  <!-- PC top / nylon bottom — modern default — wider tick -->
+  <g>
+    <rect x="620" y="270" width="80" height="20" fill="oklch(0.78 0.10 80 / 0.30)" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="3"/>
+    <text x="660" y="245" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">PC top + nylon bottom</text>
+    <text x="660" y="335" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.95">modern default</text>
+  </g>
+
+  <!-- LY nylon — slightly brighter than nylon -->
+  <g>
+    <line x1="820" y1="270" x2="820" y2="290" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="3"/>
+    <circle cx="820" cy="280" r="9" fill="oklch(0.78 0.10 80 / 0.20)" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="3"/>
+    <text x="820" y="245" font-family="Newsreader, serif" font-size="16" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">LY nylon</text>
+    <text x="820" y="335" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">split the difference</text>
+  </g>
+
+  <!-- PC — bright -->
+  <g>
+    <line x1="950" y1="270" x2="950" y2="290" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="3"/>
+    <circle cx="950" cy="280" r="11" fill="oklch(0.78 0.10 80 / 0.20)" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="3"/>
+    <text x="950" y="245" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">PC (all)</text>
+    <text x="950" y="335" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">articulate · clacky</text>
+  </g>
+
+  <!-- ABS — far right, with caution tone -->
+  <g>
+    <line x1="1040" y1="270" x2="1040" y2="290" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55" stroke-width="2"/>
+    <circle cx="1040" cy="280" r="7" fill="none" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55" stroke-width="2" stroke-dasharray="3 3"/>
+    <text x="1040" y="245" font-family="Newsreader, serif" font-size="15" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">ABS</text>
+    <text x="1040" y="335" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">hollow · avoid</text>
+  </g>
+
+  <!-- Caption -->
+  <text x="600" y="420" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">harder plastic rings longer at higher pitch; softer plastic absorbs the ring</text>
+  <text x="600" y="460" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.95">PC top + nylon bottom = brightness on top, warmth at the bottom</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 580" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>ABS versus PBT — cross-section showing wall thickness, surface texture, and how shine develops with use</title>
+
+  <!-- Vertical divider -->
+  <line x1="600" y1="80" x2="600" y2="500" stroke-opacity="0.18"/>
+
+  <!-- ═════ ABS panel ═════ -->
+  <text x="300" y="115" font-family="Newsreader, serif" font-size="26" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">ABS</text>
+  <text x="300" y="140" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">smooth · thocky · ages with shine</text>
+
+  <!-- ABS cap cross-section: thick walls (premium GMK 1.5mm style) -->
+  <path d="M 180 230 L 420 230 L 410 250 L 410 380 L 190 380 L 190 250 Z" stroke-opacity="0.85"/>
+  <!-- Inner wall — showing thickness -->
+  <path d="M 210 250 L 390 250 L 380 270 L 380 360 L 220 360 L 220 270 Z" stroke-opacity="0.6"/>
+  <!-- Stem cross -->
+  <path d="M 290 360 L 310 360 L 310 365 L 320 365 L 320 375 L 310 375 L 310 380 L 290 380 L 290 375 L 280 375 L 280 365 L 290 365 Z" stroke-opacity="0.6"/>
+
+  <!-- Wall thickness leader -->
+  <g stroke-opacity="0.55">
+    <line x1="190" y1="320" x2="120" y2="320"/>
+    <line x1="120" y1="316" x2="120" y2="324"/>
+    <line x1="220" y1="320" x2="120" y2="320"/>
+  </g>
+  <text x="115" y="338" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="end" opacity="0.95">~1.5mm wall</text>
+  <text x="115" y="354" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.55">thick · focused</text>
+
+  <!-- Glossy highlight on top surface -->
+  <g stroke="oklch(0.78 0.10 80)" stroke-opacity="0.85" stroke-width="2.5">
+    <line x1="220" y1="240" x2="380" y2="240"/>
+  </g>
+  <text x="430" y="237" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.10 80)" stroke="none" opacity="0.95">smooth from mold</text>
+
+  <!-- Shine progression strip below cap -->
+  <text x="300" y="420" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">shine timeline (home row)</text>
+  <g>
+    <rect x="180" y="430" width="60" height="20" stroke-opacity="0.45" fill="oklch(0.78 0.10 80 / 0.03)"/>
+    <rect x="240" y="430" width="60" height="20" stroke-opacity="0.6" fill="oklch(0.78 0.10 80 / 0.20)"/>
+    <rect x="300" y="430" width="60" height="20" stroke-opacity="0.8" fill="oklch(0.78 0.10 80 / 0.45)"/>
+    <rect x="360" y="430" width="60" height="20" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="2.5" fill="oklch(0.78 0.10 80 / 0.65)"/>
+  </g>
+  <text x="210" y="468" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">new</text>
+  <text x="270" y="468" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">3 mo</text>
+  <text x="330" y="468" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">12 mo</text>
+  <text x="390" y="468" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.95">24 mo</text>
+
+  <!-- ═════ PBT panel ═════ -->
+  <text x="900" y="115" font-family="Newsreader, serif" font-size="26" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">PBT</text>
+  <text x="900" y="140" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">textured · clacky · ages unchanged</text>
+
+  <!-- PBT cap cross-section: medium walls, with stippled top surface -->
+  <path d="M 780 230 L 1020 230 L 1010 250 L 1010 380 L 790 380 L 790 250 Z" stroke-opacity="0.85"/>
+  <path d="M 805 250 L 995 250 L 985 270 L 985 360 L 815 360 L 815 270 Z" stroke-opacity="0.6"/>
+  <!-- Stem cross -->
+  <path d="M 890 360 L 910 360 L 910 365 L 920 365 L 920 375 L 910 375 L 910 380 L 890 380 L 890 375 L 880 375 L 880 365 L 890 365 Z" stroke-opacity="0.6"/>
+
+  <!-- Wall thickness leader -->
+  <g stroke-opacity="0.55">
+    <line x1="790" y1="320" x2="720" y2="320"/>
+    <line x1="720" y1="316" x2="720" y2="324"/>
+    <line x1="815" y1="320" x2="720" y2="320"/>
+  </g>
+  <text x="715" y="338" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="end" opacity="0.95">~1.3mm wall</text>
+  <text x="715" y="354" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.55">dry · less ring</text>
+
+  <!-- Matte stipple texture indicator on top -->
+  <g stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round">
+    <line x1="820" y1="238" x2="820" y2="242"/>
+    <line x1="835" y1="240" x2="835" y2="244"/>
+    <line x1="850" y1="238" x2="850" y2="242"/>
+    <line x1="865" y1="240" x2="865" y2="244"/>
+    <line x1="880" y1="238" x2="880" y2="242"/>
+    <line x1="895" y1="240" x2="895" y2="244"/>
+    <line x1="910" y1="238" x2="910" y2="242"/>
+    <line x1="925" y1="240" x2="925" y2="244"/>
+    <line x1="940" y1="238" x2="940" y2="242"/>
+    <line x1="955" y1="240" x2="955" y2="244"/>
+    <line x1="970" y1="238" x2="970" y2="242"/>
+  </g>
+  <text x="1030" y="237" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.10 80)" stroke="none" opacity="0.95">faintly textured</text>
+
+  <!-- Shine progression (flat for PBT) -->
+  <text x="900" y="420" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">shine timeline (home row)</text>
+  <g>
+    <rect x="780" y="430" width="60" height="20" stroke-opacity="0.45" fill="oklch(0.78 0.10 80 / 0.03)"/>
+    <rect x="840" y="430" width="60" height="20" stroke-opacity="0.45" fill="oklch(0.78 0.10 80 / 0.04)"/>
+    <rect x="900" y="430" width="60" height="20" stroke-opacity="0.45" fill="oklch(0.78 0.10 80 / 0.05)"/>
+    <rect x="960" y="430" width="60" height="20" stroke-opacity="0.45" fill="oklch(0.78 0.10 80 / 0.06)"/>
+  </g>
+  <text x="810" y="468" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">new</text>
+  <text x="870" y="468" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">3 mo</text>
+  <text x="930" y="468" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">12 mo</text>
+  <text x="990" y="468" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">24 mo</text>
+
+  <!-- Caption -->
+  <text x="600" y="530" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">two plastics, two trajectories — the cap on day one is not the cap on day five hundred</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

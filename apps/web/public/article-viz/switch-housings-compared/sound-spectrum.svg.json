@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T10:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "switch-housings-compared",
+  "article_pillar": "guides",
+  "section_anchor": "the-rest-briefly",
+  "brief_summary": "Horizontal sound-character spectrum, deepest/most-damped on the left to brightest/most-ringy on the right. Tick-with-circle markers for UPE, POM, nylon, LY nylon, all-PC. A wider amber bar marks the 'PC top + nylon bottom' modern default in the middle-right. ABS sits at the far right with a dashed muted circle and 'avoid' note.",
+  "target": "apps/web/public/article-viz/switch-housings-compared/sound-spectrum.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "switch-housings-compared.mdx § 'Why housing material matters' — 'A harder plastic lets the chamber ring at a higher pitch and for longer; a softer plastic absorbs more of the ring'",
+    "switch-housings-compared.mdx § 'Nylon' — 'warm, muted, sound-dampening, and forgiving ... the Cherry sound'",
+    "switch-housings-compared.mdx § 'Polycarbonate' — 'PC top, nylon bottom ... modern default'",
+    "switch-housings-compared.mdx § 'POM' — 'muted, slightly hollow at the top of travel ... distinctively dense at the bottom-out'",
+    "switch-housings-compared.mdx § 'The rest, briefly' — 'UHMWPE ... the deepest and most damped ... LY nylon ... brighter top-end than PA66 but still warmer than PC ... ABS housings exist almost entirely in budget switches and should be avoided'"
+  ],
+  "outputs": ["apps/web/public/article-viz/switch-housings-compared/sound-spectrum.svg"],
+  "warnings": []
+}

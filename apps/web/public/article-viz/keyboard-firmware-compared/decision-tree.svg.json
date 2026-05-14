@@ -1,0 +1,19 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T10:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "keyboard-firmware-compared",
+  "article_pillar": "guides",
+  "section_anchor": "choosing-without-overthinking-it",
+  "brief_summary": "Decision-tree diagram. Root: 'does the board ship with VIA or VIAL flashed?'. Yes-branch leads to 'use what shipped'. No-branch leads to a depth-of-remap question with three terminal outcomes: VIA (one or two swaps), VIAL (layers, tap-dance, combos — the sweet spot), QMK (leader, OLED, host-aware behavior — learn C). Amber-bordered outcome boxes.",
+  "target": "apps/web/public/article-viz/keyboard-firmware-compared/decision-tree.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "keyboard-firmware-compared.mdx § 'Choosing without overthinking it' — 'If the board shipped with VIA or VIAL pre-flashed, use whatever it shipped with ... If the board is a hotswap and the builder will only ever swap one or two keys, VIA is enough ... If the builder wants real layers, tap-dance, or macros that do more than type a fixed string, VIAL is the right target ... If the builder wants behavior that no GUI exposes ... they are in QMK territory.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/keyboard-firmware-compared/decision-tree.svg"],
+  "warnings": []
+}

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Cherry, OEM, SA, and MT3 — side-profile silhouettes drawn at consistent scale showing relative height and top-scoop shape</title>
+
+  <!-- Baseline -->
+  <line x1="80" y1="380" x2="1120" y2="380" stroke-opacity="0.5"/>
+  <text x="80" y="400" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.5">PCB</text>
+
+  <!-- ═════ Cherry — low, gently scooped ═════ -->
+  <g>
+    <text x="195" y="115" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Cherry</text>
+    <text x="195" y="140" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">~8mm · sculpted</text>
+    <!-- Cap silhouette — low with gentle cylindrical scoop -->
+    <path d="M 130 380 L 130 320 C 130 320 140 300 150 295 Q 195 285 240 295 C 250 300 260 320 260 320 L 260 380 Z"/>
+    <!-- Subtle ochre top accent indicating scoop center -->
+    <path d="M 165 305 Q 195 298 225 305" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="2"/>
+    <!-- height leader -->
+    <g stroke-opacity="0.4">
+      <line x1="280" y1="380" x2="290" y2="380"/>
+      <line x1="280" y1="295" x2="290" y2="295"/>
+      <line x1="285" y1="295" x2="285" y2="380"/>
+    </g>
+    <text x="195" y="415" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">low · focused · "thocky"</text>
+  </g>
+
+  <!-- ═════ OEM — slightly taller, sculpted ═════ -->
+  <g>
+    <text x="450" y="115" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">OEM</text>
+    <text x="450" y="140" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">~11mm · sculpted</text>
+    <path d="M 385 380 L 385 290 C 385 290 395 265 405 260 Q 450 250 495 260 C 505 265 515 290 515 290 L 515 380 Z"/>
+    <path d="M 415 272 Q 450 266 485 272" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="2"/>
+    <g stroke-opacity="0.4">
+      <line x1="535" y1="380" x2="545" y2="380"/>
+      <line x1="535" y1="260" x2="545" y2="260"/>
+      <line x1="540" y1="260" x2="540" y2="380"/>
+    </g>
+    <text x="450" y="415" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">familiar · stock factory</text>
+  </g>
+
+  <!-- ═════ SA — tall, spherical top ═════ -->
+  <g>
+    <text x="705" y="115" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">SA</text>
+    <text x="705" y="140" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">~16-18mm · sculpted · spherical</text>
+    <!-- Cap silhouette — tall, with spherical (dished bowl) top -->
+    <path d="M 640 380 L 640 230 C 640 230 650 210 660 205 Q 705 195 750 205 C 760 210 770 230 770 230 L 770 380 Z"/>
+    <!-- Spherical dish indicated by a more pronounced curve -->
+    <path d="M 660 218 Q 705 195 750 218" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="2.5"/>
+    <g stroke-opacity="0.4">
+      <line x1="790" y1="380" x2="800" y2="380"/>
+      <line x1="790" y1="205" x2="800" y2="205"/>
+      <line x1="795" y1="205" x2="795" y2="380"/>
+    </g>
+    <text x="705" y="415" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">vintage · loud · hollow ring</text>
+  </g>
+
+  <!-- ═════ MT3 — tall, deep cylindrical scoop ═════ -->
+  <g>
+    <text x="960" y="115" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">MT3</text>
+    <text x="960" y="140" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">~16mm · deep cylindrical scoop</text>
+    <!-- Tall cap with deep cylindrical scoop on top -->
+    <path d="M 895 380 L 895 235 C 895 235 905 215 915 210 L 945 210 L 945 225 C 945 250 975 250 975 225 L 975 210 L 1005 210 C 1015 215 1025 235 1025 235 L 1025 380 Z"/>
+    <!-- Scoop bottom indicated -->
+    <path d="M 943 230 Q 960 244 977 230" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="2.5"/>
+    <g stroke-opacity="0.4">
+      <line x1="1045" y1="380" x2="1055" y2="380"/>
+      <line x1="1045" y1="210" x2="1055" y2="210"/>
+      <line x1="1050" y1="210" x2="1050" y2="380"/>
+    </g>
+    <text x="960" y="415" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">deepest "thock" · finger locks in</text>
+  </g>
+
+  <!-- Caption -->
+  <text x="600" y="475" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">profile shapes the air under the cap — and the air rings</text>
+
+  <!-- Axis annotation -->
+  <text x="600" y="515" font-family="Newsreader, serif" font-size="13" font-style="italic" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.85">two axes do most of the work: sculpt and height</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

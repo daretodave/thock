@@ -1,0 +1,21 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T10:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "sound-dampening-compared",
+  "article_pillar": "guides",
+  "section_anchor": "the-stacking-order-most-builders-converge-on",
+  "brief_summary": "Horizontal four-step progression: case foam → tape mod → PE foam → plate foam (optional). Steps 1-3 are filled terracotta boxes with timeline dots on a shared axis; step 4 is dashed-outline to signal it is divisive/optional. Caption surfaces the modal modern stack ('case foam + PE foam') and the iterative discipline: 'the mod that fails the test is the one to skip'.",
+  "target": "apps/web/public/article-viz/sound-dampening-compared/stacking-order.svg",
+  "splash_color": { "name": "bordeaux (terracotta)", "oklch": "oklch(0.62 0.13 25)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "sound-dampening-compared.mdx § 'The stacking order most builders converge on' — 'Case foam first ... Tape mod second ... PE foam third ... Plate foam last, if more dampening is still wanted at that point'",
+    "sound-dampening-compared.mdx § 'The honest version' — 'Most builders end at two. Case foam plus PE foam is the common landing point'",
+    "sound-dampening-compared.mdx § closing — 'The mod that fails the test is the one to skip.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/sound-dampening-compared/stacking-order.svg"],
+  "warnings": []
+}

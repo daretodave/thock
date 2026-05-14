@@ -1,0 +1,22 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T10:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "mounting-styles-compared",
+  "article_pillar": "guides",
+  "section_anchor": "integrated-plate",
+  "brief_summary": "Four stacked cross-section diagrams of canonical mount styles. Top: gasket-mount (plate sandwiched between bordeaux foam strips, floating). Second: top-mount (plate bolted via bordeaux screw markers to top case standoffs). Third: tray-mount (top case dashed-decorative; PCB screws to bottom standoffs with bordeaux markers at intervals). Bottom: integrated plate (top case and plate as one continuous bordeaux-outlined piece). Each panel has a right-margin mechanical-label callout and a left-margin character note.",
+  "target": "apps/web/public/article-viz/mounting-styles-compared/four-mounts.svg",
+  "splash_color": { "name": "bordeaux", "oklch": "oklch(0.62 0.13 25)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "mounting-styles-compared.mdx § 'Gasket-mount' — 'Gasket-mount sandwiches strips of foam ... between the plate and the case shell on both top and bottom. The plate does not touch the case directly.'",
+    "mounting-styles-compared.mdx § 'Top-mount' — 'Top-mount screws the plate directly to standoffs on the inside of the top case half.'",
+    "mounting-styles-compared.mdx § 'Tray-mount and the no plate fixing family' — 'The PCB screws directly to standoffs on the bottom case shell, and the plate ... clips into the switches with no mechanical link to either case half.'",
+    "mounting-styles-compared.mdx § 'Integrated plate' — 'Integrated plate machines the plate as part of the case rather than as a separate piece. There is no plate-to-case seam.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/mounting-styles-compared/four-mounts.svg"],
+  "warnings": []
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>The keycap landscape mapped on two axes — sculpt (uniform versus row-sculpted) and height (low versus tall)</title>
+
+  <!-- Axes box -->
+  <rect x="220" y="120" width="800" height="380" stroke-opacity="0.35"/>
+
+  <!-- Mid-axis cross -->
+  <line x1="620" y1="120" x2="620" y2="500" stroke-opacity="0.18" stroke-dasharray="4 6"/>
+  <line x1="220" y1="310" x2="1020" y2="310" stroke-opacity="0.18" stroke-dasharray="4 6"/>
+
+  <!-- Axis labels -->
+  <text x="620" y="100" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.8">SCULPT →</text>
+  <text x="320" y="100" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">uniform</text>
+  <text x="920" y="100" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">row-sculpted</text>
+
+  <text x="200" y="310" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.8">HEIGHT</text>
+  <text x="200" y="200" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.55">tall ↑</text>
+  <text x="200" y="430" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.55">low ↓</text>
+
+  <!-- Quadrant labels (faint, in corners) -->
+  <text x="420" y="145" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.4" text-anchor="middle">tall · uniform</text>
+  <text x="820" y="145" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.4" text-anchor="middle">tall · sculpted</text>
+  <text x="420" y="490" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.4" text-anchor="middle">low · uniform</text>
+  <text x="820" y="490" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.4" text-anchor="middle">low · sculpted</text>
+
+  <!-- Plotted profiles -->
+  <!-- Cherry: low, sculpted -->
+  <circle cx="810" cy="430" r="11" fill="oklch(0.78 0.10 80 / 0.18)" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="3"/>
+  <text x="810" y="460" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Cherry</text>
+
+  <!-- OEM: slightly taller, sculpted -->
+  <circle cx="880" cy="370" r="9" fill="oklch(0.78 0.10 80 / 0.15)" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.8" stroke-width="2.5"/>
+  <text x="880" y="396" font-family="Newsreader, serif" font-size="16" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">OEM</text>
+
+  <!-- SA: tall, sculpted -->
+  <circle cx="930" cy="195" r="13" fill="oklch(0.78 0.10 80 / 0.20)" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="3"/>
+  <text x="930" y="227" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">SA</text>
+
+  <!-- MT3: tall, sculpted (slightly different position) -->
+  <circle cx="820" cy="210" r="13" fill="oklch(0.78 0.10 80 / 0.20)" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="3"/>
+  <text x="820" y="242" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">MT3</text>
+
+  <!-- Uniform family — KAT, DSA, XDA -->
+  <circle cx="370" cy="340" r="9" fill="none" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.7" stroke-width="2"/>
+  <text x="370" y="367" font-family="Newsreader, serif" font-size="15" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">KAT</text>
+  <circle cx="320" cy="420" r="8" fill="none" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55" stroke-width="2"/>
+  <text x="320" y="445" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">DSA</text>
+  <circle cx="430" cy="430" r="8" fill="none" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55" stroke-width="2"/>
+  <text x="430" y="455" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">XDA</text>
+
+  <!-- Recommendation strip below -->
+  <text x="600" y="545" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.95">if a beginner reads one paragraph: buy Cherry unless there is a specific reason not to</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

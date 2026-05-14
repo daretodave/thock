@@ -1,0 +1,22 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T10:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "keyboard-firmware-compared",
+  "article_pillar": "guides",
+  "section_anchor": "vial",
+  "brief_summary": "Three-column feature matrix — QMK / VIA / VIAL — across six capability rows: GUI remap, layer count, tap-dance, combos, macros, and leader/OLED/host-aware behavior. Amber circles for supported, em-dash for unsupported, numerical or word values where the capability is partial. Caption: 'QMK is the floor everything else stands on'.",
+  "target": "apps/web/public/article-viz/keyboard-firmware-compared/feature-matrix.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "keyboard-firmware-compared.mdx § 'QMK' — 'Layers, tap-dance, Mod-Tap, Combos, Leader sequences, one-shot modifiers, dynamic macros, RGB control, OLED rendering' all listed as in-codebase",
+    "keyboard-firmware-compared.mdx § 'VIA' — 'no Combo editor, no tap-dance editor, no Leader sequences. The keycode set in the GUI is a subset of QMK's'",
+    "keyboard-firmware-compared.mdx § 'VIAL' — 'VIAL supports tap-dance editing in the GUI. It supports Combos. It supports more layers (up to 16 versus VIA's 4)'",
+    "QMK upstream uses MAX_LAYER bitfield of 32 — referenced as 32 in matrix"
+  ],
+  "outputs": ["apps/web/public/article-viz/keyboard-firmware-compared/feature-matrix.svg"],
+  "warnings": ["QMK layer count of 32 reflects QMK's MAX_LAYER bitfield default upstream; the article cites only 'more layers' without a specific number, so this is a known-spec annotation rather than article-derived"]
+}

@@ -1,0 +1,21 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T10:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "keycap-profiles-compared",
+  "article_pillar": "guides",
+  "section_anchor": "what-to-actually-buy-first",
+  "brief_summary": "2D grid plotting keycap profiles on sculpt (x: uniform → row-sculpted) and height (y: low → tall). Filled amber circles for the four covered profiles: Cherry (low, sculpted), OEM (slightly taller, sculpted), SA (tall, sculpted right), MT3 (tall, sculpted left). Hollow outline circles for uniform family — KAT, DSA, XDA — in the uniform half. Bottom strip surfaces the article's default recommendation: buy Cherry unless there is a specific reason not to.",
+  "target": "apps/web/public/article-viz/keycap-profiles-compared/sculpt-height-grid.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "keycap-profiles-compared.mdx § 'The two axes that actually matter' — 'Two axes do most of the work: sculpt ... and height'",
+    "keycap-profiles-compared.mdx § 'Uniform profiles, briefly' — 'DSA, KAT, and XDA all use the same cap shape on every row'",
+    "keycap-profiles-compared.mdx § 'What to actually buy first' — 'Buy Cherry unless there is a specific reason not to'"
+  ],
+  "outputs": ["apps/web/public/article-viz/keycap-profiles-compared/sculpt-height-grid.svg"],
+  "warnings": []
+}

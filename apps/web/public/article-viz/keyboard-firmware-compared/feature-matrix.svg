@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>QMK, VIA, and VIAL — feature support across remap GUI, layers, tap-dance, combos, macros, and encoders</title>
+
+  <!-- Column headers -->
+  <text x="450" y="100" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">QMK</text>
+  <text x="450" y="122" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">edit C · compile · flash</text>
+  <text x="700" y="100" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">VIA</text>
+  <text x="700" y="122" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">GUI · no recompile</text>
+  <text x="950" y="100" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">VIAL</text>
+  <text x="950" y="122" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">GUI · richer feature set</text>
+
+  <!-- Row labels + horizontal separators -->
+  <g stroke-opacity="0.25" stroke-dasharray="3 6">
+    <line x1="80" y1="160" x2="1120" y2="160"/>
+    <line x1="80" y1="210" x2="1120" y2="210"/>
+    <line x1="80" y1="260" x2="1120" y2="260"/>
+    <line x1="80" y1="310" x2="1120" y2="310"/>
+    <line x1="80" y1="360" x2="1120" y2="360"/>
+    <line x1="80" y1="410" x2="1120" y2="410"/>
+    <line x1="80" y1="460" x2="1120" y2="460"/>
+  </g>
+
+  <!-- Row 1: GUI remap -->
+  <text x="320" y="195" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.85">GUI remap</text>
+  <!-- QMK: no -->
+  <text x="450" y="195" font-family="IBM Plex Sans, sans-serif" font-size="20" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">—</text>
+  <!-- VIA: yes -->
+  <circle cx="700" cy="188" r="9" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="2.5" fill="oklch(0.78 0.10 80 / 0.15)"/>
+  <!-- VIAL: yes -->
+  <circle cx="950" cy="188" r="9" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="2.5" fill="oklch(0.78 0.10 80 / 0.15)"/>
+
+  <!-- Row 2: Layers -->
+  <text x="320" y="245" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.85">layer count</text>
+  <text x="450" y="245" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">32</text>
+  <text x="700" y="245" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">4</text>
+  <text x="950" y="245" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.95">16</text>
+
+  <!-- Row 3: tap-dance -->
+  <text x="320" y="295" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.85">tap-dance</text>
+  <circle cx="450" cy="288" r="9" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="2.5" fill="oklch(0.78 0.10 80 / 0.15)"/>
+  <text x="700" y="295" font-family="IBM Plex Sans, sans-serif" font-size="20" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">—</text>
+  <circle cx="950" cy="288" r="9" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="2.5" fill="oklch(0.78 0.10 80 / 0.15)"/>
+
+  <!-- Row 4: combos -->
+  <text x="320" y="345" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.85">combos</text>
+  <circle cx="450" cy="338" r="9" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="2.5" fill="oklch(0.78 0.10 80 / 0.15)"/>
+  <text x="700" y="345" font-family="IBM Plex Sans, sans-serif" font-size="20" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">—</text>
+  <circle cx="950" cy="338" r="9" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="2.5" fill="oklch(0.78 0.10 80 / 0.15)"/>
+
+  <!-- Row 5: macros -->
+  <text x="320" y="395" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.85">macros</text>
+  <text x="450" y="395" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">full</text>
+  <text x="700" y="395" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">shallow</text>
+  <text x="950" y="395" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.95">full</text>
+
+  <!-- Row 6: leader / oled / branch on host -->
+  <text x="320" y="445" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.85">leader · OLED · host-aware</text>
+  <circle cx="450" cy="438" r="9" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="2.5" fill="oklch(0.78 0.10 80 / 0.15)"/>
+  <text x="700" y="445" font-family="IBM Plex Sans, sans-serif" font-size="20" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">—</text>
+  <text x="950" y="445" font-family="IBM Plex Sans, sans-serif" font-size="20" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">—</text>
+
+  <!-- Caption -->
+  <text x="600" y="495" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">QMK is the floor everything else stands on; VIA and VIAL are QMK with a friendlier face</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

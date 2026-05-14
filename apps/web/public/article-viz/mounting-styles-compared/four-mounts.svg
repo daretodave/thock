@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Four mounting styles in cross-section — gasket, top-mount, tray-mount, and integrated plate</title>
+
+  <!-- ═════ Gasket-mount ═════ -->
+  <g>
+    <text x="600" y="80" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">gasket-mount</text>
+    <!-- top case half -->
+    <path d="M 200 100 L 1000 100 L 1000 130 L 200 130 Z" stroke-opacity="0.85"/>
+    <!-- gasket strip top -->
+    <rect x="230" y="130" width="60" height="8" fill="oklch(0.62 0.13 25 / 0.30)" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.95" stroke-width="2"/>
+    <rect x="910" y="130" width="60" height="8" fill="oklch(0.62 0.13 25 / 0.30)" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.95" stroke-width="2"/>
+    <!-- plate (floating between gaskets) -->
+    <rect x="220" y="138" width="760" height="12" stroke-opacity="0.85"/>
+    <!-- gasket strip bottom -->
+    <rect x="230" y="150" width="60" height="8" fill="oklch(0.62 0.13 25 / 0.30)" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.95" stroke-width="2"/>
+    <rect x="910" y="150" width="60" height="8" fill="oklch(0.62 0.13 25 / 0.30)" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.95" stroke-width="2"/>
+    <!-- PCB -->
+    <rect x="220" y="162" width="760" height="6" stroke-opacity="0.6"/>
+    <!-- bottom case half -->
+    <path d="M 200 178 L 1000 178 L 1000 208 L 200 208 Z" stroke-opacity="0.85"/>
+    <text x="1020" y="158" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.62 0.13 25)" stroke="none" opacity="0.95">foam · floats</text>
+    <text x="50" y="158" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">soft · deep · uniform</text>
+  </g>
+
+  <!-- ═════ Top-mount ═════ -->
+  <g transform="translate(0, 150)">
+    <text x="600" y="80" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">top-mount</text>
+    <!-- top case half with internal standoffs -->
+    <path d="M 200 100 L 1000 100 L 1000 130 L 200 130 Z" stroke-opacity="0.85"/>
+    <!-- screw standoffs hanging from top case down to plate -->
+    <line x1="260" y1="130" x2="260" y2="148" stroke-opacity="0.7"/>
+    <line x1="940" y1="130" x2="940" y2="148" stroke-opacity="0.7"/>
+    <!-- screws (bordeaux) -->
+    <circle cx="260" cy="142" r="4" fill="oklch(0.62 0.13 25)" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.95"/>
+    <circle cx="940" cy="142" r="4" fill="oklch(0.62 0.13 25)" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.95"/>
+    <!-- plate -->
+    <rect x="220" y="140" width="760" height="12" stroke-opacity="0.85"/>
+    <!-- PCB -->
+    <rect x="220" y="162" width="760" height="6" stroke-opacity="0.6"/>
+    <!-- bottom case half -->
+    <path d="M 200 178 L 1000 178 L 1000 208 L 200 208 Z" stroke-opacity="0.85"/>
+    <text x="1020" y="148" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.62 0.13 25)" stroke="none" opacity="0.95">plate · bolted</text>
+    <text x="50" y="148" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">firm · direct · alive</text>
+  </g>
+
+  <!-- ═════ Tray-mount ═════ -->
+  <g transform="translate(0, 300)">
+    <text x="600" y="80" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">tray-mount</text>
+    <!-- top case half (decorative shell, not mechanical) -->
+    <path d="M 200 100 L 1000 100 L 1000 130 L 200 130 Z" stroke-opacity="0.5" stroke-dasharray="4 6"/>
+    <!-- plate clipped into switches (no fastener to case) -->
+    <rect x="220" y="138" width="760" height="12" stroke-opacity="0.65"/>
+    <!-- PCB -->
+    <rect x="220" y="162" width="760" height="6" stroke-opacity="0.85"/>
+    <!-- screws to bottom case standoffs (bordeaux) — only at intervals -->
+    <line x1="260" y1="168" x2="260" y2="180" stroke-opacity="0.7"/>
+    <line x1="600" y1="168" x2="600" y2="180" stroke-opacity="0.7"/>
+    <line x1="940" y1="168" x2="940" y2="180" stroke-opacity="0.7"/>
+    <circle cx="260" cy="174" r="4" fill="oklch(0.62 0.13 25)" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.95"/>
+    <circle cx="600" cy="174" r="4" fill="oklch(0.62 0.13 25)" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.95"/>
+    <circle cx="940" cy="174" r="4" fill="oklch(0.62 0.13 25)" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.95"/>
+    <!-- bottom case half -->
+    <path d="M 200 180 L 1000 180 L 1000 210 L 200 210 Z" stroke-opacity="0.85"/>
+    <text x="1020" y="174" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.62 0.13 25)" stroke="none" opacity="0.95">PCB · screws to bottom</text>
+    <text x="50" y="174" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">varies key-to-key</text>
+  </g>
+
+  <!-- ═════ Integrated plate ═════ -->
+  <g transform="translate(0, 450)">
+    <text x="600" y="80" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">integrated plate</text>
+    <!-- One-piece case with plate machined as part of top -->
+    <path d="M 200 100 L 1000 100 L 1000 150 L 800 150 L 800 138 L 400 138 L 400 150 L 200 150 Z" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.95" stroke-width="2.5" fill="oklch(0.62 0.13 25 / 0.07)"/>
+    <!-- PCB sits inside the cavity -->
+    <rect x="420" y="148" width="360" height="6" stroke-opacity="0.6"/>
+    <!-- bottom case half -->
+    <path d="M 200 158 L 1000 158 L 1000 208 L 200 208 Z" stroke-opacity="0.85"/>
+    <text x="1020" y="142" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.62 0.13 25)" stroke="none" opacity="0.95">plate = case</text>
+    <text x="50" y="142" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">rigid · bright · zero give</text>
+  </g>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

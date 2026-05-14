@@ -1,0 +1,19 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T10:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "keycap-materials-compared",
+  "article_pillar": "guides",
+  "section_anchor": "how-to-choose",
+  "brief_summary": "Four-row question-to-answer strip. Each row: a buyer-side question on the left, a dashed leader, an amber-bordered answer box, and a short qualifier on the right. Rows: designer colorway → ABS; identical in 3 years → PBT; feel-first / unsure → thick PBT; RGB showcase → polycarbonate or shine-through ABS. Bottom rule highlights the default recommendation: PBT in a profile they like.",
+  "target": "apps/web/public/article-viz/keycap-materials-compared/four-questions.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "keycap-materials-compared.mdx § 'How to choose' — 'Want a particular colorway from a designer collab. Buy ABS, almost certainly GMK ... Want the set to look identical in three years. Buy PBT ... Care more about feel than look, and unsure which to start with. Try thick PBT first ... Building an RGB showcase board. Polycarbonate or shine-through ABS are the only two answers ... If a builder can only own one set, make it PBT in a profile they like.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/keycap-materials-compared/four-questions.svg"],
+  "warnings": []
+}

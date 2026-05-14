@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Four questions to pick a keycap material — colorway, longevity, feel, RGB — each pointing to ABS, PBT, polycarbonate, or shine-through ABS</title>
+
+  <!-- Section header -->
+  <text x="600" y="100" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">strip the catalog to four questions</text>
+
+  <!-- Four question-answer rows -->
+  <!-- Row 1: colorway -->
+  <g>
+    <text x="100" y="180" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">want a specific designer colorway?</text>
+    <line x1="540" y1="175" x2="700" y2="175" stroke-opacity="0.4" stroke-dasharray="3 6"/>
+    <rect x="710" y="155" width="200" height="40" rx="6" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="2.5" fill="oklch(0.78 0.10 80 / 0.08)"/>
+    <text x="810" y="180" font-family="Newsreader, serif" font-size="17" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">ABS</text>
+    <text x="930" y="180" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">GMK · doubleshot</text>
+  </g>
+
+  <!-- Row 2: longevity -->
+  <g>
+    <text x="100" y="250" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">want the set to look identical in 3 years?</text>
+    <line x1="540" y1="245" x2="700" y2="245" stroke-opacity="0.4" stroke-dasharray="3 6"/>
+    <rect x="710" y="225" width="200" height="40" rx="6" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="2.5" fill="oklch(0.78 0.10 80 / 0.08)"/>
+    <text x="810" y="250" font-family="Newsreader, serif" font-size="17" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">PBT</text>
+    <text x="930" y="250" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">dye-sub · resale holds</text>
+  </g>
+
+  <!-- Row 3: feel, unsure -->
+  <g>
+    <text x="100" y="320" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">care more about feel, unsure where to start?</text>
+    <line x1="540" y1="315" x2="700" y2="315" stroke-opacity="0.4" stroke-dasharray="3 6"/>
+    <rect x="710" y="295" width="200" height="40" rx="6" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="2.5" fill="oklch(0.78 0.10 80 / 0.08)"/>
+    <text x="810" y="320" font-family="Newsreader, serif" font-size="17" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">thick PBT</text>
+    <text x="930" y="320" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">forgiving texture</text>
+  </g>
+
+  <!-- Row 4: RGB showcase -->
+  <g>
+    <text x="100" y="390" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">building an RGB showcase board?</text>
+    <line x1="540" y1="385" x2="700" y2="385" stroke-opacity="0.4" stroke-dasharray="3 6"/>
+    <rect x="710" y="365" width="200" height="40" rx="6" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="2.5" fill="oklch(0.78 0.10 80 / 0.08)"/>
+    <text x="810" y="390" font-family="Newsreader, serif" font-size="15" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">PC · shine-through ABS</text>
+    <text x="930" y="390" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">RGB-friendly · niche</text>
+  </g>
+
+  <!-- Bottom rule with default recommendation -->
+  <line x1="100" y1="450" x2="1100" y2="450" stroke-opacity="0.18"/>
+  <text x="600" y="490" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.95">if a builder can only own one set, make it PBT in a profile they like</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

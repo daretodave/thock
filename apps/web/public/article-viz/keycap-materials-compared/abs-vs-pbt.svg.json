@@ -1,0 +1,20 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T10:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "keycap-materials-compared",
+  "article_pillar": "guides",
+  "section_anchor": "pbt",
+  "brief_summary": "Side-by-side cross-section of ABS and PBT keycaps. Left (ABS): thicker ~1.5mm walls, smooth glossy top surface, with a shine-progression strip below showing amber filling four quadrants from 'new' through '24 mo'. Right (PBT): slightly thinner ~1.3mm walls, faintly textured top indicated by short stipple marks, shine-progression strip stays nearly empty across the same timespan.",
+  "target": "apps/web/public/article-viz/keycap-materials-compared/abs-vs-pbt.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "keycap-materials-compared.mdx § 'ABS' — 'GMK sets typically run 1.5mm thick — produce a low, focused sound the community calls thocky ... Most ABS sets show legible shine on the home row in 6 to 18 months of daily typing'",
+    "keycap-materials-compared.mdx § 'PBT' — 'PBT walls flex less. PBT surfaces resist the polishing process ... A well-made PBT set looks effectively the same after three years that it did out of the box ... PBT has a faintly textured surface, almost matte'"
+  ],
+  "outputs": ["apps/web/public/article-viz/keycap-materials-compared/abs-vs-pbt.svg"],
+  "warnings": ["PBT 1.3mm wall is a representative range, not article-specified — used as a relative comparison against the article's stated 1.5mm for GMK ABS"]
+}

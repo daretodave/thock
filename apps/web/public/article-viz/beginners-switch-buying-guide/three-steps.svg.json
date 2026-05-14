@@ -1,0 +1,19 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T10:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "beginners-switch-buying-guide",
+  "article_pillar": "guides",
+  "section_anchor": "where-to-actually-start",
+  "brief_summary": "Three connected node-circles representing the article's three-step path. Step 1: a 3×3 dot grid suggesting a switch tester. Step 2: three candidate marks with one amber-circled to indicate 'pick one'. Step 3: a small calendar grid with one cell highlighted amber to suggest 'wait a month'. Right arrows between nodes. Caption: 'three steps, in order — do not skip ahead'.",
+  "target": "apps/web/public/article-viz/beginners-switch-buying-guide/three-steps.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "beginners-switch-buying-guide.mdx § 'Where to actually start' — 'Step one: buy a switch tester, not a keyboard's worth of switches ... A switch tester is a small acrylic or plastic block with somewhere between nine and thirty-six switches mounted in it ... Step two: pick a single family, and a single switch within it ... order enough for a full board plus five or six spares ... Step three: actually use the keyboard for at least a month before changing anything ... Hands adapt.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/beginners-switch-buying-guide/three-steps.svg"],
+  "warnings": []
+}

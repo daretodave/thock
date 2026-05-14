@@ -51,6 +51,13 @@ Who VIA is for: builders whose board shipped with VIA support and who only want 
 
 ## VIAL
 
+<InlineViz
+  src="/article-viz/keyboard-firmware-compared/feature-matrix.svg"
+  alt="Three-column feature matrix comparing QMK, VIA, and VIAL across GUI remap, layer count, tap-dance, combos, macros, and leader/OLED/host-aware behavior."
+  caption="Where each firmware sits on the depth axis."
+  accent="amber"
+/>
+
 VIAL is what happens when someone forks VIA and decides to fix the limits. It is the same general idea — GUI desktop app, no recompile, edits land on the board's flash over USB — but with a noticeably richer feature set and a more permissive ecosystem. VIAL supports tap-dance editing in the GUI. It supports Combos. It supports more layers (up to 16 versus VIA's 4). It supports encoder mappings and QMK-style macro editing with full keycode support. The keymap state lives in dynamic keymaps in flash, which means the firmware doesn't need to be recompiled for every structural change the way a QMK-only keymap would.
 
 The other meaningful difference is the ecosystem model. VIA's `via.json` registry required vendor cooperation; VIAL's equivalent does not. Any board's firmware can ship with VIAL support without going through an approval gate. The practical result is that smaller designers and one-off builds are far more likely to ship VIAL-ready than VIA-ready, and the list of VIAL-supported boards has grown sharply over the last two years.
@@ -60,6 +67,13 @@ The weaknesses are smaller-scale than VIA's. The installed base of VIAL-shipping
 Who VIAL is for: builders who want VIA's ease plus most of QMK's power-user features — Combos, tap-dance, deeper macros — without learning to compile firmware. For someone building a custom 40% or a split, VIAL is usually the sweet spot.
 
 ## Choosing without overthinking it
+
+<InlineViz
+  src="/article-viz/keyboard-firmware-compared/decision-tree.svg"
+  alt="A decision tree starting with whether the board ships VIA- or VIAL-flashed, then branching by remap depth into VIA, VIAL, or QMK terminal outcomes."
+  caption="The whole choice, condensed."
+  accent="amber"
+/>
 
 The decision is shorter than the catalog suggests.
 

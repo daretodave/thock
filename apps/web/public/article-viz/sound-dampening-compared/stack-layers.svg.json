@@ -1,0 +1,20 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T10:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "sound-dampening-compared",
+  "article_pillar": "guides",
+  "section_anchor": "where-each-layer-sits-in-the-stack",
+  "brief_summary": "Side cross-section of a case showing where the four sound-dampening layers physically sit: plate foam between plate and PCB (with switch-pin cutouts), PE foam beneath the PCB, tape mod as dashed strips on the back face of the PCB, and case foam filling the bottom interior volume. Right-margin callouts label each layer in terracotta; left-margin glosses describe each layer's acoustic job.",
+  "target": "apps/web/public/article-viz/sound-dampening-compared/stack-layers.svg",
+  "splash_color": { "name": "bordeaux (terracotta)", "oklch": "oklch(0.62 0.13 25)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "sound-dampening-compared.mdx § 'Where each layer sits in the stack' — 'Case foam sits at the bottom of the case interior ... Plate foam sits in the sandwich between the switch plate and the PCB ... PE foam sits one layer down — between the PCB and the plate in some kits, under the PCB in others ... Tape mod is the simplest geometry of the four: one to four strips of painter's tape applied to the back face of the PCB.'",
+    "sound-dampening-compared.mdx § 'What each layer actually changes' — band descriptions: case foam = lower-octave reverb; plate foam = high-frequency ring; PE foam = poppy bottom-out; tape mod = low-mid resonance"
+  ],
+  "outputs": ["apps/web/public/article-viz/sound-dampening-compared/stack-layers.svg"],
+  "warnings": []
+}

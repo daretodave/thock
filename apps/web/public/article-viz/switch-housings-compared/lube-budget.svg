@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>How three common switch housings respond to lube — nylon's wide margin, PC's narrow margin, POM's near-zero budget</title>
+
+  <!-- Three panels side by side -->
+  <line x1="400" y1="80" x2="400" y2="440" stroke-opacity="0.18"/>
+  <line x1="800" y1="80" x2="800" y2="440" stroke-opacity="0.18"/>
+
+  <!-- ═════ NYLON ═════ -->
+  <text x="200" y="115" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">nylon</text>
+  <text x="200" y="138" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">forgiving · hides over-lube</text>
+  <!-- Slider bar: large amber forgiveness window -->
+  <line x1="90" y1="220" x2="310" y2="220" stroke-opacity="0.4"/>
+  <rect x="120" y="210" width="160" height="20" fill="oklch(0.78 0.10 80 / 0.30)" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="2.5"/>
+  <text x="90" y="250" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">none</text>
+  <text x="310" y="250" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.55">heavy</text>
+  <text x="200" y="285" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.95">wide margin for error</text>
+  <text x="200" y="310" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">brush thicker · biggest stock-to-lubed delta</text>
+  <text x="200" y="335" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">start here when learning</text>
+
+  <!-- ═════ PC ═════ -->
+  <text x="600" y="115" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">PC</text>
+  <text x="600" y="138" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">punishes over-lube · slow-motion</text>
+  <line x1="490" y1="220" x2="710" y2="220" stroke-opacity="0.4"/>
+  <rect x="520" y="210" width="60" height="20" fill="oklch(0.78 0.10 80 / 0.30)" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="2.5"/>
+  <!-- molasses zone -->
+  <rect x="580" y="210" width="130" height="20" fill="oklch(0.62 0.13 25 / 0.18)" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.55" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <text x="490" y="250" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">none</text>
+  <text x="710" y="250" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.55">heavy</text>
+  <text x="645" y="250" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.9">molasses</text>
+  <text x="600" y="285" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.95">narrow window · light touch</text>
+  <text x="600" y="310" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">use 105 oil on rails, 205g0 sparingly</text>
+  <text x="600" y="335" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">rewards calibrated hands</text>
+
+  <!-- ═════ POM ═════ -->
+  <text x="1000" y="115" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">POM</text>
+  <text x="1000" y="138" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">self-lubricating · barely needs it</text>
+  <line x1="890" y1="220" x2="1110" y2="220" stroke-opacity="0.4"/>
+  <rect x="900" y="210" width="40" height="20" fill="oklch(0.78 0.10 80 / 0.30)" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="2.5"/>
+  <text x="890" y="250" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">none</text>
+  <text x="1110" y="250" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.55">heavy</text>
+  <text x="1000" y="285" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.95">stem legs only</text>
+  <text x="1000" y="310" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">heavy rail lube = wasted &amp; risky</text>
+  <text x="1000" y="335" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">stock ≈ lubed nylon</text>
+
+  <!-- Caption -->
+  <text x="600" y="470" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.95">the housing decides the lube budget — and the margin for error</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

@@ -1,0 +1,21 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T10:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "switch-housings-compared",
+  "article_pillar": "guides",
+  "section_anchor": "how-housings-interact-with-lube",
+  "brief_summary": "Three-panel comparison of lube tolerance by housing. Nylon: wide amber forgiveness window. PC: narrower amber zone followed by a dashed bordeaux 'molasses' over-lube zone. POM: tiny amber zone — minimal lube budget. Each panel surfaces the working rule for that material.",
+  "target": "apps/web/public/article-viz/switch-housings-compared/lube-budget.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "switch-housings-compared.mdx § 'How housings interact with lube' — 'Nylon is forgiving. It hides over-lubing well ... PC punishes over-lubing. The lower baseline friction means even a moderately heavy coat slows the switch noticeably ... POM barely needs lube on the rails ... Most POM modders lube only the stem legs'",
+    "switch-housings-compared.mdx § 'Why housing material matters' — 'The housing decides the budget and the margin for error.'",
+    "switch-housings-compared.mdx § 'Polycarbonate' — 'the fix is a thinner application, often a thinner oil like 105 on the rails'"
+  ],
+  "outputs": ["apps/web/public/article-viz/switch-housings-compared/lube-budget.svg"],
+  "warnings": []
+}

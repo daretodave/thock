@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>A three-step path from curiosity to a confident first switch purchase — tester, then one family, then a month of real use</title>
+
+  <!-- Three step nodes in a row with connecting arrows -->
+
+  <!-- Step 1 — tester block -->
+  <g>
+    <circle cx="200" cy="200" r="80" stroke-opacity="0.5"/>
+    <!-- A miniature switch tester: 3×3 grid of dots -->
+    <g fill="oklch(0.78 0.10 80)" stroke="oklch(0.78 0.10 80)" stroke-width="1.5">
+      <circle cx="175" cy="175" r="5" fill-opacity="0.85"/>
+      <circle cx="200" cy="175" r="5" fill-opacity="0.55"/>
+      <circle cx="225" cy="175" r="5" fill-opacity="0.85"/>
+      <circle cx="175" cy="200" r="5" fill-opacity="0.55"/>
+      <circle cx="200" cy="200" r="5" fill-opacity="0.95"/>
+      <circle cx="225" cy="200" r="5" fill-opacity="0.55"/>
+      <circle cx="175" cy="225" r="5" fill-opacity="0.85"/>
+      <circle cx="200" cy="225" r="5" fill-opacity="0.55"/>
+      <circle cx="225" cy="225" r="5" fill-opacity="0.85"/>
+    </g>
+    <text x="200" y="100" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.95">step one</text>
+    <text x="200" y="125" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">buy a tester</text>
+    <text x="200" y="320" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">9-36 switches in a block</text>
+    <text x="200" y="340" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">not a full board</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <g stroke-opacity="0.6">
+    <line x1="290" y1="200" x2="500" y2="200"/>
+    <path d="M 492 192 L 500 200 L 492 208"/>
+  </g>
+
+  <!-- Step 2 — pick one block -->
+  <g>
+    <circle cx="600" cy="200" r="80" stroke-opacity="0.5"/>
+    <!-- Three candidates, one circled — the chosen family -->
+    <g fill="none" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.45" stroke-width="2">
+      <circle cx="570" cy="195" r="10"/>
+      <circle cx="630" cy="195" r="10"/>
+    </g>
+    <circle cx="600" cy="220" r="14" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="3" fill="oklch(0.78 0.10 80 / 0.10)"/>
+    <text x="600" y="100" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.95">step two</text>
+    <text x="600" y="125" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">pick one family</text>
+    <text x="600" y="320" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">one switch · full board + 6 spares</text>
+    <text x="600" y="340" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">mainstream brands first</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <g stroke-opacity="0.6">
+    <line x1="690" y1="200" x2="900" y2="200"/>
+    <path d="M 892 192 L 900 200 L 892 208"/>
+  </g>
+
+  <!-- Step 3 — month block (calendar with marked dot) -->
+  <g>
+    <circle cx="1000" cy="200" r="80" stroke-opacity="0.5"/>
+    <!-- Calendar grid 4×4 cells -->
+    <g stroke-opacity="0.55" stroke-width="1.5">
+      <rect x="960" y="170" width="80" height="60"/>
+      <line x1="960" y1="185" x2="1040" y2="185"/>
+      <line x1="960" y1="200" x2="1040" y2="200"/>
+      <line x1="960" y1="215" x2="1040" y2="215"/>
+      <line x1="980" y1="170" x2="980" y2="230"/>
+      <line x1="1000" y1="170" x2="1000" y2="230"/>
+      <line x1="1020" y1="170" x2="1020" y2="230"/>
+    </g>
+    <!-- Last cell highlighted amber — "the month is up" -->
+    <rect x="1020" y="215" width="20" height="15" fill="oklch(0.78 0.10 80 / 0.35)" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="2"/>
+    <text x="1000" y="100" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.95">step three</text>
+    <text x="1000" y="125" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">a month of use</text>
+    <text x="1000" y="320" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">hands adapt · feel changes</text>
+    <text x="1000" y="340" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">decide only after</text>
+  </g>
+
+  <!-- Caption -->
+  <text x="600" y="410" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">three steps, in order — do not skip ahead</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>
