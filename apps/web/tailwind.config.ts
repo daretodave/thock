@@ -4,6 +4,14 @@ const config: Config = {
   content: [
     './src/**/*.{ts,tsx,mdx}',
     '../../packages/ui/src/**/*.{ts,tsx}',
+    // MDX components live in @thock/content. Without this entry,
+    // every Tailwind utility used inside Callout, SerifH2, SerifH3,
+    // KeyboardImage, PullQuote, Source, InlineViz, etc. is silently
+    // purged at build time — the classes appear on rendered DOM but
+    // the CSS rules don't exist. Root cause of an aside-headbutting-
+    // h2 bug that survived two prior "fixes" because neither could
+    // ever land in the compiled stylesheet. 2026-05-14.
+    '../../packages/content/src/**/*.{ts,tsx}',
   ],
   darkMode: ['class', '.thock-light'],
   theme: {
