@@ -1,0 +1,66 @@
+name: lighthouse
+
+# Lighthouse CI on every Vercel preview deploy.
+#
+# Trigger: GitHub's `deployment_status` event, fired when Vercel
+# reports a deployment outcome. We filter to success + Preview so
+# we don't run twice (in-progress / success) and don't run against
+# production deploys (production scores get covered by the Vercel
+# dashboard already).
+#
+# Asserts: see .lighthouserc.json — a11y / best-practices / SEO are
+# hard errors at ≥95; performance is a warn at ≥90 because mobile-
+# network simulation has a wide single-run variance. numberOfRuns:3
+# absorbs that noise via median-of-3.
+#
+# Output: temporary public-storage link + a job artifact, both
+# discoverable from the Actions run page. No PR comment yet — add
+# one in a follow-up iterate if the run page is too friction.
+#
+# Closes #84 #85.
+
+on:
+  deployment_status:
+
+permissions:
+  contents: read
+
+concurrency:
+  # One lighthouse run per ref. A new push supersedes any in-flight
+  # run on the same branch — lighthouse against an older preview is
+  # wasted signal.
+  group: lighthouse-${{ github.event.deployment.environment }}-${{ github.event.deployment.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lighthouse:
+    # Vercel emits `deployment_status` with state in {in_progress,
+    # success, error, failure}. We only act on `success` for a
+    # Preview environment — production scores are surfaced elsewhere
+    # and re-running on Production would double-count.
+    if: >
+      github.event.deployment_status.state == 'success' &&
+      github.event.deployment.environment == 'Preview'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout (so the action can read .lighthouserc.json)
+        uses: actions/checkout@v4
+
+      - name: Lighthouse CI
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          # Walk a small, intentional set: home (typical reader
+          # entry), a deep-dive article (canonical article shape +
+          # InlineViz figures), the data-heavy trends tracker, and
+          # the visual-heavy group-buys index. Keep this list short
+          # — each URL × numberOfRuns adds runtime; the median-of-3
+          # noise floor matters more than coverage breadth here.
+          urls: |
+            ${{ github.event.deployment_status.target_url }}
+            ${{ github.event.deployment_status.target_url }}/article/gateron-oil-king-deep-dive
+            ${{ github.event.deployment_status.target_url }}/trends/tracker
+            ${{ github.event.deployment_status.target_url }}/group-buys
+          uploadArtifacts: true
+          temporaryPublicStorage: true
+          configPath: ./.lighthouserc.json
