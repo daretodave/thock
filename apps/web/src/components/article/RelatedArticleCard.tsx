@@ -34,7 +34,7 @@ export function RelatedArticleCard({
         {fm.title}
       </h3>
       <p className="text-small text-text-2 line-clamp-3">{fm.lede}</p>
-      <div className="mt-auto flex flex-wrap items-center gap-2 pt-2 text-small text-text-3">
+      <div className="mt-auto flex flex-wrap items-center gap-2 pt-2 text-small text-text-2">
         <span>{fm.author}</span>
         <span aria-hidden="true">·</span>
         <time dateTime={fm.publishedAt}>

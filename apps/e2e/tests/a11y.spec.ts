@@ -184,6 +184,49 @@ test('link-in-text-block — /about body links (regression guard)', async ({ pag
   expect(linkInText, formatViolations(linkInText)).toHaveLength(0)
 })
 
+// Regression guards: color-contrast on article byline metadata (author/date/read-time)
+// and tracker rank numbers drained by audit row [a11y] issue #91. These elements
+// used text-text-3 which fails contrast in light mode; swapped to text-text-2.
+
+test('color-contrast — article byline (regression guard)', async ({ page }) => {
+  await page.goto('/article/gateron-oil-king-deep-dive')
+  await page.waitForLoadState('networkidle')
+
+  const results = await new AxeBuilder({ page })
+    .withTags(WCAG_TAGS)
+    .include('[data-testid="article-byline"]')
+    .analyze()
+
+  const contrast = results.violations.filter((v) => v.id === 'color-contrast')
+  expect(contrast, formatViolations(contrast)).toHaveLength(0)
+})
+
+test('color-contrast — article card meta (regression guard)', async ({ page }) => {
+  await page.goto('/tag/linear')
+  await page.waitForLoadState('networkidle')
+
+  const results = await new AxeBuilder({ page })
+    .withTags(WCAG_TAGS)
+    .include('[data-testid="article-card-meta"]')
+    .analyze()
+
+  const contrast = results.violations.filter((v) => v.id === 'color-contrast')
+  expect(contrast, formatViolations(contrast)).toHaveLength(0)
+})
+
+test('color-contrast — tracker row rank (regression guard)', async ({ page }) => {
+  await page.goto('/trends/tracker')
+  await page.waitForLoadState('networkidle')
+
+  const results = await new AxeBuilder({ page })
+    .withTags(WCAG_TAGS)
+    .include('[data-testid="tracker-row"]')
+    .analyze()
+
+  const contrast = results.violations.filter((v) => v.id === 'color-contrast')
+  expect(contrast, formatViolations(contrast)).toHaveLength(0)
+})
+
 // Regression guard: skip link is present and targets a valid id="main" element.
 // Phase A ships this as a hard assertion because the skip link is fixed in
 // the same commit (no longer needs Phase B discovery).

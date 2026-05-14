@@ -80,7 +80,7 @@ export function ArticleCard({
   )
 
   const meta = (
-    <div className="flex flex-wrap items-center gap-2 text-small text-text-3">
+    <div data-testid="article-card-meta" className="flex flex-wrap items-center gap-2 text-small text-text-2">
       <span>{fm.author}</span>
       <span aria-hidden="true">·</span>
       <time dateTime={fm.publishedAt}>{formattedDate}</time>

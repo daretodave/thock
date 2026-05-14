@@ -28,7 +28,7 @@ export function ArticleByline({
   return (
     <div
       data-testid="article-byline"
-      className="flex flex-col gap-1 text-small text-text-3 md:flex-row md:items-center md:gap-3"
+      className="flex flex-col gap-1 text-small text-text-2 md:flex-row md:items-center md:gap-3"
     >
       <span className="text-text-2">{author}</span>
       <span aria-hidden="true" className="hidden md:inline">
