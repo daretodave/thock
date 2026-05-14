@@ -1,0 +1,20 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T10:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "75-percent-default",
+  "article_pillar": "trends",
+  "section_anchor": "what-65-percent-became-instead",
+  "brief_summary": "Two parallel vertical columns. Left: 65% with a filled steel-blue marker at the floor (Bakeneko65, gateway) and two dashed outline circles at the upper tiers labelled 'gone quiet'. Right: 75% with three filled markers at flagship, mid-wireless, and value tiers (Sonnet 2026, QK75, Rainy 75). A steel-blue migration arrow runs from 65's upper tiers to 75's column. Caption: '65 didn't lose — it found a different role'.",
+  "target": "apps/web/public/article-viz/75-percent-default/65-vs-75-tiers.svg",
+  "splash_color": { "name": "steel-blue", "oklch": "oklch(0.62 0.10 230)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "75-percent-default.mdx § 'What 65 percent became instead' — '65% didn't lose. It found a different role. The Bakeneko remains the answer thock gives when a reader asks for a first custom under $200 ... The category that moved was the upper end. Builders whose second or third board used to be a 65 with nicer materials are now buying a 75 with those materials instead'",
+    "75-percent-default.mdx § 'What we're watching' — 'the next-tier-up 65 launches have gone quiet relative to their 75 counterparts'"
+  ],
+  "outputs": ["apps/web/public/article-viz/75-percent-default/65-vs-75-tiers.svg"],
+  "warnings": []
+}

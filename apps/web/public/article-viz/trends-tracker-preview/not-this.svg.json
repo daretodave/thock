@@ -1,0 +1,19 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T10:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "trends-tracker-preview",
+  "article_pillar": "trends",
+  "section_anchor": "what-this-is-not",
+  "brief_summary": "Three dashed-border cards each labelled with what the tracker isn't — 'a buying ranking', 'a popularity contest', 'a stock chart' — overlaid with bordeaux X strokes. Each card carries a short justification line. Below, an affirmative line: 'it is a weekly read of where the hobby is paying attention, with enough structure to be argued with'.",
+  "target": "apps/web/public/article-viz/trends-tracker-preview/not-this.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "trends-tracker-preview.mdx § 'What this is not' — 'The tracker is not a buying ranking. A row at +42 is not a recommendation, and a row at -18 is not a warning ... It is not a popularity contest either. Raw mention counts would reward whichever launch happened to coincide with a slow news week ... It is not a stock chart. The hobby is not a market, prices are not part of the input ... What it is: a weekly read of where the hobby is paying attention, with enough structure to be argued with.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/trends-tracker-preview/not-this.svg"],
+  "warnings": []
+}

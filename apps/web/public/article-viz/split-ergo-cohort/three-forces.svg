@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Three forces that crossed split/ergo into a reference category in 2026 — firmware, keycaps, and supply</title>
+
+  <!-- Year axis -->
+  <line x1="120" y1="380" x2="1080" y2="380" stroke-opacity="0.5"/>
+  <text x="180" y="410" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">2021</text>
+  <text x="400" y="410" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">2023</text>
+  <text x="620" y="410" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">2024</text>
+  <text x="840" y="410" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">2025</text>
+  <text x="1040" y="410" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.62 0.10 145)" stroke="none" text-anchor="middle" opacity="0.95">2026</text>
+
+  <!-- Three forces as parallel readiness curves crossing a "usable" threshold -->
+  <!-- Threshold dotted line -->
+  <line x1="120" y1="220" x2="1080" y2="220" stroke-opacity="0.35" stroke-dasharray="4 6"/>
+  <text x="120" y="215" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.62 0.10 145)" stroke="none" opacity="0.85">usable threshold</text>
+
+  <!-- Force 1: ZMK wireless firmware -->
+  <g>
+    <path d="M 180 370 C 300 360 400 320 500 270 C 600 230 700 215 1040 200" stroke="oklch(0.62 0.10 145)" stroke-opacity="0.95" stroke-width="3"/>
+    <circle cx="1040" cy="200" r="6" fill="oklch(0.62 0.10 145)" stroke="oklch(0.62 0.10 145)" stroke-opacity="0.95"/>
+    <text x="1055" y="204" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.62 0.10 145)" stroke="none" opacity="0.95">ZMK</text>
+    <text x="1055" y="220" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">wireless firmware</text>
+  </g>
+
+  <!-- Force 2: choc-spaced keycaps -->
+  <g>
+    <path d="M 180 365 C 300 350 400 310 500 280 C 600 250 700 225 1040 210" stroke="oklch(0.62 0.10 145)" stroke-opacity="0.75" stroke-width="2.5"/>
+    <circle cx="1040" cy="210" r="5" fill="oklch(0.62 0.10 145)" stroke="oklch(0.62 0.10 145)" stroke-opacity="0.8"/>
+    <text x="1055" y="160" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.62 0.10 145)" stroke="none" opacity="0.85">keycaps</text>
+    <text x="1055" y="176" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">choc-spaced sets</text>
+  </g>
+
+  <!-- Force 3: pre-built hotswap supply -->
+  <g>
+    <path d="M 180 372 C 300 365 450 350 600 310 C 750 270 900 220 1040 195" stroke="oklch(0.62 0.10 145)" stroke-opacity="0.55" stroke-width="2"/>
+    <circle cx="1040" cy="195" r="5" fill="oklch(0.62 0.10 145 / 0.25)" stroke="oklch(0.62 0.10 145)" stroke-opacity="0.7"/>
+    <text x="1055" y="115" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.62 0.10 145)" stroke="none" opacity="0.75">supply</text>
+    <text x="1055" y="131" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">pre-built hotswap splits</text>
+  </g>
+
+  <!-- Section header -->
+  <text x="600" y="80" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">three forces sitting at "usable" — at the same time</text>
+
+  <!-- Caption -->
+  <text x="600" y="460" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">none existed at saturation in 2021 — all three sit usable in 2026</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

@@ -1,0 +1,20 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T10:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "hall-effect-mainstream",
+  "article_pillar": "trends",
+  "section_anchor": "the-counter-evidence-feel-and-configurator-gravity",
+  "brief_summary": "Two horizontal tracks separated by a faint rule. Top track (linear-mechanical mid-tier, warm-grey outline): HMX Cloud, Oil King, Tecsee Sapphire — audience: typists who listen. Bottom track (Hall-effect mid-tier, coral-emphasized): Wooting 60 HE, Razer V3 Pro, Q1 HE 8K Marble, Mode Sonnet R2 HE — audience: performance. Caption frames the partition: two tiers, two audiences, out of the same configurators.",
+  "target": "apps/web/public/article-viz/hall-effect-mainstream/two-tracks.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "hall-effect-mainstream.mdx § 'Who's driving it' — 'The HMX-dominated mid-tier linear slot for enthusiasts and the HE-dominated mid-tier performance slot are now two different tiers serving two different audiences out of the same prebuilt configurators. That partition is the structural fact this whole piece is about.'",
+    "hall-effect-mainstream.mdx § 'The counter-evidence' — 'the bench of switches that the boutique linear crowd actually argues about — the Oil King, the HMX Cloud lineage, the Tecsee Sapphire on the tactile side — are not a fight HE is structured to enter'"
+  ],
+  "outputs": ["apps/web/public/article-viz/hall-effect-mainstream/two-tracks.svg"],
+  "warnings": []
+}

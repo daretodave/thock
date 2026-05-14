@@ -1,0 +1,19 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T10:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "trends-tracker-preview",
+  "article_pillar": "trends",
+  "section_anchor": "how-to-read-a-row",
+  "brief_summary": "Anatomy of a single Trends Tracker row, rendered like the live tracker. Five columns: name (Gateron Oil King, in serif italic), category (coral 'switch' chip), direction (coral up-arrow glyph), week score (+42, coral italic), sparkline (coral ascending line with a dot terminus). Dotted leader lines drop from each column to a two-line annotation describing what that column means and what makes it useful.",
+  "target": "apps/web/public/article-viz/trends-tracker-preview/anatomy-row.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "trends-tracker-preview.mdx § 'How to read a row' — 'Five columns, left to right. Name. ... Category. ... Direction. ... Week score. A signed integer between -100 and 100 ... Sparkline. The last eight weeks of scores, drawn small ... In 2026-W19, Gateron Oil King sits at +42 with a clean ascending sparkline'"
+  ],
+  "outputs": ["apps/web/public/article-viz/trends-tracker-preview/anatomy-row.svg"],
+  "warnings": []
+}

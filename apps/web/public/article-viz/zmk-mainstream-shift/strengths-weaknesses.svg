@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>What the vendor side is buying and what they're inheriting — ZMK's two strengths versus its two open weaknesses</title>
+
+  <!-- Vertical divider -->
+  <line x1="600" y1="100" x2="600" y2="450" stroke-opacity="0.18"/>
+
+  <!-- LEFT: strengths -->
+  <text x="300" y="120" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">what they're buying</text>
+
+  <g>
+    <rect x="90" y="160" width="420" height="100" rx="10" fill="oklch(0.68 0.165 28 / 0.08)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.95" stroke-width="2.5"/>
+    <text x="300" y="195" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">power profile</text>
+    <text x="300" y="222" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">Zephyr-native BLE · event-driven scan</text>
+    <text x="300" y="240" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">660-hour claim · permits the headline</text>
+  </g>
+
+  <g>
+    <rect x="90" y="290" width="420" height="100" rx="10" fill="oklch(0.68 0.165 28 / 0.08)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.95" stroke-width="2.5"/>
+    <text x="300" y="325" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Bluetooth maturity</text>
+    <text x="300" y="352" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">multi-device · sleep/wake · keepalive</text>
+    <text x="300" y="370" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">5 years of field testing</text>
+  </g>
+
+  <!-- RIGHT: weaknesses -->
+  <text x="900" y="120" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.95">what they're inheriting</text>
+
+  <g>
+    <rect x="690" y="160" width="420" height="100" rx="10" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.7" stroke-width="2" stroke-dasharray="6 5"/>
+    <text x="900" y="195" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">configurator gap</text>
+    <text x="900" y="222" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">ZMK Studio vs. VIA</text>
+    <text x="900" y="240" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.95">devicetree workflow still leaks through</text>
+  </g>
+
+  <g>
+    <rect x="690" y="290" width="420" height="100" rx="10" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.7" stroke-width="2" stroke-dasharray="6 5"/>
+    <text x="900" y="325" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">advanced macros + combos</text>
+    <text x="900" y="352" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">Tap Dance · Layer Lock · Mod-Tap nuance</text>
+    <text x="900" y="370" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.95">docs gap, not feature gap</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="600" y="490" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">a vendor taking a firmware position inherits the firmware's reputation</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

@@ -1,0 +1,20 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T10:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "zmk-mainstream-shift",
+  "article_pillar": "trends",
+  "section_anchor": "where-the-demand-floor-came-from",
+  "brief_summary": "Time-axis chart spanning 2021 through CES 2026. Four DIY-wireless products on ZMK plotted in coral as a rising stack: ZSA Voyager (2022), Glove80 (~2023), Corne wireless, Sweep family. A dashed-bordered demand-floor band surrounds them. At the far right, a coral vertical line plus a Keychron Q Ultra block (five-board flagship) marks the vendor crossing the line at CES 2026.",
+  "target": "apps/web/public/article-viz/zmk-mainstream-shift/demand-floor.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "zmk-mainstream-shift.mdx § 'Where the demand floor came from' — 'ZSA's Voyager has shipped on ZMK since 2022, anchoring the low-profile split slot ... MoErgo's Glove80 is the column-staggered, sculpted-well counterpart and runs on the same firmware platform. Foostan's Corne ... has had wireless variants on ZMK for long enough that the configuration is documented in beginner guides ... they built a demand floor — a cohort of typists who already had ZMK boards on their desks ... A vendor investing in ZMK firmware engineering in 2026 is investing into an ecosystem that has documentation, working hardware, a configurator effort in flight, and an installed base'",
+    "zmk-mainstream-shift.mdx § 'The signal' — Keychron Q Ultra five-board flagship at CES 2026"
+  ],
+  "outputs": ["apps/web/public/article-viz/zmk-mainstream-shift/demand-floor.svg"],
+  "warnings": []
+}

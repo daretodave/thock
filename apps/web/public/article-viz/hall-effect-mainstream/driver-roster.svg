@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>The four brands driving Hall-effect's move into the mid-premium tier — and the linear-mechanical bench that is conspicuously absent</title>
+
+  <!-- Four driver cards in a row -->
+  <g>
+    <rect x="80" y="160" width="240" height="220" rx="10" fill="oklch(0.68 0.165 28 / 0.10)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.95" stroke-width="3"/>
+    <text x="200" y="120" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">analog-purist tier</text>
+    <text x="200" y="210" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Wooting</text>
+    <text x="200" y="240" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">built the category</text>
+    <text x="200" y="280" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">60 HE = reviewer reference</text>
+    <text x="200" y="298" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">mature config tooling</text>
+  </g>
+
+  <g>
+    <rect x="350" y="160" width="240" height="220" rx="10" fill="oklch(0.68 0.165 28 / 0.10)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.95" stroke-width="3"/>
+    <text x="470" y="120" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">gaming peripheral tier</text>
+    <text x="470" y="210" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Razer</text>
+    <text x="470" y="240" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">V3 Pro line</text>
+    <text x="470" y="280" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">volume the OEM channel</text>
+    <text x="470" y="298" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">pays attention to</text>
+  </g>
+
+  <g>
+    <rect x="620" y="160" width="240" height="220" rx="10" fill="oklch(0.68 0.165 28 / 0.10)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.95" stroke-width="3"/>
+    <text x="740" y="120" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">enthusiast-prebuilt</text>
+    <text x="740" y="210" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Keychron</text>
+    <text x="740" y="240" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">Q1 HE 8K Marble</text>
+    <text x="740" y="280" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">new entrant · planted flag</text>
+    <text x="740" y="298" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">ZMK firmware bet</text>
+  </g>
+
+  <g>
+    <rect x="890" y="160" width="240" height="220" rx="10" fill="oklch(0.68 0.165 28 / 0.10)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.95" stroke-width="3"/>
+    <text x="1010" y="120" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">boutique custom</text>
+    <text x="1010" y="210" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Mode</text>
+    <text x="1010" y="240" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">Sonnet R2 HE option</text>
+    <text x="1010" y="280" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">decided HE was worth</text>
+    <text x="1010" y="298" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">supporting, not ignoring</text>
+  </g>
+
+  <!-- The absence callout -->
+  <text x="600" y="445" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">notably absent: the linear-mechanical enthusiast bench</text>
+  <text x="600" y="465" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">Oil King · HMX Cloud · Sapphire — two tiers, two audiences</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

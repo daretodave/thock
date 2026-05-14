@@ -1,0 +1,21 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T10:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "split-ergo-cohort",
+  "article_pillar": "trends",
+  "section_anchor": "glove80-in-dev-newsletters",
+  "brief_summary": "Form-factor spectrum from low-profile flat (left) to sculpted-well palm-rested (right). Two sage-green anchor product cards plotted on the spectrum: ZSA Voyager on the left, MoErgo Glove80 on the right. Center area surfaces the 2026-W19 tracker score (+32, up) and the framing: 'the cohort has the two reference points it needs'.",
+  "target": "apps/web/public/article-viz/split-ergo-cohort/two-anchors.svg",
+  "splash_color": { "name": "sage-green", "oklch": "oklch(0.62 0.10 145)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "split-ergo-cohort.mdx § 'The Voyager line did the work' — 'ZSA's Voyager. A low-profile split with choc-spaced switches, hot-swap sockets ... ZSA's flagship since 2022'",
+    "split-ergo-cohort.mdx § 'Glove80 in dev newsletters' — 'MoErgo's Glove80. Column-staggered, sculpted palm rest, concave key wells ... between Voyager at the low-profile flat end and Glove80 at the sculpted-well end, the category has the two reference points it needs'",
+    "split-ergo-cohort.mdx § 'What we're watching' — '2026-W19 has the split/ergo row at score +32 and direction up'"
+  ],
+  "outputs": ["apps/web/public/article-viz/split-ergo-cohort/two-anchors.svg"],
+  "warnings": []
+}

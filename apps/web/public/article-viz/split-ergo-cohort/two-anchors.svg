@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Two anchor products framing the split/ergo cohort — ZSA Voyager at the low-profile flat end and MoErgo Glove80 at the sculpted-well end</title>
+
+  <!-- Form-factor spectrum line -->
+  <line x1="200" y1="290" x2="1000" y2="290" stroke-opacity="0.5"/>
+  <path d="M 208 282 L 200 290 L 208 298" stroke-opacity="0.5"/>
+  <path d="M 992 282 L 1000 290 L 992 298" stroke-opacity="0.5"/>
+
+  <text x="200" y="320" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">low-profile · flat</text>
+  <text x="1000" y="320" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">sculpted wells · palm-rested</text>
+
+  <!-- VOYAGER anchor -->
+  <g>
+    <rect x="120" y="160" width="260" height="100" rx="10" fill="oklch(0.62 0.10 145 / 0.12)" stroke="oklch(0.62 0.10 145)" stroke-opacity="0.95" stroke-width="3"/>
+    <text x="250" y="195" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">ZSA Voyager</text>
+    <text x="250" y="222" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">choc-spaced · hotswap</text>
+    <text x="250" y="240" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">2022 flagship · settled SKU</text>
+    <!-- anchor dot on spectrum -->
+    <circle cx="250" cy="290" r="9" fill="oklch(0.62 0.10 145 / 0.20)" stroke="oklch(0.62 0.10 145)" stroke-opacity="0.95" stroke-width="3"/>
+  </g>
+
+  <!-- GLOVE80 anchor -->
+  <g>
+    <rect x="820" y="160" width="260" height="100" rx="10" fill="oklch(0.62 0.10 145 / 0.12)" stroke="oklch(0.62 0.10 145)" stroke-opacity="0.95" stroke-width="3"/>
+    <text x="950" y="195" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">MoErgo Glove80</text>
+    <text x="950" y="222" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">column-staggered · concave</text>
+    <text x="950" y="240" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">wireless · dev-newsletter regular</text>
+    <circle cx="950" cy="290" r="9" fill="oklch(0.62 0.10 145 / 0.20)" stroke="oklch(0.62 0.10 145)" stroke-opacity="0.95" stroke-width="3"/>
+  </g>
+
+  <!-- Span indicating the cohort -->
+  <g stroke="oklch(0.62 0.10 145)" stroke-opacity="0.5" stroke-width="2" stroke-dasharray="6 5">
+    <line x1="270" y1="350" x2="930" y2="350"/>
+  </g>
+  <text x="600" y="390" font-family="Newsreader, serif" font-size="16" font-style="italic" fill="oklch(0.62 0.10 145)" stroke="none" text-anchor="middle" opacity="0.95">the cohort has the two reference points it needs</text>
+
+  <!-- Bottom strip -->
+  <text x="600" y="450" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">a product family is what gets cited in roundups</text>
+
+  <!-- Score callout -->
+  <g>
+    <text x="600" y="170" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.62 0.10 145)" stroke="none" text-anchor="middle" opacity="0.95">2026-W19 tracker</text>
+    <text x="600" y="205" font-family="Newsreader, serif" font-size="28" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">+32 · up</text>
+  </g>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

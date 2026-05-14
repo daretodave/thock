@@ -1,0 +1,20 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T10:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "zmk-mainstream-shift",
+  "article_pillar": "trends",
+  "section_anchor": "the-strengths-the-vendor-side-is-buying",
+  "brief_summary": "Two-column ledger. Left (coral solid borders, 'what they're buying'): power profile (Zephyr-native BLE, 660-hour claim) and Bluetooth maturity (5 years of DIY field testing). Right (bordeaux dashed borders, 'what they're inheriting'): configurator gap (ZMK Studio vs VIA, devicetree leakage) and advanced macros/combos gap (docs gap, not feature gap). Footer: 'a vendor taking a firmware position inherits the firmware's reputation'.",
+  "target": "apps/web/public/article-viz/zmk-mainstream-shift/strengths-weaknesses.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "zmk-mainstream-shift.mdx § 'The strengths the vendor side is buying' — 'The first is the power profile ... Keychron's 660-hour claim is the flag the lineup is planted on ... The second is Bluetooth maturity. The wireless DIY cohort spent five years shaking the protocol-level bugs out of ZMK's BLE stack on real hardware'",
+    "zmk-mainstream-shift.mdx § 'The weaknesses they're inheriting' — 'The first is the configurator. QMK has VIA ... ZMK's answer is ZMK Studio, which is in active development and showing real progress, but is not yet the drop-in equivalent ... The second is feature parity on advanced macros and combos. QMK's combo and macro infrastructure has accumulated a decade of community-driven features — Tap Dance, Layer Lock, Mod-Tap nuance'"
+  ],
+  "outputs": ["apps/web/public/article-viz/zmk-mainstream-shift/strengths-weaknesses.svg"],
+  "warnings": []
+}

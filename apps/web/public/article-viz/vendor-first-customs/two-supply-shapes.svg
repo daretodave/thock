@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Two supply-chain shapes — the 2018-2022 proxy era versus the 2026 vendor-first configurator</title>
+
+  <!-- Vertical divider -->
+  <line x1="600" y1="100" x2="600" y2="500" stroke-opacity="0.18"/>
+
+  <!-- LEFT: Proxy era -->
+  <text x="300" y="115" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">proxy era · 2018-2022</text>
+  <text x="300" y="138" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">interest check → host → regional proxies</text>
+
+  <!-- Designer node -->
+  <rect x="240" y="180" width="120" height="40" rx="6" stroke-opacity="0.85"/>
+  <text x="300" y="205" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">designer</text>
+
+  <!-- Host vendor node -->
+  <rect x="240" y="260" width="120" height="40" rx="6" stroke-opacity="0.85"/>
+  <text x="300" y="285" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">host vendor</text>
+
+  <!-- Arrow designer → host -->
+  <g stroke-opacity="0.55">
+    <line x1="300" y1="220" x2="300" y2="252"/>
+    <path d="M 292 244 L 300 252 L 308 244"/>
+  </g>
+
+  <!-- Proxies fan -->
+  <g stroke-opacity="0.55">
+    <line x1="300" y1="300" x2="160" y2="370"/>
+    <line x1="300" y1="300" x2="230" y2="370"/>
+    <line x1="300" y1="300" x2="300" y2="370"/>
+    <line x1="300" y1="300" x2="370" y2="370"/>
+    <line x1="300" y1="300" x2="440" y2="370"/>
+  </g>
+  <g stroke-opacity="0.6">
+    <rect x="120" y="370" width="80" height="32" rx="4"/>
+    <rect x="200" y="370" width="80" height="32" rx="4"/>
+    <rect x="280" y="370" width="80" height="32" rx="4"/>
+    <rect x="360" y="370" width="80" height="32" rx="4"/>
+    <rect x="440" y="370" width="50" height="32" rx="4"/>
+  </g>
+  <text x="160" y="392" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">EU</text>
+  <text x="240" y="392" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">APAC</text>
+  <text x="320" y="392" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">SA</text>
+  <text x="400" y="392" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">UK</text>
+  <text x="465" y="392" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">…</text>
+
+  <!-- Buyer at bottom -->
+  <rect x="240" y="440" width="120" height="40" rx="6" stroke-opacity="0.7"/>
+  <text x="300" y="465" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">buyer</text>
+
+  <!-- Latency callout -->
+  <text x="300" y="525" font-family="Newsreader, serif" font-size="13" font-style="italic" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.95">8-month latency · March → November</text>
+
+  <!-- RIGHT: Vendor-first -->
+  <text x="900" y="115" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">vendor-first · 2026</text>
+  <text x="900" y="138" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">configurator is the supply chain</text>
+
+  <!-- Vendor configurator node — plum -->
+  <rect x="800" y="240" width="200" height="120" rx="10" fill="oklch(0.55 0.13 320 / 0.12)" stroke="oklch(0.55 0.13 320)" stroke-opacity="0.95" stroke-width="3"/>
+  <text x="900" y="280" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.55 0.13 320)" stroke="none" text-anchor="middle" opacity="0.95">vendor configurator</text>
+  <text x="900" y="305" font-family="Newsreader, serif" font-size="16" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Mode · CannonKeys</text>
+  <text x="900" y="325" font-family="Newsreader, serif" font-size="16" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Qwertykeys · Wuque</text>
+  <text x="900" y="346" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">in-house manufacturing slots</text>
+
+  <!-- Direct arrow to buyer -->
+  <g stroke="oklch(0.55 0.13 320)" stroke-opacity="0.85" stroke-width="2.5">
+    <line x1="900" y1="360" x2="900" y2="430"/>
+    <path d="M 892 422 L 900 430 L 908 422"/>
+  </g>
+
+  <rect x="840" y="440" width="120" height="40" rx="6" stroke-opacity="0.7"/>
+  <text x="900" y="465" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">buyer</text>
+
+  <!-- Latency callout -->
+  <text x="900" y="525" font-family="Newsreader, serif" font-size="13" font-style="italic" fill="oklch(0.55 0.13 320)" stroke="none" text-anchor="middle" opacity="0.95">in-stock cadence · no region footnote</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

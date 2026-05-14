@@ -1,0 +1,19 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T10:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "alice-layout-decline",
+  "article_pillar": "trends",
+  "section_anchor": "why-its-cooling",
+  "brief_summary": "Central bordeaux-bordered Alice marker (-18 score) with three converging arrows pushing inward: top (ergonomic ceiling — fixed splay), bottom-left (premium-only positioning — $400+ floor), bottom-right (credible split alternatives — Lily58, Corne, Sofle). Three reinforcing forces pulling the trend curve down.",
+  "target": "apps/web/public/article-viz/alice-layout-decline/three-forces.svg",
+  "splash_color": { "name": "bordeaux (dusty-rose)", "oklch": "oklch(0.62 0.13 25)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "alice-layout-decline.mdx § 'Why it's cooling' — 'The first is the ergonomic ceiling. Alice asks the user to accept a fixed splay angle ... The second is positioning. Alice almost never shows up at the budget tier ... The third is the alternative. Split keyboards have spent the last three years going from fringe to merely uncommon. The Lily58, Corne, Sofle ...'"
+  ],
+  "outputs": ["apps/web/public/article-viz/alice-layout-decline/three-forces.svg"],
+  "warnings": []
+}

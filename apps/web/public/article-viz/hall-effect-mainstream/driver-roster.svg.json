@@ -1,0 +1,19 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T10:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "hall-effect-mainstream",
+  "article_pillar": "trends",
+  "section_anchor": "whos-driving-it-and-whos-not",
+  "brief_summary": "Four coral-bordered driver cards in a row, each anchored to a tier: Wooting (analog-purist), Razer (gaming peripheral), Keychron (enthusiast-prebuilt), Mode (boutique custom). Each card carries the brand, its representative product, and the role it plays. Below the cards, a noted-absence line: the linear-mechanical enthusiast bench (Oil King, HMX Cloud, Sapphire) is conspicuously not on the roster.",
+  "target": "apps/web/public/article-viz/hall-effect-mainstream/driver-roster.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "hall-effect-mainstream.mdx § 'Who's driving it — and who's not' — 'Wooting still owns the analog-purist tier ... Razer carries the gaming-peripheral tier through the V3 Pro line ... Keychron is the new entrant, using the Q1 HE 8K Marble to plant a flag in enthusiast-prebuilt territory ... Mode's inclusion of an HE option in the Sonnet R2 configurator is the loudest signal that the boutique custom side has decided the variant is worth supporting ... What's notably absent from the driver list is the linear-mechanical enthusiast bench.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/hall-effect-mainstream/driver-roster.svg"],
+  "warnings": []
+}

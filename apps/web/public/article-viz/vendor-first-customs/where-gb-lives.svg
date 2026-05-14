@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Where the group-buy era still lives in 2026 — keycap queues, grail-tier chassis, and what flipped to configurator-first</title>
+
+  <!-- Title -->
+  <text x="600" y="100" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">two patterns, coexisting at one vendor</text>
+
+  <!-- Left half: configurator (vendor-first) -->
+  <g>
+    <rect x="100" y="160" width="450" height="220" rx="12" fill="oklch(0.55 0.13 320 / 0.10)" stroke="oklch(0.55 0.13 320)" stroke-opacity="0.95" stroke-width="3"/>
+    <text x="325" y="200" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.55 0.13 320)" stroke="none" text-anchor="middle" opacity="0.95">configurator-first</text>
+    <text x="325" y="232" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">mainline boards</text>
+    <text x="325" y="270" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">Sonnet · QK75 · Bakeneko65</text>
+    <text x="325" y="295" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">in-stock · vendor balance sheet</text>
+    <text x="325" y="350" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.55 0.13 320)" stroke="none" text-anchor="middle" opacity="0.95">most boards now live here</text>
+  </g>
+
+  <!-- Right half: GB-era still alive -->
+  <g>
+    <rect x="650" y="160" width="450" height="220" rx="12" stroke-opacity="0.5" stroke-dasharray="6 6"/>
+    <text x="875" y="200" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">group-buy persists</text>
+    <text x="875" y="232" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">keycaps + grail chassis</text>
+    <text x="875" y="270" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">GMK CYL · Mammoth75 · Prussian Alert</text>
+    <text x="875" y="295" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">queue-priced · multi-month</text>
+    <text x="875" y="350" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">where unit volume can't justify carry</text>
+  </g>
+
+  <!-- Wuque illustrative dual-track example -->
+  <text x="600" y="425" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">Wuque ships configurator-first on mainline · keeps proxy-lane for Mammoth grail</text>
+  <text x="600" y="455" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.55 0.13 320)" stroke="none" text-anchor="middle" opacity="0.95">the same vendor, two supply chains, sorted by volume</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

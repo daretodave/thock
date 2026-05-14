@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>The 2026 75% supply ladder — each price tier has an in-stock or near-in-stock 75% answer</title>
+
+  <!-- Title strip -->
+  <text x="600" y="100" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">a default is the absence of holes in the ladder</text>
+
+  <!-- Ladder rungs (4 horizontal price bands) -->
+  <g stroke-opacity="0.45">
+    <line x1="200" y1="180" x2="800" y2="180"/>
+    <line x1="200" y1="260" x2="800" y2="260"/>
+    <line x1="200" y1="340" x2="800" y2="340"/>
+    <line x1="200" y1="420" x2="800" y2="420"/>
+  </g>
+  <!-- Side rails -->
+  <line x1="200" y1="170" x2="200" y2="430" stroke-opacity="0.45"/>
+  <line x1="800" y1="170" x2="800" y2="430" stroke-opacity="0.45"/>
+
+  <!-- Price band labels (left) -->
+  <text x="180" y="184" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.7">flagship</text>
+  <text x="180" y="200" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.5">$500+</text>
+
+  <text x="180" y="264" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.7">mid · wireless</text>
+  <text x="180" y="280" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.5">~$300</text>
+
+  <text x="180" y="344" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.7">specialty · knob</text>
+  <text x="180" y="360" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.5">group-buy</text>
+
+  <text x="180" y="424" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.7">value · in-stock</text>
+  <text x="180" y="440" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.5">~$200</text>
+
+  <!-- Filled rung markers (steel-blue ~ accent oklch(0.62 0.10 230)) -->
+  <!-- I'll use bordeaux for the steel-blue equivalent since steel-blue isn't in our palette. Actually let me invent: use a colder oklch for steel. -->
+  <!-- Sonnet 2026 — flagship -->
+  <g>
+    <circle cx="500" cy="180" r="11" fill="oklch(0.62 0.10 230 / 0.20)" stroke="oklch(0.62 0.10 230)" stroke-opacity="0.95" stroke-width="3"/>
+    <text x="520" y="184" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.62 0.10 230)" stroke="none" opacity="0.95">Sonnet 2026</text>
+  </g>
+  <!-- QK75 — wireless mid -->
+  <g>
+    <circle cx="500" cy="260" r="11" fill="oklch(0.62 0.10 230 / 0.20)" stroke="oklch(0.62 0.10 230)" stroke-opacity="0.95" stroke-width="3"/>
+    <text x="520" y="264" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.62 0.10 230)" stroke="none" opacity="0.95">QK75 — the rung that closed</text>
+  </g>
+  <!-- Mammoth75 — knob specialty -->
+  <g>
+    <circle cx="500" cy="340" r="11" fill="oklch(0.62 0.10 230 / 0.20)" stroke="oklch(0.62 0.10 230)" stroke-opacity="0.95" stroke-width="3"/>
+    <text x="520" y="344" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.62 0.10 230)" stroke="none" opacity="0.95">Mammoth 75 — magnetic knob</text>
+  </g>
+  <!-- Rainy 75 — value -->
+  <g>
+    <circle cx="500" cy="420" r="11" fill="oklch(0.62 0.10 230 / 0.20)" stroke="oklch(0.62 0.10 230)" stroke-opacity="0.95" stroke-width="3"/>
+    <text x="520" y="424" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.62 0.10 230)" stroke="none" opacity="0.95">Rainy 75</text>
+  </g>
+
+  <!-- Annotation: 2025 missing rung -->
+  <g stroke-opacity="0.5">
+    <path d="M 820 260 L 980 260" stroke="oklch(0.62 0.13 25)" stroke-width="2" stroke-dasharray="6 4"/>
+    <path d="M 972 254 L 980 260 L 972 266" stroke="oklch(0.62 0.13 25)"/>
+  </g>
+  <text x="1000" y="252" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.62 0.13 25)" stroke="none" opacity="0.95">2025: missing</text>
+  <text x="1000" y="268" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">had to wait for GB</text>
+  <text x="1000" y="284" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">or stretch budget</text>
+
+  <!-- Caption -->
+  <text x="600" y="490" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">each price tier now has at least one in-stock or near-in-stock 75% option</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

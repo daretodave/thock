@@ -1,0 +1,19 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T10:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "vendor-first-customs",
+  "article_pillar": "trends",
+  "section_anchor": "where-the-gb-era-still-lives",
+  "brief_summary": "Two-card layout. Left (plum solid): configurator-first mainline boards — Sonnet, QK75, Bakeneko65 — 'most boards now live here'. Right (dashed warm-grey): group-buy still alive for keycaps and grail chassis — GMK CYL, Mammoth75, Prussian Alert. Footer surfaces Wuque as the canonical dual-track example: configurator on mainline, proxy-lane on grail.",
+  "target": "apps/web/public/article-viz/vendor-first-customs/where-gb-lives.svg",
+  "splash_color": { "name": "plum", "oklch": "oklch(0.55 0.13 320)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "vendor-first-customs.mdx § 'Where the GB era still lives' — 'The proxy model didn't fail and it hasn't ended; it stopped being the default for boards. Keycap group buys are the obvious place the older shape persists ... GMK CYL runs like Prussian Alert and King of the Seas still ship as multi-month interest-check-to-fulfillment buys ... Wuque shipped a configurator-first refresh on its mainline boards while keeping a separate group-buy lane for grail chassis like the Mammoth ... The same vendor, two supply chains, sorted by where unit volume actually wants to live.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/vendor-first-customs/where-gb-lives.svg"],
+  "warnings": []
+}

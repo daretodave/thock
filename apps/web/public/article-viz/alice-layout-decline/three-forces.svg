@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Three reinforcing forces pulling Alice's curve down — ergonomic ceiling, premium-only positioning, and credible split alternatives</title>
+
+  <!-- Central Alice marker -->
+  <g>
+    <circle cx="600" cy="240" r="58" fill="oklch(0.62 0.13 25 / 0.12)" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.95" stroke-width="3"/>
+    <text x="600" y="232" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Alice</text>
+    <text x="600" y="258" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.95">-18</text>
+  </g>
+
+  <!-- Three force arrows pushing inward -->
+  <!-- Top: ergonomic ceiling -->
+  <g stroke="oklch(0.62 0.13 25)" stroke-opacity="0.7" stroke-width="2.5">
+    <path d="M 600 80 L 600 175"/>
+    <path d="M 592 167 L 600 175 L 608 167"/>
+  </g>
+  <text x="600" y="60" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">ergonomic ceiling</text>
+  <text x="600" y="78" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">fixed splay · typist tunes to layout</text>
+
+  <!-- Bottom-left: premium-only -->
+  <g stroke="oklch(0.62 0.13 25)" stroke-opacity="0.7" stroke-width="2.5">
+    <path d="M 280 380 L 545 285"/>
+    <path d="M 549 277 L 545 285 L 541 273" transform="rotate(-15 545 285)"/>
+  </g>
+  <text x="200" y="395" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">premium-only</text>
+  <text x="200" y="413" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">$400+ floor · no entry tier</text>
+
+  <!-- Bottom-right: credible splits -->
+  <g stroke="oklch(0.62 0.13 25)" stroke-opacity="0.7" stroke-width="2.5">
+    <path d="M 920 380 L 655 285"/>
+    <path d="M 651 277 L 655 285 L 659 273" transform="rotate(15 655 285)"/>
+  </g>
+  <text x="1000" y="395" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.85">credible splits</text>
+  <text x="1000" y="413" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.55">Lily58, Corne, Sofle · adjustable</text>
+
+  <!-- Caption -->
+  <text x="600" y="455" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.95">three forces, reinforcing — out-competed by less-compromised ergonomics</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

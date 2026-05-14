@@ -1,0 +1,21 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T10:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "vendor-first-customs",
+  "article_pillar": "trends",
+  "section_anchor": "mode-set-the-configurator-template",
+  "brief_summary": "Two contrasting supply-chain diagrams. Left (2018-2022, warm-grey): designer → host vendor → five regional proxies fanning out to buyer; bordeaux footer notes the 8-month March-to-November latency. Right (2026, plum): a single vendor configurator block (Mode, CannonKeys, Qwertykeys, Wuque) shipping direct to buyer; plum footer notes in-stock cadence and no region footnote.",
+  "target": "apps/web/public/article-viz/vendor-first-customs/two-supply-shapes.svg",
+  "splash_color": { "name": "plum", "oklch": "oklch(0.55 0.13 320)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "vendor-first-customs.mdx § 'The proxy era, briefly' — 'an interest check on GeekHack, a host vendor for the global region, and a set of regional proxies — Oblotzky and MyKeyboard.eu for Europe, Cerakeys for Asia-Pacific, a rotating cast for South America ... A buyer who decided in March that they wanted a custom typically had a board in hand in November.'",
+    "vendor-first-customs.mdx § 'Mode set the configurator template' — 'The configurator is the supply chain ... no proxy. There's no check your region footnote.'",
+    "vendor-first-customs.mdx § 'CannonKeys and Qwertykeys shipped in-house' — naming CannonKeys, Qwertykeys, Wuque Studio as parallel examples"
+  ],
+  "outputs": ["apps/web/public/article-viz/vendor-first-customs/two-supply-shapes.svg"],
+  "warnings": []
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>What 65 percent became — the gateway floor — and where 75 took the upper tiers</title>
+
+  <!-- Two tracks side by side, vertical orientation -->
+  <text x="350" y="100" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">65% — the gateway floor</text>
+  <text x="850" y="100" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">75% — the upper-tier default</text>
+
+  <!-- 65% column -->
+  <line x1="350" y1="140" x2="350" y2="380" stroke-opacity="0.4"/>
+  <!-- Bakeneko at floor -->
+  <circle cx="350" cy="350" r="14" fill="oklch(0.62 0.10 230 / 0.25)" stroke="oklch(0.62 0.10 230)" stroke-opacity="0.95" stroke-width="3"/>
+  <text x="350" y="385" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Bakeneko65</text>
+  <text x="350" y="402" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">under $200 · gateway</text>
+  <!-- Faded upper tiers -->
+  <circle cx="350" cy="200" r="8" fill="none" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.3" stroke-width="2" stroke-dasharray="3 4"/>
+  <text x="380" y="204" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.4">gone quiet</text>
+  <circle cx="350" cy="275" r="8" fill="none" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.3" stroke-width="2" stroke-dasharray="3 4"/>
+  <text x="380" y="279" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.4">gone quiet</text>
+
+  <!-- Movement arrow from 65 upper tiers to 75 upper tiers -->
+  <g stroke="oklch(0.62 0.10 230)" stroke-opacity="0.6" stroke-width="2.5">
+    <path d="M 410 235 C 580 235 660 230 800 230"/>
+    <path d="M 792 222 L 800 230 L 792 238"/>
+  </g>
+  <text x="610" y="220" font-family="Newsreader, serif" font-size="13" font-style="italic" fill="oklch(0.62 0.10 230)" stroke="none" text-anchor="middle" opacity="0.95">upper tiers migrated</text>
+
+  <!-- 75% column -->
+  <line x1="850" y1="140" x2="850" y2="380" stroke-opacity="0.4"/>
+  <circle cx="850" cy="170" r="14" fill="oklch(0.62 0.10 230 / 0.25)" stroke="oklch(0.62 0.10 230)" stroke-opacity="0.95" stroke-width="3"/>
+  <text x="880" y="174" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">Sonnet 2026 · flagship</text>
+  <circle cx="850" cy="240" r="13" fill="oklch(0.62 0.10 230 / 0.25)" stroke="oklch(0.62 0.10 230)" stroke-opacity="0.95" stroke-width="3"/>
+  <text x="880" y="244" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">QK75 · mid-wireless</text>
+  <circle cx="850" cy="310" r="13" fill="oklch(0.62 0.10 230 / 0.25)" stroke="oklch(0.62 0.10 230)" stroke-opacity="0.95" stroke-width="3"/>
+  <text x="880" y="314" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">Rainy 75 · value</text>
+
+  <!-- Caption -->
+  <text x="600" y="435" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">65% didn't lose — it found a different role; 75% took the next-tier-up slot</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

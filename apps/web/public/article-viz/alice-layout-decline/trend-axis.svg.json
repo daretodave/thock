@@ -1,0 +1,19 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T10:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "alice-layout-decline",
+  "article_pillar": "trends",
+  "section_anchor": "what-the-data-is-showing",
+  "brief_summary": "Three trend lines on a single time-axis for the eight-week window ending W19 2026. Bordeaux emphasized: Alice at -18, sloping down. Warm-grey secondary: Mode Designs +24 and Gateron Oil King +42, sloping up. Zero baseline drawn through the middle. Caption: 'not a collapse — out-gravitated'.",
+  "target": "apps/web/public/article-viz/alice-layout-decline/trend-axis.svg",
+  "splash_color": { "name": "bordeaux (dusty-rose)", "oklch": "oklch(0.62 0.13 25)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "alice-layout-decline.mdx § lede + 'What the data is showing' — '2026-W19 pegs Alice movement at -18 and trending down ... the same week has Mode Designs up 24 percent and the Gateron Oil King up 42'"
+  ],
+  "outputs": ["apps/web/public/article-viz/alice-layout-decline/trend-axis.svg"],
+  "warnings": []
+}

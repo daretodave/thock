@@ -1,0 +1,19 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T10:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "75-percent-default",
+  "article_pillar": "trends",
+  "section_anchor": "the-supply-side-caught-up",
+  "brief_summary": "Four-rung price ladder (flagship / mid-wireless / specialty / value) with a steel-blue filled marker on each rung naming the 2026 75% answer at that tier: Sonnet 2026, QK75, Mammoth 75, Rainy 75. A bordeaux dashed pointer at the mid-wireless rung calls out the 2025 hole that QK75 filled — readers had to wait for a group buy or stretch budget.",
+  "target": "apps/web/public/article-viz/75-percent-default/layout-ladder.svg",
+  "splash_color": { "name": "steel-blue", "oklch": "oklch(0.62 0.10 230)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "75-percent-default.mdx § 'The supply side caught up' — 'The Mammoth75 is in group-buy state at Wuque Studio ... The Rainy 75 keeps a value-tier 75 on shelf ... The Sonnet 2026 covers the flagship band. QK75 covers the wireless mid-tier. Each price tier has at least one in-stock or near-in-stock 75 option ... In 2025 a buyer looking for a 75 at the $300 wireless tier had to either wait for a group buy to open or stretch the budget to a full custom.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/75-percent-default/layout-ladder.svg"],
+  "warnings": []
+}

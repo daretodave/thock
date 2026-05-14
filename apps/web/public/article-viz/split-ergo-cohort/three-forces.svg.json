@@ -1,0 +1,19 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-14T10:30:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "split-ergo-cohort",
+  "article_pillar": "trends",
+  "section_anchor": "why-now-and-not-five-years-ago",
+  "brief_summary": "Time-axis chart showing three sage-green readiness curves rising from 2021 to 2026, each crossing a horizontal 'usable threshold' dashed line. Curves labelled on the right: ZMK wireless firmware, choc-spaced keycaps, pre-built hotswap split supply. Caption: 'none existed at saturation in 2021 — all three sit usable in 2026'.",
+  "target": "apps/web/public/article-viz/split-ergo-cohort/three-forces.svg",
+  "splash_color": { "name": "sage-green", "oklch": "oklch(0.62 0.10 145)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "split-ergo-cohort.mdx § 'Why now and not five years ago' — 'The first is firmware: ZMK's wireless story caught up to QMK's feature set ... The second is keycaps: choc-spaced sets and sculpted MT3 alternatives ... The third is supply: pre-built, hot-swap, in-stock split SKUs ... None of those forces existed at saturation in 2021. All three are sitting at usable in 2026.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/split-ergo-cohort/three-forces.svg"],
+  "warnings": []
+}
