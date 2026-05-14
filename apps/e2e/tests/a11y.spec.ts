@@ -322,6 +322,41 @@ test('color-contrast — trending tile category label (regression guard)', async
   expect(contrast, formatViolations(contrast)).toHaveLength(0)
 })
 
+// Regression guards: color-contrast on article page rail section headings drained by
+// audit row [a11y] issue #95 — "Keep reading" (RelatedArticlesRail) and "Build sheet"
+// (MentionedPartsRail) h2s used text-micro text-text-3 (12px, fails WCAG AA);
+// swapped to text-text-2. Both rails render on /article/gateron-oil-king-deep-dive
+// (has mentionedParts + non-empty related-articles list).
+test('color-contrast — related articles heading (regression guard)', async ({
+  page,
+}) => {
+  await page.goto('/article/gateron-oil-king-deep-dive')
+  await page.waitForLoadState('networkidle')
+
+  const results = await new AxeBuilder({ page })
+    .withTags(WCAG_TAGS)
+    .include('[data-testid="related-articles-heading"]')
+    .analyze()
+
+  const contrast = results.violations.filter((v) => v.id === 'color-contrast')
+  expect(contrast, formatViolations(contrast)).toHaveLength(0)
+})
+
+test('color-contrast — mentioned parts heading (regression guard)', async ({
+  page,
+}) => {
+  await page.goto('/article/gateron-oil-king-deep-dive')
+  await page.waitForLoadState('networkidle')
+
+  const results = await new AxeBuilder({ page })
+    .withTags(WCAG_TAGS)
+    .include('[data-testid="mentioned-parts-heading"]')
+    .analyze()
+
+  const contrast = results.violations.filter((v) => v.id === 'color-contrast')
+  expect(contrast, formatViolations(contrast)).toHaveLength(0)
+})
+
 // Regression guard: skip link is present and targets a valid id="main" element.
 // Phase A ships this as a hard assertion because the skip link is fixed in
 // the same commit (no longer needs Phase B discovery).

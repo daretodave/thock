@@ -20,7 +20,10 @@ export function RelatedArticlesRail({
   return (
     <Container as="section" className="border-t border-border py-12">
       <div className="flex flex-col gap-6">
-        <h2 className="font-mono uppercase tracking-[0.12em] text-micro text-text-3">
+        <h2
+          data-testid="related-articles-heading"
+          className="font-mono uppercase tracking-[0.12em] text-micro text-text-2"
+        >
           Keep reading
         </h2>
         <ul

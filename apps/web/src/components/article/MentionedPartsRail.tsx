@@ -40,7 +40,10 @@ export function MentionedPartsRail({
   return (
     <Container as="section" className="py-10">
       <div className="flex flex-col gap-5">
-        <h2 className="font-mono uppercase tracking-[0.12em] text-micro text-text-3">
+        <h2
+          data-testid="mentioned-parts-heading"
+          className="font-mono uppercase tracking-[0.12em] text-micro text-text-2"
+        >
           Build sheet
         </h2>
         <ul

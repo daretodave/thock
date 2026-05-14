@@ -196,6 +196,19 @@
 - elements: `<span className="font-mono uppercase tracking-[0.08em] text-micro text-text-3">{category}</span>` in `TrendingTile.tsx:74` — renders the category label (switch, keycap, layout, vendor, brand) at 12px with text-text-3 which fails 4.5:1 AA threshold
 - root cause: text-text-3 (`oklch(0.55 0.006 250)`) against `--thock-bg` (`oklch(0.175 0.006 250)`) fails WCAG AA at 12px. Same root cause as the recently-drained series (footer tagline, byline metadata, attribution link).
 
+### [a11y] [7.2] article page rail section headings — text-micro text-text-3 fails WCAG AA contrast (all article pages)
+- issue: #95
+- category: a11y
+- filed: 2026-05-14 by cloud /iterate audit (Phase B drain)
+- impact: 8 (RelatedArticlesRail "Keep reading" h2 renders on every article page with related articles — all 40 articles; MentionedPartsRail "Build sheet" h2 renders on article pages with mentionedParts frontmatter)
+- ease: 9 (two class substitutions + data-testid additions + 2 regression guards)
+- score: 7.2 (impact × ease / 10)
+- wcag: 1.4.3 Contrast (Minimum) AA — 4.5:1 for normal text at 12px
+- axe impact: serious
+- pages: /article/* (all article pages)
+- elements: `<h2 className="font-mono uppercase tracking-[0.12em] text-micro text-text-3">Keep reading</h2>` in `RelatedArticlesRail.tsx:23`; `<h2 className="font-mono uppercase tracking-[0.12em] text-micro text-text-3">Build sheet</h2>` in `MentionedPartsRail.tsx:43`
+- root cause: text-text-3 (`oklch(0.55 0.006 250)`) fails WCAG AA 4.5:1 at 12px against `--thock-bg`. Same root cause as the previously-drained series (footer tagline, byline metadata, TrendingTile category label).
+
 ### [MED] Lighthouse CI — phase 17 follow-up (path locked 2026-05-11 via /oversight; cloud-blocked on workflows-permission 2026-05-13)
 - issue: #85
 > Filed 2026-05-09 by phase 17 brief. The build-plan row for phase 17 listed a Lighthouse pass at ≥95 on `/` and `/article/[slug]`. The bundle-size budget shipped this phase covers the JS-weight axis on its own; this row is for the full Lighthouse signal (perf + a11y + best-practices + SEO).
