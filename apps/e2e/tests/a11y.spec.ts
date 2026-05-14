@@ -409,6 +409,24 @@ test('color-contrast — tracker archive latest label (regression guard)', async
   expect(contrast, formatViolations(contrast)).toHaveLength(0)
 })
 
+// Regression guard: color-contrast on article figcaptions drained by audit row
+// [a11y] issue #98 — InlineViz and KeyboardImage figcaptions used text-small
+// text-text-3 (14px, fails WCAG AA 4.5:1); swapped to text-text-2. Both components
+// gained data-testid="article-figcaption". Scoped to the representative article
+// page that has InlineViz diagrams with captions.
+test('color-contrast — article figcaption (regression guard)', async ({ page }) => {
+  await page.goto('/article/gateron-oil-king-deep-dive')
+  await page.waitForLoadState('networkidle')
+
+  const results = await new AxeBuilder({ page })
+    .withTags(WCAG_TAGS)
+    .include('[data-testid="article-figcaption"]')
+    .analyze()
+
+  const contrast = results.violations.filter((v) => v.id === 'color-contrast')
+  expect(contrast, formatViolations(contrast)).toHaveLength(0)
+})
+
 // Regression guard: skip link is present and targets a valid id="main" element.
 // Phase A ships this as a hard assertion because the skip link is fixed in
 // the same commit (no longer needs Phase B discovery).

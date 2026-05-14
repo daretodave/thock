@@ -237,6 +237,19 @@
 - root cause: text-text-3 (`oklch(0.55 0.006 250)`) against `--thock-bg` fails WCAG AA 4.5:1 at 12px. Same root cause as the recently-drained series (#91–#95: footer tagline, byline metadata, attribution link, TrendingTile category label, rail section headings).
 > **Resolved (2026-05-14):** Swapped text-text-3 → text-text-2 on `GroupBuysWidget.tsx:79`. Added `data-testid="widget-kicker"` for targeted regression guard. New regression guard in `apps/e2e/tests/a11y.spec.ts` scopes `AxeBuilder.include('[data-testid="widget-kicker"]')` on `/` and asserts zero `color-contrast` violations. 581 e2e green (+1 guard). Remaining Phase B candidates: figcaptions (`text-small text-text-3`), search label (`text-micro text-text-3`), GroupBuyRow/group-buys-page metadata, TrackerTable column headers, TrackerArchiveStrip "latest" + flat count — deferred to subsequent ticks. `9cc6048`
 
+### [a11y] [7.2] article figcaptions — text-small text-text-3 fails WCAG AA contrast on all article pages with diagrams
+- issue: #98
+- category: a11y
+- filed: 2026-05-14 by cloud /iterate audit (Phase B drain — axe scan confirmed during verify gate run)
+- impact: 8 (InlineViz was retrofitted to all 40 articles; every article page with a diagram caption is affected; widest article-surface a11y row to date)
+- ease: 9 (two class substitutions in InlineViz.tsx + KeyboardImage.tsx + data-testid additions + 1 regression guard)
+- score: 7.2 (impact × ease / 10)
+- wcag: 1.4.3 Contrast (Minimum) AA — 4.5:1 for normal text at 14px (text-small)
+- axe impact: serious
+- pages: /article/* (all article pages with InlineViz or KeyboardImage components with captions)
+- elements: `<figcaption class="mt-2 font-serif italic text-small text-text-3">` in both InlineViz.tsx:190 and KeyboardImage.tsx:35
+- root cause: text-text-3 (oklch(0.55 0.006 250)) against --thock-bg fails WCAG AA 4.5:1 at 14px (text-small). Same root cause as the recently-drained series (#91–#97). Axe surfaced this during the verify gate run for the Lighthouse CI attempt.
+
 ### [MED] Lighthouse CI — phase 17 follow-up (path locked 2026-05-11 via /oversight; cloud-blocked on workflows-permission 2026-05-13)
 - issue: #85
 > Filed 2026-05-09 by phase 17 brief. The build-plan row for phase 17 listed a Lighthouse pass at ≥95 on `/` and `/article/[slug]`. The bundle-size budget shipped this phase covers the JS-weight axis on its own; this row is for the full Lighthouse signal (perf + a11y + best-practices + SEO).

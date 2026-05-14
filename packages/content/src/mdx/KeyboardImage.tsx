@@ -32,7 +32,7 @@ export function KeyboardImage({
         className="block w-full border border-border bg-surface"
       />
       {caption && (
-        <figcaption className="mt-2 font-serif italic text-small text-text-3">
+        <figcaption data-testid="article-figcaption" className="mt-2 font-serif italic text-small text-text-2">
           {caption}
         </figcaption>
       )}
