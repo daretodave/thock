@@ -73,15 +73,13 @@ thock repo only**, with these permissions:
 - **Issues: read+write** (open `triage:cloud-failed` issues, apply labels)
 - **Metadata: read** (default)
 - **Pull requests: read+write** (only if you want the agent to open PRs; not used today)
-- **Workflows: read+write** (push changes under `.github/workflows/`)
+- **Workflows: read+write** (push changes that touch `.github/workflows/`)
 
-Without `Workflows: read+write`, `git push` rejects any commit that
-touches `.github/workflows/*` with: `refusing to allow a GitHub App
-to create or update workflow ... without 'workflows' permission`.
-Cloud ticks that try to ship CI plumbing (e.g. issues #84, #85
-Lighthouse follow-up) silently re-route to a different audit row
-when this scope is missing. Regenerate the PAT and `gh secret set
-ACTIONS_PAT` again to add it.
+If `Workflows: read+write` is ever missing, `git push` rejects any
+commit that touches `.github/workflows/*` with `refusing to allow a
+GitHub App to create or update workflow ... without 'workflows'
+permission`, and a cloud tick that tried to ship CI plumbing will
+re-route to a different row instead of half-committing.
 
 Copy the token (starts with `github_pat_...`) and add it:
 
