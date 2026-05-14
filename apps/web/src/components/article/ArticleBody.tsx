@@ -46,7 +46,7 @@ export function ArticleBody({
     <Container as="div" className="py-10 sm:py-14">
       <div
         data-testid="article-body"
-        className="thock-prose font-serif text-body text-text leading-[1.7] max-w-[60ch]"
+        className="thock-prose font-serif text-body text-text leading-[1.7] max-w-[60ch] xl:relative"
       >
         <MDXRemote source={body} components={components} />
       </div>
