@@ -13,12 +13,17 @@ import { mdxComponents } from '../../mdx/components'
  * and reads as deliberate breathing room.
  */
 describe('MDX prose spacing — Callout + h2', () => {
-  it('Callout renders with my-8 (32px each side)', () => {
+  it('Callout renders with asymmetric mt-8 / mb-12 — wider bottom so a following <p> never reads as headbutting the aside', () => {
     const { container } = render(<Callout title="X">body</Callout>)
     const aside = container.querySelector('aside')
     expect(aside).not.toBeNull()
     const className = aside!.className
-    expect(className).toContain('my-8')
+    expect(className).toContain('mt-8')
+    expect(className).toContain('mb-12')
+    // Guard against regression back to the symmetric my-8 or
+    // my-6 spacings, both of which left the aside-to-prose
+    // gap too tight (~1× line-height).
+    expect(className).not.toContain('my-8')
     expect(className).not.toContain('my-6')
   })
 
