@@ -33,7 +33,7 @@ describe('validateRssXml', () => {
   it('passes a feed produced by buildRssXml', () => {
     const xml = buildRssXml({
       title: 'thock — News',
-      link: 'https://thock-coral.vercel.app/news',
+      link: 'https://thock.xyz/news',
       description: 'News stories from thock.',
       articles: [article(), article({ slug: 'second', title: 'Second piece' })],
     })

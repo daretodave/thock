@@ -17,7 +17,7 @@
 // Required env (from .env or shell):
 //   VERCEL_TOKEN          personal access token
 //   VERCEL_PROJECT_NAME   optional, defaults to "thock" (the project's name —
-//                         the public alias is thock-coral.vercel.app)
+//                         the public custom domain is thock.xyz)
 //   VERCEL_TEAM_ID        required for this repo (project is team-scoped,
 //                         not personal). See agents.md "Operational secrets"
 //                         for the lookup command.
@@ -149,8 +149,8 @@ while (Date.now() - start < TIMEOUT_MS) {
         // squash-merged history, etc.) — skip the range silently.
       }
     }
-    // Prefer the project's canonical alias (e.g. thock-coral.vercel.app)
-    // over Vercel's auto-generated <project>-<hash>-<team>.vercel.app
+    // Prefer the project's canonical alias (e.g. thock.xyz) over
+    // Vercel's auto-generated <project>-<hash>-<team>.vercel.app
     // permanent URL — the latter leaks the team slug into logs.
     const canonicalAlias = match.alias?.find(
       (a) => !a.includes('-') || a.endsWith('-git-main.vercel.app'),

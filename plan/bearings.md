@@ -22,7 +22,7 @@ breathless hype.
 
 **Site name is lowercase, always.** "thock", not "Thock".
 
-**Landing:** https://thock-coral.vercel.app (Vercel-hosted, repo
+**Landing:** https://thock.xyz (Vercel-hosted, repo
 auto-deploys on push to `main`).
 
 ## Surface
@@ -671,9 +671,10 @@ pnpm format                     # prettier --write
 
 ## Vercel operational notes
 
-- Vercel **project name**: `thock`. Public **alias**:
-  `https://thock-coral.vercel.app`. The two differ — the API
-  takes the project name; the user types the alias.
+- Vercel **project name**: `thock`. Public **custom domain**:
+  `https://thock.xyz` (the legacy `thock-coral.vercel.app` alias
+  still resolves but is not primary). The two differ — the API
+  takes the project name; the user types the domain.
 - The project is team-scoped on Vercel, so `VERCEL_TEAM_ID` is
   **required** in `.env` for `pnpm deploy:check` to find it.
   See `agents.md` "Operational secrets" for the lookup command.

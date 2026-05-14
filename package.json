@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "description": "thock — keyboards, deeply. Editorial content hub for mechanical keyboard enthusiasts.",
-  "homepage": "https://thock.netlify.app",
+  "homepage": "https://thock.xyz",
   "packageManager": "pnpm@9.12.3",
   "engines": {
     "node": ">=20.10.0",

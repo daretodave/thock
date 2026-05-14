@@ -5,6 +5,7 @@ import { Container, Stack } from '@thock/ui'
 import {
   buildBreadcrumbListJsonLd,
   buildMetadata,
+  canonicalUrl,
   JsonLd,
 } from '@thock/seo'
 import type { Tag } from '@thock/content'
@@ -107,7 +108,7 @@ export default async function PartDetailPage({
             '@type': part.kind === 'board' ? 'Thing' : 'Product',
             name: part.record.name,
             description: shortDescription(part.record.description),
-            url: `https://thock-coral.vercel.app${path}`,
+            url: canonicalUrl(path),
             ...(part.kind !== 'board' && {
               brand: {
                 '@type': 'Brand',

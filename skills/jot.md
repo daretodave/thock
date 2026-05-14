@@ -15,7 +15,7 @@
 
 ## 1. Purpose
 
-You're reading thock at https://thock-coral.vercel.app, or
+You're reading thock at https://thock.xyz, or
 clicking through during a `pnpm dev` session, and you spot
 something — footer padding too tight, a switch name that
 should be in mono but renders as body text, the trends-tracker

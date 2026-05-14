@@ -439,7 +439,7 @@ auto-closed the issue; the comment confirms the deploy URL):
 node scripts/loop-issue.mjs close-comment \
   --number <N> \
   --commit <commit-sha> \
-  --deploy-url https://thock-coral.vercel.app
+  --deploy-url https://thock.xyz
 ```
 
 Failures of `close-comment` are warnings, not blockers — the fix
@@ -524,5 +524,5 @@ git push origin main
 node scripts/loop-issue.mjs open --severity ... --category ... \
   --source ... --title "..." --body-file /tmp/loop-issue-body.md
 node scripts/loop-issue.mjs close-comment --number N --commit SHA \
-  --deploy-url https://thock-coral.vercel.app
+  --deploy-url https://thock.xyz
 ```

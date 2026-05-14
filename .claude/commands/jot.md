@@ -7,7 +7,7 @@ review checkpoint. Read `skills/jot.md` end to end before
 touching anything else; that file is the single source of
 truth for this command.
 
-The user has spotted something on https://thock-coral.vercel.app
+The user has spotted something on https://thock.xyz
 (or in `pnpm dev`, or in the data) and wants to capture it
 before they forget. Your job: file one row to
 `plan/CRITIQUE.md`, commit, push, exit. Target end-to-end

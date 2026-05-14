@@ -412,7 +412,7 @@ If Step 2.5 captured `$PHASE_ISSUE` and Step 12 was green:
 node scripts/loop-issue.mjs phase-close \
   --phase "<N>" \
   --commit "<commit-sha>" \
-  --deploy-url https://thock-coral.vercel.app
+  --deploy-url https://thock.xyz
 ```
 
 The `Closes #<N>` trailer in Step 10's commit already auto-closed

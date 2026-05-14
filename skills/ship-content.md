@@ -328,7 +328,7 @@ Once green and `$N` is set:
 node scripts/loop-issue.mjs close-comment \
   --number "$N" \
   --commit "$(git rev-parse HEAD~1)" \
-  --deploy-url https://thock-coral.vercel.app
+  --deploy-url https://thock.xyz
 ```
 
 Failure of `close-comment` is a warning, not a blocker.
@@ -388,7 +388,7 @@ git push origin main
 node scripts/loop-issue.mjs open --severity med --category content \
   --source audit --title "..." --body-file /tmp/loop-issue-body.md
 node scripts/loop-issue.mjs close-comment --number N --commit SHA \
-  --deploy-url https://thock-coral.vercel.app
+  --deploy-url https://thock.xyz
 ```
 
 ## 7. Call flow from `/march` and `/iterate`

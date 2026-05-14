@@ -73,9 +73,9 @@ test('parseIssueNumber finds the URL even if not strictly the very last line', (
 })
 
 test('buildCloseCommentBody includes commit + deploy URL + closure note', () => {
-  const body = buildCloseCommentBody({ commit: 'a3f1e2c', deployUrl: 'https://thock-coral.vercel.app' })
+  const body = buildCloseCommentBody({ commit: 'a3f1e2c', deployUrl: 'https://thock.xyz' })
   assert.match(body, /a3f1e2c/)
-  assert.match(body, /https:\/\/thock-coral\.vercel\.app/)
+  assert.match(body, /https:\/\/thock\.xyz/)
   assert.match(body, /Closes #N/)
 })
 
@@ -104,11 +104,11 @@ test('buildPhaseShippedCommentBody includes phase id, commit, deploy URL, and Cl
   const body = buildPhaseShippedCommentBody({
     phaseId: '15a',
     commit: 'deadbee',
-    deployUrl: 'https://thock-coral.vercel.app',
+    deployUrl: 'https://thock.xyz',
   })
   assert.match(body, /Phase 15a/)
   assert.match(body, /deadbee/)
-  assert.match(body, /thock-coral\.vercel\.app/)
+  assert.match(body, /thock\.xyz/)
   assert.match(body, /Closes #N/)
 })
 

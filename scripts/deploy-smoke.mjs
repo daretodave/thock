@@ -18,11 +18,11 @@
 //   pnpm deploy:smoke
 //
 // Optional env:
-//   THOCK_SITE_URL    overrides the default `https://thock.netlify.app`
+//   THOCK_SITE_URL    overrides the default `https://thock.xyz`
 //                     (useful for branch deploys or local previews).
 
 const SITE_URL = (
-  process.env.THOCK_SITE_URL ?? 'https://thock-coral.vercel.app'
+  process.env.THOCK_SITE_URL ?? 'https://thock.xyz'
 ).replace(/\/+$/, '')
 
 // One URL per pattern. The full canonical-URLs walker is local-only;

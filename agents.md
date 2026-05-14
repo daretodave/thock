@@ -113,7 +113,7 @@ curl -H "Authorization: Bearer $VERCEL_TOKEN" \
 
 Pick the right `id` (starts with `team_…`) and add to `.env`.
 `VERCEL_PROJECT_NAME` defaults to `thock` (the project name —
-the public alias is `thock-coral.vercel.app`).
+the public custom domain is `thock.xyz`).
 
 If missing, `pnpm deploy:check` exits with a clear error. Shipping
 skills treat that as a blocked tick.
@@ -149,7 +149,7 @@ rather than inventing a placeholder.
 ## Project
 
 **thock** /θɒk/ — an editorial content hub for mechanical keyboard
-enthusiasts. Lives at https://thock-coral.vercel.app.
+enthusiasts. Lives at https://thock.xyz.
 
 The product spec is `spec.md` at the repo root. It's the canonical
 description. Read it once.
