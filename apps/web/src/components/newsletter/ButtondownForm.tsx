@@ -48,10 +48,11 @@ export function ButtondownForm({
     >
       <label
         htmlFor={inputId}
+        data-testid="newsletter-form-label"
         className={
           isFooter
-            ? 'font-mono text-micro uppercase tracking-[0.08em] text-text-3'
-            : 'font-mono text-small uppercase tracking-[0.08em] text-text-3'
+            ? 'font-mono text-micro uppercase tracking-[0.08em] text-text-2'
+            : 'font-mono text-small uppercase tracking-[0.08em] text-text-2'
         }
       >
         Enter your email

@@ -227,6 +227,49 @@ test('color-contrast — tracker row rank (regression guard)', async ({ page }) 
   expect(contrast, formatViolations(contrast)).toHaveLength(0)
 })
 
+// Regression guard: color-contrast on footer tagline, copyright, and newsletter
+// label drained by this tick — text-text-3 at text-small/text-micro in the
+// shared Footer component swapped to text-text-2. Three targeted scopes:
+// footer-tagline, footer-copyright, and newsletter-form-label.
+test('color-contrast — footer tagline (regression guard)', async ({ page }) => {
+  await page.goto('/')
+  await page.waitForLoadState('networkidle')
+
+  const results = await new AxeBuilder({ page })
+    .withTags(WCAG_TAGS)
+    .include('[data-testid="footer-tagline"]')
+    .analyze()
+
+  const contrast = results.violations.filter((v) => v.id === 'color-contrast')
+  expect(contrast, formatViolations(contrast)).toHaveLength(0)
+})
+
+test('color-contrast — footer copyright (regression guard)', async ({ page }) => {
+  await page.goto('/')
+  await page.waitForLoadState('networkidle')
+
+  const results = await new AxeBuilder({ page })
+    .withTags(WCAG_TAGS)
+    .include('[data-testid="footer-copyright"]')
+    .analyze()
+
+  const contrast = results.violations.filter((v) => v.id === 'color-contrast')
+  expect(contrast, formatViolations(contrast)).toHaveLength(0)
+})
+
+test('color-contrast — newsletter form label (regression guard)', async ({ page }) => {
+  await page.goto('/newsletter')
+  await page.waitForLoadState('networkidle')
+
+  const results = await new AxeBuilder({ page })
+    .withTags(WCAG_TAGS)
+    .include('[data-testid="newsletter-form-label"]')
+    .analyze()
+
+  const contrast = results.violations.filter((v) => v.id === 'color-contrast')
+  expect(contrast, formatViolations(contrast)).toHaveLength(0)
+})
+
 // Regression guard: skip link is present and targets a valid id="main" element.
 // Phase A ships this as a hard assertion because the skip link is fixed in
 // the same commit (no longer needs Phase B discovery).

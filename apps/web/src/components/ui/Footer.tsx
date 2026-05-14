@@ -17,7 +17,10 @@ export function Footer() {
           <div className="grid gap-8 md:grid-cols-2 md:items-start">
             <Stack gap={3}>
               <Wordmark size="sm" />
-              <p className="max-w-[40ch] text-small text-text-3">
+              <p
+                data-testid="footer-tagline"
+                className="max-w-[40ch] text-small text-text-2"
+              >
                 editorial content hub for mechanical keyboard enthusiasts.
               </p>
             </Stack>
@@ -26,7 +29,10 @@ export function Footer() {
           </div>
 
           <div className="flex flex-wrap items-center justify-between gap-4 border-t border-border pt-6">
-            <span className="font-mono text-micro uppercase tracking-[0.08em] text-text-3">
+            <span
+              data-testid="footer-copyright"
+              className="font-mono text-micro uppercase tracking-[0.08em] text-text-2"
+            >
               © 2026 thock
             </span>
             <nav aria-label="Footer" className="flex flex-wrap gap-5">
