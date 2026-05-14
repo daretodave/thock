@@ -61,11 +61,15 @@ the phase.
 - [x] Phase 28 — `/tags` index page (score 5.5, pass-1 candidate). New route `apps/web/src/app/tags/page.tsx` rendering every tag from `getAllTags()` grouped by the six categories (switch, layout, brand, material, profile, misc). Categorical-tinted heading per group; each chip links to `/tag/<slug>`. CollectionPage + BreadcrumbList + ItemList JSON-LD; sitemap entry. Updated `/tag/[slug]` back-link from `← home` → `← all tags` → `/tags` (drains CRITIQUE pass-2 truthfulness finding). New e2e in `apps/e2e/tests/tags.spec.ts`. Brief drafted on-demand. — `c83821e`
 - [x] Phase 29 — Group-buy archive `/group-buys/past` (score 5.5, pass-6 candidate). New loader `getAllClosedGroupBuys()` returning records whose `endDate` is in the past, sorted desc. New route `apps/web/src/app/group-buys/past/page.tsx` rendering archive list with vendor, buy name, status pill (`CLOSED` / `SHIPPED`), close date. Small "view full archive →" affordance on `/group-buys` (under the "Just closed" rail). Sitemap entry + CollectionPage + BreadcrumbList + ItemList JSON-LD. e2e in `apps/e2e/tests/group-buys.spec.ts`. `relatedArticle` link deferred — schema field does not exist yet; a schema additive belongs to its own /ship-a-phase. Brief drafted on-demand. — `df17423`
 
-> **After phase 29:** the loop transitions back to `/iterate` +
+**Promoted candidate (phase 30, promoted via /oversight 2026-05-14 from PHASE_CANDIDATES expand pass 7):**
+- [ ] Phase 30 — Content-velocity queue auto-refill (score 7.0, pass-7 candidate). Operational gap: when the `plan/AUDIT.md` content-gap queue drains, nothing files the next row, so the cloud loop falls through to `/iterate`/`/expand` instead of continuing content velocity. Ships `scripts/content-gap-survey.mjs` that surveys current state against `bearings.md` Rules 1-4 and returns the top-N shortfalls per the AUDIT.md row template. Rule 1 algorithm: sliding 30d window per pillar; comfortable (≥2) → no row; hot pursuit (=1) → score 7.0; critical hot pursuit (=0) → score 9.5. Multi-cold tie-break: oldest most-recent publishedAt → lowest window count → prominence (Trends > News > Ideas > Deep Dives > Guides). Rule 4 (gap-fill) fires only as tie-breaker between Rule-1 candidates, never as a pillar-agnostic standalone row. `skills/ship-content.md` Step 8 amendment invokes the helper post-drain and writes the next row into `plan/AUDIT.md` in the same `audit:` follow-up commit (one row per drain — no pre-fill). `skills/march.md` Step 3b.5 amendment invokes the helper inline on empty queue before falling through to expand. Two unit tests in `packages/content/test/` (or `apps/web/test/`): (a) "1 article in 30d, deep-dives" → rule=1 pillar='deep-dives' score=7.0; (b) "0 articles in 30d, news" → score=9.5 with critical-hot-pursuit framing. Bearings rule is the durable contract; the script implements it. **Brief drafted on-demand by `/ship-a-phase`.**
+
+> **After phase 30:** the loop transitions back to `/iterate` +
 > `/ship-content` — content gaps, link rot, OG art, a11y drain
 > (Phase 26 Phase B), trends-cadence (Phase 27 Phase B path lock
-> at /oversight), ongoing snapshots. `/march` makes the transition
-> automatic.
+> at /oversight), ongoing snapshots. With phase 30 shipped, the
+> content-gap queue is self-replenishing — `/march` makes the
+> transition automatic.
 
 > **Note on Netlify deploys before phase 1 ships:** auto-publishing
 > stays on; deploys will fail until `apps/web/` exists. The deploy

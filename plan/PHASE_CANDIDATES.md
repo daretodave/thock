@@ -15,27 +15,7 @@
 
 ## Pending
 
-### [score 7.0] Content-velocity queue auto-refill — make the Rule-1/2/3/4 content-gap queue self-replenishing
-- proposed: 2026-05-12, expand pass 7
-- source signals:
-  - **Operational stall, observed live**: cloud `/march` tick (this run) found `plan/AUDIT.md` content-gap queue empty after the `4e62877` → `a3f5653` drain pair shipped guides article 8 of 8. Pillar counts now: trends 8/8, news 8/8, ideas 8/8, guides 8/8, **deep-dives 4/8** (4 articles short). Step 3b.5 of `/march` had no row ≥ 3.0 to dispatch — fell through to `/expand`.
-  - **`skills/ship-content.md` Step 8 (lines 296–311)**: ticks the addressed row to `[x]` and appends the resolution commit, but emits no follow-up. The seed-prime in phase 25 was a one-shot — there is no "after-drain refill" hook. The skill assumes an external mechanism keeps the queue non-empty; no such mechanism exists.
-  - **Pattern leakage beyond Rule 1**: critique pass 11 `[MED] /tag/gmk — single article` row (CRITIQUE.md L43) is a Rule-3 (group-buy companion) demand for the 3 live GMK CYL group buys that have no companion articles. That demand is not in the queue either; it's only noted as "self-fills as the loop ships those companions" — but the loop has no way to surface "ship those companions" without a content-gap row. Same gap mechanism, different rule.
-  - **Cloud-loop cadence amplifies the cost**: `8675eb2` shipped hourly cadence + 30/24h ceiling. The cloud loop now has capacity to drain ~24 content rows/day if the queue were primed. With an empty queue, hourly ticks fall through to `/iterate` and produce small polish work instead of the content velocity the directive (`bearings.md` "Content velocity & editorial cadence") asks for.
-  - **Bearings rule is the contract**: `bearings.md` "Content velocity & editorial cadence" locks all four rules (pillar quota ≥8, tracker linkage within 14d, group-buy companion, publishedAt gap-fill). The queue must reflect all four, not just Rule 1.
-- rationale: this is a real operational gap revealed only by the cloud loop running long enough to exhaust its seed-primed queue. It is not a "should we ship more content" question — content velocity is locked by `bearings.md`. It is "the engine that decides what to ship next runs dry." Fix shape is small (skill amendment + a `computeContentGapShortfalls()` helper that surveys `data/` + `apps/web/src/content/articles/` + `data/trends/<week>.json` + `data/group-buys/*.json` against the four rules and returns the highest-priority shortfall). Cheap, impactful, blocking. The phase ships the mechanism; the queue refills itself thereafter.
-- proposed scope: 1 phase, code + skill amendment + 1 verify-gate test.
-  1. **New helper**: `scripts/content-gap-survey.mjs` (or a `@thock/content` exported function) that reads the four rules against current state and returns the top-N shortfalls scored by `impact × ease × bias-multiplier` per the AUDIT.md row template. Output is a JSON object `{ pillar?: string, rule: 1|2|3|4, score: number, suggestedTopic?: string, shortfall: string }[]`.
-     - **Rule 1 algorithm (reframed 2026-05-14 — sliding window, see bearings.md § Rule 1):** for each pillar, count articles with `publishedAt` within the last 30 days. Score banding: comfortable (≥2) → no row; hot pursuit (=1) → score 7.0; critical hot pursuit (=0) → score 9.5. When multiple pillars are cold, pick the one with the oldest most-recent publishedAt (tie-breaker: lowest window count, then prominence Trends > News > Ideas > Deep Dives > Guides). The window cutoff (30d), the floor (2), and the score values are bearings constants — change them in bearings.md, the helper reads from there or duplicates them as named constants.
-     - **Rule 2 / 3 / 4 algorithms**: unchanged — see bearings.md § Rules 2-4. Compete on raw `impact × ease`.
-  2. **`skills/ship-content.md` Step 8 amendment**: after ticking the resolved row, invoke the helper; if any shortfall scores ≥ 3.0, write the next row into `plan/AUDIT.md` (same format as the phase-25 seed rows) in the same `audit:` follow-up commit. One row per drain — don't pre-fill the queue.
-  3. **`skills/march.md` Step 3b.5 amendment**: when the queue is empty AND any pillar/rule shortfall scores ≥ 3.0, invoke the helper inline before falling through to expand. This is the safety net for cases where `/ship-content` exited without refilling (e.g. previous tick was an iterate, not a ship-content).
-  4. **Verify gate**: two unit tests in `packages/content/test/` (or `apps/web/test/`): (a) fake a "1 article in 30d, deep-dives" state and assert the helper returns a row with rule=1, pillar='deep-dives', score=7.0; (b) fake a "0 articles in 30d, news" state and assert score=9.5 with critical-hot-pursuit framing. The bearings rule is the regression guard for everything else.
-- estimated phases: 1
-- conflicts: none. The `/march` and `/ship-content` amendments are additive; the existing `[x]` rows stay as audit-trail. `bearings.md` "Content velocity" is the durable rule the helper implements — not a new policy.
-- promotion path: `/oversight` decides whether to (a) ship the helper as `scripts/` or as a `@thock/content` export, and (b) whether Rule 4 (gap-fill) should ever generate a *pillar-agnostic* row (any pillar still has room) or only fire as a tie-breaker between Rule-1 candidates. Recommend scripts/ + tie-breaker-only — keeps the helper minimal and the queue editorially coherent. Lock at brief time.
-
-_(moved to `## Promoted` below — InlineViz retrofit shipped 2026-05-14 across all 40 articles. The bearings rule is now write-time-only; there is no remaining backlog to drain.)_
+_(empty — [7.0] content-velocity queue auto-refill promoted to phase 30 via /oversight 2026-05-14; [7.5] InlineViz retrofit shipped 2026-05-14 across all 40 articles, bearings rule is now write-time-only.)_
 
 ## Considered (below threshold)
 
@@ -52,6 +32,18 @@ _(moved to `## Promoted` below — InlineViz retrofit shipped 2026-05-14 across 
 
 
 ## Promoted
+
+### [score 7.0] Content-velocity queue auto-refill — make the Rule-1/2/3/4 content-gap queue self-replenishing
+- promoted: 2026-05-14 via `/oversight` (this commit)
+- assigned phase: **30**
+- promotion decisions (locked at /oversight time):
+  - **Helper location**: ship at `scripts/content-gap-survey.mjs` (not `@thock/content` export). Keeps the surface minimal — the helper is operational tooling for skills, not application API.
+  - **Rule 4 (gap-fill) scope**: fires only as tie-breaker between Rule-1 candidates, never as a pillar-agnostic standalone row. Keeps the queue editorially coherent — gap-fill is a scheduling preference, not a shipping reason on its own.
+  - **Rule 1 algorithm**: sliding 30d window per pillar; comfortable (≥2) → no row; hot pursuit (=1) → score 7.0; critical hot pursuit (=0) → score 9.5. Pillar selection on multi-cold: oldest most-recent publishedAt → lowest window count → prominence (Trends > News > Ideas > Deep Dives > Guides). Window cutoff, floor, and score values are bearings constants; helper reads from a single named-constants block (mirrored from bearings.md § Rule 1).
+  - **Skill amendments**: `skills/ship-content.md` Step 8 invokes the helper post-drain and writes the next row into `plan/AUDIT.md` in the same `audit:` follow-up commit (one row per drain — no pre-fill). `skills/march.md` Step 3b.5 invokes the helper inline on empty queue before falling through to `/expand`.
+  - **Verify gate**: two unit tests — (a) "1 article in 30d, deep-dives" → rule=1 pillar='deep-dives' score=7.0; (b) "0 articles in 30d, news" → score=9.5 with critical-hot-pursuit framing.
+  - **Brief drafting**: drafted on-demand by `/ship-a-phase`.
+- original signals + scope: see git history of this file at `ceefc38^` (pass-7 row); current bearings reframe makes Rule 1 algorithm sliding-window, fully captured in the promotion decisions above.
 
 ### [score 7.5] InlineViz retrofit — full-library pass (shipped 2026-05-14)
 - promoted: 2026-05-14 inline (user-driven, no separate `/oversight` round). All 40 articles now carry 2 `<InlineViz>` each.

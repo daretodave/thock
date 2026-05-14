@@ -3,21 +3,13 @@
 > Latest findings from `/iterate audit` and `/oversight`. Open
 > items live here until a shipping skill drains them.
 
-> **Rule 1 reframed 2026-05-14 — static pillar-quota replaced by
-> sliding-window freshness (see `plan/bearings.md` § Rule 1).** The
-> prior bias multiplied content-gap findings by 1.5 to drive the
-> loop toward the static `≥8 articles per pillar` milestone, which
-> was hit 2026-05-13 at `702b8a9`. The static rule then went silent
-> while the 40-article corpus aged in lockstep — every article
-> within ~10 days of every other, all destined to roll past 30d
-> simultaneously. The reframe converts Rule 1 into a rolling
-> window: each pillar carries ≥2 articles published within the
+> **Rule 1: sliding window (locked 2026-05-14 — see `plan/bearings.md`
+> § Rule 1).** Each pillar carries ≥2 articles published within the
 > last 30 days, always. The rule is self-replenishing — articles
 > aging out generate new shortfalls without any external priming.
 >
-> Three states, codified in bearings.md and used by the audit-row
-> generator candidate (`scripts/content-gap-survey.mjs`, candidate
-> 7.0 in `plan/PHASE_CANDIDATES.md`):
+> Three states, codified in bearings.md and emitted by the audit-row
+> generator (phase 30 ships `scripts/content-gap-survey.mjs`):
 >
 > - **Comfortable** — every pillar ≥ 2 in 30d. No Rule-1 row files.
 > - **Hot pursuit** — one or more pillars at exactly 1 in 30d. Row
@@ -163,6 +155,8 @@
 > 5. Artifact upload via the action's built-in `uploadArtifacts: true`.
 >
 > **Cloud-blocked 2026-05-13:** the 2026-05-13T23:35Z cloud /march tick prepared this fix (`.lighthouserc.json` + `.github/workflows/lighthouse.yml` against `deployment_status`) and verify-gated it green, but `git push` rejected the commit: `refusing to allow a GitHub App to create or update workflow ".github/workflows/lighthouse.yml" without "workflows" permission`. The cloud agent runs under an installation token without `workflows: write`. Re-routed the tick to the next-best critique row (#86). To unblock from a future cloud tick: add `workflows: write` to the Claude Code GitHub App's installation permissions. Otherwise ship from a local /iterate tick (uses `ACTIONS_PAT`) or open a PR with the workflow on a feature branch. The prepared config is preserved in the issue #85 thread; whoever drains this re-stages it. See issue #85 comment trail for the exact files.
+>
+> **Unblock path locked 2026-05-14 via /oversight:** user is granting `workflows: write` to the Claude Code GitHub App installation out-of-band. Next cloud /iterate tick after the permission lands re-stages the prepared `.lighthouserc.json` + `.github/workflows/lighthouse.yml` from issue #85 and ships. No local fallback needed unless the perm grant gets blocked upstream.
 >
 > Score: **5.0** (path locked; runner choice no longer blocks. Real signal once it runs).
 
