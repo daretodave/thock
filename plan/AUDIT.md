@@ -589,6 +589,20 @@
 - issue: #105
 > **Resolved (2026-05-15):** Swapped text-text-3 → text-text-2 on all five part-page element contexts. PartHero.tsx: vendor metadata div text-text-3 → text-text-2; statusTint() fallback collapsed to text-text-2 (group-buy + limited + sold-out + discontinued all pass at text-small). data-testid="part-hero-meta" added. PartSpec.tsx: "Spec sheet" h2 text-text-3 → text-text-2 (data-testid="part-spec-heading"); spec label dt text-text-3 → text-text-2 (data-testid="part-spec-label"). MentionedInArticles.tsx: empty-state span text-text-3 → text-text-2 (data-testid="part-mentioned-kicker"); "Mentioned in N articles" h2 text-text-3 → text-text-2 (data-testid="part-mentioned-heading"). Two regression guards in apps/e2e/tests/a11y.spec.ts: part-hero-meta + part-spec-heading/part-spec-label scoped AxeBuilder.include() on /part/switch/gateron-oil-king asserting zero color-contrast violations. 595 e2e green (+2 guards). Remaining Phase B candidates: tags-page eyebrow, /sources SourceCounts + CitationIndex, MDX table th, empty-state kickers. `66d6027`
 
+### [x] [a11y] [7.2] navigation back-links — text-small text-text-3 fails WCAG AA contrast on tracker archive and part pages — addressed in 67f377a (closes #106)
+- category: a11y
+- filed: 2026-05-15 by cloud /iterate audit
+- impact: 8 (navigation elements on tracker archive pages and part kind/detail pages — three distinct page families; readers with low-contrast screens cannot reliably perceive or activate these back-nav affordances)
+- ease: 9 (three identical class substitutions + data-testid additions + 2 regression guards)
+- score: 7.2 (impact × ease / 10)
+- wcag: 1.4.3 Contrast (Minimum) AA — 4.5:1 for normal text at 14px (text-small)
+- axe impact: serious
+- pages: /trends/tracker/[week] (all archive week pages), /part/[kind] (3 kind index pages), /part/[kind]/[slug] (18 part detail pages)
+- elements: `apps/web/src/app/trends/tracker/[week]/page.tsx:133` "← Back to latest" Link (text-small text-text-3 hover:text-text); `apps/web/src/app/part/[kind]/page.tsx:157` "← home" Link (text-small text-text-3 hover:text-text); `apps/web/src/app/part/[kind]/[slug]/page.tsx:139` "← all {kind}s" Link (text-small text-text-3 hover:text-text, data-testid="part-detail-back-link")
+- root cause: text-text-3 (oklch(0.55 0.006 250)) against --thock-bg fails WCAG AA 4.5:1 at 14px. Same root cause as the Phase B drain series (#91–#105). Notably, the prev/next week nav links in the same tracker archive page already use text-text-2 correctly (lines 182, 197) — only the "Back to latest" header link was missed.
+- issue: #106
+> **Resolved (2026-05-15):** Swapped text-text-3 → text-text-2 on all three navigation back-link elements. trends/tracker/[week]/page.tsx: "← Back to latest" + data-testid="tracker-back-link". part/[kind]/page.tsx: "← home" + data-testid="part-kind-back-link". part/[kind]/[slug]/page.tsx: "← all {kind}s" (data-testid="part-detail-back-link" was already present). Two regression guards in a11y.spec.ts: tracker-back-link on /trends/tracker/2026-W19 and part-detail-back-link on /part/switch/gateron-oil-king asserting zero color-contrast violations. 596 e2e green (+2 guards). Remaining Phase B candidates: tags-page eyebrow, /sources SourceCounts + CitationIndex, MDX table th, empty-state kickers, TagChip opacity-70. `67f377a`
+
 ---
 
 (Older findings drained as they ship. Empty until other audit
