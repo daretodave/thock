@@ -528,6 +528,22 @@ test('color-contrast — callout title in article body (regression guard)', asyn
   expect(contrast, formatViolations(contrast)).toHaveLength(0)
 })
 
+// Regression guard: pillar-hero RSS pill sublabel — text-text-2 at 12px passes WCAG AA.
+// PillarHero renders on /news, /trends, /ideas, /deep-dives, /guides. Tested on /news
+// as the representative canonical pillar URL.
+test('color-contrast — pillar-hero RSS pill sublabel (regression guard)', async ({ page }) => {
+  await page.goto('/news')
+  await page.waitForLoadState('networkidle')
+
+  const results = await new AxeBuilder({ page })
+    .withTags(WCAG_TAGS)
+    .include('[data-testid="pillar-hero-pill-sublabel"]')
+    .analyze()
+
+  const contrast = results.violations.filter((v) => v.id === 'color-contrast')
+  expect(contrast, formatViolations(contrast)).toHaveLength(0)
+})
+
 // Regression guard: skip link is present and targets a valid id="main" element.
 // Phase A ships this as a hard assertion because the skip link is fixed in
 // the same commit (no longer needs Phase B discovery).

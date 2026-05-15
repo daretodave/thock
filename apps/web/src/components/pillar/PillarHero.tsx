@@ -107,7 +107,10 @@ export function PillarHero({
                   data-testid={`pillar-hero-${pill.testId ?? `pill-${i}`}`}
                   className="inline-flex flex-col gap-1 border border-border bg-surface px-5 py-4 transition-colors hover:border-border-hi"
                 >
-                  <span className="font-mono uppercase tracking-[0.1em] text-micro text-text-3">
+                  <span
+                    data-testid="pillar-hero-pill-sublabel"
+                    className="font-mono uppercase tracking-[0.1em] text-micro text-text-2"
+                  >
                     {pill.sublabel ?? 'subscribe'}
                   </span>
                   <span className="font-serif text-h3 text-text">
