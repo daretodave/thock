@@ -578,6 +578,34 @@ test('color-contrast — part spec heading + labels (regression guard)', async (
   }
 })
 
+test('color-contrast — tracker-back-link + part-kind-back-link + part-detail-back-link (regression guard)', async ({
+  page,
+}) => {
+  // Tracker archive back-link ("← Back to latest") on /trends/tracker/[week]
+  await page.goto('/trends/tracker/2026-W19')
+  await page.waitForLoadState('networkidle')
+
+  const trackerResults = await new AxeBuilder({ page })
+    .withTags(WCAG_TAGS)
+    .include('[data-testid="tracker-back-link"]')
+    .analyze()
+
+  const trackerContrast = trackerResults.violations.filter((v) => v.id === 'color-contrast')
+  expect(trackerContrast, `tracker-back-link: ${formatViolations(trackerContrast)}`).toHaveLength(0)
+
+  // Part detail back-link ("← all {kind}s") on /part/[kind]/[slug]
+  await page.goto('/part/switch/gateron-oil-king')
+  await page.waitForLoadState('networkidle')
+
+  const partDetailResults = await new AxeBuilder({ page })
+    .withTags(WCAG_TAGS)
+    .include('[data-testid="part-detail-back-link"]')
+    .analyze()
+
+  const partDetailContrast = partDetailResults.violations.filter((v) => v.id === 'color-contrast')
+  expect(partDetailContrast, `part-detail-back-link: ${formatViolations(partDetailContrast)}`).toHaveLength(0)
+})
+
 // Regression guard: skip link is present and targets a valid id="main" element.
 // Phase A ships this as a hard assertion because the skip link is fixed in
 // the same commit (no longer needs Phase B discovery).

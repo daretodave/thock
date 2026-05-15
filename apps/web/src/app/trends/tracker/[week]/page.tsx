@@ -130,7 +130,8 @@ export default async function TrackerWeekPage({
       <Container className="pt-6">
         <Link
           href="/trends/tracker"
-          className="font-mono text-small uppercase tracking-[0.08em] text-text-3 hover:text-text"
+          data-testid="tracker-back-link"
+          className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text"
         >
           ← Back to latest
         </Link>

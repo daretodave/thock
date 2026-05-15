@@ -136,7 +136,7 @@ export default async function PartDetailPage({
           <Link
             href={`/part/${part.kind}`}
             data-testid="part-detail-back-link"
-            className="font-mono text-small uppercase tracking-[0.08em] text-text-3 hover:text-text"
+            className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text"
           >
             ← all {kindHuman.toLowerCase()}s
           </Link>

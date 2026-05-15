@@ -154,7 +154,8 @@ export default async function PartIndexPage({
           </p>
           <Link
             href="/"
-            className="font-mono text-small uppercase tracking-[0.08em] text-text-3 hover:text-text"
+            data-testid="part-kind-back-link"
+            className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text"
           >
             ← home
           </Link>
