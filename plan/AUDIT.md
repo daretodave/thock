@@ -520,6 +520,20 @@
 - issue: #100
 > **Resolved (2026-05-15):** Swapped text-text-3 → text-text-2 on GroupBuyRow kind label, region badge, vendor/date metadata row, non-live countdown; group-buys/page.tsx header summary and archive link; group-buys/past/page.tsx header count and back link; GroupBuyCountdownRow.tsx vendor label. Added data-testid="group-buy-kind" and data-testid="group-buy-meta" plus data-testid="group-buys-summary" and data-testid="group-buys-past-summary" for regression guard scoping. Three regression guards in apps/e2e/tests/a11y.spec.ts assert zero color-contrast violations on the group-buy row elements and page summaries. 589 e2e green (+3 guards). Remaining Phase B candidates: search label (text-micro text-text-3 on /search), TagChip category opacity, text-down tracker sparklines. `4dc57be`
 
+### [x] [a11y] [7.2] /search — text-micro text-text-3 fails WCAG AA contrast on search label, result eyebrow, result date — addressed in f58f97a (closes #101)
+- category: a11y
+- filed: 2026-05-15 by cloud /iterate audit
+- impact: 8 (search is a primary discovery surface; label + result eyebrow + date affect every /search visit)
+- ease: 9 (three class substitutions + data-testid additions + 2 regression guards)
+- score: 7.2 (impact × ease / 10)
+- wcag: 1.4.3 Contrast (Minimum) AA — 4.5:1 for normal text at 12px
+- axe impact: serious
+- pages: /search
+- elements: `SearchPanel.tsx` search input label "query" (text-micro text-text-3); `ArticleResult.tsx` pillar eyebrow (text-micro text-text-3) + publishedAt date (text-micro text-text-3)
+- root cause: text-text-3 (oklch(0.55 0.006 250)) against --thock-bg fails WCAG AA 4.5:1 at 12px. Same root cause as the Phase B series (#91–#100).
+- issue: #101
+> **Resolved (2026-05-15):** Swapped text-text-3 → text-text-2 on all three elements. Added data-testid="search-input-label" on the label, data-testid="search-result-eyebrow" on the pillar span, data-testid="search-result-date" on the date span. Two regression guards in apps/e2e/tests/a11y.spec.ts: one static (label on /search) and one interactive (fill "gateron", wait for results, axe-scoped on eyebrow + date). 591 e2e green (+2 guards). Remaining Phase B candidates: TagChip category opacity (text-down tracker sparklines addressed alongside TrackerArchiveStrip #97; tag-chip `opacity-70` category label noted in Phase A axe scan warn).
+
 ---
 
 (Older findings drained as they ship. Empty until other audit
