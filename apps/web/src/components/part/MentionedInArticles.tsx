@@ -25,7 +25,7 @@ export function MentionedInArticles({
     return (
       <Container as="section" className="pb-16">
         <Stack gap={3}>
-          <span className="font-mono uppercase tracking-[0.12em] text-micro text-text-3">
+          <span data-testid="part-mentioned-kicker" className="font-mono uppercase tracking-[0.12em] text-micro text-text-2">
             mentioned in · 0 articles
           </span>
           <p
@@ -43,7 +43,7 @@ export function MentionedInArticles({
   return (
     <Container as="section" className="pb-12 sm:pb-16">
       <Stack gap={5}>
-        <h2 className="font-mono uppercase tracking-[0.12em] text-micro text-text-3">
+        <h2 data-testid="part-mentioned-heading" className="font-mono uppercase tracking-[0.12em] text-micro text-text-2">
           Mentioned in {articles.length}{' '}
           {articles.length === 1 ? 'article' : 'articles'}
         </h2>

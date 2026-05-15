@@ -544,6 +544,40 @@ test('color-contrast — pillar-hero RSS pill sublabel (regression guard)', asyn
   expect(contrast, formatViolations(contrast)).toHaveLength(0)
 })
 
+// Regression guard: part pages — PartHero meta div + PartSpec heading/label +
+// MentionedInArticles heading swapped text-text-3 → text-text-2. Tested on
+// /part/switch/gateron-oil-king as the representative canonical part URL (switch
+// with linked articles, exercising both PartHero and MentionedInArticles heading).
+test('color-contrast — part hero meta (regression guard)', async ({ page }) => {
+  await page.goto('/part/switch/gateron-oil-king')
+  await page.waitForLoadState('networkidle')
+
+  const results = await new AxeBuilder({ page })
+    .withTags(WCAG_TAGS)
+    .include('[data-testid="part-hero-meta"]')
+    .analyze()
+
+  const contrast = results.violations.filter((v) => v.id === 'color-contrast')
+  expect(contrast, formatViolations(contrast)).toHaveLength(0)
+})
+
+test('color-contrast — part spec heading + labels (regression guard)', async ({
+  page,
+}) => {
+  await page.goto('/part/switch/gateron-oil-king')
+  await page.waitForLoadState('networkidle')
+
+  for (const testid of ['part-spec-heading', 'part-spec-label']) {
+    const results = await new AxeBuilder({ page })
+      .withTags(WCAG_TAGS)
+      .include(`[data-testid="${testid}"]`)
+      .analyze()
+
+    const contrast = results.violations.filter((v) => v.id === 'color-contrast')
+    expect(contrast, `${testid}: ${formatViolations(contrast)}`).toHaveLength(0)
+  }
+})
+
 // Regression guard: skip link is present and targets a valid id="main" element.
 // Phase A ships this as a hard assertion because the skip link is fixed in
 // the same commit (no longer needs Phase B discovery).

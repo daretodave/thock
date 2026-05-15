@@ -21,8 +21,7 @@ const STATUS_LABEL: Record<string, string> = {
 
 function statusTint(status: string): string {
   if (status === 'in-production' || status === 'in-stock') return 'text-accent'
-  if (status === 'group-buy' || status === 'limited') return 'text-text-2'
-  return 'text-text-3'
+  return 'text-text-2'
 }
 
 export type PartHeroProps = {
@@ -47,7 +46,7 @@ export function PartHero({ part }: PartHeroProps): ReactElement {
         >
           {part.record.name}
         </h1>
-        <div className="flex flex-wrap items-center gap-x-4 gap-y-1 font-mono text-small uppercase tracking-[0.08em] text-text-3">
+        <div data-testid="part-hero-meta" className="flex flex-wrap items-center gap-x-4 gap-y-1 font-mono text-small uppercase tracking-[0.08em] text-text-2">
           {vendor ? (
             <Link
               href="/sources"

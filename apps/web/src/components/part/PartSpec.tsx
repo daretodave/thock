@@ -66,7 +66,7 @@ export function PartSpec({ part }: PartSpecProps): ReactElement {
   const rows = rowsForPart(part)
   return (
     <Container as="section" className="pb-8">
-      <h2 className="font-mono uppercase tracking-[0.12em] text-micro text-text-3 mb-5">
+      <h2 data-testid="part-spec-heading" className="font-mono uppercase tracking-[0.12em] text-micro text-text-2 mb-5">
         Spec sheet
       </h2>
       <dl
@@ -79,7 +79,7 @@ export function PartSpec({ part }: PartSpecProps): ReactElement {
             data-testid="part-spec-row"
             className="contents"
           >
-            <dt className="font-mono uppercase tracking-[0.08em] text-micro text-text-3">
+            <dt data-testid="part-spec-label" className="font-mono uppercase tracking-[0.08em] text-micro text-text-2">
               {label}
             </dt>
             <dd className="text-body text-text">
