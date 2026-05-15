@@ -51,7 +51,7 @@ export default function TagsPage(): ReactElement {
         <Stack gap={4}>
           <span
             data-testid="tags-eyebrow"
-            className="font-mono uppercase tracking-[0.12em] text-micro text-text-3"
+            className="font-mono uppercase tracking-[0.12em] text-micro text-text-2"
           >
             browse · all tags
           </span>

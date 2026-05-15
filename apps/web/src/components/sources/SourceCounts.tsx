@@ -44,7 +44,7 @@ export function SourceCounts({ rows }: SourceCountsProps): ReactElement {
         <p className="font-serif text-h3 text-text-2">
           No cited articles yet.
         </p>
-        <p className="mt-3 text-body text-text-3">
+        <p className="mt-3 text-body text-text-2">
           Articles with cited sources show up here. We&apos;re adding them as
           the catalog grows.
         </p>
@@ -82,7 +82,7 @@ export function SourceCounts({ rows }: SourceCountsProps): ReactElement {
             data-testid={`source-counts-section-${p}`}
             className="flex flex-col gap-4"
           >
-            <h2 className="font-mono text-micro uppercase tracking-[0.12em] text-text-3">
+            <h2 data-testid="source-counts-heading" className="font-mono text-micro uppercase tracking-[0.12em] text-text-2">
               {PILLAR_LABEL[p]}
             </h2>
             <ul className="flex flex-col divide-y divide-border border-y border-border">
@@ -101,7 +101,7 @@ export function SourceCounts({ rows }: SourceCountsProps): ReactElement {
                   <span
                     data-testid="source-counts-badge"
                     data-uniform={isUniform ? 'true' : 'false'}
-                    className="font-mono text-small uppercase tracking-[0.08em] text-text-3 shrink-0"
+                    className="font-mono text-small uppercase tracking-[0.08em] text-text-2 shrink-0"
                   >
                     {isUniform
                       ? `Source${uniformValue === 1 ? '' : 's'} linked`

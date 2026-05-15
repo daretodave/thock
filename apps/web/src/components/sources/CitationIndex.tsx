@@ -93,7 +93,7 @@ export function CitationIndex({ citations }: CitationIndexProps): ReactElement {
         <p className="font-serif text-h3 text-text-2">
           No external citations yet.
         </p>
-        <p className="mt-3 text-body text-text-3">
+        <p className="mt-3 text-body text-text-2">
           As articles add cited sources, the per-citation index lands here.
         </p>
       </div>
@@ -125,12 +125,12 @@ export function CitationIndex({ citations }: CitationIndexProps): ReactElement {
               </a>
               <span
                 data-testid="citation-index-host"
-                className="font-mono text-micro uppercase tracking-[0.08em] text-text-3 break-all"
+                className="font-mono text-micro uppercase tracking-[0.08em] text-text-2 break-all"
               >
                 {formatDisplayHref(href)}
               </span>
             </div>
-            <div className="flex flex-wrap gap-x-3 gap-y-1 text-small text-text-3 min-w-0 sm:justify-end sm:text-right">
+            <div className="flex flex-wrap gap-x-3 gap-y-1 text-small text-text-2 min-w-0 sm:justify-end sm:text-right">
               {articles.map((article, idx) => (
                 <span key={article.slug} className="inline-flex items-baseline">
                   {idx > 0 && (

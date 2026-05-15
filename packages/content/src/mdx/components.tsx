@@ -82,7 +82,8 @@ function MdxTh({
     <th
       {...rest}
       scope="col"
-      className="px-3 py-2 font-mono text-micro uppercase tracking-[0.08em] text-text-3 align-bottom"
+      data-testid="mdx-table-th"
+      className="px-3 py-2 font-mono text-micro uppercase tracking-[0.08em] text-text-2 align-bottom"
     >
       {children}
     </th>

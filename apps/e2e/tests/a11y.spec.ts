@@ -606,6 +606,49 @@ test('color-contrast — tracker-back-link + part-kind-back-link + part-detail-b
   expect(partDetailContrast, `part-detail-back-link: ${formatViolations(partDetailContrast)}`).toHaveLength(0)
 })
 
+test('color-contrast — /tags eyebrow (regression guard)', async ({ page }) => {
+  await page.goto('/tags')
+  await page.waitForLoadState('networkidle')
+
+  const results = await new AxeBuilder({ page })
+    .withTags(WCAG_TAGS)
+    .include('[data-testid="tags-eyebrow"]')
+    .analyze()
+
+  const contrast = results.violations.filter((v) => v.id === 'color-contrast')
+  expect(contrast, formatViolations(contrast)).toHaveLength(0)
+})
+
+test('color-contrast — MDX table th (regression guard)', async ({ page }) => {
+  await page.goto('/article/switch-films-worth-it')
+  await page.waitForLoadState('networkidle')
+
+  const results = await new AxeBuilder({ page })
+    .withTags(WCAG_TAGS)
+    .include('[data-testid="mdx-table-th"]')
+    .analyze()
+
+  const contrast = results.violations.filter((v) => v.id === 'color-contrast')
+  expect(contrast, formatViolations(contrast)).toHaveLength(0)
+})
+
+test('color-contrast — /sources heading + citation host (regression guard)', async ({
+  page,
+}) => {
+  await page.goto('/sources')
+  await page.waitForLoadState('networkidle')
+
+  for (const testid of ['source-counts-heading', 'citation-index-host']) {
+    const results = await new AxeBuilder({ page })
+      .withTags(WCAG_TAGS)
+      .include(`[data-testid="${testid}"]`)
+      .analyze()
+
+    const contrast = results.violations.filter((v) => v.id === 'color-contrast')
+    expect(contrast, `${testid}: ${formatViolations(contrast)}`).toHaveLength(0)
+  }
+})
+
 // Regression guard: skip link is present and targets a valid id="main" element.
 // Phase A ships this as a hard assertion because the skip link is fixed in
 // the same commit (no longer needs Phase B discovery).
