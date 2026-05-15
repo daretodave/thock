@@ -27,13 +27,13 @@ export function ArticleResult({
       className="border-t border-border py-5 first:border-t-0 first:pt-0"
     >
       <div className="flex flex-wrap items-center gap-2">
-        <span className="font-mono uppercase tracking-[0.08em] text-micro text-text-3">
+        <span data-testid="search-result-eyebrow" className="font-mono uppercase tracking-[0.08em] text-micro text-text-2">
           {pillarLabel(hit.pillar)}
         </span>
         <span aria-hidden="true" className="font-mono text-micro text-text-4">
           ·
         </span>
-        <span className="font-mono text-micro text-text-3">{hit.publishedAt.slice(0, 10)}</span>
+        <span data-testid="search-result-date" className="font-mono text-micro text-text-2">{hit.publishedAt.slice(0, 10)}</span>
       </div>
       <h2 className="mt-1 font-serif text-h3 text-text">
         <Link

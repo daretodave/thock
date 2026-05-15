@@ -473,6 +473,42 @@ test('color-contrast — group-buys/past summary (regression guard)', async ({ p
   expect(contrast, formatViolations(contrast)).toHaveLength(0)
 })
 
+// Regression guards: color-contrast on /search page elements drained by
+// audit row [a11y] issue #101. Three elements used text-micro text-text-3
+// (12px, fails WCAG AA 4.5:1): the search input label "query", the pillar
+// eyebrow on each result card, and the publishedAt date on each result card.
+// All three swapped to text-text-2.
+test('color-contrast — search input label (regression guard)', async ({ page }) => {
+  await page.goto('/search')
+  await page.waitForLoadState('networkidle')
+
+  const results = await new AxeBuilder({ page })
+    .withTags(WCAG_TAGS)
+    .include('[data-testid="search-input-label"]')
+    .analyze()
+
+  const contrast = results.violations.filter((v) => v.id === 'color-contrast')
+  expect(contrast, formatViolations(contrast)).toHaveLength(0)
+})
+
+test('color-contrast — search result eyebrow + date (regression guard)', async ({ page }) => {
+  await page.goto('/search')
+  await page.waitForLoadState('networkidle')
+
+  const input = page.locator('input[type="search"][name="q"]')
+  await input.fill('gateron')
+  await page.waitForSelector('[data-testid="search-result-eyebrow"]')
+
+  for (const testid of ['search-result-eyebrow', 'search-result-date']) {
+    const axeResults = await new AxeBuilder({ page })
+      .withTags(WCAG_TAGS)
+      .include(`[data-testid="${testid}"]`)
+      .analyze()
+    const contrast = axeResults.violations.filter((v) => v.id === 'color-contrast')
+    expect(contrast, `${testid}: ${formatViolations(contrast)}`).toHaveLength(0)
+  }
+})
+
 // Regression guard: skip link is present and targets a valid id="main" element.
 // Phase A ships this as a hard assertion because the skip link is fixed in
 // the same commit (no longer needs Phase B discovery).

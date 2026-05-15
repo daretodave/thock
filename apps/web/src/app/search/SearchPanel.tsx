@@ -75,7 +75,8 @@ export function SearchPanel({ allTags }: SearchPanelProps): ReactElement {
     <Container as="section" className="pb-16">
       <Stack gap={6}>
         <label
-          className="font-mono uppercase tracking-[0.12em] text-micro text-text-3"
+          data-testid="search-input-label"
+          className="font-mono uppercase tracking-[0.12em] text-micro text-text-2"
           htmlFor="search-input"
         >
           query
