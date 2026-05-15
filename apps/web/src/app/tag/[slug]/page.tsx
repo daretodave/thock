@@ -25,7 +25,7 @@ const CATEGORY_TINT: Record<Tag['category'], string> = {
   brand: 'text-tag-brand',
   material: 'text-tag-material',
   profile: 'text-tag-profile',
-  misc: 'text-text-3',
+  misc: 'text-text-2',
 }
 
 const CATEGORY_LABEL: Record<Tag['category'], string> = {

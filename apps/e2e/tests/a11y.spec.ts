@@ -649,6 +649,34 @@ test('color-contrast — /sources heading + citation host (regression guard)', a
   }
 })
 
+test('color-contrast — misc tag chip + /tags Misc heading + /tag misc eyebrow (regression guard)', async ({
+  page,
+}) => {
+  // /tags page: Misc group heading (h2) and misc-category tag chips
+  await page.goto('/tags')
+  await page.waitForLoadState('networkidle')
+
+  const tagsResults = await new AxeBuilder({ page })
+    .withTags(WCAG_TAGS)
+    .include('[data-testid="tag-group-misc"]')
+    .analyze()
+
+  const tagsContrast = tagsResults.violations.filter((v) => v.id === 'color-contrast')
+  expect(tagsContrast, `/tags misc group: ${formatViolations(tagsContrast)}`).toHaveLength(0)
+
+  // /tag/group-buy (misc category): tag-page eyebrow "tag · topic"
+  await page.goto('/tag/group-buy')
+  await page.waitForLoadState('networkidle')
+
+  const tagResults = await new AxeBuilder({ page })
+    .withTags(WCAG_TAGS)
+    .include('[data-testid="tag-page-eyebrow"]')
+    .analyze()
+
+  const tagContrast = tagResults.violations.filter((v) => v.id === 'color-contrast')
+  expect(tagContrast, `/tag/group-buy eyebrow: ${formatViolations(tagContrast)}`).toHaveLength(0)
+})
+
 // Regression guard: skip link is present and targets a valid id="main" element.
 // Phase A ships this as a hard assertion because the skip link is fixed in
 // the same commit (no longer needs Phase B discovery).

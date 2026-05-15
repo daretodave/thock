@@ -60,6 +60,6 @@ describe('<TagChip>', () => {
   it('falls back to misc tint when category is misc', () => {
     render(<TagChip slug="x" name="X" category="misc" />)
     const chip = screen.getByTestId('tag-chip')
-    expect(chip.className).toContain('text-text-3')
+    expect(chip.className).toContain('text-text-2')
   })
 })

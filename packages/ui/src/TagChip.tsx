@@ -30,7 +30,7 @@ const TINT_BY_CATEGORY: Record<TagChipCategory, string> = {
   brand: 'border-tag-brand text-tag-brand',
   material: 'border-tag-material text-tag-material',
   profile: 'border-tag-profile text-tag-profile',
-  misc: 'border-border-hi text-text-3',
+  misc: 'border-border-hi text-text-2',
 }
 
 const CATEGORY_PREFIX: Record<TagChipCategory, string | null> = {

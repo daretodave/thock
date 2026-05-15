@@ -617,6 +617,19 @@
 - issue: #107
 > **Resolved (2026-05-15):** Swapped text-text-3 → text-text-2 on all six elements plus two empty-state paragraphs across four files. Added data-testid="mdx-table-th" on MdxTh and data-testid="source-counts-heading" on SourceCounts pillar h2. Three regression guards in apps/e2e/tests/a11y.spec.ts: tags-eyebrow on /tags, mdx-table-th on /article/switch-films-worth-it, source-counts-heading + citation-index-host on /sources. 599 e2e green (+3 guards). Remaining Phase B candidates: TagChip opacity-70 category prefix (axe non-critical scan confirms failing), text-down tracker sparklines (axe non-critical scan confirms failing), empty-state kicker spans (low real-user impact — only render when no content). `38dc757`
 
+### [a11y] [7.2] misc-category tag chips + /tags Misc heading + /tag/[misc-slug] eyebrow — text-text-3 fails WCAG AA across all pages with misc tags
+- category: a11y
+- filed: 2026-05-15 by cloud /iterate audit
+- impact: 8 (TagChip misc renders on home page, all article pages, search results, /tags, /tag/[slug] — every surface with misc-tagged articles; /tags Misc heading always visible; /tag/[misc-slug] eyebrow on 21 misc-category tag pages)
+- ease: 9 (3 class substitutions across 3 files + unit test update + 1 regression guard with 2 assertions)
+- score: 7.2 (impact × ease / 10)
+- wcag: 1.4.3 Contrast (Minimum) AA — 4.5:1 for normal text at 12px (text-micro)
+- axe impact: serious
+- pages: all pages rendering misc-tagged article chips (/, /article/*, /search, /tags, /tag/*), /tags (Misc section heading), /tag/[misc-slug] (eyebrow "tag · topic")
+- elements: `packages/ui/src/TagChip.tsx` TINT_BY_CATEGORY.misc (text-text-3 → text-text-2 for chip text color); `apps/web/src/components/tags/TagGroup.tsx:11` CATEGORY_TINT.misc (text-text-3 → text-text-2 for Misc h2 heading); `apps/web/src/app/tag/[slug]/page.tsx:28` CATEGORY_TINT.misc (text-text-3 → text-text-2 for eyebrow tint)
+- root cause: misc category consistently mapped to text-text-3 as a neutral-but-decorative color across all three surfaces. text-text-3 (oklch(0.55 0.006 250)) against --thock-bg (oklch(0.175 0.006 250)) fails WCAG AA 4.5:1 at 12px. Same root cause as the Phase B drain series (#91–#107).
+- issue: #108
+
 ---
 
 (Older findings drained as they ship. Empty until other audit

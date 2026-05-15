@@ -31,6 +31,6 @@ describe('<ArticleTagRail>', () => {
     )
     const chip = screen.getByTestId('tag-chip')
     expect(chip).toHaveTextContent(/unknown-tag/i)
-    expect(chip.className).toContain('text-text-3')
+    expect(chip.className).toContain('text-text-2')
   })
 })
