@@ -673,7 +673,7 @@
 - issue: #111
 > **Resolved (2026-05-15):** Swapped text-text-3 → text-text-2 on the "Citation index" h2 in `apps/web/src/app/sources/page.tsx:90`. Added `data-testid="sources-citation-index-heading"`. Extended the existing `/sources` regression guard in `apps/e2e/tests/a11y.spec.ts` to include `sources-citation-index-heading` in the `AxeBuilder.include()` loop. 602 e2e green (+1 assertion). Remaining Phase B candidates: SuggestedArticles.tsx eyebrow + date on 404 pages; newsletter archive issue-number span; various empty-state kicker spans (low real-user impact). `dc5be05`
 
-### [a11y] [6.3] SuggestedArticles 404 — h2 eyebrow + date span fail WCAG AA contrast on /article/[bad-slug] and /tag/[bad-slug]
+### [x] [a11y] [6.3] SuggestedArticles 404 — h2 eyebrow + date span fail WCAG AA contrast on /article/[bad-slug] and /tag/[bad-slug] — addressed in be1221c (closes #112)
 - category: a11y
 - filed: 2026-05-15 by cloud /iterate audit
 - impact: 7 (renders on /article/[slug] and /tag/[slug] not-found pages whenever a reader hits an unknown URL; the "did you mean?" eyebrow h2 and per-suggestion date span both use text-text-3 at small text sizes)
@@ -685,6 +685,7 @@
 - elements: `SuggestedArticles.tsx:52` — `<h2 className="... text-micro text-text-3">` (12px); `SuggestedArticles.tsx:70` — `<span className="text-small text-text-3">` (14px)
 - root cause: text-text-3 (oklch(0.55 0.006 250)) against --thock-bg (oklch(0.175 0.006 250)) fails WCAG AA 4.5:1 at 12–14px. Same root cause as the Phase B drain series (#91–#111).
 - issue: #112
+> **Resolved (2026-05-15):** Swapped text-text-3 → text-text-2 on both elements in `apps/web/src/components/not-found/SuggestedArticles.tsx`. Added `data-testid="not-found-suggestion-eyebrow"` on the h2 and `data-testid="not-found-suggestion-date"` on the date span. Regression guard in `apps/e2e/tests/a11y.spec.ts` navigates to `/article/gateron-switch` (non-existent slug whose "gateron switch" query yields Oil King hits), scopes `AxeBuilder.include()` to both testids, and asserts zero `color-contrast` violations; short-circuits safely if no suggestions render. 603 e2e green (+1 guard). Remaining Phase B candidates: NewsletterArchive empty-state + issue-number span, PartIndexCard statusTint fallback (sold-out/discontinued), various pillar-page empty-state kickers (low real-user impact). `be1221c`
 
 ---
 
