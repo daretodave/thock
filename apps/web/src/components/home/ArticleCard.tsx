@@ -209,7 +209,8 @@ export function ArticleCard({
       </h3>
       <time
         dateTime={fm.publishedAt}
-        className="text-small text-text-3"
+        data-testid="article-card-compact-date"
+        className="text-small text-text-2"
       >
         {formattedDate}
       </time>

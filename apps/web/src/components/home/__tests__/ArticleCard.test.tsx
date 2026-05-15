@@ -59,4 +59,12 @@ describe('<ArticleCard>', () => {
     expect(screen.getByTestId('article-card-compact')).toBeInTheDocument()
     expect(screen.queryByTestId('article-card-placeholder')).toBeNull()
   })
+
+  it('compact variant date uses text-text-2 not text-text-3 (WCAG AA contrast guard)', () => {
+    const article = makeArticle()
+    render(<ArticleCard article={article} variant="compact" tagsBySlug={TAGS} />)
+    const dateEl = screen.getByTestId('article-card-compact-date')
+    expect(dateEl.className).toContain('text-text-2')
+    expect(dateEl.className).not.toContain('text-text-3')
+  })
 })
