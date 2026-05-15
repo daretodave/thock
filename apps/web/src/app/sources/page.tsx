@@ -87,7 +87,10 @@ export default function SourcesPage(): ReactElement {
           <SourceCounts rows={rows} />
 
           <section className="flex flex-col gap-5">
-            <h2 className="font-mono text-micro uppercase tracking-[0.12em] text-text-3">
+            <h2
+              data-testid="sources-citation-index-heading"
+              className="font-mono text-micro uppercase tracking-[0.12em] text-text-2"
+            >
               Citation index
             </h2>
             <p className="thock-prose max-w-[60ch] text-body text-text-2">

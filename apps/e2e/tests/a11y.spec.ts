@@ -638,7 +638,7 @@ test('color-contrast — /sources heading + citation host (regression guard)', a
   await page.goto('/sources')
   await page.waitForLoadState('networkidle')
 
-  for (const testid of ['source-counts-heading', 'citation-index-host']) {
+  for (const testid of ['source-counts-heading', 'citation-index-host', 'sources-citation-index-heading']) {
     const results = await new AxeBuilder({ page })
       .withTags(WCAG_TAGS)
       .include(`[data-testid="${testid}"]`)
