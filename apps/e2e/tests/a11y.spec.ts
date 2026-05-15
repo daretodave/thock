@@ -696,3 +696,19 @@ test('skip-to-main-content link — layout guard', async ({ page }) => {
   await skipLink.focus()
   await expect(skipLink).toBeVisible()
 })
+
+test('color-contrast — TagChip category prefix (opacity-70 removed; regression guard)', async ({
+  page,
+}) => {
+  // Article page with switch-category tag chips (gateron-oil-king has switch + brand chips)
+  await page.goto('/article/gateron-oil-king-deep-dive')
+  await page.waitForLoadState('networkidle')
+
+  const results = await new AxeBuilder({ page })
+    .withTags(WCAG_TAGS)
+    .include('[data-testid="tag-chip-category"]')
+    .analyze()
+
+  const contrast = results.violations.filter((v) => v.id === 'color-contrast')
+  expect(contrast, `tag-chip-category contrast: ${formatViolations(contrast)}`).toHaveLength(0)
+})

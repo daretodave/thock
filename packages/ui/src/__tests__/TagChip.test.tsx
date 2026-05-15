@@ -62,4 +62,11 @@ describe('<TagChip>', () => {
     const chip = screen.getByTestId('tag-chip')
     expect(chip.className).toContain('text-text-2')
   })
+
+  it('renders category prefix without contrast-failing opacity class', () => {
+    render(<TagChip slug="alice" name="Alice" category="layout" />)
+    const prefix = screen.getByTestId('tag-chip-category')
+    expect(prefix.className).not.toContain('opacity-70')
+    expect(prefix.className).not.toContain('opacity-50')
+  })
 })

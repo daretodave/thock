@@ -74,7 +74,7 @@ export function TagChip({
 
   const inner = prefix ? (
     <>
-      <span data-testid="tag-chip-category" className="opacity-70">
+      <span data-testid="tag-chip-category">
         {prefix}
       </span>
       <span aria-hidden="true" className="opacity-50">
