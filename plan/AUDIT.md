@@ -561,6 +561,20 @@
 - issue: #103
 > **Resolved (2026-05-15):** Swapped text-text-3 → text-text-2 on the pill sublabel span in `apps/web/src/components/pillar/PillarHero.tsx:110`. Added `data-testid="pillar-hero-pill-sublabel"` for regression guard scoping. Regression guard in `apps/e2e/tests/a11y.spec.ts` scopes `AxeBuilder.include('[data-testid="pillar-hero-pill-sublabel"]')` on `/news` and asserts zero `color-contrast` violations. 593 e2e green (+1 guard). Remaining Phase B candidates: TagChip opacity-70 category prefix, text-down tracker sparklines, empty-state kicker spans (low real-user impact — only render when no content). `28944f3`
 
+### [x] [a11y] [4.5] ArticleCard compact variant date — text-small text-text-3 fails WCAG AA contrast (future-guard for when compact variant is called) — addressed in 2b3c3cd (closes #104)
+- category: a11y
+- filed: 2026-05-15 by cloud /iterate audit
+- impact: 5 (compact variant date has the class issue; the variant exists in ArticleCard.tsx but has no current caller in any canonical URL — all pillar archive lists use `variant="row"`. Impact rated for when a caller ships.)
+- ease: 9 (one class substitution + data-testid addition, unit test guards it)
+- score: 4.5 (impact × ease / 10)
+- wcag: 1.4.3 Contrast (Minimum) AA — 4.5:1 for normal text at 14px (text-small)
+- axe impact: serious
+- pages: any future surface using `<ArticleCard variant="compact">`
+- elements: `<time dateTime={fm.publishedAt} className="text-small text-text-3">` in `apps/web/src/components/home/ArticleCard.tsx:212` (compact variant)
+- root cause: text-text-3 (oklch(0.55 0.006 250)) against --thock-bg fails WCAG AA 4.5:1 at 14px. Same root cause as the Phase B drain series (#91–#103). Compact variant code path is correct now so it doesn't regress when called.
+- issue: #104
+> **Resolved (2026-05-15):** Swapped text-text-3 → text-text-2 on the compact `<time>` element in `apps/web/src/components/home/ArticleCard.tsx:212`. Added `data-testid="article-card-compact-date"` for regression guard scoping. Unit test in `ArticleCard.test.tsx` asserts className contains `text-text-2` and NOT `text-text-3`; no e2e guard added because compact variant has no canonical-URL caller (all pillar archives use `variant="row"`). The code path is now future-safe for when a caller ships. 593 e2e green. Remaining Phase B candidates: TagChip opacity-70 category prefix (uses `opacity-70` mechanism, distinct from text-text-3 but same WCAG 1.4.3 failure class), text-down tracker sparklines, PartHero/PartSpec/MentionedInArticles part-page elements, /tags category headings, /sources citation elements, MDX table `<th>` headers. `2b3c3cd`
+
 ---
 
 (Older findings drained as they ship. Empty until other audit
