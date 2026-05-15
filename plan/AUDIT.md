@@ -575,6 +575,20 @@
 - issue: #104
 > **Resolved (2026-05-15):** Swapped text-text-3 → text-text-2 on the compact `<time>` element in `apps/web/src/components/home/ArticleCard.tsx:212`. Added `data-testid="article-card-compact-date"` for regression guard scoping. Unit test in `ArticleCard.test.tsx` asserts className contains `text-text-2` and NOT `text-text-3`; no e2e guard added because compact variant has no canonical-URL caller (all pillar archives use `variant="row"`). The code path is now future-safe for when a caller ships. 593 e2e green. Remaining Phase B candidates: TagChip opacity-70 category prefix (uses `opacity-70` mechanism, distinct from text-text-3 but same WCAG 1.4.3 failure class), text-down tracker sparklines, PartHero/PartSpec/MentionedInArticles part-page elements, /tags category headings, /sources citation elements, MDX table `<th>` headers. `2b3c3cd`
 
+### [x] [a11y] [5.6] part pages — text-text-3 at small text fails WCAG AA contrast (PartHero, PartSpec, MentionedInArticles) — addressed in 66d6027 (closes #105)
+- category: a11y
+- filed: 2026-05-15 by cloud /iterate audit
+- impact: 7 (all 18 /part/[kind]/[slug] pages across switch/keycap-set/board catalogs; PartHero vendor metadata + status, PartSpec heading + label rows, MentionedInArticles heading)
+- ease: 8 (5 class substitutions across 3 files + data-testid additions + 2 regression guards)
+- score: 5.6 (impact × ease / 10)
+- wcag: 1.4.3 Contrast (Minimum) AA — 4.5:1 for normal text at 12px (text-micro) and 14px (text-small)
+- axe impact: serious
+- pages: /part/switch/*, /part/keycap-set/*, /part/board/* (all 18 part pages)
+- elements: `PartHero.tsx:50` vendor metadata div (text-small text-text-3); `statusTint()` fallback returning text-text-3 for sold-out/discontinued; `PartSpec.tsx:69` "Spec sheet" h2 (text-micro text-text-3); `PartSpec.tsx:82` spec label dt (text-micro text-text-3); `MentionedInArticles.tsx:28` empty-state span (text-micro text-text-3); `MentionedInArticles.tsx:46` "Mentioned in N articles" h2 (text-micro text-text-3)
+- root cause: text-text-3 (oklch(0.55 0.006 250)) against --thock-bg fails WCAG AA 4.5:1 at 12–14px. Same root cause as the Phase B drain series (#91–#104).
+- issue: #105
+> **Resolved (2026-05-15):** Swapped text-text-3 → text-text-2 on all five part-page element contexts. PartHero.tsx: vendor metadata div text-text-3 → text-text-2; statusTint() fallback collapsed to text-text-2 (group-buy + limited + sold-out + discontinued all pass at text-small). data-testid="part-hero-meta" added. PartSpec.tsx: "Spec sheet" h2 text-text-3 → text-text-2 (data-testid="part-spec-heading"); spec label dt text-text-3 → text-text-2 (data-testid="part-spec-label"). MentionedInArticles.tsx: empty-state span text-text-3 → text-text-2 (data-testid="part-mentioned-kicker"); "Mentioned in N articles" h2 text-text-3 → text-text-2 (data-testid="part-mentioned-heading"). Two regression guards in apps/e2e/tests/a11y.spec.ts: part-hero-meta + part-spec-heading/part-spec-label scoped AxeBuilder.include() on /part/switch/gateron-oil-king asserting zero color-contrast violations. 595 e2e green (+2 guards). Remaining Phase B candidates: tags-page eyebrow, /sources SourceCounts + CitationIndex, MDX table th, empty-state kickers. `66d6027`
+
 ---
 
 (Older findings drained as they ship. Empty until other audit
