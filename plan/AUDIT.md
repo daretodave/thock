@@ -659,6 +659,20 @@
 - issue: #110
 > **Resolved (2026-05-15):** Changed `bg-surface-2` → `bg-surface group-hover:bg-surface-hi transition-colors` on the inner cell div. `text-down` on `bg-surface` (oklch 0.235 0.006 250) gives ~5.1:1 — passes WCAG AA. Hover feedback restored: inner div gains `group-hover:bg-surface-hi`; Link wrapper changed from `hover:bg-surface` → `group` so Tailwind propagates hover state to the inner div (previous hover was relying on the transparent inner div showing the Link's bg-surface through). Added `data-testid="tracker-archive-down-count"` and `data-testid="tracker-archive-up-count"` to direction count spans. Regression guard in `apps/e2e/tests/a11y.spec.ts` scopes `AxeBuilder.include('[data-testid="tracker-archive-down-count"]')` on `/trends/tracker` and asserts zero `color-contrast` violations. 602 e2e green (+1 guard). Remaining Phase B candidates: empty-state kicker spans (low real-user impact — only render when no content). `ce3c537`
 
+### [x] [a11y] [6.3] /sources — "Citation index" h2 heading text-text-3 fails WCAG AA contrast — addressed in dc5be05 (closes #111)
+- category: a11y
+- filed: 2026-05-15 by cloud /iterate audit
+- impact: 7 (always visible on /sources, accessible from footer nav on every page)
+- ease: 9 (one class substitution + data-testid + regression guard)
+- score: 6.3 (impact × ease / 10)
+- wcag: 1.4.3 Contrast (Minimum) AA — 4.5:1 for normal text at 12px
+- axe impact: serious
+- pages: /sources
+- elements: `apps/web/src/app/sources/page.tsx:90` — `<h2 className="font-mono text-micro uppercase tracking-[0.12em] text-text-3">Citation index</h2>` (always visible when visiting /sources)
+- root cause: text-text-3 (oklch(0.55 0.006 250)) against --thock-bg (oklch(0.175 0.006 250)) fails WCAG AA 4.5:1 at 12px. Missed in row #107 which addressed SourceCounts.tsx + CitationIndex.tsx elements but not the direct page-level heading. Same root cause as the Phase B drain series (#91–#110).
+- issue: #111
+> **Resolved (2026-05-15):** Swapped text-text-3 → text-text-2 on the "Citation index" h2 in `apps/web/src/app/sources/page.tsx:90`. Added `data-testid="sources-citation-index-heading"`. Extended the existing `/sources` regression guard in `apps/e2e/tests/a11y.spec.ts` to include `sources-citation-index-heading` in the `AxeBuilder.include()` loop. 602 e2e green (+1 assertion). Remaining Phase B candidates: SuggestedArticles.tsx eyebrow + date on 404 pages; newsletter archive issue-number span; various empty-state kicker spans (low real-user impact). `dc5be05`
+
 ---
 
 (Older findings drained as they ship. Empty until other audit
