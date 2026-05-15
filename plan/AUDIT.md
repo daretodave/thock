@@ -547,6 +547,20 @@
 - root cause: text-text-3 against bg-surface (oklch 0.235 in dark mode) and --thock-bg (oklch 0.175) both fail WCAG AA 4.5:1 at 12–14px. Same root cause as the Phase B drain series (#91–#101).
 - issue: #102
 
+### [x] [a11y] [7.2] pillar-hero RSS pill sublabel — text-micro text-text-3 fails WCAG AA on all pillar pages — addressed in 28944f3 (closes #103)
+- category: a11y
+- filed: 2026-05-15 by cloud /iterate audit
+- impact: 8 (PillarHero renders on /news, /trends, /ideas, /deep-dives, /guides — all 5 pillar landings; widest single-component a11y surface in the Phase B drain series)
+- ease: 9 (one class substitution + data-testid addition + 1 regression guard)
+- score: 7.2 (impact × ease / 10)
+- wcag: 1.4.3 Contrast (Minimum) AA — 4.5:1 for normal text at 12px
+- axe impact: serious
+- pages: /news, /trends, /ideas, /deep-dives, /guides (all pillar landings)
+- elements: `<span className="font-mono uppercase tracking-[0.1em] text-micro text-text-3">` at PillarHero.tsx:110 — the pill sublabel ("subscribe") rendered in the RSS pill on every pillar landing page
+- root cause: text-text-3 (oklch(0.55 0.006 250)) against --thock-bg fails WCAG AA 4.5:1 at 12px. Same root cause as the Phase B drain series (#91–#102).
+- issue: #103
+> **Resolved (2026-05-15):** Swapped text-text-3 → text-text-2 on the pill sublabel span in `apps/web/src/components/pillar/PillarHero.tsx:110`. Added `data-testid="pillar-hero-pill-sublabel"` for regression guard scoping. Regression guard in `apps/e2e/tests/a11y.spec.ts` scopes `AxeBuilder.include('[data-testid="pillar-hero-pill-sublabel"]')` on `/news` and asserts zero `color-contrast` violations. 593 e2e green (+1 guard). Remaining Phase B candidates: TagChip opacity-70 category prefix, text-down tracker sparklines, empty-state kicker spans (low real-user impact — only render when no content). `28944f3`
+
 ---
 
 (Older findings drained as they ship. Empty until other audit
