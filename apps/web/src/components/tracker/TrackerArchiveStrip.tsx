@@ -56,7 +56,7 @@ export function TrackerArchiveStrip({
           const isCurrent = snapshot.isoWeek === currentWeek
 
           const inner = (
-            <div className="flex flex-col gap-2 p-3 bg-surface-2 h-full">
+            <div className="flex flex-col gap-2 p-3 bg-surface group-hover:bg-surface-hi transition-colors h-full">
               <span
                 className={`font-mono text-micro uppercase tracking-[0.1em] ${
                   isCurrent ? 'text-accent' : 'text-text-2'
@@ -69,13 +69,13 @@ export function TrackerArchiveStrip({
               )}
               <div className="mt-auto flex gap-2 font-mono text-micro">
                 {counts.up > 0 && (
-                  <span className="text-up">+{counts.up}</span>
+                  <span data-testid="tracker-archive-up-count" className="text-up">+{counts.up}</span>
                 )}
                 {counts.flat > 0 && (
                   <span data-testid="tracker-archive-flat-count" className="text-text-2">{counts.flat}~</span>
                 )}
                 {counts.down > 0 && (
-                  <span className="text-down">-{counts.down}</span>
+                  <span data-testid="tracker-archive-down-count" className="text-down">-{counts.down}</span>
                 )}
               </div>
             </div>
@@ -95,7 +95,7 @@ export function TrackerArchiveStrip({
               key={snapshot.isoWeek}
               href={`/trends/tracker/${snapshot.isoWeek}`}
               data-testid="tracker-archive-link"
-              className="block h-full hover:bg-surface transition-colors"
+              className="block h-full group"
             >
               {inner}
             </Link>

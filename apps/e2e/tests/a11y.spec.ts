@@ -712,3 +712,26 @@ test('color-contrast — TagChip category prefix (opacity-70 removed; regression
   const contrast = results.violations.filter((v) => v.id === 'color-contrast')
   expect(contrast, `tag-chip-category contrast: ${formatViolations(contrast)}`).toHaveLength(0)
 })
+
+// Regression guard: color-contrast on TrackerArchiveStrip direction count spans drained
+// by audit row [a11y] #110. Root cause: bg-surface-2 was an invalid Tailwind class
+// (no surface-2 color in config), causing cells to render on bg-border background where
+// text-down (oklch 0.68 0.135 25) at text-micro fails WCAG AA 4.5:1 (~4.1:1). Fixed
+// by swapping bg-surface-2 → bg-surface; text-down on bg-surface passes at ~5.1:1.
+// Hover feedback restored via group + group-hover:bg-surface-hi on the inner cell div.
+test('color-contrast — TrackerArchiveStrip down-count text (regression guard)', async ({
+  page,
+}) => {
+  await page.goto('/trends/tracker')
+  await page.waitForLoadState('networkidle')
+
+  // W19 has 3 down-trending rows (Cherry MX2A, Alice layout, Cherry brand) so the
+  // down-count span renders in every W19 archive card visible on /trends/tracker.
+  const results = await new AxeBuilder({ page })
+    .withTags(WCAG_TAGS)
+    .include('[data-testid="tracker-archive-down-count"]')
+    .analyze()
+
+  const contrast = results.violations.filter((v) => v.id === 'color-contrast')
+  expect(contrast, `tracker-archive-down-count: ${formatViolations(contrast)}`).toHaveLength(0)
+})
