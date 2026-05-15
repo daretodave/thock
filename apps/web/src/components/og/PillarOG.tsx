@@ -1,4 +1,5 @@
 import type { ReactElement } from 'react'
+import { OG_BACKGROUND, OG_PALETTE } from './palette'
 
 export type PillarOGContentProps = {
   /** Pillar display label rendered both as eyebrow and italic H1. */
@@ -16,6 +17,11 @@ export type PillarOGContentProps = {
  * Returns plain JSX so each route's `opengraph-image.tsx` can
  * wrap it in `next/og` `ImageResponse` while keeping the visual
  * identity in one place.
+ *
+ * Color values come from `./palette` (hex sRGB) — Satori does not
+ * support `oklch()` so the source-of-truth oklch tokens cannot be
+ * referenced directly here. The prior version of this file was
+ * authored in oklch and silently produced 0-byte PNGs.
  */
 export function PillarOGContent({
   pillarLabel,
@@ -30,9 +36,8 @@ export function PillarOGContent({
         flexDirection: 'column',
         justifyContent: 'space-between',
         padding: '64px',
-        background:
-          'radial-gradient(ellipse at top left, oklch(0.235 0.006 250) 0%, oklch(0.175 0.006 250) 70%)',
-        color: 'oklch(0.965 0.005 90)',
+        background: OG_BACKGROUND,
+        color: OG_PALETTE.text,
         fontFamily: 'serif',
       }}
     >
@@ -40,12 +45,12 @@ export function PillarOGContent({
         style={{
           fontSize: 22,
           fontFamily: 'monospace',
-          color: 'oklch(0.78 0.005 90)',
+          color: OG_PALETTE.text2,
           letterSpacing: '0.16em',
           textTransform: 'uppercase',
         }}
       >
-        thock · {pillarLabel}
+        {`thock · ${pillarLabel}`}
       </div>
       <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
         <div style={{ display: 'flex', alignItems: 'baseline', gap: 8 }}>
@@ -64,12 +69,12 @@ export function PillarOGContent({
               width: 22,
               height: 22,
               borderRadius: 999,
-              background: 'oklch(0.80 0.135 75)',
+              background: OG_PALETTE.accent,
               marginBottom: 22,
             }}
           />
         </div>
-        <div style={{ fontSize: 32, color: 'oklch(0.78 0.005 90)' }}>
+        <div style={{ fontSize: 32, color: OG_PALETTE.text2 }}>
           {tagline}
         </div>
       </div>

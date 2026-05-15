@@ -28,6 +28,12 @@ export async function generateMetadata({
   const article = getArticleBySlug(slug)
   if (!article) return {}
 
+  // The og:image is emitted by the colocated opengraph-image.tsx
+  // route (Satori → PNG via next/og). The article's frontmatter
+  // heroImage is an SVG, and social platforms (Twitter, Facebook,
+  // LinkedIn, Slack, Discord) reject image/svg+xml as og:image
+  // content — passing it through here previously produced the
+  // missing-preview bug.
   return buildMetadata({
     title: article.frontmatter.title,
     description: article.frontmatter.lede,
@@ -36,9 +42,6 @@ export async function generateMetadata({
     publishedAt: article.frontmatter.publishedAt,
     updatedAt: article.frontmatter.updatedAt ?? undefined,
     author: article.frontmatter.author,
-    ...(article.frontmatter.heroImage
-      ? { ogImage: article.frontmatter.heroImage }
-      : {}),
   })
 }
 

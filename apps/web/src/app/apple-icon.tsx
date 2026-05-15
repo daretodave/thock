@@ -1,4 +1,5 @@
 import { ImageResponse } from 'next/og'
+import { OG_PALETTE } from '@/components/og/palette'
 
 export const runtime = 'edge'
 export const size = { width: 180, height: 180 }
@@ -9,6 +10,13 @@ export const contentType = 'image/png'
  * rendered at 180x180 PNG so iOS Safari has a high-density
  * pinned icon. Body is the lowercase "t" wordmark with the
  * brass accent dot, on the dark editorial bg.
+ *
+ * Color values come from `@/components/og/palette` (hex sRGB) —
+ * Satori does not support `oklch()`, and the prior version of this
+ * file was authored in oklch which silently produced a 0-byte PNG
+ * on every request. Every page in the layout `<link rel="apple-touch-icon">`s
+ * this route, so the upstream failure surfaced as console-error
+ * noise on every route in the e2e smoke walker.
  */
 export default function AppleIcon() {
   return new ImageResponse(
@@ -20,7 +28,7 @@ export default function AppleIcon() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          background: 'oklch(0.175 0.006 250)',
+          background: OG_PALETTE.bg,
           borderRadius: 22,
           position: 'relative',
           fontFamily: 'serif',
@@ -30,7 +38,7 @@ export default function AppleIcon() {
           style={{
             fontSize: 132,
             fontWeight: 500,
-            color: 'oklch(0.965 0.005 90)',
+            color: OG_PALETTE.text,
             letterSpacing: '-0.02em',
             lineHeight: 1,
           }}
@@ -45,7 +53,7 @@ export default function AppleIcon() {
             width: 16,
             height: 16,
             borderRadius: 999,
-            background: 'oklch(0.80 0.135 75)',
+            background: OG_PALETTE.accent,
           }}
         />
       </div>

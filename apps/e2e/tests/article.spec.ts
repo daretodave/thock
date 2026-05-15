@@ -159,6 +159,88 @@ test.describe('article page family — canonical template', () => {
     }
   })
 
+  test('og:image is a non-empty PNG (no SVG, no 0-byte cached miss)', async ({
+    page,
+    request,
+  }) => {
+    // Regression guard for the 2026-05-14 fix: previously articles
+    // emitted `og:image` pointing at the hero-art SVG, which every
+    // major social platform (Twitter, Facebook, LinkedIn, Slack,
+    // Discord) rejects as a card image. The home OG was authored
+    // in `oklch()` color which Satori cannot parse, so Vercel cached
+    // a 0-byte PNG with a 1-year immutable header. Both surfaces
+    // need the og:image to be (a) a PNG content-type meta and (b)
+    // actually return PNG bytes.
+    for (const path of [SEED, '/article/switch-films-worth-it', '/']) {
+      await page.goto(path)
+      const ogType = await page
+        .locator('meta[property="og:image:type"]')
+        .first()
+        .getAttribute('content')
+      expect(ogType, `${path}: og:image:type`).toBe('image/png')
+      const ogHref = await page
+        .locator('meta[property="og:image"]')
+        .first()
+        .getAttribute('content')
+      expect(ogHref, `${path}: og:image href`).toBeTruthy()
+      // The canonical URL points at thock.xyz; in e2e the same path
+      // lives on the local baseURL. Rewrite to the same-origin
+      // pathname so request.get() resolves to the e2e server.
+      const url = new URL(ogHref!)
+      const localPath = url.pathname + url.search
+      const res = await request.get(localPath)
+      expect(res.status(), `${path}: og:image fetch`).toBe(200)
+      expect(
+        res.headers()['content-type'],
+        `${path}: og:image content-type`,
+      ).toMatch(/image\/png/)
+      const body = await res.body()
+      expect(
+        body.length,
+        `${path}: og:image body bytes (was 0 with cached oklch crash)`,
+      ).toBeGreaterThan(1000)
+      // PNG magic bytes — confirms Satori produced a real image,
+      // not an HTML error page served with a fake content-type.
+      expect(body[0]).toBe(0x89)
+      expect(body[1]).toBe(0x50)
+      expect(body[2]).toBe(0x4e)
+      expect(body[3]).toBe(0x47)
+    }
+  })
+
+  test('GFM markdown tables render in articles that have them', async ({
+    page,
+  }) => {
+    // Regression guard for the 2026-05-14 fix: MDXRemote was wired
+    // without remark-gfm, so the `| Switch type | ... |` block in
+    // /article/switch-films-worth-it stayed as literal pipe text in
+    // the article body. Same bug across all four articles below.
+    // Fix: pass `mdxOptions.remarkPlugins: [remarkGfm]` and add
+    // styled `table`/`thead`/`tr`/`th`/`td` to mdxComponents.
+    const slugs = [
+      '/article/switch-films-worth-it',
+      '/article/pe-foam-mod',
+      '/article/stabilizer-servicing-guide',
+      '/article/tape-mod',
+    ]
+    for (const slug of slugs) {
+      await page.goto(slug)
+      const body = page.getByTestId('article-body')
+      const tables = body.locator('table')
+      expect(
+        await tables.count(),
+        `${slug} should render at least one MDX table`,
+      ).toBeGreaterThanOrEqual(1)
+      // First header cell must be a real <th scope="col"> to confirm
+      // the styled mdxComponents.th picked it up rather than a
+      // browser-default rendering.
+      const firstTh = tables.first().locator('th').first()
+      await expect(firstTh).toBeVisible()
+      const scope = await firstTh.getAttribute('scope')
+      expect(scope, `${slug}: first th scope`).toBe('col')
+    }
+  })
+
   test('document <title> applies the "— thock" suffix exactly once', async ({
     page,
   }) => {

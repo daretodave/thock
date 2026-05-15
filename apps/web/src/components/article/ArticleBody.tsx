@@ -1,8 +1,13 @@
 import type { ReactElement } from 'react'
 import { MDXRemote } from 'next-mdx-remote/rsc'
+import remarkGfm from 'remark-gfm'
 import { Container } from '@thock/ui'
 import { mdxComponents, PartReference } from '@thock/content/mdx'
 import type { ResolvedPart } from '@/lib/data-runtime'
+
+const mdxOptions = {
+  mdxOptions: { remarkPlugins: [remarkGfm] },
+}
 
 export type ArticleBodyProps = {
   /** Raw MDX body (already stripped of frontmatter by the loader). */
@@ -55,7 +60,7 @@ export function ArticleBody({
         //   overflow below the article body and overlap the footer.
         className="thock-prose font-serif text-body text-text leading-[1.7] max-w-[60ch] xl:relative xl:[display:flow-root]"
       >
-        <MDXRemote source={body} components={components} />
+        <MDXRemote source={body} components={components} options={mdxOptions} />
       </div>
     </Container>
   )

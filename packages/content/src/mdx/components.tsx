@@ -44,6 +44,64 @@ function AutoLink({
   )
 }
 
+// Editorial GFM table — wrapped in a horizontal scroll shell so wide
+// tables (5+ columns, long verdict text) don't blow past the 60ch
+// reading column on narrow viewports. Header is mono micro-caps to
+// match the eyebrow ductus used across the site; body cells keep the
+// article's serif body face for readability. Row dividers only
+// (no zebra) to stay on the restrained editorial side.
+function MdxTable({ children }: { children?: ReactNode }): ReactElement {
+  return (
+    <div className="my-8 -mx-4 overflow-x-auto sm:mx-0">
+      <table className="w-full min-w-[36rem] border-collapse text-left text-body">
+        {children}
+      </table>
+    </div>
+  )
+}
+
+function MdxThead({ children }: { children?: ReactNode }): ReactElement {
+  return <thead className="border-b border-border-hi">{children}</thead>
+}
+
+function MdxTbody({ children }: { children?: ReactNode }): ReactElement {
+  return <tbody>{children}</tbody>
+}
+
+function MdxTr({ children }: { children?: ReactNode }): ReactElement {
+  return <tr className="border-b border-border last:border-b-0">{children}</tr>
+}
+
+function MdxTh({
+  children,
+  ...rest
+}: {
+  children?: ReactNode
+} & Record<string, unknown>): ReactElement {
+  return (
+    <th
+      {...rest}
+      scope="col"
+      className="px-3 py-2 font-mono text-micro uppercase tracking-[0.08em] text-text-3 align-bottom"
+    >
+      {children}
+    </th>
+  )
+}
+
+function MdxTd({
+  children,
+  ...rest
+}: {
+  children?: ReactNode
+} & Record<string, unknown>): ReactElement {
+  return (
+    <td {...rest} className="px-3 py-3 font-serif text-text-2 align-top">
+      {children}
+    </td>
+  )
+}
+
 /**
  * Component map consumed by `next-mdx-remote` (or any MDXProvider).
  * Phase 5 plugs this map into <ArticleBody>; phase 3 simply ships
@@ -61,4 +119,10 @@ export const mdxComponents = {
   h2: SerifH2,
   h3: SerifH3,
   a: AutoLink,
+  table: MdxTable,
+  thead: MdxThead,
+  tbody: MdxTbody,
+  tr: MdxTr,
+  th: MdxTh,
+  td: MdxTd,
 } as const
