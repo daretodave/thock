@@ -631,6 +631,20 @@
 - issue: #108
 > **Resolved (2026-05-15):** Swapped text-text-3 → text-text-2 on all three misc-category surfaces: TINT_BY_CATEGORY.misc in TagChip.tsx (chip text color on home, article pages, search, /tags, /tag/*), CATEGORY_TINT.misc in TagGroup.tsx (/tags Misc h2 heading), CATEGORY_TINT.misc in tag/[slug]/page.tsx (tag-page-eyebrow on all 21 /tag/[misc-slug] pages). Unit tests updated in TagChip.test.tsx and ArticleTagRail.test.tsx. Regression guard in a11y.spec.ts: /tags misc group scoped AxeBuilder + /tag/group-buy eyebrow scoped AxeBuilder, both asserting zero color-contrast violations. 600 e2e green (+1 test block, 2 assertions). Remaining Phase B candidates: tag-chip-category opacity-70 prefix (axe non-critical scan logs this on article pages with material/other category chips), text-down tracker sparklines, empty-state kicker spans. `693110d`
 
+### [x] [a11y] [5.6] TagChip category prefix — opacity-70 reduces contrast below WCAG AA on all non-misc tag chips — addressed in 9646f2a (closes #109)
+- category: a11y
+- filed: 2026-05-15 by cloud /iterate audit
+- impact: 7 (tag chips render on home, all article pages, /tags, /search — every surface with non-misc tagged content; the prefix is the category-decoding affordance)
+- ease: 8 (one class removal in TagChip.tsx + unit test + e2e guard)
+- score: 5.6 (impact × ease / 10)
+- wcag: 1.4.3 Contrast (Minimum) AA — 4.5:1 for normal text at 12px
+- axe impact: moderate (confirmed failing by axe scan at expand pass 11)
+- pages: all pages with non-misc tag chips (/, /article/*, /tags, /search, /tag/*)
+- elements: `<span data-testid="tag-chip-category" className="opacity-70">` in `packages/ui/src/TagChip.tsx:77` — the category prefix ("switch", "layout", "brand", "material", "profile") rendered at 70% opacity at 12px (text-micro). The opacity composites the tag-specific color against --thock-bg, reducing effective contrast below WCAG AA 4.5:1.
+- root cause: opacity-70 was chosen to visually subordinate the prefix so "SWITCH · GATERON OIL KING" reads with emphasis on the name; visual hierarchy is correct but WCAG requires absolute contrast on text elements regardless of emphasis intent. Same mechanism flagged across the Phase B drain series.
+- issue: #109
+> **Resolved (2026-05-15):** Removed opacity-70 from `<span data-testid="tag-chip-category">` in `packages/ui/src/TagChip.tsx:77`. Category prefix now renders at full chip contrast; visual hierarchy (prefix reads secondary to name) is preserved via the category-specific tint colors (tag-switch amber, tag-layout steel-blue, etc.) and the `·` separator (aria-hidden, no contrast requirement). Unit test in TagChip.test.tsx asserts prefix span has no opacity-* class. Regression guard in a11y.spec.ts: AxeBuilder.include('[data-testid="tag-chip-category"]') on /article/gateron-oil-king-deep-dive asserts zero color-contrast violations. 601 e2e green (+1 guard). Remaining Phase B candidates: text-down on TrackerArchiveStrip direction counts (axe serious — confirmed), empty-state kicker spans (low real-user impact). `9646f2a`
+
 ---
 
 (Older findings drained as they ship. Empty until other audit
