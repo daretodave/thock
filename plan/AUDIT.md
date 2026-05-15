@@ -534,6 +534,19 @@
 - issue: #101
 > **Resolved (2026-05-15):** Swapped text-text-3 → text-text-2 on all three elements. Added data-testid="search-input-label" on the label, data-testid="search-result-eyebrow" on the pillar span, data-testid="search-result-date" on the date span. Two regression guards in apps/e2e/tests/a11y.spec.ts: one static (label on /search) and one interactive (fill "gateron", wait for results, axe-scoped on eyebrow + date). 591 e2e green (+2 guards). Remaining Phase B candidates: TagChip category opacity (text-down tracker sparklines addressed alongside TrackerArchiveStrip #97; tag-chip `opacity-70` category label noted in Phase A axe scan warn).
 
+### [x] [a11y] [7.2] MDX article prose components — Callout title text-micro text-text-3 fails WCAG AA on 31 articles; Caption + PullQuote attribution pre-emptive — addressed in 067dbde (closes #102)
+- category: a11y
+- filed: 2026-05-15 by cloud /iterate audit
+- impact: 8 (Callout component used in 31 articles with 41 titled instances; Caption and PullQuote attribution are pre-emptive fixes for components not yet used in articles)
+- ease: 9 (class substitutions in 3 MDX component files + data-testid additions + 1 regression guard)
+- score: 7.2 (impact × ease / 10)
+- wcag: 1.4.3 Contrast (Minimum) AA — 4.5:1 for normal text at 12px/14px
+- axe impact: serious
+- pages: /article/* (all articles using <Callout title="...">: 31 articles, 41 instances)
+- elements: `<h2 className="... text-micro text-text-3">` in Callout.tsx:36 (on bg-surface, oklch 0.235); `<p className="... text-small text-text-3">` in Caption.tsx:9 (on --thock-bg, pre-emptive); `<footer className="... text-small text-text-3">` in PullQuote.tsx:16 (on --thock-bg, pre-emptive — no articles currently use the attribution prop)
+- root cause: text-text-3 against bg-surface (oklch 0.235 in dark mode) and --thock-bg (oklch 0.175) both fail WCAG AA 4.5:1 at 12–14px. Same root cause as the Phase B drain series (#91–#101).
+- issue: #102
+
 ---
 
 (Older findings drained as they ship. Empty until other audit
