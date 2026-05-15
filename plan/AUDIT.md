@@ -506,7 +506,7 @@
 >
 > **Resolved (confirmed 2026-05-11 via /oversight):** not observed in 10+ consecutive parallel verify runs (all noting "433 e2e green parallel — no #418 flake this run"). Serial-fallback (`--workers=1`) is no longer the established mitigation. Closing.
 
-### [a11y] [6.3] GroupBuyRow + group-buys pages — text-micro text-text-3 fails WCAG AA contrast on /group-buys and /group-buys/past
+### [x] [a11y] [6.3] GroupBuyRow + group-buys pages — text-micro text-text-3 fails WCAG AA contrast on /group-buys and /group-buys/past — addressed in 4dc57be (closes #100)
 - category: a11y
 - filed: 2026-05-15 by cloud /iterate audit
 - impact: 7 (GroupBuyRow kind/region/metadata + page header summary render on every visit to /group-buys and /group-buys/past; GroupBuyCountdownRow vendor label renders on / for all home visitors)
@@ -518,6 +518,7 @@
 - elements: `GroupBuyRow.tsx` kind label (text-micro text-text-3), region badge (text-micro text-text-3), vendor/date metadata row (text-micro text-text-3), non-live countdown (text-text-3); `group-buys/page.tsx` header summary count + archive link; `group-buys/past/page.tsx` header count + back link; `GroupBuyCountdownRow.tsx` "via [vendor]" label
 - root cause: text-text-3 (oklch(0.55 0.006 250)) against --thock-bg fails WCAG AA 4.5:1 at 12px. Same root cause as the recently-drained Phase B series (#91–#98).
 - issue: #100
+> **Resolved (2026-05-15):** Swapped text-text-3 → text-text-2 on GroupBuyRow kind label, region badge, vendor/date metadata row, non-live countdown; group-buys/page.tsx header summary and archive link; group-buys/past/page.tsx header count and back link; GroupBuyCountdownRow.tsx vendor label. Added data-testid="group-buy-kind" and data-testid="group-buy-meta" plus data-testid="group-buys-summary" and data-testid="group-buys-past-summary" for regression guard scoping. Three regression guards in apps/e2e/tests/a11y.spec.ts assert zero color-contrast violations on the group-buy row elements and page summaries. 589 e2e green (+3 guards). Remaining Phase B candidates: search label (text-micro text-text-3 on /search), TagChip category opacity, text-down tracker sparklines. `4dc57be`
 
 ---
 
