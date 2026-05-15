@@ -603,6 +603,20 @@
 - issue: #106
 > **Resolved (2026-05-15):** Swapped text-text-3 → text-text-2 on all three navigation back-link elements. trends/tracker/[week]/page.tsx: "← Back to latest" + data-testid="tracker-back-link". part/[kind]/page.tsx: "← home" + data-testid="part-kind-back-link". part/[kind]/[slug]/page.tsx: "← all {kind}s" (data-testid="part-detail-back-link" was already present). Two regression guards in a11y.spec.ts: tracker-back-link on /trends/tracker/2026-W19 and part-detail-back-link on /part/switch/gateron-oil-king asserting zero color-contrast violations. 596 e2e green (+2 guards). Remaining Phase B candidates: tags-page eyebrow, /sources SourceCounts + CitationIndex, MDX table th, empty-state kickers, TagChip opacity-70. `67f377a`
 
+### [x] [a11y] [5.6] /tags eyebrow + MDX table th + /sources — text-text-3 at small text fails WCAG AA — addressed in 38dc757 (closes #107)
+- category: a11y
+- filed: 2026-05-15 by cloud /iterate audit
+- impact: 7 (MDX table th affects /article/* pages with GFM comparison tables — core content surface; /tags is a primary discovery page linked from every tag page back-link; /sources is accessible from footer nav — all three are regularly visited surfaces)
+- ease: 8 (6 class substitutions across 4 files + data-testid additions + 3 regression guards)
+- score: 5.6 (impact × ease / 10)
+- wcag: 1.4.3 Contrast (Minimum) AA — 4.5:1 for normal text at 12px, 14px, 16px
+- axe impact: serious
+- pages: /tags, /article/* (pages with GFM tables), /sources
+- elements: `tags/page.tsx:54` "browse · all tags" eyebrow (text-micro text-text-3); `mdx/components.tsx:85` MdxTh <th> (text-micro text-text-3); `SourceCounts.tsx:85` pillar h2 (text-micro text-text-3); `SourceCounts.tsx:104` source-count badge (text-small text-text-3); `CitationIndex.tsx:128` citation host URL (text-micro text-text-3); `CitationIndex.tsx:133` citing-articles list (text-small text-text-3); plus two empty-state paragraphs (text-body text-text-3)
+- root cause: text-text-3 (oklch(0.55 0.006 250)) against --thock-bg fails WCAG AA 4.5:1 at 12–16px. Same root cause as the Phase B drain series (#91–#106).
+- issue: #107
+> **Resolved (2026-05-15):** Swapped text-text-3 → text-text-2 on all six elements plus two empty-state paragraphs across four files. Added data-testid="mdx-table-th" on MdxTh and data-testid="source-counts-heading" on SourceCounts pillar h2. Three regression guards in apps/e2e/tests/a11y.spec.ts: tags-eyebrow on /tags, mdx-table-th on /article/switch-films-worth-it, source-counts-heading + citation-index-host on /sources. 599 e2e green (+3 guards). Remaining Phase B candidates: TagChip opacity-70 category prefix (axe non-critical scan confirms failing), text-down tracker sparklines (axe non-critical scan confirms failing), empty-state kicker spans (low real-user impact — only render when no content). `38dc757`
+
 ---
 
 (Older findings drained as they ship. Empty until other audit
