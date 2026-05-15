@@ -81,7 +81,10 @@ export default function GroupBuysPage(): ReactElement {
             Group buys
           </h1>
           <p className="max-w-[60ch] font-serif text-h3 text-text-2">{LEDE}</p>
-          <div className="font-mono uppercase tracking-[0.08em] text-micro text-text-3">
+          <div
+            data-testid="group-buys-summary"
+            className="font-mono uppercase tracking-[0.08em] text-micro text-text-2"
+          >
             {[
               live.length > 0 ? `${live.length} live` : null,
               announced.length > 0
@@ -160,7 +163,7 @@ export default function GroupBuysPage(): ReactElement {
             <a
               data-testid="group-buys-archive-link"
               href="/group-buys/past"
-              className="font-mono text-micro uppercase tracking-[0.08em] text-text-3 hover:text-text"
+              className="font-mono text-micro uppercase tracking-[0.08em] text-text-2 hover:text-text"
             >
               view full archive →
             </a>

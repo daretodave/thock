@@ -506,6 +506,19 @@
 >
 > **Resolved (confirmed 2026-05-11 via /oversight):** not observed in 10+ consecutive parallel verify runs (all noting "433 e2e green parallel — no #418 flake this run"). Serial-fallback (`--workers=1`) is no longer the established mitigation. Closing.
 
+### [a11y] [6.3] GroupBuyRow + group-buys pages — text-micro text-text-3 fails WCAG AA contrast on /group-buys and /group-buys/past
+- category: a11y
+- filed: 2026-05-15 by cloud /iterate audit
+- impact: 7 (GroupBuyRow kind/region/metadata + page header summary render on every visit to /group-buys and /group-buys/past; GroupBuyCountdownRow vendor label renders on / for all home visitors)
+- ease: 9 (class substitutions + data-testid additions + regression guards)
+- score: 6.3 (impact × ease / 10)
+- wcag: 1.4.3 Contrast (Minimum) AA — 4.5:1 for normal text at 12px
+- axe impact: serious
+- pages: /group-buys, /group-buys/past, / (home widget)
+- elements: `GroupBuyRow.tsx` kind label (text-micro text-text-3), region badge (text-micro text-text-3), vendor/date metadata row (text-micro text-text-3), non-live countdown (text-text-3); `group-buys/page.tsx` header summary count + archive link; `group-buys/past/page.tsx` header count + back link; `GroupBuyCountdownRow.tsx` "via [vendor]" label
+- root cause: text-text-3 (oklch(0.55 0.006 250)) against --thock-bg fails WCAG AA 4.5:1 at 12px. Same root cause as the recently-drained Phase B series (#91–#98).
+- issue: #100
+
 ---
 
 (Older findings drained as they ship. Empty until other audit

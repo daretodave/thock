@@ -66,12 +66,15 @@ export default function PastGroupBuysPage(): ReactElement {
             {TITLE}
           </h1>
           <p className="max-w-[60ch] font-serif text-h3 text-text-2">{LEDE}</p>
-          <div className="font-mono uppercase tracking-[0.08em] text-micro text-text-3">
+          <div
+            data-testid="group-buys-past-summary"
+            className="font-mono uppercase tracking-[0.08em] text-micro text-text-2"
+          >
             {past.length} closed buys
           </div>
           <a
             href="/group-buys"
-            className="font-mono text-micro uppercase tracking-[0.08em] text-text-3 hover:text-text"
+            className="font-mono text-micro uppercase tracking-[0.08em] text-text-2 hover:text-text"
           >
             ← back to live group buys
           </a>

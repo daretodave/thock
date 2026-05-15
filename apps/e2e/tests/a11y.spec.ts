@@ -427,6 +427,52 @@ test('color-contrast — article figcaption (regression guard)', async ({ page }
   expect(contrast, formatViolations(contrast)).toHaveLength(0)
 })
 
+// Regression guards: color-contrast on GroupBuyRow kind/region/metadata and
+// group-buys page summary drained by audit row [a11y] issue #100. GroupBuyRow
+// used text-micro text-text-3 (12px, fails WCAG AA 4.5:1) for kind label,
+// region badge, vendor/date metadata, and non-live countdown. Page-level summary
+// count and archive link also used text-text-3 at text-micro. All swapped to
+// text-text-2. Guards scoped to data-testids on /group-buys and /group-buys/past.
+test('color-contrast — group-buy row kind/region/meta (regression guard)', async ({ page }) => {
+  await page.goto('/group-buys')
+  await page.waitForLoadState('networkidle')
+
+  for (const testid of ['group-buy-kind', 'group-buy-region', 'group-buy-meta']) {
+    const results = await new AxeBuilder({ page })
+      .withTags(WCAG_TAGS)
+      .include(`[data-testid="${testid}"]`)
+      .analyze()
+    const contrast = results.violations.filter((v) => v.id === 'color-contrast')
+    expect(contrast, `${testid}: ${formatViolations(contrast)}`).toHaveLength(0)
+  }
+})
+
+test('color-contrast — group-buys page summary (regression guard)', async ({ page }) => {
+  await page.goto('/group-buys')
+  await page.waitForLoadState('networkidle')
+
+  const results = await new AxeBuilder({ page })
+    .withTags(WCAG_TAGS)
+    .include('[data-testid="group-buys-summary"]')
+    .analyze()
+
+  const contrast = results.violations.filter((v) => v.id === 'color-contrast')
+  expect(contrast, formatViolations(contrast)).toHaveLength(0)
+})
+
+test('color-contrast — group-buys/past summary (regression guard)', async ({ page }) => {
+  await page.goto('/group-buys/past')
+  await page.waitForLoadState('networkidle')
+
+  const results = await new AxeBuilder({ page })
+    .withTags(WCAG_TAGS)
+    .include('[data-testid="group-buys-past-summary"]')
+    .analyze()
+
+  const contrast = results.violations.filter((v) => v.id === 'color-contrast')
+  expect(contrast, formatViolations(contrast)).toHaveLength(0)
+})
+
 // Regression guard: skip link is present and targets a valid id="main" element.
 // Phase A ships this as a hard assertion because the skip link is fixed in
 // the same commit (no longer needs Phase B discovery).

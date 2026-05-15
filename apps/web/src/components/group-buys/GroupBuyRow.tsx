@@ -117,12 +117,15 @@ export function GroupBuyRow({
       )}
       <div className="flex flex-col gap-2">
         <div className="flex flex-wrap items-center gap-2">
-          <span className="font-mono text-micro uppercase tracking-[0.08em] text-text-3">
+          <span
+            data-testid="group-buy-kind"
+            className="font-mono text-micro uppercase tracking-[0.08em] text-text-2"
+          >
             {kind}
           </span>
           <span
             data-testid="group-buy-region"
-            className="border border-border-hi px-1.5 py-0.5 font-mono text-micro uppercase tracking-[0.08em] text-text-3"
+            className="border border-border-hi px-1.5 py-0.5 font-mono text-micro uppercase tracking-[0.08em] text-text-2"
           >
             {region}
           </span>
@@ -131,7 +134,10 @@ export function GroupBuyRow({
         <p className="text-small text-text-2 line-clamp-2">
           {groupBuy.description}
         </p>
-        <div className="flex flex-wrap items-center gap-x-4 gap-y-1 font-mono text-micro uppercase tracking-[0.08em] text-text-3">
+        <div
+          data-testid="group-buy-meta"
+          className="flex flex-wrap items-center gap-x-4 gap-y-1 font-mono text-micro uppercase tracking-[0.08em] text-text-2"
+        >
           <span>
             via <span className="text-accent">{vendorName}</span>
           </span>
@@ -142,7 +148,7 @@ export function GroupBuyRow({
         <span
           data-testid="group-buy-countdown"
           className={`font-mono text-small uppercase tracking-[0.08em] ${
-            variant === 'live' ? 'text-accent' : 'text-text-3'
+            variant === 'live' ? 'text-accent' : 'text-text-2'
           }`}
         >
           {countdown}

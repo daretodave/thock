@@ -91,7 +91,7 @@ export function GroupBuyCountdownRow({
         <span className="text-small font-medium text-text">
           {groupBuy.name}
         </span>
-        <span className="text-micro text-text-3">
+        <span className="text-micro text-text-2">
           via{' '}
           <span className="font-mono text-accent">
             {vendor?.name ?? groupBuy.vendorSlug}
