@@ -33,7 +33,7 @@ export function Callout({
       role="note"
     >
       {title && (
-        <h2 className="mb-2 font-mono text-micro uppercase tracking-[0.08em] text-text-3">
+        <h2 className="mb-2 font-mono text-micro uppercase tracking-[0.08em] text-text-2" data-testid="callout-title">
           {title}
         </h2>
       )}

@@ -509,6 +509,25 @@ test('color-contrast — search result eyebrow + date (regression guard)', async
   }
 })
 
+// Regression guard: color-contrast on MDX article prose components drained by
+// audit row [a11y] issue #102. Three MDX components used text-text-3 at small
+// text sizes: Caption (text-small), PullQuote attribution footer (text-small),
+// Callout title h2 (text-micro on bg-surface). Callout is actively used in 31
+// articles with 41 titled instances; Caption and PullQuote attribution were
+// pre-emptive fixes. All three swapped to text-text-2.
+test('color-contrast — callout title in article body (regression guard)', async ({ page }) => {
+  await page.goto('/article/cherry-mx2a-revision')
+  await page.waitForLoadState('networkidle')
+
+  const results = await new AxeBuilder({ page })
+    .withTags(WCAG_TAGS)
+    .include('[data-testid="callout-title"]')
+    .analyze()
+
+  const contrast = results.violations.filter((v) => v.id === 'color-contrast')
+  expect(contrast, formatViolations(contrast)).toHaveLength(0)
+})
+
 // Regression guard: skip link is present and targets a valid id="main" element.
 // Phase A ships this as a hard assertion because the skip link is fixed in
 // the same commit (no longer needs Phase B discovery).

@@ -6,6 +6,6 @@ export type CaptionProps = {
 
 export function Caption({ children }: CaptionProps): ReactElement {
   return (
-    <p className="mt-2 font-serif italic text-small text-text-3">{children}</p>
+    <p className="mt-2 font-serif italic text-small text-text-2" data-testid="article-caption">{children}</p>
   )
 }
