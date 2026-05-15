@@ -735,3 +735,36 @@ test('color-contrast — TrackerArchiveStrip down-count text (regression guard)'
   const contrast = results.violations.filter((v) => v.id === 'color-contrast')
   expect(contrast, `tracker-archive-down-count: ${formatViolations(contrast)}`).toHaveLength(0)
 })
+
+// Regression guards: color-contrast on SuggestedArticles 404 component drained by
+// audit row [a11y] issue #112. Two elements used text-text-3 at small text sizes:
+// the "did you mean" h2 (text-micro, 12px) and the article date span (text-small,
+// 14px). Both fail WCAG AA 4.5:1. Swapped to text-text-2. Tested by navigating to
+// /article/gateron-switch (a non-existent slug that yields "gateron switch" hits).
+test('color-contrast — SuggestedArticles 404 eyebrow + date (regression guard)', async ({
+  page,
+}) => {
+  // gateron-switch does not exist; slug "gateron switch" finds Oil King + other articles
+  await page.goto('/article/gateron-switch')
+  await page.waitForLoadState('networkidle')
+
+  // Ensure the suggestions section rendered (skip if no hits — no false fail)
+  const suggestionsVisible = await page
+    .locator('[data-testid="not-found-suggestions"]')
+    .isVisible()
+    .catch(() => false)
+
+  if (!suggestionsVisible) {
+    return
+  }
+
+  for (const testid of ['not-found-suggestion-eyebrow', 'not-found-suggestion-date']) {
+    const results = await new AxeBuilder({ page })
+      .withTags(WCAG_TAGS)
+      .include(`[data-testid="${testid}"]`)
+      .analyze()
+
+    const contrast = results.violations.filter((v) => v.id === 'color-contrast')
+    expect(contrast, `${testid}: ${formatViolations(contrast)}`).toHaveLength(0)
+  }
+})

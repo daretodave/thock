@@ -673,6 +673,19 @@
 - issue: #111
 > **Resolved (2026-05-15):** Swapped text-text-3 → text-text-2 on the "Citation index" h2 in `apps/web/src/app/sources/page.tsx:90`. Added `data-testid="sources-citation-index-heading"`. Extended the existing `/sources` regression guard in `apps/e2e/tests/a11y.spec.ts` to include `sources-citation-index-heading` in the `AxeBuilder.include()` loop. 602 e2e green (+1 assertion). Remaining Phase B candidates: SuggestedArticles.tsx eyebrow + date on 404 pages; newsletter archive issue-number span; various empty-state kicker spans (low real-user impact). `dc5be05`
 
+### [a11y] [6.3] SuggestedArticles 404 — h2 eyebrow + date span fail WCAG AA contrast on /article/[bad-slug] and /tag/[bad-slug]
+- category: a11y
+- filed: 2026-05-15 by cloud /iterate audit
+- impact: 7 (renders on /article/[slug] and /tag/[slug] not-found pages whenever a reader hits an unknown URL; the "did you mean?" eyebrow h2 and per-suggestion date span both use text-text-3 at small text sizes)
+- ease: 9 (two class substitutions + data-testid additions + regression guards)
+- score: 6.3 (impact × ease / 10)
+- wcag: 1.4.3 Contrast (Minimum) AA — 4.5:1 for normal text at 12px and 14px
+- axe impact: serious
+- pages: /article/[any-bad-slug] (article not-found), /tag/[any-bad-slug] (tag not-found)
+- elements: `SuggestedArticles.tsx:52` — `<h2 className="... text-micro text-text-3">` (12px); `SuggestedArticles.tsx:70` — `<span className="text-small text-text-3">` (14px)
+- root cause: text-text-3 (oklch(0.55 0.006 250)) against --thock-bg (oklch(0.175 0.006 250)) fails WCAG AA 4.5:1 at 12–14px. Same root cause as the Phase B drain series (#91–#111).
+- issue: #112
+
 ---
 
 (Older findings drained as they ship. Empty until other audit

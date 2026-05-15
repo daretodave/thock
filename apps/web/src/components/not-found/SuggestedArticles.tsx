@@ -49,7 +49,10 @@ export function SuggestedArticles({
       data-testid="not-found-suggestions"
       className="flex flex-col gap-4"
     >
-      <h2 className="font-mono uppercase tracking-[0.12em] text-micro text-text-3">
+      <h2
+        data-testid="not-found-suggestion-eyebrow"
+        className="font-mono uppercase tracking-[0.12em] text-micro text-text-2"
+      >
         {eyebrow}
       </h2>
       <ul className="flex flex-col gap-3">
@@ -67,7 +70,10 @@ export function SuggestedArticles({
               <span className="font-serif text-h3 text-text group-hover:text-accent transition-colors">
                 {hit.title}
               </span>
-              <span className="text-small text-text-3">
+              <span
+                data-testid="not-found-suggestion-date"
+                className="text-small text-text-2"
+              >
                 {PUBLISHED_FORMATTER.format(new Date(hit.publishedAt))}
               </span>
             </Link>
