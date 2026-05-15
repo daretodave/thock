@@ -645,6 +645,20 @@
 - issue: #109
 > **Resolved (2026-05-15):** Removed opacity-70 from `<span data-testid="tag-chip-category">` in `packages/ui/src/TagChip.tsx:77`. Category prefix now renders at full chip contrast; visual hierarchy (prefix reads secondary to name) is preserved via the category-specific tint colors (tag-switch amber, tag-layout steel-blue, etc.) and the `·` separator (aria-hidden, no contrast requirement). Unit test in TagChip.test.tsx asserts prefix span has no opacity-* class. Regression guard in a11y.spec.ts: AxeBuilder.include('[data-testid="tag-chip-category"]') on /article/gateron-oil-king-deep-dive asserts zero color-contrast violations. 601 e2e green (+1 guard). Remaining Phase B candidates: text-down on TrackerArchiveStrip direction counts (axe serious — confirmed), empty-state kicker spans (low real-user impact). `9646f2a`
 
+### [x] [a11y] [5.6] TrackerArchiveStrip down-count text — bg-surface-2 invalid class causes text-down to fail WCAG AA contrast — addressed in ce3c537 (closes #110)
+- category: a11y
+- filed: 2026-05-15 by cloud /iterate audit (Phase B drain)
+- impact: 7 (TrackerArchiveStrip renders on /trends/tracker latest view and all /trends/tracker/[week] archive pages — the site's signature feature; down-count span renders on every archive card that has any down-trending items in its snapshot)
+- ease: 8 (background class correction + data-testid additions + regression guard)
+- score: 5.6 (impact × ease / 10)
+- wcag: 1.4.3 Contrast (Minimum) AA — 4.5:1 for normal text at 12px
+- axe impact: serious (confirmed by Phase B scan noted in expand pass 11)
+- pages: /trends/tracker, /trends/tracker/[week] (all archive week pages)
+- elements: `<span className="text-down">-{counts.down}</span>` in `apps/web/src/components/tracker/TrackerArchiveStrip.tsx:78` — direction count at font-mono text-micro (12px)
+- root cause: `bg-surface-2` on the inner cell div (line 59) is an invalid Tailwind class — no `surface-2` color defined in `tailwind.config.ts`. Cells rendered on the outer grid's `bg-border` background (oklch 0.305 0.007 250). `text-down` (oklch 0.68 0.135 25) at 12px on `bg-border` gives ~4.1:1 — fails WCAG AA 4.5:1.
+- issue: #110
+> **Resolved (2026-05-15):** Changed `bg-surface-2` → `bg-surface group-hover:bg-surface-hi transition-colors` on the inner cell div. `text-down` on `bg-surface` (oklch 0.235 0.006 250) gives ~5.1:1 — passes WCAG AA. Hover feedback restored: inner div gains `group-hover:bg-surface-hi`; Link wrapper changed from `hover:bg-surface` → `group` so Tailwind propagates hover state to the inner div (previous hover was relying on the transparent inner div showing the Link's bg-surface through). Added `data-testid="tracker-archive-down-count"` and `data-testid="tracker-archive-up-count"` to direction count spans. Regression guard in `apps/e2e/tests/a11y.spec.ts` scopes `AxeBuilder.include('[data-testid="tracker-archive-down-count"]')` on `/trends/tracker` and asserts zero `color-contrast` violations. 602 e2e green (+1 guard). Remaining Phase B candidates: empty-state kicker spans (low real-user impact — only render when no content). `ce3c537`
+
 ---
 
 (Older findings drained as they ship. Empty until other audit
