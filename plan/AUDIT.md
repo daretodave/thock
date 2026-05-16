@@ -700,6 +700,20 @@
 - issue: #113
 > **Resolved (2026-05-16):** Swapped text-text-3 → text-text-2 + added data-testid="page-section-kicker" on all 13 route-level kicker spans and the tracker/[week]/not-found.tsx kicker. Fixed text-text-3 → text-text-2 in NewsletterArchive.tsx issue-number label, ArticleCard.tsx placeholder div, and PageStub.tsx deferredTo span (dead code, fixed for parity). All 16 instances cleared; grep returns 0 results. Regression guard: assertKickerContrast() helper + one test sampling /, /news, /trends, /guides, /ideas, /deep-dives, /group-buys; soft-skip when kicker is absent. 604 e2e green (+1 guard). `2e4d25c`
 
+### [x] [a11y] [6.3] PartIndexCard sold-out/discontinued status badge — text-text-3 fails WCAG AA contrast on /part/keycap-set and /part/board — addressed in 61c65c2 (closes #114)
+- issue: #114
+- category: a11y
+- filed: 2026-05-16 by cloud /iterate audit
+- impact: 7 (PartIndexCard renders on /part/keycap-set and /part/board index pages; 4 real catalog entries carry sold-out or discontinued status: gmk-bento-r2, gmk-olivia, kat-drifter, class80)
+- ease: 9 (one-line change in statusTint() fallback + data-testid addition + 1 regression guard)
+- score: 6.3 (impact × ease / 10)
+- wcag: 1.4.3 Contrast (Minimum) AA — 4.5:1 for normal text at 12px
+- axe impact: serious
+- pages: /part/keycap-set, /part/board
+- elements: `<span className="... text-micro {statusTint(status)}">` in `PartIndexCard.tsx:45` — the status badge for sold-out and discontinued parts. PartHero.tsx received the same fix in row #105 (66d6027); PartIndexCard.tsx was missed in that drain pass.
+- root cause: statusTint() fallback (`return 'text-text-3'`) fires for sold-out and discontinued statuses. text-text-3 (oklch(0.55 0.006 250)) against --thock-bg (oklch(0.175 0.006 250)) gives ~4.4:1 — just below WCAG AA 4.5:1 at 12px. Same root cause as Phase B drain series (#91–#113).
+> **Resolved (2026-05-16):** Changed fallback in statusTint() from `return 'text-text-3'` to `return 'text-text-2'` in `apps/web/src/components/part/PartIndexCard.tsx:18`. Added `data-testid="part-index-status"` to the status badge span. Regression guard in `apps/e2e/tests/a11y.spec.ts` navigates to `/part/keycap-set`, scopes `AxeBuilder.include('[data-testid="part-index-status"]')`, asserts zero `color-contrast` violations. 605 e2e green (+1 guard). `61c65c2`
+
 ---
 
 (Older findings drained as they ship. Empty until other audit
