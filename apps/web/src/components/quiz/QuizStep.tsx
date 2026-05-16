@@ -33,7 +33,7 @@ export function QuizStep({ question, options, selected, onSelect }: Props) {
               ].join(' ')}
             >
               <span className="block font-medium text-base">{opt.label}</span>
-              <span className="block text-sm text-text-3 mt-0.5">{opt.description}</span>
+              <span data-testid="quiz-option-description" className="block text-sm text-text-2 mt-0.5">{opt.description}</span>
             </button>
           )
         })}

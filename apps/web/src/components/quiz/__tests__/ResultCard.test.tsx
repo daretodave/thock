@@ -31,4 +31,11 @@ describe('<ResultCard>', () => {
     const link = screen.getByRole('link', { name: /gateron oil king/i })
     expect(link).toHaveAttribute('href', '/part/switch/gateron-oil-king')
   })
+
+  it('match percentage uses text-text-2 (not text-text-3) for WCAG AA contrast', () => {
+    render(<ResultCard sw={SWITCH} score={20} maxScore={30} rank={1} />)
+    const pct = screen.getByTestId('result-card-pct')
+    expect(pct.className).toContain('text-text-2')
+    expect(pct.className).not.toContain('text-text-3')
+  })
 })

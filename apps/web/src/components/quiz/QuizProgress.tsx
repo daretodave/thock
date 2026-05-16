@@ -7,7 +7,7 @@ export function QuizProgress({ current, total }: Props) {
   const pct = Math.round((current / total) * 100)
   return (
     <div className="mb-6">
-      <p className="text-text-3 text-sm mb-2 font-mono">
+      <p data-testid="quiz-progress-label" className="text-text-2 text-sm mb-2 font-mono">
         Question {current} of {total}
       </p>
       <div

@@ -59,7 +59,7 @@ export function ResultCard({ sw, score, maxScore, rank }: Props) {
             style={{ width: `${pct}%` }}
           />
         </div>
-        <span className="text-small font-mono text-text-3 shrink-0">{pct}% match</span>
+        <span data-testid="result-card-pct" className="text-small font-mono text-text-2 shrink-0">{pct}% match</span>
       </div>
     </div>
   )

@@ -34,4 +34,14 @@ describe('<QuizStep>', () => {
     const alphaBtn = buttons.find((b) => b.textContent?.includes('Alpha option'))
     expect(alphaBtn).toHaveAttribute('aria-pressed', 'true')
   })
+
+  it('option description uses text-text-2 (not text-text-3) for WCAG AA contrast', () => {
+    render(<QuizStep question="Q?" options={OPTIONS} selected={null} onSelect={vi.fn()} />)
+    const descs = screen.getAllByTestId('quiz-option-description')
+    expect(descs.length).toBeGreaterThan(0)
+    descs.forEach((d) => {
+      expect(d.className).toContain('text-text-2')
+      expect(d.className).not.toContain('text-text-3')
+    })
+  })
 })

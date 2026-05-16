@@ -834,3 +834,50 @@ test('color-contrast — newsletter empty-state body text-text-2 on /newsletter'
   const contrast = results.violations.filter((v) => v.id === 'color-contrast')
   expect(contrast, `newsletter-empty-body: ${formatViolations(contrast)}`).toHaveLength(0)
 })
+
+// Regression guard: color-contrast on quiz components (audit row [a11y] #121).
+// Phase 33 shipped QuizStep, QuizProgress, ResultCard with text-text-3 at 14px —
+// same root cause as Phase B drain series (#100–#115). Fixed to text-text-2.
+// Guard 1: progress label + option description on /quiz/switch (renders immediately).
+// Guard 2: result-card-pct after completing all 4 questions (clicks first option each).
+test('color-contrast — quiz progress label + option description text-text-2 (regression guard)', async ({
+  page,
+}) => {
+  await page.goto('/quiz/switch')
+  await page.waitForLoadState('networkidle')
+
+  for (const testid of ['quiz-progress-label', 'quiz-option-description']) {
+    const results = await new AxeBuilder({ page })
+      .withTags(WCAG_TAGS)
+      .include(`[data-testid="${testid}"]`)
+      .analyze()
+
+    const contrast = results.violations.filter((v) => v.id === 'color-contrast')
+    expect(contrast, `${testid}: ${formatViolations(contrast)}`).toHaveLength(0)
+  }
+})
+
+test('color-contrast — result-card-pct text-text-2 after completing quiz (regression guard)', async ({
+  page,
+}) => {
+  await page.goto('/quiz/switch')
+  await page.waitForLoadState('networkidle')
+
+  // Click first option for each of the 4 questions; auto-advance fires after 150ms.
+  for (let i = 0; i < 4; i++) {
+    const firstOption = page.locator('[data-testid="quiz-option-description"]').first()
+    await firstOption.click()
+    await page.waitForTimeout(200)
+  }
+
+  // Results should now be visible
+  await expect(page.locator('[data-testid="quiz-results"]')).toBeVisible()
+
+  const results = await new AxeBuilder({ page })
+    .withTags(WCAG_TAGS)
+    .include('[data-testid="result-card-pct"]')
+    .analyze()
+
+  const contrast = results.violations.filter((v) => v.id === 'color-contrast')
+  expect(contrast, `result-card-pct: ${formatViolations(contrast)}`).toHaveLength(0)
+})
