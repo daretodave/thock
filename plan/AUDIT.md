@@ -760,6 +760,16 @@
 - root cause: article was shipped as a concise news-style announcement; body covered timeline shift and accent-weight palette (479 words) but lacked any contextual section on the Sonnet chassis for first-time buyers.
 > **Resolved (2026-05-16):** Added "The Sonnet, briefly" section (~200 words) covering gasket mount, PC plate default + brass/FR4 upgrade options, acoustic character (gasket + PC = cushioned, medium-thocky), and a callout on the 9-degree angle and no adjustable feet. Updated updatedAt to 2026-05-16. Article now at 764 words. 620 e2e green. `f9d8bc5`
 
+### [x] [test] [4.2] SwitchQuiz orchestrator missing unit tests — addressed in ffe392e (closes #120)
+- issue: #120
+- category: test
+- filed: 2026-05-16 by cloud /iterate audit
+- impact: 6 (SwitchQuiz.tsx is the 127-line phase-33 quiz orchestrator; sub-components QuizStep/QuizProgress/ResultCard all had tests but the orchestrator managing step state, answer accumulation, setTimeout auto-advance, results surface, and reset flow had none)
+- ease: 7 (straightforward testing-library + fake-timers pattern, no mocks of non-trivial dependencies)
+- score: 4.2 (impact × ease / 10)
+- elements: `apps/web/src/components/quiz/SwitchQuiz.tsx`
+> **Resolved (2026-05-16):** Added `apps/web/src/components/quiz/__tests__/SwitchQuiz.test.tsx` with 5 unit tests: initial render (Q1 + progress), option click advances step after 150ms setTimeout, completing all 4 questions shows quiz-results testid, result links route to /part/switch/*, "Start over" resets to step 0. Uses `vi.useFakeTimers()` + `act(() => vi.advanceTimersByTime(200))` to handle the auto-advance delay; mocks `scrollIntoView` for jsdom. 620 e2e green. `ffe392e`
+
 ---
 
 (Older findings drained as they ship. Empty until other audit
