@@ -813,6 +813,16 @@
 (Older findings drained as they ship. Empty until other audit
 passes accumulate signals.)
 
+### [x] [test] [4.5] HomeSectionHeading — no colocated unit tests — addressed in pending commit (this tick)
+- issue: #125
+- category: test
+- filed: 2026-05-16 by cloud /iterate audit
+- impact: 5 (used on /, /group-buys, /ideas, /newsletter, tracker category sections — multiple high-traffic surfaces; four independent variants unguarded)
+- ease: 9 (plain functional component, no RSC, no async)
+- score: 4.5 (impact × ease / 10)
+- elements: `apps/web/src/components/home/HomeSectionHeading.tsx` — optional kicker span, dynamic h2/h3 level, optional "more →" link, title content
+> **Resolved (2026-05-16):** Added `apps/web/src/components/home/__tests__/HomeSectionHeading.test.tsx` with 8 tests: data-testid wrapper, default h2 rendering, h3 when level=3, kicker span rendered when provided, no kicker when omitted, "more →" link with correct href, no link when omitted, title text. 622 e2e green. `5f9c191`
+
 ### [x] [test] [4.8] CitationIndex — no unit tests for buildCitationIndex() or component — addressed in 36da3f3 (closes #124)
 - issue: #124
 - category: test
