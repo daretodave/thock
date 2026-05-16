@@ -714,6 +714,20 @@
 - root cause: statusTint() fallback (`return 'text-text-3'`) fires for sold-out and discontinued statuses. text-text-3 (oklch(0.55 0.006 250)) against --thock-bg (oklch(0.175 0.006 250)) gives ~4.4:1 — just below WCAG AA 4.5:1 at 12px. Same root cause as Phase B drain series (#91–#113).
 > **Resolved (2026-05-16):** Changed fallback in statusTint() from `return 'text-text-3'` to `return 'text-text-2'` in `apps/web/src/components/part/PartIndexCard.tsx:18`. Added `data-testid="part-index-status"` to the status badge span. Regression guard in `apps/e2e/tests/a11y.spec.ts` navigates to `/part/keycap-set`, scopes `AxeBuilder.include('[data-testid="part-index-status"]')`, asserts zero `color-contrast` violations. 605 e2e green (+1 guard). `61c65c2`
 
+### [x] [a11y] [4.5] newsletter empty-state body — text-body text-text-3 fails WCAG AA contrast on /newsletter — addressed in aba950b (closes #115)
+- issue: #115
+- category: a11y
+- filed: 2026-05-16 by cloud /iterate audit
+- impact: 5 (empty state always renders on /newsletter since no newsletters have been published; visible to every visitor)
+- ease: 9 (one class substitution + data-testid addition + regression guard)
+- score: 4.5 (impact × ease / 10)
+- wcag: 1.4.3 Contrast (Minimum) AA — 4.5:1 for normal text at 16px (text-body)
+- axe impact: serious
+- pages: /newsletter
+- elements: `<p className="mt-3 text-body text-text-3">` in `apps/web/src/components/newsletter/NewsletterArchive.tsx:28` — empty-state description on bg-surface (oklch(0.235 0.006 250))
+- root cause: text-text-3 (oklch(0.55 0.006 250)) against bg-surface gives ~3.1:1 — fails WCAG AA 4.5:1 at 16px. Same root cause as Phase B drain series (#91–#114). Last remaining text-text-3 instance on a currently-rendering text element in the source tree.
+> **Resolved (2026-05-16):** Swapped text-text-3 → text-text-2 on the empty-state `<p>` in `apps/web/src/components/newsletter/NewsletterArchive.tsx:28`. Added `data-testid="newsletter-empty-body"` for regression guard scoping. Regression guard in `apps/e2e/tests/a11y.spec.ts` scopes `AxeBuilder.include('[data-testid="newsletter-empty-body"]')` on `/newsletter` and asserts zero `color-contrast` violations. 606 e2e green (+1 guard). The a11y Phase B text-text-3 drain series is now complete — grep across the source tree returns 2 remaining instances: `Header.tsx:31` (search icon SVG, non-text element at 3:1 threshold — passes WCAG 1.4.11) and `NewsletterArchive.tsx:55` (archive date text-text-4 at text-micro — pre-emptive concern for when newsletters ship, not currently rendering). `aba950b`
+
 ---
 
 (Older findings drained as they ship. Empty until other audit
