@@ -768,3 +768,35 @@ test('color-contrast — SuggestedArticles 404 eyebrow + date (regression guard)
     expect(contrast, `${testid}: ${formatViolations(contrast)}`).toHaveLength(0)
   }
 })
+
+// Regression guard: color-contrast on page-section-kicker spans drained by audit
+// row [a11y] #113. All 13 route-level kicker spans used text-text-3 at text-micro
+// (12px) — WCAG AA 4.5:1 failure. Swapped to text-text-2 across all routes;
+// data-testid="page-section-kicker" added for targeted guard.
+// Kicker spans render only in empty-state branches (pillar with no articles, tag
+// with no articles, etc.). The guard tests a sampling of routes and asserts zero
+// color-contrast violations IF the kicker is present — soft skip when not rendered.
+async function assertKickerContrast(page: Page, url: string): Promise<void> {
+  await page.goto(url)
+  await page.waitForLoadState('networkidle')
+
+  const count = await page.locator('[data-testid="page-section-kicker"]').count()
+  if (count === 0) return // kicker not rendered on this URL in current data state
+
+  const results = await new AxeBuilder({ page })
+    .withTags(WCAG_TAGS)
+    .include('[data-testid="page-section-kicker"]')
+    .analyze()
+
+  const contrast = results.violations.filter((v) => v.id === 'color-contrast')
+  expect(contrast, `${url} page-section-kicker: ${formatViolations(contrast)}`).toHaveLength(0)
+}
+
+test('color-contrast — page-section-kicker text-text-2 (sampling)', async ({ page }) => {
+  // Sample across routes where the kicker might render (empty states).
+  // Asserts zero color-contrast violations if the element is in the DOM.
+  // Soft-skip when the kicker is absent (pillar/tag has content — expected in prod).
+  for (const url of ['/', '/news', '/trends', '/guides', '/ideas', '/deep-dives', '/group-buys']) {
+    await assertKickerContrast(page, url)
+  }
+})

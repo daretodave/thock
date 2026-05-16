@@ -47,7 +47,7 @@ function PlaceholderImage({
     <div
       data-testid="article-card-placeholder"
       aria-label={label}
-      className={`${className} ${HERO_IMAGE_TONE_CLASS} flex items-center justify-center font-mono uppercase tracking-[0.12em] text-micro text-text-3`}
+      className={`${className} ${HERO_IMAGE_TONE_CLASS} flex items-center justify-center font-mono uppercase tracking-[0.12em] text-micro text-text-2`}
     >
       {label}
     </div>

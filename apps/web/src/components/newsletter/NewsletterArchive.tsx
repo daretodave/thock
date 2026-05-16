@@ -49,7 +49,7 @@ export function NewsletterArchive({
           className="flex flex-col gap-2 py-5"
         >
           <div className="flex flex-wrap items-baseline gap-3">
-            <span className="font-mono text-micro uppercase tracking-[0.08em] text-text-3">
+            <span className="font-mono text-micro uppercase tracking-[0.08em] text-text-2">
               issue {String(n.frontmatter.issue).padStart(2, '0')}
             </span>
             <span className="font-mono text-micro uppercase tracking-[0.08em] text-text-4">

@@ -6,7 +6,7 @@ export default function TrackerWeekNotFound() {
     <main id="main" className="flex-1">
       <Container as="section" className="py-24">
         <Stack gap={4}>
-          <span className="font-mono uppercase tracking-[0.12em] text-micro text-text-3">
+          <span data-testid="page-section-kicker" className="font-mono uppercase tracking-[0.12em] text-micro text-text-2">
             404 · tracker
           </span>
           <h1 className="font-serif text-h1 sm:text-display text-text">

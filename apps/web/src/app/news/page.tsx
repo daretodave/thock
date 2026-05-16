@@ -90,7 +90,7 @@ export default function NewsPage(): ReactElement {
       ) : (
         <Container as="section" className="py-16">
           <Stack gap={4}>
-            <span className="font-mono uppercase tracking-[0.12em] text-micro text-text-3">
+            <span data-testid="page-section-kicker" className="font-mono uppercase tracking-[0.12em] text-micro text-text-2">
               empty pillar
             </span>
             <h2 className="font-serif text-h2 text-text">

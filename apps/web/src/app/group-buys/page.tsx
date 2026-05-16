@@ -101,7 +101,7 @@ export default function GroupBuysPage(): ReactElement {
       {totalActive === 0 && ended.length === 0 ? (
         <Container as="section" className="pb-16">
           <Stack gap={4}>
-            <span className="font-mono uppercase tracking-[0.12em] text-micro text-text-3">
+            <span data-testid="page-section-kicker" className="font-mono uppercase tracking-[0.12em] text-micro text-text-2">
               quiet week
             </span>
             <h2 className="font-serif text-h2 text-text">

@@ -48,7 +48,7 @@ export function PageStub({
         {deferredTo && (
           <span
             data-testid="page-stub-deferred"
-            className="font-mono uppercase tracking-[0.08em] text-micro text-text-3"
+            className="font-mono uppercase tracking-[0.08em] text-micro text-text-2"
           >
             Lands in {deferredTo}
           </span>

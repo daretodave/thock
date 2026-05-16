@@ -88,7 +88,7 @@ export default function TrendsTrackerPage(): ReactElement {
         <TrackerHeader snapshot={null} lede={LEDE} />
         <Container as="section" className="py-16">
           <Stack gap={4}>
-            <span className="font-mono uppercase tracking-[0.12em] text-micro text-text-3">
+            <span data-testid="page-section-kicker" className="font-mono uppercase tracking-[0.12em] text-micro text-text-2">
               tracker · empty
             </span>
             <h2 className="font-serif text-h2 text-text">
@@ -137,7 +137,7 @@ export default function TrendsTrackerPage(): ReactElement {
       ) : (
         <Container as="section" className="py-16">
           <Stack gap={3}>
-            <span className="font-mono uppercase tracking-[0.12em] text-micro text-text-3">
+            <span data-testid="page-section-kicker" className="font-mono uppercase tracking-[0.12em] text-micro text-text-2">
               snapshot · zero rows
             </span>
             <p className="max-w-[60ch] font-serif text-h3 text-text-2">
