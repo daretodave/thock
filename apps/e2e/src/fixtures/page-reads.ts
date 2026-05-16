@@ -202,6 +202,15 @@ export const pageReads: Record<string, PageRead> = {
     // here. Phase 12's tag.spec.ts covers the populated case.
     ...html([{ kind: 'h1-matches', pattern: /^#/ }]),
   },
+  '/quiz/switch': {
+    pattern: '/quiz/switch',
+    ...html([
+      // Phase 33: quiz page renders H1 "Find your switch" and the first
+      // question as a heading. The quiz is a client component; the
+      // server-rendered shell includes the static H1.
+      { kind: 'h1-matches', pattern: /find your switch/i },
+    ]),
+  },
   '/part/[kind]': {
     pattern: '/part/[kind]',
     ...html([

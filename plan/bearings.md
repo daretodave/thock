@@ -89,6 +89,7 @@ add new ones via a new phase.
 /article/[slug]                  Article (canonical entity hub)
 /tag/[slug]                      Tag page (faceted)
 /group-buys                      Curated active group buys
+/quiz/switch                     Switch recommender quiz (phase 33)
 /about                           About / editorial standards
 /newsletter                      Newsletter signup + archive
 /search                          Search results

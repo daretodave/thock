@@ -27,6 +27,7 @@ const STATIC: CanonicalUrl[] = [
   { path: '/guides', pattern: '/guides', kind: 'html' },
   { path: '/group-buys', pattern: '/group-buys', kind: 'html' },
   { path: '/group-buys/past', pattern: '/group-buys/past', kind: 'html' },
+  { path: '/quiz/switch', pattern: '/quiz/switch', kind: 'html' },
   { path: '/about', pattern: '/about', kind: 'html' },
   { path: '/newsletter', pattern: '/newsletter', kind: 'html' },
   { path: '/search', pattern: '/search', kind: 'html' },

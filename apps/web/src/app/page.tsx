@@ -1,4 +1,5 @@
 import type { ReactElement } from 'react'
+import Link from 'next/link'
 import { Container, Stack } from '@thock/ui'
 import {
   buildItemListJsonLd,
@@ -198,6 +199,17 @@ export default function HomePage(): ReactElement {
           </div>
         </Container>
       )}
+
+      {/* Switch recommender CTA */}
+      <Container as="section" className="pb-12 sm:pb-16">
+        <p className="text-small text-text-2">
+          Not sure which switch to try?{' '}
+          <Link href="/quiz/switch" className="text-accent hover:text-accent-hi underline underline-offset-2 transition-colors">
+            Find your switch
+          </Link>{' '}
+          — answer 4 questions, get your top matches.
+        </p>
+      </Container>
     </main>
   )
 }
