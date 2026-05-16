@@ -784,7 +784,7 @@
 - root cause: text-text-3 (oklch(0.55 0.006 250)) against --thock-bg (oklch(0.175)) and bg-surface (oklch(0.235)) fails WCAG AA 4.5:1 at 14px. Same root cause as Phase B drain series (#100–#115). Phase 33 components shipped after the systematic Phase B sweep.
 > **Resolved (2026-05-16):** Swapped text-text-3 → text-text-2 on all three elements. Added data-testid="quiz-option-description" (QuizStep), data-testid="quiz-progress-label" (QuizProgress), data-testid="result-card-pct" (ResultCard). Unit tests in QuizStep.test.tsx, QuizProgress.test.tsx, ResultCard.test.tsx assert text-text-2 present and text-text-3 absent. Two regression guards in a11y.spec.ts: static check on /quiz/switch for progress label + option description; interactive check clicking through 4 questions and asserting zero color-contrast on result-card-pct. 622 e2e green (+2 guards). `ae1e86a`
 
-### [test] [4.8] RelatedArticleCard — no colocated unit test (all article pages) — addressed in pending commit (this tick)
+### [x] [test] [4.8] RelatedArticleCard — no colocated unit test (all article pages)
 - issue: #122
 - category: test
 - filed: 2026-05-16 by cloud /iterate audit
@@ -794,6 +794,7 @@
 - pages: /article/* (all 40+ article pages via RelatedArticlesRail)
 - elements: `apps/web/src/components/article/RelatedArticleCard.tsx` — no `__tests__/RelatedArticleCard.test.tsx` exists; sibling `RelatedArticlesRail.test.tsx` tests the rail container but does not import or exercise the card
 - root cause: component shipped as part of the article page phase but colocated test was never added; the rail-level test covers count/null-render, not the card's rendering logic
+> **Resolved (2026-05-16):** Added 9-test suite: testid, link href, pillarLabel() eyebrow, h3 title, lede, `<time dateTime>` attribute, formatted date, author, read time. 622 e2e green. `b922976`
 
 ---
 
