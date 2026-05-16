@@ -813,6 +813,16 @@
 (Older findings drained as they ship. Empty until other audit
 passes accumulate signals.)
 
+### [x] [test] [5.6] group-buys helpers.ts — no unit tests for partitionGroupBuys / splitLiveByUrgency — addressed in b279ab8 (closes #126)
+- issue: #126
+- category: test
+- filed: 2026-05-16 by cloud /iterate audit
+- impact: 7 (partitionGroupBuys powers /group-buys live/announced/ended bucket assignment; bugs here would silently mis-route buys — no component test would catch a partition-level regression)
+- ease: 8 (pure functions with injected `now: Date` parameter — designed for testability but tests were never written)
+- score: 5.6 (impact × ease / 10)
+- elements: `apps/web/src/app/group-buys/helpers.ts` — `partitionGroupBuys()` (live/announced/ended routing, sort orders, ENDED_CAP=6) and `splitLiveByUrgency()` (≤3 days → closingSoon, else liveOpen)
+> **Resolved (2026-05-16):** Added `apps/web/src/app/group-buys/__tests__/helpers.test.ts` with 12 tests covering both functions: live/announced/ended/shipped/expired-live routing, ENDED_CAP=6 enforcement, live endDate-asc sort, ended endDate-desc sort, splitLiveByUrgency 0-day/3-day → closingSoon, 4-day → liveOpen, mixed list. 622 e2e green. `b279ab8`
+
 ### [x] [test] [4.5] HomeSectionHeading — no colocated unit tests — addressed in pending commit (this tick)
 - issue: #125
 - category: test
