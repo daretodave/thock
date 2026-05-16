@@ -687,6 +687,19 @@
 - issue: #112
 > **Resolved (2026-05-15):** Swapped text-text-3 → text-text-2 on both elements in `apps/web/src/components/not-found/SuggestedArticles.tsx`. Added `data-testid="not-found-suggestion-eyebrow"` on the h2 and `data-testid="not-found-suggestion-date"` on the date span. Regression guard in `apps/e2e/tests/a11y.spec.ts` navigates to `/article/gateron-switch` (non-existent slug whose "gateron switch" query yields Oil King hits), scopes `AxeBuilder.include()` to both testids, and asserts zero `color-contrast` violations; short-circuits safely if no suggestions render. 603 e2e green (+1 guard). Remaining Phase B candidates: NewsletterArchive empty-state + issue-number span, PartIndexCard statusTint fallback (sold-out/discontinued), various pillar-page empty-state kickers (low real-user impact). `be1221c`
 
+### [x] [a11y] [5.6] remaining text-text-3 at text-micro — 16 instances across 13 routes — addressed in 2e4d25c (closes #113)
+- category: a11y
+- filed: 2026-05-16 by cloud /iterate audit
+- impact: 8 (section-kicker spans render on every major route — /, /news, /trends, /guides, /ideas, /deep-dives, /group-buys, /group-buys/past, /tag/[slug], tracker — plus ArticleCard placeholder and NewsletterArchive issue-number label)
+- ease: 7 (systematic class substitution, same pattern as the 12 previously drained audit rows)
+- score: 5.6 (impact × ease / 10)
+- wcag: 1.4.3 Contrast (Minimum) AA — 4.5:1 for normal text at 12px
+- axe impact: serious
+- elements: `<span className="font-mono uppercase tracking-[0.12em] text-micro text-text-3">` (13 identical route-level kicker spans), NewsletterArchive.tsx issue-number label (text-micro text-text-3), ArticleCard.tsx placeholder div (text-micro text-text-3), PageStub.tsx deferredTo span (dead code)
+- root cause: text-text-3 (oklch(0.55 0.006 250)) against --thock-bg fails WCAG AA 4.5:1 at 12px. Same root cause as audit rows #100–#112.
+- issue: #113
+> **Resolved (2026-05-16):** Swapped text-text-3 → text-text-2 + added data-testid="page-section-kicker" on all 13 route-level kicker spans and the tracker/[week]/not-found.tsx kicker. Fixed text-text-3 → text-text-2 in NewsletterArchive.tsx issue-number label, ArticleCard.tsx placeholder div, and PageStub.tsx deferredTo span (dead code, fixed for parity). All 16 instances cleared; grep returns 0 results. Regression guard: assertKickerContrast() helper + one test sampling /, /news, /trends, /guides, /ideas, /deep-dives, /group-buys; soft-skip when kicker is absent. 604 e2e green (+1 guard). `2e4d25c`
+
 ---
 
 (Older findings drained as they ship. Empty until other audit
