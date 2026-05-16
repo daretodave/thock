@@ -728,6 +728,17 @@
 - root cause: text-text-3 (oklch(0.55 0.006 250)) against bg-surface gives ~3.1:1 — fails WCAG AA 4.5:1 at 16px. Same root cause as Phase B drain series (#91–#114). Last remaining text-text-3 instance on a currently-rendering text element in the source tree.
 > **Resolved (2026-05-16):** Swapped text-text-3 → text-text-2 on the empty-state `<p>` in `apps/web/src/components/newsletter/NewsletterArchive.tsx:28`. Added `data-testid="newsletter-empty-body"` for regression guard scoping. Regression guard in `apps/e2e/tests/a11y.spec.ts` scopes `AxeBuilder.include('[data-testid="newsletter-empty-body"]')` on `/newsletter` and asserts zero `color-contrast` violations. 606 e2e green (+1 guard). The a11y Phase B text-text-3 drain series is now complete — grep across the source tree returns 2 remaining instances: `Header.tsx:31` (search icon SVG, non-text element at 3:1 threshold — passes WCAG 1.4.11) and `NewsletterArchive.tsx:55` (archive date text-text-4 at text-micro — pre-emptive concern for when newsletters ship, not currently rendering). `aba950b`
 
+### [x] [MED] [5.4] lubing-101 missing guideSection — appears in "Other guides" instead of Modding — addressed in ae5c111 (closes #116)
+- issue: #116
+- category: content
+- filed: 2026-05-16 by cloud /iterate audit
+- impact: 6 (lubing-101 is the flagship 1700-word modding guide; without guideSection it renders in the "Other guides" catch-all bucket at the bottom of /guides, buried below Firmware / Modding / Switches / Keycaps sections — misses its rightful place in the Modding section alongside mounting-styles-compared and sound-dampening-compared)
+- ease: 9 (one-line frontmatter addition)
+- score: 5.4 (impact × ease / 10)
+- pages: /guides
+- root cause: `lubing-101.mdx` had no `guideSection` field; schema defaults to `null`; `groupGuidesBySection()` in `apps/web/src/app/guides/helpers.ts` routes null-section articles to `'other'` bucket labeled "Other guides", rendered last.
+> **Resolved (2026-05-16):** Added `guideSection: modding` to `apps/web/src/content/articles/lubing-101.mdx` frontmatter. The article now appears in the Modding section alongside `mounting-styles-compared` and `sound-dampening-compared`. No test changes needed — the existing guides e2e covers section rendering. 606 e2e green. `ae5c111`
+
 ---
 
 (Older findings drained as they ship. Empty until other audit
