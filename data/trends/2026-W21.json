@@ -1,0 +1,169 @@
+{
+  "isoWeek": "2026-W21",
+  "publishedAt": "2026-05-18T00:00:00.000Z",
+  "rows": [
+    {
+      "name": "HMX Cloud V2",
+      "category": "switch",
+      "direction": "up",
+      "score": 44,
+      "spark": [18, 22, 27, 31, 35, 38, 40, 44],
+      "articleSlug": null,
+      "note": "V2 mold (L4 tooling) now widely in stock at US/EU vendors; LumeKeebs and UniKeys comparison posts driving discovery. Factory lube consistency praised in community threads — steady upward velocity from W20's flat 35."
+    },
+    {
+      "name": "Gateron Oil King",
+      "category": "switch",
+      "direction": "flat",
+      "score": 40,
+      "spark": [44, 46, 43, 42, 41, 41, 41, 40],
+      "articleSlug": "gateron-oil-king-deep-dive",
+      "note": "No new drops or reviews this week; long-tail vendor stock keeps it visible but search and social volume unchanged from W20. Slight single-point erosion as HMX Cloud V2 comparison posts pull some discovery traffic."
+    },
+    {
+      "name": "Cherry MX2A",
+      "category": "switch",
+      "direction": "down",
+      "score": -28,
+      "spark": [-8, -10, -14, -17, -20, -23, -25, -28],
+      "articleSlug": "cherry-mx2a-revision",
+      "note": "Tom's Guide 'sick of Hall Effect hype' piece inadvertently resurfaces MX2A tactility complaints in comment threads. No new revision announcement from Cherry; downtrend continues as HMX and Gateron alternatives dominate recommendation threads."
+    },
+    {
+      "name": "Hall Effect / Rapid Trigger",
+      "category": "switch",
+      "direction": "up",
+      "score": 55,
+      "spark": [28, 33, 38, 42, 46, 49, 52, 55],
+      "articleSlug": null,
+      "note": "40% of tracked pro esports players now on HE or analog-optical per April 2026 data. Budget HE options now under $70 collapse the price barrier. TMR sensor coverage from CES 2026 still cycling through creator pipeline. Strongest switch-tech trend in the tracker."
+    },
+    {
+      "name": "GMK CYL Prussian Alert",
+      "category": "keycap",
+      "direction": "up",
+      "score": 54,
+      "spark": [10, 18, 26, 32, 38, 46, 50, 54],
+      "articleSlug": "gmk-cyl-prussian-alert",
+      "note": "GB live May 15 – June 12 across 10 regional vendors including KBDfans, Yushakobo, Prototypist. GeekHack IC thread actively moderated; OG Icon modifiers and custom grey/white base generating strong aesthetic buzz mid-GB window."
+    },
+    {
+      "name": "GMK CYL Ramune",
+      "category": "keycap",
+      "direction": "up",
+      "score": 38,
+      "spark": [0, 4, 10, 16, 22, 28, 33, 38],
+      "articleSlug": null,
+      "note": "GB opened May 15 across 10 vendors (Divinikey US, Prototypist UK, Geonworks KR, Yushakobo JP et al.). Pastel dual-blue plus pink WS1-white colorway driving Instagram and Discord hype in its first full active week. Ships Q3/Q4 2026."
+    },
+    {
+      "name": "DCS Grass Valley",
+      "category": "keycap",
+      "direction": "flat",
+      "score": 22,
+      "spark": [0, 5, 11, 16, 19, 21, 22, 22],
+      "articleSlug": null,
+      "note": "GB window May 1 – June 1 now in its final weeks; Prototypist-led with Geonworks/MiNoKeys support. Broadcast-era retro colorway appeals to vintage-inspired builds. Community reception positive but set sits in a quieter discovery window mid-GB."
+    },
+    {
+      "name": "MT3 Profile",
+      "category": "keycap",
+      "direction": "flat",
+      "score": 4,
+      "spark": [8, 7, 6, 5, 5, 4, 4, 4],
+      "articleSlug": null,
+      "note": "No new MT3 GB opened this week; existing sets moving through production pipeline without notable community event. Drop.com stock-drop cadence unchanged. Flat trend continues from W20 as Cherry-profile GMK sets dominate mindshare."
+    },
+    {
+      "name": "75% Layout",
+      "category": "layout",
+      "direction": "up",
+      "score": 35,
+      "spark": [16, 18, 22, 24, 27, 30, 32, 35],
+      "articleSlug": "75-percent-default",
+      "note": "Keychron Q1 Ultra 75% receiving highest volume of Q Ultra review traffic this week; MKBGuide and UniKeys round-up articles both crown 75% the 'golden ratio' layout for 2026. Rotary knob standard across form factor reinforces recommendation dominance."
+    },
+    {
+      "name": "Split / ergo (Voyager, Glove80)",
+      "category": "layout",
+      "direction": "flat",
+      "score": 34,
+      "spark": [20, 23, 26, 28, 30, 33, 34, 34],
+      "articleSlug": "split-ergo-cohort",
+      "note": "Steady baseline; Glove80 community Discord remains highly active, Voyager still recommended in beginner ergo guides. No new hardware or firmware release this week to spike signal. Holds W20 score as structural RSI-awareness demand stays consistent."
+    },
+    {
+      "name": "Alice layout",
+      "category": "layout",
+      "direction": "down",
+      "score": -23,
+      "spark": [-4, -7, -10, -13, -16, -19, -21, -23],
+      "articleSlug": "alice-layout-decline",
+      "note": "Community debate sharpens around Alice offering less wrist freedom than true splits; competitive-gaming coverage continues to cast doubt on ergonomic claims. Keychron B11 Pro foldable Alice launch noted but seen as mass-market rather than enthusiast signal."
+    },
+    {
+      "name": "Mode Designs",
+      "category": "vendor",
+      "direction": "up",
+      "score": 34,
+      "spark": [10, 14, 17, 20, 22, 26, 30, 34],
+      "articleSlug": "vendor-first-customs",
+      "note": "Encore 2026 pre-orders (opened Apr 16, shipping Jul 2026) entering peak word-of-mouth window; Crown Mounting System coverage in PC Gamer and Green-Keys this week. Prologue 98% teaser sustaining anticipation in background."
+    },
+    {
+      "name": "Keychron",
+      "category": "brand",
+      "direction": "up",
+      "score": 38,
+      "spark": [18, 22, 24, 26, 28, 32, 35, 38],
+      "articleSlug": "keychron-q-ultra-zmk",
+      "note": "Tom's Hardware Q6 Ultra 8K review published; 660-hour battery and 8K ZMK story generating mainstream press pickup. V Ultra lineup launch window imminent. Silk POM switch praised in roundups. Strongest brand momentum in the tracker this week."
+    },
+    {
+      "name": "Wuque Studio",
+      "category": "brand",
+      "direction": "up",
+      "score": 16,
+      "spark": [4, 5, 6, 7, 7, 8, 12, 16],
+      "articleSlug": null,
+      "note": "Paper80 TKL clearing positive YouTube review cycle via Whatever Studio collab; Original Aspiration switch stocked at CannonKeys attracting budget-premium linear buyers. Minor positive uptick from W20's flat-8 as brand visibility improves."
+    },
+    {
+      "name": "Cherry (GMK parent)",
+      "category": "brand",
+      "direction": "down",
+      "score": -20,
+      "spark": [-2, -4, -6, -9, -11, -15, -17, -20],
+      "articleSlug": "cherry-mx2a-revision",
+      "note": "No MX2A update announcement; clone-vs-GMK pricing discourse intensifies as quality Chinese manufacturers close the gap. Geonworks 2026 GMK warehouse sale signals oversupply on older sets. Cherry brand sentiment continues structural slide in enthusiast channels."
+    },
+    {
+      "name": "CannonKeys",
+      "category": "vendor",
+      "direction": "flat",
+      "score": 18,
+      "spark": [14, 16, 18, 19, 19, 18, 18, 18],
+      "articleSlug": null,
+      "note": "Steady in-stock rotation including Wuque Studio OA switch and various GB extras. No major new GB opened this week; community trust baseline solid but nothing to spike discourse. Holds near W20 flat score."
+    },
+    {
+      "name": "Prototypist",
+      "category": "vendor",
+      "direction": "flat",
+      "score": 18,
+      "spark": [8, 10, 12, 14, 15, 16, 17, 18],
+      "articleSlug": null,
+      "note": "DCS Grass Valley GB mid-run and GMK CYL Ramune and Prussian Alert as regional vendor keeps pipeline busy, but no new GB opened specifically from Prototypist this week. Slight deceleration from W20's active-window spike; trend settles to flat carry."
+    },
+    {
+      "name": "NovelKeys",
+      "category": "vendor",
+      "direction": "flat",
+      "score": 14,
+      "spark": [18, 17, 16, 15, 15, 15, 14, 14],
+      "articleSlug": null,
+      "note": "Spring Cleaning Sale now past; no major new GB or switch launch announced for W21. In-stock inventory rotation continues. Slight score drift downward from post-sale traffic decay but no negative catalyst; holds flat band."
+    }
+  ],
+  "updatedAt": "2026-05-18T12:00:00.000Z"
+}

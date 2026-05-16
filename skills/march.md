@@ -54,6 +54,57 @@ git pull --ff-only
 
 If divergence, stop per §5.
 
+### Step 0.5 — Weekly snapshot gate (Phase 31 amendment)
+
+After sync and before triage, check whether a weekly trend snapshot is
+due. This gate fires only on Mondays so it reuses the hourly cloud loop
+with no new workflow, workflow permission, or secret.
+
+```bash
+CURRENT_WEEK=$(node scripts/iso-week.mjs)
+IS_MONDAY=$(node -e "console.log(new Date().getDay()===1?'yes':'no')")
+SNAPSHOT_EXISTS=$(test -f "data/trends/${CURRENT_WEEK}.json" && echo "yes" || echo "no")
+```
+
+If `IS_MONDAY=yes` AND `SNAPSHOT_EXISTS=no`:
+
+1. **Spawn `scout`** to research the current week's mechanical keyboard
+   trends. Prompt: categories switch / keycap / layout / vendor / brand;
+   12–18 rows; score −100..100; direction up/down/flat; 8-point spark
+   array (arc ending at this week's score); articleSlug matching an
+   existing thock.xyz article or null; note 20–280 chars. Reference
+   the prior week's snapshot (`data/trends/<prev-week>.json`) for
+   score continuity.
+
+2. **Write `data/trends/${CURRENT_WEEK}.json`** in `TrendSnapshotSchema`
+   shape:
+   ```json
+   {
+     "isoWeek": "<YYYY-WNN>",
+     "publishedAt": "<Monday of this ISO week>T00:00:00.000Z",
+     "rows": [...],
+     "updatedAt": "<now>"
+   }
+   ```
+
+3. **`pnpm verify`** — full gate (typecheck → test → data:validate →
+   build → e2e). The data:validate step validates the new file against
+   the schema. The e2e smoke walker covers `/trends/tracker/<week>`
+   automatically via `generateStaticParams`.
+
+4. **Commit + push** via `ship-data` conventions:
+   ```bash
+   git add data/trends/${CURRENT_WEEK}.json
+   git commit -m "data: trend snapshot ${CURRENT_WEEK}
+
+   Cloud-Run: <run-url>"
+   git push origin main
+   ```
+
+5. **Return.** Skip Steps 1–4 this tick. Next tick re-dispatches normally.
+
+If `IS_MONDAY=no` OR `SNAPSHOT_EXISTS=yes`, fall through to Step 1.
+
 ### Step 1 — Triage gate (cheapest check)
 
 Load `GH_TOKEN` from `.env` and count unlabeled open issues:
@@ -263,6 +314,10 @@ plan/steps/01_build_plan.md          # pending phases
 data/BACKLOG.md                      # pending data work
 plan/CRITIQUE.md                     # critique queue + last-pass metadata
 plan/AUDIT.md                        # content-gap queue (Step 3b.5)
+
+# Weekly snapshot (Step 0.5)
+node scripts/iso-week.mjs            # prints current ISO week, e.g. 2026-W21
+data/trends/<YYYY-WNN>.json          # snapshot file (must exist by end of each Monday tick)
 
 # External signals
 gh issue list --repo $GH_REPO --search "-label:triage:..." --json number  # unlabeled count
