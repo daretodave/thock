@@ -812,3 +812,13 @@
 
 (Older findings drained as they ship. Empty until other audit
 passes accumulate signals.)
+
+### [x] [test] [4.8] CitationIndex — no unit tests for buildCitationIndex() or component — addressed in 36da3f3 (closes #124)
+- issue: #124
+- category: test
+- filed: 2026-05-16 by cloud /iterate audit
+- impact: 6 (CitationIndex renders on /sources, accessible from footer nav on every page; buildCitationIndex() has dedup/sort logic worth regression-guarding)
+- ease: 8 (pure helper + straightforward component rendering)
+- score: 4.8 (impact × ease / 10)
+- elements: `apps/web/src/components/sources/CitationIndex.tsx` — buildCitationIndex() (dedup by href, first-non-null text, per-entry article sort by publishedAt desc, output sort by most-recent-article desc) + CitationIndex component (empty state vs populated list)
+> **Resolved (2026-05-16):** Added `apps/web/src/components/sources/__tests__/CitationIndex.test.tsx` with 11 tests: 6 for buildCitationIndex() (empty input, single pair, same-article dedup, multi-article publishedAt-desc sort, first-non-null text wins, output sort) and 5 for CitationIndex component (empty state, row count, data-href attribute, host span, article link href). 622 e2e green. `36da3f3`
