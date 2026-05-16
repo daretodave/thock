@@ -739,6 +739,16 @@
 - root cause: `lubing-101.mdx` had no `guideSection` field; schema defaults to `null`; `groupGuidesBySection()` in `apps/web/src/app/guides/helpers.ts` routes null-section articles to `'other'` bucket labeled "Other guides", rendered last.
 > **Resolved (2026-05-16):** Added `guideSection: modding` to `apps/web/src/content/articles/lubing-101.mdx` frontmatter. The article now appears in the Modding section alongside `mounting-styles-compared` and `sound-dampening-compared`. No test changes needed — the existing guides e2e covers section rendering. 606 e2e green. `ae5c111`
 
+### [x] [test] [4.0] TrackerSummaryGrid + TrackerCategorySection — no unit tests for signature /trends/tracker components — addressed in 3edaf73 (closes #117)
+- issue: #117
+- category: test
+- filed: 2026-05-16 by cloud /iterate audit
+- impact: 5 (both components power the /trends/tracker signature feature; every other sibling in tracker/__tests__/ was covered)
+- ease: 8 (simple wrapper components, clear rendering behavior)
+- score: 4.0 (impact × ease / 10)
+- elements: `TrackerSummaryGrid.tsx` (null-return guard + slot count + name propagation), `TrackerCategorySection.tsx` (null-return + data-category attribute + row order + category label)
+> **Resolved (2026-05-16):** Added `TrackerSummaryGrid.test.tsx` and `TrackerCategorySection.test.tsx` in `apps/web/src/components/tracker/__tests__/`. TrackerSummaryGrid tests: null on empty snapshot, grid renders on slot fill, card count matches slot count, name content propagates. TrackerCategorySection tests: null on empty rows, testid present + data-category attribute wired, all tracker-row items render in order, category heading label ("vendor movers") renders. 606 e2e green. `3edaf73`
+
 ---
 
 (Older findings drained as they ship. Empty until other audit
