@@ -11,15 +11,15 @@ on:
     # Hourly, 24/7. History: started "every 2h off-peak ET"
     # (~7 ticks/day); bumped 2026-05-11 to hourly (~24 ticks/day);
     # briefly tried :00+:30 (~48 ticks/day) on 2026-05-12 before
-    # reverting same-day to hourly with a 30/24h ceiling to
+    # reverting same-day to hourly with a 60/24h ceiling to
     # experiment under Opus 4.7. Bounded downstream by:
-    #   - the daily commit ceiling (30 cloud-shipped commits / 24h
+    #   - the daily commit ceiling (60 cloud-shipped commits / 24h
     #     — see "Daily commit ceiling check" step below). Past that
     #     point every tick exits cleanly with no work.
     #   - the concurrency group `march` (a long-running tick blocks
     #     the next firing instead of racing it).
     #   - the 5h timeout per tick.
-    # Net: up to ~24 commits/day from cadence, with 6 ticks of
+    # Net: up to ~24 commits/day from cadence, well within the 60/24h
     # ceiling headroom for catch-up if a slow tick spans firings.
     # No-op ticks absorb slots when nothing's queued.
     - cron: '0 * * * *'
@@ -89,8 +89,8 @@ jobs:
           since="$(date -u -d '24 hours ago' '+%Y-%m-%d %H:%M:%S')"
           count=$(git log --since="$since" --grep='Cloud-Run:' --oneline | wc -l | tr -d ' ')
           echo "Cloud-shipped commits in last 24h: $count"
-          if [ "$count" -ge 30 ]; then
-            echo "Cloud ceiling reached (30 cloud-shipped commits / 24h). Exiting cleanly — no work this tick."
+          if [ "$count" -ge 60 ]; then
+            echo "Cloud ceiling reached (60 cloud-shipped commits / 24h). Exiting cleanly — no work this tick."
             echo "skip=true" >> "$GITHUB_OUTPUT"
           else
             echo "skip=false" >> "$GITHUB_OUTPUT"
