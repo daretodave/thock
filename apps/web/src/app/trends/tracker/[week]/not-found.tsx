@@ -1,14 +1,13 @@
 import Link from 'next/link'
 import { Container, Stack } from '@thock/ui'
+import { PageSectionKicker } from '@/components/ui/PageSectionKicker'
 
 export default function TrackerWeekNotFound() {
   return (
     <main id="main" className="flex-1">
       <Container as="section" className="py-24">
         <Stack gap={4}>
-          <span data-testid="page-section-kicker" className="font-mono uppercase tracking-[0.12em] text-micro text-text-2">
-            404 · tracker
-          </span>
+          <PageSectionKicker>404 · tracker</PageSectionKicker>
           <h1 className="font-serif text-h1 sm:text-display text-text">
             Week not found.
           </h1>

@@ -12,6 +12,7 @@ import type { Tag } from '@thock/content'
 import { getAllTags, getArticlesByPillar } from '@/lib/data-runtime'
 import { ArticleCard } from '@/components/home/ArticleCard'
 import { HomeSectionHeading } from '@/components/home/HomeSectionHeading'
+import { PageSectionKicker } from '@/components/ui/PageSectionKicker'
 import { PillarHero } from '@/components/pillar/PillarHero'
 import { groupGuidesBySection } from './helpers'
 
@@ -79,9 +80,7 @@ export default function GuidesPage(): ReactElement {
       {groups.length === 0 ? (
         <Container as="section" className="py-16">
           <Stack gap={4}>
-            <span data-testid="page-section-kicker" className="font-mono uppercase tracking-[0.12em] text-micro text-text-2">
-              empty pillar
-            </span>
+            <PageSectionKicker>empty pillar</PageSectionKicker>
             <h2 className="font-serif text-h2 text-text">No guides yet.</h2>
             <p className="max-w-[60ch] font-serif text-h3 text-text-2">
               The reference shelf fills in soon.

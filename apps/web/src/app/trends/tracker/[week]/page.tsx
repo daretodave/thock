@@ -19,6 +19,7 @@ import {
 import { TrackerHeader } from '@/components/tracker/TrackerHeader'
 import { TrackerSummaryGrid } from '@/components/tracker/TrackerSummaryGrid'
 import { TrackerCategorySection } from '@/components/tracker/TrackerCategorySection'
+import { PageSectionKicker } from '@/components/ui/PageSectionKicker'
 import {
   groupByCategory,
   presentCategories,
@@ -152,9 +153,7 @@ export default async function TrackerWeekPage({
       ) : (
         <Container as="section" className="py-16">
           <Stack gap={3}>
-            <span data-testid="page-section-kicker" className="font-mono uppercase tracking-[0.12em] text-micro text-text-2">
-              snapshot · zero rows
-            </span>
+            <PageSectionKicker>snapshot · zero rows</PageSectionKicker>
             <p className="max-w-[60ch] font-serif text-h3 text-text-2">
               This snapshot has no rows.
             </p>

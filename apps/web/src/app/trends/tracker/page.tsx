@@ -19,6 +19,7 @@ import { TrackerHeader } from '@/components/tracker/TrackerHeader'
 import { TrackerSummaryGrid } from '@/components/tracker/TrackerSummaryGrid'
 import { TrackerCategorySection } from '@/components/tracker/TrackerCategorySection'
 import { TrackerArchiveStrip } from '@/components/tracker/TrackerArchiveStrip'
+import { PageSectionKicker } from '@/components/ui/PageSectionKicker'
 import {
   groupByCategory,
   presentCategories,
@@ -88,9 +89,7 @@ export default function TrendsTrackerPage(): ReactElement {
         <TrackerHeader snapshot={null} lede={LEDE} />
         <Container as="section" className="py-16">
           <Stack gap={4}>
-            <span data-testid="page-section-kicker" className="font-mono uppercase tracking-[0.12em] text-micro text-text-2">
-              tracker · empty
-            </span>
+            <PageSectionKicker>tracker · empty</PageSectionKicker>
             <h2 className="font-serif text-h2 text-text">
               No tracker snapshot has shipped yet.
             </h2>
@@ -137,9 +136,7 @@ export default function TrendsTrackerPage(): ReactElement {
       ) : (
         <Container as="section" className="py-16">
           <Stack gap={3}>
-            <span data-testid="page-section-kicker" className="font-mono uppercase tracking-[0.12em] text-micro text-text-2">
-              snapshot · zero rows
-            </span>
+            <PageSectionKicker>snapshot · zero rows</PageSectionKicker>
             <p className="max-w-[60ch] font-serif text-h3 text-text-2">
               The latest snapshot has no rows. The next issue should
               fix that.

@@ -10,6 +10,7 @@ import {
 import type { Vendor } from '@thock/data'
 import { getAllClosedGroupBuys, getAllVendors } from '@/lib/data-runtime'
 import { HomeSectionHeading } from '@/components/home/HomeSectionHeading'
+import { PageSectionKicker } from '@/components/ui/PageSectionKicker'
 import { GroupBuyRow } from '@/components/group-buys/GroupBuyRow'
 
 const PATH = '/group-buys/past'
@@ -84,9 +85,7 @@ export default function PastGroupBuysPage(): ReactElement {
       {past.length === 0 ? (
         <Container as="section" className="pb-16">
           <Stack gap={4}>
-            <span data-testid="page-section-kicker" className="font-mono uppercase tracking-[0.12em] text-micro text-text-2">
-              empty archive
-            </span>
+            <PageSectionKicker>empty archive</PageSectionKicker>
             <h2 className="font-serif text-h2 text-text">
               No closed buys yet.
             </h2>

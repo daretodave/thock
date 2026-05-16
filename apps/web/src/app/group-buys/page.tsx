@@ -10,6 +10,7 @@ import {
 import type { GroupBuy, Vendor } from '@thock/data'
 import { getAllGroupBuys, getAllVendors } from '@/lib/data-runtime'
 import { HomeSectionHeading } from '@/components/home/HomeSectionHeading'
+import { PageSectionKicker } from '@/components/ui/PageSectionKicker'
 import { GroupBuyRow } from '@/components/group-buys/GroupBuyRow'
 import { partitionGroupBuys, splitLiveByUrgency } from './helpers'
 
@@ -101,9 +102,7 @@ export default function GroupBuysPage(): ReactElement {
       {totalActive === 0 && ended.length === 0 ? (
         <Container as="section" className="pb-16">
           <Stack gap={4}>
-            <span data-testid="page-section-kicker" className="font-mono uppercase tracking-[0.12em] text-micro text-text-2">
-              quiet week
-            </span>
+            <PageSectionKicker>quiet week</PageSectionKicker>
             <h2 className="font-serif text-h2 text-text">
               No active group buys right now.
             </h2>

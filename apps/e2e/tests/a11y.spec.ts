@@ -1,19 +1,19 @@
 /**
- * Phase 26 — Accessibility audit pass (Phase A: discovery walker)
+ * Phase 32 — Accessibility audit (Phase B: full WCAG AA gate)
  *
  * Runs @axe-core/playwright with WCAG 2.1 AA rules on a curated set of
- * canonical URLs. Phase A posture:
- *   - FAIL on critical violations only (keyboard traps, missing form labels,
- *     unlabeled interactive elements — things that fully block access)
- *   - WARN (log, do not fail) on serious/moderate/minor violations;
- *     these are filed as [a11y] AUDIT.md rows and drained by /iterate Phase B
- *     ticks. As each violation drains, a specific hard assertion is added here
- *     so the spec becomes a full regression guard incrementally.
+ * canonical URLs. Phase B posture (upgraded from Phase A in phase 32):
+ *   - FAIL on critical AND serious violations (color-contrast, form labels,
+ *     keyboard traps, unlabeled interactive elements, etc.)
+ *   - WARN (log, do not fail) on moderate/minor violations;
+ *     these are filed as [a11y] AUDIT.md rows and drained by /iterate ticks.
  *
- * Phase A hard-fail threshold is `critical` only. The two confirmed
- * serious color-contrast rows filed at Phase 26 (`text-text-3` and
- * `text-accent-mu` small-text contexts) drained in subsequent /iterate
- * ticks; each has its own targeted regression guard below.
+ * All serious color-contrast rows from Phase A were drained by the iterate
+ * drip across phases 26–32 (25 audit rows, 21 commits). Phase B gate is safe
+ * to enable: no serious violations remain in AUDIT.md.
+ *
+ * Targeted regression guards below (search "regression guard") lock in specific
+ * element-level assertions so each drained finding stays permanently fixed.
  */
 import { test, expect, type Page } from '@playwright/test'
 import AxeBuilder from '@axe-core/playwright'
@@ -49,21 +49,22 @@ async function runAxe(page: Page, url: string) {
   const moderate = results.violations.filter((v) => v.impact === 'moderate')
   const minor = results.violations.filter((v) => v.impact === 'minor')
 
-  // Phase A: log serious/moderate/minor for AUDIT.md filing, do not fail
-  const nonCritical = [...serious, ...moderate, ...minor]
-  if (nonCritical.length > 0) {
+  // Phase B: log moderate/minor for AUDIT.md filing, do not fail
+  const softViolations = [...moderate, ...minor]
+  if (softViolations.length > 0) {
     console.warn(
-      `[a11y Phase A] non-critical violations on ${url} (filed to AUDIT.md):\n` +
-        formatViolations(nonCritical),
+      `[a11y Phase B] moderate/minor violations on ${url} (filed to AUDIT.md):\n` +
+        formatViolations(softViolations),
     )
   }
 
-  // Phase A hard gate: ONLY critical violations block (keyboard traps, etc.)
-  // Serious violations still warn-only here; specific drained findings get
-  // targeted regression guards below (search "regression guard").
-  if (critical.length > 0) {
+  // Phase B hard gate: critical AND serious violations block.
+  // All known serious violations drained in the Phase A iterate drip (phases 26–32).
+  // New serious violations introduced by future routes will block here.
+  const hardViolations = [...critical, ...serious]
+  if (hardViolations.length > 0) {
     throw new Error(
-      `[a11y] CRITICAL violations on ${url}:\n${formatViolations(critical)}`,
+      `[a11y] CRITICAL/SERIOUS violations on ${url}:\n${formatViolations(hardViolations)}`,
     )
   }
 

@@ -17,6 +17,7 @@ import {
 } from '@/lib/data-runtime'
 import { ArticleCard } from '@/components/home/ArticleCard'
 import { HomeSectionHeading } from '@/components/home/HomeSectionHeading'
+import { PageSectionKicker } from '@/components/ui/PageSectionKicker'
 import { sortArticlesForTagArchive } from '@/components/pillar/PillarArchiveList'
 
 const CATEGORY_TINT: Record<Tag['category'], string> = {
@@ -154,9 +155,7 @@ export default async function TagPage({
       ) : (
         <Container as="section" className="pb-16">
           <Stack gap={4}>
-            <span data-testid="page-section-kicker" className="font-mono uppercase tracking-[0.12em] text-micro text-text-2">
-              empty tag
-            </span>
+            <PageSectionKicker>empty tag</PageSectionKicker>
             <h2 className="font-serif text-h2 text-text">
               No articles tagged #{tag.slug} yet.
             </h2>

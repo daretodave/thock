@@ -23,6 +23,7 @@ import {
   resolveLatestByPillar,
 } from '@/components/home/LatestByPillar'
 import { TrendingStrip } from '@/components/home/TrendingStrip'
+import { PageSectionKicker } from '@/components/ui/PageSectionKicker'
 import type { Article, Tag } from '@thock/content'
 
 export const metadata = buildMetadata({
@@ -127,9 +128,7 @@ export default function HomePage(): ReactElement {
           />
         ) : (
           <Stack gap={4}>
-            <span data-testid="page-section-kicker" className="font-mono uppercase tracking-[0.12em] text-micro text-text-2">
-              {siteConfig.tagline}
-            </span>
+            <PageSectionKicker>{siteConfig.tagline}</PageSectionKicker>
             <h1 className="font-serif text-h1 sm:text-display text-text">
               {siteConfig.name}
             </h1>

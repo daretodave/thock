@@ -28,7 +28,7 @@ export function Header() {
             href="/search"
             aria-label="Search"
             data-testid="header-search-link"
-            className="inline-flex h-9 w-9 items-center justify-center border border-border text-text-3 hover:text-text hover:border-border-hi transition-colors"
+            className="inline-flex h-9 w-9 items-center justify-center border border-border text-text-2 hover:text-text hover:border-border-hi transition-colors"
           >
             <svg
               width="16"
