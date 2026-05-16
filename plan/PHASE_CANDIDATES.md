@@ -1,7 +1,7 @@
 # Phase candidates
 
 > Last pass: 2026-05-16 at commit fb0e3c3
-> Last oversight: 2026-05-11 at commit 7939291 — promoted all 4 pending candidates (a11y 6.5 → phase 26, trends archive 6.0 → phase 27, /tags 5.5 → phase 28, GB archive 5.5 → phase 29); filed new pending candidate [in-article inline visualizations] from user oversight feedback; moved /ship-content (phase 24) + cloud schedule (phase 25) rows to Promoted for hygiene.
+> Last oversight: 2026-05-16 — promoted both Pending candidates: [7.5] Trends Tracker Phase B → phase 31 (time-critical; W21 starts 2026-05-18), [6.5] A11y Phase B → phase 32 (stops the 21-commit text-text-3 iterate drip); added user-requested fun phase 33 ("Find your switch" interactive recommender). Pending now empty — next /expand repopulates. (Prior oversight 2026-05-11 at 7939291 — promoted phases 26–29.)
 > Pass count: 12
 > Posture: bold
 > Pass 12 notes: 21 commits since pass 11 (8da10d3). Cloud-mode pass — content-gap-survey returned "all pillars comfortable" (5/5 pillars ≥8/8 in 30d window as of 2026-05-16; first natural shortfall ~15 days as oldest articles approach 30d). Window's load-bearing events: 21 consecutive a11y drains (#103–#112: PillarHero RSS sublabel `28944f3`, ArticleCard compact date `2b3c3cd`, part pages PartHero/PartSpec/MentionedInArticles `66d6027`, nav back-links tracker-archive + part `67f377a`, /tags eyebrow + MDX table th + /sources elements `38dc757`, misc-category tag chips + /tags Misc + /tag eyebrow `693110d`, **TagChip opacity-70 resolved** `9646f2a`, TrackerArchiveStrip down-count bg-surface-2 fix `ce3c537`, /sources Citation index heading `dc5be05`, SuggestedArticles 404 eyebrow + date `be1221c`). Confirmed: TagChip opacity-70 dimension of Phase B candidate was drained (`9646f2a`, closes #109) — Phase B scope update below. Confirmed remaining: 16 instances of `text-text-3 + text-micro` across apps/web/src/ — 13 of which are IDENTICAL inline kicker spans in route-level page.tsx files (`<span className="font-mono uppercase tracking-[0.12em] text-micro text-text-3">`) across news, guides, trends, ideas, deep-dives, tracker, tracker-archive, tracker-archive-not-found, group-buys, group-buys-past, tag, and home pages. A `<PageSectionKicker>` component extraction would fix all 13 at once (DRY + a11y). W21 urgency elevated: ISO week 21 starts 2026-05-18 (Monday, 2 days); tracker stalls at W20 without Phase B automation — see Tracker Phase B update below. No spec drift, no design landings, no new data entity types. **Pass 12 files 0 new candidates** — 0 new candidates above threshold; both Pending candidates strengthened with scope precision and urgency updates.
@@ -18,6 +18,12 @@
 > `/oversight`. See `skills/expand.md` for the contract.
 
 ## Pending
+
+(empty — [7.5] Trends Tracker Phase B → phase 31 and [6.5] A11y Phase B
+→ phase 32 both promoted via `/oversight` 2026-05-16; see `## Promoted`.
+Next `/expand` pass repopulates.)
+
+<!-- archived on promotion 2026-05-16 — original Pending rows preserved below for the audit trail
 
 ### [ ] [score 7.5] Trends Tracker Phase B — automated weekly snapshot cadence
 - proposed: 2026-05-14, expand pass 9; signal confirmed passes 11 + 12
@@ -57,6 +63,8 @@
 
 _(previous Pending items: [7.0] content-velocity queue auto-refill promoted to phase 30 via /oversight 2026-05-14; [7.5] InlineViz retrofit shipped 2026-05-14 across all 40 articles, bearings rule is now write-time-only.)_
 
+-->
+
 ## Considered (below threshold)
 
 - [score 5.5] `/parts` browse-landing index — discovery surface for the 18-record parts catalog (8 switches + 5 keycap-sets + 5 boards). Pattern mirrors phase 28 `/tags` (categorical-tinted grouping + sitemap + CollectionPage/ItemList JSON-LD) and phase 29 `/group-buys/past` (archive-list shape). Phase 21 shipped `/part/[kind]/[slug]` detail pages with no index entry point; readers can only land on a part page via a `MentionedParts` rail from inside an article. Filed Considered because the catalog signal alone (18 records, growing) is below the threshold without a corresponding critique row asking for discovery. Re-evaluate when (a) part records cross 25, OR (b) a critique pass flags "no entry point to browse switches/keycaps/boards." Iterate-shaped while signal stays single-source.
@@ -71,6 +79,46 @@ _(previous Pending items: [7.0] content-velocity queue auto-refill promoted to p
 
 
 ## Promoted
+
+### [score 7.5] Trends Tracker Phase B — automated weekly snapshot cadence
+- promoted: 2026-05-16 via `/oversight` (this commit)
+- assigned phase: **31**
+- promotion decisions (locked at /oversight time):
+  - **Time-critical**: ISO week 21 starts Mon 2026-05-18 (2 days from promotion). `data/trends/` holds only W19 + W20. Without Phase B the signature Trends Tracker freezes at W20 after Monday with no supply mechanism. Phase 31 is the next pending phase `/march` ships.
+  - **Path locked — march.md Monday gate (not a standalone cron)**: amend `skills/march.md` Step 1 so that before the triage gate it checks `is-monday AND no data/trends/<current-ISO-week>.json`. If both, dispatch the snapshot flow inline instead of the normal march flow. This reuses the existing hourly cloud loop — no new GitHub workflow, no new secret, no `workflows: write` grant needed (the same constraint that blocked phase 25's redundant cron applies here).
+  - **Snapshot flow**: spawn `scout` with the brief in the original candidate scope (research week's switch/keycap/layout/vendor/brand movers, direction + score −100..100, 12–18 rows). Main agent writes `data/trends/<YYYY-WNN>.json` to the existing schema, runs `pnpm verify`, commits + pushes via `ship-data` conventions. May live inline in march or as `skills/ship-snapshot.md` — implementer's call at brief time.
+  - **No code-route change expected**: `/trends/tracker/[week]/page.tsx` `generateStaticParams` already reads `getAllTrendSnapshots()`; a new record auto-extends the archive + sitemap. Confirm, don't rebuild.
+  - **Verify gate**: one unit test — `getAllTrendSnapshots()` over a mocked dir returns ISO-week-descending order. Update `plan/steps/01_build_plan.md` phase 27 row + phase 31 row with the ship commit.
+  - **Brief drafting**: drafted on-demand by `/ship-a-phase` (or pre-warm via `/plan-a-phase phase 31`).
+- original signals + scope: see the archived `## Pending` row (HTML-commented in this file on promotion). User answer at /oversight: "Promote as phase 31."
+- estimated phases: 1
+- conflicts: none — Phase 27 anticipated this; URL contract already covers `/trends/tracker/[week]`; complements `bearings.md` Rule 2.
+
+### [score 6.5] A11y Phase B systematic completion — sweep remaining text-text-3 + extract PageSectionKicker
+- promoted: 2026-05-16 via `/oversight` (this commit)
+- assigned phase: **32**
+- promotion decisions (locked at /oversight time):
+  - **Why a phase, not more iterate ticks**: 21 consecutive single-instance `text-text-3` → `text-text-2` drains have shipped since Phase 26. 16 remain, 13 of them an identical inline kicker span across route `page.tsx` files. Continuing the drip costs ~13 more ticks and never extracts the duplication, so new routes keep reintroducing the bad class. A coordinated phase closes WCAG 1.4.3 site-wide in one commit and adds a shared component that prevents recurrence.
+  - **Scope locked to the original candidate's 5-step proposed scope**: create `apps/web/src/components/ui/PageSectionKicker.tsx` (+ colocated unit test); replace the 13 inline kicker spans; fix the 3 standalone instances (`ArticleCard.tsx`, `NewsletterArchive.tsx`, `PageStub.tsx`) with `text-text-2` directly; ~5–6 axe regression guards by surface family (not 16); single `pnpm verify` green gate.
+  - **Brief drafting**: drafted on-demand by `/ship-a-phase` (or pre-warm via `/plan-a-phase phase 32`).
+- original signals + scope: see the archived `## Pending` row. User answer at /oversight: "Promote as phase 32."
+- estimated phases: 1
+- conflicts: none — extends Phase 26 a11y Phase B work; no new routes or schema changes.
+
+### [score —] "Find your switch" interactive recommender — phase 33 (user-requested fun phase)
+- promoted: 2026-05-16 via `/oversight` (this commit) — direct user request: "Anything fun we can add as phase 33?"
+- assigned phase: **33**
+- the fun, on-brand pick: thock is an editorial site about a tactile hobby with an 8+ record switch catalog (`data/switches/`) reachable only via in-article rails. A short interactive **switch recommender** turns the existing catalog into a playful entry point without new data, new assets, or external services.
+- promotion decisions (locked at /oversight time):
+  - **Route**: `apps/web/src/app/quiz/switch/page.tsx` (+ `loading.tsx` wrapping skeleton in `<main id="main">` per the phase-22 landmark contract). Client component for the interactive step state; the catalog is read at build time via the existing data-runtime loader (no client data fetch).
+  - **Mechanic**: 4–5 single-select questions — sound profile (thock / clack / silent), actuation feel (linear / tactile / clicky), hand fatigue tolerance (light / medium / heavy spring), primary use (typing / gaming / mixed), budget tier (optional). Each answer applies weighted filters/scores over `getAllSwitches()`; results render the top 2–3 matches as cards linking to their existing `/part/switch/[slug]` pages (reuses phase 21 surfaces — no new detail pages).
+  - **Pure + testable**: the scoring is a pure helper in its own `.ts` module (`recommendSwitch(answers, catalog)`) with its own unit tests (deterministic ranking; "all-tactile + heavy spring" → expected top result; empty/contradictory answers → graceful fallback ordering). Component split into small files (QuizStep, ResultCard, the page) per the build-plan style guardrails — no jam-packed single file.
+  - **Discovery + SEO**: sitemap entry for `/quiz/switch`; canonical-urls + page-reads fixtures extended so the smoke walker covers it; `WebApplication` or `Quiz`-flavored JSON-LD (implementer picks the closest schema.org type at brief time). Add a small "Not sure where to start? Find your switch →" affordance somewhere honest (e.g. the future `/parts` index when it lands, or the switches-tag page) — keep it to one entry point, no nav-bar churn.
+  - **e2e**: `apps/e2e/tests/quiz.spec.ts` — walk the quiz (answer each step, assert a result card with a `/part/switch/` href appears), assert no horizontal scroll at 375px, assert JSON-LD shape.
+  - **No analytics special-casing**: page-level GTM already covers it; respects the existing `DISABLE_ANALYTICS=1` e2e gate.
+  - **Brief drafting**: drafted on-demand by `/ship-a-phase` (or pre-warm via `/plan-a-phase phase 33`). Ships after 31 + 32 in phase order — it's the fun dessert, not a priority jump.
+- estimated phases: 1
+- conflicts: none — new route only, no schema change, reuses phase-21 part pages + existing switch data.
 
 ### [score 7.0] Content-velocity queue auto-refill — make the Rule-1/2/3/4 content-gap queue self-replenishing
 - promoted: 2026-05-14 via `/oversight` (this commit)
