@@ -800,3 +800,20 @@ test('color-contrast — page-section-kicker text-text-2 (sampling)', async ({ p
     await assertKickerContrast(page, url)
   }
 })
+
+// Regression guard: color-contrast on PartIndexCard status badge for sold-out and
+// discontinued parts (audit row [a11y] #114). PartIndexCard.tsx statusTint()
+// returned text-text-3 for those statuses at text-micro (12px) — WCAG AA failure.
+// Fixed to text-text-2; /part/keycap-set renders sold-out and discontinued items.
+test('color-contrast — PartIndexCard status badge text-text-2 on /part/keycap-set', async ({ page }) => {
+  await page.goto('/part/keycap-set')
+  await page.waitForLoadState('networkidle')
+
+  const results = await new AxeBuilder({ page })
+    .withTags(WCAG_TAGS)
+    .include('[data-testid="part-index-status"]')
+    .analyze()
+
+  const contrast = results.violations.filter((v) => v.id === 'color-contrast')
+  expect(contrast, `part-index-status: ${formatViolations(contrast)}`).toHaveLength(0)
+})

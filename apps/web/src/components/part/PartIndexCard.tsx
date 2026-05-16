@@ -15,7 +15,7 @@ const STATUS_LABEL: Record<string, string> = {
 function statusTint(status: string): string {
   if (status === 'in-production' || status === 'in-stock') return 'text-accent'
   if (status === 'group-buy' || status === 'limited') return 'text-text-2'
-  return 'text-text-3'
+  return 'text-text-2'
 }
 
 function summarize(description: string, max = 140): string {
@@ -42,6 +42,7 @@ export function PartIndexCard({ part }: PartIndexCardProps): ReactElement {
           {part.record.name}
         </Mono>
         <span
+          data-testid="part-index-status"
           className={`font-mono uppercase tracking-[0.08em] text-micro ${statusTint(status)}`}
         >
           {STATUS_LABEL[status] ?? status}
