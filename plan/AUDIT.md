@@ -796,6 +796,18 @@
 - root cause: component shipped as part of the article page phase but colocated test was never added; the rail-level test covers count/null-render, not the card's rendering logic
 > **Resolved (2026-05-16):** Added 9-test suite: testid, link href, pillarLabel() eyebrow, h3 title, lede, `<time dateTime>` attribute, formatted date, author, read time. 622 e2e green. `b922976`
 
+### [x] [test] [5.6] ArticleResult — no unit tests for /search result card — addressed in 768abe7 (closes #123)
+- issue: #123
+- category: test
+- filed: 2026-05-16 by cloud /iterate audit
+- impact: 7 (ArticleResult powers the /search results list — primary discovery surface; the component has real testable rendering logic: pillarLabel() eyebrow, ISO-date slicing, data-slug/data-score attributes, tag-chip rail capped at 6, conditional tag section)
+- ease: 8 (plain functional component, no RSC, no async — straightforward testing-library)
+- score: 5.6 (impact × ease / 10)
+- pages: /search (all search visits)
+- elements: `apps/web/src/components/search/ArticleResult.tsx` — no `search/__tests__/` directory existed; component shipped as part of phase 14 (Search) with no colocated test
+- root cause: search/__tests__/ directory was never created; every other component family with rendering logic has colocated tests
+> **Resolved (2026-05-16):** Created `apps/web/src/components/search/__tests__/ArticleResult.test.tsx` with 9-test suite: testid present, data-slug attribute, data-score toFixed(3), pillarLabel() eyebrow, date slice to 10 chars, title h2 links to /article/[slug], lede paragraph, tag chips for each tag, no chips when tags empty, cap at 6. 622 e2e green. `768abe7`
+
 ---
 
 (Older findings drained as they ship. Empty until other audit
