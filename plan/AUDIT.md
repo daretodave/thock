@@ -770,6 +770,20 @@
 - elements: `apps/web/src/components/quiz/SwitchQuiz.tsx`
 > **Resolved (2026-05-16):** Added `apps/web/src/components/quiz/__tests__/SwitchQuiz.test.tsx` with 5 unit tests: initial render (Q1 + progress), option click advances step after 150ms setTimeout, completing all 4 questions shows quiz-results testid, result links route to /part/switch/*, "Start over" resets to step 0. Uses `vi.useFakeTimers()` + `act(() => vi.advanceTimersByTime(200))` to handle the auto-advance delay; mocks `scrollIntoView` for jsdom. 620 e2e green. `ffe392e`
 
+### [x] [a11y] [7.2] quiz components — text-text-3 at 14px fails WCAG AA contrast on /quiz/switch — addressed in ae1e86a (closes #121)
+- issue: #121
+- category: a11y
+- filed: 2026-05-16 by cloud /iterate audit
+- impact: 8 (quiz is the phase-33 feature with a prominent home-page CTA; option descriptions affect every question step, progress label renders on all 4 steps, "% match" renders on every result card)
+- ease: 9 (3 class substitutions + data-testid additions + regression guards)
+- score: 7.2 (impact × ease / 10)
+- wcag: 1.4.3 Contrast (Minimum) AA — 4.5:1 for normal text at 14px
+- axe impact: serious
+- pages: /quiz/switch
+- elements: `QuizStep.tsx:36` option description (text-sm text-text-3); `QuizProgress.tsx:10` progress label (text-text-3 text-sm); `ResultCard.tsx:62` match % (text-small font-mono text-text-3)
+- root cause: text-text-3 (oklch(0.55 0.006 250)) against --thock-bg (oklch(0.175)) and bg-surface (oklch(0.235)) fails WCAG AA 4.5:1 at 14px. Same root cause as Phase B drain series (#100–#115). Phase 33 components shipped after the systematic Phase B sweep.
+> **Resolved (2026-05-16):** Swapped text-text-3 → text-text-2 on all three elements. Added data-testid="quiz-option-description" (QuizStep), data-testid="quiz-progress-label" (QuizProgress), data-testid="result-card-pct" (ResultCard). Unit tests in QuizStep.test.tsx, QuizProgress.test.tsx, ResultCard.test.tsx assert text-text-2 present and text-text-3 absent. Two regression guards in a11y.spec.ts: static check on /quiz/switch for progress label + option description; interactive check clicking through 4 questions and asserting zero color-contrast on result-card-pct. 622 e2e green (+2 guards). `ae1e86a`
+
 ---
 
 (Older findings drained as they ship. Empty until other audit
