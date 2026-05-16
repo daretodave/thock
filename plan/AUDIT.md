@@ -749,6 +749,17 @@
 - elements: `TrackerSummaryGrid.tsx` (null-return guard + slot count + name propagation), `TrackerCategorySection.tsx` (null-return + data-category attribute + row order + category label)
 > **Resolved (2026-05-16):** Added `TrackerSummaryGrid.test.tsx` and `TrackerCategorySection.test.tsx` in `apps/web/src/components/tracker/__tests__/`. TrackerSummaryGrid tests: null on empty snapshot, grid renders on slot fill, card count matches slot count, name content propagates. TrackerCategorySection tests: null on empty rows, testid present + data-category attribute wired, all tracker-row items render in order, category heading label ("vendor movers") renders. 606 e2e green. `3edaf73`
 
+### [x] [content] [3.0] mode-sonnet-r2-group-buy-coverage — 479 words, below 600-word quality threshold — addressed in f9d8bc5 (closes #119)
+- issue: #119
+- category: content
+- filed: 2026-05-16 by cloud /iterate audit
+- impact: 5 (live group-buy companion article shown in /group-buys feed and /news pillar; thin article undersells the board for R1-unfamiliar R2 buyers)
+- ease: 6 (content-curator expansion of existing article)
+- score: 3.0 (impact × ease / 10)
+- pages: /article/mode-sonnet-r2-group-buy-coverage
+- root cause: article was shipped as a concise news-style announcement; body covered timeline shift and accent-weight palette (479 words) but lacked any contextual section on the Sonnet chassis for first-time buyers.
+> **Resolved (2026-05-16):** Added "The Sonnet, briefly" section (~200 words) covering gasket mount, PC plate default + brass/FR4 upgrade options, acoustic character (gasket + PC = cushioned, medium-thocky), and a callout on the 9-degree angle and no adjustable feet. Updated updatedAt to 2026-05-16. Article now at 764 words. 620 e2e green. `f9d8bc5`
+
 ---
 
 (Older findings drained as they ship. Empty until other audit
