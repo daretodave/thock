@@ -1,0 +1,45 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-17T00:00:00.000Z",
+  "commit": "f8cb3e443c5a8c524468c8ac835874e9953757fd",
+  "kind": "hero-art",
+  "source": null,
+  "article_slug": "dcs-olivetti-comeback",
+  "article_pillar": "news",
+  "splash_color": {
+    "name": "ochre",
+    "hex": "#D4A853",
+    "secondary": "#BFA67A"
+  },
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": [],
+  "outputs": [
+    "apps/web/public/hero-art/dcs-olivetti-comeback.svg"
+  ],
+  "design_notes": {
+    "subject": "Five DCS-profile keycap cross-sections in a horizontal row",
+    "profile_traits_encoded": [
+      "Uniform height across all five caps (230px on 750px canvas) — the primary DCS identifier",
+      "Cylindrical top scoop: elliptical arc from corner to corner, dipping 28px at center",
+      "Trapezoidal silhouette: sides taper 12px inward per side from base to top",
+      "Legend slots: two horizontal olive (#6B7A5E) inset rects in the upper third"
+    ],
+    "colorway": {
+      "cap_body_fill": "#EDE8D5 (Olivetti cream, 72% opacity)",
+      "legend_slots": "#6B7A5E (olive/sage, 82% opacity primary, 38% secondary)",
+      "scoop_arc_accent": "#BFA67A (warm ochre, 2.5px)",
+      "focal_scoop_accent": "#D4A853 (ochre, 2.8px on center cap)",
+      "stroke_base": "#9c9286 (warm grey, from --kh-text-2)"
+    },
+    "composition": [
+      "Uniform-height bracket on left edge: two horizontal ticks connected by vertical arm",
+      "Focal ellipse wash beneath center cap in ochre",
+      "Bronze theme dot at upper-right: #BFA67A circle r=10",
+      "Two olive accent dots flanking the theme dot",
+      "Faint inter-cap seam lines suggest row continuity",
+      "Baseline tick marks at each cap center"
+    ]
+  },
+  "warnings": []
+}

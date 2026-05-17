@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="#9c9286" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — DCS Olivetti keycap set comeback, five DCS-profile cross-sections in Olivetti cream and olive colorway</title>
+
+  <!-- ── BACKGROUND WASH ─────────────────────────────────────────────────────
+       Warm-cream low-opacity wash spanning the keycap cluster.
+       Echoes the Olivetti cream body color without filling the whole canvas.
+  -->
+  <ellipse cx="600" cy="440" rx="470" ry="180" fill="#EDE8D5" fill-opacity="0.18" stroke="none"/>
+
+  <!-- ── BASELINE ────────────────────────────────────────────────────────────
+       The shared baseline all five caps rest on.
+  -->
+  <line x1="110" y1="570" x2="1090" y2="570" stroke="#9c9286" stroke-opacity="0.55"/>
+
+  <!-- ── HEIGHT REFERENCE LINES ─────────────────────────────────────────────
+       DCS is a uniform-height profile — one horizontal rail at cap-top height,
+       one at the scoop nadir, and a faint top rail for the cylindrical crown.
+       These make the "all rows same height" characteristic legible.
+  -->
+  <!-- Top crown rail (uniform across all caps) -->
+  <line x1="110" y1="340" x2="1090" y2="340" stroke-dasharray="4 7" stroke="#9c9286" stroke-opacity="0.22"/>
+  <!-- Scoop nadir rail — DCS cylindrical scoop bottoms out at a consistent depth -->
+  <line x1="110" y1="368" x2="1090" y2="368" stroke-dasharray="2 8" stroke="#9c9286" stroke-opacity="0.14"/>
+
+  <!-- ── FIVE DCS KEYCAP CROSS-SECTIONS ─────────────────────────────────────
+       DCS profile characteristics encoded in the geometry:
+         • Uniform height ~230px (all rows identical — the defining DCS trait)
+         • Sides taper inward slightly from base to top (~12px each side)
+         • Top surface is cylindrical: flat front-to-back in profile view,
+           shown as a gentle elliptical arc scooping down 28px at center
+         • Legend slot: a thin horizontal inset groove near the top third,
+           filled with olive (#6B7A5E) to suggest printed legends
+         • Body fill: cream (#EDE8D5) at low opacity over the warm-grey stroke
+
+       Cap positions (center x): 180, 380, 580, 780, 980
+       Base width: 155px. Top width: 131px (12px taper per side).
+       Cap height: 230px. Base y: 570. Top y: 340.
+  -->
+
+  <!-- ── CAP 1 — center x=180 ──────────────────────────────────────────────-->
+  <g id="cap-1">
+    <!-- Body fill -->
+    <path d="M 102 570 L 114 340 L 246 340 L 258 570 Z" fill="#EDE8D5" fill-opacity="0.72" stroke="none"/>
+    <!-- Outer shell (trapezoidal silhouette) -->
+    <path d="M 102 570 L 114 340 L 246 340 L 258 570 Z" stroke="#9c9286" stroke-width="2"/>
+    <!-- Cylindrical top surface — elliptical arc scooping from the two top corners -->
+    <!-- The arc dips 28px at center, giving the cylinder-across-the-finger feel -->
+    <path d="M 114 340 Q 180 368 246 340" stroke="#BFA67A" stroke-width="2.5" fill="none"/>
+    <!-- Crown highlight — a tighter ochre arc at the scoop high point, rim light -->
+    <path d="M 127 340 Q 180 356 233 340" stroke="#D4A853" stroke-width="1.5" fill="none" stroke-opacity="0.55"/>
+    <!-- Legend slot — olive horizontal inset, positioned upper-third of cap body -->
+    <!-- Slot sits ~60px below the top rail, inset 10px from each side wall at that height -->
+    <!-- At y=410: left wall x ≈ 114 + (410-340)/(570-340)*(102-114) = 114 + 70/230*(-12) ≈ 111 -->
+    <!--           right wall x ≈ 246 + 70/230*(258-246) = 246 + 3.65 ≈ 249 -->
+    <rect x="121" y="408" width="118" height="11" rx="1.5" fill="#6B7A5E" fill-opacity="0.82" stroke="none"/>
+    <!-- Sub-legend slot — a second narrower slot lower, for dual-legend suggestion -->
+    <rect x="130" y="430" width="100" height="7" rx="1" fill="#6B7A5E" fill-opacity="0.38" stroke="none"/>
+    <!-- Left-wall depth tick at base — subtle 3-D hint -->
+    <line x1="102" y1="570" x2="108" y2="565" stroke="#9c9286" stroke-opacity="0.38"/>
+    <!-- Right-wall depth tick -->
+    <line x1="258" y1="570" x2="252" y2="565" stroke="#9c9286" stroke-opacity="0.38"/>
+  </g>
+
+  <!-- ── CAP 2 — center x=380 ──────────────────────────────────────────────-->
+  <g id="cap-2">
+    <path d="M 302 570 L 314 340 L 446 340 L 458 570 Z" fill="#EDE8D5" fill-opacity="0.72" stroke="none"/>
+    <path d="M 302 570 L 314 340 L 446 340 L 458 570 Z" stroke="#9c9286" stroke-width="2"/>
+    <path d="M 314 340 Q 380 368 446 340" stroke="#BFA67A" stroke-width="2.5" fill="none"/>
+    <path d="M 327 340 Q 380 356 433 340" stroke="#D4A853" stroke-width="1.5" fill="none" stroke-opacity="0.55"/>
+    <rect x="321" y="408" width="118" height="11" rx="1.5" fill="#6B7A5E" fill-opacity="0.82" stroke="none"/>
+    <rect x="330" y="430" width="100" height="7" rx="1" fill="#6B7A5E" fill-opacity="0.38" stroke="none"/>
+    <line x1="302" y1="570" x2="308" y2="565" stroke="#9c9286" stroke-opacity="0.38"/>
+    <line x1="458" y1="570" x2="452" y2="565" stroke="#9c9286" stroke-opacity="0.38"/>
+  </g>
+
+  <!-- ── CAP 3 (center, focal) — center x=580 ───────────────────────────────
+       The center cap is the visual anchor — ochre wash behind it, slightly
+       stronger scoop accent, larger splash dot alignment above.
+  -->
+  <g id="cap-3">
+    <!-- Behind-cap focal wash — ochre, very low opacity -->
+    <rect x="502" y="338" width="156" height="234" rx="3" fill="#D4A853" fill-opacity="0.08" stroke="none"/>
+    <path d="M 502 570 L 514 340 L 646 340 L 658 570 Z" fill="#EDE8D5" fill-opacity="0.76" stroke="none"/>
+    <path d="M 502 570 L 514 340 L 646 340 L 658 570 Z" stroke="#9c9286" stroke-width="2"/>
+    <!-- Scoop arc — slightly warmer on focal cap -->
+    <path d="M 514 340 Q 580 368 646 340" stroke="#D4A853" stroke-width="2.8" fill="none"/>
+    <path d="M 527 340 Q 580 356 633 340" stroke="#D4A853" stroke-width="1.5" fill="none" stroke-opacity="0.65"/>
+    <!-- Legend slots — olive, matching the other caps -->
+    <rect x="521" y="408" width="118" height="11" rx="1.5" fill="#6B7A5E" fill-opacity="0.88" stroke="none"/>
+    <rect x="530" y="430" width="100" height="7" rx="1" fill="#6B7A5E" fill-opacity="0.42" stroke="none"/>
+    <!-- Accent border hairline on focal cap shell — ochre, very faint -->
+    <path d="M 502 570 L 514 340 L 646 340 L 658 570 Z" stroke="#D4A853" stroke-width="0.8" stroke-opacity="0.35"/>
+    <line x1="502" y1="570" x2="508" y2="565" stroke="#9c9286" stroke-opacity="0.38"/>
+    <line x1="658" y1="570" x2="652" y2="565" stroke="#9c9286" stroke-opacity="0.38"/>
+  </g>
+
+  <!-- ── CAP 4 — center x=780 ──────────────────────────────────────────────-->
+  <g id="cap-4">
+    <path d="M 702 570 L 714 340 L 846 340 L 858 570 Z" fill="#EDE8D5" fill-opacity="0.72" stroke="none"/>
+    <path d="M 702 570 L 714 340 L 846 340 L 858 570 Z" stroke="#9c9286" stroke-width="2"/>
+    <path d="M 714 340 Q 780 368 846 340" stroke="#BFA67A" stroke-width="2.5" fill="none"/>
+    <path d="M 727 340 Q 780 356 833 340" stroke="#D4A853" stroke-width="1.5" fill="none" stroke-opacity="0.55"/>
+    <rect x="721" y="408" width="118" height="11" rx="1.5" fill="#6B7A5E" fill-opacity="0.82" stroke="none"/>
+    <rect x="730" y="430" width="100" height="7" rx="1" fill="#6B7A5E" fill-opacity="0.38" stroke="none"/>
+    <line x1="702" y1="570" x2="708" y2="565" stroke="#9c9286" stroke-opacity="0.38"/>
+    <line x1="858" y1="570" x2="852" y2="565" stroke="#9c9286" stroke-opacity="0.38"/>
+  </g>
+
+  <!-- ── CAP 5 — center x=980 ──────────────────────────────────────────────-->
+  <g id="cap-5">
+    <path d="M 902 570 L 914 340 L 1046 340 L 1058 570 Z" fill="#EDE8D5" fill-opacity="0.72" stroke="none"/>
+    <path d="M 902 570 L 914 340 L 1046 340 L 1058 570 Z" stroke="#9c9286" stroke-width="2"/>
+    <path d="M 914 340 Q 980 368 1046 340" stroke="#BFA67A" stroke-width="2.5" fill="none"/>
+    <path d="M 927 340 Q 980 356 1033 340" stroke="#D4A853" stroke-width="1.5" fill="none" stroke-opacity="0.55"/>
+    <rect x="921" y="408" width="118" height="11" rx="1.5" fill="#6B7A5E" fill-opacity="0.82" stroke="none"/>
+    <rect x="930" y="430" width="100" height="7" rx="1" fill="#6B7A5E" fill-opacity="0.38" stroke="none"/>
+    <line x1="902" y1="570" x2="908" y2="565" stroke="#9c9286" stroke-opacity="0.38"/>
+    <line x1="1058" y1="570" x2="1052" y2="565" stroke="#9c9286" stroke-opacity="0.38"/>
+  </g>
+
+  <!-- ── UNIFORM-HEIGHT CALLOUT BRACKET ─────────────────────────────────────
+       A minimal vertical bracket on the left edge annotating the equal height
+       of all five caps — the defining DCS characteristic.
+       Two horizontal ticks connected by a vertical line, sitting just left
+       of cap 1. No text — purely gestural.
+  -->
+  <g stroke="#BFA67A" stroke-opacity="0.60" stroke-width="1.5">
+    <!-- Top tick (at crown level) -->
+    <line x1="75" y1="340" x2="90" y2="340"/>
+    <!-- Bottom tick (at baseline) -->
+    <line x1="75" y1="570" x2="90" y2="570"/>
+    <!-- Vertical connecting arm -->
+    <line x1="78" y1="340" x2="78" y2="570"/>
+    <!-- Center mark at mid-point of the arm — visual breath -->
+    <line x1="75" y1="455" x2="83" y2="455"/>
+  </g>
+
+  <!-- ── SPLASH DOT — bronze theme ornamental anchor ─────────────────────────
+       Small warm-bronze circle at upper-right margin. Family anchor.
+       Color: oklch(0.80 0.135 75) → approximately #c4933f / D4A853 range.
+  -->
+  <circle cx="1128" cy="88" r="10" fill="#BFA67A" fill-opacity="0.85" stroke="none"/>
+
+  <!-- ── SECONDARY ACCENT DOTS ──────────────────────────────────────────────
+       Two small olive dots flanking the splash dot — Olivetti colorway echo.
+  -->
+  <circle cx="1107" cy="104" r="4" fill="#6B7A5E" fill-opacity="0.55" stroke="none"/>
+  <circle cx="1149" cy="104" r="4" fill="#6B7A5E" fill-opacity="0.55" stroke="none"/>
+
+  <!-- ── OCHRE FOCAL WASH ELLIPSE ───────────────────────────────────────────
+       Low-opacity ellipse centered under the middle cap, echoing the
+       article's splash color. Grounds the composition.
+  -->
+  <ellipse cx="580" cy="570" rx="95" ry="12" fill="#D4A853" fill-opacity="0.20" stroke="none"/>
+
+  <!-- ── BASELINE TICK MARKS ────────────────────────────────────────────────
+       Faint ticks beneath each cap — suggest a ruler / diagram register.
+  -->
+  <g stroke="#9c9286" stroke-opacity="0.30" stroke-width="1">
+    <line x1="180" y1="570" x2="180" y2="580"/>
+    <line x1="380" y1="570" x2="380" y2="580"/>
+    <line x1="580" y1="570" x2="580" y2="585"/>
+    <line x1="780" y1="570" x2="780" y2="580"/>
+    <line x1="980" y1="570" x2="980" y2="580"/>
+  </g>
+
+  <!-- ── FAINT INTER-CAP SEAM LINES ─────────────────────────────────────────
+       DCS caps in a row sit adjacent on the keyboard. Very faint vertical
+       dividers between the caps at baseline level suggest the row-as-unit.
+  -->
+  <g stroke="#9c9286" stroke-opacity="0.16" stroke-width="1" stroke-dasharray="2 5">
+    <line x1="280" y1="570" x2="302" y2="340"/>
+    <line x1="480" y1="570" x2="502" y2="340"/>
+    <line x1="680" y1="570" x2="702" y2="340"/>
+    <line x1="880" y1="570" x2="902" y2="340"/>
+  </g>
+
+</svg>

@@ -71,6 +71,7 @@
     { "slug": "nylon", "name": "Nylon", "category": "material" },
     { "slug": "topre", "name": "Topre", "category": "brand" },
     { "slug": "hhkb", "name": "HHKB", "category": "brand" },
-    { "slug": "electrocapacitive", "name": "Electrocapacitive", "category": "switch" }
+    { "slug": "electrocapacitive", "name": "Electrocapacitive", "category": "switch" },
+    { "slug": "dcs", "name": "DCS", "category": "profile" }
   ]
 }

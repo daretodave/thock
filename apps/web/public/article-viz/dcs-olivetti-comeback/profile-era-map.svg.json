@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-17T00:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "dcs-olivetti-comeback",
+  "article_pillar": "trends",
+  "section_anchor": "What this says about Cherry-profile fatigue",
+  "brief_summary": "A horizontal four-panel era strip tracing the profile dominance arc from the typewriter era through to 2026. Panels: typewriter era (pre-2008, tall cylindrical profiles, Olivetti and IBM), early hobby era (2008–2015, Das Keyboard and PMK, DCS dominant), Cherry consolidation (2016–2023, GMK rise, clone market follows), and the current small rebellion (2024–2026, DCS Olivetti +18 W19, experienced builders rotating out). The final panel is highlighted in coral to mark the current state.",
+  "target": "apps/web/public/article-viz/dcs-olivetti-comeback/profile-era-map.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "apps/web/src/content/articles/dcs-olivetti-comeback.mdx:What DCS is and why it disappeared — 'Das Keyboard used DCS keycaps through much of its early line, which is how DCS became the de facto profile for a generation of users who entered the hobby before the group-buy economy matured. Pimp My Keyboard ran DCS sets regularly through the early-to-mid 2010s. Then the GMK era arrived.'",
+    "apps/web/src/content/articles/dcs-olivetti-comeback.mdx:What this says about Cherry-profile fatigue — 'Cherry profile's dominance was built on three practical advantages. First, GMK quality... Second, clone market depth... Third, compatibility'",
+    "apps/web/src/content/articles/dcs-olivetti-comeback.mdx:Eight weeks on the tracker — 'The Trends Tracker registered DCS Olivetti at +18 direction up in W19 (May 4–10, 2026)'"
+  ],
+  "outputs": ["apps/web/public/article-viz/dcs-olivetti-comeback/profile-era-map.svg"],
+  "warnings": []
+}

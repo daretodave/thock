@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>DCS Olivetti tracker score from W12 through W19 — values 4, 6, 9, 12, 14, 16, 17, 18 — a steady upward climb over eight weeks</title>
+
+  <!-- Title -->
+  <text x="600" y="68" font-family="Newsreader, serif" font-size="19" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.9">DCS Olivetti — tracker movement, W12 → W19</text>
+
+  <!-- Y-axis baseline at score=0 maps to y=360; top (+20) at y=180 -->
+  <!-- Scale: each point = 9px; 0 → y=360, 20 → y=180 -->
+
+  <!-- Horizontal grid lines -->
+  <line x1="160" y1="360" x2="1060" y2="360" stroke-opacity="0.45"/>
+  <line x1="160" y1="270" x2="1060" y2="270" stroke-opacity="0.18"/>
+  <line x1="160" y1="180" x2="1060" y2="180" stroke-opacity="0.18"/>
+
+  <!-- Y-axis labels -->
+  <text x="148" y="364" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.5">0</text>
+  <text x="148" y="274" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.4">+10</text>
+  <text x="148" y="184" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.4">+20</text>
+
+  <!-- X positions for 8 weeks equally spaced from x=200 to x=1020 -->
+  <!-- W12→W19: x = 200, 314, 429, 543, 657, 771, 886, 1000 -->
+  <!-- Score values: 4, 6, 9, 12, 14, 16, 17, 18 -->
+  <!-- y = 360 - (score * 9) -->
+  <!-- 4→324, 6→306, 9→279, 12→252, 14→234, 16→216, 17→207, 18→198 -->
+
+  <!-- Coral data line -->
+  <polyline
+    points="200,324 314,306 429,279 543,252 657,234 771,216 886,207 1000,198"
+    stroke="oklch(0.68 0.165 28)"
+    stroke-width="3"
+    stroke-opacity="0.95"
+    fill="none"
+  />
+
+  <!-- Data dots — small grey on non-terminal weeks -->
+  <circle cx="200" cy="324" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.5"/>
+  <circle cx="314" cy="306" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.5"/>
+  <circle cx="429" cy="279" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.5"/>
+  <circle cx="543" cy="252" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.5"/>
+  <circle cx="657" cy="234" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.5"/>
+  <circle cx="771" cy="216" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.5"/>
+  <circle cx="886" cy="207" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.5"/>
+
+  <!-- Terminal dot — W19, circled and labelled -->
+  <circle cx="1000" cy="198" r="9" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.9"/>
+  <text x="1020" y="194" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.68 0.165 28)" stroke="none" font-weight="600">+18 ↑</text>
+  <text x="1020" y="212" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">W19</text>
+
+  <!-- GB close marker — April 13 falls roughly at W15, x=543 -->
+  <line x1="543" y1="170" x2="543" y2="380" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.22" stroke-dasharray="4 4"/>
+  <text x="543" y="158" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">GB closes</text>
+  <text x="543" y="171" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">Apr 13</text>
+
+  <!-- X-axis week labels -->
+  <text x="200" y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">W12</text>
+  <text x="314" y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">W13</text>
+  <text x="429" y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">W14</text>
+  <text x="543" y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">W15</text>
+  <text x="657" y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">W16</text>
+  <text x="771" y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">W17</text>
+  <text x="886" y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">W18</text>
+  <text x="1000" y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.9">W19</text>
+
+  <!-- Caption annotation -->
+  <text x="600" y="440" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">interest continued climbing after the April 13 group-buy close</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

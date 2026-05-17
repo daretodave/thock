@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-17T00:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "dcs-olivetti-comeback",
+  "article_pillar": "trends",
+  "section_anchor": "What DCS is and why it disappeared",
+  "brief_summary": "Side-by-side keycap profile silhouettes of DCS (left) and Cherry (right) drawn at consistent scale on a shared baseline. DCS is shown taller at roughly 11mm with steeper sidewalls and a more pronounced cylindrical scoop highlighted in coral; Cherry is shown lower at roughly 8mm with gentler walls and a shallower scoop. Labels name the manufacturing era and catalog context for each profile.",
+  "target": "apps/web/public/article-viz/dcs-olivetti-comeback/dcs-vs-cherry-profile.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "apps/web/src/content/articles/dcs-olivetti-comeback.mdx:What DCS is and why it disappeared — 'DCS is a cylindrical, sculpted profile manufactured by Signature Plastics and sold through Pimp My Keyboard. Height-wise it sits between Cherry and OEM — taller than Cherry's approximately 8mm, with steeper sidewalls and a more pronounced cylindrical scoop'",
+    "apps/web/src/content/articles/dcs-olivetti-comeback.mdx:What DCS is and why it disappeared — 'Das Keyboard used DCS keycaps through much of its early line'",
+    "apps/web/src/content/articles/dcs-olivetti-comeback.mdx:What DCS is and why it disappeared — 'GMK manufactures in Cherry profile, and GMK became the gold standard for thick doubleshot ABS quality'"
+  ],
+  "outputs": ["apps/web/public/article-viz/dcs-olivetti-comeback/dcs-vs-cherry-profile.svg"],
+  "warnings": []
+}

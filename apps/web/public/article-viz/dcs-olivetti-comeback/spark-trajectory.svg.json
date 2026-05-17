@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-17T00:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "dcs-olivetti-comeback",
+  "article_pillar": "trends",
+  "section_anchor": "Eight weeks on the tracker",
+  "brief_summary": "A coral line chart plotting DCS Olivetti's eight-week tracker score trajectory from W12 through W19 (values 4, 6, 9, 12, 14, 16, 17, 18). A vertical dashed marker at W15 indicates the April 13 group-buy close, showing interest continued climbing after the buy shut. Terminal data point at W19 is circled and labelled +18 direction up.",
+  "target": "apps/web/public/article-viz/dcs-olivetti-comeback/spark-trajectory.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "apps/web/src/content/articles/dcs-olivetti-comeback.mdx:Eight weeks on the tracker — 'W19 spark trajectory: [4, 6, 9, 12, 14, 16, 17, 18] — steady upward climb over 8 weeks'",
+    "apps/web/src/content/articles/dcs-olivetti-comeback.mdx:Eight weeks on the tracker — 'The group buy closed April 13'",
+    "apps/web/src/content/articles/dcs-olivetti-comeback.mdx:Eight weeks on the tracker — 'The Trends Tracker registered DCS Olivetti at +18 direction up in W19 (May 4–10, 2026)'"
+  ],
+  "outputs": ["apps/web/public/article-viz/dcs-olivetti-comeback/spark-trajectory.svg"],
+  "warnings": []
+}

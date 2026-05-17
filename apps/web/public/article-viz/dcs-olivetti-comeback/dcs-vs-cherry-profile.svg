@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>DCS and Cherry keycap profile silhouettes drawn side by side at consistent scale — DCS taller with steeper sidewalls and a more pronounced cylindrical scoop; Cherry lower and shallower</title>
+
+  <!-- Title -->
+  <text x="600" y="70" font-family="Newsreader, serif" font-size="19" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.9">profile comparison — DCS vs Cherry</text>
+
+  <!-- Shared baseline -->
+  <line x1="120" y1="390" x2="1080" y2="390" stroke-opacity="0.4"/>
+  <text x="116" y="394" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.45">PCB</text>
+
+  <!-- ═════ DCS — left side ═════ -->
+  <!-- DCS: ~11mm, steeper walls, more pronounced cylindrical scoop -->
+  <!-- Cap body: bottom at y=390, top at roughly y=250, width ~230 centered at x=350 -->
+  <g>
+    <text x="350" y="112" font-family="Newsreader, serif" font-size="24" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">DCS</text>
+    <text x="350" y="137" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">~11mm · cylindrical · sculpted</text>
+    <text x="350" y="155" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">Signature Plastics</text>
+
+    <!-- DCS cap silhouette — taller with steeper side walls -->
+    <!-- Side walls steeper: bottom corners at (225,390)(475,390), top corners at (240,252)(460,252) -->
+    <path d="M 225 390 L 240 252 C 243 248 255 230 265 224 Q 350 214 435 224 C 445 230 457 248 460 252 L 475 390 Z"
+      stroke="oklch(0.78 0.005 90)" stroke-width="2"/>
+
+    <!-- DCS cylindrical scoop on top — more pronounced arc -->
+    <path d="M 272 236 Q 350 218 428 236"
+      stroke="oklch(0.68 0.165 28)" stroke-width="2.5" stroke-opacity="0.95"/>
+
+    <!-- Height leader -->
+    <g stroke-opacity="0.35">
+      <line x1="492" y1="390" x2="504" y2="390"/>
+      <line x1="492" y1="252" x2="504" y2="252"/>
+      <line x1="498" y1="252" x2="498" y2="390"/>
+    </g>
+    <text x="510" y="328" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.45">~11mm</text>
+
+    <!-- Descriptors -->
+    <text x="350" y="428" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">taller · steeper walls · fuller sound</text>
+    <text x="350" y="447" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.85">Das Keyboard, PMK era 2008–2015</text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="600" y1="170" x2="600" y2="405" stroke-opacity="0.18" stroke-dasharray="3 5"/>
+
+  <!-- ═════ Cherry — right side ═════ -->
+  <!-- Cherry: ~8mm, gentle side walls, shallow cylindrical scoop -->
+  <!-- Cap body: bottom at y=390, top at roughly y=278, width ~230 centered at x=850 -->
+  <g>
+    <text x="850" y="112" font-family="Newsreader, serif" font-size="24" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Cherry</text>
+    <text x="850" y="137" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">~8mm · cylindrical · sculpted</text>
+    <text x="850" y="155" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">GMK, ePBT, most group buys</text>
+
+    <!-- Cherry cap silhouette — lower, gentler walls -->
+    <path d="M 725 390 L 733 278 C 734 274 744 262 754 258 Q 850 250 946 258 C 956 262 966 274 967 278 L 975 390 Z"
+      stroke="oklch(0.78 0.005 90)" stroke-width="2"/>
+
+    <!-- Cherry cylindrical scoop — shallower arc -->
+    <path d="M 762 264 Q 850 256 938 264"
+      stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-opacity="0.6"/>
+
+    <!-- Height leader -->
+    <g stroke-opacity="0.35">
+      <line x1="991" y1="390" x2="1003" y2="390"/>
+      <line x1="991" y1="278" x2="1003" y2="278"/>
+      <line x1="997" y1="278" x2="997" y2="390"/>
+    </g>
+    <text x="1009" y="340" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.45">~8mm</text>
+
+    <!-- Descriptors -->
+    <text x="850" y="428" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">lower · focused sound · broad catalog</text>
+    <text x="850" y="447" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">GMK standard · dominant since ~2016</text>
+  </g>
+
+  <!-- Shared bottom caption -->
+  <text x="600" y="490" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">same cylindrical family — different height, different character</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>
