@@ -922,3 +922,13 @@ passes accumulate signals.)
 - issue: [mirror-failed: 2026-05-17T00:00:00Z]
 - elements: `packages/data/src/loaders/boards.ts` (getAllBoards, getBoardBySlug) + `packages/data/src/loaders/keycap-sets.ts` (getAllKeycapSets, getKeycapSetBySlug)
 > **Resolved (2026-05-17):** Added `packages/data/src/__tests__/loaders/boards.test.ts` (4 tests: seed present → mode-sonnet, sorted-by-slug, known slug resolves to Mode Sonnet, unknown slug → null) and `packages/data/src/__tests__/loaders/keycap-sets.test.ts` (4 tests: seed present → gmk-olivia, sorted-by-slug, known slug resolves to GMK Olivia, unknown slug → null). Pattern identical to switches.test.ts. 631 e2e green. `37a81d5`
+
+### [x] [test] [4.8] getReferencedParts() — no unit tests for parts loader — addressed in 220cddc (closes #131)
+- category: test
+- filed: 2026-05-17 by cloud /iterate audit
+- impact: 6 (getReferencedParts() powers MentionedPartsRail on all 40+ article pages; dispatch logic has 3 kind branches + null-drop guard + order preservation — no regression guard existed)
+- ease: 8 (pure function, real seed slugs usable directly, no mocking needed)
+- score: 4.8 (impact × ease / 10)
+- issue: #131
+- elements: `packages/content/src/loaders/parts.ts` — getReferencedParts() (switch/keycap-set/board dispatch, null-drop, frontmatter-order preservation)
+> **Resolved (2026-05-17):** Added `packages/content/src/__tests__/loaders/parts.test.ts` with 6 tests: empty mentionedParts → []; switch ref (gateron-oil-king) resolves with correct id/kind/slug/record; keycap-set ref (gmk-olivia) resolves; board ref (mode-sonnet) resolves; unknown slug dropped → []; mixed list with unresolvable entry preserves frontmatter order for the resolved entries. 631 e2e green. `220cddc`
