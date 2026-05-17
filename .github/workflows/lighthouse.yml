@@ -3,10 +3,15 @@ name: lighthouse
 # Lighthouse CI on every Vercel preview deploy.
 #
 # Trigger: GitHub's `deployment_status` event, fired when Vercel
-# reports a deployment outcome. We filter to success + Preview so
-# we don't run twice (in-progress / success) and don't run against
-# production deploys (production scores get covered by the Vercel
-# dashboard already).
+# reports a deployment outcome. thock is trunk-based — the march
+# loop commits straight to `main`, which Vercel deploys as
+# Production; there are no PRs, so no Preview deploys ever exist.
+# We therefore filter to success + Production (filtering to Preview
+# meant this workflow skipped 100% of runs and never once
+# executed — fixed 2026-05-17). Vercel's dashboard shows Speed
+# Insights, not Lighthouse-CI assertion gating against
+# .lighthouserc.json, so running here on Production is real signal,
+# not a double-count.
 #
 # Asserts: see .lighthouserc.json — a11y / best-practices / SEO are
 # hard errors at ≥95; performance is a warn at ≥90 because mobile-
@@ -35,12 +40,13 @@ concurrency:
 jobs:
   lighthouse:
     # Vercel emits `deployment_status` with state in {in_progress,
-    # success, error, failure}. We only act on `success` for a
-    # Preview environment — production scores are surfaced elsewhere
-    # and re-running on Production would double-count.
+    # success, error, failure}. We act only on `success` for the
+    # Production environment — thock has no Preview deploys (trunk-
+    # based loop), so Production is the only deploy that exists and
+    # the only place these assertions can run.
     if: >
       github.event.deployment_status.state == 'success' &&
-      github.event.deployment.environment == 'Preview'
+      github.event.deployment.environment == 'Production'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
