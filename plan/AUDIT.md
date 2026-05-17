@@ -852,3 +852,13 @@ passes accumulate signals.)
 - score: 4.8 (impact × ease / 10)
 - elements: `apps/web/src/components/sources/CitationIndex.tsx` — buildCitationIndex() (dedup by href, first-non-null text, per-entry article sort by publishedAt desc, output sort by most-recent-article desc) + CitationIndex component (empty state vs populated list)
 > **Resolved (2026-05-16):** Added `apps/web/src/components/sources/__tests__/CitationIndex.test.tsx` with 11 tests: 6 for buildCitationIndex() (empty input, single pair, same-article dedup, multi-article publishedAt-desc sort, first-non-null text wins, output sort) and 5 for CitationIndex component (empty state, row count, data-href attribute, host span, article link href). 622 e2e green. `36da3f3`
+
+### [x] [test] [4.8] ideas helpers — pickBuildOfTheWeek + isoWeekNumber lack unit tests — addressed in 5ccb872 (closes #128)
+- issue: #128
+- category: test
+- filed: 2026-05-17 by cloud /iterate audit
+- impact: 6 (pickBuildOfTheWeek selects the ideas pillar's featured Build-of-the-Week slot; isoWeekNumber drives the "Week N" kicker display — both surfaces on the ideas homepage with zero prior coverage for isoWeekNumber)
+- ease: 8 (two pure functions with no async, no RSC, no external deps)
+- score: 4.8 (impact × ease / 10)
+- elements: `apps/web/src/app/ideas/helpers.ts` — pickBuildOfTheWeek() (filter by tag, sort by publishedAt desc) + isoWeekNumber() (ISO 8601 week calculation with year-boundary edge cases)
+> **Resolved (2026-05-17):** Added `apps/web/src/app/ideas/__tests__/helpers.test.ts` with 11 tests: 5 for pickBuildOfTheWeek (empty input, no tagged articles, single tagged article, newest publishedAt wins, no mutation) and 6 for isoWeekNumber (invalid → 0, W20 Monday boundary, W20 Sunday, W21 Monday, year-boundary 2025-12-29 → W01 of 2026, Jan 1 Thu → W01). 622 e2e green. `5ccb872`
