@@ -872,3 +872,14 @@ passes accumulate signals.)
 - score: 4.8 (impact × ease / 10)
 - elements: `apps/web/src/app/ideas/helpers.ts` — pickBuildOfTheWeek() (filter by tag, sort by publishedAt desc) + isoWeekNumber() (ISO 8601 week calculation with year-boundary edge cases)
 > **Resolved (2026-05-17):** Added `apps/web/src/app/ideas/__tests__/helpers.test.ts` with 11 tests: 5 for pickBuildOfTheWeek (empty input, no tagged articles, single tagged article, newest publishedAt wins, no mutation) and 6 for isoWeekNumber (invalid → 0, W20 Monday boundary, W20 Sunday, W21 Monday, year-boundary 2025-12-29 → W01 of 2026, Jan 1 Thu → W01). 622 e2e green. `5ccb872`
+
+### [x] [3.0] trends tracker — DCS Olivetti (W19, +18) lacks Rule 2 articleSlug linkage — addressed in 4d61b74 (closes #130)
+- issue: #130
+- category: content-gaps
+- filed: 2026-05-17 by cloud /iterate audit (Rule 2 scan)
+- impact: 6 (W19 non-flat tracker row without editorial coverage; 14d threshold breaches 2026-05-18)
+- ease: 5 (one new article + hero SVG + data/trends W19 update)
+- score: 3.0 (impact × ease / 10)
+- rule: bearings.md Rule 2 — tracker linkage within 14d of ISO week start
+- data: data/trends/2026-W19.json row "DCS Olivetti" direction=up score=18, articleSlug was null
+> **Resolved (2026-05-17):** Shipped `apps/web/src/content/articles/dcs-olivetti-comeback.mdx` (~1,050 words, trends pillar, publishedAt 2026-05-14T00:00:00.000Z). Hero SVG at `/hero-art/dcs-olivetti-comeback.svg`. 3 InlineViz SVGs (spark trajectory, DCS vs Cherry profile comparison, profile era map). New tag `dcs` (profile) added to tags.json. `data/trends/2026-W19.json` DCS Olivetti `articleSlug` set to `dcs-olivetti-comeback`. 628 e2e green. `4d61b74`
