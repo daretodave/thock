@@ -962,3 +962,12 @@ passes accumulate signals.)
 - issue: #134
 - elements: `apps/e2e/tests/meta.spec.ts` — expectedTypesFor() missing cases for post-phase-17 routes
 > **Resolved (2026-05-17):** Added 8 cases to expectedTypesFor: /quiz/switch → WebApplication; /tags → CollectionPage+BreadcrumbList+ItemList; /group-buys/past → same; /part/[kind] index → same; /part/board/[slug] → Thing+BreadcrumbList; /part/(switch|keycap-set)/[slug] → Product+BreadcrumbList; /trends/tracker/YYYY-WNN → CollectionPage+BreadcrumbList+Dataset. 631 e2e green. `0f23cf2`
+
+### [test] [4.5] data-runtime: 7 exported functions lack direct unit tests — issue #138
+- category: test
+- filed: 2026-05-17 by cloud /iterate audit
+- impact: 5 (getAllVendors/getVendorBySlug power vendor lookup on part pages; getAllTrendSnapshots/getTrendSnapshot drive tracker archive generateStaticParams; getAllNewsletters/getNewsletterBySlug used by /newsletter; getArticlesMentioningPart has filtering+sorting logic and powers all 18 /part/[kind]/[slug] "mentioned in" rails)
+- ease: 9 (pure functions with no async or RSC; all add to the existing loaders.test.ts)
+- score: 4.5 (impact × ease / 10)
+- issue: #138
+- elements: `apps/web/src/lib/data-runtime/__tests__/loaders.test.ts` — missing getAllVendors, getVendorBySlug, getAllTrendSnapshots, getTrendSnapshot, getAllNewsletters, getNewsletterBySlug, getArticlesMentioningPart

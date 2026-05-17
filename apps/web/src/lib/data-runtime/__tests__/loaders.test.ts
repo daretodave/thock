@@ -12,6 +12,13 @@ import {
   getAllClosedGroupBuys,
   getAllGroupBuys,
   getLatestTrendSnapshot,
+  getAllVendors,
+  getVendorBySlug,
+  getAllTrendSnapshots,
+  getTrendSnapshot,
+  getAllNewsletters,
+  getNewsletterBySlug,
+  getArticlesMentioningPart,
   manifestGeneratedAt,
 } from '../index'
 
@@ -132,5 +139,71 @@ describe('data-runtime adapter', () => {
     expect(manifestGeneratedAt()).toMatch(
       /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}/,
     )
+  })
+
+  it('exposes all vendors sorted by slug', () => {
+    const vendors = getAllVendors()
+    expect(vendors.length).toBeGreaterThanOrEqual(1)
+    for (let i = 1; i < vendors.length; i++) {
+      expect(
+        vendors[i]!.slug.localeCompare(vendors[i - 1]!.slug),
+      ).toBeGreaterThanOrEqual(0)
+    }
+  })
+
+  it('looks up a vendor by slug', () => {
+    const vendor = getVendorBySlug('cannonkeys')
+    expect(vendor).not.toBeNull()
+    expect(vendor!.slug).toBe('cannonkeys')
+  })
+
+  it('returns null for an unknown vendor slug', () => {
+    expect(getVendorBySlug('this-vendor-does-not-exist')).toBeNull()
+  })
+
+  it('exposes all trend snapshots', () => {
+    const snaps = getAllTrendSnapshots()
+    expect(snaps.length).toBeGreaterThanOrEqual(3)
+    for (const s of snaps) {
+      expect(s.isoWeek).toMatch(/^\d{4}-W\d{2}$/)
+    }
+  })
+
+  it('looks up a trend snapshot by ISO week', () => {
+    const snap = getTrendSnapshot('2026-W21')
+    expect(snap).not.toBeNull()
+    expect(snap!.isoWeek).toBe('2026-W21')
+    expect(snap!.rows.length).toBeGreaterThan(0)
+  })
+
+  it('returns null for an unknown ISO week', () => {
+    expect(getTrendSnapshot('2026-W99')).toBeNull()
+  })
+
+  it('exposes newsletters (empty is valid)', () => {
+    const newsletters = getAllNewsletters()
+    expect(Array.isArray(newsletters)).toBe(true)
+  })
+
+  it('returns null for an unknown newsletter slug', () => {
+    expect(getNewsletterBySlug('this-newsletter-does-not-exist')).toBeNull()
+  })
+
+  it('getArticlesMentioningPart returns articles referencing a known switch', () => {
+    const articles = getArticlesMentioningPart('switch', 'gateron-oil-king')
+    expect(articles.length).toBeGreaterThanOrEqual(1)
+    for (let i = 1; i < articles.length; i++) {
+      expect(
+        articles[i - 1]!.frontmatter.publishedAt.localeCompare(
+          articles[i]!.frontmatter.publishedAt,
+        ),
+      ).toBeGreaterThanOrEqual(0)
+    }
+  })
+
+  it('getArticlesMentioningPart returns empty array for unknown slug', () => {
+    expect(
+      getArticlesMentioningPart('switch', 'this-switch-does-not-exist'),
+    ).toEqual([])
   })
 })
