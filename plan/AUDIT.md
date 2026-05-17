@@ -932,3 +932,13 @@ passes accumulate signals.)
 - issue: #131
 - elements: `packages/content/src/loaders/parts.ts` — getReferencedParts() (switch/keycap-set/board dispatch, null-drop, frontmatter-order preservation)
 > **Resolved (2026-05-17):** Added `packages/content/src/__tests__/loaders/parts.test.ts` with 6 tests: empty mentionedParts → []; switch ref (gateron-oil-king) resolves with correct id/kind/slug/record; keycap-set ref (gmk-olivia) resolves; board ref (mode-sonnet) resolves; unknown slug dropped → []; mixed list with unresolvable entry preserves frontmatter order for the resolved entries. 631 e2e green. `220cddc`
+
+### [x] [test] [5.6] svg-validity gate misses article-viz/ (84 uncovered SVGs) — addressed in 1c7b470 (closes #132)
+- category: test
+- filed: 2026-05-17 by cloud /iterate audit
+- impact: 7 (84 InlineViz SVGs across 41 article subdirs unguarded; XML double-hyphen bug reproduced on prussian-alert + 3 group-buy heroes in phase 23; InlineViz is highest-volume brander output)
+- ease: 8 (recursive walker + add 'article-viz' to SVG_DIRS)
+- score: 5.6 (impact × ease / 10)
+- issue: #132
+- elements: `apps/web/src/__tests__/svg-validity.test.ts` — SVG_DIRS missing 'article-viz'; listSvgFiles not recursive
+> **Resolved (2026-05-17):** Introduced `walkSvgs()` recursive helper replacing the flat `readdirSync` loop; added `'article-viz'` to `SVG_DIRS`. Walker now covers all 3 brander output trees (hero-art/: 42 SVGs, group-buy-art/: 6, article-viz/: 84) and handles any future multi-level destination without per-dir special casing. 631 e2e green. `1c7b470`
