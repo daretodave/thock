@@ -808,6 +808,16 @@
 - root cause: search/__tests__/ directory was never created; every other component family with rendering logic has colocated tests
 > **Resolved (2026-05-16):** Created `apps/web/src/components/search/__tests__/ArticleResult.test.tsx` with 9-test suite: testid present, data-slug attribute, data-score toFixed(3), pillarLabel() eyebrow, date slice to 10 chars, title h2 links to /article/[slug], lede paragraph, tag chips for each tag, no chips when tags empty, cap at 6. 622 e2e green. `768abe7`
 
+### [x] [test] [4.5] TagGroup — no colocated unit tests for category heading/tint logic — addressed in 42c9796 (closes #127)
+- issue: #127
+- category: test
+- filed: 2026-05-17 by cloud /iterate audit
+- impact: 5 (renders on /tags discovery page; CATEGORY_TINT has a misc special-case (text-text-2 vs text-tag-*) that could silently regress without tests; CATEGORY_LABEL mapping + chip count logic also untested)
+- ease: 9 (plain functional component, no RSC, no async)
+- score: 4.5 (impact × ease / 10)
+- elements: `apps/web/src/components/tags/TagGroup.tsx` — no `__tests__/TagGroup.test.tsx` existed; sibling `TagsIndex.test.tsx` covers the grouping helper but not the component rendering
+> **Resolved (2026-05-17):** Added `apps/web/src/components/tags/__tests__/TagGroup.test.tsx` with 8 tests: section data-testid per category, heading label for switch, heading label for misc, tint class for switch (text-tag-switch), misc special-case class (text-text-2, no text-tag-*), chip count matches tags array, chip link hrefs (/tag/<slug>), empty-tags renders no chips. 622 e2e green. `42c9796`
+
 ---
 
 (Older findings drained as they ship. Empty until other audit
