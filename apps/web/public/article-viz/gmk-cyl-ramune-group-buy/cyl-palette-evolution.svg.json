@@ -1,0 +1,20 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-17T00:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "gmk-cyl-ramune-group-buy",
+  "article_pillar": "news",
+  "section_anchor": "the-colorway-is-a-break-with-the-cyl-palette-history",
+  "brief_summary": "Horizontal swatch strip comparing 5 GMK CYL colorways: Prussian Alert (dark red + cream), GREG (terracotta + off-white), Ishtar R2 (lapis-berry + deep plum), King of the Seas (ocean blue + teal), and Ramune (pastel sky-blue + blush pink + WS1 white). The first 4 are bracketed under 'dark, saturated, European-anchored' in bordeaux; Ramune is highlighted with a bordeaux frame labeled 'pastel pivot'.",
+  "target": "apps/web/public/article-viz/gmk-cyl-ramune-group-buy/cyl-palette-evolution.svg",
+  "splash_color": { "name": "bordeaux", "oklch": "oklch(0.62 0.13 25)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "gmk-cyl-ramune-group-buy.mdx § 'The colorway is a break with the CYL palette history' — 'Prussian Alert is deep red and unbleached cream — Bauhaus-leaning, restrained. GREG is warm and earthy, almost terracotta-adjacent. King of the Seas runs ocean blue and teal with high saturation and nautical specificity. Ishtar R2 is dark lapis-berry, drawing from glazed Mesopotamian brick.'",
+    "gmk-cyl-ramune-group-buy.mdx § 'The colorway is a break with the CYL palette history' — 'Ramune does not sit in that cluster. The palette is a pastel sky-blue primary, a lighter secondary blue, a blush pink accent, and a WS1-white base.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gmk-cyl-ramune-group-buy/cyl-palette-evolution.svg"],
+  "warnings": []
+}

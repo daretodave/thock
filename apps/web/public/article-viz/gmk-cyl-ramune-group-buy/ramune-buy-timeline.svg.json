@@ -1,0 +1,21 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-17T00:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "gmk-cyl-ramune-group-buy",
+  "article_pillar": "news",
+  "section_anchor": "buying-notes",
+  "brief_summary": "Horizontal 3-milestone group buy timeline. Coral open marker at 2026-05-15, coral filled bar spanning the ~5-week window, coral close marker at ~2026-06-20, dotted gap, muted ship marker at Q3/Q4 2026. Below: three feature chips naming doubleshot ABS, 10 regional storefronts, and WS1-white base color.",
+  "target": "apps/web/public/article-viz/gmk-cyl-ramune-group-buy/ramune-buy-timeline.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "gmk-cyl-ramune-group-buy.mdx § 'Buying notes' — 'The window opened 2026-05-15 and runs through approximately 2026-06-20.'",
+    "gmk-cyl-ramune-group-buy.mdx § 'Buying notes' — 'Estimated ship is Q3/Q4 2026, consistent with GMK lead times on a doubleshot ABS set of this scope.'",
+    "gmk-cyl-ramune-group-buy.mdx § 'Buying notes' — 'Region coverage is multi-vendor and global: Divinikey (US), Prototypist (UK), Geonworks (KR), Yushakobo (JP), and six additional regional storefronts.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gmk-cyl-ramune-group-buy/ramune-buy-timeline.svg"],
+  "warnings": []
+}

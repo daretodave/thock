@@ -1,0 +1,20 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-17T00:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "gmk-cyl-ramune-group-buy",
+  "article_pillar": "news",
+  "section_anchor": "the-vendor-structure-is-the-other-story",
+  "brief_summary": "Two-panel comparison diagram. Left panel (prior CYL model): KBDfans global host box with arrow to 3 regional proxy boxes. Right panel (Ramune model, amber accent): 10 vendor boxes in 2×5 grid — Divinikey (US), Prototypist (UK), Geonworks (KR), Yushakobo (JP), and 6 unnamed regional storefronts. Center dashed divider separates the two models.",
+  "target": "apps/web/public/article-viz/gmk-cyl-ramune-group-buy/vendor-structure-comparison.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "gmk-cyl-ramune-group-buy.mdx § 'The vendor structure is the other story' — 'Every previous GMK CYL run in the 2025–2026 corpus has followed a recognizable pattern: KBDfans as global host, with selected regional proxies handling consolidation and local forwarding.'",
+    "gmk-cyl-ramune-group-buy.mdx § 'The vendor structure is the other story' — 'Ramune is structured differently. Ten regional vendors are running the buy concurrently, each with its own storefront, its own checkout, and its own regional buyer pool. Divinikey covers the US. Prototypist handles the UK. Geonworks and Yushakobo own Korea and Japan respectively.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gmk-cyl-ramune-group-buy/vendor-structure-comparison.svg"],
+  "warnings": []
+}
