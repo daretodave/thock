@@ -94,6 +94,15 @@
 
 ## Open findings
 
+### [x] [data] [5.4] W21 tracker — Hall Effect / Rapid Trigger and HMX Cloud V2 lack articleSlug linkage; W20 DCS Olivetti unlinked despite companion article shipping — addressed in ba14cc7
+- category: data
+- filed: 2026-05-17 by cloud /iterate audit
+- impact: 6 (W21's top-2 highest-scoring non-flat rows unlinked: Hall Effect / Rapid Trigger score=55 and HMX Cloud V2 score=44; tracker is the site's signature feature; Rule 2 14-day window opens 2026-05-18 for W21; W20 DCS Olivetti can also be linked to dcs-olivetti-comeback shipped 2026-05-17)
+- ease: 9 (3 JSON field updates across 2 tracker files; manifest rebuilds via pnpm verify)
+- score: 5.4 (impact × ease / 10)
+- matches: Hall Effect / Rapid Trigger (W21) → `hall-effect-mainstream`; HMX Cloud V2 (W21) → `hmx-cloud-deep-dive`; DCS Olivetti (W20) → `dcs-olivetti-comeback`
+- issue: [mirror-failed: 2026-05-17T00:00:00Z]
+
 ### [x] [data] [3.6] GSK Sweet Nightmare GB `status: "live"` stale (endDate 3 days past) — addressed in 3443fe9 (closes #89)
 - category: data
 - filed: 2026-05-14 by cloud /iterate audit (this tick)
