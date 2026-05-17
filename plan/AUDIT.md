@@ -847,6 +847,16 @@
 - pages: /group-buys, /news, /trends/tracker/2026-W21
 - elements: `data/group-buys/kbdfans-gmk-cyl-ramune.json` (new), `apps/web/src/content/articles/gmk-cyl-ramune-group-buy.mdx` (new), `data/trends/2026-W21.json` GMK CYL Ramune articleSlug field + Wuque Studio articleSlug field
 
+### [x] [test] [4.5] board + keycap-set schemas — no unit tests — addressed in 3bcab05 (closes #133)
+- category: test
+- filed: 2026-05-17 by cloud /iterate audit
+- impact: 5 (board and keycap-set schemas drive /part/board/* and /part/keycap-set/* pages; enum constraints layout/caseMaterial/mountStyle + profile/material/legendType/designer had no regression guard; the other 4 of 6 schemas all had __tests__/schemas/ coverage)
+- ease: 9 (direct port of vendor.test.ts / switch.test.ts pattern — VALID fixture from real seed record, safeParse assertions)
+- score: 4.5 (impact × ease / 10)
+- issue: #133
+- elements: `packages/data/src/schemas/board.ts`, `packages/data/src/schemas/keycap-set.ts` — no `__tests__/schemas/board.test.ts` or `keycap-set.test.ts` existed; `ls packages/data/src/__tests__/schemas/` returned only group-buy / switch / trend / vendor
+> **Resolved (2026-05-17):** Added `packages/data/src/__tests__/schemas/board.test.ts` (5 tests: valid acceptance, unknown layout rejection, unknown mountStyle rejection, unknown caseMaterial rejection, null releasedAt acceptance) and `packages/data/src/__tests__/schemas/keycap-set.test.ts` (5 tests: valid acceptance, unknown profile rejection, unknown material rejection, unknown legendType rejection, null designer acceptance). Pattern identical to vendor.test.ts / switch.test.ts. 631 e2e green. `3bcab05`
+
 ---
 
 (Older findings drained as they ship. Empty until other audit
