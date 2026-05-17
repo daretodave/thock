@@ -912,3 +912,13 @@ passes accumulate signals.)
 - rule: bearings.md Rule 2 — tracker linkage within 14d of ISO week start
 - data: data/trends/2026-W19.json row "DCS Olivetti" direction=up score=18, articleSlug was null
 > **Resolved (2026-05-17):** Shipped `apps/web/src/content/articles/dcs-olivetti-comeback.mdx` (~1,050 words, trends pillar, publishedAt 2026-05-14T00:00:00.000Z). Hero SVG at `/hero-art/dcs-olivetti-comeback.svg`. 3 InlineViz SVGs (spark trajectory, DCS vs Cherry profile comparison, profile era map). New tag `dcs` (profile) added to tags.json. `data/trends/2026-W19.json` DCS Olivetti `articleSlug` set to `dcs-olivetti-comeback`. 628 e2e green. `4d61b74`
+
+### [x] [test] [5.4] boards + keycap-sets loaders — no unit tests — addressed in 37a81d5
+- category: test
+- filed: 2026-05-17 by cloud /iterate audit
+- impact: 6 (both loaders drive /part/board/* and /part/keycap-set/* pages plus getReferencedParts() in MentionedPartsRail on all 40+ article pages; same behavioral surface as switches.test.ts which has been in place since phase 2)
+- ease: 9 (direct port of switches.test.ts pattern — 4 tests per loader, memo reset afterEach, known seed slugs: mode-sonnet / gmk-olivia)
+- score: 5.4 (impact × ease / 10)
+- issue: [mirror-failed: 2026-05-17T00:00:00Z]
+- elements: `packages/data/src/loaders/boards.ts` (getAllBoards, getBoardBySlug) + `packages/data/src/loaders/keycap-sets.ts` (getAllKeycapSets, getKeycapSetBySlug)
+> **Resolved (2026-05-17):** Added `packages/data/src/__tests__/loaders/boards.test.ts` (4 tests: seed present → mode-sonnet, sorted-by-slug, known slug resolves to Mode Sonnet, unknown slug → null) and `packages/data/src/__tests__/loaders/keycap-sets.test.ts` (4 tests: seed present → gmk-olivia, sorted-by-slug, known slug resolves to GMK Olivia, unknown slug → null). Pattern identical to switches.test.ts. 631 e2e green. `37a81d5`
