@@ -80,6 +80,22 @@ function expectedTypesFor(path: string): ExpectedTypes {
     return ['CollectionPage', 'BreadcrumbList', 'ItemList']
   if (path.startsWith('/article/')) return ['Article', 'BreadcrumbList']
   if (path.startsWith('/tag/')) return ['CollectionPage', 'BreadcrumbList']
+  // Routes shipped in phases 21–33 (previously fell through to []).
+  if (path === '/quiz/switch') return ['WebApplication']
+  if (path === '/tags') return ['CollectionPage', 'BreadcrumbList', 'ItemList']
+  if (path === '/group-buys/past')
+    return ['CollectionPage', 'BreadcrumbList', 'ItemList']
+  // /part/[kind] index pages — CollectionPage + BreadcrumbList + ItemList.
+  if (/^\/part\/[^/]+$/.test(path))
+    return ['CollectionPage', 'BreadcrumbList', 'ItemList']
+  // /part/board/[slug] — Thing (boards are not products per schema.org).
+  if (path.startsWith('/part/board/')) return ['Thing', 'BreadcrumbList']
+  // /part/switch/[slug] and /part/keycap-set/[slug] — Product.
+  if (/^\/part\/(switch|keycap-set)\//.test(path))
+    return ['Product', 'BreadcrumbList']
+  // /trends/tracker/YYYY-WNN weekly archive pages.
+  if (/^\/trends\/tracker\/\d{4}-W\d{2}$/.test(path))
+    return ['CollectionPage', 'BreadcrumbList', 'Dataset']
   // Anything else: just require *some* JSON-LD parses (catches
   // malformed HTML on routes we haven't categorized).
   return []
