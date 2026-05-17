@@ -1,0 +1,28 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-17T00:00:00.000Z",
+  "commit": "bef6ffba0c37ed1f28d7d54dcfd6b63604d9a4a9",
+  "kind": "hero-art",
+  "source": null,
+  "template": "group-buy-board-top-down",
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": [],
+  "outputs": [
+    "apps/web/public/hero-art/gmk-cyl-ramune-group-buy.svg"
+  ],
+  "article_slug": "gmk-cyl-ramune-group-buy",
+  "splash_color": {
+    "name": "ramune-sky-blue",
+    "oklch": "oklch(0.82 0.085 228)"
+  },
+  "secondary_splash": {
+    "name": "ramune-periwinkle",
+    "oklch": "oklch(0.68 0.10 255)"
+  },
+  "accent_pip": {
+    "name": "ramune-pink",
+    "oklch": "oklch(0.85 0.075 350)"
+  },
+  "warnings": []
+}

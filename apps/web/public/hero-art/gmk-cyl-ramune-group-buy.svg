@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1200 750"
+     preserveAspectRatio="xMidYMid meet"
+     fill="none"
+     stroke="oklch(0.78 0.005 90)"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     role="img"
+     aria-label="thock hero art for GMK CYL Ramune group buy — top-down 75% board silhouette with CYL-profile keycaps in the Ramune pastel dual-blue and pink colorway">
+  <title>thock hero — GMK CYL Ramune group buy, top-down 75% board with CYL-profile keycaps, pastel sky-blue and periwinkle accents with a soft-pink focal pip</title>
+
+  <!--
+    Editorial hook: GMK CYL Ramune is a pastel dual-blue set (a powder/sky blue
+    modifier color and a deeper periwinkle alpha color) finished with a
+    WS1-white legend accent. The splash here is carried by:
+      light sky-blue    oklch(0.82 0.085 228)  = modifier colorway
+      periwinkle        oklch(0.68 0.10  255)  = alpha colorway
+      soft pink         oklch(0.85 0.075 350)  = WS1-inspired accent pip
+    Warm-bronze hairlines on the top + bottom case edges per family convention.
+    Bronze theme dot at upper-right. All other strokes remain warm-grey.
+    Single splash: the modifier keys pick up the sky-blue fill; home-row alpha
+    keys pick up the periwinkle; a small pink pip anchors the lower-right.
+  -->
+
+  <!-- ============================================================
+       SPLASH WASH: a soft ellipse behind the board
+  ============================================================ -->
+  <ellipse cx="600" cy="430" rx="530" ry="220"
+           fill="oklch(0.82 0.085 228 / 0.10)" stroke="none"/>
+
+  <!-- ============================================================
+       BOARD OUTLINE: 75% top-down silhouette
+       Case 1020 x 380, centered, rounded rx 14.
+  ============================================================ -->
+
+  <!-- Outer case -->
+  <rect x="90" y="195" width="1020" height="380" rx="14" ry="14"/>
+
+  <!-- Inset bezel hint -->
+  <rect x="106" y="211" width="988" height="348" rx="9" ry="9" stroke-opacity="0.35"/>
+
+  <!-- Warm-bronze accent hairline, top case edge -->
+  <line x1="118" y1="201" x2="1082" y2="201"
+        stroke="oklch(0.80 0.135 75)" stroke-opacity="0.60" stroke-width="1.5"/>
+
+  <!-- Warm-bronze accent hairline, bottom case edge -->
+  <line x1="118" y1="569" x2="1082" y2="569"
+        stroke="oklch(0.80 0.135 75)" stroke-opacity="0.60" stroke-width="1.5"/>
+
+  <!-- ============================================================
+       ROW 1: Function row (smaller, y=227, h=34)
+       All in warm-grey stroke. Col pitch ~64px from x=118.
+  ============================================================ -->
+  <g stroke-opacity="0.80">
+    <!-- Esc -->
+    <rect x="118" y="227" width="56" height="34" rx="4" ry="4"/>
+    <rect x="124" y="234" width="44" height="20" rx="2" ry="2" stroke-opacity="0.40"/>
+    <!-- F1..F4 -->
+    <rect x="180" y="227" width="56" height="34" rx="4" ry="4"/>
+    <rect x="186" y="234" width="44" height="20" rx="2" ry="2" stroke-opacity="0.40"/>
+    <rect x="242" y="227" width="56" height="34" rx="4" ry="4"/>
+    <rect x="248" y="234" width="44" height="20" rx="2" ry="2" stroke-opacity="0.40"/>
+    <rect x="304" y="227" width="56" height="34" rx="4" ry="4"/>
+    <rect x="310" y="234" width="44" height="20" rx="2" ry="2" stroke-opacity="0.40"/>
+    <rect x="366" y="227" width="56" height="34" rx="4" ry="4"/>
+    <rect x="372" y="234" width="44" height="20" rx="2" ry="2" stroke-opacity="0.40"/>
+    <!-- F5..F8 -->
+    <rect x="446" y="227" width="56" height="34" rx="4" ry="4"/>
+    <rect x="452" y="234" width="44" height="20" rx="2" ry="2" stroke-opacity="0.40"/>
+    <rect x="508" y="227" width="56" height="34" rx="4" ry="4"/>
+    <rect x="514" y="234" width="44" height="20" rx="2" ry="2" stroke-opacity="0.40"/>
+    <rect x="570" y="227" width="56" height="34" rx="4" ry="4"/>
+    <rect x="576" y="234" width="44" height="20" rx="2" ry="2" stroke-opacity="0.40"/>
+    <rect x="632" y="227" width="56" height="34" rx="4" ry="4"/>
+    <rect x="638" y="234" width="44" height="20" rx="2" ry="2" stroke-opacity="0.40"/>
+    <!-- F9..F12 -->
+    <rect x="712" y="227" width="56" height="34" rx="4" ry="4"/>
+    <rect x="718" y="234" width="44" height="20" rx="2" ry="2" stroke-opacity="0.40"/>
+    <rect x="774" y="227" width="56" height="34" rx="4" ry="4"/>
+    <rect x="780" y="234" width="44" height="20" rx="2" ry="2" stroke-opacity="0.40"/>
+    <rect x="836" y="227" width="56" height="34" rx="4" ry="4"/>
+    <rect x="842" y="234" width="44" height="20" rx="2" ry="2" stroke-opacity="0.40"/>
+    <rect x="898" y="227" width="56" height="34" rx="4" ry="4"/>
+    <rect x="904" y="234" width="44" height="20" rx="2" ry="2" stroke-opacity="0.40"/>
+    <!-- Del / nav cluster (75% tell) -->
+    <rect x="978" y="227" width="56" height="34" rx="4" ry="4"/>
+    <rect x="984" y="234" width="44" height="20" rx="2" ry="2" stroke-opacity="0.40"/>
+  </g>
+
+  <!-- ============================================================
+       ROW 2: Number row (y=273, h=52)
+       Modifier caps (Backtick, Backspace) get the sky-blue fill.
+  ============================================================ -->
+
+  <!-- Backtick — sky-blue modifier -->
+  <rect x="118" y="273" width="60" height="52" rx="5" ry="5"
+        fill="oklch(0.82 0.085 228 / 0.80)" stroke="oklch(0.72 0.10 228)"/>
+  <rect x="126" y="282" width="44" height="34" rx="3" ry="3"
+        fill="oklch(0.88 0.06 228 / 0.50)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.50"/>
+  <!-- Number keys 1..0 in periwinkle-tinted alpha -->
+  <rect x="182" y="273" width="60" height="52" rx="5" ry="5"
+        fill="oklch(0.68 0.10 255 / 0.18)"/>
+  <rect x="190" y="282" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <rect x="246" y="273" width="60" height="52" rx="5" ry="5"
+        fill="oklch(0.68 0.10 255 / 0.18)"/>
+  <rect x="254" y="282" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <rect x="310" y="273" width="60" height="52" rx="5" ry="5"
+        fill="oklch(0.68 0.10 255 / 0.18)"/>
+  <rect x="318" y="282" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <rect x="374" y="273" width="60" height="52" rx="5" ry="5"
+        fill="oklch(0.68 0.10 255 / 0.18)"/>
+  <rect x="382" y="282" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <rect x="438" y="273" width="60" height="52" rx="5" ry="5"
+        fill="oklch(0.68 0.10 255 / 0.18)"/>
+  <rect x="446" y="282" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <rect x="502" y="273" width="60" height="52" rx="5" ry="5"
+        fill="oklch(0.68 0.10 255 / 0.18)"/>
+  <rect x="510" y="282" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <rect x="566" y="273" width="60" height="52" rx="5" ry="5"
+        fill="oklch(0.68 0.10 255 / 0.18)"/>
+  <rect x="574" y="282" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <rect x="630" y="273" width="60" height="52" rx="5" ry="5"
+        fill="oklch(0.68 0.10 255 / 0.18)"/>
+  <rect x="638" y="282" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <rect x="694" y="273" width="60" height="52" rx="5" ry="5"
+        fill="oklch(0.68 0.10 255 / 0.18)"/>
+  <rect x="702" y="282" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <rect x="758" y="273" width="60" height="52" rx="5" ry="5"
+        fill="oklch(0.68 0.10 255 / 0.18)"/>
+  <rect x="766" y="282" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <!-- Minus / Equals (modifier-adjacent, warm-grey) -->
+  <rect x="822" y="273" width="60" height="52" rx="5" ry="5"/>
+  <rect x="830" y="282" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <rect x="886" y="273" width="60" height="52" rx="5" ry="5"/>
+  <rect x="894" y="282" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <!-- Backspace 2u — sky-blue modifier -->
+  <rect x="950" y="273" width="84" height="52" rx="5" ry="5"
+        fill="oklch(0.82 0.085 228 / 0.80)" stroke="oklch(0.72 0.10 228)"/>
+  <rect x="958" y="282" width="68" height="34" rx="3" ry="3"
+        fill="oklch(0.88 0.06 228 / 0.50)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.50"/>
+
+  <!-- ============================================================
+       ROW 3: Top alpha, Q row (y=333, h=52)
+       Tab + wide mods = sky-blue; alpha keys = periwinkle wash.
+  ============================================================ -->
+
+  <!-- Tab 1.5u — sky-blue -->
+  <rect x="118" y="333" width="92" height="52" rx="5" ry="5"
+        fill="oklch(0.82 0.085 228 / 0.80)" stroke="oklch(0.72 0.10 228)"/>
+  <rect x="126" y="342" width="76" height="34" rx="3" ry="3"
+        fill="oklch(0.88 0.06 228 / 0.50)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.50"/>
+  <!-- Q..P alpha (periwinkle wash) -->
+  <rect x="214" y="333" width="60" height="52" rx="5" ry="5"
+        fill="oklch(0.68 0.10 255 / 0.22)"/>
+  <rect x="222" y="342" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <rect x="278" y="333" width="60" height="52" rx="5" ry="5"
+        fill="oklch(0.68 0.10 255 / 0.22)"/>
+  <rect x="286" y="342" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <rect x="342" y="333" width="60" height="52" rx="5" ry="5"
+        fill="oklch(0.68 0.10 255 / 0.22)"/>
+  <rect x="350" y="342" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <rect x="406" y="333" width="60" height="52" rx="5" ry="5"
+        fill="oklch(0.68 0.10 255 / 0.22)"/>
+  <rect x="414" y="342" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <rect x="470" y="333" width="60" height="52" rx="5" ry="5"
+        fill="oklch(0.68 0.10 255 / 0.22)"/>
+  <rect x="478" y="342" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <rect x="534" y="333" width="60" height="52" rx="5" ry="5"
+        fill="oklch(0.68 0.10 255 / 0.22)"/>
+  <rect x="542" y="342" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <rect x="598" y="333" width="60" height="52" rx="5" ry="5"
+        fill="oklch(0.68 0.10 255 / 0.22)"/>
+  <rect x="606" y="342" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <rect x="662" y="333" width="60" height="52" rx="5" ry="5"
+        fill="oklch(0.68 0.10 255 / 0.22)"/>
+  <rect x="670" y="342" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <rect x="726" y="333" width="60" height="52" rx="5" ry="5"
+        fill="oklch(0.68 0.10 255 / 0.22)"/>
+  <rect x="734" y="342" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <rect x="790" y="333" width="60" height="52" rx="5" ry="5"
+        fill="oklch(0.68 0.10 255 / 0.22)"/>
+  <rect x="798" y="342" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <!-- [ ] \ (warm-grey punctuation) -->
+  <rect x="854" y="333" width="60" height="52" rx="5" ry="5"/>
+  <rect x="862" y="342" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <rect x="918" y="333" width="60" height="52" rx="5" ry="5"/>
+  <rect x="926" y="342" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <rect x="982" y="333" width="52" height="52" rx="5" ry="5"/>
+  <rect x="990" y="342" width="36" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+
+  <!-- ============================================================
+       ROW 4: Home row, A row (y=393, h=52)
+  ============================================================ -->
+
+  <!-- Caps Lock 1.75u — sky-blue -->
+  <rect x="118" y="393" width="108" height="52" rx="5" ry="5"
+        fill="oklch(0.82 0.085 228 / 0.80)" stroke="oklch(0.72 0.10 228)"/>
+  <rect x="126" y="402" width="92" height="34" rx="3" ry="3"
+        fill="oklch(0.88 0.06 228 / 0.50)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.50"/>
+  <!-- A..L alpha (periwinkle wash) -->
+  <rect x="230" y="393" width="60" height="52" rx="5" ry="5"
+        fill="oklch(0.68 0.10 255 / 0.22)"/>
+  <rect x="238" y="402" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <rect x="294" y="393" width="60" height="52" rx="5" ry="5"
+        fill="oklch(0.68 0.10 255 / 0.22)"/>
+  <rect x="302" y="402" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <rect x="358" y="393" width="60" height="52" rx="5" ry="5"
+        fill="oklch(0.68 0.10 255 / 0.22)"/>
+  <rect x="366" y="402" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <rect x="422" y="393" width="60" height="52" rx="5" ry="5"
+        fill="oklch(0.68 0.10 255 / 0.22)"/>
+  <rect x="430" y="402" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <rect x="486" y="393" width="60" height="52" rx="5" ry="5"
+        fill="oklch(0.68 0.10 255 / 0.22)"/>
+  <rect x="494" y="402" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <rect x="550" y="393" width="60" height="52" rx="5" ry="5"
+        fill="oklch(0.68 0.10 255 / 0.22)"/>
+  <rect x="558" y="402" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <rect x="614" y="393" width="60" height="52" rx="5" ry="5"
+        fill="oklch(0.68 0.10 255 / 0.22)"/>
+  <rect x="622" y="402" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <rect x="678" y="393" width="60" height="52" rx="5" ry="5"
+        fill="oklch(0.68 0.10 255 / 0.22)"/>
+  <rect x="686" y="402" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <rect x="742" y="393" width="60" height="52" rx="5" ry="5"
+        fill="oklch(0.68 0.10 255 / 0.22)"/>
+  <rect x="750" y="402" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <!-- ; ' — warm-grey punctuation -->
+  <rect x="806" y="393" width="60" height="52" rx="5" ry="5"/>
+  <rect x="814" y="402" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <rect x="870" y="393" width="60" height="52" rx="5" ry="5"/>
+  <rect x="878" y="402" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <!-- Enter 2.25u — sky-blue -->
+  <rect x="934" y="393" width="100" height="52" rx="5" ry="5"
+        fill="oklch(0.82 0.085 228 / 0.80)" stroke="oklch(0.72 0.10 228)"/>
+  <rect x="942" y="402" width="84" height="34" rx="3" ry="3"
+        fill="oklch(0.88 0.06 228 / 0.50)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.50"/>
+
+  <!-- ============================================================
+       ROW 5: Bottom alpha, Z row (y=453, h=52)
+  ============================================================ -->
+
+  <!-- LShift — sky-blue -->
+  <rect x="118" y="453" width="124" height="52" rx="5" ry="5"
+        fill="oklch(0.82 0.085 228 / 0.80)" stroke="oklch(0.72 0.10 228)"/>
+  <rect x="126" y="462" width="108" height="34" rx="3" ry="3"
+        fill="oklch(0.88 0.06 228 / 0.50)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.50"/>
+  <!-- Z../ alpha (periwinkle wash) -->
+  <rect x="246" y="453" width="60" height="52" rx="5" ry="5"
+        fill="oklch(0.68 0.10 255 / 0.22)"/>
+  <rect x="254" y="462" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <rect x="310" y="453" width="60" height="52" rx="5" ry="5"
+        fill="oklch(0.68 0.10 255 / 0.22)"/>
+  <rect x="318" y="462" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <rect x="374" y="453" width="60" height="52" rx="5" ry="5"
+        fill="oklch(0.68 0.10 255 / 0.22)"/>
+  <rect x="382" y="462" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <rect x="438" y="453" width="60" height="52" rx="5" ry="5"
+        fill="oklch(0.68 0.10 255 / 0.22)"/>
+  <rect x="446" y="462" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <rect x="502" y="453" width="60" height="52" rx="5" ry="5"
+        fill="oklch(0.68 0.10 255 / 0.22)"/>
+  <rect x="510" y="462" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <rect x="566" y="453" width="60" height="52" rx="5" ry="5"
+        fill="oklch(0.68 0.10 255 / 0.22)"/>
+  <rect x="574" y="462" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <rect x="630" y="453" width="60" height="52" rx="5" ry="5"
+        fill="oklch(0.68 0.10 255 / 0.22)"/>
+  <rect x="638" y="462" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <rect x="694" y="453" width="60" height="52" rx="5" ry="5"
+        fill="oklch(0.68 0.10 255 / 0.22)"/>
+  <rect x="702" y="462" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <rect x="758" y="453" width="60" height="52" rx="5" ry="5"
+        fill="oklch(0.68 0.10 255 / 0.22)"/>
+  <rect x="766" y="462" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <rect x="822" y="453" width="60" height="52" rx="5" ry="5"
+        fill="oklch(0.68 0.10 255 / 0.22)"/>
+  <rect x="830" y="462" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <!-- RShift — sky-blue -->
+  <rect x="886" y="453" width="92" height="52" rx="5" ry="5"
+        fill="oklch(0.82 0.085 228 / 0.80)" stroke="oklch(0.72 0.10 228)"/>
+  <rect x="894" y="462" width="76" height="34" rx="3" ry="3"
+        fill="oklch(0.88 0.06 228 / 0.50)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.50"/>
+  <!-- Up arrow (warm-grey nav) -->
+  <rect x="982" y="453" width="52" height="52" rx="5" ry="5"/>
+  <rect x="990" y="462" width="36" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+
+  <!-- ============================================================
+       ROW 6: Bottom row, mods + spacebar (y=513, h=52)
+  ============================================================ -->
+
+  <!-- LCtrl — sky-blue -->
+  <rect x="118" y="513" width="76" height="52" rx="5" ry="5"
+        fill="oklch(0.82 0.085 228 / 0.80)" stroke="oklch(0.72 0.10 228)"/>
+  <rect x="126" y="522" width="60" height="34" rx="3" ry="3"
+        fill="oklch(0.88 0.06 228 / 0.50)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.50"/>
+  <!-- LWin — sky-blue -->
+  <rect x="198" y="513" width="76" height="52" rx="5" ry="5"
+        fill="oklch(0.82 0.085 228 / 0.80)" stroke="oklch(0.72 0.10 228)"/>
+  <rect x="206" y="522" width="60" height="34" rx="3" ry="3"
+        fill="oklch(0.88 0.06 228 / 0.50)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.50"/>
+  <!-- LAlt — sky-blue -->
+  <rect x="278" y="513" width="76" height="52" rx="5" ry="5"
+        fill="oklch(0.82 0.085 228 / 0.80)" stroke="oklch(0.72 0.10 228)"/>
+  <rect x="286" y="522" width="60" height="34" rx="3" ry="3"
+        fill="oklch(0.88 0.06 228 / 0.50)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.50"/>
+  <!-- Spacebar 6.25u — periwinkle, the centerpiece focal key -->
+  <rect x="358" y="513" width="392" height="52" rx="5" ry="5"
+        fill="oklch(0.68 0.10 255 / 0.55)" stroke="oklch(0.62 0.10 255)"/>
+  <rect x="366" y="522" width="376" height="34" rx="3" ry="3"
+        fill="oklch(0.72 0.08 255 / 0.38)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.45"/>
+  <!-- RAlt / Fn — sky-blue -->
+  <rect x="754" y="513" width="60" height="52" rx="5" ry="5"
+        fill="oklch(0.82 0.085 228 / 0.80)" stroke="oklch(0.72 0.10 228)"/>
+  <rect x="762" y="522" width="44" height="34" rx="3" ry="3"
+        fill="oklch(0.88 0.06 228 / 0.50)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.50"/>
+  <rect x="818" y="513" width="60" height="52" rx="5" ry="5"
+        fill="oklch(0.82 0.085 228 / 0.80)" stroke="oklch(0.72 0.10 228)"/>
+  <rect x="826" y="522" width="44" height="34" rx="3" ry="3"
+        fill="oklch(0.88 0.06 228 / 0.50)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.50"/>
+  <!-- Left arrow -->
+  <rect x="918" y="513" width="60" height="52" rx="5" ry="5"/>
+  <rect x="926" y="522" width="44" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <!-- Down arrow -->
+  <rect x="982" y="513" width="52" height="52" rx="5" ry="5"/>
+  <rect x="990" y="522" width="36" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+  <!-- Right arrow -->
+  <rect x="1038" y="513" width="44" height="52" rx="5" ry="5"/>
+  <rect x="1046" y="522" width="28" height="34" rx="3" ry="3" stroke-opacity="0.45"/>
+
+  <!-- ============================================================
+       CYL SCOOP ARCS on focal modifier keys — light WS1-inspired
+       warm-white arcs to reinforce the cylindrical profile read.
+  ============================================================ -->
+  <g stroke="oklch(0.94 0.02 200)" stroke-opacity="0.55" stroke-width="1.5">
+    <!-- Backtick scoop -->
+    <path d="M 128 302 Q 148 296 168 302"/>
+    <!-- Backspace scoop -->
+    <path d="M 960 302 Q 992 296 1024 302"/>
+    <!-- Tab scoop -->
+    <path d="M 128 358 Q 164 352 200 358"/>
+    <!-- CapsLock scoop -->
+    <path d="M 128 418 Q 172 412 216 418"/>
+    <!-- Enter scoop -->
+    <path d="M 944 418 Q 984 412 1024 418"/>
+    <!-- LShift scoop -->
+    <path d="M 128 478 Q 178 472 232 478"/>
+    <!-- Spacebar scoop (wider arc) -->
+    <path d="M 400 536 Q 554 528 710 536"/>
+  </g>
+
+  <!-- ============================================================
+       PINK ACCENT PIP: soft-pink focal dot at lower-right,
+       echoing the WS1 legend accent of the Ramune colorway.
+       Small circle + halo ring, per family convention.
+  ============================================================ -->
+  <circle cx="1080" cy="680" r="6"
+          fill="oklch(0.85 0.075 350 / 0.95)"
+          stroke="none"/>
+  <circle cx="1080" cy="680" r="12"
+          stroke="oklch(0.85 0.075 350)"
+          stroke-opacity="0.45"
+          fill="none"/>
+
+  <!-- Bronze theme dot, upper-right margin per family ornamental convention -->
+  <circle cx="1120" cy="148" r="4"
+          fill="oklch(0.80 0.135 75 / 0.90)"
+          stroke="none"/>
+  <circle cx="1120" cy="148" r="13"
+          stroke="oklch(0.80 0.135 75)"
+          stroke-opacity="0.38"
+          fill="none"/>
+</svg>

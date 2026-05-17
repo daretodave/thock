@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1200 750"
+     preserveAspectRatio="xMidYMid meet"
+     fill="none"
+     stroke="oklch(0.78 0.005 90)"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     role="img"
+     aria-label="thock group-buy card art for KBDfans GMK CYL Ramune — six CYL-profile keycaps in a two-row cluster showing the pastel dual-blue and pink Ramune colorway">
+  <title>thock group-buy hero — GMK CYL Ramune (KBDfans), six CYL-profile keycaps, sky-blue modifiers, periwinkle alpha, focal soft-pink pip</title>
+
+  <!--
+    Composition: six CYL-profile keycaps in two staggered rows of three,
+    near-top-down with a hint of the cylindrical scoop, matching the
+    established group-buy card style (see sibling kbdfans-gmk-cyl-greg-2.svg).
+
+    Ramune colorway translation to OKLCH:
+      modifier sky-blue   oklch(0.82 0.085 228)  = pale periwinkle-sky
+      alpha periwinkle    oklch(0.68 0.10  255)  = deeper cool-blue
+      soft pink accent    oklch(0.85 0.075 350)  = WS1-inspired legend rose
+
+    Focal cap: front-row middle. Modifier sky-blue fill, heavy splash.
+    Back row, centre cap: periwinkle wash, lighter.
+    All other caps: warm-grey stroke only.
+    Splash wash ellipse behind the cluster; pink accent pip lower-right.
+  -->
+
+  <!-- Splash wash: sky-blue tinted ellipse behind the cluster -->
+  <ellipse cx="600" cy="395" rx="520" ry="225"
+           fill="oklch(0.82 0.085 228 / 0.12)" stroke="none"/>
+
+  <!-- ============================================================
+       6 GMK CYL keycaps, two staggered rows of three.
+       Each cap:
+         outer silhouette path (base footprint with rounded corners)
+         inset top surface path (the CYL dish)
+         scoop arc(s)
+       Pattern inherited from kbdfans-gmk-cyl-greg-2.svg.
+  ============================================================ -->
+
+  <!-- ============================================================
+       Row 1: back row, three 1u caps
+  ============================================================ -->
+
+  <!-- Back-left — warm-grey -->
+  <g transform="translate(295 235)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          stroke-opacity="0.70"/>
+    <path d="M 38 90 Q 88 76 138 90" stroke-opacity="0.45"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke-opacity="0.30"/>
+  </g>
+
+  <!-- Back-middle — periwinkle focal wash -->
+  <g transform="translate(515 235)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"
+          fill="oklch(0.68 0.10 255 / 0.72)" stroke="oklch(0.62 0.10 255)"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          fill="oklch(0.72 0.08 255 / 0.55)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55"/>
+    <path d="M 38 90 Q 88 76 138 90" stroke="oklch(0.92 0.025 85)" stroke-opacity="0.55"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke="oklch(0.92 0.025 85)" stroke-opacity="0.38"/>
+  </g>
+
+  <!-- Back-right — warm-grey -->
+  <g transform="translate(735 235)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          stroke-opacity="0.70"/>
+    <path d="M 38 90 Q 88 76 138 90" stroke-opacity="0.45"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke-opacity="0.30"/>
+  </g>
+
+  <!-- ============================================================
+       Row 2: front row, three 1u caps, shifted half-cap right
+  ============================================================ -->
+
+  <!-- Front-left — warm-grey -->
+  <g transform="translate(405 435)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          stroke-opacity="0.70"/>
+    <path d="M 38 90 Q 88 76 138 90" stroke-opacity="0.45"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke-opacity="0.30"/>
+  </g>
+
+  <!-- Front-middle — FOCAL sky-blue modifier cap -->
+  <g transform="translate(625 435)">
+    <!-- Sky-blue cap body -->
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"
+          fill="oklch(0.82 0.085 228 / 0.92)" stroke="oklch(0.72 0.10 228)"/>
+    <!-- Lighter top surface so the scoop reads -->
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          fill="oklch(0.88 0.06 228 / 0.80)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.50"/>
+    <!-- CYL scoop arcs in warm WS1-white -->
+    <path d="M 38 90 Q 88 74 138 90" stroke="oklch(0.96 0.015 90)" stroke-opacity="0.70"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke="oklch(0.96 0.015 90)" stroke-opacity="0.45"/>
+  </g>
+
+  <!-- Front-right — warm-grey -->
+  <g transform="translate(845 435)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          stroke-opacity="0.70"/>
+    <path d="M 38 90 Q 88 76 138 90" stroke-opacity="0.45"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke-opacity="0.30"/>
+  </g>
+
+  <!-- ============================================================
+       PINK ACCENT PIP: soft-pink focal dot below the cluster,
+       echoing the WS1 legend accent of the Ramune colorway.
+       Mirrors the accent-pip convention in the greg-2 sibling.
+  ============================================================ -->
+  <circle cx="800" cy="618" r="6"
+          fill="oklch(0.85 0.075 350 / 0.95)"
+          stroke="oklch(0.85 0.075 350)"/>
+  <circle cx="800" cy="618" r="13"
+          stroke="oklch(0.85 0.075 350)"
+          stroke-opacity="0.42"
+          fill="none"/>
+</svg>
