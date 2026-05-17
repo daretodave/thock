@@ -837,7 +837,7 @@
 - elements: `apps/web/src/app/deep-dives/helpers.ts` — sortDeepDivesByLength() (readTime desc, publishedAt desc tie-break, slug asc build-stability tie-break) — no `__tests__/` directory existed
 > **Resolved (2026-05-17):** Added `apps/web/src/app/deep-dives/__tests__/helpers.test.ts` with 7 tests: empty array, single article, readTime desc sort order, publishedAt desc tie-break, slug asc build-stability tie-break, all three keys in cascade, and input array immutability. 628 e2e green. `0f2904b`
 
-### [x] [content] [3.5] GMK CYL Ramune — no group-buy record and no companion article despite being the highest-scoring non-flat W21 tracker row — addressed in pending commit (this tick — cloud /iterate drain)
+### [x] [content] [3.5] GMK CYL Ramune — no group-buy record and no companion article despite being the highest-scoring non-flat W21 tracker row — addressed in `8edcd45`
 - category: content
 - filed: 2026-05-17 by cloud /iterate audit
 - impact: 7 (GMK CYL Ramune score=38 direction=up in W21 — highest non-flat keycap row; GB opened 2026-05-15 across 10 global vendors; no data record or companion article; Rule 3 gap created and immediately resolved in same tick)
