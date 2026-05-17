@@ -24,24 +24,33 @@ const publicDir = resolve(here, '../../public')
  * here when the loop starts emitting SVGs to them.
  */
 
-const SVG_DIRS = ['hero-art', 'group-buy-art'] as const
+// article-viz/ uses per-article subdirectories — the walker must recurse.
+const SVG_DIRS = ['hero-art', 'group-buy-art', 'article-viz'] as const
+
+function walkSvgs(dir: string, out: string[]): void {
+  let entries: string[]
+  try {
+    const stat = statSync(dir)
+    if (!stat.isDirectory()) return
+    entries = readdirSync(dir)
+  } catch {
+    return
+  }
+  for (const entry of entries) {
+    const full = join(dir, entry)
+    const stat = statSync(full)
+    if (stat.isDirectory()) {
+      walkSvgs(full, out)
+    } else if (entry.endsWith('.svg')) {
+      out.push(full)
+    }
+  }
+}
 
 function listSvgFiles(): string[] {
   const out: string[] = []
   for (const sub of SVG_DIRS) {
-    const dir = join(publicDir, sub)
-    let entries: string[]
-    try {
-      const stat = statSync(dir)
-      if (!stat.isDirectory()) continue
-      entries = readdirSync(dir)
-    } catch {
-      continue
-    }
-    for (const entry of entries) {
-      if (!entry.endsWith('.svg')) continue
-      out.push(join(dir, entry))
-    }
+    walkSvgs(join(publicDir, sub), out)
   }
   return out
 }
