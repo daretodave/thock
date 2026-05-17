@@ -952,3 +952,13 @@ passes accumulate signals.)
 - issue: #132
 - elements: `apps/web/src/__tests__/svg-validity.test.ts` — SVG_DIRS missing 'article-viz'; listSvgFiles not recursive
 > **Resolved (2026-05-17):** Introduced `walkSvgs()` recursive helper replacing the flat `readdirSync` loop; added `'article-viz'` to `SVG_DIRS`. Walker now covers all 3 brander output trees (hero-art/: 42 SVGs, group-buy-art/: 6, article-viz/: 84) and handles any future multi-level destination without per-dir special casing. 631 e2e green. `1c7b470`
+
+### [x] [test] [3.5] meta.spec.ts JSON-LD shape audit gaps for 8 route families (phases 21–33) — addressed in 0f23cf2 (closes #134)
+- category: test
+- filed: 2026-05-17 by cloud /iterate audit
+- impact: 5 (8 route families shipped in phases 21–33 fell through to [] in expectedTypesFor — JSON-LD parse checked but @type not asserted; regression in type on quiz, tags, group-buys/past, part/[kind], part/[kind]/[slug], tracker/[week] would be invisible to the e2e gate)
+- ease: 7 (add 8 pattern-match cases to expectedTypesFor; each 1–2 lines)
+- score: 3.5 (impact × ease / 10)
+- issue: #134
+- elements: `apps/e2e/tests/meta.spec.ts` — expectedTypesFor() missing cases for post-phase-17 routes
+> **Resolved (2026-05-17):** Added 8 cases to expectedTypesFor: /quiz/switch → WebApplication; /tags → CollectionPage+BreadcrumbList+ItemList; /group-buys/past → same; /part/[kind] index → same; /part/board/[slug] → Thing+BreadcrumbList; /part/(switch|keycap-set)/[slug] → Product+BreadcrumbList; /trends/tracker/YYYY-WNN → CollectionPage+BreadcrumbList+Dataset. 631 e2e green. `0f23cf2`
