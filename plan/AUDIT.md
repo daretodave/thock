@@ -827,6 +827,16 @@
 - elements: `apps/web/src/components/tags/TagGroup.tsx` — no `__tests__/TagGroup.test.tsx` existed; sibling `TagsIndex.test.tsx` covers the grouping helper but not the component rendering
 > **Resolved (2026-05-17):** Added `apps/web/src/components/tags/__tests__/TagGroup.test.tsx` with 8 tests: section data-testid per category, heading label for switch, heading label for misc, tint class for switch (text-tag-switch), misc special-case class (text-text-2, no text-tag-*), chip count matches tags array, chip link hrefs (/tag/<slug>), empty-tags renders no chips. 622 e2e green. `42c9796`
 
+### [x] [test] [4.5] deep-dives helpers — sortDeepDivesByLength() has no unit tests — addressed in 0f2904b
+- category: test
+- filed: 2026-05-17 by cloud /iterate audit
+- impact: 5 (sortDeepDivesByLength powers the /deep-dives pillar sort order — longest reads first — across all 8 deep-dives articles; same pattern as recently-tested guides/helpers and ideas/helpers)
+- ease: 9 (pure function, no RSC, no async, no external deps — identical pattern to groupGuidesBySection and pickBuildOfTheWeek)
+- score: 4.5 (impact × ease / 10)
+- issue: [mirror-failed: 2026-05-17T00:00:00Z]
+- elements: `apps/web/src/app/deep-dives/helpers.ts` — sortDeepDivesByLength() (readTime desc, publishedAt desc tie-break, slug asc build-stability tie-break) — no `__tests__/` directory existed
+> **Resolved (2026-05-17):** Added `apps/web/src/app/deep-dives/__tests__/helpers.test.ts` with 7 tests: empty array, single article, readTime desc sort order, publishedAt desc tie-break, slug asc build-stability tie-break, all three keys in cascade, and input array immutability. 628 e2e green. `0f2904b`
+
 ---
 
 (Older findings drained as they ship. Empty until other audit
