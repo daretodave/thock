@@ -94,6 +94,14 @@
 
 ## Open findings
 
+### [x] [test] [4.0] validateAll() in @thock/data/validate has no unit tests — addressed in 352f365 (closes #142)
+- category: test
+- filed: 2026-05-18 by cloud /iterate audit
+- impact: 5 (validateAll() is the integration layer combining walkAll() + checkCrossRefs() into the ValidationResult used by `pnpm data:validate`; the synthetic-input path exists specifically for testing but was untested; counts aggregation and ok-flag computation were uncovered)
+- ease: 8 (synthetic-input path already wired; fixtures reusable from crossrefs.test.ts)
+- score: 4.0 (impact × ease / 10)
+- issue: #142
+
 ### [x] [data] [5.4] W21 tracker — Hall Effect / Rapid Trigger and HMX Cloud V2 lack articleSlug linkage; W20 DCS Olivetti unlinked despite companion article shipping — addressed in ba14cc7
 - category: data
 - filed: 2026-05-17 by cloud /iterate audit
