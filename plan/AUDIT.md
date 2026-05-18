@@ -1073,3 +1073,12 @@ passes accumulate signals.)
 - score: 3.6 (impact × ease / 10)
 - issue: #146
 > **Resolved (2026-05-18):** Added `apps/web/src/app/search/__tests__/SearchPanel.test.tsx` with 4 tests: (1) empty-query hint renders search-empty-query testid; (2) debounced query with hits renders search-results testid; (3) non-matching query renders "no matches" text + all 5 pillar fallback links; (4) ?q= URL param pre-populates input + triggers search on mount. Mocks next/navigation useSearchParams and @/lib/search/runtime searchArticles; vi.useFakeTimers() handles 120ms debounce. 446 unit tests (+4), 631 e2e green. `bce4ec4`
+
+### [test] [4.8] tracker/index.ts — 5 pure helpers driving Trends Tracker have no unit tests
+- category: test
+- filed: 2026-05-18 by cloud /iterate audit
+- impact: 6 (pickSummarySlots/groupByCategory/weekKicker/formatDelta/presentCategories drive the signature Trends Tracker dashboard — TrackerSummaryGrid, TrackerCategorySection, and the tracker page route; pickSummarySlots has non-trivial dedup + slot-selection logic amended in critique pass 9 with no regression guard)
+- ease: 8 (pure functions, no async, no RSC, no mocking needed)
+- score: 4.8 (impact × ease / 10)
+- issue: [mirror-failed: 2026-05-18T00:00:00Z]
+- elements: `apps/web/src/lib/tracker/index.ts` — pickSummarySlots, groupByCategory, weekKicker, formatDelta, presentCategories
