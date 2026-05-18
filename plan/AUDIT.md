@@ -857,6 +857,16 @@
 - elements: `packages/data/src/schemas/board.ts`, `packages/data/src/schemas/keycap-set.ts` — no `__tests__/schemas/board.test.ts` or `keycap-set.test.ts` existed; `ls packages/data/src/__tests__/schemas/` returned only group-buy / switch / trend / vendor
 > **Resolved (2026-05-17):** Added `packages/data/src/__tests__/schemas/board.test.ts` (5 tests: valid acceptance, unknown layout rejection, unknown mountStyle rejection, unknown caseMaterial rejection, null releasedAt acceptance) and `packages/data/src/__tests__/schemas/keycap-set.test.ts` (5 tests: valid acceptance, unknown profile rejection, unknown material rejection, unknown legendType rejection, null designer acceptance). Pattern identical to vendor.test.ts / switch.test.ts. 631 e2e green. `3bcab05`
 
+### [x] [data] [3.6] cannonkeys-nyawice: status "live" but endDate 2026-05-17 (closed yesterday) — addressed in 1d34cd8 (closes #139)
+- category: data
+- filed: 2026-05-18 by cloud /iterate audit
+- impact: 4 (source-of-truth field wrong; renderer-side guard in GroupBuyRow.tsx absorbs user-visible "LIVE" label leak on /group-buys; but /group-buys/past archive selection, RSS, JSON-LD, and downstream consumers see the stale status)
+- ease: 9 (one JSON field flip; schema enum already allows "closed")
+- score: 3.6 (impact × ease / 10)
+- root cause: no automation refreshes group-buy status as endDate passes. Same drift pattern as GSK Sweet Nightmare (fixed 3443fe9, closes #89) and Ishtar R2 (renderer-side guard 478c952).
+- issue: #139
+> **Resolved (2026-05-18):** Flipped status "live" → "closed", bumped updatedAt to 2026-05-18T00:00:00.000Z on data/group-buys/cannonkeys-nyawice.json. Updated group-buys.test.ts "includes live buys" assertion from Nyawice (now closed) to kbdfans-gmk-cyl-greg-2 (also live on the test's reference date 2026-05-10). 631 e2e green. `1d34cd8`
+
 ---
 
 (Older findings drained as they ship. Empty until other audit
