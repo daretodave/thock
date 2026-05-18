@@ -1011,3 +1011,13 @@ passes accumulate signals.)
 - issue: #138
 - elements: `apps/web/src/lib/data-runtime/__tests__/loaders.test.ts` — missing getAllVendors, getVendorBySlug, getAllTrendSnapshots, getTrendSnapshot, getAllNewsletters, getNewsletterBySlug, getArticlesMentioningPart
 > **Resolved (2026-05-17):** Added 8 tests to `apps/web/src/lib/data-runtime/__tests__/loaders.test.ts`: vendor sort + slug lookup + unknown-null; trend snapshot list + week lookup + unknown-null; newsletter empty-list + unknown-null; getArticlesMentioningPart filter (gateron-oil-king → ≥1 article, publishedAt-desc order) + empty-on-unknown-slug. 427 unit tests, 631 e2e green. `82b53c6`
+
+### [x] [test] [4.0] @thock/data and @thock/content paths.ts — path utility functions lack direct unit tests — addressed in 1741175
+- category: test
+- filed: 2026-05-18 by cloud /iterate audit
+- impact: 5 (both paths.ts modules are the foundational filesystem layer for all loaders in their respective packages; fileBaseName(), listEntityFiles(), articlesDir(), etc. called on every getAll* invocation with no regression guard)
+- ease: 8 (fileBaseName is pure; setRepoRootForTests exists in @thock/data for injection; listArticleFiles/listEntityFiles can exercise the real seed data)
+- score: 4.0 (impact × ease / 10)
+- issue: [mirror-failed: 2026-05-18T00:00:00Z]
+- elements: `packages/data/src/loaders/paths.ts` (fileBaseName, listEntityFiles, dataDir, entityDir); `packages/content/src/loaders/paths.ts` (fileBaseName, listArticleFiles, listNewsletterFiles, articlesDir, tagsFile)
+> **Resolved (2026-05-18):** Added `packages/data/src/__tests__/loaders/paths.test.ts` (8 tests: fileBaseName 4 edge cases, dataDir + entityDir via setRepoRootForTests, listEntityFiles sorted + empty-on-unknown) and `packages/content/src/__tests__/loaders/paths.test.ts` (9 tests: fileBaseName 4 edge cases, listArticleFiles sorted + seed-slug presence, listNewsletterFiles returns array, articlesDir + tagsFile path suffix assertions). 631 e2e green. `1741175`
