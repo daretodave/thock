@@ -904,6 +904,14 @@
 - issue: [mirror-failed: 2026-05-18T00:00:00Z]
 > **Resolved (2026-05-18):** Added `data/group-buys/kbdfans-gmk-cyl-prussian-alert.json` (status=live, startDate=2026-05-15, endDate=2026-06-12, productKind=keycap-set, vendorSlug=kbdfans, region=global). Hero SVG at `apps/web/public/group-buy-art/kbdfans-gmk-cyl-prussian-alert.svg` rendered by brander (Cherry-profile cluster, Prussian-red splash `oklch(0.45 0.14 25)`, cream alphas, bronze theme dot). 34 data records, 8 group-buys, all valid. 442 unit tests, 631 e2e green.
 
+### [x] [test] [4.5] shared.ts — foundational Zod building-block schemas have no direct unit tests — addressed in this commit (closes #143)
+- category: test
+- filed: 2026-05-18 by cloud /iterate audit
+- impact: 5 (SlugSchema, IsoDateSchema, DateOnlySchema, UrlSchema, CountryCodeSchema, IsoWeekSchema, HousingMaterialSchema, StemMaterialSchema are used by all 6 entity schemas; a regex change here would silently break all schema validation with no direct regression guard catching it first)
+- ease: 9 (trivial safeParse tests, same pattern as existing entity schema tests)
+- score: 4.5 (impact × ease / 10)
+- issue: #143
+
 ---
 
 (Older findings drained as they ship. Empty until other audit
