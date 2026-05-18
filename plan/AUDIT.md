@@ -993,6 +993,15 @@ passes accumulate signals.)
 - elements: `apps/e2e/tests/meta.spec.ts` — expectedTypesFor() missing cases for post-phase-17 routes
 > **Resolved (2026-05-17):** Added 8 cases to expectedTypesFor: /quiz/switch → WebApplication; /tags → CollectionPage+BreadcrumbList+ItemList; /group-buys/past → same; /part/[kind] index → same; /part/board/[slug] → Thing+BreadcrumbList; /part/(switch|keycap-set)/[slug] → Product+BreadcrumbList; /trends/tracker/YYYY-WNN → CollectionPage+BreadcrumbList+Dataset. 631 e2e green. `0f23cf2`
 
+### [x] [test] [4.5] packages/data memo.ts — no direct unit tests for caching contract — addressed in be85a0a
+- category: test
+- filed: 2026-05-18 by cloud /iterate audit
+- impact: 5 (memo() is the foundational caching layer used by all 6 data loaders; a broken cache contract would silently corrupt data across loader calls)
+- ease: 9 (pure module, no async, no fs, injected vi.fn() stubs)
+- score: 4.5 (impact × ease / 10)
+- issue: [mirror-failed: 2026-05-18T00:00:00Z]
+- elements: `packages/data/src/loaders/memo.ts` — caching contract (fn called exactly once), __resetForTests() clears all entries, independent keys don't share cache, same reference returned on subsequent calls
+
 ### [x] [test] [4.5] data-runtime: 7 exported functions lack direct unit tests — addressed in 82b53c6 (closes #138)
 - category: test
 - filed: 2026-05-17 by cloud /iterate audit
