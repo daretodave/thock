@@ -1074,7 +1074,7 @@ passes accumulate signals.)
 - issue: #146
 > **Resolved (2026-05-18):** Added `apps/web/src/app/search/__tests__/SearchPanel.test.tsx` with 4 tests: (1) empty-query hint renders search-empty-query testid; (2) debounced query with hits renders search-results testid; (3) non-matching query renders "no matches" text + all 5 pillar fallback links; (4) ?q= URL param pre-populates input + triggers search on mount. Mocks next/navigation useSearchParams and @/lib/search/runtime searchArticles; vi.useFakeTimers() handles 120ms debounce. 446 unit tests (+4), 631 e2e green. `bce4ec4`
 
-### [test] [4.8] tracker/index.ts — 5 pure helpers driving Trends Tracker have no unit tests
+### [x] [test] [4.8] tracker/index.ts — 5 pure helpers driving Trends Tracker have no unit tests — addressed in 76c4e90
 - category: test
 - filed: 2026-05-18 by cloud /iterate audit
 - impact: 6 (pickSummarySlots/groupByCategory/weekKicker/formatDelta/presentCategories drive the signature Trends Tracker dashboard — TrackerSummaryGrid, TrackerCategorySection, and the tracker page route; pickSummarySlots has non-trivial dedup + slot-selection logic amended in critique pass 9 with no regression guard)
@@ -1082,3 +1082,4 @@ passes accumulate signals.)
 - score: 4.8 (impact × ease / 10)
 - issue: [mirror-failed: 2026-05-18T00:00:00Z]
 - elements: `apps/web/src/lib/tracker/index.ts` — pickSummarySlots, groupByCategory, weekKicker, formatDelta, presentCategories
+> **Resolved (2026-05-18):** Added `apps/web/src/lib/tracker/__tests__/index.test.ts` with 23 tests across all 5 functions. pickSummarySlots: 6 tests (empty input, all-4-slots, no-reuse, breakout-by-spark-slope, faller-fallback, sleeper-drops). groupByCategory: 4 tests (bucket init, score-desc, name-asc tie-break, routing). weekKicker: 4 tests (valid parse, empty string, missing padding, W01). formatDelta: 6 tests (null, flat, zero, positive, negative, rounding). presentCategories: 3 tests (filters empty, canonical order, single). 469 unit tests total. 631 e2e green. `76c4e90`
