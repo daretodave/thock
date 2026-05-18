@@ -912,7 +912,7 @@
 - score: 4.5 (impact × ease / 10)
 - issue: #143
 
-### [ ] [test] [6.3] Source.tsx — no unit test for external-link guard logic (26 of 42 articles)
+### [x] [test] [6.3] Source.tsx — no unit test for external-link guard logic (26 of 42 articles) — addressed in 6e851b9 (closes #145)
 - category: test
 - filed: 2026-05-18 by cloud /iterate audit
 - impact: 7 (Source renders in 26 of 42 articles — 62% of the corpus; the isExternal check adds rel="noopener" target="_blank" for https?:// URLs and must not silently regress; data-source="true" is the extraction marker used by /sources)
