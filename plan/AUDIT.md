@@ -887,6 +887,15 @@
 - elements: `apps/web/src/lib/data-runtime/index.ts` — getAllSwitches, getSwitchBySlug, getAllKeycapSets, getKeycapSetBySlug, getAllBoards, getBoardBySlug, getGroupBuyBySlug — none imported or tested in loaders.test.ts; the 82b53c6 pass covered 7 other untested loaders (vendors, trends, newsletters, getArticlesMentioningPart) but missed the part-catalog adapters
 > **Resolved (2026-05-18):** Added 11 tests to `apps/web/src/lib/data-runtime/__tests__/loaders.test.ts`: getAllSwitches (length + type validation), getSwitchBySlug (slug round-trip + null on unknown), getAllKeycapSets (length), getKeycapSetBySlug (gmk-olivia round-trip + null on unknown), getAllBoards (length), getBoardBySlug (mode-sonnet round-trip + null on unknown), getGroupBuyBySlug (kbdfans-gmk-cyl-greg-2 round-trip + null on unknown). 442 unit tests, 631 e2e green. `7889df4`
 
+### [x] [data] [5.6] kbdfans-gmk-cyl-prussian-alert — live GB opened 2026-05-15, missing group-buy data record — addressed in this commit
+- category: data
+- filed: 2026-05-18 by cloud /iterate audit
+- impact: 8 (live group buy since May 15; companion article at /article/gmk-cyl-prussian-alert promises "live entry will land on the /group-buys board" — 3 days post-open the record was absent; W21 tracker has the set at score=54 direction=up; /group-buys board was missing the highest-scoring non-flat keycap row)
+- ease: 7 (one JSON data record + hero SVG via brander; all details available from article + W21 tracker)
+- score: 5.6 (impact × ease / 10)
+- issue: [mirror-failed: 2026-05-18T00:00:00Z]
+> **Resolved (2026-05-18):** Added `data/group-buys/kbdfans-gmk-cyl-prussian-alert.json` (status=live, startDate=2026-05-15, endDate=2026-06-12, productKind=keycap-set, vendorSlug=kbdfans, region=global). Hero SVG at `apps/web/public/group-buy-art/kbdfans-gmk-cyl-prussian-alert.svg` rendered by brander (Cherry-profile cluster, Prussian-red splash `oklch(0.45 0.14 25)`, cream alphas, bronze theme dot). 34 data records, 8 group-buys, all valid. 442 unit tests, 631 e2e green.
+
 ---
 
 (Older findings drained as they ship. Empty until other audit

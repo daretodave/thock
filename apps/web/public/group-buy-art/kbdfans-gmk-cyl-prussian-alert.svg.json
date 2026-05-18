@@ -1,0 +1,30 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-18T00:00:00Z",
+  "commit": "19b55f57e094d28b66f0cd928672eb41b23718d6",
+  "kind": "group-buy-hero-art",
+  "source": "plan/bearings.md § Group-buy hero art — colorful SVGs (locked 2026-05-10 via /oversight)",
+  "template": "directive: simple line drawing + single splash of color illustrative of productKind keycap-set",
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": [],
+  "size": [1200, 750],
+  "subject": "Five CYL-profile keycaps in a tight editorial cluster — three back-row, two front-row offset right. Unbleached cream bodies (the alpha story) with one focal Prussian-red cap (front-left) as the alert accent. Back-right cap carries a faint Prussian-red blush on its top surface, suggesting a modifier key. Bronze theme dot at upper-right margin.",
+  "splash_color": {
+    "name": "prussian-red",
+    "oklch": "oklch(0.45 0.14 25)"
+  },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "bronze_theme_dot": "oklch(0.80 0.135 75)",
+  "cream_body_color": "oklch(0.94 0.018 85)",
+  "product": "GMK CYL Prussian Alert",
+  "vendor": "KBDfans",
+  "product_kind": "keycap-set",
+  "keycap_profile": "CYL",
+  "cluster": "3-back-2-front staggered",
+  "focal_cap": "front-row left — full Prussian-red splash",
+  "outputs": [
+    "apps/web/public/group-buy-art/kbdfans-gmk-cyl-prussian-alert.svg"
+  ],
+  "warnings": []
+}

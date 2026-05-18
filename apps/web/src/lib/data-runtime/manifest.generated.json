@@ -415,6 +415,22 @@
       "updatedAt": "2026-05-09T20:00:00.000Z"
     },
     {
+      "slug": "kbdfans-gmk-cyl-prussian-alert",
+      "name": "GMK CYL Prussian Alert",
+      "vendorSlug": "kbdfans",
+      "productSlug": null,
+      "productKind": "keycap-set",
+      "startDate": "2026-05-15",
+      "endDate": "2026-06-12",
+      "region": "global",
+      "url": "https://kbdfans.com/products/gmk-cyl-prussian-alert",
+      "imageUrl": null,
+      "heroImage": "/group-buy-art/kbdfans-gmk-cyl-prussian-alert.svg",
+      "status": "live",
+      "description": "GMK CYL Prussian Alert — Bauhaus-leaning Cherry-profile doubleshot ABS set with deep Prussian red alphas on unbleached cream, GMK-manufactured. GB live globally via KBDfans (global host), Yushakobo, Prototypist, and 7 additional regional vendors; order window 2026-05-15 through 2026-06-12.",
+      "updatedAt": "2026-05-18T00:00:00.000Z"
+    },
+    {
       "slug": "kbdfans-gmk-cyl-ramune",
       "name": "GMK CYL Ramune",
       "vendorSlug": "kbdfans",
@@ -3093,5 +3109,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-05-18T05:40:57.880Z"
+  "generatedAt": "2026-05-18T09:25:43.632Z"
 }

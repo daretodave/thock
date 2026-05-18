@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1200 750"
+     preserveAspectRatio="xMidYMid meet"
+     fill="none"
+     stroke="oklch(0.78 0.005 90)"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     role="img"
+     aria-label="thock group-buy card art for KBDfans GMK CYL Prussian Alert — five CYL-profile keycaps in a tight cluster, unbleached cream bodies with a deep Prussian-red accent cap">
+  <title>thock group-buy hero — GMK CYL Prussian Alert (KBDfans), five CYL-profile keycaps, unbleached cream alphas, one focal Prussian-red accent cap</title>
+
+  <!--
+    Composition: five CYL-profile keycaps in a tight editorial cluster —
+    three across the back row, two in the front row offset half a cap to
+    the right. The arrangement suggests loose keycaps freshly pulled from
+    a board, editorial-photograph style.
+
+    Prussian Alert colorway translation to OKLCH:
+      unbleached cream body    oklch(0.94 0.018 85)   = warm paper / raw-linen
+      Prussian red accent      oklch(0.45 0.14  25)   = deep brick-red, the splash
+      warm-grey stroke         oklch(0.78 0.005 90)   = the default across the family
+
+    Strategy:
+      - Three back-row caps have the unbleached-cream body fill at moderate
+        alpha — the cream alphas are the background story.
+      - Front-row LEFT cap gets the Prussian-red splash fill — the alert
+        accent, rendered boldly.
+      - Front-row RIGHT cap picks up a lighter cream body, suggesting another
+        alpha key, so the red focal cap stands alone.
+      - Splash ellipse behind the cluster uses the Prussian red at very low
+        alpha — a breath of warmth, not a blaze.
+      - Bronze theme dot at upper-right margin: oklch(0.80 0.135 75).
+      - Accent pip below the cluster in Prussian red echoes the family
+        convention.
+  -->
+
+  <!-- ============================================================
+       SPLASH WASH: deep warm brick-red ellipse behind the cluster.
+       Single-splash convention: one accent hue, very low alpha.
+  ============================================================ -->
+  <ellipse cx="590" cy="400" rx="490" ry="208"
+           fill="oklch(0.45 0.14 25 / 0.11)" stroke="none"/>
+
+  <!-- ============================================================
+       BRONZE THEME DOT: upper-right margin ornamental anchor.
+       Per hero-art spec: small oklch(0.80 0.135 75) circle.
+  ============================================================ -->
+  <circle cx="1092" cy="88" r="9"
+          fill="oklch(0.80 0.135 75 / 0.90)"
+          stroke="oklch(0.80 0.135 75)"/>
+  <circle cx="1092" cy="88" r="17"
+          stroke="oklch(0.80 0.135 75)"
+          stroke-opacity="0.35"
+          fill="none"/>
+
+  <!-- ============================================================
+       KEYCAP SILHOUETTE TEMPLATE (CYL-profile, near-top-down with
+       a hint of 3/4 to read the cylindrical scoop):
+
+         Outer footprint:  176 × 168 px, rounded corners via Q curves
+         Inset top surface: ~18 px inset on all sides
+         Scoop: two concentric arcs slightly above centre and slightly
+                below centre, curving inward at midpoints to read the
+                CYL dish
+
+       Same path vocabulary as the greg-2 / king-of-the-seas / ramune
+       sibling files.
+  ============================================================ -->
+
+  <!-- ===== ROW 1 — BACK ROW: three 1u caps ===== -->
+
+  <!-- Back-left — unbleached cream alpha body -->
+  <g transform="translate(268 238)">
+    <!-- outer silhouette, cream fill suggesting the unbleached alpha body -->
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"
+          fill="oklch(0.94 0.018 85 / 0.82)" stroke="oklch(0.78 0.005 90)"/>
+    <!-- inset top surface — lighter cream to suggest the CYL sculpt -->
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          fill="oklch(0.97 0.010 88 / 0.70)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.65"/>
+    <!-- CYL scoop arcs -->
+    <path d="M 38 90 Q 88 76 138 90" stroke-opacity="0.42"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke-opacity="0.28"/>
+  </g>
+
+  <!-- Back-middle — unbleached cream, slightly elevated (draws the eye inward) -->
+  <g transform="translate(498 222)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"
+          fill="oklch(0.94 0.018 85 / 0.78)" stroke="oklch(0.78 0.005 90)"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          fill="oklch(0.97 0.010 88 / 0.65)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.60"/>
+    <path d="M 38 90 Q 88 76 138 90" stroke-opacity="0.40"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke-opacity="0.26"/>
+  </g>
+
+  <!-- Back-right — unbleached cream, a trace of the Prussian-red accent as
+       a very faint blush on the top surface only — suggesting a modifier
+       key in the alert accent colour, not yet the full splash -->
+  <g transform="translate(728 238)">
+    <!-- outer cap: plain cream -->
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"
+          fill="oklch(0.94 0.018 85 / 0.78)" stroke="oklch(0.78 0.005 90)"/>
+    <!-- top surface: faint Prussian-red tint — same surface-color idea as the
+         legend legends on the alert keycaps, applied as a wash rather than fill -->
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          fill="oklch(0.45 0.14 25 / 0.18)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55"/>
+    <path d="M 38 90 Q 88 76 138 90" stroke-opacity="0.38"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke-opacity="0.24"/>
+  </g>
+
+  <!-- ===== ROW 2 — FRONT ROW: two 1u caps, offset right ===== -->
+
+  <!-- Front-left — FOCAL CAP: full Prussian-red splash.
+       This is the alert accent cap — Prussian red body, warm legend surface. -->
+  <g transform="translate(408 440)">
+    <!-- full Prussian-red cap body -->
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"
+          fill="oklch(0.45 0.14 25 / 0.92)" stroke="oklch(0.45 0.14 25)"/>
+    <!-- inset top surface — warmer, slightly lighter so the scoop reads on the dark fill -->
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          fill="oklch(0.52 0.12 28 / 0.80)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.50"/>
+    <!-- CYL scoop arcs in warm near-white so they read on the dark body -->
+    <path d="M 38 90 Q 88 74 138 90"
+          stroke="oklch(0.92 0.025 85)" stroke-opacity="0.65"/>
+    <path d="M 38 102 Q 88 90 138 102"
+          stroke="oklch(0.92 0.025 85)" stroke-opacity="0.42"/>
+  </g>
+
+  <!-- Front-right — plain cream alpha, flanking the focal cap.
+       No accent fill — keeps the Prussian red isolated. -->
+  <g transform="translate(628 440)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"
+          fill="oklch(0.94 0.018 85 / 0.80)" stroke="oklch(0.78 0.005 90)"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          fill="oklch(0.97 0.010 88 / 0.65)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.60"/>
+    <path d="M 38 90 Q 88 76 138 90" stroke-opacity="0.40"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke-opacity="0.26"/>
+  </g>
+
+  <!-- ============================================================
+       ACCENT PIP: small Prussian-red dot below and right of the
+       focal cap — mirrors the family pip convention (greg-2, ramune).
+  ============================================================ -->
+  <circle cx="776" cy="626" r="6"
+          fill="oklch(0.45 0.14 25 / 0.92)"
+          stroke="oklch(0.45 0.14 25)"/>
+  <circle cx="776" cy="626" r="13"
+          stroke="oklch(0.45 0.14 25)"
+          stroke-opacity="0.38"
+          fill="none"/>
+</svg>
