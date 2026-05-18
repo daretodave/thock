@@ -1093,3 +1093,13 @@ passes accumulate signals.)
 - issue: [mirror-failed: 2026-05-18T00:00:00Z]
 - elements: `packages/content/src/mdx/PartReference.tsx` — switch/keycap-set/board kind branches, vendorHref null guard, fallback prop, sponsored link rel
 > **Resolved (2026-05-18):** Added `packages/content/src/__tests__/mdx/PartReference.test.tsx` with 6 tests: (1) default fallback `[unknown part:id]` when parts array is empty; (2) custom fallback prop; (3) switch kind → Mono with no anchor; (4) keycap-set with imageUrl → anchor with rel="sponsored noopener"; (5) keycap-set with imageUrl null → Mono only; (6) board with imageUrl → anchor + Mono. 475 unit tests total. 631 e2e green. `309b79a`
+
+### [x] [test] [4.2] walkAll() in validate/walk.ts — no direct unit tests for production filesystem validation path — addressed in 49d4ba7
+- category: test
+- filed: 2026-05-18 by cloud /iterate audit
+- impact: 7 (walkAll() is the production filesystem walk + schema validation path invoked by pnpm data:validate via validateAll() without synthetic input; JSON-parse error capture, schema-validation failure capture, and the full 34-record real-data walk were uncovered — all validate/index.test.ts cases use synthetic { records: ... } input)
+- ease: 6 (needs setRepoRootForTests injection for isolation tests; uses mkdtempSync + temp dir for the error-path tests; pattern established by paths.test.ts)
+- score: 4.2 (impact × ease / 10)
+- issue: [mirror-failed: 2026-05-18T22:31:00Z]
+- elements: `packages/data/src/validate/walk.ts` — walkAll() real filesystem walk, JSON parse error capture, schema validation failure capture, ParsedRecord shape
+> **Resolved (2026-05-18):** Added `packages/data/src/__tests__/validate/walk.test.ts` with 5 tests: (1) real data directory produces no failures — regression guard for all 34 live records; (2) parsed records cover all 6 entity kinds; (3) each ParsedRecord has correct kind/file/baseName/data shape; (4) invalid JSON file captured as ParseFailure with "failed to parse JSON" message; (5) schema-invalid JSON captured as ParseFailure for the correct kind. Tests 4–5 use mkdtempSync + setRepoRootForTests injection (pattern from paths.test.ts). 113 data tests total (+5). 631 e2e green. `49d4ba7`
