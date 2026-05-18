@@ -11,6 +11,7 @@ import {
   getActiveGroupBuys,
   getAllClosedGroupBuys,
   getAllGroupBuys,
+  getGroupBuyBySlug,
   getLatestTrendSnapshot,
   getAllVendors,
   getVendorBySlug,
@@ -20,6 +21,12 @@ import {
   getNewsletterBySlug,
   getArticlesMentioningPart,
   manifestGeneratedAt,
+  getAllSwitches,
+  getSwitchBySlug,
+  getAllKeycapSets,
+  getKeycapSetBySlug,
+  getAllBoards,
+  getBoardBySlug,
 } from '../index'
 
 describe('data-runtime adapter', () => {
@@ -205,5 +212,70 @@ describe('data-runtime adapter', () => {
     expect(
       getArticlesMentioningPart('switch', 'this-switch-does-not-exist'),
     ).toEqual([])
+  })
+
+  it('exposes all switches', () => {
+    const switches = getAllSwitches()
+    expect(switches.length).toBeGreaterThanOrEqual(1)
+    for (const sw of switches) {
+      expect(sw.slug).toBeTruthy()
+      expect(['linear', 'tactile', 'clicky', 'silent-linear', 'silent-tactile']).toContain(sw.type)
+    }
+  })
+
+  it('looks up a switch by slug', () => {
+    const sw = getSwitchBySlug('gateron-oil-king')
+    expect(sw).not.toBeNull()
+    expect(sw!.slug).toBe('gateron-oil-king')
+  })
+
+  it('returns null for an unknown switch slug', () => {
+    expect(getSwitchBySlug('this-switch-does-not-exist')).toBeNull()
+  })
+
+  it('exposes all keycap sets', () => {
+    const sets = getAllKeycapSets()
+    expect(sets.length).toBeGreaterThanOrEqual(1)
+    for (const ks of sets) {
+      expect(ks.slug).toBeTruthy()
+    }
+  })
+
+  it('looks up a keycap set by slug', () => {
+    const ks = getKeycapSetBySlug('gmk-olivia')
+    expect(ks).not.toBeNull()
+    expect(ks!.slug).toBe('gmk-olivia')
+  })
+
+  it('returns null for an unknown keycap set slug', () => {
+    expect(getKeycapSetBySlug('this-keycap-set-does-not-exist')).toBeNull()
+  })
+
+  it('exposes all boards', () => {
+    const boards = getAllBoards()
+    expect(boards.length).toBeGreaterThanOrEqual(1)
+    for (const b of boards) {
+      expect(b.slug).toBeTruthy()
+    }
+  })
+
+  it('looks up a board by slug', () => {
+    const board = getBoardBySlug('mode-sonnet')
+    expect(board).not.toBeNull()
+    expect(board!.slug).toBe('mode-sonnet')
+  })
+
+  it('returns null for an unknown board slug', () => {
+    expect(getBoardBySlug('this-board-does-not-exist')).toBeNull()
+  })
+
+  it('looks up a group buy by slug', () => {
+    const gb = getGroupBuyBySlug('kbdfans-gmk-cyl-greg-2')
+    expect(gb).not.toBeNull()
+    expect(gb!.slug).toBe('kbdfans-gmk-cyl-greg-2')
+  })
+
+  it('returns null for an unknown group buy slug', () => {
+    expect(getGroupBuyBySlug('this-group-buy-does-not-exist')).toBeNull()
   })
 })
