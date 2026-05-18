@@ -1083,3 +1083,13 @@ passes accumulate signals.)
 - issue: [mirror-failed: 2026-05-18T00:00:00Z]
 - elements: `apps/web/src/lib/tracker/index.ts` — pickSummarySlots, groupByCategory, weekKicker, formatDelta, presentCategories
 > **Resolved (2026-05-18):** Added `apps/web/src/lib/tracker/__tests__/index.test.ts` with 23 tests across all 5 functions. pickSummarySlots: 6 tests (empty input, all-4-slots, no-reuse, breakout-by-spark-slope, faller-fallback, sleeper-drops). groupByCategory: 4 tests (bucket init, score-desc, name-asc tie-break, routing). weekKicker: 4 tests (valid parse, empty string, missing padding, W01). formatDelta: 6 tests (null, flat, zero, positive, negative, rounding). presentCategories: 3 tests (filters empty, canonical order, single). 469 unit tests total. 631 e2e green. `76c4e90`
+
+### [x] [test] [4.8] PartReference.tsx — sole untested MDX component with branching rendering logic — addressed in 309b79a
+- category: test
+- filed: 2026-05-18 by cloud /iterate audit
+- impact: 6 (PartReference is the only MDX component in packages/content/src/mdx/ without a test; it drives part-link rendering in ArticleBody for all 42 article pages — switch/keycap-set/board branching, conditional anchor with rel="sponsored noopener", and fallback text had no regression guard despite all sibling MDX components being tested)
+- ease: 8 (pure React component, no async, no RSC, no router — simple render + querySelector assertions; mock pattern established by MentionedPartsRail.test.tsx)
+- score: 4.8 (impact × ease / 10)
+- issue: [mirror-failed: 2026-05-18T00:00:00Z]
+- elements: `packages/content/src/mdx/PartReference.tsx` — switch/keycap-set/board kind branches, vendorHref null guard, fallback prop, sponsored link rel
+> **Resolved (2026-05-18):** Added `packages/content/src/__tests__/mdx/PartReference.test.tsx` with 6 tests: (1) default fallback `[unknown part:id]` when parts array is empty; (2) custom fallback prop; (3) switch kind → Mono with no anchor; (4) keycap-set with imageUrl → anchor with rel="sponsored noopener"; (5) keycap-set with imageUrl null → Mono only; (6) board with imageUrl → anchor + Mono. 475 unit tests total. 631 e2e green. `309b79a`
