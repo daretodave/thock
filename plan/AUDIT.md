@@ -877,6 +877,16 @@
 - elements: `apps/web/src/components/article/ArticleBody.tsx` — no `__tests__/ArticleBody.test.tsx` existed; sole untested component in the article family
 > **Resolved (2026-05-18):** Added `apps/web/src/components/article/__tests__/ArticleBody.test.tsx` with 4 tests: (1) data-testid="article-body" wrapper present; (2) body source passed to MDXRemote; (3) no-error render when parts omitted (defaults to []); (4) no-error render when parts array provided. Mocks next-mdx-remote/rsc (async RSC) and @thock/content/mdx (full remark pipeline). 431 unit tests, 631 e2e green. `40ac380`
 
+### [x] [test] [4.5] data-runtime part-catalog adapters — 7 untested functions (getAllSwitches, getSwitchBySlug, getAllKeycapSets, getKeycapSetBySlug, getAllBoards, getBoardBySlug, getGroupBuyBySlug) — addressed in 7889df4 (closes #141)
+- category: test
+- filed: 2026-05-18 by cloud /iterate audit
+- impact: 5 (these functions power /part/switch/*, /part/keycap-set/*, /part/board/*, and the quiz getAllSwitches call; bugs would silently break part-catalog pages without any test regression guard)
+- ease: 9 (direct port of the existing vendor/trend/newsletter test pattern in loaders.test.ts)
+- score: 4.5 (impact × ease / 10)
+- issue: #141
+- elements: `apps/web/src/lib/data-runtime/index.ts` — getAllSwitches, getSwitchBySlug, getAllKeycapSets, getKeycapSetBySlug, getAllBoards, getBoardBySlug, getGroupBuyBySlug — none imported or tested in loaders.test.ts; the 82b53c6 pass covered 7 other untested loaders (vendors, trends, newsletters, getArticlesMentioningPart) but missed the part-catalog adapters
+> **Resolved (2026-05-18):** Added 11 tests to `apps/web/src/lib/data-runtime/__tests__/loaders.test.ts`: getAllSwitches (length + type validation), getSwitchBySlug (slug round-trip + null on unknown), getAllKeycapSets (length), getKeycapSetBySlug (gmk-olivia round-trip + null on unknown), getAllBoards (length), getBoardBySlug (mode-sonnet round-trip + null on unknown), getGroupBuyBySlug (kbdfans-gmk-cyl-greg-2 round-trip + null on unknown). 442 unit tests, 631 e2e green. `7889df4`
+
 ---
 
 (Older findings drained as they ship. Empty until other audit
