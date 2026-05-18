@@ -867,6 +867,16 @@
 - issue: #139
 > **Resolved (2026-05-18):** Flipped status "live" → "closed", bumped updatedAt to 2026-05-18T00:00:00.000Z on data/group-buys/cannonkeys-nyawice.json. Updated group-buys.test.ts "includes live buys" assertion from Nyawice (now closed) to kbdfans-gmk-cyl-greg-2 (also live on the test's reference date 2026-05-10). 631 e2e green. `1d34cd8`
 
+### [x] [test] [3.6] ArticleBody — no unit test (sole untested article component) — addressed in 40ac380 (closes #140)
+- category: test
+- filed: 2026-05-18 by cloud /iterate audit
+- impact: 6 (ArticleBody.tsx wraps MDXRemote and binds resolved parts to PartReference for all 42 article pages; every sibling component in the article family has colocated tests)
+- ease: 6 (mock next-mdx-remote/rsc + @thock/content/mdx; straightforward testing-library tests)
+- score: 3.6 (impact × ease / 10)
+- issue: #140
+- elements: `apps/web/src/components/article/ArticleBody.tsx` — no `__tests__/ArticleBody.test.tsx` existed; sole untested component in the article family
+> **Resolved (2026-05-18):** Added `apps/web/src/components/article/__tests__/ArticleBody.test.tsx` with 4 tests: (1) data-testid="article-body" wrapper present; (2) body source passed to MDXRemote; (3) no-error render when parts omitted (defaults to []); (4) no-error render when parts array provided. Mocks next-mdx-remote/rsc (async RSC) and @thock/content/mdx (full remark pipeline). 431 unit tests, 631 e2e green. `40ac380`
+
 ---
 
 (Older findings drained as they ship. Empty until other audit
