@@ -1018,6 +1018,16 @@ passes accumulate signals.)
 - elements: `apps/e2e/tests/meta.spec.ts` — expectedTypesFor() missing cases for post-phase-17 routes
 > **Resolved (2026-05-17):** Added 8 cases to expectedTypesFor: /quiz/switch → WebApplication; /tags → CollectionPage+BreadcrumbList+ItemList; /group-buys/past → same; /part/[kind] index → same; /part/board/[slug] → Thing+BreadcrumbList; /part/(switch|keycap-set)/[slug] → Product+BreadcrumbList; /trends/tracker/YYYY-WNN → CollectionPage+BreadcrumbList+Dataset. 631 e2e green. `0f23cf2`
 
+### [x] [test] [4.5] @thock/content memo.ts — caching contract has no direct unit tests — addressed in 66c5ca8 (closes #144)
+- category: test
+- filed: 2026-05-18 by cloud /iterate audit
+- impact: 5 (@thock/content memo() is the foundational caching layer for all content loaders; 4 test files import __resetForTests but the caching contract itself was uncovered)
+- ease: 9 (pure module, no async, no fs; direct port of the 5-test data/memo.test.ts pattern shipped at be85a0a)
+- score: 4.5 (impact × ease / 10)
+- issue: #144
+- elements: `packages/content/src/loaders/memo.ts` — caching contract (fn called exactly once, same reference returned, __resetForTests clears all entries, independent keys don't share cache)
+> **Resolved (2026-05-18):** Added `packages/content/src/__tests__/loaders/memo.test.ts` with 5 tests mirroring the data package's memo.test.ts: loader called exactly once across 3 invocations; same (identical) object reference returned; __resetForTests causes re-invocation; independent keys don't share values; __resetForTests clears all keys simultaneously. 636 unit tests, 631 e2e green. `66c5ca8`
+
 ### [x] [test] [4.5] packages/data memo.ts — no direct unit tests for caching contract — addressed in be85a0a
 - category: test
 - filed: 2026-05-18 by cloud /iterate audit
