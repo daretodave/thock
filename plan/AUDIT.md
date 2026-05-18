@@ -1064,3 +1064,12 @@ passes accumulate signals.)
 - issue: [mirror-failed: 2026-05-18T00:00:00Z]
 - elements: `packages/data/src/loaders/paths.ts` (fileBaseName, listEntityFiles, dataDir, entityDir); `packages/content/src/loaders/paths.ts` (fileBaseName, listArticleFiles, listNewsletterFiles, articlesDir, tagsFile)
 > **Resolved (2026-05-18):** Added `packages/data/src/__tests__/loaders/paths.test.ts` (8 tests: fileBaseName 4 edge cases, dataDir + entityDir via setRepoRootForTests, listEntityFiles sorted + empty-on-unknown) and `packages/content/src/__tests__/loaders/paths.test.ts` (9 tests: fileBaseName 4 edge cases, listArticleFiles sorted + seed-slug presence, listNewsletterFiles returns array, articlesDir + tagsFile path suffix assertions). 631 e2e green. `1741175`
+
+### [x] [test] [3.6] SearchPanel.tsx — no unit test for /search primary UI component — addressed in bce4ec4 (closes #146)
+- category: test
+- filed: 2026-05-18 by cloud /iterate audit
+- impact: 6 (SearchPanel is the primary /search surface; owns debounce, URL param hydration, and three distinct render states — no regression guard existed despite all sibling components being tested)
+- ease: 6 (client component with hooks; vi.mock() for next/navigation + @/lib/search/runtime; vi.useFakeTimers() for debounce)
+- score: 3.6 (impact × ease / 10)
+- issue: #146
+> **Resolved (2026-05-18):** Added `apps/web/src/app/search/__tests__/SearchPanel.test.tsx` with 4 tests: (1) empty-query hint renders search-empty-query testid; (2) debounced query with hits renders search-results testid; (3) non-matching query renders "no matches" text + all 5 pillar fallback links; (4) ?q= URL param pre-populates input + triggers search on mount. Mocks next/navigation useSearchParams and @/lib/search/runtime searchArticles; vi.useFakeTimers() handles 120ms debounce. 446 unit tests (+4), 631 e2e green. `bce4ec4`
