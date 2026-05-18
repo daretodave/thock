@@ -1103,3 +1103,12 @@ passes accumulate signals.)
 - issue: [mirror-failed: 2026-05-18T22:31:00Z]
 - elements: `packages/data/src/validate/walk.ts` — walkAll() real filesystem walk, JSON parse error capture, schema validation failure capture, ParsedRecord shape
 > **Resolved (2026-05-18):** Added `packages/data/src/__tests__/validate/walk.test.ts` with 5 tests: (1) real data directory produces no failures — regression guard for all 34 live records; (2) parsed records cover all 6 entity kinds; (3) each ParsedRecord has correct kind/file/baseName/data shape; (4) invalid JSON file captured as ParseFailure with "failed to parse JSON" message; (5) schema-invalid JSON captured as ParseFailure for the correct kind. Tests 4–5 use mkdtempSync + setRepoRootForTests injection (pattern from paths.test.ts). 113 data tests total (+5). 631 e2e green. `49d4ba7`
+
+### [x] [test] [4.8] Callout / Caption / PullQuote — 3 MDX prose components have no unit tests — addressed in d06a8fa (closes #147)
+- category: test
+- filed: 2026-05-18 by cloud /iterate audit
+- impact: 6 (Callout renders in 31 of 42 articles; has TONE map (note/warn/info), conditional title h2 with data-testid="callout-title", and text-text-2 a11y fix from #102 — all unguarded. Caption and PullQuote each have data-testid attributes added during Phase B a11y drain with no regression guard)
+- ease: 8 (functional components, no RSC, no async, no router — same test pattern as Source.tsx and PartReference.tsx)
+- score: 4.8 (impact × ease / 10)
+- issue: #147
+> **Resolved (2026-05-18):** Added `Callout.test.tsx` (7 tests: role="note", TONE map for note/warn/info, conditional title h2 with data-testid="callout-title" + text-text-2 class regression guard for #102 a11y fix, no-h2 when omitted, children), `Caption.test.tsx` (3 tests: p element, data-testid="article-caption", children), `PullQuote.test.tsx` (5 tests: blockquote, no footer without attribution, footer with data-testid="pullquote-attribution", em-dash prefix, children). 490 unit tests total (+15). 631 e2e green. `d06a8fa`
