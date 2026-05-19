@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { searchArticles } from '../runtime'
+import { searchArticles, searchParts } from '../runtime'
 
 describe('searchArticles', () => {
   it('returns an empty array for an empty query', () => {
@@ -53,5 +53,41 @@ describe('searchArticles', () => {
     // "swich" → "switch"
     const hits = searchArticles('swich')
     expect(hits.length).toBeGreaterThanOrEqual(1)
+  })
+})
+
+describe('searchParts', () => {
+  it('returns an empty array for an empty query', () => {
+    expect(searchParts('')).toEqual([])
+  })
+
+  it('returns an empty array for a whitespace-only query', () => {
+    expect(searchParts('   ')).toEqual([])
+  })
+
+  it('matches by name substring (case-insensitive)', () => {
+    const hits = searchParts('gateron oil king')
+    expect(hits.length).toBeGreaterThanOrEqual(1)
+    expect(hits[0]?.name.toLowerCase()).toContain('gateron oil king')
+  })
+
+  it('matches by kind substring', () => {
+    const switches = searchParts('switch')
+    expect(switches.length).toBeGreaterThanOrEqual(1)
+    expect(switches.every((h) => h.kind === 'switch')).toBe(true)
+  })
+
+  it('respects the limit cap', () => {
+    const all = searchParts('a', 100)
+    const limited = searchParts('a', 1)
+    if (all.length === 0) return
+    expect(limited.length).toBeLessThanOrEqual(1)
+  })
+
+  it('attaches a score of 1.0 to every hit', () => {
+    const hits = searchParts('gateron')
+    for (const h of hits) {
+      expect(h.score).toBe(1.0)
+    }
   })
 })
