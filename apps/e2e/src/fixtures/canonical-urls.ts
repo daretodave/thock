@@ -70,13 +70,39 @@ function listArticleSlugs(root: string): string[] {
     .sort()
 }
 
+function getTagSlugsUsedInArticles(root: string): Set<string> {
+  const dir = resolve(root, 'apps/web/src/content/articles')
+  if (!existsSync(dir)) return new Set()
+  const used = new Set<string>()
+  for (const f of readdirSync(dir).filter((f) => f.endsWith('.mdx'))) {
+    const content = readFileSync(resolve(dir, f), 'utf-8')
+    // Frontmatter tags are always inline YAML arrays: tags: [a, b, "c", ...]
+    const m = content.match(/^tags:\s*\[([^\]]*)\]/m)
+    if (m) {
+      m[1]!
+        .split(',')
+        .map((s) => s.trim().replace(/^["']|["']$/g, ''))
+        .filter(Boolean)
+        .forEach((s) => used.add(s))
+    }
+  }
+  return used
+}
+
 function listTagSlugs(root: string): string[] {
   const file = resolve(root, 'apps/web/src/content/tags.json')
   if (!existsSync(file)) return []
   const parsed = JSON.parse(readFileSync(file, 'utf-8')) as {
     tags: { slug: string }[]
   }
-  return parsed.tags.map((t) => t.slug).sort()
+  // Only include tags that appear in at least one article — mirrors the
+  // sitemap and /tags browse-surface filter so the smoke walker and
+  // meta.spec.ts sitemap test stay in sync with what gets crawled.
+  const used = getTagSlugsUsedInArticles(root)
+  return parsed.tags
+    .map((t) => t.slug)
+    .filter((s) => used.has(s))
+    .sort()
 }
 
 function listPartSlugs(

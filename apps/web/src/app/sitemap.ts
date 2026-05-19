@@ -6,6 +6,7 @@ import {
   getAllSwitches,
   getAllTags,
   getAllTrendSnapshots,
+  getArticlesByTag,
 } from '@/lib/data-runtime'
 import { canonicalUrl, PILLARS } from '@thock/seo'
 
@@ -55,11 +56,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }))
 
-  const tagEntries: MetadataRoute.Sitemap = getAllTags().map((t) => ({
-    url: canonicalUrl(`/tag/${t.slug}`),
-    lastModified: now,
-    priority: 0.5,
-  }))
+  const tagEntries: MetadataRoute.Sitemap = getAllTags()
+    .filter((t) => getArticlesByTag(t.slug).length > 0)
+    .map((t) => ({
+      url: canonicalUrl(`/tag/${t.slug}`),
+      lastModified: now,
+      priority: 0.5,
+    }))
 
   const partKindEntries: MetadataRoute.Sitemap = [
     { url: canonicalUrl('/part/switch'), lastModified: now, priority: 0.6 },

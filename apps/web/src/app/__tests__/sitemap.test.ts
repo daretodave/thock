@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import sitemap from '../sitemap'
 import { canonicalUrl, PILLARS } from '@thock/seo'
-import { getAllArticles, getAllTags } from '@/lib/data-runtime'
+import { getAllArticles, getAllTags, getArticlesByTag } from '@/lib/data-runtime'
 
 describe('sitemap', () => {
   const map = sitemap()
@@ -50,9 +50,19 @@ describe('sitemap', () => {
     }
   })
 
-  it('includes every tag slug', () => {
+  it('includes every tag slug that has at least one article', () => {
     for (const t of getAllTags()) {
-      expect(urls).toContain(canonicalUrl(`/tag/${t.slug}`))
+      if (getArticlesByTag(t.slug).length > 0) {
+        expect(urls).toContain(canonicalUrl(`/tag/${t.slug}`))
+      }
+    }
+  })
+
+  it('excludes orphaned tag slugs (tags with no articles) from the sitemap', () => {
+    for (const t of getAllTags()) {
+      if (getArticlesByTag(t.slug).length === 0) {
+        expect(urls).not.toContain(canonicalUrl(`/tag/${t.slug}`))
+      }
     }
   })
 
