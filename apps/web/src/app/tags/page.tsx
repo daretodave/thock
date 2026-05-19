@@ -7,7 +7,7 @@ import {
   buildMetadata,
   JsonLd,
 } from '@thock/seo'
-import { getAllTags } from '@/lib/data-runtime'
+import { getAllTags, getArticlesByTag } from '@/lib/data-runtime'
 import { TagsIndex, CATEGORY_ORDER } from '@/components/tags/TagsIndex'
 
 const PATH = '/tags'
@@ -20,7 +20,7 @@ export const metadata = buildMetadata({
 })
 
 export default function TagsPage(): ReactElement {
-  const tags = getAllTags()
+  const tags = getAllTags().filter((t) => getArticlesByTag(t.slug).length > 0)
 
   const itemListItems = tags.map((t) => ({
     name: t.name,

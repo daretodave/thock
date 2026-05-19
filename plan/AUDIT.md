@@ -1148,3 +1148,12 @@ passes accumulate signals.)
 - score: 3.6 (impact × ease / 10)
 - issue: #150
 > **Resolved (2026-05-19):** Exported resolveAccent() from InlineViz.tsx (no behavior change). Added packages/content/src/__tests__/mdx/InlineViz.test.ts with 8 unit tests: coral/amber/bronze/bordeaux aliases, default alias, undefined fallback, raw oklch passthrough, CSS var passthrough. @thock/content: 21 test files, 125 tests (+1/+8). 632 e2e green. `038c143`
+
+### [x] [seo] [4.0] /tags — 7 orphaned tags with no articles surfaced as browse chips (closes #151)
+- category: seo
+- filed: 2026-05-19 by cloud /iterate audit
+- impact: 5 (7 tags in tags.json — `60`, `full`, `novelkeys`, `ortho`, `sa`, `tkl`, `wuque` — had no articles; all 7 appeared as clickable chips on /tags, linking to empty /tag/<slug> pages; `tkl`, `60%`, `SA`, `Ortho` are high-signal keyboard terms that attract browsing readers who land on "No articles yet" dead-ends; creates thin-content pages crawlers index from the tags browse surface)
+- ease: 8 (one-line filter in apps/web/src/app/tags/page.tsx — `getAllTags().filter(t => getArticlesByTag(t.slug).length > 0)`)
+- score: 4.0 (impact × ease / 10)
+- issue: #151
+> **Resolved (2026-05-19):** Added `getArticlesByTag` import to `apps/web/src/app/tags/page.tsx` and filtered the tags list to exclude tags with 0 articles: `getAllTags().filter(t => getArticlesByTag(t.slug).length > 0)`. Tags with articles: 61 (down from 68). The 7 orphaned tags (`60`, `full`, `novelkeys`, `ortho`, `sa`, `tkl`, `wuque`) remain in tags.json for future articles to use but no longer appear on the browse surface or in the JSON-LD ItemList. All 481 unit tests + 632 e2e green.
