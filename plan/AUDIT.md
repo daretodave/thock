@@ -94,6 +94,15 @@
 
 ## Open findings
 
+### [x] [seo] [3.5] sitemap lists 7 orphaned tags with no articles (thin-content pages indexed by crawlers) — addressed in e3a2fcb (closes #153)
+- category: seo
+- filed: 2026-05-19 by cloud /iterate audit
+- impact: 5 (7 tags — `60`, `full`, `novelkeys`, `ortho`, `sa`, `tkl`, `wuque` — listed in sitemap with priority 0.5; crawlers discover and index these empty /tag/<slug> pages; the /tags browse surface was already filtered in 34924c8 but the sitemap was not; thin-content dilutes site quality signal)
+- ease: 7 (sitemap.ts: 2-line change adding getArticlesByTag filter; canonical-urls.ts: helper to derive article-covered tag slugs from frontmatter scan; sitemap.test.ts: split test to cover both positive and negative cases)
+- score: 3.5 (impact × ease / 10)
+- issue: #153
+> **Resolved (2026-05-19):** `sitemap.ts` now filters `getAllTags()` by `getArticlesByTag(t.slug).length > 0` — 61 tag entries instead of 68. `canonical-urls.ts` `listTagSlugs()` gains a `getTagSlugsUsedInArticles()` helper that scans article MDX frontmatter for used tags, filtering out orphaned slugs from the smoke walker and `meta.spec.ts` sitemap test. `sitemap.test.ts` split into two assertions: covered tags must be present; orphaned tags must be absent. 482 unit tests, 608 e2e green. `e3a2fcb`
+
 ### [x] [test] [4.0] validateAll() in @thock/data/validate has no unit tests — addressed in 352f365 (closes #142)
 - category: test
 - filed: 2026-05-18 by cloud /iterate audit
