@@ -1130,3 +1130,12 @@ passes accumulate signals.)
 - score: 3.6 (impact × ease / 10)
 - issue: #148
 > **Resolved (2026-05-19):** Extracted `isoWeekString(date = new Date())` from cli entrypoint body, added `export const __test = { isoWeekString }` following the content-gap-survey.mjs pattern. CLI behaviour (`console.log(isoWeekString())`) unchanged. Added `scripts/__tests__/iso-week.test.mjs` with 5 node:test cases: known Monday W21, known Sunday W21, week rollover to W22, year-boundary Dec 29 2025 → 2026-W01 (Thursday is Jan 1), year-boundary Jan 1 2026 → 2026-W01. 21 script tests total (+5). 631 e2e green. `75831bd`
+
+### [x] [test] [3.6] InlineViz.resolveAccent — no unit tests for accent alias resolution (80 article-viz connectors) — addressed in 038c143 (closes #150)
+- category: test
+- filed: 2026-05-19 by cloud /iterate audit
+- impact: 4 (resolveAccent() drives the desktop connector-arm accent color for every <InlineViz> component — 80 total across 40 articles; OKLCH alias values are specific and a future typo would silently degrade all connector rendering with no test to catch it; bearings.md describes the connector as a load-bearing visual identity element)
+- ease: 9 (pure function with no I/O, no side effects; exported with a single keyword change)
+- score: 3.6 (impact × ease / 10)
+- issue: #150
+> **Resolved (2026-05-19):** Exported resolveAccent() from InlineViz.tsx (no behavior change). Added packages/content/src/__tests__/mdx/InlineViz.test.ts with 8 unit tests: coral/amber/bronze/bordeaux aliases, default alias, undefined fallback, raw oklch passthrough, CSS var passthrough. @thock/content: 21 test files, 125 tests (+1/+8). 632 e2e green. `038c143`
