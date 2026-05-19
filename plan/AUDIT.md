@@ -1112,3 +1112,12 @@ passes accumulate signals.)
 - score: 4.8 (impact × ease / 10)
 - issue: #147
 > **Resolved (2026-05-18):** Added `Callout.test.tsx` (7 tests: role="note", TONE map for note/warn/info, conditional title h2 with data-testid="callout-title" + text-text-2 class regression guard for #102 a11y fix, no-h2 when omitted, children), `Caption.test.tsx` (3 tests: p element, data-testid="article-caption", children), `PullQuote.test.tsx` (5 tests: blockquote, no footer without attribution, footer with data-testid="pullquote-attribution", em-dash prefix, children). 490 unit tests total (+15). 631 e2e green. `d06a8fa`
+
+### [x] [test] [3.6] scripts/iso-week.mjs — no unit tests for year-boundary ISO week calculation — addressed in 75831bd (closes #148)
+- category: test
+- filed: 2026-05-19 by cloud /iterate audit
+- impact: 4 (isoWeekString() drives the march.md Step 0.5 weekly snapshot gate; Dec 29–31 year-boundary edge case silently wrong would skip or double-shoot Monday snapshots across the year turn; script had no test coverage despite non-trivial Thursday-anchored logic)
+- ease: 9 (pure function with no I/O, no deps — node:test runner, no devDeps; __test export pattern already established by content-gap-survey.mjs)
+- score: 3.6 (impact × ease / 10)
+- issue: #148
+> **Resolved (2026-05-19):** Extracted `isoWeekString(date = new Date())` from cli entrypoint body, added `export const __test = { isoWeekString }` following the content-gap-survey.mjs pattern. CLI behaviour (`console.log(isoWeekString())`) unchanged. Added `scripts/__tests__/iso-week.test.mjs` with 5 node:test cases: known Monday W21, known Sunday W21, week rollover to W22, year-boundary Dec 29 2025 → 2026-W01 (Thursday is Jan 1), year-boundary Jan 1 2026 → 2026-W01. 21 script tests total (+5). 631 e2e green. `75831bd`
