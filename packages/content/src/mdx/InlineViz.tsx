@@ -21,7 +21,7 @@ const ACCENT_OKLCH: Record<string, string> = {
   default: 'var(--thock-accent)',
 }
 
-function resolveAccent(accent: string | undefined): string {
+export function resolveAccent(accent: string | undefined): string {
   const fallback = ACCENT_OKLCH['default'] ?? 'var(--thock-accent)'
   if (!accent) return fallback
   // Named alias?
