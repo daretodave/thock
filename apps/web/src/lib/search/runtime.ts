@@ -13,6 +13,15 @@ export type SearchDocument = {
 
 export type SearchHit = SearchDocument & { score: number }
 
+export type PartSearchDocument = {
+  id: string
+  slug: string
+  kind: 'switch' | 'keycap-set' | 'board'
+  name: string
+}
+
+export type PartSearchHit = PartSearchDocument & { score: number }
+
 type IndexBundle = {
   index: MiniSearch<SearchDocument>
   documents: Record<string, SearchDocument>
@@ -66,6 +75,20 @@ export function searchArticles(
     hits.push({ ...doc, score: r.score })
   }
   return hits
+}
+
+/**
+ * Simple substring search over the parts catalog embedded in the index
+ * payload. 18 records — no MiniSearch needed; linear scan is fast enough.
+ */
+export function searchParts(query: string, limit = 10): PartSearchHit[] {
+  const q = query.toLowerCase().trim()
+  if (!q) return []
+  const parts = (payload as { parts?: PartSearchDocument[] }).parts ?? []
+  return parts
+    .filter((p) => `${p.name} ${p.kind}`.toLowerCase().includes(q))
+    .slice(0, limit)
+    .map((p) => ({ ...p, score: 1.0 }))
 }
 
 /** Reset the module-level cache. Test-only. */

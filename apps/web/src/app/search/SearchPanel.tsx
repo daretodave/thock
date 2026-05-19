@@ -11,8 +11,9 @@ import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 import type { Tag } from '@thock/content'
 import { Container, Stack } from '@thock/ui'
-import { searchArticles, type SearchHit } from '@/lib/search/runtime'
+import { searchArticles, searchParts, type SearchHit, type PartSearchHit } from '@/lib/search/runtime'
 import { ArticleResult } from '@/components/search/ArticleResult'
+import { PartResult } from '@/components/search/PartResult'
 
 const DEBOUNCE_MS = 120
 
@@ -67,9 +68,13 @@ export function SearchPanel({ allTags }: SearchPanelProps): ReactElement {
     return searchArticles(debouncedQuery)
   }, [debouncedQuery])
 
+  const partResults: PartSearchHit[] = useMemo(() => {
+    return searchParts(debouncedQuery)
+  }, [debouncedQuery])
+
   const trimmed = debouncedQuery.trim()
   const showHint = trimmed.length === 0
-  const showEmpty = !showHint && results.length === 0
+  const showEmpty = !showHint && results.length === 0 && partResults.length === 0
 
   return (
     <Container as="section" className="pb-16">
@@ -122,6 +127,18 @@ export function SearchPanel({ allTags }: SearchPanelProps): ReactElement {
             {results.map((hit) => (
               <ArticleResult key={hit.id} hit={hit} tagsBySlug={tagsBySlug} />
             ))}
+          </div>
+        )}
+        {partResults.length > 0 && (
+          <div data-testid="search-part-results">
+            <div className="font-mono uppercase tracking-[0.12em] text-micro text-text-2 pt-6 pb-2">
+              parts
+            </div>
+            <div className="flex flex-col">
+              {partResults.map((hit) => (
+                <PartResult key={hit.id} hit={hit} />
+              ))}
+            </div>
           </div>
         )}
       </Stack>

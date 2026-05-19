@@ -43,4 +43,17 @@ test.describe('search — phase 14', () => {
     await expect(page.locator('input[type="search"][name="q"]')).toBeVisible()
   })
 
+  test('searching a switch name surfaces a part result linking to the part page', async ({
+    page,
+  }) => {
+    await page.goto('/search')
+    const input = page.locator('input[type="search"][name="q"]')
+    await input.fill('Gateron')
+    await page.waitForSelector('[data-testid="search-part-result"]')
+    const partResult = page.locator('[data-testid="search-part-result"]').first()
+    await expect(partResult).toHaveAttribute('data-kind', 'switch')
+    const link = partResult.locator('a').first()
+    await expect(link).toHaveAttribute('href', /\/part\/switch\/gateron/)
+  })
+
 })

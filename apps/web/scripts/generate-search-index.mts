@@ -17,6 +17,7 @@ import { fileURLToPath } from 'node:url'
 import MiniSearch from 'minisearch'
 
 import { getAllArticles } from '@thock/content'
+import { getAllSwitches, getAllKeycapSets, getAllBoards } from '@thock/data'
 
 const here = dirname(fileURLToPath(import.meta.url))
 const outDir = resolve(here, '..', 'src', 'lib', 'search')
@@ -31,6 +32,13 @@ type SearchDoc = {
   tags: string[]
   publishedAt: string
   body: string
+}
+
+type PartDoc = {
+  id: string
+  slug: string
+  kind: 'switch' | 'keycap-set' | 'board'
+  name: string
 }
 
 const articles = getAllArticles()
@@ -56,9 +64,16 @@ const ms = new MiniSearch<SearchDoc>({
 })
 ms.addAll(documents)
 
+const parts: PartDoc[] = [
+  ...getAllSwitches().map((s) => ({ id: s.slug, slug: s.slug, kind: 'switch' as const, name: s.name })),
+  ...getAllKeycapSets().map((k) => ({ id: k.slug, slug: k.slug, kind: 'keycap-set' as const, name: k.name })),
+  ...getAllBoards().map((b) => ({ id: b.slug, slug: b.slug, kind: 'board' as const, name: b.name })),
+]
+
 const payload = {
   serialized: JSON.parse(JSON.stringify(ms.toJSON())),
   documents: documents.map(({ body: _body, ...rest }) => rest),
+  parts,
   generatedAt: new Date().toISOString(),
   count: documents.length,
 }
@@ -68,3 +83,4 @@ writeFileSync(outFile, JSON.stringify(payload, null, 2), 'utf-8')
 
 console.log(`[search] wrote ${outFile}`)
 console.log(`  articles indexed: ${documents.length}`)
+console.log(`  parts cataloged: ${parts.length}`)

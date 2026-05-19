@@ -9,6 +9,7 @@ vi.mock('next/navigation', () => ({
 
 vi.mock('@/lib/search/runtime', () => ({
   searchArticles: vi.fn(() => []),
+  searchParts: vi.fn(() => []),
 }))
 
 const ALL_TAGS: Tag[] = [

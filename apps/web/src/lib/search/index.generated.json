@@ -70206,6 +70206,116 @@
       "publishedAt": "2026-04-13T14:00:00.000Z"
     }
   ],
-  "generatedAt": "2026-05-18T19:49:53.089Z",
+  "parts": [
+    {
+      "id": "akko-v3-cream-blue-pro",
+      "slug": "akko-v3-cream-blue-pro",
+      "kind": "switch",
+      "name": "Akko V3 Cream Blue Pro"
+    },
+    {
+      "id": "cherry-mx2a-red",
+      "slug": "cherry-mx2a-red",
+      "kind": "switch",
+      "name": "Cherry MX2A Red"
+    },
+    {
+      "id": "cherry-mx2a-silent-black",
+      "slug": "cherry-mx2a-silent-black",
+      "kind": "switch",
+      "name": "Cherry MX2A Silent Black"
+    },
+    {
+      "id": "drop-holy-panda-x",
+      "slug": "drop-holy-panda-x",
+      "kind": "switch",
+      "name": "Drop Holy Panda X"
+    },
+    {
+      "id": "gateron-oil-king",
+      "slug": "gateron-oil-king",
+      "kind": "switch",
+      "name": "Gateron Oil King"
+    },
+    {
+      "id": "gateron-pro-3-yellow",
+      "slug": "gateron-pro-3-yellow",
+      "kind": "switch",
+      "name": "Gateron G Pro 3.0 Yellow"
+    },
+    {
+      "id": "hmx-cloud",
+      "slug": "hmx-cloud",
+      "kind": "switch",
+      "name": "HMX Cloud Linear"
+    },
+    {
+      "id": "tecsee-sapphire-v2",
+      "slug": "tecsee-sapphire-v2",
+      "kind": "switch",
+      "name": "Tecsee Sapphire V2"
+    },
+    {
+      "id": "gmk-bento-r2",
+      "slug": "gmk-bento-r2",
+      "kind": "keycap-set",
+      "name": "GMK Bentō R2"
+    },
+    {
+      "id": "gmk-olivia",
+      "slug": "gmk-olivia",
+      "kind": "keycap-set",
+      "name": "GMK Olivia"
+    },
+    {
+      "id": "kat-drifter",
+      "slug": "kat-drifter",
+      "kind": "keycap-set",
+      "name": "KAT Drifter"
+    },
+    {
+      "id": "mt3-dasher",
+      "slug": "mt3-dasher",
+      "kind": "keycap-set",
+      "name": "Drop MT3 Dasher"
+    },
+    {
+      "id": "mt3-devtty",
+      "slug": "mt3-devtty",
+      "kind": "keycap-set",
+      "name": "Drop + Matt3o MT3 /dev/tty"
+    },
+    {
+      "id": "bakeneko65",
+      "slug": "bakeneko65",
+      "kind": "board",
+      "name": "Bakeneko65"
+    },
+    {
+      "id": "class80",
+      "slug": "class80",
+      "kind": "board",
+      "name": "MM Studio Class80"
+    },
+    {
+      "id": "mammoth75",
+      "slug": "mammoth75",
+      "kind": "board",
+      "name": "Mammoth75"
+    },
+    {
+      "id": "mode-sonnet",
+      "slug": "mode-sonnet",
+      "kind": "board",
+      "name": "Mode Sonnet"
+    },
+    {
+      "id": "qk75",
+      "slug": "qk75",
+      "kind": "board",
+      "name": "QK75"
+    }
+  ],
+  "generatedAt": "2026-05-19T05:38:49.801Z",
   "count": 42
 }
