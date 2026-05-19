@@ -1196,3 +1196,13 @@ passes accumulate signals.)
 - issue: [mirror-failed: 2026-05-19T00:00:00Z]
 - elements: `data/trends/2026-W19.json` and `data/trends/2026-W20.json` — "HMX Cloud" row `articleSlug` set to `"beginners-switch-buying-guide"` in both; `hmx-cloud-deep-dive` is the correct slug (lede: "Today the Cloud sits second on our W19 tracker…")
 > **Resolved (2026-05-19):** Changed `articleSlug` from `"beginners-switch-buying-guide"` to `"hmx-cloud-deep-dive"` in both `data/trends/2026-W19.json` and `data/trends/2026-W20.json`. The beginners guide has zero mentions of HMX Cloud; the deep-dive is a 1100-word dedicated piece whose own lede references W19 tracker position. W21 already carried the correct slug. 608 e2e green. `8aceeee`
+
+### [x] [a11y] [3.0] PartResult search-part-kind chip lacks color-contrast regression guard — addressed in this commit
+- category: accessibility
+- filed: 2026-05-19 by cloud /iterate audit
+- impact: 3 (PartResult is a new component shipped with correct text-text-2 at text-micro/12px; without a guard, a silent regression to text-text-3 would fail WCAG AA 4.5:1 and go undetected until a user report — consistent risk level with the other 39 regression guards filed across Phase B)
+- ease: 10 (one test block following the verbatim pattern already present for search-result-eyebrow; no production code change needed)
+- score: 3.0 (impact × ease / 10)
+- issue: n/a (pre-emptive guard — no current violation)
+- elements: `apps/e2e/tests/a11y.spec.ts` — add `'color-contrast — search part-kind chip (regression guard)'` test; queries `/search?q=gateron`, waits for `[data-testid="search-part-kind"]`, runs axe color-contrast scope
+> **Resolved (2026-05-19):** Added regression guard test `'color-contrast — search part-kind chip (regression guard)'` to `apps/e2e/tests/a11y.spec.ts` (after the existing search eyebrow + date guard). Test navigates to /search, fills "gateron", awaits `[data-testid="search-part-kind"]`, runs scoped axe color-contrast check. Guard locks in the text-text-2 class on PartResult's kind chip, which passes WCAG AA at 12px (same as all other eyebrow-pattern elements already guarded). 40 regression guards total.

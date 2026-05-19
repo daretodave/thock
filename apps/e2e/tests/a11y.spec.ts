@@ -510,6 +510,26 @@ test('color-contrast — search result eyebrow + date (regression guard)', async
   }
 })
 
+// Regression guard: color-contrast on the PartResult kind chip in search
+// results. PartResult uses text-micro text-text-2 (12px) for the kind label
+// ("Switch", "Keycap Set", "Board"). Guard prevents silent regression to
+// text-text-3 which fails WCAG AA 4.5:1 at that size.
+test('color-contrast — search part-kind chip (regression guard)', async ({ page }) => {
+  await page.goto('/search')
+  await page.waitForLoadState('networkidle')
+
+  const input = page.locator('input[type="search"][name="q"]')
+  await input.fill('gateron')
+  await page.waitForSelector('[data-testid="search-part-kind"]')
+
+  const axeResults = await new AxeBuilder({ page })
+    .withTags(WCAG_TAGS)
+    .include('[data-testid="search-part-kind"]')
+    .analyze()
+  const contrast = axeResults.violations.filter((v) => v.id === 'color-contrast')
+  expect(contrast, formatViolations(contrast)).toHaveLength(0)
+})
+
 // Regression guard: color-contrast on MDX article prose components drained by
 // audit row [a11y] issue #102. Three MDX components used text-text-3 at small
 // text sizes: Caption (text-small), PullQuote attribution footer (text-small),
