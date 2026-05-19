@@ -1131,6 +1131,15 @@ passes accumulate signals.)
 - issue: #148
 > **Resolved (2026-05-19):** Extracted `isoWeekString(date = new Date())` from cli entrypoint body, added `export const __test = { isoWeekString }` following the content-gap-survey.mjs pattern. CLI behaviour (`console.log(isoWeekString())`) unchanged. Added `scripts/__tests__/iso-week.test.mjs` with 5 node:test cases: known Monday W21, known Sunday W21, week rollover to W22, year-boundary Dec 29 2025 → 2026-W01 (Thursday is Jan 1), year-boundary Jan 1 2026 → 2026-W01. 21 script tests total (+5). 631 e2e green. `75831bd`
 
+### [x] [test] [3.6] searchParts() — no unit tests for parts catalog search function — addressed in 4e7c4f1
+- category: test
+- filed: 2026-05-19 by cloud /iterate audit
+- impact: 4 (searchParts() was added in 99f0e5e to surface 18 part entity records via /search; the function's empty-query guard, case-insensitive substring match, limit cap, and score attachment were uncovered despite being the backend for SearchPanel part results and the new e2e parts-search guard)
+- ease: 9 (pure function, no I/O, no async — trivial to test by importing from runtime.ts)
+- score: 3.6 (impact × ease / 10)
+- issue: [mirror-failed: 2026-05-19T09:22:00Z]
+> **Resolved (2026-05-19):** Added `describe('searchParts', ...)` block to `apps/web/src/lib/search/__tests__/runtime.test.ts` with 6 tests: empty query returns []; whitespace-only query returns []; name substring match (case-insensitive, "gateron oil king"); kind substring match ("switch" → all switch hits); limit cap; score 1.0 on every hit. 481 unit tests (+6), 632 e2e green. `4e7c4f1`
+
 ### [x] [test] [3.6] InlineViz.resolveAccent — no unit tests for accent alias resolution (80 article-viz connectors) — addressed in 038c143 (closes #150)
 - category: test
 - filed: 2026-05-19 by cloud /iterate audit
