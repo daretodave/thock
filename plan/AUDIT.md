@@ -1113,6 +1113,15 @@ passes accumulate signals.)
 - issue: #147
 > **Resolved (2026-05-18):** Added `Callout.test.tsx` (7 tests: role="note", TONE map for note/warn/info, conditional title h2 with data-testid="callout-title" + text-text-2 class regression guard for #102 a11y fix, no-h2 when omitted, children), `Caption.test.tsx` (3 tests: p element, data-testid="article-caption", children), `PullQuote.test.tsx` (5 tests: blockquote, no footer without attribution, footer with data-testid="pullquote-attribution", em-dash prefix, children). 490 unit tests total (+15). 631 e2e green. `d06a8fa`
 
+### [x] [seo] [3.0] /search returns 0 results for part names — 18 entity records invisible to the search index — addressed in this commit (closes #149)
+- category: seo
+- filed: 2026-05-19 by cloud /iterate audit
+- impact: 6 (18 part detail pages at /part/[kind]/[slug] unreachable via search; Phase 33 quiz routes home-page users to /part/switch/[slug] making parts catalog a first-class surface; readers searching "Gateron Oil King", "GMK Olivia", or "Mode Sonnet" got 0 results)
+- ease: 5 (multi-file: extend generate-search-index.mts + runtime.ts + new PartResult component + SearchPanel update + e2e assertion)
+- score: 3.0 (impact × ease / 10)
+- issue: #149
+> **Resolved (2026-05-19):** Extended `generate-search-index.mts` to call `getAllSwitches()`, `getAllKeycapSets()`, `getAllBoards()` from `@thock/data` and embed a `parts: PartDoc[]` catalog in the payload JSON (18 records: 8 switches + 5 keycap-sets + 5 boards). Added `PartSearchDocument` + `PartSearchHit` types and `searchParts()` (simple substring match on name + kind) to `runtime.ts`. New `PartResult.tsx` component renders kind chip + name + link to `/part/[kind]/[slug]`. `SearchPanel.tsx` calls `searchParts()` alongside `searchArticles()` and renders part hits below article results. `SearchPanel.test.tsx` mock updated; 6-test `PartResult.test.tsx` added. E2e guard in `search.spec.ts` asserts searching "Gateron" surfaces a part result linking to `/part/switch/gateron-*`. 475 unit tests (+6), 632 e2e green (+1). `index.generated.json` regenerated with parts catalog.
+
 ### [x] [test] [3.6] scripts/iso-week.mjs — no unit tests for year-boundary ISO week calculation — addressed in 75831bd (closes #148)
 - category: test
 - filed: 2026-05-19 by cloud /iterate audit
