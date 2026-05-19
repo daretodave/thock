@@ -1176,3 +1176,13 @@ passes accumulate signals.)
 - issue: #152
 - elements: `packages/content/src/mdx/components.tsx` — AutoLink (a: mapping, isExternal check, rel/target branch, className)
 > **Resolved (2026-05-19):** Added `packages/content/src/__tests__/mdx/AutoLink.test.tsx` with 6 tests: children render; href passthrough; internal path (no rel/target); external https:// (rel="noopener" target="_blank"); external http:// (rel+target); undefined href (no rel/target). Mirrors the Source.test.tsx pattern (same external-link security rationale). @thock/content: 22 test files, 131 tests (+1/+6). 632 e2e green. `788cf96`
+
+### [x] [test] [3.6] slugFromFile() — no direct unit tests for content slug utility — addressed in d0c788a (closes #154)
+- category: test
+- filed: 2026-05-19 by cloud /iterate audit
+- impact: 4 (slugFromFile() in packages/content/src/util/slug.ts powers all 42 article slug computations; edge cases for Windows backslash paths and non-.mdx extensions were untested; the function computes the slug used in all article URLs)
+- ease: 9 (pure function, no side effects, no imports — trivial to test directly)
+- score: 3.6 (impact × ease / 10)
+- issue: #154
+- elements: `packages/content/src/util/slug.ts` — slugFromFile()
+> **Resolved (2026-05-19):** Added `packages/content/src/__tests__/util/slug.test.ts` with 6 tests: bare filename, forward-slash path, backslash path (Windows), mixed-separator path, non-.mdx extension passthrough, no-extension passthrough. @thock/content: 23 test files, 137 tests (+1/+6). 608 e2e green. `d0c788a`
