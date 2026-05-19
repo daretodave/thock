@@ -1186,3 +1186,13 @@ passes accumulate signals.)
 - issue: #154
 - elements: `packages/content/src/util/slug.ts` — slugFromFile()
 > **Resolved (2026-05-19):** Added `packages/content/src/__tests__/util/slug.test.ts` with 6 tests: bare filename, forward-slash path, backslash path (Windows), mixed-separator path, non-.mdx extension passthrough, no-extension passthrough. @thock/content: 23 test files, 137 tests (+1/+6). 608 e2e green. `d0c788a`
+
+### [x] [data] [4.5] W19+W20 HMX Cloud tracker rows link to wrong article — beginners-switch-buying-guide has no HMX content — addressed in 8aceeee
+- category: data
+- filed: 2026-05-19 by cloud /iterate audit
+- impact: 5 (W19 and W20 tracker archive pages each show a "Read more" link for the HMX Cloud row that navigates to the beginners-switch-buying-guide article, which does not mention HMX Cloud — a wrong cross-reference that misdirects readers on two historical tracker views)
+- ease: 9 (two-field JSON edit across two snapshot files; W21 already has the correct hmx-cloud-deep-dive link)
+- score: 4.5 (impact × ease / 10)
+- issue: [mirror-failed: 2026-05-19T00:00:00Z]
+- elements: `data/trends/2026-W19.json` and `data/trends/2026-W20.json` — "HMX Cloud" row `articleSlug` set to `"beginners-switch-buying-guide"` in both; `hmx-cloud-deep-dive` is the correct slug (lede: "Today the Cloud sits second on our W19 tracker…")
+> **Resolved (2026-05-19):** Changed `articleSlug` from `"beginners-switch-buying-guide"` to `"hmx-cloud-deep-dive"` in both `data/trends/2026-W19.json` and `data/trends/2026-W20.json`. The beginners guide has zero mentions of HMX Cloud; the deep-dive is a 1100-word dedicated piece whose own lede references W19 tracker position. W21 already carried the correct slug. 608 e2e green. `8aceeee`
