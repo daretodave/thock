@@ -1158,7 +1158,7 @@ passes accumulate signals.)
 - issue: #151
 > **Resolved (2026-05-19):** Added `getArticlesByTag` import to `apps/web/src/app/tags/page.tsx` and filtered the tags list to exclude tags with 0 articles: `getAllTags().filter(t => getArticlesByTag(t.slug).length > 0)`. Tags with articles: 61 (down from 68). The 7 orphaned tags (`60`, `full`, `novelkeys`, `ortho`, `sa`, `tkl`, `wuque`) remain in tags.json for future articles to use but no longer appear on the browse surface or in the JSON-LD ItemList. All 481 unit tests + 632 e2e green.
 
-### [test] [4.8] AutoLink — MDX anchor replacement has no unit tests (all article hyperlinks)
+### [x] [test] [4.8] AutoLink — MDX anchor replacement has no unit tests (all article hyperlinks) — addressed in 788cf96 (closes #152)
 - category: test
 - filed: 2026-05-19 by cloud /iterate audit
 - impact: 6 (AutoLink is the `a:` replacement in mdxComponents, applied to every hyperlink in every MDX article; the isExternal check controls security-relevant `rel="noopener" target="_blank"` for external URLs — same rationale as Source.tsx which got 6 tests at 6e851b9; every article with a link passes through AutoLink)
@@ -1166,3 +1166,4 @@ passes accumulate signals.)
 - score: 4.8 (impact × ease / 10)
 - issue: #152
 - elements: `packages/content/src/mdx/components.tsx` — AutoLink (a: mapping, isExternal check, rel/target branch, className)
+> **Resolved (2026-05-19):** Added `packages/content/src/__tests__/mdx/AutoLink.test.tsx` with 6 tests: children render; href passthrough; internal path (no rel/target); external https:// (rel="noopener" target="_blank"); external http:// (rel+target); undefined href (no rel/target). Mirrors the Source.test.tsx pattern (same external-link security rationale). @thock/content: 22 test files, 131 tests (+1/+6). 632 e2e green. `788cf96`
