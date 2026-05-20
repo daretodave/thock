@@ -1224,13 +1224,14 @@ passes accumulate signals.)
 - issue: #156
 > **Resolved (2026-05-20):** Extracted `getAdjacentWeeks` from `apps/web/src/app/trends/tracker/[week]/page.tsx` (line 73) to `apps/web/src/app/trends/tracker/[week]/helpers.ts` and exported it. Updated page.tsx import accordingly. Added `apps/web/src/app/trends/tracker/[week]/__tests__/helpers.test.ts` with 5 tests: empty list → both null; single snapshot → both null; first week (W19) → prev=null, next=W20; last week (W21) → prev=W20, next=null; middle week (W20) → prev=W19, next=W21. 487 unit tests (+5), 609 e2e green. `a17c7cd`
 
-### [ ] [content] [3.6] cannonkeys-nyawice-group-buy — stale present-tense "is open" language for closed group buy
+### [x] [content] [3.6] cannonkeys-nyawice-group-buy — stale present-tense "is open" language for closed group buy — addressed in 38629af (closes #158)
 - category: content
 - filed: 2026-05-20 by cloud /iterate audit
 - impact: 4 (readers visiting after 2026-05-17 see "is open at CannonKeys through 2026-05-17" in both the lede and body; the absolute date is present which limits confusion but the verb tense actively contradicts it)
 - ease: 9 (two is-open → ran rewrites in MDX, plus "opening today" and "when the window closes" cleanup in the Buying notes section)
 - score: 3.6 (impact × ease / 10)
 - issue: #158
+> **Resolved (2026-05-20):** Rewrote four stale present-tense phrases in `cannonkeys-nyawice-group-buy.mdx`: lede and body "is open … through 2026-05-17" → "ran … through 2026-05-17"; Buying notes "opening today" removed; closing "when the window closes" → "when builds begin shipping". Updated `updatedAt` frontmatter. 609 e2e green. `38629af`
 
 ### [x] [seo] [3.2] /quiz/switch missing BreadcrumbList JSON-LD — addressed in 36a7e33 (closes #157)
 - category: seo
