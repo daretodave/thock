@@ -1206,11 +1206,11 @@ passes accumulate signals.)
 - issue: n/a (pre-emptive guard — no current violation)
 - elements: `apps/e2e/tests/a11y.spec.ts` — add `'color-contrast — search part-kind chip (regression guard)'` test; queries `/search?q=gateron`, waits for `[data-testid="search-part-kind"]`, runs axe color-contrast scope
 
-### [test] [3.6] printReport() — no unit tests for validation CLI formatter (closes #155)
+### [x] [test] [3.6] printReport() — no unit tests for validation CLI formatter — addressed in 66106da (closes #155)
 - category: test
 - filed: 2026-05-20 by cloud /iterate audit
 - impact: 4 (printReport() renders all validation output to the developer and CI; has two paths — ok (success message, no error calls) and error (error count + per-error details with file/slug/field formatting); these branches are uncovered; validateAll/walkAll/crossrefs all have direct unit tests but report does not)
 - ease: 9 (mock console.log/console.error with vi.spyOn; 5 test cases covering both paths and the 3 formatting branches)
 - score: 3.6 (impact × ease / 10)
 - issue: #155
-> **Resolved (2026-05-19):** Added regression guard test `'color-contrast — search part-kind chip (regression guard)'` to `apps/e2e/tests/a11y.spec.ts` (after the existing search eyebrow + date guard). Test navigates to /search, fills "gateron", awaits `[data-testid="search-part-kind"]`, runs scoped axe color-contrast check. Guard locks in the text-text-2 class on PartResult's kind chip, which passes WCAG AA at 12px (same as all other eyebrow-pattern elements already guarded). 40 regression guards total.
+> **Resolved (2026-05-20):** Added `packages/data/src/__tests__/validate/report.test.ts` with 5 unit tests using vi.spyOn to mock console.log/error: (1) ok path — prints total count, per-kind breakdown, success line, no error calls; (2) error path — prints error count + details, no success line; (3) uses err.file as location prefix; (4) falls back to kind/slug when file absent; (5) includes [field] in brackets. 609 e2e green. `66106da`
