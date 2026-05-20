@@ -1275,7 +1275,7 @@ passes accumulate signals.)
 - issue: #159
 > **Resolved (2026-05-20):** Added 4 `it()` blocks to `apps/web/src/app/__tests__/sitemap.test.ts`: (1) /tags, /quiz/switch, /group-buys/past all included (phases 28, 33, 29); (2) every tracker archive week included via `getAllTrendSnapshots()` (phase 27); (3) all /part/[kind] index pages included (phase 21); (4) every part detail slug included via getAllSwitches/getAllKeycapSets/getAllBoards (phase 21). 609 e2e green. `904d5c8`
 
-### [a11y] [4.8] text-text-4 at small text fails WCAG AA — part catalog count, MentionedInArticles footer, tracker archive nav, newsletter archive date
+### [x] [a11y] [4.8] text-text-4 at small text fails WCAG AA — part catalog count, MentionedInArticles footer, tracker archive nav, newsletter archive date — addressed in 00a668a
 - category: a11y
 - filed: 2026-05-20 by cloud /iterate audit
 - impact: 6 (affects /part/switch, /part/keycap-set, /part/board count sentence; all part detail pages with companion articles; tracker/2026-W19 "No earlier weeks" label; newsletter archive when populated)
@@ -1287,6 +1287,7 @@ passes accumulate signals.)
 - elements: `text-micro text-text-4` on (1) part kind-index count sentence; (2) MentionedInArticles footer note; (3) tracker "← No earlier weeks" disabled nav label at text-small; (4) newsletter archive issue date
 - root cause: text-text-4 (oklch(0.40 0.004 250)) has even lower luminance than text-text-3 (oklch(0.55 0.006 250)) which was systematically fixed across the Phase B drain (issues #91–#113). These four real-content instances were not covered by that sweep.
 - issue: [mirror-failed: 2026-05-20T00:00:00Z]
+> **Resolved (2026-05-20):** Swapped text-text-4 → text-text-2 on all four elements. Added data-testid="part-index-count" on the count paragraph in part/[kind]/page.tsx; data-testid="mentioned-in-footer" on the MentionedInArticles footer note; data-testid="tracker-no-earlier-weeks" on the tracker disabled nav label. Two new regression guards in apps/e2e/tests/a11y.spec.ts: AxeBuilder.include() scoped to [data-testid="part-index-count"] on /part/switch and [data-testid="tracker-no-earlier-weeks"] on /trends/tracker/2026-W19, each asserting zero color-contrast violations. Newsletter archive date requires no extra guard — the archive is empty in CI (no newsletters shipped yet). 611 e2e green (+2 guards). `00a668a`
 
 ### [x] [test] [3.6] KeyboardImage.tsx — MDX image wrapper has no unit tests (last untested MDX component) — addressed in 4d2a603 (closes #162)
 - category: test
