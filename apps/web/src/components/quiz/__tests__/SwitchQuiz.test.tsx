@@ -83,11 +83,22 @@ describe('<SwitchQuiz>', () => {
   it('result cards link to /part/switch/[slug] pages', () => {
     render(<SwitchQuiz switches={SWITCHES} />)
     answerAllQuestions()
-    const links = screen.getAllByRole('link')
-    expect(links.length).toBeGreaterThan(0)
-    for (const link of links) {
+    const resultLinks = screen
+      .getAllByRole('link')
+      .filter((l) => l.getAttribute('href') !== '/part/switch')
+    expect(resultLinks.length).toBeGreaterThan(0)
+    for (const link of resultLinks) {
       expect(link.getAttribute('href')).toMatch(/^\/part\/switch\//)
     }
+  })
+
+  it('browse-all link points to /part/switch catalog page', () => {
+    render(<SwitchQuiz switches={SWITCHES} />)
+    answerAllQuestions()
+    const browseLink = screen.getByTestId('quiz-browse-all-link')
+    expect(browseLink).toBeInTheDocument()
+    expect(browseLink.getAttribute('href')).toBe('/part/switch')
+    expect(browseLink.textContent).toMatch(/browse all switches/i)
   })
 
   it('"Start over" resets to the first question', () => {

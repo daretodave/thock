@@ -25,7 +25,7 @@ test.describe('/quiz/switch — phase 33', () => {
     await expect(page.getByText(/question 2 of 4/i)).toBeVisible()
   })
 
-  test('shows results with /part/switch/ links after answering all questions', async ({
+  test('shows results with /part/switch/ links and browse-all affordance after answering all questions', async ({
     page,
   }) => {
     await page.goto('/quiz/switch')
@@ -41,6 +41,9 @@ test.describe('/quiz/switch — phase 33', () => {
     expect(count).toBeGreaterThanOrEqual(1)
     const firstHref = await resultLinks.first().getAttribute('href')
     expect(firstHref).toMatch(/^\/part\/switch\//)
+    const browseAllLink = page.getByTestId('quiz-browse-all-link')
+    await expect(browseAllLink).toBeVisible()
+    await expect(browseAllLink).toHaveAttribute('href', '/part/switch')
   })
 
   test('start-over button resets to question 1', async ({ page }) => {

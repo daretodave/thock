@@ -1,6 +1,7 @@
 'use client'
 
 import { useRef, useState } from 'react'
+import Link from 'next/link'
 import type { Switch } from '@thock/data'
 import { recommendSwitch, type QuizAnswers } from '@/lib/quiz/recommendSwitch'
 import { QuizProgress } from './QuizProgress'
@@ -113,13 +114,22 @@ export function SwitchQuiz({ switches }: Props) {
               />
             ))}
           </div>
-          <button
-            type="button"
-            onClick={handleReset}
-            className="mt-8 text-small font-mono text-text-2 hover:text-text border border-border px-4 py-2 rounded hover:border-border-hi transition-colors"
-          >
-            Start over
-          </button>
+          <div className="mt-8 flex flex-wrap items-center gap-4">
+            <Link
+              href="/part/switch"
+              data-testid="quiz-browse-all-link"
+              className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text transition-colors"
+            >
+              Browse all switches →
+            </Link>
+            <button
+              type="button"
+              onClick={handleReset}
+              className="text-small font-mono text-text-2 hover:text-text border border-border px-4 py-2 rounded hover:border-border-hi transition-colors"
+            >
+              Start over
+            </button>
+          </div>
         </div>
       )}
     </div>
