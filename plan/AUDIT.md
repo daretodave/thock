@@ -1223,3 +1223,12 @@ passes accumulate signals.)
 - score: 3.5 (impact × ease / 10)
 - issue: #156
 > **Resolved (2026-05-20):** Extracted `getAdjacentWeeks` from `apps/web/src/app/trends/tracker/[week]/page.tsx` (line 73) to `apps/web/src/app/trends/tracker/[week]/helpers.ts` and exported it. Updated page.tsx import accordingly. Added `apps/web/src/app/trends/tracker/[week]/__tests__/helpers.test.ts` with 5 tests: empty list → both null; single snapshot → both null; first week (W19) → prev=null, next=W20; last week (W21) → prev=W20, next=null; middle week (W20) → prev=W19, next=W21. 487 unit tests (+5), 609 e2e green. `a17c7cd`
+
+### [x] [seo] [3.2] /quiz/switch missing BreadcrumbList JSON-LD — addressed in 36a7e33 (closes #157)
+- category: seo
+- filed: 2026-05-20 by cloud /iterate audit
+- impact: 4 (/quiz/switch was the only page in the URL contract shipping a JSON-LD type without an accompanying BreadcrumbList; every other comparable standalone page ships both)
+- ease: 8 (3-line addition to quiz/switch/page.tsx + meta.spec.ts fixture update + quiz.spec.ts assertion)
+- score: 3.2 (impact × ease / 10)
+- issue: #157
+> **Resolved (2026-05-20):** Added `buildBreadcrumbListJsonLd([Home, Find your switch])` to the `JsonLd graph` array alongside `WEB_APP_JSON_LD` in `apps/web/src/app/quiz/switch/page.tsx`. Updated `meta.spec.ts` fixture from `['WebApplication']` to `['WebApplication', 'BreadcrumbList']`. Extended `quiz.spec.ts` JSON-LD test to also assert BreadcrumbList presence and crumb name. 609 e2e green. `36a7e33`
