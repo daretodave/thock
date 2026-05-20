@@ -16,6 +16,7 @@ import {
   getAllTrendSnapshots,
   getTrendSnapshot,
 } from '@/lib/data-runtime'
+import { getAdjacentWeeks } from './helpers'
 import { TrackerHeader } from '@/components/tracker/TrackerHeader'
 import { TrackerSummaryGrid } from '@/components/tracker/TrackerSummaryGrid'
 import { TrackerCategorySection } from '@/components/tracker/TrackerCategorySection'
@@ -67,18 +68,6 @@ function buildDatasetJsonLd(
     temporalCoverage: snapshot.isoWeek,
     dateModified: snapshot.publishedAt,
     publisher: siteConfig.publisher,
-  }
-}
-
-function getAdjacentWeeks(week: string): {
-  prev: string | null
-  next: string | null
-} {
-  const all = getAllTrendSnapshots()
-  const idx = all.findIndex((s) => s.isoWeek === week)
-  return {
-    prev: idx > 0 ? (all[idx - 1]?.isoWeek ?? null) : null,
-    next: idx < all.length - 1 ? (all[idx + 1]?.isoWeek ?? null) : null,
   }
 }
 
