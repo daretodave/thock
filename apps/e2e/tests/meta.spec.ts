@@ -81,7 +81,7 @@ function expectedTypesFor(path: string): ExpectedTypes {
   if (path.startsWith('/article/')) return ['Article', 'BreadcrumbList']
   if (path.startsWith('/tag/')) return ['CollectionPage', 'BreadcrumbList']
   // Routes shipped in phases 21–33 (previously fell through to []).
-  if (path === '/quiz/switch') return ['WebApplication']
+  if (path === '/quiz/switch') return ['WebApplication', 'BreadcrumbList']
   if (path === '/tags') return ['CollectionPage', 'BreadcrumbList', 'ItemList']
   if (path === '/group-buys/past')
     return ['CollectionPage', 'BreadcrumbList', 'ItemList']

@@ -53,12 +53,14 @@ test.describe('/quiz/switch — phase 33', () => {
     await expect(page.getByText(/question 1 of 4/i)).toBeVisible()
   })
 
-  test('includes WebApplication JSON-LD', async ({ page }) => {
+  test('includes WebApplication and BreadcrumbList JSON-LD', async ({ page }) => {
     await page.goto('/quiz/switch')
     const scripts = await page
       .locator('script[type="application/ld+json"]')
       .allTextContents()
     const flat = scripts.join('\n')
     expect(flat).toContain('"@type":"WebApplication"')
+    expect(flat).toContain('"@type":"BreadcrumbList"')
+    expect(flat).toContain('"name":"Find your switch"')
   })
 })

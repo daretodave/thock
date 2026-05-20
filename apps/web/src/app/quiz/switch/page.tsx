@@ -1,6 +1,6 @@
 import type { ReactElement } from 'react'
 import { Container } from '@thock/ui'
-import { buildMetadata, JsonLd } from '@thock/seo'
+import { buildBreadcrumbListJsonLd, buildMetadata, JsonLd } from '@thock/seo'
 import { getAllSwitches } from '@/lib/data-runtime'
 import { SwitchQuiz } from '@/components/quiz/SwitchQuiz'
 
@@ -26,7 +26,15 @@ export default function QuizSwitchPage(): ReactElement {
   return (
     <main id="main">
       <Container>
-        <JsonLd graph={WEB_APP_JSON_LD} />
+        <JsonLd
+          graph={[
+            WEB_APP_JSON_LD,
+            buildBreadcrumbListJsonLd([
+              { name: 'Home', path: '/' },
+              { name: 'Find your switch', path: '/quiz/switch' },
+            ]),
+          ]}
+        />
         <div className="mb-4 pt-8">
           <h1 className="text-h1 font-serif text-text mb-3">Find your switch</h1>
           <p className="text-body text-text-2 max-w-[55ch]">
