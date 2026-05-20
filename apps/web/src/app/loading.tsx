@@ -1,13 +1,12 @@
 import { Container, Stack } from '@thock/ui'
+import { PageSectionKicker } from '@/components/ui/PageSectionKicker'
 
 export default function HomeLoading() {
   return (
     <main id="main" className="flex-1">
       <Container as="section" className="py-12 sm:py-16">
       <Stack gap={6}>
-        <span className="font-mono uppercase tracking-[0.12em] text-micro text-text-4">
-          loading · home
-        </span>
+        <PageSectionKicker>loading · home</PageSectionKicker>
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1.4fr_1fr]">
           <div className="aspect-[16/10] animate-pulse bg-surface" />
           <div className="flex flex-col gap-3">

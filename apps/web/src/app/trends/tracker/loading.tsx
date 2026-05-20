@@ -1,13 +1,12 @@
 import { Container, Stack } from '@thock/ui'
+import { PageSectionKicker } from '@/components/ui/PageSectionKicker'
 
 export default function TrackerLoading() {
   return (
     <main id="main" className="flex-1">
       <Container as="header" className="py-12 sm:py-16">
         <Stack gap={4}>
-          <span className="font-mono uppercase tracking-[0.12em] text-micro text-text-4">
-            loading · tracker
-          </span>
+          <PageSectionKicker>loading · tracker</PageSectionKicker>
           <div className="h-12 w-3/4 animate-pulse bg-surface" />
           <div className="h-6 w-2/3 max-w-[60ch] animate-pulse bg-surface" />
         </Stack>
