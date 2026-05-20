@@ -1214,3 +1214,12 @@ passes accumulate signals.)
 - score: 3.6 (impact × ease / 10)
 - issue: #155
 > **Resolved (2026-05-20):** Added `packages/data/src/__tests__/validate/report.test.ts` with 5 unit tests using vi.spyOn to mock console.log/error: (1) ok path — prints total count, per-kind breakdown, success line, no error calls; (2) error path — prints error count + details, no success line; (3) uses err.file as location prefix; (4) falls back to kind/slug when file absent; (5) includes [field] in brackets. 609 e2e green. `66106da`
+
+### [x] [test] [3.5] getAdjacentWeeks() — inline tracker archive navigation helper had no unit tests — addressed in a17c7cd (closes #156)
+- category: test
+- filed: 2026-05-20 by cloud /iterate audit
+- impact: 5 (tracker archive prev/next navigation on all 3 week pages; first/last edge cases non-obvious; e2e only validated W19→W20 link, not boundary null cases)
+- ease: 7 (extract to helpers.ts + 5 unit tests)
+- score: 3.5 (impact × ease / 10)
+- issue: #156
+> **Resolved (2026-05-20):** Extracted `getAdjacentWeeks` from `apps/web/src/app/trends/tracker/[week]/page.tsx` (line 73) to `apps/web/src/app/trends/tracker/[week]/helpers.ts` and exported it. Updated page.tsx import accordingly. Added `apps/web/src/app/trends/tracker/[week]/__tests__/helpers.test.ts` with 5 tests: empty list → both null; single snapshot → both null; first week (W19) → prev=null, next=W20; last week (W21) → prev=W20, next=null; middle week (W20) → prev=W19, next=W21. 487 unit tests (+5), 609 e2e green. `a17c7cd`
