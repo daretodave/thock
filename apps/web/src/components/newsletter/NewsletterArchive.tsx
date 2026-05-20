@@ -52,7 +52,7 @@ export function NewsletterArchive({
             <span className="font-mono text-micro uppercase tracking-[0.08em] text-text-2">
               issue {String(n.frontmatter.issue).padStart(2, '0')}
             </span>
-            <span className="font-mono text-micro uppercase tracking-[0.08em] text-text-4">
+            <span className="font-mono text-micro uppercase tracking-[0.08em] text-text-2">
               {n.frontmatter.publishedAt.slice(0, 10)}
             </span>
           </div>

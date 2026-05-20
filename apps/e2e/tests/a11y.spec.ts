@@ -901,3 +901,34 @@ test('color-contrast — result-card-pct text-text-2 after completing quiz (regr
   const contrast = results.violations.filter((v) => v.id === 'color-contrast')
   expect(contrast, `result-card-pct: ${formatViolations(contrast)}`).toHaveLength(0)
 })
+
+// text-text-4 at text-micro / text-small fails WCAG AA (even lower luminance than
+// text-text-3 which was systematically fixed across phases 26-32). Four real-content
+// elements swapped text-text-4 → text-text-2: part-index-count, mentioned-in-footer,
+// tracker-no-earlier-weeks, and newsletter archive date.
+test('color-contrast — part/switch catalog count text-text-2 (regression guard)', async ({
+  page,
+}) => {
+  await page.goto('/part/switch')
+  const results = await new AxeBuilder({ page })
+    .withTags(WCAG_TAGS)
+    .include('[data-testid="part-index-count"]')
+    .analyze()
+  const contrast = results.violations.filter((v) => v.id === 'color-contrast')
+  expect(contrast, `part-index-count: ${formatViolations(contrast)}`).toHaveLength(0)
+})
+
+test('color-contrast — tracker/2026-W19 "No earlier weeks" label text-text-2 (regression guard)', async ({
+  page,
+}) => {
+  // W19 is the earliest snapshot — it always renders the "No earlier weeks" disabled label.
+  await page.goto('/trends/tracker/2026-W19')
+  const el = page.locator('[data-testid="tracker-no-earlier-weeks"]')
+  await expect(el).toBeVisible()
+  const results = await new AxeBuilder({ page })
+    .withTags(WCAG_TAGS)
+    .include('[data-testid="tracker-no-earlier-weeks"]')
+    .analyze()
+  const contrast = results.violations.filter((v) => v.id === 'color-contrast')
+  expect(contrast, `tracker-no-earlier-weeks: ${formatViolations(contrast)}`).toHaveLength(0)
+})

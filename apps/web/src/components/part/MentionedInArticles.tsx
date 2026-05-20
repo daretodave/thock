@@ -57,7 +57,10 @@ export function MentionedInArticles({
             />
           ))}
         </div>
-        <p className="font-mono uppercase tracking-[0.08em] text-micro text-text-4">
+        <p
+          data-testid="mentioned-in-footer"
+          className="font-mono uppercase tracking-[0.08em] text-micro text-text-2"
+        >
           {partName} appears in editor-curated build sheets.
         </p>
       </Stack>

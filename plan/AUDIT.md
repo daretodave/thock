@@ -1275,6 +1275,19 @@ passes accumulate signals.)
 - issue: #159
 > **Resolved (2026-05-20):** Added 4 `it()` blocks to `apps/web/src/app/__tests__/sitemap.test.ts`: (1) /tags, /quiz/switch, /group-buys/past all included (phases 28, 33, 29); (2) every tracker archive week included via `getAllTrendSnapshots()` (phase 27); (3) all /part/[kind] index pages included (phase 21); (4) every part detail slug included via getAllSwitches/getAllKeycapSets/getAllBoards (phase 21). 609 e2e green. `904d5c8`
 
+### [a11y] [4.8] text-text-4 at small text fails WCAG AA — part catalog count, MentionedInArticles footer, tracker archive nav, newsletter archive date
+- category: a11y
+- filed: 2026-05-20 by cloud /iterate audit
+- impact: 6 (affects /part/switch, /part/keycap-set, /part/board count sentence; all part detail pages with companion articles; tracker/2026-W19 "No earlier weeks" label; newsletter archive when populated)
+- ease: 8 (4 class substitutions across 4 files + data-testid additions + 2 regression guards)
+- score: 4.8 (impact × ease / 10)
+- wcag: 1.4.3 Contrast (Minimum) AA — 4.5:1 for normal text at 12px/14px
+- axe impact: serious
+- pages: /part/switch, /part/keycap-set, /part/board, /part/[kind]/[slug] (all with companion articles), /trends/tracker/2026-W19, /newsletter (when archive populated)
+- elements: `text-micro text-text-4` on (1) part kind-index count sentence; (2) MentionedInArticles footer note; (3) tracker "← No earlier weeks" disabled nav label at text-small; (4) newsletter archive issue date
+- root cause: text-text-4 (oklch(0.40 0.004 250)) has even lower luminance than text-text-3 (oklch(0.55 0.006 250)) which was systematically fixed across the Phase B drain (issues #91–#113). These four real-content instances were not covered by that sweep.
+- issue: [mirror-failed: 2026-05-20T00:00:00Z]
+
 ### [x] [test] [3.6] KeyboardImage.tsx — MDX image wrapper has no unit tests (last untested MDX component) — addressed in 4d2a603 (closes #162)
 - category: test
 - filed: 2026-05-20 by cloud /iterate audit

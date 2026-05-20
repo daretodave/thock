@@ -174,7 +174,10 @@ export default async function PartIndexPage({
             <PartIndexCard key={`${part.kind}:${part.slug}`} part={part} />
           ))}
         </div>
-        <p className="mt-6 font-mono uppercase tracking-[0.08em] text-micro text-text-4">
+        <p
+          data-testid="part-index-count"
+          className="mt-6 font-mono uppercase tracking-[0.08em] text-micro text-text-2"
+        >
           {parts.length}{' '}
           {parts.length === 1 ? kind : KIND_PLURAL[kind]} in the catalog.
         </p>

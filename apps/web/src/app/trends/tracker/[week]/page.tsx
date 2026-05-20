@@ -172,7 +172,10 @@ export default async function TrackerWeekPage({
                 ← {weekKicker(prev) ? `Week ${weekKicker(prev)!.week}, ${weekKicker(prev)!.year}` : prev}
               </Link>
             ) : (
-              <span className="font-mono text-small uppercase tracking-[0.08em] text-text-4">
+              <span
+                data-testid="tracker-no-earlier-weeks"
+                className="font-mono text-small uppercase tracking-[0.08em] text-text-2"
+              >
                 ← No earlier weeks
               </span>
             )}
