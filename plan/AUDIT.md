@@ -1273,4 +1273,14 @@ passes accumulate signals.)
 - ease: 9 (add 4 it() blocks importing getAllTrendSnapshots + getAllSwitches + getAllKeycapSets + getAllBoards)
 - score: 3.6 (impact × ease / 10)
 - issue: #159
+> **Resolved (2026-05-20):** Added 4 `it()` blocks to `apps/web/src/app/__tests__/sitemap.test.ts`: (1) /tags, /quiz/switch, /group-buys/past all included (phases 28, 33, 29); (2) every tracker archive week included via `getAllTrendSnapshots()` (phase 27); (3) all /part/[kind] index pages included (phase 21); (4) every part detail slug included via getAllSwitches/getAllKeycapSets/getAllBoards (phase 21). 609 e2e green. `904d5c8`
+
+### [x] [test] [3.6] KeyboardImage.tsx — MDX image wrapper has no unit tests (last untested MDX component) — addressed in 4d2a603 (closes #162)
+- category: test
+- filed: 2026-05-20 by cloud /iterate audit
+- impact: 4 (KeyboardImage renders in articles with the <KeyboardImage> MDX component; has conditional figcaption logic, width/height forwarding, and data-testid="article-figcaption" load-bearing for the axe regression guard in a11y.spec.ts; all 8 sibling MDX components had colocated tests)
+- ease: 9 (pure React component, no async, no RSC, no router; same pattern as Caption.test.tsx)
+- score: 3.6 (impact × ease / 10)
+- issue: #162
+> **Resolved (2026-05-20):** Added `packages/content/src/__tests__/mdx/KeyboardImage.test.tsx` with 5 tests: img src+alt passthrough; figcaption with data-testid="article-figcaption" when caption provided; no figcaption when caption omitted; width+height forwarded to img when provided; no width+height attributes when not provided. @thock/content: 24 test files, 142 tests (+1/+5). 609 e2e green. `4d2a603`
 > **Resolved (2026-05-20):** Extended `apps/web/src/app/__tests__/sitemap.test.ts` with 4 new it() blocks: (1) /tags + /quiz/switch + /group-buys/past; (2) every tracker archive week entry; (3) all /part/[kind] index pages; (4) every part detail slug for switches, keycap-sets, and boards. Imports extended to include getAllTrendSnapshots, getAllSwitches, getAllKeycapSets, getAllBoards. 491 unit tests (+4), 609 e2e green. `904d5c8`
