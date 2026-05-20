@@ -1241,3 +1241,12 @@ passes accumulate signals.)
 - score: 3.2 (impact × ease / 10)
 - issue: #157
 > **Resolved (2026-05-20):** Added `buildBreadcrumbListJsonLd([Home, Find your switch])` to the `JsonLd graph` array alongside `WEB_APP_JSON_LD` in `apps/web/src/app/quiz/switch/page.tsx`. Updated `meta.spec.ts` fixture from `['WebApplication']` to `['WebApplication', 'BreadcrumbList']`. Extended `quiz.spec.ts` JSON-LD test to also assert BreadcrumbList presence and crumb name. 609 e2e green. `36a7e33`
+
+### [x] [test] [3.6] sitemap.test.ts missing assertions for routes added in phases 21-33 — addressed in 904d5c8 (closes #159)
+- category: test
+- filed: 2026-05-20 by cloud /iterate audit
+- impact: 4 (sitemap.test.ts frozen at Phase 17 baseline; routes added in Phases 21, 27, 28, 29, 33 — /tags, /quiz/switch, /group-buys/past, /trends/tracker/<week>, /part/[kind] index + detail pages — unchecked by unit tests; only the slower e2e meta.spec.ts caught regressions; future developer could drop a route from sitemap.ts with no unit-test signal)
+- ease: 9 (add 4 it() blocks importing getAllTrendSnapshots + getAllSwitches + getAllKeycapSets + getAllBoards)
+- score: 3.6 (impact × ease / 10)
+- issue: #159
+> **Resolved (2026-05-20):** Extended `apps/web/src/app/__tests__/sitemap.test.ts` with 4 new it() blocks: (1) /tags + /quiz/switch + /group-buys/past; (2) every tracker archive week entry; (3) all /part/[kind] index pages; (4) every part detail slug for switches, keycap-sets, and boards. Imports extended to include getAllTrendSnapshots, getAllSwitches, getAllKeycapSets, getAllBoards. 491 unit tests (+4), 609 e2e green. `904d5c8`
