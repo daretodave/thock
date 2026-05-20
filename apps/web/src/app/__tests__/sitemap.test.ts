@@ -1,7 +1,15 @@
 import { describe, expect, it } from 'vitest'
 import sitemap from '../sitemap'
 import { canonicalUrl, PILLARS } from '@thock/seo'
-import { getAllArticles, getAllTags, getArticlesByTag } from '@/lib/data-runtime'
+import {
+  getAllArticles,
+  getAllBoards,
+  getAllKeycapSets,
+  getAllSwitches,
+  getAllTags,
+  getAllTrendSnapshots,
+  getArticlesByTag,
+} from '@/lib/data-runtime'
 
 describe('sitemap', () => {
   const map = sitemap()
@@ -63,6 +71,36 @@ describe('sitemap', () => {
       if (getArticlesByTag(t.slug).length === 0) {
         expect(urls).not.toContain(canonicalUrl(`/tag/${t.slug}`))
       }
+    }
+  })
+
+  it('includes /tags, /quiz/switch, /group-buys/past (phases 28, 33, 29)', () => {
+    for (const path of ['/tags', '/quiz/switch', '/group-buys/past']) {
+      expect(urls).toContain(canonicalUrl(path))
+    }
+  })
+
+  it('includes every tracker archive week (phase 27)', () => {
+    for (const s of getAllTrendSnapshots()) {
+      expect(urls).toContain(canonicalUrl(`/trends/tracker/${s.isoWeek}`))
+    }
+  })
+
+  it('includes all /part/[kind] index pages (phase 21)', () => {
+    for (const kind of ['switch', 'keycap-set', 'board']) {
+      expect(urls).toContain(canonicalUrl(`/part/${kind}`))
+    }
+  })
+
+  it('includes every part detail slug (phase 21)', () => {
+    for (const s of getAllSwitches()) {
+      expect(urls).toContain(canonicalUrl(`/part/switch/${s.slug}`))
+    }
+    for (const k of getAllKeycapSets()) {
+      expect(urls).toContain(canonicalUrl(`/part/keycap-set/${k.slug}`))
+    }
+    for (const b of getAllBoards()) {
+      expect(urls).toContain(canonicalUrl(`/part/board/${b.slug}`))
     }
   })
 
