@@ -1298,3 +1298,16 @@ passes accumulate signals.)
 - issue: #162
 > **Resolved (2026-05-20):** Added `packages/content/src/__tests__/mdx/KeyboardImage.test.tsx` with 5 tests: img src+alt passthrough; figcaption with data-testid="article-figcaption" when caption provided; no figcaption when caption omitted; width+height forwarded to img when provided; no width+height attributes when not provided. @thock/content: 24 test files, 142 tests (+1/+5). 609 e2e green. `4d2a603`
 > **Resolved (2026-05-20):** Extended `apps/web/src/app/__tests__/sitemap.test.ts` with 4 new it() blocks: (1) /tags + /quiz/switch + /group-buys/past; (2) every tracker archive week entry; (3) all /part/[kind] index pages; (4) every part detail slug for switches, keycap-sets, and boards. Imports extended to include getAllTrendSnapshots, getAllSwitches, getAllKeycapSets, getAllBoards. 491 unit tests (+4), 609 e2e green. `904d5c8`
+
+### [x] [a11y] [4.0] loading skeleton kickers — text-text-4 at 12px fails WCAG AA on 13 routes — addressed in 9b57082 (closes #163)
+- category: a11y
+- filed: 2026-05-20 by cloud /iterate audit
+- impact: 5 (loading state kicker visible during SSR streaming on every page load for users with cold cache or slow connections; WCAG 1.4.3 AA violation in light mode — same root cause as Phase B drain series)
+- ease: 8 (swap inline span for PageSectionKicker across 13 loading.tsx files; same pattern as Phase 32)
+- score: 4.0 (impact × ease / 10)
+- wcag: 1.4.3 Contrast (Minimum) AA — 4.5:1 for normal text at 12px
+- pages: /, /article/[slug], /deep-dives, /group-buys, /guides, /ideas, /news, /trends, /trends/tracker, /trends/tracker/[week], /tag/[slug], /part/[kind], /part/[kind]/[slug]
+- elements: `<span className="font-mono uppercase tracking-[0.12em] text-micro text-text-4">loading · ...</span>` in all 13 loading.tsx files
+- root cause: text-text-4 (oklch(0.40 0.004 250)) at text-micro (12px) fails WCAG AA contrast in light mode. Phase 32's PageSectionKicker drain covered page.tsx files; loading.tsx files were out of scope.
+- issue: #163
+> **Resolved (2026-05-20):** Replaced inline span with PageSectionKicker (text-text-2) in all 13 loading.tsx files: home, article/[slug], deep-dives, group-buys, guides, ideas, news, trends, trends/tracker, trends/tracker/[week], tag/[slug], part/[kind], part/[kind]/[slug]. PageSectionKicker always renders text-text-2 (WCAG AA compliant); regression prevented by component contract. 611 e2e green. `9b57082`
