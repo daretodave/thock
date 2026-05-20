@@ -26,6 +26,12 @@ const KIND_HEADING: Record<ValidKind, string> = {
   board: 'Boards',
 }
 
+const KIND_PLURAL: Record<ValidKind, string> = {
+  switch: 'switches',
+  'keycap-set': 'keycap-sets',
+  board: 'boards',
+}
+
 const KIND_DESCRIPTION: Record<ValidKind, string> = {
   switch:
     'Every switch in the thock catalog — what they feel like, who makes them, and which articles dig in.',
@@ -170,7 +176,7 @@ export default async function PartIndexPage({
         </div>
         <p className="mt-6 font-mono uppercase tracking-[0.08em] text-micro text-text-4">
           {parts.length}{' '}
-          {parts.length === 1 ? `${kind}` : `${kind}s`} in the catalog.
+          {parts.length === 1 ? kind : KIND_PLURAL[kind]} in the catalog.
         </p>
       </Container>
     </main>
