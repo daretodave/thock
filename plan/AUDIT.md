@@ -1242,7 +1242,7 @@ passes accumulate signals.)
 - issue: #157
 > **Resolved (2026-05-20):** Added `buildBreadcrumbListJsonLd([Home, Find your switch])` to the `JsonLd graph` array alongside `WEB_APP_JSON_LD` in `apps/web/src/app/quiz/switch/page.tsx`. Updated `meta.spec.ts` fixture from `['WebApplication']` to `['WebApplication', 'BreadcrumbList']`. Extended `quiz.spec.ts` JSON-LD test to also assert BreadcrumbList presence and crumb name. 609 e2e green. `36a7e33`
 
-### [ ] [nav] [6.3] /quiz/switch results — no path to browse the full switch catalog after seeing 3 matches
+### [x] [nav] [6.3] /quiz/switch results — no path to browse the full switch catalog after seeing 3 matches — addressed in 4f804f8 (closes #160)
 - category: affordance
 - filed: 2026-05-20 by cloud /iterate audit
 - impact: 7 (quiz has a prominent home-page CTA; all users completing the quiz hit a dead-end — only "Start over" or browser back to leave the results screen)
@@ -1252,6 +1252,7 @@ passes accumulate signals.)
 - pages: /quiz/switch (results view)
 - elements: `SwitchQuiz.tsx` results section — no forward navigation; `<button>Start over</button>` is the only action beside clicking a ResultCard
 - root cause: SwitchQuiz was shipped in Phase 33 with result cards linking to individual `/part/switch/[slug]` pages, but no link to `/part/switch` (the kind-index page listing all 8 switches). The `/parts` landing page (Phase Candidates) would eventually add this, but `/part/switch` already exists and needs only a one-line addition to close the gap now.
+> **Resolved (2026-05-20):** Added `<Link href="/part/switch" data-testid="quiz-browse-all-link">Browse all switches →</Link>` to the SwitchQuiz results section alongside the Start over button. Unit test added to `SwitchQuiz.test.tsx` (browse-all-link present, href=/part/switch, text correct); e2e assertion added to `quiz.spec.ts` (results view shows browse-all link with correct href). 492 unit tests, 609 e2e green. `4f804f8`
 
 ### [x] [test] [3.6] sitemap.test.ts missing assertions for routes added in phases 21-33 — addressed in 904d5c8 (closes #159)
 - category: test
