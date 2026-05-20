@@ -1242,6 +1242,18 @@ passes accumulate signals.)
 - issue: #157
 > **Resolved (2026-05-20):** Added `buildBreadcrumbListJsonLd([Home, Find your switch])` to the `JsonLd graph` array alongside `WEB_APP_JSON_LD` in `apps/web/src/app/quiz/switch/page.tsx`. Updated `meta.spec.ts` fixture from `['WebApplication']` to `['WebApplication', 'BreadcrumbList']`. Extended `quiz.spec.ts` JSON-LD test to also assert BreadcrumbList presence and crumb name. 609 e2e green. `36a7e33`
 
+### [x] [fix] [4.0] /part/[kind] count — "switchs" instead of "switches" — addressed in feebc00 (closes #161)
+- category: bug
+- filed: 2026-05-20 by cloud /iterate audit
+- impact: 5 (grammar error visible to all /part/switch visitors: "8 switchs in the catalog.")
+- ease: 8 (add KIND_PLURAL lookup map, one file)
+- score: 4.0 (impact × ease / 10)
+- issue: #161
+- pages: /part/switch
+- elements: count label line 173 in `apps/web/src/app/part/[kind]/page.tsx`
+- root cause: count label used `${kind}s` template which produces "switchs" for kind="switch"; correct English plural is "switches"
+> **Resolved (2026-05-20):** Added `KIND_PLURAL` record map with correct plurals (switch→switches, keycap-set→keycap-sets, board→boards); count label now uses `KIND_PLURAL[kind]`. pnpm verify green. `feebc00`
+
 ### [x] [nav] [6.3] /quiz/switch results — no path to browse the full switch catalog after seeing 3 matches — addressed in 4f804f8 (closes #160)
 - category: affordance
 - filed: 2026-05-20 by cloud /iterate audit
