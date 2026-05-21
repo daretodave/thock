@@ -1357,3 +1357,12 @@ passes accumulate signals.)
 - elements: line 38 — "[GMK CYL Prussian Alert] is set to open mid-month"
 - issue: #164
 > **Resolved (2026-05-21):** Changed "is set to open mid-month" → "opened on 2026-05-15" in the CYL ecosystem section. Updated updatedAt frontmatter to 2026-05-21T00:00:00.000Z. 611 e2e green. `af5bc02`
+
+### [x] [test] [3.6] sitemap.test.ts missing /parts assertion (phase 35) — addressed in 00361e6 (closes #166)
+- category: test
+- filed: 2026-05-21 by cloud /iterate audit
+- impact: 4 (phase 35 shipped /parts and wired it into sitemap.ts at priority 0.6; a regression silently removing /parts from the sitemap would not be caught by the unit test suite — the e2e smoke walker covers /parts at the integration level but the sitemap unit layer had no guard)
+- ease: 9 (one-line addition to the existing it() block at line 77 that already asserts /tags, /quiz/switch, /group-buys/past)
+- score: 3.6 (impact × ease / 10)
+- issue: #166
+> **Resolved (2026-05-21):** Extended the it() label to include "phases 28, 33, 29, 35" and added '/parts' to the path array. 660 e2e green. `00361e6`
