@@ -63,6 +63,16 @@ test.describe('per-part pages — phase 21', () => {
         expect(href).toMatch(new RegExp(`^/part/${kind}/`))
       })
     }
+
+    test('kind-index back-link points to /parts (discovery triangle)', async ({
+      page,
+    }) => {
+      await page.goto('/part/switch')
+      const backLink = page.getByTestId('part-kind-back-link')
+      await expect(backLink).toBeVisible()
+      await expect(backLink).toHaveAttribute('href', '/parts')
+      await expect(backLink).toContainText('all parts')
+    })
   })
 
   test.describe('detail pages', () => {

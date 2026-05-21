@@ -129,6 +129,7 @@ export default async function PartIndexPage({
           }),
           buildBreadcrumbListJsonLd([
             { name: 'Home', path: '/' },
+            { name: 'Parts', path: '/parts' },
             { name: heading, path },
           ]),
           buildItemListJsonLd({
@@ -159,11 +160,11 @@ export default async function PartIndexPage({
             {description}
           </p>
           <Link
-            href="/"
+            href="/parts"
             data-testid="part-kind-back-link"
             className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text"
           >
-            ← home
+            ← all parts
           </Link>
         </Stack>
       </Container>

@@ -121,7 +121,7 @@ export default async function PartDetailPage({
           },
           buildBreadcrumbListJsonLd([
             { name: 'Home', path: '/' },
-            { name: 'Parts', path: '/part' },
+            { name: 'Parts', path: '/parts' },
             { name: kindHuman, path: `/part/${part.kind}` },
             { name: part.record.name, path },
           ]),
