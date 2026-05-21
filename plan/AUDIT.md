@@ -105,6 +105,8 @@
 - why the loop was blind to it: `/iterate` audit and `/march` read Vercel `deploy:check` + `plan/AUDIT.md` / `CRITIQUE.md` only; a failing non-`march` GitHub Actions workflow is invisible to autonomous ticks. This row is the bridge — without it the workflow stays red indefinitely.
 - action: change `lighthouse.yml` `urls:` to audit the public production alias `https://thock.xyz` (the canonical `siteConfig.siteUrl`, not SSO-protected) instead of `target_url` — hardcode the four paths (`/`, `/article/gateron-oil-king-deep-dive`, `/trends/tracker`, `/group-buys`) against that base. Keep the `deployment_status` Production-success trigger as the run signal; only the audited URL changes. Fallback host `thock-coral.vercel.app` also resolves public if `thock.xyz` is unsuitable. (Alternative: disable Vercel Deployment Protection for the project — an out-of-repo dashboard setting; the canonical-alias fix is in-repo and preferred.)
 - once fixed: the run page should show real category scores. If the genuine site then fails an assertion, that is a separate, real audit row.
+- issue: #165
+- blocker: cloud loop cannot push `.github/workflows/` files — ACTIONS_PAT needs `workflow` scope (classic PAT) or `workflows: write` permission (fine-grained). The fix is one line in lighthouse.yml (confirmed correct; soft-reset after push rejected on 2026-05-21 cloud tick). Drain requires a local push or ACTIONS_PAT scope upgrade.
 
 ### [x] [copy] [3.6] mode-sonnet-r2 article callout promises /group-buys entry that doesn't exist — addressed in adc0bf5
 - category: copy
