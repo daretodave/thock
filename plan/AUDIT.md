@@ -1358,6 +1358,14 @@ passes accumulate signals.)
 - issue: #164
 > **Resolved (2026-05-21):** Changed "is set to open mid-month" → "opened on 2026-05-15" in the CYL ecosystem section. Updated updatedAt frontmatter to 2026-05-21T00:00:00.000Z. 611 e2e green. `af5bc02`
 
+### [ ] [test] [4.5] meta.spec.ts missing /parts JSON-LD type assertion (phase 35) — closes #167
+- category: test
+- filed: 2026-05-21 by cloud /iterate audit
+- impact: 5 (the /parts route is walked by meta.spec.ts but expectedTypesFor returns [] — no CollectionPage/BreadcrumbList/ItemList type assertions; a regression silently removing or mistyping the JSON-LD on /parts would pass the meta.spec.ts JSON-LD shape audit; same gap that audit row #134 closed for phases 21–33)
+- ease: 9 (one if-statement addition to expectedTypesFor identical to the existing /tags and /group-buys/past cases)
+- score: 4.5 (impact × ease / 10)
+- issue: #167
+
 ### [x] [test] [3.6] sitemap.test.ts missing /parts assertion (phase 35) — addressed in 00361e6 (closes #166)
 - category: test
 - filed: 2026-05-21 by cloud /iterate audit
