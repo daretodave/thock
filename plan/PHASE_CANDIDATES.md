@@ -1,7 +1,7 @@
 # Phase candidates
 
 > Last pass: 2026-05-21 at commit 792b009
-> Last oversight: 2026-05-16 — promoted both Pending candidates: [7.5] Trends Tracker Phase B → phase 31 (time-critical; W21 starts 2026-05-18), [6.5] A11y Phase B → phase 32 (stops the 21-commit text-text-3 iterate drip); added user-requested fun phase 33 ("Find your switch" interactive recommender). Pending now empty — next /expand repopulates. (Prior oversight 2026-05-11 at 7939291 — promoted phases 26–29.)
+> Last oversight: 2026-05-21 — promoted both [6.0] parts candidates: Parts catalog second data pass → phase 34, /parts root browse landing → phase 35 (34 ships first so the landing debuts against an enriched catalog). Closed the GA 503 [needs-user-call] AUDIT row (user verified GA admin out-of-band — resolved). Filed [ci][4.8] Lighthouse CI AUDIT row (workflow audits the SSO-protected per-deployment URL → redirects to vercel.com/login; the loop was blind to it). 5 candidates remain Pending. (Prior oversight 2026-05-16 — promoted phases 31–33.)
 > Pass count: 22
 > Posture: bold
 > Pass 22 notes: 5 commits since pass 21 (0c8b116). Cloud-mode pass — `/iterate` failure-mode 6 fired (audit found no findings ≥ 3.0; all categories clear: content-gap-survey "all pillars comfortable", all tracker Rule 2 linkages complete, all live GBs have Rule 3 companions, no stale group-buy status records). Window: 1 content fix (`adc0bf5` — mode-sonnet-r2 callout removed broken /group-buys promise); 1 content language update (`54096b4` — gmk-cyl-prussian-alert stale pre-open phrases updated after May 15 open); 2 audit tick commits. No spec drift, no design landings, no new data records, no loop-queued GitHub issues. **Pass 22 files 0 new candidates**: 5-commit maintenance-shaped window; no new phase-level signal. All 6 Pending candidates unchanged.
@@ -28,22 +28,6 @@
 
 ## Pending
 
-### [ ] [score 6.0] /parts root browse landing — unified catalog index for switches, keycap-sets, and boards
-- proposed: 2026-05-16, expand pass 13 (upgraded from Considered 5.5 at pass 7)
-- source signals:
-  - **Phase 21 gap**: `/part/[kind]/[slug]` detail pages and `/part/[kind]` kind-index pages exist, but no `/parts` landing unifies the three kinds. Readers navigating from `/part/switch/gateron-oil-king` to `/part/board/...` have no path without going through articles.
-  - **Phase 33 signal (new at pass 13)**: The "Find your switch" quiz ships a prominent home-page CTA (`→ /quiz/switch`) that routes users directly to `/part/switch/[slug]` result pages. This makes the parts catalog an active discovery surface for the first time — but quiz results only surface switches; a reader curious about boards or keycap-sets has no obvious next step.
-  - **Pattern match**: Phase 28 (`/tags`), Phase 29 (`/group-buys/past`) both follow this exact pattern: existing detail/kind pages → add a top-level browse landing → closes the navigation triangle. CollectionPage + ItemList JSON-LD + sitemap entry.
-- rationale: The original Considered threshold ("25+ records OR critique flags 'no entry point'") was set before Phase 33 existed. Phase 33 changes the context: the quiz actively routes readers to part detail pages from the home page — making /parts the natural "browse all catalog" complement to the quiz's "find one match" entry. A /parts landing with three categorical sections (Switches · Keycap sets · Boards) with record counts and kind-index links completes the navigation triangle (quiz → result → /parts → kind-index → detail) and gives readers an unprompted way to explore the full catalog.
-- proposed scope (1 phase):
-  1. New route `apps/web/src/app/parts/page.tsx` rendering three categorical sections with record counts and links to `/part/switch`, `/part/keycap-set`, `/part/board`. Thin wrapper — all data comes from existing loaders (`getAllSwitches()`, `getAllKeycapSets()`, `getAllBoards()`).
-  2. CollectionPage + ItemList JSON-LD (3 top-level items, one per kind). BreadcrumbList: Home → Parts.
-  3. Sitemap entry at changefreq monthly (grows with catalog); `canonical-urls` + `page-reads` fixtures extended.
-  4. e2e: `apps/e2e/tests/parts.spec.ts` extends with /parts H1, three-section structure, kind-link hrefs, JSON-LD shape.
-  5. One affordance: add "Browse all parts →" link on `/quiz/switch` results view (below the top-3 matches) so quiz users have a clear next step.
-- estimated phases: 1
-- conflicts: none — extends Phase 21 surfaces; URL `/parts` not in contract yet but follows established `/tags` → `/tag/[slug]` → `/tag/[slug]/page.tsx` pattern. No schema change.
-
 ### [ ] [score 5.5] Tracker Rule 2 linkage audit helper — auto-file content-gap rows for unlinked trend entries
 - proposed: 2026-05-16, expand pass 13
 - source signals:
@@ -59,22 +43,6 @@
   4. `skills/march.md` Step 3b.5 note: tracker-linkage rows use the same `category: content-gaps` tag, so `/ship-content` drains them in the same lane as Rule 1 rows. No new skill, no new dispatch lane.
 - estimated phases: 1
 - conflicts: none — `scripts/tracker-linkage-survey.mjs` mirrors `content-gap-survey.mjs`; march.md Step 0.5 is an additive amendment; no schema change; no new routes.
-
-### [ ] [score 6.0] Parts catalog second data pass — expand switch/keycap-set/board records to enrich quiz utility and browse surfaces
-- proposed: 2026-05-17, expand pass 14
-- source signals:
-  - **Quiz demand (Phase 33)**: The "Find your switch" quiz routes home-page users directly to `/part/switch/[slug]` detail pages. With only 8 switches in `data/switches/`, quiz takers with diverse profiles (budget, hall-effect, silent, clicky, heavy tactile) converge on the same 2–3 results — limited variety undermines the "find your match" premise.
-  - **Data sparsity (Phase 20 seed state)**: Phase 20 added 8 switches, 5 keycap-sets, 5 boards as a seed layer. The catalog has not grown since. The Pending `/parts` browse landing [6.0] (pass 13) will render catalog density on three sections — thin records make the landing feel sparse.
-  - **Scout pattern proven**: Phase 18–20 used the same scout → ship-data flow to build the initial catalog; repeatable with no new tooling.
-- rationale: Phase 33's quiz transforms the parts catalog from a cross-reference layer into an active discovery surface. The quiz's value proposition — "find your match" — scales with catalog breadth. A second scout-driven data pass that adds underrepresented switch categories (budget hall-effect, silent linear, light tactile, clicky, premium linear) and fills out keycap-sets + boards closes the gap between "seed catalog" and "useful browse surface." Directly enriches both the quiz and the pending /parts landing.
-- proposed scope (1 phase):
-  1. Scout researches 8–10 new switches across underrepresented segments: budget hall-effect (Gateron Magnetic Jade, Akko CS variants), silent linear (Gateron Yellow Pro Silent, Boba U4T silent), light tactile, clicky (Kailh Box White/Navy), and one additional premium linear. Verifies vendor URLs, ships records via `ship-data` conventions.
-  2. Scout researches 3–4 new keycap-sets: one SA-profile, one KAT or MT3, and 1–2 PBT doubleshot sets in common colorways (complement the current GMK-heavy coverage).
-  3. Scout researches 2–3 new boards: one 75% layout, one split (Alice or HHKB-style), one compact TKL — broadens catalog beyond the current 60/65% slab entries.
-  4. `pnpm verify` green gate; all records validated against existing schemas (no schema change needed).
-  5. No route or component changes; enriches existing `/part/[kind]/[slug]` + `/part/[kind]` + quiz results automatically via data-runtime manifest rebuild.
-- estimated phases: 1
-- conflicts: none — extends Phase 20 data; `ship-data` pattern proven; no schema change; no URL contract change.
 
 ### [ ] [score 5.5] Group-buy relatedArticle schema additive — link GB records to companion editorial coverage
 - proposed: 2026-05-17, expand pass 14
@@ -197,7 +165,7 @@ _(previous Pending items: [7.0] content-velocity queue auto-refill promoted to p
 
 ## Considered (below threshold)
 
-- ~~[score 5.5] `/parts` browse-landing index~~ — **promoted to Pending [6.0] at pass 13** on Phase 33 quiz signal. See Pending above.
+- ~~[score 5.5] `/parts` browse-landing index~~ — **promoted to phase 35 via /oversight 2026-05-21** (was Pending [6.0] since pass 13). See `## Promoted`.
 - [score 5.0] Tracker null-articleSlug "article pending" visual treatment — W21 snapshot launched with ~16 rows of real direction/score data but no `articleSlug` (ba14cc7 linked 2 non-flat rows; 5 null-flat rows remain in W21 per pass 16 check). Phase 31's Monday gate makes null-slug rows routine: every new weekly snapshot starts with 12–18 nulls and they drain as Rule 2 content is shipped. Phase 8 "early data muted styling" was designed for absent data (no score yet), not present-data-no-article (score exists, article pending). A rendering variant distinguishing the two states would be honest UX — the current muted style implies "we don't know yet," but the site does know: it just hasn't written about it yet. Score remains at [5.0] (no critique finding filed; non-flat null-slug rows are now well-linked via ba14cc7; only flat-direction nulls remain which are less editorially urgent). Iterate-shaped (component-level change to `TrackerRow` + 1 unit test variant); re-evaluate if Rule 2 rows accumulate at HIGH signal strength or if critique flags the visual state as confusing.
 - [score 3.7] `/quiz` extension — keycap-set and board recommenders. Phase 33 ships switch recommender; the natural extension is parallel quizzes for keycap-sets (profile, material, legends) and boards (form factor, mounting style, budget). Data-gated: only 5 keycap-sets and 5 boards in catalog, too sparse for meaningful recommendations. Re-evaluate when catalog crosses 10 records per kind — candidate 1 above (parts catalog expansion), if promoted and shipped, would bring switches to ~18 (well past the threshold), keycap-sets to ~8–9, boards to ~7–8.
 - [score 4.0] Editorial voice unification (`/about` "we" vs `/newsletter` "I"; `/group-buys` + `/` "Closing soon" / "ending soon" framing). Two critique findings cluster around editorial register mismatches. Drainable in ≤2 iterate ticks (one for the pronoun unify, one for the 72h-gate logic on the home widget + group-buys page). Iterate is the right shape, not a phase.
@@ -211,6 +179,28 @@ _(previous Pending items: [7.0] content-velocity queue auto-refill promoted to p
 
 
 ## Promoted
+
+### [score 6.0] Parts catalog second data pass — expand switch/keycap-set/board records
+- promoted: 2026-05-21 via `/oversight` (this commit)
+- assigned phase: **34**
+- promotion decisions (locked at /oversight time):
+  - **Ships before phase 35**: the data pass enriches the catalog so the `/parts` landing (phase 35) debuts dense rather than sparse, and the Phase 33 quiz gains result variety. Contiguous 34 → 35.
+  - **Scope locked to the candidate's 5-step proposed scope**: scout researches 8–10 new switches across underrepresented segments (budget hall-effect, silent linear, light tactile, clicky, premium linear), 3–4 keycap-sets (SA, KAT/MT3, PBT doubleshot), 2–3 boards (75%, split, compact TKL); `/ship-data` drops records validated against existing schemas. No schema change, no route/component change — the data-runtime manifest rebuild ripples the new records into `/part/[kind]/[slug]`, the quiz, and (once shipped) `/parts`.
+  - **Brief drafting**: drafted on-demand by `/ship-a-phase`.
+- original signals + scope: expand pass 14 candidate row (was in `## Pending`; see git history of this file at `7399784^`). User answer at /oversight 2026-05-21: "Promote the two [6.0] parts candidates."
+- estimated phases: 1
+- conflicts: none — extends Phase 20 data; `ship-data` pattern proven; no schema or URL contract change.
+
+### [score 6.0] /parts root browse landing — unified catalog index for switches, keycap-sets, boards
+- promoted: 2026-05-21 via `/oversight` (this commit)
+- assigned phase: **35**
+- promotion decisions (locked at /oversight time):
+  - **Ships after phase 34** so the landing renders against the enriched catalog.
+  - **Scope locked to the candidate's 5-step proposed scope**: new route `apps/web/src/app/parts/page.tsx` with three categorical sections (Switches · Keycap sets · Boards), record counts, links to `/part/switch` · `/part/keycap-set` · `/part/board` — thin wrapper over `getAllSwitches()` / `getAllKeycapSets()` / `getAllBoards()`. CollectionPage + ItemList + BreadcrumbList JSON-LD; sitemap entry; `canonical-urls` + `page-reads` fixtures extended; `apps/e2e/tests/parts.spec.ts` extended with /parts assertions. One affordance: "Browse all parts →" link on the `/quiz/switch` results view. Completes the discovery triangle (quiz → result → /parts → kind-index → detail).
+  - **Brief drafting**: drafted on-demand by `/ship-a-phase`.
+- original signals + scope: expand pass 13 candidate row (was in `## Pending`; see git history of this file at `7399784^`). User answer at /oversight 2026-05-21: "Promote the two [6.0] parts candidates."
+- estimated phases: 1
+- conflicts: none — extends Phase 21 surfaces; `/parts` follows the established `/tags` browse-landing pattern; no schema change.
 
 ### [score 7.5] Trends Tracker Phase B — automated weekly snapshot cadence
 - promoted: 2026-05-16 via `/oversight` (this commit)

@@ -94,6 +94,18 @@
 
 ## Open findings
 
+### [ ] [ci] [4.8] Lighthouse CI workflow audits the SSO-protected per-deployment URL — every run fails, the gate produces zero signal
+- category: ci
+- filed: 2026-05-21 by /oversight
+- impact: 6 (the Lighthouse gate has never once passed: dormant while it filtered to Preview, then red on every run since `48adce0` switched it to gate Production. The perf / a11y / SEO regression signal phases #84/#85 shipped it for is entirely lost, and a permanent red ✘ on the Actions tab trains everyone to ignore CI status)
+- ease: 8 (one-file change to `.github/workflows/lighthouse.yml` — swap the audited base URL; no app/package code)
+- score: 4.8 (impact × ease / 10)
+- root cause: `.github/workflows/lighthouse.yml` sets `urls:` from `${{ github.event.deployment_status.target_url }}`, which is Vercel's immutable per-deployment hostname (e.g. `https://thock-hig8pokji-funkycoffee.vercel.app`). That hostname has Vercel Deployment Protection (Authentication / SSO) enabled, so Lighthouse follows a 307 to `https://vercel.com/login?next=…` and audits Vercel's login page — which fails `categories.accessibility`, `categories.best-practices`, `categories.seo`, `color-contrast`, and ~12 other assertions. The page under test is never thock.
+- evidence: run 26217540757 (2026-05-21T09:26Z) and every prior run — `##[error]21 results for https://vercel.com/login?next=%2Fsso-api%3Furl%3D…thock-hig8pokji-funkycoffee.vercel.app…`. The `march` workflow and `pnpm deploy:check` are unaffected and green — this is isolated to the Lighthouse workflow.
+- why the loop was blind to it: `/iterate` audit and `/march` read Vercel `deploy:check` + `plan/AUDIT.md` / `CRITIQUE.md` only; a failing non-`march` GitHub Actions workflow is invisible to autonomous ticks. This row is the bridge — without it the workflow stays red indefinitely.
+- action: change `lighthouse.yml` `urls:` to audit the public production alias `https://thock.xyz` (the canonical `siteConfig.siteUrl`, not SSO-protected) instead of `target_url` — hardcode the four paths (`/`, `/article/gateron-oil-king-deep-dive`, `/trends/tracker`, `/group-buys`) against that base. Keep the `deployment_status` Production-success trigger as the run signal; only the audited URL changes. Fallback host `thock-coral.vercel.app` also resolves public if `thock.xyz` is unsuitable. (Alternative: disable Vercel Deployment Protection for the project — an out-of-repo dashboard setting; the canonical-alias fix is in-repo and preferred.)
+- once fixed: the run page should show real category scores. If the genuine site then fails an assertion, that is a separate, real audit row.
+
 ### [x] [copy] [3.6] mode-sonnet-r2 article callout promises /group-buys entry that doesn't exist — addressed in adc0bf5
 - category: copy
 - filed: 2026-05-21 by cloud /iterate audit
@@ -312,12 +324,13 @@
 >
 > **Resolved (2026-05-10):** wrapped `<TrackerSummaryGrid>` in `apps/web/src/app/trends/tracker/page.tsx` with a visible h2 "This week at a glance" right after the TrackerHeader's h1. Sequence is now `h1 → h2 → h3*4 → h2*5` (no skip). Wording chosen over the audit's suggested "Top movers this week" because the four cards include Sleeper (which is flat by design — see also pending [MED] critique #8) — "movers" framing dilutes the Sleeper kind. New e2e regression guard at `apps/e2e/tests/trends.spec.ts` walks every heading in document order and asserts no level jump > 1 going down — catches future skips automatically. Verify: 409 e2e green parallel (no #418 flake this run).
 
-### [needs-user-call] [MED] / — production GA `/g/collect` beacons returning HTTP 503 (user verifying out-of-band)
+### [x] [MED] / — production GA `/g/collect` beacons returning HTTP 503 — resolved via /oversight 2026-05-21 (user verified GA admin)
 - pass: critique 8 (commit `d34580c`) → mirrored to AUDIT via /oversight 2026-05-11
 - evidence: reader sub-agent's `read_network_requests` on / captured `POST https://www.google-analytics.com/g/collect?...&en=scroll` → 503 and `POST .../g/collect?...&en=page_view` → 503, both fired right after page hydration. GA4 measurement ID `G-5R4DKQ02GV` (downstream of GTM container `GTM-58T839ZD`).
 - impact: if persistent (not just reader's session), the editorial team is silently losing the analytics signal trends decisions ride on.
 - needs-user-call: GA admin + GTM tag config sit outside the repo; the loop can't autonomously verify or reconfigure them. User confirmed at /oversight 2026-05-11 they will verify GA admin (property active state, sample rate, hostname allowlist) out-of-band and report back. The loop must NOT attempt to drain this row — it is informational until the user reports back.
 - on-resolution: if persistent + Google-side, the candidate path is swapping to a self-hosted runner (Plausible/Umami) — the `<GoogleTagManager>` Server Component scaffolding already has the env-gate to host a second runner alongside. File as new phase candidate via `/expand` if that path is chosen.
+> **Resolved (2026-05-21 via /oversight):** User verified GA admin out-of-band and confirmed the analytics property is healthy — the 503s in the critique-8 reader session were transient / session-scoped, not a persistent Google-side outage. No self-hosted-runner phase candidate needed. Row closed; the loop no longer treats GA telemetry as an open question.
 
 ### [x] [LOW] [a11y] all pages — no "skip to main content" link — addressed in 7899462 (phase 26)
 > Filed 2026-05-10 by /iterate audit pass.

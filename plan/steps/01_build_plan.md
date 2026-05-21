@@ -69,12 +69,17 @@ the phase.
 - [x] Phase 32 — A11y Phase B systematic completion (score 6.5, pass-10 candidate). Stops the 21-commit single-instance `text-text-3` → `text-text-2` iterate drip: 16 remain, 13 an identical inline kicker span across route `page.tsx` files. Create `apps/web/src/components/ui/PageSectionKicker.tsx` (+ colocated unit test) at `text-text-2`; replace the 13 inline spans; fix the 3 standalone instances (`ArticleCard.tsx`, `NewsletterArchive.tsx`, `PageStub.tsx`) directly; ~5–6 axe regression guards by surface family; single `pnpm verify` green gate. Closes WCAG 1.4.3 site-wide and prevents recurrence from new routes copying the bad class. Brief drafted on-demand by `/ship-a-phase`. — `f41cc25`
 - [x] Phase 33 — "Find your switch" interactive recommender (user-requested fun phase). New route `apps/web/src/app/quiz/switch/page.tsx` (+ `loading.tsx` with `<main id="main">` per the phase-22 landmark contract). 4–5 single-select questions (sound profile, actuation feel, spring weight tolerance, primary use, optional budget) weighted-score over `getAllSwitches()`; top 2–3 matches link to existing `/part/switch/[slug]` pages (reuses phase 21 — no new detail pages). Scoring is a pure `recommendSwitch(answers, catalog)` helper in its own `.ts` module with unit tests; components split small (QuizStep / ResultCard / page) per the style guardrails. Sitemap + canonical-urls + page-reads extended; `WebApplication`/`Quiz` JSON-LD; one honest entry-point affordance (no nav churn). `apps/e2e/tests/quiz.spec.ts` walks the quiz + asserts a `/part/switch/` result + 375px no-scroll + JSON-LD. No schema change, no new assets, respects `DISABLE_ANALYTICS=1`. Ships after 31 + 32 in phase order. Brief drafted on-demand by `/ship-a-phase`. — `faf99f5`
 
-> **After phase 33:** the loop transitions back to `/iterate` +
-> `/ship-content` — content gaps, link rot, OG art, ongoing trends
-> snapshots (now automated by phase 31's Monday gate). With phase 30
-> shipped the content-gap queue is self-replenishing; `/march` makes
-> the transition automatic once 31–33 are `[x]`. Phase 31 is the
-> next pending phase — it is time-critical, ship it first.
+**Promoted candidates (phases 34–35, promoted via /oversight 2026-05-21 from PHASE_CANDIDATES expand passes 13 + 14 — both [6.0] parts-surface candidates):**
+- [ ] Phase 34 — Parts catalog second data pass (score 6.0, pass-14 candidate). Scout researches 8–10 new switches across underrepresented segments (budget hall-effect, silent linear, light tactile, clicky, premium linear), 3–4 keycap-sets (SA, KAT/MT3, PBT doubleshot), 2–3 boards (75%, split, compact TKL); `/ship-data` drops records validated against existing schemas — no schema change, no route/component change. Data-runtime manifest rebuild ripples the new records into `/part/[kind]/[slug]`, the Phase 33 quiz (more result variety), and the Phase 35 `/parts` landing. Ships before 35 so the landing debuts against an enriched catalog. Brief drafted on-demand by `/ship-a-phase`.
+- [ ] Phase 35 — /parts root browse landing (score 6.0, pass-13 candidate). New route `apps/web/src/app/parts/page.tsx` rendering three categorical sections (Switches · Keycap sets · Boards) with record counts and links to `/part/switch` · `/part/keycap-set` · `/part/board` — thin wrapper over `getAllSwitches()` / `getAllKeycapSets()` / `getAllBoards()`. CollectionPage + ItemList + BreadcrumbList JSON-LD; sitemap entry; `canonical-urls` + `page-reads` fixtures extended; `apps/e2e/tests/parts.spec.ts` extended with /parts assertions. One affordance: "Browse all parts →" link on the `/quiz/switch` results view. Completes the discovery triangle (quiz → result → /parts → kind-index → detail). Brief drafted on-demand by `/ship-a-phase`.
+
+> **Phases 34–35** (promoted 2026-05-21) are the next pending work —
+> `/march` ships phase 34 first, then 35. **After phase 35:** the
+> loop transitions back to `/iterate` + `/ship-content` — content
+> gaps, link rot, OG art, ongoing trends snapshots (automated by
+> phase 31's Monday gate). With phase 30 shipped the content-gap
+> queue is self-replenishing; `/march` makes the transition
+> automatic once 34–35 are `[x]`.
 
 > **Note on Netlify deploys before phase 1 ships:** auto-publishing
 > stays on; deploys will fail until `apps/web/` exists. The deploy
