@@ -85,7 +85,11 @@ describe('<SwitchQuiz>', () => {
     answerAllQuestions()
     const resultLinks = screen
       .getAllByRole('link')
-      .filter((l) => l.getAttribute('href') !== '/part/switch')
+      .filter(
+        (l) =>
+          l.getAttribute('href') !== '/part/switch' &&
+          l.getAttribute('href') !== '/parts',
+      )
     expect(resultLinks.length).toBeGreaterThan(0)
     for (const link of resultLinks) {
       expect(link.getAttribute('href')).toMatch(/^\/part\/switch\//)

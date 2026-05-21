@@ -122,6 +122,13 @@ export function SwitchQuiz({ switches }: Props) {
             >
               Browse all switches →
             </Link>
+            <Link
+              href="/parts"
+              data-testid="quiz-browse-all-parts-link"
+              className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text transition-colors"
+            >
+              Browse all parts →
+            </Link>
             <button
               type="button"
               onClick={handleReset}

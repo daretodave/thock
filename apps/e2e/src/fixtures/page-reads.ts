@@ -176,6 +176,14 @@ export const pageReads: Record<string, PageRead> = {
     pattern: '/sources',
     ...html([{ kind: 'h1-matches', pattern: /where we got the facts/i }]),
   },
+  '/parts': {
+    pattern: '/parts',
+    ...html([
+      // Phase 35: parts landing groups all three kinds; H1 is "Parts".
+      { kind: 'h1-matches', pattern: /^parts$/i },
+      { kind: 'min-link-count', selector: '[data-testid="parts-section-row"]', min: 3 },
+    ]),
+  },
   '/tags': {
     pattern: '/tags',
     ...html([

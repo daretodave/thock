@@ -1,5 +1,50 @@
 import { expect, test } from '@playwright/test'
 
+test.describe('/parts root browse landing — phase 35', () => {
+  test('renders eyebrow, H1, and three section rows', async ({ page }) => {
+    await page.goto('/parts')
+    await expect(page.getByTestId('parts-eyebrow')).toBeVisible()
+    await expect(page.getByTestId('parts-h1')).toHaveText(/^parts$/i)
+    const rows = page.locator('[data-testid="parts-section-row"]')
+    expect(await rows.count()).toBe(3)
+  })
+
+  test('each section row links to the correct kind-index', async ({ page }) => {
+    await page.goto('/parts')
+    const rows = page.locator('[data-testid="parts-section-row"]')
+    const hrefs = await rows.evaluateAll((els) =>
+      els.map((el) => el.getAttribute('href')),
+    )
+    expect(hrefs).toContain('/part/switch')
+    expect(hrefs).toContain('/part/keycap-set')
+    expect(hrefs).toContain('/part/board')
+  })
+
+  test('emits CollectionPage + BreadcrumbList + ItemList JSON-LD', async ({
+    page,
+  }) => {
+    await page.goto('/parts')
+    const scripts = await page
+      .locator('script[type="application/ld+json"]')
+      .allTextContents()
+    const flat = scripts.join('\n')
+    expect(flat).toContain('"@type":"CollectionPage"')
+    expect(flat).toContain('"@type":"BreadcrumbList"')
+    expect(flat).toContain('"@type":"ItemList"')
+  })
+
+  test('quiz results view carries a Browse all parts link', async ({ page }) => {
+    await page.goto('/quiz/switch')
+    for (let i = 0; i < 4; i++) {
+      await page.getByRole('button').first().click()
+    }
+    await expect(page.getByTestId('quiz-results')).toBeVisible()
+    const link = page.getByTestId('quiz-browse-all-parts-link')
+    await expect(link).toBeVisible()
+    await expect(link).toHaveAttribute('href', '/parts')
+  })
+})
+
 test.describe('per-part pages — phase 21', () => {
   test.describe('kind-index pages', () => {
     for (const kind of ['switch', 'keycap-set', 'board'] as const) {
