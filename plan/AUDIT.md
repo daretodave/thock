@@ -1320,3 +1320,14 @@ passes accumulate signals.)
 - root cause: text-text-4 (oklch(0.40 0.004 250)) at text-micro (12px) fails WCAG AA contrast in light mode. Phase 32's PageSectionKicker drain covered page.tsx files; loading.tsx files were out of scope.
 - issue: #163
 > **Resolved (2026-05-20):** Replaced inline span with PageSectionKicker (text-text-2) in all 13 loading.tsx files: home, article/[slug], deep-dives, group-buys, guides, ideas, news, trends, trends/tracker, trends/tracker/[week], tag/[slug], part/[kind], part/[kind]/[slug]. PageSectionKicker always renders text-text-2 (WCAG AA compliant); regression prevented by component contract. 611 e2e green. `9b57082`
+
+### [x] [content] [4.0] gmk-cyl-prussian-alert — 7 stale pre-opening phrases after May 15 buy open — addressed in 54096b4
+- category: content
+- filed: 2026-05-21 by cloud /iterate audit
+- impact: 5 (companion article published 2026-05-10, 5 days before the buy opened 2026-05-15; buy runs through 2026-06-12; readers arriving during the active window saw stale "is set to open", "will mirror", and "will land" language; pre-open uncertainty callout told readers to treat all details as unconfirmed even though the product page was already live)
+- ease: 8 (7 targeted phrase replacements + callout removal in gmk-cyl-prussian-alert.mdx; no new data records or components needed)
+- score: 4.0 (impact × ease / 10)
+- pages: /article/gmk-cyl-prussian-alert
+- elements: title, lede, body (lines 20, 22-24, 30, 34, 36 before edit)
+- issue: [mirror-failed: 2026-05-21T00:00:00Z]
+> **Resolved (2026-05-21):** Updated title/lede to reflect live-buy state ("opens at KBDfans on May 15" → "is live at KBDfans through June 12"). Converted 7 stale phrases: "is set to open" → "opened … and runs through 2026-06-12"; "will mirror onto the KBDfans product page when the buy opens" → "are on the KBDfans product page"; "The buy opens 2026-05-15" → "The buy opened 2026-05-15 and runs through 2026-06-12"; "The live entry will land on the /group-buys board when the product page goes up." → "The live entry is on the /group-buys board.". Removed pre-open uncertainty callout ("treat any number outside the GB date itself as unconfirmed until the product page goes live"). Set updatedAt to 2026-05-21. 611 e2e green. `54096b4`
