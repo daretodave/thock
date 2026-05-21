@@ -94,7 +94,7 @@
 
 ## Open findings
 
-### [ ] [a11y] [4.8] /quiz/switch missing from axe desktop a11y suite — interactive ARIA surface never hardened by Phase B gate
+### [x] [a11y] [4.8] /quiz/switch missing from axe desktop a11y suite — interactive ARIA surface never hardened by Phase B gate — addressed in 6868728, closes #170
 - category: a11y
 - filed: 2026-05-21 by cloud /iterate audit
 - impact: 6 (/quiz/switch is the most complex ARIA surface on the site: role="progressbar", role="group", aria-pressed on option buttons; ships in phase 33; absent from the Phase B axe gate that hardens 8 other canonical pages)
@@ -102,6 +102,7 @@
 - score: 4.8 (impact × ease / 10)
 - action: add test('switch quiz (/quiz/switch)', ...) to the desktop suite; update count comment to 9 pages
 - issue: #170
+> **Resolved (2026-05-21):** Added `runAxe(page, '/quiz/switch')` to the Phase B desktop a11y suite as the 9th test. Desktop suite now covers 9 canonical pages. Gate passes green — quiz ARIA (role="progressbar", role="group", aria-pressed) is well-formed; all text uses text-text-2 which is Phase B-verified contrast-compliant. 662 e2e green (+1). `6868728`
 
 ### [ ] [ci] [4.8] Lighthouse CI workflow audits the SSO-protected per-deployment URL — every run fails, the gate produces zero signal
 - category: ci
