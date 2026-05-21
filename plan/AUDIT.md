@@ -104,7 +104,7 @@
 - issue: #170
 > **Resolved (2026-05-21):** Added `runAxe(page, '/quiz/switch')` to the Phase B desktop a11y suite as the 9th test. Desktop suite now covers 9 canonical pages. Gate passes green — quiz ARIA (role="progressbar", role="group", aria-pressed) is well-formed; all text uses text-text-2 which is Phase B-verified contrast-compliant. 662 e2e green (+1). `6868728`
 
-### [ ] [seo] [5.6] /part/[kind] BreadcrumbList missing /parts intermediate node; detail page has /part (404 path)
+### [x] [seo] [5.6] /part/[kind] BreadcrumbList missing /parts intermediate node; detail page has /part (404 path) — addressed in 825d30b, closes #171
 - category: seo
 - filed: 2026-05-21 by cloud /iterate audit
 - impact: 7 (BreadcrumbList on all 3 kind-index pages omits the /parts landing — chain is Home → Switches instead of Home → Parts → Switches; detail page BreadcrumbList has { path: '/part' } which is a 404 URL, visible to search engines in JSON-LD rich results; phase 35 brief explicitly calls out the discovery triangle but the back-edge is broken — kind-index says ← home not ← all parts)
