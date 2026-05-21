@@ -1,0 +1,19 @@
+{
+  "slug": "gazzew-boba-lt",
+  "name": "Gazzew Boba LT",
+  "vendorSlug": "novelkeys",
+  "type": "silent-linear",
+  "housingTop": "nylon",
+  "housingBottom": "nylon",
+  "stem": "pom",
+  "springGrams": {
+    "actuation": 37,
+    "bottomOut": 45
+  },
+  "travelMm": 4.0,
+  "factoryLubed": true,
+  "releasedAt": "2021-04-01",
+  "status": "in-production",
+  "description": "Ultra-light silent linear using the same Boba dampening housing as the U4 but with a smooth stem and minimal spring. The 37g actuation is among the lightest of any silent linear; popular for gamers and typists who want near-silent keystrokes without tactile feedback. Pre-lubed on the rails and dampened top and bottom.",
+  "updatedAt": "2026-05-21T00:00:00.000Z"
+}

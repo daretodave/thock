@@ -1,0 +1,19 @@
+{
+  "slug": "c3-tangerine-r2",
+  "name": "C3 Equalz Tangerine R2",
+  "vendorSlug": "cannonkeys",
+  "type": "linear",
+  "housingTop": "pc",
+  "housingBottom": "nylon",
+  "stem": "pom",
+  "springGrams": {
+    "actuation": 67,
+    "bottomOut": 72
+  },
+  "travelMm": 4.0,
+  "factoryLubed": false,
+  "releasedAt": "2020-08-01",
+  "status": "in-production",
+  "description": "Dark-spring premium linear named for its orange colorway. The R2 revision improves stem-to-housing tolerances; the polycarbonate top and nylon bottom pairing gives a balanced muted sound profile — not as deep as an all-nylon housing but noticeably less poppy than all-PC. A benchmark pick in the mid-weight premium linear segment.",
+  "updatedAt": "2026-05-21T00:00:00.000Z"
+}

@@ -1,0 +1,15 @@
+{
+  "slug": "drop-ctrl",
+  "name": "Drop CTRL",
+  "vendorSlug": "drop",
+  "layout": "tkl",
+  "caseMaterial": "aluminum",
+  "mountStyle": "top-mount",
+  "hotswap": true,
+  "wireless": false,
+  "releasedAt": "2018-10-01",
+  "status": "in-stock",
+  "imageUrl": null,
+  "description": "Compact TKL in an aircraft-grade aluminum case with a top-mount PCB, hot-swap QMK/VIA support, and per-key RGB. Drop's flagship board since 2018; accessible price for a full-metal TKL with hotswap PCBs. The top-mount gives a firmer, more direct typing feel than the gasket boards in the same price range.",
+  "updatedAt": "2026-05-21T00:00:00.000Z"
+}

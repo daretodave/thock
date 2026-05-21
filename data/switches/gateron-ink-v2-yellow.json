@@ -1,0 +1,19 @@
+{
+  "slug": "gateron-ink-v2-yellow",
+  "name": "Gateron Ink V2 Yellow",
+  "vendorSlug": "kbdfans",
+  "type": "linear",
+  "housingTop": "pc",
+  "housingBottom": "pc",
+  "stem": "pom",
+  "springGrams": {
+    "actuation": 35,
+    "bottomOut": 45
+  },
+  "travelMm": 4.0,
+  "factoryLubed": true,
+  "releasedAt": "2021-05-01",
+  "status": "in-production",
+  "description": "Light premium linear in Gateron's semi-translucent deep-plum Ink housing. The V2 revision tightens tolerances on the stem post and adds factory lube; the light 35g spring makes it one of the smoothest and fastest-feeling linears at this price point. Popular for gaming builds and fast typists.",
+  "updatedAt": "2026-05-21T00:00:00.000Z"
+}

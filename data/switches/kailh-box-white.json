@@ -1,0 +1,19 @@
+{
+  "slug": "kailh-box-white",
+  "name": "Kailh Box White",
+  "vendorSlug": "novelkeys",
+  "type": "clicky",
+  "housingTop": "pc",
+  "housingBottom": "pc",
+  "stem": "pom",
+  "springGrams": {
+    "actuation": 45,
+    "bottomOut": 60
+  },
+  "travelMm": 3.6,
+  "factoryLubed": false,
+  "releasedAt": "2017-06-01",
+  "status": "in-production",
+  "description": "Budget clicky with a box-stem design that encloses the leaf spring inside the stem housing, preventing dust and debris ingress. Click bar at actuation gives a crisp tactile bump and audible click simultaneously; lighter spring makes it accessible for beginners and typists.",
+  "updatedAt": "2026-05-21T00:00:00.000Z"
+}

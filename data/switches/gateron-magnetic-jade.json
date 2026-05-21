@@ -1,0 +1,19 @@
+{
+  "slug": "gateron-magnetic-jade",
+  "name": "Gateron Magnetic Jade",
+  "vendorSlug": "kbdfans",
+  "type": "linear",
+  "housingTop": "pc",
+  "housingBottom": "nylon",
+  "stem": "mixed",
+  "springGrams": {
+    "actuation": 45,
+    "bottomOut": 55
+  },
+  "travelMm": 4.0,
+  "factoryLubed": true,
+  "releasedAt": "2022-09-01",
+  "status": "in-production",
+  "description": "Hall-effect magnetic linear using a rare-earth magnet in the stem rather than a physical leaf spring for actuation sensing. The linear travel is smooth and the actuation point can be adjusted digitally in supporting keyboards; the jade coloring mirrors the Box Jade but the mechanism is entirely distinct. Suited to rapid-fire gaming and endurance typing where metal-contact fatigue matters.",
+  "updatedAt": "2026-05-21T00:00:00.000Z"
+}

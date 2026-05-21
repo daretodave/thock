@@ -1,0 +1,19 @@
+{
+  "slug": "durock-t1",
+  "name": "Durock T1",
+  "vendorSlug": "cannonkeys",
+  "type": "tactile",
+  "housingTop": "nylon",
+  "housingBottom": "nylon",
+  "stem": "pom",
+  "springGrams": {
+    "actuation": 67,
+    "bottomOut": 70
+  },
+  "travelMm": 4.0,
+  "factoryLubed": false,
+  "releasedAt": "2020-03-01",
+  "status": "in-production",
+  "description": "Heavy premium tactile with a sharp, pronounced bump near the top of the stroke. The nylon housing keeps sound muted and deep; the stiff spring gives deliberate actuation feedback that builders often compare to the Topre experience at a fraction of the cost. Commonly paired with 205g0 lube on housing rails only — over-lubing kills the bump.",
+  "updatedAt": "2026-05-21T00:00:00.000Z"
+}

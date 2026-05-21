@@ -1,0 +1,15 @@
+{
+  "slug": "kbd75v3",
+  "name": "KBD75 v3",
+  "vendorSlug": "kbdfans",
+  "layout": "75",
+  "caseMaterial": "aluminum",
+  "mountStyle": "gasket",
+  "hotswap": true,
+  "wireless": false,
+  "releasedAt": "2022-04-01",
+  "status": "in-stock",
+  "imageUrl": null,
+  "description": "75-percent gasket-mounted aluminum board from KBDfans with a hotswap PCB and QMK/VIA support. The V3 revision switches from a top-mount to a gasket mount for a softer, more forgiving typing feel; one of the most-recommended 75% entry points for builders who want a function row without moving to a TKL.",
+  "updatedAt": "2026-05-21T00:00:00.000Z"
+}

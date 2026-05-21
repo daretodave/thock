@@ -20,6 +20,25 @@
       "updatedAt": "2026-05-09T20:00:00.000Z"
     },
     {
+      "slug": "c3-tangerine-r2",
+      "name": "C3 Equalz Tangerine R2",
+      "vendorSlug": "cannonkeys",
+      "type": "linear",
+      "housingTop": "pc",
+      "housingBottom": "nylon",
+      "stem": "pom",
+      "springGrams": {
+        "actuation": 67,
+        "bottomOut": 72
+      },
+      "travelMm": 4,
+      "factoryLubed": false,
+      "releasedAt": "2020-08-01",
+      "status": "in-production",
+      "description": "Dark-spring premium linear named for its orange colorway. The R2 revision improves stem-to-housing tolerances; the polycarbonate top and nylon bottom pairing gives a balanced muted sound profile — not as deep as an all-nylon housing but noticeably less poppy than all-PC. A benchmark pick in the mid-weight premium linear segment.",
+      "updatedAt": "2026-05-21T00:00:00.000Z"
+    },
+    {
       "slug": "cherry-mx2a-red",
       "name": "Cherry MX2A Red",
       "vendorSlug": "cannonkeys",
@@ -77,6 +96,63 @@
       "updatedAt": "2026-05-09T20:00:00.000Z"
     },
     {
+      "slug": "durock-t1",
+      "name": "Durock T1",
+      "vendorSlug": "cannonkeys",
+      "type": "tactile",
+      "housingTop": "nylon",
+      "housingBottom": "nylon",
+      "stem": "pom",
+      "springGrams": {
+        "actuation": 67,
+        "bottomOut": 70
+      },
+      "travelMm": 4,
+      "factoryLubed": false,
+      "releasedAt": "2020-03-01",
+      "status": "in-production",
+      "description": "Heavy premium tactile with a sharp, pronounced bump near the top of the stroke. The nylon housing keeps sound muted and deep; the stiff spring gives deliberate actuation feedback that builders often compare to the Topre experience at a fraction of the cost. Commonly paired with 205g0 lube on housing rails only — over-lubing kills the bump.",
+      "updatedAt": "2026-05-21T00:00:00.000Z"
+    },
+    {
+      "slug": "gateron-ink-v2-yellow",
+      "name": "Gateron Ink V2 Yellow",
+      "vendorSlug": "kbdfans",
+      "type": "linear",
+      "housingTop": "pc",
+      "housingBottom": "pc",
+      "stem": "pom",
+      "springGrams": {
+        "actuation": 35,
+        "bottomOut": 45
+      },
+      "travelMm": 4,
+      "factoryLubed": true,
+      "releasedAt": "2021-05-01",
+      "status": "in-production",
+      "description": "Light premium linear in Gateron's semi-translucent deep-plum Ink housing. The V2 revision tightens tolerances on the stem post and adds factory lube; the light 35g spring makes it one of the smoothest and fastest-feeling linears at this price point. Popular for gaming builds and fast typists.",
+      "updatedAt": "2026-05-21T00:00:00.000Z"
+    },
+    {
+      "slug": "gateron-magnetic-jade",
+      "name": "Gateron Magnetic Jade",
+      "vendorSlug": "kbdfans",
+      "type": "linear",
+      "housingTop": "pc",
+      "housingBottom": "nylon",
+      "stem": "mixed",
+      "springGrams": {
+        "actuation": 45,
+        "bottomOut": 55
+      },
+      "travelMm": 4,
+      "factoryLubed": true,
+      "releasedAt": "2022-09-01",
+      "status": "in-production",
+      "description": "Hall-effect magnetic linear using a rare-earth magnet in the stem rather than a physical leaf spring for actuation sensing. The linear travel is smooth and the actuation point can be adjusted digitally in supporting keyboards; the jade coloring mirrors the Box Jade but the mechanism is entirely distinct. Suited to rapid-fire gaming and endurance typing where metal-contact fatigue matters.",
+      "updatedAt": "2026-05-21T00:00:00.000Z"
+    },
+    {
       "slug": "gateron-oil-king",
       "name": "Gateron Oil King",
       "vendorSlug": "cannonkeys",
@@ -115,6 +191,44 @@
       "updatedAt": "2026-05-09T20:00:00.000Z"
     },
     {
+      "slug": "gazzew-boba-lt",
+      "name": "Gazzew Boba LT",
+      "vendorSlug": "novelkeys",
+      "type": "silent-linear",
+      "housingTop": "nylon",
+      "housingBottom": "nylon",
+      "stem": "pom",
+      "springGrams": {
+        "actuation": 37,
+        "bottomOut": 45
+      },
+      "travelMm": 4,
+      "factoryLubed": true,
+      "releasedAt": "2021-04-01",
+      "status": "in-production",
+      "description": "Ultra-light silent linear using the same Boba dampening housing as the U4 but with a smooth stem and minimal spring. The 37g actuation is among the lightest of any silent linear; popular for gamers and typists who want near-silent keystrokes without tactile feedback. Pre-lubed on the rails and dampened top and bottom.",
+      "updatedAt": "2026-05-21T00:00:00.000Z"
+    },
+    {
+      "slug": "gazzew-boba-u4",
+      "name": "Gazzew Boba U4",
+      "vendorSlug": "novelkeys",
+      "type": "silent-tactile",
+      "housingTop": "nylon",
+      "housingBottom": "nylon",
+      "stem": "pom",
+      "springGrams": {
+        "actuation": 62,
+        "bottomOut": 68
+      },
+      "travelMm": 4,
+      "factoryLubed": true,
+      "releasedAt": "2020-06-01",
+      "status": "in-production",
+      "description": "Silent tactile with a round, pronounced bump at the top of the stroke and foam dampeners on both upstroke and downstroke. The nylon housing produces a muted thud rather than a clack; popular in office environments. Comes pre-lubed on the rails; builders often rattle-mod the spring for a cleaner sound.",
+      "updatedAt": "2026-05-21T00:00:00.000Z"
+    },
+    {
       "slug": "hmx-cloud",
       "name": "HMX Cloud Linear",
       "vendorSlug": "cannonkeys",
@@ -132,6 +246,44 @@
       "status": "in-production",
       "description": "Light linear with an LY stem in PA12 top and PA2.0 bottom housings. Voiced as a clacky, high-pitched poppy linear; popular as a budget pick for builders chasing a clean top-out without a deep thock.",
       "updatedAt": "2026-05-09T20:00:00.000Z"
+    },
+    {
+      "slug": "kailh-box-jade",
+      "name": "Kailh Box Jade",
+      "vendorSlug": "novelkeys",
+      "type": "clicky",
+      "housingTop": "pc",
+      "housingBottom": "pc",
+      "stem": "pom",
+      "springGrams": {
+        "actuation": 50,
+        "bottomOut": 70
+      },
+      "travelMm": 3.6,
+      "factoryLubed": false,
+      "releasedAt": "2018-03-01",
+      "status": "in-production",
+      "description": "Heavier box clicky with a thicker click bar than the Box White, producing a louder, crisper snap and higher actuation force. The box stem protects the leaf spring from contamination; Jade's stiffer bar gives builders a louder, more deliberate click character without sacrificing the Box line's IP56-rated housing.",
+      "updatedAt": "2026-05-21T00:00:00.000Z"
+    },
+    {
+      "slug": "kailh-box-white",
+      "name": "Kailh Box White",
+      "vendorSlug": "novelkeys",
+      "type": "clicky",
+      "housingTop": "pc",
+      "housingBottom": "pc",
+      "stem": "pom",
+      "springGrams": {
+        "actuation": 45,
+        "bottomOut": 60
+      },
+      "travelMm": 3.6,
+      "factoryLubed": false,
+      "releasedAt": "2017-06-01",
+      "status": "in-production",
+      "description": "Budget clicky with a box-stem design that encloses the leaf spring inside the stem housing, preventing dust and debris ingress. Click bar at actuation gives a crisp tactile bump and audible click simultaneously; lighter spring makes it accessible for beginners and typists.",
+      "updatedAt": "2026-05-21T00:00:00.000Z"
     },
     {
       "slug": "tecsee-sapphire-v2",
@@ -155,6 +307,20 @@
   ],
   "keycapSets": [
     {
+      "slug": "domikey-wob",
+      "name": "Domikey WOB",
+      "vendorSlug": "kbdfans",
+      "profile": "cherry",
+      "material": "pbt",
+      "legendType": "doubleshot",
+      "designer": null,
+      "releasedAt": "2020-01-01",
+      "status": "in-stock",
+      "imageUrl": null,
+      "description": "Evergreen white-on-black Cherry-profile PBT doubleshot set from Domikey. Praised for tight legend registration and minimal shine over extended use — the PBT material resists the greasy sheen that plagues ABS sets. A benchmark utility set for builders who want a clean, functional look without the group-buy wait or aftermarket premium.",
+      "updatedAt": "2026-05-21T00:00:00.000Z"
+    },
+    {
       "slug": "gmk-bento-r2",
       "name": "GMK Bentō R2",
       "vendorSlug": "cannonkeys",
@@ -167,6 +333,20 @@
       "imageUrl": null,
       "description": "Cherry-profile doubleshot ABS set in white and dark blue with pink accents, designed by biip and inspired by Japanese bento boxes. R1 ran in 2019; R2 is the round most owners actually have, and the set that anchored biip's design reputation.",
       "updatedAt": "2026-05-09T20:00:00.000Z"
+    },
+    {
+      "slug": "gmk-laser",
+      "name": "GMK Laser",
+      "vendorSlug": "drop",
+      "profile": "cherry",
+      "material": "abs",
+      "legendType": "doubleshot",
+      "designer": "LASER",
+      "releasedAt": "2018-11-01",
+      "status": "discontinued",
+      "imageUrl": null,
+      "description": "Synthwave-inspired GMK Cherry set in a deep-purple base with vibrant pink and teal legends. Designed by u/LASER and produced by GMK through Drop; the R1 colorway defined the retro-futurist aesthetic trend in custom keycaps and spawned a wave of synthwave-adjacent sets. Highly sought after on the aftermarket.",
+      "updatedAt": "2026-05-21T00:00:00.000Z"
     },
     {
       "slug": "gmk-olivia",
@@ -223,6 +403,20 @@
       "imageUrl": null,
       "description": "Matt3o's original MT3 set: doubleshot ABS in cream and charcoal, modeled on IBM beamspring caps. The set that defined the MT3 profile and remains the reference build for tall, sculpted typing.",
       "updatedAt": "2026-05-09T20:00:00.000Z"
+    },
+    {
+      "slug": "sa-godspeed",
+      "name": "SA Godspeed",
+      "vendorSlug": "drop",
+      "profile": "sa",
+      "material": "abs",
+      "legendType": "doubleshot",
+      "designer": "nickhimself",
+      "releasedAt": "2020-07-01",
+      "status": "discontinued",
+      "imageUrl": null,
+      "description": "High-profile SA set in a steel-blue and cream colorway with a space-exploration theme. Designed by u/nickhimself and produced by Signature Plastics through Drop; the sculpted SA profile creates a dramatic stepped appearance and a distinct high-pitched typing sound compared to Cherry-profile sets. A gateway set for enthusiasts exploring tall-profile keycaps.",
+      "updatedAt": "2026-05-21T00:00:00.000Z"
     }
   ],
   "boards": [
@@ -255,6 +449,51 @@
       "imageUrl": null,
       "description": "Retro-styled CNC aluminum TKL from MM Studio with thick bezels, a 3.5 kg unbuilt weight, and a choice of top mount, PCB gasket mount with plate, or plateless PCB gasket. R1 sold out; R2 succeeded it.",
       "updatedAt": "2026-05-09T20:00:00.000Z"
+    },
+    {
+      "slug": "drop-ctrl",
+      "name": "Drop CTRL",
+      "vendorSlug": "drop",
+      "layout": "tkl",
+      "caseMaterial": "aluminum",
+      "mountStyle": "top-mount",
+      "hotswap": true,
+      "wireless": false,
+      "releasedAt": "2018-10-01",
+      "status": "in-stock",
+      "imageUrl": null,
+      "description": "Compact TKL in an aircraft-grade aluminum case with a top-mount PCB, hot-swap QMK/VIA support, and per-key RGB. Drop's flagship board since 2018; accessible price for a full-metal TKL with hotswap PCBs. The top-mount gives a firmer, more direct typing feel than the gasket boards in the same price range.",
+      "updatedAt": "2026-05-21T00:00:00.000Z"
+    },
+    {
+      "slug": "ikki68-aurora",
+      "name": "Ikki68 Aurora",
+      "vendorSlug": "wuque-studio",
+      "layout": "65",
+      "caseMaterial": "polycarbonate",
+      "mountStyle": "gasket",
+      "hotswap": true,
+      "wireless": false,
+      "releasedAt": "2021-09-01",
+      "status": "in-stock",
+      "imageUrl": null,
+      "description": "Polycarbonate 65-percent gasket board from Wuque Studio with a frosted translucent case that diffuses per-key RGB into a soft glow effect. The PC case and gasket mount combine to produce a softer, bouncier typing feel than aluminum boards in the same bracket. An accessible entry into polycarbonate builds for hobbyists who want RGB without a heavy metal chassis.",
+      "updatedAt": "2026-05-21T00:00:00.000Z"
+    },
+    {
+      "slug": "kbd75v3",
+      "name": "KBD75 v3",
+      "vendorSlug": "kbdfans",
+      "layout": "75",
+      "caseMaterial": "aluminum",
+      "mountStyle": "gasket",
+      "hotswap": true,
+      "wireless": false,
+      "releasedAt": "2022-04-01",
+      "status": "in-stock",
+      "imageUrl": null,
+      "description": "75-percent gasket-mounted aluminum board from KBDfans with a hotswap PCB and QMK/VIA support. The V3 revision switches from a top-mount to a gasket mount for a softer, more forgiving typing feel; one of the most-recommended 75% entry points for builders who want a function row without moving to a TKL.",
+      "updatedAt": "2026-05-21T00:00:00.000Z"
     },
     {
       "slug": "mammoth75",
@@ -1570,8 +1809,8 @@
       "slug": "gmk-cyl-prussian-alert",
       "frontmatter": {
         "slug": "gmk-cyl-prussian-alert",
-        "title": "GMK CYL Prussian Alert opens at KBDfans on May 15",
-        "lede": "GMK CYL Prussian Alert lands at KBDfans on 2026-05-15 with a Bauhaus-leaning red-on-cream palette. The IC has been the loudest GMK CYL thread on GeekHack heading into the buy.",
+        "title": "GMK CYL Prussian Alert is live at KBDfans through June 12",
+        "lede": "GMK CYL Prussian Alert opened at KBDfans on 2026-05-15 with a Bauhaus-leaning red-on-cream palette. The buy runs through 2026-06-12 — the IC was the loudest GMK CYL thread on GeekHack before the open, and the order window is now live.",
         "author": "thock",
         "pillar": "news",
         "tags": [
@@ -1582,7 +1821,7 @@
           "cherry-profile"
         ],
         "publishedAt": "2026-05-10T18:00:00.000Z",
-        "updatedAt": null,
+        "updatedAt": "2026-05-21T00:00:00.000Z",
         "heroImage": "/hero-art/gmk-cyl-prussian-alert.svg",
         "heroImageAlt": "Top-down cluster of six GMK CYL keycaps laid out as if just tipped from a kit — two staggered rows with a 1.25u modifier and a stray 1u accent cap — with the centered back-row cap painted deep Prussian red as the focal alert piece.",
         "featured": false,
@@ -1596,8 +1835,8 @@
           }
         ]
       },
-      "body": "\nGMK CYL Prussian Alert is set to open at KBDfans on 2026-05-15. The set has been on our trends radar for weeks: the GeekHack interest-check thread cleared 121k views and 141 replies before a single base kit went up for order, putting it ahead of where Metro System and Selene were sitting at the equivalent point in their pre-GB curves.\n\n<Callout type=\"note\" title=\"What's confirmed, what isn't\">\n  KBDfans has named the set and the 2026-05-15 GB-open date. Final base-kit pricing, regional proxies, and lead time were not published as of this writing. Treat any number outside the GB date itself as unconfirmed until the product page goes live.\n</Callout>\n\n## What's in the run\n\nPrussian Alert is a <Mono>GMK CYL</Mono> doubleshot ABS set in Cherry profile — the cylindrical sub-line GMK has been running for the last two years on selected sets. The headline palette is a deep Prussian red against an unbleached cream alpha, with a single ochre modifier accent. It reads closer to the warm-Bauhaus end of the GMK catalog than to the saturated dye-sub work showing up in DCS and KAT this year.\n\nDesigner credits and the kit list (base, modifier kits, novelties, deskmat) sit on the GeekHack IC and will mirror onto the KBDfans product page when the buy opens. The set is GMK-manufactured, so the usual GMK lead times apply — long, but predictable.\n\n## Timing\n\nThe buy opens 2026-05-15 at KBDfans as the global host. KBDfans has been the primary vendor on the IC since January, which is unusual for a GMK CYL set of this profile — Oblotzky and Cannonkeys have historically shared the slot — and worth noting if you typically buy through a regional proxy in the EU or APAC. As of publication, no proxy partners are listed.\n\nIf KBDfans's recent <Source href=\"https://kbdfans.com/products/gmk-cyl-king-of-the-seas\">GMK CYL King of the Seas</Source> cadence holds, expect a 4-to-6-week order window after the open date. The live entry will land on the [/group-buys](/group-buys) board when the product page goes up.\n\n<InlineViz\n  src=\"/article-viz/gmk-cyl-prussian-alert/ic-momentum.svg\"\n  alt=\"Three Prussian-red stat blocks — 121k views and 141 replies on GeekHack IC, +38 direction up on the W19 trends tracker, and May 15 2026 open at KBDfans — with a footer line on the red-on-cream Bauhaus palette.\"\n  caption=\"Pre-open momentum, in three numbers.\"\n  accent=\"oklch(0.50 0.18 25)\"\n/>\n\n## Why this is on the radar\n\nThe trends signal is concrete. Prussian Alert sits on this week's [/trends/tracker](/trends/tracker) board at +38, direction up, on the strength of the IC traffic heading into the GB. That is a position normally held by the breakout switch of the moment, not by an unreleased keycap set.\n\nThe palette is the second reason. The red-on-cream colorway is doing what GMK CYL Olivetti did in earlier runs — leaning on a small, specific design vocabulary rather than a kit-everything modifier sprawl. Prussian Alert's IC renders pair the alphas with a tight Cyrillic + Hangul + 40s sub-kit and very little else. Compared to GMK community staples like <PartReference id=\"bento\" /> R2, which earned its reputation on a similarly tight palette story, the editorial discipline shows in how few accent colors GMK sampled before locking the run.\n\n<InlineViz\n  src=\"/article-viz/gmk-cyl-prussian-alert/watch-points.svg\"\n  alt=\"Three Prussian-red watch cards naming the close-week signals — single SKU vs. split fulfillment, modifier-kit count, deskmat and novelty handling — each with what the signal means.\"\n  caption=\"What the close numbers will tell us.\"\n  accent=\"oklch(0.50 0.18 25)\"\n/>\n\n## What we're watching\n\nThree things will tell us where Prussian Alert lands when the dust settles. First: whether KBDfans posts a single global SKU or splits regional fulfillment — a single SKU usually means tighter allocation and an earlier close. Second: the modifier-kit count. CYL sets that ship with three or fewer kits tend to keep their pricing tight; sprawl correlates with deeper discounts at restock. Third: whether the deskmat and novelty kits run as add-ons to the base, or get held back as a future add-on round.\n\nOn reception: the IC numbers say the demand exists. The question is whether GMK CYL as a profile sustains a second strong year, or whether enthusiast attention rotates back to non-Cherry profiles (DCS Olivetti's recent close already hints in that direction). We will revisit when the GB closes and the order numbers settle.\n",
-      "readTime": 4,
+      "body": "\nGMK CYL Prussian Alert opened at KBDfans on 2026-05-15 and runs through 2026-06-12. The set has been on our trends radar for weeks: the GeekHack interest-check thread cleared 121k views and 141 replies before a single base kit went up for order, putting it ahead of where Metro System and Selene were sitting at the equivalent point in their pre-GB curves.\n\n## What's in the run\n\nPrussian Alert is a <Mono>GMK CYL</Mono> doubleshot ABS set in Cherry profile — the cylindrical sub-line GMK has been running for the last two years on selected sets. The headline palette is a deep Prussian red against an unbleached cream alpha, with a single ochre modifier accent. It reads closer to the warm-Bauhaus end of the GMK catalog than to the saturated dye-sub work showing up in DCS and KAT this year.\n\nDesigner credits and the kit list (base, modifier kits, novelties, deskmat) are on the KBDfans product page. The set is GMK-manufactured, so the usual GMK lead times apply — long, but predictable.\n\n## Timing\n\nThe buy opened 2026-05-15 at KBDfans as the global host and runs through 2026-06-12. KBDfans has been the primary vendor on the IC since January, which is unusual for a GMK CYL set of this profile — Oblotzky and Cannonkeys have historically shared the slot — and worth noting if you typically buy through a regional proxy in the EU or APAC. As of publication, no proxy partners are listed.\n\nIf KBDfans's recent <Source href=\"https://kbdfans.com/products/gmk-cyl-king-of-the-seas\">GMK CYL King of the Seas</Source> cadence holds, expect a 4-to-6-week order window after the open date. The live entry is on the [/group-buys](/group-buys) board.\n\n<InlineViz\n  src=\"/article-viz/gmk-cyl-prussian-alert/ic-momentum.svg\"\n  alt=\"Three Prussian-red stat blocks — 121k views and 141 replies on GeekHack IC, +38 direction up on the W19 trends tracker, and May 15 2026 open at KBDfans — with a footer line on the red-on-cream Bauhaus palette.\"\n  caption=\"Pre-open momentum, in three numbers.\"\n  accent=\"oklch(0.50 0.18 25)\"\n/>\n\n## Why this is on the radar\n\nThe trends signal is concrete. Prussian Alert sits on this week's [/trends/tracker](/trends/tracker) board at +38, direction up, on the strength of the IC traffic heading into the GB. That is a position normally held by the breakout switch of the moment, not by an unreleased keycap set.\n\nThe palette is the second reason. The red-on-cream colorway is doing what GMK CYL Olivetti did in earlier runs — leaning on a small, specific design vocabulary rather than a kit-everything modifier sprawl. Prussian Alert's IC renders pair the alphas with a tight Cyrillic + Hangul + 40s sub-kit and very little else. Compared to GMK community staples like <PartReference id=\"bento\" /> R2, which earned its reputation on a similarly tight palette story, the editorial discipline shows in how few accent colors GMK sampled before locking the run.\n\n<InlineViz\n  src=\"/article-viz/gmk-cyl-prussian-alert/watch-points.svg\"\n  alt=\"Three Prussian-red watch cards naming the close-week signals — single SKU vs. split fulfillment, modifier-kit count, deskmat and novelty handling — each with what the signal means.\"\n  caption=\"What the close numbers will tell us.\"\n  accent=\"oklch(0.50 0.18 25)\"\n/>\n\n## What we're watching\n\nThree things will tell us where Prussian Alert lands when the dust settles. First: whether KBDfans posts a single global SKU or splits regional fulfillment — a single SKU usually means tighter allocation and an earlier close. Second: the modifier-kit count. CYL sets that ship with three or fewer kits tend to keep their pricing tight; sprawl correlates with deeper discounts at restock. Third: whether the deskmat and novelty kits run as add-ons to the base, or get held back as a future add-on round.\n\nOn reception: the IC numbers say the demand exists. The question is whether GMK CYL as a profile sustains a second strong year, or whether enthusiast attention rotates back to non-Cherry profiles (DCS Olivetti's recent close already hints in that direction). We will revisit when the GB closes and the order numbers settle.\n",
+      "readTime": 3,
       "filePath": "/home/runner/work/thock/thock/apps/web/src/content/articles/gmk-cyl-prussian-alert.mdx"
     },
     {
@@ -1851,7 +2090,7 @@
           }
         ]
       },
-      "body": "\n<Callout type=\"info\" title=\"Update — 2026-05-09\">\n  CannonKeys has shifted the R2 opening window. The buy is now **announced for 2026-06-01 through 2026-07-15** rather than the originally-published 2026-05-01 through 2026-06-15 dates referenced below. See the live entry on [/group-buys](/group-buys) for the current window. The body of this article is preserved as the published 2026-05-06 record of what was announced at the time.\n</Callout>\n\nThe second round of Mode's 65% board, the <PartReference id=\"sonnet\" />, is now live for order at CannonKeys. The group buy opened on 2026-05-01 and is scheduled to close 2026-06-15. CannonKeys is handling the global region directly, so there is no separate proxy for buyers in the US, EU, UK, or APAC.\n\nThe board returns with the same gasket-mount internals and aluminum case as the first round. The headline change in R2 is the accent-weight palette, not the chassis.\n\n<Callout type=\"info\" title=\"Group-buy timing\">\n  Round opens 2026-05-01 and closes 2026-06-15. Group-buy windows can shift, so check the vendor page before the final week if you are still on the fence.\n</Callout>\n\n<InlineViz\n  src=\"/article-viz/mode-sonnet-r2-group-buy-coverage/weight-finishes.svg\"\n  alt=\"Three weight finish cards — polished and black PVD as returning R1 options, and bronze PVD as the new R2 option (bronze-emphasized) paired with silver and graphite case colorways.\"\n  caption=\"The accent-weight is the headline change.\"\n  accent=\"bronze\"\n/>\n\n## What's new in R2\n\nR2 keeps the original case profile and weight footprint but introduces a refreshed set of accent-weight color options. The vendor listing for <Mono>MODE Sonnet R2</Mono> shows the brass weight available in three finishes: polished, black PVD, and a new bronze PVD that was not offered in R1. The bronze finish is paired in product photography with the silver and graphite case colorways.\n\nMode has not changed the typing-angle, plate options, or the default polycarbonate plate inclusion. R1 buyers who want only the new weight finish should check the standalone accessory listing on the same page rather than re-ordering the full kit.\n\nLead time is listed as approximately Q4 2026, in line with R1 cadence. <Source href=\"https://cannonkeys.com/products/mode-sonnet-r2\">CannonKeys product page</Source> has the full configurator, including plate, weight, and PCB selection.\n\n<InlineViz\n  src=\"/article-viz/mode-sonnet-r2-group-buy-coverage/timeline-shift.svg\"\n  alt=\"Two stacked windows showing the R2 timeline shift — faded dashed bar for the originally-announced window struck through, and a bronze-filled solid bar for the revised 2026-06-01 to 2026-07-15 window.\"\n  caption=\"One month later — and soft on the close.\"\n  accent=\"bronze\"\n/>\n\n## The Sonnet, briefly\n\nFor buyers who passed on R1 or are arriving at <Mono>Mode Sonnet</Mono> for the first time: the chassis is a 65% aluminum case with a 9-degree typing angle and a gasket-mount suspension. The default plate in every kit is polycarbonate. Mode also offers a brass plate and an FR4 plate as paid upgrades at checkout, both of which ship as separate configurations on the CannonKeys product page.\n\nThe acoustic character of the default build leans soft. Gasket suspension plus a PC plate means flex is built in at both layers — the result is a board that absorbs keystroke energy rather than bouncing it back. That makes for a cushioned, medium-thocky sound profile on most switches, and a relatively forgiving typing feel even with stiffer linears. Buyers who prefer a tighter, higher-pitched response should budget for the brass plate option at checkout; brass stiffens the flex stack considerably and shifts the pitch up.\n\nThe tradeoff is worth naming clearly: the PC plate is not a compromise for a budget build — it is a deliberate choice that the gasket mount rewards. But it is a different feel from what you get on a brass- or aluminum-plate board, and if your reference point is a top-mount or tray-mount board you have been using for years, the first session will feel noticeably different. That difference is the point.\n\n<Callout type=\"note\">\n  The 9-degree angle is conservative for a 65%. It positions well for most typists who do not use a wrist rest, and is low enough that a thin rest does not fight the hand. Typists who prefer steeper angles should check their existing wrist height before ordering — the Sonnet does not have adjustable feet.\n</Callout>\n\n## Buying notes\n\nThe R2 group buy is global through CannonKeys, with one checkout flow and one fulfillment timeline. There is no announced regional proxy in the EU or APAC for this round, so duty and shipping at delivery time will follow CannonKeys's standard outbound policy.\n\nA note on links: group-buy URLs published on thock are auto-flagged with `rel=\"sponsored noopener\"` at render time. That tag is applied by the site, not the editorial team, and applies whether or not thock has any commercial relationship with the vendor in question. In this case, thock has no affiliate arrangement with CannonKeys for the Sonnet R2.\n\nBuyers who missed R1 should treat the closing date as soft. Mode and CannonKeys have, in past rounds, extended deadlines by a week or two when configurator inventory allowed; they have also closed early when allocation filled. The safest read of 2026-06-15 is \"do not assume an extension.\"\n\nWhat to watch next: Mode typically follows a flagship round with a smaller accessory drop two to three months later. If the bronze PVD weight sells through quickly, expect a standalone weight restock before the boards themselves ship.\n",
+      "body": "\n<Callout type=\"info\" title=\"Update — 2026-05-09\">\n  CannonKeys has shifted the R2 opening window. The buy is now **announced for 2026-06-01 through 2026-07-15** rather than the originally-published 2026-05-01 through 2026-06-15 dates referenced below. The body of this article is preserved as the published 2026-05-06 record of what was announced at the time.\n</Callout>\n\nThe second round of Mode's 65% board, the <PartReference id=\"sonnet\" />, is now live for order at CannonKeys. The group buy opened on 2026-05-01 and is scheduled to close 2026-06-15. CannonKeys is handling the global region directly, so there is no separate proxy for buyers in the US, EU, UK, or APAC.\n\nThe board returns with the same gasket-mount internals and aluminum case as the first round. The headline change in R2 is the accent-weight palette, not the chassis.\n\n<Callout type=\"info\" title=\"Group-buy timing\">\n  Round opens 2026-05-01 and closes 2026-06-15. Group-buy windows can shift, so check the vendor page before the final week if you are still on the fence.\n</Callout>\n\n<InlineViz\n  src=\"/article-viz/mode-sonnet-r2-group-buy-coverage/weight-finishes.svg\"\n  alt=\"Three weight finish cards — polished and black PVD as returning R1 options, and bronze PVD as the new R2 option (bronze-emphasized) paired with silver and graphite case colorways.\"\n  caption=\"The accent-weight is the headline change.\"\n  accent=\"bronze\"\n/>\n\n## What's new in R2\n\nR2 keeps the original case profile and weight footprint but introduces a refreshed set of accent-weight color options. The vendor listing for <Mono>MODE Sonnet R2</Mono> shows the brass weight available in three finishes: polished, black PVD, and a new bronze PVD that was not offered in R1. The bronze finish is paired in product photography with the silver and graphite case colorways.\n\nMode has not changed the typing-angle, plate options, or the default polycarbonate plate inclusion. R1 buyers who want only the new weight finish should check the standalone accessory listing on the same page rather than re-ordering the full kit.\n\nLead time is listed as approximately Q4 2026, in line with R1 cadence. <Source href=\"https://cannonkeys.com/products/mode-sonnet-r2\">CannonKeys product page</Source> has the full configurator, including plate, weight, and PCB selection.\n\n<InlineViz\n  src=\"/article-viz/mode-sonnet-r2-group-buy-coverage/timeline-shift.svg\"\n  alt=\"Two stacked windows showing the R2 timeline shift — faded dashed bar for the originally-announced window struck through, and a bronze-filled solid bar for the revised 2026-06-01 to 2026-07-15 window.\"\n  caption=\"One month later — and soft on the close.\"\n  accent=\"bronze\"\n/>\n\n## The Sonnet, briefly\n\nFor buyers who passed on R1 or are arriving at <Mono>Mode Sonnet</Mono> for the first time: the chassis is a 65% aluminum case with a 9-degree typing angle and a gasket-mount suspension. The default plate in every kit is polycarbonate. Mode also offers a brass plate and an FR4 plate as paid upgrades at checkout, both of which ship as separate configurations on the CannonKeys product page.\n\nThe acoustic character of the default build leans soft. Gasket suspension plus a PC plate means flex is built in at both layers — the result is a board that absorbs keystroke energy rather than bouncing it back. That makes for a cushioned, medium-thocky sound profile on most switches, and a relatively forgiving typing feel even with stiffer linears. Buyers who prefer a tighter, higher-pitched response should budget for the brass plate option at checkout; brass stiffens the flex stack considerably and shifts the pitch up.\n\nThe tradeoff is worth naming clearly: the PC plate is not a compromise for a budget build — it is a deliberate choice that the gasket mount rewards. But it is a different feel from what you get on a brass- or aluminum-plate board, and if your reference point is a top-mount or tray-mount board you have been using for years, the first session will feel noticeably different. That difference is the point.\n\n<Callout type=\"note\">\n  The 9-degree angle is conservative for a 65%. It positions well for most typists who do not use a wrist rest, and is low enough that a thin rest does not fight the hand. Typists who prefer steeper angles should check their existing wrist height before ordering — the Sonnet does not have adjustable feet.\n</Callout>\n\n## Buying notes\n\nThe R2 group buy is global through CannonKeys, with one checkout flow and one fulfillment timeline. There is no announced regional proxy in the EU or APAC for this round, so duty and shipping at delivery time will follow CannonKeys's standard outbound policy.\n\nA note on links: group-buy URLs published on thock are auto-flagged with `rel=\"sponsored noopener\"` at render time. That tag is applied by the site, not the editorial team, and applies whether or not thock has any commercial relationship with the vendor in question. In this case, thock has no affiliate arrangement with CannonKeys for the Sonnet R2.\n\nBuyers who missed R1 should treat the closing date as soft. Mode and CannonKeys have, in past rounds, extended deadlines by a week or two when configurator inventory allowed; they have also closed early when allocation filled. The safest read of 2026-06-15 is \"do not assume an extension.\"\n\nWhat to watch next: Mode typically follows a flagship round with a smaller accessory drop two to three months later. If the bronze PVD weight sells through quickly, expect a standalone weight restock before the boards themselves ship.\n",
       "readTime": 4,
       "filePath": "/home/runner/work/thock/thock/apps/web/src/content/articles/mode-sonnet-r2-group-buy-coverage.mdx"
     },
@@ -2227,7 +2466,7 @@
           "abs"
         ],
         "publishedAt": "2026-04-28T14:00:00.000Z",
-        "updatedAt": null,
+        "updatedAt": "2026-05-21T00:00:00.000Z",
         "heroImage": "/hero-art/gmk-cyl-king-of-the-seas-group-buy.svg",
         "heroImageAlt": "Top-down silhouette of a keycap set on a board rendered in a 2px warm-grey stroke on a 1200x750 transparent canvas, with a single coral accent picked across an alpha cluster to stand in for one colorway of a two-palette set, and a thin warm-bronze highlight tracing the case edge.",
         "featured": false,
@@ -2235,7 +2474,7 @@
         "guideSection": null,
         "mentionedParts": []
       },
-      "body": "\nGMK CYL King of the Seas is live at KBDfans. MiKeyDigit's set opened on 2026-04-28 and runs through 2026-05-31 — a five-week window for a <Mono>doubleshot ABS</Mono> set in the <Mono>CYL</Mono> cylindrical sub-line GMK has been running on selected sets for the last two years. The headline editorially is not the profile, the manufacturer, or the vendor cadence — all of which have a paper trail at this point. It is the colorway selector. The buy ships two palettes at once: <Mono>The Sovereign</Mono>, deep ocean blues, and <Mono>The Mutation</Mono>, electric pink. Same base set, two opposed accents, single configurator.\n\n<InlineViz\n  src=\"/article-viz/gmk-cyl-king-of-the-seas-group-buy/two-palettes.svg\"\n  alt=\"Two facing card panels — The Sovereign in deep ocean blue (moody, desk-as-furniture) and The Mutation in electric pink (electric, desk-as-instrument), each with a row of mini key tiles in palette, joined by a central 'or' chip.\"\n  caption=\"One set, two opposed accents.\"\n  accent=\"oklch(0.68 0.20 0)\"\n/>\n\n## Two colorways, one buy\n\nMost GMK CYL runs ship a single accent palette. A designer picks a direction, the IC threads converge on that direction, the buy opens with one base kit and a small modifier-kit slate. If a second palette appears, it usually appears later — a second round, a vendor-driven reissue, a different designer reusing the legend layout under a new name. The two-palette concurrent buy is the less-common pattern, and the economics behind why it is less common are not subtle. Two palettes mean two minimum-order quantities to clear, two photoshoots, two configurator paths, and two streams of buyer indecision over which kit to commit to.\n\nKing of the Seas is taking the opposite bet. The Sovereign and The Mutation are both available for the duration of the window, and buyers choose at checkout rather than at IC. The mood split is wide on purpose — one moody, one electric — which reads as a deliberate read of an audience that has fractured along exactly that axis over the last year. The desk-as-instrument crowd has been pulling toward saturated synthetic palettes; the desk-as-furniture crowd has been pulling toward muted naturalistic ones. Designers who try to hit the midpoint tend to land in a third place that satisfies neither. MiKeyDigit's answer is to skip the midpoint and ship both ends.\n\n<Callout type=\"note\" title=\"The two-palette math, briefly\">\n  A concurrent dual-colorway GMK CYL buy is doing something MOQ-economics usually resists. Each palette has to clear its own GMK minimum independently — they are separate tooling runs at the manufacturer, not a colorway toggle on a single SKU. The five-week window plus a global single-vendor host is the structural answer to that constraint: pool the audience for both palettes inside one buying window, one checkout, one fulfillment timeline, and let buyer preference do the allocation. If both clear, the model scales. If only one clears, the run becomes a case study in why most CYL designers ship a single palette.\n</Callout>\n\n## The CYL ecosystem keeps consolidating at KBDfans\n\nKing of the Seas is the third GMK CYL News piece on thock inside the current corpus, and all three have run through KBDfans. [GMK CYL GREG R2](/article/gmk-cyl-greg-2-group-buy) opened at the start of May, [GMK CYL Prussian Alert](/article/gmk-cyl-prussian-alert) is set to open mid-month, and King of the Seas is the one already live. The CYL sub-line is consolidating at a single vendor at a tempo that the larger GMK Cherry-profile catalog is not. Where Oblotzky and Cannonkeys used to share the GMK CYL slot, KBDfans is now hosting the bulk of the open runs with a single configurator, a single checkout, and a single fulfillment SKU per buy.\n\nThat consolidation matters for King of the Seas specifically because the dual-palette mechanic depends on it. A two-vendor split would have forced a choice between regional proxies for each palette and would have fragmented the order book in a way that made the MOQ math harder, not easier. The single-vendor KBDfans host keeps both palettes inside one order pool. It is the same [vendor-led customs](/article/vendor-first-customs) pattern that has been one of the cleaner vendor arrangements in the hobby this year — single vendor, single configurator, single fulfillment SKU, no IC churn between announcement and open — extended now to accommodate two SKUs inside the one buy.\n\n## MiKeyDigit and the legend layout\n\nThe designer credit is MiKeyDigit. The set is a Cherry-clone curl in the CYL family, doubleshot ABS, with the standard alpha-mod-novelty kit logic underneath. The nautical theme runs through the legend layout and the novelty selection — the IC renders carry the King of the Seas naming through both palettes, with the legends, alpha layout, and base-kit architecture identical between The Sovereign and The Mutation. The two palettes are accent recolors of the same set, not two different sets sharing a designer. That is the structural reason the two-palette buy works inside one configurator: only the colorway choice forks, not the kit layout.\n\nBeyond the credit and the layout work, the editorial read on MiKeyDigit's fingerprint is best left to the second round, if there is one. One set is a data point. The cleanest signal in this buy is the dual-colorway decision itself, and that signal will be louder in the close numbers than in the IC.\n\n<InlineViz\n  src=\"/article-viz/gmk-cyl-king-of-the-seas-group-buy/gb-window.svg\"\n  alt=\"Buy-window timeline running 2026-04-28 to 2026-05-31 at KBDfans, with chips naming designer (MiKeyDigit), profile and material (CYL · doubleshot ABS), and region (global).\"\n  caption=\"The window, condensed.\"\n  accent=\"oklch(0.68 0.20 0)\"\n/>\n\n## Buying notes\n\nThe window is 2026-04-28 through 2026-05-31. Region is global through KBDfans, with a single configurator covering both palettes and a single checkout flow. GMK lead times apply — long but predictable. The set is doubleshot ABS, not PBT, so the usual ABS caveats apply on shine timelines for heavy typists.\n\nA note on links: group-buy URLs published on thock are auto-flagged with `rel=\"sponsored noopener\"` at render time. The tag is applied by the site, not the editorial team. thock has no affiliate arrangement with KBDfans for GMK CYL King of the Seas.\n\nFull configurator and the current window are at <Source href=\"https://kbdfans.com/products/gmk-cyl-king-of-the-seas\">KBDfans's product page</Source>. The live entry alongside the rest of the open buys sits on [/group-buys](/group-buys).\n\n## What we're watching\n\nTwo questions ride on this run. The first is the allocation split between The Sovereign and The Mutation when the close numbers settle. A near-even split would say MiKeyDigit's read of the fractured palette audience was right and that the dual-colorway buy clears as a single object rather than two collocated runs. A heavy skew to one palette — in either direction — would say one side of the split carried the buy and the other rode along, and that future CYL designers can read the result as \"the audience picked the moody one\" or \"the audience picked the electric one\" without much ambiguity.\n\nThe second is whether the model gets copied. The dual-palette concurrent buy is a less-common pattern in GMK CYL economics for a reason, and most designers will keep shipping a single palette per run on the basis that one MOQ is easier than two. If both Sovereign and Mutation clear inside the 2026-05-31 close, expect at least one other CYL designer to test the same structure before year-end. If only one clears, the pattern stays rare, and the next King of the Seas will be a single-palette set whether MiKeyDigit designs it or not.\n\nKing of the Seas closes 2026-05-31. The [trends tracker](/trends/tracker) will pick up the close-week signal when the order numbers settle.\n",
+      "body": "\nGMK CYL King of the Seas is live at KBDfans. MiKeyDigit's set opened on 2026-04-28 and runs through 2026-05-31 — a five-week window for a <Mono>doubleshot ABS</Mono> set in the <Mono>CYL</Mono> cylindrical sub-line GMK has been running on selected sets for the last two years. The headline editorially is not the profile, the manufacturer, or the vendor cadence — all of which have a paper trail at this point. It is the colorway selector. The buy ships two palettes at once: <Mono>The Sovereign</Mono>, deep ocean blues, and <Mono>The Mutation</Mono>, electric pink. Same base set, two opposed accents, single configurator.\n\n<InlineViz\n  src=\"/article-viz/gmk-cyl-king-of-the-seas-group-buy/two-palettes.svg\"\n  alt=\"Two facing card panels — The Sovereign in deep ocean blue (moody, desk-as-furniture) and The Mutation in electric pink (electric, desk-as-instrument), each with a row of mini key tiles in palette, joined by a central 'or' chip.\"\n  caption=\"One set, two opposed accents.\"\n  accent=\"oklch(0.68 0.20 0)\"\n/>\n\n## Two colorways, one buy\n\nMost GMK CYL runs ship a single accent palette. A designer picks a direction, the IC threads converge on that direction, the buy opens with one base kit and a small modifier-kit slate. If a second palette appears, it usually appears later — a second round, a vendor-driven reissue, a different designer reusing the legend layout under a new name. The two-palette concurrent buy is the less-common pattern, and the economics behind why it is less common are not subtle. Two palettes mean two minimum-order quantities to clear, two photoshoots, two configurator paths, and two streams of buyer indecision over which kit to commit to.\n\nKing of the Seas is taking the opposite bet. The Sovereign and The Mutation are both available for the duration of the window, and buyers choose at checkout rather than at IC. The mood split is wide on purpose — one moody, one electric — which reads as a deliberate read of an audience that has fractured along exactly that axis over the last year. The desk-as-instrument crowd has been pulling toward saturated synthetic palettes; the desk-as-furniture crowd has been pulling toward muted naturalistic ones. Designers who try to hit the midpoint tend to land in a third place that satisfies neither. MiKeyDigit's answer is to skip the midpoint and ship both ends.\n\n<Callout type=\"note\" title=\"The two-palette math, briefly\">\n  A concurrent dual-colorway GMK CYL buy is doing something MOQ-economics usually resists. Each palette has to clear its own GMK minimum independently — they are separate tooling runs at the manufacturer, not a colorway toggle on a single SKU. The five-week window plus a global single-vendor host is the structural answer to that constraint: pool the audience for both palettes inside one buying window, one checkout, one fulfillment timeline, and let buyer preference do the allocation. If both clear, the model scales. If only one clears, the run becomes a case study in why most CYL designers ship a single palette.\n</Callout>\n\n## The CYL ecosystem keeps consolidating at KBDfans\n\nKing of the Seas is the third GMK CYL News piece on thock inside the current corpus, and all three have run through KBDfans. [GMK CYL GREG R2](/article/gmk-cyl-greg-2-group-buy) opened at the start of May, [GMK CYL Prussian Alert](/article/gmk-cyl-prussian-alert) opened on 2026-05-15, and King of the Seas is the one already live. The CYL sub-line is consolidating at a single vendor at a tempo that the larger GMK Cherry-profile catalog is not. Where Oblotzky and Cannonkeys used to share the GMK CYL slot, KBDfans is now hosting the bulk of the open runs with a single configurator, a single checkout, and a single fulfillment SKU per buy.\n\nThat consolidation matters for King of the Seas specifically because the dual-palette mechanic depends on it. A two-vendor split would have forced a choice between regional proxies for each palette and would have fragmented the order book in a way that made the MOQ math harder, not easier. The single-vendor KBDfans host keeps both palettes inside one order pool. It is the same [vendor-led customs](/article/vendor-first-customs) pattern that has been one of the cleaner vendor arrangements in the hobby this year — single vendor, single configurator, single fulfillment SKU, no IC churn between announcement and open — extended now to accommodate two SKUs inside the one buy.\n\n## MiKeyDigit and the legend layout\n\nThe designer credit is MiKeyDigit. The set is a Cherry-clone curl in the CYL family, doubleshot ABS, with the standard alpha-mod-novelty kit logic underneath. The nautical theme runs through the legend layout and the novelty selection — the IC renders carry the King of the Seas naming through both palettes, with the legends, alpha layout, and base-kit architecture identical between The Sovereign and The Mutation. The two palettes are accent recolors of the same set, not two different sets sharing a designer. That is the structural reason the two-palette buy works inside one configurator: only the colorway choice forks, not the kit layout.\n\nBeyond the credit and the layout work, the editorial read on MiKeyDigit's fingerprint is best left to the second round, if there is one. One set is a data point. The cleanest signal in this buy is the dual-colorway decision itself, and that signal will be louder in the close numbers than in the IC.\n\n<InlineViz\n  src=\"/article-viz/gmk-cyl-king-of-the-seas-group-buy/gb-window.svg\"\n  alt=\"Buy-window timeline running 2026-04-28 to 2026-05-31 at KBDfans, with chips naming designer (MiKeyDigit), profile and material (CYL · doubleshot ABS), and region (global).\"\n  caption=\"The window, condensed.\"\n  accent=\"oklch(0.68 0.20 0)\"\n/>\n\n## Buying notes\n\nThe window is 2026-04-28 through 2026-05-31. Region is global through KBDfans, with a single configurator covering both palettes and a single checkout flow. GMK lead times apply — long but predictable. The set is doubleshot ABS, not PBT, so the usual ABS caveats apply on shine timelines for heavy typists.\n\nA note on links: group-buy URLs published on thock are auto-flagged with `rel=\"sponsored noopener\"` at render time. The tag is applied by the site, not the editorial team. thock has no affiliate arrangement with KBDfans for GMK CYL King of the Seas.\n\nFull configurator and the current window are at <Source href=\"https://kbdfans.com/products/gmk-cyl-king-of-the-seas\">KBDfans's product page</Source>. The live entry alongside the rest of the open buys sits on [/group-buys](/group-buys).\n\n## What we're watching\n\nTwo questions ride on this run. The first is the allocation split between The Sovereign and The Mutation when the close numbers settle. A near-even split would say MiKeyDigit's read of the fractured palette audience was right and that the dual-colorway buy clears as a single object rather than two collocated runs. A heavy skew to one palette — in either direction — would say one side of the split carried the buy and the other rode along, and that future CYL designers can read the result as \"the audience picked the moody one\" or \"the audience picked the electric one\" without much ambiguity.\n\nThe second is whether the model gets copied. The dual-palette concurrent buy is a less-common pattern in GMK CYL economics for a reason, and most designers will keep shipping a single palette per run on the basis that one MOQ is easier than two. If both Sovereign and Mutation clear inside the 2026-05-31 close, expect at least one other CYL designer to test the same structure before year-end. If only one clears, the pattern stays rare, and the next King of the Seas will be a single-palette set whether MiKeyDigit designs it or not.\n\nKing of the Seas closes 2026-05-31. The [trends tracker](/trends/tracker) will pick up the close-week signal when the order numbers settle.\n",
       "readTime": 6,
       "filePath": "/home/runner/work/thock/thock/apps/web/src/content/articles/gmk-cyl-king-of-the-seas-group-buy.mdx"
     },
@@ -2621,7 +2860,7 @@
       "frontmatter": {
         "slug": "cannonkeys-nyawice-group-buy",
         "title": "The Nyawice puts a leaf-spring F1 mount under a friction-fit-cat-ears Alice",
-        "lede": "An Alice-layout board with a leaf-spring F1 mount, a 9-degree typing angle, and four colorways of friction-fit silicone cat ears is open at CannonKeys through 2026-05-17. The mount type is the editorial story; the cat ears are the conversation.",
+        "lede": "An Alice-layout board with a leaf-spring F1 mount, a 9-degree typing angle, and four colorways of friction-fit silicone cat ears ran at CannonKeys through 2026-05-17. The mount type is the editorial story; the cat ears are the conversation.",
         "author": "thock",
         "pillar": "news",
         "tags": [
@@ -2631,7 +2870,7 @@
           "aluminum"
         ],
         "publishedAt": "2026-04-17T14:00:00.000Z",
-        "updatedAt": null,
+        "updatedAt": "2026-05-20T00:00:00.000Z",
         "heroImage": "/hero-art/cannonkeys-nyawice-group-buy.svg",
         "heroImageAlt": "Top-down line silhouette of an Alice-layout keyboard rendered in a 2px warm-grey stroke on a transparent 1200x750 canvas, with coral splashes standing in for friction-fit cat ears at the upper corners and a coral nose between them, and a thin warm-bronze highlight tracing the case edge.",
         "featured": false,
@@ -2639,7 +2878,7 @@
         "guideSection": null,
         "mentionedParts": []
       },
-      "body": "\nAlice boards open most weeks somewhere on the custom side of the hobby; the layout is not scarce, and \"another Alice\" is not, on its own, news. What earns the <Mono>Nyawice</Mono> a column at thock is the combination underneath the silhouette: a less-common <Mono>leaf-spring F1</Mono> mount, a 9-degree typing angle at the upper end of what Alice-style boards ship, and a decorative-attachment system — friction-fit silicone cat ears and a nose in four colorways — that treats the case as a surface to dress rather than a sculpture to leave alone. The group buy is open at CannonKeys through 2026-05-17.\n\n<InlineViz\n  src=\"/article-viz/cannonkeys-nyawice-group-buy/mount-context.svg\"\n  alt=\"Three mount-style cards in a row — gasket-mount on the left (premium-tier default), leaf-spring F1 in the center (coral-filled, the Nyawice pick), and tray-mount on the right (budget tier) — each with a mini cross-section diagram.\"\n  caption=\"Where the Nyawice's mount choice sits.\"\n  accent=\"coral\"\n/>\n\n## The mount is the story\n\nMost Alice boards in 2026 land on one of two mount families. Gasket-mount is the dominant choice on the premium tier; tray-mount survives at the budget tier and on older designs that haven't been redrawn. The <Mono>Nyawice</Mono> picks a third, less-trafficked option: a leaf-spring F1 mount, where a sprung leaf carries the plate at defined contact points and acts as a tuning lever for both typing feel and case acoustics.\n\n<Callout type=\"note\" title=\"What 'leaf-spring F1' is doing\">\n  Leaf-spring mounts suspend the plate on metal leaves rather than on silicone or poron gasket strips. The leaf's geometry — its length, thickness, and contact points — determines how the plate flexes under a keystroke and, more audibly, how the case rings or doesn't around it. The trade-off versus gasket-mount is sharper, more uniform feedback at the cost of some of the cushioned-bottom-out character readers expect from a modern gasket build. F1 here refers to the specific leaf geometry CannonKeys is shipping; the family name is generic.\n</Callout>\n\nThe acoustic case for leaf-spring is straightforward in theory and unpredictable in practice. A well-tuned leaf decouples the plate from the case shell enough to keep the spectrogram clean, but unlike gasket strips the leaf transmits a defined amount of resonance back into the chassis. A <Mono>leaf-spring F1</Mono> build can come out either crisper or hollower than its gasket sibling depending on the case wall thickness, the plate material, and how aggressively the leaves are tensioned. Reviewers will spend the next month figuring out which of those the <Mono>Nyawice</Mono> is. The mount choice is what makes that worth watching.\n\nThe 9-degree typing angle compounds the question. Nine degrees is high — toward the upper end of what Alice-style boards ship, and a degree or two past what readers with rest-flat wrist posture will find comfortable without a palm rest. Higher angles do interact with leaf-spring mounts in non-obvious ways: a steeper plate sits at a different load distribution on the leaves than a flat one, which can either tighten or loosen the perceived feedback. Readers cross-shopping the <Mono>Nyawice</Mono> against a flatter gasket Alice should not assume the same plate material will sound or feel the same in this chassis.\n\n## Where it fits the layout picture\n\nThe Alice category has been cooling on thock's snapshot for most of 2026 — the trends piece on [the slow fade of Alice layouts](/article/alice-layout-decline) has the layout down 18 percent on this week's tracker, and the shape there is more drain than collapse. The <Mono>Nyawice</Mono> is not a counter-argument to that read, but it is a counter-example: a vendor with a real audience betting that a specific combination of mount, angle, and aesthetic still has a buy-through audience inside the cooling envelope. One group buy is a data point, not a trend reversal. If it sells through cleanly, it complicates the \"Alice is stalled\" thesis at the margin; if it doesn't, it confirms it.\n\nThe broader [split-ergo cohort](/article/split-ergo-cohort) the corpus has been tracking is adjacent but not the same conversation. Alice fits the split-spacebar bracket without being a true ergo board — the splay is fixed by the designer, not the typist — and most Nyawice buyers will be choosing it for its aesthetics and feel, not as an ergonomic intervention. Treating the <Mono>Nyawice</Mono> as a flag-bearer for the ergo cohort would be a misread; treating it as a quietly-engineered Alice with an unusual mount choice is closer to right.\n\n## The cat ears, on purpose\n\nThe friction-fit silicone cat ears and the matching nose are not a marketing add-on; they ship as a defining feature of the buy, in four colorways — orange, pink, baby blue, lilac. Editorially this is the part of the story that's easy to dismiss and worth not dismissing. The custom side of the hobby has spent a decade making board aesthetics a fixed property of the case at fabrication time: anodization, top weight, badge. The decorative-attachment idea — pieces a user can pop on or off without a screwdriver, in colorways picked from a 4-option palette — is a different posture toward the object. It treats the case as a surface that can change moods between Tuesday and Friday.\n\nWhether that idea travels past the <Mono>Nyawice</Mono> depends on whether buyers actually swap the colorways, or whether the cat ears end up as a single permanent install per board. The friction-fit choice is the right one for the experiment: a magnetic or screw-mounted attachment would have implied a forever commitment, and silicone friction-fit reads as deliberately impermanent. If the swap rate is real, expect other vendors to start sketching their own decorative-attachment ecosystems within twelve months.\n\n<InlineViz\n  src=\"/article-viz/cannonkeys-nyawice-group-buy/gb-window.svg\"\n  alt=\"A four-week timeline running from 2026-04-17 (opens, coral marker) to 2026-05-17 (closes, coral marker) with the window highlighted in coral, plus three feature chips naming leaf-spring F1 mount, 9° angle, and friction-fit cat ears in four colorways.\"\n  caption=\"The window, and the editorial story.\"\n  accent=\"coral\"\n/>\n\n## Buying notes\n\nThe buy is global through CannonKeys, with one checkout and one fulfillment timeline. The window is 2026-04-17 through 2026-05-17 — a four-week buy, opening today. PCB choice includes a hotswap option, which materially expands the cross-shop set against any <Mono>MX2A</Mono>-era switch a hotswap-Alice build might land on without solder. Soldered PCB remains the default for buyers who want the cleaner board feel. Pricing, plate options, and the per-colorway availability of the silicone pieces are listed on the vendor page; thock is not republishing them here because configurator prices on CannonKeys group buys can move during the window.\n\nA note on links: group-buy URLs published on thock are auto-flagged with `rel=\"sponsored noopener\"` at render time. The tag is applied by the site, not the editorial team. thock has no affiliate arrangement with CannonKeys for the <Mono>Nyawice</Mono>.\n\nFull configurator and the current window are at <Source href=\"https://cannonkeys.com/products/nyawice\">CannonKeys's product page</Source>; the live entry alongside the other open buys lives on [/group-buys](/group-buys).\n\n## What we're watching\n\nTwo questions hang off this buy. The first is sales velocity: a clean sell-through is a small but real counterweight to the Alice-decline read; a soft close inside an expected-extension window would confirm it. The second is whether <Mono>leaf-spring F1</Mono> shows up in any other 2026 board project after the <Mono>Nyawice</Mono> ships. Mount choices propagate through the custom side slowly — a single high-profile build with a different mount can move the next eighteen months of designer conversation, or it can vanish without an echo. The <Mono>Nyawice</Mono> is the cleanest test case of the year so far for both questions. Reports back when the window closes.\n",
+      "body": "\nAlice boards open most weeks somewhere on the custom side of the hobby; the layout is not scarce, and \"another Alice\" is not, on its own, news. What earns the <Mono>Nyawice</Mono> a column at thock is the combination underneath the silhouette: a less-common <Mono>leaf-spring F1</Mono> mount, a 9-degree typing angle at the upper end of what Alice-style boards ship, and a decorative-attachment system — friction-fit silicone cat ears and a nose in four colorways — that treats the case as a surface to dress rather than a sculpture to leave alone. The group buy ran at CannonKeys through 2026-05-17.\n\n<InlineViz\n  src=\"/article-viz/cannonkeys-nyawice-group-buy/mount-context.svg\"\n  alt=\"Three mount-style cards in a row — gasket-mount on the left (premium-tier default), leaf-spring F1 in the center (coral-filled, the Nyawice pick), and tray-mount on the right (budget tier) — each with a mini cross-section diagram.\"\n  caption=\"Where the Nyawice's mount choice sits.\"\n  accent=\"coral\"\n/>\n\n## The mount is the story\n\nMost Alice boards in 2026 land on one of two mount families. Gasket-mount is the dominant choice on the premium tier; tray-mount survives at the budget tier and on older designs that haven't been redrawn. The <Mono>Nyawice</Mono> picks a third, less-trafficked option: a leaf-spring F1 mount, where a sprung leaf carries the plate at defined contact points and acts as a tuning lever for both typing feel and case acoustics.\n\n<Callout type=\"note\" title=\"What 'leaf-spring F1' is doing\">\n  Leaf-spring mounts suspend the plate on metal leaves rather than on silicone or poron gasket strips. The leaf's geometry — its length, thickness, and contact points — determines how the plate flexes under a keystroke and, more audibly, how the case rings or doesn't around it. The trade-off versus gasket-mount is sharper, more uniform feedback at the cost of some of the cushioned-bottom-out character readers expect from a modern gasket build. F1 here refers to the specific leaf geometry CannonKeys is shipping; the family name is generic.\n</Callout>\n\nThe acoustic case for leaf-spring is straightforward in theory and unpredictable in practice. A well-tuned leaf decouples the plate from the case shell enough to keep the spectrogram clean, but unlike gasket strips the leaf transmits a defined amount of resonance back into the chassis. A <Mono>leaf-spring F1</Mono> build can come out either crisper or hollower than its gasket sibling depending on the case wall thickness, the plate material, and how aggressively the leaves are tensioned. Reviewers will spend the next month figuring out which of those the <Mono>Nyawice</Mono> is. The mount choice is what makes that worth watching.\n\nThe 9-degree typing angle compounds the question. Nine degrees is high — toward the upper end of what Alice-style boards ship, and a degree or two past what readers with rest-flat wrist posture will find comfortable without a palm rest. Higher angles do interact with leaf-spring mounts in non-obvious ways: a steeper plate sits at a different load distribution on the leaves than a flat one, which can either tighten or loosen the perceived feedback. Readers cross-shopping the <Mono>Nyawice</Mono> against a flatter gasket Alice should not assume the same plate material will sound or feel the same in this chassis.\n\n## Where it fits the layout picture\n\nThe Alice category has been cooling on thock's snapshot for most of 2026 — the trends piece on [the slow fade of Alice layouts](/article/alice-layout-decline) has the layout down 18 percent on this week's tracker, and the shape there is more drain than collapse. The <Mono>Nyawice</Mono> is not a counter-argument to that read, but it is a counter-example: a vendor with a real audience betting that a specific combination of mount, angle, and aesthetic still has a buy-through audience inside the cooling envelope. One group buy is a data point, not a trend reversal. If it sells through cleanly, it complicates the \"Alice is stalled\" thesis at the margin; if it doesn't, it confirms it.\n\nThe broader [split-ergo cohort](/article/split-ergo-cohort) the corpus has been tracking is adjacent but not the same conversation. Alice fits the split-spacebar bracket without being a true ergo board — the splay is fixed by the designer, not the typist — and most Nyawice buyers will be choosing it for its aesthetics and feel, not as an ergonomic intervention. Treating the <Mono>Nyawice</Mono> as a flag-bearer for the ergo cohort would be a misread; treating it as a quietly-engineered Alice with an unusual mount choice is closer to right.\n\n## The cat ears, on purpose\n\nThe friction-fit silicone cat ears and the matching nose are not a marketing add-on; they ship as a defining feature of the buy, in four colorways — orange, pink, baby blue, lilac. Editorially this is the part of the story that's easy to dismiss and worth not dismissing. The custom side of the hobby has spent a decade making board aesthetics a fixed property of the case at fabrication time: anodization, top weight, badge. The decorative-attachment idea — pieces a user can pop on or off without a screwdriver, in colorways picked from a 4-option palette — is a different posture toward the object. It treats the case as a surface that can change moods between Tuesday and Friday.\n\nWhether that idea travels past the <Mono>Nyawice</Mono> depends on whether buyers actually swap the colorways, or whether the cat ears end up as a single permanent install per board. The friction-fit choice is the right one for the experiment: a magnetic or screw-mounted attachment would have implied a forever commitment, and silicone friction-fit reads as deliberately impermanent. If the swap rate is real, expect other vendors to start sketching their own decorative-attachment ecosystems within twelve months.\n\n<InlineViz\n  src=\"/article-viz/cannonkeys-nyawice-group-buy/gb-window.svg\"\n  alt=\"A four-week timeline running from 2026-04-17 (opens, coral marker) to 2026-05-17 (closes, coral marker) with the window highlighted in coral, plus three feature chips naming leaf-spring F1 mount, 9° angle, and friction-fit cat ears in four colorways.\"\n  caption=\"The window, and the editorial story.\"\n  accent=\"coral\"\n/>\n\n## Buying notes\n\nThe buy is global through CannonKeys, with one checkout and one fulfillment timeline. The window ran 2026-04-17 through 2026-05-17 — a four-week buy. PCB choice includes a hotswap option, which materially expands the cross-shop set against any <Mono>MX2A</Mono>-era switch a hotswap-Alice build might land on without solder. Soldered PCB remains the default for buyers who want the cleaner board feel. Pricing, plate options, and the per-colorway availability of the silicone pieces are listed on the vendor page; thock is not republishing them here because configurator prices on CannonKeys group buys can move during the window.\n\nA note on links: group-buy URLs published on thock are auto-flagged with `rel=\"sponsored noopener\"` at render time. The tag is applied by the site, not the editorial team. thock has no affiliate arrangement with CannonKeys for the <Mono>Nyawice</Mono>.\n\nFull configurator and the current window are at <Source href=\"https://cannonkeys.com/products/nyawice\">CannonKeys's product page</Source>; the live entry alongside the other open buys lives on [/group-buys](/group-buys).\n\n## What we're watching\n\nTwo questions hang off this buy. The first is sales velocity: a clean sell-through is a small but real counterweight to the Alice-decline read; a soft close inside an expected-extension window would confirm it. The second is whether <Mono>leaf-spring F1</Mono> shows up in any other 2026 board project after the <Mono>Nyawice</Mono> ships. Mount choices propagate through the custom side slowly — a single high-profile build with a different mount can move the next eighteen months of designer conversation, or it can vanish without an echo. The <Mono>Nyawice</Mono> is the cleanest test case of the year so far for both questions. Thock will report back when builds begin shipping.\n",
       "readTime": 6,
       "filePath": "/home/runner/work/thock/thock/apps/web/src/content/articles/cannonkeys-nyawice-group-buy.mdx"
     },
@@ -3109,5 +3348,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-05-20T01:02:08.321Z"
+  "generatedAt": "2026-05-21T11:18:59.677Z"
 }

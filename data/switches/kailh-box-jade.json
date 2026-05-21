@@ -1,0 +1,19 @@
+{
+  "slug": "kailh-box-jade",
+  "name": "Kailh Box Jade",
+  "vendorSlug": "novelkeys",
+  "type": "clicky",
+  "housingTop": "pc",
+  "housingBottom": "pc",
+  "stem": "pom",
+  "springGrams": {
+    "actuation": 50,
+    "bottomOut": 70
+  },
+  "travelMm": 3.6,
+  "factoryLubed": false,
+  "releasedAt": "2018-03-01",
+  "status": "in-production",
+  "description": "Heavier box clicky with a thicker click bar than the Box White, producing a louder, crisper snap and higher actuation force. The box stem protects the leaf spring from contamination; Jade's stiffer bar gives builders a louder, more deliberate click character without sacrificing the Box line's IP56-rated housing.",
+  "updatedAt": "2026-05-21T00:00:00.000Z"
+}
