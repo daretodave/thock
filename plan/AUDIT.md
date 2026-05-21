@@ -94,6 +94,15 @@
 
 ## Open findings
 
+### [x] [copy] [3.6] mode-sonnet-r2 article callout promises /group-buys entry that doesn't exist — addressed in adc0bf5
+- category: copy
+- filed: 2026-05-21 by cloud /iterate audit
+- impact: 4 (readers following the update callout to /group-buys won't find the Mode Sonnet R2 entry; the callout directed readers to "the live entry on /group-buys for the current window" but the fictional cannonkeys-mode-sonnet-r2 record was deleted in Phase 18 and never re-added as a real record)
+- ease: 9 (one sentence removal in the callout on line 21 of mode-sonnet-r2-group-buy-coverage.mdx)
+- score: 3.6 (impact × ease / 10)
+- issue: [mirror-failed: 2026-05-21T00:00:00Z]
+> **Resolved (2026-05-21):** Removed "See the live entry on /group-buys for the current window." from the update callout. The callout still states the updated window dates (2026-06-01 through 2026-07-15) and notes the body is preserved as the published 2026-05-06 record — readers have the information without a broken /group-buys promise. 611 e2e green. `adc0bf5`
+
 ### [x] [seo] [3.5] sitemap lists 7 orphaned tags with no articles (thin-content pages indexed by crawlers) — addressed in e3a2fcb (closes #153)
 - category: seo
 - filed: 2026-05-19 by cloud /iterate audit
