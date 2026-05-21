@@ -108,6 +108,15 @@
 - issue: #165
 - blocker: cloud loop cannot push `.github/workflows/` files — ACTIONS_PAT needs `workflow` scope (classic PAT) or `workflows: write` permission (fine-grained). The fix is one line in lighthouse.yml (confirmed correct; soft-reset after push rejected on 2026-05-21 cloud tick). Drain requires a local push or ACTIONS_PAT scope upgrade.
 
+### [x] [a11y] [4.0] /parts missing from axe desktop suite — addressed in 00da541, closes #169
+- category: a11y
+- filed: 2026-05-21 by cloud /iterate audit
+- impact: 5 (/parts is the only Phase 28–35 route with zero axe coverage under the WCAG 2.1 AA hard gate)
+- ease: 8 (add one runAxe test case to the Phase 32 desktop suite — copy-paste pattern)
+- score: 4.0 (impact × ease / 10)
+- issue: #169
+> **Resolved (2026-05-21):** Added `runAxe(page, '/parts')` to the Phase 32 desktop a11y suite in `apps/e2e/tests/a11y.spec.ts`. Desktop suite now covers 8 canonical pages. 661 e2e green. `00da541`
+
 ### [x] [copy] [3.6] mode-sonnet-r2 article callout promises /group-buys entry that doesn't exist — addressed in adc0bf5
 - category: copy
 - filed: 2026-05-21 by cloud /iterate audit
