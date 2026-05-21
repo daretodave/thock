@@ -1331,3 +1331,14 @@ passes accumulate signals.)
 - elements: title, lede, body (lines 20, 22-24, 30, 34, 36 before edit)
 - issue: [mirror-failed: 2026-05-21T00:00:00Z]
 > **Resolved (2026-05-21):** Updated title/lede to reflect live-buy state ("opens at KBDfans on May 15" → "is live at KBDfans through June 12"). Converted 7 stale phrases: "is set to open" → "opened … and runs through 2026-06-12"; "will mirror onto the KBDfans product page when the buy opens" → "are on the KBDfans product page"; "The buy opens 2026-05-15" → "The buy opened 2026-05-15 and runs through 2026-06-12"; "The live entry will land on the /group-buys board when the product page goes up." → "The live entry is on the /group-buys board.". Removed pre-open uncertainty callout ("treat any number outside the GB date itself as unconfirmed until the product page goes live"). Set updatedAt to 2026-05-21. 611 e2e green. `54096b4`
+
+### [x] [content] [3.6] gmk-cyl-king-of-the-seas — stale "Prussian Alert is set to open mid-month" language — addressed in af5bc02 (closes #164)
+- category: content
+- filed: 2026-05-21 by cloud /iterate audit
+- impact: 4 (readers visiting /article/gmk-cyl-king-of-the-seas-group-buy see a factually wrong claim about Prussian Alert's open status; article published 2026-04-28 before PA opened; PA has been live for 6 days as of the fix date)
+- ease: 9 (one phrase change in line 38 of the article body)
+- score: 3.6 (impact × ease / 10)
+- pages: /article/gmk-cyl-king-of-the-seas-group-buy
+- elements: line 38 — "[GMK CYL Prussian Alert] is set to open mid-month"
+- issue: #164
+> **Resolved (2026-05-21):** Changed "is set to open mid-month" → "opened on 2026-05-15" in the CYL ecosystem section. Updated updatedAt frontmatter to 2026-05-21T00:00:00.000Z. 611 e2e green. `af5bc02`
