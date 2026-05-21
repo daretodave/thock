@@ -105,6 +105,15 @@ describe('<SwitchQuiz>', () => {
     expect(browseLink.textContent).toMatch(/browse all switches/i)
   })
 
+  it('browse-all-parts link points to /parts catalog page', () => {
+    render(<SwitchQuiz switches={SWITCHES} />)
+    answerAllQuestions()
+    const partsLink = screen.getByTestId('quiz-browse-all-parts-link')
+    expect(partsLink).toBeInTheDocument()
+    expect(partsLink.getAttribute('href')).toBe('/parts')
+    expect(partsLink.textContent).toMatch(/browse all parts/i)
+  })
+
   it('"Start over" resets to the first question', () => {
     render(<SwitchQuiz switches={SWITCHES} />)
     answerAllQuestions()
