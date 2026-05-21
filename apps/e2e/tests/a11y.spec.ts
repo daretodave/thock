@@ -71,7 +71,7 @@ async function runAxe(page: Page, url: string) {
   return results
 }
 
-// Desktop suite — 8 canonical pages (phase 35: /parts added)
+// Desktop suite — 9 canonical pages (phase 33: /quiz/switch added)
 test.describe('a11y — desktop', () => {
   test('home (/)', async ({ page }) => {
     await runAxe(page, '/')
@@ -103,6 +103,10 @@ test.describe('a11y — desktop', () => {
 
   test('parts catalog (/parts)', async ({ page }) => {
     await runAxe(page, '/parts')
+  })
+
+  test('switch quiz (/quiz/switch)', async ({ page }) => {
+    await runAxe(page, '/quiz/switch')
   })
 })
 
