@@ -1375,3 +1375,12 @@ passes accumulate signals.)
 - score: 3.6 (impact × ease / 10)
 - issue: #166
 > **Resolved (2026-05-21):** Extended the it() label to include "phases 28, 33, 29, 35" and added '/parts' to the path array. 660 e2e green. `00361e6`
+
+### [x] [test] [3.6] SwitchQuiz — quiz-browse-all-parts-link has no unit test — addressed in c9272e0 (closes #168)
+- category: test
+- filed: 2026-05-21 by cloud /iterate audit
+- impact: 4 (phase 35 added <Link href="/parts" data-testid="quiz-browse-all-parts-link"> to SwitchQuiz results; the existing test suite was updated to filter /parts from the result-card link assertion but no positive assertion verified the link's existence, href, or text — a regression removing the link would pass all unit tests)
+- ease: 9 (one it() block addition to SwitchQuiz.test.tsx; same pattern as the adjacent browse-all-link test)
+- score: 3.6 (impact × ease / 10)
+- issue: #168
+> **Resolved (2026-05-21):** Added 1 it() block to SwitchQuiz.test.tsx: render → answerAllQuestions → getByTestId('quiz-browse-all-parts-link') → assert in-document, href=/parts, text matches /browse all parts/i. SwitchQuiz suite: 5 → 6 tests. 660 e2e green. `c9272e0`
