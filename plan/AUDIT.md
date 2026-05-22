@@ -1463,7 +1463,7 @@ passes accumulate signals.)
 - issue: #168
 > **Resolved (2026-05-21):** Added 1 it() block to SwitchQuiz.test.tsx: render → answerAllQuestions → getByTestId('quiz-browse-all-parts-link') → assert in-document, href=/parts, text matches /browse all parts/i. SwitchQuiz suite: 5 → 6 tests. 660 e2e green. `c9272e0`
 
-### [ ] [content] [3.2] gsk-sweet-nightmare-group-buy — three stale phrases reference an active window for a group buy closed May 11
+### [x] [content] [3.2] gsk-sweet-nightmare-group-buy — three stale phrases reference an active window for a group buy closed May 11 — addressed in 84885e7 (closes #177)
 - category: content
 - filed: 2026-05-22 by cloud /iterate audit
 - impact: 4 (readers arriving now see "live window," "closes 2026-05-11; we will revisit," and "live entry alongside the open buys" language for a buy 11 days past close; the /group-buys link also points to the live board instead of the archive)
