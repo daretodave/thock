@@ -1521,3 +1521,12 @@ passes accumulate signals.)
 - score: 3.6 (impact × ease / 10)
 - issue: [mirror-failed: 2026-05-22T17:04:00Z]
 > **Resolved (2026-05-22):** Extracted isValidKind, PRODUCTION_STATUSES, sortParts to apps/web/src/app/part/[kind]/helpers.ts (exported). Updated page.tsx to import from helpers. Added apps/web/src/app/part/[kind]/__tests__/helpers.test.ts: 8 cases covering isValidKind (valid/invalid/case-sensitive) and sortParts (active-first, alpha within group, all four production statuses, mutation-safety). 664 e2e green.
+
+### [x] [data] [3.5] cannonkeys-mode-sonnet-r2 missing group-buy data record (announced 2026-06-01) — addressed in f080087 (closes #183)
+- category: data
+- filed: 2026-05-22 by cloud /iterate audit
+- impact: 7 (Mode Sonnet R2 GB opens in ~10 days; companion article mode-sonnet-r2-group-buy-coverage already live and links /group-buys; announced section empty without this record)
+- ease: 5 (one JSON data record + hero SVG via brander; also fixed getAllClosedGroupBuys() to treat lapsed-announced buys as past)
+- score: 3.5 (impact × ease / 10)
+- issue: #183
+> **Resolved (2026-05-22):** Added data/group-buys/cannonkeys-mode-sonnet-r2.json (status=announced, startDate=2026-06-01, endDate=2026-07-15, region=global, productKind=board, vendorSlug=cannonkeys). Hero SVG rendered by brander at apps/web/public/group-buy-art/cannonkeys-mode-sonnet-r2.svg (65% silhouette, warm bronze/ochre accent per bearings group-buy hero art rule). Fixed getAllClosedGroupBuys() in data-runtime/index.ts to include announced+lapsed buys, mirroring the lapsed-live logic. Manifest and search index regenerated. 664 e2e green. `f080087`
