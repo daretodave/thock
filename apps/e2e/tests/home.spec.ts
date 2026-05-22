@@ -44,4 +44,11 @@ test.describe('home page family — phase 6', () => {
     const rows = page.getByTestId('group-buy-row')
     expect(await rows.count()).toBeGreaterThanOrEqual(1)
   })
+
+  test('/parts catalog link is present on the home page', async ({ page }) => {
+    await page.goto('/')
+    const partsLink = page.getByTestId('home-cta-strip').getByRole('link', { name: /browse the parts catalog/i })
+    await expect(partsLink).toBeVisible()
+    await expect(partsLink).toHaveAttribute('href', '/parts')
+  })
 })
