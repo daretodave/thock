@@ -110,9 +110,15 @@ describe('<TrackerRow>', () => {
     expect(unlinkedName.className).not.toMatch(/\bunderline\b/)
   })
 
-  it('renders an em-dash when no article resolves and no note is set', () => {
+  it('renders "article pending" in the note column when no article resolves and no note is set', () => {
     render(<TrackerRow rank={2} row={row()} />)
-    expect(screen.getByTestId('tracker-row')).toHaveTextContent('—')
+    expect(screen.getByTestId('tracker-row-pending-note')).toBeInTheDocument()
+    expect(screen.getByTestId('tracker-row-pending-note')).toHaveTextContent('article pending')
+  })
+
+  it('does not render an em-dash when no article resolves and no note is set', () => {
+    render(<TrackerRow rank={2} row={row()} />)
+    expect(screen.queryByText('—')).toBeNull()
   })
 
   it('renders the editor’s note as descriptive text and keeps a single click target on the row name when both article and note are set', () => {

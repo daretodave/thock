@@ -1415,6 +1415,14 @@ passes accumulate signals.)
 - issue: #166
 > **Resolved (2026-05-21):** Extended the it() label to include "phases 28, 33, 29, 35" and added '/parts' to the path array. 660 e2e green. `00361e6`
 
+### [ ] [ux] [4.8] tracker: 'article pending' note for null-slug rows with real scores — closes #173
+- category: enhancement
+- filed: 2026-05-22 by cloud /iterate audit
+- impact: 6 (signature feature; all tracker page visits; every weekly snapshot begins with 12–18 rows where the em-dash misleads — current "—" implies "no data" but these rows always carry a real score/direction/sparkline)
+- ease: 8 (single-component change in TrackerRow.tsx + update 1 existing test + 1 new test)
+- score: 4.8 (impact × ease / 10)
+- issue: #173
+
 ### [x] [test] [3.6] SwitchQuiz — quiz-browse-all-parts-link has no unit test — addressed in c9272e0 (closes #168)
 - category: test
 - filed: 2026-05-21 by cloud /iterate audit

@@ -92,8 +92,8 @@ export function TrackerRow({
             {noteText}
           </span>
         ) : (
-          <span aria-hidden="true" className="text-text-4">
-            —
+          <span data-testid="tracker-row-pending-note" className="text-text-4">
+            article pending
           </span>
         )}
       </span>
