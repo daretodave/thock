@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1200 630"
+     preserveAspectRatio="xMidYMid meet"
+     fill="none"
+     stroke="oklch(0.78 0.005 90)"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     role="img"
+     aria-label="thock group-buy card art for CannonKeys Mode Sonnet R2 — 65% gasket-mount aluminum keyboard in warm bronze colorway">
+  <title>thock group-buy hero — Mode Sonnet R2 (CannonKeys), 65% gasket-mount aluminum, warm bronze colorway</title>
+
+  <!--
+    Mode Sonnet R2: 65% layout, gasket-mount construction, aluminum case,
+    warm bronze colorway. CannonKeys group buy 2026-06-01 through 2026-07-15.
+
+    Composition strategy:
+      A 65% keyboard viewed in slight top-down perspective fills roughly 78%
+      of canvas width. The warm bronze splash reads as the case top-surface
+      color — a low-alpha bronze fill on the case body, plus a solid focal
+      bronze accent strip running along the inner top edge of the case (the
+      gasket reveal) and a matching strip on the bottom — the defining visual
+      tell of the gasket-mount construction where the top half of the case
+      sits on the gasket rather than screwing directly to the plate.
+
+      65% silhouette:
+        - No F-row (the defining 65% tell vs. 75%)
+        - Full alpha block: number row + 4 alpha rows (QWERTY / home / bottom)
+        - Mod row (bottom) with space bar
+        - Right navigation column: typically 3 keys stacked (Del / Home / End or
+          Del / PgUp / PgDn depending on layout variant)
+        - Arrow cluster (inverted-T: up above, left/down/right beneath) at
+          bottom-right, outside the alpha block
+
+      Color palette:
+        background wash   oklch(0.80 0.135 75 / 0.06)   warm bronze, very low alpha
+        case fill         oklch(0.80 0.135 75 / 0.15)   bronze case body
+        gasket strip      oklch(0.80 0.135 75 / 0.88)   solid bronze — the focal accent
+        key dots          oklch(0.78 0.005 90)           warm grey, standard family
+        bronze theme dot  oklch(0.80 0.135 75)           upper-right ornamental anchor
+        accent pip        oklch(0.80 0.135 75)           lower accent dot
+
+    Single-splash discipline: warm bronze is the only accent hue throughout.
+  -->
+
+  <!-- ============================================================
+       BACKGROUND WARM WASH — barely-there bronze field behind
+       the keyboard body, sets the warm colorway stage.
+  ============================================================ -->
+  <rect x="60" y="60" width="1080" height="510"
+        fill="oklch(0.80 0.135 75 / 0.04)" stroke="none"/>
+
+  <!-- ============================================================
+       BRONZE THEME DOT — upper-right margin, family ornamental
+       anchor. Per visual language spec.
+  ============================================================ -->
+  <circle cx="1104" cy="76" r="8"
+          fill="oklch(0.80 0.135 75 / 0.92)"
+          stroke="oklch(0.80 0.135 75)"/>
+  <circle cx="1104" cy="76" r="16"
+          stroke="oklch(0.80 0.135 75)"
+          stroke-opacity="0.32"
+          fill="none"/>
+
+  <!-- ============================================================
+       OUTER CASE — 65% aluminum board.
+       Width: ~78% of 1200 = 936px (alphas + right nav column).
+       The case sits centered horizontally, with generous vertical
+       centering. Rounded corners rx=12 (aluminum machined feel).
+
+       Case bounding box: x=96..1068, y=148..508
+       Total: 972 × 360 px
+
+       The 65% aspect ratio on a real board is roughly 5:2 — a
+       65% at ~13.5u wide × ~5.5u tall including case bezel.
+  ============================================================ -->
+  <defs>
+    <!-- Clip path for the bronze gasket fill strips -->
+    <clipPath id="case-clip">
+      <rect x="96" y="148" width="972" height="360" rx="12" ry="12"/>
+    </clipPath>
+  </defs>
+
+  <!-- Case body — bronze fill at low alpha, giving the warm colorway -->
+  <rect x="96" y="148" width="972" height="360" rx="12" ry="12"
+        fill="oklch(0.80 0.135 75 / 0.13)"/>
+
+  <!-- Outer case stroke -->
+  <rect x="96" y="148" width="972" height="360" rx="12" ry="12"/>
+
+  <!-- Inner bezel inset — plate frame, inset 18px from case edge -->
+  <rect x="114" y="166" width="936" height="324" rx="7" ry="7"
+        stroke-opacity="0.40"/>
+
+  <!-- ============================================================
+       GASKET REVEAL STRIPS — the defining visual tell of
+       gasket-mount construction. The top and bottom of the plate
+       float on a silicone gasket, leaving a visible gap (the
+       "reveal") between case and plate.
+
+       Top gasket strip: a solid bronze band along the inside of
+       the top case edge, 12px tall.
+       Bottom gasket strip: matching 12px band on the bottom.
+       These are clipped to the case shape so they sit cleanly
+       within the rounded corners.
+  ============================================================ -->
+  <g clip-path="url(#case-clip)">
+    <!-- Top gasket strip -->
+    <rect x="96" y="148" width="972" height="14"
+          fill="oklch(0.80 0.135 75 / 0.82)" stroke="none"/>
+    <!-- Bottom gasket strip -->
+    <rect x="96" y="494" width="972" height="14"
+          fill="oklch(0.80 0.135 75 / 0.82)" stroke="none"/>
+  </g>
+
+  <!-- Gasket strip inner edge lines — crisp stroke to read the flex -->
+  <line x1="114" y1="162" x2="1068" y2="162"
+        stroke="oklch(0.80 0.135 75)" stroke-opacity="0.90" stroke-width="1.5"/>
+  <line x1="114" y1="494" x2="1068" y2="494"
+        stroke="oklch(0.80 0.135 75)" stroke-opacity="0.90" stroke-width="1.5"/>
+
+  <!-- ============================================================
+       SCREWPOST / GASKET MOUNT POINTS — small bronze dots at
+       the standard gasket-mount post positions. These evoke the
+       silicone gasket pads that the plate rests on.
+       Mode Sonnet typically uses 5–7 posts along top and bottom
+       of the plate; we suggest 6 per edge.
+  ============================================================ -->
+  <g fill="oklch(0.80 0.135 75 / 0.75)" stroke="none">
+    <!-- Top gasket posts (6 along top inner edge) -->
+    <circle cx="174"  cy="162" r="3.5"/>
+    <circle cx="338"  cy="162" r="3.5"/>
+    <circle cx="502"  cy="162" r="3.5"/>
+    <circle cx="666"  cy="162" r="3.5"/>
+    <circle cx="830"  cy="162" r="3.5"/>
+    <circle cx="994"  cy="162" r="3.5"/>
+    <!-- Bottom gasket posts (matching) -->
+    <circle cx="174"  cy="494" r="3.5"/>
+    <circle cx="338"  cy="494" r="3.5"/>
+    <circle cx="502"  cy="494" r="3.5"/>
+    <circle cx="666"  cy="494" r="3.5"/>
+    <circle cx="830"  cy="494" r="3.5"/>
+    <circle cx="994"  cy="494" r="3.5"/>
+  </g>
+
+  <!-- ============================================================
+       KEY DOT GRID — 65% layout.
+
+       Layout geometry (plate interior x=114..1050, y=166..494):
+         Alpha block: columns 1–15 (0u–14u), pitch 54px
+           Starting x: 138 (first key center)
+           Column centers: 138, 192, 246, 300, 354, 408, 462, 516,
+                           570, 624, 678, 732, 786, 840, 894
+         Right nav column: starts at x=948 (after alpha gap ~54px)
+           3 keys stacked: 948, y = 227 / 281 / 335
+         Arrow cluster (bottom-right):
+           Up:    x=948, y=443
+           Left:  x=894, y=497 — but arrow row sits just below mod row
+           Down:  x=948, y=497
+           Right: x=1002, y=497
+
+       Rows (centers):
+         Row 0 (number row): y=227
+         Row 1 (QWERTY):     y=281
+         Row 2 (home row):   y=335
+         Row 3 (bottom row): y=389
+         Row 4 (mod/space):  y=443   ← space bar + mod keys only
+
+       Key dots: warm-grey circles r=3.5 for alpha rows, r=2.5 for
+       mod row (fewer, wider keys). Nav column keys are rendered as
+       small rectangles to distinguish them from alpha dots.
+  ============================================================ -->
+
+  <!-- === Row 0: number row — 14 keys (15u block) === -->
+  <g fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.70">
+    <circle cx="138" cy="227" r="3"/>
+    <circle cx="192" cy="227" r="3"/>
+    <circle cx="246" cy="227" r="3"/>
+    <circle cx="300" cy="227" r="3"/>
+    <circle cx="354" cy="227" r="3"/>
+    <circle cx="408" cy="227" r="3"/>
+    <circle cx="462" cy="227" r="3"/>
+    <circle cx="516" cy="227" r="3"/>
+    <circle cx="570" cy="227" r="3"/>
+    <circle cx="624" cy="227" r="3"/>
+    <circle cx="678" cy="227" r="3"/>
+    <circle cx="732" cy="227" r="3"/>
+    <circle cx="786" cy="227" r="3"/>
+    <circle cx="840" cy="227" r="3"/>
+  </g>
+
+  <!-- === Row 1: QWERTY row — 14 keys === -->
+  <g fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.82">
+    <circle cx="138" cy="281" r="3.5"/>
+    <circle cx="192" cy="281" r="3.5"/>
+    <circle cx="246" cy="281" r="3.5"/>
+    <circle cx="300" cy="281" r="3.5"/>
+    <circle cx="354" cy="281" r="3.5"/>
+    <circle cx="408" cy="281" r="3.5"/>
+    <circle cx="462" cy="281" r="3.5"/>
+    <circle cx="516" cy="281" r="3.5"/>
+    <circle cx="570" cy="281" r="3.5"/>
+    <circle cx="624" cy="281" r="3.5"/>
+    <circle cx="678" cy="281" r="3.5"/>
+    <circle cx="732" cy="281" r="3.5"/>
+    <circle cx="786" cy="281" r="3.5"/>
+    <circle cx="840" cy="281" r="3.5"/>
+  </g>
+
+  <!-- === Row 2: home row — 13 keys (home row is shorter on right due to larger Enter) === -->
+  <g fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.82">
+    <circle cx="138" cy="335" r="3.5"/>
+    <circle cx="192" cy="335" r="3.5"/>
+    <circle cx="246" cy="335" r="3.5"/>
+    <circle cx="300" cy="335" r="3.5"/>
+    <circle cx="354" cy="335" r="3.5"/>
+    <circle cx="408" cy="335" r="3.5"/>
+    <circle cx="462" cy="335" r="3.5"/>
+    <circle cx="516" cy="335" r="3.5"/>
+    <circle cx="570" cy="335" r="3.5"/>
+    <circle cx="624" cy="335" r="3.5"/>
+    <circle cx="678" cy="335" r="3.5"/>
+    <circle cx="732" cy="335" r="3.5"/>
+    <!-- Enter key represented as a wider rect below -->
+  </g>
+  <!-- Enter key — wide rect, 2u, top right of home row -->
+  <rect x="768" y="320" width="96" height="30" rx="3" ry="3"
+        stroke="oklch(0.78 0.005 90)" stroke-opacity="0.70" fill="none"/>
+
+  <!-- === Row 3: bottom row — 12 keys === -->
+  <g fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.82">
+    <circle cx="138" cy="389" r="3.5"/>
+    <circle cx="192" cy="389" r="3.5"/>
+    <circle cx="246" cy="389" r="3.5"/>
+    <circle cx="300" cy="389" r="3.5"/>
+    <circle cx="354" cy="389" r="3.5"/>
+    <circle cx="408" cy="389" r="3.5"/>
+    <circle cx="462" cy="389" r="3.5"/>
+    <circle cx="516" cy="389" r="3.5"/>
+    <circle cx="570" cy="389" r="3.5"/>
+    <circle cx="624" cy="389" r="3.5"/>
+    <circle cx="678" cy="389" r="3.5"/>
+    <!-- Right shift — wide rect -->
+  </g>
+  <!-- Right shift — 2.75u wide rect -->
+  <rect x="714" y="374" width="120" height="30" rx="3" ry="3"
+        stroke="oklch(0.78 0.005 90)" stroke-opacity="0.70" fill="none"/>
+
+  <!-- === Row 4: mod / spacebar row === -->
+  <!-- Left mods: Ctrl, Win, Alt (3 small 1u keys) -->
+  <g fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.72">
+    <circle cx="138" cy="443" r="3"/>
+    <circle cx="192" cy="443" r="3"/>
+    <circle cx="246" cy="443" r="3"/>
+  </g>
+  <!-- Space bar — 6.25u wide rect -->
+  <rect x="276" y="428" width="270" height="30" rx="3" ry="3"
+        stroke="oklch(0.78 0.005 90)" stroke-opacity="0.75" fill="none"/>
+  <!-- Right mods: Alt, Fn (2 small) -->
+  <g fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.72">
+    <circle cx="570" cy="443" r="3"/>
+    <circle cx="624" cy="443" r="3"/>
+  </g>
+
+  <!-- ============================================================
+       RIGHT NAVIGATION COLUMN — 65% tell.
+       Three stacked 1u keys on the right of the alpha block
+       (typically: Del / Home / End or Del / PgUp / PgDn).
+       Drawn as small rounded rects, same weight as arrow keys,
+       slightly bronze tinted to read as a distinct cluster zone.
+  ============================================================ -->
+  <g stroke-opacity="0.82">
+    <!-- Del -->
+    <rect x="908" y="213" width="36" height="28" rx="3" ry="3"/>
+    <!-- Home / PgUp -->
+    <rect x="908" y="267" width="36" height="28" rx="3" ry="3"/>
+    <!-- End / PgDn -->
+    <rect x="908" y="321" width="36" height="28" rx="3" ry="3"/>
+  </g>
+
+  <!-- ============================================================
+       ARROW CLUSTER — bottom-right, the other 65% identity mark.
+       Inverted-T: Up sits centered above, Left/Down/Right in a
+       row beneath. Key size 36×28, pitch 40px.
+  ============================================================ -->
+  <g stroke-opacity="0.88">
+    <!-- Up -->
+    <rect x="948" y="413" width="36" height="28" rx="3" ry="3"/>
+    <!-- Left -->
+    <rect x="908" y="457" width="36" height="28" rx="3" ry="3"/>
+    <!-- Down -->
+    <rect x="948" y="457" width="36" height="28" rx="3" ry="3"/>
+    <!-- Right -->
+    <rect x="988" y="457" width="36" height="28" rx="3" ry="3"/>
+  </g>
+
+  <!-- Arrow key chevron marks — minimal wedge glyphs so the
+       cluster reads as directional at a glance -->
+  <g stroke="oklch(0.78 0.005 90)" stroke-width="1.5" stroke-opacity="0.55"
+     stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Up chevron -->
+    <polyline points="960,433 966,427 972,433"/>
+    <!-- Left chevron -->
+    <polyline points="924,475 918,471 924,467"/>
+    <!-- Down chevron -->
+    <polyline points="960,461 966,467 972,461"/>
+    <!-- Right chevron -->
+    <polyline points="1000,467 1006,471 1000,475"/>
+  </g>
+
+  <!-- ============================================================
+       FOCAL BRONZE ACCENT ELEMENT — the anodized bronze case top
+       bar. A solid-bronze line near the very top of the case
+       (inside the gasket strip) running the full width.
+
+       This represents the clean machined top-bezel of an aluminum
+       65% — the part you see when looking at the board dead-on.
+       It is the Mode Sonnet's most recognizable visual beat:
+       the thick top bezel that the Sonnet is known for.
+  ============================================================ -->
+  <!-- Wide top-bezel band — rendered as a filled rect, bronze -->
+  <rect x="96" y="148" width="972" height="38" rx="12" ry="12"
+        fill="oklch(0.80 0.135 75 / 0.28)" stroke="none"/>
+  <!-- Bottom edge of the top-bezel (clean machined line) -->
+  <line x1="114" y1="186" x2="1068" y2="186"
+        stroke="oklch(0.80 0.135 75)" stroke-opacity="0.65" stroke-width="1.5"/>
+
+  <!-- ============================================================
+       LOGO AREA — center of top bezel, small rect placeholder
+       suggesting the Mode wordmark engraved on the top bezel.
+       Bronze stroke, very low opacity.
+  ============================================================ -->
+  <rect x="555" y="158" width="90" height="18" rx="2" ry="2"
+        stroke="oklch(0.80 0.135 75)" stroke-opacity="0.38"
+        stroke-width="1" fill="none"/>
+
+  <!-- ============================================================
+       ACCENT PIP — lower-right of canvas, family convention.
+       Focal bronze dot + halo ring.
+  ============================================================ -->
+  <circle cx="1072" cy="566" r="7"
+          fill="oklch(0.80 0.135 75 / 0.90)"
+          stroke="oklch(0.80 0.135 75)"/>
+  <circle cx="1072" cy="566" r="15"
+          stroke="oklch(0.80 0.135 75)"
+          stroke-opacity="0.35"
+          fill="none"/>
+
+  <!-- ============================================================
+       SUBTLE COLUMN GUIDES across alpha block — at very low
+       opacity, they add depth without competing with the bronze.
+  ============================================================ -->
+  <g stroke-opacity="0.10" stroke-width="1">
+    <line x1="165" y1="186" x2="165" y2="494"/>
+    <line x1="219" y1="186" x2="219" y2="494"/>
+    <line x1="273" y1="186" x2="273" y2="494"/>
+    <line x1="327" y1="186" x2="327" y2="494"/>
+    <line x1="381" y1="186" x2="381" y2="494"/>
+    <line x1="435" y1="186" x2="435" y2="494"/>
+    <line x1="489" y1="186" x2="489" y2="494"/>
+    <line x1="543" y1="186" x2="543" y2="494"/>
+    <line x1="597" y1="186" x2="597" y2="494"/>
+    <line x1="651" y1="186" x2="651" y2="494"/>
+    <line x1="705" y1="186" x2="705" y2="494"/>
+    <line x1="759" y1="186" x2="759" y2="494"/>
+    <line x1="813" y1="186" x2="813" y2="494"/>
+    <line x1="867" y1="186" x2="867" y2="494"/>
+  </g>
+</svg>

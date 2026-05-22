@@ -1,0 +1,17 @@
+{
+  "kind": "group-buy-hero-art",
+  "target": "apps/web/public/group-buy-art/cannonkeys-mode-sonnet-r2.svg",
+  "source": "plan/bearings.md § Group-buy hero art — colorful SVGs",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject",
+  "size": [1200, 630],
+  "subject": "65% gasket-mount aluminum keyboard silhouette (Mode Sonnet R2) with warm bronze colorway — bronze gasket reveal strips along top and bottom plate edges, wide machined top bezel, right nav column + arrow cluster identifying the 65% layout",
+  "splash_color": "oklch(0.80 0.135 75)",
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": [],
+  "prompt": "Mode Sonnet R2 is a 65% gasket-mount aluminum keyboard in a warm bronze colorway, announced for CannonKeys group buy 2026-06-01 through 2026-07-15. The composition centers a 65% case (972×360px) on the 1200×630 canvas. The single-splash accent is warm bronze (oklch(0.80 0.135 75)) — used as: a low-alpha bronze fill on the case body (the colorway), solid gasket reveal strips at the top and bottom of the case (14px bands at full bronze opacity, the defining gasket-mount visual tell), a wide top-bezel band at 0.28 alpha (Mode Sonnet is known for its thick machined top bezel), and crisp 1.5px stroke lines along the gasket flex boundaries. Alpha dot grid uses warm-grey circles at standard family weight. 65% layout is unambiguous: no F-row, 14-column alpha block across 4 alpha rows (number, QWERTY, home, bottom) plus mod/spacebar row; a 3-key right nav column (Del/Home/End as rounded rects) to the right of the alpha block; an inverted-T arrow cluster (up above, left/down/right beneath) at bottom-right with minimal chevron glyphs. Enter and right-shift are rendered as wide rounded rects rather than dots. Column guides at 0.10 opacity add depth without contesting the bronze. Bronze theme dot at upper-right (family ornament) and accent pip with halo at lower-right. Single-splash discipline: no second hue introduced anywhere. Voice: knowledgeable peer — the gasket strips are the load-bearing editorial element, reading the construction method directly into the silhouette.",
+  "revision": 1,
+  "generated_by": "brander (sub-agent)",
+  "generated_at": "2026-05-22",
+  "commit_at_render": "857d30319a6d7341c52f3718618dcf224da5b0de",
+  "tokens_snapshot": "2fc8f9a4"
+}

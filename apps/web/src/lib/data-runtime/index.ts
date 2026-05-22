@@ -123,7 +123,7 @@ export function getAllClosedGroupBuys(now: Date = new Date()): GroupBuy[] {
   return manifest.groupBuys
     .filter((g) => {
       if (g.status === 'closed' || g.status === 'shipped') return true
-      if (g.status === 'live' && g.endDate < today) return true
+      if ((g.status === 'live' || g.status === 'announced') && g.endDate < today) return true
       return false
     })
     .sort((a, b) => {
