@@ -1493,3 +1493,12 @@ passes accumulate signals.)
 - elements: (1) paragraph before closing Section heading line 57: "the live window are at KBDfans's product page"; (2) closing paragraph line 63: "The live entry alongside the rest of the open buys sits on [/group-buys](/group-buys)"; (3) closing sentence line 63: "Sweet Nightmare closes 2026-05-11; we will revisit when the variant-level sell-through is visible."
 - action: (1) rewrite "the full configurator and the live window are at KBDfans's product page" → remove "live window" reference, keep the source link; (2) update /group-buys link to /group-buys/past with "closed-buy archive" framing; (3) update closing sentence from future-tense "closes...we will revisit" to past-tense "closed 2026-05-11"; (4) bump updatedAt to 2026-05-22
 - issue: #177
+
+### [x] [test] [3.6] sortParts + isValidKind in /part/[kind] have no unit tests — addressed in this commit
+- category: test
+- filed: 2026-05-22 by cloud /iterate audit
+- impact: 4 (sortParts drives active-first ordering on /part/switch, /part/keycap-set, /part/board; the PRODUCTION_STATUSES invariant was untested — a silent regression removing a status would reorder the entire catalog without any failing test; unlike every other route with helpers, /part/[kind] had no helpers.ts extraction)
+- ease: 9 (extract two functions to helpers.ts + write 8 test cases; same pattern as guides, ideas, deep-dives helpers)
+- score: 3.6 (impact × ease / 10)
+- issue: [mirror-failed: 2026-05-22T17:04:00Z]
+> **Resolved (2026-05-22):** Extracted isValidKind, PRODUCTION_STATUSES, sortParts to apps/web/src/app/part/[kind]/helpers.ts (exported). Updated page.tsx to import from helpers. Added apps/web/src/app/part/[kind]/__tests__/helpers.test.ts: 8 cases covering isValidKind (valid/invalid/case-sensitive) and sortParts (active-first, alpha within group, all four production statuses, mutation-safety). 664 e2e green.

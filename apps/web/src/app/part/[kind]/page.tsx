@@ -16,9 +16,11 @@ import {
   type ResolvedPart,
 } from '@/lib/data-runtime'
 import { PartIndexCard } from '@/components/part/PartIndexCard'
-
-const VALID_KINDS = ['switch', 'keycap-set', 'board'] as const
-type ValidKind = (typeof VALID_KINDS)[number]
+import {
+  isValidKind,
+  sortParts,
+  type ValidKind,
+} from './helpers'
 
 const KIND_HEADING: Record<ValidKind, string> = {
   switch: 'Switches',
@@ -39,10 +41,6 @@ const KIND_DESCRIPTION: Record<ValidKind, string> = {
     'Every keycap set in the thock catalog — profile, material, designer, and which builds use them.',
   board:
     'Every board in the thock catalog — layout, mount style, and the articles that cover them.',
-}
-
-function isValidKind(kind: string): kind is ValidKind {
-  return (VALID_KINDS as readonly string[]).includes(kind)
 }
 
 function partsForKind(kind: ValidKind): ResolvedPart[] {
@@ -68,22 +66,6 @@ function partsForKind(kind: ValidKind): ResolvedPart[] {
     slug: record.slug,
     record,
   }))
-}
-
-const PRODUCTION_STATUSES = new Set([
-  'in-production',
-  'in-stock',
-  'group-buy',
-  'limited',
-])
-
-function sortParts(parts: ResolvedPart[]): ResolvedPart[] {
-  return [...parts].sort((a, b) => {
-    const aActive = PRODUCTION_STATUSES.has(a.record.status)
-    const bActive = PRODUCTION_STATUSES.has(b.record.status)
-    if (aActive !== bActive) return aActive ? -1 : 1
-    return a.record.name.localeCompare(b.record.name)
-  })
 }
 
 export async function generateMetadata({
