@@ -1415,13 +1415,14 @@ passes accumulate signals.)
 - issue: #166
 > **Resolved (2026-05-21):** Extended the it() label to include "phases 28, 33, 29, 35" and added '/parts' to the path array. 660 e2e green. `00361e6`
 
-### [ ] [ux] [4.8] tracker: 'article pending' note for null-slug rows with real scores — closes #173
+### [x] [ux] [4.8] tracker: 'article pending' note for null-slug rows with real scores — addressed in 41f1755 (closes #173)
 - category: enhancement
 - filed: 2026-05-22 by cloud /iterate audit
 - impact: 6 (signature feature; all tracker page visits; every weekly snapshot begins with 12–18 rows where the em-dash misleads — current "—" implies "no data" but these rows always carry a real score/direction/sparkline)
 - ease: 8 (single-component change in TrackerRow.tsx + update 1 existing test + 1 new test)
 - score: 4.8 (impact × ease / 10)
 - issue: #173
+> **Resolved (2026-05-22):** Changed null-noteText branch in TrackerRow's editor's-note column from `<span aria-hidden="true" className="text-text-4">—</span>` to `<span data-testid="tracker-row-pending-note" className="text-text-4">article pending</span>`. Updated existing em-dash test and added one new test for the pending-note testid. 663 e2e green. `41f1755`
 
 ### [x] [test] [3.6] SwitchQuiz — quiz-browse-all-parts-link has no unit test — addressed in c9272e0 (closes #168)
 - category: test
