@@ -138,6 +138,17 @@
 - issue: #165
 - blocker: cloud loop cannot push `.github/workflows/` files — ACTIONS_PAT needs `workflow` scope (classic PAT) or `workflows: write` permission (fine-grained). The fix is one line in lighthouse.yml (confirmed correct; soft-reset after push rejected on 2026-05-21 cloud tick). Drain requires a local push or ACTIONS_PAT scope upgrade.
 
+### [x] [copy] [3.6] home GroupBuysWidget kicker says "ending soon" — /group-buys page uses "Closing soon" for the same urgency band
+- category: copy
+- filed: 2026-05-22 by cloud /iterate audit
+- impact: 4 (affects / and /group-buys — two surfaces describing the same urgency band with different vocabulary)
+- ease: 9 (single string change in one file)
+- score: 3.6 (impact × ease / 10)
+- evidence: `apps/web/src/components/home/GroupBuysWidget.tsx:64` uses `'group buys · ending soon'`; `apps/web/src/app/group-buys/page.tsx:118` uses `title="Closing soon"`. Widget heading on line 66 already says "Don't miss the close", making "ending soon" the odd-one-out.
+- action: change GroupBuysWidget.tsx kicker from `'group buys · ending soon'` to `'group buys · closing soon'`
+- issue: #176
+> **Resolved (2026-05-22):** Kicker string changed from 'ending soon' to 'closing soon'; test updated. 664 e2e green. `00602dd`
+
 ### [x] [copy] [4.5] trends-tracker-preview says "updated every Friday" — tracker updates on Mondays since Phase 31 — addressed in 0975c4b, closes #175
 - category: copy
 - filed: 2026-05-22 by cloud /iterate audit
