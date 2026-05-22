@@ -1462,3 +1462,14 @@ passes accumulate signals.)
 - score: 3.6 (impact × ease / 10)
 - issue: #168
 > **Resolved (2026-05-21):** Added 1 it() block to SwitchQuiz.test.tsx: render → answerAllQuestions → getByTestId('quiz-browse-all-parts-link') → assert in-document, href=/parts, text matches /browse all parts/i. SwitchQuiz suite: 5 → 6 tests. 660 e2e green. `c9272e0`
+
+### [ ] [content] [3.2] gsk-sweet-nightmare-group-buy — three stale phrases reference an active window for a group buy closed May 11
+- category: content
+- filed: 2026-05-22 by cloud /iterate audit
+- impact: 4 (readers arriving now see "live window," "closes 2026-05-11; we will revisit," and "live entry alongside the open buys" language for a buy 11 days past close; the /group-buys link also points to the live board instead of the archive)
+- ease: 8 (3 phrase fixes + updatedAt bump; same pattern as the prussian-alert and king-of-the-seas post-open language fixes)
+- score: 3.2 (impact × ease / 10)
+- pages: /article/gsk-sweet-nightmare-group-buy
+- elements: (1) paragraph before closing Section heading line 57: "the live window are at KBDfans's product page"; (2) closing paragraph line 63: "The live entry alongside the rest of the open buys sits on [/group-buys](/group-buys)"; (3) closing sentence line 63: "Sweet Nightmare closes 2026-05-11; we will revisit when the variant-level sell-through is visible."
+- action: (1) rewrite "the full configurator and the live window are at KBDfans's product page" → remove "live window" reference, keep the source link; (2) update /group-buys link to /group-buys/past with "closed-buy archive" framing; (3) update closing sentence from future-tense "closes...we will revisit" to past-tense "closed 2026-05-11"; (4) bump updatedAt to 2026-05-22
+- issue: #177
