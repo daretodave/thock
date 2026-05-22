@@ -138,6 +138,16 @@
 - issue: #165
 - blocker: cloud loop cannot push `.github/workflows/` files — ACTIONS_PAT needs `workflow` scope (classic PAT) or `workflows: write` permission (fine-grained). The fix is one line in lighthouse.yml (confirmed correct; soft-reset after push rejected on 2026-05-21 cloud tick). Drain requires a local push or ACTIONS_PAT scope upgrade.
 
+### [x] [copy] [3.2] gmk-cyl-ramune-group-buy — 'approximately 2026-06-20' imprecise; stale forward-looking closer — addressed in 75ad5a0, closes #179
+- category: copy
+- filed: 2026-05-22 by cloud /iterate audit
+- impact: 4 (live buy article visited by active buyers; 'approximately' is inaccurate since kbdfans-gmk-cyl-ramune.json has endDate: 2026-06-20 exactly; 'We will revisit when the numbers land' is an unfulfillable editorial promise on a static MDX article)
+- ease: 8 (6 text substitutions: 3 body occurrences + 1 SVG alt text + 1 'around June 20' precision fix + closing sentence rewrite)
+- score: 3.2 (impact × ease / 10)
+- action: remove 'approximately ' from all date references; replace closing with tracker link; bump updatedAt
+- issue: #179
+> **Resolved (2026-05-22):** Removed 'approximately' from 3 body occurrences of '2026-06-20' and 1 InlineViz alt text. Fixed 'closes around June 20' → 'closes on 2026-06-20' in 'What we're watching'. Replaced 'Ramune closes approximately 2026-06-20. We will revisit when the numbers land.' with 'Ramune closes 2026-06-20. Follow the trends tracker for post-close movement data.' updatedAt bumped to 2026-05-22. 664 e2e green. `75ad5a0`
+
 ### [x] [copy] [3.6] home GroupBuysWidget kicker says "ending soon" — /group-buys page uses "Closing soon" for the same urgency band
 - category: copy
 - filed: 2026-05-22 by cloud /iterate audit
