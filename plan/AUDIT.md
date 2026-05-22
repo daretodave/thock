@@ -94,6 +94,15 @@
 
 ## Open findings
 
+### [x] [copy] [3.6] gmk-cyl-ishtar-r2-group-buy — closed buy buying-notes links to /group-buys (active) instead of /group-buys/past (archive) — addressed in 2705750, closes #184
+- category: copy
+- filed: 2026-05-22 by cloud /iterate audit
+- impact: 4 (closed buy article misdirects readers to active buys page; same /group-buys → /group-buys/past pattern fixed on Sweet Nightmare `3443fe9` and Nyawice `0bcbb47`)
+- ease: 9 (single sentence edit + updatedAt bump)
+- score: 3.6 (impact × ease / 10)
+- issue: #184
+> **Resolved (2026-05-22):** "The live entries for buys still inside their windows sit on /group-buys" → "The archived entry is at /group-buys/past. Ishtar R2 closed 2026-05-10." updatedAt bumped to 2026-05-22. 664 e2e green. `2705750`
+
 ### [x] [copy] [3.6] gmk-cyl-greg-2-group-buy closing sentence: "We will revisit when the order numbers settle" is unfulfillable on a static MDX — addressed in 6fba00d, closes #180
 - category: copy
 - filed: 2026-05-22 by cloud /iterate audit
