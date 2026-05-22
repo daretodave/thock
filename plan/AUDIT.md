@@ -138,6 +138,15 @@
 - issue: #165
 - blocker: cloud loop cannot push `.github/workflows/` files — ACTIONS_PAT needs `workflow` scope (classic PAT) or `workflows: write` permission (fine-grained). The fix is one line in lighthouse.yml (confirmed correct; soft-reset after push rejected on 2026-05-21 cloud tick). Drain requires a local push or ACTIONS_PAT scope upgrade.
 
+### [x] [ux] [4.0] /parts landing has no home-page or nav entry point — addressed in f097dba, closes #174
+- category: ux
+- filed: 2026-05-22 by cloud /iterate audit
+- impact: 5 (/parts catalogs 48 parts across 3 kinds; shipped in phase 35 but had zero home-page or global-nav visibility — only reachable via quiz results or /part/[kind] back-links)
+- ease: 8 (extend existing "Switch recommender CTA" paragraph on home page to also link /parts; add 1 e2e guard)
+- score: 4.0 (impact × ease / 10)
+- issue: #174
+> **Resolved (2026-05-22):** Extended the home-page "Switch recommender CTA" paragraph (`page.tsx`) to include a "browse the parts catalog" link pointing to `/parts`, giving the phase-35 surface a direct home-page entry point. Added `data-testid="home-cta-strip"` on the container; new e2e assertion in `home.spec.ts` verifies the `/parts` link is visible and href-correct. 664 e2e green (+1). `f097dba`
+
 ### [x] [a11y] [4.0] /parts missing from axe desktop suite — addressed in 00da541, closes #169
 - category: a11y
 - filed: 2026-05-21 by cloud /iterate audit
