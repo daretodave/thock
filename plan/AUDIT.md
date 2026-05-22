@@ -138,7 +138,7 @@
 - issue: #165
 - blocker: cloud loop cannot push `.github/workflows/` files — ACTIONS_PAT needs `workflow` scope (classic PAT) or `workflows: write` permission (fine-grained). The fix is one line in lighthouse.yml (confirmed correct; soft-reset after push rejected on 2026-05-21 cloud tick). Drain requires a local push or ACTIONS_PAT scope upgrade.
 
-### [ ] [copy] [4.5] trends-tracker-preview says "updated every Friday" — tracker updates on Mondays since Phase 31
+### [x] [copy] [4.5] trends-tracker-preview says "updated every Friday" — tracker updates on Mondays since Phase 31 — addressed in 0975c4b, closes #175
 - category: copy
 - filed: 2026-05-22 by cloud /iterate audit
 - impact: 5 (the "Reading the Trends Tracker" explainer at /article/trends-tracker-preview is linked from /about and is the canonical reference for how the tracker works; both the lede and the body claim Friday updates, but Phase 31's Monday-gate writes each snapshot on Monday and all three existing snapshots have Monday publishedAt timestamps — a reader checking the tracker expecting Friday updates will be confused when new data appears Monday instead; the closing sentence also promises "Watch 2026-W20 for the first annotated rows" — W20 and W21 have notes on every row, so the forward-looking promise is stale)
@@ -146,6 +146,7 @@
 - score: 4.5 (impact × ease / 10)
 - action: (1) lede: "updated every Friday" → "updated each Monday"; (2) line 19: "updates each Friday at 08:00 UTC" → "updates each Monday morning"; (3) line 67: replace "Watch 2026-W20 for the first annotated rows" with a current-state note that per-row editorial notes are now live across all snapshots; (4) bump updatedAt to 2026-05-22
 - issue: #175
+> **Resolved (2026-05-22):** Lede "updated every Friday" → "updated each Monday". Body sentence "updates each Friday at 08:00 UTC" → "updates each Monday morning". Closing paragraph replaced: stale "Watch 2026-W20 for the first annotated rows" promise → "Every row now carries an editorial note explaining why it moved." updatedAt bumped to 2026-05-22. 664 e2e green. `0975c4b`
 
 ### [x] [ux] [4.0] /parts landing has no home-page or nav entry point — addressed in f097dba, closes #174
 - category: ux
