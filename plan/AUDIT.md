@@ -143,6 +143,16 @@
 - issue: #181
 > **Resolved (2026-05-22):** Replaced "We will revisit when the GB closes and the order numbers settle." with "Follow the [trends tracker](/trends/tracker) for post-close movement data." updatedAt already 2026-05-22 from f929776. 664 e2e green. `f98048f`
 
+### [x] [copy] [3.6] gmk-cyl-king-of-the-seas closing sentence: "will pick up the close-week signal" is unfulfillable on a static MDX — addressed in c25c1f0, closes #182
+- category: copy
+- filed: 2026-05-22 by cloud /iterate audit
+- impact: 4 (live group buy closing 2026-05-31; same unfulfillable-promise pattern as #179 ramune fixed in 75ad5a0, #180 greg-2 fixed in 6fba00d, #181 prussian-alert fixed in f98048f; the tracker records weekly community-wide signals, not close-week analysis for specific GBs)
+- ease: 9 (single sentence rewrite — last line of the article)
+- score: 3.6 (impact × ease / 10)
+- action: replace "King of the Seas closes 2026-05-31. The [trends tracker](/trends/tracker) will pick up the close-week signal when the order numbers settle." with "King of the Seas closes 2026-05-31. Follow the [trends tracker](/trends/tracker) for post-close movement data."
+- issue: #182
+> **Resolved (2026-05-22):** Replaced closing sentence with tracker link. updatedAt bumped to 2026-05-22. 664 e2e green. `c25c1f0`
+
 ### [ ] [ci] [4.8] Lighthouse CI workflow audits the SSO-protected per-deployment URL — every run fails, the gate produces zero signal
 - category: ci
 - filed: 2026-05-21 by /oversight
