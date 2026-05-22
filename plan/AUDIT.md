@@ -94,6 +94,16 @@
 
 ## Open findings
 
+### [x] [copy] [3.6] gmk-cyl-greg-2-group-buy closing sentence: "We will revisit when the order numbers settle" is unfulfillable on a static MDX — addressed in 6fba00d, closes #180
+- category: copy
+- filed: 2026-05-22 by cloud /iterate audit
+- impact: 4 (live group buy closing 2026-05-29; same unfulfillable-promise pattern as #179 ramune fixed in 75ad5a0; a static MDX cannot revisit post-close data)
+- ease: 9 (single sentence rewrite — last line of the article)
+- score: 3.6 (impact × ease / 10)
+- action: replace "GREG R2 closes 2026-05-29. We will revisit when the order numbers settle." with "GREG R2 closes 2026-05-29. Follow the [trends tracker](/trends/tracker) for post-close movement data."
+- issue: #180
+> **Resolved (2026-05-22):** Replaced closing sentence with tracker link. updatedAt bumped to 2026-05-22. 664 e2e green. `6fba00d`
+
 ### [x] [a11y] [4.8] /quiz/switch missing from axe desktop a11y suite — interactive ARIA surface never hardened by Phase B gate — addressed in 6868728, closes #170
 - category: a11y
 - filed: 2026-05-21 by cloud /iterate audit
