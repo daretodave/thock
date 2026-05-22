@@ -154,6 +154,16 @@
 > **Resolved (2026-05-22):** Replaced closing sentence with tracker link. updatedAt bumped to 2026-05-22. 664 e2e green. `c25c1f0`
 
 ### [ ] [ci] [4.8] Lighthouse CI workflow audits the SSO-protected per-deployment URL — every run fails, the gate produces zero signal
+<!-- finding unchanged — cloud-blocked; ACTIONS_PAT needs workflow scope -->
+
+### [x] [copy] [3.6] cannonkeys-nyawice-group-buy — stale 'current window' and unfulfillable closer (buy closed 2026-05-17) — addressed in 0bcbb47
+- category: copy
+- filed: 2026-05-22 by cloud /iterate audit
+- impact: 4 (closed buy article; "current window" in Source link and "/group-buys" link stale; "Thock will report back when builds begin shipping" unfulfillable — same pattern as Ramune/Prussian Alert/GREG 2/King of the Seas)
+- ease: 9 (3 sentence rewrites + updatedAt bump)
+- score: 3.6 (impact × ease / 10)
+- issue: [mirror-failed: 2026-05-22T21:37:00Z]
+> **Resolved (2026-05-22):** "the current window" → "build details"; "/group-buys" → "/group-buys/past" (buy is in archive). Closing sentence "Thock will report back when builds begin shipping." → "Follow the trends tracker for post-fulfillment movement data." updatedAt bumped to 2026-05-22. 664 e2e green. `0bcbb47`
 - category: ci
 - filed: 2026-05-21 by /oversight
 - impact: 6 (the Lighthouse gate has never once passed: dormant while it filtered to Preview, then red on every run since `48adce0` switched it to gate Production. The perf / a11y / SEO regression signal phases #84/#85 shipped it for is entirely lost, and a permanent red ✘ on the Actions tab trains everyone to ignore CI status)
