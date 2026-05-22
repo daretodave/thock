@@ -61,7 +61,7 @@ export function GroupBuysWidget({
         .slice(0, max)
     : sortedAll.slice(0, max)
   const kicker = anyUrgent
-    ? 'group buys · ending soon'
+    ? 'group buys · closing soon'
     : 'group buys · open now'
   const heading = anyUrgent ? "Don't miss the close" : 'Currently running'
 

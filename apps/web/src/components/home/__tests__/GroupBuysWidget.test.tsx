@@ -123,7 +123,7 @@ describe('<GroupBuysWidget>', () => {
     expect(container.querySelector('aside')?.getAttribute('data-urgent')).toBe(
       'true',
     )
-    expect(screen.getByText(/group buys · ending soon/i)).toBeTruthy()
+    expect(screen.getByText(/group buys · closing soon/i)).toBeTruthy()
     expect(screen.getByText(/Don't miss the close/i)).toBeTruthy()
   })
 
