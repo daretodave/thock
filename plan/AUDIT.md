@@ -134,6 +134,15 @@
 - root cause: article was shipped as a lean news announcement covering timing, palette, and tracker signal, but omitted kit structure details, pricing context, and buying guidance that a reader considering the live buy needs
 > **Resolved (2026-05-22):** Expanded "What's in the run" with kit structure (base/modifier/novelties/deskmat pattern, KBDfans as authoritative source for exact counts), pricing context ($110–155 USD base kit range; fully-kitted $165–240 territory), and colorway resale-value analysis. Expanded "Timing" with international shipping context (EU buyers: 20–25% import overhead without proxy), and production timeline (~9–12 months from GB close; Q1–Q2 2027 delivery window). Article now at ~700+ prose words. updatedAt bumped to 2026-05-22. 663 e2e green. `f929776`
 
+### [x] [copy] [3.6] gmk-cyl-prussian-alert — "We will revisit when the GB closes" unfulfillable closer — addressed in f98048f, closes #181
+- category: copy
+- filed: 2026-05-22 by cloud /iterate audit
+- impact: 4 (live GB through 2026-06-12; same unfulfillable-promise pattern as #179 ramune fixed in 75ad5a0 and #180 greg-2 fixed in 6fba00d; static MDX cannot revisit post-close data)
+- ease: 9 (single sentence rewrite — last line of the article body)
+- score: 3.6 (impact × ease / 10)
+- issue: #181
+> **Resolved (2026-05-22):** Replaced "We will revisit when the GB closes and the order numbers settle." with "Follow the [trends tracker](/trends/tracker) for post-close movement data." updatedAt already 2026-05-22 from f929776. 664 e2e green. `f98048f`
+
 ### [ ] [ci] [4.8] Lighthouse CI workflow audits the SSO-protected per-deployment URL — every run fails, the gate produces zero signal
 - category: ci
 - filed: 2026-05-21 by /oversight
