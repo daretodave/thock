@@ -113,6 +113,17 @@
 - action: (1) kind-index: add { name: 'Parts', path: '/parts' } to BreadcrumbList; update back-link to href="/parts" / ← all parts; (2) detail: change path: '/part' → path: '/parts'; (3) e2e: assert part-kind-back-link href="/parts"
 - issue: #171
 
+### [x] [content] [3.0] gmk-cyl-prussian-alert — ~470 prose words, well below 600-word quality threshold — addressed in f929776 (closes #172)
+- category: content
+- filed: 2026-05-22 by cloud /iterate audit
+- impact: 5 (live group buy through 2026-06-12; article is the thinnest in the corpus; other GMK CYL companions range 1073–1309 prose words; thin content undersells a high-momentum buy)
+- ease: 6 (content-curator expansion of existing article; no new components, data records, or schema changes)
+- score: 3.0 (impact × ease / 10)
+- issue: #172
+- pages: /article/gmk-cyl-prussian-alert
+- root cause: article was shipped as a lean news announcement covering timing, palette, and tracker signal, but omitted kit structure details, pricing context, and buying guidance that a reader considering the live buy needs
+> **Resolved (2026-05-22):** Expanded "What's in the run" with kit structure (base/modifier/novelties/deskmat pattern, KBDfans as authoritative source for exact counts), pricing context ($110–155 USD base kit range; fully-kitted $165–240 territory), and colorway resale-value analysis. Expanded "Timing" with international shipping context (EU buyers: 20–25% import overhead without proxy), and production timeline (~9–12 months from GB close; Q1–Q2 2027 delivery window). Article now at ~700+ prose words. updatedAt bumped to 2026-05-22. 663 e2e green. `f929776`
+
 ### [ ] [ci] [4.8] Lighthouse CI workflow audits the SSO-protected per-deployment URL — every run fails, the gate produces zero signal
 - category: ci
 - filed: 2026-05-21 by /oversight
