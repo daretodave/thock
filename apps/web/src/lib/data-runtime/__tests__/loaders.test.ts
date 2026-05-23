@@ -88,7 +88,7 @@ describe('data-runtime adapter', () => {
     }
   })
 
-  it('past group buys includes closed/shipped + lapsed-live, sorted endDate desc', () => {
+  it('past group buys includes closed/shipped + lapsed-live and lapsed-announced, sorted endDate desc', () => {
     // Pick a reference date far in the future so every record qualifies as past.
     const farFuture = new Date('2099-12-31T00:00:00Z')
     const past = getAllClosedGroupBuys(farFuture)
@@ -99,6 +99,23 @@ describe('data-runtime adapter', () => {
         past[i - 1]!.endDate.localeCompare(past[i]!.endDate),
       ).toBeGreaterThanOrEqual(0)
     }
+  })
+
+  it('past group buys includes lapsed-announced (status announced + endDate past)', () => {
+    // cannonkeys-mode-sonnet-r2 is announced with endDate 2026-07-15.
+    // A reference date after that endDate must include it in the closed list.
+    const afterEnd = new Date('2026-07-16T00:00:00Z')
+    const past = getAllClosedGroupBuys(afterEnd)
+    const slugs = past.map((g) => g.slug)
+    expect(slugs).toContain('cannonkeys-mode-sonnet-r2')
+  })
+
+  it('past group buys excludes announced buy whose endDate is still in the future', () => {
+    // Same buy — a reference date before the end date must NOT include it.
+    const beforeEnd = new Date('2026-05-25T00:00:00Z')
+    const past = getAllClosedGroupBuys(beforeEnd)
+    const slugs = past.map((g) => g.slug)
+    expect(slugs).not.toContain('cannonkeys-mode-sonnet-r2')
   })
 
   it('past group buys excludes future-dated live buys', () => {
