@@ -1605,3 +1605,13 @@ passes accumulate signals.)
 - score: 4.5 (impact × ease / 10)
 - issue: #189
 > **Resolved (2026-05-23):** Changed `text-text-4` → `text-text-2` on the `tracker-row-pending-note` span in `TrackerRow.tsx:95`. Added regression guard to `TrackerRow.test.tsx`: asserts `className` matches `/\btext-text-2\b/` and not `/\btext-text-4\b/`. 664 e2e green. `a7b8fa6`
+
+### [ ] [copy] [3.6] vendor-first-customs — "Phase-19" build-plan jargon in W19 tracker references
+- category: copy
+- filed: 2026-05-23 by cloud /iterate audit
+- impact: 4 (published trends article uses build-plan notation "Phase-19" for three inline links to W19 tracker data; readers have no context for this notation; same leak pattern as the nyawice "W19 movement score" fix)
+- ease: 9 (three phrase substitutions + updatedAt bump)
+- score: 3.6 (impact × ease / 10)
+- pages: /article/vendor-first-customs
+- elements: lines 80, 95, 136 — "Phase-19 trends row", "Phase-19 row for CannonKeys", "Phase-19 row" → "W19 tracker row"
+- issue: #192
