@@ -1577,3 +1577,12 @@ passes accumulate signals.)
 - score: 3.6 (impact × ease / 10)
 - issue: #187
 > **Resolved (2026-05-23):** Updated test name from "lapsed-live" to "lapsed-live and lapsed-announced". Added positive case (reference date after Mode Sonnet R2 endDate → slug present) and negative case (before endDate → slug absent). 664 e2e green. `fe1cc59`
+
+### [x] [test] [4.5] getActiveGroupBuys — no positive assertion for announced status — addressed in 404020e (closes #188)
+- category: test
+- filed: 2026-05-23 by cloud /iterate audit
+- impact: 5 (getActiveGroupBuys powers /group-buys announced section; silent regression filtering out announced status would hide Mode Sonnet R2 from /group-buys with no failing test; symmetric gap to the getAllClosedGroupBuys coverage filed in #187)
+- ease: 9 (two targeted it() blocks in loaders.test.ts — positive and negative case)
+- score: 4.5 (impact × ease / 10)
+- issue: #188
+> **Resolved (2026-05-23):** Added positive case (cannonkeys-mode-sonnet-r2 slug present when ref date 2026-05-23, before endDate 2026-07-15) and negative case (slug absent when ref date 2026-07-16, after endDate). Symmetric with getAllClosedGroupBuys coverage from fe1cc59. 664 e2e green. `404020e`
