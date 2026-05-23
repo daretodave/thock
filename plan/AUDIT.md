@@ -181,9 +181,9 @@
 - issue: #182
 > **Resolved (2026-05-22):** Replaced closing sentence with tracker link. updatedAt bumped to 2026-05-22. 664 e2e green. `c25c1f0`
 
-### [ ] [ci] [4.8] Lighthouse CI workflow audits the SSO-protected per-deployment URL — every run fails, the gate produces zero signal
-<!-- finding unchanged — cloud-blocked; ACTIONS_PAT needs workflow scope -->
+### [x] [ci] [4.8] Lighthouse CI workflow audits the SSO-protected per-deployment URL — every run fails, the gate produces zero signal — addressed in this commit (closes #190, #165)
 - issue: #190
+> **Resolved (2026-05-23):** `.github/workflows/lighthouse.yml` `urls:` swapped from `${{ github.event.deployment_status.target_url }}` (SSO-gated per-deployment hostname → 307 to vercel.com/login) to the public canonical alias `https://thock.xyz` for all four audited paths. Production-success `deployment_status` trigger preserved — only the audited URL changes. Detailed comment block added in-file referencing this AUDIT row. Pushed via local user session (cloud loop blocked on `workflow` PAT scope).
 
 ### [x] [copy] [3.6] building-mode-sonnet — unfulfillable 'report back' promise + stale R2 pointer — addressed in 9055ece (closes #191)
 - category: copy

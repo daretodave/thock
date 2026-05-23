@@ -62,11 +62,21 @@ jobs:
           # the visual-heavy group-buys index. Keep this list short
           # — each URL × numberOfRuns adds runtime; the median-of-3
           # noise floor matters more than coverage breadth here.
+          #
+          # Audit the public canonical alias (siteConfig.siteUrl), not
+          # the per-deployment Vercel hostname. The deployment URL is
+          # gated by Vercel Deployment Protection (Authentication/SSO)
+          # so target_url 307-redirects to vercel.com/login — Lighthouse
+          # then audits the login page, which trips ~21 assertions and
+          # produces zero signal about thock. The Production trigger
+          # above still gates the run on a successful Vercel deploy of
+          # the commit; only the audited URL changes. (Fixed 2026-05-23
+          # — see plan/AUDIT.md #190.)
           urls: |
-            ${{ github.event.deployment_status.target_url }}
-            ${{ github.event.deployment_status.target_url }}/article/gateron-oil-king-deep-dive
-            ${{ github.event.deployment_status.target_url }}/trends/tracker
-            ${{ github.event.deployment_status.target_url }}/group-buys
+            https://thock.xyz/
+            https://thock.xyz/article/gateron-oil-king-deep-dive
+            https://thock.xyz/trends/tracker
+            https://thock.xyz/group-buys
           uploadArtifacts: true
           temporaryPublicStorage: true
           configPath: ./.lighthouserc.json
