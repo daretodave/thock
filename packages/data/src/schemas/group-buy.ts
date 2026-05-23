@@ -24,6 +24,14 @@ export const GroupBuySchema = z
      * when the field is null.
      */
     heroImage: z.string().nullable(),
+    /**
+     * Slug of the thock companion article covering this group buy
+     * (e.g. "gmk-cyl-ramune-group-buy"). Phase 37 schema additive.
+     * Optional — group buys without editorial coverage omit the field.
+     * Rendered as "Read our coverage →" link on active cards and
+     * archive rows; JSON-LD ListItem carries `sameAs` when set.
+     */
+    relatedArticle: z.string().optional(),
     status: z.enum(['announced', 'live', 'closed', 'shipped']),
     description: z.string().min(20).max(800),
     updatedAt: IsoDateSchema,

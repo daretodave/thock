@@ -97,11 +97,12 @@ export function buildCollectionPageJsonLd(
  * One ItemList entry. Provide either `path` (a site-relative path
  * canonicalized against `siteConfig.url`) or `url` (an absolute URL
  * passed through unchanged — used for outbound items like group
- * buys with no on-site detail page).
+ * buys with no on-site detail page). Optional `sameAs` carries a
+ * second canonical URL (e.g. a thock article covering a group buy).
  */
 export type ItemListEntry =
-  | { name: string; path: string; url?: never }
-  | { name: string; url: string; path?: never }
+  | { name: string; path: string; url?: never; sameAs?: string }
+  | { name: string; url: string; path?: never; sameAs?: string }
 export type BuildItemListJsonLdInput = {
   name?: string
   items: ItemListEntry[]
@@ -119,6 +120,7 @@ export function buildItemListJsonLd(
       position: i + 1,
       name: entry.name,
       url: entry.url ?? canonicalUrl(entry.path as string),
+      ...(entry.sameAs ? { sameAs: entry.sameAs } : {}),
     })),
   }
 }

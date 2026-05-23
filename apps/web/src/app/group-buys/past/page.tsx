@@ -5,6 +5,7 @@ import {
   buildCollectionPageJsonLd,
   buildItemListJsonLd,
   buildMetadata,
+  canonicalUrl,
   JsonLd,
 } from '@thock/seo'
 import type { Vendor } from '@thock/data'
@@ -35,6 +36,9 @@ export default function PastGroupBuysPage(): ReactElement {
   const itemListItems = past.map((gb) => ({
     name: gb.name,
     url: gb.url,
+    ...(gb.relatedArticle
+      ? { sameAs: canonicalUrl(`/article/${gb.relatedArticle}`) }
+      : {}),
   }))
 
   return (

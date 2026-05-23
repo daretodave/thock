@@ -53,6 +53,41 @@ test.describe('group-buys index — phase 13', () => {
   })
 })
 
+test.describe('group-buys relatedArticle — phase 37', () => {
+  test('shows "read our coverage" link on at least one card where relatedArticle is set', async ({
+    page,
+  }) => {
+    await page.goto('/group-buys')
+    const links = page.locator('[data-testid="group-buy-coverage-link"]')
+    expect(await links.count()).toBeGreaterThanOrEqual(1)
+    const first = links.first()
+    await expect(first).toHaveAttribute('href', /^\/article\//)
+    await expect(first).toContainText(/read our coverage/i)
+  })
+
+  test('coverage link also appears on past group-buys archive', async ({
+    page,
+  }) => {
+    await page.goto('/group-buys/past')
+    const links = page.locator('[data-testid="group-buy-coverage-link"]')
+    expect(await links.count()).toBeGreaterThanOrEqual(1)
+    const first = links.first()
+    await expect(first).toHaveAttribute('href', /^\/article\//)
+  })
+
+  test('ItemList JSON-LD on /group-buys includes sameAs for buy with relatedArticle', async ({
+    page,
+  }) => {
+    await page.goto('/group-buys')
+    const scripts = await page
+      .locator('script[type="application/ld+json"]')
+      .allTextContents()
+    const flat = scripts.join('\n')
+    expect(flat).toContain('"sameAs"')
+    expect(flat).toContain('/article/')
+  })
+})
+
 test.describe('group-buys archive — phase 29', () => {
   test('renders the Past group buys H1', async ({ page }) => {
     await page.goto('/group-buys/past')

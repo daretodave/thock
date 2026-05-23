@@ -164,6 +164,15 @@ export function GroupBuyRow({
             view at vendor →
           </a>
         )}
+        {groupBuy.relatedArticle && (
+          <a
+            data-testid="group-buy-coverage-link"
+            href={`/article/${groupBuy.relatedArticle}`}
+            className="font-mono text-micro uppercase tracking-[0.08em] text-text-2 hover:text-text"
+          >
+            read our coverage →
+          </a>
+        )}
       </div>
     </article>
   )

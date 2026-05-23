@@ -5,6 +5,7 @@ import {
   buildCollectionPageJsonLd,
   buildItemListJsonLd,
   buildMetadata,
+  canonicalUrl,
   JsonLd,
 } from '@thock/seo'
 import type { GroupBuy, Vendor } from '@thock/data'
@@ -49,6 +50,9 @@ export default function GroupBuysPage(): ReactElement {
   const itemListItems = [...live, ...announced].map((gb) => ({
     name: gb.name,
     url: gb.url,
+    ...(gb.relatedArticle
+      ? { sameAs: canonicalUrl(`/article/${gb.relatedArticle}`) }
+      : {}),
   }))
 
   const totalActive = live.length + announced.length

@@ -601,6 +601,7 @@
       "url": "https://cannonkeys.com/products/mode-sonnet-r2",
       "imageUrl": null,
       "heroImage": "/group-buy-art/cannonkeys-mode-sonnet-r2.svg",
+      "relatedArticle": "mode-sonnet-r2-group-buy-coverage",
       "status": "announced",
       "description": "Mode Sonnet R2 — 65% gasket-mount aluminum board with polycarbonate plate as default and brass/FR4 upgrade options. Warm bronze and ochre accent colorway. Global group buy hosted by CannonKeys, 2026-06-01 through 2026-07-15. Lead time approximately Q4 2026.",
       "updatedAt": "2026-05-22T00:00:00.000Z"
@@ -617,6 +618,7 @@
       "url": "https://cannonkeys.com/products/nyawice",
       "imageUrl": null,
       "heroImage": "/group-buy-art/cannonkeys-nyawice.svg",
+      "relatedArticle": "cannonkeys-nyawice-group-buy",
       "status": "closed",
       "description": "Alice-layout board with a leaf-spring F1 mount and 9-degree typing angle, run with friction-fit silicone cat ears and nose in orange, pink, baby blue, and lilac; hotswap PCB optional.",
       "updatedAt": "2026-05-18T00:00:00.000Z"
@@ -633,6 +635,7 @@
       "url": "https://kbdfans.com/products/gmk-cyl-greg-2",
       "imageUrl": null,
       "heroImage": "/group-buy-art/kbdfans-gmk-cyl-greg-2.svg",
+      "relatedArticle": "gmk-cyl-greg-2-group-buy",
       "status": "live",
       "description": "Second round of GMK CYL GREG, a doubleshot ABS Cherry-clone set in CYL profile, run on KBDfans through May.",
       "updatedAt": "2026-05-09T20:00:00.000Z"
@@ -649,6 +652,7 @@
       "url": "https://kbdfans.com/products/gmk-cyl-ishtar-r2",
       "imageUrl": null,
       "heroImage": "/group-buy-art/kbdfans-gmk-cyl-ishtar-r2.svg",
+      "relatedArticle": "gmk-cyl-ishtar-r2-group-buy",
       "status": "closed",
       "description": "Second round of GMK CYL Ishtar, a Mesopotamia-themed Cherry-profile doubleshot ABS set with multi-region proxies; estimated Q4 2026 delivery.",
       "updatedAt": "2026-05-11T14:00:00.000Z"
@@ -665,6 +669,7 @@
       "url": "https://kbdfans.com/products/gmk-cyl-king-of-the-seas",
       "imageUrl": null,
       "heroImage": "/group-buy-art/kbdfans-gmk-cyl-king-of-the-seas.svg",
+      "relatedArticle": "gmk-cyl-king-of-the-seas-group-buy",
       "status": "live",
       "description": "GMK CYL doubleshot ABS set by MiKeyDigit in two colorways: The Sovereign in deep ocean blues and The Mutation in electric pink.",
       "updatedAt": "2026-05-09T20:00:00.000Z"
@@ -681,6 +686,7 @@
       "url": "https://kbdfans.com/products/gmk-cyl-prussian-alert",
       "imageUrl": null,
       "heroImage": "/group-buy-art/kbdfans-gmk-cyl-prussian-alert.svg",
+      "relatedArticle": "gmk-cyl-prussian-alert",
       "status": "live",
       "description": "GMK CYL Prussian Alert — Bauhaus-leaning Cherry-profile doubleshot ABS set with deep Prussian red alphas on unbleached cream, GMK-manufactured. GB live globally via KBDfans (global host), Yushakobo, Prototypist, and 7 additional regional vendors; order window 2026-05-15 through 2026-06-12.",
       "updatedAt": "2026-05-18T00:00:00.000Z"
@@ -697,6 +703,7 @@
       "url": "https://kbdfans.com/products/gmk-cyl-ramune",
       "imageUrl": null,
       "heroImage": "/group-buy-art/kbdfans-gmk-cyl-ramune.svg",
+      "relatedArticle": "gmk-cyl-ramune-group-buy",
       "status": "live",
       "description": "GMK CYL Ramune — pastel dual-blue plus pink WS1-white colorway in the CYL cylindrical sub-line, running globally across 10 regional vendors including Divinikey (US), Prototypist (UK), Geonworks (KR), and Yushakobo (JP).",
       "updatedAt": "2026-05-17T00:00:00.000Z"
@@ -713,6 +720,7 @@
       "url": "https://kbdfans.com/products/gsk-sweet-nightmare",
       "imageUrl": null,
       "heroImage": "/group-buy-art/kbdfans-gsk-sweet-nightmare.svg",
+      "relatedArticle": "gsk-sweet-nightmare-group-buy",
       "status": "closed",
       "description": "Goldenstar resin keycap run with four colorway options (Bimorphis, Shigan, Eviscera, Optigon) in Kawa and Guro finishes, on a tight four-day window.",
       "updatedAt": "2026-05-14T05:30:00.000Z"
@@ -3364,5 +3372,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-05-23T12:37:30.832Z"
+  "generatedAt": "2026-05-23T13:43:28.363Z"
 }

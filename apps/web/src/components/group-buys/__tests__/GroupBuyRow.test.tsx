@@ -168,4 +168,44 @@ describe('<GroupBuyRow>', () => {
     ).toBeInTheDocument()
     expect(screen.queryByTestId('group-buy-hero')).not.toBeInTheDocument()
   })
+
+  it('renders "read our coverage" link when relatedArticle is set (phase 37)', () => {
+    render(
+      <GroupBuyRow
+        groupBuy={gb({ relatedArticle: 'mode-sonnet-r2-group-buy-coverage' })}
+        vendor={vendor}
+        variant="live"
+        now={NOW}
+      />,
+    )
+    const link = screen.getByTestId('group-buy-coverage-link')
+    expect(link).toBeInTheDocument()
+    expect(link).toHaveAttribute(
+      'href',
+      '/article/mode-sonnet-r2-group-buy-coverage',
+    )
+    expect(link).toHaveTextContent(/read our coverage/i)
+  })
+
+  it('does not render coverage link when relatedArticle is absent (phase 37)', () => {
+    render(
+      <GroupBuyRow groupBuy={gb()} vendor={vendor} variant="live" now={NOW} />,
+    )
+    expect(
+      screen.queryByTestId('group-buy-coverage-link'),
+    ).not.toBeInTheDocument()
+  })
+
+  it('renders coverage link on ended variant (phase 37 — closed buy links to coverage)', () => {
+    render(
+      <GroupBuyRow
+        groupBuy={gb({ status: 'closed', relatedArticle: 'gmk-cyl-ramune-group-buy' })}
+        vendor={vendor}
+        variant="ended"
+        now={NOW}
+      />,
+    )
+    const link = screen.getByTestId('group-buy-coverage-link')
+    expect(link).toHaveAttribute('href', '/article/gmk-cyl-ramune-group-buy')
+  })
 })
