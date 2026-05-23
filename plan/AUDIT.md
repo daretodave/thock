@@ -1568,3 +1568,12 @@ passes accumulate signals.)
 - score: 3.5 (impact × ease / 10)
 - issue: #183
 > **Resolved (2026-05-22):** Added data/group-buys/cannonkeys-mode-sonnet-r2.json (status=announced, startDate=2026-06-01, endDate=2026-07-15, region=global, productKind=board, vendorSlug=cannonkeys). Hero SVG rendered by brander at apps/web/public/group-buy-art/cannonkeys-mode-sonnet-r2.svg (65% silhouette, warm bronze/ochre accent per bearings group-buy hero art rule). Fixed getAllClosedGroupBuys() in data-runtime/index.ts to include announced+lapsed buys, mirroring the lapsed-live logic. Manifest and search index regenerated. 664 e2e green. `f080087`
+
+### [x] [test] [3.6] getAllClosedGroupBuys missing announced+lapsed coverage — addressed in fe1cc59 (closes #187)
+- category: test
+- filed: 2026-05-23 by cloud /iterate audit
+- impact: 4 (f080087 added status === 'announced' to lapsed detection; silent regression risk if announced path broken)
+- ease: 9 (two targeted it() blocks + rename existing test)
+- score: 3.6 (impact × ease / 10)
+- issue: #187
+> **Resolved (2026-05-23):** Updated test name from "lapsed-live" to "lapsed-live and lapsed-announced". Added positive case (reference date after Mode Sonnet R2 endDate → slug present) and negative case (before endDate → slug absent). 664 e2e green. `fe1cc59`
