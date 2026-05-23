@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "description": "Forbidden temporal anti-patterns for static MDX articles. Static articles cannot revisit, update, or report back after publication — phrases that promise future updates or use relative time references decay on every reader visit.",
+  "patterns": [
+    {
+      "id": "unfulfillable-revisit",
+      "match": "will revisit",
+      "description": "Unfulfillable editorial promise — static MDX cannot revisit after publication. Rewrite as a tracker link or past-tense observation."
+    },
+    {
+      "id": "unfulfillable-report-back",
+      "match": "report back",
+      "description": "Unfulfillable editorial promise — static MDX cannot report back after publication. Rewrite as a tracker link or remove the forward commitment."
+    },
+    {
+      "id": "unfulfillable-check-back",
+      "match": "check back",
+      "description": "Implies future update that static MDX cannot deliver. Replace with a direct link to the resource the reader should consult."
+    },
+    {
+      "id": "unfulfillable-stay-tuned",
+      "match": "stay tuned",
+      "description": "Implies future broadcast — static MDX will not be updated. Remove or rewrite as a tracker/archive link."
+    },
+    {
+      "id": "unfulfillable-coming-soon",
+      "match": "coming soon",
+      "description": "Implies future content — static MDX does not self-update. Remove or rewrite with an absolute timeline if one is known."
+    },
+    {
+      "id": "stale-buy-live",
+      "match": "the buy is live",
+      "description": "Group-buy status phrase becomes stale after the window closes. Use absolute dates: 'the buy opened on YYYY-MM-DD and runs through YYYY-MM-DD'."
+    },
+    {
+      "id": "approximate-date-year",
+      "match": "approximately \\d{4}",
+      "regex": true,
+      "description": "Imprecise year claim — use exact dates when the schedule is known. 'approximately [year]' misleads readers once the delivery schedule firms up."
+    },
+    {
+      "id": "approximate-date-quarter",
+      "match": "approximately Q[1-4]",
+      "regex": true,
+      "description": "Imprecise quarter claim — use an exact date or a firm quarter anchor without 'approximately'."
+    },
+    {
+      "id": "approximate-date-month",
+      "match": "approximately (?:January|February|March|April|May|June|July|August|September|October|November|December)",
+      "regex": true,
+      "description": "Imprecise month-name date claim — use exact dates when the schedule is firm."
+    },
+    {
+      "id": "relative-time-weeks",
+      "match": "\\d+\\s+weeks?\\s+from\\s+now",
+      "regex": true,
+      "description": "Relative time reference decays after publication. Replace with an absolute date derived from the article's publishedAt."
+    },
+    {
+      "id": "relative-time-months",
+      "match": "\\d+\\s+months?\\s+from\\s+now",
+      "regex": true,
+      "description": "Relative time reference decays after publication. Replace with an absolute date derived from the article's publishedAt."
+    }
+  ]
+}

@@ -256,7 +256,31 @@ hydration race). If the serial run also fails, that is a real failure
 
 Iterate up to 3 times on the same root cause. Stop per §8.
 
-### Step 7 — Commit + push
+### Step 7 — Language gate + commit + push
+
+**Step 7a — Language gate (post-draft, pre-commit):**
+
+Before staging any files, run the temporal anti-pattern checker on the
+new article (Phase 36 amendment):
+
+```bash
+node scripts/article-language-check.mjs apps/web/src/content/articles/<slug>.mdx
+```
+
+- **Exit 0 (clean):** proceed to Step 7b.
+- **Exit 1 (violations):** do NOT commit. Pass the full violation list
+  back to `content-curator` with a revision brief:
+  > "The draft at `<slug>.mdx` has the following temporal anti-patterns
+  > that must be fixed before publication: [list violations with line
+  > numbers and descriptions from the checker output]. Each violation
+  > decays on every reader visit after publication. Rewrite using
+  > absolute dates (e.g. 'opened on YYYY-MM-DD'), past-tense phrasing
+  > ('was tracking at'), or a tracker link instead of an editorial
+  > promise. Return the complete revised MDX file."
+  Then re-run `content-curator` once. If the revised article still
+  has violations on a second check, hard-fail — stop per §8.
+
+**Step 7b — Commit + push:**
 
 Stage explicitly. Never `git add .`:
 
