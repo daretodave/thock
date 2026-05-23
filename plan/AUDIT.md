@@ -94,6 +94,15 @@
 
 ## Open findings
 
+### [ ] [copy] [4.5] gmk-cyl-prussian-alert — "this week's tracker board at +38" stale; article published W19 (May 10), buy opened May 15, current W21 score is 54
+- category: copy
+- filed: 2026-05-23 by cloud /iterate audit
+- impact: 5 (live buy article until 2026-06-12; readers checking the article for buy intelligence see "+38" as the current tracker score when the actual W21 score is 54; "this week's" implies present-tense currency when the article is 3 weeks old; the InlineViz alt text on the same page correctly labels the same number as "W19 trends tracker" — the body text contradicts its own infographic)
+- ease: 9 (one sentence rewrite — past-tense "was tracking at +38 … in the week before the buy opened" removes both the stale time reference and the stale score claim)
+- score: 4.5 (impact × ease / 10)
+- action: change "sits on this week's [/trends/tracker](/trends/tracker) board at +38, direction up" → "was tracking at +38 on the [/trends/tracker](/trends/tracker) in the week before the buy opened, direction up"; bump updatedAt to 2026-05-23
+- issue: #186
+
 ### [x] [copy] [3.6] gmk-cyl-ishtar-r2-group-buy — 'is set to open' stale for Prussian Alert (opened 2026-05-15) — addressed in eb03e27, closes #185
 - category: copy
 - filed: 2026-05-23 by cloud /iterate audit
