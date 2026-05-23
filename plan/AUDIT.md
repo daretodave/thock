@@ -1616,7 +1616,7 @@ passes accumulate signals.)
 - elements: lines 80, 95, 136 — "Phase-19 trends row", "Phase-19 row for CannonKeys", "Phase-19 row" → "W19 tracker row"
 - issue: #192
 
-### [ ] [copy] [4.8] keychron-q-ultra-zmk — three stale temporal phrases in "What we're watching" section
+### [x] [copy] [4.8] keychron-q-ultra-zmk — three stale temporal phrases in "What we're watching" section — addressed in 0338e99 (closes #193)
 - category: copy
 - filed: 2026-05-23 by cloud /iterate audit
 - impact: 6 (news article; "What we're watching" is action-guiding text — readers in that section decide whether to act; three stale phrases in one paragraph undermine trust: "four weeks from now" decays after 2026-06-07, "currently up at +30" is W19/20 data now two weeks old, "Reviews are landing this month" reads as May 2026 only)
@@ -1625,4 +1625,5 @@ passes accumulate signals.)
 - pages: /article/keychron-q-ultra-zmk
 - elements: `apps/web/src/content/articles/keychron-q-ultra-zmk.mdx:51` — "board four weeks from now" → publication-relative absolute; "Keychron is currently up at +30" → past-tense absolute; "Reviews are landing this month" → "Reviews were landing in May 2026"
 - issue: #193
+> **Resolved (2026-05-23):** Three phrase substitutions in `keychron-q-ultra-zmk.mdx:51`: "four weeks from now" → "in the weeks following this piece"; "currently up at +30" → "was at +30 on the tracker at the time this piece filed"; "this month" → "in May 2026". updatedAt bumped. 664 e2e green. `0338e99`
 > **Resolved (2026-05-23):** Replaced three "Phase-19 [trends row|row|row]" references with "W19 tracker row" / "W19 tracker row for CannonKeys" / "W19 tracker row for Prototypist". updatedAt bumped to 2026-05-23. 664 e2e green. `c68223d`
