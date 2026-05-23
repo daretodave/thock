@@ -1615,4 +1615,14 @@ passes accumulate signals.)
 - pages: /article/vendor-first-customs
 - elements: lines 80, 95, 136 — "Phase-19 trends row", "Phase-19 row for CannonKeys", "Phase-19 row" → "W19 tracker row"
 - issue: #192
+
+### [ ] [copy] [4.8] keychron-q-ultra-zmk — three stale temporal phrases in "What we're watching" section
+- category: copy
+- filed: 2026-05-23 by cloud /iterate audit
+- impact: 6 (news article; "What we're watching" is action-guiding text — readers in that section decide whether to act; three stale phrases in one paragraph undermine trust: "four weeks from now" decays after 2026-06-07, "currently up at +30" is W19/20 data now two weeks old, "Reviews are landing this month" reads as May 2026 only)
+- ease: 8 (one paragraph, three phrase substitutions; same pattern as nyawice / vendor-first-customs / building-mode-sonnet copy fixes)
+- score: 4.8 (impact × ease / 10)
+- pages: /article/keychron-q-ultra-zmk
+- elements: `apps/web/src/content/articles/keychron-q-ultra-zmk.mdx:51` — "board four weeks from now" → publication-relative absolute; "Keychron is currently up at +30" → past-tense absolute; "Reviews are landing this month" → "Reviews were landing in May 2026"
+- issue: #193
 > **Resolved (2026-05-23):** Replaced three "Phase-19 [trends row|row|row]" references with "W19 tracker row" / "W19 tracker row for CannonKeys" / "W19 tracker row for Prototypist". updatedAt bumped to 2026-05-23. 664 e2e green. `c68223d`
