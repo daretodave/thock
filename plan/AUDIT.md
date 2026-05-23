@@ -1663,3 +1663,17 @@ passes accumulate signals.)
 - score: 3.6 (impact × ease / 10)
 - elements: `packages/seo/src/buildJsonLd.ts:123` — `...(entry.sameAs ? { sameAs: entry.sameAs } : {})` — the sameAs conditional in buildItemListJsonLd's itemListElement mapper
 > **Resolved (2026-05-23):** Added 2 unit tests to buildJsonLd.test.ts: "includes sameAs in ListItem when entry carries it" and "omits sameAs from ListItem when entry does not carry it". 667 e2e green. `4200d7d`
+
+### [x] [copy] [5.4] "this week's tracker" stale relative ref — alice-layout-decline + cannonkeys-nyawice + language gate gap — addressed in 2b88aa1 (closes #199)
+- category: copy
+- filed: 2026-05-23 by cloud /iterate audit
+- impact: 6 (two articles use the same decaying phrase; gate gap lets future articles repeat it)
+- ease: 9 (two phrase substitutions + JSON config + unit test)
+- score: 5.4 (impact × ease / 10)
+- issue: #199
+- pages: /article/alice-layout-decline, /article/cannonkeys-nyawice-group-buy
+- elements:
+  - `apps/web/src/content/articles/alice-layout-decline.mdx:38` — "this week's tracker" (should be "the W19 tracker")
+  - `apps/web/src/content/articles/cannonkeys-nyawice-group-buy.mdx:40` — same phrase quoting the alice article
+  - `scripts/article-language-patterns.json` — "this week's tracker" not in pattern list
+> **Resolved (2026-05-23):** Replaced "this week's tracker" with "the W19 tracker" in both articles; updatedAt bumped. Added `relative-tracker-this-week` pattern to article-language-patterns.json; 2 unit tests (positive + negative) added to article-language-check.test.mjs. 667 e2e green. `2b88aa1`
