@@ -94,7 +94,7 @@
 
 ## Open findings
 
-### [ ] [copy] [4.5] gmk-cyl-prussian-alert — "this week's tracker board at +38" stale; article published W19 (May 10), buy opened May 15, current W21 score is 54
+### [x] [copy] [4.5] gmk-cyl-prussian-alert — "this week's tracker board at +38" stale; article published W19 (May 10), buy opened May 15, current W21 score is 54 — addressed in 97340c0, closes #186
 - category: copy
 - filed: 2026-05-23 by cloud /iterate audit
 - impact: 5 (live buy article until 2026-06-12; readers checking the article for buy intelligence see "+38" as the current tracker score when the actual W21 score is 54; "this week's" implies present-tense currency when the article is 3 weeks old; the InlineViz alt text on the same page correctly labels the same number as "W19 trends tracker" — the body text contradicts its own infographic)
@@ -102,6 +102,7 @@
 - score: 4.5 (impact × ease / 10)
 - action: change "sits on this week's [/trends/tracker](/trends/tracker) board at +38, direction up" → "was tracking at +38 on the [/trends/tracker](/trends/tracker) in the week before the buy opened, direction up"; bump updatedAt to 2026-05-23
 - issue: #186
+> **Resolved (2026-05-23):** Changed "sits on this week's [/trends/tracker] board at +38, direction up" → "was tracking at +38 on the [/trends/tracker] in the week before the buy opened, direction up". Past-tense phrasing frames the +38 as pre-open IC signal, not the current tracker score (W21 shows 54). Aligns with the InlineViz alt text on the same page which correctly labels the figure as "W19 trends tracker". updatedAt bumped to 2026-05-23. 664 e2e green. `97340c0`
 
 ### [x] [copy] [3.6] gmk-cyl-ishtar-r2-group-buy — 'is set to open' stale for Prussian Alert (opened 2026-05-15) — addressed in eb03e27, closes #185
 - category: copy
