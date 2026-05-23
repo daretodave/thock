@@ -1586,3 +1586,12 @@ passes accumulate signals.)
 - score: 4.5 (impact × ease / 10)
 - issue: #188
 > **Resolved (2026-05-23):** Added positive case (cannonkeys-mode-sonnet-r2 slug present when ref date 2026-05-23, before endDate 2026-07-15) and negative case (slug absent when ref date 2026-07-16, after endDate). Symmetric with getAllClosedGroupBuys coverage from fe1cc59. 664 e2e green. `404020e`
+
+### [x] [a11y] [4.5] tracker 'article pending' — text-text-4 on visible text fails WCAG AA contrast — addressed in a7b8fa6 (closes #189)
+- category: a11y
+- filed: 2026-05-23 by cloud /iterate audit
+- impact: 5 (TrackerRow renders 'article pending' on desktop for any row with null noteText; text-text-4 (oklch(0.40 0.004 250)) fails WCAG 1.4.3 AA 4.5:1 against thock-bg; commit 41f1755 changed the prior aria-hidden em-dash to visible text but kept the low-contrast token; future tracker weeks starting before 14-day Rule 2 linkage window closes will show the failing text)
+- ease: 9 (one class substitution)
+- score: 4.5 (impact × ease / 10)
+- issue: #189
+> **Resolved (2026-05-23):** Changed `text-text-4` → `text-text-2` on the `tracker-row-pending-note` span in `TrackerRow.tsx:95`. Added regression guard to `TrackerRow.test.tsx`: asserts `className` matches `/\btext-text-2\b/` and not `/\btext-text-4\b/`. 664 e2e green. `a7b8fa6`
