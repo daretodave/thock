@@ -183,6 +183,16 @@
 
 ### [ ] [ci] [4.8] Lighthouse CI workflow audits the SSO-protected per-deployment URL — every run fails, the gate produces zero signal
 <!-- finding unchanged — cloud-blocked; ACTIONS_PAT needs workflow scope -->
+- issue: #190
+
+### [x] [copy] [3.6] building-mode-sonnet — unfulfillable 'report back' promise + stale R2 pointer — addressed in 9055ece (closes #191)
+- category: copy
+- filed: 2026-05-23 by cloud /iterate audit
+- impact: 4 (ideas-pillar featured article; same unfulfillable-promise pattern fixed in previous ticks; stale vendor-page pointer misses published R2 coverage)
+- ease: 9 (2 sentence rewrites + updatedAt bump)
+- score: 3.6 (impact × ease / 10)
+- issue: #191
+> **Resolved (2026-05-23):** Removed "We'll report back if that swap happens." — rewritten to state hypothesis without forward commitment. Updated "keep an eye on the Mode Designs Sonnet page" to link directly to /article/mode-sonnet-r2-group-buy-coverage (R2 announced 2026-06-01). updatedAt bumped to 2026-05-23. 664 e2e green. `9055ece`
 
 ### [x] [copy] [3.6] cannonkeys-nyawice-group-buy — stale 'current window' and unfulfillable closer (buy closed 2026-05-17) — addressed in 0bcbb47
 - category: copy
