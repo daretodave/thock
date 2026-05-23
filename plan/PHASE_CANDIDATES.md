@@ -1,7 +1,7 @@
 # Phase candidates
 
 > Last pass: 2026-05-23 at commit 62f028c
-> Last oversight: 2026-05-21 — promoted both [6.0] parts candidates: Parts catalog second data pass → phase 34, /parts root browse landing → phase 35 (34 ships first so the landing debuts against an enriched catalog). Closed the GA 503 [needs-user-call] AUDIT row (user verified GA admin out-of-band — resolved). Filed [ci][4.8] Lighthouse CI AUDIT row (workflow audits the SSO-protected per-deployment URL → redirects to vercel.com/login; the loop was blind to it). 5 candidates remain Pending. (Prior oversight 2026-05-16 — promoted phases 31–33.)
+> Last oversight: 2026-05-23 — all build-plan phases shipped (34+35 landed 2026-05-21); transition to pure maintenance mode triggered candidate promotions. Promoted [4.5] Content language quality gate → phase 36 (strongest operational signal — 5 consecutive copy-fix commits, same temporal-language anti-pattern, bearings Rule 4 documented but unenforced) and [5.5] Group-buy relatedArticle schema additive → phase 37 (unblocks the Pending Rule 3 companion survey for deterministic detection; Phase 23 is the proven shape). Left [ci][4.8] Lighthouse CI AUDIT row as-is — user will tackle interactively post-oversight (Vercel SSO bypass token or preview-protection adjustment). 3 candidates remain Pending. (Prior oversight 2026-05-21 — promoted phases 34–35.)
 > Pass count: 25
 > Posture: bold
 > Pass 25 notes: 20 commits since pass 24 (6952060). Cloud-mode pass — `/march` Step 3c fired (triage 0 unlabeled, critique skipped cloud-mode, all phases shipped, data backlog empty, content-gap-survey "all pillars comfortable"). Window load-bearing events: 5 copy-fix commits (building-mode-sonnet unfulfillable closer + stale R2 pointer `9055ece`, tracker 'article pending' a11y fix `a7b8fa6`, test coverage for `getActiveGroupBuys`/`getAllClosedGroupBuys` `404020e`, `ishtar-r2` copy fixes, `nyawice` copy fix); 2 test commits; 1 data record (mode-sonnet-r2 GB data record); 1 a11y fix (tracker 'article pending' text-text-4 → text-text-2). Window is maintenance-shaped — all signals reinforce existing candidates, no new phase-level signal. No spec drift, no design landings, no new entity types. AUDIT.md: 1 Pending row [ci][4.8] — still blocked for cloud. CRITIQUE.md: 0 pending findings. **Pass 25 files 0 new candidates**: the window does not cross any expand threshold; the [4.5] content language gate candidate gains +1 instance (building-mode-sonnet copy fix follows the identical temporal-language pattern) but this strengthens the existing candidate, not a new one. Existing 5 Pending candidates unchanged.
@@ -29,21 +29,6 @@
 
 ## Pending
 
-### [ ] [score 4.5] Content language quality gate — automated MDX linter for static-site temporal anti-patterns in articles
-- proposed: 2026-05-22, expand pass 24
-- source signals:
-  - **Commit-pattern signal (G — 4 consecutive copy-fix commits, same anti-pattern)**: `75ad5a0` (gmk-cyl-ramune — removed "approximately" from 3 date references + closed stale "We will revisit when the numbers land" closer); `f98048f` (gmk-cyl-prussian-alert — removed "We will revisit when the GB closes and the order numbers settle"); `6fba00d` (gmk-cyl-greg-2 — removed "We will revisit when the order numbers settle"); plus earlier `12a818d` (cannonkeys-nyawice — "roughly one week left as of this column" written with present-tense reading state instead of publication-date-relative copy). All four are variations of the same root pattern: **static MDX cannot fulfill forward-looking promises** ("we will revisit", "approximately [date]", present-tense "buy is live" after close).
-  - **bearings.md Rule 4 insufficient** (locked 2026-05-10): Rule 4 documents the anti-pattern ("group-buy companion pieces dated their startDate use absolute window phrasing in prose, never relative-time-remaining") but the rule lives in a markdown section that the content-curator brief pulls from inconsistently — 4 violations across 4 separate /ship-content ticks demonstrate the prose rule isn't mechanically enforced.
-  - **Iterate drain cost**: each violation costs 2 iterate commits (audit row file + content fix). 4 instances × 2 commits = 8 maintenance commits in this window alone. The pattern will recur with every new group-buy companion article shipped.
-- rationale: The repair cost is measurable and recurring. Each instance requires the iterate loop to notice the language, file an audit row, and then ship a content fix — 2 commits per instance with no architectural value. A `scripts/article-language-check.mjs` linter running as part of `pnpm verify` (or as a post-draft step in `skills/ship-content.md`) would catch violations at ship time, not at the next iterate audit. The script shape is proven by `content-gap-survey.mjs`: scan MDX files, match a configurable pattern list, emit a report or non-zero exit. The configurable pattern list starts with: `we will revisit`, `approximately [0-9]`, `the buy is( still)? live`, `you can order now`, `closes approximately`, `check back` — all static-site temporal anti-patterns. Running in gate mode on the new article only (not corpus scan, to avoid noise from existing articles) makes the gate cheap and safe.
-- proposed scope (1 phase):
-  1. `scripts/article-language-check.mjs`: reads one or more MDX file paths (passed as CLI args) or scans all of `apps/web/src/content/articles/` by default. Matches a JSON-configurable list of forbidden patterns (regex or exact string). Exits non-zero if any violations found; prints violation + line number + suggested rewrite. `--json` for programmatic use; `--write` appends AUDIT.md rows for corpus-scan mode.
-  2. `skills/ship-content.md` Step 7 amendment (post-draft, pre-commit): after content-curator returns the MDX draft, run `node scripts/article-language-check.mjs <path-to-new-article>`. If violations found, pass the violation list back to content-curator with a revision brief ("replace these phrases with absolute phrasing per bearings Rule 4") and re-run once. Hard-fail if violations persist after one revision.
-  3. One unit test (Vitest): MDX string containing "We will revisit when the GB closes" → checker returns 1 violation with the matching pattern name. Control: MDX with only absolute date phrasing → 0 violations. One additional test: "approximately 2026-06-20" → 1 violation (approximate-date pattern).
-  4. Optional: one-time corpus scan (`node scripts/article-language-check.mjs --write`) as part of the phase ship commit, to discover any remaining violations in existing articles and file AUDIT.md rows for the iterate loop to drain.
-- estimated phases: 1
-- conflicts: none — additive script; no URL contract change; no schema change; `pnpm verify` gate shape proven by content-gap-survey.mjs.
-
 ### [ ] [score 5.5] Tracker Rule 2 linkage audit helper — auto-file content-gap rows for unlinked trend entries
 - proposed: 2026-05-16, expand pass 13
 - source signals:
@@ -59,21 +44,6 @@
   4. `skills/march.md` Step 3b.5 note: tracker-linkage rows use the same `category: content-gaps` tag, so `/ship-content` drains them in the same lane as Rule 1 rows. No new skill, no new dispatch lane.
 - estimated phases: 1
 - conflicts: none — `scripts/tracker-linkage-survey.mjs` mirrors `content-gap-survey.mjs`; march.md Step 0.5 is an additive amendment; no schema change; no new routes.
-
-### [ ] [score 5.5] Group-buy relatedArticle schema additive — link GB records to companion editorial coverage
-- proposed: 2026-05-17, expand pass 14
-- source signals:
-  - **Phase 29 explicit defer**: Phase 29 brief notes: "relatedArticle wiring deferred — schema field does not exist yet; a schema additive belongs to its own /ship-a-phase." The defer was deliberate — correct to do in isolation.
-  - **Companion articles now exist**: /ship-content has shipped group-buy companion articles since Phase 29 (e.g., `cannonkeys-nyawice-group-buy`, `prussian-alert-group-buy`). The corpus now has editorial coverage that can be cross-linked.
-- rationale: Group-buy cards on `/group-buys` and `/group-buys/past` are editorial islands — a reader browsing the catalog has no direct path to thock's coverage of that buy. The `relatedArticle: string?` schema field closes this gap: cards gain an optional "Read our coverage →" link, archive rows gain a post-mortem link, and the cross-link graph improves for SEO. Phase 23 (hero art schema additive) proved the additive-schema + retrofit pattern; this is the same 5-step lift.
-- proposed scope (1 phase):
-  1. Schema additive: `relatedArticle: z.string().optional()` on `packages/data/src/schemas/group-buy.ts`; regenerate JSON Schema at `data/schemas/`.
-  2. Retrofit existing 6 `data/group-buys/*.json` records: scan corpus for companion articles; add `relatedArticle` field where a match exists.
-  3. Render: `/group-buys` active cards and `/group-buys/past` archive rows gain an optional "Read our coverage →" link to `/article/[relatedArticle]` (shown only when field is set, no layout change).
-  4. JSON-LD: ItemList item carries a `sameAs` or `relatedLink` property when `relatedArticle` is set.
-  5. `pnpm verify` green gate; `apps/e2e/tests/group-buys.spec.ts` asserts a "Read our coverage" link on at least one card where the field is set.
-- estimated phases: 1
-- conflicts: none — Phase 23 proves the schema-additive pattern; no URL contract change; additive only.
 
 ### [ ] [score 4.8] Stale group-buy status auto-detection — scanner to flag live records past their endDate
 - proposed: 2026-05-18, expand pass 16
@@ -195,6 +165,31 @@ _(previous Pending items: [7.0] content-velocity queue auto-refill promoted to p
 
 
 ## Promoted
+
+### [score 4.5] Content language quality gate — automated MDX linter for static-site temporal anti-patterns
+- promoted: 2026-05-23 via `/oversight` (this commit)
+- assigned phase: **36**
+- promotion decisions (locked at /oversight time):
+  - **Why a phase despite the low [4.5] score**: the operational repair-rate is the load-bearing signal, not the absolute score. 5 consecutive copy-fix commits since 2026-05-21 (`75ad5a0`, `f98048f`, `6fba00d`, `9055ece`, `0338e99`) all repair the same anti-pattern (static MDX with forward-looking promises). Each instance burns 2 maintenance commits (audit row + content fix). Phase 36 is the mechanical enforcement of bearings Rule 4 — documented but unenforced today — and stops the recurring drain at write time.
+  - **Scope locked to the candidate's 4-step proposed scope**: `scripts/article-language-check.mjs` with JSON-configurable forbidden-pattern list (`we will revisit`, `approximately [0-9]`, `the buy is( still)? live`, `you can order now`, `closes approximately`, `check back` — extensible); `--write` to corpus-scan and append AUDIT.md rows, gate-mode default to scan named MDX files. `skills/ship-content.md` Step 7 amendment runs the gate post-draft, pre-commit; one revision retry; hard-fail on persistent violations. One Vitest unit test (positive + negative MDX strings; one approximate-date pattern test). Optional one-time corpus scan in the ship commit to file iterate rows for pre-existing violations.
+  - **Ships before phase 37**: phase 36 is a tooling phase with zero risk; phase 37 is a schema additive with retrofit work. 36 first means phase 37's commit lands against a gated content pipeline.
+  - **Brief drafting**: drafted on-demand by `/ship-a-phase`.
+- original signals + scope: see git history of this file at `c6b9b65^` (pass-24 row; was in `## Pending`). User answer at /oversight 2026-05-23: "Promote [4.5] + [5.5] relatedArticle additive as 36+37".
+- estimated phases: 1
+- conflicts: none — additive script; no URL contract change; no schema change; `pnpm verify` gate shape proven by `content-gap-survey.mjs`.
+
+### [score 5.5] Group-buy relatedArticle schema additive — link GB records to companion editorial coverage
+- promoted: 2026-05-23 via `/oversight` (this commit)
+- assigned phase: **37**
+- promotion decisions (locked at /oversight time):
+  - **Why now**: phase 29 explicitly deferred the schema additive ("belongs to its own /ship-a-phase"). Companion articles now exist in corpus (cannonkeys-nyawice-group-buy, prussian-alert-group-buy, gmk-cyl-ramune-group-buy, gmk-cyl-ishtar-r2-group-buy, gmk-cyl-king-of-the-seas-group-buy, gmk-cyl-greg-2-group-buy) so retrofit has real targets. Group-buy cards on `/group-buys` and `/group-buys/past` are editorial islands without a path to thock's coverage. Phase 23 (hero art schema additive) is the proven 5-step pattern.
+  - **Scope locked to the candidate's 5-step proposed scope**: (1) `relatedArticle: z.string().optional()` on `packages/data/src/schemas/group-buy.ts` + regenerate JSON Schema; (2) retrofit existing `data/group-buys/*.json` records by scanning corpus for slug-substring matches; (3) render optional "Read our coverage →" link on `/group-buys` active cards + `/group-buys/past` archive rows (no layout change, hidden when null); (4) JSON-LD ItemList items carry `sameAs`/`relatedLink` when set; (5) `apps/e2e/tests/group-buys.spec.ts` asserts a "Read our coverage" link on at least one card where the field is set.
+  - **Ships after phase 36** so the data + render commit lands against the language gate.
+  - **Downstream**: unblocks the Pending [5.5] Rule 3 companion survey — once `relatedArticle` exists as a deterministic field, that survey becomes `!relatedArticle && status ∈ {live, announced}` instead of heuristic slug-match. Phase 37 should not pre-commit to filing Rule 3 rows itself — that's the next phase candidate's lane.
+  - **Brief drafting**: drafted on-demand by `/ship-a-phase`.
+- original signals + scope: see git history of this file at `c6b9b65^` (pass-14 row; was in `## Pending`). User answer at /oversight 2026-05-23: "Promote [4.5] + [5.5] relatedArticle additive as 36+37".
+- estimated phases: 1
+- conflicts: none — Phase 23 proves the schema-additive pattern; no URL contract change; additive only.
 
 ### [score 6.0] Parts catalog second data pass — expand switch/keycap-set/board records
 - promoted: 2026-05-21 via `/oversight` (this commit)
