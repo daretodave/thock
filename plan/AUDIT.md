@@ -94,6 +94,15 @@
 
 ## Open findings
 
+### [x] [copy] [3.6] gmk-cyl-ishtar-r2-group-buy — 'is set to open' stale for Prussian Alert (opened 2026-05-15) — addressed in eb03e27, closes #185
+- category: copy
+- filed: 2026-05-23 by cloud /iterate audit
+- impact: 4 (Ishtar R2 is a closed buy so traffic is lower than live-buy articles; stale forward-looking language for a companion buy that has been live for 8 days creates a factual inaccuracy for readers following the GMK CYL ecosystem)
+- ease: 9 (single sentence rewrite + updatedAt bump)
+- score: 3.6 (impact × ease / 10)
+- issue: #185
+> **Resolved (2026-05-23):** Changed "is set to open at KBDfans on 2026-05-15" → "opened at KBDfans on 2026-05-15 and runs through 2026-06-12". Pattern matches gmk-cyl-king-of-the-seas (line 38 already correctly read "opened on 2026-05-15"). updatedAt bumped to 2026-05-23. 664 e2e green. `eb03e27`
+
 ### [x] [copy] [3.6] gmk-cyl-ishtar-r2-group-buy — closed buy buying-notes links to /group-buys (active) instead of /group-buys/past (archive) — addressed in 2705750, closes #184
 - category: copy
 - filed: 2026-05-22 by cloud /iterate audit
