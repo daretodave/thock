@@ -88,6 +88,23 @@ describe('data-runtime adapter', () => {
     }
   })
 
+  it('active group buys includes announced buy whose endDate is in the future', () => {
+    // cannonkeys-mode-sonnet-r2 is announced with endDate 2026-07-15.
+    // A reference date before that endDate must include it in the active list.
+    const beforeEnd = new Date('2026-05-23T00:00:00Z')
+    const active = getActiveGroupBuys(beforeEnd)
+    const slugs = active.map((g) => g.slug)
+    expect(slugs).toContain('cannonkeys-mode-sonnet-r2')
+  })
+
+  it('active group buys excludes announced buy whose endDate is in the past', () => {
+    // Same buy — a reference date after the end date must NOT include it.
+    const afterEnd = new Date('2026-07-16T00:00:00Z')
+    const active = getActiveGroupBuys(afterEnd)
+    const slugs = active.map((g) => g.slug)
+    expect(slugs).not.toContain('cannonkeys-mode-sonnet-r2')
+  })
+
   it('past group buys includes closed/shipped + lapsed-live and lapsed-announced, sorted endDate desc', () => {
     // Pick a reference date far in the future so every record qualifies as past.
     const farFuture = new Date('2099-12-31T00:00:00Z')
