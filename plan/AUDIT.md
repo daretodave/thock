@@ -1653,3 +1653,12 @@ passes accumulate signals.)
   - line 45: `approximately Q4` (approximate-date-quarter)
 - action: rewrite each flagged phrase using absolute dates or past-tense phrasing; see pattern descriptions in scripts/article-language-patterns.json
 > **Resolved (2026-05-23):** "Lead time is listed as approximately Q4 2026" → "Lead time is listed as Q4 2026". Removed "approximately" — Q4 already communicates the 3-month range; the hedging word adds no informational value. updatedAt bumped to 2026-05-23. 667 e2e green. `c5c0e14`
+
+### [test] [3.6] buildItemListJsonLd — sameAs extension (phase 37) has no unit tests
+- category: test
+- filed: 2026-05-23 by cloud /iterate audit
+- issue: #198
+- impact: 4 (sameAs carries relatedArticle cross-links in JSON-LD for group-buy ItemLists on /group-buys and /group-buys/past; Phase 37's key JSON-LD deliverable has e2e coverage via group-buys.spec.ts but no unit-level regression guard — a change to the conditional at buildJsonLd.ts:123 would be invisible to the unit test suite)
+- ease: 9 (2 it() blocks in buildJsonLd.test.ts; pure function, no RSC, no async; mirrors the existing "emits a numbered ListItem" and "omits name" tests)
+- score: 3.6 (impact × ease / 10)
+- elements: `packages/seo/src/buildJsonLd.ts:123` — `...(entry.sameAs ? { sameAs: entry.sameAs } : {})` — the sameAs conditional in buildItemListJsonLd's itemListElement mapper

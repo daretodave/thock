@@ -112,4 +112,28 @@ describe('buildItemListJsonLd', () => {
     })
     expect(ld.name).toBeUndefined()
   })
+
+  it('includes sameAs in ListItem when entry carries it', () => {
+    const ld = buildItemListJsonLd({
+      items: [
+        {
+          name: 'Mode Sonnet R2',
+          url: 'https://cannonkeys.com/products/mode-sonnet-r2',
+          sameAs: `${siteConfig.url}/article/mode-sonnet-r2-group-buy-coverage`,
+        },
+      ],
+    })
+    const items = ld.itemListElement as Array<Record<string, unknown>>
+    expect(items[0]?.['sameAs']).toBe(
+      `${siteConfig.url}/article/mode-sonnet-r2-group-buy-coverage`,
+    )
+  })
+
+  it('omits sameAs from ListItem when entry does not carry it', () => {
+    const ld = buildItemListJsonLd({
+      items: [{ name: 'No link', path: '/group-buys' }],
+    })
+    const items = ld.itemListElement as Array<Record<string, unknown>>
+    expect(items[0]).not.toHaveProperty('sameAs')
+  })
 })
