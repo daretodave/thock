@@ -94,6 +94,15 @@
 
 ## Open findings
 
+### [x] [copy] [4.5] vendor-first-customs — 3 "W19 tracker row" links resolve to live tracker instead of /trends/tracker/2026-W19 — addressed in 806239c, closes #201
+- category: copy
+- filed: 2026-05-23 by cloud /iterate audit
+- impact: 5 (3 explicitly W19-labeled anchors send readers to the live tracker which now shows W21 data; article body cites W19-specific scores +24/+18/+14 which differ from W21 values)
+- ease: 9 (3 URL substitutions in one MDX file; /trends/tracker/2026-W19 is pre-rendered by Phase 27 generateStaticParams)
+- score: 4.5 (impact × ease / 10)
+- issue: #201
+> **Resolved (2026-05-23):** Changed all 3 `/trends/tracker` hrefs to `/trends/tracker/2026-W19` in `vendor-first-customs.mdx` (lines 80, 95, 136). Readers clicking "W19 tracker row" links now land on the historical W19 snapshot instead of the current W21 tracker. 667 e2e green. `806239c`
+
 ### [x] [copy] [4.5] gmk-cyl-prussian-alert — "this week's tracker board at +38" stale; article published W19 (May 10), buy opened May 15, current W21 score is 54 — addressed in 97340c0, closes #186
 - category: copy
 - filed: 2026-05-23 by cloud /iterate audit
