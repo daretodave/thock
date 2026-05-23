@@ -61,6 +61,11 @@
       "match": "\\d+\\s+months?\\s+from\\s+now",
       "regex": true,
       "description": "Relative time reference decays after publication. Replace with an absolute date derived from the article's publishedAt."
+    },
+    {
+      "id": "relative-tracker-this-week",
+      "match": "this week's tracker",
+      "description": "Relative tracker reference decays after the week of publication. Replace with the ISO week anchor: 'the W19 tracker' or 'the 2026-W19 snapshot'."
     }
   ]
 }

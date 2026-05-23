@@ -220,4 +220,43 @@ describe('checkFile — negative cases (no violations expected)', () => {
     const violations = checkFile(filePath, patterns)
     assert.equal(violations.length, 0, '"will" alone should not trigger unfulfillable-revisit')
   })
+
+  test('"the W19 tracker" absolute anchor passes', () => {
+    const content = makeMdx(
+      'slug: test\ntitle: Test\nauthor: thock\npillar: trends\npublishedAt: 2026-05-05',
+      '\nAlice is down 18 percent on the W19 tracker, with the trajectory unambiguously down.\n'
+    )
+    const filePath = tmpMdx(content)
+    const violations = checkFile(filePath, patterns)
+    assert.equal(violations.length, 0, '"the W19 tracker" absolute anchor should pass')
+  })
+})
+
+// ── relative-tracker-this-week ────────────────────────────────────────────────
+
+describe('checkFile — relative-tracker-this-week pattern', () => {
+  const patterns = loadPatterns()
+
+  test('flags "this week\'s tracker" as a relative temporal reference', () => {
+    const content = makeMdx(
+      'slug: test\ntitle: Test\nauthor: thock\npillar: trends\npublishedAt: 2026-05-05',
+      "\nAlice is down 18 percent on this week's tracker, with the trajectory down.\n"
+    )
+    const filePath = tmpMdx(content)
+    const violations = checkFile(filePath, patterns)
+    assert.ok(
+      violations.some((v) => v.patternId === 'relative-tracker-this-week'),
+      'expected relative-tracker-this-week violation',
+    )
+  })
+
+  test('"the W21 tracker" absolute form does not trigger the pattern', () => {
+    const content = makeMdx(
+      'slug: test\ntitle: Test\nauthor: thock\npillar: trends\npublishedAt: 2026-05-20',
+      '\nHall Effect was at +55 on the W21 tracker this month.\n'
+    )
+    const filePath = tmpMdx(content)
+    const violations = checkFile(filePath, patterns)
+    assert.equal(violations.length, 0, 'absolute week anchor should not trigger')
+  })
 })
