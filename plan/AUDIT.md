@@ -1628,7 +1628,7 @@ passes accumulate signals.)
 > **Resolved (2026-05-23):** Three phrase substitutions in `keychron-q-ultra-zmk.mdx:51`: "four weeks from now" → "in the weeks following this piece"; "currently up at +30" → "was at +30 on the tracker at the time this piece filed"; "this month" → "in May 2026". updatedAt bumped. 664 e2e green. `0338e99`
 > **Resolved (2026-05-23):** Replaced three "Phase-19 [trends row|row|row]" references with "W19 tracker row" / "W19 tracker row for CannonKeys" / "W19 tracker row for Prototypist". updatedAt bumped to 2026-05-23. 664 e2e green. `c68223d`
 
-### [ ] [copy] [3.6] gmk-cyl-ramune-group-buy — 1 temporal anti-pattern violation detected by article-language-check.mjs
+### [x] [copy] [3.6] gmk-cyl-ramune-group-buy — 1 temporal anti-pattern violation detected by article-language-check.mjs — addressed in c5c0e14, closes #196
 - category: copy
 - filed: 2026-05-23 by article-language-check.mjs corpus scan
 - impact: 4 (static MDX temporal phrase decays on every reader visit after publication)
@@ -1639,8 +1639,9 @@ passes accumulate signals.)
 - violations:
   - line 78: `The buy is live` (stale-buy-live)
 - action: rewrite each flagged phrase using absolute dates or past-tense phrasing; see pattern descriptions in scripts/article-language-patterns.json
+> **Resolved (2026-05-23):** "The buy is live as of 2026-05-15." → "The buy opened on 2026-05-15 and runs through 2026-06-20." Absolute-date form is durable after the buy window closes. updatedAt bumped to 2026-05-23. 667 e2e green. `c5c0e14`
 
-### [ ] [copy] [3.6] mode-sonnet-r2-group-buy-coverage — 1 temporal anti-pattern violation detected by article-language-check.mjs
+### [x] [copy] [3.6] mode-sonnet-r2-group-buy-coverage — 1 temporal anti-pattern violation detected by article-language-check.mjs — addressed in c5c0e14, closes #197
 - category: copy
 - filed: 2026-05-23 by article-language-check.mjs corpus scan
 - impact: 4 (static MDX temporal phrase decays on every reader visit after publication)
@@ -1651,3 +1652,4 @@ passes accumulate signals.)
 - violations:
   - line 45: `approximately Q4` (approximate-date-quarter)
 - action: rewrite each flagged phrase using absolute dates or past-tense phrasing; see pattern descriptions in scripts/article-language-patterns.json
+> **Resolved (2026-05-23):** "Lead time is listed as approximately Q4 2026" → "Lead time is listed as Q4 2026". Removed "approximately" — Q4 already communicates the 3-month range; the hedging word adds no informational value. updatedAt bumped to 2026-05-23. 667 e2e green. `c5c0e14`
