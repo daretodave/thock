@@ -92,7 +92,7 @@ export function TrackerRow({
             {noteText}
           </span>
         ) : (
-          <span data-testid="tracker-row-pending-note" className="text-text-4">
+          <span data-testid="tracker-row-pending-note" className="text-text-2">
             article pending
           </span>
         )}

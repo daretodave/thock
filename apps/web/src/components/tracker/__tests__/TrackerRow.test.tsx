@@ -112,8 +112,12 @@ describe('<TrackerRow>', () => {
 
   it('renders "article pending" in the note column when no article resolves and no note is set', () => {
     render(<TrackerRow rank={2} row={row()} />)
-    expect(screen.getByTestId('tracker-row-pending-note')).toBeInTheDocument()
-    expect(screen.getByTestId('tracker-row-pending-note')).toHaveTextContent('article pending')
+    const pendingNote = screen.getByTestId('tracker-row-pending-note')
+    expect(pendingNote).toBeInTheDocument()
+    expect(pendingNote).toHaveTextContent('article pending')
+    // Regression guard: must use text-text-2 (WCAG AA compliant), not text-text-4
+    expect(pendingNote.className).toMatch(/\btext-text-2\b/)
+    expect(pendingNote.className).not.toMatch(/\btext-text-4\b/)
   })
 
   it('does not render an em-dash when no article resolves and no note is set', () => {
