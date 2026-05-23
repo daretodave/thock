@@ -1678,7 +1678,7 @@ passes accumulate signals.)
   - `scripts/article-language-patterns.json` — "this week's tracker" not in pattern list
 > **Resolved (2026-05-23):** Replaced "this week's tracker" with "the W19 tracker" in both articles; updatedAt bumped. Added `relative-tracker-this-week` pattern to article-language-patterns.json; 2 unit tests (positive + negative) added to article-language-check.test.mjs. 667 e2e green. `2b88aa1`
 
-### [ ] [copy] [3.6] zmk-mainstream-shift — 'this week' stale relative cross-reference — closes #200
+### [x] [copy] [3.6] zmk-mainstream-shift — 'this week' stale relative cross-reference — addressed in af4dee2, closes #200
 - category: copy
 - filed: 2026-05-23 by cloud /iterate audit
 - impact: 4 (article published 2026-04-15, 38 days ago; line 57 reads "this week called the mid-premium tier" — implies the linked hall-effect-mainstream piece appeared the same week as zmk-mainstream-shift, which decays as soon as a reader arrives post-publication-week; relative temporal cross-references are the same pattern class as "this week's tracker" fixed in #199)
@@ -1686,3 +1686,4 @@ passes accumulate signals.)
 - score: 3.6 (impact × ease / 10)
 - action: remove 'this week ' from line 57 of zmk-mainstream-shift.mdx; bump updatedAt to 2026-05-23
 - issue: #200
+> **Resolved (2026-05-23):** Removed "this week " from line 57 — sentence now reads "called the mid-premium tier the slot HE has settled into". updatedAt bumped to 2026-05-23. 667 e2e green. `af4dee2`
