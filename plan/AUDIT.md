@@ -1785,3 +1785,13 @@ passes accumulate signals.)
 - issue: #204
 - action: change "where the brand sits on the live [/trends/tracker](/trends/tracker) board in the weeks following this piece. Keychron was at +30 on the tracker at the time this piece filed, and a successful Q Ultra launch is the kind of release that either consolidates that lead or exposes it." → "where the brand sits on the Trends Tracker in the months following. At publication, the [2026-W19 Trends Tracker](/trends/tracker/2026-W19) showed Keychron at +30 — a successful Q Ultra launch is the kind of release that either consolidates that lead or exposes it."; bump updatedAt to 2026-05-24
 > **Resolved (2026-05-24):** Changed "the live [/trends/tracker] board in the weeks following this piece. Keychron was at +30 on the tracker at the time this piece filed" → "the Trends Tracker in the months following. At publication, the [2026-W19 Trends Tracker](/trends/tracker/2026-W19) showed Keychron at +30" so readers land on the historical W19 snapshot where Keychron at +30 is preserved. W21 shows Keychron at +38. updatedAt bumped to 2026-05-24. 667 e2e green. `57354e2`
+
+### [x] [copy] [4.5] zmk-mainstream-shift — "The live [Trends Tracker]" stale cross-line citation; ZMK no longer in W21 tracker — addressed in 19581f0, closes #208
+- category: copy
+- filed: 2026-05-24 by /iterate audit
+- impact: 5 (Trends article published 2026-04-15; "The live [Trends Tracker] has the ZMK row sloping up" presents W19-era data as current; W21 has no ZMK row — readers see contradicting absence; "live" adjective and present-tense verbs decay on every visit)
+- ease: 9 (2–3 word edits + past-tense conversion + updatedAt bump; language checker bigram extension guards against recurrence)
+- score: 4.5 (impact × ease / 10)
+- issue: #208
+- action: rewrite lines 210–213 to past-tense ("At publication, the [Trends Tracker] had…both were climbing…"); bump updatedAt to 2026-05-24; extend article-language-check.mjs bigram scan to catch cross-line "live [Trends Tracker" patterns + add unit test
+> **Resolved (2026-05-24):** Rewrote "The live [Trends Tracker] has the ZMK row sloping up…both are climbing" → "At publication, the [Trends Tracker] had the ZMK row sloping up…both were climbing". Cross-line split ("live\n[Trends Tracker]") evaded the per-line scan; extended article-language-check.mjs with a bigram scan (consecutive line pairs, deduplicates against single-line hits). 25 script tests (+1). updatedAt bumped to 2026-05-24. 667 e2e green. `19581f0`
