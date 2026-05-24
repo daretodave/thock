@@ -261,6 +261,111 @@ describe('checkFile — relative-tracker-this-week pattern', () => {
   })
 })
 
+// ── unfulfillable-stay-tuned ──────────────────────────────────────────────────
+
+describe('checkFile — unfulfillable-stay-tuned pattern', () => {
+  const patterns = loadPatterns()
+
+  test('flags "stay tuned" as unfulfillable broadcast promise', () => {
+    const content = makeMdx(
+      'slug: test\ntitle: Test\nauthor: thock\npillar: news\npublishedAt: 2026-05-01',
+      '\nStay tuned for updates as the buy progresses.\n'
+    )
+    const filePath = tmpMdx(content)
+    const violations = checkFile(filePath, patterns)
+    assert.ok(
+      violations.some((v) => v.patternId === 'unfulfillable-stay-tuned'),
+      'expected unfulfillable-stay-tuned violation'
+    )
+  })
+})
+
+// ── unfulfillable-coming-soon ─────────────────────────────────────────────────
+
+describe('checkFile — unfulfillable-coming-soon pattern', () => {
+  const patterns = loadPatterns()
+
+  test('flags "coming soon" as unfulfillable future-content promise', () => {
+    const content = makeMdx(
+      'slug: test\ntitle: Test\nauthor: thock\npillar: news\npublishedAt: 2026-05-01',
+      '\nA full deep-dive on the switches is coming soon.\n'
+    )
+    const filePath = tmpMdx(content)
+    const violations = checkFile(filePath, patterns)
+    assert.ok(
+      violations.some((v) => v.patternId === 'unfulfillable-coming-soon'),
+      'expected unfulfillable-coming-soon violation'
+    )
+  })
+})
+
+// ── approximate-date-month ────────────────────────────────────────────────────
+
+describe('checkFile — approximate-date-month pattern', () => {
+  const patterns = loadPatterns()
+
+  test('flags "approximately June" as imprecise month-name date claim', () => {
+    const content = makeMdx(
+      'slug: test\ntitle: Test\nauthor: thock\npillar: news\npublishedAt: 2026-05-01',
+      '\nEstimated delivery is approximately June 2026.\n'
+    )
+    const filePath = tmpMdx(content)
+    const violations = checkFile(filePath, patterns)
+    assert.ok(
+      violations.some((v) => v.patternId === 'approximate-date-month'),
+      'expected approximate-date-month violation'
+    )
+  })
+})
+
+// ── relative-time-months ──────────────────────────────────────────────────────
+
+describe('checkFile — relative-time-months pattern', () => {
+  const patterns = loadPatterns()
+
+  test('flags "3 months from now" as relative time reference', () => {
+    const content = makeMdx(
+      'slug: test\ntitle: Test\nauthor: thock\npillar: news\npublishedAt: 2026-05-01',
+      '\nThe board ships 3 months from now per the vendor timeline.\n'
+    )
+    const filePath = tmpMdx(content)
+    const violations = checkFile(filePath, patterns)
+    assert.ok(
+      violations.some((v) => v.patternId === 'relative-time-months'),
+      'expected relative-time-months violation'
+    )
+  })
+})
+
+// ── tracker-will ──────────────────────────────────────────────────────────────
+
+describe('checkFile — tracker-will pattern', () => {
+  const patterns = loadPatterns()
+
+  test('flags "tracker will be watching" as unfulfillable forward-looking promise', () => {
+    const content = makeMdx(
+      'slug: test\ntitle: Test\nauthor: thock\npillar: news\npublishedAt: 2026-05-01',
+      '\nThe tracker will be watching the close-week signal when the order books settle.\n'
+    )
+    const filePath = tmpMdx(content)
+    const violations = checkFile(filePath, patterns)
+    assert.ok(
+      violations.some((v) => v.patternId === 'tracker-will'),
+      'expected tracker-will violation'
+    )
+  })
+
+  test('"tracker had" past-tense does not trigger tracker-will', () => {
+    const content = makeMdx(
+      'slug: test\ntitle: Test\nauthor: thock\npillar: trends\npublishedAt: 2026-05-10',
+      '\nThe tracker had the Cloud at +36 in W19.\n'
+    )
+    const filePath = tmpMdx(content)
+    const violations = checkFile(filePath, patterns)
+    assert.equal(violations.length, 0, '"tracker had" should not trigger tracker-will')
+  })
+})
+
 // ── live-tracker-stale ────────────────────────────────────────────────────────
 
 describe('checkFile — live-tracker-stale pattern', () => {

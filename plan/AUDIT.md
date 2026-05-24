@@ -72,6 +72,15 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [test] [4.0] language-check: 5 patterns lack unit tests (stay-tuned, coming-soon, approximate-month, relative-months, tracker-will) — addressed in this commit, closes #212
+- category: test
+- filed: 2026-05-24 by cloud /iterate audit
+- impact: 5 (5 patterns in article-language-patterns.json have no unit tests; a regression in any — e.g. typo in match string, broken regex — would silently pass the test suite while letting violations through in the /ship-content language gate)
+- ease: 8 (node:test additions following established pattern in scripts/__tests__/article-language-check.test.mjs)
+- score: 4.0 (impact × ease / 10)
+- issue: #212
+> **Resolved (2026-05-24):** Added 6 tests across 5 new `describe` blocks in `scripts/__tests__/article-language-check.test.mjs`: `unfulfillable-stay-tuned` (1 test — "stay tuned"), `unfulfillable-coming-soon` (1 test — "coming soon"), `approximate-date-month` (1 test — "approximately June"), `relative-time-months` (1 test — "3 months from now"), `tracker-will` (2 tests — positive "tracker will be watching" + negative "tracker had" past-tense). All 14 patterns in article-language-patterns.json now have at least one unit test. Test count: 25 → 31. 667 e2e green (gate pending verify).
+
 ### [x] [copy] [5.4] gmk-cyl-ramune-group-buy — unfulfillable "tracker will be watching" closer in "What we're watching" — addressed in dd6ca9e, closes #210
 - category: copy
 - filed: 2026-05-24 by cloud /iterate audit
