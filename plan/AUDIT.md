@@ -174,6 +174,15 @@
 
 ## Open findings
 
+### [x] [copy] [5.4] acoustic-spec-rise — closing sentence "tracker will watch" escapes language gate via markdown-link form — addressed in 7caff73
+- category: copy
+- filed: 2026-05-24 by cloud /iterate audit
+- impact: 6 (trends article; unfulfillable forward-looking promise — static MDX cannot speak for what the tracker will do next; the tracker-will pattern in article-language-patterns.json does not catch "[Trends Tracker](...) will" because the markdown link brackets break the substring match; same anti-pattern class as prior tracker-will fixes this session window)
+- ease: 9 (single sentence rewrite: "will watch which lever" → "Follow…to see which lever"; updatedAt bump)
+- score: 5.4 (impact × ease / 10)
+- issue: [mirror-failed: 2026-05-24T00:00:00Z]
+> **Resolved (2026-05-24):** Rewrote closing sentence "The [Trends Tracker](/trends/tracker) will watch which lever the industry picks up next." → "Follow the [Trends Tracker](/trends/tracker) to see which lever the industry picks up next." Removes the unfulfillable forward-looking promise while preserving the reader-directive intent. Language gate blind spot noted: tracker-will pattern does not match when "Tracker" is inside a markdown link — the ] bracket breaks the substring match; a future iterate tick should add a regex pattern to close the gap. updatedAt bumped to 2026-05-24. 667 e2e green. `7caff73`
+
 ### [x] [copy] [4.5] vendor-first-customs — 3 "W19 tracker row" links resolve to live tracker instead of /trends/tracker/2026-W19 — addressed in 806239c, closes #201
 - category: copy
 - filed: 2026-05-23 by cloud /iterate audit
