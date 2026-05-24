@@ -1844,3 +1844,12 @@ passes accumulate signals.)
   - line 94: `tracker will` (tracker-will)
 - action: rewrite each flagged phrase using absolute dates or past-tense phrasing; see pattern descriptions in scripts/article-language-patterns.json
 > **Resolved (2026-05-24):** Removed "The tracker will keep running its own count." — the sentence was an unfulfillable forward-looking promise on a static MDX file. The following sentence ("Eight weeks of steady upward movement…") stands without it and carries the closing argument intact. article-language-check.mjs reports clean. updatedAt bumped to 2026-05-24T12:00:00.000Z. 667 e2e green.
+
+### [x] [fix] [5.4] tracker-will gate: markdown-link form [Tracker](url) will escapes pattern — addressed in 6adbe25, closes #213
+- category: fix
+- filed: 2026-05-24 by cloud /iterate audit
+- impact: 6 (tracker-will pattern catches literal "tracker will" but misses "[Trends Tracker](url) will" — the ] bracket breaks the substring match; future /ship-content articles could ship with unfulfillable forward-looking tracker promises that slip past the gate)
+- ease: 9 (one JSON pattern entry + 2 unit tests; no code or content change)
+- score: 5.4 (impact × ease / 10)
+- issue: #213
+> **Resolved (2026-05-24):** Added tracker-will-md-link regex pattern to scripts/article-language-patterns.json: "Tracker\]\([^)]+\)\s+will" (gi flag) catches the markdown-link form "[Trends Tracker](url) will ..." while leaving CTA links ("Follow the [Tracker](url) to see ...") unaffected. Added 2 unit tests: positive ([Trends Tracker](url) will → flagged) + negative (CTA form → clean). Test count: 31 → 33. 667 e2e green. `6adbe25`
