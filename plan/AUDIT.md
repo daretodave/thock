@@ -1814,7 +1814,7 @@ passes accumulate signals.)
 - action: rewrite lines 210–213 to past-tense ("At publication, the [Trends Tracker] had…both were climbing…"); bump updatedAt to 2026-05-24; extend article-language-check.mjs bigram scan to catch cross-line "live [Trends Tracker" patterns + add unit test
 > **Resolved (2026-05-24):** Rewrote "The live [Trends Tracker] has the ZMK row sloping up…both are climbing" → "At publication, the [Trends Tracker] had the ZMK row sloping up…both were climbing". Cross-line split ("live\n[Trends Tracker]") evaded the per-line scan; extended article-language-check.mjs with a bigram scan (consecutive line pairs, deduplicates against single-line hits). 25 script tests (+1). updatedAt bumped to 2026-05-24. 667 e2e green. `19581f0`
 
-### [ ] [copy] [3.6] dcs-olivetti-comeback — 1 temporal anti-pattern violation detected by article-language-check.mjs
+### [x] [copy] [3.6] dcs-olivetti-comeback — 1 temporal anti-pattern violation detected by article-language-check.mjs — addressed in this commit, closes #211
 - category: copy
 - filed: 2026-05-24 by article-language-check.mjs corpus scan
 - impact: 4 (static MDX temporal phrase decays on every reader visit after publication)
@@ -1825,3 +1825,4 @@ passes accumulate signals.)
 - violations:
   - line 94: `tracker will` (tracker-will)
 - action: rewrite each flagged phrase using absolute dates or past-tense phrasing; see pattern descriptions in scripts/article-language-patterns.json
+> **Resolved (2026-05-24):** Removed "The tracker will keep running its own count." — the sentence was an unfulfillable forward-looking promise on a static MDX file. The following sentence ("Eight weeks of steady upward movement…") stands without it and carries the closing argument intact. article-language-check.mjs reports clean. updatedAt bumped to 2026-05-24T12:00:00.000Z. 667 e2e green.
