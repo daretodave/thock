@@ -1804,3 +1804,15 @@ passes accumulate signals.)
 - issue: #208
 - action: rewrite lines 210–213 to past-tense ("At publication, the [Trends Tracker] had…both were climbing…"); bump updatedAt to 2026-05-24; extend article-language-check.mjs bigram scan to catch cross-line "live [Trends Tracker" patterns + add unit test
 > **Resolved (2026-05-24):** Rewrote "The live [Trends Tracker] has the ZMK row sloping up…both are climbing" → "At publication, the [Trends Tracker] had the ZMK row sloping up…both were climbing". Cross-line split ("live\n[Trends Tracker]") evaded the per-line scan; extended article-language-check.mjs with a bigram scan (consecutive line pairs, deduplicates against single-line hits). 25 script tests (+1). updatedAt bumped to 2026-05-24. 667 e2e green. `19581f0`
+
+### [ ] [copy] [3.6] dcs-olivetti-comeback — 1 temporal anti-pattern violation detected by article-language-check.mjs
+- category: copy
+- filed: 2026-05-24 by article-language-check.mjs corpus scan
+- impact: 4 (static MDX temporal phrase decays on every reader visit after publication)
+- ease: 9 (phrase rewrite — no code or schema change needed)
+- score: 3.6 (impact × ease / 10)
+- patterns: tracker-will
+- file: apps/web/src/content/articles/dcs-olivetti-comeback.mdx
+- violations:
+  - line 94: `tracker will` (tracker-will)
+- action: rewrite each flagged phrase using absolute dates or past-tense phrasing; see pattern descriptions in scripts/article-language-patterns.json
