@@ -72,6 +72,14 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [copy] [3.6] mode-sonnet-r2-group-buy-coverage — Buying Notes close date "2026-06-15" stale after timeline shift to 2026-07-15
+- category: copy
+- filed: 2026-05-24 by cloud /iterate audit
+- impact: 4 (active announced buy opening 2026-06-01; Buying Notes section advises "The safest read of 2026-06-15…" when actual close is 2026-07-15; top callout already corrects dates but Buying Notes still misleads readers who jump directly to buying guidance)
+- ease: 9 (single sentence update — replace "2026-06-15" with "revised 2026-07-15" + updatedAt bump)
+- score: 3.6 (impact × ease / 10)
+- issue: #206
+
 ### [x] [copy] [4.5] split-ergo-cohort — W19 tracker Source link goes to live tracker; direction now flat in W21 — addressed in c0abfcd, closes #205
 - category: copy
 - filed: 2026-05-24 by cloud /iterate audit
