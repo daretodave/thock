@@ -366,6 +366,39 @@ describe('checkFile — tracker-will pattern', () => {
   })
 })
 
+// ── tracker-will-md-link ──────────────────────────────────────────────────────
+
+describe('checkFile — tracker-will-md-link pattern', () => {
+  const patterns = loadPatterns()
+
+  test('flags "[Trends Tracker](url) will" markdown-link form', () => {
+    const content = makeMdx(
+      'slug: test\ntitle: Test\nauthor: thock\npillar: trends\npublishedAt: 2026-05-01',
+      '\nThe [Trends Tracker](/trends/tracker) will be watching the close-week signal.\n'
+    )
+    const filePath = tmpMdx(content)
+    const violations = checkFile(filePath, patterns)
+    assert.ok(
+      violations.some((v) => v.patternId === 'tracker-will-md-link'),
+      'expected tracker-will-md-link violation for markdown-link form'
+    )
+  })
+
+  test('"[Trends Tracker](url) to see" CTA form does not trigger the pattern', () => {
+    const content = makeMdx(
+      'slug: test\ntitle: Test\nauthor: thock\npillar: trends\npublishedAt: 2026-05-01',
+      '\nFollow the [Trends Tracker](/trends/tracker) to see which lever the industry picks up next.\n'
+    )
+    const filePath = tmpMdx(content)
+    const violations = checkFile(filePath, patterns)
+    assert.equal(
+      violations.filter((v) => v.patternId === 'tracker-will-md-link').length,
+      0,
+      '"[Trends Tracker](url) to see" CTA form should not trigger tracker-will-md-link'
+    )
+  })
+})
+
 // ── live-tracker-stale ────────────────────────────────────────────────────────
 
 describe('checkFile — live-tracker-stale pattern', () => {

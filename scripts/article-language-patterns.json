@@ -77,6 +77,12 @@
       "id": "tracker-will",
       "match": "tracker will",
       "description": "Forward-looking 'tracker will' promise is unfulfillable — static MDX cannot speak for the tracker's future updates. Replace with 'Follow the [trends tracker](/trends/tracker) to see…' or remove the sentence."
+    },
+    {
+      "id": "tracker-will-md-link",
+      "match": "Tracker\\]\\([^)]+\\)\\s+will",
+      "regex": true,
+      "description": "Markdown-link form of the tracker-will anti-pattern — '[Trends Tracker](url) will ...' is an unfulfillable forward-looking promise. Rewrite as 'Follow the [Trends Tracker](url) to see ...' or remove the sentence."
     }
   ]
 }
