@@ -72,6 +72,15 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [copy] [5.4] gmk-cyl-ramune-group-buy — unfulfillable "tracker will be watching" closer in "What we're watching" — addressed in dd6ca9e, closes #210
+- category: copy
+- filed: 2026-05-24 by cloud /iterate audit
+- impact: 6 (live buy article through 2026-06-20; unfulfillable forward-looking promise in closing paragraph misleads active buyers)
+- ease: 9 (one sentence removal; language pattern added to article-language-patterns.json)
+- score: 5.4 (impact × ease / 10)
+- issue: #210
+> **Resolved (2026-05-24):** Removed sentence "The tracker will be watching the close-week signal when the order books settle." from end of "What we're watching" section — the article's following closer ("Follow the [trends tracker] for post-close movement data.") already directs readers. Added tracker-will pattern to article-language-patterns.json; corpus scan filed AUDIT row for dcs-olivetti-comeback (same pattern). 667 e2e green. `dd6ca9e`
+
 ### [x] [copy] [3.6] gmk-cyl-ramune-group-buy — "it is running up" present-tense tracker citation with live link (W21 anchor exists) — addressed in 1dfe406, closes #209
 - category: copy
 - filed: 2026-05-24 by cloud /iterate audit
