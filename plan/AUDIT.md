@@ -72,6 +72,15 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [copy] [4.5] 75-percent-default — W19 score (+28) Source link resolves to live tracker (W21 shows +35) — addressed in 35db46a, closes #207
+- category: copy
+- filed: 2026-05-24 by cloud /iterate audit
+- impact: 5 (trends article; cites "score +28 and direction up across the eight-week window through 2026-W19" but Source href points to live tracker; W21 shows 75% Layout at +35; same score-mismatch pattern as W19 anchor series)
+- ease: 9 (one href change + remove "live " adjective + past-tense verb + updatedAt bump)
+- score: 4.5 (impact × ease / 10)
+- issue: #207
+> **Resolved (2026-05-24):** Changed Source href from `https://thock.xyz/trends/tracker` to `https://thock.xyz/trends/tracker/2026-W19` so readers land on the historical W19 snapshot where 75% Layout at +28 is preserved (W21 shows +35). Removed "live " adjective and changed "has … sitting" → "had … sitting" (past-tense frames the +28 as W19 historical data). updatedAt bumped from null to 2026-05-24. 667 e2e green. `35db46a`
+
 ### [x] [copy] [3.6] mode-sonnet-r2-group-buy-coverage — Buying Notes close date "2026-06-15" stale after timeline shift to 2026-07-15 — addressed in ce9aecd, closes #206
 - category: copy
 - filed: 2026-05-24 by cloud /iterate audit
