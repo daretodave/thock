@@ -72,6 +72,14 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [ ] [copy] [4.5] dcs-olivetti-comeback — W19 tracker citation links to live tracker (W21); DCS Olivetti not present in W21
+- category: copy
+- filed: 2026-05-24 by cloud /iterate audit
+- impact: 5 (trends article whose core claim is built on W19 data; readers clicking the tracker link see W21 where DCS Olivetti does not appear — direct factual contradiction of the article's "+18 direction up in W19" claim)
+- ease: 9 (one href change + updatedAt bump)
+- score: 4.5 (impact × ease / 10)
+- issue: #202
+
 ### [x] [copy] [4.5] cherry-mx2a-revision — "the live Trends Tracker" cites W19-era scores (−22/−14) that now differ from W21 (−28/−20) — addressed in 073d4de
 - category: copy
 - filed: 2026-05-24 by cloud /iterate audit
