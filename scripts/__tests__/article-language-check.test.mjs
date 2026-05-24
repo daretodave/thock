@@ -260,3 +260,45 @@ describe('checkFile — relative-tracker-this-week pattern', () => {
     assert.equal(violations.length, 0, 'absolute week anchor should not trigger')
   })
 })
+
+// ── live-tracker-stale ────────────────────────────────────────────────────────
+
+describe('checkFile — live-tracker-stale pattern', () => {
+  const patterns = loadPatterns()
+
+  test('flags "live Trends Tracker" as stale present-tense reference', () => {
+    const content = makeMdx(
+      'slug: test\ntitle: Test\nauthor: thock\npillar: trends\npublishedAt: 2026-05-10',
+      '\nThe live Trends Tracker has the Cloud at +36 for this week.\n'
+    )
+    const filePath = tmpMdx(content)
+    const violations = checkFile(filePath, patterns)
+    assert.ok(
+      violations.some((v) => v.patternId === 'live-tracker-stale'),
+      'expected live-tracker-stale violation',
+    )
+  })
+
+  test('flags markdown-link form "live [Trends Tracker](...)"', () => {
+    const content = makeMdx(
+      'slug: test\ntitle: Test\nauthor: thock\npillar: trends\npublishedAt: 2026-05-10',
+      '\nThe live [Trends Tracker](/trends/tracker) has the Hall-effect category sloping up.\n'
+    )
+    const filePath = tmpMdx(content)
+    const violations = checkFile(filePath, patterns)
+    assert.ok(
+      violations.some((v) => v.patternId === 'live-tracker-stale'),
+      'expected live-tracker-stale violation for markdown-link form',
+    )
+  })
+
+  test('"W19 Trends Tracker" ISO-anchored form does not trigger the pattern', () => {
+    const content = makeMdx(
+      'slug: test\ntitle: Test\nauthor: thock\npillar: trends\npublishedAt: 2026-05-10',
+      '\nThe W19 Trends Tracker had the Cloud at +36 — second in the linear category.\n'
+    )
+    const filePath = tmpMdx(content)
+    const violations = checkFile(filePath, patterns)
+    assert.equal(violations.length, 0, 'ISO-anchored form should not trigger live-tracker-stale')
+  })
+})

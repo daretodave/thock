@@ -1705,3 +1705,27 @@ passes accumulate signals.)
 - action: remove 'this week ' from line 57 of zmk-mainstream-shift.mdx; bump updatedAt to 2026-05-23
 - issue: #200
 > **Resolved (2026-05-23):** Removed "this week " from line 57 — sentence now reads "called the mid-premium tier the slot HE has settled into". updatedAt bumped to 2026-05-23. 667 e2e green. `af4dee2`
+
+### [x] [copy] [4.5] hmx-cloud-deep-dive — "pass-5 Trends Tracker currently has" build-plan jargon + stale W19 live-tracker citation
+- category: copy
+- filed: 2026-05-24 by /iterate audit
+- impact: 5 (build-plan jargon "pass-5" is meaningless to readers; "currently has" presents W19 historical data as present-tense fact; link targets live /trends/tracker showing W21+44 not W19+36)
+- ease: 9 (1-line rewrite — change to past-tense W19 snapshot link; bump updatedAt)
+- score: 4.5 (impact × ease / 10)
+- file: apps/web/src/content/articles/hmx-cloud-deep-dive.mdx
+- line: 26
+- issue: [mirror-failed: 2026-05-24T00:00:00Z]
+- action: rewrite line 26 — remove "pass-5", change href to /trends/tracker/2026-W19, "currently has" → "had", bump updatedAt to 2026-05-24
+> **Resolved (2026-05-24):** Line 26 now reads "The [W19 Trends Tracker snapshot](/trends/tracker/2026-W19) had <PartReference id="hmx-cloud" /> at +36 — second only to…". Build-plan jargon removed, past-tense anchored to W19 snapshot. updatedAt bumped to 2026-05-24. Also added live-tracker-stale pattern to article-language-patterns.json + 3 tests in article-language-check.test.mjs.
+
+### [ ] [copy] [3.6] hall-effect-mainstream — 1 temporal anti-pattern violation detected by article-language-check.mjs
+- category: copy
+- filed: 2026-05-24 by article-language-check.mjs corpus scan
+- impact: 4 (static MDX temporal phrase decays on every reader visit after publication)
+- ease: 9 (phrase rewrite — no code or schema change needed)
+- score: 3.6 (impact × ease / 10)
+- patterns: live-tracker-stale
+- file: apps/web/src/content/articles/hall-effect-mainstream.mdx
+- violations:
+  - line 65: `live [Trends Tracker` (live-tracker-stale)
+- action: rewrite each flagged phrase using absolute dates or past-tense phrasing; see pattern descriptions in scripts/article-language-patterns.json

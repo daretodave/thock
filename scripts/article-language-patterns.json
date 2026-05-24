@@ -66,6 +66,12 @@
       "id": "relative-tracker-this-week",
       "match": "this week's tracker",
       "description": "Relative tracker reference decays after the week of publication. Replace with the ISO week anchor: 'the W19 tracker' or 'the 2026-W19 snapshot'."
+    },
+    {
+      "id": "live-tracker-stale",
+      "match": "live \\[?Trends Tracker",
+      "regex": true,
+      "description": "Present-tense 'live Trends Tracker' implies real-time data that static MDX cannot provide — the link target is a snapshot from publication time. Replace with the specific ISO week anchor: 'the W19 Trends Tracker' and link to '/trends/tracker/<isoWeek>'."
     }
   ]
 }
