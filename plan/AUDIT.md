@@ -1749,3 +1749,13 @@ passes accumulate signals.)
 - action: rewrite each flagged phrase using absolute dates or past-tense phrasing; see pattern descriptions in scripts/article-language-patterns.json
 - issue: [mirror-failed: 2026-05-24T00:00:00Z]
 > **Resolved (2026-05-24):** Rewrote the closing paragraph's tracker reference from "The live [Trends Tracker] has the Hall-effect category currently sloping up..." to "At publication, the [Trends Tracker] showed the Hall-effect category on an upward slope..." and "right now, the volume is sitting" → "at publication, the volume was sitting". Past-tense publication-anchored phrasing is stable on every reader visit. article-language-check.mjs reports clean. updatedAt bumped to 2026-05-24. 667 e2e green. `80b2877`
+
+### [x] [copy] [4.5] keychron-q-ultra-zmk — "was at +30 on the tracker at the time this piece filed" links to live tracker (W21 shows +38) — addressed in 57354e2, closes #204
+- category: copy
+- filed: 2026-05-24 by cloud /iterate audit
+- impact: 5 (news article about a currently-reviewed product; "+30 at the time this piece filed" cites W19 data — article published 2026-05-10, end of W19 — but link resolves to live tracker showing Keychron at +38 in W21; same score-mismatch pattern as W19 anchor series)
+- ease: 9 (one clause rewrite + anchor link to W19 snapshot + updatedAt bump)
+- score: 4.5 (impact × ease / 10)
+- issue: #204
+- action: change "where the brand sits on the live [/trends/tracker](/trends/tracker) board in the weeks following this piece. Keychron was at +30 on the tracker at the time this piece filed, and a successful Q Ultra launch is the kind of release that either consolidates that lead or exposes it." → "where the brand sits on the Trends Tracker in the months following. At publication, the [2026-W19 Trends Tracker](/trends/tracker/2026-W19) showed Keychron at +30 — a successful Q Ultra launch is the kind of release that either consolidates that lead or exposes it."; bump updatedAt to 2026-05-24
+> **Resolved (2026-05-24):** Changed "the live [/trends/tracker] board in the weeks following this piece. Keychron was at +30 on the tracker at the time this piece filed" → "the Trends Tracker in the months following. At publication, the [2026-W19 Trends Tracker](/trends/tracker/2026-W19) showed Keychron at +30" so readers land on the historical W19 snapshot where Keychron at +30 is preserved. W21 shows Keychron at +38. updatedAt bumped to 2026-05-24. 667 e2e green. `57354e2`
