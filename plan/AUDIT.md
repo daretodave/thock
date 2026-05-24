@@ -72,6 +72,15 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [copy] [4.5] gmk-cyl-prussian-alert — W19 tracker citation (+38) links to live tracker (W21 shows +54) — addressed in 9d0b1c5, closes #203
+- category: copy
+- filed: 2026-05-24 by cloud /iterate audit
+- impact: 5 (live buy article through 2026-06-12; line 53 cites W19 score +38 "in the week before the buy opened" but href /trends/tracker resolves to W21 where Prussian Alert scores +54 — score mismatch for active buyers)
+- ease: 9 (one href change + updatedAt bump)
+- score: 4.5 (impact × ease / 10)
+- issue: #203
+> **Resolved (2026-05-24):** Changed `[/trends/tracker](/trends/tracker)` → `[2026-W19 Trends Tracker](/trends/tracker/2026-W19)` so readers land on the historical W19 snapshot where Prussian Alert at +38 is preserved. W21 shows Prussian Alert at +54 — anchoring to W19 removes the contradiction. updatedAt bumped to 2026-05-24. 667 e2e green. `9d0b1c5`
+
 ### [x] [copy] [4.5] dcs-olivetti-comeback — W19 tracker citation links to live tracker (W21); DCS Olivetti not present in W21 — addressed in ce7a88f, closes #202
 - category: copy
 - filed: 2026-05-24 by cloud /iterate audit
