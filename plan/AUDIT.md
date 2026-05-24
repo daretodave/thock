@@ -72,6 +72,15 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [copy] [4.5] cherry-mx2a-revision — "the live Trends Tracker" cites W19-era scores (−22/−14) that now differ from W21 (−28/−20) — addressed in 073d4de
+- category: copy
+- filed: 2026-05-24 by cloud /iterate audit
+- impact: 5 (deep-dives article read by Cherry-switch researchers; live tracker link now shows W21 scores −28/−20 while article claimed −22/−14; contradiction between article body and the page it links to)
+- ease: 9 (href update + past-tense rewrite + updatedAt bump)
+- score: 4.5 (impact × ease / 10)
+- issue: [mirror-failed: 2026-05-24T00:00:00Z]
+> **Resolved (2026-05-24):** Changed `href="/trends/tracker"` → `href="/trends/tracker/2026-W19"` so readers land on the historical W19 snapshot matching the cited scores. Rewrote "the live Trends Tracker has the MX2A line slipping at score −22 and Cherry-as-a-brand at −14" → "the 2026-W19 Trends Tracker snapshot pegged the MX2A line at score −22 and Cherry-as-a-brand at −14 — a slide that has continued since". Past-tense phrasing is stable regardless of future tracker updates. updatedAt bumped to 2026-05-24. 667 e2e green. `073d4de`
+
 ## Drained findings (kept for audit-trail; do not re-open)
 
 ### [x] Brand-assets-first posture — drain pass complete
