@@ -72,6 +72,15 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [copy] [4.5] split-ergo-cohort — W19 tracker Source link goes to live tracker; direction now flat in W21 — addressed in c0abfcd, closes #205
+- category: copy
+- filed: 2026-05-24 by cloud /iterate audit
+- impact: 5 (trends article; article claims split/ergo at +32 direction up in W19; live tracker now shows +34 direction flat in W21; readers clicking the Source citation see contradicting direction signal)
+- ease: 9 (one href change + remove "live " adjective + updatedAt bump)
+- score: 4.5 (impact × ease / 10)
+- issue: #205
+> **Resolved (2026-05-24):** Changed Source href from `https://thock.xyz/trends/tracker` to `https://thock.xyz/trends/tracker/2026-W19` so readers land on the historical W19 snapshot where split/ergo at +32 direction up is preserved. W21 shows direction flat at +34 — anchoring to W19 removes the contradiction. Removed "live " adjective before the Source tag (the link now points to a snapshot, not the live tracker). updatedAt bumped from null to 2026-05-24. 667 e2e green. `c0abfcd`
+
 ### [x] [copy] [4.5] gmk-cyl-prussian-alert — W19 tracker citation (+38) links to live tracker (W21 shows +54) — addressed in 9d0b1c5, closes #203
 - category: copy
 - filed: 2026-05-24 by cloud /iterate audit
