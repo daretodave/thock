@@ -72,6 +72,15 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [copy] [3.6] gmk-cyl-ramune-group-buy — "it is running up" present-tense tracker citation with live link (W21 anchor exists) — addressed in 1dfe406, closes #209
+- category: copy
+- filed: 2026-05-24 by cloud /iterate audit
+- impact: 4 (live buy article through 2026-06-20; readers checking buy intelligence see present-tense tracker description that decays; W21 snapshot confirms +38 direction up in the buy's first full active week)
+- ease: 9 (two-word tense fix + href change to /trends/tracker/2026-W21 + updatedAt bump)
+- score: 3.6 (impact × ease / 10)
+- issue: #209
+> **Resolved (2026-05-24):** Changed `[trends tracker](/trends/tracker)` → `[2026-W21 Trends Tracker](/trends/tracker/2026-W21)` (first snapshot where Ramune appears at +38 direction up, the buy's first full active week). Changed "it is running up" → "it was running up" — past tense frames the momentum as a publication-era observation. Line 88 closer redirecting to live tracker for post-close data is unchanged. updatedAt bumped to 2026-05-24. 667 e2e green. `1dfe406`
+
 ### [x] [copy] [4.5] 75-percent-default — W19 score (+28) Source link resolves to live tracker (W21 shows +35) — addressed in 35db46a, closes #207
 - category: copy
 - filed: 2026-05-24 by cloud /iterate audit
