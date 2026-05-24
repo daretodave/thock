@@ -301,4 +301,17 @@ describe('checkFile — live-tracker-stale pattern', () => {
     const violations = checkFile(filePath, patterns)
     assert.equal(violations.length, 0, 'ISO-anchored form should not trigger live-tracker-stale')
   })
+
+  test('flags "live [Trends Tracker]" split across two lines (bigram scan)', () => {
+    const content = makeMdx(
+      'slug: test\ntitle: Test\nauthor: thock\npillar: trends\npublishedAt: 2026-04-15',
+      '\nThe ZMK adoption ceiling is essentially gone. The live\n[Trends Tracker](/trends/tracker) had the ZMK row sloping up.\n'
+    )
+    const filePath = tmpMdx(content)
+    const violations = checkFile(filePath, patterns)
+    assert.ok(
+      violations.some((v) => v.patternId === 'live-tracker-stale'),
+      'expected live-tracker-stale violation for cross-line pattern',
+    )
+  })
 })

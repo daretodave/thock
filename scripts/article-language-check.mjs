@@ -97,6 +97,36 @@ function checkFile(filePath, patterns) {
     }
   }
 
+  // Bigram scan: check consecutive line pairs for patterns that split across a line boundary.
+  // Joins each pair with a single space and only reports matches that cross the join point,
+  // preventing duplicates of single-line violations already caught above.
+  for (let i = 0; i < bodyLines.length - 1; i++) {
+    const bigramLine = bodyLines[i] + ' ' + bodyLines[i + 1]
+    const joinIdx = bodyLines[i].length // the space is at joinIdx; line[i+1] starts at joinIdx+1
+    const lineNum = bodyStartLine + i
+
+    for (const pattern of patterns) {
+      pattern.re.lastIndex = 0
+      let m
+      while ((m = pattern.re.exec(bigramLine)) !== null) {
+        const matchEnd = m.index + m[0].length
+        // Only report if the match truly crosses the line boundary
+        if (m.index <= joinIdx && matchEnd > joinIdx) {
+          violations.push({
+            file: filePath,
+            slug,
+            line: lineNum,
+            column: m.index + 1,
+            match: m[0].replace(/\s+/g, ' ').trim(),
+            patternId: pattern.id,
+            description: pattern.description,
+            context: bigramLine.trim().slice(0, 120),
+          })
+        }
+      }
+    }
+  }
+
   return violations
 }
 
