@@ -1853,3 +1853,13 @@ passes accumulate signals.)
 - score: 5.4 (impact × ease / 10)
 - issue: #213
 > **Resolved (2026-05-24):** Added tracker-will-md-link regex pattern to scripts/article-language-patterns.json: "Tracker\]\([^)]+\)\s+will" (gi flag) catches the markdown-link form "[Trends Tracker](url) will ..." while leaving CTA links ("Follow the [Tracker](url) to see ...") unaffected. Added 2 unit tests: positive ([Trends Tracker](url) will → flagged) + negative (CTA form → clean). Test count: 31 → 33. 667 e2e green. `6adbe25`
+
+### [x] [data] [3.6] W22 tracker: Wuque Studio missing vendor-first-customs articleSlug — addressed in cae441b (closes #214)
+- category: data
+- filed: 2026-05-25 by cloud /iterate audit
+- impact: 4 (flat vendor row on /trends/tracker/2026-W22; missing articleSlug severs tracker → editorial navigation path for Wuque Studio coverage)
+- ease: 9 (one JSON field edit in data/trends/2026-W22.json)
+- score: 3.6 (impact × ease / 10)
+- issue: #214
+- elements: `data/trends/2026-W22.json` Wuque Studio row — articleSlug was null (dropped by Monday-gate scout); W21 correctly carried vendor-first-customs
+> **Resolved (2026-05-25):** Set `articleSlug: "vendor-first-customs"` on the Wuque Studio row in data/trends/2026-W22.json. The vendor-first-customs article covers Wuque's configurator migration and dual-track strategy; it remains the canonical editorial reference for this brand even when no W22-specific piece exists. 670 e2e green. `cae441b`
