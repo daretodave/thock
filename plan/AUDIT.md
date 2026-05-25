@@ -72,6 +72,15 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [data] [4.5] W22 tracker Prototypist row: null articleSlug despite vendor-first-customs existing — addressed in f2cadd4, closes #215
+- category: data
+- filed: 2026-05-25 by cloud /iterate audit
+- impact: 5 (Trends Tracker row for an up-trending vendor has no article link on the tracker's signature surface; vendor-first-customs explicitly covers Prototypist as EU/UK fulfillment vendor and was linked in W19+W20)
+- ease: 9 (one-field JSON fix in data/trends/2026-W22.json)
+- score: 4.5 (impact × ease / 10)
+- issue: #215
+> **Resolved (2026-05-25):** Set `articleSlug: "vendor-first-customs"` on the Prototypist row in data/trends/2026-W22.json. The article explicitly references Prototypist's W19 tracker row and was the linked article in both W19 and W20 snapshots; W21 dropped it during a flat week; W22's up direction restores the link. 670 e2e green. `f2cadd4`
+
 ### [x] [test] [4.0] language-check: 5 patterns lack unit tests (stay-tuned, coming-soon, approximate-month, relative-months, tracker-will) — addressed in this commit, closes #212
 - category: test
 - filed: 2026-05-24 by cloud /iterate audit
