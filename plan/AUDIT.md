@@ -183,6 +183,15 @@
 
 ## Open findings
 
+### [x] [copy] [4.5] zmk-mainstream-shift — bare /trends/tracker link in "had the ZMK row sloping up" clause; W22 tracker has no ZMK row — addressed in this commit, closes #216
+- category: copy
+- filed: 2026-05-25 by cloud /iterate audit
+- impact: 5 (reader following link sees no ZMK row on the W22 tracker — direct contradiction of "ZMK row sloping up"; ZMK tracker row pre-dates our W19 archive and is absent from all current snapshots W19–W22)
+- ease: 9 (remove href, past-tense "had" framing already correct; bump updatedAt)
+- score: 4.5 (impact × ease / 10)
+- issue: #216
+> **Resolved (2026-05-25):** Removed href from "[Trends Tracker](/trends/tracker)" → "thock Trends Tracker" in zmk-mainstream-shift.mdx line 211. The ZMK tracker row existed pre-W19 and is not present in any snapshot W19–W22; the bare href took readers to W22 where no ZMK row exists, directly contradicting the "ZMK row sloping up" claim. Past-tense "had" already scopes the observation to publication era; removing the broken href stops the contradiction without changing the editorial content. updatedAt bumped to 2026-05-25. 670 e2e green.
+
 ### [x] [copy] [5.4] acoustic-spec-rise — closing sentence "tracker will watch" escapes language gate via markdown-link form — addressed in 7caff73
 - category: copy
 - filed: 2026-05-24 by cloud /iterate audit
