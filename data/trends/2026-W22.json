@@ -1,0 +1,169 @@
+{
+  "isoWeek": "2026-W22",
+  "publishedAt": "2026-05-25T00:00:00.000Z",
+  "rows": [
+    {
+      "name": "HMX Cloud V2",
+      "category": "switch",
+      "direction": "up",
+      "score": 49,
+      "spark": [28, 32, 35, 38, 41, 44, 46, 49],
+      "articleSlug": "hmx-cloud-deep-dive",
+      "note": "HMX Cloud V2 maintains momentum on community reputation alone; L4 second-gen lube production is steady and vendor sell-through remains strong at LumeKeebs and SwitchOddities. Score advances from W21 on sustained comparison-thread presence and positive word-of-mouth."
+    },
+    {
+      "name": "Gateron Oil King",
+      "category": "switch",
+      "direction": "flat",
+      "score": 41,
+      "spark": [40, 39, 40, 41, 40, 40, 41, 41],
+      "articleSlug": "gateron-oil-king-deep-dive",
+      "note": "Gateron Oil King holds its workhorse reputation with no new W22 releases, reviews, or comparison spikes. Stock at major US/EU vendors is steady. Score holds flat — no meaningful challengers this week but no fresh buzz either."
+    },
+    {
+      "name": "Cherry MX2A",
+      "category": "switch",
+      "direction": "down",
+      "score": -31,
+      "spark": [-14, -17, -20, -22, -25, -28, -29, -31],
+      "articleSlug": "cherry-mx2a-revision",
+      "note": "No W22 update from Cherry; MX2A remains technically adequate but uninspiring versus HMX and Gateron alternatives. ThereminGoat and community comparison threads highlight the switch's limitations. Structural enthusiast-sentiment slide continues with no reversal catalyst."
+    },
+    {
+      "name": "Hall Effect / Rapid Trigger",
+      "category": "switch",
+      "direction": "up",
+      "score": 60,
+      "spark": [35, 40, 44, 48, 51, 55, 57, 60],
+      "articleSlug": "hall-effect-mainstream",
+      "note": "HE and Rapid Trigger are near-baseline features in 2026 gaming keyboards. Akko MOD007v5 HE and GamaKay TMR from CES 2026 are active discussion topics; PC Gamer and MKBGuide updated best-HE roundups this month. Budget HE under $70 collapses the entry-price barrier."
+    },
+    {
+      "name": "GMK CYL Prussian Alert",
+      "category": "keycap",
+      "direction": "up",
+      "score": 59,
+      "spark": [30, 36, 40, 44, 48, 54, 56, 59],
+      "articleSlug": "gmk-cyl-prussian-alert",
+      "note": "GB live May 15–June 12 with NovelKeys (US), Prototypist (UK), KBDfans (CN), and Oblotzky (EU) among 10+ vendors. Prussian Blue on CYL profile draws strong GeekHack discussion. W22 is the mid-run peak-engagement window; order volume building ahead of the June 12 close."
+    },
+    {
+      "name": "GMK CYL Ramune",
+      "category": "keycap",
+      "direction": "up",
+      "score": 44,
+      "spark": [20, 24, 28, 32, 35, 38, 41, 44],
+      "articleSlug": "gmk-cyl-ramune-group-buy",
+      "note": "GB opened May 15, concurrent with Prussian Alert — a double-GMK-GB week on GeekHack. Inspired by the Japanese soft drink colorway; vendors include Divinikey, GeonWorks, Prototypist, Deltakeyco. Community reception positive around the pastel dual-blue and pink palette."
+    },
+    {
+      "name": "DCS Grass Valley",
+      "category": "keycap",
+      "direction": "flat",
+      "score": 23,
+      "spark": [18, 19, 20, 21, 22, 22, 23, 23],
+      "articleSlug": null,
+      "note": "DCS Grass Valley group buy runs May 1–June 1, 2026. Vintage 1980s broadcast keyboard aesthetic appeals to a niche audience. Interest is stable but modest; the concurrent GMK double-GB this week draws more community volume, keeping Grass Valley at flat."
+    },
+    {
+      "name": "MT3 Profile",
+      "category": "keycap",
+      "direction": "flat",
+      "score": 4,
+      "spark": [4, 4, 4, 4, 4, 4, 4, 4],
+      "articleSlug": "keycap-profiles-compared",
+      "note": "MT3 profile sees no new W22 group buys or notable releases. Steady in profile comparison threads but no momentum spikes. Score holds flat as MT3 maintains its niche following without new supply events this week."
+    },
+    {
+      "name": "75% Layout",
+      "category": "layout",
+      "direction": "up",
+      "score": 38,
+      "spark": [20, 23, 26, 29, 32, 35, 36, 38],
+      "articleSlug": "75-percent-default",
+      "note": "75% layout consolidates as the dominant 2026 form factor. Mode Designs Sonnet 2026 and Keychron Q11 Ultra 8K both target the 75% audience. Buyer guides updated in May 2026 name 75% the golden-ratio layout; new hardware launches continue reinforcing the category."
+    },
+    {
+      "name": "Split / Ergo (Voyager, Glove80)",
+      "category": "layout",
+      "direction": "up",
+      "score": 39,
+      "spark": [22, 24, 26, 28, 30, 34, 36, 39],
+      "articleSlug": "split-ergo-cohort",
+      "note": "Keychron Q11 Ultra 8K (May 8) generated 50k+ social impressions — biggest mainstream split news in months. Z11 Ultra 8K Alice split also launched mid-May. MoErgo Glove80 remains top ergonomic pick in 2026 roundups. W22 is the highest-signal week for split/ergo in months."
+    },
+    {
+      "name": "Alice layout",
+      "category": "layout",
+      "direction": "down",
+      "score": -26,
+      "spark": [-10, -14, -17, -19, -21, -23, -24, -26],
+      "articleSlug": "alice-layout-decline",
+      "note": "Alice layout's structural decline continues; gaming skepticism around angled columns persists. Keychron Z11 Ultra 8K uses an Alice-style design but targets productivity users rather than driving enthusiast interest. No new IC thread or GB reversed the trend in W22."
+    },
+    {
+      "name": "Mode Designs",
+      "category": "vendor",
+      "direction": "up",
+      "score": 37,
+      "spark": [18, 22, 25, 27, 30, 34, 35, 37],
+      "articleSlug": "mode-sonnet-r2-group-buy-coverage",
+      "note": "Encore 2026 pre-orders open with July 2026 shipping target. Sonnet 2026 available in multiple colorways; Monterey and Cacao keycaps shipped in May. High-output 2026 release cadence keeps the brand in community conversation weekly. Boutique positioning remains strong."
+    },
+    {
+      "name": "CannonKeys",
+      "category": "vendor",
+      "direction": "flat",
+      "score": 18,
+      "spark": [16, 16, 17, 18, 18, 18, 18, 18],
+      "articleSlug": "cannonkeys-nyawice-group-buy",
+      "note": "CannonKeys maintains steady vendor presence with Obliterated75 and Satisfaction75 V2 in stock. No new W22 group buy announcement; existing GBs continue fulfillment. Score holds flat with no fresh launch or community spike to drive directional movement."
+    },
+    {
+      "name": "Prototypist",
+      "category": "vendor",
+      "direction": "up",
+      "score": 21,
+      "spark": [12, 13, 15, 16, 17, 18, 19, 21],
+      "articleSlug": null,
+      "note": "Prototypist serves as UK vendor for both GMK CYL Prussian Alert and Ramune simultaneously, plus active GBs for Float65, Bauer 65, Seal TKL, and MW Mass 80. Volume of concurrent active projects in W22 lifts vendor visibility above its prior flat baseline."
+    },
+    {
+      "name": "NovelKeys",
+      "category": "vendor",
+      "direction": "flat",
+      "score": 15,
+      "spark": [12, 12, 13, 13, 14, 14, 14, 15],
+      "articleSlug": null,
+      "note": "NovelKeys participates as US vendor for GMK CYL Prussian Alert, providing a minor W22 lift. No major new switch or keyboard announcement this week. Score edges slightly up on GB vendor participation alone."
+    },
+    {
+      "name": "Keychron",
+      "category": "brand",
+      "direction": "up",
+      "score": 44,
+      "spark": [24, 27, 30, 33, 36, 38, 41, 44],
+      "articleSlug": "keychron-q-ultra-zmk",
+      "note": "Q11 Ultra 8K wireless split (May 8) reached 50k+ social impressions within days. Z11 Ultra 8K Alice split launched mid-May. ZMK firmware and 660-hour battery in the Ultra series draw mainstream press coverage. Keychron brand momentum is the strongest in the tracker this week."
+    },
+    {
+      "name": "Wuque Studio",
+      "category": "brand",
+      "direction": "flat",
+      "score": 17,
+      "spark": [8, 9, 11, 12, 14, 16, 16, 17],
+      "articleSlug": null,
+      "note": "Wuque Studio Nama (80% with functional watch movement, 300-unit run) delivered to buyers in March 2026. No new W22 announcement; CannonKeys continues stocking WS products. Brand holds steady prestige from the Nama's viral coverage but generates no fresh W22 signal."
+    },
+    {
+      "name": "Cherry (GMK parent)",
+      "category": "brand",
+      "direction": "down",
+      "score": -23,
+      "spark": [-8, -11, -14, -16, -18, -20, -21, -23],
+      "articleSlug": "cherry-mx2a-revision",
+      "note": "Cherry-the-switch-brand sentiment continues its structural decline. MX2A acknowledged as improved but not exciting versus HMX or Gateron. Concurrent GMK CYL GBs benefit GMK-the-keycap-brand but not Cherry. No positive W22 event reverses the trend."
+    }
+  ],
+  "updatedAt": "2026-05-25T12:00:00.000Z"
+}
