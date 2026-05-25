@@ -192,13 +192,14 @@
 
 ## Open findings
 
-### [ ] [test] [3.6] language gate: tracker-href-bare-week pattern missing — W-anchored links to bare /trends/tracker go undetected
+### [x] [test] [3.6] language gate: tracker-href-bare-week pattern missing — W-anchored links to bare /trends/tracker go undetected — addressed in 6fd79fb, closes #219
 - category: test
 - filed: 2026-05-25 by cloud /iterate audit
 - impact: 4 (12+ articles required manual fixup where markdown links with ISO week references in their text pointed to the bare /trends/tracker URL instead of the archived snapshot; the gate has no pattern to prevent recurrence in future /ship-content articles)
 - ease: 9 (one JSON entry in article-language-patterns.json + 2 unit tests; no code or content change)
 - score: 3.6 (impact × ease / 10)
 - issue: #219
+> **Resolved (2026-05-25):** Added tracker-href-bare-week regex pattern to scripts/article-language-patterns.json: matches `\[[^\]]*\b(?:W\d{2}|\d{4}-W\d{2})\b[^\]]*\]\(/trends/tracker\)` — markdown links with an ISO week reference in their text pointing to the bare /trends/tracker URL. Carve-out: "Follow the [Trends Tracker](/trends/tracker)" directives contain no week reference and are not flagged. Added 2 unit tests: positive ([W19 Trends Tracker](/trends/tracker) → flagged) + negative (CTA form → clean). Corpus scan confirms clean. Test count: 33 → 35. 670 e2e green. `6fd79fb`
 
 ### [x] [copy] [4.0] trends-tracker-preview — "A current example" uses present-tense verbs for W19 snapshot data now 3 weeks stale — addressed in cc7192e
 - category: copy
