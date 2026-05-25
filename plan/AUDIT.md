@@ -181,6 +181,15 @@
 > Production probes 2xx across 10 patterns. Marked drained on
 > 2026-05-09T12:30Z during oversight pass.
 
+### [x] [copy] [3.6] alice-layout-decline — W19 tracker body citation unlinked (no hyperlink to archived snapshot) — addressed in b9c9bfc, closes #217
+- category: copy
+- filed: 2026-05-25 by cloud /iterate audit
+- impact: 4 (trends article; body says "down 18 percent on the W19 tracker" without linking to the archived /trends/tracker/2026-W19 snapshot; split-ergo-cohort, dcs-olivetti-comeback, and hmx-cloud-deep-dive all link their W19 citations; alice-layout-decline was the only W19-citing trends article with an unlinked body mention)
+- ease: 9 (one markdown hyperlink addition + updatedAt bump)
+- score: 3.6 (impact × ease / 10)
+- issue: #217
+> **Resolved (2026-05-25):** Changed "the W19 tracker" → "[W19 tracker snapshot](/trends/tracker/2026-W19)" in alice-layout-decline.mdx body at line 38. Readers can now verify the -18 score directly from the body sentence. updatedAt bumped to 2026-05-25. 670 e2e green. `b9c9bfc`
+
 ## Open findings
 
 ### [x] [copy] [4.5] zmk-mainstream-shift — bare /trends/tracker link in "had the ZMK row sloping up" clause; W22 tracker has no ZMK row — addressed in this commit, closes #216
