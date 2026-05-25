@@ -399,6 +399,39 @@ describe('checkFile — tracker-will-md-link pattern', () => {
   })
 })
 
+// ── tracker-href-bare-week ────────────────────────────────────────────────────
+
+describe('checkFile — tracker-href-bare-week pattern', () => {
+  const patterns = loadPatterns()
+
+  test('flags "[W19 Trends Tracker](/trends/tracker)" as bare-week tracker link', () => {
+    const content = makeMdx(
+      'slug: test\ntitle: Test\nauthor: thock\npillar: trends\npublishedAt: 2026-05-01',
+      '\nAlice dropped in the [W19 Trends Tracker](/trends/tracker) with no sign of recovery.\n'
+    )
+    const filePath = tmpMdx(content)
+    const violations = checkFile(filePath, patterns)
+    assert.ok(
+      violations.some((v) => v.patternId === 'tracker-href-bare-week'),
+      'expected tracker-href-bare-week violation for W19 link text form'
+    )
+  })
+
+  test('"Follow the [Trends Tracker](/trends/tracker)" CTA does not trigger', () => {
+    const content = makeMdx(
+      'slug: test\ntitle: Test\nauthor: thock\npillar: news\npublishedAt: 2026-05-01',
+      '\nFollow the [Trends Tracker](/trends/tracker) for post-close movement data.\n'
+    )
+    const filePath = tmpMdx(content)
+    const violations = checkFile(filePath, patterns)
+    assert.equal(
+      violations.filter((v) => v.patternId === 'tracker-href-bare-week').length,
+      0,
+      '"Follow the [Trends Tracker](/trends/tracker)" CTA should not trigger tracker-href-bare-week'
+    )
+  })
+})
+
 // ── live-tracker-stale ────────────────────────────────────────────────────────
 
 describe('checkFile — live-tracker-stale pattern', () => {

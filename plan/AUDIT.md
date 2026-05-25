@@ -192,6 +192,14 @@
 
 ## Open findings
 
+### [ ] [test] [3.6] language gate: tracker-href-bare-week pattern missing — W-anchored links to bare /trends/tracker go undetected
+- category: test
+- filed: 2026-05-25 by cloud /iterate audit
+- impact: 4 (12+ articles required manual fixup where markdown links with ISO week references in their text pointed to the bare /trends/tracker URL instead of the archived snapshot; the gate has no pattern to prevent recurrence in future /ship-content articles)
+- ease: 9 (one JSON entry in article-language-patterns.json + 2 unit tests; no code or content change)
+- score: 3.6 (impact × ease / 10)
+- issue: #219
+
 ### [x] [copy] [4.0] trends-tracker-preview — "A current example" uses present-tense verbs for W19 snapshot data now 3 weeks stale — addressed in cc7192e
 - category: copy
 - filed: 2026-05-25 by cloud /iterate audit

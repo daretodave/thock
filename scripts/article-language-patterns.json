@@ -83,6 +83,12 @@
       "match": "Tracker\\]\\([^)]+\\)\\s+will",
       "regex": true,
       "description": "Markdown-link form of the tracker-will anti-pattern — '[Trends Tracker](url) will ...' is an unfulfillable forward-looking promise. Rewrite as 'Follow the [Trends Tracker](url) to see ...' or remove the sentence."
+    },
+    {
+      "id": "tracker-href-bare-week",
+      "match": "\\[[^\\]]*\\b(?:W\\d{2}|\\d{4}-W\\d{2})\\b[^\\]]*\\]\\(/trends/tracker\\)",
+      "regex": true,
+      "description": "Markdown link with an ISO week reference in the link text (e.g., 'W19', '2026-W19') pointing to the bare /trends/tracker URL. Links citing historical tracker data should target the archived snapshot for that week (e.g., /trends/tracker/2026-W19). 'Follow the [Trends Tracker](/trends/tracker)' closing directives are exempt — they contain no week reference in the link text."
     }
   ]
 }
