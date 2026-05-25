@@ -192,6 +192,15 @@
 
 ## Open findings
 
+### [x] [copy] [4.0] trends-tracker-preview — "A current example" uses present-tense verbs for W19 snapshot data now 3 weeks stale — addressed in cc7192e
+- category: copy
+- filed: 2026-05-25 by cloud /iterate audit
+- impact: 5 (canonical tracker methodology explainer linked from /about; "sits at +42", "reads -18", "is holding flat" etc describe W19 values that have diverged in W22: Oil King 41, Mode Designs 37, Wuque Studio 17, Alice −26 vs article's −18)
+- ease: 8 (paragraph rewrite: "A current example" → "A worked example"; present → past tense; add W19 archive link; update InlineViz alt text; bump updatedAt)
+- score: 4.0 (impact × ease / 10)
+- issue: [mirror-failed: 2026-05-25T00:00:00Z]
+> **Resolved (2026-05-25):** Changed "A current example" → "A worked example". Past-tense all verbs in the example paragraph (sat, read, held, was up at, was flat at). Added archive link: "In the [2026-W19 snapshot](/trends/tracker/2026-W19)". Removed "live" from InlineViz alt text ("live W19 Gateron Oil King row" → "2026-W19 Gateron Oil King row"). updatedAt bumped to 2026-05-25. 670 e2e green. `cc7192e`
+
 ### [x] [copy] [4.5] zmk-mainstream-shift — bare /trends/tracker link in "had the ZMK row sloping up" clause; W22 tracker has no ZMK row — addressed in this commit, closes #216
 - category: copy
 - filed: 2026-05-25 by cloud /iterate audit
