@@ -1890,3 +1890,10 @@ passes accumulate signals.)
 - issue: #214
 - elements: `data/trends/2026-W22.json` Wuque Studio row — articleSlug was null (dropped by Monday-gate scout); W21 correctly carried vendor-first-customs
 > **Resolved (2026-05-25):** Set `articleSlug: "vendor-first-customs"` on the Wuque Studio row in data/trends/2026-W22.json. The vendor-first-customs article covers Wuque's configurator migration and dual-track strategy; it remains the canonical editorial reference for this brand even when no W22-specific piece exists. 670 e2e green. `cae441b`
+
+### [x] [fix] [3.6] cannonkeys-nyawice-group-buy — W19 tracker body citation lacks href to archived snapshot — addressed in 168bde0, closes #218
+- category: fix
+- filed: 2026-05-25 by cloud /iterate audit
+- impact: 4 (body cites "down 18 percent on the W19 tracker" — variant C: text present, no hyperlink; no W19 tracker link existed anywhere in this article)
+- ease: 9 (one-phrase MDX change)
+- score: 3.6 (impact × ease / 10)
