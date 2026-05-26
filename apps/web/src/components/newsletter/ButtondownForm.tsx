@@ -72,8 +72,8 @@ export function ButtondownForm({
           placeholder="you@example.com"
           className={
             isFooter
-              ? 'flex-1 border border-border bg-surface px-3 py-2 text-small text-text placeholder:text-text-4 focus:outline-none focus:border-border-hi'
-              : 'flex-1 border border-border bg-surface px-4 py-3 text-body text-text placeholder:text-text-4 focus:outline-none focus:border-border-hi'
+              ? 'flex-1 border border-border bg-surface px-3 py-2 text-small text-text placeholder:text-text-2 focus:outline-none focus:border-border-hi'
+              : 'flex-1 border border-border bg-surface px-4 py-3 text-body text-text placeholder:text-text-2 focus:outline-none focus:border-border-hi'
           }
         />
         <input
