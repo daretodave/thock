@@ -1959,3 +1959,14 @@ passes accumulate signals.)
 - impact: 4 (body cites "down 18 percent on the W19 tracker" — variant C: text present, no hyperlink; no W19 tracker link existed anywhere in this article)
 - ease: 9 (one-phrase MDX change)
 - score: 3.6 (impact × ease / 10)
+
+### [x] [a11y] [4.5] placeholder:text-text-4 — WCAG AA contrast failure on /search, /newsletter, /404 inputs — addressed in 69f9d81, closes #223
+- category: a11y
+- filed: 2026-05-26 by cloud /iterate audit
+- impact: 5 (three form inputs across three pages use placeholder:text-text-4 — oklch(0.42) against bg-surface oklch(0.235) and bg-bg oklch(0.175) — yielding ~2.0:1 contrast, far below WCAG 1.4.3's 4.5:1 minimum for normal text; placeholder hint text is unreadable for users relying on contrast in low-vision conditions)
+- ease: 9 (three files, one class-name change each; no logic or schema change)
+- score: 4.5 (impact × ease / 10)
+- elements: apps/web/src/components/newsletter/ButtondownForm.tsx:75-76, apps/web/src/components/not-found/RootNotFound.tsx:54, apps/web/src/app/search/SearchPanel.tsx:99
+- action: change placeholder:text-text-4 → placeholder:text-text-2 in all three files; text-text-2 (oklch(0.78)) yields ~8:1 contrast on bg-surface and ~9:1 on bg-bg, both passing WCAG AA
+- issue: #223
+> **Resolved (2026-05-26):** Changed `placeholder:text-text-4` → `placeholder:text-text-2` in ButtondownForm.tsx (both compact and standard variants), RootNotFound.tsx, and SearchPanel.tsx. text-text-2 (oklch(0.78)) yields ~8:1 contrast on bg-surface and ~9:1 on bg-bg — both pass WCAG 1.4.3 AA. axe-core 4.11.3 does not test ::placeholder pseudo-element contrast, so the e2e a11y spec was previously passing despite the violation. 670 e2e green. `69f9d81`
