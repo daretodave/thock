@@ -72,6 +72,14 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [copy] [3.6] hmx-cloud-deep-dive lede: "Today the Cloud sits second on our W19 tracker" — present-tense "Today" decays across reads
+- category: copy
+- filed: 2026-05-26 by cloud /iterate audit
+- impact: 4 (lede text renders in article hero, article cards across the site, search results, OG metadata, and related-article rails; "Today" implies present tense that diverges from W22 reality — readers see "Today... W19 tracker" and must guess whether "today" means the publication date or the current date)
+- ease: 9 (three-word change in frontmatter lede: "Today the Cloud sits second on our W19" → "In W19, the Cloud sat second on our"; present→past tense; updatedAt already current from f6053b4)
+- score: 3.6 (impact × ease / 10)
+- issue: #220
+
 ### [x] [copy] [3.6] hmx-cloud-deep-dive closing paragraph: unlinked W19 tracker citation (Variant C) — addressed in f6053b4
 - category: copy
 - filed: 2026-05-26 by cloud /iterate audit
