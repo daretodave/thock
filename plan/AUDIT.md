@@ -72,6 +72,15 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [copy] [3.6] hmx-cloud-deep-dive lede — "sat...and lands" mixed tense; 07cf733 fixed "sits→sat" but left "lands" present — addressed in 998750e, closes #221
+- category: copy
+- filed: 2026-05-26 by cloud /iterate audit
+- impact: 4 (lede renders in article hero, article cards across the site, related-articles rails, and OG metadata; the coordinated clause "sat second on our tracker and lands in half the $120 prebuilts" has inconsistent tense — past "sat" followed by present "lands" in the same clause; the previous fix 07cf733 converted "sits→sat" but left "lands" unchanged, making the incomplete fix more visible than the original)
+- ease: 9 (single word change in frontmatter lede: "lands" → "landed"; no other files touched)
+- score: 3.6 (impact × ease / 10)
+- issue: #221
+> **Resolved (2026-05-26):** Changed "lands" → "landed" in frontmatter lede. Consistent past tense throughout the lede clause ("sat second on our tracker and landed in half the $120 prebuilts"). 670 e2e green. `998750e`
+
 ### [x] [copy] [3.6] hmx-cloud-deep-dive lede: "Today the Cloud sits second on our W19 tracker" — present-tense "Today" decays across reads — addressed in 07cf733, closes #220
 - category: copy
 - filed: 2026-05-26 by cloud /iterate audit
