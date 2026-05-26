@@ -72,6 +72,14 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [ ] [copy] [3.2] gmk-cyl-greg-2-group-buy — bare /trends/tracker href in "DCS Olivetti row is on the same arc" clause; DCS Olivetti absent from W22 tracker
+- category: copy
+- filed: 2026-05-26 by cloud /iterate audit
+- impact: 4 (live buy article through 2026-05-29; bare /trends/tracker href alongside "the DCS Olivetti row is on the same arc" takes readers to W22 tracker where DCS Olivetti is absent — replaced by DCS Grass Valley; same Variant B pattern as zmk-mainstream-shift `7662ecb`)
+- ease: 8 (remove href from tracker link text: "[trends tracker](/trends/tracker)" → "Trends Tracker"; DCS Olivetti aside stays as editorial context; updatedAt bump)
+- score: 3.2 (impact × ease / 10)
+- issue: #224
+
 ### [x] [copy] [3.2] hall-effect-mainstream — "At publication" tracker cite predates Hall-effect row; bare /trends/tracker href — addressed in this commit
 - category: copy
 - filed: 2026-05-26 by cloud /iterate audit
