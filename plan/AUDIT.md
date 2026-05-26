@@ -72,6 +72,14 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [copy] [3.6] hmx-cloud-deep-dive closing paragraph: unlinked W19 tracker citation (Variant C) — addressed in this commit
+- category: copy
+- filed: 2026-05-26 by cloud /iterate audit
+- impact: 4 (deep-dives article closing sentence references "+36 on the W19 tracker" without href; line 26 of the same article already links the identical data as [W19 Trends Tracker snapshot](/trends/tracker/2026-W19); reader at the end of the article cannot navigate to the archived snapshot to verify the cited figure)
+- ease: 9 (one markdown hyperlink change + updatedAt bump)
+- score: 3.6 (impact × ease / 10)
+- issue: [mirror-failed: 2026-05-26T00:00:00Z]
+
 ### [x] [data] [4.5] W22 tracker Prototypist row: null articleSlug despite vendor-first-customs existing — addressed in f2cadd4, closes #215
 - category: data
 - filed: 2026-05-25 by cloud /iterate audit
