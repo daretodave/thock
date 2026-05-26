@@ -1979,3 +1979,15 @@ passes accumulate signals.)
 - action: change placeholder:text-text-4 → placeholder:text-text-2 in all three files; text-text-2 (oklch(0.78)) yields ~8:1 contrast on bg-surface and ~9:1 on bg-bg, both passing WCAG AA
 - issue: #223
 > **Resolved (2026-05-26):** Changed `placeholder:text-text-4` → `placeholder:text-text-2` in ButtondownForm.tsx (both compact and standard variants), RootNotFound.tsx, and SearchPanel.tsx. text-text-2 (oklch(0.78)) yields ~8:1 contrast on bg-surface and ~9:1 on bg-bg — both pass WCAG 1.4.3 AA. axe-core 4.11.3 does not test ::placeholder pseudo-element contrast, so the e2e a11y spec was previously passing despite the violation. 670 e2e green. `69f9d81`
+
+### [x] [copy] [4.0] mode-sonnet-r2-group-buy-coverage — "Group-buy timing" callout shows stale pre-reschedule dates — addressed in 04ed551, closes #225
+- category: copy
+- filed: 2026-05-26 by cloud /iterate audit
+- impact: 5 (two callouts in same article contradict each other — top callout says new dates 2026-06-01 through 2026-07-15; second "Group-buy timing" callout still shows original 2026-05-01 through 2026-06-15; a reader trusting the second callout would think the buy is 25 days in and almost done — it actually doesn't open until June 1)
+- ease: 8 (one-line callout body update + updatedAt bump; no logic or schema change)
+- score: 4.0 (impact × ease / 10)
+- file: apps/web/src/content/articles/mode-sonnet-r2-group-buy-coverage.mdx
+- line: 29
+- issue: #225
+- action: rewrite line 29 "Round opens 2026-05-01 and closes 2026-06-15" → "Round now opens 2026-06-01 and closes 2026-07-15 (rescheduled — see update note at top)"; bump updatedAt to 2026-05-26
+> **Resolved (2026-05-26):** Updated the "Group-buy timing" callout to show the rescheduled dates 2026-06-01 through 2026-07-15 with a back-reference to the top update note. The second callout no longer contradicts the first. updatedAt bumped to 2026-05-26. 670 e2e green. `04ed551`
