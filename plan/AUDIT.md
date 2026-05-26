@@ -72,6 +72,15 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [copy] [3.2] hall-effect-mainstream — "At publication" tracker cite predates Hall-effect row; bare /trends/tracker href — addressed in this commit
+- category: copy
+- filed: 2026-05-26 by cloud /iterate audit
+- impact: 4 ("At publication, the [Trends Tracker](/trends/tracker) showed the Hall-effect category on an upward slope" — article published 2026-04-22 (W17), before the tracker existed (W19 first snapshot); Hall-effect row first appears in W21 (+55, direction up); the "At publication" qualifier claims tracker data existed in April when it did not; bare href resolves to live W22 tracker)
+- ease: 8 (change temporal qualifier + update href to W21 archive)
+- score: 3.2 (impact × ease / 10)
+- issue: [mirror-failed: 2026-05-26T00:00:00Z]
+> **Resolved (2026-05-26):** Changed "At publication, the [Trends Tracker](/trends/tracker) showed the Hall-effect category on an upward slope and the polling-rate sub-thread rising alongside it." → "The [2026-W21 Trends Tracker](/trends/tracker/2026-W21) showed the Hall-effect category at +55 and on an upward slope, with polling-rate configurability rising alongside it." Removes anachronistic "At publication" qualifier (W17 predates tracker and Hall-effect row); anchors to W21 (earliest snapshot with Hall-effect data at +55 direction up); links to archive not live tracker. updatedAt bumped to 2026-05-26. 670 e2e green.
+
 ### [x] [copy] [3.6] hmx-cloud-deep-dive lede — "sat...and lands" mixed tense; 07cf733 fixed "sits→sat" but left "lands" present — addressed in 998750e, closes #221
 - category: copy
 - filed: 2026-05-26 by cloud /iterate audit
