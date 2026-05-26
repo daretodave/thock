@@ -227,6 +227,15 @@
 
 ## Open findings
 
+### [x] [copy] [3.5] gsk-sweet-nightmare-group-buy — stale "not yet in" uncertainty paragraph after May 11 close — addressed in 9cfab0a, closes #222
+- category: copy
+- filed: 2026-05-26 by cloud /iterate audit
+- impact: 5 (news article for a buy closed 2026-05-11; line 53 "The editorial answer is not yet in" / "Neither reading is available yet" — stale present-tense uncertainty for a 15-day-old close; previous fix 84885e7 addressed closing-section phrases but missed this paragraph)
+- ease: 7 (rewrite one paragraph to past-tense framing; updatedAt bump)
+- score: 3.5 (impact × ease / 10)
+- issue: #222
+> **Resolved (2026-05-26):** Rewrote line 53 from "The editorial answer is not yet in... Neither reading is available yet." to past-tense framing: "The editorial answer was not available at close — variant-level sell-through data is not published for artisan resin runs." Preserves the two-reading analytical framework in conditional past tense. updatedAt bumped to 2026-05-26. 670 e2e green. `9cfab0a`
+
 ### [x] [test] [3.6] language gate: tracker-href-bare-week pattern missing — W-anchored links to bare /trends/tracker go undetected — addressed in 6fd79fb, closes #219
 - category: test
 - filed: 2026-05-25 by cloud /iterate audit
