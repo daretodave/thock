@@ -72,6 +72,15 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [copy] [3.2] zmk-mainstream-shift — "At publication, the thock Trends Tracker had the ZMK row sloping up" — anachronistic claim; ZMK absent from all snapshots — addressed in ed2c700, closes #226
+- category: copy
+- filed: 2026-05-27 by cloud /iterate audit
+- impact: 4 (trends article; publishedAt 2026-04-15 predates tracker launch (W19, 2026-05-06); "At publication, the thock Trends Tracker had the ZMK row" is an anachronism — the tracker did not exist at publication; additionally ZMK appears in no stored snapshot W19–W22; prior fix #216 removed the broken href but the prose claim itself remained)
+- ease: 8 (one sentence deletion/rewrite preserving editorial observation; updatedAt bump)
+- score: 3.2 (impact × ease / 10)
+- issue: #226
+> **Resolved (2026-05-27):** Removed "At publication, the thock Trends Tracker had the ZMK row sloping up and the wireless-firmware sub-thread sloping up alongside it; neither line had spiked, both were climbing on the cadence of a category settling into a default slot." Replaced with "ZMK and the wireless-firmware sub-thread were both climbing on the cadence of a category settling into a default slot rather than having a moment." — preserves the editorial observation without the unverifiable pre-tracker data source. updatedAt bumped to 2026-05-27. 670 e2e green. `ed2c700`
+
 ### [x] [copy] [3.2] gmk-cyl-greg-2-group-buy — bare /trends/tracker href in "DCS Olivetti row is on the same arc" clause; DCS Olivetti absent from W22 tracker
 - category: copy
 - filed: 2026-05-26 by cloud /iterate audit
