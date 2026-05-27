@@ -2000,3 +2000,14 @@ passes accumulate signals.)
 - issue: #225
 - action: rewrite line 29 "Round opens 2026-05-01 and closes 2026-06-15" → "Round now opens 2026-06-01 and closes 2026-07-15 (rescheduled — see update note at top)"; bump updatedAt to 2026-05-26
 > **Resolved (2026-05-26):** Updated the "Group-buy timing" callout to show the rescheduled dates 2026-06-01 through 2026-07-15 with a back-reference to the top update note. The second callout no longer contradicts the first. updatedAt bumped to 2026-05-26. 670 e2e green. `04ed551`
+
+### [x] [fix] [3.6] language gate — "at publication" + bare tracker URL anti-pattern not covered — addressed in 429089d, closes #227
+- category: fix
+- filed: 2026-05-27 by cloud /iterate audit (expand pass 33 callout — iterate-shaped)
+- impact: 4 (preventive: catches "At publication, the [Trends Tracker](/trends/tracker) showed…" — bare-URL form of the tracker-anachronism; af530a7 fixed the one instance manually; no gate prevents future articles from repeating it)
+- ease: 9 (add one JSON pattern to article-language-patterns.json + 2 unit tests)
+- score: 3.6 (impact × ease / 10)
+- elements: scripts/article-language-patterns.json, scripts/__tests__/article-language-check.test.mjs
+- issue: #227
+- action: add pattern id="at-publication-bare-tracker" matching `[Aa]t publication.*\[.*[Tt]racker.*\]\(/trends/tracker\)` with regex:true; add positive test (bare URL → triggers) and negative test (snapshot URL → does not trigger)
+> **Resolved (2026-05-27):** Added `at-publication-bare-tracker` pattern to `scripts/article-language-patterns.json`. Matches "At publication, the [Trends Tracker](/trends/tracker)…" with a bare URL; does not match snapshot URLs (/trends/tracker/2026-W19) or forward-looking "Follow the tracker" CTAs. 2 unit tests added. Corpus scan: 0 violations (current articles already use snapshot anchors). 670 e2e green. `429089d`
