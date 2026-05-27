@@ -486,3 +486,36 @@ describe('checkFile — live-tracker-stale pattern', () => {
     )
   })
 })
+
+// ── at-publication-bare-tracker ───────────────────────────────────────────────
+
+describe('checkFile — at-publication-bare-tracker pattern', () => {
+  const patterns = loadPatterns()
+
+  test('flags "At publication, the [Trends Tracker](/trends/tracker)" bare URL form', () => {
+    const content = makeMdx(
+      'slug: test\ntitle: Test\nauthor: thock\npillar: trends\npublishedAt: 2026-04-22',
+      '\nAt publication, the [Trends Tracker](/trends/tracker) showed the Hall-effect category on an upward slope.\n'
+    )
+    const filePath = tmpMdx(content)
+    const violations = checkFile(filePath, patterns)
+    assert.ok(
+      violations.some((v) => v.patternId === 'at-publication-bare-tracker'),
+      'expected at-publication-bare-tracker violation for bare URL form',
+    )
+  })
+
+  test('"At publication, the [2026-W19 Trends Tracker](/trends/tracker/2026-W19)" snapshot URL does not trigger', () => {
+    const content = makeMdx(
+      'slug: test\ntitle: Test\nauthor: thock\npillar: trends\npublishedAt: 2026-05-15',
+      '\nAt publication, the [2026-W19 Trends Tracker](/trends/tracker/2026-W19) showed Keychron at +30.\n'
+    )
+    const filePath = tmpMdx(content)
+    const violations = checkFile(filePath, patterns)
+    assert.equal(
+      violations.filter((v) => v.patternId === 'at-publication-bare-tracker').length,
+      0,
+      'snapshot URL form should not trigger at-publication-bare-tracker',
+    )
+  })
+})

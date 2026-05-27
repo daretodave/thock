@@ -89,6 +89,12 @@
       "match": "\\[[^\\]]*\\b(?:W\\d{2}|\\d{4}-W\\d{2})\\b[^\\]]*\\]\\(/trends/tracker\\)",
       "regex": true,
       "description": "Markdown link with an ISO week reference in the link text (e.g., 'W19', '2026-W19') pointing to the bare /trends/tracker URL. Links citing historical tracker data should target the archived snapshot for that week (e.g., /trends/tracker/2026-W19). 'Follow the [Trends Tracker](/trends/tracker)' closing directives are exempt — they contain no week reference in the link text."
+    },
+    {
+      "id": "at-publication-bare-tracker",
+      "match": "[Aa]t publication.*\\[.*[Tt]racker.*\\]\\(/trends/tracker\\)",
+      "regex": true,
+      "description": "Historical tracker citation using 'at publication' with a bare /trends/tracker URL. Replace with the specific ISO week snapshot: '[YYYY-WNN Trends Tracker](/trends/tracker/YYYY-WNN)'. 'Follow the [Trends Tracker](/trends/tracker)' forward-looking closers are exempt — they do not contain 'at publication'."
     }
   ]
 }
