@@ -72,6 +72,15 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [fix] [3.6] language gate: "this quarter" bare temporal pattern missing; hall-effect-mainstream stale June 30 — addressed in 9645a36
+- category: fix
+- filed: 2026-05-28 by cloud /iterate audit
+- impact: 4 (hall-effect-mainstream.mdx line 17 uses "at least one Tier-1 prebuilt launch this quarter" — a bare relative quarter reference that means Q2 2026 at the April 22 publication date; becomes stale July 1; no gate pattern catches "this quarter"; preventive measure consistent with tracker-href-bare-week and at-publication-bare-tracker additions)
+- ease: 9 (one JSON pattern entry + 2 unit tests + one article word change; corpus scan confirms 1 violation)
+- score: 3.6 (impact × ease / 10)
+- issue: [mirror-failed: 2026-05-28T07:30:00Z]
+> **Resolved (2026-05-28):** Added `relative-this-quarter` regex pattern to `scripts/article-language-patterns.json` (matches `\bthis quarter\b`; carve-out: "Q2 2026" and other absolute forms do not trigger). Fixed the one corpus violation: "at least one Tier-1 prebuilt launch this quarter" → "in Q2 2026" in `hall-effect-mainstream.mdx`. updatedAt bumped to 2026-05-28. 2 unit tests added (test count: 37 → 39). 670 e2e green. `9645a36`
+
 ### [x] [copy] [3.2] zmk-mainstream-shift — "At publication, the thock Trends Tracker had the ZMK row sloping up" — anachronistic claim; ZMK absent from all snapshots — addressed in ed2c700, closes #226
 - category: copy
 - filed: 2026-05-27 by cloud /iterate audit
