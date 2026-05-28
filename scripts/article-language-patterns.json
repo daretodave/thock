@@ -95,6 +95,12 @@
       "match": "[Aa]t publication.*\\[.*[Tt]racker.*\\]\\(/trends/tracker\\)",
       "regex": true,
       "description": "Historical tracker citation using 'at publication' with a bare /trends/tracker URL. Replace with the specific ISO week snapshot: '[YYYY-WNN Trends Tracker](/trends/tracker/YYYY-WNN)'. 'Follow the [Trends Tracker](/trends/tracker)' forward-looking closers are exempt — they do not contain 'at publication'."
+    },
+    {
+      "id": "relative-this-quarter",
+      "match": "\\bthis quarter\\b",
+      "regex": true,
+      "description": "Bare relative quarter reference decays after the quarter of publication. Replace with an absolute quarter anchor (e.g., 'Q2 2026') derived from the article's publishedAt."
     }
   ]
 }

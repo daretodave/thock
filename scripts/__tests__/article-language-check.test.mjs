@@ -519,3 +519,36 @@ describe('checkFile — at-publication-bare-tracker pattern', () => {
     )
   })
 })
+
+// ── relative-this-quarter ─────────────────────────────────────────────────────
+
+describe('checkFile — relative-this-quarter pattern', () => {
+  const patterns = loadPatterns()
+
+  test('flags bare "this quarter" as a relative temporal reference', () => {
+    const content = makeMdx(
+      'slug: test\ntitle: Test\nauthor: thock\npillar: trends\npublishedAt: 2026-04-22',
+      '\nHE is the headline configuration on at least one Tier-1 prebuilt launch this quarter.\n'
+    )
+    const filePath = tmpMdx(content)
+    const violations = checkFile(filePath, patterns)
+    assert.ok(
+      violations.some((v) => v.patternId === 'relative-this-quarter'),
+      'expected relative-this-quarter violation for bare "this quarter"'
+    )
+  })
+
+  test('"Q2 2026" absolute quarter anchor does not trigger the pattern', () => {
+    const content = makeMdx(
+      'slug: test\ntitle: Test\nauthor: thock\npillar: trends\npublishedAt: 2026-04-22',
+      '\nHE is the headline configuration on at least one Tier-1 prebuilt launch in Q2 2026.\n'
+    )
+    const filePath = tmpMdx(content)
+    const violations = checkFile(filePath, patterns)
+    assert.equal(
+      violations.filter((v) => v.patternId === 'relative-this-quarter').length,
+      0,
+      '"Q2 2026" absolute quarter anchor should not trigger relative-this-quarter'
+    )
+  })
+})
