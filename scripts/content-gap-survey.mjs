@@ -127,7 +127,7 @@ function extractFrontmatter(content) {
   if (!match) return null
   const yaml = match[1]
   const pillarMatch = yaml.match(/^pillar:\s*(.+)$/m)
-  const publishedAtMatch = yaml.match(/^publishedAt:\s*'?([^'\n]+)'?/m)
+  const publishedAtMatch = yaml.match(/^publishedAt:\s*['"]?([^'"\n]+)['"]?/m)
   if (!pillarMatch || !publishedAtMatch) return null
   return {
     pillar: pillarMatch[1].trim(),

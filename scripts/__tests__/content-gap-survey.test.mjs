@@ -142,6 +142,14 @@ Body text.`
     assert.ok(fm)
     assert.equal(fm.publishedAt.slice(0, 10), '2026-04-14')
   })
+
+  test('handles double-quoted publishedAt without leading quote in result', () => {
+    const content = `---\npillar: trends\npublishedAt: "2026-05-14T00:00:00.000Z"\n---\nBody.`
+    const fm = extractFrontmatter(content)
+    assert.ok(fm)
+    assert.equal(fm.publishedAt, '2026-05-14T00:00:00.000Z')
+    assert.equal(fm.publishedAt.slice(0, 10), '2026-05-14')
+  })
 })
 
 // ── formatAuditRow ─────────────────────────────────────────────────────────────
