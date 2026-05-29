@@ -72,6 +72,15 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [data] [3.6] GMK CYL GREG 2 status stale — endDate 2026-05-29 passed, still marked live — addressed in 9ab3c45, closes #228
+- category: data
+- filed: 2026-05-29 by cloud /iterate audit
+- impact: 4 (source-of-truth status field wrong; buy window closed today; renderer-side guard absorbs label leak on /group-buys, but /group-buys/past archive selection, JSON-LD, RSS, and any downstream consumer all see stale field)
+- ease: 9 (one JSON field flip + loader test update; same pattern as Sweet Nightmare `3443fe9` and Nyawice `1d34cd8`)
+- score: 3.6 (impact × ease / 10)
+- issue: #228
+> **Resolved (2026-05-29):** Flipped `status` from `"live"` to `"closed"` and bumped `updatedAt` to 2026-05-29T00:00:00.000Z on `data/group-buys/kbdfans-gmk-cyl-greg-2.json`. Updated `packages/data` group-buys loader test: removed greg-2 from the "active list includes live buys" assertion (now closed); King of the Seas (endDate 2026-05-31, status live) retained as the live-buy reference. Manifest + search index refreshed by data:validate step. 670 e2e green. `9ab3c45`
+
 ### [x] [fix] [3.6] language gate: "this quarter" bare temporal pattern missing; hall-effect-mainstream stale June 30 — addressed in 9645a36
 - category: fix
 - filed: 2026-05-28 by cloud /iterate audit
