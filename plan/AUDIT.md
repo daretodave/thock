@@ -72,6 +72,15 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [copy] [3.6] gmk-cyl-greg-2-group-buy — stale /group-buys link and "current window" phrasing after May 29 close — addressed in 459e252, closes #230
+- category: copy
+- filed: 2026-05-29 by cloud /iterate audit
+- impact: 4 (closed buy article; "current window" is stale; link misdirects readers from /group-buys to /group-buys/past; same pattern as cannonkeys-nyawice 0bcbb47 and gmk-cyl-ishtar-r2 2705750)
+- ease: 9 (single sentence edit + updatedAt bump)
+- score: 3.6 (impact × ease / 10)
+- issue: #230
+> **Resolved (2026-05-29):** Changed "Full configurator and the current window are at KBDfans's product page. The live entry alongside the rest of the open buys sits on /group-buys" → "Full configurator details are at KBDfans's product page. The archived entry is at /group-buys/past". updatedAt bumped to 2026-05-29. 673 e2e green. `459e252`
+
 ### [x] [data] [3.6] GMK CYL GREG 2 status stale — endDate 2026-05-29 passed, still marked live — addressed in 9ab3c45, closes #228
 - category: data
 - filed: 2026-05-29 by cloud /iterate audit
