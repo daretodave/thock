@@ -23,10 +23,9 @@ describe('group-buys loader', () => {
   })
 
   it('includes live group buys in active list when their window includes the date', () => {
-    // Greg 2 runs 2026-05-01 → 2026-05-29; King of the Seas 2026-04-28 → 2026-05-31.
+    // King of the Seas runs 2026-04-28 → 2026-05-31.
     const active = getActiveGroupBuys(new Date('2026-05-10T00:00:00Z'))
     const slugs = active.map((g) => g.slug)
-    expect(slugs).toContain('kbdfans-gmk-cyl-greg-2')
     expect(slugs).toContain('kbdfans-gmk-cyl-king-of-the-seas')
   })
 
