@@ -2029,3 +2029,14 @@ passes accumulate signals.)
 - issue: #227
 - action: add pattern id="at-publication-bare-tracker" matching `[Aa]t publication.*\[.*[Tt]racker.*\]\(/trends/tracker\)` with regex:true; add positive test (bare URL → triggers) and negative test (snapshot URL → does not trigger)
 > **Resolved (2026-05-27):** Added `at-publication-bare-tracker` pattern to `scripts/article-language-patterns.json`. Matches "At publication, the [Trends Tracker](/trends/tracker)…" with a bare URL; does not match snapshot URLs (/trends/tracker/2026-W19) or forward-looking "Follow the tracker" CTAs. 2 unit tests added. Corpus scan: 0 violations (current articles already use snapshot anchors). 670 e2e green. `429089d`
+
+### [x] [fix] [4.5] content-gap-survey extractFrontmatter skips double-quoted publishedAt — addressed in 0aa2636, closes #229
+- category: fix
+- filed: 2026-05-29 by cloud /iterate audit
+- impact: 5 (correctness: dcs-olivetti-comeback.mdx silently excluded from trends pillar window count, causing false hot-pursuit or false comfortable readings)
+- ease: 9 (one-line regex change + normalize frontmatter + one new test)
+- score: 4.5 (impact × ease / 10)
+- elements: scripts/content-gap-survey.mjs, apps/web/src/content/articles/dcs-olivetti-comeback.mdx, scripts/__tests__/content-gap-survey.test.mjs
+- issue: #229
+- action: widen regex from `'?([^'\n]+)'?` to `['"]?([^'"\n]+)['"]?`; normalize article publishedAt to single quotes; add extractFrontmatter double-quote test
+> **Resolved (2026-05-29):** Fixed `extractFrontmatter` regex to handle both single- and double-quoted YAML values. Normalized `dcs-olivetti-comeback.mdx` to single-quoted `publishedAt` and inline tags. Added a failing test that now passes. 673 e2e green. `0aa2636`
