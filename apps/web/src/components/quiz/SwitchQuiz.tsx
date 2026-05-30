@@ -29,6 +29,7 @@ const QUESTIONS: {
     options: [
       { value: 'smooth', label: 'Smooth and linear', description: 'No bump — consistent resistance from top to bottom' },
       { value: 'tactile', label: 'Tactile bump', description: 'A physical click-point that confirms each keystroke' },
+      { value: 'clicky', label: 'Audible click', description: 'A distinct snap and click sound on every actuation' },
     ],
   },
   {

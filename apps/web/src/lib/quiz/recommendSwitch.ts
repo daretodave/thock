@@ -2,7 +2,7 @@ import type { Switch } from '@thock/data'
 
 export type QuizAnswers = {
   soundProfile: 'thocky' | 'crisp' | 'silent' | 'neutral'
-  actuationFeel: 'smooth' | 'tactile'
+  actuationFeel: 'smooth' | 'tactile' | 'clicky'
   springWeight: 'light' | 'medium' | 'heavy'
   primaryUse: 'gaming' | 'typing' | 'office'
 }
@@ -34,6 +34,7 @@ function scoreSoundProfile(sw: Switch, profile: QuizAnswers['soundProfile']): nu
 function scoreActuationFeel(sw: Switch, feel: QuizAnswers['actuationFeel']): number {
   if (feel === 'smooth') return sw.type.startsWith('linear') ? 8 : 0
   if (feel === 'tactile') return sw.type === 'tactile' || sw.type === 'silent-tactile' ? 8 : 0
+  if (feel === 'clicky') return sw.type === 'clicky' ? 8 : 0
   return 0
 }
 

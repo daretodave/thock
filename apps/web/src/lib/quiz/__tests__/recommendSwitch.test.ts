@@ -25,8 +25,10 @@ const TACTILE_HEAVY = makeSwitch({ slug: 'tactile-heavy', type: 'tactile', sprin
 const LINEAR_LIGHT = makeSwitch({ slug: 'linear-light', type: 'linear', springGrams: { actuation: 40, bottomOut: 55 } })
 const SILENT_LINEAR = makeSwitch({ slug: 'silent-one', type: 'silent-linear', springGrams: { actuation: 45, bottomOut: 60 } })
 const LINEAR_MED = makeSwitch({ slug: 'linear-med', type: 'linear', springGrams: { actuation: 50, bottomOut: 65 } })
+const CLICKY_MED = makeSwitch({ slug: 'clicky-med', type: 'clicky', springGrams: { actuation: 50, bottomOut: 70 }, housingTop: 'pc', housingBottom: 'pc' })
 
 const CATALOG = [TACTILE_HEAVY, LINEAR_LIGHT, SILENT_LINEAR, LINEAR_MED]
+const CATALOG_WITH_CLICKY = [TACTILE_HEAVY, LINEAR_LIGHT, SILENT_LINEAR, LINEAR_MED, CLICKY_MED]
 
 describe('recommendSwitch', () => {
   it('A: returns tactile switch when heavy tactile answers given', () => {
@@ -72,6 +74,17 @@ describe('recommendSwitch', () => {
       primaryUse: 'typing',
     }
     expect(recommendSwitch(answers, [])).toEqual([])
+  })
+
+  it('F: returns clicky switch first when actuationFeel is clicky', () => {
+    const answers: QuizAnswers = {
+      soundProfile: 'neutral',
+      actuationFeel: 'clicky',
+      springWeight: 'medium',
+      primaryUse: 'typing',
+    }
+    const results = recommendSwitch(answers, CATALOG_WITH_CLICKY)
+    expect(results[0]?.switch.type).toBe('clicky')
   })
 
   it('E: returns at most 3 results even with 8 switches', () => {
