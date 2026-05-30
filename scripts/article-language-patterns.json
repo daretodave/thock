@@ -8,6 +8,11 @@
       "description": "Unfulfillable editorial promise — static MDX cannot revisit after publication. Rewrite as a tracker link or past-tense observation."
     },
     {
+      "id": "unfulfillable-worth-revisiting",
+      "match": "worth revisiting",
+      "description": "Implied self-update promise — 'worth revisiting in N months' tells the reader the article will be updated, which static MDX cannot deliver. Remove the time-bound closer or rewrite as an external resource pointer (tracker, guides, vendor forums)."
+    },
+    {
       "id": "unfulfillable-report-back",
       "match": "report back",
       "description": "Unfulfillable editorial promise — static MDX cannot report back after publication. Rewrite as a tracker link or remove the forward commitment."

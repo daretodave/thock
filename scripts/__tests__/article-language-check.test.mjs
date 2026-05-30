@@ -552,3 +552,34 @@ describe('checkFile — relative-this-quarter pattern', () => {
     )
   })
 })
+
+describe('checkFile — unfulfillable-worth-revisiting pattern', () => {
+  const patterns = loadPatterns()
+
+  test('flags "worth revisiting in six months" as a self-update promise', () => {
+    const content = makeMdx(
+      'slug: test\ntitle: Test\nauthor: thock\npillar: guides\npublishedAt: 2026-04-13',
+      '\nIt is worth revisiting in six months when more build data exists.\n'
+    )
+    const filePath = tmpMdx(content)
+    const violations = checkFile(filePath, patterns)
+    assert.ok(
+      violations.some((v) => v.patternId === 'unfulfillable-worth-revisiting'),
+      'expected unfulfillable-worth-revisiting violation for "worth revisiting in six months"'
+    )
+  })
+
+  test('does not flag prose without "worth revisiting"', () => {
+    const content = makeMdx(
+      'slug: test\ntitle: Test\nauthor: thock\npillar: guides\npublishedAt: 2026-04-13',
+      '\nThe approach is worth another look before committing to the next build.\n'
+    )
+    const filePath = tmpMdx(content)
+    const violations = checkFile(filePath, patterns)
+    assert.equal(
+      violations.filter((v) => v.patternId === 'unfulfillable-worth-revisiting').length,
+      0,
+      '"worth another look" without "worth revisiting" should not trigger the pattern'
+    )
+  })
+})
