@@ -2058,3 +2058,12 @@ passes accumulate signals.)
 - issue: #229
 - action: widen regex from `'?([^'\n]+)'?` to `['"]?([^'"\n]+)['"]?`; normalize article publishedAt to single quotes; add extractFrontmatter double-quote test
 > **Resolved (2026-05-29):** Fixed `extractFrontmatter` regex to handle both single- and double-quoted YAML values. Normalized `dcs-olivetti-comeback.mdx` to single-quoted `publishedAt` and inline tags. Added a failing test that now passes. 673 e2e green. `0aa2636`
+
+### [x] [fix] [3.5] quiz — clicky switches unreachable: no actuationFeel option maps to type="clicky" — addressed in 77c34ae, closes #231
+- category: fix
+- filed: 2026-05-30 by cloud /iterate audit
+- impact: 5 (kailh-box-jade and kailh-box-white score 0 on both soundProfile and actuationFeel functions; clicky enthusiasts receive only linear/tactile results from the /quiz/switch discovery surface regardless of intent)
+- ease: 7 (add one QuizAnswers union member + one SwitchQuiz option + one scoring branch + one unit test)
+- score: 3.5 (impact × ease / 10)
+- elements: apps/web/src/lib/quiz/recommendSwitch.ts, apps/web/src/components/quiz/SwitchQuiz.tsx, apps/web/src/lib/quiz/__tests__/recommendSwitch.test.ts
+- issue: #231
