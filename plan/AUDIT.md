@@ -72,6 +72,15 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [fix] [3.6] language gate: worth-revisiting form escapes unfulfillable-revisit pattern — addressed in f50088a
+- category: fix
+- filed: 2026-05-30 by cloud /iterate audit
+- impact: 4 (guides article switch-films-worth-it.mdx; "It is worth revisiting in six months when more build data exists." is semantically identical to the already-gated "will revisit" but not caught by the existing unfulfillable-revisit pattern; future ship-content articles could reproduce the same self-update promise)
+- ease: 9 (add one pattern to article-language-patterns.json + 2 unit tests + 1 corpus fix + updatedAt bump)
+- score: 3.6 (impact × ease / 10)
+- issue: [mirror-failed: 2026-05-30T00:00:00Z]
+> **Resolved (2026-05-30):** Added unfulfillable-worth-revisiting pattern to scripts/article-language-patterns.json (match: "worth revisiting"). Added 2 unit tests (positive: "worth revisiting in six months" flagged; negative: "worth another look" clean). Test count: 39 → 41. Fixed corpus violation in switch-films-worth-it.mdx line 95: removed "It is worth revisiting in six months when more build data exists." — replaced closer with reader redirect to /guides and vendor forums. updatedAt bumped to 2026-05-30. Corpus scan clean. 673 e2e green. `f50088a`
+
 ### [x] [copy] [3.6] gmk-cyl-greg-2-group-buy — stale /group-buys link and "current window" phrasing after May 29 close — addressed in 459e252, closes #230
 - category: copy
 - filed: 2026-05-29 by cloud /iterate audit
