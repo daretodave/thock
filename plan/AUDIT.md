@@ -2133,4 +2133,13 @@ passes accumulate signals.)
 - ease: 9 (single field change + updatedAt bump)
 - score: 3.6 (impact × ease / 10)
 - issue: #235
+
+### [copy] [4.5] gmk-cyl-greg-2-group-buy — present-tense phrasing stale after May 29 close
+- category: copy
+- filed: 2026-05-31 by cloud /iterate audit
+- impact: 5 (lede + body opener + buying-notes + closing line all say "runs through 2026-05-29" / "closes 2026-05-29" — the buy closed 2 days ago; a reader visiting now sees a live-sounding article for a closed buy)
+- ease: 9 (four string replacements in one file + updatedAt bump)
+- score: 4.5 (impact × ease / 10)
+- elements: apps/web/src/content/articles/gmk-cyl-greg-2-group-buy.mdx lines 4, 17, 57, 71
+- issue: #238
 > **Resolved (2026-05-31):** Changed `author: thock editorial` → `author: thock` in stabilizers-explained.mdx. Bumped updatedAt to 2026-05-31. 682 e2e green. `342ee16`
