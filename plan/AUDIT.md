@@ -2068,7 +2068,7 @@ passes accumulate signals.)
 - elements: apps/web/src/lib/quiz/recommendSwitch.ts, apps/web/src/components/quiz/SwitchQuiz.tsx, apps/web/src/lib/quiz/__tests__/recommendSwitch.test.ts
 - issue: #231
 
-### [HOT PURSUIT] [content-gap] [7] guides pillar — 1 of ≥2 articles in last 30d
+### [x] [HOT PURSUIT] [content-gap] [7] guides pillar — 1 of ≥2 articles in last 30d — addressed in d66c919 (closes #232)
 - category: content-gaps
 - impact: 5 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
