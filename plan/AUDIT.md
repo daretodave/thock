@@ -2067,3 +2067,15 @@ passes accumulate signals.)
 - score: 3.5 (impact × ease / 10)
 - elements: apps/web/src/lib/quiz/recommendSwitch.ts, apps/web/src/components/quiz/SwitchQuiz.tsx, apps/web/src/lib/quiz/__tests__/recommendSwitch.test.ts
 - issue: #231
+
+### [HOT PURSUIT] [content-gap] [7] guides pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 5 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: guides
+- window-count: 1
+- window-start: 2026-05-01
+- score: 7
+- next: /ship-content → guides pillar article
+> Filed 2026-05-31 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
