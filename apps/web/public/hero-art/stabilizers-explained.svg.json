@@ -1,0 +1,27 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-31T00:00:00.000Z",
+  "commit": "15e09597893b964d6f53fce80867919c9162f287",
+  "kind": "hero-art",
+  "source": null,
+  "template": null,
+  "article_slug": "stabilizers-explained",
+  "article_pillar": "guides",
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": [],
+  "outputs": [
+    "apps/web/public/hero-art/stabilizers-explained.svg"
+  ],
+  "splash_color": {
+    "name": "ochre",
+    "hex": "#C9823A",
+    "oklch": "oklch(0.64 0.13 58)"
+  },
+  "stroke_neutral": "#3A3530",
+  "bronze_accent": "#C8974A",
+  "background": "#FAF6F0",
+  "canvas": [1200, 750],
+  "subject": "PCB-mount stabilizer cross-section — two housings (left and right), stems inside each housing, wire bridging them at the cross-bar hooks; keycap silhouette resting on top; motion arrows indicating key travel; no text labels",
+  "warnings": []
+}

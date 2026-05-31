@@ -1,0 +1,25 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-23T13:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "stabilizers-explained",
+  "article_pillar": "guides",
+  "section_anchor": "factory-stabilizers-versus-aftermarket",
+  "brief_summary": "Four-row categorization table of stabilizer options. Row 1: budget factory (replace before servicing). Row 2: mid-range factory (service first). Row 3: aftermarket baseline — Durock V2, TX Stabilizers (reliable baseline). Row 4: premium aftermarket — Staebies, C3 Equalz (diminishing returns vs serviced V2). Each row shows tier, mount type in JetBrains Mono, example products, and an amber verdict chip.",
+  "target": "apps/web/public/article-viz/stabilizers-explained/factory-vs-aftermarket.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "JetBrains Mono"],
+  "data_sources": [
+    "stabilizers-explained.mdx § 'Factory stabilizers versus aftermarket' — 'Budget-board factory stabilizers... are typically worth replacing before servicing'",
+    "stabilizers-explained.mdx § 'Factory stabilizers versus aftermarket' — 'Mid-range factory stabilizers... are usually serviceable to a good result'",
+    "stabilizers-explained.mdx § 'Factory stabilizers versus aftermarket' — 'Durock V2 and TX Stabilizers are the reliable aftermarket baseline'",
+    "stabilizers-explained.mdx § 'Factory stabilizers versus aftermarket' — 'Staebies (Staebilizers) and C³ Equalz represent the premium tier... The diminishing-returns curve is real'"
+  ],
+  "outputs": ["apps/web/public/article-viz/stabilizers-explained/factory-vs-aftermarket.svg"],
+  "warnings": []
+}

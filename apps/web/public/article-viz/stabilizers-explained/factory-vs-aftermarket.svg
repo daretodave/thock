@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Four-row categorization of stabilizer options from budget factory to premium aftermarket, each with a verdict label</title>
+
+  <!-- Faint baseline -->
+  <line x1="80" y1="480" x2="1120" y2="480" stroke-opacity="0.4"/>
+
+  <!-- ── Row labels header ──────────────────────────────────────────────── -->
+  <text x="100" y="52" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.5" letter-spacing="0.06em">TIER</text>
+  <text x="360" y="52" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.5" letter-spacing="0.06em">TYPE</text>
+  <text x="630" y="52" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.5" letter-spacing="0.06em">EXAMPLES</text>
+  <text x="920" y="52" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.5" letter-spacing="0.06em">VERDICT</text>
+  <!-- Header underline -->
+  <line x1="80" y1="60" x2="1120" y2="60" stroke-opacity="0.3" stroke-width="1"/>
+
+  <!-- Column dividers -->
+  <line x1="330" y1="60" x2="330" y2="465" stroke-opacity="0.2" stroke-dasharray="4 6"/>
+  <line x1="600" y1="60" x2="600" y2="465" stroke-opacity="0.2" stroke-dasharray="4 6"/>
+  <line x1="870" y1="60" x2="870" y2="465" stroke-opacity="0.2" stroke-dasharray="4 6"/>
+
+  <!-- ══ ROW 1: BUDGET FACTORY ═══════════════════════════════════════════ -->
+  <rect x="82" y="70" width="1036" height="88" rx="4" stroke-opacity="0.0" fill="oklch(0.78 0.005 90 / 0.04)"/>
+  <line x1="82" y1="70" x2="1118" y2="70" stroke-opacity="0.2" stroke-width="1"/>
+
+  <text x="100" y="105" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.9">Budget</text>
+  <text x="100" y="124" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.9">factory</text>
+
+  <text x="360" y="105" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">plate-mount</text>
+  <text x="360" y="124" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">or clip-in</text>
+
+  <text x="630" y="105" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">Budget boards, RK, Akko</text>
+  <text x="630" y="124" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">entry-level Keychron</text>
+
+  <!-- Verdict chip — amber background -->
+  <rect x="888" y="82" width="220" height="48" rx="5" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.75" fill="oklch(0.78 0.10 80 / 0.10)"/>
+  <text x="998" y="104" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" font-weight="600">Replace before</text>
+  <text x="998" y="122" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" font-weight="600">servicing</text>
+
+  <!-- ══ ROW 2: MID-RANGE FACTORY ════════════════════════════════════════ -->
+  <line x1="82" y1="158" x2="1118" y2="158" stroke-opacity="0.2" stroke-width="1"/>
+
+  <text x="100" y="193" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.9">Mid-range</text>
+  <text x="100" y="212" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.9">factory</text>
+
+  <text x="360" y="193" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">screw-in</text>
+  <text x="360" y="212" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">(usually)</text>
+
+  <text x="630" y="193" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">Mode, higher Keychron</text>
+  <text x="630" y="212" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">lines, most GB boards</text>
+
+  <rect x="888" y="170" width="220" height="48" rx="5" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.75" fill="oklch(0.78 0.10 80 / 0.10)"/>
+  <text x="998" y="192" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" font-weight="600">Service first,</text>
+  <text x="998" y="210" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" font-weight="600">decide after</text>
+
+  <!-- ══ ROW 3: AFTERMARKET BASELINE ════════════════════════════════════ -->
+  <line x1="82" y1="246" x2="1118" y2="246" stroke-opacity="0.2" stroke-width="1"/>
+
+  <text x="100" y="281" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.9">Aftermarket</text>
+  <text x="100" y="300" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.9">baseline</text>
+
+  <text x="360" y="281" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">screw-in</text>
+
+  <text x="630" y="274" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.9">Durock V2</text>
+  <text x="630" y="296" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.9">TX Stabilizers</text>
+
+  <rect x="888" y="258" width="220" height="48" rx="5" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.75" fill="oklch(0.78 0.10 80 / 0.10)"/>
+  <text x="998" y="280" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" font-weight="600">Reliable baseline</text>
+  <text x="998" y="298" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" font-weight="600">for most builds</text>
+
+  <!-- ══ ROW 4: PREMIUM AFTERMARKET ═════════════════════════════════════ -->
+  <line x1="82" y1="334" x2="1118" y2="334" stroke-opacity="0.2" stroke-width="1"/>
+
+  <text x="100" y="369" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.9">Premium</text>
+  <text x="100" y="388" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.9">aftermarket</text>
+
+  <text x="360" y="369" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">screw-in</text>
+
+  <text x="630" y="362" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.9">Staebies</text>
+  <text x="630" y="384" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.9">C³ Equalz</text>
+
+  <rect x="888" y="346" width="220" height="48" rx="5" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.75" fill="oklch(0.78 0.10 80 / 0.10)"/>
+  <text x="998" y="368" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" font-weight="600">Diminishing returns</text>
+  <text x="998" y="386" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" font-weight="600">vs. serviced V2</text>
+
+  <!-- Closing row line -->
+  <line x1="82" y1="422" x2="1118" y2="422" stroke-opacity="0.2" stroke-width="1"/>
+
+  <!-- Brass-bronze theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

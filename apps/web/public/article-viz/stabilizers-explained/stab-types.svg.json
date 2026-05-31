@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-23T13:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "stabilizers-explained",
+  "article_pillar": "guides",
+  "section_anchor": "types-of-stabilizers",
+  "brief_summary": "Three-column comparison strip of stabilizer mounting types. Column 1 shows plate-mount geometry (housing clips into plate, PCB not anchored). Column 2 shows PCB clip-in (plastic clips snap into PCB holes, tool-free). Column 3 shows PCB screw-in (threaded screws anchor housing to PCB, firmest). Each column has a two-line trade-off summary and an amber verdict line.",
+  "target": "apps/web/public/article-viz/stabilizers-explained/stab-types.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "JetBrains Mono", "Newsreader"],
+  "data_sources": [
+    "stabilizers-explained.mdx § 'Types of stabilizers' — 'Plate-mount stabilizers clip into holes in the switch plate rather than attaching to the PCB'",
+    "stabilizers-explained.mdx § 'Types of stabilizers' — 'PCB clip-in stabilizers attach directly to the PCB via two plastic clips that snap into holes'",
+    "stabilizers-explained.mdx § 'Types of stabilizers' — 'PCB screw-in stabilizers use a small screw through the PCB to anchor the housing'"
+  ],
+  "outputs": ["apps/web/public/article-viz/stabilizers-explained/stab-types.svg"],
+  "warnings": []
+}

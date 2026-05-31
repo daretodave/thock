@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 580" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Cross-section of a stabilizer housing showing three rattle sources — wire slop at the barrel, housing clearance at the stem bore, and dry hook at the wire-hook-in-stem joint</title>
+
+  <!-- Faint baseline -->
+  <line x1="80" y1="540" x2="1120" y2="540" stroke-opacity="0.4"/>
+
+  <!-- Soft amber wash behind the center housing -->
+  <ellipse cx="600" cy="310" rx="200" ry="160" fill="oklch(0.78 0.10 80 / 0.08)" stroke="none"/>
+
+  <!-- ── PCB SUBSTRATE ──────────────────────────────────────────────────── -->
+  <rect x="320" y="450" width="560" height="22" rx="3" stroke-opacity="0.55"/>
+  <text x="600" y="465" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">PCB</text>
+
+  <!-- ── HOUSING BODY ────────────────────────────────────────────────────── -->
+  <!-- Left wall -->
+  <path d="M 480 180 L 480 450" stroke-opacity="0.85"/>
+  <!-- Right wall -->
+  <path d="M 720 180 L 720 450" stroke-opacity="0.85"/>
+  <!-- Housing top -->
+  <path d="M 480 180 L 720 180" stroke-opacity="0.85"/>
+  <!-- Internal barrel left wall -->
+  <path d="M 510 180 L 510 260" stroke-opacity="0.6"/>
+  <!-- Internal barrel right wall -->
+  <path d="M 690 180 L 690 260" stroke-opacity="0.6"/>
+  <!-- Barrel floor -->
+  <path d="M 510 260 L 690 260" stroke-opacity="0.6"/>
+
+  <!-- Screw holes (housing feet) -->
+  <circle cx="510" cy="435" r="8" stroke-opacity="0.6"/>
+  <circle cx="690" cy="435" r="8" stroke-opacity="0.6"/>
+
+  <!-- ── STEM BODY ───────────────────────────────────────────────────────── -->
+  <rect x="545" y="265" width="110" height="150" rx="3" stroke-opacity="0.8"/>
+
+  <!-- Gap between stem and bore (clearance gap) — amber dotted outline -->
+  <g stroke="oklch(0.78 0.10 80)" stroke-dasharray="2 5" stroke-opacity="0.85" stroke-width="2">
+    <line x1="510" y1="270" x2="545" y2="270"/>
+    <line x1="655" y1="270" x2="690" y2="270"/>
+    <line x1="510" y1="408" x2="545" y2="408"/>
+    <line x1="655" y1="408" x2="690" y2="408"/>
+  </g>
+
+  <!-- Stem interior (simplified) -->
+  <rect x="562" y="282" width="76" height="100" rx="2" stroke-opacity="0.5"/>
+
+  <!-- Wire hook inside stem (at bottom of stem body, small hook shape) -->
+  <path d="M 585 415 L 585 430 L 615 430 L 615 415" stroke-opacity="0.8"/>
+  <path d="M 600 415 L 600 430" stroke-opacity="0.5"/>
+
+  <!-- ── WIRE ──────────────────────────────────────────────────────────────
+       Wire runs horizontally, enters left barrel at top, exits right barrel at top.
+       Shown as a thick amber stroke to make it visually distinct. -->
+  <g stroke="oklch(0.78 0.10 80)" stroke-width="3.5" stroke-opacity="0.75">
+    <!-- Left wire entering housing barrel -->
+    <line x1="320" y1="220" x2="510" y2="220"/>
+    <!-- Wire turning down inside left barrel (coaxial stub) -->
+    <path d="M 550 220 C 555 220 560 225 560 235 L 560 265" stroke-width="2.5" stroke-opacity="0.65"/>
+    <!-- Right wire exiting housing barrel -->
+    <line x1="690" y1="220" x2="880" y2="220"/>
+    <!-- Wire turning down inside right barrel -->
+    <path d="M 650 220 C 645 220 640 225 640 235 L 640 265" stroke-width="2.5" stroke-opacity="0.65"/>
+  </g>
+  <!-- Wire endpoints (to the side, suggesting the full-width span) -->
+  <circle cx="320" cy="220" r="4" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.7" fill="none"/>
+  <circle cx="880" cy="220" r="4" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.7" fill="none"/>
+
+  <!-- ══ CALLOUT 1: WIRE SLOP ════════════════════════════════════════════
+       Arrow points to where the wire contacts the inside of the left barrel -->
+  <!-- Callout circle -->
+  <circle cx="140" cy="190" r="20" stroke="oklch(0.78 0.10 80)" stroke-width="2" stroke-opacity="0.9" fill="none"/>
+  <text x="140" y="197" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle">1</text>
+  <!-- Connector line to barrel region -->
+  <g stroke="oklch(0.78 0.10 80)" stroke-opacity="0.65" stroke-width="1.5">
+    <line x1="160" y1="200" x2="480" y2="220"/>
+    <path d="M 473 214 L 480 220 L 473 226"/>
+  </g>
+  <!-- Label -->
+  <text x="140" y="238" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" font-weight="600">wire slop</text>
+  <text x="140" y="258" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">metal-on-plastic</text>
+  <text x="140" y="274" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">in the barrel</text>
+  <text x="140" y="296" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">fix: dielectric grease</text>
+
+  <!-- ══ CALLOUT 2: HOUSING CLEARANCE ════════════════════════════════════
+       Arrow points to the gap between stem and bore (right side) -->
+  <circle cx="1060" cy="320" r="20" stroke="oklch(0.78 0.10 80)" stroke-width="2" stroke-opacity="0.9" fill="none"/>
+  <text x="1060" y="327" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle">2</text>
+  <g stroke="oklch(0.78 0.10 80)" stroke-opacity="0.65" stroke-width="1.5">
+    <line x1="1040" y1="320" x2="695" y2="320"/>
+    <path d="M 702 314 L 695 320 L 702 326"/>
+  </g>
+  <text x="1060" y="360" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" font-weight="600">housing clearance</text>
+  <text x="1060" y="380" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">stem sliding in bore</text>
+  <text x="1060" y="396" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">when dry</text>
+  <text x="1060" y="418" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">fix: GPL-205 G0</text>
+
+  <!-- ══ CALLOUT 3: DRY HOOK ═════════════════════════════════════════════
+       Arrow points to the hook joint at the bottom of the stem -->
+  <circle cx="140" cy="445" r="20" stroke="oklch(0.78 0.10 80)" stroke-width="2" stroke-opacity="0.9" fill="none"/>
+  <text x="140" y="452" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle">3</text>
+  <g stroke="oklch(0.78 0.10 80)" stroke-opacity="0.65" stroke-width="1.5">
+    <line x1="160" y1="445" x2="582" y2="428"/>
+    <path d="M 575 422 L 582 428 L 575 434"/>
+  </g>
+  <text x="140" y="490" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" font-weight="600">dry hook</text>
+  <text x="140" y="510" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">wire hook flexing in</text>
+  <text x="140" y="526" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">stem slot when dry</text>
+  <text x="140" y="544" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">fix: dielectric grease</text>
+
+  <!-- Brass-bronze theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

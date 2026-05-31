@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Three stabilizer mounting types compared — plate-mount, PCB clip-in, and PCB screw-in</title>
+
+  <!-- Faint baseline -->
+  <line x1="80" y1="430" x2="1120" y2="430" stroke-opacity="0.4"/>
+  <g stroke-opacity="0.3">
+    <line x1="80"   y1="430" x2="80"   y2="438"/>
+    <line x1="400"  y1="430" x2="400"  y2="438"/>
+    <line x1="720"  y1="430" x2="720"  y2="438"/>
+    <line x1="1120" y1="430" x2="1120" y2="438"/>
+  </g>
+
+  <!-- Column dividers -->
+  <line x1="400" y1="60" x2="400" y2="420" stroke-opacity="0.25" stroke-dasharray="4 6"/>
+  <line x1="720" y1="60" x2="720" y2="420" stroke-opacity="0.25" stroke-dasharray="4 6"/>
+
+  <!-- ══ COLUMN 1: PLATE-MOUNT ══════════════════════════════════════════ -->
+  <!-- Column header -->
+  <text x="240" y="52" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="oklch(0.78 0.10 80)" stroke="none" font-weight="600" text-anchor="middle" letter-spacing="0.04em">PLATE-MOUNT</text>
+  <line x1="130" y1="62" x2="350" y2="62" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.6" stroke-width="1.5"/>
+
+  <!-- Plate bar (top layer) -->
+  <rect x="130" y="90" width="220" height="28" rx="3" stroke-opacity="0.85"/>
+  <text x="240" y="109" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">plate</text>
+
+  <!-- Clip tabs into plate (two small hooks from housing) -->
+  <path d="M 200 118 L 200 134 L 192 140 L 192 152" stroke-opacity="0.75"/>
+  <path d="M 280 118 L 280 134 L 288 140 L 288 152" stroke-opacity="0.75"/>
+
+  <!-- Housing body -->
+  <rect x="175" y="152" width="130" height="80" rx="4" stroke-opacity="0.85"/>
+  <!-- Stem inside housing -->
+  <rect x="210" y="160" width="60" height="64" rx="2" stroke-opacity="0.6"/>
+  <!-- Wire horizontal run -->
+  <line x1="150" y1="200" x2="175" y2="200" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.8" stroke-width="2.5"/>
+  <line x1="305" y1="200" x2="330" y2="200" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.8" stroke-width="2.5"/>
+
+  <!-- PCB below — faint, not connected -->
+  <rect x="130" y="245" width="220" height="18" rx="2" stroke-opacity="0.35" stroke-dasharray="5 5"/>
+  <text x="240" y="257" font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.4">PCB (no anchor)</text>
+
+  <!-- Trade-off text -->
+  <text x="240" y="300" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.9">Mounts to plate, not PCB</text>
+  <text x="240" y="322" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.9">Limited serviceability</text>
+  <text x="240" y="350" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.85">Use when PCB-mount</text>
+  <text x="240" y="368" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.85">holes are absent</text>
+
+  <!-- ══ COLUMN 2: PCB CLIP-IN ══════════════════════════════════════════ -->
+  <text x="560" y="52" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="oklch(0.78 0.10 80)" stroke="none" font-weight="600" text-anchor="middle" letter-spacing="0.04em">PCB CLIP-IN</text>
+  <line x1="450" y1="62" x2="670" y2="62" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.6" stroke-width="1.5"/>
+
+  <!-- PCB bar -->
+  <rect x="450" y="195" width="220" height="28" rx="3" stroke-opacity="0.85"/>
+  <text x="560" y="214" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">PCB</text>
+
+  <!-- Housing body (sitting above PCB) -->
+  <rect x="495" y="110" width="130" height="85" rx="4" stroke-opacity="0.85"/>
+  <!-- Stem inside housing -->
+  <rect x="530" y="118" width="60" height="69" rx="2" stroke-opacity="0.6"/>
+  <!-- Wire horizontal run -->
+  <line x1="450" y1="155" x2="495" y2="155" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.8" stroke-width="2.5"/>
+  <line x1="625" y1="155" x2="670" y2="155" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.8" stroke-width="2.5"/>
+
+  <!-- Clip tabs snapping into PCB holes — two downward V-clips -->
+  <path d="M 515 195 L 515 213 L 507 224 L 523 224 L 515 213" stroke-opacity="0.75"/>
+  <path d="M 605 195 L 605 213 L 597 224 L 613 224 L 605 213" stroke-opacity="0.75"/>
+
+  <!-- Clip label callout -->
+  <line x1="515" y1="224" x2="515" y2="238" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.6" stroke-width="1.5"/>
+  <text x="515" y="252" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.9">clip</text>
+
+  <!-- Trade-off text -->
+  <text x="560" y="300" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.9">Tool-free install and removal</text>
+  <text x="560" y="322" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.9">May shift under heavy use</text>
+  <text x="560" y="350" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.85">Good for frequent</text>
+  <text x="560" y="368" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.85">disassembly builds</text>
+
+  <!-- ══ COLUMN 3: PCB SCREW-IN ════════════════════════════════════════ -->
+  <text x="920" y="52" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="oklch(0.78 0.10 80)" stroke="none" font-weight="600" text-anchor="middle" letter-spacing="0.04em">PCB SCREW-IN</text>
+  <line x1="810" y1="62" x2="1040" y2="62" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.6" stroke-width="1.5"/>
+
+  <!-- PCB bar -->
+  <rect x="810" y="195" width="220" height="28" rx="3" stroke-opacity="0.85"/>
+  <text x="920" y="214" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">PCB</text>
+
+  <!-- Housing body -->
+  <rect x="855" y="110" width="130" height="85" rx="4" stroke-opacity="0.85"/>
+  <!-- Stem inside housing -->
+  <rect x="890" y="118" width="60" height="69" rx="2" stroke-opacity="0.6"/>
+  <!-- Wire horizontal run -->
+  <line x1="810" y1="155" x2="855" y2="155" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.8" stroke-width="2.5"/>
+  <line x1="985" y1="155" x2="1030" y2="155" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.8" stroke-width="2.5"/>
+
+  <!-- Screw shaft through housing foot and PCB -->
+  <line x1="870" y1="195" x2="870" y2="238" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.85" stroke-width="2.5"/>
+  <!-- Screw head -->
+  <rect x="862" y="232" width="16" height="8" rx="2" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.85" fill="none"/>
+  <!-- Screw thread suggestion -->
+  <g stroke="oklch(0.78 0.10 80)" stroke-opacity="0.45" stroke-width="1">
+    <line x1="867" y1="208" x2="873" y2="208"/>
+    <line x1="867" y1="216" x2="873" y2="216"/>
+    <line x1="867" y1="224" x2="873" y2="224"/>
+  </g>
+
+  <!-- Second screw on the other side -->
+  <line x1="970" y1="195" x2="970" y2="238" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.85" stroke-width="2.5"/>
+  <rect x="962" y="232" width="16" height="8" rx="2" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.85" fill="none"/>
+  <g stroke="oklch(0.78 0.10 80)" stroke-opacity="0.45" stroke-width="1">
+    <line x1="967" y1="208" x2="973" y2="208"/>
+    <line x1="967" y1="216" x2="973" y2="216"/>
+    <line x1="967" y1="224" x2="973" y2="224"/>
+  </g>
+
+  <!-- Screw label -->
+  <text x="920" y="252" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.9">screw anchor</text>
+
+  <!-- Trade-off text -->
+  <text x="920" y="300" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.9">Firmest housing anchor</text>
+  <text x="920" y="322" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.9">Requires screwdriver</text>
+  <text x="920" y="350" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.85">Best choice for</text>
+  <text x="920" y="368" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.85">daily-driver builds</text>
+
+  <!-- Brass-bronze theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

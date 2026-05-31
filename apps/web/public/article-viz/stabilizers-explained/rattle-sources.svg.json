@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-23T13:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "stabilizers-explained",
+  "article_pillar": "guides",
+  "section_anchor": "the-rattle-problem-three-sources",
+  "brief_summary": "Cross-section of a single stabilizer housing on a PCB baseline with three amber numbered callouts. Callout 1 (wire slop) points to the wire-inside-barrel interface. Callout 2 (housing clearance) points to the gap between the stem and bore. Callout 3 (dry hook) points to the wire-hook-in-stem-slot joint. Each callout names the source and the fix.",
+  "target": "apps/web/public/article-viz/stabilizers-explained/rattle-sources.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "JetBrains Mono", "Newsreader"],
+  "data_sources": [
+    "stabilizers-explained.mdx § 'The rattle problem — three sources' — 'Wire slop is the loudest and most immediately obvious. The wire ends rotate inside the housing barrels on every keystroke'",
+    "stabilizers-explained.mdx § 'The rattle problem — three sources' — 'Housing clearance refers to the gap between the stabilizer stem and the inside of the housing bore'",
+    "stabilizers-explained.mdx § 'The rattle problem — three sources' — 'Lube pooling and dry hook... The wire hooks into a slot at the bottom of each stabilizer stem, and that hook-in-slot joint flexes slightly on every keystroke'"
+  ],
+  "outputs": ["apps/web/public/article-viz/stabilizers-explained/rattle-sources.svg"],
+  "warnings": []
+}

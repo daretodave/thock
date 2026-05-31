@@ -72,6 +72,8 @@
     { "slug": "topre", "name": "Topre", "category": "brand" },
     { "slug": "hhkb", "name": "HHKB", "category": "brand" },
     { "slug": "electrocapacitive", "name": "Electrocapacitive", "category": "switch" },
-    { "slug": "dcs", "name": "DCS", "category": "profile" }
+    { "slug": "dcs", "name": "DCS", "category": "profile" },
+    { "slug": "stabilizers", "name": "Stabilizers", "category": "misc" },
+    { "slug": "lubing", "name": "Lubing", "category": "switch" }
   ]
 }
