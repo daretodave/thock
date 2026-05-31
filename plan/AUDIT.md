@@ -281,6 +281,15 @@
 
 ## Open findings
 
+### [x] [copy] [4.0] gmk-cyl-king-of-the-seas-group-buy — body prose present-tense stale after May 31 close — addressed in this commit
+- category: copy
+- filed: 2026-05-31 by cloud /iterate audit
+- impact: 5 (intro paragraph "is live at KBDfans" is the first sentence readers see; "is the one already live" in the CYL ecosystem section and future conditionals in "What we're watching" all refer to the 2026-05-31 close as a future event; the previous fix 3b47199 addressed only the Buying Notes section)
+- ease: 8 (targeted past-tense rewrites across 4 sentences in one article; no schema changes, no new files; updatedAt already 2026-05-31 from prior fix)
+- score: 4.0 (impact × ease / 10)
+- issue: [mirror-failed: 2026-05-31T07:32:00Z]
+> **Resolved (2026-05-31):** Past-tense four body sentences that referred to the buy's live status or its close as a future event. (1) Intro: "is live at KBDfans. … runs through 2026-05-31 … The buy ships" → "ran at KBDfans from 2026-04-28 through 2026-05-31 … The buy shipped". (2) Narrative: "is the one already live" → "was already open when the other two launched". (3) Watching section: "If both Sovereign and Mutation clear inside the 2026-05-31 close … If only one clears" → "Whether both Sovereign and Mutation cleared the 2026-05-31 window … A two-palette clear … a single-palette result". (4) Closing: "closes 2026-05-31" → "closed 2026-05-31". 682 e2e green.
+
 ### [x] [data] [3.6] GMK CYL King of the Seas status stale — endDate 2026-05-31 passed, still marked live — addressed in f6f5a2b, closes #233
 - category: data
 - filed: 2026-05-31 by cloud /iterate audit
