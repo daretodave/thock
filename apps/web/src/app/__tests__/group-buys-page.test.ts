@@ -35,9 +35,10 @@ describe('partitionGroupBuys', () => {
     })
   })
 
-  it('routes to live / announced / ended by status + endDate', () => {
+  it('routes to live / announced / ended by status + startDate + endDate', () => {
     const live = gb({ slug: 'live', status: 'live', endDate: '2026-06-01' })
-    const ann = gb({ slug: 'ann', status: 'announced' })
+    // future-announced: startDate hasn't arrived yet (2026-06-01 > NOW 2026-05-09)
+    const ann = gb({ slug: 'ann', status: 'announced', startDate: '2026-06-01' })
     const closed = gb({ slug: 'closed', status: 'closed' })
     const shipped = gb({ slug: 'shipped', status: 'shipped' })
     const expiredLive = gb({
@@ -56,6 +57,33 @@ describe('partitionGroupBuys', () => {
       'expired',
       'shipped',
     ])
+  })
+
+  it('promotes announced buy with startDate <= today to live', () => {
+    // startDate 2026-04-01 is in the past relative to NOW 2026-05-09;
+    // the buy is open (endDate 2026-06-01 still future) — should be live
+    const started = gb({
+      slug: 'started',
+      status: 'announced',
+      startDate: '2026-04-01',
+      endDate: '2026-06-01',
+    })
+    const result = partitionGroupBuys([started], NOW)
+    expect(result.live.map((g) => g.slug)).toEqual(['started'])
+    expect(result.announced).toEqual([])
+  })
+
+  it('routes announced buy with past endDate to ended', () => {
+    const lapsed = gb({
+      slug: 'lapsed',
+      status: 'announced',
+      startDate: '2026-03-01',
+      endDate: '2026-04-01',
+    })
+    const result = partitionGroupBuys([lapsed], NOW)
+    expect(result.live).toEqual([])
+    expect(result.announced).toEqual([])
+    expect(result.ended.map((g) => g.slug)).toEqual(['lapsed'])
   })
 
   it('sorts live by endDate asc, name asc tie-break', () => {

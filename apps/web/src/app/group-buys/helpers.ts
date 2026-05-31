@@ -19,16 +19,20 @@ function todayIso(now: Date): string {
 }
 
 function isLive(gb: GroupBuy, today: string): boolean {
-  return gb.status === 'live' && gb.endDate >= today
+  const liveOrStarted =
+    gb.status === 'live' ||
+    (gb.status === 'announced' && gb.startDate <= today)
+  return liveOrStarted && gb.endDate >= today
 }
 
-function isAnnounced(gb: GroupBuy): boolean {
-  return gb.status === 'announced'
+function isAnnounced(gb: GroupBuy, today: string): boolean {
+  return gb.status === 'announced' && gb.startDate > today
 }
 
 function isEnded(gb: GroupBuy, today: string): boolean {
   if (gb.status === 'closed' || gb.status === 'shipped') return true
   if (gb.status === 'live' && gb.endDate < today) return true
+  if (gb.status === 'announced' && gb.endDate < today) return true
   return false
 }
 
@@ -53,7 +57,7 @@ export function partitionGroupBuys(
 
   for (const gb of groupBuys) {
     if (isLive(gb, today)) live.push(gb)
-    else if (isAnnounced(gb)) announced.push(gb)
+    else if (isAnnounced(gb, today)) announced.push(gb)
     else if (isEnded(gb, today)) ended.push(gb)
   }
 
