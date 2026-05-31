@@ -290,12 +290,14 @@
 - issue: #233
 > **Resolved (2026-05-31):** Flipped `status` from `"live"` to `"closed"` and bumped `updatedAt` to 2026-05-31T00:00:00.000Z on `data/group-buys/kbdfans-gmk-cyl-king-of-the-seas.json`. Updated `packages/data` group-buys loader test: migrated the "includes live buy in active list" assertion from King of the Seas (now closed) to Prussian Alert (window 2026-05-15→2026-06-12, tested at 2026-05-20). Manifest + search index refreshed by data:validate step. 682 e2e green. `f6f5a2b`
 
-### [copy] [3.6] gmk-cyl-king-of-the-seas-group-buy — stale /group-buys link and "current window" phrasing after May 31 close
+### [x] [copy] [3.6] gmk-cyl-king-of-the-seas-group-buy — stale /group-buys link and "current window" phrasing after May 31 close — addressed in 3b47199, closes #234
 - category: copy
 - filed: 2026-05-31 by cloud /iterate audit
 - impact: 4 (closed buy article; "the current window" phrasing and live /group-buys link misdirect readers who arrive post-close; same pattern as GREG 2 `459e252` and Nyawice `0bcbb47`)
 - ease: 9 (single sentence edit + updatedAt bump)
 - score: 3.6 (impact × ease / 10)
+- issue: #234
+> **Resolved (2026-05-31):** Changed "Full configurator and the current window are at KBDfans's product page. The live entry alongside the rest of the open buys sits on /group-buys" → "Full configurator details are at KBDfans's product page. The archived entry is at /group-buys/past." Bumped updatedAt to 2026-05-31. 682 e2e green. `3b47199`
 
 ### [x] [copy] [3.5] gsk-sweet-nightmare-group-buy — stale "not yet in" uncertainty paragraph after May 11 close — addressed in 9cfab0a, closes #222
 - category: copy
