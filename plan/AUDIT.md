@@ -72,6 +72,16 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [copy] [3.6] gmk-cyl-king-of-the-seas-group-buy — title "opens" and lede "runs through" stale after May 31 close — addressed in 5bd3e52, closes #237
+- category: copy
+- filed: 2026-05-31 by cloud /iterate audit
+- impact: 4 (title renders in article cards, OG title tag, and article header; lede renders in cards, search snippets, OG description — affect how closed-buy readers encounter the article)
+- ease: 9 (two-word frontmatter edits: title "opens" → "opened"; lede "runs through" → "ran through")
+- score: 3.6 (impact × ease / 10)
+- note: body prose was past-tensed in 8dc45e4 but frontmatter title and lede were not updated in the same pass
+- issue: #237
+> **Resolved (2026-05-31):** Changed title "opens at KBDfans" → "opened at KBDfans"; lede "runs through 2026-05-31" → "ran through 2026-05-31". Consistent past tense throughout article after May 31 close. 682 e2e green. `5bd3e52`
+
 ### [x] [fix] [3.6] language gate: worth-revisiting form escapes unfulfillable-revisit pattern — addressed in f50088a
 - category: fix
 - filed: 2026-05-30 by cloud /iterate audit
