@@ -291,6 +291,15 @@
 
 ## Open findings
 
+### [x] [fix] [3.5] /group-buys: announced buy past startDate never promotes to live section — addressed in 72d7e9d, closes #239
+- category: fix
+- filed: 2026-05-31 by cloud /iterate audit
+- impact: 5 (cannonkeys-mode-sonnet-r2 opens 2026-06-01; without fix, /group-buys would show "1 announced" indefinitely instead of routing the started buy to the live section; readers land on an open buy listed under "Announced")
+- ease: 7 (helpers.ts: extend isLive/isAnnounced/isEnded + partitionGroupBuys signature; 2 new unit tests)
+- score: 3.5 (impact × ease / 10)
+- issue: #239
+> **Resolved (2026-05-31):** Extended `isLive()` to match `status==='announced' && startDate <= today`; updated `isAnnounced()` to only match future-announced buys (`startDate > today`); added `announced + past endDate → ended` case to `isEnded()`. `partitionGroupBuys` passes `today` to the updated `isAnnounced` signature. 2 new unit tests: announced-past-startDate routes to live; announced-past-endDate routes to ended. Existing test updated (ann fixture now has future startDate). 682 e2e green. `72d7e9d`
+
 ### [x] [content] [3.6] stabilizer-servicing-guide — missing stabilizers and lubing tags despite being explicitly about both — addressed in f3acf43, closes #236
 - category: content
 - filed: 2026-05-31 by cloud /iterate audit
