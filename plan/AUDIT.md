@@ -2097,3 +2097,11 @@ passes accumulate signals.)
 - score: 7
 - next: /ship-content → guides pillar article
 > Filed 2026-05-31 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+
+### [copy] [3.6] stabilizers-explained — author field 'thock editorial' deviates from corpus standard 'thock'
+- category: copy
+- filed: 2026-05-31 by cloud /iterate audit
+- impact: 4 (byline renders across article page, article cards on home/pillar/tag pages, RSS feeds; inconsistent with all 42 other articles in corpus; implies a distinct editorial entity from the established thock byline convention)
+- ease: 9 (single field change + updatedAt bump)
+- score: 3.6 (impact × ease / 10)
+- issue: #235
