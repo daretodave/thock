@@ -2134,7 +2134,7 @@ passes accumulate signals.)
 - score: 3.6 (impact × ease / 10)
 - issue: #235
 
-### [copy] [4.5] gmk-cyl-greg-2-group-buy — present-tense phrasing stale after May 29 close
+### [x] [copy] [4.5] gmk-cyl-greg-2-group-buy — present-tense phrasing stale after May 29 close — addressed in 31d55c8, closes #238
 - category: copy
 - filed: 2026-05-31 by cloud /iterate audit
 - impact: 5 (lede + body opener + buying-notes + closing line all say "runs through 2026-05-29" / "closes 2026-05-29" — the buy closed 2 days ago; a reader visiting now sees a live-sounding article for a closed buy)
