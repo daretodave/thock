@@ -281,6 +281,15 @@
 
 ## Open findings
 
+### [x] [content] [3.6] stabilizer-servicing-guide — missing stabilizers and lubing tags despite being explicitly about both — addressed in f3acf43, closes #236
+- category: content
+- filed: 2026-05-31 by cloud /iterate audit
+- impact: 4 (stabilizer-servicing-guide is about stabilizer lubing; /tag/stabilizers and /tag/lubing each show only 1 article (stabilizers-explained) and omit this servicing guide; a reader who finds stabilizers-explained and clicks #stabilizers will not find the companion servicing piece)
+- ease: 9 (frontmatter tag array edit + updatedAt bump; no schema change, no new files)
+- score: 3.6 (impact × ease / 10)
+- issue: #236
+> **Resolved (2026-05-31):** Added `stabilizers` and `lubing` to tags array in stabilizer-servicing-guide.mdx. Tags updated from [modding, beginner, linear] to [modding, beginner, linear, stabilizers, lubing]. /tag/stabilizers and /tag/lubing each now show 2 articles. updatedAt bumped to 2026-05-31. 682 e2e green. `f3acf43`
+
 ### [x] [copy] [4.0] gmk-cyl-king-of-the-seas-group-buy — body prose present-tense stale after May 31 close — addressed in this commit
 - category: copy
 - filed: 2026-05-31 by cloud /iterate audit
