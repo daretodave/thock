@@ -23,10 +23,10 @@ describe('group-buys loader', () => {
   })
 
   it('includes live group buys in active list when their window includes the date', () => {
-    // King of the Seas runs 2026-04-28 → 2026-05-31.
-    const active = getActiveGroupBuys(new Date('2026-05-10T00:00:00Z'))
+    // Prussian Alert runs 2026-05-15 → 2026-06-12.
+    const active = getActiveGroupBuys(new Date('2026-05-20T00:00:00Z'))
     const slugs = active.map((g) => g.slug)
-    expect(slugs).toContain('kbdfans-gmk-cyl-king-of-the-seas')
+    expect(slugs).toContain('kbdfans-gmk-cyl-prussian-alert')
   })
 
   it('excludes a closed group buy from the active list once its end-date has passed', () => {
