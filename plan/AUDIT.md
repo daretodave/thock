@@ -2152,3 +2152,12 @@ passes accumulate signals.)
 - elements: apps/web/src/content/articles/gmk-cyl-greg-2-group-buy.mdx lines 4, 17, 57, 71
 - issue: #238
 > **Resolved (2026-05-31):** Changed `author: thock editorial` → `author: thock` in stabilizers-explained.mdx. Bumped updatedAt to 2026-05-31. 682 e2e green. `342ee16`
+
+### [x] [copy] [3.6] gmk-cyl-ishtar-r2-group-buy — title "closes" stale after May 10 close — addressed in a8461f0
+- category: copy
+- filed: 2026-05-31 by cloud /iterate audit
+- impact: 4 (title renders in article cards on home/pillar/tag/related pages, OG title tag, RSS feed titles, search snippets — present-tense "closes" implies active closing window on a buy that closed 21 days ago)
+- ease: 9 (one-word frontmatter edit)
+- score: 3.6 (impact × ease / 10)
+- issue: [mirror-failed: 2026-05-31T18:40:00Z]
+- elements: apps/web/src/content/articles/gmk-cyl-ishtar-r2-group-buy.mdx line 3
