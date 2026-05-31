@@ -213,7 +213,7 @@
       "26": [
         13,
         7,
-        45,
+        46,
         495
       ],
       "27": [
@@ -266,7 +266,7 @@
       ],
       "35": [
         8,
-        3,
+        5,
         30,
         653
       ],
@@ -315,8 +315,8 @@
     },
     "averageFieldLength": [
       9.023255813953488,
-      5.767441860465116,
-      39.58139534883721,
+      5.813953488372093,
+      39.60465116279069,
       615.1395348837209
     ],
     "storedFields": {
@@ -683,8 +683,8 @@
       },
       "26": {
         "slug": "gmk-cyl-king-of-the-seas-group-buy",
-        "title": "GMK CYL King of the Seas opens at KBDfans in two colorways at once",
-        "lede": "MiKeyDigit's nautical doubleshot ABS set opened at KBDfans on 2026-04-28 and runs through 2026-05-31. The rarer angle is the two-colorway split — The Sovereign in deep ocean blues and The Mutation in electric pink, sold concurrently inside the same buy rather than staggered as separate runs.",
+        "title": "GMK CYL King of the Seas opened at KBDfans in two colorways at once",
+        "lede": "MiKeyDigit's nautical doubleshot ABS set opened at KBDfans on 2026-04-28 and ran through 2026-05-31. The rarer angle is the two-colorway split — The Sovereign in deep ocean blues and The Mutation in electric pink, sold concurrently inside the same buy rather than staggered as separate runs.",
         "pillar": "news",
         "tags": [
           "gmk",
@@ -811,7 +811,9 @@
         "tags": [
           "modding",
           "beginner",
-          "linear"
+          "linear",
+          "stabilizers",
+          "lubing"
         ],
         "publishedAt": "2026-04-20T14:00:00.000Z"
       },
@@ -21210,6 +21212,7 @@
         {
           "2": {
             "8": 1,
+            "26": 1,
             "38": 1
           },
           "3": {
@@ -24280,7 +24283,7 @@
             "1": 1,
             "7": 1,
             "22": 1,
-            "26": 2
+            "26": 1
           },
           "3": {
             "0": 1,
@@ -33309,6 +33312,9 @@
       [
         "opened",
         {
+          "0": {
+            "26": 1
+          },
           "2": {
             "1": 1,
             "7": 1,
@@ -33348,8 +33354,7 @@
         "opens",
         {
           "0": {
-            "15": 1,
-            "26": 1
+            "15": 1
           },
           "3": {
             "1": 1,
@@ -35614,7 +35619,8 @@
             "23": 1
           },
           "1": {
-            "0": 1
+            "0": 1,
+            "35": 1
           },
           "3": {
             "0": 7,
@@ -70695,7 +70701,8 @@
             "0": 1
           },
           "1": {
-            "0": 1
+            "0": 1,
+            "35": 1
           },
           "2": {
             "0": 1,
@@ -71664,8 +71671,8 @@
     {
       "id": "gmk-cyl-king-of-the-seas-group-buy",
       "slug": "gmk-cyl-king-of-the-seas-group-buy",
-      "title": "GMK CYL King of the Seas opens at KBDfans in two colorways at once",
-      "lede": "MiKeyDigit's nautical doubleshot ABS set opened at KBDfans on 2026-04-28 and runs through 2026-05-31. The rarer angle is the two-colorway split — The Sovereign in deep ocean blues and The Mutation in electric pink, sold concurrently inside the same buy rather than staggered as separate runs.",
+      "title": "GMK CYL King of the Seas opened at KBDfans in two colorways at once",
+      "lede": "MiKeyDigit's nautical doubleshot ABS set opened at KBDfans on 2026-04-28 and ran through 2026-05-31. The rarer angle is the two-colorway split — The Sovereign in deep ocean blues and The Mutation in electric pink, sold concurrently inside the same buy rather than staggered as separate runs.",
       "pillar": "news",
       "tags": [
         "gmk",
@@ -71801,7 +71808,9 @@
       "tags": [
         "modding",
         "beginner",
-        "linear"
+        "linear",
+        "stabilizers",
+        "lubing"
       ],
       "publishedAt": "2026-04-20T14:00:00.000Z"
     },
@@ -72103,6 +72112,6 @@
       "name": "QK75"
     }
   ],
-  "generatedAt": "2026-05-31T07:34:25.385Z",
+  "generatedAt": "2026-05-31T12:43:59.190Z",
   "count": 43
 }

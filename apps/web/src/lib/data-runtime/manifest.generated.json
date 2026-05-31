@@ -2837,8 +2837,8 @@
       "slug": "gmk-cyl-king-of-the-seas-group-buy",
       "frontmatter": {
         "slug": "gmk-cyl-king-of-the-seas-group-buy",
-        "title": "GMK CYL King of the Seas opens at KBDfans in two colorways at once",
-        "lede": "MiKeyDigit's nautical doubleshot ABS set opened at KBDfans on 2026-04-28 and runs through 2026-05-31. The rarer angle is the two-colorway split — The Sovereign in deep ocean blues and The Mutation in electric pink, sold concurrently inside the same buy rather than staggered as separate runs.",
+        "title": "GMK CYL King of the Seas opened at KBDfans in two colorways at once",
+        "lede": "MiKeyDigit's nautical doubleshot ABS set opened at KBDfans on 2026-04-28 and ran through 2026-05-31. The rarer angle is the two-colorway split — The Sovereign in deep ocean blues and The Mutation in electric pink, sold concurrently inside the same buy rather than staggered as separate runs.",
         "author": "thock",
         "pillar": "news",
         "tags": [
@@ -3156,10 +3156,12 @@
         "tags": [
           "modding",
           "beginner",
-          "linear"
+          "linear",
+          "stabilizers",
+          "lubing"
         ],
         "publishedAt": "2026-04-20T14:00:00.000Z",
-        "updatedAt": null,
+        "updatedAt": "2026-05-31T00:00:00.000Z",
         "heroImage": "/hero-art/stabilizer-servicing-guide.svg",
         "heroImageAlt": "A keyboard outline with stabilizer contact points called out in coral",
         "featured": false,
@@ -3741,5 +3743,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-05-31T07:34:24.363Z"
+  "generatedAt": "2026-05-31T12:43:58.278Z"
 }
