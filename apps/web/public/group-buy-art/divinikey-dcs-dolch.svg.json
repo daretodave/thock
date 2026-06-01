@@ -1,0 +1,22 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-01T00:00:00.000Z",
+  "commit": "13b4f99f2e1ab656ec55d9610f86ecc1e700e23b",
+  "kind": "hero-art",
+  "source": null,
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": [],
+  "asset": "divinikey-dcs-dolch.svg",
+  "brief": "DCS Dolch group-buy hero art — DCS profile keycap cluster, vintage Dolch colorway",
+  "outputs": [
+    "apps/web/public/group-buy-art/divinikey-dcs-dolch.svg"
+  ],
+  "splash_color": {
+    "name": "dolch-charcoal",
+    "oklch": "oklch(0.38 0.015 250)"
+  },
+  "bronze_accent": "oklch(0.80 0.135 75)",
+  "data_sources": [],
+  "warnings": []
+}

@@ -552,6 +552,15 @@
       "updatedAt": "2026-05-08T00:00:00.000Z"
     },
     {
+      "slug": "divinikey",
+      "name": "Divinikey",
+      "url": "https://divinikey.com",
+      "countryCode": "US",
+      "description": "US-based mechanical keyboard retailer headquartered in Los Angeles, California, stocking keyboards, keycap sets, switches, and accessories; runs group buys for custom keyboard projects including DCS and GMK keycap sets.",
+      "status": "active",
+      "updatedAt": "2026-06-01T00:00:00.000Z"
+    },
+    {
       "slug": "drop",
       "name": "Drop",
       "url": "https://drop.com",
@@ -622,6 +631,22 @@
       "status": "closed",
       "description": "Alice-layout board with a leaf-spring F1 mount and 9-degree typing angle, run with friction-fit silicone cat ears and nose in orange, pink, baby blue, and lilac; hotswap PCB optional.",
       "updatedAt": "2026-05-18T00:00:00.000Z"
+    },
+    {
+      "slug": "divinikey-dcs-dolch",
+      "name": "DCS Dolch",
+      "vendorSlug": "divinikey",
+      "productSlug": null,
+      "productKind": "keycap-set",
+      "startDate": "2026-06-01",
+      "endDate": "2026-07-01",
+      "region": "global",
+      "url": "https://divinikey.com/products/dcs-dolch-keycaps",
+      "imageUrl": null,
+      "heroImage": "/group-buy-art/divinikey-dcs-dolch.svg",
+      "status": "live",
+      "description": "DCS Dolch — classic Dolch colorway (dark grey alphas, light grey mods) in DCS profile by Signature Plastics, designed by cartersrush; running June 1–July 1 2026 via Divinikey (NA), Prototypist (UK), Keebsupply and DeltakeyCo (EU), and six other regional vendors. Base kit $119–$128 MOQ-tiered; estimated October 2026 ship.",
+      "updatedAt": "2026-06-01T00:00:00.000Z"
     },
     {
       "slug": "kbdfans-gmk-cyl-greg-2",
@@ -2069,7 +2094,7 @@
             43
           ],
           "articleSlug": "gmk-cyl-ramune-group-buy",
-          "note": "Ramune GB closed around June 5 after its May 15 open, leaving the set in fulfillment limbo until Q3–Q4 2026. Post-close discussion is positive but quiet. Divinikey and Prototypist confirmed orders; score holds as momentum naturally cools after close."
+          "note": "Ramune runs through 2026-06-20, entering the back half of its four-week window. Direction flat at +43 as early-adopter momentum settles; undecided buyers have three more weeks before close. Divinikey and Prototypist handle US and UK fulfillment."
         },
         {
           "name": "DCS Grass Valley",
@@ -2122,7 +2147,7 @@
             29,
             31
           ],
-          "articleSlug": "keycap-profiles-compared",
+          "articleSlug": null,
           "note": "Selene GB (May 15–June 19) is active through W23 across vendors including Prototypist, Duckeebs, and KBDfans. The glitter-effect special-plastics colorway draws consistent r/MechanicalKeyboards attention, with Q4 2026 fulfillment keeping excitement measured but building."
         },
         {
@@ -2288,7 +2313,7 @@
           "note": "Cherry's April 2026 MX2A Dummy switch release continues to generate skeptical community reactions in W23 forum threads, seen as an attempt to manufacture novelty rather than address core enthusiast concerns. Long GMK production timelines add to the brand's negative sentiment."
         }
       ],
-      "updatedAt": "2026-06-01T12:00:00.000Z"
+      "updatedAt": "2026-06-01T14:00:00.000Z"
     }
   ],
   "articles": [
@@ -4074,5 +4099,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-06-01T02:03:01.565Z"
+  "generatedAt": "2026-06-01T05:56:48.984Z"
 }

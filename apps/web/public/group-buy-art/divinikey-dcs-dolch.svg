@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1200 750"
+     preserveAspectRatio="xMidYMid meet"
+     fill="none"
+     stroke="oklch(0.78 0.005 90)"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     role="img"
+     aria-label="thock group-buy hero — DCS Dolch by Signature Plastics via Divinikey, five DCS-profile keycaps in a cluster evoking the vintage dark-alpha Dolch colorway">
+  <title>thock group-buy hero — DCS Dolch (Divinikey / Signature Plastics), five DCS-profile keycaps, dark charcoal alpha cluster, warm brass accent pip</title>
+
+  <!--
+    DCS Dolch — composition notes
+    ==============================
+    Dolch colorway: dark charcoal grey alphas + lighter grey modifiers.
+    Vintage aesthetic from 1980s/90s Sun Microsystems workstation boards.
+    DCS (Dyesub Compatible Standard) profile by Signature Plastics:
+      cylindrical top surface — notably deeper and wider scoop arc than
+      Cherry or CYL; the defining physical characteristic of DCS.
+
+    Splash color: warm charcoal oklch(0.38 0.015 250) — evokes the dark
+    Dolch alpha bodies without being a literal neutral grey. Applied as:
+      1. A low-opacity ellipse wash behind the entire cluster.
+      2. Solid fill on the three "alpha" caps (back row), the dominant
+         character of Dolch.
+    The two front-row caps remain in warm-grey stroke only, standing in
+    for the lighter modifier treatment.
+
+    Bronze theme pip: oklch(0.80 0.135 75) — the standard brass accent
+    dot at the lower-right, the family ornamental anchor.
+
+    DCS scoop anatomy (versus CYL siblings):
+      - Top surface inset is wider relative to the cap footprint.
+      - Scoop arc is substantially deeper — the cylindrical dish is the
+        most pronounced of the common keycap profiles.
+      - Second arc drawn lower to reinforce the dish depth.
+
+    Composition: 5 caps — 3-cap back row (all alpha/charcoal fill) +
+    2-cap front row (modifier/warm-grey stroke), staggered half-cap right.
+    Five caps reads "small curated set" versus six reads "full board" —
+    appropriate for a keycap group buy hero.
+  -->
+
+  <!-- ── Splash wash: charcoal-tinted ellipse framing the cluster ── -->
+  <ellipse cx="600" cy="388" rx="505" ry="215"
+           fill="oklch(0.38 0.015 250 / 0.13)" stroke="none"/>
+
+  <!-- ================================================================
+       DCS cap template geometry (1u, ~176 wide × 170 tall in local coords)
+       DCS has a higher wall and a wider, deeper scoop than CYL:
+         outer:  full footprint with gently rounded corners
+         top:    inset surface — DCS top is notably wider than the wall gap
+         scoop:  deep cylindrical arc, placed in the upper-middle third
+         scoop2: secondary reinforcing arc ~16px below the first
+       ================================================================ -->
+
+  <!-- ══════════════════════════════════════════════════════════════
+       BACK ROW — three 1u alpha caps, Dolch charcoal fill
+       Translation: back-left x=280, back-mid x=502, back-right x=724
+       y baseline = 222
+  ══════════════════════════════════════════════════════════════ -->
+
+  <!-- Back-left alpha cap — charcoal Dolch fill -->
+  <g transform="translate(280 222)">
+    <!-- outer footprint: DCS has a wider flat ledge before the top surface -->
+    <path d="M 10 16 Q 0 6 12 2 L 164 2 Q 176 6 166 16 L 166 158 Q 176 166 164 170 L 12 170 Q 0 166 10 158 Z"
+          fill="oklch(0.38 0.015 250 / 0.88)"
+          stroke="oklch(0.38 0.015 250)"/>
+    <!-- top surface: DCS top surface sits deeper into the wall -->
+    <path d="M 28 26 Q 20 18 32 16 L 144 16 Q 156 18 148 26 L 148 148 Q 156 156 144 158 L 32 158 Q 20 156 28 148 Z"
+          fill="oklch(0.42 0.015 250 / 0.75)"
+          stroke="oklch(0.52 0.010 250)" stroke-opacity="0.65"/>
+    <!-- DCS scoop arc — deep cylindrical dish, distinctive wide curve -->
+    <path d="M 34 82 Q 88 60 142 82"
+          stroke="oklch(0.62 0.008 250)" stroke-opacity="0.70"/>
+    <!-- reinforcing scoop arc below -->
+    <path d="M 34 98 Q 88 80 142 98"
+          stroke="oklch(0.62 0.008 250)" stroke-opacity="0.45"/>
+  </g>
+
+  <!-- Back-middle alpha cap — charcoal Dolch fill -->
+  <g transform="translate(502 222)">
+    <path d="M 10 16 Q 0 6 12 2 L 164 2 Q 176 6 166 16 L 166 158 Q 176 166 164 170 L 12 170 Q 0 166 10 158 Z"
+          fill="oklch(0.38 0.015 250 / 0.88)"
+          stroke="oklch(0.38 0.015 250)"/>
+    <path d="M 28 26 Q 20 18 32 16 L 144 16 Q 156 18 148 26 L 148 148 Q 156 156 144 158 L 32 158 Q 20 156 28 148 Z"
+          fill="oklch(0.42 0.015 250 / 0.75)"
+          stroke="oklch(0.52 0.010 250)" stroke-opacity="0.65"/>
+    <path d="M 34 82 Q 88 60 142 82"
+          stroke="oklch(0.62 0.008 250)" stroke-opacity="0.70"/>
+    <path d="M 34 98 Q 88 80 142 98"
+          stroke="oklch(0.62 0.008 250)" stroke-opacity="0.45"/>
+  </g>
+
+  <!-- Back-right alpha cap — charcoal Dolch fill -->
+  <g transform="translate(724 222)">
+    <path d="M 10 16 Q 0 6 12 2 L 164 2 Q 176 6 166 16 L 166 158 Q 176 166 164 170 L 12 170 Q 0 166 10 158 Z"
+          fill="oklch(0.38 0.015 250 / 0.88)"
+          stroke="oklch(0.38 0.015 250)"/>
+    <path d="M 28 26 Q 20 18 32 16 L 144 16 Q 156 18 148 26 L 148 148 Q 156 156 144 158 L 32 158 Q 20 156 28 148 Z"
+          fill="oklch(0.42 0.015 250 / 0.75)"
+          stroke="oklch(0.52 0.010 250)" stroke-opacity="0.65"/>
+    <path d="M 34 82 Q 88 60 142 82"
+          stroke="oklch(0.62 0.008 250)" stroke-opacity="0.70"/>
+    <path d="M 34 98 Q 88 80 142 98"
+          stroke="oklch(0.62 0.008 250)" stroke-opacity="0.45"/>
+  </g>
+
+  <!-- ══════════════════════════════════════════════════════════════
+       FRONT ROW — two 1u modifier caps, warm-grey stroke only
+       Staggered half-cap right relative to back row center.
+       Translation: front-left x=391, front-right x=613
+       y baseline = 432
+       The lighter modifier treatment: no charcoal fill, stroke-only,
+       the established Dolch "lighter grey mod" read.
+  ══════════════════════════════════════════════════════════════ -->
+
+  <!-- Front-left modifier cap — warm-grey stroke, no fill -->
+  <g transform="translate(391 432)">
+    <path d="M 10 16 Q 0 6 12 2 L 164 2 Q 176 6 166 16 L 166 158 Q 176 166 164 170 L 12 170 Q 0 166 10 158 Z"/>
+    <path d="M 28 26 Q 20 18 32 16 L 144 16 Q 156 18 148 26 L 148 148 Q 156 156 144 158 L 32 158 Q 20 156 28 148 Z"
+          stroke-opacity="0.65"/>
+    <path d="M 34 82 Q 88 60 142 82" stroke-opacity="0.45"/>
+    <path d="M 34 98 Q 88 80 142 98" stroke-opacity="0.30"/>
+  </g>
+
+  <!-- Front-right modifier cap — warm-grey stroke, no fill -->
+  <g transform="translate(613 432)">
+    <path d="M 10 16 Q 0 6 12 2 L 164 2 Q 176 6 166 16 L 166 158 Q 176 166 164 170 L 12 170 Q 0 166 10 158 Z"/>
+    <path d="M 28 26 Q 20 18 32 16 L 144 16 Q 156 18 148 26 L 148 148 Q 156 156 144 158 L 32 158 Q 20 156 28 148 Z"
+          stroke-opacity="0.65"/>
+    <path d="M 34 82 Q 88 60 142 82" stroke-opacity="0.45"/>
+    <path d="M 34 98 Q 88 80 142 98" stroke-opacity="0.30"/>
+  </g>
+
+  <!-- ── Bronze theme pip: family ornamental anchor, upper-right ── -->
+  <!-- Warm brass accent dot at the visual anchor — the thock family
+       ornamental pip present in every group-buy hero. Sits at
+       upper-right of the canvas, clear of the keycap cluster. -->
+  <circle cx="1062" cy="118" r="7"
+          fill="oklch(0.80 0.135 75)"
+          stroke="none"/>
+  <circle cx="1062" cy="118" r="14"
+          stroke="oklch(0.80 0.135 75)"
+          stroke-opacity="0.38"
+          fill="none"/>
+  <circle cx="1062" cy="118" r="22"
+          stroke="oklch(0.80 0.135 75)"
+          stroke-opacity="0.16"
+          fill="none"/>
+
+</svg>
