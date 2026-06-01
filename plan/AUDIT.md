@@ -72,6 +72,15 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [data] [3.5] DCS Dolch live GB (Jun 1–Jul 1) not in database — add Divinikey vendor + group-buy record — addressed in 180461b, closes #242
+- category: data
+- filed: 2026-06-01 by cloud /iterate audit
+- impact: 5 (DCS Dolch opened today at +29 in W23 tracker; absent from /group-buys active view; Divinikey also missing as vendor stub; Rule 3 companion opportunity fires next tick)
+- ease: 7 (two JSON records + brander hero art; no schema change, no code change)
+- score: 3.5 (impact × ease / 10)
+- issue: #242
+> **Resolved (2026-06-01):** Created `data/vendors/divinikey.json` (US, active, Los Angeles) and `data/group-buys/divinikey-dcs-dolch.json` (status: live, startDate: 2026-06-01, endDate: 2026-07-01, region: global). Hero art at `apps/web/public/group-buy-art/divinikey-dcs-dolch.svg` (DCS profile keycap cluster, charcoal + brass palette). Scout confirmed dates via Divinikey product page and Geekhack IC thread 123033; 9+ regional vendors confirmed. 685 e2e green. `180461b`
+
 ### [x] [copy] [4.0] mode-sonnet-r2-group-buy-coverage — callout/lede stale "announced for 2026-06-01" after buy opened today — addressed in 956e67a, closes #240
 - category: copy
 - filed: 2026-06-01 by cloud /iterate audit
