@@ -147,8 +147,8 @@
       "15": [
         6,
         6,
-        40,
-        412
+        41,
+        411
       ],
       "16": [
         6,
@@ -190,7 +190,7 @@
         9,
         7,
         45,
-        487
+        488
       ],
       "23": [
         10,
@@ -316,7 +316,7 @@
     "averageFieldLength": [
       9.023255813953488,
       5.813953488372093,
-      39.60465116279069,
+      39.62790697674418,
       615.1395348837209
     ],
     "storedFields": {
@@ -433,7 +433,7 @@
       },
       "8": {
         "slug": "gmk-cyl-ishtar-r2-group-buy",
-        "title": "GMK CYL Ishtar R2 closes at KBDfans with a second-and-likely-last shot at the lapis Mesopotamia palette",
+        "title": "GMK CYL Ishtar R2 closed at KBDfans with a second-and-likely-last shot at the lapis Mesopotamia palette",
         "lede": "GMK CYL Ishtar R2 ran 2026-04-17 through 2026-05-10 at KBDfans. The editorial event is not the open — it is the close. A second round on a Cherry-profile doubleshot ABS set is the second-and-likely-last shot at MSRP before the aftermarket takes over the palette.",
         "pillar": "news",
         "tags": [
@@ -530,7 +530,7 @@
       "15": {
         "slug": "mode-sonnet-r2-group-buy-coverage",
         "title": "Mode Sonnet R2 opens at CannonKeys",
-        "lede": "Mode has announced the second round of its 65% Sonnet board at CannonKeys, now scheduled for 2026-06-01 through 2026-07-15 after a vendor-side timeline shift. See the in-article update for the new dates and accent-weight color options.",
+        "lede": "Mode's second round of its 65% Sonnet board is now open at CannonKeys, running from 2026-06-01 through 2026-07-15 after a vendor-side timeline shift. See the in-article update for the dates and accent-weight color options.",
         "pillar": "news",
         "tags": [
           "65",
@@ -628,7 +628,7 @@
       "22": {
         "slug": "gmk-cyl-greg-2-group-buy",
         "title": "GMK CYL GREG returns for round 2 at KBDfans",
-        "lede": "Round 2 of GMK CYL GREG opened at KBDfans on 2026-05-01 and runs through 2026-05-29. The four-week window sits on the longer end for GMK CYL R2s, and the round-2 cadence itself is becoming the more interesting story as sets prove out in R1 and accumulate latent demand.",
+        "lede": "Round 2 of GMK CYL GREG opened at KBDfans on 2026-05-01 and ran through 2026-05-29. The four-week window sits on the longer end for GMK CYL R2s, and the round-2 cadence itself is becoming the more interesting story as sets prove out in R1 and accumulate latent demand.",
         "pillar": "news",
         "tags": [
           "gmk",
@@ -7232,7 +7232,6 @@
         {
           "2": {
             "14": 1,
-            "15": 1,
             "16": 2,
             "24": 1,
             "25": 1,
@@ -7256,7 +7255,7 @@
             "12": 2,
             "13": 2,
             "14": 1,
-            "15": 5,
+            "15": 4,
             "16": 11,
             "17": 3,
             "18": 2,
@@ -19767,9 +19766,6 @@
           "0": {
             "33": 1
           },
-          "2": {
-            "15": 1
-          },
           "3": {
             "1": 2,
             "4": 4,
@@ -20227,7 +20223,7 @@
             "12": 1,
             "13": 1,
             "14": 1,
-            "15": 3,
+            "15": 1,
             "16": 1,
             "17": 2,
             "19": 1,
@@ -21212,6 +21208,7 @@
         {
           "2": {
             "8": 1,
+            "22": 1,
             "26": 1,
             "38": 1
           },
@@ -21222,6 +21219,7 @@
             "6": 1,
             "8": 2,
             "9": 1,
+            "22": 1,
             "26": 2,
             "38": 2,
             "40": 1
@@ -24202,6 +24200,7 @@
         {
           "2": {
             "5": 1,
+            "15": 1,
             "40": 1
           },
           "3": {
@@ -24282,7 +24281,6 @@
           "2": {
             "1": 1,
             "7": 1,
-            "22": 1,
             "26": 1
           },
           "3": {
@@ -24296,9 +24294,10 @@
             "9": 2,
             "10": 2,
             "12": 4,
+            "15": 1,
             "17": 6,
             "21": 2,
-            "22": 4,
+            "22": 3,
             "25": 2,
             "26": 5,
             "28": 1,
@@ -24662,7 +24661,7 @@
           "3": {
             "7": 1,
             "8": 10,
-            "15": 5,
+            "15": 4,
             "18": 1,
             "22": 7,
             "26": 2,
@@ -30516,7 +30515,7 @@
             "18": 1,
             "19": 2,
             "20": 1,
-            "22": 1,
+            "22": 2,
             "23": 2,
             "24": 2,
             "25": 3,
@@ -33328,7 +33327,7 @@
             "7": 3,
             "8": 2,
             "12": 1,
-            "15": 1,
+            "15": 3,
             "22": 1,
             "26": 2,
             "33": 2
@@ -33359,7 +33358,6 @@
           "3": {
             "1": 1,
             "9": 1,
-            "15": 1,
             "26": 1,
             "34": 1,
             "38": 1,
@@ -33373,6 +33371,7 @@
           "2": {
             "7": 1,
             "8": 1,
+            "15": 1,
             "40": 1
           },
           "3": {
@@ -34077,7 +34076,7 @@
             "12": 16,
             "13": 10,
             "14": 10,
-            "15": 10,
+            "15": 12,
             "16": 10,
             "17": 14,
             "18": 19,
@@ -39001,6 +39000,7 @@
             "12": 1,
             "13": 3,
             "14": 1,
+            "15": 1,
             "17": 1,
             "18": 2,
             "21": 1,
@@ -39040,14 +39040,14 @@
             "12": 34,
             "13": 27,
             "14": 21,
-            "15": 26,
+            "15": 25,
             "16": 12,
             "17": 19,
             "18": 42,
             "19": 76,
             "20": 20,
             "21": 61,
-            "22": 41,
+            "22": 40,
             "23": 45,
             "24": 31,
             "25": 78,
@@ -43346,6 +43346,9 @@
       [
         "closed",
         {
+          "0": {
+            "8": 1
+          },
           "2": {
             "2": 1,
             "12": 1
@@ -43357,6 +43360,7 @@
             "13": 2,
             "14": 1,
             "15": 1,
+            "22": 1,
             "26": 1,
             "30": 1,
             "31": 1,
@@ -43381,14 +43385,10 @@
       [
         "closes",
         {
-          "0": {
-            "8": 1
-          },
           "3": {
             "1": 4,
             "3": 1,
             "15": 1,
-            "22": 1,
             "28": 1,
             "29": 1,
             "34": 1,
@@ -49616,6 +49616,7 @@
           },
           "2": {
             "1": 1,
+            "15": 1,
             "17": 1,
             "24": 1,
             "28": 1,
@@ -51222,7 +51223,7 @@
             "10": 2,
             "12": 1,
             "14": 1,
-            "15": 2,
+            "15": 1,
             "16": 1,
             "19": 1,
             "22": 1,
@@ -51248,7 +51249,7 @@
             "12": 6,
             "13": 3,
             "14": 7,
-            "15": 16,
+            "15": 15,
             "16": 9,
             "17": 13,
             "18": 8,
@@ -53131,7 +53132,7 @@
             "9": 1,
             "12": 14,
             "14": 2,
-            "15": 8,
+            "15": 9,
             "16": 2,
             "17": 6,
             "19": 7,
@@ -58361,7 +58362,7 @@
             "12": 2,
             "13": 2,
             "14": 2,
-            "15": 3,
+            "15": 2,
             "16": 6,
             "17": 2,
             "18": 3,
@@ -58406,7 +58407,7 @@
             "12": 86,
             "13": 73,
             "14": 78,
-            "15": 69,
+            "15": 70,
             "16": 64,
             "17": 102,
             "18": 107,
@@ -62606,14 +62607,11 @@
       [
         "announced",
         {
-          "2": {
-            "15": 1
-          },
           "3": {
             "6": 1,
             "7": 1,
             "14": 1,
-            "15": 4,
+            "15": 3,
             "22": 1,
             "29": 1,
             "40": 1
@@ -63067,7 +63065,7 @@
             "12": 21,
             "13": 17,
             "14": 21,
-            "15": 22,
+            "15": 23,
             "16": 23,
             "17": 27,
             "18": 30,
@@ -63900,9 +63898,6 @@
       [
         "scheduled",
         {
-          "2": {
-            "15": 1
-          },
           "3": {
             "15": 1
           }
@@ -69701,6 +69696,7 @@
             "6": 2,
             "12": 2,
             "13": 1,
+            "15": 1,
             "17": 1,
             "21": 2,
             "26": 1,
@@ -71403,7 +71399,7 @@
     {
       "id": "gmk-cyl-ishtar-r2-group-buy",
       "slug": "gmk-cyl-ishtar-r2-group-buy",
-      "title": "GMK CYL Ishtar R2 closes at KBDfans with a second-and-likely-last shot at the lapis Mesopotamia palette",
+      "title": "GMK CYL Ishtar R2 closed at KBDfans with a second-and-likely-last shot at the lapis Mesopotamia palette",
       "lede": "GMK CYL Ishtar R2 ran 2026-04-17 through 2026-05-10 at KBDfans. The editorial event is not the open — it is the close. A second round on a Cherry-profile doubleshot ABS set is the second-and-likely-last shot at MSRP before the aftermarket takes over the palette.",
       "pillar": "news",
       "tags": [
@@ -71507,7 +71503,7 @@
       "id": "mode-sonnet-r2-group-buy-coverage",
       "slug": "mode-sonnet-r2-group-buy-coverage",
       "title": "Mode Sonnet R2 opens at CannonKeys",
-      "lede": "Mode has announced the second round of its 65% Sonnet board at CannonKeys, now scheduled for 2026-06-01 through 2026-07-15 after a vendor-side timeline shift. See the in-article update for the new dates and accent-weight color options.",
+      "lede": "Mode's second round of its 65% Sonnet board is now open at CannonKeys, running from 2026-06-01 through 2026-07-15 after a vendor-side timeline shift. See the in-article update for the dates and accent-weight color options.",
       "pillar": "news",
       "tags": [
         "65",
@@ -71612,7 +71608,7 @@
       "id": "gmk-cyl-greg-2-group-buy",
       "slug": "gmk-cyl-greg-2-group-buy",
       "title": "GMK CYL GREG returns for round 2 at KBDfans",
-      "lede": "Round 2 of GMK CYL GREG opened at KBDfans on 2026-05-01 and runs through 2026-05-29. The four-week window sits on the longer end for GMK CYL R2s, and the round-2 cadence itself is becoming the more interesting story as sets prove out in R1 and accumulate latent demand.",
+      "lede": "Round 2 of GMK CYL GREG opened at KBDfans on 2026-05-01 and ran through 2026-05-29. The four-week window sits on the longer end for GMK CYL R2s, and the round-2 cadence itself is becoming the more interesting story as sets prove out in R1 and accumulate latent demand.",
       "pillar": "news",
       "tags": [
         "gmk",
@@ -72112,6 +72108,6 @@
       "name": "QK75"
     }
   ],
-  "generatedAt": "2026-05-31T12:43:59.190Z",
+  "generatedAt": "2026-06-01T02:03:02.568Z",
   "count": 43
 }

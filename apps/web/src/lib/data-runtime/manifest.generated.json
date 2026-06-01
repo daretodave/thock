@@ -602,9 +602,9 @@
       "imageUrl": null,
       "heroImage": "/group-buy-art/cannonkeys-mode-sonnet-r2.svg",
       "relatedArticle": "mode-sonnet-r2-group-buy-coverage",
-      "status": "announced",
+      "status": "live",
       "description": "Mode Sonnet R2 — 65% gasket-mount aluminum board with polycarbonate plate as default and brass/FR4 upgrade options. Warm bronze and ochre accent colorway. Global group buy hosted by CannonKeys, 2026-06-01 through 2026-07-15. Lead time approximately Q4 2026.",
-      "updatedAt": "2026-05-22T00:00:00.000Z"
+      "updatedAt": "2026-06-01T00:00:00.000Z"
     },
     {
       "slug": "cannonkeys-nyawice",
@@ -1958,6 +1958,337 @@
         }
       ],
       "updatedAt": "2026-05-25T12:00:00.000Z"
+    },
+    {
+      "isoWeek": "2026-W23",
+      "publishedAt": "2026-06-01T00:00:00.000Z",
+      "rows": [
+        {
+          "name": "Hall Effect / Rapid Trigger",
+          "category": "switch",
+          "direction": "up",
+          "score": 66,
+          "spark": [
+            40,
+            44,
+            48,
+            51,
+            55,
+            57,
+            60,
+            66
+          ],
+          "articleSlug": "hall-effect-mainstream",
+          "note": "IQUNIX EC75, a 75% Hall Effect keyboard with Rapid Trigger, debuted hands-on at Computex Taipei June 2–5. iRocks also showed its K114H wireless magnetic switch keyboard at the same show, cementing HE as the dominant gaming-adjacent trend in W23."
+        },
+        {
+          "name": "HMX Cloud V2",
+          "category": "switch",
+          "direction": "up",
+          "score": 53,
+          "spark": [
+            32,
+            35,
+            38,
+            41,
+            44,
+            46,
+            49,
+            53
+          ],
+          "articleSlug": "hmx-cloud-deep-dive",
+          "note": "HMX confirmed its dual-material bottom housing entered full production-ready status with a Q3 release window this week. Community enthusiasm around the Cloud V2 lineage stays elevated as HMX's second-generation lubrication system rolls into production."
+        },
+        {
+          "name": "Gateron Oil King",
+          "category": "switch",
+          "direction": "flat",
+          "score": 41,
+          "spark": [
+            39,
+            40,
+            41,
+            40,
+            40,
+            41,
+            41,
+            41
+          ],
+          "articleSlug": "gateron-oil-king-deep-dive",
+          "note": "Oil King holds its benchmark status in W23 with no new product news. ThereminGoat's Gateron Lanes review continues to redirect tactile curiosity toward Gateron's newer lineup, keeping Oil King discussed but not accelerating. Availability stable across major US vendors."
+        },
+        {
+          "name": "Cherry MX2A",
+          "category": "switch",
+          "direction": "down",
+          "score": -33,
+          "spark": [
+            -17,
+            -20,
+            -22,
+            -25,
+            -28,
+            -29,
+            -31,
+            -33
+          ],
+          "articleSlug": "cherry-mx2a-revision",
+          "note": "The April 2026 MX2A Dummy switch release drew skeptical community reactions on KeebTalk and Geekhack, undermining MX2A's regained credibility. No substantive W23 MX2A news; sentiment continues sliding as HE and HMX capture enthusiast attention."
+        },
+        {
+          "name": "GMK CYL Prussian Alert",
+          "category": "keycap",
+          "direction": "up",
+          "score": 63,
+          "spark": [
+            36,
+            40,
+            44,
+            48,
+            54,
+            56,
+            59,
+            63
+          ],
+          "articleSlug": "gmk-cyl-prussian-alert",
+          "note": "Prussian Alert enters its final week before the June 12 deadline, driving last-chance buying urgency across ten regional vendors including NovelKeys, Prototypist, and Oblotzky. Geekhack and KeebTalk chatter spikes as undecided buyers commit to the Prussian Blue base."
+        },
+        {
+          "name": "GMK CYL Ramune",
+          "category": "keycap",
+          "direction": "flat",
+          "score": 43,
+          "spark": [
+            24,
+            28,
+            32,
+            35,
+            38,
+            41,
+            44,
+            43
+          ],
+          "articleSlug": "gmk-cyl-ramune-group-buy",
+          "note": "Ramune GB closed around June 5 after its May 15 open, leaving the set in fulfillment limbo until Q3–Q4 2026. Post-close discussion is positive but quiet. Divinikey and Prototypist confirmed orders; score holds as momentum naturally cools after close."
+        },
+        {
+          "name": "DCS Grass Valley",
+          "category": "keycap",
+          "direction": "down",
+          "score": 18,
+          "spark": [
+            19,
+            20,
+            21,
+            22,
+            22,
+            23,
+            23,
+            18
+          ],
+          "articleSlug": null,
+          "note": "Grass Valley officially closed June 1 after its May 1 run, clearing MOQ per the Geekhack thread. Post-close interest drops sharply as the set enters Signature Plastics' production queue with an estimated Q3 2026 ship date."
+        },
+        {
+          "name": "DCS Dolch",
+          "category": "keycap",
+          "direction": "up",
+          "score": 29,
+          "spark": [
+            0,
+            5,
+            10,
+            15,
+            19,
+            23,
+            26,
+            29
+          ],
+          "articleSlug": null,
+          "note": "DCS Dolch opened its group buy June 1 through July 1 via Divinikey, debuting a dark-alpha Dolch colorway in DCS profile made by Signature Plastics. Launch timing captures vintage-keycap buyers coming off Grass Valley's close. Estimated ship October 2026."
+        },
+        {
+          "name": "GMK CYL Selene",
+          "category": "keycap",
+          "direction": "up",
+          "score": 31,
+          "spark": [
+            10,
+            14,
+            18,
+            21,
+            24,
+            27,
+            29,
+            31
+          ],
+          "articleSlug": "keycap-profiles-compared",
+          "note": "Selene GB (May 15–June 19) is active through W23 across vendors including Prototypist, Duckeebs, and KBDfans. The glitter-effect special-plastics colorway draws consistent r/MechanicalKeyboards attention, with Q4 2026 fulfillment keeping excitement measured but building."
+        },
+        {
+          "name": "75% Layout",
+          "category": "layout",
+          "direction": "up",
+          "score": 43,
+          "spark": [
+            23,
+            26,
+            29,
+            32,
+            35,
+            36,
+            38,
+            43
+          ],
+          "articleSlug": "75-percent-default",
+          "note": "IQUNIX EC75, a 75% Hall Effect keyboard, debuted at Computex Taipei June 2–5. iRocks also showed its K114H wireless magnetic switch keyboard at the same show, cementing HE as the dominant gaming-adjacent trend and reinforcing 75% as the default enthusiast layout for 2026."
+        },
+        {
+          "name": "Split / Ergo (Voyager, Glove80)",
+          "category": "layout",
+          "direction": "up",
+          "score": 42,
+          "spark": [
+            24,
+            26,
+            28,
+            30,
+            34,
+            36,
+            39,
+            42
+          ],
+          "articleSlug": "split-ergo-cohort",
+          "note": "CannonKeys Link split ergo GB (May 16–June 15) is in its final weeks with open-source PCB threshold at 300 units, generating active community tracking. Keychron V10 Ultra Alice at $124.99 adds mainstream entry-level exposure to the ergo category in W23."
+        },
+        {
+          "name": "Alice layout",
+          "category": "layout",
+          "direction": "down",
+          "score": -27,
+          "spark": [
+            -14,
+            -17,
+            -19,
+            -21,
+            -23,
+            -24,
+            -26,
+            -27
+          ],
+          "articleSlug": "alice-layout-decline",
+          "note": "Alice continues its slow decline with no new notable IC or GB launches in W23. Keychron V10 Ultra Alice at $124.99 provides a budget on-ramp but community preference is shifting toward true split ergo over the ergonomic-lite compromise. No competitive gaming adoption reported."
+        },
+        {
+          "name": "Mode Designs",
+          "category": "vendor",
+          "direction": "up",
+          "score": 40,
+          "spark": [
+            22,
+            25,
+            27,
+            30,
+            34,
+            35,
+            37,
+            40
+          ],
+          "articleSlug": "mode-sonnet-r2-group-buy-coverage",
+          "note": "Mode Designs Encore 2026 pre-orders remain live in W23, with July 2026 ship dates and five colorways. The Crown Mounting System using wave springs and silicone spools is attracting strong enthusiast coverage. At $289, it is Mode's most discussed product of the year."
+        },
+        {
+          "name": "CannonKeys",
+          "category": "vendor",
+          "direction": "up",
+          "score": 22,
+          "spark": [
+            16,
+            17,
+            18,
+            18,
+            18,
+            18,
+            18,
+            22
+          ],
+          "articleSlug": "cannonkeys-nyawice-group-buy",
+          "note": "CannonKeys Link split ergo GB enters its final three weeks with an open-source PCB milestone drawing community goodwill. Also hosting GMK Spark (May 21–June 21), keeping its active GB count elevated in W23. Small score bump reflects the Link's positive community engagement."
+        },
+        {
+          "name": "Prototypist",
+          "category": "vendor",
+          "direction": "up",
+          "score": 24,
+          "spark": [
+            13,
+            15,
+            16,
+            17,
+            18,
+            19,
+            21,
+            24
+          ],
+          "articleSlug": "vendor-first-customs",
+          "note": "Prototypist handles UK fulfillment for both GMK CYL Prussian Alert and GMK CYL Selene simultaneously in W23, while also listing Gateron Lanes in stock for immediate shipping. Multi-GB active footprint and reliable in-stock switches continue to build community trust."
+        },
+        {
+          "name": "Keychron",
+          "category": "brand",
+          "direction": "flat",
+          "score": 44,
+          "spark": [
+            27,
+            30,
+            33,
+            36,
+            38,
+            41,
+            44,
+            44
+          ],
+          "articleSlug": "keychron-q-ultra-zmk",
+          "note": "Keychron V10 Ultra at $124.99 ships for in-stock SKUs with some on backorder. No major W23 announcements; the brand coasts on strong Q1 momentum from CES launches. The V Ultra series with 660-hour battery and 8K polling keeps Keychron visible in mainstream coverage."
+        },
+        {
+          "name": "Wuque Studio",
+          "category": "brand",
+          "direction": "flat",
+          "score": 17,
+          "spark": [
+            9,
+            11,
+            12,
+            14,
+            16,
+            16,
+            17,
+            17
+          ],
+          "articleSlug": null,
+          "note": "No new Wuque Studio switch or keyboard announcements identified in W23. The WS Morandi received continued positive discussion following ThereminGoat's review, and the brand maintains a steady in-stock catalog. Score holds flat absent any W23 product news or community event."
+        },
+        {
+          "name": "Cherry (GMK parent)",
+          "category": "brand",
+          "direction": "down",
+          "score": -28,
+          "spark": [
+            -11,
+            -14,
+            -16,
+            -18,
+            -20,
+            -21,
+            -23,
+            -28
+          ],
+          "articleSlug": "cherry-mx2a-revision",
+          "note": "Cherry's April 2026 MX2A Dummy switch release continues to generate skeptical community reactions in W23 forum threads, seen as an attempt to manufacture novelty rather than address core enthusiast concerns. Long GMK production timelines add to the brand's negative sentiment."
+        }
+      ],
+      "updatedAt": "2026-06-01T12:00:00.000Z"
     }
   ],
   "articles": [
@@ -2226,7 +2557,7 @@
       "slug": "gmk-cyl-ishtar-r2-group-buy",
       "frontmatter": {
         "slug": "gmk-cyl-ishtar-r2-group-buy",
-        "title": "GMK CYL Ishtar R2 closes at KBDfans with a second-and-likely-last shot at the lapis Mesopotamia palette",
+        "title": "GMK CYL Ishtar R2 closed at KBDfans with a second-and-likely-last shot at the lapis Mesopotamia palette",
         "lede": "GMK CYL Ishtar R2 ran 2026-04-17 through 2026-05-10 at KBDfans. The editorial event is not the open — it is the close. A second round on a Cherry-profile doubleshot ABS set is the second-and-likely-last shot at MSRP before the aftermarket takes over the palette.",
         "author": "thock",
         "pillar": "news",
@@ -2238,7 +2569,7 @@
           "abs"
         ],
         "publishedAt": "2026-05-10T14:00:00.000Z",
-        "updatedAt": "2026-05-23T00:00:00.000Z",
+        "updatedAt": "2026-05-31T00:00:00.000Z",
         "heroImage": "/hero-art/gmk-cyl-ishtar-r2-group-buy.svg",
         "heroImageAlt": "Top-down silhouette of a keycap set on a board rendered in a 2px warm-grey stroke on a 1200x750 transparent canvas, with deep lapis-blue accents picked across an alpha cluster to stand in for the glazed-brick palette of the Ishtar Gate, and a thin sandstone highlight tracing the case edge.",
         "featured": false,
@@ -2448,7 +2779,7 @@
       "frontmatter": {
         "slug": "mode-sonnet-r2-group-buy-coverage",
         "title": "Mode Sonnet R2 opens at CannonKeys",
-        "lede": "Mode has announced the second round of its 65% Sonnet board at CannonKeys, now scheduled for 2026-06-01 through 2026-07-15 after a vendor-side timeline shift. See the in-article update for the new dates and accent-weight color options.",
+        "lede": "Mode's second round of its 65% Sonnet board is now open at CannonKeys, running from 2026-06-01 through 2026-07-15 after a vendor-side timeline shift. See the in-article update for the dates and accent-weight color options.",
         "author": "thock",
         "pillar": "news",
         "tags": [
@@ -2459,7 +2790,7 @@
           "aluminum"
         ],
         "publishedAt": "2026-05-06T14:00:00.000Z",
-        "updatedAt": "2026-05-26T00:00:00.000Z",
+        "updatedAt": "2026-06-01T00:00:00.000Z",
         "heroImage": "/hero-art/mode-sonnet-r2-group-buy-coverage.svg",
         "heroImageAlt": "Near-monochrome top-down line silhouette of a 65% keyboard case with a single warm-bronze accent dot at the bottom right standing in for the new R2 accent-weight finish.",
         "featured": false,
@@ -2473,7 +2804,7 @@
           }
         ]
       },
-      "body": "\n<Callout type=\"info\" title=\"Update — 2026-05-09\">\n  CannonKeys has shifted the R2 opening window. The buy is now **announced for 2026-06-01 through 2026-07-15** rather than the originally-published 2026-05-01 through 2026-06-15 dates referenced below. The body of this article is preserved as the published 2026-05-06 record of what was announced at the time.\n</Callout>\n\nThe second round of Mode's 65% board, the <PartReference id=\"sonnet\" />, is now live for order at CannonKeys. The group buy opened on 2026-05-01 and is scheduled to close 2026-06-15. CannonKeys is handling the global region directly, so there is no separate proxy for buyers in the US, EU, UK, or APAC.\n\nThe board returns with the same gasket-mount internals and aluminum case as the first round. The headline change in R2 is the accent-weight palette, not the chassis.\n\n<Callout type=\"info\" title=\"Group-buy timing\">\n  Round now opens 2026-06-01 and closes 2026-07-15 (rescheduled — see update note at top). Group-buy windows can shift, so check the vendor page before the final week if you are still on the fence.\n</Callout>\n\n<InlineViz\n  src=\"/article-viz/mode-sonnet-r2-group-buy-coverage/weight-finishes.svg\"\n  alt=\"Three weight finish cards — polished and black PVD as returning R1 options, and bronze PVD as the new R2 option (bronze-emphasized) paired with silver and graphite case colorways.\"\n  caption=\"The accent-weight is the headline change.\"\n  accent=\"bronze\"\n/>\n\n## What's new in R2\n\nR2 keeps the original case profile and weight footprint but introduces a refreshed set of accent-weight color options. The vendor listing for <Mono>MODE Sonnet R2</Mono> shows the brass weight available in three finishes: polished, black PVD, and a new bronze PVD that was not offered in R1. The bronze finish is paired in product photography with the silver and graphite case colorways.\n\nMode has not changed the typing-angle, plate options, or the default polycarbonate plate inclusion. R1 buyers who want only the new weight finish should check the standalone accessory listing on the same page rather than re-ordering the full kit.\n\nLead time is listed as Q4 2026, in line with R1 cadence. <Source href=\"https://cannonkeys.com/products/mode-sonnet-r2\">CannonKeys product page</Source> has the full configurator, including plate, weight, and PCB selection.\n\n<InlineViz\n  src=\"/article-viz/mode-sonnet-r2-group-buy-coverage/timeline-shift.svg\"\n  alt=\"Two stacked windows showing the R2 timeline shift — faded dashed bar for the originally-announced window struck through, and a bronze-filled solid bar for the revised 2026-06-01 to 2026-07-15 window.\"\n  caption=\"One month later — and soft on the close.\"\n  accent=\"bronze\"\n/>\n\n## The Sonnet, briefly\n\nFor buyers who passed on R1 or are arriving at <Mono>Mode Sonnet</Mono> for the first time: the chassis is a 65% aluminum case with a 9-degree typing angle and a gasket-mount suspension. The default plate in every kit is polycarbonate. Mode also offers a brass plate and an FR4 plate as paid upgrades at checkout, both of which ship as separate configurations on the CannonKeys product page.\n\nThe acoustic character of the default build leans soft. Gasket suspension plus a PC plate means flex is built in at both layers — the result is a board that absorbs keystroke energy rather than bouncing it back. That makes for a cushioned, medium-thocky sound profile on most switches, and a relatively forgiving typing feel even with stiffer linears. Buyers who prefer a tighter, higher-pitched response should budget for the brass plate option at checkout; brass stiffens the flex stack considerably and shifts the pitch up.\n\nThe tradeoff is worth naming clearly: the PC plate is not a compromise for a budget build — it is a deliberate choice that the gasket mount rewards. But it is a different feel from what you get on a brass- or aluminum-plate board, and if your reference point is a top-mount or tray-mount board you have been using for years, the first session will feel noticeably different. That difference is the point.\n\n<Callout type=\"note\">\n  The 9-degree angle is conservative for a 65%. It positions well for most typists who do not use a wrist rest, and is low enough that a thin rest does not fight the hand. Typists who prefer steeper angles should check their existing wrist height before ordering — the Sonnet does not have adjustable feet.\n</Callout>\n\n## Buying notes\n\nThe R2 group buy is global through CannonKeys, with one checkout flow and one fulfillment timeline. There is no announced regional proxy in the EU or APAC for this round, so duty and shipping at delivery time will follow CannonKeys's standard outbound policy.\n\nA note on links: group-buy URLs published on thock are auto-flagged with `rel=\"sponsored noopener\"` at render time. That tag is applied by the site, not the editorial team, and applies whether or not thock has any commercial relationship with the vendor in question. In this case, thock has no affiliate arrangement with CannonKeys for the Sonnet R2.\n\nBuyers who missed R1 should treat the closing date as soft. Mode and CannonKeys have, in past rounds, extended deadlines by a week or two when configurator inventory allowed; they have also closed early when allocation filled. The safest read of the revised 2026-07-15 close is \"do not assume an extension.\"\n\nWhat to watch next: Mode typically follows a flagship round with a smaller accessory drop two to three months later. If the bronze PVD weight sells through quickly, expect a standalone weight restock before the boards themselves ship.\n",
+      "body": "\n<Callout type=\"info\" title=\"Update — 2026-05-09\">\n  CannonKeys shifted the R2 opening window. The buy **opened on 2026-06-01 and runs through 2026-07-15**, rather than the originally-published 2026-05-01 through 2026-06-15 dates referenced below. The body of this article is preserved as the published 2026-05-06 record of what was announced at the time.\n</Callout>\n\nThe second round of Mode's 65% board, the <PartReference id=\"sonnet\" />, is now live for order at CannonKeys. The group buy opened on 2026-05-01 and is scheduled to close 2026-06-15. CannonKeys is handling the global region directly, so there is no separate proxy for buyers in the US, EU, UK, or APAC.\n\nThe board returns with the same gasket-mount internals and aluminum case as the first round. The headline change in R2 is the accent-weight palette, not the chassis.\n\n<Callout type=\"info\" title=\"Group-buy timing\">\n  The buy opened on 2026-06-01 and closes 2026-07-15 (rescheduled — see update note at top). Group-buy windows can shift, so check the vendor page before the final week if you are still on the fence.\n</Callout>\n\n<InlineViz\n  src=\"/article-viz/mode-sonnet-r2-group-buy-coverage/weight-finishes.svg\"\n  alt=\"Three weight finish cards — polished and black PVD as returning R1 options, and bronze PVD as the new R2 option (bronze-emphasized) paired with silver and graphite case colorways.\"\n  caption=\"The accent-weight is the headline change.\"\n  accent=\"bronze\"\n/>\n\n## What's new in R2\n\nR2 keeps the original case profile and weight footprint but introduces a refreshed set of accent-weight color options. The vendor listing for <Mono>MODE Sonnet R2</Mono> shows the brass weight available in three finishes: polished, black PVD, and a new bronze PVD that was not offered in R1. The bronze finish is paired in product photography with the silver and graphite case colorways.\n\nMode has not changed the typing-angle, plate options, or the default polycarbonate plate inclusion. R1 buyers who want only the new weight finish should check the standalone accessory listing on the same page rather than re-ordering the full kit.\n\nLead time is listed as Q4 2026, in line with R1 cadence. <Source href=\"https://cannonkeys.com/products/mode-sonnet-r2\">CannonKeys product page</Source> has the full configurator, including plate, weight, and PCB selection.\n\n<InlineViz\n  src=\"/article-viz/mode-sonnet-r2-group-buy-coverage/timeline-shift.svg\"\n  alt=\"Two stacked windows showing the R2 timeline shift — faded dashed bar for the originally-announced window struck through, and a bronze-filled solid bar for the revised 2026-06-01 to 2026-07-15 window.\"\n  caption=\"One month later — and soft on the close.\"\n  accent=\"bronze\"\n/>\n\n## The Sonnet, briefly\n\nFor buyers who passed on R1 or are arriving at <Mono>Mode Sonnet</Mono> for the first time: the chassis is a 65% aluminum case with a 9-degree typing angle and a gasket-mount suspension. The default plate in every kit is polycarbonate. Mode also offers a brass plate and an FR4 plate as paid upgrades at checkout, both of which ship as separate configurations on the CannonKeys product page.\n\nThe acoustic character of the default build leans soft. Gasket suspension plus a PC plate means flex is built in at both layers — the result is a board that absorbs keystroke energy rather than bouncing it back. That makes for a cushioned, medium-thocky sound profile on most switches, and a relatively forgiving typing feel even with stiffer linears. Buyers who prefer a tighter, higher-pitched response should budget for the brass plate option at checkout; brass stiffens the flex stack considerably and shifts the pitch up.\n\nThe tradeoff is worth naming clearly: the PC plate is not a compromise for a budget build — it is a deliberate choice that the gasket mount rewards. But it is a different feel from what you get on a brass- or aluminum-plate board, and if your reference point is a top-mount or tray-mount board you have been using for years, the first session will feel noticeably different. That difference is the point.\n\n<Callout type=\"note\">\n  The 9-degree angle is conservative for a 65%. It positions well for most typists who do not use a wrist rest, and is low enough that a thin rest does not fight the hand. Typists who prefer steeper angles should check their existing wrist height before ordering — the Sonnet does not have adjustable feet.\n</Callout>\n\n## Buying notes\n\nThe R2 group buy is global through CannonKeys, with one checkout flow and one fulfillment timeline. There is no announced regional proxy in the EU or APAC for this round, so duty and shipping at delivery time will follow CannonKeys's standard outbound policy.\n\nA note on links: group-buy URLs published on thock are auto-flagged with `rel=\"sponsored noopener\"` at render time. That tag is applied by the site, not the editorial team, and applies whether or not thock has any commercial relationship with the vendor in question. In this case, thock has no affiliate arrangement with CannonKeys for the Sonnet R2.\n\nBuyers who missed R1 should treat the closing date as soft. Mode and CannonKeys have, in past rounds, extended deadlines by a week or two when configurator inventory allowed; they have also closed early when allocation filled. The safest read of the revised 2026-07-15 close is \"do not assume an extension.\"\n\nWhat to watch next: Mode typically follows a flagship round with a smaller accessory drop two to three months later. If the bronze PVD weight sells through quickly, expect a standalone weight restock before the boards themselves ship.\n",
       "readTime": 4,
       "filePath": "/home/runner/work/thock/thock/apps/web/src/content/articles/mode-sonnet-r2-group-buy-coverage.mdx"
     },
@@ -2704,7 +3035,7 @@
       "frontmatter": {
         "slug": "gmk-cyl-greg-2-group-buy",
         "title": "GMK CYL GREG returns for round 2 at KBDfans",
-        "lede": "Round 2 of GMK CYL GREG opened at KBDfans on 2026-05-01 and runs through 2026-05-29. The four-week window sits on the longer end for GMK CYL R2s, and the round-2 cadence itself is becoming the more interesting story as sets prove out in R1 and accumulate latent demand.",
+        "lede": "Round 2 of GMK CYL GREG opened at KBDfans on 2026-05-01 and ran through 2026-05-29. The four-week window sits on the longer end for GMK CYL R2s, and the round-2 cadence itself is becoming the more interesting story as sets prove out in R1 and accumulate latent demand.",
         "author": "thock",
         "pillar": "news",
         "tags": [
@@ -2715,7 +3046,7 @@
           "abs"
         ],
         "publishedAt": "2026-05-01T14:00:00.000Z",
-        "updatedAt": "2026-05-29T00:00:00.000Z",
+        "updatedAt": "2026-05-31T00:00:00.000Z",
         "heroImage": "/hero-art/gmk-cyl-greg-2-group-buy.svg",
         "heroImageAlt": "Top-down line silhouette of a keycap set laid out on a board, rendered in a 2px warm-grey stroke on a 1200x750 transparent canvas, with a single coral accent picked out across a small cluster of caps to stand in for the GREG colorway and a thin warm-bronze highlight tracing the case edge.",
         "featured": false,
@@ -2723,7 +3054,7 @@
         "guideSection": null,
         "mentionedParts": []
       },
-      "body": "\nGMK CYL GREG is back at KBDfans for a second round. The buy opened on 2026-05-01 and runs through 2026-05-29 — a four-week window that lands on the longer side for a GMK CYL R2. The set itself is unchanged from R1 in profile, manufacturer, and material: <Mono>doubleshot ABS</Mono> in the <Mono>CYL</Mono> cylindrical sub-line that GMK has been running on selected sets for the past two years. The original GREG palette returns with it.\n\nThe headline editorially is not the colorway. It is the cadence.\n\n<InlineViz\n  src=\"/article-viz/gmk-cyl-greg-2-group-buy/r1-r2-cadence.svg\"\n  alt=\"Two stacked timelines — historical GMK R2 gap (3-5 years, warm-grey) versus the compressed GMK CYL line gap (~18 months, coral-emphasized) — showing that GREG fits inside the new cadence.\"\n  caption=\"The compressed CYL rhythm.\"\n  accent=\"coral\"\n/>\n\n## The round-2 pattern, now a pattern\n\nA year ago a GMK CYL second round was an event. Today it is starting to read like a published schedule. KBDfans has been quietly running R2s on the CYL line at a tempo that, if it holds through the rest of 2026, will normalize round-2 as a reliable second chance rather than a rare reissue. GREG is the latest test of that pattern.\n\nThe mechanics behind the cadence are straightforward. A GMK CYL set proves out in R1 — the palette earns its corner of the GMK shelf, IC discussion keeps going past the close, and the people who missed the first run keep saying they would have bought it. Twelve to twenty-four months later, the vendor reads that residual demand off GeekHack and the Discord channels and runs R2. The volume on R2 is typically lower than R1, the configurator is usually tighter (fewer add-on kits, no novelty refresh), and the close is faster. The point of R2 is to convert latent want into a second wave, not to expand the set's footprint.\n\nWhat is new in 2026 is that the gap between R1 and R2 on GMK CYL specifically has compressed. Where the broader GMK community has historically waited years between rounds — sometimes long enough that R2 buyers are a different generation of the hobby than R1 — the CYL sub-line is running closer to an eighteen-month rhythm. GREG R2 fits inside that envelope.\n\n## What's actually in the run\n\nThe R2 configurator is the R1 set with the same kit logic underneath. The base kit is the original GREG palette in <Mono>doubleshot ABS</Mono>; the profile is <Mono>CYL</Mono>. KBDfans is hosting the buy as global, with a single checkout flow and a single fulfillment timeline. No regional proxy is listed for this round, which is consistent with how KBDfans has been handling its recent CYL runs.\n\n<Callout type=\"note\" title=\"What CYL is, briefly\">\n  <Mono>CYL</Mono> is GMK's cylindrical-top profile — a Cherry-profile clone in the same height family, with the same row sculpt, but tooled and molded by GMK rather than by Cherry. The geometry is close enough that buyers swap CYL and Cherry-profile caps between boards without a second thought, but the two are not identical. CYL caps tend to read slightly thicker in the hand and have a marginally different stem tolerance than the Cherry originals; the typing feel is in the same neighborhood, not the same room. Readers cross-shopping a CYL set against a Cherry-profile set should not assume the two will sound or measure the same on the same board.\n</Callout>\n\nCYL has been the less-trafficked member of the GMK profile family for most of its life. It exists in the same conversation as the broader Cherry-clone revival the Trends Tracker has been logging through 2026 — the DCS Olivetti row is on the same arc — but CYL is the one that is being run as a recurring program rather than a one-off project. That distinction matters when reading R2 cadence: a single-run profile cannot accumulate a round-2 pattern, and CYL is now demonstrably the one in the GMK catalog that can.\n\nGREG itself slots into the GMK CYL canon alongside [Prussian Alert](/article/gmk-cyl-prussian-alert) and the Olivetti runs the corpus has covered. The CYL ecosystem is consolidating in a way that the larger GMK Cherry-profile catalog is not. A buyer who has been tracking that consolidation will already know whether GREG's palette is for them; a buyer arriving fresh should treat R2 as the second and probably final shot at this set's specific colorway in <Mono>doubleshot ABS</Mono>.\n\n<InlineViz\n  src=\"/article-viz/gmk-cyl-greg-2-group-buy/buy-card.svg\"\n  alt=\"A five-chip buy card naming window (2026-05-01 to 2026-05-29), runner (KBDfans), profile (CYL), material (doubleshot ABS), and region (global).\"\n  caption=\"The buy, condensed.\"\n  accent=\"coral\"\n/>\n\n## Buying notes\n\nThe window is 2026-05-01 through 2026-05-29 — four weeks, opening at the start of May and closing at the end of it. Region is global through KBDfans. GMK lead times apply: long but predictable. The set is doubleshot ABS, not PBT, so the usual ABS caveats apply on shine timelines for heavy typists.\n\nThe vendor relationship sits in the same lane as the rest of KBDfans's recent CYL slate. The pattern of KBDfans-as-runner for the GMK CYL line has been one of the cleaner [vendor-led customs](/article/vendor-first-customs) arrangements in the hobby this year — single vendor, single configurator, single fulfillment SKU, no IC churn between announcement and open. R2 buyers benefit from that as a process matter even when they do not think about it.\n\nA note on links: group-buy URLs published on thock are auto-flagged with `rel=\"sponsored noopener\"` at render time. The tag is applied by the site, not the editorial team. thock has no affiliate arrangement with KBDfans for GMK CYL GREG.\n\nFull configurator details are at <Source href=\"https://kbdfans.com/products/gmk-cyl-greg-2\">KBDfans's product page</Source>. The archived entry is at [/group-buys/past](/group-buys/past).\n\n## What we're watching\n\nTwo questions ride on this run. The first is volume: a GMK CYL R2 that clears at or near R1 numbers would be the strongest single piece of evidence yet that the round-2 cadence is reproducible across the CYL catalog, not just a feature of the standout sets. A soft close inside the four-week window would say the opposite — that the latent-demand pool is shallower than the residual chatter suggests and that R2 is closer to a clearance mechanism than a second wave.\n\nThe second is whether the GMK CYL R2 rhythm gets formalized. KBDfans has not announced a published schedule for the line, and as long as R2s are read off Discord traffic rather than calendared up front, the cadence is informal. If GREG sells through clean enough to telegraph the next R2, expect the vendor to start naming the line's R2 slate ahead of time — the way some vendors have begun pre-announcing keyboard R2s during the R1 fulfillment window. That move, when it comes, will mark the moment GMK CYL R2 stops being a pattern enthusiasts notice and starts being a program the vendor advertises.\n\nGREG R2 closes 2026-05-29. Follow the [trends tracker](/trends/tracker) for post-close movement data.\n",
+      "body": "\nGMK CYL GREG is back at KBDfans for a second round. The buy opened on 2026-05-01 and ran through 2026-05-29 — a four-week window that lands on the longer side for a GMK CYL R2. The set itself is unchanged from R1 in profile, manufacturer, and material: <Mono>doubleshot ABS</Mono> in the <Mono>CYL</Mono> cylindrical sub-line that GMK has been running on selected sets for the past two years. The original GREG palette returns with it.\n\nThe headline editorially is not the colorway. It is the cadence.\n\n<InlineViz\n  src=\"/article-viz/gmk-cyl-greg-2-group-buy/r1-r2-cadence.svg\"\n  alt=\"Two stacked timelines — historical GMK R2 gap (3-5 years, warm-grey) versus the compressed GMK CYL line gap (~18 months, coral-emphasized) — showing that GREG fits inside the new cadence.\"\n  caption=\"The compressed CYL rhythm.\"\n  accent=\"coral\"\n/>\n\n## The round-2 pattern, now a pattern\n\nA year ago a GMK CYL second round was an event. Today it is starting to read like a published schedule. KBDfans has been quietly running R2s on the CYL line at a tempo that, if it holds through the rest of 2026, will normalize round-2 as a reliable second chance rather than a rare reissue. GREG is the latest test of that pattern.\n\nThe mechanics behind the cadence are straightforward. A GMK CYL set proves out in R1 — the palette earns its corner of the GMK shelf, IC discussion keeps going past the close, and the people who missed the first run keep saying they would have bought it. Twelve to twenty-four months later, the vendor reads that residual demand off GeekHack and the Discord channels and runs R2. The volume on R2 is typically lower than R1, the configurator is usually tighter (fewer add-on kits, no novelty refresh), and the close is faster. The point of R2 is to convert latent want into a second wave, not to expand the set's footprint.\n\nWhat is new in 2026 is that the gap between R1 and R2 on GMK CYL specifically has compressed. Where the broader GMK community has historically waited years between rounds — sometimes long enough that R2 buyers are a different generation of the hobby than R1 — the CYL sub-line is running closer to an eighteen-month rhythm. GREG R2 fits inside that envelope.\n\n## What's actually in the run\n\nThe R2 configurator is the R1 set with the same kit logic underneath. The base kit is the original GREG palette in <Mono>doubleshot ABS</Mono>; the profile is <Mono>CYL</Mono>. KBDfans is hosting the buy as global, with a single checkout flow and a single fulfillment timeline. No regional proxy is listed for this round, which is consistent with how KBDfans has been handling its recent CYL runs.\n\n<Callout type=\"note\" title=\"What CYL is, briefly\">\n  <Mono>CYL</Mono> is GMK's cylindrical-top profile — a Cherry-profile clone in the same height family, with the same row sculpt, but tooled and molded by GMK rather than by Cherry. The geometry is close enough that buyers swap CYL and Cherry-profile caps between boards without a second thought, but the two are not identical. CYL caps tend to read slightly thicker in the hand and have a marginally different stem tolerance than the Cherry originals; the typing feel is in the same neighborhood, not the same room. Readers cross-shopping a CYL set against a Cherry-profile set should not assume the two will sound or measure the same on the same board.\n</Callout>\n\nCYL has been the less-trafficked member of the GMK profile family for most of its life. It exists in the same conversation as the broader Cherry-clone revival the Trends Tracker has been logging through 2026 — the DCS Olivetti row is on the same arc — but CYL is the one that is being run as a recurring program rather than a one-off project. That distinction matters when reading R2 cadence: a single-run profile cannot accumulate a round-2 pattern, and CYL is now demonstrably the one in the GMK catalog that can.\n\nGREG itself slots into the GMK CYL canon alongside [Prussian Alert](/article/gmk-cyl-prussian-alert) and the Olivetti runs the corpus has covered. The CYL ecosystem is consolidating in a way that the larger GMK Cherry-profile catalog is not. A buyer who has been tracking that consolidation will already know whether GREG's palette is for them; a buyer arriving fresh should treat R2 as the second and probably final shot at this set's specific colorway in <Mono>doubleshot ABS</Mono>.\n\n<InlineViz\n  src=\"/article-viz/gmk-cyl-greg-2-group-buy/buy-card.svg\"\n  alt=\"A five-chip buy card naming window (2026-05-01 to 2026-05-29), runner (KBDfans), profile (CYL), material (doubleshot ABS), and region (global).\"\n  caption=\"The buy, condensed.\"\n  accent=\"coral\"\n/>\n\n## Buying notes\n\nThe window was 2026-05-01 through 2026-05-29 — four weeks, opening at the start of May and closing at the end of it. Region is global through KBDfans. GMK lead times apply: long but predictable. The set is doubleshot ABS, not PBT, so the usual ABS caveats apply on shine timelines for heavy typists.\n\nThe vendor relationship sits in the same lane as the rest of KBDfans's recent CYL slate. The pattern of KBDfans-as-runner for the GMK CYL line has been one of the cleaner [vendor-led customs](/article/vendor-first-customs) arrangements in the hobby this year — single vendor, single configurator, single fulfillment SKU, no IC churn between announcement and open. R2 buyers benefit from that as a process matter even when they do not think about it.\n\nA note on links: group-buy URLs published on thock are auto-flagged with `rel=\"sponsored noopener\"` at render time. The tag is applied by the site, not the editorial team. thock has no affiliate arrangement with KBDfans for GMK CYL GREG.\n\nFull configurator details are at <Source href=\"https://kbdfans.com/products/gmk-cyl-greg-2\">KBDfans's product page</Source>. The archived entry is at [/group-buys/past](/group-buys/past).\n\n## What we're watching\n\nTwo questions ride on this run. The first is volume: a GMK CYL R2 that clears at or near R1 numbers would be the strongest single piece of evidence yet that the round-2 cadence is reproducible across the CYL catalog, not just a feature of the standout sets. A soft close inside the four-week window would say the opposite — that the latent-demand pool is shallower than the residual chatter suggests and that R2 is closer to a clearance mechanism than a second wave.\n\nThe second is whether the GMK CYL R2 rhythm gets formalized. KBDfans has not announced a published schedule for the line, and as long as R2s are read off Discord traffic rather than calendared up front, the cadence is informal. If GREG sells through clean enough to telegraph the next R2, expect the vendor to start naming the line's R2 slate ahead of time — the way some vendors have begun pre-announcing keyboard R2s during the R1 fulfillment window. That move, when it comes, will mark the moment GMK CYL R2 stops being a pattern enthusiasts notice and starts being a program the vendor advertises.\n\nGREG R2 closed 2026-05-29. Follow the [trends tracker](/trends/tracker) for post-close movement data.\n",
       "readTime": 6,
       "filePath": "/home/runner/work/thock/thock/apps/web/src/content/articles/gmk-cyl-greg-2-group-buy.mdx"
     },
@@ -3743,5 +4074,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-05-31T12:43:58.278Z"
+  "generatedAt": "2026-06-01T02:03:01.565Z"
 }
