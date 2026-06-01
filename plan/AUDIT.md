@@ -2241,3 +2241,12 @@ passes accumulate signals.)
 - score: 4.0 (impact × ease / 10)
 - elements: apps/web/src/content/articles/beginners-switch-buying-guide.mdx frontmatter + line 44
 - issue: #247
+
+### [x] [content] [4.5] keycap-profiles-compared — missing 'sa' tag despite SA in title and 15 body mentions — addressed in dafaab4, closes #249
+- category: content
+- filed: 2026-06-01 by cloud /iterate audit
+- impact: 5 (article titled "Keycap profiles, compared: Cherry, OEM, SA, and MT3" is the canonical SA profile reference; /tag/sa had 0 articles; sa-godspeed is in the parts database but /tag/sa showed nothing; readers browsing by profile tag couldn't find the comparison guide)
+- ease: 9 (add 'sa' to tags array + updatedAt bump; no other files)
+- score: 4.5 (impact × ease / 10)
+- issue: #249
+> **Resolved (2026-06-01):** Added `sa` to tags array between `oem-profile` and `mt3` in keycap-profiles-compared.mdx frontmatter. Bumped updatedAt to 2026-06-01. /tag/sa now shows 1 article. 697 e2e green. `dafaab4`
