@@ -1,0 +1,21 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-01T00:00:00.000Z",
+  "commit": "c934528c5c2853bb516582269b48dc1107c9e185",
+  "kind": "inline-viz",
+  "source": null,
+  "template": null,
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "article_slug": "divinikey-dcs-dolch-group-buy",
+  "article_pillar": "news",
+  "section_anchor": "Dolch Colorway",
+  "splash_color": { "name": "terracotta", "hex": "#c87941" },
+  "outputs": ["apps/web/public/article-viz/divinikey-dcs-dolch-group-buy/dolch-palette.svg"],
+  "data_sources": [
+    "Signature Plastics WS-series colorway designations — WS1 (#3d3d3d) dark grey alphas, WS2 (#7a7065) medium grey mods, WS3 (#b5b0ac) light grey accent legends",
+    "article body — 'classic 1990s Dolch colorway (dark-grey alphas + medium-grey mods)'"
+  ],
+  "warnings": []
+}

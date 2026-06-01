@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>DCS vs Cherry profile — side-by-side cross-section showing DCS taller with steeper walls and a deeper cylindrical scoop; Cherry lower and shallower</title>
+
+  <!-- Title -->
+  <text x="600" y="54" font-family="Newsreader, 'Iowan Old Style', Georgia, serif" font-size="19" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.90">profile comparison — DCS vs Cherry</text>
+
+  <!-- Shared baseline -->
+  <line x1="100" y1="345" x2="1100" y2="345" stroke-opacity="0.35"/>
+  <text x="96" y="349" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.40">PCB</text>
+
+  <!-- ═══ DCS — left panel ════════════════════════════════════════════════ -->
+  <!-- DCS: ~11mm effective height, steeper side walls, pronounced cylindrical scoop.
+       Cap body: bottom (200,345)(430,345), top edge narrowed, height ~185px on this canvas. -->
+  <g>
+    <text x="315" y="98" font-family="Newsreader, 'Iowan Old Style', Georgia, serif" font-size="26" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">DCS</text>
+    <text x="315" y="122" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.60">~11 mm · cylindrical · sculpted</text>
+    <text x="315" y="140" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.40">Signature Plastics</text>
+
+    <!-- Low-opacity terracotta wash — splash tie-in -->
+    <ellipse cx="315" cy="255" rx="130" ry="95" fill="#c87941" fill-opacity="0.07" stroke="none"/>
+
+    <!-- DCS cap silhouette — taller, steeper walls -->
+    <!-- Bottom width 230, top width ~196; height 185px -->
+    <path d="M 200 345 L 212 162 C 213 158 223 146 233 142 Q 315 132 397 142 C 407 146 417 158 418 162 L 430 345 Z"
+          stroke="oklch(0.78 0.005 90)" stroke-width="2"/>
+
+    <!-- DCS cylindrical scoop — the profile's defining feature, terracotta accent -->
+    <path d="M 240 148 Q 315 136 390 148"
+          stroke="#c87941" stroke-width="2.5" stroke-opacity="0.90"/>
+
+    <!-- Inner scoop shadow — faint, suggests the concave dish -->
+    <path d="M 248 160 Q 315 150 382 160"
+          stroke="oklch(0.78 0.005 90)" stroke-width="1" stroke-opacity="0.35"/>
+
+    <!-- Height leader — right side of cap -->
+    <g stroke-opacity="0.32">
+      <line x1="445" y1="345" x2="457" y2="345"/>
+      <line x1="445" y1="162" x2="457" y2="162"/>
+      <line x1="451" y1="162" x2="451" y2="345"/>
+    </g>
+    <text x="462" y="260" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.45">~11 mm</text>
+
+    <!-- Descriptors below baseline -->
+    <text x="315" y="376" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.70">taller · steeper walls · deeper scoop</text>
+    <text x="315" y="395" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="12" fill="#c87941" stroke="none" text-anchor="middle" opacity="0.80">DCS Dolch · Signature Plastics</text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="600" y1="125" x2="600" y2="360" stroke-opacity="0.15" stroke-dasharray="3 5"/>
+
+  <!-- ═══ Cherry — right panel ════════════════════════════════════════════ -->
+  <!-- Cherry: ~8mm, gentler walls, shallower cylindrical scoop.
+       Cap body: bottom (770,345)(1000,345), top edge narrowed, height ~130px on canvas. -->
+  <g>
+    <text x="885" y="98" font-family="Newsreader, 'Iowan Old Style', Georgia, serif" font-size="26" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Cherry</text>
+    <text x="885" y="122" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.60">~8 mm · cylindrical · sculpted</text>
+    <text x="885" y="140" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.40">GMK, ePBT, most modern group buys</text>
+
+    <!-- Cherry cap silhouette — lower, gentler walls -->
+    <!-- Bottom width 230, top narrowed ~200; height ~130px -->
+    <path d="M 770 345 L 779 218 C 780 214 790 202 800 198 Q 885 190 970 198 C 980 202 990 214 991 218 L 1000 345 Z"
+          stroke="oklch(0.78 0.005 90)" stroke-width="2"/>
+
+    <!-- Cherry scoop — shallower than DCS, warm-grey (no terracotta accent) -->
+    <path d="M 806 204 Q 885 198 964 204"
+          stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-opacity="0.58"/>
+
+    <!-- Height leader -->
+    <g stroke-opacity="0.32">
+      <line x1="1016" y1="345" x2="1028" y2="345"/>
+      <line x1="1016" y1="218" x2="1028" y2="218"/>
+      <line x1="1022" y1="218" x2="1022" y2="345"/>
+    </g>
+    <text x="1033" y="288" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.45">~8 mm</text>
+
+    <!-- Descriptors below baseline -->
+    <text x="885" y="376" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.70">lower · shallower scoop · broad catalog</text>
+    <text x="885" y="395" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.48">GMK standard · dominant since ~2016</text>
+  </g>
+
+  <!-- Shared bottom caption -->
+  <text x="600" y="428" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">same cylindrical family — DCS sits ~3 mm taller with a more assertive scoop</text>
+
+  <!-- Brass theme dot — upper-right ornamental anchor -->
+  <circle cx="1170" cy="38" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

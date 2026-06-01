@@ -74,6 +74,7 @@
     { "slug": "electrocapacitive", "name": "Electrocapacitive", "category": "switch" },
     { "slug": "dcs", "name": "DCS", "category": "profile" },
     { "slug": "stabilizers", "name": "Stabilizers", "category": "misc" },
-    { "slug": "lubing", "name": "Lubing", "category": "switch" }
+    { "slug": "lubing", "name": "Lubing", "category": "switch" },
+    { "slug": "divinikey", "name": "Divinikey", "category": "brand" }
   ]
 }

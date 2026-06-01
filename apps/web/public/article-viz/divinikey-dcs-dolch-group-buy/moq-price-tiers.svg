@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>MOQ price tiers — base kit starts at $128, drops to $119 when MOQ is met; early buyers help unlock the lower tier for everyone</title>
+
+  <!-- Title -->
+  <text x="600" y="52" font-family="Newsreader, 'Iowan Old Style', Georgia, serif" font-size="19" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.90">base kit pricing — MOQ tier unlock</text>
+
+  <!-- ── Chart area: two bars side by side.
+       Bar chart: y-axis baseline at y=310. Max bar height ~180px (for $128).
+       $128 bar: height 180px, top at y=130. Bar width 200, centered at x=370.
+       $119 bar: scaled proportionally: 119/128 × 180 ≈ 167px, top at y=143.
+       $119 bar centered at x=830.
+       Gap between: 830-370=460. ── -->
+
+  <!-- Y-axis hairline -->
+  <line x1="200" y1="100" x2="200" y2="320" stroke-opacity="0.28"/>
+
+  <!-- Baseline (x-axis) -->
+  <line x1="200" y1="320" x2="1000" y2="320" stroke-opacity="0.28"/>
+
+  <!-- Horizontal grid lines — $100 and $120 reference -->
+  <line x1="200" y1="290" x2="1000" y2="290" stroke-dasharray="3 6" stroke-opacity="0.18"/>
+  <text x="192" y="294" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.38">$120</text>
+  <line x1="200" y1="235" x2="1000" y2="235" stroke-dasharray="3 6" stroke-opacity="0.18"/>
+  <text x="192" y="239" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.38">$130</text>
+
+  <!-- ── Bar 1: $128 — without MOQ (warm-grey) ──────────────────────────── -->
+  <!-- Height: (128-100)/(135-100) × 200 = 28/35 × 200 ≈ 160px. Top at 320-160=160. -->
+  <g>
+    <!-- Bar body -->
+    <rect x="270" y="160" width="200" height="160" rx="3"
+          fill="#7a7065" fill-opacity="0.22"
+          stroke="#7a7065" stroke-width="2"/>
+
+    <!-- Price label inside bar, near top -->
+    <text x="370" y="200" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="32" font-weight="600" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.80">$128</text>
+
+    <!-- "without MOQ" label below bar -->
+    <text x="370" y="346" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">if MOQ not met</text>
+    <text x="370" y="365" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.42">early-bird risk tier</text>
+  </g>
+
+  <!-- ── Downward arrow between bars ──────────────────────────────────────── -->
+  <g stroke="#c87941" stroke-width="2" stroke-opacity="0.70">
+    <!-- Horizontal shaft -->
+    <line x1="490" y1="173" x2="710" y2="173"/>
+    <!-- Arrowhead pointing right-down -->
+    <polyline points="700,165 710,173 700,181" fill="none"/>
+  </g>
+  <text x="600" y="163" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="12" fill="#c87941" stroke="none" text-anchor="middle" opacity="0.78">MOQ reached</text>
+  <text x="600" y="195" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="11" fill="#c87941" stroke="none" text-anchor="middle" opacity="0.58">−$9 / kit</text>
+
+  <!-- ── Bar 2: $119 — MOQ unlocked (terracotta accent) ─────────────────── -->
+  <!-- Height: (119-100)/(135-100) × 200 = 19/35 × 200 ≈ 109px. Top at 320-148=172. -->
+  <!-- Using proportional height: 119/128 × 160 ≈ 148px. Top at 320-148=172. -->
+  <g>
+    <!-- Low-opacity terracotta wash behind bar -->
+    <rect x="730" y="168" width="200" height="152" rx="3" fill="#c87941" fill-opacity="0.10" stroke="none"/>
+    <!-- Bar body -->
+    <rect x="730" y="172" width="200" height="148" rx="3"
+          fill="#c87941" fill-opacity="0.20"
+          stroke="#c87941" stroke-width="2" stroke-opacity="0.85"/>
+
+    <!-- Focal dot at bar top — terracotta accent anchor -->
+    <circle cx="830" cy="172" r="5" fill="#c87941" fill-opacity="0.90" stroke="#c87941"/>
+    <circle cx="830" cy="172" r="10" stroke="#c87941" stroke-opacity="0.30" stroke-width="1"/>
+
+    <!-- Price label -->
+    <text x="830" y="218" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="32" font-weight="600" fill="#c87941" stroke="none" text-anchor="middle" opacity="0.88">$119</text>
+
+    <!-- Label below bar -->
+    <text x="830" y="346" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">MOQ unlocked</text>
+    <text x="830" y="365" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="12" fill="#c87941" stroke="none" text-anchor="middle" opacity="0.70">target tier — buy in early</text>
+  </g>
+
+  <!-- ── Bottom caption ─────────────────────────────────────────────────── -->
+  <text x="600" y="403" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.48">base kit USD · group buy June 1 – July 1, 2026 · via Divinikey</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="38" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="#7a7065" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — DCS Dolch keycap cluster, six DCS-profile caps in warm-grey silhouette with terracotta accent on Esc</title>
+
+  <!-- DCS profile character: taller than Cherry (~11mm), steeper side walls,
+       pronounced cylindrical scoop on the top surface. The gentle curve across
+       the top is the visual signature that separates DCS from the shorter Cherry.
+       Six caps presented in a loose cluster — five standard alphas and one wider Esc. -->
+
+  <!-- Low-opacity terracotta wash behind the Esc cap — splash anchor -->
+  <ellipse cx="258" cy="405" rx="115" ry="75" fill="#c87941" fill-opacity="0.09" stroke="none"/>
+
+  <!-- Shared baseline — faint, editorial register -->
+  <line x1="100" y1="530" x2="1100" y2="530" stroke-opacity="0.22"/>
+
+  <!-- ── Cap 1: Esc — wide (1.5u), terracotta accent treatment ──────────── -->
+  <!-- Bottom corners: (120, 530)(310, 530). Top corners pulled inward, steeper walls.
+       DCS: bottom width ~190, top edge narrowed to ~168, height ~170px. -->
+  <g>
+    <!-- Cap body -->
+    <path d="M 120 530 L 131 363 C 132 358 142 346 152 342 Q 215 334 278 342 C 288 346 298 358 299 363 L 310 530 Z"
+          stroke="#7a7065" stroke-width="2" fill="#c87941" fill-opacity="0.10"/>
+
+    <!-- Cylindrical scoop across the top — the DCS signature curve, terracotta accent -->
+    <path d="M 159 348 Q 215 338 271 348"
+          stroke="#c87941" stroke-width="2.5" stroke-opacity="0.92"/>
+
+    <!-- Keycap legend area — faint inner rect to suggest the legend zone -->
+    <rect x="145" y="370" width="130" height="64" rx="3" stroke="#7a7065" stroke-opacity="0.20" stroke-width="1"/>
+
+    <!-- "Esc" label hint — three faint horizontal dashes, no literal text -->
+    <line x1="188" y1="395" x2="240" y2="395" stroke="#c87941" stroke-opacity="0.45" stroke-width="1.5"/>
+    <line x1="198" y1="407" x2="230" y2="407" stroke="#c87941" stroke-opacity="0.30" stroke-width="1"/>
+    <line x1="205" y1="419" x2="223" y2="419" stroke="#c87941" stroke-opacity="0.18" stroke-width="1"/>
+
+    <!-- Terracotta focal dot — accent anchor at the cap crown midpoint -->
+    <circle cx="215" cy="344" r="4.5" fill="#c87941" fill-opacity="0.88" stroke="#c87941" stroke-width="1"/>
+    <circle cx="215" cy="344" r="9" stroke="#c87941" stroke-opacity="0.30" stroke-width="1"/>
+  </g>
+
+  <!-- ── Cap 2: standard 1u alpha (left of Esc) ─────────────────────────── -->
+  <!-- Bottom (338,530)(458,530). Height ~162. -->
+  <g>
+    <path d="M 340 530 L 350 372 C 351 368 360 356 369 353 Q 398 346 427 353 C 436 356 445 368 446 372 L 456 530 Z"
+          stroke="#7a7065" stroke-width="2"/>
+    <path d="M 356 358 Q 398 350 440 358"
+          stroke="#7a7065" stroke-width="2" stroke-opacity="0.55"/>
+  </g>
+
+  <!-- ── Cap 3: standard 1u alpha ──────────────────────────────────────── -->
+  <g>
+    <path d="M 478 530 L 488 372 C 489 368 498 356 507 353 Q 536 346 565 353 C 574 356 583 368 584 372 L 594 530 Z"
+          stroke="#7a7065" stroke-width="2"/>
+    <path d="M 494 358 Q 536 350 578 358"
+          stroke="#7a7065" stroke-width="2" stroke-opacity="0.55"/>
+  </g>
+
+  <!-- ── Cap 4: standard 1u alpha ──────────────────────────────────────── -->
+  <g>
+    <path d="M 616 530 L 626 372 C 627 368 636 356 645 353 Q 674 346 703 353 C 712 356 721 368 722 372 L 732 530 Z"
+          stroke="#7a7065" stroke-width="2"/>
+    <path d="M 632 358 Q 674 350 716 358"
+          stroke="#7a7065" stroke-width="2" stroke-opacity="0.55"/>
+  </g>
+
+  <!-- ── Cap 5: standard 1u alpha ──────────────────────────────────────── -->
+  <g>
+    <path d="M 754 530 L 764 372 C 765 368 774 356 783 353 Q 812 346 841 353 C 850 356 859 368 860 372 L 870 530 Z"
+          stroke="#7a7065" stroke-width="2"/>
+    <path d="M 770 358 Q 812 350 854 358"
+          stroke="#7a7065" stroke-width="2" stroke-opacity="0.55"/>
+  </g>
+
+  <!-- ── Cap 6: slightly wider mod key (1.25u) — rightmost ─────────────── -->
+  <g>
+    <path d="M 892 530 L 903 367 C 904 363 913 351 923 348 Q 957 340 991 348 C 1001 351 1010 363 1011 367 L 1022 530 Z"
+          stroke="#7a7065" stroke-width="2"/>
+    <path d="M 910 353 Q 957 345 1004 353"
+          stroke="#7a7065" stroke-width="2" stroke-opacity="0.55"/>
+  </g>
+
+  <!-- ── Warm-bronze theme dot — upper-right family ornament ──────────── -->
+  <circle cx="1148" cy="84" r="3.5" fill="#b88a2e" stroke="#b88a2e"/>
+  <circle cx="1148" cy="84" r="7" stroke="#b88a2e" stroke-opacity="0.35" stroke-width="1"/>
+
+  <!-- ── Faint left-edge height rule — editorial didactic ─────────────── -->
+  <g stroke-opacity="0.25">
+    <!-- top of the DCS cap -->
+    <line x1="86" y1="342" x2="102" y2="342"/>
+    <!-- baseline -->
+    <line x1="86" y1="530" x2="102" y2="530"/>
+    <!-- leader -->
+    <line x1="92" y1="342" x2="92" y2="530"/>
+  </g>
+
+  <!-- ── DCS label — lower left, editorial anchor ─────────────────────── -->
+  <text x="120" y="598" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="15" fill="#7a7065" stroke="none" letter-spacing="2.2" opacity="0.65">DCS PROFILE — Signature Plastics</text>
+  <text x="120" y="620" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="13" fill="#7a7065" stroke="none" opacity="0.40">cylindrical sculpt · ~11mm · Dolch colorway</text>
+
+  <!-- ── Terracotta accent hairline at the bottom of the Esc cap — ties splash to baseline -->
+  <line x1="120" y1="530" x2="310" y2="530" stroke="#c87941" stroke-opacity="0.45" stroke-width="2"/>
+</svg>

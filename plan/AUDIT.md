@@ -2180,6 +2180,15 @@ passes accumulate signals.)
 - issue: [mirror-failed: 2026-05-31T18:40:00Z]
 - elements: apps/web/src/content/articles/gmk-cyl-ishtar-r2-group-buy.mdx line 3
 
+### [content] [3.5] divinikey-dcs-dolch — Rule 3 violation: live GB (Jun 1–Jul 1) has no companion article
+- category: content-gaps
+- filed: 2026-06-01 by cloud /iterate audit
+- impact: 7 (DCS Dolch opened today at Divinikey; /group-buys active view shows the buy without "Read our coverage →"; Rule 3 fires on every live buy without a companion piece; DCS Grass Valley just closed same day — vintage-keycap buyers are actively tracking the space)
+- ease: 5 (one new news-pillar article via /ship-content; 900–1200 words; group-buy companion template established by Ramune, Prussian Alert, Mode Sonnet R2)
+- score: 3.5 (impact × ease / 10)
+- rule: Rule 3 — group-buy companion
+- issue: #243
+
 ### [x] [data] [5.4] W23 tracker: Ramune note wrong close date + Selene bad articleSlug — addressed in 87c779d, closes #241
 - category: data
 - filed: 2026-06-01 by cloud /iterate audit
