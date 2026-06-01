@@ -72,6 +72,15 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [content] [3.5] GMK CYL Selene (live, Jun 19 close) has no companion article — Rule 3 violation — addressed in 87136a8, closes #246
+- category: content-gaps
+- filed: 2026-06-01 by cloud /iterate audit
+- impact: 7 (live buy through 2026-06-19; +31 up in W23 tracker; kbdfans-gmk-cyl-selene.json status=live with no relatedArticle; Rule 3 mandates companion coverage for every live/announced buy)
+- ease: 5 (new article via content-curator + brander; group-buy companion pattern well-established)
+- score: 3.5 (impact × ease / 10)
+- issue: #246
+> **Resolved (2026-06-01):** Drafted ~1020-word companion article at apps/web/src/content/articles/gmk-cyl-selene-group-buy.mdx (news pillar, publishedAt 2026-05-15 per group-buy startDate exemption, four sections). Hero SVG at apps/web/public/hero-art/gmk-cyl-selene-group-buy.svg (dusty-violet + teal glitter-dot keycap cluster, moon-phase novelty glyph). relatedArticle set on kbdfans-gmk-cyl-selene.json; articleSlug set on W23 Selene tracker row. Language gate clean. 694 e2e green. `87136a8`
+
 ### [x] [data] [3.0] GMK CYL Selene active buy (May 15–Jun 19) — no group-buy record in data/group-buys/ — addressed in bf8cd58
 - category: data
 - filed: 2026-06-01 by cloud /iterate audit
