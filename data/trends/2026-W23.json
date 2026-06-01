@@ -54,7 +54,7 @@
       "score": 43,
       "spark": [24, 28, 32, 35, 38, 41, 44, 43],
       "articleSlug": "gmk-cyl-ramune-group-buy",
-      "note": "Ramune GB closed around June 5 after its May 15 open, leaving the set in fulfillment limbo until Q3–Q4 2026. Post-close discussion is positive but quiet. Divinikey and Prototypist confirmed orders; score holds as momentum naturally cools after close."
+      "note": "Ramune runs through 2026-06-20, entering the back half of its four-week window. Direction flat at +43 as early-adopter momentum settles; undecided buyers have three more weeks before close. Divinikey and Prototypist handle US and UK fulfillment."
     },
     {
       "name": "DCS Grass Valley",
@@ -80,7 +80,7 @@
       "direction": "up",
       "score": 31,
       "spark": [10, 14, 18, 21, 24, 27, 29, 31],
-      "articleSlug": "keycap-profiles-compared",
+      "articleSlug": null,
       "note": "Selene GB (May 15–June 19) is active through W23 across vendors including Prototypist, Duckeebs, and KBDfans. The glitter-effect special-plastics colorway draws consistent r/MechanicalKeyboards attention, with Q4 2026 fulfillment keeping excitement measured but building."
     },
     {
@@ -165,5 +165,5 @@
       "note": "Cherry's April 2026 MX2A Dummy switch release continues to generate skeptical community reactions in W23 forum threads, seen as an attempt to manufacture novelty rather than address core enthusiast concerns. Long GMK production timelines add to the brand's negative sentiment."
     }
   ],
-  "updatedAt": "2026-06-01T12:00:00.000Z"
+  "updatedAt": "2026-06-01T14:00:00.000Z"
 }
