@@ -72,6 +72,14 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [copy] [3.6] trends-tracker-preview — "modding" tag mismatch — article is a tracker explainer, not a modification guide — addressed in 9747d69, closes #245
+- category: copy
+- filed: 2026-06-01 by cloud /iterate audit
+- impact: 4 (the /tag/modding page lists "Reading the Trends Tracker" alongside lubing-101, pe-foam-mod, tape-mod and other hands-on modification guides; misleads tag browsers; "modding" does not appear in article body)
+- ease: 9 (remove one word from tags array + updatedAt bump)
+- score: 3.6 (impact × ease / 10)
+- issue: #245
+
 ### [x] [data] [6.3] W23 tracker: DCS Dolch row null articleSlug — companion article divinikey-dcs-dolch-group-buy shipped same day — addressed in this commit, closes #244
 - category: data
 - filed: 2026-06-01 by cloud /iterate audit
