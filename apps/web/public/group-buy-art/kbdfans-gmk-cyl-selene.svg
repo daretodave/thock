@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1200 750"
+     preserveAspectRatio="xMidYMid meet"
+     fill="none"
+     stroke="oklch(0.78 0.005 90)"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     role="img"
+     aria-label="thock group-buy card art for KBDfans GMK CYL Selene — five Cherry-profile keycaps, alpha and modifier heights, dusty rose focal splash on a moon-goddess theme">
+  <title>thock group-buy hero — GMK CYL Selene (KBDfans), five Cherry-profile keycaps mixing alpha and modifier heights, dusty rose splash</title>
+
+  <!--
+    Composition: five Cherry-profile keycaps drawn top-down with a slight
+    trapezoidal silhouette (narrower front edge, thin front-lip band).
+    Back row: two caps — a wide Shift modifier (left) and a 1u alpha (right).
+    Front row: three caps — a tall modifier (left), one focal alpha (center),
+    one 1u alpha (right). The asymmetric row split mimics how a real row
+    scatters when you pull a cluster out of a tray.
+
+    Selene is a moon-goddess theme (designer whysoda, silver-grey base +
+    purple/teal rainbow glitter). The hero art doesn't try to echo the glitter.
+    Instead, the single dusty-rose splash (#c47a8a ≈ oklch(0.64 0.095 5))
+    evokes the moonlit palette — the hue lives between rose and old-blush,
+    warm enough to feel nocturnal. Bronze warm-grey stroke on the four
+    non-focal caps; the focal alpha carries a crescent glyph in dusty rose.
+
+    Splash: oklch(0.64 0.095 5)   (dusty rose — #c47a8a approx)
+    Accent: oklch(0.58 0.10  75)  (warm bronze — #b8903a approx; used only for theme dot)
+    Stroke base: oklch(0.78 0.005 90)  (warm grey)
+  -->
+
+  <!-- ── Splash wash: a diffuse dusty-rose ellipse behind the cluster ───────────────────── -->
+  <ellipse cx="588" cy="400" rx="490" ry="210"
+           fill="oklch(0.64 0.095 5 / 0.10)" stroke="none"/>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       BACK ROW — two caps, left-heavy: wide modifier + 1u alpha
+       Back row baseline: top edge y=215, body bottom y=370
+       Modifier (1.5u): x=280..460  (width 180)
+       Alpha 1u:        x=490..640  (width 150)
+  ════════════════════════════════════════════════════════════════ -->
+
+  <!-- Back row: LEFT cap — wide Shift modifier (1.5u, Cherry R1/R4 taller sculpt)
+       Top-down trapezoid: front edge ~8px narrower each side than back -->
+  <g>
+    <!-- Cap body -->
+    <path d="
+      M 280 215
+      L 460 215
+      L 468 358
+      L 272 358
+      Z"/>
+    <!-- Cherry inset dish: top surface -->
+    <path d="
+      M 300 232
+      L 440 232
+      L 444 318
+      L 296 318
+      Z" stroke-opacity="0.55"/>
+    <!-- Front lip band — Cherry's characteristic lower front edge -->
+    <path d="M 296 318 L 444 318 L 452 345 L 288 345 Z" stroke-opacity="0.38"/>
+    <!-- Row-sculpt centerline curve (faint) -->
+    <path d="M 304 268 Q 370 258 436 268" stroke-opacity="0.28"/>
+  </g>
+
+  <!-- Back row: RIGHT cap — 1u alpha (standard Cherry height) -->
+  <g>
+    <!-- Cap body -->
+    <path d="
+      M 500 215
+      L 648 215
+      L 655 352
+      L 493 352
+      Z"/>
+    <!-- Cherry inset dish -->
+    <path d="
+      M 518 232
+      L 630 232
+      L 634 315
+      L 514 315
+      Z" stroke-opacity="0.55"/>
+    <!-- Front lip -->
+    <path d="M 514 315 L 634 315 L 641 340 L 507 340 Z" stroke-opacity="0.38"/>
+    <!-- Row-sculpt centerline -->
+    <path d="M 522 268 Q 574 258 626 268" stroke-opacity="0.28"/>
+  </g>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       FRONT ROW — three caps, staggered left ~60px
+       Front row baseline: top edge y=395, body bottom y=565
+       Modifier 1.25u (tall): x=220..385  (width 165)
+       Alpha 1u FOCAL:        x=415..565  (width 150)
+       Alpha 1u:              x=595..745  (width 150)
+  ════════════════════════════════════════════════════════════════ -->
+
+  <!-- Front row: LEFT cap — 1.25u modifier (taller sculpt than alpha) -->
+  <g>
+    <!-- Cap body -->
+    <path d="
+      M 220 395
+      L 385 395
+      L 392 540
+      L 213 540
+      Z"/>
+    <!-- Cherry inset dish -->
+    <path d="
+      M 238 412
+      L 367 412
+      L 370 498
+      L 235 498
+      Z" stroke-opacity="0.55"/>
+    <!-- Front lip -->
+    <path d="M 235 498 L 370 498 L 378 525 L 227 525 Z" stroke-opacity="0.38"/>
+    <!-- Row-sculpt centerline -->
+    <path d="M 242 450 Q 303 440 364 450" stroke-opacity="0.28"/>
+  </g>
+
+  <!-- Front row: CENTER cap — 1u alpha FOCAL (dusty rose splash + crescent glyph) -->
+  <g>
+    <!-- Focal cap body — dusty rose fill -->
+    <path d="
+      M 415 395
+      L 565 395
+      L 572 537
+      L 408 537
+      Z"
+      fill="oklch(0.64 0.095 5 / 0.88)"
+      stroke="oklch(0.64 0.095 5)"/>
+    <!-- Inset dish — slightly lighter rose wash -->
+    <path d="
+      M 432 412
+      L 547 412
+      L 550 496
+      L 429 496
+      Z"
+      fill="oklch(0.70 0.075 5 / 0.72)"
+      stroke="oklch(0.64 0.095 5)"
+      stroke-opacity="0.80"/>
+    <!-- Front lip -->
+    <path d="M 429 496 L 550 496 L 557 522 L 422 522 Z"
+      fill="oklch(0.64 0.095 5 / 0.55)"
+      stroke="oklch(0.64 0.095 5)"
+      stroke-opacity="0.65"/>
+
+    <!-- Crescent glyph: moon-goddess Selene motif.
+         A waxing crescent drawn as two overlapping arcs — the
+         outer arc is larger, the inner arc is offset, leaving
+         the crescent sliver. Centered in the inset dish. -->
+    <g stroke="oklch(0.92 0.025 5)" stroke-opacity="0.92" stroke-width="1.8" fill="none">
+      <!-- Outer arc of the crescent (right-facing waxing moon) -->
+      <path d="M 490 432 A 30 30 0 0 1 490 478"/>
+      <!-- Inner arc offset left — the shadow limb -->
+      <path d="M 490 432 A 18 23 0 0 0 490 478"/>
+    </g>
+    <!-- Subtle row-sculpt centerline (dashed on focal to let glyph breathe) -->
+    <path d="M 436 452 Q 490 443 544 452"
+          stroke="oklch(0.64 0.095 5)"
+          stroke-opacity="0.32"
+          stroke-dasharray="3 5"/>
+  </g>
+
+  <!-- Front row: RIGHT cap — 1u alpha (warm-grey stroke) -->
+  <g>
+    <!-- Cap body -->
+    <path d="
+      M 595 395
+      L 745 395
+      L 752 535
+      L 588 535
+      Z"/>
+    <!-- Cherry inset dish -->
+    <path d="
+      M 613 412
+      L 727 412
+      L 730 495
+      L 610 495
+      Z" stroke-opacity="0.55"/>
+    <!-- Front lip -->
+    <path d="M 610 495 L 730 495 L 737 521 L 603 521 Z" stroke-opacity="0.38"/>
+    <!-- Row-sculpt centerline -->
+    <path d="M 617 450 Q 670 440 723 450" stroke-opacity="0.28"/>
+  </g>
+
+  <!-- ── Quiet ground anchor: dashed line beneath the cluster ──────────────────────────── -->
+  <line x1="180" y1="610" x2="800" y2="610"
+        stroke-opacity="0.15" stroke-dasharray="3 9"/>
+
+  <!-- ── Measurement ticks at right margin — bracket the cluster height ────────────────── -->
+  <g stroke-opacity="0.22">
+    <line x1="820" y1="215" x2="834" y2="215"/>
+    <line x1="820" y1="565" x2="834" y2="565"/>
+    <line x1="827" y1="215" x2="827" y2="565" stroke-opacity="0.15"/>
+  </g>
+
+  <!-- ── Bronze theme dot, upper-right — family ornamental anchor ──────────────────────── -->
+  <!-- Inner pip: warm bronze fill -->
+  <circle cx="1058" cy="172" r="5"
+          fill="oklch(0.58 0.10 75 / 0.90)"
+          stroke="none"/>
+  <!-- Outer halo ring in bronze -->
+  <circle cx="1058" cy="172" r="16"
+          stroke="oklch(0.58 0.10 75)"
+          stroke-opacity="0.32"
+          fill="none"/>
+
+  <!-- ── Secondary dusty-rose accent pip — echoes the focal splash color ────────────────── -->
+  <!-- Placed lower-right of the cluster so the composition has two color anchors
+       (the theme dot upper-right, the rose pip lower-center-right). -->
+  <circle cx="800" cy="628" r="5"
+          fill="oklch(0.64 0.095 5 / 0.88)"
+          stroke="none"/>
+  <circle cx="800" cy="628" r="14"
+          stroke="oklch(0.64 0.095 5)"
+          stroke-opacity="0.38"
+          fill="none"/>
+</svg>
