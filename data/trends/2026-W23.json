@@ -1,0 +1,169 @@
+{
+  "isoWeek": "2026-W23",
+  "publishedAt": "2026-06-01T00:00:00.000Z",
+  "rows": [
+    {
+      "name": "Hall Effect / Rapid Trigger",
+      "category": "switch",
+      "direction": "up",
+      "score": 66,
+      "spark": [40, 44, 48, 51, 55, 57, 60, 66],
+      "articleSlug": "hall-effect-mainstream",
+      "note": "IQUNIX EC75, a 75% Hall Effect keyboard with Rapid Trigger, debuted hands-on at Computex Taipei June 2–5. iRocks also showed its K114H wireless magnetic switch keyboard at the same show, cementing HE as the dominant gaming-adjacent trend in W23."
+    },
+    {
+      "name": "HMX Cloud V2",
+      "category": "switch",
+      "direction": "up",
+      "score": 53,
+      "spark": [32, 35, 38, 41, 44, 46, 49, 53],
+      "articleSlug": "hmx-cloud-deep-dive",
+      "note": "HMX confirmed its dual-material bottom housing entered full production-ready status with a Q3 release window this week. Community enthusiasm around the Cloud V2 lineage stays elevated as HMX's second-generation lubrication system rolls into production."
+    },
+    {
+      "name": "Gateron Oil King",
+      "category": "switch",
+      "direction": "flat",
+      "score": 41,
+      "spark": [39, 40, 41, 40, 40, 41, 41, 41],
+      "articleSlug": "gateron-oil-king-deep-dive",
+      "note": "Oil King holds its benchmark status in W23 with no new product news. ThereminGoat's Gateron Lanes review continues to redirect tactile curiosity toward Gateron's newer lineup, keeping Oil King discussed but not accelerating. Availability stable across major US vendors."
+    },
+    {
+      "name": "Cherry MX2A",
+      "category": "switch",
+      "direction": "down",
+      "score": -33,
+      "spark": [-17, -20, -22, -25, -28, -29, -31, -33],
+      "articleSlug": "cherry-mx2a-revision",
+      "note": "The April 2026 MX2A Dummy switch release drew skeptical community reactions on KeebTalk and Geekhack, undermining MX2A's regained credibility. No substantive W23 MX2A news; sentiment continues sliding as HE and HMX capture enthusiast attention."
+    },
+    {
+      "name": "GMK CYL Prussian Alert",
+      "category": "keycap",
+      "direction": "up",
+      "score": 63,
+      "spark": [36, 40, 44, 48, 54, 56, 59, 63],
+      "articleSlug": "gmk-cyl-prussian-alert",
+      "note": "Prussian Alert enters its final week before the June 12 deadline, driving last-chance buying urgency across ten regional vendors including NovelKeys, Prototypist, and Oblotzky. Geekhack and KeebTalk chatter spikes as undecided buyers commit to the Prussian Blue base."
+    },
+    {
+      "name": "GMK CYL Ramune",
+      "category": "keycap",
+      "direction": "flat",
+      "score": 43,
+      "spark": [24, 28, 32, 35, 38, 41, 44, 43],
+      "articleSlug": "gmk-cyl-ramune-group-buy",
+      "note": "Ramune GB closed around June 5 after its May 15 open, leaving the set in fulfillment limbo until Q3–Q4 2026. Post-close discussion is positive but quiet. Divinikey and Prototypist confirmed orders; score holds as momentum naturally cools after close."
+    },
+    {
+      "name": "DCS Grass Valley",
+      "category": "keycap",
+      "direction": "down",
+      "score": 18,
+      "spark": [19, 20, 21, 22, 22, 23, 23, 18],
+      "articleSlug": null,
+      "note": "Grass Valley officially closed June 1 after its May 1 run, clearing MOQ per the Geekhack thread. Post-close interest drops sharply as the set enters Signature Plastics' production queue with an estimated Q3 2026 ship date."
+    },
+    {
+      "name": "DCS Dolch",
+      "category": "keycap",
+      "direction": "up",
+      "score": 29,
+      "spark": [0, 5, 10, 15, 19, 23, 26, 29],
+      "articleSlug": null,
+      "note": "DCS Dolch opened its group buy June 1 through July 1 via Divinikey, debuting a dark-alpha Dolch colorway in DCS profile made by Signature Plastics. Launch timing captures vintage-keycap buyers coming off Grass Valley's close. Estimated ship October 2026."
+    },
+    {
+      "name": "GMK CYL Selene",
+      "category": "keycap",
+      "direction": "up",
+      "score": 31,
+      "spark": [10, 14, 18, 21, 24, 27, 29, 31],
+      "articleSlug": "keycap-profiles-compared",
+      "note": "Selene GB (May 15–June 19) is active through W23 across vendors including Prototypist, Duckeebs, and KBDfans. The glitter-effect special-plastics colorway draws consistent r/MechanicalKeyboards attention, with Q4 2026 fulfillment keeping excitement measured but building."
+    },
+    {
+      "name": "75% Layout",
+      "category": "layout",
+      "direction": "up",
+      "score": 43,
+      "spark": [23, 26, 29, 32, 35, 36, 38, 43],
+      "articleSlug": "75-percent-default",
+      "note": "IQUNIX EC75, a 75% Hall Effect keyboard, debuted at Computex Taipei June 2–5. iRocks also showed its K114H wireless magnetic switch keyboard at the same show, cementing HE as the dominant gaming-adjacent trend and reinforcing 75% as the default enthusiast layout for 2026."
+    },
+    {
+      "name": "Split / Ergo (Voyager, Glove80)",
+      "category": "layout",
+      "direction": "up",
+      "score": 42,
+      "spark": [24, 26, 28, 30, 34, 36, 39, 42],
+      "articleSlug": "split-ergo-cohort",
+      "note": "CannonKeys Link split ergo GB (May 16–June 15) is in its final weeks with open-source PCB threshold at 300 units, generating active community tracking. Keychron V10 Ultra Alice at $124.99 adds mainstream entry-level exposure to the ergo category in W23."
+    },
+    {
+      "name": "Alice layout",
+      "category": "layout",
+      "direction": "down",
+      "score": -27,
+      "spark": [-14, -17, -19, -21, -23, -24, -26, -27],
+      "articleSlug": "alice-layout-decline",
+      "note": "Alice continues its slow decline with no new notable IC or GB launches in W23. Keychron V10 Ultra Alice at $124.99 provides a budget on-ramp but community preference is shifting toward true split ergo over the ergonomic-lite compromise. No competitive gaming adoption reported."
+    },
+    {
+      "name": "Mode Designs",
+      "category": "vendor",
+      "direction": "up",
+      "score": 40,
+      "spark": [22, 25, 27, 30, 34, 35, 37, 40],
+      "articleSlug": "mode-sonnet-r2-group-buy-coverage",
+      "note": "Mode Designs Encore 2026 pre-orders remain live in W23, with July 2026 ship dates and five colorways. The Crown Mounting System using wave springs and silicone spools is attracting strong enthusiast coverage. At $289, it is Mode's most discussed product of the year."
+    },
+    {
+      "name": "CannonKeys",
+      "category": "vendor",
+      "direction": "up",
+      "score": 22,
+      "spark": [16, 17, 18, 18, 18, 18, 18, 22],
+      "articleSlug": "cannonkeys-nyawice-group-buy",
+      "note": "CannonKeys Link split ergo GB enters its final three weeks with an open-source PCB milestone drawing community goodwill. Also hosting GMK Spark (May 21–June 21), keeping its active GB count elevated in W23. Small score bump reflects the Link's positive community engagement."
+    },
+    {
+      "name": "Prototypist",
+      "category": "vendor",
+      "direction": "up",
+      "score": 24,
+      "spark": [13, 15, 16, 17, 18, 19, 21, 24],
+      "articleSlug": "vendor-first-customs",
+      "note": "Prototypist handles UK fulfillment for both GMK CYL Prussian Alert and GMK CYL Selene simultaneously in W23, while also listing Gateron Lanes in stock for immediate shipping. Multi-GB active footprint and reliable in-stock switches continue to build community trust."
+    },
+    {
+      "name": "Keychron",
+      "category": "brand",
+      "direction": "flat",
+      "score": 44,
+      "spark": [27, 30, 33, 36, 38, 41, 44, 44],
+      "articleSlug": "keychron-q-ultra-zmk",
+      "note": "Keychron V10 Ultra at $124.99 ships for in-stock SKUs with some on backorder. No major W23 announcements; the brand coasts on strong Q1 momentum from CES launches. The V Ultra series with 660-hour battery and 8K polling keeps Keychron visible in mainstream coverage."
+    },
+    {
+      "name": "Wuque Studio",
+      "category": "brand",
+      "direction": "flat",
+      "score": 17,
+      "spark": [9, 11, 12, 14, 16, 16, 17, 17],
+      "articleSlug": null,
+      "note": "No new Wuque Studio switch or keyboard announcements identified in W23. The WS Morandi received continued positive discussion following ThereminGoat's review, and the brand maintains a steady in-stock catalog. Score holds flat absent any W23 product news or community event."
+    },
+    {
+      "name": "Cherry (GMK parent)",
+      "category": "brand",
+      "direction": "down",
+      "score": -28,
+      "spark": [-11, -14, -16, -18, -20, -21, -23, -28],
+      "articleSlug": "cherry-mx2a-revision",
+      "note": "Cherry's April 2026 MX2A Dummy switch release continues to generate skeptical community reactions in W23 forum threads, seen as an attempt to manufacture novelty rather than address core enthusiast concerns. Long GMK production timelines add to the brand's negative sentiment."
+    }
+  ],
+  "updatedAt": "2026-06-01T12:00:00.000Z"
+}
