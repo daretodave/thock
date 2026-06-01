@@ -2180,7 +2180,7 @@ passes accumulate signals.)
 - issue: [mirror-failed: 2026-05-31T18:40:00Z]
 - elements: apps/web/src/content/articles/gmk-cyl-ishtar-r2-group-buy.mdx line 3
 
-### [content] [3.5] divinikey-dcs-dolch — Rule 3 violation: live GB (Jun 1–Jul 1) has no companion article
+### [x] [content] [3.5] divinikey-dcs-dolch — Rule 3 violation: live GB (Jun 1–Jul 1) has no companion article — addressed in 9ba52e8, closes #243
 - category: content-gaps
 - filed: 2026-06-01 by cloud /iterate audit
 - impact: 7 (DCS Dolch opened today at Divinikey; /group-buys active view shows the buy without "Read our coverage →"; Rule 3 fires on every live buy without a companion piece; DCS Grass Valley just closed same day — vintage-keycap buyers are actively tracking the space)
@@ -2188,6 +2188,7 @@ passes accumulate signals.)
 - score: 3.5 (impact × ease / 10)
 - rule: Rule 3 — group-buy companion
 - issue: #243
+> **Resolved (2026-06-01):** Shipped "DCS Dolch opens at Divinikey — a computing-history colorway returns" at /article/divinikey-dcs-dolch-group-buy (~1080 words, publishedAt 2026-06-01 per group-buy startDate exception). Hero SVG + 3 InlineViz SVGs (dolch-palette, dcs-vs-cherry-profile, moq-price-tiers). divinikey brand tag added to tags.json. data/group-buys/divinikey-dcs-dolch.json relatedArticle set. Language gate clean after 2-violation fix. 691 e2e green. `9ba52e8`
 
 ### [x] [data] [5.4] W23 tracker: Ramune note wrong close date + Selene bad articleSlug — addressed in 87c779d, closes #241
 - category: data
