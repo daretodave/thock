@@ -72,6 +72,15 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [data] [3.0] GMK CYL Selene active buy (May 15–Jun 19) — no group-buy record in data/group-buys/ — addressed in bf8cd58
+- category: data
+- filed: 2026-06-01 by cloud /iterate audit
+- impact: 5 (active buy at +31 up in W23 tracker; absent from /group-buys active view and home GroupBuysWidget; no heroImage or companion article path; 5 other GMK CYL sets all have records)
+- ease: 6 (scout research done; KBDfans vendor already exists; group-buy JSON + brander hero art; pattern well-established from 5 prior GMK CYL records)
+- score: 3.0 (impact × ease / 10)
+- issue: [mirror-failed: 2026-06-01T00:00:00Z]
+> **Resolved (2026-06-01):** Created data/group-buys/kbdfans-gmk-cyl-selene.json (status: live, May 15–Jun 19, KBDfans, global, $160 base kit). Hero art at apps/web/public/group-buy-art/kbdfans-gmk-cyl-selene.svg — Cherry-profile keycap cluster with dusty-rose splash and bronze dot, moon-phase glyph on focal alpha. 11 group-buys total. 691 e2e green. `bf8cd58`
+
 ### [x] [copy] [3.6] trends-tracker-preview — "modding" tag mismatch — article is a tracker explainer, not a modification guide — addressed in 9747d69, closes #245
 - category: copy
 - filed: 2026-06-01 by cloud /iterate audit
