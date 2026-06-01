@@ -72,6 +72,14 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [data] [6.3] W23 tracker: DCS Dolch row null articleSlug — companion article divinikey-dcs-dolch-group-buy shipped same day — addressed in this commit, closes #244
+- category: data
+- filed: 2026-06-01 by cloud /iterate audit
+- impact: 7 (DCS Dolch is +29 up — highest-scoring keycap row in W23; companion article shipped today; tracker rows without articleSlug render unlinked on the signature Trends Tracker surface)
+- ease: 9 (one JSON field update in data/trends/2026-W23.json)
+- score: 6.3 (impact × ease / 10)
+- issue: #244
+
 ### [x] [data] [3.5] DCS Dolch live GB (Jun 1–Jul 1) not in database — add Divinikey vendor + group-buy record — addressed in 180461b, closes #242
 - category: data
 - filed: 2026-06-01 by cloud /iterate audit
