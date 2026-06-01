@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — GMK CYL Selene, Cherry-profile keycap cluster with silver-grey base, moon-phase novelty, purple and teal glitter accents</title>
+
+  <!-- Soft splash wash behind the key cluster — muted violet -->
+  <ellipse cx="600" cy="400" rx="520" ry="215" fill="#9B7FC8" fill-opacity="0.10" stroke="none"/>
+
+  <!-- ============================================================
+       6 GMK CYL Selene keycaps, near-top-down with slight 3/4 angle
+       to read the Cherry-profile cylindrical scoop. Layout: two rows
+       of three offset like a freshly-tipped tray, with one focal
+       novelty key slightly foregrounded.
+
+       Silver-grey base fill: #D4D6D9 (warm neutral, light-mode safe)
+       Focal novelty key carries the moon-phase glyph (crescent).
+
+       Each cap:
+         - outer footprint (base silhouette, filled silver-grey)
+         - top surface (inset, slightly different fill to read depth)
+         - CYL scoop arc (subtle cylindrical dish highlight)
+       ============================================================ -->
+
+  <!-- ================ Row 1 (back row) ================ -->
+
+  <!-- Cap 1 — back-left -->
+  <g transform="translate(293 230)">
+    <!-- footprint -->
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"
+          fill="#D4D6D9" fill-opacity="0.55"/>
+    <!-- top surface -->
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          fill="#E0E2E5" fill-opacity="0.70" stroke-opacity="0.65"/>
+    <!-- CYL scoop arc -->
+    <path d="M 38 90 Q 88 76 138 90" stroke-opacity="0.40"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke-opacity="0.25"/>
+    <!-- glitter — dusty-violet dots -->
+    <circle cx="60"  cy="50"  r="2.2" fill="#9B7FC8" fill-opacity="0.70" stroke="none"/>
+    <circle cx="108" cy="64"  r="1.6" fill="#9B7FC8" fill-opacity="0.55" stroke="none"/>
+    <circle cx="82"  cy="128" r="2.0" fill="#4DB8A6" fill-opacity="0.65" stroke="none"/>
+    <!-- diamond glitter (rotated square) -->
+    <rect x="120" y="44" width="5" height="5" rx="0.5" transform="rotate(45 122.5 46.5)"
+          fill="#9B7FC8" fill-opacity="0.55" stroke="none"/>
+    <rect x="52"  y="118" width="4" height="4" rx="0.5" transform="rotate(45 54 120)"
+          fill="#4DB8A6" fill-opacity="0.50" stroke="none"/>
+  </g>
+
+  <!-- Cap 2 — back-middle (FOCAL — moon-phase novelty key) -->
+  <!-- Shifted forward 10 px vertically to foreground it slightly -->
+  <g transform="translate(513 210)">
+    <!-- footprint — violet wash for the novelty focal cap -->
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"
+          fill="#9B7FC8" fill-opacity="0.28" stroke="#9B7FC8" stroke-opacity="0.75"/>
+    <!-- top surface -->
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          fill="#C4B8E0" fill-opacity="0.45" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55"/>
+    <!-- CYL scoop arc -->
+    <path d="M 38 90 Q 88 74 138 90" stroke-opacity="0.45"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke-opacity="0.28"/>
+
+    <!-- Moon-phase glyph — crescent, centred on the key top surface -->
+    <!-- Outer circle -->
+    <circle cx="88" cy="83" r="26" stroke="#9B7FC8" stroke-opacity="0.90" stroke-width="1.8" fill="none"/>
+    <!-- Inner occulting circle for crescent illusion — filled with top-surface color -->
+    <circle cx="100" cy="78" r="22" fill="#C4B8E0" fill-opacity="0.85" stroke="none"/>
+    <!-- Small teal dot at crescent tip -->
+    <circle cx="70" cy="72" r="3.5" fill="#4DB8A6" fill-opacity="0.80" stroke="none"/>
+
+    <!-- glitter — heavier on the novelty key -->
+    <circle cx="55"  cy="48"  r="2.5" fill="#9B7FC8" fill-opacity="0.75" stroke="none"/>
+    <circle cx="130" cy="55"  r="2.0" fill="#4DB8A6" fill-opacity="0.70" stroke="none"/>
+    <circle cx="118" cy="130" r="2.2" fill="#9B7FC8" fill-opacity="0.65" stroke="none"/>
+    <circle cx="62"  cy="125" r="1.8" fill="#4DB8A6" fill-opacity="0.60" stroke="none"/>
+    <rect x="135" y="118" width="5" height="5" rx="0.5" transform="rotate(45 137.5 120.5)"
+          fill="#9B7FC8" fill-opacity="0.60" stroke="none"/>
+    <rect x="45"  y="60"  width="4" height="4" rx="0.5" transform="rotate(45 47 62)"
+          fill="#4DB8A6" fill-opacity="0.55" stroke="none"/>
+  </g>
+
+  <!-- Cap 3 — back-right -->
+  <g transform="translate(733 230)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"
+          fill="#D4D6D9" fill-opacity="0.55"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          fill="#E0E2E5" fill-opacity="0.70" stroke-opacity="0.65"/>
+    <path d="M 38 90 Q 88 76 138 90" stroke-opacity="0.40"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke-opacity="0.25"/>
+    <!-- glitter -->
+    <circle cx="95"  cy="48"  r="2.0" fill="#9B7FC8" fill-opacity="0.65" stroke="none"/>
+    <circle cx="55"  cy="72"  r="1.6" fill="#4DB8A6" fill-opacity="0.55" stroke="none"/>
+    <circle cx="130" cy="118" r="2.2" fill="#9B7FC8" fill-opacity="0.60" stroke="none"/>
+    <rect x="65"  y="120" width="5" height="5" rx="0.5" transform="rotate(45 67.5 122.5)"
+          fill="#4DB8A6" fill-opacity="0.50" stroke="none"/>
+  </g>
+
+  <!-- ================ Row 2 (front row, shifted half a cap width) ================ -->
+
+  <!-- Cap 4 — front-left -->
+  <g transform="translate(203 420)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"
+          fill="#D4D6D9" fill-opacity="0.55"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          fill="#E0E2E5" fill-opacity="0.70" stroke-opacity="0.65"/>
+    <path d="M 38 90 Q 88 76 138 90" stroke-opacity="0.40"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke-opacity="0.25"/>
+    <!-- glitter -->
+    <circle cx="70"  cy="52"  r="2.0" fill="#4DB8A6" fill-opacity="0.65" stroke="none"/>
+    <circle cx="118" cy="42"  r="1.6" fill="#9B7FC8" fill-opacity="0.55" stroke="none"/>
+    <circle cx="88"  cy="130" r="2.2" fill="#4DB8A6" fill-opacity="0.60" stroke="none"/>
+    <rect x="42"  y="106" width="4" height="4" rx="0.5" transform="rotate(45 44 108)"
+          fill="#9B7FC8" fill-opacity="0.50" stroke="none"/>
+  </g>
+
+  <!-- Cap 5 — front-middle (1.25u — modifier width) -->
+  <g transform="translate(423 420)">
+    <!-- 1.25u footprint: 220 wide -->
+    <path d="M 8 14 Q 0 8 14 4 L 206 4 Q 220 8 212 14 L 212 154 Q 220 160 206 164 L 14 164 Q 0 160 8 154 Z"
+          fill="#D4D6D9" fill-opacity="0.55"/>
+    <path d="M 30 28 Q 24 22 36 20 L 184 20 Q 196 22 190 28 L 190 138 Q 196 144 184 146 L 36 146 Q 24 144 30 138 Z"
+          fill="#E0E2E5" fill-opacity="0.70" stroke-opacity="0.65"/>
+    <path d="M 38 90 Q 110 76 188 90" stroke-opacity="0.40"/>
+    <path d="M 38 102 Q 110 90 188 102" stroke-opacity="0.25"/>
+    <!-- glitter — moderate scatter -->
+    <circle cx="65"  cy="50"  r="2.2" fill="#9B7FC8" fill-opacity="0.65" stroke="none"/>
+    <circle cx="160" cy="58"  r="1.8" fill="#4DB8A6" fill-opacity="0.60" stroke="none"/>
+    <circle cx="112" cy="130" r="2.0" fill="#9B7FC8" fill-opacity="0.60" stroke="none"/>
+    <circle cx="48"  cy="128" r="1.6" fill="#4DB8A6" fill-opacity="0.55" stroke="none"/>
+    <rect x="178" y="120" width="5" height="5" rx="0.5" transform="rotate(45 180.5 122.5)"
+          fill="#9B7FC8" fill-opacity="0.55" stroke="none"/>
+    <rect x="90"  y="42"  width="4" height="4" rx="0.5" transform="rotate(45 92 44)"
+          fill="#4DB8A6" fill-opacity="0.50" stroke="none"/>
+  </g>
+
+  <!-- Cap 6 — front-right (1u accent cap, slightly forward like a stray from the kit) -->
+  <g transform="translate(703 450)">
+    <!-- 1u: 132 wide -->
+    <path d="M 8 14 Q 0 8 14 4 L 118 4 Q 132 8 124 14 L 124 154 Q 132 160 118 164 L 14 164 Q 0 160 8 154 Z"
+          fill="#D4D6D9" fill-opacity="0.55"/>
+    <path d="M 30 28 Q 24 22 36 20 L 96 20 Q 108 22 102 28 L 102 138 Q 108 144 96 146 L 36 146 Q 24 144 30 138 Z"
+          fill="#E0E2E5" fill-opacity="0.70" stroke-opacity="0.65"/>
+    <path d="M 38 90 Q 66 76 100 90" stroke-opacity="0.40"/>
+    <path d="M 38 102 Q 66 90 100 102" stroke-opacity="0.25"/>
+    <!-- glitter — teal emphasis on accent cap -->
+    <circle cx="52"  cy="50"  r="2.4" fill="#4DB8A6" fill-opacity="0.75" stroke="none"/>
+    <circle cx="88"  cy="44"  r="1.8" fill="#9B7FC8" fill-opacity="0.65" stroke="none"/>
+    <circle cx="70"  cy="126" r="2.0" fill="#4DB8A6" fill-opacity="0.65" stroke="none"/>
+    <rect x="40"  y="118" width="4" height="4" rx="0.5" transform="rotate(45 42 120)"
+          fill="#9B7FC8" fill-opacity="0.55" stroke="none"/>
+  </g>
+
+  <!-- ============================================================
+       Ornamental anchor — bronze/brass theme dot, upper-right margin
+       (family convention across all thock hero art)
+       ============================================================ -->
+  <circle cx="1114" cy="88" r="7"  fill="oklch(0.80 0.135 75)" fill-opacity="0.92" stroke="none"/>
+  <circle cx="1114" cy="88" r="13" stroke="oklch(0.80 0.135 75)" stroke-opacity="0.40" fill="none"/>
+
+  <!-- Focal accent dot — dusty-violet pip near the novelty key,
+       same conceptual role as the red pip on the Prussian Alert hero -->
+  <circle cx="695" cy="380" r="7"  fill="#9B7FC8" fill-opacity="0.90" stroke="none"/>
+  <circle cx="695" cy="380" r="13" stroke="#9B7FC8" stroke-opacity="0.40" fill="none"/>
+
+  <!-- Secondary teal pip — echo near the front-right cap -->
+  <circle cx="860" cy="510" r="5"  fill="#4DB8A6" fill-opacity="0.78" stroke="none"/>
+  <circle cx="860" cy="510" r="10" stroke="#4DB8A6" stroke-opacity="0.35" fill="none"/>
+</svg>

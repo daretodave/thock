@@ -1,0 +1,22 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-01T00:00:00.000Z",
+  "commit": "e78f051559c47b798e89cad259bc2b0f65a5d18a",
+  "kind": "hero-art",
+  "slug": "gmk-cyl-selene-group-buy",
+  "article_pillar": "news",
+  "type": "article-hero",
+  "generatedAt": "2026-06-01T00:00:00.000Z",
+  "source": "hand-authored from prussian-alert template",
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": [],
+  "motif": "Cherry-profile keycap cluster with silver-grey base, purple and teal glitter dots, moon-phase novelty glyph",
+  "splash": "dusty-violet (#9B7FC8) + teal (#4DB8A6)",
+  "canvas": "1200x750",
+  "agent": "brander",
+  "outputs": [
+    "apps/web/public/hero-art/gmk-cyl-selene-group-buy.svg"
+  ],
+  "warnings": []
+}
