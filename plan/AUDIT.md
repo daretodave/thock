@@ -2232,3 +2232,12 @@ passes accumulate signals.)
 - score: 5.4 (impact × ease / 10)
 - issue: #241
 > **Resolved (2026-06-01):** Rewrote Ramune note to accurately reflect open buy status through 2026-06-20 (245 chars, within 280-char schema limit). Set GMK CYL Selene articleSlug from "keycap-profiles-compared" to null — no thock article covers Selene specifically. updatedAt bumped to 2026-06-01T14:00:00.000Z. 685 e2e green. `87c779d`
+
+### [x] [content] [4.0] beginners-switch-buying-guide — kailh-box-white named in body but absent from mentionedParts — addressed in <commit>, closes #247
+- category: content
+- filed: 2026-06-01 by cloud /iterate audit
+- impact: 5 (body line 44 explicitly recommends "Kailh Box White" as the modern clicky alternative; kailh-box-white part record was added in Phase 34 but mentionedParts was never updated; /part/switch/kailh-box-white shows 0 "mentioned in" articles despite thock's most-read beginner guide recommending it; MentionedPartsRail on the article also omits the part)
+- ease: 8 (frontmatter mentionedParts entry + PartReference inline component + updatedAt bump; no new files)
+- score: 4.0 (impact × ease / 10)
+- elements: apps/web/src/content/articles/beginners-switch-buying-guide.mdx frontmatter + line 44
+- issue: #247
