@@ -72,6 +72,15 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [copy] [4.0] mode-sonnet-r2-group-buy-coverage — callout/lede stale "announced for 2026-06-01" after buy opened today — addressed in 956e67a, closes #240
+- category: copy
+- filed: 2026-06-01 by cloud /iterate audit
+- impact: 5 (update callout is the first content block readers see; "The buy is now announced for 2026-06-01" reads as if buy hasn't started when it opened today; lede "now scheduled for" reinforces the stale framing; both surfaces render in article cards on /news, /tag/mode, /tag/cannonkeys)
+- ease: 8 (targeted prose edits in callout sentences + lede + updatedAt bump; data status flip "announced" → "live" bundled as supporting data fix)
+- score: 4.0 (impact × ease / 10)
+- issue: #240
+> **Resolved (2026-06-01):** Lede: "now scheduled for 2026-06-01" → "now open from 2026-06-01". Update callout (2026-05-09): "announced for 2026-06-01 through 2026-07-15" → "opened on 2026-06-01 and runs through 2026-07-15". Timing callout: "Round now opens 2026-06-01" → "The buy opened on 2026-06-01". Data: cannonkeys-mode-sonnet-r2.json status "announced" → "live"; updatedAt bumped to 2026-06-01. 685 e2e green. `956e67a`
+
 ### [x] [copy] [3.6] gmk-cyl-king-of-the-seas-group-buy — title "opens" and lede "runs through" stale after May 31 close — addressed in 5bd3e52, closes #237
 - category: copy
 - filed: 2026-05-31 by cloud /iterate audit
