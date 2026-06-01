@@ -2170,3 +2170,12 @@ passes accumulate signals.)
 - score: 3.6 (impact × ease / 10)
 - issue: [mirror-failed: 2026-05-31T18:40:00Z]
 - elements: apps/web/src/content/articles/gmk-cyl-ishtar-r2-group-buy.mdx line 3
+
+### [x] [data] [5.4] W23 tracker: Ramune note wrong close date + Selene bad articleSlug — addressed in 87c779d, closes #241
+- category: data
+- filed: 2026-06-01 by cloud /iterate audit
+- impact: 6 (Ramune note claimed "closed around June 5" — buy open until June 20; active buyer reading /trends/tracker/2026-W23 sees wrong close date; Selene linked to unrelated keycap-profiles-compared guide)
+- ease: 9 (two field edits in one JSON file)
+- score: 5.4 (impact × ease / 10)
+- issue: #241
+> **Resolved (2026-06-01):** Rewrote Ramune note to accurately reflect open buy status through 2026-06-20 (245 chars, within 280-char schema limit). Set GMK CYL Selene articleSlug from "keycap-profiles-compared" to null — no thock article covers Selene specifically. updatedAt bumped to 2026-06-01T14:00:00.000Z. 685 e2e green. `87c779d`
