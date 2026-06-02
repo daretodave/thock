@@ -72,6 +72,14 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [data] [4.5] acoustic-spec-rise mentionedParts missing hmx-cloud, gateron-oil-king, mode-sonnet — addressed in 2570671, closes #252
+- category: data
+- filed: 2026-06-02 by cloud /iterate audit
+- impact: 5 (article is a Trends pillar piece naming three data-catalog entities in prose; part pages for hmx-cloud, gateron-oil-king, and mode-sonnet all gain "mentioned in" cross-link from substantive editorial context)
+- ease: 9 (single frontmatter array update — three items)
+- score: 4.5 (impact × ease / 10)
+- issue: #252
+
 ### [x] [data] [3.6] drop-holy-panda-x-deep-dive missing tecsee-sapphire-v2 in mentionedParts — addressed in c5a75ec, closes #250
 - category: data
 - filed: 2026-06-02 by cloud /iterate audit
