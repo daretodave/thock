@@ -72,6 +72,14 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [data] [4.5] building-mode-sonnet-with-oil-kings mentionedParts missing bakeneko65
+- category: data
+- filed: 2026-06-02 by cloud /iterate audit
+- impact: 5 (article is an Ideas pillar build piece that explicitly compares the Mode Sonnet vs Bakeneko65 sound character with the same Oil Kings; /part/board/bakeneko65 gains a "mentioned in" cross-link from a substantive build comparison — "Compared to the same switches in a Bakeneko65 built last summer, the Sonnet sounds about a half-octave lower and considerably less metallic")
+- ease: 9 (single frontmatter array entry addition)
+- score: 4.5 (impact × ease / 10)
+- issue: #253
+
 ### [x] [data] [4.5] acoustic-spec-rise mentionedParts missing hmx-cloud, gateron-oil-king, mode-sonnet — addressed in 2570671, closes #252
 - category: data
 - filed: 2026-06-02 by cloud /iterate audit
