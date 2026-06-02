@@ -72,6 +72,14 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [data] [3.6] hall-effect-mainstream missing mode-sonnet in mentionedParts — addressed in a74f5cf, closes #254
+- category: data
+- filed: 2026-06-02 by cloud /iterate audit
+- impact: 4 (article discusses Mode Sonnet R2 as a concrete HE mainstream signal in 3+ body passages; /part/board/mode-sonnet gains "mentioned in" cross-link from a substantive Trends pillar article)
+- ease: 9 (single frontmatter entry addition)
+- score: 3.6 (impact × ease / 10)
+- issue: #254
+
 ### [x] [data] [4.5] building-mode-sonnet-with-oil-kings mentionedParts missing bakeneko65 — addressed in f62670b, closes #253
 - category: data
 - filed: 2026-06-02 by cloud /iterate audit
