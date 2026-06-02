@@ -72,6 +72,14 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [data] [4.5] W23 tracker: DCS Grass Valley score +18 on a down row — should be -18 — addressed in this commit, closes #255
+- category: data
+- filed: 2026-06-02 by cloud /iterate audit
+- impact: 5 (Trends Tracker W23 keycap section: formatDelta(18, 'down') renders "+18% ▼" instead of "-18% ▼"; groupByCategory places DCS Grass Valley above Cherry MX2A in the positive region; all other down rows across W19–W23 consistently use negative scores)
+- ease: 9 (two fields in one JSON record: score and spark values)
+- score: 4.5 (impact × ease / 10)
+- issue: #255
+
 ### [x] [data] [3.6] hall-effect-mainstream missing mode-sonnet in mentionedParts — addressed in a74f5cf, closes #254
 - category: data
 - filed: 2026-06-02 by cloud /iterate audit
