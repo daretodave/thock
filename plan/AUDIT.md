@@ -2276,3 +2276,12 @@ passes accumulate signals.)
 - issue: [mirror-failed: 2026-06-02T00:00:00Z]
 - elements: apps/web/src/content/articles/gmk-cyl-selene-group-buy.mdx
 > **Resolved (2026-06-02):** Added selene-kit-pricing.svg (horizontal range-bar chart — base $110–155, 3 add-on kits $55–85 each, fully-kitted $220–325 footer note; orchid #9370B8 highlight on base kit) and selene-cyl-subline.svg (4-panel GMK CYL sub-line character map: Prussian Alert/Bauhaus restraint → Ramune/pastel softness → King of the Seas/nautical depth → Selene/material-first glitter reflect). Both SVGs use orchid #9370B8 as splash; provenance JSONs include article-body citations for no-fabrication compliance. Placed after pricing paragraph and after sub-line comparison paragraph respectively. Language gate clean. updatedAt bumped to 2026-06-02. 697 e2e green. `c3c9e06`
+
+### [x] [content] [4.5] sound-dampening-compared — mode-sonnet and ikki68-aurora missing from mentionedParts — addressed in bc5de31, closes #251
+- category: content
+- filed: 2026-06-02 by cloud /iterate audit
+- impact: 5 (sound-dampening-compared popularityScore 65, guides pillar; mode-sonnet and ikki68-aurora are named boards in body prose at line 48; both /part/board/ pages gain "mentioned in" cross-link from a high-traffic reference article; mentionedParts was completely empty despite specific product names in body)
+- ease: 9 (add 2 mentionedParts entries + PartReference tags + updatedAt bump; no schema or code change)
+- score: 4.5 (impact × ease / 10)
+- issue: #251
+> **Resolved (2026-06-02):** Added mentionedParts entries for mode-sonnet (board) and ikki68-aurora (board). Added PartReference tags inline at line 48 — "The Mode Sonnet, the Wuque IKKI68 Aurora" → "The <PartReference id="mode-sonnet" />, the <PartReference id="ikki68-aurora" />". Bumped updatedAt to 2026-06-02. Both /part/board/mode-sonnet and /part/board/ikki68-aurora now show this article in their "mentioned in" rail. 697 e2e green. `bc5de31`
