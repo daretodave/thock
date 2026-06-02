@@ -72,7 +72,7 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
-### [data] [4.5] building-mode-sonnet-with-oil-kings mentionedParts missing bakeneko65
+### [x] [data] [4.5] building-mode-sonnet-with-oil-kings mentionedParts missing bakeneko65 — addressed in f62670b, closes #253
 - category: data
 - filed: 2026-06-02 by cloud /iterate audit
 - impact: 5 (article is an Ideas pillar build piece that explicitly compares the Mode Sonnet vs Bakeneko65 sound character with the same Oil Kings; /part/board/bakeneko65 gains a "mentioned in" cross-link from a substantive build comparison — "Compared to the same switches in a Bakeneko65 built last summer, the Sonnet sounds about a half-octave lower and considerably less metallic")
