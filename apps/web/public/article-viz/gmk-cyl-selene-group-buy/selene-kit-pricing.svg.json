@@ -1,0 +1,21 @@
+{
+  "generated_by": "main-agent",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-02T00:00:00.000Z",
+  "commit": null,
+  "kind": "inline-viz",
+  "source": null,
+  "template": null,
+  "tokens_snapshot": null,
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "article_slug": "gmk-cyl-selene-group-buy",
+  "article_pillar": "news",
+  "section_anchor": "What's in the run",
+  "splash_color": { "name": "orchid", "hex": "#9370B8" },
+  "outputs": ["apps/web/public/article-viz/gmk-cyl-selene-group-buy/selene-kit-pricing.svg"],
+  "data_sources": [
+    "apps/web/src/content/articles/gmk-cyl-selene-group-buy.mdx — 'Pricing for GMK CYL base kits has ranged between $110 and $155 USD across recent cycles, with modifier and novelty add-ons typically in the $55–$85 USD range each'",
+    "apps/web/src/content/articles/gmk-cyl-selene-group-buy.mdx — 'A fully-kitted order — base plus a modifier kit and the novelties — puts the total in the $220–$325 range before shipping'"
+  ],
+  "warnings": []
+}

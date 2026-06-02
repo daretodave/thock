@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>GMK CYL Selene kit pricing structure — four per-kit price ranges: base $110–155, ISO/modifier $55–85, novelties $55–85, spacebar $55–85</title>
+
+  <!-- Title -->
+  <text x="600" y="48" font-family="Newsreader, 'Iowan Old Style', Georgia, serif" font-size="19" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.90">GMK CYL Selene — per-kit pricing</text>
+
+  <!-- X-axis baseline -->
+  <line x1="270" y1="410" x2="1145" y2="410" stroke="oklch(0.78 0.005 90)" stroke-width="1" stroke-opacity="0.25"/>
+
+  <!-- Grid lines and labels: $0, $50, $100, $150 (scale: 5px/$, origin x=270) -->
+  <!-- $0 at x=270 -->
+  <line x1="270" y1="115" x2="270" y2="410" stroke="oklch(0.78 0.005 90)" stroke-width="0.75" stroke-opacity="0.15"/>
+  <text x="270" y="430" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.50">$0</text>
+
+  <!-- $50 at x=520 -->
+  <line x1="520" y1="115" x2="520" y2="410" stroke="oklch(0.78 0.005 90)" stroke-width="0.75" stroke-dasharray="4 4" stroke-opacity="0.15"/>
+  <text x="520" y="430" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.50">$50</text>
+
+  <!-- $100 at x=770 -->
+  <line x1="770" y1="115" x2="770" y2="410" stroke="oklch(0.78 0.005 90)" stroke-width="0.75" stroke-dasharray="4 4" stroke-opacity="0.15"/>
+  <text x="770" y="430" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.50">$100</text>
+
+  <!-- $150 at x=1020 -->
+  <line x1="1020" y1="115" x2="1020" y2="410" stroke="oklch(0.78 0.005 90)" stroke-width="0.75" stroke-dasharray="4 4" stroke-opacity="0.15"/>
+  <text x="1020" y="430" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.50">$150</text>
+
+  <!-- ── Row 1: Base kit ($110–$155) ──────────────────────────────────────── -->
+  <!-- bar_left = 270 + 110*5 = 820, bar_right = 270 + 155*5 = 1045, width=225 -->
+  <g>
+    <text x="255" y="153" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="13" font-weight="500" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.85">base kit</text>
+    <text x="255" y="169" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.45">ANSI + standard</text>
+    <!-- Empty guide line -->
+    <line x1="270" y1="157" x2="820" y2="157" stroke="oklch(0.78 0.005 90)" stroke-width="0.5" stroke-opacity="0.10"/>
+    <!-- Range bar (filled, orchid) -->
+    <rect x="820" y="139" width="225" height="36" rx="3" fill="#9370B8" fill-opacity="0.18" stroke="#9370B8" stroke-width="1.5" stroke-opacity="0.70"/>
+    <!-- Price labels -->
+    <text x="820" y="136" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#9370B8" stroke="none" text-anchor="middle" opacity="0.80">$110</text>
+    <text x="1045" y="136" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#9370B8" stroke="none" text-anchor="middle" opacity="0.80">$155</text>
+  </g>
+
+  <!-- ── Row 2: ISO / extended modifier kit ($55–$85) ──────────────────────── -->
+  <!-- bar_left = 270 + 55*5 = 545, bar_right = 270 + 85*5 = 695, width=150 -->
+  <g>
+    <text x="255" y="223" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="13" font-weight="500" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.85">ISO / modifier</text>
+    <text x="255" y="239" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.45">UK, Nordic, DE coverage</text>
+    <line x1="270" y1="227" x2="545" y2="227" stroke="oklch(0.78 0.005 90)" stroke-width="0.5" stroke-opacity="0.10"/>
+    <rect x="545" y="209" width="150" height="36" rx="3" fill="oklch(0.78 0.005 90)" fill-opacity="0.08" stroke="oklch(0.78 0.005 90)" stroke-width="1.5" stroke-opacity="0.35"/>
+    <text x="545" y="206" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">$55</text>
+    <text x="695" y="206" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">$85</text>
+  </g>
+
+  <!-- ── Row 3: Novelties kit ($55–$85) ────────────────────────────────────── -->
+  <g>
+    <text x="255" y="293" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="13" font-weight="500" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.85">novelties</text>
+    <text x="255" y="309" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.45">moon-phase legends</text>
+    <line x1="270" y1="297" x2="545" y2="297" stroke="oklch(0.78 0.005 90)" stroke-width="0.5" stroke-opacity="0.10"/>
+    <rect x="545" y="279" width="150" height="36" rx="3" fill="oklch(0.78 0.005 90)" fill-opacity="0.08" stroke="oklch(0.78 0.005 90)" stroke-width="1.5" stroke-opacity="0.35"/>
+    <text x="545" y="276" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">$55</text>
+    <text x="695" y="276" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">$85</text>
+  </g>
+
+  <!-- ── Row 4: Spacebar kit ($55–$85) ─────────────────────────────────────── -->
+  <g>
+    <text x="255" y="363" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="13" font-weight="500" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.85">spacebar</text>
+    <text x="255" y="379" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.45">alt lengths, accent bars</text>
+    <line x1="270" y1="367" x2="545" y2="367" stroke="oklch(0.78 0.005 90)" stroke-width="0.5" stroke-opacity="0.10"/>
+    <rect x="545" y="349" width="150" height="36" rx="3" fill="oklch(0.78 0.005 90)" fill-opacity="0.08" stroke="oklch(0.78 0.005 90)" stroke-width="1.5" stroke-opacity="0.35"/>
+    <text x="545" y="346" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">$55</text>
+    <text x="695" y="346" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">$85</text>
+  </g>
+
+  <!-- Fully-kitted note -->
+  <text x="600" y="447" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.48">fully kitted (base + modifier + novelties): $220–$325 before shipping · source: KBDfans listing</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="38" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

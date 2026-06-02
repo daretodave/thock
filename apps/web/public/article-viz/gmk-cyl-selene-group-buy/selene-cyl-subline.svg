@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>GMK CYL sub-line colorway characters — four sets mapped by their defining visual argument: Prussian Alert (Bauhaus restraint), Ramune (pastel softness), King of the Seas (nautical depth), Selene (material-first glitter reflect)</title>
+
+  <!-- Title -->
+  <text x="600" y="48" font-family="Newsreader, 'Iowan Old Style', Georgia, serif" font-size="19" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.90">GMK CYL sub-line — four colorway characters</text>
+
+  <!-- ── Panels layout: 4 × 262px wide, 22px gap, left offset 37 ─────────── -->
+
+  <!-- Panel 1: Prussian Alert (x=37) -->
+  <g>
+    <rect x="37" y="80" width="262" height="180" rx="4" fill="#8B2635" stroke="oklch(0.78 0.005 90)" stroke-width="1.5" stroke-opacity="0.30"/>
+    <!-- Cream accent stripe at bottom of swatch -->
+    <rect x="37" y="222" width="262" height="38" rx="0 0 4 4" fill="#F2EDDF" fill-opacity="0.90" stroke="none"/>
+    <rect x="37" y="222" width="262" height="38" rx="0 0 4 4" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="1.5" stroke-opacity="0.30"/>
+    <text x="168" y="245" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#8B2635" stroke="none" text-anchor="middle" opacity="0.70">cream on red</text>
+    <!-- Label -->
+    <text x="168" y="288" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="13" font-weight="600" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.90">Prussian Alert</text>
+    <text x="168" y="307" font-family="Newsreader, 'Iowan Old Style', Georgia, serif" font-size="12" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.60">Bauhaus restraint</text>
+    <text x="168" y="325" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.40">desaturated red on cream</text>
+  </g>
+
+  <!-- Panel 2: Ramune (x=321) -->
+  <g>
+    <rect x="321" y="80" width="262" height="180" rx="4" fill="#A8CDDE" stroke="oklch(0.78 0.005 90)" stroke-width="1.5" stroke-opacity="0.30"/>
+    <!-- Inner tonal ring -->
+    <rect x="333" y="92" width="238" height="156" rx="2" fill="none" stroke="#78AABF" stroke-width="0.75" stroke-opacity="0.30"/>
+    <text x="452" y="245" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#3a6a80" stroke="none" text-anchor="middle" opacity="0.70">pastel blue</text>
+    <text x="452" y="288" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="13" font-weight="600" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.90">Ramune</text>
+    <text x="452" y="307" font-family="Newsreader, 'Iowan Old Style', Georgia, serif" font-size="12" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.60">pastel softness</text>
+    <text x="452" y="325" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.40">soft blue on pale ground</text>
+  </g>
+
+  <!-- Panel 3: King of the Seas (x=605) -->
+  <g>
+    <rect x="605" y="80" width="262" height="180" rx="4" fill="#1E4A55" stroke="oklch(0.78 0.005 90)" stroke-width="1.5" stroke-opacity="0.30"/>
+    <!-- Teal accent stripe -->
+    <rect x="605" y="222" width="262" height="38" rx="0 0 4 4" fill="#3A8A8A" fill-opacity="0.90" stroke="none"/>
+    <rect x="605" y="222" width="262" height="38" rx="0 0 4 4" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="1.5" stroke-opacity="0.30"/>
+    <text x="736" y="245" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#1E4A55" stroke="none" text-anchor="middle" opacity="0.80">nautical teal</text>
+    <text x="736" y="288" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="13" font-weight="600" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.90">King of the Seas</text>
+    <text x="736" y="307" font-family="Newsreader, 'Iowan Old Style', Georgia, serif" font-size="12" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.60">nautical depth</text>
+    <text x="736" y="325" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.40">dark navy · teal accent</text>
+  </g>
+
+  <!-- Panel 4: Selene (x=889) — material-first, glitter reflect, orchid accent -->
+  <g>
+    <rect x="889" y="80" width="262" height="180" rx="4" fill="#C0BDC8" stroke="#9370B8" stroke-width="1.5" stroke-opacity="0.80"/>
+    <!-- Glitter dots (structural purple-teal flake hint) -->
+    <circle cx="920" cy="112" r="2.5" fill="#9370B8" fill-opacity="0.55" stroke="none"/>
+    <circle cx="960" cy="145" r="2" fill="#4ABCCA" fill-opacity="0.45" stroke="none"/>
+    <circle cx="945" cy="175" r="3" fill="#9370B8" fill-opacity="0.40" stroke="none"/>
+    <circle cx="1000" cy="130" r="2" fill="#4ABCCA" fill-opacity="0.50" stroke="none"/>
+    <circle cx="1030" cy="160" r="2.5" fill="#9370B8" fill-opacity="0.45" stroke="none"/>
+    <circle cx="1075" cy="115" r="2" fill="#4ABCCA" fill-opacity="0.40" stroke="none"/>
+    <circle cx="1100" cy="150" r="2.5" fill="#9370B8" fill-opacity="0.35" stroke="none"/>
+    <circle cx="1120" cy="185" r="2" fill="#4ABCCA" fill-opacity="0.50" stroke="none"/>
+    <circle cx="1085" cy="105" r="1.5" fill="#9370B8" fill-opacity="0.60" stroke="none"/>
+    <circle cx="910" cy="200" r="2" fill="#9370B8" fill-opacity="0.30" stroke="none"/>
+    <circle cx="1040" cy="200" r="3" fill="#4ABCCA" fill-opacity="0.35" stroke="none"/>
+    <circle cx="970" cy="115" r="1.5" fill="#9370B8" fill-opacity="0.50" stroke="none"/>
+    <!-- Orchid accent stripe at bottom -->
+    <rect x="889" y="222" width="262" height="38" rx="0 0 4 4" fill="#9370B8" fill-opacity="0.22" stroke="none"/>
+    <rect x="889" y="222" width="262" height="38" rx="0 0 4 4" fill="none" stroke="#9370B8" stroke-width="1.5" stroke-opacity="0.60"/>
+    <text x="1020" y="245" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="#9370B8" stroke="none" text-anchor="middle" opacity="0.80">glitter reflect ABS</text>
+    <text x="1020" y="288" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="13" font-weight="600" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.90">Selene</text>
+    <text x="1020" y="307" font-family="Newsreader, 'Iowan Old Style', Georgia, serif" font-size="12" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.60">material-first</text>
+    <text x="1020" y="325" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.40">silver-grey · purple-teal flake</text>
+  </g>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="38" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

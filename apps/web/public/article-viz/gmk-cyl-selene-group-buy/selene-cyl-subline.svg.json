@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-02T00:00:00.000Z",
+  "commit": null,
+  "kind": "inline-viz",
+  "source": null,
+  "template": null,
+  "tokens_snapshot": null,
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "article_slug": "gmk-cyl-selene-group-buy",
+  "article_pillar": "news",
+  "section_anchor": "Why this is on the radar",
+  "splash_color": { "name": "orchid", "hex": "#9370B8" },
+  "outputs": ["apps/web/public/article-viz/gmk-cyl-selene-group-buy/selene-cyl-subline.svg"],
+  "data_sources": [
+    "apps/web/src/content/articles/gmk-cyl-selene-group-buy.mdx — 'GMK CYL Prussian Alert led with a tight, desaturated red-on-cream palette — a Bauhaus restraint story'",
+    "apps/web/src/content/articles/gmk-cyl-selene-group-buy.mdx — 'GMK CYL Ramune leaned into soft pastel blues'",
+    "apps/web/src/content/articles/gmk-cyl-selene-group-buy.mdx — 'GMK CYL King of the Seas used a nautical teal as a dominant hue'",
+    "apps/web/src/content/articles/gmk-cyl-selene-group-buy.mdx — 'Selene is the first set in the sub-line to make the plastic material itself the primary visual argument'"
+  ],
+  "warnings": []
+}
