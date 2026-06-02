@@ -2285,3 +2285,12 @@ passes accumulate signals.)
 - score: 4.5 (impact × ease / 10)
 - issue: #251
 > **Resolved (2026-06-02):** Added mentionedParts entries for mode-sonnet (board) and ikki68-aurora (board). Added PartReference tags inline at line 48 — "The Mode Sonnet, the Wuque IKKI68 Aurora" → "The <PartReference id="mode-sonnet" />, the <PartReference id="ikki68-aurora" />". Bumped updatedAt to 2026-06-02. Both /part/board/mode-sonnet and /part/board/ikki68-aurora now show this article in their "mentioned in" rail. 697 e2e green. `bc5de31`
+
+### [x] [content] [5.4] hall-effect-mainstream — mentionedParts empty despite hmx-cloud, gateron-oil-king, tecsee-sapphire-v2 named in body — addressed in 5468bb6
+- category: content
+- filed: 2026-06-02 by cloud /iterate audit
+- impact: 6 (hall-effect-mainstream is a cornerstone trends article; three named switches — HMX Cloud, Oil King, Tecsee Sapphire — are explicitly listed as the "boutique linear crowd" bench at line 57; all three have part pages; their /part/switch/ mentioned-in rails miss this high-prominence article)
+- ease: 9 (frontmatter array change only — no code, no component, no schema change)
+- score: 5.4 (impact × ease / 10)
+- issue: [mirror-failed: 2026-06-02T00:00:00Z]
+- elements: apps/web/src/content/articles/hall-effect-mainstream.mdx
