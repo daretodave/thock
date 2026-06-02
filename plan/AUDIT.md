@@ -72,6 +72,14 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [data] [3.6] drop-holy-panda-x-deep-dive missing tecsee-sapphire-v2 in mentionedParts — addressed in c5a75ec, closes #250
+- category: data
+- filed: 2026-06-02 by cloud /iterate audit
+- impact: 4 (Tecsee Sapphire named 3× in the HPX deep-dive as the primary D-shaped tactile comparison; /part/switch/tecsee-sapphire-v2 gains "mentioned in" cross-link from a quality deep-dive)
+- ease: 9 (single frontmatter entry addition)
+- score: 3.6 (impact × ease / 10)
+- issue: #250
+
 ### [x] [data] [4.5] clicky-switches-deep-dive missing mentionedParts for kailh-box-jade — addressed in e18e10b4b5c2476f6f020301297bb6f8fe3389e7
 - category: data
 - filed: 2026-06-02 by cloud /iterate audit
