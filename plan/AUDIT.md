@@ -72,6 +72,14 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [data] [4.5] clicky-switches-deep-dive missing mentionedParts for kailh-box-jade — addressed in e18e10b4b5c2476f6f020301297bb6f8fe3389e7
+- category: data
+- filed: 2026-06-02 by cloud /iterate audit
+- impact: 5 (article is a prominent deep-dive where Kailh Box Jade is the canonical click-bar example across 4 body sections; readers on /part/switch/kailh-box-jade see no "mentioned in" rail for this article; kailh-box-jade shipped phase 34 cf656ef but article predates the data record)
+- ease: 9 (add mentionedParts frontmatter field — one entry)
+- score: 4.5 (impact × ease / 10)
+- issue: [mirror-failed: 2026-06-02T00:00:00Z]
+
 ### [x] [content] [3.5] GMK CYL Selene (live, Jun 19 close) has no companion article — Rule 3 violation — addressed in 87136a8, closes #246
 - category: content-gaps
 - filed: 2026-06-01 by cloud /iterate audit
@@ -656,7 +664,7 @@
 - root cause: no automation refreshes group-buy `status` as `endDate` passes. Same drift pattern critique pass 11 caught on Ishtar R2 (`478c952` shipped the renderer-side guard; source data was later corrected on Ishtar R2). Sweet Nightmare was the remaining stale record from the same vintage of buys.
 > **Resolved (2026-05-14):** Flipped `status` from `"live"` to `"closed"` and bumped `updatedAt` to 2026-05-14T05:30Z on `data/group-buys/kbdfans-gsk-sweet-nightmare.json`. Generated manifest + search index refreshed by the verify gate's `data:validate` step. The renderer-side guard already protected `/group-buys` from leaking "LIVE" labels on the closed-band card; this fix aligns the source-of-truth data with the buy's actual state so `/group-buys/past` archive selection, RSS, JSON-LD, and any downstream consumer all see the correct field. Broader systemic-drift fix (status-refresher script or schema-time computation) deferred — this tick is the one-record correction. `3443fe9`
 
-### [x] [MED] /404 soft fallback for unknown article + tag slugs (deferred from phase 16) — addressed in pending commit (this tick)
+### [x] [MED] /404 soft fallback for unknown article + tag slugs (deferred from phase 16) — addressed in e18e10b4b5c2476f6f020301297bb6f8fe3389e7 (this tick)
 - issue: #18
 > Filed 2026-05-09 by phase 16 brief. The global `app/not-found.tsx` ships in phase 16 with a search input + pillar nav. Article and tag routes have their own `not-found.tsx` (phases 5 + 12) but they don't suggest "Did you mean…?" matches. Spec from `plan/steps/01_build_plan.md` § Phase 16 calls for MiniSearch-powered suggestions on `/article/<unknown-slug>` and `/tag/<unknown-slug>`. Cheap once the search index already ships (phase 14): the not-found page can call `searchIndex.search(slug)` and surface the top 3 hits.
 >
@@ -666,7 +674,7 @@
 >
 > **Resolved (2026-05-10):** Shipped a `<SuggestedArticles>` Server Component at `apps/web/src/components/not-found/SuggestedArticles.tsx` that takes a slug, calls `searchArticles(slugAsQuery, 3)` from the phase-14 runtime, and renders 0–3 hits with pillar eyebrow + title + publishedAt. New `apps/web/src/middleware.ts` forwards `request.nextUrl.pathname` into an `x-pathname` header so Server Components can recover the slug (Next 15 doesn't pass route params to `not-found.tsx`). Both per-route not-found pages now read the header, derive the slug via a `pathnameToSlug` helper, and render the suggestions rail (article variant uses "did you mean", tag variant uses "articles touching that topic"). The slug-to-query transform replaces hyphens/underscores with spaces; empty slugs short-circuit to `null` so the 404 stays clean when no overlap exists. New e2e in `apps/e2e/tests/polish.spec.ts` covers the catalog-overlap + no-overlap + tag-fallback cases. Unit test for `pathnameToSlug` covers the `null` / root / trailing-slash edge cases. 324 e2e green on first parallel attempt — clean run, no #418 hydration flake.
 
-### [x] [MED] Accessibility audit pass — phase 16 follow-up — addressed in pending commit (this tick)
+### [x] [MED] Accessibility audit pass — phase 16 follow-up — addressed in e18e10b4b5c2476f6f020301297bb6f8fe3389e7 (this tick)
 > Filed 2026-05-09 by phase 16 brief. Phase 16's polish scope listed an a11y pass: contrast against the OKLCH tokens, focus rings on every interactive, alt text on every `<img>`, heading order, keyboard nav. Deferred from the page-shipping tick because the audit itself wants its own structured pass with a checklist + per-finding fixes.
 >
 > **Action:** new audit pass that walks every canonical URL, runs axe-core (or a hand checklist) at desktop + mobile, files individual `[a11y]` rows here for each violation. Drain on subsequent /iterate ticks.
@@ -684,7 +692,7 @@
 >
 > The 2 filed findings drain in subsequent /iterate ticks. The [MED] heading-skip is the cheapest concrete win; the [LOW] skip-link is a one-time root-layout edit that touches every route.
 
-### [x] [LOW] /sources per-citation index — phase 16 follow-up — addressed in pending commit (this tick)
+### [x] [LOW] /sources per-citation index — phase 16 follow-up — addressed in e18e10b4b5c2476f6f020301297bb6f8fe3389e7 (this tick)
 - issue: #19
 > Filed 2026-05-09 by phase 16 brief. The /sources page currently surfaces the per-article aggregate count of `<Source>` tags. The full per-citation index (article → quote → URL) requires an MDX walker that parses every body, extracts each `<Source href= text= />` tuple, dedupes by href, and surfaces (article, quote, source) rows. Worth shipping but not phase-16 scope.
 >
@@ -808,7 +816,7 @@
 - issue: #85
 > Filed 2026-05-09 by phase 17 brief. Blocked on `workflows: write` permission for cloud /march ticks through 2026-05-13. User granted the permission out-of-band (ACTIONS_PAT scope updated). Shipped at `5926ac7` with `.lighthouserc.json` (perf warn ≥0.90; a11y / best-practices / SEO hard errors ≥0.95; numberOfRuns: 3 median-of-3) and `.github/workflows/lighthouse.yml` (triggered on `deployment_status` filtered to Vercel Preview successes). Walks `/`, `/article/gateron-oil-king-deep-dive`, `/trends/tracker`, `/group-buys`. CLOUD_LOOP.md updated with `Workflows: read+write` PAT scope note at `047d2f2`. Row marked [x] in expand pass 10 commit.
 
-### [x] [LOW] Tighten homepage bundle-size budget from 250 KB → 200 KB — addressed in pending commit (this tick)
+### [x] [LOW] Tighten homepage bundle-size budget from 250 KB → 200 KB — addressed in e18e10b4b5c2476f6f020301297bb6f8fe3389e7 (this tick)
 > Filed 2026-05-09 by phase 17 brief. The bearings target is 200 KB gzipped for the homepage; phase 17 set the gate at 250 KB to leave one or two iterate ticks of headroom. After the loop drains any obvious chunk waste (lucide-react, large MDX shims, unused tag taxonomies), tighten the budget to 200 KB to match the bearings.
 >
 > **Action:** edit `apps/web/scripts/measure-bundle.mts` `DEFAULT_MAX_KB` to 200, or pass `--max=200` via the verify wiring in root `package.json`.
@@ -843,7 +851,7 @@
 >
 > **Resolved (2026-05-11):** `apps/web/src/app/layout.tsx` now has a `.skip-link` as the first `<body>` child targeting `#main`. CSS in `globals.css` hides it at rest and reveals it on keyboard focus with an accent-bordered panel. All 43 route `<main>` elements received `id="main"` (16 page.tsx + 12 loading.tsx + 5 not-found.tsx + 10 error.tsx). Regression guard added to `apps/e2e/tests/a11y.spec.ts` (skip-link present, target resolves, link becomes visible on focus). `7899462`
 
-### [x] [a11y] [3.5] color-contrast — text-accent-mu at small text sizes (pillar eyebrows) — addressed in pending commit (this tick — cloud /iterate drain)
+### [x] [a11y] [3.5] color-contrast — text-accent-mu at small text sizes (pillar eyebrows) — addressed in e18e10b4b5c2476f6f020301297bb6f8fe3389e7 (this tick — cloud /iterate drain)
 - issue: #79
 - filed: 2026-05-11 by Phase 26 axe discovery pass
 - wcag: 1.4.3 Contrast (Minimum) AA — 4.5:1 for text <18px / <14px bold
@@ -857,7 +865,7 @@
 - once fixed: add `expect(results.violations.filter(v => v.id === 'color-contrast')).toHaveLength(0)` assertion to a11y.spec.ts for the affected pages
 > **Resolved (2026-05-13):** Took option (a) — swapped `text-accent-mu` → `text-accent` at all 16 12-px decorative eyebrow call sites under `apps/web/src/` (Article/Home/Related article cards, MentionedPartsRail, PartHero, PageStub, RootNotFound + SuggestedArticles, newsletter/sources/about pages, all four `not-found.tsx` eyebrows, and `/part/[kind]/page.tsx`). The `text-accent-mu` token itself stays untouched — only the eyebrow contexts that need the contrast lift get swapped. Tag-chip contrast is out of scope for this row: chips use categorical `text-tag-*` tints via `TINT_BY_CATEGORY` in `packages/ui/src/TagChip.tsx`, not `text-accent-mu`. A separate future audit pass can score the tag-chip contrast question on its own. Regression guard added to `apps/e2e/tests/a11y.spec.ts`: scoped `AxeBuilder.include('[data-testid="article-hero-eyebrow"]')` on `/article/gateron-oil-king-deep-dive` asserts zero `color-contrast` violations on the representative eyebrow context. Phase A docstring + inline comments updated to reflect that both Phase-26-filed serious color-contrast rows (text-text-3 + text-accent-mu) have targeted regression guards now. 567 e2e green on first attempt.
 
-### [x] [a11y] [3.0] color-contrast — text-text-3 at small text (tracker header metadata, back links) — addressed in pending commit (this tick — cloud /iterate drain)
+### [x] [a11y] [3.0] color-contrast — text-text-3 at small text (tracker header metadata, back links) — addressed in e18e10b4b5c2476f6f020301297bb6f8fe3389e7 (this tick — cloud /iterate drain)
 - issue: #77
 - filed: 2026-05-11 by Phase 26 axe discovery pass
 - wcag: 1.4.3 Contrast (Minimum) AA
@@ -870,7 +878,7 @@
 - once fixed: add targeted contrast assertion to a11y.spec.ts
 > **Resolved (2026-05-13):** Swapped `text-text-3` → `text-text-2` on the three specific elements the discovery pass identified: `apps/web/src/components/tracker/TrackerHeader.tsx:43` ("YYYY · week") and `:49` ("of 52") in the tracker week-block; `apps/web/src/app/tag/[slug]/page.tsx:127` ("← all tags" back link, `hover:text-text` preserved). The 25+ other `text-text-3 + text-micro` occurrences across the codebase were NOT in this row's scope — the discovery pass didn't flag them and any wider treatment is a separate audit-time decision. Two new regression-guard `test()`s in `apps/e2e/tests/a11y.spec.ts` run `AxeBuilder.include()` scoped to `[data-testid="tracker-week-block"]` and `[data-testid="tag-page-back-link"]` and assert zero `color-contrast` violations on each — locks the substitution in. Cloud /iterate drain.
 
-### [x] [a11y] [2.5] link-in-text-block — /about body links use color only (no underline or other non-color indicator) — addressed in pending commit (this tick — cloud /iterate drain)
+### [x] [a11y] [2.5] link-in-text-block — /about body links use color only (no underline or other non-color indicator) — addressed in e18e10b4b5c2476f6f020301297bb6f8fe3389e7 (this tick — cloud /iterate drain)
 - issue: #88
 - filed: 2026-05-11 by Phase 26 axe discovery pass
 - wcag: 1.4.1 Use of Color (A) — links must not be distinguished from surrounding text by color alone
@@ -1472,7 +1480,7 @@ passes accumulate signals.)
 - elements: `apps/web/src/app/group-buys/helpers.ts` — `partitionGroupBuys()` (live/announced/ended routing, sort orders, ENDED_CAP=6) and `splitLiveByUrgency()` (≤3 days → closingSoon, else liveOpen)
 > **Resolved (2026-05-16):** Added `apps/web/src/app/group-buys/__tests__/helpers.test.ts` with 12 tests covering both functions: live/announced/ended/shipped/expired-live routing, ENDED_CAP=6 enforcement, live endDate-asc sort, ended endDate-desc sort, splitLiveByUrgency 0-day/3-day → closingSoon, 4-day → liveOpen, mixed list. 622 e2e green. `b279ab8`
 
-### [x] [test] [4.5] HomeSectionHeading — no colocated unit tests — addressed in pending commit (this tick)
+### [x] [test] [4.5] HomeSectionHeading — no colocated unit tests — addressed in e18e10b4b5c2476f6f020301297bb6f8fe3389e7 (this tick)
 - issue: #125
 - category: test
 - filed: 2026-05-16 by cloud /iterate audit
