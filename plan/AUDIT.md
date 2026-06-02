@@ -2336,3 +2336,13 @@ passes accumulate signals.)
 - issue: #256
 - elements: apps/web/src/content/articles/gasket-mount-reality.mdx line 58
 > **Resolved (2026-06-02):** Added bakeneko65 to mentionedParts frontmatter (id: bakeneko, kind: board, slug: bakeneko65). Added `<PartReference id="bakeneko" />` inline at line 58 replacing plain "the Bakeneko" — "the Geon Frog, the Bakeneko, and Mode's own lineup" → "the Geon Frog, the <PartReference id="bakeneko" />, and Mode's own lineup". Bumped updatedAt to 2026-06-02T00:00:00.000Z. /part/board/bakeneko65 now shows gasket-mount-reality in its "mentioned in" rail. 697 e2e green. `3db692a`
+
+### [x] [content] [4.0] plate-materials-explained — no mentionedParts despite naming hmx-cloud and gateron-oil-king as build-recipe exemplars — addressed in 00be895, closes #257
+- category: content
+- filed: 2026-06-02 by cloud /iterate audit
+- impact: 5 (plate-materials-explained is a deep-dives guide; HMX Cloud named as the "let the switch sing" FR4 build switch; Oil King named as the "deep thock" polycarbonate gasket-mount build switch; /part/switch/hmx-cloud and /part/switch/gateron-oil-king both gain "mentioned in" cross-link from a practical build reference article)
+- ease: 8 (add mentionedParts frontmatter + two PartReference inline tags + updatedAt bump; no schema or code change)
+- score: 4.0 (impact × ease / 10)
+- issue: #257
+- elements: apps/web/src/content/articles/plate-materials-explained.mdx lines 92, 94
+> **Resolved (2026-06-02):** Added mentionedParts frontmatter (id: hmx-cloud, kind: switch, slug: hmx-cloud; id: oil-king, kind: switch, slug: gateron-oil-king). Added `<PartReference id="hmx-cloud" />` at line 92 ("let the switch sing" build) and `<PartReference id="oil-king" />` at line 94 ("deep thock" default build). updatedAt bumped to 2026-06-02. Language gate clean. 697 e2e green. `00be895`
