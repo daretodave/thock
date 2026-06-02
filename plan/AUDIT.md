@@ -2266,3 +2266,13 @@ passes accumulate signals.)
 - score: 4.5 (impact × ease / 10)
 - issue: #249
 > **Resolved (2026-06-01):** Added `sa` to tags array between `oem-profile` and `mt3` in keycap-profiles-compared.mdx frontmatter. Bumped updatedAt to 2026-06-01. /tag/sa now shows 1 article. 697 e2e green. `dafaab4`
+
+### [x] [content] [3.6] gmk-cyl-selene-group-buy — missing InlineViz (0 of ≥2 required by bearings) — addressed in c3c9e06
+- category: content
+- filed: 2026-06-02 by cloud /iterate audit
+- impact: 6 (bearings rule mandates ≥2 InlineViz per article as non-optional editorial baseline; violation on a live news article reduces editorial quality and is visible to all readers of the article)
+- ease: 6 (2 SVGs hand-authored + 2 InlineViz tag insertions + updatedAt bump; no schema or component change)
+- score: 3.6 (impact × ease / 10)
+- issue: [mirror-failed: 2026-06-02T00:00:00Z]
+- elements: apps/web/src/content/articles/gmk-cyl-selene-group-buy.mdx
+> **Resolved (2026-06-02):** Added selene-kit-pricing.svg (horizontal range-bar chart — base $110–155, 3 add-on kits $55–85 each, fully-kitted $220–325 footer note; orchid #9370B8 highlight on base kit) and selene-cyl-subline.svg (4-panel GMK CYL sub-line character map: Prussian Alert/Bauhaus restraint → Ramune/pastel softness → King of the Seas/nautical depth → Selene/material-first glitter reflect). Both SVGs use orchid #9370B8 as splash; provenance JSONs include article-body citations for no-fabrication compliance. Placed after pricing paragraph and after sub-line comparison paragraph respectively. Language gate clean. updatedAt bumped to 2026-06-02. 697 e2e green. `c3c9e06`
