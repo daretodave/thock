@@ -2327,7 +2327,7 @@ passes accumulate signals.)
 - issue: [mirror-failed: 2026-06-02T00:00:00Z]
 - elements: apps/web/src/content/articles/hall-effect-mainstream.mdx
 
-### [ ] [content] [4.0] gasket-mount-reality — bakeneko65 named in body but absent from mentionedParts
+### [x] [content] [4.0] gasket-mount-reality — bakeneko65 named in body but absent from mentionedParts — addressed in 3db692a, closes #256
 - category: content
 - filed: 2026-06-02 by cloud /iterate audit
 - impact: 5 (gasket-mount-reality popularityScore=28; article names "the Bakeneko" as a peer canonical reference board alongside "Mode's own lineup" at line 58; /part/board/bakeneko65 gains "mentioned in" cross-link from this moderately-trafficked ideas-pillar article; bakeneko65 currently shows 0 "mentioned in" cross-links from this article)
@@ -2335,3 +2335,4 @@ passes accumulate signals.)
 - score: 4.0 (impact × ease / 10)
 - issue: #256
 - elements: apps/web/src/content/articles/gasket-mount-reality.mdx line 58
+> **Resolved (2026-06-02):** Added bakeneko65 to mentionedParts frontmatter (id: bakeneko, kind: board, slug: bakeneko65). Added `<PartReference id="bakeneko" />` inline at line 58 replacing plain "the Bakeneko" — "the Geon Frog, the Bakeneko, and Mode's own lineup" → "the Geon Frog, the <PartReference id="bakeneko" />, and Mode's own lineup". Bumped updatedAt to 2026-06-02T00:00:00.000Z. /part/board/bakeneko65 now shows gasket-mount-reality in its "mentioned in" rail. 697 e2e green. `3db692a`
