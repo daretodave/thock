@@ -2346,3 +2346,13 @@ passes accumulate signals.)
 - issue: #257
 - elements: apps/web/src/content/articles/plate-materials-explained.mdx lines 92, 94
 > **Resolved (2026-06-02):** Added mentionedParts frontmatter (id: hmx-cloud, kind: switch, slug: hmx-cloud; id: oil-king, kind: switch, slug: gateron-oil-king). Added `<PartReference id="hmx-cloud" />` at line 92 ("let the switch sing" build) and `<PartReference id="oil-king" />` at line 94 ("deep thock" default build). updatedAt bumped to 2026-06-02. Language gate clean. 697 e2e green. `00be895`
+
+### [x] [content] [4.0] trends-tracker-preview — gateron-oil-king missing from mentionedParts despite 3 prose mentions — addressed in d0625b7
+- category: content
+- filed: 2026-06-02 by cloud /iterate audit
+- impact: 5 (trends-tracker-preview popularityScore 30, the canonical explainer article for new readers learning the tracker; Gateron Oil King is used as the primary worked example across 3 prose mentions — line 23 "A switch family like Gateron Oil King", line 38 naming convention example, line 48 "sat at +42 with a clean ascending sparkline"; /part/switch/gateron-oil-king gains cross-link from the most-read tracker entry-point article)
+- ease: 8 (add 1 mentionedParts entry + PartReference inline at line 23 + updatedAt bump; no schema or code change)
+- score: 4.0 (impact × ease / 10)
+- issue: [mirror-failed: 2026-06-02T00:00:00Z]
+- elements: apps/web/src/content/articles/trends-tracker-preview.mdx line 23
+> **Resolved (2026-06-02):** Added mentionedParts entry (id: oil-king, kind: switch, slug: gateron-oil-king). Replaced plain "Gateron Oil King" at line 23 with `<PartReference id="oil-king" />`. updatedAt bumped to 2026-06-02. Language gate clean. 697 e2e green. `d0625b7`
