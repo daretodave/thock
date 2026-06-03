@@ -72,6 +72,15 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [content] [4.5] divinikey-dcs-dolch-group-buy — mode-sonnet missing from mentionedParts despite body mention — addressed in b1d2fb3, closes #263
+- category: content
+- filed: 2026-06-03 by cloud /iterate audit
+- impact: 5 (live group-buy companion article; Mode Sonnet board named in body prose at line 53 as a reference chassis example; /part/board/mode-sonnet gains "mentioned in" cross-link from a live buy article)
+- ease: 9 (add structured mentionedParts entry + swap plain text to PartReference; updatedAt bump)
+- score: 4.5 (impact × ease / 10)
+- issue: #263
+> **Resolved (2026-06-03):** Added structured mentionedParts entry (id: mode-sonnet, kind: board, slug: mode-sonnet). Replaced plain-text "the Mode Sonnet" with `<PartReference id="mode-sonnet" />` at line 53. updatedAt bumped to 2026-06-03. /part/board/mode-sonnet now shows divinikey-dcs-dolch-group-buy in its "mentioned in" rail. Language gate clean. 700 e2e green. `b1d2fb3`
+
 ### [x] [data] [4.5] clicky-switches-deep-dive missing drop-holy-panda-x in mentionedParts — addressed in 1ae85e1, closes #260
 - category: data
 - filed: 2026-06-03 by cloud /iterate audit
