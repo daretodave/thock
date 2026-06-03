@@ -72,6 +72,13 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [data] [5.4] drop-holy-panda-x-deep-dive missing gateron-oil-king + hmx-cloud in mentionedParts — addressed in a2bc454, closes #259
+- category: data
+- filed: 2026-06-03 by cloud /iterate audit
+- impact: 6 (Oil King and HMX Cloud are the two primary linear benchmarks the article triangulates against, with explicit force-curve specs; absent from mentionedParts breaks bidirectional cross-reference rails on both part pages)
+- ease: 9 (frontmatter edit — add two slug entries)
+- score: 5.4 (impact × ease / 10)
+
 ### [x] [data] [4.5] W23 tracker: DCS Grass Valley score +18 on a down row — should be -18 — addressed in this commit, closes #255
 - category: data
 - filed: 2026-06-02 by cloud /iterate audit
