@@ -1,0 +1,23 @@
+{
+  "generated_by": "content-curator",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-27T13:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "case-materials-compared",
+  "article_pillar": "guides",
+  "section_anchor": "choosing-for-your-build",
+  "brief_summary": "Horizontal bar chart of typical 65% case weights by material. Three bars: aluminium (~1.2 kg, ochre-accented as the reference/heaviest), polycarbonate (~0.7 kg), ABS (~0.65 kg). X-axis runs 0 to 1.2 kg with four tick marks. Bars are proportional to stated weights. A footer note clarifies the figures represent case-only mass without PCB or switches, and that brass weight inserts can increase aluminium boards further.",
+  "target": "apps/web/public/article-viz/case-materials-compared/material-weight-chart.svg",
+  "splash_color": { "name": "ochre", "oklch": "#B07A3A" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "JetBrains Mono"],
+  "data_sources": [
+    "apps/web/src/content/articles/case-materials-compared.mdx § 'Aluminium' — 'A CNC-machined aluminium 65% typically lands around 1.2 kg without PCB or switches'",
+    "apps/web/src/content/articles/case-materials-compared.mdx § 'Polycarbonate' — 'A PC 65% typically runs around 0.7 kg'",
+    "apps/web/src/content/articles/case-materials-compared.mdx § 'ABS' — 'ABS 65% cases land around 0.65 kg'"
+  ],
+  "outputs": ["apps/web/public/article-viz/case-materials-compared/material-weight-chart.svg"],
+  "warnings": []
+}

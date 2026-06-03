@@ -1,0 +1,23 @@
+{
+  "generated_by": "content-curator",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-27T13:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "case-materials-compared",
+  "article_pillar": "guides",
+  "section_anchor": "polycarbonate",
+  "brief_summary": "Three-panel cross-section diagram showing how acoustic energy from switch bottom-out travels through each case material. Aluminium: thick walls absorb and trap high-frequency energy (dashed arrows, short escape paths). Polycarbonate: thinner, less-dense walls allow more energy to escape the cavity (solid escape arrows in all directions, including upward), producing a brighter character. ABS: moderate escape with a hollow-cavity annotation indicating the ring that foam mods address. Ochre arrows trace the energy flow; dashed lines indicate absorption.",
+  "target": "apps/web/public/article-viz/case-materials-compared/sound-profile-diagram.svg",
+  "splash_color": { "name": "ochre", "oklch": "#B07A3A" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "apps/web/src/content/articles/case-materials-compared.mdx § 'Aluminium' — 'Dense walls damp high frequencies; the case becomes a near-silent resonant chamber'",
+    "apps/web/src/content/articles/case-materials-compared.mdx § 'Polycarbonate' — 'Less dense than aluminium so more acoustic energy escapes rather than being absorbed. The resonance is brighter'",
+    "apps/web/src/content/articles/case-materials-compared.mdx § 'ABS' — 'Slight hollowness without foam modifications, but easily dampened'"
+  ],
+  "outputs": ["apps/web/public/article-viz/case-materials-compared/sound-profile-diagram.svg"],
+  "warnings": []
+}

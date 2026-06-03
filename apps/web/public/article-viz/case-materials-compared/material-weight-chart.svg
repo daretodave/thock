@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Relative weight of typical 65% keyboard cases by material — aluminium approximately 1.2 kg, polycarbonate approximately 0.7 kg, ABS approximately 0.65 kg</title>
+
+  <!-- Theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+
+  <!-- Header -->
+  <text x="100" y="68" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.9">65% case weight — material comparison</text>
+
+  <!-- Y-axis line -->
+  <line x1="200" y1="100" x2="200" y2="360" stroke-opacity="0.55"/>
+
+  <!-- X-axis line -->
+  <line x1="200" y1="360" x2="1050" y2="360" stroke-opacity="0.55"/>
+
+  <!-- X-axis ticks and labels -->
+  <g stroke-opacity="0.4">
+    <line x1="200" y1="360" x2="200" y2="368"/>
+    <line x1="412" y1="360" x2="412" y2="368"/>
+    <line x1="624" y1="360" x2="624" y2="368"/>
+    <line x1="836" y1="360" x2="836" y2="368"/>
+    <line x1="1048" y1="360" x2="1048" y2="368"/>
+  </g>
+  <text x="200" y="386" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">0</text>
+  <text x="412" y="386" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">0.3</text>
+  <text x="624" y="386" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">0.6</text>
+  <text x="836" y="386" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">0.9</text>
+  <text x="1048" y="386" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">1.2</text>
+  <text x="625" y="416" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.4">kilograms (kg) — 65% case only, no PCB or switches</text>
+
+  <!-- Grid lines (subtle) -->
+  <g stroke-opacity="0.1">
+    <line x1="412" y1="100" x2="412" y2="360"/>
+    <line x1="624" y1="100" x2="624" y2="360"/>
+    <line x1="836" y1="100" x2="836" y2="360"/>
+    <line x1="1048" y1="100" x2="1048" y2="360"/>
+  </g>
+
+  <!-- ── ROW 1: Aluminium ── -->
+  <!-- Bar width: 1.2 kg → 848px (1048-200) × (1.2/1.2) = 848 -->
+  <text x="180" y="155" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.85">aluminium</text>
+  <rect x="200" y="130" width="848" height="36" fill="#B07A3A" fill-opacity="0.22" stroke="#B07A3A" stroke-opacity="0.9" stroke-width="2"/>
+  <text x="1058" y="153" font-family="JetBrains Mono, monospace" font-size="14" fill="#B07A3A" stroke="none" opacity="0.95"> ~1.2 kg</text>
+  <text x="210" y="152" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#B07A3A" stroke="none" opacity="0.7">heaviest — authoritative desk feel</text>
+
+  <!-- ── ROW 2: Polycarbonate ── -->
+  <!-- Bar width: 0.7 / 1.2 × 848 = 495 -->
+  <text x="180" y="243" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.85">polycarbonate</text>
+  <rect x="200" y="218" width="495" height="36" fill="oklch(0.78 0.005 90 / 0.10)" stroke-opacity="0.75" stroke-width="2"/>
+  <text x="705" y="241" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75"> ~0.7 kg</text>
+  <text x="210" y="240" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.5">light · slight flex at the deck</text>
+
+  <!-- ── ROW 3: ABS ── -->
+  <!-- Bar width: 0.65 / 1.2 × 848 = 459 -->
+  <text x="180" y="331" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.85">ABS</text>
+  <rect x="200" y="306" width="459" height="36" fill="oklch(0.78 0.005 90 / 0.10)" stroke-opacity="0.75" stroke-width="2"/>
+  <text x="669" y="329" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75"> ~0.65 kg</text>
+  <text x="210" y="328" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.5">lightest — easiest to carry</text>
+
+  <!-- Bottom note -->
+  <line x1="100" y1="440" x2="1100" y2="440" stroke-opacity="0.15"/>
+  <text x="600" y="454" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.4">weights are representative; individual designs vary by wall thickness and any brass weight inserts</text>
+</svg>

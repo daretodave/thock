@@ -1,0 +1,25 @@
+{
+  "generated_by": "content-curator",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-27T13:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "case-materials-compared",
+  "article_pillar": "guides",
+  "section_anchor": "aluminium",
+  "brief_summary": "Four-axis comparison ladder for aluminium, polycarbonate, and ABS case materials. Rows are weight (65% typical mass), case flex (under typing load), cost (relative manufacturing cost), and acoustic brightness. The ochre accent marks the leading material per axis — aluminium for weight and acoustic damping, PC for flex, ABS for cost. Makes explicit that no single material wins all four.",
+  "target": "apps/web/public/article-viz/case-materials-compared/material-comparison-ladder.svg",
+  "splash_color": { "name": "ochre", "oklch": "#B07A3A" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "JetBrains Mono", "Newsreader"],
+  "data_sources": [
+    "apps/web/src/content/articles/case-materials-compared.mdx § 'Aluminium' — 'A CNC-machined aluminium 65% typically lands around 1.2 kg without PCB or switches'",
+    "apps/web/src/content/articles/case-materials-compared.mdx § 'Polycarbonate' — 'A PC 65% typically runs around 0.7 kg'",
+    "apps/web/src/content/articles/case-materials-compared.mdx § 'ABS' — 'ABS 65% cases land around 0.65 kg'",
+    "apps/web/src/content/articles/case-materials-compared.mdx § 'Polycarbonate' — 'Less dense than aluminium so more acoustic energy escapes rather than being absorbed'",
+    "apps/web/src/content/articles/case-materials-compared.mdx § 'ABS' — 'Cheaper to produce than PC and far cheaper than machined aluminium'"
+  ],
+  "outputs": ["apps/web/public/article-viz/case-materials-compared/material-comparison-ladder.svg"],
+  "warnings": []
+}

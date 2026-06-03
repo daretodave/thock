@@ -1,0 +1,109 @@
+---
+title: "Keyboard case materials, compared: aluminium, polycarbonate, and ABS"
+slug: case-materials-compared
+pillar: guides
+publishedAt: '2026-05-27T13:00:00.000Z'
+updatedAt: '2026-05-27T13:00:00.000Z'
+author: thock
+lede: "The case is the largest resonant body in a keyboard. Aluminium, polycarbonate, and ABS each change the sound, feel, and weight profile in fundamentally different ways — here is what each material actually does."
+heroImage: /hero-art/case-materials-compared.svg
+heroImageAlt: "Cross-section diagram of a keyboard case showing different material layers"
+tags:
+  - aluminum
+  - polycarbonate
+  - abs
+  - beginner
+mentionedParts: []
+readTimeMinutes: 7
+featured: false
+popularityScore: 42
+---
+
+A builder shopping their second or third board will eventually stop filtering by layout and start filtering by case material. The spec sheets name aluminium, polycarbonate, and ABS as though those words are self-explanatory. They are not — or rather, they explain something real, but not the thing most buyers think they explain. The case material is not a cosmetic choice. It is the acoustic and structural substrate the entire build rests on, and every other tuning decision downstream of it — switch choice, foam stack, plate material — is working around what the case has already decided.
+
+## Why the case material matters
+
+A mechanical keyboard case is a resonant enclosure. The plate and PCB float inside it; the case sets the acoustic baseline they float within. When a switch bottoms out, the energy from that impact has to go somewhere: into the keycap, into the plate, into the PCB, and into the case walls. What the case does with that energy — absorbs it, reflects it, transmits it — determines whether the resulting sound is dead and authoritative, bright and airy, or warm but slightly hollow.
+
+Three physical properties drive the difference between materials. Density determines how much acoustic energy the walls absorb rather than pass through: denser materials damp high frequencies more aggressively. Stiffness determines whether the case flexes under typing load, which contributes a springier bottom-out feel in more compliant materials. Cost of manufacture determines which tier of the market each material dominates. These three axes interact, and no single material wins all of them simultaneously.
+
+<InlineViz
+  src="/article-viz/case-materials-compared/material-comparison-ladder.svg"
+  alt="Four-row comparison table for aluminium, polycarbonate, and ABS across weight, case flex, cost, and acoustic brightness. Each row shows horizontal bars with ochre highlighting the leading material per axis. Aluminium leads on weight and acoustic damping; polycarbonate on flex; ABS on lowest cost."
+  caption="No single material leads every axis. The build decides which trade-off matters most."
+  accent="#B07A3A"
+/>
+
+## Aluminium
+
+Aluminium is the prestige default. Dense, stiff, and cold to the touch in winter, it produces the typing character the enthusiast market spent the better part of a decade chasing: a tight, controlled bottom-out with almost no case resonance bleeding into the sound signature. The walls absorb high-frequency vibration efficiently, which means the switch's own character — its stem, its spring, its housing material — reads more cleanly through the board without the case adding acoustic color of its own.
+
+Two families exist within the aluminium market and they behave differently enough to be worth separating. Extruded aluminium is the budget route: the case profile is forced through a die, which keeps wall thickness uniform but limits the geometry to simple extrusions. Entry-level aluminium boards — including many that retail under $150 — use extruded shells with machined end-caps. The walls are thinner than a CNC-machined case, which means slightly less damping but still far more than any plastic. CNC-machined aluminium is the premium route: the case is milled from a billet, which allows complex geometries, precisely tuned wall thicknesses, and the kind of interior chamfering that board designers use to control internal resonance. A CNC-machined aluminium 65% typically lands around 1.2 kg without PCB or switches. That weight is not incidental — it is part of the typing experience, the desk presence, the deliberateness of the bottom-out.
+
+The honest trade-offs are price and hand-feel. CNC aluminium costs more to produce than any plastic alternative, and that cost passes to the buyer. And on a cold desk in a cold room, an aluminium case feels exactly like what it is: a block of metal. Some builders love that sensation. Others reach for a wrist rest by the second hour.
+
+Real boards that land squarely in this character: the <Source href="https://drop.com/buy/drop-ctrl-mechanical-keyboard">Drop CTRL</Source> at the accessible end, the Mode Sonnet at the boutique end. Both are aluminium-bodied; both demonstrate the damped, controlled acoustic signature the material is known for.
+
+## Polycarbonate
+
+Polycarbonate is the transparent option, though transparency is a downstream consequence of its material properties rather than the reason to choose it. The more meaningful fact is density: PC is substantially less dense than aluminium, which changes what happens to acoustic energy at the case wall. Instead of being absorbed, more of it escapes or is reflected back into the cavity, and what comes out of the board has a brighter, livelier character than the same build in aluminium would produce.
+
+The lower density also contributes a slight flex. A PC case under sustained typing load gives a small amount — not dramatically, not enough to feel like a gasket-mount board, but enough that a typist moving from an aluminium board to a PC board on the same afternoon will notice the deck feels marginally springier. This is not a flaw. For builders chasing a lighter, more energetic bottom-out, that flex is part of the appeal.
+
+The acoustic profile is the reason PC has found a home in budget-to-mid builds rather than being purely a bargain material. The ikki68 Aurora <Source href="https://wuquestudio.com/products/ikki68-aurora-r2">from Wuque Studio</Source> is the canonical example: a polycarbonate case that reads acoustically brighter and airier than most aluminium boards at similar or lower price points. The board became a reference point for "what PC sounds like" because Wuque executed the geometry well enough that the material's natural resonance character came through clearly. A PC 65% typically runs around 0.7 kg — meaningfully lighter than its aluminium equivalent.
+
+<Callout type="note" title="PC and RGB">
+  Polycarbonate's transparency is a practical advantage for boards with per-key RGB — light passes through the case walls and diffuses outward. If underglow or case-glow is a priority, PC is the only mainstream case material that delivers it cleanly. Aluminium and ABS block light entirely.
+</Callout>
+
+## ABS
+
+ABS — acrylonitrile butadiene styrene — is the most common case material in absolute terms, because it is the cheapest to produce at scale. Injection molding ABS is fast, the tooling is inexpensive, and the material flows cleanly into complex geometries without the wall-thickness constraints that extrusion imposes on aluminium. These manufacturing advantages are why most prebuilt boards — the Keychron V series, most Royal Kludge designs, the entire entry-level tier — ship ABS cases whether or not the spec sheet calls it out by name.
+
+The sound profile sits between the two plastics. ABS is stiffer than PC under typing load, which means less deck flex and a firmer bottom-out. It is also slightly denser, which means it absorbs a little more acoustic energy than PC does — the result is a warmer, less bright character than PC, without reaching the controlled damping of aluminium. The community shorthand for unmodded ABS is "warm but slightly hollow," and that framing is accurate: the case cavity resonates enough to add a subtle ring to the bottom-out that aluminium would have suppressed and PC would have amplified into brightness. ABS lands somewhere in between, with a warmth that works well for many switch types.
+
+The hollow character is also the easiest to address. A sheet of case foam on the bottom of the cavity absorbs the ring almost completely, and the modification costs almost nothing and takes five minutes. Most ABS-cased prebuilts benefit from this mod more than they benefit from any switch or keycap change. ABS 65% cases land around 0.65 kg — the lightest of the three, which makes ABS-cased boards the easiest to carry and the most desk-friendly for typists who shift their keyboard position frequently.
+
+<InlineViz
+  src="/article-viz/case-materials-compared/sound-profile-diagram.svg"
+  alt="Three cross-section panels, one per material. Aluminium panel shows thick walls with dashed arrows indicating energy absorbed by walls and only a downward solid arrow reaching the base. Polycarbonate panel shows thinner walls with solid ochre arrows escaping left, right, and upward from the switch impact point. ABS panel shows moderate escape with a dashed hollow-cavity rectangle and partial side-escape arrows."
+  caption="Where the energy goes determines the character. Aluminium traps it; polycarbonate releases it; ABS holds some and lets some through."
+  accent="#B07A3A"
+/>
+
+## Material combinations and the case-as-layer principle
+
+The three materials do not always appear in isolation. Boards that blend them are common enough to be worth naming.
+
+Aluminium base with polycarbonate top is the most frequent hybrid. The base provides mass and isolation from the desk surface, damping low-frequency vibrations before they reach the typing deck. The polycarbonate top provides the slight deck flex and acoustic brightness that a full-aluminium build would suppress. The result is a board that trades the pure dead-silence of all-aluminium for a character that is controlled but not muted. Many mid-range customs in the $200–$400 range use this configuration.
+
+Brass weights — typically a milled block that sits in the case bottom, below the PCB — are a separate mechanism entirely. Brass is dense enough that it adds mass to the assembly without meaningfully stiffening the case walls. The effect is a lower resonant frequency in the cavity and a slightly slower, heavier bottom-out sensation. Builders who want the desk presence of a heavy aluminium board without paying for a full CNC-aluminium shell sometimes reach for an aluminium case with a brass weight as the cost-efficient middle path. The Mode Sonnet offers this configuration explicitly, and the brass weight option is the most common reason a board of that tier sells out its heavier SKU before the standard one.
+
+<Callout type="note" title="The mount interacts with all of this">
+  Case material sets the acoustic baseline, but mount style multiplies or cancels it. A gasket-mount PC board sounds different from a top-mount PC board in the same shell because the gasket decouples the plate from the case walls that the material analysis describes. Read the mount before reading the material — or read them together. The mounting styles guide covers this in full.
+</Callout>
+
+## Choosing for your build
+
+<InlineViz
+  src="/article-viz/case-materials-compared/material-weight-chart.svg"
+  alt="Three horizontal bars on a kilogram axis from zero to 1.2 kg. Aluminium bar extends the full width to 1.2 kg, ochre-accented. Polycarbonate bar reaches 0.7 kg. ABS bar reaches 0.65 kg. Each bar carries a short inline note: aluminium is heaviest with authoritative desk feel, polycarbonate has slight flex at the deck, ABS is lightest and easiest to carry."
+  caption="Weight is load-bearing data for builders who travel or share desk space — the gap between aluminium and plastic is not trivial."
+  accent="#B07A3A"
+/>
+
+The decision collapses to four scenarios, and the material follows directly from which scenario applies.
+
+**Budget first.** If the build envelope has a hard ceiling and the buyer is not willing to spend it on the case, ABS is the right answer. The acoustic limitation is real but addressable with a five-dollar foam sheet. The weight advantage is genuine. At this tier, the case is not the editorial statement; the switch and keycap set are.
+
+**Bright and airy character.** If the build intent is a lively, resonant sound — the kind of board that reads as energetic rather than authoritative — polycarbonate is the correct starting point. Switch pairing matters here: a PC case amplifies brightness, so a switch with strong top-out character (tactiles, most linears with stiff springs) will come through clearly. A very dark, quiet linear on PC can read as incoherent, where the case says bright and the switch says quiet.
+
+**Heft and silence.** If the build intent is a heavy, controlled board with no case resonance bleeding into the sound signature — the typing experience that reads as serious, desk-bound, deliberate — aluminium is the only answer. Budget for the price difference. CNC aluminium is not cheap, and the boards that execute it well charge accordingly.
+
+**Mixed, for a reason.** If the build is chasing a specific combination — mass without total damping, or transparency without full acoustic brightness — hybrid configurations are worth seeking out rather than treating as compromises. An aluminium base with a polycarbonate top is not a hedged bet; it is a deliberate configuration that the community has converged on for a reason. A brass weight in an aluminium case is an additive tuning tool, not evidence that the case alone was not enough. The case-as-dampening-layer principle runs in both directions: adding mass tunes one axis, changing material tunes another, and the combination is not the sum of two separate compromises but a distinct sound profile in its own right.
+
+The question to ask before committing: what does the build want to say when it speaks? If the answer is quiet authority, buy aluminium. If the answer is bright and alive, buy polycarbonate. If the answer is warm utility that ships tomorrow and leaves budget for a better switch set, buy ABS and add foam.
+
+## What to watch
+
+The mid-tier custom market is moving toward case-material configurability at checkout — FR4 plate alongside aluminium or polycarbonate is already a checkbox on several configurators, and case-material choice is following the same path. Builders who historically had to pick the one case the vendor shipped are gaining access to the same board in two or three materials with meaningful acoustic differences. That migration is worth watching because it will generate the first clean A/B data on what these materials actually do in the same design, with the same mount, the same PCB, and the same foam stack — the controlled comparison the scene has been missing and that listening tests have never been able to provide cleanly. When that data arrives, this guide gets an update.

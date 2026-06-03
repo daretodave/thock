@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="#4A4540" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — keyboard case materials compared: aluminium, polycarbonate, and ABS cross-sections</title>
+
+  <!--
+    LAYOUT — three keyboard case cross-sections shown in side profile,
+    stacked vertically. Each section represents one material; they share
+    the same outer silhouette shape so the material difference is immediately
+    legible. Left-to-right reading order across the canvas.
+
+    Canvas: 1200 × 750 px, viewBox 0 0 1200 750
+    Stroke: #4A4540 warm grey, 2px base weight
+    Splash: #B07A3A ochre — accent lines, callout arms, focal treatment on aluminium
+    Background: transparent
+
+    Three case panels, each: 320 px wide, 180 px tall.
+    Panel centers x: 220, 600, 980.
+    Panel tops y: 220, seat bottom y: 400, with PCB bed implied at y 420.
+
+    Material treatments:
+      Aluminium (left)   — dense diagonal hatching inside walls; heavier wall depth (20 px)
+      Polycarbonate (mid) — thin outline only, dashed interior seam, near-empty body
+      ABS (right)         — uniform block, simple solid outline, no texture
+
+    Callout arms in ochre extend from each panel upward to label zones.
+    Annotation ticks + left-margin axis in family convention.
+  -->
+
+  <!-- ─── SPLASH: ochre elliptical wash under the aluminium panel (focal) ─── -->
+  <ellipse cx="220" cy="310" rx="195" ry="110" fill="#B07A3A" fill-opacity="0.11" stroke="none"/>
+
+  <!-- ─── SHARED BASELINE across all three panels ─────────────────────────── -->
+  <line x1="60" y1="420" x2="1140" y2="420" stroke="#4A4540" stroke-opacity="0.35"/>
+
+  <!-- Baseline tick marks at each panel edge — family rhythm anchors -->
+  <g stroke="#4A4540" stroke-opacity="0.3">
+    <line x1="80"   y1="420" x2="80"   y2="430"/>
+    <line x1="360"  y1="420" x2="360"  y2="430"/>
+    <line x1="440"  y1="420" x2="440"  y2="430"/>
+    <line x1="760"  y1="420" x2="760"  y2="430"/>
+    <line x1="840"  y1="420" x2="840"  y2="430"/>
+    <line x1="1120" y1="420" x2="1120" y2="430"/>
+  </g>
+
+  <!-- Faint horizontal reference at panel top — visual ruler -->
+  <line x1="60" y1="200" x2="1140" y2="200" stroke="#4A4540" stroke-dasharray="3 7" stroke-opacity="0.18"/>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       PANEL A — ALUMINIUM (focal; left column, x 80–360)
+       Dense diagonal hatch inside the walls. Wall depth 22 px each side.
+       Tighter hatching = denser material, machined precision feel.
+       Outer case body is a rounded-corner trapezoid in cross-section:
+         top edge  y=210 (slightly narrower)
+         base edge y=420 (full width)
+         outer left wall x=80; outer right wall x=360
+       ═══════════════════════════════════════════════════════════════════════ -->
+
+  <!-- Ochre splash rect inside the aluminium panel -->
+  <rect x="81" y="211" width="278" height="208" fill="#B07A3A" fill-opacity="0.07" stroke="none"/>
+
+  <!-- Outer case outline — aluminium -->
+  <path d="M 80 420 L 90 210 L 350 210 L 360 420 Z" stroke="#B07A3A" stroke-width="2.5"/>
+
+  <!-- Top surface — mild dome suggesting anodized plate -->
+  <path d="M 90 210 Q 220 198 350 210" stroke="#B07A3A" stroke-width="2.5"/>
+
+  <!-- Inner cavity walls — 22 px inset each side, ceiling at y=232 -->
+  <path d="M 112 420 L 119 232 L 321 232 L 328 420" stroke="#4A4540" stroke-opacity="0.6"/>
+
+  <!-- PCB bed / bottom floor line at the inner base -->
+  <line x1="112" y1="410" x2="328" y2="410" stroke="#4A4540" stroke-opacity="0.35"/>
+
+  <!-- DENSE DIAGONAL HATCH inside left wall (aluminium character) -->
+  <g stroke="#B07A3A" stroke-opacity="0.38" stroke-width="1.3">
+    <!-- Left wall hatch — strip between x 80–112, y 232–420 -->
+    <line x1="82"  y1="300" x2="112" y2="270"/>
+    <line x1="82"  y1="325" x2="112" y2="295"/>
+    <line x1="82"  y1="350" x2="112" y2="320"/>
+    <line x1="82"  y1="375" x2="112" y2="345"/>
+    <line x1="82"  y1="400" x2="112" y2="370"/>
+    <line x1="82"  y1="420" x2="112" y2="390"/>
+    <line x1="90"  y1="250" x2="112" y2="228"/>
+    <line x1="82"  y1="275" x2="112" y2="245"/>
+    <!-- Right wall hatch — strip between x 328–360, y 232–420 -->
+    <line x1="328" y1="270" x2="358" y2="300"/>
+    <line x1="328" y1="295" x2="358" y2="325"/>
+    <line x1="328" y1="320" x2="358" y2="350"/>
+    <line x1="328" y1="345" x2="358" y2="375"/>
+    <line x1="328" y1="370" x2="358" y2="400"/>
+    <line x1="328" y1="390" x2="358" y2="420"/>
+    <line x1="328" y1="228" x2="350" y2="250"/>
+    <line x1="328" y1="245" x2="358" y2="275"/>
+  </g>
+
+  <!-- Top wall hatch — ceiling strip between y 210–232 -->
+  <g stroke="#B07A3A" stroke-opacity="0.35" stroke-width="1.3">
+    <line x1="100" y1="210" x2="115" y2="225"/>
+    <line x1="125" y1="210" x2="140" y2="225"/>
+    <line x1="150" y1="210" x2="165" y2="225"/>
+    <line x1="175" y1="210" x2="190" y2="225"/>
+    <line x1="200" y1="210" x2="215" y2="225"/>
+    <line x1="225" y1="210" x2="240" y2="225"/>
+    <line x1="250" y1="210" x2="265" y2="225"/>
+    <line x1="275" y1="210" x2="290" y2="225"/>
+    <line x1="300" y1="210" x2="315" y2="225"/>
+    <line x1="325" y1="210" x2="340" y2="225"/>
+  </g>
+
+  <!-- Machined chamfer bevel ticks at the four inner wall corners -->
+  <g stroke="#B07A3A" stroke-opacity="0.55" stroke-width="1.5">
+    <line x1="112" y1="232" x2="104" y2="222"/>
+    <line x1="328" y1="232" x2="336" y2="222"/>
+    <line x1="112" y1="412" x2="104" y2="420"/>
+    <line x1="328" y1="412" x2="336" y2="420"/>
+  </g>
+
+  <!-- LABEL: "aluminium" — small monospace, ochre, centered below panel -->
+  <g font-family="ui-monospace, 'JetBrains Mono', monospace" font-size="22" fill="#B07A3A" stroke="none" letter-spacing="3" text-anchor="middle">
+    <text x="220" y="462">aluminium</text>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       PANEL B — POLYCARBONATE (middle column, x 440–760)
+       Thinnest outline (1.5 px), near-empty interior — transparent material.
+       Wall depth 10 px only — very thin walls read as "flex / flex mount."
+       Dashed interior seam suggesting translucency. No fill.
+       ═══════════════════════════════════════════════════════════════════════ -->
+
+  <!-- Outer case outline — polycarbonate -->
+  <path d="M 440 420 L 450 210 L 750 210 L 760 420 Z" stroke="#4A4540" stroke-width="1.5"/>
+
+  <!-- Top surface dome -->
+  <path d="M 450 210 Q 600 199 750 210" stroke="#4A4540" stroke-width="1.5"/>
+
+  <!-- Inner cavity walls — 10 px inset, ceiling at y=220 — very thin walls -->
+  <path d="M 460 420 L 464 220 L 736 220 L 740 420" stroke="#4A4540" stroke-opacity="0.5" stroke-width="1.4"/>
+
+  <!-- Dashed internal mid-seam suggesting translucency / light passing through -->
+  <line x1="465" y1="315" x2="735" y2="315" stroke="#4A4540" stroke-opacity="0.22" stroke-dasharray="4 8" stroke-width="1.2"/>
+
+  <!-- Very faint vertical diffusion ticks — translucency hint -->
+  <g stroke="#4A4540" stroke-opacity="0.14" stroke-width="1.2">
+    <line x1="500" y1="225" x2="500" y2="415"/>
+    <line x1="540" y1="225" x2="540" y2="415"/>
+    <line x1="580" y1="225" x2="580" y2="415"/>
+    <line x1="620" y1="225" x2="620" y2="415"/>
+    <line x1="660" y1="225" x2="660" y2="415"/>
+    <line x1="700" y1="225" x2="700" y2="415"/>
+  </g>
+
+  <!-- PCB bed line -->
+  <line x1="461" y1="410" x2="739" y2="410" stroke="#4A4540" stroke-opacity="0.28"/>
+
+  <!-- LABEL: "polycarbonate" -->
+  <g font-family="ui-monospace, 'JetBrains Mono', monospace" font-size="22" fill="#4A4540" stroke="none" letter-spacing="3" text-anchor="middle" opacity="0.7">
+    <text x="600" y="462">polycarbonate</text>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       PANEL C — ABS (right column, x 840–1120)
+       Uniform block outline, no internal texture — simple isotropic solid.
+       Wall depth 16 px — mid-range. No hatching, no dashes. Pure geometry.
+       ═══════════════════════════════════════════════════════════════════════ -->
+
+  <!-- Outer case outline — ABS -->
+  <path d="M 840 420 L 850 210 L 1110 210 L 1120 420 Z" stroke="#4A4540" stroke-width="2"/>
+
+  <!-- Top surface dome -->
+  <path d="M 850 210 Q 980 199 1110 210" stroke="#4A4540" stroke-width="2"/>
+
+  <!-- Inner cavity walls — 16 px inset, ceiling at y=226 -->
+  <path d="M 866 420 L 872 226 L 1088 226 L 1094 420" stroke="#4A4540" stroke-opacity="0.55"/>
+
+  <!-- PCB bed line -->
+  <line x1="867" y1="410" x2="1093" y2="410" stroke="#4A4540" stroke-opacity="0.3"/>
+
+  <!-- ABS mold-line tick — a single horizontal seam mid-wall height suggesting
+       injection mold parting line (characteristic of ABS manufacture) -->
+  <line x1="840" y1="315" x2="1120" y2="315" stroke="#4A4540" stroke-opacity="0.20" stroke-dasharray="2 0"/>
+
+  <!-- Subtle corner-weight marks at inner wall corners — "uniform material" cue -->
+  <g stroke="#4A4540" stroke-opacity="0.35">
+    <line x1="866" y1="226" x2="877" y2="226"/>
+    <line x1="1083" y1="226" x2="1094" y2="226"/>
+  </g>
+
+  <!-- LABEL: "ABS" -->
+  <g font-family="ui-monospace, 'JetBrains Mono', monospace" font-size="22" fill="#4A4540" stroke="none" letter-spacing="3" text-anchor="middle" opacity="0.7">
+    <text x="980" y="462">ABS</text>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       ANNOTATION CALLOUT ARMS (ochre) — three property callouts above the
+       panels, one per material. Each arm: a short leader line from a wall
+       edge up to a horizontal tick, with a circle end-cap.
+       Property being annotated: wall character / material legibility cue.
+       ═══════════════════════════════════════════════════════════════════════ -->
+
+  <!-- ALUMINIUM callout — wall density / machined precision
+       From left wall midpoint (x=80, y=315) upward and left -->
+  <g stroke="#B07A3A" stroke-width="1.8" fill="none">
+    <line x1="85"  y1="320" x2="38"  y2="160"/>
+    <line x1="38"  y1="160" x2="165" y2="160"/>
+    <circle cx="38" cy="160" r="3.5" fill="#B07A3A" stroke="#B07A3A"/>
+  </g>
+  <!-- Callout annotation tick mark at arm end -->
+  <line x1="165" y1="157" x2="165" y2="163" stroke="#B07A3A" stroke-width="1.5" stroke-opacity="0.7"/>
+
+  <!-- POLYCARBONATE callout — thin walls / transparency
+       From top center (x=600, y=209) upward -->
+  <g stroke="#4A4540" stroke-width="1.5" fill="none" stroke-opacity="0.55">
+    <line x1="600" y1="205" x2="600" y2="115"/>
+    <line x1="518" y1="115" x2="682" y2="115"/>
+    <circle cx="600" cy="115" r="3" fill="#4A4540" stroke="#4A4540"/>
+  </g>
+  <!-- Tick marks at each end of horizontal arm -->
+  <g stroke="#4A4540" stroke-opacity="0.4" stroke-width="1.3">
+    <line x1="518" y1="112" x2="518" y2="118"/>
+    <line x1="682" y1="112" x2="682" y2="118"/>
+  </g>
+
+  <!-- ABS callout — uniform solid block / parting line
+       From right wall midpoint (x=1120, y=315) upward and right -->
+  <g stroke="#4A4540" stroke-width="1.5" fill="none" stroke-opacity="0.55">
+    <line x1="1116" y1="320" x2="1155" y2="160"/>
+    <line x1="1035" y1="160" x2="1155" y2="160"/>
+    <circle cx="1155" cy="160" r="3" fill="#4A4540" stroke="#4A4540" fill-opacity="0.55"/>
+  </g>
+  <line x1="1035" y1="157" x2="1035" y2="163" stroke="#4A4540" stroke-width="1.3" stroke-opacity="0.4"/>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       DIMENSION / THICKNESS ANNOTATION BRACKETS
+       Small double-arrow brackets on the left wall of each panel showing
+       relative wall thickness at a glance.
+       ═══════════════════════════════════════════════════════════════════════ -->
+
+  <!-- Aluminium — thick wall bracket (22 px) at y 315, left wall x 80–112 -->
+  <g stroke="#B07A3A" stroke-width="1.5" fill="none" stroke-opacity="0.7">
+    <line x1="62" y1="315" x2="75" y2="315"/>
+    <line x1="62" y1="310" x2="62" y2="320"/>
+    <!-- arrow end at inner wall -->
+    <line x1="75" y1="310" x2="75" y2="320"/>
+  </g>
+
+  <!-- Polycarbonate — thin wall bracket (10 px) at y 315, left wall x 440–460 -->
+  <g stroke="#4A4540" stroke-width="1.3" fill="none" stroke-opacity="0.5">
+    <line x1="424" y1="315" x2="436" y2="315"/>
+    <line x1="424" y1="310" x2="424" y2="320"/>
+    <line x1="436" y1="310" x2="436" y2="320"/>
+  </g>
+
+  <!-- ABS — mid wall bracket (16 px) at y 315, left wall x 840–866 -->
+  <g stroke="#4A4540" stroke-width="1.3" fill="none" stroke-opacity="0.5">
+    <line x1="822" y1="315" x2="840" y2="315"/>
+    <line x1="822" y1="310" x2="822" y2="320"/>
+    <line x1="840" y1="310" x2="840" y2="320"/>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       MOUNTING POINT DETAILS — three gasketed mounting posts visible at the
+       bottom of each case cross-section, at the inner-cavity base level.
+       Represented as small filled circles on the PCB bed line.
+       ═══════════════════════════════════════════════════════════════════════ -->
+
+  <!-- Aluminium mount posts — 3 posts, gasketed (ring around each post) -->
+  <g stroke="#B07A3A" stroke-opacity="0.65">
+    <circle cx="155" cy="410" r="5" stroke-width="1.5"/>
+    <circle cx="220" cy="410" r="5" stroke-width="1.5"/>
+    <circle cx="285" cy="410" r="5" stroke-width="1.5"/>
+    <!-- Gasket rings -->
+    <circle cx="155" cy="410" r="9" stroke-width="1" stroke-opacity="0.35"/>
+    <circle cx="220" cy="410" r="9" stroke-width="1" stroke-opacity="0.35"/>
+    <circle cx="285" cy="410" r="9" stroke-width="1" stroke-opacity="0.35"/>
+  </g>
+
+  <!-- Polycarbonate mount posts -->
+  <g stroke="#4A4540" stroke-opacity="0.45">
+    <circle cx="518" cy="410" r="5" stroke-width="1.4"/>
+    <circle cx="600" cy="410" r="5" stroke-width="1.4"/>
+    <circle cx="682" cy="410" r="5" stroke-width="1.4"/>
+    <circle cx="518" cy="410" r="9" stroke-width="1" stroke-opacity="0.3"/>
+    <circle cx="600" cy="410" r="9" stroke-width="1" stroke-opacity="0.3"/>
+    <circle cx="682" cy="410" r="9" stroke-width="1" stroke-opacity="0.3"/>
+  </g>
+
+  <!-- ABS mount posts -->
+  <g stroke="#4A4540" stroke-opacity="0.45">
+    <circle cx="905" cy="410" r="5" stroke-width="1.4"/>
+    <circle cx="980" cy="410" r="5" stroke-width="1.4"/>
+    <circle cx="1055" cy="410" r="5" stroke-width="1.4"/>
+    <circle cx="905" cy="410" r="9" stroke-width="1" stroke-opacity="0.3"/>
+    <circle cx="980" cy="410" r="9" stroke-width="1" stroke-opacity="0.3"/>
+    <circle cx="1055" cy="410" r="9" stroke-width="1" stroke-opacity="0.3"/>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SECTION DIVIDER LINES — faint vertical rules between the three panels
+       to read as "three separate specimens"
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <line x1="400" y1="160" x2="400" y2="480" stroke="#4A4540" stroke-opacity="0.12" stroke-dasharray="2 8"/>
+  <line x1="800" y1="160" x2="800" y2="480" stroke="#4A4540" stroke-opacity="0.12" stroke-dasharray="2 8"/>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       LOWER ANNOTATION BAND — a horizontal data strip beneath all three
+       panels (y 510–570) showing a rough relative "acoustic density" bar
+       for each material. Aluminium = longest bar (most resonant / most dense);
+       polycarbonate = shortest bar (most damped / least rigid);
+       ABS = mid-length bar.
+       No numbers — purely comparative proportional bars.
+       ═══════════════════════════════════════════════════════════════════════ -->
+
+  <!-- Axis label line -->
+  <line x1="60" y1="540" x2="1140" y2="540" stroke="#4A4540" stroke-opacity="0.15"/>
+
+  <!-- Aluminium bar — ochre, 260 px wide (longest) -->
+  <line x1="80" y1="528" x2="340" y2="528" stroke="#B07A3A" stroke-width="3" stroke-linecap="round"/>
+  <!-- end tick -->
+  <line x1="340" y1="523" x2="340" y2="533" stroke="#B07A3A" stroke-width="1.5"/>
+  <!-- start tick -->
+  <line x1="80" y1="523" x2="80" y2="533" stroke="#B07A3A" stroke-width="1.5"/>
+
+  <!-- Polycarbonate bar — grey, 140 px wide (shortest) -->
+  <line x1="530" y1="528" x2="670" y2="528" stroke="#4A4540" stroke-width="3" stroke-linecap="round" stroke-opacity="0.55"/>
+  <line x1="670" y1="523" x2="670" y2="533" stroke="#4A4540" stroke-width="1.5" stroke-opacity="0.55"/>
+  <line x1="530" y1="523" x2="530" y2="533" stroke="#4A4540" stroke-width="1.5" stroke-opacity="0.55"/>
+
+  <!-- ABS bar — grey, 200 px wide (mid) -->
+  <line x1="880" y1="528" x2="1080" y2="528" stroke="#4A4540" stroke-width="3" stroke-linecap="round" stroke-opacity="0.55"/>
+  <line x1="1080" y1="523" x2="1080" y2="533" stroke="#4A4540" stroke-width="1.5" stroke-opacity="0.55"/>
+  <line x1="880" y1="523" x2="880" y2="533" stroke="#4A4540" stroke-width="1.5" stroke-opacity="0.55"/>
+
+  <!-- Vertical tie lines from each bar back up to its panel -->
+  <g stroke="#4A4540" stroke-opacity="0.14" stroke-width="1" stroke-dasharray="1 6">
+    <line x1="220" y1="422" x2="220" y2="525"/>
+    <line x1="600" y1="422" x2="600" y2="525"/>
+    <line x1="980" y1="422" x2="980" y2="525"/>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       LEFT-MARGIN AXIS TICKS — family-conventional didactic ticks on the
+       left edge aligning to key horizontal datums:
+         y=200  (top reference)
+         y=315  (mid-wall / thermal gradient midpoint)
+         y=420  (baseline / PCB bed)
+         y=528  (acoustic comparison strip)
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <g stroke="#4A4540" stroke-opacity="0.32">
+    <line x1="38" y1="200" x2="58" y2="200"/>
+    <line x1="44" y1="315" x2="58" y2="315"/>
+    <line x1="38" y1="420" x2="58" y2="420"/>
+    <line x1="44" y1="528" x2="58" y2="528"/>
+  </g>
+
+  <!-- Vertical axis line tying the four left-margin ticks -->
+  <line x1="58" y1="195" x2="58" y2="533" stroke="#4A4540" stroke-opacity="0.18" stroke-dasharray="2 6"/>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       FOCAL ACCENT — a horizontal accent line in ochre spanning the
+       aluminium panel at its wall-midpoint. The "feature line" that reads
+       as the editorial anchor — aluminium is the reference material.
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <line x1="90" y1="315" x2="350" y2="315" stroke="#B07A3A" stroke-opacity="0.55" stroke-width="2"/>
+
+  <!-- Small accent dot at the centre of the aluminium focal line -->
+  <circle cx="220" cy="315" r="4.5" fill="#B07A3A" fill-opacity="0.9" stroke="#B07A3A"/>
+  <circle cx="220" cy="315" r="9"   fill="none"    stroke="#B07A3A" stroke-opacity="0.4"/>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       BRASS-BRONZE THEME DOT — family ornamental anchor, top-right margin
+       ═══════════════════════════════════════════════════════════════════════ -->
+  <circle cx="1148" cy="92" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

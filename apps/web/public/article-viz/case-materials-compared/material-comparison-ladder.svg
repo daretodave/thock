@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 580" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Case material comparison across four axes — weight, flex, cost, and acoustic brightness for aluminium, polycarbonate, and ABS</title>
+
+  <!-- Theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+
+  <!-- Header -->
+  <text x="100" y="68" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.9">case material — four axes</text>
+
+  <!-- Column headers -->
+  <text x="380" y="105" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="#B07A3A" stroke="none" text-anchor="middle" font-weight="600">aluminium</text>
+  <text x="640" y="105" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">polycarbonate</text>
+  <text x="900" y="105" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">ABS</text>
+
+  <!-- Divider under headers -->
+  <line x1="100" y1="115" x2="1100" y2="115" stroke-opacity="0.22"/>
+
+  <!-- Vertical separators -->
+  <line x1="260" y1="100" x2="260" y2="530" stroke-opacity="0.15"/>
+  <line x1="520" y1="100" x2="520" y2="530" stroke-opacity="0.15"/>
+  <line x1="780" y1="100" x2="780" y2="530" stroke-opacity="0.15"/>
+  <line x1="1040" y1="100" x2="1040" y2="530" stroke-opacity="0.15"/>
+
+  <!-- ── ROW 1: WEIGHT ── -->
+  <text x="170" y="175" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75" text-anchor="middle">weight</text>
+  <text x="170" y="193" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.45" text-anchor="middle">65% typical</text>
+
+  <!-- Aluminium weight bar (heavy: ~1.2 kg) — long, ochre accent -->
+  <rect x="280" y="155" width="200" height="26" fill="#B07A3A" fill-opacity="0.22" stroke="#B07A3A" stroke-opacity="0.9"/>
+  <text x="490" y="173" font-family="JetBrains Mono, monospace" font-size="13" fill="#B07A3A" stroke="none" opacity="0.95"> ~1.2 kg</text>
+  <!-- Polycarbonate weight bar (light: ~0.7 kg) -->
+  <rect x="540" y="155" width="116" height="26" fill="oklch(0.78 0.005 90 / 0.10)" stroke-opacity="0.7"/>
+  <text x="666" y="173" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7"> ~0.7 kg</text>
+  <!-- ABS weight bar (~0.65 kg) -->
+  <rect x="800" y="155" width="108" height="26" fill="oklch(0.78 0.005 90 / 0.10)" stroke-opacity="0.7"/>
+  <text x="918" y="173" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7"> ~0.65 kg</text>
+
+  <!-- ROW 1 separator -->
+  <line x1="100" y1="205" x2="1100" y2="205" stroke-opacity="0.12"/>
+
+  <!-- ── ROW 2: FLEX ── -->
+  <text x="170" y="260" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75" text-anchor="middle">case flex</text>
+  <text x="170" y="278" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.45" text-anchor="middle">under load</text>
+
+  <!-- Aluminium flex bar (rigid → short) -->
+  <rect x="280" y="242" width="36" height="26" fill="oklch(0.78 0.005 90 / 0.10)" stroke-opacity="0.65"/>
+  <text x="326" y="260" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">none</text>
+
+  <!-- PC flex bar (springy → medium) — ochre accent as "winner" for flex -->
+  <rect x="540" y="242" width="140" height="26" fill="#B07A3A" fill-opacity="0.22" stroke="#B07A3A" stroke-opacity="0.9"/>
+  <text x="690" y="260" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#B07A3A" stroke="none" opacity="0.95">slight spring</text>
+
+  <!-- ABS flex bar (rigid → short) -->
+  <rect x="800" y="242" width="40" height="26" fill="oklch(0.78 0.005 90 / 0.10)" stroke-opacity="0.65"/>
+  <text x="850" y="260" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">none</text>
+
+  <!-- ROW 2 separator -->
+  <line x1="100" y1="292" x2="1100" y2="292" stroke-opacity="0.12"/>
+
+  <!-- ── ROW 3: COST ── -->
+  <text x="170" y="347" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75" text-anchor="middle">cost</text>
+  <text x="170" y="365" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.45" text-anchor="middle">relative</text>
+
+  <!-- Aluminium cost (highest) -->
+  <rect x="280" y="329" width="210" height="26" fill="oklch(0.78 0.005 90 / 0.10)" stroke-opacity="0.65"/>
+  <text x="500" y="347" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6"> highest</text>
+
+  <!-- PC cost (moderate) -->
+  <rect x="540" y="329" width="130" height="26" fill="oklch(0.78 0.005 90 / 0.10)" stroke-opacity="0.65"/>
+  <text x="680" y="347" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6"> moderate</text>
+
+  <!-- ABS cost (lowest → ochre winner) -->
+  <rect x="800" y="329" width="74" height="26" fill="#B07A3A" fill-opacity="0.22" stroke="#B07A3A" stroke-opacity="0.9"/>
+  <text x="884" y="347" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#B07A3A" stroke="none" opacity="0.95"> lowest</text>
+
+  <!-- ROW 3 separator -->
+  <line x1="100" y1="379" x2="1100" y2="379" stroke-opacity="0.12"/>
+
+  <!-- ── ROW 4: ACOUSTIC BRIGHTNESS ── -->
+  <text x="170" y="436" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75" text-anchor="middle">acoustic</text>
+  <text x="170" y="454" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.45" text-anchor="middle">brightness</text>
+
+  <!-- Aluminium acoustic (dead-silent / very low — short bar) -->
+  <rect x="280" y="416" width="42" height="26" fill="oklch(0.78 0.005 90 / 0.10)" stroke-opacity="0.65"/>
+  <text x="332" y="434" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">damped</text>
+
+  <!-- PC acoustic (brighter — medium bar, ochre winner) -->
+  <rect x="540" y="416" width="174" height="26" fill="#B07A3A" fill-opacity="0.22" stroke="#B07A3A" stroke-opacity="0.9"/>
+  <text x="724" y="434" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#B07A3A" stroke="none" opacity="0.95"> brightest</text>
+
+  <!-- ABS acoustic (moderate) -->
+  <rect x="800" y="416" width="110" height="26" fill="oklch(0.78 0.005 90 / 0.10)" stroke-opacity="0.65"/>
+  <text x="920" y="434" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6"> warm mid</text>
+
+  <!-- Bottom axis -->
+  <line x1="100" y1="500" x2="1100" y2="500" stroke-opacity="0.22"/>
+
+  <!-- Footer note -->
+  <text x="600" y="540" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.48">ochre highlight marks the leading material per axis — no single material wins all four</text>
+</svg>

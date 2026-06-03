@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Acoustic energy flow through keyboard case materials — how vibration from switch bottom-out travels through aluminium, polycarbonate, and ABS case walls</title>
+
+  <!-- Theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+
+  <!-- Header -->
+  <text x="100" y="68" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.9">acoustic energy — where it goes</text>
+
+  <!-- Shared legend -->
+  <line x1="810" y1="58" x2="840" y2="58" stroke="#B07A3A" stroke-width="2.5"/>
+  <text x="848" y="63" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#B07A3A" stroke="none" opacity="0.9">energy flow</text>
+  <line x1="940" y1="58" x2="970" y2="58" stroke-opacity="0.4" stroke-dasharray="4 3"/>
+  <text x="978" y="63" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">absorbed</text>
+
+  <!-- ════════════════════════════════════════════════
+       ALUMINIUM PANEL (left)
+       ════════════════════════════════════════════════ -->
+  <text x="200" y="120" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" font-weight="600">aluminium</text>
+  <text x="200" y="140" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">dense · stiff walls</text>
+
+  <!-- Case outline — aluminium (thick walls, clean rect) -->
+  <rect x="100" y="165" width="200" height="310" stroke-opacity="0.85" stroke-width="10" stroke-linejoin="round"/>
+  <!-- Inner cavity -->
+  <rect x="122" y="187" width="156" height="266" stroke-opacity="0.25" stroke-width="1"/>
+
+  <!-- Switch block in cavity -->
+  <rect x="155" y="240" width="90" height="34" fill="oklch(0.78 0.005 90 / 0.12)" stroke-opacity="0.6"/>
+  <text x="200" y="262" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">switch</text>
+
+  <!-- Bottom-out impact dot -->
+  <circle cx="200" cy="274" r="4" fill="#B07A3A" stroke="#B07A3A"/>
+
+  <!-- Energy arrows — mostly trapped by dense walls, going around cavity -->
+  <!-- Down to bottom -->
+  <path d="M 200 278 L 200 440" stroke="#B07A3A" stroke-width="2" marker-end="url(#arr)"/>
+  <!-- Left into wall — trapped -->
+  <path d="M 192 265 L 124 265" stroke="#B07A3A" stroke-width="2" stroke-dasharray="4 3"/>
+  <path d="M 124 265 L 124 440" stroke="#B07A3A" stroke-width="1.5" stroke-dasharray="4 3" stroke-opacity="0.5"/>
+  <!-- Right into wall — trapped -->
+  <path d="M 248 265 L 276 265" stroke="#B07A3A" stroke-width="2" stroke-dasharray="4 3"/>
+  <path d="M 276 265 L 276 440" stroke="#B07A3A" stroke-width="1.5" stroke-dasharray="4 3" stroke-opacity="0.5"/>
+
+  <!-- Label: most energy absorbed in walls -->
+  <text x="200" y="490" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">dense walls absorb</text>
+  <text x="200" y="505" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">high frequencies</text>
+
+  <!-- Arrowhead marker -->
+  <defs>
+    <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#B07A3A"/>
+    </marker>
+    <marker id="arr-grey" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="oklch(0.78 0.005 90)" fill-opacity="0.55"/>
+    </marker>
+  </defs>
+
+  <!-- ════════════════════════════════════════════════
+       POLYCARBONATE PANEL (centre)
+       ════════════════════════════════════════════════ -->
+  <text x="600" y="120" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" font-weight="600">polycarbonate</text>
+  <text x="600" y="140" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">less dense · slight flex</text>
+
+  <!-- Case outline — PC (thinner walls, slightly translucent feel) -->
+  <rect x="500" y="165" width="200" height="310" stroke-opacity="0.85" stroke-width="5"/>
+  <!-- Inner cavity -->
+  <rect x="515" y="180" width="170" height="295" stroke-opacity="0.2" stroke-width="1"/>
+
+  <!-- Switch block -->
+  <rect x="555" y="240" width="90" height="34" fill="oklch(0.78 0.005 90 / 0.12)" stroke-opacity="0.6"/>
+  <text x="600" y="262" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">switch</text>
+
+  <!-- Bottom-out impact dot -->
+  <circle cx="600" cy="274" r="4" fill="#B07A3A" stroke="#B07A3A"/>
+
+  <!-- Energy arrows — more escapes because walls are less dense -->
+  <!-- Down (strong) -->
+  <path d="M 600 278 L 600 440" stroke="#B07A3A" stroke-width="2" marker-end="url(#arr)"/>
+  <!-- Escape left through wall (solid arrows - energy escapes) -->
+  <path d="M 592 265 L 498 265" stroke="#B07A3A" stroke-width="2" marker-end="url(#arr)"/>
+  <!-- Escape right -->
+  <path d="M 608 265 L 702 265" stroke="#B07A3A" stroke-width="2" marker-end="url(#arr)"/>
+  <!-- Upward escape (case resonates more) -->
+  <path d="M 600 238 L 600 168" stroke="#B07A3A" stroke-width="1.5" marker-end="url(#arr)" stroke-opacity="0.75"/>
+
+  <!-- Label -->
+  <text x="600" y="490" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">less dense — more energy</text>
+  <text x="600" y="505" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">escapes → brighter sound</text>
+
+  <!-- ════════════════════════════════════════════════
+       ABS PANEL (right)
+       ════════════════════════════════════════════════ -->
+  <text x="1000" y="120" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" font-weight="600">ABS</text>
+  <text x="1000" y="140" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">rigid plastic · warm mid</text>
+
+  <!-- Case outline — ABS (moderate wall, similar to PC but slightly thicker feel) -->
+  <rect x="900" y="165" width="200" height="310" stroke-opacity="0.85" stroke-width="6"/>
+  <!-- Inner cavity -->
+  <rect x="917" y="182" width="166" height="291" stroke-opacity="0.2" stroke-width="1"/>
+
+  <!-- Switch block -->
+  <rect x="955" y="240" width="90" height="34" fill="oklch(0.78 0.005 90 / 0.12)" stroke-opacity="0.6"/>
+  <text x="1000" y="262" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">switch</text>
+
+  <!-- Bottom-out impact dot -->
+  <circle cx="1000" cy="274" r="4" fill="#B07A3A" stroke="#B07A3A"/>
+
+  <!-- Energy — moderate escape: mainly down, partial side escape, no upward -->
+  <!-- Down (strong) -->
+  <path d="M 1000 278 L 1000 440" stroke="#B07A3A" stroke-width="2" marker-end="url(#arr)"/>
+  <!-- Partial side escape left -->
+  <path d="M 991 265 L 919 265" stroke="#B07A3A" stroke-width="1.5" stroke-dasharray="5 3" stroke-opacity="0.8"/>
+  <!-- Partial side escape right -->
+  <path d="M 1009 265 L 1081 265" stroke="#B07A3A" stroke-width="1.5" stroke-dasharray="5 3" stroke-opacity="0.8"/>
+
+  <!-- Hollow resonance annotation (slight hollow character) -->
+  <rect x="935" y="295" width="130" height="50" stroke-opacity="0.18" stroke-dasharray="4 3"/>
+  <text x="1000" y="318" font-family="IBM Plex Sans, sans-serif" font-size="10" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">hollow cavity</text>
+  <text x="1000" y="332" font-family="IBM Plex Sans, sans-serif" font-size="10" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">rings without foam</text>
+
+  <!-- Label -->
+  <text x="1000" y="490" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">warm mid profile — slight hollow</text>
+  <text x="1000" y="505" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">tamed easily with foam mods</text>
+
+  <!-- Bottom rule -->
+  <line x1="100" y1="560" x2="1100" y2="560" stroke-opacity="0.18"/>
+  <text x="600" y="590" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">solid arrows = acoustic energy escaping the cavity; dashed = energy absorbed or damped by case walls</text>
+</svg>
