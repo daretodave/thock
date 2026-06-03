@@ -2356,3 +2356,15 @@ passes accumulate signals.)
 - issue: [mirror-failed: 2026-06-02T00:00:00Z]
 - elements: apps/web/src/content/articles/trends-tracker-preview.mdx line 23
 > **Resolved (2026-06-02):** Added mentionedParts entry (id: oil-king, kind: switch, slug: gateron-oil-king). Replaced plain "Gateron Oil King" at line 23 with `<PartReference id="oil-king" />`. updatedAt bumped to 2026-06-02. Language gate clean. 697 e2e green. `d0625b7`
+
+### [HOT PURSUIT] [content-gap] [7] guides pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 5 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: guides
+- window-count: 1
+- window-start: 2026-05-04
+- score: 7
+- next: /ship-content → guides pillar article
+> Filed 2026-06-03 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
