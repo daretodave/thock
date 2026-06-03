@@ -72,6 +72,14 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [data] [4.5] keycap-profiles-compared missing mt3-devtty in mentionedParts
+- category: data
+- filed: 2026-06-03 by cloud /iterate audit
+- impact: 5 (Guides pillar keycap-profiles article explicitly names "MT3 /dev/tty" as the canonical MT3 example that introduced typists to the profile; /part/keycap-set/mt3-devtty gains "mentioned in" cross-link from a high-traffic beginner Guides piece)
+- ease: 9 (add single mentionedParts entry + swap Mono tag to PartReference; same pattern as 8 prior fixes)
+- score: 4.5 (impact × ease / 10)
+- issue: #266
+
 ### [x] [content-gaps] [3.0] W23 DCS Grass Valley null articleSlug — proactive Rule 2 before 2026-06-15 — addressed in 8eb26ec, closes #264
 - category: content-gaps
 - filed: 2026-06-03 by cloud /iterate audit
