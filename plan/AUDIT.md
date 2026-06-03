@@ -2386,3 +2386,12 @@ passes accumulate signals.)
 - issue: [mirror-failed: 2026-06-03T00:00:00Z]
 - elements: apps/web/src/content/articles/case-materials-compared.mdx lines 45, 53
 > **Resolved (2026-06-03):** Added mentionedParts entries for drop-ctrl, mode-sonnet, ikki68-aurora (all board kind). Added `<PartReference id="mode-sonnet" />` at line 45 (first plain-text mention replacing "the Mode Sonnet") and `<PartReference id="ikki68-aurora" />` at line 53 (wrapping "The ikki68 Aurora" before the Source). Drop CTRL Source wrapper kept for /sources citation; frontmatter entry drives its "mentioned in" rail. updatedAt bumped to 2026-06-03. Language gate clean. 700 e2e green. `26c1a01`
+
+### [x] [content] [5.4] alice-layout-decline — gateron-oil-king missing from mentionedParts despite body mention and inline-viz reference — addressed in 765d1ef
+- category: content
+- filed: 2026-06-03 by cloud /iterate audit
+- impact: 6 (alice-layout-decline is a trends article, popularityScore 26; Gateron Oil King is the primary comparison benchmark cited by name in the inline viz alt text and in the body prose at line 41 — "the Gateron Oil King up 42"; absent from mentionedParts breaks the bidirectional cross-reference rail on /part/switch/gateron-oil-king)
+- ease: 9 (add structured mentionedParts entry + swap <Mono> tag to <PartReference id="oil-king" />)
+- score: 5.4 (impact × ease / 10)
+- issue: [mirror-failed: 2026-06-03T00:00:00Z]
+> **Resolved (2026-06-03):** Added structured mentionedParts entry (id: oil-king, kind: switch, slug: gateron-oil-king). Swapped `<Mono>Gateron Oil King</Mono>` to `<PartReference id="oil-king" />` at line 41 so body prose links to the part page. updatedAt bumped to 2026-06-03. Language gate clean. 700 e2e green. `765d1ef`
