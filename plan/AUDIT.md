@@ -72,6 +72,15 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [content-gaps] [3.0] W23 DCS Grass Valley null articleSlug — proactive Rule 2 before 2026-06-15 — addressed in 8eb26ec, closes #264
+- category: content-gaps
+- filed: 2026-06-03 by cloud /iterate audit
+- impact: 6 (W23 tracker row "DCS Grass Valley (keycap) dir=down score=-18" null articleSlug; Rule 2 14-day window fires 2026-06-15; article proactively written to prevent violation; W23 tracker now wired to dcs-grass-valley-decline; dcs tag grows from 2 to 3 articles)
+- ease: 5 (new trends article via content-curator; 900–1200 word target; publishedAt gap-fill May 19)
+- score: 3.0 (impact × ease / 10)
+- issue: #264
+> **Resolved (2026-06-03):** Drafted ~1100-word trends article "DCS Grass Valley closes: what the profile's 2026 run tells us" covering the three-GB 2026 DCS revival (Olivetti W19, Grass Valley W21–W23, Dolch W23). Hero SVG: ochre DCS profile keycap row silhouette. 3 InlineViz: tracker arc, profile comparison, GB timeline. W23 DCS Grass Valley tracker row wired (articleSlug: dcs-grass-valley-decline). Language gate clean. 703 e2e green. `8eb26ec`
+
 ### [x] [content] [4.5] divinikey-dcs-dolch-group-buy — mode-sonnet missing from mentionedParts despite body mention — addressed in b1d2fb3, closes #263
 - category: content
 - filed: 2026-06-03 by cloud /iterate audit
