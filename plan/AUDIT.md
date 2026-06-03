@@ -2439,3 +2439,13 @@ passes accumulate signals.)
 - score: 5.4 (impact × ease / 10)
 - issue: #262
 > **Resolved (2026-06-03):** Added tecsee-sapphire-v2 (id: sapphire, kind: switch) and mode-sonnet (id: mode-sonnet, kind: board) to mentionedParts. updatedAt bumped to 2026-06-03. /part/switch/tecsee-sapphire-v2 and /part/board/mode-sonnet now show hmx-cloud-deep-dive in their "mentioned in" rails. Language gate clean. 700 e2e green. `8df4747`
+
+### [x] [content] [3.6] mounting-styles-compared — bakeneko65 missing from mentionedParts despite two body references — addressed in ad714db, closes #265
+- category: content
+- filed: 2026-06-03 by cloud /iterate audit
+- impact: 4 (mounting-styles-compared guides article; "original Bakeneko design" named as origin of burger-mount style at line 81; "Bakeneko-style designs" cited as the low-cost integrated-plate tier at line 104; bakeneko65 part page gains "mentioned in" cross-link from a practical mounting-styles reference guide; existing qk75 PartReference at line 69 created asymmetry)
+- ease: 9 (add 1 mentionedParts entry + swap inline "Bakeneko" to <PartReference id="bakeneko" /> at line 81 + updatedAt bump)
+- score: 3.6 (impact × ease / 10)
+- issue: #265
+- elements: apps/web/src/content/articles/mounting-styles-compared.mdx lines 81, 104
+> **Resolved (2026-06-03):** Added bakeneko65 (id: bakeneko, kind: board, slug: bakeneko65) to mentionedParts. Swapped plain "Bakeneko" at line 81 to `<PartReference id="bakeneko" />` — "original Bakeneko design" now links to the part page, parallel to the qk75 PartReference at line 69. updatedAt bumped to 2026-06-03. Language gate clean. 703 e2e green. `ad714db`
