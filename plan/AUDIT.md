@@ -72,6 +72,14 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [data] [4.5] clicky-switches-deep-dive missing drop-holy-panda-x in mentionedParts
+- category: data
+- filed: 2026-06-03 by cloud /iterate audit
+- impact: 5 (Deep Dives pillar piece explicitly names "the Holy Panda X" at line 90 as the engineering benchmark for factory-tuned tactile lube approach; /part/switch/drop-holy-panda-x gains "mentioned in" cross-link from a substantive clicky-focused deep-dive)
+- ease: 9 (single frontmatter array entry addition)
+- score: 4.5 (impact × ease / 10)
+- issue: #260
+
 ### [x] [data] [5.4] drop-holy-panda-x-deep-dive missing gateron-oil-king + hmx-cloud in mentionedParts — addressed in a2bc454, closes #259
 - category: data
 - filed: 2026-06-03 by cloud /iterate audit
