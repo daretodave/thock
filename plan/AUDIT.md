@@ -2369,3 +2369,13 @@ passes accumulate signals.)
 - next: /ship-content → guides pillar article
 > Filed 2026-06-03 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 > **Resolved (2026-06-03):** Shipped "Keyboard case materials, compared: aluminium, polycarbonate, and ABS" at `/article/case-materials-compared`, publishedAt 2026-05-27 (gap-fill: largest gap 05-23 → 06-01 in 30-day window). ~1530 words, 3 InlineViz. Guides pillar now at 2 of ≥2 in last 30d — comfortable. `b6c8485`
+
+### [x] [content] [4.0] case-materials-compared — drop-ctrl, mode-sonnet, ikki68-aurora missing from mentionedParts — addressed in 26c1a01
+- category: content
+- filed: 2026-06-03 by cloud /iterate audit
+- impact: 5 (case-materials-compared guides pillar popularityScore 42; Drop CTRL (line 45), Mode Sonnet (lines 45, 80), and ikki68 Aurora (line 53) are explicitly named boards; all three have part pages; their "mentioned in" rails were missing this guide as a cross-link)
+- ease: 8 (add 3 mentionedParts entries + 2 PartReference inline tags + updatedAt bump; no schema or code change)
+- score: 4.0 (impact × ease / 10)
+- issue: [mirror-failed: 2026-06-03T00:00:00Z]
+- elements: apps/web/src/content/articles/case-materials-compared.mdx lines 45, 53
+> **Resolved (2026-06-03):** Added mentionedParts entries for drop-ctrl, mode-sonnet, ikki68-aurora (all board kind). Added `<PartReference id="mode-sonnet" />` at line 45 (first plain-text mention replacing "the Mode Sonnet") and `<PartReference id="ikki68-aurora" />` at line 53 (wrapping "The ikki68 Aurora" before the Source). Drop CTRL Source wrapper kept for /sources citation; frontmatter entry drives its "mentioned in" rail. updatedAt bumped to 2026-06-03. Language gate clean. 700 e2e green. `26c1a01`
