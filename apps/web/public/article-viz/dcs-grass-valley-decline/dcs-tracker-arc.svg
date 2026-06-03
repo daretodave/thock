@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <!-- Zero baseline -->
+  <line x1="60" y1="200" x2="740" y2="200" stroke="#d4cfc8" stroke-width="1" stroke-dasharray="4 2"/>
+
+  <!-- Main polyline connecting points 1–4 -->
+  <!-- y = 200 - (score * 4) -->
+  <!-- P1: x=80, score=+18, y=200-72=128 -->
+  <!-- P2: x=200, score=+22, y=200-88=112 -->
+  <!-- P3: x=320, score=+23, y=200-92=108 -->
+  <!-- P4: x=440, score=-18, y=200+72=272 -->
+  <polyline
+    points="80,128 200,112 320,108 440,272"
+    fill="none"
+    stroke="#9c9286"
+    stroke-width="1.5"
+    stroke-linejoin="round"
+    stroke-linecap="round"
+  />
+
+  <!-- Dashed connector from P4 to P5 (Dolch) -->
+  <!-- P5: x=560, score=+29, y=200-116=84 -->
+  <line
+    x1="440" y1="272"
+    x2="560" y2="84"
+    stroke="#9c9286"
+    stroke-width="1.5"
+    stroke-dasharray="5 3"
+    stroke-linecap="round"
+  />
+
+  <!-- P1: W19 Olivetti +18 — warm-grey dot -->
+  <circle cx="80" cy="128" r="6" fill="#9c9286"/>
+
+  <!-- P2: W21 Grass Valley debut +22 — ochre dot -->
+  <circle cx="200" cy="112" r="6" fill="#B07A3A"/>
+
+  <!-- P3: W22 Grass Valley +23 — ochre dot -->
+  <circle cx="320" cy="108" r="6" fill="#B07A3A"/>
+
+  <!-- P4: W23 Grass Valley closes -18 — ochre dot, below zero -->
+  <circle cx="440" cy="272" r="6" fill="#B07A3A"/>
+
+  <!-- P5: W23 Dolch +29 — warm-grey dot, right-offset -->
+  <circle cx="560" cy="84" r="6" fill="#9c9286"/>
+
+  <!-- Labels below each dot (offset +20px below dot center, with room) -->
+  <!-- P1 label -->
+  <text
+    x="80" y="150"
+    text-anchor="middle"
+    font-family="'Courier New', Courier, monospace"
+    font-size="11"
+    fill="#6b6560"
+  >W19 Olivetti</text>
+  <text
+    x="80" y="163"
+    text-anchor="middle"
+    font-family="'Courier New', Courier, monospace"
+    font-size="11"
+    fill="#6b6560"
+  >+18</text>
+
+  <!-- P2 label -->
+  <text
+    x="200" y="134"
+    text-anchor="middle"
+    font-family="'Courier New', Courier, monospace"
+    font-size="11"
+    fill="#6b6560"
+  >W21 +22</text>
+
+  <!-- P3 label -->
+  <text
+    x="320" y="130"
+    text-anchor="middle"
+    font-family="'Courier New', Courier, monospace"
+    font-size="11"
+    fill="#6b6560"
+  >W22 +23</text>
+
+  <!-- P4 label (below the dot, which is already below zero line) -->
+  <text
+    x="440" y="295"
+    text-anchor="middle"
+    font-family="'Courier New', Courier, monospace"
+    font-size="11"
+    fill="#6b6560"
+  >W23 -18&#x2193;</text>
+
+  <!-- P5 label -->
+  <text
+    x="560" y="106"
+    text-anchor="middle"
+    font-family="'Courier New', Courier, monospace"
+    font-size="11"
+    fill="#6b6560"
+  >W23 Dolch</text>
+  <text
+    x="560" y="119"
+    text-anchor="middle"
+    font-family="'Courier New', Courier, monospace"
+    font-size="11"
+    fill="#6b6560"
+  >+29&#x2191;</text>
+
+  <!-- Zero line label -->
+  <text
+    x="56" y="204"
+    text-anchor="end"
+    font-family="'Courier New', Courier, monospace"
+    font-size="10"
+    fill="#a09a94"
+  >0</text>
+</svg>

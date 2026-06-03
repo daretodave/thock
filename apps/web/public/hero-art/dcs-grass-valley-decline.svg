@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="#9c9286" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — DCS Grass Valley decline trends piece, six DCS-profile keycaps showing stepped row heights R1 through R5</title>
+
+  <!-- ── BACKGROUND SPARKLINE — DECLINE ARC ───────────────────────────────────
+       A very faint downward-trending curve spanning the canvas.
+       Reinforces the "decline" editorial framing without distracting from
+       the keycap silhouettes. The curve descends left-to-right, terminating
+       lower than its origin — a quiet visual editorial signal.
+  -->
+  <path d="M 80 280 C 260 260, 480 340, 680 410 S 980 510 1120 540"
+        stroke="#9c9286" stroke-width="1.5" stroke-opacity="0.12"
+        stroke-dasharray="6 10" fill="none"/>
+
+  <!-- ── BASELINE ──────────────────────────────────────────────────────────────
+       Shared baseline all six caps rest on. Warm-grey, partial opacity.
+  -->
+  <line x1="100" y1="570" x2="1100" y2="570" stroke="#9c9286" stroke-opacity="0.50"/>
+
+  <!-- ── STEPPED HEIGHT REFERENCE LINES ───────────────────────────────────────
+       DCS is a fully sculpted profile — each row has a distinct height.
+       Rows 1–5 are represented across the six-cap cluster (R1 leftmost,
+       R5 rightmost; the sixth cap is a second R5 to fill the row).
+       Faint horizontal rails show the crown elevation of each row.
+
+       DCS row heights (relative, in this canvas):
+         R1  → crown at  y=282  (tallest, ~288px body)
+         R2  → crown at  y=328  (tall,    ~242px body)
+         R3  → crown at  y=370  (mid,     ~200px body)  ← focal cap
+         R4  → crown at  y=410  (short,   ~160px body)
+         R5  → crown at  y=450  (lowest,  ~120px body)
+  -->
+  <!-- R1 crown rail -->
+  <line x1="100" y1="282" x2="280" y2="282" stroke-dasharray="3 8" stroke="#9c9286" stroke-opacity="0.18"/>
+  <!-- R2 crown rail -->
+  <line x1="270" y1="328" x2="450" y2="328" stroke-dasharray="3 8" stroke="#9c9286" stroke-opacity="0.18"/>
+  <!-- R3 crown rail (focal) -->
+  <line x1="440" y1="370" x2="700" y2="370" stroke-dasharray="3 8" stroke="#9c9286" stroke-opacity="0.22"/>
+  <!-- R4 crown rail -->
+  <line x1="690" y1="410" x2="880" y2="410" stroke-dasharray="3 8" stroke="#9c9286" stroke-opacity="0.18"/>
+  <!-- R5 crown rail -->
+  <line x1="870" y1="450" x2="1100" y2="450" stroke-dasharray="3 8" stroke="#9c9286" stroke-opacity="0.18"/>
+
+  <!-- ── STEPPED STAIRCASE SILHOUETTE GUIDE ────────────────────────────────────
+       A very faint staircase line tracing the crown-top profile of the row
+       from left to right — makes the DCS stepping legible as a diagram.
+       This also echoes the "decline" arc in a more angular, mechanical idiom.
+  -->
+  <polyline
+    points="185,282 245,282 245,328 385,328 385,370 570,370 570,410 765,410 765,450 975,450"
+    stroke="#BFA67A" stroke-width="1.5" stroke-opacity="0.28" fill="none"
+    stroke-dasharray="4 7"/>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════
+       SIX DCS KEYCAP CROSS-SECTIONS — side-profile silhouettes
+       ═══════════════════════════════════════════════════════════════════════
+       DCS geometry:
+         • Trapezoidal body: sides taper inward slightly from base to crown.
+         • Top surface is cylindrical (cylindrical-across-the-finger):
+           shown as a gentle downward arc (scoop) connecting the two top corners.
+         • Legend slot: horizontal inset near the upper third of the body.
+         • Row heights decrease left to right (R1 → R5).
+
+       Cap positions and row assignments:
+         Cap 1   R1   center x=185    base w=160  top w=136  height=288  baseline y=570  crown y=282
+         Cap 2   R2   center x=385    base w=152  top w=130  height=242  baseline y=570  crown y=328
+         Cap 3   R3   center x=570    base w=146  top w=126  height=200  baseline y=570  crown y=370  ← focal (ochre)
+         Cap 4   R4   center x=765    base w=140  top w=122  height=160  baseline y=570  crown y=410
+         Cap 5   R5   center x=930    base w=136  top w=120  height=120  baseline y=570  crown y=450
+         Cap 6   R5   center x=1040   base w=136  top w=120  height=120  baseline y=570  crown y=450
+
+       Body path:  M (cx - base_w/2) 570
+                   L (cx - top_w/2)  crown_y
+                   L (cx + top_w/2)  crown_y
+                   L (cx + base_w/2) 570
+                   Z
+       Scoop arc:  M (cx - top_w/2) crown_y
+                   Q cx (crown_y + scoop_depth) (cx + top_w/2) crown_y
+       where scoop_depth = 30px for all rows.
+
+       Legend slot:  sits at ~38% down from crown.
+         slot_y  = crown_y + 0.38 * height
+         At slot_y, left wall x  = (cx - base_w/2) + (570 - slot_y) / height * (base_w - top_w) / 2
+                                  rounding to nearest integer
+         slot_w  ≈ top_w - 10  (inset 5px each side from the angled wall at that height)
+
+       Scoop depth: 30px. Crown highlight arc depth: 18px (inner, tighter).
+  -->
+
+  <!-- ── CAP 1 — Row 1 — center x=185 ─────────────────────────────────────────
+       crown y=282  base w=160  top w=136  height=288
+       left base x=105   right base x=265
+       left crown x=117  right crown x=253
+       legend slot y = 282 + 0.38*288 = 282+109 = 391
+       wall x at y=391: (570-391)/288 * (160-136)/2 = 179/288 * 12 = 7.45
+         left wall at 391: 105 + 7.45 = ~112    right wall: 265 - 7.45 = ~258
+       slot width ≈ top_w - 10 = 126
+  -->
+  <g id="cap-r1">
+    <!-- Body fill — very low opacity warm tone, background-safe -->
+    <path d="M 105 570 L 117 282 L 253 282 L 265 570 Z" fill="#EDE8D5" fill-opacity="0.60" stroke="none"/>
+    <!-- Outer shell -->
+    <path d="M 105 570 L 117 282 L 253 282 L 265 570 Z" stroke="#9c9286" stroke-width="2"/>
+    <!-- Cylindrical top scoop arc -->
+    <path d="M 117 282 Q 185 312 253 282" stroke="#BFA67A" stroke-width="2.5" fill="none"/>
+    <!-- Crown highlight arc — subtler, inset -->
+    <path d="M 131 282 Q 185 300 239 282" stroke="#D4A853" stroke-width="1.5" fill="none" stroke-opacity="0.45"/>
+    <!-- Legend slot — warm-grey fill, primary slot -->
+    <rect x="117" y="389" width="126" height="12" rx="1.5" fill="#9c9286" fill-opacity="0.55" stroke="none"/>
+    <!-- Sub-legend — fainter, narrower -->
+    <rect x="127" y="413" width="106" height="7" rx="1" fill="#9c9286" fill-opacity="0.28" stroke="none"/>
+    <!-- Depth corner ticks -->
+    <line x1="105" y1="570" x2="112" y2="563" stroke="#9c9286" stroke-opacity="0.35"/>
+    <line x1="265" y1="570" x2="258" y2="563" stroke="#9c9286" stroke-opacity="0.35"/>
+  </g>
+
+  <!-- ── CAP 2 — Row 2 — center x=385 ─────────────────────────────────────────
+       crown y=328  base w=152  top w=130  height=242
+       left base x=309   right base x=461
+       left crown x=320  right crown x=450
+       legend slot y = 328 + 0.38*242 = 328+92 = 420
+       slot width ≈ 120
+  -->
+  <g id="cap-r2">
+    <path d="M 309 570 L 320 328 L 450 328 L 461 570 Z" fill="#EDE8D5" fill-opacity="0.60" stroke="none"/>
+    <path d="M 309 570 L 320 328 L 450 328 L 461 570 Z" stroke="#9c9286" stroke-width="2"/>
+    <path d="M 320 328 Q 385 358 450 328" stroke="#BFA67A" stroke-width="2.5" fill="none"/>
+    <path d="M 333 328 Q 385 346 437 328" stroke="#D4A853" stroke-width="1.5" fill="none" stroke-opacity="0.45"/>
+    <rect x="320" y="418" width="120" height="12" rx="1.5" fill="#9c9286" fill-opacity="0.55" stroke="none"/>
+    <rect x="330" y="441" width="100" height="7" rx="1" fill="#9c9286" fill-opacity="0.28" stroke="none"/>
+    <line x1="309" y1="570" x2="316" y2="563" stroke="#9c9286" stroke-opacity="0.35"/>
+    <line x1="461" y1="570" x2="454" y2="563" stroke="#9c9286" stroke-opacity="0.35"/>
+  </g>
+
+  <!-- ── CAP 3 (FOCAL) — Row 3 — center x=570 ─────────────────────────────────
+       crown y=370  base w=146  top w=126  height=200
+       left base x=497   right base x=643
+       left crown x=507  right crown x=633
+       legend slot y = 370 + 0.38*200 = 370+76 = 446
+       slot width ≈ 116
+
+       Ochre treatment:
+         • Low-opacity ochre fill on the body
+         • Ochre outline hairline (thin, 0.8px) as focal highlight
+         • Warm-bronze dot on the legend slot (the "legend accent dot")
+         • Background ochre ellipse wash centered behind the cap
+  -->
+  <g id="cap-r3-focal">
+    <!-- Focal wash — ochre ellipse behind the cap -->
+    <ellipse cx="570" cy="470" rx="100" ry="104" fill="#B07A3A" fill-opacity="0.10" stroke="none"/>
+    <!-- Body fill — stronger ochre opacity for focal differentiation -->
+    <path d="M 497 570 L 507 370 L 633 370 L 643 570 Z" fill="#B07A3A" fill-opacity="0.22" stroke="none"/>
+    <!-- Outer shell — ochre stroke instead of warm-grey -->
+    <path d="M 497 570 L 507 370 L 633 370 L 643 570 Z" stroke="#B07A3A" stroke-width="2.2"/>
+    <!-- Faint outline echo in warm-grey for depth -->
+    <path d="M 497 570 L 507 370 L 633 370 L 643 570 Z" stroke="#9c9286" stroke-width="0.8" stroke-opacity="0.35"/>
+    <!-- Cylindrical top scoop — full ochre on focal cap -->
+    <path d="M 507 370 Q 570 400 633 370" stroke="#B07A3A" stroke-width="3" fill="none"/>
+    <!-- Crown highlight — warm-bronze inner arc -->
+    <path d="M 520 370 Q 570 388 620 370" stroke="#D4A853" stroke-width="1.8" fill="none" stroke-opacity="0.70"/>
+    <!-- Legend slot — ochre fill -->
+    <rect x="510" y="444" width="116" height="12" rx="1.5" fill="#B07A3A" fill-opacity="0.72" stroke="none"/>
+    <!-- Sub-legend -->
+    <rect x="520" y="467" width="96" height="7" rx="1" fill="#B07A3A" fill-opacity="0.36" stroke="none"/>
+    <!-- Warm-bronze legend accent dot — the focal marker on the legend face -->
+    <circle cx="570" cy="450" r="5" fill="#D4A853" fill-opacity="0.90" stroke="none"/>
+    <!-- Depth corner ticks — ochre -->
+    <line x1="497" y1="570" x2="504" y2="563" stroke="#B07A3A" stroke-opacity="0.55"/>
+    <line x1="643" y1="570" x2="636" y2="563" stroke="#B07A3A" stroke-opacity="0.55"/>
+  </g>
+
+  <!-- ── CAP 4 — Row 4 — center x=765 ─────────────────────────────────────────
+       crown y=410  base w=140  top w=122  height=160
+       left base x=695   right base x=835
+       left crown x=704  right crown x=826
+       legend slot y = 410 + 0.38*160 = 410+61 = 471
+       slot width ≈ 112
+  -->
+  <g id="cap-r4">
+    <path d="M 695 570 L 704 410 L 826 410 L 835 570 Z" fill="#EDE8D5" fill-opacity="0.60" stroke="none"/>
+    <path d="M 695 570 L 704 410 L 826 410 L 835 570 Z" stroke="#9c9286" stroke-width="2"/>
+    <path d="M 704 410 Q 765 440 826 410" stroke="#BFA67A" stroke-width="2.5" fill="none"/>
+    <path d="M 716 410 Q 765 427 814 410" stroke="#D4A853" stroke-width="1.5" fill="none" stroke-opacity="0.45"/>
+    <rect x="706" y="469" width="112" height="12" rx="1.5" fill="#9c9286" fill-opacity="0.55" stroke="none"/>
+    <rect x="716" y="491" width="92" height="7" rx="1" fill="#9c9286" fill-opacity="0.28" stroke="none"/>
+    <line x1="695" y1="570" x2="702" y2="563" stroke="#9c9286" stroke-opacity="0.35"/>
+    <line x1="835" y1="570" x2="828" y2="563" stroke="#9c9286" stroke-opacity="0.35"/>
+  </g>
+
+  <!-- ── CAP 5 — Row 5 — center x=930 ─────────────────────────────────────────
+       crown y=450  base w=136  top w=120  height=120
+       left base x=862   right base x=998
+       left crown x=870  right crown x=990
+       legend slot y = 450 + 0.38*120 = 450+46 = 496
+       slot width ≈ 110
+  -->
+  <g id="cap-r5a">
+    <path d="M 862 570 L 870 450 L 990 450 L 998 570 Z" fill="#EDE8D5" fill-opacity="0.60" stroke="none"/>
+    <path d="M 862 570 L 870 450 L 990 450 L 998 570 Z" stroke="#9c9286" stroke-width="2"/>
+    <path d="M 870 450 Q 930 480 990 450" stroke="#BFA67A" stroke-width="2.5" fill="none"/>
+    <path d="M 881 450 Q 930 467 979 450" stroke="#D4A853" stroke-width="1.5" fill="none" stroke-opacity="0.45"/>
+    <rect x="873" y="494" width="110" height="12" rx="1.5" fill="#9c9286" fill-opacity="0.55" stroke="none"/>
+    <rect x="883" y="516" width="90" height="7" rx="1" fill="#9c9286" fill-opacity="0.28" stroke="none"/>
+    <line x1="862" y1="570" x2="869" y2="563" stroke="#9c9286" stroke-opacity="0.35"/>
+    <line x1="998" y1="570" x2="991" y2="563" stroke="#9c9286" stroke-opacity="0.35"/>
+  </g>
+
+  <!-- ── CAP 6 — Row 5 (second) — center x=1065 ────────────────────────────────
+       Same geometry as cap 5, offset right. DCS keycap rows typically have
+       multiple R5-height modifier keys (Tab, Caps Lock neighbors, etc.).
+       crown y=450  base w=136  top w=120  height=120
+       left base x=997   right base x=1133
+       left crown x=1005 right crown x=1125
+       legend slot y = 496
+  -->
+  <g id="cap-r5b">
+    <path d="M 997 570 L 1005 450 L 1125 450 L 1133 570 Z" fill="#EDE8D5" fill-opacity="0.60" stroke="none"/>
+    <path d="M 997 570 L 1005 450 L 1125 450 L 1133 570 Z" stroke="#9c9286" stroke-width="2"/>
+    <path d="M 1005 450 Q 1065 480 1125 450" stroke="#BFA67A" stroke-width="2.5" fill="none"/>
+    <path d="M 1016 450 Q 1065 467 1114 450" stroke="#D4A853" stroke-width="1.5" fill="none" stroke-opacity="0.45"/>
+    <rect x="1008" y="494" width="110" height="12" rx="1.5" fill="#9c9286" fill-opacity="0.55" stroke="none"/>
+    <rect x="1018" y="516" width="90" height="7" rx="1" fill="#9c9286" fill-opacity="0.28" stroke="none"/>
+    <line x1="997" y1="570" x2="1004" y2="563" stroke="#9c9286" stroke-opacity="0.35"/>
+    <line x1="1133" y1="570" x2="1126" y2="563" stroke="#9c9286" stroke-opacity="0.35"/>
+  </g>
+
+  <!-- ── LEFT-EDGE HEIGHT BRACKET ──────────────────────────────────────────────
+       Annotates the stepped row heights with a single vertical bracket running
+       from R1 crown to the baseline. Fine warm-bronze strokes.
+       Horizontal ticks at each row's crown elevation — purely gestural,
+       no text required, the geometry carries the story.
+  -->
+  <g stroke="#BFA67A" stroke-opacity="0.55" stroke-width="1.5">
+    <!-- Vertical spine -->
+    <line x1="72" y1="282" x2="72" y2="570"/>
+    <!-- R1 crown tick -->
+    <line x1="67" y1="282" x2="82" y2="282"/>
+    <!-- R2 crown tick -->
+    <line x1="67" y1="328" x2="79" y2="328"/>
+    <!-- R3 crown tick (focal — slightly longer) -->
+    <line x1="65" y1="370" x2="82" y2="370" stroke-width="2"/>
+    <!-- R4 crown tick -->
+    <line x1="67" y1="410" x2="79" y2="410"/>
+    <!-- R5 crown tick -->
+    <line x1="67" y1="450" x2="79" y2="450"/>
+    <!-- Baseline tick -->
+    <line x1="67" y1="570" x2="82" y2="570"/>
+  </g>
+  <!-- Small step-down indicator arrows on the bracket spine — five short
+       diagonal marks pointing down-right, between each row tick pair.
+       Each ↓ suggests "and shorter still." -->
+  <g stroke="#BFA67A" stroke-opacity="0.32" stroke-width="1.2">
+    <line x1="69" y1="305" x2="75" y2="312"/>
+    <line x1="69" y1="349" x2="75" y2="356"/>
+    <line x1="69" y1="390" x2="75" y2="397"/>
+    <line x1="69" y1="430" x2="75" y2="437"/>
+  </g>
+
+  <!-- ── BASELINE TICK MARKS ─────────────────────────────────────────────────
+       Faint center-bottom ticks under each cap — register marks.
+  -->
+  <g stroke="#9c9286" stroke-opacity="0.30" stroke-width="1">
+    <line x1="185"  y1="570" x2="185"  y2="581"/>
+    <line x1="385"  y1="570" x2="385"  y2="581"/>
+    <line x1="570"  y1="570" x2="570"  y2="584"/>
+    <line x1="765"  y1="570" x2="765"  y2="581"/>
+    <line x1="930"  y1="570" x2="930"  y2="581"/>
+    <line x1="1065" y1="570" x2="1065" y2="581"/>
+  </g>
+
+  <!-- ── FOCAL CAP BASELINE SHADOW ────────────────────────────────────────────
+       Ochre ellipse ground-shadow under cap 3 — compositional anchor.
+  -->
+  <ellipse cx="570" cy="570" rx="80" ry="10" fill="#B07A3A" fill-opacity="0.18" stroke="none"/>
+
+  <!-- ── BRONZE THEME DOT — ornamental family anchor ───────────────────────────
+       Small warm-bronze filled circle at the upper-right margin.
+       Color approximates oklch(0.80 0.135 75): #D4A853 / #BFA67A range.
+  -->
+  <circle cx="1148" cy="88" r="9" fill="#BFA67A" fill-opacity="0.88" stroke="none"/>
+
+  <!-- ── SECONDARY ACCENT CONSTELLATION ────────────────────────────────────────
+       Two tiny satellite dots flanking the theme dot — family micro-ornament.
+  -->
+  <circle cx="1129" cy="103" r="3.5" fill="#BFA67A" fill-opacity="0.45" stroke="none"/>
+  <circle cx="1148" cy="107" r="2.5" fill="#D4A853" fill-opacity="0.50" stroke="none"/>
+
+</svg>

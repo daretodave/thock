@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <!-- Center divider -->
+  <line x1="400" y1="60" x2="400" y2="360" stroke="#d4cfc8" stroke-width="1" stroke-dasharray="4 3"/>
+
+  <!-- ============================================================ -->
+  <!-- DCS PROFILE — LEFT SIDE (x=80..360, baseline y=300)         -->
+  <!-- ============================================================ -->
+  <!-- Row label headers -->
+  <text x="100" y="75" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="10" fill="#a09a94">R1</text>
+  <text x="155" y="75" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="10" fill="#a09a94">R2</text>
+  <text x="210" y="75" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="10" fill="#a09a94">R3</text>
+  <text x="265" y="75" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="10" fill="#a09a94">R4</text>
+  <text x="320" y="75" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="10" fill="#a09a94">R5</text>
+
+  <!-- DCS R1: h=120, width=40, baseline y=300, top y=180, x=80..120 -->
+  <!-- Lean back -5deg: transform origin at bottom-center (100,300) -->
+  <g transform="rotate(-5, 100, 300)">
+    <!-- Cap body: trapezoid — wider at bottom, narrower at top -->
+    <path d="M82,300 L118,300 L115,180 L85,180 Z"
+      fill="none" stroke="#9c9286" stroke-width="2" stroke-linejoin="round"/>
+    <!-- Cylindrical scoop on top (arc curving downward) -->
+    <path d="M85,180 Q100,194 115,180"
+      fill="none" stroke="#9c9286" stroke-width="2"/>
+  </g>
+
+  <!-- DCS R2: h=110, x=135..175, top y=190 -->
+  <g transform="rotate(-2, 155, 300)">
+    <path d="M137,300 L173,300 L170,190 L140,190 Z"
+      fill="none" stroke="#9c9286" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M140,190 Q155,203 170,190"
+      fill="none" stroke="#9c9286" stroke-width="2"/>
+  </g>
+
+  <!-- DCS R3 (center cap, ochre fill): h=100, x=190..230, top y=200 -->
+  <path d="M192,300 L228,300 L225,200 L195,200 Z"
+    fill="rgba(176,122,58,0.12)" stroke="#9c9286" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M195,200 Q210,213 225,200"
+    fill="none" stroke="#9c9286" stroke-width="2"/>
+
+  <!-- DCS R4: h=90, x=245..285, top y=210 -->
+  <g transform="rotate(1, 265, 300)">
+    <path d="M247,300 L283,300 L280,210 L250,210 Z"
+      fill="none" stroke="#9c9286" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M250,210 Q265,222 280,210"
+      fill="none" stroke="#9c9286" stroke-width="2"/>
+  </g>
+
+  <!-- DCS R5: h=82, x=300..340, top y=218 -->
+  <g transform="rotate(2, 320, 300)">
+    <path d="M302,300 L338,300 L335,218 L305,218 Z"
+      fill="none" stroke="#9c9286" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M305,218 Q320,230 335,218"
+      fill="none" stroke="#9c9286" stroke-width="2"/>
+  </g>
+
+  <!-- DCS profile label -->
+  <text x="210" y="330" text-anchor="middle"
+    font-family="'Courier New', Courier, monospace"
+    font-size="13" fill="#6b6560">DCS profile</text>
+  <!-- Accent note -->
+  <text x="210" y="346" text-anchor="middle"
+    font-family="'Courier New', Courier, monospace"
+    font-size="10" fill="#a09a94">sculpted, tall R1</text>
+
+  <!-- ============================================================ -->
+  <!-- CHERRY PROFILE — RIGHT SIDE (x=440..720, baseline y=300)    -->
+  <!-- ============================================================ -->
+  <!-- Row label headers -->
+  <text x="460" y="75" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="10" fill="#a09a94">R1</text>
+  <text x="515" y="75" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="10" fill="#a09a94">R2</text>
+  <text x="570" y="75" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="10" fill="#a09a94">R3</text>
+  <text x="625" y="75" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="10" fill="#a09a94">R4</text>
+  <text x="680" y="75" text-anchor="middle" font-family="'Courier New', Courier, monospace" font-size="10" fill="#a09a94">R5</text>
+
+  <!-- Cherry R1: h=90, slight lean, x=440..480, top y=210 -->
+  <g transform="rotate(-2, 460, 300)">
+    <path d="M442,300 L478,300 L476,210 L444,210 Z"
+      fill="none" stroke="#9c9286" stroke-width="2" stroke-linejoin="round"/>
+    <!-- Shallower scoop -->
+    <path d="M444,210 Q460,219 476,210"
+      fill="none" stroke="#9c9286" stroke-width="2"/>
+  </g>
+
+  <!-- Cherry R2: h=90, x=495..535, top y=210 -->
+  <path d="M497,300 L533,300 L531,210 L499,210 Z"
+    fill="none" stroke="#9c9286" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M499,210 Q515,219 531,210"
+    fill="none" stroke="#9c9286" stroke-width="2"/>
+
+  <!-- Cherry R3: h=90, x=550..590, top y=210 -->
+  <path d="M552,300 L588,300 L586,210 L554,210 Z"
+    fill="none" stroke="#9c9286" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M554,210 Q570,219 586,210"
+    fill="none" stroke="#9c9286" stroke-width="2"/>
+
+  <!-- Cherry R4: h=90, x=605..645, top y=210 -->
+  <path d="M607,300 L643,300 L641,210 L609,210 Z"
+    fill="none" stroke="#9c9286" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M609,210 Q625,219 641,210"
+    fill="none" stroke="#9c9286" stroke-width="2"/>
+
+  <!-- Cherry R5: h=90, x=660..700, top y=210 -->
+  <path d="M662,300 L698,300 L696,210 L664,210 Z"
+    fill="none" stroke="#9c9286" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M664,210 Q680,219 696,210"
+    fill="none" stroke="#9c9286" stroke-width="2"/>
+
+  <!-- Cherry profile label -->
+  <text x="570" y="330" text-anchor="middle"
+    font-family="'Courier New', Courier, monospace"
+    font-size="13" fill="#6b6560">Cherry profile</text>
+  <text x="570" y="346" text-anchor="middle"
+    font-family="'Courier New', Courier, monospace"
+    font-size="10" fill="#a09a94">uniform, flatter scoop</text>
+
+  <!-- Shared baseline rule -->
+  <line x1="80" y1="300" x2="720" y2="300" stroke="#d4cfc8" stroke-width="1" stroke-dasharray="3 4"/>
+</svg>

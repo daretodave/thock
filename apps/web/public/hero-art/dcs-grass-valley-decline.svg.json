@@ -1,0 +1,37 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-03T00:00:00Z",
+  "commit": "c19c0104bdfce4d232dfabfaecb8ce3734a63d24",
+  "kind": "hero-art",
+  "source": "hand-authored from brief and design tokens",
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": [],
+  "outputs": [
+    "apps/web/public/hero-art/dcs-grass-valley-decline.svg"
+  ],
+  "warnings": [],
+  "article_slug": "dcs-grass-valley-decline",
+  "subject": "DCS profile keycap row silhouette with stepped row heights",
+  "splash_color": "ochre",
+  "accent_color": "warm-bronze",
+  "canvas": "1200x750",
+  "stroke_weight": "2px",
+  "rendered_at": "2026-06-03",
+  "generator": "brander",
+  "design_notes": {
+    "keycap_count": 6,
+    "row_assignments": ["R1", "R2", "R3-focal", "R4", "R5", "R5"],
+    "focal_cap": "cap-r3-focal (center x=570)",
+    "stroke_color": "#9c9286 (approx oklch(0.58 0.006 90), --kh-text-3)",
+    "scoop_arc_accent": "#BFA67A (warm-bronze, approx oklch(0.80 0.135 75), --kh-accent)",
+    "crown_highlight": "#D4A853 (ochre, approx oklch(0.78 0.10 80))",
+    "splash_hex": "#B07A3A",
+    "splash_oklch": "approx oklch(0.68 0.105 65) — ochre/warm-brass",
+    "theme_dot_hex": "#BFA67A",
+    "theme_dot_position": "cx=1148 cy=88 r=9",
+    "legend_dot_hex": "#D4A853",
+    "background": "transparent",
+    "decline_motif": "faint dashed downward-trending curve behind caps, stepped-height bracket on left edge"
+  }
+}

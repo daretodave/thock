@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-19T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "dcs-grass-valley-decline",
+  "article_pillar": "trends",
+  "section_anchor": "The DCS profile and why it fell out of rotation",
+  "brief_summary": "Two DCS-profile keycap silhouettes drawn side by side at consistent scale — DCS on the left with steep cylindrical sidewalls, approximately 11mm tall, profile ridge traced in ochre; Cherry profile on the right, approximately 8mm tall with a shallower scoop and gentler sidewall angle. Both in warm-grey stroke with labels below. Illustrates the height and sculpt differential described in the article body.",
+  "target": "apps/web/public/article-viz/dcs-grass-valley-decline/profile-comparison.svg",
+  "splash_color": { "name": "amber (ochre)", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "apps/web/src/content/articles/dcs-grass-valley-decline.mdx:The DCS profile and why it fell out of rotation — 'steep legend height differential across rows'",
+    "apps/web/src/content/articles/dcs-grass-valley-decline.mdx:The DCS profile and why it fell out of rotation — 'cylindrical scoop on each cap is more pronounced than Cherry's equivalent'",
+    "apps/web/src/content/articles/dcs-grass-valley-decline.mdx:The DCS profile and why it fell out of rotation — 'taller hand position over the board'"
+  ],
+  "outputs": ["apps/web/public/article-viz/dcs-grass-valley-decline/profile-comparison.svg"],
+  "warnings": []
+}

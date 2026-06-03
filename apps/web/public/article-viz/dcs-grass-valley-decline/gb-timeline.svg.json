@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-19T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "dcs-grass-valley-decline",
+  "article_pillar": "trends",
+  "section_anchor": "The production pattern: post-close dip is expected",
+  "brief_summary": "A horizontal timeline spanning March 2026 through July 2026 with three DCS group-buy windows rendered as adjacent labeled bands. DCS Olivetti in warm-grey from March 27 to April 13; DCS Grass Valley in ochre from May 1 to June 1; DCS Dolch in dark warm-grey from June 1 to July 1. The shared edge between Grass Valley and Dolch at June 1 is the visual emphasis — the handoff moment. Month markers on a baseline rule below the bands.",
+  "target": "apps/web/public/article-viz/dcs-grass-valley-decline/gb-timeline.svg",
+  "splash_color": { "name": "amber (ochre)", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "apps/web/src/content/articles/dcs-grass-valley-decline.mdx:Three GBs in six months — 'DCS Olivetti ran March 27 through April 13'",
+    "apps/web/src/content/articles/dcs-grass-valley-decline.mdx:Three GBs in six months — 'ran through 2026-06-01 via Prototypist ... May 1'",
+    "apps/web/src/content/articles/dcs-grass-valley-decline.mdx:DCS Dolch as momentum transfer — 'The window runs 2026-06-01 through 2026-07-01' (from divinikey-dcs-dolch-group-buy.mdx § Buying logistics)"
+  ],
+  "outputs": ["apps/web/public/article-viz/dcs-grass-valley-decline/gb-timeline.svg"],
+  "warnings": []
+}

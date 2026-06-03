@@ -1,0 +1,25 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-19T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "dcs-grass-valley-decline",
+  "article_pillar": "trends",
+  "section_anchor": "Three GBs in six months",
+  "brief_summary": "A sparkline timeline chart showing the tracker arc across three 2026 DCS group buys. Five labeled data points: W19 Olivetti +18 (warm-grey), W21 Grass Valley +22 (ochre), W22 Grass Valley +23 (ochre, flat), W23 Grass Valley -18 (ochre, down arrow at post-close dip), and W23 Dolch +29 (warm-grey, up arrow showing baton-pass opening). Shared horizontal time axis with a zero baseline and vertical dashed dividers at W21 and W23 to mark the Grass Valley open and close.",
+  "target": "apps/web/public/article-viz/dcs-grass-valley-decline/dcs-tracker-arc.svg",
+  "splash_color": { "name": "amber (ochre)", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "apps/web/src/content/articles/dcs-grass-valley-decline.mdx:Three GBs in six months — 'W19 tracker showed it up +18'",
+    "apps/web/src/content/articles/dcs-grass-valley-decline.mdx:Three GBs in six months — 'tracked +22 in W21 and +23 in W22'",
+    "apps/web/src/content/articles/dcs-grass-valley-decline.mdx:Three GBs in six months — 'dropped to -18 in W23 as the buy closed'",
+    "apps/web/src/content/articles/dcs-grass-valley-decline.mdx:Three GBs in six months — 'DCS Dolch opening at +29, direction up'"
+  ],
+  "outputs": ["apps/web/public/article-viz/dcs-grass-valley-decline/dcs-tracker-arc.svg"],
+  "warnings": []
+}
