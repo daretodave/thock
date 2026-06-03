@@ -2412,3 +2412,11 @@ passes accumulate signals.)
 - score: 5.4 (impact × ease / 10)
 - issue: #261
 > **Resolved (2026-06-03):** Added structured mentionedParts entry (id: gateron-oil-king, kind: switch, slug: gateron-oil-king). updatedAt bumped to 2026-06-03. /part/switch/gateron-oil-king now shows cherry-mx2a-revision in its "mentioned in" rail. Language gate clean. 700 e2e green. `7b94f40`
+
+### [content] [5.4] hmx-cloud-deep-dive — tecsee-sapphire-v2 + mode-sonnet missing from mentionedParts
+- category: content
+- filed: 2026-06-03 by cloud /iterate audit
+- impact: 6 (hmx-cloud-deep-dive is a deep-dives article; Tecsee Sapphire is explicitly named at line 32 as the incumbent the HMX tactile bench fails to displace — "haven't materially threatened the Tecsee Sapphire's hold on that slot"; Mode Sonnet is named at line 26 as the canonical mid-tier build context — "what should I drop into my Mode Sonnet R2"; both absent from mentionedParts breaks "mentioned in" rails on /part/switch/tecsee-sapphire-v2 and /part/board/mode-sonnet)
+- ease: 9 (two frontmatter array entry additions)
+- score: 5.4 (impact × ease / 10)
+- issue: #262

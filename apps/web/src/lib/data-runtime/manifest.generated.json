@@ -2639,7 +2639,7 @@
           "linear"
         ],
         "publishedAt": "2026-05-10T19:00:00.000Z",
-        "updatedAt": "2026-05-24T00:00:00.000Z",
+        "updatedAt": "2026-06-03T00:00:00.000Z",
         "heroImage": "/hero-art/cherry-mx2a-revision.svg",
         "heroImageAlt": "Cherry MX2A switch cross-section, side view — top housing with stem hole, cruciform-mount POM stem column drawn in cherry-red splash, 5-coil spring, bent-leaf contact, and bottom housing with pin contacts; a thin dashed callout traces from the stem-housing interface to a magnified circular inset showing the new factory grease ring with scattered lube dots.",
         "featured": false,
@@ -2670,6 +2670,11 @@
             "id": "sapphire",
             "kind": "switch",
             "slug": "tecsee-sapphire-v2"
+          },
+          {
+            "id": "gateron-oil-king",
+            "kind": "switch",
+            "slug": "gateron-oil-king"
           }
         ]
       },
@@ -2755,7 +2760,7 @@
           "trends-2026"
         ],
         "publishedAt": "2026-05-10T10:30:00.000Z",
-        "updatedAt": "2026-05-26T00:00:00.000Z",
+        "updatedAt": "2026-06-03T00:00:00.000Z",
         "heroImage": "/hero-art/hmx-cloud-deep-dive.svg",
         "heroImageAlt": "Exploded-axonometric silhouette of a mechanical keyboard switch on a dark background — top housing, stem, spring, and lower housing separated by thin gap lines, with a single pale-cyan accent dot anchoring the stem.",
         "featured": false,
@@ -2776,6 +2781,16 @@
             "id": "mx2a-red",
             "kind": "switch",
             "slug": "cherry-mx2a-red"
+          },
+          {
+            "id": "sapphire",
+            "kind": "switch",
+            "slug": "tecsee-sapphire-v2"
+          },
+          {
+            "id": "mode-sonnet",
+            "kind": "board",
+            "slug": "mode-sonnet"
           }
         ]
       },
@@ -4334,5 +4349,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-06-03T11:50:13.988Z"
+  "generatedAt": "2026-06-03T15:47:02.410Z"
 }
