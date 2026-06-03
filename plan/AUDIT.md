@@ -72,7 +72,7 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
-### [data] [4.5] keycap-profiles-compared missing mt3-devtty in mentionedParts
+### [x] [data] [4.5] keycap-profiles-compared missing mt3-devtty in mentionedParts — addressed in 8687211, closes #266
 - category: data
 - filed: 2026-06-03 by cloud /iterate audit
 - impact: 5 (Guides pillar keycap-profiles article explicitly names "MT3 /dev/tty" as the canonical MT3 example that introduced typists to the profile; /part/keycap-set/mt3-devtty gains "mentioned in" cross-link from a high-traffic beginner Guides piece)
