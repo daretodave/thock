@@ -2357,7 +2357,7 @@ passes accumulate signals.)
 - elements: apps/web/src/content/articles/trends-tracker-preview.mdx line 23
 > **Resolved (2026-06-02):** Added mentionedParts entry (id: oil-king, kind: switch, slug: gateron-oil-king). Replaced plain "Gateron Oil King" at line 23 with `<PartReference id="oil-king" />`. updatedAt bumped to 2026-06-02. Language gate clean. 697 e2e green. `d0625b7`
 
-### [HOT PURSUIT] [content-gap] [7] guides pillar — 1 of ≥2 articles in last 30d
+### [x] [HOT PURSUIT] [content-gap] [7] guides pillar — 1 of ≥2 articles in last 30d — addressed in b6c8485 (closes #258)
 - category: content-gaps
 - impact: 5 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -2368,3 +2368,4 @@ passes accumulate signals.)
 - score: 7
 - next: /ship-content → guides pillar article
 > Filed 2026-06-03 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+> **Resolved (2026-06-03):** Shipped "Keyboard case materials, compared: aluminium, polycarbonate, and ABS" at `/article/case-materials-compared`, publishedAt 2026-05-27 (gap-fill: largest gap 05-23 → 06-01 in 30-day window). ~1530 words, 3 InlineViz. Guides pillar now at 2 of ≥2 in last 30d — comfortable. `b6c8485`
