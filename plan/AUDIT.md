@@ -2403,3 +2403,11 @@ passes accumulate signals.)
 - score: 5.4 (impact × ease / 10)
 - issue: [mirror-failed: 2026-06-03T00:00:00Z]
 > **Resolved (2026-06-03):** Added structured mentionedParts entry (id: oil-king, kind: switch, slug: gateron-oil-king). Swapped `<Mono>Gateron Oil King</Mono>` to `<PartReference id="oil-king" />` at line 41 so body prose links to the part page. updatedAt bumped to 2026-06-03. Language gate clean. 700 e2e green. `765d1ef`
+
+### [content] [5.4] cherry-mx2a-revision — gateron-oil-king missing from mentionedParts despite body mention
+- category: content
+- filed: 2026-06-03 by cloud /iterate audit
+- impact: 6 (cherry-mx2a-revision is a deep-dives article; Gateron Oil King is explicitly named in the body at line 49 as the acoustic benchmark Gateron Pro 3 emulates — "the same housing pairing that the Oil King uses to sound the way it sounds" — and the article links to its deep-dive; absent from mentionedParts breaks the "mentioned in" cross-reference rail on /part/switch/gateron-oil-king)
+- ease: 9 (single frontmatter array entry addition)
+- score: 5.4 (impact × ease / 10)
+- issue: #261
