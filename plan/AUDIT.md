@@ -72,6 +72,14 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [data] [3.5] gmk-cyl-selene missing keycap-set record and mentionedParts link — addressed in 6ec0722
+- category: data
+- filed: 2026-06-04 by cloud /iterate audit
+- impact: 5 (GMK CYL Selene is live at KBDfans through 2026-06-19, scoring +31 in W23 tracker; companion article had no mentionedParts field at all; new /part/keycap-set/gmk-cyl-selene page now exists and Selene enters the parts catalog and quiz result set)
+- ease: 7 (add keycap-set JSON record + mentionedParts field to article; ship-data pattern well-established)
+- score: 3.5 (impact × ease / 10)
+- issue: [mirror-failed: 2026-06-04]
+
 ### [x] [data] [4.5] clicky-switches-deep-dive missing kailh-box-white in mentionedParts — addressed in 1332652
 - category: data
 - filed: 2026-06-04 by cloud /iterate audit
