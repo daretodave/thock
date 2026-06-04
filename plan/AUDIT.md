@@ -72,6 +72,14 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [data] [4.5] clicky-switches-deep-dive missing kailh-box-white in mentionedParts — addressed in 1332652
+- category: data
+- filed: 2026-06-04 by cloud /iterate audit
+- impact: 5 (clicky-switches-deep-dive is the site's primary editorial resource on clicky switches; line 54 names "The Kailh Box family — Jade, Navy, White, Pale Blue — gave clickies a second wind..."; kailh-box-white was added to catalog in phase 34 but the article predates it; /part/switch/kailh-box-white gains a "mentioned in" cross-link from the most prominent clicky deep-dive on the site)
+- ease: 9 (add single mentionedParts entry + wrap "White" in Mono tag to match Box Jade / Box Navy style; same pattern as prior fixes)
+- score: 4.5 (impact × ease / 10)
+- issue: [mirror-failed: 2026-06-04T00:00:00Z]
+
 ### [x] [data] [4.5] keycap-profiles-compared missing mt3-devtty in mentionedParts — addressed in 8687211, closes #266
 - category: data
 - filed: 2026-06-03 by cloud /iterate audit
