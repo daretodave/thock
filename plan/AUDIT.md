@@ -2510,3 +2510,11 @@ passes accumulate signals.)
 - score: 4.5 (impact × ease / 10)
 - issue: [mirror-failed: 2026-06-05T00:00:00Z]
 > **Resolved (2026-06-05):** Added oil-king (id: oil-king, kind: switch, slug: gateron-oil-king) and hmx-cloud (id: hmx-cloud, kind: switch, slug: hmx-cloud) to mentionedParts frontmatter. Consistent with hall-effect-mainstream.mdx treatment of the same two products (frontmatter entries without inline PartReference, since body uses them as tier descriptors). updatedAt bumped to 2026-06-05. 709 e2e green. `69e99f6`
+
+### [x] [content] [3.6] hmx-cloud-deep-dive — gateron-pro-3-yellow missing from mentionedParts — addressed in 25a2f8782fbf2709dab25b5fdf9a9622aa222afa, closes #269
+- category: content
+- filed: 2026-06-05 by cloud /iterate audit
+- impact: 4 (hmx-cloud-deep-dive deep-dives article names "Oil King and Pro 3.0 line" in restock-cadence comparison; gateron-pro-3-yellow in catalog; /part/switch/gateron-pro-3-yellow gains "mentioned in" cross-link from a substantive deep-dive)
+- ease: 9 (frontmatter entry + PartReference inline at line 87 + updatedAt bump; no schema or code change)
+- score: 3.6 (impact × ease / 10)
+- issue: #269
