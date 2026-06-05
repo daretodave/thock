@@ -2543,3 +2543,11 @@ passes accumulate signals.)
 - score: 3.5 (impact × ease / 10)
 - next: add <PartReference id="sa-godspeed" /> to SA section body; add sa-godspeed to mentionedParts frontmatter
 - issue: #271
+
+### [x] [data] [4.0] beginners-switch-buying-guide — durock-t1 absent from tactile section, part page had empty "mentioned in" rail — addressed in 4d9fe89
+- category: data
+- filed: 2026-06-05 by cloud /iterate audit
+- impact: 5 (beginners-switch-buying-guide is the guides pillar flagship article; Durock T1 is the hobby's canonical entry-level heavy tactile with 67g actuation; /part/switch/durock-t1 had 0 article cross-links across all 48 articles; tactile section listed four common starting points but omitted the T1 — the most-recommended heavy bump option)
+- ease: 8 (one sentence + PartReference in existing tactile paragraph + frontmatter entry)
+- score: 4.0 (impact × ease / 10)
+- issue: [mirror-failed: 2026-06-05T23:30:00Z]
