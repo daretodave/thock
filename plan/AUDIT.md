@@ -2526,3 +2526,11 @@ passes accumulate signals.)
 - ease: 7 (single sentence update in article body + frontmatter mentionedParts update; updatedAt bumped)
 - score: 3.5 (impact × ease / 10)
 - issue: [mirror-failed: 2026-06-05T00:00:00Z]
+
+### [x] [data] [4.5] plate-materials-explained missing mode-sonnet in mentionedParts — addressed in 598e896, closes #270
+- category: data
+- filed: 2026-06-05 by cloud /iterate audit
+- impact: 5 (deep-dives article on plate materials names Mode Sonnet as the pioneering mid-tier board to offer configurable plate options in its "What to watch" section; mode-sonnet is in the boards catalog; /part/board/mode-sonnet "mentioned in" rail was missing this plate-materials guide cross-link; builders researching the Mode Sonnet board gain a relevant editorial reference)
+- ease: 9 (single frontmatter entry; no body or code change)
+- score: 4.5 (impact × ease / 10)
+- issue: #270
