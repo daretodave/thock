@@ -2473,3 +2473,15 @@ passes accumulate signals.)
 - issue: #265
 - elements: apps/web/src/content/articles/mounting-styles-compared.mdx lines 81, 104
 > **Resolved (2026-06-03):** Added bakeneko65 (id: bakeneko, kind: board, slug: bakeneko65) to mentionedParts. Swapped plain "Bakeneko" at line 81 to `<PartReference id="bakeneko" />` — "original Bakeneko design" now links to the part page, parallel to the qk75 PartReference at line 69. updatedAt bumped to 2026-06-03. Language gate clean. 703 e2e green. `ad714db`
+
+### [x] [content-gaps] [3.5] hall-effect tag has 2 articles — W23 tracker #1 trending topic needs a buyer's guide — addressed in 72d4480, closes #267
+- category: content-gaps
+- filed: 2026-06-05 by cloud /iterate audit
+- impact: 7 (hall-effect / rapid-trigger is the W23 tracker's top-scoring entry at +66 direction up; the site has a technology deep-dive and a market-trend piece but no practical buyer's guide; readers who searched "hall-effect keyboard guide" after encountering the tracker find no purchase guidance on thock; gateron-magnetic-jade is in the catalog with no guide article linking to it)
+- ease: 5 (one new guides article, delegate to content-curator + brander)
+- score: 3.5 (impact × ease / 10)
+- rule: tag underrepresentation (hall-effect tag at 2 articles, below the 3-article threshold for a top-trending topic)
+- target: guides pillar — "Hall-effect keyboards: a buyer's guide" — slug hall-effect-keyboard-guide
+- publishedAt: 2026-05-30T12:00:00.000Z (gap-fill: largest gap May 27T13:00 → Jun 1T14:00)
+- issue: #267
+> **Resolved (2026-06-05):** Shipped hall-effect-keyboard-guide.mdx (~1480 words, 7 sections) to the guides pillar. Tags: hall-effect, magnetic, switches, prebuilt, configurator, polling-rate. mentionedParts: gateron-magnetic-jade. Hero SVG: ochre splash, Hall-effect cross-section with annotated callouts. hall-effect tag now at 3 articles. Language gate clean. 709 e2e green. `72d4480`
