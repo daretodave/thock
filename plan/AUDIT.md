@@ -72,6 +72,14 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [data] [4.8] beginners-switch-buying-guide silent section had no named example; gazzew-boba-u4 orphaned — addressed in 27e279f, closes #268
+- category: data
+- filed: 2026-06-05 by cloud /iterate audit
+- impact: 6 (high-popularity guide article; gazzew-boba-u4 had zero mentionedParts references across all 48 articles; /part/switch/gazzew-boba-u4 "mentioned in" rail was empty; silent section now has a concrete named example matching the same pattern as the linear and clicky sections)
+- ease: 8 (single sentence + PartReference + frontmatter entry)
+- score: 4.8 (impact × ease / 10)
+- issue: #268
+
 ### [x] [data] [4.5] switch-films-worth-it missing drop-holy-panda-x in mentionedParts — addressed in 20abb34
 - category: data
 - filed: 2026-06-05 by cloud /iterate audit
