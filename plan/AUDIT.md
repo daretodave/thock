@@ -2534,3 +2534,12 @@ passes accumulate signals.)
 - ease: 9 (single frontmatter entry; no body or code change)
 - score: 4.5 (impact × ease / 10)
 - issue: #270
+
+### [x] [content] [3.5] keycap-profiles-compared — SA section has no canonical set example — addressed in ca59b41, closes #271
+- category: content
+- filed: 2026-06-05 by cloud /iterate audit
+- impact: 5 (guides article comparing Cherry, OEM, SA, MT3 profiles; Cherry section cites gmk-bento-r2, MT3 cites mt3-dasher + mt3-devtty, KAT section cites kat-drifter; SA section describes the profile in detail but never names a specific set — the only profile section without a concrete PartReference; sa-godspeed is in the catalog as the canonical SA example, produced by Signature Plastics through Drop, described as "a gateway set for enthusiasts exploring tall-profile keycaps")
+- ease: 7 (one sentence + PartReference in SA section + frontmatter slug addition)
+- score: 3.5 (impact × ease / 10)
+- next: add <PartReference id="sa-godspeed" /> to SA section body; add sa-godspeed to mentionedParts frontmatter
+- issue: #271
