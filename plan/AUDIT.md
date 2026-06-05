@@ -2518,3 +2518,12 @@ passes accumulate signals.)
 - ease: 9 (frontmatter entry + PartReference inline at line 87 + updatedAt bump; no schema or code change)
 - score: 3.6 (impact × ease / 10)
 - issue: #269
+
+### [3.5] spring-swaps-explained missing mentionedParts — c3-tangerine-r2 orphaned
+- category: data
+- filed: 2026-06-05 by cloud /iterate audit
+- impact: 5 (ideas pillar article has empty mentionedParts: []; c3-tangerine-r2 part page shows empty "mentioned in" rail — zero article cross-links from a well-regarded switch in the catalog; spring-swaps article references "a 75g spring in a switch that would be better at 62g" as a vague example when the Tangerine R2 at 67g is the canonical real-world case)
+- ease: 7 (single sentence update in article body replacing abstract example with specific PartReference; frontmatter mentionedParts update)
+- score: 3.5 (impact × ease / 10)
+- issue: [mirror-failed: 2026-06-05T00:00:00Z]
+- next: update spring-swaps-explained.mdx — add tangerine-r2 to mentionedParts + replace vague example sentence with PartReference
