@@ -72,6 +72,14 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [data] [4.5] switch-films-worth-it missing drop-holy-panda-x in mentionedParts — addressed in 20abb34
+- category: data
+- filed: 2026-06-05 by cloud /iterate audit
+- impact: 5 (Holy Panda X is named in a comparison table row with verdict "Worth trying"; drop-holy-panda-x part page gains a "mentioned in" cross-link from the ideas pillar; switch-films article gains HPX in its parts rail)
+- ease: 9 (single frontmatter addition)
+- score: 4.5 (impact × ease / 10)
+- issue: [mirror-failed: 2026-06-05T00:00:00Z]
+
 ### [x] [data] [3.5] gmk-cyl-selene missing keycap-set record and mentionedParts link — addressed in 6ec0722
 - category: data
 - filed: 2026-06-04 by cloud /iterate audit
