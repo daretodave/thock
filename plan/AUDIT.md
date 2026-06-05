@@ -2485,3 +2485,12 @@ passes accumulate signals.)
 - publishedAt: 2026-05-30T12:00:00.000Z (gap-fill: largest gap May 27T13:00 → Jun 1T14:00)
 - issue: #267
 > **Resolved (2026-06-05):** Shipped hall-effect-keyboard-guide.mdx (~1480 words, 7 sections) to the guides pillar. Tags: hall-effect, magnetic, switches, prebuilt, configurator, polling-rate. mentionedParts: gateron-magnetic-jade. Hero SVG: ochre splash, Hall-effect cross-section with annotated callouts. hall-effect tag now at 3 articles. Language gate clean. 709 e2e green. `72d4480`
+
+### [x] [content] [4.5] hall-effect-keyboard-guide missing oil-king + hmx-cloud in mentionedParts — addressed in 69e99f6
+- category: content
+- filed: 2026-06-05 by cloud /iterate audit
+- impact: 5 (hall-effect-keyboard-guide is the guides pillar buyer's guide just shipped 2026-06-05; Gateron Oil King and HMX Cloud are named explicitly in body prose at lines 88 and 98 as the canonical MX linear reference benchmarks the article positions HE against; both are in the data catalog; their part pages gain "mentioned in" cross-link from a high-traffic buyer's guide article)
+- ease: 9 (frontmatter array additions + updatedAt bump; no body or code change)
+- score: 4.5 (impact × ease / 10)
+- issue: [mirror-failed: 2026-06-05T00:00:00Z]
+> **Resolved (2026-06-05):** Added oil-king (id: oil-king, kind: switch, slug: gateron-oil-king) and hmx-cloud (id: hmx-cloud, kind: switch, slug: hmx-cloud) to mentionedParts frontmatter. Consistent with hall-effect-mainstream.mdx treatment of the same two products (frontmatter entries without inline PartReference, since body uses them as tier descriptors). updatedAt bumped to 2026-06-05. 709 e2e green. `69e99f6`
