@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — Hall-effect switch cross-section, buyer's guide callouts</title>
+
+  <!-- ================================================================
+       Canvas:  1200 × 750
+       Subject: Hall-effect switch cross-section (left-half cut-away)
+       Motif:   Annotated diagram with four callout lines
+                1. magnet in stem  (at stem base)
+                2. Hall sensor     (on PCB pad — ochre accent)
+                3. analog voltage  (voltage-bar glyph at right)
+                4. firmware threshold (dashed line across voltage bar)
+
+       Palette:
+         Background   #F9F4EF  warm paper
+         Stroke       #4A4540  warm charcoal, 2px
+         Callout grey #8A8480  annotation lines + labels
+         Accent ochre #C9A84C  Hall sensor pad + focal dot
+         Bronze theme #b88a2e  upper-right ornament dot
+  ================================================================ -->
+
+  <!-- BACKGROUND -->
+  <rect width="1200" height="750" fill="#F9F4EF" stroke="none"/>
+
+  <!-- Very faint warm grid suggesting a technical drawing sheet -->
+  <g stroke="#4A4540" stroke-opacity="0.04" stroke-width="1">
+    <line x1="0" y1="375" x2="1200" y2="375"/>
+    <line x1="600" y1="0" x2="600" y2="750"/>
+  </g>
+
+  <!-- ================================================================
+       SWITCH CROSS-SECTION
+       The switch is centered horizontally at x=520.
+       It shows a left-half cut-away view in the classic style.
+       Layout y-zones:
+         Keycap top            y=130
+         Top housing           y=170–265
+         Housing seam          y=265
+         Stem travel region    y=265–480
+         Bottom housing        y=480–580
+         PCB layer             y=580–620
+         Hall sensor pad       y=605  (ochre)
+  ================================================================ -->
+
+  <!-- ── KEYCAP (top, above housing) ─────────────────────────────── -->
+  <g stroke="#4A4540" stroke-width="2">
+    <!-- Keycap body — flat-profiled, cut-away left half only -->
+    <path d="
+      M 430 130
+      L 610 130
+      L 620 175
+      L 420 175
+      Z"
+      fill="#F9F4EF"/>
+    <!-- Top ledge — subtle depth tick -->
+    <line x1="430" y1="130" x2="610" y2="130" stroke-opacity="0.65"/>
+    <!-- Keycap top surface highlight (warm bronze accent on leading edge — family convention) -->
+    <path d="M 430 130 L 610 130" stroke="#C9A84C" stroke-opacity="0.60" stroke-width="2"/>
+  </g>
+
+  <!-- ── TOP HOUSING ───────────────────────────────────────────────── -->
+  <g stroke="#4A4540" stroke-width="2">
+    <!-- Outer top housing trapezoid — slightly wider than the stem aperture -->
+    <path d="
+      M 400 175
+      L 640 175
+      L 655 265
+      L 385 265
+      Z"
+      fill="#F9F4EF"/>
+    <!-- Stem aperture at top of housing -->
+    <path d="
+      M 480 175
+      L 560 175
+      L 565 210
+      L 475 210
+      Z"
+      fill="#F9F4EF"/>
+    <!-- Inner rib / cavity suggestion -->
+    <line x1="400" y1="225" x2="472" y2="225" stroke-opacity="0.35"/>
+    <line x1="568" y1="225" x2="640" y2="225" stroke-opacity="0.35"/>
+    <!-- Mounting nub (left clip) -->
+    <path d="M 400 210 L 388 210 L 385 220 L 400 220" stroke-opacity="0.55"/>
+  </g>
+
+  <!-- HOUSING SEAM — dashed mid-line where the two halves meet -->
+  <line x1="375" y1="265" x2="665" y2="265"
+    stroke="#4A4540" stroke-width="1.5" stroke-dasharray="4 6" stroke-opacity="0.45"/>
+
+  <!-- ── STEM ────────────────────────────────────────────────────────
+       The stem travels from the aperture at y=210 down to y=460.
+       The magnet is housed in the bottom portion of the stem (y=430–460).
+  ─────────────────────────────────────────────────────────────────── -->
+  <g stroke="#4A4540" stroke-width="2">
+    <!-- Stem cruciform top (above the keycap housing) -->
+    <path d="
+      M 503 130
+      L 537 130
+      L 537 145
+      L 546 145
+      L 546 175
+      L 494 175
+      L 494 145
+      L 503 145
+      Z"
+      fill="#F9F4EF"/>
+    <!-- Stem body — the column running down through the housing -->
+    <path d="
+      M 494 210
+      L 546 210
+      L 546 430
+      L 494 430
+      Z"
+      fill="#F9F4EF"/>
+    <!-- Guide line down the center of stem body (very faint) -->
+    <line x1="520" y1="218" x2="520" y2="424" stroke-opacity="0.28"/>
+    <!-- Rail ticks on stem sides (suggest travel guide rails) -->
+    <line x1="494" y1="290" x2="478" y2="290" stroke-opacity="0.40"/>
+    <line x1="494" y1="340" x2="478" y2="340" stroke-opacity="0.40"/>
+    <line x1="494" y1="390" x2="478" y2="390" stroke-opacity="0.40"/>
+    <line x1="546" y1="290" x2="562" y2="290" stroke-opacity="0.40"/>
+    <line x1="546" y1="340" x2="562" y2="340" stroke-opacity="0.40"/>
+    <line x1="546" y1="390" x2="562" y2="390" stroke-opacity="0.40"/>
+  </g>
+
+  <!-- ── MAGNET IN STEM (at stem base, y=430–460) ─────────────────── -->
+  <!-- Rectangular magnet block rendered at the bottom of the stem -->
+  <rect x="496" y="430" width="48" height="30" rx="2"
+    fill="#4A4540" fill-opacity="0.10"
+    stroke="#4A4540" stroke-width="2"/>
+  <!-- Polarity divider line inside magnet -->
+  <line x1="520" y1="430" x2="520" y2="460"
+    stroke="#4A4540" stroke-opacity="0.40" stroke-width="1.5"/>
+  <!-- N/S polarity dots — tiny, subtle -->
+  <circle cx="510" cy="445" r="3" fill="#4A4540" fill-opacity="0.30" stroke="none"/>
+  <circle cx="530" cy="445" r="3" fill="#F9F4EF" stroke="#4A4540" stroke-opacity="0.40" stroke-width="1"/>
+
+  <!-- ── BOTTOM HOUSING ─────────────────────────────────────────────── -->
+  <g stroke="#4A4540" stroke-width="2">
+    <!-- Spring (coil between stem base and bottom housing floor) -->
+    <ellipse cx="520" cy="478" rx="26" ry="6" stroke-opacity="0.65"/>
+    <ellipse cx="520" cy="489" rx="26" ry="6" stroke-opacity="0.65"/>
+    <ellipse cx="520" cy="500" rx="26" ry="6" stroke-opacity="0.65"/>
+    <ellipse cx="520" cy="511" rx="26" ry="6" stroke-opacity="0.65"/>
+
+    <!-- Outer bottom housing shell -->
+    <path d="
+      M 385 265
+      L 655 265
+      L 655 580
+      L 385 580
+      Z"
+      fill="none"/>
+    <!-- Bottom housing floor -->
+    <line x1="385" y1="580" x2="655" y2="580"/>
+    <!-- Inner well around spring + sensor -->
+    <path d="M 468 530 L 572 530 L 572 580 L 468 580 Z" stroke-opacity="0.40"/>
+    <!-- Bottom housing left/right walls explicit (part of the cut-away, visible) -->
+    <line x1="385" y1="265" x2="385" y2="580" stroke-opacity="0.75"/>
+    <line x1="655" y1="265" x2="655" y2="580" stroke-opacity="0.75"/>
+  </g>
+
+  <!-- ── PCB PLANE ──────────────────────────────────────────────────── -->
+  <g stroke="#4A4540" stroke-width="1.5">
+    <!-- PCB board surface -->
+    <rect x="355" y="580" width="330" height="18" rx="2"
+      fill="#4A4540" fill-opacity="0.06"
+      stroke="#4A4540" stroke-opacity="0.55"/>
+    <!-- PCB traces (horizontal hairlines, faint) -->
+    <line x1="370" y1="590" x2="450" y2="590" stroke-opacity="0.25"/>
+    <line x1="590" y1="590" x2="670" y2="590" stroke-opacity="0.25"/>
+  </g>
+
+  <!-- ── HALL SENSOR PAD (ochre accent — the key focal element) ───── -->
+  <!-- Ochre wash fill — the visual anchor the callout arrows point to -->
+  <circle cx="520" cy="605" r="16"
+    fill="#C9A84C" fill-opacity="0.28" stroke="none"/>
+  <!-- Sensor pad stroked ring -->
+  <circle cx="520" cy="605" r="10"
+    fill="#C9A84C" fill-opacity="0.18"
+    stroke="#C9A84C" stroke-width="2"/>
+  <!-- Center dot -->
+  <circle cx="520" cy="605" r="4"
+    fill="#C9A84C" stroke="none"/>
+  <!-- Outer sensing-radius halo -->
+  <circle cx="520" cy="605" r="20"
+    fill="none"
+    stroke="#C9A84C" stroke-opacity="0.30" stroke-width="1.5" stroke-dasharray="3 4"/>
+
+  <!-- ── VOLTAGE-BAR GLYPH (right side, x=730–780) ─────────────────
+       A small vertical bar chart reading "output voltage vs. key travel".
+       Three fill bars at increasing heights suggest analog ramp.
+  ─────────────────────────────────────────────────────────────────── -->
+  <g stroke="#4A4540" stroke-width="1.5" stroke-opacity="0.65">
+    <!-- Bounding box of voltage bar display -->
+    <rect x="718" y="380" width="72" height="160" rx="2"
+      fill="#F9F4EF" stroke-opacity="0.45"/>
+    <!-- Y-axis tick marks -->
+    <line x1="718" y1="410" x2="724" y2="410"/>
+    <line x1="718" y1="440" x2="724" y2="440"/>
+    <line x1="718" y1="470" x2="724" y2="470"/>
+    <line x1="718" y1="500" x2="724" y2="500"/>
+    <line x1="718" y1="530" x2="724" y2="530"/>
+    <!-- Voltage bar fills — three steps, left to right, rising (analog ramp) -->
+    <!-- Bar 1: low voltage (shallow press) -->
+    <rect x="729" y="516" width="14" height="24" rx="1"
+      fill="#4A4540" fill-opacity="0.20" stroke="none"/>
+    <!-- Bar 2: mid voltage -->
+    <rect x="747" y="490" width="14" height="50" rx="1"
+      fill="#4A4540" fill-opacity="0.30" stroke="none"/>
+    <!-- Bar 3: full press voltage — tallest -->
+    <rect x="765" y="456" width="14" height="84" rx="1"
+      fill="#4A4540" fill-opacity="0.40" stroke="none"/>
+  </g>
+
+  <!-- ── FIRMWARE THRESHOLD LINE (dashed horizontal across the voltage bar) ──
+       Sits at y=500, crossing the bar chart interior — represents the
+       configurable actuation point.
+  ─────────────────────────────────────────────────────────────────── -->
+  <line x1="718" y1="500" x2="790" y2="500"
+    stroke="#4A4540" stroke-width="2" stroke-dasharray="5 4" stroke-opacity="0.75"/>
+  <!-- Arrow tip pointing right at threshold line (indicates it can be moved) -->
+  <path d="M 790 500 L 782 495 M 790 500 L 782 505"
+    stroke="#4A4540" stroke-width="1.5" stroke-opacity="0.65"/>
+
+  <!-- ================================================================
+       CALLOUT ANNOTATION LINES
+       All leader lines: stroke #8A8480, weight 1.2px
+       Labels: JetBrains Mono / ui-monospace, 12–13px, fill #8A8480
+       Each line ends in a small filled dot at the label anchor.
+  ================================================================ -->
+
+  <!-- ── CALLOUT 1: "magnet in stem" ──────────────────────────────────
+       Target: magnet block at stem base ~(520, 445)
+       Leader: elbow up-left to (320, 395) then left to (240, 395)
+  ─────────────────────────────────────────────────────────────────── -->
+  <g stroke="#8A8480" stroke-width="1.2" fill="none">
+    <path d="M 496 445 L 310 445 L 310 395"/>
+    <!-- Terminal dot at label end -->
+    <circle cx="310" cy="395" r="3" fill="#8A8480" stroke="none"/>
+  </g>
+  <!-- Arrow tip pointing right toward the magnet -->
+  <path d="M 496 445 L 505 440 M 496 445 L 505 450"
+    stroke="#8A8480" stroke-width="1.2" fill="none"/>
+  <text x="306" y="383"
+    font-family="'JetBrains Mono','IBM Plex Mono',ui-monospace,monospace"
+    font-size="12" fill="#8A8480" letter-spacing="0.03em"
+    text-anchor="middle" stroke="none">magnet</text>
+  <text x="306" y="398"
+    font-family="'JetBrains Mono','IBM Plex Mono',ui-monospace,monospace"
+    font-size="12" fill="#8A8480" letter-spacing="0.03em"
+    text-anchor="middle" stroke="none">in stem</text>
+
+  <!-- ── CALLOUT 2: "Hall sensor" ──────────────────────────────────────
+       Target: sensor pad at (520, 605)
+       Leader: down-left elbow to (300, 655) — label left-anchored
+  ─────────────────────────────────────────────────────────────────── -->
+  <g stroke="#C9A84C" stroke-width="1.4" fill="none">
+    <path d="M 500 605 L 360 605 L 360 655"/>
+    <circle cx="360" cy="655" r="3.5" fill="#C9A84C" stroke="none"/>
+  </g>
+  <path d="M 500 605 L 509 600 M 500 605 L 509 610"
+    stroke="#C9A84C" stroke-width="1.4" fill="none"/>
+  <text x="356" y="671"
+    font-family="'JetBrains Mono','IBM Plex Mono',ui-monospace,monospace"
+    font-size="12" fill="#C9A84C" letter-spacing="0.03em"
+    text-anchor="middle" stroke="none">Hall</text>
+  <text x="356" y="686"
+    font-family="'JetBrains Mono','IBM Plex Mono',ui-monospace,monospace"
+    font-size="12" fill="#C9A84C" letter-spacing="0.03em"
+    text-anchor="middle" stroke="none">sensor</text>
+
+  <!-- ── CALLOUT 3: "analog voltage" ──────────────────────────────────
+       Target: voltage bar glyph at right (~(790, 480))
+       Leader: right elbow to (880, 480) then right to (940, 480)
+  ─────────────────────────────────────────────────────────────────── -->
+  <g stroke="#8A8480" stroke-width="1.2" fill="none">
+    <path d="M 790 478 L 870 478 L 870 440"/>
+    <circle cx="870" cy="440" r="3" fill="#8A8480" stroke="none"/>
+  </g>
+  <path d="M 790 478 L 781 473 M 790 478 L 781 483"
+    stroke="#8A8480" stroke-width="1.2" fill="none"/>
+  <text x="870" y="426"
+    font-family="'JetBrains Mono','IBM Plex Mono',ui-monospace,monospace"
+    font-size="12" fill="#8A8480" letter-spacing="0.03em"
+    text-anchor="middle" stroke="none">analog</text>
+  <text x="870" y="441"
+    font-family="'JetBrains Mono','IBM Plex Mono',ui-monospace,monospace"
+    font-size="12" fill="#8A8480" letter-spacing="0.03em"
+    text-anchor="middle" stroke="none">voltage</text>
+
+  <!-- ── CALLOUT 4: "firmware threshold" ─────────────────────────────
+       Target: dashed threshold line at y=500, x≈790
+       Leader: right to (880, 500) then up to (880, 540)
+  ─────────────────────────────────────────────────────────────────── -->
+  <g stroke="#8A8480" stroke-width="1.2" fill="none">
+    <path d="M 792 500 L 880 500 L 880 540"/>
+    <circle cx="880" cy="540" r="3" fill="#8A8480" stroke="none"/>
+  </g>
+  <text x="880" y="556"
+    font-family="'JetBrains Mono','IBM Plex Mono',ui-monospace,monospace"
+    font-size="12" fill="#8A8480" letter-spacing="0.03em"
+    text-anchor="middle" stroke="none">firmware</text>
+  <text x="880" y="571"
+    font-family="'JetBrains Mono','IBM Plex Mono',ui-monospace,monospace"
+    font-size="12" fill="#8A8480" letter-spacing="0.03em"
+    text-anchor="middle" stroke="none">threshold</text>
+
+  <!-- ================================================================
+       DIDACTIC MARGIN TICKS (left edge, quiet — family convention)
+  ================================================================ -->
+  <g stroke="#4A4540" stroke-opacity="0.25" stroke-width="1">
+    <line x1="335" y1="130" x2="348" y2="130"/>
+    <line x1="335" y1="175" x2="348" y2="175"/>
+    <line x1="335" y1="265" x2="348" y2="265"/>
+    <line x1="335" y1="460" x2="348" y2="460"/>
+    <line x1="335" y1="580" x2="348" y2="580"/>
+    <line x1="335" y1="598" x2="348" y2="598"/>
+  </g>
+
+  <!-- Diagonal brace lines suggesting "cut section" at the edges of the cross-section -->
+  <g stroke="#4A4540" stroke-opacity="0.18" stroke-width="1">
+    <line x1="385" y1="265" x2="370" y2="240"/>
+    <line x1="655" y1="265" x2="670" y2="240"/>
+  </g>
+
+  <!-- Ochre wash region behind the sensor pad — buyer's checklist focal area -->
+  <ellipse cx="520" cy="595" rx="70" ry="40"
+    fill="#C9A84C" fill-opacity="0.07" stroke="none"/>
+
+  <!-- ================================================================
+       BRASS / BRONZE THEME DOT — upper-right ornamental anchor
+       (family convention, present in all thock heroes)
+  ================================================================ -->
+  <circle cx="1148" cy="70" r="3.5" fill="#b88a2e" stroke="#b88a2e"/>
+
+  <!-- Faint board-label watermark lower-right -->
+  <text x="1140" y="720"
+    font-family="'JetBrains Mono','IBM Plex Mono',ui-monospace,monospace"
+    font-size="10" fill="#4A4540" fill-opacity="0.20"
+    letter-spacing="0.06em" text-anchor="end" stroke="none">hall-effect</text>
+</svg>

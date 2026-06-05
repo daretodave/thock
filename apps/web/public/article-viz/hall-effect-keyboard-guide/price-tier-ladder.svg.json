@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-05T12:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "hall-effect-keyboard-guide",
+  "article_pillar": "guides",
+  "section_anchor": "the-pricing-reality",
+  "brief_summary": "A vertical price ladder with three tiers mapped against a price axis ($80 at the bottom, $250 at the top). Bottom tier: budget HE $80–$120, annotated with 'configurator shallow or desktop-only, calibration manual or absent, magnet tolerance loose' — rendered in a muted stroke. Middle tier: mid HE $130–$160, annotated with 'browser configurator, per-key rapid trigger, reliable calibration' — rendered with amber accent. Top tier: enthusiast HE $160–$250, annotated with 'firmware parity with hardware, tight magnet tolerance, hot-swap open standard' — rendered with amber accent. An amber bracket spans the top two tiers with the label 'where the firmware matches the hardware'. The diagram directly supports the article's pricing-reality section claims.",
+  "target": "apps/web/public/article-viz/hall-effect-keyboard-guide/price-tier-ladder.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "hall-effect-keyboard-guide.mdx § 'The pricing reality' — 'Budget Hall-effect boards in the $80–$120 range exist and they are real keyboards. They cut corners on configurator depth — often a desktop-only app, often no per-key actuation control — or on calibration quality.'",
+    "hall-effect-keyboard-guide.mdx § 'The pricing reality' — 'The enthusiast tier at $150–$250 is where the firmware typically matches the hardware. Per-key rapid trigger is exposed in a browser configurator, calibration is reliable, and the magnet tolerance is tight enough that WASD behavior is consistent across the cluster.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/hall-effect-keyboard-guide/price-tier-ladder.svg"],
+  "warnings": []
+}

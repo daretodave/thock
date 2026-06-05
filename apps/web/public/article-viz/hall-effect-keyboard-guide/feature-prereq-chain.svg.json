@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-05T12:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "hall-effect-keyboard-guide",
+  "article_pillar": "guides",
+  "section_anchor": "the-three-features-that-matter-and-what-they-require",
+  "brief_summary": "A three-row by three-column matrix diagram. Rows are the three Hall-effect features (rapid trigger, per-key actuation depth, analog HID axis). Columns are the three prerequisite stages (hardware, configurator, user setup). Each cell has an amber accent circle and descriptive text. Arrows connect the cells left-to-right within each row. The diagram makes visible that all three prerequisites must be satisfied for any feature to function.",
+  "target": "apps/web/public/article-viz/hall-effect-keyboard-guide/feature-prereq-chain.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "hall-effect-keyboard-guide.mdx § 'The three features that matter — and what they require' — 'Rapid trigger requires a board with Hall sensors on every key position (hardware), a configurator that exposes the reset-delta parameter per key (software), and the user actually setting the delta (setup).'",
+    "hall-effect-keyboard-guide.mdx § 'The three features that matter — and what they require' — 'Per-key actuation depth requires the same sensor foundation plus a configurator that lets the user set an independent threshold per key.'",
+    "hall-effect-keyboard-guide.mdx § 'The three features that matter — and what they require' — 'Analog HID axis requires a board that supports HID gamepad descriptors alongside the keyboard descriptor, a configurator that lets the user bind the axis mapping, and a game that accepts the gamepad input.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/hall-effect-keyboard-guide/feature-prereq-chain.svg"],
+  "warnings": []
+}

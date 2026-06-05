@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Three Hall-effect features — rapid trigger, per-key actuation depth, analog HID axis — each requiring hardware, configurator, and user setup</title>
+
+  <!-- Column headers -->
+  <text x="320" y="72" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6" letter-spacing="0.05em">HARDWARE</text>
+  <text x="600" y="72" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6" letter-spacing="0.05em">CONFIGURATOR</text>
+  <text x="880" y="72" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6" letter-spacing="0.05em">USER SETUP</text>
+
+  <!-- Vertical guides (faint) -->
+  <line x1="460" y1="85" x2="460" y2="445" stroke-opacity="0.12"/>
+  <line x1="740" y1="85" x2="740" y2="445" stroke-opacity="0.12"/>
+
+  <!-- ═════ ROW 1: Rapid Trigger ═════ -->
+  <!-- Row label -->
+  <text x="118" y="148" font-family="Newsreader, serif" font-size="19" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">rapid</text>
+  <text x="118" y="170" font-family="Newsreader, serif" font-size="19" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">trigger</text>
+
+  <!-- Hardware cell -->
+  <rect x="200" y="120" width="240" height="80" rx="6" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.9" stroke-width="2" fill="oklch(0.78 0.10 80 / 0.07)"/>
+  <circle cx="280" cy="160" r="7" fill="oklch(0.78 0.10 80)" stroke="oklch(0.78 0.10 80)"/>
+  <text x="340" y="156" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">Hall sensor</text>
+  <text x="340" y="173" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">per key position</text>
+
+  <!-- Arrow -->
+  <path d="M 440 160 L 472 160" stroke-opacity="0.4"/>
+  <path d="M 464 154 L 472 160 L 464 166" stroke-opacity="0.4"/>
+
+  <!-- Configurator cell -->
+  <rect x="480" y="120" width="240" height="80" rx="6" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.9" stroke-width="2" fill="oklch(0.78 0.10 80 / 0.07)"/>
+  <circle cx="560" cy="160" r="7" fill="oklch(0.78 0.10 80)" stroke="oklch(0.78 0.10 80)"/>
+  <text x="620" y="156" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">per-key reset</text>
+  <text x="620" y="173" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">delta control</text>
+
+  <!-- Arrow -->
+  <path d="M 720 160 L 752 160" stroke-opacity="0.4"/>
+  <path d="M 744 154 L 752 160 L 744 166" stroke-opacity="0.4"/>
+
+  <!-- User setup cell -->
+  <rect x="760" y="120" width="240" height="80" rx="6" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.9" stroke-width="2" fill="oklch(0.78 0.10 80 / 0.07)"/>
+  <circle cx="840" cy="160" r="7" fill="oklch(0.78 0.10 80)" stroke="oklch(0.78 0.10 80)"/>
+  <text x="900" y="156" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">set delta per</text>
+  <text x="900" y="173" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">key cluster</text>
+
+  <!-- ═════ ROW 2: Per-key actuation depth ═════ -->
+  <text x="118" y="278" font-family="Newsreader, serif" font-size="19" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">per-key</text>
+  <text x="118" y="300" font-family="Newsreader, serif" font-size="19" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">actuation</text>
+
+  <rect x="200" y="250" width="240" height="80" rx="6" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.9" stroke-width="2" fill="oklch(0.78 0.10 80 / 0.07)"/>
+  <circle cx="280" cy="290" r="7" fill="oklch(0.78 0.10 80)" stroke="oklch(0.78 0.10 80)"/>
+  <text x="340" y="286" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">analog voltage</text>
+  <text x="340" y="303" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">curve per key</text>
+
+  <path d="M 440 290 L 472 290" stroke-opacity="0.4"/>
+  <path d="M 464 284 L 472 290 L 464 296" stroke-opacity="0.4"/>
+
+  <rect x="480" y="250" width="240" height="80" rx="6" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.9" stroke-width="2" fill="oklch(0.78 0.10 80 / 0.07)"/>
+  <circle cx="560" cy="290" r="7" fill="oklch(0.78 0.10 80)" stroke="oklch(0.78 0.10 80)"/>
+  <text x="620" y="286" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">per-key depth</text>
+  <text x="620" y="303" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">slider in GUI</text>
+
+  <path d="M 720 290 L 752 290" stroke-opacity="0.4"/>
+  <path d="M 744 284 L 752 290 L 744 296" stroke-opacity="0.4"/>
+
+  <rect x="760" y="250" width="240" height="80" rx="6" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.9" stroke-width="2" fill="oklch(0.78 0.10 80 / 0.07)"/>
+  <circle cx="840" cy="290" r="7" fill="oklch(0.78 0.10 80)" stroke="oklch(0.78 0.10 80)"/>
+  <text x="900" y="286" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">configure each</text>
+  <text x="900" y="303" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">key group</text>
+
+  <!-- ═════ ROW 3: Analog HID axis ═════ -->
+  <text x="118" y="398" font-family="Newsreader, serif" font-size="19" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">analog</text>
+  <text x="118" y="420" font-family="Newsreader, serif" font-size="19" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">HID axis</text>
+
+  <rect x="200" y="370" width="240" height="80" rx="6" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.9" stroke-width="2" fill="oklch(0.78 0.10 80 / 0.07)"/>
+  <circle cx="280" cy="410" r="7" fill="oklch(0.78 0.10 80)" stroke="oklch(0.78 0.10 80)"/>
+  <text x="340" y="406" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">gamepad HID</text>
+  <text x="340" y="423" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">descriptor support</text>
+
+  <path d="M 440 410 L 472 410" stroke-opacity="0.4"/>
+  <path d="M 464 404 L 472 410 L 464 416" stroke-opacity="0.4"/>
+
+  <rect x="480" y="370" width="240" height="80" rx="6" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.9" stroke-width="2" fill="oklch(0.78 0.10 80 / 0.07)"/>
+  <circle cx="560" cy="410" r="7" fill="oklch(0.78 0.10 80)" stroke="oklch(0.78 0.10 80)"/>
+  <text x="620" y="406" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">axis bind in</text>
+  <text x="620" y="423" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">configurator</text>
+
+  <path d="M 720 410 L 752 410" stroke-opacity="0.4"/>
+  <path d="M 744 404 L 752 410 L 744 416" stroke-opacity="0.4"/>
+
+  <rect x="760" y="370" width="240" height="80" rx="6" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.9" stroke-width="2" fill="oklch(0.78 0.10 80 / 0.07)"/>
+  <circle cx="840" cy="410" r="7" fill="oklch(0.78 0.10 80)" stroke="oklch(0.78 0.10 80)"/>
+  <text x="900" y="406" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">game must accept</text>
+  <text x="900" y="423" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">gamepad input</text>
+
+  <!-- Horizontal row dividers -->
+  <line x1="160" y1="235" x2="1040" y2="235" stroke-opacity="0.10"/>
+  <line x1="160" y1="355" x2="1040" y2="355" stroke-opacity="0.10"/>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>A vertical price ladder with three tiers. Bottom: $80–$120 budget HE — configurator shallow or desktop-only, calibration manual or absent, magnet tolerance loose. Middle: $130–$160 mid HE — browser configurator, per-key rapid trigger, reliable calibration. Top: $160–$250 enthusiast HE — firmware parity with hardware, tight magnet tolerance, hot-swap open standard. An ochre bracket spans the top two tiers labeled 'where the firmware matches the hardware'.</title>
+
+  <!-- Vertical axis / spine -->
+  <line x1="240" y1="70" x2="240" y2="390" stroke-opacity="0.35"/>
+
+  <!-- Price tick marks -->
+  <!-- Top of axis label -->
+  <text x="228" y="80" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.5">$250</text>
+  <line x1="232" y1="76" x2="240" y2="76" stroke-opacity="0.35"/>
+
+  <text x="228" y="188" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.5">$160</text>
+  <line x1="232" y1="184" x2="240" y2="184" stroke-opacity="0.35"/>
+
+  <text x="228" y="293" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.5">$130</text>
+  <line x1="232" y1="289" x2="240" y2="289" stroke-opacity="0.35"/>
+
+  <text x="228" y="393" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.5">$80</text>
+  <line x1="232" y1="389" x2="240" y2="389" stroke-opacity="0.35"/>
+
+  <!-- ═════ TIER 3: Enthusiast $160–$250 ═════ -->
+  <rect x="260" y="76" width="600" height="108" rx="6" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="2" fill="oklch(0.78 0.10 80 / 0.08)"/>
+  <text x="290" y="104" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none">enthusiast HE · $160–$250</text>
+  <text x="290" y="126" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">firmware parity with hardware</text>
+  <text x="290" y="144" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">tight magnet tolerance · hot-swap open standard</text>
+  <text x="290" y="162" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">browser configurator with per-key rapid trigger</text>
+
+  <!-- ═════ TIER 2: Mid $130–$160 ═════ -->
+  <rect x="260" y="196" width="600" height="93" rx="6" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.9" stroke-width="2" fill="oklch(0.78 0.10 80 / 0.08)"/>
+  <text x="290" y="222" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none">mid HE · $130–$160</text>
+  <text x="290" y="244" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">browser configurator · per-key rapid trigger</text>
+  <text x="290" y="262" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">reliable calibration routine</text>
+
+  <!-- ═════ TIER 1: Budget $80–$120 ═════ -->
+  <rect x="260" y="301" width="600" height="88" rx="6" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.4" stroke-width="2" fill="none"/>
+  <text x="290" y="327" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">budget HE · $80–$120</text>
+  <text x="290" y="349" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">configurator shallow or desktop-only</text>
+  <text x="290" y="367" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">calibration manual or absent · magnet tolerance loose</text>
+
+  <!-- Brace spanning tiers 2 and 3 -->
+  <line x1="880" y1="76" x2="896" y2="76" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.8"/>
+  <line x1="896" y1="76" x2="896" y2="289" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.8"/>
+  <line x1="880" y1="289" x2="896" y2="289" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.8"/>
+  <line x1="896" y1="183" x2="912" y2="183" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.8"/>
+  <text x="920" y="169" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none" opacity="0.9">where the firmware</text>
+  <text x="920" y="185" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none" opacity="0.9">matches the hardware</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

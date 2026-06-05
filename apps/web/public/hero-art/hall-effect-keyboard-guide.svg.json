@@ -1,0 +1,18 @@
+{
+  "slug": "hall-effect-keyboard-guide",
+  "asset": "hero-art",
+  "generatedAt": "2026-06-05T00:00:00.000Z",
+  "motif": "Hall-effect switch cross-section with buyer's guide callouts",
+  "accent": "ochre",
+  "canvas": "1200x750",
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "kind": "hero-art",
+  "source": null,
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["JetBrains Mono", "IBM Plex Mono", "ui-monospace"],
+  "outputs": [
+    "apps/web/public/hero-art/hall-effect-keyboard-guide.svg"
+  ],
+  "warnings": []
+}

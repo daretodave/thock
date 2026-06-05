@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-05T12:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "hall-effect-keyboard-guide",
+  "article_pillar": "guides",
+  "section_anchor": "switch-feel-what-hall-effect-changes-and-what-it-doesnt",
+  "brief_summary": "A two-panel comparison. Left panel ('the press') shows that Hall-effect and MX force-over-travel curves are identical when specced correctly — both lines are nearly superimposed, one warm-grey for MX and one amber dashed for Hall-effect. Right panel ('the firmware behavior') shows the architectural difference: Hall-effect exposes a continuous rising voltage curve with a labeled actuation threshold and a small rapid-trigger reset window bracket, while MX shows a binary step function. The diagram supports the article's central claim that Hall-effect changes post-press behavior, not the feel of the press itself.",
+  "target": "apps/web/public/article-viz/hall-effect-keyboard-guide/press-vs-firmware.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "hall-effect-keyboard-guide.mdx § 'Switch feel: what Hall-effect changes and what it doesn't' — 'The sensing architecture does not change how the stem and spring feel on the way down. A Hall-effect switch can be specced to feel identical to a quality MX linear if the spring weight, housing geometry, and lube are matched.'",
+    "hall-effect-keyboard-guide.mdx § 'Switch feel: what Hall-effect changes and what it doesn't' — 'What Hall-effect does change is the post-press firmware behavior — the reset window, the actuation threshold, the analog output mapping.'",
+    "hall-effect-keyboard-guide.mdx § 'Who actually benefits from Hall-effect' — 'On a Hall-effect board with rapid trigger enabled, the firmware resets as soon as the stem rises by a configured delta — as small as 0.1mm to 0.4mm in practice, compared to 1.5–2mm on a standard MX.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/hall-effect-keyboard-guide/press-vs-firmware.svg"],
+  "warnings": []
+}
