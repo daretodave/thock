@@ -2608,3 +2608,11 @@ passes accumulate signals.)
 - ease: 8 (one sentence addition to Cherry section + one frontmatter mentionedParts entry; same pattern as gmk-olivia and domikey-wob additions)
 - score: 4.8 (impact × ease / 10)
 - issue: [mirror-failed: 2026-06-06]
+
+### [x] [data] [4.0] beginners-switch-buying-guide missing akko-v3-cream-blue-pro — orphan light tactile — addressed in a151d4b77364ec0707bd2b91df7750ab32c3ee11, closes #276
+- category: data
+- filed: 2026-06-06 by cloud /iterate audit
+- impact: 5 (popular beginner guide; akko-v3-cream-blue-pro is in-production budget light tactile at 45g — covers the light end of the tactile spectrum; /part/switch/akko-v3-cream-blue-pro "mentioned in" rail was empty)
+- ease: 8 (one sentence + PartReference + frontmatter entry; e2e fixture updated per comment instruction)
+- score: 4.0 (impact × ease / 10)
+- issue: #276
