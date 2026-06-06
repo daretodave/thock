@@ -72,6 +72,14 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [data] [4.0] keycap-profiles-compared Cherry section missing domikey-wob — orphan PBT keycap set
+- category: data
+- filed: 2026-06-06 by cloud /iterate audit
+- impact: 5 (guides pillar primary keycap-selection article; Domikey WoB is the catalog's benchmark PBT Cherry-profile set — in-stock evergreen utility pick at a price well below GMK group-buy; /part/keycap-set/domikey-wob "mentioned in" rail is empty despite being a canonical PBT alternative to the ABS sets already named in the Cherry section)
+- ease: 8 (one sentence addition to Cherry recommendation paragraph + one frontmatter mentionedParts entry; same pattern as gmk-olivia addition in 365f896)
+- score: 4.0 (impact × ease / 10)
+- issue: #275
+
 ### [x] [data] [4.8] keycap-profiles-compared Cherry section missing gmk-olivia PartReference — orphan keycap set — addressed in 365f896, closes #273
 - category: data
 - filed: 2026-06-06 by cloud /iterate audit
