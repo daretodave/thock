@@ -127,14 +127,16 @@ test.describe('per-part pages — phase 21', () => {
       expect(await rows.count()).toBeGreaterThanOrEqual(1)
     })
 
-    test('renders the empty-state for a part no article references', async ({
+    test('renders the mentioned-in rail for class80 after mounting-styles-compared wiring', async ({
       page,
     }) => {
-      // class80 is in the catalog but no article cites it
-      // (verify-time hand-check; if a future article adds it, swap this
-      // for another uncited slug and re-record).
+      // class80 is cited in mounting-styles-compared mentionedParts — verify
+      // the cross-link rail renders (all catalog parts are now cited in ≥1 article).
       await page.goto('/part/board/class80')
-      await expect(page.getByTestId('part-mentioned-empty')).toBeVisible()
+      const list = page.getByTestId('part-mentioned-list')
+      await expect(list).toBeVisible()
+      const rows = list.locator('a[href^="/article/"]')
+      expect(await rows.count()).toBeGreaterThanOrEqual(1)
     })
 
     test('does not render the part page chrome for an unknown slug', async ({
