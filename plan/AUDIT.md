@@ -2624,3 +2624,11 @@ passes accumulate signals.)
 - ease: 8 (one sentence + PartReference + frontmatter entry; e2e fixture updated per comment instruction)
 - score: 4.0 (impact × ease / 10)
 - issue: #276
+
+### [x] [data] [4.2] gmk-cyl-ramune — missing keycap-set catalog record, companion article had empty mentionedParts — addressed in d022eb9
+- category: data
+- filed: 2026-06-06 by cloud /iterate audit
+- impact: 6 (live group buy closes 2026-06-20; trending in W22+W23 tracker; companion article gmk-cyl-ramune-group-buy.mdx already live but mentionedParts was []; /part/keycap-set/gmk-cyl-ramune part page was 404)
+- ease: 7 (create keycap-set JSON record + update frontmatter mentionedParts; schema-compliant with gmk-cyl-selene as template; 10 keycap-set records total was 9)
+- score: 4.2 (impact × ease / 10)
+- issue: #278
