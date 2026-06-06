@@ -2584,3 +2584,11 @@ passes accumulate signals.)
 - score: 4.0 (impact × ease / 10)
 - issue: #274
 > **Resolved (2026-06-06):** Added Boba LT PartReference and mentionedParts entry to beginners-switch-buying-guide.mdx. Sentence appended after U4/U4T contrast clause: "The <PartReference id="boba-lt" /> completes the family on the linear side: the same Boba housing and dampening, but a smooth stem with no tactile event and an ultralight 37g actuation — one of the lightest factory-lubed silent linears in production." /part/switch/gazzew-boba-lt gains its first "mentioned in" cross-link. Language gate clean. 712 e2e green. `914c0ab921ea1645fdb175cded97303d541538aa`
+
+### [x] [data] [4.0] mounting-styles-compared missing kbd75v3 as 75% gasket example — orphan board — addressed in 3770bc4
+- category: data
+- filed: 2026-06-06 by cloud /iterate audit
+- impact: 5 (mounting-styles-compared is the Guides pillar's primary mount-style article; kbd75v3 is the most-recommended 75% gasket entry point from KBDfans; no article cross-link despite being in-stock catalog data; part page "mentioned in" rail was empty)
+- ease: 8 (one sentence addition in gasket section + PartReference + frontmatter mentionedParts entry; same pattern as prior orphan-part fixes)
+- score: 4.0 (impact × ease / 10)
+- issue: [mirror-failed: 2026-06-06T00:00:00Z]
