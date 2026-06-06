@@ -2680,3 +2680,11 @@ passes accumulate signals.)
 - ease: 7 (single sentence addition at end of "What we're watching" section; updatedAt bumped)
 - score: 4.2 (impact × ease / 10)
 - issue: #281
+
+### [x] [content] [4.8] keycap-profiles-compared missing cross-link to keycap-materials-compared — addressed in 2d28c9e, closes #283
+- category: content
+- filed: 2026-06-06 by cloud /iterate audit
+- impact: 6 (popularityScore 42 guide covers profile axis; companion materials guide already links to it on line 27; readers arriving via search had no path to the other half of the keycap decision)
+- ease: 8 (single sentence addition at end of Closing section; updatedAt bumped)
+- score: 4.8 (impact × ease / 10)
+- issue: #283
