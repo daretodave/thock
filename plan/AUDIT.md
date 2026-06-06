@@ -2593,6 +2593,14 @@ passes accumulate signals.)
 - score: 4.0 (impact × ease / 10)
 - issue: [mirror-failed: 2026-06-06T00:00:00Z]
 
+### [x] [data] [3.5] gateron-oil-king-deep-dive — gateron-ink-v2-yellow orphan switch missing from mentionedParts — addressed in 36f9117
+- category: data
+- filed: 2026-06-06 by cloud /iterate audit
+- impact: 5 (Gateron Ink V2 Yellow is an in-production premium linear with zero editorial cross-links; the oil-king deep-dive already discusses all-PC housings as a direct contrast to the Oil King's mixed-resin approach — the Ink V2 Yellow is the canonical named example; /part/switch/gateron-ink-v2-yellow "mentioned in" rail was empty)
+- ease: 7 (one frontmatter mentionedParts entry + one inline PartReference in existing prose)
+- score: 3.5 (impact × ease / 10)
+- issue: [mirror-failed: 2026-06-06 — GH_REPO missing in CI env]
+
 ### [x] [data] [4.8] keycap-profiles-compared Cherry section missing gmk-laser — orphan keycap set — addressed in 8b0b086
 - category: data
 - filed: 2026-06-06 by cloud /iterate audit
