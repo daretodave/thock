@@ -72,6 +72,14 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [content] [5.4] keychron-q-ultra-zmk — zmk-mainstream-shift bidirectional cross-link missing — addressed in 384362f
+- category: content
+- filed: 2026-06-06 by cloud /iterate audit
+- impact: 6 (keychron-q-ultra-zmk § "ZMK as the platform" states "the firmware has moved out of niche-DIY into mainstream-prebuilt territory" — exactly the thesis of zmk-mainstream-shift; zmk-mainstream-shift already links back to keychron (line 36) but the reverse link was absent; readers at the keychron article had no navigation path to the broader ZMK analysis)
+- ease: 9 (single markdown link addition in existing prose)
+- score: 5.4 (impact × ease / 10)
+- issue: [mirror-failed: 2026-06-06T00:00:00Z]
+
 ### [x] [content] [4.5] mounting-styles-compared — 'sound-dampening guide' prose reference not linked — addressed in e5e5ca4, closes #282
 - category: content
 - filed: 2026-06-06 by cloud /iterate audit
