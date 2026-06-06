@@ -72,6 +72,14 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [data] [4.8] keycap-profiles-compared Cherry section missing gmk-olivia PartReference — orphan keycap set — addressed in 365f896, closes #273
+- category: data
+- filed: 2026-06-06 by cloud /iterate audit
+- impact: 6 (guides pillar primary keycap-selection article; gmk-olivia is the catalog's most iconic discontinued Cherry-profile set — the community-defining pink-and-cream set from 2018; /part/keycap-set/gmk-olivia "mentioned in" rail is empty despite being first-class catalog data)
+- ease: 8 (one sentence addition to Cherry section + one frontmatter mentionedParts entry; same pattern as sa-godspeed + mt3-devtty additions in this article)
+- score: 4.8 (impact × ease / 10)
+- issue: #273
+
 ### [x] [data] [4.8] beginners-switch-buying-guide silent section had no named example; gazzew-boba-u4 orphaned — addressed in 27e279f, closes #268
 - category: data
 - filed: 2026-06-05 by cloud /iterate audit
