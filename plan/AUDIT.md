@@ -2656,3 +2656,11 @@ passes accumulate signals.)
 - ease: 9 (mentionedParts entry + Mono→PartReference swap; same pattern as prior keycap-set cross-ref fixes)
 - score: 4.2 (impact × ease / 10)
 - issue: #279
+
+### [x] [content] [4.2] hall-effect-mainstream — missing cross-link to hall-effect-keyboard-guide — addressed in da938b8, closes #281
+- category: content
+- filed: 2026-06-06 by cloud /iterate audit
+- impact: 6 (hall-effect-mainstream is the W23 tracker anchor for the #1 trending topic at +66; popularityScore 35; buyer's guide published 2026-05-30 after this article's last update 2026-05-28 — the article didn't know the guide existed)
+- ease: 7 (single sentence addition at end of "What we're watching" section; updatedAt bumped)
+- score: 4.2 (impact × ease / 10)
+- issue: #281
