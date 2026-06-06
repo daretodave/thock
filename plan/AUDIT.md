@@ -2632,3 +2632,11 @@ passes accumulate signals.)
 - ease: 7 (create keycap-set JSON record + update frontmatter mentionedParts; schema-compliant with gmk-cyl-selene as template; 10 keycap-set records total was 9)
 - score: 4.2 (impact × ease / 10)
 - issue: #278
+
+### [x] [data] [4.2] gmk-cyl-selene-group-buy — gmk-cyl-ramune missing from mentionedParts despite explicit body mention — addressed in be32980, closes #279
+- category: data
+- filed: 2026-06-06 by cloud /iterate audit
+- impact: 5 (gmk-cyl-selene-group-buy is a live-buy companion for a buy open through Jun 19; article names GMK CYL Ramune at line 29 and with <Mono>GMK CYL Ramune</Mono> at line 50 in the CYL sub-line comparison section; gmk-cyl-ramune keycap-set record added d022eb9 but the Selene article predated it; /part/keycap-set/gmk-cyl-ramune "mentioned in" rail now includes this article)
+- ease: 9 (mentionedParts entry + Mono→PartReference swap; same pattern as prior keycap-set cross-ref fixes)
+- score: 4.2 (impact × ease / 10)
+- issue: #279
