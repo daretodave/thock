@@ -10,5 +10,4 @@ finds data gaps)
 
 ## Done
 
-(empty — `/ship-data` flips entries here as it ships them, with
-commit hash)
+- [x] add switch gazzew-boba-u4t — `data/switches/gazzew-boba-u4t.json` (filed + shipped in same tick 2026-06-06 from empty-backlog audit; referenced in 3 articles as full-sound tactile counterpart to Boba U4)

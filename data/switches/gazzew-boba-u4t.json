@@ -1,0 +1,19 @@
+{
+  "slug": "gazzew-boba-u4t",
+  "name": "Gazzew Boba U4T",
+  "vendorSlug": "novelkeys",
+  "type": "tactile",
+  "housingTop": "nylon",
+  "housingBottom": "nylon",
+  "stem": "pom",
+  "springGrams": {
+    "actuation": 62,
+    "bottomOut": 68
+  },
+  "travelMm": 4.0,
+  "factoryLubed": true,
+  "releasedAt": "2020-06-01",
+  "status": "in-production",
+  "description": "Full-sound tactile counterpart to the Boba U4 — same nylon housing, same pronounced round bump near the top of the stroke, but without the foam dampeners, so the bottom-out and top-out ring freely. The result is a tactile with a deep, full-bodied thud on each keypress. Popular for typists who want a strong round bump without sacrificing acoustic character. Pre-lubed on the rails; spring-rattling on the upstroke is common and addressed with a thin oil on the spring.",
+  "updatedAt": "2026-06-06T00:00:00.000Z"
+}
