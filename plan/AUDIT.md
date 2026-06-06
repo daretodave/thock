@@ -72,6 +72,14 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [data] [4.5] gmk-cyl-prussian-alert missing gmk-cyl-selene in mentionedParts — addressed in c720ca6
+- category: data
+- filed: 2026-06-06 by cloud /iterate audit
+- impact: 5 (prussian-alert is a live buy article currently on /group-buys; opening paragraph compares pre-GB momentum against "Metro System and Selene" — the Selene keycap-set catalog record exists as gmk-cyl-selene (added 2026-06-01) but was absent from mentionedParts; /part/keycap-set/gmk-cyl-selene "mentioned in" rail gains a cross-link from a closely related active buy article in the same GMK CYL sub-line)
+- ease: 9 (single frontmatter entry addition + PartReference swap; updatedAt bump)
+- score: 4.5 (impact × ease / 10)
+- issue: [mirror-failed: 2026-06-06T00:00:00Z]
+
 ### [x] [data] [4.5] mounting-styles-compared missing class80 — last orphan board; all 34 catalog parts now cited — addressed in 750f133, closes #277
 - category: data
 - filed: 2026-06-06 by cloud /iterate audit
