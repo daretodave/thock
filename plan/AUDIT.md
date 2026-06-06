@@ -2592,3 +2592,11 @@ passes accumulate signals.)
 - ease: 8 (one sentence addition in gasket section + PartReference + frontmatter mentionedParts entry; same pattern as prior orphan-part fixes)
 - score: 4.0 (impact × ease / 10)
 - issue: [mirror-failed: 2026-06-06T00:00:00Z]
+
+### [x] [data] [4.8] keycap-profiles-compared Cherry section missing gmk-laser — orphan keycap set — addressed in 8b0b086
+- category: data
+- filed: 2026-06-06 by cloud /iterate audit
+- impact: 6 (guides pillar primary keycap-selection article with popularityScore 42; GMK Laser is one of the hobby's most iconic Cherry-profile ABS sets — the 2018 synthwave/retro-futurist design that defined an entire aesthetic wave and still commands aftermarket premiums; /part/keycap-set/gmk-laser "mentioned in" rail was empty despite being catalog data)
+- ease: 8 (one sentence addition to Cherry section + one frontmatter mentionedParts entry; same pattern as gmk-olivia and domikey-wob additions)
+- score: 4.8 (impact × ease / 10)
+- issue: [mirror-failed: 2026-06-06]
