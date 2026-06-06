@@ -2567,3 +2567,12 @@ passes accumulate signals.)
 - ease: 9 (frontmatter entry + PartReference wrap)
 - score: 4.5 (impact × ease / 10)
 - issue: #272
+
+### [x] [data] [4.0] beginners-switch-buying-guide — gazzew-boba-lt absent from silent section, silent-linear orphan with 0 cross-links
+- category: data
+- filed: 2026-06-06 by cloud /iterate audit
+- impact: 5 (beginners-switch-buying-guide is the guides pillar highest-traffic switch article, popularityScore 51; silent section already mentions Boba U4T [tactile, full-sound] and Boba U4 [tactile, silent] as a contrast pair — the Boba LT [silent-linear, 37g] completes the Boba trifecta and gives builders who want silence without tactile feedback a concrete named recommendation; /part/switch/gazzew-boba-lt has 0 article cross-links across all 49 articles)
+- ease: 8 (one sentence after the U4/U4T clause + PartReference id="boba-lt" + frontmatter entry; same pattern as boba-u4t fix fe0780c)
+- score: 4.0 (impact × ease / 10)
+- issue: #274
+> **Resolved (2026-06-06):** Added Boba LT PartReference and mentionedParts entry to beginners-switch-buying-guide.mdx. Sentence appended after U4/U4T contrast clause: "The <PartReference id="boba-lt" /> completes the family on the linear side: the same Boba housing and dampening, but a smooth stem with no tactile event and an ultralight 37g actuation — one of the lightest factory-lubed silent linears in production." /part/switch/gazzew-boba-lt gains its first "mentioned in" cross-link. Language gate clean. 712 e2e green. `914c0ab921ea1645fdb175cded97303d541538aa`
