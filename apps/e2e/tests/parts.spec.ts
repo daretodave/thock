@@ -130,10 +130,10 @@ test.describe('per-part pages — phase 21', () => {
     test('renders the empty-state for a part no article references', async ({
       page,
     }) => {
-      // akko-v3-cream-blue-pro is in the catalog but no article cites it
+      // class80 is in the catalog but no article cites it
       // (verify-time hand-check; if a future article adds it, swap this
       // for another uncited slug and re-record).
-      await page.goto('/part/switch/akko-v3-cream-blue-pro')
+      await page.goto('/part/board/class80')
       await expect(page.getByTestId('part-mentioned-empty')).toBeVisible()
     })
 
