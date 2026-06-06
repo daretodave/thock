@@ -7,7 +7,7 @@ pillar: guides
 guideSection: 'modding'
 tags: [modding, acoustic, aluminum, polycarbonate, beginner]
 publishedAt: '2026-04-25T13:00:00.000Z'
-updatedAt: '2026-06-03T00:00:00.000Z'
+updatedAt: '2026-06-06T00:00:00.000Z'
 heroImage: /hero-art/mounting-styles-compared.svg
 heroImageAlt: "Side-profile cross-section silhouettes of four mounting styles stacked vertically — gasket (foam strips between plate and case), top-mount (plate screwed to the top half of the case), tray-mount (PCB screwed to standoffs on the bottom case), integrated plate (plate machined as part of the case) — drawn in a single muted-terracotta stroke on warm paper, each labelled with a small mono caption."
 featured: false
@@ -22,6 +22,9 @@ mentionedParts:
   - id: bakeneko
     kind: board
     slug: bakeneko65
+  - id: kbd75v3
+    kind: board
+    slug: kbd75v3
 ---
 
 A builder finishes their second custom and notices, without quite being able to say why, that it feels different from the first. The switches are the same batch. The stabilizers are tuned. The keycaps moved over from the old board. The case material is the same aluminum the last one was. But the new board lands softer at the bottom of every press, the sound is rounder, the typing surface gives a millimeter under a heavy stroke. The thing that changed is the mount style — the mechanical relationship between the plate, the PCB, and the case shell — and it is the half of the typing feel that almost no review covers directly.
@@ -47,7 +50,7 @@ The sound is the easiest signature to identify in a side-by-side. Gasket boards 
 
 The feel is the more subtle change. A well-built gasket board gives perceptibly under a heavy keypress — not a lot, somewhere between half a millimeter and a millimeter and a half depending on the foam density and the strip placement — and a typist who comes off a top-mount or integrated board onto a gasket notices the give within a few keystrokes. Light typists may not notice at all. The "soft" reputation gasket boards have earned in the modern era is mostly accurate and mostly a function of the gasket compression rather than any quality of the plate material itself.
 
-<PartReference id="mode-sonnet" /> is a canonical modern example: a 65% aluminum case with the plate gasket-mounted top and bottom, shipping with hotswap PCBs and a brass weight option. The typing feel is the standard reference point for what gasket means in the current market — soft, uniform, low-pitched. Most enthusiast boards announced for group buy since 2023 are gasket-mounted, and the format has effectively become the default for new custom designs.
+<PartReference id="mode-sonnet" /> is a canonical modern example: a 65% aluminum case with the plate gasket-mounted top and bottom, shipping with hotswap PCBs and a brass weight option. The typing feel is the standard reference point for what gasket means in the current market — soft, uniform, low-pitched. Most enthusiast boards announced for group buy since 2023 are gasket-mounted, and the format has effectively become the default for new custom designs. The <PartReference id="kbd75v3" /> is a 75% counterpart in the same tier — gasket-mounted, hotswap PCB, QMK/VIA — and a common first recommendation for builders who want a function row without moving to a full TKL.
 
 The honest caveat with gasket is that execution matters more than the label. A board that calls itself gasket-mount but uses thin strips with poor compression behaves more like a top-mount with extra steps. The foam density, strip length, and the snugness of the case fit all have to land for the mount to deliver its advertised character. Builders evaluating a new design should look for actual compression specs in the announcement, not just the word "gasket" in the marketing copy.
 
