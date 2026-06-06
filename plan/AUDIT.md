@@ -72,6 +72,14 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [content] [4.5] mounting-styles-compared — 'sound-dampening guide' prose reference not linked — addressed in e5e5ca4, closes #282
+- category: content
+- filed: 2026-06-06 by cloud /iterate audit
+- impact: 5 (guides pillar article; line 76 names "the sound-dampening guide" in plain text but provides no navigation path; readers wanting the acoustic mod stack described in that sentence could not reach the guide without a manual search)
+- ease: 9 (single-token markdown link addition)
+- score: 4.5 (impact × ease / 10)
+- issue: #282
+
 ### [x] [data] [4.5] drop-holy-panda-x-deep-dive missing gazzew-boba-u4t in mentionedParts — addressed in 33ce740, closes #280
 - category: data
 - filed: 2026-06-06 by cloud /iterate audit
