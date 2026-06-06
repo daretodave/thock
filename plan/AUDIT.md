@@ -2551,3 +2551,11 @@ passes accumulate signals.)
 - ease: 8 (one sentence + PartReference in existing tactile paragraph + frontmatter entry)
 - score: 4.0 (impact × ease / 10)
 - issue: [mirror-failed: 2026-06-05T23:30:00Z]
+
+### [x] [data] [4.5] beginners-switch-buying-guide — gazzew-boba-u4t missing from mentionedParts — addressed in fe0780c, closes #272
+- category: data
+- filed: 2026-06-06 by cloud /iterate audit
+- impact: 5 (highest-traffic switch guide, popularityScore 51; guide explicitly contrasts U4T and U4 as full-sound vs. silent siblings; U4 had PartReference but U4T lacked one despite data record existing since same tick)
+- ease: 9 (frontmatter entry + PartReference wrap)
+- score: 4.5 (impact × ease / 10)
+- issue: #272
