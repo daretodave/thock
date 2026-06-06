@@ -72,6 +72,14 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [data] [4.5] drop-holy-panda-x-deep-dive missing gazzew-boba-u4t in mentionedParts — addressed in 33ce740, closes #280
+- category: data
+- filed: 2026-06-06 by cloud /iterate audit
+- impact: 5 (drop-holy-panda-x-deep-dive uses the Boba U4T as the canonical D-shaped bump benchmark in 4 body passages and the InlineViz alt text; gazzew-boba-u4t data record added to catalog 2026-06-06; /part/switch/gazzew-boba-u4t "mentioned in" rail gains cross-link from the site's primary tactile-bump-geometry analysis)
+- ease: 9 (single frontmatter mentionedParts entry addition; updatedAt bump)
+- score: 4.5 (impact × ease / 10)
+- issue: #280
+
 ### [x] [data] [4.5] gmk-cyl-prussian-alert missing gmk-cyl-selene in mentionedParts — addressed in c720ca6
 - category: data
 - filed: 2026-06-06 by cloud /iterate audit
