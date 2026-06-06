@@ -72,6 +72,14 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [data] [4.5] mounting-styles-compared missing class80 — last orphan board; all 34 catalog parts now cited — addressed in 750f133, closes #277
+- category: data
+- filed: 2026-06-06 by cloud /iterate audit
+- impact: 5 (class80 is the MM Studio Class80, a CNC aluminum TKL with multi-mode mount; mounting-styles-compared explicitly names Mode Sonnet and kbd75v3 as gasket examples and notes kbd75v3 as "without moving to a full TKL" — class80 is the natural TKL counterpart; /part/board/class80 "mentioned in" rail was empty; all 34 catalog parts are now cited in ≥1 article for the first time)
+- ease: 9 (one sentence + PartReference + frontmatter mentionedParts entry; e2e test updated to verify mentioned-in rail renders)
+- score: 4.5 (impact × ease / 10)
+- issue: #277
+
 ### [x] [data] [4.0] keycap-profiles-compared Cherry section missing domikey-wob — orphan PBT keycap set — addressed in 1dc769f, closes #275
 - category: data
 - filed: 2026-06-06 by cloud /iterate audit
