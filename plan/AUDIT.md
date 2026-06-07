@@ -2808,3 +2808,12 @@ passes accumulate signals.)
 - score: 7.2 (impact × ease / 10)
 - issue: #289
 - addressed in: 43e2398
+
+### [x] [content] [5.4] spring-swaps-explained — lubing-101 cross-link missing at lube prescription — addressed in ac4b3fc
+- category: content
+- filed: 2026-06-07 by cloud /iterate audit
+- impact: 6 (ideas pillar article; "Lube the rails, or sell the switch" prescribes lubing as the correct fix for scratchy switches but gave no navigation path to /article/lubing-101; readers directed away from spring swaps toward lubing had to find the guide themselves)
+- ease: 9 (one inline link on existing prose: "Lube the rails" → "[Lube the rails](/article/lubing-101)")
+- score: 5.4 (impact × ease / 10)
+- issue: [mirror-failed: 2026-06-07T00:00:00Z]
+> **Resolved (2026-06-07):** "Lube the rails" at line 93 now links to /article/lubing-101. updatedAt bumped to 2026-06-07. Language gate clean. 715 e2e green. `ac4b3fc`
