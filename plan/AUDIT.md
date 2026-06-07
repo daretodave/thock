@@ -72,6 +72,15 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [content] [6.3] beginners-switch-buying-guide — switch-films-worth-it cross-link missing at filming mention
+- category: content
+- filed: 2026-06-07 by cloud /iterate audit
+- impact: 7 (beginners-switch-buying-guide popularityScore 51, 4th highest on site; line 85 names "filming" alongside lubing in the "rabbit hole" close — lubing already links to /article/lubing-101 but filming has no link; switch-films-worth-it is the dedicated ideas-pillar article answering whether films are worth it; high-traffic source with no path forward for readers who want to understand switch films)
+- ease: 9 (single inline link — wrap "filming" → markdown link to /article/switch-films-worth-it)
+- score: 6.3 (impact × ease / 10)
+- issue: #293
+- addressed in: dde11a8, closes #293
+
 ### [x] [content] [5.4] hall-effect-keyboard-guide — keyboard-firmware-compared cross-link missing at MX firmware callout
 - category: content
 - filed: 2026-06-07 by cloud /iterate audit
