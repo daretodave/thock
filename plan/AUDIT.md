@@ -2817,3 +2817,12 @@ passes accumulate signals.)
 - score: 5.4 (impact × ease / 10)
 - issue: [mirror-failed: 2026-06-07T00:00:00Z]
 > **Resolved (2026-06-07):** "Lube the rails" at line 93 now links to /article/lubing-101. updatedAt bumped to 2026-06-07. Language gate clean. 715 e2e green. `ac4b3fc`
+
+### [x] [content] [5.4] plate-materials-explained — sound-dampening-compared cross-link missing at pairing close
+- category: content
+- filed: 2026-06-07 by cloud /iterate audit
+- impact: 6 (plate-materials-explained Deep Dives article had zero internal article links; the Pairing guide section names PE foam and case foam as brass plate complements but provided no navigation path to sound-dampening-compared popularityScore 65, the hub guide covering all four acoustic mods)
+- ease: 9 (one closing sentence at end of Pairing guide before "What to watch" section)
+- score: 5.4 (impact × ease / 10)
+- issue: [mirror-failed: 2026-06-07T00:00:00Z]
+- addressed in: a29cba5
