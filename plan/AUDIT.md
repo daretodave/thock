@@ -2720,3 +2720,11 @@ passes accumulate signals.)
 - ease: 9 (wrap "lubing" in a markdown link in beginners guide; add one closing sentence in lubing-101 "The practical take" section linking back)
 - score: 6.3 (impact × ease / 10)
 - issue: #284
+
+### [x] [content] [6.3] sound-dampening-compared — pe-foam-mod guide cross-link missing at PE foam section close — addressed in 0ee7428, closes #286
+- category: content
+- filed: 2026-06-07 by cloud /iterate audit
+- impact: 7 (sound-dampening-compared popularityScore 65, highest-traffic comparison guide; PE foam section described the mod's mechanism and ratio advantage without sending readers to /article/pe-foam-mod — the dedicated installation guide; tape-mod section already had an identical pattern close added in bbc42c1; PE foam is the "highest-ROI single addition" per the article's own copy)
+- ease: 9 (single prose sentence addition at end of §PE foam, identical to tape-mod section close)
+- score: 6.3 (impact × ease / 10)
+- issue: #286
