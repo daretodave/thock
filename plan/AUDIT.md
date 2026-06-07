@@ -2688,3 +2688,11 @@ passes accumulate signals.)
 - ease: 8 (single sentence addition at end of Closing section; updatedAt bumped)
 - score: 4.8 (impact × ease / 10)
 - issue: #283
+
+### [x] [content] [6.3] beginners-switch-buying-guide — lubing-101 bidirectional cross-link missing — addressed in 2fbfe66, closes #284
+- category: content
+- filed: 2026-06-07 by cloud /iterate audit
+- impact: 7 (popularityScore 51, highest-traffic guides article; "Step three" section explicitly names lubing as the natural next activity without providing a link to /article/lubing-101; lubing-101 had 0 outgoing article links and updatedAt null)
+- ease: 9 (wrap "lubing" in a markdown link in beginners guide; add one closing sentence in lubing-101 "The practical take" section linking back)
+- score: 6.3 (impact × ease / 10)
+- issue: #284
