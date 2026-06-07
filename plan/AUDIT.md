@@ -72,6 +72,15 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [content] [4.5] gasket-mount-reality — plate-materials-explained cross-link missing at plate material section
+- category: content
+- filed: 2026-06-07 by cloud /iterate audit
+- impact: 5 (gasket-mount-reality popularityScore 28; "Plate material" subsection discusses PC, brass, FR4, POM plate properties in ~150 words but provided no navigation path to plate-materials-explained, the dedicated deep-dive covering plate material comparison across build contexts; gasket-mount-reality had zero article cross-links before this fix)
+- ease: 9 (single inline sentence addition at end of "Plate material" subsection)
+- score: 4.5 (impact × ease / 10)
+- issue: [mirror-failed: 2026-06-07T00:00:00Z]
+- addressed in: 31aca78
+
 ### [x] [content] [6.3] pe-foam-mod — stabilizer-servicing-guide cross-link missing at verdict close
 - category: content
 - filed: 2026-06-07 by cloud /iterate audit
