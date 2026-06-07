@@ -2781,3 +2781,12 @@ passes accumulate signals.)
 - score: 7.2 (impact × ease / 10)
 - issue: [mirror-failed: 2026-06-07T00:00:00Z]
 - addressed in: a074ffc
+
+### [x] [content] [7.2] stabilizer-servicing-guide — sound-dampening-compared cross-link missing at article close
+- category: content
+- filed: 2026-06-07 by cloud /iterate audit
+- impact: 8 (stabilizer-servicing-guide popularityScore 72, highest-traffic guide in catalog; ends with "the difference between a stabilizer that sounds good and one that sounds finished" but provides no onward path; sound-dampening-compared [popularityScore 65] is the natural continuation covering foam mods, tape mod, and case materials for builders who have addressed stabilizers and want the rest of the acoustic chain)
+- ease: 9 (one closing sentence addition at end of "What to expect" section, identical pattern to tape-mod and pe-foam-mod closing cross-links)
+- score: 7.2 (impact × ease / 10)
+- issue: #289
+- addressed in: 43e2398
