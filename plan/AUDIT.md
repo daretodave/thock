@@ -72,6 +72,15 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [content] [6.3] tape-mod — sound-dampening-compared cross-link missing at verdict section
+- category: content
+- filed: 2026-06-07 by cloud /iterate audit
+- impact: 7 (tape-mod popularityScore 67, 3rd-highest traffic on site; sound-dampening-compared popularityScore 65 is the hub guide covering all four acoustic mods — case foam, PE foam, tape mod, plate foam; tape-mod had pe-foam comparison sentence but no navigation path to the broader overview; sound-dampening-compared already linked to tape-mod [bbc42c1] but the reverse was absent)
+- ease: 9 (single sentence addition after pe-foam comparison paragraph in verdict section)
+- score: 6.3 (impact × ease / 10)
+- issue: [mirror-failed: 2026-06-07T00:00:00Z]
+- addressed in: 9329185
+
 ### [x] [content] [7.2] stabilizer-servicing-guide — lubing-101 cross-link missing at stem bore recommendation
 - category: content
 - filed: 2026-06-07 by cloud /iterate audit
