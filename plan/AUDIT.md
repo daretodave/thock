@@ -72,6 +72,15 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [content] [6.3] pe-foam-mod — stabilizer-servicing-guide cross-link missing at verdict close
+- category: content
+- filed: 2026-06-07 by cloud /iterate audit
+- impact: 7 (pe-foam-mod verdict section names "properly tuned stabilizers" as the companion mod after PE foam and switch lube — without linking to stabilizer-servicing-guide (popularityScore 72, #1 on site); readers who follow the three-mod combo recommendation have no navigation path to the full stabilizer tuning guide)
+- ease: 9 (single inline link wrap — "properly tuned stabilizers" → markdown link to /article/stabilizer-servicing-guide)
+- score: 6.3 (impact × ease / 10)
+- issue: [mirror-failed: 2026-06-07T00:00:00Z]
+- addressed in: fa3caf1
+
 ### [x] [content] [6.3] tape-mod — sound-dampening-compared cross-link missing at verdict section
 - category: content
 - filed: 2026-06-07 by cloud /iterate audit
