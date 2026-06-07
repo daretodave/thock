@@ -72,6 +72,14 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [content] [6.3] keyboard-firmware-compared — ZMK mention missing link to zmk-mainstream-shift — addressed in 62834d2, closes #287
+- category: content
+- filed: 2026-06-07 by cloud /iterate audit
+- impact: 7 (keyboard-firmware-compared popularityScore 47, 5th-highest on site; line 92 explicitly says "ZMK is out of scope for this guide" — the natural handoff signal — but provides no navigation path to zmk-mainstream-shift, the dedicated ZMK analysis; readers following the wireless track have no forward link)
+- ease: 9 (single inline link wrap — "ZMK" at first prose mention in line 92)
+- score: 6.3 (impact × ease / 10)
+- issue: #287
+
 ### [x] [content] [5.4] case-materials-compared — sound-dampening guide cross-link missing at foam reference — addressed in e7fd1d9
 - category: content
 - filed: 2026-06-07 by cloud /iterate audit
