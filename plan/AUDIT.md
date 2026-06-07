@@ -72,6 +72,15 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [content] [5.4] hall-effect-keyboard-guide — keyboard-firmware-compared cross-link missing at MX firmware callout
+- category: content
+- filed: 2026-06-07 by cloud /iterate audit
+- impact: 6 (hall-effect-keyboard-guide popularityScore 35; "Firmware complexity" tradeoffs section names "mature QMK or VIA on MX switches" as the MX ease advantage without linking to keyboard-firmware-compared, the dedicated QMK/VIA/VIAL guide; keyboard-firmware-compared popularityScore 47, 5th highest on site, previously had zero incoming article cross-links)
+- ease: 9 (single inline link — "mature QMK or VIA" → markdown link to /article/keyboard-firmware-compared)
+- score: 5.4 (impact × ease / 10)
+- issue: #292
+- addressed in: f7dbd46, closes #292
+
 ### [x] [content] [5.4] switch-housings-compared — lubing-101 cross-link missing at lube section
 - category: content
 - filed: 2026-06-07 by cloud /iterate audit
