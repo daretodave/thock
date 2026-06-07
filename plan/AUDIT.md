@@ -2763,3 +2763,12 @@ passes accumulate signals.)
 - ease: 9 (single prose sentence addition at end of §PE foam, identical to tape-mod section close)
 - score: 6.3 (impact × ease / 10)
 - issue: #286
+
+### [x] [content] [7.2] gateron-oil-king-deep-dive — plate-materials-explained cross-link missing at plate-swap recommendation
+- category: content
+- filed: 2026-06-07 by cloud /iterate audit
+- impact: 8 (gateron-oil-king-deep-dive popularityScore 38, 8th most popular article; explicitly recommends plate swaps as the productive next modding direction for builders but provides no navigation path to plate-materials-explained — the dedicated deep-dive on how FR4, POM, brass, and aluminium each change the acoustic profile; every reader who follows the article's own advice to experiment with plate material has no onward link)
+- ease: 9 (one sentence appended to the plate-swap paragraph, identical pattern to tape-mod/pe-foam cross-link fixes)
+- score: 7.2 (impact × ease / 10)
+- issue: [mirror-failed: 2026-06-07T00:00:00Z]
+- addressed in: a074ffc
