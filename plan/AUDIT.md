@@ -72,6 +72,14 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [content] [5.4] case-materials-compared — sound-dampening guide cross-link missing at foam reference — addressed in e7fd1d9
+- category: content
+- filed: 2026-06-07 by cloud /iterate audit
+- impact: 6 (case-materials-compared popularityScore 42; § "Budget first" references "a five-dollar foam sheet" for ABS acoustic limitations but provided no navigation path to sound-dampening-compared popularityScore 65, which covers PE foam, tape mod, and case foam options; only mounting-styles-compared linked to sound-dampening-compared across the 48-article corpus)
+- ease: 9 (single inline link addition)
+- score: 5.4 (impact × ease / 10)
+- issue: [mirror-failed: 2026-06-07T00:00:00Z]
+
 ### [x] [content] [6.3] sound-dampening-compared — tape-mod guide cross-link missing at section close — addressed in bbc42c1
 - category: content
 - filed: 2026-06-07 by cloud /iterate audit
