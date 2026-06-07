@@ -6,7 +6,7 @@ author: thock
 pillar: guides
 tags: [firmware, qmk, via, vial, beginner]
 publishedAt: '2026-04-29T13:00:00.000Z'
-updatedAt: null
+updatedAt: '2026-06-07T00:00:00.000Z'
 heroImage: /hero-art/keyboard-firmware-compared.svg
 heroImageAlt: "Top-down silhouette of a 75% mechanical keyboard drawn in a single warm-grey stroke on warm paper, with three small ochre callout chips floating above the keys labeled QMK, VIA, and VIAL — each connected by a dashed lead line to a distinct cluster of keys it governs."
 featured: false
@@ -89,7 +89,7 @@ The honest framing is that QMK is the floor everything else stands on. VIA and V
   A keyboard ships with whichever firmware family the vendor compiled in. Switching from one to another on an already-built board can mean a simple reflash on a modern RP2040 board with bootloader access, or it can mean unsoldering a Pro Micro and swapping the daughter board on an older design. Always check the vendor's product page before the build, not after. A board that doesn't list VIA or VIAL support in the spec sheet probably doesn't have it, and "QMK-compatible" alone doesn't imply either GUI works out of the box.
 </Callout>
 
-The other compatibility note is wireless. QMK's wireless story has been historically weak — it supports a handful of Bluetooth modules but was never designed around them — and VIA and VIAL inherit that limitation. Wireless boards usually run a fourth firmware, ZMK, which is its own project with its own configuration model (YAML-and-devicetree rather than C-and-Make) and its own ecosystem. ZMK is out of scope for this guide; the short version is that a builder shopping for a wireless split should look at ZMK support specifically and not assume the QMK/VIA/VIAL trichotomy applies.
+The other compatibility note is wireless. QMK's wireless story has been historically weak — it supports a handful of Bluetooth modules but was never designed around them — and VIA and VIAL inherit that limitation. Wireless boards usually run a fourth firmware, [ZMK](/article/zmk-mainstream-shift), which is its own project with its own configuration model (YAML-and-devicetree rather than C-and-Make) and its own ecosystem. ZMK is out of scope for this guide; the short version is that a builder shopping for a wireless split should look at ZMK support specifically and not assume the QMK/VIA/VIAL trichotomy applies.
 
 A reader who lands here from a wired hotswap board can mostly forget about ZMK. A reader building a Corne or a Kyria for Bluetooth use should treat ZMK as the default and the three firmwares above as the wired-only answer.
 
