@@ -72,6 +72,15 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [content] [5.4] switch-housings-compared — lubing-101 cross-link missing at lube section
+- category: content
+- filed: 2026-06-07 by cloud /iterate audit
+- impact: 6 (guides pillar; dedicated "How housings interact with lube" section discusses lube application in detail across nylon/PC/POM with zero cross-link to the companion technique guide)
+- ease: 9 (single closing sentence appended to lube section)
+- score: 5.4 (impact × ease / 10)
+- issue: #291
+- addressed in: 49fd299
+
 ### [x] [content] [5.4] case-materials-compared — mounting-styles-compared cross-link missing at mount callout
 - category: content
 - filed: 2026-06-07 by cloud /iterate audit
