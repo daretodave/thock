@@ -19,7 +19,7 @@ mentionedParts:
   - id: hmx-cloud
     kind: switch
     slug: hmx-cloud
-updatedAt: '2026-06-05T00:00:00.000Z'
+updatedAt: '2026-06-07T00:00:00.000Z'
 featured: false
 popularityScore: 35
 readTimeMinutes: 7
@@ -99,7 +99,7 @@ Three tradeoffs come up consistently in the first month of ownership.
 
 **Calibration drift.** The Hall sensor's reading is a function of the absolute distance between the magnet and the sensor pad. That distance can shift over months as the switch housing settles, the PCB flexes slightly under repeated use, and the rest position of the stem changes by tens of microns. The result is that the actuation threshold the board was calibrated against no longer corresponds to the same physical depth. Boards with good calibration routines make this easy to correct; boards without one allow the drift to accumulate silently. Run a calibration whenever the board starts feeling inconsistent — not on a fixed schedule, but as a diagnostic response.
 
-**Firmware complexity.** More features equal more surface area for bugs. Early Hall-effect software had a higher rate of edge-case issues — sticky keys after rapid-trigger reconfiguration, calibration routines that failed on specific key positions, configurator state lost on disconnect — than comparable MX-lineage launches at the same price. The category has matured considerably since 2024, and the gap is closing, but it has not closed. Buyers buying into a first-generation HE firmware stack from a new vendor should expect a rougher experience than a board running mature QMK or VIA on MX switches.
+**Firmware complexity.** More features equal more surface area for bugs. Early Hall-effect software had a higher rate of edge-case issues — sticky keys after rapid-trigger reconfiguration, calibration routines that failed on specific key positions, configurator state lost on disconnect — than comparable MX-lineage launches at the same price. The category has matured considerably since 2024, and the gap is closing, but it has not closed. Buyers buying into a first-generation HE firmware stack from a new vendor should expect a rougher experience than a board running [mature QMK or VIA](/article/keyboard-firmware-compared) on MX switches.
 
 **The feel ceiling.** As noted above, a Hall-effect board at $150 is not going to feel like a $150 MX custom. The best Hall-effect builds deliver the feature set and a respectable linear feel; they do not deliver the acoustic signature a well-tuned MX build can hit. Buyers who want both — the feel of an Oil King build and the configurator depth of a Wooting — are asking for something the market does not yet offer at any price.
 
