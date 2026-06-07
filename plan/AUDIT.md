@@ -72,6 +72,15 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [content] [7.2] stabilizer-servicing-guide — lubing-101 cross-link missing at stem bore recommendation
+- category: content
+- filed: 2026-06-07 by cloud /iterate audit
+- impact: 8 (stabilizer-servicing-guide popularityScore 72, #1 on site; § "Lube selection" names Krytox GPL-205 G0 at line 56 as "the same lube used on switch stems" — without linking to lubing-101, the dedicated guide covering exactly that application; readers wanting to understand GPL-205 G0 on switch stems have no navigation path from the highest-traffic article on the site)
+- ease: 9 (single inline link wrap — "The same lube used on switch stems" → markdown link to /article/lubing-101)
+- score: 7.2 (impact × ease / 10)
+- issue: #288
+- addressed in: ccc6c3b, closes #288
+
 ### [x] [content] [6.3] keyboard-firmware-compared — ZMK mention missing link to zmk-mainstream-shift — addressed in 62834d2, closes #287
 - category: content
 - filed: 2026-06-07 by cloud /iterate audit
