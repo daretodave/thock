@@ -72,6 +72,14 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [content] [6.3] sound-dampening-compared — tape-mod guide cross-link missing at section close — addressed in bbc42c1
+- category: content
+- filed: 2026-06-07 by cloud /iterate audit
+- impact: 7 (sound-dampening-compared popularityScore 65 is the hub overview for all four dampening mods; tape-mod popularityScore 67 is the dedicated deep-dive — readers of the overview had no navigation path to the full mechanics)
+- ease: 9 (single prose sentence addition at end of §Tape mod)
+- score: 6.3 (impact × ease / 10)
+- issue: [mirror-failed: 2026-06-07T00:00:00Z]
+
 ### [x] [content] [5.4] stabilizers-explained — stabilizer-servicing-guide cross-link missing at tuning handoff — addressed in b01abc3, closes #285
 - category: content
 - filed: 2026-06-07 by cloud /iterate audit
