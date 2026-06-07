@@ -72,6 +72,14 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [content] [5.4] stabilizers-explained — stabilizer-servicing-guide cross-link missing at tuning handoff — addressed in b01abc3, closes #285
+- category: content
+- filed: 2026-06-07 by cloud /iterate audit
+- impact: 6 (stabilizers-explained § "Standard tuning sequence" lists housing feet in the lube table but provided no navigation path to stabilizer-servicing-guide, which deep-dives the housing-foot step that survives most incomplete service jobs; popularityScore 72 on the companion means high-traffic target readers were missing)
+- ease: 9 (single cross-link sentence addition after Step four)
+- score: 5.4 (impact × ease / 10)
+- issue: #285
+
 ### [x] [content] [5.4] keychron-q-ultra-zmk — zmk-mainstream-shift bidirectional cross-link missing — addressed in 384362f
 - category: content
 - filed: 2026-06-06 by cloud /iterate audit
