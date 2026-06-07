@@ -72,6 +72,15 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [content] [5.4] case-materials-compared — mounting-styles-compared cross-link missing at mount callout
+- category: content
+- filed: 2026-06-07 by cloud /iterate audit
+- impact: 6 (case-materials-compared popularityScore 42; the Callout "The mount interacts with all of this" explicitly instructs readers to read "The mounting styles guide" — without linking to mounting-styles-compared; readers following the recommendation have no navigation path)
+- ease: 9 (single inline link wrap — "The mounting styles guide" → markdown link to /article/mounting-styles-compared)
+- score: 5.4 (impact × ease / 10)
+- issue: #290
+- addressed in: d4b872e
+
 ### [x] [content] [4.5] gasket-mount-reality — plate-materials-explained cross-link missing at plate material section
 - category: content
 - filed: 2026-06-07 by cloud /iterate audit
