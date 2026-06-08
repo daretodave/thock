@@ -72,6 +72,15 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [content] [6.3] divinikey-dcs-dolch-group-buy — dcs-grass-valley-decline cross-link missing at Grass Valley competitive mention
+- category: content
+- filed: 2026-06-08 by cloud /iterate audit
+- impact: 7 (divinikey-dcs-dolch-group-buy line 81 names DCS Grass Valley as the direct competitive comparable for Dolch buyers — "Buyers who tracked Grass Valley but did not commit have an immediate adjacent option" — with no navigation path to dcs-grass-valley-decline; the Grass Valley article's own lede explicitly names Dolch and the shared calendar day, confirming editorial twinning; article already links to dcs-olivetti-comeback twice, so the DCS arc is established — Grass Valley is the missing third link)
+- ease: 9 (single inline link — wrap "DCS Grass Valley" at line 81 → markdown link to /article/dcs-grass-valley-decline)
+- score: 6.3 (impact × ease / 10)
+- issue: [mirror-failed: 2026-06-08T00:00:00Z]
+- addressed in: 25a0c44
+
 ### [x] [content] [6.3] split-ergo-cohort — zmk-mainstream-shift cross-link missing at ZMK force citation
 - category: content
 - filed: 2026-06-08 by cloud /iterate audit
