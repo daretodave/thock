@@ -2936,3 +2936,12 @@ passes accumulate signals.)
 - score: 5.4 (impact × ease / 10)
 - issue: [mirror-failed: 2026-06-08T00:00:00Z]
 - addressed in: fd85dca
+
+### [x] [content] [6.3] sound-dampening-compared — stabilizer-servicing-guide cross-link missing at stabilizer rattle mention
+- category: content
+- filed: 2026-06-08 by cloud /iterate audit
+- impact: 7 (sound-dampening-compared popularityScore 65; line 97 names "stabilizer rattle" as a "different fix" from case acoustic mods but left readers without a navigation path to stabilizer-servicing-guide — the dedicated fix guide at popularityScore 72, the highest-traffic article on the site; stabilizer-servicing-guide had only 2 incoming article cross-links before this fix)
+- ease: 9 (single inline link wrap — "stabilizer rattle" → markdown link to /article/stabilizer-servicing-guide)
+- score: 6.3 (impact × ease / 10)
+- issue: [mirror-failed: 2026-06-08T00:00:00Z]
+- addressed in: 37d0677
