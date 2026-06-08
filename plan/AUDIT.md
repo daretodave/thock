@@ -72,6 +72,15 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [content] [5.4] dcs-grass-valley-decline — dcs-olivetti-comeback cross-link missing at first Olivetti mention
+- category: content
+- filed: 2026-06-08 by cloud /iterate audit
+- impact: 6 (dcs-grass-valley-decline's central three-GB narrative thesis hinges on "the Olivetti signal" as the catalyst; the Olivetti is mentioned at the opening of the article body without a navigation path to dcs-olivetti-comeback; dcs-dolch article links to dcs-olivetti-comeback twice; readers following the DCS arc from dcs-grass-valley-decline had no direct path to the first chapter)
+- ease: 9 (single inline link — wrap "a comeback group buy" at line 29 → markdown link to /article/dcs-olivetti-comeback)
+- score: 5.4 (impact × ease / 10)
+- issue: [mirror-failed: 2026-06-08T00:00:00Z]
+- addressed in: d8b28a8
+
 ### [x] [content] [6.3] alice-layout-decline — split-ergo-cohort cross-link missing at split comparison
 - category: content
 - filed: 2026-06-08 by cloud /iterate audit
