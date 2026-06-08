@@ -2954,3 +2954,12 @@ passes accumulate signals.)
 - score: 6.3 (impact × ease / 10)
 - issue: #299
 - addressed in: 7d17ad4
+
+### [x] [content] [6.3] keyboard-firmware-compared — stabilizer-servicing-guide cross-link missing at stabilizer mention
+- category: content
+- filed: 2026-06-08 by cloud /iterate audit
+- impact: 7 (keyboard-firmware-compared popularityScore 47; the intro mentions "get the stabilizers quiet" without linking to stabilizer-servicing-guide — the dedicated how-to at popularityScore 72, the highest-traffic article on the site; readers arriving at the firmware guide from a build context have zero navigation path to the stabilizer fix guide)
+- ease: 9 (single inline markdown link — "get the stabilizers quiet" → linked text at line 18)
+- score: 6.3 (impact × ease / 10)
+- issue: #300
+- addressed in: 0b12525
