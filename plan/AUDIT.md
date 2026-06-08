@@ -72,6 +72,15 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [content] [6.3] clicky-switches-deep-dive — drop-holy-panda-x-deep-dive cross-link missing at asymmetric-lube citation
+- category: content
+- filed: 2026-06-08 by cloud /iterate audit
+- impact: 7 (clicky-switches-deep-dive had zero outgoing article links; line 96 cites "the same asymmetric-lube logic the Holy Panda X uses would be a meaningful upgrade" — drop-holy-panda-x-deep-dive dedicates its "The factory lube" section to exactly this asymmetric-lube approach; readers following clicky-switches-deep-dive's What to Watch claim had no navigation path to the companion tactile analysis)
+- ease: 9 (single inline link — wrap "the Holy Panda X" at line 96 → markdown link to /article/drop-holy-panda-x-deep-dive)
+- score: 6.3 (impact × ease / 10)
+- issue: [mirror-failed: 2026-06-08T00:00:00Z]
+- addressed in: 49e6567
+
 ### [x] [content] [6.3] divinikey-dcs-dolch-group-buy — dcs-grass-valley-decline cross-link missing at Grass Valley competitive mention
 - category: content
 - filed: 2026-06-08 by cloud /iterate audit
