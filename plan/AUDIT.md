@@ -72,13 +72,14 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
-### [content] [6.3] spring-swaps-explained — pe-foam-mod cross-link missing at acoustic-mod list in conclusion
+### [x] [content] [6.3] spring-swaps-explained — pe-foam-mod cross-link missing at acoustic-mod list in conclusion
 - category: content
 - filed: 2026-06-08 by cloud /iterate audit
 - impact: 7 (spring-swaps-explained "The take" section lists "PE foam, tape, films, lube — none of them change how hard the switch pushes back" with no links; readers following the acoustic-vs-force distinction have no path to pe-foam-mod which covers exactly this; the only outgoing link in the article is lubing-101)
 - ease: 9 (single inline link — wrap "PE foam" → markdown link to /article/pe-foam-mod)
 - score: 6.3 (impact × ease / 10)
 - issue: #297
+- addressed in: d5ec5c6
 
 ### [x] [content] [6.3] clicky-switches-deep-dive — drop-holy-panda-x-deep-dive cross-link missing at asymmetric-lube citation
 - category: content
