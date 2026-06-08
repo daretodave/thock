@@ -2945,3 +2945,12 @@ passes accumulate signals.)
 - score: 6.3 (impact × ease / 10)
 - issue: [mirror-failed: 2026-06-08T00:00:00Z]
 - addressed in: 37d0677
+
+### [x] [content] [6.3] cherry-mx2a-revision — hall-effect-mainstream cross-link missing at Hall-effect competitive threat
+- category: content
+- filed: 2026-06-08 by cloud /iterate audit
+- impact: 7 (cherry-mx2a-revision's "What we're watching" section names "Hall-effect and optical switches" as the force displacing Cherry from the high-performance esports tier but provides no navigation path to hall-effect-mainstream — the W23 tracker #1 trending topic at +66, the dedicated article covering exactly this market displacement; readers who follow the MX2A retreat narrative have no onward link to the trend it names as the driver)
+- ease: 9 (single inline markdown link — wrap "Hall-effect" in "Hall-effect and optical switches" at line 87)
+- score: 6.3 (impact × ease / 10)
+- issue: #299
+- addressed in: 7d17ad4
