@@ -2916,3 +2916,12 @@ passes accumulate signals.)
 - score: 6.3 (impact × ease / 10)
 - issue: #296
 - addressed in: 621535a
+
+### [x] [content] [5.4] switch-films-worth-it — spring-swaps-explained cross-link missing at spring-ping fix recommendation
+- category: content
+- filed: 2026-06-08 by cloud /iterate audit
+- impact: 6 (ideas pillar modding article; line 59 says "stem-side lubing or spring swapping is the fix" for spring ping, directly recommending spring swapping with no link to the companion article; spring-swaps-explained is a discoverability orphan with 0 incoming cross-links from any article)
+- ease: 9 (one inline markdown link addition; "spring swapping" → linked text at the recommendation sentence)
+- score: 5.4 (impact × ease / 10)
+- issue: [mirror-failed: 2026-06-08T00:00:00Z]
+- addressed in: fd85dca
