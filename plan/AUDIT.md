@@ -72,6 +72,17 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [content] [5.4] case-materials-compared — plate-materials-explained cross-link missing at plate material mention in intro
+- category: content
+- impact: 6
+- ease: 9
+- score: 5.4
+- issue: #298
+- observation: case-materials-compared intro names "plate material" as a downstream build decision (alongside switch choice and foam stack) without linking to the dedicated plate-materials-explained guide. Only 2 articles linked to it (gasket-mount-reality, gateron-oil-king-deep-dive); the case guide is the natural third entry for readers building their knowledge chain.
+- evidence: apps/web/src/content/articles/case-materials-compared.mdx:31 — "plate material" was bare text; grep for "plate-materials" returned nothing.
+- suggested fix: wrap "plate material" on line 31 with [plate material](/article/plate-materials-explained)
+- addressed in: 6d70f2a, closes #298
+
 ### [x] [content] [6.3] spring-swaps-explained — pe-foam-mod cross-link missing at acoustic-mod list in conclusion
 - category: content
 - filed: 2026-06-08 by cloud /iterate audit
