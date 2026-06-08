@@ -2880,3 +2880,12 @@ passes accumulate signals.)
 - score: 5.4 (impact × ease / 10)
 - issue: [mirror-failed: 2026-06-07T00:00:00Z]
 - addressed in: a29cba5
+
+### [x] [content] [6.3] typing-tests-lie — split-ergo-cohort cross-link missing at ergo claim
+- category: content
+- filed: 2026-06-08 by cloud /iterate audit
+- impact: 7 (ideas pillar article; "the ergo split crowd has been quietly correct for years" directly validates split ergonomics without linking to split-ergo-cohort; Split/Ergo is W24 tracker #2 category at +52 and rising — timely connection; 0 existing article cross-links in typing-tests-lie)
+- ease: 9 (one inline markdown link addition; "ergo split" → linked text; updatedAt bump)
+- score: 6.3 (impact × ease / 10)
+- issue: #296
+- addressed in: 621535a
