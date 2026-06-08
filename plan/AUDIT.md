@@ -79,7 +79,7 @@
 - ease: 9 (single inline link — wrap "filming" → markdown link to /article/switch-films-worth-it)
 - score: 5.4 (impact × ease / 10)
 - issue: #294
-- addressed in: pending
+- addressed in: a00e9b0, closes #294
 
 ### [x] [content] [6.3] beginners-switch-buying-guide — switch-films-worth-it cross-link missing at filming mention
 - category: content
