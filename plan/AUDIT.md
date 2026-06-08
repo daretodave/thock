@@ -72,6 +72,14 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [content] [6.3] alice-layout-decline — split-ergo-cohort cross-link missing at split comparison
+- category: content
+- filed: 2026-06-08 by cloud /iterate audit
+- impact: 7 (alice-layout-decline argues that split keyboards are now a "less-compromised purchase" — this is the article's central competitive claim, and split-ergo-cohort is the dedicated thock piece covering that shift; readers persuaded by the argument have no direct path to deeper coverage)
+- ease: 9 (single inline link — wrap "Split keyboards" on line 97 → markdown link to /article/split-ergo-cohort)
+- score: 6.3 (impact × ease / 10)
+- issue: #295
+
 ### [x] [content] [5.4] building-mode-sonnet-with-oil-kings — switch-films-worth-it cross-link missing at gear spec filming mention
 - category: content
 - filed: 2026-06-08 by cloud /iterate audit
