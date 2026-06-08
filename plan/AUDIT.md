@@ -72,6 +72,15 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [content] [6.3] split-ergo-cohort — zmk-mainstream-shift cross-link missing at ZMK force citation
+- category: content
+- filed: 2026-06-08 by cloud /iterate audit
+- impact: 7 (split-ergo-cohort cites "ZMK's wireless story caught up to QMK's feature set" as the first of three forces enabling split/ergo growth; this is the central thesis of zmk-mainstream-shift; readers following split-ergo-cohort's Force 1 claim have no navigation path to the dedicated analysis; split-ergo-cohort already links to 75-percent-default but not to the ZMK article)
+- ease: 9 (single inline link — wrap "ZMK's wireless story" at line 120 → markdown link to /article/zmk-mainstream-shift)
+- score: 6.3 (impact × ease / 10)
+- issue: [mirror-failed: 2026-06-08T00:00:00Z]
+- addressed in: d928772
+
 ### [x] [content] [5.4] dcs-grass-valley-decline — dcs-olivetti-comeback cross-link missing at first Olivetti mention
 - category: content
 - filed: 2026-06-08 by cloud /iterate audit
