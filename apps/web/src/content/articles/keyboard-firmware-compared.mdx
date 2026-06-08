@@ -6,7 +6,7 @@ author: thock
 pillar: guides
 tags: [firmware, qmk, via, vial, beginner]
 publishedAt: '2026-04-29T13:00:00.000Z'
-updatedAt: '2026-06-07T00:00:00.000Z'
+updatedAt: '2026-06-08T00:00:00.000Z'
 heroImage: /hero-art/keyboard-firmware-compared.svg
 heroImageAlt: "Top-down silhouette of a 75% mechanical keyboard drawn in a single warm-grey stroke on warm paper, with three small ochre callout chips floating above the keys labeled QMK, VIA, and VIAL — each connected by a dashed lead line to a distinct cluster of keys it governs."
 featured: false
@@ -15,7 +15,7 @@ guideSection: 'firmware'
 mentionedParts: []
 ---
 
-A first-time builder spends a month on the board itself. They tune the switches, film the housings if they are that kind of builder, get the stabilizers quiet, find a keycap set that does what they want, and at the end of all of it they have a $400 keyboard that types beautifully and has a right-shift key where they want enter to be. They open a forum thread to ask how to remap it and the first reply tells them to edit `keymap.c` and run `qmk compile`. The second reply tells them to install VIA. The third reply tells them both of those are wrong and they should be using VIAL. It is one in the morning and they just want to type a return.
+A first-time builder spends a month on the board itself. They tune the switches, film the housings if they are that kind of builder, [get the stabilizers quiet](/article/stabilizer-servicing-guide), find a keycap set that does what they want, and at the end of all of it they have a $400 keyboard that types beautifully and has a right-shift key where they want enter to be. They open a forum thread to ask how to remap it and the first reply tells them to edit `keymap.c` and run `qmk compile`. The second reply tells them to install VIA. The third reply tells them both of those are wrong and they should be using VIAL. It is one in the morning and they just want to type a return.
 
 Firmware is the layer most builders never touch and never need to think about. The board's microcontroller scans the matrix, decides which keys are pressed, and sends USB keycodes to the computer. That is the whole job. But the moment a builder wants to do anything beyond the layout the vendor shipped — remap a key, add a function layer, write a macro, set up a one-shot modifier — they meet the firmware ecosystem, and the ecosystem has three serious answers. This guide is for that builder. It will not turn anyone into a firmware engineer. It will tell a reader what to learn, in what order, for the kind of board they actually own.
 
