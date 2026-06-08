@@ -72,6 +72,15 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [content] [5.4] building-mode-sonnet-with-oil-kings — switch-films-worth-it cross-link missing at gear spec filming mention
+- category: content
+- filed: 2026-06-08 by cloud /iterate audit
+- impact: 6 (building-mode-sonnet-with-oil-kings popularityScore 34; build gear spec at line 48 says "no filming" without explaining or linking the term; readers learning keyboard builds don't know what filming means or whether to do it; switch-films-worth-it is the dedicated ideas-pillar answer; only cross-linked from 2 other articles before this fix)
+- ease: 9 (single inline link — wrap "filming" → markdown link to /article/switch-films-worth-it)
+- score: 5.4 (impact × ease / 10)
+- issue: #294
+- addressed in: pending
+
 ### [x] [content] [6.3] beginners-switch-buying-guide — switch-films-worth-it cross-link missing at filming mention
 - category: content
 - filed: 2026-06-07 by cloud /iterate audit
