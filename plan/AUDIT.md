@@ -3005,3 +3005,12 @@ passes accumulate signals.)
 - score: 5.4 (impact × ease / 10)
 - issue: #304
 - addressed in: c870a13
+
+### [x] [content] [5.4] lubing-101 — cherry-mx2a-revision cross-link missing at MX2A redesign mention
+- category: content
+- filed: 2026-06-09 by cloud /iterate audit
+- impact: 6 (lubing-101 guides article; line 72 cites "the Cherry MX2A redesign" as the benchmark event for modern factory lubing — the single most important recent development in factory lube quality — but provided no navigation path to cherry-mx2a-revision, the deep-dive that explains exactly what that redesign changed; lubing-101 had only 1 outgoing article cross-link before this fix; cherry-mx2a-revision is a substantive deep-dive with the engineering detail readers need to understand why the MX2A lube benchmark matters)
+- ease: 9 (single inline link replacement — <Mono>Cherry MX2A</Mono> redesign → [Cherry MX2A redesign](/article/cherry-mx2a-revision))
+- score: 5.4 (impact × ease / 10)
+- issue: #305
+- addressed in: 247d795
