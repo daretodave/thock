@@ -3075,3 +3075,12 @@ passes accumulate signals.)
 - score: 6.3 (impact × ease / 10)
 - issue: [mirror-failed: 2026-06-09T00:00:00Z]
 - addressed in: e0fa916
+
+### [x] [content] [6.3] clicky-switches-deep-dive — plate-materials-explained cross-link missing at plate prescription
+- category: content
+- filed: 2026-06-09 by cloud /iterate audit
+- impact: 7 (clicky-switches-deep-dive's "Building clicky in 2026" section prescribes specific plate materials — POM and FR4 — as the correct acoustic choice for a clicky build, but provides no navigation path to plate-materials-explained, the dedicated deep-dive covering how FR4, POM, brass, and aluminium each change the acoustic profile; readers acting on the material prescription had no onward link to the comparison resource)
+- ease: 9 (single closing sentence at end of "Building clicky in 2026" section, same pattern as gateron-oil-king-deep-dive → plate-materials-explained fix)
+- score: 6.3 (impact × ease / 10)
+- issue: #308
+- addressed in: 0e0a9dc, closes #308
