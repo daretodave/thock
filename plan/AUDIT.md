@@ -3105,3 +3105,15 @@ passes accumulate signals.)
 - score: 6.3 (impact × ease / 10)
 - issue: #309
 - addressed in: 4ab7f56, closes #309
+
+### [x] [content] [6.3] topre-electrocapacitive-deep-dive — magnetic-switches-deep-dive cross-link missing at Hall-effect architecture description
+- category: content
+- filed: 2026-06-09 by cloud /iterate audit
+- impact: 7 (topre article line 76 describes Hall-effect/magnetic sensing architecture "Hall-effect is magnetic — a Hall sensor on the PCB reads the field of a small magnet in the switch stem as the stem moves" — the exact architectural premise of magnetic-switches-deep-dive; magnetic article already links back to topre at lines 14+71; cross-link was unidirectional between two companion deep-dives covering adjacent sensing lineages)
+- ease: 9 (single inline link wrap at named architectural description — same pattern as all prior cross-link fixes)
+- score: 6.3 (impact × ease / 10)
+- observation: topre-electrocapacitive-deep-dive "Where Topre fits in 2026" section links to hall-effect-mainstream (the market analysis) but not to magnetic-switches-deep-dive (the architecture deep-dive) when it describes the Hall-effect/magnetic sensing mechanism. The magnetic article opens with a link to the topre article and references it again at its taxonomy section. Reader of the topre piece learning about Hall-effect has no path to the companion architecture piece.
+- evidence: apps/web/src/content/articles/topre-electrocapacitive-deep-dive.mdx:74 — hall-effect-mainstream link present; line 76 — "Hall-effect is magnetic — a Hall sensor on the PCB reads the field of a small magnet in the switch stem as the stem moves" — no link; grep for "magnetic-switches-deep-dive" in topre article returns 0 matches; magnetic-switches-deep-dive.mdx lines 14+71 already cross-link to topre.
+- suggested fix: wrap the architectural description at line 76 with a link to /article/magnetic-switches-deep-dive
+- issue: #311
+- addressed in: df66cd5
