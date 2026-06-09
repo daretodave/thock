@@ -72,6 +72,18 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [content] [5.4] gateron-oil-king-deep-dive — switch-housings-compared cross-link missing at housing section close
+- category: content
+- filed: 2026-06-09 by cloud /iterate audit
+- impact: 6 (gateron-oil-king-deep-dive popularityScore 38; "The housing, in two halves" section covers PC/nylon/POM resin combination in detail but provides no navigation path to switch-housings-compared — the dedicated guide on housing material acoustics with 0 incoming article cross-links before this fix; the closing paragraph directly parallels the plate-materials cross-link pattern already present at line 60)
+- ease: 9 (single inline sentence appended to housing section closing paragraph — same pattern as line 60's plate-materials cross-link)
+- score: 5.4 (impact × ease / 10)
+- issue: [mirror-failed: 2026-06-09T00:00:00Z]
+- observation: gateron-oil-king-deep-dive's "The housing, in two halves" section covers polycarbonate/nylon/POM resin combinations in depth but closes without a navigation path to switch-housings-compared — the dedicated guide covering how different housing resins shape switch acoustics across the catalog. The article already uses the pattern at line 60 ("For a full treatment of how... see [plate materials deep-dive]") but only for plate materials; the housing section lacks the companion handoff.
+- evidence: apps/web/src/content/articles/gateron-oil-king-deep-dive.mdx:44 — housing section closes "most competitors pick one resin and live with the trade-off" with no link; grep for "switch-housings-compared" returned nothing in the file.
+- suggested fix: append closing sentence to housing section paragraph at line 44 → "For a full comparison of how different housing resins — nylon, polycarbonate, POM, and their mixed combinations — shape switch acoustics across the catalog, see [switch housings, compared](/article/switch-housings-compared)."
+- addressed in: aa2eb2a
+
 ### [x] [content] [5.4] case-materials-compared — plate-materials-explained cross-link missing at plate material mention in intro
 - category: content
 - impact: 6
