@@ -3066,3 +3066,12 @@ passes accumulate signals.)
 - score: 6.3 (impact × ease / 10)
 - issue: #307
 - addressed in: ffbb6f8, closes #307
+
+### [x] [content] [6.3] plate-materials-explained — tape-mod cross-link missing at order-of-operations recommendation
+- category: content
+- filed: 2026-06-09 by cloud /iterate audit
+- impact: 7 (plate-materials-explained's "order of operations" paragraph directly recommends "tape mod or PE foam sheet" as one of the first mods a builder should apply, but provides no navigation path to the tape-mod article; tape-mod is the 3rd highest-traffic article on the site at popularityScore=67 and had only 1 incoming cross-link from the entire 48-article corpus; builders reading the build-sequence recommendation and deciding to try tape mod had no path to the dedicated guide)
+- ease: 9 (single inline markdown link wrap — "tape mod" → [tape mod](/article/tape-mod) in the order-of-operations sentence)
+- score: 6.3 (impact × ease / 10)
+- issue: [mirror-failed: 2026-06-09T00:00:00Z]
+- addressed in: e0fa916
