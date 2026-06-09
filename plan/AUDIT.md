@@ -72,6 +72,18 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [content] [5.4] beginners-switch-buying-guide — clicky-switches-deep-dive cross-link missing at clicky family section close
+- category: content
+- filed: 2026-06-09 by cloud /iterate audit
+- impact: 6 (beginners-switch-buying-guide popularityScore=51, primary entry-point for switch selection; clicky-switches-deep-dive has 0 incoming cross-links from the article corpus; the clicky paragraph at line 62 describes the click-jacket mechanism and closes with a practical advice sentence but provides no navigation path forward for beginners who choose clickies; the deep-dive explicitly addresses "mechanical-keyboard newcomers" as the second constituency cohort and explains click-bar vs click-jacket in depth)
+- ease: 9 (single closing sentence appended to the clicky paragraph — same pattern as all 40 prior cross-link fixes)
+- score: 5.4 (impact × ease / 10)
+- observation: beginners-switch-buying-guide's clicky section (line 62) introduces the clicky family and closes with "A clicky switch is a great choice in a private room and a poor choice in an open office." There is no link to clicky-switches-deep-dive, which provides the natural next step for a beginner who picks clicky — explaining how click-jacket and click-bar mechanisms differ and what that means for build decisions. The deep-dive currently has 0 incoming links from the 48-article corpus.
+- evidence: apps/web/src/content/articles/beginners-switch-buying-guide.mdx:62 — clicky paragraph closes with "A clicky switch is a great choice in a private room and a poor choice in an open office." with no link; grep for "clicky-switches-deep-dive" returns nothing in the file.
+- suggested fix: append closing sentence to clicky paragraph → "For a deeper look at how click mechanisms work and what separates click-bar from click-jacket designs, see [clicky switches, a deep dive](/article/clicky-switches-deep-dive)."
+- issue: [mirror-failed: 2026-06-09T00:00:00Z]
+- addressed in: d191cab
+
 ### [x] [content] [5.4] 75-percent-default — gasket-mount-reality cross-link missing at Build-shape watch Callout
 - category: content
 - filed: 2026-06-09 by cloud /iterate audit
