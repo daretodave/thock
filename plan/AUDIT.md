@@ -3084,3 +3084,12 @@ passes accumulate signals.)
 - score: 6.3 (impact × ease / 10)
 - issue: #308
 - addressed in: 0e0a9dc, closes #308
+
+### [x] [content] [6.3] keycap-profiles-compared — beginners-switch-buying-guide cross-link missing at closing
+- category: content
+- filed: 2026-06-09 by cloud /iterate audit
+- impact: 7 (keycap-profiles-compared popularityScore=42; closing paragraph explicitly positions "Switches set the gait of a keyboard" vs "Keycaps set the timbre" — establishing the complementary builder decision — but provided no navigation path to beginners-switch-buying-guide (popularityScore=51, 4th-highest on site); the closing already linked to keycap-materials-compared for the material axis but left the switch axis unlinked; a beginner finishing the keycap guide with their switch choice still open had no path to the companion entry-point)
+- ease: 9 (single closing sentence appended after existing keycap-materials-compared link — same pattern as all prior cross-link fixes)
+- score: 6.3 (impact × ease / 10)
+- issue: #309
+- addressed in: 4ab7f56, closes #309
