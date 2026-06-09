@@ -3024,3 +3024,12 @@ passes accumulate signals.)
 - score: 6.3 (impact × ease / 10)
 - issue: [mirror-failed: 2026-06-09T00:00:00Z]
 - addressed in: fa7d2619b86d4c67e50be97374c1534caaed4274
+
+### [x] [content] [6.3] acoustic-spec-rise — sound-dampening-compared cross-link missing at dampening stack
+- category: content
+- filed: 2026-06-09 by cloud /iterate audit
+- impact: 7 (trends pillar article "How 'thock' became an acoustic spec" — the central article for the site's acoustic theme; "The four-layer stack went standard" section describes the three-layer dampening stack in detail (silicone pad, foam tape, poron strip) without linking to sound-dampening-compared, the dedicated guide for builders who want to replicate it; acoustic-spec-rise had only 5 outgoing article cross-links before this fix; linking to the dampening guide completes the path for readers introduced to the stack concept)
+- ease: 9 (single prose addition at the dampening stack description)
+- score: 6.3 (impact × ease / 10)
+- issue: #306
+- addressed in: 25f0d68, closes #306
