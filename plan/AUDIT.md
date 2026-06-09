@@ -72,6 +72,18 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [content] [6.3] gmk-cyl-prussian-alert — dcs-olivetti-comeback cross-link missing at profile-rotation mention
+- category: content
+- filed: 2026-06-09 by cloud /iterate audit
+- impact: 7 (gmk-cyl-prussian-alert line 71 mentions "DCS Olivetti's recent close" as evidence of enthusiast attention rotating away from Cherry profile — the exact editorial premise of dcs-olivetti-comeback; dcs-olivetti-comeback already links back to gmk-cyl-prussian-alert explicitly; cross-link is unidirectional)
+- ease: 9 (single inline link replacement at named reference — same pattern as all prior cross-link fixes)
+- score: 6.3 (impact × ease / 10)
+- observation: gmk-cyl-prussian-alert's closing paragraph cites "DCS Olivetti's recent close" as a signal that enthusiasm may rotate away from Cherry profile, without linking to the companion piece that covers that story. dcs-olivetti-comeback already links back to gmk-cyl-prussian-alert; completing the bidirectional pair is the natural reader path.
+- evidence: apps/web/src/content/articles/gmk-cyl-prussian-alert.mdx:71 — "DCS Olivetti's recent close already hints in that direction" — no link; grep for "dcs-olivetti-comeback" returns 0 matches; dcs-olivetti-comeback.mdx:58 already cross-links back.
+- suggested fix: replace plain text with [DCS Olivetti's recent close](/article/dcs-olivetti-comeback)
+- issue: #310
+- addressed in: 07225a1
+
 ### [x] [content] [6.3] trends-tracker-preview — alice-layout-decline cross-link missing at worked example Alice mention
 - category: content
 - filed: 2026-06-09 by cloud /iterate audit
