@@ -2963,3 +2963,12 @@ passes accumulate signals.)
 - score: 6.3 (impact × ease / 10)
 - issue: #300
 - addressed in: 0b12525
+
+### [x] [content] [6.3] tape-mod — case-materials-compared cross-link missing at PC case section
+- category: content
+- filed: 2026-06-09 by cloud /iterate audit
+- impact: 7 (tape-mod popularityScore 67, 3rd-highest traffic on site; the "Fully polycarbonate or acrylic cases" bullet at line 77 explicitly explains that PC case material acoustics dominate the sound profile but provided no navigation path to case-materials-compared — popularityScore 42, 0 incoming article cross-links before this fix; tape-mod already links to pe-foam-mod and sound-dampening-compared, making this the clear third link in the acoustic stack chain)
+- ease: 9 (single closing sentence appended to the "Fully polycarbonate or acrylic cases" bullet — identical pattern to the tape-mod → sound-dampening-compared cross-link at line 107)
+- score: 6.3 (impact × ease / 10)
+- issue: #301
+- addressed in: 017dca5, closes #301
