@@ -91,6 +91,7 @@
 - ease: 9 (single inline sentence appended to housing section closing paragraph — same pattern as line 60's plate-materials cross-link)
 - score: 5.4 (impact × ease / 10)
 - issue: [mirror-failed: 2026-06-09T00:00:00Z]
+- addressed in: fa7d2619b86d4c67e50be97374c1534caaed4274
 - observation: gateron-oil-king-deep-dive's "The housing, in two halves" section covers polycarbonate/nylon/POM resin combinations in depth but closes without a navigation path to switch-housings-compared — the dedicated guide covering how different housing resins shape switch acoustics across the catalog. The article already uses the pattern at line 60 ("For a full treatment of how... see [plate materials deep-dive]") but only for plate materials; the housing section lacks the companion handoff.
 - evidence: apps/web/src/content/articles/gateron-oil-king-deep-dive.mdx:44 — housing section closes "most competitors pick one resin and live with the trade-off" with no link; grep for "switch-housings-compared" returned nothing in the file.
 - suggested fix: append closing sentence to housing section paragraph at line 44 → "For a full comparison of how different housing resins — nylon, polycarbonate, POM, and their mixed combinations — shape switch acoustics across the catalog, see [switch housings, compared](/article/switch-housings-compared)."
@@ -3015,10 +3016,11 @@ passes accumulate signals.)
 - issue: #305
 - addressed in: 247d795
 
-### [content] [6.3] stabilizer-servicing-guide — stabilizers-explained cross-link missing at intro
+### [x] [content] [6.3] stabilizer-servicing-guide — stabilizers-explained cross-link missing at intro
 - category: content
 - filed: 2026-06-09 by cloud /iterate audit
 - impact: 7 (stabilizer-servicing-guide is the highest-traffic article at popularityScore 72; stabilizers-explained is its published companion covering what stabilizers are, types, and rattle mechanics — but has 0 incoming cross-links from any article; the servicing guide's intro paragraph assumes familiarity with stabilizer concepts that the companion guide provides; every reader of the most popular article gets a path to the foundational context)
 - ease: 9 (one sentence addition near the intro pointing to stabilizers-explained; same pattern as dozens of recent bidirectional cross-link completions)
 - score: 6.3 (impact × ease / 10)
 - issue: [mirror-failed: 2026-06-09T00:00:00Z]
+- addressed in: fa7d2619b86d4c67e50be97374c1534caaed4274
