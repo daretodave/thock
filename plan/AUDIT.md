@@ -3118,7 +3118,7 @@ passes accumulate signals.)
 - issue: #311
 - addressed in: df66cd5
 
-### [content] [6.3] mode-sonnet-r2-group-buy-coverage — building-mode-sonnet-with-oil-kings cross-link missing at "The Sonnet, briefly" section close
+### [x] [content] [6.3] mode-sonnet-r2-group-buy-coverage — building-mode-sonnet-with-oil-kings cross-link missing at "The Sonnet, briefly" section close
 - category: content
 - filed: 2026-06-09 by cloud /iterate audit
 - impact: 7 (mode-sonnet-r2-group-buy-coverage popularityScore=22 in news pillar; zero article cross-links; building-mode-sonnet-with-oil-kings already links TO this article at line 72 — "R2 is announced for 2026-06-01 through 2026-07-15 at CannonKeys" — creating half of a bidirectional pair; "The Sonnet, briefly" section introduces the chassis to first-time buyers, the exact audience for the companion build guide covering the same board in a real build context; no navigation path from the announcement piece to the build piece)
@@ -3128,3 +3128,4 @@ passes accumulate signals.)
 - evidence: apps/web/src/content/articles/mode-sonnet-r2-group-buy-coverage.mdx lines 56–60 — "The Sonnet, briefly" closes "That difference is the point." with no link to building-mode-sonnet-with-oil-kings; grep for "building-mode-sonnet" returns 0 matches in the file; building-mode-sonnet-with-oil-kings.mdx line 72 already cross-links to this article.
 - suggested fix: append closing sentence → "For a first-hand account of how the default build performs in practice, see [building the Mode Sonnet with Gateron Oil Kings](/article/building-mode-sonnet-with-oil-kings)."
 - issue: [mirror-failed: 2026-06-09T00:00:00Z]
+- addressed in: 016709dbe657247c6254694710fca1451212b379
