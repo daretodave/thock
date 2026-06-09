@@ -2996,3 +2996,12 @@ passes accumulate signals.)
 - score: 6.3 (impact × ease / 10)
 - issue: #301
 - addressed in: 017dca5, closes #301
+
+### [x] [content] [5.4] hmx-cloud-deep-dive — acoustic-spec-rise cross-link missing at article close
+- category: content
+- filed: 2026-06-09 by cloud /iterate audit
+- impact: 6 (hmx-cloud-deep-dive deep-dive article; acoustic-spec-rise already links to hmx-cloud-deep-dive as its central exhibit ("most visibly HMX, whose [Cloud deep-dive] argues that HMX's edge isn't material novelty but rather the boring industrial answer of 'do the lubing well, at volume, every time'") — but the link is one-directional; readers of the deep-dive have no path to the trends piece that frames the same factory-lube quality shift as a market-wide phenomenon; bidirectional completion)
+- ease: 9 (single sentence addition at close of "What we're watching" section, after the final paragraph referencing W19 Trends Tracker)
+- score: 5.4 (impact × ease / 10)
+- issue: #304
+- addressed in: c870a13
