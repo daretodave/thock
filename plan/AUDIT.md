@@ -3014,3 +3014,11 @@ passes accumulate signals.)
 - score: 5.4 (impact × ease / 10)
 - issue: #305
 - addressed in: 247d795
+
+### [content] [6.3] stabilizer-servicing-guide — stabilizers-explained cross-link missing at intro
+- category: content
+- filed: 2026-06-09 by cloud /iterate audit
+- impact: 7 (stabilizer-servicing-guide is the highest-traffic article at popularityScore 72; stabilizers-explained is its published companion covering what stabilizers are, types, and rattle mechanics — but has 0 incoming cross-links from any article; the servicing guide's intro paragraph assumes familiarity with stabilizer concepts that the companion guide provides; every reader of the most popular article gets a path to the foundational context)
+- ease: 9 (one sentence addition near the intro pointing to stabilizers-explained; same pattern as dozens of recent bidirectional cross-link completions)
+- score: 6.3 (impact × ease / 10)
+- issue: [mirror-failed: 2026-06-09T00:00:00Z]
