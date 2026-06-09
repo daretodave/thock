@@ -72,6 +72,18 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [content] [5.4] 75-percent-default — gasket-mount-reality cross-link missing at Build-shape watch Callout
+- category: content
+- filed: 2026-06-09 by cloud /iterate audit
+- impact: 6 (trends article with zero article cross-links; Build-shape watch Callout explicitly names "gasket-mount internals as default rather than option" — the precise subject of gasket-mount-reality — with no companion link; both articles share "75" and "mode" tags; readers of 75-percent-default are the primary audience for the gasket-mount guide)
+- ease: 9 (single sentence appended to Callout body — same pattern as gasket-mount-reality line 49's plate-materials cross-link)
+- score: 5.4 (impact × ease / 10)
+- issue: #303
+- observation: 75-percent-default has zero article cross-links despite its Build-shape watch Callout explicitly naming gasket-mount internals as the default chassis shape converging across 2026 75% boards. The gasket-mount-reality article covers exactly what that convergence means in practice — how different gasket implementations translate to feel and acoustics across the $90–$400 price ladder — but there was no path from the trends piece to the guide.
+- evidence: apps/web/src/content/articles/75-percent-default.mdx:101-107 — Callout body closes "but the chassis intent is converging" with no link; grep for "gasket-mount-reality" returned nothing in the file; grep for "[/article/" returned zero matches across the entire file.
+- suggested fix: append closing sentence to Callout body → "For what gasket-mount internals actually deliver across the price ladder, see [what gasket mount actually delivers](/article/gasket-mount-reality)."
+- addressed in: e93a152
+
 ### [x] [content] [5.4] gateron-oil-king-deep-dive — switch-housings-compared cross-link missing at housing section close
 - category: content
 - filed: 2026-06-09 by cloud /iterate audit
