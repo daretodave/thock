@@ -3045,3 +3045,12 @@ passes accumulate signals.)
 - score: 6.3 (impact × ease / 10)
 - issue: #306
 - addressed in: 25f0d68, closes #306
+
+### [x] [content] [6.3] building-mode-sonnet — stabilizer-servicing-guide cross-link missing at stab spec
+- category: content
+- filed: 2026-06-09 by cloud /iterate audit
+- impact: 7 (building-mode-sonnet-with-oil-kings popularityScore 34; Build Details callout describes stabilizer service in precise technical terms — "clipped, holee-modded, lubed with 205g0 on the wire ends and a thin coat of XHT-BDZ in the housings" — exactly what stabilizer-servicing-guide covers; stabilizer-servicing-guide is the site's most popular article at popularityScore 72; readers of the build report following the stabilizer work had no navigation path to the methodology guide)
+- ease: 9 (single inline link on "clipped, holee-modded, lubed" in the Build Details callout)
+- score: 6.3 (impact × ease / 10)
+- issue: #307
+- addressed in: ffbb6f8, closes #307
