@@ -72,6 +72,18 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [content] [6.3] trends-tracker-preview — alice-layout-decline cross-link missing at worked example Alice mention
+- category: content
+- filed: 2026-06-09 by cloud /iterate audit
+- impact: 7 (trends-tracker-preview popularityScore=30; zero outgoing article cross-links; "alice" tag in frontmatter; worked example at line 51 explicitly names Alice layout at -18 — the exact editorial premise of alice-layout-decline whose lede cites W19 Alice at -18; two articles are companion pieces sharing the same data point with no path between them)
+- ease: 9 (single follow-on sentence appended inline after the Alice clause — same pattern as all prior cross-link fixes)
+- score: 6.3 (impact × ease / 10)
+- observation: trends-tracker-preview uses Alice layout at -18 as its worked example for how to read a tracker row. alice-layout-decline's lede directly cites W19 Alice at -18 as the editorial premise for a full deep-dive on the decline. The two articles share the same data point; a reader following the trends-tracker-preview worked example has no path to the companion piece that unpacks the full story.
+- evidence: apps/web/src/content/articles/trends-tracker-preview.mdx line 51 — "Alice layout read -18 with the slope still pointing down — eight weeks of softening interest after the last wave of group buys closed." — no link; grep for "alice-layout-decline" returns 0 matches; article has 0 outgoing cross-links to rest of corpus.
+- suggested fix: append follow-on sentence inline after Alice clause → "For the longer story on where Alice interest went and why, see [the slow fade of Alice layouts](/article/alice-layout-decline)."
+- issue: [mirror-failed: 2026-06-09T00:00:00Z]
+- addressed in: 81a603e
+
 ### [x] [content] [5.4] beginners-switch-buying-guide — clicky-switches-deep-dive cross-link missing at clicky family section close
 - category: content
 - filed: 2026-06-09 by cloud /iterate audit
