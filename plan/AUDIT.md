@@ -3130,7 +3130,7 @@ passes accumulate signals.)
 - issue: [mirror-failed: 2026-06-09T00:00:00Z]
 - addressed in: 016709dbe657247c6254694710fca1451212b379
 
-### [HOT PURSUIT] [content-gap] [7] ideas pillar — 1 of ≥2 articles in last 30d
+### [x] [HOT PURSUIT] [content-gap] [7] ideas pillar — 1 of ≥2 articles in last 30d
 - category: content-gaps
 - impact: 7 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -3140,4 +3140,17 @@ passes accumulate signals.)
 - window-start: 2026-05-11
 - score: 7
 - next: /ship-content → ideas pillar article
+> Filed 2026-06-10 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+- addressed in: 1f82d26
+
+### [HOT PURSUIT] [content-gap] [7] deep-dives pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 6 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: deep-dives
+- window-count: 1
+- window-start: 2026-05-11
+- score: 7
+- next: /ship-content → deep-dives pillar article
 > Filed 2026-06-10 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
