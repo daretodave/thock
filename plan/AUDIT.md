@@ -3260,3 +3260,12 @@ passes accumulate signals.)
 - suggested fix: append closing sentence to the factory-lube section: "For builders working with switches that ship dry — or wanting to understand what the asymmetric-lube standard looks like in practice — [lubing switches](/article/lubing-switches-guide) is the step-by-step reference."
 - issue: #316
 - addressed in: 087bef0, closes #316
+
+### [x] [content] [6.3] keychron-q1-he board not in mentionedParts — mentioned-in rail empty
+- category: content
+- filed: 2026-06-10 by cloud /iterate audit
+- impact: 7 (keychron-q1-he added to /data but /part/board/keychron-q1-he "mentioned in" rail showed zero articles; 3 articles name the Q1 HE 8K Marble as a primary example — keychron-q-ultra-zmk, hall-effect-mainstream, zmk-mainstream-shift)
+- ease: 9 (YAML list additions in frontmatter — same pattern as all prior mentionedParts wiring)
+- score: 6.3 (impact × ease / 10)
+- issue: #317
+- addressed in: e03ed79, closes #317
