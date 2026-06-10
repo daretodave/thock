@@ -72,6 +72,18 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [content] [6.3] pe-foam-mod — lubing-101 cross-link missing at switch lube mention in verdict
+- category: content
+- filed: 2026-06-10 by cloud /iterate audit
+- impact: 7 (pe-foam-mod popularityScore 20; verdict section explicitly names three mods as the complete acoustic-stack fix — PE foam + switch lube + properly tuned stabilizers — with stabilizer-servicing-guide already linked (fa3caf1) but "switch lube job" unlinked; lubing-101 is the #1-traffic article on the site; readers following the triad recommendation have a path to stabs but not to lubing)
+- ease: 9 (single inline link wrap — "switch lube job" → markdown link to /article/lubing-101 — same pattern as the stabilizer link in the same sentence)
+- score: 6.3 (impact × ease / 10)
+- observation: pe-foam-mod's verdict at line 110 reads "Combine it with a careful switch lube job and [properly tuned stabilizers](/article/stabilizer-servicing-guide) and the three mods together cover the most common sources of acoustic dissatisfaction in a mid-range build." The stabilizer link was added in fa3caf1 but "switch lube job" remained unlinked despite being the second named mod. pe-foam-mod had 0 references to lubing-101 across the entire article.
+- evidence: apps/web/src/content/articles/pe-foam-mod.mdx:110 — "a careful switch lube job and [properly tuned stabilizers]" — "switch lube job" unlinked; grep for "lubing-101" returns 0 matches in the file.
+- suggested fix: wrap "switch lube job" → [switch lube job](/article/lubing-101)
+- issue: #313
+- addressed in: 2ea2f21, closes #313
+
 ### [x] [content] [6.3] gmk-cyl-prussian-alert — dcs-olivetti-comeback cross-link missing at profile-rotation mention
 - category: content
 - filed: 2026-06-09 by cloud /iterate audit
