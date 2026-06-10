@@ -34,6 +34,9 @@ import {
 const here = dirname(fileURLToPath(import.meta.url))
 const outDir = resolve(here, '..', 'src', 'lib', 'data-runtime')
 const outFile = resolve(outDir, 'manifest.generated.json')
+const ogOutFile = resolve(outDir, 'og-manifest.generated.json')
+
+const articles = getAllArticles()
 
 const manifest = {
   switches: getAllSwitches(),
@@ -42,14 +45,32 @@ const manifest = {
   vendors: getAllVendors(),
   groupBuys: getAllGroupBuys(),
   trends: getAllTrendSnapshots(),
-  articles: getAllArticles(),
+  articles,
   newsletters: getAllNewsletters(),
   tags: getAllTags(),
   generatedAt: new Date().toISOString(),
 } as const
 
+// Minimal manifest for edge OG image handlers — article body and filePath
+// are not needed for OG generation; stripping them keeps the edge bundle
+// well under Vercel's 1 MB edge-function size limit.
+const ogManifest = {
+  articles: articles.map((a) => ({
+    slug: a.slug,
+    readTime: a.readTime,
+    frontmatter: {
+      title: a.frontmatter.title,
+      lede: a.frontmatter.lede,
+      pillar: a.frontmatter.pillar,
+      author: a.frontmatter.author,
+    },
+  })),
+  generatedAt: manifest.generatedAt,
+}
+
 mkdirSync(outDir, { recursive: true })
 writeFileSync(outFile, `${JSON.stringify(manifest, null, 2)}\n`, 'utf-8')
+writeFileSync(ogOutFile, `${JSON.stringify(ogManifest, null, 2)}\n`, 'utf-8')
 
 console.log(`[manifest] wrote ${outFile}`)
 console.log(`  switches:    ${manifest.switches.length}`)
@@ -61,3 +82,4 @@ console.log(`  trends:      ${manifest.trends.length}`)
 console.log(`  articles:    ${manifest.articles.length}`)
 console.log(`  newsletters: ${manifest.newsletters.length}`)
 console.log(`  tags:        ${manifest.tags.length}`)
+console.log(`[manifest] wrote ${ogOutFile} (articles-only OG manifest: ${ogManifest.articles.length} articles)`)

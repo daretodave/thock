@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/og'
 import { pillarLabel, siteConfig } from '@thock/seo'
-import { getArticleBySlug } from '@/lib/data-runtime'
+import { getArticleForOg } from '@/lib/data-runtime/og-runtime'
 import { ArticleOGContent } from '@/components/og/ArticleOG'
 import { OG_PALETTE } from '@/components/og/palette'
 
@@ -20,7 +20,7 @@ export async function generateImageMetadata({
   params: Promise<{ slug: string }>
 }) {
   const { slug } = await params
-  const article = getArticleBySlug(slug)
+  const article = getArticleForOg(slug)
   const alt = article
     ? `${article.frontmatter.title} — ${siteConfig.name}`
     : `${siteConfig.name} — ${siteConfig.tagline}`
@@ -44,7 +44,7 @@ export default async function OpenGraphImage({
   params: Promise<{ slug: string }>
 }) {
   const { slug } = await params
-  const article = getArticleBySlug(slug)
+  const article = getArticleForOg(slug)
 
   if (!article) {
     return new ImageResponse(
