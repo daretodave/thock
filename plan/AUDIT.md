@@ -3212,3 +3212,15 @@ passes accumulate signals.)
 - suggested fix: replace "[Lubing 101](/article/lubing-101) covers the method end to end" with "[lubing switches](/article/lubing-switches-guide) is the practical reference"
 - issue: [mirror-failed: 2026-06-10T12:00:00Z]
 - addressed in: cc303bb
+
+### [x] [content] [6.3] tape-mod — mounting-styles-compared cross-link missing at gasket-mount section
+- category: content
+- filed: 2026-06-10 by cloud /iterate audit
+- impact: 7 (tape-mod popularityScore=67, the site's 3rd most popular article; "Where it doesn't help much" → "Gasket-mount boards" paragraph explains the fundamental reason tape-mod's effectiveness is determined by mounting style — gasket designs already handle resonance isolation — but provides no path to mounting-styles-compared for readers unfamiliar with mounting types; the "Fully polycarbonate" paragraph in the same section already demonstrates the correct cross-link pattern with a case-materials-compared closing sentence; mounting-styles-compared already links TO tape-mod at its tray-mount section — the pair was editorially established but only half-navigable)
+- ease: 9 (single sentence addition at the close of the gasket-mount paragraph — same pattern as all prior cross-link fixes)
+- score: 6.3 (impact × ease / 10)
+- observation: tape-mod "Gasket-mount boards" paragraph closes "...the problem is almost certainly not the PCB surface; it is something else in the stack." with no link to mounting-styles-compared. The article repeatedly distinguishes gasket-mount, top-mount, and tray-mount boards to explain where tape-mod works and doesn't, but never links to the guide that covers these distinctions. mounting-styles-compared (commit 09559c4) already cites tape-mod at its tray-mount section ("the PE foam and [tape mod](/article/tape-mod) stack"). Fully-polycarbonate paragraph at line 77 of tape-mod shows the correct closing pattern: "For a breakdown of how aluminum, polycarbonate, brass, and ABS each shape the acoustic baseline differently, see [the case materials guide](/article/case-materials-compared)."
+- evidence: apps/web/src/content/articles/tape-mod.mdx line 73 — "Gasket-mount boards" paragraph has no link to mounting-styles-compared; grep for "mounting-styles" in tape-mod.mdx returns 0 matches; mounting-styles-compared.mdx line 111 links to tape-mod.
+- suggested fix: append closing sentence to the gasket-mount paragraph → "For a breakdown of how gasket, top-mount, and tray-mount designs differ and the acoustic isolation each provides by default, see [mounting styles compared](/article/mounting-styles-compared)."
+- issue: #314
+- addressed in: f3c3464, closes #314
