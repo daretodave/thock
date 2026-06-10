@@ -3129,3 +3129,15 @@ passes accumulate signals.)
 - suggested fix: append closing sentence → "For a first-hand account of how the default build performs in practice, see [building the Mode Sonnet with Gateron Oil Kings](/article/building-mode-sonnet-with-oil-kings)."
 - issue: [mirror-failed: 2026-06-09T00:00:00Z]
 - addressed in: 016709dbe657247c6254694710fca1451212b379
+
+### [HOT PURSUIT] [content-gap] [7] ideas pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 7 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: ideas
+- window-count: 1
+- window-start: 2026-05-11
+- score: 7
+- next: /ship-content → ideas pillar article
+> Filed 2026-06-10 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
