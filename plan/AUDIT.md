@@ -3200,3 +3200,15 @@ passes accumulate signals.)
 - suggested fix: append closing sentence → "Builders ready to start and wanting the step-by-step application reference — which lubes go where, in what order, and on which surfaces to skip — can find it in [lubing switches: what to use, how much, and what to skip](/article/lubing-switches-guide)."
 - issue: [mirror-failed: 2026-06-10T00:00:00Z]
 - addressed in: 69aab54
+
+### [x] [content] [6.3] switch-housings-compared — lubing-switches-guide cross-link missing at technique handoff
+- category: content
+- filed: 2026-06-10 by cloud /iterate audit
+- impact: 7 (switch-housings-compared "How housings interact with lube" section closes with a sentence explicitly promising "the full technique — which products to use for each housing type, how to apply them, and how much is too much" and links to lubing-101, the conceptual overview, instead of lubing-switches-guide, the dedicated practical reference whose lede is "the practical reference" covering exactly those four questions)
+- ease: 9 (single sentence and link change — same pattern as all prior cross-link fixes)
+- score: 6.3 (impact × ease / 10)
+- observation: switch-housings-compared line 97 reads "For the full technique — which products to use for each housing type, how to apply them, and how much is too much — [Lubing 101](/article/lubing-101) covers the method end to end." lubing-101 is the conceptual companion covering why to lube and what lubing does; lubing-switches-guide is the practical step-by-step reference covering four lube types, four application points, per-housing notes (PC over-lube, POM skipping rails), and the irreversible-mistake calibration. The sentence promises the practical reference and delivers the conceptual one.
+- evidence: apps/web/src/content/articles/switch-housings-compared.mdx:97 — link is [Lubing 101](/article/lubing-101); grep for "lubing-switches" in the file returns 0 matches; lubing-switches-guide lede describes it as "the practical reference."
+- suggested fix: replace "[Lubing 101](/article/lubing-101) covers the method end to end" with "[lubing switches](/article/lubing-switches-guide) is the practical reference"
+- issue: [mirror-failed: 2026-06-10T12:00:00Z]
+- addressed in: cc303bb
