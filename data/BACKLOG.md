@@ -5,8 +5,8 @@
 
 ## Pending
 
-- [ ] add vendor keychron (prerequisite for keychron-q1-he board record — mentioned in 5+ articles)
-- [ ] add board keychron-q1-he (requires keychron vendor; Q1 HE 8K Marble named in keychron-q-ultra-zmk + hall-effect-mainstream)
+- [x] add vendor keychron (prerequisite for keychron-q1-he board record — mentioned in 5+ articles)
+- [x] add board keychron-q1-he (requires keychron vendor; Q1 HE 8K Marble named in keychron-q-ultra-zmk + hall-effect-mainstream)
 
 ## Done
 
