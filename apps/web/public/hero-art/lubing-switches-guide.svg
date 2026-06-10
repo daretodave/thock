@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — mechanical switch cross-section with lube callout points</title>
+
+  <!-- Coral splash wash behind the switch body — low opacity halo -->
+  <ellipse cx="600" cy="390" rx="260" ry="220" fill="oklch(0.65 0.18 28 / 0.10)" stroke="none"/>
+
+  <!-- ================================================================
+       Canvas: 1200 × 750   Stroke: 2px warm grey   Background: transparent
+       Splash: coral  oklch(0.65 0.18 28)
+       Switch drawn centered, x=600, switch occupies y=90–660
+       Layout (exploded cross-section, top-to-bottom):
+         Top housing    y  90 – 245
+         Stem           y 150 – 430
+         Spring         y 345 – 570
+         Bottom housing y 475 – 650
+       ================================================================ -->
+
+  <!-- Faint explode guide lines -->
+  <g stroke-dasharray="4 8" stroke-opacity="0.18">
+    <line x1="280" y1="260" x2="920" y2="260"/>
+    <line x1="280" y1="625" x2="920" y2="625"/>
+  </g>
+
+  <!-- ── TOP HOUSING ──────────────────────────────────────────────── -->
+  <g stroke-opacity="0.70">
+    <!-- Outer top-housing profile -->
+    <path d="M 445 245 L 445 150 Q 445 95 510 95 L 690 95 Q 755 95 755 150 L 755 245 Z"/>
+    <!-- Stem slot on top face -->
+    <path d="M 560 95 L 640 95 L 640 115 L 560 115 Z" stroke-opacity="0.55"/>
+    <!-- LED window notch left side -->
+    <path d="M 445 180 L 425 180 L 425 205 L 445 205" stroke-opacity="0.55"/>
+    <!-- Inner cavity walls (cut-away hint) -->
+    <line x1="482" y1="115" x2="482" y2="245" stroke-opacity="0.30"/>
+    <line x1="718" y1="115" x2="718" y2="245" stroke-opacity="0.30"/>
+    <!-- Retaining clip ears -->
+    <path d="M 445 212 L 430 212 L 430 232 L 445 232" stroke-opacity="0.55"/>
+    <path d="M 755 212 L 770 212 L 770 232 L 755 232" stroke-opacity="0.55"/>
+    <!-- Bottom rim -->
+    <line x1="445" y1="245" x2="755" y2="245" stroke-opacity="0.65"/>
+  </g>
+
+  <!-- ── STEM ──────────────────────────────────────────────────────── -->
+  <g stroke-opacity="0.60">
+    <!-- Cruciform head (visible at top) -->
+    <path d="M 578 130 L 622 130 L 622 148 L 634 148 L 634 162 L 566 162 L 566 148 L 578 148 Z"/>
+    <!-- Stem body -->
+    <rect x="568" y="162" width="64" height="118" rx="2"/>
+    <!-- Centre detail line -->
+    <line x1="600" y1="170" x2="600" y2="272" stroke-opacity="0.35"/>
+    <!-- Stem rails (horizontal nubs) -->
+    <line x1="568" y1="200" x2="550" y2="200" stroke-opacity="0.50"/>
+    <line x1="568" y1="234" x2="550" y2="234" stroke-opacity="0.50"/>
+    <line x1="632" y1="200" x2="650" y2="200" stroke-opacity="0.50"/>
+    <line x1="632" y1="234" x2="650" y2="234" stroke-opacity="0.50"/>
+    <!-- Stem pole descending through spring (dashed = hidden) -->
+    <line x1="600" y1="280" x2="600" y2="480" stroke-dasharray="3 6" stroke-opacity="0.30"/>
+    <!-- Stem base / bottom of stem body, leaf spring contact zone -->
+    <path d="M 560 280 L 640 280 L 644 310 L 556 310 Z" stroke-opacity="0.55"/>
+    <!-- Leaf spring (thin horizontal spring inside housing) -->
+    <path d="M 480 295 Q 530 310 560 295" stroke-opacity="0.55" stroke-width="1.5"/>
+    <path d="M 720 295 Q 670 310 640 295" stroke-opacity="0.55" stroke-width="1.5"/>
+  </g>
+
+  <!-- ── SPRING ───────────────────────────────────────────────────── -->
+  <g stroke-opacity="0.55">
+    <!-- 9 coils, overlapping ellipses centered at x=600 -->
+    <ellipse cx="600" cy="355" rx="46" ry="7.5"/>
+    <ellipse cx="600" cy="368" rx="46" ry="7.5"/>
+    <ellipse cx="600" cy="381" rx="46" ry="7.5"/>
+    <ellipse cx="600" cy="394" rx="46" ry="7.5"/>
+    <ellipse cx="600" cy="407" rx="46" ry="7.5"/>
+    <ellipse cx="600" cy="420" rx="46" ry="7.5"/>
+    <ellipse cx="600" cy="433" rx="46" ry="7.5"/>
+    <ellipse cx="600" cy="446" rx="46" ry="7.5"/>
+    <ellipse cx="600" cy="459" rx="46" ry="7.5"/>
+    <!-- Spring axis (faint dashed) -->
+    <line x1="600" y1="348" x2="600" y2="466" stroke-opacity="0.25" stroke-dasharray="2 5"/>
+  </g>
+
+  <!-- ── BOTTOM HOUSING ────────────────────────────────────────────── -->
+  <g stroke-opacity="0.70">
+    <!-- Outer bottom housing -->
+    <path d="M 445 485 L 755 485 L 740 640 L 460 640 Z"/>
+    <!-- Slider rails (vertical grooves) -->
+    <line x1="490" y1="485" x2="490" y2="555" stroke-opacity="0.40"/>
+    <line x1="710" y1="485" x2="710" y2="555" stroke-opacity="0.40"/>
+    <!-- Inner well / stem cavity -->
+    <path d="M 545 485 L 655 485 L 650 545 L 550 545 Z" stroke-opacity="0.45"/>
+    <!-- Spring seat / cup at base -->
+    <ellipse cx="600" cy="590" rx="52" ry="16" stroke-opacity="0.55"/>
+    <!-- Pin contacts -->
+    <circle cx="490" cy="612" r="5" stroke-opacity="0.65"/>
+    <circle cx="710" cy="612" r="5" stroke-opacity="0.65"/>
+    <!-- Center post -->
+    <circle cx="600" cy="573" r="7" stroke-opacity="0.45"/>
+    <!-- Side rail nubs -->
+    <line x1="520" y1="485" x2="520" y2="500" stroke-opacity="0.40"/>
+    <line x1="680" y1="485" x2="680" y2="500" stroke-opacity="0.40"/>
+    <!-- Top rim -->
+    <line x1="445" y1="485" x2="755" y2="485" stroke-opacity="0.60"/>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════════
+       CORAL CALLOUT POINTS — 4 lube zones
+       ═══════════════════════════════════════════════════════════════ -->
+
+  <!-- Callout 1: Stem leg outer face (leaf spring contact) — left side -->
+  <!-- Arrow from dot at stem-leg/leaf contact, pointing left then up to label zone -->
+  <circle cx="550" cy="297" r="7" fill="oklch(0.65 0.18 28 / 0.25)" stroke="oklch(0.65 0.18 28)" stroke-width="2"/>
+  <circle cx="550" cy="297" r="3" fill="oklch(0.65 0.18 28)" stroke="none"/>
+  <path d="M 543 297 L 390 255" stroke="oklch(0.65 0.18 28)" stroke-width="1.5" stroke-dasharray="none" stroke-linecap="round"/>
+  <circle cx="390" cy="255" r="3" fill="oklch(0.65 0.18 28)" stroke="none"/>
+  <text x="380" y="242" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.65 0.18 28)" stroke="none" text-anchor="middle">stem legs</text>
+  <text x="380" y="225" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.65 0.18 28 / 0.75)" stroke="none" text-anchor="middle">outer face</text>
+
+  <!-- Callout 2: Bottom housing slider rails — right side -->
+  <circle cx="710" cy="520" r="7" fill="oklch(0.65 0.18 28 / 0.25)" stroke="oklch(0.65 0.18 28)" stroke-width="2"/>
+  <circle cx="710" cy="520" r="3" fill="oklch(0.65 0.18 28)" stroke="none"/>
+  <path d="M 717 520 L 870 500" stroke="oklch(0.65 0.18 28)" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="870" cy="500" r="3" fill="oklch(0.65 0.18 28)" stroke="none"/>
+  <text x="882" y="495" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.65 0.18 28)" stroke="none">housing rails</text>
+  <text x="882" y="512" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.65 0.18 28 / 0.75)" stroke="none">slider grooves</text>
+
+  <!-- Callout 3: Spring wire coils — right side -->
+  <circle cx="646" cy="407" r="7" fill="oklch(0.65 0.18 28 / 0.25)" stroke="oklch(0.65 0.18 28)" stroke-width="2"/>
+  <circle cx="646" cy="407" r="3" fill="oklch(0.65 0.18 28)" stroke="none"/>
+  <path d="M 653 407 L 810 375" stroke="oklch(0.65 0.18 28)" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="810" cy="375" r="3" fill="oklch(0.65 0.18 28)" stroke="none"/>
+  <text x="822" y="370" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.65 0.18 28)" stroke="none">spring wire</text>
+  <text x="822" y="387" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.65 0.18 28 / 0.75)" stroke="none">coil body</text>
+
+  <!-- Callout 4: Spring seat in bottom housing — left side -->
+  <circle cx="554" cy="590" r="7" fill="oklch(0.65 0.18 28 / 0.25)" stroke="oklch(0.65 0.18 28)" stroke-width="2"/>
+  <circle cx="554" cy="590" r="3" fill="oklch(0.65 0.18 28)" stroke="none"/>
+  <path d="M 547 590 L 370 622" stroke="oklch(0.65 0.18 28)" stroke-width="1.5" stroke-linecap="round"/>
+  <circle cx="370" cy="622" r="3" fill="oklch(0.65 0.18 28)" stroke="none"/>
+  <text x="360" y="618" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.65 0.18 28)" stroke="none" text-anchor="end">spring seat</text>
+  <text x="360" y="635" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.65 0.18 28 / 0.75)" stroke="none" text-anchor="end">coil rest cup</text>
+
+  <!-- Bronze theme dot — upper-right ornamental anchor -->
+  <circle cx="1158" cy="42" r="4" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+
+  <!-- Subtle measurement tick marks -->
+  <g stroke-opacity="0.28">
+    <line x1="320" y1="95" x2="332" y2="95"/>
+    <line x1="320" y1="245" x2="332" y2="245"/>
+    <line x1="320" y1="355" x2="332" y2="355"/>
+    <line x1="320" y1="485" x2="332" y2="485"/>
+    <line x1="320" y1="640" x2="332" y2="640"/>
+  </g>
+</svg>

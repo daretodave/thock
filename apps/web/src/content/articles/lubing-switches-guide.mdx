@@ -1,0 +1,109 @@
+---
+slug: lubing-switches-guide
+title: "Lubing switches: what to use, how much, and what to skip"
+lede: "Four lubes, four application points, and one rule that prevents most mistakes: over-lubing is irreversible, under-lubing is not. Here is the practical reference."
+author: thock
+pillar: ideas
+tags: [lubing, switches, modding, linear, tactile]
+publishedAt: '2026-06-05T00:00:00.000Z'
+updatedAt: '2026-06-05T00:00:00.000Z'
+heroImage: /hero-art/lubing-switches-guide.svg
+heroImageAlt: "A switch housing split open in cross-section, with coral accent lines marking the four application points where lube changes a switch's character."
+featured: false
+popularityScore: 0
+readTimeMinutes: 6
+mentionedParts:
+  - id: gateron-oil-king
+    kind: switch
+    slug: gateron-oil-king
+  - id: gazzew-boba-u4
+    kind: switch
+    slug: gazzew-boba-u4
+  - id: drop-holy-panda-x
+    kind: switch
+    slug: drop-holy-panda-x
+  - id: gateron-ink-v2-yellow
+    kind: switch
+    slug: gateron-ink-v2-yellow
+---
+
+The board cost $200. The switches are stock. A vendor order arrives with a 10g pot of <Mono>Krytox 205g0</Mono>, a brush, and an instruction set assembled from four contradictory forum threads. One says to coat everything. One says to never touch the legs on a tactile. One says factory lube is fine and hand-lubing makes things worse. One links a YouTube video that takes forty minutes to explain twelve seconds of work.
+
+The forum anxiety is real but the underlying decision is simple. Lube changes three things: it quiets plastic-on-plastic friction, it dampens spring resonance, and on tactiles, it can eliminate the very feature that made the switch worth buying. The skills that matter are knowing which lube goes where, understanding why tactile legs are different from everything else, and recognizing when the pot should stay closed.
+
+The most important calibration before starting: **over-lubing is the only irreversible mistake.** Too little lube leaves a switch underperforming; it can be corrected at any time. Too much lube on tactile legs destroys the bump; the only fix is a solvent wash and a full restart. Err light. Always.
+
+## The four you actually need
+
+The switch lube market has dozens of products, but builders converge on four workhorses for a reason. Each has a specific role.
+
+**<Mono>Krytox 205g0</Mono>** is the standard for linear switches. It is a thick, high-viscosity grease that coats stem rails and housing rails with enough body to stay in place across months of use. The viscosity that makes it ideal for linears is the same property that makes it wrong for tactiles — a full 205g0 application on a tactile stem leg flattens the bump into something that feels like a slightly sticky linear. On linears: stems, housing rails, and nothing else.
+
+**<Mono>Tribosys 3203</Mono>** is the conservative pick for light tactiles. It is meaningfully thinner than 205g0 — closer in behavior to a light oil-grease hybrid — and that lower viscosity preserves more of the tactile character when applied carefully to the stem legs. The tradeoff is that it provides less noise reduction than 205g0 and needs to be applied more precisely. If the goal is a tactile that feels smoother without losing its bump, 3203 on the legs at a barely-there application is the right starting point.
+
+**<Mono>Tribosys 3204</Mono>** sits between 3203 and 205g0. It is thicker than 3203 but more forgiving on light tactiles than 205g0. Builders who want slightly more coverage than 3203 gives without committing to the full 205g0 weight often land on 3204 as a middle option. It also works well on linears where 205g0 feels like it adds too much damping — polycarbonate-housed switches in particular can become over-dampened under 205g0, and 3204 gives a lighter result.
+
+**Dielectric grease** belongs in this list because it shows up in the same vendor orders and causes confusion. It is not a switch lube. Dielectric grease is for stabilizer wires — the thick coat on the wire ends that eliminates rattle and reduces the metallic ping from the wire moving in the stabilizer housing. Applied to a switch stem or housing rail, it is far too thick and will mute the switch almost completely. Keep it in its own container and use it only at the stabilizer wire ends.
+
+<InlineViz
+  src="/article-viz/lubing-switches-guide/application-map.svg"
+  alt="Switch anatomy cross-section with four coral callout lines pointing to labeled lube application zones: stem legs annotated 205g0 or 3203 light pass, housing rails annotated 205g0 light-medium, spring wire annotated GPL105 or 205g0 bag-lube or paint, and spring seat annotated optional thin layer."
+  caption="Four application zones, each with its own product and weight. The stem legs are the one zone where the answer differs between linears and tactiles."
+  accent="coral"
+/>
+
+The application points across all four lubes map to four locations in the switch: the outside faces of the stem legs, the bottom housing rails where the stem skirt rides, the spring wire itself, and the spring's base contact. <Mono>GPL 105</Mono> is the standard spring lube — thin enough to apply via bag-shake method, effective at eliminating spring ping, and light enough that it does not migrate to the electrical contacts. The contact leaves inside the lower housing are the one surface that must never receive any lube from any of the four products listed here.
+
+## What happens to tactiles
+
+A tactile switch's bump is a physical interference. The two legs on the bottom of the stem catch on the leaf spring as the stem travels down; that catch creates the tactile event. The height, sharpness, and character of the bump all come from the geometry of that interaction — how abruptly the legs ramp over the leaf, how quickly the leaf snaps through.
+
+Lube on the legs reduces the coefficient of friction at that interference point. A thin coat of 3203 softens the snap slightly, rounding the bump's leading edge without erasing it. A moderate coat of 3203 makes the bump feel noticeably lighter. <Mono>Krytox 205g0</Mono> on the legs of most tactiles eliminates the bump almost entirely — the legs slide over the leaf without the characteristic catch, and what the finger registers is a slightly springy linear.
+
+The rule that holds across tactile types: **the stem legs get zero to barely-there application, and everything else follows linear protocol.** The housing rails, the spring, the non-leg surfaces of the stem — all of those surfaces are the same as a linear. The legs are the single exception, and the decision on the legs is essentially binary: skip them entirely, or apply the thinnest possible coat of 3203 and test before proceeding.
+
+<InlineViz
+  src="/article-viz/lubing-switches-guide/tactile-lube-matrix.svg"
+  alt="Two-by-two matrix with application location on the horizontal axis (stem legs left, housing rails and spring right) and lube weight on the vertical axis (heavy 205g0 top, light 3203 bottom). Top-left quadrant labeled AVOID in coral: heavy lube on stem legs destroys bump, switch feels linear. Top-right quadrant labeled CAUTION in amber: heavy lube on rails is acceptable, smooth rails. Bottom-left quadrant labeled MINIMAL IMPACT: light lube on stem legs gives minimal bump reduction, acceptable on strong tactiles like Boba U4 and Holy Panda. Bottom-right quadrant labeled RECOMMENDED in sage green: light lube on rails and spring is standard practice with no trade-offs."
+  caption="Location matters more than product choice. Heavy lube on the legs destroys the bump regardless of the switch."
+  accent="coral"
+/>
+
+The <PartReference id="gazzew-boba-u4" /> is the clearest illustration of this split. The bump on the Boba U4 is high on the stroke and pronounced enough that it survives a light 3203 application on the legs with most of its character intact. The housing rails and spring benefit from the same treatment as any linear. Builders who have tried 205g0 on U4 legs universally describe the result as a ruined switch — the bump that made it worth buying simply disappears.
+
+<PartReference id="drop-holy-panda-x" /> is the opposite end of the risk spectrum. The Holy Panda bump is sharp and distinct, and it is that sharpness that makes the switch polarizing in both directions. Any lube on the legs at all pushes the character toward a generic heavy tactile. Builders who buy Holy Pandas for the bump typically skip the legs entirely and lube only the housing rails and spring.
+
+## The factory-lubed problem
+
+A significant share of popular switches arrive factory-lubed. <PartReference id="gateron-oil-king" /> ships with a POM stem in a nylon/PC housing combination and a machine-applied lube job that produces a notably smooth, deep result out of the bag. The coverage is sometimes uneven compared to a careful hand application, but the Oil King's reputation for being excellent stock is well-earned.
+
+The <PartReference id="gateron-ink-v2-yellow" /> is a case where factory is genuinely better than hand-rework for most builders. The polycarbonate housing amplifies feel inconsistencies; a clumsy 205g0 application over factory lube introduces irregularities the PC housing makes immediately obvious.
+
+Three paths exist with a factory-lubed switch. **Lube over** the existing application — fine, expect a slightly different feel than a clean job. **Wash and re-lube** — acetone bath strips everything cleanly; the result is the purest possible hand application at the cost of the factory character. **Leave it** — for switches like the Oil King, this is a legitimate choice: the factory job is good enough that the marginal hand-lube improvement may not justify the afternoon.
+
+## When to skip it entirely
+
+Clicky switches are the clearest case. The click mechanism depends on the tactile-plus-audible event from a click jacket or click bar; stem and housing lube damps exactly the mechanism that produces the click. Some builders apply 205g0 to the spring only to kill ping without touching anything else — that is the right call on a clicky. The stem and housing rails should stay dry.
+
+Silent switches present a milder argument for skipping. The dampening pads already address most of what lube would address acoustically; lubing is not harmful but the delta is small, and pads interact unpredictably with some viscosities.
+
+The highest-skill case is recognizing premium factory-lubed switches where hand-lubing makes things worse. The <Mono>Gateron Ink V2 Yellow</Mono> is the consistent example: the polycarbonate housing makes imprecision audible, and builders who apply 205g0 over factory lube without washing first frequently report a result that is less consistent than stock. When the factory job is genuinely good, the default is to leave it.
+
+## Application mechanics
+
+Brush size controls outcome more than most builders expect. A brush with too much lube on it at first contact will deposit a visible bead — more than ten switches' worth of coverage in a single stroke. Load the brush lightly, wipe the excess on the inside of the pot lid, and start with less than feels necessary. The application should look slightly wet, not coated.
+
+Direction matters on the housing rails. The correct stroke is linear — one pass down the rail in the direction of stem travel, then lift. Circular strokes or back-and-forth passes deposit uneven coverage and create ridges that the stem will feel on its way through. Two passes on the stem legs (if lubing tactile legs at all); one pass on each housing rail; one pass on the bottom of the stem skirt that contacts the housing.
+
+Spring lubing has two methods. Bag-lube with <Mono>GPL 105</Mono> is the standard: three drops into a small bag, springs in, seal and shake for ten seconds. The coverage is light and consistent across every spring in the bag. The alternative is a manual application of 205g0 on each spring coil — slower, more coverage, and appropriate for builds where the builder specifically wants the spring's contribution to feel dampened rather than just quieted. Most linears are well-served by bag-lube; springs on high-end builds where feel precision matters may warrant the manual approach.
+
+<InlineViz
+  src="/article-viz/lubing-switches-guide/application-technique.svg"
+  alt="Two side-by-side panels divided by a vertical dashed line. Left panel labeled CORRECT with a coral checkmark badge: a brush making linear straight strokes along housing rail grooves with coral arrow showing one direction of travel and a lube film trail. Right panel labeled INCORRECT with a grey X badge: circular and wavy stroke patterns on the same rail with pooling dots showing uneven coverage. Left panel caption reads consistent thin film; right panel caption reads inconsistent film depth."
+  caption="One linear pass per rail — lift the brush and return to start rather than back-stroking."
+  accent="coral"
+/>
+
+The endpoint of a correct lube job is a switch that sounds smoother and slightly deeper than it did stock, and still has the character it was bought for. A linear should feel round and quiet; it should not feel dead. A tactile should preserve its bump. If the bottom-out sounds flat and the upstroke feels like it is fighting resistance, the application was too heavy on one of the surfaces — usually the housing rails or the stem legs. Open the switch, wipe with a dry cotton swab, and start the application again lighter.
+
+The skill compound quickly with repetition. First-board lubers typically spend three to four hours on a sixty-five-switch layout; the same builder a year later is at ninety minutes with better results. The protocol does not change, only the calibration of what "slightly wet" looks like on a brush.

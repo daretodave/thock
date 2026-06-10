@@ -1,0 +1,36 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored svg",
+  "at": "2026-06-10T00:00:00.000Z",
+  "commit": "65f7a12d5ddd2b48184732231801d324d56ae541",
+  "kind": "inline-viz",
+  "slug": "lubing-switches-guide",
+  "type": "article-viz",
+  "viz_slug": "application-technique",
+  "description": "Two-panel side-by-side diagram contrasting correct linear brush strokes along housing rails (coral checkmark, even lube film) against incorrect circular or dabbing motions (grey X, pooling shown).",
+  "article_slug": "lubing-switches-guide",
+  "article_pillar": "switches",
+  "section_anchor": "Brush technique",
+  "source": "hand-authored SVG",
+  "tokens_snapshot": "f79eb6c04b4a9d2e0e3e083f8aeb6bc57586d849",
+  "splash_color": {
+    "name": "coral",
+    "oklch": "oklch(0.65 0.18 28)"
+  },
+  "canvas": "1200x750",
+  "stroke_weight": "2px",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "outputs": [
+    "apps/web/public/article-viz/lubing-switches-guide/application-technique.svg"
+  ],
+  "generated_at": "2026-06-10T00:00:00.000Z",
+  "data_sources": [
+    {
+      "type": "article",
+      "slug": "lubing-switches-guide",
+      "section": "Brush technique",
+      "claim": "Use linear strokes along the rail length for a consistent thin film; circular or dabbing motions cause pooling and uneven coverage"
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,36 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored svg",
+  "at": "2026-06-10T00:00:00.000Z",
+  "commit": "65f7a12d5ddd2b48184732231801d324d56ae541",
+  "kind": "inline-viz",
+  "slug": "lubing-switches-guide",
+  "type": "article-viz",
+  "viz_slug": "tactile-lube-matrix",
+  "description": "2x2 matrix grid mapping lube weight (heavy 205g0 vs light 3203) against application location (stem legs vs housing rails and spring), with color-coded quadrant outcomes for tactile switches.",
+  "article_slug": "lubing-switches-guide",
+  "article_pillar": "switches",
+  "section_anchor": "Tactile switches — what not to do",
+  "source": "hand-authored SVG",
+  "tokens_snapshot": "f79eb6c04b4a9d2e0e3e083f8aeb6bc57586d849",
+  "splash_color": {
+    "name": "coral",
+    "oklch": "oklch(0.65 0.18 28)"
+  },
+  "canvas": "1200x750",
+  "stroke_weight": "2px",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "outputs": [
+    "apps/web/public/article-viz/lubing-switches-guide/tactile-lube-matrix.svg"
+  ],
+  "generated_at": "2026-06-10T00:00:00.000Z",
+  "data_sources": [
+    {
+      "type": "article",
+      "slug": "lubing-switches-guide",
+      "section": "Tactile switches — what not to do",
+      "claim": "Lubing the stem legs with heavy lube like 205g0 destroys the tactile bump making the switch feel linear; light lube on rails and spring is standard practice with no trade-offs"
+    }
+  ],
+  "warnings": []
+}

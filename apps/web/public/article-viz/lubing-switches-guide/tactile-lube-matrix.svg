@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.52 0.008 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Tactile lube decision map — 2x2 matrix of lube weight vs application location</title>
+
+  <!-- Warm-paper background -->
+  <rect width="1200" height="750" fill="oklch(0.97 0.01 85)" stroke="none"/>
+
+  <!-- Faint inner frame border -->
+  <rect x="24" y="24" width="1152" height="702" stroke="oklch(0.85 0.008 85)" stroke-width="1" stroke-opacity="0.6"/>
+
+  <!-- Title -->
+  <text x="600" y="60" font-family="Newsreader, serif" font-size="30" font-style="italic" font-weight="500" fill="oklch(0.28 0.012 80)" stroke="none" text-anchor="middle">Tactile lube decision map</text>
+  <line x1="140" y1="72" x2="1060" y2="72" stroke="oklch(0.85 0.008 85)" stroke-width="1" stroke-opacity="0.7"/>
+
+  <!-- ================================================================
+       Matrix layout:
+         Left gutter (Y-axis label): x=46–120
+         Cell columns: left x=120–640, right x=640–1160
+         Cell rows: top y=100–420, bottom y=420–680
+         Axis labels: top x=380 / 900, left y=260 / 550
+       ================================================================ -->
+
+  <!-- ── AXIS LABELS ─────────────────────────────────────────────── -->
+
+  <!-- X-axis header -->
+  <text x="600" y="96" font-family="IBM Plex Sans, sans-serif" font-size="13" font-weight="600" fill="oklch(0.42 0.006 90)" stroke="none" text-anchor="middle" letter-spacing="0.08em">APPLICATION LOCATION</text>
+
+  <!-- X-axis column labels -->
+  <text x="380" y="118" font-family="IBM Plex Sans, sans-serif" font-size="15" font-weight="600" fill="oklch(0.35 0.01 90)" stroke="none" text-anchor="middle">Stem legs</text>
+  <text x="900" y="118" font-family="IBM Plex Sans, sans-serif" font-size="15" font-weight="600" fill="oklch(0.35 0.01 90)" stroke="none" text-anchor="middle">Housing rails + spring</text>
+
+  <!-- Y-axis label (rotated) -->
+  <text x="48" y="420" font-family="IBM Plex Sans, sans-serif" font-size="13" font-weight="600" fill="oklch(0.42 0.006 90)" stroke="none" text-anchor="middle" transform="rotate(-90, 48, 420)" letter-spacing="0.08em">LUBE WEIGHT</text>
+
+  <!-- Y-axis row labels -->
+  <text x="98" y="268" font-family="IBM Plex Sans, sans-serif" font-size="14" font-weight="600" fill="oklch(0.35 0.01 90)" stroke="none" text-anchor="middle" transform="rotate(-90, 98, 268)">Heavy (205g0)</text>
+  <text x="98" y="558" font-family="IBM Plex Sans, sans-serif" font-size="14" font-weight="600" fill="oklch(0.35 0.01 90)" stroke="none" text-anchor="middle" transform="rotate(-90, 98, 558)">Light (3203)</text>
+
+  <!-- ── GRID STRUCTURE ───────────────────────────────────────────── -->
+  <!-- Outer matrix border -->
+  <rect x="120" y="128" width="1040" height="558" stroke="oklch(0.72 0.008 85)" stroke-width="1.5"/>
+  <!-- Vertical divider -->
+  <line x1="640" y1="128" x2="640" y2="686" stroke="oklch(0.72 0.008 85)" stroke-width="1.5"/>
+  <!-- Horizontal divider -->
+  <line x1="120" y1="407" x2="1160" y2="407" stroke="oklch(0.72 0.008 85)" stroke-width="1.5"/>
+
+  <!-- ── CELL Q1: Top-left — Heavy lube / Stem legs — BAD ─────────── -->
+  <!-- Coral tint: "Destroys tactile bump" -->
+  <rect x="121" y="129" width="518" height="277" fill="oklch(0.65 0.18 28 / 0.12)" stroke="none"/>
+  <!-- Coral warning bar at top of cell -->
+  <rect x="121" y="129" width="518" height="5" fill="oklch(0.65 0.18 28 / 0.55)" stroke="none"/>
+  <!-- Cell icon — X mark in coral -->
+  <g stroke="oklch(0.62 0.13 25)" stroke-width="2.5" stroke-linecap="round">
+    <line x1="344" y1="185" x2="380" y2="221"/>
+    <line x1="380" y1="185" x2="344" y2="221"/>
+  </g>
+  <circle cx="362" cy="203" r="22" stroke="oklch(0.62 0.13 25)" stroke-width="1.5"/>
+  <!-- Cell text -->
+  <text x="362" y="264" font-family="Newsreader, serif" font-size="18" font-weight="500" fill="oklch(0.38 0.12 28)" stroke="none" text-anchor="middle">Destroys tactile bump.</text>
+  <text x="362" y="286" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.45 0.10 28)" stroke="none" text-anchor="middle">Switch feels linear.</text>
+  <!-- Diagonal "AVOID" stamp -->
+  <text x="218" y="360" font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" letter-spacing="0.14em" opacity="0.60">AVOID</text>
+  <rect x="178" y="347" width="80" height="18" rx="2" stroke="oklch(0.62 0.13 25)" stroke-width="1" fill="none" opacity="0.55"/>
+
+  <!-- ── CELL Q2: Top-right — Heavy lube / Rails + spring — CAUTION ─ -->
+  <!-- Coral-tinted cell — acceptable but not ideal -->
+  <rect x="641" y="129" width="518" height="277" fill="oklch(0.78 0.10 75 / 0.09)" stroke="none"/>
+  <!-- Amber top bar -->
+  <rect x="641" y="129" width="518" height="5" fill="oklch(0.78 0.10 75 / 0.45)" stroke="none"/>
+  <!-- Cell icon — tilde/wave = caution -->
+  <path d="M 852 192 Q 870 172 888 192 Q 906 212 924 192" stroke="oklch(0.60 0.10 60)" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Cell text -->
+  <text x="900" y="254" font-family="Newsreader, serif" font-size="18" font-weight="500" fill="oklch(0.35 0.08 60)" stroke="none" text-anchor="middle">Smooth rails.</text>
+  <text x="900" y="276" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.42 0.06 60)" stroke="none" text-anchor="middle">Acceptable on most tactiles.</text>
+  <!-- Label -->
+  <text x="758" y="380" font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.55 0.08 60)" stroke="none" text-anchor="middle" letter-spacing="0.14em" opacity="0.65">CAUTION</text>
+  <rect x="718" y="367" width="80" height="18" rx="2" stroke="oklch(0.55 0.08 60)" stroke-width="1" fill="none" opacity="0.55"/>
+
+  <!-- ── CELL Q3: Bottom-left — Light lube / Stem legs — MINIMAL ──── -->
+  <!-- Warm amber tint — minimal impact, acceptable on strong tactiles -->
+  <rect x="121" y="408" width="518" height="277" fill="oklch(0.78 0.10 80 / 0.10)" stroke="none"/>
+  <!-- Amber bottom-left bar -->
+  <rect x="121" y="408" width="518" height="5" fill="oklch(0.78 0.10 80 / 0.40)" stroke="none"/>
+  <!-- Cell icon — half-filled circle = partial impact -->
+  <circle cx="362" cy="490" r="22" stroke="oklch(0.58 0.09 75)" stroke-width="1.8"/>
+  <path d="M 362 468 A 22 22 0 0 1 362 512 Z" fill="oklch(0.58 0.09 75 / 0.40)" stroke="none"/>
+  <!-- Cell text -->
+  <text x="362" y="542" font-family="Newsreader, serif" font-size="18" font-weight="500" fill="oklch(0.38 0.08 75)" stroke="none" text-anchor="middle">Minimal bump reduction.</text>
+  <text x="362" y="564" font-family="IBM Plex Sans, sans-serif" font-size="13.5" fill="oklch(0.44 0.07 75)" stroke="none" text-anchor="middle">Acceptable on strong tactiles</text>
+  <text x="362" y="582" font-family="IBM Plex Sans, sans-serif" font-size="13.5" fill="oklch(0.44 0.07 75)" stroke="none" text-anchor="middle">(Boba U4, Holy Panda).</text>
+  <!-- Label -->
+  <text x="218" y="662" font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.52 0.08 75)" stroke="none" text-anchor="middle" letter-spacing="0.10em" opacity="0.65">MINIMAL IMPACT</text>
+  <rect x="148" y="649" width="140" height="18" rx="2" stroke="oklch(0.52 0.08 75)" stroke-width="1" fill="none" opacity="0.55"/>
+
+  <!-- ── CELL Q4: Bottom-right — Light lube / Rails + spring — GOOD ── -->
+  <!-- Muted sage tint — recommended, no trade-offs -->
+  <rect x="641" y="408" width="518" height="277" fill="oklch(0.76 0.085 155 / 0.10)" stroke="none"/>
+  <!-- Sage top bar -->
+  <rect x="641" y="408" width="518" height="5" fill="oklch(0.76 0.085 155 / 0.40)" stroke="none"/>
+  <!-- Cell icon — checkmark -->
+  <g stroke="oklch(0.52 0.085 155)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="876,478 892,498 918,468"/>
+  </g>
+  <circle cx="897" cy="485" r="22" stroke="oklch(0.52 0.085 155)" stroke-width="1.5"/>
+  <!-- Cell text -->
+  <text x="900" y="542" font-family="Newsreader, serif" font-size="18" font-weight="500" fill="oklch(0.32 0.07 155)" stroke="none" text-anchor="middle">Standard practice.</text>
+  <text x="900" y="564" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.40 0.06 155)" stroke="none" text-anchor="middle">No trade-offs.</text>
+  <!-- Label -->
+  <text x="768" y="662" font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.46 0.08 155)" stroke="none" text-anchor="middle" letter-spacing="0.10em" opacity="0.70">RECOMMENDED</text>
+  <rect x="698" y="649" width="140" height="18" rx="2" stroke="oklch(0.46 0.08 155)" stroke-width="1" fill="none" opacity="0.55"/>
+
+  <!-- ── AXIS TICK MARKS ───────────────────────────────────────────── -->
+  <line x1="120" y1="407" x2="108" y2="407" stroke="oklch(0.72 0.008 85)" stroke-width="1.5"/>
+  <line x1="640" y1="128" x2="640" y2="116" stroke="oklch(0.72 0.008 85)" stroke-width="1.5"/>
+  <line x1="1160" y1="128" x2="1160" y2="116" stroke="oklch(0.72 0.008 85)" stroke-width="1.5"/>
+  <line x1="120" y1="686" x2="108" y2="686" stroke="oklch(0.72 0.008 85)" stroke-width="1.5"/>
+
+  <!-- Bronze theme dot -->
+  <circle cx="1158" cy="42" r="4" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

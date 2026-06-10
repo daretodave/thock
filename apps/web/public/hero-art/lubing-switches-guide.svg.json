@@ -1,0 +1,31 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored svg",
+  "at": "2026-06-10T00:00:00.000Z",
+  "commit": "65f7a12d5ddd2b48184732231801d324d56ae541",
+  "kind": "hero-art",
+  "slug": "lubing-switches-guide",
+  "type": "hero",
+  "description": "Mechanical switch cross-section with four coral callout arrows marking the key lube application zones: stem leg outer face, bottom housing slider rails, spring wire coil body, and spring seat cup.",
+  "source": "hand-authored SVG — switch cross-section anatomy illustration",
+  "tokens_snapshot": "f79eb6c04b4a9d2e0e3e083f8aeb6bc57586d849",
+  "splash_color": "coral",
+  "splash_oklch": "oklch(0.65 0.18 28)",
+  "canvas": "1200x750",
+  "stroke_weight": "2px",
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans"],
+  "outputs": [
+    "apps/web/public/hero-art/lubing-switches-guide.svg"
+  ],
+  "generated_at": "2026-06-10T00:00:00.000Z",
+  "data_sources": [
+    {
+      "type": "article",
+      "slug": "lubing-switches-guide",
+      "section": "Where to apply lube",
+      "claim": "Apply lube to the outer face of the stem legs, the bottom housing slider rails, the spring wire, and the spring seat"
+    }
+  ],
+  "warnings": []
+}
