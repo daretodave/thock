@@ -3236,3 +3236,15 @@ passes accumulate signals.)
 - suggested fix: add closing sentence to lubing-switches-guide linking to lubing-101 as the decision-framework companion.
 - issue: #315
 - addressed in: 7e8a364, closes #315
+
+### [x] [content] [6.3] drop-holy-panda-x-deep-dive — lubing-switches-guide cross-link missing at factory-lube section
+- category: content
+- filed: 2026-06-10 by cloud /iterate audit
+- impact: 7 (drop-holy-panda-x-deep-dive's "factory lube" section explicitly contrasts the factory-lubed HPX with the hand-lubed Boba U4T — "ships dry and is expected to be hand-lubed, which is part of why the U4T discourse always includes the 'after lube' asterisk" — but provides no link to lubing-switches-guide; lubing-switches-guide already references the Drop Holy Panda X directly at line 74 with a PartReference covering the skip-the-legs asymmetric technique; the link back from the HPX article to the lube reference is missing)
+- ease: 9 (single closing sentence addition at the end of the "factory lube" paragraph — same pattern as all prior cross-link fixes)
+- score: 6.3 (impact × ease / 10)
+- observation: drop-holy-panda-x-deep-dive has an entire "The factory lube — the engineering decision" section covering the asymmetric-lube approach (light on stem legs, heavier on rails) and explicitly discusses the Boba U4T being "expected to be hand-lubed." The article provides no path from this discussion to lubing-switches-guide, which covers exactly that territory: which switches to skip the legs on, how much is too much, and the per-housing notes. lubing-switches-guide already references the HPX via PartReference at line 74.
+- evidence: apps/web/src/content/articles/drop-holy-panda-x-deep-dive.mdx:92 — "The HPX ships with the asterisk already paid down." — no link to /article/lubing-switches-guide; grep for "lubing-switches" in the file returns 0 matches; lubing-switches-guide.mdx:74 references drop-holy-panda-x with PartReference and explains the skip-the-legs technique.
+- suggested fix: append closing sentence to the factory-lube section: "For builders working with switches that ship dry — or wanting to understand what the asymmetric-lube standard looks like in practice — [lubing switches](/article/lubing-switches-guide) is the step-by-step reference."
+- issue: #316
+- addressed in: 087bef0, closes #316
