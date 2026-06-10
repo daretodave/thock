@@ -72,7 +72,7 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
-### [ ] [content] [6.3] hall-effect-mainstream — optical-switches-explained cross-link missing at HE/optical callout
+### [x] [content] [6.3] hall-effect-mainstream — optical-switches-explained cross-link missing at HE/optical callout
 - category: content
 - filed: 2026-06-10 by cloud /iterate audit
 - impact: 7 (hall-effect-mainstream is a Trends pillar article; the Callout "HE and optical are not the same thing" explains optical switches without routing the reader to the companion deep-dive; optical-switches-explained was published 2026-06-07 after the callout was written; the bidirectional cross-link is missing — readers wanting the full optical architecture have no path from this callout)
@@ -82,6 +82,7 @@
 - evidence: apps/web/src/content/articles/hall-effect-mainstream.mdx:38 — "Both Hall-effect and optical switches are non-mechanical actuation" — "optical switches" unlinked; grep for "optical-switches-explained" returns 0 matches in the file.
 - suggested fix: wrap "optical switches" → [optical switches](/article/optical-switches-explained) in the Callout body
 - issue: [mirror-failed: 2026-06-10T00:00:00Z]
+- addressed in: 4cce4ff
 
 ### [x] [content] [6.3] pe-foam-mod — lubing-101 cross-link missing at switch lube mention in verdict
 - category: content
