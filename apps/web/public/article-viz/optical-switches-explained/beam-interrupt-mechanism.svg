@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" preserveAspectRatio="xMidYMid meet" fill="none" stroke="#3a3530" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <title>Beam-interrupt mechanism — at rest vs actuated side-by-side</title>
+
+  <!-- Warm-paper background -->
+  <rect width="900" height="400" fill="#faf8f5" stroke="none"/>
+
+  <!-- Faint center divider -->
+  <line x1="450" y1="30" x2="450" y2="370" stroke-dasharray="3 7" stroke-opacity="0.2"/>
+
+  <!-- ════════════════════════════════════════════════════════════════════════
+       LEFT PANEL — "At rest" (beam passes through, signal HIGH)
+       Panel x 0–450, housing center cx=225, beam axis y=200.
+       ════════════════════════════════════════════════════════════════════════ -->
+
+  <!-- LEFT: housing walls -->
+  <rect x="60" y="100" width="24" height="200" rx="2"/>
+  <rect x="390" y="100" width="24" height="200" rx="2"/>
+  <!-- Housing top and bottom caps -->
+  <rect x="84" y="100" width="230" height="20" rx="2" stroke-opacity="0.55"/>
+  <rect x="84" y="280" width="230" height="20" rx="2" stroke-opacity="0.55"/>
+
+  <!-- LEFT: optical access ports at beam height y 192–208 -->
+  <rect x="60" y="192" width="24" height="16" rx="1" stroke-opacity="0.7"/>
+  <rect x="390" y="192" width="24" height="16" rx="1" stroke-opacity="0.7"/>
+
+  <!-- LEFT: LED component -->
+  <rect x="22" y="188" width="38" height="24" rx="2"/>
+  <path d="M 60 192 Q 67 200 60 208" stroke-opacity="0.65"/>
+  <line x1="22" y1="194" x2="8" y2="194" stroke-opacity="0.5"/>
+  <line x1="22" y1="206" x2="8" y2="206" stroke-opacity="0.5"/>
+
+  <!-- LEFT: phototransistor component -->
+  <rect x="414" y="188" width="38" height="24" rx="2"/>
+  <path d="M 414 192 Q 407 200 414 208" stroke-opacity="0.65"/>
+  <line x1="452" y1="194" x2="465" y2="194" stroke-opacity="0.5"/>
+  <line x1="452" y1="206" x2="465" y2="206" stroke-opacity="0.5"/>
+
+  <!-- LEFT: Stem at rest — window aligned to beam axis y=200 -->
+  <!-- Body above window -->
+  <rect x="160" y="120" width="80" height="70" rx="1"/>
+  <!-- Slot top and bottom edges -->
+  <line x1="160" y1="190" x2="240" y2="190"/>
+  <line x1="160" y1="210" x2="240" y2="210"/>
+  <!-- Faint slot side walls -->
+  <line x1="160" y1="190" x2="160" y2="210" stroke-opacity="0.28"/>
+  <line x1="240" y1="190" x2="240" y2="210" stroke-opacity="0.28"/>
+  <!-- Body below window -->
+  <rect x="160" y="210" width="80" height="70" rx="1"/>
+  <!-- Cruciform head -->
+  <path d="M 178 120 L 222 120 L 224 112 L 176 112 Z" stroke-opacity="0.55"/>
+  <!-- Spring tabs -->
+  <line x1="192" y1="280" x2="190" y2="294" stroke-opacity="0.45"/>
+  <line x1="208" y1="280" x2="206" y2="294" stroke-opacity="0.45"/>
+
+  <!-- LEFT: beam path — terracotta, passes cleanly through the open window -->
+  <line x1="60" y1="200" x2="160" y2="200"
+        stroke="#c2694b" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <line x1="160" y1="200" x2="240" y2="200"
+        stroke="#c2694b" stroke-width="2" stroke-dasharray="3 3" stroke-opacity="0.95"/>
+  <line x1="240" y1="200" x2="414" y2="200"
+        stroke="#c2694b" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <!-- Emission chevron -->
+  <path d="M 60 195 L 70 200 L 60 205"
+        stroke="#c2694b" stroke-width="1.5" fill="none" stroke-opacity="0.8"/>
+  <!-- Reception dot at PT -->
+  <circle cx="414" cy="200" r="3.5" fill="#c2694b" stroke="none" fill-opacity="0.8"/>
+
+  <!-- LEFT: panel label -->
+  <text x="225" y="56"
+        font-family="'JetBrains Mono','IBM Plex Mono',monospace"
+        font-size="12" fill="#3a3530" text-anchor="middle" dominant-baseline="middle"
+        letter-spacing="0.04em">at rest</text>
+
+  <!-- LEFT: state label -->
+  <text x="225" y="350"
+        font-family="'JetBrains Mono','IBM Plex Mono',monospace"
+        font-size="12" fill="#c2694b" text-anchor="middle" dominant-baseline="middle"
+        letter-spacing="0.03em">signal HIGH</text>
+  <line x1="225" y1="340" x2="225" y2="324" stroke="#c2694b" stroke-opacity="0.35" stroke-width="1"/>
+  <path d="M 221 327 L 225 319 L 229 327" stroke="#c2694b" stroke-width="1" fill="none" stroke-opacity="0.45"/>
+
+  <!-- LEFT: component micro-labels -->
+  <text x="41" y="180"
+        font-family="'JetBrains Mono','IBM Plex Mono',monospace"
+        font-size="10" fill="#3a3530" text-anchor="middle"
+        fill-opacity="0.55" letter-spacing="0.02em">LED</text>
+  <text x="433" y="180"
+        font-family="'JetBrains Mono','IBM Plex Mono',monospace"
+        font-size="10" fill="#3a3530" text-anchor="middle"
+        fill-opacity="0.55" letter-spacing="0.02em">PT</text>
+
+  <!-- ════════════════════════════════════════════════════════════════════════
+       RIGHT PANEL — "Actuated" (beam blocked, signal LOW)
+       Panel x 450–900, housing center cx=675, beam axis y=200.
+       ════════════════════════════════════════════════════════════════════════ -->
+
+  <!-- RIGHT: housing walls -->
+  <rect x="510" y="100" width="24" height="200" rx="2"/>
+  <rect x="840" y="100" width="24" height="200" rx="2"/>
+  <rect x="534" y="100" width="230" height="20" rx="2" stroke-opacity="0.55"/>
+  <rect x="534" y="280" width="230" height="20" rx="2" stroke-opacity="0.55"/>
+
+  <!-- RIGHT: optical access ports -->
+  <rect x="510" y="192" width="24" height="16" rx="1" stroke-opacity="0.7"/>
+  <rect x="840" y="192" width="24" height="16" rx="1" stroke-opacity="0.7"/>
+
+  <!-- RIGHT: LED component (still active) -->
+  <rect x="472" y="188" width="38" height="24" rx="2"/>
+  <path d="M 510 192 Q 517 200 510 208" stroke-opacity="0.65"/>
+  <line x1="472" y1="194" x2="458" y2="194" stroke-opacity="0.5"/>
+  <line x1="472" y1="206" x2="458" y2="206" stroke-opacity="0.5"/>
+
+  <!-- RIGHT: phototransistor (dim — no signal arriving) -->
+  <rect x="864" y="188" width="38" height="24" rx="2" stroke-opacity="0.38"/>
+  <path d="M 864 192 Q 857 200 864 208" stroke-opacity="0.28"/>
+  <line x1="902" y1="194" x2="892" y2="194" stroke-opacity="0.28"/>
+  <line x1="902" y1="206" x2="892" y2="206" stroke-opacity="0.28"/>
+
+  <!-- RIGHT: Stem ACTUATED — pressed down ~55px, solid body now at beam axis -->
+  <!-- Body above window (pressed low, now at y 65–175) -->
+  <rect x="610" y="65" width="80" height="110" rx="1"/>
+  <!-- Slot now above beam axis (y 175–195) -->
+  <line x1="610" y1="175" x2="690" y2="175"/>
+  <line x1="610" y1="195" x2="690" y2="195"/>
+  <line x1="610" y1="175" x2="610" y2="195" stroke-opacity="0.28"/>
+  <line x1="690" y1="175" x2="690" y2="195" stroke-opacity="0.28"/>
+  <!-- Body below window — solid material crosses y=200, blocking the beam -->
+  <rect x="610" y="195" width="80" height="115" rx="1"/>
+  <!-- Cruciform head stub (compressed, clipped to canvas) -->
+  <path d="M 628 65 L 672 65 L 674 57 L 626 57 Z" stroke-opacity="0.42"/>
+  <!-- Spring tabs -->
+  <line x1="642" y1="310" x2="640" y2="324" stroke-opacity="0.42"/>
+  <line x1="658" y1="310" x2="656" y2="324" stroke-opacity="0.42"/>
+
+  <!-- RIGHT: beam — emitted by LED, blocked by stem, never reaches PT -->
+  <!-- LED to stem face (arrives, then stops) -->
+  <line x1="510" y1="200" x2="610" y2="200"
+        stroke="#c2694b" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <!-- Emission chevron -->
+  <path d="M 510 195 L 520 200 L 510 205"
+        stroke="#c2694b" stroke-width="1.5" fill="none" stroke-opacity="0.8"/>
+  <!-- Blocking cross at the stem face -->
+  <line x1="604" y1="194" x2="616" y2="206" stroke="#c2694b" stroke-width="2" stroke-opacity="0.82"/>
+  <line x1="616" y1="194" x2="604" y2="206" stroke="#c2694b" stroke-width="2" stroke-opacity="0.82"/>
+  <!-- Right half — beam absent, shown as faint ghost -->
+  <line x1="690" y1="200" x2="840" y2="200"
+        stroke="#3a3530" stroke-width="1" stroke-dasharray="3 6" stroke-opacity="0.18"/>
+
+  <!-- RIGHT: panel label -->
+  <text x="675" y="56"
+        font-family="'JetBrains Mono','IBM Plex Mono',monospace"
+        font-size="12" fill="#3a3530" text-anchor="middle" dominant-baseline="middle"
+        letter-spacing="0.04em">actuated</text>
+
+  <!-- RIGHT: state label -->
+  <text x="675" y="350"
+        font-family="'JetBrains Mono','IBM Plex Mono',monospace"
+        font-size="12" fill="#3a3530" text-anchor="middle" dominant-baseline="middle"
+        fill-opacity="0.68" letter-spacing="0.03em">signal LOW — keypress registered</text>
+  <line x1="675" y1="318" x2="675" y2="336" stroke-opacity="0.22" stroke-width="1"/>
+  <path d="M 671 333 L 675 341 L 679 333" stroke-opacity="0.28" stroke-width="1" fill="none"/>
+
+  <!-- RIGHT: component micro-labels -->
+  <text x="491" y="180"
+        font-family="'JetBrains Mono','IBM Plex Mono',monospace"
+        font-size="10" fill="#3a3530" text-anchor="middle"
+        fill-opacity="0.55" letter-spacing="0.02em">LED</text>
+  <text x="883" y="180"
+        font-family="'JetBrains Mono','IBM Plex Mono',monospace"
+        font-size="10" fill="#3a3530" text-anchor="middle"
+        fill-opacity="0.32" letter-spacing="0.02em">PT</text>
+
+  <!-- Brass-bronze ornamental theme dot — top-right margin -->
+  <circle cx="876" cy="28" r="2.5" fill="#c8a96e" stroke="#c8a96e"/>
+</svg>

@@ -1,0 +1,29 @@
+{
+  "asset_type": "hero-art",
+  "slug": "optical-switches-explained",
+  "viz_slug": null,
+  "description": "Optical switch cross-section hero art. Switch housing shown in cross-section with LED component mounted in the left wall port and phototransistor in the right wall port. Stem shown in the at-rest (not actuated) position — its machined beam-window slot is aligned to the optical axis so the terracotta dotted beam line passes freely through. A faint ghost of the stem in the actuated (pressed-down) position is drawn at reduced opacity with dashed stroke, its solid body crossing the beam axis; a warm-bronze accent dot sits at the crossing point to indicate the blocked-beam state. Spring stack rendered below the stem. No text labels; structural reading through geometry alone.",
+  "accent": "#c2694b",
+  "canvas": "1200x750",
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "stroke_weight": "2px",
+  "splash_hue": "terracotta",
+  "splash_color": "#c2694b",
+  "bronze_accent": "#c8a96e",
+  "background": "#faf8f5",
+  "data_sources": [
+    { "type": "brief", "content": "article brief and thock bearings.md style guide" }
+  ],
+  "generated_by": "brander",
+  "engine": "hand-authored SVG (no raster pipeline)",
+  "at": "2026-06-10T00:00:00.000Z",
+  "commit": "5ed2ee644fc329e856790b93889a2b7679491bea",
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": [],
+  "outputs": [
+    "apps/web/public/hero-art/optical-switches-explained.svg",
+    "apps/web/public/hero-art/optical-switches-explained.svg.json"
+  ],
+  "version": 1,
+  "warnings": []
+}

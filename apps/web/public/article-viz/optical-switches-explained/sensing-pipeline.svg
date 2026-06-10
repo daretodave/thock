@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200" preserveAspectRatio="xMidYMid meet" fill="none" stroke="#3a3530" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <title>Optical switch sensing pipeline — LED to keypress event</title>
+
+  <!-- Warm-paper background -->
+  <rect width="900" height="200" fill="#faf8f5" stroke="none"/>
+
+  <!--
+    Six pipeline stages, left to right, centered at y=100.
+    Stage boxes: 96px wide x 44px tall, rx=5.
+    Stages 4 (ADC) and 5 (firmware threshold) use terracotta outline.
+    Stage 5 is wider (148px) to accommodate the two-word label.
+  -->
+
+  <!-- ── STAGE 1: LED ──────────────────────────────────────────────────────── -->
+  <rect x="34" y="78" width="96" height="44" rx="5"/>
+  <text x="82" y="103"
+        font-family="'JetBrains Mono','IBM Plex Mono',monospace"
+        font-size="11" fill="#3a3530" text-anchor="middle" dominant-baseline="middle"
+        letter-spacing="0.03em">LED</text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="130" y1="100" x2="162" y2="100" stroke-opacity="0.55"/>
+  <path d="M 158 95 L 166 100 L 158 105" stroke-opacity="0.55" fill="none"/>
+
+  <!-- ── STAGE 2: beam ──────────────────────────────────────────────────────── -->
+  <rect x="166" y="78" width="96" height="44" rx="5"/>
+  <text x="214" y="103"
+        font-family="'JetBrains Mono','IBM Plex Mono',monospace"
+        font-size="11" fill="#3a3530" text-anchor="middle" dominant-baseline="middle"
+        letter-spacing="0.03em">beam</text>
+  <!-- Terracotta accent dashed line inside the beam box -->
+  <line x1="180" y1="100" x2="248" y2="100"
+        stroke="#c2694b" stroke-width="1" stroke-dasharray="4 3" stroke-opacity="0.55"/>
+
+  <!-- Arrow 2→3 -->
+  <line x1="262" y1="100" x2="294" y2="100" stroke-opacity="0.55"/>
+  <path d="M 290 95 L 298 100 L 290 105" stroke-opacity="0.55" fill="none"/>
+
+  <!-- ── STAGE 3: phototransistor ──────────────────────────────────────────── -->
+  <rect x="298" y="78" width="96" height="44" rx="5"/>
+  <text x="346" y="97"
+        font-family="'JetBrains Mono','IBM Plex Mono',monospace"
+        font-size="11" fill="#3a3530" text-anchor="middle" dominant-baseline="middle"
+        letter-spacing="0.03em">photo-</text>
+  <text x="346" y="111"
+        font-family="'JetBrains Mono','IBM Plex Mono',monospace"
+        font-size="11" fill="#3a3530" text-anchor="middle" dominant-baseline="middle"
+        letter-spacing="0.03em">transistor</text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="394" y1="100" x2="426" y2="100" stroke-opacity="0.55"/>
+  <path d="M 422 95 L 430 100 L 422 105" stroke-opacity="0.55" fill="none"/>
+
+  <!-- ── STAGE 4: ADC (terracotta outline) ────────────────────────────────── -->
+  <rect x="430" y="78" width="96" height="44" rx="5" stroke="#c2694b" stroke-width="1.5"/>
+  <text x="478" y="103"
+        font-family="'JetBrains Mono','IBM Plex Mono',monospace"
+        font-size="11" fill="#c2694b" text-anchor="middle" dominant-baseline="middle"
+        letter-spacing="0.03em">ADC</text>
+  <text x="478" y="130"
+        font-family="'JetBrains Mono','IBM Plex Mono',monospace"
+        font-size="9" fill="#c2694b" text-anchor="middle"
+        fill-opacity="0.62" letter-spacing="0.02em">analog → digital</text>
+
+  <!-- Arrow 4→5 -->
+  <line x1="526" y1="100" x2="566" y2="100" stroke-opacity="0.55"/>
+  <path d="M 562 95 L 570 100 L 562 105" stroke-opacity="0.55" fill="none"/>
+
+  <!-- ── STAGE 5: firmware threshold (terracotta outline, wider box) ───────── -->
+  <rect x="570" y="78" width="148" height="44" rx="5" stroke="#c2694b" stroke-width="1.5"/>
+  <text x="644" y="97"
+        font-family="'JetBrains Mono','IBM Plex Mono',monospace"
+        font-size="11" fill="#c2694b" text-anchor="middle" dominant-baseline="middle"
+        letter-spacing="0.03em">firmware</text>
+  <text x="644" y="111"
+        font-family="'JetBrains Mono','IBM Plex Mono',monospace"
+        font-size="11" fill="#c2694b" text-anchor="middle" dominant-baseline="middle"
+        letter-spacing="0.03em">threshold</text>
+  <text x="644" y="130"
+        font-family="'JetBrains Mono','IBM Plex Mono',monospace"
+        font-size="9" fill="#c2694b" text-anchor="middle"
+        fill-opacity="0.62" letter-spacing="0.02em">polling interval</text>
+
+  <!-- Arrow 5→6 -->
+  <line x1="718" y1="100" x2="750" y2="100" stroke-opacity="0.55"/>
+  <path d="M 746 95 L 754 100 L 746 105" stroke-opacity="0.55" fill="none"/>
+
+  <!-- ── STAGE 6: keypress event ──────────────────────────────────────────── -->
+  <rect x="754" y="78" width="112" height="44" rx="5"/>
+  <text x="810" y="97"
+        font-family="'JetBrains Mono','IBM Plex Mono',monospace"
+        font-size="11" fill="#3a3530" text-anchor="middle" dominant-baseline="middle"
+        letter-spacing="0.03em">keypress</text>
+  <text x="810" y="111"
+        font-family="'JetBrains Mono','IBM Plex Mono',monospace"
+        font-size="11" fill="#3a3530" text-anchor="middle" dominant-baseline="middle"
+        letter-spacing="0.03em">event</text>
+
+  <!-- Stage-number micro-labels above each box -->
+  <g font-family="'JetBrains Mono','IBM Plex Mono',monospace" font-size="9" fill="#3a3530"
+     fill-opacity="0.32" text-anchor="middle" letter-spacing="0.02em">
+    <text x="82" y="70">1</text>
+    <text x="214" y="70">2</text>
+    <text x="346" y="70">3</text>
+    <text x="478" y="70">4</text>
+    <text x="644" y="70">5</text>
+    <text x="810" y="70">6</text>
+  </g>
+
+  <!-- Brass-bronze ornamental theme dot — top-right margin -->
+  <circle cx="876" cy="28" r="2.5" fill="#c8a96e" stroke="#c8a96e"/>
+</svg>

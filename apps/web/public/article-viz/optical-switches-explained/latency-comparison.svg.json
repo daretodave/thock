@@ -1,0 +1,30 @@
+{
+  "asset_type": "inline-viz",
+  "slug": "optical-switches-explained",
+  "viz_slug": "latency-comparison",
+  "description": "Horizontal stacked-bar chart comparing keypress latency budgets for contact switches and optical switches. Contact switch bar (top) shows three proportional segments: bounce (1–5ms, terracotta fill), debounce window (5ms, warm grey fill), and polling (1ms, dark fill) — total ~6–11ms. Optical switch bar (bottom) shows polling only (1ms, dark fill) — total ~1ms. A ghost outline of the contact-switch bar width sits behind the optical bar so the eye can compare the scale directly. Bars are visually proportional: scale of 58px per ms so the full contact bar spans 640px. Legend strip below the chart identifies the three fill types.",
+  "accent": "#c2694b",
+  "canvas": "900x300",
+  "stroke_color": "#3a3530",
+  "stroke_weight": "1.5px",
+  "background": "#faf8f5",
+  "data_sources": [
+    { "type": "brief", "content": "article brief specifying: contact switch bounce 1–5ms, debounce window 5ms, polling 1ms, total ~6–11ms; optical switch polling 1ms only, total ~1ms" }
+  ],
+  "generated_by": "brander",
+  "engine": "hand-authored SVG (no raster pipeline)",
+  "at": "2026-06-10T00:00:00.000Z",
+  "commit": "5ed2ee644fc329e856790b93889a2b7679491bea",
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": ["JetBrains Mono", "IBM Plex Mono"],
+  "article_slug": "optical-switches-explained",
+  "article_pillar": "deep-dives",
+  "section_anchor": "latency-why-optical-wins",
+  "splash_color": { "name": "terracotta", "oklch": "oklch(0.60 0.115 38)" },
+  "outputs": [
+    "apps/web/public/article-viz/optical-switches-explained/latency-comparison.svg",
+    "apps/web/public/article-viz/optical-switches-explained/latency-comparison.svg.json"
+  ],
+  "version": 1,
+  "warnings": []
+}

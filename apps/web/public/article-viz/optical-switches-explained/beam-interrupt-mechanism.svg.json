@@ -1,0 +1,30 @@
+{
+  "asset_type": "inline-viz",
+  "slug": "optical-switches-explained",
+  "viz_slug": "beam-interrupt-mechanism",
+  "description": "Side-by-side diptych comparing the two states of an optical switch beam-interrupt sensor. Left panel: stem at rest, beam-window slot aligned to the LED/phototransistor optical axis — beam passes through, phototransistor receives signal, state reads HIGH. Right panel: stem actuated (pressed down), solid stem body crosses the optical axis, beam is blocked before reaching the phototransistor — signal drops LOW and the firmware registers a keypress. Terracotta beam line in both panels; blocking cross drawn at stem face in actuated state; PT shown dim when not receiving. Monospace labels identify components and output state.",
+  "accent": "#c2694b",
+  "canvas": "900x400",
+  "stroke_color": "#3a3530",
+  "stroke_weight": "1.5px",
+  "background": "#faf8f5",
+  "data_sources": [
+    { "type": "brief", "content": "article brief and thock bearings.md style guide" }
+  ],
+  "generated_by": "brander",
+  "engine": "hand-authored SVG (no raster pipeline)",
+  "at": "2026-06-10T00:00:00.000Z",
+  "commit": "5ed2ee644fc329e856790b93889a2b7679491bea",
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": ["JetBrains Mono", "IBM Plex Mono"],
+  "article_slug": "optical-switches-explained",
+  "article_pillar": "deep-dives",
+  "section_anchor": "how-the-beam-interrupt-works",
+  "splash_color": { "name": "terracotta", "oklch": "oklch(0.60 0.115 38)" },
+  "outputs": [
+    "apps/web/public/article-viz/optical-switches-explained/beam-interrupt-mechanism.svg",
+    "apps/web/public/article-viz/optical-switches-explained/beam-interrupt-mechanism.svg.json"
+  ],
+  "version": 1,
+  "warnings": []
+}

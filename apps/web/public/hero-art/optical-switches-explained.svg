@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — optical switch cross-section, stem at rest, LED beam passing through to phototransistor</title>
+
+  <!-- Warm-paper background -->
+  <rect width="1200" height="750" fill="#faf8f5" stroke="none"/>
+
+  <!-- Terracotta beam-path wash — a soft elliptical band along the horizontal beam axis,
+       the optical path that defines everything about this mechanism. -->
+  <ellipse cx="600" cy="400" rx="340" ry="32" fill="#c2694b1a" stroke="none"/>
+
+  <!-- ════════════════════════════════════════════════════════════════════════════
+       SWITCH HOUSING — cross-section centered at (600, 375)
+       Top housing covers y 130–270; bottom housing 490–640.
+       The stem channel runs vertically through the middle, x 540–660.
+       The optical axis runs horizontally at y 400 across the full housing width.
+       ════════════════════════════════════════════════════════════════════════════ -->
+
+  <!-- ── TOP HOUSING cut-away ──────────────────────────────────────────────────── -->
+  <g>
+    <!-- Outer top housing block -->
+    <path d="M 310 130 L 890 130 L 890 270 L 310 270 Z"/>
+    <!-- Inner cavity — hollowed space the stem travels through -->
+    <path d="M 330 148 L 870 148 L 870 260 L 330 260 Z" stroke-opacity="0.38"/>
+    <!-- Stem aperture slot on top face (cruciform entry) -->
+    <path d="
+      M 558 130
+      L 642 130
+      L 646 142
+      L 634 142
+      L 634 150
+      L 620 150
+      L 620 142
+      L 580 142
+      L 580 150
+      L 566 150
+      L 566 142
+      L 554 142
+      Z" stroke-opacity="0.7"/>
+    <!-- Lateral optical access ports in the housing wall — where the LED and
+         phototransistor seats are machined. These are cut-out rectangles in
+         the side walls at the beam height (y 390–410). -->
+    <!-- LEFT port (LED side) -->
+    <path d="M 310 388 L 330 388 L 330 412 L 310 412 Z" stroke-opacity="0.6"/>
+    <!-- RIGHT port (phototransistor side) -->
+    <path d="M 870 388 L 890 388 L 890 412 L 870 412 Z" stroke-opacity="0.6"/>
+    <!-- Mounting clip nubs -->
+    <line x1="310" y1="240" x2="296" y2="240" stroke-opacity="0.5"/>
+    <line x1="890" y1="240" x2="904" y2="240" stroke-opacity="0.5"/>
+  </g>
+
+  <!-- Faint explode seam between top housing and stem assembly -->
+  <line x1="305" y1="286" x2="895" y2="286" stroke-dasharray="4 7" stroke-opacity="0.28"/>
+  <circle cx="600" cy="286" r="2.5" stroke-opacity="0.45"/>
+
+  <!-- ── HOUSING SIDE WALLS (mid section, flanking the stem channel) ─────────── -->
+  <!-- Left wall segment — between top housing and bottom housing -->
+  <path d="M 310 270 L 310 490 L 330 490 L 330 270 Z" stroke-opacity="0.5"/>
+  <!-- Left inner wall — stem channel boundary -->
+  <path d="M 540 270 L 540 490" stroke-opacity="0.4"/>
+  <!-- Right wall segment -->
+  <path d="M 870 270 L 870 490 L 890 490 L 890 270 Z" stroke-opacity="0.5"/>
+  <!-- Right inner wall -->
+  <path d="M 660 270 L 660 490" stroke-opacity="0.4"/>
+
+  <!-- ── LED COMPONENT (left side, mounted in the housing wall) ─────────────── -->
+  <!-- LED body — small rectangular component seated in the left port -->
+  <rect x="228" y="382" width="82" height="36" rx="3"/>
+  <!-- LED lens dome suggestion -->
+  <path d="M 310 390 Q 324 400 310 410" stroke-opacity="0.7"/>
+  <!-- LED internal structure — faint cathode/anode lines -->
+  <line x1="248" y1="394" x2="248" y2="408" stroke-opacity="0.4"/>
+  <line x1="264" y1="391" x2="264" y2="409" stroke-opacity="0.4"/>
+  <!-- LED lead wires going left -->
+  <line x1="228" y1="394" x2="210" y2="394" stroke-opacity="0.55"/>
+  <line x1="228" y1="406" x2="210" y2="406" stroke-opacity="0.55"/>
+  <!-- "LED" label glyph — three short tick marks suggesting emission -->
+  <g stroke="#c2694b" stroke-opacity="0.75" stroke-width="1.5">
+    <line x1="198" y1="400" x2="186" y2="400"/>
+    <line x1="196" y1="394" x2="182" y2="387"/>
+    <line x1="196" y1="406" x2="182" y2="413"/>
+  </g>
+
+  <!-- ── PHOTOTRANSISTOR COMPONENT (right side) ─────────────────────────────── -->
+  <!-- PT body -->
+  <rect x="890" y="382" width="82" height="36" rx="3"/>
+  <!-- PT lens dome suggestion -->
+  <path d="M 890 390 Q 876 400 890 410" stroke-opacity="0.7"/>
+  <!-- PT internal structure — Darlington pair suggestion (two nested arcs) -->
+  <path d="M 934 393 Q 948 400 934 407" stroke-opacity="0.45"/>
+  <path d="M 944 390 Q 962 400 944 410" stroke-opacity="0.35"/>
+  <!-- PT lead wires going right -->
+  <line x1="972" y1="394" x2="990" y2="394" stroke-opacity="0.55"/>
+  <line x1="972" y1="406" x2="990" y2="406" stroke-opacity="0.55"/>
+
+  <!-- ── THE BEAM PATH — the article's defining line ────────────────────────── -->
+  <!-- Terracotta dotted line: emitted from LED lens, travels through the open
+       stem window, arrives at the phototransistor. Drawn in two segments so the
+       stem window gap is visually obvious (beam exists on both sides of the gap). -->
+  <!-- Segment 1: LED lens to left edge of stem window -->
+  <line x1="310" y1="400" x2="540" y2="400"
+        stroke="#c2694b" stroke-width="2" stroke-dasharray="6 5"
+        stroke-linecap="round"/>
+  <!-- Segment 2: right edge of stem window to phototransistor -->
+  <line x1="660" y1="400" x2="890" y2="400"
+        stroke="#c2694b" stroke-width="2" stroke-dasharray="6 5"
+        stroke-linecap="round"/>
+  <!-- Through the open window — a slightly brighter, uninterrupted segment to
+       emphasize "beam passes through freely in the at-rest state" -->
+  <line x1="540" y1="400" x2="660" y2="400"
+        stroke="#c2694b" stroke-width="2.5" stroke-dasharray="4 3"
+        stroke-linecap="round" stroke-opacity="0.9"/>
+  <!-- Emission arrow at LED: small chevron pointing right -->
+  <path d="M 310 394 L 322 400 L 310 406"
+        stroke="#c2694b" stroke-width="1.5" fill="none" stroke-opacity="0.8"/>
+  <!-- Arrival indicator at phototransistor: small dot -->
+  <circle cx="890" cy="400" r="4" fill="#c2694b" stroke="none" fill-opacity="0.75"/>
+
+  <!-- ── STEM — "not actuated" position ────────────────────────────────────── -->
+  <!-- The stem sits high; its lower body clears the optical axis entirely,
+       leaving the beam path open. The window is the transparent zone in the
+       stem body aligned to the beam height. -->
+  <g>
+    <!-- Cruciform head -->
+    <path d="
+      M 578 300
+      L 622 300
+      L 622 313
+      L 638 313
+      L 638 328
+      L 562 328
+      L 562 313
+      L 578 313
+      Z"/>
+    <!-- Stem body upper segment (above the beam window) -->
+    <path d="M 562 328 L 638 328 L 638 375 L 562 375 Z"/>
+    <!-- Stem window gap: the notch/slot machined through the stem body
+         to let the beam pass. Drawn as a clear gap in the outline —
+         no fill, just the top and bottom edges of the slot. -->
+    <!-- Slot top edge -->
+    <line x1="562" y1="375" x2="638" y2="375"/>
+    <!-- Slot bottom edge -->
+    <line x1="562" y1="425" x2="638" y2="425"/>
+    <!-- Faint vertical side walls of the slot (the slot is cut all the way through) -->
+    <line x1="562" y1="375" x2="562" y2="425" stroke-opacity="0.3"/>
+    <line x1="638" y1="375" x2="638" y2="425" stroke-opacity="0.3"/>
+    <!-- Stem body lower segment (below the beam window) -->
+    <path d="M 562 425 L 638 425 L 638 475 L 562 475 Z"/>
+    <!-- Spring socket tabs -->
+    <line x1="574" y1="475" x2="572" y2="492" stroke-opacity="0.55"/>
+    <line x1="626" y1="475" x2="624" y2="492" stroke-opacity="0.55"/>
+    <!-- Stem centerline -->
+    <line x1="600" y1="335" x2="600" y2="468" stroke-dasharray="3 5" stroke-opacity="0.38"/>
+  </g>
+
+  <!-- ── STEM GHOST — "actuated" position (faint, shifted down ~60px) ─────── -->
+  <!-- Shows where the stem body would be when pressed. In this position the
+       solid body of the stem crosses y=400, blocking the beam.
+       Drawn at reduced opacity and with dashed stroke to read as "ghost / future state." -->
+  <g stroke-opacity="0.22" stroke-dasharray="5 4">
+    <!-- Ghost cruciform head -->
+    <path d="
+      M 578 360
+      L 622 360
+      L 622 373
+      L 638 373
+      L 638 388
+      L 562 388
+      L 562 373
+      L 578 373
+      Z"/>
+    <!-- Ghost stem body upper segment -->
+    <path d="M 562 388 L 638 388 L 638 435 L 562 435 Z"/>
+    <!-- Ghost slot (now ABOVE y=400 — beam is blocked) -->
+    <line x1="562" y1="435" x2="638" y2="435"/>
+    <line x1="562" y1="485" x2="638" y2="485"/>
+    <!-- Ghost lower segment -->
+    <path d="M 562 485 L 638 485 L 638 535 L 562 535 Z"/>
+  </g>
+
+  <!-- Actuated-state accent dot — small warm-bronze filled circle ON the ghost
+       stem body at the beam-crossing height, indicating "stem here = beam blocked."
+       Per the brief: brass-bronze `#c8a96e` on the actuated ghost. -->
+  <circle cx="600" cy="400" r="8" fill="#c8a96e" stroke="#c8a96e"
+          stroke-opacity="0.7" fill-opacity="0.35"/>
+  <circle cx="600" cy="400" r="4" fill="#c8a96e" stroke="none" fill-opacity="0.85"/>
+
+  <!-- Downward arrow — hints at the actuation motion between rest and ghost -->
+  <g stroke-opacity="0.38">
+    <line x1="648" y1="340" x2="648" y2="376"/>
+    <path d="M 643 371 L 648 379 L 653 371" stroke-opacity="0.38"/>
+  </g>
+
+  <!-- ── SPRING ────────────────────────────────────────────────────────────── -->
+  <g>
+    <ellipse cx="600" cy="508" rx="34" ry="6"/>
+    <ellipse cx="600" cy="519" rx="34" ry="6"/>
+    <ellipse cx="600" cy="530" rx="34" ry="6"/>
+    <ellipse cx="600" cy="541" rx="34" ry="6"/>
+    <ellipse cx="600" cy="552" rx="34" ry="6"/>
+    <ellipse cx="600" cy="563" rx="34" ry="6"/>
+    <ellipse cx="600" cy="574" rx="34" ry="6"/>
+    <line x1="600" y1="500" x2="600" y2="580" stroke-dasharray="2 5" stroke-opacity="0.32"/>
+  </g>
+
+  <!-- Faint explode seam between mid section and bottom housing -->
+  <line x1="305" y1="494" x2="895" y2="494" stroke-dasharray="4 7" stroke-opacity="0.28"/>
+  <circle cx="600" cy="494" r="2.5" stroke-opacity="0.45"/>
+
+  <!-- ── BOTTOM HOUSING ─────────────────────────────────────────────────────── -->
+  <g>
+    <path d="M 310 490 L 890 490 L 876 620 L 324 620 Z"/>
+    <!-- Inner spring well -->
+    <path d="M 566 490 L 634 490 L 628 560 L 572 560 Z" stroke-opacity="0.55"/>
+    <!-- PCB pin contacts -->
+    <circle cx="430" cy="598" r="6"/>
+    <circle cx="770" cy="598" r="6"/>
+    <!-- Center mount post -->
+    <circle cx="600" cy="600" r="7" stroke-opacity="0.5"/>
+    <!-- Side rail nubs -->
+    <line x1="440" y1="490" x2="440" y2="507" stroke-opacity="0.45"/>
+    <line x1="760" y1="490" x2="760" y2="507" stroke-opacity="0.45"/>
+    <!-- Mounting clip nubs bottom -->
+    <line x1="310" y1="546" x2="296" y2="546" stroke-opacity="0.45"/>
+    <line x1="890" y1="546" x2="904" y2="546" stroke-opacity="0.45"/>
+  </g>
+
+  <!-- ── DIDACTIC TIER TICKS — left margin ─────────────────────────────────── -->
+  <g stroke-opacity="0.25">
+    <line x1="68" y1="200" x2="80" y2="200"/>
+    <line x1="68" y1="400" x2="80" y2="400"/>
+    <line x1="68" y1="540" x2="80" y2="540"/>
+    <line x1="68" y1="560" x2="80" y2="560"/>
+  </g>
+  <!-- Beam-axis callout tick (right margin) -->
+  <line x1="1120" y1="400" x2="1132" y2="400" stroke-opacity="0.3"/>
+
+  <!-- Brass-bronze ornamental theme dot — top-right margin, family convention -->
+  <circle cx="1148" cy="92" r="3" fill="#c8a96e" stroke="#c8a96e"/>
+</svg>

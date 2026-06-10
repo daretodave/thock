@@ -1,0 +1,30 @@
+{
+  "asset_type": "inline-viz",
+  "slug": "optical-switches-explained",
+  "viz_slug": "sensing-pipeline",
+  "description": "Linear left-to-right pipeline showing all six stages of optical switch signal processing: LED emits light (stage 1) → beam travels through switch housing (stage 2) → phototransistor receives or does not receive light (stage 3) → analog-to-digital converter samples the PT output (stage 4, terracotta outline) → firmware applies a threshold to the digital reading each polling cycle (stage 5, terracotta outline) → keypress event is dispatched (stage 6). Stages 4 and 5 are highlighted in terracotta because they represent the computational path where polling latency is introduced. Sub-labels below stages 4 and 5 read 'analog → digital' and 'polling interval' respectively.",
+  "accent": "#c2694b",
+  "canvas": "900x200",
+  "stroke_color": "#3a3530",
+  "stroke_weight": "1.5px",
+  "background": "#faf8f5",
+  "data_sources": [
+    { "type": "brief", "content": "article brief and thock bearings.md style guide" }
+  ],
+  "generated_by": "brander",
+  "engine": "hand-authored SVG (no raster pipeline)",
+  "at": "2026-06-10T00:00:00.000Z",
+  "commit": "5ed2ee644fc329e856790b93889a2b7679491bea",
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": ["JetBrains Mono", "IBM Plex Mono"],
+  "article_slug": "optical-switches-explained",
+  "article_pillar": "deep-dives",
+  "section_anchor": "the-sensing-pipeline",
+  "splash_color": { "name": "terracotta", "oklch": "oklch(0.60 0.115 38)" },
+  "outputs": [
+    "apps/web/public/article-viz/optical-switches-explained/sensing-pipeline.svg",
+    "apps/web/public/article-viz/optical-switches-explained/sensing-pipeline.svg.json"
+  ],
+  "version": 1,
+  "warnings": []
+}

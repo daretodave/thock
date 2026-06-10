@@ -75,6 +75,7 @@
     { "slug": "dcs", "name": "DCS", "category": "profile" },
     { "slug": "stabilizers", "name": "Stabilizers", "category": "misc" },
     { "slug": "lubing", "name": "Lubing", "category": "switch" },
-    { "slug": "divinikey", "name": "Divinikey", "category": "brand" }
+    { "slug": "divinikey", "name": "Divinikey", "category": "brand" },
+    { "slug": "optical", "name": "Optical", "category": "switch" }
   ]
 }

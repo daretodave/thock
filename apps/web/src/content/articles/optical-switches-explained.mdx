@@ -1,0 +1,99 @@
+---
+slug: optical-switches-explained
+title: "How optical switches actually sense a keypress"
+description: "The beam-interrupt mechanism eliminates contact bounce entirely — here's what that actually means for actuation, latency, and the firmware pipeline that makes rapid trigger possible."
+lede: "An optical switch replaces the metal contact with a beam of light. That one change eliminates contact bounce entirely, reshapes the latency math, and is why some optical boards can offer per-key actuation at 0.1mm granularity. The mechanism is simpler than the marketing makes it sound."
+author: thock
+pillar: deep-dives
+tags: [optical, switches, deep-dive]
+publishedAt: '2026-06-07T14:00:00.000Z'
+updatedAt: null
+heroImage: /hero-art/optical-switches-explained.svg
+heroImageAlt: "Diagram of an optical switch cross-section showing the LED beam and phototransistor sensing pair"
+featured: false
+popularityScore: 30
+mentionedParts: []
+---
+
+An optical switch does not close a circuit. It interrupts a beam. That is the architectural fact this article is built around, and it is the same shape of fact as the one that opens [the Hall-effect piece](/article/magnetic-switches-deep-dive) and [the Topre piece](/article/topre-electrocapacitive-deep-dive) — a sensing lineage defined by what it measures rather than by what it touches. A Cherry-lineage switch is a binary electrical event: two metal leaves make contact, the controller sees the closure, a key registers. An optical switch is a photonic event: a beam of light passes across the interior of the switch housing, a stem descends and blocks the beam, a phototransistor on the far side detects the interruption, and the key registers. There is no metal-to-metal contact. There is no bounce. There is a beam that either arrives or does not.
+
+The features that optical keyboards are sold on — no debounce, faster latency, per-key actuation adjustment — all unwind from that single photonic architecture. Understanding what is actually true about those claims, and where the honest limits are, is the purpose of this piece.
+
+## The two optical architectures
+
+<InlineViz
+  src="/article-viz/optical-switches-explained/beam-interrupt-mechanism.svg"
+  alt="Two-state side-by-side cross-section of an optical switch housing. Left panel 'at rest': LED on the left wall, a dashed beam crossing the housing to a phototransistor on the right wall, stem raised with an open slot aligned to the beam path, labelled 'beam passes — no actuation'. Right panel 'pressed': stem descended, an opaque blade occupying the beam path, the dashed beam stopped mid-crossing and fading, phototransistor in terracotta indicating no signal, labelled 'beam blocked — actuation'."
+  caption="Beam-interrupt: the stem carries an opaque blade that interrupts the light path on descent. The phototransistor output drops; firmware reads that drop as an actuation."
+  accent="#c2694b"
+/>
+
+There are two ways to build an optical switch, and the field has settled firmly on one of them.
+
+The dominant architecture is **beam-interrupt**: an LED on one side of the switch housing shines across the interior to a phototransistor on the opposite side. The stem carries an opaque blade or flag. At rest, the beam passes freely and the phototransistor outputs a high signal. When the key is pressed, the stem descends, the opaque blade enters the beam path, the light is blocked, and the phototransistor output drops. The firmware reads the output drop as an actuation.
+
+The alternative is **beam-reflect** (sometimes called reflective optical): an LED shines downward inside the housing, and a reflective surface on the descending stem bounces light back toward a photodetector positioned beside the LED. At rest the reflective surface is out of range; as the stem descends it enters the LED's cone and the reflected light increases. The firmware reads the increase as an actuation.
+
+Beam-reflect sounds elegant, but beam-interrupt has won the manufacturing contest for a simple reason: it is more noise-tolerant. Ambient light, dust on the reflective surface, and slight variation in the stem's reflectivity all shift the baseline signal in a reflective design. A beam-interrupt design needs only to detect presence or absence of a signal — the phototransistor either sees light or it does not — which makes the threshold comparison stable across part-to-part variation. <Mono>Flaretech</Mono>, the beam-interrupt optical standard that has become the dominant format used by several manufacturers, is the reference implementation of this architecture. <Mono>Gateron</Mono>'s optical line uses a variant of the same beam-interrupt geometry. <Mono>Razer</Mono>'s optical switches use a proprietary implementation of the same principle.
+
+<Callout type="note">
+  Reflective optical switches exist and work well in controlled conditions. Some gaming-peripheral switches, particularly in early optical trackpads and short-throw button implementations, use reflective architectures. For full-travel mechanical key switches, beam-interrupt is the production-viable architecture in essentially every shipping product.
+</Callout>
+
+## How the actuation point is set — the sensing pipeline
+
+<InlineViz
+  src="/article-viz/optical-switches-explained/sensing-pipeline.svg"
+  alt="Horizontal pipeline diagram with five labelled stages connected by arrows. Stage 1 in warm-grey: 'LED' with a small radiating-lines glyph. Stage 2: 'beam' with a dashed horizontal arrow. Stage 3: 'phototransistor' with a detector-symbol glyph. Stage 4: 'ADC' in terracotta, with a small analog-wave symbol above and a digital-step symbol below, labelled 'analog to digital'. Stage 5: 'firmware threshold comparison' with a horizontal threshold line and a signal crossing it, labelled 'keypress event' with a terracotta marker at the crossing."
+  caption="The pipeline from light to keypress. The ADC converts the phototransistor's analog output to a digital value; firmware compares it against a configurable threshold. That threshold is what per-key actuation adjustment actually moves."
+  accent="#c2694b"
+/>
+
+The sensing pipeline for a beam-interrupt optical switch runs as follows. The LED, typically an infrared emitter, sits on one side of the switch housing and fires continuously. A phototransistor on the opposite side outputs a voltage proportional to the light it receives — high when the beam is clear, dropping toward zero when the beam is blocked. That output feeds into an analog-to-digital converter (ADC) on the microcontroller, which samples the voltage and expresses it as a digital number. The firmware then compares that number against a configured threshold value: if the reading is below the threshold (beam blocked, stem down), the key is actuated; if above (beam passing, stem up), the key is released.
+
+That firmware threshold is the load-bearing detail for per-key actuation adjustment. In a contact switch, the actuation point is a geometric fact: the metal leaves meet at a fixed depth in the stem's travel, set by the switch's physical dimensions, and no firmware setting moves it. In an optical switch, the ADC converts the phototransistor signal into a number, and the number the firmware compares it against is a parameter. A board that exposes this parameter per-key can let a user set the WASD cluster to actuate at 1.0mm of travel and the bottom row to actuate at 2.0mm — not because the physical switch changed, but because the threshold number changed. The 0.1mm granularity that some optical boards advertise is a statement about the ADC's resolution and the firmware's precision in expressing travel distance as an ADC count.
+
+Rapid trigger is the same mechanism applied to the release stroke. A contact-switch board can only report "released" once the stem has physically risen above the contact closure point. An optical board with a configurable release threshold can report "released" as soon as the ADC reading rises by a configured delta above the actuation reading — the key is considered released the moment the beam is significantly less blocked than it was at actuation, regardless of where in the travel the stem actually is. At a delta of 0.1mm, a key that was pressed 1.5mm re-actuates after lifting just 0.1mm. The [firmware pipeline discussion in the firmware comparison piece](/article/keyboard-firmware-compared) covers how QMK and ZMK expose per-key actuation in broader firmware context; here the relevant point is that optical switches are one of the hardware prerequisites for the feature — the firmware needs an analog signal level to compare against, and beam-interrupt optical provides one.
+
+## The latency claim, precisely
+
+<InlineViz
+  src="/article-viz/optical-switches-explained/latency-comparison.svg"
+  alt="Horizontal latency strip comparing two switch types on parallel rows. Top row 'contact switch': a terracotta 'bounce' segment spanning 1–5 ms, followed by a grey 'debounce window' segment spanning 5 ms, together labelled '~6–10 ms total to registered keypress'. Bottom row 'optical switch': the bounce segment is absent (drawn as white space with an 'x' marker), a small grey 'ADC + polling' segment spanning 1 ms, labelled '~1 ms total to registered keypress'. A right-margin bracket covers the difference and reads 'up to ~5 ms saved'."
+  caption="The bounce-debounce window is the latency optical eliminates. Polling latency remains. Net saving is real, not marginal — but not the zero-latency the marketing implies."
+  accent="#c2694b"
+/>
+
+Optical switch marketing leans hard on "zero latency" and "no debounce required." Both claims need unpacking.
+
+The claim that is genuinely true: optical switches eliminate contact bounce. When two metal contacts close in an MX-lineage switch, the leaves vibrate against each other for a brief interval before settling — the electrical signal at the controller oscillates between open and closed several times before stabilising. That bounce window is typically 1–5ms. To avoid registering multiple keypresses from a single physical press, contact-switch firmware holds the key as "actuated" and does not re-evaluate it for a debounce window — typically 5ms — after the first contact closure. That window is a deliberate delay baked into the firmware to absorb the physical noise. An optical switch has no metal contacts and no bounce: the phototransistor output when the beam is blocked is a clean, stable low voltage from the moment the blade enters the beam path. No debounce window is needed.
+
+The claim that needs qualification: optical switches still go through the ADC and the firmware's polling window. A 1000Hz polling rate means the firmware checks every key position once per millisecond. An event that happens between two polls is not registered until the next poll. That 1ms polling latency is present in optical and contact-switch boards alike — it is not eliminated by the optical architecture. A board with a 1000Hz polling loop and optical switches has approximately 1ms of latency per keypress; a board with a 1000Hz polling loop and contact switches with standard debounce has approximately 6–10ms of latency per keypress (1ms polling plus the 5ms debounce window). The optical saving is real and consistent — roughly 5ms per keypress under standard firmware settings — but it is not zero, and it is not independent of the polling rate.
+
+<Callout type="note">
+  Higher polling rates (2000Hz, 8000Hz) are starting to appear in gaming-focused boards regardless of switch type. At 8000Hz, the polling window drops to 0.125ms, which is well below the human perception threshold for latency. The optical switch's bounce-debounce saving matters most when the polling rate is the standard 1000Hz — at ultra-high polling rates, both switch types are effectively latency-floor limited by the USB polling cycle, and the 5ms optical saving is no longer the dominant term.
+</Callout>
+
+## Trade-offs the spec sheet doesn't volunteer
+
+Optical switches have a set of trade-offs that the marketing does not lead with, and an enthusiast building with them should know all four.
+
+**LED aging.** The LED in an optical switch is a semiconductor that degrades over time, like any LED. The degradation is slow — rated lifespans of tens of millions of actuations are typical, and daily use of even a heavily-used key takes years to approach the rated limit — but it is real and it is not present in contact switches, which wear at the metal contact surfaces rather than at an emitter. A contact switch's wearing mechanism is visible as contact oxidation, measurable as increased resistance, and addressable by cleaning or replacement. An LED's wearing mechanism is a gradual reduction in output power. If the output drops far enough, the phototransistor's signal-to-noise ratio narrows, the firmware threshold becomes harder to stabilise, and the key may begin to exhibit missed actuations before it fails outright. Years of daily use, not months — but worth knowing.
+
+**Recalibration on stem swap.** Because actuation points are firmware thresholds that are set relative to the phototransistor's baseline output, and because different stems may have different blade geometries or opacity characteristics, a stem swap requires recalibration. The board needs to re-zero its per-key actuation model for any position that received a new stem. Contact-switch boards are geometry-only: a new switch in the same socket has the same physical actuation depth by definition, and no firmware recalibration is needed. This is a small friction for enthusiasts who treat switch swapping as a hobby in itself.
+
+**Hot-swap compatibility is board-dependent.** MX-compatible contact switches standardised the socket footprint in a way that made hot-swap sockets ubiquitous. Optical switches have not. The Flaretech standard exists and some boards support hot-swap of Flaretech-compatible optical switches, but the socket geometry is different from MX hot-swap, and not all optical boards expose the LED/phototransistor module in a user-serviceable form. A <Mono>Wooting 60HE</Mono> or <Mono>Wooting Two Lekker</Mono> using Hall-effect <Mono>Lekker</Mono> switches — Wooting's current platform is actually Hall-effect via an earlier Flaretech optical foundation — illustrates how the category has evolved past the original Flaretech optical architecture. Strictly optical implementations like <Mono>Razer</Mono>'s optical keyboards use switch modules that are compatible with their boards but not with the broader MX hot-swap socket standard.
+
+**Narrower aftermarket.** The MX-compatible contact switch market has hundreds of variants across every possible force curve, tactile profile, and acoustic character. The optical switch market is a fraction of that size. Gateron's optical range, Razer's proprietary optical implementation, and the Flaretech-licensed variants cover most of the available field. A builder who wants a specific feeling — a 67g progressive tactile with a tight housing, say, or a 55g linear with a specific stem-to-housing clearance — will find the optical catalogue exhausted long before the MX catalogue.
+
+## Where optical sits in the four-lineage taxonomy
+
+The four sensing lineages in current production keyboards each have a different relationship to the analog signal at the heart of actuation. MX contact-closure is binary at the switch — two leaves meet, no continuous signal exists. [Topre electrocapacitive](/article/topre-electrocapacitive-deep-dive) is continuous in principle, as the capacitive reading tracks spring compression, but shipped Topre boards threshold it to a binary actuation rather than exposing the curve to firmware. [Hall-effect magnetic](/article/magnetic-switches-deep-dive) is the analog-output leader: the Hall sensor produces a continuous voltage tracking magnet proximity, and that curve is exposed to firmware as the basis for per-key actuation and rapid trigger.
+
+Optical sits in an interesting middle position. A beam-interrupt switch is architecturally binary — the beam is blocked or it is not — but the phototransistor output is technically analog in the transition region, as the blade enters the beam path at an angle and progressively occluds the beam before blocking it completely. Firmware that samples the ADC during this partial-occlusion window can extract a position estimate, which is the basis for the per-key actuation adjustment and rapid-trigger features on boards like the <Mono>Wooting 60HE</Mono>'s earlier Flaretech-based variants. In practice, the linear region of partial occlusion is narrow, the signal is noisier than a Hall-effect sensor's voltage curve, and the analog feature ceiling is lower — but the foundation exists, which is why optical and Hall-effect both support per-key actuation while MX and Topre do not.
+
+The result is that optical occupies a distinct competitive band: it shares the "no contact bounce" property with Hall-effect, it provides a narrower but real analog window for actuation adjustment, and it does so with simpler PCB geometry (no Hall sensor chips, no per-key IC placement constraints) at lower manufacturing cost than Hall-effect. The trade is that the analog ceiling is lower and the switch aftermarket is smaller.
+
+## What to watch
+
+The optical category's unresolved question is whether wider partial-occlusion profiles — stem blade geometries that extend the analog transition region across more of the switch's travel — can close the analog-feature gap with Hall-effect while retaining optical's manufacturing-cost advantage. A few experimental switch designs have moved in this direction, combining a wider occlusion blade with a higher-resolution ADC to extract a more useful position curve. Whether that hardware investment results in a full analog-feature parity with Hall-effect, or settles at a narrower feature set at a lower price point, is the story the optical category is currently writing. The architecture is not standing still.
