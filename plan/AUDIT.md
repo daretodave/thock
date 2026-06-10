@@ -3188,3 +3188,15 @@ passes accumulate signals.)
 - suggested fix: replace "PE-foam-and-tape-mod stack" with "PE foam and [tape mod](/article/tape-mod) stack"
 - issue: [mirror-failed: 2026-06-10T11:23Z]
 - addressed in: 09559c4
+
+### [x] [content] [5.4] lubing-101 — lubing-switches-guide cross-link missing at article close
+- category: content
+- filed: 2026-06-10 by cloud /iterate audit
+- impact: 6 (lubing-101 and lubing-switches-guide are direct companion articles on the same topic — one conceptual, one practical — but neither links to the other; readers finishing lubing-101's "practical take" section have no path to the step-by-step application reference that was shipped as its companion)
+- ease: 9 (single sentence addition at the article's natural handoff point — same pattern as all prior cross-link fixes)
+- score: 5.4 (impact × ease / 10)
+- observation: lubing-101 ends with a handoff to the beginner's switch guide but has no link to lubing-switches-guide, which is the direct companion article covering exactly what the reader would want next: specific lube types, application points, and technique. The two articles are the conceptual-to-practical pair for the same task.
+- evidence: apps/web/src/content/articles/lubing-101.mdx:92 — article ends with beginner's guide cross-link but no link to /article/lubing-switches-guide; grep for "lubing-switches" in the file returns 0 matches.
+- suggested fix: append closing sentence → "Builders ready to start and wanting the step-by-step application reference — which lubes go where, in what order, and on which surfaces to skip — can find it in [lubing switches: what to use, how much, and what to skip](/article/lubing-switches-guide)."
+- issue: [mirror-failed: 2026-06-10T00:00:00Z]
+- addressed in: 69aab54
