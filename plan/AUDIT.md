@@ -3176,3 +3176,15 @@ passes accumulate signals.)
 - score: 6.3 (impact × ease / 10)
 - issue: #312
 - addressed in: f160e48, closes #312
+
+### [x] [content] [6.3] mounting-styles-compared — tape-mod cross-link missing at tray-mount recommendation
+- category: content
+- filed: 2026-06-10 by cloud /iterate audit
+- impact: 7 (mounting-styles-compared explicitly recommends the "PE-foam-and-tape-mod stack" for tray-mount boards; tape-mod has popularityScore 67, the highest of any ideas article; a reader following the mounting guidance hits a dead end where the companion mod guide is unnamed and unlinked)
+- ease: 9 (single inline link change — hyphenated compound split and tape-mod linked — same pattern as all prior cross-link fixes)
+- score: 6.3 (impact × ease / 10)
+- observation: mounting-styles-compared line 111 reads "The PE-foam-and-tape-mod stack can take a tray-mount board most of the way to a satisfying sound" — tape-mod mentioned as a named technique without linking to the tape-mod article. tape-mod is the site's highest-traffic ideas article (popularityScore 67) and is directly relevant to tray-mount builders following this guide's recommendation.
+- evidence: apps/web/src/content/articles/mounting-styles-compared.mdx:111 — "PE-foam-and-tape-mod stack" — no link to /article/tape-mod; grep for "tape-mod" in links returns 0 matches.
+- suggested fix: replace "PE-foam-and-tape-mod stack" with "PE foam and [tape mod](/article/tape-mod) stack"
+- issue: [mirror-failed: 2026-06-10T11:23Z]
+- addressed in: 09559c4
