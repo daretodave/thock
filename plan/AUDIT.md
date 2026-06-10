@@ -3155,3 +3155,12 @@ passes accumulate signals.)
 - next: /ship-content → deep-dives pillar article
 > Filed 2026-06-10 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 - addressed in: 32e01bd
+
+### [x] [content] [6.3] magnetic-switches-deep-dive — optical-switches-explained cross-link missing in callout
+- category: content
+- filed: 2026-06-10 by cloud /iterate audit
+- impact: 9 (magnetic-switches-deep-dive "Optical is not magnetic" callout explicitly describes optical architecture — beam interruption, binary vs analog, Wooting Lekker examples — but provided no link to optical-switches-explained; optical article already linked back at lines 18 and 91; readers of the magnetic piece learning about optical had no path to the companion deep-dive)
+- ease: 7 (single closing sentence addition in the callout)
+- score: 6.3 (impact × ease / 10)
+- issue: #312
+- addressed in: f160e48, closes #312
