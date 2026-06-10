@@ -3224,3 +3224,15 @@ passes accumulate signals.)
 - suggested fix: append closing sentence to the gasket-mount paragraph → "For a breakdown of how gasket, top-mount, and tray-mount designs differ and the acoustic isolation each provides by default, see [mounting styles compared](/article/mounting-styles-compared)."
 - issue: #314
 - addressed in: f3c3464, closes #314
+
+### [x] [content] [6.3] lubing-switches-guide — lubing-101 cross-link missing at article close
+- category: content
+- filed: 2026-06-10 by cloud /iterate audit
+- impact: 7 (lubing-switches-guide published 2026-06-05 with zero outbound article cross-links; lubing-101 is the #1-traffic article on the site and already links forward to lubing-switches-guide as "the step-by-step application reference"; a reader arriving on lubing-switches-guide from search has no editorial path to the broader context article explaining what lubing changes and when it earns its keep)
+- ease: 9 (single sentence addition at article close — same pattern as all prior cross-link fixes)
+- score: 6.3 (impact × ease / 10)
+- observation: lubing-switches-guide.mdx has zero outbound prose cross-links to any other article. lubing-101 already links forward to it explicitly ("Builders ready to start and wanting the step-by-step application reference — which lubes go where, in what order, and on which surfaces to skip — can find it in [lubing switches: what to use, how much, and what to skip](/article/lubing-switches-guide)"). The reverse path — from the application reference back to the decision-framework article — does not exist. The bidirectional pair is half-complete.
+- evidence: apps/web/src/content/articles/lubing-switches-guide.mdx — grep for /article/ returns 0 matches; lubing-101.mdx:92 links forward to lubing-switches-guide explicitly.
+- suggested fix: add closing sentence to lubing-switches-guide linking to lubing-101 as the decision-framework companion.
+- issue: #315
+- addressed in: 7e8a364, closes #315
