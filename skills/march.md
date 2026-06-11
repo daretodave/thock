@@ -272,7 +272,19 @@ This files AUDIT rows (`content-gaps`, score 7.0) for any `live` or
 `announced` group-buy records with no `relatedArticle` — enforcing
 bearings.md Rule 3 mechanically. Deduplicates against existing AUDIT
 rows. If it exits non-zero, log and continue — the survey is
-best-effort. Then fall through to Step 3c (expand).
+best-effort.
+
+Then run the stale group-buy scanner (Phase 42 amendment):
+
+```bash
+node scripts/group-buy-status-check.mjs --write
+```
+
+This files AUDIT rows (`data`, score 3.6) for any `live` or `announced`
+group-buy records whose `endDate` is in the past — enforcing data hygiene
+mechanically. Deduplicates against existing AUDIT rows. If it exits
+non-zero, log and continue — the scanner is best-effort. Then fall
+through to Step 3c (expand).
 
 #### 3c. Expand due (rate-limited, posture-gated)?
 

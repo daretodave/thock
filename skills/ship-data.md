@@ -154,6 +154,22 @@ Deduplication is built in — repeated runs are safe. If the script exits
 non-zero, log the error and continue; this check is best-effort, not
 blocking.
 
+#### Step 4c — Check for stale status when adding or updating a group-buy record (phase 42 rule)
+
+After writing the JSON (and after Step 4b), run the stale status scanner:
+
+```bash
+node scripts/group-buy-status-check.mjs --write
+```
+
+If the record has `endDate < today` and `status ∈ {live, announced}`, the
+script appends a `data` AUDIT row (score 3.6) so the next `/ship-data` tick
+corrects the status field.
+
+Deduplication is built in — repeated runs are safe. If the script exits
+non-zero, log the error and continue; this check is best-effort, not
+blocking.
+
 #### Step 4a — Bundle hero art when adding a group-buy record (phase 23 rule)
 
 When `<entity>` is `group-buys`, the new record's `heroImage`
