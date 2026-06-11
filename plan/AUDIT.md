@@ -72,6 +72,18 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [content] [6.3] cherry-mx2a-revision — optical-switches-explained cross-link missing at optical mention
+- category: content
+- filed: 2026-06-11 by cloud /iterate audit
+- impact: 7 (cherry-mx2a-revision is a high-traffic Trends article; line 87 links "Hall-effect" to the dedicated deep-dive but leaves "optical switches" unlinked despite optical-switches-explained existing; the asymmetry is notable — same phrase, same sensing-lineage category, one linked and one not)
+- ease: 9 (single inline link wrap — "optical switches" → [optical switches](/article/optical-switches-explained) at line 87)
+- score: 6.3 (impact × ease / 10)
+- observation: cherry-mx2a-revision line 87 reads "...by [Hall-effect](/article/hall-effect-mainstream) and optical switches" — Hall-effect is linked but "optical switches" is unlinked; optical-switches-explained is the canonical beam-interrupt deep-dive; magnetic-switches-deep-dive and hall-effect-mainstream both cross-link to optical-switches-explained; cherry-mx2a-revision was the remaining article in the sensing-lineage set without this link.
+- evidence: apps/web/src/content/articles/cherry-mx2a-revision.mdx:87 — "...and optical switches" — "optical switches" unlinked; grep for "optical-switches-explained" returned 0 matches before fix.
+- suggested fix: wrap "optical switches" → [optical switches](/article/optical-switches-explained) at line 87
+- issue: #319
+- addressed in: 1d4a363, closes #319
+
 ### [x] [content] [6.3] hall-effect-mainstream — optical-switches-explained cross-link missing at HE/optical callout
 - category: content
 - filed: 2026-06-10 by cloud /iterate audit
