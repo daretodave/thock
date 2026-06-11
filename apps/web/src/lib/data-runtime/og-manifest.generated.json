@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "slug": "o-ring-mod",
+      "readTime": 8,
+      "frontmatter": {
+        "title": "The o-ring mod: soft landings for tray-mount and top-mount boards",
+        "lede": "A $2 bag of silicone O-rings is enough to give a tray-mount board meaningfully more flex and a cleaner sound. Here is the full procedure and what to realistically expect.",
+        "pillar": "ideas",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "optical-switches-explained",
       "readTime": 12,
       "frontmatter": {
@@ -501,5 +511,5 @@
       }
     }
   ],
-  "generatedAt": "2026-06-10T17:37:52.218Z"
+  "generatedAt": "2026-06-11T01:07:49.789Z"
 }

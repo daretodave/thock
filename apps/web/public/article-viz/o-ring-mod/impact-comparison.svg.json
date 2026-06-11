@@ -1,0 +1,25 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-09T10:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "o-ring-mod",
+  "article_pillar": "ideas",
+  "section_anchor": "results-to-expect",
+  "brief_summary": "Before-and-after acoustic impact strip at matching vertical scale. Left panel ('no O-ring'): a tall narrow spike polyline in caution-red with a faint red fill area, annotated 'sharp peak / metallic bottom-out' and 'brief, concentrated, resonant'. Right panel ('with O-ring'): a lower, broader rounded bell-curve polyline in ochre with faint ochre fill, annotated 'lower, broader peak / energy absorbed and spread' and 'distributed, lower energy, quieter'. Both share the same vertical energy scale bracket.",
+  "target": "apps/web/public/article-viz/o-ring-mod/impact-comparison.svg",
+  "splash_color": { "name": "ochre", "oklch": "oklch(0.76 0.095 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "o-ring-mod.mdx § 'Results to expect' — 'The sharp metallic bottom-out tone common to full-metal tray-mount boards ... softens noticeably. The impact energy that was bouncing directly off the standoffs and ringing the case is now being partially absorbed by the silicone before it gets there. The resulting sound is lower, rounder, and less fatiguing'",
+    "o-ring-mod.mdx § 'Results to expect' — 'The flex increase is real but modest — on most tray-mount boards, 1–2mm of additional deflection at the PCB center'"
+  ],
+  "outputs": ["apps/web/public/article-viz/o-ring-mod/impact-comparison.svg"],
+  "warnings": [
+    "Waveform shapes are qualitative and schematic — they illustrate the described acoustic character (sharp vs. broad/lower) rather than data from a measured spectrogram. The article body explicitly describes the qualitative result; the viz renders that description visually."
+  ]
+}

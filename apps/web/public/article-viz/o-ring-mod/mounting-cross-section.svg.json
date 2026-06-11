@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-09T10:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "o-ring-mod",
+  "article_pillar": "ideas",
+  "section_anchor": "what-it-does",
+  "brief_summary": "Side-by-side cross-section diptych. Left ('no O-ring · hard metal contact'): case with standoff, PCB, and screw; caution-red spark marks at the standoff-to-PCB joint indicate hard metal-on-metal impact energy. Right ('with O-ring · silicone cushion'): identical structure with an ochre ellipse (O-ring) seated on the standoff top between standoff and PCB; rounded ochre arrow indicates energy is absorbed and dispersed rather than transmitted.",
+  "target": "apps/web/public/article-viz/o-ring-mod/mounting-cross-section.svg",
+  "splash_color": { "name": "ochre", "oklch": "oklch(0.76 0.095 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "o-ring-mod.mdx § 'What it does' — 'A tray-mount keyboard bolts the PCB directly onto threaded metal standoffs that rise from the case bottom. Every keystroke sends energy through the switch, into the PCB, and straight into those standoff-to-PCB contact points — which are rigid'",
+    "o-ring-mod.mdx § 'What it does' — 'The O-ring mod inserts a small silicone ring between the PCB hole and the head of each mounting screw (or between the PCB and the top of each standoff, depending on standoff geometry). The ring is compliant — it compresses slightly under tightening torque and under keystroke load'"
+  ],
+  "outputs": ["apps/web/public/article-viz/o-ring-mod/mounting-cross-section.svg"],
+  "warnings": []
+}

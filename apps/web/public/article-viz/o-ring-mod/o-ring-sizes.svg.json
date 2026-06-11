@@ -1,0 +1,25 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-09T10:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "o-ring-mod",
+  "article_pillar": "ideas",
+  "section_anchor": "step-by-step",
+  "brief_summary": "Four-row sizing reference table rendered as an SVG chart. Rows for M3, M4, #4-40, and #6-32 screw sizes, each showing shank diameter, recommended O-ring inner diameter range, and common board types. M3 and #4-40 rows highlighted with ochre left-bar and background fill as the dominant hobby sizes. JetBrains Mono used for the dimensional values.",
+  "target": "apps/web/public/article-viz/o-ring-mod/o-ring-sizes.svg",
+  "splash_color": { "name": "ochre", "oklch": "oklch(0.76 0.095 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "o-ring-mod.mdx § 'What you need' — 'The standard choice is #4-40 or M3 silicone O-rings. Most keyboards sold in this market use M3 or #4-40 machine screws for PCB mounting'",
+    "o-ring-mod.mdx § 'What you need — Callout' — 'If you are unsure of your board's screw size, M3 is the safer default for most keyboards sold since 2020 ... For M3 screws, an ID of 2.5–2.8mm works well'"
+  ],
+  "outputs": ["apps/web/public/article-viz/o-ring-mod/o-ring-sizes.svg"],
+  "warnings": [
+    "Shank diameter values for #4-40 (2.84mm) and #6-32 (3.51mm) are standard imperial fastener specifications. M3 and M4 diameters are ISO metric standard values. No fabricated numbers."
+  ]
+}

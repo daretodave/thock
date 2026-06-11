@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Before-and-after acoustic impact strip: left panel shows a tall sharp spike waveform in caution-red for hard metal contact, right panel shows a shorter broader rounded waveform in ochre for O-ring absorbed impact, both at the same vertical scale</title>
+
+  <!-- Title -->
+  <text x="600" y="58" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">keystroke impact — hard contact vs. silicone absorbed</text>
+
+  <!-- ====== LEFT PANEL — no O-ring, hard spike ====== -->
+  <text x="300" y="98" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.9">no O-ring</text>
+
+  <!-- Baseline -->
+  <line x1="100" y1="360" x2="500" y2="360" stroke-opacity="0.35"/>
+
+  <!-- Sharp spike waveform — caution-red -->
+  <polyline points="100,360 140,360 160,360 200,355 220,340 240,200 250,110 260,200 280,330 300,352 320,358 360,360 500,360"
+    stroke="oklch(0.62 0.13 25)" stroke-width="2.5" stroke-opacity="0.9" fill="none"/>
+  <!-- Spike fill — faint red area -->
+  <polygon points="100,360 140,360 160,360 200,355 220,340 240,200 250,110 260,200 280,330 300,352 320,358 360,360 500,360"
+    fill="oklch(0.62 0.13 25 / 0.12)" stroke="none"/>
+
+  <!-- Peak annotation -->
+  <line x1="250" y1="110" x2="280" y2="78" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.75" stroke-width="1.5"/>
+  <text x="284" y="76" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.62 0.13 25)" stroke="none" opacity="0.9">sharp peak</text>
+  <text x="284" y="92" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.62 0.13 25)" stroke="none" opacity="0.7">metallic bottom-out</text>
+
+  <!-- Scale bracket left -->
+  <line x1="90" y1="110" x2="90" y2="360" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.3" stroke-width="1.5"/>
+  <line x1="85" y1="110" x2="95" y2="110" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.3" stroke-width="1.5"/>
+  <line x1="85" y1="360" x2="95" y2="360" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.3" stroke-width="1.5"/>
+  <text x="82" y="240" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.4" transform="rotate(-90 82 240)">energy</text>
+
+  <!-- Label below -->
+  <text x="300" y="392" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.75">brief, concentrated, resonant</text>
+
+  <!-- ====== DIVIDER ====== -->
+  <line x1="600" y1="80" x2="600" y2="400" stroke-opacity="0.18" stroke-dasharray="6 4"/>
+
+  <!-- ====== RIGHT PANEL — with O-ring, rounded wave ====== -->
+  <text x="900" y="98" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.76 0.095 80)" stroke="none" text-anchor="middle" opacity="0.95">with O-ring</text>
+
+  <!-- Baseline -->
+  <line x1="700" y1="360" x2="1100" y2="360" stroke-opacity="0.35"/>
+
+  <!-- Broad, lower rounded waveform — ochre -->
+  <polyline points="700,360 720,360 740,358 760,350 780,334 810,288 840,248 870,226 900,220 930,226 960,248 990,280 1020,320 1050,348 1070,357 1090,360 1100,360"
+    stroke="oklch(0.76 0.095 80)" stroke-width="2.5" stroke-opacity="0.95" fill="none"/>
+  <!-- Area fill — faint ochre -->
+  <polygon points="700,360 720,360 740,358 760,350 780,334 810,288 840,248 870,226 900,220 930,226 960,248 990,280 1020,320 1050,348 1070,357 1090,360 1100,360"
+    fill="oklch(0.76 0.095 80 / 0.15)" stroke="none"/>
+
+  <!-- Peak annotation -->
+  <line x1="900" y1="220" x2="930" y2="78" stroke="oklch(0.76 0.095 80)" stroke-opacity="0.75" stroke-width="1.5"/>
+  <text x="934" y="76" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.76 0.095 80)" stroke="none" opacity="0.95">lower, broader peak</text>
+  <text x="934" y="92" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.76 0.095 80)" stroke="none" opacity="0.7">energy absorbed and spread</text>
+
+  <!-- Same-scale bracket right -->
+  <line x1="690" y1="110" x2="690" y2="360" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.3" stroke-width="1.5"/>
+  <line x1="685" y1="110" x2="695" y2="110" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.3" stroke-width="1.5"/>
+  <line x1="685" y1="360" x2="695" y2="360" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.3" stroke-width="1.5"/>
+
+  <!-- Same-scale annotation -->
+  <text x="600" y="130" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.42">same scale</text>
+
+  <!-- Label below -->
+  <text x="900" y="392" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.76 0.095 80)" stroke="none" text-anchor="middle" opacity="0.8">distributed, lower energy, quieter</text>
+
+  <!-- Caption -->
+  <text x="600" y="432" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.62">the silicone ring absorbs what was bouncing off the standoff into the case</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="36" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

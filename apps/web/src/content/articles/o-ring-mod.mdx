@@ -1,0 +1,94 @@
+---
+title: "The o-ring mod: soft landings for tray-mount and top-mount boards"
+slug: o-ring-mod
+pillar: ideas
+publishedAt: '2026-06-09T00:00:00.000Z'
+updatedAt: '2026-06-11T00:00:00.000Z'
+author: thock
+lede: "A $2 bag of silicone O-rings is enough to give a tray-mount board meaningfully more flex and a cleaner sound. Here is the full procedure and what to realistically expect."
+heroImage: /hero-art/o-ring-mod.svg
+heroImageAlt: "Cross-section diagram of a PCB mounting standoff with a silicone O-ring seated on the post, reducing hard contact between PCB and case"
+tags:
+  - modding
+  - acoustic
+  - tray-mount
+mentionedParts: []
+readTimeMinutes: 5
+featured: false
+popularityScore: 30
+---
+
+A $2–$5 bag of silicone O-rings, a screwdriver, and thirty minutes is the entire investment. The O-ring mod converts every rigid standoff-to-PCB contact point in a tray-mount or top-mount board into a small silicone cushion. The result is a softer PCB landing, a modest increase in vertical give, and a reduction in the metallic clack that budget boards develop when the PCB bottoms directly against metal. No soldering, no permanent modification, fully reversible.
+
+## What it does
+
+A tray-mount keyboard bolts the PCB directly onto threaded metal standoffs that rise from the case bottom. Every keystroke sends energy through the switch, into the PCB, and straight into those standoff-to-PCB contact points — which are rigid, which means the energy bounces back as a hard, metallic tap. On a full-metal or die-cast zinc case the effect is exaggerated further because the case itself rings. This is the characteristic hollow-clack that many associate with budget boards and entry-level prebuilts. For a breakdown of how tray-mount compares acoustically to top-mount and gasket designs, see [mounting styles compared](/article/mounting-styles-compared).
+
+The O-ring mod inserts a small silicone ring between the PCB hole and the head of each mounting screw (or between the PCB and the top of each standoff, depending on standoff geometry). The ring is compliant — it compresses slightly under tightening torque and under keystroke load, absorbing a fraction of the impact energy before it can propagate into the metal. Flex increases by roughly 1–2mm on most tray-mounts. The sound shift is more noticeable than the flex: the sharp metallic bottom-out tone softens into something closer to the thuddy landing that gasket-mount boards deliver by design.
+
+<InlineViz
+  src="/article-viz/o-ring-mod/mounting-cross-section.svg"
+  alt="Side-by-side cross-section of tray-mount PCB mounting. Left panel shows PCB resting directly on a metal standoff — rigid contact, with a caution-red spark indicating the hard energy bounce. Right panel shows an O-ring seated on the standoff post between the standoff top and PCB — the ring compresses, the energy path softens, labelled in ochre."
+  caption="Metal-to-PCB on the left. Silicone cushion on the right."
+  accent="ochre"
+/>
+
+The mod does not transform a tray-mount into a gasket-mount. Gasket design already decouples the plate from the case through foam strips — the O-ring mod operates at a different point in the stack, at the PCB-to-standoff interface rather than the plate-to-case interface. What it delivers is a step toward the softer end of the tray-mount spectrum, not a category change.
+
+## What you need
+
+The standard choice is <Mono>#4-40</Mono> or <Mono>M3</Mono> silicone O-rings. Most keyboards sold in this market use M3 or #4-40 machine screws for PCB mounting, so one of those two sizes will fit the majority of boards. Silicone is the correct material — not nitrile, not EPDM. Silicone compresses more predictably across a wider temperature range, maintains its shape under repeated compression cycles, and does not harden over time the way nitrile can. Clear or black silicone are both fine acoustically; the difference is cosmetic. A pack of 100 rings costs $2–$4 at a hardware store or online. One board typically uses 5–10 screws, so a single bag covers many builds.
+
+<Callout type="note" title="Which size to order">
+  If you are unsure of your board's screw size, M3 is the safer default for most keyboards sold since 2020 — it is the dominant thread standard in the hobby. The #4-40 imperial size covers older boards and a number of US-designed keyboards. O-ring ID (inner diameter) should be slightly smaller than the screw shank to seat firmly; for M3 screws, an ID of 2.5–2.8mm works well.
+</Callout>
+
+## Step-by-step
+
+**1. Open the board.** Remove the case screws — on a tray-mount these are typically on the case underside or perimeter — and separate the case halves. On many budget boards the PCB is already partially visible; on some it will still be held in by the PCB mounting screws themselves.
+
+**2. Remove the PCB.** Unscrew the PCB mounting screws and set them aside in a cup or container in order. Take note of how the PCB sits on the standoffs: whether the screw head bears against the PCB from above (through a hole, clamping into the standoff below) or whether the PCB rests on the top of a standoff and the screw threads downward into it. This determines where the O-ring goes.
+
+**3. Thread one O-ring onto each screw or standoff.** For the most common geometry — screw from above, threading into the standoff — slide one O-ring down the screw shank so it sits between the screw head and the PCB surface. The ring seats in the PCB hole, and when the screw is tightened the head compresses the ring rather than bearing directly against the FR4. Some builders double-stack (two O-rings per screw) for more compression; start with single rings and evaluate before committing to doubles. Double-stacking introduces more play and risks misalignment on boards with tight PCB tolerances.
+
+**4. Reassemble with light torque.** Thread each screw in by hand until snug, then turn one additional quarter-rotation. Do not torque hard — over-tightening compresses the O-rings fully against their stops and defeats the mod. The PCB should feel slightly springy when pressed down gently at the center before the case is fully closed.
+
+<InlineViz
+  src="/article-viz/o-ring-mod/o-ring-sizes.svg"
+  alt="A sizing reference chart with four rows for M3, M4, number-four-forty, and number-six screw sizes. Each row shows the screw shank diameter, a recommended O-ring inner diameter range, and a short note on which board types commonly use each size. M3 and number-four-forty are highlighted in ochre as the dominant hobby sizes."
+  caption="Dominant thread sizes in the hobby and their matching O-ring IDs."
+  accent="ochre"
+/>
+
+**5. Close the case and test.** Press the center of the board gently with a finger before inserting case screws — you should feel a small amount of give. If the board feels rigid, the O-rings may be over-compressed. If the PCB shifts noticeably under light pressure, the O-rings are too thick and the mounting is too loose. The target is spring-under-press, not float.
+
+<Callout type="warn" title="PCB height and plate alignment">
+  On boards where the PCB height relative to the standoffs determines plate-to-PCB gap, O-rings lift the PCB slightly off the standoff tops. This is usually less than 1mm but can affect plate alignment on tight-tolerance designs. Check that the plate still seats flush in its retention clips or standoffs after adding O-rings. If the plate sits proud of the case top edge after the mod, try thinner O-rings or single rings instead of doubles.
+</Callout>
+
+## Results to expect
+
+The flex increase is real but modest — on most tray-mount boards, 1–2mm of additional deflection at the PCB center measured under moderate typing load. That number is smaller than what a well-tuned gasket board delivers, but it is felt across the board, not just at the corners. Typists who press hard will notice it immediately; light typists may only feel it on deliberate test presses.
+
+The acoustic change is more significant than the flex change and is the primary reason the mod is worth doing on resonant cases. The sharp metallic bottom-out tone common to full-metal tray-mount boards — particularly prevalent on die-cast zinc and thick aluminum cases — softens noticeably. The impact energy that was bouncing directly off the standoffs and ringing the case is now being partially absorbed by the silicone before it gets there. The resulting sound is lower, rounder, and less fatiguing in long typing sessions.
+
+<InlineViz
+  src="/article-viz/o-ring-mod/impact-comparison.svg"
+  alt="Before-and-after acoustic impact strip. Left panel labelled 'no O-ring' shows a tall sharp spike waveform in caution-red above a standoff, representing hard metallic impact energy. Right panel labelled 'with O-ring' shows a shorter, broader rounded waveform in ochre, indicating absorbed and dispersed impact energy. Both panels share the same vertical scale."
+  caption="Hard contact spikes. O-ring rounds and lowers the impact."
+  accent="ochre"
+/>
+
+The mod works best on full-metal cases where case resonance is the dominant acoustic problem. Thin-walled plastic tray-mount cases benefit less — they resonate differently and the primary fix there is [PE foam in the case cavity](/article/pe-foam-mod). Once the O-ring mod is done, [the tape mod](/article/tape-mod) is a natural next layer: it targets PCB-surface resonance, a distinct acoustic path from the standoff-impact energy the O-ring mod addresses.
+
+## When it does not help much
+
+If the board is already gasket-mounted, skip this mod. A gasket design already decouples the plate from the case through compliant foam strips — the acoustic isolation the O-ring mod delivers at the standoff level is already built into the mounting architecture at a higher level. Adding O-rings to a gasket board introduces unnecessary play without meaningful acoustic benefit. For a full explanation of why gasket boards behave differently and where modding effort is better spent on them, see [what gasket mount actually delivers](/article/gasket-mount-reality).
+
+Boards with very tight PCB-to-standoff tolerances — typically tight-tolerance aluminum customs where the PCB height is precisely controlled — may not seat cleanly with O-rings. If the O-rings prevent the case from closing flat, they are too thick for that design. Try thinner rings (Shore 40A instead of 60A) before giving up; the softer durometer compresses more fully under the screw head and takes up less stack height at rest.
+
+## The before-and-after test
+
+Do a typing test on bare board, with no case screws — just PCB and switches — before starting the mod. Listen to the standoff contact points specifically: heavy presses near the center of the board versus near the edges will reveal which screws are bearing the most load. After the mod, run the same test. The delta is most obvious when you go back to back rather than relying on memory.
+
+For a broader view of where the O-ring mod fits across the full acoustic stack — case resonance, PCB resonance, plate resonance, and switch sound — [sound dampening compared](/article/sound-dampening-compared) maps each mod to its layer and gives a framework for deciding which to do first.

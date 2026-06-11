@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>O-ring sizing reference chart: M3, M4, #4-40, and #6-32 screw sizes with recommended O-ring inner diameter ranges and common board types using each size. M3 and #4-40 highlighted as dominant hobby sizes.</title>
+
+  <!-- Title -->
+  <text x="600" y="60" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">O-ring sizing — match the ring to the screw thread</text>
+
+  <!-- Header row -->
+  <text x="160" y="104" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">screw size</text>
+  <text x="360" y="104" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">shank diam.</text>
+  <text x="560" y="104" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">O-ring ID</text>
+  <text x="860" y="104" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">commonly used in</text>
+
+  <!-- Divider under header -->
+  <line x1="80" y1="112" x2="1120" y2="112" stroke-opacity="0.22"/>
+
+  <!-- ROW 1 — M3 highlighted -->
+  <rect x="80" y="120" width="1040" height="72" fill="oklch(0.76 0.095 80 / 0.08)" stroke="oklch(0.76 0.095 80)" stroke-opacity="0.55" stroke-width="1.5"/>
+  <rect x="80" y="120" width="6" height="72" fill="oklch(0.76 0.095 80)" stroke="none" opacity="0.9"/>
+
+  <text x="160" y="152" font-family="JetBrains Mono, monospace" font-size="16" fill="oklch(0.76 0.095 80)" stroke="none" text-anchor="middle">M3</text>
+  <text x="160" y="172" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.76 0.095 80)" stroke="none" text-anchor="middle" opacity="0.8">metric · dominant</text>
+  <text x="360" y="160" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">3.0 mm</text>
+  <text x="560" y="152" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.76 0.095 80)" stroke="none" text-anchor="middle">2.5 – 2.8 mm</text>
+  <text x="560" y="170" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">slightly under shank</text>
+  <text x="860" y="150" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">most post-2018 customs + prebuilts</text>
+  <text x="860" y="168" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">Keychron, KBDfans, Mode, Qwertykeys boards</text>
+
+  <!-- ROW 2 — M4 -->
+  <rect x="80" y="200" width="1040" height="64" stroke-opacity="0.28" fill="oklch(0.78 0.005 90 / 0.03)"/>
+  <text x="160" y="229" font-family="JetBrains Mono, monospace" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.82">M4</text>
+  <text x="160" y="249" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">metric · less common</text>
+  <text x="360" y="238" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.8">4.0 mm</text>
+  <text x="560" y="229" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.82">3.4 – 3.7 mm</text>
+  <text x="560" y="247" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">slightly under shank</text>
+  <text x="860" y="228" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.8">some TKL and full-size aluminum boards</text>
+  <text x="860" y="246" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">verify screw size before ordering</text>
+
+  <!-- ROW 3 — #4-40 highlighted -->
+  <rect x="80" y="272" width="1040" height="72" fill="oklch(0.76 0.095 80 / 0.08)" stroke="oklch(0.76 0.095 80)" stroke-opacity="0.55" stroke-width="1.5"/>
+  <rect x="80" y="272" width="6" height="72" fill="oklch(0.76 0.095 80)" stroke="none" opacity="0.9"/>
+  <text x="160" y="304" font-family="JetBrains Mono, monospace" font-size="16" fill="oklch(0.76 0.095 80)" stroke="none" text-anchor="middle">#4-40</text>
+  <text x="160" y="324" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.76 0.095 80)" stroke="none" text-anchor="middle" opacity="0.8">imperial · dominant</text>
+  <text x="360" y="312" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">2.84 mm</text>
+  <text x="560" y="304" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.76 0.095 80)" stroke="none" text-anchor="middle">2.4 – 2.6 mm</text>
+  <text x="560" y="322" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">slightly under shank</text>
+  <text x="860" y="302" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">US-designed keyboards, many Drop boards</text>
+  <text x="860" y="320" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">older boards, Filco-adjacent designs</text>
+
+  <!-- ROW 4 — #6-32 -->
+  <rect x="80" y="352" width="1040" height="64" stroke-opacity="0.28" fill="oklch(0.78 0.005 90 / 0.03)"/>
+  <text x="160" y="381" font-family="JetBrains Mono, monospace" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.82">#6-32</text>
+  <text x="160" y="401" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">imperial · case screws</text>
+  <text x="360" y="390" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.8">3.51 mm</text>
+  <text x="560" y="381" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.82">3.0 – 3.2 mm</text>
+  <text x="560" y="399" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">slightly under shank</text>
+  <text x="860" y="381" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.8">some larger case assemblies</text>
+  <text x="860" y="399" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">rarely used for PCB mounting</text>
+
+  <!-- Legend -->
+  <text x="600" y="444" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">ochre rows = the two dominant hobby sizes — order one of these if unsure</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="36" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

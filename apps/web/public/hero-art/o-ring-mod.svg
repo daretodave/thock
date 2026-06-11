@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — bare PCB top-down with mounting holes and O-ring callout</title>
+
+  <!-- Ochre wash under the PCB body -->
+  <rect x="190" y="180" width="680" height="390" rx="10" fill="oklch(0.78 0.12 75 / 0.08)" stroke="none"/>
+
+  <!-- PCB outline (bare board, no keycaps) -->
+  <rect x="190" y="180" width="680" height="390" rx="10"/>
+  <!-- Inner board edge / silkscreen boundary -->
+  <rect x="210" y="200" width="640" height="350" rx="6" stroke-opacity="0.35"/>
+
+  <!-- Mounting hole grid — 9 holes typical for tray mount -->
+  <!-- Corner holes -->
+  <circle cx="240" cy="230" r="8"/>
+  <circle cx="830" cy="230" r="8"/>
+  <circle cx="240" cy="540" r="8"/>
+  <circle cx="830" cy="540" r="8"/>
+  <!-- Mid-edge holes -->
+  <circle cx="535" cy="220" r="8"/>
+  <circle cx="535" cy="550" r="8"/>
+  <circle cx="200" cy="375" r="8"/>
+  <circle cx="870" cy="375" r="8"/>
+  <!-- Center hole -->
+  <circle cx="535" cy="375" r="8"/>
+
+  <!-- Mounting hole screw hole inner rings (inner detail) -->
+  <circle cx="240" cy="230" r="4" stroke-opacity="0.55"/>
+  <circle cx="830" cy="230" r="4" stroke-opacity="0.55"/>
+  <circle cx="240" cy="540" r="4" stroke-opacity="0.55"/>
+  <circle cx="830" cy="540" r="4" stroke-opacity="0.55"/>
+  <circle cx="535" cy="220" r="4" stroke-opacity="0.55"/>
+  <circle cx="535" cy="550" r="4" stroke-opacity="0.55"/>
+  <circle cx="200" cy="375" r="4" stroke-opacity="0.55"/>
+  <circle cx="870" cy="375" r="4" stroke-opacity="0.55"/>
+  <circle cx="535" cy="375" r="4" stroke-opacity="0.55"/>
+
+  <!-- PCB trace suggestion — faint horizontal bands hinting at trace routing -->
+  <g stroke-opacity="0.12">
+    <line x1="220" y1="290" x2="850" y2="290"/>
+    <line x1="220" y1="330" x2="850" y2="330"/>
+    <line x1="220" y1="420" x2="850" y2="420"/>
+    <line x1="220" y1="460" x2="850" y2="460"/>
+  </g>
+
+  <!-- Switch footprint grid hint — faint dots at switch positions (5×14 sample) -->
+  <g fill="oklch(0.78 0.005 90 / 0.20)" stroke="none">
+    <!-- Row 1 -->
+    <circle cx="260" cy="290" r="2.5"/>
+    <circle cx="308" cy="290" r="2.5"/>
+    <circle cx="356" cy="290" r="2.5"/>
+    <circle cx="404" cy="290" r="2.5"/>
+    <circle cx="452" cy="290" r="2.5"/>
+    <circle cx="500" cy="290" r="2.5"/>
+    <circle cx="548" cy="290" r="2.5"/>
+    <circle cx="596" cy="290" r="2.5"/>
+    <circle cx="644" cy="290" r="2.5"/>
+    <circle cx="692" cy="290" r="2.5"/>
+    <circle cx="740" cy="290" r="2.5"/>
+    <circle cx="788" cy="290" r="2.5"/>
+    <circle cx="836" cy="290" r="2.5"/>
+    <!-- Row 2 -->
+    <circle cx="260" cy="338" r="2.5"/>
+    <circle cx="308" cy="338" r="2.5"/>
+    <circle cx="356" cy="338" r="2.5"/>
+    <circle cx="404" cy="338" r="2.5"/>
+    <circle cx="452" cy="338" r="2.5"/>
+    <circle cx="500" cy="338" r="2.5"/>
+    <circle cx="548" cy="338" r="2.5"/>
+    <circle cx="596" cy="338" r="2.5"/>
+    <circle cx="644" cy="338" r="2.5"/>
+    <circle cx="692" cy="338" r="2.5"/>
+    <circle cx="740" cy="338" r="2.5"/>
+    <circle cx="788" cy="338" r="2.5"/>
+    <circle cx="836" cy="338" r="2.5"/>
+    <!-- Row 3 -->
+    <circle cx="260" cy="386" r="2.5"/>
+    <circle cx="308" cy="386" r="2.5"/>
+    <circle cx="356" cy="386" r="2.5"/>
+    <circle cx="404" cy="386" r="2.5"/>
+    <circle cx="452" cy="386" r="2.5"/>
+    <circle cx="548" cy="386" r="2.5"/>
+    <circle cx="596" cy="386" r="2.5"/>
+    <circle cx="644" cy="386" r="2.5"/>
+    <circle cx="692" cy="386" r="2.5"/>
+    <circle cx="740" cy="386" r="2.5"/>
+    <circle cx="788" cy="386" r="2.5"/>
+    <circle cx="836" cy="386" r="2.5"/>
+    <!-- Row 4 -->
+    <circle cx="260" cy="434" r="2.5"/>
+    <circle cx="308" cy="434" r="2.5"/>
+    <circle cx="356" cy="434" r="2.5"/>
+    <circle cx="404" cy="434" r="2.5"/>
+    <circle cx="452" cy="434" r="2.5"/>
+    <circle cx="500" cy="434" r="2.5"/>
+    <circle cx="548" cy="434" r="2.5"/>
+    <circle cx="596" cy="434" r="2.5"/>
+    <circle cx="644" cy="434" r="2.5"/>
+    <circle cx="692" cy="434" r="2.5"/>
+    <circle cx="740" cy="434" r="2.5"/>
+    <circle cx="788" cy="434" r="2.5"/>
+  </g>
+
+  <!-- ── CALLOUT: exploded view of bottom-left mounting hole with O-ring ─── -->
+
+  <!-- Leader line from bottom-left hole to callout zone -->
+  <g stroke="oklch(0.78 0.12 75)" stroke-width="1.5">
+    <path d="M 240 548 L 240 610 L 360 670" fill="none"/>
+  </g>
+
+  <!-- Exploded cross-section callout box -->
+  <!-- Standoff body -->
+  <rect x="340" y="620" width="40" height="80" rx="3" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.7"/>
+  <!-- Standoff inner channel (screw hole) -->
+  <rect x="352" y="628" width="16" height="64" rx="2" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.4"/>
+
+  <!-- O-ring seated on top of standoff — ochre fill -->
+  <ellipse cx="360" cy="618" rx="22" ry="7" fill="oklch(0.78 0.12 75 / 0.55)" stroke="oklch(0.78 0.12 75)" stroke-width="2"/>
+  <!-- O-ring cross-section hint (torus top profile) -->
+  <ellipse cx="360" cy="618" rx="14" ry="4" fill="none" stroke="oklch(0.78 0.12 75 / 0.5)" stroke-width="1.5"/>
+
+  <!-- PCB edge at callout — hovering above the o-ring -->
+  <rect x="310" y="596" width="100" height="14" rx="2" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.85"/>
+  <!-- PCB label -->
+  <text x="415" y="607" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">PCB</text>
+
+  <!-- O-ring label with bracket line -->
+  <line x1="385" y1="618" x2="430" y2="618" stroke="oklch(0.78 0.12 75)" stroke-width="1.5"/>
+  <text x="434" y="622" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.12 75)" stroke="none">O-ring</text>
+
+  <!-- Standoff label -->
+  <line x1="384" y1="660" x2="430" y2="660" stroke="oklch(0.78 0.005 90)" stroke-width="1.5" stroke-opacity="0.7"/>
+  <text x="434" y="664" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">standoff</text>
+
+  <!-- Screw descending into standoff -->
+  <line x1="360" y1="580" x2="360" y2="600" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-opacity="0.6"/>
+  <path d="M 352 580 L 368 580 M 353 575 L 367 575 M 355 570 L 365 570" stroke="oklch(0.78 0.005 90)" stroke-width="1.5" stroke-opacity="0.5" fill="none"/>
+
+  <!-- Callout zone boundary (light dashed) -->
+  <rect x="290" y="565" width="160" height="150" rx="6" stroke="oklch(0.78 0.12 75 / 0.3)" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- Article title label -->
+  <text x="600" y="665" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">the o-ring mod</text>
+  <text x="600" y="692" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">tray-mount · top-mount · soft landings</text>
+
+  <!-- Bronze theme dot — upper right ornamental anchor -->
+  <circle cx="1158" cy="42" r="4" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

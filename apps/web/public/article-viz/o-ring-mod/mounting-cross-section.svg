@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Tray-mount PCB mounting — before and after the O-ring mod — showing hard metal-to-PCB contact versus a silicone O-ring cushion on the standoff</title>
+
+  <!-- Title -->
+  <text x="600" y="68" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">before and after — the standoff that was bottoming hard</text>
+
+  <!-- ============ LEFT PANEL — no O-ring ============ -->
+  <text x="300" y="108" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">no O-ring · hard metal contact</text>
+
+  <!-- Case bottom (left) -->
+  <rect x="100" y="420" width="400" height="24" stroke-opacity="0.7" fill="oklch(0.78 0.005 90 / 0.06)"/>
+  <text x="90" y="436" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.5">case</text>
+
+  <!-- Standoff left -->
+  <rect x="272" y="320" width="56" height="100" stroke-opacity="0.75" fill="oklch(0.78 0.005 90 / 0.08)"/>
+  <text x="300" y="313" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">standoff</text>
+
+  <!-- PCB left -->
+  <rect x="140" y="290" width="320" height="26" stroke-opacity="0.85" fill="oklch(0.78 0.005 90 / 0.04)"/>
+  <text x="90" y="307" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.6">PCB</text>
+
+  <!-- Screw left — head bears directly on PCB -->
+  <rect x="286" y="266" width="28" height="26" stroke-opacity="0.75" fill="oklch(0.78 0.005 90 / 0.08)"/>
+  <text x="300" y="258" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">screw</text>
+
+  <!-- Hard contact spark at PCB-standoff joint, left -->
+  <g stroke="oklch(0.62 0.13 25)" stroke-width="2.5" stroke-opacity="0.9">
+    <line x1="272" y1="316" x2="254" y2="299"/>
+    <line x1="272" y1="316" x2="247" y2="320"/>
+    <line x1="272" y1="316" x2="256" y2="332"/>
+    <line x1="272" y1="316" x2="264" y2="296"/>
+  </g>
+  <text x="218" y="350" font-family="Newsreader, serif" font-size="13" font-style="italic" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.9">hard impact</text>
+  <text x="218" y="366" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.75">metal on metal</text>
+
+  <!-- Hard contact spark, right side of standoff -->
+  <g stroke="oklch(0.62 0.13 25)" stroke-width="2.5" stroke-opacity="0.9">
+    <line x1="328" y1="316" x2="346" y2="299"/>
+    <line x1="328" y1="316" x2="353" y2="320"/>
+    <line x1="328" y1="316" x2="344" y2="332"/>
+  </g>
+
+  <!-- ============ DIVIDER ============ -->
+  <line x1="600" y1="90" x2="600" y2="458" stroke-opacity="0.18" stroke-dasharray="6 4"/>
+
+  <!-- ============ RIGHT PANEL — with O-ring ============ -->
+  <text x="900" y="108" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.76 0.095 80)" stroke="none" text-anchor="middle" opacity="0.95">with O-ring · silicone cushion</text>
+
+  <!-- Case bottom (right) -->
+  <rect x="700" y="420" width="400" height="24" stroke-opacity="0.7" fill="oklch(0.78 0.005 90 / 0.06)"/>
+  <text x="1112" y="436" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="start" opacity="0.5">case</text>
+
+  <!-- Standoff right -->
+  <rect x="872" y="328" width="56" height="92" stroke-opacity="0.75" fill="oklch(0.78 0.005 90 / 0.08)"/>
+  <text x="900" y="320" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">standoff</text>
+
+  <!-- O-ring — seated on standoff top, between standoff and PCB -->
+  <ellipse cx="900" cy="324" rx="30" ry="7" fill="oklch(0.76 0.095 80 / 0.28)" stroke="oklch(0.76 0.095 80)" stroke-width="2.5" stroke-opacity="0.95"/>
+  <line x1="932" y1="325" x2="958" y2="328" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.38" stroke-width="1.5"/>
+  <text x="962" y="322" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.76 0.095 80)" stroke="none" opacity="0.95">O-ring (M3 silicone)</text>
+  <text x="962" y="337" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">compresses under torque</text>
+
+  <!-- PCB right -->
+  <rect x="740" y="290" width="320" height="26" stroke-opacity="0.85" fill="oklch(0.78 0.005 90 / 0.04)"/>
+  <text x="1112" y="307" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="start" opacity="0.6">PCB</text>
+
+  <!-- Screw right -->
+  <rect x="886" y="266" width="28" height="26" stroke-opacity="0.75" fill="oklch(0.78 0.005 90 / 0.08)"/>
+  <text x="900" y="258" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">screw</text>
+
+  <!-- Soft absorbed energy arrow -->
+  <path d="M 842 344 Q 822 360 834 374" stroke="oklch(0.76 0.095 80)" stroke-width="2.5" stroke-opacity="0.9" fill="none"/>
+  <polygon points="834,374 828,362 844,368" fill="oklch(0.76 0.095 80)" stroke="none" opacity="0.9"/>
+  <text x="808" y="393" font-family="Newsreader, serif" font-size="13" font-style="italic" fill="oklch(0.76 0.095 80)" stroke="none" text-anchor="middle" opacity="0.9">absorbed</text>
+  <text x="808" y="408" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.76 0.095 80)" stroke="none" text-anchor="middle" opacity="0.75">energy dispersed</text>
+
+  <!-- Bottom caption -->
+  <text x="600" y="468" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">one ring per standoff — silicone, not nitrile</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>
