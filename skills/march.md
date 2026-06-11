@@ -101,6 +101,25 @@ If `IS_MONDAY=yes` AND `SNAPSHOT_EXISTS=no`:
    git push origin main
    ```
 
+4.5. **Run tracker linkage survey** (Phase 41 amendment) — after the snapshot
+   commits, enforce Rule 2 on any topics now past the 14-day threshold:
+
+   ```bash
+   node scripts/tracker-linkage-survey.mjs --write
+   ```
+
+   If it files new AUDIT rows, commit them:
+
+   ```bash
+   git add plan/AUDIT.md
+   git commit -m "audit: tracker Rule 2 gaps filed by tracker-linkage-survey.mjs
+
+   Cloud-Run: <run-url>"
+   git push origin main
+   ```
+
+   If it exits clean or non-zero, log and continue. The survey is best-effort.
+
 5. **Return.** Skip Steps 1–4 this tick. Next tick re-dispatches normally.
 
 If `IS_MONDAY=no` OR `SNAPSHOT_EXISTS=yes`, fall through to Step 1.
