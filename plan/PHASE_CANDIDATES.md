@@ -123,85 +123,6 @@
 
 ## Pending
 
-### [ ] [score 6.5] mentionedParts ship-time enforcement gate — prevent new articles from shipping with missing entity cross-references
-- proposed: 2026-06-03, expand pass 94
-- source signals:
-  - **Commit-pattern signal (G — 9 mentionedParts fix commits in 21-commit pass 94 window)**: acoustic-spec-rise (+hmx-cloud, gateron-oil-king, mode-sonnet), building-mode-sonnet-with-oil-kings (+bakeneko65), hall-effect-mainstream (+mode-sonnet), hall-effect-mainstream (+hmx-cloud, gateron-oil-king, tecsee-sapphire-v2), trends-tracker-preview (+gateron-oil-king), plate-materials-explained (+hmx-cloud, gateron-oil-king), gasket-mount-reality (+bakeneko65), case-materials-compared (+drop-ctrl, mode-sonnet, ikki68-aurora) — plus 5 more from pass 92's window. 14+ mentionedParts fix commits across 2 pass windows. Each fix pair is 2 commits (audit tick + content edit), costing ~18 commits of iterate capacity out of ~40 total in the window.
-  - **Existing [4.5] candidate confirms demand**: Pass 92 filed the "Automated mentionedParts cross-reference audit" (scan corpus → file AUDIT rows reactively). The 9-commit continuation in pass 94's window proves detection alone doesn't stop the drain — a gate is needed to prevent new articles from shipping with the gap in the first place.
-  - **Phase 36 proven template**: `scripts/article-language-check.mjs` + `ship-content.md` Step 7a amendment is the exact structural pattern. The language gate prevented temporal anti-patterns at ship time; a parts gate would prevent mentionedParts gaps at ship time. Same wiring, different pattern set.
-- rationale: The 14+ mentionedParts fix commits represent the single largest iterate drain category since the test-coverage drive (phases 26–32). The [4.5] detection candidate (scan corpus, file rows) is correct but reactive — it closes the gap 2–3 ticks after a new article lands. A gate in `ship-content.md` Step 7b would close the gap at the article-draft stage: run before commit, pass violations back to content-curator once, hard-fail if violations persist. Cost: ~0 commits per article that ships correct mentionedParts. Benefit: eliminates the most expensive iterate drain category. The existing [4.5] candidate becomes complementary (backfill existing articles via the survey; the gate handles all future articles). Distinct from [4.5]: gate is forward-looking (ship time); survey is backward-looking (corpus audit).
-- proposed scope (1 phase):
-  1. `scripts/article-parts-check.mjs` — reads all `data/{switches,keycap-sets,boards}/*.json` entity names + aliases; parses a given article MDX body (positional arg); flags entity names found in prose that are absent from `mentionedParts` frontmatter. CLI: gate mode (named file, exit 1 on violations), `--json` for structured output. Name matching: case-insensitive substring match against `name` field of each entity record. Skip Topre / entities not yet in the data catalog (null miss).
-  2. `skills/ship-content.md` Step 7b amendment: post-draft, pre-commit, run `node scripts/article-parts-check.mjs <article-slug>.mdx`; if violations, include them in the revision brief passed back to content-curator; re-run once; hard-fail if violations persist (same shape as Step 7a language gate).
-  3. One-time scan of corpus (46 articles) on ship; any remaining gaps (currently: magnetic-switches-deep-dive.mdx has 0 mentionedParts but references HMX Cloud + Gateron Magnetic Jade — both in catalog) filed as AUDIT rows for the iterate loop to drain.
-  4. Vitest unit tests: (a) entity name in prose + absent from mentionedParts → violation; (b) entity name in prose + present in mentionedParts → no violation; (c) entity not in data catalog → no false positive.
-- estimated phases: 1
-- conflicts: none — extends phase 36 gate pattern; additive to existing [4.5] detection candidate (both can coexist); no URL contract change; no schema change.
-
-### [ ] [score 4.5] Article series navigation — optional series frontmatter + prev/next reader affordance
-- proposed: 2026-06-03, expand pass 94
-- source signals:
-  - **Data growth signal (F — 46 articles, organic series forming)**: The corpus now contains an organic builder-guide sequence: `pe-foam-mod.mdx` (foam layer), `plate-materials-explained.mdx` (plate layer), `gasket-mount-reality.mdx` (mount style), `case-materials-compared.mdx` (outer case) — four consecutive guides covering keyboard anatomy bottom-to-top, shipped within ~7 days of each other. No reader affordance exists to follow the sequence; a reader who finds `plate-materials-explained` via search has no signal that `gasket-mount-reality` is the natural next read.
-  - **Commit-pattern signal (G — 4 consecutive builder guide commits in 2 pass windows)**: case-materials-compared (b6c8485, pass 94), plate-materials-explained (present in corpus), gasket-mount-reality (present), pe-foam-mod (present). The content curator shipped four thematically linked articles in rapid succession, which is the corpus pattern that warrants a `series` concept.
-- rationale: At 46 articles, the guides pillar has enough density that readers can traverse a topic linearly — but the current "Related Articles" rail shows same-pillar/same-tag articles without sequence ordering. An optional `series: {name, position}` frontmatter field + a prev/next nav component would surface structured reading paths for build-progression topics (anatomy, modding, firmware) and longer deep-dive arcs. Spec scope: "deep knowledge" and "build ideas" — series navigation serves both. One phase: schema additive (optional field, no data contract change), one new component, no new routes (the article page already exists), sitemap and canonical-urls unchanged. Pilot the 4-article builder-anatomy series as the first target; content-curator can assign series metadata on future thematic clusters.
-- proposed scope (1 phase):
-  1. `series?: { name: string; position: number; total: number }` optional field in article frontmatter Zod schema (`packages/content/src/schemas/article.ts`) — additive, no existing articles break.
-  2. `getAllArticlesInSeries(seriesName)` loader returning articles in position order.
-  3. `<ArticleSeriesNav>` component: compact prev/next strip rendered in `ArticlePage` when `series` is set. Shows series name, current position ("2 of 4"), prev-article link (← article title), next-article link (article title →). Position-1 hides prev; position-N hides next. Colocated unit tests.
-  4. Retrofit the 4 builder-anatomy articles with `series: {name: "Keyboard anatomy", position: 1–4, total: 4}` frontmatter.
-  5. `apps/e2e/tests/articles.spec.ts` extension: assert the series nav strip renders on a series article + that prev/next hrefs resolve to correct sibling slugs.
-- estimated phases: 1
-- conflicts: none — additive frontmatter field; no URL contract change; no new routes; compatible with Related Articles rail (both can coexist).
-
-### [ ] [score 5.5] Tracker Rule 2 linkage audit helper — auto-file content-gap rows for unlinked trend entries
-- proposed: 2026-05-16, expand pass 13
-- source signals:
-  - **bearings.md Rule 2** (locked at /oversight 2026-05-10): "Any trend that enters the tracker should link to a dedicated thock.xyz article within 14 days of first appearance. If no article exists, the next /ship-content tick should produce one."
-  - **Phase 31 gap**: Phase 31 shipped the Monday snapshot gate (writing a new `data/trends/YYYY-WNN.json` each week), but has no mechanism to detect when the 14-day window on a null-articleSlug row has expired, nor to file a content-gap row so /ship-content can drain it.
-  - **Imminent deadline**: W19 was published 2026-05-04; the 14-day window closes 2026-05-18. W19 has 3 rows with null `articleSlug`. W20 (3 nulls) follows 2026-05-25. Without the helper, these Rule 2 gaps accumulate silently — the tracker promises linked deep-dives but delivers orphaned rows indefinitely.
-  - **Pattern proven**: Phase 30 (`scripts/content-gap-survey.mjs`) is the exact template: scan a data dir, identify gaps against a bearings rule, file AUDIT.md rows in the `/ship-content`-compatible format. The same pattern applied to tracker linkage is a 1-phase lift.
-- rationale: Rule 2 is a bearings contract — not advisory. Without enforcement, the tracker will accumulate unlinked rows as weekly snapshots add 12–18 rows and scout research doesn't reliably match every trend to an existing article. The helper closes the gap the same way Phase 30 closed the Rule 1 gap: mechanical scan → filed rows → /ship-content drain. The march.md Step 0.5 amendment (run the survey immediately after writing the Monday snapshot) ensures Rule 2 rows land in the queue the same tick the trend first appears — before the 14-day clock even starts, if the trend has no obvious article match.
-- proposed scope (1 phase):
-  1. `scripts/tracker-linkage-survey.mjs`: reads all `data/trends/*.json`, collects rows where `articleSlug` is null AND `publishedAt` is >14 days ago; groups by topic name; deduplicates if the same topic appears across multiple null weeks; emits AUDIT.md rows in the `category: content-gaps` format with `rule: Rule 2 — tracker linkage`. `--write` flag appends to `plan/AUDIT.md`; dry-run default.
-  2. `skills/march.md` Step 0.5 amendment: after writing the Monday snapshot and running `pnpm verify`, call `node scripts/tracker-linkage-survey.mjs --write` and, if rows were filed, commit the `plan/AUDIT.md` update in the same audit-tick commit (same pattern as `content-gap-survey.mjs --write`).
-  3. One unit test: mocked trends dir with a W19-shaped file (null-slug row, publishedAt 15 days ago) → survey returns 1 row with correct AUDIT.md template fields.
-  4. `skills/march.md` Step 3b.5 note: tracker-linkage rows use the same `category: content-gaps` tag, so `/ship-content` drains them in the same lane as Rule 1 rows. No new skill, no new dispatch lane.
-- estimated phases: 1
-- conflicts: none — `scripts/tracker-linkage-survey.mjs` mirrors `content-gap-survey.mjs`; march.md Step 0.5 is an additive amendment; no schema change; no new routes.
-
-### [ ] [score 4.8] Stale group-buy status auto-detection — scanner to flag live records past their endDate
-- proposed: 2026-05-18, expand pass 16
-- source signals:
-  - **Commit-pattern signal (pass 16 window)**: `1d34cd8` (cannonkeys-nyawice) is the 3rd manual stale-status flip in the project history — `3443fe9` (GSK Sweet Nightmare, closed 3 days past endDate), `478c952` (Ishtar R2, renderer-side guard filed same window), `1d34cd8` (cannonkeys-nyawice, status live with endDate 2026-05-17). All three are identical: `status: "live"` with `endDate < today`, discovered by the iterate audit, corrected by a 1-field JSON flip. The pattern repeats every 2–3 weeks as group-buy windows close.
-  - **Operational gap**: `scripts/content-gap-survey.mjs` automates Rule 1 (pillar freshness); the Pending tracker-linkage-survey candidate automates Rule 2; the Pending group-buy-companion-survey automates Rule 3. But stale `status` drift is orthogonal to all three — it's a data-integrity check (field value is wrong vs. field is missing), not a content-gap check. No existing candidate covers it.
-  - **Blast radius of stale records**: `/group-buys/past` archive selection, RSS feeds, JSON-LD ItemList, and any downstream consumer all see the stale `status` field. The renderer-side guard in `GroupBuyRow.tsx` absorbs the visible label leak on `/group-buys`, but every other surface is exposed until manually corrected.
-- rationale: Three manual instances of the same 1-field fix constitute a pattern worth automating. A `scripts/group-buy-status-check.mjs` would read all `data/group-buys/*.json`, flag records where `status === "live" AND endDate < today`, and emit an AUDIT.md row (category: data) so the loop drains it next tick. The script mirrors the content-gap-survey.mjs shape: dry-run by default, `--write` to append, `--json` for programmatic use. `skills/march.md` Step 3b.5a (empty-queue refill) would also invoke this check so stale records surface before falling through to `/expand`. Distinct from Rule 3 companion survey: this checks field accuracy, not editorial coverage.
-- proposed scope (1 phase):
-  1. `scripts/group-buy-status-check.mjs`: reads all `data/group-buys/*.json`; for each record where `status === "live" OR status === "announced"`, checks whether `endDate < today`. Files one AUDIT.md row per stale record: `category: data`, `impact: 4`, `ease: 9`, `score: 3.6`, including the field value, endDate, and fix instruction (`status → "closed"`). Dry-run default; `--write` appends; `--json` emits structured output for programmatic use.
-  2. `skills/march.md` Step 3b.5a amendment: after the Rule 1 content-gap-survey invocation, also run `node scripts/group-buy-status-check.mjs --write`; commit any new data rows in the same audit-tick commit.
-  3. `skills/ship-data.md` Step 4c note: when updating a group-buy record's `endDate`, also run the stale-status check to catch any sibling records that may have silently crossed the threshold in the same data pass.
-  4. One unit test: mocked GB record with `status: "live"` and `endDate` 2 days in the past → scanner returns 1 row with `score: 3.6` and the correct field values. Control: record with `endDate` 2 days in the future → no row.
-- estimated phases: 1
-- conflicts: none — orthogonal to Rule 3 companion survey; no schema change; no URL contract change; script shape proven by content-gap-survey.mjs.
-
-### [ ] [score 5.5] Group-buy Rule 3 companion survey — automated detection of live/announced GBs without editorial coverage
-- proposed: 2026-05-17, expand pass 15
-- source signals:
-  - **bearings.md Rule 3** (locked 2026-05-10): "Every `data/group-buys/<vendor>-<slug>.json` record with `status: live` or `status: announced` has a companion editorial piece... The audit treats a live/announced group buy without a companion article as a content-gap finding scored at impact 7."
-  - **Manual drains this window confirm the pattern**: pass 14 window drained a Rule 3 gap manually — `8edcd45` shipped the GMK CYL Ramune companion + data record after the iterate audit noticed the gap. `ba14cc7` + `4d61b74` drained Rule 2 gaps manually in the same window. Both required human-in-the-loop audit to notice; automated detection would file the row the same tick a new GB record lands.
-  - **Rules 1 + 2 automation suite**: Phase 30 ships `scripts/content-gap-survey.mjs` (Rule 1 automation, `cc1b8ed`). The tracker-linkage-survey [5.5] Pending candidate would automate Rule 2. Rule 3 is the only remaining bearings content rule without automated detection. Completing the suite makes the `/march` dispatcher self-sufficient for all three rules.
-  - **Dependency note**: most reliable after the `relatedArticle` schema additive [5.5] ships — `relatedArticle` on the GB record gives a canonical link slot; the survey can then check `!relatedArticle && (status=live|announced)` deterministically. Before the additive, the survey falls back to a heuristic slug-match scan (article slug contains GB slug substring) — workable but less precise.
-- rationale: Rule 3 requires companion pieces for every live/announced group buy. When `/ship-data` adds a new GB record, the brander step fires automatically (hero art, bearings.md rule) but no companion row lands in `plan/AUDIT.md`. Without an automated survey, the gap accumulates until an iterate audit manually notices it — which requires the audit to know the Rule 3 contract and scan for violations. A `scripts/group-buy-companion-survey.mjs` closes the gap: run after any `/ship-data` GB add + run as the Step 3b.5a corollary for Rule 3, ensuring the content queue is always primed. Completes the three-rule automation suite (Phase 30 closed Rule 1; this + the tracker-linkage-survey close Rules 2+3).
-- proposed scope (1 phase):
-  1. `scripts/group-buy-companion-survey.mjs`: reads all `data/group-buys/*.json` records with `status: live` or `status: announced`; checks whether `relatedArticle` is set (post-schema-additive) or falls back to slug-match heuristic (pre-additive); emits AUDIT.md rows in `category: content-gaps` format with `rule: Rule 3 — group-buy companion`, `impact: 7`, `ease: 5`, scored at 3.5 (impact × ease / 10). `--write` flag appends to `plan/AUDIT.md`; dry-run default.
-  2. `skills/march.md` Step 3b.5a amendment: after Rule 1 survey on empty queue, also run `node scripts/group-buy-companion-survey.mjs --write`; commit any new rows with the same audit-tick commit pattern.
-  3. `skills/ship-data.md` Step 4b amendment: when adding a group-buy record (`status: live` or `status: announced`), run the survey after the brander step and file any missing companion row into `plan/AUDIT.md` in the same commit.
-  4. One unit test: mocked `data/group-buys/` dir with a live GB record (no `relatedArticle`) → survey returns 1 row with correct AUDIT.md template fields and `score: 3.5`.
-  5. Dry-run gate: `node scripts/group-buy-companion-survey.mjs` (no `--write`) prints current gaps without modifying any file; usable as a pre-commit check.
-- estimated phases: 1
-- conflicts: none — phase 37 shipped `relatedArticle` (`fc17f19`); deterministic detection is now available. No URL contract change; no schema change in this phase.
-- pass 26 signal update (2026-05-23): **phase 37 shipped** at `fc17f19` — `relatedArticle` is now a first-class schema field; 8 of 9 GB records retrofitted. Candidate upgraded from heuristic to deterministic: `!relatedArticle && status ∈ {live, announced}` eliminates slug-match approximation. Current corpus check: 0 violations (all 4 live/announced GBs — cannonkeys-mode-sonnet-r2, kbdfans-gmk-cyl-greg-2, kbdfans-gmk-cyl-king-of-the-seas, kbdfans-gmk-cyl-prussian-alert + kbdfans-gmk-cyl-ramune — have `relatedArticle` set). Candidate is fully unblocked; promotion timing tied to user appetite for the automation suite (along with the co-pending Tracker Rule 2 helper [5.5]).
-
 ### [x] [score 6.0] Parts catalog entity search — extend MiniSearch index to include switches, keycap-sets, and boards
 - **iterate-resolved: 2026-05-19 at `99f0e5e`** — shipped as an iterate fix in the same cloud session as pass 17 filing. Did not require promotion or a full phase. `searchParts()` unit tests shipped at `4e7c4f1`.
 - proposed: 2026-05-19, expand pass 17
@@ -245,35 +166,6 @@
 - estimated phases: 1
 - conflicts: none — additive only; mentionedParts is existing frontmatter schema; no URL contract or data schema change.
 
-### [ ] [score 5.5] Companion-article prose cross-link auditor — automated detection and AUDIT row filing for missing prose cross-links between companion articles
-- proposed: 2026-06-07, expand pass 119
-- source signals:
-  - **Commit-pattern signal (G — 9 prose cross-link pairs in 21-commit pass 119 window)**: sound-dampening-compared→pe-foam-mod, case-materials-compared→sound-dampening-compared, sound-dampening-compared→tape-mod, stabilizers-explained→stabilizer-servicing-guide, beginners-switch-buying-guide→lubing-101, keycap-profiles-compared→keycap-materials-compared, mounting-styles-compared→sound-dampening-compared, hall-effect-mainstream→buyer's-guide, keychron-q-ultra-zmk→zmk-mainstream-shift. Each pair was 2 commits (audit tick + content edit). This pattern has persisted across passes 94–119 as the largest single iterate drain category.
-  - **Operational gap**: No automated detection exists for prose article-to-article cross-links. The iterate loop discovers each gap from scratch during manual audit. The [4.5] Automated mentionedParts cross-reference audit candidate addresses a distinct gap (entity names in prose not in mentionedParts); this candidate addresses article-to-article prose links between companion articles. Both can coexist — different detection logic, different fix pattern.
-  - **Cross-window persistence**: The iterate loop has spent ~40+ commits across passes 94–119 on prose cross-link additions. The signal was strong enough to file the [4.5] article series navigation candidate (pass 94) and the [6.5] mentionedParts ship-time gate (pass 94); the prose cross-link class continued unaddressed because it spans more than just series articles.
-- rationale: When articles reference companion articles' topics in prose without providing a markdown link, readers have no navigation path. A scan of articles pairwise for tag-overlap (≥2 shared tags) identifies likely companions; checking whether a link exists between them surfaces the gap. At 48 articles with ~60 tags across 6 categories, the pairwise candidate set is bounded (~150–200 pairs after tag-filter, ~20–40 with no existing cross-link). Filing AUDIT rows for confirmed pairs lets the iterate loop drain them mechanically rather than discovering each gap from scratch. Cost per drain tick: 1 content edit (already the cheapest fix type in the iterate repertoire). Cost of not automating: 2 commits per gap × ~20 undetected gaps = ~40 commits of iterate capacity, replicated on every new batch of articles.
-- proposed scope (1 phase):
-  1. `scripts/article-crosslink-survey.mjs`: reads all article frontmatter (tags, pillar, slug, title) and body text. For each pair sharing ≥2 tags, checks whether article A's body contains a markdown link to `/article/B-slug` (and vice versa). Pairs with no cross-link in either direction file an AUDIT row: `category: content`, `impact: 5` (same-pillar pair) or `impact: 4` (adjacent-pillar pair), `ease: 9`, `score: 4.5` or `3.6`. CLI: dry-run default; `--write` appends to `plan/AUDIT.md`; `--json` for structured output.
-  2. `skills/march.md` Step 3b.5a amendment: after the existing Rule-1 + group-buy-companion surveys, also run `node scripts/article-crosslink-survey.mjs --write`; commit any new rows in the same audit-tick commit pattern.
-  3. `skills/ship-content.md` Step 7c amendment: post-draft, pre-commit, run the survey on the new article against the existing corpus; file discovered cross-link opportunities as AUDIT rows in the same ship-content commit so the next iterate tick drains them proactively.
-  4. One Vitest unit test: mocked article pair with 2 shared tags and no cross-link in either body → survey returns 1 AUDIT row with correct fields. Control: same pair with existing link → no row.
-- estimated phases: 1
-- conflicts: none — additive only; complements [4.5] mentionedParts cross-reference audit (different gap category: entity mentions vs. article-to-article links); no URL contract change; no schema change; no new routes.
-
-### [ ] [score 4.5] Orphan parts editorial baseline — write targeted articles covering the 10 catalog parts with zero editorial cross-links
-- proposed: 2026-06-05, expand pass 112
-- source signals:
-  - **Data coverage gap (F)**: 10 parts in the data catalog have zero article `mentionedParts` cross-links (verified scan against all data/{switches,boards,keycap-sets} records): `akko-v3-cream-blue-pro`, `durock-t1`, `gateron-ink-v2-yellow`, `gazzew-boba-lt` (switches); `class80`, `kbd75v3` (boards); `domikey-wob`, `gmk-laser`, `gmk-olivia`, `sa-godspeed` (keycap-sets). These parts surface on their own detail pages but appear in no "mentioned in" rail anywhere on the site.
-  - **Commit-pattern milestone (G)**: The iterate-driven mentionedParts drain is now complete — 4 fix pairs in the pass 112 window (beginners-switch-buying-guide +gazzew-boba-u4, hmx-cloud-deep-dive +gateron-pro-3-yellow, spring-swaps-explained +c3-tangerine-r2, plate-materials-explained +mode-sonnet) brought the corpus to zero missing frontmatter gaps for the first time. The 10 orphan parts are not a frontmatter gap — no article mentions them in prose at all.
-- rationale: The autonomous loop (iterate + ship-content) writes articles targeting Rule-1 velocity gaps; it has no mechanism to target catalog parts with zero editorial coverage. These 10 parts will remain unreachable via the "mentioned in" rail indefinitely without a dedicated content pass. Several are high-profile: Durock T1 (tactile switch flagship, community standard), GMK Olivia and GMK Laser (collector-tier colorways with broad recognition), Gateron Ink V2 Yellow (popular premium linear). 3-4 focused articles — each covering 2-3 of the orphan parts — would bootstrap full catalog editorial coverage while contributing to content velocity on the ideas or deep-dives pillar.
-- proposed scope (1 phase):
-  1. **Durock T1 tactile deep-dive** (deep-dives pillar): the community tactile reference point — naturally mentions `akko-v3-cream-blue-pro` (competing tactile) and `gazzew-boba-lt` (lightweight tactile comparison) as part of the benchmark framing.
-  2. **Premium linear tier article** (deep-dives or ideas pillar): smooth-linear roundup or shootout — naturally covers `gateron-ink-v2-yellow` as the Gateron premium tier representative.
-  3. **Keycap colorways spotlight** (ideas or news pillar): GMK Olivia, GMK Laser, and SA Godspeed as collector-tier colorways with distinct aesthetic identities — covers `gmk-olivia`, `gmk-laser`, `sa-godspeed`, and naturally `domikey-wob` in the same editorial piece.
-  4. **Board coverage** (evaluate at authoring time): `class80` and `kbd75v3` may fit as sidebar comparisons in the existing hmx-cloud or gasket-mount article, or as part of a board-tier comparison article — may not require a standalone piece.
-- estimated phases: 1
-- conflicts: none — core editorial content; no URL contract change, no data schema change, no new entity types. Article slugs TBD at authoring time.
-
 <!-- archived on promotion 2026-05-16 — original Pending rows preserved below for the audit trail
 
 ### [ ] [score 7.5] Trends Tracker Phase B — automated weekly snapshot cadence
@@ -316,38 +208,6 @@ _(previous Pending items: [7.0] content-velocity queue auto-refill promoted to p
 
 -->
 
-### [ ] [score 6.5] Article date archive `/archive` — spec §5.3 browsing/discovery feature, never shipped
-- proposed: 2026-06-11, expand pass 124
-- source signals:
-  - D (spec drift): spec §5.3 "Browsing & Discovery" explicitly names "Archive by date" as one of three discovery features alongside pillar pages and tag pages. The pillar pages (phases 7–11) and tag pages (phase 12) shipped from the spec; the date archive was not included in the URL contract and has never been shipped.
-  - F (data growth): 51 articles in corpus, spanning May–June 2026. Monthly groupings are now meaningful enough to surface (May 2026 is the dominant month; groupings will normalize as the rolling content cadence continues under Rule 1).
-- rationale: spec §5.3 is the MVP browsing spec, not a Phase 3 "later" item. Archive by date is a standard editorial discovery pattern that tag pages and pillar pages do not replace — readers who want "what was published last month" or "what did thock cover in week X" have no path. With 51 articles and Rule 1 ensuring ongoing content velocity (~1 article every 3–4 days), the archive will be meaningfully populated. The staggered publishedAt Rule 4 distribution already in effect ensures the archive shows editorial variety rather than bulk-publish clustering.
-- proposed scope: new static route `apps/web/src/app/archive/page.tsx` — reads `getAllArticles()`, sorts by `publishedAt` desc, groups by `YYYY-MM` (e.g. "June 2026 · 9 articles"). Month heading with article count; article list per month using the existing card component. CollectionPage + BreadcrumbList JSON-LD. Sitemap entry. `canonical-urls` + `page-reads` fixtures extended. New e2e describe block or spec file. A "Browse by date →" affordance on `/tags` (natural pairing: browse by tag OR by date). No schema change, no new loaders.
-- estimated phases: 1
-- conflicts: none — new URL `/archive`; does not affect any existing URL contract shape; no schema change; no data change.
-
-### [ ] [score 6.5] Switch head-to-head comparison `/compare/switch` — spec Phase 3 feature, 17 switches now in catalog
-- proposed: 2026-06-11, expand pass 124
-- source signals:
-  - D (spec): spec §13 Phase 3 roadmap names "Comparison tool for switches or layouts" explicitly. Phase 3 is "later" not "never" — with 17 switches now in the structured data catalog, the data precondition that made this premature at launch is met.
-  - F (data growth): 17 switches across all major categories (linear, tactile, clicky, silent-linear, silent-tactile, hall-effect) with structured comparable fields (actuation force g, pre-travel mm, total travel mm, type, sound profile, manufacturer). The Phase 34 data pass specifically enriched the catalog with underrepresented segments (budget HE, silent linear, light tactile, premium linear) — comparison utility is at its highest since launch.
-  - H (plan gap): phase 33 ("Find your switch" quiz) covers "which switch fits my preferences?" but not "how does switch A differ from switch B specifically?" — the quiz and comparison are complementary, not redundant.
-- rationale: the quiz gives a guided selection path; the comparison gives a verification path for readers who already have two candidates. With 17 structured records and `getAllSwitches()` available at build time, a side-by-side spec table is straightforward. The `/part/switch/[slug]` pages (phase 21) give detail for individual switches; `/compare/switch` gives the cross-record diff view.
-- proposed scope: new route `apps/web/src/app/compare/switch/page.tsx`. Query-param URL shape: `/compare/switch?a=gateron-oil-king&b=gazzew-boba-u4`. Two-slot selector (combobox or dropdown, populated from `getAllSwitches()` at build time as a static prop). Side-by-side table: name, manufacturer, type, actuation force, pre-travel, total travel, sound profile. Each switch name links to its `/part/switch/[slug]` page. ItemList JSON-LD. Sitemap entry for the base `/compare/switch` route (not all pairs — they're query-param variants). `canonical-urls` + `page-reads` fixtures extended. One new e2e spec (land on /compare/switch, select two switches via JS, assert table renders). A "Compare →" link on `/part/switch/[slug]` pages (small secondary affordance).
-- estimated phases: 1
-- conflicts: none — new URL `/compare/switch`; query-param routing is a standard Next.js pattern; no schema change; no data change.
-
-### [ ] [score 5.5] Vendor index + detail pages `/vendors` + `/vendor/[slug]` — data-backed browse surface, loaders already exist
-- proposed: 2026-06-11, expand pass 124
-- source signals:
-  - F (data growth): 8 vendors in catalog (CannonKeys, NovelKeys, Wuque Studio, KBDfans, Drop, Divinikey, Keychron, Wooting), each with slug, name, URL, countryCode, description, status. Keychron and Wooting added in the past 7 days — the vendor catalog is actively growing.
-  - G (commit pattern): `data: add vendor X` commits are recurring (cannonkeys, novelkeys, wuque-studio, kbdfans, drop, divinikey, keychron, wooting across multiple windows). Each new vendor arrives data-first with no browse surface.
-  - H (plan pattern): Phase 35 (`/parts` index) + Phase 21 (`/part/[kind]/[slug]`) proved the entity-index + entity-detail pattern for the parts catalog. `getAllVendors()` and `getVendorBySlug()` already exist in `apps/web/src/lib/data-runtime/index.ts` — the same bootstrap that made parts pages easy applies here.
-- rationale: readers who encounter "CannonKeys" in an article have no thock path to "what else does CannonKeys run?" — only an external link to cannonkeys.com. Vendor pages would show: the vendor's active and recent group-buys (from `getAllActiveGroupBuys()` + `getAllClosedGroupBuys()` filtered by vendor slug), the vendor's boards in the parts catalog (from `getAllBoards()` filtered by vendor), and a link to the vendor's own site. The Wooting vendor detail would show the Wooting 60HE board (once that record ships via ship-data) and any Wooting group-buy records. The Keychron detail shows the Q1 HE and 3 articles that reference it.
-- proposed scope: `/vendors/page.tsx` (index listing all active vendors: name, countryCode, description excerpt, link to detail; CollectionPage + BreadcrumbList + ItemList JSON-LD) + `/vendor/[slug]/page.tsx` (detail: full description, vendor URL `rel="noopener"`, active group-buys section, boards section; Thing/Organization JSON-LD with sameAs for the vendor URL). `generateStaticParams` from `getAllVendors()`. Sitemap entries. `canonical-urls` + `page-reads` fixtures extended. `apps/e2e/tests/vendors.spec.ts`. No schema change — all needed data already exists.
-- estimated phases: 1
-- conflicts: none — new URLs `/vendors` and `/vendor/[slug]`; additive to the URL contract; no schema change.
-
 ## Considered (below threshold)
 
 - ~~[score 5.5] `/parts` browse-landing index~~ — **promoted to phase 35 via /oversight 2026-05-21** (was Pending [6.0] since pass 13). See `## Promoted`.
@@ -365,6 +225,99 @@ _(previous Pending items: [7.0] content-velocity queue auto-refill promoted to p
 
 
 ## Promoted
+
+### [score 6.5] mentionedParts ship-time enforcement gate
+- promoted: 2026-06-11 via `/oversight` (this commit)
+- assigned phase: **38**
+- promotion decisions (locked at /oversight time):
+  - **Anchor of the automation-suite promotion**: the prose cross-link / mentionedParts fix-pair drain consumed ~40+ iterate commits across expand passes 94–124 — the largest drain category since the test-coverage drive. The gate stops the mentionedParts half at draft time (Phase-36 Step-7a shape: run pre-commit, one content-curator revision retry, hard-fail on persistence).
+  - **Scope locked to the candidate's 4-step proposed scope**: `scripts/article-parts-check.mjs` (entity-name scan vs `mentionedParts` frontmatter, gate mode + `--json`), `skills/ship-content.md` Step 7b amendment, one-time corpus scan filing AUDIT rows for residual gaps, Vitest unit tests (violation / no-violation / not-in-catalog control).
+  - **Relation to the [4.5] mentionedParts survey (pass 92, still Pending)**: the gate is forward-looking; the survey is backward-looking corpus audit. The survey stays Pending — corpus was at zero gaps as of pass 112, so its remaining value is re-checking after future `/ship-data` entity adds.
+  - **Brief drafting**: drafted on-demand by `/ship-a-phase`.
+- original signals + scope: see git history of this file at `5e3bc51` (pass-94 row; was in `## Pending`). User answer at /oversight 2026-06-11: "Promote full suite (5)".
+- estimated phases: 1
+- conflicts: none — extends phase 36 gate pattern; no URL contract change; no schema change.
+
+### [score 5.5] Companion-article prose cross-link auditor
+- promoted: 2026-06-11 via `/oversight` (this commit)
+- assigned phase: **39**
+- promotion decisions (locked at /oversight time):
+  - **The other half of the drain-stopper pair**: tag-overlap (≥2 shared tags) pairwise scan over article bodies; unlinked companion pairs file AUDIT rows (impact 5 same-pillar / 4 adjacent-pillar, ease 9) so iterate drains mechanically instead of rediscovering each gap.
+  - **Scope locked to the candidate's 4-step proposed scope**: `scripts/article-crosslink-survey.mjs` (dry-run default, `--write`, `--json`), `skills/march.md` Step 3b.5a amendment, `skills/ship-content.md` Step 7c amendment, one Vitest unit test (gap + control).
+  - **Ships after phase 38** so both halves of the drain close back-to-back.
+  - **Brief drafting**: drafted on-demand by `/ship-a-phase`.
+- original signals + scope: see git history of this file at `5e3bc51` (pass-119 row; was in `## Pending`). User answer at /oversight 2026-06-11: "Promote full suite (5)".
+- estimated phases: 1
+- conflicts: none — additive only; complements phase 38 (entity mentions vs article-to-article links); no URL contract change; no schema change.
+
+### [score 5.5] Group-buy Rule 3 companion survey
+- promoted: 2026-06-11 via `/oversight` (this commit)
+- assigned phase: **40**
+- promotion decisions (locked at /oversight time):
+  - **Deterministic since phase 37** (`fc17f19`): detection is `!relatedArticle && status ∈ {live, announced}` — no heuristic slug-match needed. Corpus check at pass 26 showed 0 violations; the survey's value is catching future GB adds the same tick they land.
+  - **Scope locked to the candidate's 5-step proposed scope**: `scripts/group-buy-companion-survey.mjs` (content-gaps rows at impact 7 / ease 5, dry-run default, `--write`), `skills/march.md` Step 3b.5a + `skills/ship-data.md` Step 4b amendments, one unit test.
+  - **Completes the bearings-rule automation suite** together with phases 41 (Rule 2) and 30 (Rule 1, shipped).
+  - **Brief drafting**: drafted on-demand by `/ship-a-phase`.
+- original signals + scope: see git history of this file at `5e3bc51` (pass-15 row; was in `## Pending`). User answer at /oversight 2026-06-11: "Promote full suite (5)".
+- estimated phases: 1
+- conflicts: none — no URL contract change; no schema change.
+
+### [score 5.5] Tracker Rule 2 linkage audit helper
+- promoted: 2026-06-11 via `/oversight` (this commit)
+- assigned phase: **41**
+- promotion decisions (locked at /oversight time):
+  - **Rule 2 is a bearings contract, unenforced since lock (2026-05-10)**: weekly Monday snapshots add 12–18 rows; null-`articleSlug` rows past the 14-day window accumulate silently without this helper.
+  - **Scope locked to the candidate's 4-step proposed scope**: `scripts/tracker-linkage-survey.mjs` (null-slug rows >14 days, topic dedupe, `content-gaps` rows tagged `rule: Rule 2`, dry-run default, `--write`), `skills/march.md` Step 0.5 amendment (run after the Monday snapshot), one unit test, Step 3b.5 note (drains in the existing `/ship-content` lane).
+  - **Brief drafting**: drafted on-demand by `/ship-a-phase`.
+- original signals + scope: see git history of this file at `5e3bc51` (pass-13 row; was in `## Pending`). User answer at /oversight 2026-06-11: "Promote full suite (5)".
+- estimated phases: 1
+- conflicts: none — mirrors `content-gap-survey.mjs`; additive march amendment; no schema change; no new routes.
+
+### [score 4.8] Stale group-buy status auto-detection
+- promoted: 2026-06-11 via `/oversight` (this commit)
+- assigned phase: **42**
+- promotion decisions (locked at /oversight time):
+  - **Why a phase despite the sub-5 score**: same operational-repair-rate logic as phase 36 — three identical manual 1-field flips (`3443fe9`, `478c952`, `1d34cd8`) recurring every 2–3 weeks as GB windows close; data-integrity check orthogonal to the Rule 2/3 surveys.
+  - **Scope locked to the candidate's 4-step proposed scope**: `scripts/group-buy-status-check.mjs` (flags `status ∈ {live, announced}` with `endDate < today`, `data` rows at impact 4 / ease 9, dry-run default, `--write`, `--json`), `skills/march.md` Step 3b.5a + `skills/ship-data.md` Step 4c amendments, one unit test (stale + future-dated control).
+  - **Brief drafting**: drafted on-demand by `/ship-a-phase`.
+- original signals + scope: see git history of this file at `5e3bc51` (pass-16 row; was in `## Pending`). User answer at /oversight 2026-06-11: "Promote full suite (5)".
+- estimated phases: 1
+- conflicts: none — orthogonal to Rule 3 survey; no schema change; no URL contract change.
+
+### [score 6.5] Article date archive `/archive`
+- promoted: 2026-06-11 via `/oversight` (this commit)
+- assigned phase: **43**
+- promotion decisions (locked at /oversight time):
+  - **First of three pass-124 reader-surface promotions**: spec §5.3 names "Archive by date" alongside pillar pages and tag pages — both shipped; the archive never entered the URL contract. 51 articles spanning May–June 2026 make monthly groupings meaningful.
+  - **Scope locked to the candidate's proposed scope**: static route `apps/web/src/app/archive/page.tsx` grouping `getAllArticles()` by `YYYY-MM` with month headings + counts; CollectionPage + BreadcrumbList JSON-LD; sitemap entry; `canonical-urls` + `page-reads` extended; e2e block; "Browse by date →" affordance on `/tags`. No schema change, no new loaders.
+  - **Ships after the automation suite (38–42)** so new-surface work lands against a fully gated content pipeline.
+  - **Brief drafting**: drafted on-demand by `/ship-a-phase`.
+- original signals + scope: see git history of this file at `5e3bc51` (pass-124 row; was in `## Pending`). User answer at /oversight 2026-06-11: "Promote all three".
+- estimated phases: 1
+- conflicts: none — new URL `/archive`; additive to the URL contract; no schema change; no data change.
+
+### [score 6.5] Switch head-to-head comparison `/compare/switch`
+- promoted: 2026-06-11 via `/oversight` (this commit)
+- assigned phase: **44**
+- promotion decisions (locked at /oversight time):
+  - **Spec §13 Phase 3 feature, data precondition met**: 17 switches with structured comparable fields (actuation force, travel, type, sound profile) after the phase 34 enrichment pass. Complements the phase 33 quiz: guided selection vs A/B verification.
+  - **Scope locked to the candidate's proposed scope**: route `apps/web/src/app/compare/switch/page.tsx` with query-param shape `?a=<slug>&b=<slug>`; two-slot selector from `getAllSwitches()`; side-by-side spec table linking to `/part/switch/[slug]`; ItemList JSON-LD; sitemap entry for the base route only; fixtures + one e2e spec; "Compare →" affordance on `/part/switch/[slug]`.
+  - **Brief drafting**: drafted on-demand by `/ship-a-phase`.
+- original signals + scope: see git history of this file at `5e3bc51` (pass-124 row; was in `## Pending`). User answer at /oversight 2026-06-11: "Promote all three".
+- estimated phases: 1
+- conflicts: none — new URL `/compare/switch`; query-param routing is standard Next.js; no schema change; no data change.
+
+### [score 5.5] Vendor index + detail pages `/vendors` + `/vendor/[slug]`
+- promoted: 2026-06-11 via `/oversight` (this commit)
+- assigned phase: **45**
+- promotion decisions (locked at /oversight time):
+  - **Loaders already exist** (`getAllVendors()` / `getVendorBySlug()` in the data runtime); 8 vendors in catalog and growing (Keychron + Wooting added within 7 days of promotion). Same entity-index + entity-detail bootstrap that made phases 21 + 35 cheap.
+  - **Scope locked to the candidate's proposed scope**: `/vendors` index (name, countryCode, description, link; CollectionPage + BreadcrumbList + ItemList JSON-LD) + `/vendor/[slug]` detail (description, vendor URL, active + past group-buys filtered by vendor, boards section; Organization JSON-LD with `sameAs`); `generateStaticParams` from `getAllVendors()`; sitemap; fixtures; `apps/e2e/tests/vendors.spec.ts`. No schema change.
+  - **Ships last of the batch** — lowest score of the three surfaces.
+  - **Brief drafting**: drafted on-demand by `/ship-a-phase`.
+- original signals + scope: see git history of this file at `5e3bc51` (pass-124 row; was in `## Pending`). User answer at /oversight 2026-06-11: "Promote all three".
+- estimated phases: 1
+- conflicts: none — new URLs `/vendors` and `/vendor/[slug]`; additive to the URL contract; no schema change.
 
 ### [score 4.5] Content language quality gate — automated MDX linter for static-site temporal anti-patterns
 - promoted: 2026-05-23 via `/oversight` (this commit)
@@ -569,6 +522,16 @@ _(previous Pending items: [7.0] content-velocity queue auto-refill promoted to p
 - conflicts: none with `bearings.md` (extends the existing hero-art directive); none with the URL contract (no new routes); the schema additive is additive (nullable field, backwards-compatible).
 
 ## Rejected
+
+### [score 4.5] Article series navigation — optional series frontmatter + prev/next reader affordance
+- rejected: 2026-06-11 via `/oversight` (this commit)
+- reason: sat below the promotion line since pass 94 (~8 days, ~30 expand passes) without score movement. The reader-path concern it targets is partially served today by the Related Articles rail and will be further served by phase 39 (prose cross-link auditor), which mechanically links companion articles — including the builder-anatomy sequence that motivated this candidate. A `series` frontmatter concept can be re-proposed if a genuinely ordered multi-part series is ever commissioned editorially; the current corpus pattern is thematic clustering, not sequenced parts.
+- user answer at /oversight 2026-06-11: "Reject the two 4.5s".
+
+### [score 4.5] Orphan parts editorial baseline — targeted articles for catalog parts with zero editorial cross-links
+- rejected: 2026-06-11 via `/oversight` (this commit)
+- reason: sat below the promotion line since pass 112. Commissioning articles to serve catalog records inverts the editorial direction — content should drive data, not backfill it. Rule-1 content velocity (~1 article per 3–4 days) plus the phase 38 mentionedParts gate will organically absorb orphan parts as future articles naturally mention them; parts that never earn a prose mention don't warrant commissioned coverage. Detail pages for orphan parts remain reachable via `/parts`, kind indexes, search, and the quiz.
+- user answer at /oversight 2026-06-11: "Reject the two 4.5s".
 
 ### [score 6.5] React #418 hydration flake — dedicated investigation phase
 - rejected: 2026-05-11 via `/oversight` (this commit) — **self-resolved**

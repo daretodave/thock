@@ -4,7 +4,12 @@
       "numberOfRuns": 3,
       "settings": {
         "preset": "desktop",
-        "skipAudits": ["uses-http2"]
+        "skipAudits": ["uses-http2"],
+        "blockedUrlPatterns": [
+          "*googletagmanager.com*",
+          "*google-analytics.com*",
+          "*analytics.google.com*"
+        ]
       }
     },
     "assert": {
