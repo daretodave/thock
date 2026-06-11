@@ -3282,3 +3282,15 @@ passes accumulate signals.)
 - next: /ship-content → ideas pillar article
 > Filed 2026-06-11 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 - addressed in: 8c60c55
+
+### [x] [content] [6.3] mounting-styles-compared — o-ring-mod cross-link missing at tray-mount section
+- category: content
+- filed: 2026-06-11 by cloud /iterate audit
+- impact: 7 (mounting-styles-compared "What to actually pick" tray-mount paragraph linked to tape-mod but not o-ring-mod; o-ring-mod article (published 2026-06-09) already links back to mounting-styles-compared — pair was half-navigable; tray-mount builders following the mod-stack guidance had no path to the standoff-contact fix)
+- ease: 9 (single sentence edit — same pattern as all prior cross-link fixes)
+- score: 6.3 (impact × ease / 10)
+- observation: mounting-styles-compared "What to actually pick" section tray-mount paragraph reads "The PE foam and tape mod stack can take a tray-mount board most of the way to a satisfying sound, but the floor is lower than gasket and the ceiling is lower too." — no link to /article/o-ring-mod. o-ring-mod.mdx opening paragraph explicitly links back: "see [mounting styles compared](/article/mounting-styles-compared)" — the reverse path was missing.
+- evidence: apps/web/src/content/articles/mounting-styles-compared.mdx — grep for "o-ring-mod" returns 0 matches; o-ring-mod.mdx line 3 links forward to mounting-styles-compared.
+- suggested fix: extend tray-mount sentence to mention o-ring mod as the standoff-contact complement to PE foam and tape mod.
+- issue: #318
+- addressed in: 41bfcc5, closes #318
