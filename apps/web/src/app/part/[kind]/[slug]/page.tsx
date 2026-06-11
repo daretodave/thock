@@ -133,6 +133,15 @@ export default async function PartDetailPage({
       <PartBody description={part.record.description} />
       <Container as="section" className="pb-8">
         <Stack gap={2}>
+          {part.kind === 'switch' && (
+            <Link
+              href={`/compare/switch?a=${part.slug}`}
+              data-testid="part-compare-link"
+              className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text"
+            >
+              Compare this switch →
+            </Link>
+          )}
           <Link
             href={`/part/${part.kind}`}
             data-testid="part-detail-back-link"

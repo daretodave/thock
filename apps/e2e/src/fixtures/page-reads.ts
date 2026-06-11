@@ -218,6 +218,14 @@ export const pageReads: Record<string, PageRead> = {
     // here. Phase 12's tag.spec.ts covers the populated case.
     ...html([{ kind: 'h1-matches', pattern: /^#/ }]),
   },
+  '/compare/switch': {
+    pattern: '/compare/switch',
+    ...html([
+      // Phase 44: base route (no query params) renders the selector UI
+      // and the default "Compare switches" heading.
+      { kind: 'h1-matches', pattern: /compare/i },
+    ]),
+  },
   '/quiz/switch': {
     pattern: '/quiz/switch',
     ...html([

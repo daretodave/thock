@@ -44,6 +44,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: canonicalUrl('/archive'), lastModified: now, priority: 0.5 },
     { url: canonicalUrl('/tags'), lastModified: now, priority: 0.5 },
     { url: canonicalUrl('/parts'), lastModified: now, priority: 0.6 },
+    { url: canonicalUrl('/compare/switch'), lastModified: now, priority: 0.6 },
     { url: canonicalUrl('/feed.xml'), lastModified: now, priority: 0.3 },
     ...PILLARS.map((p) => ({
       url: canonicalUrl(`/feed/${p.slug}.xml`),
