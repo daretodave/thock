@@ -3330,3 +3330,14 @@ passes accumulate signals.)
 - suggested fix: add one sentence about optical switches in the comparison paragraph, between analog-progressive and Topre descriptions
 - issue: [mirror-failed: 2026-06-11T09:40:00Z]
 - addressed in: b675a09
+
+### [ ] [mentionedParts] [3.6] mode-sonnet-r2-group-buy-coverage — 1 catalog entity mentioned in prose but absent from mentionedParts
+- category: mentionedParts
+- filed: 2026-06-11 by article-parts-check.mjs corpus scan
+- impact: 4 (missing mentionedParts entries break the /part/[kind]/[slug] "mentioned in" rail)
+- ease: 9 (frontmatter edit — no code or schema change needed)
+- score: 3.6 (impact × ease / 10)
+- file: apps/web/src/content/articles/mode-sonnet-r2-group-buy-coverage.mdx
+- entities:
+  - Gateron Oil King (switch `gateron-oil-king`) — prose line 60
+- action: add each entity to the article's mentionedParts frontmatter with the correct slug and kind

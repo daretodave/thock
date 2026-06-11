@@ -256,7 +256,7 @@ hydration race). If the serial run also fails, that is a real failure
 
 Iterate up to 3 times on the same root cause. Stop per §8.
 
-### Step 7 — Language gate + commit + push
+### Step 7 — Language gate + mentionedParts gate + commit + push
 
 **Step 7a — Language gate (post-draft, pre-commit):**
 
@@ -280,7 +280,28 @@ node scripts/article-language-check.mjs apps/web/src/content/articles/<slug>.mdx
   Then re-run `content-curator` once. If the revised article still
   has violations on a second check, hard-fail — stop per §8.
 
-**Step 7b — Commit + push:**
+**Step 7b — mentionedParts gate (post-draft, pre-commit):**
+
+After the language gate passes, run the mentionedParts enforcement checker
+on the new article (Phase 38 amendment):
+
+```bash
+node scripts/article-parts-check.mjs apps/web/src/content/articles/<slug>.mdx
+```
+
+- **Exit 0 (clean):** proceed to Step 7c.
+- **Exit 1 (violations):** do NOT commit. Pass the full violation list
+  back to `content-curator` with a revision brief:
+  > "The draft at `<slug>.mdx` mentions the following catalog entities in
+  > its prose but does not declare them in `mentionedParts` frontmatter:
+  > [list violations with entity name, kind, slug, and line number from
+  > the checker output]. Add each missing entity to the `mentionedParts`
+  > array in the frontmatter using the exact slug shown. Return the
+  > complete revised MDX file with updated frontmatter."
+  Then re-run `content-curator` once. If the revised article still has
+  violations on a second check, hard-fail — stop per §8.
+
+**Step 7c — Commit + push:**
 
 Stage explicitly. Never `git add .`:
 
