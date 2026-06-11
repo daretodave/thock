@@ -3342,7 +3342,7 @@ passes accumulate signals.)
   - Gateron Oil King (switch `gateron-oil-king`) — prose line 60
 - action: add each entity to the article's mentionedParts frontmatter with the correct slug and kind
 
-### [ ] [cross-links] [4.5] 75-percent-default ↔ vendor-first-customs — no prose cross-link (same pillar, ≥2 shared tags: trends-2026, mode, qwertykeys)
+### [x] [cross-links] [4.5] 75-percent-default ↔ vendor-first-customs — no prose cross-link (same pillar, ≥2 shared tags: trends-2026, mode, qwertykeys)
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -3352,6 +3352,7 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/75-percent-default.mdx
 - article-b: apps/web/src/content/articles/vendor-first-customs.mdx
 - action: add [vendor-first-customs](/article/vendor-first-customs) to 75-percent-default body, or vice versa
+- addressed in: HEAD
 
 ### [ ] [cross-links] [3.6] acoustic-spec-rise ↔ drop-holy-panda-x-deep-dive — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, factory-lubed)
 - category: cross-links
