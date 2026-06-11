@@ -1,4 +1,5 @@
 import type { ReactElement } from 'react'
+import Link from 'next/link'
 import { Container, Stack } from '@thock/ui'
 import {
   buildBreadcrumbListJsonLd,
@@ -100,6 +101,13 @@ export default function GroupBuysPage(): ReactElement {
               .filter((segment): segment is string => segment !== null)
               .join(' · ')}
           </div>
+          <Link
+            href="/vendors"
+            data-testid="group-buys-vendors-link"
+            className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text"
+          >
+            Browse vendors →
+          </Link>
         </Stack>
       </Container>
 

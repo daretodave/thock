@@ -262,6 +262,20 @@ export function getArticlesMentioningPart(
   )
 }
 
+/** All group buys for a vendor, endDate desc (active soonest first, past most-recent first). */
+export function getGroupBuysByVendor(vendorSlug: string): GroupBuy[] {
+  return manifest.groupBuys
+    .filter((g) => g.vendorSlug === vendorSlug)
+    .sort((a, b) => b.endDate.localeCompare(a.endDate))
+}
+
+/** All boards for a vendor, alphabetical by name. */
+export function getBoardsByVendor(vendorSlug: string): Board[] {
+  return manifest.boards
+    .filter((b) => b.vendorSlug === vendorSlug)
+    .sort((a, b) => a.name.localeCompare(b.name))
+}
+
 /** Manifest build timestamp — useful for debugging staleness. */
 export function manifestGeneratedAt(): string {
   return manifest.generatedAt

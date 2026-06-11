@@ -36,6 +36,7 @@ const STATIC: CanonicalUrl[] = [
   { path: '/tags', pattern: '/tags', kind: 'html' },
   { path: '/parts', pattern: '/parts', kind: 'html' },
   { path: '/compare/switch', pattern: '/compare/switch', kind: 'html' },
+  { path: '/vendors', pattern: '/vendors', kind: 'html' },
   { path: '/part/switch', pattern: '/part/[kind]', kind: 'html' },
   { path: '/part/keycap-set', pattern: '/part/[kind]', kind: 'html' },
   { path: '/part/board', pattern: '/part/[kind]', kind: 'html' },
@@ -120,6 +121,15 @@ function listPartSlugs(
     .sort()
 }
 
+function listVendorSlugs(root: string): string[] {
+  const dir = resolve(root, 'data/vendors')
+  if (!existsSync(dir)) return []
+  return readdirSync(dir)
+    .filter((f) => f.endsWith('.json'))
+    .map((f) => f.replace(/\.json$/, ''))
+    .sort()
+}
+
 function listTrendWeeks(root: string): string[] {
   const dir = resolve(root, 'data/trends')
   if (!existsSync(dir)) return []
@@ -191,6 +201,13 @@ export function getCanonicalUrls(): CanonicalUrl[] {
     dynamic.push({
       path: `/trends/tracker/${week}`,
       pattern: '/trends/tracker/[week]',
+      kind: 'html',
+    })
+  }
+  for (const slug of listVendorSlugs(root)) {
+    dynamic.push({
+      path: `/vendor/${slug}`,
+      pattern: '/vendor/[slug]',
       kind: 'html',
     })
   }

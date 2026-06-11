@@ -6,6 +6,7 @@ import {
   getAllSwitches,
   getAllTags,
   getAllTrendSnapshots,
+  getAllVendors,
   getArticlesByTag,
 } from '@/lib/data-runtime'
 import { canonicalUrl, PILLARS } from '@thock/seo'
@@ -45,6 +46,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: canonicalUrl('/tags'), lastModified: now, priority: 0.5 },
     { url: canonicalUrl('/parts'), lastModified: now, priority: 0.6 },
     { url: canonicalUrl('/compare/switch'), lastModified: now, priority: 0.6 },
+    { url: canonicalUrl('/vendors'), lastModified: now, priority: 0.6 },
     { url: canonicalUrl('/feed.xml'), lastModified: now, priority: 0.3 },
     ...PILLARS.map((p) => ({
       url: canonicalUrl(`/feed/${p.slug}.xml`),
@@ -103,6 +105,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }),
   )
 
+  const vendorEntries: MetadataRoute.Sitemap = getAllVendors().map((v) => ({
+    url: canonicalUrl(`/vendor/${v.slug}`),
+    lastModified: v.updatedAt,
+    priority: 0.6,
+  }))
+
   return [
     ...staticEntries,
     ...articleEntries,
@@ -112,5 +120,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...keycapSetEntries,
     ...boardEntries,
     ...trackerWeekEntries,
+    ...vendorEntries,
   ]
 }

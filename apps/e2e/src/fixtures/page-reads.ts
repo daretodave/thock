@@ -226,6 +226,21 @@ export const pageReads: Record<string, PageRead> = {
       { kind: 'h1-matches', pattern: /compare/i },
     ]),
   },
+  '/vendors': {
+    pattern: '/vendors',
+    ...html([
+      // Phase 45: vendors index lists all vendors; H1 is "Vendors".
+      { kind: 'h1-matches', pattern: /^vendors$/i },
+      { kind: 'min-link-count', selector: '[data-testid="vendor-card"]', min: 1 },
+    ]),
+  },
+  '/vendor/[slug]': {
+    pattern: '/vendor/[slug]',
+    ...html([
+      // Phase 45: vendor detail H1 is the vendor name; JSON-LD Organization.
+      { kind: 'h1-present' },
+    ]),
+  },
   '/quiz/switch': {
     pattern: '/quiz/switch',
     ...html([
