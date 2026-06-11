@@ -3269,3 +3269,15 @@ passes accumulate signals.)
 - score: 6.3 (impact × ease / 10)
 - issue: #317
 - addressed in: e03ed79, closes #317
+
+### [HOT PURSUIT] [content-gap] [7] ideas pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 7 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: ideas
+- window-count: 1
+- window-start: 2026-05-12
+- score: 7
+- next: /ship-content → ideas pillar article
+> Filed 2026-06-11 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
