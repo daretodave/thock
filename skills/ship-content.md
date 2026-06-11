@@ -256,7 +256,7 @@ hydration race). If the serial run also fails, that is a real failure
 
 Iterate up to 3 times on the same root cause. Stop per §8.
 
-### Step 7 — Language gate + mentionedParts gate + commit + push
+### Step 7 — Language gate + mentionedParts gate + cross-link survey + commit + push
 
 **Step 7a — Language gate (post-draft, pre-commit):**
 
@@ -301,7 +301,24 @@ node scripts/article-parts-check.mjs apps/web/src/content/articles/<slug>.mdx
   Then re-run `content-curator` once. If the revised article still has
   violations on a second check, hard-fail — stop per §8.
 
-**Step 7c — Commit + push:**
+**Step 7c — Cross-link survey (post-draft, pre-commit; Phase 39 amendment):**
+
+After both gates pass, run the cross-link survey scoped to the new article:
+
+```bash
+node scripts/article-crosslink-survey.mjs --write --slug <slug>
+```
+
+This checks all existing articles sharing ≥2 tags with the new article and files
+AUDIT rows for any pairs that lack a prose cross-link in either body. The rows
+surface in the iterate queue for future ticks to drain.
+
+- This step is **non-gating** — the survey is informational only. Exit 0 or 1
+  from the script, log any output, and proceed to Step 7d regardless.
+- Deduplication in `--write` mode ensures repeated calls on the same pair do not
+  create duplicate AUDIT rows.
+
+**Step 7d — Commit + push:**
 
 Stage explicitly. Never `git add .`:
 

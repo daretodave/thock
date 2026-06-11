@@ -225,10 +225,23 @@ node scripts/content-gap-survey.mjs --write
   `/ship-content`).
 
 - If it prints "all pillars comfortable — no row filed", fall
-  through to Step 3c (expand).
+  through to the cross-link sweep below.
 
-- If it exits non-zero, log the error and fall through to Step 3c.
-  The refill is best-effort; the loop continues.
+- If it exits non-zero, log the error and fall through to the
+  cross-link sweep below. The refill is best-effort; the loop
+  continues.
+
+After content-gap-survey completes (regardless of outcome), run the
+companion cross-link survey (Phase 39 amendment):
+
+```bash
+node scripts/article-crosslink-survey.mjs --write
+```
+
+This files AUDIT rows for any article pairs sharing ≥2 tags with no
+prose cross-link. Deduplicates against existing AUDIT rows so repeated
+calls are safe. If it exits non-zero, log and continue — the survey is
+best-effort. Then fall through to Step 3c (expand).
 
 #### 3c. Expand due (rate-limited, posture-gated)?
 
