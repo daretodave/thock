@@ -241,6 +241,18 @@ node scripts/article-crosslink-survey.mjs --write
 This files AUDIT rows for any article pairs sharing ≥2 tags with no
 prose cross-link. Deduplicates against existing AUDIT rows so repeated
 calls are safe. If it exits non-zero, log and continue — the survey is
+best-effort.
+
+Then run the group-buy companion survey (Phase 40 amendment):
+
+```bash
+node scripts/group-buy-companion-survey.mjs --write
+```
+
+This files AUDIT rows (`content-gaps`, score 7.0) for any `live` or
+`announced` group-buy records with no `relatedArticle` — enforcing
+bearings.md Rule 3 mechanically. Deduplicates against existing AUDIT
+rows. If it exits non-zero, log and continue — the survey is
 best-effort. Then fall through to Step 3c (expand).
 
 #### 3c. Expand due (rate-limited, posture-gated)?

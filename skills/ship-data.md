@@ -137,6 +137,23 @@ Use the schema. Slug convention: `kebab-case`, derived from the
 canonical name. No spaces, no underscores, no apostrophes (strip them
 or substitute with `-`).
 
+#### Step 4b — File companion-article AUDIT row when adding a group-buy record (phase 40 rule)
+
+After writing the JSON, run the companion survey to catch Rule 3 gaps
+immediately:
+
+```bash
+node scripts/group-buy-companion-survey.mjs --write
+```
+
+If the new record is `live` or `announced` with no `relatedArticle`,
+the script appends a `content-gaps` AUDIT row (score 7.0) so the next
+`/ship-content` tick produces the companion piece automatically.
+
+Deduplication is built in — repeated runs are safe. If the script exits
+non-zero, log the error and continue; this check is best-effort, not
+blocking.
+
 #### Step 4a — Bundle hero art when adding a group-buy record (phase 23 rule)
 
 When `<entity>` is `group-buys`, the new record's `heroImage`
