@@ -1,4 +1,5 @@
 import type { ReactElement } from 'react'
+import Link from 'next/link'
 import { Container, Stack } from '@thock/ui'
 import {
   buildBreadcrumbListJsonLd,
@@ -68,6 +69,16 @@ export default function TagsPage(): ReactElement {
       </Container>
 
       <TagsIndex tags={tags} />
+
+      <Container className="pb-12">
+        <Link
+          href="/archive"
+          data-testid="tags-archive-link"
+          className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-accent transition-colors"
+        >
+          Browse by date →
+        </Link>
+      </Container>
     </main>
   )
 }

@@ -176,6 +176,14 @@ export const pageReads: Record<string, PageRead> = {
     pattern: '/sources',
     ...html([{ kind: 'h1-matches', pattern: /where we got the facts/i }]),
   },
+  '/archive': {
+    pattern: '/archive',
+    ...html([
+      // Phase 43: archive groups all articles by month; H1 is "Archive".
+      { kind: 'h1-matches', pattern: /^archive$/i },
+      { kind: 'min-link-count', selector: 'a[data-testid="archive-article-link"]', min: 1 },
+    ]),
+  },
   '/parts': {
     pattern: '/parts',
     ...html([
