@@ -3318,3 +3318,15 @@ passes accumulate signals.)
 - suggested fix: wrap "Switch films" → [Switch films](/article/switch-films-worth-it) at line 97
 - issue: [mirror-failed: 2026-06-11T00:00:00Z]
 - addressed in: d5dd164
+
+### [x] [content] [6.3] topre-electrocapacitive-deep-dive — optical-switches-explained cross-link missing at sensing-lineage comparison
+- category: content
+- filed: 2026-06-11 by cloud /iterate audit
+- impact: 7 (topre-electrocapacitive-deep-dive "Where Topre fits in 2026" compares Hall-effect, analog-progressive, and Topre but omits optical — the fourth non-MX sensing lineage; optical-switches-explained already links to topre in its opening paragraph; the sensing-lineage pair was half-navigable)
+- ease: 9 (single sentence insertion in the comparison paragraph — same pattern as all prior cross-link fixes)
+- score: 6.3 (impact × ease / 10)
+- observation: topre-electrocapacitive-deep-dive line 76 paragraph beginning "Hall-effect is magnetic..." named three sensing architectures (Hall-effect, analog-progressive, Topre) without mentioning optical switches. optical-switches-explained line 18 already linked to topre; the reverse path was absent.
+- evidence: apps/web/src/content/articles/topre-electrocapacitive-deep-dive.mdx — grep for "optical-switches-explained" returns 0 matches before fix; optical-switches-explained.mdx line 18 links forward to topre.
+- suggested fix: add one sentence about optical switches in the comparison paragraph, between analog-progressive and Topre descriptions
+- issue: [mirror-failed: 2026-06-11T09:40:00Z]
+- addressed in: b675a09
