@@ -3306,3 +3306,15 @@ passes accumulate signals.)
 - suggested fix: extend tray-mount sentence to mention o-ring mod as the standoff-contact complement to PE foam and tape mod.
 - issue: #318
 - addressed in: 41bfcc5, closes #318
+
+### [x] [content] [6.3] sound-dampening-compared — switch-films-worth-it cross-link missing at films mention
+- category: content
+- filed: 2026-06-11 by cloud /iterate audit
+- impact: 7 (sound-dampening-compared "The mods that get conflated with these but aren't" section explicitly names switch films as a contrasting technique but provides no link to switch-films-worth-it; readers who want the companion guide on when films are worth it have no path from this article)
+- ease: 9 (single inline link wrap — "Switch films" → [Switch films](/article/switch-films-worth-it) at line 97)
+- score: 6.3 (impact × ease / 10)
+- observation: sound-dampening-compared line 97 reads "Switch films act at the switch itself, tightening the top and bottom housings against each other; they change the sound of the switch, not the sound of the case." — "Switch films" is unlinked despite switch-films-worth-it being the canonical dedicated guide on the topic and the natural companion read from the dampening article.
+- evidence: apps/web/src/content/articles/sound-dampening-compared.mdx:97 — "Switch films" unlinked; grep for "switch-films-worth-it" returns 0 matches before fix.
+- suggested fix: wrap "Switch films" → [Switch films](/article/switch-films-worth-it) at line 97
+- issue: [mirror-failed: 2026-06-11T00:00:00Z]
+- addressed in: d5dd164
