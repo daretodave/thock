@@ -3767,7 +3767,7 @@ passes accumulate signals.)
 - issue: #332
 - addressed in: 
 
-### [ ] [cross-links] [4.5] divinikey-dcs-dolch-group-buy ↔ gmk-cyl-king-of-the-seas-group-buy — no prose cross-link (same pillar, ≥2 shared tags: group-buy, abs)
+### [x] [cross-links] [4.5] divinikey-dcs-dolch-group-buy ↔ gmk-cyl-king-of-the-seas-group-buy — no prose cross-link (same pillar, ≥2 shared tags: group-buy, abs)
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -3777,6 +3777,8 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/divinikey-dcs-dolch-group-buy.mdx
 - article-b: apps/web/src/content/articles/gmk-cyl-king-of-the-seas-group-buy.mdx
 - action: add [gmk-cyl-king-of-the-seas-group-buy](/article/gmk-cyl-king-of-the-seas-group-buy) to divinikey-dcs-dolch-group-buy body, or vice versa
+- issue: #333
+- addressed in: f67b8fc
 
 ### [ ] [cross-links] [4.5] divinikey-dcs-dolch-group-buy ↔ gmk-cyl-prussian-alert — no prose cross-link (same pillar, ≥2 shared tags: group-buy, keycaps)
 - category: cross-links
