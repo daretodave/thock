@@ -3742,7 +3742,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/keycap-profiles-compared.mdx
 - action: add [keycap-profiles-compared](/article/keycap-profiles-compared) to dcs-olivetti-comeback body, or vice versa
 
-### [ ] [cross-links] [4.5] divinikey-dcs-dolch-group-buy ↔ gmk-cyl-greg-2-group-buy — no prose cross-link (same pillar, ≥2 shared tags: group-buy, abs)
+### [x] [cross-links] [4.5] divinikey-dcs-dolch-group-buy ↔ gmk-cyl-greg-2-group-buy — no prose cross-link (same pillar, ≥2 shared tags: group-buy, abs)
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -3752,6 +3752,7 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/divinikey-dcs-dolch-group-buy.mdx
 - article-b: apps/web/src/content/articles/gmk-cyl-greg-2-group-buy.mdx
 - action: add [gmk-cyl-greg-2-group-buy](/article/gmk-cyl-greg-2-group-buy) to divinikey-dcs-dolch-group-buy body, or vice versa
+- addressed in: 0b3ad4a
 
 ### [ ] [cross-links] [4.5] divinikey-dcs-dolch-group-buy ↔ gmk-cyl-ishtar-r2-group-buy — no prose cross-link (same pillar, ≥2 shared tags: group-buy, abs)
 - category: cross-links
