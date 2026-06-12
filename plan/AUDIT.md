@@ -3649,7 +3649,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/switch-films-worth-it.mdx
 - action: add [switch-films-worth-it](/article/switch-films-worth-it) to cherry-mx2a-revision body, or vice versa
 
-### [ ] [cross-links] [4.5] clicky-switches-deep-dive ↔ hmx-cloud-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, switches)
+### [x] [cross-links] [4.5] clicky-switches-deep-dive ↔ hmx-cloud-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, switches)
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -3659,6 +3659,8 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/clicky-switches-deep-dive.mdx
 - article-b: apps/web/src/content/articles/hmx-cloud-deep-dive.mdx
 - action: add [hmx-cloud-deep-dive](/article/hmx-cloud-deep-dive) to clicky-switches-deep-dive body, or vice versa
+- issue: #329
+- addressed in: e9e8b74, closes #329
 
 ### [ ] [cross-links] [4.5] clicky-switches-deep-dive ↔ magnetic-switches-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, switches)
 - category: cross-links
