@@ -4629,3 +4629,24 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/tape-mod.mdx
 - article-b: apps/web/src/content/articles/typing-tests-lie.mdx
 - action: add [typing-tests-lie](/article/typing-tests-lie) to tape-mod body, or vice versa
+
+### [HOT PURSUIT] [content-gap] [7] deep-dives pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 6 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: deep-dives
+- window-count: 1
+- window-start: 2026-05-13
+- score: 7
+- next: /ship-content → deep-dives pillar article
+> Filed 2026-06-12 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+
+### [ ] [data] [3.6] kbdfans-gmk-cyl-prussian-alert — status stale, endDate 2026-06-12 passed
+- category: data
+- filed: 2026-06-12 by group-buy-status-check.mjs
+- impact: 4 (buy shows status "live" but endDate 2026-06-12 has passed — data hygiene gap)
+- ease: 9 (update status field to 'closed' in data/group-buys/kbdfans-gmk-cyl-prussian-alert.json)
+- score: 3.6 (impact × ease / 10)
+- group-buy: data/group-buys/kbdfans-gmk-cyl-prussian-alert.json
+- action: update status from 'live' to 'closed' in data/group-buys/kbdfans-gmk-cyl-prussian-alert.json
