@@ -3675,7 +3675,7 @@ passes accumulate signals.)
 - issue: #330
 - addressed in: HEAD, closes #330
 
-### [ ] [cross-links] [4.5] clicky-switches-deep-dive ↔ optical-switches-explained — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, switches)
+### [x] [cross-links] [4.5] clicky-switches-deep-dive ↔ optical-switches-explained — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, switches) — addressed in f497763, closes #331
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -3685,6 +3685,7 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/clicky-switches-deep-dive.mdx
 - article-b: apps/web/src/content/articles/optical-switches-explained.mdx
 - action: add [optical-switches-explained](/article/optical-switches-explained) to clicky-switches-deep-dive body, or vice versa
+- issue: #331
 
 ### [ ] [cross-links] [3.6] dcs-grass-valley-decline ↔ gmk-cyl-prussian-alert — no prose cross-link (adjacent pillar, ≥2 shared tags: keycaps, group-buy)
 - category: cross-links
