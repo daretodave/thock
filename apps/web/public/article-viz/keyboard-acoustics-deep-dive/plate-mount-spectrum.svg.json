@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-12T00:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "keyboard-acoustics-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "Plate and mount acoustics: transmission and isolation",
+  "brief_summary": "Two-axis grid diagram with plate stiffness (rigid to compliant) on the horizontal axis and mount isolation (coupled to isolated) on the vertical axis. Four quadrants label the predictable acoustic zones: deep thock (gasket-mount + PC/POM plate), controlled stiffness (top-mount + aluminum), bright ring (tray-mount + brass), and soft clack (tray-mount + PC). The deep thock quadrant is washed in ochre as the focal zone.",
+  "target": "apps/web/public/article-viz/keyboard-acoustics-deep-dive/plate-mount-spectrum.svg",
+  "splash_color": { "name": "ochre", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "apps/web/src/content/articles/keyboard-acoustics-deep-dive.mdx:Plate and mount acoustics — 'A brass plate in a rigid top-mount rings loudly and decays slowly; the same brass plate in a well-tuned gasket-mount sounds controlled and meaty.'",
+    "apps/web/src/content/articles/keyboard-acoustics-deep-dive.mdx:Plate and mount acoustics — 'Picking plate material without specifying mount type is an incomplete conversation.'",
+    "apps/web/src/content/articles/plate-materials-explained.mdx:The material walk — 'polycarbonate plate plus gasket-mount plus a thock-forward switch is the deep thock default.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/keyboard-acoustics-deep-dive/plate-mount-spectrum.svg"],
+  "warnings": []
+}

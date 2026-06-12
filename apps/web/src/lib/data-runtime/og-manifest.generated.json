@@ -31,6 +31,16 @@
       }
     },
     {
+      "slug": "keyboard-acoustics-deep-dive",
+      "readTime": 14,
+      "frontmatter": {
+        "title": "The physics of thock: how every layer shapes your keyboard's sound",
+        "lede": "Every component between your fingertip and the desk makes a decision about your keyboard's sound — the switch, the plate, the case, the surface it sits on. Understanding what each layer adds or subtracts is the difference between chasing a sound blindly and engineering it deliberately.",
+        "pillar": "deep-dives",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "divinikey-dcs-dolch-group-buy",
       "readTime": 7,
       "frontmatter": {
@@ -511,5 +521,5 @@
       }
     }
   ],
-  "generatedAt": "2026-06-11T22:57:02.529Z"
+  "generatedAt": "2026-06-12T01:13:46.700Z"
 }

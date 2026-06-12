@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — keyboard acoustics deep dive: cross-section acoustic stack with sound-wave ripple</title>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════════
+       ACOUSTIC STACK — side-profile cross-section, 1200×750 canvas.
+       Layer order (top → bottom):
+         1. Keycap cap body
+         2. Switch housing (top + stem visible)
+         3. Plate (rigid mid-layer)
+         4. PCB substrate
+         5. Case foam / dampening layer  ← ochre splash wash
+         6. Case bottom
+
+       The ochre wash highlights the foam layer as the "active" acoustic
+       treatment surface. A sound-wave ripple radiates from the switch
+       contact point (base of switch, where PCB pin engages) to illustrate
+       the acoustic physics angle.
+
+       All layers are rendered as horizontal bands occupying the full
+       keyboard width (200–1000 px on the x-axis), with thin hairline
+       annotation lines and mono-weight labels pointing to each layer.
+
+       Bronze theme dot sits in the top-right margin per family convention.
+       ═══════════════════════════════════════════════════════════════════════════ -->
+
+  <!-- ── LAYER 1: KEYCAP CAP ────────────────────────────────────────────────── -->
+  <!-- A row of five SA-ish profile keycap silhouettes, centred over the switch
+       column. They sit above the main cross-section line to give the diagram a
+       "zoomed into one switch column" sense of depth. -->
+  <g id="keycap-row">
+    <!-- Five keycap caps in a row, centred on x=600 with ~76px pitch -->
+    <!-- Keycap 1 (leftmost) -->
+    <path d="M 296 108 C 296 100, 302 96, 310 96 L 354 96 C 362 96, 368 100, 368 108 L 368 138 C 368 148, 360 154, 350 154 L 314 154 C 304 154, 296 148, 296 138 Z"/>
+    <!-- Keycap 2 -->
+    <path d="M 374 108 C 374 100, 380 96, 388 96 L 432 96 C 440 96, 446 100, 446 108 L 446 138 C 446 148, 438 154, 428 154 L 392 154 C 382 154, 374 148, 374 138 Z"/>
+    <!-- Keycap 3 — centre, focal key over the sound-event switch -->
+    <path d="M 452 104 C 452 95, 459 90, 468 90 L 532 90 C 541 90, 548 95, 548 104 L 548 138 C 548 149, 539 156, 528 156 L 472 156 C 461 156, 452 149, 452 138 Z" stroke-width="2.5"/>
+    <!-- Keycap 4 -->
+    <path d="M 554 108 C 554 100, 560 96, 568 96 L 612 96 C 620 96, 626 100, 626 108 L 626 138 C 626 148, 618 154, 608 154 L 572 154 C 562 154, 554 148, 554 138 Z"/>
+    <!-- Keycap 5 (rightmost) -->
+    <path d="M 632 108 C 632 100, 638 96, 646 96 L 690 96 C 698 96, 704 100, 704 108 L 704 138 C 704 148, 696 154, 686 154 L 650 154 C 640 154, 632 148, 632 138 Z"/>
+    <!-- Keycap legends — faint cross marks indicating letter positions -->
+    <line x1="332" y1="121" x2="332" y2="129" stroke-opacity="0.3"/>
+    <line x1="328" y1="125" x2="336" y2="125" stroke-opacity="0.3"/>
+    <line x1="410" y1="121" x2="410" y2="129" stroke-opacity="0.3"/>
+    <line x1="406" y1="125" x2="414" y2="125" stroke-opacity="0.3"/>
+    <line x1="500" y1="119" x2="500" y2="128" stroke-opacity="0.3"/>
+    <line x1="495" y1="123" x2="505" y2="123" stroke-opacity="0.3"/>
+    <line x1="589" y1="121" x2="589" y2="129" stroke-opacity="0.3"/>
+    <line x1="585" y1="125" x2="593" y2="125" stroke-opacity="0.3"/>
+    <line x1="668" y1="121" x2="668" y2="129" stroke-opacity="0.3"/>
+    <line x1="664" y1="125" x2="672" y2="125" stroke-opacity="0.3"/>
+  </g>
+
+  <!-- Keycap stems (connecting keycap bottom to switch stem top) -->
+  <g stroke-opacity="0.5" stroke-width="1.5">
+    <line x1="332" y1="154" x2="332" y2="176"/>
+    <line x1="410" y1="154" x2="410" y2="176"/>
+    <line x1="500" y1="156" x2="500" y2="176"/>
+    <line x1="589" y1="154" x2="589" y2="176"/>
+    <line x1="668" y1="154" x2="668" y2="176"/>
+  </g>
+
+  <!-- ── LAYER 2: SWITCH HOUSING BAND ──────────────────────────────────────── -->
+  <!-- Horizontal band representing the switch body (top housing + stems visible) -->
+  <!-- Switch band outer top edge -->
+  <path d="M 200 176 L 1000 176" stroke-opacity="0.55" stroke-width="1.5"/>
+  <!-- Switch band — top housing block -->
+  <rect x="200" y="176" width="800" height="62" rx="2"/>
+  <!-- Individual switch housings within the band — five columns, each ~76px wide -->
+  <!-- Switch housing outlines (inner boundaries) -->
+  <g stroke-opacity="0.6" stroke-width="1">
+    <!-- sw 1 -->
+    <rect x="296" y="183" width="76" height="48" rx="1"/>
+    <!-- sw 2 -->
+    <rect x="374" y="183" width="76" height="48" rx="1"/>
+    <!-- sw 3 (focal) -->
+    <rect x="452" y="180" width="96" height="51" rx="1" stroke-opacity="0.85" stroke-width="1.5"/>
+    <!-- sw 4 -->
+    <rect x="554" y="183" width="76" height="48" rx="1"/>
+    <!-- sw 5 -->
+    <rect x="632" y="183" width="76" height="48" rx="1"/>
+  </g>
+  <!-- Switch stem positions (cruciform cross marks) -->
+  <g stroke-opacity="0.4" stroke-width="1">
+    <line x1="334" y1="200" x2="334" y2="218"/> <line x1="325" y1="209" x2="343" y2="209"/>
+    <line x1="412" y1="200" x2="412" y2="218"/> <line x1="403" y1="209" x2="421" y2="209"/>
+    <line x1="500" y1="198" x2="500" y2="219"/> <line x1="489" y1="208" x2="511" y2="208"/>
+    <line x1="592" y1="200" x2="592" y2="218"/> <line x1="583" y1="209" x2="601" y2="209"/>
+    <line x1="670" y1="200" x2="670" y2="218"/> <line x1="661" y1="209" x2="679" y2="209"/>
+  </g>
+  <!-- Switch legs at bottom of housing (PCB pins) -->
+  <g stroke-opacity="0.5" stroke-width="1.5">
+    <line x1="318" y1="238" x2="318" y2="248"/> <line x1="350" y1="238" x2="350" y2="248"/>
+    <line x1="396" y1="238" x2="396" y2="248"/> <line x1="428" y1="238" x2="428" y2="248"/>
+    <line x1="483" y1="238" x2="483" y2="250"/> <line x1="517" y1="238" x2="517" y2="250"/>
+    <line x1="576" y1="238" x2="576" y2="248"/> <line x1="608" y1="238" x2="608" y2="248"/>
+    <line x1="654" y1="238" x2="654" y2="248"/> <line x1="686" y1="238" x2="686" y2="248"/>
+  </g>
+
+  <!-- ── LAYER 3: PLATE ────────────────────────────────────────────────────── -->
+  <!-- A solid rigid band. Real plates are 1–1.5mm steel/aluminium/PC.
+       Drawn as a relatively thin solid bar to convey rigidity. -->
+  <rect x="200" y="248" width="800" height="22" rx="1"/>
+  <!-- Plate surface grain — subtle horizontal dashes suggesting metal grain -->
+  <g stroke-opacity="0.18" stroke-width="0.75" stroke-dasharray="6 10">
+    <line x1="208" y1="255" x2="992" y2="255"/>
+    <line x1="208" y1="263" x2="992" y2="263"/>
+  </g>
+  <!-- Switch cutouts in the plate (visible holes for switch pins through) -->
+  <g stroke-opacity="0.5" stroke-width="1">
+    <rect x="320" y="248" width="28" height="22"/>
+    <rect x="398" y="248" width="28" height="22"/>
+    <rect x="484" y="248" width="30" height="22"/>
+    <rect x="578" y="248" width="28" height="22"/>
+    <rect x="656" y="248" width="28" height="22"/>
+  </g>
+
+  <!-- ── LAYER 4: PCB ───────────────────────────────────────────────────────── -->
+  <!-- PCB band — slightly thicker than plate, with trace line hints -->
+  <rect x="200" y="270" width="800" height="30" rx="1"/>
+  <!-- PCB trace suggestions — very faint angled hairlines suggesting routing -->
+  <g stroke-opacity="0.12" stroke-width="0.75">
+    <line x1="260" y1="278" x2="310" y2="278"/>
+    <line x1="310" y1="278" x2="320" y2="284"/>
+    <line x1="380" y1="278" x2="400" y2="278"/>
+    <line x1="470" y1="278" x2="488" y2="278"/>
+    <line x1="540" y1="284" x2="560" y2="278"/>
+    <line x1="620" y1="278" x2="648" y2="278"/>
+    <line x1="710" y1="278" x2="730" y2="278"/>
+    <line x1="800" y1="278" x2="850" y2="278"/>
+    <!-- horizontal bus traces -->
+    <line x1="240" y1="290" x2="960" y2="290"/>
+  </g>
+  <!-- Switch contact points visible through PCB — small pads where switch pins land -->
+  <g stroke-opacity="0.55" stroke-width="1">
+    <circle cx="318" cy="284" r="3.5"/>  <circle cx="350" cy="284" r="3.5"/>
+    <circle cx="396" cy="284" r="3.5"/>  <circle cx="428" cy="284" r="3.5"/>
+    <circle cx="483" cy="284" r="3.5"/>  <circle cx="517" cy="284" r="3.5"/>
+    <circle cx="576" cy="284" r="3.5"/>  <circle cx="608" cy="284" r="3.5"/>
+    <circle cx="654" cy="284" r="3.5"/>  <circle cx="686" cy="284" r="3.5"/>
+  </g>
+  <!-- Focal switch contact (sw3, centre) — the acoustic event point -->
+  <circle cx="483" cy="284" r="6" stroke="oklch(0.78 0.12 75)" stroke-width="1.5" stroke-opacity="0.9"/>
+  <circle cx="517" cy="284" r="6" stroke="oklch(0.78 0.12 75)" stroke-width="1.5" stroke-opacity="0.9"/>
+
+  <!-- ── LAYER 5: CASE FOAM / DAMPENING ← OCHRE SPLASH LAYER ──────────────── -->
+  <!-- This is the "active" acoustic treatment layer.
+       Filled with an ochre wash to mark it as the splash accent.
+       Slightly taller than the other layers to communicate material thickness. -->
+  <!-- Ochre fill — the splash wash -->
+  <rect x="200" y="300" width="800" height="38" rx="1" fill="oklch(0.78 0.12 75 / 0.18)" stroke="oklch(0.78 0.12 75)" stroke-width="2"/>
+  <!-- Foam texture — small repeating oval dimples suggesting open-cell foam -->
+  <g fill="none" stroke="oklch(0.78 0.12 75)" stroke-width="0.75" stroke-opacity="0.35">
+    <ellipse cx="240" cy="319" rx="8" ry="5"/>
+    <ellipse cx="270" cy="319" rx="8" ry="5"/>
+    <ellipse cx="300" cy="319" rx="8" ry="5"/>
+    <ellipse cx="330" cy="319" rx="8" ry="5"/>
+    <ellipse cx="360" cy="319" rx="8" ry="5"/>
+    <ellipse cx="390" cy="319" rx="8" ry="5"/>
+    <ellipse cx="420" cy="319" rx="8" ry="5"/>
+    <ellipse cx="450" cy="319" rx="8" ry="5"/>
+    <ellipse cx="480" cy="319" rx="8" ry="5"/>
+    <ellipse cx="510" cy="319" rx="8" ry="5"/>
+    <ellipse cx="540" cy="319" rx="8" ry="5"/>
+    <ellipse cx="570" cy="319" rx="8" ry="5"/>
+    <ellipse cx="600" cy="319" rx="8" ry="5"/>
+    <ellipse cx="630" cy="319" rx="8" ry="5"/>
+    <ellipse cx="660" cy="319" rx="8" ry="5"/>
+    <ellipse cx="690" cy="319" rx="8" ry="5"/>
+    <ellipse cx="720" cy="319" rx="8" ry="5"/>
+    <ellipse cx="750" cy="319" rx="8" ry="5"/>
+    <ellipse cx="780" cy="319" rx="8" ry="5"/>
+    <ellipse cx="810" cy="319" rx="8" ry="5"/>
+    <ellipse cx="840" cy="319" rx="8" ry="5"/>
+    <ellipse cx="870" cy="319" rx="8" ry="5"/>
+    <ellipse cx="900" cy="319" rx="8" ry="5"/>
+    <ellipse cx="930" cy="319" rx="8" ry="5"/>
+    <ellipse cx="960" cy="319" rx="8" ry="5"/>
+    <!-- second row, offset -->
+    <ellipse cx="255" cy="329" rx="8" ry="5"/>
+    <ellipse cx="285" cy="329" rx="8" ry="5"/>
+    <ellipse cx="315" cy="329" rx="8" ry="5"/>
+    <ellipse cx="345" cy="329" rx="8" ry="5"/>
+    <ellipse cx="375" cy="329" rx="8" ry="5"/>
+    <ellipse cx="405" cy="329" rx="8" ry="5"/>
+    <ellipse cx="435" cy="329" rx="8" ry="5"/>
+    <ellipse cx="465" cy="329" rx="8" ry="5"/>
+    <ellipse cx="495" cy="329" rx="8" ry="5"/>
+    <ellipse cx="525" cy="329" rx="8" ry="5"/>
+    <ellipse cx="555" cy="329" rx="8" ry="5"/>
+    <ellipse cx="585" cy="329" rx="8" ry="5"/>
+    <ellipse cx="615" cy="329" rx="8" ry="5"/>
+    <ellipse cx="645" cy="329" rx="8" ry="5"/>
+    <ellipse cx="675" cy="329" rx="8" ry="5"/>
+    <ellipse cx="705" cy="329" rx="8" ry="5"/>
+    <ellipse cx="735" cy="329" rx="8" ry="5"/>
+    <ellipse cx="765" cy="329" rx="8" ry="5"/>
+    <ellipse cx="795" cy="329" rx="8" ry="5"/>
+    <ellipse cx="825" cy="329" rx="8" ry="5"/>
+    <ellipse cx="855" cy="329" rx="8" ry="5"/>
+    <ellipse cx="885" cy="329" rx="8" ry="5"/>
+    <ellipse cx="915" cy="329" rx="8" ry="5"/>
+    <ellipse cx="945" cy="329" rx="8" ry="5"/>
+  </g>
+
+  <!-- ── LAYER 6: CASE BOTTOM ───────────────────────────────────────────────── -->
+  <!-- Thickest band — the case body / bottom shell -->
+  <rect x="200" y="338" width="800" height="50" rx="2"/>
+  <!-- Case bottom inner well — a recessed region indicating the hollow interior -->
+  <path d="M 220 352 L 980 352 L 980 382 L 220 382 Z" stroke-opacity="0.35" stroke-width="1"/>
+  <!-- Case feet / bumpers at the bottom corners -->
+  <rect x="216" y="386" width="28" height="8" rx="3" stroke-opacity="0.5" stroke-width="1.5"/>
+  <rect x="956" y="386" width="28" height="8" rx="3" stroke-opacity="0.5" stroke-width="1.5"/>
+  <!-- Gasket mounting points inside the case (small tab silhouettes) -->
+  <g stroke-opacity="0.45" stroke-width="1">
+    <path d="M 274 338 L 274 330 L 284 330 L 284 338"/>
+    <path d="M 450 338 L 450 330 L 460 330 L 460 338"/>
+    <path d="M 600 338 L 600 330 L 610 330 L 610 338"/>
+    <path d="M 740 338 L 740 330 L 750 330 L 750 338"/>
+    <path d="M 916 338 L 916 330 L 926 330 L 926 338"/>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════════
+       SOUND-WAVE RIPPLE — radiating from the switch contact point.
+       The focal switch (sw3, centre) is at x≈500, y≈284 (PCB contact layer).
+       Concentric arcs radiate downward and laterally, representing acoustic
+       energy propagating through the stack layers.
+       ═══════════════════════════════════════════════════════════════════════════ -->
+  <g id="sound-wave" stroke="oklch(0.78 0.12 75)" fill="none" stroke-linecap="round">
+    <!-- The origin is the switch contact. Ripples radiate outward. Each arc
+         gets progressively more transparent to show energy dissipation. -->
+    <!-- Arc 1 — innermost, tightest, most opaque -->
+    <path d="M 480 284 Q 500 298, 520 284" stroke-width="1.75" stroke-opacity="0.85"/>
+    <!-- Arc 2 -->
+    <path d="M 466 284 Q 500 310, 534 284" stroke-width="1.5" stroke-opacity="0.68"/>
+    <!-- Arc 3 -->
+    <path d="M 450 284 Q 500 324, 550 284" stroke-width="1.25" stroke-opacity="0.50"/>
+    <!-- Arc 4 — crossing into the foam layer -->
+    <path d="M 432 284 Q 500 340, 568 284" stroke-width="1.1" stroke-opacity="0.35"/>
+    <!-- Arc 5 — broad, near the case bottom layer -->
+    <path d="M 412 300 Q 500 360, 588 300" stroke-width="1" stroke-opacity="0.22"/>
+    <!-- Arc 6 — widest, fading out, reaching case body -->
+    <path d="M 388 320 Q 500 380, 612 320" stroke-width="0.9" stroke-opacity="0.13"/>
+  </g>
+
+  <!-- Bronze accent dot at the wave origin — "switch contact / acoustic event" focal mark -->
+  <!-- This is the combined family-convention focal-dot + acoustic-event marker -->
+  <circle cx="500" cy="284" r="5" fill="oklch(0.80 0.135 75 / 0.95)" stroke="oklch(0.80 0.135 75)" stroke-width="1.5"/>
+  <circle cx="500" cy="284" r="10" stroke="oklch(0.80 0.135 75)" stroke-opacity="0.45" stroke-width="1" fill="none"/>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════════
+       ANNOTATION HAIRLINES + LABELS
+       Left-margin annotation system: hairlines from each layer's midpoint to
+       a vertical callout rail at x=140, with mono-weight label text.
+       Right-margin: secondary confirmatory labels.
+       All strokes 0.6px, text 11px JetBrains Mono style.
+       ═══════════════════════════════════════════════════════════════════════════ -->
+
+  <!-- Callout rail — vertical hairline at x=140 -->
+  <line x1="140" y1="100" x2="140" y2="420" stroke-opacity="0.2" stroke-width="0.6"/>
+
+  <!-- Per-layer annotation lines (left) -->
+  <!-- Layer 1: keycap -->
+  <line x1="200" y1="125" x2="140" y2="125" stroke-width="0.6" stroke-opacity="0.55"/>
+  <circle cx="140" cy="125" r="1.8" fill="oklch(0.78 0.005 90)" stroke="none"/>
+
+  <!-- Layer 2: switch housing -->
+  <line x1="200" y1="207" x2="140" y2="207" stroke-width="0.6" stroke-opacity="0.55"/>
+  <circle cx="140" cy="207" r="1.8" fill="oklch(0.78 0.005 90)" stroke="none"/>
+
+  <!-- Layer 3: plate -->
+  <line x1="200" y1="259" x2="140" y2="259" stroke-width="0.6" stroke-opacity="0.55"/>
+  <circle cx="140" cy="259" r="1.8" fill="oklch(0.78 0.005 90)" stroke="none"/>
+
+  <!-- Layer 4: PCB -->
+  <line x1="200" y1="285" x2="140" y2="285" stroke-width="0.6" stroke-opacity="0.55"/>
+  <circle cx="140" cy="285" r="1.8" fill="oklch(0.78 0.005 90)" stroke="none"/>
+
+  <!-- Layer 5: foam — ochre accent on the callout dot -->
+  <line x1="200" y1="319" x2="140" y2="319" stroke-width="0.6" stroke-opacity="0.8" stroke="oklch(0.78 0.12 75)"/>
+  <circle cx="140" cy="319" r="2.5" fill="oklch(0.78 0.12 75)" stroke="none"/>
+
+  <!-- Layer 6: case bottom -->
+  <line x1="200" y1="363" x2="140" y2="363" stroke-width="0.6" stroke-opacity="0.55"/>
+  <circle cx="140" cy="363" r="1.8" fill="oklch(0.78 0.005 90)" stroke="none"/>
+
+  <!-- Labels — IBM Plex Sans / JetBrains Mono style; rendered as SVG text -->
+  <!-- font-family deliberately spelled out; on export, these render from system fonts
+       (JetBrains Mono for the technical layer names, matching the thock mono family) -->
+  <g font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace"
+     font-size="11" fill="oklch(0.58 0.006 90)" text-anchor="end" dominant-baseline="middle">
+    <text x="132" y="125">keycap</text>
+    <text x="132" y="207">switch housing</text>
+    <text x="132" y="259">plate</text>
+    <text x="132" y="285">pcb</text>
+    <text x="132" y="319" fill="oklch(0.78 0.12 75)" font-size="11.5">case foam</text>
+    <text x="132" y="363">case body</text>
+  </g>
+
+  <!-- Right-margin secondary annotations — bracket + label style -->
+  <!-- Bracket indicating the "keyboard acoustic stack" as a whole -->
+  <g stroke-width="0.6" stroke-opacity="0.4">
+    <line x1="1060" y1="176" x2="1070" y2="176"/>
+    <line x1="1070" y1="176" x2="1070" y2="388"/>
+    <line x1="1070" y1="388" x2="1060" y2="388"/>
+    <!-- Mid-tick at the bracket midpoint -->
+    <line x1="1070" y1="282" x2="1078" y2="282"/>
+  </g>
+  <!-- "acoustic stack" label, rotated 90°, right margin -->
+  <text
+    x="1090" y="282"
+    font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace"
+    font-size="10"
+    fill="oklch(0.42 0.007 250)"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    transform="rotate(90 1090 282)">
+    acoustic stack
+  </text>
+
+  <!-- Sound-wave origin annotation — small callout right of the focal switch -->
+  <!-- Hairline from the bronze dot to a label below the PCB layer -->
+  <line x1="510" y1="284" x2="560" y2="390" stroke-width="0.6" stroke-opacity="0.45"/>
+  <circle cx="560" cy="390" r="1.5" fill="oklch(0.58 0.006 90)" stroke="none"/>
+  <text
+    x="566" y="400"
+    font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace"
+    font-size="10"
+    fill="oklch(0.80 0.135 75)"
+    dominant-baseline="middle">
+    contact event
+  </text>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════════
+       MEASUREMENT TICK MARKS — left edge, one per layer tier midpoint.
+       Family convention: subtle dimension reference marks.
+       ═══════════════════════════════════════════════════════════════════════════ -->
+  <g stroke-opacity="0.22" stroke-width="0.75">
+    <line x1="164" y1="125" x2="174" y2="125"/>
+    <line x1="164" y1="207" x2="174" y2="207"/>
+    <line x1="164" y1="259" x2="174" y2="259"/>
+    <line x1="164" y1="285" x2="174" y2="285"/>
+    <line x1="164" y1="319" x2="174" y2="319"/>
+    <line x1="164" y1="363" x2="174" y2="363"/>
+  </g>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════════
+       BOTTOM COMPOSITION SPACE — article title glyph strip
+       A faint Newsreader-style italic text "keyboard acoustics" sits below the
+       main diagram as a baseline label, restrained and typographic.
+       ═══════════════════════════════════════════════════════════════════════════ -->
+  <text
+    x="600" y="460"
+    font-family="'Newsreader', 'Iowan Old Style', Georgia, serif"
+    font-style="italic"
+    font-size="18"
+    font-weight="400"
+    letter-spacing="-0.01em"
+    fill="oklch(0.42 0.007 250)"
+    text-anchor="middle"
+    dominant-baseline="middle">
+    keyboard acoustics — the physics of sound in the stack
+  </text>
+
+  <!-- ═══════════════════════════════════════════════════════════════════════════
+       BRASS-BRONZE THEME DOT — family ornamental anchor, top-right margin.
+       Required on every thock hero-art per the visual family convention.
+       ═══════════════════════════════════════════════════════════════════════════ -->
+  <circle cx="1148" cy="64" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+
+</svg>

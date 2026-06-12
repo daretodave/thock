@@ -1,0 +1,153 @@
+---
+slug: keyboard-acoustics-deep-dive
+title: "The physics of thock: how every layer shapes your keyboard's sound"
+lede: "Every component between your fingertip and the desk makes a decision about your keyboard's sound — the switch, the plate, the case, the surface it sits on. Understanding what each layer adds or subtracts is the difference between chasing a sound blindly and engineering it deliberately."
+author: thock
+pillar: deep-dives
+tags: [acoustic, deep-dive, modding, switches, stabilizers]
+publishedAt: '2026-06-03T12:00:00.000Z'
+updatedAt: null
+heroImage: /hero-art/keyboard-acoustics-deep-dive.svg
+heroImageAlt: "Cross-section line drawing of a mechanical keyboard stack — keycaps, switches, plate, PCB, gasket socks, case, and desk surface — each layer labeled with its acoustic role and drawn in a single warm-grey stroke with an ochre splash highlighting the plate and a brass-bronze theme dot at the upper right."
+featured: false
+popularityScore: 0
+mentionedParts:
+  - id: gateron-oil-king
+    kind: switch
+    slug: gateron-oil-king
+  - id: c3-tangerine-r2
+    kind: switch
+    slug: c3-tangerine-r2
+  - id: hmx-cloud
+    kind: switch
+    slug: hmx-cloud
+  - id: gazzew-boba-u4
+    kind: switch
+    slug: gazzew-boba-u4
+readTimeMinutes: 8
+---
+
+The word "thock" refers to a specific acoustic event: a deep, full-bodied bottom-out with a short decay and no metallic ring in the tail. Most builders chase it. Fewer understand why one board achieves it and an identical-looking board at the same price point does not. The answer is not in any single component — it is in how seven layers of materials transmit, absorb, and color vibration as energy moves from finger to desk. This is what each of those layers is doing.
+
+## The sound stack: seven layers, seven decisions
+
+A keystroke is a mechanical impulse. The stem bottoms out, the housing flexes a fraction, and that energy radiates outward in every direction simultaneously — through the keycap, through the plate, into the case, into the desk. The path that energy takes — and how much of it is absorbed, reflected, or colored at each interface — is what the ear hears as the keyboard's acoustic signature.
+
+<InlineViz
+  src="/article-viz/keyboard-acoustics-deep-dive/acoustic-stack.svg"
+  alt="Vertical cross-section diagram of a keyboard acoustic stack with seven labeled layers from top to bottom: keycap (mass and profile shape), switch housing (resonant chamber), plate (transmission medium), PCB (energy bridge), gasket or mount interface (decoupling layer), case (cavity and walls), desk surface (final ground). Each layer has a short annotation on the right margin describing its acoustic role. The plate layer is washed in ochre as the focal layer."
+  caption="Seven layers, each making its own acoustic decision. The plate is the most substitutable variable; the case cavity is the most underrated one."
+  accent="ochre"
+/>
+
+Working from top to bottom: the keycap determines mass (a heavier keycap at PBT's 1.5mm wall damps the top-out noticeably versus a thin ABS cap), and the keycap profile determines how much of that mass is cantilevered over the switch. The switch is where the fundamental sound event originates. The plate transmits that event into the structure. The PCB bridges plate to case. The mount interface (tray screws, top-mount standoffs, or gasket pads) either rigidly couples or softly decouples the PCB-plate assembly from the case walls. The case cavity and walls color the sound with their own resonant character. The desk surface is the final absorber or reflector.
+
+Each of these layers is a lever. Understanding what each lever does — and in which direction — is the core skill the acoustic specification movement is trying to codify. The [acoustic spec](/article/acoustic-spec-rise) piece covers how vendors are formalizing this vocabulary; this article covers the physics underneath it.
+
+---
+
+## Switch acoustics: the event at the source
+
+The switch is the origin of the sound. Everything else is downstream.
+
+Four variables determine a switch's acoustic contribution: stem material, housing material, stem pole length, and lubrication.
+
+**Stem material.** POM (polyoxymethylene) is the dominant modern stem material because it is self-lubricating and dimensionally stable — it produces a predictably smooth rail-contact sound. A POM stem in a nylon housing glides with low friction and generates minimal high-frequency content at the rail interface. Nylon stems (still common in budget switches) have higher surface friction and produce more rail noise, which is why hand-lubing nylon-stem switches returns a larger acoustic improvement than the same application on a POM stem.
+
+**Housing material.** The housing is the resonant chamber the stem moves inside. A polycarbonate (PC) top housing is acoustically transparent: it lets the switch's natural register pass through with minimal attenuation. A nylon bottom housing is acoustically absorptive: it damps the bottom-out impact and converts high-frequency "tick" energy into low-mid "thock" energy. The combination — PC top, nylon bottom — is the most common pairing in premium linears for exactly this reason. The <PartReference id="gateron-oil-king" /> is the canonical example: its PC top housing contributes presence to the upstroke, and its nylon bottom housing gives the bottom-out its characteristic deep, contained pock. An all-nylon switch like the <PartReference id="gazzew-boba-u4" /> takes this absorption further and produces a muted thud that is acoustically rounded but lacks top-end articulation. An all-PC switch like the <PartReference id="hmx-cloud" /> sits at the other pole — bright, clacky, with minimal dampening in the housing itself.
+
+**Stem pole length.** Long-pole stems — where the stem post extends further down into the bottom housing — reduce pre-travel and change the acoustic character of bottom-out. A standard-pole stem bottoms out by compressing the spring against the PCB pins, which produces a sound dominated by the housing floor. A long-pole stem contacts the bottom housing wall directly before the spring fully compresses, creating a second, crisper event that many builders describe as the "extra pop" of a long-pole switch. The <PartReference id="c3-tangerine-r2" /> uses a standard POM stem; swapping to a long-pole variant of the same housing geometry would shift the bottom-out character from rounded to slightly more articulated. Neither is objectively better — it depends on what the rest of the build needs.
+
+**Lubrication.** Lube changes two things: rail-contact friction (which affects sound at every point of travel) and spring noise. Thin lubes like <Mono>Krytox 105</Mono> on the spring reduce spring ping — the metallic ringing that appears on keystroke release — without affecting stem feel. Thicker lubes like <Mono>Krytox 205g0</Mono> on the stem rails and legs eliminate rail scratch and reduce the high-frequency content of the bottom-out. Over-lubing, particularly on the housing floor, can eliminate the top-out click event entirely, leaving a sound that many builders find dead rather than smooth. The goal is reduction of noise without erasure of character.
+
+---
+
+## Plate and mount acoustics: transmission and isolation
+
+The plate receives the switch's acoustic energy and routes it into the case. How much energy reaches the case walls — and how quickly — is controlled by plate material and mounting style.
+
+<InlineViz
+  src="/article-viz/keyboard-acoustics-deep-dive/plate-mount-spectrum.svg"
+  alt="Two-axis grid diagram. Horizontal axis runs from 'rigid' on the left to 'compliant' on the right, labeled as plate stiffness. Vertical axis runs from 'coupled' at the bottom to 'isolated' at the top, labeled as mount isolation. Four labeled regions: upper-right 'deep thock' zone with ochre fill showing gasket-mount plus PC or POM plate. Lower-left 'bright ring' zone showing tray-mount plus brass plate. Upper-left 'controlled stiffness' zone showing top-mount plus aluminum plate. Lower-right 'soft clack' zone showing tray-mount plus polycarbonate plate. Each zone has one or two example pairings in small text."
+  caption="Plate stiffness and mount isolation move independently — pairing them deliberately produces predictable acoustic zones."
+  accent="ochre"
+/>
+
+[Plate materials](/article/plate-materials-explained) are covered in depth elsewhere; the short version for acoustic purposes: brass is stiff and dense, transmits energy efficiently, and produces a longer ring-out and higher fundamental. Aluminum is stiff but lighter, acoustically neutral, and lets the rest of the build speak. Polycarbonate and POM are compliant — they flex under the keystroke, absorb some of the impact before it reaches the mount, and produce a warmer, more muted character. FR4 (the same fiberglass laminate as the PCB) sits between aluminum and polycarbonate: stiff enough to preserve top-end articulation, compliant enough to avoid the brass ring.
+
+Mounting style is the multiplier on whatever the plate is doing. [Gasket-mounted](/article/gasket-mount-reality) designs decouple the plate from the case through compressible silicone pads — the plate can flex slightly on keystroke, and a fraction of the energy is absorbed by the gasket before it reaches the case walls. This isolation lengthens the decay, lowers the fundamental, and gives the typing sound a quality that the hobby calls "floaty." Top-mount designs bolt the plate directly to the case top, making the case walls the first rigid surface the plate energy meets — tight, controlled, and louder in the high mids. Tray-mount designs screw the PCB (and therefore the plate) directly into case standoffs, creating a rigid mechanical path from switch to case that produces the characteristic hollow ring of budget boards.
+
+The interaction between plate and mount is the most leveraged variable in keyboard acoustics. A brass plate in a rigid top-mount rings loudly and decays slowly; the same brass plate in a well-tuned gasket-mount sounds controlled and meaty. A POM plate in a tray-mount sounds soft; the same POM plate in a double-soft gasket-mount can sound dead. Picking plate material without specifying mount type is an incomplete conversation — see [mounting styles compared](/article/mounting-styles-compared) for the full breakdown.
+
+---
+
+## Case acoustics: the room around the sound
+
+The case determines two things: how much energy gets absorbed at the walls, and what the resonant character of the internal cavity is.
+
+Wall material is the variable builders discuss most. Aluminum is stiff, non-resonant at keyboard-frequency ranges, and transmits energy to the desk surface efficiently. A well-built aluminum case is acoustically neutral — it does not add character, it passes it through. A poorly built aluminum case (thin walls, hollow bottom, no internal foam) rings at a frequency determined by the wall geometry and transmits that ring into every keystroke. Polycarbonate cases flex slightly under typing load, which absorbs some energy at the walls and gives the case a slightly warmer character than aluminum at the same wall thickness. Brass cases are dense and heavy — the mass itself dissipates energy — but their high density also makes them good resonators at certain frequencies, which is why a foamless brass case can ring in a very particular way. Acrylic is the acoustically challenging material: it is stiff, brittle, and has almost no internal damping, which is why an acrylic case without internal foam tends toward a high, glassy ring.
+
+<Callout type="note" title="Case geometry matters as much as material">
+  Internal angles and case depth are often overlooked. A case with a steep interior bevel reflects keystroke energy back toward the PCB instead of absorbing it at the walls. A shallower interior geometry with more foam coverage area produces a more even sound across the key map. Deep cases (common in 75% and TKL designs) have more air volume to resonate; that extra volume benefits more from case foam than a shallow 60% does.
+</Callout>
+
+Case foam, silicone pours, and foam-lined bottom pads address the cavity resonance problem directly. An empty case cavity below the PCB acts as a resonant chamber — it amplifies certain frequencies the way a hollow-body guitar amplifies string vibration. Filling that cavity, partially or completely, changes both the resonant frequency and the decay character. A silicone pour in the case bottom shifts the resonant frequency down and damps the decay, producing a heavier, less hollow sound. A partial foam fill absorbs energy without moving the resonant frequency as dramatically, which is why many builds benefit from foam without completely losing the sense of acoustic presence that an unfilled cavity naturally contributes.
+
+---
+
+## Dampening interventions: what each mod targets
+
+The four standard post-build mods — PE foam, tape mod, o-ring mod, and silicone pour — each operate at a different layer of the stack. Treating them as interchangeable is the error that produces over-damped boards with no acoustic life left in them.
+
+<InlineViz
+  src="/article-viz/keyboard-acoustics-deep-dive/dampening-methods.svg"
+  alt="Four-panel horizontal strip, each panel representing one dampening method. Panel 1: PE foam — shows a cross-section with the foam layer positioned below the PCB and above the case floor, labeled 'targets case cavity resonance'. Panel 2: tape mod — shows the back face of a PCB with four tape strips across it, labeled 'targets PCB surface resonance'. Panel 3: O-ring mod — shows a standoff with an O-ring seated between standoff head and PCB, labeled 'targets standoff impact transmission'. Panel 4: silicone pour — shows a cross-section with the bottom cavity filled with a solid layer, labeled 'eliminates cavity resonance entirely'. Each panel has an ochre accent border and a small frequency-spectrum sketch indicating which part of the range is most affected."
+  caption="Four mods, four distinct target layers. Stacking all four without evaluation produces diminishing returns fast."
+  accent="ochre"
+/>
+
+The [PE foam mod](/article/pe-foam-mod) places a thin polyethylene sheet between the PCB and the case bottom. It targets the air cavity below the PCB that acts as a resonant chamber on boards where that gap is large or unoccupied. The effect is a reduction in hollow resonance — the typing sound lands rather than rings. It does not affect what happens above the PCB.
+
+The [tape mod](/article/tape-mod) applies painter's tape to the back face of the PCB. The PCB is a large, thin FR4 plate that resonates when keystroke energy passes through it; the tape adds mass and a small absorptive layer at that surface. The mod is primarily acoustic — a slight reduction in PCB-surface ring — with negligible feel impact. It is most useful on budget top-mount boards where no other dampening is present.
+
+The [o-ring mod](/article/o-ring-mod) inserts silicone O-rings between the PCB mounting screws and the standoffs. It targets the rigid standoff-to-PCB contact points in tray-mount designs, converting each hard metal-on-PCB interface into a slightly compliant silicone cushion. The acoustic result is a softening of the metallic impact transient — the sharp bottom-out clack that budget tray-mount boards produce at those contact points. It adds 1–2mm of PCB flex on most boards.
+
+Silicone pours address case cavity resonance at the most fundamental level by eliminating the resonant volume entirely. A silicone pour changes the mass of the assembly and shifts the acoustic character permanently — it is not reversible the way the other three mods are. The trade-off is real: some builders find that a fully poured case loses the sense of acoustic presence that a partial foam fill preserves.
+
+<Callout type="warn" title="Stacking mods can over-damp">
+  PE foam plus tape plus plate foam plus a silicone-poured case is four overlapping dampening interventions. The result is often a board that sounds acoustically flat — no resonance, but also no character. Add mods one at a time, evaluate after each addition, and stop when the board sounds intentional rather than just quiet.
+</Callout>
+
+For a side-by-side comparison of all four mods ranked by effort and acoustic impact, see [sound dampening compared](/article/sound-dampening-compared).
+
+---
+
+## Stabilizer acoustics: the distinct problem
+
+Stabilizer rattle is not part of the switch sound, the plate sound, or the case resonance — it is an independent acoustic problem with its own failure modes and its own fix. A builder who has meticulously tuned every other layer of the stack and left their [stabilizers](/article/stabilizers-explained) unserviced will have a board that sounds excellent on 90 percent of keys and terrible on the remaining 10 percent (space bar, shift, enter, backspace).
+
+The stabilizer rattle problem has three separate sources: wire-barrel contact (the loudest), housing clearance (the secondary scratch), and the wire hook-in-stem slot (the clunk that survives incomplete service jobs). None of these is related to the switch or plate materials — they are stabilizer-mechanism sounds that the acoustic stack downstream can only partially mask. No amount of case foam addresses a dry wire barrel.
+
+Spring ping is the acoustic sibling problem: a metallic ringing that appears on keystroke release and is often mistakenly attributed to the case. Spring ping originates inside the switch housing when the spring vibrates against the housing walls during decompression. The fix is thin oil (<Mono>Krytox 105</Mono>) on the spring coils, not case modification. The diagnostic: if a board rings distinctly on the upstroke but sounds controlled on the downstroke, the source is almost certainly spring ping, not the case.
+
+---
+
+## Reading the sound from the spec sheet
+
+A builder who understands all seven layers can make a reasonable acoustic prediction from a spec sheet alone. The rough heuristic:
+
+**Case material and mount style set the acoustic character class.** A polycarbonate gasket-mount is going to produce a warm, low-frequency-heavy sound with slow decay — regardless of what switches are installed. An aluminum tray-mount is going to produce a brighter, faster-decaying sound with more top-end presence. The case and mount set the range; everything else moves within it.
+
+**Plate material determines where in that range the build sits.** A POM plate in a PC gasket-mount is going to sit toward the warmer end of an already-warm range. A brass plate in the same case is going to tighten and brighten the result without changing the fundamental character. FR4 or aluminum plates are acoustically neutral relative to the mount — they do not push the character toward either extreme.
+
+**Switch housing determines the fundamental color of the keystroke event.** All-nylon switches produce rounded, low-frequency-heavy bottom-outs; all-PC switches produce brighter, more articulated keystrokes; mixed-housing switches sit between the poles in predictable ways. The switch color and the plate color add; a nylon-bottom switch in a warm mount stack produces a sound that some builders find deeply satisfying and others find dead.
+
+**Dampening layers and stabilizer service are baseline hygiene.** A build with the right case, plate, and switches but unserviced stabilizers and no foam is acoustically incomplete. PE foam and stabilizer service are the two highest-return interventions available to any build, regardless of component choices.
+
+**The desk surface matters more than most builders acknowledge.** A hard desk — glass, hard wood, steel — reflects keystroke energy back into the case, increasing perceived volume and brightening the high-frequency content. A soft desk — leather mat, thick cloth pad, fabric deskpad — absorbs energy at the case bottom and subtly lowers the fundamental frequency. The same board typed on bare glass and on a thick felt deskpad sounds like two different keyboards. This is not a mod; it is the last layer of the acoustic stack, and it is the one most builders have lying around already.
+
+## The open frontier
+
+The [acoustic specification](/article/acoustic-spec-rise) vocabulary is still developing. Vendors are beginning to publish plate materials, gasket durometers, and foam specifications — but the full stack is rarely disclosed, and the interactions between layers are not linear. A builder who understands what each layer is doing has a significant advantage over one who is reading forum consensus: the consensus describes what worked in a specific build, and the physics describes why it worked and how to replicate the logic in a different one. The why is the transferable part.
+
+Watch for the plateless mount category as it develops on the high-end customs market: without a plate as a transmission medium, the PCB-to-case acoustic path changes in ways that do not map cleanly onto any of the plate-material discussions above. The vocabulary for that category is still forming, and the physics is genuinely different.

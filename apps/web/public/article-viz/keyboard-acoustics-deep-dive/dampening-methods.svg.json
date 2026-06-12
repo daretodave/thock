@@ -1,0 +1,25 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-12T00:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "keyboard-acoustics-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "Dampening interventions: what each mod targets",
+  "brief_summary": "Four-panel horizontal strip, one panel per dampening method (PE foam, tape mod, o-ring mod, silicone pour). Each panel shows a small cross-section sketch of the mod's physical position in the stack, a name, a one-line description of what layer it targets, and a small acoustic waveform sketch indicating which frequency band is most affected. All panels bordered in ochre.",
+  "target": "apps/web/public/article-viz/keyboard-acoustics-deep-dive/dampening-methods.svg",
+  "splash_color": { "name": "ochre", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "JetBrains Mono"],
+  "data_sources": [
+    "apps/web/src/content/articles/keyboard-acoustics-deep-dive.mdx:Dampening interventions — 'The PE foam mod places a thin polyethylene sheet between the PCB and the case bottom. It targets the air cavity below the PCB that acts as a resonant chamber.'",
+    "apps/web/src/content/articles/keyboard-acoustics-deep-dive.mdx:Dampening interventions — 'The tape mod applies painter’s tape to the back face of the PCB... a slight reduction in PCB-surface ring.'",
+    "apps/web/src/content/articles/keyboard-acoustics-deep-dive.mdx:Dampening interventions — 'The o-ring mod inserts silicone O-rings between the PCB mounting screws and the standoffs. It targets the rigid standoff-to-PCB contact points.'",
+    "apps/web/src/content/articles/keyboard-acoustics-deep-dive.mdx:Dampening interventions — 'Silicone pours address case cavity resonance at the most fundamental level by eliminating the resonant volume entirely.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/keyboard-acoustics-deep-dive/dampening-methods.svg"],
+  "warnings": []
+}

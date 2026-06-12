@@ -1,0 +1,26 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-12T00:00:00.000Z",
+  "commit": "f6cefc8ab4a15f7f499619323f03f422f91ed0f26734094",
+  "kind": "hero-art",
+  "source": null,
+  "template": null,
+  "article_slug": "keyboard-acoustics-deep-dive",
+  "article_pillar": "deep-dives",
+  "size": [1200, 750],
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": ["Newsreader", "IBM Plex Sans", "JetBrains Mono"],
+  "outputs": [
+    "apps/web/public/hero-art/keyboard-acoustics-deep-dive.svg"
+  ],
+  "splash_color": {
+    "name": "ochre",
+    "oklch": "oklch(0.78 0.12 75)"
+  },
+  "theme_dot": "oklch(0.80 0.135 75)",
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "stroke_weight": "2px",
+  "subject": "keyboard cross-section acoustic stack — keycap / switch housing / plate / PCB / case foam (ochre splash) / case bottom — with concentric sound-wave arcs radiating from the switch contact point on the PCB layer",
+  "warnings": []
+}

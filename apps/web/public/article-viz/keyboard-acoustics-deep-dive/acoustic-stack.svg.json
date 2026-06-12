@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-12T00:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "keyboard-acoustics-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "The sound stack: seven layers, seven decisions",
+  "brief_summary": "Vertical cross-section diagram of a keyboard acoustic stack showing seven labeled layers from keycap to desk surface. Each layer is annotated with its acoustic role in the right margin. The plate layer is washed in ochre as the most substitutable focal variable. A dashed arrow on the left margin indicates downward energy flow.",
+  "target": "apps/web/public/article-viz/keyboard-acoustics-deep-dive/acoustic-stack.svg",
+  "splash_color": { "name": "ochre", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "apps/web/src/content/articles/keyboard-acoustics-deep-dive.mdx:The sound stack — 'The switch is where the fundamental sound event originates. The plate transmits that event into the structure.'",
+    "apps/web/src/content/articles/keyboard-acoustics-deep-dive.mdx:The sound stack — 'The case cavity and walls color the sound with their own resonant character. The desk surface is the final absorber or reflector.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/keyboard-acoustics-deep-dive/acoustic-stack.svg"],
+  "warnings": []
+}

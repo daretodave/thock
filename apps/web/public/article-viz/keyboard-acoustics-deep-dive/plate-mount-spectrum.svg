@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" fill="none">
+  <defs>
+    <style>
+      text { font-family: 'IBM Plex Sans', sans-serif; }
+      .label-serif { font-family: 'Newsreader', serif; font-style: italic; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="480" fill="oklch(0.97 0.008 80)" />
+
+  <!-- Theme dot -->
+  <circle cx="1162" cy="38" r="9" fill="oklch(0.80 0.135 75)" />
+
+  <!-- Title -->
+  <text x="600" y="30" text-anchor="middle" font-size="13" fill="oklch(0.50 0.005 90)" font-family="IBM Plex Sans, sans-serif" letter-spacing="0.08em">PLATE STIFFNESS × MOUNT ISOLATION</text>
+
+  <!-- Grid area: x=130 to x=970, y=60 to y=420 -->
+  <!-- Quadrant fills -->
+  <!-- Upper-right: deep thock — ochre wash -->
+  <rect x="550" y="60" width="420" height="180" rx="0" fill="oklch(0.90 0.055 80)" opacity="0.55"/>
+  <!-- Upper-left: controlled stiffness -->
+  <rect x="130" y="60" width="420" height="180" fill="oklch(0.88 0.008 80)" opacity="0.45"/>
+  <!-- Lower-left: bright ring -->
+  <rect x="130" y="240" width="420" height="180" fill="oklch(0.86 0.012 60)" opacity="0.40"/>
+  <!-- Lower-right: soft clack -->
+  <rect x="550" y="240" width="420" height="180" fill="oklch(0.88 0.008 80)" opacity="0.35"/>
+
+  <!-- Grid lines (axes) -->
+  <!-- Horizontal axis (midpoint y=240) -->
+  <line x1="130" y1="240" x2="970" y2="240" stroke="oklch(0.78 0.005 90)" stroke-width="2"/>
+  <!-- Vertical axis (midpoint x=550) -->
+  <line x1="550" y1="60" x2="550" y2="420" stroke="oklch(0.78 0.005 90)" stroke-width="2"/>
+
+  <!-- Border box -->
+  <rect x="130" y="60" width="840" height="360" rx="3" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="1.5"/>
+
+  <!-- Axis labels -->
+  <!-- Horizontal: rigid → compliant -->
+  <text x="200" y="450" text-anchor="middle" font-size="13" fill="oklch(0.45 0.005 90)" font-family="IBM Plex Sans, sans-serif">RIGID</text>
+  <text x="900" y="450" text-anchor="middle" font-size="13" fill="oklch(0.45 0.005 90)" font-family="IBM Plex Sans, sans-serif">COMPLIANT</text>
+  <text x="550" y="468" text-anchor="middle" font-size="11" fill="oklch(0.55 0.005 90)" font-family="IBM Plex Sans, sans-serif">← plate stiffness →</text>
+  <line x1="240" y1="444" x2="860" y2="444" stroke="oklch(0.78 0.005 90)" stroke-width="1" marker-end="url(#arrow)"/>
+
+  <!-- Vertical: coupled → isolated -->
+  <text x="100" y="410" text-anchor="middle" font-size="13" fill="oklch(0.45 0.005 90)" font-family="IBM Plex Sans, sans-serif" transform="rotate(-90 100 410)">COUPLED</text>
+  <text x="100" y="100" text-anchor="middle" font-size="13" fill="oklch(0.45 0.005 90)" font-family="IBM Plex Sans, sans-serif" transform="rotate(-90 100 100)">ISOLATED</text>
+  <text x="60" y="240" text-anchor="middle" font-size="11" fill="oklch(0.55 0.005 90)" font-family="IBM Plex Sans, sans-serif" transform="rotate(-90 60 240)">← mount isolation →</text>
+
+  <!-- Zone labels -->
+  <!-- Upper-right: deep thock (ochre) -->
+  <text x="760" y="108" text-anchor="middle" font-size="16" fill="oklch(0.38 0.060 78)" font-family="Newsreader, serif" font-style="italic" font-weight="700">deep thock</text>
+  <text x="760" y="130" text-anchor="middle" font-size="11" fill="oklch(0.45 0.008 80)" font-family="IBM Plex Sans, sans-serif">gasket-mount + PC or POM plate</text>
+  <circle cx="760" cy="168" r="7" fill="oklch(0.78 0.10 80)" opacity="0.9"/>
+
+  <!-- Upper-left: controlled stiffness -->
+  <text x="340" y="108" text-anchor="middle" font-size="16" fill="oklch(0.40 0.005 90)" font-family="Newsreader, serif" font-style="italic">controlled</text>
+  <text x="340" y="128" text-anchor="middle" font-size="11" fill="oklch(0.50 0.005 90)" font-family="IBM Plex Sans, sans-serif">top-mount + aluminum plate</text>
+
+  <!-- Lower-left: bright ring -->
+  <text x="340" y="280" text-anchor="middle" font-size="16" fill="oklch(0.42 0.005 65)" font-family="Newsreader, serif" font-style="italic">bright ring</text>
+  <text x="340" y="300" text-anchor="middle" font-size="11" fill="oklch(0.50 0.005 90)" font-family="IBM Plex Sans, sans-serif">tray-mount + brass plate</text>
+
+  <!-- Lower-right: soft clack -->
+  <text x="760" y="280" text-anchor="middle" font-size="16" fill="oklch(0.42 0.005 90)" font-family="Newsreader, serif" font-style="italic">soft clack</text>
+  <text x="760" y="300" text-anchor="middle" font-size="11" fill="oklch(0.50 0.005 90)" font-family="IBM Plex Sans, sans-serif">tray-mount + PC plate</text>
+
+  <!-- Vertical axis label (left side) -->
+</svg>
