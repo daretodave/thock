@@ -3565,7 +3565,7 @@ passes accumulate signals.)
 - issue: #326
 - addressed in: bdbc0a5, closes #326
 
-### [ ] [cross-links] [4.5] case-materials-compared ↔ keycap-materials-compared — no prose cross-link (same pillar, ≥2 shared tags: abs, beginner)
+### [x] [cross-links] [4.5] case-materials-compared ↔ keycap-materials-compared — no prose cross-link (same pillar, ≥2 shared tags: abs, beginner)
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -3575,6 +3575,8 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/case-materials-compared.mdx
 - article-b: apps/web/src/content/articles/keycap-materials-compared.mdx
 - action: add [keycap-materials-compared](/article/keycap-materials-compared) to case-materials-compared body, or vice versa
+- issue: #327
+- addressed in: 713b9fd, closes #327
 
 ### [ ] [cross-links] [4.5] case-materials-compared ↔ switch-housings-compared — no prose cross-link (same pillar, ≥2 shared tags: polycarbonate, beginner)
 - category: cross-links
