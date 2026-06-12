@@ -3662,7 +3662,7 @@ passes accumulate signals.)
 - issue: #329
 - addressed in: e9e8b74, closes #329
 
-### [ ] [cross-links] [4.5] clicky-switches-deep-dive ↔ magnetic-switches-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, switches)
+### [x] [cross-links] [4.5] clicky-switches-deep-dive ↔ magnetic-switches-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, switches)
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -3672,6 +3672,8 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/clicky-switches-deep-dive.mdx
 - article-b: apps/web/src/content/articles/magnetic-switches-deep-dive.mdx
 - action: add [magnetic-switches-deep-dive](/article/magnetic-switches-deep-dive) to clicky-switches-deep-dive body, or vice versa
+- issue: #330
+- addressed in: HEAD, closes #330
 
 ### [ ] [cross-links] [4.5] clicky-switches-deep-dive ↔ optical-switches-explained — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, switches)
 - category: cross-links
