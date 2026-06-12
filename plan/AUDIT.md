@@ -3614,7 +3614,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/lubing-switches-guide.mdx
 - action: add [lubing-switches-guide](/article/lubing-switches-guide) to cherry-mx2a-revision body, or vice versa
 
-### [ ] [cross-links] [4.5] cherry-mx2a-revision ↔ magnetic-switches-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
+### [x] [cross-links] [4.5] cherry-mx2a-revision ↔ magnetic-switches-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -3624,6 +3624,8 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/cherry-mx2a-revision.mdx
 - article-b: apps/web/src/content/articles/magnetic-switches-deep-dive.mdx
 - action: add [magnetic-switches-deep-dive](/article/magnetic-switches-deep-dive) to cherry-mx2a-revision body, or vice versa
+- issue: #328
+- addressed in: fac95d6, closes #328
 
 ### [ ] [cross-links] [3.6] cherry-mx2a-revision ↔ spring-swaps-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: switches, linear)
 - category: cross-links
