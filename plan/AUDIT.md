@@ -4373,7 +4373,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/stabilizer-servicing-guide.mdx
 - action: add [stabilizer-servicing-guide](/article/stabilizer-servicing-guide) to mounting-styles-compared body, or vice versa
 
-### [ ] [cross-links] [4.5] mounting-styles-compared ↔ stabilizers-explained — no prose cross-link (same pillar, ≥2 shared tags: modding, acoustic, beginner)
+### [x] [cross-links] [4.5] mounting-styles-compared ↔ stabilizers-explained — no prose cross-link (same pillar, ≥2 shared tags: modding, acoustic, beginner)
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -4383,6 +4383,8 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/mounting-styles-compared.mdx
 - article-b: apps/web/src/content/articles/stabilizers-explained.mdx
 - action: add [stabilizers-explained](/article/stabilizers-explained) to mounting-styles-compared body, or vice versa
+- issue: [mirror-failed: 2026-06-12T11:25:00Z]
+- addressed in: 8d7e3b7
 
 ### [ ] [cross-links] [4.5] mounting-styles-compared ↔ switch-housings-compared — no prose cross-link (same pillar, ≥2 shared tags: polycarbonate, beginner)
 - category: cross-links
