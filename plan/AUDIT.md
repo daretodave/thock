@@ -3552,7 +3552,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/trends-tracker-preview.mdx
 - action: add [trends-tracker-preview](/article/trends-tracker-preview) to building-mode-sonnet-with-oil-kings body, or vice versa
 
-### [ ] [cross-links] [4.5] cannonkeys-nyawice-group-buy ↔ mode-sonnet-r2-group-buy-coverage — no prose cross-link (same pillar, ≥2 shared tags: cannonkeys, group-buy, aluminum)
+### [x] [cross-links] [4.5] cannonkeys-nyawice-group-buy ↔ mode-sonnet-r2-group-buy-coverage — no prose cross-link (same pillar, ≥2 shared tags: cannonkeys, group-buy, aluminum)
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -3562,6 +3562,8 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/cannonkeys-nyawice-group-buy.mdx
 - article-b: apps/web/src/content/articles/mode-sonnet-r2-group-buy-coverage.mdx
 - action: add [mode-sonnet-r2-group-buy-coverage](/article/mode-sonnet-r2-group-buy-coverage) to cannonkeys-nyawice-group-buy body, or vice versa
+- issue: #326
+- addressed in: bdbc0a5, closes #326
 
 ### [ ] [cross-links] [4.5] case-materials-compared ↔ keycap-materials-compared — no prose cross-link (same pillar, ≥2 shared tags: abs, beginner)
 - category: cross-links
