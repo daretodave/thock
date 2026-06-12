@@ -7,6 +7,7 @@ author: thock
 pillar: deep-dives
 tags: [hall-effect, magnetic, switches, deep-dive]
 publishedAt: '2026-04-14T14:00:00.000Z'
+updatedAt: '2026-06-12T00:00:00.000Z'
 heroImage: /hero-art/magnetic-switches-deep-dive.svg
 heroImageAlt: "Cross-section of a single Hall-effect key position — a stem with a small embedded magnet descending toward a Hall sensor pad on the PCB, drawn in a single warm-grey stroke with coral magnetic field lines bending and tightening as the magnet approaches the sensor."
 ---
@@ -66,7 +67,7 @@ The fourth item is firmware complexity. A magnetic-switch board is doing more wo
 
 The current generation of keyboards sits across four sensing lineages, and each one makes a different set of tradeoffs visible to the buyer.
 
-MX contact-closure is the default and has been for forty years: a metal leaf bent by a stem, a contact closing, a binary keypress event. The architecture is cheap to manufacture, the feel space is vast — the switch field is dominated by tactile and linear variants tuned to a degree that no other lineage approaches — and the firmware is simple. The ceiling is that the press itself is binary, and every feature the category gets at the firmware layer has to be built out of binary events.
+MX contact-closure is the default and has been for forty years: a metal leaf bent by a stem, a contact closing, a binary keypress event. The architecture is cheap to manufacture, the feel space is vast — the switch field is dominated by tactile and linear variants tuned to a degree that no other lineage approaches — and the firmware is simple. The ceiling is that the press itself is binary, and every feature the category gets at the firmware layer has to be built out of binary events. The clicky corner of the MX family — click-jacket and click-bar mechanisms with their own acoustic goals — sits within the same contact-closure architecture but serves a distinct constituency; that story is covered in [why clicky switches still have a constituency](/article/clicky-switches-deep-dive).
 
 Topre electrocapacitive — covered in [the Topre piece](/article/topre-electrocapacitive-deep-dive) — reads spring compression as a change in capacitance over a printed pad. The press is analog at the sensor in principle, but Topre boards have historically thresholded the reading to a binary actuation rather than exposing the curve, so the user-facing feature set looks more like MX than like Hall-effect. The architecture commands a price premium because the feel is genuinely distinct and the closed-standard manufacturing keeps the field narrow.
 
