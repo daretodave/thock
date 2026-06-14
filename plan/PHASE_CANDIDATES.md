@@ -168,54 +168,6 @@
 - estimated phases: 1
 - conflicts: none — additive only; mentionedParts is existing frontmatter schema; no URL contract or data schema change.
 
-### [ ] [score 6.0] Cross-link drain efficiency — batch same-article cross-link fixes per iterate tick
-- proposed: 2026-06-12, expand pass 125
-- source signals:
-  - **AUDIT.md dominant (A — 117 pending cross-link rows)**: Phase 39 (article-crosslink-survey) filed 117 unlinked pairs across the corpus. The survey runs automatically on the empty-queue path (march Step 3b.5a) and keeps the queue fresh. The rows score 3.6–4.5 and are processed by `/iterate` one per tick. At current cadence this queue drains in ~117 ticks spanning multiple weeks.
-  - **Commit-pattern signal (G — 21/36 recent commits are cross-link fixes)**: 21 of the 36 commits since pass 124 are `content: <article> — <sibling> cross-link …` paired with `audit: finding [X.X] addressed` commits. Cross-link fixes now consume 58% of all maintenance bandwidth. The signal was similar at passes 119–124; it has not diminished.
-  - **New cluster signal**: `keyboard-acoustics-deep-dive` (published between passes 124 and 125) generated 11 new pending cross-link pairs in one survey run — 5 same-pillar [4.5] + 6 adjacent [3.6]. At 1/tick that article alone takes 11 ticks to drain. The pattern will repeat every time a new deep-dives article ships.
-- rationale: The bottleneck is architectural: `/iterate` is designed to pick the single top-scoring finding and ship one fix. For cross-link rows this is wasteful — fixing "keyboard-acoustics-deep-dive ↔ cherry-mx2a-revision" and "keyboard-acoustics-deep-dive ↔ hmx-cloud-deep-dive" in the same commit costs no more than fixing one, because both edits touch the same MDX file. A skill amendment makes the iterate loop cluster-aware for cross-link rows: when the top finding is category `cross-links` for article X, drain ALL pending cross-link pairs for X in a single commit. This reduces an 11-tick drain to 1 tick. Applied across the 117-row queue (approximately 30–40 distinct source articles), the drain completes in ~30 commits instead of ~117.
-- proposed scope (1 phase):
-  1. Amend `skills/iterate.md` Step 3: when the top-scored finding is category `cross-links`, call `scripts/article-crosslink-survey.mjs --json --slug <article-a>` to retrieve ALL pending cross-link pairs involving that article. Apply all pending links for the article in a single MDX edit. Mark all corresponding AUDIT rows `[x]` in the same commit.
-  2. Amend `scripts/article-crosslink-survey.mjs` to add `--slug <slug>` scoping that returns all pending pairs where `article-a === <slug>` OR `article-b === <slug>` (existing `--slug` flag already implemented per phase 39 build plan — confirm scope, expand if needed).
-  3. One unit test: given 3 pending rows all touching article X and 1 touching article Y, `--slug X --json` returns exactly the 3 X rows.
-  4. `skills/march.md` Step 3b.5a note: update "run crosslink survey" bullet to reference the new cluster-aware iterate behavior.
-  5. `pnpm verify` green gate.
-- estimated phases: 1
-- conflicts: none — skill amendment only; no URL contract change; no schema change; no new routes. Compatible with posture bold; iterate still picks the highest-scoring finding first.
-
-### [ ] [score 5.5] /quiz/keycap-set — keycap-set profile recommender quiz
-- proposed: 2026-06-12, expand pass 125
-- source signals:
-  - **Data threshold crossed (F — keycap-sets count hit 10)**: The Considered item (`[3.7] /quiz extension — keycap-set and board recommenders`) explicitly noted "Re-evaluate when keycap-sets or boards crosses 10 records." `data/keycap-sets/` now has exactly 10 records (gmk-olivia, mt3-dev-tty, epbt-modern-essentials, gmk-laser, sa-godspeed, domikey-wob + 4 more from phases 20/34). Threshold triggered; graduating from Considered to Pending with a score bump to reflect data readiness.
-  - **Phase 33 proven pattern (signal multiplicity)**: `/quiz/switch` shipped cleanly at `faf99f5` — 4-question weighted-score quiz, `recommendSwitch(answers, catalog)` pure helper with unit tests, ResultCard + QuizStep components, `WebApplication` JSON-LD, e2e coverage. The code shape is directly reusable for keycap-sets.
-  - **Beginner confusion signal**: Keycap-set profile (Cherry, OEM, SA, MT3, KAT, DSA, XDA) is the most commonly cited confusion vector for new keyboard builders after switch selection. The existing guides pillar covers profiles in articles, but an interactive path from question to specific set is absent.
-- rationale: The keycap-set quiz fills the remaining major gap in the "I'm new, help me start" path. The switch quiz routes beginners to `/part/switch/[slug]`; the keycap quiz routes them to `/part/keycap-set/[slug]`. Together they cover the two biggest purchase decisions before a first build. Questions would target: profile height preference (low-medium-high), sculpted vs uniform (typing ergonomics), material priority (ABS shine vs PBT texture), legends style (doubleshot / dye-sub / laser-etched), and budget tier. 10 records is sufficient for meaningful result variety — SA-Godspeed (high-sculpted ABS), MT3 /dev/tty (high-sculpted PBT-DSA hybrid), ePBT (low uniform PBT), GMK Olivia (cherry sculpted ABS) represent 4 distinct profiles with different recommendation paths.
-- proposed scope (1 phase — mirrors phase 33):
-  1. New route `apps/web/src/app/quiz/keycap-set/page.tsx` (+ `loading.tsx` with `<main id="main">`). Server page exports `generateMetadata` + `WebApplication` JSON-LD. Client component `KeycapSetQuiz` manages step state; pure helper `recommendKeycapSet(answers, catalog)` in its own `.ts` module with unit tests.
-  2. 4–5 questions: profile height (low/mid/high), shaping (sculpted/uniform), material (ABS/PBT/doesn't matter), legends style (doubleshot/dye-sub/either), budget tier (optional). Weighted scoring over `getAllKeycapSets()` catalog. Top 2–3 results render as `ResultCard` links to `/part/keycap-set/[slug]`.
-  3. Sitemap entry; `canonical-urls` + `page-reads` extended; `apps/e2e/tests/quiz.spec.ts` extended with a keycap-set quiz block.
-  4. One affordance: "Find your keycap set →" link on `/parts` keycap-set section (matches the switch quiz affordance pattern on `/quiz/switch`).
-  5. `pnpm verify` green gate.
-- estimated phases: 1
-- conflicts: none — new route only; URL contract extension needed (add `/quiz/keycap-set` to `bearings.md`); no schema change; `getAllKeycapSets()` loader already exists.
-
-### [ ] [score 4.5] /compare/board — side-by-side board spec comparison
-- proposed: 2026-06-12, expand pass 125
-- source signals:
-  - **Phase 44 proven pattern**: `/compare/switch` shipped at `c99834b` — query-param shape `?a=<slug>&b=<slug>`, `SwitchCompareSelector` (client, two dropdowns, disabled when equal), `SwitchCompareTable` (9 spec rows, diff rows elevated), dynamic `generateMetadata`, ItemList JSON-LD. The entire code shape is reusable with board-specific spec rows.
-  - **Data growth (F — 9 boards)**: `data/boards/` has 9 records: drop-ctrl, kbd75v3, ikki68-aurora, mode-sonnet, bakeneko-c, lofree-flow, cycle7, bauer-lite, keychron-q1-he. Board comparison dimensions are well-defined in the existing schema (layout, formFactor, mountingStyle, caseMaterial, pcbType, hotswap, released, priceUSD) — 7–8 spec rows directly comparable.
-  - **Completion of the comparison surface family**: `/compare/switch` established the pattern; board comparison completes the two-surface family covering the most common pre-purchase decisions (switches and boards together span most of a keyboard build budget).
-- rationale: Board selection involves spec trade-offs that prose can't efficiently surface — a builder comparing the KBD75V3 (gasket-mount, polycarbonate, hot-swap, $145) vs the Drop CTRL (top-mount, aluminum, hot-swap, $199) vs Mode Sonnet (gasket-mount, aluminum, standard PCB, $165) benefits from a side-by-side diff that highlights the mounting style and price gap. The phase 44 pattern handles this cleanly: diff rows (mountingStyle, caseMaterial, priceUSD) render at elevated text; identical rows (hot-swap if both match) are visually de-emphasized. A cross-link affordance on `/part/board/[slug]` ("Compare this board →") completes the discovery path.
-- proposed scope (1 phase — mirrors phase 44):
-  1. New route `apps/web/src/app/compare/board/page.tsx` (client: `BoardCompareSelector` + `BoardCompareTable`). Spec rows: layout, formFactor, mountingStyle, caseMaterial, pcbType, hotswap, priceUSD, released (8 rows). Dynamic `generateMetadata`: "BoardA vs BoardB" when both params resolve.
-  2. JSON-LD: BreadcrumbList always + ItemList with two ListItem entries when both params set. Sitemap entry for `/compare/board` at 0.6.
-  3. `canonical-urls` + `page-reads` fixtures extended; `apps/e2e/tests/compare.spec.ts` extended with board compare block (selector renders, compare button, table, diff rows).
-  4. Cross-link: "Compare this board →" affordance on `/part/board/[slug]` detail pages.
-  5. Unit tests: `BoardCompareTable` (diff detection ×3, equal rows ×2) + `BoardCompareSelector` (disabled when equal ×2). `pnpm verify` green gate.
-- estimated phases: 1
-- conflicts: none — new route only; `/compare/board` URL contract extension needed in `bearings.md`; no schema change; existing `getAllBoards()` loader and board JSON schema are sufficient.
-
 <!-- archived on promotion 2026-05-16 — original Pending rows preserved below for the audit trail
 
 ### [ ] [score 7.5] Trends Tracker Phase B — automated weekly snapshot cadence
@@ -275,6 +227,64 @@ _(previous Pending items: [7.0] content-velocity queue auto-refill promoted to p
 
 
 ## Promoted
+
+<!-- batch promoted 2026-06-14 via /oversight — phases 46–49.
+     User answers: cross-link queue → "prune weak rows + promote
+     batch-drain"; surfaces → "promote both [/quiz/keycap-set,
+     /compare/board] and then a smart way to go to quizzes and
+     compare board (right now it's at the bottom of the site →
+     make it more visible)". -->
+
+### [score 6.0] Cross-link drain efficiency — batch same-article cross-link fixes per iterate tick
+- promoted: 2026-06-14 via `/oversight` (this commit)
+- assigned phase: **46**
+- promotion decisions (locked at /oversight time):
+  - **Anchor of this batch + paired with the AUDIT prune**: the [3.6] adjacent-pillar rows were pruned in the same oversight commit (see `plan/AUDIT.md` PRUNE note); the 52 surviving `[cross-links] [4.5]` same-pillar rows drain through this phase's cluster-aware iterate behavior instead of 1/tick. Scored 6.0, highest live candidate.
+  - **Scope locked to the candidate's 5-step proposed scope**: amend `skills/iterate.md` Step 3 so a top-scored `cross-links` finding for article X drains ALL pending cross-link pairs touching X in one commit; add/confirm `--slug` scoping on `scripts/article-crosslink-survey.mjs`; one Vitest unit test (3 X-rows + 1 Y-row → `--slug X` returns the 3); `skills/march.md` Step 3b.5a note; `pnpm verify` gate.
+  - **Ships first in the batch** — it changes how the remaining cross-link queue drains, so it should land before the loop resumes maintenance.
+  - **Brief drafting**: drafted on-demand by `/ship-a-phase`.
+- original signals + scope: see git history of this file (pass-125 row; was in `## Pending`).
+- estimated phases: 1
+- conflicts: none — skill amendment only; no URL contract change; no schema change.
+
+### [score 5.5] /quiz/keycap-set — keycap-set profile recommender quiz
+- promoted: 2026-06-14 via `/oversight` (this commit)
+- assigned phase: **47**
+- promotion decisions (locked at /oversight time):
+  - **User chose "promote both" reader surfaces**: keycap-sets crossed the 10-record threshold the Considered item gated on; mirrors the proven phase-33 `/quiz/switch` shape (`recommendKeycapSet(answers, catalog)` pure helper + unit tests, QuizStep/ResultCard, `WebApplication` JSON-LD, e2e).
+  - **Scope locked to the candidate's 5-step proposed scope**: new `apps/web/src/app/quiz/keycap-set/page.tsx` (+ `loading.tsx` with `<main id="main">`), 4–5 weighted questions over `getAllKeycapSets()`, results link to `/part/keycap-set/[slug]`, sitemap + `canonical-urls` + `page-reads` + `apps/e2e/tests/quiz.spec.ts` extended, `/quiz/keycap-set` added to `bearings.md` URL contract.
+  - **Visibility handled by phase 49** — the affordance for this quiz is folded into the discoverability phase, not just a `/parts` link.
+  - **Brief drafting**: drafted on-demand by `/ship-a-phase`.
+- original signals + scope: see git history of this file (pass-125 row; was in `## Pending`).
+- estimated phases: 1
+- conflicts: none — new route only; `getAllKeycapSets()` loader already exists; no schema change.
+
+### [score 4.5] /compare/board — side-by-side board spec comparison
+- promoted: 2026-06-14 via `/oversight` (this commit)
+- assigned phase: **48**
+- promotion decisions (locked at /oversight time):
+  - **The second half of "promote both"**: 9 boards in catalog; mirrors phase-44 `/compare/switch` exactly (`?a=&b=` query shape, BoardCompareSelector + BoardCompareTable, dynamic `generateMetadata`, ItemList JSON-LD). Completes the comparison-surface family.
+  - **Scope locked to the candidate's 5-step proposed scope**: new `apps/web/src/app/compare/board/page.tsx`, 8 spec rows (layout, formFactor, mountingStyle, caseMaterial, pcbType, hotswap, priceUSD, released) with diff-row elevation, sitemap + fixtures + `apps/e2e/tests/compare.spec.ts` extended, "Compare this board →" affordance on `/part/board/[slug]`, `/compare/board` added to `bearings.md`.
+  - **Brief drafting**: drafted on-demand by `/ship-a-phase`.
+- original signals + scope: see git history of this file (pass-125 row; was in `## Pending`).
+- estimated phases: 1
+- conflicts: none — new route only; `getAllBoards()` loader + board schema sufficient; no schema change.
+
+### [score 6.0] Interactive-tools discoverability — surface quiz + compare above the footer
+- promoted: 2026-06-14 via `/oversight` (this commit; **new — user-requested at this oversight**, no prior expand pass)
+- assigned phase: **49**
+- promotion decisions (locked at /oversight time):
+  - **User signal (verbatim)**: "a smart way to go to quizzes and compare board (right now it's at the bottom of the site → make it more visible)." The four interactive tools (`/quiz/switch`, `/quiz/keycap-set`, `/compare/switch`, `/compare/board`) are reachable today only via footer links and scattered per-page affordances — no first-class discovery path.
+  - **Ships LAST in the batch** — it surfaces all four tools, so phases 47 + 48 must exist first (so `/quiz/keycap-set` and `/compare/board` are live links, not 404s).
+  - **Proposed scope (to be refined by `/plan-a-phase phase 49` or `/ship-a-phase`)**:
+    1. A "Tools" (or "Find your gear") discovery surface promoted out of the footer — implementer picks the lowest-churn shape: a header-nav entry, a home-page section, or a small `/tools` index landing linking all four interactive tools with one-line descriptions. Prefer reusing existing nav/section components over new chrome; no nav churn beyond the single new entry point.
+    2. Each tool gets a consistent card/affordance (name, one-liner, link). Honest entry points only — no duplicate or misleading labels.
+    3. If a `/tools` route is chosen: sitemap + `canonical-urls` + `page-reads` + e2e + CollectionPage/ItemList JSON-LD, per the standard new-route contract; `/tools` added to `bearings.md`. If nav/home-only: e2e asserts the entry point renders and links resolve to all four tools.
+    4. `pnpm verify` green gate.
+  - **Brief drafting**: drafted on-demand by `/ship-a-phase` (or refine first via `/plan-a-phase phase 49`).
+- source signals: user request at /oversight 2026-06-14 (no expand pass — direct promotion).
+- estimated phases: 1
+- conflicts: low — at most one new route (`/tools`) + one nav/home entry point; reuses existing tool routes; no schema change. Header-nav option touches `<Header>` (shared) — keep the addition minimal.
 
 ### [score 6.5] mentionedParts ship-time enforcement gate
 - promoted: 2026-06-11 via `/oversight` (this commit)
