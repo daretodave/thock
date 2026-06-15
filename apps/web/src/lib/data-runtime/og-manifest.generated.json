@@ -42,7 +42,7 @@
     },
     {
       "slug": "divinikey-dcs-dolch-group-buy",
-      "readTime": 7,
+      "readTime": 8,
       "frontmatter": {
         "title": "DCS Dolch opens at Divinikey — a computing-history colorway returns",
         "lede": "The Dolch colorway — dark grey alphas, lighter grey mods, named after the 1990s portable workstations — is now in a four-week DCS-profile group buy at Divinikey and eight regional storefronts through 2026-07-01.",
@@ -62,7 +62,7 @@
     },
     {
       "slug": "case-materials-compared",
-      "readTime": 10,
+      "readTime": 11,
       "frontmatter": {
         "title": "Keyboard case materials, compared: aluminium, polycarbonate, and ABS",
         "lede": "The case is the largest resonant body in a keyboard. Aluminium, polycarbonate, and ABS each change the sound, feel, and weight profile in fundamentally different ways — here is what each material actually does.",
@@ -242,7 +242,7 @@
     },
     {
       "slug": "mode-sonnet-r2-group-buy-coverage",
-      "readTime": 4,
+      "readTime": 5,
       "frontmatter": {
         "title": "Mode Sonnet R2 opens at CannonKeys",
         "lede": "Mode's second round of its 65% Sonnet board is now open at CannonKeys, running from 2026-06-01 through 2026-07-15 after a vendor-side timeline shift. See the in-article update for the dates and accent-weight color options.",
@@ -462,7 +462,7 @@
     },
     {
       "slug": "clicky-switches-deep-dive",
-      "readTime": 9,
+      "readTime": 10,
       "frontmatter": {
         "title": "Why clicky switches still have a constituency",
         "lede": "Linears and tactiles dominate the modern build conversation, and clickies barely appear in it. The reason is not that clicky switches have aged out — it is that the people who want them really want them, and the manufacturers know it.",
@@ -502,7 +502,7 @@
     },
     {
       "slug": "magnetic-switches-deep-dive",
-      "readTime": 12,
+      "readTime": 13,
       "frontmatter": {
         "title": "How Hall-effect switches actually sense a keypress",
         "lede": "A Hall-effect switch is not a faster MX switch. It is a different sensing lineage — a magnet in the stem, a sensor on the PCB, and an analog voltage where contact closure used to be. The features the marketing pages lead with all unwind from that one architectural fact.",
@@ -521,5 +521,5 @@
       }
     }
   ],
-  "generatedAt": "2026-06-12T01:13:46.700Z"
+  "generatedAt": "2026-06-15T00:04:00.363Z"
 }

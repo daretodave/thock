@@ -190,4 +190,26 @@ describe('findUnlinkedPairs — scope slug', () => {
     assert.equal(scoped.length, 2)
     assert.ok(scoped.every((p) => p.slugA === 'alpha' || p.slugB === 'alpha'))
   })
+
+  test('3 X-rows + 1 Y-row: --slug X returns 3, not 4 (phase 46 cluster-drain invariant)', () => {
+    // X has 3 unlinked siblings (A, B, C); Y and Z share tags but neither involves X.
+    // cluster-aware iterate uses --slug X to batch-drain all 3 in one commit.
+    const articles = [
+      makeArticle('hub-x', 'deep-dives', ['linear', 'pom', 'deep-dive'], ''),
+      makeArticle('sib-a', 'deep-dives', ['linear', 'pom'], ''),
+      makeArticle('sib-b', 'deep-dives', ['linear', 'deep-dive'], ''),
+      makeArticle('sib-c', 'deep-dives', ['pom', 'deep-dive'], ''),
+      makeArticle('unrelated-y', 'guides', ['modding', 'acoustic'], ''),
+      makeArticle('unrelated-z', 'guides', ['modding', 'acoustic'], ''),
+    ]
+    const allPairs = findUnlinkedPairs(articles, null)
+    const xPairs = findUnlinkedPairs(articles, 'hub-x')
+    // Total: hub-x↔sib-a, hub-x↔sib-b, hub-x↔sib-c, unrelated-y↔unrelated-z = 4
+    assert.equal(allPairs.length, 4)
+    // Scoped to hub-x: only the 3 X-pairs
+    assert.equal(xPairs.length, 3)
+    assert.ok(xPairs.every((p) => p.slugA === 'hub-x' || p.slugB === 'hub-x'))
+    // Y↔Z pair is not included
+    assert.ok(xPairs.every((p) => p.slugA !== 'unrelated-y' && p.slugB !== 'unrelated-y'))
+  })
 })

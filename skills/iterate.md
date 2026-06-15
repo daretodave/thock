@@ -337,6 +337,23 @@ For each category, default delegation:
   audit row).
 - **Data gaps** → follow `skills/ship-data.md` §5 inline (or
   effectively re-enter the ship-data flow within this tick).
+- **Cross-links (cluster-aware, Phase 46)** → when the winning row
+  is `category: cross-links`, extract the "hub article" X: whichever
+  of `article-a` / `article-b` appears in more other pending
+  `[ ] [cross-links]` rows (tie-break: take `article-a`, the
+  alphabetically-earlier slug). Then collect **all** pending
+  `[ ] [cross-links]` rows in `plan/AUDIT.md` where X appears as
+  either slug. Confirm the full set at drain time:
+  ```bash
+  node scripts/article-crosslink-survey.mjs --json --slug X
+  ```
+  Fix all N pairs in a single commit — for each pair (X, sibling),
+  add a markdown link in whichever article body has the cleaner
+  insertion point (prefer X's body when both work equally). Commit
+  subject: `content: <X> cross-links — N pairs drained`. Tick all
+  addressed rows in a single `audit:` follow-up commit (not one per
+  pair). This drains per-article rather than per-pair, collapsing
+  ~52 same-pillar rows into ~15–20 ticks.
 - **SEO / link integrity / a11y / tests** → main agent implements.
 - **Performance** → main agent investigates; may delegate to
   `scout` if external benchmarking needed.

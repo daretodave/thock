@@ -262,6 +262,13 @@ prose cross-link. Deduplicates against existing AUDIT rows so repeated
 calls are safe. If it exits non-zero, log and continue — the survey is
 best-effort.
 
+**Phase 46 note — cluster-aware drain:** when `/iterate` picks a
+`cross-links` row as its top finding, its Step 3 logic automatically
+collects and drains **all** pending cross-link pairs involving the
+same hub article in one commit (using `--slug <hub>` on the survey
+script). No additional march-level orchestration is needed — the
+iterate tick handles the clustering itself.
+
 Then run the group-buy companion survey (Phase 40 amendment):
 
 ```bash
