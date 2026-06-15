@@ -3573,7 +3573,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/pe-foam-mod.mdx
 - action: add [pe-foam-mod](/article/pe-foam-mod) to gasket-mount-reality body, or vice versa
 
-### [ ] [cross-links] [4.5] gasket-mount-reality ↔ tape-mod — no prose cross-link (same pillar, ≥2 shared tags: modding, acoustic)
+### [x] [cross-links] [4.5] gasket-mount-reality ↔ tape-mod — no prose cross-link (same pillar, ≥2 shared tags: modding, acoustic)
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -3583,6 +3583,7 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/gasket-mount-reality.mdx
 - article-b: apps/web/src/content/articles/tape-mod.mdx
 - action: add [tape-mod](/article/tape-mod) to gasket-mount-reality body, or vice versa
+- addressed in: 99a02b3
 
 ### [ ] [cross-links] [4.5] gateron-oil-king-deep-dive ↔ hmx-cloud-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: linear, factory-lubed, deep-dive)
 - category: cross-links
@@ -3864,7 +3865,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/switch-films-worth-it.mdx
 - action: add [switch-films-worth-it](/article/switch-films-worth-it) to lubing-switches-guide body, or vice versa
 
-### [ ] [cross-links] [4.5] lubing-switches-guide ↔ tape-mod — no prose cross-link (same pillar, ≥2 shared tags: modding, linear)
+### [x] [cross-links] [4.5] lubing-switches-guide ↔ tape-mod — no prose cross-link (same pillar, ≥2 shared tags: modding, linear)
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -3874,6 +3875,7 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/lubing-switches-guide.mdx
 - article-b: apps/web/src/content/articles/tape-mod.mdx
 - action: add [tape-mod](/article/tape-mod) to lubing-switches-guide body, or vice versa
+- addressed in: 99a02b3
 
 ### [x] [cross-links] [4.5] lubing-switches-guide ↔ typing-tests-lie — no prose cross-link (same pillar, ≥2 shared tags: switches, modding)
 - category: cross-links
@@ -3947,7 +3949,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/stabilizer-servicing-guide.mdx
 - action: add [stabilizer-servicing-guide](/article/stabilizer-servicing-guide) to spring-swaps-explained body, or vice versa
 
-### [ ] [cross-links] [4.5] spring-swaps-explained ↔ tape-mod — no prose cross-link (same pillar, ≥2 shared tags: modding, linear)
+### [x] [cross-links] [4.5] spring-swaps-explained ↔ tape-mod — no prose cross-link (same pillar, ≥2 shared tags: modding, linear)
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -3957,6 +3959,7 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/spring-swaps-explained.mdx
 - article-b: apps/web/src/content/articles/tape-mod.mdx
 - action: add [tape-mod](/article/tape-mod) to spring-swaps-explained body, or vice versa
+- addressed in: 99a02b3
 
 ### [x] [cross-links] [4.5] spring-swaps-explained ↔ typing-tests-lie — no prose cross-link (same pillar, ≥2 shared tags: modding, switches)
 - category: cross-links
@@ -3982,7 +3985,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/switch-films-worth-it.mdx
 - action: add [switch-films-worth-it](/article/switch-films-worth-it) to stabilizer-servicing-guide body, or vice versa
 
-### [ ] [cross-links] [4.5] stabilizer-servicing-guide ↔ tape-mod — no prose cross-link (same pillar, ≥2 shared tags: modding, beginner, linear)
+### [x] [cross-links] [4.5] stabilizer-servicing-guide ↔ tape-mod — no prose cross-link (same pillar, ≥2 shared tags: modding, beginner, linear)
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -3992,6 +3995,7 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/stabilizer-servicing-guide.mdx
 - article-b: apps/web/src/content/articles/tape-mod.mdx
 - action: add [tape-mod](/article/tape-mod) to stabilizer-servicing-guide body, or vice versa
+- addressed in: 99a02b3
 
 ### [x] [cross-links] [4.5] stabilizer-servicing-guide ↔ typing-tests-lie — no prose cross-link (same pillar, ≥2 shared tags: modding, beginner)
 - category: cross-links
@@ -4006,7 +4010,7 @@ passes accumulate signals.)
 - issue: [mirror-failed: 2026-06-15T00:00:00Z]
 - addressed in: 4fd470b
 
-### [ ] [cross-links] [4.5] switch-films-worth-it ↔ tape-mod — no prose cross-link (same pillar, ≥2 shared tags: linear, modding)
+### [x] [cross-links] [4.5] switch-films-worth-it ↔ tape-mod — no prose cross-link (same pillar, ≥2 shared tags: linear, modding)
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -4016,6 +4020,7 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/switch-films-worth-it.mdx
 - article-b: apps/web/src/content/articles/tape-mod.mdx
 - action: add [tape-mod](/article/tape-mod) to switch-films-worth-it body, or vice versa
+- addressed in: 99a02b3
 
 ### [x] [cross-links] [4.5] switch-films-worth-it ↔ typing-tests-lie — no prose cross-link (same pillar, ≥2 shared tags: modding, switches)
 - category: cross-links
