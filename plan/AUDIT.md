@@ -4113,3 +4113,787 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/optical-switches-explained.mdx
 - action: add [optical-switches-explained](/article/optical-switches-explained) to keyboard-acoustics-deep-dive body, or vice versa
 
+
+### [x] [content-gap] [7] trends pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 8 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: trends
+- window-count: 1
+- window-start: 2026-05-16
+- score: 7
+- next: /ship-content → trends pillar article
+> Filed 2026-06-15 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+- addressed in: 5ea4b6a — rapid-trigger-gaming-crossover
+
+### [ ] [cross-links] [3.6] acoustic-spec-rise ↔ drop-holy-panda-x-deep-dive — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, factory-lubed)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: modding, factory-lubed
+- article-a: apps/web/src/content/articles/acoustic-spec-rise.mdx
+- article-b: apps/web/src/content/articles/drop-holy-panda-x-deep-dive.mdx
+- action: add [drop-holy-panda-x-deep-dive](/article/drop-holy-panda-x-deep-dive) to acoustic-spec-rise body, or vice versa
+
+### [ ] [cross-links] [3.6] acoustic-spec-rise ↔ gasket-mount-reality — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: modding, acoustic
+- article-a: apps/web/src/content/articles/acoustic-spec-rise.mdx
+- article-b: apps/web/src/content/articles/gasket-mount-reality.mdx
+- action: add [gasket-mount-reality](/article/gasket-mount-reality) to acoustic-spec-rise body, or vice versa
+
+### [ ] [cross-links] [3.6] acoustic-spec-rise ↔ mounting-styles-compared — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: modding, acoustic
+- article-a: apps/web/src/content/articles/acoustic-spec-rise.mdx
+- article-b: apps/web/src/content/articles/mounting-styles-compared.mdx
+- action: add [mounting-styles-compared](/article/mounting-styles-compared) to acoustic-spec-rise body, or vice versa
+
+### [ ] [cross-links] [3.6] acoustic-spec-rise ↔ o-ring-mod — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: modding, acoustic
+- article-a: apps/web/src/content/articles/acoustic-spec-rise.mdx
+- article-b: apps/web/src/content/articles/o-ring-mod.mdx
+- action: add [o-ring-mod](/article/o-ring-mod) to acoustic-spec-rise body, or vice versa
+
+### [ ] [cross-links] [3.6] acoustic-spec-rise ↔ pe-foam-mod — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: modding, acoustic
+- article-a: apps/web/src/content/articles/acoustic-spec-rise.mdx
+- article-b: apps/web/src/content/articles/pe-foam-mod.mdx
+- action: add [pe-foam-mod](/article/pe-foam-mod) to acoustic-spec-rise body, or vice versa
+
+### [ ] [cross-links] [3.6] acoustic-spec-rise ↔ plate-materials-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: modding, acoustic
+- article-a: apps/web/src/content/articles/acoustic-spec-rise.mdx
+- article-b: apps/web/src/content/articles/plate-materials-explained.mdx
+- action: add [plate-materials-explained](/article/plate-materials-explained) to acoustic-spec-rise body, or vice versa
+
+### [ ] [cross-links] [3.6] acoustic-spec-rise ↔ stabilizers-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: modding, acoustic
+- article-a: apps/web/src/content/articles/acoustic-spec-rise.mdx
+- article-b: apps/web/src/content/articles/stabilizers-explained.mdx
+- action: add [stabilizers-explained](/article/stabilizers-explained) to acoustic-spec-rise body, or vice versa
+
+### [ ] [cross-links] [3.6] acoustic-spec-rise ↔ tape-mod — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: modding, acoustic
+- article-a: apps/web/src/content/articles/acoustic-spec-rise.mdx
+- article-b: apps/web/src/content/articles/tape-mod.mdx
+- action: add [tape-mod](/article/tape-mod) to acoustic-spec-rise body, or vice versa
+
+### [ ] [cross-links] [3.6] alice-layout-decline ↔ drop-holy-panda-x-deep-dive — no prose cross-link (adjacent pillar, ≥2 shared tags: deep-dive, modding)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: deep-dive, modding
+- article-a: apps/web/src/content/articles/alice-layout-decline.mdx
+- article-b: apps/web/src/content/articles/drop-holy-panda-x-deep-dive.mdx
+- action: add [drop-holy-panda-x-deep-dive](/article/drop-holy-panda-x-deep-dive) to alice-layout-decline body, or vice versa
+
+### [ ] [cross-links] [3.6] alice-layout-decline ↔ keyboard-acoustics-deep-dive — no prose cross-link (adjacent pillar, ≥2 shared tags: deep-dive, modding)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: deep-dive, modding
+- article-a: apps/web/src/content/articles/alice-layout-decline.mdx
+- article-b: apps/web/src/content/articles/keyboard-acoustics-deep-dive.mdx
+- action: add [keyboard-acoustics-deep-dive](/article/keyboard-acoustics-deep-dive) to alice-layout-decline body, or vice versa
+
+### [ ] [cross-links] [3.6] alice-layout-decline ↔ plate-materials-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: deep-dive, modding)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: deep-dive, modding
+- article-a: apps/web/src/content/articles/alice-layout-decline.mdx
+- article-b: apps/web/src/content/articles/plate-materials-explained.mdx
+- action: add [plate-materials-explained](/article/plate-materials-explained) to alice-layout-decline body, or vice versa
+
+### [ ] [cross-links] [3.6] beginners-switch-buying-guide ↔ building-mode-sonnet-with-oil-kings — no prose cross-link (adjacent pillar, ≥2 shared tags: linear, gateron)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: linear, gateron
+- article-a: apps/web/src/content/articles/beginners-switch-buying-guide.mdx
+- article-b: apps/web/src/content/articles/building-mode-sonnet-with-oil-kings.mdx
+- action: add [building-mode-sonnet-with-oil-kings](/article/building-mode-sonnet-with-oil-kings) to beginners-switch-buying-guide body, or vice versa
+
+### [ ] [cross-links] [3.6] beginners-switch-buying-guide ↔ gateron-oil-king-deep-dive — no prose cross-link (adjacent pillar, ≥2 shared tags: linear, gateron)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: linear, gateron
+- article-a: apps/web/src/content/articles/beginners-switch-buying-guide.mdx
+- article-b: apps/web/src/content/articles/gateron-oil-king-deep-dive.mdx
+- action: add [gateron-oil-king-deep-dive](/article/gateron-oil-king-deep-dive) to beginners-switch-buying-guide body, or vice versa
+
+### [ ] [cross-links] [3.6] beginners-switch-buying-guide ↔ lubing-switches-guide — no prose cross-link (adjacent pillar, ≥2 shared tags: linear, tactile)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: linear, tactile
+- article-a: apps/web/src/content/articles/beginners-switch-buying-guide.mdx
+- article-b: apps/web/src/content/articles/lubing-switches-guide.mdx
+- action: add [lubing-switches-guide](/article/lubing-switches-guide) to beginners-switch-buying-guide body, or vice versa
+
+### [ ] [cross-links] [3.6] beginners-switch-buying-guide ↔ spring-swaps-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: linear, tactile)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: linear, tactile
+- article-a: apps/web/src/content/articles/beginners-switch-buying-guide.mdx
+- article-b: apps/web/src/content/articles/spring-swaps-explained.mdx
+- action: add [spring-swaps-explained](/article/spring-swaps-explained) to beginners-switch-buying-guide body, or vice versa
+
+### [ ] [cross-links] [3.6] beginners-switch-buying-guide ↔ stabilizer-servicing-guide — no prose cross-link (adjacent pillar, ≥2 shared tags: linear, beginner)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: linear, beginner
+- article-a: apps/web/src/content/articles/beginners-switch-buying-guide.mdx
+- article-b: apps/web/src/content/articles/stabilizer-servicing-guide.mdx
+- action: add [stabilizer-servicing-guide](/article/stabilizer-servicing-guide) to beginners-switch-buying-guide body, or vice versa
+
+### [ ] [cross-links] [3.6] beginners-switch-buying-guide ↔ tape-mod — no prose cross-link (adjacent pillar, ≥2 shared tags: linear, beginner)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: linear, beginner
+- article-a: apps/web/src/content/articles/beginners-switch-buying-guide.mdx
+- article-b: apps/web/src/content/articles/tape-mod.mdx
+- action: add [tape-mod](/article/tape-mod) to beginners-switch-buying-guide body, or vice versa
+
+### [ ] [cross-links] [3.6] building-mode-sonnet-with-oil-kings ↔ gateron-oil-king-deep-dive — no prose cross-link (adjacent pillar, ≥2 shared tags: gateron, linear)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: gateron, linear
+- article-a: apps/web/src/content/articles/building-mode-sonnet-with-oil-kings.mdx
+- article-b: apps/web/src/content/articles/gateron-oil-king-deep-dive.mdx
+- action: add [gateron-oil-king-deep-dive](/article/gateron-oil-king-deep-dive) to building-mode-sonnet-with-oil-kings body, or vice versa
+
+### [ ] [cross-links] [3.6] building-mode-sonnet-with-oil-kings ↔ trends-tracker-preview — no prose cross-link (adjacent pillar, ≥2 shared tags: gateron, mode)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: gateron, mode
+- article-a: apps/web/src/content/articles/building-mode-sonnet-with-oil-kings.mdx
+- article-b: apps/web/src/content/articles/trends-tracker-preview.mdx
+- action: add [trends-tracker-preview](/article/trends-tracker-preview) to building-mode-sonnet-with-oil-kings body, or vice versa
+
+### [ ] [cross-links] [3.6] cherry-mx2a-revision ↔ lubing-switches-guide — no prose cross-link (adjacent pillar, ≥2 shared tags: switches, linear)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: switches, linear
+- article-a: apps/web/src/content/articles/cherry-mx2a-revision.mdx
+- article-b: apps/web/src/content/articles/lubing-switches-guide.mdx
+- action: add [lubing-switches-guide](/article/lubing-switches-guide) to cherry-mx2a-revision body, or vice versa
+
+### [ ] [cross-links] [3.6] cherry-mx2a-revision ↔ spring-swaps-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: switches, linear)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: switches, linear
+- article-a: apps/web/src/content/articles/cherry-mx2a-revision.mdx
+- article-b: apps/web/src/content/articles/spring-swaps-explained.mdx
+- action: add [spring-swaps-explained](/article/spring-swaps-explained) to cherry-mx2a-revision body, or vice versa
+
+### [ ] [cross-links] [3.6] cherry-mx2a-revision ↔ switch-films-worth-it — no prose cross-link (adjacent pillar, ≥2 shared tags: switches, linear)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: switches, linear
+- article-a: apps/web/src/content/articles/cherry-mx2a-revision.mdx
+- article-b: apps/web/src/content/articles/switch-films-worth-it.mdx
+- action: add [switch-films-worth-it](/article/switch-films-worth-it) to cherry-mx2a-revision body, or vice versa
+
+### [ ] [cross-links] [3.6] dcs-grass-valley-decline ↔ gmk-cyl-prussian-alert — no prose cross-link (adjacent pillar, ≥2 shared tags: keycaps, group-buy)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: keycaps, group-buy
+- article-a: apps/web/src/content/articles/dcs-grass-valley-decline.mdx
+- article-b: apps/web/src/content/articles/gmk-cyl-prussian-alert.mdx
+- action: add [gmk-cyl-prussian-alert](/article/gmk-cyl-prussian-alert) to dcs-grass-valley-decline body, or vice versa
+
+### [ ] [cross-links] [3.6] dcs-grass-valley-decline ↔ gmk-cyl-selene-group-buy — no prose cross-link (adjacent pillar, ≥2 shared tags: keycaps, group-buy)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: keycaps, group-buy
+- article-a: apps/web/src/content/articles/dcs-grass-valley-decline.mdx
+- article-b: apps/web/src/content/articles/gmk-cyl-selene-group-buy.mdx
+- action: add [gmk-cyl-selene-group-buy](/article/gmk-cyl-selene-group-buy) to dcs-grass-valley-decline body, or vice versa
+
+### [ ] [cross-links] [3.6] dcs-grass-valley-decline ↔ gsk-sweet-nightmare-group-buy — no prose cross-link (adjacent pillar, ≥2 shared tags: keycaps, group-buy)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: keycaps, group-buy
+- article-a: apps/web/src/content/articles/dcs-grass-valley-decline.mdx
+- article-b: apps/web/src/content/articles/gsk-sweet-nightmare-group-buy.mdx
+- action: add [gsk-sweet-nightmare-group-buy](/article/gsk-sweet-nightmare-group-buy) to dcs-grass-valley-decline body, or vice versa
+
+### [ ] [cross-links] [3.6] dcs-olivetti-comeback ↔ gmk-cyl-selene-group-buy — no prose cross-link (adjacent pillar, ≥2 shared tags: keycaps, cherry-profile)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: keycaps, cherry-profile
+- article-a: apps/web/src/content/articles/dcs-olivetti-comeback.mdx
+- article-b: apps/web/src/content/articles/gmk-cyl-selene-group-buy.mdx
+- action: add [gmk-cyl-selene-group-buy](/article/gmk-cyl-selene-group-buy) to dcs-olivetti-comeback body, or vice versa
+
+### [ ] [cross-links] [3.6] dcs-olivetti-comeback ↔ keycap-profiles-compared — no prose cross-link (adjacent pillar, ≥2 shared tags: keycaps, cherry-profile)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: keycaps, cherry-profile
+- article-a: apps/web/src/content/articles/dcs-olivetti-comeback.mdx
+- article-b: apps/web/src/content/articles/keycap-profiles-compared.mdx
+- action: add [keycap-profiles-compared](/article/keycap-profiles-compared) to dcs-olivetti-comeback body, or vice versa
+
+### [ ] [cross-links] [3.6] divinikey-dcs-dolch-group-buy ↔ keycap-materials-compared — no prose cross-link (adjacent pillar, ≥2 shared tags: keycaps, abs)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: keycaps, abs
+- article-a: apps/web/src/content/articles/divinikey-dcs-dolch-group-buy.mdx
+- article-b: apps/web/src/content/articles/keycap-materials-compared.mdx
+- action: add [keycap-materials-compared](/article/keycap-materials-compared) to divinikey-dcs-dolch-group-buy body, or vice versa
+
+### [ ] [cross-links] [3.6] drop-holy-panda-x-deep-dive ↔ spring-swaps-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: tactile, modding)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: tactile, modding
+- article-a: apps/web/src/content/articles/drop-holy-panda-x-deep-dive.mdx
+- article-b: apps/web/src/content/articles/spring-swaps-explained.mdx
+- action: add [spring-swaps-explained](/article/spring-swaps-explained) to drop-holy-panda-x-deep-dive body, or vice versa
+
+### [ ] [cross-links] [3.6] drop-holy-panda-x-deep-dive ↔ switch-films-worth-it — no prose cross-link (adjacent pillar, ≥2 shared tags: tactile, modding)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: tactile, modding
+- article-a: apps/web/src/content/articles/drop-holy-panda-x-deep-dive.mdx
+- article-b: apps/web/src/content/articles/switch-films-worth-it.mdx
+- action: add [switch-films-worth-it](/article/switch-films-worth-it) to drop-holy-panda-x-deep-dive body, or vice versa
+
+### [ ] [cross-links] [3.6] gasket-mount-reality ↔ mounting-styles-compared — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic, polycarbonate)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: modding, acoustic, polycarbonate
+- article-a: apps/web/src/content/articles/gasket-mount-reality.mdx
+- article-b: apps/web/src/content/articles/mounting-styles-compared.mdx
+- action: add [mounting-styles-compared](/article/mounting-styles-compared) to gasket-mount-reality body, or vice versa
+
+### [ ] [cross-links] [3.6] gasket-mount-reality ↔ sound-dampening-compared — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: modding, acoustic
+- article-a: apps/web/src/content/articles/gasket-mount-reality.mdx
+- article-b: apps/web/src/content/articles/sound-dampening-compared.mdx
+- action: add [sound-dampening-compared](/article/sound-dampening-compared) to gasket-mount-reality body, or vice versa
+
+### [ ] [cross-links] [3.6] gasket-mount-reality ↔ stabilizers-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: modding, acoustic
+- article-a: apps/web/src/content/articles/gasket-mount-reality.mdx
+- article-b: apps/web/src/content/articles/stabilizers-explained.mdx
+- action: add [stabilizers-explained](/article/stabilizers-explained) to gasket-mount-reality body, or vice versa
+
+### [ ] [cross-links] [3.6] gmk-cyl-prussian-alert ↔ keycap-profiles-compared — no prose cross-link (adjacent pillar, ≥2 shared tags: keycaps, cherry-profile)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: keycaps, cherry-profile
+- article-a: apps/web/src/content/articles/gmk-cyl-prussian-alert.mdx
+- article-b: apps/web/src/content/articles/keycap-profiles-compared.mdx
+- action: add [keycap-profiles-compared](/article/keycap-profiles-compared) to gmk-cyl-prussian-alert body, or vice versa
+
+### [ ] [cross-links] [3.6] gmk-cyl-selene-group-buy ↔ keycap-materials-compared — no prose cross-link (adjacent pillar, ≥2 shared tags: keycaps, abs)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: keycaps, abs
+- article-a: apps/web/src/content/articles/gmk-cyl-selene-group-buy.mdx
+- article-b: apps/web/src/content/articles/keycap-materials-compared.mdx
+- action: add [keycap-materials-compared](/article/keycap-materials-compared) to gmk-cyl-selene-group-buy body, or vice versa
+
+### [ ] [cross-links] [3.6] gmk-cyl-selene-group-buy ↔ keycap-profiles-compared — no prose cross-link (adjacent pillar, ≥2 shared tags: keycaps, cherry-profile)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: keycaps, cherry-profile
+- article-a: apps/web/src/content/articles/gmk-cyl-selene-group-buy.mdx
+- article-b: apps/web/src/content/articles/keycap-profiles-compared.mdx
+- action: add [keycap-profiles-compared](/article/keycap-profiles-compared) to gmk-cyl-selene-group-buy body, or vice versa
+
+### [ ] [cross-links] [3.6] hall-effect-keyboard-guide ↔ keychron-q-ultra-zmk — no prose cross-link (adjacent pillar, ≥2 shared tags: prebuilt, polling-rate)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: prebuilt, polling-rate
+- article-a: apps/web/src/content/articles/hall-effect-keyboard-guide.mdx
+- article-b: apps/web/src/content/articles/keychron-q-ultra-zmk.mdx
+- action: add [keychron-q-ultra-zmk](/article/keychron-q-ultra-zmk) to hall-effect-keyboard-guide body, or vice versa
+
+### [ ] [cross-links] [3.6] hmx-cloud-deep-dive ↔ lubing-switches-guide — no prose cross-link (adjacent pillar, ≥2 shared tags: linear, switches)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: linear, switches
+- article-a: apps/web/src/content/articles/hmx-cloud-deep-dive.mdx
+- article-b: apps/web/src/content/articles/lubing-switches-guide.mdx
+- action: add [lubing-switches-guide](/article/lubing-switches-guide) to hmx-cloud-deep-dive body, or vice versa
+
+### [ ] [cross-links] [3.6] hmx-cloud-deep-dive ↔ spring-swaps-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: linear, switches)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: linear, switches
+- article-a: apps/web/src/content/articles/hmx-cloud-deep-dive.mdx
+- article-b: apps/web/src/content/articles/spring-swaps-explained.mdx
+- action: add [spring-swaps-explained](/article/spring-swaps-explained) to hmx-cloud-deep-dive body, or vice versa
+
+### [ ] [cross-links] [3.6] hmx-cloud-deep-dive ↔ switch-films-worth-it — no prose cross-link (adjacent pillar, ≥2 shared tags: linear, switches)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: linear, switches
+- article-a: apps/web/src/content/articles/hmx-cloud-deep-dive.mdx
+- article-b: apps/web/src/content/articles/switch-films-worth-it.mdx
+- action: add [switch-films-worth-it](/article/switch-films-worth-it) to hmx-cloud-deep-dive body, or vice versa
+
+### [ ] [cross-links] [3.6] keyboard-acoustics-deep-dive ↔ lubing-101 — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, switches)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: modding, switches
+- article-a: apps/web/src/content/articles/keyboard-acoustics-deep-dive.mdx
+- article-b: apps/web/src/content/articles/lubing-101.mdx
+- action: add [lubing-101](/article/lubing-101) to keyboard-acoustics-deep-dive body, or vice versa
+
+### [ ] [cross-links] [3.6] keyboard-acoustics-deep-dive ↔ lubing-switches-guide — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, switches)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: modding, switches
+- article-a: apps/web/src/content/articles/keyboard-acoustics-deep-dive.mdx
+- article-b: apps/web/src/content/articles/lubing-switches-guide.mdx
+- action: add [lubing-switches-guide](/article/lubing-switches-guide) to keyboard-acoustics-deep-dive body, or vice versa
+
+### [ ] [cross-links] [3.6] keyboard-acoustics-deep-dive ↔ spring-swaps-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, switches)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: modding, switches
+- article-a: apps/web/src/content/articles/keyboard-acoustics-deep-dive.mdx
+- article-b: apps/web/src/content/articles/spring-swaps-explained.mdx
+- action: add [spring-swaps-explained](/article/spring-swaps-explained) to keyboard-acoustics-deep-dive body, or vice versa
+
+### [ ] [cross-links] [3.6] keyboard-acoustics-deep-dive ↔ stabilizer-servicing-guide — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, stabilizers)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: modding, stabilizers
+- article-a: apps/web/src/content/articles/keyboard-acoustics-deep-dive.mdx
+- article-b: apps/web/src/content/articles/stabilizer-servicing-guide.mdx
+- action: add [stabilizer-servicing-guide](/article/stabilizer-servicing-guide) to keyboard-acoustics-deep-dive body, or vice versa
+
+### [ ] [cross-links] [3.6] keyboard-acoustics-deep-dive ↔ switch-films-worth-it — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, switches)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: modding, switches
+- article-a: apps/web/src/content/articles/keyboard-acoustics-deep-dive.mdx
+- article-b: apps/web/src/content/articles/switch-films-worth-it.mdx
+- action: add [switch-films-worth-it](/article/switch-films-worth-it) to keyboard-acoustics-deep-dive body, or vice versa
+
+### [ ] [cross-links] [3.6] keyboard-acoustics-deep-dive ↔ typing-tests-lie — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, switches)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: modding, switches
+- article-a: apps/web/src/content/articles/keyboard-acoustics-deep-dive.mdx
+- article-b: apps/web/src/content/articles/typing-tests-lie.mdx
+- action: add [typing-tests-lie](/article/typing-tests-lie) to keyboard-acoustics-deep-dive body, or vice versa
+
+### [ ] [cross-links] [3.6] lubing-101 ↔ switch-films-worth-it — no prose cross-link (adjacent pillar, ≥2 shared tags: switches, modding)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: switches, modding
+- article-a: apps/web/src/content/articles/lubing-101.mdx
+- article-b: apps/web/src/content/articles/switch-films-worth-it.mdx
+- action: add [switch-films-worth-it](/article/switch-films-worth-it) to lubing-101 body, or vice versa
+
+### [ ] [cross-links] [3.6] lubing-101 ↔ tape-mod — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, beginner)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: modding, beginner
+- article-a: apps/web/src/content/articles/lubing-101.mdx
+- article-b: apps/web/src/content/articles/tape-mod.mdx
+- action: add [tape-mod](/article/tape-mod) to lubing-101 body, or vice versa
+
+### [ ] [cross-links] [3.6] lubing-101 ↔ typing-tests-lie — no prose cross-link (adjacent pillar, ≥2 shared tags: switches, modding, beginner)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: switches, modding, beginner
+- article-a: apps/web/src/content/articles/lubing-101.mdx
+- article-b: apps/web/src/content/articles/typing-tests-lie.mdx
+- action: add [typing-tests-lie](/article/typing-tests-lie) to lubing-101 body, or vice versa
+
+### [ ] [cross-links] [3.6] lubing-switches-guide ↔ stabilizers-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: lubing, modding)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: lubing, modding
+- article-a: apps/web/src/content/articles/lubing-switches-guide.mdx
+- article-b: apps/web/src/content/articles/stabilizers-explained.mdx
+- action: add [stabilizers-explained](/article/stabilizers-explained) to lubing-switches-guide body, or vice versa
+
+### [ ] [cross-links] [3.6] mode-sonnet-r2-group-buy-coverage ↔ vendor-first-customs — no prose cross-link (adjacent pillar, ≥2 shared tags: mode, cannonkeys)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: mode, cannonkeys
+- article-a: apps/web/src/content/articles/mode-sonnet-r2-group-buy-coverage.mdx
+- article-b: apps/web/src/content/articles/vendor-first-customs.mdx
+- action: add [vendor-first-customs](/article/vendor-first-customs) to mode-sonnet-r2-group-buy-coverage body, or vice versa
+
+### [ ] [cross-links] [3.6] mounting-styles-compared ↔ pe-foam-mod — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic, beginner)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: modding, acoustic, beginner
+- article-a: apps/web/src/content/articles/mounting-styles-compared.mdx
+- article-b: apps/web/src/content/articles/pe-foam-mod.mdx
+- action: add [pe-foam-mod](/article/pe-foam-mod) to mounting-styles-compared body, or vice versa
+
+### [ ] [cross-links] [3.6] mounting-styles-compared ↔ plate-materials-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic, polycarbonate)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: modding, acoustic, polycarbonate
+- article-a: apps/web/src/content/articles/mounting-styles-compared.mdx
+- article-b: apps/web/src/content/articles/plate-materials-explained.mdx
+- action: add [plate-materials-explained](/article/plate-materials-explained) to mounting-styles-compared body, or vice versa
+
+### [ ] [cross-links] [3.6] mounting-styles-compared ↔ stabilizer-servicing-guide — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, beginner)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: modding, beginner
+- article-a: apps/web/src/content/articles/mounting-styles-compared.mdx
+- article-b: apps/web/src/content/articles/stabilizer-servicing-guide.mdx
+- action: add [stabilizer-servicing-guide](/article/stabilizer-servicing-guide) to mounting-styles-compared body, or vice versa
+
+### [ ] [cross-links] [3.6] mounting-styles-compared ↔ typing-tests-lie — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, beginner)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: modding, beginner
+- article-a: apps/web/src/content/articles/mounting-styles-compared.mdx
+- article-b: apps/web/src/content/articles/typing-tests-lie.mdx
+- action: add [typing-tests-lie](/article/typing-tests-lie) to mounting-styles-compared body, or vice versa
+
+### [ ] [cross-links] [3.6] o-ring-mod ↔ plate-materials-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: modding, acoustic
+- article-a: apps/web/src/content/articles/o-ring-mod.mdx
+- article-b: apps/web/src/content/articles/plate-materials-explained.mdx
+- action: add [plate-materials-explained](/article/plate-materials-explained) to o-ring-mod body, or vice versa
+
+### [ ] [cross-links] [3.6] o-ring-mod ↔ stabilizers-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: modding, acoustic
+- article-a: apps/web/src/content/articles/o-ring-mod.mdx
+- article-b: apps/web/src/content/articles/stabilizers-explained.mdx
+- action: add [stabilizers-explained](/article/stabilizers-explained) to o-ring-mod body, or vice versa
+
+### [ ] [cross-links] [3.6] pe-foam-mod ↔ plate-materials-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: modding, acoustic
+- article-a: apps/web/src/content/articles/pe-foam-mod.mdx
+- article-b: apps/web/src/content/articles/plate-materials-explained.mdx
+- action: add [plate-materials-explained](/article/plate-materials-explained) to pe-foam-mod body, or vice versa
+
+### [ ] [cross-links] [3.6] pe-foam-mod ↔ stabilizers-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic, beginner)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: modding, acoustic, beginner
+- article-a: apps/web/src/content/articles/pe-foam-mod.mdx
+- article-b: apps/web/src/content/articles/stabilizers-explained.mdx
+- action: add [stabilizers-explained](/article/stabilizers-explained) to pe-foam-mod body, or vice versa
+
+### [ ] [cross-links] [3.6] plate-materials-explained ↔ stabilizers-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: modding, acoustic
+- article-a: apps/web/src/content/articles/plate-materials-explained.mdx
+- article-b: apps/web/src/content/articles/stabilizers-explained.mdx
+- action: add [stabilizers-explained](/article/stabilizers-explained) to plate-materials-explained body, or vice versa
+
+### [ ] [cross-links] [3.6] plate-materials-explained ↔ switch-housings-compared — no prose cross-link (adjacent pillar, ≥2 shared tags: polycarbonate, pom)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: polycarbonate, pom
+- article-a: apps/web/src/content/articles/plate-materials-explained.mdx
+- article-b: apps/web/src/content/articles/switch-housings-compared.mdx
+- action: add [switch-housings-compared](/article/switch-housings-compared) to plate-materials-explained body, or vice versa
+
+### [ ] [cross-links] [3.6] sound-dampening-compared ↔ typing-tests-lie — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, beginner)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: modding, beginner
+- article-a: apps/web/src/content/articles/sound-dampening-compared.mdx
+- article-b: apps/web/src/content/articles/typing-tests-lie.mdx
+- action: add [typing-tests-lie](/article/typing-tests-lie) to sound-dampening-compared body, or vice versa
+
+### [ ] [cross-links] [3.6] stabilizers-explained ↔ tape-mod — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic, beginner)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: modding, acoustic, beginner
+- article-a: apps/web/src/content/articles/stabilizers-explained.mdx
+- article-b: apps/web/src/content/articles/tape-mod.mdx
+- action: add [tape-mod](/article/tape-mod) to stabilizers-explained body, or vice versa
+
+### [ ] [cross-links] [3.6] stabilizers-explained ↔ typing-tests-lie — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, beginner)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: modding, beginner
+- article-a: apps/web/src/content/articles/stabilizers-explained.mdx
+- article-b: apps/web/src/content/articles/typing-tests-lie.mdx
+- action: add [typing-tests-lie](/article/typing-tests-lie) to stabilizers-explained body, or vice versa
+
+### [ ] [cross-links] [3.6] switch-housings-compared ↔ typing-tests-lie — no prose cross-link (adjacent pillar, ≥2 shared tags: switches, beginner)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: switches, beginner
+- article-a: apps/web/src/content/articles/switch-housings-compared.mdx
+- article-b: apps/web/src/content/articles/typing-tests-lie.mdx
+- action: add [typing-tests-lie](/article/typing-tests-lie) to switch-housings-compared body, or vice versa
+
+### [ ] [cross-links] [3.6] rapid-trigger-gaming-crossover ↔ hall-effect-keyboard-guide — no prose cross-link (adjacent pillar, ≥2 shared tags: hall-effect, polling-rate, switches)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: hall-effect, polling-rate, switches
+- article-a: apps/web/src/content/articles/rapid-trigger-gaming-crossover.mdx
+- article-b: apps/web/src/content/articles/hall-effect-keyboard-guide.mdx
+- action: add [hall-effect-keyboard-guide](/article/hall-effect-keyboard-guide) to rapid-trigger-gaming-crossover body, or vice versa
+
+### [ ] [cross-links] [4.5] rapid-trigger-gaming-crossover ↔ hall-effect-mainstream — no prose cross-link (same pillar, ≥2 shared tags: hall-effect, polling-rate, trends-2026, switches)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: hall-effect, polling-rate, trends-2026, switches
+- article-a: apps/web/src/content/articles/rapid-trigger-gaming-crossover.mdx
+- article-b: apps/web/src/content/articles/hall-effect-mainstream.mdx
+- action: add [hall-effect-mainstream](/article/hall-effect-mainstream) to rapid-trigger-gaming-crossover body, or vice versa
+
+### [ ] [cross-links] [3.6] rapid-trigger-gaming-crossover ↔ hmx-cloud-deep-dive — no prose cross-link (adjacent pillar, ≥2 shared tags: trends-2026, switches)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: trends-2026, switches
+- article-a: apps/web/src/content/articles/rapid-trigger-gaming-crossover.mdx
+- article-b: apps/web/src/content/articles/hmx-cloud-deep-dive.mdx
+- action: add [hmx-cloud-deep-dive](/article/hmx-cloud-deep-dive) to rapid-trigger-gaming-crossover body, or vice versa
+
+### [ ] [cross-links] [3.6] rapid-trigger-gaming-crossover ↔ magnetic-switches-deep-dive — no prose cross-link (adjacent pillar, ≥2 shared tags: hall-effect, switches)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: hall-effect, switches
+- article-a: apps/web/src/content/articles/rapid-trigger-gaming-crossover.mdx
+- article-b: apps/web/src/content/articles/magnetic-switches-deep-dive.mdx
+- action: add [magnetic-switches-deep-dive](/article/magnetic-switches-deep-dive) to rapid-trigger-gaming-crossover body, or vice versa
+
+### [HOT PURSUIT] [content-gap] [7] news pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 7 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: news
+- window-count: 1
+- window-start: 2026-05-16
+- score: 7
+- next: /ship-content → news pillar article
+> Filed 2026-06-15 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
