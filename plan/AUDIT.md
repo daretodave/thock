@@ -3788,7 +3788,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/optical-switches-explained.mdx
 - action: add [optical-switches-explained](/article/optical-switches-explained) to hmx-cloud-deep-dive body, or vice versa
 
-### [ ] [cross-links] [4.5] lubing-101 ↔ mounting-styles-compared — no prose cross-link (same pillar, ≥2 shared tags: modding, beginner)
+### [x] [cross-links] [4.5] lubing-101 ↔ mounting-styles-compared — no prose cross-link (same pillar, ≥2 shared tags: modding, beginner)
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -3798,8 +3798,9 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/lubing-101.mdx
 - article-b: apps/web/src/content/articles/mounting-styles-compared.mdx
 - action: add [mounting-styles-compared](/article/mounting-styles-compared) to lubing-101 body, or vice versa
+- addressed in: 7b9c458
 
-### [ ] [cross-links] [4.5] lubing-101 ↔ sound-dampening-compared — no prose cross-link (same pillar, ≥2 shared tags: modding, beginner)
+### [x] [cross-links] [4.5] lubing-101 ↔ sound-dampening-compared — no prose cross-link (same pillar, ≥2 shared tags: modding, beginner)
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -3809,8 +3810,9 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/lubing-101.mdx
 - article-b: apps/web/src/content/articles/sound-dampening-compared.mdx
 - action: add [sound-dampening-compared](/article/sound-dampening-compared) to lubing-101 body, or vice versa
+- addressed in: 7b9c458
 
-### [ ] [cross-links] [4.5] lubing-101 ↔ stabilizers-explained — no prose cross-link (same pillar, ≥2 shared tags: modding, beginner)
+### [x] [cross-links] [4.5] lubing-101 ↔ stabilizers-explained — no prose cross-link (same pillar, ≥2 shared tags: modding, beginner)
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -3820,8 +3822,9 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/lubing-101.mdx
 - article-b: apps/web/src/content/articles/stabilizers-explained.mdx
 - action: add [stabilizers-explained](/article/stabilizers-explained) to lubing-101 body, or vice versa
+- addressed in: 7b9c458
 
-### [ ] [cross-links] [4.5] lubing-101 ↔ switch-housings-compared — no prose cross-link (same pillar, ≥2 shared tags: switches, beginner)
+### [x] [cross-links] [4.5] lubing-101 ↔ switch-housings-compared — no prose cross-link (same pillar, ≥2 shared tags: switches, beginner)
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -3831,6 +3834,7 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/lubing-101.mdx
 - article-b: apps/web/src/content/articles/switch-housings-compared.mdx
 - action: add [switch-housings-compared](/article/switch-housings-compared) to lubing-101 body, or vice versa
+- addressed in: 7b9c458
 
 ### [ ] [cross-links] [4.5] lubing-switches-guide ↔ spring-swaps-explained — no prose cross-link (same pillar, ≥2 shared tags: switches, modding, linear, tactile)
 - category: cross-links
@@ -4681,7 +4685,7 @@ passes accumulate signals.)
 - addressed in: e3e6b6c
 
 
-### [ ] [cross-links] [3.6] lubing-101 ↔ switch-films-worth-it — no prose cross-link (adjacent pillar, ≥2 shared tags: switches, modding)
+### [x] [cross-links] [3.6] lubing-101 ↔ switch-films-worth-it — no prose cross-link (adjacent pillar, ≥2 shared tags: switches, modding)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4691,8 +4695,9 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/lubing-101.mdx
 - article-b: apps/web/src/content/articles/switch-films-worth-it.mdx
 - action: add [switch-films-worth-it](/article/switch-films-worth-it) to lubing-101 body, or vice versa
+- addressed in: 7b9c458
 
-### [ ] [cross-links] [3.6] lubing-101 ↔ tape-mod — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, beginner)
+### [x] [cross-links] [3.6] lubing-101 ↔ tape-mod — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, beginner)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4702,6 +4707,7 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/lubing-101.mdx
 - article-b: apps/web/src/content/articles/tape-mod.mdx
 - action: add [tape-mod](/article/tape-mod) to lubing-101 body, or vice versa
+- addressed in: 7b9c458
 
 ### [x] [cross-links] [3.6] lubing-101 ↔ typing-tests-lie — no prose cross-link (adjacent pillar, ≥2 shared tags: switches, modding, beginner)
 - category: cross-links
