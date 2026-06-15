@@ -4047,7 +4047,7 @@ passes accumulate signals.)
 - group-buy: data/group-buys/kbdfans-gmk-cyl-prussian-alert.json
 - action: update status from 'live' to 'closed' in data/group-buys/kbdfans-gmk-cyl-prussian-alert.json
 
-### [ ] [cross-links] [4.5] keyboard-acoustics-deep-dive ↔ cherry-mx2a-revision — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, switches)
+### [x] [cross-links] [4.5] keyboard-acoustics-deep-dive ↔ cherry-mx2a-revision — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, switches)
 - category: cross-links
 - filed: 2026-06-12 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -4057,8 +4057,10 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/keyboard-acoustics-deep-dive.mdx
 - article-b: apps/web/src/content/articles/cherry-mx2a-revision.mdx
 - action: add [cherry-mx2a-revision](/article/cherry-mx2a-revision) to keyboard-acoustics-deep-dive body, or vice versa
+- addressed in: e3e6b6c
 
-### [ ] [cross-links] [4.5] keyboard-acoustics-deep-dive ↔ clicky-switches-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, switches)
+
+### [x] [cross-links] [4.5] keyboard-acoustics-deep-dive ↔ clicky-switches-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, switches)
 - category: cross-links
 - filed: 2026-06-12 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -4068,8 +4070,10 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/keyboard-acoustics-deep-dive.mdx
 - article-b: apps/web/src/content/articles/clicky-switches-deep-dive.mdx
 - action: add [clicky-switches-deep-dive](/article/clicky-switches-deep-dive) to keyboard-acoustics-deep-dive body, or vice versa
+- addressed in: e3e6b6c
 
-### [ ] [cross-links] [4.5] keyboard-acoustics-deep-dive ↔ drop-holy-panda-x-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, modding)
+
+### [x] [cross-links] [4.5] keyboard-acoustics-deep-dive ↔ drop-holy-panda-x-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, modding)
 - category: cross-links
 - filed: 2026-06-12 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -4079,8 +4083,10 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/keyboard-acoustics-deep-dive.mdx
 - article-b: apps/web/src/content/articles/drop-holy-panda-x-deep-dive.mdx
 - action: add [drop-holy-panda-x-deep-dive](/article/drop-holy-panda-x-deep-dive) to keyboard-acoustics-deep-dive body, or vice versa
+- addressed in: e3e6b6c
 
-### [ ] [cross-links] [4.5] keyboard-acoustics-deep-dive ↔ hmx-cloud-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, switches)
+
+### [x] [cross-links] [4.5] keyboard-acoustics-deep-dive ↔ hmx-cloud-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, switches)
 - category: cross-links
 - filed: 2026-06-12 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -4090,8 +4096,10 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/keyboard-acoustics-deep-dive.mdx
 - article-b: apps/web/src/content/articles/hmx-cloud-deep-dive.mdx
 - action: add [hmx-cloud-deep-dive](/article/hmx-cloud-deep-dive) to keyboard-acoustics-deep-dive body, or vice versa
+- addressed in: e3e6b6c
 
-### [ ] [cross-links] [4.5] keyboard-acoustics-deep-dive ↔ magnetic-switches-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, switches)
+
+### [x] [cross-links] [4.5] keyboard-acoustics-deep-dive ↔ magnetic-switches-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, switches)
 - category: cross-links
 - filed: 2026-06-12 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -4101,8 +4109,10 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/keyboard-acoustics-deep-dive.mdx
 - article-b: apps/web/src/content/articles/magnetic-switches-deep-dive.mdx
 - action: add [magnetic-switches-deep-dive](/article/magnetic-switches-deep-dive) to keyboard-acoustics-deep-dive body, or vice versa
+- addressed in: e3e6b6c
 
-### [ ] [cross-links] [4.5] keyboard-acoustics-deep-dive ↔ optical-switches-explained — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, switches)
+
+### [x] [cross-links] [4.5] keyboard-acoustics-deep-dive ↔ optical-switches-explained — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, switches)
 - category: cross-links
 - filed: 2026-06-12 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -4112,6 +4122,7 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/keyboard-acoustics-deep-dive.mdx
 - article-b: apps/web/src/content/articles/optical-switches-explained.mdx
 - action: add [optical-switches-explained](/article/optical-switches-explained) to keyboard-acoustics-deep-dive body, or vice versa
+- addressed in: e3e6b6c
 
 
 ### [x] [content-gap] [7] trends pillar — 1 of ≥2 articles in last 30d
@@ -4226,7 +4237,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/drop-holy-panda-x-deep-dive.mdx
 - action: add [drop-holy-panda-x-deep-dive](/article/drop-holy-panda-x-deep-dive) to alice-layout-decline body, or vice versa
 
-### [ ] [cross-links] [3.6] alice-layout-decline ↔ keyboard-acoustics-deep-dive — no prose cross-link (adjacent pillar, ≥2 shared tags: deep-dive, modding)
+### [x] [cross-links] [3.6] alice-layout-decline ↔ keyboard-acoustics-deep-dive — no prose cross-link (adjacent pillar, ≥2 shared tags: deep-dive, modding)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4236,6 +4247,8 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/alice-layout-decline.mdx
 - article-b: apps/web/src/content/articles/keyboard-acoustics-deep-dive.mdx
 - action: add [keyboard-acoustics-deep-dive](/article/keyboard-acoustics-deep-dive) to alice-layout-decline body, or vice versa
+- addressed in: e3e6b6c
+
 
 ### [ ] [cross-links] [3.6] alice-layout-decline ↔ plate-materials-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: deep-dive, modding)
 - category: cross-links
@@ -4567,7 +4580,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/switch-films-worth-it.mdx
 - action: add [switch-films-worth-it](/article/switch-films-worth-it) to hmx-cloud-deep-dive body, or vice versa
 
-### [ ] [cross-links] [3.6] keyboard-acoustics-deep-dive ↔ lubing-101 — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, switches)
+### [x] [cross-links] [3.6] keyboard-acoustics-deep-dive ↔ lubing-101 — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, switches)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4577,8 +4590,10 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/keyboard-acoustics-deep-dive.mdx
 - article-b: apps/web/src/content/articles/lubing-101.mdx
 - action: add [lubing-101](/article/lubing-101) to keyboard-acoustics-deep-dive body, or vice versa
+- addressed in: e3e6b6c
 
-### [ ] [cross-links] [3.6] keyboard-acoustics-deep-dive ↔ lubing-switches-guide — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, switches)
+
+### [x] [cross-links] [3.6] keyboard-acoustics-deep-dive ↔ lubing-switches-guide — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, switches)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4588,8 +4603,10 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/keyboard-acoustics-deep-dive.mdx
 - article-b: apps/web/src/content/articles/lubing-switches-guide.mdx
 - action: add [lubing-switches-guide](/article/lubing-switches-guide) to keyboard-acoustics-deep-dive body, or vice versa
+- addressed in: e3e6b6c
 
-### [ ] [cross-links] [3.6] keyboard-acoustics-deep-dive ↔ spring-swaps-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, switches)
+
+### [x] [cross-links] [3.6] keyboard-acoustics-deep-dive ↔ spring-swaps-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, switches)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4599,8 +4616,10 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/keyboard-acoustics-deep-dive.mdx
 - article-b: apps/web/src/content/articles/spring-swaps-explained.mdx
 - action: add [spring-swaps-explained](/article/spring-swaps-explained) to keyboard-acoustics-deep-dive body, or vice versa
+- addressed in: e3e6b6c
 
-### [ ] [cross-links] [3.6] keyboard-acoustics-deep-dive ↔ stabilizer-servicing-guide — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, stabilizers)
+
+### [x] [cross-links] [3.6] keyboard-acoustics-deep-dive ↔ stabilizer-servicing-guide — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, stabilizers)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4610,8 +4629,10 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/keyboard-acoustics-deep-dive.mdx
 - article-b: apps/web/src/content/articles/stabilizer-servicing-guide.mdx
 - action: add [stabilizer-servicing-guide](/article/stabilizer-servicing-guide) to keyboard-acoustics-deep-dive body, or vice versa
+- addressed in: e3e6b6c
 
-### [ ] [cross-links] [3.6] keyboard-acoustics-deep-dive ↔ switch-films-worth-it — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, switches)
+
+### [x] [cross-links] [3.6] keyboard-acoustics-deep-dive ↔ switch-films-worth-it — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, switches)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4621,8 +4642,10 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/keyboard-acoustics-deep-dive.mdx
 - article-b: apps/web/src/content/articles/switch-films-worth-it.mdx
 - action: add [switch-films-worth-it](/article/switch-films-worth-it) to keyboard-acoustics-deep-dive body, or vice versa
+- addressed in: e3e6b6c
 
-### [ ] [cross-links] [3.6] keyboard-acoustics-deep-dive ↔ typing-tests-lie — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, switches)
+
+### [x] [cross-links] [3.6] keyboard-acoustics-deep-dive ↔ typing-tests-lie — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, switches)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4632,6 +4655,8 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/keyboard-acoustics-deep-dive.mdx
 - article-b: apps/web/src/content/articles/typing-tests-lie.mdx
 - action: add [typing-tests-lie](/article/typing-tests-lie) to keyboard-acoustics-deep-dive body, or vice versa
+- addressed in: e3e6b6c
+
 
 ### [ ] [cross-links] [3.6] lubing-101 ↔ switch-films-worth-it — no prose cross-link (adjacent pillar, ≥2 shared tags: switches, modding)
 - category: cross-links
