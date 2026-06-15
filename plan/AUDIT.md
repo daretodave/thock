@@ -4886,7 +4886,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/magnetic-switches-deep-dive.mdx
 - action: add [magnetic-switches-deep-dive](/article/magnetic-switches-deep-dive) to rapid-trigger-gaming-crossover body, or vice versa
 
-### [HOT PURSUIT] [content-gap] [7] news pillar — 1 of ≥2 articles in last 30d
+### [x] [HOT PURSUIT] [content-gap] [7] news pillar — 1 of ≥2 articles in last 30d
 - category: content-gaps
 - impact: 7 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -4897,3 +4897,59 @@ passes accumulate signals.)
 - score: 7
 - next: /ship-content → news pillar article
 > Filed 2026-06-15 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+- addressed in: 003729f — computex-2026-keyboard-highlights
+
+### [ ] [cross-links] [3.6] computex-2026-keyboard-highlights ↔ hall-effect-mainstream — no prose cross-link (adjacent pillar, ≥2 shared tags: hall-effect, switches, trends-2026)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: hall-effect, switches, trends-2026
+- article-a: apps/web/src/content/articles/computex-2026-keyboard-highlights.mdx
+- article-b: apps/web/src/content/articles/hall-effect-mainstream.mdx
+- action: add [hall-effect-mainstream](/article/hall-effect-mainstream) to computex-2026-keyboard-highlights body, or vice versa
+
+### [ ] [cross-links] [3.6] computex-2026-keyboard-highlights ↔ hmx-cloud-deep-dive — no prose cross-link (adjacent pillar, ≥2 shared tags: switches, trends-2026)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: switches, trends-2026
+- article-a: apps/web/src/content/articles/computex-2026-keyboard-highlights.mdx
+- article-b: apps/web/src/content/articles/hmx-cloud-deep-dive.mdx
+- action: add [hmx-cloud-deep-dive](/article/hmx-cloud-deep-dive) to computex-2026-keyboard-highlights body, or vice versa
+
+### [ ] [cross-links] [3.6] computex-2026-keyboard-highlights ↔ magnetic-switches-deep-dive — no prose cross-link (adjacent pillar, ≥2 shared tags: hall-effect, switches)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: hall-effect, switches
+- article-a: apps/web/src/content/articles/computex-2026-keyboard-highlights.mdx
+- article-b: apps/web/src/content/articles/magnetic-switches-deep-dive.mdx
+- action: add [magnetic-switches-deep-dive](/article/magnetic-switches-deep-dive) to computex-2026-keyboard-highlights body, or vice versa
+
+### [ ] [cross-links] [3.6] computex-2026-keyboard-highlights ↔ rapid-trigger-gaming-crossover — no prose cross-link (adjacent pillar, ≥2 shared tags: hall-effect, switches, trends-2026)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: hall-effect, switches, trends-2026
+- article-a: apps/web/src/content/articles/computex-2026-keyboard-highlights.mdx
+- article-b: apps/web/src/content/articles/rapid-trigger-gaming-crossover.mdx
+- action: add [rapid-trigger-gaming-crossover](/article/rapid-trigger-gaming-crossover) to computex-2026-keyboard-highlights body, or vice versa
+
+### [ ] [cross-links] [3.6] computex-2026-keyboard-highlights ↔ zmk-mainstream-shift — no prose cross-link (adjacent pillar, ≥2 shared tags: wireless, trends-2026)
+- category: cross-links
+- filed: 2026-06-15 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: wireless, trends-2026
+- article-a: apps/web/src/content/articles/computex-2026-keyboard-highlights.mdx
+- article-b: apps/web/src/content/articles/zmk-mainstream-shift.mdx
+- action: add [zmk-mainstream-shift](/article/zmk-mainstream-shift) to computex-2026-keyboard-highlights body, or vice versa
