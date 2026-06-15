@@ -142,6 +142,15 @@ export default async function PartDetailPage({
               Compare this switch →
             </Link>
           )}
+          {part.kind === 'keycap-set' && (
+            <Link
+              href="/quiz/keycap-set"
+              data-testid="part-keycapset-quiz-link"
+              className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text"
+            >
+              Find your keycap set →
+            </Link>
+          )}
           <Link
             href={`/part/${part.kind}`}
             data-testid="part-detail-back-link"

@@ -250,6 +250,13 @@ export const pageReads: Record<string, PageRead> = {
       { kind: 'h1-matches', pattern: /find your switch/i },
     ]),
   },
+  '/quiz/keycap-set': {
+    pattern: '/quiz/keycap-set',
+    ...html([
+      // Phase 47: quiz page renders H1 "Find your keycap set".
+      { kind: 'h1-matches', pattern: /find your keycap set/i },
+    ]),
+  },
   '/part/[kind]': {
     pattern: '/part/[kind]',
     ...html([

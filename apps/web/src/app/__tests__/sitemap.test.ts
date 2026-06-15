@@ -74,8 +74,8 @@ describe('sitemap', () => {
     }
   })
 
-  it('includes /tags, /quiz/switch, /group-buys/past, /parts (phases 28, 33, 29, 35)', () => {
-    for (const path of ['/tags', '/quiz/switch', '/group-buys/past', '/parts']) {
+  it('includes /tags, /quiz/switch, /quiz/keycap-set, /group-buys/past, /parts (phases 28, 33, 47, 29, 35)', () => {
+    for (const path of ['/tags', '/quiz/switch', '/quiz/keycap-set', '/group-buys/past', '/parts']) {
       expect(urls).toContain(canonicalUrl(path))
     }
   })

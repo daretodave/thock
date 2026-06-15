@@ -38,6 +38,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
     },
     { url: canonicalUrl('/quiz/switch'), lastModified: now, priority: 0.7 },
+    { url: canonicalUrl('/quiz/keycap-set'), lastModified: now, priority: 0.7 },
     { url: canonicalUrl('/about'), lastModified: now, priority: 0.4 },
     { url: canonicalUrl('/newsletter'), lastModified: now, priority: 0.4 },
     { url: canonicalUrl('/search'), lastModified: now, priority: 0.4 },

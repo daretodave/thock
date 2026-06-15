@@ -90,6 +90,7 @@ add new ones via a new phase.
 /tag/[slug]                      Tag page (faceted)
 /group-buys                      Curated active group buys
 /quiz/switch                     Switch recommender quiz (phase 33)
+/quiz/keycap-set                 Keycap-set recommender quiz (phase 47)
 /about                           About / editorial standards
 /newsletter                      Newsletter signup + archive
 /search                          Search results
