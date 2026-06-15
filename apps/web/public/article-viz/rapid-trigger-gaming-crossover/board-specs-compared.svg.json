@@ -1,0 +1,34 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-15T00:00:00.000Z",
+  "commit": "96b0feac602cd8a793970a15595afc458a49208f",
+  "kind": "inline-viz",
+  "source": null,
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": ["IBM Plex Sans"],
+  "outputs": [
+    "apps/web/public/article-viz/rapid-trigger-gaming-crossover/board-specs-compared.svg"
+  ],
+  "warnings": [],
+  "agent": "brander",
+  "article": "rapid-trigger-gaming-crossover",
+  "article_slug": "rapid-trigger-gaming-crossover",
+  "article_pillar": "trends",
+  "asset": "article-viz",
+  "slug": "board-specs-compared",
+  "section_anchor": "Specs at a Glance: Gaming vs Enthusiast vs Boutique",
+  "subject": "Three-column spec comparison table: Corsair CLIPPER PRO Mini 60 (gaming mainstream), IQUNIX EC75 (enthusiast hall-effect), mode Sonnet R2 (boutique gasket, no HE). Rows: Switch type, Polling rate, Rapid Trigger, Price tier. Coral highlight on Yes/Rapid Trigger cells for HE boards.",
+  "splash": "#e05a4e",
+  "splash_color": {
+    "name": "coral",
+    "oklch": "oklch(0.62 0.145 28)"
+  },
+  "canvas": "800x320",
+  "generated": "2026-06-15T00:00:00.000Z",
+  "data_sources": [
+    "W25 Trends Tracker snapshot: data/trends/2026-W25.json — 'Corsair CLIPPER PRO Mini 60: Hall-effect, 8000 Hz polling, Rapid Trigger'",
+    "W25 Trends Tracker snapshot: data/trends/2026-W25.json — 'IQUNIX EC75: Hall-effect, 8000 Hz polling, Rapid Trigger'",
+    "W25 Trends Tracker snapshot: data/trends/2026-W25.json — 'mode Sonnet R2: Contact MX linear, 1000 Hz polling, no Rapid Trigger'"
+  ]
+}

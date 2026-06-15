@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Spec comparison across three boards — Corsair CLIPPER PRO Mini 60 (gaming-mainstream), IQUNIX EC75 (enthusiast HE), Mode Sonnet R2 (boutique gasket, no HE). Rows: switch type, polling rate, Rapid Trigger, price tier. The CLIPPER PRO and EC75 columns match on all HE/RT dimensions; Mode Sonnet R2 differs on switch type, polling rate, and RT support.</title>
+
+  <!-- Title -->
+  <text x="600" y="50" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">spec comparison — the gap that closed</text>
+
+  <!-- Column header labels -->
+  <!-- Col A: Corsair CLIPPER PRO Mini 60, x-center 330 -->
+  <!-- Col B: IQUNIX EC75, x-center 630 -->
+  <!-- Col C: Mode Sonnet R2, x-center 930 -->
+
+  <!-- Header row background -->
+  <rect x="180" y="70" width="300" height="56" rx="6" fill="oklch(0.68 0.165 28 / 0.12)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.8" stroke-width="2"/>
+  <rect x="490" y="70" width="280" height="56" rx="6" fill="oklch(0.68 0.165 28 / 0.12)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.8" stroke-width="2"/>
+  <rect x="780" y="70" width="280" height="56" rx="6" fill="oklch(0.78 0.005 90 / 0.06)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.35" stroke-width="1.5"/>
+
+  <text x="330" y="95" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" font-weight="600">Corsair CLIPPER PRO</text>
+  <text x="330" y="113" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.7">Mini 60 — gaming mainstream</text>
+
+  <text x="630" y="95" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" font-weight="600">IQUNIX EC75</text>
+  <text x="630" y="113" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.7">enthusiast HE · Alice-adjacent</text>
+
+  <text x="920" y="95" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" font-weight="600" opacity="0.75">Mode Sonnet R2</text>
+  <text x="920" y="113" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">boutique gasket · no HE</text>
+
+  <!-- Row labels column -->
+  <text x="155" y="178" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.6">Switch type</text>
+  <text x="155" y="258" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.6">Polling rate</text>
+  <text x="155" y="338" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.6">Rapid Trigger</text>
+  <text x="155" y="418" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.6">Price tier</text>
+
+  <!-- Row 1 — Switch type -->
+  <rect x="180" y="148" width="300" height="52" rx="4" fill="oklch(0.68 0.165 28 / 0.10)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.5" stroke-width="1.5"/>
+  <text x="330" y="179" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" font-weight="600">Hall-effect</text>
+
+  <rect x="490" y="148" width="280" height="52" rx="4" fill="oklch(0.68 0.165 28 / 0.10)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.5" stroke-width="1.5"/>
+  <text x="630" y="179" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" font-weight="600">Hall-effect</text>
+
+  <rect x="780" y="148" width="280" height="52" rx="4" fill="oklch(0.78 0.005 90 / 0.05)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.25" stroke-width="1.5"/>
+  <text x="920" y="179" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">Contact mechanical</text>
+
+  <!-- Row 2 — Polling rate -->
+  <rect x="180" y="228" width="300" height="52" rx="4" fill="oklch(0.68 0.165 28 / 0.10)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.5" stroke-width="1.5"/>
+  <text x="330" y="259" font-family="JetBrains Mono, monospace" font-size="15" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" font-weight="600">8000 Hz</text>
+
+  <rect x="490" y="228" width="280" height="52" rx="4" fill="oklch(0.68 0.165 28 / 0.10)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.5" stroke-width="1.5"/>
+  <text x="630" y="259" font-family="JetBrains Mono, monospace" font-size="15" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" font-weight="600">8000 Hz</text>
+
+  <rect x="780" y="228" width="280" height="52" rx="4" fill="oklch(0.78 0.005 90 / 0.05)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.25" stroke-width="1.5"/>
+  <text x="920" y="259" font-family="JetBrains Mono, monospace" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">1000 Hz</text>
+
+  <!-- Row 3 — Rapid Trigger -->
+  <rect x="180" y="308" width="300" height="52" rx="4" fill="oklch(0.68 0.165 28 / 0.10)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.5" stroke-width="1.5"/>
+  <text x="330" y="335" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" font-weight="600">Sub-0.1mm</text>
+  <text x="330" y="352" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.7">configurable per key</text>
+
+  <rect x="490" y="308" width="280" height="52" rx="4" fill="oklch(0.68 0.165 28 / 0.10)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.5" stroke-width="1.5"/>
+  <text x="630" y="335" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" font-weight="600">Sub-0.1mm</text>
+  <text x="630" y="352" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.7">configurable per key</text>
+
+  <!-- Caution cell for Mode Sonnet RT -->
+  <rect x="780" y="308" width="280" height="52" rx="4" fill="oklch(0.62 0.13 25 / 0.08)" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.5" stroke-width="1.5"/>
+  <text x="920" y="335" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.85">Not supported</text>
+  <text x="920" y="352" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.4">contact switch, fixed threshold</text>
+
+  <!-- Row 4 — Price tier -->
+  <rect x="180" y="388" width="300" height="52" rx="4" fill="oklch(0.68 0.165 28 / 0.06)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.35" stroke-width="1.5"/>
+  <text x="330" y="419" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">Mid-range · retail</text>
+
+  <rect x="490" y="388" width="280" height="52" rx="4" fill="oklch(0.68 0.165 28 / 0.06)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.35" stroke-width="1.5"/>
+  <text x="630" y="419" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">Mid-range · retail</text>
+
+  <rect x="780" y="388" width="280" height="52" rx="4" fill="oklch(0.78 0.005 90 / 0.05)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.25" stroke-width="1.5"/>
+  <text x="920" y="419" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">Boutique · group buy</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

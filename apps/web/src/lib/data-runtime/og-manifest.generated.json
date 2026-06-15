@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "slug": "rapid-trigger-gaming-crossover",
+      "readTime": 8,
+      "frontmatter": {
+        "title": "Gaming Boards Are Winning the Spec War, and Enthusiasts Are Paying Attention",
+        "lede": "Hall-effect sensors and Rapid Trigger have done what RGB lighting and polling-rate marketing never could: closed the spec gap between gaming keyboards and enthusiast builds at the hardware layer. The divide persists in culture and community, but at the switch and firmware level, the lines are dissolving.",
+        "pillar": "trends",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "o-ring-mod",
       "readTime": 8,
       "frontmatter": {
@@ -521,5 +531,5 @@
       }
     }
   ],
-  "generatedAt": "2026-06-15T05:55:09.115Z"
+  "generatedAt": "2026-06-15T08:09:32.744Z"
 }

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" fill="none">
+  <!-- Sparkline: 8 data points showing upward trend, coral stroke -->
+  <!-- Points: (150,390),(262,380),(375,360),(487,340),(600,310),(712,280),(825,250),(1050,220) -->
+  <!-- Note: gap jump at x=825 to x=1050 intentional (last segment accelerates) -->
+  <polyline
+    points="150,390 262,380 375,360 487,340 600,310 712,280 825,250 1050,220"
+    stroke="#e05a4e"
+    stroke-width="3"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+  />
+  <!-- Data point dots: coral fill, r=5 -->
+  <circle cx="150"  cy="390" r="5" fill="#e05a4e"/>
+  <circle cx="262"  cy="380" r="5" fill="#e05a4e"/>
+  <circle cx="375"  cy="360" r="5" fill="#e05a4e"/>
+  <circle cx="487"  cy="340" r="5" fill="#e05a4e"/>
+  <circle cx="600"  cy="310" r="5" fill="#e05a4e"/>
+  <circle cx="712"  cy="280" r="5" fill="#e05a4e"/>
+  <circle cx="825"  cy="250" r="5" fill="#e05a4e"/>
+  <circle cx="1050" cy="220" r="5" fill="#e05a4e"/>
+  <!-- Vertical dashed line at x=1050 (latest data point) -->
+  <line
+    x1="1050" y1="100"
+    x2="1050" y2="650"
+    stroke="#888888"
+    stroke-width="1"
+    stroke-dasharray="4 4"
+  />
+  <!-- Keyboard silhouette: 60% top-view rounded-rectangle -->
+  <!-- Centered horizontally at x=600, centered vertically at y=580 -->
+  <!-- Width=480, Height=180 → x from 360 to 840, y from 490 to 670 -->
+  <rect
+    x="360" y="490"
+    width="480" height="180"
+    rx="12" ry="12"
+    stroke="#c9952e"
+    stroke-width="2"
+    fill="none"
+  />
+  <!-- Keyboard internal key-row guides (bronze, very subtle) -->
+  <!-- Row 1 divider at y=525 -->
+  <line x1="378" y1="525" x2="822" y2="525" stroke="#c9952e" stroke-width="1" opacity="0.35"/>
+  <!-- Row 2 divider at y=560 -->
+  <line x1="378" y1="560" x2="822" y2="560" stroke="#c9952e" stroke-width="1" opacity="0.35"/>
+  <!-- Row 3 divider at y=595 -->
+  <line x1="378" y1="595" x2="822" y2="595" stroke="#c9952e" stroke-width="1" opacity="0.35"/>
+  <!-- Row 4 divider at y=630 -->
+  <line x1="378" y1="630" x2="822" y2="630" stroke="#c9952e" stroke-width="1" opacity="0.35"/>
+  <!-- Vertical column guides (subtle) -->
+  <line x1="415" y1="508" x2="415" y2="662" stroke="#c9952e" stroke-width="1" opacity="0.20"/>
+  <line x1="452" y1="508" x2="452" y2="662" stroke="#c9952e" stroke-width="1" opacity="0.20"/>
+  <line x1="489" y1="508" x2="489" y2="662" stroke="#c9952e" stroke-width="1" opacity="0.20"/>
+  <line x1="526" y1="508" x2="526" y2="662" stroke="#c9952e" stroke-width="1" opacity="0.20"/>
+  <line x1="563" y1="508" x2="563" y2="662" stroke="#c9952e" stroke-width="1" opacity="0.20"/>
+  <line x1="600" y1="508" x2="600" y2="662" stroke="#c9952e" stroke-width="1" opacity="0.20"/>
+  <line x1="637" y1="508" x2="637" y2="662" stroke="#c9952e" stroke-width="1" opacity="0.20"/>
+  <line x1="674" y1="508" x2="674" y2="662" stroke="#c9952e" stroke-width="1" opacity="0.20"/>
+  <line x1="711" y1="508" x2="711" y2="662" stroke="#c9952e" stroke-width="1" opacity="0.20"/>
+  <line x1="748" y1="508" x2="748" y2="662" stroke="#c9952e" stroke-width="1" opacity="0.20"/>
+  <line x1="785" y1="508" x2="785" y2="662" stroke="#c9952e" stroke-width="1" opacity="0.20"/>
+  <!-- Bronze theme dot: upper-right ornamental anchor -->
+  <circle cx="1132" cy="60" r="7" fill="#c9952e" opacity="0.90"/>
+</svg>

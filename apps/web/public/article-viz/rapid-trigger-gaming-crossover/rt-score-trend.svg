@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300" fill="none">
+  <!-- Title -->
+  <text x="400" y="20" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="13" fill="#cccccc" text-anchor="middle">Hall Effect / Rapid Trigger — Trends Tracker Score</text>
+  <!-- Y-axis gridlines at 25, 50, 75 -->
+  <!-- Score 0 → y=260, Score 100 → y=20, scale: (score/100)*(260-20) = score*2.4 subtracted from 260 -->
+  <!-- y for score=75: 260 - 75*2.4 = 260 - 180 = 80 -->
+  <!-- y for score=50: 260 - 50*2.4 = 260 - 120 = 140 -->
+  <!-- y for score=25: 260 - 25*2.4 = 260 - 60  = 200 -->
+  <!-- y for score=0:  260 -->
+  <!-- y for score=100: 260 - 100*2.4 = 20 -->
+  <!-- Gridlines -->
+  <line x1="100" y1="80"  x2="760" y2="80"  stroke="#333333" stroke-width="1" opacity="0.6"/>
+  <line x1="100" y1="140" x2="760" y2="140" stroke="#333333" stroke-width="1" opacity="0.6"/>
+  <line x1="100" y1="200" x2="760" y2="200" stroke="#333333" stroke-width="1" opacity="0.6"/>
+  <!-- Y-axis baseline -->
+  <line x1="100" y1="20"  x2="100" y2="260" stroke="#444444" stroke-width="1"/>
+  <!-- X-axis baseline -->
+  <line x1="100" y1="260" x2="760" y2="260" stroke="#444444" stroke-width="1"/>
+  <!-- Y-axis labels: 0, 25, 50, 75, 100 -->
+  <text x="90" y="264" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" fill="#888888" text-anchor="end">0</text>
+  <text x="90" y="204" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" fill="#888888" text-anchor="end">25</text>
+  <text x="90" y="144" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" fill="#888888" text-anchor="end">50</text>
+  <text x="90"  y="84" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" fill="#888888" text-anchor="end">75</text>
+  <text x="90"  y="24" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" fill="#888888" text-anchor="end">100</text>
+  <!-- X-axis labels: W21 W22 W23 W24 W25 at x positions 140, 280, 420, 560, 700 -->
+  <text x="140" y="278" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" fill="#888888" text-anchor="middle">W21</text>
+  <text x="280" y="278" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" fill="#888888" text-anchor="middle">W22</text>
+  <text x="420" y="278" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" fill="#888888" text-anchor="middle">W23</text>
+  <text x="560" y="278" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" fill="#888888" text-anchor="middle">W24</text>
+  <text x="700" y="278" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" fill="#888888" text-anchor="middle">W25</text>
+  <!-- Data points:
+       W21=65 → y = 260 - 65*2.4 = 260 - 156 = 104
+       W22=68 → y = 260 - 68*2.4 = 260 - 163.2 = 96.8 ≈ 97
+       W23=72 → y = 260 - 72*2.4 = 260 - 172.8 = 87.2 ≈ 87
+       W24=76 → y = 260 - 76*2.4 = 260 - 182.4 = 77.6 ≈ 78
+       W25=76 → y = 78 (same as W24)
+  -->
+  <!-- Connecting line -->
+  <polyline
+    points="140,104 280,97 420,87 560,78 700,78"
+    stroke="#e05a4e"
+    stroke-width="2.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+  />
+  <!-- Data dots -->
+  <circle cx="140" cy="104" r="4" fill="#e05a4e"/>
+  <circle cx="280" cy="97"  r="4" fill="#e05a4e"/>
+  <circle cx="420" cy="87"  r="4" fill="#e05a4e"/>
+  <circle cx="560" cy="78"  r="4" fill="#e05a4e"/>
+  <circle cx="700" cy="78"  r="4" fill="#e05a4e"/>
+  <!-- Score value labels above each dot -->
+  <text x="140" y="96"  font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="#e05a4e" text-anchor="middle">65</text>
+  <text x="280" y="89"  font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="#e05a4e" text-anchor="middle">68</text>
+  <text x="420" y="79"  font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="#e05a4e" text-anchor="middle">72</text>
+  <text x="560" y="70"  font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="#e05a4e" text-anchor="middle">76</text>
+  <text x="700" y="70"  font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="#e05a4e" text-anchor="middle">76</text>
+  <!-- Bottom caption -->
+  <text x="400" y="295" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="10" fill="#666666" text-anchor="middle">W21–W25 2026 · thock Trends Tracker</text>
+</svg>

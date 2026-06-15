@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Contact switch versus hall-effect switch — fixed binary actuation threshold versus continuous analog magnetic sensing with configurable Rapid Trigger markers</title>
+
+  <!-- Title -->
+  <text x="600" y="54" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">contact vs hall-effect — how the sensing differs</text>
+
+  <!-- Divider -->
+  <line x1="600" y1="72" x2="600" y2="400" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.18" stroke-dasharray="6 4"/>
+
+  <!-- ===== LEFT PANEL — CONTACT SWITCH ===== -->
+  <text x="300" y="96" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6" letter-spacing="0.08em">CONTACT SWITCH</text>
+
+  <!-- Switch housing outline -->
+  <rect x="240" y="110" width="120" height="220" rx="6" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55" stroke-width="2"/>
+  <!-- Top housing cap -->
+  <rect x="258" y="110" width="84" height="28" rx="4" fill="oklch(0.78 0.005 90 / 0.08)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.45"/>
+  <!-- Stem shaft -->
+  <rect x="288" y="138" width="24" height="90" rx="2" fill="oklch(0.78 0.005 90 / 0.12)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55"/>
+  <!-- Spring -->
+  <line x1="300" y1="228" x2="300" y2="288" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.4" stroke-dasharray="3 3"/>
+  <!-- Contact leaves -->
+  <path d="M 262 270 L 285 258" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.6" stroke-width="2.5"/>
+  <path d="M 338 270 L 315 258" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.6" stroke-width="2.5"/>
+
+  <!-- Fixed actuation threshold line -->
+  <line x1="178" y1="228" x2="422" y2="228" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.4" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="172" y="232" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.55">actuation</text>
+  <text x="172" y="245" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.55">fixed</text>
+
+  <!-- Binary indicator — OPEN / CLOSED -->
+  <rect x="190" y="310" width="60" height="26" rx="4" fill="oklch(0.78 0.005 90 / 0.1)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.35"/>
+  <text x="220" y="328" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">OPEN</text>
+  <rect x="360" y="310" width="64" height="26" rx="4" fill="oklch(0.78 0.005 90 / 0.1)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.35"/>
+  <text x="392" y="328" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">CLOSED</text>
+  <text x="300" y="326" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.35">or</text>
+
+  <text x="300" y="372" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">binary — threshold fixed at factory</text>
+  <text x="300" y="390" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">no firmware can change actuation depth</text>
+
+  <!-- ===== RIGHT PANEL — HALL-EFFECT ===== -->
+  <text x="900" y="96" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.9" letter-spacing="0.08em">HALL-EFFECT</text>
+
+  <!-- Switch housing outline -->
+  <rect x="840" y="110" width="120" height="220" rx="6" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55" stroke-width="2"/>
+  <!-- Top housing cap -->
+  <rect x="858" y="110" width="84" height="28" rx="4" fill="oklch(0.78 0.005 90 / 0.08)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.45"/>
+  <!-- Stem shaft -->
+  <rect x="888" y="138" width="24" height="90" rx="2" fill="oklch(0.78 0.005 90 / 0.12)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55"/>
+  <!-- Magnet in stem — coral fill -->
+  <ellipse cx="900" cy="222" rx="10" ry="6" fill="oklch(0.68 0.165 28 / 0.85)" stroke="oklch(0.68 0.165 28)" stroke-width="1.5"/>
+  <text x="900" y="218" font-family="IBM Plex Sans, sans-serif" font-size="8" fill="oklch(0.175 0.006 250)" stroke="none" text-anchor="middle">N</text>
+  <text x="900" y="228" font-family="IBM Plex Sans, sans-serif" font-size="8" fill="oklch(0.175 0.006 250)" stroke="none" text-anchor="middle">S</text>
+  <!-- Spring -->
+  <line x1="900" y1="232" x2="900" y2="288" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.4" stroke-dasharray="3 3"/>
+  <!-- Hall sensor chip on PCB -->
+  <rect x="884" y="294" width="32" height="16" rx="3" fill="oklch(0.68 0.165 28 / 0.25)" stroke="oklch(0.68 0.165 28)" stroke-width="1.5"/>
+  <text x="900" y="306" font-family="JetBrains Mono, monospace" font-size="8" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.9">HALL</text>
+
+  <!-- Magnetic field arc lines — coral -->
+  <path d="M 870 222 Q 848 200 860 178" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.4" stroke-width="1.5" fill="none"/>
+  <path d="M 930 222 Q 952 200 940 178" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.4" stroke-width="1.5" fill="none"/>
+
+  <!-- Analog range bar — coral, full travel depth -->
+  <rect x="778" y="138" width="14" height="156" rx="3" fill="oklch(0.68 0.165 28 / 0.18)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.7" stroke-width="1.5"/>
+  <!-- Configurable actuation marker — dashed, movable -->
+  <line x1="764" y1="198" x2="800" y2="198" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.9" stroke-width="2" stroke-dasharray="4 3"/>
+  <text x="758" y="202" font-family="IBM Plex Sans, sans-serif" font-size="10" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="end" opacity="0.85">actuate</text>
+  <!-- Configurable reset marker -->
+  <line x1="764" y1="170" x2="800" y2="170" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.6" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <text x="758" y="174" font-family="IBM Plex Sans, sans-serif" font-size="10" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="end" opacity="0.7">reset</text>
+  <text x="762" y="140" font-family="IBM Plex Sans, sans-serif" font-size="9" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="end" opacity="0.55">analog</text>
+  <text x="762" y="151" font-family="IBM Plex Sans, sans-serif" font-size="9" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="end" opacity="0.55">range</text>
+
+  <text x="900" y="372" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.85">analog — position read continuously</text>
+  <text x="900" y="390" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">actuation + reset configurable per key</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-12T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "rapid-trigger-gaming-crossover",
+  "article_pillar": "trends",
+  "section_anchor": "The spec comparison the gap-closing argument rests on",
+  "brief_summary": "Three-column spec comparison table for Corsair CLIPPER PRO Mini 60 (gaming-mainstream), IQUNIX EC75 (enthusiast HE), and Mode Sonnet R2 (boutique gasket, no HE). Rows cover switch type, polling rate, Rapid Trigger support, and price tier. CLIPPER PRO and EC75 columns are coral-highlighted and match on all HE/RT dimensions; Mode Sonnet R2 differs on switch type (contact mechanical), polling rate (1000Hz), and RT support (not supported, shown in caution red).",
+  "target": "apps/web/public/article-viz/rapid-trigger-gaming-crossover/three-board-spec-compare.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "JetBrains Mono"],
+  "data_sources": [
+    "apps/web/src/content/articles/rapid-trigger-gaming-crossover.mdx:The spec comparison — 'Corsair CLIPPER PRO Mini 60. IP57 water resistance, 8000Hz polling, Rapid Trigger configurable down to sub-0.1mm resolution'",
+    "apps/web/src/content/articles/rapid-trigger-gaming-crossover.mdx:The spec comparison — 'IQUNIX EC75 — an Alice-adjacent layout with a gasket mount, 8000Hz polling, hall-effect sensors, and Rapid Trigger at the same sub-0.1mm floor'",
+    "apps/web/src/content/articles/rapid-trigger-gaming-crossover.mdx:The spec comparison — 'Mode Sonnet R2 — ships with contact-based mechanical switches, no Rapid Trigger, and polling at 1000Hz'"
+  ],
+  "outputs": ["apps/web/public/article-viz/rapid-trigger-gaming-crossover/three-board-spec-compare.svg"],
+  "warnings": []
+}

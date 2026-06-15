@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-12T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "rapid-trigger-gaming-crossover",
+  "article_pillar": "trends",
+  "section_anchor": "What Rapid Trigger actually changes",
+  "brief_summary": "Two-panel cross-section diagram contrasting contact-switch binary actuation (fixed threshold, open/closed only) with hall-effect analog sensing (magnet in stem, Hall sensor on PCB, continuous position range, configurable actuation and reset markers). Used to ground the mechanism explanation in the body.",
+  "target": "apps/web/public/article-viz/rapid-trigger-gaming-crossover/sensor-mechanism.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "JetBrains Mono"],
+  "data_sources": [
+    "apps/web/src/content/articles/rapid-trigger-gaming-crossover.mdx:What Rapid Trigger actually changes — 'Traditional mechanical switches — contact-based — operate on a binary: the switch is either open or closed. The actuation point is fixed at the factory'",
+    "apps/web/src/content/articles/rapid-trigger-gaming-crossover.mdx:What Rapid Trigger actually changes — 'Hall-effect switches replace the contact mechanism with a magnet in the stem and a Hall sensor on the PCB. The sensor reads the magnet's field continuously as an analog value'",
+    "apps/web/src/content/articles/rapid-trigger-gaming-crossover.mdx:What Rapid Trigger actually changes — 'Rapid Trigger is the firmware feature that exploits this: instead of fixed actuation and reset thresholds, the switch fires whenever the key moves downward past a configurable distance'"
+  ],
+  "outputs": ["apps/web/public/article-viz/rapid-trigger-gaming-crossover/sensor-mechanism.svg"],
+  "warnings": []
+}

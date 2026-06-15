@@ -1,0 +1,35 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-15T00:00:00.000Z",
+  "commit": "96b0feac602cd8a793970a15595afc458a49208f",
+  "kind": "inline-viz",
+  "source": null,
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": ["IBM Plex Sans"],
+  "outputs": [
+    "apps/web/public/article-viz/rapid-trigger-gaming-crossover/rt-score-trend.svg"
+  ],
+  "warnings": [],
+  "agent": "brander",
+  "article": "rapid-trigger-gaming-crossover",
+  "article_slug": "rapid-trigger-gaming-crossover",
+  "article_pillar": "trends",
+  "asset": "article-viz",
+  "slug": "rt-score-trend",
+  "section_anchor": "Trends Tracker score — W21 through W25 2026",
+  "subject": "Line chart of Hall Effect / Rapid Trigger Trends Tracker score, W21–W25 2026. Scores: 65, 68, 72, 76, 76. Coral line on transparent background, IBM Plex Sans labels.",
+  "splash": "#e05a4e",
+  "splash_color": {
+    "name": "coral",
+    "oklch": "oklch(0.62 0.145 28)"
+  },
+  "canvas": "800x300",
+  "generated": "2026-06-15T00:00:00.000Z",
+  "data_sources": [
+    "W25 Trends Tracker snapshot: data/trends/2026-W25.json — 'Hall Effect / Rapid Trigger score: 76'",
+    "W24 Trends Tracker snapshot: data/trends/2026-W24.json — 'Hall Effect / Rapid Trigger score: 72'",
+    "W23 Trends Tracker snapshot: data/trends/2026-W23.json — 'Hall Effect / Rapid Trigger score: 68'",
+    "W21 Trends Tracker snapshot: data/trends/2026-W21.json — 'Hall Effect / Rapid Trigger score: 65'"
+  ]
+}
