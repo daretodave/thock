@@ -91,6 +91,8 @@ add new ones via a new phase.
 /group-buys                      Curated active group buys
 /quiz/switch                     Switch recommender quiz (phase 33)
 /quiz/keycap-set                 Keycap-set recommender quiz (phase 47)
+/compare/switch                  Switch side-by-side comparison (phase 44)
+/compare/board                   Board side-by-side comparison (phase 48)
 /about                           About / editorial standards
 /newsletter                      Newsletter signup + archive
 /search                          Search results

@@ -226,6 +226,14 @@ export const pageReads: Record<string, PageRead> = {
       { kind: 'h1-matches', pattern: /compare/i },
     ]),
   },
+  '/compare/board': {
+    pattern: '/compare/board',
+    ...html([
+      // Phase 48: base route (no query params) renders the selector UI
+      // and the default "Compare boards" heading.
+      { kind: 'h1-matches', pattern: /compare/i },
+    ]),
+  },
   '/vendors': {
     pattern: '/vendors',
     ...html([
