@@ -3528,7 +3528,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/gmk-cyl-ramune-group-buy.mdx
 - action: add [gmk-cyl-ramune-group-buy](/article/gmk-cyl-ramune-group-buy) to divinikey-dcs-dolch-group-buy body, or vice versa
 
-### [ ] [cross-links] [4.5] divinikey-dcs-dolch-group-buy ↔ gmk-cyl-selene-group-buy — no prose cross-link (same pillar, ≥2 shared tags: group-buy, keycaps, abs)
+### [x] [cross-links] [4.5] divinikey-dcs-dolch-group-buy ↔ gmk-cyl-selene-group-buy — no prose cross-link (same pillar, ≥2 shared tags: group-buy, keycaps, abs)
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -3616,7 +3616,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/gmk-cyl-ramune-group-buy.mdx
 - action: add [gmk-cyl-ramune-group-buy](/article/gmk-cyl-ramune-group-buy) to gmk-cyl-greg-2-group-buy body, or vice versa
 
-### [ ] [cross-links] [4.5] gmk-cyl-greg-2-group-buy ↔ gmk-cyl-selene-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, kbdfans, group-buy, cherry-profile, abs)
+### [x] [cross-links] [4.5] gmk-cyl-greg-2-group-buy ↔ gmk-cyl-selene-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, kbdfans, group-buy, cherry-profile, abs)
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -3638,7 +3638,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/gmk-cyl-ramune-group-buy.mdx
 - action: add [gmk-cyl-ramune-group-buy](/article/gmk-cyl-ramune-group-buy) to gmk-cyl-ishtar-r2-group-buy body, or vice versa
 
-### [ ] [cross-links] [4.5] gmk-cyl-ishtar-r2-group-buy ↔ gmk-cyl-selene-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, kbdfans, group-buy, cherry-profile, abs)
+### [x] [cross-links] [4.5] gmk-cyl-ishtar-r2-group-buy ↔ gmk-cyl-selene-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, kbdfans, group-buy, cherry-profile, abs)
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -3671,7 +3671,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/gmk-cyl-ramune-group-buy.mdx
 - action: add [gmk-cyl-ramune-group-buy](/article/gmk-cyl-ramune-group-buy) to gmk-cyl-king-of-the-seas-group-buy body, or vice versa
 
-### [ ] [cross-links] [4.5] gmk-cyl-king-of-the-seas-group-buy ↔ gmk-cyl-selene-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, kbdfans, group-buy, cherry-profile, abs)
+### [x] [cross-links] [4.5] gmk-cyl-king-of-the-seas-group-buy ↔ gmk-cyl-selene-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, kbdfans, group-buy, cherry-profile, abs)
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -3704,7 +3704,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/gmk-cyl-ramune-group-buy.mdx
 - action: add [gmk-cyl-ramune-group-buy](/article/gmk-cyl-ramune-group-buy) to gmk-cyl-prussian-alert body, or vice versa
 
-### [ ] [cross-links] [4.5] gmk-cyl-prussian-alert ↔ gmk-cyl-selene-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, group-buy, kbdfans, keycaps, cherry-profile)
+### [x] [cross-links] [4.5] gmk-cyl-prussian-alert ↔ gmk-cyl-selene-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, group-buy, kbdfans, keycaps, cherry-profile)
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -3726,7 +3726,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/gsk-sweet-nightmare-group-buy.mdx
 - action: add [gsk-sweet-nightmare-group-buy](/article/gsk-sweet-nightmare-group-buy) to gmk-cyl-prussian-alert body, or vice versa
 
-### [ ] [cross-links] [4.5] gmk-cyl-ramune-group-buy ↔ gmk-cyl-selene-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, kbdfans, group-buy, cherry-profile, abs)
+### [x] [cross-links] [4.5] gmk-cyl-ramune-group-buy ↔ gmk-cyl-selene-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, kbdfans, group-buy, cherry-profile, abs)
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -3748,7 +3748,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/gsk-sweet-nightmare-group-buy.mdx
 - action: add [gsk-sweet-nightmare-group-buy](/article/gsk-sweet-nightmare-group-buy) to gmk-cyl-ramune-group-buy body, or vice versa
 
-### [ ] [cross-links] [4.5] gmk-cyl-selene-group-buy ↔ gsk-sweet-nightmare-group-buy — no prose cross-link (same pillar, ≥2 shared tags: group-buy, kbdfans, keycaps)
+### [x] [cross-links] [4.5] gmk-cyl-selene-group-buy ↔ gsk-sweet-nightmare-group-buy — no prose cross-link (same pillar, ≥2 shared tags: group-buy, kbdfans, keycaps)
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -4393,7 +4393,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/gmk-cyl-prussian-alert.mdx
 - action: add [gmk-cyl-prussian-alert](/article/gmk-cyl-prussian-alert) to dcs-grass-valley-decline body, or vice versa
 
-### [ ] [cross-links] [3.6] dcs-grass-valley-decline ↔ gmk-cyl-selene-group-buy — no prose cross-link (adjacent pillar, ≥2 shared tags: keycaps, group-buy)
+### [x] [cross-links] [3.6] dcs-grass-valley-decline ↔ gmk-cyl-selene-group-buy — no prose cross-link (adjacent pillar, ≥2 shared tags: keycaps, group-buy)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4415,7 +4415,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/gsk-sweet-nightmare-group-buy.mdx
 - action: add [gsk-sweet-nightmare-group-buy](/article/gsk-sweet-nightmare-group-buy) to dcs-grass-valley-decline body, or vice versa
 
-### [ ] [cross-links] [3.6] dcs-olivetti-comeback ↔ gmk-cyl-selene-group-buy — no prose cross-link (adjacent pillar, ≥2 shared tags: keycaps, cherry-profile)
+### [x] [cross-links] [3.6] dcs-olivetti-comeback ↔ gmk-cyl-selene-group-buy — no prose cross-link (adjacent pillar, ≥2 shared tags: keycaps, cherry-profile)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4514,7 +4514,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/keycap-profiles-compared.mdx
 - action: add [keycap-profiles-compared](/article/keycap-profiles-compared) to gmk-cyl-prussian-alert body, or vice versa
 
-### [ ] [cross-links] [3.6] gmk-cyl-selene-group-buy ↔ keycap-materials-compared — no prose cross-link (adjacent pillar, ≥2 shared tags: keycaps, abs)
+### [x] [cross-links] [3.6] gmk-cyl-selene-group-buy ↔ keycap-materials-compared — no prose cross-link (adjacent pillar, ≥2 shared tags: keycaps, abs)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4525,7 +4525,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/keycap-materials-compared.mdx
 - action: add [keycap-materials-compared](/article/keycap-materials-compared) to gmk-cyl-selene-group-buy body, or vice versa
 
-### [ ] [cross-links] [3.6] gmk-cyl-selene-group-buy ↔ keycap-profiles-compared — no prose cross-link (adjacent pillar, ≥2 shared tags: keycaps, cherry-profile)
+### [x] [cross-links] [3.6] gmk-cyl-selene-group-buy ↔ keycap-profiles-compared — no prose cross-link (adjacent pillar, ≥2 shared tags: keycaps, cherry-profile)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
