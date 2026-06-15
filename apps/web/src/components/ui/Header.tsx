@@ -21,6 +21,13 @@ export function Header() {
               {pillar.label}
             </Link>
           ))}
+          <Link
+            href="/tools"
+            data-testid="header-tools-link"
+            className="font-sans text-small text-text-2 hover:text-text transition-colors"
+          >
+            Tools
+          </Link>
         </nav>
 
         <div className="flex items-center gap-3">

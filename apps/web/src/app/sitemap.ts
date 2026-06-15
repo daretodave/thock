@@ -48,6 +48,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: canonicalUrl('/parts'), lastModified: now, priority: 0.6 },
     { url: canonicalUrl('/compare/switch'), lastModified: now, priority: 0.6 },
     { url: canonicalUrl('/compare/board'), lastModified: now, priority: 0.6 },
+    { url: canonicalUrl('/tools'), lastModified: now, priority: 0.7 },
     { url: canonicalUrl('/vendors'), lastModified: now, priority: 0.6 },
     { url: canonicalUrl('/feed.xml'), lastModified: now, priority: 0.3 },
     ...PILLARS.map((p) => ({

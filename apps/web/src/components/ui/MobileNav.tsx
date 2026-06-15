@@ -102,6 +102,16 @@ export function MobileNav(): ReactElement {
                 </Link>
               </li>
             ))}
+            <li className="border-b border-border last:border-b-0">
+              <Link
+                href="/tools"
+                data-testid="mobile-nav-tools-link"
+                onClick={() => setOpen(false)}
+                className="block py-3 font-serif text-h3 text-text hover:text-accent transition-colors"
+              >
+                Tools
+              </Link>
+            </li>
           </ul>
         </nav>
       )}

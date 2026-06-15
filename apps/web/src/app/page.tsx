@@ -211,7 +211,11 @@ export default function HomePage(): ReactElement {
           <Link href="/quiz/keycap-set" className="text-accent hover:text-accent-hi underline underline-offset-2 transition-colors">
             find your keycap set
           </Link>{' '}
-          — answer 4 questions, get your top matches. Or{' '}
+          — answer 4 questions, get your top matches. Browse{' '}
+          <Link href="/tools" className="text-accent hover:text-accent-hi underline underline-offset-2 transition-colors" data-testid="home-tools-link">
+            all interactive tools
+          </Link>{' '}
+          — quizzes and comparison tables in one place. Or{' '}
           <Link href="/parts" className="text-accent hover:text-accent-hi underline underline-offset-2 transition-colors">
             browse the parts catalog
           </Link>{' '}

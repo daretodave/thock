@@ -249,6 +249,14 @@ export const pageReads: Record<string, PageRead> = {
       { kind: 'h1-present' },
     ]),
   },
+  '/tools': {
+    pattern: '/tools',
+    ...html([
+      // Phase 49: tools index H1 is "Tools"; grid of 4 tool cards.
+      { kind: 'h1-matches', pattern: /^tools$/i },
+      { kind: 'min-link-count', selector: '[data-testid^="tools-card-"]', min: 4 },
+    ]),
+  },
   '/quiz/switch': {
     pattern: '/quiz/switch',
     ...html([

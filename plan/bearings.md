@@ -93,6 +93,7 @@ add new ones via a new phase.
 /quiz/keycap-set                 Keycap-set recommender quiz (phase 47)
 /compare/switch                  Switch side-by-side comparison (phase 44)
 /compare/board                   Board side-by-side comparison (phase 48)
+/tools                           Interactive tools index (phase 49)
 /about                           About / editorial standards
 /newsletter                      Newsletter signup + archive
 /search                          Search results

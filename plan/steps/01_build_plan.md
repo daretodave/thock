@@ -91,14 +91,14 @@ the phase.
 - [x] Phase 46 — Cross-link drain efficiency (score 6.0, pass-125 candidate). Make `/iterate` cluster-aware: when the top-scored finding is category `cross-links` for article X, drain ALL pending cross-link pairs touching X in one commit (collapses the ~52 surviving same-pillar `[4.5]` rows from ~52 ticks to ~15–20). Amend `skills/iterate.md` Step 3 + confirm/add `--slug` scoping on `scripts/article-crosslink-survey.mjs` + one Vitest unit test (3 X-rows + 1 Y-row → `--slug X` returns the 3) + `skills/march.md` Step 3b.5a note. Paired with the same-oversight AUDIT prune of 65 `[3.6]` adjacent-pillar rows. Ships first in this batch. No URL/schema change. Brief drafted on-demand by `/ship-a-phase`. — `073acf2`
 - [x] Phase 47 — `/quiz/keycap-set` keycap-set recommender (score 5.5, pass-125 candidate; keycap-sets crossed 10 records). Mirrors phase-33 `/quiz/switch`: `apps/web/src/app/quiz/keycap-set/page.tsx` (+ `loading.tsx` with `<main id="main">`), 4–5 weighted questions over `getAllKeycapSets()` via a pure `recommendKeycapSet(answers, catalog)` helper with unit tests, ResultCard links to `/part/keycap-set/[slug]`, `WebApplication` JSON-LD, sitemap + `canonical-urls` + `page-reads` + `apps/e2e/tests/quiz.spec.ts` extended, `/quiz/keycap-set` in `bearings.md`. No schema change. Brief drafted on-demand. — `2e9b649`
 - [x] Phase 48 — `/compare/board` side-by-side comparison (score 4.5, pass-125 candidate; 9 boards). Mirrors phase-44 `/compare/switch`: `?a=&b=` query shape, `BoardCompareSelector` + `BoardCompareTable` (8 spec rows: layout, formFactor, mountingStyle, caseMaterial, pcbType, hotswap, priceUSD, released; diff rows elevated), dynamic `generateMetadata`, ItemList JSON-LD, sitemap + fixtures + `apps/e2e/tests/compare.spec.ts` extended, "Compare this board →" affordance on `/part/board/[slug]`, `/compare/board` in `bearings.md`. No schema change. Brief drafted on-demand.
-- [ ] Phase 49 — Interactive-tools discoverability (score 6.0, **user-requested at this oversight**). User: the quiz + compare tools are "at the bottom of the site → make it more visible." Promote the four interactive tools (`/quiz/switch`, `/quiz/keycap-set`, `/compare/switch`, `/compare/board`) out of the footer into a first-class discovery surface — implementer picks the lowest-churn shape (header-nav entry, a home-page section, or a small `/tools` index landing); reuse existing nav/section components, no nav churn beyond one entry point. If a `/tools` route: full new-route contract (sitemap + fixtures + e2e + CollectionPage/ItemList JSON-LD + `bearings.md`); if nav/home-only: e2e asserts the entry point renders and all four links resolve. **Ships LAST** — needs 47 + 48 live first. Refine via `/plan-a-phase phase 49` or draft on-demand by `/ship-a-phase`.
+- [x] Phase 49 — Interactive-tools discoverability (score 6.0, **user-requested at this oversight**). New `/tools` index landing (CollectionPage + BreadcrumbList + ItemList JSON-LD, 4 tool cards linking to `/quiz/switch`, `/quiz/keycap-set`, `/compare/switch`, `/compare/board`); "Tools" entry added to desktop header nav + mobile drawer (one entry point); home CTA strip gains an "all interactive tools →" link; sitemap + canonical-urls + page-reads + `bearings.md` updated; `apps/e2e/tests/tools.spec.ts` (6 tests). Brief drafted on-demand.
 
-> **Phases 46–49** (promoted 2026-06-14) are the next pending work —
-> `/march` ships them in order: 46 first (it changes how the
-> remaining cross-link queue drains), then 47 + 48 (the two
-> interactive surfaces), then 49 (surfaces all four tools, so it
-> needs 47 + 48 live). **After phase 49:** the loop returns to pure
-> maintenance mode with the cross-link queue draining per-article.
+> **Phases 46–49** (promoted 2026-06-14, all shipped) completed this batch —
+> 46 made cross-link draining cluster-aware; 47 + 48 shipped the two
+> interactive tools (`/quiz/keycap-set`, `/compare/board`); 49 surfaced all
+> four tools via a first-class `/tools` index + nav entry.
+> **After phase 49:** the loop returns to pure maintenance mode with the
+> cross-link queue draining per-article.
 
 > **Phases 38–45** (promoted 2026-06-11, all shipped) completed the next pending work —
 > `/march` ships them in order. 38–42 complete the bearings-rule
