@@ -1,0 +1,23 @@
+{
+  "generated_by": "brander",
+  "engine": "resvg",
+  "at": "2026-06-15T00:00:00.000Z",
+  "commit": "d17b1ce1dbd6e1b9895eb6891a4fbaa07ecf0cef",
+  "kind": "hero-art",
+  "source": "hand-authored SVG",
+  "tokens_snapshot": "f79eb6c04b4a9d2e0e3e083f8aeb6bc57586d849",
+  "fonts": ["IBM Plex Sans"],
+  "outputs": [
+    "apps/web/public/hero-art/computex-2026-keyboard-highlights.svg"
+  ],
+  "slug": "computex-2026-keyboard-highlights",
+  "assetType": "hero",
+  "generatedAt": "2026-06-15T00:00:00.000Z",
+  "subject": "TKL keyboard top-down outline with hall-effect sensor radial glow on accent key; COMPUTEX 2026 editorial label beneath board",
+  "splashColor": "#c9634a",
+  "themeAccent": "#c49a35",
+  "canvas": "1200x750",
+  "strokeWeight": "2px",
+  "data_sources": [],
+  "warnings": []
+}

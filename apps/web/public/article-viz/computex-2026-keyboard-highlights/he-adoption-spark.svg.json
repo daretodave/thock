@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-25T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "computex-2026-keyboard-highlights",
+  "article_pillar": "news",
+  "section_anchor": "What dropped at the show",
+  "brief_summary": "Coral sparkline plotting Hall Effect / Rapid Trigger Trends Tracker scores across seven weeks W19 through W25 — values 38, 42, 48, 55, 60, 65, 72. A dashed vertical marker at W22 is labeled Computex 2026 May 20–24. The W22 dot is accent-colored and the terminal W25 dot is a filled coral circle labeled 72. The viz establishes that the climb pre-dates Computex; the show was an accelerant, not the origin.",
+  "target": "apps/web/public/article-viz/computex-2026-keyboard-highlights/he-adoption-spark.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "apps/web/src/content/articles/computex-2026-keyboard-highlights.mdx:What to watch next — 'The W25 Trends Tracker logged hall-effect as the highest-scoring category in the switch tier for the third consecutive week, up from 60 in W21'",
+    "apps/web/src/content/articles/computex-2026-keyboard-highlights.mdx:article brief — HE/RT spark scores W19–W25: 38, 42, 48, 55, 60, 65, 72",
+    "apps/web/src/content/articles/computex-2026-keyboard-highlights.mdx:article brief — 'Computex ran May 20–24, 2026'"
+  ],
+  "outputs": ["apps/web/public/article-viz/computex-2026-keyboard-highlights/he-adoption-spark.svg"],
+  "warnings": []
+}

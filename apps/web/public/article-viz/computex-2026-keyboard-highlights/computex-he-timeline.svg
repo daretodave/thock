@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Horizontal timeline with four labeled events: Computex May 20 to 24 2026 IQUNIX EC75 debut and Corsair CLIPPER PRO Mini 60 reveal; mid-2026 Gateron Magnetic Lanes volume rollout expected; Q3 2026 first EC75 reviewer units expected; Q4 2026 configurator parity verdict</title>
+
+  <!-- Title -->
+  <text x="600" y="46" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Computex 2026 → Q4 2026 — HE milestone calendar</text>
+
+  <!-- Main timeline axis -->
+  <line x1="120" y1="190" x2="1090" y2="190" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.35" stroke-width="2"/>
+  <!-- Arrowhead on right -->
+  <polygon points="1090,190 1075,183 1075,197" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.35"/>
+
+  <!-- ===== EVENT 1: Computex (x=200) ===== -->
+  <!-- Vertical tick -->
+  <line x1="200" y1="175" x2="200" y2="205" stroke="oklch(0.68 0.165 28)" stroke-width="2.5" stroke-opacity="0.90"/>
+  <!-- Dot on timeline -->
+  <circle cx="200" cy="190" r="7" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.90"/>
+  <!-- Label above -->
+  <text x="200" y="160" font-family="IBM Plex Sans, sans-serif" font-size="13" font-weight="700" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.92">Computex 2026</text>
+  <text x="200" y="176" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.75">May 20–24</text>
+  <!-- Details below -->
+  <text x="200" y="222" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.60">IQUNIX EC75 debut</text>
+  <text x="200" y="237" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">Corsair CLIPPER PRO Mini 60</text>
+  <text x="200" y="252" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.50">Gateron HE ecosystem shown</text>
+
+  <!-- ===== EVENT 2: Mid-2026 (x=490) ===== -->
+  <line x1="490" y1="175" x2="490" y2="205" stroke="oklch(0.78 0.005 90)" stroke-width="1.5" stroke-opacity="0.45"/>
+  <circle cx="490" cy="190" r="5" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.45"/>
+  <text x="490" y="162" font-family="IBM Plex Sans, sans-serif" font-size="12" font-weight="600" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.70">Mid-2026</text>
+  <text x="490" y="222" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">Gateron Magnetic Lanes</text>
+  <text x="490" y="237" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.50">volume rollout expected</text>
+
+  <!-- ===== EVENT 3: Q3 2026 (x=730) ===== -->
+  <line x1="730" y1="175" x2="730" y2="205" stroke="oklch(0.78 0.005 90)" stroke-width="1.5" stroke-opacity="0.45"/>
+  <circle cx="730" cy="190" r="5" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.45"/>
+  <text x="730" y="162" font-family="IBM Plex Sans, sans-serif" font-size="12" font-weight="600" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.70">Q3 2026</text>
+  <text x="730" y="222" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">First EC75 reviewer</text>
+  <text x="730" y="237" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.50">units expected</text>
+
+  <!-- ===== EVENT 4: Q4 2026 (x=970) ===== -->
+  <line x1="970" y1="175" x2="970" y2="205" stroke="oklch(0.78 0.005 90)" stroke-width="1.5" stroke-opacity="0.45"/>
+  <circle cx="970" cy="190" r="5" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.45"/>
+  <text x="970" y="162" font-family="IBM Plex Sans, sans-serif" font-size="12" font-weight="600" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.70">Q4 2026</text>
+  <text x="970" y="222" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">Configurator parity</text>
+  <text x="970" y="237" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.50">verdict from reviews</text>
+
+  <!-- "Now" pointer at Computex node -->
+  <text x="200" y="132" font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.70">the floor</text>
+
+  <!-- Footer annotation -->
+  <text x="600" y="310" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.50">Computex was the floor — the next three acts are supply chain and firmware</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="36" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — TKL keyboard top-down silhouette, hall-effect sensor glow on accent key, Computex 2026</title>
+
+  <!-- Coral wash behind the HE sensor key region -->
+  <ellipse cx="580" cy="355" rx="110" ry="90" fill="#c9634a" fill-opacity="0.07" stroke="none"/>
+
+  <!-- KEYBOARD BODY — TKL outline, slight perspective tilt (top edge shorter/higher than bottom) -->
+  <!-- Outer shell trapezoid in warm-grey stroke -->
+  <path d="
+    M 152 218
+    L 1048 218
+    L 1064 532
+    L 136 532
+    Z"
+    stroke="#9a8f86" stroke-width="2" fill="none"/>
+
+  <!-- Inner bezel inset (6px inside the outer shell) -->
+  <path d="
+    M 168 232
+    L 1032 232
+    L 1047 518
+    L 153 518
+    Z"
+    stroke="#9a8f86" stroke-width="1" stroke-opacity="0.4" fill="none"/>
+
+  <!-- Bronze top-edge accent bar -->
+  <line x1="152" y1="218" x2="1048" y2="218" stroke="#c49a35" stroke-opacity="0.80" stroke-width="2.5"/>
+  <!-- Bronze bottom-edge accent bar -->
+  <line x1="136" y1="532" x2="1064" y2="532" stroke="#c49a35" stroke-opacity="0.55" stroke-width="2"/>
+
+  <!-- FUNCTION ROW (F1–F12 + Delete cluster, slightly staggered for perspective) -->
+  <!-- Each key: small rounded rect. F1–F4 block -->
+  <g stroke="#9a8f86" stroke-width="1.5" fill="none">
+    <!-- F1 -->
+    <rect x="186" y="246" width="36" height="26" rx="3"/>
+    <!-- F2 -->
+    <rect x="228" y="246" width="36" height="26" rx="3"/>
+    <!-- F3 -->
+    <rect x="270" y="246" width="36" height="26" rx="3"/>
+    <!-- F4 -->
+    <rect x="312" y="246" width="36" height="26" rx="3"/>
+    <!-- gap -->
+    <!-- F5 -->
+    <rect x="366" y="246" width="36" height="26" rx="3"/>
+    <!-- F6 -->
+    <rect x="408" y="246" width="36" height="26" rx="3"/>
+    <!-- F7 -->
+    <rect x="450" y="246" width="36" height="26" rx="3"/>
+    <!-- F8 -->
+    <rect x="492" y="246" width="36" height="26" rx="3"/>
+    <!-- gap -->
+    <!-- F9 -->
+    <rect x="546" y="246" width="36" height="26" rx="3"/>
+    <!-- F10 -->
+    <rect x="588" y="246" width="36" height="26" rx="3"/>
+    <!-- F11 -->
+    <rect x="630" y="246" width="36" height="26" rx="3"/>
+    <!-- F12 -->
+    <rect x="672" y="246" width="36" height="26" rx="3"/>
+    <!-- PrtSc / ScrLk / Pause -->
+    <rect x="726" y="246" width="36" height="26" rx="3"/>
+    <rect x="768" y="246" width="36" height="26" rx="3"/>
+    <rect x="810" y="246" width="36" height="26" rx="3"/>
+  </g>
+
+  <!-- NUMBER ROW (~ through Backspace) — 14 keys -->
+  <g stroke="#9a8f86" stroke-width="1.5" fill="none">
+    <rect x="186" y="286" width="36" height="36" rx="3"/>
+    <rect x="228" y="286" width="36" height="36" rx="3"/>
+    <rect x="270" y="286" width="36" height="36" rx="3"/>
+    <rect x="312" y="286" width="36" height="36" rx="3"/>
+    <rect x="354" y="286" width="36" height="36" rx="3"/>
+    <rect x="396" y="286" width="36" height="36" rx="3"/>
+    <rect x="438" y="286" width="36" height="36" rx="3"/>
+    <rect x="480" y="286" width="36" height="36" rx="3"/>
+    <rect x="522" y="286" width="36" height="36" rx="3"/>
+    <rect x="564" y="286" width="36" height="36" rx="3"/>
+    <rect x="606" y="286" width="36" height="36" rx="3"/>
+    <rect x="648" y="286" width="36" height="36" rx="3"/>
+    <rect x="690" y="286" width="36" height="36" rx="3"/>
+    <!-- Backspace (wider) -->
+    <rect x="732" y="286" width="80" height="36" rx="3"/>
+    <!-- Nav cluster: Insert / Home / PgUp -->
+    <rect x="828" y="286" width="36" height="36" rx="3"/>
+    <rect x="870" y="286" width="36" height="36" rx="3"/>
+    <rect x="912" y="286" width="36" height="36" rx="3"/>
+  </g>
+
+  <!-- TOP ALPHA ROW (Tab + Q–P + [ ] \) -->
+  <g stroke="#9a8f86" stroke-width="1.5" fill="none">
+    <!-- Tab -->
+    <rect x="186" y="328" width="52" height="36" rx="3"/>
+    <rect x="244" y="328" width="36" height="36" rx="3"/>
+    <rect x="286" y="328" width="36" height="36" rx="3"/>
+    <rect x="328" y="328" width="36" height="36" rx="3"/>
+    <rect x="370" y="328" width="36" height="36" rx="3"/>
+    <rect x="412" y="328" width="36" height="36" rx="3"/>
+    <rect x="454" y="328" width="36" height="36" rx="3"/>
+    <rect x="496" y="328" width="36" height="36" rx="3"/>
+    <rect x="538" y="328" width="36" height="36" rx="3"/>
+    <rect x="580" y="328" width="36" height="36" rx="3"/>
+    <!-- THE ACCENT KEY — coral highlight, HE sensor glow focus -->
+    <rect x="622" y="328" width="36" height="36" rx="3" stroke="#c9634a" stroke-opacity="0.90" stroke-width="2.5" fill="#c9634a" fill-opacity="0.12"/>
+    <rect x="664" y="328" width="36" height="36" rx="3"/>
+    <rect x="706" y="328" width="36" height="36" rx="3"/>
+    <!-- Backslash (wider) -->
+    <rect x="748" y="328" width="64" height="36" rx="3"/>
+    <!-- Nav: Delete / End / PgDn -->
+    <rect x="828" y="328" width="36" height="36" rx="3"/>
+    <rect x="870" y="328" width="36" height="36" rx="3"/>
+    <rect x="912" y="328" width="36" height="36" rx="3"/>
+  </g>
+
+  <!-- HOME ROW (Caps + A–; + Enter) -->
+  <g stroke="#9a8f86" stroke-width="1.5" fill="none">
+    <!-- Caps -->
+    <rect x="186" y="370" width="60" height="36" rx="3"/>
+    <rect x="252" y="370" width="36" height="36" rx="3"/>
+    <rect x="294" y="370" width="36" height="36" rx="3"/>
+    <rect x="336" y="370" width="36" height="36" rx="3"/>
+    <rect x="378" y="370" width="36" height="36" rx="3"/>
+    <rect x="420" y="370" width="36" height="36" rx="3"/>
+    <rect x="462" y="370" width="36" height="36" rx="3"/>
+    <rect x="504" y="370" width="36" height="36" rx="3"/>
+    <rect x="546" y="370" width="36" height="36" rx="3"/>
+    <rect x="588" y="370" width="36" height="36" rx="3"/>
+    <rect x="630" y="370" width="36" height="36" rx="3"/>
+    <rect x="672" y="370" width="36" height="36" rx="3"/>
+    <!-- Enter (wider) -->
+    <rect x="714" y="370" width="98" height="36" rx="3"/>
+  </g>
+
+  <!-- BOTTOM ALPHA ROW (Shift + Z–/ + Shift) -->
+  <g stroke="#9a8f86" stroke-width="1.5" fill="none">
+    <!-- L-Shift -->
+    <rect x="186" y="412" width="78" height="36" rx="3"/>
+    <rect x="270" y="412" width="36" height="36" rx="3"/>
+    <rect x="312" y="412" width="36" height="36" rx="3"/>
+    <rect x="354" y="412" width="36" height="36" rx="3"/>
+    <rect x="396" y="412" width="36" height="36" rx="3"/>
+    <rect x="438" y="412" width="36" height="36" rx="3"/>
+    <rect x="480" y="412" width="36" height="36" rx="3"/>
+    <rect x="522" y="412" width="36" height="36" rx="3"/>
+    <rect x="564" y="412" width="36" height="36" rx="3"/>
+    <rect x="606" y="412" width="36" height="36" rx="3"/>
+    <rect x="648" y="412" width="36" height="36" rx="3"/>
+    <!-- R-Shift (wider) -->
+    <rect x="690" y="412" width="122" height="36" rx="3"/>
+    <!-- Arrow keys -->
+    <rect x="870" y="412" width="36" height="36" rx="3"/>
+    <!-- Up arrow (sits between L and R) -->
+    <rect x="870" y="370" width="36" height="36" rx="3"/>
+  </g>
+
+  <!-- MODIFIERS ROW (Ctrl / Win / Alt / Space / Alt / Fn / Ctrl) -->
+  <g stroke="#9a8f86" stroke-width="1.5" fill="none">
+    <!-- L-Ctrl -->
+    <rect x="186" y="454" width="50" height="36" rx="3"/>
+    <!-- Win -->
+    <rect x="242" y="454" width="36" height="36" rx="3"/>
+    <!-- L-Alt -->
+    <rect x="284" y="454" width="36" height="36" rx="3"/>
+    <!-- Spacebar (wide) -->
+    <rect x="326" y="454" width="296" height="36" rx="3"/>
+    <!-- R-Alt -->
+    <rect x="628" y="454" width="36" height="36" rx="3"/>
+    <!-- Fn -->
+    <rect x="670" y="454" width="36" height="36" rx="3"/>
+    <!-- Menu -->
+    <rect x="712" y="454" width="36" height="36" rx="3"/>
+    <!-- R-Ctrl -->
+    <rect x="754" y="454" width="58" height="36" rx="3"/>
+    <!-- L-arrow / Down-arrow / R-arrow -->
+    <rect x="828" y="454" width="36" height="36" rx="3"/>
+    <rect x="870" y="454" width="36" height="36" rx="3"/>
+    <rect x="912" y="454" width="36" height="36" rx="3"/>
+  </g>
+
+  <!-- HE SENSOR GLOW — radial lines emanating from the accent key center (640, 346) -->
+  <g stroke="#c9634a" fill="none" stroke-linecap="round">
+    <!-- Innermost ring: small dashed circle -->
+    <circle cx="640" cy="346" r="24" stroke-opacity="0.55" stroke-width="1.5" stroke-dasharray="4 5"/>
+    <!-- Mid ring -->
+    <circle cx="640" cy="346" r="44" stroke-opacity="0.30" stroke-width="1.2" stroke-dasharray="3 7"/>
+    <!-- Outer ring -->
+    <circle cx="640" cy="346" r="68" stroke-opacity="0.16" stroke-width="1" stroke-dasharray="2 9"/>
+    <!-- Radial spokes (8 directions) -->
+    <line x1="640" y1="316" x2="640" y2="298" stroke-opacity="0.50" stroke-width="1.5"/>
+    <line x1="661" y1="325" x2="676" y2="310" stroke-opacity="0.40" stroke-width="1.2"/>
+    <line x1="670" y1="346" x2="690" y2="346" stroke-opacity="0.50" stroke-width="1.5"/>
+    <line x1="661" y1="367" x2="676" y2="382" stroke-opacity="0.40" stroke-width="1.2"/>
+    <line x1="640" y1="376" x2="640" y2="394" stroke-opacity="0.50" stroke-width="1.5"/>
+    <line x1="619" y1="367" x2="604" y2="382" stroke-opacity="0.40" stroke-width="1.2"/>
+    <line x1="610" y1="346" x2="590" y2="346" stroke-opacity="0.50" stroke-width="1.5"/>
+    <line x1="619" y1="325" x2="604" y2="310" stroke-opacity="0.40" stroke-width="1.2"/>
+    <!-- Focal dot — sensor center -->
+    <circle cx="640" cy="346" r="4" fill="#c9634a" fill-opacity="0.85" stroke="none"/>
+    <circle cx="640" cy="346" r="8" stroke="#c9634a" stroke-opacity="0.45" stroke-width="1.5" fill="none"/>
+  </g>
+
+  <!-- USB cable port hint — right side of case, small rect -->
+  <rect x="1046" y="366" width="18" height="10" rx="2" stroke="#9a8f86" stroke-opacity="0.50" stroke-width="1.5" fill="none"/>
+
+  <!-- CAPTION TEXT — small-caps editorial label below the board -->
+  <text
+    x="600" y="586"
+    font-family="'IBM Plex Sans', system-ui, sans-serif"
+    font-size="11"
+    font-weight="500"
+    letter-spacing="0.16em"
+    text-anchor="middle"
+    fill="#9a8f86"
+    fill-opacity="0.70"
+    text-transform="uppercase">COMPUTEX 2026</text>
+
+  <!-- Bronze theme dot — upper-right ornamental anchor -->
+  <circle cx="1090" cy="190" r="5" fill="#c49a35" fill-opacity="0.90" stroke="none"/>
+  <circle cx="1090" cy="190" r="9" fill="none" stroke="#c49a35" stroke-opacity="0.30" stroke-width="1.5"/>
+</svg>

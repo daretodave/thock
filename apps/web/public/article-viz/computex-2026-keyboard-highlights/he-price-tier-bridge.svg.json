@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-25T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "computex-2026-keyboard-highlights",
+  "article_pillar": "news",
+  "section_anchor": "The technology signal",
+  "brief_summary": "Two-column tier diagram comparing Gaming HE (flagship $200+, mid $120–$200, entry $80–$120) against Enthusiast HE (boutique custom $200+, mid prebuilt $130–$200). A dashed coral arrow bridges the Gaming mid tier to the Enthusiast mid-prebuilt tier with the label 'price curve converging'. The mid tiers on both sides are coral-highlighted, making the convergence argument visual.",
+  "target": "apps/web/public/article-viz/computex-2026-keyboard-highlights/he-price-tier-bridge.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "JetBrains Mono", "Newsreader"],
+  "data_sources": [
+    "apps/web/src/content/articles/computex-2026-keyboard-highlights.mdx:The technology signal — 'Gaming-peripheral demand is the volume lever that moves sensor supply chains'",
+    "apps/web/src/content/articles/computex-2026-keyboard-highlights.mdx:The technology signal — 'the per-unit economics of HE actuation in a $150–$200 enthusiast chassis start to look reasonable'",
+    "apps/web/src/content/articles/hall-effect-keyboard-guide.mdx:The pricing reality — '$80–$120 budget HE', '$130–$160 mid HE', '$160–$250 enthusiast HE'"
+  ],
+  "outputs": ["apps/web/public/article-viz/computex-2026-keyboard-highlights/he-price-tier-bridge.svg"],
+  "warnings": ["Price tier ranges are synthesized from hall-effect-keyboard-guide.mdx price tier ladder — not fabricated, but not sourced to a live price tracker"]
+}

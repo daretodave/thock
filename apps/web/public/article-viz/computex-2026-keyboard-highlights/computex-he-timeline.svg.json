@@ -1,0 +1,25 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-05-25T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "computex-2026-keyboard-highlights",
+  "article_pillar": "news",
+  "section_anchor": "What to watch next",
+  "brief_summary": "Horizontal milestone timeline with four labeled events: Computex 2026 May 20–24 (IQUNIX EC75 debut, Corsair CLIPPER PRO Mini 60 reveal, Gateron HE ecosystem shown); mid-2026 Gateron Magnetic Lanes volume rollout expected; Q3 2026 first EC75 reviewer units expected; Q4 2026 configurator parity verdict from reviews. The Computex node is coral-accented; subsequent nodes are warm-grey. An arrow on the right indicates the timeline continues.",
+  "target": "apps/web/public/article-viz/computex-2026-keyboard-highlights/computex-he-timeline.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "JetBrains Mono", "Newsreader"],
+  "data_sources": [
+    "apps/web/src/content/articles/computex-2026-keyboard-highlights.mdx:What to watch next — 'The IQUNIX EC75 debuted at Computex without a confirmed ship date or retail configuration'",
+    "apps/web/src/content/articles/computex-2026-keyboard-highlights.mdx:What to watch next — 'The timeline for [Gateron Magnetic Lanes rollout] is mid-2026 based on Computex-floor conversations reported in W25 roundups'",
+    "apps/web/src/content/articles/computex-2026-keyboard-highlights.mdx:What to watch next — 'Q3 2026' implicit from 'whether the Rapid Trigger implementation and gasket compliance hold up outside the controlled show environment'",
+    "apps/web/src/content/articles/computex-2026-keyboard-highlights.mdx:article brief — 'Computex ran May 20–24, 2026'"
+  ],
+  "outputs": ["apps/web/public/article-viz/computex-2026-keyboard-highlights/computex-he-timeline.svg"],
+  "warnings": ["Q3/Q4 2026 event dates are projected, not confirmed — article prose phrases them as 'expected'"]
+}

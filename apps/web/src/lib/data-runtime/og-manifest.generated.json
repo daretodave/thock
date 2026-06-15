@@ -81,6 +81,16 @@
       }
     },
     {
+      "slug": "computex-2026-keyboard-highlights",
+      "readTime": 7,
+      "frontmatter": {
+        "title": "Computex 2026: hall-effect keyboards enter the enthusiast conversation",
+        "lede": "Computex 2026 (May 20–24) was the week hall-effect stopped being a gaming-peripheral curiosity and walked into the same room as enthusiast-grade chassis. Two boards made that argument concrete.",
+        "pillar": "news",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "stabilizers-explained",
       "readTime": 12,
       "frontmatter": {
@@ -531,5 +541,5 @@
       }
     }
   ],
-  "generatedAt": "2026-06-15T08:09:32.744Z"
+  "generatedAt": "2026-06-15T10:31:17.301Z"
 }
