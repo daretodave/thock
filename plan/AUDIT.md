@@ -3869,7 +3869,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/tape-mod.mdx
 - action: add [tape-mod](/article/tape-mod) to lubing-switches-guide body, or vice versa
 
-### [ ] [cross-links] [4.5] lubing-switches-guide ↔ typing-tests-lie — no prose cross-link (same pillar, ≥2 shared tags: switches, modding)
+### [x] [cross-links] [4.5] lubing-switches-guide ↔ typing-tests-lie — no prose cross-link (same pillar, ≥2 shared tags: switches, modding)
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -3879,6 +3879,8 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/lubing-switches-guide.mdx
 - article-b: apps/web/src/content/articles/typing-tests-lie.mdx
 - action: add [typing-tests-lie](/article/typing-tests-lie) to lubing-switches-guide body, or vice versa
+- issue: [mirror-failed: 2026-06-15T00:00:00Z]
+- addressed in: 4fd470b
 
 ### [x] [cross-links] [4.5] mounting-styles-compared ↔ stabilizers-explained — no prose cross-link (same pillar, ≥2 shared tags: modding, acoustic, beginner)
 - category: cross-links
@@ -3904,7 +3906,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/switch-housings-compared.mdx
 - action: add [switch-housings-compared](/article/switch-housings-compared) to mounting-styles-compared body, or vice versa
 
-### [ ] [cross-links] [4.5] pe-foam-mod ↔ typing-tests-lie — no prose cross-link (same pillar, ≥2 shared tags: modding, beginner)
+### [x] [cross-links] [4.5] pe-foam-mod ↔ typing-tests-lie — no prose cross-link (same pillar, ≥2 shared tags: modding, beginner)
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -3914,6 +3916,8 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/pe-foam-mod.mdx
 - article-b: apps/web/src/content/articles/typing-tests-lie.mdx
 - action: add [typing-tests-lie](/article/typing-tests-lie) to pe-foam-mod body, or vice versa
+- issue: [mirror-failed: 2026-06-15T00:00:00Z]
+- addressed in: 4fd470b
 
 ### [ ] [cross-links] [4.5] sound-dampening-compared ↔ stabilizers-explained — no prose cross-link (same pillar, ≥2 shared tags: modding, acoustic, beginner)
 - category: cross-links
@@ -3948,7 +3952,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/tape-mod.mdx
 - action: add [tape-mod](/article/tape-mod) to spring-swaps-explained body, or vice versa
 
-### [ ] [cross-links] [4.5] spring-swaps-explained ↔ typing-tests-lie — no prose cross-link (same pillar, ≥2 shared tags: modding, switches)
+### [x] [cross-links] [4.5] spring-swaps-explained ↔ typing-tests-lie — no prose cross-link (same pillar, ≥2 shared tags: modding, switches)
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -3958,6 +3962,8 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/spring-swaps-explained.mdx
 - article-b: apps/web/src/content/articles/typing-tests-lie.mdx
 - action: add [typing-tests-lie](/article/typing-tests-lie) to spring-swaps-explained body, or vice versa
+- issue: [mirror-failed: 2026-06-15T00:00:00Z]
+- addressed in: 4fd470b
 
 ### [ ] [cross-links] [4.5] stabilizer-servicing-guide ↔ switch-films-worth-it — no prose cross-link (same pillar, ≥2 shared tags: modding, linear)
 - category: cross-links
@@ -3981,7 +3987,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/tape-mod.mdx
 - action: add [tape-mod](/article/tape-mod) to stabilizer-servicing-guide body, or vice versa
 
-### [ ] [cross-links] [4.5] stabilizer-servicing-guide ↔ typing-tests-lie — no prose cross-link (same pillar, ≥2 shared tags: modding, beginner)
+### [x] [cross-links] [4.5] stabilizer-servicing-guide ↔ typing-tests-lie — no prose cross-link (same pillar, ≥2 shared tags: modding, beginner)
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -3991,6 +3997,8 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/stabilizer-servicing-guide.mdx
 - article-b: apps/web/src/content/articles/typing-tests-lie.mdx
 - action: add [typing-tests-lie](/article/typing-tests-lie) to stabilizer-servicing-guide body, or vice versa
+- issue: [mirror-failed: 2026-06-15T00:00:00Z]
+- addressed in: 4fd470b
 
 ### [ ] [cross-links] [4.5] switch-films-worth-it ↔ tape-mod — no prose cross-link (same pillar, ≥2 shared tags: linear, modding)
 - category: cross-links
@@ -4003,7 +4011,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/tape-mod.mdx
 - action: add [tape-mod](/article/tape-mod) to switch-films-worth-it body, or vice versa
 
-### [ ] [cross-links] [4.5] switch-films-worth-it ↔ typing-tests-lie — no prose cross-link (same pillar, ≥2 shared tags: modding, switches)
+### [x] [cross-links] [4.5] switch-films-worth-it ↔ typing-tests-lie — no prose cross-link (same pillar, ≥2 shared tags: modding, switches)
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -4013,8 +4021,10 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/switch-films-worth-it.mdx
 - article-b: apps/web/src/content/articles/typing-tests-lie.mdx
 - action: add [typing-tests-lie](/article/typing-tests-lie) to switch-films-worth-it body, or vice versa
+- issue: [mirror-failed: 2026-06-15T00:00:00Z]
+- addressed in: 4fd470b
 
-### [ ] [cross-links] [4.5] tape-mod ↔ typing-tests-lie — no prose cross-link (same pillar, ≥2 shared tags: modding, beginner)
+### [x] [cross-links] [4.5] tape-mod ↔ typing-tests-lie — no prose cross-link (same pillar, ≥2 shared tags: modding, beginner)
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -4024,6 +4034,8 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/tape-mod.mdx
 - article-b: apps/web/src/content/articles/typing-tests-lie.mdx
 - action: add [typing-tests-lie](/article/typing-tests-lie) to tape-mod body, or vice versa
+- issue: [mirror-failed: 2026-06-15T00:00:00Z]
+- addressed in: 4fd470b
 
 ### [x] [HOT PURSUIT] [content-gap] [7] deep-dives pillar — 1 of ≥2 articles in last 30d
 - category: content-gaps
@@ -4680,7 +4692,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/tape-mod.mdx
 - action: add [tape-mod](/article/tape-mod) to lubing-101 body, or vice versa
 
-### [ ] [cross-links] [3.6] lubing-101 ↔ typing-tests-lie — no prose cross-link (adjacent pillar, ≥2 shared tags: switches, modding, beginner)
+### [x] [cross-links] [3.6] lubing-101 ↔ typing-tests-lie — no prose cross-link (adjacent pillar, ≥2 shared tags: switches, modding, beginner)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4690,6 +4702,8 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/lubing-101.mdx
 - article-b: apps/web/src/content/articles/typing-tests-lie.mdx
 - action: add [typing-tests-lie](/article/typing-tests-lie) to lubing-101 body, or vice versa
+- issue: [mirror-failed: 2026-06-15T00:00:00Z]
+- addressed in: 4fd470b
 
 ### [ ] [cross-links] [3.6] lubing-switches-guide ↔ stabilizers-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: lubing, modding)
 - category: cross-links
@@ -4746,7 +4760,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/stabilizer-servicing-guide.mdx
 - action: add [stabilizer-servicing-guide](/article/stabilizer-servicing-guide) to mounting-styles-compared body, or vice versa
 
-### [ ] [cross-links] [3.6] mounting-styles-compared ↔ typing-tests-lie — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, beginner)
+### [x] [cross-links] [3.6] mounting-styles-compared ↔ typing-tests-lie — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, beginner)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4756,6 +4770,8 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/mounting-styles-compared.mdx
 - article-b: apps/web/src/content/articles/typing-tests-lie.mdx
 - action: add [typing-tests-lie](/article/typing-tests-lie) to mounting-styles-compared body, or vice versa
+- issue: [mirror-failed: 2026-06-15T00:00:00Z]
+- addressed in: 4fd470b
 
 ### [ ] [cross-links] [3.6] o-ring-mod ↔ plate-materials-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic)
 - category: cross-links
@@ -4823,7 +4839,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/switch-housings-compared.mdx
 - action: add [switch-housings-compared](/article/switch-housings-compared) to plate-materials-explained body, or vice versa
 
-### [ ] [cross-links] [3.6] sound-dampening-compared ↔ typing-tests-lie — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, beginner)
+### [x] [cross-links] [3.6] sound-dampening-compared ↔ typing-tests-lie — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, beginner)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4833,6 +4849,8 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/sound-dampening-compared.mdx
 - article-b: apps/web/src/content/articles/typing-tests-lie.mdx
 - action: add [typing-tests-lie](/article/typing-tests-lie) to sound-dampening-compared body, or vice versa
+- issue: [mirror-failed: 2026-06-15T00:00:00Z]
+- addressed in: 4fd470b
 
 ### [ ] [cross-links] [3.6] stabilizers-explained ↔ tape-mod — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic, beginner)
 - category: cross-links
@@ -4845,7 +4863,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/tape-mod.mdx
 - action: add [tape-mod](/article/tape-mod) to stabilizers-explained body, or vice versa
 
-### [ ] [cross-links] [3.6] stabilizers-explained ↔ typing-tests-lie — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, beginner)
+### [x] [cross-links] [3.6] stabilizers-explained ↔ typing-tests-lie — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, beginner)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4855,8 +4873,10 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/stabilizers-explained.mdx
 - article-b: apps/web/src/content/articles/typing-tests-lie.mdx
 - action: add [typing-tests-lie](/article/typing-tests-lie) to stabilizers-explained body, or vice versa
+- issue: [mirror-failed: 2026-06-15T00:00:00Z]
+- addressed in: 4fd470b
 
-### [ ] [cross-links] [3.6] switch-housings-compared ↔ typing-tests-lie — no prose cross-link (adjacent pillar, ≥2 shared tags: switches, beginner)
+### [x] [cross-links] [3.6] switch-housings-compared ↔ typing-tests-lie — no prose cross-link (adjacent pillar, ≥2 shared tags: switches, beginner)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4866,6 +4886,8 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/switch-housings-compared.mdx
 - article-b: apps/web/src/content/articles/typing-tests-lie.mdx
 - action: add [typing-tests-lie](/article/typing-tests-lie) to switch-housings-compared body, or vice versa
+- issue: [mirror-failed: 2026-06-15T00:00:00Z]
+- addressed in: 4fd470b
 
 ### [ ] [cross-links] [3.6] rapid-trigger-gaming-crossover ↔ hall-effect-keyboard-guide — no prose cross-link (adjacent pillar, ≥2 shared tags: hall-effect, polling-rate, switches)
 - category: cross-links
