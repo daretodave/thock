@@ -42,7 +42,7 @@
     },
     {
       "slug": "keyboard-acoustics-deep-dive",
-      "readTime": 14,
+      "readTime": 15,
       "frontmatter": {
         "title": "The physics of thock: how every layer shapes your keyboard's sound",
         "lede": "Every component between your fingertip and the desk makes a decision about your keyboard's sound — the switch, the plate, the case, the surface it sits on. Understanding what each layer adds or subtracts is the difference between chasing a sound blindly and engineering it deliberately.",
@@ -122,7 +122,7 @@
     },
     {
       "slug": "gmk-cyl-selene-group-buy",
-      "readTime": 5,
+      "readTime": 6,
       "frontmatter": {
         "title": "GMK CYL Selene is live at KBDfans through June 19",
         "lede": "GMK CYL Selene opened at KBDfans on 2026-05-15 with a special-effects glitter-reflect colorway in purple and teal over a silver-grey base. Designed by whysoda and inspired by the Greek Titaness of the Moon, the buy runs through 2026-06-19 with Q4 2026 fulfillment.",
@@ -212,7 +212,7 @@
     },
     {
       "slug": "typing-tests-lie",
-      "readTime": 6,
+      "readTime": 7,
       "frontmatter": {
         "title": "Why typing tests lie",
         "lede": "Monkeytype scores reward fast and forgiving. A daily driver needs comfortable and honest. Optimizing a build for the test selects for the wrong things — and the gap shows up around hour two, not in the leaderboard.",
@@ -541,5 +541,5 @@
       }
     }
   ],
-  "generatedAt": "2026-06-15T10:31:17.301Z"
+  "generatedAt": "2026-06-15T21:10:50.762Z"
 }
