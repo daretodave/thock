@@ -3506,7 +3506,7 @@ passes accumulate signals.)
 - issue: #333
 - addressed in: f67b8fc
 
-### [ ] [cross-links] [4.5] divinikey-dcs-dolch-group-buy ↔ gmk-cyl-prussian-alert — no prose cross-link (same pillar, ≥2 shared tags: group-buy, keycaps)
+### [x] [cross-links] [4.5] divinikey-dcs-dolch-group-buy ↔ gmk-cyl-prussian-alert — no prose cross-link (same pillar, ≥2 shared tags: group-buy, keycaps)
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -3516,6 +3516,8 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/divinikey-dcs-dolch-group-buy.mdx
 - article-b: apps/web/src/content/articles/gmk-cyl-prussian-alert.mdx
 - action: add [gmk-cyl-prussian-alert](/article/gmk-cyl-prussian-alert) to divinikey-dcs-dolch-group-buy body, or vice versa
+- issue: #342
+- addressed in: 89143b9, closes #342
 
 ### [x] [cross-links] [4.5] divinikey-dcs-dolch-group-buy ↔ gmk-cyl-ramune-group-buy — no prose cross-link (same pillar, ≥2 shared tags: group-buy, abs)
 - category: cross-links
@@ -4416,7 +4418,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/switch-films-worth-it.mdx
 - action: add [switch-films-worth-it](/article/switch-films-worth-it) to cherry-mx2a-revision body, or vice versa
 
-### [ ] [cross-links] [3.6] dcs-grass-valley-decline ↔ gmk-cyl-prussian-alert — no prose cross-link (adjacent pillar, ≥2 shared tags: keycaps, group-buy)
+### [x] [cross-links] [3.6] dcs-grass-valley-decline ↔ gmk-cyl-prussian-alert — no prose cross-link (adjacent pillar, ≥2 shared tags: keycaps, group-buy)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4426,6 +4428,7 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/dcs-grass-valley-decline.mdx
 - article-b: apps/web/src/content/articles/gmk-cyl-prussian-alert.mdx
 - action: add [gmk-cyl-prussian-alert](/article/gmk-cyl-prussian-alert) to dcs-grass-valley-decline body, or vice versa
+- addressed in: 89143b9
 
 ### [x] [cross-links] [3.6] dcs-grass-valley-decline ↔ gmk-cyl-selene-group-buy — no prose cross-link (adjacent pillar, ≥2 shared tags: keycaps, group-buy)
 - category: cross-links
@@ -4538,7 +4541,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/stabilizers-explained.mdx
 - action: add [stabilizers-explained](/article/stabilizers-explained) to gasket-mount-reality body, or vice versa
 
-### [ ] [cross-links] [3.6] gmk-cyl-prussian-alert ↔ keycap-profiles-compared — no prose cross-link (adjacent pillar, ≥2 shared tags: keycaps, cherry-profile)
+### [x] [cross-links] [3.6] gmk-cyl-prussian-alert ↔ keycap-profiles-compared — no prose cross-link (adjacent pillar, ≥2 shared tags: keycaps, cherry-profile)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4548,6 +4551,7 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/gmk-cyl-prussian-alert.mdx
 - article-b: apps/web/src/content/articles/keycap-profiles-compared.mdx
 - action: add [keycap-profiles-compared](/article/keycap-profiles-compared) to gmk-cyl-prussian-alert body, or vice versa
+- addressed in: 89143b9
 
 ### [x] [cross-links] [3.6] gmk-cyl-selene-group-buy ↔ keycap-materials-compared — no prose cross-link (adjacent pillar, ≥2 shared tags: keycaps, abs)
 - category: cross-links
