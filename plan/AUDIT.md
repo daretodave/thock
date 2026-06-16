@@ -3941,7 +3941,7 @@ passes accumulate signals.)
 - issue: [mirror-failed: 2026-06-15T00:00:00Z]
 - addressed in: 4fd470b
 
-### [ ] [cross-links] [4.5] sound-dampening-compared ↔ stabilizers-explained — no prose cross-link (same pillar, ≥2 shared tags: modding, acoustic, beginner)
+### [x] [cross-links] [4.5] sound-dampening-compared ↔ stabilizers-explained — no prose cross-link (same pillar, ≥2 shared tags: modding, acoustic, beginner)
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -3951,6 +3951,8 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/sound-dampening-compared.mdx
 - article-b: apps/web/src/content/articles/stabilizers-explained.mdx
 - action: add [stabilizers-explained](/article/stabilizers-explained) to sound-dampening-compared body, or vice versa
+- issue: [mirror-failed: 2026-06-16T00:00:00Z]
+- addressed in: cd4cc75
 
 ### [x] [cross-links] [4.5] spring-swaps-explained ↔ stabilizer-servicing-guide — no prose cross-link (same pillar, ≥2 shared tags: modding, linear) — addressed in ad32abd
 - category: cross-links
@@ -4817,7 +4819,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/plate-materials-explained.mdx
 - action: add [plate-materials-explained](/article/plate-materials-explained) to o-ring-mod body, or vice versa
 
-### [ ] [cross-links] [3.6] o-ring-mod ↔ stabilizers-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic)
+### [x] [cross-links] [3.6] o-ring-mod ↔ stabilizers-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4827,6 +4829,7 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/o-ring-mod.mdx
 - article-b: apps/web/src/content/articles/stabilizers-explained.mdx
 - action: add [stabilizers-explained](/article/stabilizers-explained) to o-ring-mod body, or vice versa
+- addressed in: cd4cc75
 
 ### [x] [cross-links] [3.6] pe-foam-mod ↔ plate-materials-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic) — closes #340
 - category: cross-links
@@ -4839,7 +4842,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/plate-materials-explained.mdx
 - action: add [plate-materials-explained](/article/plate-materials-explained) to pe-foam-mod body, or vice versa
 
-### [ ] [cross-links] [3.6] pe-foam-mod ↔ stabilizers-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic, beginner)
+### [x] [cross-links] [3.6] pe-foam-mod ↔ stabilizers-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic, beginner)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4849,6 +4852,7 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/pe-foam-mod.mdx
 - article-b: apps/web/src/content/articles/stabilizers-explained.mdx
 - action: add [stabilizers-explained](/article/stabilizers-explained) to pe-foam-mod body, or vice versa
+- addressed in: cd4cc75
 
 ### [x] [cross-links] [3.6] plate-materials-explained ↔ stabilizers-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic) — closes #340
 - category: cross-links
@@ -4885,7 +4889,7 @@ passes accumulate signals.)
 - issue: [mirror-failed: 2026-06-15T00:00:00Z]
 - addressed in: 4fd470b
 
-### [ ] [cross-links] [3.6] stabilizers-explained ↔ tape-mod — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic, beginner)
+### [x] [cross-links] [3.6] stabilizers-explained ↔ tape-mod — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic, beginner)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4895,6 +4899,7 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/stabilizers-explained.mdx
 - article-b: apps/web/src/content/articles/tape-mod.mdx
 - action: add [tape-mod](/article/tape-mod) to stabilizers-explained body, or vice versa
+- addressed in: cd4cc75
 
 ### [x] [cross-links] [3.6] stabilizers-explained ↔ typing-tests-lie — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, beginner)
 - category: cross-links
