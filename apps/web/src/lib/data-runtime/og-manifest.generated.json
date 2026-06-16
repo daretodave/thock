@@ -82,7 +82,7 @@
     },
     {
       "slug": "computex-2026-keyboard-highlights",
-      "readTime": 7,
+      "readTime": 8,
       "frontmatter": {
         "title": "Computex 2026: hall-effect keyboards enter the enthusiast conversation",
         "lede": "Computex 2026 (May 20–24) was the week hall-effect stopped being a gaming-peripheral curiosity and walked into the same room as enthusiast-grade chassis. Two boards made that argument concrete.",
@@ -142,7 +142,7 @@
     },
     {
       "slug": "drop-holy-panda-x-deep-dive",
-      "readTime": 12,
+      "readTime": 13,
       "frontmatter": {
         "title": "Why the Drop Holy Panda X feels the way it does",
         "lede": "The Holy Panda was a six-month frankenswitch project for most of its life. The Drop Holy Panda X is the first version where the geometry, the spring tune, the housing pairing, and the factory lube were the spec — not the mod.",
@@ -392,7 +392,7 @@
     },
     {
       "slug": "acoustic-spec-rise",
-      "readTime": 7,
+      "readTime": 8,
       "frontmatter": {
         "title": "How 'thock' became an acoustic spec, not an accident",
         "lede": "A decade ago a thocky board was the win condition of a $300 custom — the payoff for the right switches, the right lube job, the right patience. In 2026 the same sound is table-stakes for a $150 prebuilt: factory-lubed switches, silicone dampening, gasket-mounted plates, PBT doubleshot. The stack that used to be enthusiast-only is now what mid-tier vendors design toward from day one.",
@@ -541,5 +541,5 @@
       }
     }
   ],
-  "generatedAt": "2026-06-16T00:57:51.491Z"
+  "generatedAt": "2026-06-16T08:13:50.463Z"
 }

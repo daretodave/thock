@@ -3552,7 +3552,7 @@ passes accumulate signals.)
 - action: add [gsk-sweet-nightmare-group-buy](/article/gsk-sweet-nightmare-group-buy) to divinikey-dcs-dolch-group-buy body, or vice versa
 - addressed in: 8c6e739, closes #337
 
-### [ ] [cross-links] [4.5] drop-holy-panda-x-deep-dive ↔ plate-materials-explained — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, modding)
+### [x] [cross-links] [4.5] drop-holy-panda-x-deep-dive ↔ plate-materials-explained — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, modding) — closes #340
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -4284,7 +4284,7 @@ passes accumulate signals.)
 - addressed in: e3e6b6c
 
 
-### [ ] [cross-links] [3.6] alice-layout-decline ↔ plate-materials-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: deep-dive, modding)
+### [x] [cross-links] [3.6] alice-layout-decline ↔ plate-materials-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: deep-dive, modding) — closes #340
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4763,7 +4763,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/pe-foam-mod.mdx
 - action: add [pe-foam-mod](/article/pe-foam-mod) to mounting-styles-compared body, or vice versa
 
-### [ ] [cross-links] [3.6] mounting-styles-compared ↔ plate-materials-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic, polycarbonate)
+### [x] [cross-links] [3.6] mounting-styles-compared ↔ plate-materials-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic, polycarbonate) — closes #340
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4798,7 +4798,7 @@ passes accumulate signals.)
 - issue: [mirror-failed: 2026-06-15T00:00:00Z]
 - addressed in: 4fd470b
 
-### [ ] [cross-links] [3.6] o-ring-mod ↔ plate-materials-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic)
+### [x] [cross-links] [3.6] o-ring-mod ↔ plate-materials-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic) — closes #340
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4820,7 +4820,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/stabilizers-explained.mdx
 - action: add [stabilizers-explained](/article/stabilizers-explained) to o-ring-mod body, or vice versa
 
-### [ ] [cross-links] [3.6] pe-foam-mod ↔ plate-materials-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic)
+### [x] [cross-links] [3.6] pe-foam-mod ↔ plate-materials-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic) — closes #340
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4842,7 +4842,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/stabilizers-explained.mdx
 - action: add [stabilizers-explained](/article/stabilizers-explained) to pe-foam-mod body, or vice versa
 
-### [ ] [cross-links] [3.6] plate-materials-explained ↔ stabilizers-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic)
+### [x] [cross-links] [3.6] plate-materials-explained ↔ stabilizers-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic) — closes #340
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4853,7 +4853,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/stabilizers-explained.mdx
 - action: add [stabilizers-explained](/article/stabilizers-explained) to plate-materials-explained body, or vice versa
 
-### [ ] [cross-links] [3.6] plate-materials-explained ↔ switch-housings-compared — no prose cross-link (adjacent pillar, ≥2 shared tags: polycarbonate, pom)
+### [x] [cross-links] [3.6] plate-materials-explained ↔ switch-housings-compared — no prose cross-link (adjacent pillar, ≥2 shared tags: polycarbonate, pom) — closes #340
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
