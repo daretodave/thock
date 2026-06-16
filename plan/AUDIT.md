@@ -3952,7 +3952,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/stabilizers-explained.mdx
 - action: add [stabilizers-explained](/article/stabilizers-explained) to sound-dampening-compared body, or vice versa
 
-### [ ] [cross-links] [4.5] spring-swaps-explained ↔ stabilizer-servicing-guide — no prose cross-link (same pillar, ≥2 shared tags: modding, linear)
+### [x] [cross-links] [4.5] spring-swaps-explained ↔ stabilizer-servicing-guide — no prose cross-link (same pillar, ≥2 shared tags: modding, linear) — addressed in ad32abd
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -3988,7 +3988,7 @@ passes accumulate signals.)
 - issue: [mirror-failed: 2026-06-15T00:00:00Z]
 - addressed in: 4fd470b
 
-### [ ] [cross-links] [4.5] stabilizer-servicing-guide ↔ switch-films-worth-it — no prose cross-link (same pillar, ≥2 shared tags: modding, linear)
+### [x] [cross-links] [4.5] stabilizer-servicing-guide ↔ switch-films-worth-it — no prose cross-link (same pillar, ≥2 shared tags: modding, linear) — addressed in ad32abd
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -4342,7 +4342,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/spring-swaps-explained.mdx
 - action: add [spring-swaps-explained](/article/spring-swaps-explained) to beginners-switch-buying-guide body, or vice versa
 
-### [ ] [cross-links] [3.6] beginners-switch-buying-guide ↔ stabilizer-servicing-guide — no prose cross-link (adjacent pillar, ≥2 shared tags: linear, beginner)
+### [x] [cross-links] [3.6] beginners-switch-buying-guide ↔ stabilizer-servicing-guide — no prose cross-link (adjacent pillar, ≥2 shared tags: linear, beginner) — addressed in ad32abd
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4782,7 +4782,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/plate-materials-explained.mdx
 - action: add [plate-materials-explained](/article/plate-materials-explained) to mounting-styles-compared body, or vice versa
 
-### [ ] [cross-links] [3.6] mounting-styles-compared ↔ stabilizer-servicing-guide — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, beginner)
+### [x] [cross-links] [3.6] mounting-styles-compared ↔ stabilizer-servicing-guide — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, beginner) — addressed in ad32abd
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -5034,7 +5034,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/zmk-mainstream-shift.mdx
 - action: add [zmk-mainstream-shift](/article/zmk-mainstream-shift) to computex-2026-keyboard-highlights body, or vice versa
 
-### [ ] [cross-links] [3.6] lubing-101 ↔ stabilizer-servicing-guide — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, beginner)
+### [x] [cross-links] [3.6] lubing-101 ↔ stabilizer-servicing-guide — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, beginner) — addressed in ad32abd
 - category: cross-links
 - filed: 2026-06-16 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
