@@ -4922,7 +4922,7 @@ passes accumulate signals.)
 - issue: [mirror-failed: 2026-06-15T00:00:00Z]
 - addressed in: 4fd470b
 
-### [ ] [cross-links] [3.6] rapid-trigger-gaming-crossover ↔ hall-effect-keyboard-guide — no prose cross-link (adjacent pillar, ≥2 shared tags: hall-effect, polling-rate, switches)
+### [x] [cross-links] [3.6] rapid-trigger-gaming-crossover ↔ hall-effect-keyboard-guide — no prose cross-link (adjacent pillar, ≥2 shared tags: hall-effect, polling-rate, switches)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4932,8 +4932,9 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/rapid-trigger-gaming-crossover.mdx
 - article-b: apps/web/src/content/articles/hall-effect-keyboard-guide.mdx
 - action: add [hall-effect-keyboard-guide](/article/hall-effect-keyboard-guide) to rapid-trigger-gaming-crossover body, or vice versa
+- addressed in: 705d1ff
 
-### [ ] [cross-links] [4.5] rapid-trigger-gaming-crossover ↔ hall-effect-mainstream — no prose cross-link (same pillar, ≥2 shared tags: hall-effect, polling-rate, trends-2026, switches)
+### [x] [cross-links] [4.5] rapid-trigger-gaming-crossover ↔ hall-effect-mainstream — no prose cross-link (same pillar, ≥2 shared tags: hall-effect, polling-rate, trends-2026, switches)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -4943,8 +4944,10 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/rapid-trigger-gaming-crossover.mdx
 - article-b: apps/web/src/content/articles/hall-effect-mainstream.mdx
 - action: add [hall-effect-mainstream](/article/hall-effect-mainstream) to rapid-trigger-gaming-crossover body, or vice versa
+- issue: #347
+- addressed in: 705d1ff, closes #347
 
-### [ ] [cross-links] [3.6] rapid-trigger-gaming-crossover ↔ hmx-cloud-deep-dive — no prose cross-link (adjacent pillar, ≥2 shared tags: trends-2026, switches)
+### [x] [cross-links] [3.6] rapid-trigger-gaming-crossover ↔ hmx-cloud-deep-dive — no prose cross-link (adjacent pillar, ≥2 shared tags: trends-2026, switches)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4954,8 +4957,9 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/rapid-trigger-gaming-crossover.mdx
 - article-b: apps/web/src/content/articles/hmx-cloud-deep-dive.mdx
 - action: add [hmx-cloud-deep-dive](/article/hmx-cloud-deep-dive) to rapid-trigger-gaming-crossover body, or vice versa
+- addressed in: 705d1ff (hmx-cloud-deep-dive already linked to rapid-trigger-gaming-crossover via Wooting-style boards mention)
 
-### [ ] [cross-links] [3.6] rapid-trigger-gaming-crossover ↔ magnetic-switches-deep-dive — no prose cross-link (adjacent pillar, ≥2 shared tags: hall-effect, switches)
+### [x] [cross-links] [3.6] rapid-trigger-gaming-crossover ↔ magnetic-switches-deep-dive — no prose cross-link (adjacent pillar, ≥2 shared tags: hall-effect, switches)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4965,6 +4969,7 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/rapid-trigger-gaming-crossover.mdx
 - article-b: apps/web/src/content/articles/magnetic-switches-deep-dive.mdx
 - action: add [magnetic-switches-deep-dive](/article/magnetic-switches-deep-dive) to rapid-trigger-gaming-crossover body, or vice versa
+- addressed in: 705d1ff
 
 ### [x] [HOT PURSUIT] [content-gap] [7] news pillar — 1 of ≥2 articles in last 30d
 - category: content-gaps
@@ -5012,7 +5017,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/magnetic-switches-deep-dive.mdx
 - action: add [magnetic-switches-deep-dive](/article/magnetic-switches-deep-dive) to computex-2026-keyboard-highlights body, or vice versa
 
-### [ ] [cross-links] [3.6] computex-2026-keyboard-highlights ↔ rapid-trigger-gaming-crossover — no prose cross-link (adjacent pillar, ≥2 shared tags: hall-effect, switches, trends-2026)
+### [x] [cross-links] [3.6] computex-2026-keyboard-highlights ↔ rapid-trigger-gaming-crossover — no prose cross-link (adjacent pillar, ≥2 shared tags: hall-effect, switches, trends-2026)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -5022,6 +5027,7 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/computex-2026-keyboard-highlights.mdx
 - article-b: apps/web/src/content/articles/rapid-trigger-gaming-crossover.mdx
 - action: add [rapid-trigger-gaming-crossover](/article/rapid-trigger-gaming-crossover) to computex-2026-keyboard-highlights body, or vice versa
+- addressed in: 705d1ff
 
 ### [ ] [cross-links] [3.6] computex-2026-keyboard-highlights ↔ zmk-mainstream-shift — no prose cross-link (adjacent pillar, ≥2 shared tags: wireless, trends-2026)
 - category: cross-links
