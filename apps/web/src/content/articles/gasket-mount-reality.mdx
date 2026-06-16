@@ -3,7 +3,7 @@ slug: gasket-mount-reality
 title: "What gasket mount actually delivers (and what it doesn't)"
 pillar: ideas
 publishedAt: '2026-04-19T10:00:00.000Z'
-updatedAt: '2026-06-07T00:00:00.000Z'
+updatedAt: '2026-06-16T00:00:00.000Z'
 author: thock
 lede: "The label appears on keyboards at every price point, from $90 prebuilts to $400 group-buy customs, but two boards with identical spec-sheet language can sound nothing alike. Here is what the term actually tells you, and what it doesn't."
 heroImage: /hero-art/gasket-mount-reality.svg
@@ -33,7 +33,7 @@ In a gasket-mount keyboard, the plate — the piece of aluminum, polycarbonate, 
 
 That description is accurate for every keyboard that legitimately uses the term. It is also almost entirely uninformative about the result, because the behavior of that floating plate depends entirely on what the gasket material is, how much of it there is, and how many points of contact it makes with the plate.
 
-The alternative mount types — top mount, tray mount, bottom mount — have more predictable outcomes because the stiffness of a screw-to-standoff joint varies less across manufacturers than the stiffness of a piece of silicone. Gasket mount introduced a variable that the industry has not yet standardized, and the marketing adopted the term before the engineering settled.
+The alternative mount types — top mount, tray mount, bottom mount, each covered in the [mounting styles guide](/article/mounting-styles-compared) — have more predictable outcomes because the stiffness of a screw-to-standoff joint varies less across manufacturers than the stiffness of a piece of silicone. Gasket mount introduced a variable that the industry has not yet standardized, and the marketing adopted the term before the engineering settled.
 
 <InlineViz
   src="/article-viz/gasket-mount-reality/three-variables.svg"
@@ -72,7 +72,7 @@ Find a teardown or a build log. The keyboard hobby has good documentation cultur
 
 Ask whether the gaskets are replaceable. A board that ships with replaceable gaskets in multiple durometers is acknowledging that the right answer depends on the builder and the switch choice. That design philosophy is a reliable signal that the manufacturer understands the variable, even if they're not publishing the Shore A number in the storefront copy.
 
-Finally, pair expectations to the rest of the build. A gasket mount with a brass plate and stiff gaskets running <PartReference id="oil-king" /> linears is going to sound fundamentally different from the same mount with a PC plate and softer gaskets. The switches and the plate interact before the gasket sees any of the energy. No mount design can override what the plate material and switch characteristics are already doing. The gasket shapes the tail of the acoustic envelope — the sustain and the decay — not the fundamental character of the keystroke. A builder who understands that will not be surprised by any gasket-mount board, regardless of what the label costs.
+Finally, pair expectations to the rest of the build. A gasket mount with a brass plate and stiff gaskets running <PartReference id="oil-king" /> linears is going to sound fundamentally different from the same mount with a PC plate and softer gaskets. The switches and the plate interact before the gasket sees any of the energy. No mount design can override what the plate material and switch characteristics are already doing. The gasket shapes the tail of the acoustic envelope — the sustain and the decay — not the fundamental character of the keystroke. A builder who understands that will not be surprised by any gasket-mount board, regardless of what the label costs. Stabilizers operate in that same post-impact acoustic window; for how stab rattle and chassis resonance interact, see [stabilizers explained](/article/stabilizers-explained).
 
 <InlineViz
   src="/article-viz/gasket-mount-reality/two-questions.svg"
@@ -83,6 +83,6 @@ Finally, pair expectations to the rest of the build. A gasket mount with a brass
 
 ## What to look for
 
-A gasket-mount board worth the name has a PC or POM plate option, a gasket durometer the vendor will tell you, and at least six contact points. Below that threshold the term is shorthand for "softer than a tray mount," which is useful information — just not the information the marketing implies. For builders who own a board in that range and want reliable acoustic improvement without waiting for better specs, [the tape mod](/article/tape-mod) is the cheapest intervention that specifically targets the PCB resonance that budget top-mount and tray-mount builds leave unaddressed. A board at $90 that says "soft typing feel, compliant mount" is describing itself accurately and asking for appropriate expectations. A board at $90 that says "gasket mount" and provides no further detail is asking to be benchmarked against boards that cost four times as much. The distinction is worth holding.
+A gasket-mount board worth the name has a PC or POM plate option, a gasket durometer the vendor will tell you, and at least six contact points. Below that threshold the term is shorthand for "softer than a tray mount," which is useful information — just not the information the marketing implies. For builders who own a board in that range and want reliable acoustic improvement without waiting for better specs, [the tape mod](/article/tape-mod) is the cheapest intervention that specifically targets the PCB resonance that budget top-mount and tray-mount builds leave unaddressed. Layering in [PE foam](/article/pe-foam-mod) addresses the low-mid resonance the tape mod leaves; [the sound-dampening guide](/article/sound-dampening-compared) covers how both stack with the chassis design. A board at $90 that says "soft typing feel, compliant mount" is describing itself accurately and asking for appropriate expectations. A board at $90 that says "gasket mount" and provides no further detail is asking to be benchmarked against boards that cost four times as much. The distinction is worth holding.
 
 The interesting development to watch over the next two quarters is whether the more detailed acoustic specifications — gasket durometer, contact count, plate-swap compatibility — migrate down to the $150 tier as competition for that bracket intensifies. The boards arriving in 2026 at the mid range are already speccing more carefully than 2023 equivalents. The spec sheet is catching up to the label. When a $120 board publishes its gasket Shore A alongside its plate material options, the term will have earned its marketing weight. It hasn't yet, but the direction is right.
