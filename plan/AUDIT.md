@@ -3601,7 +3601,7 @@ passes accumulate signals.)
 - action: add [hmx-cloud-deep-dive](/article/hmx-cloud-deep-dive) to gateron-oil-king-deep-dive body, or vice versa
 - addressed in: fad0476, closes #338
 
-### [ ] [cross-links] [4.5] gmk-cyl-greg-2-group-buy ↔ gmk-cyl-ishtar-r2-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, kbdfans, group-buy, cherry-profile, abs)
+### [x] [cross-links] [4.5] gmk-cyl-greg-2-group-buy ↔ gmk-cyl-ishtar-r2-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, kbdfans, group-buy, cherry-profile, abs)
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -3611,6 +3611,8 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/gmk-cyl-greg-2-group-buy.mdx
 - article-b: apps/web/src/content/articles/gmk-cyl-ishtar-r2-group-buy.mdx
 - action: add [gmk-cyl-ishtar-r2-group-buy](/article/gmk-cyl-ishtar-r2-group-buy) to gmk-cyl-greg-2-group-buy body, or vice versa
+- issue: #348
+- addressed in: 7cad289, closes #348
 
 ### [x] [cross-links] [4.5] gmk-cyl-greg-2-group-buy ↔ gmk-cyl-ramune-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, kbdfans, group-buy, cherry-profile, abs)
 - category: cross-links
