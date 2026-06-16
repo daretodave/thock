@@ -3843,7 +3843,7 @@ passes accumulate signals.)
 - action: add [switch-housings-compared](/article/switch-housings-compared) to lubing-101 body, or vice versa
 - addressed in: 7b9c458
 
-### [ ] [cross-links] [4.5] lubing-switches-guide ↔ spring-swaps-explained — no prose cross-link (same pillar, ≥2 shared tags: switches, modding, linear, tactile)
+### [x] [cross-links] [4.5] lubing-switches-guide ↔ spring-swaps-explained — no prose cross-link (same pillar, ≥2 shared tags: switches, modding, linear, tactile)
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -3854,7 +3854,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/spring-swaps-explained.mdx
 - action: add [spring-swaps-explained](/article/spring-swaps-explained) to lubing-switches-guide body, or vice versa
 
-### [ ] [cross-links] [4.5] lubing-switches-guide ↔ stabilizer-servicing-guide — no prose cross-link (same pillar, ≥2 shared tags: lubing, modding, linear)
+### [x] [cross-links] [4.5] lubing-switches-guide ↔ stabilizer-servicing-guide — no prose cross-link (same pillar, ≥2 shared tags: lubing, modding, linear)
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -3865,7 +3865,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/stabilizer-servicing-guide.mdx
 - action: add [stabilizer-servicing-guide](/article/stabilizer-servicing-guide) to lubing-switches-guide body, or vice versa
 
-### [ ] [cross-links] [4.5] lubing-switches-guide ↔ switch-films-worth-it — no prose cross-link (same pillar, ≥2 shared tags: switches, modding, linear, tactile)
+### [x] [cross-links] [4.5] lubing-switches-guide ↔ switch-films-worth-it — no prose cross-link (same pillar, ≥2 shared tags: switches, modding, linear, tactile)
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -4317,7 +4317,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/gateron-oil-king-deep-dive.mdx
 - action: add [gateron-oil-king-deep-dive](/article/gateron-oil-king-deep-dive) to beginners-switch-buying-guide body, or vice versa
 
-### [ ] [cross-links] [3.6] beginners-switch-buying-guide ↔ lubing-switches-guide — no prose cross-link (adjacent pillar, ≥2 shared tags: linear, tactile)
+### [x] [cross-links] [3.6] beginners-switch-buying-guide ↔ lubing-switches-guide — no prose cross-link (adjacent pillar, ≥2 shared tags: linear, tactile)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4383,7 +4383,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/trends-tracker-preview.mdx
 - action: add [trends-tracker-preview](/article/trends-tracker-preview) to building-mode-sonnet-with-oil-kings body, or vice versa
 
-### [ ] [cross-links] [3.6] cherry-mx2a-revision ↔ lubing-switches-guide — no prose cross-link (adjacent pillar, ≥2 shared tags: switches, linear)
+### [x] [cross-links] [3.6] cherry-mx2a-revision ↔ lubing-switches-guide — no prose cross-link (adjacent pillar, ≥2 shared tags: switches, linear)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4582,7 +4582,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/keychron-q-ultra-zmk.mdx
 - action: add [keychron-q-ultra-zmk](/article/keychron-q-ultra-zmk) to hall-effect-keyboard-guide body, or vice versa
 
-### [ ] [cross-links] [3.6] hmx-cloud-deep-dive ↔ lubing-switches-guide — no prose cross-link (adjacent pillar, ≥2 shared tags: linear, switches)
+### [x] [cross-links] [3.6] hmx-cloud-deep-dive ↔ lubing-switches-guide — no prose cross-link (adjacent pillar, ≥2 shared tags: linear, switches)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4730,7 +4730,7 @@ passes accumulate signals.)
 - issue: [mirror-failed: 2026-06-15T00:00:00Z]
 - addressed in: 4fd470b
 
-### [ ] [cross-links] [3.6] lubing-switches-guide ↔ stabilizers-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: lubing, modding)
+### [x] [cross-links] [3.6] lubing-switches-guide ↔ stabilizers-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: lubing, modding)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
