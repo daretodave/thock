@@ -4172,7 +4172,7 @@ passes accumulate signals.)
 > Filed 2026-06-15 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 - addressed in: 5ea4b6a — rapid-trigger-gaming-crossover
 
-### [ ] [cross-links] [3.6] acoustic-spec-rise ↔ drop-holy-panda-x-deep-dive — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, factory-lubed)
+### [x] [cross-links] [3.6] acoustic-spec-rise ↔ drop-holy-panda-x-deep-dive — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, factory-lubed) — addressed in 1885e64
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4183,7 +4183,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/drop-holy-panda-x-deep-dive.mdx
 - action: add [drop-holy-panda-x-deep-dive](/article/drop-holy-panda-x-deep-dive) to acoustic-spec-rise body, or vice versa
 
-### [ ] [cross-links] [3.6] acoustic-spec-rise ↔ gasket-mount-reality — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic)
+### [x] [cross-links] [3.6] acoustic-spec-rise ↔ gasket-mount-reality — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic) — addressed in 1885e64
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4194,7 +4194,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/gasket-mount-reality.mdx
 - action: add [gasket-mount-reality](/article/gasket-mount-reality) to acoustic-spec-rise body, or vice versa
 
-### [ ] [cross-links] [3.6] acoustic-spec-rise ↔ mounting-styles-compared — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic)
+### [x] [cross-links] [3.6] acoustic-spec-rise ↔ mounting-styles-compared — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic) — addressed in 1885e64
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4205,7 +4205,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/mounting-styles-compared.mdx
 - action: add [mounting-styles-compared](/article/mounting-styles-compared) to acoustic-spec-rise body, or vice versa
 
-### [ ] [cross-links] [3.6] acoustic-spec-rise ↔ o-ring-mod — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic)
+### [x] [cross-links] [3.6] acoustic-spec-rise ↔ o-ring-mod — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic) — addressed in 1885e64
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4216,7 +4216,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/o-ring-mod.mdx
 - action: add [o-ring-mod](/article/o-ring-mod) to acoustic-spec-rise body, or vice versa
 
-### [ ] [cross-links] [3.6] acoustic-spec-rise ↔ pe-foam-mod — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic)
+### [x] [cross-links] [3.6] acoustic-spec-rise ↔ pe-foam-mod — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic) — addressed in 1885e64
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4227,7 +4227,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/pe-foam-mod.mdx
 - action: add [pe-foam-mod](/article/pe-foam-mod) to acoustic-spec-rise body, or vice versa
 
-### [ ] [cross-links] [3.6] acoustic-spec-rise ↔ plate-materials-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic)
+### [x] [cross-links] [3.6] acoustic-spec-rise ↔ plate-materials-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic) — addressed in 1885e64
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4238,7 +4238,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/plate-materials-explained.mdx
 - action: add [plate-materials-explained](/article/plate-materials-explained) to acoustic-spec-rise body, or vice versa
 
-### [ ] [cross-links] [3.6] acoustic-spec-rise ↔ stabilizers-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic)
+### [x] [cross-links] [3.6] acoustic-spec-rise ↔ stabilizers-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic) — addressed in 1885e64
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4249,7 +4249,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/stabilizers-explained.mdx
 - action: add [stabilizers-explained](/article/stabilizers-explained) to acoustic-spec-rise body, or vice versa
 
-### [ ] [cross-links] [3.6] acoustic-spec-rise ↔ tape-mod — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic)
+### [x] [cross-links] [3.6] acoustic-spec-rise ↔ tape-mod — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic) — addressed in 1885e64
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -5025,3 +5025,14 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/computex-2026-keyboard-highlights.mdx
 - article-b: apps/web/src/content/articles/zmk-mainstream-shift.mdx
 - action: add [zmk-mainstream-shift](/article/zmk-mainstream-shift) to computex-2026-keyboard-highlights body, or vice versa
+
+### [ ] [cross-links] [3.6] lubing-101 ↔ stabilizer-servicing-guide — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, beginner)
+- category: cross-links
+- filed: 2026-06-16 by article-crosslink-survey.mjs
+- impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 3.6 (impact × ease / 10)
+- shared-tags: modding, beginner
+- article-a: apps/web/src/content/articles/lubing-101.mdx
+- article-b: apps/web/src/content/articles/stabilizer-servicing-guide.mdx
+- action: add [stabilizer-servicing-guide](/article/stabilizer-servicing-guide) to lubing-101 body, or vice versa
