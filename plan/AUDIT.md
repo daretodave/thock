@@ -3565,7 +3565,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/plate-materials-explained.mdx
 - action: add [plate-materials-explained](/article/plate-materials-explained) to drop-holy-panda-x-deep-dive body, or vice versa
 
-### [ ] [cross-links] [4.5] gasket-mount-reality ↔ pe-foam-mod — no prose cross-link (same pillar, ≥2 shared tags: modding, acoustic)
+### [x] [cross-links] [4.5] gasket-mount-reality ↔ pe-foam-mod — no prose cross-link (same pillar, ≥2 shared tags: modding, acoustic)
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -3575,6 +3575,7 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/gasket-mount-reality.mdx
 - article-b: apps/web/src/content/articles/pe-foam-mod.mdx
 - action: add [pe-foam-mod](/article/pe-foam-mod) to gasket-mount-reality body, or vice versa
+- addressed in: 63f2ea5, closes #343
 
 ### [x] [cross-links] [4.5] gasket-mount-reality ↔ tape-mod — no prose cross-link (same pillar, ≥2 shared tags: modding, acoustic)
 - category: cross-links
@@ -4508,7 +4509,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/switch-films-worth-it.mdx
 - action: add [switch-films-worth-it](/article/switch-films-worth-it) to drop-holy-panda-x-deep-dive body, or vice versa
 
-### [ ] [cross-links] [3.6] gasket-mount-reality ↔ mounting-styles-compared — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic, polycarbonate)
+### [x] [cross-links] [3.6] gasket-mount-reality ↔ mounting-styles-compared — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic, polycarbonate)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4518,8 +4519,9 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/gasket-mount-reality.mdx
 - article-b: apps/web/src/content/articles/mounting-styles-compared.mdx
 - action: add [mounting-styles-compared](/article/mounting-styles-compared) to gasket-mount-reality body, or vice versa
+- addressed in: 63f2ea5, closes #343
 
-### [ ] [cross-links] [3.6] gasket-mount-reality ↔ sound-dampening-compared — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic)
+### [x] [cross-links] [3.6] gasket-mount-reality ↔ sound-dampening-compared — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4529,8 +4531,9 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/gasket-mount-reality.mdx
 - article-b: apps/web/src/content/articles/sound-dampening-compared.mdx
 - action: add [sound-dampening-compared](/article/sound-dampening-compared) to gasket-mount-reality body, or vice versa
+- addressed in: 63f2ea5, closes #343
 
-### [ ] [cross-links] [3.6] gasket-mount-reality ↔ stabilizers-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic)
+### [x] [cross-links] [3.6] gasket-mount-reality ↔ stabilizers-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4540,6 +4543,7 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/gasket-mount-reality.mdx
 - article-b: apps/web/src/content/articles/stabilizers-explained.mdx
 - action: add [stabilizers-explained](/article/stabilizers-explained) to gasket-mount-reality body, or vice versa
+- addressed in: 63f2ea5, closes #343
 
 ### [x] [cross-links] [3.6] gmk-cyl-prussian-alert ↔ keycap-profiles-compared — no prose cross-link (adjacent pillar, ≥2 shared tags: keycaps, cherry-profile)
 - category: cross-links
