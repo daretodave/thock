@@ -32,7 +32,7 @@
     },
     {
       "slug": "lubing-switches-guide",
-      "readTime": 9,
+      "readTime": 10,
       "frontmatter": {
         "title": "Lubing switches: what to use, how much, and what to skip",
         "lede": "Four lubes, four application points, and one rule that prevents most mistakes: over-lubing is irreversible, under-lubing is not. Here is the practical reference.",
@@ -322,7 +322,7 @@
     },
     {
       "slug": "tape-mod",
-      "readTime": 9,
+      "readTime": 10,
       "frontmatter": {
         "title": "The tape mod: what one strip of Kapton actually does",
         "lede": "Three to five strips of painter's tape on the back of your PCB — that's the whole mod. The acoustic effect is real. Its magnitude depends almost entirely on the board underneath it.",
@@ -541,5 +541,5 @@
       }
     }
   ],
-  "generatedAt": "2026-06-15T21:10:50.762Z"
+  "generatedAt": "2026-06-16T00:57:51.491Z"
 }
