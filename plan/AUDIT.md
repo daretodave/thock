@@ -3586,7 +3586,7 @@ passes accumulate signals.)
 - action: add [tape-mod](/article/tape-mod) to gasket-mount-reality body, or vice versa
 - addressed in: 99a02b3
 
-### [ ] [cross-links] [4.5] gateron-oil-king-deep-dive ↔ hmx-cloud-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: linear, factory-lubed, deep-dive)
+### [x] [cross-links] [4.5] gateron-oil-king-deep-dive ↔ hmx-cloud-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: linear, factory-lubed, deep-dive)
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -3596,6 +3596,7 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/gateron-oil-king-deep-dive.mdx
 - article-b: apps/web/src/content/articles/hmx-cloud-deep-dive.mdx
 - action: add [hmx-cloud-deep-dive](/article/hmx-cloud-deep-dive) to gateron-oil-king-deep-dive body, or vice versa
+- addressed in: fad0476, closes #338
 
 ### [ ] [cross-links] [4.5] gmk-cyl-greg-2-group-buy ↔ gmk-cyl-ishtar-r2-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, kbdfans, group-buy, cherry-profile, abs)
 - category: cross-links
@@ -3770,7 +3771,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/gsk-sweet-nightmare-group-buy.mdx
 - action: add [gsk-sweet-nightmare-group-buy](/article/gsk-sweet-nightmare-group-buy) to gmk-cyl-selene-group-buy body, or vice versa
 
-### [ ] [cross-links] [4.5] hmx-cloud-deep-dive ↔ magnetic-switches-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
+### [x] [cross-links] [4.5] hmx-cloud-deep-dive ↔ magnetic-switches-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -3780,8 +3781,9 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/hmx-cloud-deep-dive.mdx
 - article-b: apps/web/src/content/articles/magnetic-switches-deep-dive.mdx
 - action: add [magnetic-switches-deep-dive](/article/magnetic-switches-deep-dive) to hmx-cloud-deep-dive body, or vice versa
+- addressed in: fad0476, closes #338
 
-### [ ] [cross-links] [4.5] hmx-cloud-deep-dive ↔ optical-switches-explained — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
+### [x] [cross-links] [4.5] hmx-cloud-deep-dive ↔ optical-switches-explained — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -3791,6 +3793,7 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/hmx-cloud-deep-dive.mdx
 - article-b: apps/web/src/content/articles/optical-switches-explained.mdx
 - action: add [optical-switches-explained](/article/optical-switches-explained) to hmx-cloud-deep-dive body, or vice versa
+- addressed in: fad0476, closes #338
 
 ### [x] [cross-links] [4.5] lubing-101 ↔ mounting-styles-compared — no prose cross-link (same pillar, ≥2 shared tags: modding, beginner)
 - category: cross-links
