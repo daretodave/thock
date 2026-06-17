@@ -3919,7 +3919,7 @@ passes accumulate signals.)
 - issue: [mirror-failed: 2026-06-12T11:25:00Z]
 - addressed in: 8d7e3b7
 
-### [ ] [cross-links] [4.5] mounting-styles-compared ↔ switch-housings-compared — no prose cross-link (same pillar, ≥2 shared tags: polycarbonate, beginner)
+### [x] [cross-links] [4.5] mounting-styles-compared ↔ switch-housings-compared — no prose cross-link (same pillar, ≥2 shared tags: polycarbonate, beginner)
 - category: cross-links
 - filed: 2026-06-11 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -3929,6 +3929,8 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/mounting-styles-compared.mdx
 - article-b: apps/web/src/content/articles/switch-housings-compared.mdx
 - action: add [switch-housings-compared](/article/switch-housings-compared) to mounting-styles-compared body, or vice versa
+- issue: #350
+- addressed in: 1d7591d, closes #350
 
 ### [x] [cross-links] [4.5] pe-foam-mod ↔ typing-tests-lie — no prose cross-link (same pillar, ≥2 shared tags: modding, beginner)
 - category: cross-links
@@ -4764,7 +4766,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/vendor-first-customs.mdx
 - action: add [vendor-first-customs](/article/vendor-first-customs) to mode-sonnet-r2-group-buy-coverage body, or vice versa
 
-### [ ] [cross-links] [3.6] mounting-styles-compared ↔ pe-foam-mod — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic, beginner)
+### [x] [cross-links] [3.6] mounting-styles-compared ↔ pe-foam-mod — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic, beginner)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4774,6 +4776,7 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/mounting-styles-compared.mdx
 - article-b: apps/web/src/content/articles/pe-foam-mod.mdx
 - action: add [pe-foam-mod](/article/pe-foam-mod) to mounting-styles-compared body, or vice versa
+- addressed in: 1d7591d
 
 ### [x] [cross-links] [3.6] mounting-styles-compared ↔ plate-materials-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic, polycarbonate) — closes #340
 - category: cross-links
