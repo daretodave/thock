@@ -4307,7 +4307,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/plate-materials-explained.mdx
 - action: add [plate-materials-explained](/article/plate-materials-explained) to alice-layout-decline body, or vice versa
 
-### [ ] [cross-links] [3.6] beginners-switch-buying-guide ↔ building-mode-sonnet-with-oil-kings — no prose cross-link (adjacent pillar, ≥2 shared tags: linear, gateron)
+### [x] [cross-links] [3.6] beginners-switch-buying-guide ↔ building-mode-sonnet-with-oil-kings — no prose cross-link (adjacent pillar, ≥2 shared tags: linear, gateron) — addressed in c2c1ea4
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4317,8 +4317,9 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/beginners-switch-buying-guide.mdx
 - article-b: apps/web/src/content/articles/building-mode-sonnet-with-oil-kings.mdx
 - action: add [building-mode-sonnet-with-oil-kings](/article/building-mode-sonnet-with-oil-kings) to beginners-switch-buying-guide body, or vice versa
+- issue: [mirror-failed: 2026-06-17]
 
-### [ ] [cross-links] [3.6] beginners-switch-buying-guide ↔ gateron-oil-king-deep-dive — no prose cross-link (adjacent pillar, ≥2 shared tags: linear, gateron)
+### [x] [cross-links] [3.6] beginners-switch-buying-guide ↔ gateron-oil-king-deep-dive — no prose cross-link (adjacent pillar, ≥2 shared tags: linear, gateron) — addressed in c2c1ea4
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4328,6 +4329,7 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/beginners-switch-buying-guide.mdx
 - article-b: apps/web/src/content/articles/gateron-oil-king-deep-dive.mdx
 - action: add [gateron-oil-king-deep-dive](/article/gateron-oil-king-deep-dive) to beginners-switch-buying-guide body, or vice versa
+- issue: [mirror-failed: 2026-06-17]
 
 ### [x] [cross-links] [3.6] beginners-switch-buying-guide ↔ lubing-switches-guide — no prose cross-link (adjacent pillar, ≥2 shared tags: linear, tactile)
 - category: cross-links
@@ -4340,7 +4342,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/lubing-switches-guide.mdx
 - action: add [lubing-switches-guide](/article/lubing-switches-guide) to beginners-switch-buying-guide body, or vice versa
 
-### [ ] [cross-links] [3.6] beginners-switch-buying-guide ↔ spring-swaps-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: linear, tactile)
+### [x] [cross-links] [3.6] beginners-switch-buying-guide ↔ spring-swaps-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: linear, tactile) — addressed in c2c1ea4
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4350,6 +4352,7 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/beginners-switch-buying-guide.mdx
 - article-b: apps/web/src/content/articles/spring-swaps-explained.mdx
 - action: add [spring-swaps-explained](/article/spring-swaps-explained) to beginners-switch-buying-guide body, or vice versa
+- issue: [mirror-failed: 2026-06-17]
 
 ### [x] [cross-links] [3.6] beginners-switch-buying-guide ↔ stabilizer-servicing-guide — no prose cross-link (adjacent pillar, ≥2 shared tags: linear, beginner) — addressed in ad32abd
 - category: cross-links
@@ -4362,7 +4365,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/stabilizer-servicing-guide.mdx
 - action: add [stabilizer-servicing-guide](/article/stabilizer-servicing-guide) to beginners-switch-buying-guide body, or vice versa
 
-### [ ] [cross-links] [3.6] beginners-switch-buying-guide ↔ tape-mod — no prose cross-link (adjacent pillar, ≥2 shared tags: linear, beginner)
+### [x] [cross-links] [3.6] beginners-switch-buying-guide ↔ tape-mod — no prose cross-link (adjacent pillar, ≥2 shared tags: linear, beginner) — addressed in c2c1ea4
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4372,6 +4375,7 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/beginners-switch-buying-guide.mdx
 - article-b: apps/web/src/content/articles/tape-mod.mdx
 - action: add [tape-mod](/article/tape-mod) to beginners-switch-buying-guide body, or vice versa
+- issue: [mirror-failed: 2026-06-17]
 
 ### [ ] [cross-links] [3.6] building-mode-sonnet-with-oil-kings ↔ gateron-oil-king-deep-dive — no prose cross-link (adjacent pillar, ≥2 shared tags: gateron, linear)
 - category: cross-links
