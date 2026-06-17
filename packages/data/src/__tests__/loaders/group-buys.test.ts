@@ -23,10 +23,10 @@ describe('group-buys loader', () => {
   })
 
   it('includes live group buys in active list when their window includes the date', () => {
-    // Prussian Alert runs 2026-05-15 → 2026-06-12.
-    const active = getActiveGroupBuys(new Date('2026-05-20T00:00:00Z'))
+    // Mode Sonnet R2 runs 2026-06-01 → 2026-07-15.
+    const active = getActiveGroupBuys(new Date('2026-06-15T00:00:00Z'))
     const slugs = active.map((g) => g.slug)
-    expect(slugs).toContain('kbdfans-gmk-cyl-prussian-alert')
+    expect(slugs).toContain('cannonkeys-mode-sonnet-r2')
   })
 
   it('excludes a closed group buy from the active list once its end-date has passed', () => {
