@@ -4379,7 +4379,7 @@ passes accumulate signals.)
 - action: add [tape-mod](/article/tape-mod) to beginners-switch-buying-guide body, or vice versa
 - issue: [mirror-failed: 2026-06-17]
 
-### [ ] [cross-links] [3.6] building-mode-sonnet-with-oil-kings ↔ gateron-oil-king-deep-dive — no prose cross-link (adjacent pillar, ≥2 shared tags: gateron, linear)
+### [x] [cross-links] [3.6] building-mode-sonnet-with-oil-kings ↔ gateron-oil-king-deep-dive — no prose cross-link (adjacent pillar, ≥2 shared tags: gateron, linear)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4389,8 +4389,10 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/building-mode-sonnet-with-oil-kings.mdx
 - article-b: apps/web/src/content/articles/gateron-oil-king-deep-dive.mdx
 - action: add [gateron-oil-king-deep-dive](/article/gateron-oil-king-deep-dive) to building-mode-sonnet-with-oil-kings body, or vice versa
+- issue: [mirror-failed: 2026-06-17T00:00:00Z]
+- addressed in: a64d6a2 (this tick — cluster drain, 2 pairs)
 
-### [ ] [cross-links] [3.6] building-mode-sonnet-with-oil-kings ↔ trends-tracker-preview — no prose cross-link (adjacent pillar, ≥2 shared tags: gateron, mode)
+### [x] [cross-links] [3.6] building-mode-sonnet-with-oil-kings ↔ trends-tracker-preview — no prose cross-link (adjacent pillar, ≥2 shared tags: gateron, mode)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4400,6 +4402,8 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/building-mode-sonnet-with-oil-kings.mdx
 - article-b: apps/web/src/content/articles/trends-tracker-preview.mdx
 - action: add [trends-tracker-preview](/article/trends-tracker-preview) to building-mode-sonnet-with-oil-kings body, or vice versa
+- issue: [mirror-failed: 2026-06-17T00:00:00Z]
+- addressed in: a64d6a2 (this tick — cluster drain, 2 pairs)
 
 ### [x] [cross-links] [3.6] cherry-mx2a-revision ↔ lubing-switches-guide — no prose cross-link (adjacent pillar, ≥2 shared tags: switches, linear)
 - category: cross-links
