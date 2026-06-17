@@ -4416,7 +4416,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/lubing-switches-guide.mdx
 - action: add [lubing-switches-guide](/article/lubing-switches-guide) to cherry-mx2a-revision body, or vice versa
 
-### [ ] [cross-links] [3.6] cherry-mx2a-revision ↔ spring-swaps-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: switches, linear)
+### [x] [cross-links] [3.6] cherry-mx2a-revision ↔ spring-swaps-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: switches, linear)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4426,8 +4426,10 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/cherry-mx2a-revision.mdx
 - article-b: apps/web/src/content/articles/spring-swaps-explained.mdx
 - action: add [spring-swaps-explained](/article/spring-swaps-explained) to cherry-mx2a-revision body, or vice versa
+- issue: #354
+- addressed in: 80d8765, closes #354
 
-### [ ] [cross-links] [3.6] cherry-mx2a-revision ↔ switch-films-worth-it — no prose cross-link (adjacent pillar, ≥2 shared tags: switches, linear)
+### [x] [cross-links] [3.6] cherry-mx2a-revision ↔ switch-films-worth-it — no prose cross-link (adjacent pillar, ≥2 shared tags: switches, linear)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4437,6 +4439,8 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/cherry-mx2a-revision.mdx
 - article-b: apps/web/src/content/articles/switch-films-worth-it.mdx
 - action: add [switch-films-worth-it](/article/switch-films-worth-it) to cherry-mx2a-revision body, or vice versa
+- issue: #354
+- addressed in: 80d8765, closes #354
 
 ### [x] [cross-links] [3.6] dcs-grass-valley-decline ↔ gmk-cyl-prussian-alert — no prose cross-link (adjacent pillar, ≥2 shared tags: keycaps, group-buy)
 - category: cross-links
