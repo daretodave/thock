@@ -4272,7 +4272,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/tape-mod.mdx
 - action: add [tape-mod](/article/tape-mod) to acoustic-spec-rise body, or vice versa
 
-### [ ] [cross-links] [3.6] alice-layout-decline ↔ drop-holy-panda-x-deep-dive — no prose cross-link (adjacent pillar, ≥2 shared tags: deep-dive, modding)
+### [x] [cross-links] [3.6] alice-layout-decline ↔ drop-holy-panda-x-deep-dive — no prose cross-link (adjacent pillar, ≥2 shared tags: deep-dive, modding)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4282,6 +4282,8 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/alice-layout-decline.mdx
 - article-b: apps/web/src/content/articles/drop-holy-panda-x-deep-dive.mdx
 - action: add [drop-holy-panda-x-deep-dive](/article/drop-holy-panda-x-deep-dive) to alice-layout-decline body, or vice versa
+- issue: #353
+- addressed in: 67d7e43, closes #353
 
 ### [x] [cross-links] [3.6] alice-layout-decline ↔ keyboard-acoustics-deep-dive — no prose cross-link (adjacent pillar, ≥2 shared tags: deep-dive, modding)
 - category: cross-links
@@ -4500,7 +4502,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/keycap-materials-compared.mdx
 - action: add [keycap-materials-compared](/article/keycap-materials-compared) to divinikey-dcs-dolch-group-buy body, or vice versa
 
-### [ ] [cross-links] [3.6] drop-holy-panda-x-deep-dive ↔ spring-swaps-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: tactile, modding)
+### [x] [cross-links] [3.6] drop-holy-panda-x-deep-dive ↔ spring-swaps-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: tactile, modding)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4510,8 +4512,10 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/drop-holy-panda-x-deep-dive.mdx
 - article-b: apps/web/src/content/articles/spring-swaps-explained.mdx
 - action: add [spring-swaps-explained](/article/spring-swaps-explained) to drop-holy-panda-x-deep-dive body, or vice versa
+- issue: #353
+- addressed in: 67d7e43, closes #353
 
-### [ ] [cross-links] [3.6] drop-holy-panda-x-deep-dive ↔ switch-films-worth-it — no prose cross-link (adjacent pillar, ≥2 shared tags: tactile, modding)
+### [x] [cross-links] [3.6] drop-holy-panda-x-deep-dive ↔ switch-films-worth-it — no prose cross-link (adjacent pillar, ≥2 shared tags: tactile, modding)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4521,6 +4525,8 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/drop-holy-panda-x-deep-dive.mdx
 - article-b: apps/web/src/content/articles/switch-films-worth-it.mdx
 - action: add [switch-films-worth-it](/article/switch-films-worth-it) to drop-holy-panda-x-deep-dive body, or vice versa
+- issue: #353
+- addressed in: 67d7e43, closes #353
 
 ### [x] [cross-links] [3.6] gasket-mount-reality ↔ mounting-styles-compared — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic, polycarbonate)
 - category: cross-links
