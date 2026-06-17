@@ -4082,7 +4082,7 @@ passes accumulate signals.)
 > Filed 2026-06-12 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 - addressed in: 3959b5f
 
-### [ ] [data] [3.6] kbdfans-gmk-cyl-prussian-alert — status stale, endDate 2026-06-12 passed
+### [x] [data] [3.6] kbdfans-gmk-cyl-prussian-alert — status stale, endDate 2026-06-12 passed
 - category: data
 - filed: 2026-06-12 by group-buy-status-check.mjs
 - impact: 4 (buy shows status "live" but endDate 2026-06-12 has passed — data hygiene gap)
@@ -4090,6 +4090,8 @@ passes accumulate signals.)
 - score: 3.6 (impact × ease / 10)
 - group-buy: data/group-buys/kbdfans-gmk-cyl-prussian-alert.json
 - action: update status from 'live' to 'closed' in data/group-buys/kbdfans-gmk-cyl-prussian-alert.json
+- issue: #351
+- addressed in: a487e76, closes #351
 
 ### [x] [cross-links] [4.5] keyboard-acoustics-deep-dive ↔ cherry-mx2a-revision — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, switches)
 - category: cross-links
