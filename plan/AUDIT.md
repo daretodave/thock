@@ -4610,7 +4610,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/keycap-profiles-compared.mdx
 - action: add [keycap-profiles-compared](/article/keycap-profiles-compared) to gmk-cyl-selene-group-buy body, or vice versa
 
-### [ ] [cross-links] [3.6] hall-effect-keyboard-guide ↔ keychron-q-ultra-zmk — no prose cross-link (adjacent pillar, ≥2 shared tags: prebuilt, polling-rate)
+### [x] [cross-links] [3.6] hall-effect-keyboard-guide ↔ keychron-q-ultra-zmk — no prose cross-link (adjacent pillar, ≥2 shared tags: prebuilt, polling-rate)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4620,6 +4620,8 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/hall-effect-keyboard-guide.mdx
 - article-b: apps/web/src/content/articles/keychron-q-ultra-zmk.mdx
 - action: add [keychron-q-ultra-zmk](/article/keychron-q-ultra-zmk) to hall-effect-keyboard-guide body, or vice versa
+- issue: [mirror-failed: 2026-06-19T21:30:00Z]
+- addressed in: 5385331
 
 ### [x] [cross-links] [3.6] hmx-cloud-deep-dive ↔ lubing-switches-guide — no prose cross-link (adjacent pillar, ≥2 shared tags: linear, switches)
 - category: cross-links
