@@ -5086,7 +5086,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/stabilizer-servicing-guide.mdx
 - action: add [stabilizer-servicing-guide](/article/stabilizer-servicing-guide) to lubing-101 body, or vice versa
 
-### [HOT PURSUIT] [content-gap] [7] trends pillar — 1 of ≥2 articles in last 30d
+### [x] [HOT PURSUIT] [content-gap] [7] trends pillar — 1 of ≥2 articles in last 30d — addressed in 87d7579 (closes #355)
 - category: content-gaps
 - impact: 8 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
