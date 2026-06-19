@@ -4784,7 +4784,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/stabilizers-explained.mdx
 - action: add [stabilizers-explained](/article/stabilizers-explained) to lubing-switches-guide body, or vice versa
 
-### [ ] [cross-links] [3.6] mode-sonnet-r2-group-buy-coverage ↔ vendor-first-customs — no prose cross-link (adjacent pillar, ≥2 shared tags: mode, cannonkeys)
+### [x] [cross-links] [3.6] mode-sonnet-r2-group-buy-coverage ↔ vendor-first-customs — no prose cross-link (adjacent pillar, ≥2 shared tags: mode, cannonkeys)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4794,6 +4794,8 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/mode-sonnet-r2-group-buy-coverage.mdx
 - article-b: apps/web/src/content/articles/vendor-first-customs.mdx
 - action: add [vendor-first-customs](/article/vendor-first-customs) to mode-sonnet-r2-group-buy-coverage body, or vice versa
+- issue: #357
+- addressed in: bf06177
 
 ### [x] [cross-links] [3.6] mounting-styles-compared ↔ pe-foam-mod — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, acoustic, beginner)
 - category: cross-links
