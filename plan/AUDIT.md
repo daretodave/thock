@@ -4501,7 +4501,7 @@ passes accumulate signals.)
 - issue: [mirror-failed: 2026-06-19T00:00:00Z]
 - addressed in: adf0aed
 
-### [ ] [cross-links] [3.6] divinikey-dcs-dolch-group-buy ↔ keycap-materials-compared — no prose cross-link (adjacent pillar, ≥2 shared tags: keycaps, abs)
+### [x] [cross-links] [3.6] divinikey-dcs-dolch-group-buy ↔ keycap-materials-compared — no prose cross-link (adjacent pillar, ≥2 shared tags: keycaps, abs)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4511,6 +4511,8 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/divinikey-dcs-dolch-group-buy.mdx
 - article-b: apps/web/src/content/articles/keycap-materials-compared.mdx
 - action: add [keycap-materials-compared](/article/keycap-materials-compared) to divinikey-dcs-dolch-group-buy body, or vice versa
+- issue: #356
+- addressed in: 8eaa06f, closes #356
 
 ### [x] [cross-links] [3.6] drop-holy-panda-x-deep-dive ↔ spring-swaps-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: tactile, modding)
 - category: cross-links
