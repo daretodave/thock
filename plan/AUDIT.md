@@ -5102,7 +5102,7 @@ passes accumulate signals.)
 - next: /ship-content → trends pillar article
 > Filed 2026-06-19 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 
-### [ ] [data] [3.6] kbdfans-gmk-cyl-selene — status stale, endDate 2026-06-19 passed
+### [x] [data] [3.6] kbdfans-gmk-cyl-selene — status stale, endDate 2026-06-19 passed
 - category: data
 - filed: 2026-06-19 by group-buy-status-check.mjs
 - impact: 4 (buy shows status "live" but endDate 2026-06-19 has passed — data hygiene gap)
@@ -5110,3 +5110,4 @@ passes accumulate signals.)
 - score: 3.6 (impact × ease / 10)
 - group-buy: data/group-buys/kbdfans-gmk-cyl-selene.json
 - action: update status from 'live' to 'closed' in data/group-buys/kbdfans-gmk-cyl-selene.json
+- addressed in: 480b458
