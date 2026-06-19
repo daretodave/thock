@@ -4488,7 +4488,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/gmk-cyl-selene-group-buy.mdx
 - action: add [gmk-cyl-selene-group-buy](/article/gmk-cyl-selene-group-buy) to dcs-olivetti-comeback body, or vice versa
 
-### [ ] [cross-links] [3.6] dcs-olivetti-comeback ↔ keycap-profiles-compared — no prose cross-link (adjacent pillar, ≥2 shared tags: keycaps, cherry-profile)
+### [x] [cross-links] [3.6] dcs-olivetti-comeback ↔ keycap-profiles-compared — no prose cross-link (adjacent pillar, ≥2 shared tags: keycaps, cherry-profile)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4498,6 +4498,8 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/dcs-olivetti-comeback.mdx
 - article-b: apps/web/src/content/articles/keycap-profiles-compared.mdx
 - action: add [keycap-profiles-compared](/article/keycap-profiles-compared) to dcs-olivetti-comeback body, or vice versa
+- issue: [mirror-failed: 2026-06-19T00:00:00Z]
+- addressed in: adf0aed
 
 ### [ ] [cross-links] [3.6] divinikey-dcs-dolch-group-buy ↔ keycap-materials-compared — no prose cross-link (adjacent pillar, ≥2 shared tags: keycaps, abs)
 - category: cross-links
@@ -4628,7 +4630,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/lubing-switches-guide.mdx
 - action: add [lubing-switches-guide](/article/lubing-switches-guide) to hmx-cloud-deep-dive body, or vice versa
 
-### [ ] [cross-links] [3.6] hmx-cloud-deep-dive ↔ spring-swaps-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: linear, switches)
+### [x] [cross-links] [3.6] hmx-cloud-deep-dive ↔ spring-swaps-explained — no prose cross-link (adjacent pillar, ≥2 shared tags: linear, switches)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4638,8 +4640,9 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/hmx-cloud-deep-dive.mdx
 - article-b: apps/web/src/content/articles/spring-swaps-explained.mdx
 - action: add [spring-swaps-explained](/article/spring-swaps-explained) to hmx-cloud-deep-dive body, or vice versa
+- addressed in: stale — spring-swaps-explained already links to hmx-cloud-deep-dive (crosslink survey confirmed 0 unlinked pairs for hmx-cloud-deep-dive)
 
-### [ ] [cross-links] [3.6] hmx-cloud-deep-dive ↔ switch-films-worth-it — no prose cross-link (adjacent pillar, ≥2 shared tags: linear, switches)
+### [x] [cross-links] [3.6] hmx-cloud-deep-dive ↔ switch-films-worth-it — no prose cross-link (adjacent pillar, ≥2 shared tags: linear, switches)
 - category: cross-links
 - filed: 2026-06-15 by article-crosslink-survey.mjs
 - impact: 4 (cross-pillar articles sharing ≥2 tags with no cross-link; related content not discoverable)
@@ -4649,6 +4652,7 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/hmx-cloud-deep-dive.mdx
 - article-b: apps/web/src/content/articles/switch-films-worth-it.mdx
 - action: add [switch-films-worth-it](/article/switch-films-worth-it) to hmx-cloud-deep-dive body, or vice versa
+- addressed in: stale — switch-films-worth-it already links to hmx-cloud-deep-dive (crosslink survey confirmed 0 unlinked pairs for hmx-cloud-deep-dive)
 
 ### [x] [cross-links] [3.6] keyboard-acoustics-deep-dive ↔ lubing-101 — no prose cross-link (adjacent pillar, ≥2 shared tags: modding, switches)
 - category: cross-links
