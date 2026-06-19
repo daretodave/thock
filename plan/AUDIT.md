@@ -5117,3 +5117,95 @@ passes accumulate signals.)
 - group-buy: data/group-buys/kbdfans-gmk-cyl-selene.json
 - action: update status from 'live' to 'closed' in data/group-buys/kbdfans-gmk-cyl-selene.json
 - addressed in: 480b458
+
+### [ ] [mentionedParts] [3.6] acoustic-spec-rise — 1 catalog entity mentioned in prose but absent from mentionedParts
+- category: mentionedParts
+- filed: 2026-06-19 by article-parts-check.mjs corpus scan
+- impact: 4 (missing mentionedParts entries break the /part/[kind]/[slug] "mentioned in" rail)
+- ease: 9 (frontmatter edit — no code or schema change needed)
+- score: 3.6 (impact × ease / 10)
+- file: apps/web/src/content/articles/acoustic-spec-rise.mdx
+- entities:
+  - Drop Holy Panda X (switch `drop-holy-panda-x`) — prose line 98
+- action: add each entity to the article's mentionedParts frontmatter with the correct slug and kind
+
+### [ ] [mentionedParts] [3.6] alice-layout-decline — 1 catalog entity mentioned in prose but absent from mentionedParts
+- category: mentionedParts
+- filed: 2026-06-19 by article-parts-check.mjs corpus scan
+- impact: 4 (missing mentionedParts entries break the /part/[kind]/[slug] "mentioned in" rail)
+- ease: 9 (frontmatter edit — no code or schema change needed)
+- score: 3.6 (impact × ease / 10)
+- file: apps/web/src/content/articles/alice-layout-decline.mdx
+- entities:
+  - Drop Holy Panda X (switch `drop-holy-panda-x`) — prose line 112
+- action: add each entity to the article's mentionedParts frontmatter with the correct slug and kind
+
+### [x] [mentionedParts] [3.6] beginners-switch-buying-guide — 1 catalog entity mentioned in prose but absent from mentionedParts
+- category: mentionedParts
+- filed: 2026-06-19 by article-parts-check.mjs corpus scan
+- impact: 4 (missing mentionedParts entries break the /part/[kind]/[slug] "mentioned in" rail)
+- ease: 9 (frontmatter edit — no code or schema change needed)
+- score: 3.6 (impact × ease / 10)
+- file: apps/web/src/content/articles/beginners-switch-buying-guide.mdx
+- entities:
+  - Mode Sonnet (board `mode-sonnet`) — prose line 58
+- action: add each entity to the article's mentionedParts frontmatter with the correct slug and kind
+- issue: #358
+- addressed in: a5cf1c6, closes #358
+
+### [ ] [mentionedParts] [3.6] dcs-grass-valley-decline — 1 catalog entity mentioned in prose but absent from mentionedParts
+- category: mentionedParts
+- filed: 2026-06-19 by article-parts-check.mjs corpus scan
+- impact: 4 (missing mentionedParts entries break the /part/[kind]/[slug] "mentioned in" rail)
+- ease: 9 (frontmatter edit — no code or schema change needed)
+- score: 3.6 (impact × ease / 10)
+- file: apps/web/src/content/articles/dcs-grass-valley-decline.mdx
+- entities:
+  - GMK CYL Selene (keycap-set `gmk-cyl-selene`) — prose line 60
+- action: add each entity to the article's mentionedParts frontmatter with the correct slug and kind
+
+### [ ] [mentionedParts] [3.6] dcs-olivetti-comeback — 1 catalog entity mentioned in prose but absent from mentionedParts
+- category: mentionedParts
+- filed: 2026-06-19 by article-parts-check.mjs corpus scan
+- impact: 4 (missing mentionedParts entries break the /part/[kind]/[slug] "mentioned in" rail)
+- ease: 9 (frontmatter edit — no code or schema change needed)
+- score: 3.6 (impact × ease / 10)
+- file: apps/web/src/content/articles/dcs-olivetti-comeback.mdx
+- entities:
+  - GMK CYL Selene (keycap-set `gmk-cyl-selene`) — prose line 58
+- action: add each entity to the article's mentionedParts frontmatter with the correct slug and kind
+
+### [ ] [mentionedParts] [3.6] divinikey-dcs-dolch-group-buy — 2 catalog entities mentioned in prose but absent from mentionedParts
+- category: mentionedParts
+- filed: 2026-06-19 by article-parts-check.mjs corpus scan
+- impact: 4 (missing mentionedParts entries break the /part/[kind]/[slug] "mentioned in" rail)
+- ease: 9 (frontmatter edit — no code or schema change needed)
+- score: 3.6 (impact × ease / 10)
+- file: apps/web/src/content/articles/divinikey-dcs-dolch-group-buy.mdx
+- entities:
+  - GMK CYL Ramune (keycap-set `gmk-cyl-ramune`) — prose line 83
+  - GMK CYL Selene (keycap-set `gmk-cyl-selene`) — prose line 83
+- action: add each entity to the article's mentionedParts frontmatter with the correct slug and kind
+
+### [ ] [mentionedParts] [3.6] gsk-sweet-nightmare-group-buy — 2 catalog entities mentioned in prose but absent from mentionedParts
+- category: mentionedParts
+- filed: 2026-06-19 by article-parts-check.mjs corpus scan
+- impact: 4 (missing mentionedParts entries break the /part/[kind]/[slug] "mentioned in" rail)
+- ease: 9 (frontmatter edit — no code or schema change needed)
+- score: 3.6 (impact × ease / 10)
+- file: apps/web/src/content/articles/gsk-sweet-nightmare-group-buy.mdx
+- entities:
+  - GMK CYL Ramune (keycap-set `gmk-cyl-ramune`) — prose line 63
+  - GMK CYL Selene (keycap-set `gmk-cyl-selene`) — prose line 63
+- action: add each entity to the article's mentionedParts frontmatter with the correct slug and kind
+
+### [ ] [mentionedParts] [3.6] keyboard-acoustics-deep-dive — 1 catalog entity mentioned in prose but absent from mentionedParts
+- category: mentionedParts
+- filed: 2026-06-19 by article-parts-check.mjs corpus scan
+- impact: 4 (missing mentionedParts entries break the /part/[kind]/[slug] "mentioned in" rail)
+- ease: 9 (frontmatter edit — no code or schema change needed)
+- score: 3.6 (impact × ease / 10)
+- file: apps/web/src/content/articles/keyboard-acoustics-deep-dive.mdx
+- entities:
+  - Drop Holy Panda X (switch `drop-holy-panda-x`) — prose line 63
+- action: add each entity to the article's mentionedParts frontmatter with the correct slug and kind
