@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Two-column comparison showing old wireless-as-premium market convention versus Keychron K series where wireless is included by default at the same price tier</title>
+
+  <!-- Column divider -->
+  <line x1="600" y1="60" x2="600" y2="420" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.18" stroke-width="1"/>
+
+  <!-- LEFT COLUMN: pre-2021 convention -->
+  <text x="300" y="60" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">pre-2021 wireless keyboard market</text>
+
+  <!-- Wired base model card -->
+  <rect x="100" y="90" width="400" height="80" rx="8" fill="none" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.40" stroke-width="1.5"/>
+  <text x="300" y="121" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.70">wired base model</text>
+  <text x="300" y="143" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">full spec · standard price</text>
+
+  <!-- connector -->
+  <line x1="300" y1="170" x2="300" y2="200" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.30" stroke-width="1.5"/>
+  <text x="300" y="195" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.80">wireless variant: premium add-on</text>
+
+  <!-- Wireless premium card -->
+  <rect x="100" y="210" width="400" height="100" rx="8" fill="oklch(0.62 0.13 25 / 0.06)" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.50" stroke-width="1.5" stroke-dasharray="5 5"/>
+  <text x="300" y="244" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.70">wireless variant</text>
+  <text x="300" y="264" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.80">+$30–50 price premium</text>
+  <text x="300" y="284" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">sometimes: reduced spec, weaker stabs</text>
+
+  <!-- RIGHT COLUMN: Keychron K series -->
+  <text x="900" y="60" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.85">Keychron K series</text>
+
+  <!-- Single unified card -->
+  <rect x="640" y="90" width="460" height="160" rx="8" fill="oklch(0.68 0.165 28 / 0.10)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.90" stroke-width="2.5"/>
+  <text x="870" y="140" font-family="Newsreader, serif" font-size="19" font-style="italic" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">Bluetooth included</text>
+  <text x="870" y="168" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">same spec as wired</text>
+  <text x="870" y="190" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">no price premium · no feature cuts</text>
+  <text x="870" y="215" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.80">wireless = the baseline, not the upgrade</text>
+
+  <!-- Expectation shift arrow -->
+  <line x1="510" y1="300" x2="630" y2="300" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.85" stroke-width="2"/>
+  <polygon points="640,300 624,293 624,307" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)" opacity="0.85"/>
+  <text x="570" y="325" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.80">expectation shift</text>
+
+  <!-- Context note -->
+  <text x="600" y="395" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">the vendor convention was not a hardware constraint</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

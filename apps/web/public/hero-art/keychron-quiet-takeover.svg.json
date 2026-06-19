@@ -1,0 +1,21 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-19T00:00:00.000Z",
+  "commit": "bc1f069eee15eb3b40614761e07573a4cfda06cb",
+  "kind": "hero-art",
+  "article_slug": "keychron-quiet-takeover",
+  "article_pillar": "trends",
+  "source": "hand-authored — no source template",
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": [],
+  "splash_color": {
+    "name": "muted-terracotta",
+    "oklch": "oklch(0.62 0.09 32)"
+  },
+  "subject": "75% keyboard silhouette (top-down layout, keycap grid) paired with ascending sparkline arc representing Keychron brand momentum trajectory",
+  "outputs": [
+    "apps/web/public/hero-art/keychron-quiet-takeover.svg"
+  ],
+  "warnings": []
+}

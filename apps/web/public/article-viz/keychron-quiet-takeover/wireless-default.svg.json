@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-15T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "keychron-quiet-takeover",
+  "article_pillar": "trends",
+  "section_anchor": "Wireless as the default, not the premium",
+  "brief_summary": "A two-column comparison diagram contrasting the pre-2021 market convention (wireless as a premium add-on at +$30–50 with potential spec cuts) against Keychron's K series approach (Bluetooth included at the same price tier, same spec). A coral arrow runs left-to-right labelled 'expectation shift'. The caution color marks the wireless-premium cards on the left. Grounds the argument that Keychron changed buyer expectations, not just price.",
+  "target": "apps/web/public/article-viz/keychron-quiet-takeover/wireless-default.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "apps/web/src/content/articles/keychron-quiet-takeover.mdx:Wireless as the default, not the premium — 'the market convention was that wireless was a premium add-on. The wireless version of a keyboard cost more, often had worse stabilizers or a reduced feature set'",
+    "apps/web/src/content/articles/keychron-quiet-takeover.mdx:Wireless as the default, not the premium — 'Keychron's K series made wireless the baseline. The K2, K6, K8 — all had Bluetooth as a standard feature at prices that made wireless the obvious first purchase'"
+  ],
+  "outputs": ["apps/web/public/article-viz/keychron-quiet-takeover/wireless-default.svg"],
+  "warnings": []
+}

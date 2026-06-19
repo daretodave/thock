@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-15T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "keychron-quiet-takeover",
+  "article_pillar": "trends",
+  "section_anchor": "The product ladder that captured every entry point",
+  "brief_summary": "A three-tier vertical ladder diagram showing Keychron's K / V / Q series product progression. Each tier is a coral-outlined card with price range, key specs, and audience label. A buyer-progression arrow on the left edge runs bottom to top. The diagram grounds the article's argument that a buyer can ascend the entire product ladder without switching brands.",
+  "target": "apps/web/public/article-viz/keychron-quiet-takeover/product-ladder.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "apps/web/src/content/articles/keychron-quiet-takeover.mdx:The product ladder that captured every entry point — 'K series launched as a budget Bluetooth board. Hot-swap, ABS keycaps, accessible price'",
+    "apps/web/src/content/articles/keychron-quiet-takeover.mdx:The product ladder that captured every entry point — 'V series arrived as the mid-tier answer: QMK and VIA support, PBT keycaps, gasket mount at a sub-$100 price'",
+    "apps/web/src/content/articles/keychron-quiet-takeover.mdx:The product ladder that captured every entry point — 'Q series sits at the top of the stack — aluminum case, gasket mount, the same QMK/VIA firmware stack, better stock switches' and '$100–$180'"
+  ],
+  "outputs": ["apps/web/public/article-viz/keychron-quiet-takeover/product-ladder.svg"],
+  "warnings": []
+}

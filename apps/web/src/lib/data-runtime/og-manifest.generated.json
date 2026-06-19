@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "slug": "keychron-quiet-takeover",
+      "readTime": 9,
+      "frontmatter": {
+        "title": "Keychron's Quiet Takeover: How One Brand Became the Mechanical Keyboard Default",
+        "lede": "Ask almost anyone — a forum regular, a YouTube comment section, a Discord server for people who just bought their first mechanical keyboard — what board to get, and you'll hear the same answer. This is how that happened.",
+        "pillar": "trends",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "rapid-trigger-gaming-crossover",
       "readTime": 8,
       "frontmatter": {
@@ -52,7 +62,7 @@
     },
     {
       "slug": "divinikey-dcs-dolch-group-buy",
-      "readTime": 8,
+      "readTime": 9,
       "frontmatter": {
         "title": "DCS Dolch opens at Divinikey — a computing-history colorway returns",
         "lede": "The Dolch colorway — dark grey alphas, lighter grey mods, named after the 1990s portable workstations — is now in a four-week DCS-profile group buy at Divinikey and eight regional storefronts through 2026-07-01.",
@@ -541,5 +551,5 @@
       }
     }
   ],
-  "generatedAt": "2026-06-16T08:13:50.463Z"
+  "generatedAt": "2026-06-19T16:51:07.497Z"
 }

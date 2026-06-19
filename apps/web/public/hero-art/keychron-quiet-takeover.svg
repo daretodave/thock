@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — Keychron quiet takeover: 75% keyboard silhouette, top-down layout, paired with an ascending sparkline arc representing brand momentum</title>
+
+  <!-- Muted terracotta wash behind the upper-right sparkline terminus — focal region -->
+  <ellipse cx="990" cy="155" rx="200" ry="110" fill="oklch(0.62 0.09 32 / 0.10)" stroke="none"/>
+
+  <!-- ==========================================================
+       75% case outline — Keychron family archetype.
+       Rectilinear, lightly chamfered corners. Top-down read.
+       Canvas: 1200×750. Board occupies left-center band,
+       leaving upper-right quadrant for the sparkline terminus.
+       Case box: x 80–930, y 310–670.
+       ========================================================== -->
+  <g>
+    <!-- Outer case -->
+    <path d="
+      M  96 310
+      L 912 310
+      L 928 326
+      L 928 654
+      L 912 670
+      L  96 670
+      L  80 654
+      L  80 326
+      Z" />
+    <!-- Inner bezel -->
+    <path d="
+      M 112 328
+      L 908 328
+      L 916 336
+      L 916 642
+      L 908 650
+      L 112 650
+      L 104 642
+      L 104 336
+      Z" stroke-opacity="0.50"/>
+    <!-- Warm-bronze accent line on the top case edge -->
+    <line x1="96" y1="310" x2="912" y2="310" stroke="oklch(0.80 0.135 75)" stroke-width="2.5" stroke-opacity="0.85"/>
+    <!-- Subtle weight separation at base -->
+    <line x1="96" y1="656" x2="912" y2="656" stroke-opacity="0.35"/>
+  </g>
+
+  <!-- ==========================================================
+       75% layout — six rows (function row + 5 main rows).
+       Key pitch: 38px keys, 4px gutters (42px step).
+       Origin: x=120, y=346.
+       16 columns; right-hand nav column on rows 1-2 and 4-5.
+       ========================================================== -->
+
+  <!-- Function row — compressed height 28px -->
+  <g>
+    <rect x="120" y="346" width="38" height="28" rx="3"/>
+    <rect x="162" y="346" width="38" height="28" rx="3"/>
+    <rect x="204" y="346" width="38" height="28" rx="3"/>
+    <rect x="246" y="346" width="38" height="28" rx="3"/>
+    <rect x="288" y="346" width="38" height="28" rx="3"/>
+    <rect x="330" y="346" width="38" height="28" rx="3"/>
+    <rect x="372" y="346" width="38" height="28" rx="3"/>
+    <rect x="414" y="346" width="38" height="28" rx="3"/>
+    <rect x="456" y="346" width="38" height="28" rx="3"/>
+    <rect x="498" y="346" width="38" height="28" rx="3"/>
+    <rect x="540" y="346" width="38" height="28" rx="3"/>
+    <rect x="582" y="346" width="38" height="28" rx="3"/>
+    <rect x="624" y="346" width="38" height="28" rx="3"/>
+    <rect x="666" y="346" width="38" height="28" rx="3"/>
+    <rect x="708" y="346" width="38" height="28" rx="3"/>
+    <rect x="750" y="346" width="38" height="28" rx="3"/>
+    <rect x="792" y="346" width="38" height="28" rx="3"/>
+    <rect x="834" y="346" width="38" height="28" rx="3"/>
+    <rect x="876" y="346" width="38" height="28" rx="3"/>
+  </g>
+
+  <!-- Row 1 — number row, 15 alpha keys + backspace + 2 nav -->
+  <g>
+    <rect x="120" y="382" width="38" height="38" rx="3"/>
+    <rect x="162" y="382" width="38" height="38" rx="3"/>
+    <rect x="204" y="382" width="38" height="38" rx="3"/>
+    <rect x="246" y="382" width="38" height="38" rx="3"/>
+    <rect x="288" y="382" width="38" height="38" rx="3"/>
+    <rect x="330" y="382" width="38" height="38" rx="3"/>
+    <rect x="372" y="382" width="38" height="38" rx="3"/>
+    <rect x="414" y="382" width="38" height="38" rx="3"/>
+    <rect x="456" y="382" width="38" height="38" rx="3"/>
+    <rect x="498" y="382" width="38" height="38" rx="3"/>
+    <rect x="540" y="382" width="38" height="38" rx="3"/>
+    <rect x="582" y="382" width="38" height="38" rx="3"/>
+    <rect x="624" y="382" width="38" height="38" rx="3"/>
+    <rect x="666" y="382" width="80" height="38" rx="3"/>
+    <rect x="750" y="382" width="38" height="38" rx="3"/>
+    <rect x="792" y="382" width="38" height="38" rx="3"/>
+    <rect x="834" y="382" width="38" height="38" rx="3"/>
+    <rect x="876" y="382" width="38" height="38" rx="3"/>
+  </g>
+
+  <!-- Row 2 — qwerty row: tab + 13 + backslash + nav -->
+  <g>
+    <rect x="120" y="424" width="58" height="38" rx="3"/>
+    <rect x="182" y="424" width="38" height="38" rx="3"/>
+    <rect x="224" y="424" width="38" height="38" rx="3"/>
+    <rect x="266" y="424" width="38" height="38" rx="3"/>
+    <rect x="308" y="424" width="38" height="38" rx="3"/>
+    <rect x="350" y="424" width="38" height="38" rx="3"/>
+    <rect x="392" y="424" width="38" height="38" rx="3"/>
+    <rect x="434" y="424" width="38" height="38" rx="3"/>
+    <rect x="476" y="424" width="38" height="38" rx="3"/>
+    <rect x="518" y="424" width="38" height="38" rx="3"/>
+    <rect x="560" y="424" width="38" height="38" rx="3"/>
+    <rect x="602" y="424" width="38" height="38" rx="3"/>
+    <rect x="644" y="424" width="38" height="38" rx="3"/>
+    <rect x="686" y="424" width="60" height="38" rx="3"/>
+    <rect x="750" y="424" width="38" height="38" rx="3"/>
+    <rect x="792" y="424" width="38" height="38" rx="3"/>
+    <rect x="834" y="424" width="38" height="38" rx="3"/>
+    <rect x="876" y="424" width="38" height="38" rx="3"/>
+  </g>
+
+  <!-- Row 3 — caps row: caps + 12 + enter (iso-ish enter spans 2u), nav col on right only row 3 -->
+  <g>
+    <rect x="120" y="466" width="68" height="38" rx="3"/>
+    <rect x="192" y="466" width="38" height="38" rx="3"/>
+    <rect x="234" y="466" width="38" height="38" rx="3"/>
+    <rect x="276" y="466" width="38" height="38" rx="3"/>
+    <rect x="318" y="466" width="38" height="38" rx="3"/>
+    <rect x="360" y="466" width="38" height="38" rx="3"/>
+    <rect x="402" y="466" width="38" height="38" rx="3"/>
+    <rect x="444" y="466" width="38" height="38" rx="3"/>
+    <rect x="486" y="466" width="38" height="38" rx="3"/>
+    <rect x="528" y="466" width="38" height="38" rx="3"/>
+    <rect x="570" y="466" width="38" height="38" rx="3"/>
+    <rect x="612" y="466" width="38" height="38" rx="3"/>
+    <rect x="654" y="466" width="38" height="38" rx="3"/>
+    <rect x="696" y="466" width="92" height="38" rx="3"/>
+    <rect x="834" y="466" width="38" height="38" rx="3"/>
+    <rect x="876" y="466" width="38" height="38" rx="3"/>
+  </g>
+
+  <!-- Row 4 — shift row: lshift + 11 + rshift + up + nav -->
+  <g>
+    <rect x="120" y="508" width="90" height="38" rx="3"/>
+    <rect x="214" y="508" width="38" height="38" rx="3"/>
+    <rect x="256" y="508" width="38" height="38" rx="3"/>
+    <rect x="298" y="508" width="38" height="38" rx="3"/>
+    <rect x="340" y="508" width="38" height="38" rx="3"/>
+    <rect x="382" y="508" width="38" height="38" rx="3"/>
+    <rect x="424" y="508" width="38" height="38" rx="3"/>
+    <rect x="466" y="508" width="38" height="38" rx="3"/>
+    <rect x="508" y="508" width="38" height="38" rx="3"/>
+    <rect x="550" y="508" width="38" height="38" rx="3"/>
+    <rect x="592" y="508" width="38" height="38" rx="3"/>
+    <rect x="634" y="508" width="38" height="38" rx="3"/>
+    <rect x="676" y="508" width="70" height="38" rx="3"/>
+    <rect x="750" y="508" width="38" height="38" rx="3"/>
+    <rect x="792" y="508" width="38" height="38" rx="3"/>
+    <rect x="834" y="508" width="38" height="38" rx="3"/>
+    <rect x="876" y="508" width="38" height="38" rx="3"/>
+  </g>
+
+  <!-- Row 5 — bottom row: mods + spacebar + mods + arrows -->
+  <g>
+    <rect x="120" y="550" width="50" height="38" rx="3"/>
+    <rect x="174" y="550" width="50" height="38" rx="3"/>
+    <rect x="228" y="550" width="50" height="38" rx="3"/>
+    <rect x="282" y="550" width="262" height="38" rx="3"/>
+    <rect x="548" y="550" width="50" height="38" rx="3"/>
+    <rect x="602" y="550" width="50" height="38" rx="3"/>
+    <rect x="656" y="550" width="50" height="38" rx="3"/>
+    <rect x="710" y="550" width="38" height="38" rx="3"/>
+    <rect x="750" y="550" width="38" height="38" rx="3"/>
+    <rect x="792" y="550" width="38" height="38" rx="3"/>
+    <rect x="834" y="550" width="38" height="38" rx="3"/>
+    <rect x="876" y="550" width="38" height="38" rx="3"/>
+  </g>
+
+  <!-- ==========================================================
+       ASCENDING SPARKLINE ARC — the trends thesis.
+       A single smooth cubic bezier sweeps from the lower-left
+       corner of the canvas up to the upper-right, cresting above
+       the keyboard case's top edge.
+
+       Path origin: (60, 660) — just left of the board base.
+       Control point 1: (380, 520) — follows the rising left wall.
+       Control point 2: (820, 120) — pulls the arc high before terminus.
+       Terminus: (1140, 88) — upper-right, well above the board.
+
+       A second, offset path at lower opacity creates a gentle
+       shadow thickness, giving the line editorial weight without
+       making it feel heavy.
+       ========================================================== -->
+
+  <!-- Sparkline shadow (same path, offset slightly, low opacity) -->
+  <path d="M 60 668 C 380 528 820 128 1140 96"
+        stroke="oklch(0.62 0.09 32)" stroke-width="3.5" stroke-opacity="0.18" fill="none"/>
+
+  <!-- Sparkline main stroke — terracotta splash -->
+  <path d="M 60 660 C 380 520 820 120 1140 88"
+        stroke="oklch(0.62 0.09 32)" stroke-width="2.5" stroke-opacity="0.92" fill="none"/>
+
+  <!-- Momentum tick marks along the sparkline — six knots suggesting data points.
+       Computed roughly along the cubic at t = 0.1, 0.2, 0.4, 0.6, 0.8, 0.95.
+       Each knot is a small perpendicular tick; no fill, no dots (keeps it minimal). -->
+
+  <!-- t≈0.10  → approx (153, 622) -->
+  <line x1="149" y1="628" x2="157" y2="616" stroke="oklch(0.62 0.09 32)" stroke-width="2" stroke-opacity="0.65"/>
+  <!-- t≈0.22  → approx (268, 565) -->
+  <line x1="264" y1="571" x2="272" y2="559" stroke="oklch(0.62 0.09 32)" stroke-width="2" stroke-opacity="0.65"/>
+  <!-- t≈0.38  → approx (440, 487) -->
+  <line x1="436" y1="493" x2="444" y2="481" stroke="oklch(0.62 0.09 32)" stroke-width="2" stroke-opacity="0.65"/>
+  <!-- t≈0.56  → approx (640, 368) -->
+  <line x1="636" y1="374" x2="644" y2="362" stroke="oklch(0.62 0.09 32)" stroke-width="2" stroke-opacity="0.65"/>
+  <!-- t≈0.74  → approx (850, 236) -->
+  <line x1="846" y1="242" x2="854" y2="230" stroke="oklch(0.62 0.09 32)" stroke-width="2" stroke-opacity="0.65"/>
+  <!-- t≈0.90  → approx (1028, 135) -->
+  <line x1="1024" y1="141" x2="1032" y2="129" stroke="oklch(0.62 0.09 32)" stroke-width="2" stroke-opacity="0.65"/>
+
+  <!-- Terminus dot — solid terracotta circle at sparkline end, the visual focal anchor -->
+  <circle cx="1140" cy="88" r="7"
+          fill="oklch(0.62 0.09 32)" stroke="none"/>
+  <!-- Outer halo ring at terminus — reads as "current value" in data-viz grammar -->
+  <circle cx="1140" cy="88" r="14"
+          stroke="oklch(0.62 0.09 32)" stroke-opacity="0.38" stroke-width="1.5" fill="none"/>
+
+  <!-- ==========================================================
+       BRONZE THEME DOT — upper-right margin family ornament.
+       Per hero-art spec: small oklch(0.80 0.135 75) circle.
+       Positioned to the left of the sparkline terminus, clear
+       of overlap.
+       ========================================================== -->
+  <circle cx="1080" cy="58" r="8"
+          fill="oklch(0.80 0.135 75)" fill-opacity="0.88" stroke="none"/>
+
+  <!-- ==========================================================
+       SUBTLE HORIZONTAL AXIS GHOST — a faint baseline beneath
+       the sparkline, anchoring it in the data-chart grammar.
+       Dashed, very low opacity, does not compete with the board.
+       ========================================================== -->
+  <line x1="40" y1="675" x2="1160" y2="675"
+        stroke-dasharray="4 10" stroke-opacity="0.20" fill="none"/>
+
+</svg>

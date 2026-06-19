@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-15T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "keychron-quiet-takeover",
+  "article_pillar": "trends",
+  "section_anchor": "The 'default recommendation' and what it costs the market",
+  "brief_summary": "A coral line chart plotting Keychron brand tracker scores across seven weeks (W19–W25 2026), with scores rising from 30 to 55. The W25 terminal point is a filled coral circle. A dashed horizontal line at score 50 marks the threshold where the brand appears in more than half of weekly tracker roundups. The W24 crossing of that threshold is annotated. Visualises the argument that the brand score trajectory reflects a category settling into a new default rather than a moment.",
+  "target": "apps/web/public/article-viz/keychron-quiet-takeover/brand-score-sparkline.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "apps/web/src/content/articles/keychron-quiet-takeover.mdx:lede and tracker data — 'The Trends Tracker showed the brand at a score of 55 in W25, up from 30 in W19'",
+    "apps/web/src/content/articles/keychron-quiet-takeover.mdx:The 'default recommendation' and what it costs the market — 'tracker reading of 55 in W25 — up 25 points from the W19 reading of 30'",
+    "apps/web/src/content/articles/keychron-q-ultra-zmk.mdx:What we're watching — 'At publication, the 2026-W19 Trends Tracker showed Keychron at +30'"
+  ],
+  "outputs": ["apps/web/public/article-viz/keychron-quiet-takeover/brand-score-sparkline.svg"],
+  "warnings": ["Intermediate weekly scores (W20–W24) are interpolated linearly between the two anchored data points (W19=30, W25=55) as no per-week breakdown is available in source material. The terminal and start values are article-sourced. A future audit pass should replace interpolated values with measured tracker figures if available."]
+}
