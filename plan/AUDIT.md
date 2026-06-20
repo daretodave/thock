@@ -84,6 +84,15 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [seo] [4.5] /tools, /parts, /vendors missing opengraph-image.tsx — addressed in 68f5558
+- category: seo
+- filed: 2026-06-20 by cloud /iterate audit
+- impact: 5 (three route families shipped in phases 35, 45, 49 fell back to the site-default OG when shared on social; /tools, /parts, /vendors are first-class editorial surfaces)
+- ease: 9 (three files, same PillarOGContent pattern as /news, /trends, etc.)
+- score: 4.5 (impact × ease / 10)
+- issue: [mirror-failed: 2026-06-20T00:00:00Z]
+- addressed in: 68f5558
+
 ### [x] [tests] [3.6] ArchiveMonthGroup missing unit test — addressed in f486654, closes #365
 - category: tests
 - filed: 2026-06-20 by cloud /iterate audit
