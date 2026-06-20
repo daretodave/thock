@@ -5214,7 +5214,7 @@ passes accumulate signals.)
   - Drop Holy Panda X (switch `drop-holy-panda-x`) — prose line 63
 - action: add each entity to the article's mentionedParts frontmatter with the correct slug and kind
 
-### [ ] [data] [3.6] kbdfans-gmk-cyl-ramune — status stale, endDate 2026-06-20 passed
+### [x] [data] [3.6] kbdfans-gmk-cyl-ramune — status stale, endDate 2026-06-20 passed
 - category: data
 - filed: 2026-06-20 by group-buy-status-check.mjs
 - impact: 4 (buy shows status "live" but endDate 2026-06-20 has passed — data hygiene gap)
@@ -5222,3 +5222,5 @@ passes accumulate signals.)
 - score: 3.6 (impact × ease / 10)
 - group-buy: data/group-buys/kbdfans-gmk-cyl-ramune.json
 - action: update status from 'live' to 'closed' in data/group-buys/kbdfans-gmk-cyl-ramune.json
+- issue: #361
+- addressed in: ec327d6, closes #361
