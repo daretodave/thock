@@ -84,6 +84,15 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [fix] [3.6] 6 zero-article tags in tags.json generate empty /tag pages — addressed in db43714, closes #367
+- category: fix
+- filed: 2026-06-20 by cloud /iterate audit
+- impact: 4 (tags 60, full, novelkeys, ortho, tkl, wuque had 0 articles; empty /tag/<slug> pages returned an empty grid instead of 404; sitemap and /tags browse already filtered them but source data was inconsistent)
+- ease: 9 (remove 6 entries from tags.json; sitemap + browse filtering unchanged)
+- score: 3.6 (impact × ease / 10)
+- issue: #367
+- addressed in: db43714, closes #367
+
 ### [x] [seo] [4.5] /tools, /parts, /vendors missing opengraph-image.tsx — addressed in 68f5558
 - category: seo
 - filed: 2026-06-20 by cloud /iterate audit
