@@ -5131,7 +5131,7 @@ passes accumulate signals.)
 - issue: #359
 - addressed in: 4a9a7a7, closes #359
 
-### [ ] [mentionedParts] [3.6] alice-layout-decline — 1 catalog entity mentioned in prose but absent from mentionedParts
+### [x] [mentionedParts] [3.6] alice-layout-decline — 1 catalog entity mentioned in prose but absent from mentionedParts
 - category: mentionedParts
 - filed: 2026-06-19 by article-parts-check.mjs corpus scan
 - impact: 4 (missing mentionedParts entries break the /part/[kind]/[slug] "mentioned in" rail)
@@ -5141,6 +5141,8 @@ passes accumulate signals.)
 - entities:
   - Drop Holy Panda X (switch `drop-holy-panda-x`) — prose line 112
 - action: add each entity to the article's mentionedParts frontmatter with the correct slug and kind
+- issue: #360
+- addressed in: 42fd394, closes #360
 
 ### [x] [mentionedParts] [3.6] beginners-switch-buying-guide — 1 catalog entity mentioned in prose but absent from mentionedParts
 - category: mentionedParts
