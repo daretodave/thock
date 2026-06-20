@@ -5118,7 +5118,7 @@ passes accumulate signals.)
 - action: update status from 'live' to 'closed' in data/group-buys/kbdfans-gmk-cyl-selene.json
 - addressed in: 480b458
 
-### [ ] [mentionedParts] [3.6] acoustic-spec-rise — 1 catalog entity mentioned in prose but absent from mentionedParts
+### [x] [mentionedParts] [3.6] acoustic-spec-rise — 1 catalog entity mentioned in prose but absent from mentionedParts
 - category: mentionedParts
 - filed: 2026-06-19 by article-parts-check.mjs corpus scan
 - impact: 4 (missing mentionedParts entries break the /part/[kind]/[slug] "mentioned in" rail)
@@ -5128,6 +5128,8 @@ passes accumulate signals.)
 - entities:
   - Drop Holy Panda X (switch `drop-holy-panda-x`) — prose line 98
 - action: add each entity to the article's mentionedParts frontmatter with the correct slug and kind
+- issue: #359
+- addressed in: 4a9a7a7, closes #359
 
 ### [ ] [mentionedParts] [3.6] alice-layout-decline — 1 catalog entity mentioned in prose but absent from mentionedParts
 - category: mentionedParts
@@ -5209,3 +5211,12 @@ passes accumulate signals.)
 - entities:
   - Drop Holy Panda X (switch `drop-holy-panda-x`) — prose line 63
 - action: add each entity to the article's mentionedParts frontmatter with the correct slug and kind
+
+### [ ] [data] [3.6] kbdfans-gmk-cyl-ramune — status stale, endDate 2026-06-20 passed
+- category: data
+- filed: 2026-06-20 by group-buy-status-check.mjs
+- impact: 4 (buy shows status "live" but endDate 2026-06-20 has passed — data hygiene gap)
+- ease: 9 (update status field to 'closed' in data/group-buys/kbdfans-gmk-cyl-ramune.json)
+- score: 3.6 (impact × ease / 10)
+- group-buy: data/group-buys/kbdfans-gmk-cyl-ramune.json
+- action: update status from 'live' to 'closed' in data/group-buys/kbdfans-gmk-cyl-ramune.json
