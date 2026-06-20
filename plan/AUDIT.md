@@ -5271,3 +5271,14 @@ passes accumulate signals.)
 - action: add `if (!samePillar) continue` in findUnlinkedPairs after computing samePillar; update "assigns lower score for cross-pillar pairs" unit test to assert pairs.length === 0 (suppressed) instead of 1
 - issue: [mirror-failed: 2026-06-20T00:00:00Z]
 - addressed in: 2ab171d
+
+### [x] [newsletter] [4.0] /newsletter shows empty archive — inaugural digest needed
+- category: content
+- filed: 2026-06-20 by iterate audit
+- impact: 5 (visible empty-state reduces reader trust that the newsletter is active; /newsletter is in sitemap and linked from footer)
+- ease: 8 (one MDX file — NewsletterFrontmatterSchema + getAllNewsletters() loader already in place; no code change needed)
+- score: 4.0 (impact × ease / 10)
+- page: /newsletter
+- action: draft apps/web/src/content/newsletters/thock-weekly-001.mdx (5 article picks one per pillar + W25 tracker snapshot); pnpm verify + commit
+- issue: #366
+- addressed in: f5c8d19, closes #366
