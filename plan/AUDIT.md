@@ -5209,7 +5209,7 @@ passes accumulate signals.)
 - issue: #363
 - addressed in: b3ef13e, closes #363
 
-### [ ] [mentionedParts] [3.6] keyboard-acoustics-deep-dive — 1 catalog entity mentioned in prose but absent from mentionedParts
+### [x] [mentionedParts] [3.6] keyboard-acoustics-deep-dive — 1 catalog entity mentioned in prose but absent from mentionedParts
 - category: mentionedParts
 - filed: 2026-06-19 by article-parts-check.mjs corpus scan
 - impact: 4 (missing mentionedParts entries break the /part/[kind]/[slug] "mentioned in" rail)
@@ -5219,6 +5219,7 @@ passes accumulate signals.)
 - entities:
   - Drop Holy Panda X (switch `drop-holy-panda-x`) — prose line 63
 - action: add each entity to the article's mentionedParts frontmatter with the correct slug and kind
+- addressed in: da27366
 
 ### [x] [data] [3.6] kbdfans-gmk-cyl-ramune — status stale, endDate 2026-06-20 passed
 - category: data
