@@ -5231,3 +5231,14 @@ passes accumulate signals.)
 - action: update status from 'live' to 'closed' in data/group-buys/kbdfans-gmk-cyl-ramune.json
 - issue: #361
 - addressed in: ec327d6, closes #361
+
+### [x] [tests] [4.5] KeycapSetResultCard — missing unit test
+- category: tests
+- filed: 2026-06-20 by iterate audit
+- impact: 5 (phase-47 quiz result card has no colocated test; regressions in name, link href, or match-pct rendering go undetected)
+- ease: 9 (pure render test, mirrors existing ResultCard.test.tsx shape)
+- score: 4.5 (impact × ease / 10)
+- component: apps/web/src/components/quiz/KeycapSetResultCard.tsx
+- action: add apps/web/src/components/quiz/__tests__/KeycapSetResultCard.test.tsx
+- issue: [mirror-failed: 2026-06-20T00:00:00Z]
+- addressed in: a7ded59
