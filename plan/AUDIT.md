@@ -5300,3 +5300,12 @@ passes accumulate signals.)
 - action: draft apps/web/src/content/newsletters/thock-weekly-001.mdx (5 article picks one per pillar + W25 tracker snapshot); pnpm verify + commit
 - issue: #366
 - addressed in: f5c8d19, closes #366
+
+### [x] [seo] [4.5] /group-buys, /quiz, /compare, /tags, /archive missing opengraph-image.tsx — addressed in 01d24ce
+- category: seo
+- filed: 2026-06-20 by cloud /iterate audit
+- impact: 5 (7 editorial surfaces fell back to site-default OG when shared on social; /group-buys is the curated hub, /quiz and /compare are the interactive tools, /tags and /archive are browse indexes)
+- ease: 9 (PillarOGContent pattern — same as /tools, /parts, /vendors in 68f5558)
+- score: 4.5 (impact × ease / 10)
+- issue: [mirror-failed: 2026-06-20T00:00:00Z]
+- addressed in: 01d24ce
