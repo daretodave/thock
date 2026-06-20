@@ -351,7 +351,7 @@
 - estimated phases: 1
 - conflicts: none — additive only; no URL contract change; no data schema change; `/newsletter` route and `getAllNewsletters()` loader both exist since phase 15.
 
-### [ ] [score 4.5] OG coverage for interactive tools — `/quiz/*` and `/compare/*` lack `opengraph-image.tsx`
+### [x] [score 4.5] OG coverage for interactive tools — `/quiz/*` and `/compare/*` lack `opengraph-image.tsx` (shipped: seo: commit 01d24ce)
 - proposed: 2026-06-20, expand pass 133
 - source signals:
   - **SEO signal (C — incomplete OG after last iterate)**: The just-shipped iterate tick added `opengraph-image.tsx` to `/tools`, `/parts`, and `/vendors`. The four interactive tool pages — `/quiz/switch`, `/quiz/keycap-set`, `/compare/switch`, `/compare/board` — still serve the site-default OG fallback. These four pages are higher-share-intent than the section indexes: users link to their quiz result experience and share specific switch comparisons in keyboard community discussions.

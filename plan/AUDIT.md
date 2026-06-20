@@ -5309,3 +5309,12 @@ passes accumulate signals.)
 - score: 4.5 (impact × ease / 10)
 - issue: [mirror-failed: 2026-06-20T00:00:00Z]
 - addressed in: 01d24ce
+
+### [x] [seo] [6.3] /trends/tracker and /trends/tracker/[week] missing opengraph-image.tsx
+- category: seo
+- filed: 2026-06-20 by cloud /iterate audit
+- impact: 7 (Trends Tracker is the signature thock surface; falls back to site-default OG when shared on social; the tracker is the primary editorial differentiator and should have its own card)
+- ease: 9 (PillarOGContent pattern — same as /trends pillar and /tools; static tagline; no dynamic params)
+- score: 6.3 (impact × ease / 10)
+- issue: [mirror-failed: 2026-06-20T00:00:00Z]
+- addressed in: 2d82020
