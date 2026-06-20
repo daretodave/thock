@@ -847,22 +847,6 @@ test('color-contrast — PartIndexCard status badge text-text-2 on /part/keycap-
   expect(contrast, `part-index-status: ${formatViolations(contrast)}`).toHaveLength(0)
 })
 
-// Regression guard: color-contrast on newsletter empty-state body text (audit row
-// [a11y] #115). NewsletterArchive.tsx empty-state <p> used text-text-3 at text-body
-// (16px) on bg-surface — WCAG AA 4.5:1 failure. Fixed to text-text-2.
-test('color-contrast — newsletter empty-state body text-text-2 on /newsletter', async ({ page }) => {
-  await page.goto('/newsletter')
-  await page.waitForLoadState('networkidle')
-
-  const results = await new AxeBuilder({ page })
-    .withTags(WCAG_TAGS)
-    .include('[data-testid="newsletter-empty-body"]')
-    .analyze()
-
-  const contrast = results.violations.filter((v) => v.id === 'color-contrast')
-  expect(contrast, `newsletter-empty-body: ${formatViolations(contrast)}`).toHaveLength(0)
-})
-
 // Regression guard: color-contrast on quiz components (audit row [a11y] #121).
 // Phase 33 shipped QuizStep, QuizProgress, ResultCard with text-text-3 at 14px —
 // same root cause as Phase B drain series (#100–#115). Fixed to text-text-2.

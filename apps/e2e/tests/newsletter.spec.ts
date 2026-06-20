@@ -24,16 +24,14 @@ test.describe('newsletter page — phase 15', () => {
     )
   })
 
-  test('shows the empty-state archive when no digests have been authored', async ({
-    page,
-  }) => {
+  test('shows the inaugural issue in the archive', async ({ page }) => {
     await page.goto('/newsletter')
     await expect(
-      page.getByTestId('newsletter-archive-empty'),
+      page.getByTestId('newsletter-archive'),
     ).toBeVisible()
     await expect(
-      page.getByTestId('newsletter-archive-empty'),
-    ).toContainText(/no digests yet/i)
+      page.getByTestId('newsletter-archive-row').first(),
+    ).toContainText(/thock weekly/i)
   })
 
   test('renders WebSite + BreadcrumbList JSON-LD', async ({ page }) => {
