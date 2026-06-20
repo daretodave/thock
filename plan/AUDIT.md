@@ -5195,7 +5195,7 @@ passes accumulate signals.)
 - action: add each entity to the article's mentionedParts frontmatter with the correct slug and kind
 - addressed in: 1865c61
 
-### [ ] [mentionedParts] [3.6] gsk-sweet-nightmare-group-buy — 2 catalog entities mentioned in prose but absent from mentionedParts
+### [x] [mentionedParts] [3.6] gsk-sweet-nightmare-group-buy — 2 catalog entities mentioned in prose but absent from mentionedParts
 - category: mentionedParts
 - filed: 2026-06-19 by article-parts-check.mjs corpus scan
 - impact: 4 (missing mentionedParts entries break the /part/[kind]/[slug] "mentioned in" rail)
@@ -5206,6 +5206,8 @@ passes accumulate signals.)
   - GMK CYL Ramune (keycap-set `gmk-cyl-ramune`) — prose line 63
   - GMK CYL Selene (keycap-set `gmk-cyl-selene`) — prose line 63
 - action: add each entity to the article's mentionedParts frontmatter with the correct slug and kind
+- issue: #363
+- addressed in: b3ef13e, closes #363
 
 ### [ ] [mentionedParts] [3.6] keyboard-acoustics-deep-dive — 1 catalog entity mentioned in prose but absent from mentionedParts
 - category: mentionedParts
