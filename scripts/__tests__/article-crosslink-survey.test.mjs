@@ -106,15 +106,14 @@ describe('findUnlinkedPairs — gap', () => {
     assert.equal(pairs[0].score, 4.5)
   })
 
-  test('assigns lower score for cross-pillar pairs', () => {
+  test('suppresses cross-pillar (adjacent-pillar) pairs — oversight 2026-06-14', () => {
     const articles = [
       makeArticle('article-a', 'deep-dives', ['pom', 'linear'], ''),
       makeArticle('article-b', 'guides', ['pom', 'linear'], ''),
     ]
     const pairs = findUnlinkedPairs(articles, null)
-    assert.equal(pairs.length, 1)
-    assert.ok(!pairs[0].samePillar)
-    assert.equal(pairs[0].score, 3.6)
+    // Adjacent-pillar pairs are suppressed; only same-pillar pairs file.
+    assert.equal(pairs.length, 0)
   })
 })
 

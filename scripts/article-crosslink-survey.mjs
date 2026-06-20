@@ -142,11 +142,15 @@ function findUnlinkedPairs(articles, scopeSlug) {
       const sharedTags = a.tags.filter((t) => b.tags.includes(t))
       if (sharedTags.length < 2) continue
 
+      // Adjacent-pillar pairs suppressed per oversight 2026-06-14:
+      // "raise the survey's adjacent-pillar floor rather than re-pruning by hand"
+      const samePillar = a.pillar === b.pillar
+      if (!samePillar) continue
+
       const aLinksB = hasLinkTo(a.bodyLines, b.slug)
       const bLinksA = hasLinkTo(b.bodyLines, a.slug)
       if (aLinksB || bLinksA) continue
 
-      const samePillar = a.pillar === b.pillar
       pairs.push({
         slugA: a.slug,
         slugB: b.slug,
