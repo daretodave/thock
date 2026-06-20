@@ -5157,7 +5157,7 @@ passes accumulate signals.)
 - issue: #358
 - addressed in: a5cf1c6, closes #358
 
-### [ ] [mentionedParts] [3.6] dcs-grass-valley-decline — 1 catalog entity mentioned in prose but absent from mentionedParts
+### [x] [mentionedParts] [3.6] dcs-grass-valley-decline — 1 catalog entity mentioned in prose but absent from mentionedParts
 - category: mentionedParts
 - filed: 2026-06-19 by article-parts-check.mjs corpus scan
 - impact: 4 (missing mentionedParts entries break the /part/[kind]/[slug] "mentioned in" rail)
@@ -5167,6 +5167,7 @@ passes accumulate signals.)
 - entities:
   - GMK CYL Selene (keycap-set `gmk-cyl-selene`) — prose line 60
 - action: add each entity to the article's mentionedParts frontmatter with the correct slug and kind
+- issue: [mirror-failed: 2026-06-20T05:33Z]
 
 ### [ ] [mentionedParts] [3.6] dcs-olivetti-comeback — 1 catalog entity mentioned in prose but absent from mentionedParts
 - category: mentionedParts
