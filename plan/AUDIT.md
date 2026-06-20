@@ -84,6 +84,15 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [tests] [3.6] VendorBoardSection missing unit test — addressed in 1df9fab, closes #364
+- category: tests
+- filed: 2026-06-20 by cloud /iterate audit
+- impact: 4 (VendorBoardSection.tsx on /vendor/[slug] detail pages had no colocated test despite phase 45 scope listing VendorCard, VendorGroupBuySection, VendorBoardSection as test targets; sibling components both have tests)
+- ease: 9 (standard unit test for a simple render component; well-established pattern from VendorCard.test.tsx and VendorGroupBuySection.test.tsx)
+- score: 3.6 (impact × ease / 10)
+- issue: #364
+- addressed in: 1df9fab, closes #364
+
 ### [x] [content] [6.3] cherry-mx2a-revision — optical-switches-explained cross-link missing at optical mention
 - category: content
 - filed: 2026-06-11 by cloud /iterate audit
