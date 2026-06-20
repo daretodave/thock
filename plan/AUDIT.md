@@ -5260,3 +5260,14 @@ passes accumulate signals.)
 - action: add apps/web/src/components/quiz/__tests__/KeycapSetResultCard.test.tsx
 - issue: [mirror-failed: 2026-06-20T00:00:00Z]
 - addressed in: a7ded59
+
+### [x] [refactor] [4.0] article-crosslink-survey.mjs — adjacent-pillar pairs still file despite oversight suppression directive
+- category: refactor
+- filed: 2026-06-20 by cloud /iterate audit
+- impact: 5 (plan/AUDIT.md PRUNE note 2026-06-14 explicitly says "if the drain re-dominates, raise the survey's adjacent-pillar floor rather than re-pruning by hand"; expand pass 128 confirmed re-domination (37/41 = 90% of pending queue were [3.6] adjacent-pillar rows refiled by the empty-queue path); suppression prevents the same pattern from recurring as new articles land)
+- ease: 8 (single guard in findUnlinkedPairs + one unit test update; no app code, no URL change, no schema change)
+- score: 4.0 (impact × ease / 10)
+- script: scripts/article-crosslink-survey.mjs
+- action: add `if (!samePillar) continue` in findUnlinkedPairs after computing samePillar; update "assigns lower score for cross-pillar pairs" unit test to assert pairs.length === 0 (suppressed) instead of 1
+- issue: [mirror-failed: 2026-06-20T00:00:00Z]
+- addressed in: 2ab171d
