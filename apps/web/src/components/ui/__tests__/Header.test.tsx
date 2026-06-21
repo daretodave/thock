@@ -9,10 +9,10 @@ describe('<Header>', () => {
     expect(homeLink).toHaveAttribute('href', '/')
   })
 
-  it('renders all five pillar nav links', () => {
+  it('renders all five pillar nav links plus the Tools entry', () => {
     render(<Header />)
     const nav = screen.getByRole('navigation', { name: 'Primary' })
-    const labels = ['News', 'Trends', 'Ideas', 'Deep Dives', 'Guides']
+    const labels = ['News', 'Trends', 'Ideas', 'Deep Dives', 'Guides', 'Tools']
     for (const label of labels) {
       expect(nav).toHaveTextContent(label)
     }

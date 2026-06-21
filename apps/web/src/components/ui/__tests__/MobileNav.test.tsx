@@ -19,14 +19,21 @@ describe('<MobileNav>', () => {
     expect(screen.getByTestId('mobile-nav-menu')).toBeInTheDocument()
   })
 
-  it('renders all five pillar links inside the open drawer', () => {
+  it('renders all five pillar links plus Tools inside the open drawer', () => {
     render(<MobileNav />)
     fireEvent.click(screen.getByTestId('mobile-nav-toggle'))
     const drawer = screen.getByTestId('mobile-nav-menu')
-    const labels = ['News', 'Trends', 'Ideas', 'Deep Dives', 'Guides']
+    const labels = ['News', 'Trends', 'Ideas', 'Deep Dives', 'Guides', 'Tools']
     for (const label of labels) {
       expect(drawer).toHaveTextContent(label)
     }
+  })
+
+  it('renders the Tools link with correct href and testid', () => {
+    render(<MobileNav />)
+    fireEvent.click(screen.getByTestId('mobile-nav-toggle'))
+    const toolsLink = screen.getByTestId('mobile-nav-tools-link')
+    expect(toolsLink).toHaveAttribute('href', '/tools')
   })
 
   it('closes the drawer when a link inside it is clicked', () => {

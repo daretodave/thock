@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test'
 
 test.describe('mobile nav — phase critique drain', () => {
-  test('hamburger toggle is visible at 375px and opens a drawer with all 5 pillar links', async ({
+  test('hamburger toggle is visible at 375px and opens a drawer with pillar links and Tools', async ({
     page,
   }) => {
     // Regression guard for plan/CRITIQUE.md HIGH "mobile nav —
@@ -18,7 +18,7 @@ test.describe('mobile nav — phase critique drain', () => {
     const drawer = page.getByTestId('mobile-nav-menu')
     await expect(drawer).toBeVisible()
 
-    for (const label of ['News', 'Trends', 'Ideas', 'Deep Dives', 'Guides']) {
+    for (const label of ['News', 'Trends', 'Ideas', 'Deep Dives', 'Guides', 'Tools']) {
       await expect(drawer.getByRole('link', { name: label })).toBeVisible()
     }
   })
