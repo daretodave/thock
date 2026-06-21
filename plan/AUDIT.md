@@ -5390,7 +5390,7 @@ passes accumulate signals.)
 - issue: [mirror-failed: 2026-06-21T11:10:00Z]
 - addressed in: 0e8fa83
 
-### [ ] [seo] [4.8] OG coverage gate missing — scripts/og-coverage-check.mjs not yet in repo
+### [x] [seo] [4.8] OG coverage gate missing — scripts/og-coverage-check.mjs not yet in repo
 - category: seo
 - filed: 2026-06-21 by /iterate audit
 - impact: 6 (14 seo: OG image commits across expand passes 127–134 consumed ~28 iterate ticks on a fully-mechanical class; automation closes the class permanently, same shape as article-parts-check.mjs for mentionedParts and article-language-check.mjs for temporal language)
@@ -5399,4 +5399,4 @@ passes accumulate signals.)
 - observation: no script existed to detect missing opengraph-image.tsx handlers at ship time. 28 iterate ticks were spent filing/fixing "route X shipped without OG" findings across 8 expand passes. The class is identical to what phase 38 closed for mentionedParts.
 - suggested fix: scripts/og-coverage-check.mjs + unit tests + skills/march.md Step 3b.5a amendment + skills/ship-a-phase.md Step 9 annotation.
 - issue: #372
-- addressed in: [pending this commit]
+- addressed in: abe4a2c, closes #372
