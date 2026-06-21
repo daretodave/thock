@@ -84,6 +84,42 @@ test.describe('per-part pages — phase 21', () => {
       await expect(backLink).toHaveAttribute('href', '/parts')
       await expect(backLink).toContainText('all parts')
     })
+
+    test('/part/switch kind-index carries quiz and compare affordances', async ({
+      page,
+    }) => {
+      await page.goto('/part/switch')
+      await expect(page.getByTestId('part-kind-quiz-link')).toHaveAttribute(
+        'href',
+        '/quiz/switch',
+      )
+      await expect(page.getByTestId('part-kind-compare-link')).toHaveAttribute(
+        'href',
+        '/compare/switch',
+      )
+    })
+
+    test('/part/keycap-set kind-index carries quiz affordance', async ({
+      page,
+    }) => {
+      await page.goto('/part/keycap-set')
+      await expect(page.getByTestId('part-kind-quiz-link')).toHaveAttribute(
+        'href',
+        '/quiz/keycap-set',
+      )
+      await expect(page.getByTestId('part-kind-compare-link')).toHaveCount(0)
+    })
+
+    test('/part/board kind-index carries compare affordance', async ({
+      page,
+    }) => {
+      await page.goto('/part/board')
+      await expect(page.getByTestId('part-kind-compare-link')).toHaveAttribute(
+        'href',
+        '/compare/board',
+      )
+      await expect(page.getByTestId('part-kind-quiz-link')).toHaveCount(0)
+    })
   })
 
   test.describe('detail pages', () => {

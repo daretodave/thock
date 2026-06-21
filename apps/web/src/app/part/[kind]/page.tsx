@@ -43,6 +43,22 @@ const KIND_DESCRIPTION: Record<ValidKind, string> = {
     'Every board in the thock catalog — layout, mount style, and the articles that cover them.',
 }
 
+const KIND_TOOLS: Record<
+  ValidKind,
+  { quiz?: { href: string; label: string }; compare?: { href: string; label: string } }
+> = {
+  switch: {
+    quiz: { href: '/quiz/switch', label: 'Find your switch →' },
+    compare: { href: '/compare/switch', label: 'Compare switches →' },
+  },
+  'keycap-set': {
+    quiz: { href: '/quiz/keycap-set', label: 'Find your keycap set →' },
+  },
+  board: {
+    compare: { href: '/compare/board', label: 'Compare boards →' },
+  },
+}
+
 function partsForKind(kind: ValidKind): ResolvedPart[] {
   if (kind === 'switch') {
     return getAllSwitches().map((record) => ({
@@ -99,6 +115,7 @@ export default async function PartIndexPage({
   const path = `/part/${kind}`
   const heading = KIND_HEADING[kind]
   const description = KIND_DESCRIPTION[kind]
+  const tools = KIND_TOOLS[kind]
 
   return (
     <main id="main" className="flex-1">
@@ -148,6 +165,28 @@ export default async function PartIndexPage({
           >
             ← all parts
           </Link>
+          {(tools.quiz ?? tools.compare) && (
+            <div className="flex flex-wrap gap-4">
+              {tools.quiz && (
+                <Link
+                  href={tools.quiz.href}
+                  data-testid="part-kind-quiz-link"
+                  className="font-mono text-small uppercase tracking-[0.08em] text-accent hover:text-text"
+                >
+                  {tools.quiz.label}
+                </Link>
+              )}
+              {tools.compare && (
+                <Link
+                  href={tools.compare.href}
+                  data-testid="part-kind-compare-link"
+                  className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text"
+                >
+                  {tools.compare.label}
+                </Link>
+              )}
+            </div>
+          )}
         </Stack>
       </Container>
 
