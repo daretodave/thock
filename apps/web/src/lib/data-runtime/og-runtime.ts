@@ -39,10 +39,17 @@ export type PartOGData = {
   name: string
 }
 
+export type VendorOGData = {
+  slug: string
+  name: string
+  description: string
+}
+
 type OGManifest = {
   articles: ArticleOGData[]
   tags: TagOGData[]
   parts: PartOGData[]
+  vendors: VendorOGData[]
   generatedAt: string
 }
 
@@ -58,4 +65,8 @@ export function getTagForOg(slug: string): TagOGData | null {
 
 export function getPartForOg(kind: string, slug: string): PartOGData | null {
   return (ogManifest.parts ?? []).find((p) => p.kind === kind && p.slug === slug) ?? null
+}
+
+export function getVendorForOg(slug: string): VendorOGData | null {
+  return (ogManifest.vendors ?? []).find((v) => v.slug === slug) ?? null
 }

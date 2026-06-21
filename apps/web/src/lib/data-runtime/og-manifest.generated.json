@@ -1070,5 +1070,47 @@
       "name": "QK75"
     }
   ],
-  "generatedAt": "2026-06-21T01:58:02.571Z"
+  "vendors": [
+    {
+      "slug": "cannonkeys",
+      "name": "CannonKeys",
+      "description": "Boutique keyboard vendor based in the United States. Stocks switches, keycaps, and runs in-house and partnered group buys for boards and accessories."
+    },
+    {
+      "slug": "divinikey",
+      "name": "Divinikey",
+      "description": "US-based mechanical keyboard retailer headquartered in Los Angeles, California, stocking keyboards, keycap sets, switches, and accessories; runs group buys for custom keyboard projects including DCS and GMK keycap sets."
+    },
+    {
+      "slug": "drop",
+      "name": "Drop",
+      "description": "US storefront and platform for community-driven keyboard, audio, and gaming products. Co-develops MT3 keycap profiles with Matt3o and runs in-house Drop-branded switches and boards."
+    },
+    {
+      "slug": "kbdfans",
+      "name": "KBDfans",
+      "description": "China-based mechanical keyboard vendor with a long-running storefront for boards, switches, keycaps, and accessories; hosts a large slate of GMK and in-house group buys with multi-region proxies."
+    },
+    {
+      "slug": "keychron",
+      "name": "Keychron",
+      "description": "Popular keyboard brand based in Hong Kong known for the Q line (gasket-mounted aluminum prebuilts with QMK/VIA support), the K line (wireless mechanical for everyday use), and the Q Ultra series featuring ZMK firmware and magnetic Hall-effect switches. One of the highest-volume vendors in the enthusiast-adjacent prebuilt market, stocked widely across Amazon and direct."
+    },
+    {
+      "slug": "novelkeys",
+      "name": "NovelKeys",
+      "description": "Indianapolis-based vendor that runs in-house switches (Cream, Silk) and partners on group buys for keycaps and boards. One of the most-cited NA storefronts for enthusiast switch SKUs."
+    },
+    {
+      "slug": "wooting",
+      "name": "Wooting",
+      "description": "Dutch maker of Hall-effect keyboards and the originator of rapid-trigger for PC gaming. The Wooting 60HE and Wooting 60HE+ are the benchmarks the rest of the analog-input category measures against: per-key actuation depth, analog axis output to games, and the most mature rapid-trigger firmware stack in the segment. Wooting's software has a multi-year head start on configurator depth that newer HE entrants are actively closing."
+    },
+    {
+      "slug": "wuque-studio",
+      "name": "Wuque Studio",
+      "description": "China-based design studio and vendor known for in-house boards (Mammoth, Ikki68, Promise) and partnered group buys, sold direct from shop.wuquestudio.com with regional proxies."
+    }
+  ],
+  "generatedAt": "2026-06-21T03:14:49.561Z"
 }

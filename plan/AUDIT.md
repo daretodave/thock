@@ -84,6 +84,17 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [ ] [seo] [4.8] OG images missing for 6 routes — /vendor/[slug], /about, /group-buys/past, /newsletter, /search, /sources
+- category: seo
+- impact: 6 (8 dynamic vendor detail pages + 5 static pages fall back to site-default OG card; vendor pages are linked from group-buy cards and the /vendors index — social shares show no context)
+- ease: 8 (PillarOGContent pattern established; static routes are 1-file copy; /vendor/[slug] needs ogManifest vendors field + getVendorForOg() helper)
+- score: 4.8
+- filed: 2026-06-21 by cloud /iterate audit
+- observation: 22 of 28 page families have opengraph-image.tsx handlers after the recent SEO sprint. 6 routes remain uncovered: /vendor/[slug] (8 pages — cannonkeys, divinikey, drop, kbdfans, keychron, novelkeys, wooting, wuque-studio), /about, /group-buys/past, /newsletter, /search, /sources.
+- evidence: `find apps/web/src/app -name "page.tsx"` then check sibling opengraph-image.tsx — 6 directories returned no handler.
+- suggested fix: add vendors array to ogManifest in generate-data-manifest.mts; add VendorOGData type + getVendorForOg() to og-runtime.ts; create /vendor/[slug]/opengraph-image.tsx showing vendor name; create 5 static PillarOGContent handlers.
+- issue: #370
+
 ### [x] [fix] [3.6] 6 zero-article tags in tags.json generate empty /tag pages — addressed in db43714, closes #367
 - category: fix
 - filed: 2026-06-20 by cloud /iterate audit
