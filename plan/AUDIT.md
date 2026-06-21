@@ -84,6 +84,17 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [affordance] [4.2] /part/[kind] index pages missing quiz and compare tool affordances — addressed in this commit
+- category: affordance
+- impact: 6 (3 kind-index pages — /part/switch, /part/keycap-set, /part/board — list all catalog records but provide no entry-point CTAs to the quiz or compare tools; readers browsing the catalog have no path to "Find your switch →" or "Compare switches →" without going via /tools)
+- ease: 7 (KIND_TOOLS map + conditional Link tags in existing header Stack; no schema change, no new components)
+- score: 4.2 (impact × ease / 10)
+- filed: 2026-06-21 by cloud /iterate audit
+- observation: /part/[kind]/page.tsx header renders eyebrow, H1, description, and "← all parts" back-link but no kind-specific tool affordances. The detail page /part/[kind]/[slug]/page.tsx gained "Find your switch →" and "Compare this switch →" in 0b4caeb, but the parent kind-index pages were not updated. Switch index (17 records), keycap-set index (10 records), and board index (9 records) all lack discovery CTAs to the quiz/compare tools that exist for their kind.
+- evidence: apps/web/src/app/part/[kind]/page.tsx — no quiz or compare Link in the header section; grep for "quiz-link\|compare-link" in page.tsx → 0 matches; /part/switch, /part/keycap-set, /part/board all confirm no tool CTAs in rendered HTML.
+- suggested fix: add KIND_TOOLS record (switch: quiz + compare; keycap-set: quiz; board: compare); render tool Links with data-testid="part-kind-quiz-link" and data-testid="part-kind-compare-link" after the back-link; add 3 e2e tests in parts.spec.ts kind-index block.
+- issue: [mirror-failed: 2026-06-21T00:00:00Z]
+
 ### [x] [a11y] [3.2] a11y mobile suite missing 13 routes — desktop covers 16, mobile covered only 3 — addressed in b008a6f
 - category: a11y
 - impact: 4 (mobile viewport axe coverage for 13 routes absent; mobile-specific regressions would go undetected)
