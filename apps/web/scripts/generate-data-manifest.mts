@@ -65,6 +65,7 @@ const ogManifest = {
       author: a.frontmatter.author,
     },
   })),
+  tags: manifest.tags.map((t) => ({ slug: t.slug, name: t.name, category: t.category })),
   generatedAt: manifest.generatedAt,
 }
 
@@ -82,4 +83,4 @@ console.log(`  trends:      ${manifest.trends.length}`)
 console.log(`  articles:    ${manifest.articles.length}`)
 console.log(`  newsletters: ${manifest.newsletters.length}`)
 console.log(`  tags:        ${manifest.tags.length}`)
-console.log(`[manifest] wrote ${ogOutFile} (articles-only OG manifest: ${ogManifest.articles.length} articles)`)
+console.log(`[manifest] wrote ${ogOutFile} (OG manifest: ${ogManifest.articles.length} articles, ${ogManifest.tags.length} tags)`)

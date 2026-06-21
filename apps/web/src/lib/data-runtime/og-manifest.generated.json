@@ -551,5 +551,342 @@
       }
     }
   ],
-  "generatedAt": "2026-06-20T20:38:42.918Z"
+  "tags": [
+    {
+      "slug": "65",
+      "name": "65%",
+      "category": "layout"
+    },
+    {
+      "slug": "75",
+      "name": "75%",
+      "category": "layout"
+    },
+    {
+      "slug": "abs",
+      "name": "ABS",
+      "category": "material"
+    },
+    {
+      "slug": "acoustic",
+      "name": "Acoustic",
+      "category": "misc"
+    },
+    {
+      "slug": "alice",
+      "name": "Alice",
+      "category": "layout"
+    },
+    {
+      "slug": "aluminum",
+      "name": "Aluminum",
+      "category": "material"
+    },
+    {
+      "slug": "beginner",
+      "name": "Beginner",
+      "category": "misc"
+    },
+    {
+      "slug": "build-of-the-week",
+      "name": "Build of the week",
+      "category": "misc"
+    },
+    {
+      "slug": "cannonkeys",
+      "name": "CannonKeys",
+      "category": "brand"
+    },
+    {
+      "slug": "cherry",
+      "name": "Cherry",
+      "category": "brand"
+    },
+    {
+      "slug": "cherry-profile",
+      "name": "Cherry profile",
+      "category": "profile"
+    },
+    {
+      "slug": "clicky",
+      "name": "Clicky",
+      "category": "switch"
+    },
+    {
+      "slug": "configurator",
+      "name": "Configurator",
+      "category": "misc"
+    },
+    {
+      "slug": "dcs",
+      "name": "DCS",
+      "category": "profile"
+    },
+    {
+      "slug": "deep-dive",
+      "name": "Deep dive",
+      "category": "misc"
+    },
+    {
+      "slug": "divinikey",
+      "name": "Divinikey",
+      "category": "brand"
+    },
+    {
+      "slug": "drop",
+      "name": "Drop",
+      "category": "brand"
+    },
+    {
+      "slug": "electrocapacitive",
+      "name": "Electrocapacitive",
+      "category": "switch"
+    },
+    {
+      "slug": "ergo",
+      "name": "Ergo",
+      "category": "layout"
+    },
+    {
+      "slug": "factory-lubed",
+      "name": "Factory-lubed",
+      "category": "switch"
+    },
+    {
+      "slug": "firmware",
+      "name": "Firmware",
+      "category": "misc"
+    },
+    {
+      "slug": "gateron",
+      "name": "Gateron",
+      "category": "brand"
+    },
+    {
+      "slug": "glove80",
+      "name": "Glove80",
+      "category": "brand"
+    },
+    {
+      "slug": "gmk",
+      "name": "GMK",
+      "category": "brand"
+    },
+    {
+      "slug": "group-buy",
+      "name": "Group buy",
+      "category": "misc"
+    },
+    {
+      "slug": "hall-effect",
+      "name": "Hall-effect",
+      "category": "switch"
+    },
+    {
+      "slug": "hhkb",
+      "name": "HHKB",
+      "category": "brand"
+    },
+    {
+      "slug": "kailh",
+      "name": "Kailh",
+      "category": "brand"
+    },
+    {
+      "slug": "kbdfans",
+      "name": "KBDfans",
+      "category": "brand"
+    },
+    {
+      "slug": "keycaps",
+      "name": "Keycaps",
+      "category": "misc"
+    },
+    {
+      "slug": "keychron",
+      "name": "Keychron",
+      "category": "brand"
+    },
+    {
+      "slug": "layout",
+      "name": "Layout",
+      "category": "layout"
+    },
+    {
+      "slug": "linear",
+      "name": "Linear",
+      "category": "switch"
+    },
+    {
+      "slug": "lubed",
+      "name": "Lubed",
+      "category": "switch"
+    },
+    {
+      "slug": "lubing",
+      "name": "Lubing",
+      "category": "switch"
+    },
+    {
+      "slug": "magnetic",
+      "name": "Magnetic",
+      "category": "switch"
+    },
+    {
+      "slug": "modding",
+      "name": "Modding",
+      "category": "misc"
+    },
+    {
+      "slug": "mode",
+      "name": "Mode",
+      "category": "brand"
+    },
+    {
+      "slug": "mt3",
+      "name": "MT3",
+      "category": "profile"
+    },
+    {
+      "slug": "mx2a",
+      "name": "MX2A",
+      "category": "switch"
+    },
+    {
+      "slug": "nylon",
+      "name": "Nylon",
+      "category": "material"
+    },
+    {
+      "slug": "oem-profile",
+      "name": "OEM profile",
+      "category": "profile"
+    },
+    {
+      "slug": "optical",
+      "name": "Optical",
+      "category": "switch"
+    },
+    {
+      "slug": "pbt",
+      "name": "PBT",
+      "category": "material"
+    },
+    {
+      "slug": "polling-rate",
+      "name": "Polling rate",
+      "category": "misc"
+    },
+    {
+      "slug": "polycarbonate",
+      "name": "Polycarbonate",
+      "category": "material"
+    },
+    {
+      "slug": "pom",
+      "name": "POM",
+      "category": "material"
+    },
+    {
+      "slug": "prebuilt",
+      "name": "Prebuilt",
+      "category": "misc"
+    },
+    {
+      "slug": "qmk",
+      "name": "QMK",
+      "category": "misc"
+    },
+    {
+      "slug": "qwertykeys",
+      "name": "Qwertykeys",
+      "category": "brand"
+    },
+    {
+      "slug": "sa",
+      "name": "SA",
+      "category": "profile"
+    },
+    {
+      "slug": "silent",
+      "name": "Silent",
+      "category": "switch"
+    },
+    {
+      "slug": "split",
+      "name": "Split",
+      "category": "layout"
+    },
+    {
+      "slug": "stabilizers",
+      "name": "Stabilizers",
+      "category": "misc"
+    },
+    {
+      "slug": "switch-films",
+      "name": "Switch films",
+      "category": "misc"
+    },
+    {
+      "slug": "switches",
+      "name": "Switches",
+      "category": "misc"
+    },
+    {
+      "slug": "tactile",
+      "name": "Tactile",
+      "category": "switch"
+    },
+    {
+      "slug": "topre",
+      "name": "Topre",
+      "category": "brand"
+    },
+    {
+      "slug": "tray-mount",
+      "name": "Tray-mount",
+      "category": "layout"
+    },
+    {
+      "slug": "trends-2026",
+      "name": "Trends 2026",
+      "category": "misc"
+    },
+    {
+      "slug": "trends-tracker",
+      "name": "Trends Tracker",
+      "category": "misc"
+    },
+    {
+      "slug": "vendor",
+      "name": "Vendor",
+      "category": "misc"
+    },
+    {
+      "slug": "via",
+      "name": "VIA",
+      "category": "misc"
+    },
+    {
+      "slug": "vial",
+      "name": "VIAL",
+      "category": "misc"
+    },
+    {
+      "slug": "voyager",
+      "name": "Voyager",
+      "category": "brand"
+    },
+    {
+      "slug": "wireless",
+      "name": "Wireless",
+      "category": "misc"
+    },
+    {
+      "slug": "zmk",
+      "name": "ZMK",
+      "category": "misc"
+    }
+  ],
+  "generatedAt": "2026-06-21T00:45:44.700Z"
 }
