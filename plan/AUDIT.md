@@ -84,7 +84,7 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
-### [ ] [seo] [4.8] OG images missing for 6 routes — /vendor/[slug], /about, /group-buys/past, /newsletter, /search, /sources
+### [x] [seo] [4.8] OG images missing for 6 routes — /vendor/[slug], /about, /group-buys/past, /newsletter, /search, /sources — addressed in 10eb02e, closes #370
 - category: seo
 - impact: 6 (8 dynamic vendor detail pages + 5 static pages fall back to site-default OG card; vendor pages are linked from group-buy cards and the /vendors index — social shares show no context)
 - ease: 8 (PillarOGContent pattern established; static routes are 1-file copy; /vendor/[slug] needs ogManifest vendors field + getVendorForOg() helper)
