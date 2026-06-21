@@ -5329,3 +5329,12 @@ passes accumulate signals.)
 - suggested fix: add /tag/[slug]/opengraph-image.tsx using PillarOGContent with tag.name as pillarLabel and category-keyed tagline; add tags to og-manifest for edge-runtime lookup
 - issue: #368
 - addressed in: 73280f9, closes #368
+
+### [x] [seo] [3.6] /part/[kind] and /part/[kind]/[slug] missing OG images — 39 part pages — addressed in 382bfb7, closes #369
+- category: seo
+- filed: 2026-06-21 by cloud /iterate audit
+- impact: 6 (36 part entity pages + 3 kind-index pages fell back to site-default OG when shared on social; switch/keycap-set/board detail pages are product-level entities that keyboard enthusiasts share when comparing options)
+- ease: 6 (manifest additive for 36 part records + og-runtime lookup function + 2 OG handlers)
+- score: 3.6 (impact × ease / 10)
+- issue: #369
+- addressed in: 382bfb7, closes #369
