@@ -139,7 +139,7 @@ test.describe('a11y — desktop', () => {
   })
 })
 
-// Mobile suite — 3 representative pages at 375px
+// Mobile suite — 16 routes at 375px (matches desktop suite; extended to phases 43–49)
 test.describe('a11y — mobile (375px)', () => {
   test.use({ viewport: { width: 375, height: 800 } })
 
@@ -153,6 +153,58 @@ test.describe('a11y — mobile (375px)', () => {
 
   test('trends tracker — mobile', async ({ page }) => {
     await runAxe(page, '/trends/tracker')
+  })
+
+  test('group buys — mobile', async ({ page }) => {
+    await runAxe(page, '/group-buys')
+  })
+
+  test('search — mobile', async ({ page }) => {
+    await runAxe(page, '/search')
+  })
+
+  test('about — mobile', async ({ page }) => {
+    await runAxe(page, '/about')
+  })
+
+  test('tag page — mobile', async ({ page }) => {
+    await runAxe(page, '/tag/linear')
+  })
+
+  test('parts catalog — mobile', async ({ page }) => {
+    await runAxe(page, '/parts')
+  })
+
+  test('switch quiz — mobile', async ({ page }) => {
+    await runAxe(page, '/quiz/switch')
+  })
+
+  test('article archive — mobile', async ({ page }) => {
+    await runAxe(page, '/archive')
+  })
+
+  test('switch compare — mobile', async ({ page }) => {
+    await runAxe(page, '/compare/switch')
+  })
+
+  test('board compare — mobile', async ({ page }) => {
+    await runAxe(page, '/compare/board')
+  })
+
+  test('vendors index — mobile', async ({ page }) => {
+    await runAxe(page, '/vendors')
+  })
+
+  test('vendor detail — mobile', async ({ page }) => {
+    await runAxe(page, '/vendor/cannonkeys')
+  })
+
+  test('tools index — mobile', async ({ page }) => {
+    await runAxe(page, '/tools')
+  })
+
+  test('keycap-set quiz — mobile', async ({ page }) => {
+    await runAxe(page, '/quiz/keycap-set')
   })
 })
 
