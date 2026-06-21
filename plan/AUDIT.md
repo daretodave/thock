@@ -5368,3 +5368,13 @@ passes accumulate signals.)
 - score: 4.0 (impact × ease / 10)
 - source: iterate audit 2026-06-21
 - issue: [mirror-failed: 2026-06-21]
+
+### [x] [tests] [4.5] Mobile + desktop nav Tools link missing from test assertions
+- category: tests
+- filed: 2026-06-21 by iterate audit
+- impact: 5 (phase-49 added "Tools" to both desktop <Header> nav and mobile <MobileNav> drawer, but all three test files only asserted the 5 pillar links — the Tools entry was completely untested, leaving an undetected regression window)
+- ease: 9 (label-array additions in two unit tests + one assertion in the e2e mobile spec)
+- score: 4.5 (impact × ease / 10)
+- observation: data-testid="mobile-nav-tools-link" was present in MobileNav.tsx (confirming intent), but nav.mobile.spec.ts's drawer test looped over only the five pillars; Header.test.tsx and MobileNav.test.tsx had the same gap for the desktop and unit-test surfaces respectively
+- issue: [mirror-failed: 2026-06-21T11:10:00Z]
+- addressed in: 0e8fa83
