@@ -84,6 +84,17 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [tests] [3.2] meta.spec.ts JSON-LD type assertions missing for 7 route families — /archive, /vendors, /vendor/[slug], /tools, /compare/switch, /compare/board, /quiz/keycap-set — addressed in 1d6516e
+- category: tests
+- impact: 4 (7 route families emit CollectionPage/BreadcrumbList/Organization/WebApplication JSON-LD in their page.tsx files but expectedTypesFor() in meta.spec.ts returns [] for them — any regression in those schemas would go undetected)
+- ease: 8 (additive entries to expectedTypesFor() in apps/e2e/tests/meta.spec.ts — simple path string comparisons, pattern well established for 20+ existing entries)
+- score: 3.2 (impact × ease / 10)
+- filed: 2026-06-21 by cloud /iterate audit
+- observation: meta.spec.ts phase-17 JSON-LD audit walks every canonical HTML URL and asserts expected @type values. 7 routes shipped in phases 43–49 produce real JSON-LD but have no specific type assertions: /archive (CollectionPage+BreadcrumbList+ItemList), /vendors (CollectionPage+BreadcrumbList+ItemList), /vendor/[slug] (Organization+BreadcrumbList), /tools (CollectionPage+BreadcrumbList+ItemList), /compare/switch (BreadcrumbList), /compare/board (BreadcrumbList), /quiz/keycap-set (WebApplication+BreadcrumbList). All fall through to return [] which means no type assertion is made.
+- evidence: grep '@type' apps/web/src/app/{archive,vendors,tools}/page.tsx — all import buildCollectionPageJsonLd+buildBreadcrumbListJsonLd+buildItemListJsonLd; grep apps/web/src/app/vendor/[slug]/page.tsx — @type: 'Organization' + buildBreadcrumbListJsonLd; grep apps/web/src/app/quiz/keycap-set/page.tsx — @type: 'WebApplication' + buildBreadcrumbListJsonLd; grep apps/web/src/app/compare/{switch,board}/page.tsx — buildBreadcrumbListJsonLd always. All confirmed against page sources.
+- suggested fix: add 7 entries to expectedTypesFor() in apps/e2e/tests/meta.spec.ts: /archive → ['CollectionPage','BreadcrumbList','ItemList']; /vendors → same; /vendor/[slug] wildcard → ['Organization','BreadcrumbList']; /tools → ['CollectionPage','BreadcrumbList','ItemList']; /compare/switch → ['BreadcrumbList']; /compare/board → ['BreadcrumbList']; /quiz/keycap-set → ['WebApplication','BreadcrumbList'].
+- issue: [mirror-failed: 2026-06-21T00:00:00Z]
+
 ### [x] [seo] [4.8] OG images missing for 6 routes — /vendor/[slug], /about, /group-buys/past, /newsletter, /search, /sources — addressed in 10eb02e, closes #370
 - category: seo
 - impact: 6 (8 dynamic vendor detail pages + 5 static pages fall back to site-default OG card; vendor pages are linked from group-buy cards and the /vendors index — social shares show no context)
