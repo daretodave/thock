@@ -72,7 +72,7 @@ using the standard `impact × ease / 10` formula. Apply the
 
 (Multiply each content-gap score by 1.5 before ranking.)
 
-Confirm the top row maps to one of the 4 bearings rules:
+Confirm the top row maps to one of the 4 bearings rules or a newsletter cadence row:
 
 - **Rule 1 — pillar quota:** `pillarArticleCount < 8`
 - **Rule 2 — tracker linkage:** non-flat trend row older than 14 days
@@ -81,6 +81,10 @@ Confirm the top row maps to one of the 4 bearings rules:
   `status ∈ {live, announced}` and no companion article
 - **Rule 4 — publishedAt staggering:** implicit; every new article
   must gap-fill
+- **Newsletter cadence:** row filed by `newsletter-gap-survey.mjs` (score
+  4.0) when ≥7 days have elapsed since the last digest. Route is
+  `apps/web/src/content/newsletters/<slug>.mdx`, not `articles/`. See
+  the **Newsletter cadence** note in Step 4 for brief adjustments.
 
 If no content-gap row exists, or all rows score < 3.0, exit cleanly:
 log "no content queue — falling through" and return to caller.
@@ -205,6 +209,17 @@ After both agents return, confirm:
 2. SVG exists at `apps/web/public/hero-art/<slug>.svg`.
 3. MDX frontmatter `heroImage: /hero-art/<slug>.svg` — path matches.
 4. MDX frontmatter `heroImageAlt` is set and non-empty.
+
+**Newsletter cadence note:** When the AUDIT row category is `newsletter`
+(filed by `newsletter-gap-survey.mjs`), the output path is
+`apps/web/src/content/newsletters/<slug>.mdx` (not `articles/`). The
+slug convention is `thock-weekly-NNN` where NNN is the next issue number
+from the audit row. Brief content-curator with the weekly round-up format:
+5 article picks (one per pillar, chosen from the most recent or most
+relevant pieces), a tracker insight from the latest `data/trends/<week>.json`,
+~350–450 words total. No hero image or tags for newsletter MDX — the
+frontmatter requires `slug`, `title`, `lede`, `issue`, `publishedAt`
+only. Skip the brander sub-agent for newsletter rows.
 
 ### Step 5 — Validate and extend `tags.json`
 

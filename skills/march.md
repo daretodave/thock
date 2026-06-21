@@ -290,8 +290,18 @@ node scripts/group-buy-status-check.mjs --write
 This files AUDIT rows (`data`, score 3.6) for any `live` or `announced`
 group-buy records whose `endDate` is in the past — enforcing data hygiene
 mechanically. Deduplicates against existing AUDIT rows. If it exits
-non-zero, log and continue — the scanner is best-effort. Then fall
-through to Step 3c (expand).
+non-zero, log and continue — the scanner is best-effort.
+
+Then run the newsletter cadence survey (Phase XX amendment):
+
+```bash
+node scripts/newsletter-gap-survey.mjs --write
+```
+
+This files a `content-gaps` AUDIT row (score 4.0) when ≥7 calendar days
+have elapsed since the most-recent newsletter digest. Deduplicates against
+any existing pending newsletter row. If it exits non-zero, log and continue
+— the survey is best-effort. Then fall through to Step 3c (expand).
 
 #### 3c. Expand due (rate-limited, posture-gated)?
 
