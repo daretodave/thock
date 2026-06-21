@@ -84,6 +84,17 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [a11y] [4.8] a11y desktop suite missing 7 route families from phases 43–49 — /archive, /compare/switch, /compare/board, /vendors, /vendor/[slug], /tools, /quiz/keycap-set — addressed in a3fe414, closes #371
+- category: a11y
+- impact: 6 (7 route families shipped in phases 43–49 with real interactive elements — compare selectors, keycap-set quiz, vendor external links — have no full runAxe(WCAG 2.1 AA) coverage in a11y.spec.ts desktop suite; any critical/serious violation introduced in those routes would be invisible to the gate)
+- ease: 8 (additive pattern — 7 new test blocks calling runAxe(page, url), same shape as existing 9 desktop tests; no component or data changes)
+- score: 4.8 (impact × ease / 10)
+- filed: 2026-06-21 by cloud /iterate audit
+- observation: a11y.spec.ts desktop suite was last extended in phase 33 (/quiz/switch added). Phases 43–49 shipped 7 new route families: /archive (CollectionPage, static), /compare/switch + /compare/board (two <select> dropdowns with label/htmlFor, interactive), /vendors (collection list), /vendor/[slug] (external link, detail sections), /tools (collection grid), /quiz/keycap-set (interactive quiz with option buttons). The suite covers 9 routes; these 7 bring the gap to 44% of canonical route families with no full axe pass. The compare pages have htmlFor/id pairs and aria-labels confirmed in source — likely clean — but unverified by the gate.
+- evidence: grep "runAxe" apps/e2e/tests/a11y.spec.ts → 9 direct runAxe calls (/, article, tracker, group-buys, search, about, tag/linear, parts, quiz/switch). grep for "archive\|compare\|vendors\|tools\|quiz/keycap" → 0 matches in the desktop describe block. pages confirmed to have no full axe pass: /archive, /compare/switch, /compare/board, /vendors, /vendor/cannonkeys (representative slug), /tools, /quiz/keycap-set.
+- suggested fix: add 7 test blocks to the 'a11y — desktop' describe in apps/e2e/tests/a11y.spec.ts calling runAxe(page, url) for each route. Use vendor slug 'cannonkeys' (always present, has active group buys — exercises all sections). Update spec comment from "9 canonical pages (phase 33)" to "16 canonical pages (phase 49)".
+- issue: #371
+
 ### [x] [tests] [3.2] meta.spec.ts JSON-LD type assertions missing for 7 route families — /archive, /vendors, /vendor/[slug], /tools, /compare/switch, /compare/board, /quiz/keycap-set — addressed in 1d6516e
 - category: tests
 - impact: 4 (7 route families emit CollectionPage/BreadcrumbList/Organization/WebApplication JSON-LD in their page.tsx files but expectedTypesFor() in meta.spec.ts returns [] for them — any regression in those schemas would go undetected)
