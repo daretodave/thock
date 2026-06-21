@@ -116,6 +116,20 @@ test.describe('per-part pages — phase 21', () => {
       expect(flat).toMatch(/"@type":"(Product|Thing)"/)
     })
 
+    test('switch detail page carries compare and quiz affordances', async ({
+      page,
+    }) => {
+      await page.goto('/part/switch/gateron-oil-king')
+      await expect(page.getByTestId('part-compare-link')).toHaveAttribute(
+        'href',
+        '/compare/switch?a=gateron-oil-king',
+      )
+      await expect(page.getByTestId('part-switch-quiz-link')).toHaveAttribute(
+        'href',
+        '/quiz/switch',
+      )
+    })
+
     test('mentioned-in rail surfaces ≥1 article when known articles cite the part', async ({
       page,
     }) => {

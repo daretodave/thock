@@ -142,6 +142,15 @@ export default async function PartDetailPage({
               Compare this switch →
             </Link>
           )}
+          {part.kind === 'switch' && (
+            <Link
+              href="/quiz/switch"
+              data-testid="part-switch-quiz-link"
+              className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text"
+            >
+              Find your switch →
+            </Link>
+          )}
           {part.kind === 'board' && (
             <Link
               href={`/compare/board?a=${part.slug}`}
