@@ -97,6 +97,15 @@ function expectedTypesFor(path: string): ExpectedTypes {
   // /trends/tracker/YYYY-WNN weekly archive pages.
   if (/^\/trends\/tracker\/\d{4}-W\d{2}$/.test(path))
     return ['CollectionPage', 'BreadcrumbList', 'Dataset']
+  // Routes shipped in phases 43–49 (previously fell through to []).
+  if (path === '/archive') return ['CollectionPage', 'BreadcrumbList', 'ItemList']
+  if (path === '/vendors') return ['CollectionPage', 'BreadcrumbList', 'ItemList']
+  if (path.startsWith('/vendor/')) return ['Organization', 'BreadcrumbList']
+  if (path === '/tools') return ['CollectionPage', 'BreadcrumbList', 'ItemList']
+  // /compare/* base URLs always emit BreadcrumbList; ItemList only when both ?a=&b= params resolve.
+  if (path === '/compare/switch') return ['BreadcrumbList']
+  if (path === '/compare/board') return ['BreadcrumbList']
+  if (path === '/quiz/keycap-set') return ['WebApplication', 'BreadcrumbList']
   // Anything else: just require *some* JSON-LD parses (catches
   // malformed HTML on routes we haven't categorized).
   return []
