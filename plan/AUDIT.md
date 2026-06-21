@@ -5420,3 +5420,15 @@ passes accumulate signals.)
 - observation: `part.kind === 'switch'` block in page.tsx has a compare link but no quiz link; `part.kind === 'keycap-set'` block has a quiz link but no compare link (compare/keycap-set not yet built). Switch detail is the only kind with an existing quiz but no quiz affordance on its own detail page.
 - issue: [mirror-failed: 2026-06-21T00:00:00Z]
 - addressed in: 0b4caeb
+
+### [x] [tests] [3.6] /quiz/keycap-set results view — keycap-quiz-browse-all-parts-link has no unit or e2e regression guard
+- category: tests
+- filed: 2026-06-21 by cloud /iterate audit
+- impact: 4 (if the "Browse all parts →" href in KeycapSetQuiz changes from /parts, no test catches it; SwitchQuiz.test.tsx line 108 guards the equivalent quiz-browse-all-parts-link, but KeycapSetQuiz.test.tsx and parts.spec.ts have no parallel assertion for keycap-quiz-browse-all-parts-link)
+- ease: 9 (mirror the SwitchQuiz test pattern: one it() in KeycapSetQuiz.test.tsx + one test block in parts.spec.ts)
+- score: 3.6 (impact × ease / 10)
+- observation: KeycapSetQuiz.tsx line 185 renders data-testid="keycap-quiz-browse-all-parts-link" linking to /parts. SwitchQuiz.test.tsx line 108 tests the equivalent quiz-browse-all-parts-link; KeycapSetQuiz.test.tsx does not test its counterpart. parts.spec.ts line 36–45 tests quiz-browse-all-parts-link on /quiz/switch but has no equivalent for /quiz/keycap-set.
+- evidence: grep keycap-quiz-browse-all-parts-link in KeycapSetQuiz.test.tsx → 0 matches; grep keycap-quiz-browse-all-parts-link in apps/e2e/tests/ → 0 matches; quiz-browse-all-parts-link in SwitchQuiz.test.tsx line 111 and parts.spec.ts line 42 both pass.
+- suggested fix: add it('browse-all-parts link points to /parts catalog page') to KeycapSetQuiz.test.tsx using getByTestId('keycap-quiz-browse-all-parts-link'); add test to parts.spec.ts mirroring lines 36–45 for /quiz/keycap-set.
+- issue: [mirror-failed: 2026-06-21T00:00:00Z]
+- addressed in: 46c29d7
