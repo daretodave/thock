@@ -5410,3 +5410,13 @@ passes accumulate signals.)
 - suggested fix: scripts/og-coverage-check.mjs + unit tests + skills/march.md Step 3b.5a amendment + skills/ship-a-phase.md Step 9 annotation.
 - issue: #372
 - addressed in: abe4a2c, closes #372
+
+### [x] [nav] [4.5] /part/switch/[slug] missing "Find your switch →" quiz affordance
+- category: enhancement
+- filed: 2026-06-21 by /iterate audit
+- impact: 5 (switch detail pages link to /compare/switch but not to /quiz/switch — breaks the discovery path; /part/keycap-set/[slug] has "Find your keycap set →" since phase 47, making this an asymmetry that readers on switch pages cannot discover the quiz from)
+- ease: 9 (one-block JSX addition parallel to the keycap-set quiz block; one e2e assertion)
+- score: 4.5 (impact × ease / 10)
+- observation: `part.kind === 'switch'` block in page.tsx has a compare link but no quiz link; `part.kind === 'keycap-set'` block has a quiz link but no compare link (compare/keycap-set not yet built). Switch detail is the only kind with an existing quiz but no quiz affordance on its own detail page.
+- issue: [mirror-failed: 2026-06-21T00:00:00Z]
+- addressed in: 0b4caeb
