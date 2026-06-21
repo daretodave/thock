@@ -5360,3 +5360,11 @@ passes accumulate signals.)
 - score: 3.6 (impact × ease / 10)
 - issue: #369
 - addressed in: 382bfb7, closes #369
+
+### [x] [newsletter] [4.0] Newsletter cadence — no automated gap survey script exists
+- category: content-gaps
+- impact: 5 (newsletter archive has no automated cadence check; future issues require manual iteration to ship)
+- ease: 8 (script mirrors content-gap-survey.mjs pattern; one unit test; one march amendment)
+- score: 4.0 (impact × ease / 10)
+- source: iterate audit 2026-06-21
+- issue: [mirror-failed: 2026-06-21]
