@@ -84,6 +84,16 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [a11y] [3.2] a11y mobile suite missing 13 routes — desktop covers 16, mobile covered only 3 — addressed in b008a6f
+- category: a11y
+- impact: 4 (mobile viewport axe coverage for 13 routes absent; mobile-specific regressions would go undetected)
+- ease: 8 (additive — 13 new test blocks mirroring desktop suite at 375px; no component changes)
+- score: 3.2 (impact × ease / 10)
+- filed: 2026-06-21 by cloud /iterate audit
+- observation: after the desktop suite was extended to 16 routes (phases 43–49 added in a3fe414), the mobile suite remained at 3 routes (home, article, tracker). The 13-route parity gap means mobile axe violations on group-buys, search, about, tag/linear, parts, quiz/switch, archive, compare/switch, compare/board, vendors, vendor detail, tools, and quiz/keycap-set would be invisible at 375px viewport.
+- evidence: a11y.spec.ts mobile describe block had 3 runAxe calls; desktop had 16. Gap of 13 routes with no mobile axe coverage.
+- issue: [mirror-failed: 2026-06-21] (GH_TOKEN unavailable in cloud)
+
 ### [x] [a11y] [4.8] a11y desktop suite missing 7 route families from phases 43–49 — /archive, /compare/switch, /compare/board, /vendors, /vendor/[slug], /tools, /quiz/keycap-set — addressed in a3fe414, closes #371
 - category: a11y
 - impact: 6 (7 route families shipped in phases 43–49 with real interactive elements — compare selectors, keycap-set quiz, vendor external links — have no full runAxe(WCAG 2.1 AA) coverage in a11y.spec.ts desktop suite; any critical/serious violation introduced in those routes would be invisible to the gate)
