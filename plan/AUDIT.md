@@ -5318,3 +5318,14 @@ passes accumulate signals.)
 - score: 6.3 (impact × ease / 10)
 - issue: [mirror-failed: 2026-06-20T00:00:00Z]
 - addressed in: 2d82020
+
+### [x] [seo] [4.9] /tag/[slug] — 54 tag pages missing per-tag OG image
+- category: seo
+- filed: 2026-06-21 by cloud /iterate audit
+- impact: 7 (54 individual tag browse pages all falling back to the generic site-default OG when shared on social; tag pages are faceted discovery surfaces shared by readers to highlight themed collections)
+- ease: 7 (dynamic edge OG handler with tag lookup; required adding tags to og-manifest so the edge bundle stays under 1 MB; pattern from /article/[slug]/opengraph-image.tsx)
+- score: 4.9 (impact × ease / 10)
+- observation: /tag/[slug] had no opengraph-image.tsx; the /tags index OG does not cascade to sibling /tag/[slug] route segments in Next.js App Router; all 54 tag pages inherited the root site-default OG (wordmark + "keyboards, deeply." tagline) regardless of which tag was being viewed
+- suggested fix: add /tag/[slug]/opengraph-image.tsx using PillarOGContent with tag.name as pillarLabel and category-keyed tagline; add tags to og-manifest for edge-runtime lookup
+- issue: #368
+- addressed in: 73280f9, closes #368
