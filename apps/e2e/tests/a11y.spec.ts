@@ -71,7 +71,7 @@ async function runAxe(page: Page, url: string) {
   return results
 }
 
-// Desktop suite — 9 canonical pages (phase 33: /quiz/switch added)
+// Desktop suite — 16 canonical pages (phase 49: 7 routes from phases 43–49 added)
 test.describe('a11y — desktop', () => {
   test('home (/)', async ({ page }) => {
     await runAxe(page, '/')
@@ -107,6 +107,35 @@ test.describe('a11y — desktop', () => {
 
   test('switch quiz (/quiz/switch)', async ({ page }) => {
     await runAxe(page, '/quiz/switch')
+  })
+
+  // Phases 43–49 routes added to close the a11y coverage gap (issue #371)
+  test('article archive (/archive)', async ({ page }) => {
+    await runAxe(page, '/archive')
+  })
+
+  test('switch compare (/compare/switch)', async ({ page }) => {
+    await runAxe(page, '/compare/switch')
+  })
+
+  test('board compare (/compare/board)', async ({ page }) => {
+    await runAxe(page, '/compare/board')
+  })
+
+  test('vendors index (/vendors)', async ({ page }) => {
+    await runAxe(page, '/vendors')
+  })
+
+  test('vendor detail (/vendor/cannonkeys)', async ({ page }) => {
+    await runAxe(page, '/vendor/cannonkeys')
+  })
+
+  test('tools index (/tools)', async ({ page }) => {
+    await runAxe(page, '/tools')
+  })
+
+  test('keycap-set quiz (/quiz/keycap-set)', async ({ page }) => {
+    await runAxe(page, '/quiz/keycap-set')
   })
 })
 
@@ -923,4 +952,25 @@ test('color-contrast — tracker/2026-W19 "No earlier weeks" label text-text-2 (
     .analyze()
   const contrast = results.violations.filter((v) => v.id === 'color-contrast')
   expect(contrast, `tracker-no-earlier-weeks: ${formatViolations(contrast)}`).toHaveLength(0)
+})
+
+// Regression guards: color-contrast on /archive pillar label and read-time spans drained by
+// audit row [a11y] #371. ArchiveMonthGroup.tsx used text-micro text-text-3 (12px) for both
+// the pillar-label chip (w-20 left column) and the read-time span (ml-auto right column).
+// Both fail WCAG AA 4.5:1; swapped to text-text-2. data-testids added for guard targeting.
+test('color-contrast — archive pillar label + read-time text-text-2 (regression guard)', async ({
+  page,
+}) => {
+  await page.goto('/archive')
+  await page.waitForLoadState('networkidle')
+
+  for (const testid of ['archive-pillar-label', 'archive-read-time']) {
+    const results = await new AxeBuilder({ page })
+      .withTags(WCAG_TAGS)
+      .include(`[data-testid="${testid}"]`)
+      .analyze()
+
+    const contrast = results.violations.filter((v) => v.id === 'color-contrast')
+    expect(contrast, `${testid}: ${formatViolations(contrast)}`).toHaveLength(0)
+  }
 })

@@ -41,13 +41,19 @@ export function ArchiveMonthGroup({
               data-testid="archive-article-link"
               className="group flex items-baseline gap-3 hover:text-accent transition-colors"
             >
-              <span className="font-mono text-micro uppercase tracking-[0.08em] text-text-3 w-20 shrink-0 group-hover:text-text-2 transition-colors">
+              <span
+                data-testid="archive-pillar-label"
+                className="font-mono text-micro uppercase tracking-[0.08em] text-text-2 w-20 shrink-0 transition-colors"
+              >
                 {PILLAR_LABELS[article.frontmatter.pillar] ?? article.frontmatter.pillar}
               </span>
               <span className="font-serif text-body text-text group-hover:text-accent transition-colors">
                 {article.frontmatter.title}
               </span>
-              <span className="font-mono text-micro text-text-3 shrink-0 ml-auto">
+              <span
+                data-testid="archive-read-time"
+                className="font-mono text-micro text-text-2 shrink-0 ml-auto"
+              >
                 {article.readTime}m
               </span>
             </Link>
