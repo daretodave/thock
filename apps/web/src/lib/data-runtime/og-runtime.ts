@@ -33,9 +33,16 @@ export type TagOGData = {
   category: Tag['category']
 }
 
+export type PartOGData = {
+  slug: string
+  kind: 'switch' | 'keycap-set' | 'board'
+  name: string
+}
+
 type OGManifest = {
   articles: ArticleOGData[]
   tags: TagOGData[]
+  parts: PartOGData[]
   generatedAt: string
 }
 
@@ -47,4 +54,8 @@ export function getArticleForOg(slug: string): ArticleOGData | null {
 
 export function getTagForOg(slug: string): TagOGData | null {
   return (ogManifest.tags ?? []).find((t) => t.slug === slug) ?? null
+}
+
+export function getPartForOg(kind: string, slug: string): PartOGData | null {
+  return (ogManifest.parts ?? []).find((p) => p.kind === kind && p.slug === slug) ?? null
 }

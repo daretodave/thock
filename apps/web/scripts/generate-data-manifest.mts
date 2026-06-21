@@ -66,6 +66,11 @@ const ogManifest = {
     },
   })),
   tags: manifest.tags.map((t) => ({ slug: t.slug, name: t.name, category: t.category })),
+  parts: [
+    ...manifest.switches.map((s) => ({ slug: s.slug, kind: 'switch' as const, name: s.name })),
+    ...manifest.keycapSets.map((k) => ({ slug: k.slug, kind: 'keycap-set' as const, name: k.name })),
+    ...manifest.boards.map((b) => ({ slug: b.slug, kind: 'board' as const, name: b.name })),
+  ],
   generatedAt: manifest.generatedAt,
 }
 
@@ -83,4 +88,4 @@ console.log(`  trends:      ${manifest.trends.length}`)
 console.log(`  articles:    ${manifest.articles.length}`)
 console.log(`  newsletters: ${manifest.newsletters.length}`)
 console.log(`  tags:        ${manifest.tags.length}`)
-console.log(`[manifest] wrote ${ogOutFile} (OG manifest: ${ogManifest.articles.length} articles, ${ogManifest.tags.length} tags)`)
+console.log(`[manifest] wrote ${ogOutFile} (OG manifest: ${ogManifest.articles.length} articles, ${ogManifest.tags.length} tags, ${ogManifest.parts.length} parts)`)

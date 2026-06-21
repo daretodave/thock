@@ -888,5 +888,187 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-06-21T00:45:44.700Z"
+  "parts": [
+    {
+      "slug": "akko-v3-cream-blue-pro",
+      "kind": "switch",
+      "name": "Akko V3 Cream Blue Pro"
+    },
+    {
+      "slug": "c3-tangerine-r2",
+      "kind": "switch",
+      "name": "C3 Equalz Tangerine R2"
+    },
+    {
+      "slug": "cherry-mx2a-red",
+      "kind": "switch",
+      "name": "Cherry MX2A Red"
+    },
+    {
+      "slug": "cherry-mx2a-silent-black",
+      "kind": "switch",
+      "name": "Cherry MX2A Silent Black"
+    },
+    {
+      "slug": "drop-holy-panda-x",
+      "kind": "switch",
+      "name": "Drop Holy Panda X"
+    },
+    {
+      "slug": "durock-t1",
+      "kind": "switch",
+      "name": "Durock T1"
+    },
+    {
+      "slug": "gateron-ink-v2-yellow",
+      "kind": "switch",
+      "name": "Gateron Ink V2 Yellow"
+    },
+    {
+      "slug": "gateron-magnetic-jade",
+      "kind": "switch",
+      "name": "Gateron Magnetic Jade"
+    },
+    {
+      "slug": "gateron-oil-king",
+      "kind": "switch",
+      "name": "Gateron Oil King"
+    },
+    {
+      "slug": "gateron-pro-3-yellow",
+      "kind": "switch",
+      "name": "Gateron G Pro 3.0 Yellow"
+    },
+    {
+      "slug": "gazzew-boba-lt",
+      "kind": "switch",
+      "name": "Gazzew Boba LT"
+    },
+    {
+      "slug": "gazzew-boba-u4",
+      "kind": "switch",
+      "name": "Gazzew Boba U4"
+    },
+    {
+      "slug": "gazzew-boba-u4t",
+      "kind": "switch",
+      "name": "Gazzew Boba U4T"
+    },
+    {
+      "slug": "hmx-cloud",
+      "kind": "switch",
+      "name": "HMX Cloud Linear"
+    },
+    {
+      "slug": "kailh-box-jade",
+      "kind": "switch",
+      "name": "Kailh Box Jade"
+    },
+    {
+      "slug": "kailh-box-white",
+      "kind": "switch",
+      "name": "Kailh Box White"
+    },
+    {
+      "slug": "tecsee-sapphire-v2",
+      "kind": "switch",
+      "name": "Tecsee Sapphire V2"
+    },
+    {
+      "slug": "domikey-wob",
+      "kind": "keycap-set",
+      "name": "Domikey WOB"
+    },
+    {
+      "slug": "gmk-bento-r2",
+      "kind": "keycap-set",
+      "name": "GMK Bentō R2"
+    },
+    {
+      "slug": "gmk-cyl-ramune",
+      "kind": "keycap-set",
+      "name": "GMK CYL Ramune"
+    },
+    {
+      "slug": "gmk-cyl-selene",
+      "kind": "keycap-set",
+      "name": "GMK CYL Selene"
+    },
+    {
+      "slug": "gmk-laser",
+      "kind": "keycap-set",
+      "name": "GMK Laser"
+    },
+    {
+      "slug": "gmk-olivia",
+      "kind": "keycap-set",
+      "name": "GMK Olivia"
+    },
+    {
+      "slug": "kat-drifter",
+      "kind": "keycap-set",
+      "name": "KAT Drifter"
+    },
+    {
+      "slug": "mt3-dasher",
+      "kind": "keycap-set",
+      "name": "Drop MT3 Dasher"
+    },
+    {
+      "slug": "mt3-devtty",
+      "kind": "keycap-set",
+      "name": "Drop + Matt3o MT3 /dev/tty"
+    },
+    {
+      "slug": "sa-godspeed",
+      "kind": "keycap-set",
+      "name": "SA Godspeed"
+    },
+    {
+      "slug": "bakeneko65",
+      "kind": "board",
+      "name": "Bakeneko65"
+    },
+    {
+      "slug": "class80",
+      "kind": "board",
+      "name": "MM Studio Class80"
+    },
+    {
+      "slug": "drop-ctrl",
+      "kind": "board",
+      "name": "Drop CTRL"
+    },
+    {
+      "slug": "ikki68-aurora",
+      "kind": "board",
+      "name": "Ikki68 Aurora"
+    },
+    {
+      "slug": "kbd75v3",
+      "kind": "board",
+      "name": "KBD75 v3"
+    },
+    {
+      "slug": "keychron-q1-he",
+      "kind": "board",
+      "name": "Keychron Q1 HE 8K Marble"
+    },
+    {
+      "slug": "mammoth75",
+      "kind": "board",
+      "name": "Mammoth75"
+    },
+    {
+      "slug": "mode-sonnet",
+      "kind": "board",
+      "name": "Mode Sonnet"
+    },
+    {
+      "slug": "qk75",
+      "kind": "board",
+      "name": "QK75"
+    }
+  ],
+  "generatedAt": "2026-06-21T01:58:02.571Z"
 }
