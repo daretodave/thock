@@ -301,7 +301,20 @@ node scripts/newsletter-gap-survey.mjs --write
 This files a `content-gaps` AUDIT row (score 4.0) when ≥7 calendar days
 have elapsed since the most-recent newsletter digest. Deduplicates against
 any existing pending newsletter row. If it exits non-zero, log and continue
-— the survey is best-effort. Then fall through to Step 3c (expand).
+— the survey is best-effort.
+
+Then run the OG image coverage check (iterate-shipped gate):
+
+```bash
+node scripts/og-coverage-check.mjs --write
+```
+
+This files `seo` AUDIT rows (score 4.8) for any `apps/web/src/app/**/page.tsx`
+route directories that lack a sibling `opengraph-image.tsx`. Prevents the
+"route ships without OG handler" class that consumed ~28 iterate ticks across
+passes 127–134. Deduplicates against existing AUDIT rows. If it exits
+non-zero, log and continue — the check is best-effort. Then fall through to
+Step 3c (expand).
 
 #### 3c. Expand due (rate-limited, posture-gated)?
 

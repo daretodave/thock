@@ -326,6 +326,19 @@ Runs: `typecheck && test:run && data:validate && build && e2e`.
 Iterate up to 3 times on the same root cause. If still failing,
 stop per §10.
 
+**OG image coverage gate (iterate-shipped gate, post-verify):** after
+`pnpm verify` passes and before committing, check whether any `page.tsx`
+files added in this phase lack a sibling `opengraph-image.tsx`:
+
+```bash
+node scripts/og-coverage-check.mjs --write
+```
+
+If it files new AUDIT rows, commit them in a follow-up `audit:` commit
+immediately after the phase commit (non-blocking — the phase ships first,
+the OG gap drains in the next iterate tick). If the phase already ships an
+`opengraph-image.tsx` for every new route, the script exits clean.
+
 ### Step 10 — Commit + push
 
 Stage explicitly. Conventional subject; body in 4–8 bullets
