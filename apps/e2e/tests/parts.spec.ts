@@ -43,6 +43,17 @@ test.describe('/parts root browse landing — phase 35', () => {
     await expect(link).toBeVisible()
     await expect(link).toHaveAttribute('href', '/parts')
   })
+
+  test('keycap-set quiz results view carries a Browse all parts link', async ({ page }) => {
+    await page.goto('/quiz/keycap-set')
+    for (let i = 0; i < 4; i++) {
+      await page.getByRole('button').first().click()
+    }
+    await expect(page.getByTestId('keycap-quiz-results')).toBeVisible()
+    const link = page.getByTestId('keycap-quiz-browse-all-parts-link')
+    await expect(link).toBeVisible()
+    await expect(link).toHaveAttribute('href', '/parts')
+  })
 })
 
 test.describe('per-part pages — phase 21', () => {

@@ -99,6 +99,15 @@ describe('<KeycapSetQuiz>', () => {
     expect(link.getAttribute('href')).toBe('/part/keycap-set')
   })
 
+  it('browse-all-parts link points to /parts catalog page', () => {
+    render(<KeycapSetQuiz keycapSets={KEYCAP_SETS} />)
+    answerAllQuestions()
+    const partsLink = screen.getByTestId('keycap-quiz-browse-all-parts-link')
+    expect(partsLink).toBeInTheDocument()
+    expect(partsLink.getAttribute('href')).toBe('/parts')
+    expect(partsLink.textContent).toMatch(/browse all parts/i)
+  })
+
   it('"Start over" resets to the first question', () => {
     render(<KeycapSetQuiz keycapSets={KEYCAP_SETS} />)
     answerAllQuestions()
