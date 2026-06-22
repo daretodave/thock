@@ -1,0 +1,40 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-22T00:00:00.000Z",
+  "commit": "e99b70363259aeb92e75546ac2d95a53fec22be0",
+  "kind": "hero-art",
+  "source": null,
+  "template": null,
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": [],
+  "outputs": [
+    "apps/web/public/hero-art/gmk-cyl-pandemonium-group-buy.svg"
+  ],
+  "warnings": [],
+  "slug": "gmk-cyl-pandemonium-group-buy",
+  "type": "hero",
+  "subject": "Cherry-profile keycap cluster with eclipse motif, coral splash",
+  "article": "gmk-cyl-pandemonium-group-buy",
+  "created": "2026-06-22",
+  "accent": "coral",
+  "article_pillar": "news",
+  "splash_color": {
+    "name": "coral",
+    "hex": "#e8725a",
+    "oklch": "oklch(0.63 0.145 28)"
+  },
+  "theme_accent": {
+    "name": "bronze",
+    "hex": "#c8a05a",
+    "oklch": "oklch(0.80 0.135 75)"
+  },
+  "stroke_color": {
+    "name": "warm-charcoal",
+    "hex": "#1c1e24",
+    "oklch": "oklch(0.175 0.006 250)"
+  },
+  "background": "#f5f0e8",
+  "canvas": [1200, 750],
+  "stroke_weight": 2
+}

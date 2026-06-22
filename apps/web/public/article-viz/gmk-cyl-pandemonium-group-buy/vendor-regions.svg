@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>GMK CYL Pandemonium regional vendor grid — DeltaKeyCo as primary designer-vendor, plus Prototypist APAC, Bowl Keyboards UK, Swagkeys, Pantheon Keys, Typist Club, Keybay, and one additional regional storefront across an eight-vendor spread</title>
+
+  <!-- Title -->
+  <text x="600" y="55" font-family="Newsreader, serif" font-size="19" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">eight storefronts · June 1 – July 1</text>
+
+  <!-- Primary card — DeltaKeyCo — larger, coral-accented -->
+  <rect x="80" y="82" width="320" height="100" rx="6" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.90" stroke-width="2.5"/>
+  <rect x="80" y="82" width="320" height="100" rx="6" fill="oklch(0.68 0.165 28 / 0.07)" stroke="none"/>
+  <text x="240" y="118" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" font-weight="600" opacity="0.95">PRIMARY · DESIGNER-VENDOR</text>
+  <text x="240" y="144" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">DeltaKeyCo</text>
+  <text x="240" y="167" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">North America</text>
+
+  <!-- Second row: 3 cards -->
+  <!-- Card 2 — Prototypist -->
+  <rect x="80" y="208" width="230" height="80" rx="5" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.45"/>
+  <text x="195" y="240" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.75">APAC</text>
+  <text x="195" y="263" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Prototypist</text>
+  <text x="195" y="277" font-family="IBM Plex Sans, sans-serif" font-size="10" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.40">Asia-Pacific</text>
+
+  <!-- Card 3 — Bowl Keyboards -->
+  <rect x="330" y="208" width="230" height="80" rx="5" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.45"/>
+  <text x="445" y="240" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.75">UK</text>
+  <text x="445" y="263" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Bowl Keyboards</text>
+  <text x="445" y="277" font-family="IBM Plex Sans, sans-serif" font-size="10" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.40">United Kingdom</text>
+
+  <!-- Card 4 — Swagkeys -->
+  <rect x="580" y="208" width="230" height="80" rx="5" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.45"/>
+  <text x="695" y="240" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.75">EU</text>
+  <text x="695" y="263" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Swagkeys</text>
+  <text x="695" y="277" font-family="IBM Plex Sans, sans-serif" font-size="10" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.40">Europe</text>
+
+  <!-- Third row: 4 smaller chips -->
+  <!-- Chip 5 — Pantheon Keys -->
+  <rect x="80" y="316" width="238" height="68" rx="5" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.35"/>
+  <text x="199" y="342" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.65">regional</text>
+  <text x="199" y="363" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.80">Pantheon Keys</text>
+
+  <!-- Chip 6 — Typist Club -->
+  <rect x="334" y="316" width="238" height="68" rx="5" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.35"/>
+  <text x="453" y="342" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.65">regional</text>
+  <text x="453" y="363" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.80">Typist Club</text>
+
+  <!-- Chip 7 — Keybay -->
+  <rect x="588" y="316" width="238" height="68" rx="5" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.35"/>
+  <text x="707" y="342" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.65">regional</text>
+  <text x="707" y="363" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.80">Keybay</text>
+
+  <!-- Chip 8 — +1 additional -->
+  <rect x="842" y="316" width="238" height="68" rx="5" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.25"/>
+  <text x="961" y="342" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.40">regional</text>
+  <text x="961" y="363" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">+ 1 additional</text>
+
+  <!-- Footer rule and label -->
+  <line x1="80" y1="414" x2="1120" y2="414" stroke-opacity="0.18"/>
+  <text x="600" y="438" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">designer-vendor model · concurrent independent storefronts · doubleshot ABS Cherry profile</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

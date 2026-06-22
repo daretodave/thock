@@ -1,0 +1,27 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-22T00:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "gmk-cyl-pandemonium-group-buy",
+  "article_pillar": "news",
+  "section_anchor": "the-tracker-signal",
+  "brief_summary": "Line chart of GMK CYL Pandemonium tracker score across eight weeks W19 through W26. Values are zero for W19–W21, then 14 at W22, 22 at W23, 29 at W24, 32 at W25, 33 at W26. A coral polyline traces the ascent from W22 with a plateau annotation at W25–W26. The flat-zero segment from W19–W21 is shown in muted warm-grey. A vertical dashed line marks the GB open date at W22 / June 1. The W26 terminal point is labeled '33, flat.'",
+  "target": "apps/web/public/article-viz/gmk-cyl-pandemonium-group-buy/score-trajectory.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "data/trends/2026-W26.json § GMK CYL Pandemonium row — 'spark: [0, 0, 0, 14, 22, 29, 32, 33]'",
+    "data/trends/2026-W26.json § GMK CYL Pandemonium row — 'score: 33, direction: flat'",
+    "data/trends/2026-W24.json § GMK CYL Pandemonium row — 'spark: [0, 0, 0, 0, 0, 0, 18, 29], score: 29, direction: up — New tracker entrant'",
+    "data/trends/2026-W25.json § GMK CYL Pandemonium row — 'spark: [0, 0, 0, 0, 14, 22, 29, 32], score: 32, direction: up'",
+    "gmk-cyl-pandemonium-group-buy.mdx § 'the tracker signal' — 'first appeared on the thock Trends Tracker in W23, registering a score of 18 and direction up'",
+    "gmk-cyl-pandemonium-group-buy.mdx § 'the tracker signal' — 'mid-window plateau shape that well-structured buys tend to hit'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gmk-cyl-pandemonium-group-buy/score-trajectory.svg"],
+  "warnings": []
+}

@@ -1,0 +1,26 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-22T00:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "gmk-cyl-pandemonium-group-buy",
+  "article_pillar": "news",
+  "section_anchor": "the-kit-structure-and-vendor-spread",
+  "brief_summary": "Regional vendor grid showing the eight storefronts hosting GMK CYL Pandemonium across the June 1–July 1 window. DeltaKeyCo shown as a larger primary coral-accented card with 'designer-vendor' label. Second row shows Prototypist (APAC), Bowl Keyboards (UK), and Swagkeys (EU). Third row shows Pantheon Keys, Typist Club, Keybay, and a placeholder chip for one additional regional storefront. Footer notes designer-vendor model and doubleshot ABS Cherry profile.",
+  "target": "apps/web/public/article-viz/gmk-cyl-pandemonium-group-buy/vendor-regions.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "gmk-cyl-pandemonium-group-buy.mdx § 'the kit structure and vendor spread' — 'DeltaKeyCo is the primary vendor and the design house'",
+    "gmk-cyl-pandemonium-group-buy.mdx § 'the kit structure and vendor spread' — 'Prototypist handling APAC fulfillment, Bowl Keyboards holding the UK slot, and approximately eight storefronts in total'",
+    "data/trends/2026-W25.json § GMK CYL Pandemonium note — 'Active GB June 1–July 1 via Prototypist, Delta Key Co, Bowl Keyboards, Swagkeys, Pantheon Keys, Typist Club, Keybay'",
+    "data/trends/2026-W24.json § GMK CYL Pandemonium note — 'DeltaKeyCo-designed set available through eight regional vendors including Prototypist'",
+    "data/trends/2026-W26.json § GMK CYL Pandemonium note — 'GB active June 1–July 1 via DeltaKeyCo, Prototypist, Bowl Keyboards, and others'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gmk-cyl-pandemonium-group-buy/vendor-regions.svg"],
+  "warnings": []
+}

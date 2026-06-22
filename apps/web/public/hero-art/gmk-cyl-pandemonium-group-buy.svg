@@ -1,0 +1,340 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" role="img" aria-label="Cherry-profile keycap cluster with eclipse motif — GMK CYL Pandemonium">
+  <defs>
+    <!-- Warm paper background -->
+    <rect id="bg" width="1200" height="750" fill="#f5f0e8"/>
+
+    <!-- Eclipse radial gradient — coral sun, fading outward -->
+    <radialGradient id="eclipse-wash" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#e8725a" stop-opacity="0.22"/>
+      <stop offset="55%"  stop-color="#e8725a" stop-opacity="0.09"/>
+      <stop offset="100%" stop-color="#e8725a" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Eclipse limb gradient — the crescent edge glows brighter -->
+    <radialGradient id="eclipse-limb" cx="58%" cy="42%" r="50%">
+      <stop offset="0%"   stop-color="#e8725a" stop-opacity="0"/>
+      <stop offset="72%"  stop-color="#e8725a" stop-opacity="0"/>
+      <stop offset="86%"  stop-color="#e8725a" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#e8725a" stop-opacity="0.10"/>
+    </radialGradient>
+
+    <!-- Translucent legend hatch pattern for caps -->
+    <pattern id="hatch-legend" x="0" y="0" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#e8725a" stroke-width="1.1" stroke-opacity="0.30"/>
+    </pattern>
+
+    <!-- Clip path for inner legend area of cap A (top-left) -->
+    <clipPath id="clip-cap-a-legend">
+      <rect x="264" y="206" width="88" height="58" rx="4"/>
+    </clipPath>
+    <!-- Clip path for inner legend area of cap D (middle-right) -->
+    <clipPath id="clip-cap-d-legend">
+      <rect x="484" y="206" width="88" height="58" rx="4"/>
+    </clipPath>
+  </defs>
+
+  <!-- ── Background ─────────────────────────────────────────────────── -->
+  <rect width="1200" height="750" fill="#f5f0e8"/>
+
+  <!-- ── Eclipse motif — large circle behind / overlapping the caps ─── -->
+  <!-- Outer wash -->
+  <circle cx="600" cy="340" r="310" fill="url(#eclipse-wash)"/>
+  <!-- Limb bright ring -->
+  <circle cx="600" cy="340" r="310" fill="url(#eclipse-limb)"/>
+  <!-- Outer stroke ring — the disc outline -->
+  <circle cx="600" cy="340" r="310"
+          fill="none"
+          stroke="#e8725a"
+          stroke-width="1.5"
+          stroke-opacity="0.35"/>
+  <!-- Inner occluder disc — dark paper tone, slightly off-center to suggest eclipse geometry -->
+  <circle cx="572" cy="318" r="278"
+          fill="#f5f0e8"
+          stroke="#1c1e24"
+          stroke-width="1.2"
+          stroke-opacity="0.12"/>
+  <!-- Exposed coral crescent visible on the outer ring (right side) -->
+  <path d="M 600 30
+           A 310 310 0 0 1 600 650
+           A 278 278 0 0 0 600 94
+           Z"
+        fill="#e8725a"
+        fill-opacity="0.10"/>
+
+  <!-- ── Six Cherry-profile keycap silhouettes — 2 × 3 grid ───────── -->
+  <!--
+    Cherry profile geometry (side view, slight 3/4 perspective):
+    - Base rectangle: ~120px wide × 110px tall
+    - Top face: inset ~10px left/right, raised ~20px, with a gentle concave curve
+    - Front face: slightly angled forward (trapezoidal)
+    - Rounded corners throughout: 6px
+
+    Grid layout:
+      Col 1: x = 240   Col 2: x = 380   (gap 20px between caps, 120px wide each)
+      Row 1: y = 175   Row 2: y = 315   Row 3: y = 455
+      Center the 2×3 block: total width = 2×120 + 20 = 260px
+      Shift center to x=600 → col1 x = 470, col2 x = 610
+  -->
+
+  <!-- Helper macro — Cherry-profile cap silhouette.
+       Anchor: top-left corner of the bounding box.
+       We draw each cap as a compound path.
+
+    Bounding box: 120 × 110
+    Front face (trapezoid): full width at bottom, 100px at top, 6px radius
+    Top face (pill): x+10 → x+110, y → y+20 (raised), gentle concave dish implied by stroke arc
+  -->
+
+  <!-- ── ROW 1 ─────────────────────────────────────────────────────── -->
+
+  <!-- Cap A — col 1 row 1  (x=470, y=175) — translucent legend (coral hatch fill) -->
+  <g id="cap-a">
+    <!-- Body -->
+    <path d="M 476 275
+             L 470 195
+             Q 470 185 480 183
+             L 578 181
+             Q 588 181 590 191
+             L 590 275
+             Q 590 283 582 285
+             L 478 285
+             Q 470 285 476 275 Z"
+          fill="#f0ece2"
+          stroke="#1c1e24"
+          stroke-width="2"
+          stroke-linejoin="round"/>
+    <!-- Top face dish — slightly inset pill -->
+    <path d="M 484 183
+             Q 530 172 576 183"
+          fill="none"
+          stroke="#1c1e24"
+          stroke-width="1.6"
+          stroke-opacity="0.5"/>
+    <!-- Legend area — coral hatch to suggest translucent legend -->
+    <rect x="492" y="204" width="76" height="52" rx="4"
+          fill="url(#hatch-legend)"/>
+    <!-- Legend area border -->
+    <rect x="492" y="204" width="76" height="52" rx="4"
+          fill="none"
+          stroke="#e8725a"
+          stroke-width="1.1"
+          stroke-opacity="0.55"/>
+    <!-- Side-face shading line -->
+    <line x1="476" y1="275" x2="470" y2="195"
+          stroke="#1c1e24" stroke-width="1" stroke-opacity="0.18"/>
+  </g>
+
+  <!-- Cap B — col 2 row 1  (x=620, y=175) — plain -->
+  <g id="cap-b">
+    <path d="M 626 275
+             L 620 195
+             Q 620 185 630 183
+             L 728 181
+             Q 738 181 740 191
+             L 740 275
+             Q 740 283 732 285
+             L 628 285
+             Q 620 285 626 275 Z"
+          fill="#f0ece2"
+          stroke="#1c1e24"
+          stroke-width="2"
+          stroke-linejoin="round"/>
+    <path d="M 634 183
+             Q 680 172 726 183"
+          fill="none"
+          stroke="#1c1e24"
+          stroke-width="1.6"
+          stroke-opacity="0.5"/>
+    <!-- Bronze side highlight on right edge -->
+    <line x1="740" y1="191" x2="740" y2="275"
+          stroke="#c8a05a" stroke-width="1.5" stroke-opacity="0.45"/>
+    <line x1="626" y1="275" x2="620" y2="195"
+          stroke="#1c1e24" stroke-width="1" stroke-opacity="0.18"/>
+  </g>
+
+  <!-- ── ROW 2 ─────────────────────────────────────────────────────── -->
+
+  <!-- Cap C — col 1 row 2  (x=470, y=315) — plain, slight coral tint on body -->
+  <g id="cap-c">
+    <path d="M 476 415
+             L 470 335
+             Q 470 325 480 323
+             L 578 321
+             Q 588 321 590 331
+             L 590 415
+             Q 590 423 582 425
+             L 478 425
+             Q 470 425 476 415 Z"
+          fill="#f2ebe0"
+          stroke="#1c1e24"
+          stroke-width="2"
+          stroke-linejoin="round"/>
+    <path d="M 484 323
+             Q 530 312 576 323"
+          fill="none"
+          stroke="#1c1e24"
+          stroke-width="1.6"
+          stroke-opacity="0.5"/>
+    <!-- Subtle coral body wash — references the set's dark base -->
+    <path d="M 476 415
+             L 470 335
+             Q 470 325 480 323
+             L 578 321
+             Q 588 321 590 331
+             L 590 415
+             Q 590 423 582 425
+             L 478 425
+             Q 470 425 476 415 Z"
+          fill="#e8725a"
+          fill-opacity="0.06"/>
+    <line x1="476" y1="415" x2="470" y2="335"
+          stroke="#1c1e24" stroke-width="1" stroke-opacity="0.18"/>
+  </g>
+
+  <!-- Cap D — col 2 row 2  (x=620, y=315) — translucent legend (coral hatch) -->
+  <g id="cap-d">
+    <path d="M 626 415
+             L 620 335
+             Q 620 325 630 323
+             L 728 321
+             Q 738 321 740 331
+             L 740 415
+             Q 740 423 732 425
+             L 628 425
+             Q 620 425 626 415 Z"
+          fill="#f0ece2"
+          stroke="#1c1e24"
+          stroke-width="2"
+          stroke-linejoin="round"/>
+    <path d="M 634 323
+             Q 680 312 726 323"
+          fill="none"
+          stroke="#1c1e24"
+          stroke-width="1.6"
+          stroke-opacity="0.5"/>
+    <!-- Legend hatch -->
+    <rect x="636" y="344" width="76" height="52" rx="4"
+          fill="url(#hatch-legend)"/>
+    <rect x="636" y="344" width="76" height="52" rx="4"
+          fill="none"
+          stroke="#e8725a"
+          stroke-width="1.1"
+          stroke-opacity="0.55"/>
+    <!-- Bronze side highlight -->
+    <line x1="740" y1="331" x2="740" y2="415"
+          stroke="#c8a05a" stroke-width="1.5" stroke-opacity="0.45"/>
+    <line x1="626" y1="415" x2="620" y2="335"
+          stroke="#1c1e24" stroke-width="1" stroke-opacity="0.18"/>
+  </g>
+
+  <!-- ── ROW 3 ─────────────────────────────────────────────────────── -->
+
+  <!-- Cap E — col 1 row 3  (x=470, y=455) — plain -->
+  <g id="cap-e">
+    <path d="M 476 555
+             L 470 475
+             Q 470 465 480 463
+             L 578 461
+             Q 588 461 590 471
+             L 590 555
+             Q 590 563 582 565
+             L 478 565
+             Q 470 565 476 555 Z"
+          fill="#f0ece2"
+          stroke="#1c1e24"
+          stroke-width="2"
+          stroke-linejoin="round"/>
+    <path d="M 484 463
+             Q 530 452 576 463"
+          fill="none"
+          stroke="#1c1e24"
+          stroke-width="1.6"
+          stroke-opacity="0.5"/>
+    <line x1="476" y1="555" x2="470" y2="475"
+          stroke="#1c1e24" stroke-width="1" stroke-opacity="0.18"/>
+  </g>
+
+  <!-- Cap F — col 2 row 3  (x=620, y=455) — coral body tint + bronze highlight -->
+  <g id="cap-f">
+    <path d="M 626 555
+             L 620 475
+             Q 620 465 630 463
+             L 728 461
+             Q 738 461 740 471
+             L 740 555
+             Q 740 563 732 565
+             L 628 565
+             Q 620 565 626 555 Z"
+          fill="#f2ebe0"
+          stroke="#1c1e24"
+          stroke-width="2"
+          stroke-linejoin="round"/>
+    <path d="M 634 463
+             Q 680 452 726 463"
+          fill="none"
+          stroke="#1c1e24"
+          stroke-width="1.6"
+          stroke-opacity="0.5"/>
+    <!-- Coral body wash -->
+    <path d="M 626 555
+             L 620 475
+             Q 620 465 630 463
+             L 728 461
+             Q 738 461 740 471
+             L 740 555
+             Q 740 563 732 565
+             L 628 565
+             Q 620 565 626 555 Z"
+          fill="#e8725a"
+          fill-opacity="0.06"/>
+    <!-- Bronze right-edge highlight -->
+    <line x1="740" y1="471" x2="740" y2="555"
+          stroke="#c8a05a" stroke-width="1.5" stroke-opacity="0.45"/>
+    <line x1="626" y1="555" x2="620" y2="475"
+          stroke="#1c1e24" stroke-width="1" stroke-opacity="0.18"/>
+  </g>
+
+  <!-- ── Connector tick marks between rows — subtle visual rhythm ───── -->
+  <!-- Horizontal alignment notch between cap A and B tops -->
+  <line x1="592" y1="230" x2="618" y2="230"
+        stroke="#1c1e24" stroke-width="1" stroke-opacity="0.12" stroke-dasharray="2 3"/>
+  <line x1="592" y1="370" x2="618" y2="370"
+        stroke="#1c1e24" stroke-width="1" stroke-opacity="0.12" stroke-dasharray="2 3"/>
+  <line x1="592" y1="510" x2="618" y2="510"
+        stroke="#1c1e24" stroke-width="1" stroke-opacity="0.12" stroke-dasharray="2 3"/>
+
+  <!-- ── Coral splash accent lines — radiating from eclipse center ───── -->
+  <!-- Fine radial spokes, very low opacity, suggesting light corona -->
+  <g stroke="#e8725a" stroke-width="1" stroke-opacity="0.13" fill="none">
+    <line x1="600" y1="340" x2="600" y2="30"/>
+    <line x1="600" y1="340" x2="820" y2="145"/>
+    <line x1="600" y1="340" x2="910" y2="340"/>
+    <line x1="600" y1="340" x2="820" y2="535"/>
+    <line x1="600" y1="340" x2="600" y2="650"/>
+    <line x1="600" y1="340" x2="380" y2="535"/>
+    <line x1="600" y1="340" x2="290" y2="340"/>
+    <line x1="600" y1="340" x2="380" y2="145"/>
+  </g>
+
+  <!-- ── Bronze theme dot — upper-right margin ornamental anchor ────── -->
+  <circle cx="1118" cy="62" r="9"
+          fill="#c8a05a"
+          stroke="#1c1e24"
+          stroke-width="1.4"
+          stroke-opacity="0.35"/>
+  <!-- Small satellite dot -->
+  <circle cx="1138" cy="48" r="3.5"
+          fill="none"
+          stroke="#c8a05a"
+          stroke-width="1.3"
+          stroke-opacity="0.55"/>
+
+  <!-- ── Outer warm-grey stroke warm-grey warm strokes — frame hairlines ─ -->
+  <!-- Left margin rule -->
+  <line x1="64" y1="64" x2="64" y2="686"
+        stroke="#1c1e24" stroke-width="1" stroke-opacity="0.10"/>
+  <!-- Bottom margin rule -->
+  <line x1="64" y1="686" x2="1136" y2="686"
+        stroke="#1c1e24" stroke-width="1" stroke-opacity="0.10"/>
+
+</svg>

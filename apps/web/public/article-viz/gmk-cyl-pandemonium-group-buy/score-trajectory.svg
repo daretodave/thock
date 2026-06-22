@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>GMK CYL Pandemonium tracker score across W19–W26 — zero for three weeks, then climbing from 14 at W22 to 33 at W26 with a plateau at W25–W26</title>
+
+  <!-- Subtitle -->
+  <text x="600" y="60" font-family="Newsreader, serif" font-size="19" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">GMK CYL Pandemonium — tracker score, W19 → W26</text>
+
+  <!-- Y-axis: 0 at y=380, top (40) at y=160 -->
+  <!-- Scale: 40 units spans 220px → 5.5px per unit -->
+  <!-- y = 380 - (score * 5.5) -->
+  <!-- 0→380, 10→325, 20→270, 30→215, 40→160 -->
+
+  <!-- Horizontal grid lines -->
+  <line x1="160" y1="380" x2="1060" y2="380" stroke-opacity="0.45"/>
+  <line x1="160" y1="325" x2="1060" y2="325" stroke-opacity="0.15"/>
+  <line x1="160" y1="270" x2="1060" y2="270" stroke-opacity="0.15"/>
+  <line x1="160" y1="215" x2="1060" y2="215" stroke-opacity="0.15"/>
+  <line x1="160" y1="160" x2="1060" y2="160" stroke-opacity="0.10"/>
+
+  <!-- Y-axis labels -->
+  <text x="148" y="384" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.45">0</text>
+  <text x="148" y="329" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.35">10</text>
+  <text x="148" y="274" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.35">20</text>
+  <text x="148" y="219" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.35">30</text>
+  <text x="148" y="164" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.35">40</text>
+
+  <!-- X positions for 8 weeks equally spaced x=200 to x=1020 -->
+  <!-- Spacing: (1020-200)/7 = 117.14 → round to 117 -->
+  <!-- W19=200, W20=317, W21=434, W22=551, W23=668, W24=785, W25=902, W26=1019 -->
+  <!-- Scores: 0,   0,   0,   14,  22,  29,  32,  33 -->
+  <!-- y:      380, 380, 380, 303, 259, 220.5≈221, 204, 198.5≈199 -->
+
+  <!-- "GB opens" annotation at W21/W22 boundary — first appearance W22 = x=551 -->
+  <line x1="551" y1="150" x2="551" y2="390" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.20" stroke-dasharray="5 4"/>
+  <text x="551" y="140" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">GB opens</text>
+  <text x="551" y="153" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">Jun 1</text>
+
+  <!-- Coral fill area under the data line (from W22 onward) -->
+  <polygon
+    points="551,380 551,303 668,259 785,221 902,204 1019,199 1019,380"
+    fill="oklch(0.68 0.165 28 / 0.09)"
+    stroke="none"
+  />
+
+  <!-- Flat segment W19-W22 at y=380 (score=0) -->
+  <polyline
+    points="200,380 317,380 434,380 551,380"
+    stroke="oklch(0.78 0.005 90)"
+    stroke-width="2"
+    stroke-opacity="0.28"
+    fill="none"
+  />
+
+  <!-- Coral data line from W22 ascent -->
+  <polyline
+    points="551,303 668,259 785,221 902,204 1019,199"
+    stroke="oklch(0.68 0.165 28)"
+    stroke-width="3"
+    stroke-opacity="0.95"
+    fill="none"
+  />
+
+  <!-- Connector dot at W22 where line starts climbing -->
+  <circle cx="551" cy="303" r="5" fill="oklch(0.68 0.165 28 / 0.35)" stroke="oklch(0.68 0.165 28)" stroke-width="2" stroke-opacity="0.80"/>
+
+  <!-- Small grey dots on non-terminal climbing weeks -->
+  <circle cx="668" cy="259" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.50"/>
+  <circle cx="785" cy="221" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.50"/>
+  <circle cx="902" cy="204" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.50"/>
+
+  <!-- Terminal dot W26 — filled coral -->
+  <circle cx="1019" cy="199" r="9" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.9"/>
+
+  <!-- Score labels on key points -->
+  <text x="551" y="293" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.80">14</text>
+  <text x="668" y="249" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">22</text>
+  <text x="785" y="211" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">29</text>
+  <text x="902" y="194" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">32</text>
+
+  <!-- Terminal label W26 -->
+  <text x="1042" y="196" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.68 0.165 28)" stroke="none" font-weight="600">33 →</text>
+  <text x="1042" y="213" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">flat</text>
+
+  <!-- "plateau" bracket from W25 to W26 -->
+  <line x1="902" y1="185" x2="1019" y2="185" stroke="oklch(0.68 0.165 28)" stroke-width="1.5" stroke-opacity="0.45" stroke-dasharray="3 3"/>
+  <text x="960" y="177" font-family="IBM Plex Sans, sans-serif" font-size="10" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.60">plateau</text>
+
+  <!-- X-axis week labels -->
+  <text x="200" y="410" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.40">W19</text>
+  <text x="317" y="410" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.40">W20</text>
+  <text x="434" y="410" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.40">W21</text>
+  <text x="551" y="410" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.85">W22</text>
+  <text x="668" y="410" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.50">W23</text>
+  <text x="785" y="410" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.50">W24</text>
+  <text x="902" y="410" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.50">W25</text>
+  <text x="1019" y="410" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.90">W26</text>
+
+  <!-- Caption annotation -->
+  <text x="600" y="460" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.60">first appearance W22, plateau at W25–W26 — mid-window holding pattern</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>
