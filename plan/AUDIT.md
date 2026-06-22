@@ -5464,7 +5464,7 @@ passes accumulate signals.)
 - rule: Rule 2
 - action: ship companion article for "GMK CYL Pandemonium", set articleSlug in relevant trend snapshot(s)
 
-### [ ] [cross-links] [4.5] gateron-lanes-tactile-deep-dive ↔ cherry-mx2a-revision — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
+### [x] [cross-links] [4.5] gateron-lanes-tactile-deep-dive ↔ cherry-mx2a-revision — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
 - category: cross-links
 - filed: 2026-06-22 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -5474,8 +5474,10 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/gateron-lanes-tactile-deep-dive.mdx
 - article-b: apps/web/src/content/articles/cherry-mx2a-revision.mdx
 - action: add [cherry-mx2a-revision](/article/cherry-mx2a-revision) to gateron-lanes-tactile-deep-dive body, or vice versa
+- addressed: aa2f6f0
+- issue: [mirror-failed: 2026-06-22T10:00:00Z]
 
-### [ ] [cross-links] [4.5] gateron-lanes-tactile-deep-dive ↔ clicky-switches-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
+### [x] [cross-links] [4.5] gateron-lanes-tactile-deep-dive ↔ clicky-switches-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
 - category: cross-links
 - filed: 2026-06-22 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -5485,8 +5487,10 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/gateron-lanes-tactile-deep-dive.mdx
 - article-b: apps/web/src/content/articles/clicky-switches-deep-dive.mdx
 - action: add [clicky-switches-deep-dive](/article/clicky-switches-deep-dive) to gateron-lanes-tactile-deep-dive body, or vice versa
+- addressed: aa2f6f0
+- issue: [mirror-failed: 2026-06-22T10:00:00Z]
 
-### [ ] [cross-links] [4.5] gateron-lanes-tactile-deep-dive ↔ drop-holy-panda-x-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: tactile, deep-dive)
+### [x] [cross-links] [4.5] gateron-lanes-tactile-deep-dive ↔ drop-holy-panda-x-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: tactile, deep-dive)
 - category: cross-links
 - filed: 2026-06-22 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -5496,8 +5500,10 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/gateron-lanes-tactile-deep-dive.mdx
 - article-b: apps/web/src/content/articles/drop-holy-panda-x-deep-dive.mdx
 - action: add [drop-holy-panda-x-deep-dive](/article/drop-holy-panda-x-deep-dive) to gateron-lanes-tactile-deep-dive body, or vice versa
+- addressed: aa2f6f0
+- issue: [mirror-failed: 2026-06-22T10:00:00Z]
 
-### [ ] [cross-links] [4.5] gateron-lanes-tactile-deep-dive ↔ gateron-oil-king-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: gateron, deep-dive)
+### [x] [cross-links] [4.5] gateron-lanes-tactile-deep-dive ↔ gateron-oil-king-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: gateron, deep-dive)
 - category: cross-links
 - filed: 2026-06-22 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -5507,8 +5513,10 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/gateron-lanes-tactile-deep-dive.mdx
 - article-b: apps/web/src/content/articles/gateron-oil-king-deep-dive.mdx
 - action: add [gateron-oil-king-deep-dive](/article/gateron-oil-king-deep-dive) to gateron-lanes-tactile-deep-dive body, or vice versa
+- addressed: aa2f6f0
+- issue: [mirror-failed: 2026-06-22T10:00:00Z]
 
-### [ ] [cross-links] [4.5] gateron-lanes-tactile-deep-dive ↔ hmx-cloud-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
+### [x] [cross-links] [4.5] gateron-lanes-tactile-deep-dive ↔ hmx-cloud-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
 - category: cross-links
 - filed: 2026-06-22 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -5518,8 +5526,10 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/gateron-lanes-tactile-deep-dive.mdx
 - article-b: apps/web/src/content/articles/hmx-cloud-deep-dive.mdx
 - action: add [hmx-cloud-deep-dive](/article/hmx-cloud-deep-dive) to gateron-lanes-tactile-deep-dive body, or vice versa
+- addressed: aa2f6f0
+- issue: [mirror-failed: 2026-06-22T10:00:00Z]
 
-### [ ] [cross-links] [4.5] gateron-lanes-tactile-deep-dive ↔ keyboard-acoustics-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
+### [x] [cross-links] [4.5] gateron-lanes-tactile-deep-dive ↔ keyboard-acoustics-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
 - category: cross-links
 - filed: 2026-06-22 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -5529,8 +5539,10 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/gateron-lanes-tactile-deep-dive.mdx
 - article-b: apps/web/src/content/articles/keyboard-acoustics-deep-dive.mdx
 - action: add [keyboard-acoustics-deep-dive](/article/keyboard-acoustics-deep-dive) to gateron-lanes-tactile-deep-dive body, or vice versa
+- addressed: aa2f6f0
+- issue: [mirror-failed: 2026-06-22T10:00:00Z]
 
-### [ ] [cross-links] [4.5] gateron-lanes-tactile-deep-dive ↔ magnetic-switches-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
+### [x] [cross-links] [4.5] gateron-lanes-tactile-deep-dive ↔ magnetic-switches-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
 - category: cross-links
 - filed: 2026-06-22 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -5540,8 +5552,10 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/gateron-lanes-tactile-deep-dive.mdx
 - article-b: apps/web/src/content/articles/magnetic-switches-deep-dive.mdx
 - action: add [magnetic-switches-deep-dive](/article/magnetic-switches-deep-dive) to gateron-lanes-tactile-deep-dive body, or vice versa
+- addressed: aa2f6f0
+- issue: [mirror-failed: 2026-06-22T10:00:00Z]
 
-### [ ] [cross-links] [4.5] gateron-lanes-tactile-deep-dive ↔ optical-switches-explained — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
+### [x] [cross-links] [4.5] gateron-lanes-tactile-deep-dive ↔ optical-switches-explained — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
 - category: cross-links
 - filed: 2026-06-22 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -5551,6 +5565,8 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/gateron-lanes-tactile-deep-dive.mdx
 - article-b: apps/web/src/content/articles/optical-switches-explained.mdx
 - action: add [optical-switches-explained](/article/optical-switches-explained) to gateron-lanes-tactile-deep-dive body, or vice versa
+- addressed: aa2f6f0
+- issue: [mirror-failed: 2026-06-22T10:00:00Z]
 
 ### [ ] [cross-links] [4.5] gmk-cyl-pandemonium-group-buy ↔ gmk-cyl-greg-2-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, group-buy, abs, cherry-profile)
 - category: cross-links
