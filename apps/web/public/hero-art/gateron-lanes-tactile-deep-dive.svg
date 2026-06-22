@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — Gateron Lanes tactile switch cross-section: Alps-inspired leaf-spring bump mechanism, exploded housing view showing stem bump nub, leaf spring deflection, and housing cavity</title>
+
+  <!-- Ochre splash wash — a soft horizontal ellipse at the tactile bump / leaf-spring
+       contact zone, mid-height of the diagram. Single splash, single hue.
+       The ochre hue (80-85) sits warm and golden, distinct from the coral (28) and
+       terracotta (40-45) occupied by other deep-dives in the rotation. -->
+  <ellipse cx="600" cy="418" rx="310" ry="68" fill="oklch(0.76 0.12 82 / 0.15)" stroke="none"/>
+
+  <!-- ════════════════════════════════════════════════════════════════════════════
+       COMPOSITION: single switch cross-section, centered horizontally.
+       Alps-style housing is boxier and taller in proportion than MX — closer to
+       a rectangle than the MX trapezoid. The leaf spring sits in a channel on
+       the right wall of the housing interior. Three exploded tiers:
+         Tier A: Top cap / stem head — y 140–270
+         Tier B: Stem body + leaf spring interaction — y 290–530
+         Tier C: Bottom housing + coil spring — y 550–700
+       Explode lines sit at y 278 and y 542, with center anchor dots.
+       ════════════════════════════════════════════════════════════════════════════ -->
+
+  <!-- ════════════════════════════════════════════════════════════════════════════
+       TIER A — TOP CAP (Alps-style, square-shouldered)
+       Alps top housing is wider and flatter on the shoulder than MX. The stem
+       aperture is rectangular, not cruciform — Alps stems are a simple rectangular
+       post, not the MX plus-sign. LED cutout on the north face.
+       ════════════════════════════════════════════════════════════════════════════ -->
+
+  <!-- Outer top-cap shell — boxy, Alps shoulder width ~320 px -->
+  <path d="
+    M 440 148
+    L 760 148
+    L 760 252
+    L 440 252
+    Z" />
+
+  <!-- Inner cavity wall thickness — inset ~14 px -->
+  <path d="
+    M 454 162
+    L 746 162
+    L 746 240
+    L 454 240
+    Z" stroke-opacity="0.38"/>
+
+  <!-- Rectangular stem aperture — centered on the top face.
+       Alps aperture is a simple rectangle, ~64 wide × 40 tall. -->
+  <path d="
+    M 568 148
+    L 632 148
+    L 632 172
+    L 568 172
+    Z" stroke-opacity="0.72"/>
+
+  <!-- Small raised ridge around the aperture — Alps characteristic detail -->
+  <path d="
+    M 562 148
+    L 638 148
+    L 638 178
+    L 562 178
+    Z" stroke-opacity="0.42"/>
+
+  <!-- LED notch — cutout on the top face, south of center aperture -->
+  <path d="M 576 162 L 624 162 L 620 172 L 580 172 Z" stroke-opacity="0.50"/>
+
+  <!-- Mounting clip nubs — Alps clips are on the north/south faces, not east/west -->
+  <line x1="440" y1="200" x2="428" y2="200" stroke-opacity="0.48"/>
+  <line x1="760" y1="200" x2="772" y2="200" stroke-opacity="0.48"/>
+
+  <!-- Small internal ledge lines — where the stem travel stops at top of housing.
+       Drawn as a short horizontal tick on each inner wall. -->
+  <line x1="454" y1="220" x2="476" y2="220" stroke-opacity="0.45"/>
+  <line x1="724" y1="220" x2="746" y2="220" stroke-opacity="0.45"/>
+
+  <!-- Leaf-spring channel opening — the right wall of the top housing has a vertical
+       slot so the leaf spring, anchored in the bottom housing, can pass through.
+       Drawn as a gap / opening on the right inner wall face. -->
+  <path d="M 736 162 L 746 162 L 746 240 L 736 240" stroke-opacity="0.30"/>
+  <line x1="736" y1="185" x2="746" y2="185" stroke-opacity="0.22"/>
+  <line x1="736" y1="218" x2="746" y2="218" stroke-opacity="0.22"/>
+
+  <!-- ── EXPLODE LINE A ─────────────────────────────────────────────────────── -->
+  <line x1="418" y1="278" x2="782" y2="278" stroke-dasharray="4 6" stroke-opacity="0.32"/>
+  <circle cx="600" cy="278" r="2.5" stroke-opacity="0.52"/>
+
+  <!-- ════════════════════════════════════════════════════════════════════════════
+       TIER B — STEM BODY + LEAF-SPRING INTERACTION (the tactile mechanism)
+
+       Alps-style stem is a rectangular post that slides vertically. On its right
+       flank, roughly midway down, is a small cam-shaped bump nub — the tactile
+       actuator. As the stem descends, this nub pushes the leaf spring outward,
+       then slips past its contact point, creating the tactile break.
+
+       Leaf spring: a long thin metal strip anchored at its base to the bottom
+       housing, running up the right wall of the housing cavity. The spring bends
+       outward when the stem nub presses it, then snaps back when the nub passes.
+       That snap is the tactile event.
+
+       This is the Alps SKCM Orange analogue: a separate leaf spring element
+       (not a combined slider-spring like the simplified Alps white/black).
+       ════════════════════════════════════════════════════════════════════════════ -->
+
+  <!-- ── HOUSING WALLS (side walls visible in cross-section) ─────────────────── -->
+  <!-- Left housing wall — outer face -->
+  <line x1="440" y1="290" x2="440" y2="540" stroke-opacity="0.88"/>
+  <!-- Left housing wall — inner face -->
+  <line x1="462" y1="290" x2="462" y2="540" stroke-opacity="0.40"/>
+
+  <!-- Right housing wall — outer face -->
+  <line x1="760" y1="290" x2="760" y2="540" stroke-opacity="0.88"/>
+  <!-- Right housing wall — inner face, with leaf-spring channel slot -->
+  <!-- Upper portion of right inner wall, above the spring channel -->
+  <line x1="738" y1="290" x2="738" y2="345" stroke-opacity="0.40"/>
+  <!-- Lower portion of right inner wall, below where spring bends -->
+  <line x1="738" y1="490" x2="738" y2="540" stroke-opacity="0.40"/>
+
+  <!-- Housing top cap interface line (where tier A and tier B meet) -->
+  <line x1="440" y1="290" x2="760" y2="290" stroke-opacity="0.55"/>
+  <!-- Housing bottom plate interface line (where tier B and tier C meet) -->
+  <line x1="440" y1="540" x2="760" y2="540" stroke-opacity="0.55"/>
+
+  <!-- ── STEM BODY — rectangular Alps post ────────────────────────────────────── -->
+  <!-- Stem outer profile — the rectangular post. Alps stems are ~54 wide. -->
+  <path d="
+    M 573 290
+    L 627 290
+    L 627 520
+    L 573 520
+    Z" />
+
+  <!-- Stem centerline, dashed -->
+  <line x1="600" y1="298" x2="600" y2="514" stroke-opacity="0.48" stroke-dasharray="3 5"/>
+
+  <!-- Alps stem leg stubs at bottom — two thin pegs that mate with the spring socket -->
+  <line x1="581" y1="520" x2="581" y2="536" stroke-opacity="0.50"/>
+  <line x1="619" y1="520" x2="619" y2="536" stroke-opacity="0.50"/>
+
+  <!-- Stem guide rail on left inner wall — a thin slot that keeps the stem aligned.
+       Drawn as two close parallel lines on the left inner wall. -->
+  <line x1="462" y1="340" x2="573" y2="340" stroke-opacity="0.28" stroke-dasharray="2 4"/>
+  <line x1="462" y1="460" x2="573" y2="460" stroke-opacity="0.28" stroke-dasharray="2 4"/>
+
+  <!-- ── TACTILE BUMP NUB — the focal piece, splashed ochre ───────────────────── -->
+  <!-- The bump nub is a small cam on the right flank of the stem, at roughly
+       y=400 (mid-travel). Drawn as a small convex tab extending right from the
+       stem wall. This is the piece that catches the leaf spring. -->
+
+  <!-- Ochre fill on the stem's right flank at the bump zone, as a soft wash
+       tying the nub to the spring contact point. -->
+  <rect x="573" y="378" width="54" height="64" fill="oklch(0.76 0.12 82 / 0.22)" stroke="none"/>
+
+  <!-- Bump nub shape — a small D-profile tab on the right face of the stem -->
+  <path d="
+    M 627 392
+    C 627 390, 629 388, 634 386
+    C 642 383, 648 388, 650 396
+    C 652 404, 648 414, 640 416
+    C 633 418, 627 415, 627 412
+    Z" />
+
+  <!-- Ochre accent: filled core dot at the bump nub tip + outer ring.
+       The dot marks the exact contact point where spring meets stem. -->
+  <circle cx="650" cy="402" r="7" fill="oklch(0.76 0.12 82 / 0.95)" stroke="oklch(0.76 0.12 82)"/>
+  <circle cx="650" cy="402" r="13" stroke="oklch(0.76 0.12 82)" stroke-opacity="0.48" fill="none"/>
+
+  <!-- ── LEAF SPRING — the Alps-derived tactile element ───────────────────────── -->
+  <!-- A thin metal strip, anchored at its base (bottom housing, right side),
+       running vertically up the right wall. The spring's contact arm bends
+       inward at mid-height to intersect the stem bump zone.
+
+       At rest (no keypresses): the spring tip rests against the stem face at ~y 402.
+       As stem descends: the bump nub pushes the spring to the right (outward).
+       After nub passes: the spring snaps back — that is the tactile break.
+
+       Drawn in three segments:
+         1. Base shaft running from y=540 up to y=450 along the right wall
+         2. Inward-bending arm from y=450 curving to contact at (650, 402)
+         3. Brief tip segment continuing slightly past contact point
+       The spring bends inward (toward stem) at ~y=415, contact at ~y=402.
+       The bent posture shown is the "just-touched" moment, maximum deflection. -->
+
+  <!-- Spring base shaft — anchored to right-wall channel, running upward -->
+  <path d="
+    M 718 540
+    L 718 455" stroke-opacity="0.88"/>
+
+  <!-- Spring bend arm — curves inward from the right wall toward the stem -->
+  <path d="
+    M 718 455
+    C 718 440, 710 425, 698 415
+    C 688 407, 672 403, 662 402
+    L 650 402" stroke-opacity="0.88"/>
+
+  <!-- Spring tip — continues briefly past the contact arc, indicating
+       the tip that snaps back after the bump nub passes -->
+  <path d="
+    M 650 402
+    L 644 396" stroke-opacity="0.60"/>
+
+  <!-- Spring anchor point at bottom — small pin circle -->
+  <circle cx="718" cy="540" r="3.5" stroke-opacity="0.80"/>
+  <!-- Anchor pin base line -->
+  <line x1="712" y1="540" x2="724" y2="540" stroke-opacity="0.60"/>
+
+  <!-- Second anchor point mid-spring (spring is guided by a housing post) -->
+  <circle cx="718" cy="490" r="2" stroke-opacity="0.45"/>
+
+  <!-- Spring channel bracket on the right wall — the housing feature that
+       guides and constrains the spring's lateral movement. Drawn as a small
+       C-bracket indented in the right wall, open toward the stem. -->
+  <path d="M 738 370 L 752 370 L 752 436 L 738 436" stroke-opacity="0.50"/>
+  <line x1="752" y1="370" x2="752" y2="436" stroke-opacity="0.30"/>
+
+  <!-- Motion arrow — small chevron indicating the spring snap-back direction
+       after the bump nub passes. Pointing from post-snap to rest position. -->
+  <path d="M 672 390 L 666 384 L 660 390" stroke-opacity="0.58"/>
+
+  <!-- Deflection arrow — indicates the stem descending direction -->
+  <path d="M 596 488 L 600 494 L 604 488" stroke-opacity="0.52"/>
+
+  <!-- ── EXPLODE LINE B ─────────────────────────────────────────────────────── -->
+  <line x1="418" y1="560" x2="782" y2="560" stroke-dasharray="4 6" stroke-opacity="0.32"/>
+  <circle cx="600" cy="560" r="2.5" stroke-opacity="0.52"/>
+
+  <!-- ════════════════════════════════════════════════════════════════════════════
+       TIER C — BOTTOM HOUSING + COIL SPRING
+       Alps bottom housing is flat-floored. The coil spring sits in a central well.
+       Two PCB contact legs extend below the bottom plate.
+       ════════════════════════════════════════════════════════════════════════════ -->
+
+  <!-- Bottom housing outer shell — boxy base plate -->
+  <path d="
+    M 440 572
+    L 760 572
+    L 760 710
+    L 440 710
+    Z" />
+
+  <!-- Inner bottom floor recess -->
+  <path d="
+    M 454 572
+    L 746 572
+    L 746 698
+    L 454 698
+    Z" stroke-opacity="0.38"/>
+
+  <!-- Central spring well — the socket the coil spring seats into -->
+  <path d="
+    M 556 572
+    L 644 572
+    L 644 618
+    L 556 618
+    Z" stroke-opacity="0.58"/>
+
+  <!-- Coil spring — drawn as stacked ellipses in the well.
+       Spring diameter ~56 px, each coil 10 px pitch. -->
+  <ellipse cx="600" cy="623" rx="30" ry="5.5"/>
+  <ellipse cx="600" cy="633" rx="30" ry="5.5"/>
+  <ellipse cx="600" cy="643" rx="30" ry="5.5"/>
+  <ellipse cx="600" cy="653" rx="30" ry="5.5"/>
+  <ellipse cx="600" cy="663" rx="30" ry="5.5"/>
+  <ellipse cx="600" cy="673" rx="30" ry="5.5"/>
+  <line x1="600" y1="616" x2="600" y2="679" stroke-opacity="0.32" stroke-dasharray="2 4"/>
+
+  <!-- Leaf-spring anchor socket at base right — this is where the spring base
+       (drawn in Tier B) terminates. A small recessed slot in the bottom housing
+       right inner wall. -->
+  <path d="
+    M 708 572
+    L 736 572
+    L 736 596
+    L 708 596
+    Z" stroke-opacity="0.52"/>
+  <!-- Pin hole in socket -->
+  <circle cx="722" cy="584" r="3" stroke-opacity="0.65"/>
+
+  <!-- PCB mount legs — two round pins extending below the bottom plate.
+       Alps have two non-directional legs and a center post. -->
+  <circle cx="500" cy="692" r="5.5"/>
+  <circle cx="700" cy="692" r="5.5"/>
+  <circle cx="600" cy="692" r="4.5" stroke-opacity="0.55"/>
+
+  <!-- Small internal post stubs — Alps bottom housing has two internal posts that
+       mate with the top housing clips. -->
+  <line x1="462" y1="572" x2="462" y2="590" stroke-opacity="0.45"/>
+  <line x1="738" y1="572" x2="738" y2="590" stroke-opacity="0.45"/>
+
+  <!-- ── DIDACTIC MEASUREMENT TICKS (left margin) ─────────────────────────────── -->
+  <!-- Family convention: faint ruler ticks aligned to tier midpoints on left margin -->
+  <g stroke-opacity="0.28">
+    <line x1="382" y1="200" x2="394" y2="200"/>
+    <line x1="382" y1="415" x2="394" y2="415"/>
+    <line x1="382" y1="640" x2="394" y2="640"/>
+  </g>
+  <!-- Vertical connecting spine for the ruler ticks -->
+  <line x1="388" y1="200" x2="388" y2="640" stroke-opacity="0.14" stroke-dasharray="2 6"/>
+
+  <!-- ── LABEL ZONE — faint IBM Plex Sans micro annotations ───────────────────── -->
+  <!-- Component labels at reduced opacity — didactic, non-intrusive.
+       Font is set but SVG won't embed it; the labels degrade gracefully to system sans. -->
+  <text x="420" y="148" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.50" stroke="none" letter-spacing="0.05em" text-transform="uppercase">TOP CAP</text>
+  <text x="420" y="338" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.50" stroke="none" letter-spacing="0.05em">STEM</text>
+  <text x="680" y="338" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.76 0.12 82)" fill-opacity="0.72" stroke="none" letter-spacing="0.05em">LEAF SPRING</text>
+  <text x="660" y="454" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.76 0.12 82)" fill-opacity="0.72" stroke="none" letter-spacing="0.05em">BUMP NUB</text>
+  <text x="420" y="650" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.50" stroke="none" letter-spacing="0.05em">BOTTOM HOUSING</text>
+
+  <!-- Small leader lines connecting labels to their features -->
+  <!-- "LEAF SPRING" leader to spring shaft -->
+  <line x1="718" y1="342" x2="718" y2="355" stroke-opacity="0.35" stroke-width="1"/>
+  <!-- "BUMP NUB" leader to nub tip -->
+  <line x1="660" y1="448" x2="652" y2="413" stroke-opacity="0.35" stroke-width="1"/>
+
+  <!-- ── JetBrains Mono technical value — Alps-derivative callout ──────────────── -->
+  <text x="450" y="738" font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace" font-size="10" fill="oklch(0.78 0.005 90)" fill-opacity="0.38" stroke="none" letter-spacing="0.03em">GATERON LANES — ALPS SKCM-DERIVED LEAF SPRING TACTILE</text>
+
+  <!-- ── BRONZE THEME DOT — family ornamental anchor, upper-right margin ───────── -->
+  <circle cx="1148" cy="92" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

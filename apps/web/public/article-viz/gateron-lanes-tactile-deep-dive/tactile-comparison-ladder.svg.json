@@ -1,0 +1,26 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-18T12:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "gateron-lanes-tactile-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "who-the-lanes-are-for",
+  "brief_summary": "Four-row horizontal comparison ladder showing tactile bump profiles for Gateron Lanes, Durock T1, Gazzew Boba U4T, and Drop Holy Panda X. Each row displays a force-curve glyph sketched along a travel baseline (left = start of press, right = bottom-out). Lanes: a coral-highlighted sharp spike near the left of travel with immediate decay. T1: a slightly broader spike with a moderate descent. U4T: a D-shaped flat-topped plateau. HPX: a smooth rounded arc that blends into the bottom-out. Right-margin character labels name each switch's bump category. The visual argument positions the Lanes as the only switch in the set chasing the Alps front-loaded snap character.",
+  "target": "apps/web/public/article-viz/gateron-lanes-tactile-deep-dive/tactile-comparison-ladder.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "gateron-lanes-tactile-deep-dive.mdx § 'Sound and feel profile' — 'The Lanes is sharper and lighter-feeling ... delivers less of the \"hammering a bump\" sensation that U4T partisans are after'",
+    "gateron-lanes-tactile-deep-dive.mdx § 'Sound and feel profile' — 'The Durock T1 sits between those two profiles — a sharp front edge to the bump, less plateau than the U4T'",
+    "gateron-lanes-tactile-deep-dive.mdx § 'Sound and feel profile' — 'The Boba U4T delivers a D-shaped bump — pronounced, plateau-like, designed to be felt unambiguously on every keystroke at every typing speed'",
+    "gateron-lanes-tactile-deep-dive.mdx § 'Sound and feel profile' — 'the bump arrives and is over before the bottom-out is a question. There is no ambiguous zone between the tactile event and the landing.'",
+    "drop-holy-panda-x-deep-dive.mdx § 'The rounded bump, geometrically' — 'The Holy Panda lineage delivers neither. The rounded bump on a Halo-derived stem is a smooth, symmetric arc ... a fall-off that blends into the bottom-out rather than dropping off cleanly first.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gateron-lanes-tactile-deep-dive/tactile-comparison-ladder.svg"],
+  "warnings": []
+}

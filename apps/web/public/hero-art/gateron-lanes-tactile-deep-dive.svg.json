@@ -1,0 +1,24 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored SVG (no raster pipeline)",
+  "at": "2026-06-22T00:00:00.000Z",
+  "commit": "92be09ac51f9a5a96806f6b3fac6097081fe16cb",
+  "kind": "hero-art",
+  "source": null,
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "JetBrains Mono"],
+  "slug": "gateron-lanes-tactile-deep-dive",
+  "subject": "switch cross-section — Gateron Lanes tactile housing and stem exploded view",
+  "motif": "switch cross-section",
+  "splashHue": "ochre",
+  "splashColor": "oklch(0.76 0.12 82)",
+  "canvas": "1200x750",
+  "strokeWeight": "2px",
+  "strokeColor": "oklch(0.78 0.005 90)",
+  "outputs": [
+    "apps/web/public/hero-art/gateron-lanes-tactile-deep-dive.svg",
+    "apps/web/public/hero-art/gateron-lanes-tactile-deep-dive.svg.json"
+  ],
+  "warnings": [],
+  "notes": "Alps SKCM Orange-inspired single-switch cross-section, three exploded tiers: (A) top cap — Alps-style boxy rectangular housing with square stem aperture (not MX cruciform) and leaf-spring channel slot in right wall; (B) stem body with rectangular post, tactile bump nub as a small D-profile cam on the stem's right flank, and the leaf spring as a long anchored metal strip running up the right wall cavity with an inward-bending contact arm meeting the bump nub at y=402; (C) bottom housing with coil spring in central well, leaf-spring anchor socket bottom-right, and two PCB pin contacts. Ochre splash applied as a soft horizontal wash across the tactile-event zone (y 378–442) and as the primary accent dot+ring at the bump nub contact point (x=650, y=402) — the exact location where the leaf spring snaps back and the tactile break occurs. Motion chevrons: downward arrow indicating stem travel direction, inward arrow indicating spring snap-back direction post-bump-nub-pass. Micro IBM Plex Sans labels (TOP CAP, STEM, LEAF SPRING, BUMP NUB, BOTTOM HOUSING) with leader lines at reduced opacity. JetBrains Mono technical callout at bottom margin. Ochre hue 82 chosen to sit warm-golden, distinct from coral (28), terracotta (40-45), and the broader ochre-at-80 already used by clicky-switches-deep-dive — hue 82 reads as a richer golden-yellow, warranted by the Lanes' warm brass-toned Orange-heritage character. Brass-bronze ornamental dot at top-right (x=1148, y=92) and left-margin ruler ticks at tier midpoints per family convention."
+}

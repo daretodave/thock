@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Alps SKCM Orange internal-snap mechanism vs MX-format leaf-crossing mechanism</title>
+
+  <!-- Panel divider -->
+  <line x1="600" y1="60" x2="600" y2="450" stroke-opacity="0.15"/>
+
+  <!-- ===== PANEL LEFT: Alps SKCM Orange ===== -->
+
+  <!-- Housing outline -->
+  <rect x="120" y="100" width="340" height="320" rx="6" stroke-opacity="0.7"/>
+
+  <!-- Slider body inside housing — stepped tactile profile -->
+  <!-- Slider outer walls -->
+  <rect x="210" y="115" width="160" height="295" rx="3" stroke-opacity="0.55"/>
+
+  <!-- Tactile step on slider — the key geometry, coral-highlighted -->
+  <!-- Upper smooth portion of slider -->
+  <rect x="225" y="125" width="130" height="120" fill="oklch(0.68 0.165 28 / 0.07)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.75" stroke-width="2.5"/>
+
+  <!-- The snap step — coral focal point -->
+  <path d="M 225 245 L 245 245 L 245 265 L 335 265 L 335 245 L 355 245" stroke="oklch(0.68 0.165 28)" stroke-width="3" stroke-opacity="0.95"/>
+  <circle cx="290" cy="255" r="5" fill="oklch(0.68 0.165 28)" stroke="none"/>
+
+  <!-- Internal snap spring, faint -->
+  <g stroke-opacity="0.4">
+    <ellipse cx="290" cy="285" rx="22" ry="5"/>
+    <ellipse cx="290" cy="298" rx="22" ry="5"/>
+    <ellipse cx="290" cy="311" rx="22" ry="5"/>
+  </g>
+
+  <!-- Lower slider body -->
+  <rect x="225" y="320" width="130" height="78" rx="2" stroke-opacity="0.45"/>
+
+  <!-- Keycap post stub top -->
+  <rect x="265" y="72" width="50" height="28" rx="2" stroke-opacity="0.6"/>
+
+  <!-- Bottom contact pins -->
+  <line x1="255" y1="410" x2="255" y2="435" stroke-opacity="0.55"/>
+  <line x1="325" y1="410" x2="325" y2="435" stroke-opacity="0.55"/>
+
+  <!-- Left panel label -->
+  <text x="290" y="478" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">Alps SKCM Orange</text>
+  <text x="290" y="500" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">internal snap · no leaf crossing</text>
+
+  <!-- Annotation: snap point -->
+  <g stroke="oklch(0.68 0.165 28)" stroke-opacity="0.6">
+    <line x1="355" y1="255" x2="478" y2="210"/>
+    <path d="M 472 205 L 478 210 L 472 215"/>
+  </g>
+  <text x="488" y="205" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.9">snap point</text>
+  <text x="488" y="222" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">slider interrupts itself</text>
+
+  <!-- ===== PANEL RIGHT: MX-format tactile ===== -->
+
+  <!-- Housing outline -->
+  <rect x="740" y="100" width="340" height="320" rx="6" stroke-opacity="0.7"/>
+
+  <!-- Top housing internal ledge -->
+  <line x1="740" y1="175" x2="1080" y2="175" stroke-opacity="0.25" stroke-dasharray="4 4"/>
+
+  <!-- Stem column -->
+  <rect x="870" y="110" width="120" height="180" rx="2" stroke-opacity="0.55"/>
+
+  <!-- Keycap post stub top -->
+  <rect x="895" y="72" width="70" height="28" rx="2" stroke-opacity="0.6"/>
+
+  <!-- Stem legs — the tactile bumps -->
+  <!-- Left leg with angled bump step -->
+  <path d="M 870 285 L 820 285 L 820 310 L 840 330 L 840 360 L 860 360 L 860 370 L 990 370 L 990 360 L 1010 360 L 1010 330 L 1030 310 L 1030 285 L 990 285" stroke-opacity="0.75"/>
+
+  <!-- Metal leaf — horizontal, at bump crossing point -->
+  <line x1="760" y1="310" x2="840" y2="310" stroke-opacity="0.8" stroke-width="2.5"/>
+  <line x1="1020" y1="310" x2="1100" y2="310" stroke-opacity="0.8" stroke-width="2.5"/>
+  <!-- Leaf deflection hint — faint warm grey -->
+  <path d="M 830 310 Q 840 325 850 310" stroke-opacity="0.35" stroke-dasharray="3 3"/>
+  <path d="M 1010 310 Q 1020 325 1030 310" stroke-opacity="0.35" stroke-dasharray="3 3"/>
+
+  <!-- Leaf crossing focal dot — warm grey, not coral -->
+  <circle cx="840" cy="310" r="4" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7"/>
+  <circle cx="1020" cy="310" r="4" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7"/>
+
+  <!-- Spring -->
+  <g stroke-opacity="0.4">
+    <ellipse cx="930" cy="385" rx="28" ry="6"/>
+    <ellipse cx="930" cy="399" rx="28" ry="6"/>
+    <ellipse cx="930" cy="413" rx="28" ry="6"/>
+  </g>
+
+  <!-- Bottom contact pins -->
+  <line x1="890" y1="420" x2="890" y2="438" stroke-opacity="0.55"/>
+  <line x1="970" y1="420" x2="970" y2="438" stroke-opacity="0.55"/>
+
+  <!-- Right panel label -->
+  <text x="910" y="478" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">MX-format tactile</text>
+  <text x="910" y="500" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">leaf crossing · bump from contact</text>
+
+  <!-- Annotation: leaf -->
+  <g stroke="oklch(0.78 0.005 90)" stroke-opacity="0.45">
+    <line x1="840" y1="305" x2="780" y2="255"/>
+    <path d="M 786 248 L 780 255 L 787 260"/>
+  </g>
+  <text x="700" y="248" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.75">metal leaf</text>
+  <text x="700" y="265" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.5">stem leg crosses it</text>
+
+  <!-- Baseline -->
+  <line x1="80" y1="450" x2="1120" y2="450" stroke-opacity="0.3"/>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

@@ -1,0 +1,27 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-18T12:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "gateron-lanes-tactile-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "the-community-verdict",
+  "brief_summary": "Three-week score arc chart for the Gateron Lanes on thock's tracker, W24 through W26. A coral line connects three data points: W24 at 38 (annotated 'review / first sell-out'), W25 at 39 (annotated 'wide restock / 5 vendors'), W26 at 38 (annotated 'Prototypist in-stock / steady state'). A faint dashed warm-grey reference line shows the Gateron Oil King holding in the 39-40 range across the same three weeks. The visual argument is that the Lanes did not spike-and-fade; it entered at 38, touched 39 briefly on restock news, and returned to a stable 38 — steady-state demand, not a flash of review hype.",
+  "target": "apps/web/public/article-viz/gateron-lanes-tactile-deep-dive/tracker-arc.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "JetBrains Mono"],
+  "data_sources": [
+    "data/trends/2026-W24.json § Gateron Lanes row — score: 38, direction: 'up', note: 'ThereminGoat review of the Alps SKCM Orange-inspired Gateron Lanes tactiles circulating widely on KeebTalk and Reddit. Reported sell-out cycles driving FOMO; strongest new tactile story entering mid-June.'",
+    "data/trends/2026-W25.json § Gateron Lanes row — score: 39, direction: 'flat', note: 'Widely restocked across Prototypist, Bowl Keyboards, Delta Key Co, Keybay, and Pantheon Keys. Post-ThereminGoat-review sell-out cycles stabilizing; demand holding but initial urgency has normalized into steady mid-range enthusiasm.'",
+    "data/trends/2026-W26.json § Gateron Lanes row — score: 38, direction: 'flat', note: 'Prototypist carries in-stock units shipping within 3 days. ThereminGoat review lift from W25 fading to steady state; no fresh review catalyst in W26.'",
+    "data/trends/2026-W24.json § Gateron Oil King row — score: 40, direction: 'flat'",
+    "data/trends/2026-W25.json § Gateron Oil King row — score: 40, direction: 'flat'",
+    "data/trends/2026-W26.json § Gateron Oil King row — score: 39, direction: 'flat'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gateron-lanes-tactile-deep-dive/tracker-arc.svg"],
+  "warnings": []
+}

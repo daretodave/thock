@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Gateron Lanes three-week tracker score arc W24 through W26 compared against Gateron Oil King baseline</title>
+
+  <!-- Score axis labels -->
+  <text x="72" y="108" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.55">40</text>
+  <text x="72" y="208" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.55">39</text>
+  <text x="72" y="308" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.55">38</text>
+
+  <!-- Axis tick marks, faint -->
+  <g stroke-opacity="0.18">
+    <line x1="80" y1="105" x2="1120" y2="105"/>
+    <line x1="80" y1="205" x2="1120" y2="205"/>
+    <line x1="80" y1="305" x2="1120" y2="305"/>
+  </g>
+
+  <!-- Vertical axis -->
+  <line x1="80" y1="80" x2="80" y2="340" stroke-opacity="0.35"/>
+
+  <!-- Week x-axis labels -->
+  <text x="300" y="370" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">W24</text>
+  <text x="660" y="370" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">W25</text>
+  <text x="1020" y="370" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">W26</text>
+
+  <!-- X-axis baseline -->
+  <line x1="80" y1="340" x2="1120" y2="340" stroke-opacity="0.35"/>
+
+  <!-- OIL KING reference line — flat at ~39.5, warm grey dashed -->
+  <!-- Oil King: W24=40, W25=40, W26=39. Map: score 40 → y=105, 39 → y=205, 38 → y=305 -->
+  <!-- W24 x=300, W25 x=660, W26 x=1020 -->
+  <!-- Oil King W24=40→y=105, W25=40→y=105, W26=39→y=205 -->
+  <path d="M 300 105 L 660 105 L 1020 205"
+    stroke="oklch(0.78 0.005 90)" stroke-opacity="0.35" stroke-dasharray="6 5" stroke-width="2"/>
+
+  <!-- Oil King label -->
+  <text x="1038" y="200" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.45">Oil King</text>
+
+  <!-- LANES line — coral, W24=38→y=305, W25=39→y=205, W26=38→y=305 -->
+  <path d="M 300 305 L 660 205 L 1020 305"
+    stroke="oklch(0.68 0.165 28)" stroke-width="3" stroke-opacity="0.95"/>
+
+  <!-- Lanes data point dots -->
+  <circle cx="300" cy="305" r="6" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)"/>
+  <circle cx="660" cy="205" r="6" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)"/>
+  <circle cx="1020" cy="305" r="6" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)"/>
+
+  <!-- W24 annotation -->
+  <text x="300" y="335" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.85">38</text>
+  <text x="300" y="352" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">review · first sell-out</text>
+
+  <!-- W25 annotation -->
+  <text x="660" y="188" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.85">39</text>
+  <text x="660" y="352" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">wide restock · 5 vendors</text>
+
+  <!-- W26 annotation -->
+  <text x="1020" y="335" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.85">38</text>
+  <text x="1020" y="352" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">Prototypist in-stock · steady state</text>
+
+  <!-- Lanes label -->
+  <text x="108" y="300" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.9">Gateron Lanes</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

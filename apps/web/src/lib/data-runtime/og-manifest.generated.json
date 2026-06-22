@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "slug": "gateron-lanes-tactile-deep-dive",
+      "readTime": 11,
+      "frontmatter": {
+        "title": "Gateron Lanes: The Alps-Inspired Tactile Taking Over the Mid-Range",
+        "lede": "Gateron's Lanes draws its DNA from the Alps SKCM Orange — one of the most loved tactile mechanisms of the 1980s — and arrived in June 2026 with enough community conviction to sell out on first drop.",
+        "pillar": "deep-dives",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "keychron-quiet-takeover",
       "readTime": 9,
       "frontmatter": {
@@ -1112,5 +1122,5 @@
       "description": "China-based design studio and vendor known for in-house boards (Mammoth, Ikki68, Promise) and partnered group buys, sold direct from shop.wuquestudio.com with regional proxies."
     }
   ],
-  "generatedAt": "2026-06-21T03:14:49.561Z"
+  "generatedAt": "2026-06-22T06:02:21.107Z"
 }

@@ -1,0 +1,25 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-18T12:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "gateron-lanes-tactile-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "how-the-lanes-draw-from-that-heritage",
+  "brief_summary": "Two-panel cross-section comparing the Alps SKCM Orange internal-snap mechanism against a generic MX-format tactile leaf-crossing mechanism. Left panel shows the Alps slider housing with a stepped body and a coral-highlighted internal snap point, labelled 'internal snap / no leaf crossing'. Right panel shows an MX stem with angled tactile legs approaching a horizontal metal leaf, with the leaf deflection in faint stroke, labelled 'leaf crossing / bump from contact'. The diagram makes the article's core claim visual: the Alps and MX mechanisms generate their tactile events through fundamentally different physical actions, and the Lanes attempts to approximate the Alps snap character within the MX footprint.",
+  "target": "apps/web/public/article-viz/gateron-lanes-tactile-deep-dive/alps-vs-mx-mechanism.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "gateron-lanes-tactile-deep-dive.mdx § 'What Alps SKCM Orange was' — 'a resonant slider body that physically interrupts its own travel path. The Alps tactile event is a snap, not a crossing. The slider compresses a small spring inside the housing, the spring releases, and the bump arrives as a discrete interruption'",
+    "gateron-lanes-tactile-deep-dive.mdx § 'What Alps SKCM Orange was' — 'The bump on an Alps SKCM Orange sits high on the travel, arrives quickly, and decays without drag'",
+    "gateron-lanes-tactile-deep-dive.mdx § 'How the Lanes draw from that heritage' — 'Gateron is not shipping an Alps-socket switch. The Lanes is an MX-compatible 5-pin switch — fits any MX PCB ... the fundamental mechanism is still a stem leg crossing a contact leaf.'",
+    "gateron-lanes-tactile-deep-dive.mdx § 'How the Lanes draw from that heritage' — 'the stem leg reaches the leaf, crosses it quickly, and releases with a snap-like immediacy'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gateron-lanes-tactile-deep-dive/alps-vs-mx-mechanism.svg"],
+  "warnings": []
+}

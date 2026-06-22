@@ -3128,9 +3128,429 @@
         }
       ],
       "updatedAt": "2026-06-15T14:00:00.000Z"
+    },
+    {
+      "isoWeek": "2026-W26",
+      "publishedAt": "2026-06-22T00:00:00.000Z",
+      "rows": [
+        {
+          "name": "Hall Effect / Rapid Trigger",
+          "category": "switch",
+          "direction": "up",
+          "score": 82,
+          "spark": [
+            55,
+            59,
+            62,
+            65,
+            68,
+            72,
+            76,
+            82
+          ],
+          "articleSlug": "hall-effect-mainstream",
+          "note": "Keychron V6 Ultra HE VIP reservation opened June 15 with Nova Socket hybrid-switch tech. Hall effect now treated as baseline expectation on new gaming board launches per W26 roundups."
+        },
+        {
+          "name": "HMX Cloud V2",
+          "category": "switch",
+          "direction": "flat",
+          "score": 61,
+          "spark": [
+            38,
+            44,
+            50,
+            55,
+            60,
+            64,
+            62,
+            61
+          ],
+          "articleSlug": "hmx-cloud-deep-dive",
+          "note": "Broadly in stock across iLumKB, Milktooth, LumeKeebs, and Eloquent Clicks. No new review catalyst this week; shelf-arrival plateau continues into W26."
+        },
+        {
+          "name": "Gateron Oil King",
+          "category": "switch",
+          "direction": "flat",
+          "score": 39,
+          "spark": [
+            41,
+            40,
+            40,
+            41,
+            40,
+            40,
+            40,
+            39
+          ],
+          "articleSlug": "gateron-oil-king-deep-dive",
+          "note": "Community benchmark linear at $0.90 per switch. No new reviews or restocks in W26. Steady evergreen discussion with no catalyst to move the needle."
+        },
+        {
+          "name": "Gateron Lanes",
+          "category": "switch",
+          "direction": "flat",
+          "score": 38,
+          "spark": [
+            24,
+            30,
+            34,
+            36,
+            38,
+            38,
+            39,
+            38
+          ],
+          "articleSlug": null,
+          "note": "Prototypist carries in-stock units shipping within 3 days. ThereminGoat review lift from W25 fading to steady state; no fresh review catalyst in W26."
+        },
+        {
+          "name": "Cherry MX2A",
+          "category": "switch",
+          "direction": "down",
+          "score": -36,
+          "spark": [
+            -24,
+            -26,
+            -27,
+            -28,
+            -29,
+            -30,
+            -32,
+            -36
+          ],
+          "articleSlug": "cherry-mx2a-revision",
+          "note": "Slow community sentiment bleed continues as Hall effect alternatives dominate new board specs. No MX2A product launch or review to arrest the decline in W26."
+        },
+        {
+          "name": "GMK CYL Masterpiece R2",
+          "category": "keycap",
+          "direction": "up",
+          "score": 46,
+          "spark": [
+            0,
+            0,
+            0,
+            0,
+            18,
+            30,
+            38,
+            46
+          ],
+          "articleSlug": null,
+          "note": "GB closes June 26 — final-day urgency peak via NovelKeys, KBDfans, Oblotzky, Prototypist, Geon Works. New Katakana legends on nav cluster cited as key upgrade over R1."
+        },
+        {
+          "name": "GMK CYL Pandemonium",
+          "category": "keycap",
+          "direction": "flat",
+          "score": 33,
+          "spark": [
+            0,
+            0,
+            0,
+            14,
+            22,
+            29,
+            32,
+            33
+          ],
+          "articleSlug": null,
+          "note": "GB active June 1–July 1 via DeltaKeyCo, Prototypist, Bowl Keyboards, and others. Mid-window plateau; Berserk eclipse-themed translucent set maintaining steady interest."
+        },
+        {
+          "name": "DCS Dolch",
+          "category": "keycap",
+          "direction": "flat",
+          "score": 34,
+          "spark": [
+            0,
+            0,
+            10,
+            20,
+            28,
+            35,
+            35,
+            34
+          ],
+          "articleSlug": "divinikey-dcs-dolch-group-buy",
+          "note": "GB active June 1–July 1 via Divinikey. Signature Plastics DCS profile; pricing tiers unlock on final quantity. Steady mid-window activity with no new community flashpoint."
+        },
+        {
+          "name": "GMK CYL Selene",
+          "category": "keycap",
+          "direction": "down",
+          "score": 24,
+          "spark": [
+            20,
+            24,
+            27,
+            30,
+            31,
+            33,
+            37,
+            24
+          ],
+          "articleSlug": "gmk-cyl-selene-group-buy",
+          "note": "GB closed June 19 as scheduled. Post-close fade now active; community attention shifts to open GBs. Production queue wait begins — estimated Q4 2026 fulfillment."
+        },
+        {
+          "name": "GMK CYL Prussian Alert",
+          "category": "keycap",
+          "direction": "down",
+          "score": 38,
+          "spark": [
+            45,
+            52,
+            58,
+            62,
+            68,
+            74,
+            56,
+            38
+          ],
+          "articleSlug": "gmk-cyl-prussian-alert",
+          "note": "Closed June 12; post-close fade accelerating two weeks out. No shipping or production update to re-engage community. Score continues descent from W25 peak."
+        },
+        {
+          "name": "GMK CYL Ramune",
+          "category": "keycap",
+          "direction": "down",
+          "score": 18,
+          "spark": [
+            42,
+            38,
+            36,
+            34,
+            30,
+            28,
+            24,
+            18
+          ],
+          "articleSlug": "gmk-cyl-ramune-group-buy",
+          "note": "Closed June 5; post-close fade continues with no production update. No community re-engagement catalyst in W26. Score erosion steady."
+        },
+        {
+          "name": "Split / Ergo",
+          "category": "layout",
+          "direction": "up",
+          "score": 66,
+          "spark": [
+            40,
+            42,
+            44,
+            46,
+            48,
+            52,
+            55,
+            66
+          ],
+          "articleSlug": "split-ergo-cohort",
+          "note": "Keychron Orca Echo crowdfunding raised 170M yen from 6,501 backers in half a day from June 19 Gizmart launch. Biggest split keyboard funding event of 2026 so far."
+        },
+        {
+          "name": "75% Layout",
+          "category": "layout",
+          "direction": "flat",
+          "score": 43,
+          "spark": [
+            43,
+            43,
+            44,
+            44,
+            44,
+            44,
+            44,
+            43
+          ],
+          "articleSlug": "75-percent-default",
+          "note": "Steady evergreen interest; no major new 75% board launch in W26. IQUNIX EC75 Computex halo fully faded. Dominant enthusiast form factor by volume with minimal directional movement."
+        },
+        {
+          "name": "Alice layout",
+          "category": "layout",
+          "direction": "down",
+          "score": -31,
+          "spark": [
+            -20,
+            -22,
+            -23,
+            -24,
+            -25,
+            -26,
+            -28,
+            -31
+          ],
+          "articleSlug": "alice-layout-decline",
+          "note": "Continued slow bleed as ergo-curious buyers pivot to true split boards. Orca Echo launch amplifies the trend away from Alice as a compromise form factor."
+        },
+        {
+          "name": "Mode Designs",
+          "category": "vendor",
+          "direction": "flat",
+          "score": 41,
+          "spark": [
+            30,
+            32,
+            34,
+            35,
+            36,
+            38,
+            42,
+            41
+          ],
+          "articleSlug": "mode-sonnet-r2-group-buy-coverage",
+          "note": "Prologue 98% targeting Summer 2026 — prototype testing updates posted this week. Crown Mounting System commentary still circulating. No concrete new GB announcement in W26."
+        },
+        {
+          "name": "CannonKeys",
+          "category": "vendor",
+          "direction": "down",
+          "score": 22,
+          "spark": [
+            20,
+            22,
+            24,
+            25,
+            26,
+            30,
+            28,
+            22
+          ],
+          "articleSlug": "cannonkeys-nyawice-group-buy",
+          "note": "GMK Spark closed June 21 and Link closed June 15 — both major GBs now post-close. No new GB launch announced to replace the pipeline. Vendor entering a quiet window."
+        },
+        {
+          "name": "Prototypist",
+          "category": "vendor",
+          "direction": "up",
+          "score": 33,
+          "spark": [
+            12,
+            14,
+            16,
+            18,
+            20,
+            29,
+            27,
+            33
+          ],
+          "articleSlug": null,
+          "note": "Summer Sale launched June 19–28: 40% off all items with £50 spend. GMK Pandemonium and Gateron Lanes in-stock also live. Sale timing adds traffic and sentiment lift in W26."
+        },
+        {
+          "name": "Keychron",
+          "category": "brand",
+          "direction": "up",
+          "score": 72,
+          "spark": [
+            38,
+            40,
+            42,
+            44,
+            46,
+            51,
+            55,
+            72
+          ],
+          "articleSlug": "keychron-q-ultra-zmk",
+          "note": "Orca Echo crowdfunding raised 170M yen with 6,501 backers in half a day from June 19. V6 Ultra HE VIP reservation also opened June 15 with Nova Socket hybrid tech. Strongest Keychron week of 2026."
+        },
+        {
+          "name": "Wuque Studio",
+          "category": "brand",
+          "direction": "flat",
+          "score": 13,
+          "spark": [
+            16,
+            17,
+            17,
+            17,
+            18,
+            17,
+            14,
+            13
+          ],
+          "articleSlug": null,
+          "note": "Mammoth V2 and Promise V2 listed as in-development on product updates page. No new announcement or IC launched in W26. Post-anniversary-sale dip continues at a slow bleed rate."
+        },
+        {
+          "name": "Cherry (GMK parent)",
+          "category": "brand",
+          "direction": "flat",
+          "score": -27,
+          "spark": [
+            -10,
+            -14,
+            -18,
+            -22,
+            -24,
+            -28,
+            -27,
+            -27
+          ],
+          "articleSlug": "cherry-mx2a-revision",
+          "note": "GMK production backlog for Selene, Pandemonium, and Masterpiece R2 keeps brand present but passive. MX2A switch headwinds from Hall effect segment continue with no positive catalyst in W26."
+        }
+      ],
+      "updatedAt": "2026-06-22T14:00:00.000Z"
     }
   ],
   "articles": [
+    {
+      "slug": "gateron-lanes-tactile-deep-dive",
+      "frontmatter": {
+        "slug": "gateron-lanes-tactile-deep-dive",
+        "title": "Gateron Lanes: The Alps-Inspired Tactile Taking Over the Mid-Range",
+        "lede": "Gateron's Lanes draws its DNA from the Alps SKCM Orange — one of the most loved tactile mechanisms of the 1980s — and arrived in June 2026 with enough community conviction to sell out on first drop.",
+        "author": "thock",
+        "pillar": "deep-dives",
+        "tags": [
+          "gateron",
+          "tactile",
+          "switches",
+          "deep-dive"
+        ],
+        "publishedAt": "2026-06-18T00:00:00.000Z",
+        "updatedAt": "2026-06-18T00:00:00.000Z",
+        "heroImage": "/hero-art/gateron-lanes-tactile-deep-dive.svg",
+        "heroImageAlt": "Switch cross-section diagram of the Gateron Lanes tactile mechanism — exploded side view showing the stepped tactile legs on the stem, the leaf-spring contact, and the housing halves rendered in warm-grey stroke with a coral splash at the stem shoulder",
+        "featured": false,
+        "popularityScore": 0,
+        "guideSection": null,
+        "mentionedParts": [
+          {
+            "id": "gateron-oil-king",
+            "kind": "switch",
+            "slug": "gateron-oil-king"
+          },
+          {
+            "id": "boba-u4t",
+            "kind": "switch",
+            "slug": "gazzew-boba-u4t"
+          },
+          {
+            "id": "durock-t1",
+            "kind": "switch",
+            "slug": "durock-t1"
+          },
+          {
+            "id": "drop-holy-panda-x",
+            "kind": "switch",
+            "slug": "drop-holy-panda-x"
+          },
+          {
+            "id": "gazzew-boba-u4",
+            "kind": "switch",
+            "slug": "gazzew-boba-u4"
+          }
+        ]
+      },
+      "body": "\nA switch earns its heritage claim or it does not. Calling something \"Alps-inspired\" in 2026 is marketing phrasing until the mechanism is on the bench and the tactile event either delivers or deflates. The Gateron Lanes arrived in mid-June with that claim front and center — and the reaction on KeebTalk and Reddit suggests the mechanism holds up under scrutiny.\n\n## What Alps SKCM Orange was\n\nBefore the Lanes make sense, the SKCM Orange does.\n\nAlps produced its SKCM-series switches through the 1980s and early 1990s in keyboards that aged out of mainstream use but never aged out of enthusiast reverence. The Orange variant — \"SKCM\" is the Alps housing-series designation, \"Orange\" refers to the slider color — is the tactile member of that family: a self-contained mechanism that generates its bump not through a leaf that a stem leg crosses, as every MX-compatible switch does, but through a resonant slider body that physically interrupts its own travel path. The Alps tactile event is a snap, not a crossing. The slider compresses a small spring inside the housing, the spring releases, and the bump arrives as a discrete interruption that the finger feels as a clean, singular click-like event without acoustic click.\n\nThat mechanism produces a tactile character that MX-compatible switches have historically failed to replicate. The bump on an Alps SKCM Orange sits high on the travel, arrives quickly, and decays without drag — there is no bump-to-bottom-out blurring of the kind that makes a Boba U4T feel \"long\" or a Cherry MX Brown feel \"imprecise.\" The bumps are also remarkably consistent across a board, because the mechanism is a property of the slider body rather than a tolerance-dependent crossing of a metal leaf. The SKCM Orange was never cheap and it was never common, and for roughly twenty years it was the tactile standard that every MX-format designer invoked without quite reaching.\n\n## How the Lanes draw from that heritage\n\n<InlineViz\n  src=\"/article-viz/gateron-lanes-tactile-deep-dive/alps-vs-mx-mechanism.svg\"\n  alt=\"Two-panel cross-section comparison. Left panel labelled 'Alps SKCM Orange': a slider housing with a stepped internal body, a small internal spring at mid-travel, and a coral-highlighted snap point at the top of travel where the slider interrupts itself — labelled 'internal snap / no leaf crossing'. Right panel labelled 'MX-format tactile' (generic): a standard stem with angled legs approaching a horizontal metal leaf at mid-travel, with the leaf deflection shown in faint stroke — labelled 'leaf crossing / bump from contact'. The contrast is between the two fundamentally different ways each mechanism generates its tactile event.\"\n  caption=\"The Alps snap is a slider interrupting itself. The MX bump is a stem leg crossing a leaf. These are different events in the hand — the Lanes moves closer to the former without abandoning MX compatibility.\"\n  accent=\"coral\"\n/>\n\nGateron is not shipping an Alps-socket switch. The Lanes is an MX-compatible 5-pin switch — fits any MX PCB, works in any MX-compatible board — so the fundamental mechanism is still a stem leg crossing a contact leaf. That constraint is real and it matters to the comparison. The Alps mechanism cannot be reproduced exactly inside an MX housing footprint.\n\nWhat Gateron did instead is engineer the stem geometry to front-load the bump event in the way an Alps slider does. The Lanes stem carries a pronounced step on its leading legs — a sharper drop-off on the front face of the tactile element than the rounded shoulders that Boba U4T-style or Tecsee Sapphire-style stems carry. That step changes the profile of the leaf crossing: rather than a gradual build and gradual release (the D-shaped bump profile), the stem leg reaches the leaf, crosses it quickly, and releases with a snap-like immediacy. The bump arrives in a narrower window of travel, decays without a drag tail, and in the hand reads closer to the Alps \"interruption\" character than to the typical MX bump-and-return.\n\n<Source href=\"https://theremingoat.com\">ThereminGoat's review</Source> — the community catalyst that drove the first wave of sell-outs — describes the event as \"more tactile than it looks on a force curve,\" which is a precise observation: the Lanes does not have an especially tall bump on a force-displacement graph, but the sharpness of the step makes it register as more emphatic than the raw numbers would predict.\n\nThe Lanes also runs a relatively stiff spring — Gateron specs the switch at 55g actuation with a 62g bottom-out — which contributes to the perceived sharpness. A bump is more legible when the surrounding spring weight is enough that the stem doesn't coast through it.\n\n## Switch specs\n\nThe Lanes ships in a nylon bottom housing with a polycarbonate top, the same resin split that Gateron uses on the <PartReference id=\"gateron-oil-king\" />. The top housing provides clarity and a slight hardness to the upstroke; the nylon bottom handles the bottom-out, converting what would be a sharp impact into a lower, more contained register. The POM stem is a different geometry from the Oil King's linear stem — the tactile step on the leading legs is the load-bearing difference — but the material choice is consistent across Gateron's current flagship lineup.\n\nTravel is 4.0mm full stroke, 2.0mm actuation. That's the standard MX-format spec, which puts the Lanes in the same travel class as the <PartReference id=\"durock-t1\" /> and the <PartReference id=\"boba-u4t\" />, and slightly longer than the Drop Holy Panda X's 3.4mm. The 5-pin PCB mount delivers the reduced wobble that became an expectation across the mid-tier since 2022.\n\nGateron ships the Lanes lightly factory-lubed — rail contacts only, with the bump face and the leaf contact left dry. The approach mirrors the asymmetric-lube discipline that made the Drop Holy Panda X the first factory-tactile that didn't arrive needing a corrective hand-lube pass: protect the smoothness without muting the event. Out of the bag, the bump is present at full sharpness.\n\n<Callout type=\"note\" title=\"5-pin, not 3-pin\">\n  The Lanes ships as a 5-pin (PCB-mount) switch. If the board's PCB is 3-pin only, snap the two side pins off before installation — clean, no drama. Boards with plate-mount sockets will need the same treatment.\n</Callout>\n\n## Sound and feel profile\n\nThe acoustic signature that community reports consistently point to is a dry, mid-pitched snap followed by a quiet, contained bottom-out. The polycarbonate top housing contributes brightness to the upstroke; the snap of the tactile event is audible as a brief tick separate from the main bottom-out event. The nylon bottom contains the landing without muffling it. The overall character reads as \"crisp\" rather than \"deep\" — less of the thocky low-register presence of an Oil King, more of the rapid, articulated sound a builder reaches for in a polycarbonate-plate 65-percent.\n\nCompared against the reference tactiles currently in wide circulation:\n\nThe Boba U4T delivers a D-shaped bump — pronounced, plateau-like, designed to be felt unambiguously on every keystroke at every typing speed. It is louder by default, heavier in hand, and more forgiving of typing angle, because the bump is long enough that the finger always catches part of it regardless of how squarely the key is pressed. The Lanes is sharper and lighter-feeling, which means it rewards a squarer press more but delivers less of the \"hammering a bump\" sensation that U4T partisans are after.\n\nThe Durock T1 sits between those two profiles — a sharp front edge to the bump, less plateau than the U4T, with a sound character that runs slightly brighter than the U4T in a polycarbonate build. The Lanes is in the T1's weight class but with a faster decay and a cleaner acoustic separation between the bump event and the bottom-out.\n\nNeither comparison captures the Alps dimension exactly. The Lanes is doing something the T1 and the U4T are not: the bump arrives and is over before the bottom-out is a question. There is no ambiguous zone between the tactile event and the landing.\n\n## The community verdict\n\n<InlineViz\n  src=\"/article-viz/gateron-lanes-tactile-deep-dive/tracker-arc.svg\"\n  alt=\"Three-week score arc for Gateron Lanes on thock's tracker. Three data points on a horizontal time axis: W24 at score 38 labelled 'ThereminGoat review / first sell-out', W25 at score 39 labelled 'wide restock / 5 vendors', W26 at score 38 labelled 'Prototypist in-stock / steady state'. A coral line connects the three points in a shallow rise-and-plateau shape. A faint parallel dashed line below shows Gateron Oil King holding flat at 39–40 for the same three weeks, labelled in warm grey. Both lines share the same scale on the left margin.\"\n  caption=\"Lanes entered the tracker at 38 in W24 on review momentum, ticked one point higher in W25 on restock news, and settled back to 38 in W26. Steady state, not a spike-and-fade — the Oil King's long-term flat gives the comparison its scale.\"\n  accent=\"coral\"\n/>\n\nThe Gateron Lanes entered thock's tracker in W24 — the week of June 9, 2026 — at 38, the same week ThereminGoat's review circulated widely on KeebTalk and Reddit. The initial sell-out cycles drove the urgency that W24's tracker note describes as \"strongest new tactile story entering mid-June.\" That kind of review-driven demand spike is familiar terrain: a trusted reviewer calls a switch worth your attention, builders who were on the fence click through, and vendor stock runs dry inside a week.\n\nThe more interesting data is the W25 and W26 stability. Restocks landed across Prototypist, Bowl Keyboards, Delta Key Co, Keybay, and Pantheon Keys in the second week — a notably wide distribution for a switch only a few weeks into the market. The score moved one point, to 39, on restock news, then settled back to 38 in W26 as Prototypist carried units with three-day shipping and the initial urgency normalized. A switch that sells out and then holds at 38 after wide restocking is maintaining genuine demand rather than riding a single review spike. The Lanes are down slightly on the tracker heading into the third week of availability, consistent with a new switch finding its steady-state community appetite.\n\nThe ThereminGoat review resonated for two reasons visible in the community responses. First, the Alps comparison gave the switch a frame of reference that the hobby has been waiting to apply for years — \"this is what Alps-inspired actually feels like\" is a more compelling hook than a force-curve graph. Second, the review was honest about the limits of the comparison: the Lanes is not an Alps switch and doesn't pretend to be. That honesty gave the review credibility and the switch a fair landing in community discussion.\n\n## Who the Lanes are for\n\n<InlineViz\n  src=\"/article-viz/gateron-lanes-tactile-deep-dive/tactile-comparison-ladder.svg\"\n  alt=\"Horizontal comparison ladder with four rows, one per switch. Vertical axis: four labeled rows from top to bottom — Gateron Lanes, Durock T1, Gazzew Boba U4T, Drop Holy Panda X. Horizontal axis is unlabelled but represents bump weight / travel profile, left = lighter/sharper, right = heavier/longer. Each row shows a small force-curve glyph: Lanes — a coral-highlighted sharp spike near the left end of travel decaying immediately; T1 — a slightly broader spike near left-center; U4T — a flat-topped D-shape spanning center; HPX — a smooth arc that blends into the bottom-out. Labels on the right margin: Lanes 'sharp, dry, front-loaded'; T1 'sharp, slightly longer dwell'; U4T 'heavy, plateau, D-shaped'; HPX 'rounded, blends into bottom-out'.\"\n  caption=\"Four tactiles, four bump geometries. The Lanes is the only one chasing the Alps character — a front-loaded snap with immediate decay and no drag tail.\"\n  accent=\"coral\"\n/>\n\nThe Lanes reward builders who type in a controlled, even cadence rather than hunters-and-peckers who need a bump that catches the finger from any angle. The front-loaded event is sharper and more legible at full-speed typing than it is at slow deliberate key-by-key presses, which is the inverse of the U4T's behavior. A builder who has tried a U4T and found it \"too much\" — too heavy, too present, too deliberate — will likely find the Lanes more comfortable over a session.\n\nAcoustically, the switch wants a brighter build context. A polycarbonate plate in an aluminum case, or a POM plate in a polycarbonate case, gives the snap the space to read without the build absorbing it. Pair the Lanes with a dense foam-dampened steel-plate board and the tactile character gets swallowed; pair them with a thin polycarbonate tray and the snap arrives clearly on every keystroke. Gasket-mount boards in the 65-percent to 75-percent range are the natural home.\n\nThe switch is not for builders who specifically want the Boba U4T's \"hammering a bump\" feel or the Holy Panda's rounded, continuous arc. The Lanes is a precise, high-resolution tactile — satisfying to the finger that is looking for a defined event per key, less satisfying to the typist who wants the bump to be a constant presence through the stroke.\n\nAt current pricing — available through Prototypist, Bowl Keyboards, Delta Key Co, Keybay, and Pantheon Keys, with Prototypist carrying in-stock units shipping within three days as of W26 — the Lanes land in the mid-range switch tier, above the utility brackets but well below boutique territory.\n\n<Callout type=\"note\" title=\"Lube or leave it\">\n  The factory-lubed rail contacts mean the Lanes arrive smooth enough to use stock. Builders tempted to hand-lube should approach the bump face with care — even a thin pass of Krytox 205g0 across the tactile step will reduce the snap sharpness the switch is built around. If the stock feel is too dry on the rails after extended use, a careful application to the stem legs only (not the bump face) keeps the tactile event intact.\n</Callout>\n\n## Where the Lanes land on the tactile map\n\nThe tactile category entered 2026 with its conversation centered on two poles: the U4T as the heavy-hitter, the Holy Panda X as the refined rounded-bump reference. The Lanes add a third shape to that map — the sharp, front-loaded, Alps-adjacent event — and they do it without asking the builder to swap out their PCB or hunt for specialty sockets.\n\nThe Alps SKCM Orange will never be exactly reproducible inside an MX footprint. The mechanism is different enough that a 1:1 translation is not available. What the Lanes demonstrate is that the character — the clean, decisive snap that arrives and is over — can be approached through careful stem geometry, even within the MX-leaf format's constraints. The community response, the restock pattern, and the tracker arc across W24 through W26 all read as a switch that earned its comparison rather than one that borrowed a name for marketing purposes.\n\nWhat to watch: whether Gateron ships a spring-weight variant of the Lanes at 62g/70g for builders who want the same bump geometry with a heavier landing, and whether the restocking cadence across the five current vendors holds as the initial review momentum fully normalizes. A switch at 38 on the tracker after two weeks of wide availability is a switch the market is accepting at its baseline price and supplying at a sustainable rate. The Lanes look like they have a long shelf life.\n",
+      "readTime": 11,
+      "filePath": "/home/runner/work/thock/thock/apps/web/src/content/articles/gateron-lanes-tactile-deep-dive.mdx"
+    },
     {
       "slug": "keychron-quiet-takeover",
       "frontmatter": {
@@ -5668,5 +6088,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-06-21T03:14:49.561Z"
+  "generatedAt": "2026-06-22T06:02:21.107Z"
 }
