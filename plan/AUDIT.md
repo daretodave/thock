@@ -5454,7 +5454,7 @@ passes accumulate signals.)
 - rule: Rule 2
 - action: ship companion article for "Gateron Lanes", set articleSlug in relevant trend snapshot(s)
 
-### [ ] [content-gaps] [5.5] GMK CYL Pandemonium — Rule 2 tracker linkage missing
+### [x] [content-gaps] [5.5] GMK CYL Pandemonium — Rule 2 tracker linkage missing — addressed in fe145ec, closes #374
 - category: content-gaps
 - filed: 2026-06-22 by tracker-linkage-survey.mjs
 - impact: 6 (non-flat trend row "GMK CYL Pandemonium" unlinked for 14 days; no companion deep-dive)
@@ -5551,3 +5551,36 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/gateron-lanes-tactile-deep-dive.mdx
 - article-b: apps/web/src/content/articles/optical-switches-explained.mdx
 - action: add [optical-switches-explained](/article/optical-switches-explained) to gateron-lanes-tactile-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] gmk-cyl-pandemonium-group-buy ↔ gmk-cyl-greg-2-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, group-buy, abs, cherry-profile)
+- category: cross-links
+- filed: 2026-06-22 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: gmk, group-buy, abs, cherry-profile
+- article-a: apps/web/src/content/articles/gmk-cyl-pandemonium-group-buy.mdx
+- article-b: apps/web/src/content/articles/gmk-cyl-greg-2-group-buy.mdx
+- action: add [gmk-cyl-greg-2-group-buy](/article/gmk-cyl-greg-2-group-buy) to gmk-cyl-pandemonium-group-buy body, or vice versa
+
+### [ ] [cross-links] [4.5] gmk-cyl-pandemonium-group-buy ↔ gmk-cyl-selene-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, keycaps, group-buy, abs, cherry-profile)
+- category: cross-links
+- filed: 2026-06-22 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: gmk, keycaps, group-buy, abs, cherry-profile
+- article-a: apps/web/src/content/articles/gmk-cyl-pandemonium-group-buy.mdx
+- article-b: apps/web/src/content/articles/gmk-cyl-selene-group-buy.mdx
+- action: add [gmk-cyl-selene-group-buy](/article/gmk-cyl-selene-group-buy) to gmk-cyl-pandemonium-group-buy body, or vice versa
+
+### [ ] [cross-links] [4.5] gmk-cyl-pandemonium-group-buy ↔ gsk-sweet-nightmare-group-buy — no prose cross-link (same pillar, ≥2 shared tags: keycaps, group-buy)
+- category: cross-links
+- filed: 2026-06-22 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: keycaps, group-buy
+- article-a: apps/web/src/content/articles/gmk-cyl-pandemonium-group-buy.mdx
+- article-b: apps/web/src/content/articles/gsk-sweet-nightmare-group-buy.mdx
+- action: add [gsk-sweet-nightmare-group-buy](/article/gsk-sweet-nightmare-group-buy) to gmk-cyl-pandemonium-group-buy body, or vice versa

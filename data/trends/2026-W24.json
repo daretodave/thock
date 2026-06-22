@@ -7,7 +7,16 @@
       "category": "switch",
       "direction": "up",
       "score": 72,
-      "spark": [28, 35, 44, 51, 58, 63, 66, 72],
+      "spark": [
+        28,
+        35,
+        44,
+        51,
+        58,
+        63,
+        66,
+        72
+      ],
       "articleSlug": "hall-effect-mainstream",
       "note": "Corsair CLIPPER PRO MINI 60 on sale at $99 establishes a new sub-$100 HE price floor. IQUNIX EC75 Computex momentum carries into W24. Community discussion of entry-level HE boards accelerating across Reddit and KeebTalk."
     },
@@ -16,16 +25,34 @@
       "category": "switch",
       "direction": "up",
       "score": 64,
-      "spark": [14, 22, 31, 38, 44, 49, 53, 64],
+      "spark": [
+        14,
+        22,
+        31,
+        38,
+        44,
+        49,
+        53,
+        64
+      ],
       "articleSlug": "hmx-cloud-deep-dive",
-      "note": "Cloud V2 hitting retailer shelves this week — Milktooth shipping as early as June 10, iLumKB and SwitchOddities also showing in-stock. First hands-on impressions landing online; dual-material bottom housing and second-gen lubrication praised broadly."
+      "note": "Cloud V2 hitting retailer shelves this week \u2014 Milktooth shipping as early as June 10, iLumKB and SwitchOddities also showing in-stock. First hands-on impressions landing online; dual-material bottom housing and second-gen lubrication praised broadly."
     },
     {
       "name": "Gateron Oil King",
       "category": "switch",
       "direction": "flat",
       "score": 40,
-      "spark": [38, 40, 41, 42, 41, 40, 41, 40],
+      "spark": [
+        38,
+        40,
+        41,
+        42,
+        41,
+        40,
+        41,
+        40
+      ],
       "articleSlug": "gateron-oil-king-deep-dive",
       "note": "No new news in W24. Oil King V2 remains in the 2026 catalog at $0.90 per switch but drew no fresh coverage or community threads. Benchmark-status switches trend flat absent a catalyst."
     },
@@ -34,7 +61,16 @@
       "category": "switch",
       "direction": "up",
       "score": 38,
-      "spark": [0, 0, 0, 12, 22, 30, 33, 38],
+      "spark": [
+        0,
+        0,
+        0,
+        12,
+        22,
+        30,
+        33,
+        38
+      ],
       "articleSlug": null,
       "note": "ThereminGoat review of the Alps SKCM Orange-inspired Gateron Lanes tactiles circulating widely on KeebTalk and Reddit. Reported sell-out cycles driving FOMO; strongest new tactile story entering mid-June."
     },
@@ -43,7 +79,16 @@
       "category": "switch",
       "direction": "flat",
       "score": -30,
-      "spark": [-8, -14, -20, -25, -30, -32, -33, -30],
+      "spark": [
+        -8,
+        -14,
+        -20,
+        -25,
+        -30,
+        -32,
+        -33,
+        -30
+      ],
       "articleSlug": "cherry-mx2a-revision",
       "note": "No new Cherry news in W24 softens the decline slightly. Dummy switch skepticism persists but has been priced in by the community. Score nudges up 3 points from normalisation rather than any positive catalyst."
     },
@@ -52,7 +97,16 @@
       "category": "keycap",
       "direction": "up",
       "score": 74,
-      "spark": [18, 24, 32, 42, 51, 58, 63, 74],
+      "spark": [
+        18,
+        24,
+        32,
+        42,
+        51,
+        58,
+        63,
+        74
+      ],
       "articleSlug": "gmk-cyl-prussian-alert",
       "note": "Final-day deadline June 12 at 10 PM EDT driving last-call urgency across all vendor pages. Oblotzky-led GB through NovelKeys, KBDfans, Prototypist and nine other global vendors. Score peaks this week; will fall sharply post-closure."
     },
@@ -61,25 +115,52 @@
       "category": "keycap",
       "direction": "down",
       "score": 28,
-      "spark": [30, 33, 36, 39, 42, 43, 43, 28],
+      "spark": [
+        30,
+        33,
+        36,
+        39,
+        42,
+        43,
+        43,
+        28
+      ],
       "articleSlug": "gmk-cyl-ramune-group-buy",
-      "note": "GB closed June 5, now entering silent production queue with Q3–Q4 2026 ship estimates. Community attention shifts away post-closure; sharp score drop reflects the GB exit dynamic common to GMK sets."
+      "note": "GB closed June 5, now entering silent production queue with Q3\u2013Q4 2026 ship estimates. Community attention shifts away post-closure; sharp score drop reflects the GB exit dynamic common to GMK sets."
     },
     {
       "name": "DCS Dolch",
       "category": "keycap",
       "direction": "up",
       "score": 35,
-      "spark": [0, 0, 4, 10, 18, 24, 29, 35],
+      "spark": [
+        0,
+        0,
+        4,
+        10,
+        18,
+        24,
+        29,
+        35
+      ],
       "articleSlug": "divinikey-dcs-dolch-group-buy",
-      "note": "Active GB June 1–July 1 at Divinikey. Passing its midpoint with steady daily order flow. Classic Dolch colorway in DCS profile by Signature Plastics continues to attract SA profile converts and retro-colorway fans."
+      "note": "Active GB June 1\u2013July 1 at Divinikey. Passing its midpoint with steady daily order flow. Classic Dolch colorway in DCS profile by Signature Plastics continues to attract SA profile converts and retro-colorway fans."
     },
     {
       "name": "GMK CYL Selene",
       "category": "keycap",
       "direction": "flat",
       "score": 33,
-      "spark": [8, 12, 18, 24, 28, 30, 31, 33],
+      "spark": [
+        8,
+        12,
+        18,
+        24,
+        28,
+        30,
+        31,
+        33
+      ],
       "articleSlug": "gmk-cyl-selene-group-buy",
       "note": "Active GB through June 19. Special-effects rainbow glitter plastic maintains steady community attention; US-only availability through Mechanical Keyboards caps addressable market. Closing-week push expected next week."
     },
@@ -88,16 +169,34 @@
       "category": "keycap",
       "direction": "up",
       "score": 29,
-      "spark": [0, 0, 0, 0, 0, 0, 18, 29],
-      "articleSlug": null,
-      "note": "New tracker entrant. Berserk eclipse-themed translucent red legend GB runs June 1–July 1; DeltaKeyCo-designed set available through eight regional vendors including Prototypist. Enthusiast interest building into week two of the run."
+      "spark": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        18,
+        29
+      ],
+      "articleSlug": "gmk-cyl-pandemonium-group-buy",
+      "note": "New tracker entrant. Berserk eclipse-themed translucent red legend GB runs June 1\u2013July 1; DeltaKeyCo-designed set available through eight regional vendors including Prototypist. Enthusiast interest building into week two of the run."
     },
     {
       "name": "75% Layout",
       "category": "layout",
       "direction": "flat",
       "score": 44,
-      "spark": [28, 32, 35, 38, 40, 42, 43, 44],
+      "spark": [
+        28,
+        32,
+        35,
+        38,
+        40,
+        42,
+        43,
+        44
+      ],
       "articleSlug": "75-percent-default",
       "note": "IQUNIX EC75 Computex halo effect continues into W24. Corsair CLIPPER PRO MINI 60 counters with a 60% narrative, but 75% remains the dominant launch form factor. Score holds near prior week with minimal fresh catalyst."
     },
@@ -106,16 +205,34 @@
       "category": "layout",
       "direction": "up",
       "score": 52,
-      "spark": [18, 22, 28, 32, 37, 40, 42, 52],
+      "spark": [
+        18,
+        22,
+        28,
+        32,
+        37,
+        40,
+        42,
+        52
+      ],
       "articleSlug": "split-ergo-cohort",
-      "note": "Keychron Orca Echo shown at Computex Taipei and Tokyo Tenki meetup — 49-key split with trackball and wheel. CannonKeys Link GB closes June 15, driving final-week urgency. Two simultaneous ergo narratives spiking combined category interest."
+      "note": "Keychron Orca Echo shown at Computex Taipei and Tokyo Tenki meetup \u2014 49-key split with trackball and wheel. CannonKeys Link GB closes June 15, driving final-week urgency. Two simultaneous ergo narratives spiking combined category interest."
     },
     {
       "name": "Alice layout",
       "category": "layout",
       "direction": "flat",
       "score": -26,
-      "spark": [-8, -12, -16, -20, -24, -26, -27, -26],
+      "spark": [
+        -8,
+        -12,
+        -16,
+        -20,
+        -24,
+        -26,
+        -27,
+        -26
+      ],
       "articleSlug": "alice-layout-decline",
       "note": "No new IC or GB activity. Slight score recovery from -27 as ergo enthusiasm from Orca Echo and CannonKeys Link spills sideways into Alice awareness, but no direct Alice catalyst this week."
     },
@@ -124,7 +241,16 @@
       "category": "vendor",
       "direction": "flat",
       "score": 38,
-      "spark": [14, 18, 24, 28, 32, 36, 40, 38],
+      "spark": [
+        14,
+        18,
+        24,
+        28,
+        32,
+        36,
+        40,
+        38
+      ],
       "articleSlug": "mode-sonnet-r2-group-buy-coverage",
       "note": "Encore 2026 pre-orders remain open with July 2026 ship target but no fresh announcement this week. Now a permanent SKU rather than a limited-run, reducing urgency-driven excitement. Score eases slightly from W23 peak."
     },
@@ -133,7 +259,16 @@
       "category": "vendor",
       "direction": "up",
       "score": 30,
-      "spark": [8, 10, 14, 16, 18, 20, 22, 30],
+      "spark": [
+        8,
+        10,
+        14,
+        16,
+        18,
+        20,
+        22,
+        30
+      ],
       "articleSlug": "cannonkeys-nyawice-group-buy",
       "note": "Link split ergo GB entering final 7-day push before June 15 close. Open-source PCB pledge at 300 units sold is motivating community buy-in. Score jumps on closing-week urgency; also hosting GMK Spark through June 21."
     },
@@ -142,7 +277,16 @@
       "category": "vendor",
       "direction": "up",
       "score": 29,
-      "spark": [10, 12, 14, 16, 18, 20, 24, 29],
+      "spark": [
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        24,
+        29
+      ],
       "articleSlug": null,
       "note": "UK vendor active across GMK Prussian Alert (closing June 12), GMK Pandemonium (live through July 1), and GMK Selene (live through June 19). Three concurrent active GBs plus Prussian Alert final-call traffic driving sustained vendor visibility."
     },
@@ -151,7 +295,16 @@
       "category": "brand",
       "direction": "up",
       "score": 51,
-      "spark": [28, 32, 36, 38, 40, 42, 44, 51],
+      "spark": [
+        28,
+        32,
+        36,
+        38,
+        40,
+        42,
+        44,
+        51
+      ],
       "articleSlug": "keychron-q-ultra-zmk",
       "note": "Keychron Orca Echo world premiere at Computex Taipei and Tokyo Tenki meetup generates major split-keyboard coverage. V10 Ultra shipping normally. Crowdfunding opens June 19 on Gizmodo, keeping Keychron in the news cycle all of W24."
     },
@@ -160,7 +313,16 @@
       "category": "brand",
       "direction": "flat",
       "score": 17,
-      "spark": [16, 16, 17, 18, 18, 17, 17, 17],
+      "spark": [
+        16,
+        16,
+        17,
+        18,
+        18,
+        17,
+        17,
+        17
+      ],
       "articleSlug": null,
       "note": "No announcements or shipping updates in W24. WS Morandi continues to receive positive community discussion from ThereminGoat's earlier review. Brand maintains steady in-stock catalog absent any new product news."
     },
@@ -169,9 +331,18 @@
       "category": "brand",
       "direction": "flat",
       "score": -27,
-      "spark": [-6, -10, -14, -18, -22, -24, -28, -27],
+      "spark": [
+        -6,
+        -10,
+        -14,
+        -18,
+        -22,
+        -24,
+        -28,
+        -27
+      ],
       "articleSlug": "cherry-mx2a-revision",
-      "note": "No new brand-level Cherry news in W24. GMK production timelines remain a persistent community frustration; Prussian Alert buyers facing typical 12–18 month waits. Slight score recovery from -28 as no fresh negative news this week."
+      "note": "No new brand-level Cherry news in W24. GMK production timelines remain a persistent community frustration; Prussian Alert buyers facing typical 12\u201318 month waits. Slight score recovery from -28 as no fresh negative news this week."
     }
   ],
   "updatedAt": "2026-06-08T14:00:00.000Z"
