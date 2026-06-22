@@ -1,0 +1,19 @@
+{
+  "slug": "gateron-lanes",
+  "name": "Gateron Lanes",
+  "vendorSlug": "kbdfans",
+  "type": "tactile",
+  "housingTop": "pc",
+  "housingBottom": "nylon",
+  "stem": "pom",
+  "springGrams": {
+    "actuation": 55,
+    "bottomOut": 62
+  },
+  "travelMm": 4.0,
+  "factoryLubed": true,
+  "releasedAt": "2026-06-09",
+  "status": "in-production",
+  "description": "Alps-inspired mid-weight tactile whose pronounced POM stem step front-loads the bump event, producing a sharp snap with quick decay rather than the plateau or drawn-out crossing of conventional MX tactiles. Polycarbonate top over nylon bottom; factory-lubed on rail contacts only, leaving the bump face dry to preserve tactile sharpness. 5-pin PCB mount.",
+  "updatedAt": "2026-06-22T00:00:00.000Z"
+}
