@@ -5443,3 +5443,23 @@ passes accumulate signals.)
 - suggested fix: add it('browse-all-parts link points to /parts catalog page') to KeycapSetQuiz.test.tsx using getByTestId('keycap-quiz-browse-all-parts-link'); add test to parts.spec.ts mirroring lines 36–45 for /quiz/keycap-set.
 - issue: [mirror-failed: 2026-06-21T00:00:00Z]
 - addressed in: 46c29d7
+
+### [ ] [content-gaps] [5.5] Gateron Lanes — Rule 2 tracker linkage missing
+- category: content-gaps
+- filed: 2026-06-22 by tracker-linkage-survey.mjs
+- impact: 6 (non-flat trend row "Gateron Lanes" unlinked for 14 days; no companion deep-dive)
+- ease: 9 (one article fills it; topic already editorially curated in tracker)
+- score: 5.5 (impact × ease / 10, rounded)
+- first-seen: 2026-W24
+- rule: Rule 2
+- action: ship companion article for "Gateron Lanes", set articleSlug in relevant trend snapshot(s)
+
+### [ ] [content-gaps] [5.5] GMK CYL Pandemonium — Rule 2 tracker linkage missing
+- category: content-gaps
+- filed: 2026-06-22 by tracker-linkage-survey.mjs
+- impact: 6 (non-flat trend row "GMK CYL Pandemonium" unlinked for 14 days; no companion deep-dive)
+- ease: 9 (one article fills it; topic already editorially curated in tracker)
+- score: 5.5 (impact × ease / 10, rounded)
+- first-seen: 2026-W24
+- rule: Rule 2
+- action: ship companion article for "GMK CYL Pandemonium", set articleSlug in relevant trend snapshot(s)
