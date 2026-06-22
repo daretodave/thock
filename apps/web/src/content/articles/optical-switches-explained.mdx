@@ -12,7 +12,10 @@ heroImage: /hero-art/optical-switches-explained.svg
 heroImageAlt: "Diagram of an optical switch cross-section showing the LED beam and phototransistor sensing pair"
 featured: false
 popularityScore: 30
-mentionedParts: []
+mentionedParts:
+  - id: gateron-lanes
+    kind: switch
+    slug: gateron-lanes
 ---
 
 An optical switch does not close a circuit. It interrupts a beam. That is the architectural fact this article is built around, and it is the same shape of fact as the one that opens [the Hall-effect piece](/article/magnetic-switches-deep-dive) and [the Topre piece](/article/topre-electrocapacitive-deep-dive) — a sensing lineage defined by what it measures rather than by what it touches. A Cherry-lineage switch is a binary electrical event: two metal leaves make contact, the controller sees the closure, a key registers. An optical switch is a photonic event: a beam of light passes across the interior of the switch housing, a stem descends and blocks the beam, a phototransistor on the far side detects the interruption, and the key registers. There is no metal-to-metal contact. There is no bounce. There is a beam that either arrives or does not.

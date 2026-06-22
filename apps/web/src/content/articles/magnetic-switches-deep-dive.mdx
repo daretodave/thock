@@ -10,6 +10,10 @@ publishedAt: '2026-04-14T14:00:00.000Z'
 updatedAt: '2026-06-12T00:00:00.000Z'
 heroImage: /hero-art/magnetic-switches-deep-dive.svg
 heroImageAlt: "Cross-section of a single Hall-effect key position — a stem with a small embedded magnet descending toward a Hall sensor pad on the PCB, drawn in a single warm-grey stroke with coral magnetic field lines bending and tightening as the magnet approaches the sensor."
+mentionedParts:
+  - id: gateron-lanes
+    kind: switch
+    slug: gateron-lanes
 ---
 
 A magnetic keyboard switch does not close a circuit. That is the architectural fact the rest of the category unwinds from, and it is the same shape of fact as the one that opens [the Topre piece](/article/topre-electrocapacitive-deep-dive) — a sensing lineage defined by what it measures rather than by what it touches. An MX-lineage switch is a binary electrical event: two metal leaves meet, the controller sees the new contact, the key registers. A Hall-effect switch is an analog measurement: a small magnet rides the stem down past a Hall sensor on the PCB, the sensor reports a voltage that tracks the magnet's distance, and somewhere along that voltage curve the firmware decides the key is pressed. There is no make. There is no break. There is a continuous signal that crosses a threshold the firmware owns.
