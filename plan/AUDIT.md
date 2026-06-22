@@ -84,6 +84,15 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [data] [3.6] data/AUDIT.md had 3 stale unchecked rows for shipped entities — addressed in a688b2e
+- category: data
+- impact: 4 (stale open rows for wooting vendor, keychron vendor, keychron-q1-he board would mislead future loop ticks into treating already-shipped records as pending data work)
+- ease: 9 (three [x] markers + commit hashes)
+- score: 3.6 (impact × ease / 10)
+- filed: 2026-06-22 by cloud /iterate audit
+- observation: data/AUDIT.md rows for [7.5] Missing vendor: Wooting, [7.0] Missing board: Keychron Q1 HE, and [5.5] Missing vendor: Keychron were never marked [x] despite all three records having been shipped in 8083bda (wooting) and 30c8620 (keychron + keychron-q1-he). data/BACKLOG.md already had all three as [x], and the data files exist in data/vendors/ and data/boards/.
+- addressed in: a688b2e
+
 ### [x] [affordance] [4.2] /part/[kind] index pages missing quiz and compare tool affordances — addressed in this commit
 - category: affordance
 - impact: 6 (3 kind-index pages — /part/switch, /part/keycap-set, /part/board — list all catalog records but provide no entry-point CTAs to the quiz or compare tools; readers browsing the catalog have no path to "Find your switch →" or "Compare switches →" without going via /tools)
