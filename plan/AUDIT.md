@@ -84,6 +84,17 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [data] [4.8] tracker articleSlugs for "Hall Effect / Rapid Trigger" and "Keychron" stale in W24–W26 — addressed in 6039eca
+- category: data
+- impact: 6 (tracker's two highest-scoring rows — Hall Effect / Rapid Trigger at score 82 and Keychron at score 72 in W26 — link to general overview articles rather than the dedicated trend-analysis pieces published in June 2026; readers following these rows from /trends/tracker miss the most specific editorial coverage)
+- ease: 8 (update articleSlug in 3 snapshot files for Hall Effect / Rapid Trigger: rapid-trigger-gaming-crossover published 2026-06-12 became available in W24; update 2 snapshot files for Keychron: keychron-quiet-takeover published 2026-06-15 became available in W25)
+- score: 4.8 (impact × ease / 10)
+- filed: 2026-06-22 by cloud /iterate audit
+- observation: data/trends/2026-W{24,25,26}.json — "Hall Effect / Rapid Trigger" articleSlug is hall-effect-mainstream in all three; rapid-trigger-gaming-crossover (published 2026-06-12, W24) is the dedicated trend analysis of the gaming-crossover dimension of rapid trigger / HE adoption. data/trends/2026-W{25,26}.json — "Keychron" articleSlug is keychron-q-ultra-zmk; keychron-quiet-takeover (published 2026-06-15, W25) is the dedicated brand-trajectory trend article. The existing links are not wrong but are less specific; the tracker is a navigation affordance and these rows carry the highest scores in the tracker.
+- evidence: grep "Hall Effect\|Keychron" data/trends/2026-W{24,25,26}.json — all show hall-effect-mainstream / keychron-q-ultra-zmk; grep rapid-trigger-gaming-crossover data/trends/ → 0 matches; grep keychron-quiet-takeover data/trends/ → 0 matches.
+- suggested fix: update data/trends/2026-W24.json "Hall Effect / Rapid Trigger" articleSlug → rapid-trigger-gaming-crossover; update data/trends/2026-W25.json both rows; update data/trends/2026-W26.json both rows.
+- issue: [mirror-failed: 2026-06-22T00:00:00Z]
+
 ### [x] [data] [3.6] data/AUDIT.md had 3 stale unchecked rows for shipped entities — addressed in a688b2e
 - category: data
 - impact: 4 (stale open rows for wooting vendor, keychron vendor, keychron-q1-he board would mislead future loop ticks into treating already-shipped records as pending data work)
