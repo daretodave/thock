@@ -5616,3 +5616,68 @@ passes accumulate signals.)
 - observation: Article gateron-lanes-tactile-deep-dive was shipped on 2026-06-18 (commit 2f59b43) to satisfy the Rule 2 content requirement, and the original AUDIT row was ticked. But the articleSlug field in data/trends/2026-W24.json, /W25.json, /W26.json remained null. tracker-linkage-survey.mjs detects unlinked non-flat rows by reading the snapshot data, not AUDIT.md — so the violation re-fired this tick because the data files were never updated.
 - evidence: data/trends/2026-W24.json, W25.json, W26.json all had "Gateron Lanes" rows with articleSlug: null; tracker-linkage-survey.mjs reported "MISSING LINK [score 5.5] Gateron Lanes first-seen: 2026-W24 (2026-06-08, 14d ago)"; after edits survey returned clean.
 - issue: [mirror-failed: 2026-06-22T14:56:03Z]
+
+### [x] [mentionedParts] [3.6] cherry-mx2a-revision — 1 catalog entity mentioned in prose but absent from mentionedParts
+- category: mentionedParts
+- filed: 2026-06-22 by article-parts-check.mjs corpus scan
+- impact: 4 (missing mentionedParts entries break the /part/[kind]/[slug] "mentioned in" rail)
+- ease: 9 (frontmatter edit — no code or schema change needed)
+- score: 3.6 (impact × ease / 10)
+- file: apps/web/src/content/articles/cherry-mx2a-revision.mdx
+- entities:
+  - Gateron Lanes (switch `gateron-lanes`) — prose line 75
+- action: add each entity to the article's mentionedParts frontmatter with the correct slug and kind
+- addressed: 0234adf
+- issue: [mirror-failed: 2026-06-22T00:00:00Z]
+
+### [x] [mentionedParts] [3.6] gateron-lanes-tactile-deep-dive — 1 catalog entity mentioned in prose but absent from mentionedParts
+- category: mentionedParts
+- filed: 2026-06-22 by article-parts-check.mjs corpus scan
+- impact: 4 (missing mentionedParts entries break the /part/[kind]/[slug] "mentioned in" rail)
+- ease: 9 (frontmatter edit — no code or schema change needed)
+- score: 3.6 (impact × ease / 10)
+- file: apps/web/src/content/articles/gateron-lanes-tactile-deep-dive.mdx
+- entities:
+  - Gateron Lanes (switch `gateron-lanes`) — prose line 33
+- action: add each entity to the article's mentionedParts frontmatter with the correct slug and kind
+- addressed: 0234adf
+- issue: [mirror-failed: 2026-06-22T00:00:00Z]
+
+### [x] [mentionedParts] [3.6] hmx-cloud-deep-dive — 1 catalog entity mentioned in prose but absent from mentionedParts
+- category: mentionedParts
+- filed: 2026-06-22 by article-parts-check.mjs corpus scan
+- impact: 4 (missing mentionedParts entries break the /part/[kind]/[slug] "mentioned in" rail)
+- ease: 9 (frontmatter edit — no code or schema change needed)
+- score: 3.6 (impact × ease / 10)
+- file: apps/web/src/content/articles/hmx-cloud-deep-dive.mdx
+- entities:
+  - Gateron Lanes (switch `gateron-lanes`) — prose line 101
+- action: add each entity to the article's mentionedParts frontmatter with the correct slug and kind
+- addressed: 0234adf
+- issue: [mirror-failed: 2026-06-22T00:00:00Z]
+
+### [x] [mentionedParts] [3.6] magnetic-switches-deep-dive — 1 catalog entity mentioned in prose but absent from mentionedParts
+- category: mentionedParts
+- filed: 2026-06-22 by article-parts-check.mjs corpus scan
+- impact: 4 (missing mentionedParts entries break the /part/[kind]/[slug] "mentioned in" rail)
+- ease: 9 (frontmatter edit — no code or schema change needed)
+- score: 3.6 (impact × ease / 10)
+- file: apps/web/src/content/articles/magnetic-switches-deep-dive.mdx
+- entities:
+  - Gateron Lanes (switch `gateron-lanes`) — prose line 84
+- action: add each entity to the article's mentionedParts frontmatter with the correct slug and kind
+- addressed: 0234adf
+- issue: [mirror-failed: 2026-06-22T00:00:00Z]
+
+### [x] [mentionedParts] [3.6] optical-switches-explained — 1 catalog entity mentioned in prose but absent from mentionedParts
+- category: mentionedParts
+- filed: 2026-06-22 by article-parts-check.mjs corpus scan
+- impact: 4 (missing mentionedParts entries break the /part/[kind]/[slug] "mentioned in" rail)
+- ease: 9 (frontmatter edit — no code or schema change needed)
+- score: 3.6 (impact × ease / 10)
+- file: apps/web/src/content/articles/optical-switches-explained.mdx
+- entities:
+  - Gateron Lanes (switch `gateron-lanes`) — prose line 91
+- action: add each entity to the article's mentionedParts frontmatter with the correct slug and kind
+- addressed: 0234adf
+- issue: [mirror-failed: 2026-06-22T00:00:00Z]
