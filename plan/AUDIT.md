@@ -5606,3 +5606,13 @@ passes accumulate signals.)
 - action: add [gsk-sweet-nightmare-group-buy](/article/gsk-sweet-nightmare-group-buy) to gmk-cyl-pandemonium-group-buy body, or vice versa
 - addressed: 8671e81
 - issue: [mirror-failed: 2026-06-22T12:00:00Z]
+
+### [x] [data] [5.4] tracker Rule 2 — Gateron Lanes articleSlug null in W24/W25/W26 despite companion article existing — addressed in 33504f9
+- category: data
+- filed: 2026-06-22 by /iterate audit
+- impact: 6 (tracker rows for Gateron Lanes in W24/W25/W26 showed null articleSlug; tracker-linkage-survey.mjs re-fired Rule 2 violation each tick; /trends/tracker rows for Gateron Lanes had no navigation path to companion article; Rule 2 window opened 2026-06-22 for W24)
+- ease: 9 (three JSON field edits — articleSlug: null → "gateron-lanes-tactile-deep-dive" in W24/W25/W26)
+- score: 5.4 (impact × ease / 10)
+- observation: Article gateron-lanes-tactile-deep-dive was shipped on 2026-06-18 (commit 2f59b43) to satisfy the Rule 2 content requirement, and the original AUDIT row was ticked. But the articleSlug field in data/trends/2026-W24.json, /W25.json, /W26.json remained null. tracker-linkage-survey.mjs detects unlinked non-flat rows by reading the snapshot data, not AUDIT.md — so the violation re-fired this tick because the data files were never updated.
+- evidence: data/trends/2026-W24.json, W25.json, W26.json all had "Gateron Lanes" rows with articleSlug: null; tracker-linkage-survey.mjs reported "MISSING LINK [score 5.5] Gateron Lanes first-seen: 2026-W24 (2026-06-08, 14d ago)"; after edits survey returned clean.
+- issue: [mirror-failed: 2026-06-22T14:56:03Z]
