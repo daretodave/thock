@@ -1,0 +1,187 @@
+{
+  "isoWeek": "2026-W26",
+  "publishedAt": "2026-06-22T00:00:00.000Z",
+  "rows": [
+    {
+      "name": "Hall Effect / Rapid Trigger",
+      "category": "switch",
+      "direction": "up",
+      "score": 82,
+      "spark": [55, 59, 62, 65, 68, 72, 76, 82],
+      "articleSlug": "hall-effect-mainstream",
+      "note": "Keychron V6 Ultra HE VIP reservation opened June 15 with Nova Socket hybrid-switch tech. Hall effect now treated as baseline expectation on new gaming board launches per W26 roundups."
+    },
+    {
+      "name": "HMX Cloud V2",
+      "category": "switch",
+      "direction": "flat",
+      "score": 61,
+      "spark": [38, 44, 50, 55, 60, 64, 62, 61],
+      "articleSlug": "hmx-cloud-deep-dive",
+      "note": "Broadly in stock across iLumKB, Milktooth, LumeKeebs, and Eloquent Clicks. No new review catalyst this week; shelf-arrival plateau continues into W26."
+    },
+    {
+      "name": "Gateron Oil King",
+      "category": "switch",
+      "direction": "flat",
+      "score": 39,
+      "spark": [41, 40, 40, 41, 40, 40, 40, 39],
+      "articleSlug": "gateron-oil-king-deep-dive",
+      "note": "Community benchmark linear at $0.90 per switch. No new reviews or restocks in W26. Steady evergreen discussion with no catalyst to move the needle."
+    },
+    {
+      "name": "Gateron Lanes",
+      "category": "switch",
+      "direction": "flat",
+      "score": 38,
+      "spark": [24, 30, 34, 36, 38, 38, 39, 38],
+      "articleSlug": null,
+      "note": "Prototypist carries in-stock units shipping within 3 days. ThereminGoat review lift from W25 fading to steady state; no fresh review catalyst in W26."
+    },
+    {
+      "name": "Cherry MX2A",
+      "category": "switch",
+      "direction": "down",
+      "score": -36,
+      "spark": [-24, -26, -27, -28, -29, -30, -32, -36],
+      "articleSlug": "cherry-mx2a-revision",
+      "note": "Slow community sentiment bleed continues as Hall effect alternatives dominate new board specs. No MX2A product launch or review to arrest the decline in W26."
+    },
+    {
+      "name": "GMK CYL Masterpiece R2",
+      "category": "keycap",
+      "direction": "up",
+      "score": 46,
+      "spark": [0, 0, 0, 0, 18, 30, 38, 46],
+      "articleSlug": null,
+      "note": "GB closes June 26 — final-day urgency peak via NovelKeys, KBDfans, Oblotzky, Prototypist, Geon Works. New Katakana legends on nav cluster cited as key upgrade over R1."
+    },
+    {
+      "name": "GMK CYL Pandemonium",
+      "category": "keycap",
+      "direction": "flat",
+      "score": 33,
+      "spark": [0, 0, 0, 14, 22, 29, 32, 33],
+      "articleSlug": null,
+      "note": "GB active June 1–July 1 via DeltaKeyCo, Prototypist, Bowl Keyboards, and others. Mid-window plateau; Berserk eclipse-themed translucent set maintaining steady interest."
+    },
+    {
+      "name": "DCS Dolch",
+      "category": "keycap",
+      "direction": "flat",
+      "score": 34,
+      "spark": [0, 0, 10, 20, 28, 35, 35, 34],
+      "articleSlug": "divinikey-dcs-dolch-group-buy",
+      "note": "GB active June 1–July 1 via Divinikey. Signature Plastics DCS profile; pricing tiers unlock on final quantity. Steady mid-window activity with no new community flashpoint."
+    },
+    {
+      "name": "GMK CYL Selene",
+      "category": "keycap",
+      "direction": "down",
+      "score": 24,
+      "spark": [20, 24, 27, 30, 31, 33, 37, 24],
+      "articleSlug": "gmk-cyl-selene-group-buy",
+      "note": "GB closed June 19 as scheduled. Post-close fade now active; community attention shifts to open GBs. Production queue wait begins — estimated Q4 2026 fulfillment."
+    },
+    {
+      "name": "GMK CYL Prussian Alert",
+      "category": "keycap",
+      "direction": "down",
+      "score": 38,
+      "spark": [45, 52, 58, 62, 68, 74, 56, 38],
+      "articleSlug": "gmk-cyl-prussian-alert",
+      "note": "Closed June 12; post-close fade accelerating two weeks out. No shipping or production update to re-engage community. Score continues descent from W25 peak."
+    },
+    {
+      "name": "GMK CYL Ramune",
+      "category": "keycap",
+      "direction": "down",
+      "score": 18,
+      "spark": [42, 38, 36, 34, 30, 28, 24, 18],
+      "articleSlug": "gmk-cyl-ramune-group-buy",
+      "note": "Closed June 5; post-close fade continues with no production update. No community re-engagement catalyst in W26. Score erosion steady."
+    },
+    {
+      "name": "Split / Ergo",
+      "category": "layout",
+      "direction": "up",
+      "score": 66,
+      "spark": [40, 42, 44, 46, 48, 52, 55, 66],
+      "articleSlug": "split-ergo-cohort",
+      "note": "Keychron Orca Echo crowdfunding raised 170M yen from 6,501 backers in half a day from June 19 Gizmart launch. Biggest split keyboard funding event of 2026 so far."
+    },
+    {
+      "name": "75% Layout",
+      "category": "layout",
+      "direction": "flat",
+      "score": 43,
+      "spark": [43, 43, 44, 44, 44, 44, 44, 43],
+      "articleSlug": "75-percent-default",
+      "note": "Steady evergreen interest; no major new 75% board launch in W26. IQUNIX EC75 Computex halo fully faded. Dominant enthusiast form factor by volume with minimal directional movement."
+    },
+    {
+      "name": "Alice layout",
+      "category": "layout",
+      "direction": "down",
+      "score": -31,
+      "spark": [-20, -22, -23, -24, -25, -26, -28, -31],
+      "articleSlug": "alice-layout-decline",
+      "note": "Continued slow bleed as ergo-curious buyers pivot to true split boards. Orca Echo launch amplifies the trend away from Alice as a compromise form factor."
+    },
+    {
+      "name": "Mode Designs",
+      "category": "vendor",
+      "direction": "flat",
+      "score": 41,
+      "spark": [30, 32, 34, 35, 36, 38, 42, 41],
+      "articleSlug": "mode-sonnet-r2-group-buy-coverage",
+      "note": "Prologue 98% targeting Summer 2026 — prototype testing updates posted this week. Crown Mounting System commentary still circulating. No concrete new GB announcement in W26."
+    },
+    {
+      "name": "CannonKeys",
+      "category": "vendor",
+      "direction": "down",
+      "score": 22,
+      "spark": [20, 22, 24, 25, 26, 30, 28, 22],
+      "articleSlug": "cannonkeys-nyawice-group-buy",
+      "note": "GMK Spark closed June 21 and Link closed June 15 — both major GBs now post-close. No new GB launch announced to replace the pipeline. Vendor entering a quiet window."
+    },
+    {
+      "name": "Prototypist",
+      "category": "vendor",
+      "direction": "up",
+      "score": 33,
+      "spark": [12, 14, 16, 18, 20, 29, 27, 33],
+      "articleSlug": null,
+      "note": "Summer Sale launched June 19–28: 40% off all items with £50 spend. GMK Pandemonium and Gateron Lanes in-stock also live. Sale timing adds traffic and sentiment lift in W26."
+    },
+    {
+      "name": "Keychron",
+      "category": "brand",
+      "direction": "up",
+      "score": 72,
+      "spark": [38, 40, 42, 44, 46, 51, 55, 72],
+      "articleSlug": "keychron-q-ultra-zmk",
+      "note": "Orca Echo crowdfunding raised 170M yen with 6,501 backers in half a day from June 19. V6 Ultra HE VIP reservation also opened June 15 with Nova Socket hybrid tech. Strongest Keychron week of 2026."
+    },
+    {
+      "name": "Wuque Studio",
+      "category": "brand",
+      "direction": "flat",
+      "score": 13,
+      "spark": [16, 17, 17, 17, 18, 17, 14, 13],
+      "articleSlug": null,
+      "note": "Mammoth V2 and Promise V2 listed as in-development on product updates page. No new announcement or IC launched in W26. Post-anniversary-sale dip continues at a slow bleed rate."
+    },
+    {
+      "name": "Cherry (GMK parent)",
+      "category": "brand",
+      "direction": "flat",
+      "score": -27,
+      "spark": [-10, -14, -18, -22, -24, -28, -27, -27],
+      "articleSlug": "cherry-mx2a-revision",
+      "note": "GMK production backlog for Selene, Pandemonium, and Masterpiece R2 keeps brand present but passive. MX2A switch headwinds from Hall effect segment continue with no positive catalyst in W26."
+    }
+  ],
+  "updatedAt": "2026-06-22T14:00:00.000Z"
+}
