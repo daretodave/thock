@@ -5725,7 +5725,7 @@ passes accumulate signals.)
 - issue: [mirror-failed: 2026-06-23T00:00:00Z]
 - addressed in: 6c700e2
 
-### [ ] [cross-links] [4.5] gmk-cyl-masterpiece-r2-group-buy ↔ divinikey-dcs-dolch-group-buy — no prose cross-link (same pillar, ≥2 shared tags: keycaps, group-buy, abs)
+### [x] [cross-links] [4.5] gmk-cyl-masterpiece-r2-group-buy ↔ divinikey-dcs-dolch-group-buy — no prose cross-link (same pillar, ≥2 shared tags: keycaps, group-buy, abs)
 - category: cross-links
 - filed: 2026-06-23 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -5735,8 +5735,9 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/gmk-cyl-masterpiece-r2-group-buy.mdx
 - article-b: apps/web/src/content/articles/divinikey-dcs-dolch-group-buy.mdx
 - action: add [divinikey-dcs-dolch-group-buy](/article/divinikey-dcs-dolch-group-buy) to gmk-cyl-masterpiece-r2-group-buy body, or vice versa
+- addressed in: e165bac
 
-### [ ] [cross-links] [4.5] gmk-cyl-masterpiece-r2-group-buy ↔ gmk-cyl-greg-2-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, group-buy, abs, cherry-profile)
+### [x] [cross-links] [4.5] gmk-cyl-masterpiece-r2-group-buy ↔ gmk-cyl-greg-2-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, group-buy, abs, cherry-profile)
 - category: cross-links
 - filed: 2026-06-23 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -5746,8 +5747,9 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/gmk-cyl-masterpiece-r2-group-buy.mdx
 - article-b: apps/web/src/content/articles/gmk-cyl-greg-2-group-buy.mdx
 - action: add [gmk-cyl-greg-2-group-buy](/article/gmk-cyl-greg-2-group-buy) to gmk-cyl-masterpiece-r2-group-buy body, or vice versa
+- addressed in: e165bac
 
-### [ ] [cross-links] [4.5] gmk-cyl-masterpiece-r2-group-buy ↔ gmk-cyl-ishtar-r2-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, group-buy, abs, cherry-profile)
+### [x] [cross-links] [4.5] gmk-cyl-masterpiece-r2-group-buy ↔ gmk-cyl-ishtar-r2-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, group-buy, abs, cherry-profile)
 - category: cross-links
 - filed: 2026-06-23 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -5757,8 +5759,9 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/gmk-cyl-masterpiece-r2-group-buy.mdx
 - article-b: apps/web/src/content/articles/gmk-cyl-ishtar-r2-group-buy.mdx
 - action: add [gmk-cyl-ishtar-r2-group-buy](/article/gmk-cyl-ishtar-r2-group-buy) to gmk-cyl-masterpiece-r2-group-buy body, or vice versa
+- addressed in: e165bac
 
-### [ ] [cross-links] [4.5] gmk-cyl-masterpiece-r2-group-buy ↔ gmk-cyl-king-of-the-seas-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, group-buy, abs, cherry-profile)
+### [x] [cross-links] [4.5] gmk-cyl-masterpiece-r2-group-buy ↔ gmk-cyl-king-of-the-seas-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, group-buy, abs, cherry-profile)
 - category: cross-links
 - filed: 2026-06-23 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -5768,8 +5771,9 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/gmk-cyl-masterpiece-r2-group-buy.mdx
 - article-b: apps/web/src/content/articles/gmk-cyl-king-of-the-seas-group-buy.mdx
 - action: add [gmk-cyl-king-of-the-seas-group-buy](/article/gmk-cyl-king-of-the-seas-group-buy) to gmk-cyl-masterpiece-r2-group-buy body, or vice versa
+- addressed in: e165bac
 
-### [ ] [cross-links] [4.5] gmk-cyl-masterpiece-r2-group-buy ↔ gmk-cyl-pandemonium-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, keycaps, group-buy, abs, cherry-profile)
+### [x] [cross-links] [4.5] gmk-cyl-masterpiece-r2-group-buy ↔ gmk-cyl-pandemonium-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, keycaps, group-buy, abs, cherry-profile)
 - category: cross-links
 - filed: 2026-06-23 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -5779,8 +5783,9 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/gmk-cyl-masterpiece-r2-group-buy.mdx
 - article-b: apps/web/src/content/articles/gmk-cyl-pandemonium-group-buy.mdx
 - action: add [gmk-cyl-pandemonium-group-buy](/article/gmk-cyl-pandemonium-group-buy) to gmk-cyl-masterpiece-r2-group-buy body, or vice versa
+- addressed in: e165bac
 
-### [ ] [cross-links] [4.5] gmk-cyl-masterpiece-r2-group-buy ↔ gmk-cyl-prussian-alert — no prose cross-link (same pillar, ≥2 shared tags: gmk, keycaps, group-buy, cherry-profile)
+### [x] [cross-links] [4.5] gmk-cyl-masterpiece-r2-group-buy ↔ gmk-cyl-prussian-alert — no prose cross-link (same pillar, ≥2 shared tags: gmk, keycaps, group-buy, cherry-profile)
 - category: cross-links
 - filed: 2026-06-23 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -5790,8 +5795,9 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/gmk-cyl-masterpiece-r2-group-buy.mdx
 - article-b: apps/web/src/content/articles/gmk-cyl-prussian-alert.mdx
 - action: add [gmk-cyl-prussian-alert](/article/gmk-cyl-prussian-alert) to gmk-cyl-masterpiece-r2-group-buy body, or vice versa
+- addressed in: e165bac
 
-### [ ] [cross-links] [4.5] gmk-cyl-masterpiece-r2-group-buy ↔ gmk-cyl-ramune-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, group-buy, abs, cherry-profile)
+### [x] [cross-links] [4.5] gmk-cyl-masterpiece-r2-group-buy ↔ gmk-cyl-ramune-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, group-buy, abs, cherry-profile)
 - category: cross-links
 - filed: 2026-06-23 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -5801,8 +5807,9 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/gmk-cyl-masterpiece-r2-group-buy.mdx
 - article-b: apps/web/src/content/articles/gmk-cyl-ramune-group-buy.mdx
 - action: add [gmk-cyl-ramune-group-buy](/article/gmk-cyl-ramune-group-buy) to gmk-cyl-masterpiece-r2-group-buy body, or vice versa
+- addressed in: e165bac
 
-### [ ] [cross-links] [4.5] gmk-cyl-masterpiece-r2-group-buy ↔ gmk-cyl-selene-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, keycaps, group-buy, abs, cherry-profile)
+### [x] [cross-links] [4.5] gmk-cyl-masterpiece-r2-group-buy ↔ gmk-cyl-selene-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, keycaps, group-buy, abs, cherry-profile)
 - category: cross-links
 - filed: 2026-06-23 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -5812,8 +5819,9 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/gmk-cyl-masterpiece-r2-group-buy.mdx
 - article-b: apps/web/src/content/articles/gmk-cyl-selene-group-buy.mdx
 - action: add [gmk-cyl-selene-group-buy](/article/gmk-cyl-selene-group-buy) to gmk-cyl-masterpiece-r2-group-buy body, or vice versa
+- addressed in: e165bac
 
-### [ ] [cross-links] [4.5] gmk-cyl-masterpiece-r2-group-buy ↔ gsk-sweet-nightmare-group-buy — no prose cross-link (same pillar, ≥2 shared tags: keycaps, group-buy)
+### [x] [cross-links] [4.5] gmk-cyl-masterpiece-r2-group-buy ↔ gsk-sweet-nightmare-group-buy — no prose cross-link (same pillar, ≥2 shared tags: keycaps, group-buy)
 - category: cross-links
 - filed: 2026-06-23 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -5823,3 +5831,4 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/gmk-cyl-masterpiece-r2-group-buy.mdx
 - article-b: apps/web/src/content/articles/gsk-sweet-nightmare-group-buy.mdx
 - action: add [gsk-sweet-nightmare-group-buy](/article/gsk-sweet-nightmare-group-buy) to gmk-cyl-masterpiece-r2-group-buy body, or vice versa
+- addressed in: e165bac
