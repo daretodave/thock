@@ -5701,3 +5701,15 @@ passes accumulate signals.)
 - action: add each entity to the article's mentionedParts frontmatter with the correct slug and kind
 - addressed: 0234adf
 - issue: [mirror-failed: 2026-06-22T00:00:00Z]
+
+### [x] [data] [4.5] tracker Prototypist rows W24 + W26 show direction 'up' with no articleSlug — breaks reader navigation on live tracker
+- category: data
+- impact: 5 (tracker's Prototypist vendor row showed trending-up in the current W26 live view and W24 historical view with no article link; readers navigating via tracker had no editorial context to follow)
+- ease: 9 (update 2 JSON fields in trend snapshot files; no schema change)
+- score: 4.5 (impact × ease / 10)
+- filed: 2026-06-23 by cloud /iterate audit
+- observation: data/trends/2026-W24.json and 2026-W26.json — "Prototypist" rows had direction "up" with articleSlug null. W19–W23 had linked vendor-first-customs; W24–W26 dropped the link when snapshots were regenerated. Meanwhile, two articles mentioning Prototypist prominently now exist: gmk-cyl-selene-group-buy (published 2026-05-15, 2 mentions) and gmk-cyl-pandemonium-group-buy (published 2026-06-20, 4 mentions).
+- evidence: grep "Prototypist" data/trends/2026-W2{4,5,6}.json → all show articleSlug null. tracker-linkage-survey.mjs doesn't flag because Prototypist had a link in W19–W23.
+- suggested fix: W24 Prototypist articleSlug → gmk-cyl-selene-group-buy; W26 Prototypist articleSlug → gmk-cyl-pandemonium-group-buy.
+- issue: [mirror-failed: 2026-06-23T00:00:00Z]
+- addressed in: 8e5f104
