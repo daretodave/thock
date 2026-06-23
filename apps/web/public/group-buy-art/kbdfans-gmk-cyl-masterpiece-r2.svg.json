@@ -1,0 +1,28 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-23T00:00:00Z",
+  "commit": "667b98bbd1fe5655deb6af50c33dd99f24fc16cd",
+  "kind": "hero-art",
+  "source": "apps/web/public/group-buy-art/kbdfans-gmk-cyl-selene.svg (visual language reference)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": [],
+  "outputs": [
+    "apps/web/public/group-buy-art/kbdfans-gmk-cyl-masterpiece-r2.svg"
+  ],
+  "warnings": [],
+  "asset": "/group-buy-art/kbdfans-gmk-cyl-masterpiece-r2.svg",
+  "type": "group-buy-hero",
+  "entity": "kbdfans-gmk-cyl-masterpiece-r2",
+  "subject": "keycap-cluster",
+  "kind_detail": "group-buy-hero-art",
+  "target": "apps/web/public/group-buy-art/kbdfans-gmk-cyl-masterpiece-r2.svg",
+  "size": [1200, 750],
+  "splash_color": "oklch(0.40 0.18 265)",
+  "accent_color": "oklch(0.80 0.135 75)",
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "composition": "Six CYL-profile keycaps in a two-row editorial cluster: back row — stroke-only outline cap (left), deep blue alpha with bronze legend wash (centre, stepped 20px forward), deep blue alpha (right); front row — deep blue alpha (left), deep blue focal alpha with strong bronze legend wash (centre), stroke-only outline cap (right). Diagonal offset between rows mimics a freshly-tipped keycap tray. Splash ellipse in deep blue at 0.11 alpha behind the cluster. Bronze theme dot at upper-right margin. Deep blue accent pip at lower-right. Four filled blue caps carry oklch(0.40 0.18 265) body; inset dish surfaces step to oklch(0.45 0.18 265); CYL scoop arcs in warm near-white oklch(0.92 0.025 85) so they read on the dark blue. Bronze legend-face wash on centre alpha (back-middle) and focal alpha (front-centre) at 0.14 and 0.22 alpha respectively, evoking Masterpiece R2's warm bronze / off-white legend treatment.",
+  "notes": "GMK CYL Masterpiece R2 deep-blue / warm-bronze theme. Primary splash oklch(0.40 0.18 265) approximates RAL 240 40 40 in OKLCH perceptual space — rich saturated blue, distinct from navy (lower chroma) and purple (higher hue). Two flanking caps rendered as stroke-only outlines for compositional balance without crowding the focal blue.",
+  "generated_at": "2026-06-23T00:00:00Z",
+  "commit_at_render": "667b98bbd1fe5655deb6af50c33dd99f24fc16cd"
+}

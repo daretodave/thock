@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1200 750"
+     preserveAspectRatio="xMidYMid meet"
+     fill="none"
+     stroke="oklch(0.78 0.005 90)"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     role="img"
+     aria-label="thock group-buy card art for KBDfans GMK CYL Masterpiece R2 — six Cherry-profile keycaps in row-sculpt order, deep blue bodies with warm bronze legend-face accents on the centre alpha caps">
+  <title>thock group-buy hero — GMK CYL Masterpiece R2 (KBDfans), six CYL-profile keycaps, deep blue bodies, warm bronze accent on centre alpha legend faces</title>
+
+  <!--
+    Composition: six CYL-profile keycaps in a two-row editorial cluster.
+    Back row: three 1u caps, lightly staggered (the middle cap stepped 20px
+    forward to break the rigid grid and suggest a freshly-tipped tray).
+    Front row: three 1u caps, offset half a cap-width to the right of the
+    back row, producing the characteristic diamond-offset layout used across
+    the GMK CYL family in this hero-art set.
+
+    GMK CYL Masterpiece R2 colorway:
+      Deep blue body    oklch(0.40 0.18 265)   — rich saturated blue, RAL 240 40 40
+                                                  Not navy, not purple; sits between
+                                                  royal and cobalt in perceptual hue.
+      Dish surface      oklch(0.45 0.18 265)   — slightly lighter, so the CYL scoop reads
+      Warm bronze accent oklch(0.80 0.135 75)  — same as the family ornamental accent;
+                                                  used here as a low-alpha legend-face
+                                                  wash on the two centre caps, evoking
+                                                  the off-white/bronze legend colorway
+                                                  noted on Masterpiece R2 alphas.
+      Warm-grey stroke  oklch(0.78 0.005 90)   — the invariant family default
+
+    Focal cap: front-row centre. Full deep-blue fill, bronze legend wash.
+    The four non-focal blue caps carry the same body fill at slightly lower
+    alpha so they read as coherent blue without competing with the focal.
+    Two flanking stroke-only outline caps (back-left, front-right) provide
+    compositional breathing room.
+
+    Splash ellipse: deep blue at 0.11 alpha — same technique as prussian-alert
+    and king-of-the-seas siblings.
+
+    Bronze theme dot: upper-right margin, family ornamental anchor.
+    Accent pip: lower-right of cluster, deep blue echoing focal.
+  -->
+
+  <!-- ============================================================
+       SPLASH WASH: diffuse deep-blue ellipse behind the cluster.
+  ============================================================ -->
+  <ellipse cx="598" cy="398" rx="510" ry="218"
+           fill="oklch(0.40 0.18 265 / 0.11)" stroke="none"/>
+
+  <!-- ============================================================
+       BRONZE THEME DOT: upper-right margin ornamental anchor.
+       oklch(0.80 0.135 75) — invariant across the family.
+  ============================================================ -->
+  <circle cx="1092" cy="88" r="9"
+          fill="oklch(0.80 0.135 75 / 0.90)"
+          stroke="oklch(0.80 0.135 75)"/>
+  <circle cx="1092" cy="88" r="17"
+          stroke="oklch(0.80 0.135 75)"
+          stroke-opacity="0.35"
+          fill="none"/>
+
+  <!-- ============================================================
+       KEYCAP SILHOUETTE (CYL-profile, near-top-down with a
+       hint of 3/4 to read the cylindrical scoop):
+
+         Outer footprint:  176 × 168 px, rounded corners via Q curves.
+         Inset top surface: ~18 px inset on all sides.
+         Scoop: two concentric arcs curving inward — upper arc convex
+                upward, lower arc convex downward — reads the CYL dish.
+
+       Same path vocabulary as the selene / prussian-alert /
+       king-of-the-seas / greg-2 / ramune sibling files.
+  ============================================================ -->
+
+  <!-- ===== ROW 1 (back row) — three 1u caps ===== -->
+
+  <!-- Back-left — stroke-only outline cap (breathing room, no fill competition) -->
+  <g transform="translate(250 228)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          stroke-opacity="0.55"/>
+    <path d="M 38 90 Q 88 76 138 90" stroke-opacity="0.40"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke-opacity="0.26"/>
+  </g>
+
+  <!-- Back-middle — deep blue alpha cap, stepped 20px forward to break the grid.
+       Bronze legend-face wash on the inset surface — centre alpha convention. -->
+  <g transform="translate(478 208)">
+    <!-- outer cap body: deep blue fill -->
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"
+          fill="oklch(0.40 0.18 265 / 0.88)" stroke="oklch(0.40 0.18 265)"/>
+    <!-- inset top surface: lighter blue so the scoop reads on the dark body -->
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          fill="oklch(0.45 0.18 265 / 0.80)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55"/>
+    <!-- bronze legend-face wash: warm bronze low-alpha over the top surface,
+         evoking the off-white / bronze legends on Masterpiece R2 alphas -->
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          fill="oklch(0.80 0.135 75 / 0.14)" stroke="none"/>
+    <!-- CYL scoop arcs in warm near-white so they read on the blue body -->
+    <path d="M 38 90 Q 88 74 138 90"
+          stroke="oklch(0.92 0.025 85)" stroke-opacity="0.65"/>
+    <path d="M 38 102 Q 88 90 138 102"
+          stroke="oklch(0.92 0.025 85)" stroke-opacity="0.42"/>
+  </g>
+
+  <!-- Back-right — deep blue alpha cap, same treatment as back-middle
+       but without the extra bronze pop (flanking, not focal) -->
+  <g transform="translate(706 228)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"
+          fill="oklch(0.40 0.18 265 / 0.82)" stroke="oklch(0.40 0.18 265)"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          fill="oklch(0.45 0.18 265 / 0.72)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.52"/>
+    <path d="M 38 90 Q 88 74 138 90"
+          stroke="oklch(0.92 0.025 85)" stroke-opacity="0.55"/>
+    <path d="M 38 102 Q 88 90 138 102"
+          stroke="oklch(0.92 0.025 85)" stroke-opacity="0.35"/>
+  </g>
+
+  <!-- ===== ROW 2 (front row, offset half a cap-width right) — three 1u caps ===== -->
+
+  <!-- Front-left — deep blue alpha cap (flanking) -->
+  <g transform="translate(362 428)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"
+          fill="oklch(0.40 0.18 265 / 0.82)" stroke="oklch(0.40 0.18 265)"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          fill="oklch(0.45 0.18 265 / 0.72)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.52"/>
+    <path d="M 38 90 Q 88 74 138 90"
+          stroke="oklch(0.92 0.025 85)" stroke-opacity="0.55"/>
+    <path d="M 38 102 Q 88 90 138 102"
+          stroke="oklch(0.92 0.025 85)" stroke-opacity="0.35"/>
+  </g>
+
+  <!-- Front-centre — FOCAL CAP: full deep blue + strong bronze legend wash.
+       This is the visual anchor — maximum saturation, maximum bronze accent. -->
+  <g transform="translate(590 428)">
+    <!-- full deep blue cap body -->
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"
+          fill="oklch(0.40 0.18 265 / 0.94)" stroke="oklch(0.40 0.18 265)"/>
+    <!-- inset top surface: lighter blue -->
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          fill="oklch(0.45 0.18 265 / 0.85)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55"/>
+    <!-- strong bronze legend-face wash on the focal cap — the Masterpiece legend
+         treatment, more emphatic than the flanking caps -->
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          fill="oklch(0.80 0.135 75 / 0.22)" stroke="none"/>
+    <!-- CYL scoop arcs in warm off-white — visible on the blue body -->
+    <path d="M 38 90 Q 88 74 138 90"
+          stroke="oklch(0.92 0.025 85)" stroke-opacity="0.72"/>
+    <path d="M 38 102 Q 88 90 138 102"
+          stroke="oklch(0.92 0.025 85)" stroke-opacity="0.50"/>
+  </g>
+
+  <!-- Front-right — stroke-only outline cap (mirrors back-left; visual balance) -->
+  <g transform="translate(818 428)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          stroke-opacity="0.55"/>
+    <path d="M 38 90 Q 88 76 138 90" stroke-opacity="0.40"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke-opacity="0.26"/>
+  </g>
+
+  <!-- ============================================================
+       ACCENT PIP: small deep-blue dot below the cluster,
+       right of centre — mirrors the family pip convention.
+  ============================================================ -->
+  <circle cx="784" cy="630" r="6"
+          fill="oklch(0.40 0.18 265 / 0.92)"
+          stroke="oklch(0.40 0.18 265)"/>
+  <circle cx="784" cy="630" r="13"
+          stroke="oklch(0.40 0.18 265)"
+          stroke-opacity="0.38"
+          fill="none"/>
+</svg>
