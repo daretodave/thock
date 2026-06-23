@@ -5713,3 +5713,113 @@ passes accumulate signals.)
 - suggested fix: W24 Prototypist articleSlug → gmk-cyl-selene-group-buy; W26 Prototypist articleSlug → gmk-cyl-pandemonium-group-buy.
 - issue: [mirror-failed: 2026-06-23T00:00:00Z]
 - addressed in: 8e5f104
+
+### [x] [content-gaps] [3.5] proactive Rule 2: GMK CYL Masterpiece R2 — W25+W26 tracker rows unlinked (deadline June 29) — addressed in 6c700e2
+- category: content-gaps
+- impact: 7 (trending up keycap GB closing June 26; W25+W26 tracker rows unlinked; Rule 2 14-day deadline on W25 = June 29)
+- ease: 5 (new article via content-curator)
+- score: 3.5 (impact × ease / 10)
+- filed: 2026-06-23 by /iterate audit
+- observation: GMK CYL Masterpiece R2 appeared in two consecutive tracker snapshots (W25 score=38 direction=up, W26 score=46 direction=up) with no linked article. W25 publishedAt 2026-06-15 → Rule 2 deadline June 29. GB closes June 26 — proactive article prevents the violation and provides reader value while the buy is still open.
+- evidence: data/trends/2026-W25.json + 2026-W26.json — articleSlug null in both; tracker-linkage-survey found no violations (within 14-day window); GB active at KBDfans, Prototypist, Geon Works, NovelKeys, Oblotzky.
+- issue: [mirror-failed: 2026-06-23T00:00:00Z]
+- addressed in: 6c700e2
+
+### [ ] [cross-links] [4.5] gmk-cyl-masterpiece-r2-group-buy ↔ divinikey-dcs-dolch-group-buy — no prose cross-link (same pillar, ≥2 shared tags: keycaps, group-buy, abs)
+- category: cross-links
+- filed: 2026-06-23 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: keycaps, group-buy, abs
+- article-a: apps/web/src/content/articles/gmk-cyl-masterpiece-r2-group-buy.mdx
+- article-b: apps/web/src/content/articles/divinikey-dcs-dolch-group-buy.mdx
+- action: add [divinikey-dcs-dolch-group-buy](/article/divinikey-dcs-dolch-group-buy) to gmk-cyl-masterpiece-r2-group-buy body, or vice versa
+
+### [ ] [cross-links] [4.5] gmk-cyl-masterpiece-r2-group-buy ↔ gmk-cyl-greg-2-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, group-buy, abs, cherry-profile)
+- category: cross-links
+- filed: 2026-06-23 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: gmk, group-buy, abs, cherry-profile
+- article-a: apps/web/src/content/articles/gmk-cyl-masterpiece-r2-group-buy.mdx
+- article-b: apps/web/src/content/articles/gmk-cyl-greg-2-group-buy.mdx
+- action: add [gmk-cyl-greg-2-group-buy](/article/gmk-cyl-greg-2-group-buy) to gmk-cyl-masterpiece-r2-group-buy body, or vice versa
+
+### [ ] [cross-links] [4.5] gmk-cyl-masterpiece-r2-group-buy ↔ gmk-cyl-ishtar-r2-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, group-buy, abs, cherry-profile)
+- category: cross-links
+- filed: 2026-06-23 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: gmk, group-buy, abs, cherry-profile
+- article-a: apps/web/src/content/articles/gmk-cyl-masterpiece-r2-group-buy.mdx
+- article-b: apps/web/src/content/articles/gmk-cyl-ishtar-r2-group-buy.mdx
+- action: add [gmk-cyl-ishtar-r2-group-buy](/article/gmk-cyl-ishtar-r2-group-buy) to gmk-cyl-masterpiece-r2-group-buy body, or vice versa
+
+### [ ] [cross-links] [4.5] gmk-cyl-masterpiece-r2-group-buy ↔ gmk-cyl-king-of-the-seas-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, group-buy, abs, cherry-profile)
+- category: cross-links
+- filed: 2026-06-23 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: gmk, group-buy, abs, cherry-profile
+- article-a: apps/web/src/content/articles/gmk-cyl-masterpiece-r2-group-buy.mdx
+- article-b: apps/web/src/content/articles/gmk-cyl-king-of-the-seas-group-buy.mdx
+- action: add [gmk-cyl-king-of-the-seas-group-buy](/article/gmk-cyl-king-of-the-seas-group-buy) to gmk-cyl-masterpiece-r2-group-buy body, or vice versa
+
+### [ ] [cross-links] [4.5] gmk-cyl-masterpiece-r2-group-buy ↔ gmk-cyl-pandemonium-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, keycaps, group-buy, abs, cherry-profile)
+- category: cross-links
+- filed: 2026-06-23 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: gmk, keycaps, group-buy, abs, cherry-profile
+- article-a: apps/web/src/content/articles/gmk-cyl-masterpiece-r2-group-buy.mdx
+- article-b: apps/web/src/content/articles/gmk-cyl-pandemonium-group-buy.mdx
+- action: add [gmk-cyl-pandemonium-group-buy](/article/gmk-cyl-pandemonium-group-buy) to gmk-cyl-masterpiece-r2-group-buy body, or vice versa
+
+### [ ] [cross-links] [4.5] gmk-cyl-masterpiece-r2-group-buy ↔ gmk-cyl-prussian-alert — no prose cross-link (same pillar, ≥2 shared tags: gmk, keycaps, group-buy, cherry-profile)
+- category: cross-links
+- filed: 2026-06-23 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: gmk, keycaps, group-buy, cherry-profile
+- article-a: apps/web/src/content/articles/gmk-cyl-masterpiece-r2-group-buy.mdx
+- article-b: apps/web/src/content/articles/gmk-cyl-prussian-alert.mdx
+- action: add [gmk-cyl-prussian-alert](/article/gmk-cyl-prussian-alert) to gmk-cyl-masterpiece-r2-group-buy body, or vice versa
+
+### [ ] [cross-links] [4.5] gmk-cyl-masterpiece-r2-group-buy ↔ gmk-cyl-ramune-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, group-buy, abs, cherry-profile)
+- category: cross-links
+- filed: 2026-06-23 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: gmk, group-buy, abs, cherry-profile
+- article-a: apps/web/src/content/articles/gmk-cyl-masterpiece-r2-group-buy.mdx
+- article-b: apps/web/src/content/articles/gmk-cyl-ramune-group-buy.mdx
+- action: add [gmk-cyl-ramune-group-buy](/article/gmk-cyl-ramune-group-buy) to gmk-cyl-masterpiece-r2-group-buy body, or vice versa
+
+### [ ] [cross-links] [4.5] gmk-cyl-masterpiece-r2-group-buy ↔ gmk-cyl-selene-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, keycaps, group-buy, abs, cherry-profile)
+- category: cross-links
+- filed: 2026-06-23 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: gmk, keycaps, group-buy, abs, cherry-profile
+- article-a: apps/web/src/content/articles/gmk-cyl-masterpiece-r2-group-buy.mdx
+- article-b: apps/web/src/content/articles/gmk-cyl-selene-group-buy.mdx
+- action: add [gmk-cyl-selene-group-buy](/article/gmk-cyl-selene-group-buy) to gmk-cyl-masterpiece-r2-group-buy body, or vice versa
+
+### [ ] [cross-links] [4.5] gmk-cyl-masterpiece-r2-group-buy ↔ gsk-sweet-nightmare-group-buy — no prose cross-link (same pillar, ≥2 shared tags: keycaps, group-buy)
+- category: cross-links
+- filed: 2026-06-23 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: keycaps, group-buy
+- article-a: apps/web/src/content/articles/gmk-cyl-masterpiece-r2-group-buy.mdx
+- article-b: apps/web/src/content/articles/gsk-sweet-nightmare-group-buy.mdx
+- action: add [gsk-sweet-nightmare-group-buy](/article/gsk-sweet-nightmare-group-buy) to gmk-cyl-masterpiece-r2-group-buy body, or vice versa
