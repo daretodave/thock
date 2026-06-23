@@ -84,6 +84,17 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [data] [4.2] GMK CYL Pandemonium missing group-buy data record — addressed in 59d8511
+- category: data
+- impact: 7 (live buy not appearing on /group-buys or home widget; closes July 1 — time-critical; companion article gmk-cyl-pandemonium-group-buy.mdx exists but data record absent)
+- ease: 6 (add DeltaKeyCo vendor record first, then group-buy JSON + brander hero SVG)
+- score: 4.2 (impact × ease / 10)
+- filed: 2026-06-23 by cloud /iterate audit
+- observation: gmk-cyl-pandemonium-group-buy.mdx (published 2026-06-20) exists and has a W26 tracker entry, but data/vendors/ has no DeltaKeyCo entry and data/group-buys/ has no record for the buy. Pandemonium was documented as "pending next tick" in the prior [4.9] audit row (which addressed Masterpiece R2 only). DeltaKeyCo is the primary vendor and design house for the buy, distinct from KBDfans which ran all prior GMK CYL buys.
+- evidence: ls data/vendors/ | grep delta → empty; ls data/group-buys/ | grep pandemonium → empty; article confirmed live buy June 1–July 1 via DeltaKeyCo (FR), Prototypist (APAC), Bowl Keyboards (UK), and 5 regional partners.
+- suggested fix: add data/vendors/deltakeyco.json + data/group-buys/deltakeyco-gmk-cyl-pandemonium.json + brander hero SVG at apps/web/public/group-buy-art/deltakeyco-gmk-cyl-pandemonium.svg
+- issue: [mirror-failed: 2026-06-23T00:00:00Z]
+
 ### [x] [data] [4.9] gmk-cyl-masterpiece-r2 and gmk-cyl-pandemonium missing group-buy records — masterpiece-r2 addressed in 5b37114
 - category: data
 - impact: 7 (both are live group buys not appearing on /group-buys, /group-buys/past, or home widget; Masterpiece R2 closes June 26 — time-critical)
