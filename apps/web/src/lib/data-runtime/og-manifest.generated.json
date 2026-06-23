@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "slug": "gmk-cyl-masterpiece-r2-group-buy",
+      "readTime": 7,
+      "frontmatter": {
+        "title": "GMK CYL Masterpiece R2 closes June 26 — what the deep-blue revival gets right",
+        "lede": "Energieschleuder's six-year-later return to Japanese craftsmanship aesthetics has been climbing the thock tracker all window — scoring 46 in W26 with the buy open through June 26.",
+        "pillar": "news",
+        "author": "thock editorial"
+      }
+    },
+    {
       "slug": "gmk-cyl-pandemonium-group-buy",
       "readTime": 9,
       "frontmatter": {
@@ -1137,5 +1147,5 @@
       "description": "China-based design studio and vendor known for in-house boards (Mammoth, Ikki68, Promise) and partnered group buys, sold direct from shop.wuquestudio.com with regional proxies."
     }
   ],
-  "generatedAt": "2026-06-23T00:43:51.125Z"
+  "generatedAt": "2026-06-23T01:59:23.946Z"
 }

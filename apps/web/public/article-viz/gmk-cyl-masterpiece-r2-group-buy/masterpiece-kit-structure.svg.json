@@ -1,0 +1,25 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-21T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "gmk-cyl-masterpiece-r2-group-buy",
+  "article_pillar": "news",
+  "section_anchor": "kitting-and-pricing-what-changed-from-r1",
+  "brief_summary": "Three-card kit layout. Left card (coral accent) shows Origin TKL Base at $99 USD with Katakana alphas and nav cluster. Centre card (muted) shows Roman Base at $125 USD with Latin alphas. Right card (muted) shows Precision Kit at $25 USD for Katakana numpad. A bottom note bar states that R1's all-in base was $129 and R2's entry price is $30 lower.",
+  "target": "apps/web/public/article-viz/gmk-cyl-masterpiece-r2-group-buy/masterpiece-kit-structure.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "gmk-cyl-masterpiece-r2-group-buy.mdx § 'Kitting and pricing' — 'The Origin TKL base ($99) leads with Katakana legends on the alpha and navigation rows.'",
+    "gmk-cyl-masterpiece-r2-group-buy.mdx § 'Kitting and pricing' — 'The Roman Base ($125) covers buyers who want the colorway without the Katakana alphas.'",
+    "gmk-cyl-masterpiece-r2-group-buy.mdx § 'Kitting and pricing' — 'numpad coverage is handled by the separate Precision Kit at $25.'",
+    "gmk-cyl-masterpiece-r2-group-buy.mdx § 'Kitting and pricing' — 'R1 ran a single base kit at $129 USD with numpad included.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gmk-cyl-masterpiece-r2-group-buy/masterpiece-kit-structure.svg"],
+  "warnings": []
+}

@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-21T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "gmk-cyl-masterpiece-r2-group-buy",
+  "article_pillar": "news",
+  "section_anchor": "tracker-outlook-what-happens-at-close",
+  "brief_summary": "Two-bar chart showing Masterpiece R2's consecutive thock tracker score gains: W25 at 38 (direction up, lighter coral bar) and W26 at 46 (direction up, fuller coral bar). A dashed arrow connects the bars to show directional movement. A callout box right of the W26 bar labels it 'closing week — buy closes June 26, 2026.' Y-axis runs 0–60 in increments of 10.",
+  "target": "apps/web/public/article-viz/gmk-cyl-masterpiece-r2-group-buy/tracker-arc.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "gmk-cyl-masterpiece-r2-group-buy.mdx § lede — 'scoring 46 in W26 with the buy open through June 26'",
+    "gmk-cyl-masterpiece-r2-group-buy.mdx § 'Tracker outlook' — 'Masterpiece R2 has been posting consecutive direction=up scores on the thock tracker — 38 in W25, 46 in W26.'",
+    "gmk-cyl-masterpiece-r2-group-buy.mdx § 'Tracker outlook' — 'The W26 score represents the closing-week demand peak that most well-seeded GMK group buys reach as the window compresses.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gmk-cyl-masterpiece-r2-group-buy/tracker-arc.svg"],
+  "warnings": []
+}

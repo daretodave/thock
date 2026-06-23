@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>GMK CYL Masterpiece R2 kit structure — Origin TKL base $99, Roman Base $125, Precision Kit numpad add-on $25; entry price down $30 from R1's $129 all-in base</title>
+
+  <!-- Title -->
+  <text x="600" y="50" font-family="Newsreader, 'Iowan Old Style', Georgia, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.90">Masterpiece R2 — kit structure and pricing</text>
+
+  <!-- ── Card 1: Origin TKL Base ──────────────────────────────────────────── -->
+  <rect x="60" y="80" width="330" height="210" rx="6" fill="oklch(0.68 0.165 28)" fill-opacity="0.09" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.65" stroke-width="1.5"/>
+  <!-- Header band -->
+  <rect x="60" y="80" width="330" height="48" rx="6 6 0 0" fill="oklch(0.68 0.165 28)" fill-opacity="0.22" stroke="none"/>
+  <text x="225" y="111" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="14" font-weight="600" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">Origin TKL Base</text>
+  <!-- Price -->
+  <text x="225" y="158" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="32" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.90">$99</text>
+  <text x="225" y="176" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="11" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.60">USD</text>
+  <!-- Descriptor lines -->
+  <text x="225" y="208" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.80">Katakana alphas + nav cluster</text>
+  <text x="225" y="226" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.80">ANSI TKL coverage</text>
+  <text x="225" y="270" font-family="Newsreader, 'Iowan Old Style', Georgia, serif" font-size="12" font-style="italic" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.70">core thematic kit</text>
+
+  <!-- ── Card 2: Roman Base ───────────────────────────────────────────────── -->
+  <rect x="435" y="80" width="330" height="210" rx="6" fill="oklch(0.78 0.005 90)" fill-opacity="0.05" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.40" stroke-width="1.5"/>
+  <!-- Header band -->
+  <rect x="435" y="80" width="330" height="48" rx="6 6 0 0" fill="oklch(0.78 0.005 90)" fill-opacity="0.10" stroke="none"/>
+  <text x="600" y="111" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="14" font-weight="600" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.80">Roman Base</text>
+  <!-- Price -->
+  <text x="600" y="158" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="32" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">$125</text>
+  <text x="600" y="176" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">USD</text>
+  <!-- Descriptor lines -->
+  <text x="600" y="208" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.70">Latin alphas</text>
+  <text x="600" y="226" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.70">broader layout coverage</text>
+  <text x="600" y="270" font-family="Newsreader, 'Iowan Old Style', Georgia, serif" font-size="12" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.52">colorway without Kana</text>
+
+  <!-- ── Card 3: Precision Kit ────────────────────────────────────────────── -->
+  <rect x="810" y="80" width="330" height="210" rx="6" fill="oklch(0.78 0.005 90)" fill-opacity="0.05" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.40" stroke-width="1.5"/>
+  <!-- Header band -->
+  <rect x="810" y="80" width="330" height="48" rx="6 6 0 0" fill="oklch(0.78 0.005 90)" fill-opacity="0.10" stroke="none"/>
+  <text x="975" y="111" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="14" font-weight="600" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.80">Precision Kit</text>
+  <!-- Price -->
+  <text x="975" y="158" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="32" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">$25</text>
+  <text x="975" y="176" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">USD add-on</text>
+  <!-- Descriptor lines -->
+  <text x="975" y="208" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.70">Katakana numpad</text>
+  <text x="975" y="226" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.70">sold separately</text>
+  <text x="975" y="270" font-family="Newsreader, 'Iowan Old Style', Georgia, serif" font-size="12" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.52">was bundled in R1 base</text>
+
+  <!-- ── Bottom note bar ──────────────────────────────────────────────────── -->
+  <rect x="60" y="322" width="1080" height="44" rx="4" fill="oklch(0.68 0.165 28)" fill-opacity="0.07" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.30" stroke-width="1"/>
+  <text x="600" y="340" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">R1 base was $129 all-in (numpad included) · R2 Origin TKL entry is $30 lower at $99</text>
+  <text x="600" y="356" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">Deskmat (Wave / seigaiha pattern) ~$25 · GB runs June 5 – June 26, 2026</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="40" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

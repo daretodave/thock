@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Masterpiece R1 to R2 Katakana scope expansion — R1 had Katakana on alphas only; R2 extends to full navigation cluster and numpad via Precision Kit</title>
+
+  <!-- Title -->
+  <text x="600" y="50" font-family="Newsreader, 'Iowan Old Style', Georgia, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.90">Masterpiece R1 → R2 — Katakana scope</text>
+
+  <!-- ── LEFT COLUMN: R1 (2020) ─────────────────────────────────────────────── -->
+
+  <!-- Column header -->
+  <rect x="70" y="78" width="460" height="36" rx="4" fill="oklch(0.78 0.005 90)" fill-opacity="0.08" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.30" stroke-width="1.5"/>
+  <text x="300" y="102" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="14" font-weight="600" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.80">R1 (2020)</text>
+
+  <!-- Alpha block — Katakana YES -->
+  <rect x="70" y="134" width="460" height="72" rx="4" fill="oklch(0.68 0.165 28)" fill-opacity="0.14" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.60" stroke-width="1.5"/>
+  <text x="300" y="162" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="13" font-weight="600" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">Alphas</text>
+  <text x="300" y="182" font-family="Newsreader, 'Iowan Old Style', Georgia, serif" font-size="12" font-style="italic" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.80">Katakana legends — full coverage</text>
+
+  <!-- Nav cluster block — Latin only -->
+  <rect x="70" y="226" width="220" height="72" rx="4" fill="oklch(0.78 0.005 90)" fill-opacity="0.06" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.28" stroke-width="1.5"/>
+  <text x="180" y="254" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="13" font-weight="600" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.60">Nav cluster</text>
+  <text x="180" y="274" font-family="Newsreader, 'Iowan Old Style', Georgia, serif" font-size="12" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.42">Latin only</text>
+
+  <!-- Numpad block — Latin only -->
+  <rect x="310" y="226" width="220" height="72" rx="4" fill="oklch(0.78 0.005 90)" fill-opacity="0.06" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.28" stroke-width="1.5"/>
+  <text x="420" y="254" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="13" font-weight="600" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.60">Numpad</text>
+  <text x="420" y="274" font-family="Newsreader, 'Iowan Old Style', Georgia, serif" font-size="12" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.42">Latin only</text>
+
+  <!-- R1 bottom note -->
+  <text x="300" y="336" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.42">1,500-unit base kit · $129 · RAMA artisan collab</text>
+
+  <!-- ── DIVIDER ──────────────────────────────────────────────────────────────── -->
+  <line x1="600" y1="78" x2="600" y2="380" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.18" stroke-width="1" stroke-dasharray="5 4"/>
+
+  <!-- Arrow -->
+  <text x="600" y="285" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="22" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.35">→</text>
+
+  <!-- ── RIGHT COLUMN: R2 (2026) ────────────────────────────────────────────── -->
+
+  <!-- Column header -->
+  <rect x="670" y="78" width="460" height="36" rx="4" fill="oklch(0.68 0.165 28)" fill-opacity="0.14" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.55" stroke-width="1.5"/>
+  <text x="900" y="102" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="14" font-weight="600" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">R2 (2026)</text>
+
+  <!-- Alpha block — Katakana YES (same) -->
+  <rect x="670" y="134" width="460" height="72" rx="4" fill="oklch(0.68 0.165 28)" fill-opacity="0.14" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.60" stroke-width="1.5"/>
+  <text x="900" y="162" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="13" font-weight="600" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">Alphas</text>
+  <text x="900" y="182" font-family="Newsreader, 'Iowan Old Style', Georgia, serif" font-size="12" font-style="italic" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.80">Katakana legends — full coverage</text>
+
+  <!-- Nav cluster block — Katakana NOW -->
+  <rect x="670" y="226" width="220" height="72" rx="4" fill="oklch(0.68 0.165 28)" fill-opacity="0.14" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.60" stroke-width="1.5"/>
+  <text x="780" y="254" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="13" font-weight="600" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">Nav cluster</text>
+  <text x="780" y="274" font-family="Newsreader, 'Iowan Old Style', Georgia, serif" font-size="12" font-style="italic" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.85">Katakana — new in R2</text>
+
+  <!-- Numpad block — Katakana NOW -->
+  <rect x="910" y="226" width="220" height="72" rx="4" fill="oklch(0.68 0.165 28)" fill-opacity="0.14" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.60" stroke-width="1.5"/>
+  <text x="1020" y="254" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="13" font-weight="600" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">Numpad</text>
+  <text x="1020" y="274" font-family="Newsreader, 'Iowan Old Style', Georgia, serif" font-size="12" font-style="italic" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.85">Precision Kit · $25</text>
+
+  <!-- Full-layout bracket label -->
+  <line x1="670" y1="320" x2="1130" y2="320" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.40" stroke-width="1"/>
+  <line x1="670" y1="310" x2="670" y2="330" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.40" stroke-width="1"/>
+  <line x1="1130" y1="310" x2="1130" y2="330" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.40" stroke-width="1"/>
+  <text x="900" y="344" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="11" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.80">full-layout thematic coverage</text>
+
+  <!-- R2 bottom note -->
+  <text x="900" y="376" font-family="'IBM Plex Sans', ui-sans-serif, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.42">two bases ($99 / $125) · 7 vendors · no artisan</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="40" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

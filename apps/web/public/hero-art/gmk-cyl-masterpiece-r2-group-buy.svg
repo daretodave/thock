@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — GMK CYL Masterpiece R2, Cherry-profile keycap row silhouette in deep indigo with white legend marks and a muted terracotta accent, seigaiha wave pattern suggested in the background</title>
+
+  <!-- Editorial hook: GMK CYL Masterpiece R2 is a deep-blue keycap set with
+       white legends and a shokunin (Japanese artisan/craftsman) aesthetic.
+       The Wave deskmat features a seigaiha overlapping wave-scale pattern.
+       This hero shows six Cherry-profile keycap side silhouettes in a
+       horizontal row — the R1 (top-row) sculpt, slight backward tilt and
+       a low cylindrical scoop — in Masterpiece's rich deep indigo. Three
+       caps carry faint near-white legend marks (WS1 white legends). The
+       muted terracotta splash appears as a thin accent edge on the first
+       and last cap and a soft focal dot at the visual anchor. A very faint
+       seigaiha wave-scale repeating pattern sits behind the key row at low
+       opacity, suggesting the Wave deskmat without dominating. Family
+       convention: warm-bronze theme dot at upper-right margin. -->
+
+  <defs>
+    <!-- Deep indigo body fill — Masterpiece R2 rich blue, RAL 240 40 40 character -->
+    <!-- oklch(0.32 0.12 262) — deep cool navy, slightly violet-leaning -->
+
+    <!-- Terracotta accent low-opacity wash behind row center -->
+    <radialGradient id="terra-wash" cx="50%" cy="60%" r="42%">
+      <stop offset="0%"   stop-color="oklch(0.62 0.10 35)" stop-opacity="0.10"/>
+      <stop offset="70%"  stop-color="oklch(0.62 0.10 35)" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="oklch(0.62 0.10 35)" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Body fill gradient — deep indigo with subtle top-face lighting -->
+    <linearGradient id="cap-body-fill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="oklch(0.36 0.11 262)" stop-opacity="1"/>
+      <stop offset="100%" stop-color="oklch(0.26 0.13 264)" stop-opacity="1"/>
+    </linearGradient>
+
+    <!-- Top face fill — lighter, suggests the cylindrical top surface -->
+    <linearGradient id="cap-top-fill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="oklch(0.44 0.10 258)" stop-opacity="1"/>
+      <stop offset="100%" stop-color="oklch(0.34 0.12 262)" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ============================================================
+       SEIGAIHA BACKGROUND — overlapping wave-scale pattern
+       Very faint, top half of canvas, hue matches the indigo keys.
+       Seigaiha = overlapping semicircles arranged in a fish-scale/
+       wave pattern. Rows offset by half a unit.
+       Scale radius r=54, pitch 108 wide × 54 tall.
+       Rendered at low opacity so it reads as texture, not illustration.
+       ============================================================ -->
+
+  <!--
+    Seigaiha grid plan:
+      Semicircle radius: 52
+      Horizontal pitch: 104 (= 2r)
+      Vertical pitch:   52  (= r, so rows interleave)
+      Origin row 0: y_center=52, cols from x=0 (every 104)
+      Origin row 1: y_center=104, cols offset +52 from row 0
+
+    Canvas coverage: x 0..1200, y 0..420 (upper ~56% of canvas)
+    Row 0 centers: y=52, x = 0, 104, 208, 312, 416, 520, 624, 728, 832, 936, 1040, 1144
+    Row 1 centers: y=104, x = 52, 156, 260, 364, 468, 572, 676, 780, 884, 988, 1092
+    Row 2 centers: y=156, x = 0, 104, 208, ...
+    ...continuing to y=416
+  -->
+
+  <g stroke="oklch(0.42 0.09 262)" stroke-width="1" stroke-opacity="0.12" fill="oklch(0.38 0.08 262)" fill-opacity="0.05">
+    <!-- Row 0 y=52 -->
+    <path d="M 0 52 A 52 52 0 0 1 104 52 Z"/>
+    <path d="M 104 52 A 52 52 0 0 1 208 52 Z"/>
+    <path d="M 208 52 A 52 52 0 0 1 312 52 Z"/>
+    <path d="M 312 52 A 52 52 0 0 1 416 52 Z"/>
+    <path d="M 416 52 A 52 52 0 0 1 520 52 Z"/>
+    <path d="M 520 52 A 52 52 0 0 1 624 52 Z"/>
+    <path d="M 624 52 A 52 52 0 0 1 728 52 Z"/>
+    <path d="M 728 52 A 52 52 0 0 1 832 52 Z"/>
+    <path d="M 832 52 A 52 52 0 0 1 936 52 Z"/>
+    <path d="M 936 52 A 52 52 0 0 1 1040 52 Z"/>
+    <path d="M 1040 52 A 52 52 0 0 1 1144 52 Z"/>
+    <path d="M 1144 52 A 52 52 0 0 1 1248 52 Z"/>
+    <!-- Row 1 y=104 offset x+52 -->
+    <path d="M 52 104 A 52 52 0 0 1 156 104 Z"/>
+    <path d="M 156 104 A 52 52 0 0 1 260 104 Z"/>
+    <path d="M 260 104 A 52 52 0 0 1 364 104 Z"/>
+    <path d="M 364 104 A 52 52 0 0 1 468 104 Z"/>
+    <path d="M 468 104 A 52 52 0 0 1 572 104 Z"/>
+    <path d="M 572 104 A 52 52 0 0 1 676 104 Z"/>
+    <path d="M 676 104 A 52 52 0 0 1 780 104 Z"/>
+    <path d="M 780 104 A 52 52 0 0 1 884 104 Z"/>
+    <path d="M 884 104 A 52 52 0 0 1 988 104 Z"/>
+    <path d="M 988 104 A 52 52 0 0 1 1092 104 Z"/>
+    <path d="M 1092 104 A 52 52 0 0 1 1196 104 Z"/>
+    <!-- Row 2 y=156 -->
+    <path d="M 0 156 A 52 52 0 0 1 104 156 Z"/>
+    <path d="M 104 156 A 52 52 0 0 1 208 156 Z"/>
+    <path d="M 208 156 A 52 52 0 0 1 312 156 Z"/>
+    <path d="M 312 156 A 52 52 0 0 1 416 156 Z"/>
+    <path d="M 416 156 A 52 52 0 0 1 520 156 Z"/>
+    <path d="M 520 156 A 52 52 0 0 1 624 156 Z"/>
+    <path d="M 624 156 A 52 52 0 0 1 728 156 Z"/>
+    <path d="M 728 156 A 52 52 0 0 1 832 156 Z"/>
+    <path d="M 832 156 A 52 52 0 0 1 936 156 Z"/>
+    <path d="M 936 156 A 52 52 0 0 1 1040 156 Z"/>
+    <path d="M 1040 156 A 52 52 0 0 1 1144 156 Z"/>
+    <path d="M 1144 156 A 52 52 0 0 1 1248 156 Z"/>
+    <!-- Row 3 y=208 offset x+52 -->
+    <path d="M 52 208 A 52 52 0 0 1 156 208 Z"/>
+    <path d="M 156 208 A 52 52 0 0 1 260 208 Z"/>
+    <path d="M 260 208 A 52 52 0 0 1 364 208 Z"/>
+    <path d="M 364 208 A 52 52 0 0 1 468 208 Z"/>
+    <path d="M 468 208 A 52 52 0 0 1 572 208 Z"/>
+    <path d="M 572 208 A 52 52 0 0 1 676 208 Z"/>
+    <path d="M 676 208 A 52 52 0 0 1 780 208 Z"/>
+    <path d="M 780 208 A 52 52 0 0 1 884 208 Z"/>
+    <path d="M 884 208 A 52 52 0 0 1 988 208 Z"/>
+    <path d="M 988 208 A 52 52 0 0 1 1092 208 Z"/>
+    <path d="M 1092 208 A 52 52 0 0 1 1196 208 Z"/>
+    <!-- Row 4 y=260 -->
+    <path d="M 0 260 A 52 52 0 0 1 104 260 Z"/>
+    <path d="M 104 260 A 52 52 0 0 1 208 260 Z"/>
+    <path d="M 208 260 A 52 52 0 0 1 312 260 Z"/>
+    <path d="M 312 260 A 52 52 0 0 1 416 260 Z"/>
+    <path d="M 416 260 A 52 52 0 0 1 520 260 Z"/>
+    <path d="M 520 260 A 52 52 0 0 1 624 260 Z"/>
+    <path d="M 624 260 A 52 52 0 0 1 728 260 Z"/>
+    <path d="M 728 260 A 52 52 0 0 1 832 260 Z"/>
+    <path d="M 832 260 A 52 52 0 0 1 936 260 Z"/>
+    <path d="M 936 260 A 52 52 0 0 1 1040 260 Z"/>
+    <path d="M 1040 260 A 52 52 0 0 1 1144 260 Z"/>
+    <path d="M 1144 260 A 52 52 0 0 1 1248 260 Z"/>
+    <!-- Row 5 y=312 offset x+52 -->
+    <path d="M 52 312 A 52 52 0 0 1 156 312 Z"/>
+    <path d="M 156 312 A 52 52 0 0 1 260 312 Z"/>
+    <path d="M 260 312 A 52 52 0 0 1 364 312 Z"/>
+    <path d="M 364 312 A 52 52 0 0 1 468 312 Z"/>
+    <path d="M 468 312 A 52 52 0 0 1 572 312 Z"/>
+    <path d="M 572 312 A 52 52 0 0 1 676 312 Z"/>
+    <path d="M 676 312 A 52 52 0 0 1 780 312 Z"/>
+    <path d="M 780 312 A 52 52 0 0 1 884 312 Z"/>
+    <path d="M 884 312 A 52 52 0 0 1 988 312 Z"/>
+    <path d="M 988 312 A 52 52 0 0 1 1092 312 Z"/>
+    <path d="M 1092 312 A 52 52 0 0 1 1196 312 Z"/>
+    <!-- Row 6 y=364 -->
+    <path d="M 0 364 A 52 52 0 0 1 104 364 Z"/>
+    <path d="M 104 364 A 52 52 0 0 1 208 364 Z"/>
+    <path d="M 208 364 A 52 52 0 0 1 312 364 Z"/>
+    <path d="M 312 364 A 52 52 0 0 1 416 364 Z"/>
+    <path d="M 416 364 A 52 52 0 0 1 520 364 Z"/>
+    <path d="M 520 364 A 52 52 0 0 1 624 364 Z"/>
+    <path d="M 624 364 A 52 52 0 0 1 728 364 Z"/>
+    <path d="M 728 364 A 52 52 0 0 1 832 364 Z"/>
+    <path d="M 832 364 A 52 52 0 0 1 936 364 Z"/>
+    <path d="M 936 364 A 52 52 0 0 1 1040 364 Z"/>
+    <path d="M 1040 364 A 52 52 0 0 1 1144 364 Z"/>
+    <path d="M 1144 364 A 52 52 0 0 1 1248 364 Z"/>
+    <!-- Row 7 y=416 offset x+52 -->
+    <path d="M 52 416 A 52 52 0 0 1 156 416 Z"/>
+    <path d="M 156 416 A 52 52 0 0 1 260 416 Z"/>
+    <path d="M 260 416 A 52 52 0 0 1 364 416 Z"/>
+    <path d="M 364 416 A 52 52 0 0 1 468 416 Z"/>
+    <path d="M 468 416 A 52 52 0 0 1 572 416 Z"/>
+    <path d="M 572 416 A 52 52 0 0 1 676 416 Z"/>
+    <path d="M 676 416 A 52 52 0 0 1 780 416 Z"/>
+    <path d="M 780 416 A 52 52 0 0 1 884 416 Z"/>
+    <path d="M 884 416 A 52 52 0 0 1 988 416 Z"/>
+    <path d="M 988 416 A 52 52 0 0 1 1092 416 Z"/>
+    <path d="M 1092 416 A 52 52 0 0 1 1196 416 Z"/>
+  </g>
+
+  <!-- ============================================================
+       TERRACOTTA WASH — soft radial behind the key row center
+       Very low opacity; pulls the eye to the composition center
+       without competing with the indigo keycaps.
+       ============================================================ -->
+  <ellipse cx="600" cy="500" rx="520" ry="180" fill="url(#terra-wash)" stroke="none"/>
+
+  <!-- ============================================================
+       BASELINE — the surface the keycaps rest on
+       Subtle warm-grey line; suggests the PCB/plate surface.
+       A quiet terracotta hairline sits 4px below for accent depth.
+       ============================================================ -->
+  <line x1="110" y1="598" x2="1090" y2="598" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.45" stroke-width="1.5"/>
+  <line x1="110" y1="602" x2="1090" y2="602" stroke="oklch(0.62 0.10 35)" stroke-opacity="0.30" stroke-width="1"/>
+
+  <!-- ============================================================
+       SIX CHERRY-PROFILE KEYCAP SIDE SILHOUETTES
+       ============================================================
+
+       Cherry R1 (top row) geometry — side view:
+         - Body: trapezoidal, base ~124px wide, top ~106px wide.
+           Front face angles forward 4px from base to top.
+           Back face is near-vertical, slight rearward lean.
+         - Total height: ~148px (base at y=598, top rim at y=450).
+         - Top face (the typing surface): narrow concave slab,
+           slopes back 6px over ~106px width.
+           The CYL cylindrical scoop is shown as a gentle concave
+           arc across the top face interior.
+         - Rounded corners: 6px at base, 4px at top shoulder.
+
+       Layout:
+         6 caps, centered on x=600.
+         Cap width base: 124px. Gap between caps: 16px.
+         Total row width: 6*124 + 5*16 = 744 + 80 = 824px.
+         Start x = (1200 - 824) / 2 = 188.
+         Cap centers: 188+62, +140, +140, +140, +140, +140
+                    = 250, 390, 530, 670, 810, 950
+
+         Left edge of cap n: 188 + n*140 (n = 0..5)
+         Caps: x0=188, x1=328, x2=468, x3=608, x4=748, x5=888.
+         Right edge: x_left + 124.
+         Bottom: y=598. Top rim: y=452.
+
+       Cherry R1 shape (per cap, local coords with x_L = left edge):
+         Base left:  (x_L+2,  598)
+         Base right: (x_L+122, 598)
+         Front-face top-right: (x_L+118, 452) — front leans forward 4px
+         Back-face top-left:   (x_L+8,  452) — back leans back slightly
+         Top face connects x_L+8..x_L+118 at y=452 sloping to y=448 at center.
+
+       The keycap body shape (closed path):
+         M (x_L+2, 598)          bottom-left
+         L (x_L+122, 598)        bottom-right
+         L (x_L+118, 454)        top-right shoulder
+         Q (x_L+63, 448) (x_L+8, 454)  top face — slight concave curve
+         L (x_L+8, 454)          top-left shoulder (covered by Q curve)
+         Z
+
+       Front face slight angle: the front-bottom corner is at x_L+2;
+       the front-top corner is at x_L+8 (leans back 6px = slightly rearward).
+       Back face: bottom x_L+122, top x_L+118 (leans forward 4px).
+       This gives the characteristic Cherry R1 backward-leaning geometry.
+
+       Top-face interior scoop (CYL cylindrical dish arc):
+         Rendered as a stroke arc across the top face interior.
+         M (x_L+16, 456) Q (x_L+63, 445) (x_L+110, 456)
+         — a shallow concave arc, ~11px dip at center.
+
+       ============================================================ -->
+
+  <!-- ── CAP 1 (x_L=188) — deep indigo, NO legend, terracotta right-edge accent ── -->
+  <g id="cap-1">
+    <!-- Main body -->
+    <path d="M 190 598
+             L 310 598
+             L 306 454
+             Q 251 448 196 454
+             Z"
+          fill="url(#cap-body-fill)"
+          stroke="oklch(0.78 0.005 90)"
+          stroke-width="2"
+          stroke-linejoin="round"/>
+    <!-- Top face — separate lighter region hinting at the cylindrical surface -->
+    <path d="M 196 454
+             Q 251 448 306 454
+             L 306 468
+             Q 251 463 196 468
+             Z"
+          fill="url(#cap-top-fill)"
+          stroke="oklch(0.78 0.005 90)"
+          stroke-width="1.2"
+          stroke-opacity="0.6"/>
+    <!-- CYL scoop arc across top face interior -->
+    <path d="M 202 460 Q 251 451 300 460"
+          stroke="oklch(0.68 0.08 258)" stroke-width="1.5" stroke-opacity="0.55" fill="none"/>
+    <!-- Terracotta accent right edge — thin bright line on the right shoulder -->
+    <line x1="306" y1="454" x2="310" y2="598"
+          stroke="oklch(0.62 0.10 35)" stroke-width="2" stroke-opacity="0.70"/>
+  </g>
+
+  <!-- ── CAP 2 (x_L=328) — deep indigo, white legend marks (2 horizontal bars) ── -->
+  <g id="cap-2">
+    <path d="M 330 598
+             L 450 598
+             L 446 454
+             Q 391 448 336 454
+             Z"
+          fill="url(#cap-body-fill)"
+          stroke="oklch(0.78 0.005 90)"
+          stroke-width="2"
+          stroke-linejoin="round"/>
+    <path d="M 336 454
+             Q 391 448 446 454
+             L 446 468
+             Q 391 463 336 468
+             Z"
+          fill="url(#cap-top-fill)"
+          stroke="oklch(0.78 0.005 90)"
+          stroke-width="1.2"
+          stroke-opacity="0.6"/>
+    <path d="M 342 460 Q 391 451 440 460"
+          stroke="oklch(0.68 0.08 258)" stroke-width="1.5" stroke-opacity="0.55" fill="none"/>
+    <!-- White legend marks — two short horizontal bars suggesting a numeral or letter -->
+    <line x1="364" y1="504" x2="418" y2="504"
+          stroke="oklch(0.94 0.004 85)" stroke-width="2.5" stroke-opacity="0.80" stroke-linecap="round"/>
+    <line x1="364" y1="530" x2="400" y2="530"
+          stroke="oklch(0.94 0.004 85)" stroke-width="2.5" stroke-opacity="0.60" stroke-linecap="round"/>
+  </g>
+
+  <!-- ── CAP 3 (x_L=468) — deep indigo, NO legend ── -->
+  <g id="cap-3">
+    <path d="M 470 598
+             L 590 598
+             L 586 454
+             Q 531 448 476 454
+             Z"
+          fill="url(#cap-body-fill)"
+          stroke="oklch(0.78 0.005 90)"
+          stroke-width="2"
+          stroke-linejoin="round"/>
+    <path d="M 476 454
+             Q 531 448 586 454
+             L 586 468
+             Q 531 463 476 468
+             Z"
+          fill="url(#cap-top-fill)"
+          stroke="oklch(0.78 0.005 90)"
+          stroke-width="1.2"
+          stroke-opacity="0.6"/>
+    <path d="M 482 460 Q 531 451 580 460"
+          stroke="oklch(0.68 0.08 258)" stroke-width="1.5" stroke-opacity="0.55" fill="none"/>
+  </g>
+
+  <!-- ── CAP 4 (x_L=608) — deep indigo, white legend marks — CENTRAL CAP ── -->
+  <g id="cap-4">
+    <path d="M 610 598
+             L 730 598
+             L 726 454
+             Q 671 448 616 454
+             Z"
+          fill="url(#cap-body-fill)"
+          stroke="oklch(0.78 0.005 90)"
+          stroke-width="2"
+          stroke-linejoin="round"/>
+    <path d="M 616 454
+             Q 671 448 726 454
+             L 726 468
+             Q 671 463 616 468
+             Z"
+          fill="url(#cap-top-fill)"
+          stroke="oklch(0.78 0.005 90)"
+          stroke-width="1.2"
+          stroke-opacity="0.6"/>
+    <path d="M 622 460 Q 671 451 720 460"
+          stroke="oklch(0.68 0.08 258)" stroke-width="1.5" stroke-opacity="0.55" fill="none"/>
+    <!-- White legend marks — single centered horizontal bar, suggesting a key glyph -->
+    <line x1="640" y1="512" x2="702" y2="512"
+          stroke="oklch(0.94 0.004 85)" stroke-width="2.5" stroke-opacity="0.82" stroke-linecap="round"/>
+    <!-- Subtle second bar, shorter, offset lower -->
+    <line x1="648" y1="536" x2="694" y2="536"
+          stroke="oklch(0.94 0.004 85)" stroke-width="1.8" stroke-opacity="0.50" stroke-linecap="round"/>
+    <!-- Terracotta focal accent dot — visual anchor on the top shoulder of the center cap -->
+    <circle cx="671" cy="449" r="5"
+            fill="oklch(0.62 0.10 35)" fill-opacity="0.90"
+            stroke="oklch(0.62 0.10 35)" stroke-width="1" stroke-opacity="0.80"/>
+    <circle cx="671" cy="449" r="10"
+            fill="none"
+            stroke="oklch(0.62 0.10 35)" stroke-width="1" stroke-opacity="0.35"/>
+  </g>
+
+  <!-- ── CAP 5 (x_L=748) — deep indigo, white legend marks ── -->
+  <g id="cap-5">
+    <path d="M 750 598
+             L 870 598
+             L 866 454
+             Q 811 448 756 454
+             Z"
+          fill="url(#cap-body-fill)"
+          stroke="oklch(0.78 0.005 90)"
+          stroke-width="2"
+          stroke-linejoin="round"/>
+    <path d="M 756 454
+             Q 811 448 866 454
+             L 866 468
+             Q 811 463 756 468
+             Z"
+          fill="url(#cap-top-fill)"
+          stroke="oklch(0.78 0.005 90)"
+          stroke-width="1.2"
+          stroke-opacity="0.6"/>
+    <path d="M 762 460 Q 811 451 860 460"
+          stroke="oklch(0.68 0.08 258)" stroke-width="1.5" stroke-opacity="0.55" fill="none"/>
+    <!-- White legend marks — two bars, different widths -->
+    <line x1="770" y1="498" x2="852" y2="498"
+          stroke="oklch(0.94 0.004 85)" stroke-width="2.5" stroke-opacity="0.78" stroke-linecap="round"/>
+    <line x1="784" y1="522" x2="836" y2="522"
+          stroke="oklch(0.94 0.004 85)" stroke-width="2" stroke-opacity="0.52" stroke-linecap="round"/>
+    <line x1="770" y1="546" x2="852" y2="546"
+          stroke="oklch(0.94 0.004 85)" stroke-width="1.8" stroke-opacity="0.40" stroke-linecap="round"/>
+  </g>
+
+  <!-- ── CAP 6 (x_L=888) — deep indigo, NO legend, terracotta left-edge accent ── -->
+  <g id="cap-6">
+    <path d="M 890 598
+             L 1010 598
+             L 1006 454
+             Q 951 448 896 454
+             Z"
+          fill="url(#cap-body-fill)"
+          stroke="oklch(0.78 0.005 90)"
+          stroke-width="2"
+          stroke-linejoin="round"/>
+    <path d="M 896 454
+             Q 951 448 1006 454
+             L 1006 468
+             Q 951 463 896 468
+             Z"
+          fill="url(#cap-top-fill)"
+          stroke="oklch(0.78 0.005 90)"
+          stroke-width="1.2"
+          stroke-opacity="0.6"/>
+    <path d="M 902 460 Q 951 451 1000 460"
+          stroke="oklch(0.68 0.08 258)" stroke-width="1.5" stroke-opacity="0.55" fill="none"/>
+    <!-- Terracotta accent left edge — mirrors cap 1 right edge -->
+    <line x1="896" y1="454" x2="890" y2="598"
+          stroke="oklch(0.62 0.10 35)" stroke-width="2" stroke-opacity="0.70"/>
+  </g>
+
+  <!-- ============================================================
+       SHADOW / GROUND PLANE
+       Very subtle elliptical blur shadow beneath the row; suggests
+       a surface beneath the keycaps without making it look like a board.
+       Rendered as a very low-opacity warm-grey ellipse.
+       ============================================================ -->
+  <ellipse cx="599" cy="606" rx="430" ry="14"
+           fill="oklch(0.55 0.006 250)" fill-opacity="0.18" stroke="none"/>
+
+  <!-- ============================================================
+       TERRACOTTA FRAMING LINE
+       A single thin horizontal accent line above the caps — suggests
+       a case rail or a composition boundary. Very restrained.
+       ============================================================ -->
+  <line x1="188" y1="432" x2="1012" y2="432"
+        stroke="oklch(0.62 0.10 35)" stroke-width="1" stroke-opacity="0.22" stroke-dasharray="4 8"/>
+
+  <!-- ============================================================
+       BRONZE THEME DOT — upper-right margin, family ornamental anchor
+       Per bearings.md: "small oklch(0.80 0.135 75) circle at
+       the upper-right margin — family ornamental anchor."
+       ============================================================ -->
+  <circle cx="1148" cy="78" r="4"
+          fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)" stroke-width="1"/>
+  <circle cx="1148" cy="78" r="8"
+          fill="none"
+          stroke="oklch(0.80 0.135 75)" stroke-width="1" stroke-opacity="0.40"/>
+
+</svg>

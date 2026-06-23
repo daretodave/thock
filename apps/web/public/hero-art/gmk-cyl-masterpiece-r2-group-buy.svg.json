@@ -1,0 +1,72 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-23",
+  "commit": "6b48b0cfa9444e0516230eb16a9ea1dddfa2c776",
+  "kind": "hero-art",
+  "slug": "gmk-cyl-masterpiece-r2-group-buy",
+  "article_slug": "gmk-cyl-masterpiece-r2-group-buy",
+  "pillar": "news",
+  "target": "apps/web/public/hero-art/gmk-cyl-masterpiece-r2-group-buy.svg",
+  "source": "plan/bearings.md § Article hero art — locked 2026-05-09",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject",
+  "size": [1200, 750],
+  "canvas": "1200x750",
+  "subject": "Six Cherry-profile keycap side silhouettes in a horizontal row, R1 (top-row) sculpt. Bodies filled in deep indigo navy matching the Masterpiece R2 rich blue (RAL 240 40 40 character, oklch(0.32 0.12 262) via gradient). Three caps carry near-white WS1-suggesting legend marks (short horizontal bars). Muted terracotta accent appears on the outer right edge of cap 1 and the outer left edge of cap 6, plus a focal dot at the top shoulder of the central cap 4. A very faint seigaiha (overlapping wave-scale) pattern fills the upper two-thirds of the canvas at ~5% opacity, suggesting the Wave deskmat. A soft terracotta radial wash sits behind the row center. Baseline hairline with a thin terracotta shadow below. Bronze theme dot at upper-right margin.",
+  "hue": "deep indigo navy (oklch(0.32 0.12 262)) — matching GMK CYL Masterpiece R2 RAL 240 40 40",
+  "motif": "seigaiha (Japanese overlapping wave-scale) — very faint background texture referencing the Wave deskmat, ~5% opacity indigo stroke",
+  "generatedAt": "2026-06-23",
+  "splash_color": {
+    "name": "muted terracotta",
+    "oklch": "oklch(0.62 0.10 35)",
+    "approx_hex": "#C4745A",
+    "usage": [
+      "Right-edge accent line on cap 1 (first of row)",
+      "Left-edge accent line on cap 6 (last of row)",
+      "Focal dot at top shoulder of cap 4 (center)",
+      "Soft radial wash behind row center (fill-opacity 0.10 → 0.04)",
+      "Thin dashed framing line above cap row (stroke-opacity 0.22)"
+    ],
+    "rationale": "Muted terracotta chosen over coral and dusty rose: it is warm without competing with the deep indigo bodies, maintains the shokunin (artisan) calm aesthetic, and recalls the warm clay / lacquerware tones common in Japanese craft objects. Coral would have been too loud against the deep navy; dusty rose too pink for the masculine craftsman theme."
+  },
+  "keycap_color": {
+    "name": "deep indigo navy",
+    "oklch_body_gradient_top": "oklch(0.36 0.11 262)",
+    "oklch_body_gradient_bottom": "oklch(0.26 0.13 264)",
+    "oklch_top_face_gradient_top": "oklch(0.44 0.10 258)",
+    "oklch_top_face_gradient_bottom": "oklch(0.34 0.12 262)",
+    "oklch_scoop_arc": "oklch(0.68 0.08 258)",
+    "rationale": "Deep cool violet-leaning navy keyed to RAL 240 40 40, the rich blue of GMK CYL Masterpiece R2. Body gradient adds subtle depth (lighter top → darker base) to read as a physical object without shadow rendering."
+  },
+  "legend_marks": {
+    "color": "oklch(0.94 0.004 85)",
+    "opacity_range": "0.40 – 0.82",
+    "stroke_width": "1.8 – 2.5px",
+    "applied_to": ["cap 2 (two bars)", "cap 4 (two bars, center cap)", "cap 5 (three bars)"],
+    "rationale": "Short horizontal strokes suggest WS1 white legends in an abstracted way without rendering actual glyphs. Varied opacities give depth: primary legend bar at full opacity, secondary reference bar lighter."
+  },
+  "seigaiha": {
+    "pitch_px": 104,
+    "radius_px": 52,
+    "fill_opacity": 0.05,
+    "stroke_opacity": 0.12,
+    "color": "oklch(0.42 0.09 262)",
+    "canvas_coverage": "y=0 to y=416 (upper ~55% of 750px canvas), full width",
+    "rows": 8,
+    "notes": "Standard seigaiha geometry: semicircles of radius r, alternating rows offset by r horizontally, stacked every r vertically. At 5% fill and 12% stroke the pattern reads as suggestion, not illustration."
+  },
+  "bronze_accent": {
+    "name": "warm-bronze",
+    "oklch": "oklch(0.80 0.135 75)",
+    "usage": "Inner and outer circle at upper-right margin (cx=1148, cy=78, r=4 filled, r=8 ring at 40% opacity)"
+  },
+  "notes": "Cherry R1 profile geometry: body trapezoid widens 8px front-to-back taper over 146px height (base 124px wide, top 110px wide). Front face leans rearward 6px from base to top shoulder; back face leans forward 4px — characteristic Cherry R1 backward-lean. CYL cylindrical scoop rendered as a 11px-dip concave arc across the top face interior. All six caps share the same body geometry; only legend marks and edge accents vary. Six-cap layout: 124px wide caps with 16px gaps, total row 824px, centered on 1200px canvas (x start=188). Transparent canvas (no background rect) so the SVG is light-mode safe on the warm-paper body or dark-mode safe on the charcoal background.",
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": [],
+  "outputs": [
+    "apps/web/public/hero-art/gmk-cyl-masterpiece-r2-group-buy.svg"
+  ],
+  "warnings": [],
+  "xml_validity": "validated — no double-hyphen runs inside comments; parses as well-formed XML",
+  "revision": 1
+}

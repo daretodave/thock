@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-21T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "gmk-cyl-masterpiece-r2-group-buy",
+  "article_pillar": "news",
+  "section_anchor": "the-design-argument-shokunin-culture-and-the-katakana-problem",
+  "brief_summary": "Two-column comparison diagram showing the scope of Katakana legend coverage in R1 (2020) versus R2 (2026). R1 column shows alphas in coral (Katakana) and nav cluster + numpad in muted grey (Latin only). R2 column shows all three blocks in coral with labels indicating Katakana nav cluster and Precision Kit numpad. A bracketed callout beneath the R2 column reads 'full-layout thematic coverage.' Illustrates the core design upgrade claim made in the article.",
+  "target": "apps/web/public/article-viz/gmk-cyl-masterpiece-r2-group-buy/r1-r2-nav-expansion.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "gmk-cyl-masterpiece-r2-group-buy.mdx § 'The design argument' — 'Katakana legends were confined to the alpha keys — a choice that reads as caution in retrospect. The navigation cluster kept Latin glyphs. The numpad kept Latin glyphs.'",
+    "gmk-cyl-masterpiece-r2-group-buy.mdx § 'The design argument' — 'R2 fixes this at the technical level, not just the editorial one. The navigation cluster is 1u keys — Home, End, PgUp, PgDn, Insert, Delete, and the arrow cluster. Energieschleuder extended Katakana across the full nav cluster and into the numpad.'",
+    "gmk-cyl-masterpiece-r2-group-buy.mdx § 'Kitting and pricing' — 'The Precision Kit at $25' and 'R1 ran a single base kit at $129 USD with numpad included.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gmk-cyl-masterpiece-r2-group-buy/r1-r2-nav-expansion.svg"],
+  "warnings": []
+}
