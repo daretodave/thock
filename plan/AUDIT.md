@@ -5855,4 +5855,14 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/gmk-cyl-masterpiece-r2-group-buy.mdx
 - article-b: apps/web/src/content/articles/gsk-sweet-nightmare-group-buy.mdx
 - action: add [gsk-sweet-nightmare-group-buy](/article/gsk-sweet-nightmare-group-buy) to gmk-cyl-masterpiece-r2-group-buy body, or vice versa
+
+### [ ] [copy] [3.6] Two articles use "author: thock editorial" instead of site-standard "author: thock"
+- category: copy
+- filed: 2026-06-23 by /iterate audit
+- impact: 4 (author byline rendered in article page, article card, and OG images; 2 of 58 articles show "thock editorial" while all others show "thock" — breaks publication identity consistency)
+- ease: 9 (simple string replacement in 2 MDX files)
+- score: 3.6 (impact × ease / 10)
+- articles: apps/web/src/content/articles/gmk-cyl-masterpiece-r2-group-buy.mdx, apps/web/src/content/articles/gmk-cyl-pandemonium-group-buy.mdx
+- action: change `author: thock editorial` → `author: thock` in both MDX files
+- issue: [mirror-failed: 2026-06-23T00:00:00Z]
 - addressed in: e165bac
