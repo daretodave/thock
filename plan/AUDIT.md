@@ -5856,7 +5856,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/gsk-sweet-nightmare-group-buy.mdx
 - action: add [gsk-sweet-nightmare-group-buy](/article/gsk-sweet-nightmare-group-buy) to gmk-cyl-masterpiece-r2-group-buy body, or vice versa
 
-### [ ] [copy] [3.6] Two articles use "author: thock editorial" instead of site-standard "author: thock"
+### [x] [copy] [3.6] Two articles use "author: thock editorial" instead of site-standard "author: thock" — addressed in 86b07fb
 - category: copy
 - filed: 2026-06-23 by /iterate audit
 - impact: 4 (author byline rendered in article page, article card, and OG images; 2 of 58 articles show "thock editorial" while all others show "thock" — breaks publication identity consistency)
