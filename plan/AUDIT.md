@@ -84,6 +84,19 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [data] [4.9] gmk-cyl-masterpiece-r2 and gmk-cyl-pandemonium missing group-buy records — masterpiece-r2 addressed in 5b37114
+- category: data
+- impact: 7 (both are live group buys not appearing on /group-buys, /group-buys/past, or home widget; Masterpiece R2 closes June 26 — time-critical)
+- ease: 7 (add JSON records + brander SVG; Masterpiece R2 uses kbdfans vendor which exists; Pandemonium requires adding DeltaKeyCo vendor first)
+- score: 4.9 (impact × ease / 10)
+- filed: 2026-06-23 by cloud /iterate audit
+- observation: gmk-cyl-masterpiece-r2-group-buy.mdx (published 2026-06-21) and gmk-cyl-pandemonium-group-buy.mdx (published 2026-06-20) exist with tracker entries in W26, but data/group-buys/ has no record for either. The group-buy-companion-survey cannot detect this gap because it only checks existing data records. Neither buy appears on /group-buys index or /group-buys/past archive.
+- evidence: ls data/group-buys/ | grep -E "masterpiece|pandemonium" → empty; data/trends/2026-W26.json rows show both slugs; both articles confirmed live buys (Masterpiece R2 June 5–26, Pandemonium June 1–July 1).
+- suggested fix: tick 1 — add kbdfans-gmk-cyl-masterpiece-r2 (most urgent, closes June 26); tick 2 — add DeltaKeyCo vendor record then kbdfans-gmk-cyl-pandemonium.
+- issue: [mirror-failed: 2026-06-23T00:00:00Z]
+- Masterpiece R2 addressed: 5b37114 (data/group-buys/kbdfans-gmk-cyl-masterpiece-r2.json + brander hero art)
+- Pandemonium: pending next tick (DeltaKeyCo vendor required)
+
 ### [x] [data] [4.8] tracker articleSlugs for "Hall Effect / Rapid Trigger" and "Keychron" stale in W24–W26 — addressed in 6039eca
 - category: data
 - impact: 6 (tracker's two highest-scoring rows — Hall Effect / Rapid Trigger at score 82 and Keychron at score 72 in W26 — link to general overview articles rather than the dedicated trend-analysis pieces published in June 2026; readers following these rows from /trends/tracker miss the most specific editorial coverage)
