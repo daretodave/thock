@@ -1112,6 +1112,11 @@
       "description": "Boutique keyboard vendor based in the United States. Stocks switches, keycaps, and runs in-house and partnered group buys for boards and accessories."
     },
     {
+      "slug": "deltakeyco",
+      "name": "Delta Key Co.",
+      "description": "French mechanical keyboard vendor founded by two brothers. Sells keyboards, keycaps, switches, and accessories; ships from Grimaud, France."
+    },
+    {
       "slug": "divinikey",
       "name": "Divinikey",
       "description": "US-based mechanical keyboard retailer headquartered in Los Angeles, California, stocking keyboards, keycap sets, switches, and accessories; runs group buys for custom keyboard projects including DCS and GMK keycap sets."
@@ -1147,5 +1152,5 @@
       "description": "China-based design studio and vendor known for in-house boards (Mammoth, Ikki68, Promise) and partnered group buys, sold direct from shop.wuquestudio.com with regional proxies."
     }
   ],
-  "generatedAt": "2026-06-23T05:32:25.357Z"
+  "generatedAt": "2026-06-23T07:41:49.387Z"
 }

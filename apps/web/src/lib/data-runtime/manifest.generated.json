@@ -633,6 +633,15 @@
       "updatedAt": "2026-05-08T00:00:00.000Z"
     },
     {
+      "slug": "deltakeyco",
+      "name": "Delta Key Co.",
+      "url": "https://deltakeyco.com",
+      "countryCode": "FR",
+      "description": "French mechanical keyboard vendor founded by two brothers. Sells keyboards, keycaps, switches, and accessories; ships from Grimaud, France.",
+      "status": "active",
+      "updatedAt": "2026-06-23T00:00:00.000Z"
+    },
+    {
       "slug": "divinikey",
       "name": "Divinikey",
       "url": "https://divinikey.com",
@@ -730,6 +739,23 @@
       "status": "closed",
       "description": "Alice-layout board with a leaf-spring F1 mount and 9-degree typing angle, run with friction-fit silicone cat ears and nose in orange, pink, baby blue, and lilac; hotswap PCB optional.",
       "updatedAt": "2026-05-18T00:00:00.000Z"
+    },
+    {
+      "slug": "deltakeyco-gmk-cyl-pandemonium",
+      "name": "GMK CYL Pandemonium",
+      "vendorSlug": "deltakeyco",
+      "productSlug": null,
+      "productKind": "keycap-set",
+      "startDate": "2026-06-01",
+      "endDate": "2026-07-01",
+      "region": "global",
+      "url": "https://deltakeyco.com/products/gmk-cyl-pandemonium-group-buy",
+      "imageUrl": null,
+      "heroImage": "/group-buy-art/deltakeyco-gmk-cyl-pandemonium.svg",
+      "relatedArticle": "gmk-cyl-pandemonium-group-buy",
+      "status": "live",
+      "description": "DeltaKeyCo's Berserk eclipse-themed Cherry-profile doubleshot ABS set. Dark near-black base with translucent blood-red legends. Eight storefronts globally: DeltaKeyCo (primary), Prototypist (APAC), Bowl Keyboards (UK), and five regional partners. Base and novelty kits plus deskmat. June 1–July 1 2026.",
+      "updatedAt": "2026-06-23T00:00:00.000Z"
     },
     {
       "slug": "divinikey-dcs-dolch",
@@ -6224,5 +6250,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-06-23T05:32:25.357Z"
+  "generatedAt": "2026-06-23T07:41:49.387Z"
 }

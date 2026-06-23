@@ -1,0 +1,28 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-23T00:00:00Z",
+  "commit": "0595a7fd2e07d980a263c411cda6c4b4252c26e0",
+  "kind": "hero-art",
+  "source": "apps/web/public/group-buy-art/kbdfans-gmk-cyl-masterpiece-r2.svg (visual language reference)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": [],
+  "outputs": [
+    "apps/web/public/group-buy-art/deltakeyco-gmk-cyl-pandemonium.svg"
+  ],
+  "warnings": [],
+  "asset": "/group-buy-art/deltakeyco-gmk-cyl-pandemonium.svg",
+  "type": "group-buy-hero",
+  "entity": "deltakeyco-gmk-cyl-pandemonium",
+  "subject": "keycap-cluster",
+  "kind_detail": "group-buy-hero-art",
+  "target": "apps/web/public/group-buy-art/deltakeyco-gmk-cyl-pandemonium.svg",
+  "size": [1200, 630],
+  "splash_color": "oklch(0.44 0.195 28)",
+  "accent_color": "oklch(0.80 0.135 75)",
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "composition": "Six CYL-profile keycaps in a two-row editorial cluster: back row — stroke-only outline cap (left), near-black warm-burgundy alpha with blood-red legend wash (centre, stepped 18px forward), near-black warm-burgundy alpha (right); front row — near-black warm-burgundy alpha (left), near-black focal alpha with strong blood-red legend wash and bronze edge stroke (centre), stroke-only outline cap (right). Diagonal offset between rows mimics a freshly-tipped keycap tray. Eclipse splash ellipse in blood-red at 0.10 alpha behind the cluster. Bronze theme dot at upper-right margin. Blood-red accent pip at lower-right. Dark warm-burgundy background fill #120808. Four filled dark caps carry oklch(0.14 0.025 18) body; inset dish surfaces step to oklch(0.18 0.030 18); CYL scoop arcs in dim warm-red oklch(0.60 0.12 28) so they read on the near-black body. Blood-red legend-face wash at 0.18 alpha on flanking caps and 0.34 alpha on the focal, evoking the translucent-red outer doubleshot over the tinted inner shot. Focal cap outer stroke uses bronze oklch(0.80 0.135 75) at 0.55 opacity as a warm metallic edge highlight.",
+  "notes": "GMK CYL Pandemonium Berserk eclipse theme by Delta Key Co. Near-black body #1a0a0a approximated as oklch(0.14 0.025 18) — very dark, warm-burgundy-tinged, not flat black. Blood-red accent #cc2200 approximated as oklch(0.44 0.195 28) — warm coral/blood-red, evokes the translucent red doubleshot legends. Canvas is 1200x630 (16:2.1 portrait-safe ratio for the group-buy card), compared to the 1200x750 hero-art standard, per brief. Two flanking caps rendered as stroke-only outlines for compositional balance.",
+  "generated_at": "2026-06-23T00:00:00Z",
+  "commit_at_render": "0595a7fd2e07d980a263c411cda6c4b4252c26e0"
+}

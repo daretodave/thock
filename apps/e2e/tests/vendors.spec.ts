@@ -7,7 +7,7 @@ test.describe('/vendors index', () => {
     await expect(h1).toBeVisible()
     await expect(h1).toHaveText('Vendors')
     const cards = page.locator('[data-testid="vendor-card"]')
-    await expect(cards).toHaveCount(8)
+    await expect(cards).toHaveCount(9)
   })
 
   test('renders eyebrow and list', async ({ page }) => {

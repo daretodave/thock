@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1200 630"
+     preserveAspectRatio="xMidYMid meet"
+     fill="none"
+     stroke="oklch(0.78 0.005 90)"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     role="img"
+     aria-label="thock group-buy card art for Delta Key Co. GMK CYL Pandemonium — six Cherry-profile keycaps in row-sculpt order, near-black warm-burgundy bodies with blood-red translucent legend-face accents, Berserk eclipse theme">
+  <title>thock group-buy hero — GMK CYL Pandemonium (Delta Key Co.), six CYL-profile keycaps, near-black warm-burgundy bodies, blood-red translucent accent on legend faces</title>
+
+  <!--
+    Composition: six CYL-profile keycaps in a two-row editorial cluster.
+    Back row: three 1u caps, lightly staggered (the middle cap stepped 18px
+    forward to break the rigid grid and suggest a freshly-tipped tray).
+    Front row: three 1u caps, offset half a cap-width to the right of the
+    back row, producing the characteristic diamond-offset layout used across
+    the GMK CYL family in this hero-art set.
+
+    GMK CYL Pandemonium colorway — Berserk eclipse theme by Delta Key Co.:
+      Near-black body     #1a0a0a  ≈ oklch(0.14 0.025 18)  — very dark, warm
+                                     burgundy-tinged, not flat black; the red
+                                     channel raises it from neutral.
+      Dish surface        #250d0d  ≈ oklch(0.18 0.030 18)  — fractionally
+                                     lighter so the CYL scoop reads on the body.
+      Blood-red accent    #cc2200  ≈ oklch(0.44 0.195 28)  — warm coral/blood-
+                                     red; used as a translucent legend-face wash
+                                     on filled caps, evoking the translucent red
+                                     outer doubleshot over the tinted inner.
+      Bronze edge         oklch(0.80 0.135 75)             — family accent; used
+                                     here as a subtle warm highlight on stroke
+                                     edges and the upper-right ornamental dot.
+      Warm-grey stroke    oklch(0.78 0.005 90)             — invariant family
+                                     default.
+
+    Focal cap: front-row centre. Full near-black fill, strong red legend wash.
+    The four non-focal dark caps carry the same body at slightly lower alpha so
+    they read as coherent dark-warm bodies without competing with the focal.
+    Two flanking stroke-only outline caps (back-left, front-right) provide
+    compositional breathing room.
+
+    Splash ellipse: blood-red at 0.10 alpha — the eclipse wash behind the
+    cluster.
+
+    Bronze theme dot: upper-right margin, family ornamental anchor.
+    Accent pip: lower-right of cluster, blood-red echoing focal.
+  -->
+
+  <!-- ============================================================
+       BACKGROUND FILL: near-black warm-burgundy, slightly
+       lighter than #0d0404 so the stroke outlines read cleanly.
+  ============================================================ -->
+  <rect width="1200" height="630" fill="#120808"/>
+
+  <!-- ============================================================
+       ECLIPSE SPLASH WASH: diffuse blood-red ellipse behind the
+       cluster, evoking the Berserk eclipse aesthetic.
+  ============================================================ -->
+  <ellipse cx="596" cy="328" rx="510" ry="195"
+           fill="oklch(0.44 0.195 28 / 0.10)" stroke="none"/>
+
+  <!-- ============================================================
+       BRONZE THEME DOT: upper-right margin ornamental anchor.
+       oklch(0.80 0.135 75) — invariant across the family.
+  ============================================================ -->
+  <circle cx="1092" cy="72" r="9"
+          fill="oklch(0.80 0.135 75 / 0.90)"
+          stroke="oklch(0.80 0.135 75)"/>
+  <circle cx="1092" cy="72" r="17"
+          stroke="oklch(0.80 0.135 75)"
+          stroke-opacity="0.35"
+          fill="none"/>
+
+  <!-- ============================================================
+       KEYCAP SILHOUETTE (CYL-profile, near-top-down with a
+       hint of 3/4 to read the cylindrical scoop):
+
+         Outer footprint:  176 × 168 px, rounded corners via Q curves.
+         Inset top surface: ~18 px inset on all sides.
+         Scoop: two concentric arcs curving inward — upper arc convex
+                upward, lower arc convex downward — reads the CYL dish.
+
+       Same path vocabulary as the masterpiece-r2 / selene /
+       prussian-alert / king-of-the-seas / greg-2 / ramune siblings.
+
+       Stroke for filled cap outlines: dim warm-red so the border
+       doesn't fight the body. oklch(0.30 0.12 22) — a dark,
+       slightly-saturated warm-red that reads as the body colour's
+       edge, not as a separate accent.
+  ============================================================ -->
+
+  <!-- ===== ROW 1 (back row) — three 1u caps ===== -->
+
+  <!-- Back-left — stroke-only outline cap (breathing room, no fill) -->
+  <g transform="translate(244 188)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          stroke-opacity="0.55"/>
+    <path d="M 38 90 Q 88 76 138 90" stroke-opacity="0.40"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke-opacity="0.26"/>
+  </g>
+
+  <!-- Back-middle — near-black body cap, stepped 18px forward.
+       Blood-red legend-face wash — translucent red legend treatment. -->
+  <g transform="translate(472 170)">
+    <!-- outer cap body: near-black warm fill -->
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"
+          fill="oklch(0.14 0.025 18 / 0.92)" stroke="oklch(0.30 0.12 22)"/>
+    <!-- inset top surface: fractionally lighter warm-dark -->
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          fill="oklch(0.18 0.030 18 / 0.85)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.45"/>
+    <!-- blood-red legend-face wash: translucent red over the dish surface -->
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          fill="oklch(0.44 0.195 28 / 0.18)" stroke="none"/>
+    <!-- CYL scoop arcs in dim warm-red so they read against the dark body -->
+    <path d="M 38 90 Q 88 74 138 90"
+          stroke="oklch(0.60 0.12 28)" stroke-opacity="0.60"/>
+    <path d="M 38 102 Q 88 90 138 102"
+          stroke="oklch(0.60 0.12 28)" stroke-opacity="0.38"/>
+  </g>
+
+  <!-- Back-right — near-black body cap, same treatment as back-middle
+       but without the extra red pop (flanking, not focal) -->
+  <g transform="translate(700 188)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"
+          fill="oklch(0.14 0.025 18 / 0.86)" stroke="oklch(0.30 0.12 22)"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          fill="oklch(0.18 0.030 18 / 0.75)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.42"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          fill="oklch(0.44 0.195 28 / 0.12)" stroke="none"/>
+    <path d="M 38 90 Q 88 74 138 90"
+          stroke="oklch(0.60 0.12 28)" stroke-opacity="0.52"/>
+    <path d="M 38 102 Q 88 90 138 102"
+          stroke="oklch(0.60 0.12 28)" stroke-opacity="0.32"/>
+  </g>
+
+  <!-- ===== ROW 2 (front row, offset half a cap-width right) — three 1u caps ===== -->
+
+  <!-- Front-left — near-black body cap (flanking) -->
+  <g transform="translate(356 368)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"
+          fill="oklch(0.14 0.025 18 / 0.86)" stroke="oklch(0.30 0.12 22)"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          fill="oklch(0.18 0.030 18 / 0.75)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.42"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          fill="oklch(0.44 0.195 28 / 0.12)" stroke="none"/>
+    <path d="M 38 90 Q 88 74 138 90"
+          stroke="oklch(0.60 0.12 28)" stroke-opacity="0.52"/>
+    <path d="M 38 102 Q 88 90 138 102"
+          stroke="oklch(0.60 0.12 28)" stroke-opacity="0.32"/>
+  </g>
+
+  <!-- Front-centre — FOCAL CAP: near-black body + strong blood-red legend wash.
+       This is the visual anchor — maximum warmth, maximum red accent.
+       A bronze edge glow on the outer footprint stroke evokes the warm
+       metallic edge treatment of the Pandemonium aesthetic. -->
+  <g transform="translate(584 368)">
+    <!-- full near-black warm cap body, bronze edge stroke hint -->
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"
+          fill="oklch(0.14 0.025 18 / 0.96)" stroke="oklch(0.80 0.135 75)" stroke-opacity="0.55"/>
+    <!-- inset top surface: slightly lighter warm-dark -->
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          fill="oklch(0.18 0.030 18 / 0.88)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.48"/>
+    <!-- strong blood-red legend-face wash — the Pandemonium translucent red
+         outer shot over the dark inner, more emphatic on the focal cap -->
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          fill="oklch(0.44 0.195 28 / 0.34)" stroke="none"/>
+    <!-- CYL scoop arcs in warm dim-red — read against the dark body -->
+    <path d="M 38 90 Q 88 74 138 90"
+          stroke="oklch(0.60 0.12 28)" stroke-opacity="0.75"/>
+    <path d="M 38 102 Q 88 90 138 102"
+          stroke="oklch(0.60 0.12 28)" stroke-opacity="0.50"/>
+  </g>
+
+  <!-- Front-right — stroke-only outline cap (mirrors back-left; visual balance) -->
+  <g transform="translate(812 368)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          stroke-opacity="0.55"/>
+    <path d="M 38 90 Q 88 76 138 90" stroke-opacity="0.40"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke-opacity="0.26"/>
+  </g>
+
+  <!-- ============================================================
+       ACCENT PIP: small blood-red dot below the cluster,
+       right of centre — mirrors the family pip convention.
+  ============================================================ -->
+  <circle cx="778" cy="562" r="6"
+          fill="oklch(0.44 0.195 28 / 0.92)"
+          stroke="oklch(0.44 0.195 28)"/>
+  <circle cx="778" cy="562" r="13"
+          stroke="oklch(0.44 0.195 28)"
+          stroke-opacity="0.38"
+          fill="none"/>
+</svg>
