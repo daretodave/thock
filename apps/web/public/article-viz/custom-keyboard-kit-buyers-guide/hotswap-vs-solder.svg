@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Four-row comparison between hot-swap and solder PCBs across tools required, switch changes later, plate feel, and first-build risk, with the winning option per row highlighted in amber</title>
+
+  <!-- Column headers -->
+  <text x="530" y="45" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" font-weight="700" letter-spacing="0.05em" text-anchor="middle">HOT-SWAP</text>
+  <text x="950" y="45" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" font-weight="700" letter-spacing="0.05em" text-anchor="middle">SOLDER</text>
+  <line x1="40" y1="62" x2="1160" y2="62" stroke-opacity="0.25"/>
+
+  <!-- Row 1: Tools required — hot-swap wins -->
+  <text x="40" y="105" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none" font-weight="600" letter-spacing="0.03em">TOOLS REQUIRED</text>
+  <rect x="340" y="80" width="380" height="55" rx="8" fill="oklch(0.78 0.10 80)" fill-opacity="0.12" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.85"/>
+  <text x="530" y="113" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">None</text>
+  <rect x="760" y="80" width="380" height="55" rx="8" stroke-opacity="0.4"/>
+  <text x="950" y="113" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Iron + solder skill</text>
+
+  <!-- Row 2: Switch changes later — hot-swap wins -->
+  <text x="40" y="180" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none" font-weight="600" letter-spacing="0.03em">SWITCH CHANGES</text>
+  <text x="40" y="198" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none" font-weight="600" letter-spacing="0.03em">LATER</text>
+  <rect x="340" y="150" width="380" height="55" rx="8" fill="oklch(0.78 0.10 80)" fill-opacity="0.12" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.85"/>
+  <text x="530" y="183" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Plug and play, anytime</text>
+  <rect x="760" y="150" width="380" height="55" rx="8" stroke-opacity="0.4"/>
+  <text x="950" y="183" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Requires desoldering</text>
+
+  <!-- Row 3: Plate feel — solder wins -->
+  <text x="40" y="255" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none" font-weight="600" letter-spacing="0.03em">PLATE FEEL</text>
+  <rect x="340" y="230" width="380" height="55" rx="8" stroke-opacity="0.4"/>
+  <text x="530" y="263" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Slightly softer (socket flex)</text>
+  <rect x="760" y="230" width="380" height="55" rx="8" fill="oklch(0.78 0.10 80)" fill-opacity="0.12" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.85"/>
+  <text x="950" y="263" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Marginally firmer, direct</text>
+
+  <!-- Row 4: First-build risk — hot-swap wins -->
+  <text x="40" y="330" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none" font-weight="600" letter-spacing="0.03em">FIRST-BUILD RISK</text>
+  <rect x="340" y="305" width="380" height="55" rx="8" fill="oklch(0.78 0.10 80)" fill-opacity="0.12" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.85"/>
+  <text x="530" y="338" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Low — no cold joints</text>
+  <rect x="760" y="305" width="380" height="55" rx="8" stroke-opacity="0.4"/>
+  <text x="950" y="333" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Cold joints, lifted</text>
+  <text x="950" y="351" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">pads possible</text>
+
+  <!-- Footnote -->
+  <text x="40" y="410" font-family="Newsreader, serif" font-style="italic" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">Solder wins exactly one row. Hot-swap wins the three that matter on a first build.</text>
+
+  <!-- Brass-bronze theme dot -->
+  <circle cx="1170" cy="25" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

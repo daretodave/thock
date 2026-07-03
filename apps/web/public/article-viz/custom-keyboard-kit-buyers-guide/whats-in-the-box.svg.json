@@ -1,0 +1,22 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-27T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "custom-keyboard-kit-buyers-guide",
+  "article_pillar": "guides",
+  "section_anchor": "whats-actually-in-the-box",
+  "brief_summary": "Two-column checklist contrasting what a barebones kit reliably includes (case, plate, PCB, mounting hardware, marked with amber checkmarks) against what the buyer must budget for separately (switches, keycaps, stabilizers often, cable sometimes, marked with neutral plus marks rather than a caution color since these are budgeting notes, not warnings).",
+  "target": "apps/web/public/article-viz/custom-keyboard-kit-buyers-guide/whats-in-the-box.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "custom-keyboard-kit-buyers-guide.mdx § 'What's actually in the box' — 'A barebones kit reliably includes the case shell, the plate, the PCB, and the screws that hold them together. It inconsistently includes stabilizers... It rarely includes a USB cable of any real quality, and it never includes switches or keycaps.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/custom-keyboard-kit-buyers-guide/whats-in-the-box.svg"],
+  "warnings": []
+}

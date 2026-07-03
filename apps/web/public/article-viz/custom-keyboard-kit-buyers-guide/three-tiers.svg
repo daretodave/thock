@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Matrix comparing what's included in a prebuilt board, a barebones kit, and loose-parts DIY across case, plate, PCB, mounting hardware, stabilizers, switches, and keycaps</title>
+
+  <!-- Column headers -->
+  <text x="560" y="55" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" font-weight="700" letter-spacing="0.05em" text-anchor="middle">PREBUILT</text>
+  <text x="800" y="55" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.10 80)" stroke="none" font-weight="700" letter-spacing="0.05em" text-anchor="middle">BAREBONES KIT</text>
+  <text x="1040" y="55" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" font-weight="700" letter-spacing="0.05em" text-anchor="middle">LOOSE PARTS</text>
+  <line x1="40" y1="70" x2="1160" y2="70" stroke-opacity="0.25"/>
+
+  <!-- Column guide lines -->
+  <g stroke-opacity="0.15" stroke-dasharray="3 7">
+    <line x1="560" y1="80" x2="560" y2="490"/>
+    <line x1="800" y1="80" x2="800" y2="490"/>
+    <line x1="1040" y1="80" x2="1040" y2="490"/>
+  </g>
+
+  <!-- Row dividers + labels -->
+  <g font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">
+    <text x="40" y="115">Case</text>
+    <text x="40" y="170">Plate</text>
+    <text x="40" y="225">PCB</text>
+    <text x="40" y="280">Mounting hardware</text>
+    <text x="40" y="335">Stabilizers</text>
+    <text x="40" y="390">Switches</text>
+    <text x="40" y="445">Keycaps</text>
+  </g>
+  <g stroke-opacity="0.12" stroke-dasharray="4 6">
+    <line x1="40" y1="130" x2="1160" y2="130"/>
+    <line x1="40" y1="185" x2="1160" y2="185"/>
+    <line x1="40" y1="240" x2="1160" y2="240"/>
+    <line x1="40" y1="295" x2="1160" y2="295"/>
+    <line x1="40" y1="350" x2="1160" y2="350"/>
+    <line x1="40" y1="405" x2="1160" y2="405"/>
+  </g>
+
+  <!-- Dot legend helper macros (manually repeated) -->
+  <!-- Row 1: Case — filled, filled, open -->
+  <circle cx="560" cy="108" r="9" fill="oklch(0.78 0.005 90)" fill-opacity="0.55" stroke="none"/>
+  <circle cx="800" cy="108" r="9" fill="oklch(0.78 0.10 80)" stroke="none"/>
+  <circle cx="1040" cy="108" r="9" stroke-opacity="0.5"/>
+
+  <!-- Row 2: Plate — filled, filled, open -->
+  <circle cx="560" cy="163" r="9" fill="oklch(0.78 0.005 90)" fill-opacity="0.55" stroke="none"/>
+  <circle cx="800" cy="163" r="9" fill="oklch(0.78 0.10 80)" stroke="none"/>
+  <circle cx="1040" cy="163" r="9" stroke-opacity="0.5"/>
+
+  <!-- Row 3: PCB — filled, filled, open -->
+  <circle cx="560" cy="218" r="9" fill="oklch(0.78 0.005 90)" fill-opacity="0.55" stroke="none"/>
+  <circle cx="800" cy="218" r="9" fill="oklch(0.78 0.10 80)" stroke="none"/>
+  <circle cx="1040" cy="218" r="9" stroke-opacity="0.5"/>
+
+  <!-- Row 4: Mounting hardware — filled, filled, open -->
+  <circle cx="560" cy="273" r="9" fill="oklch(0.78 0.005 90)" fill-opacity="0.55" stroke="none"/>
+  <circle cx="800" cy="273" r="9" fill="oklch(0.78 0.10 80)" stroke="none"/>
+  <circle cx="1040" cy="273" r="9" stroke-opacity="0.5"/>
+
+  <!-- Row 5: Stabilizers — filled, half, open -->
+  <circle cx="560" cy="328" r="9" fill="oklch(0.78 0.005 90)" fill-opacity="0.55" stroke="none"/>
+  <circle cx="800" cy="328" r="9" fill="oklch(0.78 0.10 80)" fill-opacity="0.4" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.8"/>
+  <circle cx="1040" cy="328" r="9" stroke-opacity="0.5"/>
+
+  <!-- Row 6: Switches — filled, open, open -->
+  <circle cx="560" cy="383" r="9" fill="oklch(0.78 0.005 90)" fill-opacity="0.55" stroke="none"/>
+  <circle cx="800" cy="383" r="9" stroke-opacity="0.5"/>
+  <circle cx="1040" cy="383" r="9" stroke-opacity="0.5"/>
+
+  <!-- Row 7: Keycaps — filled, open, open -->
+  <circle cx="560" cy="438" r="9" fill="oklch(0.78 0.005 90)" fill-opacity="0.55" stroke="none"/>
+  <circle cx="800" cy="438" r="9" stroke-opacity="0.5"/>
+  <circle cx="1040" cy="438" r="9" stroke-opacity="0.5"/>
+
+  <!-- Legend -->
+  <g font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">
+    <circle cx="55" cy="480" r="7" fill="oklch(0.78 0.10 80)" stroke="none"/>
+    <text x="70" y="484">included</text>
+    <circle cx="180" cy="480" r="7" fill="oklch(0.78 0.10 80)" fill-opacity="0.4" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.8"/>
+    <text x="195" y="484">varies by vendor</text>
+    <circle cx="350" cy="480" r="7" stroke-opacity="0.5"/>
+    <text x="365" y="484">source separately</text>
+  </g>
+
+  <!-- Brass-bronze theme dot -->
+  <circle cx="1170" cy="30" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

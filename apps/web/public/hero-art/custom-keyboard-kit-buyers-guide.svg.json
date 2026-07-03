@@ -1,0 +1,31 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-03T00:00:00Z",
+  "commit": "ce24be39d7646112d4795de0340c26afe5c5f90c",
+  "kind": "hero-art",
+  "article_slug": "custom-keyboard-kit-buyers-guide",
+  "article_pillar": "guides",
+  "brief_summary": "Hero art for the guides-pillar buyer's guide on choosing a first barebones custom keyboard kit (case + plate + PCB, not a full board). Motif: exploded-view stacked layers — case shell, plate, PCB — with dashed explode-gap dividers, downward assembly arrows, alignment guides tying standoff/mounting-hole positions across the three layers, and a faint ghost silhouette at the bottom showing the assembled result. Conveys 'kit of parts you assemble' rather than a finished keyboard.",
+  "target": "apps/web/public/hero-art/custom-keyboard-kit-buyers-guide.svg",
+  "source": "plan/bearings.md § Article hero art — colorful keyboard SVGs (locked 2026-05-09)",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject; guide default is an annotated motif — reinterpreted here as an exploded kit-parts stack (case/plate/PCB) since that is the article's literal subject matter",
+  "size": [1200, 750],
+  "subject": "Exploded-view diagram of a barebones keyboard kit: a case-shell silhouette (top layer) with standoff posts, a switch plate (middle layer) with cutouts and mounting holes, and a PCB (bottom layer) with a connector notch, trace hints, and mounting holes — all three registered to the same x-positions via faint dashed alignment guides. Downward arrows mark the explode gaps as assembly steps. A faint dashed ghost silhouette below shows the finished, assembled case with a single ochre accent carried through as the visual through-line.",
+  "splash_color": {
+    "name": "ochre",
+    "oklch": "oklch(0.72 0.13 88)"
+  },
+  "accent_color": {
+    "name": "warm-bronze (theme accent)",
+    "oklch": "oklch(0.80 0.135 75)"
+  },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "tokens_sha256": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": [],
+  "outputs": [
+    "apps/web/public/hero-art/custom-keyboard-kit-buyers-guide.svg"
+  ],
+  "warnings": []
+}

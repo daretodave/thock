@@ -1,0 +1,106 @@
+---
+slug: custom-keyboard-kit-buyers-guide
+title: "Choosing your first custom keyboard kit: a buyer's guide"
+lede: "Most first custom keyboards aren't built from loose parts and aren't bought finished — they're a barebones kit, a case-plate-PCB bundle that leaves the rest of the decision to the buyer. Here's how to make that decision without guessing."
+author: thock
+pillar: guides
+guideSection: null
+tags: [beginner, hot-swap, gasket-mount, barebones-kit, aluminum, prebuilt]
+publishedAt: '2026-06-27T14:00:00.000Z'
+updatedAt: '2026-06-27T14:00:00.000Z'
+heroImage: /hero-art/custom-keyboard-kit-buyers-guide.svg
+heroImageAlt: "An exploded side-profile diagram of a keyboard kit's three core layers — case shell, plate, and PCB — stacked with dashed explode-lines and an amber splash marking the hot-swap sockets on the PCB layer."
+featured: false
+popularityScore: 0
+readTimeMinutes: 7
+mentionedParts:
+  - id: kbd75v3
+    kind: board
+    slug: kbd75v3
+  - id: qk75
+    kind: board
+    slug: qk75
+  - id: drop-ctrl
+    kind: board
+    slug: drop-ctrl
+  - id: keychron-q1-he
+    kind: board
+    slug: keychron-q1-he
+---
+
+"Building a custom keyboard" sounds like it means sourcing every part from scratch. For almost everyone buying their first one, it doesn't. It means buying a barebones kit — a case, a plate, and a PCB, sold as a bundle — and then making three or four smaller decisions on top of it. Those smaller decisions are where a first build actually succeeds or goes sideways, and none of them are obvious from a product listing photo.
+
+This guide is the zoomed-out companion to picking a switch or picking a layout. It's about the box the rest of the build goes into.
+
+## Prebuilt, barebones, or loose parts
+
+Three tiers cover the market, and the words get used loosely enough that it's worth pinning down before spending anything.
+
+A **prebuilt** board ships complete — case, plate, PCB, switches, keycaps, stabilizers, cable, ready to plug in and type on. A **barebones kit** ships the structural core — case, plate, PCB, mounting hardware — and stops there. The buyer supplies switches and keycaps separately, and often the stabilizers too. **Loose-parts DIY** means sourcing the case, the plate, and the PCB from separate vendors individually, with no guarantee any two of them were designed against the same tolerances.
+
+<InlineViz
+  src="/article-viz/custom-keyboard-kit-buyers-guide/three-tiers.svg"
+  alt="A matrix with three column headers — prebuilt, barebones kit, loose parts — and seven row labels: case, plate, PCB, mounting hardware, stabilizers, switches, keycaps. Filled amber dots mark what's included at each tier, open dots mark what the buyer must still source, and half-filled dots mark items that vary by vendor."
+  caption="The barebones kit is the middle tier — structurally complete, functionally unfinished."
+  accent="amber"
+/>
+
+The barebones kit is what most people mean when they say "custom keyboard," and it's the right default for a first build. It removes the compatibility risk of loose parts — the case, plate, and PCB are guaranteed to fit each other, because the vendor designed and tested them as a set — while still leaving the two most personal choices, switches and keycaps, entirely open. A board like the <PartReference id="kbd75v3" /> from <Mono>KBDfans</Mono> or the <PartReference id="qk75" /> from <Mono>CannonKeys</Mono> ships exactly this way: case, plate, PCB, screws, and nothing that touches a finger. Loose-parts DIY is worth knowing about, not worth starting with — it's the tier experienced builders move to once they have specific opinions about plate material or foam stack that a kit vendor's bundle doesn't offer.
+
+## Hot-swap or solder — the one decision that's hard to undo
+
+Every barebones kit's PCB is either hot-swap or solder, and this is the single spec on the listing page that actually gates what a first build can become. A hot-swap PCB has small sockets under each key position that a switch plugs directly into — no soldering iron, no desoldering to change a switch later, and no risk of a cold joint or a lifted pad on a first attempt. A solder PCB requires soldering every switch to the board permanently; changing a switch afterward means desoldering it cleanly, which is a real skill with a real failure mode for anyone doing it for the first time.
+
+<InlineViz
+  src="/article-viz/custom-keyboard-kit-buyers-guide/hotswap-vs-solder.svg"
+  alt="A four-row comparison ladder between hot-swap and solder PCBs, across tools required, switch changes later, plate feel, and first-build risk. Amber bars highlight the winning option per row: hot-swap wins tools required, switch changes later, and first-build risk; solder wins plate feel."
+  caption="Solder wins exactly one axis. Hot-swap wins the three that matter on a first build."
+  accent="amber"
+/>
+
+Hot-swap is the sane default for a first kit, and it isn't close. A soldering iron is one more tool and one more skill standing between a beginner and a working keyboard, and the ability to change switch families later — without unsoldering anything — is worth more to a first-time builder than any of the marginal downsides. Those downsides are real but small: hot-swap sockets add a fractional amount of resistance and flex under the plate compared to a switch soldered directly to copper, which some experienced builders can feel as a slightly softer, less direct bottom-out. That difference is a second-build consideration, not a first one.
+
+<Callout type="warn" title="Check the pin count before ordering switches">
+  Hot-swap sockets are built for either 5-pin or 3-pin switches, and the two aren't always interchangeable without clipping the extra plastic pins off a 5-pin switch first. The kit's spec sheet will say which the PCB expects — check it before the switch order goes in, not after it arrives.
+</Callout>
+
+Wireless changes the calculation slightly. The <PartReference id="qk75" /> ships both wired and wireless hot-swap PCB options from the same case, which is a useful pattern to look for — it means the hot-swap decision and the wireless decision aren't forced together. A board like the <PartReference id="keychron-q1-he" /> sits at the opposite end of this whole conversation: it's a hot-swap board too, but it ships prebuilt, complete with magnetic switches and firmware configured out of the box, which is a different product entirely from a barebones kit even though the spec sheets share the word "hot-swap."
+
+## Mounting style and case material — fixed at purchase
+
+Two more specs on the same listing page are worth flagging even briefly, because unlike switches and keycaps, they can't be changed after the kit ships.
+
+Mounting style — gasket, top-mount, tray-mount, or integrated plate — decides how the plate physically relates to the case, and that relationship shapes the typing feel more than almost any other single spec. It's not something to guess at from a render; the full breakdown of what each style actually does to sound and feel lives in [mounting styles, compared](/article/mounting-styles-compared). What matters here is simpler: the kit's listing will name one of the four, and it's worth reading that name and knowing roughly what it means before checkout, not after the board arrives feeling different from expected.
+
+Case material works the same way. Aluminium, polycarbonate, and ABS aren't cosmetic choices — they set the acoustic and structural baseline the rest of the build sits inside, and the tradeoffs between them are covered in full in [case materials, compared](/article/case-materials-compared). The <PartReference id="drop-ctrl" /> is a useful reference point for the accessible end of aluminium: a CNC-machined metal case at a price that doesn't require a boutique group-buy, which is a fair benchmark for what "aluminium, but not expensive" looks like in a barebones-adjacent kit.
+
+## What's actually in the box
+
+The listing photo shows a finished keyboard. The box does not contain a finished keyboard. This is the single most common source of first-kit sticker shock, and it's worth budgeting for explicitly before the kit itself goes in the cart.
+
+<InlineViz
+  src="/article-viz/custom-keyboard-kit-buyers-guide/whats-in-the-box.svg"
+  alt="Two-column checklist. The left column, headed IN THE BOX and marked with amber checkmarks, lists case, plate, PCB, and mounting hardware. The right column, headed BUDGET SEPARATELY and marked with open plus marks, lists switches, keycaps, stabilizers often, and cable sometimes."
+  caption="Stabilizers and cables are the two line items builders most often forget to price in."
+  accent="amber"
+/>
+
+A barebones kit reliably includes the case shell, the plate, the PCB, and the screws that hold them together. It inconsistently includes stabilizers — some vendors bundle screw-in stabilizers, others leave them out entirely, and the listing page is the only place this gets specified, so it's worth actually reading rather than assuming. It rarely includes a USB cable of any real quality, and it never includes switches or keycaps. Those three categories — switches, keycaps, and whatever stabilizers didn't come in the box — routinely add up to as much as the kit itself, sometimes more once a keycap set with a full modifier kit and novelties is factored in. Drop sells the <PartReference id="drop-ctrl" /> as both a barebones case-and-PCB listing and a complete listing with switches included, which is a clean illustration of the price gap between the two: the same board, split into two SKUs, at two very different totals.
+
+<Callout type="note" title="Buy the whole stack before checkout">
+  Price the kit, the switches, the keycaps, and the stabilizers together before ordering any of them. A kit that looks like the cheapest option on a shortlist can end up the most expensive full build once the rest of the stack is priced in — and the reverse happens just as often.
+</Callout>
+
+## The checklist
+
+In order, for a first barebones kit:
+
+1. **Pick the layout footprint first.** 60%, 65%, 75%, TKL — the case size is fixed at purchase and touches every keycap set and every desk-fit decision downstream of it.
+2. **Confirm hot-swap.** Unless there's a specific reason to solder — cost, a plate feel preference already formed from a prior build — hot-swap is the default.
+3. **Read the mount style and case material off the spec sheet**, and cross-check them against what those specs actually mean rather than assuming from the render.
+4. **Price the full stack** — kit, switches, keycaps, stabilizers, cable — before ordering the kit alone.
+5. **Check for a hot-swap socket pin count and a stabilizer inclusion note** on the listing page specifically; these are the two details vendors most often bury in a spec table instead of the main description.
+
+## What to watch for next
+
+Hot-swap has become close to the default assumption on mid-tier and above barebones kits, which means the harder decision for most first-time buyers has already shifted away from "hot-swap or solder" and toward "which mount style and which case material" — the two specs that are fixed at purchase and the two this guide points elsewhere for. The next thing worth watching is how far vendors keep splitting SKUs the way Drop splits the CTRL — barebones and complete versions of the identical board, priced and sold separately — because that split is what makes the actual cost of "the rest of the stack" visible before checkout instead of after it.

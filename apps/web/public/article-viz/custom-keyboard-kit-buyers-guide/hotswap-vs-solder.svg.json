@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-27T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "custom-keyboard-kit-buyers-guide",
+  "article_pillar": "guides",
+  "section_anchor": "hot-swap-or-solder-the-one-decision-thats-hard-to-undo",
+  "brief_summary": "Four-row comparison ladder between hot-swap and solder PCBs across tools required, switch changes later, plate feel, and first-build risk. Each row highlights the winning option in an amber-tinted panel — hot-swap wins three of the four rows, solder wins plate feel — matching the article's argument that hot-swap is the sane first-kit default.",
+  "target": "apps/web/public/article-viz/custom-keyboard-kit-buyers-guide/hotswap-vs-solder.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "custom-keyboard-kit-buyers-guide.mdx § 'Hot-swap or solder — the one decision that's hard to undo' — 'A hot-swap PCB has small sockets under each key position that a switch plugs directly into — no soldering iron, no desoldering to change a switch later, and no risk of a cold joint or a lifted pad on a first attempt.'",
+    "custom-keyboard-kit-buyers-guide.mdx § 'Hot-swap or solder — the one decision that's hard to undo' — 'hot-swap sockets add a fractional amount of resistance and flex under the plate compared to a switch soldered directly to copper, which some experienced builders can feel as a slightly softer, less direct bottom-out.'",
+    "custom-keyboard-kit-buyers-guide.mdx § 'Hot-swap or solder — the one decision that's hard to undo' — 'Solder wins exactly one axis. Hot-swap wins the three that matter on a first build.' (InlineViz caption)"
+  ],
+  "outputs": ["apps/web/public/article-viz/custom-keyboard-kit-buyers-guide/hotswap-vs-solder.svg"],
+  "warnings": []
+}

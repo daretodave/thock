@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-27T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "custom-keyboard-kit-buyers-guide",
+  "article_pillar": "guides",
+  "section_anchor": "prebuilt-barebones-or-loose-parts",
+  "brief_summary": "Seven-row by three-column matrix comparing what's included at each of the three purchasing tiers — prebuilt, barebones kit, loose-parts DIY — across case, plate, PCB, mounting hardware, stabilizers, switches, and keycaps. Filled dots mark included items, an amber-tinted half-fill marks vendor-dependent inclusion, open dots mark items the buyer must source separately.",
+  "target": "apps/web/public/article-viz/custom-keyboard-kit-buyers-guide/three-tiers.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "custom-keyboard-kit-buyers-guide.mdx § 'Prebuilt, barebones, or loose parts' — 'A prebuilt board ships complete — case, plate, PCB, switches, keycaps, stabilizers, cable, ready to plug in and type on. A barebones kit ships the structural core — case, plate, PCB, mounting hardware — and stops there. The buyer supplies switches and keycaps separately, and often the stabilizers too.'",
+    "custom-keyboard-kit-buyers-guide.mdx § 'Prebuilt, barebones, or loose parts' — 'Loose-parts DIY means sourcing the case, the plate, and the PCB from separate vendors individually, with no guarantee any two of them were designed against the same tolerances.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/custom-keyboard-kit-buyers-guide/three-tiers.svg"],
+  "warnings": []
+}

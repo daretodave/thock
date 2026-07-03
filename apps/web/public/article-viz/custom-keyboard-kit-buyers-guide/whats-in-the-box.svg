@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Two-column checklist of what a barebones kit includes versus what a buyer must budget for separately — case, plate, PCB, and mounting hardware in the box; switches, keycaps, stabilizers often, and cable sometimes budgeted separately</title>
+
+  <!-- Column headers -->
+  <text x="60" y="55" font-family="IBM Plex Sans, sans-serif" font-size="19" fill="oklch(0.78 0.10 80)" stroke="none" font-weight="700" letter-spacing="0.03em">IN THE BOX</text>
+  <line x1="60" y1="66" x2="280" y2="66" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.6" stroke-width="1.5"/>
+
+  <text x="640" y="55" font-family="IBM Plex Sans, sans-serif" font-size="19" fill="oklch(0.78 0.005 90)" stroke="none" font-weight="700" letter-spacing="0.03em">BUDGET SEPARATELY</text>
+  <line x1="640" y1="66" x2="960" y2="66" stroke-opacity="0.5" stroke-width="1.5"/>
+
+  <!-- Vertical divider -->
+  <line x1="600" y1="40" x2="600" y2="410" stroke-opacity="0.15" stroke-dasharray="4 6"/>
+
+  <!-- IN THE BOX row 1: Case -->
+  <circle cx="80" cy="120" r="16" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.85"/>
+  <path d="M 72 120 L 78 127 L 90 112" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="2.5"/>
+  <text x="115" y="126" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none">Case</text>
+
+  <!-- IN THE BOX row 2: Plate -->
+  <circle cx="80" cy="180" r="16" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.85"/>
+  <path d="M 72 180 L 78 187 L 90 172" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="2.5"/>
+  <text x="115" y="186" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none">Plate</text>
+
+  <!-- IN THE BOX row 3: PCB -->
+  <circle cx="80" cy="240" r="16" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.85"/>
+  <path d="M 72 240 L 78 247 L 90 232" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="2.5"/>
+  <text x="115" y="246" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none">PCB</text>
+
+  <!-- IN THE BOX row 4: Mounting hardware -->
+  <circle cx="80" cy="300" r="16" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.85"/>
+  <path d="M 72 300 L 78 307 L 90 292" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="2.5"/>
+  <text x="115" y="306" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none">Mounting hardware</text>
+
+  <!-- BUDGET SEPARATELY row 1: Switches -->
+  <circle cx="660" cy="120" r="16" stroke-opacity="0.5"/>
+  <line x1="660" y1="112" x2="660" y2="128" stroke-opacity="0.6" stroke-width="2"/>
+  <line x1="652" y1="120" x2="668" y2="120" stroke-opacity="0.6" stroke-width="2"/>
+  <text x="695" y="126" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none">Switches</text>
+
+  <!-- BUDGET SEPARATELY row 2: Keycaps -->
+  <circle cx="660" cy="180" r="16" stroke-opacity="0.5"/>
+  <line x1="660" y1="172" x2="660" y2="188" stroke-opacity="0.6" stroke-width="2"/>
+  <line x1="652" y1="180" x2="668" y2="180" stroke-opacity="0.6" stroke-width="2"/>
+  <text x="695" y="186" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none">Keycaps</text>
+
+  <!-- BUDGET SEPARATELY row 3: Stabilizers, often -->
+  <circle cx="660" cy="240" r="16" stroke-opacity="0.5"/>
+  <line x1="660" y1="232" x2="660" y2="248" stroke-opacity="0.6" stroke-width="2"/>
+  <line x1="652" y1="240" x2="668" y2="240" stroke-opacity="0.6" stroke-width="2"/>
+  <text x="695" y="236" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none">Stabilizers</text>
+  <text x="695" y="256" font-family="Newsreader, serif" font-style="italic" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">often</text>
+
+  <!-- BUDGET SEPARATELY row 4: Cable, sometimes -->
+  <circle cx="660" cy="310" r="16" stroke-opacity="0.5"/>
+  <line x1="660" y1="302" x2="660" y2="318" stroke-opacity="0.6" stroke-width="2"/>
+  <line x1="652" y1="310" x2="668" y2="310" stroke-opacity="0.6" stroke-width="2"/>
+  <text x="695" y="306" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none">Cable</text>
+  <text x="695" y="326" font-family="Newsreader, serif" font-style="italic" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">sometimes</text>
+
+  <!-- Brass-bronze theme dot -->
+  <circle cx="1170" cy="30" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>
