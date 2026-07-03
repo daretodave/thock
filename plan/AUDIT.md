@@ -5935,7 +5935,7 @@ passes accumulate signals.)
 - group-buy: data/group-buys/kbdfans-gmk-cyl-masterpiece-r2.json
 - action: update status from 'live' to 'closed' in data/group-buys/kbdfans-gmk-cyl-masterpiece-r2.json
 
-### [ ] [newsletter] [4.0] Weekly digest — issue 002 due (16 days since issue 1)
+### [x] [newsletter] [4.0] Weekly digest — issue 002 due (16 days since issue 1) — addressed in d6c34e5, closes #377
 - category: content-gaps
 - filed: 2026-07-03 by newsletter-gap-survey.mjs
 - impact: 5 (newsletter archive going stale reduces /newsletter value and reader trust in cadence)
@@ -5944,5 +5944,5 @@ passes accumulate signals.)
 - next: /ship-content → newsletter type (weekly round-up, 5 pillar picks, tracker insight)
 - last-issue: 2026-06-16 (thock-weekly-001)
 - days-since: 16
-- issue: [mirror-failed: 2026-07-03]
+- issue: #377
 > Filed 2026-07-03 by newsletter-gap-survey.mjs. 16 days since issue 1. Threshold: ≥7 calendar days.
