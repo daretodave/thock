@@ -5883,7 +5883,7 @@ passes accumulate signals.)
 - score: 3.0 (impact × ease / 10)
 - issue: none yet (filed locally; observed during the readopt commit d6ed343, which briefly committed the win32-flavored regeneration — restored to the CI-generated state in the follow-up commit)
 
-### [CRITICAL HOT PURSUIT] [content-gap] [9.5] guides pillar — 0 of ≥2 articles in last 30d
+### [x] [CRITICAL HOT PURSUIT] [content-gap] [9.5] guides pillar — 0 of ≥2 articles in last 30d — addressed in 18d3607, closes #375
 - category: content-gaps
 - impact: 5 (Rule 1 sliding window — critical-hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -5894,3 +5894,15 @@ passes accumulate signals.)
 - score: 9.5
 - next: /ship-content → guides pillar article
 > Filed 2026-07-03 by content-gap-survey.mjs (auto-refill). Zero articles published in the last 30 days — critical hot pursuit (score 9.5). Loop drops iterate/polish until the pillar recovers.
+
+### [HOT PURSUIT] [content-gap] [7] guides pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 5 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: guides
+- window-count: 1
+- window-start: 2026-06-03
+- score: 7
+- next: /ship-content → guides pillar article
+> Filed 2026-07-03 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
