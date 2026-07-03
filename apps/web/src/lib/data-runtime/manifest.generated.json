@@ -770,9 +770,9 @@
       "imageUrl": null,
       "heroImage": "/group-buy-art/divinikey-dcs-dolch.svg",
       "relatedArticle": "divinikey-dcs-dolch-group-buy",
-      "status": "live",
+      "status": "closed",
       "description": "DCS Dolch — classic Dolch colorway (dark grey alphas, light grey mods) in DCS profile by Signature Plastics, designed by cartersrush; running June 1–July 1 2026 via Divinikey (NA), Prototypist (UK), Keebsupply and DeltakeyCo (EU), and six other regional vendors. Base kit $119–$128 MOQ-tiered; estimated October 2026 ship.",
-      "updatedAt": "2026-06-01T14:00:00.000Z"
+      "updatedAt": "2026-07-03T18:30:00.000Z"
     },
     {
       "slug": "kbdfans-gmk-cyl-greg-2",
@@ -6366,5 +6366,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-07-03T17:36:45.520Z"
+  "generatedAt": "2026-07-03T18:34:39.496Z"
 }

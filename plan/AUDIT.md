@@ -5926,6 +5926,7 @@ passes accumulate signals.)
 - score: 3.6 (impact × ease / 10)
 - group-buy: data/group-buys/divinikey-dcs-dolch.json
 - action: update status from 'live' to 'closed' in data/group-buys/divinikey-dcs-dolch.json
+- issue: #379
 
 ### [ ] [data] [3.6] kbdfans-gmk-cyl-masterpiece-r2 — status stale, endDate 2026-06-26 passed
 - category: data
