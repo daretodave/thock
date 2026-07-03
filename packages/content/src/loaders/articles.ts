@@ -4,7 +4,12 @@ import {
   type ArticleFrontmatter,
   type Pillar,
 } from '../schema/frontmatter'
-import { listArticleFiles, readUtf8, fileBaseName } from './paths'
+import {
+  listArticleFiles,
+  readUtf8,
+  fileBaseName,
+  toRepoRelativePosix,
+} from './paths'
 import { computeReadTime } from '../util/readTime'
 import { memo } from './memo'
 import { getAllTags } from './tags'
@@ -47,7 +52,7 @@ const loadAll = memo<Article[]>('articles', () => {
       frontmatter: parsed.data,
       body: content,
       readTime: computeReadTime(content),
-      filePath: file,
+      filePath: toRepoRelativePosix(file),
     })
   }
   // newest first

@@ -3,7 +3,12 @@ import {
   NewsletterFrontmatterSchema,
   type NewsletterFrontmatter,
 } from '../schema/newsletter'
-import { fileBaseName, listNewsletterFiles, readUtf8 } from './paths'
+import {
+  fileBaseName,
+  listNewsletterFiles,
+  readUtf8,
+  toRepoRelativePosix,
+} from './paths'
 import { memo } from './memo'
 
 export type Newsletter = {
@@ -34,7 +39,7 @@ const loadAll = memo<Newsletter[]>('newsletters', () => {
       slug: parsed.data.slug,
       frontmatter: parsed.data,
       body: content,
-      filePath: file,
+      filePath: toRepoRelativePosix(file),
     })
   }
   issues.sort((a, b) =>
