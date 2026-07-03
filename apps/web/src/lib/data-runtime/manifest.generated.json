@@ -753,9 +753,9 @@
       "imageUrl": null,
       "heroImage": "/group-buy-art/deltakeyco-gmk-cyl-pandemonium.svg",
       "relatedArticle": "gmk-cyl-pandemonium-group-buy",
-      "status": "live",
+      "status": "closed",
       "description": "DeltaKeyCo's Berserk eclipse-themed Cherry-profile doubleshot ABS set. Dark near-black base with translucent blood-red legends. Eight storefronts globally: DeltaKeyCo (primary), Prototypist (APAC), Bowl Keyboards (UK), and five regional partners. Base and novelty kits plus deskmat. June 1–July 1 2026.",
-      "updatedAt": "2026-06-23T00:00:00.000Z"
+      "updatedAt": "2026-07-03T00:00:00.000Z"
     },
     {
       "slug": "divinikey-dcs-dolch",
@@ -6366,5 +6366,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-07-03T16:48:53.834Z"
+  "generatedAt": "2026-07-03T17:36:45.520Z"
 }
