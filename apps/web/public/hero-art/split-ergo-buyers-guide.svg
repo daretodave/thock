@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — split keyboard halves, buyer's-guide callouts: column stagger, thumb cluster, tenting angle</title>
+
+  <!-- ================================================================
+       Canvas:  1200 × 750
+       Subject: top-down silhouettes of two split keyboard halves,
+                column-staggered main fields + angled thumb clusters,
+                annotated with three buyer's-guide callouts.
+       Palette:
+         Stroke   oklch(0.78 0.005 90)  warm-grey, 2px
+         Callout  oklch(0.58 0.006 90)  muted warm-grey (leader lines + labels)
+         Splash   oklch(0.68 0.165 28)  coral (highlighted decision features)
+         Bronze   oklch(0.80 0.135 75)  theme accent (top-right ornament only)
+       Background: transparent (light-mode safe per house style).
+  ================================================================ -->
+
+  <!-- Faint canvas-wide wash, coral, sets the stage -->
+  <path
+    d="M 70 90 L 1130 90 L 1130 660 L 70 660 Z"
+    fill="oklch(0.68 0.165 28 / 0.05)" stroke="none"/>
+
+  <!-- Spotlight wash behind the center gap — "the split" is the visual anchor -->
+  <ellipse cx="600" cy="420" rx="130" ry="210" fill="oklch(0.68 0.165 28 / 0.09)" stroke="none"/>
+
+  <!-- ============ LEFT HALF ============
+       Top-down silhouette. Case x=90→540, main body y=300→560.
+       5 columns × 4 rows + 3-key thumb cluster tucked below.
+       Column 3 (middle finger, the deepest stagger) and the thumb
+       cluster are picked out in coral — the two callout targets. -->
+
+  <!-- Left half outer case -->
+  <path
+    d="
+      M 104 300
+      L 526 300
+      L 540 332
+      L 540 528
+      L 460 560
+      L 104 560
+      Q 90 560 90 546
+      L 90 314
+      Q 90 300 104 300
+      Z"/>
+
+  <!-- Left half inset bezel hint -->
+  <path
+    d="
+      M 110 316
+      L 522 316
+      L 524 334
+      L 524 522
+      L 456 544
+      L 110 544
+      Q 106 544 106 540
+      L 106 320
+      Q 106 316 110 316
+      Z"
+    stroke-opacity="0.35"/>
+
+  <!-- Left half: 5 columns × 4 rows, column-staggered per finger length -->
+  <g stroke-opacity="0.7">
+    <!-- Column 1 (pinky, lowest) -->
+    <circle cx="146" cy="346" r="3"/>
+    <circle cx="146" cy="396" r="3"/>
+    <circle cx="146" cy="446" r="3"/>
+    <circle cx="146" cy="496" r="3"/>
+    <!-- Column 2 (ring) -->
+    <circle cx="226" cy="338" r="3"/>
+    <circle cx="226" cy="388" r="3"/>
+    <circle cx="226" cy="438" r="3"/>
+    <circle cx="226" cy="488" r="3"/>
+    <!-- Column 3 (middle, highest — callout 1 target, coral) -->
+    <circle cx="306" cy="332" r="3.5" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)"/>
+    <circle cx="306" cy="382" r="3" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.75"/>
+    <circle cx="306" cy="432" r="3" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.75"/>
+    <circle cx="306" cy="482" r="3" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.75"/>
+    <!-- Column 4 (index) -->
+    <circle cx="386" cy="338" r="3"/>
+    <circle cx="386" cy="388" r="3"/>
+    <circle cx="386" cy="438" r="3"/>
+    <circle cx="386" cy="488" r="3"/>
+    <!-- Column 5 (inner index) -->
+    <circle cx="466" cy="346" r="3"/>
+    <circle cx="466" cy="396" r="3"/>
+    <circle cx="466" cy="446" r="3"/>
+    <circle cx="466" cy="496" r="3"/>
+  </g>
+
+  <!-- Left thumb cluster — callout 2 target, coral -->
+  <g stroke="oklch(0.68 0.165 28)" stroke-opacity="0.9" fill="oklch(0.68 0.165 28 / 0.14)">
+    <rect x="380" y="582" width="32" height="24" rx="3" ry="3" transform="rotate(-12 396 594)"/>
+    <rect x="420" y="592" width="32" height="24" rx="3" ry="3" transform="rotate(-12 436 604)"/>
+    <rect x="460" y="602" width="32" height="24" rx="3" ry="3" transform="rotate(-12 476 614)"/>
+  </g>
+
+  <!-- Faint column guide lines on left half -->
+  <g stroke-opacity="0.18">
+    <line x1="186" y1="320" x2="186" y2="540"/>
+    <line x1="266" y1="320" x2="266" y2="540"/>
+    <line x1="346" y1="320" x2="346" y2="540"/>
+    <line x1="426" y1="320" x2="426" y2="540"/>
+  </g>
+
+  <!-- ============ RIGHT HALF ============
+       Mirror of the left. Case x=660→1110. Neutral — the callouts
+       point at the left half only; the article notes the mirror. -->
+
+  <!-- Right half outer case -->
+  <path
+    d="
+      M 1096 300
+      L 674 300
+      L 660 332
+      L 660 528
+      L 740 560
+      L 1096 560
+      Q 1110 560 1110 546
+      L 1110 314
+      Q 1110 300 1096 300
+      Z"/>
+
+  <!-- Right half inset bezel hint -->
+  <path
+    d="
+      M 1090 316
+      L 678 316
+      L 676 334
+      L 676 522
+      L 744 544
+      L 1090 544
+      Q 1094 544 1094 540
+      L 1094 320
+      Q 1094 316 1090 316
+      Z"
+    stroke-opacity="0.35"/>
+
+  <!-- Right half: 5 columns × 4 rows, column-staggered (mirror of left) -->
+  <g stroke-opacity="0.7">
+    <!-- Column 1 (inner index) -->
+    <circle cx="734" cy="346" r="3"/>
+    <circle cx="734" cy="396" r="3"/>
+    <circle cx="734" cy="446" r="3"/>
+    <circle cx="734" cy="496" r="3"/>
+    <!-- Column 2 (index) -->
+    <circle cx="814" cy="338" r="3"/>
+    <circle cx="814" cy="388" r="3"/>
+    <circle cx="814" cy="438" r="3"/>
+    <circle cx="814" cy="488" r="3"/>
+    <!-- Column 3 (middle, highest) -->
+    <circle cx="894" cy="332" r="3"/>
+    <circle cx="894" cy="382" r="3"/>
+    <circle cx="894" cy="432" r="3"/>
+    <circle cx="894" cy="482" r="3"/>
+    <!-- Column 4 (ring) -->
+    <circle cx="974" cy="338" r="3"/>
+    <circle cx="974" cy="388" r="3"/>
+    <circle cx="974" cy="438" r="3"/>
+    <circle cx="974" cy="488" r="3"/>
+    <!-- Column 5 (pinky) -->
+    <circle cx="1054" cy="346" r="3"/>
+    <circle cx="1054" cy="396" r="3"/>
+    <circle cx="1054" cy="446" r="3"/>
+    <circle cx="1054" cy="496" r="3"/>
+  </g>
+
+  <!-- Right thumb cluster — neutral (mirrored, +12deg) -->
+  <g stroke-opacity="0.85">
+    <rect x="708" y="602" width="32" height="24" rx="3" ry="3" transform="rotate(12 724 614)"/>
+    <rect x="748" y="592" width="32" height="24" rx="3" ry="3" transform="rotate(12 764 604)"/>
+    <rect x="788" y="582" width="32" height="24" rx="3" ry="3" transform="rotate(12 804 594)"/>
+  </g>
+
+  <!-- Faint column guide lines on right half -->
+  <g stroke-opacity="0.18">
+    <line x1="774" y1="320" x2="774" y2="540"/>
+    <line x1="854" y1="320" x2="854" y2="540"/>
+    <line x1="934" y1="320" x2="934" y2="540"/>
+    <line x1="1014" y1="320" x2="1014" y2="540"/>
+  </g>
+
+  <!-- ============ TENTING-ANGLE GLYPH ============
+       Side-profile wedge, bottom-right margin. Ground reference (flat,
+       dashed) vs. tilted case profile pivoting up from the near edge,
+       with a coral angle arc marking the tent — callout 3 target. -->
+  <line x1="965" y1="712" x2="1075" y2="712" stroke-opacity="0.3" stroke-dasharray="3 4"/>
+  <path
+    d="M 970 712 L 1060 712 L 1052 692 L 978 692 Z"
+    transform="rotate(-16 970 712)"
+    stroke-opacity="0.85"/>
+  <path
+    d="M 996 712 A 26 26 0 0 0 995.0 704.8"
+    stroke="oklch(0.68 0.165 28)" stroke-width="1.6" stroke-opacity="0.85" fill="none"/>
+  <circle cx="970" cy="712" r="3" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)"/>
+
+  <!-- ================================================================
+       CALLOUT ANNOTATIONS
+       Leader lines + labels: oklch(0.58 0.006 90), JetBrains Mono 13px.
+       Each ends in a small terminal dot at the label anchor.
+  ================================================================ -->
+
+  <!-- Callout 1: column stagger — target col 3 top dot on the left half -->
+  <g stroke="oklch(0.58 0.006 90)" stroke-width="1.2" fill="none">
+    <path d="M 306 332 L 306 210 L 190 210"/>
+    <circle cx="190" cy="210" r="3" fill="oklch(0.58 0.006 90)" stroke="none"/>
+  </g>
+  <text x="190" y="192" font-family="'JetBrains Mono','IBM Plex Mono',ui-monospace,monospace"
+    font-size="13" fill="oklch(0.58 0.006 90)" letter-spacing="0.03em"
+    text-anchor="middle" stroke="none">column</text>
+  <text x="190" y="207" font-family="'JetBrains Mono','IBM Plex Mono',ui-monospace,monospace"
+    font-size="13" fill="oklch(0.58 0.006 90)" letter-spacing="0.03em"
+    text-anchor="middle" stroke="none">stagger</text>
+
+  <!-- Callout 2: thumb cluster — target left thumb cluster -->
+  <g stroke="oklch(0.58 0.006 90)" stroke-width="1.2" fill="none">
+    <path d="M 374 606 L 300 606 L 300 668"/>
+    <circle cx="300" cy="668" r="3" fill="oklch(0.58 0.006 90)" stroke="none"/>
+  </g>
+  <circle cx="374" cy="606" r="2.5" fill="oklch(0.58 0.006 90)" stroke="none"/>
+  <text x="300" y="685" font-family="'JetBrains Mono','IBM Plex Mono',ui-monospace,monospace"
+    font-size="13" fill="oklch(0.58 0.006 90)" letter-spacing="0.03em"
+    text-anchor="middle" stroke="none">thumb</text>
+  <text x="300" y="700" font-family="'JetBrains Mono','IBM Plex Mono',ui-monospace,monospace"
+    font-size="13" fill="oklch(0.58 0.006 90)" letter-spacing="0.03em"
+    text-anchor="middle" stroke="none">cluster</text>
+
+  <!-- Callout 3: tenting angle — target the wedge glyph -->
+  <g stroke="oklch(0.58 0.006 90)" stroke-width="1.2" fill="none">
+    <path d="M 1038 674 L 1038 645 L 1100 645"/>
+    <circle cx="1100" cy="645" r="3" fill="oklch(0.58 0.006 90)" stroke="none"/>
+  </g>
+  <text x="1100" y="628" font-family="'JetBrains Mono','IBM Plex Mono',ui-monospace,monospace"
+    font-size="13" fill="oklch(0.58 0.006 90)" letter-spacing="0.03em"
+    text-anchor="middle" stroke="none">tenting</text>
+  <text x="1100" y="643" font-family="'JetBrains Mono','IBM Plex Mono',ui-monospace,monospace"
+    font-size="13" fill="oklch(0.58 0.006 90)" letter-spacing="0.03em"
+    text-anchor="middle" stroke="none">angle</text>
+
+  <!-- ================================================================
+       BRASS / BRONZE THEME DOT — upper-right ornamental anchor
+       (family convention, present in every thock hero)
+  ================================================================ -->
+  <circle cx="1148" cy="70" r="3.5" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

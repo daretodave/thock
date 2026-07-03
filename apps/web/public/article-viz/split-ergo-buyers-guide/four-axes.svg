@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Four independent design axes that combine to make a split or ergonomic keyboard — monoblock vs split, row-stagger vs column-stagger, flat vs tented, flat plate vs sculpted well</title>
+
+  <!-- Row dividers -->
+  <g stroke-opacity="0.2" stroke-dasharray="4 6">
+    <line x1="40" y1="155" x2="1160" y2="155"/>
+    <line x1="40" y1="285" x2="1160" y2="285"/>
+    <line x1="40" y1="415" x2="1160" y2="415"/>
+  </g>
+
+  <!-- ══ ROW 1: SPLIT AXIS ══════════════════════════════════════════ -->
+  <text x="40" y="95" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.10 80)" stroke="none" font-weight="600" letter-spacing="0.06em">SPLIT AXIS</text>
+
+  <!-- monoblock -->
+  <rect x="380" y="65" width="100" height="50" rx="6" stroke-opacity="0.85"/>
+  <text x="430" y="140" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">monoblock</text>
+
+  <line x1="490" y1="90" x2="820" y2="90" stroke-opacity="0.3" stroke-dasharray="3 7"/>
+
+  <!-- split -->
+  <rect x="825" y="65" width="45" height="50" rx="6" stroke-opacity="0.85"/>
+  <rect x="895" y="65" width="45" height="50" rx="6" stroke-opacity="0.85"/>
+  <circle cx="890" cy="52" r="4" fill="oklch(0.78 0.10 80)" stroke="none"/>
+  <text x="890" y="140" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.95">split</text>
+
+  <!-- ══ ROW 2: STAGGER AXIS ════════════════════════════════════════ -->
+  <text x="40" y="225" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.10 80)" stroke="none" font-weight="600" letter-spacing="0.06em">STAGGER AXIS</text>
+
+  <!-- row-stagger: rows offset horizontally -->
+  <g fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">
+    <rect x="380" y="192" width="10" height="10" rx="2"/>
+    <rect x="404" y="192" width="10" height="10" rx="2"/>
+    <rect x="428" y="192" width="10" height="10" rx="2"/>
+    <rect x="452" y="192" width="10" height="10" rx="2"/>
+
+    <rect x="392" y="212" width="10" height="10" rx="2"/>
+    <rect x="416" y="212" width="10" height="10" rx="2"/>
+    <rect x="440" y="212" width="10" height="10" rx="2"/>
+    <rect x="464" y="212" width="10" height="10" rx="2"/>
+
+    <rect x="406" y="232" width="10" height="10" rx="2"/>
+    <rect x="430" y="232" width="10" height="10" rx="2"/>
+    <rect x="454" y="232" width="10" height="10" rx="2"/>
+    <rect x="478" y="232" width="10" height="10" rx="2"/>
+  </g>
+  <text x="430" y="270" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">row-stagger</text>
+
+  <line x1="500" y1="220" x2="800" y2="220" stroke-opacity="0.3" stroke-dasharray="3 7"/>
+
+  <!-- column-stagger: columns offset vertically -->
+  <circle cx="890" cy="182" r="4" fill="oklch(0.78 0.10 80)" stroke="none"/>
+  <g fill="oklch(0.78 0.10 80)" stroke="none" opacity="0.85">
+    <rect x="836" y="230" width="10" height="10" rx="2"/>
+    <rect x="836" y="214" width="10" height="10" rx="2"/>
+    <rect x="836" y="198" width="10" height="10" rx="2"/>
+
+    <rect x="864" y="238" width="10" height="10" rx="2"/>
+    <rect x="864" y="222" width="10" height="10" rx="2"/>
+    <rect x="864" y="206" width="10" height="10" rx="2"/>
+
+    <rect x="892" y="230" width="10" height="10" rx="2"/>
+    <rect x="892" y="214" width="10" height="10" rx="2"/>
+    <rect x="892" y="198" width="10" height="10" rx="2"/>
+
+    <rect x="920" y="216" width="10" height="10" rx="2"/>
+    <rect x="920" y="200" width="10" height="10" rx="2"/>
+    <rect x="920" y="184" width="10" height="10" rx="2"/>
+  </g>
+  <text x="890" y="270" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.95">column-stagger</text>
+
+  <!-- ══ ROW 3: TENT AXIS ═══════════════════════════════════════════ -->
+  <text x="40" y="355" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.10 80)" stroke="none" font-weight="600" letter-spacing="0.06em">TENT AXIS</text>
+
+  <!-- flat -->
+  <line x1="370" y1="382" x2="490" y2="382" stroke-opacity="0.35"/>
+  <rect x="380" y="325" width="100" height="50" rx="4" stroke-opacity="0.85"/>
+  <text x="430" y="400" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">flat</text>
+
+  <line x1="500" y1="350" x2="800" y2="350" stroke-opacity="0.3" stroke-dasharray="3 7"/>
+
+  <!-- tented -->
+  <line x1="830" y1="382" x2="950" y2="382" stroke-opacity="0.35"/>
+  <rect x="840" y="325" width="100" height="50" rx="4" stroke-opacity="0.85" transform="rotate(-16 890 350)"/>
+  <path d="M 940 372 A 55 55 0 0 0 918 335" stroke-opacity="0.5"/>
+  <circle cx="890" cy="290" r="4" fill="oklch(0.78 0.10 80)" stroke="none"/>
+  <text x="890" y="400" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.95">tented</text>
+
+  <!-- ══ ROW 4: WELL AXIS ═══════════════════════════════════════════ -->
+  <text x="40" y="485" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.10 80)" stroke="none" font-weight="600" letter-spacing="0.06em">WELL AXIS</text>
+
+  <!-- flat plate -->
+  <rect x="380" y="455" width="100" height="50" rx="4" stroke-opacity="0.85"/>
+  <text x="430" y="530" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">flat plate</text>
+
+  <line x1="500" y1="480" x2="800" y2="480" stroke-opacity="0.3" stroke-dasharray="3 7"/>
+
+  <!-- sculpted well: concave cross-section -->
+  <path d="M 835 505 L 835 470 Q 890 445 945 470 L 945 505" stroke-opacity="0.85"/>
+  <circle cx="890" cy="420" r="4" fill="oklch(0.78 0.10 80)" stroke="none"/>
+  <text x="890" y="530" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.95">sculpted well</text>
+
+  <!-- Brass-bronze theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

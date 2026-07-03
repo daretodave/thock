@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>The four-step split/ergo buying decision path — name the problem, split or monoblock, kit prebuilt or sculpted, budget the relearning weeks</title>
+
+  <!-- Panel 1 -->
+  <rect x="40" y="60" width="255" height="260" rx="10" stroke-opacity="0.85"/>
+  <circle cx="90" cy="105" r="18" fill="none" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.9"/>
+  <text x="90" y="111" font-family="JetBrains Mono, monospace" font-size="16" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" font-weight="600">1</text>
+  <text x="70" y="155" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" font-weight="600">Name the</text>
+  <text x="70" y="176" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" font-weight="600">problem</text>
+  <text x="70" y="212" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">Shoulder strain, wrist</text>
+  <text x="70" y="232" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">angle, or curiosity —</text>
+  <text x="70" y="252" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">each points at a</text>
+  <text x="70" y="272" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">different fix.</text>
+
+  <!-- Arrow 1 -->
+  <line x1="300" y1="190" x2="325" y2="190" stroke-opacity="0.6"/>
+  <path d="M 318 182 L 328 190 L 318 198" stroke-opacity="0.6"/>
+
+  <!-- Panel 2 -->
+  <rect x="330" y="60" width="255" height="260" rx="10" stroke-opacity="0.85"/>
+  <circle cx="380" cy="105" r="18" fill="none" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.9"/>
+  <text x="380" y="111" font-family="JetBrains Mono, monospace" font-size="16" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" font-weight="600">2</text>
+  <text x="360" y="155" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" font-weight="600">Split or</text>
+  <text x="360" y="176" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" font-weight="600">monoblock</text>
+  <text x="360" y="212" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">Desk space and</text>
+  <text x="360" y="232" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">per-hand angle vs. a</text>
+  <text x="360" y="252" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">sculpted feel with</text>
+  <text x="360" y="272" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">no cable at all.</text>
+
+  <!-- Arrow 2 -->
+  <line x1="590" y1="190" x2="615" y2="190" stroke-opacity="0.6"/>
+  <path d="M 608 182 L 618 190 L 608 198" stroke-opacity="0.6"/>
+
+  <!-- Panel 3 -->
+  <rect x="620" y="60" width="255" height="260" rx="10" stroke-opacity="0.85"/>
+  <circle cx="670" cy="105" r="18" fill="none" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.9"/>
+  <text x="670" y="111" font-family="JetBrains Mono, monospace" font-size="16" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" font-weight="600">3</text>
+  <text x="650" y="155" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" font-weight="600">Kit, prebuilt,</text>
+  <text x="650" y="176" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" font-weight="600">or sculpted</text>
+  <text x="650" y="212" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">Match the cost and</text>
+  <text x="650" y="232" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">firmware effort to real</text>
+  <text x="650" y="252" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">tolerance for soldering</text>
+  <text x="650" y="272" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">and flashing firmware.</text>
+
+  <!-- Arrow 3 -->
+  <line x1="880" y1="190" x2="905" y2="190" stroke-opacity="0.6"/>
+  <path d="M 898 182 L 908 190 L 898 198" stroke-opacity="0.6"/>
+
+  <!-- Panel 4 -->
+  <rect x="910" y="60" width="250" height="260" rx="10" stroke-opacity="0.85"/>
+  <circle cx="960" cy="105" r="18" fill="none" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.9"/>
+  <text x="960" y="111" font-family="JetBrains Mono, monospace" font-size="16" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" font-weight="600">4</text>
+  <text x="940" y="155" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" font-weight="600">Budget the</text>
+  <text x="940" y="176" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" font-weight="600">relearning weeks</text>
+  <text x="940" y="212" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">Comfortable speed</text>
+  <text x="940" y="232" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">dips before it recovers</text>
+  <text x="940" y="252" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">— plan around it,</text>
+  <text x="940" y="272" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">not despite it.</text>
+
+  <!-- Brass-bronze theme dot -->
+  <circle cx="1170" cy="30" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

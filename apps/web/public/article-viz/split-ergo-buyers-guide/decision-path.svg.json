@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-18T13:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "split-ergo-buyers-guide",
+  "article_pillar": "guides",
+  "section_anchor": "how-to-actually-choose",
+  "brief_summary": "Four-panel numbered process strip walking through the buying decision path in order: name the problem, split or monoblock, kit/prebuilt/sculpted, budget the relearning weeks. Panel copy is drawn directly from the four numbered steps described in the article's 'How to actually choose' section.",
+  "target": "apps/web/public/article-viz/split-ergo-buyers-guide/decision-path.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "JetBrains Mono", "Newsreader"],
+  "data_sources": [
+    "split-ergo-buyers-guide.mdx § 'How to actually choose' — 'Step one: name the problem... Step two: split or monoblock... Step three: kit, prebuilt, or sculpted... Step four: budget the relearning weeks'",
+    "split-ergo-buyers-guide.mdx § 'How to actually choose' — 'self-reported transition accounts converge on roughly two weeks before things feel normal again'"
+  ],
+  "outputs": ["apps/web/public/article-viz/split-ergo-buyers-guide/decision-path.svg"],
+  "warnings": []
+}

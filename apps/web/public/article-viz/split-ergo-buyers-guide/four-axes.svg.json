@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-18T13:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "split-ergo-buyers-guide",
+  "article_pillar": "guides",
+  "section_anchor": "the-four-axes-nobody-separates",
+  "brief_summary": "Layered four-row diagram, one row per independent design axis a split/ergo board can choose: monoblock vs split, row-stagger vs column-stagger, flat vs tented, flat plate vs sculpted well. Each row shows a small line-drawn icon pair with the more committing option marked by an amber dot, matching the axis descriptions in the article's opening section.",
+  "target": "apps/web/public/article-viz/split-ergo-buyers-guide/four-axes.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "JetBrains Mono", "Newsreader"],
+  "data_sources": [
+    "split-ergo-buyers-guide.mdx § 'The four axes nobody separates' — 'Split versus monoblock... Row-stagger versus column-stagger... Flat versus tented... Flat plate versus sculpted well'",
+    "split-ergo-buyers-guide.mdx § 'The four axes nobody separates' — 'Column-stagger is the layout choice that produces the most immediate feel of \"this is different\" and also the layout choice with the steepest relearning curve'",
+    "split-ergo-buyers-guide.mdx § 'The four axes nobody separates' — 'Sculpted wells are the most committing choice on this list'"
+  ],
+  "outputs": ["apps/web/public/article-viz/split-ergo-buyers-guide/four-axes.svg"],
+  "warnings": []
+}

@@ -1,0 +1,32 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-03T13:41:30Z",
+  "commit": "67385ec510846ec70e9c8f46cd0516afb9ecbf1f",
+  "kind": "hero-art",
+  "article_slug": "split-ergo-buyers-guide",
+  "article_pillar": "guides",
+  "brief_summary": "Hero art for the guides-pillar buyer's guide on split & ergonomic keyboards. bearings.md's guide default (an annotated keycap row) is a suggestion, not a hard rule, so a more on-topic motif was chosen: top-down silhouettes of two split keyboard halves with column-staggered main fields and angled thumb clusters, carrying the guide pillar's 'annotated' quality via three buyer's-guide callouts (column stagger, thumb cluster, tenting angle) rather than the generic keycap-row default.",
+  "target": "apps/web/public/hero-art/split-ergo-buyers-guide.svg",
+  "source": "plan/bearings.md § Article hero art — colorful keyboard SVGs (locked 2026-05-09)",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject; guide subjects default to an annotated motif — reinterpreted here as callouts on a split-keyboard silhouette rather than a keycap row, per the topic-specific subject match this brief called for",
+  "size": [1200, 750],
+  "subject": "Top-down silhouettes of two split keyboard halves (left and right, mirror images, column-staggered five-column-by-four-row main fields with three-key angled thumb clusters) separated by a center gap, with three buyer's-guide callout annotations: column stagger (targeting the deepest-stagger middle column on the left half, picked out in coral), thumb cluster (targeting the left half's angled thumb keys, coral fill), and tenting angle (a small tilted side-profile case wedge in the bottom-right margin with a coral angle arc against a dashed flat-ground reference). Right half stays neutral warm-grey — the callouts point at one instance per feature, the article explains it applies to both halves.",
+  "splash_color": {
+    "name": "coral",
+    "oklch": "oklch(0.68 0.165 28)",
+    "hex_approx": "#e07a5f"
+  },
+  "accent_color": {
+    "name": "warm-bronze (theme accent)",
+    "oklch": "oklch(0.80 0.135 75)"
+  },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "callout_color": "oklch(0.58 0.006 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["JetBrains Mono", "IBM Plex Mono", "ui-monospace"],
+  "outputs": [
+    "apps/web/public/hero-art/split-ergo-buyers-guide.svg"
+  ],
+  "warnings": []
+}

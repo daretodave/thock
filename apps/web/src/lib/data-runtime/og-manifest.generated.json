@@ -7,7 +7,7 @@
         "title": "GMK CYL Masterpiece R2 closes June 26 — what the deep-blue revival gets right",
         "lede": "Energieschleuder's six-year-later return to Japanese craftsmanship aesthetics has been climbing the thock tracker all window — scoring 46 in W26 with the buy open through June 26.",
         "pillar": "news",
-        "author": "thock editorial"
+        "author": "thock"
       }
     },
     {
@@ -17,7 +17,17 @@
         "title": "GMK CYL Pandemonium: the eclipse-themed keycap set that's been trending all window",
         "lede": "DeltaKeyCo's Berserk eclipse group buy has been climbing the tracker since it opened June 1, posting a score of 33 in W26 with a flat direction — mid-window plateau, buy still live through July 1.",
         "pillar": "news",
-        "author": "thock editorial"
+        "author": "thock"
+      }
+    },
+    {
+      "slug": "split-ergo-buyers-guide",
+      "readTime": 9,
+      "frontmatter": {
+        "title": "Split and ergonomic keyboards: a buyer's guide",
+        "lede": "Split doesn't automatically mean ergonomic, and ergonomic doesn't automatically mean split. Before spending money on either, a reader needs to know which of four separate design choices they're actually buying — and which one of them is solving their problem.",
+        "pillar": "guides",
+        "author": "thock"
       }
     },
     {
@@ -643,6 +653,11 @@
       "category": "switch"
     },
     {
+      "slug": "columnar-stagger",
+      "name": "Columnar stagger",
+      "category": "layout"
+    },
+    {
       "slug": "configurator",
       "name": "Configurator",
       "category": "misc"
@@ -1152,5 +1167,5 @@
       "description": "China-based design studio and vendor known for in-house boards (Mammoth, Ikki68, Promise) and partnered group buys, sold direct from shop.wuquestudio.com with regional proxies."
     }
   ],
-  "generatedAt": "2026-06-23T07:41:49.387Z"
+  "generatedAt": "2026-07-03T13:54:56.021Z"
 }

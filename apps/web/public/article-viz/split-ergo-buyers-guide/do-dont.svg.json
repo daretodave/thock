@@ -1,0 +1,25 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-18T13:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "split-ergo-buyers-guide",
+  "article_pillar": "guides",
+  "section_anchor": "common-pitfalls",
+  "brief_summary": "Two-column do/don't map. The do column (amber checkmarks) lists changing one axis at a time, keeping the old board as a fallback, and committing to the firmware before the layout. The don't column (warm-red x marks) lists stacking every axis on a first board, selling the old board immediately, and judging week one. Every item is drawn directly from the article's 'Common pitfalls' section.",
+  "target": "apps/web/public/article-viz/split-ergo-buyers-guide/do-dont.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "JetBrains Mono", "Newsreader"],
+  "data_sources": [
+    "split-ergo-buyers-guide.mdx § 'Common pitfalls' — 'The most common mistake is stacking all four axes on a first purchase — split, column-stagger, a fully ortho thumb cluster, and an aggressive tent angle'",
+    "split-ergo-buyers-guide.mdx § 'Common pitfalls' — 'The third is selling the old board too early'",
+    "split-ergo-buyers-guide.mdx § 'How to actually choose' — 'Keeping the old board plugged in and available during that window... removes the pressure that turns a bad week into an abandoned experiment'",
+    "split-ergo-buyers-guide.mdx § 'Common pitfalls' — 'using the stock layout for the first few weeks before customizing layers is not a compromise, it's the fastest path to fluency' (firmware-before-layout ordering)"
+  ],
+  "outputs": ["apps/web/public/article-viz/split-ergo-buyers-guide/do-dont.svg"],
+  "warnings": ["'Judge week one' condenses the article's discussion of the multi-week relearning curve into a single caution label; the underlying claim (don't evaluate the transition after only a few days) is supported by the 'budget the relearning weeks' step but not stated verbatim."]
+}

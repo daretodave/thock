@@ -71,6 +71,7 @@
     { "slug": "lubing", "name": "Lubing", "category": "switch" },
     { "slug": "divinikey", "name": "Divinikey", "category": "brand" },
     { "slug": "optical", "name": "Optical", "category": "switch" },
-    { "slug": "tray-mount", "name": "Tray-mount", "category": "layout" }
+    { "slug": "tray-mount", "name": "Tray-mount", "category": "layout" },
+    { "slug": "columnar-stagger", "name": "Columnar stagger", "category": "layout" }
   ]
 }
