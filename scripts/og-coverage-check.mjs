@@ -109,7 +109,7 @@ function findOgDirs(appDir) {
  *      /…/apps/web/src/app → / (root)
  */
 function toRouteLabel(routeDir, appDir) {
-  const rel = relative(appDir, routeDir)
+  const rel = relative(appDir, routeDir).replace(/\\/g, '/')
   return rel === '' ? '/' : `/${rel}`
 }
 

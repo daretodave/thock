@@ -30,12 +30,12 @@ describe('dataDir and entityDir', () => {
 
   it('dataDir() is /data under the injected repo root', () => {
     setRepoRootForTests('/fake/root')
-    expect(dataDir()).toBe('/fake/root/data')
+    expect(dataDir().replace(/\\/g, '/')).toBe('/fake/root/data')
   })
 
   it('entityDir() is the entity subdirectory under /data', () => {
     setRepoRootForTests('/fake/root')
-    expect(entityDir('switches')).toBe('/fake/root/data/switches')
+    expect(entityDir('switches').replace(/\\/g, '/')).toBe('/fake/root/data/switches')
   })
 })
 
