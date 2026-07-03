@@ -5882,3 +5882,15 @@ passes accumulate signals.)
 - ease: 6 (make generation portable: store `filePath` repo-relative with posix separators; normalize body strings to LF at read time. Alternatively untrack the three files if nothing reads them from the repo at rest)
 - score: 3.0 (impact × ease / 10)
 - issue: none yet (filed locally; observed during the readopt commit d6ed343, which briefly committed the win32-flavored regeneration — restored to the CI-generated state in the follow-up commit)
+
+### [CRITICAL HOT PURSUIT] [content-gap] [9.5] guides pillar — 0 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 5 (Rule 1 sliding window — critical-hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: guides
+- window-count: 0
+- window-start: 2026-06-03
+- score: 9.5
+- next: /ship-content → guides pillar article
+> Filed 2026-07-03 by content-gap-survey.mjs (auto-refill). Zero articles published in the last 30 days — critical hot pursuit (score 9.5). Loop drops iterate/polish until the pillar recovers.
