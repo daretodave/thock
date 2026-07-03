@@ -5908,7 +5908,7 @@ passes accumulate signals.)
 > Filed 2026-07-03 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 > **Resolved (2026-07-03):** Shipped "Choosing your first custom keyboard kit: a buyer's guide" at `/article/custom-keyboard-kit-buyers-guide`, publishedAt 2026-06-27 (gap-fill midpoint of the largest window gap). Guides pillar now at 2 of 2 in the 30-day window — quota met. content-gap-survey.mjs re-run post-ship reports all pillars comfortable, no new row filed.
 
-### [ ] [data] [3.6] deltakeyco-gmk-cyl-pandemonium — status stale, endDate 2026-07-01 passed
+### [x] [data] [3.6] deltakeyco-gmk-cyl-pandemonium — status stale, endDate 2026-07-01 passed — addressed in this commit, closes #378
 - category: data
 - filed: 2026-07-03 by group-buy-status-check.mjs
 - impact: 4 (buy shows status "live" but endDate 2026-07-01 has passed — data hygiene gap)
@@ -5916,6 +5916,7 @@ passes accumulate signals.)
 - score: 3.6 (impact × ease / 10)
 - group-buy: data/group-buys/deltakeyco-gmk-cyl-pandemonium.json
 - action: update status from 'live' to 'closed' in data/group-buys/deltakeyco-gmk-cyl-pandemonium.json
+- issue: #378
 
 ### [ ] [data] [3.6] divinikey-dcs-dolch — status stale, endDate 2026-07-01 passed
 - category: data
