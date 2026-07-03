@@ -5895,7 +5895,7 @@ passes accumulate signals.)
 - next: /ship-content → guides pillar article
 > Filed 2026-07-03 by content-gap-survey.mjs (auto-refill). Zero articles published in the last 30 days — critical hot pursuit (score 9.5). Loop drops iterate/polish until the pillar recovers.
 
-### [HOT PURSUIT] [content-gap] [7] guides pillar — 1 of ≥2 articles in last 30d
+### [x] [content-gap] [7] guides pillar — 1 of ≥2 articles in last 30d — addressed in 08fa7bc
 - category: content-gaps
 - impact: 5 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -5906,3 +5906,43 @@ passes accumulate signals.)
 - score: 7
 - next: /ship-content → guides pillar article
 > Filed 2026-07-03 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+> **Resolved (2026-07-03):** Shipped "Choosing your first custom keyboard kit: a buyer's guide" at `/article/custom-keyboard-kit-buyers-guide`, publishedAt 2026-06-27 (gap-fill midpoint of the largest window gap). Guides pillar now at 2 of 2 in the 30-day window — quota met. content-gap-survey.mjs re-run post-ship reports all pillars comfortable, no new row filed.
+
+### [ ] [data] [3.6] deltakeyco-gmk-cyl-pandemonium — status stale, endDate 2026-07-01 passed
+- category: data
+- filed: 2026-07-03 by group-buy-status-check.mjs
+- impact: 4 (buy shows status "live" but endDate 2026-07-01 has passed — data hygiene gap)
+- ease: 9 (update status field to 'closed' in data/group-buys/deltakeyco-gmk-cyl-pandemonium.json)
+- score: 3.6 (impact × ease / 10)
+- group-buy: data/group-buys/deltakeyco-gmk-cyl-pandemonium.json
+- action: update status from 'live' to 'closed' in data/group-buys/deltakeyco-gmk-cyl-pandemonium.json
+
+### [ ] [data] [3.6] divinikey-dcs-dolch — status stale, endDate 2026-07-01 passed
+- category: data
+- filed: 2026-07-03 by group-buy-status-check.mjs
+- impact: 4 (buy shows status "live" but endDate 2026-07-01 has passed — data hygiene gap)
+- ease: 9 (update status field to 'closed' in data/group-buys/divinikey-dcs-dolch.json)
+- score: 3.6 (impact × ease / 10)
+- group-buy: data/group-buys/divinikey-dcs-dolch.json
+- action: update status from 'live' to 'closed' in data/group-buys/divinikey-dcs-dolch.json
+
+### [ ] [data] [3.6] kbdfans-gmk-cyl-masterpiece-r2 — status stale, endDate 2026-06-26 passed
+- category: data
+- filed: 2026-07-03 by group-buy-status-check.mjs
+- impact: 4 (buy shows status "live" but endDate 2026-06-26 has passed — data hygiene gap)
+- ease: 9 (update status field to 'closed' in data/group-buys/kbdfans-gmk-cyl-masterpiece-r2.json)
+- score: 3.6 (impact × ease / 10)
+- group-buy: data/group-buys/kbdfans-gmk-cyl-masterpiece-r2.json
+- action: update status from 'live' to 'closed' in data/group-buys/kbdfans-gmk-cyl-masterpiece-r2.json
+
+### [ ] [newsletter] [4.0] Weekly digest — issue 002 due (16 days since issue 1)
+- category: content-gaps
+- filed: 2026-07-03 by newsletter-gap-survey.mjs
+- impact: 5 (newsletter archive going stale reduces /newsletter value and reader trust in cadence)
+- ease: 8 (content-curator weekly round-up: 5 pillar picks + tracker insight)
+- score: 4.0 (impact × ease / 10)
+- next: /ship-content → newsletter type (weekly round-up, 5 pillar picks, tracker insight)
+- last-issue: 2026-06-16 (thock-weekly-001)
+- days-since: 16
+- issue: [mirror-failed: 2026-07-03]
+> Filed 2026-07-03 by newsletter-gap-survey.mjs. 16 days since issue 1. Threshold: ≥7 calendar days.
