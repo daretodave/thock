@@ -5928,7 +5928,7 @@ passes accumulate signals.)
 - action: update status from 'live' to 'closed' in data/group-buys/divinikey-dcs-dolch.json
 - issue: #379
 
-### [ ] [data] [3.6] kbdfans-gmk-cyl-masterpiece-r2 — status stale, endDate 2026-06-26 passed
+### [x] [data] [3.6] kbdfans-gmk-cyl-masterpiece-r2 — status stale, endDate 2026-06-26 passed — addressed in 4079455, closes #380
 - category: data
 - filed: 2026-07-03 by group-buy-status-check.mjs
 - impact: 4 (buy shows status "live" but endDate 2026-06-26 has passed — data hygiene gap)
@@ -5936,6 +5936,7 @@ passes accumulate signals.)
 - score: 3.6 (impact × ease / 10)
 - group-buy: data/group-buys/kbdfans-gmk-cyl-masterpiece-r2.json
 - action: update status from 'live' to 'closed' in data/group-buys/kbdfans-gmk-cyl-masterpiece-r2.json
+- issue: #380
 
 ### [x] [newsletter] [4.0] Weekly digest — issue 002 due (16 days since issue 1) — addressed in d6c34e5, closes #377
 - category: content-gaps
