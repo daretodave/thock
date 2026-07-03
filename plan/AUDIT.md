@@ -5918,7 +5918,7 @@ passes accumulate signals.)
 - action: update status from 'live' to 'closed' in data/group-buys/deltakeyco-gmk-cyl-pandemonium.json
 - issue: #378
 
-### [ ] [data] [3.6] divinikey-dcs-dolch — status stale, endDate 2026-07-01 passed
+### [x] [data] [3.6] divinikey-dcs-dolch — status stale, endDate 2026-07-01 passed — addressed in c7612d2, closes #379
 - category: data
 - filed: 2026-07-03 by group-buy-status-check.mjs
 - impact: 4 (buy shows status "live" but endDate 2026-07-01 has passed — data hygiene gap)
