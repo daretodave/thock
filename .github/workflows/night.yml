@@ -1,0 +1,131 @@
+name: night
+
+# The night shift: one /digest tick a day. Writes plan/DIGEST.md
+# — the morning briefing — and runs the nightly breadth check
+# (the full `pnpm verify`, fresh eyes on main) that must never
+# run on the per-commit path's clock. The digest commit itself is
+# notes-only (plan/ prose; the /jot carve-out — see
+# skills/digest.md hard rule 5). Shares the march concurrency
+# group so cloud writers never race.
+
+on:
+  schedule:
+    - cron: '30 10 * * *'   # daily ~06:30 ET, after the overnight ticks
+  workflow_dispatch:
+
+concurrency:
+  group: march              # one cloud writer at a time, ever
+  cancel-in-progress: false
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60     # the breadth verify is the long pole
+    permissions:
+      contents: write
+      issues: read
+      actions: read         # gh run list — the pulse
+      id-token: write
+    steps:
+      - name: Checkout (full history for the pulse)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          # PAT (not GITHUB_TOKEN) so git push commits as you, not as
+          # github-actions[bot] — same identity posture as march.yml.
+          token: ${{ secrets.ACTIONS_PAT }}
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Set up Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('apps/e2e/package.json', 'pnpm-lock.yaml') }}
+          restore-keys: |
+            playwright-${{ runner.os }}-
+
+      - name: Install Playwright browsers (chromium only)
+        # @playwright/test is only installed under apps/e2e in the
+        # workspace, so `pnpm exec playwright` from root can't find
+        # it. Run the e2e package's own install script instead.
+        run: pnpm --filter "@thock/e2e" e2e:install
+
+      # Git author identity is set via GIT_AUTHOR_* / GIT_COMMITTER_*
+      # env vars on the action step below, NOT via `git config` —
+      # same mechanism and rationale as march.yml (the action's
+      # internal git config would override a workflow-step config).
+
+      - name: Run /digest (night shift)
+        uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          # Synthesis is where a stronger model earns its keep; the
+          # night model leads the day one.
+          claude_args: |
+            --model claude-sonnet-5
+            --dangerously-skip-permissions
+          prompt: |
+            You are thock's night shift running in CI. Read agents.md
+            first, then execute skills/digest.md end to end — it is the
+            single source of truth for this tick.
+
+            Cloud notes:
+
+            1. The breadth check is the full `pnpm verify`, run FOREGROUND
+               and awaited — never `run_in_background` (that is the one
+               thing that wedges this loop). If one call is too slow, run
+               it as sequential foreground legs, each its own blocking
+               call. A red leg becomes a HIGH plan/AUDIT.md row — file it
+               and still ship the digest; the next dispatcher tick fixes
+               it.
+            2. The digest's own commit is NOTES-ONLY (plan/DIGEST.md plus
+               any plan/AUDIT.md or plan/PHASE_CANDIDATES.md rows). The
+               /jot carve-out applies to the commit; the verify run above
+               is breadth, not the commit's gate.
+            3. Tuning proposals become plan/PHASE_CANDIDATES.md candidates,
+               never direct edits. Only local /oversight promotes.
+            4. Your one commit MUST end with this exact trailer (a blank
+               line before it, then the trailer as its own line):
+
+                  Cloud-Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+            5. One commit (digest: <YYYY-MM-DD>), push, then
+               `pnpm deploy:check` to confirm the deploy lands. If the
+               tick cannot ship cleanly, exit with a one-line note in this
+               log — do not half-commit.
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          # ACTIONS_PAT (not GITHUB_TOKEN) so the agent's `gh` calls
+          # and any direct git operations identify as you, not as
+          # the bot.
+          GH_TOKEN: ${{ secrets.ACTIONS_PAT }}
+          # Author identity — same env-var path as march.yml.
+          GIT_AUTHOR_NAME:     "David Rehmat"
+          GIT_AUTHOR_EMAIL:    "me@dave.blue"
+          GIT_COMMITTER_NAME:  "David Rehmat"
+          GIT_COMMITTER_EMAIL: "me@dave.blue"
+
+      - name: Open night-failed issue if action crashed
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.ACTIONS_PAT }}
+        run: |
+          existing=$(gh issue list --search 'in:title "Night digest crashed" state:open' --json number --jq 'length')
+          if [ "$existing" -eq 0 ]; then
+            gh issue create \
+              --title "Night digest crashed: $(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+              --body "The night shift exited non-zero. Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          else
+            echo "An open 'Night digest crashed' issue already exists — skipping."
+          fi

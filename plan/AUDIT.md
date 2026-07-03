@@ -5866,3 +5866,11 @@ passes accumulate signals.)
 - action: change `author: thock editorial` → `author: thock` in both MDX files
 - issue: [mirror-failed: 2026-06-23T00:00:00Z]
 - addressed in: e165bac
+
+### [ ] [engineering] [3.5] Windows path-separator seams — 4 tests fail on a local win32 session (green on ubuntu CI)
+- category: engineering
+- filed: 2026-07-03 by the nexus readopt pass (local session)
+- impact: 5 (a local Windows session cannot run the full gate green: packages/data src/__tests__/loaders/paths.test.ts hardcodes posix expectations — expected `/fake/root/data`, received `Z:\fake\root\data` — and scripts/__tests__/og-coverage-check.test.mjs toRouteLabel expects `/article/[slug]`, receives `/article\[slug]`. All four are test-expectation seams; the product code behaves correctly and both legs are green on ubuntu CI where every cloud tick runs them)
+- ease: 7 (normalize separators — path.posix in the test helpers, or a replaceAll('\\', '/') in toRouteLabel — ~4 assertions across 2 files)
+- score: 3.5 (impact × ease / 10)
+- issue: none yet (filed locally; the next /iterate can mirror it per phase-15a)

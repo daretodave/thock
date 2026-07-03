@@ -67,10 +67,11 @@ per-commit path onto a nightly job.
 
 ### 4. The deploy gate runs **after** every push.
 
-`pnpm deploy:check` polls Netlify for the deploy matching the
-just-pushed commit. It prints `"Checking last deployment..."`,
-shows state transitions (`building → ready`), and exits non-zero
-on `error` / `failed` / timeout.
+`pnpm deploy:check` polls Vercel for the deploy matching the
+just-pushed commit (migrated from Netlify in phase 4b). It
+prints `"Checking last deployment..."`, shows state transitions
+(`building → ready`), and exits non-zero on `error` / `failed`
+/ timeout.
 
 Every shipping skill calls it as Step 12. A red deploy is treated
 identically to a red verify gate: read the log, patch the root

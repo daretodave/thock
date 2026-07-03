@@ -33,7 +33,7 @@ roughly:
 - Sonnet 4.6: ~$0.40–0.60/tick → ~$10–15/day at 24 ticks
 - Opus 4.7:   ~$2.00–3.00/tick → ~$48–72/day at 24 ticks
 
-The 30-commit/24h ceiling caps the worst case either way (no-op
+The 60-commit/24h ceiling caps the worst case either way (no-op
 ticks don't count, so real cost tracks shipped volume).
 
 ## Setup (one-time)
@@ -136,15 +136,18 @@ issues are:
 ### Normal operation
 
 The cron fires at `0 * * * *` UTC — hourly, 24/7. Up to ~24
-ticks/day. The daily commit ceiling (30 cloud-shipped commits
-/ 24h) sits 6 above the cadence cap, giving a little catch-up
-headroom for ticks that span firings; no-op ticks absorb slots
-when nothing's queued. You don't have to do anything.
+ticks/day. The daily commit ceiling (60 cloud-shipped commits
+/ 24h) sits well above the cadence cap, giving catch-up
+headroom for ticks that span firings and same-tick multi-commit
+shipping; no-op ticks absorb slots when nothing's queued. You
+don't have to do anything.
 
 Each tick:
-1. Runs the daily commit-ceiling check (30 cloud commits / 24h).
+1. Runs the daily commit-ceiling check (60 cloud commits / 24h).
    If reached, exits 0 with a log note — no work this tick.
-2. Configures git as `github-actions[bot]`.
+2. Sets the commit author to David Rehmat <me@dave.blue> via
+   GIT_AUTHOR_* / GIT_COMMITTER_* env vars on the action step
+   (user-author mode — not github-actions[bot]).
 3. Runs `/march` in cloud mode (skips `/oversight` and `/critique`).
 4. The agent ships a phase, a data update, an iterate finding, or
    nothing — depending on what's queued.
@@ -213,19 +216,42 @@ git log --invert-grep --grep='Cloud-Run:' --oneline
 `git log --grep='Cloud-Run:'` is the canonical filter once the
 convention is in place.
 
+## The other loops — night + heartbeat
+
+Two more workflows ride alongside march (added 2026-07-03,
+readopt):
+
+- **`night.yml` — the night shift.** Daily at 10:30 UTC
+  (~06:30 ET), one `/digest` tick writes `plan/DIGEST.md` —
+  the morning briefing — and runs the nightly breadth check
+  (the full `pnpm verify`, fresh eyes on main; red legs become
+  HIGH `plan/AUDIT.md` rows, not fixes). The digest commit is
+  notes-only (the `/jot` carve-out). Shares the `march`
+  concurrency group. Read it with coffee instead of reading
+  run logs.
+- **`heartbeat.yml` — the immune system.** Every 6h, no model:
+  cancels runs wedged past 2h (unblocking the shared
+  concurrency group) and opens a deduped issue if march hasn't
+  completed a tick in 14h — so "disabled and forgotten" pages
+  the issue tracker instead of dying silently. Deliberately
+  runs on the bot `GITHUB_TOKEN`: the watchdog speaks as the
+  system, not as the human.
+
 ## Changing the model
 
-Current default is Opus 4.7 (promoted 2026-05-12 from Sonnet 4.6
-to experiment with Opus quality on the autonomous tick). Opus is
-roughly 2x Sonnet's weight against the Max weekly cap, so watch
-`/cost` for a week of mixed usage.
+Current default is Sonnet 5 (bumped 2026-07-03 from Sonnet 4.6
+at readopt; the Opus 4.7 experiment of 2026-05-12 was reverted
+2026-05-14 — Opus is roughly 2x Sonnet's weight against the Max
+weekly cap, and the autonomous tick didn't reliably justify the
+quality bump). Watch `/cost` for a week of mixed usage before
+promoting to an Opus id (currently `claude-opus-4-8`; ids age —
+verify before changing).
 
-To switch back to Sonnet 4.6 (cheap-on-quota, fast enough for
-`/march`'s decision logic), edit `.github/workflows/march.yml`:
+The model lives in `.github/workflows/march.yml`:
 
 ```yaml
 claude_args: |
-  --model claude-sonnet-4-6
+  --model claude-sonnet-5
   --dangerously-skip-permissions
 ```
 
@@ -256,7 +282,7 @@ underlying skill it dispatched to.
 | `Permission denied` on `git push` | PAT expired or rescoped | Mint a new fine-grained PAT with `contents:write`, update `ACTIONS_PAT` |
 | `triage:cloud-failed` issue open | Tick hit a real error | Read the issue body for the run URL; fix root cause; close issue |
 | Loop appears stuck | A previous tick is still running and concurrency group is holding | `gh run list --workflow march.yml --status in_progress`, cancel the stale one |
-| Repeated red deploys | Netlify-side regression | Check Netlify dashboard; root-cause as you would locally |
+| Repeated red deploys | Vercel-side regression | Check the Vercel dashboard; root-cause as you would locally |
 | Quota pressure on Max | Cloud + heavy local work overlapping | Drop cloud cadence: change cron from hourly (`0 * * * *`) to every 2h (`0 */2 * * *`) or every 4h (`0 */4 * * *`) |
 
 ## Why this is structured this way
