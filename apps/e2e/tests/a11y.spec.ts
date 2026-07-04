@@ -71,7 +71,7 @@ async function runAxe(page: Page, url: string) {
   return results
 }
 
-// Desktop suite — 21 canonical pages (phase 49: 7 routes from phases 43–49 added; issue #383: 4 pillar list pages added; issue #384: /news added)
+// Desktop suite — 30 canonical pages (phase 49: 7 routes from phases 43–49 added; issue #383: 4 pillar list pages added; issue #384: /news added; issue #385: 9 more routes added)
 test.describe('a11y — desktop', () => {
   test('home (/)', async ({ page }) => {
     await runAxe(page, '/')
@@ -159,9 +159,46 @@ test.describe('a11y — desktop', () => {
   test('news pillar (/news)', async ({ page }) => {
     await runAxe(page, '/news')
   })
+
+  // 9 more routes closing the coverage gap (issue #385)
+  test('group buys past (/group-buys/past)', async ({ page }) => {
+    await runAxe(page, '/group-buys/past')
+  })
+
+  test('newsletter (/newsletter)', async ({ page }) => {
+    await runAxe(page, '/newsletter')
+  })
+
+  test('sources (/sources)', async ({ page }) => {
+    await runAxe(page, '/sources')
+  })
+
+  test('tags index (/tags)', async ({ page }) => {
+    await runAxe(page, '/tags')
+  })
+
+  test('part kind index — switch (/part/switch)', async ({ page }) => {
+    await runAxe(page, '/part/switch')
+  })
+
+  test('part kind index — keycap-set (/part/keycap-set)', async ({ page }) => {
+    await runAxe(page, '/part/keycap-set')
+  })
+
+  test('part kind index — board (/part/board)', async ({ page }) => {
+    await runAxe(page, '/part/board')
+  })
+
+  test('part detail (/part/switch/gateron-oil-king)', async ({ page }) => {
+    await runAxe(page, '/part/switch/gateron-oil-king')
+  })
+
+  test('tracker archive week (/trends/tracker/2026-W19)', async ({ page }) => {
+    await runAxe(page, '/trends/tracker/2026-W19')
+  })
 })
 
-// Mobile suite — 21 routes at 375px (matches desktop suite; extended to phases 43–49 + pillar list pages)
+// Mobile suite — 30 routes at 375px (matches desktop suite; extended to phases 43–49 + pillar list pages + issue #385)
 test.describe('a11y — mobile (375px)', () => {
   test.use({ viewport: { width: 375, height: 800 } })
 
@@ -249,6 +286,43 @@ test.describe('a11y — mobile (375px)', () => {
   // News pillar — the fifth primary pillar, missed by issue #383 (issue #384)
   test('news pillar — mobile', async ({ page }) => {
     await runAxe(page, '/news')
+  })
+
+  // 9 more routes closing the coverage gap (issue #385)
+  test('group buys past — mobile', async ({ page }) => {
+    await runAxe(page, '/group-buys/past')
+  })
+
+  test('newsletter — mobile', async ({ page }) => {
+    await runAxe(page, '/newsletter')
+  })
+
+  test('sources — mobile', async ({ page }) => {
+    await runAxe(page, '/sources')
+  })
+
+  test('tags index — mobile', async ({ page }) => {
+    await runAxe(page, '/tags')
+  })
+
+  test('part kind index — switch — mobile', async ({ page }) => {
+    await runAxe(page, '/part/switch')
+  })
+
+  test('part kind index — keycap-set — mobile', async ({ page }) => {
+    await runAxe(page, '/part/keycap-set')
+  })
+
+  test('part kind index — board — mobile', async ({ page }) => {
+    await runAxe(page, '/part/board')
+  })
+
+  test('part detail — mobile', async ({ page }) => {
+    await runAxe(page, '/part/switch/gateron-oil-king')
+  })
+
+  test('tracker archive week — mobile', async ({ page }) => {
+    await runAxe(page, '/trends/tracker/2026-W19')
   })
 })
 
