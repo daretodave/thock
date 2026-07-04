@@ -5972,3 +5972,12 @@ passes accumulate signals.)
 - action: add 1 desktop + 1 mobile axe test block to apps/e2e/tests/a11y.spec.ts following the established runAxe pattern
 - issue: #384
 > Only finding ≥3.0 after a fresh audit pass across data-gaps, SEO, link integrity, a11y, tests, and performance (categories B–G) — content-gap Rule 1–4 mechanical surveys (content-gap, crosslink, companion, stale-GB, newsletter-gap, OG-coverage) all reported clean this same tick; no pending phases/data/CRITIQUE rows; expand gate not due (3 commits/~3h since pass 141, below 20-commit/48h threshold).
+
+### [x] [a11y] [4.0] 9 canonical routes missing full-page axe WCAG coverage — /group-buys/past, /newsletter, /sources, /tags, /part/switch, /part/keycap-set, /part/board, /part/switch/[slug], /trends/tracker/[week] — addressed in 0af549d, closes #385
+- category: a11y
+- filed: 2026-07-04 by /iterate audit (cloud march tick)
+- impact: 5 (following the b3e791a + 25016e4 pillar-page drain, a diff of `apps/e2e/src/fixtures/canonical-urls.ts` against `apps/e2e/tests/a11y.spec.ts`'s runAxe() call list shows 7 static routes — /group-buys/past, /newsletter, /sources, /tags, and the 3 /part/[kind] index pages — plus 2 dynamic patterns — /part/[kind]/[slug] and /trends/tracker/[week] — have zero full-page axe coverage; only narrow element-scoped color-contrast regression guards touch them, which would miss any non-contrast violation (missing labels, heading order, landmark issues) on these surfaces)
+- ease: 8 (mechanical addition — 9 new `test()` blocks in the desktop describe + 9 in the mobile describe of `apps/e2e/tests/a11y.spec.ts`, copy-pasting the established `runAxe(page, url)` pattern; representative slugs already exist in the corpus for the two dynamic patterns)
+- score: 4.0 (impact × ease / 10)
+- routes: /group-buys/past, /newsletter, /sources, /tags, /part/switch, /part/keycap-set, /part/board, /part/switch/gateron-oil-king, /trends/tracker/2026-W19
+- action: add 9 desktop + 9 mobile axe test blocks to apps/e2e/tests/a11y.spec.ts following the established runAxe pattern
