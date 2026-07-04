@@ -5951,7 +5951,7 @@ passes accumulate signals.)
 - issue: #377
 > Filed 2026-07-03 by newsletter-gap-survey.mjs. 16 days since issue 1. Threshold: ≥7 calendar days.
 
-### [ ] [a11y] [4.0] Pillar list pages (/guides, /ideas, /deep-dives, /trends) have zero axe WCAG coverage
+### [x] [a11y] [4.0] Pillar list pages (/guides, /ideas, /deep-dives, /trends) have zero axe WCAG coverage — addressed in b3e791a, closes #383
 - category: a11y
 - filed: 2026-07-04 by /iterate audit (cloud march tick)
 - impact: 5 (4 of 5 primary nav destinations — including /guides, which has a structurally distinct grouped-by-section layout via `groupGuidesBySection` unlike the hero+archive template the other four pillars share — ship with zero automated a11y gate; same historical blind spot that produced ~30 color-contrast findings elsewhere on the site across phases 26–32)
