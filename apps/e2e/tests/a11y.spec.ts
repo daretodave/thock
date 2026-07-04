@@ -71,7 +71,7 @@ async function runAxe(page: Page, url: string) {
   return results
 }
 
-// Desktop suite — 20 canonical pages (phase 49: 7 routes from phases 43–49 added; issue #383: 4 pillar list pages added)
+// Desktop suite — 21 canonical pages (phase 49: 7 routes from phases 43–49 added; issue #383: 4 pillar list pages added; issue #384: /news added)
 test.describe('a11y — desktop', () => {
   test('home (/)', async ({ page }) => {
     await runAxe(page, '/')
@@ -154,9 +154,14 @@ test.describe('a11y — desktop', () => {
   test('trends pillar (/trends)', async ({ page }) => {
     await runAxe(page, '/trends')
   })
+
+  // News pillar — the fifth primary pillar, missed by issue #383 (issue #384)
+  test('news pillar (/news)', async ({ page }) => {
+    await runAxe(page, '/news')
+  })
 })
 
-// Mobile suite — 20 routes at 375px (matches desktop suite; extended to phases 43–49 + pillar list pages)
+// Mobile suite — 21 routes at 375px (matches desktop suite; extended to phases 43–49 + pillar list pages)
 test.describe('a11y — mobile (375px)', () => {
   test.use({ viewport: { width: 375, height: 800 } })
 
@@ -239,6 +244,11 @@ test.describe('a11y — mobile (375px)', () => {
 
   test('trends pillar — mobile', async ({ page }) => {
     await runAxe(page, '/trends')
+  })
+
+  // News pillar — the fifth primary pillar, missed by issue #383 (issue #384)
+  test('news pillar — mobile', async ({ page }) => {
+    await runAxe(page, '/news')
   })
 })
 
