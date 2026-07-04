@@ -5961,3 +5961,14 @@ passes accumulate signals.)
 - action: add 4 desktop + 4 mobile axe test blocks to apps/e2e/tests/a11y.spec.ts following the established runAxe pattern
 - issue: #383
 > Only finding ≥3.0 after a fresh audit pass across data-gaps, SEO, link integrity, a11y, tests, and performance (categories B–G) — all other categories confirmed clean via direct script runs and cross-referencing (article-parts-check.mjs, sitemap/robots read, markdown-link cross-reference across all 60 articles, __tests__ coverage check, pnpm size budget). Content-gap Rule 1–4 mechanical surveys (content-gap, crosslink, companion, stale-GB, newsletter-gap, OG-coverage) all reported clean this same tick.
+
+### [x] [a11y] [4.0] /news pillar page missing axe WCAG coverage — addressed in 25016e4, closes #384
+- category: a11y
+- filed: 2026-07-04 by /iterate audit (cloud march tick)
+- impact: 5 (/news is one of the site's five primary nav pillars — news, trends, ideas, deep-dives, guides — and shares the same PillarHero + PillarArchiveList template as the other four; the prior commit b3e791a added full-page axe coverage for guides/ideas/deep-dives/trends but missed news, leaving one of five primary destinations with zero automated a11y gate)
+- ease: 8 (mechanical addition — 1 new `test()` block in the desktop describe + 1 in the mobile describe of `apps/e2e/tests/a11y.spec.ts`, copy-pasting the existing `runAxe(page, url)` pattern already used for the other 20 canonical routes)
+- score: 4.0 (impact × ease / 10)
+- routes: /news
+- action: add 1 desktop + 1 mobile axe test block to apps/e2e/tests/a11y.spec.ts following the established runAxe pattern
+- issue: #384
+> Only finding ≥3.0 after a fresh audit pass across data-gaps, SEO, link integrity, a11y, tests, and performance (categories B–G) — content-gap Rule 1–4 mechanical surveys (content-gap, crosslink, companion, stale-GB, newsletter-gap, OG-coverage) all reported clean this same tick; no pending phases/data/CRITIQUE rows; expand gate not due (3 commits/~3h since pass 141, below 20-commit/48h threshold).
