@@ -5950,3 +5950,14 @@ passes accumulate signals.)
 - days-since: 16
 - issue: #377
 > Filed 2026-07-03 by newsletter-gap-survey.mjs. 16 days since issue 1. Threshold: ≥7 calendar days.
+
+### [ ] [a11y] [4.0] Pillar list pages (/guides, /ideas, /deep-dives, /trends) have zero axe WCAG coverage
+- category: a11y
+- filed: 2026-07-04 by /iterate audit (cloud march tick)
+- impact: 5 (4 of 5 primary nav destinations — including /guides, which has a structurally distinct grouped-by-section layout via `groupGuidesBySection` unlike the hero+archive template the other four pillars share — ship with zero automated a11y gate; same historical blind spot that produced ~30 color-contrast findings elsewhere on the site across phases 26–32)
+- ease: 8 (mechanical addition — 4 new `test()` blocks in the desktop describe + 4 in the mobile describe of `apps/e2e/tests/a11y.spec.ts`, copy-pasting the existing `runAxe(page, url)` pattern already used for the other 16 canonical routes)
+- score: 4.0 (impact × ease / 10)
+- routes: /guides, /ideas, /deep-dives, /trends
+- action: add 4 desktop + 4 mobile axe test blocks to apps/e2e/tests/a11y.spec.ts following the established runAxe pattern
+- issue: #383
+> Only finding ≥3.0 after a fresh audit pass across data-gaps, SEO, link integrity, a11y, tests, and performance (categories B–G) — all other categories confirmed clean via direct script runs and cross-referencing (article-parts-check.mjs, sitemap/robots read, markdown-link cross-reference across all 60 articles, __tests__ coverage check, pnpm size budget). Content-gap Rule 1–4 mechanical surveys (content-gap, crosslink, companion, stale-GB, newsletter-gap, OG-coverage) all reported clean this same tick.

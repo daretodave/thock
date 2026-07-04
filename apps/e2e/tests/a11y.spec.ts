@@ -71,7 +71,7 @@ async function runAxe(page: Page, url: string) {
   return results
 }
 
-// Desktop suite — 16 canonical pages (phase 49: 7 routes from phases 43–49 added)
+// Desktop suite — 20 canonical pages (phase 49: 7 routes from phases 43–49 added; issue #383: 4 pillar list pages added)
 test.describe('a11y — desktop', () => {
   test('home (/)', async ({ page }) => {
     await runAxe(page, '/')
@@ -137,9 +137,26 @@ test.describe('a11y — desktop', () => {
   test('keycap-set quiz (/quiz/keycap-set)', async ({ page }) => {
     await runAxe(page, '/quiz/keycap-set')
   })
+
+  // Pillar list pages — closes the a11y coverage gap (issue #383)
+  test('guides pillar (/guides)', async ({ page }) => {
+    await runAxe(page, '/guides')
+  })
+
+  test('ideas pillar (/ideas)', async ({ page }) => {
+    await runAxe(page, '/ideas')
+  })
+
+  test('deep dives pillar (/deep-dives)', async ({ page }) => {
+    await runAxe(page, '/deep-dives')
+  })
+
+  test('trends pillar (/trends)', async ({ page }) => {
+    await runAxe(page, '/trends')
+  })
 })
 
-// Mobile suite — 16 routes at 375px (matches desktop suite; extended to phases 43–49)
+// Mobile suite — 20 routes at 375px (matches desktop suite; extended to phases 43–49 + pillar list pages)
 test.describe('a11y — mobile (375px)', () => {
   test.use({ viewport: { width: 375, height: 800 } })
 
@@ -205,6 +222,23 @@ test.describe('a11y — mobile (375px)', () => {
 
   test('keycap-set quiz — mobile', async ({ page }) => {
     await runAxe(page, '/quiz/keycap-set')
+  })
+
+  // Pillar list pages — closes the a11y coverage gap (issue #383)
+  test('guides pillar — mobile', async ({ page }) => {
+    await runAxe(page, '/guides')
+  })
+
+  test('ideas pillar — mobile', async ({ page }) => {
+    await runAxe(page, '/ideas')
+  })
+
+  test('deep dives pillar — mobile', async ({ page }) => {
+    await runAxe(page, '/deep-dives')
+  })
+
+  test('trends pillar — mobile', async ({ page }) => {
+    await runAxe(page, '/trends')
   })
 })
 
