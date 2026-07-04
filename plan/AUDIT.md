@@ -6004,3 +6004,13 @@ passes accumulate signals.)
 - suggested fix: spawn scout for W27 (window 2026-06-29–2026-07-05) mechanical-keyboard movers across switch/keycap/layout/vendor/brand categories, 12–18 rows, referencing 2026-W26.json for score continuity; write `data/trends/2026-W27.json` in `TrendSnapshotSchema` shape; `pnpm verify`; commit.
 - issue: #387
 > **Resolved (2026-07-04):** Spawned scout for W27 (2026-06-29–2026-07-04) mechanical-keyboard movers; wrote `data/trends/2026-W27.json` (19 rows — 15 researched + 4 continuation rows for CannonKeys/Prototypist/Wuque Studio/Cherry-GMK-parent restored to keep every category ≥3 rows for the tracker's regression guard). Notable: GMK CYL Pandemonium + DCS Dolch closed on schedule July 1; Keychron Orca Echo crowdfunding set a new GIZMART GMV record; new "Work Louder x OpenAI Codex Micro" vendor row (no article yet — Rule 2 candidate in 14 days if still unlinked). `pnpm verify` full gate green: 590 unit + 142 script tests, data:validate 9 trend weeks, build, size 108.5KB/200KB budget, 937/937 e2e. `ed21aff`
+
+### [x] [a11y] [4.0] /part/keycap-set/[slug] and /part/board/[slug] missing axe WCAG coverage — addressed in 7401295, closes #388
+- category: a11y
+- filed: 2026-07-04 by /iterate audit (cloud march tick)
+- impact: 6 (`apps/e2e/tests/a11y.spec.ts` covered `/part/switch/[slug]` but never the other two part-detail templates; `PartHero`/`PartBody`/`PartSpec` render different spec fields and `MentionedInArticles` content per kind, so the switch-page pass didn't prove keycap-set/board detail pages clean — narrow blast radius vs. the pillar-wide gaps drained in prior ticks)
+- ease: 8 (mechanical addition — 2 desktop + 2 mobile `runAxe` blocks mirroring the existing switch-detail pattern; `domikey-wob` and `class80` already exist as valid slugs)
+- score: 4.0 (impact × ease / 10, discounted from raw 4.8 for narrow blast radius)
+- action: add `/part/keycap-set/domikey-wob` and `/part/board/class80` axe blocks (desktop + mobile) to `apps/e2e/tests/a11y.spec.ts`
+- issue: #388
+> All mechanical content-gap surveys (content-gap, crosslink, companion, stale-GB, newsletter-gap, OG-coverage) reported clean this tick; no pending phases/data/CRITIQUE rows; expand gate not due (6 commits/~5.5h since pass 142, below 20-commit/48h threshold). Fresh audit across data-gaps/SEO/link-integrity/a11y/tests/perf (delegated to Explore sub-agent) confirmed all other categories clean — data/trends current, all group buys correctly archived, sitemap/JSON-LD/robots complete, article-parts-check clean, 100% component test coverage, `pnpm size` budget green. The raw-`<img>` gate scope gap in `packages/content/src/mdx/` (noted at pass 142) remains below threshold — not re-surfaced.
