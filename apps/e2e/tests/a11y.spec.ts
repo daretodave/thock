@@ -193,6 +193,16 @@ test.describe('a11y — desktop', () => {
     await runAxe(page, '/part/switch/gateron-oil-king')
   })
 
+  // Part detail templates for the other two kinds — different spec fields
+  // and MentionedInArticles content than the switch template (issue #388)
+  test('part detail (/part/keycap-set/domikey-wob)', async ({ page }) => {
+    await runAxe(page, '/part/keycap-set/domikey-wob')
+  })
+
+  test('part detail (/part/board/class80)', async ({ page }) => {
+    await runAxe(page, '/part/board/class80')
+  })
+
   test('tracker archive week (/trends/tracker/2026-W19)', async ({ page }) => {
     await runAxe(page, '/trends/tracker/2026-W19')
   })
@@ -319,6 +329,15 @@ test.describe('a11y — mobile (375px)', () => {
 
   test('part detail — mobile', async ({ page }) => {
     await runAxe(page, '/part/switch/gateron-oil-king')
+  })
+
+  // Part detail templates for the other two kinds (issue #388)
+  test('part detail — keycap-set — mobile', async ({ page }) => {
+    await runAxe(page, '/part/keycap-set/domikey-wob')
+  })
+
+  test('part detail — board — mobile', async ({ page }) => {
+    await runAxe(page, '/part/board/class80')
   })
 
   test('tracker archive week — mobile', async ({ page }) => {
