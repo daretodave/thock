@@ -5981,3 +5981,13 @@ passes accumulate signals.)
 - score: 4.0 (impact × ease / 10)
 - routes: /group-buys/past, /newsletter, /sources, /tags, /part/switch, /part/keycap-set, /part/board, /part/switch/gateron-oil-king, /trends/tracker/2026-W19
 - action: add 9 desktop + 9 mobile axe test blocks to apps/e2e/tests/a11y.spec.ts following the established runAxe pattern
+
+### [x] [tests] [5.4] og-runtime.ts data adapter has zero test coverage — addressed in 06338bb, closes #386
+- category: tests
+- filed: 2026-07-04 by /iterate audit (cloud march tick)
+- impact: 6 (`apps/web/src/lib/data-runtime/og-runtime.ts` backs the OG image handlers for 4 route families — article/[slug], tag/[slug], part/[kind]/[slug], vendor/[slug] — a silent regression here would produce wrong social-card content across hundreds of dynamic pages; its sibling `index.ts` has thorough coverage in `loaders.test.ts` but this file had none)
+- ease: 9 (same pattern as the existing loaders.test.ts, fixtures already exist as committed og-manifest.generated.json data; one new test file, 4 functions × known-slug + not-found cases)
+- score: 5.4 (impact × ease / 10)
+- action: add apps/web/src/lib/data-runtime/__tests__/og-runtime.test.ts mirroring loaders.test.ts — 9 tests covering getArticleForOg, getTagForOg, getPartForOg, getVendorForOg
+- issue: #386
+> Only finding ≥3.0 after a fresh manual audit pass across SEO, link integrity, a11y, tests, and performance (categories C–G, delegated to Explore sub-agent) — all mechanical surveys (content-gap, crosslink, companion, stale-GB, newsletter-gap, OG-coverage, article-parts-check, article-language-check, tracker-linkage) reported clean this same tick; no pending phases/data/CRITIQUE rows; expand gate not due (2 commits/~1.5h since pass 142, below 20-commit/48h threshold). A borderline [G] performance finding (raw-`<img>` gate in `apps/web/__tests__/no-raw-img.test.ts` not scoped to `packages/content/src/mdx/`, score ≈2.4–3.0) was also surfaced but left unaddressed below the 3.0 threshold.
