@@ -313,8 +313,22 @@ This files `seo` AUDIT rows (score 4.8) for any `apps/web/src/app/**/page.tsx`
 route directories that lack a sibling `opengraph-image.tsx`. Prevents the
 "route ships without OG handler" class that consumed ~28 iterate ticks across
 passes 127–134. Deduplicates against existing AUDIT rows. If it exits
-non-zero, log and continue — the check is best-effort. Then fall through to
-Step 3c (expand).
+non-zero, log and continue — the check is best-effort.
+
+Then run the a11y spec coverage check (expand pass 135 candidate, shipped
+via iterate):
+
+```bash
+node scripts/a11y-spec-coverage-check.mjs --write
+```
+
+This files `tests` AUDIT rows (score 3.2) for any static canonical route
+(from `apps/e2e/src/fixtures/canonical-urls.ts`) missing a `runAxe(page,
+'<route>')` assertion in `apps/e2e/tests/a11y.spec.ts`'s desktop or mobile
+suite. Prevents the "route ships without a11y coverage" class that required
+4 reactive commits across phases 43–49. Deduplicates against existing AUDIT
+rows. If it exits non-zero, log and continue — the check is best-effort.
+Then fall through to Step 3c (expand).
 
 #### 3c. Expand due (rate-limited, posture-gated)?
 

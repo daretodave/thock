@@ -339,6 +339,18 @@ immediately after the phase commit (non-blocking — the phase ships first,
 the OG gap drains in the next iterate tick). If the phase already ships an
 `opengraph-image.tsx` for every new route, the script exits clean.
 
+**A11y spec coverage gate (iterate-shipped gate, post-verify):** in the same
+pass, check whether any static route added in this phase is missing a
+`runAxe(page, '<route>')` assertion in `apps/e2e/tests/a11y.spec.ts`:
+
+```bash
+node scripts/a11y-spec-coverage-check.mjs --write
+```
+
+Same non-blocking contract as the OG gate above — fold any filed rows into
+the same follow-up `audit:` commit. If the phase already added desktop +
+mobile `test()` entries for every new static route, the script exits clean.
+
 ### Step 10 — Commit + push
 
 Stage explicitly. Conventional subject; body in 4–8 bullets
