@@ -41,4 +41,16 @@ describe('group-buys loader', () => {
     const gb = getGroupBuyBySlug('cannonkeys-mode-sonnet-r2')
     expect(gb?.url).not.toBe('https://cannonkeys.com/products/mode-sonnet-r2')
   })
+
+  it('does not regress deltakeyco-gmk-cyl-pandemonium url to the known-dead product path (regression guard)', () => {
+    const gb = getGroupBuyBySlug('deltakeyco-gmk-cyl-pandemonium')
+    expect(gb?.url).not.toBe(
+      'https://deltakeyco.com/products/gmk-cyl-pandemonium-group-buy',
+    )
+  })
+
+  it('does not regress kbdfans-gmk-cyl-ramune url to the known-dead product path (regression guard)', () => {
+    const gb = getGroupBuyBySlug('kbdfans-gmk-cyl-ramune')
+    expect(gb?.url).not.toBe('https://kbdfans.com/products/gmk-cyl-ramune')
+  })
 })

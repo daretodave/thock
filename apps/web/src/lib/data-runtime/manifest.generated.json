@@ -749,13 +749,13 @@
       "startDate": "2026-06-01",
       "endDate": "2026-07-01",
       "region": "global",
-      "url": "https://deltakeyco.com/products/gmk-cyl-pandemonium-group-buy",
+      "url": "https://deltakeyco.com",
       "imageUrl": null,
       "heroImage": "/group-buy-art/deltakeyco-gmk-cyl-pandemonium.svg",
       "relatedArticle": "gmk-cyl-pandemonium-group-buy",
       "status": "closed",
       "description": "DeltaKeyCo's Berserk eclipse-themed Cherry-profile doubleshot ABS set. Dark near-black base with translucent blood-red legends. Eight storefronts globally: DeltaKeyCo (primary), Prototypist (APAC), Bowl Keyboards (UK), and five regional partners. Base and novelty kits plus deskmat. June 1–July 1 2026.",
-      "updatedAt": "2026-07-03T00:00:00.000Z"
+      "updatedAt": "2026-07-05T00:00:00.000Z"
     },
     {
       "slug": "divinikey-dcs-dolch",
@@ -868,13 +868,13 @@
       "startDate": "2026-05-15",
       "endDate": "2026-06-20",
       "region": "global",
-      "url": "https://kbdfans.com/products/gmk-cyl-ramune",
+      "url": "https://kbdfans.com",
       "imageUrl": null,
       "heroImage": "/group-buy-art/kbdfans-gmk-cyl-ramune.svg",
       "relatedArticle": "gmk-cyl-ramune-group-buy",
       "status": "closed",
       "description": "GMK CYL Ramune — pastel dual-blue plus pink WS1-white colorway in the CYL cylindrical sub-line, running globally across 10 regional vendors including Divinikey (US), Prototypist (UK), Geonworks (KR), and Yushakobo (JP).",
-      "updatedAt": "2026-06-20T00:00:00.000Z"
+      "updatedAt": "2026-07-05T00:00:00.000Z"
     },
     {
       "slug": "kbdfans-gmk-cyl-selene",
@@ -6715,5 +6715,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-07-05T14:45:14.464Z"
+  "generatedAt": "2026-07-05T20:42:33.180Z"
 }
