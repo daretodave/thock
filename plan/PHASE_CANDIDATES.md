@@ -373,7 +373,8 @@
 - estimated phases: 1
 - conflicts: none — script only; no route/schema/URL contract change; existing `opengraph-image.tsx` handlers are untouched.
 
-### [ ] [score 4.5] a11y and e2e spec coverage gap detector — detect route families missing a11y.spec.ts and meta.spec.ts entries
+### [x] [score 4.5] a11y and e2e spec coverage gap detector — detect route families missing a11y.spec.ts and meta.spec.ts entries
+- **shipped: feat: 683a01b** — `scripts/a11y-spec-coverage-check.mjs` ships a narrowed scope: gate/--write/--json modes, dedup, 14 unit tests, `skills/march.md` Step 3b.5a + `skills/ship-a-phase.md` Step 9 amendments. The meta.spec.ts half of the original proposal was dropped — that file already auto-generates a JSON-LD test for every canonical URL via a `for (const path of HTML_PATHS)` loop, so there is no "missing test" gap there, only a weaker-assertion risk (`expectedTypesFor` falling through to `[]`) that would need regex pattern-matching prone to false positives (confirmed against `/part/switch` etc., covered via a regex branch with no literal path string in source). Shipped directly via `/iterate` (cloud march tick 2026-07-05) rather than a full phase — same precedent as `og-coverage-check.mjs` and `newsletter-gap-survey.mjs`, both single-tick iterate ships.
 - proposed: 2026-06-21, expand pass 135
 - source signals:
   - **G (commit pattern — dominant)**: 4 a11y/meta-spec coverage commits in the 8-commit pass 135 window: `a3fe414` (desktop a11y suite extended to 7 missing route families from phases 43–49), `b008a6f` (mobile suite extended to 13 missing routes to match desktop), `0e8fa83` (Tools nav test gap — Header.tsx test missing /tools assertion), plus `1d6516e` from the pass 134 window (meta.spec.ts JSON-LD type assertions added for 7 route families from phases 43–49). All 4 are reactive fixes to gaps created when phases 43–49 shipped without updating the existing test suite entries.
