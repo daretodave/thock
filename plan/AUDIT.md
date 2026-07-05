@@ -6109,11 +6109,12 @@ passes accumulate signals.)
 - action: `gsk-sweet-nightmare-group-buy.mdx:63` cited `kbdfans.com/products/sweet-nightmare` (404); swapped to `kbdfans.com/products/gsk-sweet-nightmare` (200), matching the sibling data record's already-correct `url`. One-fix-per-tick rule split the row — the remaining 8 need per-vendor research and are re-filed below.
 - issue: #397
 
-### [ ] [content] [3.2] 8 dead `<Source>` citations across 7 articles — vendor blog reorgs, dead product pages, changed YouTube handle
+### [x] [content] [3.2] 8 dead `<Source>` citations across 7 articles — vendor blog reorgs, dead product pages, changed YouTube handle — addressed in d83c2e9, closes #398
 - category: content
 - filed: 2026-07-05 by cloud /iterate audit (residual — split from the [4.2] row above after its trivial 1-of-9 fix shipped)
 - impact: 5 (8 remaining dead `<Source href>` citations across 7 articles; each renders as a live outbound link and is aggregated on `/sources`)
 - ease: 4 (each link needs a per-vendor research pass to find a live replacement — not a mechanical swap; scout-shaped work)
 - score: 3.2 (impact × ease / 10)
 - articles: `hmx-cloud-deep-dive.mdx:44` (hmxkeyboard.com — DNS fail), `gmk-cyl-ramune-group-buy.mdx:81` (geonworks.com — DNS fail), `gmk-cyl-pandemonium-group-buy.mdx:92` (bowlkeyboards.co.uk — DNS fail), `plate-materials-explained.mdx:56,58` (thockking.com/blogs/learn/plate-materials + theremingoat.com/blog/category/scientific+studies — both 404), `clicky-switches-deep-dive.mdx:84` + `cherry-mx2a-revision.mdx:51` (cherry-world.com/cherry-mx-2a — redirects to a malformed 404 URL), `switch-films-worth-it.mdx:30` (novelkeys.com/collections/switch-films — 404), `gasket-mount-reality.mdx:71` (youtube.com/@thereminGoat — 404, handle likely changed)
-- next: spawn `scout` per remaining vendor/creator to find a live replacement URL (vendor homepage or current blog path) for each of the 8
+- action: spawned `scout` to research all 8; verified-live replacements applied — keeb-finder.com/switches/filter/brand-HMX, geon.works, bowlkeyboards.com, thockking.com/blogs/learn/choosing-the-best-plate-material, theremingoat.com/pdf-archive, cherry.de/en-us/company/news/cherry-blog/article/cherry-mx2a (×2), novelkeys.com/products/nk-x-deskeys-switch-films, theremingoat.com
+- issue: #398
