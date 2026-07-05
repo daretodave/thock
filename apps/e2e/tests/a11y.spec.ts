@@ -206,6 +206,37 @@ test.describe('a11y — desktop', () => {
   test('tracker archive week (/trends/tracker/2026-W19)', async ({ page }) => {
     await runAxe(page, '/trends/tracker/2026-W19')
   })
+
+  // 404 templates — 7 distinct not-found routes, previously zero full-page
+  // axe coverage (only narrow color-contrast regression guards existed).
+  // issue #389
+  test('root not-found (/this-route-does-not-exist-anywhere)', async ({ page }) => {
+    await runAxe(page, '/this-route-does-not-exist-anywhere')
+  })
+
+  test('article not-found (/article/this-slug-does-not-exist)', async ({ page }) => {
+    await runAxe(page, '/article/this-slug-does-not-exist')
+  })
+
+  test('tag not-found (/tag/this-tag-does-not-exist)', async ({ page }) => {
+    await runAxe(page, '/tag/this-tag-does-not-exist')
+  })
+
+  test('part kind not-found (/part/invalid-kind)', async ({ page }) => {
+    await runAxe(page, '/part/invalid-kind')
+  })
+
+  test('part detail not-found (/part/switch/this-switch-does-not-exist)', async ({ page }) => {
+    await runAxe(page, '/part/switch/this-switch-does-not-exist')
+  })
+
+  test('vendor not-found (/vendor/this-vendor-does-not-exist)', async ({ page }) => {
+    await runAxe(page, '/vendor/this-vendor-does-not-exist')
+  })
+
+  test('tracker week not-found (/trends/tracker/2099-W99)', async ({ page }) => {
+    await runAxe(page, '/trends/tracker/2099-W99')
+  })
 })
 
 // Mobile suite — 30 routes at 375px (matches desktop suite; extended to phases 43–49 + pillar list pages + issue #385)
@@ -342,6 +373,35 @@ test.describe('a11y — mobile (375px)', () => {
 
   test('tracker archive week — mobile', async ({ page }) => {
     await runAxe(page, '/trends/tracker/2026-W19')
+  })
+
+  // 404 templates — mobile (issue #389)
+  test('root not-found — mobile', async ({ page }) => {
+    await runAxe(page, '/this-route-does-not-exist-anywhere')
+  })
+
+  test('article not-found — mobile', async ({ page }) => {
+    await runAxe(page, '/article/this-slug-does-not-exist')
+  })
+
+  test('tag not-found — mobile', async ({ page }) => {
+    await runAxe(page, '/tag/this-tag-does-not-exist')
+  })
+
+  test('part kind not-found — mobile', async ({ page }) => {
+    await runAxe(page, '/part/invalid-kind')
+  })
+
+  test('part detail not-found — mobile', async ({ page }) => {
+    await runAxe(page, '/part/switch/this-switch-does-not-exist')
+  })
+
+  test('vendor not-found — mobile', async ({ page }) => {
+    await runAxe(page, '/vendor/this-vendor-does-not-exist')
+  })
+
+  test('tracker week not-found — mobile', async ({ page }) => {
+    await runAxe(page, '/trends/tracker/2099-W99')
   })
 })
 
