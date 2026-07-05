@@ -18,6 +18,21 @@ describe('<ArticleCard>', () => {
     expect(h1).toHaveTextContent('Hero pick title')
   })
 
+  it('hero variant renders an h2 when titleAs="h2" (pillar pages already have an H1)', () => {
+    const article = makeArticle({
+      frontmatter: {
+        ...makeArticle().frontmatter,
+        title: 'Pillar lead title',
+      },
+    })
+    render(
+      <ArticleCard article={article} variant="hero" titleAs="h2" tagsBySlug={TAGS} />,
+    )
+    expect(screen.queryByRole('heading', { level: 1 })).toBeNull()
+    const h2 = screen.getByRole('heading', { level: 2 })
+    expect(h2).toHaveTextContent('Pillar lead title')
+  })
+
   it('hero variant uses a placeholder when heroImage is null', () => {
     const article = makeArticle()
     render(<ArticleCard article={article} variant="hero" tagsBySlug={TAGS} />)

@@ -94,6 +94,7 @@ export default function TrendsPage(): ReactElement {
           <ArticleCard
             article={lead}
             variant="hero"
+            titleAs="h2"
             tagsBySlug={tagsBySlug}
           />
         </Container>

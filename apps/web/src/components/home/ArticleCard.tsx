@@ -20,6 +20,13 @@ export type ArticleCardProps = {
   tagsBySlug?: Map<string, Tag>
   /** Reserved — see `tagsBySlug` above. */
   maxTags?: number
+  /**
+   * Heading level for the hero variant's title. Defaults to `h1`
+   * (home page hero, the page's only H1). Pillar pages that render
+   * their own H1 via `PillarHero` above a hero-variant card must
+   * pass `h2` to avoid a duplicate H1.
+   */
+  titleAs?: 'h1' | 'h2'
 }
 
 const PUBLISHED_FORMATTER = new Intl.DateTimeFormat('en-US', {
@@ -59,7 +66,9 @@ function PlaceholderImage({
  * lifts to `packages/ui/` only when phase 7 (News pillar) needs it.
  *
  * - hero: full-width, large image (or placeholder) above title +
- *   lede + meta. Used as the home page H1.
+ *   lede + meta. Renders an H1 by default (home page); pass
+ *   `titleAs="h2"` on pillar pages that already render an H1 via
+ *   `PillarHero`.
  * - large: 4-up grid card — image on top, title below.
  * - row: horizontal card — image left, body right.
  * - compact: title + pillar + date only, no image.
@@ -67,6 +76,7 @@ function PlaceholderImage({
 export function ArticleCard({
   article,
   variant,
+  titleAs = 'h1',
 }: ArticleCardProps): ReactElement {
   const fm = article.frontmatter
   const path = `/article/${article.slug}`
@@ -90,6 +100,7 @@ export function ArticleCard({
   )
 
   if (variant === 'hero') {
+    const HeroTitle = titleAs
     return (
       <Link
         href={path}
@@ -115,11 +126,11 @@ export function ArticleCard({
         )}
         <div className="flex flex-col gap-4">
           {eyebrow}
-          <h1
+          <HeroTitle
             className={`${variantToTitleClass.hero} group-hover:text-accent transition-colors`}
           >
             {fm.title}
-          </h1>
+          </HeroTitle>
           <p className="text-h3 text-text-2 font-serif max-w-[60ch]">
             {fm.lede}
           </p>
