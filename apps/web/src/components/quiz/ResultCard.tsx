@@ -51,8 +51,12 @@ export function ResultCard({ sw, score, maxScore, rank }: Props) {
       <p className="text-small text-text-2">{excerpt}</p>
       <div className="flex items-center gap-3">
         <div
-          className="flex-1 h-1.5 bg-bg-2 rounded-full overflow-hidden"
+          role="progressbar"
+          aria-valuenow={pct}
+          aria-valuemin={0}
+          aria-valuemax={100}
           aria-label={`match score ${pct}%`}
+          className="flex-1 h-1.5 bg-bg-2 rounded-full overflow-hidden"
         >
           <div
             className="h-full bg-accent-mu rounded-full transition-all"

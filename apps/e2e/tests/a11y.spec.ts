@@ -35,11 +35,7 @@ function formatViolations(violations: AxeViolation[]): string {
     .join('\n')
 }
 
-async function runAxe(page: Page, url: string) {
-  await page.goto(url)
-  // Wait for the page to be fully painted (avoids false loading-state hits)
-  await page.waitForLoadState('networkidle')
-
+async function assertAxeClean(page: Page, label: string) {
   const results = await new AxeBuilder({ page })
     .withTags(WCAG_TAGS)
     .analyze()
@@ -53,7 +49,7 @@ async function runAxe(page: Page, url: string) {
   const softViolations = [...moderate, ...minor]
   if (softViolations.length > 0) {
     console.warn(
-      `[a11y Phase B] moderate/minor violations on ${url} (filed to AUDIT.md):\n` +
+      `[a11y Phase B] moderate/minor violations on ${label} (filed to AUDIT.md):\n` +
         formatViolations(softViolations),
     )
   }
@@ -64,11 +60,36 @@ async function runAxe(page: Page, url: string) {
   const hardViolations = [...critical, ...serious]
   if (hardViolations.length > 0) {
     throw new Error(
-      `[a11y] CRITICAL/SERIOUS violations on ${url}:\n${formatViolations(hardViolations)}`,
+      `[a11y] CRITICAL/SERIOUS violations on ${label}:\n${formatViolations(hardViolations)}`,
     )
   }
 
   return results
+}
+
+async function runAxe(page: Page, url: string) {
+  await page.goto(url)
+  // Wait for the page to be fully painted (avoids false loading-state hits)
+  await page.waitForLoadState('networkidle')
+
+  return assertAxeClean(page, url)
+}
+
+// Clicks the first option for each of a quiz's 4 questions, landing on the
+// results state (auto-advance fires ~150ms after each click). Each quiz
+// component names its results container differently (SwitchQuiz uses
+// "quiz-results", KeycapSetQuiz uses "keycap-quiz-results").
+async function completeQuiz(page: Page, url: string, resultsTestId: string) {
+  await page.goto(url)
+  await page.waitForLoadState('networkidle')
+
+  for (let i = 0; i < 4; i++) {
+    const firstOption = page.locator('[data-testid="quiz-option-description"]').first()
+    await firstOption.click()
+    await page.waitForTimeout(200)
+  }
+
+  await expect(page.locator(`[data-testid="${resultsTestId}"]`)).toBeVisible()
 }
 
 // Desktop suite — 30 canonical pages (phase 49: 7 routes from phases 43–49 added; issue #383: 4 pillar list pages added; issue #384: /news added; issue #385: 9 more routes added)
@@ -402,6 +423,36 @@ test.describe('a11y — mobile (375px)', () => {
 
   test('tracker week not-found — mobile', async ({ page }) => {
     await runAxe(page, '/trends/tracker/2099-W99')
+  })
+})
+
+// Quiz result-view coverage (issue tracked by pass-143 expand note): every prior
+// quiz a11y pass scanned only the initial question view. The results state (a
+// distinct DOM tree — ResultCard, build sheet, retake CTA) had never run a
+// full-page axe scan, only narrow color-contrast include()s on specific testids.
+test.describe('a11y — quiz results (post-completion)', () => {
+  test('switch quiz results (/quiz/switch)', async ({ page }) => {
+    await completeQuiz(page, '/quiz/switch', 'quiz-results')
+    await assertAxeClean(page, '/quiz/switch (results state)')
+  })
+
+  test('keycap-set quiz results (/quiz/keycap-set)', async ({ page }) => {
+    await completeQuiz(page, '/quiz/keycap-set', 'keycap-quiz-results')
+    await assertAxeClean(page, '/quiz/keycap-set (results state)')
+  })
+})
+
+test.describe('a11y — quiz results (post-completion, mobile 375px)', () => {
+  test.use({ viewport: { width: 375, height: 800 } })
+
+  test('switch quiz results — mobile', async ({ page }) => {
+    await completeQuiz(page, '/quiz/switch', 'quiz-results')
+    await assertAxeClean(page, '/quiz/switch (results state, mobile)')
+  })
+
+  test('keycap-set quiz results — mobile', async ({ page }) => {
+    await completeQuiz(page, '/quiz/keycap-set', 'keycap-quiz-results')
+    await assertAxeClean(page, '/quiz/keycap-set (results state, mobile)')
   })
 })
 
