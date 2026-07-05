@@ -36,4 +36,9 @@ describe('group-buys loader', () => {
       'wuque-studio-paper80-whatever-studio',
     )
   })
+
+  it('does not regress cannonkeys-mode-sonnet-r2 url to the known-dead product path (regression guard: fixed 9255abe, reintroduced by e3dbac8, fixed again 74e897a)', () => {
+    const gb = getGroupBuyBySlug('cannonkeys-mode-sonnet-r2')
+    expect(gb?.url).not.toBe('https://cannonkeys.com/products/mode-sonnet-r2')
+  })
 })
