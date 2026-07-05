@@ -6025,3 +6025,14 @@ passes accumulate signals.)
 - action: added 7 desktop + 7 mobile axe test blocks to `apps/e2e/tests/a11y.spec.ts` following the established `runAxe` pattern
 - issue: #389
 > Fresh audit across data-gaps/SEO/link-integrity/a11y/tests/perf (delegated to Explore sub-agent) after all mechanical content-gap surveys (content-gap, crosslink, companion, stale-GB, newsletter-gap, OG-coverage) reported clean; no pending phases/data/CRITIQUE rows; expand gate not due (1 commit/~9h since pass 143, below 20-commit/48h threshold). A second [3.5] a11y finding (quiz result-view state never axe-scanned) and the recurring raw-`<img>` gate scope gap in `packages/content/src/mdx/` (~2.0-2.8, confirmed flat — `KeyboardImage` component still unused in the 60-article corpus) were also surfaced but left below/at this tick's pick; the quiz-result finding is next in line for a future tick. `pnpm verify` full gate green: typecheck, 875 unit/script tests, data:validate (68 records), build, 955/955 e2e.
+
+### [x] [a11y] [4.8] quiz result-view state never axe-scanned — aria-prohibited-attr on match-score meter — addressed in this commit, closes #390
+- category: a11y
+- filed: 2026-07-05 by /iterate audit (cloud march tick)
+- impact: 6 (every prior a11y pass on `/quiz/switch` and `/quiz/keycap-set` scanned only the initial question view; the completed results state — a distinct DOM tree, ResultCard/KeycapSetResultCard + build-sheet + retake CTA — had never run a full-page axe scan, only a narrow `color-contrast`-scoped `include()` on `result-card-pct`. Adding the missing scan surfaced a real, previously-undetected WCAG violation: the match-score meter is a plain `<div>` (implicit role `generic`) carrying `aria-label`, which the `generic` role prohibits — axe-core `aria-prohibited-attr`, serious impact, on both quiz components)
+- ease: 8 (2-line `role="progressbar"` + `aria-valuenow/min/max` fix per component, mirroring standard progress-bar semantics; 4 new axe test blocks — desktop + mobile × 2 quizzes — reusing the existing `completeQuiz`/`assertAxeClean` helpers)
+- score: 4.8 (impact × ease / 10)
+- routes: /quiz/switch, /quiz/keycap-set
+- action: added `role="progressbar"` + `aria-valuenow`/`aria-valuemin`/`aria-valuemax` to the match-score meter in `ResultCard.tsx` and `KeycapSetResultCard.tsx`; added 4 full-page axe blocks (desktop + mobile, both quizzes) to `apps/e2e/tests/a11y.spec.ts` completing each quiz before scanning
+- issue: #390
+> Surfaced by pass 143's `/expand` note ("the quiz-result finding is next in line for a future tick"); no pending phases/data/CRITIQUE rows or mechanical-survey findings this tick (content-gap, crosslink, companion, stale-GB, newsletter-gap, OG-coverage all clean); expand gate not due (3 commits/~9.5h since pass 143, below 20-commit/48h threshold). `pnpm verify` full gate green: typecheck, 68 data records, 142 script tests, 596 unit tests, build, size (108.5 KB/200 KB budget), 959/959 e2e.
