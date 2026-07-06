@@ -6131,3 +6131,29 @@ passes accumulate signals.)
 - next: /ship-content → ideas pillar article
 > Filed 2026-07-06 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 > **Resolved (2026-07-06):** Shipped "Retrobrighting: what UV and peroxide actually reverse in yellowed ABS" at `/article/retrobrighting-keycaps`, publishedAt 2026-06-22 (gap-fill midpoint of the 27-day 2026-06-09 → 2026-07-06 gap). Ideas pillar now at 2 of ≥2 in the 30-day window — comfortable. Note: two earlier stalled ticks today (2026-07-06 03:12 and 05:31) had each opened their own duplicate mirror issue (#399, #400) for this same row without completing a commit — closed both as superseded once this ships. `ec6f080`
+
+### [x] [a11y] [4.2] InlineViz zoom dialog has no keyboard focus trap — addressed in 3028a13, closes #402
+- category: a11y
+- filed: 2026-07-06 by /iterate audit (cloud march tick, pass 154)
+- impact: 6 (`InlineViz` renders in all 61 articles; its zoom modal is `role="dialog" aria-modal="true"` but had no Tab-trap — background nav/article content stayed in the tab order behind the opaque backdrop, so a keyboard user could Tab out of the dialog into hidden content. Not caught by axe-core's default critical/serious ruleset — it's a runtime keyboard-interaction behavior, not a static DOM check)
+- ease: 7 (contained fix inside the existing keydown handler via a `dialogRef` query over focusable elements; add one colocated test file)
+- score: 4.2 (impact × ease / 10)
+- action: `packages/content/src/mdx/InlineViz.tsx` — added `dialogRef`, trapped `Tab`/`Shift+Tab` to wrap focus at the dialog's first/last focusable element instead of letting it escape. Added `InlineViz.test.tsx` (13 tests: open/close/Escape/Tab-wrap/caption), merging in the pre-existing `resolveAccent`-only `InlineViz.test.ts` rather than keep two test files for one module.
+- issue: #402
+> All mechanical surveys clean (content-gap, crosslink, companion, stale-GB, newsletter-gap, OG-coverage, a11y-spec-coverage, tracker-linkage, article-parts-check, article-language-check); 0 unlabeled GitHub issues (1 open, #395, mirrors the still-blocked `[6.3]` engineering row); no spec.md/design diff, no data growth since pass 153. A fresh Explore-agent sweep across link integrity, a11y, tests, SEO, performance, and data integrity surfaced this as the top finding (4.2), ahead of two lower-priority residuals filed below (not bundled into this tick per the one-fix-per-tick rule). `pnpm verify` full gate green: typecheck, 149 content unit tests (13 new), 591 web unit tests, 156 script tests, data:validate (69 records), build, size (108.5KB/200KB budget), 968/968 e2e.
+
+### [a11y] [3.6] PartReference resolves board/keycap-set links from the wrong data field
+- category: a11y
+- filed: 2026-07-06 by /iterate audit (cloud march tick, pass 154 — residual, not bundled into this tick's fix)
+- impact: 6 (`packages/content/src/mdx/PartReference.tsx:33-38` links board/keycap-set part names using `part.record.imageUrl` — a field documented in `packages/data/src/schemas/group-buy.ts:19` as vendor-supplied product *imagery*, not a shop link. Every board/keycap-set record's `imageUrl` is currently `null` (9 boards + 10 keycap-sets), so the bug is silently masked today, and `PartReference.test.tsx` bakes in the same mismatch by using shop-URL-shaped values as test `imageUrl` fixtures. The moment `/ship-data` or a vendor-image backfill populates a real product photo, every `<PartReference>` for that part will render `rel="sponsored noopener" target="_blank"` straight to a JPG instead of the vendor page)
+- ease: 6 (resolve the vendor via `vendorSlug` in `getReferencedParts` (`packages/content/src/loaders/parts.ts`) and pass the vendor's `url` as the href; update `PartReference.tsx` and its test fixtures accordingly)
+- score: 3.6 (impact × ease / 10)
+- next: main agent implements — touches `packages/content/src/loaders/parts.ts`, `packages/content/src/mdx/PartReference.tsx`, `PartReference.test.tsx`
+
+### [seo] [3.6] JSON-LD script bodies not escaped against `</script>` breakout
+- category: seo
+- filed: 2026-07-06 by /iterate audit (cloud march tick, pass 154 — residual, not bundled into this tick's fix)
+- impact: 4 (`packages/seo/src/JsonLd.ts:18` — `dangerouslySetInnerHTML: { __html: JSON.stringify(graph) }` with no escaping. Every page on the site uses this helper. No current article/data string contains the literal substring `</script`, so nothing is exploitable today, but it's a latent, systemic gap: the first future content field that happens to include that substring terminates the script tag early and injects raw HTML on that page)
+- ease: 9 (one-line hardening fix: `JSON.stringify(graph).replace(/</g, '\\u003c')`)
+- score: 3.6 (impact × ease / 10)
+- next: main agent implements — one-line change in `packages/seo/src/JsonLd.ts`, plus a regression test asserting a `</script` substring in input never appears unescaped in the rendered output
