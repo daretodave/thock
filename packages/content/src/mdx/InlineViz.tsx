@@ -97,6 +97,7 @@ export function InlineViz({
   const [zoomed, setZoomed] = useState(false)
   const triggerRef = useRef<HTMLButtonElement | null>(null)
   const closeRef = useRef<HTMLButtonElement | null>(null)
+  const dialogRef = useRef<HTMLDivElement | null>(null)
 
   // Body scroll lock + Escape-to-close + focus management.
   // Locking via overflow:hidden on <body> is intentionally simple —
@@ -110,7 +111,30 @@ export function InlineViz({
     document.body.style.overflow = 'hidden'
 
     const onKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setZoomed(false)
+      if (e.key === 'Escape') {
+        setZoomed(false)
+        return
+      }
+      // Trap Tab focus inside the dialog — background content stays
+      // in the DOM (not `inert`), so without this a Tab/Shift+Tab from
+      // the last/first focusable dialog element escapes into content
+      // hidden behind the opaque backdrop.
+      if (e.key === 'Tab') {
+        const focusable = dialogRef.current?.querySelectorAll<HTMLElement>(
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        )
+        if (!focusable || focusable.length === 0) return
+        const first = focusable[0]
+        const last = focusable[focusable.length - 1]
+        if (!first || !last) return
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault()
+          last.focus()
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault()
+          first.focus()
+        }
+      }
     }
     document.addEventListener('keydown', onKey)
 
@@ -194,6 +218,7 @@ export function InlineViz({
 
       {zoomed && (
         <div
+          ref={dialogRef}
           role="dialog"
           aria-modal="true"
           aria-label={alt}
