@@ -30,4 +30,24 @@ describe('<JsonLd>', () => {
     expect(scripts.length).toBe(1)
     expect(Array.isArray(JSON.parse(scripts[0]!.innerHTML))).toBe(true)
   })
+
+  it('escapes </script> in string fields so the tag cannot be broken out of', () => {
+    const { container } = render(
+      <JsonLd
+        graph={{
+          '@context': 'https://schema.org',
+          '@type': 'Article',
+          headline: 'Breaking out with </script><script>alert(1)</script>',
+        }}
+      />,
+    )
+    const script = container.querySelector('script[type="application/ld+json"]')
+    expect(script).not.toBeNull()
+    expect(script!.innerHTML).not.toContain('</script>')
+    expect(JSON.parse(script!.innerHTML)).toEqual({
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: 'Breaking out with </script><script>alert(1)</script>',
+    })
+  })
 })

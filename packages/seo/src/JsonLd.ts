@@ -15,6 +15,9 @@ type Graph = Record<string, unknown> | Record<string, unknown>[]
 export function JsonLd({ graph }: { graph: Graph }): ReactElement {
   return createElement('script', {
     type: 'application/ld+json',
-    dangerouslySetInnerHTML: { __html: JSON.stringify(graph) },
+    // `<` is escaped so a future string field containing the literal
+    // substring `</script` can't terminate this tag early — `<`
+    // round-trips through JSON.parse back to `<`.
+    dangerouslySetInnerHTML: { __html: JSON.stringify(graph).replace(/</g, '\\u003c') },
   })
 }

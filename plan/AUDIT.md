@@ -6157,3 +6157,4 @@ passes accumulate signals.)
 - ease: 9 (one-line hardening fix: `JSON.stringify(graph).replace(/</g, '\\u003c')`)
 - score: 3.6 (impact × ease / 10)
 - next: main agent implements — one-line change in `packages/seo/src/JsonLd.ts`, plus a regression test asserting a `</script` substring in input never appears unescaped in the rendered output
+- issue: #403
