@@ -6,108 +6,111 @@
 
 ## Headline
 
-**Quiet, healthy day with one real find.** 22 `march` ticks in the
-last ~25 hours: 9 productive (a11y coverage completed across every
-remaining route family — 404/not-found, quiz result-view with a
-genuine `aria-prohibited-attr` fix, part-detail keycap-set/board —
-plus a preventative `a11y-spec-coverage-check.mjs` gate, a W27
-trend-snapshot backfill, and og-runtime unit coverage), 12 clean
-no-ops, and **1 crash** (22:19 UTC — the `/march` action itself
-failed after 2s with no transcript). Chasing that crash down
-surfaced a real workflow bug: the crash-issue-opening gate
-(`march.yml` steps 11–12) never actually fires when the action
-step fails, because of GitHub Actions' implicit `success()` gate —
-exactly the one case it exists to catch. Filed as a new `[score
-6.0]` candidate below (see Tuning proposals). Full breadth `pnpm
-verify` is green top to bottom, deploy is `READY` at HEAD. One open
-issue (#391, dead CannonKeys vendor URL) is mid-flight — opened at
-03:29 UTC per the "can't ship cleanly → open an issue" contract,
-not yet fixed. `plan/CRITIQUE.md` is now 55 days / 1135 commits
-since its last pass — unchanged diagnosis from yesterday (cloud
-hard-skips `/critique` by design; still an `/oversight` question).
+**Clean day, zero crashes, heavy dead-link cleanup.** 20 `march`
+ticks in the ~24 hours since the last digest, all `success` — no
+repeat of yesterday's 22:19 crash. The window drained a real
+external-link-rot cluster: 3 separate dead-link discoveries (2
+group-buy vendor URLs feeding `/group-buys/past` JSON-LD, then 9
+dead `<Source>` citations across 8 articles, the last 8 researched
+and fixed in one `scout`-backed commit) plus the still-open
+CannonKeys URL from yesterday (#391) and its regression guard.
+`/expand` noticed the pattern itself — pass 151 filed a `[score
+6.0]` candidate to mechanize link-rot detection instead of relying
+on another manual sweep next time. 8 of 9 issues opened this window
+are now closed; only `#395` (the blocked `march.yml` crash-issue
+gate fix) remains open, still stuck on the same cloud
+workflow-write permission wall found yesterday. One minor blip: two
+consecutive stalled ticks (03:07, 05:27 UTC) each opened their own
+mirror issue for the same ideas-pillar content-gap row before a
+third tick actually shipped the article — self-healed same window,
+noted below in case it recurs. Full breadth `pnpm verify` is green
+top to bottom (968/968 e2e, up from 959 — new regression-guard
+tests), deploy is `READY` at HEAD. `plan/CRITIQUE.md` is now 57
+days / 1157 commits since its last pass — unchanged diagnosis from
+yesterday (cloud hard-skips `/critique` by design; still an
+`/oversight` question).
 
 ## While you were out
 
 | When (UTC) | Tick | Outcome |
 |---|---|---|
-| 07-04 09:43–10:01 | iterate | a11y drain — 9 more routes axe coverage added + audit-closed |
-| 07-04 10:39–10:48 | expand | pass 142 — no candidates |
-| 07-04 11:30–11:53 | iterate | engineering drain — og-runtime data adapter unit coverage + audit-closed |
-| 07-04 12:26–12:30 | march | no-op |
-| 07-04 13:31–13:41 | march | no-op |
-| 07-04 14:32–15:00 | iterate | data drain — trends W27 snapshot backfilled (missed Monday cadence) + audit-closed |
-| 07-04 15:25–15:52 | iterate | a11y drain — part-detail keycap-set/board axe coverage added + audit-closed |
-| 07-04 16:22–16:26 | march | no-op |
-| 07-04 17:23–17:27 | march | no-op |
-| 07-04 18:22–18:29 | expand | pass 143 — no candidates |
-| 07-04 19:29–19:32 | march | no-op |
-| 07-04 20:21–20:24 | march | no-op |
-| 07-04 21:20–21:24 | march | no-op |
-| 07-04 22:19–22:20 | march | **crash** — `/march` action failed after 2s, no transcript produced; crash-issue gate silently didn't fire (see Headline + Tuning proposals) |
-| 07-04 23:21–23:26 | march | no-op |
-| 07-05 00:38–01:01 | iterate | a11y drain — 404/not-found route family (7 templates) axe coverage added + audit-closed |
-| 07-05 01:35–02:00 | iterate | a11y drain — quiz result-view axe scan added, real `aria-prohibited-attr` bug fixed + audit-closed |
-| 07-05 03:07–03:33 | iterate | issue #391 opened (dead CannonKeys vendor URL) — no fix shipped this tick, still open |
-| 07-05 05:20–05:36 | expand | pass 144 — no candidates |
-| 07-05 07:07–07:26 | expand | pass 145 — no candidates |
-| 07-05 09:02–09:24 | iterate | engineering drain — `a11y-spec-coverage-check.mjs` gate shipped (drains the standing candidate) + audit-closed |
-| 07-05 10:44–10:51 | expand | pass 146 — no candidates |
-
-No unlabeled "Cloud march tick crashed" issue was opened for the
-22:19 crash — that's the bug this digest found, not evidence the
-crash was silently handled correctly.
+| 07-05 11:32–11:48 | iterate | issue #391 fix shipped — dead CannonKeys vendor URL on the only live group buy (`74e897a`) |
+| 07-05 12:30–12:55 | iterate | regression guard added pinning the CannonKeys URL (`5845ad4`), closes #393 |
+| 07-05 13:32–13:51 | expand | pass 147 — no candidates |
+| 07-05 14:32–14:56 | iterate | a11y drain — duplicate H1 on 4 pillar pages fixed (`98f6d99`), closes #394 |
+| 07-05 15:27–15:34 | expand | pass 148 — no candidates |
+| 07-05 16:23–16:45 | iterate | engineering audit — wrote the `march.yml` crash-gate `always()` fix, hit cloud workflow-push permission wall, reverted and filed blocked row + candidate (`7f2c2b4`) |
+| 07-05 17:26–17:38 | march | no-op |
+| 07-05 18:24–18:43 | expand | pass 149 — no candidates |
+| 07-05 19:30–19:47 | expand | pass 150 — no candidates |
+| 07-05 20:25–20:54 | iterate | data drain — 2 dead group-buy vendor URLs on `/group-buys/past` JSON-LD swapped for stable homepages (`b7ff688`), closes #396 |
+| 07-05 21:23–21:45 | iterate | content drain — 1-of-9 dead `<Source>` citation fixed, trivial slug swap (`349b81e`), closes #397 |
+| 07-05 22:21–22:42 | iterate | content drain — remaining 8 dead `<Source>` citations across 7 articles researched via `scout` and fixed (`d83c2e9`), closes #398 |
+| 07-05 23:23–23:35 | march | no-op |
+| 07-06 00:38–00:40 | march | no-op |
+| 07-06 01:36–02:03 | iterate | data drain — trend snapshot `2026-W28` backfilled (`3768e8b`) |
+| 07-06 03:07–03:13 | iterate | content-gap row auto-filed for ideas pillar (`f90b8ba`) — stalled, opened mirror issue #399 without a completing commit |
+| 07-06 05:27–05:32 | iterate | stalled again on the same content-gap row — opened a second mirror issue #400, still no commit |
+| 07-06 07:34–07:39 | march | no-op |
+| 07-06 09:23–09:48 | iterate | content shipped — "Retrobrighting" ideas article (`ec6f080`), closes the content-gap row and supersedes #399/#400 |
+| 07-06 11:32–11:51 | expand | pass 151 — 1 candidate filed (external link-rot survey, `[score 6.0]`) |
 
 ## Shipped
 
-- a11y: full-page axe WCAG coverage completed for every remaining
-  route family — the 7 `404`/not-found templates, both quiz
-  result-view states (surfacing and fixing a real
-  `aria-prohibited-attr` violation on the match-score meter — a
-  plain `<div>` with `aria-label` needed `role="progressbar"` +
-  `aria-valuenow`/`min`/`max`), and the `/part/keycap-set/[slug]` +
-  `/part/board/[slug]` detail templates.
-- Engineering: `scripts/a11y-spec-coverage-check.mjs` — a
-  preventative gate (mirroring `og-coverage-check.mjs`) that
-  detects new canonical routes shipping without `a11y.spec.ts`
-  coverage, closing out the standing `[4.5] a11y and e2e spec
-  coverage gap detector` candidate that had recurred 4 times across
-  expand passes 133–143. Also: `og-runtime` data-adapter unit
-  coverage (9 tests).
-- Data: `data/trends/2026-W27.json` backfilled (19 rows) — the
-  Monday snapshot cadence gate missed W27 because its Monday
-  (2026-06-29) fell inside the March outage window; caught and
-  filed at impact 9.0 the same tick it was discovered.
+- **Link-rot cleanup (the window's dominant theme)**: dead
+  CannonKeys vendor URL (#391) + regression guard, 2 dead group-buy
+  vendor URLs on `/group-buys/past` JSON-LD (#396), and 9 dead
+  `<Source>` citations across 8 articles (#397, #398) — vendor
+  blog reorgs, 404s from domain moves, and one changed YouTube
+  handle, all researched and replaced with verified-live URLs.
+- a11y: duplicate H1 removed from 4 pillar hero cards
+  (deep-dives/ideas/trends/news) via a `titleAs` prop on
+  `ArticleCard`.
+- Content: "Retrobrighting: what UV and peroxide actually reverse
+  in yellowed ABS" published to the ideas pillar, closing a Rule 1
+  hot-pursuit content-gap.
+- Data: `data/trends/2026-W28.json` trend snapshot backfilled.
+- Engineering: root-caused (but could not ship) a real
+  `march.yml` bug — the crash-issue-opening gate never fires when
+  the action step itself fails, because its `if:` conditions lack
+  `always()`. The fix is written and verify-green; it's blocked on
+  a cloud push-permission wall (see Needs You #1).
 
 ## Queues now
 
 - **Build plan**: 0 pending phases — pure `/iterate` maintenance
-  mode since phase 17.
+  mode, unchanged.
 - **Cross-link drain**: 0 pending, unchanged.
-- **`plan/AUDIT.md`**: 0 open rows — every finding from this window
-  was audit-closed in the same tick that shipped its fix, except
-  the still-open issue below.
+- **`plan/AUDIT.md`**: 1 open row — `[blocked-cloud-permission]
+  [6.3]` the `march.yml` crash-gate fix, still stuck on the same
+  workflow-write permission wall diagnosed yesterday. No other
+  pending rows; everything else this window was audit-closed in
+  the same tick that shipped its fix.
 - **`plan/CRITIQUE.md`**: pass 11, last pass 2026-05-10T20:35 UTC
-  at commit `931c8a7`. **55 days / 1135 commits stale** (up from
-  54/1118 yesterday — expected, not a regression; see yesterday's
-  refined diagnosis, carried in the standing `[6.5] Critique gate
-  diagnostic` candidate: cloud hard-skips `/critique` by design, so
-  the real question is what local cadence should exist).
-- **`plan/PHASE_CANDIDATES.md`**: 10 pending rows — net unchanged
-  from yesterday (the `a11y and e2e spec coverage gap detector`
-  candidate shipped directly via `/iterate` this window and is now
-  marked `[x]`; this digest adds one new `[score 6.0]` candidate,
-  the `march.yml` crash-issue-gate fix). Current set: Parts catalog
-  third data pass (5.5), Tracker 8-week editorial analysis (5.0),
-  `/quiz/board` (6.5), `/compare/keycap-set` (5.5), Vitest coverage
-  CI gate (5.5), Critique gate diagnostic (6.5), **march.yml
-  crash-issue gate (6.0, new)**, Tracker topic history page (4.5),
-  ship-data entity-arrival mentionedParts rescan (5.5), Accessory
-  parts kind (5.0).
-- **`data/BACKLOG.md`**: 0 pending — all rows drained.
-- **Triage**: 1 open issue — `#391` "fix: dead CannonKeys vendor
-  URL on the only live group buy" (MED, `loop:opened` +
-  `source:audit`, opened 2026-07-05T03:29 UTC, still unfixed as of
-  this digest). 0 unlabeled, 0 `triage:needs-user`.
+  at commit `931c8a7`. **57 days / 1157 commits stale** (up from
+  55/1135 yesterday — expected, not a regression; unchanged
+  diagnosis: cloud hard-skips `/critique` by design, so the real
+  question is what local cadence should exist).
+- **`plan/PHASE_CANDIDATES.md`**: 12 pending rows — up from 10
+  yesterday. Two new this window: **external link-rot survey
+  (`[score 6.0]`, pass 151)** — a self-observed pattern (3
+  dead-link fix cycles in 11 commits) proposing a scheduled
+  HEAD-probe survey; and **cloud loop cannot push
+  `.github/workflows/*.yml` (`[score 5.5]`)** — the standing-gap
+  companion to the blocked AUDIT row above. Other incumbents
+  unchanged: `/quiz/board` (6.5), Critique gate diagnostic (6.5),
+  Parts catalog third data pass (5.5), `/compare/keycap-set` (5.5),
+  Vitest coverage CI gate (5.5), ship-data mentionedParts rescan
+  (5.5), Tracker 8-week editorial analysis (5.0), Accessory parts
+  kind (5.0), Tracker topic history page (4.5).
+- **`data/BACKLOG.md`**: 0 actionable rows (3 rows sit under
+  `## Pending` marked `[x]` — done but not yet relocated to
+  `## Done`; cosmetic, not a queue-pressure signal).
+- **Triage**: 1 open issue — `#395` "cloud march crash-issue gate
+  silently skips on action failure" (bug, `severity:med`,
+  `loop:opened`, `source:audit`), still open and still blocked by
+  the same push-permission wall. 0 unlabeled, 0
+  `triage:needs-user`.
 
 ## Breadth verdict
 
@@ -115,72 +118,76 @@ Full `pnpm verify` run fresh, foreground, sequential legs — all
 green:
 
 - `typecheck` — green, 8/8 workspace packages.
-- `test:run` — green, 94 files / 590 tests.
+- `test:run` — green, 928 tests across 7 workspaces (591 web + 121
+  data + 32 seo + 31 ui + 144 content + 6 e2e-fixtures + 3 tokens).
 - `test:scripts` — green, 57 suites / 156 tests.
-- `data:validate` — green, 68 records (9 vendors, 18 switches, 10
-  keycap-sets, 9 boards, 13 group-buys, 9 trend weeks), cross-refs
-  resolve.
-- `build` — green, no manifest churn this run.
-- `size` — green, 108.5 KB / 200 KB homepage gzip budget (unchanged
-  — no bundle-affecting shipped this window).
-- `e2e` — green, 959/959 in 7.1m. Same benign `NoFallbackError`
-  logged mid-run on `/trends/tracker/[week]` (expected 404-path
-  behavior for a non-generated week param) as prior digests; did
-  not fail any test.
+- `data:validate` — green, 69 records (9 vendors, 18 switches, 10
+  keycap-sets, 9 boards, 13 group-buys, 10 trend weeks — up from 68
+  with the W28 backfill), cross-refs resolve.
+- `build` — green, no manifest churn issues.
+- `size` — green, 108.5 KB / 200 KB homepage gzip budget
+  (unchanged).
+- `e2e` — green, 968/968 (up from 959 — new regression-guard
+  tests this window). Same benign `NoFallbackError` logged mid-run
+  on `/trends/tracker/[week]` (expected 404-path behavior for a
+  non-generated week param) as prior digests; did not fail any
+  test.
 - **Lighthouse**: no signal — workflow still `disabled_manually`
   (unchanged since 2026-06-14).
-- `pnpm deploy:check` at HEAD (`175dd9e`) — deploy `READY`.
+- `pnpm deploy:check` at HEAD (`ecb6a0b`) — deploy `READY`.
 
-No red legs. No new AUDIT rows filed by this breadth check itself
-(the crash-gate finding came from the pulse read, not the breadth
-check).
+No red legs. No new AUDIT rows filed by this breadth check itself.
 
 ## Needs you
 
-1. **New: `march.yml` crash-issue gate has a workflow-level bug**
-   (`[score 6.0]` candidate filed this pass). Steps 11–12 of
-   `.github/workflows/march.yml` lack `always()` in their `if:`
-   conditions, so GitHub Actions' implicit `success()` prepend
-   skips them whenever the preceding "Run /march (cloud mode)"
-   step fails — silently defeating the one case ("the action
-   crashed before producing a transcript") the gate was written to
-   catch. Confirmed by direct log inspection of run `28721452962`.
-   Cheap, low-risk, 2-line fix; worth an early `/oversight` look
-   given it affects the loop's own observability.
-2. **Standing: refine or resolve the `[6.5] Critique gate
-   diagnostic` candidate.** Unchanged from yesterday — the original
-   diagnosis (a march Step 2 dispatch-condition bug) was superseded
-   by the direct finding that cloud `/march` hard-skips `/critique`
-   by design. The open question is what local `/critique` cadence,
-   if any, should exist, given only ~105 local commits landed in
-   the last 55 days and none happened to be a `/critique` pass.
-3. **Issue `#391`** (dead CannonKeys vendor URL on the only live
-   group buy, Mode Sonnet R2) has been open ~8 hours without a fix
-   — the tick that filed it exited cleanly per the "can't ship
-   cleanly, don't half-commit" contract rather than shipping the
-   one-line URL swap in the same commit. Not blocked, just a
-   visible loose end; expect the next `/iterate` tick to drain it
-   (same low-risk pattern as commit `9255abe`, 2026-05-09 — point
-   at CannonKeys' stable storefront homepage instead of the dead
-   product path).
+1. **Standing: cloud loop cannot push `.github/workflows/*.yml`
+   changes** (`[score 5.5]` candidate, companion to the `[6.3]`
+   blocked AUDIT row and open issue `#395`). Confirmed twice now —
+   the cloud push credential (a `ghs_`-prefixed GitHub App
+   installation token) lacks the `workflows` permission GitHub
+   requires for any push touching `.github/workflows/*`, regardless
+   of the `ACTIONS_PAT` secret's intended purpose. Two paths: (a)
+   re-scope the PAT backing `ACTIONS_PAT` with "Workflows: write"
+   and confirm it's actually the push credential (not just the
+   `gh` CLI credential), restoring full cloud autonomy; or (b)
+   accept the constraint and document workflow-file edits as
+   local/`/oversight`-only, same as brand-setup taste calls. The
+   two-line `march.yml` fix itself is ready to apply verbatim once
+   either path is chosen.
+2. **Standing: refine or resolve the `[6.5]` Critique gate
+   diagnostic candidate.** Unchanged from yesterday — cloud
+   `/march` hard-skips `/critique` by design; the open question is
+   what local `/critique` cadence, if any, should exist, now that
+   57 days and 1157 commits have passed with zero local passes.
+3. **Minor, not blocking: duplicate mirror-issue opening on a
+   stalled retry.** Two consecutive ticks (03:07 and 05:27 UTC)
+   each opened a fresh GitHub issue for the same ideas-pillar
+   content-gap row instead of finding and reusing the one already
+   open — #399 and #400, both closed as superseded once the
+   article actually shipped at 09:44. Self-healed within the same
+   window with no lasting effect; flagging in case the pattern
+   recurs, in which case a dedup check before opening a new mirror
+   issue for an already-open signal would be the fix. Not filing a
+   candidate for a single two-tick blip.
 
 ## Today's intent
 
 No pending build-plan phase, no AUDIT/BACKLOG queue pressure — the
-loop is in clean maintenance mode. The most likely next tick drains
-issue `#391` (mechanical, low-risk). Absent that, expect another
-`/expand` no-op or a fresh mechanical-survey finding. The 10
-pending `plan/PHASE_CANDIDATES.md` rows are the standing backlog
-for the next `/oversight` promotion pass — `/quiz/board` (6.5) and
-`Critique gate diagnostic` (6.5) are the highest-scored incumbents,
-but the newly-filed `march.yml` crash-issue gate fix (6.0) is the
-cheapest and most self-contained of the three and worth an early
-look given it's a loop-observability fix, not a product feature.
+loop is in clean maintenance mode. With the link-rot cluster fully
+drained, the most likely next `/iterate` tick is either a fresh
+mechanical-survey finding or another `/expand` no-op. The freshly
+filed `[score 6.0]` external link-rot survey candidate is the
+natural next mechanization if `/oversight` wants to shrink the
+12-row candidate backlog — it directly prevents a repeat of this
+window's 3-cycle manual dead-link sweep. `/quiz/board` (6.5) and
+Critique gate diagnostic (6.5) remain the highest-scored
+incumbents overall.
 
 ## Tuning proposals
 
-One new candidate filed this pass: `[score 6.0]` `march.yml`
-crash-issue gate fix — see Needs You #1 for the full citation
-trail (run `28721452962`, missing `always()` on steps 11–12). The
-standing `[score 6.5]` Critique gate diagnostic candidate is
-unchanged and carried forward, not re-filed.
+None filed by this digest pass. The two new `plan/PHASE_CANDIDATES.md`
+rows this window (external link-rot survey `[6.0]`, cloud-loop
+workflow-push gap `[5.5]`) were both self-filed by `/iterate`/`/expand`
+during the day, not by this digest. The standing `[6.5]` Critique
+gate diagnostic candidate is unchanged and carried forward, not
+re-filed.
