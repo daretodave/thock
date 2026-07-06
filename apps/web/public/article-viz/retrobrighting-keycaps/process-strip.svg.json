@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-22T12:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "retrobrighting-keycaps",
+  "article_pillar": "ideas",
+  "section_anchor": "what-retrobrighting-actually-does",
+  "brief_summary": "Four-panel numbered process strip: (1) clean and prep the keycaps, (2, coral) apply hydrogen peroxide creme and seal under plastic wrap, (3, coral) UV exposure across multiple monitored sessions, (4) rinse and inspect for color and flex. A caution callout beneath panel 3 notes that shorter, re-checked sessions beat one long unmonitored soak, tying the process to the embrittlement risk discussed later in the article.",
+  "target": "apps/web/public/article-viz/retrobrighting-keycaps/process-strip.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "retrobrighting-keycaps.mdx § 'What retrobrighting actually does' — 'a hydrogen peroxide solution ... applied to the keycap, sealed under plastic wrap ... then exposed to UV light'",
+    "retrobrighting-keycaps.mdx § Callout 'It's slow' — 'reapplying peroxide as it dries out under the wrap'",
+    "retrobrighting-keycaps.mdx § 'The risk that comes with the reward' — 'the cautious version of the protocol favors patience — shorter exposure sessions, checked and re-wrapped, rather than one long unmonitored soak'"
+  ],
+  "outputs": ["apps/web/public/article-viz/retrobrighting-keycaps/process-strip.svg"],
+  "warnings": []
+}

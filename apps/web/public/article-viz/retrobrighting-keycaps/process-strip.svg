@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Four-panel process strip: clean and prep, apply peroxide and seal under plastic wrap, expose to UV across multiple monitored sessions, then rinse and inspect for color and brittleness</title>
+
+  <text x="600" y="60" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">four steps, spread across days</text>
+
+  <!-- connecting rail -->
+  <line x1="130" y1="220" x2="1070" y2="220" stroke-opacity="0.2"/>
+
+  <!-- Panel 1 -->
+  <g>
+    <circle cx="180" cy="150" r="34" stroke-opacity="0.85"/>
+    <text x="180" y="158" font-family="JetBrains Mono, monospace" font-size="20" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">1</text>
+    <text x="180" y="215" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">clean &amp; prep</text>
+    <text x="180" y="238" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">remove caps, wash off dust and oils</text>
+  </g>
+
+  <!-- Panel 2 -->
+  <g>
+    <circle cx="470" cy="150" r="34" fill="oklch(0.68 0.165 28 / 0.14)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.9"/>
+    <text x="470" y="158" font-family="JetBrains Mono, monospace" font-size="20" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">2</text>
+    <text x="470" y="215" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">peroxide + wrap</text>
+    <text x="470" y="238" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">12–40 vol creme, sealed under plastic film</text>
+  </g>
+
+  <!-- Panel 3 -->
+  <g>
+    <circle cx="760" cy="150" r="34" fill="oklch(0.68 0.165 28 / 0.14)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.9"/>
+    <text x="760" y="158" font-family="JetBrains Mono, monospace" font-size="20" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">3</text>
+    <text x="760" y="215" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">UV exposure</text>
+    <text x="760" y="238" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">sunlight or lamp, monitored across sessions</text>
+  </g>
+
+  <!-- Panel 4 -->
+  <g>
+    <circle cx="1050" cy="150" r="34" stroke-opacity="0.85"/>
+    <text x="1050" y="158" font-family="JetBrains Mono, monospace" font-size="20" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">4</text>
+    <text x="1050" y="215" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">rinse &amp; inspect</text>
+    <text x="1050" y="238" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">check color and flex before repeating</text>
+  </g>
+
+  <!-- caution note under panel 3, since that's where embrittlement risk accrues -->
+  <line x1="760" y1="184" x2="760" y2="280" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.6" stroke-dasharray="4 4"/>
+  <text x="760" y="300" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.85">shorter sessions, re-checked, beat one long unmonitored soak</text>
+
+  <text x="600" y="400" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">the rushed version is the one that cracks a legend</text>
+
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

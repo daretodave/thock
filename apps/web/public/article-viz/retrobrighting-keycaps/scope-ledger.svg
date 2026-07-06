@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Two-column ledger of what retrobrighting reverses versus what it does not fix — bromine-oxidation yellowing on the left, finger-oil shine, PBT discoloration, and dyed ABS on the right</title>
+
+  <line x1="600" y1="100" x2="600" y2="480" stroke-opacity="0.18"/>
+
+  <!-- LEFT: what it reverses -->
+  <text x="300" y="130" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">what it reverses</text>
+
+  <g>
+    <rect x="90" y="170" width="420" height="220" rx="8" fill="oklch(0.68 0.165 28 / 0.10)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.95" stroke-width="2.5"/>
+    <text x="300" y="215" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">bromine oxidation yellowing</text>
+    <text x="300" y="250" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">white / off-white ABS</text>
+    <text x="300" y="272" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">flame-retardant compounds, oxidized by</text>
+    <text x="300" y="294" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">decades of UV + oxygen exposure</text>
+    <text x="300" y="336" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.9">H2O2 + UV reduces the same</text>
+    <text x="300" y="356" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.9">compound back toward colorless</text>
+  </g>
+
+  <!-- RIGHT: what it doesn't fix -->
+  <text x="900" y="130" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.95">what it doesn't fix</text>
+
+  <g>
+    <rect x="690" y="160" width="420" height="66" rx="6" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.6" stroke-width="2" stroke-dasharray="5 5"/>
+    <text x="900" y="188" font-family="Newsreader, serif" font-size="16" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">polished shine</text>
+    <line x1="710" y1="188" x2="1090" y2="188" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.7" stroke-width="2"/>
+    <text x="900" y="210" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">texture/gloss change from finger oils + abrasion</text>
+  </g>
+
+  <g>
+    <rect x="690" y="240" width="420" height="66" rx="6" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.6" stroke-width="2" stroke-dasharray="5 5"/>
+    <text x="900" y="268" font-family="Newsreader, serif" font-size="16" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">PBT discoloration</text>
+    <line x1="710" y1="268" x2="1090" y2="268" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.7" stroke-width="2"/>
+    <text x="900" y="290" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">different additive chemistry, wrong diagnosis</text>
+  </g>
+
+  <g>
+    <rect x="690" y="320" width="420" height="66" rx="6" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.6" stroke-width="2" stroke-dasharray="5 5"/>
+    <text x="900" y="348" font-family="Newsreader, serif" font-size="16" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">dyed / colored ABS</text>
+    <line x1="710" y1="348" x2="1090" y2="348" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.7" stroke-width="2"/>
+    <text x="900" y="370" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">dye + peroxide interaction is unpredictable</text>
+  </g>
+
+  <text x="600" y="440" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">one chemical problem, three things that only look like it</text>
+
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

@@ -75,6 +75,7 @@
     { "slug": "columnar-stagger", "name": "Columnar stagger", "category": "layout" },
     { "slug": "gasket-mount", "name": "Gasket-mount", "category": "layout" },
     { "slug": "hot-swap", "name": "Hot-swap", "category": "switch" },
-    { "slug": "barebones-kit", "name": "Barebones kit", "category": "misc" }
+    { "slug": "barebones-kit", "name": "Barebones kit", "category": "misc" },
+    { "slug": "retrobrighting", "name": "Retrobrighting", "category": "misc" }
   ]
 }

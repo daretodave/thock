@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-22T12:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "retrobrighting-keycaps",
+  "article_pillar": "ideas",
+  "section_anchor": "what-it-doesnt-fix",
+  "brief_summary": "Two-column ledger. Left (coral-filled, 'what it reverses'): bromine oxidation yellowing on white/off-white ABS, with the H2O2+UV mechanism noted. Right (dashed bordeaux with strikethroughs, 'what it doesn't fix'): polished shine from finger oils and abrasion, PBT discoloration, and dyed/colored ABS — each with a short note on why it falls outside the mechanism.",
+  "target": "apps/web/public/article-viz/retrobrighting-keycaps/scope-ledger.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "retrobrighting-keycaps.mdx § 'What it doesn't fix' — 'Shine from finger oils is not a color problem ... That's a texture and gloss change, not a chemical one.'",
+    "retrobrighting-keycaps.mdx § 'What it doesn't fix' — 'PBT ... generally does not develop the same bromine-driven yellowing that vintage ABS does ... dousing PBT in peroxide and sunlight expecting an ABS-style reversal is treating the wrong diagnosis.'",
+    "retrobrighting-keycaps.mdx § 'What it doesn't fix' — 'Dyed or colored ABS is its own gamble too — the dye and the flame-retardant chemistry can interact with the peroxide unpredictably'"
+  ],
+  "outputs": ["apps/web/public/article-viz/retrobrighting-keycaps/scope-ledger.svg"],
+  "warnings": []
+}

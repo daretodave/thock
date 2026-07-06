@@ -11,6 +11,16 @@
       }
     },
     {
+      "slug": "retrobrighting-keycaps",
+      "readTime": 6,
+      "frontmatter": {
+        "title": "Retrobrighting: what UV and peroxide actually reverse in yellowed ABS",
+        "lede": "Vintage ABS keycaps go the color of weak tea, and the hobby's fix is a jar of hair developer and a sunny windowsill. The chemistry behind that fix is real — but it reverses one specific kind of damage, and builders regularly aim it at problems it cannot touch.",
+        "pillar": "ideas",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "gmk-cyl-masterpiece-r2-group-buy",
       "readTime": 7,
       "frontmatter": {
@@ -873,6 +883,11 @@
       "category": "brand"
     },
     {
+      "slug": "retrobrighting",
+      "name": "Retrobrighting",
+      "category": "misc"
+    },
+    {
       "slug": "sa",
       "name": "SA",
       "category": "profile"
@@ -1192,5 +1207,5 @@
       "description": "China-based design studio and vendor known for in-house boards (Mammoth, Ikki68, Promise) and partnered group buys, sold direct from shop.wuquestudio.com with regional proxies."
     }
   ],
-  "generatedAt": "2026-07-06T01:54:32.571Z"
+  "generatedAt": "2026-07-06T09:37:04.984Z"
 }

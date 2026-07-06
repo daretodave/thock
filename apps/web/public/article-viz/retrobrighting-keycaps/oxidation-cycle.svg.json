@@ -1,0 +1,22 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-22T12:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "retrobrighting-keycaps",
+  "article_pillar": "ideas",
+  "section_anchor": "what-retrobrighting-actually-does",
+  "brief_summary": "Cross-section diptych of ABS plastic. Left panel shows sparse, colorless bromine flame-retardant compounds in unyellowed plastic; a coral forward arrow labeled 'decades of UV + O2' leads to a coral-filled middle panel showing the same compounds oxidized to an amber tint. A dashed coral reverse arrow along the bottom, labeled 'H2O2 + UV', shows the oxidized compounds being chemically reduced back toward colorless — illustrating that retrobrighting reverses the same reaction rather than coating over it.",
+  "target": "apps/web/public/article-viz/retrobrighting-keycaps/oxidation-cycle.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "retrobrighting-keycaps.mdx § 'What's actually turning yellow' — 'brominated flame retardants ... Over years of exposure to UV light and ambient oxygen, the bromine compounds oxidize. The oxidation byproducts are what carry the yellow-to-amber tint.'",
+    "retrobrighting-keycaps.mdx § 'What retrobrighting actually does' — 'the UV catalyzes a reaction that chemically reduces the oxidized bromine compounds back toward their original, colorless state ... Retrobrighting is chemically altering the same compound that caused the problem'"
+  ],
+  "outputs": ["apps/web/public/article-viz/retrobrighting-keycaps/oxidation-cycle.svg"],
+  "warnings": []
+}

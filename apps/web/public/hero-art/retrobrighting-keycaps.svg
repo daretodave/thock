@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — a yellowed keycap and its restored counterpart, with a UV-and-peroxide process arrow between them</title>
+
+  <!-- ================================================================
+       Canvas: 1200 × 750   Stroke: 2px warm-bone (default oklch(0.78 0.005 90))
+       Splash: coral oklch(0.68 0.165 28) — matches this article's inline-viz set
+       Accent: warm bronze oklch(0.80 0.135 75) — single ornamental corner dot only
+       Layout:
+         Title + subtitle           top center
+         "before" keycap (coral)    left,  x 180–420
+         process arrow + UV motif   center, x 460–740
+         "after" keycap (clean)     right, x 780–1020
+       ================================================================ -->
+
+  <!-- Soft coral glow wash tying the whole composition together -->
+  <rect x="140" y="260" width="940" height="380" rx="24" fill="oklch(0.68 0.165 28 / 0.05)" stroke="none"/>
+
+  <!-- ===== Title ===== -->
+  <text x="600" y="104" font-family="'Newsreader', 'Iowan Old Style', Georgia, serif" font-style="italic"
+    font-size="32" fill="oklch(0.78 0.005 90)" fill-opacity="0.85" stroke="none" text-anchor="middle">retrobrighting</text>
+  <text x="600" y="132" font-family="'IBM Plex Sans', system-ui, sans-serif"
+    font-size="15" fill="oklch(0.78 0.005 90)" fill-opacity="0.50" stroke="none" text-anchor="middle">UV + hydrogen peroxide — reversing bromine oxidation in ABS</text>
+
+  <!-- ===== BEFORE keycap — yellowed, coral fill (side profile) ===== -->
+  <path d="
+    M 180 560
+    L 420 560
+    L 380 300
+    Q 380 290 370 290
+    L 230 290
+    Q 220 290 220 300
+    Z"
+    fill="oklch(0.68 0.165 28 / 0.18)" stroke="oklch(0.68 0.165 28)" stroke-width="2" stroke-opacity="0.90"/>
+
+  <!-- Top bevel highlight -->
+  <line x1="235" y1="300" x2="365" y2="300" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.40" stroke-width="1.5"/>
+
+  <!-- Oxidized bromine byproducts — sparse dots, matches the article's oxidation-cycle diagram motif -->
+  <g fill="oklch(0.68 0.165 28)" fill-opacity="0.55" stroke="none">
+    <circle cx="264" cy="345" r="5"/>
+    <circle cx="336" cy="368" r="5"/>
+    <circle cx="286" cy="400" r="4.5"/>
+    <circle cx="352" cy="432" r="5"/>
+    <circle cx="270" cy="464" r="4.5"/>
+    <circle cx="320" cy="496" r="5"/>
+  </g>
+
+  <!-- BEFORE label -->
+  <text x="300" y="598" font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace"
+    font-size="14" fill="oklch(0.68 0.165 28)" fill-opacity="0.92" letter-spacing="0.04em"
+    text-anchor="middle" stroke="none">before</text>
+  <text x="300" y="618" font-family="'IBM Plex Sans', system-ui, sans-serif"
+    font-size="12" fill="oklch(0.68 0.165 28)" fill-opacity="0.55" text-anchor="middle" stroke="none">yellowed ABS</text>
+
+  <!-- ===== PROCESS ARROW + UV motif (center) ===== -->
+
+  <!-- UV sun glyph -->
+  <circle cx="600" cy="320" r="16" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.75" stroke-width="2"/>
+  <g stroke="oklch(0.68 0.165 28)" stroke-opacity="0.60" stroke-width="2">
+    <line x1="600" y1="300" x2="600" y2="286"/>
+    <line x1="614" y1="306" x2="624" y2="296"/>
+    <line x1="620" y1="320" x2="634" y2="320"/>
+    <line x1="614" y1="334" x2="624" y2="344"/>
+    <line x1="600" y1="340" x2="600" y2="354"/>
+    <line x1="586" y1="334" x2="576" y2="344"/>
+    <line x1="580" y1="320" x2="566" y2="320"/>
+    <line x1="586" y1="306" x2="576" y2="296"/>
+  </g>
+  <text x="600" y="266" font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace"
+    font-size="12" fill="oklch(0.68 0.165 28)" fill-opacity="0.85" letter-spacing="0.04em"
+    text-anchor="middle" stroke="none">UV</text>
+
+  <!-- Arrow shaft, before → after -->
+  <path d="M 470 400 L 730 400" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.85" stroke-width="2.5"/>
+  <path d="M 712 388 L 730 400 L 712 412" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.85" stroke-width="2.5" fill="none"/>
+
+  <!-- Process bubbles along the arrow shaft -->
+  <g fill="oklch(0.68 0.165 28)" fill-opacity="0.35" stroke="none">
+    <circle cx="520" cy="400" r="3.5"/>
+    <circle cx="580" cy="400" r="3"/>
+    <circle cx="640" cy="400" r="3.5"/>
+    <circle cx="690" cy="400" r="3"/>
+  </g>
+
+  <text x="600" y="432" font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace"
+    font-size="12" fill="oklch(0.68 0.165 28)" fill-opacity="0.80" letter-spacing="0.04em"
+    text-anchor="middle" stroke="none">H2O2 + UV</text>
+
+  <!-- ===== AFTER keycap — restored, clean outline only (side profile, same shape) ===== -->
+  <path d="
+    M 780 560
+    L 1020 560
+    L 980 300
+    Q 980 290 970 290
+    L 830 290
+    Q 820 290 820 300
+    Z"
+    fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-opacity="0.90"/>
+
+  <!-- Top bevel highlight -->
+  <line x1="835" y1="300" x2="965" y2="300" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.35" stroke-width="1.5"/>
+
+  <!-- AFTER label -->
+  <text x="900" y="598" font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace"
+    font-size="14" fill="oklch(0.78 0.005 90)" fill-opacity="0.85" letter-spacing="0.04em"
+    text-anchor="middle" stroke="none">after</text>
+  <text x="900" y="618" font-family="'IBM Plex Sans', system-ui, sans-serif"
+    font-size="12" fill="oklch(0.78 0.005 90)" fill-opacity="0.50" text-anchor="middle" stroke="none">restored</text>
+
+  <!-- ===== Bronze theme dot — ornamental anchor, upper right ===== -->
+  <circle cx="1160" cy="42" r="4" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

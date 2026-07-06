@@ -4273,6 +4273,33 @@
       "filePath": "apps/web/src/content/articles/custom-keyboard-kit-buyers-guide.mdx"
     },
     {
+      "slug": "retrobrighting-keycaps",
+      "frontmatter": {
+        "slug": "retrobrighting-keycaps",
+        "title": "Retrobrighting: what UV and peroxide actually reverse in yellowed ABS",
+        "lede": "Vintage ABS keycaps go the color of weak tea, and the hobby's fix is a jar of hair developer and a sunny windowsill. The chemistry behind that fix is real — but it reverses one specific kind of damage, and builders regularly aim it at problems it cannot touch.",
+        "author": "thock",
+        "pillar": "ideas",
+        "tags": [
+          "keycaps",
+          "abs",
+          "modding",
+          "retrobrighting"
+        ],
+        "publishedAt": "2026-06-22T12:00:00.000Z",
+        "updatedAt": "2026-06-22T12:00:00.000Z",
+        "heroImage": "/hero-art/retrobrighting-keycaps.svg",
+        "heroImageAlt": "A yellowed keycap next to its restored counterpart with a UV-and-peroxide process arrow between them, coral line-drawing style",
+        "featured": false,
+        "popularityScore": 0,
+        "guideSection": null,
+        "mentionedParts": []
+      },
+      "body": "\nA set of vintage ABS keycaps that started life the color of printer paper does not stay that color. Given a few decades near a window or under a desk lamp, it drifts toward amber, sometimes deep enough to look almost tortoiseshell. The fix the hobby has settled on is a jar of hair developer, some plastic wrap, and a sunny weekend, and the process carries a name confident enough to suggest it's fully understood: retrobrighting. The chemistry behind it is real. What it actually reverses is narrower than the name implies, and it gets pointed at problems it was never built to solve more often than not.\n\n## What's actually turning yellow\n\nThe discoloration is not dirt, and it is not the plastic aging in the vague, everything-gets-worse sense people usually mean. It is a specific chemical reaction happening inside the material.\n\nMost vintage off-white and light-colored keycaps are ABS — acrylonitrile butadiene styrene — molded with brominated flame retardants mixed into the plastic. Those compounds are there for fire-safety compliance, not for looks, and in an off-white or cream cap they are invisible at the factory. Over years of exposure to UV light and ambient oxygen, the bromine compounds oxidize. The oxidation byproducts are what carry the yellow-to-amber tint. The plastic itself has not degraded structurally in any way you'd feel by touch — the color layer is a chemical change happening throughout the material, not a surface film sitting on top of it.\n\nThis is why the yellowing shows up almost exclusively on vintage and off-white ABS: those are the formulations that used bromine-heavy flame retardant packages most heavily, and they are the ones that have had the most decades of UV exposure to complete the reaction. A board built ten years ago in a similar ABS blend will yellow far more slowly simply because it hasn't had the exposure time; a board built with different additive chemistry may barely yellow at all.\n\n## What retrobrighting actually does\n\nRetrobrighting is an oxidation-reversal process, not a coating, a bleach, or a paint. The typical protocol: a hydrogen peroxide solution — often sourced as 12 to 40 volume creme developer from a beauty supply store, chosen because the peroxide is suspended in a thick gel that clings to a curved keycap surface instead of running off — applied to the keycap, sealed under plastic wrap to hold the peroxide against the plastic and limit evaporation, then exposed to UV light. Direct sunlight works. A dedicated UV lamp works faster and more evenly. Either way, the UV catalyzes a reaction that chemically reduces the oxidized bromine compounds back toward their original, colorless state.\n\n<InlineViz\n  src=\"/article-viz/retrobrighting-keycaps/oxidation-cycle.svg\"\n  alt=\"Cross-section diagram of ABS plastic showing bromine flame-retardant compounds oxidizing under UV and oxygen exposure to produce yellow tint, and the same compounds being chemically reduced back toward colorless under hydrogen peroxide and UV during retrobrighting.\"\n  caption=\"Same molecule, run in reverse — not a coating over the discoloration.\"\n  accent=\"coral\"\n/>\n\nThat distinction is the entire reason the process can work at all. A cleaner or a whitening agent that just sat on the surface would be hiding the yellow, and the color would creep back the moment the treatment wore off. Retrobrighting is chemically altering the same compound that caused the problem, which is why a properly treated cap can genuinely return to something close to its original color rather than a bleached-looking approximation of it — and why the result tends to hold, since the underlying chemical state has actually changed rather than being masked.\n\n<InlineViz\n  src=\"/article-viz/retrobrighting-keycaps/process-strip.svg\"\n  alt=\"Four-panel process strip showing the retrobrighting steps in sequence: clean and prep the keycaps, apply hydrogen peroxide creme and seal under plastic wrap, expose to UV light over multiple monitored sessions, then rinse and inspect for color and brittleness.\"\n  caption=\"Four steps, spread across days rather than an afternoon.\"\n  accent=\"coral\"\n/>\n\n<Callout type=\"note\" title=\"It's slow\">\n  The reaction is not fast. A light case of yellowing might clear in a few hours of strong midday sun. A heavily yellowed vintage cap can need multiple days of cumulative UV exposure, reapplying peroxide as it dries out under the wrap. There is no shortcut that compresses this into an afternoon without raising the other risks below.\n</Callout>\n\n## What it doesn't fix\n\nThe process has clear edges, and most of the disappointment builders report comes from running past them.\n\n<InlineViz\n  src=\"/article-viz/retrobrighting-keycaps/scope-ledger.svg\"\n  alt=\"Two-column ledger. Left, coral-filled: what retrobrighting reverses — bromine oxidation yellowing in white and off-white ABS. Right, dashed bordeaux with strikethroughs: what it does not fix — polished shine from finger oils and abrasion, PBT discoloration, and dyed or colored ABS reacting unpredictably.\"\n  caption=\"One chemical problem, three things that only look like it.\"\n  accent=\"coral\"\n/>\n\n**Shine from finger oils is not a color problem.** The glossy, worn-smooth look on the most-used keys of an old board — usually the home row and the spacebar — comes from physical polishing of the plastic surface by decades of skin contact, plus a fine abrasion pattern from repeated keystrokes. That's a texture and gloss change, not a chemical one. No amount of peroxide reverses microscopic surface polish, because there's no oxidized compound there to reduce. The only real fixes for shine are living with it, light abrasive treatment to break up the polished surface (with its own risk of visible scuffing if overdone), or replacing the cap.\n\n**It doesn't work on plastics that don't yellow the same way.** PBT — polybutylene terephthalate, the material behind most modern aftermarket keycap sets — uses a different additive chemistry and generally does not develop the same bromine-driven yellowing that vintage ABS does. PBT can discolor for other reasons (dye migration, UV fading of pigment, contamination), but that's a different mechanism, and dousing PBT in peroxide and sunlight expecting an ABS-style reversal is treating the wrong diagnosis. Dyed or colored ABS is its own gamble too — the dye and the flame-retardant chemistry can interact with the peroxide unpredictably, sometimes fading the intended color along with the yellow tint it was supposed to remove.\n\n## The risk that comes with the reward\n\nHydrogen peroxide is doing real chemistry to the plastic, and that chemistry doesn't stop being active just because the color looks right. Leaving a cap under peroxide and UV for too long, or reaching for a stronger developer concentration than the case needs, pushes past color correction into oxidizing the plastic's polymer structure itself — the material can come out of an overtreated session measurably more brittle than it went in. Old ABS is already more brittle than it was when new, and legends printed or pad-printed decades ago are a specific weak point: aggressive treatment has cracked legend text and, in worse cases, cracked the cap itself along a stress point. This isn't a hypothetical — it's the most commonly reported failure mode in build threads that document the process, and it's the reason the cautious version of the protocol favors patience — shorter exposure sessions, checked and re-wrapped, rather than one long unmonitored soak.\n\n## Is it worth doing\n\nFor a specific job, yes. Retrobrighting is cheap — a bottle of developer and some plastic wrap costs a few dollars — and it is the only method that genuinely reverses the underlying chemical change rather than disguising it. For anyone restoring a vintage board where the original keycaps are irreplaceable and the alternative is living with amber caps or sourcing NOS replacements at a premium, it's a reasonable trade of a few days of patience for a real result.\n\nIt is not a routine maintenance mod. It doesn't apply to shine, doesn't apply to PBT, and carries a real if modest risk of embrittlement or cracking on caps that are already decades past their manufacturing date. Treat it as a restoration tool for a specific chemical problem on a specific plastic, not a general-purpose keycap refresh — and budget the time. A quick pass under a desk lamp for an hour is not the process; multi-day, monitored UV exposure is the process, and the caps that come out the other side looking right are the ones that were given that time rather than rushed toward it.\n",
+      "readTime": 6,
+      "filePath": "apps/web/src/content/articles/retrobrighting-keycaps.mdx"
+    },
+    {
       "slug": "gmk-cyl-masterpiece-r2-group-buy",
       "frontmatter": {
         "slug": "gmk-cyl-masterpiece-r2-group-buy",
@@ -6943,6 +6970,11 @@
       "category": "brand"
     },
     {
+      "slug": "retrobrighting",
+      "name": "Retrobrighting",
+      "category": "misc"
+    },
+    {
       "slug": "sa",
       "name": "SA",
       "category": "profile"
@@ -7028,5 +7060,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-07-06T01:54:32.571Z"
+  "generatedAt": "2026-07-06T09:37:04.984Z"
 }
