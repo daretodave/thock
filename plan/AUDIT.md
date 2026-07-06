@@ -6118,3 +6118,15 @@ passes accumulate signals.)
 - articles: `hmx-cloud-deep-dive.mdx:44` (hmxkeyboard.com — DNS fail), `gmk-cyl-ramune-group-buy.mdx:81` (geonworks.com — DNS fail), `gmk-cyl-pandemonium-group-buy.mdx:92` (bowlkeyboards.co.uk — DNS fail), `plate-materials-explained.mdx:56,58` (thockking.com/blogs/learn/plate-materials + theremingoat.com/blog/category/scientific+studies — both 404), `clicky-switches-deep-dive.mdx:84` + `cherry-mx2a-revision.mdx:51` (cherry-world.com/cherry-mx-2a — redirects to a malformed 404 URL), `switch-films-worth-it.mdx:30` (novelkeys.com/collections/switch-films — 404), `gasket-mount-reality.mdx:71` (youtube.com/@thereminGoat — 404, handle likely changed)
 - action: spawned `scout` to research all 8; verified-live replacements applied — keeb-finder.com/switches/filter/brand-HMX, geon.works, bowlkeyboards.com, thockking.com/blogs/learn/choosing-the-best-plate-material, theremingoat.com/pdf-archive, cherry.de/en-us/company/news/cherry-blog/article/cherry-mx2a (×2), novelkeys.com/products/nk-x-deskeys-switch-films, theremingoat.com
 - issue: #398
+
+### [HOT PURSUIT] [content-gap] [7] ideas pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 7 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: ideas
+- window-count: 1
+- window-start: 2026-06-06
+- score: 7
+- next: /ship-content → ideas pillar article
+> Filed 2026-07-06 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
