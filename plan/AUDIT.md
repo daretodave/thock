@@ -6150,7 +6150,7 @@ passes accumulate signals.)
 - score: 3.6 (impact × ease / 10)
 - next: main agent implements — touches `packages/content/src/loaders/parts.ts`, `packages/content/src/mdx/PartReference.tsx`, `PartReference.test.tsx`
 
-### [seo] [3.6] JSON-LD script bodies not escaped against `</script>` breakout
+### [x] [seo] [3.6] JSON-LD script bodies not escaped against `</script>` breakout — addressed in 118d6f5, closes #403
 - category: seo
 - filed: 2026-07-06 by /iterate audit (cloud march tick, pass 154 — residual, not bundled into this tick's fix)
 - impact: 4 (`packages/seo/src/JsonLd.ts:18` — `dangerouslySetInnerHTML: { __html: JSON.stringify(graph) }` with no escaping. Every page on the site uses this helper. No current article/data string contains the literal substring `</script`, so nothing is exploitable today, but it's a latent, systemic gap: the first future content field that happens to include that substring terminates the script tag early and injects raw HTML on that page)
@@ -6158,3 +6158,4 @@ passes accumulate signals.)
 - score: 3.6 (impact × ease / 10)
 - next: main agent implements — one-line change in `packages/seo/src/JsonLd.ts`, plus a regression test asserting a `</script` substring in input never appears unescaped in the rendered output
 - issue: #403
+> **Resolved (2026-07-06):** Escaped `<` → `<` in `JsonLd.ts` after `JSON.stringify`; round-trips correctly through `JSON.parse` (search engines and the new regression test both recover the original object). Added a test asserting a `</script>`-bearing string field never appears unescaped in the rendered script body. `pnpm verify` full gate green. `118d6f5`
