@@ -11,6 +11,7 @@ const makeArticle = (overrides: Partial<Article> = {}): Article => ({
     slug: 'foo',
     title: 'Foo & bar',
     lede: '<one> "two"',
+    description: null,
     author: 'Mara',
     pillar: 'news',
     tags: ['gateron-oil-king'],

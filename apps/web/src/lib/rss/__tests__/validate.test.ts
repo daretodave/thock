@@ -10,6 +10,7 @@ function article(over: Partial<Article['frontmatter']> = {}): Article {
       slug: 'sample',
       title: 'Sample article',
       lede: 'A sample lede long enough to satisfy the schema minimum length.',
+      description: null,
       author: 'thock',
       pillar: 'news',
       tags: ['group-buy'],

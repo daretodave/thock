@@ -56,6 +56,19 @@ describe('ArticleFrontmatterSchema', () => {
     expect(result.mentionedParts).toEqual([])
     expect(result.updatedAt).toBeNull()
     expect(result.guideSection).toBeNull()
+    expect(result.description).toBeNull()
+  })
+
+  it('accepts a hand-authored description distinct from the lede', () => {
+    const result = ArticleFrontmatterSchema.safeParse({
+      ...VALID,
+      description:
+        'A search-snippet-length summary written specifically for meta description and JSON-LD, separate from the on-page lede.',
+    })
+    expect(result.success).toBe(true)
+    if (result.success) {
+      expect(result.data.description).not.toBe(result.data.lede)
+    }
   })
 
   it('rejects a too-short title', () => {

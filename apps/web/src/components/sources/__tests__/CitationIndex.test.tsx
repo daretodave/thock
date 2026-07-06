@@ -15,6 +15,7 @@ function articleFixture(over: Partial<Article['frontmatter']> = {}): Article {
       slug,
       title: 'Sample article',
       lede: 'A lede long enough to satisfy the schema minimum length.',
+      description: null,
       author: 'thock',
       pillar: 'news',
       tags: ['group-buy'],

@@ -16,6 +16,7 @@ function makeArticle(
       slug,
       title: slug,
       lede: 'A test article for unit testing purposes only.',
+      description: null,
       author: 'thock',
       pillar: 'deep-dives',
       tags: [],

@@ -4228,6 +4228,7 @@
         "slug": "custom-keyboard-kit-buyers-guide",
         "title": "Choosing your first custom keyboard kit: a buyer's guide",
         "lede": "Most first custom keyboards aren't built from loose parts and aren't bought finished — they're a barebones kit, a case-plate-PCB bundle that leaves the rest of the decision to the buyer. Here's how to make that decision without guessing.",
+        "description": null,
         "author": "thock",
         "pillar": "guides",
         "tags": [
@@ -4278,6 +4279,7 @@
         "slug": "retrobrighting-keycaps",
         "title": "Retrobrighting: what UV and peroxide actually reverse in yellowed ABS",
         "lede": "Vintage ABS keycaps go the color of weak tea, and the hobby's fix is a jar of hair developer and a sunny windowsill. The chemistry behind that fix is real — but it reverses one specific kind of damage, and builders regularly aim it at problems it cannot touch.",
+        "description": null,
         "author": "thock",
         "pillar": "ideas",
         "tags": [
@@ -4305,6 +4307,7 @@
         "slug": "gmk-cyl-masterpiece-r2-group-buy",
         "title": "GMK CYL Masterpiece R2 closes June 26 — what the deep-blue revival gets right",
         "lede": "Energieschleuder's six-year-later return to Japanese craftsmanship aesthetics has been climbing the thock tracker all window — scoring 46 in W26 with the buy open through June 26.",
+        "description": null,
         "author": "thock",
         "pillar": "news",
         "tags": [
@@ -4344,6 +4347,7 @@
         "slug": "gmk-cyl-pandemonium-group-buy",
         "title": "GMK CYL Pandemonium: the eclipse-themed keycap set that's been trending all window",
         "lede": "DeltaKeyCo's Berserk eclipse group buy has been climbing the tracker since it opened June 1, posting a score of 33 in W26 with a flat direction — mid-window plateau, buy still live through July 1.",
+        "description": null,
         "author": "thock",
         "pillar": "news",
         "tags": [
@@ -4378,6 +4382,7 @@
         "slug": "split-ergo-buyers-guide",
         "title": "Split and ergonomic keyboards: a buyer's guide",
         "lede": "Split doesn't automatically mean ergonomic, and ergonomic doesn't automatically mean split. Before spending money on either, a reader needs to know which of four separate design choices they're actually buying — and which one of them is solving their problem.",
+        "description": null,
         "author": "thock",
         "pillar": "guides",
         "tags": [
@@ -4412,6 +4417,7 @@
         "slug": "gateron-lanes-tactile-deep-dive",
         "title": "Gateron Lanes: The Alps-Inspired Tactile Taking Over the Mid-Range",
         "lede": "Gateron's Lanes draws its DNA from the Alps SKCM Orange — one of the most loved tactile mechanisms of the 1980s — and arrived in June 2026 with enough community conviction to sell out on first drop.",
+        "description": null,
         "author": "thock",
         "pillar": "deep-dives",
         "tags": [
@@ -4470,6 +4476,7 @@
         "slug": "keychron-quiet-takeover",
         "title": "Keychron's Quiet Takeover: How One Brand Became the Mechanical Keyboard Default",
         "lede": "Ask almost anyone — a forum regular, a YouTube comment section, a Discord server for people who just bought their first mechanical keyboard — what board to get, and you'll hear the same answer. This is how that happened.",
+        "description": "The thock trends tracker shows Keychron brand momentum at score 55 and rising. Here's the product ladder, firmware strategy, and community effect that built the new default.",
         "author": "thock",
         "pillar": "trends",
         "tags": [
@@ -4503,6 +4510,7 @@
         "slug": "rapid-trigger-gaming-crossover",
         "title": "Gaming Boards Are Winning the Spec War, and Enthusiasts Are Paying Attention",
         "lede": "Hall-effect sensors and Rapid Trigger have done what RGB lighting and polling-rate marketing never could: closed the spec gap between gaming keyboards and enthusiast builds at the hardware layer. The divide persists in culture and community, but at the switch and firmware level, the lines are dissolving.",
+        "description": null,
         "author": "thock",
         "pillar": "trends",
         "tags": [
@@ -4536,6 +4544,7 @@
         "slug": "o-ring-mod",
         "title": "The o-ring mod: soft landings for tray-mount and top-mount boards",
         "lede": "A $2 bag of silicone O-rings is enough to give a tray-mount board meaningfully more flex and a cleaner sound. Here is the full procedure and what to realistically expect.",
+        "description": null,
         "author": "thock",
         "pillar": "ideas",
         "tags": [
@@ -4562,6 +4571,7 @@
         "slug": "optical-switches-explained",
         "title": "How optical switches actually sense a keypress",
         "lede": "An optical switch replaces the metal contact with a beam of light. That one change eliminates contact bounce entirely, reshapes the latency math, and is why some optical boards can offer per-key actuation at 0.1mm granularity. The mechanism is simpler than the marketing makes it sound.",
+        "description": "The beam-interrupt mechanism eliminates contact bounce entirely — here's what that actually means for actuation, latency, and the firmware pipeline that makes rapid trigger possible.",
         "author": "thock",
         "pillar": "deep-dives",
         "tags": [
@@ -4594,6 +4604,7 @@
         "slug": "lubing-switches-guide",
         "title": "Lubing switches: what to use, how much, and what to skip",
         "lede": "Four lubes, four application points, and one rule that prevents most mistakes: over-lubing is irreversible, under-lubing is not. Here is the practical reference.",
+        "description": null,
         "author": "thock",
         "pillar": "ideas",
         "tags": [
@@ -4643,6 +4654,7 @@
         "slug": "keyboard-acoustics-deep-dive",
         "title": "The physics of thock: how every layer shapes your keyboard's sound",
         "lede": "Every component between your fingertip and the desk makes a decision about your keyboard's sound — the switch, the plate, the case, the surface it sits on. Understanding what each layer adds or subtracts is the difference between chasing a sound blindly and engineering it deliberately.",
+        "description": null,
         "author": "thock",
         "pillar": "deep-dives",
         "tags": [
@@ -4697,6 +4709,7 @@
         "slug": "divinikey-dcs-dolch-group-buy",
         "title": "DCS Dolch opens at Divinikey — a computing-history colorway returns",
         "lede": "The Dolch colorway — dark grey alphas, lighter grey mods, named after the 1990s portable workstations — is now in a four-week DCS-profile group buy at Divinikey and eight regional storefronts through 2026-07-01.",
+        "description": null,
         "author": "thock",
         "pillar": "news",
         "tags": [
@@ -4741,6 +4754,7 @@
         "slug": "hall-effect-keyboard-guide",
         "title": "Hall-effect keyboards: a practical buyer's guide",
         "lede": "Rapid trigger, per-key actuation depth, analog axis output — Hall-effect keyboards deliver all three, but only if the firmware matches the hardware. Here is what to look for, what to pay, and who should skip the category entirely.",
+        "description": null,
         "author": "thock",
         "pillar": "guides",
         "tags": [
@@ -4786,6 +4800,7 @@
         "slug": "case-materials-compared",
         "title": "Keyboard case materials, compared: aluminium, polycarbonate, and ABS",
         "lede": "The case is the largest resonant body in a keyboard. Aluminium, polycarbonate, and ABS each change the sound, feel, and weight profile in fundamentally different ways — here is what each material actually does.",
+        "description": null,
         "author": "thock",
         "pillar": "guides",
         "tags": [
@@ -4829,6 +4844,7 @@
         "slug": "computex-2026-keyboard-highlights",
         "title": "Computex 2026: hall-effect keyboards enter the enthusiast conversation",
         "lede": "Computex 2026 (May 20–24) was the week hall-effect stopped being a gaming-peripheral curiosity and walked into the same room as enthusiast-grade chassis. Two boards made that argument concrete.",
+        "description": null,
         "author": "thock",
         "pillar": "news",
         "tags": [
@@ -4867,6 +4883,7 @@
         "slug": "stabilizers-explained",
         "title": "Stabilizers explained: from stock rattle to silent smoothness",
         "lede": "Stabilizers are the most acoustically influential component most builders treat as an afterthought. Understanding what they are and why they fail changes every build that follows.",
+        "description": "What stabilizers are, why they rattle, and how to tune them — covering types, rattle mechanics, the standard mod sequence, and when to upgrade from stock.",
         "author": "thock",
         "pillar": "guides",
         "tags": [
@@ -4895,6 +4912,7 @@
         "slug": "dcs-grass-valley-decline",
         "title": "DCS Grass Valley closes: what the profile's 2026 run tells us",
         "lede": "Grass Valley's group buy closed 2026-06-01 and the tracker dropped -18 that same week — but DCS Dolch opened the same day at +29. The momentum didn't dissipate; it transferred.",
+        "description": null,
         "author": "thock",
         "pillar": "trends",
         "tags": [
@@ -4928,6 +4946,7 @@
         "slug": "gmk-cyl-ramune-group-buy",
         "title": "GMK CYL Ramune is the pastel pivot the CYL catalog needed",
         "lede": "GMK CYL Ramune opened on 2026-05-15 across ten regional vendors simultaneously — the broadest multi-vendor launch in the CYL sub-line's history. The pastel dual-blue and pink colorway is a deliberate break from the darker European-influenced palettes that have defined CYL since its first runs.",
+        "description": null,
         "author": "thock",
         "pillar": "news",
         "tags": [
@@ -4962,6 +4981,7 @@
         "slug": "gmk-cyl-selene-group-buy",
         "title": "GMK CYL Selene is live at KBDfans through June 19",
         "lede": "GMK CYL Selene opened at KBDfans on 2026-05-15 with a special-effects glitter-reflect colorway in purple and teal over a silver-grey base. Designed by whysoda and inspired by the Greek Titaness of the Moon, the buy runs through 2026-06-19 with Q4 2026 fulfillment.",
+        "description": null,
         "author": "thock",
         "pillar": "news",
         "tags": [
@@ -5002,6 +5022,7 @@
         "slug": "dcs-olivetti-comeback",
         "title": "DCS Olivetti and the quiet rebellion against Cherry orthodoxy",
         "lede": "A March group buy closed strong, and eight weeks of steady tracker movement later, DCS Olivetti is the clearest sign that experienced builders are ready to argue about profile again.",
+        "description": null,
         "author": "thock",
         "pillar": "trends",
         "tags": [
@@ -5036,6 +5057,7 @@
         "slug": "drop-holy-panda-x-deep-dive",
         "title": "Why the Drop Holy Panda X feels the way it does",
         "lede": "The Holy Panda was a six-month frankenswitch project for most of its life. The Drop Holy Panda X is the first version where the geometry, the spring tune, the housing pairing, and the factory lube were the spec — not the mod.",
+        "description": null,
         "author": "thock",
         "pillar": "deep-dives",
         "tags": [
@@ -5090,6 +5112,7 @@
         "slug": "spring-swaps-explained",
         "title": "Spring swaps: what swapping the spring actually changes",
         "lede": "Swapping the spring is the most-discussed mod that does the least of what builders expect. Here is what the spring actually controls, what it does not, and when the swap is worth the afternoon.",
+        "description": null,
         "author": "thock",
         "pillar": "ideas",
         "tags": [
@@ -5123,6 +5146,7 @@
         "slug": "keychron-q-ultra-zmk",
         "title": "Keychron's Q Ultra ZMK series brings 660h battery to the prebuilt-premium tier",
         "lede": "Keychron used CES 2026 to announce the Q Ultra line — Q1 through Q6 prebuilts running ZMK rather than QMK/VIA. The 660h battery claim is the headline; the firmware swap is the actual story.",
+        "description": null,
         "author": "thock",
         "pillar": "news",
         "tags": [
@@ -5157,6 +5181,7 @@
         "slug": "cherry-mx2a-revision",
         "title": "What Cherry's MX2A revision actually changed",
         "lede": "Cherry's MX2A landed in 2023 with a real engineering update — factory lube, tighter tolerances, the same 100M-press lifespan. The reason the discourse cooled isn't that the switch failed; it's that the enthusiast slot it aimed at was already claimed by the time it arrived.",
+        "description": null,
         "author": "thock",
         "pillar": "deep-dives",
         "tags": [
@@ -5221,6 +5246,7 @@
         "slug": "gmk-cyl-prussian-alert",
         "title": "GMK CYL Prussian Alert is live at KBDfans through June 12",
         "lede": "GMK CYL Prussian Alert opened at KBDfans on 2026-05-15 with a Bauhaus-leaning red-on-cream palette. The buy runs through 2026-06-12 — the IC was the loudest GMK CYL thread on GeekHack before the open, and the order window is now live.",
+        "description": null,
         "author": "thock",
         "pillar": "news",
         "tags": [
@@ -5260,6 +5286,7 @@
         "slug": "gmk-cyl-ishtar-r2-group-buy",
         "title": "GMK CYL Ishtar R2 closed at KBDfans with a second-and-likely-last shot at the lapis Mesopotamia palette",
         "lede": "GMK CYL Ishtar R2 ran 2026-04-17 through 2026-05-10 at KBDfans. The editorial event is not the open — it is the close. A second round on a Cherry-profile doubleshot ABS set is the second-and-likely-last shot at MSRP before the aftermarket takes over the palette.",
+        "description": null,
         "author": "thock",
         "pillar": "news",
         "tags": [
@@ -5288,6 +5315,7 @@
         "slug": "hmx-cloud-deep-dive",
         "title": "How HMX took over the mid-tier linear slot",
         "lede": "Two years ago HMX was a name on a vendor page nobody pronounced confidently. In W19, the Cloud sat second on our tracker and landed in half the $120 prebuilts the scene argues about. The rise wasn't an accident.",
+        "description": null,
         "author": "thock",
         "pillar": "deep-dives",
         "tags": [
@@ -5352,6 +5380,7 @@
         "slug": "typing-tests-lie",
         "title": "Why typing tests lie",
         "lede": "Monkeytype scores reward fast and forgiving. A daily driver needs comfortable and honest. Optimizing a build for the test selects for the wrong things — and the gap shows up around hour two, not in the leaderboard.",
+        "description": null,
         "author": "thock",
         "pillar": "ideas",
         "tags": [
@@ -5379,6 +5408,7 @@
         "slug": "plate-materials-explained",
         "title": "Plate materials, explained: what brass, FR4, POM, and aluminium actually change",
         "lede": "The plate is the cheapest variable in the build and the one builders argue about hardest. Most of the heat is misdirected — but a usable fraction of it is real, and the difference is worth pinning down.",
+        "description": null,
         "author": "thock",
         "pillar": "deep-dives",
         "tags": [
@@ -5423,6 +5453,7 @@
         "slug": "gsk-sweet-nightmare-group-buy",
         "title": "GSK Sweet Nightmare runs a four-day window at KBDfans with an eight-variant matrix",
         "lede": "Goldenstar's Sweet Nightmare resin run opened at KBDfans on 2026-05-08 and closed 2026-05-11. The four-day window is unusually tight for a formal group buy, and the eight-variant matrix — four colorways across two finishes — compresses a configurator's worth of choices into a half-week.",
+        "description": null,
         "author": "thock",
         "pillar": "news",
         "tags": [
@@ -5460,6 +5491,7 @@
         "slug": "trends-tracker-preview",
         "title": "Reading the Trends Tracker",
         "lede": "thock's Trends Tracker is a weekly snapshot of what is rising, falling, or holding flat across the hobby — switches, keycaps, layouts, vendors, and brands, scored on a single -100 to 100 scale and updated each Monday. This is what the columns mean and what they do not.",
+        "description": null,
         "author": "thock",
         "pillar": "trends",
         "tags": [
@@ -5493,6 +5525,7 @@
         "slug": "building-mode-sonnet-with-oil-kings",
         "title": "Pairing Oil Kings with the Mode Sonnet",
         "lede": "This pairing has been on the bench for months, and a free Sunday finally made it happen. The Sonnet is a soft 65 with a top-mount-leaf gasket, and Oil Kings are a heavy factory-lubed linear — together they hit a register worth coming back to.",
+        "description": null,
         "author": "thock",
         "pillar": "ideas",
         "tags": [
@@ -5538,6 +5571,7 @@
         "slug": "mode-sonnet-r2-group-buy-coverage",
         "title": "Mode Sonnet R2 opens at CannonKeys",
         "lede": "Mode's second round of its 65% Sonnet board is now open at CannonKeys, running from 2026-06-01 through 2026-07-15 after a vendor-side timeline shift. See the in-article update for the dates and accent-weight color options.",
+        "description": null,
         "author": "thock",
         "pillar": "news",
         "tags": [
@@ -5577,6 +5611,7 @@
         "slug": "alice-layout-decline",
         "title": "The slow fade of Alice layouts",
         "lede": "Alice mounts had a clear moment between 2021 and 2023 — the splayed alphas, the angled bar, the promise of a typing posture that didn't twist your wrists. The thock trends snapshot for 2026-W19 pegs Alice movement at -18 and trending down. The layout still has loyal users, but the curve has bent.",
+        "description": null,
         "author": "thock",
         "pillar": "trends",
         "tags": [
@@ -5615,6 +5650,7 @@
         "slug": "vendor-first-customs",
         "title": "When customs became vendor-first",
         "lede": "From 2018 through 2022 the typical custom shipped through one host vendor and a fan of regional proxies; by 2026 the baseline custom is a configurator on a vendor's own storefront. Boards moved. Keycap group buys mostly didn't.",
+        "description": null,
         "author": "thock",
         "pillar": "trends",
         "tags": [
@@ -5665,6 +5701,7 @@
         "slug": "gateron-oil-king-deep-dive",
         "title": "Why the Gateron Oil King sounds the way it does",
         "lede": "Few stock linears earn the word 'creamy' on first press. The Oil King does, and the reason is not a secret stem material or a proprietary lube — it is a careful pairing of housing resins and a factory tune that other linears under thirty cents tend to skip.",
+        "description": null,
         "author": "thock",
         "pillar": "deep-dives",
         "tags": [
@@ -5705,6 +5742,7 @@
         "slug": "keycap-profiles-compared",
         "title": "Keycap profiles, compared: Cherry, OEM, SA, and MT3",
         "lede": "Most beginners agonize over switches for weeks, then drop any keycap set on top and discover the keycap was doing half the work all along. Profile shapes the sound, the typing angle, and the way a board reads on a desk — and the four profiles below cover almost every set on the market.",
+        "description": null,
         "author": "thock",
         "pillar": "guides",
         "tags": [
@@ -5775,6 +5813,7 @@
         "slug": "split-ergo-cohort",
         "title": "The split/ergo cohort grew up",
         "lede": "Split and ergonomic boards spent a decade as a hobbyist sub-cohort orbiting a stagger-majority. By 2026 the Voyager line, the Glove80, and a steady trickle of r/mk transition posts have pushed split/ergo across a visibility threshold — still a minority, but now a reference category instead of a footnote.",
+        "description": null,
         "author": "thock",
         "pillar": "trends",
         "tags": [
@@ -5814,6 +5853,7 @@
         "slug": "tape-mod",
         "title": "The tape mod: what one strip of Kapton actually does",
         "lede": "Three to five strips of painter's tape on the back of your PCB — that's the whole mod. The acoustic effect is real. Its magnitude depends almost entirely on the board underneath it.",
+        "description": null,
         "author": "thock",
         "pillar": "ideas",
         "tags": [
@@ -5841,6 +5881,7 @@
         "slug": "gmk-cyl-greg-2-group-buy",
         "title": "GMK CYL GREG returns for round 2 at KBDfans",
         "lede": "Round 2 of GMK CYL GREG opened at KBDfans on 2026-05-01 and ran through 2026-05-29. The four-week window sits on the longer end for GMK CYL R2s, and the round-2 cadence itself is becoming the more interesting story as sets prove out in R1 and accumulate latent demand.",
+        "description": null,
         "author": "thock",
         "pillar": "news",
         "tags": [
@@ -5869,6 +5910,7 @@
         "slug": "lubing-101",
         "title": "Lubing 101: what matters, what doesn't, and where to stop",
         "lede": "Lube moves the sound and feel of a switch in ways nothing else in the build can. It also chews up a Saturday and ruins switches when applied with the enthusiasm the rabbit-hole crowd recommends. Here is the version that earns its keep.",
+        "description": null,
         "author": "thock",
         "pillar": "guides",
         "tags": [
@@ -5912,6 +5954,7 @@
         "slug": "beginners-switch-buying-guide",
         "title": "A beginner's guide to picking your first switch",
         "lede": "Switches are the single biggest factor in how a keyboard feels and sounds, and the catalog has grown overwhelming. This guide narrows the entire market into three families, explains who each one is for, and gives a three-step path from curiosity to a confident first purchase. By the end, the reader can pick a category without second-guessing.",
+        "description": null,
         "author": "thock",
         "pillar": "guides",
         "tags": [
@@ -5982,6 +6025,7 @@
         "slug": "keyboard-firmware-compared",
         "title": "Keyboard firmware, compared: QMK, VIA, and VIAL",
         "lede": "A first-time builder finishes a beautiful board, sits down to remap right-shift to enter, and discovers the firmware question is the one nobody warned them about. The catalog has three serious answers and an opinion about each.",
+        "description": null,
         "author": "thock",
         "pillar": "guides",
         "tags": [
@@ -6010,6 +6054,7 @@
         "slug": "gmk-cyl-king-of-the-seas-group-buy",
         "title": "GMK CYL King of the Seas opened at KBDfans in two colorways at once",
         "lede": "MiKeyDigit's nautical doubleshot ABS set opened at KBDfans on 2026-04-28 and ran through 2026-05-31. The rarer angle is the two-colorway split — The Sovereign in deep ocean blues and The Mutation in electric pink, sold concurrently inside the same buy rather than staggered as separate runs.",
+        "description": null,
         "author": "thock",
         "pillar": "news",
         "tags": [
@@ -6038,6 +6083,7 @@
         "slug": "sound-dampening-compared",
         "title": "Sound dampening, compared: case foam, plate foam, PE foam, and the tape mod",
         "lede": "Four layers, four very different jobs. Here is what each sound mod actually changes, where it sits in the build stack, and the order to stack them in if you only have time for one or two.",
+        "description": null,
         "author": "thock",
         "pillar": "guides",
         "tags": [
@@ -6075,6 +6121,7 @@
         "slug": "acoustic-spec-rise",
         "title": "How 'thock' became an acoustic spec, not an accident",
         "lede": "A decade ago a thocky board was the win condition of a $300 custom — the payoff for the right switches, the right lube job, the right patience. In 2026 the same sound is table-stakes for a $150 prebuilt: factory-lubed switches, silicone dampening, gasket-mounted plates, PBT doubleshot. The stack that used to be enthusiast-only is now what mid-tier vendors design toward from day one.",
+        "description": null,
         "author": "thock",
         "pillar": "trends",
         "tags": [
@@ -6124,6 +6171,7 @@
         "slug": "mounting-styles-compared",
         "title": "Mounting styles, compared: gasket, top-mount, tray, and integrated plate",
         "lede": "A builder who has lubed switches and tuned stabilizers and chosen a keycap profile and still cannot place why their next board feels different from their last one is usually meeting the mount style. The plate's relationship to the case is the half of the typing feel that nobody discusses on a sound test.",
+        "description": null,
         "author": "thock",
         "pillar": "guides",
         "tags": [
@@ -6178,6 +6226,7 @@
         "slug": "75-percent-default",
         "title": "How 75 percent became the default custom layout",
         "lede": "Two years ago a custom-board recommendation defaulted to 65% with a polite note about 75% as the next step up. The Sonnet 2026 refresh, the QK75, and a crowded mid-tier have flipped that order. 75% is now the layout customs reach for first.",
+        "description": null,
         "author": "thock",
         "pillar": "trends",
         "tags": [
@@ -6227,6 +6276,7 @@
         "slug": "pe-foam-mod",
         "title": "The PE foam mod: the two-dollar upgrade that actually works",
         "lede": "PE foam is one of the most accessible mods in the hobby — a $2 sheet between your PCB and case can noticeably reduce hollow resonance. Here is what it actually does, when to use it, and when to skip it.",
+        "description": null,
         "author": "thock",
         "pillar": "ideas",
         "tags": [
@@ -6253,6 +6303,7 @@
         "slug": "keycap-materials-compared",
         "title": "Keycap materials, compared: ABS, PBT, and the rest",
         "lede": "Most builders obsess over switches and quietly accept whatever keycaps came in the box, then wonder six months in why their board doesn't sound like the YouTube video. Half the answer is the plastic. Material decides how a cap rings, how it ages, and what it feels like under a fingertip on day one and day one thousand.",
+        "description": null,
         "author": "thock",
         "pillar": "guides",
         "tags": [
@@ -6296,6 +6347,7 @@
         "slug": "hall-effect-mainstream",
         "title": "How Hall-effect quietly became the new mid-premium default",
         "lede": "The polling-rate hype is loud and easy to wave off — 8K, 32K, numbers chasing each other up the spec sheet. The quieter story is that the magnetic-switch tier has stopped being a Wooting-shaped niche and has settled into the $100–$230 prebuilt slot the scene actually buys from. The volume has moved, not just the marketing.",
+        "description": null,
         "author": "thock",
         "pillar": "trends",
         "tags": [
@@ -6351,6 +6403,7 @@
         "slug": "switch-housings-compared",
         "title": "Switch housings, compared: nylon, polycarbonate, POM, and the rest",
         "lede": "The housing line on a switch spec sheet is the second-most-important thing about a switch, after the type, and most buyers skim past it. Material decides how the switch rings, how the stem rails feel under a finger, and how much grace it gives a bad lube job. A 'PC top, nylon bottom' tag is doing more work than its three words suggest.",
+        "description": null,
         "author": "thock",
         "pillar": "guides",
         "tags": [
@@ -6395,6 +6448,7 @@
         "slug": "stabilizer-servicing-guide",
         "title": "Stabilizer servicing: the one step most builders skip",
         "lede": "Most builders lube their switches meticulously and treat stabilizers as an afterthought. The rattle that survives a full stab lube job almost always traces back to one overlooked contact point.",
+        "description": null,
         "author": "thock",
         "pillar": "ideas",
         "tags": [
@@ -6423,6 +6477,7 @@
         "slug": "gasket-mount-reality",
         "title": "What gasket mount actually delivers (and what it doesn't)",
         "lede": "The label appears on keyboards at every price point, from $90 prebuilts to $400 group-buy customs, but two boards with identical spec-sheet language can sound nothing alike. Here is what the term actually tells you, and what it doesn't.",
+        "description": null,
         "author": "thock",
         "pillar": "ideas",
         "tags": [
@@ -6467,6 +6522,7 @@
         "slug": "clicky-switches-deep-dive",
         "title": "Why clicky switches still have a constituency",
         "lede": "Linears and tactiles dominate the modern build conversation, and clickies barely appear in it. The reason is not that clicky switches have aged out — it is that the people who want them really want them, and the manufacturers know it.",
+        "description": "Click-jacket and click-bar mechanisms make different sounds and serve different ears. The market for both has stayed roughly flat for a decade — and that is the story.",
         "author": "thock",
         "pillar": "deep-dives",
         "tags": [
@@ -6511,6 +6567,7 @@
         "slug": "cannonkeys-nyawice-group-buy",
         "title": "The Nyawice puts a leaf-spring F1 mount under a friction-fit-cat-ears Alice",
         "lede": "An Alice-layout board with a leaf-spring F1 mount, a 9-degree typing angle, and four colorways of friction-fit silicone cat ears ran at CannonKeys through 2026-05-17. The mount type is the editorial story; the cat ears are the conversation.",
+        "description": null,
         "author": "thock",
         "pillar": "news",
         "tags": [
@@ -6538,6 +6595,7 @@
         "slug": "topre-electrocapacitive-deep-dive",
         "title": "How Topre's electrocapacitive switches actually work",
         "lede": "Topre is not just another switch — it is a third sensing lineage, parallel to the MX-style contact switches and the Hall-effect newcomers. Understanding why HHKB and Realforce typists pay what they pay starts with the fact that a Topre keypress does not close a circuit at all.",
+        "description": "Topre survives at premium prices because the sensing architecture is genuinely different — a capacitive PCB reading a spring compression, not a contact closure.",
         "author": "thock",
         "pillar": "deep-dives",
         "tags": [
@@ -6565,6 +6623,7 @@
         "slug": "zmk-mainstream-shift",
         "title": "ZMK is becoming the wireless default for premium prebuilts",
         "lede": "A five-board flagship lineup running ZMK isn't a niche move; it's a market signal that an open-source firmware that lived in DIY-wireless territory for half a decade has crossed into mainstream-prebuilt anchor status. The vendor side has finally caught up with where the cohort already was.",
+        "description": null,
         "author": "thock",
         "pillar": "trends",
         "tags": [
@@ -6600,6 +6659,7 @@
         "slug": "magnetic-switches-deep-dive",
         "title": "How Hall-effect switches actually sense a keypress",
         "lede": "A Hall-effect switch is not a faster MX switch. It is a different sensing lineage — a magnet in the stem, a sensor on the PCB, and an analog voltage where contact closure used to be. The features the marketing pages lead with all unwind from that one architectural fact.",
+        "description": "Magnetic switches replace the contact closure with an analog field reading — a sensing lineage that quietly sits beside MX, Topre, and optical, with different consequences at every layer of the build.",
         "author": "thock",
         "pillar": "deep-dives",
         "tags": [
@@ -6633,6 +6693,7 @@
         "slug": "switch-films-worth-it",
         "title": "Switch films: do they actually do anything?",
         "lede": "Thin POM shims between your switch housings cost five dollars and promise a tighter, better-sounding switch. The mechanism is real. Whether it matters on your specific switches is a separate question.",
+        "description": null,
         "author": "thock",
         "pillar": "ideas",
         "tags": [
@@ -7060,5 +7121,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-07-06T09:37:04.984Z"
+  "generatedAt": "2026-07-06T21:00:30.748Z"
 }

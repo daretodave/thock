@@ -11,6 +11,7 @@ export function makeArticle(over: Partial<Article> = {}): Article {
     slug: 'a',
     title: 'Article A',
     lede: 'A lede that meets the schema minimum length requirement.',
+    description: null,
     author: 'thock',
     pillar: 'news',
     tags: ['linear'],

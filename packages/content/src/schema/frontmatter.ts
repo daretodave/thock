@@ -21,6 +21,7 @@ export const ArticleFrontmatterSchema = z.object({
   slug: SlugSchema,
   title: z.string().min(4).max(200),
   lede: z.string().min(20).max(400),
+  description: z.string().min(20).max(300).nullable().default(null),
   author: z.string().min(2),
   pillar: PillarSchema,
   tags: z.array(z.string()).min(1).max(8),

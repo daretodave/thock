@@ -36,7 +36,7 @@ export async function generateMetadata({
   // missing-preview bug.
   return buildMetadata({
     title: article.frontmatter.title,
-    description: article.frontmatter.lede,
+    description: article.frontmatter.description ?? article.frontmatter.lede,
     path: `/article/${article.slug}`,
     type: 'article',
     publishedAt: article.frontmatter.publishedAt,
@@ -76,7 +76,7 @@ export default async function ArticlePage({
         graph={[
           buildArticleJsonLd({
             headline: fm.title,
-            description: fm.lede,
+            description: fm.description ?? fm.lede,
             path,
             publishedAt: fm.publishedAt,
             updatedAt: fm.updatedAt ?? undefined,
