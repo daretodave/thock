@@ -43,8 +43,8 @@ import type {
  */
 export type ResolvedPart =
   | { id: string; kind: 'switch'; slug: string; record: Switch }
-  | { id: string; kind: 'keycap-set'; slug: string; record: KeycapSet }
-  | { id: string; kind: 'board'; slug: string; record: Board }
+  | { id: string; kind: 'keycap-set'; slug: string; record: KeycapSet; vendorUrl: string | null }
+  | { id: string; kind: 'board'; slug: string; record: Board; vendorUrl: string | null }
 
 import manifestJson from './manifest.generated.json'
 
@@ -228,12 +228,16 @@ export function getReferencedParts(article: Article): ResolvedPart[] {
         out.push({ id: ref.id, kind: 'switch', slug: ref.slug, record })
     } else if (ref.kind === 'keycap-set') {
       const record = getKeycapSetBySlug(ref.slug)
-      if (record)
-        out.push({ id: ref.id, kind: 'keycap-set', slug: ref.slug, record })
+      if (record) {
+        const vendorUrl = getVendorBySlug(record.vendorSlug)?.url ?? null
+        out.push({ id: ref.id, kind: 'keycap-set', slug: ref.slug, record, vendorUrl })
+      }
     } else if (ref.kind === 'board') {
       const record = getBoardBySlug(ref.slug)
-      if (record)
-        out.push({ id: ref.id, kind: 'board', slug: ref.slug, record })
+      if (record) {
+        const vendorUrl = getVendorBySlug(record.vendorSlug)?.url ?? null
+        out.push({ id: ref.id, kind: 'board', slug: ref.slug, record, vendorUrl })
+      }
     }
   }
   return out

@@ -13,6 +13,7 @@ import {
   getAllBoards,
   getAllKeycapSets,
   getAllSwitches,
+  getVendorBySlug,
   type ResolvedPart,
 } from '@/lib/data-runtime'
 import { PartIndexCard } from '@/components/part/PartIndexCard'
@@ -74,6 +75,7 @@ function partsForKind(kind: ValidKind): ResolvedPart[] {
       kind: 'keycap-set',
       slug: record.slug,
       record,
+      vendorUrl: getVendorBySlug(record.vendorSlug)?.url ?? null,
     }))
   }
   return getAllBoards().map((record) => ({
@@ -81,6 +83,7 @@ function partsForKind(kind: ValidKind): ResolvedPart[] {
     kind: 'board',
     slug: record.slug,
     record,
+    vendorUrl: getVendorBySlug(record.vendorSlug)?.url ?? null,
   }))
 }
 

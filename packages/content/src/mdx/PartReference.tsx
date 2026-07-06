@@ -32,8 +32,8 @@ export function PartReference({
   const name = part.record.name
   const vendorHref = (() => {
     if (part.kind === 'switch') return null // switch records don't carry a URL today
-    if (part.kind === 'keycap-set') return part.record.imageUrl
-    if (part.kind === 'board') return part.record.imageUrl
+    if (part.kind === 'keycap-set') return part.vendorUrl
+    if (part.kind === 'board') return part.vendorUrl
     return null
   })()
 

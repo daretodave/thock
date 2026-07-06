@@ -15,6 +15,7 @@ import {
   getBoardBySlug,
   getKeycapSetBySlug,
   getSwitchBySlug,
+  getVendorBySlug,
   type ResolvedPart,
 } from '@/lib/data-runtime'
 import { PartHero } from '@/components/part/PartHero'
@@ -45,11 +46,25 @@ function resolvePart(kind: ValidKind, slug: string): ResolvedPart | null {
   if (kind === 'keycap-set') {
     const record = getKeycapSetBySlug(slug)
     return record
-      ? { id: `keycap-set:${slug}`, kind: 'keycap-set', slug, record }
+      ? {
+          id: `keycap-set:${slug}`,
+          kind: 'keycap-set',
+          slug,
+          record,
+          vendorUrl: getVendorBySlug(record.vendorSlug)?.url ?? null,
+        }
       : null
   }
   const record = getBoardBySlug(slug)
-  return record ? { id: `board:${slug}`, kind: 'board', slug, record } : null
+  return record
+    ? {
+        id: `board:${slug}`,
+        kind: 'board',
+        slug,
+        record,
+        vendorUrl: getVendorBySlug(record.vendorSlug)?.url ?? null,
+      }
+    : null
 }
 
 function shortDescription(description: string, max = 150): string {

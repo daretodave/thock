@@ -23,7 +23,7 @@ describe('getReferencedParts', () => {
     expect(part?.record).toBeDefined()
   })
 
-  it('resolves a keycap-set ref using a known seed slug', () => {
+  it('resolves a keycap-set ref using a known seed slug, with the vendor URL (not product imagery)', () => {
     const result = getReferencedParts(
       makeArticle([{ id: 'olivia', kind: 'keycap-set', slug: 'gmk-olivia' }]),
     )
@@ -31,9 +31,10 @@ describe('getReferencedParts', () => {
     const [part] = result
     expect(part).toMatchObject({ id: 'olivia', kind: 'keycap-set', slug: 'gmk-olivia' })
     expect(part?.record).toBeDefined()
+    expect(part && 'vendorUrl' in part ? part.vendorUrl : undefined).toMatch(/^https?:\/\//)
   })
 
-  it('resolves a board ref using a known seed slug', () => {
+  it('resolves a board ref using a known seed slug, with the vendor URL (not product imagery)', () => {
     const result = getReferencedParts(
       makeArticle([{ id: 'sonnet', kind: 'board', slug: 'mode-sonnet' }]),
     )
@@ -41,6 +42,7 @@ describe('getReferencedParts', () => {
     const [part] = result
     expect(part).toMatchObject({ id: 'sonnet', kind: 'board', slug: 'mode-sonnet' })
     expect(part?.record).toBeDefined()
+    expect(part && 'vendorUrl' in part ? part.vendorUrl : undefined).toMatch(/^https?:\/\//)
   })
 
   it('drops refs whose slug does not resolve', () => {

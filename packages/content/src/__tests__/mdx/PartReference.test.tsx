@@ -14,7 +14,8 @@ const KEYCAP_SET_PART = {
   id: 'olivia',
   kind: 'keycap-set',
   slug: 'gmk-olivia',
-  record: { name: 'GMK Olivia', imageUrl: 'https://kbdfans.com/gmk-olivia' },
+  record: { name: 'GMK Olivia', imageUrl: null },
+  vendorUrl: 'https://kbdfans.com',
 } as unknown as ResolvedPart
 
 const KEYCAP_SET_NO_URL = {
@@ -22,13 +23,15 @@ const KEYCAP_SET_NO_URL = {
   kind: 'keycap-set',
   slug: 'kat-drifter',
   record: { name: 'KAT Drifter', imageUrl: null },
+  vendorUrl: null,
 } as unknown as ResolvedPart
 
 const BOARD_PART = {
   id: 'sonnet',
   kind: 'board',
   slug: 'mode-sonnet',
-  record: { name: 'Mode Sonnet', imageUrl: 'https://modedesigns.com/sonnet' },
+  record: { name: 'Mode Sonnet', imageUrl: null },
+  vendorUrl: 'https://modedesigns.com',
 } as unknown as ResolvedPart
 
 describe('PartReference', () => {
@@ -50,26 +53,26 @@ describe('PartReference', () => {
     expect(container.querySelector('a')).toBeNull()
   })
 
-  it('renders keycap-set part as anchor + Mono when imageUrl is set', () => {
+  it('renders keycap-set part as anchor to the vendor URL when resolved', () => {
     const { container } = render(<PartReference id="olivia" parts={[KEYCAP_SET_PART]} />)
     const a = container.querySelector('a')
     expect(a).not.toBeNull()
-    expect(a!.getAttribute('href')).toBe('https://kbdfans.com/gmk-olivia')
+    expect(a!.getAttribute('href')).toBe('https://kbdfans.com')
     expect(a!.getAttribute('rel')).toBe('sponsored noopener')
     expect(container.textContent).toBe('GMK Olivia')
   })
 
-  it('renders keycap-set part as Mono with no anchor when imageUrl is null', () => {
+  it('renders keycap-set part as Mono with no anchor when vendorUrl is null', () => {
     const { container } = render(<PartReference id="kat-drifter" parts={[KEYCAP_SET_NO_URL]} />)
     expect(container.querySelector('a')).toBeNull()
     expect(container.textContent).toBe('KAT Drifter')
   })
 
-  it('renders board part as anchor + Mono when imageUrl is set', () => {
+  it('renders board part as anchor to the vendor URL when resolved', () => {
     const { container } = render(<PartReference id="sonnet" parts={[BOARD_PART]} />)
     const a = container.querySelector('a')
     expect(a).not.toBeNull()
-    expect(a!.getAttribute('href')).toBe('https://modedesigns.com/sonnet')
+    expect(a!.getAttribute('href')).toBe('https://modedesigns.com')
     expect(container.textContent).toBe('Mode Sonnet')
   })
 })
