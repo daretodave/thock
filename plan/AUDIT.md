@@ -6161,3 +6161,13 @@ passes accumulate signals.)
 - next: main agent implements — one-line change in `packages/seo/src/JsonLd.ts`, plus a regression test asserting a `</script` substring in input never appears unescaped in the rendered output
 - issue: #403
 > **Resolved (2026-07-06):** Escaped `<` → `<` in `JsonLd.ts` after `JSON.stringify`; round-trips correctly through `JSON.parse` (search engines and the new regression test both recover the original object). Added a test asserting a `</script>`-bearing string field never appears unescaped in the rendered script body. `pnpm verify` full gate green. `118d6f5`
+
+### [x] [seo] [3.0] article meta description silently drops hand-authored frontmatter field — addressed in 7a777f0, closes #405
+- category: seo
+- filed: 2026-07-06 by /iterate audit (cloud march tick, pass 155)
+- impact: 5 (`ArticleFrontmatterSchema` had no `description` field, only `lede`; 6 of 61 articles carried a hand-authored `description:` frontmatter key written specifically as a tight SERP-appropriate summary, but Zod's default unknown-key stripping silently dropped it — `apps/web/src/app/article/[slug]/page.tsx` always fell back to the longer narrative `lede` for both `<meta name="description">` and JSON-LD `Article.description`)
+- ease: 6 (additive schema field + two-line fallback in page.tsx; ripples into 8 test fixtures typed against the output shape)
+- score: 3.0 (impact × ease / 10)
+- action: `packages/content/src/schema/frontmatter.ts` — added `description: z.string().min(20).max(300).nullable().default(null)`; `apps/web/src/app/article/[slug]/page.tsx` — both `generateMetadata` and the JSON-LD builder now read `fm.description ?? fm.lede`. Updated 8 test fixtures (`deep-dives`/`guides`/`ideas` helpers, home `testFixtures`, `CitationIndex`/`SourceCounts`/`buildRss`/`validate` tests) that construct `Article` objects against the schema's output type.
+- issue: #405
+> All mechanical surveys clean (content-gap, crosslink, companion, stale-GB, newsletter-gap, OG-coverage, a11y-spec-coverage); 0 unlabeled GitHub issues; no pending phases/data work; the `[6.3]` blocked-cloud-permission row remains blocked (workflow-file push permission gap, unrelated). A fresh Explore-agent sweep across link integrity, a11y, tests, SEO, data integrity, and performance found the internal corpus clean (no dead internal links, no orphaned cross-refs, no missing alt text, no focus-visible gaps, no untested modules) — this frontmatter/schema mismatch was the only concrete, verified defect surfaced. `pnpm verify` full gate green: typecheck, 908 unit tests (150 content + 591 web + rest across packages), data:validate (69 records), build, 968/968 e2e.
