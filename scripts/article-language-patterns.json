@@ -106,6 +106,12 @@
       "match": "\\bthis quarter\\b",
       "regex": true,
       "description": "Bare relative quarter reference decays after the quarter of publication. Replace with an absolute quarter anchor (e.g., 'Q2 2026') derived from the article's publishedAt."
+    },
+    {
+      "id": "relative-next-month",
+      "match": "\\bnext month\\b",
+      "regex": true,
+      "description": "Bare relative-month promise decays a month after publication and never resolves in a static article. Rewrite as a past-tense observation once the window has closed, or an absolute date anchor if still forward-looking."
     }
   ]
 }

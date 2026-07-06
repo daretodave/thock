@@ -553,6 +553,39 @@ describe('checkFile — relative-this-quarter pattern', () => {
   })
 })
 
+// ── relative-next-month ───────────────────────────────────────────────────────
+
+describe('checkFile — relative-next-month pattern', () => {
+  const patterns = loadPatterns()
+
+  test('flags "the next month" as a relative temporal reference', () => {
+    const content = makeMdx(
+      'slug: test\ntitle: Test\nauthor: thock\npillar: news\npublishedAt: 2026-04-17',
+      '\nReviewers will spend the next month figuring out which of those the Nyawice is.\n'
+    )
+    const filePath = tmpMdx(content)
+    const violations = checkFile(filePath, patterns)
+    assert.ok(
+      violations.some((v) => v.patternId === 'relative-next-month'),
+      'expected relative-next-month violation for bare "next month"'
+    )
+  })
+
+  test('past-tense phrasing without "next month" does not trigger the pattern', () => {
+    const content = makeMdx(
+      'slug: test\ntitle: Test\nauthor: thock\npillar: news\npublishedAt: 2026-04-17',
+      '\nReviewers were still working out which of those the Nyawice is by the time the buy closed.\n'
+    )
+    const filePath = tmpMdx(content)
+    const violations = checkFile(filePath, patterns)
+    assert.equal(
+      violations.filter((v) => v.patternId === 'relative-next-month').length,
+      0,
+      'past-tense rewrite should not trigger relative-next-month'
+    )
+  })
+})
+
 describe('checkFile — unfulfillable-worth-revisiting pattern', () => {
   const patterns = loadPatterns()
 
