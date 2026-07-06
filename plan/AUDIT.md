@@ -6119,7 +6119,7 @@ passes accumulate signals.)
 - action: spawned `scout` to research all 8; verified-live replacements applied — keeb-finder.com/switches/filter/brand-HMX, geon.works, bowlkeyboards.com, thockking.com/blogs/learn/choosing-the-best-plate-material, theremingoat.com/pdf-archive, cherry.de/en-us/company/news/cherry-blog/article/cherry-mx2a (×2), novelkeys.com/products/nk-x-deskeys-switch-films, theremingoat.com
 - issue: #398
 
-### [HOT PURSUIT] [content-gap] [7] ideas pillar — 1 of ≥2 articles in last 30d
+### [x] [HOT PURSUIT] [content-gap] [7] ideas pillar — 1 of ≥2 articles in last 30d — addressed in ec6f080, closes #401
 - category: content-gaps
 - impact: 7 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -6130,3 +6130,4 @@ passes accumulate signals.)
 - score: 7
 - next: /ship-content → ideas pillar article
 > Filed 2026-07-06 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+> **Resolved (2026-07-06):** Shipped "Retrobrighting: what UV and peroxide actually reverse in yellowed ABS" at `/article/retrobrighting-keycaps`, publishedAt 2026-06-22 (gap-fill midpoint of the 27-day 2026-06-09 → 2026-07-06 gap). Ideas pillar now at 2 of ≥2 in the 30-day window — comfortable. Note: two earlier stalled ticks today (2026-07-06 03:12 and 05:31) had each opened their own duplicate mirror issue (#399, #400) for this same row without completing a commit — closed both as superseded once this ships. `ec6f080`
