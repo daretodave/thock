@@ -6192,13 +6192,15 @@ passes accumulate signals.)
 - issue: #407
 > All mechanical surveys clean (content-gap, crosslink, companion, stale-GB, newsletter-gap, OG-coverage, a11y-spec-coverage); the `[6.3]` blocked-cloud-permission row remains blocked (unrelated). 0 unlabeled GitHub issues; no pending phases/data work. A fresh Explore-agent sweep across internal link integrity, stale temporal language, data integrity, a11y, tests, and SEO found 3 more closed-buy articles with the same present-tense-after-close anti-pattern (`gmk-cyl-ramune-group-buy`, `gmk-cyl-masterpiece-r2-group-buy`, plus a cross-reference in `gsk-sweet-nightmare-group-buy`) — not bundled into this tick per the one-fix-per-tick rule; re-filed below as follow-up rows. Noted gap: the language-check gate's frontmatter-blind scope let this slip past the mechanical linter entirely — worth a future gate extension, not shipped this tick. `pnpm verify` full gate green (see commit).
 
-### [content] [3.0] gmk-cyl-ramune-group-buy — stale present-tense "is live"/"runs through" after June 20 close
+### [x] [content] [3.5] gmk-cyl-ramune-group-buy — stale present-tense "is live"/"runs through" after June 20 close — addressed in ead8205, closes #409
 - category: content
 - filed: 2026-07-07 by /iterate audit (cloud march tick, pass 157 — residual, not bundled into this tick's fix)
 - impact: 5 (buy closed 2026-06-20 per `data/group-buys/kbdfans-gmk-cyl-ramune.json`; body opens "GMK CYL Ramune is live. The buy opened on 2026-05-15 and runs through 2026-06-20" and line 85 has an unresolved forward-looking promise: "Two questions ride on this run, and both will have legible answers by the time the window closes on 2026-06-20")
 - ease: 7 (multi-sentence past-tense rewrite across the opening line + line 66 + line 85; no schema/data changes)
 - score: 3.5 (impact × ease / 10)
-- next: rewrite opening + line 66 + line 85 to past tense; bump `updatedAt`
+- action: past-tensed the opening line, the vendor-structure paragraph, the Buying notes section, and the closing section (retitled "What we're watching" → "What we were watching"); updated the "/group-buys" link to the archived "/group-buys/past" entry, matching the gmk-cyl-selene precedent; bumped `updatedAt` to 2026-07-07.
+- issue: #409
+> All mechanical surveys clean (content-gap, crosslink, companion, stale-GB, newsletter-gap, OG-coverage, a11y-spec-coverage); the `[6.3]` blocked-cloud-permission row remains blocked (unrelated, needs /oversight for the workflow-push permission gap). 0 unlabeled GitHub issues; no pending phases/data work. Expand's 20-commit/48h gate not met (8 commits/~6h20m since pass 154). This drains the last of the residual rows filed by the prior ticks' sweeps — AUDIT.md's only remaining Pending row is now the blocked `[6.3]` one. `pnpm verify` full gate green: typecheck, 591 unit tests, 158 script tests, data:validate, build, size (108.5 KB / 200 KB budget), 968/968 e2e.
 
 ### [x] [content] [4.8] gmk-cyl-masterpiece-r2-group-buy — title/lede still frame a June 26 close as upcoming, 11 days after it closed — addressed in d0bd552, closes #408
 - category: content
