@@ -6181,3 +6181,29 @@ passes accumulate signals.)
 - action: rewrote the sentence to past tense; bumped `updatedAt` to 2026-07-06. Added a `relative-next-month` pattern to `scripts/article-language-patterns.json` (mirrors the precedent `relative-this-quarter` pattern from `9645a36`) plus 2 unit tests, so this class of violation is caught mechanically going forward — the existing gate had no pattern for "next month" and let this one through.
 - issue: #406
 > All mechanical surveys clean (content-gap, crosslink, companion, stale-GB, newsletter-gap, OG-coverage, a11y-spec-coverage); the `[6.3]` blocked-cloud-permission row remains blocked (workflow-file push permission gap, unrelated — same constraint applies to this cloud run). Expand's own 20-commit/48h gate not met (1 commit since pass 154). A fresh Explore-agent sweep across broken links, a11y, tests, content quality, data integrity, SEO, and performance found the internal corpus otherwise clean (0 broken internal links, 0 missing alt text, all articles ≥600 words, no dead vendor/citation URLs beyond known bot-blocked false positives) — this stale temporal-language sentence was the only concrete, verified defect surfaced, ahead of a lower-scored [2.4] missing-unit-test finding on two `data-runtime` loader functions (not shipped this tick — one fix per tick). `pnpm verify` full gate green: typecheck, 43 script tests (2 new), data:validate, build, 968/968 e2e.
+
+### [x] [content] [4.0] gmk-cyl-selene-group-buy — stale "is live" title/prose after June 19 close — addressed in this commit, closes #407
+- category: content
+- filed: 2026-07-07 by /iterate audit (cloud march tick, pass 157)
+- impact: 5 (buy closed 2026-06-19, 18 days before this tick, but frontmatter `title` still read "GMK CYL Selene is live at KBDfans through June 19" — feeds `<title>`, the OG image, and JSON-LD `headline`, not just body prose; three body sentences also used present-tense "runs through"; the mechanical `article-language-check.mjs` gate only scans MDX body, not frontmatter, and the exact phrase doesn't match the existing `stale-buy-live` pattern ("the buy is live"), so it slipped through undetected)
+- ease: 8 (title/lede/updatedAt frontmatter rewrite + 4 body tense fixes; no schema/data changes; data record already correctly `status: "closed"`)
+- score: 4.0 (impact × ease / 10)
+- action: rewrote title to "GMK CYL Selene closed at KBDfans with the sub-line's first material-first colorway" (matches the `gmk-cyl-ishtar-r2-group-buy` retrospective-title precedent); past-tensed lede and 4 body sentences ("runs through" → "closed"/"ran through"); "won't be in wide circulation" → "were not in wide circulation"; "The live entry is tracked on the [group-buys board](/group-buys)" → "The closed entry is archived on the [group-buys board](/group-buys/past)"; bumped `updatedAt` to 2026-07-07.
+- issue: #407
+> All mechanical surveys clean (content-gap, crosslink, companion, stale-GB, newsletter-gap, OG-coverage, a11y-spec-coverage); the `[6.3]` blocked-cloud-permission row remains blocked (unrelated). 0 unlabeled GitHub issues; no pending phases/data work. A fresh Explore-agent sweep across internal link integrity, stale temporal language, data integrity, a11y, tests, and SEO found 3 more closed-buy articles with the same present-tense-after-close anti-pattern (`gmk-cyl-ramune-group-buy`, `gmk-cyl-masterpiece-r2-group-buy`, plus a cross-reference in `gsk-sweet-nightmare-group-buy`) — not bundled into this tick per the one-fix-per-tick rule; re-filed below as follow-up rows. Noted gap: the language-check gate's frontmatter-blind scope let this slip past the mechanical linter entirely — worth a future gate extension, not shipped this tick. `pnpm verify` full gate green (see commit).
+
+### [content] [3.0] gmk-cyl-ramune-group-buy — stale present-tense "is live"/"runs through" after June 20 close
+- category: content
+- filed: 2026-07-07 by /iterate audit (cloud march tick, pass 157 — residual, not bundled into this tick's fix)
+- impact: 5 (buy closed 2026-06-20 per `data/group-buys/kbdfans-gmk-cyl-ramune.json`; body opens "GMK CYL Ramune is live. The buy opened on 2026-05-15 and runs through 2026-06-20" and line 85 has an unresolved forward-looking promise: "Two questions ride on this run, and both will have legible answers by the time the window closes on 2026-06-20")
+- ease: 7 (multi-sentence past-tense rewrite across the opening line + line 66 + line 85; no schema/data changes)
+- score: 3.5 (impact × ease / 10)
+- next: rewrite opening + line 66 + line 85 to past tense; bump `updatedAt`
+
+### [content] [3.4] gmk-cyl-masterpiece-r2-group-buy — title/lede still frame a June 26 close as upcoming, 11 days after it closed
+- category: content
+- filed: 2026-07-07 by /iterate audit (cloud march tick, pass 157 — residual, not bundled into this tick's fix)
+- impact: 6 (title "closes June 26 — what the deep-blue revival gets right" and lede "with the buy open through June 26" both read as forward-looking; `data/group-buys/kbdfans-gmk-cyl-masterpiece-r2.json` shows `status: "closed"`)
+- ease: 8 (title/lede past-tense rewrite + line 29 "runs through" fix; no schema/data changes)
+- score: 4.8 (impact × ease / 10)
+- next: rewrite title/lede/line 29 to past tense; bump `updatedAt`
