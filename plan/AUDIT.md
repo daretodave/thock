@@ -6200,10 +6200,12 @@ passes accumulate signals.)
 - score: 3.5 (impact × ease / 10)
 - next: rewrite opening + line 66 + line 85 to past tense; bump `updatedAt`
 
-### [content] [3.4] gmk-cyl-masterpiece-r2-group-buy — title/lede still frame a June 26 close as upcoming, 11 days after it closed
+### [x] [content] [4.8] gmk-cyl-masterpiece-r2-group-buy — title/lede still frame a June 26 close as upcoming, 11 days after it closed — addressed in d0bd552, closes #408
 - category: content
 - filed: 2026-07-07 by /iterate audit (cloud march tick, pass 157 — residual, not bundled into this tick's fix)
 - impact: 6 (title "closes June 26 — what the deep-blue revival gets right" and lede "with the buy open through June 26" both read as forward-looking; `data/group-buys/kbdfans-gmk-cyl-masterpiece-r2.json` shows `status: "closed"`)
 - ease: 8 (title/lede past-tense rewrite + line 29 "runs through" fix; no schema/data changes)
 - score: 4.8 (impact × ease / 10)
-- next: rewrite title/lede/line 29 to past tense; bump `updatedAt`
+- action: rewrote title to a retrospective form (precedent: `gmk-cyl-ishtar-r2-group-buy`); past-tensed lede, line 29, the "Tracker outlook" heading and its closing paragraph; updated the baked-in `tracker-arc.svg` text "buy closes June 26, 2026" → "buy closed June 26, 2026" (the staleness had leaked into a rendered image asset, not just prose); bumped `updatedAt` to 2026-07-07.
+- issue: #408
+> All mechanical surveys clean (content-gap, crosslink, companion, stale-GB, newsletter-gap, OG-coverage, a11y-spec-coverage); the `[6.3]` blocked-cloud-permission row remains blocked (unrelated). 0 unlabeled GitHub issues; no pending phases/data work. Expand's 20-commit/48h gate not met (6 commits/~2h15m since pass 154). This drains the second of the two residual rows filed by the prior tick's Explore-agent sweep (`gmk-cyl-ramune-group-buy` at score 3.5 remains, lower-scored, for a future tick — one fix per tick). `pnpm verify` full gate green: typecheck, unit tests, 158 script tests, data:validate, build, size, 968/968 e2e.
