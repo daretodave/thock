@@ -6232,10 +6232,12 @@ passes accumulate signals.)
 - issue: #411
 > Same fresh-sweep pass surfaced a second, lower-scored residual (`gmk-cyl-pandemonium-group-buy`, same bug class, score 3.4) — filed below, one-fix-per-tick rule defers it to a future tick. All mechanical surveys clean; the `[6.3]` blocked-cloud-permission row remains blocked (unrelated). CRITIQUE.md's only Pending row remains the non-actionable `[needs-user-call]` GA-beacon item. 0 unlabeled GitHub issues; no pending phases/data work. Expand's 20-commit/48h gate not met (11 commits/~10.5h since pass 154). `pnpm verify` full gate green: typecheck, unit tests, data:validate, build, 968/968 e2e.
 
-### [content] [3.4] gmk-cyl-pandemonium-group-buy — stale "still live"/"trending" title/prose 6 days after July 1 close
+### [x] [content] [3.4] gmk-cyl-pandemonium-group-buy — stale "still live"/"trending" title/prose 6 days after July 1 close — addressed in 2edd08d, closes #412
 - category: content
 - filed: 2026-07-07 by /iterate audit (cloud march tick, pass 159 — residual, not bundled into this tick's fix)
 - impact: 4.2 (title "...that's been trending all window" and lede "buy still live through July 1" both feed `<title>`, OG image, and JSON-LD `headline`; `data/group-buys/deltakeyco-gmk-cyl-pandemonium.json` shows `status: "closed"`, `endDate: "2026-07-01"`, `updatedAt` frozen at 2026-06-20)
 - ease: 8 (title/lede/updatedAt frontmatter rewrite + body tense fixes; no schema/data changes; same well-precedented shape as the divinikey-dcs-dolch fix above)
 - score: 3.4 (impact × ease / 10)
-- next: rewrite title to a retrospective form (precedent: `gmk-cyl-ishtar-r2-group-buy`); past-tense lede and body sentences at lines 2, 8, 26, 42; bump `updatedAt` to date of fix.
+- action: rewrote title to a retrospective form (precedent: `gmk-cyl-ishtar-r2-group-buy`); past-tensed lede and body sentences describing the buy window, the DCS Dolch tracker comparison, and the "What to watch for at close" section (retitled "What we watched for at close"); bumped `updatedAt` to 2026-07-07.
+- issue: #412
+> All mechanical surveys clean (content-gap, crosslink, companion, stale-GB, newsletter-gap, OG-coverage, a11y-spec-coverage); the `[6.3]` blocked-cloud-permission row remains blocked (unrelated, needs `/oversight` for the workflow-push permission gap). CRITIQUE.md's only Pending row remains the non-actionable `[needs-user-call]` GA-beacon item. 0 unlabeled GitHub issues; no pending phases/data work. Expand's 20-commit/48h gate not met (13 commits/~12.5h since pass 154). This was the only actionable Pending AUDIT.md row this tick — the last residual from pass 159's fresh sweep. `pnpm verify` full gate green: typecheck, unit tests, data:validate, build, 968/968 e2e.
