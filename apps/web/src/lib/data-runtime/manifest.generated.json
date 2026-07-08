@@ -4239,7 +4239,7 @@
           "deep-dive"
         ],
         "publishedAt": "2026-07-02T14:00:00.000Z",
-        "updatedAt": "2026-07-02T14:00:00.000Z",
+        "updatedAt": "2026-07-08T00:00:00.000Z",
         "heroImage": "/hero-art/durock-t1-deep-dive.svg",
         "heroImageAlt": "Side-view cross-section of a heavy nylon-housing tactile switch — top housing, POM stem with a pronounced tactile bump geometry near the top of travel, stiff coil spring, and nylon bottom housing, rendered in a single warm-grey stroke with an amber splash across the bump-and-leaf contact zone",
         "featured": false,
@@ -4255,11 +4255,6 @@
             "id": "boba-u4t",
             "kind": "switch",
             "slug": "gazzew-boba-u4t"
-          },
-          {
-            "id": "gazzew-boba-u4",
-            "kind": "switch",
-            "slug": "gazzew-boba-u4"
           },
           {
             "id": "drop-holy-panda-x",
@@ -4482,7 +4477,7 @@
           "deep-dive"
         ],
         "publishedAt": "2026-06-18T00:00:00.000Z",
-        "updatedAt": "2026-06-18T00:00:00.000Z",
+        "updatedAt": "2026-07-08T00:00:00.000Z",
         "heroImage": "/hero-art/gateron-lanes-tactile-deep-dive.svg",
         "heroImageAlt": "Switch cross-section diagram of the Gateron Lanes tactile mechanism — exploded side view showing the stepped tactile legs on the stem, the leaf-spring contact, and the housing halves rendered in warm-grey stroke with a coral splash at the stem shoulder",
         "featured": false,
@@ -4508,11 +4503,6 @@
             "id": "drop-holy-panda-x",
             "kind": "switch",
             "slug": "drop-holy-panda-x"
-          },
-          {
-            "id": "gazzew-boba-u4",
-            "kind": "switch",
-            "slug": "gazzew-boba-u4"
           },
           {
             "id": "gateron-lanes",
@@ -7181,5 +7171,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-07-08T16:52:09.350Z"
+  "generatedAt": "2026-07-08T17:51:24.156Z"
 }
