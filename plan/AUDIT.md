@@ -6313,3 +6313,14 @@ passes accumulate signals.)
 - next: past-tense both references in `dcs-grass-valley-decline.mdx`; bump `updatedAt`. Same recurring bug class as the 7 prior stale-group-buy-prose fixes this week (#406-#413), but this instance is a *third-party* cross-reference (neither buy's own companion article) — confirms the standing gap noted at pass 157/159 that no mechanical gate checks cross-article group-buy mentions, only each article's own companion.
 - issue: #424
 > **Resolved (2026-07-08):** past-tensed both cross-references in `dcs-grass-valley-decline.mdx` ("open at KBDfans through" -> "which ran at KBDfans through"; "the open window through" -> "the order window that ran through"); bumped `updatedAt` to 2026-07-08. `c0b1844`.
+
+### [x] [content] [4.8] case-materials-compared — dead Drop CTRL source link (soft-404) — addressed in 7427f62, closes #425
+- category: content
+- filed: 2026-07-08 by /iterate audit (cloud march tick, fresh Explore-agent sweep)
+- impact: 6 (the `<Source href="drop.com/buy/drop-ctrl-mechanical-keyboard">Drop CTRL</Source>` citation in an active guides-pillar comparison article now resolves to Drop's generic "Gaming Collaborations by Corsair" hub — HTTP 200 but zero CTRL content, so the citation no longer supports the claim it's attached to; slipped past the pass-147/148 dead-link sweep because this article wasn't in that batch)
+- ease: 8 (swap to `<PartReference id="drop-ctrl" />` — the entity is already declared in this article's `mentionedParts` and has its own `/part/board/drop-ctrl` page, matching the sibling `mode-sonnet` reference in the same sentence)
+- score: 4.8 (impact × ease / 10)
+- evidence: `apps/web/src/content/articles/case-materials-compared.mdx:54` — curl confirmed `<title>Drop - Gaming Collaborations by Corsair</title>` at the cited URL.
+- action: replaced the `<Source>` link with `<PartReference id="drop-ctrl" />`; bumped `updatedAt` to 2026-07-08.
+- issue: #425
+> Picked as the top signal this tick: AUDIT.md's only Pending row is the `[6.3]` blocked-cloud-permission `.github/workflows/march.yml` item (still blocked pending /oversight); CRITIQUE.md's only Pending row is the ancient non-actionable `[needs-user-call]` GA-beacon item; all mechanical surveys clean (content-gap, crosslink, companion, stale-GB, newsletter-gap, OG-coverage, a11y-spec-coverage). A fresh Explore-agent sweep across broken internal links, external link rot, content-quality regression on the two just-shipped articles (dcs-grass-valley-decline, durock-t1-deep-dive), and data integrity found the corpus otherwise clean, surfacing this soft-404 (4.8) ahead of a `mentionedParts` reverse-gap finding (4.5, `gazzew-boba-u4` declared but never mentioned in durock-t1-deep-dive prose — a known pre-existing pattern the mechanical gate doesn't check in that direction, deferred as lower-scored and non-novel). `pnpm verify` full gate green: typecheck, unit tests, data:validate, build, 974/974 e2e.
