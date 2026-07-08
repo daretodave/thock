@@ -6262,7 +6262,9 @@ passes accumulate signals.)
 - window-start: 2026-06-08
 - score: 7
 - next: /ship-content → deep-dives pillar article
+- issue: #417
 > Filed 2026-07-08 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+> Reused issue #417 ("content: deep-dives — Durock T1 deep-dive") rather than opening a fresh tracking issue — its topic (Durock T1) matches this exact hot-pursuit row and was filed by an earlier stalled dispatch attempt. Reusing avoids adding a 10th duplicate open issue to the #414–#422 pile the 2026-07-08 digest already flagged as awaiting an oversight cleanup pass.
 
 ### [x] [engineering] [4.9] ship-content dispatch stuck in a duplicate-issue loop for the deep-dives content-gap row — 9 GitHub issues opened, 0 articles shipped, ~10.5h and counting — addressed in this commit, closes #423
 - category: engineering
