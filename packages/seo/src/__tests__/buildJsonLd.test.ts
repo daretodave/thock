@@ -49,14 +49,16 @@ describe('buildArticleJsonLd', () => {
     expect(ld.dateModified).toBe('2026-05-08T12:00:00Z')
   })
 
-  it('includes image only when heroImage is set', () => {
+  it('includes image only when heroImage is set, pointing at the rendered OG PNG route', () => {
     const without = buildArticleJsonLd(base)
     expect(without.image).toBeUndefined()
     const withImg = buildArticleJsonLd({
       ...base,
-      heroImage: 'https://example.com/h.jpg',
+      heroImage: '/hero-art/foo.svg',
     })
-    expect(withImg.image).toBe('https://example.com/h.jpg')
+    expect(withImg.image).toBe(
+      `${siteConfig.url}/article/foo/opengraph-image/og`,
+    )
   })
 })
 

@@ -49,7 +49,12 @@ export function buildArticleJsonLd(
     dateModified: input.updatedAt ?? input.publishedAt,
     author: { '@type': 'Person', name: input.author },
     publisher: siteConfig.publisher,
-    ...(input.heroImage ? { image: input.heroImage } : {}),
+    // Google's Article rich-result image requirement is JPEG/PNG/WebP/GIF
+    // and an absolute URL; `heroImage` is a site-relative SVG (same
+    // constraint that forced the dynamic `opengraph-image.tsx` PNG route
+    // for og:image). Point at that route's rendered PNG instead of the
+    // raw SVG frontmatter path.
+    ...(input.heroImage ? { image: `${url}/opengraph-image/og` } : {}),
   }
 }
 
