@@ -381,10 +381,10 @@
       "legendType": "doubleshot",
       "designer": null,
       "releasedAt": null,
-      "status": "group-buy",
+      "status": "sold-out",
       "imageUrl": null,
-      "description": "Pastel dual-blue and pink doubleshot ABS Cherry-profile set in GMK's CYL cylindrical sub-line — the first CYL run to adopt a J-influenced palette (sky-blue primary, lighter secondary blue, blush-pink accent over a WS1-white base), named after Japanese Ramune soda. Also the first CYL set distributed across ten simultaneous regional storefronts (Divinikey US, Prototypist UK, Geonworks KR, Yushakobo JP, and six others) rather than a single KBDfans-hosted window. Group buy open 2026-05-15 through 2026-06-20; Q3/Q4 2026 fulfillment via GMK Germany.",
-      "updatedAt": "2026-06-06T00:00:00.000Z"
+      "description": "Pastel dual-blue and pink doubleshot ABS Cherry-profile set in GMK's CYL cylindrical sub-line — the first CYL run to adopt a J-influenced palette (sky-blue primary, lighter secondary blue, blush-pink accent over a WS1-white base), named after Japanese Ramune soda. Also the first CYL set distributed across ten simultaneous regional storefronts (Divinikey US, Prototypist UK, Geonworks KR, Yushakobo JP, and six others) rather than a single KBDfans-hosted window. Group buy ran 2026-05-15 through 2026-06-20; Q3/Q4 2026 fulfillment via GMK Germany.",
+      "updatedAt": "2026-07-08T00:00:00.000Z"
     },
     {
       "slug": "gmk-cyl-selene",
@@ -395,10 +395,10 @@
       "legendType": "doubleshot",
       "designer": "whysoda",
       "releasedAt": null,
-      "status": "group-buy",
+      "status": "sold-out",
       "imageUrl": null,
-      "description": "Special-effects doubleshot ABS Cherry-profile set designed by whysoda; the first GMK CYL set to use GMK's embedded glitter-reflect plastic as its primary palette story rather than an accent. Purple and teal iridescent shift over a silver-grey base. Includes base, ISO/modifier, novelties (moon-phase legends), and spacebar kits. KBDfans global, buy open 2026-05-15 through 2026-06-19, Q4 2026 fulfillment via GMK Germany.",
-      "updatedAt": "2026-06-04T00:00:00.000Z"
+      "description": "Special-effects doubleshot ABS Cherry-profile set designed by whysoda; the first GMK CYL set to use GMK's embedded glitter-reflect plastic as its primary palette story rather than an accent. Purple and teal iridescent shift over a silver-grey base. Includes base, ISO/modifier, novelties (moon-phase legends), and spacebar kits. KBDfans global, buy ran 2026-05-15 through 2026-06-19, Q4 2026 fulfillment via GMK Germany.",
+      "updatedAt": "2026-07-08T00:00:00.000Z"
     },
     {
       "slug": "gmk-laser",
@@ -7171,5 +7171,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-07-08T17:51:24.156Z"
+  "generatedAt": "2026-07-08T19:43:34.924Z"
 }
