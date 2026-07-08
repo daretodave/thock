@@ -181,6 +181,41 @@ publishedAt: '2026-06-01T00:00:00.000Z'`
   })
 })
 
+// ── checkFile — prefix-collision control ─────────────────────────────────────
+
+describe('checkFile — prefix-collision control', () => {
+  test('does not flag a shorter entity name as a substring of a longer one', () => {
+    const catalog = [
+      ...TEST_CATALOG,
+      { slug: 'gazzew-boba-u4', name: 'Gazzew Boba U4', kind: 'switch' },
+      { slug: 'gazzew-boba-u4t', name: 'Gazzew Boba U4T', kind: 'switch' },
+    ]
+
+    const fm = `slug: test-article
+title: Test
+lede: Test lede text here for testing purposes only.
+author: thock
+pillar: news
+tags: [switches]
+publishedAt: '2026-06-01T00:00:00.000Z'
+mentionedParts:
+  - id: boba-u4t
+    kind: switch
+    slug: gazzew-boba-u4t`
+
+    const body = `The Gazzew Boba U4T delivers a D-shaped bump on every keystroke.`
+    const content = makeMdx(fm, body)
+    const filePath = tmpMdx(content)
+
+    try {
+      const violations = checkFile(filePath, catalog)
+      assert.equal(violations.length, 0)
+    } finally {
+      cleanup(filePath)
+    }
+  })
+})
+
 // ── escapeRegex ───────────────────────────────────────────────────────────────
 
 describe('escapeRegex', () => {

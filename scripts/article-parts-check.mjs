@@ -153,7 +153,10 @@ function checkFile(filePath, catalog) {
     const key = `${entity.slug}|${entity.kind}`
     if (declared.has(key)) continue
 
-    const re = new RegExp(escapeRegex(entity.name), 'gi')
+    // Word boundaries prevent a shorter entity name from false-matching as a
+    // substring of a longer one sharing the same prefix (e.g. "Gazzew Boba U4"
+    // inside "Gazzew Boba U4T" — two distinct catalog switches).
+    const re = new RegExp(`\\b${escapeRegex(entity.name)}\\b`, 'gi')
 
     for (let i = 0; i < bodyLines.length; i++) {
       const line = bodyLines[i]
