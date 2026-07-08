@@ -6251,3 +6251,15 @@ passes accumulate signals.)
 - action: past-tensed the Selene/Ramune references in both articles' cross-reference prose ("runs through" → "ran through"; "open through"/"running through" → "closed"); bumped both `updatedAt` to 2026-07-07. This is a same-root-cause instance one tier removed from the 5 already-fixed rows — the recurring bug hits not just a closed group buy's own companion article, but every *other* article that name-checks it in passing.
 - issue: #413
 > All mechanical surveys clean (content-gap, crosslink, companion, stale-GB, newsletter-gap, OG-coverage, a11y-spec-coverage); the `[6.3]` blocked-cloud-permission row remains blocked (unrelated, needs `/oversight` for the workflow-push permission gap). CRITIQUE.md's only Pending row remains the non-actionable `[needs-user-call]` GA-beacon item. 0 unlabeled GitHub issues; no pending phases/data work. Expand's 20-commit/48h gate not met (16 commits/~14.5h since pass 154). A fresh Explore-agent sweep across broken internal links, external link rot, TODO markers, untested components, word count, and stale group-buy cross-references found the corpus otherwise clean — this was the only concrete, verified defect. Standing gap noted again: no mechanical gate cross-checks article prose against linked group-buy `status`/`endDate` for *any* article that references a buy, not just its own companion piece — still not promoted to a fix shape, a candidate for a future `/expand` pass. `pnpm verify` full gate green: typecheck, unit tests, data:validate, build, 968/968 e2e.
+
+### [HOT PURSUIT] [content-gap] [7] deep-dives pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 6 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: deep-dives
+- window-count: 1
+- window-start: 2026-06-08
+- score: 7
+- next: /ship-content → deep-dives pillar article
+> Filed 2026-07-08 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
