@@ -6302,3 +6302,14 @@ passes accumulate signals.)
 - action: add [gateron-lanes-tactile-deep-dive](/article/gateron-lanes-tactile-deep-dive) to durock-t1-deep-dive body, or vice versa
 > **Resolved (2026-07-08, cloud /iterate, cluster-drained with the pair above):** linked "The Gateron Lanes deep-dive" in durock-t1-deep-dive's opening paragraph to `/article/gateron-lanes-tactile-deep-dive`. Both pairs shared the same hub article and cleanest insertion point (the lede already named both siblings by title), so both drained in one commit per the Phase 46 cluster-aware rule. `38d5c1f`.
 - action: add [gateron-lanes-tactile-deep-dive](/article/gateron-lanes-tactile-deep-dive) to durock-t1-deep-dive body, or vice versa
+
+### [x] [content] [5.4] dcs-grass-valley-decline — 2 stale present-tense group-buy cross-references (Selene closed 2026-06-19, Dolch closed 2026-07-01) — addressed in c0b1844, closes #424
+- category: content
+- filed: 2026-07-08 by /iterate audit (cloud march tick, fresh general-purpose sweep)
+- impact: 6 (factual accuracy drift visible to readers in a trends article; both referenced buys have closed weeks ago but prose still reads present-tense "open ... through")
+- ease: 9 (two-sentence tense edits, no data changes needed)
+- score: 5.4 (impact × ease / 10)
+- evidence: `apps/web/src/content/articles/dcs-grass-valley-decline.mdx:63` — "[GMK CYL Selene](/article/gmk-cyl-selene-group-buy), open at KBDfans through 2026-06-19" — `data/group-buys/kbdfans-gmk-cyl-selene.json` has `status: "closed"`, `endDate: "2026-06-19"` (19 days stale as of 2026-07-08). Same file line 98 — "carries the full kit and regional vendor information for the open window through 2026-07-01" (referring to DCS Dolch) — `data/group-buys/divinikey-dcs-dolch.json` has `status: "closed"`, `endDate: "2026-07-01"` (7 days stale).
+- next: past-tense both references in `dcs-grass-valley-decline.mdx`; bump `updatedAt`. Same recurring bug class as the 7 prior stale-group-buy-prose fixes this week (#406-#413), but this instance is a *third-party* cross-reference (neither buy's own companion article) — confirms the standing gap noted at pass 157/159 that no mechanical gate checks cross-article group-buy mentions, only each article's own companion.
+- issue: #424
+> **Resolved (2026-07-08):** past-tensed both cross-references in `dcs-grass-valley-decline.mdx` ("open at KBDfans through" -> "which ran at KBDfans through"; "the open window through" -> "the order window that ran through"); bumped `updatedAt` to 2026-07-08. `c0b1844`.
