@@ -6278,7 +6278,7 @@ passes accumulate signals.)
 - issue: #423
 > `pnpm verify` full gate green this tick: typecheck, unit tests, data:validate, build, e2e (docs-only skill change plus a plan/AUDIT.md edit — no runtime surface touched, but the gate ran clean regardless per the standing rule). 0 unlabeled GitHub issues (triage gate fell through). No pending phases/data work. Chose this engineering fix over a 10th blind `/ship-content` dispatch on the still-Pending `[HOT PURSUIT] [content-gap] [7]` deep-dives row below — repeating the exact mechanically-documented 9x failure pattern would have added a 10th duplicate issue for zero shipped content, which is precisely the harm this fix exists to stop.
 
-### [ ] [cross-links] [4.5] durock-t1-deep-dive ↔ drop-holy-panda-x-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: tactile, deep-dive)
+### [x] [cross-links] [4.5] durock-t1-deep-dive ↔ drop-holy-panda-x-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: tactile, deep-dive) — addressed in 38d5c1f
 - category: cross-links
 - filed: 2026-07-08 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -6288,8 +6288,9 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/durock-t1-deep-dive.mdx
 - article-b: apps/web/src/content/articles/drop-holy-panda-x-deep-dive.mdx
 - action: add [drop-holy-panda-x-deep-dive](/article/drop-holy-panda-x-deep-dive) to durock-t1-deep-dive body, or vice versa
+> **Resolved (2026-07-08, cloud /iterate, cluster-drained with the pair below):** linked "The Drop Holy Panda X piece" in durock-t1-deep-dive's opening paragraph to `/article/drop-holy-panda-x-deep-dive`. `38d5c1f`.
 
-### [ ] [cross-links] [4.5] durock-t1-deep-dive ↔ gateron-lanes-tactile-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: tactile, deep-dive)
+### [x] [cross-links] [4.5] durock-t1-deep-dive ↔ gateron-lanes-tactile-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: tactile, deep-dive) — addressed in 38d5c1f
 - category: cross-links
 - filed: 2026-07-08 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -6298,4 +6299,6 @@ passes accumulate signals.)
 - shared-tags: tactile, deep-dive
 - article-a: apps/web/src/content/articles/durock-t1-deep-dive.mdx
 - article-b: apps/web/src/content/articles/gateron-lanes-tactile-deep-dive.mdx
+- action: add [gateron-lanes-tactile-deep-dive](/article/gateron-lanes-tactile-deep-dive) to durock-t1-deep-dive body, or vice versa
+> **Resolved (2026-07-08, cloud /iterate, cluster-drained with the pair above):** linked "The Gateron Lanes deep-dive" in durock-t1-deep-dive's opening paragraph to `/article/gateron-lanes-tactile-deep-dive`. Both pairs shared the same hub article and cleanest insertion point (the lede already named both siblings by title), so both drained in one commit per the Phase 46 cluster-aware rule. `38d5c1f`.
 - action: add [gateron-lanes-tactile-deep-dive](/article/gateron-lanes-tactile-deep-dive) to durock-t1-deep-dive body, or vice versa
