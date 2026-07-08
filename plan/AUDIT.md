@@ -6252,7 +6252,7 @@ passes accumulate signals.)
 - issue: #413
 > All mechanical surveys clean (content-gap, crosslink, companion, stale-GB, newsletter-gap, OG-coverage, a11y-spec-coverage); the `[6.3]` blocked-cloud-permission row remains blocked (unrelated, needs `/oversight` for the workflow-push permission gap). CRITIQUE.md's only Pending row remains the non-actionable `[needs-user-call]` GA-beacon item. 0 unlabeled GitHub issues; no pending phases/data work. Expand's 20-commit/48h gate not met (16 commits/~14.5h since pass 154). A fresh Explore-agent sweep across broken internal links, external link rot, TODO markers, untested components, word count, and stale group-buy cross-references found the corpus otherwise clean — this was the only concrete, verified defect. Standing gap noted again: no mechanical gate cross-checks article prose against linked group-buy `status`/`endDate` for *any* article that references a buy, not just its own companion piece — still not promoted to a fix shape, a candidate for a future `/expand` pass. `pnpm verify` full gate green: typecheck, unit tests, data:validate, build, 968/968 e2e.
 
-### [HOT PURSUIT] [content-gap] [7] deep-dives pillar — 1 of ≥2 articles in last 30d
+### [x] [HOT PURSUIT] [content-gap] [7] deep-dives pillar — 1 of ≥2 articles in last 30d — addressed in 5fc97b4, closes #417
 - category: content-gaps
 - impact: 6 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -6265,6 +6265,7 @@ passes accumulate signals.)
 - issue: #417
 > Filed 2026-07-08 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 > Reused issue #417 ("content: deep-dives — Durock T1 deep-dive") rather than opening a fresh tracking issue — its topic (Durock T1) matches this exact hot-pursuit row and was filed by an earlier stalled dispatch attempt. Reusing avoids adding a 10th duplicate open issue to the #414–#422 pile the 2026-07-08 digest already flagged as awaiting an oversight cleanup pass.
+> **Resolved (2026-07-08):** Shipped `apps/web/src/content/articles/durock-t1-deep-dive.mdx` (~1550 words, deep-dives pillar, publishedAt 2026-07-02T14:00:00.000Z gap-fill). Hero SVG at `/hero-art/durock-t1-deep-dive.svg` (muted-terracotta splash, switch cross-section). 3 InlineViz SVGs (mechanism comparison T1 vs U4T vs Topre, housing-recipe acoustics, spring/bump-profile ladder), all amber-accented. New tag `durock` (brand) added to tags.json. Language gate + mentionedParts gate clean. `pnpm verify` full gate green: typecheck, unit tests, data:validate, build, 974/974 e2e. This tick exercised the ship-content Step 3a resumability fix (shipped last tick at `b1f7263`) fresh, end to end, with no stall — confirming the fix resolved the 9x duplicate-issue loop.
 
 ### [x] [engineering] [4.9] ship-content dispatch stuck in a duplicate-issue loop for the deep-dives content-gap row — 9 GitHub issues opened, 0 articles shipped, ~10.5h and counting — addressed in this commit, closes #423
 - category: engineering
@@ -6276,3 +6277,25 @@ passes accumulate signals.)
 - action: shipped the well-scoped half of the fix — added Step 3a to `skills/ship-content.md`: immediately after opening the tracking issue, write `- issue: #N` onto the audit row and commit + push that single-line change before Step 4 spawns content-curator/brander. A tick that dies anywhere in Steps 4–7 now leaves the row resumable instead of issue-less. Left the 8 duplicate open issues (#414-#422) untouched — the digest's own note gates that cleanup on a human/oversight review, not a mechanical tick. Also skipped re-dispatching `/ship-content` for the still-Pending deep-dives row this same tick (fixing the dispatcher and then immediately re-running the thing it dispatches into, in one tick, would make it impossible to tell whether a subsequent failure was pre-existing or newly introduced); the next `/march` tick will exercise the patched path fresh.
 - issue: #423
 > `pnpm verify` full gate green this tick: typecheck, unit tests, data:validate, build, e2e (docs-only skill change plus a plan/AUDIT.md edit — no runtime surface touched, but the gate ran clean regardless per the standing rule). 0 unlabeled GitHub issues (triage gate fell through). No pending phases/data work. Chose this engineering fix over a 10th blind `/ship-content` dispatch on the still-Pending `[HOT PURSUIT] [content-gap] [7]` deep-dives row below — repeating the exact mechanically-documented 9x failure pattern would have added a 10th duplicate issue for zero shipped content, which is precisely the harm this fix exists to stop.
+
+### [ ] [cross-links] [4.5] durock-t1-deep-dive ↔ drop-holy-panda-x-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: tactile, deep-dive)
+- category: cross-links
+- filed: 2026-07-08 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: tactile, deep-dive
+- article-a: apps/web/src/content/articles/durock-t1-deep-dive.mdx
+- article-b: apps/web/src/content/articles/drop-holy-panda-x-deep-dive.mdx
+- action: add [drop-holy-panda-x-deep-dive](/article/drop-holy-panda-x-deep-dive) to durock-t1-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] durock-t1-deep-dive ↔ gateron-lanes-tactile-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: tactile, deep-dive)
+- category: cross-links
+- filed: 2026-07-08 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: tactile, deep-dive
+- article-a: apps/web/src/content/articles/durock-t1-deep-dive.mdx
+- article-b: apps/web/src/content/articles/gateron-lanes-tactile-deep-dive.mdx
+- action: add [gateron-lanes-tactile-deep-dive](/article/gateron-lanes-tactile-deep-dive) to durock-t1-deep-dive body, or vice versa
