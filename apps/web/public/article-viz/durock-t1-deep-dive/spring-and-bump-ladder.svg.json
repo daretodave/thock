@@ -1,0 +1,26 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-02T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "durock-t1-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "where-the-t1-sits-against-the-field",
+  "brief_summary": "Four-row horizontal comparison ladder — Durock T1, Gazzew Boba U4T, Gateron Lanes, Drop Holy Panda X — each row pairing a force-curve bump glyph with its spring-weight spec and a short character label. Positions the T1 as the heaviest spring in the set paired with the least plateau, directly against the other three tactiles this publication has already covered.",
+  "target": "apps/web/public/article-viz/durock-t1-deep-dive/spring-and-bump-ladder.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "data/switches/durock-t1.json — springGrams: { actuation: 67, bottomOut: 70 }, travelMm: 4.0",
+    "data/switches/gazzew-boba-u4t.json — springGrams: { actuation: 62, bottomOut: 68 }",
+    "data/switches/gateron-lanes.json — springGrams: { actuation: 55, bottomOut: 62 }",
+    "data/switches/drop-holy-panda-x.json — springGrams: { actuation: 60, bottomOut: 67 }, travelMm: 3.4",
+    "durock-t1-deep-dive.mdx § 'Where the T1 sits against the field' — 'the heaviest spring in the set, at 67g actuation and 70g bottom-out, paired with a bump shape that resolves faster than the U4T's long plateau'"
+  ],
+  "outputs": ["apps/web/public/article-viz/durock-t1-deep-dive/spring-and-bump-ladder.svg"],
+  "warnings": []
+}

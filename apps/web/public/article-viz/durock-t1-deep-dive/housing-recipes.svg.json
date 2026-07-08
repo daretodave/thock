@@ -1,0 +1,26 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-02T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "durock-t1-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "housing-all-nylon-and-what-that-buys-acoustically",
+  "brief_summary": "Two labelled vertical housing-recipe stacks side by side. Left: all-nylon top and bottom (Durock T1, Gazzew Boba U4T) with a low, muted sound-wave glyph. Right: polycarbonate top over nylon bottom (Gateron Lanes, Drop Holy Panda X) with a taller, brighter sound-wave glyph. Grounds the article's claim that the T1's housing recipe is a minority choice among 2026's flagship tactiles and explains the acoustic consequence of that choice.",
+  "target": "apps/web/public/article-viz/durock-t1-deep-dive/housing-recipes.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "data/switches/durock-t1.json — housingTop: nylon, housingBottom: nylon",
+    "data/switches/gazzew-boba-u4t.json — housingTop: nylon, housingBottom: nylon",
+    "data/switches/gateron-lanes.json — housingTop: pc, housingBottom: nylon",
+    "data/switches/drop-holy-panda-x.json — housingTop: pc, housingBottom: nylon",
+    "durock-t1-deep-dive.mdx § 'Housing: all-nylon, and what that buys acoustically' — 'Both housing halves are nylon, and the effect is a switch that mutes itself end to end ... the same housing recipe the U4T uses'"
+  ],
+  "outputs": ["apps/web/public/article-viz/durock-t1-deep-dive/housing-recipes.svg"],
+  "warnings": []
+}

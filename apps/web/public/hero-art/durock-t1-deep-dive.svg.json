@@ -1,0 +1,24 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored SVG (no raster pipeline)",
+  "at": "2026-07-08T12:42:42.000Z",
+  "commit": "16f69d7aacf4f6d7f38f48e8d3964a27f2469252",
+  "kind": "hero-art",
+  "source": null,
+  "tokens_snapshot": "sha256:2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": ["IBM Plex Sans", "JetBrains Mono"],
+  "slug": "durock-t1-deep-dive",
+  "subject": "switch cross-section — Durock T1 nylon/nylon housing, POM stem with a sharp tactile leg high in the stroke",
+  "motif": "switch cross-section",
+  "splashHue": "muted terracotta",
+  "splashColor": "oklch(0.58 0.115 38)",
+  "canvas": "1200x750",
+  "strokeWeight": "2px",
+  "strokeColor": "oklch(0.78 0.005 90)",
+  "outputs": [
+    "apps/web/public/hero-art/durock-t1-deep-dive.svg",
+    "apps/web/public/hero-art/durock-t1-deep-dive.svg.json"
+  ],
+  "warnings": [],
+  "notes": "MX-style single-switch cross-section, three exploded tiers: (A) top housing — nylon, trapezoid shell with cruciform stem aperture and LED notch; (B) POM stem with fixed crossbar stubs anchored to the housing inner walls — the stem's flanks carry a hard right-angle shoulder step at y 312-336, positioned high in the stem's full travel span (y 300-460), rather than a rounded mid-travel bulge, to depict the T1's sharp and early-firing tactile bump; (C) bottom housing — nylon, with central spring well, 9-coil spring, and PCB pin contacts. Muted-terracotta splash applied as a soft wash across the shoulder/crossbar contact zone plus a filled accent dot+ring at the right shoulder contact point (652, 324) and a smaller unfilled mirrored tick at the left shoulder (548, 324). Splash value oklch(0.58 0.115 38) chosen to sit between the two terracottas already in rotation — drop-holy-panda-x-deep-dive (0.55 0.105 40) and magnetic-switches-deep-dive (0.62 0.10 45) — with a touch more chroma, reserved for the T1's harder-edged, heavier character; kept distinct from the dusty rose used on topre-electrocapacitive-deep-dive and the ochre used on gateron-lanes-tactile-deep-dive / clicky-switches-deep-dive so the switch-deep-dive rotation stays visually varied. Micro IBM Plex Sans labels (TOP HOUSING · NYLON, STEM · POM, TACTILE LEG, BOTTOM HOUSING · NYLON) with one leader line at reduced opacity. JetBrains Mono technical callout at bottom margin. Brass-bronze ornamental dot at top-right (1148, 92) and left-margin ruler ticks at tier midpoints per family convention."
+}

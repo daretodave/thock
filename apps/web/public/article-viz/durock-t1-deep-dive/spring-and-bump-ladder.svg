@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Spring weight and bump-profile ladder — Durock T1, Gazzew Boba U4T, Gateron Lanes, Drop Holy Panda X</title>
+
+  <!-- Divider lines between rows -->
+  <g stroke-opacity="0.12">
+    <line x1="80" y1="170" x2="1120" y2="170"/>
+    <line x1="80" y1="270" x2="1120" y2="270"/>
+    <line x1="80" y1="370" x2="1120" y2="370"/>
+  </g>
+
+  <!-- Left border axis -->
+  <line x1="80" y1="70" x2="80" y2="430" stroke-opacity="0.3"/>
+
+  <!-- Header row labels -->
+  <text x="86" y="60" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.45">switch</text>
+  <text x="440" y="60" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">bump profile (travel L→R)</text>
+  <text x="900" y="60" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.45">spring / character</text>
+
+  <!-- ======================== -->
+  <!-- ROW 1: Durock T1        -->
+  <!-- ======================== -->
+  <text x="86" y="118" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="oklch(0.78 0.10 80)" stroke="none" opacity="0.95">Durock T1</text>
+
+  <line x1="210" y1="140" x2="680" y2="140" stroke-opacity="0.25"/>
+  <path d="M 215 140 L 290 140" stroke-opacity="0.6"/>
+  <path d="M 290 140 L 306 88 L 330 140" stroke="oklch(0.78 0.10 80)" stroke-width="3" stroke-opacity="0.95"/>
+  <path d="M 290 140 L 306 88 L 330 140 Z" fill="oklch(0.78 0.10 80 / 0.14)" stroke="none"/>
+  <circle cx="306" cy="88" r="5" fill="oklch(0.78 0.10 80)" stroke="none"/>
+  <path d="M 330 140 L 675 140" stroke-opacity="0.6"/>
+
+  <text x="900" y="112" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.10 80)" stroke="none" opacity="0.9">67g / 70g — heaviest in the set</text>
+  <text x="900" y="132" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">sharp, minimal plateau</text>
+
+  <!-- ======================== -->
+  <!-- ROW 2: Gazzew Boba U4T  -->
+  <!-- ======================== -->
+  <text x="86" y="218" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">Gazzew Boba U4T</text>
+
+  <line x1="210" y1="240" x2="680" y2="240" stroke-opacity="0.25"/>
+  <path d="M 215 240 L 280 240" stroke-opacity="0.6"/>
+  <path d="M 280 240 L 300 178 L 400 178 L 418 240" stroke-opacity="0.8" stroke-width="2.5"/>
+  <path d="M 280 240 L 300 178 L 400 178 L 418 240 Z" fill="oklch(0.78 0.005 90 / 0.07)" stroke="none"/>
+  <path d="M 418 240 L 675 240" stroke-opacity="0.6"/>
+
+  <text x="900" y="212" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">62g / 68g — long dwell</text>
+  <text x="900" y="232" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.5">D-shaped, pronounced plateau</text>
+
+  <!-- ======================== -->
+  <!-- ROW 3: Gateron Lanes    -->
+  <!-- ======================== -->
+  <text x="86" y="318" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">Gateron Lanes</text>
+
+  <line x1="210" y1="340" x2="680" y2="340" stroke-opacity="0.25"/>
+  <path d="M 215 340 L 290 340" stroke-opacity="0.6"/>
+  <path d="M 290 340 L 304 282 L 318 340" stroke-opacity="0.8" stroke-width="2.5"/>
+  <path d="M 290 340 L 304 282 L 318 340 Z" fill="oklch(0.78 0.005 90 / 0.07)" stroke="none"/>
+  <path d="M 318 340 L 675 340" stroke-opacity="0.6"/>
+
+  <text x="900" y="312" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">55g / 62g — lightest, fastest decay</text>
+  <text x="900" y="332" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.5">Alps-adjacent snap</text>
+
+  <!-- ========================= -->
+  <!-- ROW 4: Drop Holy Panda X  -->
+  <!-- ========================= -->
+  <text x="86" y="418" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">Drop Holy Panda X</text>
+
+  <line x1="210" y1="440" x2="680" y2="440" stroke-opacity="0.25"/>
+  <path d="M 215 440 L 290 440" stroke-opacity="0.6"/>
+  <path d="M 290 440 C 310 440 330 365 370 365 C 410 365 440 410 480 430 L 675 440" stroke-opacity="0.8" stroke-width="2.5"/>
+  <path d="M 290 440 C 310 440 330 365 370 365 C 410 365 440 410 480 430 L 675 440 Z" fill="oklch(0.78 0.005 90 / 0.07)" stroke="none"/>
+  <circle cx="370" cy="365" r="4" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6"/>
+
+  <text x="900" y="412" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">60g / 67g — shortest travel, 3.4mm</text>
+  <text x="900" y="432" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.5">rounded arc, blends into landing</text>
+
+  <!-- Bottom baseline -->
+  <line x1="80" y1="458" x2="1120" y2="458" stroke-opacity="0.3"/>
+
+  <!-- Bronze theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

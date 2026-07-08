@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "slug": "durock-t1-deep-dive",
+      "readTime": 10,
+      "frontmatter": {
+        "title": "Why the Durock T1's Bump Feels the Way It Does",
+        "lede": "The Durock T1 keeps turning up as the comparison point in other switches' deep-dives — the reference a reviewer reaches for when a bump needs to read as heavy and serious. It has never had its own.",
+        "pillar": "deep-dives",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "custom-keyboard-kit-buyers-guide",
       "readTime": 8,
       "frontmatter": {
@@ -708,6 +718,11 @@
       "category": "brand"
     },
     {
+      "slug": "durock",
+      "name": "Durock",
+      "category": "brand"
+    },
+    {
       "slug": "electrocapacitive",
       "name": "Electrocapacitive",
       "category": "switch"
@@ -1207,5 +1222,5 @@
       "description": "China-based design studio and vendor known for in-house boards (Mammoth, Ikki68, Promise) and partnered group buys, sold direct from shop.wuquestudio.com with regional proxies."
     }
   ],
-  "generatedAt": "2026-07-07T13:08:11.678Z"
+  "generatedAt": "2026-07-08T12:50:58.168Z"
 }

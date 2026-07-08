@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — Durock T1 switch cross-section: nylon top and bottom housing, POM stem with a sharp, pronounced tactile leg positioned near the top of the stroke</title>
+
+  <!-- Muted-terracotta splash wash — centered on the tactile leg / crossbar contact
+       zone, high in the stem's travel (per the article's "sharp bump near the top of
+       the stroke" claim). Single splash, single hue. Distinct from the terracotta
+       used on drop-holy-panda-x-deep-dive (0.55 0.105 40) and magnetic-switches-deep-dive
+       (0.62 0.10 45) — this value sits between them with a touch more chroma, reserved
+       for the T1's harder-edged, heavier character. -->
+  <ellipse cx="600" cy="324" rx="200" ry="54" fill="oklch(0.58 0.115 38 / 0.18)" stroke="none"/>
+
+  <!-- ════════════════════════════════════════════════════════════════════════════
+       COMPOSITION: single switch cross-section, centered horizontally, MX-style
+       three-piece housing (nylon top, nylon bottom) with a POM stem. Three exploded
+       tiers:
+         Tier A: Top housing — y 112–228
+         Tier B: Stem + fixed crossbar (the tactile mechanism) — y 265–470
+         Tier C: Bottom housing + coil spring — y 505–690
+       Explode lines at y 252 and y 487, with center anchor dots.
+
+       The T1's signature trait — a sharp, pronounced tactile bump arriving early
+       in the downstroke — is drawn as a hard right-angle step on the stem's flanks
+       positioned high in tier B (y 312–336), rather than a smoothly rounded bulge
+       at mid-travel. The fixed crossbar stubs (anchored to the housing walls) meet
+       the stem at that same high point.
+       ════════════════════════════════════════════════════════════════════════════ -->
+
+  <!-- ════════════════════════════════════════════════════════════════════════════
+       TIER A — TOP HOUSING (nylon), MX-style trapezoid, wider at the base
+       ════════════════════════════════════════════════════════════════════════════ -->
+
+  <!-- Outer top-housing shell -->
+  <path d="
+    M 410 112
+    L 790 112
+    L 818 228
+    L 382 228
+    Z" />
+
+  <!-- Inner cavity wall thickness — inset ~16 px -->
+  <path d="
+    M 428 128
+    L 772 128
+    L 800 214
+    L 400 214
+    Z" stroke-opacity="0.4"/>
+
+  <!-- Cruciform stem aperture on the top face — MX-standard plus-shaped cutout -->
+  <path d="
+    M 552 112
+    L 668 112
+    L 672 124
+    L 660 124
+    L 660 132
+    L 644 132
+    L 644 124
+    L 576 124
+    L 576 132
+    L 560 132
+    L 560 124
+    L 548 124
+    Z" stroke-opacity="0.7"/>
+
+  <!-- LED notch on the top face, forward of the aperture -->
+  <path d="M 586 112 L 622 112 L 618 120 L 590 120 Z" stroke-opacity="0.55"/>
+
+  <!-- Mounting clip nubs -->
+  <line x1="382" y1="170" x2="372" y2="170" stroke-opacity="0.5"/>
+  <line x1="818" y1="170" x2="828" y2="170" stroke-opacity="0.5"/>
+
+  <!-- ── EXPLODE LINE A ─────────────────────────────────────────────────────── -->
+  <line x1="350" y1="252" x2="850" y2="252" stroke-dasharray="4 6" stroke-opacity="0.32"/>
+  <circle cx="600" cy="252" r="2.5" stroke-opacity="0.52"/>
+
+  <!-- ════════════════════════════════════════════════════════════════════════════
+       TIER B — STEM (POM) + FIXED CROSSBAR — the tactile mechanism
+
+       The housing walls carry a fixed crossbar, anchored on each inner face, that
+       the stem's flanks cam against as the stem descends. Cherry-derivative MX
+       switches place this contact roughly mid-travel with a rounded leg profile;
+       the T1 instead cuts a hard right-angle shoulder into the stem, and that
+       shoulder sits high — close to the top of the stroke — so the tactile event
+       fires early and abruptly rather than gradually.
+       ════════════════════════════════════════════════════════════════════════════ -->
+
+  <!-- Left housing wall — outer face -->
+  <line x1="382" y1="265" x2="382" y2="470" stroke-opacity="0.85"/>
+  <!-- Left housing wall — inner face -->
+  <line x1="404" y1="265" x2="404" y2="470" stroke-opacity="0.35"/>
+
+  <!-- Right housing wall — outer face -->
+  <line x1="818" y1="265" x2="818" y2="470" stroke-opacity="0.85"/>
+  <!-- Right housing wall — inner face -->
+  <line x1="796" y1="265" x2="796" y2="470" stroke-opacity="0.35"/>
+
+  <!-- Housing top interface (tier A / tier B meet) -->
+  <line x1="382" y1="265" x2="818" y2="265" stroke-opacity="0.55"/>
+  <!-- Housing bottom interface (tier B / tier C meet) -->
+  <line x1="382" y1="470" x2="818" y2="470" stroke-opacity="0.55"/>
+
+  <!-- ── STEM (POM) — cruciform head + body with a sharp shoulder step high
+       in the travel ─────────────────────────────────────────────────────────── -->
+  <path d="
+    M 578 273
+    L 622 273
+    L 622 286
+    L 634 286
+    L 634 300
+    L 566 300
+    L 566 286
+    L 578 286
+    Z" />
+
+  <!-- Stem body — hard right-angle shoulders at y 312–336, near the top of the
+       stem's full travel span (y 300–460). This is the T1's sharp, pronounced
+       tactile bump, drawn as a step rather than a curve. -->
+  <path d="
+    M 566 300
+    L 566 312
+    L 548 312
+    L 548 336
+    L 566 336
+    L 566 460
+    L 634 460
+    L 634 336
+    L 652 336
+    L 652 312
+    L 634 312
+    L 634 300
+    Z" />
+
+  <!-- Stem centerline, dashed -->
+  <line x1="600" y1="308" x2="600" y2="454" stroke-opacity="0.48" stroke-dasharray="3 5"/>
+
+  <!-- Stem pole stubs at bottom — mate with the spring socket -->
+  <line x1="581" y1="460" x2="583" y2="478" stroke-opacity="0.5"/>
+  <line x1="619" y1="460" x2="617" y2="478" stroke-opacity="0.5"/>
+
+  <!-- ── FIXED CROSSBAR STUBS — anchored to the housing inner walls, reaching
+       toward the stem's shoulder step. The gap between stub end and stem
+       shoulder is the point of contact as the stem descends. ─────────────────── -->
+  <line x1="404" y1="324" x2="540" y2="324" stroke-opacity="0.7"/>
+  <line x1="796" y1="324" x2="660" y2="324" stroke-opacity="0.7"/>
+  <!-- Crossbar end-cap ticks -->
+  <line x1="540" y1="318" x2="540" y2="330" stroke-opacity="0.55"/>
+  <line x1="660" y1="318" x2="660" y2="330" stroke-opacity="0.55"/>
+
+  <!-- ── SPLASH ANCHOR — the sharp-bump contact point, right shoulder ────────── -->
+  <circle cx="652" cy="324" r="6.5" fill="oklch(0.58 0.115 38 / 0.95)" stroke="oklch(0.58 0.115 38)"/>
+  <circle cx="652" cy="324" r="12" stroke="oklch(0.58 0.115 38)" stroke-opacity="0.5" fill="none"/>
+  <!-- Mirrored contact tick, left shoulder — unfilled, secondary -->
+  <circle cx="548" cy="324" r="3" stroke-opacity="0.6"/>
+
+  <!-- Downward motion chevron — stem descent direction, below the shoulder -->
+  <path d="M 596 410 L 600 416 L 604 410" stroke-opacity="0.52"/>
+
+  <!-- ── EXPLODE LINE B ─────────────────────────────────────────────────────── -->
+  <line x1="350" y1="487" x2="850" y2="487" stroke-dasharray="4 6" stroke-opacity="0.32"/>
+  <circle cx="600" cy="487" r="2.5" stroke-opacity="0.52"/>
+
+  <!-- ════════════════════════════════════════════════════════════════════════════
+       TIER C — BOTTOM HOUSING (nylon) + coil spring
+       ════════════════════════════════════════════════════════════════════════════ -->
+
+  <!-- Outer bottom-housing shell -->
+  <path d="
+    M 400 505
+    L 800 505
+    L 800 690
+    L 400 690
+    Z" />
+
+  <!-- Inner floor recess -->
+  <path d="
+    M 416 505
+    L 784 505
+    L 784 676
+    L 416 676
+    Z" stroke-opacity="0.38"/>
+
+  <!-- Central spring well -->
+  <path d="
+    M 560 505
+    L 640 505
+    L 640 545
+    L 560 545
+    Z" stroke-opacity="0.58"/>
+
+  <!-- Coil spring — stacked ellipses, 9 coils -->
+  <ellipse cx="600" cy="552" rx="30" ry="5.5"/>
+  <ellipse cx="600" cy="564" rx="30" ry="5.5"/>
+  <ellipse cx="600" cy="576" rx="30" ry="5.5"/>
+  <ellipse cx="600" cy="588" rx="30" ry="5.5"/>
+  <ellipse cx="600" cy="600" rx="30" ry="5.5"/>
+  <ellipse cx="600" cy="612" rx="30" ry="5.5"/>
+  <ellipse cx="600" cy="624" rx="30" ry="5.5"/>
+  <ellipse cx="600" cy="636" rx="30" ry="5.5"/>
+  <ellipse cx="600" cy="648" rx="30" ry="5.5"/>
+  <line x1="600" y1="545" x2="600" y2="655" stroke-opacity="0.32" stroke-dasharray="2 4"/>
+
+  <!-- PCB mount legs — two pins + center support post -->
+  <circle cx="500" cy="680" r="5.5"/>
+  <circle cx="700" cy="680" r="5.5"/>
+  <circle cx="600" cy="680" r="4.5" stroke-opacity="0.55"/>
+
+  <!-- Side rail mount nub stubs -->
+  <line x1="416" y1="505" x2="416" y2="522" stroke-opacity="0.45"/>
+  <line x1="784" y1="505" x2="784" y2="522" stroke-opacity="0.45"/>
+
+  <!-- ── DIDACTIC MEASUREMENT TICKS (left margin) ─────────────────────────────── -->
+  <g stroke-opacity="0.28">
+    <line x1="350" y1="170" x2="362" y2="170"/>
+    <line x1="350" y1="368" x2="362" y2="368"/>
+    <line x1="350" y1="598" x2="362" y2="598"/>
+  </g>
+  <line x1="356" y1="170" x2="356" y2="598" stroke-opacity="0.14" stroke-dasharray="2 6"/>
+
+  <!-- ── LABEL ZONE — faint IBM Plex Sans micro annotations ───────────────────── -->
+  <text x="420" y="140" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.50" stroke="none" letter-spacing="0.05em" text-transform="uppercase">TOP HOUSING · NYLON</text>
+  <text x="420" y="358" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.50" stroke="none" letter-spacing="0.05em">STEM · POM</text>
+  <text x="680" y="358" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.58 0.115 38)" fill-opacity="0.78" stroke="none" letter-spacing="0.05em">TACTILE LEG</text>
+  <text x="420" y="650" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.50" stroke="none" letter-spacing="0.05em" text-transform="uppercase">BOTTOM HOUSING · NYLON</text>
+
+  <!-- "TACTILE LEG" leader to the primary contact dot -->
+  <line x1="680" y1="352" x2="656" y2="330" stroke-opacity="0.35" stroke-width="1"/>
+
+  <!-- ── JetBrains Mono technical value — material + geometry callout ─────────── -->
+  <text x="420" y="738" font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace" font-size="10" fill="oklch(0.78 0.005 90)" fill-opacity="0.38" stroke="none" letter-spacing="0.03em">DUROCK T1 — NYLON/NYLON/POM, SHARP BUMP NEAR TOP OF STROKE</text>
+
+  <!-- ── BRONZE THEME DOT — family ornamental anchor, upper-right margin ───────── -->
+  <circle cx="1148" cy="92" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

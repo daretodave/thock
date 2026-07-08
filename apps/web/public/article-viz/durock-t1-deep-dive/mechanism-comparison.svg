@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Three-panel mechanism comparison — Durock T1 leaf-crossing bump vs Gazzew Boba U4T leaf-crossing bump vs Topre capacitive dome-collapse</title>
+
+  <!-- Panel dividers -->
+  <line x1="400" y1="60" x2="400" y2="470" stroke-opacity="0.18"/>
+  <line x1="800" y1="60" x2="800" y2="470" stroke-opacity="0.18"/>
+
+  <!-- ===================== PANEL 1: Durock T1 ===================== -->
+  <text x="70" y="52" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.10 80)" stroke="none" opacity="0.95">Durock T1</text>
+  <text x="70" y="72" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">MX leaf-crossing</text>
+
+  <!-- Stem shaft -->
+  <line x1="180" y1="110" x2="180" y2="330" stroke-opacity="0.75"/>
+  <!-- Leaf contact -->
+  <line x1="180" y1="230" x2="320" y2="230" stroke-opacity="0.5"/>
+  <!-- Sharp stepped leg (steep leading shoulder) -->
+  <path d="M 180 250 L 210 250 L 226 218 L 240 230" stroke="oklch(0.78 0.10 80)" stroke-width="2.5" stroke-opacity="0.95"/>
+  <circle cx="226" cy="218" r="5" fill="oklch(0.78 0.10 80)" stroke="none"/>
+  <text x="250" y="200" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.10 80)" stroke="none" opacity="0.8">sharp step</text>
+
+  <!-- Force glyph baseline -->
+  <line x1="120" y1="400" x2="360" y2="400" stroke-opacity="0.25"/>
+  <path d="M 130 400 L 190 400 L 205 342 L 222 400 L 350 400" stroke="oklch(0.78 0.10 80)" stroke-width="2.5" stroke-opacity="0.9"/>
+  <path d="M 190 400 L 205 342 L 222 400 Z" fill="oklch(0.78 0.10 80 / 0.15)" stroke="none"/>
+  <circle cx="205" cy="342" r="4" fill="oklch(0.78 0.10 80)" stroke="none"/>
+  <text x="120" y="430" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">sharp front edge, moderate descent</text>
+  <text x="120" y="450" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.5">67g / 70g spring</text>
+
+  <!-- ===================== PANEL 2: Gazzew Boba U4T ===================== -->
+  <text x="470" y="52" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.9">Gazzew Boba U4T</text>
+  <text x="470" y="72" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">MX leaf-crossing</text>
+
+  <line x1="580" y1="110" x2="580" y2="330" stroke-opacity="0.75"/>
+  <line x1="580" y1="230" x2="720" y2="230" stroke-opacity="0.5"/>
+  <!-- Rounded shoulder producing a longer plateau -->
+  <path d="M 580 250 L 604 250 C 614 250 618 222 628 218 C 638 214 648 218 656 230" stroke-opacity="0.8" stroke-width="2.5"/>
+  <text x="650" y="200" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">rounded shoulder</text>
+
+  <line x1="520" y1="400" x2="760" y2="400" stroke-opacity="0.25"/>
+  <path d="M 530 400 L 585 400 L 600 345 L 660 345 L 675 400 L 750 400" stroke-opacity="0.8" stroke-width="2.5"/>
+  <path d="M 585 400 L 600 345 L 660 345 L 675 400 Z" fill="oklch(0.78 0.005 90 / 0.08)" stroke="none"/>
+  <text x="520" y="430" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">D-shaped plateau, long dwell</text>
+  <text x="520" y="450" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.5">62g / 68g spring</text>
+
+  <!-- ===================== PANEL 3: Topre ===================== -->
+  <text x="870" y="52" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.9">Topre</text>
+  <text x="870" y="72" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.10 80)" stroke="none" opacity="0.85">capacitive dome-collapse</text>
+
+  <!-- Rubber dome arc -->
+  <path d="M 900 200 C 900 165 1020 165 1020 200" stroke-opacity="0.7"/>
+  <!-- Conical spring (narrower at top, wider at base) -->
+  <path d="M 940 210 L 980 210 L 995 300 L 925 300 Z" stroke-opacity="0.7"/>
+  <line x1="950" y1="230" x2="970" y2="230" stroke-opacity="0.35"/>
+  <line x1="945" y1="255" x2="975" y2="255" stroke-opacity="0.35"/>
+  <line x1="935" y1="280" x2="985" y2="280" stroke-opacity="0.35"/>
+  <!-- Capacitive PCB pad -->
+  <ellipse cx="960" cy="315" rx="55" ry="14" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.9"/>
+  <ellipse cx="960" cy="315" rx="30" ry="7" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.6" stroke-dasharray="3 4"/>
+  <circle cx="960" cy="315" r="4" fill="oklch(0.78 0.10 80)" stroke="none"/>
+
+  <text x="870" y="360" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">no leaf, no stem-leg contact</text>
+  <text x="870" y="400" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">dome collapse read as</text>
+  <text x="870" y="418" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">a capacitance change</text>
+
+  <!-- Bottom note spanning full width -->
+  <line x1="70" y1="490" x2="1130" y2="490" stroke-opacity="0.15"/>
+  <text x="70" y="518" font-family="Newsreader, serif" font-style="italic" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">Mechanically unrelated to panels one and two — the comparison builders draw is about feel, not architecture.</text>
+
+  <!-- Bronze theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>
