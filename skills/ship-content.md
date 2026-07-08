@@ -156,7 +156,35 @@ echo "content-issue: #$N"
 On failure: log stderr, set `N=""`, continue (mirror is best-effort).
 
 If the row already carries an `- issue: #N` field (prior tick filed
-but didn't ship), reuse that number; skip this step.
+but didn't ship), reuse that number; skip this step and Step 3a.
+
+**Step 3a — Persist the issue number before doing anything else
+(mandatory checkpoint):**
+
+If `$N` is non-empty, add a `- issue: #$N` field to the audit row
+in `plan/AUDIT.md` (directly under the row's `- next:` line) and
+commit + push that single-line change **immediately**, before
+Step 4 spawns any agent:
+
+```bash
+git add plan/AUDIT.md
+git commit -m "$(cat <<EOF
+audit: content dispatch opened issue #$N
+
+Cloud-Run: <cloud-run-url>
+EOF
+)"
+git push origin main
+```
+
+This checkpoint exists so a tick that dies anywhere in Steps 4–7
+(content-curator/brander stall, verify failure, silent turn-end)
+leaves the row resumable: the next dispatch's Step 1 sees `- issue:
+#N` already on the row and reuses it instead of opening a fresh
+issue for a different sub-topic. Without this commit, 9 consecutive
+dispatches opened 9 duplicate issues (#414–#422) and shipped zero
+articles — see `plan/AUDIT.md` `[engineering] [4.9]` finding filed
+2026-07-08.
 
 ### Step 4 — Spawn content-curator and brander in parallel
 
