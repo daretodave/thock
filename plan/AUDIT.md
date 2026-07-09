@@ -6355,7 +6355,7 @@ passes accumulate signals.)
 - action: `buildArticleJsonLd` now emits `image: \`${canonicalUrl(path)}/opengraph-image/og\`` (only when `heroImage` is set, preserving prior omit-when-null semantics) instead of the raw frontmatter path; updated `packages/seo/src/__tests__/buildJsonLd.test.ts` fixture/expectation to match.
 > `pnpm verify` full gate green: typecheck, 591 web + 33 seo + other package unit tests, 159 script tests, data:validate (69 records), build, size (108.5 KB / 200 KB budget), 974/974 e2e. `pnpm deploy:check` green (dpl_3KbzEKVW, 98s to ready).
 
-### [seo] [4.8] Meta description has no length cap — 60 of 90 articles exceed Google's ~160-char SERP truncation point
+### [x] [seo] [4.8] Meta description has no length cap — 60 of 90 articles exceed Google's ~160-char SERP truncation point — addressed in 9757f83, closes #428
 - category: seo
 - filed: 2026-07-09 by cloud /iterate audit (fresh Explore-agent sweep)
 - impact: 6 (`packages/seo/src/buildMetadata.ts` forwards `input.description` verbatim into `meta.description`, `openGraph.description`, and `twitter.description` with no length cap. Only 6 of 90 articles carry a hand-authored `description`; the other 84 fall back to `lede`, which the article-frontmatter schema permits up to 400 chars. A sweep found 60 articles with an effective meta description over 160 characters, some over 380. Even one of the six hand-authored descriptions (`clicky-switches-deep-dive`, 167 chars) slightly overruns the budget, showing there's no safety net at any layer. Unaudited previously because the existing SEO e2e/unit coverage never asserted a length bound, and the unit test fixtures always used short descriptions)
