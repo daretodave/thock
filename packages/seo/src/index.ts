@@ -1,6 +1,10 @@
 export { siteConfig, type SiteConfig } from './siteConfig'
 export { canonicalUrl } from './canonicalUrl'
-export { buildMetadata, type BuildMetadataInput } from './buildMetadata'
+export {
+  buildMetadata,
+  truncateForMeta,
+  type BuildMetadataInput,
+} from './buildMetadata'
 export {
   buildWebSiteJsonLd,
   buildArticleJsonLd,

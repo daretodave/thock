@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { buildMetadata } from '../buildMetadata'
+import { buildMetadata, truncateForMeta } from '../buildMetadata'
 import { siteConfig } from '../siteConfig'
 
 describe('buildMetadata', () => {
@@ -89,5 +89,42 @@ describe('buildMetadata', () => {
     expect((meta.twitter as { card?: string } | undefined)?.card).toBe(
       'summary_large_image',
     )
+  })
+
+  it('truncates the description across meta, openGraph, and twitter when over the SERP limit', () => {
+    const longDescription =
+      'This is a deliberately long lede that runs well past the one hundred and sixty character practical truncation limit Google applies to search engine result page snippets, so it should get cut.'
+    const meta = buildMetadata({
+      title: 'A',
+      description: longDescription,
+      path: '/',
+    })
+    expect(meta.description).toBe(truncateForMeta(longDescription))
+    expect(meta.description!.length).toBeLessThanOrEqual(160)
+    const og = meta.openGraph as { description?: string } | undefined
+    const tw = meta.twitter as { description?: string } | undefined
+    expect(og?.description).toBe(meta.description)
+    expect(tw?.description).toBe(meta.description)
+  })
+})
+
+describe('truncateForMeta', () => {
+  it('passes through text within the limit unchanged', () => {
+    expect(truncateForMeta('short description')).toBe('short description')
+  })
+
+  it('cuts long text at a word boundary and appends an ellipsis', () => {
+    const text =
+      'a'.repeat(50) + ' ' + 'b'.repeat(50) + ' ' + 'c'.repeat(100)
+    const result = truncateForMeta(text, 160)
+    expect(result.length).toBeLessThanOrEqual(160)
+    expect(result.endsWith('…')).toBe(true)
+    expect(result.endsWith(' …')).toBe(false)
+  })
+
+  it('never cuts mid-word', () => {
+    const result = truncateForMeta('word '.repeat(60).trim(), 160)
+    const withoutEllipsis = result.slice(0, -1)
+    expect(withoutEllipsis.endsWith('word')).toBe(true)
   })
 })

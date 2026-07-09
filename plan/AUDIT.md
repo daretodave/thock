@@ -6354,3 +6354,12 @@ passes accumulate signals.)
 - evidence: confirmed via local `next dev` — `<meta property="og:image">` resolves to `/article/<slug>/opengraph-image/og?<hash>` (a real rendered PNG, `curl` 200 `image/png`); confirmed the route serves without the cache-busting hash query too.
 - action: `buildArticleJsonLd` now emits `image: \`${canonicalUrl(path)}/opengraph-image/og\`` (only when `heroImage` is set, preserving prior omit-when-null semantics) instead of the raw frontmatter path; updated `packages/seo/src/__tests__/buildJsonLd.test.ts` fixture/expectation to match.
 > `pnpm verify` full gate green: typecheck, 591 web + 33 seo + other package unit tests, 159 script tests, data:validate (69 records), build, size (108.5 KB / 200 KB budget), 974/974 e2e. `pnpm deploy:check` green (dpl_3KbzEKVW, 98s to ready).
+
+### [seo] [4.8] Meta description has no length cap — 60 of 90 articles exceed Google's ~160-char SERP truncation point
+- category: seo
+- filed: 2026-07-09 by cloud /iterate audit (fresh Explore-agent sweep)
+- impact: 6 (`packages/seo/src/buildMetadata.ts` forwards `input.description` verbatim into `meta.description`, `openGraph.description`, and `twitter.description` with no length cap. Only 6 of 90 articles carry a hand-authored `description`; the other 84 fall back to `lede`, which the article-frontmatter schema permits up to 400 chars. A sweep found 60 articles with an effective meta description over 160 characters, some over 380. Even one of the six hand-authored descriptions (`clicky-switches-deep-dive`, 167 chars) slightly overruns the budget, showing there's no safety net at any layer. Unaudited previously because the existing SEO e2e/unit coverage never asserted a length bound, and the unit test fixtures always used short descriptions)
+- ease: 8 (one function — add a `truncateForMeta(text, limit=160)` helper that cuts at the last word boundary at or before the limit and appends an ellipsis; apply only to the three SERP-facing slots, leaving JSON-LD `Article.description` and on-page `lede` untouched since those aren't length-constrained)
+- score: 4.8 (impact × ease / 10)
+- issue: #428
+- action: added `truncateForMeta` to `packages/seo/src/buildMetadata.ts`, applied to `meta.description`/`openGraph.description`/`twitter.description`; exported from `packages/seo/src/index.ts`; 4 new unit tests in `packages/seo/src/__tests__/buildMetadata.test.ts` covering pass-through, word-boundary truncation, and cross-slot consistency.
