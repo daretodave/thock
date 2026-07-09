@@ -17,7 +17,7 @@ export async function generateMetadata({
 }) {
   const { a, b } = await searchParams
   const boardA = a ? getBoardBySlug(a) : null
-  const boardB = b ? getBoardBySlug(b) : null
+  const boardB = b && b !== a ? getBoardBySlug(b) : null
 
   if (boardA && boardB) {
     return buildMetadata({
@@ -52,7 +52,7 @@ export default async function CompareBoardPage({
   const { a, b } = await searchParams
   const boards = getAllBoards()
   const boardA = a ? getBoardBySlug(a) : null
-  const boardB = b ? getBoardBySlug(b) : null
+  const boardB = b && b !== a ? getBoardBySlug(b) : null
   const showTable = boardA !== null && boardB !== null
 
   const breadcrumb = buildBreadcrumbListJsonLd([

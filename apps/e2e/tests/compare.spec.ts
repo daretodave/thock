@@ -108,6 +108,20 @@ test.describe('/compare/switch — phase 44', () => {
     await expect(selectA).toHaveValue('gateron-oil-king')
     await expect(selectB).toHaveValue('cherry-mx2a-red')
   })
+
+  test('identical a and b params fall back to the empty state instead of a degenerate table', async ({
+    page,
+  }) => {
+    await page.goto(
+      '/compare/switch?a=gateron-oil-king&b=gateron-oil-king',
+    )
+    await expect(page.getByTestId('compare-h1')).toHaveText('Compare switches')
+    await expect(page.getByTestId('compare-table')).not.toBeVisible()
+    const scripts = await page
+      .locator('script[type="application/ld+json"]')
+      .allTextContents()
+    expect(scripts.join('\n')).not.toContain('"@type":"ItemList"')
+  })
 })
 
 test.describe('/compare/board — phase 48', () => {
@@ -205,5 +219,17 @@ test.describe('/compare/board — phase 48', () => {
     const selectB = page.getByTestId('compare-select-b')
     await expect(selectA).toHaveValue('mode-sonnet')
     await expect(selectB).toHaveValue('class80')
+  })
+
+  test('identical a and b params fall back to the empty state instead of a degenerate table', async ({
+    page,
+  }) => {
+    await page.goto('/compare/board?a=mode-sonnet&b=mode-sonnet')
+    await expect(page.getByTestId('compare-h1')).toHaveText('Compare boards')
+    await expect(page.getByTestId('compare-table')).not.toBeVisible()
+    const scripts = await page
+      .locator('script[type="application/ld+json"]')
+      .allTextContents()
+    expect(scripts.join('\n')).not.toContain('"@type":"ItemList"')
   })
 })

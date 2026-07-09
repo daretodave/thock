@@ -17,7 +17,7 @@ export async function generateMetadata({
 }) {
   const { a, b } = await searchParams
   const switchA = a ? getSwitchBySlug(a) : null
-  const switchB = b ? getSwitchBySlug(b) : null
+  const switchB = b && b !== a ? getSwitchBySlug(b) : null
 
   if (switchA && switchB) {
     return buildMetadata({
@@ -52,7 +52,7 @@ export default async function CompareSwitchPage({
   const { a, b } = await searchParams
   const switches = getAllSwitches()
   const switchA = a ? getSwitchBySlug(a) : null
-  const switchB = b ? getSwitchBySlug(b) : null
+  const switchB = b && b !== a ? getSwitchBySlug(b) : null
   const showTable = switchA !== null && switchB !== null
 
   const breadcrumb = buildBreadcrumbListJsonLd([
