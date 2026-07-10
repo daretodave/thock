@@ -163,6 +163,18 @@ test.describe('per-part pages — phase 21', () => {
       expect(flat).toMatch(/"@type":"(Product|Thing)"/)
     })
 
+    test('Product JSON-LD brand.name resolves the vendor name, not the raw slug', async ({
+      page,
+    }) => {
+      await page.goto('/part/switch/gateron-oil-king')
+      const scripts = await page
+        .locator('script[type="application/ld+json"]')
+        .allTextContents()
+      const flat = scripts.join('\n')
+      expect(flat).toContain('"name":"CannonKeys"')
+      expect(flat).not.toContain('"name":"cannonkeys"')
+    })
+
     test('switch detail page carries compare and quiz affordances', async ({
       page,
     }) => {

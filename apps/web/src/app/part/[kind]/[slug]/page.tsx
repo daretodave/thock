@@ -133,7 +133,9 @@ export default async function PartDetailPage({
             ...(part.kind !== 'board' && {
               brand: {
                 '@type': 'Brand',
-                name: part.record.vendorSlug,
+                name:
+                  getVendorBySlug(part.record.vendorSlug)?.name ??
+                  part.record.vendorSlug,
               },
             }),
             ...(part.record.releasedAt && {
