@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-10T00:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "brass-weight-mod",
+  "article_pillar": "ideas",
+  "section_anchor": "what-the-mod-actually-is",
+  "brief_summary": "Side-by-side cross-section diptych of a keyboard case bottom. Left ('empty cavity · case rings'): PCB above an empty air cavity above the case bottom, with caution-red wavy lines and outward-pointing arrows indicating the case walls vibrating and ringing after a bottom-out impact. Right ('brass weight · energy absorbed'): identical structure but the cavity is filled by a solid brass weight block (bronze fill/stroke), with the impact arrow terminating in the block and near-flat lines at the case wall indicating the ring is suppressed.",
+  "target": "apps/web/public/article-viz/brass-weight-mod/mass-cavity-cross-section.svg",
+  "splash_color": { "name": "bronze", "oklch": "oklch(0.80 0.135 75)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "brass-weight-mod.mdx § 'What the mod actually is' — 'a milled brass (occasionally steel or copper) plate that bolts into the case bottom in place of a stock plastic or thin-aluminum bottom'",
+    "brass-weight-mod.mdx § 'What the mod actually is' — 'Adding mass to the case bottom increases the total moving mass the keystroke's impact energy has to accelerate ... It also raises the energy required to excite the case's own resonant modes, which is the mechanism behind the \"less case ping\"'",
+    "brass-weight-mod.mdx § 'The sound change is real and modest' — 'typical kits run somewhere in the 150–400 gram range'"
+  ],
+  "outputs": ["apps/web/public/article-viz/brass-weight-mod/mass-cavity-cross-section.svg"],
+  "warnings": []
+}

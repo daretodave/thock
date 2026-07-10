@@ -1,0 +1,22 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-10T00:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "brass-weight-mod",
+  "article_pillar": "ideas",
+  "section_anchor": "the-sound-change-is-real-and-modest",
+  "brief_summary": "Horizontal bar chart on a 0-10 g/cm3 axis comparing density of copper (~8.9), brass (~8.5, bronze-highlighted as the mod's default material), steel (~7.85), and aluminum (~2.7, labelled as the case material around the weight). Demonstrates why brass/steel/copper are the materials of choice for a weight mod rather than more aluminum.",
+  "target": "apps/web/public/article-viz/brass-weight-mod/material-density-comparison.svg",
+  "splash_color": { "name": "bronze", "oklch": "oklch(0.80 0.135 75)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "brass-weight-mod.mdx § 'The sound change is real and modest' — 'brass runs roughly 8.4–8.7 g/cm³, copper close to 8.9 g/cm³, and steel around 7.85 g/cm³ — all three to four times denser than the 2.7 g/cm³ of the aluminum case around them'"
+  ],
+  "outputs": ["apps/web/public/article-viz/brass-weight-mod/material-density-comparison.svg"],
+  "warnings": []
+}

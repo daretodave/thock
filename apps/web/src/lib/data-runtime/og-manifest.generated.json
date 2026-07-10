@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "slug": "brass-weight-mod",
+      "readTime": 8,
+      "frontmatter": {
+        "title": "The brass weight mod: what added mass actually buys you",
+        "lede": "Bolting a half-pound of brass into the bottom of a case is one of the more expensive mods in the hobby for how little it visibly does. It changes how a board sounds and sits on a desk — just not in the ways the marketing copy implies.",
+        "pillar": "ideas",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "durock-t1-deep-dive",
       "readTime": 10,
       "frontmatter": {
@@ -1222,5 +1232,5 @@
       "description": "China-based design studio and vendor known for in-house boards (Mammoth, Ikki68, Promise) and partnered group buys, sold direct from shop.wuquestudio.com with regional proxies."
     }
   ],
-  "generatedAt": "2026-07-09T18:49:23.750Z"
+  "generatedAt": "2026-07-10T00:59:23.615Z"
 }

@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-10T00:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "brass-weight-mod",
+  "article_pillar": "ideas",
+  "section_anchor": "the-feel-change-is-mostly-psychoacoustic-and-that-is-fine",
+  "brief_summary": "Two-column ledger. Left (bronze solid, 'earns its keep'): lightweight metal cases that ring, aggressive typists who shift a light board, a finishing move on an already-tuned board. Right (bordeaux dashed, 'does not help'): hollow resonance from an empty cavity, scratchy switches or untuned stabilizers, flex complaints on a rigid mount. Each card carries the reason for its verdict.",
+  "target": "apps/web/public/article-viz/brass-weight-mod/where-it-helps.svg",
+  "splash_color": { "name": "bronze", "oklch": "oklch(0.80 0.135 75)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "brass-weight-mod.mdx § 'Where it earns its keep' — 'The mod makes the most sense on lightweight, thin-walled metal cases ... It also makes sense for typists who bottom out hard and consistently shift a light board across the desk'",
+    "brass-weight-mod.mdx § 'What it does not fix' — 'A brass weight will not fix a scratchy switch, will not quiet down untuned stabilizers ... will not turn a hollow-sounding budget board into a dense-sounding one ... it also will not compensate for a genuinely bad mounting design'",
+    "brass-weight-mod.mdx § 'Where it earns its keep' — 'It is a finishing move for builders who have already done the cheap, high-leverage mods'"
+  ],
+  "outputs": ["apps/web/public/article-viz/brass-weight-mod/where-it-helps.svg"],
+  "warnings": []
+}

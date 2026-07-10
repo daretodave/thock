@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Empty case cavity versus a brass weight seated in the case bottom — before and after the impact energy path</title>
+
+  <!-- Title -->
+  <text x="600" y="60" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">the same cavity — one has somewhere to put the energy</text>
+
+  <!-- ============ LEFT PANEL — empty cavity ============ -->
+  <text x="300" y="102" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.9">empty cavity · case rings</text>
+
+  <!-- PCB left -->
+  <rect x="140" y="270" width="320" height="26" stroke-opacity="0.85" fill="oklch(0.78 0.005 90 / 0.04)"/>
+  <text x="90" y="287" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.6">PCB</text>
+
+  <!-- Impact arrow into PCB -->
+  <line x1="300" y1="196" x2="300" y2="266" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.6" stroke-width="2.5"/>
+  <polygon points="300,266 291,248 309,248" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6"/>
+  <text x="300" y="186" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">bottom-out</text>
+
+  <!-- Empty cavity outline -->
+  <rect x="140" y="316" width="320" height="90" stroke-opacity="0.35" stroke-dasharray="5 5"/>
+  <text x="90" y="365" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.45">air cavity</text>
+
+  <!-- Ring waves inside cavity, caution color -->
+  <g stroke="oklch(0.62 0.13 25)" stroke-width="2" stroke-opacity="0.85">
+    <path d="M 160 336 Q 180 322 200 336 T 240 336 T 280 336 T 320 336 T 360 336 T 400 336 T 440 336"/>
+    <path d="M 160 360 Q 180 346 200 360 T 240 360 T 280 360 T 320 360 T 360 360 T 400 360 T 440 360" stroke-opacity="0.55"/>
+    <path d="M 160 384 Q 180 370 200 384 T 240 384 T 280 384 T 320 384 T 360 384 T 400 384 T 440 384" stroke-opacity="0.3"/>
+  </g>
+
+  <!-- Case bottom left -->
+  <rect x="100" y="406" width="400" height="24" stroke-opacity="0.7" fill="oklch(0.78 0.005 90 / 0.06)"/>
+  <text x="90" y="422" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.5">case</text>
+
+  <!-- Outward ring arrows off the case walls -->
+  <g stroke="oklch(0.62 0.13 25)" stroke-width="2.5" stroke-opacity="0.85">
+    <line x1="100" y1="418" x2="72" y2="404"/>
+    <line x1="100" y1="418" x2="70" y2="424"/>
+    <line x1="500" y1="418" x2="528" y2="404"/>
+    <line x1="500" y1="418" x2="530" y2="424"/>
+  </g>
+  <text x="300" y="452" font-family="Newsreader, serif" font-size="13" font-style="italic" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.9">case walls ring</text>
+
+  <!-- ============ DIVIDER ============ -->
+  <line x1="600" y1="90" x2="600" y2="466" stroke-opacity="0.18" stroke-dasharray="6 4"/>
+
+  <!-- ============ RIGHT PANEL — brass weight ============ -->
+  <text x="900" y="102" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.80 0.135 75)" stroke="none" text-anchor="middle" opacity="0.95">brass weight · energy absorbed</text>
+
+  <!-- PCB right -->
+  <rect x="740" y="270" width="320" height="26" stroke-opacity="0.85" fill="oklch(0.78 0.005 90 / 0.04)"/>
+  <text x="1112" y="287" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="start" opacity="0.6">PCB</text>
+
+  <!-- Impact arrow into PCB -->
+  <line x1="900" y1="196" x2="900" y2="266" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.6" stroke-width="2.5"/>
+  <polygon points="900,266 891,248 909,248" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6"/>
+  <text x="900" y="186" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">bottom-out</text>
+
+  <!-- Solid brass weight block filling the cavity -->
+  <rect x="740" y="316" width="320" height="90" fill="oklch(0.80 0.135 75 / 0.22)" stroke="oklch(0.80 0.135 75)" stroke-opacity="0.95" stroke-width="2.5"/>
+  <text x="900" y="366" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.80 0.135 75)" stroke="none" text-anchor="middle" opacity="0.95">brass weight</text>
+  <text x="900" y="384" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.80 0.135 75)" stroke="none" text-anchor="middle" opacity="0.7">150–400g, fitted to the cavity</text>
+
+  <!-- Arrow into the block showing absorption, then stopping -->
+  <path d="M 900 296 L 900 320" stroke="oklch(0.80 0.135 75)" stroke-width="2.5" stroke-opacity="0.9"/>
+
+  <!-- Case bottom right -->
+  <rect x="700" y="406" width="400" height="24" stroke-opacity="0.7" fill="oklch(0.78 0.005 90 / 0.06)"/>
+  <text x="1112" y="422" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="start" opacity="0.5">case</text>
+
+  <!-- Flattened, low-amplitude lines at the case wall — much less ring -->
+  <g stroke="oklch(0.78 0.005 90)" stroke-opacity="0.3">
+    <line x1="700" y1="418" x2="676" y2="414"/>
+    <line x1="1100" y1="418" x2="1124" y2="414"/>
+  </g>
+  <text x="900" y="452" font-family="Newsreader, serif" font-size="13" font-style="italic" fill="oklch(0.80 0.135 75)" stroke="none" text-anchor="middle" opacity="0.9">more mass to move, less ring</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

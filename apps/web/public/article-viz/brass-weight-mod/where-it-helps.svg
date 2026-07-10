@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Where the brass weight mod earns its cost and where it does not — three cases each</title>
+
+  <!-- Vertical divider -->
+  <line x1="600" y1="120" x2="600" y2="450" stroke-opacity="0.18"/>
+
+  <!-- LEFT: earns its keep -->
+  <text x="300" y="140" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.80 0.135 75)" stroke="none" text-anchor="middle" opacity="0.95">earns its keep</text>
+
+  <g>
+    <rect x="90" y="170" width="420" height="76" rx="6" fill="oklch(0.80 0.135 75 / 0.10)" stroke="oklch(0.80 0.135 75)" stroke-opacity="0.95" stroke-width="2.5"/>
+    <text x="300" y="200" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.9">lightweight metal cases that ring</text>
+    <text x="300" y="222" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">extruded aluminum shells prone to audible ring</text>
+  </g>
+
+  <g>
+    <rect x="90" y="261" width="420" height="76" rx="6" fill="oklch(0.80 0.135 75 / 0.10)" stroke="oklch(0.80 0.135 75)" stroke-opacity="0.95" stroke-width="2.5"/>
+    <text x="300" y="291" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.9">aggressive typists who shift a light board</text>
+    <text x="300" y="313" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">more mass resists lateral displacement</text>
+  </g>
+
+  <g>
+    <rect x="90" y="352" width="420" height="76" rx="6" fill="oklch(0.80 0.135 75 / 0.10)" stroke="oklch(0.80 0.135 75)" stroke-opacity="0.95" stroke-width="2.5"/>
+    <text x="300" y="382" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.9">a finishing move on an already-tuned board</text>
+    <text x="300" y="404" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">foam, lube, and stabilizers already done</text>
+  </g>
+
+  <!-- RIGHT: doesn't help -->
+  <text x="900" y="140" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.95">does not help</text>
+
+  <g>
+    <rect x="690" y="170" width="420" height="76" rx="6" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.6" stroke-width="2" stroke-dasharray="5 5"/>
+    <text x="900" y="200" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">hollow resonance from an empty cavity</text>
+    <text x="900" y="222" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.95">a damping problem, not a mass problem</text>
+  </g>
+
+  <g>
+    <rect x="690" y="261" width="420" height="76" rx="6" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.6" stroke-width="2" stroke-dasharray="5 5"/>
+    <text x="900" y="291" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">scratchy switches or untuned stabilizers</text>
+    <text x="900" y="313" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.95">louder problems, solved cheaper elsewhere</text>
+  </g>
+
+  <g>
+    <rect x="690" y="352" width="420" height="76" rx="6" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.6" stroke-width="2" stroke-dasharray="5 5"/>
+    <text x="900" y="382" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">flex complaints on a rigid mount</text>
+    <text x="900" y="404" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.95">mass does not add compliance</text>
+  </g>
+
+  <!-- Caption -->
+  <text x="600" y="470" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">a short list of problems it solves, and a longer list it was never built for</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>
