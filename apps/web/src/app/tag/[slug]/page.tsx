@@ -53,7 +53,7 @@ export async function generateMetadata({
   if (!tag) return {}
   const count = getArticlesByTag(tag.slug).length
   return buildMetadata({
-    title: `#${tag.slug}`,
+    title: `#${tag.name}`,
     description: describeTag(tag, count),
     path: `/tag/${tag.slug}`,
   })
@@ -89,16 +89,16 @@ export default async function TagPage({
       <JsonLd
         graph={[
           buildCollectionPageJsonLd({
-            name: `#${tag.slug}`,
+            name: `#${tag.name}`,
             description: describeTag(tag, articles.length),
             path,
           }),
           buildBreadcrumbListJsonLd([
             { name: 'Home', path: '/' },
-            { name: `#${tag.slug}`, path },
+            { name: `#${tag.name}`, path },
           ]),
           buildItemListJsonLd({
-            name: `#${tag.slug} — articles`,
+            name: `#${tag.name} — articles`,
             items: itemListItems,
           }),
         ]}

@@ -56,6 +56,23 @@ test.describe('tag pages — phase 12', () => {
     expect(flat).toContain('"@type":"ItemList"')
   })
 
+  test('JSON-LD and <title> resolve the tag display name, not the raw slug', async ({
+    page,
+  }) => {
+    // /tag/65 — slug "65" vs. display name "65%". The raw slug silently
+    // drops the "%" that disambiguates a layout-size tag from a bare
+    // number in machine-readable surfaces (mirrors the part-page
+    // brand.name fix — display-name resolution, not slug passthrough).
+    await page.goto('/tag/65')
+    await expect(page).toHaveTitle(/#65%/)
+    const scripts = await page
+      .locator('script[type="application/ld+json"]')
+      .allTextContents()
+    const flat = scripts.join('\n')
+    expect(flat).toContain('#65%')
+    expect(flat).not.toMatch(/"name":"#65"/)
+  })
+
   test('does not render the tag page chrome for an unknown slug', async ({
     page,
   }) => {
