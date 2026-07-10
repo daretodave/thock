@@ -6394,7 +6394,7 @@ passes accumulate signals.)
 - action: rewrote `thock-weekly-002.mdx`'s frontmatter `lede` and the DCS Dolch section headline/body to past tense ("DCS Dolch closed at Divinikey...", "...ran a four-week group buy...closing July 1 with pricing settled at $119–$128"); regenerated `manifest.generated.json`/`og-manifest.generated.json`/`search/index.generated.json`.
 > Picked as the top signal this tick: AUDIT.md's only Pending row is the still-blocked `[6.3]` march.yml crash-issue gate; CRITIQUE.md's only Pending row is the non-actionable `[needs-user-call]` GA-beacon item; all 8 mechanical surveys clean (content-gap, crosslink, companion, stale-GB, newsletter-gap, OG-coverage, a11y-spec-coverage, tracker-linkage); expand's 20-commit/48h gate not met (3 commits/~7h since pass 162). A fresh general-purpose sweep across link integrity, external citation rot, data integrity, a11y, tests, SEO, content quality, performance, and interactive-tool edge cases (the last dimension checked given the recent `dc6baff` compare a===b fix) found the corpus otherwise clean and surfaced this newsletter/group-buy-status cross-reference gap as the strongest signal — a real, previously-unreported instance of a known bug class in an uncovered surface. `pnpm verify` full gate green: typecheck, 902 unit tests across workspaces, 159 script tests, data:validate (69 records), build, size (108.5 KB / 200 KB budget), 976/976 e2e. `pnpm deploy:check` green (dpl_A7ccL6YA, 100s to ready).
 
-### [HOT PURSUIT] [content-gap] [7] ideas pillar — 1 of ≥2 articles in last 30d
+### [x] [HOT PURSUIT] [content-gap] [7] ideas pillar — 1 of ≥2 articles in last 30d — addressed in 9066596, closes #432
 - category: content-gaps
 - impact: 7 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -6406,3 +6406,15 @@ passes accumulate signals.)
 - next: /ship-content → ideas pillar article
 - issue: #432
 > Filed 2026-07-10 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+> **Resolved (2026-07-10):** Shipped "The brass weight mod: what added mass actually buys you" at `/article/brass-weight-mod`, publishedAt 2026-07-06 (gap-fill midpoint of the 8-day 2026-07-02 → 2026-07-10 gap). Ideas pillar now at 2 of ≥2 in the 30-day window — comfortable. `9066596`
+
+### [ ] [cross-links] [4.5] brass-weight-mod ↔ gasket-mount-reality — no prose cross-link (same pillar, ≥2 shared tags: modding, acoustic, mode)
+- category: cross-links
+- filed: 2026-07-10 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: modding, acoustic, mode
+- article-a: apps/web/src/content/articles/brass-weight-mod.mdx
+- article-b: apps/web/src/content/articles/gasket-mount-reality.mdx
+- action: add [gasket-mount-reality](/article/gasket-mount-reality) to brass-weight-mod body, or vice versa
