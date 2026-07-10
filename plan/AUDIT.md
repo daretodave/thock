@@ -6437,3 +6437,13 @@ passes accumulate signals.)
 - action: added `focus:ring-2 focus:ring-accent focus:ring-offset-1 focus:ring-offset-bg` to `apps/web/src/app/search/SearchPanel.tsx:99`, `apps/web/src/components/newsletter/ButtondownForm.tsx:75-76` (both footer/full variants), `apps/web/src/components/not-found/RootNotFound.tsx:54`
 - issue: #435
 - action: added `vendorUrl: string | null` to the switch arm of `ResolvedPart` in both loaders; `getReferencedParts` now resolves it via `getVendorBySlug(record.vendorSlug)?.url ?? null` for switch same as board/keycap-set; `PartReference.tsx`'s three-branch ternary collapsed to `part.vendorUrl` (identical shape across all three kinds); backfilled the two other `ResolvedPart`-construction sites (`/part/[kind]` index, `/part/[kind]/[slug]` detail) that build switch entries outside `getReferencedParts`; extended `PartReference.test.tsx` (anchor + null-vendorUrl cases) and `parts.test.ts` (vendorUrl assertion) to match the board/keycap-set test shape already in place.
+
+### [x] [seo] [5.4] part JSON-LD brand.name uses raw vendor slug, not resolved name — addressed in 05d7f4b, closes #436
+- category: seo
+- filed: 2026-07-10 by cloud /iterate audit (fresh general-purpose sweep across compare/quiz/search edge cases, `.optional()` schema render sites, `!`/`as` casts, status-pill rendering consistency)
+- impact: 6 (every switch and keycap-set `/part/[kind]/[slug]` page — 28 of them — emitted Product JSON-LD with `brand.name` set to the raw vendor slug, e.g. `"cannonkeys"` instead of `"CannonKeys"`, a visible-vs-structured-data mismatch that Google Rich Results flags as a data-quality issue)
+- ease: 9 (`apps/web/src/app/part/[kind]/[slug]/page.tsx:136` already had `getVendorBySlug(part.record.vendorSlug)` in scope from the `vendorUrl` resolution three lines above `resolvePart`; one-line swap to reuse it for `brand.name`)
+- score: 5.4 (impact × ease / 10)
+- issue: #436
+- action: `brand.name` now resolves via `getVendorBySlug(part.record.vendorSlug)?.name ?? part.record.vendorSlug`; new e2e regression in `apps/e2e/tests/parts.spec.ts` asserts the JSON-LD carries `"CannonKeys"` (not `"cannonkeys"`) for gateron-oil-king.
+> Two weaker candidates from the same sweep didn't clear the bar: compare-table status enums rendered raw instead of through the sitewide `STATUS_LABEL` map (score 2.8), and `BoardCompareTable`'s vendor row leaking the raw slug (score 2.5) — both real but lower-impact than the JSON-LD structured-data mismatch, left for a future tick. `pnpm verify` full gate green: typecheck, 591 unit tests, 159 script tests, data:validate (69 records), build, size (108.5 KB / 200 KB budget), 980/980 e2e.
