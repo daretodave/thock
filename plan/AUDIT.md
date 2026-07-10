@@ -6447,3 +6447,13 @@ passes accumulate signals.)
 - issue: #436
 - action: `brand.name` now resolves via `getVendorBySlug(part.record.vendorSlug)?.name ?? part.record.vendorSlug`; new e2e regression in `apps/e2e/tests/parts.spec.ts` asserts the JSON-LD carries `"CannonKeys"` (not `"cannonkeys"`) for gateron-oil-king.
 > Two weaker candidates from the same sweep didn't clear the bar: compare-table status enums rendered raw instead of through the sitewide `STATUS_LABEL` map (score 2.8), and `BoardCompareTable`'s vendor row leaking the raw slug (score 2.5) — both real but lower-impact than the JSON-LD structured-data mismatch, left for a future tick. `pnpm verify` full gate green: typecheck, 591 unit tests, 159 script tests, data:validate (69 records), build, size (108.5 KB / 200 KB budget), 980/980 e2e.
+
+### [x] [seo] [5.4] tag page title/JSON-LD uses raw slug, not resolved display name — addressed in 8b17f57, closes #438
+- category: seo
+- filed: 2026-07-10 by cloud /iterate audit (general-purpose sweep spawned after mechanical content/data/OG/a11y surveys all came back clean) — same bug class as the part-page brand.name fix (05d7f4b) shipped earlier this same day
+- impact: 6 (`/tag/[slug]`'s `<title>` and all 3 JSON-LD nodes — CollectionPage, BreadcrumbList, ItemList — interpolated `tag.slug` instead of `tag.name`; `tags.json` has `{"slug":"65","name":"65%"}` and `{"slug":"75","name":"75%"}`, so the 65%/75% layout tag pages silently dropped the `%` in machine-readable surfaces across all 73 tag pages)
+- ease: 9 (swap 4 `${tag.slug}` interpolations to `${tag.name}` in one file; `describeTag()` in the same file already used `tag.name` for the meta description, so the resolved value was already in scope)
+- score: 5.4 (impact × ease / 10)
+- issue: #438
+- action: `apps/web/src/app/tag/[slug]/page.tsx` — title (line 56) and 3 JSON-LD `name` fields (lines 92/98/101) now use `tag.name`; visible on-page H1/lede hashtag-slug motif (phase-12 design decision) left untouched. New e2e regression in `apps/e2e/tests/tag.spec.ts` asserts `/tag/65`'s `<title>` and JSON-LD resolve to `#65%`, not `#65`.
+> `pnpm verify` full gate green: typecheck, 900 unit tests, data:validate (69 records), build, 981/981 e2e.
