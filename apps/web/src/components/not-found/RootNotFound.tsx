@@ -51,7 +51,7 @@ export function RootNotFound(): ReactElement {
             type="search"
             name="q"
             placeholder="search articles, switches, builds…"
-            className="flex-1 border border-border bg-surface px-4 py-3 text-body text-text placeholder:text-text-2 focus:outline-none focus:border-border-hi"
+            className="flex-1 border border-border bg-surface px-4 py-3 text-body text-text placeholder:text-text-2 focus:outline-none focus:border-border-hi focus:ring-2 focus:ring-accent focus:ring-offset-1 focus:ring-offset-bg"
           />
           <button
             type="submit"

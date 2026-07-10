@@ -96,7 +96,7 @@ export function SearchPanel({ allTags }: SearchPanelProps): ReactElement {
           onChange={(e) => setQuery(e.target.value)}
           autoComplete="off"
           spellCheck={false}
-          className="border border-border-hi bg-bg px-4 py-3 font-serif text-h3 text-text placeholder:text-text-2 focus:outline-none focus:border-accent"
+          className="border border-border-hi bg-bg px-4 py-3 font-serif text-h3 text-text placeholder:text-text-2 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent focus:ring-offset-1 focus:ring-offset-bg"
         />
         {showHint && (
           <div data-testid="search-empty-query" className="font-serif text-h3 text-text-2">

@@ -6427,4 +6427,13 @@ passes accumulate signals.)
 - ease: 6 (mirror the exact `160f0bd` shape change onto switch: add `vendorUrl` to the switch arm of `ResolvedPart` in `packages/content/src/loaders/parts.ts` + `apps/web/src/lib/data-runtime/index.ts`, resolve via `getVendorBySlug`, simplify `PartReference.tsx`'s branch logic; ripples into 3 additional `ResolvedPart`-construction call sites in `apps/web/src/app/part/[kind]/page.tsx` and `apps/web/src/app/part/[kind]/[slug]/page.tsx`)
 - score: 3.6 (impact × ease / 10)
 - issue: #433
+
+### [x] [a11y] [4.8] search/newsletter/404 text inputs lack visible focus ring — addressed in this commit, closes #435
+- category: a11y
+- filed: 2026-07-10 by cloud /iterate audit (fresh Explore-agent sweep — all mechanical surveys clean, AUDIT.md's only Pending row is the blocked-cloud-permission workflow-file item, CRITIQUE.md's only Pending row is the needs-user-call GA-beacon item)
+- impact: 6 (three high-traffic surfaces — sitewide search `SearchPanel.tsx`, the 404-page search box `RootNotFound.tsx`, and the newsletter signup `ButtondownForm.tsx` shown in most page footers — suppress the native focus outline via `focus:outline-none` and rely only on a subtle 1px border-color shift for focus indication, a WCAG 2.4.7 Focus Visible risk for keyboard users. The compare-page selectors (`BoardCompareSelector.tsx`, `SwitchCompareSelector.tsx`) already establish the accessible pattern in this same codebase: `focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-1 focus:ring-offset-bg`)
+- ease: 8 (append the same established ring classes to the three inputs — no layout/component-shape change)
+- score: 4.8 (impact × ease / 10)
+- action: added `focus:ring-2 focus:ring-accent focus:ring-offset-1 focus:ring-offset-bg` to `apps/web/src/app/search/SearchPanel.tsx:99`, `apps/web/src/components/newsletter/ButtondownForm.tsx:75-76` (both footer/full variants), `apps/web/src/components/not-found/RootNotFound.tsx:54`
+- issue: #435
 - action: added `vendorUrl: string | null` to the switch arm of `ResolvedPart` in both loaders; `getReferencedParts` now resolves it via `getVendorBySlug(record.vendorSlug)?.url ?? null` for switch same as board/keycap-set; `PartReference.tsx`'s three-branch ternary collapsed to `part.vendorUrl` (identical shape across all three kinds); backfilled the two other `ResolvedPart`-construction sites (`/part/[kind]` index, `/part/[kind]/[slug]` detail) that build switch entries outside `getReferencedParts`; extended `PartReference.test.tsx` (anchor + null-vendorUrl cases) and `parts.test.ts` (vendorUrl assertion) to match the board/keycap-set test shape already in place.
