@@ -66,6 +66,7 @@ describe('<ArticleBody>', () => {
           description: 'Mid-weight linear.',
           updatedAt: '2026-05-08T00:00:00.000Z',
         },
+        vendorUrl: 'https://cannonkeys.com',
       },
     ]
     render(<ArticleBody body="<PartReference id='oil-king' />" parts={parts} />)

@@ -6419,3 +6419,12 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/gasket-mount-reality.mdx
 - action: add [gasket-mount-reality](/article/gasket-mount-reality) to brass-weight-mod body, or vice versa
 - addressed in: 95aa229 — linked "mounting design" in brass-weight-mod's feel-change section to /article/gasket-mount-reality
+
+### [x] [bug] [3.6] PartReference inline switch mentions never link to the vendor, unlike board/keycap-set — addressed in this commit, closes #433
+- category: bug
+- filed: 2026-07-10 by cloud /iterate audit (fresh general-purpose sweep)
+- impact: 6 (switch is the most common `mentionedParts` kind in the corpus — 78 occurrences vs. 43 board / 25 keycap-set — so the majority of inline part mentions across dozens of articles rendered as inert `<Mono>` text instead of an outbound `rel="sponsored noopener"` vendor link, unlike their board/keycap-set siblings right next to them. `packages/content/src/mdx/PartReference.tsx:34` carried a stale comment — "switch records don't carry a URL today" — factually wrong since phase 2/3; `packages/data/src/schemas/switch.ts:13` has always carried `vendorSlug`, identical in shape to `board.ts`/`keycap-set.ts`. `160f0bd` ("a11y: PartReference — link board/keycap-set parts to the vendor, not product imagery") wired the fix for the other two kinds but never backfilled switch)
+- ease: 6 (mirror the exact `160f0bd` shape change onto switch: add `vendorUrl` to the switch arm of `ResolvedPart` in `packages/content/src/loaders/parts.ts` + `apps/web/src/lib/data-runtime/index.ts`, resolve via `getVendorBySlug`, simplify `PartReference.tsx`'s branch logic; ripples into 3 additional `ResolvedPart`-construction call sites in `apps/web/src/app/part/[kind]/page.tsx` and `apps/web/src/app/part/[kind]/[slug]/page.tsx`)
+- score: 3.6 (impact × ease / 10)
+- issue: #433
+- action: added `vendorUrl: string | null` to the switch arm of `ResolvedPart` in both loaders; `getReferencedParts` now resolves it via `getVendorBySlug(record.vendorSlug)?.url ?? null` for switch same as board/keycap-set; `PartReference.tsx`'s three-branch ternary collapsed to `part.vendorUrl` (identical shape across all three kinds); backfilled the two other `ResolvedPart`-construction sites (`/part/[kind]` index, `/part/[kind]/[slug]` detail) that build switch entries outside `getReferencedParts`; extended `PartReference.test.tsx` (anchor + null-vendorUrl cases) and `parts.test.ts` (vendorUrl assertion) to match the board/keycap-set test shape already in place.

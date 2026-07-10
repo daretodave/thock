@@ -8,6 +8,15 @@ const SWITCH_PART = {
   kind: 'switch',
   slug: 'gateron-oil-king',
   record: { name: 'Gateron Oil King' },
+  vendorUrl: 'https://gateron.com',
+} as unknown as ResolvedPart
+
+const SWITCH_PART_NO_URL = {
+  id: 'oil-king',
+  kind: 'switch',
+  slug: 'gateron-oil-king',
+  record: { name: 'Gateron Oil King' },
+  vendorUrl: null,
 } as unknown as ResolvedPart
 
 const KEYCAP_SET_PART = {
@@ -47,8 +56,17 @@ describe('PartReference', () => {
     expect(container.textContent).toBe('unknown switch')
   })
 
-  it('renders switch part name as Mono with no anchor (switches carry no URL today)', () => {
+  it('renders switch part as anchor to the vendor URL when resolved', () => {
     const { container } = render(<PartReference id="oil-king" parts={[SWITCH_PART]} />)
+    const a = container.querySelector('a')
+    expect(a).not.toBeNull()
+    expect(a!.getAttribute('href')).toBe('https://gateron.com')
+    expect(a!.getAttribute('rel')).toBe('sponsored noopener')
+    expect(container.textContent).toBe('Gateron Oil King')
+  })
+
+  it('renders switch part name as Mono with no anchor when vendorUrl is null', () => {
+    const { container } = render(<PartReference id="oil-king" parts={[SWITCH_PART_NO_URL]} />)
     expect(container.textContent).toBe('Gateron Oil King')
     expect(container.querySelector('a')).toBeNull()
   })

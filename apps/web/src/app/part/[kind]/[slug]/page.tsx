@@ -40,7 +40,13 @@ function resolvePart(kind: ValidKind, slug: string): ResolvedPart | null {
   if (kind === 'switch') {
     const record = getSwitchBySlug(slug)
     return record
-      ? { id: `switch:${slug}`, kind: 'switch', slug, record }
+      ? {
+          id: `switch:${slug}`,
+          kind: 'switch',
+          slug,
+          record,
+          vendorUrl: getVendorBySlug(record.vendorSlug)?.url ?? null,
+        }
       : null
   }
   if (kind === 'keycap-set') {

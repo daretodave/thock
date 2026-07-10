@@ -11,7 +11,7 @@ import type { Article } from './articles'
 import type { ArticlePartReference } from '../schema/frontmatter'
 
 export type ResolvedPart =
-  | { id: string; kind: 'switch'; slug: string; record: Switch }
+  | { id: string; kind: 'switch'; slug: string; record: Switch; vendorUrl: string | null }
   | { id: string; kind: 'keycap-set'; slug: string; record: KeycapSet; vendorUrl: string | null }
   | { id: string; kind: 'board'; slug: string; record: Board; vendorUrl: string | null }
 
@@ -26,7 +26,10 @@ export function getReferencedParts(article: Article): ResolvedPart[] {
   for (const ref of article.frontmatter.mentionedParts as ArticlePartReference[]) {
     if (ref.kind === 'switch') {
       const record = getSwitchBySlug(ref.slug)
-      if (record) out.push({ id: ref.id, kind: 'switch', slug: ref.slug, record })
+      if (record) {
+        const vendorUrl = getVendorBySlug(record.vendorSlug)?.url ?? null
+        out.push({ id: ref.id, kind: 'switch', slug: ref.slug, record, vendorUrl })
+      }
     } else if (ref.kind === 'keycap-set') {
       const record = getKeycapSetBySlug(ref.slug)
       if (record) {

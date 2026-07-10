@@ -67,6 +67,7 @@ function partsForKind(kind: ValidKind): ResolvedPart[] {
       kind: 'switch',
       slug: record.slug,
       record,
+      vendorUrl: getVendorBySlug(record.vendorSlug)?.url ?? null,
     }))
   }
   if (kind === 'keycap-set') {

@@ -13,7 +13,7 @@ describe('getReferencedParts', () => {
     expect(getReferencedParts(makeArticle([]))).toEqual([])
   })
 
-  it('resolves a switch ref using a known seed slug', () => {
+  it('resolves a switch ref using a known seed slug, with the vendor URL', () => {
     const result = getReferencedParts(
       makeArticle([{ id: 'oil-king', kind: 'switch', slug: 'gateron-oil-king' }]),
     )
@@ -21,6 +21,7 @@ describe('getReferencedParts', () => {
     const [part] = result
     expect(part).toMatchObject({ id: 'oil-king', kind: 'switch', slug: 'gateron-oil-king' })
     expect(part?.record).toBeDefined()
+    expect(part && 'vendorUrl' in part ? part.vendorUrl : undefined).toMatch(/^https?:\/\//)
   })
 
   it('resolves a keycap-set ref using a known seed slug, with the vendor URL (not product imagery)', () => {
