@@ -6408,7 +6408,7 @@ passes accumulate signals.)
 > Filed 2026-07-10 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 > **Resolved (2026-07-10):** Shipped "The brass weight mod: what added mass actually buys you" at `/article/brass-weight-mod`, publishedAt 2026-07-06 (gap-fill midpoint of the 8-day 2026-07-02 → 2026-07-10 gap). Ideas pillar now at 2 of ≥2 in the 30-day window — comfortable. `9066596`
 
-### [ ] [cross-links] [4.5] brass-weight-mod ↔ gasket-mount-reality — no prose cross-link (same pillar, ≥2 shared tags: modding, acoustic, mode)
+### [x] [cross-links] [4.5] brass-weight-mod ↔ gasket-mount-reality — no prose cross-link (same pillar, ≥2 shared tags: modding, acoustic, mode)
 - category: cross-links
 - filed: 2026-07-10 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -6418,3 +6418,4 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/brass-weight-mod.mdx
 - article-b: apps/web/src/content/articles/gasket-mount-reality.mdx
 - action: add [gasket-mount-reality](/article/gasket-mount-reality) to brass-weight-mod body, or vice versa
+- addressed in: 95aa229 — linked "mounting design" in brass-weight-mod's feel-change section to /article/gasket-mount-reality
