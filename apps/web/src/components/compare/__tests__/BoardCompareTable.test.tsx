@@ -1,7 +1,20 @@
-import { describe, expect, it } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import { BoardCompareTable } from '../BoardCompareTable'
 import type { Board } from '@thock/data'
+
+vi.mock('@/lib/data-runtime', async () => {
+  const actual = await vi.importActual<typeof import('@/lib/data-runtime')>(
+    '@/lib/data-runtime',
+  )
+  return {
+    ...actual,
+    getVendorBySlug: (slug: string) =>
+      slug === 'vendor-x'
+        ? { slug: 'vendor-x', name: 'Vendor X Studio', url: 'https://vendor-x.example' }
+        : null,
+  }
+})
 
 const BOARD_A: Board = {
   slug: 'board-a',
@@ -71,5 +84,11 @@ describe('<BoardCompareTable>', () => {
     const rows = screen.getAllByTestId('compare-spec-row')
     const diffRows = rows.filter((r) => r.getAttribute('data-differs') === 'true')
     expect(diffRows.length).toBe(0)
+  })
+
+  it('resolves vendorSlug to the vendor display name, falling back to the raw slug when unknown', () => {
+    render(<BoardCompareTable boardA={BOARD_A} boardB={BOARD_B} />)
+    expect(screen.getByText('Vendor X Studio')).toBeInTheDocument()
+    expect(screen.getByText('vendor-y')).toBeInTheDocument()
   })
 })

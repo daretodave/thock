@@ -2,6 +2,7 @@ import type { ReactElement } from 'react'
 import Link from 'next/link'
 import type { Board } from '@thock/data'
 import { Container, Mono } from '@thock/ui'
+import { getVendorBySlug } from '@/lib/data-runtime'
 
 const DATE_FMT = new Intl.DateTimeFormat('en-US', {
   dateStyle: 'medium',
@@ -26,7 +27,7 @@ function boardSpecRows(b: Board): SpecRow[] {
     { label: 'Wireless', value: b.wireless ? 'yes' : 'no' },
     { label: 'Status', value: b.status },
     { label: 'Released', value: formatDate(b.releasedAt) },
-    { label: 'Vendor', value: b.vendorSlug },
+    { label: 'Vendor', value: getVendorBySlug(b.vendorSlug)?.name ?? b.vendorSlug },
   ]
 }
 
