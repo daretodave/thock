@@ -66,6 +66,17 @@ describe('recommendSwitch', () => {
     expect((top?.switch.springGrams.actuation ?? 999)).toBeLessThanOrEqual(50)
   })
 
+  it('G: ranks a lighter silent-linear switch above a heavier plain linear switch for smooth + gaming + light answers', () => {
+    const answers: QuizAnswers = {
+      soundProfile: 'neutral',
+      actuationFeel: 'smooth',
+      springWeight: 'light',
+      primaryUse: 'gaming',
+    }
+    const results = recommendSwitch(answers, [LINEAR_MED, SILENT_LINEAR])
+    expect(results[0]?.switch.type).toBe('silent-linear')
+  })
+
   it('D: returns empty array for empty catalog', () => {
     const answers: QuizAnswers = {
       soundProfile: 'neutral',

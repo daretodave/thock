@@ -20,7 +20,7 @@ function scoreSoundProfile(sw: Switch, profile: QuizAnswers['soundProfile']): nu
       )
     case 'crisp':
       return (
-        (sw.type.startsWith('linear') ? 4 : 0) +
+        (sw.type === 'linear' || sw.type === 'silent-linear' ? 4 : 0) +
         (sw.housingTop === 'nylon' ? 3 : 0) +
         (sw.housingBottom === 'nylon' ? 3 : 0)
       )
@@ -32,7 +32,7 @@ function scoreSoundProfile(sw: Switch, profile: QuizAnswers['soundProfile']): nu
 }
 
 function scoreActuationFeel(sw: Switch, feel: QuizAnswers['actuationFeel']): number {
-  if (feel === 'smooth') return sw.type.startsWith('linear') ? 8 : 0
+  if (feel === 'smooth') return sw.type === 'linear' || sw.type === 'silent-linear' ? 8 : 0
   if (feel === 'tactile') return sw.type === 'tactile' || sw.type === 'silent-tactile' ? 8 : 0
   if (feel === 'clicky') return sw.type === 'clicky' ? 8 : 0
   return 0
@@ -53,9 +53,13 @@ function scoreSpringWeight(sw: Switch, weight: QuizAnswers['springWeight']): num
 function scorePrimaryUse(sw: Switch, use: QuizAnswers['primaryUse']): number {
   switch (use) {
     case 'gaming':
-      return (sw.type.startsWith('linear') ? 4 : 0) + (sw.springGrams.actuation <= 50 ? 3 : 0)
+      return (sw.type === 'linear' || sw.type === 'silent-linear' ? 4 : 0) + (sw.springGrams.actuation <= 50 ? 3 : 0)
     case 'typing':
-      return sw.type === 'tactile' || sw.type === 'silent-tactile' ? 6 : sw.type.startsWith('linear') ? 2 : 0
+      return sw.type === 'tactile' || sw.type === 'silent-tactile'
+        ? 6
+        : sw.type === 'linear' || sw.type === 'silent-linear'
+          ? 2
+          : 0
     case 'office':
       return sw.type === 'silent-linear' || sw.type === 'silent-tactile' ? 8 : sw.type === 'linear' ? 2 : sw.type === 'tactile' ? 1 : 0
   }
