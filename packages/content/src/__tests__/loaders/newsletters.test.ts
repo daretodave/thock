@@ -7,14 +7,17 @@ describe('newsletters loader', () => {
 
   it('returns every issue, newest first', () => {
     const newsletters = getAllNewsletters()
-    expect(newsletters).toHaveLength(2)
+    expect(newsletters).toHaveLength(3)
     const first = newsletters[0]!
-    expect(first.slug).toBe('thock-weekly-002')
-    expect(first.frontmatter.issue).toBe(2)
-    expect(first.frontmatter.title).toBe('thock weekly — issue 002')
+    expect(first.slug).toBe('thock-weekly-003')
+    expect(first.frontmatter.issue).toBe(3)
+    expect(first.frontmatter.title).toBe('thock weekly — issue 003')
     const second = newsletters[1]!
-    expect(second.slug).toBe('thock-weekly-001')
-    expect(second.frontmatter.issue).toBe(1)
+    expect(second.slug).toBe('thock-weekly-002')
+    expect(second.frontmatter.issue).toBe(2)
+    const third = newsletters[2]!
+    expect(third.slug).toBe('thock-weekly-001')
+    expect(third.frontmatter.issue).toBe(1)
   })
 
   it('getNewsletterBySlug returns the inaugural issue by slug', () => {
@@ -27,6 +30,12 @@ describe('newsletters loader', () => {
     const newsletter = getNewsletterBySlug('thock-weekly-002')
     expect(newsletter).not.toBeNull()
     expect(newsletter?.frontmatter.issue).toBe(2)
+  })
+
+  it('getNewsletterBySlug returns issue 003 by slug', () => {
+    const newsletter = getNewsletterBySlug('thock-weekly-003')
+    expect(newsletter).not.toBeNull()
+    expect(newsletter?.frontmatter.issue).toBe(3)
   })
 
   it('getNewsletterBySlug returns null for unknown slug', () => {
