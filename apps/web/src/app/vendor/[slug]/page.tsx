@@ -14,6 +14,7 @@ import {
   getGroupBuysByVendor,
   getVendorBySlug,
 } from '@/lib/data-runtime'
+import { countryLabel } from '@/lib/vendor-country'
 import { PageSectionKicker } from '@/components/ui/PageSectionKicker'
 import { VendorGroupBuySection } from '@/components/vendor/VendorGroupBuySection'
 import { VendorBoardSection } from '@/components/vendor/VendorBoardSection'
@@ -41,18 +42,6 @@ export async function generateMetadata({
   })
 }
 
-const COUNTRY_LABEL: Record<string, string> = {
-  US: 'United States',
-  CN: 'China',
-  JP: 'Japan',
-  DE: 'Germany',
-  UK: 'United Kingdom',
-  HK: 'Hong Kong',
-  NL: 'Netherlands',
-  KR: 'South Korea',
-  TW: 'Taiwan',
-}
-
 export default async function VendorDetailPage({
   params,
 }: {
@@ -78,7 +67,7 @@ export default async function VendorDetailPage({
   })
   const boards = getBoardsByVendor(slug)
   const path = `/vendor/${slug}`
-  const countryLabel = COUNTRY_LABEL[vendor.countryCode] ?? vendor.countryCode
+  const country = countryLabel(vendor.countryCode)
 
   return (
     <main id="main" className="flex-1">
@@ -112,7 +101,7 @@ export default async function VendorDetailPage({
             {vendor.name}
           </h1>
           <div className="flex flex-wrap items-center gap-x-4 gap-y-1 font-mono text-small uppercase tracking-[0.08em] text-text-2">
-            <span data-testid="vendor-detail-country">{countryLabel}</span>
+            <span data-testid="vendor-detail-country">{country}</span>
             <a
               href={vendor.url}
               target="_blank"

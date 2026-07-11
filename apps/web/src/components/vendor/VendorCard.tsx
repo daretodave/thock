@@ -1,18 +1,7 @@
 import type { ReactElement } from 'react'
 import Link from 'next/link'
 import type { Vendor } from '@thock/data'
-
-const COUNTRY_LABEL: Record<string, string> = {
-  US: 'United States',
-  CN: 'China',
-  JP: 'Japan',
-  DE: 'Germany',
-  UK: 'United Kingdom',
-  HK: 'Hong Kong',
-  NL: 'Netherlands',
-  KR: 'South Korea',
-  TW: 'Taiwan',
-}
+import { countryLabel } from '@/lib/vendor-country'
 
 function truncate(text: string, max = 130): string {
   if (text.length <= max) return text
@@ -24,7 +13,7 @@ export type VendorCardProps = {
 }
 
 export function VendorCard({ vendor }: VendorCardProps): ReactElement {
-  const countryLabel = COUNTRY_LABEL[vendor.countryCode] ?? vendor.countryCode
+  const country = countryLabel(vendor.countryCode)
   return (
     <div
       data-testid="vendor-card"
@@ -42,7 +31,7 @@ export function VendorCard({ vendor }: VendorCardProps): ReactElement {
           data-testid="vendor-card-country"
           className="font-mono text-micro uppercase tracking-[0.08em] text-text-2"
         >
-          {countryLabel}
+          {country}
         </span>
       </div>
       <p

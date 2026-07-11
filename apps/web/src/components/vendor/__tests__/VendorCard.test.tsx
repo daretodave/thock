@@ -27,6 +27,11 @@ describe('VendorCard', () => {
     expect(screen.getByTestId('vendor-card-country')).toHaveTextContent('United States')
   })
 
+  it('renders France for a vendor with countryCode FR', () => {
+    render(<VendorCard vendor={{ ...VENDOR, countryCode: 'FR' }} />)
+    expect(screen.getByTestId('vendor-card-country')).toHaveTextContent('France')
+  })
+
   it('renders description text', () => {
     render(<VendorCard vendor={VENDOR} />)
     const desc = screen.getByTestId('vendor-card-description')
