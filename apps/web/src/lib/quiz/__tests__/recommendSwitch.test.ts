@@ -98,6 +98,19 @@ describe('recommendSwitch', () => {
     expect(results[0]?.switch.type).toBe('clicky')
   })
 
+  it('H: does not give an ultra-light switch the same medium near-miss credit as a true medium switch', () => {
+    const ultraLight = makeSwitch({ slug: 'ultra-light', type: 'silent-linear', springGrams: { actuation: 37, bottomOut: 55 } })
+    const trueMedium = makeSwitch({ slug: 'true-medium', type: 'linear', springGrams: { actuation: 55, bottomOut: 65 } })
+    const answers: QuizAnswers = {
+      soundProfile: 'neutral',
+      actuationFeel: 'smooth',
+      springWeight: 'medium',
+      primaryUse: 'office',
+    }
+    const results = recommendSwitch(answers, [ultraLight, trueMedium])
+    expect(results[0]?.switch.slug).toBe('true-medium')
+  })
+
   it('E: returns at most 3 results even with 8 switches', () => {
     const catalog = Array.from({ length: 8 }, (_, i) =>
       makeSwitch({ slug: `sw-${i}`, springGrams: { actuation: 45 + i * 2, bottomOut: 60 + i * 2 } }),

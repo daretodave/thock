@@ -44,7 +44,7 @@ function scoreSpringWeight(sw: Switch, weight: QuizAnswers['springWeight']): num
     case 'light':
       return g <= 45 ? 8 : g <= 55 ? 4 : 0
     case 'medium':
-      return g >= 46 && g <= 59 ? 8 : g <= 65 ? 4 : 0
+      return g >= 46 && g <= 59 ? 8 : g >= 40 && g <= 65 ? 4 : 0
     case 'heavy':
       return g >= 60 ? 8 : g >= 55 ? 4 : 0
   }
