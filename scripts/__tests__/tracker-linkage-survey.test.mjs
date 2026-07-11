@@ -59,6 +59,46 @@ describe('findMissingLinks — violation', () => {
     // first seen should be W20 (the earliest)
     assert.equal(missing[0].firstSeenWeek, '2026-W20')
   })
+
+  test('flags a topic re-unlinked in a later run after being linked in an earlier run (regression: "ever linked" masking)', () => {
+    // Reproduces the real W22 / W24-W26 / W28 recurrence: a topic is linked
+    // in one run, goes flat (run breaks), then comes back non-flat in a new
+    // run that is never linked. The old "ever linked" check treated the
+    // topic as permanently linked after the first run and never re-flagged it.
+    const snapshots = [
+      makeSnapshot('2026-W15', '2026-04-13T00:00:00.000Z', [
+        makeRow('Prototypist', 'up', 'vendor-first-customs'),
+      ]),
+      makeSnapshot('2026-W16', '2026-04-20T00:00:00.000Z', [
+        makeRow('Prototypist', 'flat', null), // run breaks here
+      ]),
+      makeSnapshot('2026-W17', OLD_DATE, [
+        makeRow('Prototypist', 'up', null), // new run starts, never linked
+      ]),
+    ]
+    const missing = findMissingLinks(snapshots, TODAY)
+    assert.equal(missing.length, 1)
+    assert.equal(missing[0].name, 'Prototypist')
+    assert.equal(missing[0].firstSeenWeek, '2026-W17')
+  })
+
+  test('flags a topic whose run continues non-flat but drops its slug in a later snapshot', () => {
+    // No flat break at all — the run just keeps going, but a later week's
+    // independently-authored snapshot forgot to carry the slug forward.
+    const snapshots = [
+      makeSnapshot('2026-W20', OLD_DATE, [
+        makeRow('Topic B', 'up', 'topic-b-article'),
+      ]),
+      makeSnapshot('2026-W21', '2026-05-25T00:00:00.000Z', [
+        makeRow('Topic B', 'down', null),
+      ]),
+    ]
+    const missing = findMissingLinks(snapshots, TODAY)
+    assert.equal(missing.length, 1)
+    assert.equal(missing[0].name, 'Topic B')
+    // run started at W20 (never broke), so age is measured from there
+    assert.equal(missing[0].firstSeenWeek, '2026-W20')
+  })
 })
 
 // ── findMissingLinks — no violation (has articleSlug) ────────────────────────

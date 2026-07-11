@@ -55,44 +55,71 @@ function loadSnapshots() {
 
 // ── Gap detection ─────────────────────────────────────────────────────────────
 
-// Returns missing-link records for topics that:
-//   - Have direction !== 'flat' in at least one snapshot
-//   - Have never had articleSlug set in any snapshot
-//   - First appeared as non-flat more than 14 days before `today`
+// Returns missing-link records for topics whose CURRENT contiguous non-flat
+// run has no articleSlug on its latest row, where the run started more than
+// 14 days before `today`.
+//
+// A "run" is a maximal streak of consecutive snapshots (chronological) in
+// which the topic appears with direction !== 'flat'. A flat row, or the
+// topic being absent from a snapshot, breaks the run — the next non-flat
+// appearance starts a fresh run with its own start date.
+//
+// This intentionally does NOT treat "linked once, ever" as permanently
+// linked: each weekly snapshot is independently authored (Phase 31 cadence),
+// so an articleSlug set in an earlier run does not carry forward into a
+// later run automatically. Checking only the latest row's slug against the
+// current run's start date is what catches a topic that was linked, went
+// flat, and came back non-flat unlinked — the "ever linked" version of this
+// function masked exactly that case across three recurrences (W22, W24/W26,
+// W28 — see plan/AUDIT.md).
 //
 // `today` is a Date object (injectable for tests).
 function findMissingLinks(snapshots, today) {
-  // Map: topic name → { firstSeenNonFlatDate, hasArticleSlug, isoWeek }
+  // Map: topic name → { runStartDate, runStartWeek, latestHasSlug, latestNonFlat }
   const topicMap = new Map()
 
   for (const snapshot of snapshots) {
     const snapshotDate = new Date(snapshot.publishedAt)
     const isoWeek = snapshot.isoWeek
+    const seenThisSnapshot = new Set()
 
     for (const row of snapshot.rows || []) {
       const name = row.name
       if (!name) continue
+      seenThisSnapshot.add(name)
 
       const isNonFlat = row.direction !== 'flat'
       const hasSlug = Boolean(row.articleSlug)
 
-      if (!topicMap.has(name)) {
-        topicMap.set(name, {
-          firstSeenNonFlatDate: isNonFlat ? snapshotDate : null,
-          firstSeenNonFlatWeek: isNonFlat ? isoWeek : null,
-          hasArticleSlug: hasSlug,
-        })
+      let entry = topicMap.get(name)
+      if (!entry) {
+        entry = { runStartDate: null, runStartWeek: null, latestHasSlug: false, latestNonFlat: false }
+        topicMap.set(name, entry)
+      }
+
+      if (isNonFlat) {
+        // Start a new run only if the prior run was broken (flat/absent).
+        if (entry.runStartDate === null) {
+          entry.runStartDate = snapshotDate
+          entry.runStartWeek = isoWeek
+        }
       } else {
-        const entry = topicMap.get(name)
-        // Update first seen non-flat date (earliest non-flat appearance)
-        if (isNonFlat && entry.firstSeenNonFlatDate === null) {
-          entry.firstSeenNonFlatDate = snapshotDate
-          entry.firstSeenNonFlatWeek = isoWeek
-        }
-        // Once a slug is set in any snapshot, the topic is considered linked
-        if (hasSlug) {
-          entry.hasArticleSlug = true
-        }
+        // Flat row breaks the run.
+        entry.runStartDate = null
+        entry.runStartWeek = null
+      }
+
+      entry.latestHasSlug = hasSlug
+      entry.latestNonFlat = isNonFlat
+    }
+
+    // Topics absent from this snapshot also have their run broken — a gap
+    // in coverage is not a continuation of the prior trending streak.
+    for (const [name, entry] of topicMap) {
+      if (!seenThisSnapshot.has(name)) {
+        entry.runStartDate = null
+        entry.runStartWeek = null
+        entry.latestNonFlat = false
       }
     }
   }
@@ -101,14 +128,15 @@ function findMissingLinks(snapshots, today) {
   const todayMs = today.getTime()
 
   for (const [name, entry] of topicMap) {
-    if (entry.hasArticleSlug) continue
-    if (!entry.firstSeenNonFlatDate) continue // never was non-flat
-    const age = todayMs - entry.firstSeenNonFlatDate.getTime()
+    if (!entry.latestNonFlat) continue // latest row is flat or topic dropped out
+    if (entry.latestHasSlug) continue // current run's latest row is linked
+    if (!entry.runStartDate) continue // should be unreachable when latestNonFlat is true
+    const age = todayMs - entry.runStartDate.getTime()
     if (age > FOURTEEN_DAYS_MS) {
       missing.push({
         name,
-        firstSeenWeek: entry.firstSeenNonFlatWeek,
-        firstSeenDate: entry.firstSeenNonFlatDate.toISOString().slice(0, 10),
+        firstSeenWeek: entry.runStartWeek,
+        firstSeenDate: entry.runStartDate.toISOString().slice(0, 10),
         agedays: Math.floor(age / (24 * 60 * 60 * 1000)),
       })
     }
