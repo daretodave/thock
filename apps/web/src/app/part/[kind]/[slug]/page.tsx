@@ -29,6 +29,12 @@ const KIND_HUMAN: Record<ResolvedPart['kind'], string> = {
   board: 'Board',
 }
 
+const KIND_PLURAL: Record<ResolvedPart['kind'], string> = {
+  switch: 'switches',
+  'keycap-set': 'keycap sets',
+  board: 'boards',
+}
+
 const VALID_KINDS = ['switch', 'keycap-set', 'board'] as const
 type ValidKind = (typeof VALID_KINDS)[number]
 
@@ -197,7 +203,7 @@ export default async function PartDetailPage({
             data-testid="part-detail-back-link"
             className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text"
           >
-            ← all {kindHuman.toLowerCase()}s
+            ← all {KIND_PLURAL[part.kind]}
           </Link>
         </Stack>
       </Container>
