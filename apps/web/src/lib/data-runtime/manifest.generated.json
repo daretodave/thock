@@ -4160,7 +4160,7 @@
             28,
             25
           ],
-          "articleSlug": null,
+          "articleSlug": "vendor-first-customs",
           "note": "Quiet week between group buys; the Paper 65 and teased Smurve80/Kafka/VS06 kits keep the pipeline visible but no dated launch news surfaced this week."
         },
         {
@@ -4178,7 +4178,7 @@
             12,
             10
           ],
-          "articleSlug": null,
+          "articleSlug": "vendor-first-customs",
           "note": "Mammoth V2 and Promise V2 remain listed as in-development; no dated announcement this week, slow bleed continues."
         },
         {
@@ -7217,5 +7217,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-07-11T00:42:24.379Z"
+  "generatedAt": "2026-07-11T01:46:40.985Z"
 }
