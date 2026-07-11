@@ -49,7 +49,7 @@ export function PartHero({ part }: PartHeroProps): ReactElement {
         <div data-testid="part-hero-meta" className="flex flex-wrap items-center gap-x-4 gap-y-1 font-mono text-small uppercase tracking-[0.08em] text-text-2">
           {vendor ? (
             <Link
-              href="/sources"
+              href={`/vendor/${vendor.slug}`}
               data-testid="part-hero-vendor"
               className="hover:text-text"
             >

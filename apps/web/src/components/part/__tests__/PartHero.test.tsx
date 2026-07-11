@@ -62,6 +62,14 @@ describe('<PartHero>', () => {
     )
   })
 
+  it('links the vendor byline to the vendor page, not /sources', () => {
+    render(<PartHero part={FAKE_SWITCH} />)
+    expect(screen.getByTestId('part-hero-vendor')).toHaveAttribute(
+      'href',
+      '/vendor/novelkeys',
+    )
+  })
+
   it('falls back to the vendor slug when the vendor record is missing', () => {
     render(<PartHero part={FAKE_BOARD} />)
     expect(screen.getByTestId('part-hero-vendor')).toHaveTextContent(
