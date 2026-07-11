@@ -6458,7 +6458,7 @@ passes accumulate signals.)
 - action: `apps/web/src/app/tag/[slug]/page.tsx` — title (line 56) and 3 JSON-LD `name` fields (lines 92/98/101) now use `tag.name`; visible on-page H1/lede hashtag-slug motif (phase-12 design decision) left untouched. New e2e regression in `apps/e2e/tests/tag.spec.ts` asserts `/tag/65`'s `<title>` and JSON-LD resolve to `#65%`, not `#65`.
 > `pnpm verify` full gate green: typecheck, 900 unit tests, data:validate (69 records), build, 981/981 e2e.
 
-### [ ] [newsletter] [4.0] Weekly digest — issue 003 due (7 days since issue 2)
+### [x] [newsletter] [4.0] Weekly digest — issue 003 due (7 days since issue 2) — addressed in e271893, closes #439
 - category: content-gaps
 - filed: 2026-07-11 by newsletter-gap-survey.mjs
 - impact: 5 (newsletter archive going stale reduces /newsletter value and reader trust in cadence)
@@ -6469,3 +6469,4 @@ passes accumulate signals.)
 - days-since: 7
 - issue: #439
 > Filed 2026-07-11 by newsletter-gap-survey.mjs. 7 days since issue 2. Threshold: ≥7 calendar days.
+> **Resolved (2026-07-11):** Shipped `thock-weekly-003.mdx` — 5 pillar picks (GMK CYL Masterpiece R2 group buy, gaming-boards-spec-war trends piece, brass weight mod, keyboard acoustics deep dive, split/ergo buyer's guide) + a W28 tracker snapshot (Hall Effect/Rapid Trigger, Keychron, Split/Ergo all riding the Orca Echo crowdfunding story; Cherry MX2A counter-note). Swapped the deep-dive pick from durock-t1-deep-dive to keyboard-acoustics-deep-dive after `article-parts-check.mjs` flagged the exact catalog switch name "Durock T1" in prose — newsletters can't carry `mentionedParts` (5-field schema only), so any pick whose title reproduces a literal catalog entity name will always fail that gate; picking generically-titled deep dives sidesteps it. `pnpm verify` full gate green: typecheck, unit tests (newsletters loader updated for 3-issue archive), data:validate, build, 981/981 e2e. `e271893`
