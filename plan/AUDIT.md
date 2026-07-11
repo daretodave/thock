@@ -6457,3 +6457,15 @@ passes accumulate signals.)
 - issue: #438
 - action: `apps/web/src/app/tag/[slug]/page.tsx` — title (line 56) and 3 JSON-LD `name` fields (lines 92/98/101) now use `tag.name`; visible on-page H1/lede hashtag-slug motif (phase-12 design decision) left untouched. New e2e regression in `apps/e2e/tests/tag.spec.ts` asserts `/tag/65`'s `<title>` and JSON-LD resolve to `#65%`, not `#65`.
 > `pnpm verify` full gate green: typecheck, 900 unit tests, data:validate (69 records), build, 981/981 e2e.
+
+### [ ] [newsletter] [4.0] Weekly digest — issue 003 due (7 days since issue 2)
+- category: content-gaps
+- filed: 2026-07-11 by newsletter-gap-survey.mjs
+- impact: 5 (newsletter archive going stale reduces /newsletter value and reader trust in cadence)
+- ease: 8 (content-curator weekly round-up: 5 pillar picks + tracker insight)
+- score: 4.0 (impact × ease / 10)
+- next: /ship-content → newsletter type (weekly round-up, 5 pillar picks, tracker insight)
+- last-issue: 2026-07-03 (thock-weekly-002)
+- days-since: 7
+- issue: [mirror-failed: 2026-07-11]
+> Filed 2026-07-11 by newsletter-gap-survey.mjs. 7 days since issue 2. Threshold: ≥7 calendar days.
