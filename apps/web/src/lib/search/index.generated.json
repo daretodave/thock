@@ -899,7 +899,7 @@
       },
       "32": {
         "slug": "gsk-sweet-nightmare-group-buy",
-        "title": "GSK Sweet Nightmare runs a four-day window at KBDfans with an eight-variant matrix",
+        "title": "GSK Sweet Nightmare ran a four-day window at KBDfans with an eight-variant matrix",
         "lede": "Goldenstar's Sweet Nightmare resin run opened at KBDfans on 2026-05-08 and closed 2026-05-11. The four-day window is unusually tight for a formal group buy, and the eight-variant matrix — four colorways across two finishes — compresses a configurator's worth of choices into a half-week.",
         "pillar": "news",
         "tags": [
@@ -939,7 +939,7 @@
       },
       "35": {
         "slug": "mode-sonnet-r2-group-buy-coverage",
-        "title": "Mode Sonnet R2 opens at CannonKeys",
+        "title": "Mode Sonnet R2 opened at CannonKeys",
         "lede": "Mode's second round of its 65% Sonnet board is now open at CannonKeys, running from 2026-06-01 through 2026-07-15 after a vendor-side timeline shift. See the in-article update for the dates and accent-weight color options.",
         "pillar": "news",
         "tags": [
@@ -20143,9 +20143,6 @@
       [
         "runs",
         {
-          "0": {
-            "32": 1
-          },
           "2": {
             "20": 1,
             "46": 1
@@ -20431,6 +20428,9 @@
       [
         "ran",
         {
+          "0": {
+            "32": 1
+          },
           "2": {
             "14": 1,
             "21": 1,
@@ -73927,6 +73927,7 @@
         "opened",
         {
           "0": {
+            "35": 1,
             "46": 1
           },
           "2": {
@@ -73975,9 +73976,6 @@
       [
         "opens",
         {
-          "0": {
-            "35": 1
-          },
           "3": {
             "8": 2,
             "11": 1,
@@ -97944,7 +97942,7 @@
     {
       "id": "gsk-sweet-nightmare-group-buy",
       "slug": "gsk-sweet-nightmare-group-buy",
-      "title": "GSK Sweet Nightmare runs a four-day window at KBDfans with an eight-variant matrix",
+      "title": "GSK Sweet Nightmare ran a four-day window at KBDfans with an eight-variant matrix",
       "lede": "Goldenstar's Sweet Nightmare resin run opened at KBDfans on 2026-05-08 and closed 2026-05-11. The four-day window is unusually tight for a formal group buy, and the eight-variant matrix — four colorways across two finishes — compresses a configurator's worth of choices into a half-week.",
       "pillar": "news",
       "tags": [
@@ -97987,7 +97985,7 @@
     {
       "id": "mode-sonnet-r2-group-buy-coverage",
       "slug": "mode-sonnet-r2-group-buy-coverage",
-      "title": "Mode Sonnet R2 opens at CannonKeys",
+      "title": "Mode Sonnet R2 opened at CannonKeys",
       "lede": "Mode's second round of its 65% Sonnet board is now open at CannonKeys, running from 2026-06-01 through 2026-07-15 after a vendor-side timeline shift. See the in-article update for the dates and accent-weight color options.",
       "pillar": "news",
       "tags": [
@@ -98624,6 +98622,6 @@
       "name": "QK75"
     }
   ],
-  "generatedAt": "2026-07-11T01:46:41.850Z",
+  "generatedAt": "2026-07-11T05:12:45.747Z",
   "count": 63
 }
