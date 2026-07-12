@@ -1,6 +1,11 @@
 import type { ReactElement } from 'react'
 import { Container } from '@thock/ui'
-import { buildBreadcrumbListJsonLd, buildMetadata, JsonLd } from '@thock/seo'
+import {
+  buildBreadcrumbListJsonLd,
+  buildMetadata,
+  canonicalUrl,
+  JsonLd,
+} from '@thock/seo'
 import { getAllKeycapSets } from '@/lib/data-runtime'
 import { KeycapSetQuiz } from '@/components/quiz/KeycapSetQuiz'
 
@@ -17,7 +22,7 @@ const WEB_APP_JSON_LD = {
   name: 'thock keycap-set recommender',
   description:
     'A 4-question quiz that finds your ideal mechanical keyboard keycap set.',
-  url: 'https://thock.xyz/quiz/keycap-set',
+  url: canonicalUrl('/quiz/keycap-set'),
   applicationCategory: 'UtilityApplication',
 }
 

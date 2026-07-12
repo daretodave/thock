@@ -1,6 +1,11 @@
 import type { ReactElement } from 'react'
 import { Container } from '@thock/ui'
-import { buildBreadcrumbListJsonLd, buildMetadata, JsonLd } from '@thock/seo'
+import {
+  buildBreadcrumbListJsonLd,
+  buildMetadata,
+  canonicalUrl,
+  JsonLd,
+} from '@thock/seo'
 import { getAllSwitches } from '@/lib/data-runtime'
 import { SwitchQuiz } from '@/components/quiz/SwitchQuiz'
 
@@ -17,7 +22,7 @@ const WEB_APP_JSON_LD = {
   name: 'thock switch recommender',
   description:
     'A 4-question quiz that finds your ideal mechanical keyboard switch.',
-  url: 'https://thock.xyz/quiz/switch',
+  url: canonicalUrl('/quiz/switch'),
   applicationCategory: 'UtilityApplication',
 }
 
