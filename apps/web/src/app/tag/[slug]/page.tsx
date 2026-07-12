@@ -78,6 +78,12 @@ export default async function TagPage({
   const allTags = getAllTags()
   const tagsBySlug = new Map<string, Tag>(allTags.map((t) => [t.slug, t]))
   const tint = CATEGORY_TINT[tag.category] ?? CATEGORY_TINT.misc
+  // Chrome renders the lowercase #slug form (critique pass 8 — avoids
+  // Title-Cased names looking wrong as a hashtag). That breaks for the
+  // handful of tags where the slug drops meaning the name carries (e.g.
+  // "65" vs. "65%") — a bare numeric slug isn't a keyboard layout size on
+  // its own, so those fall back to the full display name instead.
+  const visibleLabel = /^[0-9]+$/.test(tag.slug) ? tag.name : tag.slug
 
   const itemListItems = articles.map((a) => ({
     name: a.frontmatter.title,
@@ -116,14 +122,14 @@ export default async function TagPage({
             data-testid="tag-page-h1"
             className="font-serif italic text-h1 sm:text-display text-text"
           >
-            #{tag.slug}
+            #{visibleLabel}
           </h1>
           <p
             data-testid="tag-page-lede"
             className="max-w-[60ch] font-serif text-h3 text-text-2"
           >
             {articles.length} {articles.length === 1 ? 'article' : 'articles'}{' '}
-            tagged #{tag.slug}.
+            tagged #{visibleLabel}.
           </p>
           <Link
             href="/tags"
@@ -139,7 +145,7 @@ export default async function TagPage({
         <Container as="section" className="pb-12 sm:pb-16">
           <HomeSectionHeading
             kicker="Latest first"
-            title={`Every #${tag.slug} piece`}
+            title={`Every #${visibleLabel} piece`}
           />
           <div data-testid="tag-archive-list" className="flex flex-col">
             {articles.map((article) => (
@@ -157,7 +163,7 @@ export default async function TagPage({
           <Stack gap={4}>
             <PageSectionKicker>empty tag</PageSectionKicker>
             <h2 className="font-serif text-h2 text-text">
-              No articles tagged #{tag.slug} yet.
+              No articles tagged #{visibleLabel} yet.
             </h2>
             <p className="max-w-[60ch] font-serif text-h3 text-text-2">
               When something lands under this tag, it shows up here first.

@@ -73,6 +73,23 @@ test.describe('tag pages — phase 12', () => {
     expect(flat).not.toMatch(/"name":"#65"/)
   })
 
+  test('visible H1/lede/heading/empty-state also resolve numeric-slug tags to the full display name', async ({
+    page,
+  }) => {
+    // The JSON-LD/title fix above only covered machine-readable surfaces;
+    // the H1/lede/section-heading/empty-state chrome still rendered the
+    // bare "#65" slug (which reads as a stray number, not a layout size)
+    // because the pass-8 "#slug" convention assumed slug/name only ever
+    // differ by case. "65"/"75" are the only numeric slugs where they
+    // diverge in meaning, so those two fall back to the display name.
+    await page.goto('/tag/65')
+    const h1 = page.getByTestId('tag-page-h1')
+    await expect(h1).toContainText('#65%')
+    await expect(h1).not.toHaveText('#65')
+    const lede = page.getByTestId('tag-page-lede')
+    await expect(lede).toContainText('tagged #65%')
+  })
+
   test('does not render the tag page chrome for an unknown slug', async ({
     page,
   }) => {
