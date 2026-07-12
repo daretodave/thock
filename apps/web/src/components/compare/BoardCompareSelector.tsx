@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, type ReactElement } from 'react'
+import { useEffect, useState, type ReactElement } from 'react'
 import { useRouter } from 'next/navigation'
 import type { Board } from '@thock/data'
 
@@ -18,6 +18,9 @@ export function BoardCompareSelector({
   const router = useRouter()
   const [a, setA] = useState(initialA)
   const [b, setB] = useState(initialB)
+
+  useEffect(() => setA(initialA), [initialA])
+  useEffect(() => setB(initialB), [initialB])
 
   const canCompare = a !== '' && b !== '' && a !== b
 

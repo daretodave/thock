@@ -75,4 +75,26 @@ describe('<SwitchCompareSelector>', () => {
     )
     expect(screen.getByTestId('compare-button')).toBeEnabled()
   })
+
+  it('resyncs selected values when initialA/initialB change on rerender (back/forward nav)', () => {
+    const { rerender } = render(
+      <SwitchCompareSelector
+        switches={SWITCHES}
+        initialA="gateron-oil-king"
+        initialB="cherry-mx2a-red"
+      />,
+    )
+    expect(screen.getByTestId('compare-select-a')).toHaveValue('gateron-oil-king')
+    expect(screen.getByTestId('compare-select-b')).toHaveValue('cherry-mx2a-red')
+
+    rerender(
+      <SwitchCompareSelector
+        switches={SWITCHES}
+        initialA="drop-holy-panda-x"
+        initialB="gateron-oil-king"
+      />,
+    )
+    expect(screen.getByTestId('compare-select-a')).toHaveValue('drop-holy-panda-x')
+    expect(screen.getByTestId('compare-select-b')).toHaveValue('gateron-oil-king')
+  })
 })

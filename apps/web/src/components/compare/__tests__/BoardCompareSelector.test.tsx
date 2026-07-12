@@ -74,4 +74,26 @@ describe('<BoardCompareSelector>', () => {
     )
     expect(screen.getByTestId('compare-button')).toBeEnabled()
   })
+
+  it('resyncs selected values when initialA/initialB change on rerender (back/forward nav)', () => {
+    const { rerender } = render(
+      <BoardCompareSelector
+        boards={BOARDS}
+        initialA="mode-sonnet"
+        initialB="bakeneko65"
+      />,
+    )
+    expect(screen.getByTestId('compare-select-a')).toHaveValue('mode-sonnet')
+    expect(screen.getByTestId('compare-select-b')).toHaveValue('bakeneko65')
+
+    rerender(
+      <BoardCompareSelector
+        boards={BOARDS}
+        initialA="class80"
+        initialB="mode-sonnet"
+      />,
+    )
+    expect(screen.getByTestId('compare-select-a')).toHaveValue('class80')
+    expect(screen.getByTestId('compare-select-b')).toHaveValue('mode-sonnet')
+  })
 })
