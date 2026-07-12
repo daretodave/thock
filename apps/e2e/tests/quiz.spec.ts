@@ -50,6 +50,9 @@ test.describe('/quiz/keycap-set — phase 47', () => {
     await page.goto('/quiz/keycap-set')
     for (let i = 0; i < 4; i++) {
       await page.getByRole('button').first().click()
+      if (i < 3) {
+        await expect(page.getByText(new RegExp(`question ${i + 2} of 4`, 'i'))).toBeVisible()
+      }
     }
     await expect(page.getByTestId('keycap-quiz-results')).toBeVisible()
     await page.getByRole('button', { name: /start over/i }).click()
@@ -118,6 +121,9 @@ test.describe('/quiz/switch — phase 33', () => {
     await page.goto('/quiz/switch')
     for (let i = 0; i < 4; i++) {
       await page.getByRole('button').first().click()
+      if (i < 3) {
+        await expect(page.getByText(new RegExp(`question ${i + 2} of 4`, 'i'))).toBeVisible()
+      }
     }
     await expect(page.getByTestId('quiz-results')).toBeVisible()
     await page.getByRole('button', { name: /start over/i }).click()

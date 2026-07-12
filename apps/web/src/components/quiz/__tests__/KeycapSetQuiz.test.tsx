@@ -108,6 +108,28 @@ describe('<KeycapSetQuiz>', () => {
     expect(partsLink.textContent).toMatch(/browse all parts/i)
   })
 
+  it('rapid double-click on the same question only advances one step', () => {
+    render(<KeycapSetQuiz keycapSets={KEYCAP_SETS} />)
+    fireEvent.click(screen.getByText('Low and uniform — Cherry / OEM / XDA'))
+    fireEvent.click(screen.getByText('Low and uniform — Cherry / OEM / XDA'))
+    act(() => { vi.advanceTimersByTime(200) })
+    expect(screen.getByText(/question 2 of 4/i)).toBeInTheDocument()
+  })
+
+  it('a double-click on question 1 does not skip question 2 for the rest of the quiz', () => {
+    render(<KeycapSetQuiz keycapSets={KEYCAP_SETS} />)
+    fireEvent.click(screen.getByText('Low and uniform — Cherry / OEM / XDA'))
+    fireEvent.click(screen.getByText('Low and uniform — Cherry / OEM / XDA'))
+    act(() => { vi.advanceTimersByTime(200) })
+    fireEvent.click(screen.getByText('ABS — vibrant color, smooth surface'))
+    act(() => { vi.advanceTimersByTime(200) })
+    fireEvent.click(screen.getByText('Doubleshot — legends that never fade'))
+    act(() => { vi.advanceTimersByTime(200) })
+    fireEvent.click(screen.getByText('No preference'))
+    act(() => { vi.advanceTimersByTime(200) })
+    expect(screen.getByTestId('keycap-quiz-results')).toBeInTheDocument()
+  })
+
   it('"Start over" resets to the first question', () => {
     render(<KeycapSetQuiz keycapSets={KEYCAP_SETS} />)
     answerAllQuestions()

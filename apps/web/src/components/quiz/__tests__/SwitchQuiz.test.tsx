@@ -114,6 +114,28 @@ describe('<SwitchQuiz>', () => {
     expect(partsLink.textContent).toMatch(/browse all parts/i)
   })
 
+  it('rapid double-click on the same question only advances one step', () => {
+    render(<SwitchQuiz switches={SWITCHES} />)
+    fireEvent.click(screen.getByText('Deep and thocky'))
+    fireEvent.click(screen.getByText('Deep and thocky'))
+    act(() => { vi.advanceTimersByTime(200) })
+    expect(screen.getByText(/question 2 of 4/i)).toBeInTheDocument()
+  })
+
+  it('a double-click on question 1 does not skip question 2 for the rest of the quiz', () => {
+    render(<SwitchQuiz switches={SWITCHES} />)
+    fireEvent.click(screen.getByText('Deep and thocky'))
+    fireEvent.click(screen.getByText('Deep and thocky'))
+    act(() => { vi.advanceTimersByTime(200) })
+    fireEvent.click(screen.getByText('Smooth and linear'))
+    act(() => { vi.advanceTimersByTime(200) })
+    fireEvent.click(screen.getByText('Medium — balanced resistance'))
+    act(() => { vi.advanceTimersByTime(200) })
+    fireEvent.click(screen.getByText('Long typing sessions'))
+    act(() => { vi.advanceTimersByTime(200) })
+    expect(screen.getByTestId('quiz-results')).toBeInTheDocument()
+  })
+
   it('"Start over" resets to the first question', () => {
     render(<SwitchQuiz switches={SWITCHES} />)
     answerAllQuestions()

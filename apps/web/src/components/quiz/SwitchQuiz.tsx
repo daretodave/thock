@@ -60,6 +60,7 @@ export function SwitchQuiz({ switches }: Props) {
   const [answers, setAnswers] = useState<Partial<QuizAnswers>>({})
   const [step, setStep] = useState(0)
   const topRef = useRef<HTMLDivElement>(null)
+  const pendingAdvance = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   const totalSteps = QUESTIONS.length
   const currentQ = QUESTIONS[step]
@@ -72,7 +73,9 @@ export function SwitchQuiz({ switches }: Props) {
     if (!currentQ) return
     const next = { ...answers, [currentQ.key]: value }
     setAnswers(next)
-    setTimeout(() => {
+    if (pendingAdvance.current) clearTimeout(pendingAdvance.current)
+    pendingAdvance.current = setTimeout(() => {
+      pendingAdvance.current = null
       setStep((s) => s + 1)
       topRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' })
     }, 150)
