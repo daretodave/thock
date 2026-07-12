@@ -1,4 +1,5 @@
 import type { ReactElement } from 'react'
+import Link from 'next/link'
 import { Container, Stack } from '@thock/ui'
 import {
   buildBreadcrumbListJsonLd,
@@ -77,12 +78,12 @@ export default function PastGroupBuysPage(): ReactElement {
           >
             {past.length} closed buys
           </div>
-          <a
+          <Link
             href="/group-buys"
             className="font-mono text-micro uppercase tracking-[0.08em] text-text-2 hover:text-text"
           >
             ← back to live group buys
-          </a>
+          </Link>
         </Stack>
       </Container>
 

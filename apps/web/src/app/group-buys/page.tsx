@@ -171,13 +171,13 @@ export default function GroupBuysPage(): ReactElement {
             vendorBySlug={vendorBySlug}
           />
           <div className="mt-6 flex justify-end">
-            <a
+            <Link
               data-testid="group-buys-archive-link"
               href="/group-buys/past"
               className="font-mono text-micro uppercase tracking-[0.08em] text-text-2 hover:text-text"
             >
               view full archive →
-            </a>
+            </Link>
           </div>
         </Container>
       )}
