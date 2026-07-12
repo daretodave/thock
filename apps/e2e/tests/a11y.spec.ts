@@ -426,6 +426,33 @@ test.describe('a11y — mobile (375px)', () => {
   })
 })
 
+// Compare-tool populated-state coverage (issue #460): the desktop/mobile suites
+// above only ever axe-scan the bare selector-only empty state — neither
+// SwitchCompareTable nor BoardCompareTable had ever run a full-page axe scan.
+// The populated state renders directly off query params (no click-through
+// needed), so these navigate straight to `?a=<slug>&b=<slug>`.
+test.describe('a11y — compare tool (populated state)', () => {
+  test('switch compare results', async ({ page }) => {
+    await runAxe(page, '/compare/switch?a=akko-v3-cream-blue-pro&b=c3-tangerine-r2')
+  })
+
+  test('board compare results', async ({ page }) => {
+    await runAxe(page, '/compare/board?a=bakeneko65&b=class80')
+  })
+})
+
+test.describe('a11y — compare tool (populated state, mobile 375px)', () => {
+  test.use({ viewport: { width: 375, height: 800 } })
+
+  test('switch compare results — mobile', async ({ page }) => {
+    await runAxe(page, '/compare/switch?a=akko-v3-cream-blue-pro&b=c3-tangerine-r2')
+  })
+
+  test('board compare results — mobile', async ({ page }) => {
+    await runAxe(page, '/compare/board?a=bakeneko65&b=class80')
+  })
+})
+
 // Quiz result-view coverage (issue tracked by pass-143 expand note): every prior
 // quiz a11y pass scanned only the initial question view. The results state (a
 // distinct DOM tree — ResultCard, build sheet, retake CTA) had never run a
