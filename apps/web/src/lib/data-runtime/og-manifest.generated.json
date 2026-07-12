@@ -1237,20 +1237,23 @@
       "slug": "thock-weekly-003",
       "title": "thock weekly — issue 003",
       "lede": "GMK CYL Masterpiece R2 closes out the Katakana argument, gaming boards keep closing the spec gap, and the tracker shows Keychron's Orca Echo lifting three categories at once.",
-      "issue": 3
+      "issue": 3,
+      "readTime": 4
     },
     {
       "slug": "thock-weekly-002",
       "title": "thock weekly — issue 002",
       "lede": "Keychron's quiet takeover gets the trends treatment, DCS Dolch closes out at Divinikey, and the tracker shows hall effect and split ergo both breaking into new territory.",
-      "issue": 2
+      "issue": 2,
+      "readTime": 4
     },
     {
       "slug": "thock-weekly-001",
       "title": "thock weekly — issue 001",
       "lede": "Hall effect tops the tracker, Topre gets its deep dive, and the PE foam mod still wins on price-to-performance.",
-      "issue": 1
+      "issue": 1,
+      "readTime": 4
     }
   ],
-  "generatedAt": "2026-07-12T03:12:18.462Z"
+  "generatedAt": "2026-07-12T08:54:54.368Z"
 }

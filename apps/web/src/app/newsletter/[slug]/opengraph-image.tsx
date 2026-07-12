@@ -2,6 +2,7 @@ import { ImageResponse } from 'next/og'
 import { siteConfig } from '@thock/seo'
 import { getNewsletterForOg } from '@/lib/data-runtime/og-runtime'
 import { PillarOGContent } from '@/components/og/PillarOG'
+import { ArticleOGContent } from '@/components/og/ArticleOG'
 
 export const runtime = 'edge'
 export const size = { width: 1200, height: 630 }
@@ -28,17 +29,38 @@ export default async function OpenGraphImage({
   const { slug } = await params
   const newsletter = getNewsletterForOg(slug)
 
-  const pillarLabel = newsletter
-    ? `Issue ${String(newsletter.issue).padStart(2, '0')}`
-    : 'Newsletter'
-  const tagline = newsletter
-    ? newsletter.lede.length > 120
-      ? `${newsletter.lede.slice(0, 117).trimEnd()}…`
+  if (!newsletter) {
+    return new ImageResponse(
+      (
+        <PillarOGContent
+          pillarLabel="Newsletter"
+          tagline="Weekly signal from the mechanical keyboard world, delivered."
+        />
+      ),
+      size,
+    )
+  }
+
+  const pillarLabel = `Issue ${String(newsletter.issue).padStart(2, '0')}`
+  const title = newsletter.title
+  const titleFontSize =
+    title.length <= 36 ? 88 : title.length <= 56 ? 76 : title.length <= 72 ? 66 : 58
+  const lede =
+    newsletter.lede.length > 180
+      ? `${newsletter.lede.slice(0, 177).trimEnd()}…`
       : newsletter.lede
-    : 'Weekly signal from the mechanical keyboard world, delivered.'
 
   return new ImageResponse(
-    <PillarOGContent pillarLabel={pillarLabel} tagline={tagline} />,
+    (
+      <ArticleOGContent
+        pillarLabel={pillarLabel}
+        title={title}
+        lede={lede}
+        author="thock"
+        readTime={newsletter.readTime}
+        titleFontSize={titleFontSize}
+      />
+    ),
     size,
   )
 }

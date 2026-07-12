@@ -50,6 +50,7 @@ export type NewsletterOGData = {
   title: string
   lede: string
   issue: number
+  readTime: number
 }
 
 type OGManifest = {

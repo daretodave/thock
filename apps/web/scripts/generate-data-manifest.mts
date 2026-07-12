@@ -26,6 +26,7 @@ import {
   getAllTrendSnapshots,
 } from '@thock/data'
 import {
+  computeReadTime,
   getAllArticles,
   getAllNewsletters,
   getAllTags,
@@ -77,6 +78,7 @@ const ogManifest = {
     title: n.frontmatter.title,
     lede: n.frontmatter.lede,
     issue: n.frontmatter.issue,
+    readTime: computeReadTime(n.body),
   })),
   generatedAt: manifest.generatedAt,
 }
