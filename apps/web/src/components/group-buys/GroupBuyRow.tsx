@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import type { ReactElement } from 'react'
 import type { GroupBuy, Vendor } from '@thock/data'
 
@@ -165,13 +166,13 @@ export function GroupBuyRow({
           </a>
         )}
         {groupBuy.relatedArticle && (
-          <a
+          <Link
             data-testid="group-buy-coverage-link"
             href={`/article/${groupBuy.relatedArticle}`}
             className="font-mono text-micro uppercase tracking-[0.08em] text-text-2 hover:text-text"
           >
             read our coverage →
-          </a>
+          </Link>
         )}
       </div>
     </article>
