@@ -6,102 +6,105 @@
 
 ## Headline
 
-**Busy, clean window — ten shipped `/iterate` fixes (one a real
-root-cause engineering fix), one newsletter ship, four `/expand`
-no-op passes, zero red legs.** Since yesterday's digest (`fe4c80f`),
-the loop shipped: a vendor cross-link fix (`PartReference` now links
-inline switch mentions to the vendor, `b69b3ca`); two SEO/JSON-LD
-resolution fixes (part-page `brand.name` and tag-page title/JSON-LD
-both now resolve the display name instead of the raw slug, `05d7f4b`
-+ `8b17f57`); an a11y fix (visible focus ring on search/newsletter/404
-inputs, `fd09f7c`); a fresh newsletter issue ("thock weekly — issue
-003", `e271893`, closes #439) auto-filed by `newsletter-gap-survey.mjs`
-and drained same-window; a data fix restoring the W28 tracker's
-Prototypist + Wuque Studio vendor links (`f4d14aa`, closes #440); and,
-notably, a **durable root-cause fix** to `tracker-linkage-survey.mjs`
-(`14d19e8`, closes #441) — this was the third recurrence of the same
-masked-detection bug (W22, W24/W26, W28), each prior time patched with
-a one-off data edit; this tick rewrote the detection algorithm itself
-to track linkage per contiguous non-flat run instead of "ever linked
-across all history," with 3 new regression tests reproducing the exact
-masking bug. Three more content-accuracy fixes rounded out the window:
-past-tense group-buy titles on two articles (`d2eedf2`, closes #442),
-false claims in the `/sources` intro copy about vendor sponsored links
-and a missing citation index (`6111844`, closes #443), and a broken
-self-closing `<Source>` tag on `sound-dampening-compared` that rendered
-an empty, invisible link (`4cc57d7`, closes #444). Four `/expand`
-passes (171-174) filed 0 new candidates — the 13-row
-`plan/PHASE_CANDIDATES.md` queue is unchanged, still awaiting
-`/oversight` promotion (last oversight: **49 days ago**, 2026-05-23).
-Full breadth `pnpm verify` is green top to bottom, run fresh this tick
-as sequential foreground legs (981/981 e2e, homepage bundle flat at
-108.5 KB / 200 KB). Deploy is `READY` at HEAD (`0e9f1a7`).
-`plan/CRITIQUE.md` is now **61 days / 1261 commits** since its last
-pass — unchanged diagnosis, still the standing item to resolve. New
-since yesterday: a fresh GitHub issue (`#434`, `triage:needs-user`) —
-Vercel silently dropped the webhook/ingestion for commit `e312e09`
-(three consecutive `deploy:check` timeouts before the *next* commit
-deployed normally); flagged in Needs you.
+**Quiet, clean maintenance window — 14 shipped `/iterate` fixes (one
+a real feature: newsletter detail pages), five `/expand` no-op
+passes, zero red legs.** Since yesterday's digest (`8c4b4e4`), the
+loop shipped a steady stream of small, well-scoped defects: a
+misattributed citation (`140cba4`), two quiz-scoring bugs — a
+`startsWith('linear')` under-scoring bug and a missing lower bound on
+medium spring-weight (`edea2c0`, `dc31421`) — a part-detail
+pluralization typo (`3554e90`), a `compare/board` raw-slug leak
+(`50f2938`), a part-detail vendor byline pointing at `/sources`
+instead of the vendor page (`0381de3`), a dead-code removal
+(`PageStub`, unused since phase 16, `6290c3a`), a vendor
+country-label gap (`FR` → France, `fa4cb79`). The one substantial
+ship: **newsletter digest detail pages** — `/newsletter/[slug]`
+(`6d7568b`) — three previously-unreachable published issues (each
+with a full MDX body already loaded, never linked) now have real
+routes; three fast-follow fixes landed on that brand-new surface in
+the same window: missing JSON-LD `image` field (`0885d86`), a W25
+tracker-delta miscalculation in issue 001 (`5b8c2e2`), and an OG card
+that rendered "Issue 03" as the giant headline instead of the actual
+title (`8195409`). Two more standalone fixes closed the window:
+tracker archive pages no longer claim "this week" for months-old
+snapshots (`cc2b97c`), and numeric tag slugs (`/tag/65`, `/tag/75`)
+now render "#65%"/"#75%" instead of a bare ambiguous number
+(`52455a3`). Five `/expand` passes (175-179) filed 0 new candidates
+— the 13-row `plan/PHASE_CANDIDATES.md` queue is unchanged, still
+awaiting `/oversight` promotion. Full breadth `pnpm verify` is green
+top to bottom, run fresh this tick as sequential foreground legs
+(995/995 e2e, homepage bundle flat at 108.5 KB / 200 KB). Deploy is
+`READY` at HEAD (`7e0fe3d`). `plan/CRITIQUE.md` is now **63 days /
+1295 commits** since its last pass — unchanged diagnosis, still the
+standing item to resolve. No new GitHub issues since yesterday; the
+Vercel webhook-drop issue (`#434`) and the 8 duplicate content-gap
+issues remain open, unchanged.
 
 ## While you were out
 
 | When (UTC) | Tick | Outcome |
 |---|---|---|
-| 07-10 13:06 | iterate | `PartReference` — link inline switch mentions to the vendor (`b69b3ca`) |
-| 07-10 13:55 | expand | pass 171 — no candidates |
-| 07-10 17:10 | iterate | a11y — search/newsletter/404 inputs visible focus ring (`fd09f7c`) |
-| 07-10 17:50 | iterate | seo — part JSON-LD `brand.name` resolves vendor name, not raw slug (`05d7f4b`), audit `9fe1d6f` |
-| 07-10 21:31 | expand | pass 172 — no candidates |
-| 07-10 23:39-23:40 | iterate | seo — tag page title/JSON-LD resolves display name, not raw slug (`8b17f57`), audit `373ec96` |
-| 07-11 00:34-00:37 | march | newsletter cadence row auto-filed (`900273e`); dispatch opened issue #439 (`b54554b`) |
-| 07-11 00:49-00:50 | march | content: newsletter — "thock weekly — issue 003" (`e271893`), closes #439 |
-| 07-11 01:53 | iterate | data — W28 tracker: restore Prototypist + Wuque Studio vendor link (`f4d14aa`), closes #440 |
-| 07-11 03:18-03:19 | iterate | fix — `tracker-linkage-survey.mjs` durable per-run-linkage rewrite (`14d19e8`), closes #441 |
-| 07-11 05:20 | iterate | content — mode-sonnet-r2 + gsk-sweet-nightmare past-tense group-buy titles (`d2eedf2`), closes #442 |
-| 07-11 06:57 | expand | pass 173 — no candidates |
-| 07-11 07:51 | expand | pass 174 — no candidates |
-| 07-11 08:55 | iterate | content — `/sources` intro copy fix (`6111844`), closes #443 |
-| 07-11 09:52-09:53 | iterate | content — sound-dampening-compared broken `<Source>` tag fix (`4cc57d7`), closes #444 |
+| 07-11 11:50 | iterate | content — plate-materials-explained citation misattribution fix (`140cba4`), audit `b3b7917` |
+| 07-11 12:35 | iterate | fix — quiz `startsWith('linear')` under-scoring bug (`edea2c0`), audit `45534ca` |
+| 07-11 13:48 | iterate | fix — quiz medium spring-weight scoring missing lower bound (`dc31421`), audit `6ed0fde` |
+| 07-11 14:34 | expand | pass 175 — no candidates |
+| 07-11 16:33 | expand | pass 176 — no candidates |
+| 07-11 17:45-17:46 | iterate | fix — part detail page "all switchs" pluralization typo (`3554e90`), audit `a069f1e` |
+| 07-11 18:34-18:35 | iterate | fix — compare/board vendor row raw slug instead of name (`50f2938`), audit `7828142` |
+| 07-11 19:41-19:42 | iterate | fix — part detail vendor byline linked to `/sources` instead of vendor page (`0381de3`), audit `70df509` |
+| 07-11 20:24 | expand | pass 177 — no candidates |
+| 07-11 21:33 | iterate | refactor — remove dead `PageStub` component, unused since phase 16 (`6290c3a`), audit `1c011a6` |
+| 07-11 22:36-22:37 | iterate | fix — vendor country label FR → France (`fa4cb79`), audit `5e447e8` |
+| 07-11 23:37 | expand | pass 178 — no candidates |
+| 07-12 01:05 | iterate | feat — newsletter digest detail pages `/newsletter/[slug]` (`6d7568b`), audit `5aef49b` |
+| 07-12 01:53 | iterate | seo — newsletter JSON-LD missing `image` field (`0885d86`), audit `8445818` |
+| 07-12 03:19-03:20 | iterate | content — newsletter 001 W25 tracker-delta miscalculation fix (`5b8c2e2`), audit `eed7113` |
+| 07-12 07:14 | expand | pass 179 — no candidates |
+| 07-12 08:04 | iterate | fix — tracker archive stale-tense copy (`cc2b97c`), audit `5ec2cfa` |
+| 07-12 09:03-09:06 | iterate | seo — newsletter OG card headline shows real title, not "Issue NN" (`8195409`), audit `25912d6` |
+| 07-12 09:52-09:53 | iterate | fix — tag page numeric-slug chrome "#65%"/"#75%" (`52455a3`), audit `7e0fe3d` |
 
-24 commits total in the window; every `march`-workflow run in the last
-30 (going back to 07-09 22:31) reports `success` at the GitHub Actions
-level.
+33 commits total in the window; every `march`-workflow run in the
+last 30 (going back to 07-11 01:34) reports `success` at the GitHub
+Actions level.
 
 ## Shipped
 
-- **fix**: `PartReference` now links inline switch mentions to the
-  vendor. Closes no tracked issue (direct `/iterate` fix).
-- **a11y**: `search`/`newsletter`/`404` inputs gained a visible focus
-  ring — same WCAG 2.4.7 class as prior focus-ring fixes, different
-  component surface.
-- **seo**: part-page JSON-LD `brand.name` and tag-page title/JSON-LD
-  both resolved the raw slug instead of the display name — two
-  separate one-line fixes, same bug shape, different routes.
-- **content**: "thock weekly — issue 003" — auto-filed by
-  `newsletter-gap-survey.mjs`, drained same-window. Closes #439.
-- **data**: W28 tracker — restored Prototypist + Wuque Studio
-  `vendor-first-customs` links. Third recurrence of the same
-  `tracker-linkage-survey.mjs` masking bug (W22, W24/W26, W28). Closes
-  #440.
-- **engineering**: `tracker-linkage-survey.mjs` rewritten to track
-  linkage per contiguous non-flat run instead of "ever linked across
-  all history" — the root-cause fix for the bug class above, with 3
-  new regression tests reproducing the exact masking scenario. Closes
-  #441. This is the shape of fix `/digest` exists to surface: three
-  data patches for the same symptom before the mechanism itself got
-  fixed.
-- **content**: two stale present-tense group-buy titles corrected to
-  past tense (`mode-sonnet-r2-group-buy-coverage`,
-  `gsk-sweet-nightmare-group-buy`) — the frontmatter-title variant of a
-  known bug class the body-text gate can't see. Closes #442.
-- **content**: `/sources` intro copy corrected two false claims (vendor
-  links are not auto-flagged `rel="sponsored"`; the citation index
-  already shipped, isn't "the next step"). Closes #443.
-- **content**: `sound-dampening-compared` self-closing `<Source
-  text="..." />` tag fixed to the paired form — the self-closing form
-  rendered an empty, invisible link, silently dropping a citation from
-  a live sentence. Closes #444.
-- Four `/expand` passes (171-174) — 0 new candidates; the 13-row
+- **content**: plate-materials-explained — citation misattributed
+  to an unrelated geekhack thread, fixed.
+- **engineering**: quiz — `startsWith('linear')` bug silently
+  under-scored silent-linear switches; medium spring-weight scoring
+  had no lower bound. Two separate, previously-unnoticed scoring
+  bugs in the same recommender, same tick window.
+- **engineering**: part detail page — "all switchs" pluralization
+  typo; vendor byline linked to `/sources` instead of the vendor
+  page.
+- **engineering**: compare/board — vendor row rendered a raw slug
+  instead of the resolved name.
+- **engineering**: dead-code removal — `PageStub` component, unused
+  since phase 16's stub-to-real-page replacement.
+- **engineering**: vendor country label — `FR` rendered the raw code
+  instead of "France" on `/vendors` and `/vendor/deltakeyco`.
+- **feat**: `/newsletter/[slug]` — three published newsletter
+  issues, previously unreachable (rendered `slug` only as a React
+  key, never an `href`), now have real detail routes with JSON-LD,
+  OG cards, and sitemap entries.
+- **seo**: newsletter JSON-LD missing `image` field on every issue —
+  a regression of a previously-fixed bug class, in the brand-new
+  route shipped this same window.
+- **content**: newsletter issue 001 — W25 tracker-delta miscalculation
+  ("up eight points" when the spark data showed 24).
+- **seo**: newsletter OG cards rendered "Issue 03" as the giant
+  headline instead of the actual title — every social share of every
+  issue looked generic next to article shares until this fix.
+- **fix**: tracker archive pages no longer say "this week" /
+  "actually rising this week" for snapshots up to 8+ weeks stale — 9
+  indexed, sitemap-listed archive pages affected.
+- **engineering**: tag page chrome — numeric-only slugs (`/tag/65`,
+  `/tag/75`) rendered a bare ambiguous number as the H1/lede instead
+  of "#65%"/"#75%"; the machine-readable surfaces (title, JSON-LD, OG)
+  already had this right from a prior tick.
+- Five `/expand` passes (175-179) — 0 new candidates; the 13-row
   Pending queue is unchanged.
 
 ## Queues now
@@ -113,38 +116,40 @@ level.
   `[blocked-cloud-permission] [6.3]` `march.yml` crash-gate fix
   (unchanged, still stuck on the workflow-write permission wall; the
   two-line `always()` fix is written and verified, just unpushable
-  from cloud). All 598 other rows closed.
+  from cloud). All other rows closed (613 total rows in the file, 612
+  `[x]`).
 - **`plan/CRITIQUE.md`**: pass 11, last pass 2026-05-10T20:35 UTC at
-  commit `931c8a7`. **61 days / 1261 commits stale** (up from
-  61/1236 two days ago). Unchanged diagnosis: cloud `/march` hard-skips
-  `/critique` by design (`.github/CLOUD_LOOP.md`); the `[6.5]` Critique
-  gate diagnostic candidate is still standing, unpromoted since
-  2026-07-03 (8 days now).
+  commit `931c8a7`. **63 days / 1295 commits stale** (up from 61
+  days / 1261 commits two digests ago). Unchanged diagnosis: cloud
+  `/march` hard-skips `/critique` by design
+  (`.github/CLOUD_LOOP.md`); the `[6.5]` Critique gate diagnostic
+  candidate is still standing, unpromoted.
 - **`plan/PHASE_CANDIDATES.md`**: 13 pending rows, unchanged for the
-  fourth straight digest. Top incumbents: Stale group-buy
-  frontmatter/prose gate (6.5), `/quiz/board` (6.5), Critique gate
-  diagnostic (6.5), external link-rot survey (6.0), march.yml
-  crash-issue gate `always()` fix (6.0), Parts catalog third data pass
-  (5.5), `/compare/keycap-set` (5.5), Vitest coverage CI gate (5.5),
+  fifth straight digest. Top incumbents: `/quiz/board` (6.5), Stale
+  group-buy frontmatter/prose gate (6.5), Critique gate diagnostic
+  (6.5), external link-rot survey (6.0), march.yml crash-issue gate
+  `always()` fix (6.0), Parts catalog third data pass (5.5),
+  `/compare/keycap-set` (5.5), Vitest coverage CI gate (5.5),
   ship-data mentionedParts rescan (5.5), Cloud loop workflow-push
   permission gap (5.5), Tracker 8-week editorial analysis (5.0),
-  Accessory parts kind (5.0), Tracker topic history page (4.5). **Last
-  `/oversight` promotion: 2026-05-23 — 49 days ago.**
+  Accessory parts kind (5.0), Tracker topic history page (4.5). Most
+  recent `/oversight` activity recorded in the file: 2026-06-14
+  (batch-promoted phases 46-49, a different, now-resolved candidate
+  cluster) — 28 days ago, and it did not touch any of these 13 rows.
 - **`data/BACKLOG.md`**: 0 pending rows.
-- **Triage**: 11 open issues (up from 9) — `#395` (cloud march
-  crash-issue gate, unchanged, blocked) plus 8 duplicate content-gap
-  issues (#414-#416, #418-#422) from the pre-fix ship-content
-  duplicate-issue loop, unchanged and still awaiting a
-  manual/oversight consolidation pass, plus two new since yesterday:
-  `#437` (transient 429 rate-limit on a cloud march run — already
-  triaged to `triage:reviewed`, no action needed) and `#434`
-  (`triage:needs-user` — Vercel never ingested commit `e312e09`; see
-  Needs you). 0 unlabeled.
-- **Expand cadence**: 23 consecutive no-candidate passes (152-174); 24
-  passes since the last candidate was filed (pass 151, 2026-06-19).
-  Not a mistuning signal on its own — the queue is full (13 unpromoted
-  rows), not empty; expand correctly isn't re-proposing what's already
-  filed and awaiting `/oversight`.
+- **Triage**: 11 open issues, unchanged from yesterday — `#395`
+  (cloud march crash-issue gate, blocked, companion to the AUDIT row
+  above) plus 8 duplicate content-gap issues (#414-#416, #418-#422)
+  from the pre-fix ship-content duplicate-issue loop, still awaiting
+  a manual/oversight consolidation pass, plus `#437`
+  (`triage:reviewed`, no action needed) and `#434`
+  (`triage:needs-user` — Vercel webhook drop, see Needs you). 0
+  unlabeled.
+- **Expand cadence**: 28 consecutive no-candidate passes since the
+  last candidate was filed (pass 151, 2026-06-19; passes 152-179 have
+  filed 0). Not a mistuning signal on its own — the queue is full (13
+  unpromoted rows), not empty; expand correctly isn't re-proposing
+  what's already filed and awaiting `/oversight`.
 
 ## Breadth verdict
 
@@ -154,82 +159,80 @@ e2e) — all green:
 
 - `typecheck` — green, all 8 workspace packages (apps/web, apps/e2e,
   packages/content, data, seo, tokens, ui).
-- `test:run` — green, 94 test files / 591 tests (apps/web workspace;
+- `test:run` — green, 94 test files / 596 tests (apps/web workspace;
   benign jsdom "Not implemented: navigation" stderr noise on
-  `MobileNav.test.tsx`, doesn't fail the test).
+  `MobileNav.test.tsx`, doesn't fail the test — same as prior
+  digests).
 - `test:scripts` — green, 161/161 (59 suites).
 - `data:validate` — green (69 records: 9 vendors, 18 switches, 10
   keycap-sets, 9 boards, 13 group-buys, 10 trend weeks — cross-refs
   resolve).
-- `build` — green, all routes generated, no manifest churn issues.
+- `build` — green, all routes generated, no manifest churn issues
+  (the generated manifest/search-index files picked up a
+  `generatedAt` timestamp diff from the build step and were reverted
+  before commit — no source change).
 - `size` — green, homepage gzip 108.5 KB / 200 KB budget (unchanged).
-- `e2e` — green, **981/981**. Benign `NoFallbackError` stderr noise
+- `e2e` — green, **995/995**. Benign `NoFallbackError` stderr noise
   logged mid-run on `/trends/tracker/[week]` for non-generated week
-  params (expected fallback-404 behavior, same as prior digests) — did
-  not fail any test.
-- `lighthouse` — still `disabled_manually` (since 2026-06-14, per the
-  2026-07-09 digest's correction); no new signal this tick.
-- `pnpm deploy:check` at HEAD (`0e9f1a7`) — deploy `READY`
-  (`dpl_GqB3bZ5r`).
+  params (expected fallback-404 behavior, same as prior digests) —
+  did not fail any test.
+- `lighthouse` — still `disabled_manually` (since 2026-06-14); no new
+  signal this tick.
+- `pnpm deploy:check` at HEAD (`7e0fe3d`) — deploy `READY`
+  (`dpl_Cp6Bckgq`).
 
 No red legs, no new AUDIT.md finding from this breadth check.
 
 ## Needs you
 
-1. **New: Vercel silently dropped the deploy for commit `e312e09`
-   (2026-07-10).** Filed as issue `#434` (`triage:needs-user`).
-   `pnpm deploy:check` timed out three times over ~30 minutes with "not
-   ingested yet"; direct Vercel API checks confirmed no deployment was
-   ever created for that commit, and GitHub's combined status shows no
-   Vercel check registered at all — a dropped webhook delivery, not a
-   build failure. Every commit before and after deployed normally
-   within ~30-100s of push (confirmed again this tick: HEAD `0e9f1a7`
-   deployed in 0s per `deploy:check`). Self-resolved for subsequent
-   commits, but worth a look at the GitHub → Vercel webhook
-   configuration if it recurs — a repeat would mean a real production
-   page silently going stale post-push with no loop-visible signal
-   (the loop only checks `deploy:check` at the commit that triggered
-   it, not retroactively).
-2. **Standing: promote or resolve the `[6.5]` Critique gate
-   diagnostic candidate.** 61 days / 1261 commits since the last local
-   `/critique` pass — the fresh-eyes loop has been dark for two
-   months. The candidate (filed 2026-07-03, 8 days unpromoted) already
-   has a full diagnostic writeup and a proposed fix shape (resolve the
-   AND/OR ambiguity between `march.md`'s Purpose section and its Step
-   2 body, add a trace log, manually re-baseline the header).
-3. **Standing: cloud loop cannot push `.github/workflows/*.yml`
-   changes** (`[score 5.5]` candidate, companion to the `[6.3]` blocked
-   AUDIT row and open issue `#395`). Unchanged.
-4. **Standing, now 49 days: the `/oversight` promotion backlog
-   itself.** 13 candidates pending, three at 6.5 (`/quiz/board`,
-   Critique gate diagnostic, stale group-buy frontmatter gate),
-   unpromoted since 2026-05-23. Not a code defect — just a wide gap
+1. **Standing: promote or resolve the `[6.5]` Critique gate
+   diagnostic candidate.** 63 days / 1295 commits since the last
+   local `/critique` pass — the fresh-eyes loop has been dark for
+   over two months, and the gap widened by another two days /
+   34 commits since the last digest. The candidate already has a
+   full diagnostic writeup and a proposed fix shape (resolve the
+   AND/OR ambiguity between `march.md`'s Purpose section and its
+   Step 2 body, add a trace log, manually re-baseline the header).
+2. **Standing: cloud loop cannot push `.github/workflows/*.yml`
+   changes** (`[5.5]` candidate, companion to the `[6.3]` blocked
+   AUDIT row and open issue `#395`). Unchanged — the two-line
+   `always()` fix is written and verified, just unpushable from
+   cloud until either the push credential gains "Workflows: write"
+   or workflow-file changes move to a local/`/oversight`-only path.
+3. **Standing: the `/oversight` promotion backlog itself.** 13
+   candidates pending, unchanged for the fifth straight digest,
+   three at 6.5 (`/quiz/board`, Critique gate diagnostic, stale
+   group-buy frontmatter gate). Not a code defect — just a wide gap
    between candidate supply and promotion cadence. Worth a look next
    `/oversight` pass regardless of which specific candidates get
    promoted or rejected.
-5. **Housekeeping, low urgency: 8 duplicate open GitHub issues**
-   (#414-#416, #418-#422) from the pre-fix ship-content duplicate-issue
-   loop are still open — each still names a genuine unwritten
-   deep-dives topic (not a shipped duplicate, per repeated expand-pass
-   verification), so closing them would discard real content backlog
-   rather than being pure hygiene. A manual review pass would still
-   tidy the tracker.
+4. **Housekeeping, low urgency: 8 duplicate open GitHub issues**
+   (#414-#416, #418-#422) from the pre-fix ship-content
+   duplicate-issue loop are still open — each still names a genuine
+   unwritten deep-dives topic (not a shipped duplicate), so closing
+   them would discard real content backlog rather than being pure
+   hygiene. A manual review pass would still tidy the tracker.
+5. **Unchanged from yesterday: Vercel silently dropped the deploy for
+   commit `e312e09`** (2026-07-10, issue `#434`,
+   `triage:needs-user`). Every commit before and after deployed
+   normally (confirmed again this tick — HEAD `7e0fe3d` deployed in
+   0s per `deploy:check`); self-resolved for subsequent commits, but
+   worth a look at the GitHub → Vercel webhook configuration if it
+   recurs.
 
 ## Today's intent
 
 No pending build-plan phase, no data backlog, cross-link drain and
 content-gap queue both empty. Expect more single-fix `/iterate`
 maintenance ticks — the corpus is clean per every mechanical survey
-(content-gap, crosslink, companion, stale-GB, newsletter-gap,
-OG-coverage, a11y-spec-coverage, tracker-linkage, article-parts-check,
-article-language-check) as of pass 174. `/quiz/board`, the stale
-group-buy frontmatter/prose gate, and the Critique gate diagnostic
-remain the three highest-scored Pending candidates, all still awaiting
-`/oversight` promotion — the queue hasn't moved in four digests
-running. One live thread worth watching: the newly root-caused
-`tracker-linkage-survey.mjs` fix (`14d19e8`) should mean no more W-N
-tracker-linkage data patches going forward — the next tracker week
-that would previously have needed one is the test of that.
+as of pass 179. `/quiz/board`, the stale group-buy frontmatter/prose
+gate, and the Critique gate diagnostic remain the three highest-scored
+Pending candidates, all still awaiting `/oversight` promotion — the
+queue hasn't moved in five digests running. One live thread worth
+watching: the newsletter surface shipped this window (`6d7568b`) drew
+three fast-follow fixes in the same ~9 hours (JSON-LD image, tracker
+delta, OG headline) — the freshest-shipped surface is still the most
+likely place for the next finding, same pattern as prior digests.
 
 ## Tuning proposals
 
@@ -239,10 +242,6 @@ workflow-push permission) both already have standing
 `plan/PHASE_CANDIDATES.md` rows from earlier passes, unpromoted but
 not newly worsened in a way that changes their shape — restating them
 under **Needs you** rather than re-filing duplicate candidates. The
-new Vercel-webhook-drop issue (`#434`) is also not filed as a
-candidate: it's a one-off external infrastructure signal (GitHub →
-Vercel webhook delivery), not a loop mechanism the loop controls or
-can propose fixing on itself — flagged under Needs you instead. The
-`/oversight` promotion-cadence gap (item 4 above) is also not filed as
-a new candidate: it's a call about the user's own review cadence, not
-a loop mechanism the loop can propose fixing on itself.
+`/oversight` promotion-cadence gap (item 3 above) is also not filed
+as a new candidate: it's a call about the user's own review cadence,
+not a loop mechanism the loop can propose fixing on itself.
