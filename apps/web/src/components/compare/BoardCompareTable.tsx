@@ -16,6 +16,12 @@ function formatDate(iso: string | null | undefined): string {
   return DATE_FMT.format(d)
 }
 
+const STATUS_LABEL: Record<Board['status'], string> = {
+  'in-stock': 'in stock',
+  'group-buy': 'group buy',
+  discontinued: 'discontinued',
+}
+
 type SpecRow = { label: string; value: string }
 
 function boardSpecRows(b: Board): SpecRow[] {
@@ -25,7 +31,7 @@ function boardSpecRows(b: Board): SpecRow[] {
     { label: 'Case material', value: b.caseMaterial },
     { label: 'Hotswap', value: b.hotswap ? 'yes' : 'no' },
     { label: 'Wireless', value: b.wireless ? 'yes' : 'no' },
-    { label: 'Status', value: b.status },
+    { label: 'Status', value: STATUS_LABEL[b.status] },
     { label: 'Released', value: formatDate(b.releasedAt) },
     { label: 'Vendor', value: getVendorBySlug(b.vendorSlug)?.name ?? b.vendorSlug },
   ]

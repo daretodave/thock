@@ -15,6 +15,12 @@ function formatDate(iso: string | null | undefined): string {
   return DATE_FMT.format(d)
 }
 
+const STATUS_LABEL: Record<Switch['status'], string> = {
+  'in-production': 'in production',
+  discontinued: 'discontinued',
+  limited: 'limited',
+}
+
 type SpecRow = { label: string; value: string }
 
 function switchSpecRows(s: Switch): SpecRow[] {
@@ -29,7 +35,7 @@ function switchSpecRows(s: Switch): SpecRow[] {
     },
     { label: 'Travel', value: `${s.travelMm} mm` },
     { label: 'Factory lubed', value: s.factoryLubed ? 'yes' : 'no' },
-    { label: 'Status', value: s.status },
+    { label: 'Status', value: STATUS_LABEL[s.status] },
     { label: 'Released', value: formatDate(s.releasedAt) },
   ]
 }

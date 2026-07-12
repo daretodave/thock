@@ -75,4 +75,10 @@ describe('<SwitchCompareTable>', () => {
     const diffRows = rows.filter((r) => r.getAttribute('data-differs') === 'true')
     expect(diffRows.length).toBe(0)
   })
+
+  it('renders the status as a human label, not the raw enum value', () => {
+    render(<SwitchCompareTable switchA={SWITCH_A} switchB={SWITCH_B} />)
+    expect(screen.getAllByText('in production').length).toBeGreaterThan(0)
+    expect(screen.queryByText('in-production')).not.toBeInTheDocument()
+  })
 })

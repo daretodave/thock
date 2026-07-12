@@ -91,4 +91,11 @@ describe('<BoardCompareTable>', () => {
     expect(screen.getByText('Vendor X Studio')).toBeInTheDocument()
     expect(screen.getByText('vendor-y')).toBeInTheDocument()
   })
+
+  it('renders the status as a human label, not the raw enum value', () => {
+    render(<BoardCompareTable boardA={BOARD_A} boardB={BOARD_B} />)
+    expect(screen.getByText('in stock')).toBeInTheDocument()
+    expect(screen.getByText('discontinued')).toBeInTheDocument()
+    expect(screen.queryByText('in-stock')).not.toBeInTheDocument()
+  })
 })
