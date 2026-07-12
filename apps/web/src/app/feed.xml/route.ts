@@ -1,11 +1,9 @@
 import { getAllArticles } from '@/lib/data-runtime'
 import { canonicalUrl, siteConfig } from '@thock/seo'
-import { buildRssXml, RSS_CONTENT_TYPE } from '@/lib/rss/buildRss'
-
-const GLOBAL_FEED_LIMIT = 20
+import { buildRssXml, FEED_ITEM_LIMIT, RSS_CONTENT_TYPE } from '@/lib/rss/buildRss'
 
 export function GET() {
-  const articles = getAllArticles().slice(0, GLOBAL_FEED_LIMIT)
+  const articles = getAllArticles().slice(0, FEED_ITEM_LIMIT)
   const xml = buildRssXml({
     title: `${siteConfig.name} — ${siteConfig.tagline}`,
     link: canonicalUrl('/'),

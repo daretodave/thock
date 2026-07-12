@@ -7,7 +7,7 @@ import {
   siteConfig,
   type Pillar,
 } from '@thock/seo'
-import { buildRssXml, RSS_CONTENT_TYPE } from '@/lib/rss/buildRss'
+import { buildRssXml, FEED_ITEM_LIMIT, RSS_CONTENT_TYPE } from '@/lib/rss/buildRss'
 
 /**
  * Per-pillar RSS feed. Path shape is `/feed/<pillar>.xml`; Next's
@@ -26,7 +26,7 @@ export async function GET(
   }
 
   const pillar: Pillar = slug
-  const articles = getArticlesByPillar(pillar)
+  const articles = getArticlesByPillar(pillar).slice(0, FEED_ITEM_LIMIT)
 
   const xml = buildRssXml({
     title: `${pillarLabel(pillar)} — ${siteConfig.name}`,

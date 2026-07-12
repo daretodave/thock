@@ -63,3 +63,6 @@ export function buildRssXml(channel: RssChannel): string {
 }
 
 export const RSS_CONTENT_TYPE = 'application/rss+xml; charset=utf-8'
+
+/** Max items per feed — applies to both the global and per-pillar routes. */
+export const FEED_ITEM_LIMIT = 20
