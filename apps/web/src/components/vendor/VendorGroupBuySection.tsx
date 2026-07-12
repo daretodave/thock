@@ -2,7 +2,9 @@ import type { ReactElement } from 'react'
 import { Container, Stack } from '@thock/ui'
 import type { GroupBuy, Vendor } from '@thock/data'
 import { GroupBuyRow } from '@/components/group-buys/GroupBuyRow'
-import { PageSectionKicker } from '@/components/ui/PageSectionKicker'
+
+const SECTION_HEADING_CLASS =
+  'font-mono uppercase tracking-[0.12em] text-micro text-text-2'
 
 export type VendorGroupBuySectionProps = {
   vendorName: string
@@ -31,9 +33,9 @@ export function VendorGroupBuySection({
     <>
       <Container as="section" className="pb-12">
         <Stack gap={6}>
-          <PageSectionKicker testId="vendor-active-buys-kicker">
+          <h2 data-testid="vendor-active-buys-kicker" className={SECTION_HEADING_CLASS}>
             active group buys
-          </PageSectionKicker>
+          </h2>
           {active.length === 0 ? (
             <p
               data-testid="vendor-active-buys-empty"
@@ -62,9 +64,9 @@ export function VendorGroupBuySection({
 
       <Container as="section" className="pb-12">
         <Stack gap={6}>
-          <PageSectionKicker testId="vendor-past-buys-kicker">
+          <h2 data-testid="vendor-past-buys-kicker" className={SECTION_HEADING_CLASS}>
             past group buys
-          </PageSectionKicker>
+          </h2>
           {past.length === 0 ? (
             <p
               data-testid="vendor-past-buys-empty"

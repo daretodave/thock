@@ -96,4 +96,18 @@ describe('VendorGroupBuySection', () => {
       'No past group buys recorded for CannonKeys.',
     )
   })
+
+  it('renders both section labels as real h2s, not plain spans', () => {
+    render(
+      <VendorGroupBuySection
+        vendorName="CannonKeys"
+        active={[BASE_GB]}
+        past={[PAST_GB]}
+        vendor={VENDOR}
+        now={new Date('2026-06-01')}
+      />,
+    )
+    expect(screen.getByTestId('vendor-active-buys-kicker').tagName).toBe('H2')
+    expect(screen.getByTestId('vendor-past-buys-kicker').tagName).toBe('H2')
+  })
 })

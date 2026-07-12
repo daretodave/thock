@@ -2,7 +2,9 @@ import type { ReactElement } from 'react'
 import Link from 'next/link'
 import { Container, Stack } from '@thock/ui'
 import type { Board } from '@thock/data'
-import { PageSectionKicker } from '@/components/ui/PageSectionKicker'
+
+const SECTION_HEADING_CLASS =
+  'font-mono uppercase tracking-[0.12em] text-micro text-text-2'
 
 const LAYOUT_LABEL: Record<Board['layout'], string> = {
   tkl: 'TKL',
@@ -39,9 +41,9 @@ export function VendorBoardSection({
   return (
     <Container as="section" className="pb-12">
       <Stack gap={6}>
-        <PageSectionKicker testId="vendor-boards-kicker">
+        <h2 data-testid="vendor-boards-kicker" className={SECTION_HEADING_CLASS}>
           boards
-        </PageSectionKicker>
+        </h2>
         {boards.length === 0 ? (
           <p
             data-testid="vendor-boards-empty"

@@ -47,6 +47,12 @@ describe('VendorBoardSection', () => {
     expect(row.textContent).toContain('In stock')
   })
 
+  it('renders the section label as a real h2, not a plain span', () => {
+    render(<VendorBoardSection vendorName="CannonKeys" boards={[BASE_BOARD]} />)
+    const heading = screen.getByTestId('vendor-boards-kicker')
+    expect(heading.tagName).toBe('H2')
+  })
+
   it('truncates description longer than 100 chars', () => {
     const longDesc = 'A'.repeat(150) + ' extra words'
     render(
