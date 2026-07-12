@@ -7,6 +7,8 @@ export type TrackerHeaderProps = {
   snapshot: TrendSnapshot | null
   /** Lede paragraph; the publishedAt string is woven in by the page. */
   lede: string
+  /** False on archive weeks — swaps present-tense copy for past-tense. */
+  isLatest?: boolean
 }
 
 const PUBLISHED_FORMATTER = new Intl.DateTimeFormat('en-US', {
@@ -23,17 +25,24 @@ const PUBLISHED_FORMATTER = new Intl.DateTimeFormat('en-US', {
 export function TrackerHeader({
   snapshot,
   lede,
+  isLatest = true,
 }: TrackerHeaderProps): ReactElement {
   const week = snapshot ? weekKicker(snapshot.isoWeek) : null
   const updatedCopy = snapshot
     ? `Updated ${PUBLISHED_FORMATTER.format(new Date(snapshot.publishedAt))}.`
     : 'Snapshot not yet published.'
 
-  const heading = (
-    <>
-      What&apos;s <em className="italic">actually</em> rising this week
-    </>
-  )
+  const heading =
+    isLatest || !week ? (
+      <>
+        What&apos;s <em className="italic">actually</em> rising this week
+      </>
+    ) : (
+      <>
+        What was <em className="italic">actually</em> rising in Week{' '}
+        {week.week}, {week.year}
+      </>
+    )
 
   const rightRail = week ? (
     <div

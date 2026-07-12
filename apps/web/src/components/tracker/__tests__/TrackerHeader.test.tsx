@@ -35,4 +35,19 @@ describe('<TrackerHeader>', () => {
     render(<TrackerHeader snapshot={null} lede="Lede." />)
     expect(screen.queryByTestId('tracker-week-block')).toBeNull()
   })
+
+  it('swaps to past-tense copy for an archived (non-latest) week', () => {
+    render(
+      <TrackerHeader
+        snapshot={makeTrendSnapshot({ isoWeek: '2026-W19' })}
+        lede="Lede."
+        isLatest={false}
+      />,
+    )
+    const h1 = screen.getByRole('heading', { level: 1 })
+    expect(h1).toHaveTextContent(/rising/i)
+    expect(h1).toHaveTextContent(/was/i)
+    expect(h1).toHaveTextContent(/week 19, 2026/i)
+    expect(h1.textContent ?? '').not.toMatch(/this week/i)
+  })
 })

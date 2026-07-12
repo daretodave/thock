@@ -87,6 +87,7 @@ export default async function TrackerWeekPage({
   const grouped = groupByCategory(snapshot.rows)
   const categories = presentCategories(snapshot)
   const { prev, next } = getAdjacentWeeks(week)
+  const isLatest = next === null
 
   const articlesBySlug = new Map<string, Article>(
     getAllArticles().map((a) => [a.slug, a]),
@@ -127,7 +128,7 @@ export default async function TrackerWeekPage({
         </Link>
       </Container>
 
-      <TrackerHeader snapshot={snapshot} lede={LEDE} />
+      <TrackerHeader snapshot={snapshot} lede={LEDE} isLatest={isLatest} />
 
       {snapshot.rows.length > 0 ? (
         <Container as="section" className="py-12 sm:py-16">
@@ -135,7 +136,9 @@ export default async function TrackerWeekPage({
             data-testid="tracker-summary-heading"
             className="mb-6 font-serif text-h2 text-text"
           >
-            This week at a glance
+            {isLatest || !wk
+              ? 'This week at a glance'
+              : `Week ${wk.week}, ${wk.year} at a glance`}
           </h2>
           <TrackerSummaryGrid snapshot={snapshot} />
         </Container>
