@@ -31,7 +31,7 @@ export function ResultCard({ sw, score, maxScore, rank }: Props) {
         <div className="flex items-start gap-3">
           <span
             aria-label={`rank ${rank}`}
-            className="shrink-0 w-7 h-7 rounded-full bg-accent-mu text-bg flex items-center justify-center text-small font-mono font-bold"
+            className="shrink-0 w-7 h-7 rounded-full bg-accent-mu text-text flex items-center justify-center text-small font-mono font-bold"
           >
             {rank}
           </span>

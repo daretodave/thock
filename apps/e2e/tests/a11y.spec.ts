@@ -1274,3 +1274,25 @@ test('color-contrast — archive pillar label + read-time text-text-2 (regressio
     expect(contrast, `${testid}: ${formatViolations(contrast)}`).toHaveLength(0)
   }
 })
+
+// Regression guard: color-contrast on the quiz result rank badge. Both
+// ResultCard.tsx and KeycapSetResultCard.tsx rendered the rank number as
+// text-bg (dark text) on bg-accent-mu — 3.13:1, failing WCAG AA 4.5:1 for
+// 14px bold text (not "large text" per WCAG). Swapped to text-text (5.48:1).
+test('color-contrast — quiz result rank badge (regression guard)', async ({ page }) => {
+  await page.goto('/quiz/switch')
+  for (let i = 0; i < 4; i++) {
+    await page.getByRole('button').first().click()
+    if (i < 3) {
+      await expect(page.getByText(new RegExp(`question ${i + 2} of 4`, 'i'))).toBeVisible()
+    }
+  }
+  await expect(page.getByTestId('quiz-results')).toBeVisible()
+
+  const results = await new AxeBuilder({ page })
+    .withTags(WCAG_TAGS)
+    .include('[data-testid="result-card"]')
+    .analyze()
+  const contrast = results.violations.filter((v) => v.id === 'color-contrast')
+  expect(contrast, formatViolations(contrast)).toHaveLength(0)
+})
