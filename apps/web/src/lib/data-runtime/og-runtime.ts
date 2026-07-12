@@ -45,11 +45,19 @@ export type VendorOGData = {
   description: string
 }
 
+export type NewsletterOGData = {
+  slug: string
+  title: string
+  lede: string
+  issue: number
+}
+
 type OGManifest = {
   articles: ArticleOGData[]
   tags: TagOGData[]
   parts: PartOGData[]
   vendors: VendorOGData[]
+  newsletters: NewsletterOGData[]
   generatedAt: string
 }
 
@@ -69,4 +77,8 @@ export function getPartForOg(kind: string, slug: string): PartOGData | null {
 
 export function getVendorForOg(slug: string): VendorOGData | null {
   return (ogManifest.vendors ?? []).find((v) => v.slug === slug) ?? null
+}
+
+export function getNewsletterForOg(slug: string): NewsletterOGData | null {
+  return (ogManifest.newsletters ?? []).find((n) => n.slug === slug) ?? null
 }

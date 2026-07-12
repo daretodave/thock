@@ -133,6 +133,15 @@ function listVendorSlugs(root: string): string[] {
     .sort()
 }
 
+function listNewsletterSlugs(root: string): string[] {
+  const dir = resolve(root, 'apps/web/src/content/newsletters')
+  if (!existsSync(dir)) return []
+  return readdirSync(dir)
+    .filter((f) => f.endsWith('.mdx'))
+    .map((f) => f.replace(/\.mdx$/, ''))
+    .sort()
+}
+
 function listTrendWeeks(root: string): string[] {
   const dir = resolve(root, 'data/trends')
   if (!existsSync(dir)) return []
@@ -211,6 +220,13 @@ export function getCanonicalUrls(): CanonicalUrl[] {
     dynamic.push({
       path: `/vendor/${slug}`,
       pattern: '/vendor/[slug]',
+      kind: 'html',
+    })
+  }
+  for (const slug of listNewsletterSlugs(root)) {
+    dynamic.push({
+      path: `/newsletter/${slug}`,
+      pattern: '/newsletter/[slug]',
       kind: 'html',
     })
   }

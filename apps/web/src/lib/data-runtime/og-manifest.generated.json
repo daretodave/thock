@@ -1232,5 +1232,25 @@
       "description": "China-based design studio and vendor known for in-house boards (Mammoth, Ikki68, Promise) and partnered group buys, sold direct from shop.wuquestudio.com with regional proxies."
     }
   ],
-  "generatedAt": "2026-07-11T22:29:16.020Z"
+  "newsletters": [
+    {
+      "slug": "thock-weekly-003",
+      "title": "thock weekly — issue 003",
+      "lede": "GMK CYL Masterpiece R2 closes out the Katakana argument, gaming boards keep closing the spec gap, and the tracker shows Keychron's Orca Echo lifting three categories at once.",
+      "issue": 3
+    },
+    {
+      "slug": "thock-weekly-002",
+      "title": "thock weekly — issue 002",
+      "lede": "Keychron's quiet takeover gets the trends treatment, DCS Dolch closes out at Divinikey, and the tracker shows hall effect and split ergo both breaking into new territory.",
+      "issue": 2
+    },
+    {
+      "slug": "thock-weekly-001",
+      "title": "thock weekly — issue 001",
+      "lede": "Hall effect tops the tracker, Topre gets its deep dive, and the PE foam mod still wins on price-to-performance.",
+      "issue": 1
+    }
+  ],
+  "generatedAt": "2026-07-12T00:56:41.290Z"
 }

@@ -56,9 +56,13 @@ export function NewsletterArchive({
               {n.frontmatter.publishedAt.slice(0, 10)}
             </span>
           </div>
-          <h3 className="font-serif text-h3 text-text">
+          <Link
+            href={`/newsletter/${n.slug}`}
+            data-testid="newsletter-archive-link"
+            className="font-serif text-h3 text-text hover:text-accent"
+          >
             {n.frontmatter.title}
-          </h3>
+          </Link>
           <p className="text-small text-text-2 line-clamp-2">
             {n.frontmatter.lede}
           </p>

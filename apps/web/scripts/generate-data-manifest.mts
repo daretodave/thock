@@ -72,6 +72,12 @@ const ogManifest = {
     ...manifest.boards.map((b) => ({ slug: b.slug, kind: 'board' as const, name: b.name })),
   ],
   vendors: manifest.vendors.map((v) => ({ slug: v.slug, name: v.name, description: v.description })),
+  newsletters: manifest.newsletters.map((n) => ({
+    slug: n.slug,
+    title: n.frontmatter.title,
+    lede: n.frontmatter.lede,
+    issue: n.frontmatter.issue,
+  })),
   generatedAt: manifest.generatedAt,
 }
 
@@ -89,4 +95,4 @@ console.log(`  trends:      ${manifest.trends.length}`)
 console.log(`  articles:    ${manifest.articles.length}`)
 console.log(`  newsletters: ${manifest.newsletters.length}`)
 console.log(`  tags:        ${manifest.tags.length}`)
-console.log(`[manifest] wrote ${ogOutFile} (OG manifest: ${ogManifest.articles.length} articles, ${ogManifest.tags.length} tags, ${ogManifest.parts.length} parts, ${ogManifest.vendors.length} vendors)`)
+console.log(`[manifest] wrote ${ogOutFile} (OG manifest: ${ogManifest.articles.length} articles, ${ogManifest.tags.length} tags, ${ogManifest.parts.length} parts, ${ogManifest.vendors.length} vendors, ${ogManifest.newsletters.length} newsletters)`)

@@ -43,6 +43,58 @@ test.describe('newsletter page — phase 15', () => {
     expect(flat).toContain('"@type":"WebSite"')
     expect(flat).toContain('"@type":"BreadcrumbList"')
   })
+
+  test('archive rows link through to the issue detail page', async ({
+    page,
+  }) => {
+    await page.goto('/newsletter')
+    const link = page.getByTestId('newsletter-archive-link').first()
+    const href = await link.getAttribute('href')
+    expect(href).toMatch(/^\/newsletter\/.+/)
+    await link.click()
+    await expect(page).toHaveURL(href!)
+    await expect(page.getByTestId('newsletter-detail-h1')).toBeVisible()
+  })
+})
+
+test.describe('newsletter detail page — /newsletter/[slug]', () => {
+  test('renders the issue eyebrow, H1, body, and back-link', async ({
+    page,
+  }) => {
+    await page.goto('/newsletter/thock-weekly-001')
+    await expect(page.getByTestId('newsletter-detail-eyebrow')).toContainText(
+      /issue 01/i,
+    )
+    await expect(page.getByTestId('newsletter-detail-h1')).toContainText(
+      /thock weekly/i,
+    )
+    await expect(page.getByTestId('article-body')).toBeVisible()
+    await expect(
+      page.getByTestId('newsletter-detail-back-link'),
+    ).toHaveAttribute('href', '/newsletter')
+  })
+
+  test('renders Article + BreadcrumbList JSON-LD', async ({ page }) => {
+    await page.goto('/newsletter/thock-weekly-001')
+    const scripts = await page
+      .locator('script[type="application/ld+json"]')
+      .allTextContents()
+    const flat = scripts.join('\n')
+    expect(flat).toContain('"@type":"Article"')
+    expect(flat).toContain('"@type":"BreadcrumbList"')
+  })
+
+  test('unknown issue slug renders the newsletter not-found page', async ({
+    page,
+  }) => {
+    // Asserting rendered UI rather than HTTP status — see smoke.spec.ts's
+    // "404 routes render not-found pages" comment: `next start` locally
+    // serves the not-found UI with 200 for dynamic routes with
+    // generateStaticParams under Next 15.5; production Vercel returns a
+    // real 404 (covered by deploy:smoke).
+    await page.goto('/newsletter/not-a-real-issue')
+    await expect(page.locator('h1')).toContainText(/issue not found/i)
+  })
 })
 
 test.describe('footer Buttondown form — phase 15 retrofit', () => {

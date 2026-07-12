@@ -51,4 +51,11 @@ describe('<NewsletterArchive>', () => {
     render(<NewsletterArchive newsletters={[fixture()]} />)
     expect(screen.getByText(/issue 01/i)).toBeInTheDocument()
   })
+
+  it('links the title to the issue detail route', () => {
+    render(<NewsletterArchive newsletters={[fixture()]} />)
+    const link = screen.getByTestId('newsletter-archive-link')
+    expect(link).toHaveAttribute('href', '/newsletter/issue-001')
+    expect(link).toHaveTextContent('thock weekly — issue 001')
+  })
 })

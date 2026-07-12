@@ -3,6 +3,7 @@ import {
   getAllArticles,
   getAllBoards,
   getAllKeycapSets,
+  getAllNewsletters,
   getAllSwitches,
   getAllTags,
   getAllTrendSnapshots,
@@ -114,6 +115,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }))
 
+  const newsletterEntries: MetadataRoute.Sitemap = getAllNewsletters().map(
+    (n) => ({
+      url: canonicalUrl(`/newsletter/${n.slug}`),
+      lastModified: n.frontmatter.publishedAt,
+      priority: 0.4,
+    }),
+  )
+
   return [
     ...staticEntries,
     ...articleEntries,
@@ -124,5 +133,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...boardEntries,
     ...trackerWeekEntries,
     ...vendorEntries,
+    ...newsletterEntries,
   ]
 }

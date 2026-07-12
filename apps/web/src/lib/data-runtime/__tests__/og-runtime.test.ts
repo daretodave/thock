@@ -4,6 +4,7 @@ import {
   getTagForOg,
   getPartForOg,
   getVendorForOg,
+  getNewsletterForOg,
 } from '../og-runtime'
 
 describe('og-runtime adapter', () => {
@@ -54,5 +55,17 @@ describe('og-runtime adapter', () => {
 
   it('returns null for an unknown vendor slug', () => {
     expect(getVendorForOg('this-vendor-does-not-exist')).toBeNull()
+  })
+
+  it('looks up a newsletter by slug', () => {
+    const newsletter = getNewsletterForOg('thock-weekly-001')
+    expect(newsletter).not.toBeNull()
+    expect(newsletter!.slug).toBe('thock-weekly-001')
+    expect(newsletter!.title).toBeTruthy()
+    expect(newsletter!.issue).toBe(1)
+  })
+
+  it('returns null for an unknown newsletter slug', () => {
+    expect(getNewsletterForOg('this-issue-does-not-exist')).toBeNull()
   })
 })

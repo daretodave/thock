@@ -161,6 +161,12 @@ export const pageReads: Record<string, PageRead> = {
     pattern: '/newsletter',
     ...html([{ kind: 'h1-matches', pattern: /newsletter/i }]),
   },
+  '/newsletter/[slug]': {
+    pattern: '/newsletter/[slug]',
+    ...html([
+      { kind: 'min-link-count', selector: '[data-testid="newsletter-detail-back-link"]', min: 1 },
+    ]),
+  },
   '/search': {
     pattern: '/search',
     ...html([
