@@ -74,7 +74,9 @@ test.describe('newsletter detail page — /newsletter/[slug]', () => {
     ).toHaveAttribute('href', '/newsletter')
   })
 
-  test('renders Article + BreadcrumbList JSON-LD', async ({ page }) => {
+  test('renders Article + BreadcrumbList JSON-LD with an image', async ({
+    page,
+  }) => {
     await page.goto('/newsletter/thock-weekly-001')
     const scripts = await page
       .locator('script[type="application/ld+json"]')
@@ -82,6 +84,9 @@ test.describe('newsletter detail page — /newsletter/[slug]', () => {
     const flat = scripts.join('\n')
     expect(flat).toContain('"@type":"Article"')
     expect(flat).toContain('"@type":"BreadcrumbList"')
+    expect(flat).toContain(
+      '"image":"https://thock.xyz/newsletter/thock-weekly-001/opengraph-image/og"',
+    )
   })
 
   test('unknown issue slug renders the newsletter not-found page', async ({

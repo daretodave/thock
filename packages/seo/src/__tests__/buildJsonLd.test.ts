@@ -60,6 +60,11 @@ describe('buildArticleJsonLd', () => {
       `${siteConfig.url}/article/foo/opengraph-image/og`,
     )
   })
+
+  it('accepts a boolean heroImage for callers with no frontmatter hero art but a guaranteed OG route', () => {
+    const ld = buildArticleJsonLd({ ...base, heroImage: true })
+    expect(ld.image).toBe(`${siteConfig.url}/article/foo/opengraph-image/og`)
+  })
 })
 
 describe('buildBreadcrumbListJsonLd', () => {

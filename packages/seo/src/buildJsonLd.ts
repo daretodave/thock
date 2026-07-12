@@ -31,7 +31,7 @@ export type BuildArticleJsonLdInput = {
   publishedAt: string
   updatedAt?: string
   author: string
-  heroImage?: string | null
+  heroImage?: string | boolean | null
 }
 
 export function buildArticleJsonLd(
@@ -53,7 +53,8 @@ export function buildArticleJsonLd(
     // and an absolute URL; `heroImage` is a site-relative SVG (same
     // constraint that forced the dynamic `opengraph-image.tsx` PNG route
     // for og:image). Point at that route's rendered PNG instead of the
-    // raw SVG frontmatter path.
+    // raw SVG frontmatter path. Callers with no `heroImage` frontmatter
+    // field (e.g. newsletters) but a guaranteed OG route can pass `true`.
     ...(input.heroImage ? { image: `${url}/opengraph-image/og` } : {}),
   }
 }

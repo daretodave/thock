@@ -62,6 +62,7 @@ export default async function NewsletterDetailPage({
               path,
               publishedAt: fm.publishedAt,
               author: 'thock',
+              heroImage: true,
             }),
             buildBreadcrumbListJsonLd([
               { name: 'Home', path: '/' },
