@@ -6768,3 +6768,4 @@ passes accumulate signals.)
 - first-seen: 2026-W27
 - rule: Rule 2
 - action: ship companion article for "Work Louder x OpenAI Codex Micro", set articleSlug in relevant trend snapshot(s)
+- issue: #463
