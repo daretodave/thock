@@ -6759,7 +6759,7 @@ passes accumulate signals.)
 - issue: #462
 > Picked as the top signal this tick: no unlabeled GitHub issues (triage gate); not Monday (weekly snapshot gate skipped); AUDIT.md and CRITIQUE.md both had zero Pending rows — fully drained; all mechanical surveys clean (content-gap, crosslink, companion, stale-GB, newsletter-gap, OG-coverage, a11y-spec-coverage); no pending phases/data work; march's own expand Step 3c gate not met (11 commits/~6h since pass 181). A fresh general-purpose sweep angled directly at siblings of the just-shipped 30cb04f/#461 raw-anchor fix (every other raw `<a>` in `apps/web/src/**` verified as genuinely external — ButtondownForm, VendorCard, GroupBuyRow's vendor CTA, CitationIndex) surfaced this pair as the only remaining internal-navigation raw anchors; e2e coverage against `canonical-urls.ts` confirmed complete, no other candidate cleared 3.0 within the sweep's time budget. `pnpm verify` full gate green: typecheck, 608 unit tests, data:validate (69 records), build, 1000/1000 e2e.
 
-### [ ] [content-gaps] [5.5] Work Louder x OpenAI Codex Micro — Rule 2 tracker linkage missing
+### [x] [content-gaps] [5.5] Work Louder x OpenAI Codex Micro — Rule 2 tracker linkage missing — addressed in e97be92, closes #463
 - category: content-gaps
 - filed: 2026-07-13 by tracker-linkage-survey.mjs
 - impact: 6 (non-flat trend row "Work Louder x OpenAI Codex Micro" unlinked for 14 days; no companion deep-dive)
@@ -6769,3 +6769,15 @@ passes accumulate signals.)
 - rule: Rule 2
 - action: ship companion article for "Work Louder x OpenAI Codex Micro", set articleSlug in relevant trend snapshot(s)
 - issue: #463
+
+### [HOT PURSUIT] [content-gap] [7] trends pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 8 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: trends
+- window-count: 1
+- window-start: 2026-06-13
+- score: 7
+- next: /ship-content → trends pillar article
+> Filed 2026-07-13 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
