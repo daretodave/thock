@@ -7,7 +7,7 @@
   "article_slug": "gmk-cyl-og-extensions-interest-check",
   "article_pillar": "trends",
   "section_anchor": "Outpacing the buys that are actually open",
-  "brief_summary": "Three-bar comparison chart for the same tracker week: GMK CYL OG Extensions (interest check, no group buy yet) at 55 in a focal terracotta bar, versus GMK CYL Masterpiece R2 (group buy closing that week) at 46 and GMK CYL Pandemonium (group buy mid-window) at 33, both in neutral warm-grey bars.",
+  "brief_summary": "Three-bar comparison chart of peak tracker scores: GMK CYL OG Extensions (interest check, no group buy yet, current W29 read) at 55 in a focal terracotta bar, versus GMK CYL Masterpiece R2 (group buy, peak read the week it closed) at 46 and GMK CYL Pandemonium (group buy, peak read before its own close) at 33, both in neutral warm-grey bars.",
   "target": "apps/web/public/article-viz/gmk-cyl-og-extensions-interest-check/ic-vs-live-gb.svg",
   "splash_color": { "name": "muted terracotta (matches hero art)", "oklch": "oklch(0.62 0.13 35)", "hex": "#B5603F" },
   "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
@@ -15,9 +15,10 @@
   "tokens_snapshot": "design/tokens.css",
   "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
   "data_sources": [
-    "data/trends/2026-W26.json — \"GMK CYL Masterpiece R2\": score 46, direction up, note 'GB closes June 26'",
-    "data/trends/2026-W26.json — \"GMK CYL Pandemonium\": score 33, direction flat, note 'GB active June 1-July 1 ... Mid-window plateau'",
-    "apps/web/src/content/articles/gmk-cyl-og-extensions-interest-check.mdx:Outpacing the buys that are actually open — bar-chart comparison of the three scores"
+    "data/trends/2026-W29.json — \"GMK CYL OG Extensions\": score 55, direction up (current read at time of writing)",
+    "data/trends/2026-W26.json — \"GMK CYL Masterpiece R2\": score 46 (its peak read), direction up, note 'GB closes June 26'",
+    "data/trends/2026-W26.json — \"GMK CYL Pandemonium\": score 33 (its peak read), direction flat, note 'GB active June 1-July 1 ... Mid-window plateau'",
+    "apps/web/src/content/articles/gmk-cyl-og-extensions-interest-check.mdx:Outpacing the buys that are actually open — bar-chart comparison of the three scores. Corrected 2026-07-13: Masterpiece R2/Pandemonium bars are each entity's peak tracker read (not concurrent with OG Extensions' W29 read) — original copy incorrectly framed all three as 'the same tracker week'."
   ],
   "outputs": ["apps/web/public/article-viz/gmk-cyl-og-extensions-interest-check/ic-vs-live-gb.svg"],
   "warnings": []
