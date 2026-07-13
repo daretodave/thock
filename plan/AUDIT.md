@@ -6758,3 +6758,13 @@ passes accumulate signals.)
 - action: swapped both raw `<a>` tags for `next/link`'s `<Link>` in `apps/web/src/app/group-buys/page.tsx` and `apps/web/src/app/group-buys/past/page.tsx`.
 - issue: #462
 > Picked as the top signal this tick: no unlabeled GitHub issues (triage gate); not Monday (weekly snapshot gate skipped); AUDIT.md and CRITIQUE.md both had zero Pending rows — fully drained; all mechanical surveys clean (content-gap, crosslink, companion, stale-GB, newsletter-gap, OG-coverage, a11y-spec-coverage); no pending phases/data work; march's own expand Step 3c gate not met (11 commits/~6h since pass 181). A fresh general-purpose sweep angled directly at siblings of the just-shipped 30cb04f/#461 raw-anchor fix (every other raw `<a>` in `apps/web/src/**` verified as genuinely external — ButtondownForm, VendorCard, GroupBuyRow's vendor CTA, CitationIndex) surfaced this pair as the only remaining internal-navigation raw anchors; e2e coverage against `canonical-urls.ts` confirmed complete, no other candidate cleared 3.0 within the sweep's time budget. `pnpm verify` full gate green: typecheck, 608 unit tests, data:validate (69 records), build, 1000/1000 e2e.
+
+### [ ] [content-gaps] [5.5] Work Louder x OpenAI Codex Micro — Rule 2 tracker linkage missing
+- category: content-gaps
+- filed: 2026-07-13 by tracker-linkage-survey.mjs
+- impact: 6 (non-flat trend row "Work Louder x OpenAI Codex Micro" unlinked for 14 days; no companion deep-dive)
+- ease: 9 (one article fills it; topic already editorially curated in tracker)
+- score: 5.5 (impact × ease / 10, rounded)
+- first-seen: 2026-W27
+- rule: Rule 2
+- action: ship companion article for "Work Louder x OpenAI Codex Micro", set articleSlug in relevant trend snapshot(s)
