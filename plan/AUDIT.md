@@ -6806,3 +6806,12 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/dcs-olivetti-comeback.mdx
 - action: add [dcs-olivetti-comeback](/article/dcs-olivetti-comeback) to gmk-cyl-og-extensions-interest-check body, or vice versa
 - issue: #465
+
+### [x] [content] [3.6] gmk-cyl-og-extensions article implies same-week tracker comparison across 3 weeks — addressed in d5f9e36, closes #466
+- category: content
+- filed: 2026-07-13 by cloud /iterate audit (fresh general-purpose sweep, this tick)
+- impact: 6 (signature trends-pillar article's central comparison claims OG Extensions (55), Masterpiece R2 (46), and Pandemonium (33) are reads from "the same tracker week"/"the same tracker read"; the inline-viz provenance JSON confirms Masterpiece R2 and Pandemonium's scores were sourced from `data/trends/2026-W26.json` while OG Extensions' 55 only exists in `data/trends/2026-W29.json` — three weeks apart, not concurrent. A reader who checks the tracker archive would find the framing doesn't hold up)
+- ease: 6 (surgical prose + InlineViz alt/caption + SVG label + provenance JSON correction; no new data needed — the peak-read framing is accurate to the already-sourced W26 numbers)
+- score: 3.6 (impact × ease / 10)
+- issue: #466
+> **Resolved (2026-07-13):** Reframed the "Outpacing the buys that are actually open" section from a same-week snapshot to each group buy's peak tracker read — Masterpiece R2 peaked at 46 the week it closed (June 26), Pandemonium peaked at 33 before its July 1 close, both accurate to the sourced `2026-W26.json` data. Updated InlineViz alt text, caption, and the `ic-vs-live-gb.svg` title/axis-label text (in-SVG "Same tracker week..." → "Peak reads..."; "GB closing that week"/"GB mid-window" → "GB peak, closed June 26"/"GB peak, closed July 1") plus the provenance JSON's `brief_summary` and `data_sources` to document the correction. `pnpm verify` full gate green: typecheck, unit tests, data:validate, build, 1015/1015 e2e. `d5f9e36`
