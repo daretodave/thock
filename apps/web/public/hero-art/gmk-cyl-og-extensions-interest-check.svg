@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="#9c9286" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — GMK CYL OG Extensions interest-check momentum, an ascending sparkline tracing the trends-tracker score climb from 5 to 55 over eight weeks</title>
+
+  <!-- ── FOCAL WASH — terracotta glow behind the peak zone ─────────────────────
+       Soft low-opacity ellipse seated behind the upper-right region where the
+       sparkline crests. Reads as "this is where the momentum lands."
+  -->
+  <ellipse cx="1040" cy="270" rx="150" ry="170" fill="#B5603F" fill-opacity="0.08" stroke="none"/>
+
+  <!-- ── BASELINE ──────────────────────────────────────────────────────────────
+       Faint horizontal ground line — implies "week zero" without a literal
+       axis. Dashed, low opacity, consistent with the family convention.
+  -->
+  <line x1="100" y1="620" x2="1100" y2="620" stroke="#9c9286" stroke-opacity="0.18" stroke-dasharray="4 8"/>
+
+  <!-- ── WEEK TICKS ────────────────────────────────────────────────────────────
+       Eight faint register ticks under the baseline, one per weekly reading.
+       No numerals — the geometry carries the cadence.
+  -->
+  <g stroke="#9c9286" stroke-opacity="0.25" stroke-width="1">
+    <line x1="140"  y1="620" x2="140"  y2="630"/>
+    <line x1="271"  y1="620" x2="271"  y2="630"/>
+    <line x1="403"  y1="620" x2="403"  y2="630"/>
+    <line x1="534"  y1="620" x2="534"  y2="630"/>
+    <line x1="666"  y1="620" x2="666"  y2="630"/>
+    <line x1="797"  y1="620" x2="797"  y2="630"/>
+    <line x1="929"  y1="620" x2="929"  y2="630"/>
+    <line x1="1060" y1="620" x2="1060" y2="630"/>
+  </g>
+
+  <!-- ── UNDER-CURVE WASH ──────────────────────────────────────────────────────
+       Low-opacity terracotta fill beneath the ascending sparkline — the
+       "region under the line" reading that makes the climb legible as
+       accumulated momentum, not just a stroke.
+
+       Data grounding: trends-tracker weekly score readings for the
+       "GMK CYL OG Extensions" interest check, spark = [5, 10, 18, 26, 34,
+       42, 49, 55] (data/trends/2026-W29.json).
+       Mapped linearly: y = 620 - (score - 5) / 50 * 420
+  -->
+  <path d="M 140 620 L 271 578 L 403 511 L 534 444 L 666 376 L 797 309 L 929 250 L 1060 200 L 1060 620 Z"
+        fill="#B5603F" fill-opacity="0.12" stroke="none"/>
+
+  <!-- ── "NOW" GUIDE ───────────────────────────────────────────────────────────
+       Faint vertical dashed marker at the latest reading — echoes the
+       "current snapshot" convention used on other trends hero pieces.
+  -->
+  <line x1="1060" y1="80" x2="1060" y2="650" stroke="#9c9286" stroke-opacity="0.15" stroke-dasharray="4 4"/>
+
+  <!-- ── ASCENDING SPARKLINE ───────────────────────────────────────────────────
+       The primary motif. Straight segments, round joins — a clean,
+       illustrative line rather than a plotted chart. Terracotta splash.
+  -->
+  <polyline
+    points="140,620 271,578 403,511 534,444 666,376 797,309 929,250 1060,200"
+    stroke="#B5603F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- ── WEEKLY READING DOTS ───────────────────────────────────────────────────
+       Opacity and radius climb with the reading — the earliest weeks read
+       as quiet murmurs, the latest as the loud current signal.
+  -->
+  <circle cx="140"  cy="620" r="4"   fill="#B5603F" fill-opacity="0.35" stroke="none"/>
+  <circle cx="271"  cy="578" r="4.5" fill="#B5603F" fill-opacity="0.45" stroke="none"/>
+  <circle cx="403"  cy="511" r="5"   fill="#B5603F" fill-opacity="0.55" stroke="none"/>
+  <circle cx="534"  cy="444" r="5.5" fill="#B5603F" fill-opacity="0.65" stroke="none"/>
+  <circle cx="666"  cy="376" r="6"   fill="#B5603F" fill-opacity="0.75" stroke="none"/>
+  <circle cx="797"  cy="309" r="6.5" fill="#B5603F" fill-opacity="0.82" stroke="none"/>
+  <circle cx="929"  cy="250" r="7"   fill="#B5603F" fill-opacity="0.90" stroke="none"/>
+
+  <!-- ── FOCAL DOT — latest reading, score 55 ──────────────────────────────────
+       The visual anchor point: a bold filled dot with a soft halo ring,
+       marking where the momentum currently stands.
+  -->
+  <circle cx="1060" cy="200" r="17" stroke="#B5603F" stroke-width="2" stroke-opacity="0.35" fill="none"/>
+  <circle cx="1060" cy="200" r="9" fill="#B5603F" fill-opacity="1" stroke="none"/>
+
+  <!-- ── BRONZE THEME DOT — ornamental family anchor ───────────────────────────
+       Small warm-bronze filled circle at the upper-right margin.
+       Color approximates oklch(0.80 0.135 75).
+  -->
+  <circle cx="1148" cy="88" r="9" fill="#BFA67A" fill-opacity="0.88" stroke="none"/>
+
+  <!-- ── SECONDARY ACCENT CONSTELLATION ────────────────────────────────────────
+       Two tiny satellite dots flanking the theme dot — family micro-ornament,
+       one echoing bronze, one echoing the terracotta splash for cohesion.
+  -->
+  <circle cx="1129" cy="103" r="3.5" fill="#BFA67A" fill-opacity="0.45" stroke="none"/>
+  <circle cx="1148" cy="107" r="2.5" fill="#B5603F" fill-opacity="0.50" stroke="none"/>
+
+</svg>

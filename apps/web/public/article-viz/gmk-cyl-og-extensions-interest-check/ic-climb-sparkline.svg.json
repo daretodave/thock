@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-25T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "gmk-cyl-og-extensions-interest-check",
+  "article_pillar": "trends",
+  "section_anchor": "The signal",
+  "brief_summary": "Terracotta line chart plotting the GMK CYL OG Extensions Trends Tracker score across eight consecutive weekly reads, values 5, 10, 18, 26, 34, 42, 49, 55. No flat week appears in the run. The terminal point is a filled terracotta circle labelled 55, the most recent read at time of writing.",
+  "target": "apps/web/public/article-viz/gmk-cyl-og-extensions-interest-check/ic-climb-sparkline.svg",
+  "splash_color": { "name": "muted terracotta (matches hero art)", "oklch": "oklch(0.62 0.13 35)", "hex": "#B5603F" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "data/trends/2026-W29.json — \"GMK CYL OG Extensions\": score 55, direction up, spark [5, 10, 18, 26, 34, 42, 49, 55]",
+    "apps/web/src/content/articles/gmk-cyl-og-extensions-interest-check.mdx:The signal — 'eight consecutive weekly tracker reads without ever going flat — 5, 10, 18, 26, 34, 42, 49, 55'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gmk-cyl-og-extensions-interest-check/ic-climb-sparkline.svg"],
+  "warnings": []
+}

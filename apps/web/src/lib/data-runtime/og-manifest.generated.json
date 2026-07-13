@@ -41,6 +41,16 @@
       }
     },
     {
+      "slug": "gmk-cyl-og-extensions-interest-check",
+      "readTime": 6,
+      "frontmatter": {
+        "title": "GMK CYL OG Extensions is climbing faster than any GMK CYL group buy that's open",
+        "lede": "An interest check posted on Geekhack has pulled ahead of both open GMK CYL group buys on the thock trends tracker — eight straight weekly reads without a single flat week, and it hasn't opened a group buy of its own yet.",
+        "pillar": "trends",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "retrobrighting-keycaps",
       "readTime": 6,
       "frontmatter": {
@@ -803,6 +813,11 @@
       "category": "switch"
     },
     {
+      "slug": "interest-check",
+      "name": "Interest check",
+      "category": "misc"
+    },
+    {
       "slug": "kailh",
       "name": "Kailh",
       "category": "brand"
@@ -1270,5 +1285,5 @@
       "readTime": 4
     }
   ],
-  "generatedAt": "2026-07-13T05:36:00.721Z"
+  "generatedAt": "2026-07-13T11:50:24.694Z"
 }

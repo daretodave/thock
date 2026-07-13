@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-25T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "gmk-cyl-og-extensions-interest-check",
+  "article_pillar": "trends",
+  "section_anchor": "What to watch",
+  "brief_summary": "Four-stage process strip showing the interest check's current stage (terracotta, filled) followed by the announced GB window opening July 15, 2026, the GB window closing August 12, 2026 (both dashed-outline, calendar-confirmed), and a final unconfirmed production stage (lightly dashed, hedged) that depends on the buy clearing MOQ.",
+  "target": "apps/web/public/article-viz/gmk-cyl-og-extensions-interest-check/ic-to-gb-stages.svg",
+  "splash_color": { "name": "muted terracotta (matches hero art)", "oklch": "oklch(0.62 0.13 35)", "hex": "#B5603F" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "data/trends/2026-W29.json — \"GMK CYL OG Extensions\" note: 'New \"[IC] GMK CYL OG Extensions\" interest check posted on Geekhack with a GB window of July 15-Aug 12, 2026'",
+    "apps/web/src/content/articles/gmk-cyl-og-extensions-interest-check.mdx:What to watch — GB window dates and hedged production language"
+  ],
+  "outputs": ["apps/web/public/article-viz/gmk-cyl-og-extensions-interest-check/ic-to-gb-stages.svg"],
+  "warnings": []
+}

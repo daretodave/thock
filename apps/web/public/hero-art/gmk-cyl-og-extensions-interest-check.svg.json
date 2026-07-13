@@ -1,0 +1,40 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-13T00:00:00.000Z",
+  "commit": "419cec72941dd270410d5df2ce10538ada54ef6a",
+  "kind": "hero-art",
+  "source": null,
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": [],
+  "outputs": [
+    "apps/web/public/hero-art/gmk-cyl-og-extensions-interest-check.svg"
+  ],
+  "warnings": [],
+  "article_slug": "gmk-cyl-og-extensions-interest-check",
+  "article_pillar": "trends",
+  "subject": "Ascending sparkline silhouette tracing the trends-tracker score climb for the GMK CYL OG Extensions interest check, from 5 to 55 over eight weekly readings. Under-curve wash + weekly reading dots that brighten toward the current (focal) point, per the trends-piece sparkline-silhouette house style.",
+  "splash_color": {
+    "name": "muted terracotta",
+    "oklch": "approx oklch(0.62 0.13 35)",
+    "hex": "#B5603F"
+  },
+  "accent_color": {
+    "name": "warm-bronze theme dot",
+    "oklch": "oklch(0.80 0.135 75)",
+    "hex": "#BFA67A"
+  },
+  "canvas": "1200x750",
+  "stroke_weight": "2px (sparkline itself rendered at 3px for legibility as the focal motif)",
+  "background": "transparent",
+  "data_sources": [
+    "data/trends/2026-W29.json — \"GMK CYL OG Extensions\": spark [5, 10, 18, 26, 34, 42, 49, 55], note: \"New '[IC] GMK CYL OG Extensions' interest check posted on Geekhack with a GB window of July 15-Aug 12, 2026, generating fresh keycap-community buzz.\""
+  ],
+  "design_notes": {
+    "motif": "abstract ascending sparkline, not a literal chart-with-axes — no numeral labels, no plotted axis lines beyond one faint dashed baseline",
+    "point_mapping": "y = 620 - (score - 5) / 50 * 420, x evenly spaced 140..1060 across 8 weekly readings",
+    "focal_point": "final reading (score 55) at (1060, 200) — larger dot + halo ring, marks current momentum",
+    "wash_technique": "low-opacity terracotta ellipse behind the peak zone + low-opacity fill under the polyline, same family technique as dcs-grass-valley-decline.svg's focal ellipse wash",
+    "theme_dot_position": "cx=1148 cy=88 r=9, with two satellite micro-dots (bronze + terracotta) for family cohesion"
+  }
+}

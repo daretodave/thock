@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>GMK CYL OG Extensions Trends Tracker score across eight consecutive weekly reads — values 5, 10, 18, 26, 34, 42, 49, 55 — a steady climb with no flat week</title>
+
+  <!-- Title -->
+  <text x="600" y="54" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">GMK CYL OG Extensions — Trends Tracker, eight-week IC climb</text>
+
+  <!-- Chart area: x from 200 to 1040, y from 100 (score 60) to 370 (score 0) -->
+  <!-- Scale: 270px for 60 score points -> 4.5px per point -->
+  <!-- score 5  -> 370 - 22.5  = 347.5 -->
+  <!-- score 10 -> 370 - 45    = 325 -->
+  <!-- score 18 -> 370 - 81    = 289 -->
+  <!-- score 26 -> 370 - 117   = 253 -->
+  <!-- score 34 -> 370 - 153   = 217 -->
+  <!-- score 42 -> 370 - 189   = 181 -->
+  <!-- score 49 -> 370 - 220.5 = 149.5 -->
+  <!-- score 55 -> 370 - 247.5 = 122.5 -->
+  <!-- x: 200, 320, 440, 560, 680, 800, 920, 1040 -->
+
+  <!-- Horizontal grid lines: 0, 20, 40, 60 -->
+  <line x1="180" y1="370" x2="1080" y2="370" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.4" stroke-width="1.5"/>
+  <line x1="180" y1="280" x2="1080" y2="280" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.12"/>
+  <line x1="180" y1="190" x2="1080" y2="190" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.12"/>
+  <line x1="180" y1="100" x2="1080" y2="100" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.12"/>
+
+  <!-- Y-axis labels -->
+  <text x="168" y="374" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.45">0</text>
+  <text x="168" y="284" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.4">20</text>
+  <text x="168" y="194" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.4">40</text>
+  <text x="168" y="104" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.4">60</text>
+
+  <!-- Subtle fill below line -->
+  <polygon
+    points="200,347.5 320,325 440,289 560,253 680,217 800,181 920,149.5 1040,122.5 1040,370 200,370"
+    fill="#B5603F"
+    fill-opacity="0.10"
+    stroke="none"
+  />
+
+  <!-- Terracotta data line -->
+  <polyline
+    points="200,347.5 320,325 440,289 560,253 680,217 800,181 920,149.5 1040,122.5"
+    stroke="#B5603F"
+    stroke-width="3"
+    stroke-opacity="0.95"
+    fill="none"
+  />
+
+  <!-- Data dots — non-terminal reads -->
+  <circle cx="200" cy="347.5" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.45"/>
+  <circle cx="320" cy="325"   r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.45"/>
+  <circle cx="440" cy="289"   r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.45"/>
+  <circle cx="560" cy="253"   r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.45"/>
+  <circle cx="680" cy="217"   r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.45"/>
+  <circle cx="800" cy="181"   r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.45"/>
+  <circle cx="920" cy="149.5" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.45"/>
+
+  <!-- Terminal dot — read 8, score 55 -->
+  <circle cx="1040" cy="122.5" r="10" fill="#B5603F" stroke="#B5603F" stroke-opacity="0.9"/>
+  <text x="1060" y="118" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="#B5603F" stroke="none" font-weight="600">55</text>
+  <text x="1060" y="135" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">latest read</text>
+
+  <!-- Read labels along x-axis -->
+  <text x="200"  y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">read 1</text>
+  <text x="320"  y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">read 2</text>
+  <text x="440"  y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">read 3</text>
+  <text x="560"  y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">read 4</text>
+  <text x="680"  y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">read 5</text>
+  <text x="800"  y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">read 6</text>
+  <text x="920"  y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">read 7</text>
+  <text x="1040" y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="#B5603F" stroke="none" text-anchor="middle" opacity="0.95">read 8</text>
+
+  <!-- Caption annotation -->
+  <text x="600" y="432" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">five to fifty-five, zero flat weeks in eight reads</text>
+
+  <!-- Bronze theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

@@ -34,6 +34,7 @@
     { "slug": "sa", "name": "SA", "category": "profile" },
 
     { "slug": "group-buy", "name": "Group buy", "category": "misc" },
+    { "slug": "interest-check", "name": "Interest check", "category": "misc" },
     { "slug": "beginner", "name": "Beginner", "category": "misc" },
     { "slug": "build-of-the-week", "name": "Build of the week", "category": "misc" },
     { "slug": "deep-dive", "name": "Deep dive", "category": "misc" },
