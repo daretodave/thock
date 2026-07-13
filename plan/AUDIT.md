@@ -6824,3 +6824,13 @@ passes accumulate signals.)
 - score: 5.4 (impact × ease / 10)
 - issue: #467
 > **Resolved (2026-07-13):** This exact defect was previously surfaced by the 2026-07-12 sweep that shipped #461 and deliberately deferred (tied score, picked a broader-impact finding that tick, noted "worth a future sweep re-surfacing"). Re-verified live: `apps/web/src/content/articles/building-mode-sonnet-with-oil-kings.mdx:39` said "55g bottom-out linear"; `data/switches/gateron-oil-king.json` has `springGrams.actuation: 55, springGrams.bottomOut: 65`. Corrected the cited figure from 55g to 65g. `pnpm verify` full gate green: typecheck, unit tests, data:validate, build, 1015/1015 e2e.
+
+### [x] [content] [4.5] gmk-cyl-og-extensions self-contradicts on closing date — addressed in 28f732d, closes #468
+- category: content
+- filed: 2026-07-13 by cloud /iterate audit (general-purpose sweep)
+- impact: 5 (lines 35 and 44 twice assert the interest check has "no closing date," used as a contrast to funded group buys that do have one; line 66 later states the IC "carries an announced group-buy window running July 15 through August 12, 2026" — a real closing date. A reader reaching the "What to watch" section notices the piece contradicted itself on a fact central to its own framing)
+- ease: 9 (two-line prose fix, no schema/component/test impact)
+- score: 4.5 (impact × ease / 10)
+- issue: #468
+> **Resolved (2026-07-13):** Replaced "no closing date" (line 35) and "a closing date" (line 44) with "no live listing" / "a live listing" — the IC genuinely lacks a live buy listing even with an announced window, so the phrase no longer conflicts with the line-66 reveal. `pnpm verify` full gate green: typecheck, unit tests, test:scripts, data:validate, build, size (108.6 KB/200 KB budget), 1015/1015 e2e.
+> Picked as the top signal this tick: no unlabeled GitHub issues (triage gate); Monday snapshot already existed for 2026-W29 (weekly gate skipped); AUDIT.md's only other Pending row remains the blocked `[6.3]` blocked-cloud-permission march.yml crash-issue-gate item; CRITIQUE.md's only Pending row remains the ancient non-actionable `[needs-user-call]` GA-beacon item; all mechanical surveys clean (content-gap, crosslink, companion, stale-GB, newsletter-gap, OG-coverage, a11y-spec-coverage); expand gate not due (3 commits/~2h since pass 184, threshold 20 commits/48h). A fresh general-purpose sweep (link integrity, data hygiene, a11y, tests, SEO/JSON-LD, performance, dead code, content quality on recently-published articles) found the corpus otherwise clean — this self-contradiction was the only finding clearing the 3.0 bar.
