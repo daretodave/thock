@@ -6770,7 +6770,7 @@ passes accumulate signals.)
 - action: ship companion article for "Work Louder x OpenAI Codex Micro", set articleSlug in relevant trend snapshot(s)
 - issue: #463
 
-### [HOT PURSUIT] [content-gap] [7] trends pillar — 1 of ≥2 articles in last 30d
+### [x] [HOT PURSUIT] [content-gap] [7] trends pillar — 1 of ≥2 articles in last 30d — addressed in afd551d (closes #464)
 - category: content-gaps
 - impact: 8 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -6782,3 +6782,25 @@ passes accumulate signals.)
 - next: /ship-content → trends pillar article
 - issue: #464
 > Filed 2026-07-13 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+
+### [ ] [cross-links] [4.5] gmk-cyl-og-extensions-interest-check ↔ dcs-grass-valley-decline — no prose cross-link (same pillar, ≥2 shared tags: keycaps, trends-2026)
+- category: cross-links
+- filed: 2026-07-13 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: keycaps, trends-2026
+- article-a: apps/web/src/content/articles/gmk-cyl-og-extensions-interest-check.mdx
+- article-b: apps/web/src/content/articles/dcs-grass-valley-decline.mdx
+- action: add [dcs-grass-valley-decline](/article/dcs-grass-valley-decline) to gmk-cyl-og-extensions-interest-check body, or vice versa
+
+### [ ] [cross-links] [4.5] gmk-cyl-og-extensions-interest-check ↔ dcs-olivetti-comeback — no prose cross-link (same pillar, ≥2 shared tags: keycaps, cherry-profile, trends-2026)
+- category: cross-links
+- filed: 2026-07-13 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: keycaps, cherry-profile, trends-2026
+- article-a: apps/web/src/content/articles/gmk-cyl-og-extensions-interest-check.mdx
+- article-b: apps/web/src/content/articles/dcs-olivetti-comeback.mdx
+- action: add [dcs-olivetti-comeback](/article/dcs-olivetti-comeback) to gmk-cyl-og-extensions-interest-check body, or vice versa
