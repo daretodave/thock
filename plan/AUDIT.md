@@ -6815,3 +6815,12 @@ passes accumulate signals.)
 - score: 3.6 (impact × ease / 10)
 - issue: #466
 > **Resolved (2026-07-13):** Reframed the "Outpacing the buys that are actually open" section from a same-week snapshot to each group buy's peak tracker read — Masterpiece R2 peaked at 46 the week it closed (June 26), Pandemonium peaked at 33 before its July 1 close, both accurate to the sourced `2026-W26.json` data. Updated InlineViz alt text, caption, and the `ic-vs-live-gb.svg` title/axis-label text (in-SVG "Same tracker week..." → "Peak reads..."; "GB closing that week"/"GB mid-window" → "GB peak, closed June 26"/"GB peak, closed July 1") plus the provenance JSON's `brief_summary` and `data_sources` to document the correction. `pnpm verify` full gate green: typecheck, unit tests, data:validate, build, 1015/1015 e2e. `d5f9e36`
+
+### [content] [5.4] building-mode-sonnet-with-oil-kings cites wrong Oil King spring weight — addressed in this commit, closes #467
+- category: content
+- filed: 2026-07-13 by cloud /iterate audit (fresh general-purpose sweep, this tick)
+- impact: 6 (the article's central causal argument — that the Oil King's heft fixes the Sonnet's hollow-soft-mount sound — cites 55g as the bottom-out weight; the data record has actuation at 55g and bottom-out at 65g, so the article both mislabels the spec and understates the number backing its own argument; a spec-literate reader checking the switch's known 55/65 numbers will catch the mismatch)
+- ease: 9 (one-line prose fix, no schema/component/test impact)
+- score: 5.4 (impact × ease / 10)
+- issue: #467
+> **Resolved (2026-07-13):** This exact defect was previously surfaced by the 2026-07-12 sweep that shipped #461 and deliberately deferred (tied score, picked a broader-impact finding that tick, noted "worth a future sweep re-surfacing"). Re-verified live: `apps/web/src/content/articles/building-mode-sonnet-with-oil-kings.mdx:39` said "55g bottom-out linear"; `data/switches/gateron-oil-king.json` has `springGrams.actuation: 55, springGrams.bottomOut: 65`. Corrected the cited figure from 55g to 65g. `pnpm verify` full gate pending.
