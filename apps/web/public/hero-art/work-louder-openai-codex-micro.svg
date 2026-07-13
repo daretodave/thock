@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — Work Louder Codex Micro, compact macro-pad silhouette (knob + accent key + 2x3 grid) evolving from a smaller predecessor pad</title>
+
+  <!-- Splash wash behind the accent key — sets the stage without competing with the line art -->
+  <ellipse cx="668" cy="308" rx="140" ry="110" fill="oklch(0.64 0.12 46 / 0.07)" stroke="none"/>
+
+  <!-- ============ PREDECESSOR PAD (Creator Micro 2 lineage, faded) ============ -->
+  <g stroke-opacity="0.38" stroke-width="1.5">
+    <rect x="140" y="330" width="190" height="150" rx="16" ry="16"/>
+    <rect x="152" y="342" width="166" height="126" rx="10" ry="10" stroke-opacity="0.5"/>
+    <!-- small knob -->
+    <circle cx="187" cy="376" r="15"/>
+    <line x1="187" y1="361" x2="187" y2="366"/>
+    <line x1="187" y1="386" x2="187" y2="391"/>
+    <line x1="172" y1="376" x2="177" y2="376"/>
+    <line x1="197" y1="376" x2="202" y2="376"/>
+    <!-- 2x2 mini key grid -->
+    <rect x="222" y="358" width="36" height="30" rx="5"/>
+    <rect x="266" y="358" width="36" height="30" rx="5"/>
+    <rect x="222" y="398" width="36" height="30" rx="5"/>
+    <rect x="266" y="398" width="36" height="30" rx="5"/>
+  </g>
+
+  <!-- Evolution arrow — dashed, predecessor pad into the Codex Micro body -->
+  <g stroke-opacity="0.5" stroke-dasharray="5 6">
+    <path d="M 332 400 C 368 390, 390 380, 416 366"/>
+  </g>
+  <path d="M 416 366 L 400 366 M 416 366 L 408 379" stroke-opacity="0.55"/>
+
+  <!-- ============ CODEX MICRO — main macro-pad body ============ -->
+  <!-- Outer shell -->
+  <rect x="420" y="235" width="360" height="290" rx="22" ry="22"/>
+  <!-- Inner bezel inset -->
+  <rect x="436" y="251" width="328" height="258" rx="16" ry="16" stroke-opacity="0.4" stroke-width="1"/>
+
+  <!-- Bronze top-edge hairline -->
+  <line x1="420" y1="235" x2="780" y2="235" stroke="oklch(0.80 0.135 75)" stroke-opacity="0.75" stroke-width="2.5"/>
+
+  <!-- Rotary knob, upper-left of the body -->
+  <g>
+    <circle cx="504" cy="308" r="30"/>
+    <circle cx="504" cy="308" r="18" stroke-opacity="0.5"/>
+    <!-- grip ticks -->
+    <line x1="504" y1="272" x2="504" y2="280"/>
+    <line x1="504" y1="336" x2="504" y2="344"/>
+    <line x1="470" y1="308" x2="478" y2="308"/>
+    <line x1="530" y1="308" x2="538" y2="308"/>
+    <line x1="480" y1="284" x2="486" y2="290"/>
+    <line x1="528" y1="332" x2="522" y2="326"/>
+    <line x1="528" y1="284" x2="522" y2="290"/>
+    <line x1="480" y1="332" x2="486" y2="326"/>
+  </g>
+
+  <!-- Accent key — the branded "spark" key, splash-filled -->
+  <rect x="572" y="276" width="192" height="64" rx="10" ry="10"
+    fill="oklch(0.64 0.12 46 / 0.14)" stroke="oklch(0.64 0.12 46)" stroke-opacity="0.9" stroke-width="2.5"/>
+
+  <!-- Abstract spark glyph centered in the accent key -->
+  <g stroke="oklch(0.64 0.12 46)" stroke-width="2" stroke-opacity="0.9">
+    <line x1="668" y1="291" x2="668" y2="325"/>
+    <line x1="651" y1="308" x2="685" y2="308"/>
+    <line x1="657" y1="297" x2="679" y2="319"/>
+    <line x1="679" y1="297" x2="657" y2="319"/>
+  </g>
+  <circle cx="668" cy="308" r="3.5" fill="oklch(0.64 0.12 46)" stroke="none"/>
+
+  <!-- 2x3 key grid beneath the knob + accent row -->
+  <g stroke-width="1.5">
+    <rect x="440" y="356" width="100" height="64" rx="8" ry="8"/>
+    <rect x="552" y="356" width="100" height="64" rx="8" ry="8"/>
+    <rect x="664" y="356" width="100" height="64" rx="8" ry="8"/>
+    <rect x="440" y="432" width="100" height="64" rx="8" ry="8"/>
+    <rect x="552" y="432" width="100" height="64" rx="8" ry="8"/>
+    <rect x="664" y="432" width="100" height="64" rx="8" ry="8"/>
+  </g>
+
+  <!-- USB-C port + trailing cable hint at the bottom edge -->
+  <rect x="590" y="521" width="20" height="8" rx="2" stroke-opacity="0.55" stroke-width="1.5"/>
+  <path d="M 600 529 C 600 556, 646 552, 652 580 C 656 600, 690 604, 696 626" stroke-opacity="0.4" stroke-width="1.5"/>
+
+  <!-- CAPTION TEXT -->
+  <text
+    x="600" y="610"
+    font-family="'IBM Plex Sans', system-ui, sans-serif"
+    font-size="11"
+    font-weight="500"
+    letter-spacing="0.16em"
+    text-anchor="middle"
+    fill="oklch(0.78 0.005 90)"
+    fill-opacity="0.70"
+    stroke="none">WORK LOUDER × CODEX MICRO</text>
+
+  <!-- Bronze theme dot — upper-right ornamental anchor -->
+  <circle cx="1090" cy="150" r="5" fill="oklch(0.80 0.135 75)" fill-opacity="0.90" stroke="none"/>
+  <circle cx="1090" cy="150" r="9" stroke="oklch(0.80 0.135 75)" stroke-opacity="0.30" stroke-width="1.5"/>
+</svg>

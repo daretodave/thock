@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-09T14:00:00.000Z",
+  "commit": "b807cf4",
+  "kind": "inline-viz",
+  "article_slug": "work-louder-openai-codex-micro",
+  "article_pillar": "news",
+  "section_anchor": "Why the crossover matters",
+  "brief_summary": "Coral line chart plotting the Work Louder x OpenAI Codex Micro Trends Tracker row across three consecutive weeks: 58 (W27, week of the June 29 teaser), 68 (W28, one week later), and 94 (W29, the week of July 13). A dashed forward-projection line and a dashed vertical marker past the last data point mark July 15 as the ship date, with no fabricated data point plotted past W29.",
+  "target": "apps/web/public/article-viz/work-louder-openai-codex-micro/tracker-climb.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "data/trends/2026-W27.json:rows[Work Louder x OpenAI Codex Micro] — score 58, note 'a Work Louder-built macro pad teased June 29 — pulls outside-press attention into the enthusiast space ahead of its July 15 launch'",
+    "data/trends/2026-W28.json:rows[Work Louder x OpenAI Codex Micro] — score 68, note 'One week out from the planned July 15 launch ... pricing is still unannounced'",
+    "data/trends/2026-W29.json:rows[Work Louder x OpenAI Codex Micro] — score 94, note 'ships July 15, 2026; pre-launch teasers drove a discussion spike this week'"
+  ],
+  "outputs": ["apps/web/public/article-viz/work-louder-openai-codex-micro/tracker-climb.svg"],
+  "warnings": []
+}

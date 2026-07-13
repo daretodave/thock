@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Three-box lineage diagram: Work Louder, a boutique macro-pad vendor, builds the Creator Micro 2, an existing 199 dollar catalog macro pad, which becomes the base for Codex Micro, OpenAI's first branded hardware, shipping July 15, 2026</title>
+
+  <!-- Title -->
+  <text x="600" y="46" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Vendor → platform → branded variant</text>
+
+  <!-- Box 1: Work Louder -->
+  <rect x="70" y="130" width="300" height="150" rx="6" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55"/>
+  <text x="220" y="185" font-family="IBM Plex Sans, sans-serif" font-size="18" font-weight="700" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.92">Work Louder</text>
+  <text x="220" y="212" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.60">boutique macro-pad</text>
+  <text x="220" y="230" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.60">vendor</text>
+
+  <!-- Arrow 1 -->
+  <line x1="378" y1="205" x2="452" y2="205" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55" stroke-width="2"/>
+  <polygon points="452,205 438,197 438,213" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55"/>
+  <text x="415" y="188" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">builds</text>
+
+  <!-- Box 2: Creator Micro 2 -->
+  <rect x="460" y="130" width="300" height="150" rx="6" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55"/>
+  <text x="610" y="185" font-family="JetBrains Mono, monospace" font-size="16" font-weight="700" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.92">Creator Micro 2</text>
+  <text x="610" y="212" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.60">existing catalog macro pad</text>
+  <text x="610" y="230" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.60">$199</text>
+
+  <!-- Arrow 2 -->
+  <line x1="768" y1="205" x2="842" y2="205" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.85" stroke-width="2.5"/>
+  <polygon points="842,205 826,196 826,214" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.85"/>
+  <text x="805" y="180" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.90">OpenAI</text>
+  <text x="805" y="194" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.90">collaboration</text>
+
+  <!-- Box 3: Codex Micro (accented) -->
+  <rect x="850" y="122" width="300" height="166" rx="6" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.90" stroke-width="2.5"/>
+  <text x="1000" y="180" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">Codex Micro</text>
+  <text x="1000" y="207" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">OpenAI's first branded</text>
+  <text x="1000" y="225" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">hardware</text>
+  <text x="1000" y="248" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.90">ships July 15, 2026</text>
+
+  <!-- Footer annotation -->
+  <text x="600" y="340" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">not a from-scratch product — an existing platform, wearing a new badge</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="36" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

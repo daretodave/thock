@@ -77,6 +77,7 @@
     { "slug": "gasket-mount", "name": "Gasket-mount", "category": "layout" },
     { "slug": "hot-swap", "name": "Hot-swap", "category": "switch" },
     { "slug": "barebones-kit", "name": "Barebones kit", "category": "misc" },
-    { "slug": "retrobrighting", "name": "Retrobrighting", "category": "misc" }
+    { "slug": "retrobrighting", "name": "Retrobrighting", "category": "misc" },
+    { "slug": "work-louder", "name": "Work Louder", "category": "brand" }
   ]
 }

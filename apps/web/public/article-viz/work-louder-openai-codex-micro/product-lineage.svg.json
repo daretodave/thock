@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-09T14:00:00.000Z",
+  "commit": "b807cf4",
+  "kind": "inline-viz",
+  "article_slug": "work-louder-openai-codex-micro",
+  "article_pillar": "news",
+  "section_anchor": "What's shipping",
+  "brief_summary": "Three-box horizontal lineage diagram showing Work Louder (boutique macro-pad vendor) building the Creator Micro 2 (existing $199 catalog macro pad), which becomes the base platform for Codex Micro (OpenAI's first branded hardware, shipping July 15, 2026). The third box is accented in coral to mark it as the new, OpenAI-branded product.",
+  "target": "apps/web/public/article-viz/work-louder-openai-codex-micro/product-lineage.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "apps/web/src/content/articles/work-louder-openai-codex-micro.mdx:What's shipping — 'Codex Micro is built on top of Work Louder's existing Creator Micro 2, a $199 macro pad the vendor already sells under its own name'",
+    "apps/web/src/content/articles/work-louder-openai-codex-micro.mdx:What's shipping — 'a Work Louder-built macro pad, based on the Creator Micro 2 platform, carrying OpenAI's branding, arriving July 15'",
+    "data/trends/2026-W29.json:rows[Work Louder x OpenAI Codex Micro].note — 'OpenAI's first branded hardware, Codex Micro (built by Work Louder off the $199 Creator Micro 2), ships July 15, 2026'"
+  ],
+  "outputs": ["apps/web/public/article-viz/work-louder-openai-codex-micro/product-lineage.svg"],
+  "warnings": []
+}

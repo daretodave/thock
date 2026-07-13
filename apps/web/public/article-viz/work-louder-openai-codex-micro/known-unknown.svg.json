@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-09T14:00:00.000Z",
+  "commit": "b807cf4",
+  "kind": "inline-viz",
+  "article_slug": "work-louder-openai-codex-micro",
+  "article_pillar": "news",
+  "section_anchor": "What's known, what isn't",
+  "brief_summary": "Two-column breakdown separating confirmed facts about Codex Micro from open questions as of the article's publish date. The Known column (coral checkmarks) lists four confirmed facts; the Unannounced column (muted dashed circles) lists four open questions, price chief among them. No numeric values are invented for the unknown column — it names the categories of missing information only.",
+  "target": "apps/web/public/article-viz/work-louder-openai-codex-micro/known-unknown.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "apps/web/src/content/articles/work-louder-openai-codex-micro.mdx:What's known, what isn't — 'Known, plainly: Work Louder built it. It's based on the Creator Micro 2 platform. It's OpenAI's first branded piece of hardware. It ships July 15, 2026.'",
+    "apps/web/src/content/articles/work-louder-openai-codex-micro.mdx:What's known, what isn't — 'Unannounced, as of this piece's publish date: price. Full spec sheet ... Retail channel ... whether Codex Micro does anything software-side'",
+    "data/trends/2026-W28.json:rows[Work Louder x OpenAI Codex Micro].note — 'pricing is still unannounced'"
+  ],
+  "outputs": ["apps/web/public/article-viz/work-louder-openai-codex-micro/known-unknown.svg"],
+  "warnings": []
+}

@@ -1,0 +1,24 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-13T05:17:18.000Z",
+  "commit": "b807cf4bde71a464de45afbf30773c830e4c1326",
+  "kind": "hero-art",
+  "article_slug": "work-louder-openai-codex-micro",
+  "article_pillar": "news",
+  "source": null,
+  "template": "directive: plan/bearings.md § Article hero art — news/vendor piece maps to layout silhouette or vendor glyph; compact grid chosen over full-keyboard outline per brief",
+  "tokens_snapshot": "51fdae8368c1eee844850352ec620acd2f822555",
+  "fonts": ["IBM Plex Sans"],
+  "outputs": [
+    "apps/web/public/hero-art/work-louder-openai-codex-micro.svg"
+  ],
+  "subject": "Compact macro-pad silhouette (rotary knob, splash-accented branded key with abstract spark glyph, 2x3 key grid, USB-C port) evolving via a dashed arrow out of a smaller faded predecessor pad — nods to Codex Micro being built off Work Louder's existing Creator Micro 2",
+  "splash_color": { "name": "muted terracotta", "oklch": "oklch(0.64 0.12 46)" },
+  "secondary_accent": { "name": "warm bronze theme dot", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "canvas": "1200x750",
+  "stroke_weight": "2px",
+  "data_sources": [],
+  "warnings": []
+}

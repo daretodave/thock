@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Two-column breakdown. Known, in coral: built by Work Louder, based on the 199 dollar Creator Micro 2, OpenAI's first branded hardware, ships July 15 2026. Unannounced, in muted grey: price, full spec sheet, retail channel, software integration with OpenAI's tools.</title>
+
+  <!-- Title -->
+  <text x="600" y="46" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">What's confirmed, what isn't</text>
+
+  <!-- Divider -->
+  <line x1="600" y1="90" x2="600" y2="410" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.25" stroke-dasharray="4 6"/>
+
+  <!-- Column headers -->
+  <text x="300" y="100" font-family="IBM Plex Sans, sans-serif" font-size="15" font-weight="700" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.92">Known</text>
+  <text x="900" y="100" font-family="IBM Plex Sans, sans-serif" font-size="15" font-weight="700" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">Unannounced</text>
+
+  <!-- KNOWN column items -->
+  <!-- Item 1 -->
+  <circle cx="140" cy="150" r="10" fill="oklch(0.68 0.165 28 / 0.18)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.90"/>
+  <path d="M135 150 l4 4 l8 -9" stroke="oklch(0.68 0.165 28)" stroke-width="2" fill="none"/>
+  <text x="165" y="155" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">Built by Work Louder</text>
+
+  <!-- Item 2 -->
+  <circle cx="140" cy="200" r="10" fill="oklch(0.68 0.165 28 / 0.18)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.90"/>
+  <path d="M135 200 l4 4 l8 -9" stroke="oklch(0.68 0.165 28)" stroke-width="2" fill="none"/>
+  <text x="165" y="205" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">Based on the $199 Creator Micro 2</text>
+
+  <!-- Item 3 -->
+  <circle cx="140" cy="250" r="10" fill="oklch(0.68 0.165 28 / 0.18)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.90"/>
+  <path d="M135 250 l4 4 l8 -9" stroke="oklch(0.68 0.165 28)" stroke-width="2" fill="none"/>
+  <text x="165" y="255" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">OpenAI's first branded hardware</text>
+
+  <!-- Item 4 -->
+  <circle cx="140" cy="300" r="10" fill="oklch(0.68 0.165 28 / 0.18)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.90"/>
+  <path d="M135 300 l4 4 l8 -9" stroke="oklch(0.68 0.165 28)" stroke-width="2" fill="none"/>
+  <text x="165" y="305" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">Ships July 15, 2026</text>
+
+  <!-- UNANNOUNCED column items -->
+  <!-- Item 1 -->
+  <circle cx="740" cy="150" r="10" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.40" stroke-dasharray="3 3"/>
+  <text x="740" y="155" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">?</text>
+  <text x="765" y="155" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.60">Price</text>
+
+  <!-- Item 2 -->
+  <circle cx="740" cy="200" r="10" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.40" stroke-dasharray="3 3"/>
+  <text x="740" y="205" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">?</text>
+  <text x="765" y="205" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.60">Full spec sheet</text>
+
+  <!-- Item 3 -->
+  <circle cx="740" cy="250" r="10" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.40" stroke-dasharray="3 3"/>
+  <text x="740" y="255" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">?</text>
+  <text x="765" y="255" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.60">Retail channel</text>
+
+  <!-- Item 4 -->
+  <circle cx="740" cy="300" r="10" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.40" stroke-dasharray="3 3"/>
+  <text x="740" y="305" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">?</text>
+  <text x="765" y="305" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.60">Software integration with OpenAI's tools</text>
+
+  <!-- Footer annotation -->
+  <text x="600" y="400" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.50">as of this piece's publish date, six days ahead of launch</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="36" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

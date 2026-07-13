@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "slug": "work-louder-openai-codex-micro",
+      "readTime": 6,
+      "frontmatter": {
+        "title": "OpenAI's first hardware is a Work Louder macro pad",
+        "lede": "Codex Micro, OpenAI's first piece of branded hardware, is a macro pad built by boutique vendor Work Louder on the bones of its $199 Creator Micro 2. It ships July 15, 2026, with pricing still unannounced as of this piece's publish date.",
+        "pillar": "news",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "brass-weight-mod",
       "readTime": 8,
       "frontmatter": {
@@ -993,6 +1003,11 @@
       "category": "misc"
     },
     {
+      "slug": "work-louder",
+      "name": "Work Louder",
+      "category": "brand"
+    },
+    {
       "slug": "zmk",
       "name": "ZMK",
       "category": "misc"
@@ -1255,5 +1270,5 @@
       "readTime": 4
     }
   ],
-  "generatedAt": "2026-07-13T00:49:29.572Z"
+  "generatedAt": "2026-07-13T05:36:00.721Z"
 }
