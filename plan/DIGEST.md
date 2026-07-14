@@ -6,129 +6,124 @@
 
 ## Headline
 
-**Quiet, clean maintenance window — 10 `/iterate` fixes, 2 `/expand`
-no-op passes, one Monday tracker-snapshot cadence tick, and 2
-content-gap articles shipped end to end (each closing its own
-dispatch issue), zero red legs.** Since yesterday's digest
-(`7a7b6d2`), the loop drained ten small well-scoped findings: an
-a11y heading-order skip on vendor detail pages (`45b6b5e`), a quiz
-rapid-double-click question-skip bug (`70f2be4`), a raw status-enum
-leak on compare tables (`1335723`), a missing per-pillar RSS item
-cap (`2b59ca8`), a hardcoded-URL bug in the quiz `WebApplication`
-JSON-LD (`7ecbda9`), a compare-selector/URL desync on browser
-back/forward (`534c826`), a WCAG AA contrast failure on the quiz
-result rank badge (`86e9f7c`), new a11y test coverage for the
-compare tool's populated state (`7e75910`), and two raw-anchor →
-`next/link` fixes on `/group-buys` nav (`30cb04f`, `173d07e`) — five
-of the ten closed their own GitHub issue (`#457`–`#461`, `#462`
-closes on the sixth). Monday's cadence gate fired on schedule: a
-fresh 2026-W29 trend snapshot (`cf89448`) plus a tracker
-Rule-2-linkage survey pass (`5935172`, clean — no new gaps). Two
-content-gap dispatches ran end to end: a News piece on Work Louder's
-OpenAI-hardware macro pad (`e97be92`, closes `#463`) and a Trends
-piece on the GMK CYL OG Extensions interest-check outpacing its live
-group buys (`afd551d`, closes `#464`) — the second one immediately
-filed 2 fresh same-pillar cross-link rows against itself
-(`gmk-cyl-og-extensions-interest-check` ↔ `dcs-grass-valley-decline`
-/ `dcs-olivetti-comeback`), the only Pending rows in `AUDIT.md`
-besides the standing blocked `[6.3]` permission row. Two `/expand`
-passes (180, 181) filed 0 new candidates. Full breadth `pnpm verify`
-is green top to bottom, run fresh this tick as one foreground call
-(1015/1015 e2e, homepage bundle flat at 108.6 KB / 200 KB). Deploy
-is `READY` at HEAD (`3031eb0`). `plan/CRITIQUE.md` is now **64 days
-/ 1326 commits** since its last pass — unchanged diagnosis, still
-the standing item to resolve. No new GitHub issues beyond the two
-content-dispatch opens (both closed same-day); the Vercel
-webhook-drop issue (`#434`) and the 8 duplicate content-gap issues
-remain open, unchanged.
+**Steady maintenance window — 8 `/iterate` fix ticks (16 commits,
+each opening and same-day-closing its own GitHub issue), 10
+`/expand` no-op passes, zero red legs, zero content-gap dispatches.**
+Since yesterday's digest (`4f67feb`), the loop drained eight
+self-contained editorial-correctness findings: two separate Oil
+King spring-weight citation fixes on different articles
+(`2160a6b` drop-holy-panda-x, `d369778`
+building-mode-sonnet-with-oil-kings, closes `#469`/`#467`), a
+gmk-cyl-og-extensions closing-date self-contradiction (`28f732d`,
+closes `#468`), a gmk-cyl-og-extensions same-week tracker-comparison
+wording bug (`d5f9e36`, closes `#466`), a missing 2-link cross-link
+cluster on gmk-cyl-og-extensions-interest-check (`c2d2fb0`, closes
+`#465`), a durock-t1-deep-dive "five-year-old" claim off by a year
+(`564abb6`, closes `#470`), a vendor-page group-buy widget missing
+stale-announced-status handling (`99aeaf5`, closes `#471`), and a
+computex-2026-keyboard-highlights article citing the wrong W21
+hall-effect score (`cee903d`, closes `#472`). The last two ticks each
+surfaced a second finding they didn't ship: the vendor-page fix
+noted the same bug class is dormant on the home-page
+`GroupBuyCountdownRow` widget (now filed `[4.2]`), and the
+computex-2026 fix's sweep surfaced a `[3.5]` `needs-scoping` row on
+`rapid-trigger-gaming-crossover.mdx` where the prose and its own
+hand-authored sparkline SVG disagree on which week ("W21" vs the
+SVG's "W22" label) — flagged as needing a scoped decision before
+editing, not a blind fix. Ten `/expand` passes (182-191) filed 0 new
+candidates — the 13-row Pending queue is unchanged. No Monday
+snapshot gate this window (not Monday), no content-gap dispatches
+(both pillars stayed comfortable), no data backlog activity. Full
+breadth `pnpm verify` is green top to bottom, run fresh this tick as
+eight sequential foreground legs (1015/1015 e2e, homepage bundle
+flat at 108.6 KB / 200 KB). Deploy is `READY` at HEAD (`34f26bc`).
+`plan/CRITIQUE.md` is now **65 days / 1353 commits** since its last
+pass — the gap widened by another day / 27 commits since yesterday,
+unchanged diagnosis, still the standing item to resolve.
 
 ## While you were out
 
 | When (UTC) | Tick | Outcome |
 |---|---|---|
-| 07-12 11:45 | iterate | a11y — vendor detail page skips heading level h1→h3 (`45b6b5e`), audit `042810f` |
-| 07-12 12:57-12:58 | iterate | fix — quiz rapid double-click silently skips a question (`70f2be4`), audit `dd41bb1` |
-| 07-12 13:47 | iterate | fix — compare tables render raw status enum instead of human label (`1335723`), audit `1d166e3` |
-| 07-12 14:41 | expand | pass 180 — no candidates |
-| 07-12 15:41 | iterate | fix — per-pillar RSS feeds had no item cap (`2b59ca8`), audit `22fde9b` |
-| 07-12 16:29 | expand | pass 181 — no candidates |
-| 07-12 17:32-17:45 | iterate | fix — quiz `WebApplication` JSON-LD hardcoded absolute URL (`7ecbda9`), audit `95bdbf9`, closes `#457` |
-| 07-12 18:38-18:39 | iterate | fix — compare selectors desync from URL on browser back/forward (`534c826`), audit `037a19d`, closes `#458` |
-| 07-12 19:52-19:54 | iterate | fix — quiz result rank badge fails WCAG AA color contrast (`86e9f7c`), audit `80dbf74`, closes `#459` |
-| 07-12 20:41-20:42 | iterate | test — compare tool populated-state a11y coverage (`7e75910`), audit `93eab27`, closes `#460` |
-| 07-12 21:36-21:39 | iterate | fix — group-buys coverage link uses next/link instead of raw anchor (`30cb04f`), audit `936a229`, closes `#461` |
-| 07-12 23:33 | iterate | fix — group-buys archive nav links use raw anchor instead of next/link (`173d07e`), audit `92f6859`, closes `#462` |
-| 07-13 00:56 | march (Monday gate) | data — trend snapshot 2026-W29 (`cf89448`); audit — tracker Rule 2 linkage survey, no gaps (`5935172`) |
-| 07-13 01:39 | ship-content | dispatch opened issue `#463` (news content-gap) |
-| 07-13 05:44 | ship-content | content — news: "OpenAI's first hardware is a Work Louder macro pad" (`e97be92`), audit `26f05c1`, closes `#463` |
-| 07-13 07:12 | ship-content | dispatch opened issue `#464` (trends content-gap) |
-| 07-13 11:56-11:57 | ship-content | content — trends: "GMK CYL OG Extensions is climbing faster than any GMK CYL group buy that's open" (`afd551d`), audit `3031eb0`, closes `#464` |
+| 07-13 12:53 | expand | pass 182 — no candidates |
+| 07-13 13:56 | iterate | fix — gmk-cyl-og-extensions-interest-check missing 2 cross-links to DCS siblings (`c2d2fb0`), audit `474dedc`, closes #465 |
+| 07-13 16:14 | expand | pass 183 — no candidates |
+| 07-13 18:53-18:54 | iterate | fix — gmk-cyl-og-extensions implies same-week tracker comparison across 3 weeks (`d5f9e36`), audit `fbc0c8c`, closes #466 |
+| 07-13 19:45 | expand | pass 184 — no candidates |
+| 07-13 20:43 | iterate | fix — building-mode-sonnet-with-oil-kings cites wrong Oil King spring weight (`d369778`), audit `e20d662`, closes #467 |
+| 07-13 21:39-21:40 | iterate | fix — gmk-cyl-og-extensions self-contradicts on closing date (`28f732d`), audit `928b1b7`, closes #468 |
+| 07-13 22:39 | expand | pass 185 — no candidates |
+| 07-13 23:26 | expand | pass 186 — no candidates |
+| 07-14 00:54 | expand | pass 187 — no candidates |
+| 07-14 01:48 | expand | pass 188 — no candidates |
+| 07-14 03:18 | expand | pass 189 — no candidates |
+| 07-14 05:15 | expand | pass 190 — no candidates |
+| 07-14 07:16 | expand | pass 191 — no candidates |
+| 07-14 07:52-07:53 | iterate | fix — drop-holy-panda-x deep-dive cites wrong Oil King spring weights (`2160a6b`), audit `8589230`, closes #469 |
+| 07-14 09:02 | iterate | fix — durock-t1-deep-dive "five-year-old" claim off by a year (`564abb6`), audit `bd4db77`, closes #470 |
+| 07-14 09:54 | iterate | fix — vendor page group-buy variant misses stale-announced fix (`99aeaf5`), audit `3fac223`, closes #471 — files new `[4.2]` finding on the home-page sibling widget |
+| 07-14 10:57 | iterate | fix — computex-2026-keyboard-highlights cites wrong W21 hall-effect score (`cee903d`), audit `34f26bc`, closes #472 — files new `[3.5]` needs-scoping finding |
 
-31 commits total in the window; every `march`-workflow run in the
-last 30 (going back to 07-11 23:18) reports `success` at the GitHub
+26 commits total in the window; every `march`-workflow run in the
+last 30 (going back to 07-12 21:17) reports `success` at the GitHub
 Actions level.
 
 ## Shipped
 
-- **a11y**: vendor detail page — heading order skipped a level
-  (h1 → h3), now h1 → h2.
-- **engineering**: quiz — a rapid double-click on one question
-  silently skipped the next question.
-- **engineering**: compare tables — rendered the raw status enum
-  value instead of the human-readable label.
-- **engineering**: per-pillar RSS feeds — had no item cap, unlike
-  the global feed.
-- **seo**: quiz `WebApplication` JSON-LD — hardcoded an absolute URL
-  instead of using `canonicalUrl`.
-- **engineering**: compare tool — selectors desynced from the URL on
-  browser back/forward navigation.
-- **a11y**: quiz result rank badge — failed WCAG AA color contrast.
-- **test**: compare tool populated state — new a11y coverage.
-- **engineering**: `/group-buys` — two separate raw-anchor-instead-
-  of-`next/link` findings (archive nav + coverage link), same bug
-  class, different surfaces, drained same day.
-- **data**: 2026-W29 trend snapshot (Monday cadence gate) + a clean
-  tracker Rule-2-linkage survey pass (no unlinked-topic gaps).
-- **content**: News — "OpenAI's first hardware is a Work Louder
-  macro pad."
-- **content**: Trends — "GMK CYL OG Extensions is climbing faster
-  than any GMK CYL group buy that's open."
-- Two `/expand` passes (180-181) — 0 new candidates.
+- **content**: two Oil King spring-weight citation fixes on
+  different articles (drop-holy-panda-x HPX deep-dive,
+  building-mode-sonnet-with-oil-kings).
+- **content**: gmk-cyl-og-extensions — self-contradicted on its own
+  closing date.
+- **content**: gmk-cyl-og-extensions — implied a same-week tracker
+  comparison that actually spanned 3 weeks.
+- **content**: durock-t1-deep-dive — "five-year-old" product-age
+  claim was off by a year.
+- **content**: computex-2026-keyboard-highlights — cited the wrong
+  W21 hall-effect score (60 instead of 55).
+- **cross-links**: gmk-cyl-og-extensions-interest-check now links to
+  its 2 DCS siblings (dcs-grass-valley-decline,
+  dcs-olivetti-comeback).
+- **engineering**: vendor-page group-buy widget
+  (`VendorGroupBuySection`) had no `announced`-status handling —
+  same bug class the earlier home-widget finding names, fixed on
+  the vendor-detail surface first.
+- Ten `/expand` passes (182-191) — 0 new candidates.
 
 ## Queues now
 
 - **Build plan**: 0 pending phases (all shipped) — pure `/iterate`
   maintenance mode, unchanged.
-- **Cross-link drain**: 2 pending rows, both fresh today — both
-  involve the same hub article
-  (`gmk-cyl-og-extensions-interest-check` ↔ `dcs-grass-valley-decline`
-  and ↔ `dcs-olivetti-comeback`, same-pillar, score 4.5 each). Phase
-  46's cluster-aware drain logic means the next `/iterate` tick that
-  picks this up should clear both in one commit.
-- **`plan/AUDIT.md`**: 3 open rows (627 total, 624 `[x]`) — the 2
-  fresh cross-link rows above plus the standing
-  `[blocked-cloud-permission] [6.3]` `march.yml` crash-gate fix
-  (unchanged, still stuck on the workflow-write permission wall; the
-  two-line `always()` fix is written and verified, just unpushable
-  from cloud).
+- **Cross-link drain**: 0 pending rows — the 2 fresh rows from
+  yesterday's digest both drained this window (`c2d2fb0`).
+- **`plan/AUDIT.md`**: 3 open rows (636 total, 633 `[x]`) — the
+  standing `[blocked-cloud-permission] [6.3]` `march.yml` crash-gate
+  fix (unchanged, still stuck on the workflow-write permission
+  wall) plus 2 fresh rows filed today: `[needs-scoping] [3.5]`
+  rapid-trigger-gaming-crossover.mdx's prose vs. its own sparkline
+  SVG disagree on which week is the inflection point (needs a scoped
+  decision, not a blind fix) and `[content] [4.2]` the home-page
+  `GroupBuyCountdownRow` widget lacks `announced`-status handling —
+  dormant today (no current record triggers it) but the same bug
+  class just fixed on the vendor-page sibling.
 - **`plan/CRITIQUE.md`**: pass 11, last pass 2026-05-10T20:35 UTC at
-  commit `931c8a7`. **64 days / 1326 commits stale** (up from 63
-  days / 1295 commits yesterday). Unchanged diagnosis: cloud
+  commit `931c8a7`. **65 days / 1353 commits stale** (up from 64
+  days / 1326 commits yesterday). Unchanged diagnosis: cloud
   `/march` hard-skips `/critique` by design
   (`.github/CLOUD_LOOP.md`); the `[6.5]` Critique gate diagnostic
   candidate is still standing, unpromoted.
 - **`plan/PHASE_CANDIDATES.md`**: 13 pending rows, unchanged for the
-  sixth straight digest. Top incumbents: `/quiz/board` (6.5), Stale
-  group-buy frontmatter/prose gate (6.5), Critique gate diagnostic
-  (6.5), external link-rot survey (6.0), march.yml crash-issue gate
-  `always()` fix (6.0), Parts catalog third data pass (5.5),
-  `/compare/keycap-set` (5.5), Vitest coverage CI gate (5.5),
-  ship-data mentionedParts rescan (5.5), Cloud loop workflow-push
-  permission gap (5.5), Tracker 8-week editorial analysis (5.0),
-  Accessory parts kind (5.0), Tracker topic history page (4.5). Most
-  recent `/oversight` activity recorded in the file: 2026-06-14
-  (batch-promoted phases 46-49, a different, now-resolved candidate
-  cluster) — 29 days ago, still hasn't touched any of these 13 rows.
+  seventh straight digest. Top incumbents: `/quiz/board` (6.5),
+  Stale group-buy frontmatter/prose gate (6.5), Critique gate
+  diagnostic (6.5), external link-rot survey (6.0), march.yml
+  crash-issue gate `always()` fix (6.0), Parts catalog third data
+  pass (5.5), `/compare/keycap-set` (5.5), Vitest coverage CI gate
+  (5.5), ship-data mentionedParts rescan (5.5), Cloud loop
+  workflow-push permission gap (5.5), Tracker 8-week editorial
+  analysis (5.0), Accessory parts kind (5.0), Tracker topic history
+  page (4.5). File's own header records "Last oversight: 2026-05-23"
+  for phase-candidate promotions specifically — none of these 13
+  rows have moved since.
 - **`data/BACKLOG.md`**: 0 pending rows.
 - **Triage**: 11 open issues, unchanged in composition from
   yesterday — `#395` (cloud march crash-issue gate, blocked,
@@ -137,51 +132,63 @@ Actions level.
   duplicate-issue loop, still awaiting a manual/oversight
   consolidation pass, plus `#437` (`triage:reviewed`, no action
   needed) and `#434` (`triage:needs-user` — Vercel webhook drop, see
-  Needs you). 0 unlabeled — the two content-dispatch issues opened
-  this window (`#463`, `#464`) both closed same-day when their
-  articles shipped.
-- **Expand cadence**: 30 consecutive no-candidate passes since the
-  last candidate was filed (pass 151, 2026-06-19; passes 152-181
-  have filed 0). Not a mistuning signal on its own — the queue is
+  Needs you). 0 unlabeled — all 8 content-dispatch issues opened
+  this window (`#465`-`#472`) closed same-day when their fixes
+  shipped.
+- **Expand cadence**: 10 consecutive no-candidate passes this
+  window (182-191). Not a mistuning signal on its own — the queue is
   full (13 unpromoted rows), not empty; expand correctly isn't
   re-proposing what's already filed and awaiting `/oversight`.
 
 ## Breadth verdict
 
-Full `pnpm verify` run fresh, foreground, as one blocking call
-(typecheck → test:run → test:scripts → data:validate → build → size
-→ e2e) — all green:
+Full `pnpm verify` run fresh, foreground, as eight sequential
+blocking legs (typecheck → test:run → test:scripts → data:validate
+→ build → size → e2e) — all green:
 
 - `typecheck` — green, all workspace packages (apps/web, apps/e2e,
   packages/content, data, seo, tokens, ui).
-- `test:run` — green, 94 web-workspace test files plus green runs
-  across tokens (1), seo (5), data (19), ui (7), e2e-fixtures (1),
-  content (24); benign jsdom "Not implemented: navigation" stderr
-  noise, doesn't fail the test — same as prior digests.
+- `test:run` — green across all 8 workspaces; confirmed counts on
+  the two largest (94 web-workspace test files / 609 tests, 24
+  content-workspace test files / 152 tests), tokens/seo/data/ui/
+  e2e-fixtures all reported `Done` with no failures; benign jsdom
+  "Not implemented: navigation" stderr noise on `MobileNav.test.tsx`,
+  doesn't fail the test — same as prior digests.
+- `test:scripts` — green, 161 tests / 59 suites (survey-script unit
+  coverage: content-gap, crosslink, companion, stale-GB,
+  newsletter-gap, OG-coverage, a11y-spec-coverage, tracker-linkage,
+  article-parts-check, article-language-check).
 - `data:validate` — green (manifest build reports 18 switches, 10
   keycap-sets, 9 boards, 9 vendors, 13 group-buys, 11 trend weeks,
-  65 articles, 3 newsletters, 75 tags — cross-refs resolve).
+  65 articles, 3 newsletters, 75 tags — cross-refs resolve, 70
+  records walked).
 - `build` — green, all 52 static pages generated, no manifest churn
-  issues.
+  issues (the `generatedAt` timestamp bump in the three
+  `*.generated.json` manifests was reverted before commit — build
+  artifacts, not part of this tick's notes-only diff).
 - `size` — green, homepage gzip 108.6 KB / 200 KB budget (flat).
 - `e2e` — green, **1015/1015**. Benign `NoFallbackError` stderr
-  noise logged mid-run on `/trends/tracker/[week]` for
-  non-generated week params (expected fallback-404 behavior, same
-  as prior digests) — did not fail any test.
+  noise logged mid-run on `/trends/tracker/[week]` — confirmed this
+  is the intentional `/trends/tracker/2099-W99` not-found probe in
+  `apps/e2e/tests/a11y.spec.ts` (route has `dynamicParams = false`),
+  not a regression; same as prior digests.
 - `lighthouse` — no workflow named `lighthouse` exists in this repo
-  (confirmed via `gh workflow list`); nothing to report, same as
-  every prior digest that's checked.
-- `pnpm deploy:check` at HEAD (`3031eb0`) — deploy `READY`
-  (`dpl_ELfPHA9Q`).
+  (`gh run list --workflow lighthouse` errors "could not find any
+  workflows named lighthouse"); nothing to report, same as every
+  prior digest that's checked.
+- `pnpm deploy:check` at HEAD (`34f26bc`) — deploy `READY`
+  (`dpl_88vZWDmf`).
 
-No red legs, no new AUDIT.md finding from this breadth check.
+No red legs, no new AUDIT.md finding from this breadth check itself
+(the two fresh AUDIT rows this window came from `/iterate`'s own
+sweeps, not the nightly breadth gate).
 
 ## Needs you
 
 1. **Standing: promote or resolve the `[6.5]` Critique gate
-   diagnostic candidate.** 64 days / 1326 commits since the last
+   diagnostic candidate.** 65 days / 1353 commits since the last
    local `/critique` pass — the fresh-eyes loop has been dark for
-   over two months, and the gap widened by another day / 31 commits
+   over two months, and the gap widened by another day / 27 commits
    since the last digest. The candidate already has a full
    diagnostic writeup and a proposed fix shape (resolve the AND/OR
    ambiguity between `march.md`'s Purpose section and its Step 2
@@ -193,22 +200,29 @@ No red legs, no new AUDIT.md finding from this breadth check.
    cloud until either the push credential gains "Workflows: write"
    or workflow-file changes move to a local/`/oversight`-only path.
 3. **Standing: the `/oversight` promotion backlog itself.** 13
-   candidates pending, unchanged for the sixth straight digest,
+   candidates pending, unchanged for the seventh straight digest,
    three at 6.5 (`/quiz/board`, Critique gate diagnostic, stale
    group-buy frontmatter gate). Not a code defect — just a wide gap
-   between candidate supply and promotion cadence. Worth a look next
-   `/oversight` pass regardless of which specific candidates get
-   promoted or rejected.
-4. **Housekeeping, low urgency: 8 duplicate open GitHub issues**
+   between candidate supply and promotion cadence.
+4. **New: `[needs-scoping] [3.5]` rapid-trigger-gaming-crossover.mdx
+   sparkline/prose entanglement.** The article's prose calls a data
+   point "the W21 inflection" while its own hand-authored SVG
+   highlights the same point with a coral "W22" axis label — an
+   internal text-vs-image inconsistency. The fix needs a decision
+   first (align prose to the real per-week data files, align it to
+   the SVG's own label, or both) before touching the hand-authored
+   SVG paths — flagged by `/iterate` as needing judgment rather than
+   a mechanical find-replace.
+5. **Housekeeping, low urgency: 8 duplicate open GitHub issues**
    (#414-#416, #418-#422) from the pre-fix ship-content
    duplicate-issue loop are still open — each still names a genuine
    unwritten deep-dives topic (not a shipped duplicate), so closing
    them would discard real content backlog rather than being pure
    hygiene. A manual review pass would still tidy the tracker.
-5. **Unchanged from prior digests: Vercel silently dropped the
+6. **Unchanged from prior digests: Vercel silently dropped the
    deploy for commit `e312e09`** (2026-07-10, issue `#434`,
    `triage:needs-user`). Every commit before and after deployed
-   normally (confirmed again this tick — HEAD `3031eb0` deployed
+   normally (confirmed again this tick — HEAD `34f26bc` deployed
    `READY` per `deploy:check`); self-resolved for subsequent
    commits, but worth a look at the GitHub → Vercel webhook
    configuration if it recurs.
@@ -216,27 +230,25 @@ No red legs, no new AUDIT.md finding from this breadth check.
 ## Today's intent
 
 No pending build-plan phase, no data backlog, content-gap queue
-empty (both pillars that were cold this window got their articles).
-The 2 fresh cross-link rows from the trends article are the only
-immediately actionable AUDIT.md work — expect the next `/iterate`
-tick to cluster-drain both in one commit per phase 46's hub-article
-logic. `/quiz/board`, the stale group-buy frontmatter/prose gate,
-and the Critique gate diagnostic remain the three highest-scored
-Pending candidates, all still awaiting `/oversight` promotion — the
-queue hasn't moved in six digests running. One live thread worth
-watching: the new trends article filed cross-link findings against
-itself within the same tick window it shipped in — same pattern as
-prior digests where freshly-shipped surfaces are the most likely
-source of the next finding.
+empty (both pillars comfortable). The two fresh AUDIT.md rows are
+the only immediately available work: the `[content] [4.2]`
+home-page group-buy widget gap is mechanical and unambiguous (same
+fix shape as the just-shipped vendor-page sibling), so expect the
+next `/iterate` tick to pick it up first; the `[needs-scoping]
+[3.5]` rapid-trigger row needs its scoping question answered before
+it can ship and may sit longer. `/quiz/board`, the stale group-buy
+frontmatter/prose gate, and the Critique gate diagnostic remain the
+three highest-scored Pending candidates, all still awaiting
+`/oversight` promotion — the queue hasn't moved in seven digests
+running.
 
 ## Tuning proposals
 
 None this pass. No new mistuned-gate signal in the window: the two
-live gaps this digest surfaces (critique staleness, cloud
-workflow-push permission) both already have standing
-`plan/PHASE_CANDIDATES.md` rows from earlier passes, unpromoted but
-not newly worsened in a way that changes their shape — restating
-them under **Needs you** rather than re-filing duplicate candidates.
-The `/oversight` promotion-cadence gap (item 3 above) is also not
-filed as a new candidate: it's a call about the user's own review
-cadence, not a loop mechanism the loop can propose fixing on itself.
+live gaps (critique staleness, cloud workflow-push permission) both
+already have standing `plan/PHASE_CANDIDATES.md` rows from earlier
+passes, unpromoted but not newly worsened in a way that changes
+their shape — restating them under **Needs you** rather than
+re-filing duplicate candidates. The new `[needs-scoping]` and
+`[content] [4.2]` AUDIT rows are ordinary findings for `/iterate` to
+drain, not gate-mistuning signals.
