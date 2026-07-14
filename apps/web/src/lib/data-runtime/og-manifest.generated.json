@@ -1252,6 +1252,11 @@
       "description": "Indianapolis-based vendor that runs in-house switches (Cream, Silk) and partners on group buys for keycaps and boards. One of the most-cited NA storefronts for enthusiast switch SKUs."
     },
     {
+      "slug": "qwertykeys",
+      "name": "Qwertykeys",
+      "description": "China-based custom mechanical keyboard manufacturer and direct-to-consumer storefront, based in Guangdong. Best known for the QK65/QK75/QK80/QK100 board line; ships direct with wireless and hot-swap PCB options as standard configurator choices rather than group-buy upsell tiers."
+    },
+    {
       "slug": "wooting",
       "name": "Wooting",
       "description": "Dutch maker of Hall-effect keyboards and the originator of rapid-trigger for PC gaming. The Wooting 60HE and Wooting 60HE+ are the benchmarks the rest of the analog-input category measures against: per-key actuation depth, analog axis output to games, and the most mature rapid-trigger firmware stack in the segment. Wooting's software has a multi-year head start on configurator depth that newer HE entrants are actively closing."
@@ -1285,5 +1290,5 @@
       "readTime": 4
     }
   ],
-  "generatedAt": "2026-07-14T19:46:19.460Z"
+  "generatedAt": "2026-07-14T22:44:19.504Z"
 }

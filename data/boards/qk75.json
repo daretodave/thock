@@ -1,7 +1,7 @@
 {
   "slug": "qk75",
   "name": "QK75",
-  "vendorSlug": "cannonkeys",
+  "vendorSlug": "qwertykeys",
   "layout": "75",
   "caseMaterial": "aluminum",
   "mountStyle": "pcb-mount",
@@ -11,5 +11,5 @@
   "status": "in-stock",
   "imageUrl": null,
   "description": "Qwertykeys' PCB-mount 75% with a CNC aluminum case, swappable knob/badge, and PVD weight options. Wireless and wired hotswap PCBs; bouncy plate-or-plateless feel that ties to the wider 75% mainstreaming trend.",
-  "updatedAt": "2026-05-09T20:00:00.000Z"
+  "updatedAt": "2026-07-14T00:00:00.000Z"
 }
