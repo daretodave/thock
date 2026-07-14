@@ -11,7 +11,7 @@ describe('newsletters loader', () => {
     const first = newsletters[0]!
     expect(first.slug).toBe('thock-weekly-003')
     expect(first.frontmatter.issue).toBe(3)
-    expect(first.frontmatter.title).toBe('thock weekly — issue 003')
+    expect(first.frontmatter.title).toBe('thock weekly — issue 03')
     const second = newsletters[1]!
     expect(second.slug).toBe('thock-weekly-002')
     expect(second.frontmatter.issue).toBe(2)
