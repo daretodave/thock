@@ -43,6 +43,20 @@ export function daysLeft(endDate: string, todayIso: string): number {
 }
 
 /**
+ * True while a record still says `status: 'announced'` and its
+ * `startDate` hasn't arrived yet. `getActiveGroupBuys()` includes
+ * announced records with no `startDate` gate (see
+ * `apps/web/src/lib/data-runtime/index.ts`), so this widget has to
+ * tell "not open yet" apart from "currently running" itself.
+ */
+export function isAnnouncedNotStarted(
+  groupBuy: Pick<GroupBuy, 'status' | 'startDate'>,
+  todayIso: string,
+): boolean {
+  return groupBuy.status === 'announced' && groupBuy.startDate > todayIso
+}
+
+/**
  * One row in the home page group-buys widget. Title + vendor + day
  * count + a thin progress sliver. Accent color triggers in the last
  * 72 hours per `decisions.jsx`.
@@ -53,18 +67,22 @@ export function GroupBuyCountdownRow({
   now = new Date(),
 }: GroupBuyCountdownRowProps): ReactElement {
   const todayIso = now.toISOString().slice(0, 10)
-  const left = daysLeft(groupBuy.endDate, todayIso)
+  const isAnnounced = isAnnouncedNotStarted(groupBuy, todayIso)
+  const left = isAnnounced
+    ? daysLeft(groupBuy.startDate, todayIso)
+    : daysLeft(groupBuy.endDate, todayIso)
   const fraction = progressFraction({
     startDate: groupBuy.startDate,
     endDate: groupBuy.endDate,
     todayIso,
   })
-  const isUrgent = left <= ACCENT_THRESHOLD_DAYS
+  const isUrgent = !isAnnounced && left <= ACCENT_THRESHOLD_DAYS
 
   return (
     <div
       data-testid="group-buy-row"
       data-urgent={isUrgent ? 'true' : 'false'}
+      data-announced={isAnnounced ? 'true' : 'false'}
       className="grid grid-cols-[1fr_auto] items-baseline gap-1.5 border-t border-border py-3 first:border-t-0 first:pt-0 sm:grid-cols-[40px_1fr_auto] sm:gap-x-3"
     >
       {groupBuy.heroImage ? (
@@ -104,7 +122,11 @@ export function GroupBuyCountdownRow({
           isUrgent ? 'text-accent' : 'text-text-2'
         }`}
       >
-        {left === 0 ? 'today' : `${left}d`}
+        {isAnnounced
+          ? `opens in ${left}d`
+          : left === 0
+            ? 'today'
+            : `${left}d`}
       </span>
       <div
         aria-hidden="true"

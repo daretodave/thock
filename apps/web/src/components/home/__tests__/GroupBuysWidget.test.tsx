@@ -161,6 +161,37 @@ describe('<GroupBuysWidget>', () => {
     expect(screen.getByText(/Tomorrow GB/i)).toBeTruthy()
   })
 
+  // Regression for plan/AUDIT.md [content] [4.2]: getActiveGroupBuys()
+  // includes status:'announced' records with no startDate gate. A short
+  // campaign that hasn't opened yet (endDate within 72h, startDate still
+  // ahead) must not trip the "closing soon" urgent framing or render a
+  // running countdown — it hasn't started.
+  it('does not treat an announced-but-not-started buy as urgent even when its endDate is soon', () => {
+    const notStarted = makeGroupBuy({
+      slug: 'not-started',
+      status: 'announced',
+      startDate: '2026-05-15',
+      endDate: '2026-05-20',
+      name: 'Not Started GB',
+    })
+    render(
+      <GroupBuysWidget
+        groupBuys={[notStarted]}
+        vendors={[makeVendor()]}
+        now={new Date('2026-05-09T00:00:00Z')}
+      />,
+    )
+    expect(
+      screen.getByRole('heading', { name: /Currently running/i }),
+    ).toBeTruthy()
+    const row = screen.getByTestId('group-buy-row')
+    expect(row.getAttribute('data-announced')).toBe('true')
+    expect(row.getAttribute('data-urgent')).toBe('false')
+    expect(screen.getByTestId('group-buy-countdown')).toHaveTextContent(
+      'opens in 6d',
+    )
+  })
+
   it('shows the full sorted list (capped at max) when no buy is urgent', () => {
     const items = Array.from({ length: 5 }, (_, i) =>
       makeGroupBuy({

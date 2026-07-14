@@ -1,7 +1,11 @@
 import Link from 'next/link'
 import type { ReactElement } from 'react'
 import type { GroupBuy, Vendor } from '@thock/data'
-import { GroupBuyCountdownRow, daysLeft } from './GroupBuyCountdownRow'
+import {
+  GroupBuyCountdownRow,
+  daysLeft,
+  isAnnouncedNotStarted,
+} from './GroupBuyCountdownRow'
 
 const URGENT_THRESHOLD_DAYS = 3
 
@@ -53,11 +57,17 @@ export function GroupBuysWidget({
   // that is 19 days out. When no buy is urgent, the rail shows the
   // full sorted list capped at `max`.
   const anyUrgent = sortedAll.some(
-    (gb) => daysLeft(gb.endDate, todayIso) <= URGENT_THRESHOLD_DAYS,
+    (gb) =>
+      !isAnnouncedNotStarted(gb, todayIso) &&
+      daysLeft(gb.endDate, todayIso) <= URGENT_THRESHOLD_DAYS,
   )
   const sorted = anyUrgent
     ? sortedAll
-        .filter((gb) => daysLeft(gb.endDate, todayIso) <= URGENT_THRESHOLD_DAYS)
+        .filter(
+          (gb) =>
+            !isAnnouncedNotStarted(gb, todayIso) &&
+            daysLeft(gb.endDate, todayIso) <= URGENT_THRESHOLD_DAYS,
+        )
         .slice(0, max)
     : sortedAll.slice(0, max)
   const kicker = anyUrgent

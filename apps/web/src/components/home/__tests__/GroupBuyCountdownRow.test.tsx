@@ -132,4 +132,72 @@ describe('<GroupBuyCountdownRow>', () => {
     const countdown = screen.getByTestId('group-buy-countdown')
     expect(countdown).toHaveTextContent('2d')
   })
+
+  it('renders "opens in Xd" (not a running countdown) for an announced buy that has not started', () => {
+    // Regression for plan/AUDIT.md [content] [4.2]: getActiveGroupBuys()
+    // includes status:'announced' records with no startDate gate, so
+    // this row previously rendered daysLeft(endDate) as if the buy were
+    // already running — a misleadingly "currently running" countdown
+    // for a buy nobody can enter yet.
+    const gb = makeGroupBuy({
+      status: 'announced',
+      startDate: '2026-06-01',
+      endDate: '2026-06-20',
+    })
+    render(
+      <GroupBuyCountdownRow
+        groupBuy={gb}
+        vendor={makeVendor()}
+        now={new Date('2026-05-10T00:00:00Z')}
+      />,
+    )
+    const row = screen.getByTestId('group-buy-row')
+    expect(row.getAttribute('data-announced')).toBe('true')
+    expect(row.getAttribute('data-urgent')).toBe('false')
+    expect(screen.getByTestId('group-buy-countdown')).toHaveTextContent(
+      'opens in 22d',
+    )
+  })
+
+  it('treats an announced buy that starts today as a live countdown, not "opens today"', () => {
+    // Mirrors the VendorGroupBuySection precedent (99aeaf5): "announced"
+    // only holds while startDate is strictly ahead of today, so a buy
+    // starting today is already live and counts down to close.
+    const gb = makeGroupBuy({
+      status: 'announced',
+      startDate: '2026-05-10',
+      endDate: '2026-05-20',
+    })
+    render(
+      <GroupBuyCountdownRow
+        groupBuy={gb}
+        vendor={makeVendor()}
+        now={new Date('2026-05-10T00:00:00Z')}
+      />,
+    )
+    const row = screen.getByTestId('group-buy-row')
+    expect(row.getAttribute('data-announced')).toBe('false')
+    expect(screen.getByTestId('group-buy-countdown')).toHaveTextContent('10d')
+  })
+
+  it('treats a stale-announced buy (startDate already passed) as a live countdown', () => {
+    // Same stale-status class fixed for VendorGroupBuySection (99aeaf5):
+    // a record can still say status:'announced' after its startDate
+    // has already passed.
+    const gb = makeGroupBuy({
+      status: 'announced',
+      startDate: '2026-05-01',
+      endDate: '2026-05-12',
+    })
+    render(
+      <GroupBuyCountdownRow
+        groupBuy={gb}
+        vendor={makeVendor()}
+        now={new Date('2026-05-10T00:00:00Z')}
+      />,
+    )
+    const row = screen.getByTestId('group-buy-row')
+    expect(row.getAttribute('data-announced')).toBe('false')
+    expect(screen.getByTestId('group-buy-countdown')).toHaveTextContent('2d')
+  })
 })
