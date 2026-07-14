@@ -37,7 +37,7 @@
     stroke="none"
   />
 
-  <!-- W21 inflection marker — dashed vertical -->
+  <!-- W22 inflection marker — dashed vertical -->
   <line x1="680" y1="110" x2="680" y2="380" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.2" stroke-width="1.5" stroke-dasharray="5 4"/>
   <text x="680" y="100" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">Computex</text>
   <text x="680" y="112" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">cycle begins</text>
@@ -66,7 +66,7 @@
   <text x="1060" y="178" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">highest</text>
   <text x="1060" y="190" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">switch cat.</text>
 
-  <!-- W21 score label -->
+  <!-- W22 score label -->
   <text x="680" y="188" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.75">65</text>
 
   <!-- X-axis week labels -->

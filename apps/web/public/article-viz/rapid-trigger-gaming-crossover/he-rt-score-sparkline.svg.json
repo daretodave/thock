@@ -15,9 +15,9 @@
   "tokens_snapshot": "design/tokens.css",
   "fonts": ["IBM Plex Sans", "Newsreader"],
   "data_sources": [
-    "apps/web/src/content/articles/rapid-trigger-gaming-crossover.mdx:The score signal — 'Hall Effect / Rapid Trigger has posted a score of 76 in W25 — up from 65 in W21 — the highest in the switch category for three consecutive weeks'",
+    "apps/web/src/content/articles/rapid-trigger-gaming-crossover.mdx:The score signal — 'Hall Effect / Rapid Trigger has posted a score of 76 in W25 — up from 65 in W22 — the highest in the switch category for three consecutive weeks'",
     "apps/web/src/content/articles/rapid-trigger-gaming-crossover.mdx:The score signal — spark array '[52, 55, 59, 62, 65, 68, 72, 76]' W18 through W25",
-    "apps/web/src/content/articles/rapid-trigger-gaming-crossover.mdx:The score signal — 'The W21-to-W25 acceleration — from 65 to 76 in four weeks — coincides with Computex'"
+    "apps/web/src/content/articles/rapid-trigger-gaming-crossover.mdx:The score signal — 'The W22-to-W25 acceleration — from 65 to 76 in three weeks — coincides with Computex'"
   ],
   "outputs": ["apps/web/public/article-viz/rapid-trigger-gaming-crossover/he-rt-score-sparkline.svg"],
   "warnings": []
