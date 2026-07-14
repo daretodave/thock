@@ -38,6 +38,18 @@ const PAST_GB: GroupBuy = {
   status: 'closed',
 }
 
+// Regression for the stale-status class of bug fixed in
+// group-buys/helpers.ts#isLive (critique #44): a record can still say
+// status:'announced' after its startDate has already passed.
+const STALE_ANNOUNCED_GB: GroupBuy = {
+  ...BASE_GB,
+  slug: 'cannonkeys-stale-announced',
+  name: 'Stale Announced Buy',
+  startDate: '2026-05-01',
+  endDate: '2026-06-30',
+  status: 'announced',
+}
+
 describe('VendorGroupBuySection', () => {
   it('shows active group buy list when present', () => {
     render(
@@ -109,5 +121,22 @@ describe('VendorGroupBuySection', () => {
     )
     expect(screen.getByTestId('vendor-active-buys-kicker').tagName).toBe('H2')
     expect(screen.getByTestId('vendor-past-buys-kicker').tagName).toBe('H2')
+  })
+
+  it('renders a started-but-still-announced buy as live, not "opens today"', () => {
+    render(
+      <VendorGroupBuySection
+        vendorName="CannonKeys"
+        active={[STALE_ANNOUNCED_GB]}
+        past={[]}
+        vendor={VENDOR}
+        now={new Date('2026-06-01')}
+      />,
+    )
+    const row = screen.getByTestId('group-buy-row')
+    expect(row.getAttribute('data-variant')).toBe('live')
+    expect(screen.getByTestId('group-buy-countdown')).toHaveTextContent(
+      '29d left',
+    )
   })
 })
