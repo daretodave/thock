@@ -1,4 +1,5 @@
 import type { ReactElement, ReactNode } from 'react'
+import Link from 'next/link'
 import { Mono } from '@thock/ui'
 import { PullQuote } from './PullQuote'
 import { Callout } from './Callout'
@@ -23,6 +24,9 @@ function SerifH3({ children }: { children?: ReactNode }): ReactElement {
   return <h3 className="mt-8 mb-3 font-serif text-h3">{children}</h3>
 }
 
+const AUTO_LINK_CLASS =
+  'text-text underline decoration-border-hi underline-offset-4 hover:decoration-accent'
+
 function AutoLink({
   href,
   children,
@@ -32,12 +36,24 @@ function AutoLink({
   children?: ReactNode
 } & Record<string, unknown>): ReactElement {
   const isExternal = href != null && /^https?:\/\//.test(href)
+
+  // Internal links (root-relative, e.g. /article/<slug>) go through
+  // next/link so in-article cross-links get client-side navigation
+  // and prefetching instead of a full page reload.
+  if (href != null && !isExternal) {
+    return (
+      <Link href={href} {...rest} className={AUTO_LINK_CLASS}>
+        {children}
+      </Link>
+    )
+  }
+
   return (
     <a
       href={href}
       {...rest}
       {...(isExternal ? { rel: 'noopener', target: '_blank' } : {})}
-      className="text-text underline decoration-border-hi underline-offset-4 hover:decoration-accent"
+      className={AUTO_LINK_CLASS}
     >
       {children}
     </a>
