@@ -173,6 +173,18 @@ test.describe('phase 17 — JSON-LD shape audit', () => {
   }
 })
 
+test.describe('security headers', () => {
+  test('homepage response sets the baseline security headers', async ({ request }) => {
+    const res = await request.get('/')
+    expect(res.status()).toBe(200)
+    const headers = res.headers()
+    expect(headers['x-frame-options']).toBe('DENY')
+    expect(headers['x-content-type-options']).toBe('nosniff')
+    expect(headers['referrer-policy']).toBe('strict-origin-when-cross-origin')
+    expect(headers['content-security-policy']).toContain("frame-ancestors 'none'")
+  })
+})
+
 // Also assert at least one article slug is in the canonical set
 // (defense against a regression that empties the manifest).
 test('canonical fixture has at least one article slug + one tag slug', () => {
