@@ -13,6 +13,10 @@ const nextConfig = {
           { key: 'Content-Security-Policy', value: "frame-ancestors 'none'" },
         ],
       },
+      {
+        source: '/:artDir(hero-art|article-viz|group-buy-art)/:path*',
+        headers: [{ key: 'Cache-Control', value: 'public, max-age=31536000, immutable' }],
+      },
     ]
   },
 }

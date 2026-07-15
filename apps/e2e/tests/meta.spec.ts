@@ -185,6 +185,20 @@ test.describe('security headers', () => {
   })
 })
 
+test.describe('static asset caching', () => {
+  for (const path of [
+    '/hero-art/75-percent-default.svg',
+    '/article-viz/keychron-quiet-takeover/product-ladder.svg',
+    '/group-buy-art/cannonkeys-nyawice.svg',
+  ]) {
+    test(`${path} sets a long-lived immutable Cache-Control header`, async ({ request }) => {
+      const res = await request.get(path)
+      expect(res.status()).toBe(200)
+      expect(res.headers()['cache-control']).toBe('public, max-age=31536000, immutable')
+    })
+  }
+})
+
 // Also assert at least one article slug is in the canonical set
 // (defense against a regression that empties the manifest).
 test('canonical fixture has at least one article slug + one tag slug', () => {
