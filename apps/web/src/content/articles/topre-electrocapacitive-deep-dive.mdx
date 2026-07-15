@@ -7,12 +7,16 @@ author: thock
 pillar: deep-dives
 tags: [topre, hhkb, electrocapacitive, deep-dive]
 publishedAt: '2026-04-16T13:00:00.000Z'
-updatedAt: null
+updatedAt: '2026-07-15T00:00:00.000Z'
 heroImage: /hero-art/topre-electrocapacitive-deep-dive.svg
 heroImageAlt: "Cross-section of a single Topre key position — a conical spring seated on a circular capacitive pad on the PCB, a rubber dome collared over the spring, and a slider riding the dome above, drawn in a single warm-grey stroke with a dusty-rose highlight where the spring meets the pad."
 wordCount: 1720
 featured: false
 popularityScore: 0
+mentionedParts:
+  - id: boba-u4t
+    kind: switch
+    slug: gazzew-boba-u4t
 ---
 
 The <Mono>Topre</Mono> switch does not actually close a circuit. That is the load-bearing fact, and almost every editorial confusion about why HHKB and Realforce boards command the prices they do unwinds from it. A keypress on a Cherry-lineage switch is a binary electrical event — two pieces of metal touch, the controller sees the new contact, a key registers. A keypress on a Topre is an analog measurement. A capacitive pad on the PCB watches the dielectric environment above it change as a small conical spring compresses against it, and somewhere along the compression curve the firmware decides the change is large enough to call that key pressed. There is no make. There is no break. There is a number that crossed a threshold.
