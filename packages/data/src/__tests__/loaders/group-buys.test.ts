@@ -1,3 +1,6 @@
+import { mkdirSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs'
+import { tmpdir } from 'node:os'
+import { join } from 'node:path'
 import { afterEach, describe, expect, it } from 'vitest'
 import {
   getActiveGroupBuys,
@@ -5,6 +8,7 @@ import {
   getGroupBuyBySlug,
 } from '../../loaders/group-buys'
 import { __resetForTests } from '../../loaders/memo'
+import { setRepoRootForTests } from '../../loaders/paths'
 
 describe('group-buys loader', () => {
   afterEach(() => __resetForTests())
@@ -23,10 +27,44 @@ describe('group-buys loader', () => {
   })
 
   it('includes live group buys in active list when their window includes the date', () => {
-    // Mode Sonnet R2 runs 2026-06-01 → 2026-07-15.
-    const active = getActiveGroupBuys(new Date('2026-06-15T00:00:00Z'))
-    const slugs = active.map((g) => g.slug)
-    expect(slugs).toContain('cannonkeys-mode-sonnet-r2')
+    // As of 2026-07-15 every real backfilled group buy has closed (see
+    // cannonkeys-mode-sonnet-r2, flipped to 'closed' this tick), so this
+    // invariant is exercised against a synthetic fixture root rather than
+    // real editorial data — avoids re-breaking every time the last live
+    // record closes (precedent: f6f5a2b migrated King of the Seas ->
+    // Prussian Alert; that chain has now run out of live records).
+    const dir = mkdtempSync(join(tmpdir(), 'thock-group-buys-'))
+    mkdirSync(join(dir, 'data', 'group-buys'), { recursive: true })
+    writeFileSync(
+      join(dir, 'data', 'group-buys', 'fixture-live-buy.json'),
+      JSON.stringify({
+        slug: 'fixture-live-buy',
+        name: 'Fixture Live Buy',
+        vendorSlug: 'cannonkeys',
+        productSlug: null,
+        productKind: 'other',
+        startDate: '2026-06-01',
+        endDate: '2026-07-15',
+        region: 'global',
+        url: 'https://example.com',
+        imageUrl: null,
+        heroImage: null,
+        status: 'live',
+        description:
+          'Synthetic fixture record used only to exercise the active-list date-window filter in isolation from real editorial data.',
+        updatedAt: '2026-06-01T00:00:00.000Z',
+      }),
+    )
+    try {
+      setRepoRootForTests(dir)
+      __resetForTests()
+      const active = getActiveGroupBuys(new Date('2026-06-15T00:00:00Z'))
+      const slugs = active.map((g) => g.slug)
+      expect(slugs).toContain('fixture-live-buy')
+    } finally {
+      setRepoRootForTests(null)
+      rmSync(dir, { recursive: true, force: true })
+    }
   })
 
   it('excludes a closed group buy from the active list once its end-date has passed', () => {

@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 import {
   getAllArticles,
   getArticleBySlug,
@@ -88,13 +88,53 @@ describe('data-runtime adapter', () => {
     }
   })
 
-  it('active group buys includes announced buy whose endDate is in the future', () => {
-    // cannonkeys-mode-sonnet-r2 is announced with endDate 2026-07-15.
-    // A reference date before that endDate must include it in the active list.
-    const beforeEnd = new Date('2026-05-23T00:00:00Z')
-    const active = getActiveGroupBuys(beforeEnd)
-    const slugs = active.map((g) => g.slug)
-    expect(slugs).toContain('cannonkeys-mode-sonnet-r2')
+  it('active group buys includes a non-closed buy whose endDate is in the future', async () => {
+    // As of 2026-07-15 every real group-buy record has closed (see
+    // cannonkeys-mode-sonnet-r2, flipped to 'closed' this tick), so this
+    // invariant is exercised against a synthetic manifest rather than real
+    // editorial data — avoids re-breaking every time the last live record
+    // closes. Mirrors the same fixture pattern used in
+    // packages/data/src/__tests__/loaders/group-buys.test.ts.
+    vi.resetModules()
+    vi.doMock('../manifest.generated.json', () => ({
+      default: {
+        switches: [],
+        keycapSets: [],
+        boards: [],
+        vendors: [],
+        groupBuys: [
+          {
+            slug: 'fixture-live-buy',
+            name: 'Fixture Live Buy',
+            vendorSlug: 'cannonkeys',
+            productSlug: null,
+            productKind: 'other',
+            startDate: '2026-06-01',
+            endDate: '2099-01-01',
+            region: 'global',
+            url: 'https://example.com',
+            imageUrl: null,
+            heroImage: null,
+            status: 'live',
+            description: 'Synthetic fixture group buy for date-window filter tests.',
+            updatedAt: '2026-06-01T00:00:00.000Z',
+          },
+        ],
+        trends: [],
+        articles: [],
+        newsletters: [],
+        tags: [],
+        generatedAt: '2026-06-01T00:00:00.000Z',
+      },
+    }))
+    try {
+      const mod = await import('../index')
+      const active = mod.getActiveGroupBuys(new Date('2026-07-15T00:00:00Z'))
+      expect(active.map((g) => g.slug)).toContain('fixture-live-buy')
+    } finally {
+      vi.doUnmock('../manifest.generated.json')
+      vi.resetModules()
+    }
   })
 
   it('active group buys excludes announced buy whose endDate is in the past', () => {
@@ -127,12 +167,52 @@ describe('data-runtime adapter', () => {
     expect(slugs).toContain('cannonkeys-mode-sonnet-r2')
   })
 
-  it('past group buys excludes announced buy whose endDate is still in the future', () => {
-    // Same buy — a reference date before the end date must NOT include it.
-    const beforeEnd = new Date('2026-05-25T00:00:00Z')
-    const past = getAllClosedGroupBuys(beforeEnd)
-    const slugs = past.map((g) => g.slug)
-    expect(slugs).not.toContain('cannonkeys-mode-sonnet-r2')
+  it('past group buys excludes a non-closed buy whose endDate is still in the future', async () => {
+    // As of 2026-07-15 every real group-buy record has closed (see
+    // cannonkeys-mode-sonnet-r2, flipped to 'closed' this tick), so this
+    // invariant is exercised against a synthetic manifest rather than real
+    // editorial data — mirrors the fixture pattern used in the sibling
+    // "active group buys includes..." test above.
+    vi.resetModules()
+    vi.doMock('../manifest.generated.json', () => ({
+      default: {
+        switches: [],
+        keycapSets: [],
+        boards: [],
+        vendors: [],
+        groupBuys: [
+          {
+            slug: 'fixture-live-buy',
+            name: 'Fixture Live Buy',
+            vendorSlug: 'cannonkeys',
+            productSlug: null,
+            productKind: 'other',
+            startDate: '2026-06-01',
+            endDate: '2099-01-01',
+            region: 'global',
+            url: 'https://example.com',
+            imageUrl: null,
+            heroImage: null,
+            status: 'live',
+            description: 'Synthetic fixture group buy for date-window filter tests.',
+            updatedAt: '2026-06-01T00:00:00.000Z',
+          },
+        ],
+        trends: [],
+        articles: [],
+        newsletters: [],
+        tags: [],
+        generatedAt: '2026-06-01T00:00:00.000Z',
+      },
+    }))
+    try {
+      const mod = await import('../index')
+      const past = mod.getAllClosedGroupBuys(new Date('2026-07-15T00:00:00Z'))
+      expect(past.map((g) => g.slug)).not.toContain('fixture-live-buy')
+    } finally {
+      vi.doUnmock('../manifest.generated.json')
+      vi.resetModules()
+    }
   })
 
   it('past group buys excludes future-dated live buys', () => {

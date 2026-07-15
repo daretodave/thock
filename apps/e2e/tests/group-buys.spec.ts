@@ -7,7 +7,12 @@ test.describe('group-buys index — phase 13', () => {
     await page.goto('/group-buys')
     const h1 = page.locator('h1').first()
     await expect(h1).toContainText(/group buys/i)
-    await expect(page.locator('text=/live/i').first()).toBeVisible()
+    // Meta line reads "N live · N announced · N recently ended", omitting
+    // any segment at 0 — doesn't assume a live/announced buy is currently
+    // in flight (as of 2026-07-15 every backfilled buy has closed).
+    await expect(
+      page.locator('[data-testid="group-buys-summary"]'),
+    ).toBeVisible()
   })
 
   test('lists at least four group-buy-rows from the backfill', async ({
@@ -22,9 +27,13 @@ test.describe('group-buys index — phase 13', () => {
     page,
   }) => {
     await page.goto('/group-buys')
+    // CTAs render only on live/announced rows (GroupBuyRow's `ctaVisible`);
+    // as of 2026-07-15 every backfilled buy has closed, so the list can be
+    // legitimately empty right now. Same conditional-guard shape as the
+    // "links to the past-buys archive" test above — asserts the contract
+    // on every CTA that does exist rather than assuming one is in flight.
     const ctas = page.locator('[data-testid="group-buy-cta"]')
     const count = await ctas.count()
-    expect(count).toBeGreaterThanOrEqual(1)
     for (let i = 0; i < count; i++) {
       const cta = ctas.nth(i)
       await expect(cta).toHaveAttribute('rel', 'sponsored noopener')
@@ -79,12 +88,18 @@ test.describe('group-buys relatedArticle — phase 37', () => {
     page,
   }) => {
     await page.goto('/group-buys')
+    // The active-buys ItemList only carries live/announced entries; as of
+    // 2026-07-15 every backfilled buy has closed, so it can legitimately
+    // be empty. The equivalent coverage on /group-buys/past (which does
+    // include ended buys) is asserted by the sibling "coverage link also
+    // appears on past group-buys archive" test above.
     const scripts = await page
       .locator('script[type="application/ld+json"]')
       .allTextContents()
     const flat = scripts.join('\n')
-    expect(flat).toContain('"sameAs"')
-    expect(flat).toContain('/article/')
+    if (flat.includes('"sameAs"')) {
+      expect(flat).toContain('/article/')
+    }
   })
 })
 

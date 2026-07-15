@@ -42,12 +42,13 @@ export const pageReads: Record<string, PageRead> = {
       // Phase 6: hero pick is the only h1 in the page; we no longer
       // brand-anchor the heading text since the hero swaps with the
       // newest published article. Trending tiles + at least one
-      // latest-by-pillar card + at least one group-buy row carry the
-      // composition coverage.
+      // latest-by-pillar card carry the composition coverage.
+      // group-buy-row dropped 2026-07-15: <GroupBuysWidget> renders
+      // null (by design) when the active list is empty, which is
+      // now the real state — every backfilled group buy has closed.
       { kind: 'min-link-count', selector: '[data-testid="hero-card"]', min: 1 },
       { kind: 'min-link-count', selector: '[data-testid="trending-tile"]', min: 1 },
       { kind: 'min-link-count', selector: '[data-testid="latest-by-pillar-card"]', min: 1 },
-      { kind: 'min-link-count', selector: '[data-testid="group-buy-row"]', min: 1 },
     ]),
   },
   '/news': {
