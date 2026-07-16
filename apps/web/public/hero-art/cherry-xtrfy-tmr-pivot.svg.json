@@ -1,0 +1,31 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-16T00:00:00Z",
+  "commit": "15229a92750a33818ddf4a7a5338ef2907ec3a35",
+  "kind": "hero-art",
+  "article_slug": "cherry-xtrfy-tmr-pivot",
+  "article_pillar": "trends",
+  "brief_summary": "Hero art for the Trends pillar piece on Cherry's brand-level pivot into magnetic/TMR switch tech via its XTRFY sub-brand (K5 Pro Compact launch): a 2px warm-grey sparkline that forks at a pivot node into a muted, dashed legacy continuation and a bold muted-terracotta ascent, with an open handoff ring partway along the ascent marking the sub-brand transfer from Cherry to XTRFY. A small abstract compact-keyboard silhouette sits below with one terracotta-glowing key, kept deliberately non-specific so the piece reads as trend analysis rather than a product spec sheet.",
+  "target": "apps/web/public/hero-art/cherry-xtrfy-tmr-pivot.svg",
+  "source": "plan/bearings.md § Article hero art — colorful keyboard SVGs (locked 2026-05-09), trends piece → sparkline silhouette",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject",
+  "size": [1200, 750],
+  "subject": "Sparkline forking at a pivot node: a warm-grey historical climb arrives at the present decision point, then splits into a de-emphasized dashed legacy continuation and a bold muted-terracotta ascent. The ascent hands off partway through an open ring (the XTRFY sub-brand transfer) to a steeper, full-strength segment terminating at a focal anchor (the K5 Pro Compact launch). An abstract compact-keyboard outline below carries one terracotta-highlighted key as the keyboard-domain primitive required by the hero-art directive.",
+  "splash_color": {
+    "name": "muted terracotta",
+    "oklch": "oklch(0.60 0.105 40)",
+    "hex_approx": "#a9613f"
+  },
+  "accent_color": {
+    "name": "warm-bronze (theme accent)",
+    "oklch": "oklch(0.80 0.135 75)"
+  },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": [],
+  "outputs": [
+    "apps/web/public/hero-art/cherry-xtrfy-tmr-pivot.svg"
+  ],
+  "warnings": []
+}

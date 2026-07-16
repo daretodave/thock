@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Branch diagram with Cherry GmbH at top splitting into three business lines: MX switches (muted, labelled cooling on the tracker), GMK keycap manufacturing (muted, labelled steady OEM supplier to the hobby), and XTRFY gaming peripherals highlighted in coral and labelled magnetic and TMR pivot, K5 Pro Compact, July 3 2026.</title>
+
+  <!-- Root node -->
+  <rect x="470" y="40" width="260" height="64" rx="6" stroke-opacity="0.75"/>
+  <text x="600" y="78" font-family="IBM Plex Sans, sans-serif" font-size="18" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.90">Cherry GmbH</text>
+
+  <!-- Branch lines -->
+  <path d="M 600 104 L 600 140 L 210 140 L 210 176" stroke-opacity="0.35"/>
+  <path d="M 600 104 L 600 176" stroke-opacity="0.35"/>
+  <path d="M 600 104 L 600 140 L 990 140 L 990 176" stroke-opacity="0.35"/>
+
+  <!-- Child 1: MX switches (muted) -->
+  <rect x="90" y="176" width="240" height="88" rx="6" stroke-opacity="0.55"/>
+  <text x="210" y="206" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.80">MX switches</text>
+  <text x="210" y="228" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">MX2A line</text>
+  <text x="210" y="246" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.80">cooling on the tracker</text>
+
+  <!-- Child 2: GMK keycaps (muted, steady) -->
+  <rect x="480" y="176" width="240" height="88" rx="6" stroke-opacity="0.55"/>
+  <text x="600" y="206" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.80">GMK keycaps</text>
+  <text x="600" y="228" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">doubleshot manufacturing</text>
+  <text x="600" y="246" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.60">steady, load-bearing</text>
+
+  <!-- Child 3: XTRFY (coral highlight) -->
+  <rect x="870" y="176" width="240" height="112" rx="6" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.90" stroke-width="2.5"/>
+  <rect x="870" y="176" width="240" height="112" rx="6" fill="oklch(0.68 0.165 28 / 0.10)" stroke="none"/>
+  <text x="990" y="206" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">XTRFY</text>
+  <text x="990" y="228" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.85">gaming peripherals</text>
+  <text x="990" y="246" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.90">magnetic / TMR pivot</text>
+  <text x="990" y="264" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.90">K5 Pro Compact, Jul 3 2026</text>
+
+  <!-- Bracket note under XTRFY -->
+  <path d="M 900 300 L 900 316 L 1080 316 L 1080 300" stroke-opacity="0.35"/>
+  <text x="990" y="340" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.70">the brand's first positive headline in months</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="30" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

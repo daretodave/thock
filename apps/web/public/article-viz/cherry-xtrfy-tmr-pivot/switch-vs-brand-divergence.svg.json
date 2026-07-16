@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-16T00:00:00.000Z",
+  "commit": "15229a92750a33818ddf4a7a5338ef2907ec3a35",
+  "kind": "inline-viz",
+  "article_slug": "cherry-xtrfy-tmr-pivot",
+  "article_pillar": "trends",
+  "section_anchor": "two-lines-one-brand",
+  "brief_summary": "Two-line diverging chart over the same W22-W29 2026 window: the Cherry MX2A switch tracker score (warm-red/down token) falling from -10 to -50, against the Cherry brand tracker score (coral) climbing from -45 to -24. The lines cross near the chart's midpoint, visualizing the article's central paradox — one switch line dragging the brand down while the parent brand recovers on other news.",
+  "target": "apps/web/public/article-viz/cherry-xtrfy-tmr-pivot/switch-vs-brand-divergence.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "data/trends/2026-W29.json § rows[14] 'Cherry MX2A' — direction: down, score: -50, spark: [-10,-18,-25,-32,-37,-42,-46,-50], note: 'No new SKUs since April's MX2A Dummy release; buzz keeps ceding ground to magnetic/TMR switches with little fresh MX2A-specific discussion this week.'",
+    "data/trends/2026-W29.json § rows[15] 'Cherry (GMK parent)' — direction: up, score: -24, spark: [-45,-40,-36,-33,-30,-28,-26,-24]"
+  ],
+  "outputs": ["apps/web/public/article-viz/cherry-xtrfy-tmr-pivot/switch-vs-brand-divergence.svg"],
+  "warnings": []
+}

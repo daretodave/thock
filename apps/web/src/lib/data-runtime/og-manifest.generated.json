@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "slug": "cherry-xtrfy-tmr-pivot",
+      "readTime": 6,
+      "frontmatter": {
+        "title": "Cherry bets on magnetic: the XTRFY pivot",
+        "lede": "Cherry's mainline MX switches have spent the better part of a year losing ground on the tracker. On July 3, 2026, Cherry's gaming sub-brand XTRFY answered not with another MX revision but with a magnetic-sensing switch — and gave the parent brand its first positive tracker signal in months.",
+        "pillar": "trends",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "work-louder-openai-codex-micro",
       "readTime": 6,
       "frontmatter": {
@@ -973,6 +983,11 @@
       "category": "switch"
     },
     {
+      "slug": "tmr",
+      "name": "TMR",
+      "category": "switch"
+    },
+    {
       "slug": "topre",
       "name": "Topre",
       "category": "brand"
@@ -1290,5 +1305,5 @@
       "readTime": 4
     }
   ],
-  "generatedAt": "2026-07-15T23:34:12.136Z"
+  "generatedAt": "2026-07-16T05:14:37.164Z"
 }

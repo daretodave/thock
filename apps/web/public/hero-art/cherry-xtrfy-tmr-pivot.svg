@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — Trends pillar sparkline for Cherry's brand-level pivot into magnetic/TMR switch tech via its XTRFY sub-brand (K5 Pro Compact)</title>
+
+  <!-- Splash: muted terracotta wash beneath the ascending branch of the sparkline,
+       the visual center of gravity for the piece — the article's thesis is Cherry's
+       strategic redirection, not a spec sheet, so the wash sits behind the new
+       trajectory rather than any product silhouette. -->
+  <ellipse cx="960" cy="230" rx="230" ry="140" fill="oklch(0.60 0.105 40 / 0.10)" stroke="none"/>
+
+  <!-- ════════════════════════════════════════════════════════════════════════════
+       SPARKLINE — trends-pillar motif per bearings.md "Article hero art" directive.
+       Reads left to right as: (1) Cherry's long-run mechanical-switch trajectory,
+       (2) a pivot node marking the present decision point, (3) two forking futures —
+       a muted, de-emphasized continuation of business-as-usual, and a bold terracotta
+       ascent that hands off partway to a second, steeper segment. That handoff ring
+       is the sub-brand: Cherry initiates the strategic shift, XTRFY carries it home.
+       ════════════════════════════════════════════════════════════════════════════ -->
+
+  <!-- Historical line — steady, unhurried climb, warm-grey, arriving at the pivot -->
+  <polyline points="90,420 220,405 350,385 480,368 600,355" stroke-width="2"/>
+  <circle cx="90"  cy="420" r="4" fill="oklch(0.78 0.005 90)"/>
+  <circle cx="220" cy="405" r="4" fill="oklch(0.78 0.005 90)"/>
+  <circle cx="350" cy="385" r="4" fill="oklch(0.78 0.005 90)"/>
+  <circle cx="480" cy="368" r="4" fill="oklch(0.78 0.005 90)"/>
+
+  <!-- Pivot reference line — marks the present decision point, stops short of the
+       keyboard silhouette below so the two motifs don't collide -->
+  <line x1="600" y1="150" x2="600" y2="500" stroke-width="1" stroke-opacity="0.35" stroke-dasharray="4 4"/>
+
+  <!-- Pivot node — the decision point itself -->
+  <circle cx="600" cy="355" r="6" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)"/>
+
+  <!-- Legacy continuation — business-as-usual mechanical line, muted and dashed to
+       read as a de-emphasized, lower-energy future relative to the pivot branch -->
+  <polyline points="600,355 740,362 880,368 1020,372" stroke-opacity="0.35" stroke-dasharray="5 6"/>
+  <circle cx="740"  cy="362" r="3" fill="oklch(0.78 0.005 90)" opacity="0.35"/>
+  <circle cx="880"  cy="368" r="3" fill="oklch(0.78 0.005 90)" opacity="0.35"/>
+  <circle cx="1020" cy="372" r="3" fill="oklch(0.78 0.005 90)" opacity="0.35"/>
+
+  <!-- Pivot branch, segment 1 — Cherry corporate initiates the strategic shift.
+       Drawn at reduced opacity relative to segment 2: the parent brand sets the
+       direction but doesn't itself carry the full weight of execution. -->
+  <polyline points="600,355 700,300 810,255" stroke="oklch(0.60 0.105 40)" stroke-width="2" stroke-opacity="0.55"/>
+
+  <!-- Handoff ring — the sub-brand transfer point. XTRFY becomes the vehicle for
+       the parent's redirection from here forward. Open ring, not filled, to read
+       as a transition rather than a data point. -->
+  <circle cx="810" cy="255" r="9" fill="none" stroke="oklch(0.60 0.105 40)" stroke-width="2"/>
+
+  <!-- Pivot branch, segment 2 — XTRFY's execution: full-strength stroke, steeper
+       ascent, ending at the K5 Pro Compact launch (the article's present moment). -->
+  <polyline points="810,255 930,215 1060,185" stroke="oklch(0.60 0.105 40)" stroke-width="3"/>
+  <circle cx="930" cy="215" r="5" fill="oklch(0.60 0.105 40)"/>
+
+  <!-- Focal anchor — K5 Pro Compact launch, the visual terminus of the piece -->
+  <circle cx="1060" cy="185" r="7" fill="oklch(0.60 0.105 40)" stroke="oklch(0.60 0.105 40)"/>
+  <circle cx="1060" cy="185" r="14" stroke="oklch(0.60 0.105 40)" stroke-opacity="0.4" fill="none"/>
+
+  <!-- Trajectory chevron — trend continues past the visible data, splash-colored -->
+  <path d="M 1068 176 L 1080 167 L 1075 181" stroke="oklch(0.60 0.105 40)" stroke-width="1.6" stroke-opacity="0.85" fill="none"/>
+
+  <!-- ════════════════════════════════════════════════════════════════════════════
+       COMPACT KEYBOARD SILHOUETTE — the "keyboard-domain primitive" the hero-art
+       directive asks every piece to include, kept deliberately abstract (no keycap
+       legends, no accurate layout map) so the piece reads as trend analysis rather
+       than a product spec sheet. One key glows terracotta: the new switch tech
+       living inside an otherwise familiar compact board.
+       ════════════════════════════════════════════════════════════════════════════ -->
+  <rect x="390" y="520" width="420" height="160" rx="12" ry="12" stroke-width="2"/>
+
+  <!-- Row dividers, bronze theme accent, low opacity -->
+  <line x1="408" y1="558" x2="792" y2="558" stroke="oklch(0.80 0.135 75)" stroke-width="1" stroke-opacity="0.3"/>
+  <line x1="408" y1="596" x2="792" y2="596" stroke="oklch(0.80 0.135 75)" stroke-width="1" stroke-opacity="0.3"/>
+  <line x1="408" y1="634" x2="792" y2="634" stroke="oklch(0.80 0.135 75)" stroke-width="1" stroke-opacity="0.3"/>
+
+  <!-- Column guides, subtle bronze -->
+  <line x1="446" y1="538" x2="446" y2="662" stroke="oklch(0.80 0.135 75)" stroke-width="1" stroke-opacity="0.18"/>
+  <line x1="484" y1="538" x2="484" y2="662" stroke="oklch(0.80 0.135 75)" stroke-width="1" stroke-opacity="0.18"/>
+  <line x1="522" y1="538" x2="522" y2="662" stroke="oklch(0.80 0.135 75)" stroke-width="1" stroke-opacity="0.18"/>
+  <line x1="560" y1="538" x2="560" y2="662" stroke="oklch(0.80 0.135 75)" stroke-width="1" stroke-opacity="0.18"/>
+  <line x1="598" y1="538" x2="598" y2="662" stroke="oklch(0.80 0.135 75)" stroke-width="1" stroke-opacity="0.18"/>
+  <line x1="636" y1="538" x2="636" y2="662" stroke="oklch(0.80 0.135 75)" stroke-width="1" stroke-opacity="0.18"/>
+  <line x1="674" y1="538" x2="674" y2="662" stroke="oklch(0.80 0.135 75)" stroke-width="1" stroke-opacity="0.18"/>
+  <line x1="712" y1="538" x2="712" y2="662" stroke="oklch(0.80 0.135 75)" stroke-width="1" stroke-opacity="0.18"/>
+  <line x1="750" y1="538" x2="750" y2="662" stroke="oklch(0.80 0.135 75)" stroke-width="1" stroke-opacity="0.18"/>
+
+  <!-- The one key that's different — TMR switch embedded in a familiar compact board -->
+  <rect x="706" y="606" width="32" height="32" rx="4" fill="oklch(0.60 0.105 40 / 0.85)" stroke="oklch(0.60 0.105 40)" stroke-width="1.5"/>
+
+  <!-- Bronze theme dot — family ornamental anchor, upper-right margin -->
+  <circle cx="1148" cy="62" r="7" fill="oklch(0.80 0.135 75)" opacity="0.9"/>
+</svg>

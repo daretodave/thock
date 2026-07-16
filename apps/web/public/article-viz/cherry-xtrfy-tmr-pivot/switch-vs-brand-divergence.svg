@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Two diverging lines on the same tracker scale, W22 through W29 2026. The Cherry MX2A switch score falls from -10 to -50 in warm-red. The Cherry brand score climbs from -45 to -24 in coral. The lines cross near W25, illustrating a single switch line dragging down while the parent brand recovers on other news.</title>
+
+  <!-- Axes -->
+  <line x1="140" y1="70" x2="140" y2="360" stroke-opacity="0.30"/>
+  <line x1="140" y1="360" x2="1100" y2="360" stroke-opacity="0.30"/>
+
+  <!-- Y labels: score scale -50 to 0 -->
+  <text x="118" y="82" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.55">0</text>
+  <line x1="136" y1="78" x2="1100" y2="78" stroke-opacity="0.15" stroke-width="1"/>
+  <text x="118" y="220" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.45">-25</text>
+  <line x1="136" y1="216" x2="1100" y2="216" stroke-opacity="0.10" stroke-width="1"/>
+  <text x="118" y="358" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.45">-50</text>
+
+  <!-- Week labels W22-W29 -->
+  <text x="160" y="385" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.50">W22</text>
+  <text x="294" y="385" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.50">W23</text>
+  <text x="429" y="385" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.50">W24</text>
+  <text x="563" y="385" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.50">W25</text>
+  <text x="697" y="385" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.50">W26</text>
+  <text x="831" y="385" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.50">W27</text>
+  <text x="966" y="385" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.50">W28</text>
+  <text x="1100" y="385" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.60">W29</text>
+  <text x="620" y="415" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.40">2026</text>
+
+  <!-- MX2A switch line (warm-red / down token): -10, -18, -25, -32, -37, -42, -46, -50 -->
+  <polyline
+    points="160,150 294,186 429,217.5 563,249 697,271.5 831,294 966,312 1100,330"
+    stroke="oklch(0.62 0.13 25)"
+    stroke-width="2.5"
+    stroke-opacity="0.90"
+    fill="none"
+  />
+  <circle cx="160" cy="150" r="4" fill="oklch(0.62 0.13 25)" stroke="oklch(0.62 0.13 25)" opacity="0.85"/>
+  <circle cx="1100" cy="330" r="6" fill="oklch(0.62 0.13 25)" stroke="oklch(0.62 0.13 25)" opacity="0.95"/>
+  <text x="1100" y="352" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.90">Cherry MX2A: -50</text>
+
+  <!-- Cherry brand line (coral): -45, -40, -36, -33, -30, -28, -26, -24 -->
+  <polyline
+    points="160,320 294,300 429,285 563,273.5 697,264 831,257 966,250 1100,243"
+    stroke="oklch(0.68 0.165 28)"
+    stroke-width="2.5"
+    stroke-opacity="0.95"
+    fill="none"
+  />
+  <circle cx="160" cy="320" r="4" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)" opacity="0.85"/>
+  <circle cx="1100" cy="243" r="6" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)" opacity="0.95"/>
+  <text x="1100" y="225" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">Cherry brand: -24</text>
+
+  <!-- Crossing annotation -->
+  <text x="600" y="45" font-family="Newsreader, serif" font-size="17" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">One switch line down, one brand line up — same eight weeks</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="30" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

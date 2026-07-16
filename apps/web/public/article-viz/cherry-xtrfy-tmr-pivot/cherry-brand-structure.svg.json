@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-16T00:00:00.000Z",
+  "commit": "15229a92750a33818ddf4a7a5338ef2907ec3a35",
+  "kind": "inline-viz",
+  "article_slug": "cherry-xtrfy-tmr-pivot",
+  "article_pillar": "trends",
+  "section_anchor": "why-xtrfy-why-tmr",
+  "brief_summary": "Branch diagram showing Cherry GmbH's three business lines: MX switches (muted, cooling on the tracker), GMK keycap manufacturing (muted, steady/load-bearing), and XTRFY gaming peripherals (coral-highlighted, magnetic/TMR pivot, K5 Pro Compact launched July 3, 2026). Illustrates the article's claim that Cherry is a multi-line company and the XTRFY pivot is a separate growth vector from the struggling MX line.",
+  "target": "apps/web/public/article-viz/cherry-xtrfy-tmr-pivot/cherry-brand-structure.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "data/trends/2026-W29.json § rows[15] 'Cherry (GMK parent)' note — 'Cherry XTRFY's July 3, 2026 TMR-based K5 Pro Compact launch gave the Cherry brand a rare positive headline after months of MX2A-driven decline.'",
+    "cherry-mx2a-revision.mdx § 'Cherry through GMK' — 'Cherry GmbH remains the manufacturer behind GMK doubleshot keycap sets ... The brand's center of gravity moved from switches to keycap manufacturing some time around the MX2A's arrival, and the move is durable.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/cherry-xtrfy-tmr-pivot/cherry-brand-structure.svg"],
+  "warnings": []
+}
