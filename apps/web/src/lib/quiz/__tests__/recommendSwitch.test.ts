@@ -111,6 +111,40 @@ describe('recommendSwitch', () => {
     expect(results[0]?.switch.slug).toBe('true-medium')
   })
 
+  it('I: excludes a discontinued switch even when it would otherwise win on every scoring axis', () => {
+    const discontinuedWinner = makeSwitch({
+      slug: 'discontinued-tactile',
+      type: 'tactile',
+      springGrams: { actuation: 62, bottomOut: 70 },
+      status: 'discontinued',
+    })
+    const answers: QuizAnswers = {
+      soundProfile: 'neutral',
+      actuationFeel: 'tactile',
+      springWeight: 'heavy',
+      primaryUse: 'typing',
+    }
+    // discontinuedWinner scores identically to TACTILE_HEAVY on every axis
+    // (same type, same spring weight) but is unbuyable — it must never
+    // outrank an in-production switch, nor appear in the results at all
+    // while an in-production alternative exists.
+    const results = recommendSwitch(answers, [discontinuedWinner, LINEAR_LIGHT])
+    expect(results.some((r) => r.switch.slug === 'discontinued-tactile')).toBe(false)
+  })
+
+  it('J: falls back to the full catalog when every switch is discontinued', () => {
+    const onlyDiscontinued = [makeSwitch({ slug: 'gone', status: 'discontinued' })]
+    const answers: QuizAnswers = {
+      soundProfile: 'neutral',
+      actuationFeel: 'smooth',
+      springWeight: 'medium',
+      primaryUse: 'typing',
+    }
+    const results = recommendSwitch(answers, onlyDiscontinued)
+    expect(results).toHaveLength(1)
+    expect(results[0]?.switch.slug).toBe('gone')
+  })
+
   it('E: returns at most 3 results even with 8 switches', () => {
     const catalog = Array.from({ length: 8 }, (_, i) =>
       makeSwitch({ slug: `sw-${i}`, springGrams: { actuation: 45 + i * 2, bottomOut: 60 + i * 2 } }),

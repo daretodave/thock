@@ -65,13 +65,20 @@ function scorePrimaryUse(sw: Switch, use: QuizAnswers['primaryUse']): number {
   }
 }
 
+function filterByAvailability(catalog: Switch[]): Switch[] {
+  const eligible = catalog.filter((sw) => sw.status !== 'discontinued')
+  return eligible.length > 0 ? eligible : catalog
+}
+
 export function recommendSwitch(
   answers: QuizAnswers,
   catalog: Switch[],
 ): ScoredSwitch[] {
   if (catalog.length === 0) return []
 
-  const scored = catalog
+  const eligible = filterByAvailability(catalog)
+
+  const scored = eligible
     .map((sw) => ({
       switch: sw,
       score:
