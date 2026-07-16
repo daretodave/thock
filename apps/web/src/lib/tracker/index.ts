@@ -161,6 +161,12 @@ export function weekKicker(isoWeek: string): WeekKicker | null {
  * Format the score display string for a row or summary slot.
  * Mirrors the home trending tile's signature so phase 6 can adopt
  * this helper later without a behavior change.
+ *
+ * The +/- sign is taken from `direction`, not from `score`'s own
+ * sign — `score` always equals the row's last `spark` point (a
+ * current-level number, not a signed delta), so a row can be
+ * `direction: 'down'` with a positive `score` after a sharp
+ * end-of-week drop from a higher level.
  */
 export function formatDelta(
   score: number | null,
@@ -168,8 +174,8 @@ export function formatDelta(
 ): string {
   if (score === null) return '—'
   if (direction === 'flat' || score === 0) return 'flat'
-  const sign = score > 0 ? '+' : ''
-  return `${sign}${Math.round(score)}%`
+  const sign = direction === 'up' ? '+' : '-'
+  return `${sign}${Math.round(Math.abs(score))}%`
 }
 
 /** Categories present in a snapshot, in canonical order. */

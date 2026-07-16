@@ -54,6 +54,11 @@ describe('formatDelta', () => {
   it('renders an em-dash for null scores', () => {
     expect(formatDelta(null, 'up')).toBe('—')
   })
+
+  it('signs from direction when score and direction disagree', () => {
+    expect(formatDelta(28, 'down')).toBe('-28%')
+    expect(formatDelta(-24, 'up')).toBe('+24%')
+  })
 })
 
 describe('groupByCategory', () => {

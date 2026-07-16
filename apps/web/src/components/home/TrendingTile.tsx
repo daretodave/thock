@@ -42,8 +42,8 @@ const DIR_COLOR: Record<TrendDirection, string> = {
 
 function formatDelta(delta: number | null, dir: TrendDirection): string {
   if (delta === null || delta === 0 || dir === 'flat') return 'flat'
-  const sign = delta > 0 ? '+' : ''
-  return `${sign}${Math.round(delta)}%`
+  const sign = dir === 'up' ? '+' : '-'
+  return `${sign}${Math.round(Math.abs(delta))}%`
 }
 
 /**

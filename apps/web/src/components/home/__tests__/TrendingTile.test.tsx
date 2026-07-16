@@ -60,6 +60,19 @@ describe('<TrendingTile>', () => {
     expect(tile.getAttribute('data-dir')).toBe('flat')
   })
 
+  it('signs from direction when a down row carries a positive delta', () => {
+    render(
+      <TrendingTile
+        category="keycap"
+        label="GMK CYL Ramune"
+        delta={28}
+        dir="down"
+        spark={[30, 43, 28]}
+      />,
+    )
+    expect(screen.getByTestId('trending-tile')).toHaveTextContent('-28%')
+  })
+
   it('falls back to "flat" when delta is null', () => {
     render(
       <TrendingTile

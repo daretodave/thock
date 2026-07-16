@@ -195,6 +195,14 @@ describe('formatDelta', () => {
   it('rounds fractional scores to the nearest integer', () => {
     expect(formatDelta(34.6, 'up')).toBe('+35%')
   })
+
+  it('signs from direction, not score, when a down row carries a positive score', () => {
+    expect(formatDelta(28, 'down')).toBe('-28%')
+  })
+
+  it('signs from direction, not score, when an up row carries a negative score', () => {
+    expect(formatDelta(-24, 'up')).toBe('+24%')
+  })
 })
 
 describe('presentCategories', () => {
