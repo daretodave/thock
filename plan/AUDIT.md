@@ -7016,7 +7016,7 @@ passes accumulate signals.)
 - score: 3.6 (impact × ease / 10)
 - next: add `{ id: "oil-king", kind: "switch", slug: "gateron-oil-king" }` to `durock-t1-deep-dive.mdx` mentionedParts; add `{ id: "mode-sonnet", kind: "board", slug: "mode-sonnet" }` to `trends-tracker-preview.mdx` mentionedParts
 
-### [HOT PURSUIT] [content-gap] [7] trends pillar — 1 of ≥2 articles in last 30d
+### [x] [HOT PURSUIT] [content-gap] [7] trends pillar — 1 of ≥2 articles in last 30d — addressed in 2922088, closes #497
 - category: content-gaps
 - impact: 8 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -7028,3 +7028,4 @@ passes accumulate signals.)
 - next: /ship-content → trends pillar article
 - issue: #497
 > Filed 2026-07-16 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+> **Resolved (2026-07-16):** Shipped "Cherry bets on magnetic: the XTRFY pivot" at `/article/cherry-xtrfy-tmr-pivot`, publishedAt 2026-07-12 (gap-fill: largest gap in the rolling 30-day window, between 2026-07-09 and today). Trends brand-level analysis piece on Cherry's MX2A tracker decline vs. its XTRFY sub-brand's July 3, 2026 TMR-based K5 Pro Compact launch; cross-links to `cherry-mx2a-revision`, `magnetic-switches-deep-dive`, `hall-effect-mainstream`. Trends pillar now at 2 of ≥2 in the 30-day window — quota met. `2922088`
