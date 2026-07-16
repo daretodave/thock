@@ -7015,3 +7015,15 @@ passes accumulate signals.)
 - ease: 9 (one frontmatter array entry per article — same mechanical shape as the boba-u4t fix above)
 - score: 3.6 (impact × ease / 10)
 - next: add `{ id: "oil-king", kind: "switch", slug: "gateron-oil-king" }` to `durock-t1-deep-dive.mdx` mentionedParts; add `{ id: "mode-sonnet", kind: "board", slug: "mode-sonnet" }` to `trends-tracker-preview.mdx` mentionedParts
+
+### [HOT PURSUIT] [content-gap] [7] trends pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 8 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: trends
+- window-count: 1
+- window-start: 2026-06-16
+- score: 7
+- next: /ship-content → trends pillar article
+> Filed 2026-07-16 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
