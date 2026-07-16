@@ -23,6 +23,7 @@ import {
   getAllBoards,
   getAllVendors,
   getAllGroupBuys,
+  isGroupBuyEnded,
 } from '@thock/data'
 
 const here = dirname(fileURLToPath(import.meta.url))
@@ -77,12 +78,6 @@ ms.addAll(documents)
  * Determines whether a group buy's search result should point at the
  * live `/group-buys` index or the `/group-buys/past` archive.
  */
-function isGroupBuyPast(g: { status: string; endDate: string }, todayIso: string): boolean {
-  if (g.status === 'closed' || g.status === 'shipped') return true
-  if ((g.status === 'live' || g.status === 'announced') && g.endDate < todayIso) return true
-  return false
-}
-
 const todayIso = new Date().toISOString().slice(0, 10)
 
 const parts: PartDoc[] = [
@@ -126,7 +121,7 @@ const parts: PartDoc[] = [
     slug: g.slug,
     kind: 'group-buy' as const,
     name: g.name,
-    href: isGroupBuyPast(g, todayIso) ? `/group-buys/past#${g.slug}` : `/group-buys#${g.slug}`,
+    href: isGroupBuyEnded(g, todayIso) ? `/group-buys/past#${g.slug}` : `/group-buys#${g.slug}`,
   })),
 ]
 

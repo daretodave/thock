@@ -19,6 +19,7 @@
  * @thock/content directly — those run in dev/CI contexts where
  * the workspace is intact.
  */
+import { isGroupBuyEnded } from '@thock/data'
 import type {
   Switch,
   KeycapSet,
@@ -111,9 +112,9 @@ export function getActiveGroupBuys(now: Date = new Date()): GroupBuy[] {
 
 /**
  * Past group buys — every record that has ended, in any status.
- * Mirrors `isEnded()` in `apps/web/src/app/group-buys/helpers.ts`:
- * `status` of `closed` / `shipped`, OR `status === 'live'` with
- * `endDate` strictly before today. Sorted endDate desc, name asc
+ * Delegates to `isGroupBuyEnded()` from `@thock/data` — the single
+ * source of truth shared with `apps/web/src/app/group-buys/helpers.ts`
+ * and the search index generator. Sorted endDate desc, name asc
  * tie-break. No cap — the `/group-buys/past` archive shows the full
  * history; the live `/group-buys` page keeps its own 6-row "Just
  * closed" rail.
@@ -121,11 +122,7 @@ export function getActiveGroupBuys(now: Date = new Date()): GroupBuy[] {
 export function getAllClosedGroupBuys(now: Date = new Date()): GroupBuy[] {
   const today = now.toISOString().slice(0, 10)
   return manifest.groupBuys
-    .filter((g) => {
-      if (g.status === 'closed' || g.status === 'shipped') return true
-      if ((g.status === 'live' || g.status === 'announced') && g.endDate < today) return true
-      return false
-    })
+    .filter((g) => isGroupBuyEnded(g, today))
     .sort((a, b) => {
       if (a.endDate !== b.endDate) return b.endDate.localeCompare(a.endDate)
       return a.name.localeCompare(b.name)

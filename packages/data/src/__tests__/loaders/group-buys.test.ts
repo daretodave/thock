@@ -6,6 +6,7 @@ import {
   getActiveGroupBuys,
   getAllGroupBuys,
   getGroupBuyBySlug,
+  isGroupBuyEnded,
 } from '../../loaders/group-buys'
 import { __resetForTests } from '../../loaders/memo'
 import { setRepoRootForTests } from '../../loaders/paths'
@@ -90,5 +91,45 @@ describe('group-buys loader', () => {
   it('does not regress kbdfans-gmk-cyl-ramune url to the known-dead product path (regression guard)', () => {
     const gb = getGroupBuyBySlug('kbdfans-gmk-cyl-ramune')
     expect(gb?.url).not.toBe('https://kbdfans.com/products/gmk-cyl-ramune')
+  })
+})
+
+describe('isGroupBuyEnded', () => {
+  const TODAY = '2026-07-16'
+
+  it('treats closed status as ended regardless of endDate', () => {
+    expect(
+      isGroupBuyEnded({ status: 'closed', endDate: '2099-01-01' }, TODAY),
+    ).toBe(true)
+  })
+
+  it('treats shipped status as ended regardless of endDate', () => {
+    expect(
+      isGroupBuyEnded({ status: 'shipped', endDate: '2099-01-01' }, TODAY),
+    ).toBe(true)
+  })
+
+  it('treats a live buy past its endDate as ended', () => {
+    expect(
+      isGroupBuyEnded({ status: 'live', endDate: '2026-07-01' }, TODAY),
+    ).toBe(true)
+  })
+
+  it('treats an announced buy past its endDate as ended', () => {
+    expect(
+      isGroupBuyEnded({ status: 'announced', endDate: '2026-07-01' }, TODAY),
+    ).toBe(true)
+  })
+
+  it('does not treat a live buy still within its window as ended', () => {
+    expect(
+      isGroupBuyEnded({ status: 'live', endDate: '2026-08-01' }, TODAY),
+    ).toBe(false)
+  })
+
+  it('does not treat an announced buy still within its window as ended', () => {
+    expect(
+      isGroupBuyEnded({ status: 'announced', endDate: '2026-08-01' }, TODAY),
+    ).toBe(false)
   })
 })

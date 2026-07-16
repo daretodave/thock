@@ -6,6 +6,7 @@ export {
   getAllGroupBuys,
   getActiveGroupBuys,
   getGroupBuyBySlug,
+  isGroupBuyEnded,
 } from './group-buys'
 export {
   getAllTrendSnapshots,

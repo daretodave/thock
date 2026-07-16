@@ -1,4 +1,4 @@
-import type { GroupBuy } from '@thock/data'
+import { isGroupBuyEnded, type GroupBuy } from '@thock/data'
 
 export type GroupBuyPartition = {
   live: GroupBuy[]
@@ -29,13 +29,6 @@ function isAnnounced(gb: GroupBuy, today: string): boolean {
   return gb.status === 'announced' && gb.startDate > today
 }
 
-function isEnded(gb: GroupBuy, today: string): boolean {
-  if (gb.status === 'closed' || gb.status === 'shipped') return true
-  if (gb.status === 'live' && gb.endDate < today) return true
-  if (gb.status === 'announced' && gb.endDate < today) return true
-  return false
-}
-
 /**
  * Partition every group buy into live / announced / ended buckets and
  * sort each per the phase 13 brief:
@@ -58,7 +51,7 @@ export function partitionGroupBuys(
   for (const gb of groupBuys) {
     if (isLive(gb, today)) live.push(gb)
     else if (isAnnounced(gb, today)) announced.push(gb)
-    else if (isEnded(gb, today)) ended.push(gb)
+    else if (isGroupBuyEnded(gb, today)) ended.push(gb)
   }
 
   live.sort((a, b) => {
