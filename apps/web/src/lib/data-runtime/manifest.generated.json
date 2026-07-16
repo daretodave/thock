@@ -4674,7 +4674,7 @@
           "deep-dive"
         ],
         "publishedAt": "2026-07-02T14:00:00.000Z",
-        "updatedAt": "2026-07-08T00:00:00.000Z",
+        "updatedAt": "2026-07-16T00:00:00.000Z",
         "heroImage": "/hero-art/durock-t1-deep-dive.svg",
         "heroImageAlt": "Side-view cross-section of a heavy nylon-housing tactile switch — top housing, POM stem with a pronounced tactile bump geometry near the top of travel, stiff coil spring, and nylon bottom housing, rendered in a single warm-grey stroke with an amber splash across the bump-and-leaf contact zone",
         "featured": false,
@@ -4700,6 +4700,11 @@
             "id": "gateron-lanes",
             "kind": "switch",
             "slug": "gateron-lanes"
+          },
+          {
+            "id": "oil-king",
+            "kind": "switch",
+            "slug": "gateron-oil-king"
           }
         ]
       },
@@ -6010,7 +6015,7 @@
           "mode"
         ],
         "publishedAt": "2026-05-08T08:00:00.000Z",
-        "updatedAt": "2026-06-02T00:00:00.000Z",
+        "updatedAt": "2026-07-16T00:00:00.000Z",
         "heroImage": "/hero-art/trends-tracker-preview.svg",
         "heroImageAlt": "Upward-trending sparkline silhouette across eight points with one mid-dip, drawn in a single warm-grey stroke with an ochre area-fill beneath the line and a focal latest-point cursor on the right edge.",
         "featured": false,
@@ -6021,6 +6026,11 @@
             "id": "oil-king",
             "kind": "switch",
             "slug": "gateron-oil-king"
+          },
+          {
+            "id": "mode-sonnet",
+            "kind": "board",
+            "slug": "mode-sonnet"
           }
         ]
       },
@@ -7678,5 +7688,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-07-16T05:14:37.164Z"
+  "generatedAt": "2026-07-16T07:04:58.044Z"
 }
