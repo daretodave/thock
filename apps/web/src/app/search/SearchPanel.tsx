@@ -132,7 +132,7 @@ export function SearchPanel({ allTags }: SearchPanelProps): ReactElement {
         {partResults.length > 0 && (
           <div data-testid="search-part-results">
             <div className="font-mono uppercase tracking-[0.12em] text-micro text-text-2 pt-6 pb-2">
-              parts
+              catalog
             </div>
             <div className="flex flex-col">
               {partResults.map((hit) => (

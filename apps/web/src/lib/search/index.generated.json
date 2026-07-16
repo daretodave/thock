@@ -101171,225 +101171,444 @@
       "id": "akko-v3-cream-blue-pro",
       "slug": "akko-v3-cream-blue-pro",
       "kind": "switch",
-      "name": "Akko V3 Cream Blue Pro"
+      "name": "Akko V3 Cream Blue Pro",
+      "href": "/part/switch/akko-v3-cream-blue-pro"
     },
     {
       "id": "c3-tangerine-r2",
       "slug": "c3-tangerine-r2",
       "kind": "switch",
-      "name": "C3 Equalz Tangerine R2"
+      "name": "C3 Equalz Tangerine R2",
+      "href": "/part/switch/c3-tangerine-r2"
     },
     {
       "id": "cherry-mx2a-red",
       "slug": "cherry-mx2a-red",
       "kind": "switch",
-      "name": "Cherry MX2A Red"
+      "name": "Cherry MX2A Red",
+      "href": "/part/switch/cherry-mx2a-red"
     },
     {
       "id": "cherry-mx2a-silent-black",
       "slug": "cherry-mx2a-silent-black",
       "kind": "switch",
-      "name": "Cherry MX2A Silent Black"
+      "name": "Cherry MX2A Silent Black",
+      "href": "/part/switch/cherry-mx2a-silent-black"
     },
     {
       "id": "drop-holy-panda-x",
       "slug": "drop-holy-panda-x",
       "kind": "switch",
-      "name": "Drop Holy Panda X"
+      "name": "Drop Holy Panda X",
+      "href": "/part/switch/drop-holy-panda-x"
     },
     {
       "id": "durock-t1",
       "slug": "durock-t1",
       "kind": "switch",
-      "name": "Durock T1"
+      "name": "Durock T1",
+      "href": "/part/switch/durock-t1"
     },
     {
       "id": "gateron-ink-v2-yellow",
       "slug": "gateron-ink-v2-yellow",
       "kind": "switch",
-      "name": "Gateron Ink V2 Yellow"
+      "name": "Gateron Ink V2 Yellow",
+      "href": "/part/switch/gateron-ink-v2-yellow"
     },
     {
       "id": "gateron-lanes",
       "slug": "gateron-lanes",
       "kind": "switch",
-      "name": "Gateron Lanes"
+      "name": "Gateron Lanes",
+      "href": "/part/switch/gateron-lanes"
     },
     {
       "id": "gateron-magnetic-jade",
       "slug": "gateron-magnetic-jade",
       "kind": "switch",
-      "name": "Gateron Magnetic Jade"
+      "name": "Gateron Magnetic Jade",
+      "href": "/part/switch/gateron-magnetic-jade"
     },
     {
       "id": "gateron-oil-king",
       "slug": "gateron-oil-king",
       "kind": "switch",
-      "name": "Gateron Oil King"
+      "name": "Gateron Oil King",
+      "href": "/part/switch/gateron-oil-king"
     },
     {
       "id": "gateron-pro-3-yellow",
       "slug": "gateron-pro-3-yellow",
       "kind": "switch",
-      "name": "Gateron G Pro 3.0 Yellow"
+      "name": "Gateron G Pro 3.0 Yellow",
+      "href": "/part/switch/gateron-pro-3-yellow"
     },
     {
       "id": "gazzew-boba-lt",
       "slug": "gazzew-boba-lt",
       "kind": "switch",
-      "name": "Gazzew Boba LT"
+      "name": "Gazzew Boba LT",
+      "href": "/part/switch/gazzew-boba-lt"
     },
     {
       "id": "gazzew-boba-u4",
       "slug": "gazzew-boba-u4",
       "kind": "switch",
-      "name": "Gazzew Boba U4"
+      "name": "Gazzew Boba U4",
+      "href": "/part/switch/gazzew-boba-u4"
     },
     {
       "id": "gazzew-boba-u4t",
       "slug": "gazzew-boba-u4t",
       "kind": "switch",
-      "name": "Gazzew Boba U4T"
+      "name": "Gazzew Boba U4T",
+      "href": "/part/switch/gazzew-boba-u4t"
     },
     {
       "id": "hmx-cloud",
       "slug": "hmx-cloud",
       "kind": "switch",
-      "name": "HMX Cloud Linear"
+      "name": "HMX Cloud Linear",
+      "href": "/part/switch/hmx-cloud"
     },
     {
       "id": "kailh-box-jade",
       "slug": "kailh-box-jade",
       "kind": "switch",
-      "name": "Kailh Box Jade"
+      "name": "Kailh Box Jade",
+      "href": "/part/switch/kailh-box-jade"
     },
     {
       "id": "kailh-box-white",
       "slug": "kailh-box-white",
       "kind": "switch",
-      "name": "Kailh Box White"
+      "name": "Kailh Box White",
+      "href": "/part/switch/kailh-box-white"
     },
     {
       "id": "tecsee-sapphire-v2",
       "slug": "tecsee-sapphire-v2",
       "kind": "switch",
-      "name": "Tecsee Sapphire V2"
+      "name": "Tecsee Sapphire V2",
+      "href": "/part/switch/tecsee-sapphire-v2"
     },
     {
       "id": "domikey-wob",
       "slug": "domikey-wob",
       "kind": "keycap-set",
-      "name": "Domikey WOB"
+      "name": "Domikey WOB",
+      "href": "/part/keycap-set/domikey-wob"
     },
     {
       "id": "gmk-bento-r2",
       "slug": "gmk-bento-r2",
       "kind": "keycap-set",
-      "name": "GMK Bentō R2"
+      "name": "GMK Bentō R2",
+      "href": "/part/keycap-set/gmk-bento-r2"
     },
     {
       "id": "gmk-cyl-ramune",
       "slug": "gmk-cyl-ramune",
       "kind": "keycap-set",
-      "name": "GMK CYL Ramune"
+      "name": "GMK CYL Ramune",
+      "href": "/part/keycap-set/gmk-cyl-ramune"
     },
     {
       "id": "gmk-cyl-selene",
       "slug": "gmk-cyl-selene",
       "kind": "keycap-set",
-      "name": "GMK CYL Selene"
+      "name": "GMK CYL Selene",
+      "href": "/part/keycap-set/gmk-cyl-selene"
     },
     {
       "id": "gmk-laser",
       "slug": "gmk-laser",
       "kind": "keycap-set",
-      "name": "GMK Laser"
+      "name": "GMK Laser",
+      "href": "/part/keycap-set/gmk-laser"
     },
     {
       "id": "gmk-olivia",
       "slug": "gmk-olivia",
       "kind": "keycap-set",
-      "name": "GMK Olivia"
+      "name": "GMK Olivia",
+      "href": "/part/keycap-set/gmk-olivia"
     },
     {
       "id": "kat-drifter",
       "slug": "kat-drifter",
       "kind": "keycap-set",
-      "name": "KAT Drifter"
+      "name": "KAT Drifter",
+      "href": "/part/keycap-set/kat-drifter"
     },
     {
       "id": "mt3-dasher",
       "slug": "mt3-dasher",
       "kind": "keycap-set",
-      "name": "Drop MT3 Dasher"
+      "name": "Drop MT3 Dasher",
+      "href": "/part/keycap-set/mt3-dasher"
     },
     {
       "id": "mt3-devtty",
       "slug": "mt3-devtty",
       "kind": "keycap-set",
-      "name": "Drop + Matt3o MT3 /dev/tty"
+      "name": "Drop + Matt3o MT3 /dev/tty",
+      "href": "/part/keycap-set/mt3-devtty"
     },
     {
       "id": "sa-godspeed",
       "slug": "sa-godspeed",
       "kind": "keycap-set",
-      "name": "SA Godspeed"
+      "name": "SA Godspeed",
+      "href": "/part/keycap-set/sa-godspeed"
     },
     {
       "id": "bakeneko65",
       "slug": "bakeneko65",
       "kind": "board",
-      "name": "Bakeneko65"
+      "name": "Bakeneko65",
+      "href": "/part/board/bakeneko65"
     },
     {
       "id": "class80",
       "slug": "class80",
       "kind": "board",
-      "name": "MM Studio Class80"
+      "name": "MM Studio Class80",
+      "href": "/part/board/class80"
     },
     {
       "id": "drop-ctrl",
       "slug": "drop-ctrl",
       "kind": "board",
-      "name": "Drop CTRL"
+      "name": "Drop CTRL",
+      "href": "/part/board/drop-ctrl"
     },
     {
       "id": "ikki68-aurora",
       "slug": "ikki68-aurora",
       "kind": "board",
-      "name": "Ikki68 Aurora"
+      "name": "Ikki68 Aurora",
+      "href": "/part/board/ikki68-aurora"
     },
     {
       "id": "kbd75v3",
       "slug": "kbd75v3",
       "kind": "board",
-      "name": "KBD75 v3"
+      "name": "KBD75 v3",
+      "href": "/part/board/kbd75v3"
     },
     {
       "id": "keychron-q1-he",
       "slug": "keychron-q1-he",
       "kind": "board",
-      "name": "Keychron Q1 HE 8K Marble"
+      "name": "Keychron Q1 HE 8K Marble",
+      "href": "/part/board/keychron-q1-he"
     },
     {
       "id": "mammoth75",
       "slug": "mammoth75",
       "kind": "board",
-      "name": "Mammoth75"
+      "name": "Mammoth75",
+      "href": "/part/board/mammoth75"
     },
     {
       "id": "mode-sonnet",
       "slug": "mode-sonnet",
       "kind": "board",
-      "name": "Mode Sonnet"
+      "name": "Mode Sonnet",
+      "href": "/part/board/mode-sonnet"
     },
     {
       "id": "qk75",
       "slug": "qk75",
       "kind": "board",
-      "name": "QK75"
+      "name": "QK75",
+      "href": "/part/board/qk75"
+    },
+    {
+      "id": "cannonkeys",
+      "slug": "cannonkeys",
+      "kind": "vendor",
+      "name": "CannonKeys",
+      "href": "/vendor/cannonkeys"
+    },
+    {
+      "id": "deltakeyco",
+      "slug": "deltakeyco",
+      "kind": "vendor",
+      "name": "Delta Key Co.",
+      "href": "/vendor/deltakeyco"
+    },
+    {
+      "id": "divinikey",
+      "slug": "divinikey",
+      "kind": "vendor",
+      "name": "Divinikey",
+      "href": "/vendor/divinikey"
+    },
+    {
+      "id": "drop",
+      "slug": "drop",
+      "kind": "vendor",
+      "name": "Drop",
+      "href": "/vendor/drop"
+    },
+    {
+      "id": "kbdfans",
+      "slug": "kbdfans",
+      "kind": "vendor",
+      "name": "KBDfans",
+      "href": "/vendor/kbdfans"
+    },
+    {
+      "id": "keychron",
+      "slug": "keychron",
+      "kind": "vendor",
+      "name": "Keychron",
+      "href": "/vendor/keychron"
+    },
+    {
+      "id": "novelkeys",
+      "slug": "novelkeys",
+      "kind": "vendor",
+      "name": "NovelKeys",
+      "href": "/vendor/novelkeys"
+    },
+    {
+      "id": "qwertykeys",
+      "slug": "qwertykeys",
+      "kind": "vendor",
+      "name": "Qwertykeys",
+      "href": "/vendor/qwertykeys"
+    },
+    {
+      "id": "wooting",
+      "slug": "wooting",
+      "kind": "vendor",
+      "name": "Wooting",
+      "href": "/vendor/wooting"
+    },
+    {
+      "id": "wuque-studio",
+      "slug": "wuque-studio",
+      "kind": "vendor",
+      "name": "Wuque Studio",
+      "href": "/vendor/wuque-studio"
+    },
+    {
+      "id": "thock-weekly-003",
+      "slug": "thock-weekly-003",
+      "kind": "newsletter",
+      "name": "thock weekly — issue 03",
+      "href": "/newsletter/thock-weekly-003"
+    },
+    {
+      "id": "thock-weekly-002",
+      "slug": "thock-weekly-002",
+      "kind": "newsletter",
+      "name": "thock weekly — issue 02",
+      "href": "/newsletter/thock-weekly-002"
+    },
+    {
+      "id": "thock-weekly-001",
+      "slug": "thock-weekly-001",
+      "kind": "newsletter",
+      "name": "thock weekly — issue 01",
+      "href": "/newsletter/thock-weekly-001"
+    },
+    {
+      "id": "cannonkeys-mode-sonnet-r2",
+      "slug": "cannonkeys-mode-sonnet-r2",
+      "kind": "group-buy",
+      "name": "Mode Sonnet R2",
+      "href": "/group-buys/past#cannonkeys-mode-sonnet-r2"
+    },
+    {
+      "id": "cannonkeys-nyawice",
+      "slug": "cannonkeys-nyawice",
+      "kind": "group-buy",
+      "name": "Nyawice",
+      "href": "/group-buys/past#cannonkeys-nyawice"
+    },
+    {
+      "id": "deltakeyco-gmk-cyl-pandemonium",
+      "slug": "deltakeyco-gmk-cyl-pandemonium",
+      "kind": "group-buy",
+      "name": "GMK CYL Pandemonium",
+      "href": "/group-buys/past#deltakeyco-gmk-cyl-pandemonium"
+    },
+    {
+      "id": "divinikey-dcs-dolch",
+      "slug": "divinikey-dcs-dolch",
+      "kind": "group-buy",
+      "name": "DCS Dolch",
+      "href": "/group-buys/past#divinikey-dcs-dolch"
+    },
+    {
+      "id": "kbdfans-gmk-cyl-greg-2",
+      "slug": "kbdfans-gmk-cyl-greg-2",
+      "kind": "group-buy",
+      "name": "GMK CYL GREG 2",
+      "href": "/group-buys/past#kbdfans-gmk-cyl-greg-2"
+    },
+    {
+      "id": "kbdfans-gmk-cyl-ishtar-r2",
+      "slug": "kbdfans-gmk-cyl-ishtar-r2",
+      "kind": "group-buy",
+      "name": "GMK CYL Ishtar R2",
+      "href": "/group-buys/past#kbdfans-gmk-cyl-ishtar-r2"
+    },
+    {
+      "id": "kbdfans-gmk-cyl-king-of-the-seas",
+      "slug": "kbdfans-gmk-cyl-king-of-the-seas",
+      "kind": "group-buy",
+      "name": "GMK CYL King of the Seas",
+      "href": "/group-buys/past#kbdfans-gmk-cyl-king-of-the-seas"
+    },
+    {
+      "id": "kbdfans-gmk-cyl-masterpiece-r2",
+      "slug": "kbdfans-gmk-cyl-masterpiece-r2",
+      "kind": "group-buy",
+      "name": "GMK CYL Masterpiece R2",
+      "href": "/group-buys/past#kbdfans-gmk-cyl-masterpiece-r2"
+    },
+    {
+      "id": "kbdfans-gmk-cyl-prussian-alert",
+      "slug": "kbdfans-gmk-cyl-prussian-alert",
+      "kind": "group-buy",
+      "name": "GMK CYL Prussian Alert",
+      "href": "/group-buys/past#kbdfans-gmk-cyl-prussian-alert"
+    },
+    {
+      "id": "kbdfans-gmk-cyl-ramune",
+      "slug": "kbdfans-gmk-cyl-ramune",
+      "kind": "group-buy",
+      "name": "GMK CYL Ramune",
+      "href": "/group-buys/past#kbdfans-gmk-cyl-ramune"
+    },
+    {
+      "id": "kbdfans-gmk-cyl-selene",
+      "slug": "kbdfans-gmk-cyl-selene",
+      "kind": "group-buy",
+      "name": "GMK CYL Selene",
+      "href": "/group-buys/past#kbdfans-gmk-cyl-selene"
+    },
+    {
+      "id": "kbdfans-gsk-sweet-nightmare",
+      "slug": "kbdfans-gsk-sweet-nightmare",
+      "kind": "group-buy",
+      "name": "GSK Sweet Nightmare",
+      "href": "/group-buys/past#kbdfans-gsk-sweet-nightmare"
+    },
+    {
+      "id": "wuque-studio-paper80-whatever-studio",
+      "slug": "wuque-studio-paper80-whatever-studio",
+      "kind": "group-buy",
+      "name": "Paper80 x Whatever Studio",
+      "href": "/group-buys/past#wuque-studio-paper80-whatever-studio"
     }
   ],
-  "generatedAt": "2026-07-16T07:04:58.988Z",
+  "generatedAt": "2026-07-16T19:43:29.472Z",
   "count": 66
 }

@@ -16,8 +16,14 @@ import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import MiniSearch from 'minisearch'
 
-import { getAllArticles } from '@thock/content'
-import { getAllSwitches, getAllKeycapSets, getAllBoards } from '@thock/data'
+import { getAllArticles, getAllNewsletters } from '@thock/content'
+import {
+  getAllSwitches,
+  getAllKeycapSets,
+  getAllBoards,
+  getAllVendors,
+  getAllGroupBuys,
+} from '@thock/data'
 
 const here = dirname(fileURLToPath(import.meta.url))
 const outDir = resolve(here, '..', 'src', 'lib', 'search')
@@ -37,8 +43,9 @@ type SearchDoc = {
 type PartDoc = {
   id: string
   slug: string
-  kind: 'switch' | 'keycap-set' | 'board'
+  kind: 'switch' | 'keycap-set' | 'board' | 'vendor' | 'newsletter' | 'group-buy'
   name: string
+  href: string
 }
 
 const articles = getAllArticles()
@@ -64,10 +71,63 @@ const ms = new MiniSearch<SearchDoc>({
 })
 ms.addAll(documents)
 
+/**
+ * Mirrors `getAllClosedGroupBuys()` in `apps/web/src/lib/data-runtime`:
+ * closed/shipped, or live/announced with an `endDate` already passed.
+ * Determines whether a group buy's search result should point at the
+ * live `/group-buys` index or the `/group-buys/past` archive.
+ */
+function isGroupBuyPast(g: { status: string; endDate: string }, todayIso: string): boolean {
+  if (g.status === 'closed' || g.status === 'shipped') return true
+  if ((g.status === 'live' || g.status === 'announced') && g.endDate < todayIso) return true
+  return false
+}
+
+const todayIso = new Date().toISOString().slice(0, 10)
+
 const parts: PartDoc[] = [
-  ...getAllSwitches().map((s) => ({ id: s.slug, slug: s.slug, kind: 'switch' as const, name: s.name })),
-  ...getAllKeycapSets().map((k) => ({ id: k.slug, slug: k.slug, kind: 'keycap-set' as const, name: k.name })),
-  ...getAllBoards().map((b) => ({ id: b.slug, slug: b.slug, kind: 'board' as const, name: b.name })),
+  ...getAllSwitches().map((s) => ({
+    id: s.slug,
+    slug: s.slug,
+    kind: 'switch' as const,
+    name: s.name,
+    href: `/part/switch/${s.slug}`,
+  })),
+  ...getAllKeycapSets().map((k) => ({
+    id: k.slug,
+    slug: k.slug,
+    kind: 'keycap-set' as const,
+    name: k.name,
+    href: `/part/keycap-set/${k.slug}`,
+  })),
+  ...getAllBoards().map((b) => ({
+    id: b.slug,
+    slug: b.slug,
+    kind: 'board' as const,
+    name: b.name,
+    href: `/part/board/${b.slug}`,
+  })),
+  ...getAllVendors().map((v) => ({
+    id: v.slug,
+    slug: v.slug,
+    kind: 'vendor' as const,
+    name: v.name,
+    href: `/vendor/${v.slug}`,
+  })),
+  ...getAllNewsletters().map((n) => ({
+    id: n.slug,
+    slug: n.slug,
+    kind: 'newsletter' as const,
+    name: n.frontmatter.title,
+    href: `/newsletter/${n.slug}`,
+  })),
+  ...getAllGroupBuys().map((g) => ({
+    id: g.slug,
+    slug: g.slug,
+    kind: 'group-buy' as const,
+    name: g.name,
+    href: isGroupBuyPast(g, todayIso) ? `/group-buys/past#${g.slug}` : `/group-buys#${g.slug}`,
+  })),
 ]
 
 const payload = {

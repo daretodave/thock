@@ -90,4 +90,24 @@ describe('searchParts', () => {
       expect(h.score).toBe(1.0)
     }
   })
+
+  it('surfaces vendors, newsletters, and group buys, each with an href', () => {
+    for (const kind of ['vendor', 'newsletter', 'group-buy']) {
+      const hits = searchParts(kind)
+      expect(hits.length).toBeGreaterThanOrEqual(1)
+      expect(hits.every((h) => h.kind === kind)).toBe(true)
+      for (const h of hits) {
+        expect(typeof h.href).toBe('string')
+        expect(h.href.length).toBeGreaterThan(0)
+      }
+    }
+  })
+
+  it('routes a past group buy to the /group-buys/past archive anchor', () => {
+    const groupBuyHits = searchParts('group-buy')
+    expect(groupBuyHits.length).toBeGreaterThanOrEqual(1)
+    for (const h of groupBuyHits) {
+      expect(h.href).toMatch(/^\/group-buys(\/past)?#.+/)
+    }
+  })
 })

@@ -90,6 +90,7 @@ export function GroupBuyRow({
 
   return (
     <article
+      id={groupBuy.slug}
       data-testid="group-buy-row"
       data-variant={variant}
       className={`grid grid-cols-1 items-start gap-4 border-t border-border py-5 first:border-t-0 first:pt-0 sm:grid-cols-[140px_minmax(0,1fr)_auto] sm:gap-6 ${

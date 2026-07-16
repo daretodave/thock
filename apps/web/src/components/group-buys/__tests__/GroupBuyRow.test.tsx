@@ -47,6 +47,13 @@ describe('<GroupBuyRow>', () => {
     expect(screen.getByTestId('group-buy-region')).toHaveTextContent('GLOBAL')
   })
 
+  it('exposes the group buy slug as an anchor id for deep-linking', () => {
+    render(
+      <GroupBuyRow groupBuy={gb()} vendor={vendor} variant="live" now={NOW} />,
+    )
+    expect(screen.getByTestId('group-buy-row')).toHaveAttribute('id', 'sonnet')
+  })
+
   it('shows a CTA with rel="sponsored noopener" target="_blank" on live', () => {
     render(
       <GroupBuyRow groupBuy={gb()} vendor={vendor} variant="live" now={NOW} />,

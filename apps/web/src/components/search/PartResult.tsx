@@ -6,6 +6,9 @@ const KIND_LABEL: Record<PartSearchHit['kind'], string> = {
   'switch': 'Switch',
   'keycap-set': 'Keycap Set',
   'board': 'Board',
+  'vendor': 'Vendor',
+  'newsletter': 'Newsletter',
+  'group-buy': 'Group Buy',
 }
 
 export type PartResultProps = {
@@ -34,7 +37,7 @@ export function PartResult({ hit }: PartResultProps): ReactElement {
       </div>
       <h3 className="mt-1 font-serif text-h4 text-text">
         <Link
-          href={`/part/${hit.kind}/${hit.slug}`}
+          href={hit.href}
           className="hover:text-accent transition-colors"
         >
           {hit.name}
