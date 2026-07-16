@@ -68,13 +68,30 @@ function scoreAvailability(ks: KeycapSet, pref: KeycapSetQuizAnswers['availabili
   return 0
 }
 
+function filterByAvailability(
+  catalog: KeycapSet[],
+  pref: KeycapSetQuizAnswers['availabilityPref'],
+): KeycapSet[] {
+  if (pref === 'now') {
+    const eligible = catalog.filter((ks) => ks.status === 'in-stock' || ks.status === 'group-buy')
+    return eligible.length > 0 ? eligible : catalog
+  }
+  if (pref === 'group-buy') {
+    const eligible = catalog.filter((ks) => ks.status !== 'discontinued')
+    return eligible.length > 0 ? eligible : catalog
+  }
+  return catalog
+}
+
 export function recommendKeycapSet(
   answers: KeycapSetQuizAnswers,
   catalog: KeycapSet[],
 ): ScoredKeycapSet[] {
   if (catalog.length === 0) return []
 
-  const scored = catalog
+  const eligible = filterByAvailability(catalog, answers.availabilityPref)
+
+  const scored = eligible
     .map((ks) => ({
       keycapSet: ks,
       score:

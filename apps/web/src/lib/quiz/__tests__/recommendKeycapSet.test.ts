@@ -94,6 +94,53 @@ describe('recommendKeycapSet', () => {
     expect(recommendKeycapSet(answers, [])).toEqual([])
   })
 
+  it('H: never surfaces a sold-out/discontinued set for "now" availability, even with a strong competing profile/material/legend match', () => {
+    const answers: KeycapSetQuizAnswers = {
+      profilePref: 'uniform',
+      materialPref: 'abs',
+      legendPref: 'doubleshot',
+      availabilityPref: 'now',
+    }
+    // SA_DISCONTINUED and PBT_CHERRY don't match profile/material as well as
+    // CHERRY_ABS, but a naive additive score can still let an unavailable
+    // set outrank an available one when other axes are no-pref; here all
+    // axes are engaged and CHERRY_ABS is the only in-stock cherry/abs set.
+    const results = recommendKeycapSet(answers, CATALOG)
+    for (const r of results) {
+      expect(['in-stock', 'group-buy']).toContain(r.keycapSet.status)
+    }
+  })
+
+  it('I: excludes discontinued sets for "group-buy" availability, even when a discontinued set would otherwise win on profile/material/legend match (a discontinued set cannot reappear in a group buy)', () => {
+    const answers: KeycapSetQuizAnswers = {
+      profilePref: 'spherical-tall',
+      materialPref: 'abs',
+      legendPref: 'doubleshot',
+      availabilityPref: 'group-buy',
+    }
+    // SA_DISCONTINUED matches profile/material/legend perfectly (sa + abs +
+    // doubleshot) and would out-score every in-stock/group-buy set on the
+    // unfiltered sum (33 vs. 31 for the next best) despite being unbuyable.
+    const results = recommendKeycapSet(answers, CATALOG)
+    expect(results.some((r) => r.keycapSet.slug === 'sa-gone')).toBe(false)
+    for (const r of results) {
+      expect(r.keycapSet.status).not.toBe('discontinued')
+    }
+  })
+
+  it('J: falls back to the full catalog when an availability filter would otherwise return zero results', () => {
+    const onlyDiscontinued = [SA_DISCONTINUED]
+    const answers: KeycapSetQuizAnswers = {
+      profilePref: 'no-pref',
+      materialPref: 'no-pref',
+      legendPref: 'no-pref',
+      availabilityPref: 'now',
+    }
+    const results = recommendKeycapSet(answers, onlyDiscontinued)
+    expect(results).toHaveLength(1)
+    expect(results[0]?.keycapSet.slug).toBe('sa-gone')
+  })
+
   it('G: returns at most 3 results even with a large catalog', () => {
     const big = Array.from({ length: 10 }, (_, i) =>
       makeSet({ slug: `set-${i}`, profile: 'cherry' }),
