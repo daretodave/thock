@@ -40,7 +40,7 @@ const TOOLS: Tool[] = [
     href: '/quiz/keycap-set',
     heading: 'Find your keycap set',
     description:
-      'Tell us your profile, material, and legends preferences — get your top keycap-set matches.',
+      'Tell us your profile, material, legends, and availability preferences — get your top keycap-set matches.',
     cta: 'Start the quiz',
     testId: 'tools-card-quiz-keycap-set',
   },

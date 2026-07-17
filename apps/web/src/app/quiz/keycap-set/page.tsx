@@ -44,7 +44,8 @@ export default function QuizKeycapSetPage(): ReactElement {
           <h1 className="text-h1 font-serif text-text mb-3">Find your keycap set</h1>
           <p className="text-body text-text-2 max-w-[55ch]">
             Answer four quick questions to find the keycap set that matches your profile,
-            material, and availability preferences — then explore it on its detail page.
+            material, legends, and availability preferences — then explore it on its detail
+            page.
           </p>
         </div>
         <KeycapSetQuiz keycapSets={keycapSets} />
