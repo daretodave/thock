@@ -29,7 +29,7 @@
   <circle cx="306" cy="88" r="5" fill="oklch(0.78 0.10 80)" stroke="none"/>
   <path d="M 330 140 L 675 140" stroke-opacity="0.6"/>
 
-  <text x="900" y="112" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.10 80)" stroke="none" opacity="0.9">67g / 70g — heaviest in the set</text>
+  <text x="900" y="112" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.10 80)" stroke="none" opacity="0.9">55g / 67g — widest spread</text>
   <text x="900" y="132" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">sharp, minimal plateau</text>
 
   <!-- ======================== -->
@@ -43,7 +43,7 @@
   <path d="M 280 240 L 300 178 L 400 178 L 418 240 Z" fill="oklch(0.78 0.005 90 / 0.07)" stroke="none"/>
   <path d="M 418 240 L 675 240" stroke-opacity="0.6"/>
 
-  <text x="900" y="212" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">62g / 68g — long dwell</text>
+  <text x="900" y="212" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">62g / 68g — heaviest actuation</text>
   <text x="900" y="232" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.5">D-shaped, pronounced plateau</text>
 
   <!-- ======================== -->
