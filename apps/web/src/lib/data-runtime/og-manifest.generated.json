@@ -562,7 +562,7 @@
     },
     {
       "slug": "hall-effect-mainstream",
-      "readTime": 8,
+      "readTime": 7,
       "frontmatter": {
         "title": "How Hall-effect quietly became the new mid-premium default",
         "lede": "The polling-rate hype is loud and easy to wave off — 8K, 32K, numbers chasing each other up the spec sheet. The quieter story is that the magnetic-switch tier has stopped being a Wooting-shaped niche and has settled into the $100–$230 prebuilt slot the scene actually buys from. The volume has moved, not just the marketing.",
@@ -1310,5 +1310,5 @@
       "readTime": 4
     }
   ],
-  "generatedAt": "2026-07-17T00:44:09.972Z"
+  "generatedAt": "2026-07-17T01:43:48.909Z"
 }

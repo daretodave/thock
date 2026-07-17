@@ -7,7 +7,7 @@ author: thock
 pillar: deep-dives
 tags: [optical, switches, deep-dive]
 publishedAt: '2026-06-07T14:00:00.000Z'
-updatedAt: null
+updatedAt: '2026-07-17T00:00:00.000Z'
 heroImage: /hero-art/optical-switches-explained.svg
 heroImageAlt: "Diagram of an optical switch cross-section showing the LED beam and phototransistor sensing pair"
 featured: false
@@ -16,6 +16,9 @@ mentionedParts:
   - id: gateron-lanes
     kind: switch
     slug: gateron-lanes
+  - id: wooting-60he
+    kind: board
+    slug: wooting-60he
 ---
 
 An optical switch does not close a circuit. It interrupts a beam. That is the architectural fact this article is built around, and it is the same shape of fact as the one that opens [the Hall-effect piece](/article/magnetic-switches-deep-dive) and [the Topre piece](/article/topre-electrocapacitive-deep-dive) — a sensing lineage defined by what it measures rather than by what it touches. A Cherry-lineage switch is a binary electrical event: two metal leaves make contact, the controller sees the closure, a key registers. An optical switch is a photonic event: a beam of light passes across the interior of the switch housing, a stem descends and blocks the beam, a phototransistor on the far side detects the interruption, and the key registers. There is no metal-to-metal contact. There is no bounce. There is a beam that either arrives or does not.
@@ -85,7 +88,7 @@ Optical switches have a set of trade-offs that the marketing does not lead with,
 
 **Recalibration on stem swap.** Because actuation points are firmware thresholds that are set relative to the phototransistor's baseline output, and because different stems may have different blade geometries or opacity characteristics, a stem swap requires recalibration. The board needs to re-zero its per-key actuation model for any position that received a new stem. Contact-switch boards are geometry-only: a new switch in the same socket has the same physical actuation depth by definition, and no firmware recalibration is needed. This is a small friction for enthusiasts who treat switch swapping as a hobby in itself.
 
-**Hot-swap compatibility is board-dependent.** MX-compatible contact switches standardised the socket footprint in a way that made hot-swap sockets ubiquitous. Optical switches have not. The Flaretech standard exists and some boards support hot-swap of Flaretech-compatible optical switches, but the socket geometry is different from MX hot-swap, and not all optical boards expose the LED/phototransistor module in a user-serviceable form. A <Mono>Wooting 60HE</Mono> or <Mono>Wooting Two Lekker</Mono> using Hall-effect <Mono>Lekker</Mono> switches — Wooting's current platform is actually Hall-effect via an earlier Flaretech optical foundation — illustrates how the category has evolved past the original Flaretech optical architecture. Strictly optical implementations like <Mono>Razer</Mono>'s optical keyboards use switch modules that are compatible with their boards but not with the broader MX hot-swap socket standard.
+**Hot-swap compatibility is board-dependent.** MX-compatible contact switches standardised the socket footprint in a way that made hot-swap sockets ubiquitous. Optical switches have not. The Flaretech standard exists and some boards support hot-swap of Flaretech-compatible optical switches, but the socket geometry is different from MX hot-swap, and not all optical boards expose the LED/phototransistor module in a user-serviceable form. A <PartReference id="wooting-60he" /> or <Mono>Wooting Two Lekker</Mono> using Hall-effect <Mono>Lekker</Mono> switches — Wooting's current platform is actually Hall-effect via an earlier Flaretech optical foundation — illustrates how the category has evolved past the original Flaretech optical architecture. Strictly optical implementations like <Mono>Razer</Mono>'s optical keyboards use switch modules that are compatible with their boards but not with the broader MX hot-swap socket standard.
 
 **Narrower aftermarket.** The MX-compatible contact switch market has hundreds of variants across every possible force curve, tactile profile, and acoustic character. The optical switch market is a fraction of that size. Gateron's optical range, Razer's proprietary optical implementation, and the Flaretech-licensed variants cover most of the available field. A builder who wants a specific feeling — a 67g progressive tactile with a tight housing, say, or a 55g linear with a specific stem-to-housing clearance — will find the optical catalogue exhausted long before the MX catalogue.
 
