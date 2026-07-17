@@ -1,22 +1,22 @@
 {
   "articles": [
     {
-      "slug": "cherry-xtrfy-tmr-pivot",
-      "readTime": 6,
-      "frontmatter": {
-        "title": "Cherry bets on magnetic: the XTRFY pivot",
-        "lede": "Cherry's mainline MX switches have spent the better part of a year losing ground on the tracker. On July 3, 2026, Cherry's gaming sub-brand XTRFY answered not with another MX revision but with a magnetic-sensing switch — and gave the parent brand its first positive tracker signal in months.",
-        "pillar": "trends",
-        "author": "thock"
-      }
-    },
-    {
       "slug": "work-louder-openai-codex-micro",
       "readTime": 6,
       "frontmatter": {
         "title": "OpenAI's first hardware is a Work Louder macro pad",
         "lede": "Codex Micro, OpenAI's first piece of branded hardware, is a macro pad built by boutique vendor Work Louder on the bones of its $199 Creator Micro 2. It ships July 15, 2026, with pricing still unannounced as of this piece's publish date.",
         "pillar": "news",
+        "author": "thock"
+      }
+    },
+    {
+      "slug": "cherry-xtrfy-tmr-pivot",
+      "readTime": 6,
+      "frontmatter": {
+        "title": "Cherry bets on magnetic: the XTRFY pivot",
+        "lede": "Cherry's mainline MX switches have spent the better part of a year losing ground on the tracker. On July 3, 2026, Cherry's gaming sub-brand XTRFY answered not with another MX revision but with a magnetic-sensing switch — and gave the parent brand its first positive tracker signal in months.",
+        "pillar": "trends",
         "author": "thock"
       }
     },
@@ -1310,5 +1310,5 @@
       "readTime": 4
     }
   ],
-  "generatedAt": "2026-07-17T15:48:03.775Z"
+  "generatedAt": "2026-07-17T18:45:37.811Z"
 }
