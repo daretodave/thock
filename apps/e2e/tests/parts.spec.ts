@@ -169,7 +169,7 @@ test.describe('per-part pages — phase 21', () => {
       expect(flat).toContain('"@type":"Thing"')
     })
 
-    test('part JSON-LD brand.name resolves the vendor name, not the raw slug', async ({
+    test('part JSON-LD Thing carries no invalid Product-only properties', async ({
       page,
     }) => {
       await page.goto('/part/switch/gateron-oil-king')
@@ -177,8 +177,8 @@ test.describe('per-part pages — phase 21', () => {
         .locator('script[type="application/ld+json"]')
         .allTextContents()
       const flat = scripts.join('\n')
-      expect(flat).toContain('"name":"CannonKeys"')
-      expect(flat).not.toContain('"name":"cannonkeys"')
+      expect(flat).not.toContain('"brand"')
+      expect(flat).not.toContain('"releaseDate"')
     })
 
     test('switch detail page carries compare and quiz affordances', async ({

@@ -136,17 +136,6 @@ export default async function PartDetailPage({
             name: part.record.name,
             description: shortDescription(part.record.description),
             url: canonicalUrl(path),
-            ...(part.kind !== 'board' && {
-              brand: {
-                '@type': 'Brand',
-                name:
-                  getVendorBySlug(part.record.vendorSlug)?.name ??
-                  part.record.vendorSlug,
-              },
-            }),
-            ...(part.record.releasedAt && {
-              releaseDate: part.record.releasedAt,
-            }),
           },
           buildBreadcrumbListJsonLd([
             { name: 'Home', path: '/' },
