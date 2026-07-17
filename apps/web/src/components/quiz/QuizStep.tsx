@@ -1,3 +1,5 @@
+import { useEffect, useRef } from 'react'
+
 export type QuizOption = {
   value: string
   label: string
@@ -12,9 +14,26 @@ type Props = {
 }
 
 export function QuizStep({ question, options, selected, onSelect }: Props) {
+  const headingRef = useRef<HTMLHeadingElement>(null)
+  const isFirstRender = useRef(true)
+
+  useEffect(() => {
+    if (isFirstRender.current) {
+      isFirstRender.current = false
+      return
+    }
+    headingRef.current?.focus()
+  }, [question])
+
   return (
     <div>
-      <h2 className="text-h3 font-serif text-text mb-6">{question}</h2>
+      <h2
+        ref={headingRef}
+        tabIndex={-1}
+        className="text-h3 font-serif text-text mb-6 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu rounded-sm"
+      >
+        {question}
+      </h2>
       <div className="space-y-3" role="group" aria-label={question}>
         {options.map((opt) => {
           const isSelected = selected === opt.value

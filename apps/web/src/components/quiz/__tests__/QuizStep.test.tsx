@@ -44,4 +44,22 @@ describe('<QuizStep>', () => {
       expect(d.className).not.toContain('text-text-3')
     })
   })
+
+  it('does not steal focus on initial mount', () => {
+    render(<QuizStep question="First question?" options={OPTIONS} selected={null} onSelect={vi.fn()} />)
+    expect(screen.getByRole('heading', { name: /first question/i })).not.toHaveFocus()
+  })
+
+  it('moves focus to the new question heading when the question changes', () => {
+    const { rerender } = render(
+      <QuizStep question="First question?" options={OPTIONS} selected={null} onSelect={vi.fn()} />
+    )
+    rerender(<QuizStep question="Second question?" options={OPTIONS} selected={null} onSelect={vi.fn()} />)
+    expect(screen.getByRole('heading', { name: /second question/i })).toHaveFocus()
+  })
+
+  it('question heading is programmatically focusable (tabIndex=-1)', () => {
+    render(<QuizStep question="Q?" options={OPTIONS} selected={null} onSelect={vi.fn()} />)
+    expect(screen.getByRole('heading', { name: /q\?/i })).toHaveAttribute('tabIndex', '-1')
+  })
 })
