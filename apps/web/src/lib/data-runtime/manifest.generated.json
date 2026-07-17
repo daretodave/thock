@@ -5633,6 +5633,11 @@
             "id": "boba-u4t",
             "kind": "switch",
             "slug": "gazzew-boba-u4t"
+          },
+          {
+            "id": "akko-v3-cream-blue-pro",
+            "kind": "switch",
+            "slug": "akko-v3-cream-blue-pro"
           }
         ]
       },
@@ -7713,5 +7718,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-07-17T03:29:57.656Z"
+  "generatedAt": "2026-07-17T05:13:13.499Z"
 }
