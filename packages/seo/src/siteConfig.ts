@@ -12,6 +12,12 @@ export const siteConfig = {
     '@type': 'Organization' as const,
     name: 'thock',
     url: 'https://thock.xyz',
+    logo: {
+      '@type': 'ImageObject' as const,
+      url: 'https://thock.xyz/apple-icon',
+      width: 180,
+      height: 180,
+    },
   },
 } as const
 
