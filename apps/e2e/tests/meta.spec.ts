@@ -89,11 +89,11 @@ function expectedTypesFor(path: string): ExpectedTypes {
   // /part/[kind] index pages — CollectionPage + BreadcrumbList + ItemList.
   if (/^\/part\/[^/]+$/.test(path))
     return ['CollectionPage', 'BreadcrumbList', 'ItemList']
-  // /part/board/[slug] — Thing (boards are not products per schema.org).
+  // /part/[kind]/[slug] — Thing (no offers/review/aggregateRating data
+  // exists to satisfy schema.org's Product requirements).
   if (path.startsWith('/part/board/')) return ['Thing', 'BreadcrumbList']
-  // /part/switch/[slug] and /part/keycap-set/[slug] — Product.
   if (/^\/part\/(switch|keycap-set)\//.test(path))
-    return ['Product', 'BreadcrumbList']
+    return ['Thing', 'BreadcrumbList']
   // /trends/tracker/YYYY-WNN weekly archive pages.
   if (/^\/trends\/tracker\/\d{4}-W\d{2}$/.test(path))
     return ['CollectionPage', 'BreadcrumbList', 'Dataset']

@@ -159,17 +159,17 @@ test.describe('per-part pages — phase 21', () => {
       await expect(page.getByTestId('part-spec-list')).toContainText(/Layout/i)
     })
 
-    test('emits BreadcrumbList + Product/Thing JSON-LD', async ({ page }) => {
+    test('emits BreadcrumbList + Thing JSON-LD', async ({ page }) => {
       await page.goto('/part/switch/gateron-oil-king')
       const scripts = await page
         .locator('script[type="application/ld+json"]')
         .allTextContents()
       const flat = scripts.join('\n')
       expect(flat).toContain('"@type":"BreadcrumbList"')
-      expect(flat).toMatch(/"@type":"(Product|Thing)"/)
+      expect(flat).toContain('"@type":"Thing"')
     })
 
-    test('Product JSON-LD brand.name resolves the vendor name, not the raw slug', async ({
+    test('part JSON-LD brand.name resolves the vendor name, not the raw slug', async ({
       page,
     }) => {
       await page.goto('/part/switch/gateron-oil-king')

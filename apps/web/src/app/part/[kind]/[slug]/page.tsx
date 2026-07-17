@@ -132,7 +132,7 @@ export default async function PartDetailPage({
         graph={[
           {
             '@context': 'https://schema.org',
-            '@type': part.kind === 'board' ? 'Thing' : 'Product',
+            '@type': 'Thing',
             name: part.record.name,
             description: shortDescription(part.record.description),
             url: canonicalUrl(path),
