@@ -190,6 +190,10 @@ test.describe('a11y — desktop', () => {
     await runAxe(page, '/newsletter')
   })
 
+  test('newsletter detail (/newsletter/thock-weekly-001)', async ({ page }) => {
+    await runAxe(page, '/newsletter/thock-weekly-001')
+  })
+
   test('sources (/sources)', async ({ page }) => {
     await runAxe(page, '/sources')
   })
@@ -357,6 +361,10 @@ test.describe('a11y — mobile (375px)', () => {
 
   test('newsletter — mobile', async ({ page }) => {
     await runAxe(page, '/newsletter')
+  })
+
+  test('newsletter detail — mobile', async ({ page }) => {
+    await runAxe(page, '/newsletter/thock-weekly-001')
   })
 
   test('sources — mobile', async ({ page }) => {

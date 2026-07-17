@@ -54,8 +54,8 @@ const MOBILE_MARKER = "test.describe('a11y — mobile"
  * Parse the `path: '...'` / `kind: '...'` pairs out of the STATIC array in
  * canonical-urls.ts source, returning only 'html'-kind paths. Only STATIC
  * routes are checked — dynamic per-slug routes (article, tag, part, vendor,
- * tracker week) are represented in a11y.spec.ts by one hand-picked example
- * per family already, not enumerated per-slug.
+ * tracker week, newsletter detail) are represented in a11y.spec.ts by one
+ * hand-picked example per family already, not enumerated per-slug.
  *
  * Pure function — takes source text, not a file path, for testability.
  */
