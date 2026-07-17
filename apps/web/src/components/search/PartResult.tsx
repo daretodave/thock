@@ -9,6 +9,7 @@ const KIND_LABEL: Record<PartSearchHit['kind'], string> = {
   'vendor': 'Vendor',
   'newsletter': 'Newsletter',
   'group-buy': 'Group Buy',
+  'tracker-week': 'Tracker Week',
 }
 
 export type PartResultProps = {

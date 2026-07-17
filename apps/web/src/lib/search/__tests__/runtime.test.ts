@@ -110,4 +110,13 @@ describe('searchParts', () => {
       expect(h.href).toMatch(/^\/group-buys(\/past)?#.+/)
     }
   })
+
+  it('surfaces Trends Tracker weeks, each linking to its archive page', () => {
+    const weekHits = searchParts('tracker-week')
+    expect(weekHits.length).toBeGreaterThanOrEqual(1)
+    for (const h of weekHits) {
+      expect(h.kind).toBe('tracker-week')
+      expect(h.href).toMatch(/^\/trends\/tracker\/\d{4}-W\d{2}$/)
+    }
+  })
 })

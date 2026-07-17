@@ -101644,8 +101644,85 @@
       "kind": "group-buy",
       "name": "Paper80 x Whatever Studio",
       "href": "/group-buys/past#wuque-studio-paper80-whatever-studio"
+    },
+    {
+      "id": "2026-W19",
+      "slug": "2026-W19",
+      "kind": "tracker-week",
+      "name": "Week 19 / 2026",
+      "href": "/trends/tracker/2026-W19"
+    },
+    {
+      "id": "2026-W20",
+      "slug": "2026-W20",
+      "kind": "tracker-week",
+      "name": "Week 20 / 2026",
+      "href": "/trends/tracker/2026-W20"
+    },
+    {
+      "id": "2026-W21",
+      "slug": "2026-W21",
+      "kind": "tracker-week",
+      "name": "Week 21 / 2026",
+      "href": "/trends/tracker/2026-W21"
+    },
+    {
+      "id": "2026-W22",
+      "slug": "2026-W22",
+      "kind": "tracker-week",
+      "name": "Week 22 / 2026",
+      "href": "/trends/tracker/2026-W22"
+    },
+    {
+      "id": "2026-W23",
+      "slug": "2026-W23",
+      "kind": "tracker-week",
+      "name": "Week 23 / 2026",
+      "href": "/trends/tracker/2026-W23"
+    },
+    {
+      "id": "2026-W24",
+      "slug": "2026-W24",
+      "kind": "tracker-week",
+      "name": "Week 24 / 2026",
+      "href": "/trends/tracker/2026-W24"
+    },
+    {
+      "id": "2026-W25",
+      "slug": "2026-W25",
+      "kind": "tracker-week",
+      "name": "Week 25 / 2026",
+      "href": "/trends/tracker/2026-W25"
+    },
+    {
+      "id": "2026-W26",
+      "slug": "2026-W26",
+      "kind": "tracker-week",
+      "name": "Week 26 / 2026",
+      "href": "/trends/tracker/2026-W26"
+    },
+    {
+      "id": "2026-W27",
+      "slug": "2026-W27",
+      "kind": "tracker-week",
+      "name": "Week 27 / 2026",
+      "href": "/trends/tracker/2026-W27"
+    },
+    {
+      "id": "2026-W28",
+      "slug": "2026-W28",
+      "kind": "tracker-week",
+      "name": "Week 28 / 2026",
+      "href": "/trends/tracker/2026-W28"
+    },
+    {
+      "id": "2026-W29",
+      "slug": "2026-W29",
+      "kind": "tracker-week",
+      "name": "Week 29 / 2026",
+      "href": "/trends/tracker/2026-W29"
     }
   ],
-  "generatedAt": "2026-07-17T12:56:00.531Z",
+  "generatedAt": "2026-07-17T14:49:27.918Z",
   "count": 66
 }

@@ -16,7 +16,7 @@ export type SearchHit = SearchDocument & { score: number }
 export type PartSearchDocument = {
   id: string
   slug: string
-  kind: 'switch' | 'keycap-set' | 'board' | 'vendor' | 'newsletter' | 'group-buy'
+  kind: 'switch' | 'keycap-set' | 'board' | 'vendor' | 'newsletter' | 'group-buy' | 'tracker-week'
   name: string
   href: string
 }

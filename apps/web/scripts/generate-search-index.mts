@@ -23,6 +23,7 @@ import {
   getAllBoards,
   getAllVendors,
   getAllGroupBuys,
+  getAllTrendSnapshots,
   isGroupBuyEnded,
 } from '@thock/data'
 
@@ -44,7 +45,7 @@ type SearchDoc = {
 type PartDoc = {
   id: string
   slug: string
-  kind: 'switch' | 'keycap-set' | 'board' | 'vendor' | 'newsletter' | 'group-buy'
+  kind: 'switch' | 'keycap-set' | 'board' | 'vendor' | 'newsletter' | 'group-buy' | 'tracker-week'
   name: string
   href: string
 }
@@ -79,6 +80,13 @@ ms.addAll(documents)
  * live `/group-buys` index or the `/group-buys/past` archive.
  */
 const todayIso = new Date().toISOString().slice(0, 10)
+
+/** Mirrors `weekKicker()` in `apps/web/src/lib/tracker/index.ts`'s label format. */
+function trackerWeekLabel(isoWeek: string): string {
+  const m = /^(\d{4})-W(\d{2})$/.exec(isoWeek)
+  if (!m) return isoWeek
+  return `Week ${Number(m[2])} / ${Number(m[1])}`
+}
 
 const parts: PartDoc[] = [
   ...getAllSwitches().map((s) => ({
@@ -122,6 +130,13 @@ const parts: PartDoc[] = [
     kind: 'group-buy' as const,
     name: g.name,
     href: isGroupBuyEnded(g, todayIso) ? `/group-buys/past#${g.slug}` : `/group-buys#${g.slug}`,
+  })),
+  ...getAllTrendSnapshots().map((t) => ({
+    id: t.isoWeek,
+    slug: t.isoWeek,
+    kind: 'tracker-week' as const,
+    name: trackerWeekLabel(t.isoWeek),
+    href: `/trends/tracker/${t.isoWeek}`,
   })),
 ]
 
