@@ -1228,6 +1228,11 @@
       "slug": "qk75",
       "kind": "board",
       "name": "QK75"
+    },
+    {
+      "slug": "wooting-60he",
+      "kind": "board",
+      "name": "Wooting 60HE+"
     }
   ],
   "vendors": [
@@ -1305,5 +1310,5 @@
       "readTime": 4
     }
   ],
-  "generatedAt": "2026-07-16T21:37:03.414Z"
+  "generatedAt": "2026-07-17T00:44:09.972Z"
 }

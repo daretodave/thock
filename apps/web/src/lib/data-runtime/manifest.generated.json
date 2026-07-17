@@ -620,6 +620,21 @@
       "imageUrl": null,
       "description": "Qwertykeys' PCB-mount 75% with a CNC aluminum case, swappable knob/badge, and PVD weight options. Wireless and wired hotswap PCBs; bouncy plate-or-plateless feel that ties to the wider 75% mainstreaming trend.",
       "updatedAt": "2026-07-14T00:00:00.000Z"
+    },
+    {
+      "slug": "wooting-60he",
+      "name": "Wooting 60HE+",
+      "vendorSlug": "wooting",
+      "layout": "60",
+      "caseMaterial": "plastic",
+      "mountStyle": "tray-mount",
+      "hotswap": true,
+      "wireless": false,
+      "releasedAt": "2022-04-01",
+      "status": "in-stock",
+      "imageUrl": null,
+      "description": "The board thock's Hall-effect coverage keeps citing as the analog-input reference point: hotswappable Lekker Hall-effect switches, true analog input, and per-key adjustable rapid trigger in a tray-mount ABS case. Wired USB-C only, no wireless option. Entered mass production in April 2022 and remains the fixed point reviewers measure newer HE and TMR boards against for rapid-trigger tuning depth and configurator maturity.",
+      "updatedAt": "2026-07-17T00:00:00.000Z"
     }
   ],
   "vendors": [
@@ -7688,5 +7703,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-07-16T21:37:03.414Z"
+  "generatedAt": "2026-07-17T00:44:09.972Z"
 }

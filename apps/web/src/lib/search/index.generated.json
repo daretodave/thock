@@ -101434,6 +101434,13 @@
       "href": "/part/board/qk75"
     },
     {
+      "id": "wooting-60he",
+      "slug": "wooting-60he",
+      "kind": "board",
+      "name": "Wooting 60HE+",
+      "href": "/part/board/wooting-60he"
+    },
+    {
       "id": "cannonkeys",
       "slug": "cannonkeys",
       "kind": "vendor",
@@ -101616,6 +101623,6 @@
       "href": "/group-buys/past#wuque-studio-paper80-whatever-studio"
     }
   ],
-  "generatedAt": "2026-07-16T21:37:04.468Z",
+  "generatedAt": "2026-07-17T00:44:11.052Z",
   "count": 66
 }
