@@ -76,8 +76,9 @@ export default function SourcesPage(): ReactElement {
           <div className="thock-prose max-w-[60ch]">
             <p>
               thock cites external references inline as citations, marked
-              <code>rel=&quot;noopener&quot;</code>. Vendor links inside part
-              and group-buy detail pages are separately flagged with{' '}
+              <code>rel=&quot;noopener&quot;</code>. The &quot;view at
+              vendor&quot; button on group-buy cards, and named-part mentions
+              that resolve to a vendor page, are separately flagged with{' '}
               <code>rel=&quot;sponsored&quot;</code> so a reader can tell the
               two apart. Below: a per-article tally, then the full
               per-citation index — article, quote, URL, deduped.

@@ -114,13 +114,16 @@ export function AboutBody(): ReactElement {
       <section data-testid="about-section-disclosure">
         <h2 className="font-serif text-h2 text-text">Vendor relationships</h2>
         <p>
-          Group-buy URLs published on thock are auto-flagged with{' '}
-          <code>rel=&quot;sponsored noopener&quot;</code> at render time. That
-          tag is applied by the site, not the editorial team, and applies
-          whether or not thock has any commercial relationship with the
-          vendor in question. We do not currently have affiliate arrangements
-          with any vendor we cover. If that ever changes, the disclosure
-          updates here first.
+          The &quot;view at vendor&quot; button on group-buy cards, and
+          named-part mentions that resolve to a vendor page, are auto-flagged
+          with <code>rel=&quot;sponsored noopener&quot;</code> at render time.
+          Citation links inside article prose carry{' '}
+          <code>rel=&quot;noopener&quot;</code> only. The sponsored tag is
+          applied by the site, not the editorial team, and applies whether or
+          not thock has any commercial relationship with the vendor in
+          question. We do not currently have affiliate arrangements with any
+          vendor we cover. If that ever changes, the disclosure updates here
+          first.
         </p>
         <p>
           Citations across articles surface on the{' '}
