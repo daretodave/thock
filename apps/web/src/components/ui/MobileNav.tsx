@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { useEffect, useId, useState } from 'react'
+import { useEffect, useId, useRef, useState } from 'react'
 import type { ReactElement } from 'react'
 import { PILLARS } from '@thock/seo'
 
@@ -18,11 +18,15 @@ import { PILLARS } from '@thock/seo'
 export function MobileNav(): ReactElement {
   const [open, setOpen] = useState(false)
   const menuId = useId()
+  const toggleRef = useRef<HTMLButtonElement>(null)
 
   useEffect(() => {
     if (!open) return
     function onKey(e: KeyboardEvent) {
-      if (e.key === 'Escape') setOpen(false)
+      if (e.key === 'Escape') {
+        setOpen(false)
+        toggleRef.current?.focus()
+      }
     }
     document.addEventListener('keydown', onKey)
     return () => document.removeEventListener('keydown', onKey)
@@ -41,6 +45,7 @@ export function MobileNav(): ReactElement {
   return (
     <>
       <button
+        ref={toggleRef}
         type="button"
         aria-label={open ? 'Close primary navigation' : 'Open primary navigation'}
         aria-expanded={open}

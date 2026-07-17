@@ -53,4 +53,16 @@ describe('<MobileNav>', () => {
     fireEvent.click(toggle)
     expect(screen.queryByTestId('mobile-nav-menu')).toBeNull()
   })
+
+  it('restores focus to the toggle button when closed via Escape', () => {
+    render(<MobileNav />)
+    const toggle = screen.getByTestId('mobile-nav-toggle')
+    fireEvent.click(toggle)
+    const firstLink = screen.getByTestId('mobile-nav-menu').querySelector('a')!
+    firstLink.focus()
+    expect(document.activeElement).toBe(firstLink)
+    fireEvent.keyDown(document, { key: 'Escape' })
+    expect(screen.queryByTestId('mobile-nav-menu')).toBeNull()
+    expect(document.activeElement).toBe(toggle)
+  })
 })
