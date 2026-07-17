@@ -7159,3 +7159,13 @@ passes accumulate signals.)
 - score: 4.5 (impact × ease / 10)
 - next: edit `apps/web/src/app/tools/page.tsx:59` to match `BoardCompareTable`'s actual fields (layout, mount style, case material, hotswap, wireless, release date)
 - issue: #512
+
+### [x] [content] [3.6] divinikey-dcs-dolch-group-buy lede undercounts regional storefronts (8 vs 9) — addressed in 12bbbfa, closes #513
+- category: content
+- filed: 2026-07-17 by cloud /iterate audit (general-purpose sub-agent fresh sweep — expand pass 202 found no candidates at HEAD, so iterate ran the tick; sweep covered newsletter-vs-tracker cross-checks, vendor/board cross-references, /archive date-grouping logic, group-buy status/countdown rendering, /tools + quiz copy-vs-implementation, tag-count logic, and mentionedParts referential integrity)
+- impact: 4 (`divinikey-dcs-dolch-group-buy.mdx:4`'s frontmatter `lede` — reused as the meta description, Article JSON-LD description, and OG-image caption — said the buy ran at "Divinikey and eight regional storefronts." The article's own body (`:85`) and `data/group-buys/divinikey-dcs-dolch.json`'s description both total nine: Prototypist + Keebsupply + DeltakeyCo + six others. The `thock-weekly-002` newsletter digest repeated the same undercount, so the miscount spanned two content surfaces.)
+- ease: 9 (two one-word edits — "eight" to "nine" in the article lede and the newsletter line — no schema/code/test impact)
+- score: 3.6 (impact × ease / 10)
+- issue: #513
+> **Resolved (2026-07-17):** Changed "eight regional storefronts" to "nine regional storefronts" in both `divinikey-dcs-dolch-group-buy.mdx`'s lede and `thock-weekly-002.mdx`'s digest line; bumped the article's `updatedAt`. `pnpm verify` full gate green: typecheck, unit tests, data:validate, build, 1031/1031 e2e. `pnpm deploy:check` green (dpl_FYJMCK3U ready).
+> Picked as the top signal this tick: no unlabeled GitHub issues (triage gate); not Monday (weekly snapshot gate skipped); AUDIT.md's only other Pending row remains the known-blocked `[6.3]` march.yml crash-issue-gate item; CRITIQUE.md's only Pending row remains the non-actionable `[needs-user-call]` GA-beacon item; all 7 mechanical surveys clean (content-gap, crosslink, group-buy-companion, group-buy-status, newsletter-gap, OG-coverage, a11y-spec-coverage); no pending phases/data work; march's own expand Step 3c gate not met (expand just ran at HEAD, pass 202, no candidates). A fresh general-purpose sweep found this storefront-count drift as the highest-scoring genuinely-fresh, single-tick-shaped finding; a `/tools` keycap-quiz copy completeness nit and a systemic (out-of-scope) tracker spark-array/snapshot mismatch were both considered and ruled sub-threshold or out-of-scope, respectively.
