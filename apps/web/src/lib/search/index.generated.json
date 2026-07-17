@@ -711,7 +711,7 @@
       "17": {
         "slug": "divinikey-dcs-dolch-group-buy",
         "title": "DCS Dolch closed at Divinikey — a computing-history colorway's first DCS-profile run",
-        "lede": "The Dolch colorway — dark grey alphas, lighter grey mods, named after the 1990s portable workstations — ran a four-week DCS-profile group buy at Divinikey and eight regional storefronts, closing 2026-07-01.",
+        "lede": "The Dolch colorway — dark grey alphas, lighter grey mods, named after the 1990s portable workstations — ran a four-week DCS-profile group buy at Divinikey and nine regional storefronts, closing 2026-07-01.",
         "pillar": "news",
         "tags": [
           "group-buy",
@@ -15625,7 +15625,6 @@
           },
           "2": {
             "5": 1,
-            "17": 1,
             "25": 1,
             "35": 1
           },
@@ -20383,6 +20382,9 @@
       [
         "nine",
         {
+          "2": {
+            "17": 1
+          },
           "3": {
             "31": 1,
             "34": 2,
@@ -100472,7 +100474,7 @@
       "id": "divinikey-dcs-dolch-group-buy",
       "slug": "divinikey-dcs-dolch-group-buy",
       "title": "DCS Dolch closed at Divinikey — a computing-history colorway's first DCS-profile run",
-      "lede": "The Dolch colorway — dark grey alphas, lighter grey mods, named after the 1990s portable workstations — ran a four-week DCS-profile group buy at Divinikey and eight regional storefronts, closing 2026-07-01.",
+      "lede": "The Dolch colorway — dark grey alphas, lighter grey mods, named after the 1990s portable workstations — ran a four-week DCS-profile group buy at Divinikey and nine regional storefronts, closing 2026-07-01.",
       "pillar": "news",
       "tags": [
         "group-buy",
@@ -101644,6 +101646,6 @@
       "href": "/group-buys/past#wuque-studio-paper80-whatever-studio"
     }
   ],
-  "generatedAt": "2026-07-17T08:59:47.365Z",
+  "generatedAt": "2026-07-17T12:56:00.531Z",
   "count": 66
 }
