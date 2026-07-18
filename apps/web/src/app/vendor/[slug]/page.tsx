@@ -111,7 +111,7 @@ export default async function VendorDetailPage({
             <a
               href={vendor.url}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="sponsored noopener"
               data-testid="vendor-detail-url"
               className="hover:text-text transition-colors"
             >

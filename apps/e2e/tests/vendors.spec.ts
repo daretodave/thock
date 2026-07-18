@@ -37,6 +37,20 @@ test.describe('/vendors index', () => {
     const types = nodes.map((n) => n['@type'])
     expect(types.some((t: string) => /CollectionPage|ItemList|BreadcrumbList/.test(t))).toBe(true)
   })
+
+  test('every vendor card external link carries rel="sponsored noopener" target="_blank"', async ({
+    page,
+  }) => {
+    await page.goto('/vendors')
+    const links = page.locator('[data-testid="vendor-card-external-link"]')
+    const count = await links.count()
+    expect(count).toBeGreaterThan(0)
+    for (let i = 0; i < count; i++) {
+      const link = links.nth(i)
+      await expect(link).toHaveAttribute('rel', 'sponsored noopener')
+      await expect(link).toHaveAttribute('target', '_blank')
+    }
+  })
 })
 
 test.describe('/vendor/[slug] detail', () => {
@@ -55,6 +69,8 @@ test.describe('/vendor/[slug] detail', () => {
     await expect(urlLink).toBeVisible()
     const href = await urlLink.getAttribute('href')
     expect(href).toContain('cannonkeys.com')
+    await expect(urlLink).toHaveAttribute('rel', 'sponsored noopener')
+    await expect(urlLink).toHaveAttribute('target', '_blank')
   })
 
   test('back link leads to /vendors', async ({ page }) => {

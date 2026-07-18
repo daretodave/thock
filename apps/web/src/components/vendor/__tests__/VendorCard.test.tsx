@@ -51,7 +51,7 @@ describe('VendorCard', () => {
     const link = screen.getByTestId('vendor-card-external-link')
     expect(link).toHaveAttribute('href', 'https://cannonkeys.com')
     expect(link).toHaveAttribute('target', '_blank')
-    expect(link).toHaveAttribute('rel', 'noopener noreferrer')
+    expect(link).toHaveAttribute('rel', 'sponsored noopener')
   })
 
   it('renders detail page link', () => {

@@ -51,7 +51,7 @@ export function VendorCard({ vendor }: VendorCardProps): ReactElement {
         <a
           href={vendor.url}
           target="_blank"
-          rel="noopener noreferrer"
+          rel="sponsored noopener"
           data-testid="vendor-card-external-link"
           className="text-text-2 hover:text-text transition-colors"
         >
