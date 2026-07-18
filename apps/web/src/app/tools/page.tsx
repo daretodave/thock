@@ -32,7 +32,7 @@ const TOOLS: Tool[] = [
     href: '/quiz/switch',
     heading: 'Find your switch',
     description:
-      'Answer 4 questions about feel, sound, and use — get your top switch matches from the thock catalog.',
+      'Answer 4 questions about sound, feel, spring weight, and use — get your top switch matches from the thock catalog.',
     cta: 'Start the quiz',
     testId: 'tools-card-quiz-switch',
   },
