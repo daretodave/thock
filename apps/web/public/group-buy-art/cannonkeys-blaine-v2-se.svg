@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1200 750"
+     preserveAspectRatio="xMidYMid meet"
+     fill="none"
+     stroke="oklch(0.78 0.005 90)"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     role="img"
+     aria-label="thock group-buy card art for CannonKeys Blaine V2: SE — F12 TKL aluminum keyboard kit with carbon-fiber bottom plate, warm terracotta colorway">
+  <title>thock group-buy hero — Blaine V2: SE (CannonKeys), F12 TKL aluminum kit, carbon-fiber bottom plate</title>
+
+  <!--
+    Blaine V2: SE — F12 TKL custom keyboard kit. Aluminum case, carbon-fiber
+    bottom plate, warm/classic mechanical-keyboard aesthetic. CannonKeys
+    group buy.
+
+    Composition strategy:
+      A TKL (F12) case viewed top-down fills ~85% of canvas width. The case
+      profile, top machined bezel and engraved-plate outline carry this
+      record's single splash (warm terracotta) as the colorway accent —
+      distinct from the fixed bronze family theme dot. Below the case, a
+      thin carbon-fiber weave reveal band suggests the bottom plate material
+      peeking out beneath the aluminum shell, rendered as neutral warm-grey
+      basket-weave texture (material detail, not a second hue).
+
+      F12 TKL silhouette:
+        - Full F-row: Esc + F1-F12 (13 keys, two gaps) — the "F12" tell.
+        - Number row, QWERTY, home, bottom, mod/space rows (5 alpha rows).
+        - Right nav column: 3x2 block (Ins/Home/PgUp, Del/End/PgDn).
+        - Arrow cluster: inverted-T, bottom-right.
+        - NO numpad — TKL silhouette.
+
+      Color palette:
+        background wash     oklch(0.62 0.13 35 / 0.05)   terracotta, very low alpha
+        case fill            oklch(0.62 0.13 35 / 0.10)   terracotta case wash
+        top bezel band       oklch(0.62 0.13 35 / 0.24)   machined aluminum top edge
+        nameplate outline    oklch(0.62 0.13 35 / 0.40)   engraved plate suggestion
+        corner gasket dots   oklch(0.62 0.13 35 / 0.85)   mount-point tells
+        key dots             oklch(0.78 0.005 90)          warm grey, standard family
+        bronze theme dot     oklch(0.80 0.135 75)          upper-right ornamental anchor (fixed)
+        accent pip           oklch(0.62 0.13 35)           lower-right focal dot (this record's splash)
+        carbon weave         oklch(0.78 0.005 90 / 0.22)   neutral basket-weave texture
+
+    Single-splash discipline: warm terracotta is the only per-record accent
+    hue. The bronze theme dot is the fixed family ornament, unrelated to
+    this record's colorway. Carbon-weave texture is rendered in neutral
+    warm-grey, not a third hue.
+  -->
+
+  <!-- ============================================================
+       BACKGROUND WARM WASH — barely-there terracotta field behind
+       the keyboard body, sets the colorway stage.
+  ============================================================ -->
+  <rect x="70" y="80" width="1060" height="590"
+        fill="oklch(0.62 0.13 35 / 0.05)" stroke="none"/>
+
+  <!-- ============================================================
+       BRONZE THEME DOT — upper-right margin, family ornamental
+       anchor. Fixed bronze per visual language spec, independent
+       of this record's splash hue.
+  ============================================================ -->
+  <circle cx="1104" cy="96" r="8"
+          fill="oklch(0.80 0.135 75 / 0.92)"
+          stroke="oklch(0.80 0.135 75)"/>
+  <circle cx="1104" cy="96" r="16"
+          stroke="oklch(0.80 0.135 75)"
+          stroke-opacity="0.32"
+          fill="none"/>
+
+  <!-- ============================================================
+       OUTER CASE — F12 TKL aluminum board.
+       Case bounding box: x=90..1110, y=270..599 (1020 x 329).
+  ============================================================ -->
+  <rect x="90" y="270" width="1020" height="329" rx="14" ry="14"
+        fill="oklch(0.62 0.13 35 / 0.10)"/>
+  <rect x="90" y="270" width="1020" height="329" rx="14" ry="14"/>
+
+  <!-- Inner bezel inset — plate frame -->
+  <rect x="106" y="286" width="988" height="297" rx="9" ry="9"
+        stroke-opacity="0.35"/>
+
+  <!-- ============================================================
+       TOP BEZEL BAND — machined aluminum top edge, terracotta wash.
+       Classic thick top-bezel treatment.
+  ============================================================ -->
+  <rect x="90" y="270" width="1020" height="34" rx="14" ry="14"
+        fill="oklch(0.62 0.13 35 / 0.24)" stroke="none"/>
+  <line x1="106" y1="304" x2="1094" y2="304"
+        stroke="oklch(0.62 0.13 35)" stroke-opacity="0.65" stroke-width="1.5"/>
+
+  <!-- Nameplate outline — engraved-plate suggestion, shape only, no text -->
+  <rect x="555" y="278" width="90" height="18" rx="2" ry="2"
+        stroke="oklch(0.62 0.13 35)" stroke-opacity="0.40"
+        stroke-width="1" fill="none"/>
+
+  <!-- ============================================================
+       CORNER GASKET / MOUNT-POINT DOTS — terracotta, at the inset
+       interior corners.
+  ============================================================ -->
+  <g fill="oklch(0.62 0.13 35 / 0.85)" stroke="none">
+    <circle cx="118" cy="302" r="3"/>
+    <circle cx="1082" cy="302" r="3"/>
+    <circle cx="118" cy="567" r="3"/>
+    <circle cx="1082" cy="567" r="3"/>
+  </g>
+
+  <!-- ============================================================
+       KEY DOT GRID — F12 TKL layout.
+       Columns (15, pitch 60): 146,206,266,326,386,446,506,566,
+                                 626,686,746,806,866,926,986
+  ============================================================ -->
+
+  <!-- Faint vertical column guides across the alpha block -->
+  <g stroke-opacity="0.10" stroke-width="1">
+    <line x1="176" y1="306" x2="176" y2="583"/>
+    <line x1="236" y1="306" x2="236" y2="583"/>
+    <line x1="296" y1="306" x2="296" y2="583"/>
+    <line x1="356" y1="306" x2="356" y2="583"/>
+    <line x1="416" y1="306" x2="416" y2="583"/>
+    <line x1="476" y1="306" x2="476" y2="583"/>
+    <line x1="536" y1="306" x2="536" y2="583"/>
+    <line x1="596" y1="306" x2="596" y2="583"/>
+    <line x1="656" y1="306" x2="656" y2="583"/>
+    <line x1="716" y1="306" x2="716" y2="583"/>
+    <line x1="776" y1="306" x2="776" y2="583"/>
+    <line x1="836" y1="306" x2="836" y2="583"/>
+    <line x1="896" y1="306" x2="896" y2="583"/>
+    <line x1="956" y1="306" x2="956" y2="583"/>
+  </g>
+
+  <!-- === F-row: Esc + F1-F12 (13 keys, two gaps) — the "F12" tell === -->
+  <g fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.50">
+    <circle cx="146" cy="316" r="2.5"/>
+    <circle cx="266" cy="316" r="2.5"/>
+    <circle cx="326" cy="316" r="2.5"/>
+    <circle cx="386" cy="316" r="2.5"/>
+    <circle cx="446" cy="316" r="2.5"/>
+    <circle cx="566" cy="316" r="2.5"/>
+    <circle cx="626" cy="316" r="2.5"/>
+    <circle cx="686" cy="316" r="2.5"/>
+    <circle cx="746" cy="316" r="2.5"/>
+    <circle cx="806" cy="316" r="2.5"/>
+    <circle cx="866" cy="316" r="2.5"/>
+    <circle cx="926" cy="316" r="2.5"/>
+    <circle cx="986" cy="316" r="2.5"/>
+  </g>
+
+  <!-- === Number row — 15 keys === -->
+  <g fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">
+    <circle cx="146" cy="374" r="3"/>
+    <circle cx="206" cy="374" r="3"/>
+    <circle cx="266" cy="374" r="3"/>
+    <circle cx="326" cy="374" r="3"/>
+    <circle cx="386" cy="374" r="3"/>
+    <circle cx="446" cy="374" r="3"/>
+    <circle cx="506" cy="374" r="3"/>
+    <circle cx="566" cy="374" r="3"/>
+    <circle cx="626" cy="374" r="3"/>
+    <circle cx="686" cy="374" r="3"/>
+    <circle cx="746" cy="374" r="3"/>
+    <circle cx="806" cy="374" r="3"/>
+    <circle cx="866" cy="374" r="3"/>
+    <circle cx="926" cy="374" r="3"/>
+    <circle cx="986" cy="374" r="3"/>
+  </g>
+
+  <!-- === QWERTY row — 15 keys === -->
+  <g fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">
+    <circle cx="146" cy="424" r="3"/>
+    <circle cx="206" cy="424" r="3"/>
+    <circle cx="266" cy="424" r="3"/>
+    <circle cx="326" cy="424" r="3"/>
+    <circle cx="386" cy="424" r="3"/>
+    <circle cx="446" cy="424" r="3"/>
+    <circle cx="506" cy="424" r="3"/>
+    <circle cx="566" cy="424" r="3"/>
+    <circle cx="626" cy="424" r="3"/>
+    <circle cx="686" cy="424" r="3"/>
+    <circle cx="746" cy="424" r="3"/>
+    <circle cx="806" cy="424" r="3"/>
+    <circle cx="866" cy="424" r="3"/>
+    <circle cx="926" cy="424" r="3"/>
+    <circle cx="986" cy="424" r="3"/>
+  </g>
+
+  <!-- === Home row — 15 keys === -->
+  <g fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">
+    <circle cx="146" cy="474" r="3"/>
+    <circle cx="206" cy="474" r="3"/>
+    <circle cx="266" cy="474" r="3"/>
+    <circle cx="326" cy="474" r="3"/>
+    <circle cx="386" cy="474" r="3"/>
+    <circle cx="446" cy="474" r="3"/>
+    <circle cx="506" cy="474" r="3"/>
+    <circle cx="566" cy="474" r="3"/>
+    <circle cx="626" cy="474" r="3"/>
+    <circle cx="686" cy="474" r="3"/>
+    <circle cx="746" cy="474" r="3"/>
+    <circle cx="806" cy="474" r="3"/>
+    <circle cx="866" cy="474" r="3"/>
+    <circle cx="926" cy="474" r="3"/>
+    <circle cx="986" cy="474" r="3"/>
+  </g>
+
+  <!-- === Bottom row — 15 keys === -->
+  <g fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">
+    <circle cx="146" cy="524" r="3"/>
+    <circle cx="206" cy="524" r="3"/>
+    <circle cx="266" cy="524" r="3"/>
+    <circle cx="326" cy="524" r="3"/>
+    <circle cx="386" cy="524" r="3"/>
+    <circle cx="446" cy="524" r="3"/>
+    <circle cx="506" cy="524" r="3"/>
+    <circle cx="566" cy="524" r="3"/>
+    <circle cx="626" cy="524" r="3"/>
+    <circle cx="686" cy="524" r="3"/>
+    <circle cx="746" cy="524" r="3"/>
+    <circle cx="806" cy="524" r="3"/>
+    <circle cx="866" cy="524" r="3"/>
+    <circle cx="926" cy="524" r="3"/>
+    <circle cx="986" cy="524" r="3"/>
+  </g>
+
+  <!-- === Mod / spacebar row — left mods, spacebar (wide rect), right mods === -->
+  <g fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.70">
+    <circle cx="146" cy="566" r="3"/>
+    <circle cx="206" cy="566" r="3"/>
+    <circle cx="266" cy="566" r="3"/>
+    <circle cx="806" cy="566" r="3"/>
+    <circle cx="866" cy="566" r="3"/>
+    <circle cx="926" cy="566" r="3"/>
+  </g>
+  <rect x="316" y="552" width="460" height="28" rx="4" ry="4"
+        stroke-opacity="0.75" fill="none"/>
+
+  <!-- ============================================================
+       RIGHT NAVIGATION CLUSTER — 3x2 block (Ins/Home/PgUp,
+       Del/End/PgDn), the TKL nav-block tell.
+  ============================================================ -->
+  <g stroke-opacity="0.85">
+    <rect x="1018" y="363" width="22" height="22" rx="3" ry="3"/>
+    <rect x="1046" y="363" width="22" height="22" rx="3" ry="3"/>
+    <rect x="1074" y="363" width="22" height="22" rx="3" ry="3"/>
+    <rect x="1018" y="391" width="22" height="22" rx="3" ry="3"/>
+    <rect x="1046" y="391" width="22" height="22" rx="3" ry="3"/>
+    <rect x="1074" y="391" width="22" height="22" rx="3" ry="3"/>
+  </g>
+
+  <!-- ============================================================
+       ARROW CLUSTER — bottom-right, TKL identity mark.
+  ============================================================ -->
+  <g stroke-opacity="0.85">
+    <rect x="1046" y="522" width="22" height="22" rx="3" ry="3"/>
+    <rect x="1018" y="550" width="22" height="22" rx="3" ry="3"/>
+    <rect x="1046" y="550" width="22" height="22" rx="3" ry="3"/>
+    <rect x="1074" y="550" width="22" height="22" rx="3" ry="3"/>
+  </g>
+
+  <!-- ============================================================
+       CARBON-FIBER BOTTOM PLATE REVEAL — thin band beneath the
+       case suggesting the bottom plate material peeking out below
+       the aluminum shell. Rendered as neutral warm-grey basket
+       weave texture — material detail, not a second hue.
+  ============================================================ -->
+  <defs>
+    <pattern id="carbon-weave" width="8" height="8" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="8" x2="8" y2="0"
+            stroke="oklch(0.78 0.005 90)" stroke-opacity="0.28" stroke-width="1"/>
+      <line x1="-2" y1="2" x2="2" y2="-2"
+            stroke="oklch(0.78 0.005 90)" stroke-opacity="0.28" stroke-width="1"/>
+      <line x1="6" y1="10" x2="10" y2="6"
+            stroke="oklch(0.78 0.005 90)" stroke-opacity="0.28" stroke-width="1"/>
+      <line x1="0" y1="0" x2="8" y2="8"
+            stroke="oklch(0.78 0.005 90)" stroke-opacity="0.16" stroke-width="1"/>
+      <line x1="-2" y1="6" x2="2" y2="10"
+            stroke="oklch(0.78 0.005 90)" stroke-opacity="0.16" stroke-width="1"/>
+      <line x1="6" y1="-2" x2="10" y2="2"
+            stroke="oklch(0.78 0.005 90)" stroke-opacity="0.16" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect x="110" y="610" width="980" height="22" rx="6" ry="6"
+        fill="url(#carbon-weave)"
+        stroke="oklch(0.78 0.005 90)" stroke-opacity="0.50"/>
+
+  <!-- ============================================================
+       ACCENT PIP — lower-right of canvas, family convention.
+       Focal terracotta dot + halo ring — this record's splash.
+  ============================================================ -->
+  <circle cx="1104" cy="666" r="7"
+          fill="oklch(0.62 0.13 35 / 0.90)"
+          stroke="oklch(0.62 0.13 35)"/>
+  <circle cx="1104" cy="666" r="15"
+          stroke="oklch(0.62 0.13 35)"
+          stroke-opacity="0.35"
+          fill="none"/>
+</svg>

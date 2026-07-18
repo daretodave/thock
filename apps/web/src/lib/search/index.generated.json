@@ -101587,6 +101587,13 @@
       "href": "/newsletter/thock-weekly-001"
     },
     {
+      "id": "cannonkeys-blaine-v2-se",
+      "slug": "cannonkeys-blaine-v2-se",
+      "kind": "group-buy",
+      "name": "Blaine V2: SE",
+      "href": "/group-buys#cannonkeys-blaine-v2-se"
+    },
+    {
       "id": "cannonkeys-mode-sonnet-r2",
       "slug": "cannonkeys-mode-sonnet-r2",
       "kind": "group-buy",
@@ -101755,6 +101762,6 @@
       "href": "/trends/tracker/2026-W29"
     }
   ],
-  "generatedAt": "2026-07-18T21:27:28.386Z",
+  "generatedAt": "2026-07-18T22:37:51.813Z",
   "count": 66
 }

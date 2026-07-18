@@ -731,6 +731,22 @@
   ],
   "groupBuys": [
     {
+      "slug": "cannonkeys-blaine-v2-se",
+      "name": "Blaine V2: SE",
+      "vendorSlug": "cannonkeys",
+      "productSlug": null,
+      "productKind": "board",
+      "startDate": "2026-07-10",
+      "endDate": "2026-08-09",
+      "region": "global",
+      "url": "https://cannonkeys.com/products/blaine-v2",
+      "imageUrl": null,
+      "heroImage": "/group-buy-art/cannonkeys-blaine-v2-se.svg",
+      "status": "live",
+      "description": "Blaine V2: SE — F12 TKL aluminum keyboard kit with a carbon-fiber bottom plate, triple mount system (top mount, single-sided gasket, o-ring), and a POM volcano light-diffusing element on the underside. Offered in Classic, Volcano, Seafoam, and Mystery colorways with solder or hotswap PCB options. Group buy run by CannonKeys, 2026-07-10 through 2026-08-09; estimated shipping Q1 2027.",
+      "updatedAt": "2026-07-18T00:00:00.000Z"
+    },
+    {
       "slug": "cannonkeys-mode-sonnet-r2",
       "name": "Mode Sonnet R2",
       "vendorSlug": "cannonkeys",
@@ -7718,5 +7734,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-07-18T21:27:27.307Z"
+  "generatedAt": "2026-07-18T22:37:51.076Z"
 }

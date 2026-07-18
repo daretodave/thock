@@ -7389,3 +7389,13 @@ passes accumulate signals.)
 - issue: (not mirrored — iterate Step 2.5 mirror was skipped this tick; fix shipped directly)
 > **Resolved (2026-07-18):** renamed `HomeError` → `RootError`, changed the kicker from "error · home" to "error", the heading to "Something went wrong loading this page.", and the escape link from `/about` ("about thock →") to `/` ("← back to home") — matching the exact pattern root `not-found.tsx` already documents and uses for the same shared-fallback role. Added a doc comment explaining which routes rely on this boundary. `pnpm verify` full gate green: typecheck, 664 web unit tests, data:validate (72 records), build, 1037/1037 e2e.
 > Picked as the top signal this tick: no unlabeled GitHub issues (triage gate); not Monday (weekly snapshot gate skipped); AUDIT.md's only other Pending rows are the `[6.3]` blocked-cloud-permission march.yml item and the `[4.0]` Lighthouse-CI `/oversight` item, both explicitly non-autonomous; CRITIQUE.md's only Pending row remains the non-actionable `[needs-user-call]` GA-beacon item; all 7 mechanical surveys clean (content-gap, crosslink, group-buy-companion, group-buy-status, newsletter-gap, OG-coverage, a11y-spec-coverage); no pending phases/data/content-gap work; march's own expand Step 3c gate not met (14 commits/~16h since pass 204, threshold 20 commits/48h). A fresh general-purpose sweep (meta/OG/Twitter completeness, canonical URLs on less-common routes, image alt text, article frontmatter, tag taxonomy, search index coverage, vendor data completeness, catalog numeric sanity, footer/nav link resolution, `as any` casts, console.log leftovers, dark-mode hardcoded colors) found this route-agnostic-fallback gap as the one finding clearing the 3.0 threshold; two lower-scored dead-field/JSON-LD-cap findings (~2.4 each, previously noted) were left unshipped again.
+
+### [ ] [content-gaps] [7.0] cannonkeys-blaine-v2-se — Rule 3 companion article missing
+- category: content-gaps
+- filed: 2026-07-18 by group-buy-companion-survey.mjs
+- impact: 7 (live group buy "Blaine V2: SE" has no thock companion piece; /group-buys card has no "Read our coverage →" link)
+- ease: 5 (one companion article + relatedArticle field update in the group-buy record)
+- score: 7.0 (impact × ease / 10)
+- group-buy: data/group-buys/cannonkeys-blaine-v2-se.json
+- rule: Rule 3
+- action: ship companion article for Blaine V2: SE, then set relatedArticle field in data/group-buys/cannonkeys-blaine-v2-se.json

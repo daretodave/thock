@@ -1,0 +1,22 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-18T00:00:00Z",
+  "commit": "9c279d0364d2172241c7d8ba6f2af7dcfaab7c92",
+  "kind": "group-buy-hero-art",
+  "target": "apps/web/public/group-buy-art/cannonkeys-blaine-v2-se.svg",
+  "source": "plan/bearings.md § Group-buy hero art — colorful SVGs",
+  "template": "directive: simple line drawing + single splash of color illustrative of productKind board",
+  "size": [1200, 750],
+  "subject": "F12 TKL aluminum keyboard kit silhouette (CannonKeys Blaine V2: SE) in a warm terracotta colorway — full Esc+F1-F12 F-row, terracotta top bezel band and engraved-nameplate outline, right nav cluster (Ins/Home/PgUp, Del/End/PgDn) + arrow cluster identifying the TKL layout, and a neutral warm-grey basket-weave reveal band beneath the case suggesting the carbon-fiber bottom plate",
+  "splash_color": { "name": "terracotta", "oklch": "oklch(0.62 0.13 35)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "bronze_theme_dot": "oklch(0.80 0.135 75)",
+  "fonts": [],
+  "prompt": "CannonKeys Blaine V2: SE is an F12 TKL custom keyboard kit — aluminum case, carbon-fiber bottom plate, warm/classic mechanical-keyboard aesthetic. The composition centers a TKL case (1020×329px) on the 1200×750 canvas. This record's single splash is warm terracotta (oklch(0.62 0.13 35)), distinct from the fixed bronze family theme dot — used as: a low-alpha terracotta wash on the case body (the colorway), a wider terracotta top-bezel band (0.24 alpha, the classic machined top-bezel treatment), an engraved-nameplate outline (shape only, no text/logo baked in) centered on the bezel, four terracotta corner gasket/mount-point dots at the plate's interior corners, and a focal terracotta accent pip with halo at lower-right. The F12 TKL silhouette is unambiguous: a full F-row (Esc + F1-F12, 13 keys with two gaps at the natural F4/F8 breaks) sits above five alpha rows (number, QWERTY, home, bottom, mod/spacebar — 15-column dot grid, pitch 60px) with a wide spacebar rect; a 3x2 right nav cluster (Ins/Home/PgUp over Del/End/PgDn) and an inverted-T arrow cluster sit right of the alpha block; no numpad (the TKL tell). Beneath the case, a thin rounded band (980×22px) renders a tileable basket-weave pattern in neutral warm-grey (two crossing diagonal line sets at differing opacity, 0.28/0.16) to suggest the carbon-fiber bottom plate peeking out below the aluminum shell — material texture rendered in the family's neutral stroke color, not a second accent hue. Column guides at 0.10 opacity add depth without contesting the terracotta. Bronze theme dot (fixed, oklch(0.80 0.135 75)) sits at upper-right per family ornament convention, independent of this record's terracotta colorway. Single-splash discipline: terracotta is the only per-record accent hue; carbon-weave and stroke elements stay neutral warm-grey; bronze appears only at the fixed theme-dot position. Voice: knowledgeable peer — the F-row gap rhythm and nav/arrow clusters read the TKL layout directly into the silhouette; no text or logos baked into the art.",
+  "revision": 1,
+  "generated_at": "2026-07-18",
+  "commit_at_render": "9c279d0364d2172241c7d8ba6f2af7dcfaab7c92",
+  "tokens_snapshot": "f79eb6c0",
+  "warnings": []
+}
