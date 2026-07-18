@@ -279,6 +279,20 @@ export function getBoardsByVendor(vendorSlug: string): Board[] {
     .sort((a, b) => a.name.localeCompare(b.name))
 }
 
+/** All switches for a vendor, alphabetical by name. */
+export function getSwitchesByVendor(vendorSlug: string): Switch[] {
+  return manifest.switches
+    .filter((s) => s.vendorSlug === vendorSlug)
+    .sort((a, b) => a.name.localeCompare(b.name))
+}
+
+/** All keycap sets for a vendor, alphabetical by name. */
+export function getKeycapSetsByVendor(vendorSlug: string): KeycapSet[] {
+  return manifest.keycapSets
+    .filter((k) => k.vendorSlug === vendorSlug)
+    .sort((a, b) => a.name.localeCompare(b.name))
+}
+
 /** Manifest build timestamp — useful for debugging staleness. */
 export function manifestGeneratedAt(): string {
   return manifest.generatedAt

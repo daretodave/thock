@@ -27,6 +27,8 @@ import {
   getKeycapSetBySlug,
   getAllBoards,
   getBoardBySlug,
+  getSwitchesByVendor,
+  getKeycapSetsByVendor,
 } from '../index'
 
 describe('data-runtime adapter', () => {
@@ -381,6 +383,34 @@ describe('data-runtime adapter', () => {
 
   it('returns null for an unknown board slug', () => {
     expect(getBoardBySlug('this-board-does-not-exist')).toBeNull()
+  })
+
+  it('getSwitchesByVendor returns only that vendor\'s switches, alphabetical by name', () => {
+    const switches = getSwitchesByVendor('novelkeys')
+    expect(switches.length).toBeGreaterThanOrEqual(1)
+    for (const sw of switches) {
+      expect(sw.vendorSlug).toBe('novelkeys')
+    }
+    const names = switches.map((sw) => sw.name)
+    expect(names).toEqual([...names].sort((a, b) => a.localeCompare(b)))
+  })
+
+  it('getSwitchesByVendor returns empty array for a vendor with no switches', () => {
+    expect(getSwitchesByVendor('this-vendor-does-not-exist')).toEqual([])
+  })
+
+  it('getKeycapSetsByVendor returns only that vendor\'s keycap sets, alphabetical by name', () => {
+    const sets = getKeycapSetsByVendor('kbdfans')
+    expect(sets.length).toBeGreaterThanOrEqual(1)
+    for (const ks of sets) {
+      expect(ks.vendorSlug).toBe('kbdfans')
+    }
+    const names = sets.map((ks) => ks.name)
+    expect(names).toEqual([...names].sort((a, b) => a.localeCompare(b)))
+  })
+
+  it('getKeycapSetsByVendor returns empty array for a vendor with no keycap sets', () => {
+    expect(getKeycapSetsByVendor('this-vendor-does-not-exist')).toEqual([])
   })
 
   it('looks up a group buy by slug', () => {

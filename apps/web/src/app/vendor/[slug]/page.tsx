@@ -11,11 +11,15 @@ import {
   getAllVendors,
   getBoardsByVendor,
   getGroupBuysByVendor,
+  getKeycapSetsByVendor,
+  getSwitchesByVendor,
   getVendorBySlug,
 } from '@/lib/data-runtime'
 import { countryLabel } from '@/lib/vendor-country'
 import { PageSectionKicker } from '@/components/ui/PageSectionKicker'
 import { VendorGroupBuySection } from '@/components/vendor/VendorGroupBuySection'
+import { VendorSwitchSection } from '@/components/vendor/VendorSwitchSection'
+import { VendorKeycapSetSection } from '@/components/vendor/VendorKeycapSetSection'
 import { VendorBoardSection } from '@/components/vendor/VendorBoardSection'
 
 export const dynamicParams = false
@@ -67,6 +71,8 @@ export default async function VendorDetailPage({
     return false
   })
   const boards = getBoardsByVendor(slug)
+  const switches = getSwitchesByVendor(slug)
+  const keycapSets = getKeycapSetsByVendor(slug)
   const path = `/vendor/${slug}`
   const country = countryLabel(vendor.countryCode)
 
@@ -135,6 +141,10 @@ export default async function VendorDetailPage({
         vendor={vendor}
         now={now}
       />
+
+      <VendorSwitchSection vendorName={vendor.name} switches={switches} />
+
+      <VendorKeycapSetSection vendorName={vendor.name} keycapSets={keycapSets} />
 
       <VendorBoardSection vendorName={vendor.name} boards={boards} />
     </main>

@@ -101,4 +101,30 @@ test.describe('/vendor/[slug] detail', () => {
       await expect(rows.first()).toBeVisible()
     }
   })
+
+  test('switches section lists a vendor\'s catalog switches', async ({ page }) => {
+    await page.goto('/vendor/novelkeys')
+    await expect(page.getByTestId('vendor-switches-kicker')).toBeVisible()
+    const rows = page.locator('[data-testid="vendor-switch-row"]')
+    await expect(rows.first()).toBeVisible()
+    const link = rows.first().locator('a').first()
+    const href = await link.getAttribute('href')
+    expect(href).toMatch(/^\/part\/switch\//)
+  })
+
+  test('keycap sets section lists a vendor\'s catalog keycap sets', async ({ page }) => {
+    await page.goto('/vendor/kbdfans')
+    await expect(page.getByTestId('vendor-keycap-sets-kicker')).toBeVisible()
+    const rows = page.locator('[data-testid="vendor-keycap-set-row"]')
+    await expect(rows.first()).toBeVisible()
+    const link = rows.first().locator('a').first()
+    const href = await link.getAttribute('href')
+    expect(href).toMatch(/^\/part\/keycap-set\//)
+  })
+
+  test('switches/keycap-sets empty state renders for a vendor with only boards', async ({ page }) => {
+    await page.goto('/vendor/keychron')
+    await expect(page.getByTestId('vendor-switches-empty')).toBeVisible()
+    await expect(page.getByTestId('vendor-keycap-sets-empty')).toBeVisible()
+  })
 })
