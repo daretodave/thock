@@ -77,7 +77,7 @@ function filterByAvailability(
     return eligible.length > 0 ? eligible : catalog
   }
   if (pref === 'group-buy') {
-    const eligible = catalog.filter((ks) => ks.status !== 'discontinued')
+    const eligible = catalog.filter((ks) => ks.status !== 'discontinued' && ks.status !== 'sold-out')
     return eligible.length > 0 ? eligible : catalog
   }
   const eligible = catalog.filter((ks) => ks.status !== 'discontinued' && ks.status !== 'sold-out')

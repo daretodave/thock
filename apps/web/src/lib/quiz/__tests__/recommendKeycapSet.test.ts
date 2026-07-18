@@ -129,6 +129,24 @@ describe('recommendKeycapSet', () => {
     }
   })
 
+  it('L: never surfaces a sold-out set for "group-buy" availability, even with a strong competing profile/material/legend match', () => {
+    const answers: KeycapSetQuizAnswers = {
+      profilePref: 'uniform',
+      materialPref: 'pbt',
+      legendPref: 'doubleshot',
+      availabilityPref: 'group-buy',
+    }
+    // PBT_CHERRY matches profile/material/legend perfectly (cherry + pbt +
+    // doubleshot) and would out-score every in-stock/group-buy set on the
+    // unfiltered sum despite being unbuyable — "willing to join a group
+    // buy" must not mean "sold-out is fine."
+    const results = recommendKeycapSet(answers, CATALOG)
+    expect(results.some((r) => r.keycapSet.slug === 'pbt-cherry')).toBe(false)
+    for (const r of results) {
+      expect(r.keycapSet.status).not.toBe('sold-out')
+    }
+  })
+
   it('K: never surfaces a sold-out/discontinued set for "no-pref" availability, even with a strong competing profile/material/legend match', () => {
     const answers: KeycapSetQuizAnswers = {
       profilePref: 'spherical-tall',
