@@ -74,20 +74,22 @@ test.describe('/vendor/[slug] detail', () => {
     const scripts = page.locator('script[type="application/ld+json"]')
     const count = await scripts.count()
     expect(count).toBeGreaterThan(0)
-    let foundOrg = false
+    let org: { '@type': string; url?: string; sameAs?: string } | undefined
     for (let i = 0; i < count; i++) {
       const content = await scripts.nth(i).textContent()
       const raw = JSON.parse(content ?? '{}')
       // JsonLd serializes the graph prop directly — it may be an array or single object.
-      const nodes: { '@type': string }[] = Array.isArray(raw)
+      const nodes: { '@type': string; url?: string; sameAs?: string }[] = Array.isArray(raw)
         ? raw
         : raw['@graph'] ?? [raw]
-      if (nodes.some((n) => n['@type'] === 'Organization')) {
-        foundOrg = true
-        break
-      }
+      org = nodes.find((n) => n['@type'] === 'Organization')
+      if (org) break
     }
-    expect(foundOrg).toBe(true)
+    expect(org).toBeTruthy()
+    // url must be the vendor's own homepage, not thock's page about the vendor —
+    // schema.org Organization.url identifies the entity's own site.
+    expect(org?.url).toBe('https://cannonkeys.com')
+    expect(org?.sameAs).toBeUndefined()
   })
 
   test('boards section visible for vendor with boards', async ({ page }) => {

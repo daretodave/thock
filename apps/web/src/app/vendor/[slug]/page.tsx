@@ -5,7 +5,6 @@ import { Container, Stack } from '@thock/ui'
 import {
   buildBreadcrumbListJsonLd,
   buildMetadata,
-  canonicalUrl,
   JsonLd,
 } from '@thock/seo'
 import {
@@ -79,8 +78,7 @@ export default async function VendorDetailPage({
             '@context': 'https://schema.org',
             '@type': 'Organization',
             name: vendor.name,
-            url: canonicalUrl(path),
-            sameAs: vendor.url,
+            url: vendor.url,
             description: vendor.description,
           },
           buildBreadcrumbListJsonLd([
