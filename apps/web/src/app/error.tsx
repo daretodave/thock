@@ -3,7 +3,16 @@
 import Link from 'next/link'
 import { Container, Mono, Stack } from '@thock/ui'
 
-export default function HomeError({
+/**
+ * Global root-level error boundary. Next.js falls back to this
+ * component for any route segment that doesn't define its own
+ * error.tsx — the home page plus every route without a scoped
+ * boundary (compare, quiz, tools, vendors, parts, archive, etc.),
+ * so the copy stays route-agnostic. Route families with a local
+ * error.tsx (news, trends, guides, ideas, deep-dives, group-buys,
+ * tag, article) show entity-specific copy instead.
+ */
+export default function RootError({
   error,
   reset,
 }: {
@@ -15,10 +24,10 @@ export default function HomeError({
     <Container as="section" className="py-24">
       <Stack gap={4}>
         <span className="font-mono uppercase tracking-[0.12em] text-micro text-down">
-          error · home
+          error
         </span>
         <h1 className="font-serif text-h1 sm:text-display text-text">
-          Something went wrong loading the home page.
+          Something went wrong loading this page.
         </h1>
         <p className="max-w-[60ch] font-serif text-h3 text-text-2">
           A loader probably tripped on a malformed record. The incident has
@@ -36,10 +45,10 @@ export default function HomeError({
             Try again
           </button>
           <Link
-            href="/about"
+            href="/"
             className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text"
           >
-            about thock →
+            ← back to home
           </Link>
         </div>
       </Stack>
