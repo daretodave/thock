@@ -80,7 +80,8 @@ function filterByAvailability(
     const eligible = catalog.filter((ks) => ks.status !== 'discontinued')
     return eligible.length > 0 ? eligible : catalog
   }
-  return catalog
+  const eligible = catalog.filter((ks) => ks.status !== 'discontinued' && ks.status !== 'sold-out')
+  return eligible.length > 0 ? eligible : catalog
 }
 
 export function recommendKeycapSet(

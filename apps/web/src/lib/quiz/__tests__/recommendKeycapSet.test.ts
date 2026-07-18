@@ -24,8 +24,9 @@ const PBT_KAT = makeSet({ slug: 'pbt-kat', profile: 'kat', material: 'pbt', lege
 const SA_DISCONTINUED = makeSet({ slug: 'sa-gone', profile: 'sa', material: 'abs', legendType: 'doubleshot', status: 'discontinued' })
 const MT3_INSTOCK = makeSet({ slug: 'mt3-in', profile: 'mt3', material: 'abs', legendType: 'doubleshot', status: 'in-stock' })
 const PBT_CHERRY = makeSet({ slug: 'pbt-cherry', profile: 'cherry', material: 'pbt', legendType: 'doubleshot', status: 'sold-out' })
+const SA_AVAILABLE = makeSet({ slug: 'sa-avail', profile: 'sa', material: 'pbt', legendType: 'dye-sub', status: 'in-stock' })
 
-const CATALOG = [CHERRY_ABS, PBT_KAT, SA_DISCONTINUED, MT3_INSTOCK, PBT_CHERRY]
+const CATALOG = [CHERRY_ABS, PBT_KAT, SA_DISCONTINUED, MT3_INSTOCK, PBT_CHERRY, SA_AVAILABLE]
 
 describe('recommendKeycapSet', () => {
   it('A: prefers cherry profile for uniform preference', () => {
@@ -125,6 +126,24 @@ describe('recommendKeycapSet', () => {
     expect(results.some((r) => r.keycapSet.slug === 'sa-gone')).toBe(false)
     for (const r of results) {
       expect(r.keycapSet.status).not.toBe('discontinued')
+    }
+  })
+
+  it('K: never surfaces a sold-out/discontinued set for "no-pref" availability, even with a strong competing profile/material/legend match', () => {
+    const answers: KeycapSetQuizAnswers = {
+      profilePref: 'spherical-tall',
+      materialPref: 'abs',
+      legendPref: 'doubleshot',
+      availabilityPref: 'no-pref',
+    }
+    // SA_DISCONTINUED matches profile/material/legend perfectly (sa + abs +
+    // doubleshot) and would out-score every purchasable set on the
+    // unfiltered sum despite being unbuyable — "no preference" on
+    // availability must not mean "any status is fine."
+    const results = recommendKeycapSet(answers, CATALOG)
+    expect(results.some((r) => r.keycapSet.slug === 'sa-gone')).toBe(false)
+    for (const r of results) {
+      expect(['in-stock', 'group-buy']).toContain(r.keycapSet.status)
     }
   })
 
