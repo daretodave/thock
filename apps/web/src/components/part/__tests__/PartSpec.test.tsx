@@ -71,6 +71,15 @@ describe('<PartSpec>', () => {
     expect(list).toHaveTextContent(/yes/i)
   })
 
+  it('resolves housing/stem material and switch type to human labels, not raw enum values', () => {
+    render(<PartSpec part={FAKE_SWITCH} />)
+    const list = screen.getByTestId('part-spec-list')
+    expect(list).toHaveTextContent('Linear')
+    expect(list).toHaveTextContent('PC')
+    expect(list).toHaveTextContent('Nylon')
+    expect(list).toHaveTextContent('POM')
+  })
+
   it('renders keycap-set spec rows including profile + designer', () => {
     render(<PartSpec part={FAKE_KEYCAPS} />)
     const list = screen.getByTestId('part-spec-list')
@@ -79,6 +88,14 @@ describe('<PartSpec>', () => {
     expect(list).toHaveTextContent(/Designer/i)
     expect(list).toHaveTextContent(/biip/i)
     expect(list).toHaveTextContent(/doubleshot/i)
+  })
+
+  it('resolves profile, material, and legend type to human labels, not raw enum values', () => {
+    render(<PartSpec part={FAKE_KEYCAPS} />)
+    const list = screen.getByTestId('part-spec-list')
+    expect(list).toHaveTextContent('Cherry')
+    expect(list).toHaveTextContent('ABS')
+    expect(list).toHaveTextContent('Doubleshot')
   })
 
   it('renders board spec rows including mount + hotswap', () => {
@@ -91,6 +108,14 @@ describe('<PartSpec>', () => {
     expect(list).toHaveTextContent(/Hotswap/i)
     expect(list).toHaveTextContent(/Wireless/i)
     expect(list).toHaveTextContent(/no/i)
+  })
+
+  it('resolves layout, case material, and mount style to human labels, not raw enum values', () => {
+    render(<PartSpec part={FAKE_BOARD} />)
+    const list = screen.getByTestId('part-spec-list')
+    expect(list).toHaveTextContent('65%')
+    expect(list).toHaveTextContent('Aluminum')
+    expect(list).toHaveTextContent('Gasket')
   })
 
   it('formats releasedAt via Intl medium-format UTC', () => {

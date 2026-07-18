@@ -2,6 +2,7 @@ import type { ReactElement } from 'react'
 import Link from 'next/link'
 import type { Switch } from '@thock/data'
 import { Container, Mono } from '@thock/ui'
+import { HOUSING_MATERIAL_LABEL, specLabel, STEM_MATERIAL_LABEL, SWITCH_TYPE_LABEL } from '@/lib/spec-labels'
 
 const DATE_FMT = new Intl.DateTimeFormat('en-US', {
   dateStyle: 'medium',
@@ -25,10 +26,10 @@ type SpecRow = { label: string; value: string }
 
 function switchSpecRows(s: Switch): SpecRow[] {
   return [
-    { label: 'Type', value: s.type },
-    { label: 'Top housing', value: s.housingTop },
-    { label: 'Bottom housing', value: s.housingBottom },
-    { label: 'Stem', value: s.stem },
+    { label: 'Type', value: specLabel(SWITCH_TYPE_LABEL, s.type) },
+    { label: 'Top housing', value: specLabel(HOUSING_MATERIAL_LABEL, s.housingTop) },
+    { label: 'Bottom housing', value: specLabel(HOUSING_MATERIAL_LABEL, s.housingBottom) },
+    { label: 'Stem', value: specLabel(STEM_MATERIAL_LABEL, s.stem) },
     {
       label: 'Spring',
       value: `${s.springGrams.actuation}g actuation · ${s.springGrams.bottomOut}g bottom-out`,

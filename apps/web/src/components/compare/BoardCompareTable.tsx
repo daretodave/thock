@@ -3,6 +3,12 @@ import Link from 'next/link'
 import type { Board } from '@thock/data'
 import { Container, Mono } from '@thock/ui'
 import { getVendorBySlug } from '@/lib/data-runtime'
+import {
+  BOARD_LAYOUT_LABEL,
+  CASE_MATERIAL_LABEL,
+  MOUNT_STYLE_LABEL,
+  specLabel,
+} from '@/lib/spec-labels'
 
 const DATE_FMT = new Intl.DateTimeFormat('en-US', {
   dateStyle: 'medium',
@@ -26,9 +32,9 @@ type SpecRow = { label: string; value: string }
 
 function boardSpecRows(b: Board): SpecRow[] {
   return [
-    { label: 'Layout', value: b.layout },
-    { label: 'Mount style', value: b.mountStyle },
-    { label: 'Case material', value: b.caseMaterial },
+    { label: 'Layout', value: specLabel(BOARD_LAYOUT_LABEL, b.layout) },
+    { label: 'Mount style', value: specLabel(MOUNT_STYLE_LABEL, b.mountStyle) },
+    { label: 'Case material', value: specLabel(CASE_MATERIAL_LABEL, b.caseMaterial) },
     { label: 'Hotswap', value: b.hotswap ? 'yes' : 'no' },
     { label: 'Wireless', value: b.wireless ? 'yes' : 'no' },
     { label: 'Status', value: STATUS_LABEL[b.status] },

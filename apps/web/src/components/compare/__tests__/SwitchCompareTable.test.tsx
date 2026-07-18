@@ -81,4 +81,14 @@ describe('<SwitchCompareTable>', () => {
     expect(screen.getAllByText('in production').length).toBeGreaterThan(0)
     expect(screen.queryByText('in-production')).not.toBeInTheDocument()
   })
+
+  it('renders type, housing, and stem material as human labels, not raw enum values', () => {
+    render(<SwitchCompareTable switchA={SWITCH_A} switchB={SWITCH_B} />)
+    expect(screen.getByText('Linear')).toBeInTheDocument()
+    expect(screen.getByText('Tactile')).toBeInTheDocument()
+    expect(screen.getAllByText('PC').length).toBeGreaterThan(0)
+    expect(screen.getAllByText('Nylon').length).toBeGreaterThan(0)
+    expect(screen.getAllByText('POM').length).toBeGreaterThan(0)
+    expect(screen.queryByText('pc')).not.toBeInTheDocument()
+  })
 })

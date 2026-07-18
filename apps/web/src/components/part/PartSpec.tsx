@@ -2,6 +2,18 @@ import type { ReactElement } from 'react'
 import { Container, Mono } from '@thock/ui'
 import type { Switch, KeycapSet, Board } from '@thock/data'
 import type { ResolvedPart } from '@/lib/data-runtime'
+import {
+  BOARD_LAYOUT_LABEL,
+  CASE_MATERIAL_LABEL,
+  HOUSING_MATERIAL_LABEL,
+  KEYCAP_MATERIAL_LABEL,
+  KEYCAP_PROFILE_LABEL,
+  LEGEND_TYPE_LABEL,
+  MOUNT_STYLE_LABEL,
+  specLabel,
+  STEM_MATERIAL_LABEL,
+  SWITCH_TYPE_LABEL,
+} from '@/lib/spec-labels'
 
 const DATE_FMT = new Intl.DateTimeFormat('en-US', {
   dateStyle: 'medium',
@@ -17,10 +29,10 @@ function formatDate(iso: string | null | undefined): string {
 
 function switchRows(record: Switch): Array<[string, string]> {
   return [
-    ['Type', record.type],
-    ['Top housing', record.housingTop],
-    ['Bottom housing', record.housingBottom],
-    ['Stem', record.stem],
+    ['Type', specLabel(SWITCH_TYPE_LABEL, record.type)],
+    ['Top housing', specLabel(HOUSING_MATERIAL_LABEL, record.housingTop)],
+    ['Bottom housing', specLabel(HOUSING_MATERIAL_LABEL, record.housingBottom)],
+    ['Stem', specLabel(STEM_MATERIAL_LABEL, record.stem)],
     [
       'Spring',
       `${record.springGrams.actuation}g actuation · ${record.springGrams.bottomOut}g bottom-out`,
@@ -33,9 +45,9 @@ function switchRows(record: Switch): Array<[string, string]> {
 
 function keycapSetRows(record: KeycapSet): Array<[string, string]> {
   return [
-    ['Profile', record.profile],
-    ['Material', record.material],
-    ['Legend', record.legendType],
+    ['Profile', specLabel(KEYCAP_PROFILE_LABEL, record.profile)],
+    ['Material', specLabel(KEYCAP_MATERIAL_LABEL, record.material)],
+    ['Legend', specLabel(LEGEND_TYPE_LABEL, record.legendType)],
     ['Designer', record.designer ?? '—'],
     ['Released', formatDate(record.releasedAt)],
   ]
@@ -43,9 +55,9 @@ function keycapSetRows(record: KeycapSet): Array<[string, string]> {
 
 function boardRows(record: Board): Array<[string, string]> {
   return [
-    ['Layout', record.layout],
-    ['Case material', record.caseMaterial],
-    ['Mount style', record.mountStyle],
+    ['Layout', specLabel(BOARD_LAYOUT_LABEL, record.layout)],
+    ['Case material', specLabel(CASE_MATERIAL_LABEL, record.caseMaterial)],
+    ['Mount style', specLabel(MOUNT_STYLE_LABEL, record.mountStyle)],
     ['Hotswap', record.hotswap ? 'yes' : 'no'],
     ['Wireless', record.wireless ? 'yes' : 'no'],
     ['Released', formatDate(record.releasedAt)],

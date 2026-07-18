@@ -98,4 +98,15 @@ describe('<BoardCompareTable>', () => {
     expect(screen.getByText('discontinued')).toBeInTheDocument()
     expect(screen.queryByText('in-stock')).not.toBeInTheDocument()
   })
+
+  it('renders layout, case material, and mount style as human labels, not raw enum values', () => {
+    render(<BoardCompareTable boardA={BOARD_A} boardB={BOARD_B} />)
+    expect(screen.getByText('65%')).toBeInTheDocument()
+    expect(screen.getByText('TKL')).toBeInTheDocument()
+    expect(screen.getByText('Aluminum')).toBeInTheDocument()
+    expect(screen.getByText('Polycarbonate')).toBeInTheDocument()
+    expect(screen.getByText('Gasket')).toBeInTheDocument()
+    expect(screen.getByText('Top mount')).toBeInTheDocument()
+    expect(screen.queryByText('top-mount')).not.toBeInTheDocument()
+  })
 })
