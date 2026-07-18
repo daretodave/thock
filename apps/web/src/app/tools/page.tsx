@@ -56,7 +56,7 @@ const TOOLS: Tool[] = [
     href: '/compare/board',
     heading: 'Compare boards',
     description:
-      'Pick any two boards and compare layout, mount style, case material, hotswap, wireless, and release date.',
+      'Pick any two boards and compare layout, mount style, case material, hotswap, wireless, and more.',
     cta: 'Open the comparison tool',
     testId: 'tools-card-compare-board',
   },
