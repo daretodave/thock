@@ -7399,3 +7399,4 @@ passes accumulate signals.)
 - group-buy: data/group-buys/cannonkeys-blaine-v2-se.json
 - rule: Rule 3
 - action: ship companion article for Blaine V2: SE, then set relatedArticle field in data/group-buys/cannonkeys-blaine-v2-se.json
+- issue: #535
