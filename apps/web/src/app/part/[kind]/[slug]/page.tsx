@@ -10,6 +10,9 @@ import {
 } from '@thock/seo'
 import type { Tag } from '@thock/content'
 import {
+  getAllBoards,
+  getAllKeycapSets,
+  getAllSwitches,
   getAllTags,
   getArticlesMentioningPart,
   getBoardBySlug,
@@ -83,6 +86,18 @@ function shortDescription(description: string, max = 150): string {
   if (description.length <= max) return description
   const cut = description.slice(0, max).split(' ').slice(0, -1).join(' ')
   return cut.trimEnd() + '…'
+}
+
+export const dynamicParams = false
+
+export async function generateStaticParams(): Promise<
+  { kind: string; slug: string }[]
+> {
+  return [
+    ...getAllSwitches().map((s) => ({ kind: 'switch', slug: s.slug })),
+    ...getAllKeycapSets().map((k) => ({ kind: 'keycap-set', slug: k.slug })),
+    ...getAllBoards().map((b) => ({ kind: 'board', slug: b.slug })),
+  ]
 }
 
 export async function generateMetadata({

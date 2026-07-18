@@ -12,6 +12,8 @@ import { getAllNewsletters, getNewsletterBySlug } from '@/lib/data-runtime'
 import { ArticleBody } from '@/components/article/ArticleBody'
 import { PageSectionKicker } from '@/components/ui/PageSectionKicker'
 
+export const dynamicParams = false
+
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
   return getAllNewsletters().map((n) => ({ slug: n.slug }))
 }

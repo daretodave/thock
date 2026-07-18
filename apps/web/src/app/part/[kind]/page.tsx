@@ -20,6 +20,7 @@ import { PartIndexCard } from '@/components/part/PartIndexCard'
 import {
   isValidKind,
   sortParts,
+  VALID_KINDS,
   type ValidKind,
 } from './helpers'
 
@@ -86,6 +87,12 @@ function partsForKind(kind: ValidKind): ResolvedPart[] {
     record,
     vendorUrl: getVendorBySlug(record.vendorSlug)?.url ?? null,
   }))
+}
+
+export const dynamicParams = false
+
+export async function generateStaticParams(): Promise<{ kind: string }[]> {
+  return VALID_KINDS.map((kind) => ({ kind }))
 }
 
 export async function generateMetadata({

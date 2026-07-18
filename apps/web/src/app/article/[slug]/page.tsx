@@ -8,6 +8,7 @@ import {
   pillarLabel,
 } from '@thock/seo'
 import {
+  getAllArticles,
   getAllTags,
   getArticleBySlug,
   getReferencedParts,
@@ -18,6 +19,16 @@ import { ArticleBody } from '@/components/article/ArticleBody'
 import { ArticleTagRail } from '@/components/article/ArticleTagRail'
 import { MentionedPartsRail } from '@/components/article/MentionedPartsRail'
 import { RelatedArticlesRail } from '@/components/article/RelatedArticlesRail'
+
+// `dynamicParams` stays at the Next.js default (true) here, unlike
+// the other five entity routes fixed alongside this one — this
+// route's `not-found.tsx` reads `headers()` (for "did you mean"
+// slug suggestions), which forces dynamic rendering of the 404
+// boundary and is incompatible with `dynamicParams = false`'s
+// build-time rejection. See AUDIT.md for the follow-up.
+export async function generateStaticParams(): Promise<{ slug: string }[]> {
+  return getAllArticles().map((a) => ({ slug: a.slug }))
+}
 
 export async function generateMetadata({
   params,

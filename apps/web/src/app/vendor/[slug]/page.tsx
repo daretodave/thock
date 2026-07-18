@@ -19,6 +19,8 @@ import { PageSectionKicker } from '@/components/ui/PageSectionKicker'
 import { VendorGroupBuySection } from '@/components/vendor/VendorGroupBuySection'
 import { VendorBoardSection } from '@/components/vendor/VendorBoardSection'
 
+export const dynamicParams = false
+
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
   return getAllVendors().map((v) => ({ slug: v.slug }))
 }

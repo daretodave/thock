@@ -89,16 +89,14 @@ test.describe('newsletter detail page — /newsletter/[slug]', () => {
     )
   })
 
-  test('unknown issue slug renders the newsletter not-found page', async ({
-    page,
-  }) => {
-    // Asserting rendered UI rather than HTTP status — see smoke.spec.ts's
-    // "404 routes render not-found pages" comment: `next start` locally
-    // serves the not-found UI with 200 for dynamic routes with
-    // generateStaticParams under Next 15.5; production Vercel returns a
-    // real 404 (covered by deploy:smoke).
-    await page.goto('/newsletter/not-a-real-issue')
-    await expect(page.locator('h1')).toContainText(/issue not found/i)
+  test('unknown issue slug returns a real 404', async ({ page }) => {
+    // `dynamicParams = false` (paired with generateStaticParams) rejects
+    // any slug outside the static list at the routing layer, before the
+    // route's own page.tsx/not-found.tsx ever renders — so the response
+    // carries a real 404 status and falls back to the root not-found UI.
+    const response = await page.goto('/newsletter/not-a-real-issue')
+    expect(response?.status()).toBe(404)
+    await expect(page.locator('h1')).toBeVisible()
   })
 })
 
