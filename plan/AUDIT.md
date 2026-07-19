@@ -7401,7 +7401,7 @@ passes accumulate signals.)
 - action: ship companion article for Blaine V2: SE, then set relatedArticle field in data/group-buys/cannonkeys-blaine-v2-se.json
 - issue: #535
 
-### [ ] [cross-links] [4.5] cannonkeys-blaine-v2-se-group-buy ↔ cannonkeys-nyawice-group-buy — no prose cross-link (same pillar, ≥2 shared tags: cannonkeys, group-buy, aluminum)
+### [x] [cross-links] [4.5] cannonkeys-blaine-v2-se-group-buy ↔ cannonkeys-nyawice-group-buy — no prose cross-link (same pillar, ≥2 shared tags: cannonkeys, group-buy, aluminum) — addressed in 833d611, closes #541
 - category: cross-links
 - filed: 2026-07-19 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -7412,7 +7412,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/cannonkeys-nyawice-group-buy.mdx
 - action: add [cannonkeys-nyawice-group-buy](/article/cannonkeys-nyawice-group-buy) to cannonkeys-blaine-v2-se-group-buy body, or vice versa
 
-### [ ] [cross-links] [4.5] cannonkeys-blaine-v2-se-group-buy ↔ mode-sonnet-r2-group-buy-coverage — no prose cross-link (same pillar, ≥2 shared tags: cannonkeys, group-buy, aluminum)
+### [x] [cross-links] [4.5] cannonkeys-blaine-v2-se-group-buy ↔ mode-sonnet-r2-group-buy-coverage — no prose cross-link (same pillar, ≥2 shared tags: cannonkeys, group-buy, aluminum) — addressed in 833d611, closes #541
 - category: cross-links
 - filed: 2026-07-19 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
