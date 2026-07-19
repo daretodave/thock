@@ -7390,7 +7390,7 @@ passes accumulate signals.)
 > **Resolved (2026-07-18):** renamed `HomeError` → `RootError`, changed the kicker from "error · home" to "error", the heading to "Something went wrong loading this page.", and the escape link from `/about` ("about thock →") to `/` ("← back to home") — matching the exact pattern root `not-found.tsx` already documents and uses for the same shared-fallback role. Added a doc comment explaining which routes rely on this boundary. `pnpm verify` full gate green: typecheck, 664 web unit tests, data:validate (72 records), build, 1037/1037 e2e.
 > Picked as the top signal this tick: no unlabeled GitHub issues (triage gate); not Monday (weekly snapshot gate skipped); AUDIT.md's only other Pending rows are the `[6.3]` blocked-cloud-permission march.yml item and the `[4.0]` Lighthouse-CI `/oversight` item, both explicitly non-autonomous; CRITIQUE.md's only Pending row remains the non-actionable `[needs-user-call]` GA-beacon item; all 7 mechanical surveys clean (content-gap, crosslink, group-buy-companion, group-buy-status, newsletter-gap, OG-coverage, a11y-spec-coverage); no pending phases/data/content-gap work; march's own expand Step 3c gate not met (14 commits/~16h since pass 204, threshold 20 commits/48h). A fresh general-purpose sweep (meta/OG/Twitter completeness, canonical URLs on less-common routes, image alt text, article frontmatter, tag taxonomy, search index coverage, vendor data completeness, catalog numeric sanity, footer/nav link resolution, `as any` casts, console.log leftovers, dark-mode hardcoded colors) found this route-agnostic-fallback gap as the one finding clearing the 3.0 threshold; two lower-scored dead-field/JSON-LD-cap findings (~2.4 each, previously noted) were left unshipped again.
 
-### [ ] [content-gaps] [7.0] cannonkeys-blaine-v2-se — Rule 3 companion article missing
+### [x] [content-gaps] [7.0] cannonkeys-blaine-v2-se — Rule 3 companion article missing — addressed in 151743c, closes #535
 - category: content-gaps
 - filed: 2026-07-18 by group-buy-companion-survey.mjs
 - impact: 7 (live group buy "Blaine V2: SE" has no thock companion piece; /group-buys card has no "Read our coverage →" link)
@@ -7400,3 +7400,37 @@ passes accumulate signals.)
 - rule: Rule 3
 - action: ship companion article for Blaine V2: SE, then set relatedArticle field in data/group-buys/cannonkeys-blaine-v2-se.json
 - issue: #535
+
+### [ ] [cross-links] [4.5] cannonkeys-blaine-v2-se-group-buy ↔ cannonkeys-nyawice-group-buy — no prose cross-link (same pillar, ≥2 shared tags: cannonkeys, group-buy, aluminum)
+- category: cross-links
+- filed: 2026-07-19 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: cannonkeys, group-buy, aluminum
+- article-a: apps/web/src/content/articles/cannonkeys-blaine-v2-se-group-buy.mdx
+- article-b: apps/web/src/content/articles/cannonkeys-nyawice-group-buy.mdx
+- action: add [cannonkeys-nyawice-group-buy](/article/cannonkeys-nyawice-group-buy) to cannonkeys-blaine-v2-se-group-buy body, or vice versa
+
+### [ ] [cross-links] [4.5] cannonkeys-blaine-v2-se-group-buy ↔ mode-sonnet-r2-group-buy-coverage — no prose cross-link (same pillar, ≥2 shared tags: cannonkeys, group-buy, aluminum)
+- category: cross-links
+- filed: 2026-07-19 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: cannonkeys, group-buy, aluminum
+- article-a: apps/web/src/content/articles/cannonkeys-blaine-v2-se-group-buy.mdx
+- article-b: apps/web/src/content/articles/mode-sonnet-r2-group-buy-coverage.mdx
+- action: add [mode-sonnet-r2-group-buy-coverage](/article/mode-sonnet-r2-group-buy-coverage) to cannonkeys-blaine-v2-se-group-buy body, or vice versa
+
+### [HOT PURSUIT] [content-gap] [7] guides pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 5 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: guides
+- window-count: 1
+- window-start: 2026-06-19
+- score: 7
+- next: /ship-content → guides pillar article
+> Filed 2026-07-19 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
