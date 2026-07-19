@@ -7481,7 +7481,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/stabilizers-explained.mdx
 - action: add [stabilizers-explained](/article/stabilizers-explained) to keyboard-cables-compared body, or vice versa
 
-### [HOT PURSUIT] [content-gap] [7] deep-dives pillar — 1 of ≥2 articles in last 30d
+### [x] [content-gap] [7] deep-dives pillar — 1 of ≥2 articles in last 30d — addressed in 8dfe4fa, closes #537
 - category: content-gaps
 - impact: 6 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -7493,3 +7493,37 @@ passes accumulate signals.)
 - next: /ship-content → deep-dives pillar article
 - issue: #537
 > Filed 2026-07-19 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+> **Resolved (2026-07-19):** Published "Why the Gazzew Boba U4T Rings Where the Boba U4 Stays Quiet" — ~1780-word deep dive on the U4T's D-shaped tactile bump and what removing the Boba U4's foam dampeners changes acoustically. publishedAt gap-filled to 2026-06-29 (largest gap in the 30-day window). Hero SVG + 3 InlineViz shipped. `gazzew` brand tag added. `8dfe4fa`
+
+### [ ] [cross-links] [4.5] gazzew-boba-u4t-deep-dive ↔ gateron-lanes-tactile-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: tactile, deep-dive)
+- category: cross-links
+- filed: 2026-07-19 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: tactile, deep-dive
+- article-a: apps/web/src/content/articles/gazzew-boba-u4t-deep-dive.mdx
+- article-b: apps/web/src/content/articles/gateron-lanes-tactile-deep-dive.mdx
+- action: add [gateron-lanes-tactile-deep-dive](/article/gateron-lanes-tactile-deep-dive) to gazzew-boba-u4t-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] gazzew-boba-u4t-deep-dive ↔ gateron-oil-king-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, factory-lubed)
+- category: cross-links
+- filed: 2026-07-19 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: deep-dive, factory-lubed
+- article-a: apps/web/src/content/articles/gazzew-boba-u4t-deep-dive.mdx
+- article-b: apps/web/src/content/articles/gateron-oil-king-deep-dive.mdx
+- action: add [gateron-oil-king-deep-dive](/article/gateron-oil-king-deep-dive) to gazzew-boba-u4t-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] gazzew-boba-u4t-deep-dive ↔ hmx-cloud-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, factory-lubed)
+- category: cross-links
+- filed: 2026-07-19 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: deep-dive, factory-lubed
+- article-a: apps/web/src/content/articles/gazzew-boba-u4t-deep-dive.mdx
+- article-b: apps/web/src/content/articles/hmx-cloud-deep-dive.mdx
+- action: add [hmx-cloud-deep-dive](/article/hmx-cloud-deep-dive) to gazzew-boba-u4t-deep-dive body, or vice versa
