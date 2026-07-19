@@ -7543,7 +7543,7 @@ passes accumulate signals.)
 - issue: #538
 > Filed 2026-07-19 by newsletter-gap-survey.mjs. 7 days since issue 3. Threshold: ≥7 calendar days.
 
-### [ ] [external-issue] [4.2] deploy:check never ingests a follow-up commit pushed seconds after a prior push (Vercel webhook drop on rapid double-push)
+### [x] [external-issue] [4.2] deploy:check never ingests a follow-up commit pushed seconds after a prior push (Vercel webhook drop on rapid double-push) — addressed in 350f623, closes #540
 - category: external-issue
 - filed: 2026-07-19 via /triage from user-issue #540 (opened by cloud /march tick)
 - impact: 6 (a commit pushed to main can silently have no Vercel deployment record at all — not queued, not building, not errored, just absent — which would let a genuine code regression ship with deploy:check falsely timing out and masking the real state; confirmed reproducing: HEAD 09ab17a still has zero deployment 40+ min after push, past the 10-min deploy:check timeout)
@@ -7551,4 +7551,5 @@ passes accumulate signals.)
 - score: 4.2 (impact × ease / 10)
 - next: /iterate to merge the trailing plan/AUDIT.md-only follow-up commit into the same push as the fix commit in skills/iterate.md (and any other shipping skill with a similar two-commit Step 6/7 shape); reference #540 in the commit body.
 - issue: #540
+> **Resolved (2026-07-19):** `skills/iterate.md` (Step 5/6), `skills/ship-a-phase.md` (Step 10/11), `skills/ship-content.md` (Step 7d/8), and `skills/march.md` (Step 0.5's trend-snapshot flow) all had the same two-commit shape where the first commit pushed immediately and a trailing audit/DoD-tick commit pushed again seconds later. Each now stages its trailing commit locally and pushes once, after both commits exist — new Hard rules document the pattern in each skill (iterate.md §7.8, ship-a-phase.md §7.12, ship-content.md §5.8). `skills/ship-content.md`'s Step 3a early issue-number checkpoint was deliberately left alone — it's a resumability checkpoint spanning minutes of agent work (content-curator/brander), not a rapid-fire pair, so collapsing it into a later push would reintroduce the crash-recovery gap phase 24 built it to close. `pnpm verify` full gate green: typecheck, unit, data:validate (72 records), build, 1055/1055 e2e. This tick's own two commits (`350f623` fix + this audit-tick commit) are pushed together as one push, dogfooding the fix immediately.
 > Filed 2026-07-19 by /triage. User-issue #540 self-reported by the prior cloud /march tick: `687c11c` (content fix, pushed 18:30:31Z) got a Vercel deployment and went READY in ~4s; `09ab17a` (audit-only follow-up, pushed 18:30:53Z, 22s later) never got one. Site is unaffected (687c11c is live) but main's HEAD has no deploy record tracking it — a risk if a future rapid-fire second push carries an actual code change.
