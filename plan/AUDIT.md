@@ -7437,7 +7437,7 @@ passes accumulate signals.)
 > **Resolved (2026-07-19):** Shipped "Keyboard cables, compared: coiled, straight, and the connector that actually matters" (~1570 words) at `apps/web/src/content/articles/keyboard-cables-compared.mdx`, publishedAt 2026-07-16 (gap-fill). Hero SVG + 2 InlineViz shipped by brander/content-curator. Added `cables` + `usb-c` tags. Language + mentionedParts gates clean. 1049 e2e green. `4fcef08`
 > Filed 2026-07-19 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 
-### [ ] [cross-links] [4.5] keyboard-cables-compared ↔ lubing-101 — no prose cross-link (same pillar, ≥2 shared tags: beginner, modding)
+### [x] [cross-links] [4.5] keyboard-cables-compared ↔ lubing-101 — no prose cross-link (same pillar, ≥2 shared tags: beginner, modding) — addressed in ffb545e
 - category: cross-links
 - filed: 2026-07-19 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -7448,7 +7448,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/lubing-101.mdx
 - action: add [lubing-101](/article/lubing-101) to keyboard-cables-compared body, or vice versa
 
-### [ ] [cross-links] [4.5] keyboard-cables-compared ↔ mounting-styles-compared — no prose cross-link (same pillar, ≥2 shared tags: beginner, modding)
+### [x] [cross-links] [4.5] keyboard-cables-compared ↔ mounting-styles-compared — no prose cross-link (same pillar, ≥2 shared tags: beginner, modding) — addressed in ffb545e
 - category: cross-links
 - filed: 2026-07-19 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -7459,7 +7459,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/mounting-styles-compared.mdx
 - action: add [mounting-styles-compared](/article/mounting-styles-compared) to keyboard-cables-compared body, or vice versa
 
-### [ ] [cross-links] [4.5] keyboard-cables-compared ↔ sound-dampening-compared — no prose cross-link (same pillar, ≥2 shared tags: beginner, modding)
+### [x] [cross-links] [4.5] keyboard-cables-compared ↔ sound-dampening-compared — no prose cross-link (same pillar, ≥2 shared tags: beginner, modding) — addressed in ffb545e
 - category: cross-links
 - filed: 2026-07-19 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -7470,7 +7470,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/sound-dampening-compared.mdx
 - action: add [sound-dampening-compared](/article/sound-dampening-compared) to keyboard-cables-compared body, or vice versa
 
-### [ ] [cross-links] [4.5] keyboard-cables-compared ↔ stabilizers-explained — no prose cross-link (same pillar, ≥2 shared tags: beginner, modding)
+### [x] [cross-links] [4.5] keyboard-cables-compared ↔ stabilizers-explained — no prose cross-link (same pillar, ≥2 shared tags: beginner, modding) — addressed in ffb545e
 - category: cross-links
 - filed: 2026-07-19 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
