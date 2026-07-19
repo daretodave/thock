@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-29T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "gazzew-boba-u4t-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "the-bump-why-it-sits-where-it-does",
+  "brief_summary": "Force-travel line chart of a single U4T downstroke from 0mm to 4.0mm. The line rises gently, climbs steeply into a flat, coral-highlighted plateau between roughly 1.0mm and 1.8mm of travel labelled '62g actuation, pronounced plateau', then drops and runs flat for the remainder of the stroke to a marked bottom-out at 4.0mm labelled '68g'. A dashed reference line names the 6-gram gap between the plateau's resolution and the bottom-out weight.",
+  "target": "apps/web/public/article-viz/gazzew-boba-u4t-deep-dive/bump-profile.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "data/switches/gazzew-boba-u4t.json — springGrams: { actuation: 62, bottomOut: 68 }, travelMm: 4.0",
+    "gazzew-boba-u4t-deep-dive.mdx § 'The bump: why it sits where it does' — 'a D-shaped bump ... a flat plateau across the top rather than a sharp peak' and 'Gazzew positions that plateau high in the 4.0mm stroke, in the upper third of the travel'",
+    "gazzew-boba-u4t-deep-dive.mdx § 'The bump: why it sits where it does' — 'the U4T's spread is only 6 grams'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gazzew-boba-u4t-deep-dive/bump-profile.svg"],
+  "warnings": []
+}

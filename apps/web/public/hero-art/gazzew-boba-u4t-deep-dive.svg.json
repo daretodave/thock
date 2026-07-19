@@ -1,0 +1,31 @@
+{
+  "generated_by": "content-curator-handauthored",
+  "engine": "hand-authored SVG (no raster pipeline)",
+  "at": "2026-06-29T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "hero-art",
+  "source": null,
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "JetBrains Mono"],
+  "slug": "gazzew-boba-u4t-deep-dive",
+  "subject": "switch cross-section — Gazzew Boba U4T full nylon housing, POM stem with a D-shaped flat-plateau tactile bump positioned high in the stroke, no foam dampeners so top-out and bottom-out ring freely",
+  "motif": "switch cross-section",
+  "splashHue": "coral",
+  "splashColor": "oklch(0.68 0.165 28)",
+  "canvas": "1200x750",
+  "strokeWeight": "2px",
+  "strokeColor": "oklch(0.78 0.005 90)",
+  "outputs": [
+    "apps/web/public/hero-art/gazzew-boba-u4t-deep-dive.svg",
+    "apps/web/public/hero-art/gazzew-boba-u4t-deep-dive.svg.json"
+  ],
+  "warnings": [
+    "Replaces an earlier brander-generated hero-art pass (commit a62cb41829d0a85ca51703571214bd138d6be5fa, dated 2026-07-19) that drew the U4T's bump as a smooth round bow. That characterization conflicts with this publication's already-shipped, canonical description of the U4T bump as D-shaped with a flat plateau (see durock-t1-deep-dive.mdx: 'the U4T's long D-shaped plateau' and drop-holy-panda-x-deep-dive.mdx: 'A Boba U4T ... delivers a D-shaped bump: a steep climb on the front edge, a long flat plateau across the top of the bump, and a steep drop on the back edge'). This pass corrects the stem geometry to a flat-topped plateau while preserving the earlier pass's foam-ghost-ring / resonance-arc motif, which remains accurate and is reused here."
+  ],
+  "notes": "MX-style single-switch cross-section, three exploded tiers: (A) top housing — nylon, trapezoid shell with cruciform stem aperture, LED notch, and a faint dashed 'ghost ring' on the inner cavity marking where a foam top-out pad would ordinarily sit but doesn't; (B) POM stem with a flat-topped, rounded-corner D-shaped plateau (shelf at y 297-325, apex plateau) positioned high in the stem's full body span, followed by a straight skirt to bottom-out — matching the corpus's established 'D-shaped plateau' language for this specific switch, distinct from Durock T1's hard right-angle shoulder and Drop Holy Panda X's smooth round bow at mid-travel; (C) bottom housing — nylon, with central spring well, 8-coil spring, PCB pin contacts, and a matching dashed 'ghost ring' on the floor marking the absent bottom-out foam pad. Coral splash (oklch(0.68 0.165 28)) applied as a wash across the plateau zone, a filled accent dot+ring at the plateau's right shoulder contact point (658, 325), and reused at reduced opacity for two sets of concentric half-arcs — radiating upward above the top housing (centered 600,150) and downward below the bottom housing (centered 600,650) — naming the 'no foam dampeners, rings freely on top-out and bottom-out' acoustic claim as the piece's distinguishing visual device. Coral value chosen to sit clear of the other coral/terracotta hues already in rotation for switch deep-dives: Gateron Oil King (oklch(0.71 0.135 30)), Cherry MX2A (oklch(0.6 0.19 30)), Durock T1 (oklch(0.58 0.115 38)), Drop Holy Panda X (oklch(0.55 0.105 40)), Magnetic Switches (oklch(0.62 0.10 45)). Micro IBM Plex Sans labels (TOP HOUSING · NYLON, STEM · POM, D-SHAPED PLATEAU — HIGH IN STROKE, BOTTOM HOUSING · NYLON, TOP-OUT / BOTTOM-OUT — NO DAMPENER, RINGS FREE) with one leader line at reduced opacity. JetBrains Mono technical callout at bottom margin. Brass-bronze ornamental dot at top-right (1148, 92) and left-margin ruler ticks at tier midpoints per family convention.",
+  "data_sources": [
+    "data/switches/gazzew-boba-u4t.json — housing: { top: 'nylon', bottom: 'nylon' }, stem: 'POM', description: 'same pronounced round bump near the top of the stroke, but without the foam dampeners, so the bottom-out and top-out ring freely'",
+    "durock-t1-deep-dive.mdx § 'The bump: a sharp front edge, minimal plateau' — 'the U4T's long D-shaped plateau'",
+    "drop-holy-panda-x-deep-dive.mdx § 'The rounded bump, geometrically' — 'A Boba U4T or a Tecsee Sapphire delivers a D-shaped bump: a steep climb on the front edge, a long flat plateau across the top of the bump, and a steep drop on the back edge'"
+  ]
+}

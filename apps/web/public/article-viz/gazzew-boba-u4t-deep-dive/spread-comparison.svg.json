@@ -1,0 +1,25 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-29T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "gazzew-boba-u4t-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "where-the-u4t-sits-against-the-field",
+  "brief_summary": "Horizontal bar comparison, three rows, each showing an actuation-to-bottom-out spring spread on a shared 50g-70g scale. Row one (Gazzew Boba U4T, coral) runs 62g to 68g, a short 6-gram bar labelled the heaviest actuation with the narrowest climb. Row two (Drop Holy Panda X) runs 60g to 67g, a 7-gram bar. Row three (Durock T1) runs 55g to 67g, the longest bar at 12 grams, labelled lightest actuation with the widest climb to bottom-out.",
+  "target": "apps/web/public/article-viz/gazzew-boba-u4t-deep-dive/spread-comparison.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "data/switches/gazzew-boba-u4t.json — springGrams: { actuation: 62, bottomOut: 68 }",
+    "data/switches/drop-holy-panda-x.json — springGrams: { actuation: 60, bottomOut: 67 }",
+    "data/switches/durock-t1.json — springGrams: { actuation: 55, bottomOut: 67 }",
+    "gazzew-boba-u4t-deep-dive.mdx § 'Where the U4T sits against the field' — 'the heaviest actuation weight in the set at 62g, paired with the narrowest spread to bottom-out at just 6 grams' and 'a lighter 55g actuation that climbs a full 12 grams by the time the stroke bottoms out'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gazzew-boba-u4t-deep-dive/spread-comparison.svg"],
+  "warnings": []
+}

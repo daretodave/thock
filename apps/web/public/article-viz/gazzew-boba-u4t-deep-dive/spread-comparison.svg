@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Actuation-to-bottom-out spring spread — Gazzew Boba U4T, Drop Holy Panda X, Durock T1</title>
+
+  <!-- Shared scale: 50g to 70g mapped across x 260–1080 -->
+  <line x1="260" y1="60" x2="260" y2="360" stroke-opacity="0.2" stroke-dasharray="2 6"/>
+  <line x1="1080" y1="60" x2="1080" y2="360" stroke-opacity="0.2" stroke-dasharray="2 6"/>
+  <text x="260" y="46" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">50g</text>
+  <text x="1080" y="46" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">70g</text>
+
+  <!-- Row dividers -->
+  <g stroke-opacity="0.12">
+    <line x1="80" y1="150" x2="1140" y2="150"/>
+    <line x1="80" y1="250" x2="1140" y2="250"/>
+  </g>
+
+  <!-- ═══════════ ROW 1: Gazzew Boba U4T ═══════════ -->
+  <text x="86" y="100" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.95">Gazzew Boba U4T</text>
+  <!-- Bar from 62g to 68g: x = 260 + (g-50)*41 -->
+  <line x1="752" y1="112" x2="998" y2="112" stroke="oklch(0.68 0.165 28)" stroke-width="10" stroke-opacity="0.85"/>
+  <circle cx="752" cy="112" r="7" fill="oklch(0.68 0.165 28)" stroke="none"/>
+  <circle cx="998" cy="112" r="7" fill="oklch(0.68 0.165 28)" stroke="none"/>
+  <text x="875" y="140" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">6g spread — heaviest actuation, narrowest climb</text>
+
+  <!-- ═══════════ ROW 2: Drop Holy Panda X ═══════════ -->
+  <text x="86" y="200" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">Drop Holy Panda X</text>
+  <!-- Bar from 60g to 67g -->
+  <line x1="670" y1="212" x2="957" y2="212" stroke-opacity="0.6" stroke-width="10"/>
+  <circle cx="670" cy="212" r="7" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75"/>
+  <circle cx="957" cy="212" r="7" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75"/>
+  <text x="813" y="240" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">7g spread</text>
+
+  <!-- ═══════════ ROW 3: Durock T1 ═══════════ -->
+  <text x="86" y="300" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">Durock T1</text>
+  <!-- Bar from 55g to 67g -->
+  <line x1="465" y1="312" x2="957" y2="312" stroke-opacity="0.6" stroke-width="10"/>
+  <circle cx="465" cy="312" r="7" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75"/>
+  <circle cx="957" cy="312" r="7" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75"/>
+  <text x="711" y="340" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">12g spread — lightest actuation, widest climb to bottom-out</text>
+
+  <!-- Baseline -->
+  <line x1="80" y1="368" x2="1140" y2="368" stroke-opacity="0.3"/>
+
+  <!-- Bronze theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

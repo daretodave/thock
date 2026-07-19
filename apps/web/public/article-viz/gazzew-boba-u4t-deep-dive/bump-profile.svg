@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Force-travel diagram of the Gazzew Boba U4T downstroke, 0mm to 4.0mm</title>
+
+  <!-- Axis -->
+  <line x1="120" y1="400" x2="1080" y2="400" stroke-opacity="0.35"/>
+  <line x1="120" y1="80" x2="120" y2="400" stroke-opacity="0.35"/>
+
+  <!-- Travel ticks along the x-axis: 0, 1.0, 1.8, 4.0mm -->
+  <g stroke-opacity="0.3">
+    <line x1="120" y1="400" x2="120" y2="410"/>
+    <line x1="360" y1="400" x2="360" y2="410"/>
+    <line x1="504" y1="400" x2="504" y2="410"/>
+    <line x1="1080" y1="400" x2="1080" y2="410"/>
+  </g>
+  <text x="120" y="432" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55" text-anchor="middle">0mm</text>
+  <text x="360" y="432" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55" text-anchor="middle">1.0mm</text>
+  <text x="504" y="432" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55" text-anchor="middle">1.8mm</text>
+  <text x="1080" y="432" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55" text-anchor="middle">4.0mm</text>
+  <text x="600" y="460" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.45" text-anchor="middle">travel →</text>
+
+  <!-- Force curve: gentle rise, steep climb into plateau, flat plateau, steep
+       drop, then flat quiet glide to bottom-out (marked heavier at the floor) -->
+  <path d="
+    M 120 372
+    L 300 358
+    L 356 200
+    L 504 200
+    L 560 356
+    L 1080 340" stroke-width="3"/>
+
+  <!-- Plateau fill wash — coral, matches the article's splash lineage -->
+  <path d="
+    M 356 200
+    L 504 200
+    L 560 356
+    L 300 358
+    Z" fill="oklch(0.68 0.165 28 / 0.14)" stroke="none"/>
+
+  <!-- Plateau highlight stroke -->
+  <path d="M 356 200 L 504 200" stroke="oklch(0.68 0.165 28)" stroke-width="4" stroke-opacity="0.9"/>
+
+  <!-- Plateau label -->
+  <text x="430" y="176" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">62g actuation, pronounced plateau</text>
+
+  <!-- Bottom-out marker -->
+  <circle cx="1080" cy="340" r="5" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85"/>
+  <text x="1000" y="316" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">68g bottom-out</text>
+
+  <!-- 6-gram gap reference line, dashed, between plateau resolution and bottom-out -->
+  <line x1="560" y1="356" x2="1080" y2="340" stroke-dasharray="4 6" stroke-opacity="0.4"/>
+  <text x="820" y="386" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.5" text-anchor="middle">6-gram gap — plateau to floor</text>
+
+  <!-- y-axis label -->
+  <text x="90" y="240" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.45" text-anchor="middle" transform="rotate(-90 90 240)">force →</text>
+
+  <!-- Bronze theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

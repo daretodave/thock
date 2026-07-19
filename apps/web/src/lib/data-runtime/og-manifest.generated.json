@@ -61,6 +61,16 @@
       }
     },
     {
+      "slug": "gazzew-boba-u4t-deep-dive",
+      "readTime": 9,
+      "frontmatter": {
+        "title": "Why the Gazzew Boba U4T Rings Where the Boba U4 Stays Quiet",
+        "lede": "Same stem, same housing, same bump position — the U4T's whole personality comes down to what Gazzew left out. Pull the foam from a Boba U4 and the bottom-out stops being polite.",
+        "pillar": "deep-dives",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "custom-keyboard-kit-buyers-guide",
       "readTime": 8,
       "frontmatter": {
@@ -818,6 +828,11 @@
       "category": "brand"
     },
     {
+      "slug": "gazzew",
+      "name": "Gazzew",
+      "category": "brand"
+    },
+    {
       "slug": "glove80",
       "name": "Glove80",
       "category": "brand"
@@ -1340,5 +1355,5 @@
       "readTime": 4
     }
   ],
-  "generatedAt": "2026-07-19T12:41:42.846Z"
+  "generatedAt": "2026-07-19T13:51:37.504Z"
 }

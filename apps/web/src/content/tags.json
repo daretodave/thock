@@ -21,6 +21,7 @@
     { "slug": "cannonkeys", "name": "CannonKeys", "category": "brand" },
     { "slug": "drop", "name": "Drop", "category": "brand" },
     { "slug": "durock", "name": "Durock", "category": "brand" },
+    { "slug": "gazzew", "name": "Gazzew", "category": "brand" },
 
     { "slug": "abs", "name": "ABS", "category": "material" },
     { "slug": "pbt", "name": "PBT", "category": "material" },

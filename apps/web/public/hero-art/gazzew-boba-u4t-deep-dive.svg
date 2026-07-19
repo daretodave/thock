@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — Gazzew Boba U4T switch cross-section: nylon top and bottom housing, POM stem with a D-shaped tactile plateau positioned high in the stroke, no foam dampeners — top-out and bottom-out ring freely</title>
+
+  <!-- Coral splash wash — centered on the tactile-plateau zone. Single splash,
+       single hue, reused for the plateau contact dot+ring and the top-out /
+       bottom-out resonance arcs (the "rings freely, no foam" motif) so the
+       piece stays single-splash per family convention. Distinct from the
+       other coral/terracotta values already in rotation: Gateron Oil King
+       (oklch(0.71 0.135 30)), Cherry MX2A (oklch(0.6 0.19 30)), Durock T1
+       (oklch(0.58 0.115 38)), Drop Holy Panda X (oklch(0.55 0.105 40)). -->
+  <ellipse cx="600" cy="330" rx="200" ry="50" fill="oklch(0.68 0.165 28 / 0.18)" stroke="none"/>
+
+  <!-- ════════════════════════════════════════════════════════════════════════════
+       COMPOSITION: single switch cross-section, three exploded tiers:
+         Tier A: Top housing (nylon) — y 150–250
+         Tier B: Stem (POM) + fixed crossbar, D-shaped flat plateau — y 290–470
+         Tier C: Bottom housing (nylon) + coil spring — y 510–650
+       Explode lines at y 274 and y 494.
+
+       The Boba U4T's tactile bump is D-shaped — a steep climb, a flat plateau
+       across the top, a steep drop — not a smooth round bow. The plateau is
+       drawn as a flat, rounded-corner shelf on the stem's flanks (y 305–353),
+       positioned high in tier B, matching this publication's established
+       characterization of the U4T bump (see the Durock T1 and Drop Holy Panda
+       X deep-dives, both of which cite the U4T's "D-shaped plateau" by name).
+
+       Because the U4T ships with no foam dampeners, faint dashed "ghost rings"
+       mark where a foam disc would ordinarily sit (top housing cavity, bottom
+       housing floor) — both left conspicuously empty — and coral resonance
+       arcs radiate outward above the top housing and below the bottom
+       housing, naming the "rings freely" acoustic claim.
+       ════════════════════════════════════════════════════════════════════════════ -->
+
+  <!-- ════════════════════════════════════════════════════════════════════════════
+       TOP-OUT RESONANCE ARCS
+       ════════════════════════════════════════════════════════════════════════════ -->
+  <g stroke="oklch(0.68 0.165 28)">
+    <path d="M 580 150 A 20 20 0 0 1 620 150" stroke-opacity="0.55"/>
+    <path d="M 564 150 A 36 36 0 0 1 636 150" stroke-opacity="0.35"/>
+    <path d="M 548 150 A 52 52 0 0 1 652 150" stroke-opacity="0.20"/>
+  </g>
+
+  <!-- ════════════════════════════════════════════════════════════════════════════
+       TIER A — TOP HOUSING (nylon)
+       ════════════════════════════════════════════════════════════════════════════ -->
+  <path d="
+    M 410 150
+    L 790 150
+    L 818 250
+    L 382 250
+    Z" />
+  <path d="
+    M 428 163
+    L 772 163
+    L 800 238
+    L 400 238
+    Z" stroke-opacity="0.4"/>
+
+  <!-- Cruciform stem aperture -->
+  <path d="
+    M 552 150
+    L 668 150
+    L 672 162
+    L 660 162
+    L 660 170
+    L 644 170
+    L 644 162
+    L 576 162
+    L 576 170
+    L 560 170
+    L 560 162
+    L 548 162
+    Z" stroke-opacity="0.7"/>
+
+  <!-- LED notch -->
+  <path d="M 586 150 L 622 150 L 618 158 L 590 158 Z" stroke-opacity="0.55"/>
+
+  <!-- Mounting clip nubs -->
+  <line x1="382" y1="208" x2="372" y2="208" stroke-opacity="0.5"/>
+  <line x1="818" y1="208" x2="828" y2="208" stroke-opacity="0.5"/>
+
+  <!-- Ghost ring — where a foam pad would ordinarily sit against the top-out
+       contact. Deliberately empty: dashed, faint, unfilled. -->
+  <circle cx="600" cy="205" r="18" stroke-dasharray="3 4" stroke-opacity="0.28"/>
+
+  <!-- ── EXPLODE LINE A ─────────────────────────────────────────────────────── -->
+  <line x1="350" y1="274" x2="850" y2="274" stroke-dasharray="4 6" stroke-opacity="0.32"/>
+  <circle cx="600" cy="274" r="2.5" stroke-opacity="0.52"/>
+
+  <!-- ════════════════════════════════════════════════════════════════════════════
+       TIER B — STEM (POM) + FIXED CROSSBAR — D-shaped flat plateau, positioned
+       high in the stroke
+       ════════════════════════════════════════════════════════════════════════════ -->
+
+  <line x1="382" y1="290" x2="382" y2="470" stroke-opacity="0.85"/>
+  <line x1="404" y1="290" x2="404" y2="470" stroke-opacity="0.35"/>
+  <line x1="818" y1="290" x2="818" y2="470" stroke-opacity="0.85"/>
+  <line x1="796" y1="290" x2="796" y2="470" stroke-opacity="0.35"/>
+  <line x1="382" y1="290" x2="818" y2="290" stroke-opacity="0.55"/>
+  <line x1="382" y1="470" x2="818" y2="470" stroke-opacity="0.55"/>
+
+  <!-- Stem head — cruciform -->
+  <path d="
+    M 578 298
+    L 622 298
+    L 622 311
+    L 634 311
+    L 634 325
+    L 566 325
+    L 566 311
+    L 578 311
+    Z" />
+
+  <!-- Stem body — D-shaped flat plateau: a steep climb into a flat, rounded-
+       corner shelf (y 305–353), then a steep drop back to the stem's straight
+       skirt down to bottom-out. The flat shelf is the plateau's dwell; the
+       rounded corners (vs. a hard right angle) read as a controlled climb and
+       drop rather than an instant spike. -->
+  <path d="
+    M 566 325
+    L 566 305
+    Q 566 297 574 297
+    L 626 297
+    Q 634 297 634 305
+    L 634 325
+    L 658 325
+    Q 658 331 652 334
+    L 634 342
+    L 634 470
+    L 566 470
+    L 566 342
+    L 548 334
+    Q 542 331 542 325
+    Z" />
+
+  <!-- Stem centerline -->
+  <line x1="600" y1="305" x2="600" y2="466" stroke-opacity="0.48" stroke-dasharray="3 5"/>
+
+  <!-- Stem pole stubs -->
+  <line x1="581" y1="470" x2="583" y2="488" stroke-opacity="0.5"/>
+  <line x1="619" y1="470" x2="617" y2="488" stroke-opacity="0.5"/>
+
+  <!-- Fixed crossbar stubs, anchored to housing walls, reaching the plateau shelf -->
+  <line x1="404" y1="316" x2="540" y2="316" stroke-opacity="0.7"/>
+  <line x1="796" y1="316" x2="660" y2="316" stroke-opacity="0.7"/>
+  <line x1="540" y1="310" x2="540" y2="322" stroke-opacity="0.55"/>
+  <line x1="660" y1="310" x2="660" y2="322" stroke-opacity="0.55"/>
+
+  <!-- Downward motion chevron -->
+  <path d="M 596 420 L 600 426 L 604 420" stroke-opacity="0.52"/>
+
+  <!-- ── SPLASH ANCHOR — the plateau contact point, right shoulder ───────────── -->
+  <circle cx="658" cy="325" r="6.5" fill="oklch(0.68 0.165 28 / 0.95)" stroke="oklch(0.68 0.165 28)"/>
+  <circle cx="658" cy="325" r="12" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.5" fill="none"/>
+  <circle cx="542" cy="325" r="3" stroke-opacity="0.6"/>
+
+  <!-- ── EXPLODE LINE B ─────────────────────────────────────────────────────── -->
+  <line x1="350" y1="494" x2="850" y2="494" stroke-dasharray="4 6" stroke-opacity="0.32"/>
+  <circle cx="600" cy="494" r="2.5" stroke-opacity="0.52"/>
+
+  <!-- ════════════════════════════════════════════════════════════════════════════
+       TIER C — BOTTOM HOUSING (nylon) + coil spring
+       ════════════════════════════════════════════════════════════════════════════ -->
+
+  <path d="
+    M 400 510
+    L 800 510
+    L 800 650
+    L 400 650
+    Z" />
+  <path d="
+    M 416 510
+    L 784 510
+    L 784 638
+    L 416 638
+    Z" stroke-opacity="0.38"/>
+
+  <path d="
+    M 560 510
+    L 640 510
+    L 640 545
+    L 560 545
+    Z" stroke-opacity="0.58"/>
+
+  <ellipse cx="600" cy="552" rx="28" ry="5"/>
+  <ellipse cx="600" cy="563" rx="28" ry="5"/>
+  <ellipse cx="600" cy="574" rx="28" ry="5"/>
+  <ellipse cx="600" cy="585" rx="28" ry="5"/>
+  <ellipse cx="600" cy="596" rx="28" ry="5"/>
+  <ellipse cx="600" cy="607" rx="28" ry="5"/>
+  <ellipse cx="600" cy="618" rx="28" ry="5"/>
+  <ellipse cx="600" cy="629" rx="28" ry="5"/>
+  <line x1="600" y1="545" x2="600" y2="635" stroke-opacity="0.32" stroke-dasharray="2 4"/>
+
+  <!-- Ghost ring — where a foam pad would ordinarily sit on the bottom-housing
+       floor. Deliberately empty: dashed, faint, unfilled. -->
+  <circle cx="600" cy="636" r="20" stroke-dasharray="3 4" stroke-opacity="0.26"/>
+
+  <!-- PCB mount legs -->
+  <circle cx="500" cy="644" r="5.5"/>
+  <circle cx="700" cy="644" r="5.5"/>
+  <circle cx="600" cy="644" r="4.5" stroke-opacity="0.55"/>
+
+  <line x1="416" y1="510" x2="416" y2="524" stroke-opacity="0.45"/>
+  <line x1="784" y1="510" x2="784" y2="524" stroke-opacity="0.45"/>
+
+  <!-- ════════════════════════════════════════════════════════════════════════════
+       BOTTOM-OUT RESONANCE ARCS
+       ════════════════════════════════════════════════════════════════════════════ -->
+  <g stroke="oklch(0.68 0.165 28)">
+    <path d="M 580 650 A 20 20 0 0 0 620 650" stroke-opacity="0.55"/>
+    <path d="M 564 650 A 36 36 0 0 0 636 650" stroke-opacity="0.35"/>
+    <path d="M 548 650 A 52 52 0 0 0 652 650" stroke-opacity="0.20"/>
+  </g>
+
+  <!-- ── DIDACTIC MEASUREMENT TICKS (left margin) ─────────────────────────────── -->
+  <g stroke-opacity="0.28">
+    <line x1="350" y1="200" x2="362" y2="200"/>
+    <line x1="350" y1="380" x2="362" y2="380"/>
+    <line x1="350" y1="580" x2="362" y2="580"/>
+  </g>
+  <line x1="356" y1="200" x2="356" y2="580" stroke-opacity="0.14" stroke-dasharray="2 6"/>
+
+  <!-- ── LABEL ZONE ────────────────────────────────────────────────────────────── -->
+  <text x="420" y="178" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.50" stroke="none" letter-spacing="0.05em">TOP HOUSING · NYLON</text>
+  <text x="420" y="398" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.50" stroke="none" letter-spacing="0.05em">STEM · POM</text>
+  <text x="686" y="358" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.68 0.165 28)" fill-opacity="0.78" stroke="none" letter-spacing="0.05em">D-SHAPED PLATEAU — HIGH IN STROKE</text>
+  <text x="420" y="590" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.50" stroke="none" letter-spacing="0.05em">BOTTOM HOUSING · NYLON</text>
+  <text x="700" y="122" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.68 0.165 28)" fill-opacity="0.7" stroke="none" letter-spacing="0.05em">TOP-OUT — NO DAMPENER, RINGS FREE</text>
+  <text x="700" y="700" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.68 0.165 28)" fill-opacity="0.7" stroke="none" letter-spacing="0.05em">BOTTOM-OUT — NO DAMPENER, RINGS FREE</text>
+
+  <!-- "D-SHAPED PLATEAU" leader to the primary contact dot -->
+  <line x1="686" y1="352" x2="662" y2="332" stroke-opacity="0.35" stroke-width="1"/>
+
+  <!-- ── JetBrains Mono technical value ───────────────────────────────────────── -->
+  <text x="420" y="738" font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace" font-size="10" fill="oklch(0.78 0.005 90)" fill-opacity="0.38" stroke="none" letter-spacing="0.03em">GAZZEW BOBA U4T — NYLON/NYLON/POM, D-SHAPED PLATEAU, NO FOAM DAMPENERS</text>
+
+  <!-- ── BRONZE THEME DOT — family ornamental anchor, upper-right margin ───────── -->
+  <circle cx="1148" cy="92" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

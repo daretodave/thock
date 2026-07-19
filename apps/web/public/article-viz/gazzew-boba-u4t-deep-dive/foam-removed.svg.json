@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-06-29T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "gazzew-boba-u4t-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "what-the-foam-actually-did",
+  "brief_summary": "Two side-by-side switch cross-sections sharing an identical stem and housing outline. The left panel (Boba U4) shows a filled foam pad at the top-out cavity and the bottom-out floor with small, contained sound-wave arcs. The right panel (Boba U4T) shows the same two contact points empty (dashed ghost outlines) with tall, coral resonance arcs radiating from both, naming the 'rings freely, deep full-bodied thud' claim.",
+  "target": "apps/web/public/article-viz/gazzew-boba-u4t-deep-dive/foam-removed.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "data/switches/gazzew-boba-u4t.json — description: 'Full-sound tactile counterpart to the Boba U4 — same nylon housing, same pronounced round bump near the top of the stroke, but without the foam dampeners, so the bottom-out and top-out ring freely. The result is a tactile with a deep, full-bodied thud on each keypress.'",
+    "gazzew-boba-u4t-deep-dive.mdx § 'What the foam actually did' — 'A foam dampener does one specific mechanical job: it inserts a compressible layer between two hard surfaces at the moment they'd otherwise meet directly' and 'the nylon housing itself becomes the thing doing the ringing'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gazzew-boba-u4t-deep-dive/foam-removed.svg"],
+  "warnings": []
+}
