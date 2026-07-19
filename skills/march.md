@@ -92,13 +92,17 @@ If `IS_MONDAY=yes` AND `SNAPSHOT_EXISTS=no`:
    the schema. The e2e smoke walker covers `/trends/tracker/<week>`
    automatically via `generateStaticParams`.
 
-4. **Commit + push** via `ship-data` conventions:
+4. **Commit** via `ship-data` conventions — do **not** push yet;
+   Step 4.5's follow-up commit (if any) ships in the same push (two
+   rapid-fire pushes seconds apart can drop the Vercel
+   git-integration webhook for the second commit, leaving it with
+   no deployment record — see AUDIT.md `[external-issue] [4.2]`,
+   issue #540):
    ```bash
    git add data/trends/${CURRENT_WEEK}.json
    git commit -m "data: trend snapshot ${CURRENT_WEEK}
 
    Cloud-Run: <run-url>"
-   git push origin main
    ```
 
 4.5. **Run tracker linkage survey** (Phase 41 amendment) — after the snapshot
@@ -108,7 +112,9 @@ If `IS_MONDAY=yes` AND `SNAPSHOT_EXISTS=no`:
    node scripts/tracker-linkage-survey.mjs --write
    ```
 
-   If it files new AUDIT rows, commit them:
+   If it files new AUDIT rows, commit them. Then push once — this
+   single push covers both the snapshot commit and this one (if it
+   ran):
 
    ```bash
    git add plan/AUDIT.md
@@ -118,7 +124,12 @@ If `IS_MONDAY=yes` AND `SNAPSHOT_EXISTS=no`:
    git push origin main
    ```
 
-   If it exits clean or non-zero, log and continue. The survey is best-effort.
+   If it exits clean or non-zero, log and continue (no rows filed —
+   still push the Step 4 commit alone):
+
+   ```bash
+   git push origin main
+   ```
 
 5. **Return.** Skip Steps 1–4 this tick. Next tick re-dispatches normally.
 

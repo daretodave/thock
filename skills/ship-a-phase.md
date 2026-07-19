@@ -379,26 +379,30 @@ Decisions:
 Closes #<phase-issue-number>
 EOF
 )"
-git push origin main
 ```
 
-**No `Co-Authored-By:` trailer. No emojis.**
-
-Push triggers a Netlify deploy. **A red main = a red site.** If
-verify passed locally and Netlify still fails, fetch the deploy log
-and treat it like a verify failure (read, patch, push).
+**No `Co-Authored-By:` trailer. No emojis.** Do **not** push yet —
+Step 11's DoD-tick commit ships in the same push (two rapid-fire
+pushes seconds apart can drop the Vercel git-integration webhook for
+the second commit, leaving it with no deployment record — see
+AUDIT.md `[external-issue] [4.2]`, issue #540).
 
 ### Step 11 — Tick the DoD
 
 Flip the shipped `[ ]` to `[x]` in the "Status (at-a-glance)"
 block of `plan/steps/01_build_plan.md` and add the commit hash to
-the "Phase log" section. Commit:
+the "Phase log" section. Commit, **then push once** — this single
+push covers both this commit and Step 10's ship commit:
 
 ```bash
 git add plan/steps/01_build_plan.md
 git commit -m "plan: phase <N> shipped — <one-line>"
 git push origin main
 ```
+
+Push triggers a Netlify deploy. **A red main = a red site.** If
+verify passed locally and Netlify still fails, fetch the deploy log
+and treat it like a verify failure (read, patch, push).
 
 If you generated a brief in step 2, that's a separate prior commit
 (subject `phases: brief for phase <N>`).
@@ -476,6 +480,12 @@ These are dictated by the user; do not relax:
     the stderr and continue. The mirror is a public timeline, not
     a verification step. Do not block phase delivery on GitHub
     issue API hiccups.
+12. **One push per tick, not one push per commit.** Step 10's ship
+    commit and Step 11's DoD-tick commit both stage locally; push
+    once, at the end of Step 11. Two rapid-fire pushes seconds apart
+    can drop the Vercel git-integration webhook for the second
+    commit — a real commit lands on `main` with no deployment
+    record at all (confirmed reproducing: issue #540).
 
 ## 8. Cross-link retrofit policy
 

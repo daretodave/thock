@@ -425,17 +425,23 @@ Decisions:
   2026-W17).
 EOF
 )"
-git push origin main
 ```
+
+Do **not** push yet — Step 6's audit-tick commit ships in the same
+push (see Hard rule §7.8: two rapid-fire pushes seconds apart can
+drop the Vercel git-integration webhook for the second one, leaving
+a pushed commit with no deployment record — see AUDIT.md `[external-issue] [4.2]`, issue #540).
 
 ### Step 6 — Tick the audit
 
 Flip the addressed finding to `[x]` in `plan/AUDIT.md` and append
-the commit hash. Commit:
+the commit hash. Commit, **then push once** — this single push
+covers both this commit and Step 5's fix commit:
 
 ```bash
 git add plan/AUDIT.md
 git commit -m "audit: finding [8.1] addressed"
+git push origin main
 ```
 
 ### Step 7 — Confirm deploy
@@ -516,6 +522,14 @@ Everything else: decide, ship, document. The loop continues.
    the fix anyway. Likewise, `close-comment` failures after a
    green deploy are warnings, not blockers. The mirror is a
    public timeline, not a verification step.
+8. **One push per tick, not one push per commit.** Step 5's fix
+   commit and Step 6's audit-tick commit both stage locally; push
+   once, at the end of Step 6. Two rapid-fire pushes seconds apart
+   can drop the Vercel git-integration webhook for the second commit
+   — a real commit lands on `main` with no deployment record at all
+   (confirmed reproducing: issue #540). This applies to every
+   trailing follow-up commit in the same tick, not just the audit
+   tick.
 
 ## 8. Quick reference
 

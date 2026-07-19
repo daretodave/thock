@@ -390,13 +390,17 @@ Closes #<N>
 Cloud-Run: <cloud-run-url>
 EOF
 )"
-git push origin main
 ```
 
 **No `Co-Authored-By:` trailer. No emojis.**
 
 The `Cloud-Run:` trailer is mandatory for every cloud-loop commit
 (see `agents.md` cloud-mode rules). Local invocations omit it.
+
+Do **not** push yet — Step 8's audit-tick commit ships in the same
+push (two rapid-fire pushes seconds apart can drop the Vercel
+git-integration webhook for the second commit, leaving it with no
+deployment record — see AUDIT.md `[external-issue] [4.2]`, issue #540).
 
 ### Step 8 — Tick the audit
 
@@ -422,7 +426,8 @@ node scripts/content-gap-survey.mjs --write
   not blocked by refill failure.
 
 Commit the audit update (including any new refill row) as a single
-commit (keeps the article commit clean):
+commit (keeps the article commit clean), **then push once** — this
+single push covers both this commit and Step 7d's article commit:
 
 ```bash
 git add plan/AUDIT.md
@@ -480,6 +485,12 @@ Return cleanly. The loop's next tick re-dispatches.
 6. **Verify gate is non-negotiable.** No `--no-verify`.
 7. **Issue mirror is best-effort, not gating.** Mirror failures
    are logged; the article ships regardless.
+8. **One push per tick, not one push per commit.** Step 7d's
+   article commit and Step 8's audit-tick commit both stage
+   locally; push once, at the end of Step 8. Two rapid-fire pushes
+   seconds apart can drop the Vercel git-integration webhook for the
+   second commit — a real commit lands on `main` with no deployment
+   record at all (confirmed reproducing: issue #540).
 
 ## 6. Quick reference
 
