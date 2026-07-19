@@ -21,6 +21,16 @@
       }
     },
     {
+      "slug": "cannonkeys-blaine-v2-se-group-buy",
+      "readTime": 6,
+      "frontmatter": {
+        "title": "The Blaine V2: SE puts three mount systems in one kit and asks the buyer to pick",
+        "lede": "CannonKeys's F12 TKL follow-up ships with top mount, single-sided gasket, and o-ring hardware in the same box, plus a carbon-fiber bottom plate and a POM underside element it calls Volcano. The mount menu is the story.",
+        "pillar": "news",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "brass-weight-mod",
       "readTime": 8,
       "frontmatter": {
@@ -1310,5 +1320,5 @@
       "readTime": 4
     }
   ],
-  "generatedAt": "2026-07-18T22:37:51.076Z"
+  "generatedAt": "2026-07-19T05:23:01.029Z"
 }

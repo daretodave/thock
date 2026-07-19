@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1200 750"
+     preserveAspectRatio="xMidYMid meet"
+     fill="none"
+     stroke="oklch(0.78 0.005 90)"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     role="img"
+     aria-label="thock article hero art for the CannonKeys Blaine V2: SE group buy — F12 TKL keyboard outline with triple-mount tells, a carbon-fiber material band, and a glowing POM volcano diffuser beneath the case, in a muted terracotta accent">
+  <title>thock hero — CannonKeys Blaine V2: SE group buy, F12 TKL outline with triple-mount + carbon-fiber + volcano diffuser tells</title>
+
+  <!--
+    Article hero (news/vendor piece) for the CannonKeys Blaine V2: SE
+    group buy. Per bearings.md "Article hero art" directive, a
+    news/vendor piece maps to a layout silhouette — this renders a
+    top-down F12 TKL keyboard outline as the primary subject, with
+    three restrained narrative additions unique to this article's
+    thesis (not present on the companion group-buy card art):
+
+      1. Triple-mount tells — three small glyphs beneath the case
+         (screw boss / gasket strip / o-ring) reading "top mount,
+         single-sided gasket, o-ring" without any text.
+      2. Carbon-fiber band — a thin weave-textured strip beneath the
+         case suggesting the carbon-fiber bottom plate.
+      3. POM "volcano" diffuser — a small cone glyph with concentric
+         glow rings beneath the carbon band, literalizing the
+         underside light-diffusing element the article covers.
+      4. Four unlabeled colorway dots (Classic / Volcano / Seafoam /
+         Mystery) rendered as one splash hue at varying opacity —
+         "four finishes, one accent language," never a second hue.
+
+    Single-splash discipline: muted terracotta is the only per-piece
+    accent hue. The bronze theme dot is the fixed family ornament.
+    Stroke and texture elements stay neutral warm-grey.
+
+    Palette:
+      splash (muted terracotta)  oklch(0.58 0.09 40)
+      bronze theme dot           oklch(0.80 0.135 75)   (fixed, upper-right)
+      stroke / key dots          oklch(0.78 0.005 90)   (family default)
+  -->
+
+  <!-- ============================================================
+       BACKGROUND WARM WASH — barely-there terracotta field.
+  ============================================================ -->
+  <rect x="60" y="50" width="1080" height="650"
+        fill="oklch(0.58 0.09 40 / 0.045)" stroke="none"/>
+
+  <!-- ============================================================
+       BRONZE THEME DOT — upper-right margin, fixed family
+       ornamental anchor, independent of this piece's splash hue.
+  ============================================================ -->
+  <circle cx="1104" cy="90" r="8"
+          fill="oklch(0.80 0.135 75 / 0.92)"
+          stroke="oklch(0.80 0.135 75)"/>
+  <circle cx="1104" cy="90" r="16"
+          stroke="oklch(0.80 0.135 75)"
+          stroke-opacity="0.32"
+          fill="none"/>
+
+  <!-- ============================================================
+       OUTER CASE — F12 TKL aluminum board, top-down outline.
+       Case bounding box: x=90..1110, y=170..499 (1020 x 329).
+  ============================================================ -->
+  <rect x="90" y="170" width="1020" height="329" rx="14" ry="14"
+        fill="oklch(0.58 0.09 40 / 0.08)"/>
+  <rect x="90" y="170" width="1020" height="329" rx="14" ry="14"/>
+
+  <!-- Inner bezel inset — plate frame -->
+  <rect x="106" y="186" width="988" height="297" rx="9" ry="9"
+        stroke-opacity="0.35"/>
+
+  <!-- Top bezel band — machined aluminum top edge, terracotta wash -->
+  <rect x="90" y="170" width="1020" height="34" rx="14" ry="14"
+        fill="oklch(0.58 0.09 40 / 0.20)" stroke="none"/>
+  <line x1="106" y1="204" x2="1094" y2="204"
+        stroke="oklch(0.58 0.09 40)" stroke-opacity="0.60" stroke-width="1.5"/>
+
+  <!-- Nameplate outline — engraved-plate suggestion, shape only, no text -->
+  <rect x="555" y="178" width="90" height="18" rx="2" ry="2"
+        stroke="oklch(0.58 0.09 40)" stroke-opacity="0.40"
+        stroke-width="1" fill="none"/>
+
+  <!-- ============================================================
+       KEY DOT GRID — F12 TKL layout.
+       Columns (15, pitch 60): 146,206,266,326,386,446,506,566,
+                                 626,686,746,806,866,926,986
+  ============================================================ -->
+
+  <!-- Faint vertical column guides across the alpha block -->
+  <g stroke-opacity="0.10" stroke-width="1">
+    <line x1="176" y1="206" x2="176" y2="483"/>
+    <line x1="236" y1="206" x2="236" y2="483"/>
+    <line x1="296" y1="206" x2="296" y2="483"/>
+    <line x1="356" y1="206" x2="356" y2="483"/>
+    <line x1="416" y1="206" x2="416" y2="483"/>
+    <line x1="476" y1="206" x2="476" y2="483"/>
+    <line x1="536" y1="206" x2="536" y2="483"/>
+    <line x1="596" y1="206" x2="596" y2="483"/>
+    <line x1="656" y1="206" x2="656" y2="483"/>
+    <line x1="716" y1="206" x2="716" y2="483"/>
+    <line x1="776" y1="206" x2="776" y2="483"/>
+    <line x1="836" y1="206" x2="836" y2="483"/>
+    <line x1="896" y1="206" x2="896" y2="483"/>
+    <line x1="956" y1="206" x2="956" y2="483"/>
+  </g>
+
+  <!-- === F-row: Esc + F1-F12 (13 keys, two gaps) — the "F12" tell === -->
+  <g fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.50">
+    <circle cx="146" cy="216" r="2.5"/>
+    <circle cx="266" cy="216" r="2.5"/>
+    <circle cx="326" cy="216" r="2.5"/>
+    <circle cx="386" cy="216" r="2.5"/>
+    <circle cx="446" cy="216" r="2.5"/>
+    <circle cx="566" cy="216" r="2.5"/>
+    <circle cx="626" cy="216" r="2.5"/>
+    <circle cx="686" cy="216" r="2.5"/>
+    <circle cx="746" cy="216" r="2.5"/>
+    <circle cx="806" cy="216" r="2.5"/>
+    <circle cx="866" cy="216" r="2.5"/>
+    <circle cx="926" cy="216" r="2.5"/>
+    <circle cx="986" cy="216" r="2.5"/>
+  </g>
+
+  <!-- === Number row — 15 keys === -->
+  <g fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">
+    <circle cx="146" cy="274" r="3"/>
+    <circle cx="206" cy="274" r="3"/>
+    <circle cx="266" cy="274" r="3"/>
+    <circle cx="326" cy="274" r="3"/>
+    <circle cx="386" cy="274" r="3"/>
+    <circle cx="446" cy="274" r="3"/>
+    <circle cx="506" cy="274" r="3"/>
+    <circle cx="566" cy="274" r="3"/>
+    <circle cx="626" cy="274" r="3"/>
+    <circle cx="686" cy="274" r="3"/>
+    <circle cx="746" cy="274" r="3"/>
+    <circle cx="806" cy="274" r="3"/>
+    <circle cx="866" cy="274" r="3"/>
+    <circle cx="926" cy="274" r="3"/>
+    <circle cx="986" cy="274" r="3"/>
+  </g>
+
+  <!-- === QWERTY row — 15 keys === -->
+  <g fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">
+    <circle cx="146" cy="324" r="3"/>
+    <circle cx="206" cy="324" r="3"/>
+    <circle cx="266" cy="324" r="3"/>
+    <circle cx="326" cy="324" r="3"/>
+    <circle cx="386" cy="324" r="3"/>
+    <circle cx="446" cy="324" r="3"/>
+    <circle cx="506" cy="324" r="3"/>
+    <circle cx="566" cy="324" r="3"/>
+    <circle cx="626" cy="324" r="3"/>
+    <circle cx="686" cy="324" r="3"/>
+    <circle cx="746" cy="324" r="3"/>
+    <circle cx="806" cy="324" r="3"/>
+    <circle cx="866" cy="324" r="3"/>
+    <circle cx="926" cy="324" r="3"/>
+    <circle cx="986" cy="324" r="3"/>
+  </g>
+
+  <!-- === Home row — 15 keys === -->
+  <g fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">
+    <circle cx="146" cy="374" r="3"/>
+    <circle cx="206" cy="374" r="3"/>
+    <circle cx="266" cy="374" r="3"/>
+    <circle cx="326" cy="374" r="3"/>
+    <circle cx="386" cy="374" r="3"/>
+    <circle cx="446" cy="374" r="3"/>
+    <circle cx="506" cy="374" r="3"/>
+    <circle cx="566" cy="374" r="3"/>
+    <circle cx="626" cy="374" r="3"/>
+    <circle cx="686" cy="374" r="3"/>
+    <circle cx="746" cy="374" r="3"/>
+    <circle cx="806" cy="374" r="3"/>
+    <circle cx="866" cy="374" r="3"/>
+    <circle cx="926" cy="374" r="3"/>
+    <circle cx="986" cy="374" r="3"/>
+  </g>
+
+  <!-- === Bottom row — 15 keys === -->
+  <g fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">
+    <circle cx="146" cy="424" r="3"/>
+    <circle cx="206" cy="424" r="3"/>
+    <circle cx="266" cy="424" r="3"/>
+    <circle cx="326" cy="424" r="3"/>
+    <circle cx="386" cy="424" r="3"/>
+    <circle cx="446" cy="424" r="3"/>
+    <circle cx="506" cy="424" r="3"/>
+    <circle cx="566" cy="424" r="3"/>
+    <circle cx="626" cy="424" r="3"/>
+    <circle cx="686" cy="424" r="3"/>
+    <circle cx="746" cy="424" r="3"/>
+    <circle cx="806" cy="424" r="3"/>
+    <circle cx="866" cy="424" r="3"/>
+    <circle cx="926" cy="424" r="3"/>
+    <circle cx="986" cy="424" r="3"/>
+  </g>
+
+  <!-- === Mod / spacebar row — left mods, spacebar (wide rect), right mods === -->
+  <g fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.70">
+    <circle cx="146" cy="466" r="3"/>
+    <circle cx="206" cy="466" r="3"/>
+    <circle cx="266" cy="466" r="3"/>
+    <circle cx="806" cy="466" r="3"/>
+    <circle cx="866" cy="466" r="3"/>
+    <circle cx="926" cy="466" r="3"/>
+  </g>
+  <rect x="316" y="452" width="460" height="28" rx="4" ry="4"
+        stroke-opacity="0.75" fill="none"/>
+
+  <!-- ============================================================
+       RIGHT NAVIGATION CLUSTER — 3x2 block (Ins/Home/PgUp,
+       Del/End/PgDn), the TKL nav-block tell.
+  ============================================================ -->
+  <g stroke-opacity="0.85">
+    <rect x="1018" y="263" width="22" height="22" rx="3" ry="3"/>
+    <rect x="1046" y="263" width="22" height="22" rx="3" ry="3"/>
+    <rect x="1074" y="263" width="22" height="22" rx="3" ry="3"/>
+    <rect x="1018" y="291" width="22" height="22" rx="3" ry="3"/>
+    <rect x="1046" y="291" width="22" height="22" rx="3" ry="3"/>
+    <rect x="1074" y="291" width="22" height="22" rx="3" ry="3"/>
+  </g>
+
+  <!-- ============================================================
+       ARROW CLUSTER — bottom-right, TKL identity mark.
+  ============================================================ -->
+  <g stroke-opacity="0.85">
+    <rect x="1046" y="422" width="22" height="22" rx="3" ry="3"/>
+    <rect x="1018" y="450" width="22" height="22" rx="3" ry="3"/>
+    <rect x="1046" y="450" width="22" height="22" rx="3" ry="3"/>
+    <rect x="1074" y="450" width="22" height="22" rx="3" ry="3"/>
+  </g>
+
+  <!-- ============================================================
+       TRIPLE-MOUNT TELLS — three small glyphs beneath the case,
+       this article's central thesis (top mount / single-sided
+       gasket / o-ring). Neutral warm-grey glyphs with a small
+       terracotta accent dot beneath each, tying them to the
+       splash without introducing a second hue.
+  ============================================================ -->
+  <g transform="translate(0,0)">
+    <!-- Top mount: screw boss with a cross-slot -->
+    <circle cx="420" cy="521" r="8" stroke-opacity="0.75"/>
+    <line x1="414" y1="521" x2="426" y2="521" stroke-opacity="0.75" stroke-width="1.5"/>
+
+    <!-- Single-sided gasket: short zig-zag strip -->
+    <path d="M 578 521 L 588 515 L 598 527 L 608 515 L 618 527 L 622 521"
+          stroke-opacity="0.75" stroke-width="1.5"/>
+
+    <!-- O-ring: open ring -->
+    <circle cx="780" cy="521" r="8" stroke-opacity="0.75" fill="none"/>
+    <circle cx="780" cy="521" r="3.5" stroke-opacity="0.75" fill="none"/>
+
+    <!-- Terracotta accent dots tying the three tells to the splash -->
+    <g fill="oklch(0.58 0.09 40 / 0.85)" stroke="none">
+      <circle cx="420" cy="536" r="2.5"/>
+      <circle cx="600" cy="536" r="2.5"/>
+      <circle cx="780" cy="536" r="2.5"/>
+    </g>
+  </g>
+
+  <!-- ============================================================
+       CARBON-FIBER BOTTOM PLATE REVEAL — thin band beneath the
+       mount tells, neutral warm-grey basket-weave texture.
+  ============================================================ -->
+  <defs>
+    <pattern id="carbon-weave-hero" width="8" height="8" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="8" x2="8" y2="0"
+            stroke="oklch(0.78 0.005 90)" stroke-opacity="0.28" stroke-width="1"/>
+      <line x1="-2" y1="2" x2="2" y2="-2"
+            stroke="oklch(0.78 0.005 90)" stroke-opacity="0.28" stroke-width="1"/>
+      <line x1="6" y1="10" x2="10" y2="6"
+            stroke="oklch(0.78 0.005 90)" stroke-opacity="0.28" stroke-width="1"/>
+      <line x1="0" y1="0" x2="8" y2="8"
+            stroke="oklch(0.78 0.005 90)" stroke-opacity="0.16" stroke-width="1"/>
+      <line x1="-2" y1="6" x2="2" y2="10"
+            stroke="oklch(0.78 0.005 90)" stroke-opacity="0.16" stroke-width="1"/>
+      <line x1="6" y1="-2" x2="10" y2="2"
+            stroke="oklch(0.78 0.005 90)" stroke-opacity="0.16" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect x="130" y="556" width="940" height="20" rx="6" ry="6"
+        fill="url(#carbon-weave-hero)"
+        stroke="oklch(0.78 0.005 90)" stroke-opacity="0.50"/>
+
+  <!-- ============================================================
+       POM "VOLCANO" DIFFUSER — small cone glyph beneath the
+       carbon band with concentric terracotta glow rings,
+       literalizing the article's underside light-diffusing part.
+  ============================================================ -->
+  <g>
+    <!-- Cone silhouette (flat-top crater), neutral stroke -->
+    <path d="M 565 654 L 583 618 L 617 618 L 635 654 Z" stroke-opacity="0.70"/>
+    <line x1="583" y1="618" x2="617" y2="618" stroke-opacity="0.70"/>
+
+    <!-- Glow rings emanating from the crater — this piece's splash -->
+    <circle cx="600" cy="614" r="34" stroke="oklch(0.58 0.09 40)" stroke-opacity="0.14" fill="none"/>
+    <circle cx="600" cy="614" r="22" stroke="oklch(0.58 0.09 40)" stroke-opacity="0.28" fill="none"/>
+    <circle cx="600" cy="614" r="11" stroke="oklch(0.58 0.09 40)" stroke-opacity="0.50" fill="none"/>
+    <circle cx="600" cy="614" r="5" fill="oklch(0.58 0.09 40 / 0.92)" stroke="none"/>
+  </g>
+
+  <!-- ============================================================
+       COLORWAY DOTS — Classic / Volcano / Seafoam / Mystery,
+       rendered as one splash hue at varying opacity — four
+       finishes, one accent language, never a second hue.
+  ============================================================ -->
+  <g fill="oklch(0.58 0.09 40)" stroke="none">
+    <circle cx="510" cy="700" r="7" opacity="1.0"/>
+    <circle cx="560" cy="700" r="7" opacity="0.70"/>
+    <circle cx="610" cy="700" r="7" opacity="0.45"/>
+    <circle cx="660" cy="700" r="7" opacity="0.22"/>
+  </g>
+</svg>

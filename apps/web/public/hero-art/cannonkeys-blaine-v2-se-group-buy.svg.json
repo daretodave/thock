@@ -1,0 +1,24 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-19T05:09:42Z",
+  "commit": "4df4e5aad02b24aaad19b9b58bedac7e4ccca790",
+  "kind": "hero-art",
+  "article_slug": "cannonkeys-blaine-v2-se-group-buy",
+  "article_pillar": "news",
+  "target": "apps/web/public/hero-art/cannonkeys-blaine-v2-se-group-buy.svg",
+  "source": "plan/bearings.md § Article hero art — colorful keyboard SVGs",
+  "template": "directive: news/vendor piece -> keyboard outline / layout silhouette",
+  "size": [1200, 750],
+  "subject": "Top-down F12 TKL keyboard outline silhouette for the CannonKeys Blaine V2: SE group-buy piece. Below the case: three unlabeled glyphs (screw boss / zig-zag gasket strip / open ring) reading the article's triple-mount system (top mount, single-sided gasket, o-ring); a neutral basket-weave band suggesting the carbon-fiber bottom plate; a small cone glyph with concentric glow rings suggesting the POM 'volcano' light-diffusing element on the underside; and four unlabeled dots at varying opacity of the same splash hue representing the Classic / Volcano / Seafoam / Mystery colorways.",
+  "brief_summary": "Distinct from the companion group-buy card art at /group-buy-art/cannonkeys-blaine-v2-se.svg (which renders the F12 TKL silhouette alone in warm terracotta). This hero art is the article-page treatment: same family F12 TKL silhouette plus three narrative additions unique to the mount-system / material story this article tells, in a distinct muted-terracotta value.",
+  "splash_color": { "name": "muted terracotta", "oklch": "oklch(0.58 0.09 40)" },
+  "secondary_accent": "oklch(0.80 0.135 75)",
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "f79eb6c0",
+  "fonts": [],
+  "outputs": [
+    "apps/web/public/hero-art/cannonkeys-blaine-v2-se-group-buy.svg"
+  ],
+  "warnings": []
+}

@@ -742,9 +742,10 @@
       "url": "https://cannonkeys.com/products/blaine-v2",
       "imageUrl": null,
       "heroImage": "/group-buy-art/cannonkeys-blaine-v2-se.svg",
+      "relatedArticle": "cannonkeys-blaine-v2-se-group-buy",
       "status": "live",
       "description": "Blaine V2: SE — F12 TKL aluminum keyboard kit with a carbon-fiber bottom plate, triple mount system (top mount, single-sided gasket, o-ring), and a POM volcano light-diffusing element on the underside. Offered in Classic, Volcano, Seafoam, and Mystery colorways with solder or hotswap PCB options. Group buy run by CannonKeys, 2026-07-10 through 2026-08-09; estimated shipping Q1 2027.",
-      "updatedAt": "2026-07-18T00:00:00.000Z"
+      "updatedAt": "2026-07-19T00:00:00.000Z"
     },
     {
       "slug": "cannonkeys-mode-sonnet-r2",
@@ -4655,6 +4656,34 @@
       "filePath": "apps/web/src/content/articles/cherry-xtrfy-tmr-pivot.mdx"
     },
     {
+      "slug": "cannonkeys-blaine-v2-se-group-buy",
+      "frontmatter": {
+        "slug": "cannonkeys-blaine-v2-se-group-buy",
+        "title": "The Blaine V2: SE puts three mount systems in one kit and asks the buyer to pick",
+        "lede": "CannonKeys's F12 TKL follow-up ships with top mount, single-sided gasket, and o-ring hardware in the same box, plus a carbon-fiber bottom plate and a POM underside element it calls Volcano. The mount menu is the story.",
+        "description": null,
+        "author": "thock",
+        "pillar": "news",
+        "tags": [
+          "cannonkeys",
+          "group-buy",
+          "aluminum",
+          "gasket-mount"
+        ],
+        "publishedAt": "2026-07-10T14:00:00.000Z",
+        "updatedAt": "2026-07-19T00:00:00.000Z",
+        "heroImage": "/hero-art/cannonkeys-blaine-v2-se-group-buy.svg",
+        "heroImageAlt": "Top-down line silhouette of a TKL keyboard case rendered in a 2px warm-grey stroke on a transparent 1200x750 canvas, with a coral splash marking three stacked mount-point brackets along the case's lower edge and a thin warm-bronze highlight along the top-right corner.",
+        "featured": false,
+        "popularityScore": 0,
+        "guideSection": null,
+        "mentionedParts": []
+      },
+      "body": "\nMost aluminum kits pick a mount family and defend it. Gasket-mount dominates the premium tier, top mount holds on for boards chasing a firmer, more direct keystroke, and o-ring survives mostly as a budget-friendly middle ground. CannonKeys's <Mono>Blaine V2: SE</Mono> declines to pick. The kit ships with hardware for all three — top mount, single-sided gasket, and o-ring — in the same box, alongside a carbon-fiber bottom plate and a POM underside piece the vendor calls Volcano. The group buy opened 2026-07-10 and runs through 2026-08-09.\n\n## Three mounts, one kit\n\nSupporting a single mount style well is a design problem — case wall thickness, plate tolerance, and gasket-channel geometry all get tuned around one target feel. Supporting three in the same shell is a harder one, because each mount style wants slightly different things from the case around it. Top mount wants a rigid plate perimeter screwed directly to the top case; single-sided gasket wants compliant material between the plate and the case on one axis while the PCB floats; o-ring wants a continuous ring of dampening material carrying the plate with no screws touching it at all.\n\n<Callout type=\"note\" title=\"What 'single-sided gasket' means here\">\n  Full gasket-mount typically cushions the plate on both the top and bottom case halves. Single-sided gasket drops the cushioning to one side — usually the top — and lets the other side sit more rigidly. The result splits the difference between a fully floating gasket feel and the firmer feedback of top mount, without committing to either extreme.\n</Callout>\n\nThe practical upshot for a buyer is that the <Mono>Blaine V2: SE</Mono> is one purchase decision that defers a second one. A buyer who wants the softest, most cushioned bottom-out picks o-ring hardware at build time. A buyer chasing a firmer, more direct keystroke assembles the same case in top-mount configuration instead. Single-sided gasket sits between the two. None of that requires a different case order — it is the same kit, built three different ways. Whether that flexibility reads as a genuine feature or as CannonKeys hedging on which mount buyers actually want is the open question the buy doesn't answer by itself; it will get answered by which configuration shows up most in build threads after boards ship.\n\n## A carbon-fiber plate changes the acoustic math\n\nAluminum and FR4 are the two plate materials most gasket and top-mount kits default to, and both are well-understood quantities — aluminum reads stiffer and brighter, FR4 reads a little softer and quieter, and most buyers have a mental model of the trade-off going in. Carbon fiber is a less common third option in this price and category range, and it doesn't map cleanly onto that aluminum-versus-FR4 spectrum. It's stiffer than FR4 by a meaningful margin while weighing less than aluminum, and its layered, woven structure damps vibration differently than either — carbon fiber tends toward a tighter, drier sound with less of the ring that a thin aluminum plate can carry.\n\nHere the plate in question is the bottom plate, not the mounting plate the switches sit in — a detail worth being precise about, because it changes what the material choice is actually doing. A bottom plate mostly closes off the case and controls how much of the internal cavity resonates back up through the switches; it isn't taking direct keystroke load the way a mounting plate does. A stiffer, denser bottom plate generally means less low-end boom and a shorter decay tail on each keystroke, which is the acoustic signature carbon fiber typically buys a build. Whether it's audible against a well-tuned aluminum bottom plate with foam already doing similar work is the kind of claim that needs ears on a finished board, not a spec sheet, to settle.\n\n## The Volcano element is a cosmetic move with an acoustic side effect\n\nThe <Mono>Volcano</Mono> colorway names the most visually distinctive of the kit's underside options: a POM light-diffusing element mounted on the bottom of the case. POM (polyoxymethylene) is a common switch-housing material prized for its self-lubricating, low-friction surface, but it's also translucent enough in thin sections to diffuse light — the same property that makes POM switch housings glow evenly under RGB rather than showing a hot spot at the LED. Applied to a bottom-case element instead of a switch housing, the same material property turns the underside of the board into a soft-glow panel rather than a bare aluminum or acrylic window.\n\nThe acoustic side effect is secondary but real. Any material swapped into the bottom-case stack changes what that layer of the acoustic sandwich is doing, and POM's damping properties sit closer to nylon than to acrylic or aluminum — softer, less prone to buzzing on contact. Whether the Volcano piece is primarily a lighting feature that happens to change the sound, or an acoustic tuning choice CannonKeys dressed up as a lighting feature, is not something the source material settles either way. It ships in four colorways total — Classic, Volcano, Seafoam, and Mystery — and only Volcano is described as carrying the light-diffusing element by name.\n\n## F12, briefly\n\nThe <Mono>Blaine V2: SE</Mono> is described as an F12 TKL — a TKL-adjacent layout naming convention that flags a function row running through F12 rather than a truncated or remapped top row, distinguishing it from 65% and 75% boards that compress or drop function keys entirely. For buyers coming from a standard TKL, the practical difference is minor; the naming is more useful as a signal that the function row survives intact than as a meaningfully new layout category.\n\n## Buying notes\n\nThe kit is a barebones case-and-PCB purchase, not a complete keyboard — no switches or keycaps are included, and no catalog listing for a specific switch or keycap pairing exists for this run. The buy is global through CannonKeys, a single checkout at <Source href=\"https://cannonkeys.com/products/blaine-v2\">CannonKeys's product page</Source>, with solder or hotswap PCB options available at build time in addition to the mount-hardware choice. The window runs 2026-07-10 through 2026-08-09 — a four-week buy. Estimated shipping is Q1 2027, a lead time typical for a group-buy case-and-PCB run of this scale. Pricing isn't listed in the source data reviewed for this piece and isn't reproduced here; check the vendor page directly before committing.\n\n## What to watch\n\nThe mount-hardware question is the one worth tracking past the close of the window: which of the three configurations — top mount, single-sided gasket, o-ring — ends up as the default recommendation in build threads once boards start shipping in early 2027. A kit hedging across three mount families is either a genuinely useful flexibility play or a sign that CannonKeys wasn't confident enough in any single mount tuning to commit the case design to it. Carbon-fiber bottom plates showing up on other vendors' 2027 kits would be the second signal worth watching — one high-visibility board using an uncommon plate material doesn't make a trend, but it's exactly the kind of choice that gets copied fast if early builds sound as tight as the material's reputation suggests they should.\n",
+      "readTime": 6,
+      "filePath": "apps/web/src/content/articles/cannonkeys-blaine-v2-se-group-buy.mdx"
+    },
+    {
       "slug": "brass-weight-mod",
       "frontmatter": {
         "slug": "brass-weight-mod",
@@ -7734,5 +7763,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-07-18T22:37:51.076Z"
+  "generatedAt": "2026-07-19T05:23:01.029Z"
 }
