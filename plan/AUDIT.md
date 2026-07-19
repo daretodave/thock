@@ -7527,3 +7527,15 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/gazzew-boba-u4t-deep-dive.mdx
 - article-b: apps/web/src/content/articles/hmx-cloud-deep-dive.mdx
 - action: add [hmx-cloud-deep-dive](/article/hmx-cloud-deep-dive) to gazzew-boba-u4t-deep-dive body, or vice versa
+
+### [ ] [newsletter] [4.0] Weekly digest — issue 004 due (7 days since issue 3)
+- category: content-gaps
+- filed: 2026-07-19 by newsletter-gap-survey.mjs
+- impact: 5 (newsletter archive going stale reduces /newsletter value and reader trust in cadence)
+- ease: 8 (content-curator weekly round-up: 5 pillar picks + tracker insight)
+- score: 4.0 (impact × ease / 10)
+- next: /ship-content → newsletter type (weekly round-up, 5 pillar picks, tracker insight)
+- last-issue: 2026-07-11 (thock-weekly-003)
+- days-since: 7
+- issue: [mirror-failed: 2026-07-19]
+> Filed 2026-07-19 by newsletter-gap-survey.mjs. 7 days since issue 3. Threshold: ≥7 calendar days.
