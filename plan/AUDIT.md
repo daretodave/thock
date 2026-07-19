@@ -7542,3 +7542,13 @@ passes accumulate signals.)
 - days-since: 7
 - issue: #538
 > Filed 2026-07-19 by newsletter-gap-survey.mjs. 7 days since issue 3. Threshold: ≥7 calendar days.
+
+### [ ] [external-issue] [4.2] deploy:check never ingests a follow-up commit pushed seconds after a prior push (Vercel webhook drop on rapid double-push)
+- category: external-issue
+- filed: 2026-07-19 via /triage from user-issue #540 (opened by cloud /march tick)
+- impact: 6 (a commit pushed to main can silently have no Vercel deployment record at all — not queued, not building, not errored, just absent — which would let a genuine code regression ship with deploy:check falsely timing out and masking the real state; confirmed reproducing: HEAD 09ab17a still has zero deployment 40+ min after push, past the 10-min deploy:check timeout)
+- ease: 7 (scoped fix: merge the fix-commit and the audit-follow-up commit into a single push in the shipping skills' Step 6/7 — e.g. skills/iterate.md — so two rapid-fire pushes ~20s apart don't double-trigger the git-integration webhook; no Vercel-side access needed)
+- score: 4.2 (impact × ease / 10)
+- next: /iterate to merge the trailing plan/AUDIT.md-only follow-up commit into the same push as the fix commit in skills/iterate.md (and any other shipping skill with a similar two-commit Step 6/7 shape); reference #540 in the commit body.
+- issue: #540
+> Filed 2026-07-19 by /triage. User-issue #540 self-reported by the prior cloud /march tick: `687c11c` (content fix, pushed 18:30:31Z) got a Vercel deployment and went READY in ~4s; `09ab17a` (audit-only follow-up, pushed 18:30:53Z, 22s later) never got one. Site is unaffected (687c11c is live) but main's HEAD has no deploy record tracking it — a risk if a future rapid-fire second push carries an actual code change.
