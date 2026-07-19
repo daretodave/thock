@@ -2,7 +2,7 @@
   "articles": [
     {
       "slug": "keyboard-cables-compared",
-      "readTime": 8,
+      "readTime": 9,
       "frontmatter": {
         "title": "Keyboard cables, compared: coiled, straight, and the connector that actually matters",
         "lede": "Every builder eventually stares at a cable dropdown and has to decide whether to care. Here's what coiled versus straight actually changes, and why the keyboard-side connector — not the color of the sleeve — is the decision that follows the board for its whole life.",
@@ -1355,5 +1355,5 @@
       "readTime": 4
     }
   ],
-  "generatedAt": "2026-07-19T13:51:37.504Z"
+  "generatedAt": "2026-07-19T17:27:15.428Z"
 }
