@@ -7423,7 +7423,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/mode-sonnet-r2-group-buy-coverage.mdx
 - action: add [mode-sonnet-r2-group-buy-coverage](/article/mode-sonnet-r2-group-buy-coverage) to cannonkeys-blaine-v2-se-group-buy body, or vice versa
 
-### [HOT PURSUIT] [content-gap] [7] guides pillar — 1 of ≥2 articles in last 30d
+### [x] [content-gap] [7] guides pillar — 1 of ≥2 articles in last 30d — addressed in 4fcef08, closes #536
 - category: content-gaps
 - impact: 5 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -7434,4 +7434,61 @@ passes accumulate signals.)
 - score: 7
 - next: /ship-content → guides pillar article
 - issue: #536
+> **Resolved (2026-07-19):** Shipped "Keyboard cables, compared: coiled, straight, and the connector that actually matters" (~1570 words) at `apps/web/src/content/articles/keyboard-cables-compared.mdx`, publishedAt 2026-07-16 (gap-fill). Hero SVG + 2 InlineViz shipped by brander/content-curator. Added `cables` + `usb-c` tags. Language + mentionedParts gates clean. 1049 e2e green. `4fcef08`
+> Filed 2026-07-19 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+
+### [ ] [cross-links] [4.5] keyboard-cables-compared ↔ lubing-101 — no prose cross-link (same pillar, ≥2 shared tags: beginner, modding)
+- category: cross-links
+- filed: 2026-07-19 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: beginner, modding
+- article-a: apps/web/src/content/articles/keyboard-cables-compared.mdx
+- article-b: apps/web/src/content/articles/lubing-101.mdx
+- action: add [lubing-101](/article/lubing-101) to keyboard-cables-compared body, or vice versa
+
+### [ ] [cross-links] [4.5] keyboard-cables-compared ↔ mounting-styles-compared — no prose cross-link (same pillar, ≥2 shared tags: beginner, modding)
+- category: cross-links
+- filed: 2026-07-19 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: beginner, modding
+- article-a: apps/web/src/content/articles/keyboard-cables-compared.mdx
+- article-b: apps/web/src/content/articles/mounting-styles-compared.mdx
+- action: add [mounting-styles-compared](/article/mounting-styles-compared) to keyboard-cables-compared body, or vice versa
+
+### [ ] [cross-links] [4.5] keyboard-cables-compared ↔ sound-dampening-compared — no prose cross-link (same pillar, ≥2 shared tags: beginner, modding)
+- category: cross-links
+- filed: 2026-07-19 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: beginner, modding
+- article-a: apps/web/src/content/articles/keyboard-cables-compared.mdx
+- article-b: apps/web/src/content/articles/sound-dampening-compared.mdx
+- action: add [sound-dampening-compared](/article/sound-dampening-compared) to keyboard-cables-compared body, or vice versa
+
+### [ ] [cross-links] [4.5] keyboard-cables-compared ↔ stabilizers-explained — no prose cross-link (same pillar, ≥2 shared tags: beginner, modding)
+- category: cross-links
+- filed: 2026-07-19 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: beginner, modding
+- article-a: apps/web/src/content/articles/keyboard-cables-compared.mdx
+- article-b: apps/web/src/content/articles/stabilizers-explained.mdx
+- action: add [stabilizers-explained](/article/stabilizers-explained) to keyboard-cables-compared body, or vice versa
+
+### [HOT PURSUIT] [content-gap] [7] deep-dives pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 6 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: deep-dives
+- window-count: 1
+- window-start: 2026-06-19
+- score: 7
+- next: /ship-content → deep-dives pillar article
 > Filed 2026-07-19 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
