@@ -1,0 +1,30 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-19T00:00:00.000Z",
+  "commit": "c28bb226f39eb3849880850bd4db189e2f9613e7",
+  "kind": "hero-art",
+  "source": "plan/bearings.md § Article hero art — colorful keyboard SVGs",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject",
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": ["JetBrains Mono"],
+  "outputs": [
+    "apps/web/public/hero-art/keyboard-cables-compared.svg"
+  ],
+  "warnings": [],
+  "slug": "keyboard-cables-compared",
+  "article_slug": "keyboard-cables-compared",
+  "article_pillar": "guides",
+  "type": "article-hero",
+  "canvas": "1200x750",
+  "background": "transparent / warm-paper (renders cleanly in light and dark mode)",
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "stroke_weight": "2px",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.70 0.145 26)" },
+  "subject": "Two stacked side-profile cable runs comparing a coiled, detachable-connector keyboard cable against a straight sleeved one. Row A: an aviator/GX16-style circular detachable connector (outer shell + inner shoulder ring + keying notch + five coral pin contacts) at the keyboard end, a short lead-in stub, an eighteen-ring overlapping coil (the family's line-art shorthand for a wound spring cord, every third ring lightly tinted coral for colorway texture) with a coral strain-relief focal marker (dot + ring) at the coil's connector-side joint, a lead-out stub, and a USB-C plug (rounded-pill shell + inset tongue + two contact ticks) at the host end. Row B: the same USB-C plug reused at both ends of a straight sleeved run, with sixteen diagonal ticks along the tube hinting at a woven paracord sleeve. Both rows share a coral wash anchoring the composition, left-margin row-rhythm ticks, and lowercase JetBrains Mono row captions ('coiled' / 'straight') at the right margin. Three dashed-leader callouts in the family sound-dampening-compared style label the aviator connector, the strain-relief joint, and the sleeve weave texture — the three concrete points a cable-comparison article actually turns on (connector type, mechanical stress point, sleeve material) — without needing a full keyboard in frame. Brass-bronze theme dot at (1148, 92) per family convention.",
+  "alt": "Line-art comparison of two keyboard cables: a coiled cable with a detachable aviator connector on top, and a straight, sleeved cable with USB-C connectors on both ends below, with callouts pointing to the connector, a strain-relief point, and the sleeve weave.",
+  "prompt": "Guides-pillar piece comparing keyboard cable types (coiled vs. straight, detachable-aviator vs. fixed-USB-C, sleeved vs. bare). Per the task brief, subject is a coiled cable silhouette with a small connector callout detail, evoking the comparison without depicting a full keyboard. Two-row layout borrows the family's proven stacked-comparison composition (cf. mounting-styles-compared, keycap-profiles-compared) so the 'compared' framing reads at a glance, while keeping the coiled cable + connector detail as the dominant visual per the brief. Splash coral oklch(0.70 0.145 26) chosen for variety against the terracotta/ochre-heavy recent rotation, staying inside the bearings palette (coral / dusty rose / ochre / muted terracotta, no stock blue/green). Coil rendered as eighteen overlapping 2px-stroke rings rather than a thick single stroke, keeping the family's consistent ~2px line weight instead of introducing a heavier cable-tube stroke. Cable tube segments (stubs, straight run) drawn as thin outlined pill/rect shapes for the same reason. Aviator connector modeled loosely on GX16-style detachable connectors common on custom coiled keyboard cables; USB-C modeled as a rounded pill shell with an inset tongue. Brass-bronze theme dot at (1148, 92) per family convention.",
+  "revision": 1,
+  "generatedAt": "2026-07-19",
+  "sourceSkill": "ship-asset"
+}

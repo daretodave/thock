@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Comparison strip of coiled versus straight keyboard cables across desk routing, handling noise under tension, connector drag when moved, and price</title>
+
+  <!-- Column headers -->
+  <text x="560" y="70" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">coiled</text>
+  <text x="920" y="70" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">straight</text>
+
+  <!-- Vertical dividers -->
+  <line x1="400" y1="95" x2="400" y2="560" stroke-opacity="0.18"/>
+  <line x1="740" y1="95" x2="740" y2="560" stroke-opacity="0.18"/>
+
+  <!-- Row 1: desk routing -->
+  <text x="60" y="140" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">desk routing</text>
+  <rect x="420" y="110" width="300" height="70" rx="8" fill="oklch(0.68 0.165 28 / 0.10)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.95" stroke-width="2.5"/>
+  <text x="570" y="140" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.9">holds its own shape</text>
+  <text x="570" y="160" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.9">no clip or tape needed</text>
+  <rect x="760" y="110" width="300" height="70" rx="8" stroke-opacity="0.5" stroke-dasharray="5 5"/>
+  <text x="910" y="140" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">droops unless clipped</text>
+  <text x="910" y="160" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">or taped down</text>
+
+  <!-- Row 2: handling noise under tension -->
+  <text x="60" y="235" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">handling noise</text>
+  <text x="60" y="253" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">(under tension)</text>
+  <rect x="420" y="205" width="300" height="70" rx="8" stroke-opacity="0.5" stroke-dasharray="5 5"/>
+  <text x="570" y="235" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">silent when loose</text>
+  <text x="570" y="255" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">audible only pulled taut</text>
+  <rect x="760" y="205" width="300" height="70" rx="8" stroke-opacity="0.5" stroke-dasharray="5 5"/>
+  <text x="910" y="235" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">silent when loose</text>
+  <text x="910" y="255" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">audible only pulled taut</text>
+  <text x="600" y="292" font-family="Newsreader, serif" font-size="13" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">tie — a routed, unstressed cable is silent either way</text>
+
+  <!-- Row 3: connector drag when the board moves -->
+  <text x="60" y="350" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">drag when the</text>
+  <text x="60" y="368" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">board is moved</text>
+  <rect x="420" y="320" width="300" height="70" rx="8" stroke-opacity="0.5" stroke-dasharray="5 5"/>
+  <text x="570" y="350" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">small spring resistance</text>
+  <text x="570" y="370" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">at the connector each move</text>
+  <rect x="760" y="320" width="300" height="70" rx="8" fill="oklch(0.68 0.165 28 / 0.10)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.95" stroke-width="2.5"/>
+  <text x="910" y="350" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.9">no coil drag</text>
+  <text x="910" y="370" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.9">easiest to reposition</text>
+
+  <!-- Row 4: price -->
+  <text x="60" y="452" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">price</text>
+  <rect x="420" y="422" width="300" height="70" rx="8" stroke-opacity="0.5" stroke-dasharray="5 5"/>
+  <text x="570" y="452" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">costs more —</text>
+  <text x="570" y="472" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">sleeve + coil-forming</text>
+  <rect x="760" y="422" width="300" height="70" rx="8" fill="oklch(0.68 0.165 28 / 0.10)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.95" stroke-width="2.5"/>
+  <text x="910" y="452" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.9">lower cost —</text>
+  <text x="910" y="472" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.9">standard manufacturing</text>
+
+  <!-- Footer -->
+  <text x="600" y="545" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">a stationary desk with a far-off port is the strongest case for coiled</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

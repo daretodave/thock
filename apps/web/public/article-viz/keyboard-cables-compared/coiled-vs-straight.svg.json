@@ -1,0 +1,25 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-19T14:00:00.000Z",
+  "commit": "c28bb22",
+  "kind": "inline-viz",
+  "article_slug": "keyboard-cables-compared",
+  "article_pillar": "guides",
+  "section_anchor": "coiled-versus-straight-is-mostly-a-desk-decision-not-a-sound-decision",
+  "brief_summary": "Two-column comparison strip contrasting coiled and straight keyboard cables across four rows: desk routing, handling noise under tension, connector drag when the board is moved, and price. Coral-highlighted boxes mark the favored side in each row; the handling-noise row is marked a tie with no highlighted box.",
+  "target": "apps/web/public/article-viz/keyboard-cables-compared/coiled-vs-straight.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "keyboard-cables-compared.mdx § 'Coiled versus straight is mostly a desk decision, not a sound decision' — 'A coiled cable holds its shape, so it can run from the board to the edge of the desk without needing a cable clip or a strip of tape ... A straight cable droops unless it's managed'",
+    "keyboard-cables-compared.mdx § same section — 'A loose, properly routed cable of either kind is silent in practice' and 'the scenario where cable microphonics actually show up is a cable under tension'",
+    "keyboard-cables-compared.mdx § same section — 'the coil itself adds a small amount of drag-resistance at the connector every time the board is moved'",
+    "keyboard-cables-compared.mdx § same section — 'coiled cables cost more, almost always because of the sleeve and the coil-forming process'"
+  ],
+  "outputs": ["apps/web/public/article-viz/keyboard-cables-compared/coiled-vs-straight.svg"],
+  "warnings": []
+}

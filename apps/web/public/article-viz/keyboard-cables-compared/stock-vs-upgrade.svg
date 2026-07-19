@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Decision map for whether a stock cable is fine or worth upgrading — root question branches to a stock-is-fine outcome or two upgrade-reason outcomes</title>
+
+  <!-- Root question -->
+  <rect x="380" y="50" width="440" height="90" rx="8" stroke-opacity="0.7"/>
+  <text x="600" y="85" font-family="Newsreader, serif" font-size="16" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">does the board travel, need self-supporting</text>
+  <text x="600" y="108" font-family="Newsreader, serif" font-size="16" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">routing, or need a matching look?</text>
+  <text x="600" y="128" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">the three legitimate reasons to upgrade</text>
+
+  <!-- Left branch: NO -->
+  <g stroke-opacity="0.55">
+    <path d="M 480 140 L 480 175 L 220 175 L 220 215"/>
+    <path d="M 212 207 L 220 215 L 228 207"/>
+  </g>
+  <text x="330" y="170" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">no, none apply</text>
+
+  <!-- Outcome: stock is fine -->
+  <rect x="60" y="220" width="320" height="130" rx="8" fill="oklch(0.68 0.165 28 / 0.10)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.95" stroke-width="2.5"/>
+  <text x="220" y="255" font-family="Newsreader, serif" font-size="19" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">stock cable is fine</text>
+  <text x="220" y="282" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">one desk, reaches the port,</text>
+  <text x="220" y="300" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">color doesn't matter</text>
+  <text x="220" y="326" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">— the majority of buyers</text>
+
+  <!-- Right branch: YES -->
+  <g stroke-opacity="0.55">
+    <path d="M 720 140 L 720 175 L 900 175 L 900 215"/>
+    <path d="M 892 207 L 900 215 L 908 207"/>
+  </g>
+  <text x="810" y="170" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">yes, at least one applies</text>
+
+  <!-- Two branch lines from the yes-node down to two outcomes -->
+  <g stroke-opacity="0.55">
+    <path d="M 900 215 L 900 240 L 640 240 L 640 275"/>
+    <path d="M 632 267 L 640 275 L 648 267"/>
+    <path d="M 900 240 L 900 275"/>
+    <path d="M 892 267 L 900 275 L 908 267"/>
+  </g>
+
+  <!-- Outcome 1: portable + desk-routing (practical fit) -->
+  <rect x="480" y="280" width="320" height="150" rx="8" fill="oklch(0.68 0.165 28 / 0.10)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.95" stroke-width="2.5"/>
+  <text x="640" y="313" font-family="Newsreader, serif" font-size="17" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">practical fit</text>
+  <text x="640" y="340" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">travels often — locking aviator</text>
+  <text x="640" y="358" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">connector for quick-disconnect</text>
+  <text x="640" y="380" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">far-off port — coiled cable</text>
+  <text x="640" y="398" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">holds its own shape</text>
+
+  <!-- Outcome 2: aesthetic match -->
+  <rect x="820" y="280" width="320" height="150" rx="8" fill="oklch(0.68 0.165 28 / 0.10)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.95" stroke-width="2.5"/>
+  <text x="980" y="313" font-family="Newsreader, serif" font-size="17" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">aesthetic match</text>
+  <text x="980" y="340" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">sleeve color functions as a</text>
+  <text x="980" y="358" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">visible accessory, the same</text>
+  <text x="980" y="376" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">way a keycap set or a desk</text>
+  <text x="980" y="394" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">mat does</text>
+
+  <!-- Footer -->
+  <text x="600" y="490" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">the keyboard-side connector spec is the one choice that isn't reversible later</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

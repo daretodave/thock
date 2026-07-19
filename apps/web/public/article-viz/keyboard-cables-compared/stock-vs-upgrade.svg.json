@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-19T14:00:00.000Z",
+  "commit": "c28bb22",
+  "kind": "inline-viz",
+  "article_slug": "keyboard-cables-compared",
+  "article_pillar": "guides",
+  "section_anchor": "when-the-stock-cable-is-genuinely-fine",
+  "brief_summary": "Decision-tree diagram. Root: 'does the board travel, need self-supporting routing, or need a matching look?' The no-branch terminates at 'stock cable is fine' for the majority of buyers. The yes-branch splits into two outcome boxes: 'practical fit' (locking aviator connector for portability, or a coiled cable for far-off desk routing) and 'aesthetic match' (sleeve color as a visible accessory).",
+  "target": "apps/web/public/article-viz/keyboard-cables-compared/stock-vs-upgrade.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "keyboard-cables-compared.mdx § 'When the stock cable is genuinely fine' — 'A stock cable is genuinely fine when the board lives permanently on one desk, the stock cable already reaches the port without stretching or drooping ... and the build's finished look doesn't depend on the cable matching a colorway'",
+    "keyboard-cables-compared.mdx § same section — 'the board travels and needs the security and quick-disconnect of a locking aviator connector; the desk layout genuinely benefits from a coiled cable's self-supporting shape ... or the build's finished aesthetic is part of the point, and a sleeved cable in a matching color is functioning as a visible accessory the same way a keycap set or a desk mat does'",
+    "keyboard-cables-compared.mdx § closing paragraph — 'The connector decision is the one piece of this that a buyer doesn't get to revisit later without swapping the board's PCB or daughterboard'"
+  ],
+  "outputs": ["apps/web/public/article-viz/keyboard-cables-compared/stock-vs-upgrade.svg"],
+  "warnings": []
+}

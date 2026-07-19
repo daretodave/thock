@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "slug": "keyboard-cables-compared",
+      "readTime": 8,
+      "frontmatter": {
+        "title": "Keyboard cables, compared: coiled, straight, and the connector that actually matters",
+        "lede": "Every builder eventually stares at a cable dropdown and has to decide whether to care. Here's what coiled versus straight actually changes, and why the keyboard-side connector — not the color of the sleeve — is the decision that follows the board for its whole life.",
+        "pillar": "guides",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "work-louder-openai-codex-micro",
       "readTime": 6,
       "frontmatter": {
@@ -718,6 +728,11 @@
       "category": "misc"
     },
     {
+      "slug": "cables",
+      "name": "Cables",
+      "category": "misc"
+    },
+    {
       "slug": "cannonkeys",
       "name": "CannonKeys",
       "category": "brand"
@@ -1015,6 +1030,11 @@
     {
       "slug": "trends-tracker",
       "name": "Trends Tracker",
+      "category": "misc"
+    },
+    {
+      "slug": "usb-c",
+      "name": "USB-C",
       "category": "misc"
     },
     {
@@ -1320,5 +1340,5 @@
       "readTime": 4
     }
   ],
-  "generatedAt": "2026-07-19T05:23:01.029Z"
+  "generatedAt": "2026-07-19T12:41:42.846Z"
 }
