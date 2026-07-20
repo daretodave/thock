@@ -4591,6 +4591,319 @@
         }
       ],
       "updatedAt": "2026-07-13T00:00:00.000Z"
+    },
+    {
+      "isoWeek": "2026-W30",
+      "publishedAt": "2026-07-20T00:00:00.000Z",
+      "rows": [
+        {
+          "name": "Hall Effect/Rapid Trigger",
+          "category": "switch",
+          "direction": "up",
+          "score": 94,
+          "spark": [
+            64,
+            70,
+            76,
+            81,
+            85,
+            87,
+            91,
+            94
+          ],
+          "articleSlug": "hall-effect-mainstream",
+          "note": "Keychron's V6 Ultra HE opens Kickstarter July 22 with hybrid Nova Socket TMR+mechanical PCB; PC Gamer and others now call HE/rapid trigger baseline for 2026 gaming boards."
+        },
+        {
+          "name": "HMX Cloud V2",
+          "category": "switch",
+          "direction": "flat",
+          "score": 56,
+          "spark": [
+            61,
+            60,
+            59,
+            58,
+            58,
+            57,
+            57,
+            56
+          ],
+          "articleSlug": "hmx-cloud-deep-dive",
+          "note": "No fresh coverage this week; HMX Cloud V2 discussion holds steady as a budget hot-swap linear pick per KeebFinder listings, momentum essentially plateaued."
+        },
+        {
+          "name": "Gateron Oil King",
+          "category": "switch",
+          "direction": "flat",
+          "score": 40,
+          "spark": [
+            35,
+            36,
+            37,
+            37,
+            38,
+            38,
+            39,
+            40
+          ],
+          "articleSlug": "gateron-oil-king-deep-dive",
+          "note": "Oil King catalog (linear, silent linear, silent tactile, heavy tactile) stays steady in vendor listings; no new SKUs or reviews surfaced this week per gateron.com."
+        },
+        {
+          "name": "Gateron Lanes",
+          "category": "switch",
+          "direction": "up",
+          "score": 50,
+          "spark": [
+            30,
+            33,
+            35,
+            38,
+            41,
+            44,
+            46,
+            50
+          ],
+          "articleSlug": "gateron-lanes-tactile-deep-dive",
+          "note": "ThereminGoat posted a new Gateron Lanes switch review on Patreon this month, reviving tactile-switch chatter after the initial spring launch buzz cooled."
+        },
+        {
+          "name": "Cherry MX2A",
+          "category": "switch",
+          "direction": "up",
+          "score": -46,
+          "spark": [
+            -18,
+            -25,
+            -32,
+            -37,
+            -42,
+            -46,
+            -50,
+            -46
+          ],
+          "articleSlug": "cherry-mx2a-revision",
+          "note": "MKBGuide's 2026 Cherry MX guide notes virtually every new Cherry switch now ships as MX2A, repositioning Cherry against Gateron even as ThereminGoat's dummy-switch review keeps hobbyist skepticism alive."
+        },
+        {
+          "name": "GMK CYL OG Extensions",
+          "category": "keycap",
+          "direction": "up",
+          "score": 58,
+          "spark": [
+            10,
+            18,
+            26,
+            34,
+            42,
+            49,
+            55,
+            58
+          ],
+          "articleSlug": "gmk-cyl-og-extensions-interest-check",
+          "note": "Unofficial GMK CYL OG Extensions line keeps gaining traction as a budget-friendly companion to official CYL sets, per continued KeebFinder and vendor listings."
+        },
+        {
+          "name": "GMK CYL TA Neo",
+          "category": "keycap",
+          "direction": "up",
+          "score": 62,
+          "spark": [
+            10,
+            18,
+            26,
+            34,
+            42,
+            50,
+            57,
+            62
+          ],
+          "articleSlug": null,
+          "note": "GMK CYL TA Neo group buy closed July 17, 2026 after a June 19 open per KeebFinder tracking; final-week pledges pushed interest to a close-of-buy peak."
+        },
+        {
+          "name": "DCS Handarbeit",
+          "category": "keycap",
+          "direction": "up",
+          "score": 45,
+          "spark": [
+            5,
+            10,
+            16,
+            22,
+            28,
+            34,
+            40,
+            45
+          ],
+          "articleSlug": null,
+          "note": "DCS Handarbeit's group buy wrapped July 19, 2026 (opened June 19); community chatter shifted to delivery-estimate discussion for its Q4 2026 ship window."
+        },
+        {
+          "name": "Split/Ergo layout",
+          "category": "layout",
+          "direction": "up",
+          "score": 80,
+          "spark": [
+            52,
+            58,
+            63,
+            67,
+            70,
+            74,
+            77,
+            80
+          ],
+          "articleSlug": "split-ergo-cohort",
+          "note": "MKBGuide and Engadget both flag 2025-2026 as the moment split layouts went mainstream, citing Keychron Q13 Max and Dygma as reference boards for the shift."
+        },
+        {
+          "name": "Alice layout",
+          "category": "layout",
+          "direction": "down",
+          "score": -48,
+          "spark": [
+            -16,
+            -22,
+            -27,
+            -31,
+            -34,
+            -40,
+            -44,
+            -48
+          ],
+          "articleSlug": "alice-layout-decline",
+          "note": "Ergonomic buyers increasingly skip Alice as a stepping stone and jump straight to full split, per MKBGuide's split-keyboard guide, continuing Alice's slow fade in enthusiast threads."
+        },
+        {
+          "name": "75% Layout",
+          "category": "layout",
+          "direction": "flat",
+          "score": 47,
+          "spark": [
+            41,
+            42,
+            43,
+            44,
+            44,
+            45,
+            46,
+            47
+          ],
+          "articleSlug": "75-percent-default",
+          "note": "75% remains the default custom form factor in vendor catalogs with no major new releases this week; interest holding at a steady plateau."
+        },
+        {
+          "name": "Work Louder x OpenAI Codex Micro",
+          "category": "vendor",
+          "direction": "up",
+          "score": 96,
+          "spark": [
+            40,
+            48,
+            55,
+            61,
+            68,
+            80,
+            94,
+            96
+          ],
+          "articleSlug": "work-louder-openai-codex-micro",
+          "note": "OpenAI's Codex Micro macro pad, built on Work Louder's Creator Micro platform, fully launched July 15, 2026 at $230 per TechCrunch and Engadget coverage of OpenAI's first hardware."
+        },
+        {
+          "name": "Mode Designs",
+          "category": "vendor",
+          "direction": "up",
+          "score": 58,
+          "spark": [
+            26,
+            32,
+            37,
+            41,
+            44,
+            48,
+            53,
+            58
+          ],
+          "articleSlug": "mode-sonnet-r2-group-buy-coverage",
+          "note": "Mode Designs posted a Summer 2026 update covering Sonnet/Encore shipping status, Prologue 98% progress, and an Envoy final-stock announcement, per green-keys.info."
+        },
+        {
+          "name": "Prototypist",
+          "category": "vendor",
+          "direction": "up",
+          "score": 20,
+          "spark": [
+            -35,
+            -30,
+            -25,
+            -18,
+            -10,
+            2,
+            15,
+            20
+          ],
+          "articleSlug": null,
+          "note": "Prototypist's Paper 65 kit group buy (opened March 31) continues toward Q4 2026 delivery while its GMK CYL Midnight Rainbow R2 project and 2026 relaunch push keep the vendor visible."
+        },
+        {
+          "name": "Keychron",
+          "category": "brand",
+          "direction": "up",
+          "score": 90,
+          "spark": [
+            60,
+            66,
+            71,
+            76,
+            80,
+            83,
+            86,
+            90
+          ],
+          "articleSlug": "keychron-quiet-takeover",
+          "note": "Keychron opened $5 deposits for the V6 Ultra HE ahead of a July 22 Kickstarter, the first board mixing mechanical and TMR magnetic switches via its new Nova Socket PCB, per Notebookcheck and TechPowerUp."
+        },
+        {
+          "name": "Cherry (GMK parent)",
+          "category": "brand",
+          "direction": "up",
+          "score": -18,
+          "spark": [
+            -40,
+            -36,
+            -33,
+            -30,
+            -28,
+            -26,
+            -24,
+            -18
+          ],
+          "articleSlug": "cherry-xtrfy-tmr-pivot",
+          "note": "Cherry's MX2A revision is now standard across its whole switch catalog, per MKBGuide's 2026 analysis, marking Cherry's most consequential repositioning against Gateron in years."
+        },
+        {
+          "name": "Wuque Studio",
+          "category": "brand",
+          "direction": "flat",
+          "score": -3,
+          "spark": [
+            -20,
+            -16,
+            -13,
+            -10,
+            -8,
+            -6,
+            -4,
+            -3
+          ],
+          "articleSlug": null,
+          "note": "Wuque Studio stays quiet this week; its NAMA group buy (closed December 2025, delivery est. March 2026) has cycled out of active discussion per CannonKeys listings."
+        }
+      ],
+      "updatedAt": "2026-07-20T00:00:00.000Z"
     }
   ],
   "articles": [
@@ -7851,5 +8164,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-07-19T22:24:12.634Z"
+  "generatedAt": "2026-07-20T00:42:02.521Z"
 }
