@@ -84,6 +84,16 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [bug] [4.5] /compare/switch table missing Vendor row that /compare/board has — addressed in this commit, closes #550
+- category: bug
+- filed: 2026-07-20 by cloud /iterate audit (fresh general-purpose sweep)
+- impact: 5 (`SwitchCompareTable` rendered 9 spec rows and never surfaced a switch's vendor, while the sibling `BoardCompareTable` renders the analogous field set plus a resolved `Vendor` row via `getVendorBySlug`. Both `Switch` and `Board` schemas carry an identical `vendorSlug` field, and `/part/[kind]/[slug]` resolves and displays vendor for switches, keycap sets, and boards alike — so vendor was a first-class attribute everywhere except the switch comparison table. Same class of bug as the 2026-07-18 vendor-page loader gap: a data field that exists and renders on one surface but silently drops on a sibling surface built from the same pattern.)
+- ease: 9 (single spec-row addition mirroring `BoardCompareTable.tsx`'s existing pattern — import `getVendorBySlug`, resolve with fallback to the raw slug; no schema change)
+- score: 4.5 (impact × ease / 10)
+- issue: #550
+> **Resolved (2026-07-20):** added a `Vendor` row to `switchSpecRows` in `SwitchCompareTable.tsx`, mirroring `BoardCompareTable.tsx:42`. Updated `SwitchCompareTable.test.tsx`'s row-count assertion (9 → 10) and added a vendor-resolution test mirroring `BoardCompareTable.test.tsx`'s. No e2e change needed — `compare.spec.ts` has no hardcoded row-count assertion for either table. `pnpm verify` full gate green: typecheck, 670 web unit tests, data:validate, build, size, 1064/1064 e2e.
+> Picked as the top signal this tick: no unlabeled GitHub issues; not Monday-gate-relevant (snapshot already existed); no pending phases/data/content-gap work (content-gap-survey: all pillars comfortable; all 7 companion surveys clean); march's expand Step 3c gate not due (13 commits/~8h since pass 206, under the 20-commit/48h threshold). AUDIT.md's only other Pending rows remain the `[6.3]` blocked-cloud-permission and `[4.0]` Lighthouse-CI items, both non-autonomous; CRITIQUE.md's only Pending row remains the non-actionable GA-beacon item. Manual spot-checks (word counts, hero images, tag distribution, internal links, mentionedParts, language checks) all clean, and expand pass 206 (13 commits/~8h prior) found zero new candidates — rather than immediately falling to `/expand` per iterate §6 failure mode 6, ran one more fresh general-purpose sweep first (mirroring what found the 2026-07-18 vendor bugs) across JSON-LD on newer routes, RSS validity, sitemap/robots completeness, data-vs-render cross-reference, focus-visible coverage, and TODO/FIXME scan; this compare-table asymmetry was the one genuine, verified defect.
+
 ### [x] [data] [4.2] GMK CYL Pandemonium missing group-buy data record — addressed in 59d8511
 - category: data
 - impact: 7 (live buy not appearing on /group-buys or home widget; closes July 1 — time-critical; companion article gmk-cyl-pandemonium-group-buy.mdx exists but data record absent)
