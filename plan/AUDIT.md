@@ -7566,7 +7566,7 @@ passes accumulate signals.)
 - issue: #542
 > **Resolved (2026-07-20):** Drafted ~1030-word trends-pillar vendor spotlight "Prototypist and the multi-project vendor model" covering the UK vendor's concurrent-project density pattern across W20–W30 tracker rows, its dual fulfillment/house-kit operating lanes, and its 2026 signal recovery (-35 to +20). 3 InlineViz (concurrent-GB bar chart, two-lane diagram, score trajectory) + 1 Callout. Hero SVG: dusty-rose vendor-hub node with fanning project threads + tracker sparkline. W30 Prototypist row's articleSlug set. Language + mentionedParts gates clean. 1061/1061 e2e green. `5d9baa9`
 
-### [ ] [cross-links] [4.5] prototypist-vendor-spotlight ↔ dcs-grass-valley-decline — no prose cross-link (same pillar, ≥2 shared tags: trends-2026, group-buy)
+### [x] [cross-links] [4.5] prototypist-vendor-spotlight ↔ dcs-grass-valley-decline — no prose cross-link (same pillar, ≥2 shared tags: trends-2026, group-buy) — addressed in 226469f, closes #543
 - category: cross-links
 - filed: 2026-07-20 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -7577,7 +7577,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/dcs-grass-valley-decline.mdx
 - action: add [dcs-grass-valley-decline](/article/dcs-grass-valley-decline) to prototypist-vendor-spotlight body, or vice versa
 
-### [ ] [cross-links] [4.5] prototypist-vendor-spotlight ↔ vendor-first-customs — no prose cross-link (same pillar, ≥2 shared tags: vendor, trends-2026)
+### [x] [cross-links] [4.5] prototypist-vendor-spotlight ↔ vendor-first-customs — no prose cross-link (same pillar, ≥2 shared tags: vendor, trends-2026) — addressed in 226469f, closes #543
 - category: cross-links
 - filed: 2026-07-20 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
