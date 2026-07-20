@@ -144,4 +144,19 @@ describe('<SwitchQuiz>', () => {
     expect(screen.queryByTestId('quiz-results')).not.toBeInTheDocument()
     expect(screen.getByText(/question 1 of 4/i)).toBeInTheDocument()
   })
+
+  it('moves focus to the results heading when the quiz completes', () => {
+    render(<SwitchQuiz switches={SWITCHES} />)
+    answerAllQuestions()
+    expect(screen.getByRole('heading', { name: /your top matches/i })).toHaveFocus()
+  })
+
+  it('moves focus back to the first question heading after "Start over"', () => {
+    render(<SwitchQuiz switches={SWITCHES} />)
+    answerAllQuestions()
+    fireEvent.click(screen.getByRole('button', { name: /start over/i }))
+    expect(
+      screen.getByRole('heading', { name: /how do you want your switches to sound/i })
+    ).toHaveFocus()
+  })
 })

@@ -138,4 +138,19 @@ describe('<KeycapSetQuiz>', () => {
     expect(screen.queryByTestId('keycap-quiz-results')).not.toBeInTheDocument()
     expect(screen.getByText(/question 1 of 4/i)).toBeInTheDocument()
   })
+
+  it('moves focus to the results heading when the quiz completes', () => {
+    render(<KeycapSetQuiz keycapSets={KEYCAP_SETS} />)
+    answerAllQuestions()
+    expect(screen.getByRole('heading', { name: /your top matches/i })).toHaveFocus()
+  })
+
+  it('moves focus back to the first question heading after "Start over"', () => {
+    render(<KeycapSetQuiz keycapSets={KEYCAP_SETS} />)
+    answerAllQuestions()
+    fireEvent.click(screen.getByRole('button', { name: /start over/i }))
+    expect(
+      screen.getByRole('heading', { name: /what keycap profile height appeals to you/i })
+    ).toHaveFocus()
+  })
 })

@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import type { KeycapSet } from '@thock/data'
 import {
@@ -116,6 +116,8 @@ export function KeycapSetQuiz({ keycapSets }: Props) {
   const [step, setStep] = useState(0)
   const topRef = useRef<HTMLDivElement>(null)
   const pendingAdvance = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const resultsHeadingRef = useRef<HTMLHeadingElement>(null)
+  const hasCompletedRef = useRef(false)
 
   const totalSteps = QUESTIONS.length
   const currentQ = QUESTIONS[step]
@@ -125,6 +127,13 @@ export function KeycapSetQuiz({ keycapSets }: Props) {
     ? recommendKeycapSet(answers as KeycapSetQuizAnswers, keycapSets)
     : []
   const maxScore = results[0]?.score ?? 0
+
+  useEffect(() => {
+    if (isDone) {
+      hasCompletedRef.current = true
+      resultsHeadingRef.current?.focus()
+    }
+  }, [isDone])
 
   function handleSelect(value: string) {
     if (!currentQ) return
@@ -154,13 +163,20 @@ export function KeycapSetQuiz({ keycapSets }: Props) {
             options={currentQ.options}
             selected={(answers[currentQ.key] as string | undefined) ?? null}
             onSelect={handleSelect}
+            autoFocus={hasCompletedRef.current}
           />
         </>
       )}
 
       {isDone && (
         <div data-testid="keycap-quiz-results">
-          <h2 className="text-h2 font-serif text-text mb-2">Your top matches</h2>
+          <h2
+            ref={resultsHeadingRef}
+            tabIndex={-1}
+            className="text-h2 font-serif text-text mb-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu rounded-sm"
+          >
+            Your top matches
+          </h2>
           <p className="text-body text-text-2 mb-8">
             Based on your answers, here are the keycap sets most likely to suit your build.
           </p>

@@ -11,19 +11,20 @@ type Props = {
   options: QuizOption[]
   selected: string | null
   onSelect: (value: string) => void
+  autoFocus?: boolean
 }
 
-export function QuizStep({ question, options, selected, onSelect }: Props) {
+export function QuizStep({ question, options, selected, onSelect, autoFocus = false }: Props) {
   const headingRef = useRef<HTMLHeadingElement>(null)
   const isFirstRender = useRef(true)
 
   useEffect(() => {
     if (isFirstRender.current) {
       isFirstRender.current = false
-      return
+      if (!autoFocus) return
     }
     headingRef.current?.focus()
-  }, [question])
+  }, [question, autoFocus])
 
   return (
     <div>

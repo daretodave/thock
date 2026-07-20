@@ -62,4 +62,11 @@ describe('<QuizStep>', () => {
     render(<QuizStep question="Q?" options={OPTIONS} selected={null} onSelect={vi.fn()} />)
     expect(screen.getByRole('heading', { name: /q\?/i })).toHaveAttribute('tabIndex', '-1')
   })
+
+  it('focuses the heading on mount when autoFocus is set (reset case)', () => {
+    render(
+      <QuizStep question="First question?" options={OPTIONS} selected={null} onSelect={vi.fn()} autoFocus />
+    )
+    expect(screen.getByRole('heading', { name: /first question/i })).toHaveFocus()
+  })
 })
