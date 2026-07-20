@@ -1,7 +1,20 @@
-import { describe, expect, it } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import { SwitchCompareTable } from '../SwitchCompareTable'
 import type { Switch } from '@thock/data'
+
+vi.mock('@/lib/data-runtime', async () => {
+  const actual = await vi.importActual<typeof import('@/lib/data-runtime')>(
+    '@/lib/data-runtime',
+  )
+  return {
+    ...actual,
+    getVendorBySlug: (slug: string) =>
+      slug === 'vendor-x'
+        ? { slug: 'vendor-x', name: 'Vendor X Studio', url: 'https://vendor-x.example' }
+        : null,
+  }
+})
 
 const SWITCH_A: Switch = {
   slug: 'switch-a',
@@ -51,7 +64,7 @@ describe('<SwitchCompareTable>', () => {
   it('renders the spec table with the correct number of rows', () => {
     render(<SwitchCompareTable switchA={SWITCH_A} switchB={SWITCH_B} />)
     const rows = screen.getAllByTestId('compare-spec-row')
-    expect(rows.length).toBe(9)
+    expect(rows.length).toBe(10)
   })
 
   it('marks rows with different values as data-differs="true"', () => {
@@ -90,5 +103,11 @@ describe('<SwitchCompareTable>', () => {
     expect(screen.getAllByText('Nylon').length).toBeGreaterThan(0)
     expect(screen.getAllByText('POM').length).toBeGreaterThan(0)
     expect(screen.queryByText('pc')).not.toBeInTheDocument()
+  })
+
+  it('resolves vendorSlug to the vendor display name, falling back to the raw slug when unknown', () => {
+    render(<SwitchCompareTable switchA={SWITCH_A} switchB={SWITCH_B} />)
+    expect(screen.getByText('Vendor X Studio')).toBeInTheDocument()
+    expect(screen.getByText('vendor-y')).toBeInTheDocument()
   })
 })

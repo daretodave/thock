@@ -2,6 +2,7 @@ import type { ReactElement } from 'react'
 import Link from 'next/link'
 import type { Switch } from '@thock/data'
 import { Container, Mono } from '@thock/ui'
+import { getVendorBySlug } from '@/lib/data-runtime'
 import { HOUSING_MATERIAL_LABEL, specLabel, STEM_MATERIAL_LABEL, SWITCH_TYPE_LABEL } from '@/lib/spec-labels'
 
 const DATE_FMT = new Intl.DateTimeFormat('en-US', {
@@ -38,6 +39,7 @@ function switchSpecRows(s: Switch): SpecRow[] {
     { label: 'Factory lubed', value: s.factoryLubed ? 'yes' : 'no' },
     { label: 'Status', value: STATUS_LABEL[s.status] },
     { label: 'Released', value: formatDate(s.releasedAt) },
+    { label: 'Vendor', value: getVendorBySlug(s.vendorSlug)?.name ?? s.vendorSlug },
   ]
 }
 
