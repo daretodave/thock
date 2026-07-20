@@ -8,7 +8,7 @@
       "direction": "up",
       "score": 94,
       "spark": [64, 70, 76, 81, 85, 87, 91, 94],
-      "articleSlug": "hall-effect-mainstream",
+      "articleSlug": null,
       "note": "Keychron's V6 Ultra HE opens Kickstarter July 22 with hybrid Nova Socket TMR+mechanical PCB; PC Gamer and others now call HE/rapid trigger baseline for 2026 gaming boards."
     },
     {
@@ -134,7 +134,7 @@
       "direction": "up",
       "score": 90,
       "spark": [60, 66, 71, 76, 80, 83, 86, 90],
-      "articleSlug": "keychron-quiet-takeover",
+      "articleSlug": null,
       "note": "Keychron opened $5 deposits for the V6 Ultra HE ahead of a July 22 Kickstarter, the first board mixing mechanical and TMR magnetic switches via its new Nova Socket PCB, per Notebookcheck and TechPowerUp."
     },
     {
@@ -156,5 +156,5 @@
       "note": "Wuque Studio stays quiet this week; its NAMA group buy (closed December 2025, delivery est. March 2026) has cycled out of active discussion per CannonKeys listings."
     }
   ],
-  "updatedAt": "2026-07-20T00:00:00.000Z"
+  "updatedAt": "2026-07-20T22:33:37.000Z"
 }
