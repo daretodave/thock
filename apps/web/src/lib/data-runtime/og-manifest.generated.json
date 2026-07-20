@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "slug": "prototypist-vendor-spotlight",
+      "readTime": 6,
+      "frontmatter": {
+        "title": "Prototypist and the multi-project vendor model",
+        "lede": "Prototypist rarely carries just one thing at a time. The UK vendor's tracker signal has spent 2026 rising and falling with how many group buys it's running at once — and this month it's climbing again on the strength of its own pipeline rather than someone else's.",
+        "pillar": "trends",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "keyboard-cables-compared",
       "readTime": 9,
       "frontmatter": {
@@ -1355,5 +1365,5 @@
       "readTime": 4
     }
   ],
-  "generatedAt": "2026-07-20T00:42:02.521Z"
+  "generatedAt": "2026-07-20T05:28:30.043Z"
 }

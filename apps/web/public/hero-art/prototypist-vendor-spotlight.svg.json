@@ -1,0 +1,47 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-20T05:23:40.000Z",
+  "commit": "4fcfb2379a2dc4d42d7eabe81bd4694648463bdc",
+  "kind": "hero-art",
+  "article_slug": "prototypist-vendor-spotlight",
+  "article_pillar": "trends",
+  "source": "plan/bearings.md § Article hero art — colorful keyboard SVGs (locked 2026-05-09), trends piece -> sparkline silhouette; adapted per brief to a vendor-density theme",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject",
+  "size": [1200, 750],
+  "subject": "A single vendor-hub node (keyboard-shaped capsule with an inner diamond mark, dusty-rose filled) centered in the upper-mid canvas, with five thin threads fanning out to five distinct project glyphs arranged in a loose arc beneath it: two keycap-row silhouettes (GMK CYL regional-partner colorway group buys, one at far-left, one at right-mid, each with a small accent-ring cap standing in for a novelty/legend piece), two generic board silhouettes (other concurrent fulfillment projects, left-mid and far-right), and one larger, denser board silhouette at center for 'Paper 65' -- Prototypist's own kit line, drawn bolder and tied to the hub with a thicker thread to distinguish first-party product from pass-through fulfillment. A tracker sparkline runs along the bottom edge, rising left-to-right from a decline into positive territory, with a faint dashed zero-baseline and a zero-crossing marker, ending in a focal dot at the current up-trending score. Warm-bronze theme dot at the upper-right margin.",
+  "splash_color": {
+    "name": "dusty rose",
+    "oklch": "oklch(0.68 0.075 15)"
+  },
+  "accent_color": {
+    "name": "warm-bronze (theme accent)",
+    "oklch": "oklch(0.80 0.135 75)"
+  },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": [],
+  "data_sources": [
+    "data/trends/2026-W30.json -- Prototypist row (category: vendor, direction: up, score: 20, spark: [-35,-30,-25,-18,-10,2,15,20]), note: \"Prototypist's Paper 65 kit group buy (opened March 31) continues toward Q4 2026 delivery while its GMK CYL Midnight Rainbow R2 project and 2026 relaunch push keep the vendor visible.\""
+  ],
+  "design_notes": {
+    "hub_position": "keyboard-shaped capsule, center (600, 268), splash-filled -- the only splash-colored element in the fan proper",
+    "glyph_arc": {
+      "A_far_left": "keycap-row, x=150, GMK CYL regional-partner colorway 1",
+      "B_left_mid": "board outline, x=375, generic concurrent fulfillment project",
+      "C_center": "board outline, x=600, 'Paper 65' own kit line -- larger, 3 key-dot rows (vs 2 elsewhere), bolder connecting thread",
+      "D_right_mid": "keycap-row, x=825, GMK CYL regional-partner colorway 2 (Midnight Rainbow R2, per tracker note)",
+      "E_far_right": "board outline, x=1050, generic concurrent fulfillment project"
+    },
+    "sparkline_mapping": "y = 700 - (score + 35) / 55 * 120 across x = 90..1110 (8 evenly spaced weekly readings); the decline portion (scores -35..-18) sits at or below the wash band's bottom edge (y=660), crossing back into the warm wash as the score turns positive -- the wash boundary doubles as an implicit 'into the black' marker",
+    "zero_crossing_marker": "interpolated point (790, 624) between the week-6 (-10) and week-7 (2) readings, marking where the series crosses zero",
+    "theme_dot_position": "cx=1148 cy=88 r=9, with two satellite micro-dots (dusty-rose + bronze) for family cohesion"
+  },
+  "canvas": "1200x750",
+  "stroke_weight": "2px (sparkline rendered at 2.5px for legibility as the focal motif)",
+  "background": "transparent",
+  "outputs": [
+    "apps/web/public/hero-art/prototypist-vendor-spotlight.svg"
+  ],
+  "warnings": []
+}

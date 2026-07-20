@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Two operating lanes inside one storefront — Prototypist's community fulfillment lane versus its house-kit lane</title>
+
+  <!-- Central vendor node -->
+  <circle cx="600" cy="90" r="34" fill="oklch(0.68 0.165 28 / 0.12)" stroke="oklch(0.68 0.165 28)" stroke-width="3"/>
+  <text x="600" y="96" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">Prototypist</text>
+  <text x="600" y="146" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">one storefront, two operating lanes</text>
+
+  <!-- Fan lines to each card -->
+  <g stroke-opacity="0.5">
+    <line x1="576" y1="112" x2="360" y2="188"/>
+    <line x1="624" y1="112" x2="840" y2="188"/>
+  </g>
+
+  <!-- LEFT card: community fulfillment lane -->
+  <rect x="170" y="190" width="380" height="230" rx="10" stroke-opacity="0.85"/>
+  <text x="360" y="224" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">community fulfillment lane</text>
+  <line x1="190" y1="238" x2="530" y2="238" stroke-opacity="0.25"/>
+
+  <circle cx="200" cy="266" r="3" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6"/>
+  <text x="212" y="270" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">hosts other studios' keycap-set group buys</text>
+
+  <circle cx="200" cy="298" r="3" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6"/>
+  <text x="212" y="302" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">handles UK/EU customs, currency, shipping</text>
+
+  <circle cx="200" cy="330" r="3" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6"/>
+  <text x="212" y="334" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">multiple concurrent runs typical</text>
+  <text x="212" y="352" font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.9">up to 19 open at once, W20</text>
+
+  <text x="212" y="392" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">delivery risk sits with the</text>
+  <text x="212" y="408" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">originating factory, not Prototypist</text>
+
+  <!-- RIGHT card: house-kit lane -->
+  <rect x="650" y="190" width="380" height="230" rx="10" stroke-opacity="0.85"/>
+  <text x="840" y="224" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">house-kit lane</text>
+  <line x1="670" y1="238" x2="1010" y2="238" stroke-opacity="0.25"/>
+
+  <circle cx="680" cy="266" r="3" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6"/>
+  <text x="692" y="270" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">vendor originates its own kit group buys</text>
+
+  <circle cx="680" cy="298" r="3" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6"/>
+  <text x="692" y="302" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">own storefront checkout, own deposit terms</text>
+
+  <circle cx="680" cy="330" r="3" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6"/>
+  <text x="692" y="334" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">fewer concurrent projects, longer runway</text>
+  <text x="692" y="352" font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.9">opened Mar 31, ships Q4 2026</text>
+
+  <text x="692" y="392" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">delivery risk sits with</text>
+  <text x="692" y="408" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">Prototypist itself</text>
+
+  <text x="600" y="446" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">same storefront, two different risk profiles</text>
+
+  <!-- Bronze theme dot -->
+  <circle cx="1170" cy="30" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

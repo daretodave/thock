@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-18T14:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "prototypist-vendor-spotlight",
+  "article_pillar": "trends",
+  "section_anchor": "what-a-nineteen-live-group-buy-week-actually-measures",
+  "brief_summary": "Bar chart of concurrent live group buys Prototypist carried across five 2026 tracker weeks, counted directly from named projects in each week's tracker note: 19 in W20, 6 in W22 (two colorway runs plus four board/kit buys), 3 in W23, 3 in W25, and 2 in W30 — visualizing the shift from a spring fulfillment peak to a smaller, more vendor-owned summer pipeline.",
+  "target": "apps/web/public/article-viz/prototypist-vendor-spotlight/concurrent-gb-density.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "data/trends/2026-W20.json — 'Prototypist carried 19 live group buys this week including Slate Zero and SWG Classic Blue (both closing May 18) and DCS Grass Valley — one of their densest active-window weeks of the year.'",
+    "data/trends/2026-W22.json — 'Prototypist serves as UK vendor for both GMK CYL Prussian Alert and Ramune simultaneously, plus active GBs for Float65, Bauer 65, Seal TKL, and MW Mass 80.'",
+    "data/trends/2026-W23.json — three separate rows (Prussian Alert, Ramune, Selene) each naming Prototypist as active UK/EU fulfillment for that week",
+    "data/trends/2026-W25.json — three separate rows (Selene, Pandemonium, GMK CYL Masterpiece R2) each naming Prototypist as active fulfillment for that week",
+    "data/trends/2026-W30.json — \"Prototypist's Paper 65 kit group buy (opened March 31) continues toward Q4 2026 delivery while its GMK CYL Midnight Rainbow R2 project and 2026 relaunch push keep the vendor visible.\" (two concurrently named projects)"
+  ],
+  "outputs": ["apps/web/public/article-viz/prototypist-vendor-spotlight/concurrent-gb-density.svg"],
+  "warnings": []
+}

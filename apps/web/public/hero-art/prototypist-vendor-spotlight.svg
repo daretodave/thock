@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — Prototypist vendor spotlight, one hub with five concurrent project threads and a rising tracker sparkline</title>
+
+  <!-- Splash band: faint dusty-rose wash setting the stage -->
+  <path
+    d="M 70 90 L 1130 90 L 1130 660 L 70 660 Z"
+    fill="oklch(0.68 0.075 15 / 0.07)" stroke="none"/>
+
+  <!-- ============ BRONZE THEME DOT ============
+       Upper-right margin ornamental anchor, family convention. -->
+  <circle cx="1148" cy="88" r="9" fill="oklch(0.80 0.135 75 / 0.9)" stroke="oklch(0.80 0.135 75)" stroke-width="1.5"/>
+  <circle cx="1128" cy="100" r="3"   fill="oklch(0.68 0.075 15 / 0.55)" stroke="none"/>
+  <circle cx="1161" cy="103" r="2.5" fill="oklch(0.80 0.135 75 / 0.5)" stroke="none"/>
+
+  <!-- ============ VENDOR HUB ============
+       Prototypist as one hub, centered at (600, 268). Keyboard-shaped
+       capsule + inner diamond mark, dusty-rose filled — the single
+       splash-color node in the fan (per single-splash convention). -->
+
+  <rect
+    x="550" y="240" width="100" height="56" rx="10" ry="10"
+    fill="oklch(0.68 0.075 15 / 0.92)" stroke="oklch(0.68 0.075 15)" stroke-width="2"/>
+
+  <path
+    d="M 600 252 L 622 268 L 600 284 L 578 268 Z"
+    stroke="oklch(0.78 0.005 90)" stroke-opacity="0.9" stroke-width="1.5" fill="none"/>
+
+  <circle cx="566" cy="268" r="2" fill="oklch(0.78 0.005 90 / 0.85)" stroke="none"/>
+  <circle cx="634" cy="268" r="2" fill="oklch(0.78 0.005 90 / 0.85)" stroke="none"/>
+
+  <rect
+    x="542" y="232" width="116" height="72" rx="14" ry="14"
+    stroke="oklch(0.68 0.075 15)" stroke-opacity="0.35" stroke-width="1.5" fill="none"/>
+
+  <!-- ============ CONCURRENT-PROJECT THREADS ============
+       Five thin threads leave the hub's bottom edge at distinct
+       origin points (non-crossing fan) and tie off at five distinct
+       project glyphs below. The center thread (Paper 65, Prototypist's
+       own kit line) is drawn slightly bolder — a first-party product,
+       not just fulfillment — everything else stays thin and equal. -->
+
+  <!-- Thread A: hub -> far-left keycap-row glyph -->
+  <g stroke-opacity="0.5">
+    <line x1="570" y1="298" x2="150" y2="452" stroke-width="1.4"/>
+    <circle cx="570" cy="298" r="2" fill="oklch(0.78 0.005 90 / 0.7)" stroke="none"/>
+    <circle cx="150" cy="452" r="2.5" fill="oklch(0.78 0.005 90 / 0.7)" stroke="none"/>
+  </g>
+
+  <!-- Thread B: hub -> left-mid board glyph -->
+  <g stroke-opacity="0.55">
+    <line x1="585" y1="298" x2="375" y2="418" stroke-width="1.4"/>
+    <circle cx="585" cy="298" r="2" fill="oklch(0.78 0.005 90 / 0.7)" stroke="none"/>
+    <circle cx="375" cy="418" r="2.5" fill="oklch(0.78 0.005 90 / 0.7)" stroke="none"/>
+  </g>
+
+  <!-- Thread C: hub -> center Paper 65 glyph (own line, bolder tie) -->
+  <g stroke-opacity="0.7">
+    <line x1="600" y1="298" x2="600" y2="394" stroke-width="2"/>
+    <circle cx="600" cy="298" r="2.2" fill="oklch(0.78 0.005 90 / 0.75)" stroke="none"/>
+    <circle cx="600" cy="394" r="2.8" fill="oklch(0.78 0.005 90 / 0.75)" stroke="none"/>
+  </g>
+
+  <!-- Thread D: hub -> right-mid keycap-row glyph -->
+  <g stroke-opacity="0.55">
+    <line x1="615" y1="298" x2="825" y2="434" stroke-width="1.4"/>
+    <circle cx="615" cy="298" r="2" fill="oklch(0.78 0.005 90 / 0.7)" stroke="none"/>
+    <circle cx="825" cy="434" r="2.5" fill="oklch(0.78 0.005 90 / 0.7)" stroke="none"/>
+  </g>
+
+  <!-- Thread E: hub -> far-right board glyph -->
+  <g stroke-opacity="0.5">
+    <line x1="630" y1="298" x2="1050" y2="472" stroke-width="1.4"/>
+    <circle cx="630" cy="298" r="2" fill="oklch(0.78 0.005 90 / 0.7)" stroke="none"/>
+    <circle cx="1050" cy="472" r="2.5" fill="oklch(0.78 0.005 90 / 0.7)" stroke="none"/>
+  </g>
+
+  <!-- ============ GLYPH A ============
+       Far-left keycap-row silhouette — a GMK CYL regional-partner
+       colorway group buy. Tray + 4 caps, one accent-ring cap standing
+       in for a novelty/legend cap in the set. Stroke-only, no fill
+       color (single-splash rule reserves color for hub + sparkline). -->
+  <g stroke-opacity="0.7">
+    <rect x="98" y="478" width="104" height="14" rx="4" ry="4"/>
+    <rect x="104" y="458" width="18" height="20" rx="4" ry="4"/>
+    <rect x="128" y="458" width="18" height="20" rx="4" ry="4"/>
+    <rect x="152" y="458" width="18" height="20" rx="4" ry="4"/>
+    <rect x="176" y="458" width="18" height="20" rx="4" ry="4"/>
+    <circle cx="161" cy="468" r="3" stroke-opacity="0.5"/>
+    <line x1="150" y1="452" x2="150" y2="458" stroke-opacity="0.6"/>
+  </g>
+
+  <!-- ============ GLYPH B ============
+       Left-mid board silhouette — a generic concurrent fulfillment
+       project running through the same hub. -->
+  <g stroke-opacity="0.7">
+    <rect x="325" y="424" width="100" height="48" rx="7" ry="7"/>
+    <rect x="333" y="432" width="84" height="32" rx="3" ry="3" stroke-opacity="0.4"/>
+    <circle cx="347" cy="444" r="1.5"/>
+    <circle cx="367" cy="444" r="1.5"/>
+    <circle cx="387" cy="444" r="1.5"/>
+    <circle cx="407" cy="444" r="1.5"/>
+    <circle cx="347" cy="456" r="1.5"/>
+    <circle cx="367" cy="456" r="1.5"/>
+    <circle cx="387" cy="456" r="1.5"/>
+    <circle cx="407" cy="456" r="1.5"/>
+    <line x1="375" y1="418" x2="375" y2="424" stroke-opacity="0.6"/>
+  </g>
+
+  <!-- ============ GLYPH C ============
+       Center — "Paper 65", Prototypist's own kit line, not a
+       regional fulfillment pass-through. Drawn larger, denser
+       (3 key-dot rows vs. 2), and at slightly higher stroke-opacity
+       so it reads as the vendor's flagship product among the fan. -->
+  <g stroke-opacity="0.85">
+    <rect x="545" y="400" width="110" height="54" rx="8" ry="8"/>
+    <rect x="553" y="408" width="94" height="38" rx="3" ry="3" stroke-opacity="0.45"/>
+    <circle cx="569" cy="420" r="1.5"/>
+    <circle cx="584" cy="420" r="1.5"/>
+    <circle cx="600" cy="420" r="1.5"/>
+    <circle cx="616" cy="420" r="1.5"/>
+    <circle cx="631" cy="420" r="1.5"/>
+    <circle cx="569" cy="432" r="1.5"/>
+    <circle cx="584" cy="432" r="1.5"/>
+    <circle cx="600" cy="432" r="1.5"/>
+    <circle cx="616" cy="432" r="1.5"/>
+    <circle cx="631" cy="432" r="1.5"/>
+    <circle cx="569" cy="444" r="1.5"/>
+    <circle cx="584" cy="444" r="1.5"/>
+    <circle cx="600" cy="444" r="1.5"/>
+    <circle cx="616" cy="444" r="1.5"/>
+    <circle cx="631" cy="444" r="1.5"/>
+    <line x1="600" y1="394" x2="600" y2="400" stroke-opacity="0.7"/>
+  </g>
+
+  <!-- ============ GLYPH D ============
+       Right-mid keycap-row silhouette — a second GMK CYL regional-
+       partner colorway (mirrors Glyph A's construction, distinct
+       position and level to avoid reading as a plain mirror image). -->
+  <g stroke-opacity="0.7">
+    <rect x="773" y="460" width="104" height="14" rx="4" ry="4"/>
+    <rect x="779" y="440" width="18" height="20" rx="4" ry="4"/>
+    <rect x="803" y="440" width="18" height="20" rx="4" ry="4"/>
+    <rect x="827" y="440" width="18" height="20" rx="4" ry="4"/>
+    <rect x="851" y="440" width="18" height="20" rx="4" ry="4"/>
+    <circle cx="836" cy="450" r="3" stroke-opacity="0.5"/>
+    <line x1="825" y1="434" x2="825" y2="440" stroke-opacity="0.6"/>
+  </g>
+
+  <!-- ============ GLYPH E ============
+       Far-right board silhouette — a second generic concurrent
+       fulfillment project. -->
+  <g stroke-opacity="0.7">
+    <rect x="1000" y="478" width="100" height="44" rx="6" ry="6"/>
+    <rect x="1008" y="486" width="84" height="28" rx="3" ry="3" stroke-opacity="0.4"/>
+    <circle cx="1022" cy="496" r="1.5"/>
+    <circle cx="1042" cy="496" r="1.5"/>
+    <circle cx="1062" cy="496" r="1.5"/>
+    <circle cx="1082" cy="496" r="1.5"/>
+    <circle cx="1022" cy="508" r="1.5"/>
+    <circle cx="1042" cy="508" r="1.5"/>
+    <circle cx="1062" cy="508" r="1.5"/>
+    <circle cx="1082" cy="508" r="1.5"/>
+    <line x1="1050" y1="472" x2="1050" y2="478" stroke-opacity="0.6"/>
+  </g>
+
+  <!-- ============ TRACKER SPARKLINE ============
+       Grounded in data/trends/2026-W30.json's Prototypist row:
+       spark [-35,-30,-25,-18,-10,2,15,20], direction "up", score 20.
+       8 readings, x evenly spaced 90..1110. y maps score linearly
+       across the -35..20 range onto y=700..580 (lower = more negative).
+       A faint dashed zero-baseline sits at y=624; the line visibly
+       sinks below the warm splash-wash band (bottom edge y=660)
+       during the decline, then crosses back into the wash as the
+       vendor's score turns positive — the wash boundary doubles as
+       an implicit "into the black" marker with no extra ornament. -->
+
+  <line x1="90" y1="624" x2="1110" y2="624"
+        stroke="oklch(0.78 0.005 90)" stroke-opacity="0.25" stroke-width="1.2" stroke-dasharray="4 5"/>
+
+  <path
+    d="
+      M 90 700
+      L 236 689
+      L 381 678
+      L 527 663
+      L 673 645
+      L 818 619
+      L 964 591
+      L 1110 580
+      L 1110 712
+      L 90 712
+      Z"
+    fill="oklch(0.68 0.075 15 / 0.14)" stroke="none"/>
+
+  <polyline
+    points="
+      90,700
+      236,689
+      381,678
+      527,663
+      673,645
+      818,619
+      964,591
+      1110,580"
+    stroke="oklch(0.68 0.075 15)" stroke-width="2.5"/>
+
+  <!-- Interior reading dots for the first seven weekly points -->
+  <g stroke-opacity="0.55">
+    <circle cx="90"  cy="700" r="3.2"/>
+    <circle cx="236" cy="689" r="3.2"/>
+    <circle cx="381" cy="678" r="3.2"/>
+    <circle cx="527" cy="663" r="3.2"/>
+    <circle cx="673" cy="645" r="3.2"/>
+    <circle cx="818" cy="619" r="3.2"/>
+    <circle cx="964" cy="591" r="3.2"/>
+  </g>
+
+  <!-- Zero-crossing marker: interpolated on-line point where the
+       series crosses from negative into positive between the
+       week-6 (-10) and week-7 (2) readings. -->
+  <circle cx="790" cy="624" r="4" stroke="oklch(0.68 0.075 15)" stroke-opacity="0.6" fill="none"/>
+
+  <!-- Focal dot at the final reading — current up-trending score (20) -->
+  <circle cx="1110" cy="580" r="9"  fill="oklch(0.68 0.075 15 / 0.95)" stroke="oklch(0.68 0.075 15)"/>
+  <circle cx="1110" cy="580" r="16" stroke="oklch(0.68 0.075 15)" stroke-opacity="0.45" fill="none"/>
+</svg>

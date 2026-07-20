@@ -1,0 +1,19 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-18T14:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "prototypist-vendor-spotlight",
+  "article_pillar": "trends",
+  "section_anchor": "the-2026-push-fewer-projects-more-of-them-its-own",
+  "brief_summary": "Line chart plotting Prototypist's eight-week vendor tracker signal, W23 through W30, using the exact spark array from this week's row: [-35, -30, -25, -18, -10, 2, 15, 20]. Visualizes the climb from a summer-low negative reading back into positive territory at +20 this week.",
+  "target": "apps/web/public/article-viz/prototypist-vendor-spotlight/score-trajectory.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "data/trends/2026-W30.json — row 'Prototypist', category 'vendor', direction 'up', score 20, spark: [-35, -30, -25, -18, -10, 2, 15, 20]"
+  ],
+  "outputs": ["apps/web/public/article-viz/prototypist-vendor-spotlight/score-trajectory.svg"],
+  "warnings": []
+}

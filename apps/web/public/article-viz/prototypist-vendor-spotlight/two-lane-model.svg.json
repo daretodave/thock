@@ -1,0 +1,21 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-18T14:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "prototypist-vendor-spotlight",
+  "article_pillar": "trends",
+  "section_anchor": "the-two-lanes-prototypist-runs",
+  "brief_summary": "A central 'Prototypist' node fans down to two cards: a community fulfillment lane (hosts other studios' keycap-set group buys, handles UK/EU customs, up to 19 concurrent runs in one week, delivery risk sits with the originating factory) and a house-kit lane (vendor originates its own kit group buys, own storefront checkout, opened March 31 with a Q4 2026 ship target, delivery risk sits with Prototypist itself).",
+  "target": "apps/web/public/article-viz/prototypist-vendor-spotlight/two-lane-model.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "data/trends/2026-W20.json — 'Prototypist carried 19 live group buys this week including Slate Zero and SWG Classic Blue (both closing May 18) and DCS Grass Valley — one of their densest active-window weeks of the year.'",
+    "data/trends/2026-W30.json — \"Prototypist's Paper 65 kit group buy (opened March 31) continues toward Q4 2026 delivery while its GMK CYL Midnight Rainbow R2 project and 2026 relaunch push keep the vendor visible.\"",
+    "prototypist-vendor-spotlight.mdx § 'The two lanes Prototypist runs' — describing the fulfillment lane versus the house-kit lane and their differing delivery-risk ownership"
+  ],
+  "outputs": ["apps/web/public/article-viz/prototypist-vendor-spotlight/two-lane-model.svg"],
+  "warnings": []
+}
