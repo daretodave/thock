@@ -31,6 +31,18 @@ describe('<TrackerHeader>', () => {
     expect(block).toHaveTextContent(/2026/)
   })
 
+  it('shows "of 53" for a 53-ISO-week year, not a hardcoded "of 52"', () => {
+    render(
+      <TrackerHeader
+        snapshot={makeTrendSnapshot({ isoWeek: '2026-W53' })}
+        lede="Lede."
+      />,
+    )
+    const block = screen.getByTestId('tracker-week-block')
+    expect(block).toHaveTextContent('53')
+    expect(block).toHaveTextContent('of 53')
+  })
+
   it('omits the week-number block when no snapshot is available', () => {
     render(<TrackerHeader snapshot={null} lede="Lede." />)
     expect(screen.queryByTestId('tracker-week-block')).toBeNull()

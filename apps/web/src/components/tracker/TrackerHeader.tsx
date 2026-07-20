@@ -1,7 +1,7 @@
 import type { ReactElement } from 'react'
 import type { TrendSnapshot } from '@thock/data'
 import { PillarHero } from '@/components/pillar/PillarHero'
-import { weekKicker } from '@/lib/tracker'
+import { isoWeeksInYear, weekKicker } from '@/lib/tracker'
 
 export type TrackerHeaderProps = {
   snapshot: TrendSnapshot | null
@@ -20,7 +20,8 @@ const PUBLISHED_FORMATTER = new Intl.DateTimeFormat('en-US', {
  * Tracker dashboard header. Wraps `<PillarHero>` with a `trends ·
  * tracker` breadcrumb-style eyebrow, italic display H1, lede
  * paragraph (with weave-in `publishedAt`), and a right-rail block
- * showing the big week number — `2026 · WEEK / 19 / of 52`.
+ * showing the big week number — `2026 · WEEK / 19 / of 52` (or
+ * `of 53` in an ISO 53-week year, via `isoWeeksInYear`).
  */
 export function TrackerHeader({
   snapshot,
@@ -55,7 +56,9 @@ export function TrackerHeader({
       <span className="font-serif text-display leading-none text-text">
         {String(week.week).padStart(2, '0')}
       </span>
-      <span className="font-mono text-micro text-text-2">of 52</span>
+      <span className="font-mono text-micro text-text-2">
+        of {isoWeeksInYear(week.year)}
+      </span>
     </div>
   ) : null
 

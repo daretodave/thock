@@ -183,3 +183,18 @@ export function presentCategories(snapshot: TrendSnapshot): TrendCategory[] {
   const grouped = groupByCategory(snapshot.rows)
   return CATEGORY_ORDER.filter((c) => (grouped.get(c)?.length ?? 0) > 0)
 }
+
+/** ISO week-number parity check (Zeller-style): 4 if Dec 31 falls in week 1 of the next year's count. */
+function isoLongYearRemainder(year: number): number {
+  return (year + Math.floor(year / 4) - Math.floor(year / 100) + Math.floor(year / 400)) % 7
+}
+
+/**
+ * Number of ISO weeks in a given year — 52 for most years, 53 when
+ * the year starts on a Thursday (or is a leap year starting on
+ * Wednesday). Needed so the tracker's "week N of ??" label doesn't
+ * hardcode 52 and misdisplay during a 53-week year (e.g. 2026).
+ */
+export function isoWeeksInYear(year: number): number {
+  return isoLongYearRemainder(year) === 4 || isoLongYearRemainder(year - 1) === 3 ? 53 : 52
+}

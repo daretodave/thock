@@ -3,6 +3,7 @@ import type { TrendRow, TrendSnapshot } from '@thock/data'
 import {
   formatDelta,
   groupByCategory,
+  isoWeeksInYear,
   pickSummarySlots,
   presentCategories,
   weekKicker,
@@ -168,6 +169,18 @@ describe('weekKicker', () => {
   it('parses W01 (week 1) correctly', () => {
     const result = weekKicker('2025-W01')
     expect(result).toEqual({ year: 2025, week: 1, label: 'Week 1 / 2025' })
+  })
+})
+
+describe('isoWeeksInYear', () => {
+  it('returns 53 for known 53-ISO-week years', () => {
+    expect(isoWeeksInYear(2026)).toBe(53)
+    expect(isoWeeksInYear(2020)).toBe(53)
+  })
+
+  it('returns 52 for an ordinary year', () => {
+    expect(isoWeeksInYear(2025)).toBe(52)
+    expect(isoWeeksInYear(2027)).toBe(52)
   })
 })
 
