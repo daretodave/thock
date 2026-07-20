@@ -7,17 +7,13 @@ describe('newsletters loader', () => {
 
   it('returns every issue, newest first', () => {
     const newsletters = getAllNewsletters()
-    expect(newsletters).toHaveLength(3)
+    // Floor rather than a hard count so future cadence ticks don't keep
+    // flipping this assertion (same pattern as the articles loader test).
+    expect(newsletters.length).toBeGreaterThanOrEqual(4)
+    const publishedDates = newsletters.map((n) => n.frontmatter.publishedAt)
+    expect(publishedDates).toEqual([...publishedDates].sort((a, b) => b.localeCompare(a)))
     const first = newsletters[0]!
-    expect(first.slug).toBe('thock-weekly-003')
-    expect(first.frontmatter.issue).toBe(3)
-    expect(first.frontmatter.title).toBe('thock weekly — issue 03')
-    const second = newsletters[1]!
-    expect(second.slug).toBe('thock-weekly-002')
-    expect(second.frontmatter.issue).toBe(2)
-    const third = newsletters[2]!
-    expect(third.slug).toBe('thock-weekly-001')
-    expect(third.frontmatter.issue).toBe(1)
+    expect(first.frontmatter.issue).toBe(Math.max(...newsletters.map((n) => n.frontmatter.issue)))
   })
 
   it('getNewsletterBySlug returns the inaugural issue by slug', () => {
@@ -36,6 +32,12 @@ describe('newsletters loader', () => {
     const newsletter = getNewsletterBySlug('thock-weekly-003')
     expect(newsletter).not.toBeNull()
     expect(newsletter?.frontmatter.issue).toBe(3)
+  })
+
+  it('getNewsletterBySlug returns issue 004 by slug', () => {
+    const newsletter = getNewsletterBySlug('thock-weekly-004')
+    expect(newsletter).not.toBeNull()
+    expect(newsletter?.frontmatter.issue).toBe(4)
   })
 
   it('getNewsletterBySlug returns null for unknown slug', () => {
