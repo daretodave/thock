@@ -7554,7 +7554,7 @@ passes accumulate signals.)
 > **Resolved (2026-07-19):** `skills/iterate.md` (Step 5/6), `skills/ship-a-phase.md` (Step 10/11), `skills/ship-content.md` (Step 7d/8), and `skills/march.md` (Step 0.5's trend-snapshot flow) all had the same two-commit shape where the first commit pushed immediately and a trailing audit/DoD-tick commit pushed again seconds later. Each now stages its trailing commit locally and pushes once, after both commits exist — new Hard rules document the pattern in each skill (iterate.md §7.8, ship-a-phase.md §7.12, ship-content.md §5.8). `skills/ship-content.md`'s Step 3a early issue-number checkpoint was deliberately left alone — it's a resumability checkpoint spanning minutes of agent work (content-curator/brander), not a rapid-fire pair, so collapsing it into a later push would reintroduce the crash-recovery gap phase 24 built it to close. `pnpm verify` full gate green: typecheck, unit, data:validate (72 records), build, 1055/1055 e2e. This tick's own two commits (`350f623` fix + this audit-tick commit) are pushed together as one push, dogfooding the fix immediately.
 > Filed 2026-07-19 by /triage. User-issue #540 self-reported by the prior cloud /march tick: `687c11c` (content fix, pushed 18:30:31Z) got a Vercel deployment and went READY in ~4s; `09ab17a` (audit-only follow-up, pushed 18:30:53Z, 22s later) never got one. Site is unaffected (687c11c is live) but main's HEAD has no deploy record tracking it — a risk if a future rapid-fire second push carries an actual code change.
 
-### [ ] [content-gaps] [5.5] Prototypist — Rule 2 tracker linkage missing
+### [x] [content-gaps] [5.5] Prototypist — Rule 2 tracker linkage missing — addressed in 5d9baa9, closes #542
 - category: content-gaps
 - filed: 2026-07-20 by tracker-linkage-survey.mjs
 - impact: 6 (non-flat trend row "Prototypist" unlinked for 28 days; no companion deep-dive)
@@ -7564,3 +7564,26 @@ passes accumulate signals.)
 - rule: Rule 2
 - action: ship companion article for "Prototypist", set articleSlug in relevant trend snapshot(s)
 - issue: #542
+> **Resolved (2026-07-20):** Drafted ~1030-word trends-pillar vendor spotlight "Prototypist and the multi-project vendor model" covering the UK vendor's concurrent-project density pattern across W20–W30 tracker rows, its dual fulfillment/house-kit operating lanes, and its 2026 signal recovery (-35 to +20). 3 InlineViz (concurrent-GB bar chart, two-lane diagram, score trajectory) + 1 Callout. Hero SVG: dusty-rose vendor-hub node with fanning project threads + tracker sparkline. W30 Prototypist row's articleSlug set. Language + mentionedParts gates clean. 1061/1061 e2e green. `5d9baa9`
+
+### [ ] [cross-links] [4.5] prototypist-vendor-spotlight ↔ dcs-grass-valley-decline — no prose cross-link (same pillar, ≥2 shared tags: trends-2026, group-buy)
+- category: cross-links
+- filed: 2026-07-20 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: trends-2026, group-buy
+- article-a: apps/web/src/content/articles/prototypist-vendor-spotlight.mdx
+- article-b: apps/web/src/content/articles/dcs-grass-valley-decline.mdx
+- action: add [dcs-grass-valley-decline](/article/dcs-grass-valley-decline) to prototypist-vendor-spotlight body, or vice versa
+
+### [ ] [cross-links] [4.5] prototypist-vendor-spotlight ↔ vendor-first-customs — no prose cross-link (same pillar, ≥2 shared tags: vendor, trends-2026)
+- category: cross-links
+- filed: 2026-07-20 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: vendor, trends-2026
+- article-a: apps/web/src/content/articles/prototypist-vendor-spotlight.mdx
+- article-b: apps/web/src/content/articles/vendor-first-customs.mdx
+- action: add [vendor-first-customs](/article/vendor-first-customs) to prototypist-vendor-spotlight body, or vice versa
