@@ -7531,7 +7531,7 @@ passes accumulate signals.)
 - action: add [hmx-cloud-deep-dive](/article/hmx-cloud-deep-dive) to gazzew-boba-u4t-deep-dive body, or vice versa
 - issue: #539
 
-### [ ] [newsletter] [4.0] Weekly digest — issue 004 due (7 days since issue 3)
+### [x] [newsletter] [4.0] Weekly digest — issue 004 due (7 days since issue 3) — addressed in fd125cd, closes #538
 - category: content-gaps
 - filed: 2026-07-19 by newsletter-gap-survey.mjs
 - impact: 5 (newsletter archive going stale reduces /newsletter value and reader trust in cadence)
@@ -7542,6 +7542,7 @@ passes accumulate signals.)
 - days-since: 7
 - issue: #538
 > Filed 2026-07-19 by newsletter-gap-survey.mjs. 7 days since issue 3. Threshold: ≥7 calendar days.
+> **Resolved (2026-07-20):** Drafted "thock weekly — issue 04" at `apps/web/src/content/newsletters/thock-weekly-004.mdx`, publishedAt 2026-07-20 (9 days since issue 3). Five pillar picks: Prototypist vendor spotlight (trends), Work Louder OpenAI macro pad (news), brass weight mod (ideas), Gazzew Boba U4T deep dive (deep-dives), keyboard cables guide (guides). W30 tracker snapshot covers Hall Effect/Rapid Trigger's new high (94, Keychron V6 Ultra HE Kickstarter July 22) and Split/Ergo's climb to 80. ~460 words. Language gate clean; mentionedParts/cross-link surveys are article-scoped and don't apply to newsletter MDX (no `mentionedParts` field in `NewsletterFrontmatterSchema`). Newsletters loader test updated to a floor assertion so future issues don't keep flipping a hardcoded count. `pnpm verify` full gate green: typecheck, 664 web unit tests (+ content/data/seo/ui/e2e suites), data:validate (74 records), build, 1064/1064 e2e. `fd125cd`
 
 ### [x] [external-issue] [4.2] deploy:check never ingests a follow-up commit pushed seconds after a prior push (Vercel webhook drop on rapid double-push) — addressed in 350f623, closes #540
 - category: external-issue
