@@ -7553,3 +7553,13 @@ passes accumulate signals.)
 - issue: #540
 > **Resolved (2026-07-19):** `skills/iterate.md` (Step 5/6), `skills/ship-a-phase.md` (Step 10/11), `skills/ship-content.md` (Step 7d/8), and `skills/march.md` (Step 0.5's trend-snapshot flow) all had the same two-commit shape where the first commit pushed immediately and a trailing audit/DoD-tick commit pushed again seconds later. Each now stages its trailing commit locally and pushes once, after both commits exist — new Hard rules document the pattern in each skill (iterate.md §7.8, ship-a-phase.md §7.12, ship-content.md §5.8). `skills/ship-content.md`'s Step 3a early issue-number checkpoint was deliberately left alone — it's a resumability checkpoint spanning minutes of agent work (content-curator/brander), not a rapid-fire pair, so collapsing it into a later push would reintroduce the crash-recovery gap phase 24 built it to close. `pnpm verify` full gate green: typecheck, unit, data:validate (72 records), build, 1055/1055 e2e. This tick's own two commits (`350f623` fix + this audit-tick commit) are pushed together as one push, dogfooding the fix immediately.
 > Filed 2026-07-19 by /triage. User-issue #540 self-reported by the prior cloud /march tick: `687c11c` (content fix, pushed 18:30:31Z) got a Vercel deployment and went READY in ~4s; `09ab17a` (audit-only follow-up, pushed 18:30:53Z, 22s later) never got one. Site is unaffected (687c11c is live) but main's HEAD has no deploy record tracking it — a risk if a future rapid-fire second push carries an actual code change.
+
+### [ ] [content-gaps] [5.5] Prototypist — Rule 2 tracker linkage missing
+- category: content-gaps
+- filed: 2026-07-20 by tracker-linkage-survey.mjs
+- impact: 6 (non-flat trend row "Prototypist" unlinked for 28 days; no companion deep-dive)
+- ease: 9 (one article fills it; topic already editorially curated in tracker)
+- score: 5.5 (impact × ease / 10, rounded)
+- first-seen: 2026-W26
+- rule: Rule 2
+- action: ship companion article for "Prototypist", set articleSlug in relevant trend snapshot(s)
