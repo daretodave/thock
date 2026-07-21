@@ -7778,3 +7778,14 @@ passes accumulate signals.)
 - issue: #562
 > **Resolved (2026-07-21):** independently re-verified the count and scope via a fresh Explore pass before shipping (confirmed exactly 6 elements / 4 files, and that the site's established `focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu` button pattern from `quiz/QuizStep.tsx` was the right match — not the form-input `focus:ring-2 focus:ring-accent` pattern the compare `<select>`s already use). Added the button pattern to both "Compare" buttons; added the same ring plus `rounded-sm` (for a clean inline-text ring) to both pairs of result links. `pnpm verify` full gate green: typecheck, 673 web unit tests (+161 script tests), data:validate, build, size (109.1 KB/200 KB budget), 1064/1064 e2e.
 > Picked as the top signal this tick: no unlabeled GitHub issues (triage gate); not Monday; no pending phases/data/content-gap work (all 7 mechanical surveys clean); march's own expand Step 3c gate not due (16 commits/~8.5h since pass 207, under the 20-commit/48h threshold). AUDIT.md's only Pending row is the non-autonomous `[4.0]` Lighthouse-CI `/oversight` item; CRITIQUE.md's only Pending row remains the non-actionable `[needs-user-call]` GA-beacon item. Rather than open a fresh general-purpose sweep, drained the specific candidate the prior tick (dd2d1ef) explicitly flagged but deferred under the one-fix-per-tick rule — re-verified from scratch rather than trusting the prior tick's inline note at face value. Scoping caveat carried forward: this closes only the `/compare` slice of a much broader sitewide gap in `<Link>` focus styling (VendorCard, TrackerRow, CitationIndex, AboutBody, ArticleCard, and others all share the same hover-only pattern) — left for a future dedicated survey/tick, not folded into this one-fix commit.
+
+### [ ] [content-gaps] [5.5] Keychron — Rule 2 tracker linkage missing
+- category: content-gaps
+- filed: 2026-07-21 by tracker-linkage-survey.mjs
+- impact: 6 (non-flat trend row "Keychron" unlinked for 43 days; no companion deep-dive)
+- ease: 9 (one article fills it; topic already editorially curated in tracker)
+- score: 5.5 (impact × ease / 10, rounded)
+- first-seen: 2026-W24
+- rule: Rule 2
+- action: ship companion article for "Keychron", set articleSlug in relevant trend snapshot(s)
+- issue: #563
