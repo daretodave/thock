@@ -68,7 +68,7 @@ export function SwitchCompareTable({
           <Link
             href={`/part/switch/${switchA.slug}`}
             data-testid="compare-switch-a-link"
-            className="font-serif text-h3 text-text hover:text-accent transition-colors"
+            className="font-serif text-h3 text-text hover:text-accent transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
           >
             {switchA.name}
           </Link>
@@ -77,7 +77,7 @@ export function SwitchCompareTable({
           <Link
             href={`/part/switch/${switchB.slug}`}
             data-testid="compare-switch-b-link"
-            className="font-serif text-h3 text-text hover:text-accent transition-colors"
+            className="font-serif text-h3 text-text hover:text-accent transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
           >
             {switchB.name}
           </Link>

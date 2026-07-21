@@ -95,6 +95,7 @@ export function BoardCompareSelector({
         disabled={!canCompare}
         className={
           'px-5 py-2 rounded font-mono text-small uppercase tracking-[0.08em] transition-colors ' +
+          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu ' +
           (canCompare
             ? 'bg-accent text-bg hover:bg-accent/90 cursor-pointer'
             : 'bg-surface text-text-3 cursor-not-allowed')

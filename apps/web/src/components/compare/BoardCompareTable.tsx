@@ -68,7 +68,7 @@ export function BoardCompareTable({
           <Link
             href={`/part/board/${boardA.slug}`}
             data-testid="compare-board-a-link"
-            className="font-serif text-h3 text-text hover:text-accent transition-colors"
+            className="font-serif text-h3 text-text hover:text-accent transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
           >
             {boardA.name}
           </Link>
@@ -77,7 +77,7 @@ export function BoardCompareTable({
           <Link
             href={`/part/board/${boardB.slug}`}
             data-testid="compare-board-b-link"
-            className="font-serif text-h3 text-text hover:text-accent transition-colors"
+            className="font-serif text-h3 text-text hover:text-accent transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
           >
             {boardB.name}
           </Link>
