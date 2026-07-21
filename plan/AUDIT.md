@@ -7779,7 +7779,7 @@ passes accumulate signals.)
 > **Resolved (2026-07-21):** independently re-verified the count and scope via a fresh Explore pass before shipping (confirmed exactly 6 elements / 4 files, and that the site's established `focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu` button pattern from `quiz/QuizStep.tsx` was the right match — not the form-input `focus:ring-2 focus:ring-accent` pattern the compare `<select>`s already use). Added the button pattern to both "Compare" buttons; added the same ring plus `rounded-sm` (for a clean inline-text ring) to both pairs of result links. `pnpm verify` full gate green: typecheck, 673 web unit tests (+161 script tests), data:validate, build, size (109.1 KB/200 KB budget), 1064/1064 e2e.
 > Picked as the top signal this tick: no unlabeled GitHub issues (triage gate); not Monday; no pending phases/data/content-gap work (all 7 mechanical surveys clean); march's own expand Step 3c gate not due (16 commits/~8.5h since pass 207, under the 20-commit/48h threshold). AUDIT.md's only Pending row is the non-autonomous `[4.0]` Lighthouse-CI `/oversight` item; CRITIQUE.md's only Pending row remains the non-actionable `[needs-user-call]` GA-beacon item. Rather than open a fresh general-purpose sweep, drained the specific candidate the prior tick (dd2d1ef) explicitly flagged but deferred under the one-fix-per-tick rule — re-verified from scratch rather than trusting the prior tick's inline note at face value. Scoping caveat carried forward: this closes only the `/compare` slice of a much broader sitewide gap in `<Link>` focus styling (VendorCard, TrackerRow, CitationIndex, AboutBody, ArticleCard, and others all share the same hover-only pattern) — left for a future dedicated survey/tick, not folded into this one-fix commit.
 
-### [ ] [content-gaps] [5.5] Keychron — Rule 2 tracker linkage missing
+### [x] [content-gaps] [5.5] Keychron — Rule 2 tracker linkage missing — addressed in b789217, closes #563
 - category: content-gaps
 - filed: 2026-07-21 by tracker-linkage-survey.mjs
 - impact: 6 (non-flat trend row "Keychron" unlinked for 43 days; no companion deep-dive)
@@ -7789,3 +7789,16 @@ passes accumulate signals.)
 - rule: Rule 2
 - action: ship companion article for "Keychron", set articleSlug in relevant trend snapshot(s)
 - issue: #563
+> **Resolved (2026-07-21):** drafted ~1180-word trends-pillar piece "Nova Socket: Keychron's bet on not choosing a switch technology" covering the V6 Ultra HE's hybrid mechanical/TMR hot-swap socket against the brand's broader 2026 momentum (Orca Echo crowdfunding record, W19→W28 tracker score 30→80). `publishedAt` gap-filled to 2026-07-08 (largest 30-day-window gap, tie-broken toward the midpoint closer to today per Step 2's rule) — content was scoped to only reference facts public as of that date (the July 22 Kickstarter date lock, not the later $5-deposit detail) to avoid a dateline/content contradiction. 3 InlineViz (socket cross-section, brand sparkline sourced to the real W19–W28 tracker rows, switch-tech ladder) + 1 Callout. Hero SVG: coral hot-swap-socket cross-section + rising sparkline. W30 Keychron row's `articleSlug` set. Language + mentionedParts gates clean. 1067/1067 e2e green.
+> Picked as the top signal this tick: no unlabeled GitHub issues; not Monday (W30 snapshot already existed); no pending phases/data work; AUDIT.md's only other Pending rows were the non-autonomous `[6.3]` blocked-cloud-permission march.yml item and the `[4.0]` Lighthouse-CI `/oversight` item; CRITIQUE.md's only Pending row remains the non-actionable `[needs-user-call]` GA-beacon item. Running the mechanical surveys inline surfaced this: content-gap/crosslink/companion/stale-GB/newsletter-gap/OG-coverage/a11y-spec-coverage all clean, but tracker-linkage-survey.mjs flagged "Keychron" unlinked since W24 (the topic's most recent run) even though two earlier articles already cover its beginning — the run's *latest* row (W30) had gone back to `articleSlug: null` after a real news development (Nova Socket) that neither prior companion piece covers, which is exactly the case Rule 2 exists to catch.
+
+### [ ] [cross-links] [4.5] keychron-nova-socket-hybrid ↔ zmk-mainstream-shift — no prose cross-link (same pillar, ≥2 shared tags: keychron, trends-2026)
+- category: cross-links
+- filed: 2026-07-21 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: keychron, trends-2026
+- article-a: apps/web/src/content/articles/keychron-nova-socket-hybrid.mdx
+- article-b: apps/web/src/content/articles/zmk-mainstream-shift.mdx
+- action: add [zmk-mainstream-shift](/article/zmk-mainstream-shift) to keychron-nova-socket-hybrid body, or vice versa
