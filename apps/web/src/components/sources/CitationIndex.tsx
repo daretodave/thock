@@ -119,7 +119,7 @@ export function CitationIndex({ citations }: CitationIndexProps): ReactElement {
                 href={href}
                 rel="noopener"
                 target="_blank"
-                className="font-serif text-h3 text-text underline decoration-border-hi underline-offset-4 hover:text-accent hover:decoration-accent transition-colors break-words"
+                className="font-serif text-h3 text-text underline decoration-border-hi underline-offset-4 hover:text-accent hover:decoration-accent transition-colors break-words rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
               >
                 {display}
               </a>
@@ -140,7 +140,7 @@ export function CitationIndex({ citations }: CitationIndexProps): ReactElement {
                   )}
                   <Link
                     href={`/article/${article.slug}`}
-                    className="text-text-2 hover:text-text transition-colors break-words"
+                    className="text-text-2 hover:text-text transition-colors break-words rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
                   >
                     {article.frontmatter.title}
                   </Link>

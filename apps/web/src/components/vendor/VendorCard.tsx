@@ -23,7 +23,7 @@ export function VendorCard({ vendor }: VendorCardProps): ReactElement {
         <Link
           href={`/vendor/${vendor.slug}`}
           data-testid="vendor-card-name"
-          className="font-serif text-h2 text-text hover:text-accent transition-colors"
+          className="font-serif text-h2 text-text hover:text-accent transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
         >
           {vendor.name}
         </Link>
@@ -44,7 +44,7 @@ export function VendorCard({ vendor }: VendorCardProps): ReactElement {
         <Link
           href={`/vendor/${vendor.slug}`}
           data-testid="vendor-card-detail-link"
-          className="text-text-2 hover:text-text transition-colors"
+          className="text-text-2 hover:text-text transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
         >
           View vendor →
         </Link>
@@ -53,7 +53,7 @@ export function VendorCard({ vendor }: VendorCardProps): ReactElement {
           target="_blank"
           rel="sponsored noopener"
           data-testid="vendor-card-external-link"
-          className="text-text-2 hover:text-text transition-colors"
+          className="text-text-2 hover:text-text transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
         >
           {vendor.url.replace(/^https?:\/\//, '')} ↗
         </a>

@@ -24,27 +24,27 @@ export function AboutBody(): ReactElement {
         </p>
         <ul>
           <li>
-            <Link href="/news" className="text-accent underline decoration-accent/40 underline-offset-2 transition-colors hover:text-accent-hi hover:decoration-accent">
+            <Link href="/news" className="text-accent underline decoration-accent/40 underline-offset-2 transition-colors hover:text-accent-hi hover:decoration-accent rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu">
               News
             </Link>{' '}
             — what&apos;s shipping, vendor moves, the broader industry signal.
           </li>
           <li>
-            <Link href="/trends" className="text-accent underline decoration-accent/40 underline-offset-2 transition-colors hover:text-accent-hi hover:decoration-accent">
+            <Link href="/trends" className="text-accent underline decoration-accent/40 underline-offset-2 transition-colors hover:text-accent-hi hover:decoration-accent rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu">
               Trends
             </Link>{' '}
             — how taste in switches, layouts, and keycaps moves week-to-week,
             anchored by the{' '}
             <Link
               href="/trends/tracker"
-              className="text-accent underline decoration-accent/40 underline-offset-2 transition-colors hover:text-accent-hi hover:decoration-accent"
+              className="text-accent underline decoration-accent/40 underline-offset-2 transition-colors hover:text-accent-hi hover:decoration-accent rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
             >
               Trends Tracker
             </Link>{' '}
             dashboard.
           </li>
           <li>
-            <Link href="/ideas" className="text-accent underline decoration-accent/40 underline-offset-2 transition-colors hover:text-accent-hi hover:decoration-accent">
+            <Link href="/ideas" className="text-accent underline decoration-accent/40 underline-offset-2 transition-colors hover:text-accent-hi hover:decoration-accent rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu">
               Ideas &amp; Builds
             </Link>{' '}
             — hands-on builds, mods, and the half-formed ideas that turn into
@@ -53,14 +53,14 @@ export function AboutBody(): ReactElement {
           <li>
             <Link
               href="/deep-dives"
-              className="text-accent underline decoration-accent/40 underline-offset-2 transition-colors hover:text-accent-hi hover:decoration-accent"
+              className="text-accent underline decoration-accent/40 underline-offset-2 transition-colors hover:text-accent-hi hover:decoration-accent rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
             >
               Deep Dives
             </Link>{' '}
             — long-form, sourced, and unhurried.
           </li>
           <li>
-            <Link href="/guides" className="text-accent underline decoration-accent/40 underline-offset-2 transition-colors hover:text-accent-hi hover:decoration-accent">
+            <Link href="/guides" className="text-accent underline decoration-accent/40 underline-offset-2 transition-colors hover:text-accent-hi hover:decoration-accent rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu">
               Guides
             </Link>{' '}
             — practical reference: firmware, modding, switches, keycaps.
@@ -87,7 +87,7 @@ export function AboutBody(): ReactElement {
           The{' '}
           <Link
             href="/trends/tracker"
-            className="text-accent underline decoration-accent/40 underline-offset-2 transition-colors hover:text-accent-hi hover:decoration-accent"
+            className="text-accent underline decoration-accent/40 underline-offset-2 transition-colors hover:text-accent-hi hover:decoration-accent rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
           >
             Trends Tracker
           </Link>{' '}
@@ -103,7 +103,7 @@ export function AboutBody(): ReactElement {
           Read the{' '}
           <Link
             href="/article/trends-tracker-preview"
-            className="text-accent underline decoration-accent/40 underline-offset-2 transition-colors hover:text-accent-hi hover:decoration-accent"
+            className="text-accent underline decoration-accent/40 underline-offset-2 transition-colors hover:text-accent-hi hover:decoration-accent rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
           >
             Trends Tracker preview
           </Link>{' '}
@@ -127,7 +127,7 @@ export function AboutBody(): ReactElement {
         </p>
         <p>
           Citations across articles surface on the{' '}
-          <Link href="/sources" className="text-accent underline decoration-accent/40 underline-offset-2 transition-colors hover:text-accent-hi hover:decoration-accent">
+          <Link href="/sources" className="text-accent underline decoration-accent/40 underline-offset-2 transition-colors hover:text-accent-hi hover:decoration-accent rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu">
             Sources
           </Link>{' '}
           page so the reader can audit where the facts came from.

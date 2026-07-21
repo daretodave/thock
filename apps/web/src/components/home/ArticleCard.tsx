@@ -105,7 +105,7 @@ export function ArticleCard({
       <Link
         href={path}
         data-testid="hero-card"
-        className="group flex flex-col gap-5 lg:grid lg:grid-cols-[1.4fr_1fr] lg:items-center lg:gap-8"
+        className="group flex flex-col gap-5 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu lg:grid lg:grid-cols-[1.4fr_1fr] lg:items-center lg:gap-8"
       >
         {fm.heroImage ? (
           <div className="relative aspect-[16/10] overflow-hidden">
@@ -145,7 +145,7 @@ export function ArticleCard({
       <Link
         href={path}
         data-testid="article-card-row"
-        className="group grid grid-cols-1 items-start gap-4 border-t border-border py-5 sm:grid-cols-[200px_1fr] sm:gap-6 first:border-t-0 first:pt-0"
+        className="group grid grid-cols-1 items-start gap-4 rounded-sm border-t border-border py-5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu sm:grid-cols-[200px_1fr] sm:gap-6 first:border-t-0 first:pt-0"
       >
         {fm.heroImage ? (
           <div className="relative aspect-[4/3] overflow-hidden">
@@ -179,7 +179,7 @@ export function ArticleCard({
       <Link
         href={path}
         data-testid="article-card-large"
-        className="group flex flex-col gap-3"
+        className="group flex flex-col gap-3 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
       >
         {fm.heroImage ? (
           <div className="relative aspect-[4/3] overflow-hidden">
@@ -210,7 +210,7 @@ export function ArticleCard({
     <Link
       href={path}
       data-testid="article-card-compact"
-      className="group flex flex-col gap-1 border-t border-border py-3 first:border-t-0 first:pt-0"
+      className="group flex flex-col gap-1 rounded-sm border-t border-border py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu first:border-t-0 first:pt-0"
     >
       {eyebrow}
       <h3
