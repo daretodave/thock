@@ -122,11 +122,11 @@
     {
       "name": "Prototypist",
       "category": "vendor",
-      "direction": "up",
+      "direction": "down",
       "score": 15,
-      "spark": [-40, -35, -30, -25, -18, -10, 2, 15],
+      "spark": [18, 20, 29, 27, 33, 28, 25, 15],
       "articleSlug": "vendor-first-customs",
-      "note": "Hosting the KeyBoy Advance group buy (Game Boy Advance-shaped 50%, closes July 22, 2026) and teasing the Paper 65 kit, reversing last week's decline."
+      "note": "Hosting the KeyBoy Advance group buy (Game Boy Advance-shaped 50%, closes July 22, 2026) and teasing the Paper 65 kit, continuing last week's pullback."
     },
     {
       "name": "Wuque Studio",
