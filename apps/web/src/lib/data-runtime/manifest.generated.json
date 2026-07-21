@@ -2303,13 +2303,13 @@
           "direction": "down",
           "score": -18,
           "spark": [
-            -19,
-            -20,
-            -21,
-            -22,
-            -22,
-            -23,
-            -23,
+            19,
+            20,
+            21,
+            22,
+            22,
+            23,
+            23,
             -18
           ],
           "articleSlug": "dcs-grass-valley-decline",
@@ -8219,5 +8219,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-07-21T12:53:39.947Z"
+  "generatedAt": "2026-07-21T13:49:20.690Z"
 }
