@@ -4882,7 +4882,7 @@
             -18
           ],
           "articleSlug": "cherry-xtrfy-tmr-pivot",
-          "note": "Cherry's MX2A revision is now standard across its whole switch catalog, per MKBGuide's 2026 analysis, marking Cherry's most consequential repositioning against Gateron in years."
+          "note": "Cherry's brand score keeps climbing (-24 to -18) while the MX2A switch line falls further behind (-46) — the widening gap this piece tracks: XTRFY's TMR pivot, not the mainline switch business, is what's pulling Cherry's aggregate score off its floor."
         },
         {
           "name": "Wuque Studio",
@@ -4903,7 +4903,7 @@
           "note": "Wuque Studio stays quiet this week; its NAMA group buy (closed December 2025, delivery est. March 2026) has cycled out of active discussion per CannonKeys listings."
         }
       ],
-      "updatedAt": "2026-07-20T22:33:37.000Z"
+      "updatedAt": "2026-07-21T09:04:00.000Z"
     }
   ],
   "articles": [
@@ -8219,5 +8219,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-07-21T08:10:16.711Z"
+  "generatedAt": "2026-07-21T09:07:34.971Z"
 }
