@@ -51,6 +51,16 @@
       }
     },
     {
+      "slug": "keychron-nova-socket-hybrid",
+      "readTime": 7,
+      "frontmatter": {
+        "title": "Nova Socket: Keychron's bet on not choosing a switch technology",
+        "lede": "A single hot-swap socket that accepts a standard mechanical switch or a TMR magnetic switch, decided per key, is a strange thing for a mainstream prebuilt brand to ship. It's also exactly the move Keychron has been building toward all year.",
+        "pillar": "trends",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "brass-weight-mod",
       "readTime": 8,
       "frontmatter": {
@@ -1372,5 +1382,5 @@
       "readTime": 4
     }
   ],
-  "generatedAt": "2026-07-21T13:49:20.690Z"
+  "generatedAt": "2026-07-21T15:55:03.449Z"
 }

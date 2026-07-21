@@ -1,0 +1,32 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-08T14:00:00.000Z",
+  "commit": "pending",
+  "kind": "inline-viz",
+  "article_slug": "keychron-nova-socket-hybrid",
+  "article_pillar": "trends",
+  "section_anchor": "The tracker read",
+  "brief_summary": "Coral line chart plotting the Keychron brand tracker score across ten weeks (W19-W28 2026), rising from 30 to 80. All ten points are the brand's actual weekly tracker row scores, not interpolated. The W28 terminal point is a filled coral circle; W26 and W27 are marked as the same-window Orca Echo crowdfunding record and V6 Ultra HE Kickstarter date lock the article's tracker-read section describes.",
+  "target": "apps/web/public/article-viz/keychron-nova-socket-hybrid/brand-sparkline.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "apps/web/src/content/articles/keychron-nova-socket-hybrid.mdx:The tracker read — 'The 2026-W28 tracker row puts the Keychron brand score at 80, up from 30 in W19'",
+    "data/trends/2026-W19.json:rows[Keychron].score — 30",
+    "data/trends/2026-W20.json:rows[Keychron].score — 32",
+    "data/trends/2026-W21.json:rows[Keychron].score — 38",
+    "data/trends/2026-W22.json:rows[Keychron].score — 44",
+    "data/trends/2026-W23.json:rows[Keychron].score — 44",
+    "data/trends/2026-W24.json:rows[Keychron].score — 51",
+    "data/trends/2026-W25.json:rows[Keychron].score — 55",
+    "data/trends/2026-W26.json:rows[Keychron].score — 72, note — 'Orca Echo crowdfunding raised 170M yen with 6,501 backers in half a day from June 19. V6 Ultra HE VIP reservation also opened June 15 with Nova Socket hybrid tech.'",
+    "data/trends/2026-W27.json:rows[Keychron].score — 77, note — 'Orca Echo crowdfunding topped a new GIZMART platform GMV record five days in; the campaign stays open through August 31.'",
+    "data/trends/2026-W28.json:rows[Keychron].score — 80, note — 'Orca Echo crowdfunding hit a GIZMART-record pace in its first five days and stays open through Aug 31; V6 Ultra HE hybrid board locks a July 22 Kickstarter date.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/keychron-nova-socket-hybrid/brand-sparkline.svg"],
+  "warnings": []
+}

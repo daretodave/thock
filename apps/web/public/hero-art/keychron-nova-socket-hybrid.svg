@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — Keychron V6 Ultra HE hybrid hot-swap socket: a rising sparkline tracks Keychron's 2026 momentum, and a magnified socket cross-section shows one shared four-pin footprint seated with a mechanical cross stem on the left and a magnet-over-sensor TMR stem on the right</title>
+
+  <!-- Coral wash behind the sparkline terminus — upper-right, the "current news" focal region -->
+  <ellipse cx="980" cy="130" rx="220" ry="120" fill="oklch(0.68 0.165 28 / 0.10)" stroke="none"/>
+
+  <!-- Coral wash behind the socket magnifier — the actual news hook, lower-center-right -->
+  <ellipse cx="860" cy="500" rx="210" ry="200" fill="oklch(0.68 0.165 28 / 0.06)" stroke="none"/>
+
+  <!-- ==========================================================
+       SPARKLINE — trends-pillar motif per bearings.md "Article
+       hero art" directive. Historical climb (warm-grey) arrives
+       at the present moment, then the line turns coral for the
+       2026 momentum stretch (Q1 HE launch cadence culminating in
+       the Orca Echo crowdfunding record), ending at a focal dot
+       for the V6 Ultra HE release itself.
+       ========================================================== -->
+  <polyline points="90,260 220,235 350,205 480,180 600,160" stroke-width="2"/>
+  <circle cx="90"  cy="260" r="4" fill="oklch(0.78 0.005 90)"/>
+  <circle cx="220" cy="235" r="4" fill="oklch(0.78 0.005 90)"/>
+  <circle cx="350" cy="205" r="4" fill="oklch(0.78 0.005 90)"/>
+  <circle cx="480" cy="180" r="4" fill="oklch(0.78 0.005 90)"/>
+  <circle cx="600" cy="160" r="5" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)"/>
+
+  <polyline points="600,160 760,125 920,100 1060,90" stroke="oklch(0.68 0.165 28)" stroke-width="3"/>
+  <circle cx="760" cy="125" r="4" fill="oklch(0.68 0.165 28)"/>
+  <circle cx="920" cy="100" r="4" fill="oklch(0.68 0.165 28)"/>
+
+  <!-- Focal anchor — V6 Ultra HE launch, the visual terminus of the piece -->
+  <circle cx="1060" cy="90" r="7" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)"/>
+  <circle cx="1060" cy="90" r="14" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.4" fill="none"/>
+
+  <!-- Trajectory chevron — trend continues past the visible data, splash-colored -->
+  <path d="M 1068 81 L 1080 72 L 1075 86" stroke="oklch(0.68 0.165 28)" stroke-width="1.6" stroke-opacity="0.85" fill="none"/>
+
+  <!-- ==========================================================
+       COMPACT KEYBOARD SILHOUETTE — the keyboard-domain primitive
+       the hero-art directive requires. Kept abstract (no keycap
+       legends, no accurate layout map). One key glows coral: the
+       hot-swap position where either switch family can seat.
+       ========================================================== -->
+  <rect x="90" y="560" width="370" height="120" rx="10"/>
+  <line x1="90" y1="560" x2="460" y2="560" stroke="oklch(0.80 0.135 75)" stroke-width="2.5" stroke-opacity="0.85"/>
+
+  <g>
+    <rect x="104" y="576" width="30" height="26" rx="3"/>
+    <rect x="138" y="576" width="30" height="26" rx="3"/>
+    <rect x="172" y="576" width="30" height="26" rx="3"/>
+    <rect x="206" y="576" width="30" height="26" rx="3"/>
+    <rect x="240" y="576" width="30" height="26" rx="3"/>
+    <rect x="274" y="576" width="30" height="26" rx="3"/>
+    <rect x="308" y="576" width="30" height="26" rx="3"/>
+    <rect x="342" y="576" width="30" height="26" rx="3"/>
+    <rect x="376" y="576" width="30" height="26" rx="3"/>
+    <rect x="410" y="576" width="30" height="26" rx="3"/>
+  </g>
+  <g>
+    <rect x="104" y="624" width="30" height="26" rx="3"/>
+    <rect x="138" y="624" width="30" height="26" rx="3"/>
+    <rect x="172" y="624" width="30" height="26" rx="3"/>
+    <rect x="206" y="624" width="30" height="26" rx="3"/>
+    <rect x="240" y="624" width="30" height="26" rx="3"/>
+    <rect x="274" y="624" width="30" height="26" rx="3"/>
+    <rect x="308" y="624" width="30" height="26" rx="3"/>
+    <rect x="342" y="624" width="30" height="26" rx="3"/>
+    <rect x="376" y="624" width="30" height="26" rx="3"/>
+  </g>
+
+  <!-- The hybrid-swap key — this is the position the callout below zooms into -->
+  <rect x="410" y="624" width="30" height="26" rx="3" fill="oklch(0.68 0.165 28 / 0.20)" stroke="oklch(0.68 0.165 28)" stroke-width="1.6"/>
+
+  <!-- Callout — dashed connector from the hybrid key to the magnified socket detail -->
+  <line x1="437" y1="637" x2="689" y2="555" stroke-width="1.4" stroke-dasharray="4 5" stroke-opacity="0.55"/>
+  <circle cx="437" cy="637" r="3" fill="oklch(0.68 0.165 28)"/>
+
+  <!-- ==========================================================
+       MAGNIFIED SOCKET CROSS-SECTION — the actual news hook.
+       One shared four-pin hot-swap footprint, split down the
+       middle: a mechanical cross stem seated on the left, a
+       magnet-over-sensor TMR stem seated on the right. This is
+       the "dual-mode socket motif" the brief specifies, rendered
+       as a lens/callout detail rather than a full switch diagram
+       so the piece keeps its trends-pillar sparkline identity.
+       ========================================================== -->
+  <circle cx="860" cy="500" r="180" stroke-width="1.6" stroke-opacity="0.55"/>
+
+  <!-- Divider — the socket reads as one footprint split into two seating modes -->
+  <line x1="860" y1="345" x2="860" y2="655" stroke-width="1" stroke-dasharray="3 5" stroke-opacity="0.4"/>
+
+  <!-- Shared four-pin socket base -->
+  <rect x="730" y="560" width="260" height="70" rx="8" stroke-width="2"/>
+  <circle cx="750" cy="575" r="4" fill="oklch(0.78 0.005 90)"/>
+  <circle cx="970" cy="575" r="4" fill="oklch(0.78 0.005 90)"/>
+  <circle cx="750" cy="615" r="4" fill="oklch(0.78 0.005 90)"/>
+  <circle cx="970" cy="615" r="4" fill="oklch(0.78 0.005 90)"/>
+
+  <!-- Left half — mechanical cross stem, warm-grey (the traditional switch) -->
+  <rect x="790" y="430" width="14" height="130" rx="2"/>
+  <rect x="760" y="475" width="70" height="14" rx="2"/>
+
+  <!-- Right half — TMR stem: magnet over sensor, coral (the new switch tech) -->
+  <rect x="917" y="490" width="16" height="70" rx="2" stroke="oklch(0.68 0.165 28)"/>
+  <circle cx="925" cy="470" r="20" fill="oklch(0.68 0.165 28 / 0.85)" stroke="oklch(0.68 0.165 28)" stroke-width="1.6"/>
+  <path d="M 895 448 L 878 434" stroke="oklch(0.68 0.165 28)" stroke-width="1.4" stroke-opacity="0.6"/>
+  <path d="M 925 438 L 925 418" stroke="oklch(0.68 0.165 28)" stroke-width="1.4" stroke-opacity="0.6"/>
+  <path d="M 955 448 L 972 434" stroke="oklch(0.68 0.165 28)" stroke-width="1.4" stroke-opacity="0.6"/>
+
+  <!-- Bronze theme dot — family ornamental anchor, upper-right margin -->
+  <circle cx="1148" cy="62" r="7" fill="oklch(0.80 0.135 75)" opacity="0.9"/>
+</svg>

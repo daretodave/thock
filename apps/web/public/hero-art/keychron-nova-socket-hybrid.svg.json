@@ -1,0 +1,30 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-21T00:00:00Z",
+  "commit": "633f7ecfc119748a4b227da18b59e878d9b4d5da",
+  "kind": "hero-art",
+  "article_slug": "keychron-nova-socket-hybrid",
+  "article_pillar": "trends",
+  "brief_summary": "Hero art for the Trends pillar piece on Keychron's V6 Ultra HE hybrid hot-swap socket (either a mechanical switch or a TMR magnetic switch seats in the same footprint), set against Keychron's broader 2026 momentum including the Orca Echo crowdfunding record: a 2px warm-grey sparkline rises left to right and turns coral for the recent momentum stretch, ending in a focal dot at the V6 Ultra HE launch. Below, an abstract compact-keyboard silhouette carries one coral-highlighted hybrid-swap key, connected by a dashed callout line to a magnified socket cross-section — one shared four-pin footprint split down the middle, a mechanical cross stem seated on the left and a magnet-over-sensor TMR stem seated on the right.",
+  "target": "apps/web/public/hero-art/keychron-nova-socket-hybrid.svg",
+  "source": "plan/bearings.md § Article hero art — colorful keyboard SVGs (locked 2026-05-09), trends piece → sparkline silhouette, extended per brief to nod to the hybrid-socket news hook",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject; visual family positioned between apps/web/public/hero-art/keychron-quiet-takeover.svg and apps/web/public/hero-art/cherry-xtrfy-tmr-pivot.svg",
+  "size": [1200, 750],
+  "subject": "Rising sparkline (warm-grey historical climb turning coral for the 2026 momentum stretch, terminating at the V6 Ultra HE launch focal dot) paired with an abstract compact-keyboard silhouette whose one coral hybrid-swap key connects via a dashed callout to a magnified socket cross-section: a shared four-pin hot-swap footprint split down the middle, mechanical cross stem seated on the left, magnet-over-sensor TMR stem seated on the right.",
+  "splash_color": {
+    "name": "coral",
+    "oklch": "oklch(0.68 0.165 28)"
+  },
+  "accent_color": {
+    "name": "warm-bronze (theme accent)",
+    "oklch": "oklch(0.80 0.135 75)"
+  },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": [],
+  "outputs": [
+    "apps/web/public/hero-art/keychron-nova-socket-hybrid.svg"
+  ],
+  "warnings": []
+}

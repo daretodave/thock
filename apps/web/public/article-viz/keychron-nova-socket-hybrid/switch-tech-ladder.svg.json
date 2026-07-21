@@ -1,0 +1,25 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-08T14:00:00.000Z",
+  "commit": "pending",
+  "kind": "inline-viz",
+  "article_slug": "keychron-nova-socket-hybrid",
+  "article_pillar": "trends",
+  "section_anchor": "Reading Nova Socket against the ladder",
+  "brief_summary": "Three-panel timeline strip: April 2026's Q1 HE 8K Marble (uniform key grid, no coral highlights, labelled Hall-effect only and committed at manufacture), July 2026's V6 Ultra HE with Nova Socket (a mixed key grid with a handful of coral-filled keys among the outline-only keys, labelled mechanical or TMR chosen per key), and a faded dashed next panel with a question mark standing in for an unannounced future switch technology. A coral bracket spans all three panels with the article's own framing of the hedge.",
+  "target": "apps/web/public/article-viz/keychron-nova-socket-hybrid/switch-tech-ladder.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "apps/web/src/content/articles/keychron-nova-socket-hybrid.mdx:Reading Nova Socket against the ladder — 'The Q1 HE committed. It's Hall-effect, full stop, and a buyer who wants to run standard mechanical switches on that board can't — the socket geometry doesn't support it.'",
+    "apps/web/src/content/articles/keychron-nova-socket-hybrid.mdx:What Nova Socket actually changes — 'That board reads switch position through a Hall-effect sensor under each stem, runs ZMK firmware ... It shipped as the anchor SKU of Keychron's Q Ultra series ... and reached reviewers in April 2026'",
+    "apps/web/src/content/articles/keychron-nova-socket-hybrid.mdx:Reading Nova Socket against the ladder — 'Whichever sensing architecture wins — Hall-effect, TMR, or something that hasn't shipped yet — a Nova Socket board can theoretically accommodate it as a socket revision, without asking the buyer to have picked correctly at purchase time.'",
+    "apps/web/src/content/articles/keychron-nova-socket-hybrid.mdx:What Nova Socket actually changes — 'A buyer can run all mechanical, all TMR, or mix rows ... without swapping a PCB or buying a second board.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/keychron-nova-socket-hybrid/switch-tech-ladder.svg"],
+  "warnings": []
+}

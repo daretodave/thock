@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Timeline strip with three labelled panels left to right. Panel one, dated April 2026, shows the Keychron Q1 HE 8K Marble board icon labelled "Hall-effect only, ZMK, committed at manufacture." Panel two, dated July 2026, shows the V6 Ultra HE board icon with several keys highlighted in coral, labelled "Nova Socket, mechanical or TMR, chosen per key." Panel three, labelled "next," shows a faded dashed board icon with a large question mark, labelled "next switch technology, already hedged." A coral bracket spans all three panels labelled "one hot-swap standard, whichever way the market goes."</title>
+
+  <!-- Title -->
+  <text x="600" y="42" font-family="Newsreader, serif" font-style="italic" font-size="19" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">Keychron's switch-technology ladder</text>
+
+  <!-- Bronze theme dot -->
+  <circle cx="1170" cy="30" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+
+  <!-- Panel dividers -->
+  <line x1="420" y1="100" x2="420" y2="300" stroke-dasharray="5 5" opacity="0.20"/>
+  <line x1="780" y1="100" x2="780" y2="300" stroke-dasharray="5 5" opacity="0.20"/>
+
+  <!-- Panel 1: Q1 HE, April 2026 -->
+  <text x="240" y="118" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">APRIL 2026</text>
+  <text x="240" y="134" font-family="Newsreader, serif" font-style="italic" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">Q1 HE 8K Marble</text>
+  <rect x="140" y="145" width="200" height="90" rx="10" opacity="0.8"/>
+  <rect x="163" y="163" width="14" height="14" rx="2" opacity="0.6"/>
+  <rect x="183" y="163" width="14" height="14" rx="2" opacity="0.6"/>
+  <rect x="203" y="163" width="14" height="14" rx="2" opacity="0.6"/>
+  <rect x="223" y="163" width="14" height="14" rx="2" opacity="0.6"/>
+  <rect x="243" y="163" width="14" height="14" rx="2" opacity="0.6"/>
+  <rect x="263" y="163" width="14" height="14" rx="2" opacity="0.6"/>
+  <rect x="283" y="163" width="14" height="14" rx="2" opacity="0.6"/>
+  <rect x="303" y="163" width="14" height="14" rx="2" opacity="0.6"/>
+  <rect x="163" y="187" width="14" height="14" rx="2" opacity="0.6"/>
+  <rect x="183" y="187" width="14" height="14" rx="2" opacity="0.6"/>
+  <rect x="203" y="187" width="14" height="14" rx="2" opacity="0.6"/>
+  <rect x="223" y="187" width="14" height="14" rx="2" opacity="0.6"/>
+  <rect x="243" y="187" width="14" height="14" rx="2" opacity="0.6"/>
+  <rect x="263" y="187" width="14" height="14" rx="2" opacity="0.6"/>
+  <rect x="283" y="187" width="14" height="14" rx="2" opacity="0.6"/>
+  <rect x="303" y="187" width="14" height="14" rx="2" opacity="0.6"/>
+  <text x="240" y="262" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">Hall-effect only, ZMK,</text>
+  <text x="240" y="282" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">committed at manufacture.</text>
+
+  <!-- Panel 2: V6 Ultra HE, July 2026 -->
+  <text x="600" y="118" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.75">JULY 2026</text>
+  <text x="600" y="134" font-family="Newsreader, serif" font-style="italic" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.75">V6 Ultra HE — Nova Socket</text>
+  <rect x="500" y="145" width="200" height="90" rx="10" stroke="oklch(0.68 0.165 28)" opacity="0.9"/>
+  <rect x="523" y="163" width="14" height="14" rx="2" opacity="0.6"/>
+  <rect x="543" y="163" width="14" height="14" rx="2" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.85"/>
+  <rect x="563" y="163" width="14" height="14" rx="2" opacity="0.6"/>
+  <rect x="583" y="163" width="14" height="14" rx="2" opacity="0.6"/>
+  <rect x="603" y="163" width="14" height="14" rx="2" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.85"/>
+  <rect x="623" y="163" width="14" height="14" rx="2" opacity="0.6"/>
+  <rect x="643" y="163" width="14" height="14" rx="2" opacity="0.6"/>
+  <rect x="663" y="163" width="14" height="14" rx="2" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.85"/>
+  <rect x="523" y="187" width="14" height="14" rx="2" opacity="0.6"/>
+  <rect x="543" y="187" width="14" height="14" rx="2" opacity="0.6"/>
+  <rect x="563" y="187" width="14" height="14" rx="2" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.85"/>
+  <rect x="583" y="187" width="14" height="14" rx="2" opacity="0.6"/>
+  <rect x="603" y="187" width="14" height="14" rx="2" opacity="0.6"/>
+  <rect x="623" y="187" width="14" height="14" rx="2" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.85"/>
+  <rect x="643" y="187" width="14" height="14" rx="2" opacity="0.6"/>
+  <rect x="663" y="187" width="14" height="14" rx="2" opacity="0.6"/>
+  <text x="600" y="262" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.9">Nova Socket, mechanical or TMR,</text>
+  <text x="600" y="282" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.9">chosen per key.</text>
+
+  <!-- Panel 3: next, unlabeled -->
+  <text x="960" y="118" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.4">NEXT</text>
+  <text x="960" y="134" font-family="Newsreader, serif" font-style="italic" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.4">whichever wins</text>
+  <rect x="860" y="145" width="200" height="90" rx="10" stroke-dasharray="6 5" opacity="0.35"/>
+  <text x="960" y="205" font-family="Newsreader, serif" font-size="46" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.4">?</text>
+  <text x="960" y="262" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">next switch technology,</text>
+  <text x="960" y="282" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">already hedged.</text>
+
+  <!-- Bracket spanning all three panels -->
+  <path d="M100,330 L100,345 L1100,345 L1100,330" stroke="oklch(0.68 0.165 28)" opacity="0.85" fill="none"/>
+  <line x1="600" y1="345" x2="600" y2="358" stroke="oklch(0.68 0.165 28)" opacity="0.85"/>
+  <text x="600" y="385" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.9">one hot-swap standard, whichever way the market goes.</text>
+</svg>

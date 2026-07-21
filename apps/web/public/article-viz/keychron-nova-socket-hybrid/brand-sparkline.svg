@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Coral line chart of the Keychron brand tracker score across ten weeks of 2026, rising from 30 in W19 to 80 in W28, with the W28 terminal point highlighted as a filled coral circle and an annotation marking the Orca Echo crowdfunding record and the V6 Ultra HE Kickstarter date lock both landing in the W26-W28 window</title>
+
+  <!-- Chart title -->
+  <text x="600" y="42" font-family="Newsreader, serif" font-size="17" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">Keychron brand tracker — W19 through W28 2026</text>
+
+  <!-- Bronze theme dot -->
+  <circle cx="1170" cy="30" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+
+  <!-- Y axis -->
+  <line x1="140" y1="60" x2="140" y2="330" stroke-opacity="0.30"/>
+  <!-- X axis -->
+  <line x1="140" y1="330" x2="1100" y2="330" stroke-opacity="0.30"/>
+
+  <!-- Y gridlines + labels: 40, 50, 60, 70, 80 -->
+  <line x1="136" y1="276" x2="1100" y2="276" stroke-opacity="0.10" stroke-width="1"/>
+  <text x="118" y="280" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.45">40</text>
+  <line x1="136" y1="222" x2="1100" y2="222" stroke-opacity="0.10" stroke-width="1"/>
+  <text x="118" y="226" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.45">50</text>
+  <line x1="136" y1="168" x2="1100" y2="168" stroke-opacity="0.10" stroke-width="1"/>
+  <text x="118" y="172" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.45">60</text>
+  <line x1="136" y1="114" x2="1100" y2="114" stroke-opacity="0.10" stroke-width="1"/>
+  <text x="118" y="118" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.45">70</text>
+  <text x="118" y="64" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.45">80</text>
+  <text x="118" y="331" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.45">30</text>
+
+  <!--
+    Real weekly Keychron brand-tracker scores, data/trends/2026-W19.json through 2026-W28.json:
+    W19=30 W20=32 W21=38 W22=44 W23=44 W24=51 W25=55 W26=72 W27=77 W28=80
+    y = 330 - (score-30)*5.4, x steps of ~105.6px from x=150 to x=1100
+  -->
+
+  <!-- X axis week labels -->
+  <text x="150" y="355" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">W19</text>
+  <text x="256" y="355" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">W20</text>
+  <text x="361" y="355" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">W21</text>
+  <text x="467" y="355" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.50">W22</text>
+  <text x="572" y="355" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.50">W23</text>
+  <text x="678" y="355" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">W24</text>
+  <text x="783" y="355" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">W25</text>
+  <text x="889" y="355" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.85">W26</text>
+  <text x="994" y="355" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.90">W27</text>
+  <text x="1100" y="355" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">W28</text>
+  <text x="620" y="395" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.40">2026</text>
+
+  <!-- Coral sparkline -->
+  <polyline
+    points="150,330 256,319.2 361,286.8 467,254.4 572,254.4 678,216.6 783,195 889,103.2 994,76.2 1100,60"
+    stroke="oklch(0.68 0.165 28)"
+    stroke-width="2.5"
+    stroke-opacity="0.95"
+    fill="none"
+  />
+
+  <!-- Start point: open circle W19 score=30 -->
+  <circle cx="150" cy="330" r="5" stroke="oklch(0.68 0.165 28)" stroke-width="2" fill="oklch(0.14 0.01 90)" opacity="0.90"/>
+  <text x="150" y="318" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.70">30</text>
+
+  <!-- Intermediate dots, smaller -->
+  <circle cx="256" cy="319.2" r="3" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)" opacity="0.60"/>
+  <circle cx="361" cy="286.8" r="3" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)" opacity="0.60"/>
+  <circle cx="467" cy="254.4" r="3" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)" opacity="0.65"/>
+  <circle cx="572" cy="254.4" r="3" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)" opacity="0.65"/>
+  <circle cx="678" cy="216.6" r="3" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)" opacity="0.70"/>
+  <circle cx="783" cy="195" r="3.5" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)" opacity="0.75"/>
+
+  <!-- W26/W27: the same-window launch dots -->
+  <circle cx="889" cy="103.2" r="4.5" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)" opacity="0.90"/>
+  <circle cx="994" cy="76.2" r="4.5" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)" opacity="0.90"/>
+
+  <!-- Terminal point: filled coral circle W28 score=80 -->
+  <circle cx="1100" cy="60" r="7" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)" opacity="0.95"/>
+  <text x="1100" y="46" font-family="JetBrains Mono, monospace" font-size="16" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" font-weight="600">80</text>
+
+  <!-- Annotation: Orca Echo record + V6 Ultra HE Kickstarter lock, same window -->
+  <line x1="960" y1="170" x2="945" y2="95" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.5" stroke-dasharray="3 4"/>
+  <text x="960" y="190" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.85">Orca Echo crowdfunding record +</text>
+  <text x="960" y="207" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.85">V6 Ultra HE Kickstarter lock — same window</text>
+</svg>

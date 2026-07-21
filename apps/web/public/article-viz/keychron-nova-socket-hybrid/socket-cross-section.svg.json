@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-08T14:00:00.000Z",
+  "commit": "pending",
+  "kind": "inline-viz",
+  "article_slug": "keychron-nova-socket-hybrid",
+  "article_pillar": "trends",
+  "section_anchor": "What Nova Socket actually changes",
+  "brief_summary": "Annotated cross-section showing the Nova Socket hot-swap footprint on a PCB. Left half seats a standard mechanical switch with four contact legs meeting copper pads; right half seats a TMR magnetic switch with a stem-mounted magnet over a sensor pad, in an identically-dimensioned dashed footprint outline. A coral bracket spans both halves to make the article's central claim legible: one socket, one PCB, the switch technology is decided per key at assembly, not at manufacture.",
+  "target": "apps/web/public/article-viz/keychron-nova-socket-hybrid/socket-cross-section.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "apps/web/src/content/articles/keychron-nova-socket-hybrid.mdx:What Nova Socket actually changes — 'The socket footprint is wired to support a mechanical switch's contact-closure legs and a TMR switch's magnet-over-sensor geometry at the same time, in the same four-pin outline. Seat a standard MX-compatible mechanical switch and the board reads a simple make/break. Seat a TMR switch and the same socket reads analog travel'",
+    "apps/web/src/content/articles/keychron-nova-socket-hybrid.mdx:frontmatter heroImageAlt — 'Overhead illustration of a keyboard hot-swap socket footprint split down the middle, one half seated with a standard mechanical switch stem, the other half seated with a magnet-and-sensor TMR switch stem, both sharing the same four-pin socket outline.'",
+    "apps/web/src/content/articles/keychron-nova-socket-hybrid.mdx:What Nova Socket actually changes — 'It's not a new switch. It's a socket that refuses to make the switch-technology decision on the buyer's behalf.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/keychron-nova-socket-hybrid/socket-cross-section.svg"],
+  "warnings": []
+}
