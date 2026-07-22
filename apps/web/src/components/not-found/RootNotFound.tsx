@@ -55,7 +55,7 @@ export function RootNotFound(): ReactElement {
           />
           <button
             type="submit"
-            className="border border-accent-mu px-6 py-3 font-mono text-small uppercase tracking-[0.08em] text-accent hover:text-accent-hi transition-colors"
+            className="border border-accent-mu px-6 py-3 font-mono text-small uppercase tracking-[0.08em] text-accent hover:text-accent-hi transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
           >
             Search
           </button>
@@ -70,7 +70,7 @@ export function RootNotFound(): ReactElement {
             <Link
               key={p.href}
               href={p.href}
-              className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-accent transition-colors"
+              className="rounded-sm font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
             >
               {p.label} →
             </Link>

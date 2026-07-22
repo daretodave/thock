@@ -13,7 +13,7 @@ export default function NewsletterNotFound(): ReactElement {
           </p>
           <Link
             href="/newsletter"
-            className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text"
+            className="rounded-sm font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
           >
             ← all issues
           </Link>

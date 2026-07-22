@@ -20,19 +20,28 @@ export default function PartIndexNotFound() {
           </p>
         </div>
         <div className="flex flex-wrap gap-x-6 gap-y-2 font-mono text-small uppercase tracking-[0.08em] text-text-2">
-          <Link href="/part/switch" className="hover:text-text">
+          <Link
+            href="/part/switch"
+            className="rounded-sm hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+          >
             /part/switch
           </Link>
-          <Link href="/part/keycap-set" className="hover:text-text">
+          <Link
+            href="/part/keycap-set"
+            className="rounded-sm hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+          >
             /part/keycap-set
           </Link>
-          <Link href="/part/board" className="hover:text-text">
+          <Link
+            href="/part/board"
+            className="rounded-sm hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+          >
             /part/board
           </Link>
         </div>
         <Link
           href="/"
-          className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text"
+          className="rounded-sm font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
         >
           ← back to home
         </Link>

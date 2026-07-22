@@ -62,7 +62,7 @@ export function SuggestedArticles({
               href={`/article/${hit.slug}`}
               data-testid="not-found-suggestion"
               data-slug={hit.slug}
-              className="group flex flex-col gap-1 border-t border-border py-3 first:border-t-0 first:pt-0"
+              className="group flex flex-col gap-1 rounded-sm border-t border-border py-3 first:border-t-0 first:pt-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
             >
               <span className="font-mono uppercase tracking-[0.1em] text-micro text-accent">
                 {pillarLabel(hit.pillar)}

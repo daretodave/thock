@@ -32,7 +32,7 @@ export default async function ArticleNotFound() {
 
         <Link
           href="/"
-          className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text"
+          className="rounded-sm font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
         >
           ← back to home
         </Link>
