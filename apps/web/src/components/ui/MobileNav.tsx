@@ -52,7 +52,7 @@ export function MobileNav(): ReactElement {
         aria-controls={menuId}
         data-testid="mobile-nav-toggle"
         onClick={() => setOpen((v) => !v)}
-        className="inline-flex h-9 w-9 items-center justify-center border border-border text-text-2 hover:text-text hover:border-border-hi transition-colors md:hidden"
+        className="inline-flex h-9 w-9 items-center justify-center border border-border text-text-2 hover:text-text hover:border-border-hi transition-colors md:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
       >
         {open ? (
           <svg
@@ -101,7 +101,7 @@ export function MobileNav(): ReactElement {
                 <Link
                   href={pillar.href}
                   onClick={() => setOpen(false)}
-                  className="block py-3 font-serif text-h3 text-text hover:text-accent transition-colors"
+                  className="block py-3 font-serif text-h3 text-text hover:text-accent transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
                 >
                   {pillar.label}
                 </Link>
@@ -112,7 +112,7 @@ export function MobileNav(): ReactElement {
                 href="/tools"
                 data-testid="mobile-nav-tools-link"
                 onClick={() => setOpen(false)}
-                className="block py-3 font-serif text-h3 text-text hover:text-accent transition-colors"
+                className="block py-3 font-serif text-h3 text-text hover:text-accent transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
               >
                 Tools
               </Link>

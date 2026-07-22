@@ -7,7 +7,11 @@ export function Header() {
   return (
     <header className="relative border-b border-border bg-bg">
       <Container as="div" className="flex items-center justify-between gap-6 py-4">
-        <Link href="/" aria-label="thock — home" className="shrink-0 translate-y-[3px]">
+        <Link
+          href="/"
+          aria-label="thock — home"
+          className="shrink-0 translate-y-[3px] rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+        >
           <Wordmark size="md" />
         </Link>
 
@@ -16,7 +20,7 @@ export function Header() {
             <Link
               key={pillar.slug}
               href={pillar.href}
-              className="font-sans text-small text-text-2 hover:text-text transition-colors"
+              className="font-sans text-small text-text-2 hover:text-text transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
             >
               {pillar.label}
             </Link>
@@ -24,7 +28,7 @@ export function Header() {
           <Link
             href="/tools"
             data-testid="header-tools-link"
-            className="font-sans text-small text-text-2 hover:text-text transition-colors"
+            className="font-sans text-small text-text-2 hover:text-text transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
           >
             Tools
           </Link>
@@ -35,7 +39,7 @@ export function Header() {
             href="/search"
             aria-label="Search"
             data-testid="header-search-link"
-            className="inline-flex h-9 w-9 items-center justify-center border border-border text-text-2 hover:text-text hover:border-border-hi transition-colors"
+            className="inline-flex h-9 w-9 items-center justify-center border border-border text-text-2 hover:text-text hover:border-border-hi transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
           >
             <svg
               width="16"
