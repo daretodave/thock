@@ -232,9 +232,9 @@ test.describe('a11y — desktop', () => {
     await runAxe(page, '/trends/tracker/2026-W19')
   })
 
-  // 404 templates — 7 distinct not-found routes, previously zero full-page
+  // 404 templates — 8 distinct not-found routes, previously zero full-page
   // axe coverage (only narrow color-contrast regression guards existed).
-  // issue #389
+  // issue #389; newsletter route added via issue #574
   test('root not-found (/this-route-does-not-exist-anywhere)', async ({ page }) => {
     await runAxe(page, '/this-route-does-not-exist-anywhere')
   })
@@ -261,6 +261,10 @@ test.describe('a11y — desktop', () => {
 
   test('tracker week not-found (/trends/tracker/2099-W99)', async ({ page }) => {
     await runAxe(page, '/trends/tracker/2099-W99')
+  })
+
+  test('newsletter issue not-found (/newsletter/this-issue-does-not-exist)', async ({ page }) => {
+    await runAxe(page, '/newsletter/this-issue-does-not-exist')
   })
 })
 
@@ -404,7 +408,7 @@ test.describe('a11y — mobile (375px)', () => {
     await runAxe(page, '/trends/tracker/2026-W19')
   })
 
-  // 404 templates — mobile (issue #389)
+  // 404 templates — mobile (issue #389; newsletter route added via issue #574)
   test('root not-found — mobile', async ({ page }) => {
     await runAxe(page, '/this-route-does-not-exist-anywhere')
   })
@@ -431,6 +435,10 @@ test.describe('a11y — mobile (375px)', () => {
 
   test('tracker week not-found — mobile', async ({ page }) => {
     await runAxe(page, '/trends/tracker/2099-W99')
+  })
+
+  test('newsletter issue not-found — mobile', async ({ page }) => {
+    await runAxe(page, '/newsletter/this-issue-does-not-exist')
   })
 })
 
