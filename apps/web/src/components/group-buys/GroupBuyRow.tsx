@@ -161,7 +161,7 @@ export function GroupBuyRow({
             href={groupBuy.url}
             rel="sponsored noopener"
             target="_blank"
-            className="border border-border-hi px-3 py-1.5 font-mono text-micro uppercase tracking-[0.08em] text-text-2 hover:text-text"
+            className="border border-border-hi px-3 py-1.5 font-mono text-micro uppercase tracking-[0.08em] text-text-2 hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
           >
             view at vendor →
           </a>
@@ -170,7 +170,7 @@ export function GroupBuyRow({
           <Link
             data-testid="group-buy-coverage-link"
             href={`/article/${groupBuy.relatedArticle}`}
-            className="font-mono text-micro uppercase tracking-[0.08em] text-text-2 hover:text-text"
+            className="rounded-sm font-mono text-micro uppercase tracking-[0.08em] text-text-2 hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
           >
             read our coverage →
           </Link>
@@ -179,7 +179,7 @@ export function GroupBuyRow({
           <Link
             data-testid="group-buy-product-link"
             href={`/part/${groupBuy.productKind}/${groupBuy.productSlug}`}
-            className="font-mono text-micro uppercase tracking-[0.08em] text-text-2 hover:text-text"
+            className="rounded-sm font-mono text-micro uppercase tracking-[0.08em] text-text-2 hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
           >
             view catalog specs →
           </Link>
