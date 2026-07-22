@@ -6192,7 +6192,7 @@
       "frontmatter": {
         "slug": "keychron-q-ultra-zmk",
         "title": "Keychron's Q Ultra ZMK series brings 660h battery to the prebuilt-premium tier",
-        "lede": "Keychron used CES 2026 to announce the Q Ultra line — Q1 through Q6 prebuilts running ZMK rather than QMK/VIA. The 660h battery claim is the headline; the firmware swap is the actual story.",
+        "lede": "Keychron used CES 2026 to announce the Q Ultra line — five prebuilts (Q1, Q2, Q3, Q5, Q6) running ZMK rather than QMK/VIA. The 660h battery claim is the headline; the firmware swap is the actual story.",
         "description": null,
         "author": "thock",
         "pillar": "news",
@@ -8253,5 +8253,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-07-22T05:19:51.507Z"
+  "generatedAt": "2026-07-22T07:04:48.027Z"
 }
