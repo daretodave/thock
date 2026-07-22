@@ -7,7 +7,7 @@
   "article_slug": "computex-2026-keyboard-highlights",
   "article_pillar": "news",
   "section_anchor": "What dropped at the show",
-  "brief_summary": "Coral sparkline plotting Hall Effect / Rapid Trigger Trends Tracker scores across seven weeks W19 through W25 — values 38, 42, 48, 55, 60, 65, 72. A dashed vertical marker at W22 is labeled Computex 2026 May 20–24. The W22 dot is accent-colored and the terminal W25 dot is a filled coral circle labeled 72. The viz establishes that the climb pre-dates Computex; the show was an accelerant, not the origin.",
+  "brief_summary": "Coral sparkline plotting the real Hall Effect / Rapid Trigger Trends Tracker row across the five weeks it has existed, W21 through W25 — values 55, 60, 66, 72, 76 (data/trends/2026-W21.json through 2026-W25.json; the row does not exist before W21). A dashed vertical marker at W21 is labeled Computex 2026 May 20–24 — that's the row's first tracked week, already at 55. The terminal W25 dot is a filled coral circle labeled 76. Corrected 2026-07-22 (iterate audit): the prior version fabricated a seven-week W19–W25 series (38, 42, 48, 55, 60, 65, 72) that contradicted both the real tracker data and this article's own line-101 prose ('up from 55 in W21').",
   "target": "apps/web/public/article-viz/computex-2026-keyboard-highlights/he-adoption-spark.svg",
   "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
   "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
@@ -15,9 +15,8 @@
   "tokens_snapshot": "design/tokens.css",
   "fonts": ["IBM Plex Sans", "Newsreader"],
   "data_sources": [
-    "apps/web/src/content/articles/computex-2026-keyboard-highlights.mdx:What to watch next — 'The W25 Trends Tracker logged hall-effect as the highest-scoring category in the switch tier for the third consecutive week, up from 60 in W21'",
-    "apps/web/src/content/articles/computex-2026-keyboard-highlights.mdx:article brief — HE/RT spark scores W19–W25: 38, 42, 48, 55, 60, 65, 72",
-    "apps/web/src/content/articles/computex-2026-keyboard-highlights.mdx:article brief — 'Computex ran May 20–24, 2026'"
+    "data/trends/2026-W21.json through 2026-W25.json — 'Hall Effect / Rapid Trigger' row: scores 55, 60, 66, 72, 76",
+    "apps/web/src/content/articles/computex-2026-keyboard-highlights.mdx:What to watch next — 'up from 55 in W21 at the start of the Computex cycle'"
   ],
   "outputs": ["apps/web/public/article-viz/computex-2026-keyboard-highlights/he-adoption-spark.svg"],
   "warnings": []

@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <title>Hall Effect / Rapid Trigger Trends Tracker scores from W19 through W25 — values 38, 42, 48, 55, 60, 65, 72 — a seven-week climb with Computex 2026 as the mid-point accelerant</title>
+  <title>Hall Effect / Rapid Trigger Trends Tracker scores from W21 through W25 — values 55, 60, 66, 72, 76 — already elevated the week Computex 2026 happened, climbing every week since</title>
 
   <!-- Title -->
-  <text x="600" y="48" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Hall Effect / Rapid Trigger — Trends Tracker W19 → W25</text>
+  <text x="600" y="48" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Hall Effect / Rapid Trigger — Trends Tracker W21 → W25</text>
 
-  <!-- Chart area: x 180–1060, y 100 (score 100) to 360 (score 0) -->
+  <!-- Chart area: x 200–1040, y 100 (score 100) to 360 (score 0) -->
   <!-- Scale: 260px for 100 score points = 2.6px per point -->
-  <!-- W19 score 38 → y = 360 - (38 * 2.6) = 261 -->
-  <!-- W20 score 42 → 360 - 109 = 251 -->
-  <!-- W21 score 48 → 360 - 125 = 235 -->
-  <!-- W22 score 55 → 360 - 143 = 217 -->
-  <!-- W23 score 60 → 360 - 156 = 204 -->
-  <!-- W24 score 65 → 360 - 169 = 191 -->
-  <!-- W25 score 72 → 360 - 187 = 173 -->
-  <!-- X: 7 points at x=200,340,480,620,760,900,1040 (step 140) -->
+  <!-- W21 score 55 → y = 360 - (55 * 2.6) = 217 -->
+  <!-- W22 score 60 → 360 - 156 = 204 -->
+  <!-- W23 score 66 → 360 - 171.6 = 188 -->
+  <!-- W24 score 72 → 360 - 187.2 = 173 -->
+  <!-- W25 score 76 → 360 - 197.6 = 162 -->
+  <!-- X: 5 points at x=200,410,620,830,1040 (step 210) -->
 
   <!-- Horizontal grid lines -->
   <line x1="180" y1="360" x2="1080" y2="360" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.35" stroke-width="1.5"/>
@@ -34,55 +32,49 @@
 
   <!-- Subtle fill below line -->
   <polygon
-    points="200,261 340,251 480,235 620,217 760,204 900,191 1040,173 1040,360 200,360"
+    points="200,217 410,204 620,188 830,173 1040,162 1040,360 200,360"
     fill="oklch(0.68 0.165 28 / 0.07)"
     stroke="none"
   />
 
-  <!-- Computex 2026 marker at W22 (x=620) -->
-  <line x1="620" y1="90" x2="620" y2="370" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.18" stroke-width="1.5" stroke-dasharray="5 4"/>
-  <text x="620" y="82" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.85">Computex 2026</text>
-  <text x="620" y="95" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.70">May 20–24</text>
+  <!-- Computex 2026 marker at W21 — the week the tracker first picked up this row -->
+  <line x1="200" y1="90" x2="200" y2="370" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.18" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="200" y="82" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.85">Computex 2026</text>
+  <text x="200" y="95" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.70">May 20–24</text>
 
   <!-- Coral data line -->
   <polyline
-    points="200,261 340,251 480,235 620,217 760,204 900,191 1040,173"
+    points="200,217 410,204 620,188 830,173 1040,162"
     stroke="oklch(0.68 0.165 28)"
     stroke-width="3"
     stroke-opacity="0.92"
     fill="none"
   />
 
-  <!-- Data dots — muted for pre-Computex weeks -->
-  <circle cx="200"  cy="261" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.40"/>
-  <circle cx="340"  cy="251" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.40"/>
-  <circle cx="480"  cy="235" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.40"/>
-  <!-- W22 Computex dot — accented -->
-  <circle cx="620"  cy="217" r="5.5" fill="oklch(0.68 0.165 28 / 0.45)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.90"/>
-  <circle cx="760"  cy="204" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.40"/>
-  <circle cx="900"  cy="191" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.40"/>
+  <!-- Data dots -->
+  <!-- W21 Computex dot — accented, first tracked value -->
+  <circle cx="200"  cy="217" r="5.5" fill="oklch(0.68 0.165 28 / 0.45)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.90"/>
+  <circle cx="410"  cy="204" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.40"/>
+  <circle cx="620"  cy="188" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.40"/>
+  <circle cx="830"  cy="173" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.40"/>
   <!-- Terminal dot W25 — filled coral -->
-  <circle cx="1040" cy="173" r="10" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.90"/>
+  <circle cx="1040" cy="162" r="10" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.90"/>
 
-  <!-- Score callout W19 -->
-  <text x="200" y="252" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">38</text>
-  <!-- Score callout W22 -->
-  <text x="620" y="208" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.85">55</text>
+  <!-- Score callout W21 -->
+  <text x="200" y="208" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.85">55</text>
   <!-- Terminal score label -->
-  <text x="1060" y="169" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.68 0.165 28)" stroke="none" font-weight="600">72</text>
-  <text x="1060" y="187" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.50">W25</text>
+  <text x="1060" y="158" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.68 0.165 28)" stroke="none" font-weight="600">76</text>
+  <text x="1060" y="176" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.50">W25</text>
 
   <!-- X-axis week labels -->
-  <text x="200"  y="385" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">W19</text>
-  <text x="340"  y="385" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">W20</text>
-  <text x="480"  y="385" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">W21</text>
-  <text x="620"  y="385" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.90">W22</text>
-  <text x="760"  y="385" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">W23</text>
-  <text x="900"  y="385" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">W24</text>
+  <text x="200"  y="385" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.90">W21</text>
+  <text x="410"  y="385" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">W22</text>
+  <text x="620"  y="385" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">W23</text>
+  <text x="830"  y="385" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">W24</text>
   <text x="1040" y="385" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">W25</text>
 
   <!-- Annotation -->
-  <text x="600" y="420" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">the floor rising — Computex was an accelerant, not the origin</text>
+  <text x="600" y="420" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">already elevated the week of the show — and rising every week since</text>
 
   <!-- Brass theme dot -->
   <circle cx="1170" cy="36" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
