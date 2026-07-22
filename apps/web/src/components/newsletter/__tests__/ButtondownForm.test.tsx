@@ -65,4 +65,22 @@ describe('<ButtondownForm>', () => {
     expect(link).toHaveAttribute('href', 'https://buttondown.com/refer/thock')
     expect(link).toHaveAttribute('target', '_blank')
   })
+
+  it('gives the Subscribe submit button a visible focus ring on both variants', () => {
+    for (const variant of ['footer', 'full'] as const) {
+      render(<ButtondownForm variant={variant} />)
+      const submit = screen
+        .getByTestId(`buttondown-form-${variant}`)
+        .querySelector('input[type="submit"]') as HTMLInputElement
+      expect(submit.className).toContain('focus:ring-2')
+      expect(submit.className).toContain('focus:ring-accent')
+    }
+  })
+
+  it('gives the attribution link a visible focus ring', () => {
+    render(<ButtondownForm variant="full" />)
+    const attribution = screen.getByText(/powered by buttondown/i)
+    const link = attribution.closest('a')
+    expect(link!.className).toContain('focus-visible:ring-2')
+  })
 })

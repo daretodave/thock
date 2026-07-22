@@ -81,8 +81,8 @@ export function ButtondownForm({
           value="Subscribe"
           className={
             isFooter
-              ? 'cursor-pointer border border-border-hi px-4 py-2 font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text transition-colors'
-              : 'cursor-pointer border border-accent-mu px-6 py-3 font-mono text-small uppercase tracking-[0.08em] text-accent hover:text-accent-hi transition-colors'
+              ? 'cursor-pointer border border-border-hi px-4 py-2 font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-1 focus:ring-offset-bg'
+              : 'cursor-pointer border border-accent-mu px-6 py-3 font-mono text-small uppercase tracking-[0.08em] text-accent hover:text-accent-hi transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-1 focus:ring-offset-bg'
           }
         />
       </div>
@@ -94,7 +94,7 @@ export function ButtondownForm({
           href={REFER}
           target="_blank"
           rel="noopener"
-          className="hover:text-text"
+          className="rounded-sm hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
         >
           Powered by Buttondown.
         </a>
