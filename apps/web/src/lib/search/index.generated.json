@@ -1391,7 +1391,7 @@
       "64": {
         "slug": "gasket-mount-reality",
         "title": "What gasket mount actually delivers (and what it doesn't)",
-        "lede": "The label appears on keyboards at every price point, from $90 prebuilts to $400 group-buy customs, but two boards with identical spec-sheet language can sound nothing alike. Here is what the term actually tells you, and what it doesn't.",
+        "lede": "The label appears on keyboards at every price point, from $90 prebuilts to $350 group-buy customs, but two boards with identical spec-sheet language can sound nothing alike. Here is what the term actually tells you, and what it doesn't.",
         "pillar": "ideas",
         "tags": [
           "modding",
@@ -3331,9 +3331,6 @@
       [
         "$400",
         {
-          "2": {
-            "64": 1
-          },
           "3": {
             "24": 1,
             "44": 1,
@@ -3478,6 +3475,9 @@
       [
         "$350",
         {
+          "2": {
+            "64": 1
+          },
           "3": {
             "26": 1,
             "44": 1,
@@ -106103,7 +106103,7 @@
       "id": "gasket-mount-reality",
       "slug": "gasket-mount-reality",
       "title": "What gasket mount actually delivers (and what it doesn't)",
-      "lede": "The label appears on keyboards at every price point, from $90 prebuilts to $400 group-buy customs, but two boards with identical spec-sheet language can sound nothing alike. Here is what the term actually tells you, and what it doesn't.",
+      "lede": "The label appears on keyboards at every price point, from $90 prebuilts to $350 group-buy customs, but two boards with identical spec-sheet language can sound nothing alike. Here is what the term actually tells you, and what it doesn't.",
       "pillar": "ideas",
       "tags": [
         "modding",
@@ -106751,6 +106751,6 @@
       "href": "/trends/tracker/2026-W30"
     }
   ],
-  "generatedAt": "2026-07-22T01:53:09.875Z",
+  "generatedAt": "2026-07-22T03:15:01.733Z",
   "count": 71
 }

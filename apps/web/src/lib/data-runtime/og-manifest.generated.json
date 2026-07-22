@@ -645,7 +645,7 @@
       "readTime": 9,
       "frontmatter": {
         "title": "What gasket mount actually delivers (and what it doesn't)",
-        "lede": "The label appears on keyboards at every price point, from $90 prebuilts to $400 group-buy customs, but two boards with identical spec-sheet language can sound nothing alike. Here is what the term actually tells you, and what it doesn't.",
+        "lede": "The label appears on keyboards at every price point, from $90 prebuilts to $350 group-buy customs, but two boards with identical spec-sheet language can sound nothing alike. Here is what the term actually tells you, and what it doesn't.",
         "pillar": "ideas",
         "author": "thock"
       }
@@ -1382,5 +1382,5 @@
       "readTime": 4
     }
   ],
-  "generatedAt": "2026-07-22T01:53:08.806Z"
+  "generatedAt": "2026-07-22T03:15:00.665Z"
 }
