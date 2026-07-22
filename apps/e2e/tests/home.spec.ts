@@ -49,6 +49,8 @@ test.describe('home page family — phase 6', () => {
     if ((await widget.count()) === 0) return
     const rows = page.getByTestId('group-buy-row')
     expect(await rows.count()).toBeGreaterThanOrEqual(1)
+    const href = await rows.first().getAttribute('href')
+    expect(href).toMatch(/^\/(article|part|group-buys)/)
   })
 
   test('/parts catalog link is present on the home page', async ({ page }) => {

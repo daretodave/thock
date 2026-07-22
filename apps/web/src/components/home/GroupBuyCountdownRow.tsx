@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import type { ReactElement } from 'react'
 import type { GroupBuy, Vendor } from '@thock/data'
 
@@ -57,6 +58,22 @@ export function isAnnouncedNotStarted(
 }
 
 /**
+ * Where the row should link — mirrors the affordance priority
+ * `<GroupBuyRow>` already offers on /group-buys (coverage article,
+ * then catalog spec page), falling back to the row's anchor on the
+ * canonical index when neither exists. Every render is clickable.
+ */
+export function countdownRowHref(
+  groupBuy: Pick<GroupBuy, 'slug' | 'relatedArticle' | 'productSlug' | 'productKind'>,
+): string {
+  if (groupBuy.relatedArticle) return `/article/${groupBuy.relatedArticle}`
+  if (groupBuy.productSlug) {
+    return `/part/${groupBuy.productKind}/${groupBuy.productSlug}`
+  }
+  return `/group-buys#${groupBuy.slug}`
+}
+
+/**
  * One row in the home page group-buys widget. Title + vendor + day
  * count + a thin progress sliver. Accent color triggers in the last
  * 72 hours per `decisions.jsx`.
@@ -79,11 +96,12 @@ export function GroupBuyCountdownRow({
   const isUrgent = !isAnnounced && left <= ACCENT_THRESHOLD_DAYS
 
   return (
-    <div
+    <Link
+      href={countdownRowHref(groupBuy)}
       data-testid="group-buy-row"
       data-urgent={isUrgent ? 'true' : 'false'}
       data-announced={isAnnounced ? 'true' : 'false'}
-      className="grid grid-cols-[1fr_auto] items-baseline gap-1.5 border-t border-border py-3 first:border-t-0 first:pt-0 sm:grid-cols-[40px_1fr_auto] sm:gap-x-3"
+      className="grid grid-cols-[1fr_auto] items-baseline gap-1.5 border-t border-border py-3 first:border-t-0 first:pt-0 hover:bg-surface-hi focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu sm:grid-cols-[40px_1fr_auto] sm:gap-x-3"
     >
       {groupBuy.heroImage ? (
         <div
@@ -139,6 +157,6 @@ export function GroupBuyCountdownRow({
           style={{ width: `${(fraction * 100).toFixed(2)}%` }}
         />
       </div>
-    </div>
+    </Link>
   )
 }

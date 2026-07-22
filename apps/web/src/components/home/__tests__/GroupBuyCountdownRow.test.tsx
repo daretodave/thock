@@ -2,10 +2,40 @@ import { describe, expect, it } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import {
   GroupBuyCountdownRow,
+  countdownRowHref,
   daysLeft,
   progressFraction,
 } from '../GroupBuyCountdownRow'
 import { makeGroupBuy, makeVendor } from './testFixtures'
+
+describe('countdownRowHref', () => {
+  it('prefers the related article when set', () => {
+    const gb = makeGroupBuy({
+      relatedArticle: 'some-group-buy',
+      productSlug: 'some-board',
+      productKind: 'board',
+    })
+    expect(countdownRowHref(gb)).toBe('/article/some-group-buy')
+  })
+
+  it('falls back to the catalog spec page when no article is set', () => {
+    const gb = makeGroupBuy({
+      relatedArticle: undefined,
+      productSlug: 'some-board',
+      productKind: 'board',
+    })
+    expect(countdownRowHref(gb)).toBe('/part/board/some-board')
+  })
+
+  it('falls back to the /group-buys anchor when neither is set', () => {
+    const gb = makeGroupBuy({
+      slug: 'some-gb',
+      relatedArticle: undefined,
+      productSlug: null,
+    })
+    expect(countdownRowHref(gb)).toBe('/group-buys#some-gb')
+  })
+})
 
 describe('progressFraction', () => {
   it('returns ~0.5 at the midpoint of a 10-day window', () => {
@@ -92,6 +122,21 @@ describe('<GroupBuyCountdownRow>', () => {
     )
     expect(screen.getByTestId('group-buy-row')).toHaveTextContent(
       'unknown-vendor',
+    )
+  })
+
+  it('renders the row as a link to its coverage article', () => {
+    const gb = makeGroupBuy({ relatedArticle: 'some-group-buy' })
+    render(
+      <GroupBuyCountdownRow
+        groupBuy={gb}
+        vendor={makeVendor()}
+        now={new Date('2026-05-10T00:00:00Z')}
+      />,
+    )
+    expect(screen.getByTestId('group-buy-row')).toHaveAttribute(
+      'href',
+      '/article/some-group-buy',
     )
   })
 
