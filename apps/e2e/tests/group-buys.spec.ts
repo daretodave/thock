@@ -103,6 +103,32 @@ test.describe('group-buys relatedArticle — phase 37', () => {
   })
 })
 
+test.describe('group-buys productSlug catalog link', () => {
+  test('shows "view catalog specs" link on past group-buys where productSlug is set', async ({
+    page,
+  }) => {
+    await page.goto('/group-buys/past')
+    const links = page.locator('[data-testid="group-buy-product-link"]')
+    expect(await links.count()).toBeGreaterThanOrEqual(1)
+    const first = links.first()
+    await expect(first).toHaveAttribute('href', /^\/part\/(board|keycap-set|switch)\//)
+    await expect(first).toContainText(/view catalog specs/i)
+  })
+
+  test('catalog link target resolves to a real part page', async ({
+    page,
+  }) => {
+    await page.goto('/group-buys/past')
+    const href = await page
+      .locator('[data-testid="group-buy-product-link"]')
+      .first()
+      .getAttribute('href')
+    expect(href).toBeTruthy()
+    const response = await page.request.get(href as string)
+    expect(response.status()).toBe(200)
+  })
+})
+
 test.describe('group-buys archive — phase 29', () => {
   test('renders the Past group buys H1', async ({ page }) => {
     await page.goto('/group-buys/past')

@@ -175,6 +175,15 @@ export function GroupBuyRow({
             read our coverage →
           </Link>
         )}
+        {groupBuy.productSlug && (
+          <Link
+            data-testid="group-buy-product-link"
+            href={`/part/${groupBuy.productKind}/${groupBuy.productSlug}`}
+            className="font-mono text-micro uppercase tracking-[0.08em] text-text-2 hover:text-text"
+          >
+            view catalog specs →
+          </Link>
+        )}
       </div>
     </article>
   )

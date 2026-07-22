@@ -215,4 +215,28 @@ describe('<GroupBuyRow>', () => {
     const link = screen.getByTestId('group-buy-coverage-link')
     expect(link).toHaveAttribute('href', '/article/gmk-cyl-ramune-group-buy')
   })
+
+  it('renders "view catalog specs" link to the matching part page when productSlug is set', () => {
+    render(
+      <GroupBuyRow groupBuy={gb()} vendor={vendor} variant="live" now={NOW} />,
+    )
+    const link = screen.getByTestId('group-buy-product-link')
+    expect(link).toBeInTheDocument()
+    expect(link).toHaveAttribute('href', '/part/board/mode-sonnet')
+    expect(link).toHaveTextContent(/view catalog specs/i)
+  })
+
+  it('does not render "view catalog specs" link when productSlug is null', () => {
+    render(
+      <GroupBuyRow
+        groupBuy={gb({ productSlug: null })}
+        vendor={vendor}
+        variant="live"
+        now={NOW}
+      />,
+    )
+    expect(
+      screen.queryByTestId('group-buy-product-link'),
+    ).not.toBeInTheDocument()
+  })
 })

@@ -751,7 +751,7 @@
       "slug": "cannonkeys-mode-sonnet-r2",
       "name": "Mode Sonnet R2",
       "vendorSlug": "cannonkeys",
-      "productSlug": null,
+      "productSlug": "mode-sonnet",
       "productKind": "board",
       "startDate": "2026-06-01",
       "endDate": "2026-07-15",
@@ -904,7 +904,7 @@
       "slug": "kbdfans-gmk-cyl-ramune",
       "name": "GMK CYL Ramune",
       "vendorSlug": "kbdfans",
-      "productSlug": null,
+      "productSlug": "gmk-cyl-ramune",
       "productKind": "keycap-set",
       "startDate": "2026-05-15",
       "endDate": "2026-06-20",
@@ -921,7 +921,7 @@
       "slug": "kbdfans-gmk-cyl-selene",
       "name": "GMK CYL Selene",
       "vendorSlug": "kbdfans",
-      "productSlug": null,
+      "productSlug": "gmk-cyl-selene",
       "productKind": "keycap-set",
       "startDate": "2026-05-15",
       "endDate": "2026-06-19",
@@ -8253,5 +8253,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-07-21T22:29:48.369Z"
+  "generatedAt": "2026-07-22T00:45:17.167Z"
 }
