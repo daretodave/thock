@@ -69,8 +69,9 @@ describe('<SearchPanel>', () => {
 
     act(() => { vi.advanceTimersByTime(120) })
 
-    // Stack component doesn't forward data-testid; assert by text content instead
-    expect(screen.getByText(/no matches for/i)).toBeInTheDocument()
+    // Stack component doesn't forward data-testid; assert by text content instead.
+    // The aria-live status region also contains this phrase, so scope to the visible <p>.
+    expect(screen.getByText(/no matches for/i, { selector: 'p' })).toBeInTheDocument()
     expect(screen.queryByTestId('search-results')).not.toBeInTheDocument()
     expect(screen.queryByTestId('search-empty-query')).not.toBeInTheDocument()
 
@@ -81,6 +82,37 @@ describe('<SearchPanel>', () => {
     expect(hrefs).toContain('/ideas')
     expect(hrefs).toContain('/deep-dives')
     expect(hrefs).toContain('/guides')
+  })
+
+  it('announces the empty-query hint as blank in the aria-live region', () => {
+    render(<SearchPanel allTags={ALL_TAGS} />)
+    expect(screen.getByRole('status')).toHaveTextContent('')
+  })
+
+  it('announces result count in the aria-live region after debounce', async () => {
+    const { searchArticles } = await import('@/lib/search/runtime')
+    vi.mocked(searchArticles).mockReturnValue([FAKE_HIT])
+
+    render(<SearchPanel allTags={ALL_TAGS} />)
+    const input = screen.getByRole('searchbox')
+    fireEvent.change(input, { target: { value: 'oil king' } })
+
+    act(() => { vi.advanceTimersByTime(120) })
+
+    expect(screen.getByRole('status')).toHaveTextContent('1 result for "oil king"')
+  })
+
+  it('announces no-matches in the aria-live region for a non-matching query', async () => {
+    const { searchArticles } = await import('@/lib/search/runtime')
+    vi.mocked(searchArticles).mockReturnValue([])
+
+    render(<SearchPanel allTags={ALL_TAGS} />)
+    const input = screen.getByRole('searchbox')
+    fireEvent.change(input, { target: { value: 'zzznomatch' } })
+
+    act(() => { vi.advanceTimersByTime(120) })
+
+    expect(screen.getByRole('status')).toHaveTextContent('No matches for "zzznomatch"')
   })
 
   it('pre-populates the input from the ?q= URL param on mount', async () => {

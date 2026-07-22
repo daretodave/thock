@@ -98,6 +98,15 @@ export function SearchPanel({ allTags }: SearchPanelProps): ReactElement {
           spellCheck={false}
           className="border border-border-hi bg-bg px-4 py-3 font-serif text-h3 text-text placeholder:text-text-2 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent focus:ring-offset-1 focus:ring-offset-bg"
         />
+        <div role="status" aria-live="polite" aria-atomic="true" className="sr-only">
+          {showHint
+            ? ''
+            : showEmpty
+              ? `No matches for "${trimmed}"`
+              : `${results.length + partResults.length} result${
+                  results.length + partResults.length === 1 ? '' : 's'
+                } for "${trimmed}"`}
+        </div>
         {showHint && (
           <div data-testid="search-empty-query" className="font-serif text-h3 text-text-2">
             Type a switch name, brand, or tag. Hit slowly — the index is local.
