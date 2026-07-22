@@ -195,21 +195,21 @@ export function KeycapSetQuiz({ keycapSets }: Props) {
             <Link
               href="/part/keycap-set"
               data-testid="keycap-quiz-browse-all-link"
-              className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text transition-colors"
+              className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
             >
               Browse all keycap sets →
             </Link>
             <Link
               href="/parts"
               data-testid="keycap-quiz-browse-all-parts-link"
-              className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text transition-colors"
+              className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
             >
               Browse all parts →
             </Link>
             <button
               type="button"
               onClick={handleReset}
-              className="text-small font-mono text-text-2 hover:text-text border border-border px-4 py-2 rounded hover:border-border-hi transition-colors"
+              className="text-small font-mono text-text-2 hover:text-text border border-border px-4 py-2 rounded hover:border-border-hi transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
             >
               Start over
             </button>

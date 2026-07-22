@@ -52,7 +52,7 @@ export function KeycapSetResultCard({ keycapSet: ks, score, maxScore, rank }: Pr
           <div>
             <Link
               href={`/part/keycap-set/${ks.slug}`}
-              className="font-serif text-h3 text-text hover:text-accent transition-colors"
+              className="font-serif text-h3 text-text hover:text-accent transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
             >
               {ks.name}
             </Link>
