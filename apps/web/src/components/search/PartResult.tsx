@@ -39,7 +39,7 @@ export function PartResult({ hit }: PartResultProps): ReactElement {
       <h3 className="mt-1 font-serif text-h4 text-text">
         <Link
           href={hit.href}
-          className="hover:text-accent transition-colors"
+          className="hover:text-accent transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
         >
           {hit.name}
         </Link>

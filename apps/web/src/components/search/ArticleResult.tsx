@@ -38,7 +38,7 @@ export function ArticleResult({
       <h2 className="mt-1 font-serif text-h3 text-text">
         <Link
           href={`/article/${hit.slug}`}
-          className="hover:text-accent transition-colors"
+          className="hover:text-accent transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
         >
           {hit.title}
         </Link>
