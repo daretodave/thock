@@ -8014,3 +8014,15 @@ passes accumulate signals.)
 - issue: #584
 > **Resolved (2026-07-22):** added matching `focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-1 focus:ring-offset-bg` classes to both submit-button variants, and `rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu` to the attribution link. 2 new regression tests in `ButtondownForm.test.tsx`. `pnpm verify` full gate green: typecheck, unit tests, data:validate, build, 1071/1071 e2e.
 > Picked as the top signal this tick: no unlabeled GitHub issues (triage gate); not Monday (W30 snapshot exists); no pending phases/data/content-gap work (all 7 mechanical surveys re-run clean this tick); march's own expand Step 3c gate not met (5 commits/~3.8h since pass 211, threshold 20 commits/48h). AUDIT.md's only other Pending row is the non-autonomous `[4.0]` Lighthouse-CI `/oversight` item; CRITIQUE.md's only Pending row remains the non-actionable `[needs-user-call]` GA-beacon item. A fresh general-purpose sweep (focus-visible coverage across components not yet touched by the prior fix series, numeric/factual article-vs-catalog spot-checks, JSON-LD field correctness, broken internal links, dead-code grep, test-coverage gaps, TODO/FIXME grep, copy-vs-implementation drift) found this newsletter-form gap as the highest-scored defect; two lower-scored sibling gaps of the same class — part-detail-page CTA links (6.3, tied but this one chosen for broader per-page reach via the global footer mount) and a cluster of card/rail-item links across `PartIndexCard`/`RelatedArticleCard`/`MentionedPartsRail`/`NewsletterArchive`/`TrackerArchiveStrip`/vendor-section components (4.8) — remain unshipped for a future tick per the one-fix-per-tick rule.
+
+### [HOT PURSUIT] [content-gap] [7] ideas pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 7 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: ideas
+- window-count: 1
+- window-start: 2026-06-23
+- score: 7
+- next: /ship-content → ideas pillar article
+> Filed 2026-07-23 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
