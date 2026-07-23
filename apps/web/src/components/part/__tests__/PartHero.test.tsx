@@ -83,4 +83,11 @@ describe('<PartHero>', () => {
       /in production/i,
     )
   })
+
+  it('has a focus-visible ring on the vendor byline link for keyboard navigation', () => {
+    render(<PartHero part={FAKE_SWITCH} />)
+    expect(screen.getByTestId('part-hero-vendor').className).toContain(
+      'focus-visible:ring-2',
+    )
+  })
 })

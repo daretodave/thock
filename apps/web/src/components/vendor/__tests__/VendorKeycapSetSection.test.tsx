@@ -65,4 +65,10 @@ describe('VendorKeycapSetSection', () => {
     expect(descText.length).toBeLessThan(150)
     expect(descText).toMatch(/…$/)
   })
+
+  it('has a focus-visible ring on the title link for keyboard navigation', () => {
+    render(<VendorKeycapSetSection vendorName="KBDfans" keycapSets={[BASE_KEYCAP_SET]} />)
+    const link = screen.getByRole('link', { name: BASE_KEYCAP_SET.name })
+    expect(link.className).toContain('focus-visible:ring-2')
+  })
 })

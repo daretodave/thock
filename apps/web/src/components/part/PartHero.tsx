@@ -51,7 +51,7 @@ export function PartHero({ part }: PartHeroProps): ReactElement {
             <Link
               href={`/vendor/${vendor.slug}`}
               data-testid="part-hero-vendor"
-              className="hover:text-text"
+              className="hover:text-text rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
             >
               by {vendor.name}
             </Link>

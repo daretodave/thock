@@ -65,7 +65,7 @@ export function VendorBoardSection({
                 <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
                   <Link
                     href={`/part/board/${board.slug}`}
-                    className="font-serif text-h3 text-text hover:text-accent transition-colors"
+                    className="font-serif text-h3 text-text hover:text-accent transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
                   >
                     {board.name}
                   </Link>

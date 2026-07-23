@@ -66,4 +66,10 @@ describe('VendorBoardSection', () => {
     expect(descText.length).toBeLessThan(150)
     expect(descText).toMatch(/…$/)
   })
+
+  it('has a focus-visible ring on the title link for keyboard navigation', () => {
+    render(<VendorBoardSection vendorName="CannonKeys" boards={[BASE_BOARD]} />)
+    const link = screen.getByRole('link', { name: BASE_BOARD.name })
+    expect(link.className).toContain('focus-visible:ring-2')
+  })
 })

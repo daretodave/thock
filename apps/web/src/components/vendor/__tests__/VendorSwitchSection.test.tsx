@@ -67,4 +67,10 @@ describe('VendorSwitchSection', () => {
     expect(descText.length).toBeLessThan(150)
     expect(descText).toMatch(/…$/)
   })
+
+  it('has a focus-visible ring on the title link for keyboard navigation', () => {
+    render(<VendorSwitchSection vendorName="NovelKeys" switches={[BASE_SWITCH]} />)
+    const link = screen.getByRole('link', { name: 'Kailh Box White' })
+    expect(link.className).toContain('focus-visible:ring-2')
+  })
 })
