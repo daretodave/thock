@@ -1,0 +1,21 @@
+{
+  "generated_by": "content-curator-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-23T00:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "mixing-keycap-profiles",
+  "article_pillar": "ideas",
+  "section_anchor": "where-the-swap-actually-lands",
+  "brief_summary": "Top-down keyboard outline diagram marking three coral zones that tolerate a profile swap — a single accent key, the modifier row either side of the spacebar, and the spacebar itself — against a bordeaux-dashed alpha block and number row labeled as the zone to leave in the base profile.",
+  "target": "apps/web/public/article-viz/mixing-keycap-profiles/safe-zones-map.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "mixing-keycap-profiles.mdx § 'Where the swap actually lands' — 'Builders who mix profiles successfully are not reshuffling the whole layout. They are working three zones: a single accent key (usually Esc or the arrow cluster), the modifier row, and the spacebar. Everywhere else — the alpha block, the number row — stays in the base profile'"
+  ],
+  "outputs": ["apps/web/public/article-viz/mixing-keycap-profiles/safe-zones-map.svg"],
+  "warnings": []
+}

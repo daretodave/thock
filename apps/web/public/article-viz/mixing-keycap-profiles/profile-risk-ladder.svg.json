@@ -1,0 +1,21 @@
+{
+  "generated_by": "content-curator-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-23T00:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "mixing-keycap-profiles",
+  "article_pillar": "ideas",
+  "section_anchor": "combinations-that-hold-up",
+  "brief_summary": "Vertical ladder ranking four profile-mixing combinations from low to high risk: Domikey WOB base + KAT Drifter accent (low, uniform profile), MT3 Dasher base + MT3 /dev/tty spacebar (low, same profile), Domikey WOB base + SA Godspeed modifier row (medium, smallest height gap but material drift), Domikey WOB base + SA Godspeed single top-row key (high, largest height gap). Each rung carries its one-line reason from the article's comparison table.",
+  "target": "apps/web/public/article-viz/mixing-keycap-profiles/profile-risk-ladder.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "mixing-keycap-profiles.mdx § 'Combinations that hold up' table — 'Domikey WOB (Cherry, PBT) | KAT Drifter (KAT, PBT) | Esc or arrow cluster | Low — uniform profile, matched material' / 'MT3 Dasher (MT3, ABS) | MT3 /dev/tty spacebar (MT3, ABS) | Spacebar | Low — same profile and material, colorway swap only' / 'Domikey WOB (Cherry, PBT) | SA Godspeed bottom-row mods (SA, ABS) | Modifier row | Medium — height gap is smallest here, but material will drift over time' / 'Domikey WOB (Cherry, PBT) | SA Godspeed row-1 Esc (SA, ABS) | Single top-row key | High — largest height gap on the board, easiest one to get wrong'"
+  ],
+  "outputs": ["apps/web/public/article-viz/mixing-keycap-profiles/profile-risk-ladder.svg"],
+  "warnings": []
+}

@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "slug": "mixing-keycap-profiles",
+      "readTime": 6,
+      "frontmatter": {
+        "title": "Mixing keycap profiles on one board: what actually works",
+        "lede": "Mixing profiles reads as a deliberate design choice or a rookie mistake depending entirely on where the swap lands. A handful of zones tolerate it well. The alpha block almost never does.",
+        "pillar": "ideas",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "prototypist-vendor-spotlight",
       "readTime": 6,
       "frontmatter": {
@@ -1382,5 +1392,5 @@
       "readTime": 4
     }
   ],
-  "generatedAt": "2026-07-22T21:34:20.013Z"
+  "generatedAt": "2026-07-23T01:49:39.221Z"
 }

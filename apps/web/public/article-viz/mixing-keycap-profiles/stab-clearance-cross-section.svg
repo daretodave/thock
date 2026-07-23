@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Cross-section comparing a tall sculpted spacebar and a low Cherry-profile spacebar over the same stabilizer wire, marking the clearance gap under each</title>
+
+  <!-- Shared baseline: plate + stabilizer wire -->
+  <line x1="80" y1="380" x2="1120" y2="380" stroke-opacity="0.6"/>
+  <text x="140" y="405" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">plate</text>
+
+  <!-- ── LEFT: tall sculpted spacebar (SA / MT3) ────────────────────────── -->
+  <g>
+    <text x="330" y="60" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">tall sculpted spacebar (SA / MT3)</text>
+
+    <!-- cap shell -->
+    <path d="M 190 380 L 220 130 L 440 130 L 470 380 Z" stroke-opacity="0.85"/>
+    <path d="M 220 130 Q 330 100 440 130" stroke-opacity="0.85"/>
+
+    <!-- stabilizer wire, sitting well below the cap's inner ceiling -->
+    <line x1="230" y1="345" x2="430" y2="345" stroke="oklch(0.78 0.005 90)" stroke-width="3" stroke-opacity="0.9"/>
+    <circle cx="230" cy="345" r="5" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.9"/>
+    <circle cx="430" cy="345" r="5" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.9"/>
+
+    <!-- coral clearance bracket: generous gap between wire and inner cap ceiling -->
+    <line x1="330" y1="150" x2="330" y2="345" stroke="oklch(0.68 0.165 28)" stroke-width="2.5" stroke-dasharray="2 6"/>
+    <line x1="312" y1="150" x2="348" y2="150" stroke="oklch(0.68 0.165 28)" stroke-width="2.5"/>
+    <line x1="312" y1="345" x2="348" y2="345" stroke="oklch(0.68 0.165 28)" stroke-width="2.5"/>
+    <text x="330" y="245" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">generous clearance</text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="600" y1="90" x2="600" y2="380" stroke-opacity="0.18"/>
+
+  <!-- ── RIGHT: low Cherry-profile spacebar ─────────────────────────────── -->
+  <g>
+    <text x="870" y="60" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">low Cherry-profile spacebar swapped in</text>
+
+    <!-- cap shell, much shorter -->
+    <path d="M 730 380 L 750 260 L 990 260 L 1010 380 Z" stroke-opacity="0.85"/>
+    <path d="M 750 260 Q 870 245 990 260" stroke-opacity="0.85"/>
+
+    <!-- same stabilizer wire, unchanged position -->
+    <line x1="770" y1="345" x2="970" y2="345" stroke="oklch(0.78 0.005 90)" stroke-width="3" stroke-opacity="0.9"/>
+    <circle cx="770" cy="345" r="5" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.9"/>
+    <circle cx="970" cy="345" r="5" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.9"/>
+
+    <!-- bordeaux clearance bracket: tight gap, wire close to inner ceiling -->
+    <line x1="870" y1="272" x2="870" y2="345" stroke="oklch(0.62 0.13 25)" stroke-width="2.5" stroke-dasharray="2 6"/>
+    <line x1="852" y1="272" x2="888" y2="272" stroke="oklch(0.62 0.13 25)" stroke-width="2.5"/>
+    <line x1="852" y1="345" x2="888" y2="345" stroke="oklch(0.62 0.13 25)" stroke-width="2.5"/>
+    <text x="870" y="315" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle">tight clearance — new tick risk</text>
+  </g>
+
+  <!-- Caption -->
+  <text x="600" y="450" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">same stabilizer, two different ceilings</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

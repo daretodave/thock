@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Top-down keyboard diagram marking three safe profile-mixing zones — a single accent key, the modifier row, and the spacebar — against the untouched alpha block</title>
+
+  <!-- Board outline -->
+  <rect x="230" y="70" width="740" height="400" rx="14" stroke-opacity="0.85"/>
+
+  <!-- Row dividers (6 rows) -->
+  <g stroke-opacity="0.4">
+    <line x1="230" y1="137" x2="970" y2="137"/>
+    <line x1="230" y1="203" x2="970" y2="203"/>
+    <line x1="230" y1="270" x2="970" y2="270"/>
+    <line x1="230" y1="337" x2="970" y2="337"/>
+    <line x1="230" y1="403" x2="970" y2="403"/>
+  </g>
+
+  <!-- Alpha block callout: rows 2 through 5, bordeaux dashed = leave in base profile -->
+  <rect x="230" y="203" width="740" height="200" rx="4" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.55" stroke-dasharray="5 8"/>
+  <text x="600" y="303" font-family="Newsreader, serif" font-size="16" font-style="italic" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.85">alpha block + number row — leave in base profile</text>
+
+  <!-- Zone 1: single accent key -->
+  <rect x="246" y="83" width="60" height="48" rx="7" stroke="oklch(0.68 0.165 28)" stroke-width="3"/>
+  <text x="276" y="45" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">single accent key</text>
+  <line x1="276" y1="52" x2="276" y2="80" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.6"/>
+
+  <!-- Zone 2: modifier clusters, bottom row either side of spacebar -->
+  <rect x="246" y="410" width="176" height="46" rx="8" stroke="oklch(0.68 0.165 28)" stroke-width="2.5" stroke-dasharray="6 6"/>
+  <rect x="778" y="410" width="176" height="46" rx="8" stroke="oklch(0.68 0.165 28)" stroke-width="2.5" stroke-dasharray="6 6"/>
+  <text x="600" y="560" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">modifier row</text>
+
+  <!-- Zone 3: spacebar -->
+  <rect x="440" y="410" width="320" height="46" rx="9" stroke="oklch(0.68 0.165 28)" stroke-width="3"/>
+  <text x="600" y="530" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">spacebar</text>
+  <line x1="600" y1="516" x2="600" y2="458" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.6"/>
+  <line x1="600" y1="546" x2="600" y2="536" stroke="oklch(0.68 0.165 28)" stroke-opacity="0"/>
+
+  <!-- Modifier row connector lines up to their label -->
+  <line x1="334" y1="456" x2="334" y2="470" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.6"/>
+  <line x1="866" y1="456" x2="866" y2="470" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.6"/>
+
+  <!-- Caption -->
+  <text x="600" y="605" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">three zones tolerate a mix; the sculpted middle rarely does</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

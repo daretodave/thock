@@ -4908,6 +4908,61 @@
   ],
   "articles": [
     {
+      "slug": "mixing-keycap-profiles",
+      "frontmatter": {
+        "slug": "mixing-keycap-profiles",
+        "title": "Mixing keycap profiles on one board: what actually works",
+        "lede": "Mixing profiles reads as a deliberate design choice or a rookie mistake depending entirely on where the swap lands. A handful of zones tolerate it well. The alpha block almost never does.",
+        "description": null,
+        "author": "thock",
+        "pillar": "ideas",
+        "tags": [
+          "keycaps",
+          "sa",
+          "mt3",
+          "cherry-profile",
+          "modding"
+        ],
+        "publishedAt": "2026-07-20T12:00:00.000Z",
+        "updatedAt": "2026-07-20T12:00:00.000Z",
+        "heroImage": "/hero-art/mixing-keycap-profiles.svg",
+        "heroImageAlt": "Side-profile line drawing of a single keyboard case seated with four deliberately unsorted keycap-profile silhouettes — MT3, Cherry, SA, KAT — with terracotta caliper brackets marking the height delta between each adjacent pair",
+        "featured": false,
+        "popularityScore": 0,
+        "guideSection": null,
+        "mentionedParts": [
+          {
+            "id": "sa-godspeed",
+            "kind": "keycap-set",
+            "slug": "sa-godspeed"
+          },
+          {
+            "id": "mt3-dasher",
+            "kind": "keycap-set",
+            "slug": "mt3-dasher"
+          },
+          {
+            "id": "mt3-devtty",
+            "kind": "keycap-set",
+            "slug": "mt3-devtty"
+          },
+          {
+            "id": "kat-drifter",
+            "kind": "keycap-set",
+            "slug": "kat-drifter"
+          },
+          {
+            "id": "domikey-wob",
+            "kind": "keycap-set",
+            "slug": "domikey-wob"
+          }
+        ]
+      },
+      "body": "\nEvery keycap forum has a thread titled some version of \"is this too much?\" attached to a photo of a Cherry-profile board with a single towering SA cap sitting on Escape. Half the replies say it looks intentional. Half say it looks like the wrong cap got left in the box. Both readings are correct, and the difference between them has almost nothing to do with taste and everything to do with where on the board the mix happens.\n\nMixing profiles is not a reckless move by default. It is a targeted one, and the targets are narrower than most first attempts assume.\n\n## Where the swap actually lands\n\nBuilders who mix profiles successfully are not reshuffling the whole layout. They are working three zones: a single accent key (usually Esc or the arrow cluster), the modifier row, and the spacebar. Everywhere else — the alpha block, the number row — stays in the base profile, because that's where sculpted profiles do the most row-to-row work and where a mismatch is most visible to the eye and most disruptive to touch-typing.\n\n<InlineViz\n  src=\"/article-viz/mixing-keycap-profiles/safe-zones-map.svg\"\n  alt=\"Top-down keyboard outline diagram marking three coral-circled safe zones for profile mixing — a single accent key, the modifier row, and the spacebar — with the alpha block and number row marked in bordeaux dashed outline as a caution zone to leave in the base profile.\"\n  caption=\"Three zones tolerate a profile swap. The alpha block rarely does.\"\n  accent=\"coral\"\n/>\n\nThe reason the alpha block is off-limits is the same reason sculpted profiles exist in the first place: each row is a different shape so the fingers land on the same plane reaching from the number row down to the bottom row. Swap three keys' worth of a different profile into the middle of that curve and the plane breaks — not just visually, but under the fingers, mid-reach.\n\n## The three ways a mix falls apart\n\nThe height clash is the most common failure. <PartReference id=\"sa-godspeed\">SA Godspeed</PartReference> and the rest of the SA family sit roughly twice as tall as Cherry profile at the top row and only step down toward the spacebar. Drop the SA row-1 cap onto a Cherry-profile Esc key and the neighboring number-row caps suddenly look stunted next to it — a visible step where there shouldn't be one. That same SA cap on the bottom row, next to the spacebar, reads completely differently: SA's own sculpt tapers down toward its bottom rows, so the height gap against Cherry neighbors there is much smaller. The lesson generalizes: the safest place to mix a tall profile in is the row where that profile is already at its shortest.\n\nThe second failure is stabilizer clearance, and it only shows up on the spacebar. Tall sculpted spacebars like SA and MT3 have more internal shell height above the stabilizer wire than a low Cherry-profile spacebar does. A stabilizer that's been clipped, lubed, and band-aid modded for a tall cap has more vertical room to work with. Drop a shorter Cherry spacebar onto that same stabilizer and the wire ends can sit close enough to the cap's inner ceiling to introduce a new tick that wasn't there before the swap. Any time the spacebar's profile changes, the stabilizer needs a listen-and-adjust pass — it isn't a one-time setup.\n\nThe third failure is slower to show up: material mismatch. <PartReference id=\"domikey-wob\">Domikey WOB</PartReference> is a PBT set specifically because PBT resists the glossy shine that ABS develops with hand oils and UV exposure. Pair a PBT base with an ABS accent set and the two will look color-matched on install day and visibly mismatched a few months later, as the ABS piece picks up sheen the PBT base never will. The stem itself is not the issue — MX stems are compatible across ABS and PBT and across every profile discussed here — but the finish drifts apart over time in a way that reads as neglect rather than intent.\n\n<InlineViz\n  src=\"/article-viz/mixing-keycap-profiles/stab-clearance-cross-section.svg\"\n  alt=\"Annotated cross-section comparing a tall sculpted spacebar and a low Cherry-profile spacebar over the same stabilizer wire, with a coral bracket marking the larger clearance gap under the tall cap and a bordeaux bracket marking the tighter gap under the shorter cap where wire tick can develop.\"\n  caption=\"Same stabilizer, two different ceilings.\"\n  accent=\"coral\"\n/>\n\n## Combinations that hold up\n\n<PartReference id=\"kat-drifter\">KAT Drifter</PartReference> is the lowest-risk entry point precisely because KAT is a uniform profile — every row is the same shape, so there's no per-row sculpt to break by relocating a cap. A KAT accent dropped onto a Cherry-profile board doesn't fight the alpha block's curve the way a sculpted profile would, and it can sit on almost any non-alpha key without the backwards-slant problem that a misplaced sculpted cap produces.\n\nSame-profile, different-set swaps are the other reliable move. <PartReference id=\"mt3-dasher\">Drop MT3 Dasher</PartReference> and <PartReference id=\"mt3-devtty\">Drop + Matt3o MT3 /dev/tty</PartReference> share a profile, so pairing a Dasher base with a /dev/tty spacebar changes the palette without changing a single height or sculpt line — this is a colorway mix wearing the costume of a profile mix, and it's the version of this mod with the least that can go wrong.\n\n| Base set | Accent piece | Zone | Risk |\n|---|---|---|---|\n| Domikey WOB (Cherry, PBT) | KAT Drifter (KAT, PBT) | Esc or arrow cluster | Low — uniform profile, matched material |\n| MT3 Dasher (MT3, ABS) | MT3 /dev/tty spacebar (MT3, ABS) | Spacebar | Low — same profile and material, colorway swap only |\n| Domikey WOB (Cherry, PBT) | SA Godspeed bottom-row mods (SA, ABS) | Modifier row | Medium — height gap is smallest here, but material will drift over time |\n| Domikey WOB (Cherry, PBT) | SA Godspeed row-1 Esc (SA, ABS) | Single top-row key | High — largest height gap on the board, easiest one to get wrong |\n\n<InlineViz\n  src=\"/article-viz/mixing-keycap-profiles/profile-risk-ladder.svg\"\n  alt=\"Vertical ladder ranking four profile-mixing scenarios from low to high risk, from a same-profile spacebar swap and a uniform-profile accent at the low end up to a tall sculpted top-row single-key swap at the high end, each rung with a one-line reason.\"\n  caption=\"Risk climbs with height difference and row specificity, not with boldness.\"\n  accent=\"coral\"\n/>\n\n## Reading intentional versus sloppy\n\nThe tell isn't how bold the mix is — it's whether the swap respects the placement and material rules above. A board that pulls its accent from the shortest-height row of the taller profile, keeps materials matched or accepts the divergence on purpose, and stops at one or two zones reads as considered. A board where the accent is whatever cap happened to be loose in a parts bin, dropped onto whichever key had a gap, reads as an afterthought — regardless of how striking the colorway is. The other tell is restraint: one accent key plus a modifier row is a statement. Four different profiles across one board is noise.\n\n## Where this goes next\n\nThe clearest sign that cross-profile accenting has become a real category rather than a forum curiosity is how vendors have started packaging for it — smaller accent kits sized for a single row or a novelty run, rather than full 100-plus-key sets, sold specifically to pair against an existing base. That packaging shift makes the low-risk version of this mod — one row, matched material, shortest-height placement — easier to execute correctly on the first try, which is exactly the version of this mod worth doing.\n",
+      "readTime": 6,
+      "filePath": "apps/web/src/content/articles/mixing-keycap-profiles.mdx"
+    },
+    {
       "slug": "prototypist-vendor-spotlight",
       "frontmatter": {
         "slug": "prototypist-vendor-spotlight",
@@ -8253,5 +8308,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-07-22T21:34:20.013Z"
+  "generatedAt": "2026-07-23T01:49:39.221Z"
 }

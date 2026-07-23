@@ -1,0 +1,27 @@
+{
+  "generated_by": "brander",
+  "agent": "brander",
+  "engine": "handcrafted-svg",
+  "at": "2026-07-23T00:00:00.000Z",
+  "createdAt": "2026-07-23T00:00:00.000Z",
+  "commit": "c8095d225e430c98a72946809fdfd5276fe174d6",
+  "kind": "hero-art",
+  "for": "article-hero",
+  "type": "article-hero",
+  "articleSlug": "mixing-keycap-profiles",
+  "slug": "mixing-keycap-profiles",
+  "pillar": "ideas",
+  "subject": "four mismatched keycap profile silhouettes (MT3, Cherry, SA, KAT) seated on one keyboard case, with caliper callouts marking the height deltas between adjacent caps",
+  "motif": "mixed-profile-row-on-single-case",
+  "splashHue": "terracotta",
+  "splashColor": "muted terracotta",
+  "splashHex": "#c06b4c",
+  "canvas": "1200x750",
+  "source": "handcrafted — side-profile keyboard case with four deliberately unsorted keycap-profile silhouettes (MT3, Cherry, SA, KAT) and terracotta caliper brackets calling out mixed-height deltas",
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": ["JetBrains Mono"],
+  "outputs": [
+    "apps/web/public/hero-art/mixing-keycap-profiles.svg"
+  ],
+  "warnings": []
+}

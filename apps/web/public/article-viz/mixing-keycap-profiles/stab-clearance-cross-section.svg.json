@@ -1,0 +1,21 @@
+{
+  "generated_by": "content-curator-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-23T00:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "mixing-keycap-profiles",
+  "article_pillar": "ideas",
+  "section_anchor": "the-three-ways-a-mix-falls-apart",
+  "brief_summary": "Side-by-side cross-section comparing a tall sculpted spacebar (SA / MT3) and a low Cherry-profile spacebar seated over the same stabilizer wire. A coral bracket marks the generous clearance under the tall cap's inner ceiling; a bordeaux bracket marks the tight clearance under the shorter cap, labeled as new-tick risk.",
+  "target": "apps/web/public/article-viz/mixing-keycap-profiles/stab-clearance-cross-section.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "mixing-keycap-profiles.mdx § 'The three ways a mix falls apart' — 'Tall sculpted spacebars like SA and MT3 have more internal shell height above the stabilizer wire than a low Cherry-profile spacebar does ... Drop a shorter Cherry spacebar onto that same stabilizer and the wire ends can sit close enough to the cap's inner ceiling to introduce a new tick that wasn't there before the swap.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/mixing-keycap-profiles/stab-clearance-cross-section.svg"],
+  "warnings": []
+}
