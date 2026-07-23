@@ -140,9 +140,9 @@ export function SearchPanel({ allTags }: SearchPanelProps): ReactElement {
         )}
         {partResults.length > 0 && (
           <div data-testid="search-part-results">
-            <div className="font-mono uppercase tracking-[0.12em] text-micro text-text-2 pt-6 pb-2">
+            <h2 className="font-mono uppercase tracking-[0.12em] text-micro text-text-2 pt-6 pb-2">
               catalog
-            </div>
+            </h2>
             <div className="flex flex-col">
               {partResults.map((hit) => (
                 <PartResult key={hit.id} hit={hit} />
