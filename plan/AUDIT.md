@@ -8029,7 +8029,7 @@ passes accumulate signals.)
 > Filed 2026-07-23 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 > **Resolved (2026-07-23):** Shipped "Mixing keycap profiles on one board: what actually works" (~1000 words, ideas pillar, publishedAt 2026-07-20 gap-fill). mentionedParts: sa-godspeed, mt3-dasher, mt3-devtty, kat-drifter, domikey-wob. `pnpm verify` full gate green: typecheck, unit tests, data:validate, build, 1074/1074 e2e. `c9dbe67`
 
-### [ ] [cross-links] [4.5] mixing-keycap-profiles ↔ retrobrighting-keycaps — no prose cross-link (same pillar, ≥2 shared tags: keycaps, modding)
+### [x] [cross-links] [4.5] mixing-keycap-profiles ↔ retrobrighting-keycaps — no prose cross-link (same pillar, ≥2 shared tags: keycaps, modding) — addressed in b4941c5
 - category: cross-links
 - filed: 2026-07-23 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -8039,3 +8039,5 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/mixing-keycap-profiles.mdx
 - article-b: apps/web/src/content/articles/retrobrighting-keycaps.mdx
 - action: add [retrobrighting-keycaps](/article/retrobrighting-keycaps) to mixing-keycap-profiles body, or vice versa
+> **Resolved (2026-07-23):** Added a link to retrobrighting-keycaps in mixing-keycap-profiles' material-mismatch paragraph. Worded carefully to avoid contradicting the sibling article: retrobrighting-keycaps explicitly states that ABS shine/gloss (from hand oils) is a different mechanism than bromine-oxidation yellowing — so the cross-link frames the sheen mixing-keycap-profiles describes as a separate-but-related aging problem from the yellowing retrobrighting reverses, rather than claiming they're the same chemistry. `pnpm verify` full gate green: typecheck, unit tests, script tests, data:validate, build, size, 1074/1074 e2e. `b4941c5`
+> Picked as the top signal this tick: no unlabeled GitHub issues (triage gate); W30 snapshot already existed (not Monday-relevant); no pending phases/data work; content-gap queue empty (content-gap-survey: all pillars comfortable) after the prior tick's ideas-pillar drain resolved the only Pending content-gaps row; all 7 mechanical surveys re-run fresh this tick (content-gap, crosslink, group-buy-companion, group-buy-status, newsletter-gap, og-coverage, a11y-spec-coverage) — all clean except crosslink, whose one pre-existing pair is this row; march's own expand Step 3c gate not met (11 commits/~7.5h since pass 211, threshold 20 commits/48h). AUDIT.md's only other Pending row is the non-autonomous `[4.0]` Lighthouse-CI-disabled `/oversight` item; CRITIQUE.md's only Pending row remains the non-actionable `[needs-user-call]` GA-beacon item. This cross-links row was the only actionable finding above the 3.0 floor.
