@@ -59,7 +59,7 @@ export function NewsletterArchive({
           <Link
             href={`/newsletter/${n.slug}`}
             data-testid="newsletter-archive-link"
-            className="font-serif text-h3 text-text hover:text-accent"
+            className="font-serif text-h3 text-text hover:text-accent rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
           >
             {n.frontmatter.title}
           </Link>

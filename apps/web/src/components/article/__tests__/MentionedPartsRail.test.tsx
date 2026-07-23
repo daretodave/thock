@@ -39,4 +39,10 @@ describe('<MentionedPartsRail>', () => {
     expect(anchor).not.toBeNull()
     expect(anchor!.getAttribute('href')).toBe('/part/switch/gateron-oil-king')
   })
+
+  it('has a focus-visible ring on each item link for keyboard navigation', () => {
+    render(<MentionedPartsRail parts={[FAKE_SWITCH]} />)
+    const anchor = screen.getByTestId('mentioned-parts-rail-item')
+    expect(anchor.className).toContain('focus-visible:ring-2')
+  })
 })

@@ -58,7 +58,7 @@ export function MentionedPartsRail({
               <Link
                 href={`/part/${part.kind}/${part.slug}`}
                 data-testid="mentioned-parts-rail-item"
-                className="group flex flex-col gap-1"
+                className="group flex flex-col gap-1 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
               >
                 <span className="font-mono uppercase tracking-[0.08em] text-micro text-accent">
                   {KIND_LABEL[part.kind]}

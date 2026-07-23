@@ -35,7 +35,7 @@ export function PartIndexCard({ part }: PartIndexCardProps): ReactElement {
     <Link
       href={href}
       data-testid="part-index-card"
-      className="group flex flex-col gap-2 border-t border-border py-5 transition-colors hover:border-border-hi"
+      className="group flex flex-col gap-2 border-t border-border py-5 transition-colors hover:border-border-hi focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
     >
       <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
         <Mono className="text-h3 text-text group-hover:text-accent transition-colors">

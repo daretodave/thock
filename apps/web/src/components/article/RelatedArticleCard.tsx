@@ -25,7 +25,7 @@ export function RelatedArticleCard({
     <Link
       href={`/article/${article.slug}`}
       data-testid="related-article-card"
-      className="group flex flex-col gap-2 border border-border p-4 transition-colors hover:border-border-hi"
+      className="group flex flex-col gap-2 border border-border p-4 transition-colors hover:border-border-hi focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
     >
       <span className="font-mono uppercase tracking-[0.1em] text-micro text-accent">
         {pillarLabel(fm.pillar)}

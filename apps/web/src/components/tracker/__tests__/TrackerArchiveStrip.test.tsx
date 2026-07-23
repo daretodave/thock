@@ -105,4 +105,15 @@ describe('<TrackerArchiveStrip>', () => {
     const current = screen.getAllByTestId('tracker-archive-current')
     expect(links.length + current.length).toBe(8)
   })
+
+  it('has a focus-visible ring on archive links for keyboard navigation', () => {
+    render(
+      <TrackerArchiveStrip
+        snapshots={[makeSnapshot('2026-W19'), makeSnapshot('2026-W20')]}
+        currentWeek="2026-W20"
+      />,
+    )
+    const link = screen.getByTestId('tracker-archive-link')
+    expect(link.className).toContain('focus-visible:ring-2')
+  })
 })

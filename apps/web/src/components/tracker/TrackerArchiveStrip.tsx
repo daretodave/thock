@@ -95,7 +95,7 @@ export function TrackerArchiveStrip({
               key={snapshot.isoWeek}
               href={`/trends/tracker/${snapshot.isoWeek}`}
               data-testid="tracker-archive-link"
-              className="block h-full group"
+              className="block h-full group rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
             >
               {inner}
             </Link>

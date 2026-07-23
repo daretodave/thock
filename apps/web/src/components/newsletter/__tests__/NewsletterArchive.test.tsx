@@ -58,4 +58,10 @@ describe('<NewsletterArchive>', () => {
     expect(link).toHaveAttribute('href', '/newsletter/issue-001')
     expect(link).toHaveTextContent('thock weekly — issue 001')
   })
+
+  it('has a focus-visible ring on the title link for keyboard navigation', () => {
+    render(<NewsletterArchive newsletters={[fixture()]} />)
+    const link = screen.getByTestId('newsletter-archive-link')
+    expect(link.className).toContain('focus-visible:ring-2')
+  })
 })

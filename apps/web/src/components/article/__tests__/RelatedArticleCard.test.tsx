@@ -80,4 +80,11 @@ describe('<RelatedArticleCard>', () => {
     render(<RelatedArticleCard article={ARTICLE} />)
     expect(screen.getByText('3 min read')).toBeInTheDocument()
   })
+
+  it('has a focus-visible ring for keyboard navigation', () => {
+    render(<RelatedArticleCard article={ARTICLE} />)
+    expect(screen.getByTestId('related-article-card').className).toContain(
+      'focus-visible:ring-2',
+    )
+  })
 })

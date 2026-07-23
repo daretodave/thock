@@ -49,4 +49,11 @@ describe('<PartIndexCard>', () => {
       /in production/i,
     )
   })
+
+  it('has a focus-visible ring for keyboard navigation', () => {
+    render(<PartIndexCard part={FAKE_SWITCH} />)
+    expect(screen.getByTestId('part-index-card').className).toContain(
+      'focus-visible:ring-2',
+    )
+  })
 })
