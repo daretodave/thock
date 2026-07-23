@@ -1,14 +1,7 @@
 import Link from 'next/link'
 import { Mono } from '@thock/ui'
 import type { Switch } from '@thock/data'
-
-const TYPE_LABEL: Record<string, string> = {
-  linear: 'Linear',
-  'silent-linear': 'Silent Linear',
-  tactile: 'Tactile',
-  'silent-tactile': 'Silent Tactile',
-  clicky: 'Clicky',
-}
+import { SWITCH_TYPE_LABEL, specLabel } from '@/lib/spec-labels'
 
 type Props = {
   sw: Switch
@@ -19,7 +12,7 @@ type Props = {
 
 export function ResultCard({ sw, score, maxScore, rank }: Props) {
   const pct = maxScore > 0 ? Math.round((score / maxScore) * 100) : 0
-  const typeLabel = TYPE_LABEL[sw.type] ?? sw.type
+  const typeLabel = specLabel(SWITCH_TYPE_LABEL, sw.type)
   const excerpt = sw.description.length > 80 ? sw.description.slice(0, 80).trimEnd() + '…' : sw.description
 
   return (
