@@ -361,6 +361,7 @@
 - conflicts: none — additive only; verify gate (`pnpm verify`) is unchanged; no URL contract change; no schema change.
 
 ### [ ] [score 6.5] Critique gate diagnostic — `/critique` has not fired in 53 days / 1091 commits despite Step 2's dispatch condition being trivially satisfied on every cloud tick
+- **update (2026-07-23, digest)**: still unpromoted, 20 days after filing. Refreshed pulse: `plan/CRITIQUE.md`'s header is still "Last pass: 2026-05-10T20:35:00Z at commit 931c8a7 / Pass count: 11" — now **74 days / 1604 commits** stale (was 53/1091 at filing). The gate has not advanced once in the 20 days since this candidate was filed, despite 22/22 `march` runs going green in just the most recent digest window alone — reinforcing, not just repeating, the original diagnosis. Not re-diagnosing here; the fix scope below is unchanged.
 - proposed: 2026-07-03, digest (first nightly pass)
 - source signals:
   - **Pulse signal (dominant)**: `plan/CRITIQUE.md`'s header reads "Last pass: 2026-05-10T20:35:00Z at commit 931c8a7 / Pass count: 11" — unchanged as of this digest, 53 days and 1091 commits (`git rev-list --count 931c8a7..HEAD`) later. `skills/march.md` Step 2's dispatch condition is an OR of three sub-conditions ("current commit ≥12 commits after Last-pass commit, OR Last-pass >24h ago, OR Last-pass 'never' + phase 5+ shipped") — the ≥24h leg alone has been true on every cloud tick since roughly 2026-05-11T20:35, yet the header never advanced past pass 11.
