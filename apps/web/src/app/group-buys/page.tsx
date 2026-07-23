@@ -27,6 +27,10 @@ export const metadata = buildMetadata({
   path: PATH,
 })
 
+// Live/announced/ended partitioning depends on `new Date()` at render
+// time; without revalidation this page is frozen at build/deploy time.
+export const revalidate = 3600
+
 /**
  * Phase 13 — canonical group-buys index. Live now + Announced +
  * Recently ended sections, sorted per the brief. Pulls every group

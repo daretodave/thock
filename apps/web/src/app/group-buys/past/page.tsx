@@ -26,6 +26,10 @@ export const metadata = buildMetadata({
   path: PATH,
 })
 
+// Closed-buy membership depends on `new Date()` at render time; without
+// revalidation this page is frozen at build/deploy time.
+export const revalidate = 3600
+
 export default function PastGroupBuysPage(): ReactElement {
   const now = new Date()
   const past = getAllClosedGroupBuys(now)

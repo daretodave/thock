@@ -24,6 +24,10 @@ import { VendorBoardSection } from '@/components/vendor/VendorBoardSection'
 
 export const dynamicParams = false
 
+// Active/past group-buy bucketing depends on `new Date()` at render
+// time; without revalidation this page is frozen at build/deploy time.
+export const revalidate = 3600
+
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
   return getAllVendors().map((v) => ({ slug: v.slug }))
 }

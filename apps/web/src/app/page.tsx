@@ -33,6 +33,11 @@ export const metadata = buildMetadata({
   path: '/',
 })
 
+// Group-buy live/announced/ended bucketing depends on `new Date()` at
+// render time; without revalidation this page is frozen at build/deploy
+// time and a buy's status only updates on the next push.
+export const revalidate = 3600
+
 function pickHero(articles: Article[]): Article | null {
   if (articles.length === 0) return null
   return [...articles].sort((a, b) =>
