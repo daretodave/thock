@@ -7,7 +7,7 @@ import { test, describe } from 'node:test'
 import assert from 'node:assert/strict'
 import { __test } from '../tracker-linkage-survey.mjs'
 
-const { findMissingLinks, alreadyFiled } = __test
+const { findMissingLinks, alreadyFiled, normalizeTopicKey } = __test
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
@@ -153,6 +153,77 @@ describe('findMissingLinks — flat rows excluded', () => {
     ]
     const missing = findMissingLinks(snapshots, TODAY)
     assert.equal(missing.length, 0)
+  })
+})
+
+// ── findMissingLinks — topic name spelling drift ──────────────────────────────
+
+describe('findMissingLinks — topic name spelling drift (regression: run continuity across renames)', () => {
+  test('preserves run start date across "X / Y" vs "X/Y" slash-spacing drift', () => {
+    // Reproduces the real 2026-W28→W29 "Hall Effect / Rapid Trigger" →
+    // "Hall Effect/Rapid Trigger" drift: same topic, spacing changed, no
+    // flat break in between. A raw-string match would treat these as two
+    // different topics and reset the run-start date to the later spelling.
+    const snapshots = [
+      makeSnapshot('2026-W20', OLD_DATE, [
+        makeRow('Hall Effect / Rapid Trigger', 'up', null),
+      ]),
+      makeSnapshot('2026-W21', '2026-05-25T00:00:00.000Z', [
+        makeRow('Hall Effect/Rapid Trigger', 'up', null), // spacing drifted, still unlinked
+      ]),
+    ]
+    const missing = findMissingLinks(snapshots, TODAY)
+    assert.equal(missing.length, 1)
+    // run started at W20 (the true first appearance), not reset by the W21 spelling change
+    assert.equal(missing[0].firstSeenWeek, '2026-W20')
+    assert.equal(missing[0].name, 'Hall Effect/Rapid Trigger') // most-recent spelling for display
+  })
+
+  test('preserves run start date across case-only drift', () => {
+    const snapshots = [
+      makeSnapshot('2026-W20', OLD_DATE, [
+        makeRow('75% layout', 'up', null),
+      ]),
+      makeSnapshot('2026-W21', '2026-05-25T00:00:00.000Z', [
+        makeRow('75% Layout', 'up', null),
+      ]),
+    ]
+    const missing = findMissingLinks(snapshots, TODAY)
+    assert.equal(missing.length, 1)
+    assert.equal(missing[0].firstSeenWeek, '2026-W20')
+  })
+
+  test('a slug set under one spelling still counts as linked under a drifted later spelling', () => {
+    const snapshots = [
+      makeSnapshot('2026-W20', OLD_DATE, [
+        makeRow('Hall Effect / Rapid Trigger', 'up', 'hall-effect-mainstream'),
+      ]),
+      makeSnapshot('2026-W21', '2026-05-25T00:00:00.000Z', [
+        makeRow('Hall Effect/Rapid Trigger', 'up', 'hall-effect-mainstream'),
+      ]),
+    ]
+    const missing = findMissingLinks(snapshots, TODAY)
+    assert.equal(missing.length, 0)
+  })
+})
+
+// ── normalizeTopicKey ──────────────────────────────────────────────────────────
+
+describe('normalizeTopicKey', () => {
+  test('collapses slash spacing', () => {
+    assert.equal(normalizeTopicKey('Hall Effect / Rapid Trigger'), normalizeTopicKey('Hall Effect/Rapid Trigger'))
+  })
+
+  test('is case-insensitive', () => {
+    assert.equal(normalizeTopicKey('75% Layout'), normalizeTopicKey('75% layout'))
+  })
+
+  test('collapses repeated whitespace', () => {
+    assert.equal(normalizeTopicKey('Split  /  Ergo'), normalizeTopicKey('Split/Ergo'))
+  })
+
+  test('distinct topics remain distinct', () => {
+    assert.notEqual(normalizeTopicKey('HMX Cloud'), normalizeTopicKey('HMX Cloud V2'))
   })
 })
 

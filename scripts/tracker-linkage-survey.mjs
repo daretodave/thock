@@ -73,9 +73,26 @@ function loadSnapshots() {
 // function masked exactly that case across three recurrences (W22, W24/W26,
 // W28 — see plan/AUDIT.md).
 //
+// Topic names drift in spelling week to week (scout-authored prose, not a
+// controlled vocabulary) — case, slash spacing, and trailing qualifiers all
+// vary for what is editorially the same tracked topic (e.g. "Hall Effect /
+// Rapid Trigger" vs "Hall Effect/Rapid Trigger", "75% layout" vs "75%
+// Layout"). Matching on the raw string treats each spelling as a brand-new
+// topic, silently resetting the run-start date — the same "run continuity"
+// failure mode this script was written to close (see the file-level comment
+// on the "ever linked" masking bug). Normalize to a matching key; keep the
+// most-recently-seen raw string for display.
+function normalizeTopicKey(name) {
+  return name
+    .toLowerCase()
+    .replace(/\s*\/\s*/g, '/') // "X / Y" and "X/Y" are the same topic
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
 // `today` is a Date object (injectable for tests).
 function findMissingLinks(snapshots, today) {
-  // Map: topic name → { runStartDate, runStartWeek, latestHasSlug, latestNonFlat }
+  // Map: normalized topic key → { displayName, runStartDate, runStartWeek, latestHasSlug, latestNonFlat }
   const topicMap = new Map()
 
   for (const snapshot of snapshots) {
@@ -86,15 +103,16 @@ function findMissingLinks(snapshots, today) {
     for (const row of snapshot.rows || []) {
       const name = row.name
       if (!name) continue
-      seenThisSnapshot.add(name)
+      const key = normalizeTopicKey(name)
+      seenThisSnapshot.add(key)
 
       const isNonFlat = row.direction !== 'flat'
       const hasSlug = Boolean(row.articleSlug)
 
-      let entry = topicMap.get(name)
+      let entry = topicMap.get(key)
       if (!entry) {
-        entry = { runStartDate: null, runStartWeek: null, latestHasSlug: false, latestNonFlat: false }
-        topicMap.set(name, entry)
+        entry = { displayName: name, runStartDate: null, runStartWeek: null, latestHasSlug: false, latestNonFlat: false }
+        topicMap.set(key, entry)
       }
 
       if (isNonFlat) {
@@ -109,14 +127,15 @@ function findMissingLinks(snapshots, today) {
         entry.runStartWeek = null
       }
 
+      entry.displayName = name
       entry.latestHasSlug = hasSlug
       entry.latestNonFlat = isNonFlat
     }
 
     // Topics absent from this snapshot also have their run broken — a gap
     // in coverage is not a continuation of the prior trending streak.
-    for (const [name, entry] of topicMap) {
-      if (!seenThisSnapshot.has(name)) {
+    for (const [key, entry] of topicMap) {
+      if (!seenThisSnapshot.has(key)) {
         entry.runStartDate = null
         entry.runStartWeek = null
         entry.latestNonFlat = false
@@ -127,14 +146,14 @@ function findMissingLinks(snapshots, today) {
   const missing = []
   const todayMs = today.getTime()
 
-  for (const [name, entry] of topicMap) {
+  for (const entry of topicMap.values()) {
     if (!entry.latestNonFlat) continue // latest row is flat or topic dropped out
     if (entry.latestHasSlug) continue // current run's latest row is linked
     if (!entry.runStartDate) continue // should be unreachable when latestNonFlat is true
     const age = todayMs - entry.runStartDate.getTime()
     if (age > FOURTEEN_DAYS_MS) {
       missing.push({
-        name,
+        name: entry.displayName,
         firstSeenWeek: entry.runStartWeek,
         firstSeenDate: entry.runStartDate.toISOString().slice(0, 10),
         agedays: Math.floor(age / (24 * 60 * 60 * 1000)),
@@ -175,6 +194,7 @@ export const __test = {
   findMissingLinks,
   formatAuditRow,
   alreadyFiled,
+  normalizeTopicKey,
 }
 
 // ── CLI entry (only runs when this file is invoked directly) ──────────────────
