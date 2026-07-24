@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import type { TrendRow, TrendSnapshot } from '@thock/data'
 import {
+  describeTrackerWeek,
   formatDelta,
   groupByCategory,
   isoWeeksInYear,
@@ -215,6 +216,44 @@ describe('formatDelta', () => {
 
   it('signs from direction, not score, when an up row carries a negative score', () => {
     expect(formatDelta(-24, 'up')).toBe('+24%')
+  })
+})
+
+describe('describeTrackerWeek', () => {
+  it('includes the week label, row count, category count, and top riser', () => {
+    const snapshot = makeSnapshot([
+      makeRow('Gazzew Boba U4T', { direction: 'up', score: 42, spark: [10, 42] }),
+      makeRow('Cherry MX2A', { category: 'keycap', direction: 'down', score: -12, spark: [5, -12] }),
+    ])
+    const result = describeTrackerWeek(snapshot, { week: 21, year: 2026, label: 'Week 21 / 2026' })
+    expect(result).toBe(
+      'Week 21, 2026: 2 tracked movers across 2 categories. Top mover: Gazzew Boba U4T (+42%).',
+    )
+  })
+
+  it('falls back to the raw isoWeek string when wk is null', () => {
+    const snapshot = makeSnapshot([
+      makeRow('A', { direction: 'up', score: 10, spark: [5, 10] }),
+    ])
+    const result = describeTrackerWeek(snapshot, null)
+    expect(result.startsWith('2026-W21: 1 tracked mover across 1 category.')).toBe(true)
+  })
+
+  it('uses singular "category" for exactly one category', () => {
+    const snapshot = makeSnapshot([
+      makeRow('A', { direction: 'up', score: 10, spark: [5, 10] }),
+      makeRow('B', { direction: 'down', score: -10, spark: [5, -10] }),
+    ])
+    const result = describeTrackerWeek(snapshot, null)
+    expect(result).toContain('across 1 category.')
+  })
+
+  it('returns a no-movers description when rows is empty', () => {
+    const snapshot = makeSnapshot([])
+    const result = describeTrackerWeek(snapshot, { week: 21, year: 2026, label: 'Week 21 / 2026' })
+    expect(result).toBe(
+      'Week 21, 2026: no tracked movers this week. A weighted weekly score across community chatter, retail availability, and editorial mentions.',
+    )
   })
 })
 

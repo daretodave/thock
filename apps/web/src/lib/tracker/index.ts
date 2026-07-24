@@ -184,6 +184,36 @@ export function presentCategories(snapshot: TrendSnapshot): TrendCategory[] {
   return CATEGORY_ORDER.filter((c) => (grouped.get(c)?.length ?? 0) > 0)
 }
 
+/**
+ * One-line, week-specific SEO description for a tracker snapshot —
+ * used for the meta/OG/Twitter description and the JSON-LD
+ * `Dataset`/`CollectionPage` `description` fields. Every weekly
+ * archive page previously shared one static description string,
+ * which reads to search engines as 13+ duplicate pages; this
+ * differentiates each by row count, category spread, and the
+ * week's biggest riser. The on-page `TrackerHeader` `lede` stays on
+ * the general methodology blurb — only the meta layer needs to
+ * vary per page.
+ */
+export function describeTrackerWeek(
+  snapshot: TrendSnapshot,
+  wk: WeekKicker | null,
+): string {
+  const weekLabel = wk ? `Week ${wk.week}, ${wk.year}` : snapshot.isoWeek
+  const rowCount = snapshot.rows.length
+  if (rowCount === 0) {
+    return `${weekLabel}: no tracked movers this week. A weighted weekly score across community chatter, retail availability, and editorial mentions.`
+  }
+  const categoryCount = presentCategories(snapshot).length
+  const riser = pickSummarySlots(snapshot.rows).find((s) => s.kind === 'riser')
+  const mover = riser
+    ? ` Top mover: ${riser.row.name} (${formatDelta(riser.row.score, riser.row.direction)}).`
+    : ''
+  const moverWord = rowCount === 1 ? 'mover' : 'movers'
+  const categoryWord = categoryCount === 1 ? 'category' : 'categories'
+  return `${weekLabel}: ${rowCount} tracked ${moverWord} across ${categoryCount} ${categoryWord}.${mover}`
+}
+
 /** ISO week-number parity check (Zeller-style): 4 if Dec 31 falls in week 1 of the next year's count. */
 function isoLongYearRemainder(year: number): number {
   return (year + Math.floor(year / 4) - Math.floor(year / 100) + Math.floor(year / 400)) % 7

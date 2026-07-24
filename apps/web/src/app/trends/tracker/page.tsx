@@ -21,6 +21,7 @@ import { TrackerCategorySection } from '@/components/tracker/TrackerCategorySect
 import { TrackerArchiveStrip } from '@/components/tracker/TrackerArchiveStrip'
 import { PageSectionKicker } from '@/components/ui/PageSectionKicker'
 import {
+  describeTrackerWeek,
   groupByCategory,
   presentCategories,
   weekKicker,
@@ -39,19 +40,20 @@ export function generateMetadata() {
     : BASE_TITLE
   return buildMetadata({
     title,
-    description: LEDE,
+    description: snapshot ? describeTrackerWeek(snapshot, wk) : LEDE,
     path: PATH,
   })
 }
 
-function buildDatasetJsonLd(snapshot: NonNullable<
-  ReturnType<typeof getLatestTrendSnapshot>
->) {
+function buildDatasetJsonLd(
+  snapshot: NonNullable<ReturnType<typeof getLatestTrendSnapshot>>,
+  description: string,
+) {
   return {
     '@context': 'https://schema.org' as const,
     '@type': 'Dataset' as const,
     name: BASE_TITLE,
-    description: LEDE,
+    description,
     url: canonicalUrl(PATH),
     temporalCoverage: snapshot.isoWeek,
     dateModified: snapshot.publishedAt,
@@ -69,10 +71,14 @@ export default function TrendsTrackerPage(): ReactElement {
   const snapshot = getLatestTrendSnapshot()
   const allSnapshots = getAllTrendSnapshots()
 
+  const description = snapshot
+    ? describeTrackerWeek(snapshot, weekKicker(snapshot.isoWeek))
+    : LEDE
+
   const baseGraph = [
     buildCollectionPageJsonLd({
       name: BASE_TITLE,
-      description: LEDE,
+      description,
       path: PATH,
     }),
     buildBreadcrumbListJsonLd([
@@ -117,7 +123,7 @@ export default function TrendsTrackerPage(): ReactElement {
 
   return (
     <main id="main" className="flex-1">
-      <JsonLd graph={[...baseGraph, buildDatasetJsonLd(snapshot)]} />
+      <JsonLd graph={[...baseGraph, buildDatasetJsonLd(snapshot, description)]} />
       <TrackerHeader snapshot={snapshot} lede={LEDE} />
 
       {snapshot.rows.length > 0 ? (

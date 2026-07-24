@@ -22,6 +22,7 @@ import { TrackerSummaryGrid } from '@/components/tracker/TrackerSummaryGrid'
 import { TrackerCategorySection } from '@/components/tracker/TrackerCategorySection'
 import { PageSectionKicker } from '@/components/ui/PageSectionKicker'
 import {
+  describeTrackerWeek,
   groupByCategory,
   presentCategories,
   weekKicker,
@@ -50,7 +51,7 @@ export async function generateMetadata({
     : 'Trends Tracker'
   return buildMetadata({
     title,
-    description: LEDE,
+    description: describeTrackerWeek(snapshot, wk),
     path: `/trends/tracker/${week}`,
   })
 }
@@ -58,12 +59,13 @@ export async function generateMetadata({
 function buildDatasetJsonLd(
   snapshot: NonNullable<ReturnType<typeof getTrendSnapshot>>,
   week: string,
+  description: string,
 ) {
   return {
     '@context': 'https://schema.org' as const,
     '@type': 'Dataset' as const,
     name: 'Trends Tracker',
-    description: LEDE,
+    description,
     url: canonicalUrl(`/trends/tracker/${week}`),
     temporalCoverage: snapshot.isoWeek,
     dateModified: snapshot.publishedAt,
@@ -103,14 +105,16 @@ export default async function TrackerWeekPage({
     },
   ]
 
+  const weekDescription = describeTrackerWeek(snapshot, wk)
+
   const jsonLdGraph = [
     buildCollectionPageJsonLd({
       name: wk ? `Trends Tracker — Week ${wk.week}, ${wk.year}` : 'Trends Tracker',
-      description: LEDE,
+      description: weekDescription,
       path: `/trends/tracker/${week}`,
     }),
     buildBreadcrumbListJsonLd(breadcrumbs),
-    buildDatasetJsonLd(snapshot, week),
+    buildDatasetJsonLd(snapshot, week, weekDescription),
   ]
 
   return (
