@@ -5060,7 +5060,7 @@
           "tmr"
         ],
         "publishedAt": "2026-07-12T14:00:00.000Z",
-        "updatedAt": "2026-07-12T14:00:00.000Z",
+        "updatedAt": "2026-07-23T00:00:00.000Z",
         "heroImage": "/hero-art/cherry-xtrfy-tmr-pivot.svg",
         "heroImageAlt": "Split illustration: on the left, a muted line-drawing of a standard MX-style switch cross-section labelled cooling; on the right, a coral-accented cross-section of a magnetic switch with a stem-mounted magnet over a sensor pad, labelled XTRFY, TMR pivot.",
         "featured": false,
@@ -5246,7 +5246,7 @@
           "factory-lubed"
         ],
         "publishedAt": "2026-06-29T14:00:00.000Z",
-        "updatedAt": "2026-06-29T14:00:00.000Z",
+        "updatedAt": "2026-07-23T00:00:00.000Z",
         "heroImage": "/hero-art/gazzew-boba-u4t-deep-dive.svg",
         "heroImageAlt": "Side-view cross-section of a nylon-housing tactile switch — top housing with a faint dashed ghost-ring marking an absent foam dampener, POM stem with a D-shaped flat-plateau tactile bump positioned high in the stroke, coil spring, and nylon bottom housing with a matching absent-foam ghost-ring at the floor, coral resonance arcs radiating above the top housing and below the bottom housing, rendered in a single warm-grey stroke with a coral splash across the plateau contact point",
         "featured": false,
@@ -8302,5 +8302,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-07-23T21:34:15.905Z"
+  "generatedAt": "2026-07-24T01:41:23.711Z"
 }
