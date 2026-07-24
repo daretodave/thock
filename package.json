@@ -28,8 +28,8 @@
     "deploy:smoke": "node scripts/deploy-smoke.mjs"
   },
   "devDependencies": {
-    "prettier": "^3.3.3",
-    "typescript": "^5.6.3"
+    "prettier": "^3.9.6",
+    "typescript": "^7.0.2"
   },
   "pnpm": {
     "overrides": {
