@@ -266,8 +266,8 @@
       "30": [
         14,
         8,
-        42,
-        580
+        44,
+        582
       ],
       "31": [
         9,
@@ -519,8 +519,8 @@
     "averageFieldLength": [
       9.763888888888886,
       5.791666666666667,
-      38.22222222222222,
-      663.1527777777778
+      38.25,
+      663.1805555555555
     ],
     "storedFields": {
       "0": {
@@ -928,7 +928,7 @@
       "30": {
         "slug": "gmk-cyl-selene-group-buy",
         "title": "GMK CYL Selene closed at KBDfans with the sub-line's first material-first colorway",
-        "lede": "GMK CYL Selene ran 2026-05-15 through 2026-06-19 at KBDfans with a special-effects glitter-reflect colorway in purple and teal over a silver-grey base. Designed by whysoda and inspired by the Greek Titaness of the Moon, the buy closed with Q4 2026 fulfillment ahead.",
+        "lede": "GMK CYL Selene ran 2026-05-15 through 2026-06-19 at KBDfans with a special-effects glitter-reflect colorway in purple and teal over a silver-grey base. Designed by whysoda and inspired by the Greek Titaness of the Moon, the buy closed with Q1-Q2 2027 fulfillment ahead.",
         "pillar": "news",
         "tags": [
           "gmk",
@@ -3694,12 +3694,14 @@
         "q2",
         {
           "2": {
+            "30": 1,
             "34": 1
           },
           "3": {
             "13": 2,
             "14": 1,
             "17": 1,
+            "30": 1,
             "34": 3,
             "36": 1,
             "62": 1,
@@ -3732,6 +3734,7 @@
         "q1",
         {
           "2": {
+            "30": 1,
             "34": 1
           },
           "3": {
@@ -3741,6 +3744,7 @@
             "13": 1,
             "14": 1,
             "26": 3,
+            "30": 1,
             "34": 7,
             "36": 1,
             "38": 1,
@@ -4112,16 +4116,12 @@
       [
         "q4",
         {
-          "2": {
-            "30": 1
-          },
           "3": {
             "1": 5,
             "13": 1,
             "14": 1,
             "26": 2,
             "29": 2,
-            "30": 1,
             "37": 5,
             "44": 1
           }
@@ -4949,10 +4949,14 @@
       [
         "2027",
         {
+          "2": {
+            "30": 1
+          },
           "3": {
             "5": 3,
             "13": 1,
             "14": 1,
+            "30": 1,
             "36": 1,
             "37": 2
           }
@@ -5013,7 +5017,7 @@
             "26": 1,
             "28": 1,
             "29": 1,
-            "30": 3,
+            "30": 2,
             "34": 1,
             "36": 2,
             "37": 2,
@@ -5046,7 +5050,7 @@
             "26": 12,
             "28": 21,
             "29": 16,
-            "30": 8,
+            "30": 7,
             "31": 5,
             "33": 1,
             "34": 4,
@@ -106458,7 +106462,7 @@
       "id": "gmk-cyl-selene-group-buy",
       "slug": "gmk-cyl-selene-group-buy",
       "title": "GMK CYL Selene closed at KBDfans with the sub-line's first material-first colorway",
-      "lede": "GMK CYL Selene ran 2026-05-15 through 2026-06-19 at KBDfans with a special-effects glitter-reflect colorway in purple and teal over a silver-grey base. Designed by whysoda and inspired by the Greek Titaness of the Moon, the buy closed with Q4 2026 fulfillment ahead.",
+      "lede": "GMK CYL Selene ran 2026-05-15 through 2026-06-19 at KBDfans with a special-effects glitter-reflect colorway in purple and teal over a silver-grey base. Designed by whysoda and inspired by the Greek Titaness of the Moon, the buy closed with Q1-Q2 2027 fulfillment ahead.",
       "pillar": "news",
       "tags": [
         "gmk",
@@ -107625,6 +107629,6 @@
       "href": "/trends/tracker/2026-W30"
     }
   ],
-  "generatedAt": "2026-07-24T10:02:15.917Z",
+  "generatedAt": "2026-07-24T14:47:12.554Z",
   "count": 72
 }
