@@ -138,14 +138,17 @@ describe('pickSummarySlots', () => {
     expect(slots.map((s) => s.kind)).toEqual(['riser'])
   })
 
-  it('falls back to the largest-score row when no up rows exist', () => {
+  it('drops the riser slot instead of picking a flat row when no up rows exist', () => {
+    // Pre-fix, Riser fell back to the highest-score flat row when no
+    // up-direction row remained — the same mismatched-header bug already
+    // fixed for Sleeper below, just on the Riser slot: a "BIGGEST RISER"
+    // card would render a flat-tone glyph and a "flat" delta.
     const rows: TrendRow[] = [
       row({ name: 'A', direction: 'flat', score: 5, spark: [5, 5] }),
       row({ name: 'B', direction: 'flat', score: 12, spark: [12, 12] }),
     ]
     const slots = pickSummarySlots(rows)
-    expect(slots[0]?.kind).toBe('riser')
-    expect(slots[0]?.row.name).toBe('B')
+    expect(slots.find((s) => s.kind === 'riser')).toBeUndefined()
   })
 
   it('drops the sleeper slot when only flat rows remain (critique pass 9 #8)', () => {

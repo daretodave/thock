@@ -79,16 +79,35 @@ describe('pickSummarySlots', () => {
     expect(breakout?.row.name).toBe('B')
   })
 
-  it('faller falls back to min-score row overall when no down-direction rows exist', () => {
+  it('drops the faller slot instead of picking a flat row when no down-direction rows exist', () => {
     const rows: TrendRow[] = [
       makeRow('A', { direction: 'up', score: 50, spark: [10, 50] }),
       makeRow('B', { category: 'keycap', direction: 'up', score: 30, spark: [5, 30] }),
       makeRow('C', { direction: 'flat', score: 2, spark: [2, 2] }),
     ]
     const slots = pickSummarySlots(rows)
-    // Riser=A. Remaining=[B,C]. No down rows → pool=[B,C]. Min score=C(2).
-    const faller = slots.find((s) => s.kind === 'faller')
-    expect(faller?.row.name).toBe('C')
+    expect(slots.find((s) => s.kind === 'faller')).toBeUndefined()
+    expect(slots.every((s) => s.row.direction !== 'flat')).toBe(true)
+  })
+
+  it('drops the riser slot instead of picking a flat row when no up-direction rows exist', () => {
+    const rows: TrendRow[] = [
+      makeRow('A', { direction: 'down', score: -50, spark: [10, -50] }),
+      makeRow('B', { category: 'keycap', direction: 'down', score: -30, spark: [5, -30] }),
+      makeRow('C', { direction: 'flat', score: 2, spark: [2, 2] }),
+    ]
+    const slots = pickSummarySlots(rows)
+    expect(slots.find((s) => s.kind === 'riser')).toBeUndefined()
+    expect(slots.every((s) => s.row.direction !== 'flat')).toBe(true)
+  })
+
+  it('drops both riser and faller when every row is flat', () => {
+    const rows: TrendRow[] = [
+      makeRow('A', { direction: 'flat', score: 5, spark: [5, 5] }),
+      makeRow('B', { direction: 'flat', score: 2, spark: [2, 2] }),
+    ]
+    const slots = pickSummarySlots(rows)
+    expect(slots).toEqual([])
   })
 
   it('drops the sleeper slot when no non-flat rows remain after riser/faller/breakout', () => {
@@ -246,6 +265,16 @@ describe('describeTrackerWeek', () => {
     ])
     const result = describeTrackerWeek(snapshot, null)
     expect(result).toContain('across 1 category.')
+  })
+
+  it('omits the "Top mover" clause instead of naming a flat row when no up-direction rows exist', () => {
+    const snapshot = makeSnapshot([
+      makeRow('A', { direction: 'down', score: -10, spark: [5, -10] }),
+      makeRow('B', { direction: 'flat', score: 2, spark: [2, 2] }),
+    ])
+    const result = describeTrackerWeek(snapshot, { week: 21, year: 2026, label: 'Week 21 / 2026' })
+    expect(result).not.toContain('Top mover')
+    expect(result).not.toContain('(flat)')
   })
 
   it('returns a no-movers description when rows is empty', () => {

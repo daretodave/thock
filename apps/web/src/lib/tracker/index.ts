@@ -52,15 +52,19 @@ function sparkSlope(row: TrendRow): number {
  * rendering placeholders.
  *
  * Order of selection (each draws from the remaining unused rows):
- *  1. riser   = max-score row with direction='up' (else max-score row).
- *  2. faller  = min-score row with direction='down' (else min-score row).
+ *  1. riser   = max-score row with direction='up'; drops the slot if
+ *               no up row remains.
+ *  2. faller  = min-score row with direction='down'; drops the slot if
+ *               no down row remains.
  *  3. breakout = direction='up' row with the steepest spark slope.
  *  4. sleeper = smallest abs(score) non-flat row (under-the-radar mover);
- *               drops the slot if no non-flat row remains. Critique
- *               pass 9 #8: pinning Sleeper on a flat-direction row
- *               whose editor's note says nothing's moving reads as
- *               auto-populated rather than editorially chosen, so
- *               flat-only fallback is removed.
+ *               drops the slot if no non-flat row remains.
+ *
+ *  Critique pass 9 #8 first found this for Sleeper: pinning a summary
+ *  slot on a flat-direction row whose editor's note says nothing's
+ *  moving reads as auto-populated rather than editorially chosen, so
+ *  no slot here ever falls back to a flat row — Riser and Faller drop
+ *  instead of mislabeling a flat row as a "riser"/"faller".
  */
 export function pickSummarySlots(rows: readonly TrendRow[]): SummarySlot[] {
   if (rows.length === 0) return []
@@ -70,18 +74,14 @@ export function pickSummarySlots(rows: readonly TrendRow[]): SummarySlot[] {
   const out: SummarySlot[] = []
 
   const pickRiser = () => {
-    const candidates = remaining()
-    if (candidates.length === 0) return null
-    const ups = candidates.filter((r) => r.direction === 'up')
-    const pool = ups.length > 0 ? ups : candidates
-    return pool.reduce((acc, r) => (r.score > acc.score ? r : acc), pool[0]!)
+    const ups = remaining().filter((r) => r.direction === 'up')
+    if (ups.length === 0) return null
+    return ups.reduce((acc, r) => (r.score > acc.score ? r : acc), ups[0]!)
   }
   const pickFaller = () => {
-    const candidates = remaining()
-    if (candidates.length === 0) return null
-    const downs = candidates.filter((r) => r.direction === 'down')
-    const pool = downs.length > 0 ? downs : candidates
-    return pool.reduce((acc, r) => (r.score < acc.score ? r : acc), pool[0]!)
+    const downs = remaining().filter((r) => r.direction === 'down')
+    if (downs.length === 0) return null
+    return downs.reduce((acc, r) => (r.score < acc.score ? r : acc), downs[0]!)
   }
   const pickBreakout = () => {
     const candidates = remaining().filter((r) => r.direction === 'up')
