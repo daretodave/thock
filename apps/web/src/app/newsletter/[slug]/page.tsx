@@ -100,7 +100,7 @@ export default async function NewsletterDetailPage({
           <Link
             href="/newsletter"
             data-testid="newsletter-detail-back-link"
-            className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text"
+            className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
           >
             ← all issues
           </Link>

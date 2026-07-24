@@ -143,7 +143,7 @@ export default async function TagPage({
           <Link
             href="/tags"
             data-testid="tag-page-back-link"
-            className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text"
+            className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
           >
             ← all tags
           </Link>

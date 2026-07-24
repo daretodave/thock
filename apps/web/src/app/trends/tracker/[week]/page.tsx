@@ -122,7 +122,7 @@ export default async function TrackerWeekPage({
         <Link
           href="/trends/tracker"
           data-testid="tracker-back-link"
-          className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text"
+          className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
         >
           ← Back to latest
         </Link>
@@ -170,7 +170,7 @@ export default async function TrackerWeekPage({
               <Link
                 href={`/trends/tracker/${prev}`}
                 data-testid="tracker-prev-week"
-                className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text"
+                className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
               >
                 ← {weekKicker(prev) ? `Week ${weekKicker(prev)!.week}, ${weekKicker(prev)!.year}` : prev}
               </Link>
@@ -188,7 +188,7 @@ export default async function TrackerWeekPage({
               <Link
                 href={`/trends/tracker/${next}`}
                 data-testid="tracker-next-week"
-                className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text"
+                className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
               >
                 {weekKicker(next) ? `Week ${weekKicker(next)!.week}, ${weekKicker(next)!.year}` : next} →
               </Link>
@@ -196,7 +196,7 @@ export default async function TrackerWeekPage({
               <Link
                 href="/trends/tracker"
                 data-testid="tracker-next-week"
-                className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text"
+                className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
               >
                 Latest →
               </Link>

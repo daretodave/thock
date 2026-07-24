@@ -172,7 +172,7 @@ export default async function PartIndexPage({
           <Link
             href="/parts"
             data-testid="part-kind-back-link"
-            className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text"
+            className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
           >
             ← all parts
           </Link>
@@ -182,7 +182,7 @@ export default async function PartIndexPage({
                 <Link
                   href={tools.quiz.href}
                   data-testid="part-kind-quiz-link"
-                  className="font-mono text-small uppercase tracking-[0.08em] text-accent hover:text-text"
+                  className="font-mono text-small uppercase tracking-[0.08em] text-accent hover:text-text rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
                 >
                   {tools.quiz.label}
                 </Link>
@@ -191,7 +191,7 @@ export default async function PartIndexPage({
                 <Link
                   href={tools.compare.href}
                   data-testid="part-kind-compare-link"
-                  className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text"
+                  className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
                 >
                   {tools.compare.label}
                 </Link>

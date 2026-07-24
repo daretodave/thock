@@ -131,7 +131,7 @@ export default async function VendorDetailPage({
           <Link
             href="/vendors"
             data-testid="vendor-detail-back-link"
-            className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text"
+            className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
           >
             ← all vendors
           </Link>

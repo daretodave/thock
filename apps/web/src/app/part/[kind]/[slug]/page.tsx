@@ -170,7 +170,7 @@ export default async function PartDetailPage({
             <Link
               href={`/compare/switch?a=${part.slug}`}
               data-testid="part-compare-link"
-              className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text"
+              className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
             >
               Compare this switch →
             </Link>
@@ -179,7 +179,7 @@ export default async function PartDetailPage({
             <Link
               href="/quiz/switch"
               data-testid="part-switch-quiz-link"
-              className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text"
+              className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
             >
               Find your switch →
             </Link>
@@ -188,7 +188,7 @@ export default async function PartDetailPage({
             <Link
               href={`/compare/board?a=${part.slug}`}
               data-testid="part-compare-link"
-              className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text"
+              className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
             >
               Compare this board →
             </Link>
@@ -197,7 +197,7 @@ export default async function PartDetailPage({
             <Link
               href="/quiz/keycap-set"
               data-testid="part-keycapset-quiz-link"
-              className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text"
+              className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
             >
               Find your keycap set →
             </Link>
@@ -205,7 +205,7 @@ export default async function PartDetailPage({
           <Link
             href={`/part/${part.kind}`}
             data-testid="part-detail-back-link"
-            className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text"
+            className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
           >
             ← all {KIND_PLURAL[part.kind]}
           </Link>

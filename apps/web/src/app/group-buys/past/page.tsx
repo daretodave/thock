@@ -84,7 +84,7 @@ export default function PastGroupBuysPage(): ReactElement {
           </div>
           <Link
             href="/group-buys"
-            className="font-mono text-micro uppercase tracking-[0.08em] text-text-2 hover:text-text"
+            className="font-mono text-micro uppercase tracking-[0.08em] text-text-2 hover:text-text rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
           >
             ← back to live group buys
           </Link>
