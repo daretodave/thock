@@ -142,7 +142,7 @@
       "category": "switch",
       "direction": "down",
       "score": -50,
-      "spark": [-10, -18, -25, -32, -37, -42, -46, -50],
+      "spark": [-31, -33, -30, -32, -36, -39, -42, -50],
       "articleSlug": "cherry-mx2a-revision",
       "note": "No new SKUs since April's MX2A Dummy release; buzz keeps ceding ground to magnetic/TMR switches with little fresh MX2A-specific discussion this week."
     },
@@ -151,7 +151,7 @@
       "category": "brand",
       "direction": "up",
       "score": -24,
-      "spark": [-45, -40, -36, -33, -30, -28, -26, -24],
+      "spark": [-23, -28, -27, -27, -27, -28, -30, -24],
       "articleSlug": "cherry-mx2a-revision",
       "note": "Cherry XTRFY's July 3, 2026 TMR-based K5 Pro Compact launch gave the Cherry brand a rare positive headline after months of MX2A-driven decline."
     },

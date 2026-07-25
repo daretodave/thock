@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <title>Two diverging lines on the same tracker scale, W22 through W29 2026. The Cherry MX2A switch score falls from -10 to -50 in warm-red. The Cherry brand score climbs from -45 to -24 in coral. The lines cross near W25, illustrating a single switch line dragging down while the parent brand recovers on other news.</title>
+  <title>Two lines on the same tracker scale, W22 through W29 2026, never crossing. The Cherry MX2A switch score falls from -31 to -50 in warm-red, always the more negative line. The Cherry brand score moves from -23 to -24 in coral after dipping to -30. The gap between the two lines roughly triples by the end of the window, illustrating a switch line dragging further down while the parent brand holds roughly flat.</title>
 
   <!-- Axes -->
   <line x1="140" y1="70" x2="140" y2="360" stroke-opacity="0.30"/>
@@ -24,32 +24,32 @@
   <text x="1100" y="385" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.60">W29</text>
   <text x="620" y="415" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.40">2026</text>
 
-  <!-- MX2A switch line (warm-red / down token): -10, -18, -25, -32, -37, -42, -46, -50 -->
+  <!-- MX2A switch line (warm-red / down token): -31, -33, -30, -32, -36, -39, -42, -50 -->
   <polyline
-    points="160,150 294,186 429,217.5 563,249 697,271.5 831,294 966,312 1100,330"
+    points="160,244.5 294,253.5 429,240 563,249 697,267 831,280.5 966,294 1100,330"
     stroke="oklch(0.62 0.13 25)"
     stroke-width="2.5"
     stroke-opacity="0.90"
     fill="none"
   />
-  <circle cx="160" cy="150" r="4" fill="oklch(0.62 0.13 25)" stroke="oklch(0.62 0.13 25)" opacity="0.85"/>
+  <circle cx="160" cy="244.5" r="4" fill="oklch(0.62 0.13 25)" stroke="oklch(0.62 0.13 25)" opacity="0.85"/>
   <circle cx="1100" cy="330" r="6" fill="oklch(0.62 0.13 25)" stroke="oklch(0.62 0.13 25)" opacity="0.95"/>
   <text x="1100" y="352" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.90">Cherry MX2A: -50</text>
 
-  <!-- Cherry brand line (coral): -45, -40, -36, -33, -30, -28, -26, -24 -->
+  <!-- Cherry brand line (coral): -23, -28, -27, -27, -27, -28, -30, -24 -->
   <polyline
-    points="160,320 294,300 429,285 563,273.5 697,264 831,257 966,250 1100,243"
+    points="160,208.5 294,231 429,226.5 563,226.5 697,226.5 831,231 966,240 1100,213"
     stroke="oklch(0.68 0.165 28)"
     stroke-width="2.5"
     stroke-opacity="0.95"
     fill="none"
   />
-  <circle cx="160" cy="320" r="4" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)" opacity="0.85"/>
-  <circle cx="1100" cy="243" r="6" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)" opacity="0.95"/>
-  <text x="1100" y="225" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">Cherry brand: -24</text>
+  <circle cx="160" cy="208.5" r="4" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)" opacity="0.85"/>
+  <circle cx="1100" cy="213" r="6" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)" opacity="0.95"/>
+  <text x="1100" y="195" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">Cherry brand: -24</text>
 
-  <!-- Crossing annotation -->
-  <text x="600" y="45" font-family="Newsreader, serif" font-size="17" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">One switch line down, one brand line up — same eight weeks</text>
+  <!-- Divergence annotation -->
+  <text x="600" y="45" font-family="Newsreader, serif" font-size="17" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">One switch line dragging further down, one brand line holding — same eight weeks</text>
 
   <!-- Brass theme dot -->
   <circle cx="1170" cy="30" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>

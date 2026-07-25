@@ -7,7 +7,7 @@
   "article_slug": "cherry-xtrfy-tmr-pivot",
   "article_pillar": "trends",
   "section_anchor": "the-tracker-gave-cherry-a-rare-up-week",
-  "brief_summary": "Coral line chart plotting the Cherry (GMK parent) brand tracker score across the eight-week window W22-W29 2026, climbing from -45 to -24. Terminal point annotated against the July 3, 2026 XTRFY K5 Pro Compact launch that the tracker note credits for the upswing.",
+  "brief_summary": "Coral line chart plotting the Cherry (GMK parent) brand tracker score across the eight-week window W22-W29 2026, moving from -23 to -24 after dipping to -30. Terminal point annotated against the July 3, 2026 XTRFY K5 Pro Compact launch that the tracker note credits for the upswing.",
   "target": "apps/web/public/article-viz/cherry-xtrfy-tmr-pivot/brand-sparkline.svg",
   "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
   "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
@@ -15,7 +15,7 @@
   "tokens_snapshot": "design/tokens.css",
   "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
   "data_sources": [
-    "data/trends/2026-W29.json § rows[15] 'Cherry (GMK parent)' — direction: up, score: -24, spark: [-45,-40,-36,-33,-30,-28,-26,-24], note: 'Cherry XTRFY's July 3, 2026 TMR-based K5 Pro Compact launch gave the Cherry brand a rare positive headline after months of MX2A-driven decline.'"
+    "data/trends/2026-W29.json § rows[15] 'Cherry (GMK parent)' — direction: up, score: -24, spark: [-23,-28,-27,-27,-27,-28,-30,-24] (corrected 2026-07-25 — prior spark had fabricated values with no W22-W28 historical basis; replaced with the site's actual recorded weekly scores for that entity), note: 'Cherry XTRFY's July 3, 2026 TMR-based K5 Pro Compact launch gave the Cherry brand a rare positive headline after months of MX2A-driven decline.'"
   ],
   "outputs": ["apps/web/public/article-viz/cherry-xtrfy-tmr-pivot/brand-sparkline.svg"],
   "warnings": []
