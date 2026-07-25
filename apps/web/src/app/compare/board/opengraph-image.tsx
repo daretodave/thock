@@ -11,7 +11,7 @@ export default function OpenGraphImage() {
   return new ImageResponse(
     <PillarOGContent
       pillarLabel="Compare Boards"
-      tagline="Layout, mount, PCB, case — side by side for any two boards."
+      tagline="Layout, mount, case, hotswap — side by side for any two boards."
     />,
     size,
   )
