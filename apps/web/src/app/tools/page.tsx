@@ -112,7 +112,7 @@ export default function ToolsPage(): ReactElement {
               key={tool.href}
               href={tool.href}
               data-testid={tool.testId}
-              className="group flex flex-col gap-3 border border-border p-6 hover:border-border-hi hover:bg-surface-1 transition-colors"
+              className="group flex flex-col gap-3 rounded-sm border border-border p-6 hover:border-border-hi hover:bg-surface-1 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
             >
               <span className="font-serif text-h2 text-text group-hover:text-accent transition-colors">
                 {tool.heading}

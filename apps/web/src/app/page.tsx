@@ -209,19 +209,19 @@ export default function HomePage(): ReactElement {
       <Container as="section" className="pb-12 sm:pb-16" data-testid="home-cta-strip">
         <p className="text-small text-text-2">
           Not sure which switch to try?{' '}
-          <Link href="/quiz/switch" className="text-accent hover:text-accent-hi underline underline-offset-2 transition-colors">
+          <Link href="/quiz/switch" className="rounded-sm text-accent hover:text-accent-hi underline underline-offset-2 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu">
             Find your switch
           </Link>{' '}
           — or{' '}
-          <Link href="/quiz/keycap-set" className="text-accent hover:text-accent-hi underline underline-offset-2 transition-colors">
+          <Link href="/quiz/keycap-set" className="rounded-sm text-accent hover:text-accent-hi underline underline-offset-2 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu">
             find your keycap set
           </Link>{' '}
           — answer 4 questions, get your top matches. Browse{' '}
-          <Link href="/tools" className="text-accent hover:text-accent-hi underline underline-offset-2 transition-colors" data-testid="home-tools-link">
+          <Link href="/tools" className="rounded-sm text-accent hover:text-accent-hi underline underline-offset-2 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu" data-testid="home-tools-link">
             all interactive tools
           </Link>{' '}
           — quizzes and comparison tables in one place. Or{' '}
-          <Link href="/parts" className="text-accent hover:text-accent-hi underline underline-offset-2 transition-colors">
+          <Link href="/parts" className="rounded-sm text-accent hover:text-accent-hi underline underline-offset-2 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu">
             browse the parts catalog
           </Link>{' '}
           — every switch, keycap set, and board in one place.
