@@ -265,7 +265,13 @@ export function getArticlesMentioningPart(
   )
 }
 
-/** All group buys for a vendor, endDate desc (active soonest first, past most-recent first). */
+/**
+ * All group buys for a vendor, endDate desc. This raw order only
+ * matches the desired "past most-recently-ended first" convention —
+ * callers that split the result into active/past buckets (e.g.
+ * `vendor/[slug]/page.tsx`) must re-sort the active bucket ascending
+ * (soonest-closing first) via `partitionVendorGroupBuys()`.
+ */
 export function getGroupBuysByVendor(vendorSlug: string): GroupBuy[] {
   return manifest.groupBuys
     .filter((g) => g.vendorSlug === vendorSlug)

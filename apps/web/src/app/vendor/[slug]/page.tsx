@@ -16,6 +16,7 @@ import {
   getVendorBySlug,
 } from '@/lib/data-runtime'
 import { countryLabel } from '@/lib/vendor-country'
+import { partitionVendorGroupBuys } from './helpers'
 import { PageSectionKicker } from '@/components/ui/PageSectionKicker'
 import { VendorGroupBuySection } from '@/components/vendor/VendorGroupBuySection'
 import { VendorSwitchSection } from '@/components/vendor/VendorSwitchSection'
@@ -64,16 +65,8 @@ export default async function VendorDetailPage({
   const todayIso = now.toISOString().slice(0, 10)
 
   const allGroupBuys = getGroupBuysByVendor(slug)
-  const activeGroupBuys = allGroupBuys.filter((gb) => {
-    if (gb.status === 'closed' || gb.status === 'shipped') return false
-    if (gb.endDate < todayIso) return false
-    return true
-  })
-  const pastGroupBuys = allGroupBuys.filter((gb) => {
-    if (gb.status === 'closed' || gb.status === 'shipped') return true
-    if (gb.endDate < todayIso) return true
-    return false
-  })
+  const { active: activeGroupBuys, past: pastGroupBuys } =
+    partitionVendorGroupBuys(allGroupBuys, todayIso)
   const boards = getBoardsByVendor(slug)
   const switches = getSwitchesByVendor(slug)
   const keycapSets = getKeycapSetsByVendor(slug)
