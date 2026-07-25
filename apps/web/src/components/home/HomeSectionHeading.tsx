@@ -48,7 +48,7 @@ export function HomeSectionHeading({
       {more && (
         <Link
           href={more.href}
-          className="font-mono uppercase tracking-[0.08em] text-micro text-accent hover:text-accent-hi"
+          className="rounded-sm font-mono uppercase tracking-[0.08em] text-micro text-accent hover:text-accent-hi focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
         >
           {more.label} →
         </Link>

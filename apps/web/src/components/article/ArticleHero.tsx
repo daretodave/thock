@@ -61,7 +61,10 @@ export function ArticleHero({
               data-testid="article-hero-eyebrow"
               className="font-mono uppercase tracking-[0.12em] text-micro text-accent"
             >
-              <Link href={pillarHref(pillar)} className="hover:text-accent">
+              <Link
+                href={pillarHref(pillar)}
+                className="rounded-sm hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+              >
                 {pillarLabel(pillar)}
               </Link>
             </div>

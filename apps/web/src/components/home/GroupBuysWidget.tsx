@@ -106,7 +106,7 @@ export function GroupBuysWidget({
       </div>
       <Link
         href="/group-buys"
-        className="mt-2 font-mono uppercase tracking-[0.08em] text-micro text-accent hover:text-accent-hi"
+        className="mt-2 rounded-sm font-mono uppercase tracking-[0.08em] text-micro text-accent hover:text-accent-hi focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
       >
         all active group buys →
       </Link>

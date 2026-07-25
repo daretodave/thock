@@ -39,7 +39,7 @@ export function ArchiveMonthGroup({
             <Link
               href={`/article/${article.slug}`}
               data-testid="archive-article-link"
-              className="group flex items-baseline gap-3 hover:text-accent transition-colors"
+              className="group flex items-baseline gap-3 rounded-sm hover:text-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
             >
               <span
                 data-testid="archive-pillar-label"

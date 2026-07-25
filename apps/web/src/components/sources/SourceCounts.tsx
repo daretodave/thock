@@ -94,7 +94,7 @@ export function SourceCounts({ rows }: SourceCountsProps): ReactElement {
                 >
                   <Link
                     href={`/article/${article.slug}`}
-                    className="font-serif text-h3 text-text hover:text-accent transition-colors"
+                    className="rounded-sm font-serif text-h3 text-text hover:text-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
                   >
                     {article.frontmatter.title}
                   </Link>
