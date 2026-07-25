@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Bottom-plate material spectrum — FR4 softer and quieter, aluminum stiffer and brighter, carbon fiber stiffer than FR4 by a meaningful margin and lighter than aluminum but not a clean fit on the same spectrum</title>
+
+  <!-- Title -->
+  <text x="600" y="46" font-family="Newsreader, 'Iowan Old Style', Georgia, serif" font-size="19" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.90">bottom-plate material — an established spectrum, and a material that doesn't sit cleanly on it</text>
+
+  <!-- Axis -->
+  <line x1="180" y1="220" x2="1020" y2="220" stroke="oklch(0.78 0.005 90)" stroke-width="1.5" stroke-opacity="0.30"/>
+  <text x="180" y="255" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="start" opacity="0.55">softer · quieter</text>
+  <text x="1020" y="255" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.55">stiffer · brighter</text>
+
+  <!-- FR4 anchor -->
+  <circle cx="260" cy="220" r="7" fill="oklch(0.78 0.005 90 / 0.3)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.7" stroke-width="1.5"/>
+  <text x="260" y="195" font-family="Newsreader, serif" font-size="17" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">FR4</text>
+  <text x="260" y="285" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">softer, quieter — the</text>
+  <text x="260" y="301" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">familiar quiet anchor</text>
+
+  <!-- Aluminum anchor -->
+  <circle cx="940" cy="220" r="7" fill="oklch(0.78 0.005 90 / 0.3)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.7" stroke-width="1.5"/>
+  <text x="940" y="195" font-family="Newsreader, serif" font-size="17" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">aluminum</text>
+  <text x="940" y="285" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">stiffer, brighter — the</text>
+  <text x="940" y="301" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">familiar bright anchor</text>
+
+  <!-- Carbon fiber — off-spectrum outlier, dashed bracket, coral -->
+  <path d="M 600 220 Q 600 150 420 130" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.7" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <path d="M 600 220 Q 600 150 780 130" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.7" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <circle cx="600" cy="220" r="9" fill="oklch(0.68 0.165 28 / 0.18)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.95" stroke-width="2.5"/>
+  <rect x="380" y="90" width="440" height="46" rx="8" fill="oklch(0.68 0.165 28 / 0.08)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.6" stroke-width="1.5"/>
+  <text x="600" y="112" font-family="Newsreader, serif" font-size="17" font-style="italic" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">carbon fiber — Volcano's bottom plate</text>
+  <text x="600" y="129" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.85">stiffer than FR4 by a meaningful margin, lighter than aluminum</text>
+  <text x="600" y="355" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.7">doesn't map cleanly onto the aluminum-vs-FR4 spectrum</text>
+
+  <!-- Caption -->
+  <text x="600" y="395" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">a bottom plate, not the mounting plate — closes the case, tunes the resonance</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="38" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

@@ -1,0 +1,20 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-25T00:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "cannonkeys-blaine-v2-se-group-buy",
+  "article_pillar": "news",
+  "section_anchor": "a-carbon-fiber-plate-changes-the-acoustic-math",
+  "brief_summary": "Horizontal spectrum with two warm-grey anchor points: FR4 on the left ('softer, quieter — the familiar quiet anchor') and aluminum on the right ('stiffer, brighter — the familiar bright anchor'). A coral-highlighted callout sits above the spectrum's midpoint, connected by dashed brackets to both anchors, labeled 'carbon fiber — Volcano's bottom plate: stiffer than FR4 by a meaningful margin, lighter than aluminum' with a note underneath reading 'doesn't map cleanly onto the aluminum-vs-FR4 spectrum'.",
+  "target": "apps/web/public/article-viz/cannonkeys-blaine-v2-se-group-buy/plate-material.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "cannonkeys-blaine-v2-se-group-buy.mdx § 'A carbon-fiber plate changes the acoustic math' — 'aluminum reads stiffer and brighter, FR4 reads a little softer and quieter ... Carbon fiber is a less common third option ... it doesn't map cleanly onto that aluminum-versus-FR4 spectrum. It's stiffer than FR4 by a meaningful margin while weighing less than aluminum'",
+    "cannonkeys-blaine-v2-se-group-buy.mdx § 'A carbon-fiber plate changes the acoustic math' — 'Here the plate in question is the bottom plate, not the mounting plate the switches sit in'"
+  ],
+  "outputs": ["apps/web/public/article-viz/cannonkeys-blaine-v2-se-group-buy/plate-material.svg"],
+  "warnings": []
+}

@@ -6,7 +6,7 @@ author: thock
 pillar: news
 tags: [cannonkeys, group-buy, aluminum, gasket-mount]
 publishedAt: '2026-07-10T14:00:00.000Z'
-updatedAt: '2026-07-19T00:00:00.000Z'
+updatedAt: '2026-07-25T00:00:00.000Z'
 heroImage: /hero-art/cannonkeys-blaine-v2-se-group-buy.svg
 heroImageAlt: "Top-down line silhouette of a TKL keyboard case rendered in a 2px warm-grey stroke on a transparent 1200x750 canvas, with a coral splash marking three stacked mount-point brackets along the case's lower edge and a thin warm-bronze highlight along the top-right corner."
 featured: false
@@ -27,11 +27,25 @@ Supporting a single mount style well is a design problem — case wall thickness
   Full gasket-mount typically cushions the plate on both the top and bottom case halves. Single-sided gasket drops the cushioning to one side — usually the top — and lets the other side sit more rigidly. The result splits the difference between a fully floating gasket feel and the firmer feedback of top mount, without committing to either extreme.
 </Callout>
 
+<InlineViz
+  src="/article-viz/cannonkeys-blaine-v2-se-group-buy/mount-menu.svg"
+  alt="Three mount-hardware cards side by side: top mount with a mini cross-section showing screws direct to the case, labeled 'firmer, more direct'; single-sided gasket in the center, coral-filled, with a mini cross-section showing gasket pads on the top row only, labeled 'compliant top, rigid bottom, PCB floats'; o-ring on the right with a mini cross-section showing a continuous dampening ring and no screws, labeled 'softest, most cushioned'. A feel-spectrum arrow runs beneath from 'top mount — firmer' to 'o-ring — softer'."
+  caption="One purchase, three builds — the mount hardware you choose at build time decides the feel."
+  accent="coral"
+/>
+
 The practical upshot for a buyer is that the <Mono>Blaine V2: SE</Mono> is one purchase decision that defers a second one. A buyer who wants the softest, most cushioned bottom-out picks o-ring hardware at build time. A buyer chasing a firmer, more direct keystroke assembles the same case in top-mount configuration instead. Single-sided gasket sits between the two. None of that requires a different case order — it is the same kit, built three different ways. Whether that flexibility reads as a genuine feature or as CannonKeys hedging on which mount buyers actually want is the open question the buy doesn't answer by itself; it will get answered by which configuration shows up most in build threads after boards ship. Contrast that hedge with [the Nyawice group buy](/article/cannonkeys-nyawice-group-buy), a CannonKeys Alice board that committed to a single less-common leaf-spring F1 mount rather than offering buyers a menu — the opposite bet on the same design question.
 
 ## A carbon-fiber plate changes the acoustic math
 
 Aluminum and FR4 are the two plate materials most gasket and top-mount kits default to, and both are well-understood quantities — aluminum reads stiffer and brighter, FR4 reads a little softer and quieter, and most buyers have a mental model of the trade-off going in. Carbon fiber is a less common third option in this price and category range, and it doesn't map cleanly onto that aluminum-versus-FR4 spectrum. It's stiffer than FR4 by a meaningful margin while weighing less than aluminum, and its layered, woven structure damps vibration differently than either — carbon fiber tends toward a tighter, drier sound with less of the ring that a thin aluminum plate can carry.
+
+<InlineViz
+  src="/article-viz/cannonkeys-blaine-v2-se-group-buy/plate-material.svg"
+  alt="Horizontal spectrum with FR4 anchored on the left ('softer, quieter') and aluminum anchored on the right ('stiffer, brighter'). A coral callout above the midpoint, connected by dashed brackets to both anchors, labels carbon fiber as 'stiffer than FR4 by a meaningful margin, lighter than aluminum' with a note that it 'doesn't map cleanly onto the aluminum-vs-FR4 spectrum'."
+  caption="Carbon fiber doesn't sit cleanly between the two materials buyers already know."
+  accent="coral"
+/>
 
 Here the plate in question is the bottom plate, not the mounting plate the switches sit in — a detail worth being precise about, because it changes what the material choice is actually doing. A bottom plate mostly closes off the case and controls how much of the internal cavity resonates back up through the switches; it isn't taking direct keystroke load the way a mounting plate does. A stiffer, denser bottom plate generally means less low-end boom and a shorter decay tail on each keystroke, which is the acoustic signature carbon fiber typically buys a build. Whether it's audible against a well-tuned aluminum bottom plate with foam already doing similar work is the kind of claim that needs ears on a finished board, not a spec sheet, to settle.
 

@@ -1,0 +1,20 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-25T00:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "cannonkeys-blaine-v2-se-group-buy",
+  "article_pillar": "news",
+  "section_anchor": "three-mounts-one-kit",
+  "brief_summary": "Three mount-hardware cards side by side: top mount (warm-grey outline, mini cross-section with screws direct to case, 'firmer, more direct'), single-sided gasket (coral-filled, mini cross-section with gasket pads on top row only, 'compliant top, rigid bottom, PCB floats'), o-ring (warm-grey outline, mini cross-section with a continuous dashed ring and no screws, 'softest, most cushioned'). A coral feel-spectrum arrow runs beneath from 'top mount — firmer' to 'o-ring — softer'.",
+  "target": "apps/web/public/article-viz/cannonkeys-blaine-v2-se-group-buy/mount-menu.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "cannonkeys-blaine-v2-se-group-buy.mdx § 'Three mounts, one kit' — 'Top mount wants a rigid plate perimeter screwed directly to the top case; single-sided gasket wants compliant material between the plate and the case on one axis while the PCB floats; o-ring wants a continuous ring of dampening material carrying the plate with no screws touching it at all'",
+    "cannonkeys-blaine-v2-se-group-buy.mdx § 'Three mounts, one kit' — 'A buyer who wants the softest, most cushioned bottom-out picks o-ring hardware at build time. A buyer chasing a firmer, more direct keystroke assembles the same case in top-mount configuration instead. Single-sided gasket sits between the two'"
+  ],
+  "outputs": ["apps/web/public/article-viz/cannonkeys-blaine-v2-se-group-buy/mount-menu.svg"],
+  "warnings": []
+}
