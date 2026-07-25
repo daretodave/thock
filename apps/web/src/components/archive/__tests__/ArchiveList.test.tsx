@@ -12,6 +12,13 @@ describe('ArchiveList', () => {
     expect(screen.getByText(/no articles yet/i)).toBeInTheDocument()
   })
 
+  it('empty state uses text-text-2 not text-text-3 (WCAG AA contrast guard)', () => {
+    render(<ArchiveList groups={[]} />)
+    const message = screen.getByText(/no articles yet/i)
+    expect(message.className).not.toContain('text-text-3')
+    expect(message.className).toContain('text-text-2')
+  })
+
   it('renders a month heading for each group', () => {
     const articles = [
       makeArticle({ slug: 'a', frontmatter: { ...DEFAULT_FM, slug: 'a', publishedAt: '2026-05-10T00:00:00.000Z' } }),

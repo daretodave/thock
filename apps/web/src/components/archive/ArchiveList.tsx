@@ -11,7 +11,7 @@ export function ArchiveList({ groups }: ArchiveListProps): ReactElement {
   if (groups.length === 0) {
     return (
       <Container as="section" className="pb-16">
-        <p className="font-mono text-small text-text-3">
+        <p className="font-mono text-small text-text-2">
           No articles yet — check back soon.
         </p>
       </Container>
