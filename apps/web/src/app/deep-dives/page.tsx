@@ -28,6 +28,7 @@ export const metadata = buildMetadata({
   title: TITLE,
   description: LEDE,
   path: PATH,
+  feedUrl: '/feed/deep-dives.xml',
 })
 
 /**

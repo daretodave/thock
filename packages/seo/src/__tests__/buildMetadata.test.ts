@@ -80,6 +80,27 @@ describe('buildMetadata', () => {
     ])
   })
 
+  it('omits the rss alternate type when no feedUrl is given', () => {
+    const meta = buildMetadata({
+      title: 'A',
+      description: 'b',
+      path: '/',
+    })
+    expect(meta.alternates?.types).toBeUndefined()
+  })
+
+  it('emits an rss autodiscovery alternate when feedUrl is given', () => {
+    const meta = buildMetadata({
+      title: 'News',
+      description: 'desc',
+      path: '/news',
+      feedUrl: '/feed/news.xml',
+    })
+    expect(meta.alternates?.types).toEqual({
+      'application/rss+xml': '/feed/news.xml',
+    })
+  })
+
   it('always uses summary_large_image for twitter card', () => {
     const meta = buildMetadata({
       title: 'A',

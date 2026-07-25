@@ -17,6 +17,14 @@ export type BuildMetadataInput = {
   updatedAt?: string
   /** Per-article author byline (article type only). */
   author?: string
+  /**
+   * Site-relative RSS feed path (e.g. "/feed/news.xml") for this
+   * route. Emits an `<link rel="alternate" type="application/rss+xml">`
+   * so feed readers can autodiscover the feed — the visible "RSS ·
+   * subscribe" pill on pillar pages isn't picked up by any tool that
+   * relies on the standard autodiscovery mechanism instead.
+   */
+  feedUrl?: string
 }
 
 /**
@@ -71,6 +79,9 @@ export function buildMetadata(input: BuildMetadataInput): Metadata {
     description,
     alternates: {
       canonical: url,
+      ...(input.feedUrl
+        ? { types: { 'application/rss+xml': input.feedUrl } }
+        : {}),
     },
     openGraph: {
       title: fullTitle,

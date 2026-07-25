@@ -173,6 +173,39 @@ test.describe('phase 17 — JSON-LD shape audit', () => {
   }
 })
 
+test.describe('RSS autodiscovery', () => {
+  // Next.js resolves alternates.types hrefs against metadataBase, same
+  // as it does for the canonical link — so the rendered href is
+  // absolute even though the route passes a site-relative path.
+  test('homepage emits a sitewide RSS alternate link', async ({ page }) => {
+    await page.goto('/')
+    const href = await page
+      .locator('link[rel="alternate"][type="application/rss+xml"]')
+      .getAttribute('href')
+    expect(href).toBe('https://thock.xyz/feed.xml')
+  })
+
+  const PILLAR_FEEDS: Record<string, string> = {
+    '/news': 'https://thock.xyz/feed/news.xml',
+    '/trends': 'https://thock.xyz/feed/trends.xml',
+    '/ideas': 'https://thock.xyz/feed/ideas.xml',
+    '/deep-dives': 'https://thock.xyz/feed/deep-dives.xml',
+    '/guides': 'https://thock.xyz/feed/guides.xml',
+  }
+
+  for (const [path, feedHref] of Object.entries(PILLAR_FEEDS)) {
+    test(`${path} emits an RSS alternate link matching its visible feed pill`, async ({
+      page,
+    }) => {
+      await page.goto(path)
+      const href = await page
+        .locator('link[rel="alternate"][type="application/rss+xml"]')
+        .getAttribute('href')
+      expect(href).toBe(feedHref)
+    })
+  }
+})
+
 test.describe('security headers', () => {
   test('homepage response sets the baseline security headers', async ({ request }) => {
     const res = await request.get('/')

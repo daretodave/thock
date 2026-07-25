@@ -31,6 +31,7 @@ export const metadata = buildMetadata({
   title: siteConfig.tagline,
   description: siteConfig.description,
   path: '/',
+  feedUrl: '/feed.xml',
 })
 
 // Group-buy live/announced/ended bucketing depends on `new Date()` at
