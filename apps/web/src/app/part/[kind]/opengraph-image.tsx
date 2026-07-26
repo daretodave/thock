@@ -1,4 +1,5 @@
 import { ImageResponse } from 'next/og'
+import { siteConfig } from '@thock/seo'
 import { PillarOGContent } from '@/components/og/PillarOG'
 
 export const runtime = 'edge'
@@ -15,6 +16,17 @@ const KIND_TAGLINE: Record<string, string> = {
   switch: 'Every switch in the thock catalog — specs, opinions, and deep dives.',
   'keycap-set': 'Every keycap set in the thock catalog — profile, material, and build notes.',
   board: 'Every board in the thock catalog — layout, mount style, and coverage.',
+}
+
+export async function generateImageMetadata({
+  params,
+}: {
+  params: Promise<{ kind: string }>
+}) {
+  const { kind } = await params
+  const label = KIND_LABEL[kind] ?? 'Parts'
+  const alt = `${label} — ${siteConfig.name}`
+  return [{ id: 'og', size, contentType, alt }]
 }
 
 export default async function OpenGraphImage({
