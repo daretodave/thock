@@ -36,7 +36,7 @@ export function PartResult({ hit }: PartResultProps): ReactElement {
           {KIND_LABEL[hit.kind]}
         </span>
       </div>
-      <h3 className="mt-1 font-serif text-h4 text-text">
+      <h3 className="mt-1 font-serif text-h3 text-text">
         <Link
           href={hit.href}
           className="hover:text-accent transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"

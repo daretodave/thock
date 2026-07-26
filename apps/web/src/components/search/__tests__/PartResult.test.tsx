@@ -76,6 +76,13 @@ describe('<PartResult>', () => {
     expect(screen.getByRole('heading', { level: 3 })).toHaveTextContent('Gateron Oil King')
   })
 
+  it('sizes the heading with a defined token (not the undefined text-h4 class)', () => {
+    render(<PartResult hit={SWITCH_HIT} />)
+    const heading = screen.getByRole('heading', { level: 3 })
+    expect(heading.className).toContain('text-h3')
+    expect(heading.className).not.toContain('text-h4')
+  })
+
   it('links to /part/[kind]/[slug]', () => {
     render(<PartResult hit={SWITCH_HIT} />)
     const link = screen.getByRole('link')
