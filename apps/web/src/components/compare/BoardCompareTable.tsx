@@ -62,7 +62,7 @@ export function BoardCompareTable({
       className="pb-12 overflow-x-auto"
     >
       {/* Column headers */}
-      <div className="grid grid-cols-[14ch_1fr_1fr] gap-x-8 mb-4 pb-3 border-b border-surface-3">
+      <div className="grid grid-cols-[14ch_1fr_1fr] gap-x-8 mb-4 pb-3 border-b border-border-hi">
         <div />
         <div>
           <Link

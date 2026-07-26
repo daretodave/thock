@@ -8,16 +8,16 @@ export default function VendorsLoading(): ReactElement {
       <Container as="header" className="py-12 sm:py-16">
         <Stack gap={4}>
           <PageSectionKicker>loading · vendors</PageSectionKicker>
-          <div className="h-10 w-40 bg-surface-2 rounded animate-pulse" />
-          <div className="h-5 w-64 bg-surface-2 rounded animate-pulse" />
+          <div className="h-10 w-40 bg-surface rounded animate-pulse" />
+          <div className="h-5 w-64 bg-surface rounded animate-pulse" />
         </Stack>
       </Container>
       <Container as="section" className="pb-16">
         <div className="flex flex-col gap-8">
           {Array.from({ length: 4 }).map((_, i) => (
             <div key={i} className="py-8 flex flex-col gap-3 border-b border-border">
-              <div className="h-6 w-36 bg-surface-2 rounded animate-pulse" />
-              <div className="h-4 w-full max-w-md bg-surface-2 rounded animate-pulse" />
+              <div className="h-6 w-36 bg-surface rounded animate-pulse" />
+              <div className="h-4 w-full max-w-md bg-surface rounded animate-pulse" />
             </div>
           ))}
         </div>
