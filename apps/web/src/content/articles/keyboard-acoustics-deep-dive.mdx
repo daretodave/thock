@@ -40,7 +40,7 @@ A keystroke is a mechanical impulse. The stem bottoms out, the housing flexes a 
   src="/article-viz/keyboard-acoustics-deep-dive/acoustic-stack.svg"
   alt="Vertical cross-section diagram of a keyboard acoustic stack with seven labeled layers from top to bottom: keycap (mass and profile shape), switch housing (resonant chamber), plate (transmission medium), PCB (energy bridge), gasket or mount interface (decoupling layer), case (cavity and walls), desk surface (final ground). Each layer has a short annotation on the right margin describing its acoustic role. The plate layer is washed in ochre as the focal layer."
   caption="Seven layers, each making its own acoustic decision. The plate is the most substitutable variable; the case cavity is the most underrated one."
-  accent="ochre"
+  accent="bronze"
 />
 
 Working from top to bottom: the keycap determines mass (a heavier keycap at PBT's 1.5mm wall damps the top-out noticeably versus a thin ABS cap), and the keycap profile determines how much of that mass is cantilevered over the switch. The switch is where the fundamental sound event originates. The plate transmits that event into the structure. The PCB bridges plate to case. The mount interface (tray screws, top-mount standoffs, or gasket pads) either rigidly couples or softly decouples the PCB-plate assembly from the case walls. The case cavity and walls color the sound with their own resonant character. The desk surface is the final absorber or reflector.
@@ -75,7 +75,7 @@ The plate receives the switch's acoustic energy and routes it into the case. How
   src="/article-viz/keyboard-acoustics-deep-dive/plate-mount-spectrum.svg"
   alt="Two-axis grid diagram. Horizontal axis runs from 'rigid' on the left to 'compliant' on the right, labeled as plate stiffness. Vertical axis runs from 'coupled' at the bottom to 'isolated' at the top, labeled as mount isolation. Four labeled regions: upper-right 'deep thock' zone with ochre fill showing gasket-mount plus PC or POM plate. Lower-left 'bright ring' zone showing tray-mount plus brass plate. Upper-left 'controlled stiffness' zone showing top-mount plus aluminum plate. Lower-right 'soft clack' zone showing tray-mount plus polycarbonate plate. Each zone has one or two example pairings in small text."
   caption="Plate stiffness and mount isolation move independently — pairing them deliberately produces predictable acoustic zones."
-  accent="ochre"
+  accent="bronze"
 />
 
 [Plate materials](/article/plate-materials-explained) are covered in depth elsewhere; the short version for acoustic purposes: brass is stiff and dense, transmits energy efficiently, and produces a longer ring-out and higher fundamental. Aluminum is stiff but lighter, acoustically neutral, and lets the rest of the build speak. Polycarbonate and POM are compliant — they flex under the keystroke, absorb some of the impact before it reaches the mount, and produce a warmer, more muted character. FR4 (the same fiberglass laminate as the PCB) sits between aluminum and polycarbonate: stiff enough to preserve top-end articulation, compliant enough to avoid the brass ring.
@@ -108,7 +108,7 @@ The four standard post-build mods — PE foam, tape mod, o-ring mod, and silicon
   src="/article-viz/keyboard-acoustics-deep-dive/dampening-methods.svg"
   alt="Four-panel horizontal strip, each panel representing one dampening method. Panel 1: PE foam — shows a cross-section with the foam layer positioned below the PCB and above the case floor, labeled 'targets case cavity resonance'. Panel 2: tape mod — shows the back face of a PCB with four tape strips across it, labeled 'targets PCB surface resonance'. Panel 3: O-ring mod — shows a standoff with an O-ring seated between standoff head and PCB, labeled 'targets standoff impact transmission'. Panel 4: silicone pour — shows a cross-section with the bottom cavity filled with a solid layer, labeled 'eliminates cavity resonance entirely'. Each panel has an ochre accent border and a small frequency-spectrum sketch indicating which part of the range is most affected."
   caption="Four mods, four distinct target layers. Stacking all four without evaluation produces diminishing returns fast."
-  accent="ochre"
+  accent="bronze"
 />
 
 The [PE foam mod](/article/pe-foam-mod) places a thin polyethylene sheet between the PCB and the case bottom. It targets the air cavity below the PCB that acts as a resonant chamber on boards where that gap is large or unoccupied. The effect is a reduction in hollow resonance — the typing sound lands rather than rings. It does not affect what happens above the PCB.
