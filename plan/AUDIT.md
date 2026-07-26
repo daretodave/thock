@@ -84,6 +84,16 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [a11y] [5.4] newsletter email input missing autoComplete for WCAG 1.3.5 — addressed in this commit, closes #621
+- category: a11y
+- filed: 2026-07-26 by cloud /iterate audit (fresh general-purpose sweep, angle: form input-purpose attributes)
+- impact: 6 (`ButtondownForm.tsx`'s single shared `<input type="email">` renders on every page via `Footer.tsx` plus the dedicated `/newsletter` page — the site's only lead-gen form. No `autoComplete` attribute anywhere means WCAG 2.1 SC 1.3.5 (Identify Input Purpose, AA) isn't met; repo-wide grep confirmed zero WCAG-recognized input-purpose tokens exist anywhere in the app)
+- ease: 9 (one attribute on one shared JSX element; existing test suite doesn't pin its absence, so the addition is safe and non-breaking)
+- score: 5.4 (impact × ease / 10)
+- issue: #621
+> **Resolved (2026-07-26):** added `autoComplete="email"` to the shared `<input type="email">` in `ButtondownForm.tsx` (covers both `footer` and `full` variants). New regression test in `ButtondownForm.test.tsx` asserts the attribute. `pnpm verify` full gate green: typecheck, unit tests, data:validate, build, size (108.7 KB/200 KB budget), 1080/1080 e2e.
+> Picked as the top signal this tick: no unlabeled GitHub issues (triage gate); not Monday (W30 snapshot already exists); no pending phases/data work; all 7 mechanical content-velocity surveys re-run clean, no rows filed; march's own expand Step 3c gate not met (1 commit/~45min since pass 243's record commit, threshold 20 commits/48h). A fresh general-purpose sweep (image CLS risk, unused deps, `any` casts, duplicate CSS vars, same-page anchor links, form autocomplete/label associations, meta-description length, canonical trailing-slash, OG image dimensions, JSON-LD required fields, article word-count outliers, duplicate tag slugs, print stylesheet, dark-mode contrast, lazy-loading, preconnect hints) found this as the one finding above the 3.0 threshold — everything else checked clean or moot (meta-description already clamped by `truncateForMeta`; canonical URLs already trailing-slash-normalized; fonts self-hosted via `next/font`, no preconnect needed; `/search`'s `autoComplete="off"` is deliberate and not a WCAG input-purpose field).
+
 ### [x] [bug] [4.5] /compare/switch table missing Vendor row that /compare/board has — addressed in this commit, closes #550
 - category: bug
 - filed: 2026-07-20 by cloud /iterate audit (fresh general-purpose sweep)
