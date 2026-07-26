@@ -69,6 +69,7 @@ export function ButtondownForm({
           type="email"
           name="email"
           required
+          autoComplete="email"
           placeholder="you@example.com"
           className={
             isFooter

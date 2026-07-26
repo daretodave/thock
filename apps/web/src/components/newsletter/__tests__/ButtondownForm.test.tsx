@@ -33,6 +33,15 @@ describe('<ButtondownForm>', () => {
     expect(input!.id).toBe('bd-email')
   })
 
+  it('carries autoComplete="email" for WCAG 1.3.5 input-purpose identification', () => {
+    render(<ButtondownForm variant="full" />)
+    const input = screen
+      .getByTestId('buttondown-form-full')
+      .querySelector('input[type="email"]') as HTMLInputElement | null
+    expect(input).not.toBeNull()
+    expect(input!.autocomplete).toBe('email')
+  })
+
   it('uses a variant-scoped input id so footer + full can co-exist on /newsletter', () => {
     render(
       <>
