@@ -10,7 +10,8 @@
   "scripts": {
     "test": "vitest",
     "test:run": "vitest run",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src --ext .ts,.tsx"
   },
   "dependencies": {
     "@thock/data": "workspace:*",
@@ -25,10 +26,12 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.0.1",
+    "@thock/eslint-config": "workspace:*",
     "@thock/tsconfig": "workspace:*",
     "@types/node": "^20.17.6",
     "@types/react": "^19.0.1",
     "@vitejs/plugin-react": "^4.7.0",
+    "eslint": "^8.57.1",
     "jsdom": "^25.0.1",
     "next": "^15.5.21",
     "react": "^19.0.0",

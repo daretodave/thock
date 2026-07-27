@@ -9,7 +9,7 @@
 export function computeReadTime(body: string): number {
   const noFences = body.replace(/```[\s\S]*?```/g, ' ')
   const noTags = noFences.replace(/<\/?[A-Za-z][^>]*>/g, ' ')
-  const text = noTags.replace(/[#>*_`~\[\]\(\)\{\}]/g, ' ')
+  const text = noTags.replace(/[#>*_`~[\](){}]/g, ' ')
   const words = text
     .split(/\s+/)
     .map((w) => w.trim())

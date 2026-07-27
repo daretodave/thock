@@ -169,6 +169,9 @@ importers:
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.3.2(@testing-library/dom@10.4.1)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      '@thock/eslint-config':
+        specifier: workspace:*
+        version: link:../eslint-config
       '@thock/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig
@@ -181,6 +184,9 @@ importers:
       '@vitejs/plugin-react':
         specifier: ^4.7.0
         version: 4.7.0(vite@6.4.3(@types/node@20.19.41)(jiti@1.21.7)(tsx@4.21.0)(yaml@2.9.0))
+      eslint:
+        specifier: ^8.57.1
+        version: 8.57.1
       jsdom:
         specifier: ^25.0.1
         version: 25.0.1
@@ -206,12 +212,18 @@ importers:
         specifier: ^3.23.5
         version: 3.25.2(zod@3.25.76)
     devDependencies:
+      '@thock/eslint-config':
+        specifier: workspace:*
+        version: link:../eslint-config
       '@thock/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig
       '@types/node':
         specifier: ^20.17.6
         version: 20.19.41
+      eslint:
+        specifier: ^8.57.1
+        version: 8.57.1
       tsx:
         specifier: ^4.19.2
         version: 4.21.0
@@ -222,6 +234,21 @@ importers:
         specifier: '>=3.2.6 <4.0.0'
         version: 3.2.7(@types/debug@4.1.13)(@types/node@20.19.41)(jiti@1.21.7)(jsdom@25.0.1)(tsx@4.21.0)(yaml@2.9.0)
 
+  packages/eslint-config:
+    dependencies:
+      '@typescript-eslint/eslint-plugin':
+        specifier: ^8.59.3
+        version: 8.59.3(@typescript-eslint/parser@8.59.3(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(typescript@5.9.3)
+      '@typescript-eslint/parser':
+        specifier: ^8.59.3
+        version: 8.59.3(eslint@8.57.1)(typescript@5.9.3)
+      eslint:
+        specifier: ^8.57.1
+        version: 8.57.1
+      eslint-config-prettier:
+        specifier: ^9.1.0
+        version: 9.1.2(eslint@8.57.1)
+
   packages/seo:
     devDependencies:
       '@testing-library/jest-dom':
@@ -230,6 +257,9 @@ importers:
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.3.2(@testing-library/dom@10.4.1)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      '@thock/eslint-config':
+        specifier: workspace:*
+        version: link:../eslint-config
       '@thock/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig
@@ -242,6 +272,9 @@ importers:
       '@vitejs/plugin-react':
         specifier: ^4.7.0
         version: 4.7.0(vite@6.4.3(@types/node@20.19.41)(jiti@1.21.7)(tsx@4.21.0)(yaml@2.9.0))
+      eslint:
+        specifier: ^8.57.1
+        version: 8.57.1
       jsdom:
         specifier: ^25.0.1
         version: 25.0.1
@@ -263,9 +296,15 @@ importers:
 
   packages/tokens:
     devDependencies:
+      '@thock/eslint-config':
+        specifier: workspace:*
+        version: link:../eslint-config
       '@thock/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig
+      eslint:
+        specifier: ^8.57.1
+        version: 8.57.1
       typescript:
         specifier: ^5.6.3
         version: 5.9.3
@@ -283,6 +322,9 @@ importers:
       '@testing-library/react':
         specifier: ^16.0.1
         version: 16.3.2(@testing-library/dom@10.4.1)(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)
+      '@thock/eslint-config':
+        specifier: workspace:*
+        version: link:../eslint-config
       '@thock/tsconfig':
         specifier: workspace:*
         version: link:../tsconfig
@@ -295,6 +337,9 @@ importers:
       '@vitejs/plugin-react':
         specifier: ^4.7.0
         version: 4.7.0(vite@6.4.3(@types/node@20.19.41)(jiti@1.21.7)(tsx@4.21.0)(yaml@2.9.0))
+      eslint:
+        specifier: ^8.57.1
+        version: 8.57.1
       jsdom:
         specifier: ^25.0.1
         version: 25.0.1
@@ -4322,7 +4367,7 @@ snapshots:
       '@typescript-eslint/visitor-keys': 8.59.3
       debug: 4.4.3
       minimatch: 10.2.5
-      semver: 7.8.0
+      semver: 7.8.5
       tinyglobby: 0.2.16
       ts-api-utils: 2.5.0(typescript@5.9.3)
       typescript: 5.9.3
@@ -6690,8 +6735,7 @@ snapshots:
 
   semver@7.8.0: {}
 
-  semver@7.8.5:
-    optional: true
+  semver@7.8.5: {}
 
   set-function-length@1.2.2:
     dependencies:
