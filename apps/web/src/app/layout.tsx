@@ -1,10 +1,11 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Newsreader, IBM_Plex_Sans, JetBrains_Mono } from 'next/font/google'
 import { Header } from '@/components/ui/Header'
 import { Footer } from '@/components/ui/Footer'
 import { GoogleTagManager } from '@/components/analytics/GoogleTagManager'
 import { VercelAnalytics } from '@/components/analytics/VercelAnalytics'
 import { SpeedInsights } from '@/components/analytics/SpeedInsights'
+import { OG_PALETTE } from '@/components/og/palette'
 import { siteConfig } from '@thock/seo'
 import './globals.css'
 
@@ -47,6 +48,12 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
   },
+}
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: OG_PALETTE.bg,
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
