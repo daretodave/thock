@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { Container, Wordmark } from '@thock/ui'
-import { PILLARS } from '@thock/seo'
 import { MobileNav } from './MobileNav'
+import { PrimaryNavLinks } from './PrimaryNavLinks'
 
 export function Header() {
   return (
@@ -16,22 +16,7 @@ export function Header() {
         </Link>
 
         <nav aria-label="Primary" className="hidden md:flex items-center gap-6">
-          {PILLARS.map((pillar) => (
-            <Link
-              key={pillar.slug}
-              href={pillar.href}
-              className="font-sans text-small text-text-2 hover:text-text transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
-            >
-              {pillar.label}
-            </Link>
-          ))}
-          <Link
-            href="/tools"
-            data-testid="header-tools-link"
-            className="font-sans text-small text-text-2 hover:text-text transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
-          >
-            Tools
-          </Link>
+          <PrimaryNavLinks />
         </nav>
 
         <div className="flex items-center gap-3">

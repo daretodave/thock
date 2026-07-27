@@ -1,9 +1,14 @@
 'use client'
 
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { useEffect, useId, useRef, useState } from 'react'
 import type { ReactElement } from 'react'
 import { PILLARS } from '@thock/seo'
+
+function isActive(pathname: string, href: string): boolean {
+  return pathname === href || pathname.startsWith(`${href}/`)
+}
 
 /**
  * Mobile primary-nav toggle. Renders a hamburger button at `<md`
@@ -19,6 +24,7 @@ export function MobileNav(): ReactElement {
   const [open, setOpen] = useState(false)
   const menuId = useId()
   const toggleRef = useRef<HTMLButtonElement>(null)
+  const pathname = usePathname()
 
   useEffect(() => {
     if (!open) return
@@ -96,23 +102,32 @@ export function MobileNav(): ReactElement {
           className="absolute left-0 right-0 top-full z-40 border-b border-border bg-bg md:hidden"
         >
           <ul className="mx-auto flex w-full max-w-[1280px] flex-col px-6 py-4 sm:px-10">
-            {PILLARS.map((pillar) => (
-              <li key={pillar.slug} className="border-b border-border last:border-b-0">
-                <Link
-                  href={pillar.href}
-                  onClick={() => setOpen(false)}
-                  className="block py-3 font-serif text-h3 text-text hover:text-accent transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
-                >
-                  {pillar.label}
-                </Link>
-              </li>
-            ))}
+            {PILLARS.map((pillar) => {
+              const active = isActive(pathname, pillar.href)
+              return (
+                <li key={pillar.slug} className="border-b border-border last:border-b-0">
+                  <Link
+                    href={pillar.href}
+                    onClick={() => setOpen(false)}
+                    aria-current={active ? 'page' : undefined}
+                    className={`block py-3 font-serif text-h3 transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu ${
+                      active ? 'text-accent' : 'text-text hover:text-accent'
+                    }`}
+                  >
+                    {pillar.label}
+                  </Link>
+                </li>
+              )
+            })}
             <li className="border-b border-border last:border-b-0">
               <Link
                 href="/tools"
                 data-testid="mobile-nav-tools-link"
                 onClick={() => setOpen(false)}
-                className="block py-3 font-serif text-h3 text-text hover:text-accent transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+                aria-current={isActive(pathname, '/tools') ? 'page' : undefined}
+                className={`block py-3 font-serif text-h3 transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu ${
+                  isActive(pathname, '/tools') ? 'text-accent' : 'text-text hover:text-accent'
+                }`}
               >
                 Tools
               </Link>

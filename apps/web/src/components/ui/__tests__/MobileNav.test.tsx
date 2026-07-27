@@ -1,6 +1,11 @@
-import { describe, expect, it } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 import { render, screen, fireEvent } from '@testing-library/react'
+import { usePathname } from 'next/navigation'
 import { MobileNav } from '../MobileNav'
+
+vi.mock('next/navigation', () => ({
+  usePathname: vi.fn(() => '/'),
+}))
 
 describe('<MobileNav>', () => {
   it('renders a closed hamburger toggle by default', () => {
@@ -34,6 +39,28 @@ describe('<MobileNav>', () => {
     fireEvent.click(screen.getByTestId('mobile-nav-toggle'))
     const toolsLink = screen.getByTestId('mobile-nav-tools-link')
     expect(toolsLink).toHaveAttribute('href', '/tools')
+  })
+
+  it('marks the matching pillar link aria-current="page" on the current route', () => {
+    vi.mocked(usePathname).mockReturnValue('/trends')
+    render(<MobileNav />)
+    fireEvent.click(screen.getByTestId('mobile-nav-toggle'))
+    const drawer = screen.getByTestId('mobile-nav-menu')
+    const trendsLink = Array.from(drawer.querySelectorAll('a')).find(
+      (a) => a.textContent === 'Trends',
+    )!
+    expect(trendsLink).toHaveAttribute('aria-current', 'page')
+    const newsLink = Array.from(drawer.querySelectorAll('a')).find(
+      (a) => a.textContent === 'News',
+    )!
+    expect(newsLink).not.toHaveAttribute('aria-current')
+  })
+
+  it('marks Tools current on /tools', () => {
+    vi.mocked(usePathname).mockReturnValue('/tools')
+    render(<MobileNav />)
+    fireEvent.click(screen.getByTestId('mobile-nav-toggle'))
+    expect(screen.getByTestId('mobile-nav-tools-link')).toHaveAttribute('aria-current', 'page')
   })
 
   it('closes the drawer when a link inside it is clicked', () => {
