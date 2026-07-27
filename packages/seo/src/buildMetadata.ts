@@ -27,6 +27,9 @@ export type BuildMetadataInput = {
   feedUrl?: string
 }
 
+/** Google's practical SERP title truncation point (full suffixed title). */
+const TITLE_LIMIT = 60
+
 /**
  * Page title with the site-name suffix applied exactly once. Used
  * across the document `<title>`, the OG title, and the Twitter
@@ -38,8 +41,18 @@ export type BuildMetadataInput = {
  * but skips the root segment (`<title>keyboards, deeply.`),
  * yielding inconsistent suffix counts. Filed as MED critique
  * "every page `<title>` duplicates the site name".
+ *
+ * The base title is clamped so the full suffixed string fits
+ * Google's ~60-char SERP truncation point — same word-boundary cut
+ * as `truncateForMeta`, just budgeted around the suffix length.
  */
-const SUFFIXED = (title: string): string => `${title} — ${siteConfig.name}`
+const SUFFIXED = (title: string): string => {
+  const suffix = ` — ${siteConfig.name}`
+  const budget = TITLE_LIMIT - suffix.length
+  const clamped =
+    title.length > budget ? truncateForMeta(title, budget) : title
+  return `${clamped}${suffix}`
+}
 
 /** Google's practical SERP snippet truncation point. */
 const META_DESCRIPTION_LIMIT = 160

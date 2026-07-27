@@ -112,6 +112,24 @@ describe('buildMetadata', () => {
     )
   })
 
+  it('clamps a long page title so the suffixed <title> fits the SERP limit', () => {
+    const longTitle =
+      'GMK CYL Prussian Alert Is the Group Buy Everyone on r/MechanicalKeyboards Is Watching'
+    const meta = buildMetadata({
+      title: longTitle,
+      description: 'desc',
+      path: '/article/gmk-cyl-prussian-alert',
+    })
+    const fullTitle = (meta.title as { absolute?: string }).absolute
+    expect(fullTitle).toBeDefined()
+    expect(fullTitle!.length).toBeLessThanOrEqual(60)
+    expect(fullTitle!.endsWith(` — ${siteConfig.name}`)).toBe(true)
+    const og = meta.openGraph as { title?: string } | undefined
+    const tw = meta.twitter as { title?: string } | undefined
+    expect(og?.title).toBe(fullTitle)
+    expect(tw?.title).toBe(fullTitle)
+  })
+
   it('truncates the description across meta, openGraph, and twitter when over the SERP limit', () => {
     const longDescription =
       'This is a deliberately long lede that runs well past the one hundred and sixty character practical truncation limit Google applies to search engine result page snippets, so it should get cut.'
