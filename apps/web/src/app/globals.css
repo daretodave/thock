@@ -69,3 +69,17 @@
     text-decoration: none;
   }
 }
+
+@media print {
+  header,
+  footer,
+  nav,
+  .skip-link {
+    display: none;
+  }
+
+  * {
+    color: #000 !important;
+    background: transparent !important;
+  }
+}
