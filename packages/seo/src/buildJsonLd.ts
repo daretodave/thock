@@ -47,7 +47,7 @@ export function buildArticleJsonLd(
     url,
     datePublished: input.publishedAt,
     dateModified: input.updatedAt ?? input.publishedAt,
-    author: { '@type': 'Person', name: input.author },
+    author: { '@type': 'Organization', name: input.author },
     publisher: siteConfig.publisher,
     // Google's Article rich-result image requirement is JPEG/PNG/WebP/GIF
     // and an absolute URL; `heroImage` is a site-relative SVG (same

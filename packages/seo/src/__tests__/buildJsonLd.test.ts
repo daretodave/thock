@@ -24,7 +24,7 @@ describe('buildArticleJsonLd', () => {
     description: 'lede',
     path: '/article/foo',
     publishedAt: '2026-05-01T12:00:00Z',
-    author: 'Mara',
+    author: 'thock',
   }
 
   it('builds an Article graph', () => {
@@ -33,7 +33,7 @@ describe('buildArticleJsonLd', () => {
     expect(ld.headline).toBe('Foo')
     expect(ld.url).toBe(`${siteConfig.url}/article/foo`)
     expect(ld.mainEntityOfPage).toBe(`${siteConfig.url}/article/foo`)
-    expect(ld.author).toEqual({ '@type': 'Person', name: 'Mara' })
+    expect(ld.author).toEqual({ '@type': 'Organization', name: 'thock' })
   })
 
   it('falls back dateModified to publishedAt when updatedAt is absent', () => {
