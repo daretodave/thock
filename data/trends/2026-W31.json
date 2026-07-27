@@ -1,0 +1,313 @@
+{
+  "isoWeek": "2026-W31",
+  "publishedAt": "2026-07-27T00:00:00.000Z",
+  "rows": [
+    {
+      "name": "Hall Effect/Rapid Trigger",
+      "category": "switch",
+      "direction": "up",
+      "score": 95,
+      "spark": [
+        58,
+        66,
+        72,
+        79,
+        85,
+        90,
+        94,
+        95
+      ],
+      "articleSlug": "keychron-nova-socket-hybrid",
+      "note": "Keychron V6 Ultra HE Kickstarter live since July 22; hybrid Nova Socket mixes TMR and mechanical switches on one PCB (Notebookcheck, vgtimes)."
+    },
+    {
+      "name": "Cherry MX2A",
+      "category": "switch",
+      "direction": "flat",
+      "score": -45,
+      "spark": [
+        -58,
+        -56,
+        -54,
+        -52,
+        -50,
+        -48,
+        -46,
+        -45
+      ],
+      "articleSlug": "cherry-mx2a-revision",
+      "note": "MKB Guide's 2026 Cherry MX guide confirms MX2A remains default for nearly all new Cherry switches; no new SKUs this week."
+    },
+    {
+      "name": "Gateron Oil King",
+      "category": "switch",
+      "direction": "flat",
+      "score": 40,
+      "spark": [
+        38,
+        39,
+        40,
+        41,
+        40,
+        39,
+        40,
+        40
+      ],
+      "articleSlug": "gateron-oil-king-deep-dive",
+      "note": "No new Oil King SKUs since early-2026 expansion; lineup steady across Gateron, KBDfans, Divinikey listings."
+    },
+    {
+      "name": "Gateron Lanes",
+      "category": "switch",
+      "direction": "up",
+      "score": 54,
+      "spark": [
+        30,
+        34,
+        38,
+        42,
+        46,
+        48,
+        50,
+        54
+      ],
+      "articleSlug": "gateron-lanes-tactile-deep-dive",
+      "note": "ThereminGoat's Lanes review keeps driving KeebTalk and Geekhack tactile-chatter discussion a week after posting."
+    },
+    {
+      "name": "HMX Cloud V2",
+      "category": "switch",
+      "direction": "flat",
+      "score": 55,
+      "spark": [
+        58,
+        57,
+        55,
+        56,
+        57,
+        55,
+        56,
+        55
+      ],
+      "articleSlug": "hmx-cloud-deep-dive",
+      "note": "Budget hot-swap linear remains widely stocked at UniKeys, Milktooth, SwitchOddities; no new revision announced."
+    },
+    {
+      "name": "GMK CYL OG Extensions",
+      "category": "keycap",
+      "direction": "up",
+      "score": 62,
+      "spark": [
+        30,
+        36,
+        42,
+        48,
+        52,
+        55,
+        58,
+        62
+      ],
+      "articleSlug": "gmk-cyl-og-extensions-interest-check",
+      "note": "Geekhack GB (July 15-Aug 12) past its first full week, kittings still unlocking on Prototypist and NovelKeys."
+    },
+    {
+      "name": "GMK CYL TA Neo",
+      "category": "keycap",
+      "direction": "down",
+      "score": 50,
+      "spark": [
+        34,
+        40,
+        46,
+        52,
+        58,
+        60,
+        62,
+        50
+      ],
+      "articleSlug": null,
+      "note": "GB closed July 17; set now in production with Nov 2026 ship estimate per Oblotzky/zFrontier, live chatter cooled."
+    },
+    {
+      "name": "Divinikey DCS Dolch",
+      "category": "keycap",
+      "direction": "flat",
+      "score": 38,
+      "spark": [
+        20,
+        24,
+        28,
+        32,
+        35,
+        37,
+        38,
+        38
+      ],
+      "articleSlug": "divinikey-dcs-dolch-group-buy",
+      "note": "GB closed July 1 with Oct 2026 ship estimate; community now discussing kitting refunds and MOQ tier unlocks."
+    },
+    {
+      "name": "Split/Ergo layout",
+      "category": "layout",
+      "direction": "up",
+      "score": 82,
+      "spark": [
+        55,
+        60,
+        65,
+        70,
+        74,
+        77,
+        80,
+        82
+      ],
+      "articleSlug": "split-ergo-cohort",
+      "note": "Engadget's updated 2026 ergonomic keyboard roundup and MKB Guide both reaffirm split/ergo as the dominant 2026 trend."
+    },
+    {
+      "name": "Alice layout",
+      "category": "layout",
+      "direction": "down",
+      "score": -52,
+      "spark": [
+        -20,
+        -26,
+        -32,
+        -38,
+        -42,
+        -45,
+        -48,
+        -52
+      ],
+      "articleSlug": "alice-layout-decline",
+      "note": "MKB Guide frames Alice as an 'ergonomic compromise' as buyers keep favoring full split boards like the Q13 Max."
+    },
+    {
+      "name": "75% Layout",
+      "category": "layout",
+      "direction": "up",
+      "score": 50,
+      "spark": [
+        44,
+        46,
+        45,
+        47,
+        46,
+        48,
+        47,
+        50
+      ],
+      "articleSlug": "75-percent-default",
+      "note": "Mode Designs' Summer 2026 update pushes Sonnet (75%) into fulfillment and Encore (75%) shipping late July."
+    },
+    {
+      "name": "Work Louder x OpenAI Codex Micro",
+      "category": "vendor",
+      "direction": "up",
+      "score": 97,
+      "spark": [
+        40,
+        55,
+        68,
+        78,
+        88,
+        93,
+        96,
+        97
+      ],
+      "articleSlug": "work-louder-openai-codex-micro",
+      "note": "Sold out in under 24 hours; eBay resale hit $700-800+ per Resell Calendar and eWeek, despite mixed developer reviews."
+    },
+    {
+      "name": "Mode Designs",
+      "category": "vendor",
+      "direction": "up",
+      "score": 62,
+      "spark": [
+        35,
+        40,
+        45,
+        50,
+        53,
+        56,
+        58,
+        62
+      ],
+      "articleSlug": "mode-sonnet-r2-group-buy-coverage",
+      "note": "Summer 2026 update: Sonnet in fulfillment, Encore ships late July, Prologue/Lotus-Obscura caps teased for late summer."
+    },
+    {
+      "name": "Prototypist",
+      "category": "vendor",
+      "direction": "up",
+      "score": 24,
+      "spark": [
+        8,
+        11,
+        14,
+        16,
+        18,
+        19,
+        20,
+        24
+      ],
+      "articleSlug": "prototypist-vendor-spotlight",
+      "note": "Paper 65 GB kit tracking toward Aug/Sept 2026 arrival per CannonKeys estimate; steady incremental interest."
+    },
+    {
+      "name": "Keychron",
+      "category": "brand",
+      "direction": "up",
+      "score": 94,
+      "spark": [
+        60,
+        68,
+        74,
+        80,
+        84,
+        87,
+        90,
+        94
+      ],
+      "articleSlug": "keychron-quiet-takeover",
+      "note": "V6 Ultra HE Kickstarter launch (July 22) dominates keyboard-news coverage from Gizmochina to Notebookcheck this week."
+    },
+    {
+      "name": "Cherry (GMK parent)",
+      "category": "brand",
+      "direction": "up",
+      "score": -10,
+      "spark": [
+        -40,
+        -36,
+        -32,
+        -28,
+        -24,
+        -21,
+        -18,
+        -10
+      ],
+      "articleSlug": "cherry-xtrfy-tmr-pivot",
+      "note": "Cherry XTRFY's TMR magnetic line (MX 8.2 Pro TMR, K5 Pro TMR Compact) keeps drawing coverage, offsetting MX2A stagnation."
+    },
+    {
+      "name": "Wuque Studio",
+      "category": "brand",
+      "direction": "flat",
+      "score": -4,
+      "spark": [
+        -8,
+        -6,
+        -4,
+        -2,
+        -3,
+        -2,
+        -3,
+        -4
+      ],
+      "articleSlug": null,
+      "note": "No new product or GB announcements on Wuque's official news blog this week; quiet since June product updates."
+    }
+  ],
+  "updatedAt": "2026-07-27T01:40:00.000Z"
+}
