@@ -8523,3 +8523,15 @@ passes accumulate signals.)
 - issue: #633
 > **Resolved (2026-07-27):** new `apps/web/src/components/ui/PrimaryNavLinks.tsx` client subcomponent reads `usePathname()` and sets `aria-current="page"` + a distinct active className (`text-text` vs `text-text-2`) on the matching pillar/Tools link, matching exact path or any nested sub-route (so `/trends/tracker` still highlights Trends). `Header.tsx` now renders `<PrimaryNavLinks />` in place of its inline link list. `MobileNav.tsx` (already a client component) gets the same `aria-current` + active-class (`text-accent` vs `text-text`) treatment directly on its drawer links. New `PrimaryNavLinks.test.tsx` (4 tests); `Header.test.tsx`/`MobileNav.test.tsx` updated to mock `next/navigation`'s `usePathname`, plus 2 new active-state assertions in `MobileNav.test.tsx`. `pnpm verify` full gate green: typecheck, lint, unit + script tests (apps/web 727 tests, up from 721), data:validate, build, size, 1083/1083 e2e.
 > Picked as the top signal this tick: no unlabeled GitHub issues (triage gate, 0 unlabeled); Monday W31 snapshot already existed; no pending phases/data/content-gap work; all 7 mechanical surveys re-ran clean, no rows filed. AUDIT.md's only other Pending rows remain the four standing non-autonomous items (`[blocked-cloud-permission] [6.3]` march.yml, `[4.0]` Lighthouse-CI-disabled `/oversight` item, `[needs-user-call] [4.2]` soft-404 item, `[blocked-cloud-permission] [4.0]` heartbeat.yml). CRITIQUE.md's only Pending row remains the non-actionable `[needs-user-call]` GA-beacon item. march's own expand Step 3c gate not met (9 commits/~5h since pass 246's record commit, threshold 20 commits/48h). Dispatched a fresh general-purpose sweep with angles disjoint from passes 226-247 (JSON-LD completeness on /archive /tools /quiz/* /compare/* /newsletter/[slug], numeric spec claims in article prose vs catalog data, PartReference-vs-mentionedParts dangling-id census, internal markdown link resolution, opengraph-image.tsx staleness, vendor-data completeness, tag taxonomy category correctness, About page urgency-claim accuracy, /compare invalid-slug handling) — the missing primary-nav aria-current was the one candidate that cleared the 3.0 bar; every other angle came back clean.
+
+### [HOT PURSUIT] [content-gap] [7] guides pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 5 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: guides
+- window-count: 1
+- window-start: 2026-06-28
+- score: 7
+- next: /ship-content → guides pillar article
+> Filed 2026-07-28 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
