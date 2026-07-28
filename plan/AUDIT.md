@@ -8563,3 +8563,12 @@ passes accumulate signals.)
 - issue: #636
 > Filed 2026-07-28 by newsletter-gap-survey.mjs. 7 days since issue 4. Threshold: ≥7 calendar days.
 > **Resolved (2026-07-28):** Shipped `thock-weekly-005.mdx` — 5 pillar picks (ZMK wireless/split firmware guide, mixing keycap profiles, Cherry XTRFY TMR pivot, CannonKeys Blaine V2: SE, Durock T1 deep dive) + W31 tracker snapshot. Every "X weeks ago" tracker claim was checked against the real archived `data/trends/<week>.json` per-week scores rather than the row's smoothed `spark` array — the fabrication class documented at `[content] [4.5]` (issue 04, closes #553) and `[content] [4.2]` (closes #574, superlative-vs-archive) — catching 3 rows (Hall Effect/Rapid Trigger, Work Louder x OpenAI, Split/Ergo) that didn't exist in the tracker 8 weeks ago and one wrong figure (Cherry brand real W23 score -28, not the spark-derived -40). `pnpm verify` full gate green: typecheck, test:run, data:validate, build, 1089/1089 e2e.
+
+### [x] [content] [5.4] newsletter issue 05 fabricates Hall Effect/Rapid Trigger tracker-entry date — addressed in this commit, closes #637
+- category: content-accuracy
+- filed: 2026-07-28 by cloud /march tick → /expand dispatch (general-purpose disjoint sweep)
+- impact: 6 (self-contradicts a previously published issue in the same archive — `thock-weekly-004.mdx:65` independently cites the same row's W22 score of 60 — and undermines the tracker's core data-honesty selling point; same fabrication class fixed twice before, closes #553 and #574, and issue 05's own resolution note above claims to have guarded against exactly this class)
+- ease: 9 (one-sentence edit — drop the false "entered the tracker two weeks ago" clause, keep the correct figures)
+- score: 5.4 (impact × ease / 10)
+- issue: #637
+> **Resolved (2026-07-28):** reworded `thock-weekly-005.mdx:65` from "up from 91 when it entered the tracker two weeks ago" to "up from 91 two weeks ago and part of a steady climb from 55 back in W21" — the row has been present and climbing in `data/trends/` since W21 (55→60→66→72→76→82→85→87→91→94→95), it did not "enter" the tracker at W29. `pnpm verify` full gate green.
