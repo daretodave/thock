@@ -9,6 +9,8 @@ import {
 } from '@thock/seo'
 import { buildRssXml, FEED_ITEM_LIMIT, RSS_CONTENT_TYPE } from '@/lib/rss/buildRss'
 
+export const revalidate = 3600
+
 /**
  * Per-pillar RSS feed. Path shape is `/feed/<pillar>.xml`; Next's
  * dynamic segment captures `<pillar>.xml` so we strip the suffix
