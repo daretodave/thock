@@ -8551,7 +8551,7 @@ passes accumulate signals.)
 - issue: #635
 > **Resolved (2026-07-28):** added inline link from split-ergo-buyers-guide's firmware-step pitfall paragraph to zmk-wireless-split-firmware-guide. `pnpm verify` full gate green: 1086/1086 e2e. `63dd722d`.
 
-### [ ] [newsletter] [4.0] Weekly digest — issue 005 due (7 days since issue 4)
+### [x] [newsletter] [4.0] Weekly digest — issue 005 due (7 days since issue 4) — addressed in c42f846d, closes #636
 - category: content-gaps
 - filed: 2026-07-28 by newsletter-gap-survey.mjs
 - impact: 5 (newsletter archive going stale reduces /newsletter value and reader trust in cadence)
@@ -8562,3 +8562,4 @@ passes accumulate signals.)
 - days-since: 7
 - issue: #636
 > Filed 2026-07-28 by newsletter-gap-survey.mjs. 7 days since issue 4. Threshold: ≥7 calendar days.
+> **Resolved (2026-07-28):** Shipped `thock-weekly-005.mdx` — 5 pillar picks (ZMK wireless/split firmware guide, mixing keycap profiles, Cherry XTRFY TMR pivot, CannonKeys Blaine V2: SE, Durock T1 deep dive) + W31 tracker snapshot. Every "X weeks ago" tracker claim was checked against the real archived `data/trends/<week>.json` per-week scores rather than the row's smoothed `spark` array — the fabrication class documented at `[content] [4.5]` (issue 04, closes #553) and `[content] [4.2]` (closes #574, superlative-vs-archive) — catching 3 rows (Hall Effect/Rapid Trigger, Work Louder x OpenAI, Split/Ergo) that didn't exist in the tracker 8 weeks ago and one wrong figure (Cherry brand real W23 score -28, not the spark-derived -40). `pnpm verify` full gate green: typecheck, test:run, data:validate, build, 1089/1089 e2e.
