@@ -1374,6 +1374,13 @@
   ],
   "newsletters": [
     {
+      "slug": "thock-weekly-005",
+      "title": "thock weekly — issue 05",
+      "lede": "Cherry's XTRFY sub-brand pulls the parent brand back into positive territory on the tracker, CannonKeys hedges a TKL group buy across three mount systems at once, and the Durock T1 finally gets the deep-dive other reviews kept borrowing it for.",
+      "issue": 5,
+      "readTime": 4
+    },
+    {
       "slug": "thock-weekly-004",
       "title": "thock weekly — issue 04",
       "lede": "Prototypist's vendor model gets the trends treatment, OpenAI ships a macro pad built by Work Louder, and the tracker's Hall Effect score hits a new high ahead of Keychron's July 22 Kickstarter.",
@@ -1402,5 +1409,5 @@
       "readTime": 4
     }
   ],
-  "generatedAt": "2026-07-28T09:12:33.360Z"
+  "generatedAt": "2026-07-28T11:07:05.704Z"
 }
