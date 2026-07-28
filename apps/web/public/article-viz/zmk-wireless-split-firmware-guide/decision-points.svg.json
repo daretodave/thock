@@ -1,0 +1,25 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-24T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "zmk-wireless-split-firmware-guide",
+  "article_pillar": "guides",
+  "section_anchor": "the-decision-points-that-are-actually-different",
+  "brief_summary": "Four labeled panels in a horizontal strip, one per decision point unique to wireless/split builds: split pairing (two half-icons joined by a dashed line), Bluetooth profiles (one board icon radiating to three host circles), power management (a battery glyph with a sleep-loop icon), and configuration method (a fork between a GUI/Studio box and a devicetree box). Each panel carries an amber accent dot.",
+  "target": "apps/web/public/article-viz/zmk-wireless-split-firmware-guide/decision-points.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "zmk-wireless-split-firmware-guide.mdx § 'The decision points that are actually different' — 'Split pairing. A ZMK split board has two roles: a central half ... and a peripheral half ... the two halves pair with each other automatically the first time they power on together'",
+    "zmk-wireless-split-firmware-guide.mdx § 'The decision points that are actually different' — 'Bluetooth profile management. ZMK supports multiple bonded host profiles — commonly five'",
+    "zmk-wireless-split-firmware-guide.mdx § 'The decision points that are actually different' — 'Power management and battery tuning. Because the central half's radio has to periodically listen for the peripheral's transmissions, it draws more power than the peripheral does ... Idle timeout and deep-sleep thresholds are configurable'",
+    "zmk-wireless-split-firmware-guide.mdx § 'ZMK Studio versus hand-written devicetree' — the Studio-versus-devicetree configuration fork"
+  ],
+  "outputs": ["apps/web/public/article-viz/zmk-wireless-split-firmware-guide/decision-points.svg"],
+  "warnings": []
+}

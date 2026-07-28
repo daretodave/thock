@@ -1,0 +1,35 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-28T00:00:00Z",
+  "commit": "8b131993b255733239bfb8d138db9418336e4ea6",
+  "kind": "hero-art",
+  "article_slug": "zmk-wireless-split-firmware-guide",
+  "article_pillar": "guides",
+  "source": "plan/bearings.md § Article hero art — colorful keyboard SVGs (locked 2026-05-09)",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject",
+  "size": [1200, 750],
+  "brief_summary": "Hero art for the Guides pillar piece on ZMK wireless/split-keyboard firmware: two split-keyboard-half silhouettes in 2px warm-grey stroke, each carrying its own radio (antenna dot + rising concentric signal arcs), bridged across the center gap by a dashed link line and a terracotta Bluetooth-rune pulse — the wireless-pairing motif that visually differentiates this piece from a wired-firmware guide.",
+  "subject": "Two top-down split-keyboard-half silhouettes (5 columns x 4 rows + angled 3-key thumb cluster each, mirrored left/right) reused from the split-ergo family geometry, in neutral warm-grey 2px stroke with no per-column highlighting since ergonomics is not this article's claim. The center gap between the halves carries the wireless motif: an antenna dot on each half's inner top edge, three concentric terracotta signal arcs rising above each dot, a dashed terracotta link line connecting the two dots directly across the gap, and a terracotta Bluetooth-rune glyph inside a halo ring riding the midpoint of the link line as the piece's focal anchor. A soft terracotta wash sits behind the whole bridge region to draw the eye there first.",
+  "splash_color": {
+    "name": "muted terracotta",
+    "oklch": "oklch(0.60 0.11 42)"
+  },
+  "accent_color": {
+    "name": "warm-bronze (theme accent)",
+    "oklch": "oklch(0.80 0.135 75)"
+  },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "stroke_weight": "2px",
+  "canvas": "1200x750",
+  "background": "transparent (light-mode safe per house style)",
+  "tokens_snapshot": "f79eb6c04b4a9d2e0e3e083f8aeb6bc57586d849",
+  "fonts": [],
+  "alt": "Two split keyboard halves facing each other, each with its own small radio broadcasting concentric signal arcs, linked across the gap by a dashed line and a Bluetooth glyph at the midpoint — illustrating wireless pairing between split keyboard halves.",
+  "prompt": "Guides-pillar piece on ZMK wireless/split-keyboard firmware. Per bearings' subject mapping for guide pieces (annotated keycap/board motif) and this brief's explicit instruction, the subject is a split-keyboard silhouette (two halves) in single warm-grey 2px stroke with a wireless/Bluetooth signal-arc motif connecting the two halves — the visual differentiator from a purely wired-firmware piece (cf. keyboard-firmware-compared.svg, which covers QMK/VIA/VIAL on a single unified board). Case + key-grid + thumb-cluster geometry reused from split-ergo-buyers-guide.svg (established family silhouette for split boards) but stripped of that piece's ergonomics-specific callouts (column stagger, thumb cluster, tenting angle) since this article's claim is about firmware, not hand geometry. New wireless bridge: each half gets its own antenna dot + three concentric signal arcs (rising-wave technique borrowed from zmk-mainstream-shift.svg's single-radio motif, here doubled and mirrored so each half clearly has its own radio), joined by a dashed link line and a Bluetooth-rune pulse dot at the true center of the canvas as the focal anchor. Splash hue is muted terracotta oklch(0.60 0.11 42) (matches the family's established terracotta value used in brass-weight-mod.svg) rather than reusing zmk-mainstream-shift's coral or keyboard-firmware-compared's ochre, since both of those are recent sibling ZMK/firmware pieces and terracotta keeps the concurrent set visually distinct while staying inside the warm palette (avoids stock blue/green per bearings). Brass-bronze theme dot at (1148, 70) per family convention.",
+  "revision": 1,
+  "outputs": [
+    "apps/web/public/hero-art/zmk-wireless-split-firmware-guide.svg"
+  ],
+  "warnings": []
+}

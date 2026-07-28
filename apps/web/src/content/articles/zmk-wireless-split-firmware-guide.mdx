@@ -1,0 +1,99 @@
+---
+slug: zmk-wireless-split-firmware-guide
+title: "ZMK for wireless and split builds: a practical guide"
+lede: "QMK answers almost every firmware question on a wired board. Add a battery and a second half, and the honest answer changes — this is the guide for the builder standing at that fork."
+author: thock
+pillar: guides
+tags: [zmk, wireless, split, firmware, beginner]
+publishedAt: '2026-07-24T14:00:00.000Z'
+updatedAt: '2026-07-24T14:00:00.000Z'
+heroImage: /hero-art/zmk-wireless-split-firmware-guide.svg
+heroImageAlt: "Two split-keyboard half silhouettes drawn in a single warm-grey stroke, connected by a dashed wireless arc instead of a cable, with small annotated labels marking the central half, the peripheral half, and a battery glyph — an amber splash on the central half's radio icon."
+featured: false
+popularityScore: 0
+guideSection: 'firmware'
+mentionedParts: []
+---
+
+A builder shopping for a wired 65% can pick almost any firmware story and land fine — QMK underneath, VIA or VIAL on top, done in an afternoon. Add a battery and a second half connected by nothing but Bluetooth, and half of that advice stops applying. This is the guide for the second builder: the one eyeing a split, wireless, or split-and-wireless board and trying to figure out whether QMK is still the safe default or whether <Mono>ZMK</Mono> is actually the better answer.
+
+The short version, for anyone who wants it before the reasoning: if the board is wireless, ZMK is very likely the right call, and for most split boards specifically it's already the vendor's default rather than an alternative. This guide explains why, walks through the decision points that are genuinely different from the wired QMK/VIA/VIAL world covered in [firmware, compared](/article/keyboard-firmware-compared), and gives a builder enough vocabulary to read a board's spec sheet correctly before ordering.
+
+<Callout type="info" title="What ZMK is, in one paragraph">
+  <Mono>ZMK</Mono> is an open-source keyboard firmware built on the Zephyr RTOS, designed from its first commit around Bluetooth Low Energy and battery life rather than having wireless support bolted onto a codebase built for wired boards. It uses a configuration model — YAML for board-level settings, devicetree overlays for the keymap itself — instead of QMK's C-and-Make workflow. The canonical reference is <Source href="https://zmk.dev">the project's own documentation</Source>, which is worth bookmarking before a first flash regardless of how this guide gets used.
+</Callout>
+
+## Why QMK's wireless story is the weaker one
+
+QMK was not designed around wireless. It grew up as a wired firmware — matrix scan, keycode, USB HID, done — and Bluetooth support was added later, board by board, largely through community-maintained modules rather than a first-class subsystem. That history shows up in exactly the places that matter for a battery-powered board: sleep states are shallower, the BLE stack is thinner, and the multi-device profile switching that a Bluetooth keyboard needs to be pleasant day-to-day is inconsistent across boards rather than a guaranteed feature of the firmware itself.
+
+ZMK made the opposite bet from day one. It sits on Zephyr, an RTOS built for low-power embedded devices generally, and its event-driven scanning and sleep architecture were designed around the assumption that the device runs on a coin cell or a small lithium-polymer pack and needs to survive weeks, not hours. Split support was part of the design from early on too, with a defined central-and-peripheral role split (see <Source href="https://zmk.dev/docs/features/split-keyboards">ZMK's split-keyboard documentation</Source>) rather than a workaround retrofitted onto a single-board assumption. None of this makes QMK a bad firmware — it remains the deeper, more mature project for wired boards, as [firmware, compared](/article/keyboard-firmware-compared) lays out — it makes QMK a worse starting assumption specifically for the wireless and split case this guide is about.
+
+<InlineViz
+  src="/article-viz/zmk-wireless-split-firmware-guide/design-origin.svg"
+  alt="Two horizontal timeline bars. The top bar, labeled QMK, starts at a wired-firmware origin point and shows a later, smaller Bluetooth-added segment grafted on partway along. The bottom bar, labeled ZMK, starts at a Bluetooth-and-Zephyr origin point with the wireless segment running the full length of the bar."
+  caption="Same destination, different starting assumption — bolted-on versus built-in."
+  accent="amber"
+/>
+
+## The decision points that are actually different
+
+Four things change once a board has a battery and possibly a second half. None of them come up on a wired hotswap.
+
+**Split pairing.** A ZMK split board has two roles: a central half, which talks to the host computer over USB or Bluetooth and runs the actual keymap logic, and a peripheral half, which only talks to the central. By convention the left half is central and the right is peripheral, and the two halves pair with each other automatically the first time they power on together — similar in spirit to how a phone pairs with a headset, with the bond stored on both sides after that first handshake. If pairing ever gets confused, the fix is to clear the stored bond and let the halves re-discover each other, not to reflash anything. This two-role model is ZMK-specific vocabulary; a builder coming from a wired board's single-microcontroller mental model needs to learn it once and then mostly forgets about it, because it works quietly in the background after the first pairing.
+
+**Bluetooth profile management.** ZMK supports multiple bonded host profiles — commonly five — so the same board can be paired with a laptop, a phone, and a tablet at once, switching between them with a keycode rather than a re-pair. This is the single most tangible day-to-day difference a builder coming from wired feels: a wireless split earns its keep by living on a desk and moving to a second machine with one keypress, and profile management is the feature that makes that painless.
+
+**Power management and battery tuning.** Because the central half's radio has to periodically listen for the peripheral's transmissions, it draws more power than the peripheral does — a detail worth knowing before assuming both halves drain at the same rate. Idle timeout and deep-sleep thresholds are configurable, and a builder chasing maximum battery life should look at those settings specifically rather than assuming the firmware defaults are already tuned for their usage pattern. This is a genuinely different axis of tuning than anything in the wired QMK/VIA world, where power draw simply isn't a variable.
+
+**ZMK Studio versus raw devicetree.** This is the closest wireless equivalent to the QMK-versus-VIA question, and it's covered in more detail below.
+
+<InlineViz
+  src="/article-viz/zmk-wireless-split-firmware-guide/decision-points.svg"
+  alt="Four labeled panels in a horizontal strip: split pairing (two half icons joined by a dashed line), Bluetooth profiles (one board icon radiating to three host icons), power management (a battery glyph with a sleep-moon icon), and configuration method (a fork between a GUI icon and a devicetree-file icon). Each panel carries a small amber accent mark."
+  caption="Four decision points a wired build never has to make."
+  accent="amber"
+/>
+
+## ZMK Studio versus hand-written devicetree
+
+QMK's answer to "I don't want to learn a build toolchain" is VIA or VIAL — a GUI that talks to an already-flashed board over USB and edits the keymap live, no recompile. ZMK's answer is <Mono>ZMK Studio</Mono>, and it is real but younger. Studio is a desktop and web application that lets a builder reassign keys, rename layers, and enable additional layers without reflashing firmware, connecting over USB or, on some platforms, BLE. It is explicitly an MVP: assigning behaviors to keys, renaming layers, and switching physical layouts all work today; configuring combos, conditional layers, and behavior properties in the GUI is listed as planned rather than shipped, and defining an entirely new behavior or physical layout isn't a Studio feature at all — that still means editing the devicetree keymap directly.
+
+<Callout type="note" title="What Studio doesn't do (yet)">
+  A builder who wants combos, conditional layers, or a genuinely custom key behavior on a ZMK board will still open the devicetree keymap file at some point. That isn't a bug in Studio — it's the boundary of an MVP tool that's actively adding capability, and worth knowing before assuming Studio is a drop-in equivalent to VIA on every axis.
+</Callout>
+
+The practical read: a builder who only wants to remap keys, adjust layers, and pick a physical layout variant can stay in Studio and never look at a devicetree file. A builder who wants tap-dance-equivalent behaviors, combos, or anything past that boundary needs to be comfortable opening a YAML/devicetree config, flashing over USB, and iterating — closer to QMK's build-and-flash loop than to VIA's instant edits, though the config format itself (declarative devicetree overlays) reads differently from QMK's C.
+
+<InlineViz
+  src="/article-viz/zmk-wireless-split-firmware-guide/studio-boundary.svg"
+  alt="A split rectangle labeled ZMK Studio on the left, marked with amber checkmarks for assign behaviors to keys, rename layers, and select physical layouts. The right side, labeled devicetree required, is marked with warm-red items for combos, conditional layers, behavior properties, and new physical layouts."
+  caption="Studio covers the remap-only path; the devicetree file is still where the power-user features live."
+  accent="amber"
+/>
+
+## When to actually pick ZMK over QMK
+
+The honest framing is that this isn't really a rivalry for most builders — the board being wireless usually settles it before feature comparisons matter.
+
+If the board is wireless at all — split or not — ZMK is the safer default. The battery life and Bluetooth maturity gap discussed above is not a marginal difference; it's the difference between a board that lasts weeks on a charge and one that needs daily attention. A builder who insists on QMK for a wireless board should have a specific reason for it — usually an existing keymap they don't want to migrate — because the firmware maturity argument runs one direction.
+
+If the board is split but wired (a Corne or Lily58 built with a TRRS cable rather than Bluetooth, for instance), the choice opens back up, and QMK's split support over a wired connection is mature and well-documented — this is genuinely a coin flip that comes down to whether the builder also wants wireless later, in which case starting on ZMK avoids a firmware migration down the line.
+
+If the board is neither split nor wireless, this guide doesn't apply — go read [firmware, compared](/article/keyboard-firmware-compared) instead, because QMK, VIA, and VIAL are the right frame for that board.
+
+<Callout type="warn" title="Vendor choice, not builder choice, on prebuilts">
+  As with the wired trichotomy, firmware on a prebuilt wireless board is a vendor decision made at manufacture time. A growing number of Tier-1 vendors now ship ZMK as the default on their wireless lines — a shift covered in more detail in [ZMK's move into mainstream prebuilts](/article/zmk-mainstream-shift) — but plenty of older or budget wireless boards still ship a QMK-derived Bluetooth fork with weaker battery numbers. Check the spec sheet for the actual firmware named, not just the word "wireless."
+</Callout>
+
+## Getting a first ZMK build running
+
+For a DIY split, the practical path is narrower than QMK's ecosystem might suggest, and that's mostly a good thing. Most builders start from an existing board's config in the <Source href="https://github.com/zmkfirmware/zmk">ZMK repository</Source> or a community fork for their specific PCB, rather than writing a devicetree file from nothing. The build itself typically runs through GitHub Actions rather than a local toolchain — push a keymap change, GitHub compiles it, download the resulting firmware file and flash it over USB. That's a meaningfully different workflow from QMK's local `qmk compile`, and it removes the thirty-minute local toolchain setup that trips up first-time QMK builders, at the cost of needing a GitHub account and a few minutes of build queue time per change.
+
+The first flash is also the moment to decide the Studio-versus-devicetree question in practice rather than in the abstract: flash with Studio support enabled if the board supports it, do the initial remaps there, and only open the devicetree keymap once a specific behavior — a combo, a conditional layer — isn't reachable from the GUI. That ordering keeps a first build's learning curve close to VIA's rather than close to raw QMK's, even though the underlying config format is different.
+
+## What to watch for next
+
+The gap this guide keeps circling back to is Studio's feature ceiling. Combos, conditional layers, and behavior-property editing are on the project's public roadmap rather than shipped, and each one that lands in the GUI is one less reason a builder needs to touch a devicetree file directly. A wireless/split builder evaluating ZMK should treat that roadmap as a moving target worth checking against the current release notes rather than this guide's snapshot of it — the honest gap between "GUI-only" and "devicetree required" is one this guide expects to keep shrinking as Studio matures, not one that's settled.
+
+The other thing worth tracking is the vendor side: as more Tier-1 wireless boards ship ZMK by default, the community documentation and pre-built configs for common PCBs keep getting easier to find, which is the same flywheel that made QMK's wired ecosystem this deep in the first place. A builder starting a first ZMK split today is starting from a materially easier position than one who started two years ago, and that trend line points in one direction.

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — ZMK wireless split-firmware guide: two split keyboard halves bridged by a terracotta Bluetooth pairing motif</title>
+
+  <!-- ================================================================
+       Canvas:  1200 × 750
+       Subject: top-down silhouettes of two split keyboard halves,
+                bridged by a wireless-pairing motif in the center gap —
+                the visual differentiator from a wired-firmware piece.
+       Palette:
+         Stroke   oklch(0.78 0.005 90)  warm-grey, 2px
+         Splash   oklch(0.60 0.11 42)   muted terracotta (wireless motif)
+         Bronze   oklch(0.80 0.135 75)  theme accent (top-right ornament only)
+       Background: transparent (light-mode safe per house style).
+  ================================================================ -->
+
+  <!-- Soft terracotta wash behind the center gap — the wireless bridge is the focal element -->
+  <ellipse cx="600" cy="290" rx="230" ry="100" fill="oklch(0.60 0.11 42 / 0.09)" stroke="none"/>
+
+  <!-- ============ LEFT HALF ============
+       Top-down silhouette. Case x=90→540, main body y=300→560.
+       5 columns × 4 rows + 3-key thumb cluster tucked below. -->
+
+  <!-- Left half outer case -->
+  <path
+    d="
+      M 104 300
+      L 526 300
+      L 540 332
+      L 540 528
+      L 460 560
+      L 104 560
+      Q 90 560 90 546
+      L 90 314
+      Q 90 300 104 300
+      Z"/>
+
+  <!-- Left half inset bezel hint -->
+  <path
+    d="
+      M 110 316
+      L 522 316
+      L 524 334
+      L 524 522
+      L 456 544
+      L 110 544
+      Q 106 544 106 540
+      L 106 320
+      Q 106 316 110 316
+      Z"
+    stroke-opacity="0.35"/>
+
+  <!-- Left half: 5 columns × 4 rows, column-staggered per finger length -->
+  <g stroke-opacity="0.7">
+    <!-- Column 1 (pinky, lowest) -->
+    <circle cx="146" cy="346" r="3"/>
+    <circle cx="146" cy="396" r="3"/>
+    <circle cx="146" cy="446" r="3"/>
+    <circle cx="146" cy="496" r="3"/>
+    <!-- Column 2 (ring) -->
+    <circle cx="226" cy="338" r="3"/>
+    <circle cx="226" cy="388" r="3"/>
+    <circle cx="226" cy="438" r="3"/>
+    <circle cx="226" cy="488" r="3"/>
+    <!-- Column 3 (middle, highest) -->
+    <circle cx="306" cy="332" r="3"/>
+    <circle cx="306" cy="382" r="3"/>
+    <circle cx="306" cy="432" r="3"/>
+    <circle cx="306" cy="482" r="3"/>
+    <!-- Column 4 (index) -->
+    <circle cx="386" cy="338" r="3"/>
+    <circle cx="386" cy="388" r="3"/>
+    <circle cx="386" cy="438" r="3"/>
+    <circle cx="386" cy="488" r="3"/>
+    <!-- Column 5 (inner index) -->
+    <circle cx="466" cy="346" r="3"/>
+    <circle cx="466" cy="396" r="3"/>
+    <circle cx="466" cy="446" r="3"/>
+    <circle cx="466" cy="496" r="3"/>
+  </g>
+
+  <!-- Left thumb cluster — sells the split silhouette -->
+  <g stroke-opacity="0.85">
+    <rect x="380" y="582" width="32" height="24" rx="3" ry="3" transform="rotate(-12 396 594)"/>
+    <rect x="420" y="592" width="32" height="24" rx="3" ry="3" transform="rotate(-12 436 604)"/>
+    <rect x="460" y="602" width="32" height="24" rx="3" ry="3" transform="rotate(-12 476 614)"/>
+  </g>
+
+  <!-- Faint column guide lines on left half -->
+  <g stroke-opacity="0.18">
+    <line x1="186" y1="320" x2="186" y2="540"/>
+    <line x1="266" y1="320" x2="266" y2="540"/>
+    <line x1="346" y1="320" x2="346" y2="540"/>
+    <line x1="426" y1="320" x2="426" y2="540"/>
+  </g>
+
+  <!-- ============ RIGHT HALF ============
+       Mirror of the left. Case x=660→1110. -->
+
+  <!-- Right half outer case -->
+  <path
+    d="
+      M 1096 300
+      L 674 300
+      L 660 332
+      L 660 528
+      L 740 560
+      L 1096 560
+      Q 1110 560 1110 546
+      L 1110 314
+      Q 1110 300 1096 300
+      Z"/>
+
+  <!-- Right half inset bezel hint -->
+  <path
+    d="
+      M 1090 316
+      L 678 316
+      L 676 334
+      L 676 522
+      L 744 544
+      L 1090 544
+      Q 1094 544 1094 540
+      L 1094 320
+      Q 1094 316 1090 316
+      Z"
+    stroke-opacity="0.35"/>
+
+  <!-- Right half: 5 columns × 4 rows, column-staggered (mirror of left) -->
+  <g stroke-opacity="0.7">
+    <!-- Column 1 (inner index) -->
+    <circle cx="734" cy="346" r="3"/>
+    <circle cx="734" cy="396" r="3"/>
+    <circle cx="734" cy="446" r="3"/>
+    <circle cx="734" cy="496" r="3"/>
+    <!-- Column 2 (index) -->
+    <circle cx="814" cy="338" r="3"/>
+    <circle cx="814" cy="388" r="3"/>
+    <circle cx="814" cy="438" r="3"/>
+    <circle cx="814" cy="488" r="3"/>
+    <!-- Column 3 (middle, highest) -->
+    <circle cx="894" cy="332" r="3"/>
+    <circle cx="894" cy="382" r="3"/>
+    <circle cx="894" cy="432" r="3"/>
+    <circle cx="894" cy="482" r="3"/>
+    <!-- Column 4 (ring) -->
+    <circle cx="974" cy="338" r="3"/>
+    <circle cx="974" cy="388" r="3"/>
+    <circle cx="974" cy="438" r="3"/>
+    <circle cx="974" cy="488" r="3"/>
+    <!-- Column 5 (pinky) -->
+    <circle cx="1054" cy="346" r="3"/>
+    <circle cx="1054" cy="396" r="3"/>
+    <circle cx="1054" cy="446" r="3"/>
+    <circle cx="1054" cy="496" r="3"/>
+  </g>
+
+  <!-- Right thumb cluster (mirrored, +12deg) -->
+  <g stroke-opacity="0.85">
+    <rect x="708" y="602" width="32" height="24" rx="3" ry="3" transform="rotate(12 724 614)"/>
+    <rect x="748" y="592" width="32" height="24" rx="3" ry="3" transform="rotate(12 764 604)"/>
+    <rect x="788" y="582" width="32" height="24" rx="3" ry="3" transform="rotate(12 804 594)"/>
+  </g>
+
+  <!-- Faint column guide lines on right half -->
+  <g stroke-opacity="0.18">
+    <line x1="774" y1="320" x2="774" y2="540"/>
+    <line x1="854" y1="320" x2="854" y2="540"/>
+    <line x1="934" y1="320" x2="934" y2="540"/>
+    <line x1="1014" y1="320" x2="1014" y2="540"/>
+  </g>
+
+  <!-- ================================================================
+       WIRELESS PAIRING BRIDGE — the guide's differentiator from a
+       wired-firmware piece. Each half carries its own radio (antenna
+       dot on the inner top edge with three concentric signal arcs
+       rising above it); a dashed link line ties the two radios
+       together with a Bluetooth rune riding the midpoint pulse —
+       "two boards, one wireless link."
+  ================================================================ -->
+
+  <!-- Left radio: antenna dot + rising signal arcs -->
+  <g stroke="oklch(0.60 0.11 42)" stroke-width="2.2">
+    <path d="M 470 270 A 30 30 0 0 1 530 270" fill="none"/>
+    <path d="M 455 255 A 45 45 0 0 1 545 255" fill="none" stroke-opacity="0.7"/>
+    <path d="M 440 240 A 60 60 0 0 1 560 240" fill="none" stroke-opacity="0.45"/>
+  </g>
+  <circle cx="500" cy="300" r="9" fill="none" stroke="oklch(0.60 0.11 42)" stroke-opacity="0.5"/>
+  <circle cx="500" cy="300" r="5" fill="oklch(0.60 0.11 42)" stroke="none"/>
+
+  <!-- Right radio: antenna dot + rising signal arcs (mirrored position, same orientation) -->
+  <g stroke="oklch(0.60 0.11 42)" stroke-width="2.2">
+    <path d="M 670 270 A 30 30 0 0 1 730 270" fill="none"/>
+    <path d="M 655 255 A 45 45 0 0 1 745 255" fill="none" stroke-opacity="0.7"/>
+    <path d="M 640 240 A 60 60 0 0 1 760 240" fill="none" stroke-opacity="0.45"/>
+  </g>
+  <circle cx="700" cy="300" r="9" fill="none" stroke="oklch(0.60 0.11 42)" stroke-opacity="0.5"/>
+  <circle cx="700" cy="300" r="5" fill="oklch(0.60 0.11 42)" stroke="none"/>
+
+  <!-- Dashed link line — the literal wireless pairing between the two halves -->
+  <line x1="500" y1="300" x2="700" y2="300"
+    stroke="oklch(0.60 0.11 42)" stroke-width="1.6" stroke-dasharray="3 7" stroke-opacity="0.75"/>
+
+  <!-- Midpoint pulse + Bluetooth rune — the focal anchor of the whole piece -->
+  <circle cx="600" cy="300" r="22" fill="oklch(0.60 0.11 42 / 0.12)" stroke="oklch(0.60 0.11 42 / 0.85)" stroke-width="2"/>
+  <path d="M 600 288 L 600 312 L 610 306 L 590 294 L 610 294 L 600 306 L 600 318"
+    stroke="oklch(0.60 0.11 42)" stroke-width="2.4" fill="none" stroke-linejoin="round"/>
+
+  <!-- ================================================================
+       BRASS / BRONZE THEME DOT — upper-right ornamental anchor
+       (family convention, present in every thock hero)
+  ================================================================ -->
+  <circle cx="1148" cy="70" r="3.5" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

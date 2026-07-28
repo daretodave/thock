@@ -1,0 +1,22 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-24T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "zmk-wireless-split-firmware-guide",
+  "article_pillar": "guides",
+  "section_anchor": "zmk-studio-versus-hand-written-devicetree",
+  "brief_summary": "A split rectangle. Left half, labeled ZMK Studio, lists amber checkmarks for assigning behaviors to keys, renaming/enabling layers, and selecting physical layouts. Right half, labeled devicetree required, lists warm-red x-marks for combos, conditional layers, behavior properties, and new physical layouts. Visualizes the article's Studio-versus-devicetree boundary.",
+  "target": "apps/web/public/article-viz/zmk-wireless-split-firmware-guide/studio-boundary.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "zmk-wireless-split-firmware-guide.mdx § 'ZMK Studio versus hand-written devicetree' — 'Studio is a desktop and web application that lets a builder reassign keys, rename layers, and enable additional layers without reflashing firmware ... assigning behaviors to keys, renaming layers, and switching physical layouts all work today; configuring combos, conditional layers, and behavior properties in the GUI is listed as planned rather than shipped, and defining an entirely new behavior or physical layout isn't a Studio feature at all'"
+  ],
+  "outputs": ["apps/web/public/article-viz/zmk-wireless-split-firmware-guide/studio-boundary.svg"],
+  "warnings": []
+}

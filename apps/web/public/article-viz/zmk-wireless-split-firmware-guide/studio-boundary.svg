@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>A split rectangle. Left half, labeled ZMK Studio, lists in amber checkmarks: assign behaviors to keys, rename layers, select physical layouts. Right half, labeled devicetree required, lists in warm-red marks: combos, conditional layers, behavior properties, new physical layouts</title>
+
+  <text x="600" y="50" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">where the Studio boundary sits today</text>
+
+  <!-- Outer divider -->
+  <rect x="70" y="90" width="1060" height="340" rx="10" stroke-opacity="0.35"/>
+  <line x1="600" y1="90" x2="600" y2="430" stroke-opacity="0.35" stroke-dasharray="4 6"/>
+
+  <!-- Left column: ZMK Studio -->
+  <text x="335" y="130" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.10 80)" stroke="none" font-weight="600" text-anchor="middle">ZMK Studio</text>
+  <circle cx="335" cy="120" r="4" fill="oklch(0.78 0.10 80)" stroke="none"/>
+
+  <g fill="none" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.9">
+    <path d="M 115 175 L 122 182 L 137 165" stroke-width="3"/>
+  </g>
+  <text x="150" y="185" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">assign behaviors to keys</text>
+
+  <g fill="none" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.9">
+    <path d="M 115 225 L 122 232 L 137 215" stroke-width="3"/>
+  </g>
+  <text x="150" y="235" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">rename and enable layers</text>
+
+  <g fill="none" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.9">
+    <path d="M 115 275 L 122 282 L 137 265" stroke-width="3"/>
+  </g>
+  <text x="150" y="285" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">select physical layouts</text>
+
+  <text x="335" y="385" font-family="Newsreader, serif" font-size="13" font-style="italic" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.85">no reflash needed</text>
+
+  <!-- Right column: devicetree required -->
+  <text x="865" y="130" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.62 0.13 25)" stroke="none" font-weight="600" text-anchor="middle">devicetree required</text>
+
+  <g stroke="oklch(0.62 0.13 25)" stroke-opacity="0.9">
+    <line x1="645" y1="165" x2="659" y2="179"/>
+    <line x1="659" y1="165" x2="645" y2="179"/>
+  </g>
+  <text x="675" y="180" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">combos</text>
+
+  <g stroke="oklch(0.62 0.13 25)" stroke-opacity="0.9">
+    <line x1="645" y1="215" x2="659" y2="229"/>
+    <line x1="659" y1="215" x2="645" y2="229"/>
+  </g>
+  <text x="675" y="230" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">conditional layers</text>
+
+  <g stroke="oklch(0.62 0.13 25)" stroke-opacity="0.9">
+    <line x1="645" y1="265" x2="659" y2="279"/>
+    <line x1="659" y1="265" x2="645" y2="279"/>
+  </g>
+  <text x="675" y="280" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">behavior properties</text>
+
+  <g stroke="oklch(0.62 0.13 25)" stroke-opacity="0.9">
+    <line x1="645" y1="315" x2="659" y2="329"/>
+    <line x1="659" y1="315" x2="645" y2="329"/>
+  </g>
+  <text x="675" y="330" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">new physical layouts</text>
+
+  <text x="865" y="385" font-family="Newsreader, serif" font-size="13" font-style="italic" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.85">still a YAML/devicetree edit + reflash</text>
+
+  <!-- Caption line -->
+  <text x="600" y="455" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">an MVP boundary, not a permanent ceiling</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

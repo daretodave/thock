@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-24T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "zmk-wireless-split-firmware-guide",
+  "article_pillar": "guides",
+  "section_anchor": "why-qmks-wireless-story-is-the-weaker-one",
+  "brief_summary": "Two horizontal timeline bars. Top bar (QMK) starts at a wired-firmware origin point in 2015 and shows a shorter, later amber segment where Bluetooth support was added board by board. Bottom bar (ZMK) starts at a Bluetooth-plus-Zephyr origin point in 2018 and runs wireless-native the full length of the bar. Illustrates the article's 'bolted-on versus built-in' argument.",
+  "target": "apps/web/public/article-viz/zmk-wireless-split-firmware-guide/design-origin.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "zmk-wireless-split-firmware-guide.mdx § 'Why QMK's wireless story is the weaker one' — 'QMK was not designed around wireless. It grew up as a wired firmware ... Bluetooth support was added later, board by board, largely through community-maintained modules rather than a first-class subsystem.'",
+    "zmk-wireless-split-firmware-guide.mdx § 'Why QMK's wireless story is the weaker one' — 'ZMK made the opposite bet from day one. It sits on Zephyr, an RTOS built for low-power embedded devices generally, and its event-driven scanning and sleep architecture were designed around the assumption that the device runs on a coin cell or a small lithium-polymer pack.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/zmk-wireless-split-firmware-guide/design-origin.svg"],
+  "warnings": []
+}
