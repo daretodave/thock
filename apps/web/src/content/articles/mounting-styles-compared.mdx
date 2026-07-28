@@ -7,7 +7,7 @@ pillar: guides
 guideSection: 'modding'
 tags: [modding, acoustic, aluminum, polycarbonate, beginner]
 publishedAt: '2026-04-25T13:00:00.000Z'
-updatedAt: '2026-06-12T12:00:00.000Z'
+updatedAt: '2026-07-28T00:00:00.000Z'
 heroImage: /hero-art/mounting-styles-compared.svg
 heroImageAlt: "Side-profile cross-section silhouettes of four mounting styles stacked vertically — gasket (foam strips between plate and case), top-mount (plate screwed to the top half of the case), tray-mount (PCB screwed to standoffs on the bottom case), integrated plate (plate machined as part of the case) — drawn in a single muted-terracotta stroke on warm paper, each labelled with a small mono caption."
 featured: false
@@ -57,6 +57,8 @@ The feel is the more subtle change. A well-built gasket board gives perceptibly 
 
 The honest caveat with gasket is that execution matters more than the label. A board that calls itself gasket-mount but uses thin strips with poor compression behaves more like a top-mount with extra steps. The foam density, strip length, and the snugness of the case fit all have to land for the mount to deliver its advertised character. Builders evaluating a new design should look for actual compression specs in the announcement, not just the word "gasket" in the marketing copy.
 
+A distinctive gasket variant worth naming on its own is the **burger mount** — a name that comes from the original <PartReference id="bakeneko" /> design, where the case clamshells around a single o-ring that runs the perimeter of the plate-PCB assembly instead of foam strips top and bottom. The o-ring still isolates the assembly from the case shell and still compresses under a keypress, just less than a well-built foam gasket does — the feel and sound land closer to gasket than to integrated, tighter and more uniform than a foam-strip build but with real give, not zero. Bakeneko-style boards remain the standard reference for what a well-executed budget gasket implementation sounds like, at a price point full custom gasket boards cannot reach.
+
 ## Top-mount
 
 Top-mount screws the plate directly to standoffs on the inside of the top case half. The plate is bolted to the case; the PCB hangs off the plate through the switches; the bottom case half is structural but not mechanically connected to the typing surface. It is the classic high-end mount style, dominant in the customs of the late 2010s and early 2020s — the <Mono>Tofu</Mono> redux, the Bauer, the Mr. Suit, most of the early TGR boards.
@@ -87,7 +89,7 @@ The sound is the most consistent of the four styles. There are no foam strips to
 
 The feel is the firmest of the four. Zero give, zero flex, zero margin — the typing surface is a solid block of metal or plastic. Heavy bottom-out typists tend to either love this or bounce off it within a week. There is no in-between.
 
-The variant most builders meet first is the **burger mount** — a name that comes from the original <PartReference id="bakeneko" /> design, where the case clamshells around a single o-ring that runs the perimeter of the plate-PCB assembly. The o-ring functions as a kind of degenerate gasket: it isolates the assembly from the case shell but provides almost no compression, so the feel is closer to integrated than to gasket. Modern budget boards in the KBDFans QK series and similar designs use either true integrated plates or burger-style o-ring isolation to deliver a tight, consistent sound at a price point gasket-mount cannot reach.
+Modern budget boards in the KBDFans QK series and similar unibody designs lean on this approach to deliver a tight, consistent sound at a price point top-mount customs cannot reach — no separate plate to manufacture or tune, just a milled case doing double duty.
 
 ## How real boards blend these
 
@@ -104,12 +106,12 @@ The practical move when evaluating a new board is to read past the one-word moun
 
 ## What to actually pick
 
-If a builder wants the softest, deepest, most uniform sound and feel — and they are buying in the modern enthusiast custom market — they want gasket. The mode-sonnet and most of its contemporaries cover that space well, and the catalog is large enough that the only real question is which case material and which layout, not which mount.
+If a builder wants the softest, deepest, most uniform sound and feel — and they are buying in the modern enthusiast custom market — they want gasket. The mode-sonnet and most of its contemporaries cover that space well, and the catalog is large enough that the only real question is which case material and which layout, not which mount. Builders who want that same gasket character at a fraction of the price should look at burger-mount boards like the Bakeneko instead — the earlier section covers the trade-off.
 
 If a builder wants the firmer, more direct, more case-resonant feel that defined the late-2010s custom era, they want top-mount. The catalog is smaller and the prices are usually higher, but the boards exist and the character is real and distinct.
 
 If a builder is shopping at the prebuilt end of the market and willing to mod, tray-mount is what they are getting whether the listing says so or not. The [PE foam mod](/article/pe-foam-mod) and [tape mod](/article/tape-mod) stack can take a tray-mount board most of the way to a satisfying sound; the [o-ring mod](/article/o-ring-mod) handles the standoff contact points that foam cannot reach; and [properly serviced stabilizers](/article/stabilizer-servicing-guide) address the rattle that neither foam nor o-ring touches. The floor is lower than gasket and the ceiling is lower too.
 
-If a builder wants the tightest possible sound at the lowest possible price — and is willing to accept zero give in the typing surface — integrated plate or burger mount is the answer. The QK-series and Bakeneko-style designs deliver a sound character at $200 that gasket boards struggle to match at twice the price, with the trade-off paid entirely in firmness of feel.
+If a builder wants the tightest possible sound at the lowest possible price — and is willing to accept zero give in the typing surface — integrated plate is the answer. The QK-series delivers a sound character at $200 that most top-mount customs struggle to match at twice the price, with the trade-off paid entirely in firmness of feel.
 
 The honest closing note is that mount style interacts with everything else the builder has chosen. A linear switch on a gasket board with PE foam and a thick MT3 set produces one kind of sound; the same switch on a top-mount board with bare PCB and a Cherry-profile ABS set produces a different one. The mount is a layer, not a verdict. For the plate variable that pairs with each of these mount styles — how aluminium, brass, FR4, POM, and polycarbonate each interact with tray, gasket, and top-mount geometries — see [plate materials, explained](/article/plate-materials-explained). The thock house take: pick the mount that matches the typing feel wanted, not the sound — the sound can be tuned around the mount, but the feel under the finger cannot.

@@ -592,7 +592,7 @@
     },
     {
       "slug": "mounting-styles-compared",
-      "readTime": 12,
+      "readTime": 13,
       "frontmatter": {
         "title": "Mounting styles, compared: gasket, top-mount, tray, and integrated plate",
         "lede": "A builder who has lubed switches and tuned stabilizers and chosen a keycap profile and still cannot place why their next board feels different from their last one is usually meeting the mount style. The plate's relationship to the case is the half of the typing feel that nobody discusses on a sound test.",
@@ -1409,5 +1409,5 @@
       "readTime": 4
     }
   ],
-  "generatedAt": "2026-07-28T19:42:41.909Z"
+  "generatedAt": "2026-07-28T21:44:01.916Z"
 }
