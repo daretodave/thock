@@ -53,7 +53,6 @@ export function SwitchCompareSelector({
           value={a}
           onChange={(e) => setA(e.target.value)}
           className={selectClass}
-          aria-label="First switch"
         >
           <option value="">Select a switch…</option>
           {switches.map((s) => (
@@ -77,7 +76,6 @@ export function SwitchCompareSelector({
           value={b}
           onChange={(e) => setB(e.target.value)}
           className={selectClass}
-          aria-label="Second switch"
         >
           <option value="">Select a switch…</option>
           {switches.map((s) => (

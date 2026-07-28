@@ -75,6 +75,18 @@ describe('<BoardCompareSelector>', () => {
     expect(screen.getByTestId('compare-button')).toBeEnabled()
   })
 
+  it('exposes an accessible name matching the visible label (no aria-label override)', () => {
+    render(
+      <BoardCompareSelector boards={BOARDS} initialA="" initialB="" />,
+    )
+    expect(screen.getByRole('combobox', { name: 'Board A' })).toBe(
+      screen.getByTestId('compare-select-a'),
+    )
+    expect(screen.getByRole('combobox', { name: 'Board B' })).toBe(
+      screen.getByTestId('compare-select-b'),
+    )
+  })
+
   it('resyncs selected values when initialA/initialB change on rerender (back/forward nav)', () => {
     const { rerender } = render(
       <BoardCompareSelector

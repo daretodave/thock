@@ -53,7 +53,6 @@ export function BoardCompareSelector({
           value={a}
           onChange={(e) => setA(e.target.value)}
           className={selectClass}
-          aria-label="First board"
         >
           <option value="">Select a board…</option>
           {boards.map((b) => (
@@ -77,7 +76,6 @@ export function BoardCompareSelector({
           value={b}
           onChange={(e) => setB(e.target.value)}
           className={selectClass}
-          aria-label="Second board"
         >
           <option value="">Select a board…</option>
           {boards.map((b) => (

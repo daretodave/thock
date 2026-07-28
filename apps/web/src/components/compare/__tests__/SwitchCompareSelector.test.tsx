@@ -76,6 +76,18 @@ describe('<SwitchCompareSelector>', () => {
     expect(screen.getByTestId('compare-button')).toBeEnabled()
   })
 
+  it('exposes an accessible name matching the visible label (no aria-label override)', () => {
+    render(
+      <SwitchCompareSelector switches={SWITCHES} initialA="" initialB="" />,
+    )
+    expect(screen.getByRole('combobox', { name: 'Switch A' })).toBe(
+      screen.getByTestId('compare-select-a'),
+    )
+    expect(screen.getByRole('combobox', { name: 'Switch B' })).toBe(
+      screen.getByTestId('compare-select-b'),
+    )
+  })
+
   it('resyncs selected values when initialA/initialB change on rerender (back/forward nav)', () => {
     const { rerender } = render(
       <SwitchCompareSelector
