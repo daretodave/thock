@@ -8537,3 +8537,26 @@ passes accumulate signals.)
 - issue: #634
 > Filed 2026-07-28 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 > **Resolved (2026-07-28):** shipped `zmk-wireless-split-firmware-guide.mdx` (guides pillar) — a ZMK wireless/split-keyboard firmware decision guide, differentiated from the existing `keyboard-firmware-compared.mdx` (wired QMK/VIA/VIAL trichotomy) and `zmk-mainstream-shift.mdx` (Trends-pillar market piece). `publishedAt` gap-filled to 2026-07-24 (largest 30-day-window gap, 07-20 to 07-28). Hero SVG + 3 inline-viz diagrams via `brander`. Language gate and mentionedParts gate both clean. `pnpm verify` full gate green (typecheck, test, data:validate, build, 1086/1086 e2e).
+
+### [ ] [cross-links] [4.5] split-ergo-buyers-guide ↔ zmk-wireless-split-firmware-guide — no prose cross-link (same pillar, ≥2 shared tags: split, beginner, wireless)
+- category: cross-links
+- filed: 2026-07-28 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: split, beginner, wireless
+- article-a: apps/web/src/content/articles/split-ergo-buyers-guide.mdx
+- article-b: apps/web/src/content/articles/zmk-wireless-split-firmware-guide.mdx
+- action: add [zmk-wireless-split-firmware-guide](/article/zmk-wireless-split-firmware-guide) to split-ergo-buyers-guide body, or vice versa
+
+### [ ] [newsletter] [4.0] Weekly digest — issue 005 due (7 days since issue 4)
+- category: content-gaps
+- filed: 2026-07-28 by newsletter-gap-survey.mjs
+- impact: 5 (newsletter archive going stale reduces /newsletter value and reader trust in cadence)
+- ease: 8 (content-curator weekly round-up: 5 pillar picks + tracker insight)
+- score: 4.0 (impact × ease / 10)
+- next: /ship-content → newsletter type (weekly round-up, 5 pillar picks, tracker insight)
+- last-issue: 2026-07-20 (thock-weekly-004)
+- days-since: 7
+- issue: [mirror-failed: 2026-07-28]
+> Filed 2026-07-28 by newsletter-gap-survey.mjs. 7 days since issue 4. Threshold: ≥7 calendar days.
