@@ -1,6 +1,7 @@
 import type { ReactElement } from 'react'
 import {
   buildBreadcrumbListJsonLd,
+  buildItemListJsonLd,
   buildMetadata,
   buildWebSiteJsonLd,
   JsonLd,
@@ -34,6 +35,13 @@ export default function NewsletterPage(): ReactElement {
             { name: 'Home', path: '/' },
             { name: TITLE, path: PATH },
           ]),
+          buildItemListJsonLd({
+            name: 'Newsletter archive',
+            items: newsletters.map((n) => ({
+              name: n.frontmatter.title,
+              path: `/newsletter/${n.slug}`,
+            })),
+          }),
         ]}
       />
 

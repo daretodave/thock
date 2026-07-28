@@ -71,7 +71,7 @@ function expectedTypesFor(path: string): ExpectedTypes {
   if (path === '/') return ['WebSite', 'ItemList']
   if (path === '/about') return ['WebSite', 'BreadcrumbList']
   if (path === '/sources') return ['WebSite', 'BreadcrumbList']
-  if (path === '/newsletter') return ['WebSite', 'BreadcrumbList']
+  if (path === '/newsletter') return ['WebSite', 'BreadcrumbList', 'ItemList']
   if (path === '/search') return ['BreadcrumbList']
   if (path === '/group-buys') return ['CollectionPage', 'BreadcrumbList']
   if (path === '/trends/tracker')
