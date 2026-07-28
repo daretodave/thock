@@ -153,7 +153,7 @@ export default async function TagPage({
       {articles.length > 0 ? (
         <Container as="section" className="pb-12 sm:pb-16">
           <HomeSectionHeading
-            kicker="Latest first"
+            kicker="Archive"
             title={`Every #${visibleLabel} piece`}
           />
           <div data-testid="tag-archive-list" className="flex flex-col">
