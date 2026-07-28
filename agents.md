@@ -42,7 +42,7 @@ footer. See `.github/CLOUD_LOOP.md` for the full convention.
 `pnpm verify` runs **before** every commit:
 
 ```
-typecheck → test:run → data:validate → build → e2e
+typecheck → lint → test:run → test:scripts → data:validate → build → size → e2e
 ```
 
 Every check is a hard gate. **Hermetic e2e is part of the gate** —
