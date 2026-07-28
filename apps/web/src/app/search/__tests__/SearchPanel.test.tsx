@@ -36,6 +36,7 @@ describe('<SearchPanel>', () => {
   afterEach(() => {
     vi.useRealTimers()
     vi.clearAllMocks()
+    vi.unstubAllGlobals()
   })
 
   it('shows the empty-query hint when no query is present', () => {
@@ -129,5 +130,21 @@ describe('<SearchPanel>', () => {
     const input = screen.getByRole('searchbox') as HTMLInputElement
     expect(input.value).toBe('gateron')
     expect(screen.getByTestId('search-results')).toBeInTheDocument()
+  })
+
+  it('autofocuses the input on a fine-pointer (desktop) visit', () => {
+    vi.stubGlobal('matchMedia', vi.fn().mockReturnValue({ matches: false }))
+
+    render(<SearchPanel allTags={ALL_TAGS} />)
+
+    expect(document.activeElement).toBe(screen.getByRole('searchbox'))
+  })
+
+  it('does not steal focus on a coarse-pointer (touch) visit', () => {
+    vi.stubGlobal('matchMedia', vi.fn().mockReturnValue({ matches: true }))
+
+    render(<SearchPanel allTags={ALL_TAGS} />)
+
+    expect(document.activeElement).not.toBe(screen.getByRole('searchbox'))
   })
 })

@@ -44,6 +44,10 @@ export function SearchPanel({ allTags }: SearchPanelProps): ReactElement {
   const inputRef = useRef<HTMLInputElement | null>(null)
 
   useEffect(() => {
+    // Coarse-pointer (touch) visits skip autofocus — stealing focus on
+    // load raises the on-screen keyboard before the reader has seen the
+    // heading/lede, and pushes AT focus past the page's own context.
+    if (window.matchMedia?.('(pointer: coarse)').matches) return
     inputRef.current?.focus()
   }, [])
 
