@@ -8538,7 +8538,7 @@ passes accumulate signals.)
 > Filed 2026-07-28 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 > **Resolved (2026-07-28):** shipped `zmk-wireless-split-firmware-guide.mdx` (guides pillar) — a ZMK wireless/split-keyboard firmware decision guide, differentiated from the existing `keyboard-firmware-compared.mdx` (wired QMK/VIA/VIAL trichotomy) and `zmk-mainstream-shift.mdx` (Trends-pillar market piece). `publishedAt` gap-filled to 2026-07-24 (largest 30-day-window gap, 07-20 to 07-28). Hero SVG + 3 inline-viz diagrams via `brander`. Language gate and mentionedParts gate both clean. `pnpm verify` full gate green (typecheck, test, data:validate, build, 1086/1086 e2e).
 
-### [ ] [cross-links] [4.5] split-ergo-buyers-guide ↔ zmk-wireless-split-firmware-guide — no prose cross-link (same pillar, ≥2 shared tags: split, beginner, wireless)
+### [x] [cross-links] [4.5] split-ergo-buyers-guide ↔ zmk-wireless-split-firmware-guide — no prose cross-link (same pillar, ≥2 shared tags: split, beginner, wireless) — addressed in 63dd722d, closes #635
 - category: cross-links
 - filed: 2026-07-28 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -8548,6 +8548,8 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/split-ergo-buyers-guide.mdx
 - article-b: apps/web/src/content/articles/zmk-wireless-split-firmware-guide.mdx
 - action: add [zmk-wireless-split-firmware-guide](/article/zmk-wireless-split-firmware-guide) to split-ergo-buyers-guide body, or vice versa
+- issue: #635
+> **Resolved (2026-07-28):** added inline link from split-ergo-buyers-guide's firmware-step pitfall paragraph to zmk-wireless-split-firmware-guide. `pnpm verify` full gate green: 1086/1086 e2e. `63dd722d`.
 
 ### [ ] [newsletter] [4.0] Weekly digest — issue 005 due (7 days since issue 4)
 - category: content-gaps
