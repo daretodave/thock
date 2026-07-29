@@ -1,4 +1,5 @@
 import type { ReactElement } from 'react'
+import Link from 'next/link'
 import { Container } from '@thock/ui'
 import {
   buildBreadcrumbListJsonLd,
@@ -114,9 +115,18 @@ export default async function CompareSwitchPage({
         />
 
         {!showTable && (
-          <p className="text-body text-text-2 pb-8">
-            Select two switches above to see a side-by-side spec comparison.
-          </p>
+          <div className="pb-8">
+            <p className="text-body text-text-2 mb-2">
+              Select two switches above to see a side-by-side spec comparison.
+            </p>
+            <Link
+              href="/quiz/switch"
+              data-testid="compare-quiz-link"
+              className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+            >
+              Not sure? Take the quiz →
+            </Link>
+          </div>
         )}
       </Container>
 

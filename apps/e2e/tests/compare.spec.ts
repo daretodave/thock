@@ -12,6 +12,13 @@ test.describe('/compare/switch — phase 44', () => {
     await expect(page.getByTestId('compare-button')).toBeDisabled()
   })
 
+  test('empty state links to the switch quiz', async ({ page }) => {
+    await page.goto('/compare/switch')
+    const quizLink = page.getByTestId('compare-quiz-link')
+    await expect(quizLink).toBeVisible()
+    await expect(quizLink).toHaveAttribute('href', '/quiz/switch')
+  })
+
   test('renders comparison table when two valid slugs are in query params', async ({
     page,
   }) => {
@@ -134,6 +141,13 @@ test.describe('/compare/board — phase 48', () => {
     await expect(page.getByTestId('compare-select-a')).toBeVisible()
     await expect(page.getByTestId('compare-select-b')).toBeVisible()
     await expect(page.getByTestId('compare-button')).toBeDisabled()
+  })
+
+  test('empty state links to browse all boards', async ({ page }) => {
+    await page.goto('/compare/board')
+    const browseLink = page.getByTestId('compare-browse-link')
+    await expect(browseLink).toBeVisible()
+    await expect(browseLink).toHaveAttribute('href', '/part/board')
   })
 
   test('renders comparison table when two valid slugs are in query params', async ({
