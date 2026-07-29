@@ -1317,7 +1317,7 @@
     {
       "slug": "wooting-60he",
       "kind": "board",
-      "name": "Wooting 60HE+"
+      "name": "Wooting 60HE"
     }
   ],
   "vendors": [
@@ -1409,5 +1409,5 @@
       "readTime": 4
     }
   ],
-  "generatedAt": "2026-07-28T21:44:01.916Z"
+  "generatedAt": "2026-07-29T05:28:10.215Z"
 }
