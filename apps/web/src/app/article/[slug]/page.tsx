@@ -37,7 +37,7 @@ export async function generateMetadata({
 }) {
   const { slug } = await params
   const article = getArticleBySlug(slug)
-  if (!article) return {}
+  if (!article) return { robots: { index: false, follow: false } }
 
   // The og:image is emitted by the colocated opengraph-image.tsx
   // route (Satori → PNG via next/og). The article's frontmatter

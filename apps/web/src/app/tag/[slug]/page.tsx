@@ -59,7 +59,7 @@ export async function generateMetadata({
 }) {
   const { slug } = await params
   const tag = getTagBySlug(slug)
-  if (!tag) return {}
+  if (!tag) return { robots: { index: false, follow: false } }
   const count = getArticlesByTag(tag.slug).length
   return buildMetadata({
     title: `#${tag.name}`,
