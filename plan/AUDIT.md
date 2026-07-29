@@ -84,6 +84,17 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [content] [4.5] buckling-spring-deep-dive names Durock T1 and Gateron Lanes in prose but omits both from mentionedParts — addressed in this commit, closes #659
+- category: content
+- filed: 2026-07-29 by cloud /iterate audit (fresh general-purpose sweep, angle: newest-article factual/reference audit)
+- impact: 5 (`buckling-spring-deep-dive.mdx` line 60 name-drops "Durock T1" and "Gateron Lanes" by exact catalog name, each linked to their sibling deep-dive article, but frontmatter declared `mentionedParts: []`. `getArticlesMentioningPart()` reads only frontmatter, not body prose, so `/part/switch/durock-t1` and `/part/switch/gateron-lanes`'s "mentioned in" rail silently omitted this article despite the explicit prose link — the same bug class fixed at issue #548 and elsewhere)
+- ease: 9 (two-entry frontmatter addition mirroring the existing `durock-t1-deep-dive.mdx` shape; no schema/code change)
+- score: 4.5 (impact × ease / 10)
+- evidence: `node scripts/article-parts-check.mjs --json` — the repo's own ship-time gate for this exact class — reported 2 violations (`durock-t1`, `gateron-lanes`, both line 60) before the fix, 0 after.
+- issue: #659
+> **Resolved (2026-07-29):** added `durock-t1` and `gateron-lanes` to `mentionedParts` frontmatter. `article-parts-check.mjs --json` now reports zero violations. `pnpm verify` full gate green: typecheck, unit tests, data:validate, build, 1100/1100 e2e.
+> Picked as the top signal this tick: no unlabeled GitHub issues (triage gate); not Monday-relevant (W31 snapshot already existed); no pending phases/data/content-gap work (all 7 mechanical surveys re-ran clean, no rows filed); march's own expand Step 3c gate not met (6 commits/~5.3h since pass 251, threshold 20 commits/48h). AUDIT.md's only other Pending rows remained the standing non-autonomous items (`[4.0]` Lighthouse-CI `/oversight` item, `[needs-user-call] [4.2]` soft-404 item, `[blocked-cloud-permission]` march.yml/heartbeat.yml items); CRITIQUE.md's only Pending row remains the non-actionable GA-beacon item. Dispatched a fresh general-purpose sweep with angles disjoint from recent passes (the two newest articles' factual accuracy + cross-links, compare-table null handling, /tools blurb accuracy, newsletter archive, manifest/search-index staleness) — this mentionedParts gap on the just-shipped buckling-spring-deep-dive was the one finding that cleared the 3.0 bar; cross-links, manifest/search-index sync, compare-table rendering, and /tools blurbs all came back clean.
+
 ### [x] [content-gaps] [4.2] Deep Dives pillar about to breach Rule 1 sliding-window freshness — both anchor articles age out within days — addressed in commit `da66d271`, closes #656
 - category: content-gaps
 - filed: 2026-07-29 by cloud /iterate audit (fresh general-purpose sweep, angle: pillar freshness proactive check)
