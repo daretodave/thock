@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Force versus travel — buckling spring shows a negative-slope cliff at the buckle point; an elastomer dome shows a smooth rounded peak with no discontinuity</title>
+
+  <!-- Axes -->
+  <line x1="120" y1="380" x2="1100" y2="380" stroke-opacity="0.55"/>
+  <line x1="120" y1="380" x2="120" y2="60" stroke-opacity="0.55"/>
+  <text x="120" y="410" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">top of travel</text>
+  <text x="1100" y="410" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6" text-anchor="end">bottom-out</text>
+  <text x="95" y="70" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.6">force</text>
+
+  <!-- Buckling-spring curve — rises, then a sharp cliff (negative slope), then rises again to bottom-out -->
+  <path d="
+    M 160 340
+    C 260 320, 360 260, 430 190
+    L 460 240
+    C 490 290, 520 300, 560 290
+    C 700 260, 900 200, 1060 110"
+    stroke="oklch(0.78 0.10 80)" stroke-width="3" stroke-opacity="0.95"/>
+
+  <!-- Buckle-point marker -->
+  <circle cx="430" cy="190" r="6" fill="oklch(0.78 0.10 80)" stroke="oklch(0.78 0.10 80)"/>
+  <line x1="430" y1="190" x2="430" y2="80" stroke-opacity="0.3" stroke-dasharray="3 5"/>
+  <text x="430" y="70" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.95">buckle point</text>
+
+  <!-- Cliff annotation -->
+  <path d="M 470 205 L 500 225" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.6" stroke-width="1.6"/>
+  <text x="560" y="245" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none" opacity="0.9">force drops — column has failed</text>
+
+  <text x="800" y="330" font-family="Newsreader, serif" font-size="17" font-style="italic" fill="oklch(0.78 0.10 80)" stroke="none" opacity="0.9">buckling spring — snap-through</text>
+
+  <!-- Elastomer dome comparison curve — smooth rounded peak, no discontinuity -->
+  <path d="
+    M 160 300
+    C 280 260, 340 130, 420 130
+    C 500 130, 560 260, 620 280
+    C 760 320, 900 280, 1060 200"
+    stroke-opacity="0.5" stroke-dasharray="6 6"/>
+  <text x="420" y="115" font-family="Newsreader, serif" font-size="16" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">elastomer dome — smooth collapse</text>
+
+  <text x="600" y="440" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">a dome's tactile bump is a peak; a buckling spring's is a cliff</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="32" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

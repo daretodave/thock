@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-29T16:49:00.000Z",
+  "commit": "62d82f51494962e04b25b040809f1701255d91e3",
+  "kind": "inline-viz",
+  "article_slug": "buckling-spring-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "why-the-snap-is-a-physics-event-not-a-dome-collapse",
+  "brief_summary": "Qualitative force-versus-travel schematic (no fabricated numeric axis values) contrasting a buckling spring's negative-slope 'cliff' at the buckle point against an elastomer dome's smooth, discontinuity-free rounded peak. Shape only — matches the article's described curve behavior, not measured data.",
+  "target": "apps/web/public/article-viz/buckling-spring-deep-dive/force-curve.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "buckling-spring-deep-dive.mdx § 'Why the snap is a physics event, not a dome collapse' — 'a bent column is easier to keep bending than a straight one is to keep straightening. That drop is a genuine negative slope in the force curve, the mechanical signature of what engineers call snap-through buckling: not a peak, a cliff.'",
+    "buckling-spring-deep-dive.mdx § 'Why the snap is a physics event, not a dome collapse' — 'Every tactile switch the modern hobby builds around... produces a local peak in its force curve: force rises, crests, and eases back down smoothly as the elastomer or leg deforms and releases.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/buckling-spring-deep-dive/force-curve.svg"],
+  "warnings": []
+}

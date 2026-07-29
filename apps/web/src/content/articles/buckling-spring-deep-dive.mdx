@@ -1,0 +1,84 @@
+---
+slug: buckling-spring-deep-dive
+title: "How buckling-spring switches actually work"
+description: "A coil spring compressed past its critical load, kinking sideways and flicking a hammer at a sense layer below. Not a dome collapsing — an actual mechanical failure event, engineered on purpose."
+lede: "thock has already reached for the buckling-spring snap twice — once to describe a Topre dome, once to describe a click-bar's sharpness — without ever explaining what a buckling spring actually is. The mechanism predates both, and it is stranger and more mechanically honest than either."
+author: thock
+pillar: deep-dives
+tags: [buckling-spring, ibm, tactile, clicky, deep-dive]
+publishedAt: '2026-07-26T14:00:00.000Z'
+updatedAt: '2026-07-26T14:00:00.000Z'
+heroImage: /hero-art/buckling-spring-deep-dive.svg
+heroImageAlt: "Line-drawing cross-section of an IBM Model M buckling-spring keyswitch, shown mid-buckle: a coil spring bowing sideways inside its guide barrel, handing off to a pivoting hammer/flipper on a fixed pivot, which strikes a raised contact pucker on a membrane sheet below — an amber focal dot and ring mark the strike point."
+wordCount: 1720
+featured: false
+popularityScore: 0
+mentionedParts: []
+---
+
+Most switch mechanisms fail gracefully. A rubber dome collapses. A leaf bends. A magnet drifts closer to a sensor. A buckling spring does something more violent: it is compressed until it becomes mechanically unstable and buckles sideways, all at once, on purpose. That instant of structural failure — not a dome giving way, not a leaf reaching a ledge — is the actuation event. It is also why a Model M sounds like nothing else on a desk, and why people who typed on one in 1988 will still tell you, unprompted, that nothing built since has quite matched it.
+
+## The mechanism, precisely
+
+<InlineViz
+  src="/article-viz/buckling-spring-deep-dive/buckling-mechanism.svg"
+  alt="Two-panel cross-section. Left panel, labelled 'before critical load': a coil spring standing upright inside a barrel stem, leaning slightly forward, with an upright hammer resting beside it. Right panel, labelled 'at the buckle': the same spring kinked sideways into a sharp bend, the hammer swung down on its pivot to strike a sense layer at the base, with an amber focal dot at the strike point."
+  caption="One spring does three jobs — return force, tactile event, and the mechanical trigger that trips the hammer. Nothing else in the stack senses the keypress."
+  accent="amber"
+/>
+
+A buckling-spring key position has three moving parts: the keycap and its stem, a coil spring, and a pivoting hammer (IBM's patents call it a rocker; the hobby calls it a hammer or a flipper). The stem sits on top of the spring inside a barrel-shaped housing. Critically, the spring is not mounted dead straight between two fixed points — it is seated with a slight forward lean built into the geometry, so that when it is loaded past its critical point it has only one direction available to fail in. That detail is what makes the mechanism repeatable rather than chaotic: an unbiased column under axial load can buckle in any direction, but a pre-bent one buckles the same way every time.
+
+As the keycap travels down, the spring compresses straight for the first stretch of travel, building resistance the way any compressed spring does. At a defined load, the column can no longer hold a straight shape and buckles — it kinks sideways, converting the vertical compression into a sideways kick against the hammer sitting beside it. The hammer, mounted on a pivot, gets flicked forward and down by that kick, and its far end strikes a sense layer at the base of the switch. The keycap keeps travelling to bottom-out after the buckle, but the actuation has already happened — the buckle event and the switch trip are the same instant.
+
+This is the detail that separates a buckling spring from every rubber-dome or leaf-spring tactile mechanism the modern hobby builds around: nothing here is elastomer, and nothing here is a beam reaching a stop. The spring's failure under load is the switch. <Source href="https://en.wikipedia.org/wiki/Buckling_spring">Wikipedia's summary calls it "a non-teasible, snap action, tactile feedback key mechanism of extreme mechanical simplicity and high reliability"</Source> — three adjectives that all trace back to the fact that one steel part is doing the job three separate parts do in an MX-style switch: spring, tactile leaf, and stem all at once.
+
+## Two lineages, one spring
+
+<InlineViz
+  src="/article-viz/buckling-spring-deep-dive/two-lineages.svg"
+  alt="Side-by-side comparison. Left column, labelled 'Model F — capacitive PCB': a hammer approaching two circular capacitor pads on a pad card, annotated 'plates never touch each other', beside an amber bar reaching roughly full height labelled 'about 100 million actuations'. Right column, labelled 'Model M — membrane contact': a hammer pressed flush against a membrane sheet with a contact dot, a shorter amber bar labelled 'about 25 million actuations'."
+  caption="Same spring, same buckle, two different sense layers underneath it — and a fourfold difference in rated life between them."
+  accent="amber"
+/>
+
+IBM shipped two distinct sensing layers under the same spring-and-hammer mechanism, and the distinction matters more than most retrospectives credit. The earlier Model F, built around a mechanism <Source href="https://en.wikipedia.org/wiki/Buckling_spring">patented in 1971 by Richard Hunter Harris</Source>, put a capacitive PCB — a "pad card" — under the hammer: the buckle drives the conductive hammer down toward a pair of plates on that card, and the controller reads the resulting shift in capacitance between the plates rather than waiting for either plate to touch the other. The two plates the reading depends on never close a circuit against each other. There is no electrical contact to wear. <Source href="https://deskthority.net/wiki/IBM_buckling_spring">Deskthority's writeup puts the Model F's rated life at roughly 100 million actuations</Source>, a figure that survives specifically because nothing in the sense path ever touches anything else.
+
+The Model M, developed by IBM engineer Edwin T. Coleman III in the early 1980s to cut the cost of the Model F's capacitive PCB, replaced that sense layer with a membrane assembly — two flexible sheets with printed carbon traces, where the hammer's strike presses the sheets together to close a circuit. Mechanically the buckle is identical; electrically it is a plain contact switch, no different in principle from the rubber-dome keyboards it gets unfairly lumped in with. The trade-off is durability: contacts wear, and traces degrade with dust and moisture in a way a sealed capacitive gap does not. <Source href="https://deskthority.net/wiki/IBM_buckling_spring">The same source lists the Model M's rated life at roughly 25 million actuations</Source> — a quarter of the Model F's figure, and the actual bottleneck in almost every degraded vintage board still floating around secondhand markets. When a forty-year-old Model M develops dead keys, it is almost always the membrane, never the spring.
+
+That's the detail worth sitting with: the buckling spring itself was never the durability story. It was always the sense layer underneath it, and IBM built two very different ones.
+
+## Why the snap is a physics event, not a dome collapse
+
+<InlineViz
+  src="/article-viz/buckling-spring-deep-dive/force-curve.svg"
+  alt="Force-versus-travel line chart. An amber curve rises steadily, then drops sharply downward at a labelled 'buckle point' before rising again toward bottom-out — a visible cliff in the curve. A dashed grey comparison curve labelled 'elastomer dome' rises smoothly to a rounded peak and eases back down with no discontinuity."
+  caption="A dome's tactile bump is a smooth local peak. A buckling spring's is a cliff — the load actually drops as the column fails."
+  accent="amber"
+/>
+
+Every tactile switch the modern hobby builds around — Topre's rubber dome, a Boba U4T's D-shaped plateau, a Holy Panda's tactile leg — produces a *local* peak in its force curve: force rises, crests, and eases back down smoothly as the elastomer or leg deforms and releases. A buckling spring's force curve does something else entirely. As the column compresses toward its critical load, the resisting force climbs in something close to a rising curve, and then — at the instant of buckling — the force needed to keep compressing the column actually falls. The column has gone from a straight, stiff shape to a bent, compliant one, and a bent column is easier to keep bending than a straight one is to keep straightening. That drop is a genuine negative slope in the force curve, the mechanical signature of what engineers call snap-through buckling: not a peak, a cliff.
+
+The practical result is that a buckling spring feels like something briefly gave way underfoot, because something did. thock's own Topre piece describes the HHKB's dome-collapse tactile event as ["closer in character to a buckling-spring snap than to a rounded MX tactile bump"](/article/topre-electrocapacitive-deep-dive) — that comparison is doing real work, because Topre's dome is still an elastomer collapsing under compression, a smooth local peak dressed up to feel sharp. A buckling spring's cliff is not dressed up. It is the actual force curve of a column losing its structural integrity, once per keystroke, tens of millions of times over a working life, without the steel itself wearing out the way that description would suggest.
+
+<PullQuote>A buckling spring switch doesn't gracefully decide a keypress happened. It fails first, structurally, and the failure is the signal.</PullQuote>
+
+<Callout type="warn" title="This isn't a moddable platform">
+A Model M or a Unicomp reissue is not a hobbyist build target in the way an MX-compatible board is. There is no hot-swap socket, no QMK or VIA layer, and historically no way to change the spring weight, the hammer geometry, or the sense layer without machining new parts. Full-size 101/104-key and 122-key layouts also predate the 60%/65%/75% custom-keyboard footprint entirely — a stock Model M does not fit the desk real estate most modern builds are designed around. The entire modding lever available to a buckling-spring owner is a lube-and-clean pass on the barrel-and-spring assembly; everything else about the mechanism is fixed.
+</Callout>
+
+## Built to outlast the desk it sits on
+
+The spring itself is close to the one part in a modern keyboard that does not meaningfully wear. Steel coil springs operated well below their yield point have fatigue lives measured in the tens of millions of cycles before crack initiation becomes a real risk, and a buckling spring's peak load sits comfortably inside that margin — which is why the failure mode in an old Model M is reliably the sense layer (a worn membrane trace, a dusty capacitive board) and essentially never the spring. Elastomer domes degrade by a different mechanism entirely: compression set, where the rubber slowly stops fully returning to its rest shape after repeated compression, softening the tactile event over years. A steel spring under axial load does not have a comparable slow-decay failure mode; it works the same on cycle one and cycle twenty million, until it doesn't, and then it is a hard failure rather than a soft one.
+
+That durability profile is also a manufacturing story, not just a materials one. <Source href="https://en.wikipedia.org/wiki/Unicomp">Unicomp was founded in 1996 by Neil Muyskens and a group of former IBM and Lexmark employees</Source>, after Lexmark's five-year keyboard contract with IBM ended. Rather than the tooling being scrapped, Unicomp bought the license, the design rights, and the original machinery, and moved production to Lexington, Kentucky, where it still builds the Model M's descendants on much of that same equipment — a continuity most "heritage" switch designs, reverse-engineered from old samples rather than built on the original line, don't have.
+
+## Where the following lives
+
+The constituency this piece is closing the gap on has already shown up twice in thock's own archive without being named. The clicky-switches deep dive noted that ["touch-typists who learned on IBM Model M buckling-springs in the 1980s and 1990s mostly want the acoustic confirmation that a keypress registered"](/article/clicky-switches-deep-dive), and identified them as the anchor cohort keeping the entire clicky-switch category alive. That is not incidental — a click-jacket or click-bar switch is explicitly chasing an acoustic signature the buckling spring set the reference point for decades earlier, with a genuinely different mechanism producing a genuinely different sound underneath the resemblance.
+
+Unicomp's current lineup — the New Model M, the tenkeyless Mini M, and the EnduraPro with an integrated pointing stick — keeps the membrane-sensed lineage in continuous production, still assembled in Lexington, still using the same spring-and-hammer geometry IBM shipped in the 1980s. Separately, a smaller reproduction effort has gone the other direction: <Source href="https://www.modelfkeyboards.com/">Model F Keyboards manufactures new-built reproductions of the earlier Model F</Source>, reviving the capacitive-PCB sense layer rather than the membrane one, in both full-size and compact layouts. Between the two, both branches of IBM's original fork — cheap-and-contact versus durable-and-non-contact — are back in active, if small-scale, production at the same time, which was not true for most of the 2000s and 2010s.
+
+## What to watch
+
+The buckling spring is never going to compete for the 65% gasket-mount custom market — the mechanism's hammer geometry needs vertical clearance that a low-profile board simply does not have, and the sound is the opposite of what that scene has spent five years engineering toward. What is worth watching is whether the capacitive-PCB revival stays a boutique curiosity or grows into a real second track: a non-contact sense layer with a 100-million-actuation rating is a genuinely better engineering answer than almost anything the hobby ships today, buckling spring or otherwise, and it has never had a fair shot at modern layouts, modern keycap compatibility, or modern price points. If that reproduction effort scales, the interesting story will not be nostalgia. It will be a forty-year-old non-contact sensing architecture quietly outlasting several generations of switches built to replace it.

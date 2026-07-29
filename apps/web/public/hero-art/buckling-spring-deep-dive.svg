@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — IBM Model M buckling-spring keyswitch cross-section: coil spring bowing sideways mid-buckle inside its guide barrel, striking a pivoting hammer/flipper that trips a membrane contact point below</title>
+
+  <!-- Ochre wash — a soft vertical-ish ellipse spanning the buckle-to-strike zone
+       (barrel/spring through hammer through membrane contact). Single splash,
+       single hue, muted chroma for an industrial/vintage read rather than a
+       bright illustrative one. -->
+  <ellipse cx="630" cy="500" rx="310" ry="150" fill="oklch(0.70 0.115 76 / 0.10)" stroke="none"/>
+
+  <!-- ════════════════════════════════════════════════════════════════════════════
+       COMPOSITION: single switch cross-section, centered horizontally.
+       Five tiers, separated by dashed explode lines:
+         Tier A: Keycap                          y  100–206
+         Tier B: Stem                            y  225–350
+         Tier C: Guide barrel + buckling spring   y  352–520
+         Tier D: Hammer / flipper                 y  525–590
+         Tier E: Membrane / contact layer          y  598–650
+       ════════════════════════════════════════════════════════════════════════════ -->
+
+  <!-- Small "finger about to press" arrow above the keycap -->
+  <g stroke-opacity="0.55">
+    <line x1="600" y1="68" x2="600" y2="94"/>
+    <path d="M 593 88 L 600 98 L 607 88"/>
+  </g>
+
+  <!-- ── TIER A — KEYCAP ─────────────────────────────────────────────────────── -->
+  <g>
+    <path d="
+      M 470 108
+      L 730 108
+      C 736 108, 740 112, 740 118
+      L 740 158
+      C 740 164, 736 168, 730 168
+      L 470 168
+      C 464 168, 460 164, 460 158
+      L 460 118
+      C 460 112, 464 108, 470 108
+      Z" />
+    <!-- Slight sculpted-top dish -->
+    <path d="M 495 120 C 550 132, 650 132, 705 120" stroke-opacity="0.45"/>
+    <!-- Skirt walls dropping to the mounting rim -->
+    <path d="M 460 168 L 443 206 L 757 206 L 740 168" stroke-opacity="0.75"/>
+    <line x1="443" y1="206" x2="757" y2="206" stroke-opacity="0.55"/>
+    <!-- Cruciform-style under-mount slot -->
+    <path d="M 585 206 L 615 206 L 615 218 L 585 218 Z" stroke-opacity="0.5"/>
+  </g>
+
+  <!-- Explode line A -->
+  <line x1="380" y1="215" x2="820" y2="215" stroke-dasharray="4 6" stroke-opacity="0.32"/>
+  <circle cx="600" cy="215" r="2.5" stroke-opacity="0.5"/>
+
+  <!-- ── TIER B — STEM ───────────────────────────────────────────────────────── -->
+  <g>
+    <path d="M 583 225 L 617 225 L 617 344 L 583 344 Z"/>
+    <line x1="600" y1="232" x2="600" y2="338" stroke-opacity="0.4" stroke-dasharray="3 5"/>
+    <!-- Small asymmetric guide flange at the stem foot — the off-centre bias that
+         seeds the buckle's preferred direction -->
+    <path d="M 617 336 L 630 342 L 617 348 Z" stroke-opacity="0.45"/>
+  </g>
+
+  <!-- Explode line B -->
+  <line x1="380" y1="352" x2="820" y2="352" stroke-dasharray="4 6" stroke-opacity="0.32"/>
+  <circle cx="600" cy="352" r="2.5" stroke-opacity="0.5"/>
+
+  <!-- ── TIER C — GUIDE BARREL + BUCKLING SPRING ─────────────────────────────── -->
+  <g>
+    <!-- Barrel collar / mouth, gapped where the stem passes through -->
+    <line x1="470" y1="356" x2="583" y2="356" stroke-opacity="0.6"/>
+    <line x1="617" y1="356" x2="730" y2="356" stroke-opacity="0.6"/>
+    <!-- Barrel outer walls -->
+    <line x1="470" y1="356" x2="470" y2="515" stroke-opacity="0.82"/>
+    <line x1="730" y1="356" x2="730" y2="515" stroke-opacity="0.82"/>
+    <!-- Barrel inner walls -->
+    <line x1="486" y1="356" x2="486" y2="515" stroke-opacity="0.32"/>
+    <line x1="714" y1="356" x2="714" y2="515" stroke-opacity="0.32"/>
+    <!-- Barrel base collar -->
+    <line x1="470" y1="515" x2="730" y2="515" stroke-opacity="0.6"/>
+
+    <!-- Reference axis — where the spring would sit if it were compressing straight
+         down. The visible gap between this dashed line and the drawn coils is the
+         entire point: this is a sideways buckle, not a vertical compression. -->
+    <line x1="600" y1="365" x2="600" y2="495" stroke-opacity="0.26" stroke-dasharray="2 4"/>
+
+    <!-- Coil spring, uniform diameter, leaning progressively further right as it
+         descends — a snapshot mid-buckle, caught leaning into the barrel wall
+         rather than resolved back to centre. -->
+    <ellipse cx="600"   cy="365" rx="42" ry="9"/>
+    <ellipse cx="605.5" cy="387" rx="42" ry="9"/>
+    <ellipse cx="614.4" cy="408" rx="42" ry="9"/>
+    <ellipse cx="624.4" cy="430" rx="42" ry="9"/>
+    <ellipse cx="635.3" cy="452" rx="42" ry="9"/>
+    <ellipse cx="647.3" cy="473" rx="42" ry="9"/>
+    <ellipse cx="660"   cy="495" rx="42" ry="9"/>
+
+    <!-- Helical connecting strokes, left and right tangents between successive coils,
+         so the stack reads as a wound spring rather than stacked rings -->
+    <g stroke-opacity="0.65">
+      <path d="M 558   365 L 563.5 387"/>
+      <path d="M 563.5 387 L 572.4 408"/>
+      <path d="M 572.4 408 L 582.4 430"/>
+      <path d="M 582.4 430 L 593.3 452"/>
+      <path d="M 593.3 452 L 605.3 473"/>
+      <path d="M 605.3 473 L 618   495"/>
+
+      <path d="M 642   365 L 647.5 387"/>
+      <path d="M 647.5 387 L 656.4 408"/>
+      <path d="M 656.4 408 L 666.4 430"/>
+      <path d="M 666.4 430 L 677.3 452"/>
+      <path d="M 677.3 452 L 689.3 473"/>
+      <path d="M 689.3 473 L 702   495"/>
+    </g>
+
+    <!-- Buckle-direction motion chevron, splash hue -->
+    <path d="M 663 478 L 677 484 L 663 490" stroke="oklch(0.70 0.115 76)" stroke-opacity="0.75"/>
+  </g>
+
+  <!-- Explode line C -->
+  <line x1="380" y1="520" x2="820" y2="520" stroke-dasharray="4 6" stroke-opacity="0.32"/>
+  <circle cx="600" cy="520" r="2.5" stroke-opacity="0.5"/>
+
+  <!-- ── TIER D — HAMMER / FLIPPER ────────────────────────────────────────────── -->
+  <g>
+    <!-- Force hand-off from the buckled spring foot down onto the flipper, splash hue -->
+    <g stroke="oklch(0.70 0.115 76)" stroke-opacity="0.8">
+      <line x1="660" y1="503" x2="660" y2="540"/>
+      <path d="M 654 534 L 660 542 L 666 534"/>
+    </g>
+
+    <!-- Fixed pivot / hinge -->
+    <circle cx="545" cy="548" r="4" stroke-opacity="0.85"/>
+    <path d="M 539 548 L 551 548 L 545 559 Z" stroke-opacity="0.6"/>
+    <g stroke-opacity="0.4">
+      <line x1="539" y1="559" x2="549" y2="565"/>
+      <line x1="545" y1="559" x2="555" y2="565"/>
+      <line x1="551" y1="559" x2="561" y2="565"/>
+    </g>
+
+    <!-- Lever at rest (reference) -->
+    <line x1="545" y1="548" x2="665" y2="548" stroke-opacity="0.28" stroke-dasharray="3 5"/>
+    <!-- Lever, tripped by the buckle, rotated down at its far end -->
+    <line x1="545" y1="548" x2="665" y2="585" stroke-opacity="0.92"/>
+    <!-- Striker foot -->
+    <circle cx="665" cy="585" r="7" stroke-opacity="0.9"/>
+
+    <!-- Swept-motion arc, splash hue, from rest position to tripped position -->
+    <path d="M 665 548 Q 690 566, 665 585" stroke="oklch(0.70 0.115 76)" stroke-opacity="0.5" stroke-dasharray="2 4"/>
+  </g>
+
+  <!-- Explode line D -->
+  <line x1="380" y1="598" x2="820" y2="598" stroke-dasharray="4 6" stroke-opacity="0.32"/>
+  <circle cx="600" cy="598" r="2.5" stroke-opacity="0.5"/>
+
+  <!-- ── TIER E — MEMBRANE / CONTACT LAYER ────────────────────────────────────── -->
+  <g>
+    <!-- Membrane top surface, with a small raised contact pucker directly under
+         the striker foot -->
+    <path d="
+      M 380 610
+      L 630 610
+      C 645 610, 650 598, 665 598
+      C 680 598, 685 610, 700 610
+      L 820 610" stroke-opacity="0.9"/>
+    <!-- Membrane thickness -->
+    <line x1="380" y1="610" x2="380" y2="624" stroke-opacity="0.5"/>
+    <line x1="820" y1="610" x2="820" y2="624" stroke-opacity="0.5"/>
+    <line x1="380" y1="624" x2="820" y2="624" stroke-opacity="0.45"/>
+    <!-- PCB plane hint beneath the membrane -->
+    <line x1="390" y1="632" x2="810" y2="632" stroke-opacity="0.2" stroke-dasharray="2 6"/>
+    <!-- Contact traces leaving the strike zone -->
+    <path d="M 610 624 L 610 645 L 520 645" stroke-opacity="0.5"/>
+    <path d="M 720 624 L 720 645 L 800 645" stroke-opacity="0.5"/>
+  </g>
+
+  <!-- Splash focal anchor — the actuation point: where the tripped hammer's foot
+       closes the contact. Family convention: filled dot + outer ring. -->
+  <circle cx="665" cy="598" r="6.5" fill="oklch(0.70 0.115 76 / 0.95)" stroke="oklch(0.70 0.115 76)"/>
+  <circle cx="665" cy="598" r="13" stroke="oklch(0.70 0.115 76)" stroke-opacity="0.5" fill="none"/>
+
+  <!-- ── DIDACTIC MEASUREMENT TICKS (left margin) ─────────────────────────────── -->
+  <g stroke-opacity="0.28">
+    <line x1="382" y1="138" x2="394" y2="138"/>
+    <line x1="382" y1="285" x2="394" y2="285"/>
+    <line x1="382" y1="433" x2="394" y2="433"/>
+    <line x1="382" y1="565" x2="394" y2="565"/>
+    <line x1="382" y1="615" x2="394" y2="615"/>
+  </g>
+  <line x1="388" y1="138" x2="388" y2="615" stroke-opacity="0.14" stroke-dasharray="2 6"/>
+
+  <!-- ── LABEL ZONE — micro annotations ───────────────────────────────────────── -->
+  <text x="420" y="142" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.50" stroke="none" letter-spacing="0.05em">KEYCAP</text>
+  <text x="420" y="289" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.50" stroke="none" letter-spacing="0.05em">STEM</text>
+  <text x="420" y="433" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.50" stroke="none" letter-spacing="0.05em">GUIDE BARREL</text>
+  <text x="420" y="563" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.50" stroke="none" letter-spacing="0.05em">HAMMER</text>
+  <text x="420" y="618" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.50" stroke="none" letter-spacing="0.05em">MEMBRANE</text>
+
+  <text x="705" y="460" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.70 0.115 76)" fill-opacity="0.75" stroke="none" letter-spacing="0.05em">BUCKLE</text>
+  <text x="705" y="580" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.70 0.115 76)" fill-opacity="0.75" stroke="none" letter-spacing="0.05em">STRIKE POINT</text>
+
+  <!-- Leader lines connecting labels to their features -->
+  <line x1="700" y1="456" x2="680" y2="450" stroke-opacity="0.35" stroke-width="1"/>
+  <line x1="715" y1="588" x2="678" y2="600" stroke-opacity="0.35" stroke-width="1"/>
+
+  <!-- ── JetBrains Mono technical caption ──────────────────────────────────────── -->
+  <text x="420" y="710" font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace" font-size="10" fill="oklch(0.78 0.005 90)" fill-opacity="0.38" stroke="none" letter-spacing="0.03em">IBM MODEL M — BUCKLING SPRING KEYSWITCH, SHOWN MID-BUCKLE</text>
+
+  <!-- ── BRONZE THEME DOT — family ornamental anchor, upper-right margin ───────── -->
+  <circle cx="1148" cy="92" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

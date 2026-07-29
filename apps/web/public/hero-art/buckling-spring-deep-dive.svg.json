@@ -1,0 +1,29 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored SVG (no raster pipeline)",
+  "at": "2026-07-29T16:40:51.000Z",
+  "commit": "62d82f51494962e04b25b040809f1701255d91e3",
+  "kind": "hero-art",
+  "source": null,
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "JetBrains Mono"],
+  "article_slug": "buckling-spring-deep-dive",
+  "article_pillar": "deep-dives",
+  "subject": "IBM Model M buckling-spring keyswitch cross-section, five exploded tiers: keycap, stem, guide barrel with coil spring caught mid-buckle (leaning progressively sideways rather than compressing straight down), a pivoting hammer/flipper tripped by the buckle, and a membrane/contact layer beneath",
+  "motif": "single switch cross-section, exploded vertical tiers",
+  "splashHue": "ochre",
+  "splashColor": "oklch(0.70 0.115 76)",
+  "accent_color": {
+    "name": "warm-bronze (theme accent)",
+    "oklch": "oklch(0.80 0.135 75)"
+  },
+  "canvas": "1200x750",
+  "strokeWeight": "2px",
+  "strokeColor": "oklch(0.78 0.005 90)",
+  "outputs": [
+    "apps/web/public/hero-art/buckling-spring-deep-dive.svg",
+    "apps/web/public/hero-art/buckling-spring-deep-dive.svg.json"
+  ],
+  "warnings": [],
+  "notes": "Five-tier exploded cross-section, dashed explode lines between each: (A) keycap silhouette with a small 'finger about to press' arrow above; (B) stem post with a small asymmetric guide flange at its foot, hinting at the off-centre bias that seeds a consistent buckle direction; (C) guide barrel (housing walls) containing a coil spring drawn as seven uniform-diameter coils whose centre-x leans progressively further right descending the column — a snapshot caught mid-buckle, leaning toward the barrel's inner wall rather than resolved back to centre. A dashed reference axis at x=600 runs the full height of the spring tier so the reader can see the growing lateral gap between 'where a straight compression would sit' and where the coils actually are — that gap is the article's whole point, the buckle IS the mechanical event, not incidental to it; (D) a pivoting hammer/flipper: fixed hinge with a ground/fixed-support symbol on the left, a dashed rest-position lever and a solid tripped-position lever swept down at its far end, plus a swept-motion arc and a splash-hue force arrow showing the buckled spring's lower coil handing off its load onto the flipper; (E) a membrane/contact layer with a small raised contact pucker directly under the flipper's foot, two contact traces leaving the strike zone, and a splash-hue focal dot+ring marking the exact actuation point — the family's standard 'this is where the event completes' motif. Ochre chosen per brief, muted to oklch(0.70 0.115 76) (lower L and C than the ochre used by clicky-switches-deep-dive at hue 80 and gateron-lanes-tactile-deep-dive at hue 82) for a warmer, more desaturated, industrial/vintage read suited to the IBM Model M subject rather than a bright illustrative one. Brass-bronze ornamental dot at top-right and left-margin didactic tier ticks with connecting spine preserved per hero-art family convention. IBM Plex Sans micro-labels for the five structural tiers (neutral) plus two ochre labels ('BUCKLE', 'STRIKE POINT') at the two focal events; one small JetBrains Mono caption at the bottom margin naming the mechanism. No fabricated specs or numeric claims — the caption is descriptive only."
+}

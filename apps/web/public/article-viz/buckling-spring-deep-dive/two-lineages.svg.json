@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-29T16:47:00.000Z",
+  "commit": "62d82f51494962e04b25b040809f1701255d91e3",
+  "kind": "inline-viz",
+  "article_slug": "buckling-spring-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "two-lineages-one-spring",
+  "brief_summary": "Side-by-side comparison of the two IBM sense-layer lineages built under the same buckling spring: Model F's non-contact capacitive PCB pair (hammer hovers, gap never closes) rated near 100 million actuations, versus Model M's membrane sheet (hammer physically closes the contact) rated near 25 million actuations. Bars are drawn at a 4:1 height ratio matching the cited figures.",
+  "target": "apps/web/public/article-viz/buckling-spring-deep-dive/two-lineages.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "JetBrains Mono"],
+  "data_sources": [
+    "buckling-spring-deep-dive.mdx § 'Two lineages, one spring' — 'Deskthority's writeup puts the Model F's rated life at roughly 100 million actuations, a figure that survives specifically because nothing in the sense path ever touches anything else.'",
+    "buckling-spring-deep-dive.mdx § 'Two lineages, one spring' — 'The same source lists the Model M's rated life at roughly 25 million actuations — a quarter of the Model F's figure.'",
+    "buckling-spring-deep-dive.mdx § 'Two lineages, one spring' — 'the buckle drives the conductive hammer down toward a pair of plates on that card, and the controller reads the resulting shift in capacitance between the plates rather than waiting for either plate to touch the other. The two plates the reading depends on never close a circuit against each other... a membrane assembly — two flexible sheets with printed carbon traces, where the hammer's strike physically presses the sheets together to close a circuit.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/buckling-spring-deep-dive/two-lineages.svg"],
+  "warnings": []
+}

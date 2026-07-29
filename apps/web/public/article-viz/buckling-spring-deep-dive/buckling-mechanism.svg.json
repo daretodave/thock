@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-29T16:45:00.000Z",
+  "commit": "62d82f51494962e04b25b040809f1701255d91e3",
+  "kind": "inline-viz",
+  "article_slug": "buckling-spring-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "the-mechanism-precisely",
+  "brief_summary": "Two-panel cross-section contrasting the switch's state just before critical load (spring straight, hammer upright, gap to the sense layer intact) against the instant of buckling (spring kinked sideways, hammer swung down on its pivot, striking the sense layer). Establishes that the buckle event and the actuation event are the same instant.",
+  "target": "apps/web/public/article-viz/buckling-spring-deep-dive/buckling-mechanism.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "buckling-spring-deep-dive.mdx § 'The mechanism, precisely' — 'As the keycap travels down, the spring compresses straight for the first stretch of travel... At a defined load, the column can no longer hold a straight shape and buckles — it kinks sideways, converting the vertical compression into a sideways kick against the hammer sitting beside it. The hammer, mounted on a pivot, gets flicked forward and down by that kick, and its far end strikes a sense layer at the base of the switch.'",
+    "buckling-spring-deep-dive.mdx § 'The mechanism, precisely' — 'the spring is not mounted dead straight between two fixed points — it is seated with a slight forward lean built into the geometry, so that when it is loaded past its critical point it has only one direction available to fail in.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/buckling-spring-deep-dive/buckling-mechanism.svg"],
+  "warnings": []
+}

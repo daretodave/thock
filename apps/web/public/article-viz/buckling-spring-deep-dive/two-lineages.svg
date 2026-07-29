@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Two IBM sense-layer lineages under the same buckling spring — Model F's capacitive PCB rated near 100 million actuations, versus Model M's membrane contact rated near 25 million actuations</title>
+
+  <line x1="600" y1="80" x2="600" y2="560" stroke-opacity="0.2"/>
+
+  <!-- ═════ LEFT: MODEL F — CAPACITIVE PCB ═════ -->
+  <text x="300" y="105" font-family="Newsreader, serif" font-size="24" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Model F</text>
+  <text x="300" y="130" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">capacitive PCB — no contact</text>
+
+  <!-- Hammer hovering above two capacitor plates, gap visible -->
+  <g stroke-opacity="0.9">
+    <circle cx="300" cy="200" r="6"/>
+    <line x1="300" y1="206" x2="300" y2="240"/>
+  </g>
+  <ellipse cx="300" cy="248" rx="8" ry="4" stroke-opacity="0.5"/>
+
+  <!-- gap indicator -->
+  <line x1="300" y1="252" x2="300" y2="278" stroke-opacity="0.35" stroke-dasharray="2 4"/>
+  <text x="322" y="268" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.10 80)" stroke="none" opacity="0.9">plates never touch each other</text>
+
+  <!-- two capacitive plates -->
+  <rect x="230" y="282" width="60" height="14" rx="3" stroke-opacity="0.75"/>
+  <rect x="310" y="282" width="60" height="14" rx="3" stroke-opacity="0.75"/>
+  <text x="300" y="320" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">capacitive plate pair</text>
+
+  <!-- Actuation-life bar — tall -->
+  <rect x="260" y="360" width="80" height="180" fill="oklch(0.78 0.10 80 / 0.85)" stroke="oklch(0.78 0.10 80)"/>
+  <text x="300" y="352" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.95">rated life</text>
+  <text x="300" y="580" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">~100 million actuations</text>
+
+  <!-- ═════ RIGHT: MODEL M — MEMBRANE CONTACT ═════ -->
+  <text x="900" y="105" font-family="Newsreader, serif" font-size="24" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Model M</text>
+  <text x="900" y="130" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">membrane contact — physical closure</text>
+
+  <!-- Hammer pressed flush against membrane -->
+  <g stroke-opacity="0.9">
+    <circle cx="900" cy="200" r="6"/>
+    <line x1="900" y1="206" x2="900" y2="278"/>
+  </g>
+
+  <!-- membrane sheet, flexed at contact -->
+  <path d="M 830 282 L 870 282 C 885 282 885 296 900 296 C 915 296 915 282 930 282 L 970 282" stroke-opacity="0.85"/>
+  <line x1="830" y1="296" x2="970" y2="296" stroke-opacity="0.5"/>
+  <circle cx="900" cy="290" r="3.5" fill="oklch(0.78 0.10 80)" stroke="oklch(0.78 0.10 80)"/>
+  <text x="900" y="320" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">carbon-trace membrane sheet</text>
+
+  <!-- Actuation-life bar — shorter, roughly a quarter height -->
+  <rect x="860" y="495" width="80" height="45" fill="oklch(0.78 0.10 80 / 0.85)" stroke="oklch(0.78 0.10 80)"/>
+  <text x="900" y="352" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.95">rated life</text>
+  <text x="900" y="580" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">~25 million actuations</text>
+
+  <!-- shared baseline -->
+  <line x1="200" y1="540" x2="1000" y2="540" stroke-opacity="0.3"/>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

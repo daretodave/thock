@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Buckling-spring mechanism — before critical load (spring straight, hammer upright) versus at the buckle (spring kinked sideways, hammer swung down to strike the sense layer)</title>
+
+  <!-- Vertical divider -->
+  <line x1="600" y1="80" x2="600" y2="520" stroke-opacity="0.2"/>
+
+  <!-- ═════ LEFT PANEL: BEFORE CRITICAL LOAD ═════ -->
+  <text x="300" y="105" font-family="Newsreader, serif" font-size="24" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">before critical load</text>
+  <text x="300" y="130" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">spring compressing straight, hammer at rest</text>
+
+  <ellipse cx="300" cy="330" rx="170" ry="150" fill="oklch(0.78 0.10 80 / 0.06)" stroke="none"/>
+
+  <!-- Barrel housing -->
+  <path d="M 230 175 L 370 175 L 370 470 L 230 470 Z" stroke-opacity="0.5"/>
+
+  <!-- Keycap stub at top -->
+  <path d="M 260 155 L 340 155 L 340 175 L 260 175 Z" stroke-opacity="0.8"/>
+
+  <!-- Spring — straight, slightly pre-bent (leaning right), stacked ellipses -->
+  <g stroke-opacity="0.85">
+    <ellipse cx="298" cy="205" rx="34" ry="7"/>
+    <ellipse cx="300" cy="230" rx="34" ry="7"/>
+    <ellipse cx="302" cy="255" rx="34" ry="7"/>
+    <ellipse cx="304" cy="280" rx="34" ry="7"/>
+    <ellipse cx="306" cy="305" rx="34" ry="7"/>
+    <ellipse cx="308" cy="330" rx="34" ry="7"/>
+    <ellipse cx="310" cy="355" rx="34" ry="7"/>
+  </g>
+  <line x1="298" y1="198" x2="312" y2="362" stroke-opacity="0.3" stroke-dasharray="2 4"/>
+
+  <!-- Hammer — upright, resting beside spring base -->
+  <g stroke-opacity="0.9">
+    <line x1="352" y1="400" x2="352" y2="440"/>
+    <circle cx="352" cy="400" r="6"/>
+    <line x1="346" y1="440" x2="358" y2="440"/>
+  </g>
+  <text x="380" y="404" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">hammer, upright</text>
+
+  <!-- Sense layer at base -->
+  <line x1="230" y1="470" x2="370" y2="470" stroke-opacity="0.6"/>
+  <line x1="230" y1="470" x2="230" y2="490" stroke-opacity="0.5"/>
+  <line x1="370" y1="470" x2="370" y2="490" stroke-opacity="0.5"/>
+  <line x1="230" y1="490" x2="370" y2="490" stroke-opacity="0.5"/>
+  <!-- gap between hammer and sense layer, emphasized -->
+  <line x1="340" y1="440" x2="340" y2="468" stroke-opacity="0.3" stroke-dasharray="2 4"/>
+
+  <text x="300" y="540" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">column loading straight</text>
+  <text x="300" y="560" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">force rising, no actuation yet</text>
+
+  <!-- ═════ RIGHT PANEL: AT THE BUCKLE ═════ -->
+  <text x="900" y="105" font-family="Newsreader, serif" font-size="24" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">at the buckle</text>
+  <text x="900" y="130" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">column kinks sideways, hammer trips</text>
+
+  <ellipse cx="900" cy="330" rx="170" ry="150" fill="oklch(0.78 0.10 80 / 0.09)" stroke="none"/>
+
+  <!-- Barrel housing -->
+  <path d="M 830 175 L 970 175 L 970 470 L 830 470 Z" stroke-opacity="0.5"/>
+
+  <!-- Keycap stub, slightly lower (more travel) -->
+  <path d="M 858 190 L 938 190 L 938 210 L 858 210 Z" stroke-opacity="0.8"/>
+
+  <!-- Spring — kinked sideways at the buckle point, amber emphasis -->
+  <g stroke-opacity="0.85">
+    <ellipse cx="898" cy="222" rx="34" ry="7"/>
+    <ellipse cx="900" cy="246" rx="34" ry="7"/>
+  </g>
+  <g stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="2.5">
+    <path d="M 900 246 C 940 262, 950 288, 928 312 C 912 330, 908 344, 918 360"/>
+  </g>
+  <text x="960" y="290" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none" opacity="0.95">buckle point</text>
+
+  <!-- Hammer — swung down, striking sense layer -->
+  <g stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="2.5">
+    <line x1="918" y1="360" x2="946" y2="440"/>
+    <circle cx="918" cy="360" r="6" fill="oklch(0.78 0.10 80)"/>
+  </g>
+  <!-- ghost of upright hammer position for reference -->
+  <line x1="952" y1="400" x2="952" y2="440" stroke-opacity="0.2" stroke-dasharray="2 4"/>
+
+  <!-- Rotation arc showing hammer swing -->
+  <path d="M 952 400 A 42 42 0 0 1 946 440" stroke-opacity="0.4" stroke-dasharray="3 5"/>
+
+  <!-- Sense layer at base -->
+  <line x1="830" y1="470" x2="970" y2="470" stroke-opacity="0.6"/>
+  <line x1="830" y1="470" x2="830" y2="490" stroke-opacity="0.5"/>
+  <line x1="970" y1="470" x2="970" y2="490" stroke-opacity="0.5"/>
+  <line x1="830" y1="490" x2="970" y2="490" stroke-opacity="0.5"/>
+
+  <!-- Strike point — splash focal dot -->
+  <circle cx="946" cy="470" r="6.5" fill="oklch(0.78 0.10 80 / 0.95)" stroke="oklch(0.78 0.10 80)"/>
+  <circle cx="946" cy="470" r="13" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.5" fill="none"/>
+
+  <text x="900" y="540" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">the buckle IS the actuation</text>
+  <text x="900" y="560" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">structural failure, not a switch closing gently</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

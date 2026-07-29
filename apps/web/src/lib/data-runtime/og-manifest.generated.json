@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "slug": "buckling-spring-deep-dive",
+      "readTime": 9,
+      "frontmatter": {
+        "title": "How buckling-spring switches actually work",
+        "lede": "thock has already reached for the buckling-spring snap twice — once to describe a Topre dome, once to describe a click-bar's sharpness — without ever explaining what a buckling spring actually is. The mechanism predates both, and it is stranger and more mechanically honest than either.",
+        "pillar": "deep-dives",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "zmk-wireless-split-firmware-guide",
       "readTime": 10,
       "frontmatter": {
@@ -773,6 +783,11 @@
       "category": "misc"
     },
     {
+      "slug": "buckling-spring",
+      "name": "Buckling spring",
+      "category": "switch"
+    },
+    {
       "slug": "build-of-the-week",
       "name": "Build of the week",
       "category": "misc"
@@ -901,6 +916,11 @@
       "slug": "hot-swap",
       "name": "Hot-swap",
       "category": "switch"
+    },
+    {
+      "slug": "ibm",
+      "name": "IBM",
+      "category": "brand"
     },
     {
       "slug": "interest-check",
@@ -1409,5 +1429,5 @@
       "readTime": 4
     }
   ],
-  "generatedAt": "2026-07-29T05:28:10.215Z"
+  "generatedAt": "2026-07-29T16:53:05.650Z"
 }
