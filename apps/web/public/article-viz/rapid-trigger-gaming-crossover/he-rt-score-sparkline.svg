@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <title>Hall Effect / Rapid Trigger Trends Tracker score from W18 through W25 — values 52, 55, 59, 62, 65, 68, 72, 76 — a steady eight-week climb to the top of the switch category</title>
+  <title>Hall Effect / Rapid Trigger Trends Tracker score from W18 through W25 — values 52, 55, 59, 55, 60, 66, 72, 76 — a brief W21 dip, then a climb to the top of the switch category</title>
 
   <!-- Title -->
   <text x="600" y="54" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Hall Effect / Rapid Trigger — Trends Tracker, W18 → W25</text>
@@ -10,9 +10,9 @@
   <!-- Score 52 → y = 370 - (52 * 2.7) = 370 - 140.4 = 229.6 ≈ 230 -->
   <!-- Score 55 → 370 - 148.5 = 221.5 ≈ 222 -->
   <!-- Score 59 → 370 - 159.3 = 210.7 ≈ 211 -->
-  <!-- Score 62 → 370 - 167.4 = 202.6 ≈ 203 -->
-  <!-- Score 65 → 370 - 175.5 = 194.5 ≈ 195 -->
-  <!-- Score 68 → 370 - 183.6 = 186.4 ≈ 186 -->
+  <!-- Score 55 (W21) → 370 - 148.5 = 221.5 ≈ 222 -->
+  <!-- Score 60 (W22) → 370 - 162.0 = 208.0 ≈ 208 -->
+  <!-- Score 66 (W23) → 370 - 178.2 = 191.8 ≈ 192 -->
   <!-- Score 72 → 370 - 194.4 = 175.6 ≈ 176 -->
   <!-- Score 76 → 370 - 205.2 = 164.8 ≈ 165 -->
   <!-- X positions: 8 weeks equally spaced x=200..1040, step=(1040-200)/7=120 -->
@@ -32,7 +32,7 @@
 
   <!-- Subtle fill below line -->
   <polygon
-    points="200,230 320,222 440,211 560,203 680,195 800,186 920,176 1040,165 1040,370 200,370"
+    points="200,230 320,222 440,211 560,222 680,208 800,192 920,176 1040,165 1040,370 200,370"
     fill="oklch(0.68 0.165 28 / 0.08)"
     stroke="none"
   />
@@ -44,7 +44,7 @@
 
   <!-- Coral data line -->
   <polyline
-    points="200,230 320,222 440,211 560,203 680,195 800,186 920,176 1040,165"
+    points="200,230 320,222 440,211 560,222 680,208 800,192 920,176 1040,165"
     stroke="oklch(0.68 0.165 28)"
     stroke-width="3"
     stroke-opacity="0.95"
@@ -55,9 +55,9 @@
   <circle cx="200" cy="230" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.45"/>
   <circle cx="320" cy="222" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.45"/>
   <circle cx="440" cy="211" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.45"/>
-  <circle cx="560" cy="203" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.45"/>
-  <circle cx="680" cy="195" r="4.5" fill="oklch(0.68 0.165 28 / 0.55)" stroke="oklch(0.68 0.165 28)" opacity="0.75"/>
-  <circle cx="800" cy="186" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.45"/>
+  <circle cx="560" cy="222" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.45"/>
+  <circle cx="680" cy="208" r="4.5" fill="oklch(0.68 0.165 28 / 0.55)" stroke="oklch(0.68 0.165 28)" opacity="0.75"/>
+  <circle cx="800" cy="192" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.45"/>
   <circle cx="920" cy="176" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.45"/>
 
   <!-- Terminal dot W25 — filled coral, labelled -->
@@ -67,7 +67,7 @@
   <text x="1060" y="190" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">switch cat.</text>
 
   <!-- W22 score label -->
-  <text x="680" y="188" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.75">65</text>
+  <text x="680" y="201" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.75">60</text>
 
   <!-- X-axis week labels -->
   <text x="200"  y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">W18</text>
