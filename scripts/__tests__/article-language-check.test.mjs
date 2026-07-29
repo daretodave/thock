@@ -586,6 +586,118 @@ describe('checkFile — relative-next-month pattern', () => {
   })
 })
 
+// ── relative-tracker-this-week-variant ────────────────────────────────────────
+
+describe('checkFile — relative-tracker-this-week-variant pattern', () => {
+  const patterns = loadPatterns()
+
+  test('flags "this week\'s row" as a relative temporal reference', () => {
+    const content = makeMdx(
+      'slug: test\ntitle: Test\nauthor: thock\npillar: trends\npublishedAt: 2026-05-05',
+      "\nTwo heading into this week's row, down from three the week before.\n"
+    )
+    const filePath = tmpMdx(content)
+    const violations = checkFile(filePath, patterns)
+    assert.ok(
+      violations.some((v) => v.patternId === 'relative-tracker-this-week-variant'),
+      'expected relative-tracker-this-week-variant violation'
+    )
+  })
+
+  test('flags "this week\'s reading" as a relative temporal reference', () => {
+    const content = makeMdx(
+      'slug: test\ntitle: Test\nauthor: thock\npillar: trends\npublishedAt: 2026-05-05',
+      "\nTicking back up to 20 on this week's reading.\n"
+    )
+    const filePath = tmpMdx(content)
+    const violations = checkFile(filePath, patterns)
+    assert.ok(
+      violations.some((v) => v.patternId === 'relative-tracker-this-week-variant'),
+      'expected relative-tracker-this-week-variant violation'
+    )
+  })
+
+  test('"the W30 row" absolute anchor does not trigger the pattern', () => {
+    const content = makeMdx(
+      'slug: test\ntitle: Test\nauthor: thock\npillar: trends\npublishedAt: 2026-05-05',
+      '\nTwo in the W30 row, down from three the week before.\n'
+    )
+    const filePath = tmpMdx(content)
+    const violations = checkFile(filePath, patterns)
+    assert.equal(
+      violations.filter((v) => v.patternId === 'relative-tracker-this-week-variant').length,
+      0,
+      '"the W30 row" absolute anchor should not trigger the pattern'
+    )
+  })
+})
+
+// ── relative-current-week ─────────────────────────────────────────────────────
+
+describe('checkFile — relative-current-week pattern', () => {
+  const patterns = loadPatterns()
+
+  test('flags "current week" as a relative temporal reference', () => {
+    const content = makeMdx(
+      'slug: test\ntitle: Test\nauthor: thock\npillar: trends\npublishedAt: 2026-05-05',
+      '\nThe final bar is highlighted as the current week.\n'
+    )
+    const filePath = tmpMdx(content)
+    const violations = checkFile(filePath, patterns)
+    assert.ok(
+      violations.some((v) => v.patternId === 'relative-current-week'),
+      'expected relative-current-week violation'
+    )
+  })
+
+  test('"the W30 reading" absolute anchor does not trigger the pattern', () => {
+    const content = makeMdx(
+      'slug: test\ntitle: Test\nauthor: thock\npillar: trends\npublishedAt: 2026-05-05',
+      '\nThe final bar is highlighted as the W30 reading.\n'
+    )
+    const filePath = tmpMdx(content)
+    const violations = checkFile(filePath, patterns)
+    assert.equal(
+      violations.filter((v) => v.patternId === 'relative-current-week').length,
+      0,
+      '"the W30 reading" absolute anchor should not trigger relative-current-week'
+    )
+  })
+})
+
+// ── relative-as-of-this-week ──────────────────────────────────────────────────
+
+describe('checkFile — relative-as-of-this-week pattern', () => {
+  const patterns = loadPatterns()
+
+  test('flags "as of this week" as a relative temporal reference', () => {
+    const content = makeMdx(
+      'slug: test\ntitle: Test\nauthor: thock\npillar: trends\npublishedAt: 2026-05-05',
+      "\nAs of this week it's tracking toward Q4 2026 delivery.\n"
+    )
+    const filePath = tmpMdx(content)
+    const violations = checkFile(filePath, patterns)
+    assert.ok(
+      violations.some((v) => v.patternId === 'relative-as-of-this-week'),
+      'expected relative-as-of-this-week violation'
+    )
+  })
+
+  test('"as of the W30 snapshot" absolute anchor does not trigger the pattern', () => {
+    const content = makeMdx(
+      'slug: test\ntitle: Test\nauthor: thock\npillar: trends\npublishedAt: 2026-05-05',
+      "\nAs of the W30 snapshot it was tracking toward Q4 2026 delivery.\n"
+    )
+    const filePath = tmpMdx(content)
+    const violations = checkFile(filePath, patterns)
+    assert.equal(
+      violations.filter((v) => v.patternId === 'relative-as-of-this-week').length,
+      0,
+      '"as of the W30 snapshot" absolute anchor should not trigger relative-as-of-this-week'
+    )
+  })
+})
+
 describe('checkFile — unfulfillable-worth-revisiting pattern', () => {
   const patterns = loadPatterns()
 

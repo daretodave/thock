@@ -112,6 +112,23 @@
       "match": "\\bnext month\\b",
       "regex": true,
       "description": "Bare relative-month promise decays a month after publication and never resolves in a static article. Rewrite as a past-tense observation once the window has closed, or an absolute date anchor if still forward-looking."
+    },
+    {
+      "id": "relative-tracker-this-week-variant",
+      "match": "this week's (?:row|reading|snapshot|data)",
+      "regex": true,
+      "description": "Relative tracker reference decays after the week of publication — 'this week's row/reading/snapshot/data' is the same anti-pattern as 'this week's tracker' with a different noun. Replace with the ISO week anchor: 'the W19 row' or 'the 2026-W19 reading'."
+    },
+    {
+      "id": "relative-current-week",
+      "match": "\\bcurrent week\\b",
+      "regex": true,
+      "description": "Bare 'current week' reference (often in chart alt text) decays after the week of publication. Replace with the specific ISO week anchor: 'the W19 point' or 'the most recent of the N weeks shown'."
+    },
+    {
+      "id": "relative-as-of-this-week",
+      "match": "as of this week",
+      "description": "Relative 'as of this week' framing decays after the week of publication. Replace with the specific ISO week anchor: 'as of the W19 snapshot'."
     }
   ]
 }
