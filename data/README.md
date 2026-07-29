@@ -33,8 +33,9 @@ data/
 ├── keycap-sets/<slug>.json
 ├── boards/<slug>.json
 ├── vendors/<slug>.json
-├── group-buys/<slug>.json
-├── group-buys/archive/<slug>.json # past end-date; loader skips
+├── group-buys/<slug>.json         # stays here permanently past end-date;
+│                                   # `isGroupBuyEnded()` (status + endDate)
+│                                   # routes it to /group-buys/past, not location
 └── trends/<YYYY-WW>.json          # weekly snapshot files
 ```
 
@@ -48,8 +49,10 @@ data/
    filename matches the `slug` field.
 4. **Cross-refs use slugs.** A switch references its vendor by
    slug, not by name. Slugs are forever; names change.
-5. **Append-mostly.** Never delete records. Archive (move to
-   `archive/`) or set `status: "deprecated"`.
+5. **Append-mostly.** Never delete records. Group buys stay in
+   `group-buys/` past their `endDate` — `status` + `endDate` (not
+   file location) determine whether a record reads as active or
+   past (see `isGroupBuyEnded()` in `packages/data/src/loaders/group-buys.ts`).
 6. **`pnpm data:validate` must pass.** Every record validates
    against its schema; every cross-reference resolves.
 

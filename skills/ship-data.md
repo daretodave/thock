@@ -267,9 +267,17 @@ Score each finding 0–10 by impact × ease.
    slug that doesn't exist in `/data`. Score by reference count.
 2. **Schema drift.** A record validates against an old schema but
    the schema has new required fields.
-3. **Stale group buys.** `endDate < today`. Move to
-   `data/group-buys/archive/<slug>.json` (subdirectory), update
-   loader to skip archived.
+3. **Stale group-buy status.** `status ∈ {live, announced}` with
+   `endDate < today` — the status field wasn't updated when the buy
+   closed. Correct the `status` in place (`closed` or `shipped`);
+   never move the file. `getAllGroupBuys()` is intentionally
+   non-recursive (see `packages/data/src/loaders/paths.ts`) and
+   records stay in the flat `data/group-buys/` folder permanently —
+   `isGroupBuyEnded()` (status- and `endDate`-driven) is what routes
+   a record to `/group-buys/past`, not a physical move. This finding
+   is already automated by `scripts/group-buy-status-check.mjs`
+   (Step 4c); this audit-pass entry exists for the manual/cold-start
+   case.
 4. **Trend snapshot stale.** No new file in `data/trends/` for the
    current ISO week.
 5. **Switch coverage gaps.** Articles mention switches with no

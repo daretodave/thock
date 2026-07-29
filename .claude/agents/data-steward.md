@@ -79,13 +79,18 @@ the whole tree:
 - Find duplicate names/aliases; merge (older slug wins; alias the
   newer).
 - Sort string arrays for diff stability.
-- Move expired group buys to `data/group-buys/archive/`.
+- Correct stale `status` on expired group buys (`live`/`announced`
+  with `endDate < today` → `closed`/`shipped`) in place. Never move
+  the file — `data/group-buys/` has no `archive/` subfolder; loaders
+  are non-recursive by design (see `packages/data/src/loaders/paths.ts`)
+  and route ended buys to `/group-buys/past` via `isGroupBuyEnded()`
+  (status + `endDate`), not physical location.
 
 Commit each category as its own commit:
 
 - `data: normalize slugs across all entities`
 - `data: repair cross-references (N stubs created)`
-- `data: archive N expired group buys`
+- `data: correct stale status on N expired group buys`
 
 The loop can be interrupted between commits without losing work.
 

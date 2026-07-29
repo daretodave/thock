@@ -154,8 +154,7 @@ Z:/keyboard/                              # repo root (will be renamed by user)
 │   ├── keycap-sets/<slug>.json
 │   ├── boards/<slug>.json
 │   ├── vendors/<slug>.json
-│   ├── group-buys/<slug>.json
-│   ├── group-buys/archive/<slug>.json
+│   ├── group-buys/<slug>.json            # stays put past endDate (see below)
 │   └── trends/<YYYY-WW>.json
 │
 ├── apps/
@@ -233,7 +232,10 @@ Entities (one folder per type, one file per record):
 - `keycap-sets/` — GMK Olivia, MT3 /dev/tty, ePBT …
 - `boards/` — Mode Sonnet, Bauer Lite, Lofree Flow …
 - `vendors/` — Drop, NovelKeys, Cannonkeys, KBDFans …
-- `group-buys/` — currently active (archive subfolder for past).
+- `group-buys/` — records stay here permanently; `status` +
+  `endDate` (via `isGroupBuyEnded()`) determine active vs. past,
+  not file location — loaders are non-recursive and never read an
+  `archive/` subfolder.
 - `trends/` — weekly snapshots `YYYY-WW.json`.
 
 Maintained by `/ship-data` (single record at a time) and
