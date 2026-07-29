@@ -84,6 +84,17 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [ ] [content-gaps] [4.2] Deep Dives pillar about to breach Rule 1 sliding-window freshness — both anchor articles age out within days
+- category: content-gaps
+- filed: 2026-07-29 by cloud /iterate audit (fresh general-purpose sweep, angle: pillar freshness proactive check)
+- impact: 7 (Rule 1 pillar-prominence weighting for Deep Dives per `skills/iterate.md` §4.A; this is the exact self-replenishing mechanism bearings.md Rule 1 designed to catch before it tips into hot-pursuit/critical scoring)
+- ease: 6 (new deep-dives article via content-curator + brander; well-worn ship-content path, no schema/code changes)
+- score: 4.2 (impact × ease / 10)
+- observation: today is 2026-07-29. Deep Dives' two most-recent articles are `durock-t1-deep-dive.mdx` (publishedAt 2026-07-02, 27 days ago) and `gazzew-boba-u4t-deep-dive.mdx` (publishedAt 2026-06-29, exactly 30 days ago — already at the rolling-window boundary `content-gap-survey.mjs` enforces). `node scripts/content-gap-survey.mjs --write` still reports "all pillars comfortable" this tick (count=2, boundary inclusive), but `gazzew-boba-u4t` ages out of the 30-day window within a day and `durock-t1` follows within the week, which would drop Deep Dives straight past hot-pursuit (score 7.0) to critical hot-pursuit (score 9.5, count=0) — the other four pillars (news, trends, guides, ideas) all have more recent anchors and are not at similar risk. Shipping now, proactively, precedented by the DCS Grass Valley proactive Rule-2 fix (`plan/AUDIT.md` 2026-06-03, score 3.0).
+- evidence: `grep -rl "pillar: deep-dives" apps/web/src/content/articles/*.mdx | xargs grep -H "publishedAt:"` — `durock-t1-deep-dive.mdx` 2026-07-02T14:00:00.000Z, `gazzew-boba-u4t-deep-dive.mdx` 2026-06-29T14:00:00.000Z, next-oldest `gateron-lanes-tactile-deep-dive.mdx` 2026-06-18T00:00:00.000Z (already outside the 30-day window from today).
+- next: delegate to `/ship-content` — draft one new Deep Dives article via content-curator + brander per `skills/iterate.md` §3.
+- issue: #656
+
 ### [x] [enhancement] [3.6] compare-tool empty states have no link to the quiz or catalog — addressed in this commit, closes #655
 - category: enhancement
 - filed: 2026-07-29 by cloud /iterate audit (fresh general-purpose sweep, angle: compare-tool empty-state navigation)
