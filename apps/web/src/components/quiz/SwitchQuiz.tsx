@@ -135,6 +135,15 @@ export function SwitchQuiz({ switches }: Props) {
             ))}
           </div>
           <div className="mt-8 flex flex-wrap items-center gap-4">
+            {results[0] && results[1] && (
+              <Link
+                href={`/compare/switch?a=${results[0].switch.slug}&b=${results[1].switch.slug}`}
+                data-testid="quiz-compare-top-link"
+                className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+              >
+                Compare top 2 →
+              </Link>
+            )}
             <Link
               href="/part/switch"
               data-testid="quiz-browse-all-link"

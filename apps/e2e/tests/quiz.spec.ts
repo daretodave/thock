@@ -115,6 +115,10 @@ test.describe('/quiz/switch — phase 33', () => {
     const browseAllLink = page.getByTestId('quiz-browse-all-link')
     await expect(browseAllLink).toBeVisible()
     await expect(browseAllLink).toHaveAttribute('href', '/part/switch')
+    const compareLink = page.getByTestId('quiz-compare-top-link')
+    await expect(compareLink).toBeVisible()
+    const compareHref = await compareLink.getAttribute('href')
+    expect(compareHref).toMatch(/^\/compare\/switch\?a=.+&b=.+$/)
   })
 
   test('start-over button resets to question 1', async ({ page }) => {

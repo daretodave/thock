@@ -88,12 +88,23 @@ describe('<SwitchQuiz>', () => {
       .filter(
         (l) =>
           l.getAttribute('href') !== '/part/switch' &&
-          l.getAttribute('href') !== '/parts',
+          l.getAttribute('href') !== '/parts' &&
+          !l.getAttribute('href')?.startsWith('/compare/switch'),
       )
     expect(resultLinks.length).toBeGreaterThan(0)
     for (const link of resultLinks) {
       expect(link.getAttribute('href')).toMatch(/^\/part\/switch\//)
     }
+  })
+
+  it('shows a "Compare top 2" link to /compare/switch with the top 2 result slugs', () => {
+    render(<SwitchQuiz switches={SWITCHES} />)
+    answerAllQuestions()
+    const compareLink = screen.getByTestId('quiz-compare-top-link')
+    expect(compareLink).toBeInTheDocument()
+    expect(compareLink.textContent).toMatch(/compare top 2/i)
+    const href = compareLink.getAttribute('href') ?? ''
+    expect(href).toMatch(/^\/compare\/switch\?a=.+&b=.+$/)
   })
 
   it('browse-all link points to /part/switch catalog page', () => {
