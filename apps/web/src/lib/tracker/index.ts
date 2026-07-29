@@ -52,13 +52,23 @@ function sparkSlope(row: TrendRow): number {
  * rendering placeholders.
  *
  * Order of selection (each draws from the remaining unused rows):
- *  1. riser   = max-score row with direction='up'; drops the slot if
+ *  1. riser   = direction='up' row with the steepest spark slope (the
+ *               row that moved the most this week); drops the slot if
  *               no up row remains.
- *  2. faller  = min-score row with direction='down'; drops the slot if
- *               no down row remains.
- *  3. breakout = direction='up' row with the steepest spark slope.
+ *  2. faller  = direction='down' row with the steepest negative spark
+ *               slope; drops the slot if no down row remains.
+ *  3. breakout = direction='up' row with the next-steepest spark slope
+ *               among those left after riser is drawn.
  *  4. sleeper = smallest abs(score) non-flat row (under-the-radar mover);
  *               drops the slot if no non-flat row remains.
+ *
+ *  Riser/faller used to rank by raw `score`, but `score` is a
+ *  current-level number, not a signed delta (see `formatDelta`'s
+ *  docstring below) — ranking by it could crown a row that barely
+ *  moved this week over one with a much bigger swing, just because
+ *  the first started from a higher level. Ranking by `sparkSlope`
+ *  (this week's actual movement) matches what "biggest riser/faller"
+ *  promises a reader.
  *
  *  Critique pass 9 #8 first found this for Sleeper: pinning a summary
  *  slot on a flat-direction row whose editor's note says nothing's
@@ -76,12 +86,12 @@ export function pickSummarySlots(rows: readonly TrendRow[]): SummarySlot[] {
   const pickRiser = () => {
     const ups = remaining().filter((r) => r.direction === 'up')
     if (ups.length === 0) return null
-    return ups.reduce((acc, r) => (r.score > acc.score ? r : acc), ups[0]!)
+    return ups.reduce((acc, r) => (sparkSlope(r) > sparkSlope(acc) ? r : acc), ups[0]!)
   }
   const pickFaller = () => {
     const downs = remaining().filter((r) => r.direction === 'down')
     if (downs.length === 0) return null
-    return downs.reduce((acc, r) => (r.score < acc.score ? r : acc), downs[0]!)
+    return downs.reduce((acc, r) => (sparkSlope(r) < sparkSlope(acc) ? r : acc), downs[0]!)
   }
   const pickBreakout = () => {
     const candidates = remaining().filter((r) => r.direction === 'up')

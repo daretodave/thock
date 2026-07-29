@@ -110,10 +110,10 @@ describe('pickSummarySlots', () => {
 
   it('selects riser, faller, breakout, sleeper without duplication', () => {
     const rows: TrendRow[] = [
-      row({ name: 'Up-A', direction: 'up', score: 30, spark: [1, 5, 10] }),
-      row({ name: 'Up-B', direction: 'up', score: 12, spark: [1, 2, 18] }), // steepest
+      row({ name: 'Up-A', direction: 'up', score: 30, spark: [1, 5, 10] }), // slope 9 → breakout
+      row({ name: 'Up-B', direction: 'up', score: 12, spark: [1, 2, 18] }), // slope 17, steepest → riser
       row({ name: 'Down-A', direction: 'down', score: -22, spark: [10, 5, 1] }),
-      row({ name: 'Up-C', direction: 'up', score: 6, spark: [3, 4, 6] }), // smallest-abs non-flat → sleeper
+      row({ name: 'Up-C', direction: 'up', score: 6, spark: [3, 4, 6] }), // slope 3, smallest-abs non-flat remaining → sleeper
     ]
     const slots = pickSummarySlots(rows)
     expect(slots.map((s) => s.kind)).toEqual([
@@ -123,9 +123,9 @@ describe('pickSummarySlots', () => {
       'sleeper',
     ])
     expect(slots.map((s) => s.row.name)).toEqual([
-      'Up-A',
-      'Down-A',
       'Up-B',
+      'Down-A',
+      'Up-A',
       'Up-C',
     ])
   })

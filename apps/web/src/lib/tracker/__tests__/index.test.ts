@@ -65,9 +65,9 @@ describe('pickSummarySlots', () => {
     expect(new Set(names).size).toBe(names.length)
   })
 
-  it('breakout picks the steepest spark slope among remaining up rows, not the highest score', () => {
+  it('riser picks the steepest spark slope among up rows, not the highest score', () => {
     // A: score=80 but gentle slope. B: score=30 but steep slope.
-    // Riser=A (max up score). Breakout should pick B (steeper slope).
+    // Riser should pick B (moved the most this week), not A (highest level).
     const rows: TrendRow[] = [
       makeRow('A', { direction: 'up', score: 80, spark: [70, 75, 78, 80] }), // slope 10
       makeRow('B', { category: 'keycap', direction: 'up', score: 30, spark: [5, 12, 20, 30] }), // slope 25
@@ -75,8 +75,32 @@ describe('pickSummarySlots', () => {
       makeRow('D', { direction: 'flat', score: 5, spark: [5, 5] }),
     ]
     const slots = pickSummarySlots(rows)
-    const breakout = slots.find((s) => s.kind === 'breakout')
-    expect(breakout?.row.name).toBe('B')
+    const riser = slots.find((s) => s.kind === 'riser')
+    expect(riser?.row.name).toBe('B')
+  })
+
+  it('faller picks the steepest negative spark slope among down rows, not the lowest score', () => {
+    // A: score=-40 but only dropped a little. B: score=-10 but dropped much further.
+    const rows: TrendRow[] = [
+      makeRow('A', { direction: 'down', score: -40, spark: [-30, -35, -38, -40] }), // slope -10
+      makeRow('B', { category: 'keycap', direction: 'down', score: -10, spark: [40, 25, 15, -10] }), // slope -50
+      makeRow('C', { direction: 'up', score: 20, spark: [10, 20] }),
+    ]
+    const slots = pickSummarySlots(rows)
+    const faller = slots.find((s) => s.kind === 'faller')
+    expect(faller?.row.name).toBe('B')
+  })
+
+  it('breakout picks the next-steepest spark slope among up rows left after riser is drawn', () => {
+    const rows: TrendRow[] = [
+      makeRow('A', { direction: 'up', score: 30, spark: [5, 30] }), // slope 25 — riser
+      makeRow('B', { category: 'keycap', direction: 'up', score: 80, spark: [70, 80] }), // slope 10 — breakout
+      makeRow('C', { category: 'layout', direction: 'up', score: 15, spark: [10, 15] }), // slope 5
+      makeRow('D', { category: 'vendor', direction: 'down', score: -20, spark: [20, -20] }),
+    ]
+    const slots = pickSummarySlots(rows)
+    expect(slots.find((s) => s.kind === 'riser')?.row.name).toBe('A')
+    expect(slots.find((s) => s.kind === 'breakout')?.row.name).toBe('B')
   })
 
   it('drops the faller slot instead of picking a flat row when no down-direction rows exist', () => {
