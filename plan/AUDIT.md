@@ -84,7 +84,7 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
-### [ ] [content-gaps] [4.2] Deep Dives pillar about to breach Rule 1 sliding-window freshness — both anchor articles age out within days
+### [x] [content-gaps] [4.2] Deep Dives pillar about to breach Rule 1 sliding-window freshness — both anchor articles age out within days — addressed in commit `da66d271`, closes #656
 - category: content-gaps
 - filed: 2026-07-29 by cloud /iterate audit (fresh general-purpose sweep, angle: pillar freshness proactive check)
 - impact: 7 (Rule 1 pillar-prominence weighting for Deep Dives per `skills/iterate.md` §4.A; this is the exact self-replenishing mechanism bearings.md Rule 1 designed to catch before it tips into hot-pursuit/critical scoring)
@@ -94,6 +94,7 @@
 - evidence: `grep -rl "pillar: deep-dives" apps/web/src/content/articles/*.mdx | xargs grep -H "publishedAt:"` — `durock-t1-deep-dive.mdx` 2026-07-02T14:00:00.000Z, `gazzew-boba-u4t-deep-dive.mdx` 2026-06-29T14:00:00.000Z, next-oldest `gateron-lanes-tactile-deep-dive.mdx` 2026-06-18T00:00:00.000Z (already outside the 30-day window from today).
 - next: delegate to `/ship-content` — draft one new Deep Dives article via content-curator + brander per `skills/iterate.md` §3.
 - issue: #656
+> **Resolved (2026-07-29):** shipped `buckling-spring-deep-dive.mdx` (publishedAt 2026-07-26, gap-fill midpoint of the 5-day gap between `gateron-lanes-tactile-deep-dive` on 2026-07-24 and today's sentinel) — "How buckling-spring switches actually work," closing the architecture-arc gap left by Topre/Hall-effect/optical deep dives referencing buckling springs only in passing. Deep Dives now carries a fresh anchor well inside the 30-day window. `pnpm verify` full gate green: typecheck, unit tests, data:validate, build, 1100/1100 e2e.
 
 ### [x] [enhancement] [3.6] compare-tool empty states have no link to the quiz or catalog — addressed in this commit, closes #655
 - category: enhancement
@@ -8753,3 +8754,47 @@ passes accumulate signals.)
 - issue: #641
 > **Resolved (2026-07-29):** added a "Compare top 2 →" link to `SwitchQuiz.tsx`'s results footer, rendered whenever `results[0]` and `results[1]` both exist, linking to `/compare/switch?a=<top-slug>&b=<second-slug>`. Updated `SwitchQuiz.test.tsx`'s result-links filter to exclude the new link (it doesn't match the `/part/switch/` prefix assertion) and added a dedicated test pinning the href shape; extended `quiz.spec.ts`'s existing results e2e test with a visibility + href-pattern assertion for the new link. `pnpm verify` full gate green: typecheck, 733 unit tests, data:validate, build, 1089/1089 e2e.
 > Picked as the top signal this tick: no unlabeled GitHub issues (triage gate, 0 unlabeled — #641 carries `loop:opened` so it's excluded from the unlabeled count, which is exactly why it had gone undrained); not Monday-relevant (W31 snapshot already existed at tick start); no pending phases/data/content-gap work (all 7 mechanical content-velocity surveys re-ran clean, no rows filed). AUDIT.md's only other Pending rows remained the four standing non-autonomous items; CRITIQUE.md's only Pending row remained the non-actionable `[needs-user-call]` GA-beacon item. march's own expand Step 3c gate not met (9 commits/~9h since pass 249's anchor, threshold 20 commits/48h) — fell through to `/iterate`. Rather than running a fresh ambient sweep, checked the open-issues list first (the triage-gate query excludes `loop:opened` issues from "unlabeled," so a previously-mirrored-but-undrained finding can hide there) and found #641 — a well-specified, already-scoped MED finding with no corresponding AUDIT.md row, i.e. an interrupted prior tick. Shipped it directly rather than re-auditing from scratch.
+
+### [ ] [cross-links] [4.5] buckling-spring-deep-dive ↔ drop-holy-panda-x-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: tactile, deep-dive)
+- category: cross-links
+- filed: 2026-07-29 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: tactile, deep-dive
+- article-a: apps/web/src/content/articles/buckling-spring-deep-dive.mdx
+- article-b: apps/web/src/content/articles/drop-holy-panda-x-deep-dive.mdx
+- action: add [drop-holy-panda-x-deep-dive](/article/drop-holy-panda-x-deep-dive) to buckling-spring-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] buckling-spring-deep-dive ↔ durock-t1-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: tactile, deep-dive)
+- category: cross-links
+- filed: 2026-07-29 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: tactile, deep-dive
+- article-a: apps/web/src/content/articles/buckling-spring-deep-dive.mdx
+- article-b: apps/web/src/content/articles/durock-t1-deep-dive.mdx
+- action: add [durock-t1-deep-dive](/article/durock-t1-deep-dive) to buckling-spring-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] buckling-spring-deep-dive ↔ gateron-lanes-tactile-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: tactile, deep-dive)
+- category: cross-links
+- filed: 2026-07-29 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: tactile, deep-dive
+- article-a: apps/web/src/content/articles/buckling-spring-deep-dive.mdx
+- article-b: apps/web/src/content/articles/gateron-lanes-tactile-deep-dive.mdx
+- action: add [gateron-lanes-tactile-deep-dive](/article/gateron-lanes-tactile-deep-dive) to buckling-spring-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] buckling-spring-deep-dive ↔ gazzew-boba-u4t-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: tactile, deep-dive)
+- category: cross-links
+- filed: 2026-07-29 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: tactile, deep-dive
+- article-a: apps/web/src/content/articles/buckling-spring-deep-dive.mdx
+- article-b: apps/web/src/content/articles/gazzew-boba-u4t-deep-dive.mdx
+- action: add [gazzew-boba-u4t-deep-dive](/article/gazzew-boba-u4t-deep-dive) to buckling-spring-deep-dive body, or vice versa
