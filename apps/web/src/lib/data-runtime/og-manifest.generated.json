@@ -2,7 +2,7 @@
   "articles": [
     {
       "slug": "buckling-spring-deep-dive",
-      "readTime": 9,
+      "readTime": 10,
       "frontmatter": {
         "title": "How buckling-spring switches actually work",
         "lede": "thock has already reached for the buckling-spring snap twice — once to describe a Topre dome, once to describe a click-bar's sharpness — without ever explaining what a buckling spring actually is. The mechanism predates both, and it is stranger and more mechanically honest than either.",
@@ -1429,5 +1429,5 @@
       "readTime": 4
     }
   ],
-  "generatedAt": "2026-07-29T16:53:05.650Z"
+  "generatedAt": "2026-07-29T17:41:39.059Z"
 }
