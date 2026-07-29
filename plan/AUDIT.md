@@ -8817,4 +8817,14 @@ passes accumulate signals.)
 - action: add [gazzew-boba-u4t-deep-dive](/article/gazzew-boba-u4t-deep-dive) to buckling-spring-deep-dive body, or vice versa
 - issue: #658
 > **Resolved (2026-07-29):** drained as part of the cluster-aware cross-link fix (see drop-holy-panda-x-deep-dive row above for the shared commit). Linked "a Boba U4T's D-shaped plateau" in the same sentence to `/article/gazzew-boba-u4t-deep-dive`.
+
+### [x] [seo] [3.6] trends tracker archive OG image identical across all weeks — addressed in f8b78c7b, closes #660
+- category: seo
+- filed: 2026-07-29 by cloud /iterate audit (fresh general-purpose sweep, angle: dynamic OG image differentiation)
+- impact: 6 (Trends Tracker is bearings.md's named signature feature; every one of the 13 archived weeks — and every future week — shared one static social-share image, while the sibling `generateMetadata`/JSON-LD already differentiate per week; every other dynamic-segment route in the app already varies its OG image by param, so this was the one outlier)
+- ease: 6 (established pattern to replicate — `newsletter/[slug]`, `tag/[slug]`, `vendor/[slug]`, `part/[kind]/[slug]` all already do `async OpenGraphImage({ params })` + `generateImageMetadata`)
+- score: 3.6 (impact × ease / 10)
+- next: mirror `newsletter/[slug]/opengraph-image.tsx`'s pattern — extend `og-manifest.generated.json` with a `trends` section, add `getTrendSnapshotForOg(isoWeek)` to `og-runtime.ts`, rewrite `trends/tracker/[week]/opengraph-image.tsx` to be async/param-aware
+- issue: #660
+> **Resolved (2026-07-29):** `trends/tracker/[week]/opengraph-image.tsx` now resolves `params.week` via `getTrendSnapshotForOg`, rendering a week-specific `pillarLabel` (from `weekKicker`) and tagline (from `describeTrackerWeek`, truncated at 90 chars matching the vendor-OG convention) through `PillarOGContent`. `generateImageMetadata` differentiates the `alt` text too. Falls back to the prior static card for an unknown week. New unit tests cover `getTrendSnapshotForOg` hit/miss.
 > Picked as the top signal this tick: no unlabeled GitHub issues (triage gate); not Monday-relevant (W31 snapshot already existed); no pending phases/data/content-gap work (all 7 mechanical surveys re-ran clean, no rows filed); march's own expand Step 3c gate not met (4 commits/~4.4h since pass 251, threshold 20 commits/48h). AUDIT.md's only other Pending rows remained the non-autonomous `[6.3]`/`[4.0]` blocked-cloud-permission items and the `[4.0]` Lighthouse-CI `/oversight` item and `[4.2]` needs-user-call soft-404 item; CRITIQUE.md's only Pending row remains the non-actionable GA-beacon item. These four cross-links rows, all filed the same tick the buckling-spring-deep-dive article shipped, were the highest-scored actionable signal — a direct instance of the cluster-aware drain path `skills/iterate.md` Step 3 describes.
