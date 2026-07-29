@@ -8755,7 +8755,7 @@ passes accumulate signals.)
 > **Resolved (2026-07-29):** added a "Compare top 2 →" link to `SwitchQuiz.tsx`'s results footer, rendered whenever `results[0]` and `results[1]` both exist, linking to `/compare/switch?a=<top-slug>&b=<second-slug>`. Updated `SwitchQuiz.test.tsx`'s result-links filter to exclude the new link (it doesn't match the `/part/switch/` prefix assertion) and added a dedicated test pinning the href shape; extended `quiz.spec.ts`'s existing results e2e test with a visibility + href-pattern assertion for the new link. `pnpm verify` full gate green: typecheck, 733 unit tests, data:validate, build, 1089/1089 e2e.
 > Picked as the top signal this tick: no unlabeled GitHub issues (triage gate, 0 unlabeled — #641 carries `loop:opened` so it's excluded from the unlabeled count, which is exactly why it had gone undrained); not Monday-relevant (W31 snapshot already existed at tick start); no pending phases/data/content-gap work (all 7 mechanical content-velocity surveys re-ran clean, no rows filed). AUDIT.md's only other Pending rows remained the four standing non-autonomous items; CRITIQUE.md's only Pending row remained the non-actionable `[needs-user-call]` GA-beacon item. march's own expand Step 3c gate not met (9 commits/~9h since pass 249's anchor, threshold 20 commits/48h) — fell through to `/iterate`. Rather than running a fresh ambient sweep, checked the open-issues list first (the triage-gate query excludes `loop:opened` issues from "unlabeled," so a previously-mirrored-but-undrained finding can hide there) and found #641 — a well-specified, already-scoped MED finding with no corresponding AUDIT.md row, i.e. an interrupted prior tick. Shipped it directly rather than re-auditing from scratch.
 
-### [ ] [cross-links] [4.5] buckling-spring-deep-dive ↔ drop-holy-panda-x-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: tactile, deep-dive)
+### [x] [cross-links] [4.5] buckling-spring-deep-dive ↔ drop-holy-panda-x-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: tactile, deep-dive) — addressed in 8bb9e674, closes #658
 - category: cross-links
 - filed: 2026-07-29 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -8765,8 +8765,10 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/buckling-spring-deep-dive.mdx
 - article-b: apps/web/src/content/articles/drop-holy-panda-x-deep-dive.mdx
 - action: add [drop-holy-panda-x-deep-dive](/article/drop-holy-panda-x-deep-dive) to buckling-spring-deep-dive body, or vice versa
+- issue: #658
+> **Resolved (2026-07-29):** drained as part of the cluster-aware cross-link fix — all 4 pending pairs hubbed on buckling-spring-deep-dive (the just-shipped article) fixed in one commit, per `skills/iterate.md` Step 3. Linked "a Holy Panda's tactile leg" in the force-curve comparison sentence to `/article/drop-holy-panda-x-deep-dive`.
 
-### [ ] [cross-links] [4.5] buckling-spring-deep-dive ↔ durock-t1-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: tactile, deep-dive)
+### [x] [cross-links] [4.5] buckling-spring-deep-dive ↔ durock-t1-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: tactile, deep-dive) — addressed in 8bb9e674, closes #658
 - category: cross-links
 - filed: 2026-07-29 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -8776,8 +8778,10 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/buckling-spring-deep-dive.mdx
 - article-b: apps/web/src/content/articles/durock-t1-deep-dive.mdx
 - action: add [durock-t1-deep-dive](/article/durock-t1-deep-dive) to buckling-spring-deep-dive body, or vice versa
+- issue: #658
+> **Resolved (2026-07-29):** drained as part of the cluster-aware cross-link fix (see drop-holy-panda-x-deep-dive row above for the shared commit). Linked "a Durock T1's sharp-edged bump" in the same sentence to `/article/durock-t1-deep-dive`.
 
-### [ ] [cross-links] [4.5] buckling-spring-deep-dive ↔ gateron-lanes-tactile-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: tactile, deep-dive)
+### [x] [cross-links] [4.5] buckling-spring-deep-dive ↔ gateron-lanes-tactile-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: tactile, deep-dive) — addressed in 8bb9e674, closes #658
 - category: cross-links
 - filed: 2026-07-29 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -8787,8 +8791,10 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/buckling-spring-deep-dive.mdx
 - article-b: apps/web/src/content/articles/gateron-lanes-tactile-deep-dive.mdx
 - action: add [gateron-lanes-tactile-deep-dive](/article/gateron-lanes-tactile-deep-dive) to buckling-spring-deep-dive body, or vice versa
+- issue: #658
+> **Resolved (2026-07-29):** drained as part of the cluster-aware cross-link fix (see drop-holy-panda-x-deep-dive row above for the shared commit). Linked "a Gateron Lanes' stepped snap" in the same sentence to `/article/gateron-lanes-tactile-deep-dive`.
 
-### [ ] [cross-links] [4.5] buckling-spring-deep-dive ↔ gazzew-boba-u4t-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: tactile, deep-dive)
+### [x] [cross-links] [4.5] buckling-spring-deep-dive ↔ gazzew-boba-u4t-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: tactile, deep-dive) — addressed in 8bb9e674, closes #658
 - category: cross-links
 - filed: 2026-07-29 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -8798,3 +8804,6 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/buckling-spring-deep-dive.mdx
 - article-b: apps/web/src/content/articles/gazzew-boba-u4t-deep-dive.mdx
 - action: add [gazzew-boba-u4t-deep-dive](/article/gazzew-boba-u4t-deep-dive) to buckling-spring-deep-dive body, or vice versa
+- issue: #658
+> **Resolved (2026-07-29):** drained as part of the cluster-aware cross-link fix (see drop-holy-panda-x-deep-dive row above for the shared commit). Linked "a Boba U4T's D-shaped plateau" in the same sentence to `/article/gazzew-boba-u4t-deep-dive`.
+> Picked as the top signal this tick: no unlabeled GitHub issues (triage gate); not Monday-relevant (W31 snapshot already existed); no pending phases/data/content-gap work (all 7 mechanical surveys re-ran clean, no rows filed); march's own expand Step 3c gate not met (4 commits/~4.4h since pass 251, threshold 20 commits/48h). AUDIT.md's only other Pending rows remained the non-autonomous `[6.3]`/`[4.0]` blocked-cloud-permission items and the `[4.0]` Lighthouse-CI `/oversight` item and `[4.2]` needs-user-call soft-404 item; CRITIQUE.md's only Pending row remains the non-actionable GA-beacon item. These four cross-links rows, all filed the same tick the buckling-spring-deep-dive article shipped, were the highest-scored actionable signal — a direct instance of the cluster-aware drain path `skills/iterate.md` Step 3 describes.
