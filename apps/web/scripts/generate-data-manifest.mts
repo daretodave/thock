@@ -80,6 +80,19 @@ const ogManifest = {
     issue: n.frontmatter.issue,
     readTime: computeReadTime(n.body),
   })),
+  trends: manifest.trends.map((t) => ({
+    isoWeek: t.isoWeek,
+    publishedAt: t.publishedAt,
+    updatedAt: t.updatedAt,
+    rows: t.rows.map((r) => ({
+      name: r.name,
+      category: r.category,
+      direction: r.direction,
+      score: r.score,
+      spark: r.spark,
+      articleSlug: r.articleSlug,
+    })),
+  })),
   generatedAt: manifest.generatedAt,
 }
 
@@ -97,4 +110,4 @@ console.log(`  trends:      ${manifest.trends.length}`)
 console.log(`  articles:    ${manifest.articles.length}`)
 console.log(`  newsletters: ${manifest.newsletters.length}`)
 console.log(`  tags:        ${manifest.tags.length}`)
-console.log(`[manifest] wrote ${ogOutFile} (OG manifest: ${ogManifest.articles.length} articles, ${ogManifest.tags.length} tags, ${ogManifest.parts.length} parts, ${ogManifest.vendors.length} vendors, ${ogManifest.newsletters.length} newsletters)`)
+console.log(`[manifest] wrote ${ogOutFile} (OG manifest: ${ogManifest.articles.length} articles, ${ogManifest.tags.length} tags, ${ogManifest.parts.length} parts, ${ogManifest.vendors.length} vendors, ${ogManifest.newsletters.length} newsletters, ${ogManifest.trends.length} trend snapshots)`)

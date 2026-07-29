@@ -1429,5 +1429,4025 @@
       "readTime": 4
     }
   ],
-  "generatedAt": "2026-07-29T18:36:09.091Z"
+  "trends": [
+    {
+      "isoWeek": "2026-W19",
+      "publishedAt": "2026-05-08T00:00:00.000Z",
+      "updatedAt": "2026-05-10T01:30:00.000Z",
+      "rows": [
+        {
+          "name": "Gateron Oil King",
+          "category": "switch",
+          "direction": "up",
+          "score": 42,
+          "spark": [
+            12,
+            18,
+            22,
+            28,
+            30,
+            35,
+            38,
+            42
+          ],
+          "articleSlug": "gateron-oil-king-deep-dive"
+        },
+        {
+          "name": "HMX Cloud",
+          "category": "switch",
+          "direction": "up",
+          "score": 36,
+          "spark": [
+            8,
+            12,
+            16,
+            22,
+            26,
+            30,
+            33,
+            36
+          ],
+          "articleSlug": "hmx-cloud-deep-dive"
+        },
+        {
+          "name": "Cherry MX2A revisions",
+          "category": "switch",
+          "direction": "down",
+          "score": -22,
+          "spark": [
+            -4,
+            -8,
+            -10,
+            -14,
+            -16,
+            -18,
+            -20,
+            -22
+          ],
+          "articleSlug": "cherry-mx2a-revision"
+        },
+        {
+          "name": "MT3 profile",
+          "category": "keycap",
+          "direction": "flat",
+          "score": 4,
+          "spark": [
+            2,
+            5,
+            3,
+            4,
+            6,
+            5,
+            4,
+            4
+          ],
+          "articleSlug": null
+        },
+        {
+          "name": "GMK CYL Prussian Alert",
+          "category": "keycap",
+          "direction": "up",
+          "score": 38,
+          "spark": [
+            10,
+            14,
+            18,
+            22,
+            28,
+            32,
+            35,
+            38
+          ],
+          "articleSlug": "gmk-cyl-prussian-alert"
+        },
+        {
+          "name": "DCS Olivetti",
+          "category": "keycap",
+          "direction": "up",
+          "score": 18,
+          "spark": [
+            4,
+            6,
+            9,
+            12,
+            14,
+            16,
+            17,
+            18
+          ],
+          "articleSlug": "dcs-olivetti-comeback"
+        },
+        {
+          "name": "Alice layout",
+          "category": "layout",
+          "direction": "down",
+          "score": -18,
+          "spark": [
+            -2,
+            -5,
+            -8,
+            -10,
+            -12,
+            -15,
+            -16,
+            -18
+          ],
+          "articleSlug": "alice-layout-decline"
+        },
+        {
+          "name": "Split / ergo (Voyager, Glove80)",
+          "category": "layout",
+          "direction": "up",
+          "score": 32,
+          "spark": [
+            12,
+            15,
+            18,
+            22,
+            25,
+            28,
+            30,
+            32
+          ],
+          "articleSlug": "split-ergo-cohort"
+        },
+        {
+          "name": "75% layout",
+          "category": "layout",
+          "direction": "up",
+          "score": 28,
+          "spark": [
+            10,
+            13,
+            17,
+            20,
+            22,
+            25,
+            27,
+            28
+          ],
+          "articleSlug": "75-percent-default"
+        },
+        {
+          "name": "Mode Designs",
+          "category": "vendor",
+          "direction": "up",
+          "score": 24,
+          "spark": [
+            10,
+            12,
+            15,
+            18,
+            20,
+            22,
+            23,
+            24
+          ],
+          "articleSlug": "vendor-first-customs"
+        },
+        {
+          "name": "CannonKeys",
+          "category": "vendor",
+          "direction": "up",
+          "score": 18,
+          "spark": [
+            4,
+            7,
+            10,
+            13,
+            15,
+            17,
+            18,
+            18
+          ],
+          "articleSlug": "vendor-first-customs"
+        },
+        {
+          "name": "Prototypist",
+          "category": "vendor",
+          "direction": "up",
+          "score": 14,
+          "spark": [
+            4,
+            6,
+            8,
+            10,
+            11,
+            13,
+            14,
+            14
+          ],
+          "articleSlug": "vendor-first-customs"
+        },
+        {
+          "name": "Wuque Studio",
+          "category": "brand",
+          "direction": "flat",
+          "score": 8,
+          "spark": [
+            6,
+            7,
+            9,
+            10,
+            8,
+            9,
+            8,
+            8
+          ],
+          "articleSlug": null
+        },
+        {
+          "name": "Keychron",
+          "category": "brand",
+          "direction": "up",
+          "score": 30,
+          "spark": [
+            12,
+            16,
+            20,
+            23,
+            26,
+            28,
+            29,
+            30
+          ],
+          "articleSlug": "keychron-q-ultra-zmk"
+        },
+        {
+          "name": "Cherry (GMK manufacturer)",
+          "category": "brand",
+          "direction": "down",
+          "score": -14,
+          "spark": [
+            -2,
+            -4,
+            -6,
+            -8,
+            -10,
+            -12,
+            -13,
+            -14
+          ],
+          "articleSlug": "cherry-mx2a-revision"
+        }
+      ]
+    },
+    {
+      "isoWeek": "2026-W20",
+      "publishedAt": "2026-05-11T00:00:00.000Z",
+      "updatedAt": "2026-05-11T12:00:00.000Z",
+      "rows": [
+        {
+          "name": "Gateron Oil King",
+          "category": "switch",
+          "direction": "flat",
+          "score": 41,
+          "spark": [
+            18,
+            22,
+            28,
+            30,
+            35,
+            38,
+            42,
+            41
+          ],
+          "articleSlug": "gateron-oil-king-deep-dive"
+        },
+        {
+          "name": "HMX Cloud",
+          "category": "switch",
+          "direction": "flat",
+          "score": 35,
+          "spark": [
+            12,
+            16,
+            22,
+            26,
+            30,
+            33,
+            36,
+            35
+          ],
+          "articleSlug": "hmx-cloud-deep-dive"
+        },
+        {
+          "name": "Cherry MX2A revisions",
+          "category": "switch",
+          "direction": "down",
+          "score": -23,
+          "spark": [
+            -8,
+            -10,
+            -14,
+            -16,
+            -18,
+            -20,
+            -22,
+            -23
+          ],
+          "articleSlug": "cherry-mx2a-revision"
+        },
+        {
+          "name": "MT3 profile",
+          "category": "keycap",
+          "direction": "flat",
+          "score": 4,
+          "spark": [
+            5,
+            3,
+            4,
+            6,
+            5,
+            4,
+            4,
+            4
+          ],
+          "articleSlug": null
+        },
+        {
+          "name": "GMK CYL Prussian Alert",
+          "category": "keycap",
+          "direction": "up",
+          "score": 46,
+          "spark": [
+            14,
+            18,
+            22,
+            28,
+            32,
+            35,
+            38,
+            46
+          ],
+          "articleSlug": "gmk-cyl-prussian-alert"
+        },
+        {
+          "name": "DCS Olivetti",
+          "category": "keycap",
+          "direction": "flat",
+          "score": 16,
+          "spark": [
+            6,
+            9,
+            12,
+            14,
+            16,
+            17,
+            18,
+            16
+          ],
+          "articleSlug": "dcs-olivetti-comeback"
+        },
+        {
+          "name": "Alice layout",
+          "category": "layout",
+          "direction": "down",
+          "score": -19,
+          "spark": [
+            -5,
+            -8,
+            -10,
+            -12,
+            -15,
+            -16,
+            -18,
+            -19
+          ],
+          "articleSlug": "alice-layout-decline"
+        },
+        {
+          "name": "Split / ergo (Voyager, Glove80)",
+          "category": "layout",
+          "direction": "up",
+          "score": 34,
+          "spark": [
+            15,
+            18,
+            22,
+            25,
+            28,
+            30,
+            32,
+            34
+          ],
+          "articleSlug": "split-ergo-cohort"
+        },
+        {
+          "name": "75% layout",
+          "category": "layout",
+          "direction": "up",
+          "score": 30,
+          "spark": [
+            13,
+            17,
+            20,
+            22,
+            25,
+            27,
+            28,
+            30
+          ],
+          "articleSlug": "75-percent-default"
+        },
+        {
+          "name": "Mode Designs",
+          "category": "vendor",
+          "direction": "up",
+          "score": 26,
+          "spark": [
+            12,
+            15,
+            18,
+            20,
+            22,
+            23,
+            24,
+            26
+          ],
+          "articleSlug": "vendor-first-customs"
+        },
+        {
+          "name": "CannonKeys",
+          "category": "vendor",
+          "direction": "flat",
+          "score": 18,
+          "spark": [
+            7,
+            10,
+            13,
+            15,
+            17,
+            18,
+            18,
+            18
+          ],
+          "articleSlug": "vendor-first-customs"
+        },
+        {
+          "name": "Prototypist",
+          "category": "vendor",
+          "direction": "up",
+          "score": 16,
+          "spark": [
+            6,
+            8,
+            10,
+            11,
+            13,
+            14,
+            14,
+            16
+          ],
+          "articleSlug": "vendor-first-customs"
+        },
+        {
+          "name": "Wuque Studio",
+          "category": "brand",
+          "direction": "flat",
+          "score": 8,
+          "spark": [
+            7,
+            9,
+            10,
+            8,
+            9,
+            8,
+            8,
+            8
+          ],
+          "articleSlug": null
+        },
+        {
+          "name": "Keychron",
+          "category": "brand",
+          "direction": "up",
+          "score": 32,
+          "spark": [
+            16,
+            20,
+            23,
+            26,
+            28,
+            29,
+            30,
+            32
+          ],
+          "articleSlug": "keychron-q-ultra-zmk"
+        },
+        {
+          "name": "Cherry (GMK manufacturer)",
+          "category": "brand",
+          "direction": "down",
+          "score": -15,
+          "spark": [
+            -4,
+            -6,
+            -8,
+            -10,
+            -12,
+            -13,
+            -14,
+            -15
+          ],
+          "articleSlug": "cherry-mx2a-revision"
+        }
+      ]
+    },
+    {
+      "isoWeek": "2026-W21",
+      "publishedAt": "2026-05-18T00:00:00.000Z",
+      "updatedAt": "2026-05-18T12:00:00.000Z",
+      "rows": [
+        {
+          "name": "HMX Cloud V2",
+          "category": "switch",
+          "direction": "up",
+          "score": 44,
+          "spark": [
+            18,
+            22,
+            27,
+            31,
+            35,
+            38,
+            40,
+            44
+          ],
+          "articleSlug": "hmx-cloud-deep-dive"
+        },
+        {
+          "name": "Gateron Oil King",
+          "category": "switch",
+          "direction": "flat",
+          "score": 40,
+          "spark": [
+            44,
+            46,
+            43,
+            42,
+            41,
+            41,
+            41,
+            40
+          ],
+          "articleSlug": "gateron-oil-king-deep-dive"
+        },
+        {
+          "name": "Cherry MX2A",
+          "category": "switch",
+          "direction": "down",
+          "score": -28,
+          "spark": [
+            -8,
+            -10,
+            -14,
+            -17,
+            -20,
+            -23,
+            -25,
+            -28
+          ],
+          "articleSlug": "cherry-mx2a-revision"
+        },
+        {
+          "name": "Hall Effect / Rapid Trigger",
+          "category": "switch",
+          "direction": "up",
+          "score": 55,
+          "spark": [
+            28,
+            33,
+            38,
+            42,
+            46,
+            49,
+            52,
+            55
+          ],
+          "articleSlug": "hall-effect-mainstream"
+        },
+        {
+          "name": "GMK CYL Prussian Alert",
+          "category": "keycap",
+          "direction": "up",
+          "score": 54,
+          "spark": [
+            10,
+            18,
+            26,
+            32,
+            38,
+            46,
+            50,
+            54
+          ],
+          "articleSlug": "gmk-cyl-prussian-alert"
+        },
+        {
+          "name": "GMK CYL Ramune",
+          "category": "keycap",
+          "direction": "up",
+          "score": 38,
+          "spark": [
+            0,
+            4,
+            10,
+            16,
+            22,
+            28,
+            33,
+            38
+          ],
+          "articleSlug": "gmk-cyl-ramune-group-buy"
+        },
+        {
+          "name": "DCS Grass Valley",
+          "category": "keycap",
+          "direction": "flat",
+          "score": 22,
+          "spark": [
+            0,
+            5,
+            11,
+            16,
+            19,
+            21,
+            22,
+            22
+          ],
+          "articleSlug": null
+        },
+        {
+          "name": "MT3 Profile",
+          "category": "keycap",
+          "direction": "flat",
+          "score": 4,
+          "spark": [
+            8,
+            7,
+            6,
+            5,
+            5,
+            4,
+            4,
+            4
+          ],
+          "articleSlug": null
+        },
+        {
+          "name": "75% Layout",
+          "category": "layout",
+          "direction": "up",
+          "score": 35,
+          "spark": [
+            16,
+            18,
+            22,
+            24,
+            27,
+            30,
+            32,
+            35
+          ],
+          "articleSlug": "75-percent-default"
+        },
+        {
+          "name": "Split / ergo (Voyager, Glove80)",
+          "category": "layout",
+          "direction": "flat",
+          "score": 34,
+          "spark": [
+            20,
+            23,
+            26,
+            28,
+            30,
+            33,
+            34,
+            34
+          ],
+          "articleSlug": "split-ergo-cohort"
+        },
+        {
+          "name": "Alice layout",
+          "category": "layout",
+          "direction": "down",
+          "score": -23,
+          "spark": [
+            -4,
+            -7,
+            -10,
+            -13,
+            -16,
+            -19,
+            -21,
+            -23
+          ],
+          "articleSlug": "alice-layout-decline"
+        },
+        {
+          "name": "Mode Designs",
+          "category": "vendor",
+          "direction": "up",
+          "score": 34,
+          "spark": [
+            10,
+            14,
+            17,
+            20,
+            22,
+            26,
+            30,
+            34
+          ],
+          "articleSlug": "vendor-first-customs"
+        },
+        {
+          "name": "Keychron",
+          "category": "brand",
+          "direction": "up",
+          "score": 38,
+          "spark": [
+            18,
+            22,
+            24,
+            26,
+            28,
+            32,
+            35,
+            38
+          ],
+          "articleSlug": "keychron-q-ultra-zmk"
+        },
+        {
+          "name": "Wuque Studio",
+          "category": "brand",
+          "direction": "up",
+          "score": 16,
+          "spark": [
+            4,
+            5,
+            6,
+            7,
+            7,
+            8,
+            12,
+            16
+          ],
+          "articleSlug": "vendor-first-customs"
+        },
+        {
+          "name": "Cherry (GMK parent)",
+          "category": "brand",
+          "direction": "down",
+          "score": -20,
+          "spark": [
+            -2,
+            -4,
+            -6,
+            -9,
+            -11,
+            -15,
+            -17,
+            -20
+          ],
+          "articleSlug": "cherry-mx2a-revision"
+        },
+        {
+          "name": "CannonKeys",
+          "category": "vendor",
+          "direction": "flat",
+          "score": 18,
+          "spark": [
+            14,
+            16,
+            18,
+            19,
+            19,
+            18,
+            18,
+            18
+          ],
+          "articleSlug": null
+        },
+        {
+          "name": "Prototypist",
+          "category": "vendor",
+          "direction": "flat",
+          "score": 18,
+          "spark": [
+            8,
+            10,
+            12,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "articleSlug": null
+        },
+        {
+          "name": "NovelKeys",
+          "category": "vendor",
+          "direction": "flat",
+          "score": 14,
+          "spark": [
+            18,
+            17,
+            16,
+            15,
+            15,
+            15,
+            14,
+            14
+          ],
+          "articleSlug": null
+        }
+      ]
+    },
+    {
+      "isoWeek": "2026-W22",
+      "publishedAt": "2026-05-25T00:00:00.000Z",
+      "updatedAt": "2026-05-25T12:00:00.000Z",
+      "rows": [
+        {
+          "name": "HMX Cloud V2",
+          "category": "switch",
+          "direction": "up",
+          "score": 49,
+          "spark": [
+            28,
+            32,
+            35,
+            38,
+            41,
+            44,
+            46,
+            49
+          ],
+          "articleSlug": "hmx-cloud-deep-dive"
+        },
+        {
+          "name": "Gateron Oil King",
+          "category": "switch",
+          "direction": "flat",
+          "score": 41,
+          "spark": [
+            40,
+            39,
+            40,
+            41,
+            40,
+            40,
+            41,
+            41
+          ],
+          "articleSlug": "gateron-oil-king-deep-dive"
+        },
+        {
+          "name": "Cherry MX2A",
+          "category": "switch",
+          "direction": "down",
+          "score": -31,
+          "spark": [
+            -14,
+            -17,
+            -20,
+            -22,
+            -25,
+            -28,
+            -29,
+            -31
+          ],
+          "articleSlug": "cherry-mx2a-revision"
+        },
+        {
+          "name": "Hall Effect / Rapid Trigger",
+          "category": "switch",
+          "direction": "up",
+          "score": 60,
+          "spark": [
+            35,
+            40,
+            44,
+            48,
+            51,
+            55,
+            57,
+            60
+          ],
+          "articleSlug": "hall-effect-mainstream"
+        },
+        {
+          "name": "GMK CYL Prussian Alert",
+          "category": "keycap",
+          "direction": "up",
+          "score": 59,
+          "spark": [
+            30,
+            36,
+            40,
+            44,
+            48,
+            54,
+            56,
+            59
+          ],
+          "articleSlug": "gmk-cyl-prussian-alert"
+        },
+        {
+          "name": "GMK CYL Ramune",
+          "category": "keycap",
+          "direction": "up",
+          "score": 44,
+          "spark": [
+            20,
+            24,
+            28,
+            32,
+            35,
+            38,
+            41,
+            44
+          ],
+          "articleSlug": "gmk-cyl-ramune-group-buy"
+        },
+        {
+          "name": "DCS Grass Valley",
+          "category": "keycap",
+          "direction": "flat",
+          "score": 23,
+          "spark": [
+            18,
+            19,
+            20,
+            21,
+            22,
+            22,
+            23,
+            23
+          ],
+          "articleSlug": null
+        },
+        {
+          "name": "MT3 Profile",
+          "category": "keycap",
+          "direction": "flat",
+          "score": 4,
+          "spark": [
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "articleSlug": "keycap-profiles-compared"
+        },
+        {
+          "name": "75% Layout",
+          "category": "layout",
+          "direction": "up",
+          "score": 38,
+          "spark": [
+            20,
+            23,
+            26,
+            29,
+            32,
+            35,
+            36,
+            38
+          ],
+          "articleSlug": "75-percent-default"
+        },
+        {
+          "name": "Split / Ergo (Voyager, Glove80)",
+          "category": "layout",
+          "direction": "up",
+          "score": 39,
+          "spark": [
+            22,
+            24,
+            26,
+            28,
+            30,
+            34,
+            36,
+            39
+          ],
+          "articleSlug": "split-ergo-cohort"
+        },
+        {
+          "name": "Alice layout",
+          "category": "layout",
+          "direction": "down",
+          "score": -26,
+          "spark": [
+            -10,
+            -14,
+            -17,
+            -19,
+            -21,
+            -23,
+            -24,
+            -26
+          ],
+          "articleSlug": "alice-layout-decline"
+        },
+        {
+          "name": "Mode Designs",
+          "category": "vendor",
+          "direction": "up",
+          "score": 37,
+          "spark": [
+            18,
+            22,
+            25,
+            27,
+            30,
+            34,
+            35,
+            37
+          ],
+          "articleSlug": "mode-sonnet-r2-group-buy-coverage"
+        },
+        {
+          "name": "CannonKeys",
+          "category": "vendor",
+          "direction": "flat",
+          "score": 18,
+          "spark": [
+            16,
+            16,
+            17,
+            18,
+            18,
+            18,
+            18,
+            18
+          ],
+          "articleSlug": "cannonkeys-nyawice-group-buy"
+        },
+        {
+          "name": "Prototypist",
+          "category": "vendor",
+          "direction": "up",
+          "score": 21,
+          "spark": [
+            12,
+            13,
+            15,
+            16,
+            17,
+            18,
+            19,
+            21
+          ],
+          "articleSlug": "vendor-first-customs"
+        },
+        {
+          "name": "NovelKeys",
+          "category": "vendor",
+          "direction": "flat",
+          "score": 15,
+          "spark": [
+            12,
+            12,
+            13,
+            13,
+            14,
+            14,
+            14,
+            15
+          ],
+          "articleSlug": null
+        },
+        {
+          "name": "Keychron",
+          "category": "brand",
+          "direction": "up",
+          "score": 44,
+          "spark": [
+            24,
+            27,
+            30,
+            33,
+            36,
+            38,
+            41,
+            44
+          ],
+          "articleSlug": "keychron-q-ultra-zmk"
+        },
+        {
+          "name": "Wuque Studio",
+          "category": "brand",
+          "direction": "flat",
+          "score": 17,
+          "spark": [
+            8,
+            9,
+            11,
+            12,
+            14,
+            16,
+            16,
+            17
+          ],
+          "articleSlug": "vendor-first-customs"
+        },
+        {
+          "name": "Cherry (GMK parent)",
+          "category": "brand",
+          "direction": "down",
+          "score": -23,
+          "spark": [
+            -8,
+            -11,
+            -14,
+            -16,
+            -18,
+            -20,
+            -21,
+            -23
+          ],
+          "articleSlug": "cherry-mx2a-revision"
+        }
+      ]
+    },
+    {
+      "isoWeek": "2026-W23",
+      "publishedAt": "2026-06-01T00:00:00.000Z",
+      "updatedAt": "2026-06-01T14:00:00.000Z",
+      "rows": [
+        {
+          "name": "Hall Effect / Rapid Trigger",
+          "category": "switch",
+          "direction": "up",
+          "score": 66,
+          "spark": [
+            40,
+            44,
+            48,
+            51,
+            55,
+            57,
+            60,
+            66
+          ],
+          "articleSlug": "hall-effect-mainstream"
+        },
+        {
+          "name": "HMX Cloud V2",
+          "category": "switch",
+          "direction": "up",
+          "score": 53,
+          "spark": [
+            32,
+            35,
+            38,
+            41,
+            44,
+            46,
+            49,
+            53
+          ],
+          "articleSlug": "hmx-cloud-deep-dive"
+        },
+        {
+          "name": "Gateron Oil King",
+          "category": "switch",
+          "direction": "flat",
+          "score": 41,
+          "spark": [
+            39,
+            40,
+            41,
+            40,
+            40,
+            41,
+            41,
+            41
+          ],
+          "articleSlug": "gateron-oil-king-deep-dive"
+        },
+        {
+          "name": "Cherry MX2A",
+          "category": "switch",
+          "direction": "down",
+          "score": -33,
+          "spark": [
+            -17,
+            -20,
+            -22,
+            -25,
+            -28,
+            -29,
+            -31,
+            -33
+          ],
+          "articleSlug": "cherry-mx2a-revision"
+        },
+        {
+          "name": "GMK CYL Prussian Alert",
+          "category": "keycap",
+          "direction": "up",
+          "score": 63,
+          "spark": [
+            36,
+            40,
+            44,
+            48,
+            54,
+            56,
+            59,
+            63
+          ],
+          "articleSlug": "gmk-cyl-prussian-alert"
+        },
+        {
+          "name": "GMK CYL Ramune",
+          "category": "keycap",
+          "direction": "flat",
+          "score": 43,
+          "spark": [
+            24,
+            28,
+            32,
+            35,
+            38,
+            41,
+            44,
+            43
+          ],
+          "articleSlug": "gmk-cyl-ramune-group-buy"
+        },
+        {
+          "name": "DCS Grass Valley",
+          "category": "keycap",
+          "direction": "down",
+          "score": -18,
+          "spark": [
+            19,
+            20,
+            21,
+            22,
+            22,
+            23,
+            23,
+            -18
+          ],
+          "articleSlug": "dcs-grass-valley-decline"
+        },
+        {
+          "name": "DCS Dolch",
+          "category": "keycap",
+          "direction": "up",
+          "score": 29,
+          "spark": [
+            0,
+            5,
+            10,
+            15,
+            19,
+            23,
+            26,
+            29
+          ],
+          "articleSlug": "divinikey-dcs-dolch-group-buy"
+        },
+        {
+          "name": "GMK CYL Selene",
+          "category": "keycap",
+          "direction": "up",
+          "score": 31,
+          "spark": [
+            10,
+            14,
+            18,
+            21,
+            24,
+            27,
+            29,
+            31
+          ],
+          "articleSlug": "gmk-cyl-selene-group-buy"
+        },
+        {
+          "name": "75% Layout",
+          "category": "layout",
+          "direction": "up",
+          "score": 43,
+          "spark": [
+            23,
+            26,
+            29,
+            32,
+            35,
+            36,
+            38,
+            43
+          ],
+          "articleSlug": "75-percent-default"
+        },
+        {
+          "name": "Split / Ergo (Voyager, Glove80)",
+          "category": "layout",
+          "direction": "up",
+          "score": 42,
+          "spark": [
+            24,
+            26,
+            28,
+            30,
+            34,
+            36,
+            39,
+            42
+          ],
+          "articleSlug": "split-ergo-cohort"
+        },
+        {
+          "name": "Alice layout",
+          "category": "layout",
+          "direction": "down",
+          "score": -27,
+          "spark": [
+            -14,
+            -17,
+            -19,
+            -21,
+            -23,
+            -24,
+            -26,
+            -27
+          ],
+          "articleSlug": "alice-layout-decline"
+        },
+        {
+          "name": "Mode Designs",
+          "category": "vendor",
+          "direction": "up",
+          "score": 40,
+          "spark": [
+            22,
+            25,
+            27,
+            30,
+            34,
+            35,
+            37,
+            40
+          ],
+          "articleSlug": "mode-sonnet-r2-group-buy-coverage"
+        },
+        {
+          "name": "CannonKeys",
+          "category": "vendor",
+          "direction": "up",
+          "score": 22,
+          "spark": [
+            16,
+            17,
+            18,
+            18,
+            18,
+            18,
+            18,
+            22
+          ],
+          "articleSlug": "cannonkeys-nyawice-group-buy"
+        },
+        {
+          "name": "Prototypist",
+          "category": "vendor",
+          "direction": "up",
+          "score": 24,
+          "spark": [
+            13,
+            15,
+            16,
+            17,
+            18,
+            19,
+            21,
+            24
+          ],
+          "articleSlug": "vendor-first-customs"
+        },
+        {
+          "name": "Keychron",
+          "category": "brand",
+          "direction": "flat",
+          "score": 44,
+          "spark": [
+            27,
+            30,
+            33,
+            36,
+            38,
+            41,
+            44,
+            44
+          ],
+          "articleSlug": "keychron-q-ultra-zmk"
+        },
+        {
+          "name": "Wuque Studio",
+          "category": "brand",
+          "direction": "flat",
+          "score": 17,
+          "spark": [
+            9,
+            11,
+            12,
+            14,
+            16,
+            16,
+            17,
+            17
+          ],
+          "articleSlug": null
+        },
+        {
+          "name": "Cherry (GMK parent)",
+          "category": "brand",
+          "direction": "down",
+          "score": -28,
+          "spark": [
+            -11,
+            -14,
+            -16,
+            -18,
+            -20,
+            -21,
+            -23,
+            -28
+          ],
+          "articleSlug": "cherry-mx2a-revision"
+        }
+      ]
+    },
+    {
+      "isoWeek": "2026-W24",
+      "publishedAt": "2026-06-08T00:00:00.000Z",
+      "updatedAt": "2026-07-21T03:12:25.000Z",
+      "rows": [
+        {
+          "name": "Hall Effect / Rapid Trigger",
+          "category": "switch",
+          "direction": "up",
+          "score": 72,
+          "spark": [
+            28,
+            35,
+            44,
+            51,
+            58,
+            63,
+            66,
+            72
+          ],
+          "articleSlug": "rapid-trigger-gaming-crossover"
+        },
+        {
+          "name": "HMX Cloud V2",
+          "category": "switch",
+          "direction": "up",
+          "score": 64,
+          "spark": [
+            14,
+            22,
+            31,
+            38,
+            44,
+            49,
+            53,
+            64
+          ],
+          "articleSlug": "hmx-cloud-deep-dive"
+        },
+        {
+          "name": "Gateron Oil King",
+          "category": "switch",
+          "direction": "flat",
+          "score": 40,
+          "spark": [
+            38,
+            40,
+            41,
+            42,
+            41,
+            40,
+            41,
+            40
+          ],
+          "articleSlug": "gateron-oil-king-deep-dive"
+        },
+        {
+          "name": "Gateron Lanes",
+          "category": "switch",
+          "direction": "up",
+          "score": 38,
+          "spark": [
+            0,
+            0,
+            0,
+            12,
+            22,
+            30,
+            33,
+            38
+          ],
+          "articleSlug": "gateron-lanes-tactile-deep-dive"
+        },
+        {
+          "name": "Cherry MX2A",
+          "category": "switch",
+          "direction": "flat",
+          "score": -30,
+          "spark": [
+            -8,
+            -14,
+            -20,
+            -25,
+            -30,
+            -32,
+            -33,
+            -30
+          ],
+          "articleSlug": "cherry-mx2a-revision"
+        },
+        {
+          "name": "GMK CYL Prussian Alert",
+          "category": "keycap",
+          "direction": "up",
+          "score": 74,
+          "spark": [
+            18,
+            24,
+            32,
+            42,
+            51,
+            58,
+            63,
+            74
+          ],
+          "articleSlug": "gmk-cyl-prussian-alert"
+        },
+        {
+          "name": "GMK CYL Ramune",
+          "category": "keycap",
+          "direction": "down",
+          "score": 28,
+          "spark": [
+            30,
+            33,
+            36,
+            39,
+            42,
+            43,
+            43,
+            28
+          ],
+          "articleSlug": "gmk-cyl-ramune-group-buy"
+        },
+        {
+          "name": "DCS Dolch",
+          "category": "keycap",
+          "direction": "up",
+          "score": 35,
+          "spark": [
+            0,
+            0,
+            4,
+            10,
+            18,
+            24,
+            29,
+            35
+          ],
+          "articleSlug": "divinikey-dcs-dolch-group-buy"
+        },
+        {
+          "name": "GMK CYL Selene",
+          "category": "keycap",
+          "direction": "flat",
+          "score": 33,
+          "spark": [
+            8,
+            12,
+            18,
+            24,
+            28,
+            30,
+            31,
+            33
+          ],
+          "articleSlug": "gmk-cyl-selene-group-buy"
+        },
+        {
+          "name": "GMK CYL Pandemonium",
+          "category": "keycap",
+          "direction": "up",
+          "score": 29,
+          "spark": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            18,
+            29
+          ],
+          "articleSlug": "gmk-cyl-pandemonium-group-buy"
+        },
+        {
+          "name": "75% Layout",
+          "category": "layout",
+          "direction": "flat",
+          "score": 44,
+          "spark": [
+            28,
+            32,
+            35,
+            38,
+            40,
+            42,
+            43,
+            44
+          ],
+          "articleSlug": "75-percent-default"
+        },
+        {
+          "name": "Split / Ergo",
+          "category": "layout",
+          "direction": "up",
+          "score": 52,
+          "spark": [
+            18,
+            22,
+            28,
+            32,
+            37,
+            40,
+            42,
+            52
+          ],
+          "articleSlug": "split-ergo-cohort"
+        },
+        {
+          "name": "Alice layout",
+          "category": "layout",
+          "direction": "flat",
+          "score": -26,
+          "spark": [
+            -8,
+            -12,
+            -16,
+            -20,
+            -24,
+            -26,
+            -27,
+            -26
+          ],
+          "articleSlug": "alice-layout-decline"
+        },
+        {
+          "name": "Mode Designs",
+          "category": "vendor",
+          "direction": "flat",
+          "score": 38,
+          "spark": [
+            14,
+            18,
+            24,
+            28,
+            32,
+            36,
+            40,
+            38
+          ],
+          "articleSlug": "mode-sonnet-r2-group-buy-coverage"
+        },
+        {
+          "name": "CannonKeys",
+          "category": "vendor",
+          "direction": "up",
+          "score": 30,
+          "spark": [
+            8,
+            10,
+            14,
+            16,
+            18,
+            20,
+            22,
+            30
+          ],
+          "articleSlug": "cannonkeys-nyawice-group-buy"
+        },
+        {
+          "name": "Prototypist",
+          "category": "vendor",
+          "direction": "up",
+          "score": 29,
+          "spark": [
+            10,
+            12,
+            14,
+            16,
+            18,
+            20,
+            24,
+            29
+          ],
+          "articleSlug": "gmk-cyl-selene-group-buy"
+        },
+        {
+          "name": "Keychron",
+          "category": "brand",
+          "direction": "up",
+          "score": 51,
+          "spark": [
+            28,
+            32,
+            36,
+            38,
+            40,
+            42,
+            44,
+            51
+          ],
+          "articleSlug": "keychron-q-ultra-zmk"
+        },
+        {
+          "name": "Wuque Studio",
+          "category": "brand",
+          "direction": "flat",
+          "score": 17,
+          "spark": [
+            16,
+            16,
+            17,
+            18,
+            18,
+            17,
+            17,
+            17
+          ],
+          "articleSlug": null
+        },
+        {
+          "name": "Cherry (GMK parent)",
+          "category": "brand",
+          "direction": "flat",
+          "score": -27,
+          "spark": [
+            -6,
+            -10,
+            -14,
+            -18,
+            -22,
+            -24,
+            -28,
+            -27
+          ],
+          "articleSlug": "cherry-mx2a-revision"
+        }
+      ]
+    },
+    {
+      "isoWeek": "2026-W25",
+      "publishedAt": "2026-06-15T00:00:00.000Z",
+      "updatedAt": "2026-06-15T14:00:00.000Z",
+      "rows": [
+        {
+          "name": "Hall Effect / Rapid Trigger",
+          "category": "switch",
+          "direction": "up",
+          "score": 76,
+          "spark": [
+            52,
+            55,
+            59,
+            62,
+            65,
+            68,
+            72,
+            76
+          ],
+          "articleSlug": "rapid-trigger-gaming-crossover"
+        },
+        {
+          "name": "HMX Cloud V2",
+          "category": "switch",
+          "direction": "flat",
+          "score": 62,
+          "spark": [
+            30,
+            38,
+            44,
+            50,
+            55,
+            60,
+            64,
+            62
+          ],
+          "articleSlug": "hmx-cloud-deep-dive"
+        },
+        {
+          "name": "Gateron Oil King",
+          "category": "switch",
+          "direction": "flat",
+          "score": 40,
+          "spark": [
+            42,
+            41,
+            40,
+            40,
+            41,
+            40,
+            40,
+            40
+          ],
+          "articleSlug": "gateron-oil-king-deep-dive"
+        },
+        {
+          "name": "Gateron Lanes",
+          "category": "switch",
+          "direction": "flat",
+          "score": 39,
+          "spark": [
+            18,
+            24,
+            30,
+            34,
+            36,
+            38,
+            38,
+            39
+          ],
+          "articleSlug": "gateron-lanes-tactile-deep-dive"
+        },
+        {
+          "name": "Cherry MX2A",
+          "category": "switch",
+          "direction": "down",
+          "score": -32,
+          "spark": [
+            -22,
+            -24,
+            -26,
+            -27,
+            -28,
+            -29,
+            -30,
+            -32
+          ],
+          "articleSlug": "cherry-mx2a-revision"
+        },
+        {
+          "name": "GMK CYL Prussian Alert",
+          "category": "keycap",
+          "direction": "down",
+          "score": 56,
+          "spark": [
+            40,
+            45,
+            52,
+            58,
+            62,
+            68,
+            74,
+            56
+          ],
+          "articleSlug": "gmk-cyl-prussian-alert"
+        },
+        {
+          "name": "GMK CYL Selene",
+          "category": "keycap",
+          "direction": "up",
+          "score": 37,
+          "spark": [
+            18,
+            20,
+            24,
+            27,
+            30,
+            31,
+            33,
+            37
+          ],
+          "articleSlug": "gmk-cyl-selene-group-buy"
+        },
+        {
+          "name": "GMK CYL Pandemonium",
+          "category": "keycap",
+          "direction": "up",
+          "score": 32,
+          "spark": [
+            0,
+            0,
+            0,
+            0,
+            14,
+            22,
+            29,
+            32
+          ],
+          "articleSlug": "gmk-cyl-pandemonium-group-buy"
+        },
+        {
+          "name": "GMK CYL Masterpiece R2",
+          "category": "keycap",
+          "direction": "up",
+          "score": 38,
+          "spark": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            18,
+            30,
+            38
+          ],
+          "articleSlug": "gmk-cyl-masterpiece-r2-group-buy"
+        },
+        {
+          "name": "DCS Dolch",
+          "category": "keycap",
+          "direction": "flat",
+          "score": 35,
+          "spark": [
+            0,
+            0,
+            0,
+            10,
+            20,
+            28,
+            35,
+            35
+          ],
+          "articleSlug": "divinikey-dcs-dolch-group-buy"
+        },
+        {
+          "name": "GMK CYL Ramune",
+          "category": "keycap",
+          "direction": "down",
+          "score": 24,
+          "spark": [
+            45,
+            42,
+            38,
+            36,
+            34,
+            30,
+            28,
+            24
+          ],
+          "articleSlug": "gmk-cyl-ramune-group-buy"
+        },
+        {
+          "name": "Split / Ergo",
+          "category": "layout",
+          "direction": "up",
+          "score": 55,
+          "spark": [
+            38,
+            40,
+            42,
+            44,
+            46,
+            48,
+            52,
+            55
+          ],
+          "articleSlug": "split-ergo-cohort"
+        },
+        {
+          "name": "75% Layout",
+          "category": "layout",
+          "direction": "flat",
+          "score": 44,
+          "spark": [
+            42,
+            43,
+            43,
+            44,
+            44,
+            44,
+            44,
+            44
+          ],
+          "articleSlug": "75-percent-default"
+        },
+        {
+          "name": "Alice layout",
+          "category": "layout",
+          "direction": "down",
+          "score": -28,
+          "spark": [
+            -18,
+            -20,
+            -22,
+            -23,
+            -24,
+            -25,
+            -26,
+            -28
+          ],
+          "articleSlug": "alice-layout-decline"
+        },
+        {
+          "name": "Mode Designs",
+          "category": "vendor",
+          "direction": "up",
+          "score": 42,
+          "spark": [
+            28,
+            30,
+            32,
+            34,
+            35,
+            36,
+            38,
+            42
+          ],
+          "articleSlug": "mode-sonnet-r2-group-buy-coverage"
+        },
+        {
+          "name": "CannonKeys",
+          "category": "vendor",
+          "direction": "flat",
+          "score": 28,
+          "spark": [
+            18,
+            20,
+            22,
+            24,
+            25,
+            26,
+            30,
+            28
+          ],
+          "articleSlug": "cannonkeys-nyawice-group-buy"
+        },
+        {
+          "name": "Prototypist",
+          "category": "vendor",
+          "direction": "flat",
+          "score": 27,
+          "spark": [
+            10,
+            12,
+            14,
+            16,
+            18,
+            20,
+            29,
+            27
+          ],
+          "articleSlug": null
+        },
+        {
+          "name": "Keychron",
+          "category": "brand",
+          "direction": "up",
+          "score": 55,
+          "spark": [
+            36,
+            38,
+            40,
+            42,
+            44,
+            46,
+            51,
+            55
+          ],
+          "articleSlug": "keychron-quiet-takeover"
+        },
+        {
+          "name": "Wuque Studio",
+          "category": "brand",
+          "direction": "down",
+          "score": 14,
+          "spark": [
+            16,
+            16,
+            17,
+            17,
+            17,
+            18,
+            17,
+            14
+          ],
+          "articleSlug": null
+        },
+        {
+          "name": "Cherry (GMK parent)",
+          "category": "brand",
+          "direction": "flat",
+          "score": -27,
+          "spark": [
+            -6,
+            -10,
+            -14,
+            -18,
+            -22,
+            -24,
+            -28,
+            -27
+          ],
+          "articleSlug": "cherry-mx2a-revision"
+        }
+      ]
+    },
+    {
+      "isoWeek": "2026-W26",
+      "publishedAt": "2026-06-22T00:00:00.000Z",
+      "updatedAt": "2026-06-22T14:00:00.000Z",
+      "rows": [
+        {
+          "name": "Hall Effect / Rapid Trigger",
+          "category": "switch",
+          "direction": "up",
+          "score": 82,
+          "spark": [
+            55,
+            59,
+            62,
+            65,
+            68,
+            72,
+            76,
+            82
+          ],
+          "articleSlug": "rapid-trigger-gaming-crossover"
+        },
+        {
+          "name": "HMX Cloud V2",
+          "category": "switch",
+          "direction": "flat",
+          "score": 61,
+          "spark": [
+            38,
+            44,
+            50,
+            55,
+            60,
+            64,
+            62,
+            61
+          ],
+          "articleSlug": "hmx-cloud-deep-dive"
+        },
+        {
+          "name": "Gateron Oil King",
+          "category": "switch",
+          "direction": "flat",
+          "score": 39,
+          "spark": [
+            41,
+            40,
+            40,
+            41,
+            40,
+            40,
+            40,
+            39
+          ],
+          "articleSlug": "gateron-oil-king-deep-dive"
+        },
+        {
+          "name": "Gateron Lanes",
+          "category": "switch",
+          "direction": "flat",
+          "score": 38,
+          "spark": [
+            24,
+            30,
+            34,
+            36,
+            38,
+            38,
+            39,
+            38
+          ],
+          "articleSlug": "gateron-lanes-tactile-deep-dive"
+        },
+        {
+          "name": "Cherry MX2A",
+          "category": "switch",
+          "direction": "down",
+          "score": -36,
+          "spark": [
+            -24,
+            -26,
+            -27,
+            -28,
+            -29,
+            -30,
+            -32,
+            -36
+          ],
+          "articleSlug": "cherry-mx2a-revision"
+        },
+        {
+          "name": "GMK CYL Masterpiece R2",
+          "category": "keycap",
+          "direction": "up",
+          "score": 46,
+          "spark": [
+            0,
+            0,
+            0,
+            0,
+            18,
+            30,
+            38,
+            46
+          ],
+          "articleSlug": "gmk-cyl-masterpiece-r2-group-buy"
+        },
+        {
+          "name": "GMK CYL Pandemonium",
+          "category": "keycap",
+          "direction": "flat",
+          "score": 33,
+          "spark": [
+            0,
+            0,
+            0,
+            14,
+            22,
+            29,
+            32,
+            33
+          ],
+          "articleSlug": "gmk-cyl-pandemonium-group-buy"
+        },
+        {
+          "name": "DCS Dolch",
+          "category": "keycap",
+          "direction": "flat",
+          "score": 34,
+          "spark": [
+            0,
+            0,
+            10,
+            20,
+            28,
+            35,
+            35,
+            34
+          ],
+          "articleSlug": "divinikey-dcs-dolch-group-buy"
+        },
+        {
+          "name": "GMK CYL Selene",
+          "category": "keycap",
+          "direction": "down",
+          "score": 24,
+          "spark": [
+            20,
+            24,
+            27,
+            30,
+            31,
+            33,
+            37,
+            24
+          ],
+          "articleSlug": "gmk-cyl-selene-group-buy"
+        },
+        {
+          "name": "GMK CYL Prussian Alert",
+          "category": "keycap",
+          "direction": "down",
+          "score": 38,
+          "spark": [
+            45,
+            52,
+            58,
+            62,
+            68,
+            74,
+            56,
+            38
+          ],
+          "articleSlug": "gmk-cyl-prussian-alert"
+        },
+        {
+          "name": "GMK CYL Ramune",
+          "category": "keycap",
+          "direction": "down",
+          "score": 18,
+          "spark": [
+            42,
+            38,
+            36,
+            34,
+            30,
+            28,
+            24,
+            18
+          ],
+          "articleSlug": "gmk-cyl-ramune-group-buy"
+        },
+        {
+          "name": "Split / Ergo",
+          "category": "layout",
+          "direction": "up",
+          "score": 66,
+          "spark": [
+            40,
+            42,
+            44,
+            46,
+            48,
+            52,
+            55,
+            66
+          ],
+          "articleSlug": "split-ergo-cohort"
+        },
+        {
+          "name": "75% Layout",
+          "category": "layout",
+          "direction": "flat",
+          "score": 43,
+          "spark": [
+            43,
+            43,
+            44,
+            44,
+            44,
+            44,
+            44,
+            43
+          ],
+          "articleSlug": "75-percent-default"
+        },
+        {
+          "name": "Alice layout",
+          "category": "layout",
+          "direction": "down",
+          "score": -31,
+          "spark": [
+            -20,
+            -22,
+            -23,
+            -24,
+            -25,
+            -26,
+            -28,
+            -31
+          ],
+          "articleSlug": "alice-layout-decline"
+        },
+        {
+          "name": "Mode Designs",
+          "category": "vendor",
+          "direction": "flat",
+          "score": 41,
+          "spark": [
+            30,
+            32,
+            34,
+            35,
+            36,
+            38,
+            42,
+            41
+          ],
+          "articleSlug": "mode-sonnet-r2-group-buy-coverage"
+        },
+        {
+          "name": "CannonKeys",
+          "category": "vendor",
+          "direction": "down",
+          "score": 22,
+          "spark": [
+            20,
+            22,
+            24,
+            25,
+            26,
+            30,
+            28,
+            22
+          ],
+          "articleSlug": "cannonkeys-nyawice-group-buy"
+        },
+        {
+          "name": "Prototypist",
+          "category": "vendor",
+          "direction": "up",
+          "score": 33,
+          "spark": [
+            12,
+            14,
+            16,
+            18,
+            20,
+            29,
+            27,
+            33
+          ],
+          "articleSlug": "gmk-cyl-pandemonium-group-buy"
+        },
+        {
+          "name": "Keychron",
+          "category": "brand",
+          "direction": "up",
+          "score": 72,
+          "spark": [
+            38,
+            40,
+            42,
+            44,
+            46,
+            51,
+            55,
+            72
+          ],
+          "articleSlug": "keychron-quiet-takeover"
+        },
+        {
+          "name": "Wuque Studio",
+          "category": "brand",
+          "direction": "flat",
+          "score": 13,
+          "spark": [
+            16,
+            17,
+            17,
+            17,
+            18,
+            17,
+            14,
+            13
+          ],
+          "articleSlug": null
+        },
+        {
+          "name": "Cherry (GMK parent)",
+          "category": "brand",
+          "direction": "flat",
+          "score": -27,
+          "spark": [
+            -10,
+            -14,
+            -18,
+            -22,
+            -24,
+            -28,
+            -27,
+            -27
+          ],
+          "articleSlug": "cherry-mx2a-revision"
+        }
+      ]
+    },
+    {
+      "isoWeek": "2026-W27",
+      "publishedAt": "2026-06-29T00:00:00.000Z",
+      "updatedAt": "2026-07-04T00:00:00.000Z",
+      "rows": [
+        {
+          "name": "Hall Effect / Rapid Trigger",
+          "category": "switch",
+          "direction": "up",
+          "score": 85,
+          "spark": [
+            59,
+            62,
+            65,
+            68,
+            72,
+            76,
+            82,
+            85
+          ],
+          "articleSlug": "rapid-trigger-gaming-crossover"
+        },
+        {
+          "name": "Keychron",
+          "category": "brand",
+          "direction": "up",
+          "score": 77,
+          "spark": [
+            40,
+            42,
+            44,
+            46,
+            51,
+            55,
+            72,
+            77
+          ],
+          "articleSlug": "keychron-quiet-takeover"
+        },
+        {
+          "name": "Split / Ergo",
+          "category": "layout",
+          "direction": "up",
+          "score": 69,
+          "spark": [
+            42,
+            44,
+            46,
+            48,
+            52,
+            55,
+            66,
+            69
+          ],
+          "articleSlug": "split-ergo-cohort"
+        },
+        {
+          "name": "HMX Cloud V2",
+          "category": "switch",
+          "direction": "flat",
+          "score": 60,
+          "spark": [
+            44,
+            50,
+            55,
+            60,
+            64,
+            62,
+            61,
+            60
+          ],
+          "articleSlug": "hmx-cloud-deep-dive"
+        },
+        {
+          "name": "Mode Designs",
+          "category": "vendor",
+          "direction": "flat",
+          "score": 42,
+          "spark": [
+            32,
+            34,
+            35,
+            36,
+            38,
+            42,
+            41,
+            42
+          ],
+          "articleSlug": "mode-sonnet-r2-group-buy-coverage"
+        },
+        {
+          "name": "75% Layout",
+          "category": "layout",
+          "direction": "flat",
+          "score": 43,
+          "spark": [
+            43,
+            44,
+            44,
+            44,
+            44,
+            44,
+            43,
+            43
+          ],
+          "articleSlug": "75-percent-default"
+        },
+        {
+          "name": "Gateron Oil King",
+          "category": "switch",
+          "direction": "flat",
+          "score": 39,
+          "spark": [
+            40,
+            40,
+            41,
+            40,
+            40,
+            40,
+            39,
+            39
+          ],
+          "articleSlug": "gateron-oil-king-deep-dive"
+        },
+        {
+          "name": "Gateron Lanes",
+          "category": "switch",
+          "direction": "flat",
+          "score": 36,
+          "spark": [
+            30,
+            34,
+            36,
+            38,
+            38,
+            39,
+            38,
+            36
+          ],
+          "articleSlug": "gateron-lanes-tactile-deep-dive"
+        },
+        {
+          "name": "Alice layout",
+          "category": "layout",
+          "direction": "down",
+          "score": -33,
+          "spark": [
+            -22,
+            -23,
+            -24,
+            -25,
+            -26,
+            -28,
+            -31,
+            -33
+          ],
+          "articleSlug": "alice-layout-decline"
+        },
+        {
+          "name": "GMK CYL Masterpiece R2",
+          "category": "keycap",
+          "direction": "down",
+          "score": 33,
+          "spark": [
+            0,
+            0,
+            0,
+            18,
+            30,
+            38,
+            46,
+            33
+          ],
+          "articleSlug": "gmk-cyl-masterpiece-r2-group-buy"
+        },
+        {
+          "name": "GMK CYL Pandemonium",
+          "category": "keycap",
+          "direction": "down",
+          "score": 29,
+          "spark": [
+            0,
+            0,
+            14,
+            22,
+            29,
+            32,
+            33,
+            29
+          ],
+          "articleSlug": "gmk-cyl-pandemonium-group-buy"
+        },
+        {
+          "name": "DCS Dolch",
+          "category": "keycap",
+          "direction": "down",
+          "score": 28,
+          "spark": [
+            0,
+            10,
+            20,
+            28,
+            35,
+            35,
+            34,
+            28
+          ],
+          "articleSlug": "divinikey-dcs-dolch-group-buy"
+        },
+        {
+          "name": "Work Louder x OpenAI Codex Micro",
+          "category": "vendor",
+          "direction": "up",
+          "score": 58,
+          "spark": [
+            0,
+            0,
+            0,
+            0,
+            8,
+            22,
+            40,
+            58
+          ],
+          "articleSlug": "work-louder-openai-codex-micro"
+        },
+        {
+          "name": "GMK CYL Selene",
+          "category": "keycap",
+          "direction": "down",
+          "score": 14,
+          "spark": [
+            24,
+            27,
+            30,
+            31,
+            33,
+            37,
+            24,
+            14
+          ],
+          "articleSlug": "gmk-cyl-selene-group-buy"
+        },
+        {
+          "name": "Cherry MX2A",
+          "category": "switch",
+          "direction": "down",
+          "score": -39,
+          "spark": [
+            -26,
+            -27,
+            -28,
+            -29,
+            -30,
+            -32,
+            -36,
+            -39
+          ],
+          "articleSlug": "cherry-mx2a-revision"
+        },
+        {
+          "name": "Prototypist",
+          "category": "vendor",
+          "direction": "down",
+          "score": 28,
+          "spark": [
+            14,
+            16,
+            18,
+            20,
+            29,
+            27,
+            33,
+            28
+          ],
+          "articleSlug": "gmk-cyl-pandemonium-group-buy"
+        },
+        {
+          "name": "CannonKeys",
+          "category": "vendor",
+          "direction": "flat",
+          "score": 20,
+          "spark": [
+            22,
+            24,
+            25,
+            26,
+            30,
+            28,
+            22,
+            20
+          ],
+          "articleSlug": "cannonkeys-nyawice-group-buy"
+        },
+        {
+          "name": "Wuque Studio",
+          "category": "brand",
+          "direction": "flat",
+          "score": 12,
+          "spark": [
+            17,
+            17,
+            17,
+            18,
+            17,
+            14,
+            13,
+            12
+          ],
+          "articleSlug": null
+        },
+        {
+          "name": "Cherry (GMK parent)",
+          "category": "brand",
+          "direction": "flat",
+          "score": -28,
+          "spark": [
+            -14,
+            -18,
+            -22,
+            -24,
+            -28,
+            -27,
+            -27,
+            -28
+          ],
+          "articleSlug": "cherry-mx2a-revision"
+        }
+      ]
+    },
+    {
+      "isoWeek": "2026-W28",
+      "publishedAt": "2026-07-06T00:00:00.000Z",
+      "updatedAt": "2026-07-06T00:00:00.000Z",
+      "rows": [
+        {
+          "name": "Hall Effect / Rapid Trigger",
+          "category": "switch",
+          "direction": "up",
+          "score": 87,
+          "spark": [
+            62,
+            65,
+            68,
+            72,
+            76,
+            82,
+            85,
+            87
+          ],
+          "articleSlug": "rapid-trigger-gaming-crossover"
+        },
+        {
+          "name": "Keychron",
+          "category": "brand",
+          "direction": "up",
+          "score": 80,
+          "spark": [
+            42,
+            44,
+            46,
+            51,
+            55,
+            72,
+            77,
+            80
+          ],
+          "articleSlug": "keychron-quiet-takeover"
+        },
+        {
+          "name": "Split / Ergo",
+          "category": "layout",
+          "direction": "up",
+          "score": 72,
+          "spark": [
+            44,
+            46,
+            48,
+            52,
+            55,
+            66,
+            69,
+            72
+          ],
+          "articleSlug": "split-ergo-cohort"
+        },
+        {
+          "name": "HMX Cloud V2",
+          "category": "switch",
+          "direction": "flat",
+          "score": 58,
+          "spark": [
+            50,
+            55,
+            60,
+            64,
+            62,
+            61,
+            60,
+            58
+          ],
+          "articleSlug": "hmx-cloud-deep-dive"
+        },
+        {
+          "name": "Work Louder x OpenAI Codex Micro",
+          "category": "vendor",
+          "direction": "up",
+          "score": 68,
+          "spark": [
+            0,
+            0,
+            8,
+            22,
+            40,
+            58,
+            64,
+            68
+          ],
+          "articleSlug": "work-louder-openai-codex-micro"
+        },
+        {
+          "name": "Mode Designs",
+          "category": "vendor",
+          "direction": "up",
+          "score": 45,
+          "spark": [
+            34,
+            35,
+            36,
+            38,
+            42,
+            41,
+            42,
+            45
+          ],
+          "articleSlug": "mode-sonnet-r2-group-buy-coverage"
+        },
+        {
+          "name": "75% Layout",
+          "category": "layout",
+          "direction": "flat",
+          "score": 43,
+          "spark": [
+            44,
+            44,
+            44,
+            44,
+            44,
+            43,
+            43,
+            43
+          ],
+          "articleSlug": "75-percent-default"
+        },
+        {
+          "name": "Alice layout",
+          "category": "layout",
+          "direction": "down",
+          "score": -36,
+          "spark": [
+            -24,
+            -25,
+            -26,
+            -28,
+            -31,
+            -33,
+            -35,
+            -36
+          ],
+          "articleSlug": "alice-layout-decline"
+        },
+        {
+          "name": "Gateron Oil King",
+          "category": "switch",
+          "direction": "flat",
+          "score": 37,
+          "spark": [
+            40,
+            41,
+            40,
+            40,
+            40,
+            39,
+            39,
+            37
+          ],
+          "articleSlug": "gateron-oil-king-deep-dive"
+        },
+        {
+          "name": "Gateron Lanes",
+          "category": "switch",
+          "direction": "flat",
+          "score": 35,
+          "spark": [
+            34,
+            36,
+            38,
+            38,
+            39,
+            38,
+            36,
+            35
+          ],
+          "articleSlug": "gateron-lanes-tactile-deep-dive"
+        },
+        {
+          "name": "GMK CYL Masterpiece R2",
+          "category": "keycap",
+          "direction": "down",
+          "score": 24,
+          "spark": [
+            0,
+            0,
+            18,
+            30,
+            38,
+            46,
+            33,
+            24
+          ],
+          "articleSlug": "gmk-cyl-masterpiece-r2-group-buy"
+        },
+        {
+          "name": "GMK CYL Pandemonium",
+          "category": "keycap",
+          "direction": "down",
+          "score": 22,
+          "spark": [
+            0,
+            14,
+            22,
+            29,
+            32,
+            33,
+            29,
+            22
+          ],
+          "articleSlug": "gmk-cyl-pandemonium-group-buy"
+        },
+        {
+          "name": "DCS Dolch",
+          "category": "keycap",
+          "direction": "down",
+          "score": 19,
+          "spark": [
+            10,
+            20,
+            28,
+            35,
+            35,
+            34,
+            28,
+            19
+          ],
+          "articleSlug": "divinikey-dcs-dolch-group-buy"
+        },
+        {
+          "name": "Prototypist",
+          "category": "vendor",
+          "direction": "down",
+          "score": 25,
+          "spark": [
+            16,
+            18,
+            20,
+            29,
+            27,
+            33,
+            28,
+            25
+          ],
+          "articleSlug": "vendor-first-customs"
+        },
+        {
+          "name": "Wuque Studio",
+          "category": "brand",
+          "direction": "down",
+          "score": 10,
+          "spark": [
+            17,
+            17,
+            18,
+            17,
+            14,
+            13,
+            12,
+            10
+          ],
+          "articleSlug": "vendor-first-customs"
+        },
+        {
+          "name": "Cherry MX2A",
+          "category": "switch",
+          "direction": "down",
+          "score": -42,
+          "spark": [
+            -27,
+            -28,
+            -29,
+            -30,
+            -32,
+            -36,
+            -39,
+            -42
+          ],
+          "articleSlug": "cherry-mx2a-revision"
+        },
+        {
+          "name": "Cherry (GMK parent)",
+          "category": "brand",
+          "direction": "down",
+          "score": -30,
+          "spark": [
+            -18,
+            -22,
+            -24,
+            -28,
+            -27,
+            -27,
+            -28,
+            -30
+          ],
+          "articleSlug": "cherry-mx2a-revision"
+        }
+      ]
+    },
+    {
+      "isoWeek": "2026-W29",
+      "publishedAt": "2026-07-13T00:00:00.000Z",
+      "updatedAt": "2026-07-13T00:00:00.000Z",
+      "rows": [
+        {
+          "name": "Hall Effect/Rapid Trigger",
+          "category": "switch",
+          "direction": "up",
+          "score": 91,
+          "spark": [
+            58,
+            64,
+            70,
+            76,
+            81,
+            85,
+            87,
+            91
+          ],
+          "articleSlug": "rapid-trigger-gaming-crossover"
+        },
+        {
+          "name": "Keychron",
+          "category": "brand",
+          "direction": "up",
+          "score": 86,
+          "spark": [
+            55,
+            60,
+            66,
+            71,
+            76,
+            80,
+            83,
+            86
+          ],
+          "articleSlug": "keychron-quiet-takeover"
+        },
+        {
+          "name": "Split/Ergo",
+          "category": "layout",
+          "direction": "up",
+          "score": 77,
+          "spark": [
+            45,
+            52,
+            58,
+            63,
+            67,
+            70,
+            74,
+            77
+          ],
+          "articleSlug": "split-ergo-cohort"
+        },
+        {
+          "name": "HMX Cloud V2",
+          "category": "switch",
+          "direction": "flat",
+          "score": 57,
+          "spark": [
+            62,
+            61,
+            60,
+            59,
+            58,
+            58,
+            57,
+            57
+          ],
+          "articleSlug": "hmx-cloud-deep-dive"
+        },
+        {
+          "name": "Work Louder x OpenAI Codex Micro",
+          "category": "vendor",
+          "direction": "up",
+          "score": 94,
+          "spark": [
+            30,
+            40,
+            48,
+            55,
+            61,
+            68,
+            80,
+            94
+          ],
+          "articleSlug": "work-louder-openai-codex-micro"
+        },
+        {
+          "name": "Mode Designs",
+          "category": "vendor",
+          "direction": "up",
+          "score": 53,
+          "spark": [
+            20,
+            26,
+            32,
+            37,
+            41,
+            44,
+            48,
+            53
+          ],
+          "articleSlug": "mode-sonnet-r2-group-buy-coverage"
+        },
+        {
+          "name": "75% Layout",
+          "category": "layout",
+          "direction": "flat",
+          "score": 46,
+          "spark": [
+            40,
+            41,
+            42,
+            43,
+            44,
+            44,
+            45,
+            46
+          ],
+          "articleSlug": "75-percent-default"
+        },
+        {
+          "name": "Alice layout",
+          "category": "layout",
+          "direction": "down",
+          "score": -44,
+          "spark": [
+            -10,
+            -16,
+            -22,
+            -27,
+            -31,
+            -34,
+            -40,
+            -44
+          ],
+          "articleSlug": "alice-layout-decline"
+        },
+        {
+          "name": "Gateron Oil King",
+          "category": "switch",
+          "direction": "flat",
+          "score": 39,
+          "spark": [
+            34,
+            35,
+            36,
+            37,
+            37,
+            38,
+            38,
+            39
+          ],
+          "articleSlug": "gateron-oil-king-deep-dive"
+        },
+        {
+          "name": "Gateron Lanes",
+          "category": "switch",
+          "direction": "up",
+          "score": 46,
+          "spark": [
+            28,
+            30,
+            33,
+            35,
+            38,
+            41,
+            44,
+            46
+          ],
+          "articleSlug": "gateron-lanes-tactile-deep-dive"
+        },
+        {
+          "name": "GMK CYL Masterpiece R2",
+          "category": "keycap",
+          "direction": "down",
+          "score": -30,
+          "spark": [
+            -5,
+            -10,
+            -15,
+            -19,
+            -22,
+            -25,
+            -27,
+            -30
+          ],
+          "articleSlug": "gmk-cyl-masterpiece-r2-group-buy"
+        },
+        {
+          "name": "GMK CYL Pandemonium",
+          "category": "keycap",
+          "direction": "down",
+          "score": -27,
+          "spark": [
+            -5,
+            -9,
+            -13,
+            -17,
+            -20,
+            -22,
+            -25,
+            -27
+          ],
+          "articleSlug": "gmk-cyl-pandemonium-group-buy"
+        },
+        {
+          "name": "DCS Dolch",
+          "category": "keycap",
+          "direction": "down",
+          "score": -23,
+          "spark": [
+            -3,
+            -7,
+            -11,
+            -14,
+            -16,
+            -18,
+            -21,
+            -23
+          ],
+          "articleSlug": "divinikey-dcs-dolch-group-buy"
+        },
+        {
+          "name": "Prototypist",
+          "category": "vendor",
+          "direction": "down",
+          "score": 15,
+          "spark": [
+            18,
+            20,
+            29,
+            27,
+            33,
+            28,
+            25,
+            15
+          ],
+          "articleSlug": "vendor-first-customs"
+        },
+        {
+          "name": "Wuque Studio",
+          "category": "brand",
+          "direction": "flat",
+          "score": -4,
+          "spark": [
+            -25,
+            -20,
+            -16,
+            -13,
+            -10,
+            -8,
+            -6,
+            -4
+          ],
+          "articleSlug": "vendor-first-customs"
+        },
+        {
+          "name": "Cherry MX2A",
+          "category": "switch",
+          "direction": "down",
+          "score": -50,
+          "spark": [
+            -31,
+            -33,
+            -30,
+            -32,
+            -36,
+            -39,
+            -42,
+            -50
+          ],
+          "articleSlug": "cherry-mx2a-revision"
+        },
+        {
+          "name": "Cherry (GMK parent)",
+          "category": "brand",
+          "direction": "up",
+          "score": -24,
+          "spark": [
+            -23,
+            -28,
+            -27,
+            -27,
+            -27,
+            -28,
+            -30,
+            -24
+          ],
+          "articleSlug": "cherry-mx2a-revision"
+        },
+        {
+          "name": "GMK CYL OG Extensions",
+          "category": "keycap",
+          "direction": "up",
+          "score": 55,
+          "spark": [
+            5,
+            10,
+            18,
+            26,
+            34,
+            42,
+            49,
+            55
+          ],
+          "articleSlug": "gmk-cyl-og-extensions-interest-check"
+        }
+      ]
+    },
+    {
+      "isoWeek": "2026-W30",
+      "publishedAt": "2026-07-20T00:00:00.000Z",
+      "updatedAt": "2026-07-26T00:00:00.000Z",
+      "rows": [
+        {
+          "name": "Hall Effect/Rapid Trigger",
+          "category": "switch",
+          "direction": "up",
+          "score": 94,
+          "spark": [
+            64,
+            70,
+            76,
+            81,
+            85,
+            87,
+            91,
+            94
+          ],
+          "articleSlug": "keychron-nova-socket-hybrid"
+        },
+        {
+          "name": "HMX Cloud V2",
+          "category": "switch",
+          "direction": "flat",
+          "score": 56,
+          "spark": [
+            61,
+            60,
+            59,
+            58,
+            58,
+            57,
+            57,
+            56
+          ],
+          "articleSlug": "hmx-cloud-deep-dive"
+        },
+        {
+          "name": "Gateron Oil King",
+          "category": "switch",
+          "direction": "flat",
+          "score": 40,
+          "spark": [
+            35,
+            36,
+            37,
+            37,
+            38,
+            38,
+            39,
+            40
+          ],
+          "articleSlug": "gateron-oil-king-deep-dive"
+        },
+        {
+          "name": "Gateron Lanes",
+          "category": "switch",
+          "direction": "up",
+          "score": 50,
+          "spark": [
+            30,
+            33,
+            35,
+            38,
+            41,
+            44,
+            46,
+            50
+          ],
+          "articleSlug": "gateron-lanes-tactile-deep-dive"
+        },
+        {
+          "name": "Cherry MX2A",
+          "category": "switch",
+          "direction": "up",
+          "score": -46,
+          "spark": [
+            -18,
+            -25,
+            -32,
+            -37,
+            -42,
+            -46,
+            -50,
+            -46
+          ],
+          "articleSlug": "cherry-mx2a-revision"
+        },
+        {
+          "name": "GMK CYL OG Extensions",
+          "category": "keycap",
+          "direction": "up",
+          "score": 58,
+          "spark": [
+            10,
+            18,
+            26,
+            34,
+            42,
+            49,
+            55,
+            58
+          ],
+          "articleSlug": "gmk-cyl-og-extensions-interest-check"
+        },
+        {
+          "name": "GMK CYL TA Neo",
+          "category": "keycap",
+          "direction": "up",
+          "score": 62,
+          "spark": [
+            10,
+            18,
+            26,
+            34,
+            42,
+            50,
+            57,
+            62
+          ],
+          "articleSlug": null
+        },
+        {
+          "name": "DCS Handarbeit",
+          "category": "keycap",
+          "direction": "up",
+          "score": 45,
+          "spark": [
+            5,
+            10,
+            16,
+            22,
+            28,
+            34,
+            40,
+            45
+          ],
+          "articleSlug": null
+        },
+        {
+          "name": "Split/Ergo layout",
+          "category": "layout",
+          "direction": "up",
+          "score": 80,
+          "spark": [
+            52,
+            58,
+            63,
+            67,
+            70,
+            74,
+            77,
+            80
+          ],
+          "articleSlug": "split-ergo-cohort"
+        },
+        {
+          "name": "Alice layout",
+          "category": "layout",
+          "direction": "down",
+          "score": -48,
+          "spark": [
+            -16,
+            -22,
+            -27,
+            -31,
+            -34,
+            -40,
+            -44,
+            -48
+          ],
+          "articleSlug": "alice-layout-decline"
+        },
+        {
+          "name": "75% Layout",
+          "category": "layout",
+          "direction": "flat",
+          "score": 47,
+          "spark": [
+            41,
+            42,
+            43,
+            44,
+            44,
+            45,
+            46,
+            47
+          ],
+          "articleSlug": "75-percent-default"
+        },
+        {
+          "name": "Work Louder x OpenAI Codex Micro",
+          "category": "vendor",
+          "direction": "up",
+          "score": 96,
+          "spark": [
+            40,
+            48,
+            55,
+            61,
+            68,
+            80,
+            94,
+            96
+          ],
+          "articleSlug": "work-louder-openai-codex-micro"
+        },
+        {
+          "name": "Mode Designs",
+          "category": "vendor",
+          "direction": "up",
+          "score": 58,
+          "spark": [
+            26,
+            32,
+            37,
+            41,
+            44,
+            48,
+            53,
+            58
+          ],
+          "articleSlug": "mode-sonnet-r2-group-buy-coverage"
+        },
+        {
+          "name": "Prototypist",
+          "category": "vendor",
+          "direction": "up",
+          "score": 20,
+          "spark": [
+            20,
+            29,
+            27,
+            33,
+            28,
+            25,
+            15,
+            20
+          ],
+          "articleSlug": "prototypist-vendor-spotlight"
+        },
+        {
+          "name": "Keychron",
+          "category": "brand",
+          "direction": "up",
+          "score": 90,
+          "spark": [
+            60,
+            66,
+            71,
+            76,
+            80,
+            83,
+            86,
+            90
+          ],
+          "articleSlug": "keychron-nova-socket-hybrid"
+        },
+        {
+          "name": "Cherry (GMK parent)",
+          "category": "brand",
+          "direction": "up",
+          "score": -18,
+          "spark": [
+            -40,
+            -36,
+            -33,
+            -30,
+            -28,
+            -26,
+            -24,
+            -18
+          ],
+          "articleSlug": "cherry-xtrfy-tmr-pivot"
+        },
+        {
+          "name": "Wuque Studio",
+          "category": "brand",
+          "direction": "flat",
+          "score": -3,
+          "spark": [
+            -20,
+            -16,
+            -13,
+            -10,
+            -8,
+            -6,
+            -4,
+            -3
+          ],
+          "articleSlug": null
+        }
+      ]
+    },
+    {
+      "isoWeek": "2026-W31",
+      "publishedAt": "2026-07-27T00:00:00.000Z",
+      "updatedAt": "2026-07-27T01:40:00.000Z",
+      "rows": [
+        {
+          "name": "Hall Effect/Rapid Trigger",
+          "category": "switch",
+          "direction": "up",
+          "score": 95,
+          "spark": [
+            58,
+            66,
+            72,
+            79,
+            85,
+            90,
+            94,
+            95
+          ],
+          "articleSlug": "keychron-nova-socket-hybrid"
+        },
+        {
+          "name": "Cherry MX2A",
+          "category": "switch",
+          "direction": "flat",
+          "score": -45,
+          "spark": [
+            -58,
+            -56,
+            -54,
+            -52,
+            -50,
+            -48,
+            -46,
+            -45
+          ],
+          "articleSlug": "cherry-mx2a-revision"
+        },
+        {
+          "name": "Gateron Oil King",
+          "category": "switch",
+          "direction": "flat",
+          "score": 40,
+          "spark": [
+            38,
+            39,
+            40,
+            41,
+            40,
+            39,
+            40,
+            40
+          ],
+          "articleSlug": "gateron-oil-king-deep-dive"
+        },
+        {
+          "name": "Gateron Lanes",
+          "category": "switch",
+          "direction": "up",
+          "score": 54,
+          "spark": [
+            30,
+            34,
+            38,
+            42,
+            46,
+            48,
+            50,
+            54
+          ],
+          "articleSlug": "gateron-lanes-tactile-deep-dive"
+        },
+        {
+          "name": "HMX Cloud V2",
+          "category": "switch",
+          "direction": "flat",
+          "score": 55,
+          "spark": [
+            58,
+            57,
+            55,
+            56,
+            57,
+            55,
+            56,
+            55
+          ],
+          "articleSlug": "hmx-cloud-deep-dive"
+        },
+        {
+          "name": "GMK CYL OG Extensions",
+          "category": "keycap",
+          "direction": "up",
+          "score": 62,
+          "spark": [
+            30,
+            36,
+            42,
+            48,
+            52,
+            55,
+            58,
+            62
+          ],
+          "articleSlug": "gmk-cyl-og-extensions-interest-check"
+        },
+        {
+          "name": "GMK CYL TA Neo",
+          "category": "keycap",
+          "direction": "down",
+          "score": 50,
+          "spark": [
+            34,
+            40,
+            46,
+            52,
+            58,
+            60,
+            62,
+            50
+          ],
+          "articleSlug": null
+        },
+        {
+          "name": "Divinikey DCS Dolch",
+          "category": "keycap",
+          "direction": "flat",
+          "score": 38,
+          "spark": [
+            20,
+            24,
+            28,
+            32,
+            35,
+            37,
+            38,
+            38
+          ],
+          "articleSlug": "divinikey-dcs-dolch-group-buy"
+        },
+        {
+          "name": "Split/Ergo layout",
+          "category": "layout",
+          "direction": "up",
+          "score": 82,
+          "spark": [
+            55,
+            60,
+            65,
+            70,
+            74,
+            77,
+            80,
+            82
+          ],
+          "articleSlug": "split-ergo-cohort"
+        },
+        {
+          "name": "Alice layout",
+          "category": "layout",
+          "direction": "down",
+          "score": -52,
+          "spark": [
+            -20,
+            -26,
+            -32,
+            -38,
+            -42,
+            -45,
+            -48,
+            -52
+          ],
+          "articleSlug": "alice-layout-decline"
+        },
+        {
+          "name": "75% Layout",
+          "category": "layout",
+          "direction": "up",
+          "score": 50,
+          "spark": [
+            44,
+            46,
+            45,
+            47,
+            46,
+            48,
+            47,
+            50
+          ],
+          "articleSlug": "75-percent-default"
+        },
+        {
+          "name": "Work Louder x OpenAI Codex Micro",
+          "category": "vendor",
+          "direction": "up",
+          "score": 97,
+          "spark": [
+            40,
+            55,
+            68,
+            78,
+            88,
+            93,
+            96,
+            97
+          ],
+          "articleSlug": "work-louder-openai-codex-micro"
+        },
+        {
+          "name": "Mode Designs",
+          "category": "vendor",
+          "direction": "up",
+          "score": 62,
+          "spark": [
+            35,
+            40,
+            45,
+            50,
+            53,
+            56,
+            58,
+            62
+          ],
+          "articleSlug": "mode-sonnet-r2-group-buy-coverage"
+        },
+        {
+          "name": "Prototypist",
+          "category": "vendor",
+          "direction": "up",
+          "score": 24,
+          "spark": [
+            8,
+            11,
+            14,
+            16,
+            18,
+            19,
+            20,
+            24
+          ],
+          "articleSlug": "prototypist-vendor-spotlight"
+        },
+        {
+          "name": "Keychron",
+          "category": "brand",
+          "direction": "up",
+          "score": 94,
+          "spark": [
+            60,
+            68,
+            74,
+            80,
+            84,
+            87,
+            90,
+            94
+          ],
+          "articleSlug": "keychron-quiet-takeover"
+        },
+        {
+          "name": "Cherry (GMK parent)",
+          "category": "brand",
+          "direction": "up",
+          "score": -10,
+          "spark": [
+            -40,
+            -36,
+            -32,
+            -28,
+            -24,
+            -21,
+            -18,
+            -10
+          ],
+          "articleSlug": "cherry-xtrfy-tmr-pivot"
+        },
+        {
+          "name": "Wuque Studio",
+          "category": "brand",
+          "direction": "flat",
+          "score": -4,
+          "spark": [
+            -8,
+            -6,
+            -4,
+            -2,
+            -3,
+            -2,
+            -3,
+            -4
+          ],
+          "articleSlug": null
+        }
+      ]
+    }
+  ],
+  "generatedAt": "2026-07-29T20:37:26.670Z"
 }

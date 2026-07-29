@@ -13,6 +13,7 @@
  */
 import type { Pillar } from '@thock/content'
 import type { Tag } from '@thock/content'
+import type { TrendSnapshot } from '@thock/data'
 
 import ogManifestJson from './og-manifest.generated.json'
 
@@ -53,12 +54,16 @@ export type NewsletterOGData = {
   readTime: number
 }
 
+/** Trend snapshot rows minus the `note` prose field — not needed for OG card generation. */
+export type TrendOGData = TrendSnapshot
+
 type OGManifest = {
   articles: ArticleOGData[]
   tags: TagOGData[]
   parts: PartOGData[]
   vendors: VendorOGData[]
   newsletters: NewsletterOGData[]
+  trends: TrendOGData[]
   generatedAt: string
 }
 
@@ -82,4 +87,8 @@ export function getVendorForOg(slug: string): VendorOGData | null {
 
 export function getNewsletterForOg(slug: string): NewsletterOGData | null {
   return (ogManifest.newsletters ?? []).find((n) => n.slug === slug) ?? null
+}
+
+export function getTrendSnapshotForOg(isoWeek: string): TrendOGData | null {
+  return (ogManifest.trends ?? []).find((t) => t.isoWeek === isoWeek) ?? null
 }

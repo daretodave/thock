@@ -5,6 +5,7 @@ import {
   getPartForOg,
   getVendorForOg,
   getNewsletterForOg,
+  getTrendSnapshotForOg,
 } from '../og-runtime'
 
 describe('og-runtime adapter', () => {
@@ -67,5 +68,17 @@ describe('og-runtime adapter', () => {
 
   it('returns null for an unknown newsletter slug', () => {
     expect(getNewsletterForOg('this-issue-does-not-exist')).toBeNull()
+  })
+
+  it('looks up a trend snapshot by ISO week', () => {
+    const snapshot = getTrendSnapshotForOg('2026-W19')
+    expect(snapshot).not.toBeNull()
+    expect(snapshot!.isoWeek).toBe('2026-W19')
+    expect(snapshot!.rows.length).toBeGreaterThan(0)
+    expect(snapshot!.rows[0]!.name).toBeTruthy()
+  })
+
+  it('returns null for an unknown ISO week', () => {
+    expect(getTrendSnapshotForOg('2099-W01')).toBeNull()
   })
 })
