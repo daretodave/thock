@@ -84,6 +84,16 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [enhancement] [3.6] compare-tool empty states have no link to the quiz or catalog — addressed in this commit, closes #655
+- category: enhancement
+- filed: 2026-07-29 by cloud /iterate audit (fresh general-purpose sweep, angle: compare-tool empty-state navigation)
+- impact: 4 (`/compare/switch` and `/compare/board` render a plain, linkless paragraph in the empty state — a visitor who lands there without already knowing two names to compare has no in-page path forward. Mirror image of issue #641/commit `95a90109`, which added the missing quiz→compare link and was scored 4.5 as a real, valuable fix)
+- ease: 9 (one conditional `<Link>` per page's empty-state block; no schema/route/component signature changes; no existing test pinned the old plain-paragraph text)
+- score: 3.6 (impact × ease / 10)
+- issue: #655
+> **Resolved (2026-07-29):** `/compare/switch` empty state now links to `/quiz/switch` ("Not sure? Take the quiz →"); `/compare/board` empty state links to `/part/board` ("Browse all boards →", no board quiz exists to target). Both styled like the adjacent quiz-footer affordance from `SwitchQuiz.tsx`. New e2e assertions in `compare.spec.ts` for both links' visibility and href.
+> Picked as the top signal this tick: no unlabeled GitHub issues; not Monday-relevant (W31 snapshot already existed); no pending phases/data/content-gap work (all 7 mechanical surveys re-ran clean); march's expand Step 3c gate not due (0 commits since pass 250, which ran this same tick). AUDIT.md's only other Pending row remains the `[4.0]` Lighthouse-CI `/oversight` item; CRITIQUE.md's only Pending row remains the non-actionable GA-beacon item. A fresh general-purpose sweep (checked: `/sources` per-citation index — already real, not a stub; quiz recommender tie/empty-catalog handling — clean; trends sparkline array consistency — clean; compare-tool malformed/self-referencing query params — already handled; mobile nav focus trap/aria — already hardened; archive month-grouping timezone risk — string-prefix based, no risk) found this empty-state navigation gap as the one finding scoring above 3.0, directly precedented by the just-shipped inverse fix (#641).
+
 ### [x] [a11y] [5.4] newsletter email input missing autoComplete for WCAG 1.3.5 — addressed in this commit, closes #621
 - category: a11y
 - filed: 2026-07-26 by cloud /iterate audit (fresh general-purpose sweep, angle: form input-purpose attributes)
