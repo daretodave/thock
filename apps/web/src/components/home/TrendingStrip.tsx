@@ -9,7 +9,9 @@ export type TrendingStripProps = {
 /**
  * Six-tile trending strip on the home page. Reads from the most
  * recent `TrendSnapshot` and renders the top 6 actively-moving rows
- * (direction `up` or `down`) as `<TrendingTile>`s. Hidden entirely
+ * (direction `up` or `down`), ranked by movement magnitude
+ * (`abs(score)` desc — the same convention `tracker/index.ts` uses
+ * for riser/faller picks), as `<TrendingTile>`s. Hidden entirely
  * when the snapshot is null/empty or contains zero moving rows —
  * matches `phase_6_home.md` "No latest trend snapshot" empty state
  * and respects the rail's "what's moving on the tracker" framing
@@ -22,6 +24,8 @@ export function TrendingStrip({
 
   const tiles = snapshot.rows
     .filter((row) => row.direction !== 'flat')
+    .slice()
+    .sort((a, b) => Math.abs(b.score) - Math.abs(a.score))
     .slice(0, 6)
   if (tiles.length === 0) return null
 
