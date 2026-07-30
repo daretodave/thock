@@ -3,7 +3,7 @@ import { PageSectionKicker } from '@/components/ui/PageSectionKicker'
 
 export default function QuizKeycapSetLoading() {
   return (
-    <main id="main">
+    <main id="main" className="flex-1">
       <Container>
         <div className="py-12 max-w-2xl mx-auto">
           <PageSectionKicker className="mb-4 block">loading · quiz</PageSectionKicker>

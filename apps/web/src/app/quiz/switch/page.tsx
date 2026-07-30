@@ -29,7 +29,7 @@ const WEB_APP_JSON_LD = {
 export default function QuizSwitchPage(): ReactElement {
   const switches = getAllSwitches()
   return (
-    <main id="main">
+    <main id="main" className="flex-1">
       <Container>
         <JsonLd
           graph={[
