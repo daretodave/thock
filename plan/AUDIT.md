@@ -84,6 +84,17 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [enhancement] [3.6] /quiz/switch and /quiz/keycap-set page/loading templates missing flex-1 on `<main>` — addressed in 5b8c0def, closes #674
+- category: enhancement
+- filed: 2026-07-30 by cloud /iterate audit (fresh general-purpose sweep, angle: re-scoring carried-forward pass-261 sub-threshold candidate)
+- impact: 4 (the root layout (`apps/web/src/app/layout.tsx`) sets `<body className="... flex flex-col">`, relying on `<main className="flex-1">` to grow and pin the footer to the viewport bottom on short-content pages. `grep -rn '<main' apps/web/src/app --include="page.tsx" --include="loading.tsx" | grep -o '<main[^>]*>' | sort | uniq -c` showed 47 route templates carrying `flex-1` and exactly 4 that didn't — all 4 in the quiz route family (`quiz/switch/page.tsx`, `quiz/switch/loading.tsx`, `quiz/keycap-set/page.tsx`, `quiz/keycap-set/loading.tsx`). Without it, the footer rides up flush against short quiz content instead of pinning to the viewport bottom on short viewports — a visible layout inconsistency versus every other page on a top-level nav surface)
+- ease: 9 (single className addition × 4 files, no logic/test changes needed)
+- score: 3.6 (impact × ease / 10) — re-scored above the pass-261 carry-forward value (2.4) after confirming this is the *only* deviation from an otherwise-universal 47/47 site convention on a top-level nav surface, not a cosmetic one-off
+- evidence: `grep -rln '<main id="main">$' apps/web/src/app --include="page.tsx" --include="loading.tsx"` → exactly the 4 quiz files listed above.
+- issue: #674
+> **Resolved (2026-07-30):** added `className="flex-1"` to `<main>` in all 4 files. `pnpm verify` full gate green: typecheck, lint, unit tests, script tests, data:validate, build, size, 1102/1102 e2e.
+> Picked as the top signal this tick: no unlabeled GitHub issues (triage gate); not Monday-relevant (W31 snapshot already existed); no pending phases/data/content-gap work (all 7 mechanical surveys re-ran clean, no rows filed); march's own expand Step 3c gate not met (7 commits/~5.8h since pass 261, threshold 20 commits/48h). AUDIT.md's only other Pending row is the `[4.0]` Lighthouse-CI `/oversight` item (needs-user-call, non-autonomous); CRITIQUE.md's only Pending row remains the non-actionable GA-beacon item. Dispatched a fresh general-purpose sweep with angles disjoint from passes 249–261; its top candidate (Callout MDX component title rendering as `<h2>`) turned out to be a deliberate, already-tested a11y tradeoff (`packages/content/src/__tests__/mdx/spacing.test.tsx` "MDX a11y — Callout title is a heading" — `h2` was chosen specifically to avoid an h1→h3 WCAG 1.3.1 skip when a callout sits before the first `##` section; downgrading it would reintroduce a previously-fixed bug), so it was discarded after verification. Fell back to re-scoring the two pass-261 carried-forward sub-threshold candidates by hand: the footer `© 2026 thock` hardcoded-year item stayed sub-threshold on inspection (impact 3 × ease 9 / 10 = 2.7, cosmetic, self-heals in 5 months), while this quiz `flex-1` gap re-scored to 3.6 once confirmed as the sole deviation from a 47/47 site-wide convention.
+
 ### [x] [a11y] [4.5] sitewide: no prefers-reduced-motion support for skeleton animations — addressed in 5350d208, closes #673
 - category: a11y
 - filed: 2026-07-30 by cloud /iterate audit (fresh general-purpose sweep, angle: prefers-reduced-motion support)
