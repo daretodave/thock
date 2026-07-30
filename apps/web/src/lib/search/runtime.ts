@@ -49,11 +49,29 @@ function load(): IndexBundle {
 }
 
 const DEFAULT_LIMIT = 25
+// Below this length, prefix/fuzzy expansion turns a single short term into
+// a near-universal match (e.g. "SA" prefix-matching every "said", "same",
+// "saturn" token in 74/74 article bodies) — gate expansion off below it.
+const MIN_EXPANSION_LENGTH = 3
+// Common English words that appear in nearly every article body verbatim.
+// Left ungated, a bare stopword query ("a", "the") exact-matches the whole
+// corpus and the aria-live region announces a materially false result count.
+const STOPWORDS = new Set([
+  'a', 'an', 'and', 'at', 'by', 'for', 'i', 'in', 'is', 'it',
+  'of', 'on', 'or', 'the', 'to',
+])
 const SEARCH_OPTIONS = {
   boost: { title: 4, tags: 3, lede: 2, body: 1 },
-  fuzzy: 0.2,
-  prefix: true,
+  fuzzy: (term: string) => (term.length >= MIN_EXPANSION_LENGTH ? 0.2 : false),
+  prefix: (term: string) => term.length >= MIN_EXPANSION_LENGTH,
 } as const
+
+function stripStopwords(query: string): string {
+  return query
+    .split(/\s+/)
+    .filter((term) => term.length > 0 && !STOPWORDS.has(term.toLowerCase()))
+    .join(' ')
+}
 
 /**
  * Run a query against the precomputed MiniSearch index. Returns
@@ -64,7 +82,7 @@ export function searchArticles(
   query: string,
   limit: number = DEFAULT_LIMIT,
 ): SearchHit[] {
-  const trimmed = query.trim()
+  const trimmed = stripStopwords(query.trim())
   if (trimmed.length === 0) return []
   const { index, documents } = load()
   const raw = index.search(trimmed, SEARCH_OPTIONS)

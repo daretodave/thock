@@ -21,10 +21,21 @@ describe('searchArticles', () => {
   })
 
   it('caps the result list at the requested limit', () => {
-    const all = searchArticles('a', 25)
+    const all = searchArticles('switch', 25)
     if (all.length === 0) return
-    const limited = searchArticles('a', 1)
+    const limited = searchArticles('switch', 1)
     expect(limited.length).toBeLessThanOrEqual(1)
+  })
+
+  it('returns no results for a bare stopword query instead of the whole corpus', () => {
+    expect(searchArticles('a')).toEqual([])
+    expect(searchArticles('the')).toEqual([])
+    expect(searchArticles('i')).toEqual([])
+  })
+
+  it('does not prefix/fuzzy-expand a short query into a near-total corpus match', () => {
+    const hits = searchArticles('SA')
+    expect(hits.length).toBeLessThan(20)
   })
 
   it('returns hits enriched with stored fields', () => {
