@@ -84,6 +84,17 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [a11y] [4.5] sitewide: no prefers-reduced-motion support for skeleton animations — addressed in 5350d208, closes #673
+- category: a11y
+- filed: 2026-07-30 by cloud /iterate audit (fresh general-purpose sweep, angle: prefers-reduced-motion support)
+- impact: 5 (`animate-pulse` — a CSS keyframe pulse/opacity animation — is used across 21 files, including nearly every route's `loading.tsx` skeleton screen: `apps/web/src/app/news/loading.tsx`, `apps/web/src/app/guides/loading.tsx`, `apps/web/src/app/group-buys/loading.tsx`, `apps/web/src/app/archive/loading.tsx`, `apps/web/src/app/parts/loading.tsx`, and more. Tailwind's `animate-pulse` utility is not itself gated by `prefers-reduced-motion`, and no `@media (prefers-reduced-motion: reduce)` block existed anywhere in the codebase — `globals.css` had only an `@media print` block. Users with vestibular disorders who set the OS-level "reduce motion" preference got full pulsing animation on every client-side route transition, violating WCAG 2.3.3 best practice on an otherwise a11y-conscious codebase that already ships a dedicated `a11y-spec-coverage-check.mjs`)
+- ease: 9 (single, well-known global CSS addition to `apps/web/src/app/globals.css`, no component-level changes needed)
+- score: 4.5 (impact × ease / 10)
+- evidence: `grep -rn "reduced-motion|motion-safe|motion-reduce" apps/web/src/app/globals.css apps/web/src/styles/*.css` returned nothing pre-fix; `grep -rl "animate-pulse" apps/web/src --include="*.tsx" | wc -l` → 21 files.
+- issue: #673
+> **Resolved (2026-07-30):** added `@media (prefers-reduced-motion: reduce)` block to `apps/web/src/app/globals.css` alongside the existing `@media print` block, collapsing `animation-duration`/`animation-iteration-count`/`transition-duration`/`scroll-behavior` to near-zero/auto for users with the OS preference set. `pnpm verify` full gate green: typecheck, lint, 740 unit tests, 175 script tests, data:validate, build, size, 1102/1102 e2e.
+> Picked as the top signal this tick: no unlabeled GitHub issues (triage gate); not Monday-relevant (W31 snapshot already existed); no pending phases/data/content-gap work (all 7 mechanical surveys re-ran clean, no rows filed); march's own expand Step 3c gate not met (5 commits/~3h since pass 261, threshold 20 commits/48h). AUDIT.md's only other Pending rows remained the standing non-autonomous items (`[blocked-cloud-permission]` march.yml/heartbeat.yml items, `[4.0]` Lighthouse-CI `/oversight` item, `[needs-user-call] [4.2]` soft-404 item); CRITIQUE.md's only Pending row remains the non-actionable GA-beacon item. Dispatched a fresh general-purpose sweep with angles disjoint from passes 249–261 (search index freshness, /sources citation-count accuracy, quiz scoring correctness, group-buy Product/Offer JSON-LD, RSS per-pillar item-count accuracy, orphaned data records, duplicate/near-duplicate article titles) — every other angle came back clean; this reduced-motion gap was the one finding that cleared the 3.0 bar.
+
 ### [x] [content] [3.6] lubing-101 carries the 'lubed' attribute tag instead of the 'lubing' topic tag every other process guide uses — addressed in 5d5d2386, closes #672
 - category: content
 - filed: 2026-07-30 by cloud /iterate audit (fresh general-purpose sweep, angle: tag-taxonomy vs article-topic match)
