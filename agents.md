@@ -81,8 +81,6 @@ skill).
 
 ### 5. No `--no-verify`. No force-push. No destructive resets.
 
-### 5. No `--no-verify`. No force-push. No destructive resets.
-
 If a hook fails, fix the underlying issue. If `git pull` diverges,
 stop and report — don't blind-rebase. Tests alongside code, never
 "add tests later".
