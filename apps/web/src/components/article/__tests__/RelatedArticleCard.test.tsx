@@ -15,7 +15,7 @@ const ARTICLE: Article = {
     author: 'thock',
     pillar: 'news',
     tags: ['linear'],
-    publishedAt: '2026-05-01T00:00:00.000Z',
+    publishedAt: '2026-07-30T00:00:00.000Z',
     updatedAt: null,
     heroImage: null,
     heroImageAlt: null,
@@ -63,12 +63,12 @@ describe('<RelatedArticleCard>', () => {
     const { container } = render(<RelatedArticleCard article={ARTICLE} />)
     const time = container.querySelector('time')
     expect(time).not.toBeNull()
-    expect(time?.getAttribute('dateTime')).toBe('2026-05-01T00:00:00.000Z')
+    expect(time?.getAttribute('dateTime')).toBe('2026-07-30T00:00:00.000Z')
   })
 
-  it('renders the formatted publish date', () => {
+  it('renders the formatted publish date using dateStyle: medium', () => {
     render(<RelatedArticleCard article={ARTICLE} />)
-    expect(screen.getByText('May 1, 2026')).toBeInTheDocument()
+    expect(screen.getByText('Jul 30, 2026')).toBeInTheDocument()
   })
 
   it('renders the author name', () => {
