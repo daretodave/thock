@@ -84,6 +84,17 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [enhancement] [3.6] RelatedArticleCard date format diverges from sibling ArticleCard/SuggestedArticles — addressed in 5318a703, closes #676
+- category: enhancement
+- filed: 2026-07-30 by cloud /iterate audit (fresh general-purpose sweep, angle: date-format-token consistency + semantic `<time>` markup coverage across all date-bearing UI components)
+- impact: 4 (every one of the 74 articles' Related Articles rail renders a visibly different date format than the pillar/home listing the reader arrived from)
+- ease: 9 (one-line `dateStyle` token change, no schema/component-shape change)
+- score: 3.6 (impact × ease / 10)
+- evidence: `apps/web/src/components/article/RelatedArticleCard.tsx:11` used `dateStyle: 'long'` while the two other components rendering the same "article preview card" atom — `apps/web/src/components/home/ArticleCard.tsx:33` and `apps/web/src/components/not-found/SuggestedArticles.tsx:20` — both use `dateStyle: 'medium'`.
+- issue: #676
+> **Resolved (2026-07-30):** changed `RelatedArticleCard.tsx:11` to `dateStyle: 'medium'`; updated the colocated test to assert against a July date (May dates render identically under `'long'`/`'medium'` in en-US, so the prior fixture wouldn't have caught a regression). `pnpm verify` full gate green: typecheck, 175 unit tests, data:validate, build, 1102/1102 e2e.
+> Picked as the top signal this tick: no unlabeled GitHub issues (triage gate); not Monday (W31 snapshot already existed); no pending phases/data/content-gap work (all 7 mechanical surveys re-ran clean, no rows filed); march's own expand Step 3c gate not met (11 commits/~8.6h since pass 261, threshold 20 commits/48h). Dispatched a fresh general-purpose sweep with angles disjoint from recent passes (vendor URL liveness, switch spec-vs-description numeric cross-check, enum-vs-label-map coverage, dead-export census, missing-test census, typecheck/lint, repeated-word grep) — all came back clean except this date-format divergence and a related sub-3.0 finding (5 of 8 date-rendering components skip semantic `<time dateTime>` markup, score 3.2, noted for a future tick). The already-known sub-floor footer-year-hardcode finding (score 2.7) remains open, unchanged.
+
 ### [x] [data-gaps] [7.2] Trends Tracker W29 Wuque Studio row mislabeled "flat" despite a 14-point crash — addressed in 81b3f295, closes #675
 - category: data-gaps
 - filed: 2026-07-30 by cloud /iterate audit (fresh general-purpose sweep, angle: trends-tracker data-integrity cross-check)
