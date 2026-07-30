@@ -25,6 +25,18 @@ export const GroupBuySchema = z
      */
     heroImage: z.string().nullable(),
     /**
+     * Descriptive alt text for `heroImage`, mirroring the article
+     * `heroImageAlt` frontmatter field (Phase 4 content schema).
+     * Nullable — records without art (or awaiting backfill) render
+     * an empty (decorative) alt, matching `heroImage`'s own nullable
+     * partial-backfill contract. Populated from the hero SVG's own
+     * authored `aria-label`/`subject` provenance so the description
+     * that already exists in `apps/web/public/group-buy-art/*.svg`
+     * reaches assistive tech instead of dying inside an untouched
+     * SVG attribute.
+     */
+    heroImageAlt: z.string().min(2).nullable(),
+    /**
      * Slug of the thock companion article covering this group buy
      * (e.g. "gmk-cyl-ramune-group-buy"). Phase 37 schema additive.
      * Optional — group buys without editorial coverage omit the field.

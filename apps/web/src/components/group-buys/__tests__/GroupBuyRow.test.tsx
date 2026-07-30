@@ -18,6 +18,7 @@ function gb(over: Partial<GroupBuy> = {}): GroupBuy {
     url: 'https://cannonkeys.com/products/mode-sonnet',
     imageUrl: null,
     heroImage: null,
+    heroImageAlt: null,
     status: 'live',
     description:
       'Second run of the Mode Sonnet 65 percent. Same gasket mount and hotswap PCB.',
@@ -174,6 +175,38 @@ describe('<GroupBuyRow>', () => {
       screen.getByTestId('group-buy-hero-placeholder'),
     ).toBeInTheDocument()
     expect(screen.queryByTestId('group-buy-hero')).not.toBeInTheDocument()
+  })
+
+  it('uses heroImageAlt as the hero image alt text', () => {
+    render(
+      <GroupBuyRow
+        groupBuy={gb({
+          heroImage: '/group-buy-art/sonnet.svg',
+          heroImageAlt: '65% gasket-mount aluminum keyboard in warm bronze.',
+        })}
+        vendor={vendor}
+        variant="live"
+        now={NOW}
+      />,
+    )
+    expect(
+      screen.getByAltText('65% gasket-mount aluminum keyboard in warm bronze.'),
+    ).toBeInTheDocument()
+  })
+
+  it('falls back to an empty (decorative) alt when heroImageAlt is null', () => {
+    render(
+      <GroupBuyRow
+        groupBuy={gb({ heroImage: '/group-buy-art/sonnet.svg' })}
+        vendor={vendor}
+        variant="live"
+        now={NOW}
+      />,
+    )
+    expect(screen.getByTestId('group-buy-hero').querySelector('img')).toHaveAttribute(
+      'alt',
+      '',
+    )
   })
 
   it('renders "read our coverage" link when relatedArticle is set (phase 37)', () => {

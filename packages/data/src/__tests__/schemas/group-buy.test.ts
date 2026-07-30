@@ -13,6 +13,7 @@ const VALID = {
   url: 'https://cannonkeys.com/products/nyawice',
   imageUrl: null,
   heroImage: '/group-buy-art/cannonkeys-nyawice.svg',
+  heroImageAlt: 'Top-down Alice-layout keyboard silhouette with focal cat-ear silhouettes.',
   status: 'live' as const,
   description: 'Alice-layout board with leaf-spring F1 mount and 9-degree typing angle.',
   updatedAt: '2026-05-09T20:00:00.000Z',
@@ -70,6 +71,22 @@ describe('GroupBuySchema', () => {
     const result = GroupBuySchema.safeParse({
       ...VALID,
       heroImage: 42,
+    })
+    expect(result.success).toBe(false)
+  })
+
+  it('accepts a null heroImageAlt (partial backfill safe)', () => {
+    const result = GroupBuySchema.safeParse({
+      ...VALID,
+      heroImageAlt: null,
+    })
+    expect(result.success).toBe(true)
+  })
+
+  it('rejects a heroImageAlt shorter than 2 characters', () => {
+    const result = GroupBuySchema.safeParse({
+      ...VALID,
+      heroImageAlt: 'x',
     })
     expect(result.success).toBe(false)
   })

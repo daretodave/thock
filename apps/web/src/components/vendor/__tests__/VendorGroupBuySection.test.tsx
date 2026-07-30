@@ -25,6 +25,7 @@ const BASE_GB: GroupBuy = {
   url: 'https://cannonkeys.com/mode-sonnet-r2',
   imageUrl: null,
   heroImage: null,
+  heroImageAlt: null,
   status: 'live',
   description: 'The second run of the Mode Sonnet.',
   updatedAt: '2026-05-01T00:00:00.000Z',

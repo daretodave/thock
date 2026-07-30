@@ -104,7 +104,7 @@ export function GroupBuyRow({
         >
           <Image
             src={groupBuy.heroImage}
-            alt={`thock hero — ${groupBuy.name}`}
+            alt={groupBuy.heroImageAlt ?? ''}
             fill
             sizes="140px"
             className="object-cover"

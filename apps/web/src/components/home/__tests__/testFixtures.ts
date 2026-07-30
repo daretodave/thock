@@ -57,6 +57,7 @@ export function makeGroupBuy(over: Partial<GroupBuy> = {}): GroupBuy {
     url: 'https://example.com/gb',
     imageUrl: null,
     heroImage: null,
+    heroImageAlt: null,
     status: 'live',
     description:
       'A short description that is long enough to satisfy the schema minimum.',

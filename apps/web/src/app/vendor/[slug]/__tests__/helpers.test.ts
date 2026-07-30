@@ -19,6 +19,7 @@ function makeGroupBuy(
     url: 'https://example.com',
     imageUrl: null,
     heroImage: null,
+    heroImageAlt: null,
     description: 'A test group buy for unit testing purposes only.',
     updatedAt: '2026-01-01T00:00:00.000Z',
     ...overrides,

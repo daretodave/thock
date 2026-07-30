@@ -376,6 +376,18 @@ renders a coral-tinted placeholder block — never a broken
 image. The fallback is intentionally distinguishable from a
 real hero so missing art is observable in QA.
 
+**Alt text (locked 2026-07-30 via iterate — closes a11y gap):**
+every `heroImage` carries a matching `heroImageAlt` field
+(nullable string, mirrors the article `heroImageAlt`
+frontmatter contract). `brander` already writes a descriptive
+`subject`/`composition` field into the sibling `.svg.json`
+provenance and a matching `aria-label` on the SVG root — that
+authored description never reached assistive tech because
+`next/image` renders the SVG as an opaque `<img>`, so it must
+also be copied verbatim (trimmed to a clean sentence) into the
+data record's `heroImageAlt` at generation time, not left for a
+later backfill pass.
+
 ### Inline-viz — 2–3 per article, no longer optional (locked 2026-05-14 via /oversight)
 
 Every article ships with 2–3 inline visualizations embedded

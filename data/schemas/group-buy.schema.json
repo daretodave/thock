@@ -19,6 +19,17 @@
             "null"
           ]
         },
+        "heroImageAlt": {
+          "anyOf": [
+            {
+              "minLength": 2,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
         "imageUrl": {
           "anyOf": [
             {
@@ -108,6 +119,7 @@
         "url",
         "imageUrl",
         "heroImage",
+        "heroImageAlt",
         "status",
         "description",
         "updatedAt"

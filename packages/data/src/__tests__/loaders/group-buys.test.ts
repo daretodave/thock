@@ -50,6 +50,7 @@ describe('group-buys loader', () => {
         url: 'https://example.com',
         imageUrl: null,
         heroImage: null,
+        heroImageAlt: null,
         status: 'live',
         description:
           'Synthetic fixture record used only to exercise the active-list date-window filter in isolation from real editorial data.',
