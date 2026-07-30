@@ -1279,7 +1279,7 @@
         "lede": "Lube moves the sound and feel of a switch in ways nothing else in the build can. It also chews up a Saturday and ruins switches when applied with the enthusiasm the rabbit-hole crowd recommends. Here is the version that earns its keep.",
         "pillar": "guides",
         "tags": [
-          "lubed",
+          "lubing",
           "switches",
           "modding",
           "beginner"
@@ -15203,6 +15203,7 @@
           "1": {
             "23": 1,
             "29": 1,
+            "54": 1,
             "66": 1
           },
           "2": {
@@ -15265,7 +15266,6 @@
             "40": 1,
             "45": 1,
             "49": 1,
-            "54": 1,
             "59": 2
           },
           "2": {
@@ -109798,7 +109798,7 @@
       "lede": "Lube moves the sound and feel of a switch in ways nothing else in the build can. It also chews up a Saturday and ruins switches when applied with the enthusiasm the rabbit-hole crowd recommends. Here is the version that earns its keep.",
       "pillar": "guides",
       "tags": [
-        "lubed",
+        "lubing",
         "switches",
         "modding",
         "beginner"
@@ -110648,6 +110648,6 @@
       "href": "/trends/tracker/2026-W31"
     }
   ],
-  "generatedAt": "2026-07-30T09:13:04.820Z",
+  "generatedAt": "2026-07-30T15:49:50.658Z",
   "count": 74
 }
