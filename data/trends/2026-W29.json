@@ -131,9 +131,9 @@
     {
       "name": "Wuque Studio",
       "category": "brand",
-      "direction": "flat",
+      "direction": "down",
       "score": -4,
-      "spark": [-25, -20, -16, -13, -10, -8, -6, -4],
+      "spark": [17, 17, 17, 14, 13, 12, 10, -4],
       "articleSlug": "vendor-first-customs",
       "note": "Confirmed as Haimu's sole business agent outside mainland China this week; teased VANY Alice group buy and Mammoth V2/Promise V2 development stabilized sentiment."
     },

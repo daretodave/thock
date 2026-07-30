@@ -4789,16 +4789,16 @@
         {
           "name": "Wuque Studio",
           "category": "brand",
-          "direction": "flat",
+          "direction": "down",
           "score": -4,
           "spark": [
-            -25,
-            -20,
-            -16,
-            -13,
-            -10,
-            -8,
-            -6,
+            17,
+            17,
+            17,
+            14,
+            13,
+            12,
+            10,
             -4
           ],
           "articleSlug": "vendor-first-customs"
@@ -5449,5 +5449,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-07-30T15:49:49.647Z"
+  "generatedAt": "2026-07-30T20:43:36.174Z"
 }
