@@ -84,6 +84,17 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [data-gaps] [7.2] Trends Tracker W29 Wuque Studio row mislabeled "flat" despite a 14-point crash — addressed in 81b3f295, closes #675
+- category: data-gaps
+- filed: 2026-07-30 by cloud /iterate audit (fresh general-purpose sweep, angle: trends-tracker data-integrity cross-check)
+- impact: 8 (the Trends Tracker is the site's signature feature; the wrong `direction` field corrupted three user-facing surfaces at once — the row's tone/glyph/`aria-label` on `/trends/tracker/2026-W29` read "flat" instead of "down"; `formatDelta()` in `apps/web/src/lib/tracker/index.ts` printed the literal string "flat" instead of a signed delta; and `pickFaller()` explicitly filters `direction === 'down'`, so the row was silently ineligible for the "Faller of the week" narrative slot despite being the real biggest faller that week)
+- ease: 9 (single JSON field fix in one record — `direction` plus a `spark` array correction sourced directly from sibling week files' `score` values — no schema change, no cross-file cascade)
+- score: 7.2 (impact × ease / 10)
+- evidence: `data/trends/2026-W22.json` through `2026-W28.json` Wuque Studio scores: 17, 17, 17, 14, 13, 12, 10 (direction "down" at W28); `data/trends/2026-W29.json` recorded score -4 but `direction: "flat"` — the sign flip from W28→W29 (10 → -4) is the sole outlier among 48 "flat"-labeled rows checked, which otherwise stay within a ±1–3 point noise band. Rendering path confirmed in `apps/web/src/components/tracker/TrackerRow.tsx` (`TONE_CLASS[row.direction]`) and `apps/web/src/lib/tracker/index.ts:92` (`pickFaller` filters `r.direction === 'down'`).
+- issue: #675
+> **Resolved (2026-07-30):** set `data/trends/2026-W29.json`'s Wuque Studio row `direction: "down"` and `spark: [17,17,17,14,13,12,10,-4]` (actual recorded scores from `2026-W22.json`–`2026-W28.json`). `pnpm verify` full gate green: typecheck, unit tests, data:validate, build, 1102/1102 e2e.
+> Picked as the top signal this tick: no unlabeled GitHub issues (triage gate); not Monday (W31 snapshot already existed); no pending phases/data/content-gap work (all 7 mechanical surveys re-ran clean, no rows filed); march's own expand Step 3c gate not met (9 commits/~6h since pass 261, threshold 20 commits/48h). AUDIT.md's only other Pending row is the `[4.0]` Lighthouse-CI `/oversight` item (needs-user-call, non-autonomous); CRITIQUE.md's only Pending row remains the non-actionable GA-beacon item. Dispatched a fresh general-purpose sweep with angles disjoint from recent passes (data/schema cross-reference integrity, catalog-vs-prose numeric spec checks, JSON-LD on less-common route families, interactive-tool edge cases, group-buy data hygiene, tag taxonomy orphans, newsletter/RSS accuracy, sitemap completeness) — most angles came back clean; this tracker-row direction/spark mismatch was the one verified, scoreable defect. A companion sub-finding (5 other W29 rows with cosmetically-wrong but correctly-signed spark arrays, score 3.6) was noted for a future tick rather than bundled into this one-fix-per-tick commit.
+
 ### [x] [enhancement] [3.6] /quiz/switch and /quiz/keycap-set page/loading templates missing flex-1 on `<main>` — addressed in 5b8c0def, closes #674
 - category: enhancement
 - filed: 2026-07-30 by cloud /iterate audit (fresh general-purpose sweep, angle: re-scoring carried-forward pass-261 sub-threshold candidate)
