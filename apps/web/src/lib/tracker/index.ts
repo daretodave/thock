@@ -39,7 +39,7 @@ const KICKER: Record<SummarySlotKind, string> = {
   sleeper: 'sleeper',
 }
 
-function sparkSlope(row: TrendRow): number {
+export function sparkSlope(row: TrendRow): number {
   const { spark } = row
   if (spark.length < 2) return 0
   return spark[spark.length - 1]! - spark[0]!

@@ -43,34 +43,63 @@ describe('<TrendingStrip>', () => {
     // Regression guard: TrendingStrip used to take the first 6
     // non-flat rows in raw file order, silently excluding the
     // week's biggest movers whenever a low-score row happened to
-    // sort earlier in data/trends/<week>.json (score field is the
-    // established magnitude metric — see tracker/index.ts's
-    // riser/faller picks).
+    // sort earlier in data/trends/<week>.json.
     const snapshot = makeTrendSnapshot()
     const smallEarly = {
       ...snapshot.rows[0]!,
       name: 'SmallEarly',
       score: 10,
+      spark: [5, 10],
       direction: 'up' as const,
     }
     const bigLate = {
       ...snapshot.rows[0]!,
       name: 'BigLate',
       score: 90,
+      spark: [30, 90],
       direction: 'up' as const,
     }
     const bigNegative = {
       ...snapshot.rows[0]!,
       name: 'BigNegative',
       score: -80,
+      spark: [10, -80],
       direction: 'down' as const,
     }
     snapshot.rows = [smallEarly, bigLate, bigNegative]
     render(<TrendingStrip snapshot={snapshot} />)
     const tiles = screen.getAllByTestId('trending-tile')
-    expect(tiles[0]).toHaveTextContent('BigLate')
-    expect(tiles[1]).toHaveTextContent('BigNegative')
+    expect(tiles[0]).toHaveTextContent('BigNegative')
+    expect(tiles[1]).toHaveTextContent('BigLate')
     expect(tiles[2]).toHaveTextContent('SmallEarly')
+  })
+
+  it('ranks by spark slope (this week\'s move), not the score level', () => {
+    // Regression guard: a row that starts from a high level but barely
+    // moved this week (small slope) must not outrank a row with a much
+    // bigger weekly swing just because its raw score is lower — the
+    // same "level masks movement" failure mode fixed for tracker/index.ts's
+    // riser/faller picks in 07dfd9b9.
+    const snapshot = makeTrendSnapshot()
+    const highLevelLowMove = {
+      ...snapshot.rows[0]!,
+      name: 'HighLevelLowMove',
+      score: 82,
+      spark: [55, 82], // slope 27
+      direction: 'up' as const,
+    }
+    const lowLevelBigMove = {
+      ...snapshot.rows[0]!,
+      name: 'LowLevelBigMove',
+      score: -10,
+      spark: [-40, -10], // slope 30
+      direction: 'down' as const,
+    }
+    snapshot.rows = [highLevelLowMove, lowLevelBigMove]
+    render(<TrendingStrip snapshot={snapshot} />)
+    const tiles = screen.getAllByTestId('trending-tile')
+    expect(tiles[0]).toHaveTextContent('LowLevelBigMove')
+    expect(tiles[1]).toHaveTextContent('HighLevelLowMove')
   })
 
   it('excludes rows with direction `flat` (rail header commits to movement)', () => {
