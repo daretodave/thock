@@ -20,6 +20,13 @@ test.describe('per-route 404 — search-suggestion path', () => {
     expect(firstHref).toMatch(/^\/article\/[a-z0-9-]+$/)
   })
 
+  test('/article/<unknown-slug> emits not-found metadata, not the homepage title', async ({
+    page,
+  }) => {
+    await page.goto('/article/gateron-oil')
+    await expect(page).toHaveTitle(/page not found/i)
+  })
+
   // (Removed: "no overlap" e2e — fragile against catalog growth.
   // MiniSearch fuzzy/prefix matching at scale finds overlap for
   // most strings; the empty-result behavior is unit-tested against
@@ -36,6 +43,13 @@ test.describe('per-route 404 — search-suggestion path', () => {
     await expect(suggestions).toBeVisible()
     const items = page.getByTestId('not-found-suggestion')
     expect(await items.count()).toBeGreaterThanOrEqual(1)
+  })
+
+  test('/tag/<unknown-slug> emits not-found metadata, not the homepage title', async ({
+    page,
+  }) => {
+    await page.goto('/tag/gateron-something-fake')
+    await expect(page).toHaveTitle(/page not found/i)
   })
 })
 

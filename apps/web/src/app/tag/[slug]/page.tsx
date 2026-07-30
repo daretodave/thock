@@ -8,6 +8,7 @@ import {
   buildItemListJsonLd,
   buildMetadata,
   JsonLd,
+  siteConfig,
 } from '@thock/seo'
 import type { Tag } from '@thock/content'
 import {
@@ -59,7 +60,13 @@ export async function generateMetadata({
 }) {
   const { slug } = await params
   const tag = getTagBySlug(slug)
-  if (!tag) return { robots: { index: false, follow: false } }
+  if (!tag) {
+    return {
+      title: { absolute: `Page not found — ${siteConfig.name}` },
+      description: 'That URL doesn’t match anything on thock.',
+      robots: { index: false, follow: false },
+    }
+  }
   const count = getArticlesByTag(tag.slug).length
   return buildMetadata({
     title: `#${tag.name}`,

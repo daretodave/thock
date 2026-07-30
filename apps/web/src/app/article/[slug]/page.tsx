@@ -6,6 +6,7 @@ import {
   JsonLd,
   pillarHref,
   pillarLabel,
+  siteConfig,
 } from '@thock/seo'
 import {
   getAllArticles,
@@ -37,7 +38,13 @@ export async function generateMetadata({
 }) {
   const { slug } = await params
   const article = getArticleBySlug(slug)
-  if (!article) return { robots: { index: false, follow: false } }
+  if (!article) {
+    return {
+      title: { absolute: `Page not found — ${siteConfig.name}` },
+      description: 'That URL doesn’t match anything on thock.',
+      robots: { index: false, follow: false },
+    }
+  }
 
   // The og:image is emitted by the colocated opengraph-image.tsx
   // route (Satori → PNG via next/og). The article's frontmatter
