@@ -28,4 +28,15 @@ describe('<ArticleByline>', () => {
     expect(time.tagName).toBe('TIME')
     expect(time).toHaveAttribute('dateTime', '2026-05-08T12:00:00.000Z')
   })
+
+  it('renders the formatted publish date using dateStyle: medium', () => {
+    render(
+      <ArticleByline
+        author="thock"
+        publishedAt="2026-07-30T00:00:00.000Z"
+        readTime={4}
+      />,
+    )
+    expect(screen.getByText('Jul 30, 2026')).toBeInTheDocument()
+  })
 })

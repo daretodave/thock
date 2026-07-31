@@ -48,6 +48,16 @@ describe('<TrackerHeader>', () => {
     expect(screen.queryByTestId('tracker-week-block')).toBeNull()
   })
 
+  it('formats the "Updated" copy using dateStyle: medium', () => {
+    render(
+      <TrackerHeader
+        snapshot={makeTrendSnapshot({ publishedAt: '2026-07-30T00:00:00.000Z' })}
+        lede="Lede."
+      />,
+    )
+    expect(screen.getByText(/Updated Jul 30, 2026\./)).toBeInTheDocument()
+  })
+
   it('swaps to past-tense copy for an archived (non-latest) week', () => {
     render(
       <TrackerHeader

@@ -1,7 +1,7 @@
 import type { ReactElement } from 'react'
 
 const PUBLISHED_FORMATTER = new Intl.DateTimeFormat('en-US', {
-  dateStyle: 'long',
+  dateStyle: 'medium',
   timeZone: 'UTC',
 })
 
