@@ -15,15 +15,22 @@ const TITLE = 'Search'
 const LEDE =
   'Search every article, tag, and part across thock. Built locally — no third-party indexing.'
 
-export const metadata = {
-  ...buildMetadata({
-    title: TITLE,
-    description: LEDE,
-    path: PATH,
-  }),
-  // /search?q=… variants don't add value to the index; the bare
-  // /search page stays indexable.
-  robots: { index: true, follow: true },
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<{ q?: string }>
+}) {
+  const { q } = await searchParams
+  return {
+    ...buildMetadata({
+      title: TITLE,
+      description: LEDE,
+      path: PATH,
+    }),
+    // /search?q=… variants don't add value to the index; the bare
+    // /search page stays indexable.
+    robots: { index: !q, follow: true },
+  }
 }
 
 /**
