@@ -16,20 +16,25 @@ const FAKE_TAGS: Map<string, Tag> = new Map([
 
 const FAKE_ARTICLE = {
   slug: 'gateron-oil-king-deep-dive',
-  pillar: 'deep-dives',
   body: '',
-  wordCount: 1500,
-  readingTimeMinutes: 8,
+  readTime: 8,
+  filePath: '/tmp/gateron-oil-king-deep-dive.mdx',
   frontmatter: {
+    slug: 'gateron-oil-king-deep-dive',
     title: 'The Gateron Oil King, taken apart',
+    author: 'thock',
     pillar: 'deep-dives',
     publishedAt: '2026-04-30T09:00:00.000Z',
+    updatedAt: null,
     tags: ['gateron'],
     lede: 'A 67g linear that everyone reaches for when they want a wet, factory-lubed sound profile out of the bag.',
+    description: null,
+    featured: false,
+    popularityScore: 0,
+    guideSection: null,
     mentionedParts: [],
     heroImage: null,
     heroImageAlt: null,
-    sources: [],
   },
 } as unknown as Article
 
@@ -45,6 +50,9 @@ describe('<MentionedInArticles>', () => {
     const list = screen.getByTestId('part-mentioned-list')
     expect(list.children.length).toBeGreaterThanOrEqual(1)
     expect(list).toHaveTextContent(/Gateron Oil King, taken apart/i)
+    expect(screen.getByTestId('article-card-meta')).toHaveTextContent(
+      /thock.*8 min read/i,
+    )
   })
 
   it('renders the empty-state when no articles cite the part', () => {
