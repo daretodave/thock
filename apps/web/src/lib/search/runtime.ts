@@ -99,10 +99,14 @@ export function searchArticles(
 /**
  * Simple substring search over the parts catalog embedded in the index
  * payload. 18 records — no MiniSearch needed; linear scan is fast enough.
+ * Shares `searchArticles`'s stopword/short-query guard — a raw substring
+ * scan is even more prone to over-matching (e.g. "the" matching "King of
+ * the Seas") since it has no prefix/fuzzy length floor of its own.
  */
 export function searchParts(query: string, limit = 10): PartSearchHit[] {
-  const q = query.toLowerCase().trim()
-  if (!q) return []
+  const trimmed = stripStopwords(query.trim())
+  if (trimmed.length < MIN_EXPANSION_LENGTH) return []
+  const q = trimmed.toLowerCase()
   const parts = (payload as { parts?: PartSearchDocument[] }).parts ?? []
   return parts
     .filter((p) => `${p.name} ${p.kind}`.toLowerCase().includes(q))

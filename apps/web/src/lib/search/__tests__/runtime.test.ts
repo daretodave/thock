@@ -89,10 +89,16 @@ describe('searchParts', () => {
   })
 
   it('respects the limit cap', () => {
-    const all = searchParts('a', 100)
-    const limited = searchParts('a', 1)
+    const all = searchParts('switch', 100)
+    const limited = searchParts('switch', 1)
     if (all.length === 0) return
     expect(limited.length).toBeLessThanOrEqual(1)
+  })
+
+  it('returns an empty array for a short or bare-stopword query instead of over-matching by substring', () => {
+    expect(searchParts('a')).toEqual([])
+    expect(searchParts('the')).toEqual([])
+    expect(searchParts('ab')).toEqual([])
   })
 
   it('attaches a score of 1.0 to every hit', () => {
