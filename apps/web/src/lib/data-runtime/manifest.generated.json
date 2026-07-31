@@ -5317,6 +5317,7 @@
           "sa",
           "mt3",
           "cherry-profile",
+          "kat",
           "modding"
         ],
         "publishedAt": "2026-07-20T12:00:00.000Z",
@@ -7248,6 +7249,7 @@
           "oem-profile",
           "sa",
           "mt3",
+          "kat",
           "beginner"
         ],
         "publishedAt": "2026-05-03T13:00:00.000Z",
@@ -8505,6 +8507,11 @@
       "category": "brand"
     },
     {
+      "slug": "kat",
+      "name": "KAT",
+      "category": "profile"
+    },
+    {
       "slug": "kbdfans",
       "name": "KBDfans",
       "category": "brand"
@@ -8720,5 +8727,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-07-30T22:35:01.391Z"
+  "generatedAt": "2026-07-31T09:15:18.552Z"
 }

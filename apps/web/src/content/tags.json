@@ -33,6 +33,7 @@
     { "slug": "oem-profile", "name": "OEM profile", "category": "profile" },
     { "slug": "mt3", "name": "MT3", "category": "profile" },
     { "slug": "sa", "name": "SA", "category": "profile" },
+    { "slug": "kat", "name": "KAT", "category": "profile" },
 
     { "slug": "group-buy", "name": "Group buy", "category": "misc" },
     { "slug": "interest-check", "name": "Interest check", "category": "misc" },
