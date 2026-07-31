@@ -44,7 +44,7 @@ jobs:
       id-token: write   # Claude Code Action's OIDC handshake
     steps:
       - name: Checkout (full history for /march dispatch)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
           # PAT (not GITHUB_TOKEN) so git push commits as you, not as
