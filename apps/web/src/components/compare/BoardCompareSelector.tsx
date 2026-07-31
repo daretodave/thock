@@ -23,6 +23,7 @@ export function BoardCompareSelector({
   useEffect(() => setB(initialB), [initialB])
 
   const canCompare = a !== '' && b !== '' && a !== b
+  const showSameSelectionHint = a !== '' && b !== '' && a === b
 
   function handleCompare() {
     if (canCompare) {
@@ -86,21 +87,34 @@ export function BoardCompareSelector({
         </select>
       </div>
 
-      <button
-        data-testid="compare-button"
-        type="button"
-        onClick={handleCompare}
-        disabled={!canCompare}
-        className={
-          'px-5 py-2 rounded font-mono text-small uppercase tracking-[0.08em] transition-colors ' +
-          'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu ' +
-          (canCompare
-            ? 'bg-accent text-bg hover:bg-accent/90 cursor-pointer'
-            : 'bg-surface text-text-3 cursor-not-allowed')
-        }
-      >
-        Compare
-      </button>
+      <div className="flex flex-col gap-1">
+        <button
+          data-testid="compare-button"
+          type="button"
+          onClick={handleCompare}
+          disabled={!canCompare}
+          aria-describedby={showSameSelectionHint ? 'compare-same-selection-hint' : undefined}
+          className={
+            'px-5 py-2 rounded font-mono text-small uppercase tracking-[0.08em] transition-colors ' +
+            'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu ' +
+            (canCompare
+              ? 'bg-accent text-bg hover:bg-accent/90 cursor-pointer'
+              : 'bg-surface text-text-3 cursor-not-allowed')
+          }
+        >
+          Compare
+        </button>
+        {showSameSelectionHint && (
+          <p
+            id="compare-same-selection-hint"
+            role="status"
+            aria-live="polite"
+            className="font-mono text-micro text-text-3"
+          >
+            Pick two different boards to compare
+          </p>
+        )}
+      </div>
     </div>
   )
 }

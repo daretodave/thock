@@ -87,6 +87,29 @@ describe('<BoardCompareSelector>', () => {
     )
   })
 
+  it('shows no same-selection hint when values differ or are empty', () => {
+    render(
+      <BoardCompareSelector boards={BOARDS} initialA="" initialB="" />,
+    )
+    expect(screen.queryByText('Pick two different boards to compare')).not.toBeInTheDocument()
+  })
+
+  it('shows an accessible same-selection hint wired to the button when a === b', () => {
+    render(
+      <BoardCompareSelector
+        boards={BOARDS}
+        initialA="mode-sonnet"
+        initialB="mode-sonnet"
+      />,
+    )
+    const hint = screen.getByRole('status')
+    expect(hint).toHaveTextContent('Pick two different boards to compare')
+    expect(screen.getByTestId('compare-button')).toHaveAttribute(
+      'aria-describedby',
+      hint.id,
+    )
+  })
+
   it('resyncs selected values when initialA/initialB change on rerender (back/forward nav)', () => {
     const { rerender } = render(
       <BoardCompareSelector
