@@ -15,23 +15,41 @@ export type CitationIndexProps = {
 }
 
 /**
+ * Normalizes an href to a dedupe key so `https://example.com` and
+ * `https://www.example.com/` group as the same source — scheme,
+ * leading `www.`, and a trailing slash are all cosmetic variance
+ * on the same resource, not distinct citations.
+ */
+function normalizeHrefKey(href: string): string {
+  try {
+    const url = new URL(href)
+    const host = url.hostname.replace(/^www\./, '')
+    const path = url.pathname.replace(/\/$/, '')
+    return `${host}${path}`.toLowerCase()
+  } catch {
+    return href.toLowerCase()
+  }
+}
+
+/**
  * Build a deduped per-citation index from a flat list of
- * `(article, citation)` tuples. Articles are deduped per `href`
- * and sorted by publishedAt descending; the display text is the
- * first non-null text seen for each href (citations on the same
- * URL across articles tend to use similar wording — this is the
- * cheapest "good enough" pick).
+ * `(article, citation)` tuples. Articles are deduped per
+ * normalized href and sorted by publishedAt descending; the
+ * display text is the first non-null text seen for each href
+ * (citations on the same URL across articles tend to use similar
+ * wording — this is the cheapest "good enough" pick).
  */
 export function buildCitationIndex(
   pairs: Array<{ article: Article; citation: SourceCitation }>,
 ): CitationRecord[] {
   const byHref = new Map<
     string,
-    { text: string | null; articleSlugs: Set<string>; articles: Article[] }
+    { href: string; text: string | null; articleSlugs: Set<string>; articles: Article[] }
   >()
 
   for (const { article, citation } of pairs) {
-    const existing = byHref.get(citation.href)
+    const key = normalizeHrefKey(citation.href)
+    const existing = byHref.get(key)
     if (existing) {
       if (!existing.articleSlugs.has(article.slug)) {
         existing.articleSlugs.add(article.slug)
@@ -41,7 +59,8 @@ export function buildCitationIndex(
         existing.text = citation.text
       }
     } else {
-      byHref.set(citation.href, {
+      byHref.set(key, {
+        href: citation.href,
         text: citation.text,
         articleSlugs: new Set([article.slug]),
         articles: [article],
@@ -50,11 +69,11 @@ export function buildCitationIndex(
   }
 
   const records: CitationRecord[] = []
-  for (const [href, entry] of byHref.entries()) {
+  for (const entry of byHref.values()) {
     entry.articles.sort((a, b) =>
       b.frontmatter.publishedAt.localeCompare(a.frontmatter.publishedAt),
     )
-    records.push({ href, text: entry.text, articles: entry.articles })
+    records.push({ href: entry.href, text: entry.text, articles: entry.articles })
   }
 
   records.sort((a, b) => {

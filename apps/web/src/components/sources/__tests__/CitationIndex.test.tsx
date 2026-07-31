@@ -90,6 +90,28 @@ describe('buildCitationIndex()', () => {
     expect(result[0]!.text).toBe('Site label')
   })
 
+  it('groups a bare host and its www-prefixed variant as one record', () => {
+    const a = articleFixture({ slug: 'a' })
+    const b = articleFixture({ slug: 'b' })
+    const result = buildCitationIndex([
+      { article: a, citation: cite('https://theremingoat.com', null) },
+      { article: b, citation: cite('https://www.theremingoat.com/', 'TheRemingoat') },
+    ])
+    expect(result).toHaveLength(1)
+    expect(result[0]!.articles).toHaveLength(2)
+    expect(result[0]!.href).toBe('https://theremingoat.com')
+  })
+
+  it('keeps distinct paths on the same host as separate records', () => {
+    const a = articleFixture({ slug: 'a' })
+    const b = articleFixture({ slug: 'b' })
+    const result = buildCitationIndex([
+      { article: a, citation: cite('https://www.theremingoat.com/blog', 'Blog') },
+      { article: b, citation: cite('https://www.theremingoat.com/pdf-archive', 'Archive') },
+    ])
+    expect(result).toHaveLength(2)
+  })
+
   it('sorts output entries by most-recent article publishedAt desc', () => {
     const early = articleFixture({ slug: 'early', publishedAt: '2026-03-01T00:00:00.000Z' })
     const late = articleFixture({ slug: 'late', publishedAt: '2026-05-15T00:00:00.000Z' })
