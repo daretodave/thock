@@ -102,4 +102,20 @@ test.describe('tracker archive — phase 27', () => {
     expect(flat).toContain(`"url":"${canonicalUrl('/trends/tracker')}"`)
     expect(flat).not.toContain(`"url":"${canonicalUrl(latest.path)}"`)
   })
+
+  test('second-newest week\'s next-week link resolves to the canonical /trends/tracker, not the latest week\'s own path', async ({
+    page,
+  }) => {
+    const weekUrls = getCanonicalUrls().filter(
+      (u) => u.pattern === '/trends/tracker/[week]',
+    )
+    expect(weekUrls.length).toBeGreaterThanOrEqual(2)
+    const secondNewest = weekUrls[weekUrls.length - 2]
+    if (!secondNewest) throw new Error('no second-newest trend week found in fixture')
+
+    await page.goto(secondNewest.path)
+    const nextLink = page.getByTestId('tracker-next-week')
+    await expect(nextLink).toHaveAttribute('href', '/trends/tracker')
+    await expect(nextLink).toContainText(/latest/i)
+  })
 })

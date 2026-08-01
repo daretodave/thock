@@ -96,6 +96,7 @@ export default async function TrackerWeekPage({
   const categories = presentCategories(snapshot)
   const { prev, next } = getAdjacentWeeks(week)
   const isLatest = next === null
+  const nextIsLatest = next !== null && getAdjacentWeeks(next).next === null
 
   const articlesBySlug = new Map<string, Article>(
     getAllArticles().map((a) => [a.slug, a]),
@@ -196,11 +197,15 @@ export default async function TrackerWeekPage({
           <div>
             {next ? (
               <Link
-                href={`/trends/tracker/${next}`}
+                href={nextIsLatest ? '/trends/tracker' : `/trends/tracker/${next}`}
                 data-testid="tracker-next-week"
                 className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
               >
-                {weekKicker(next) ? `Week ${weekKicker(next)!.week}, ${weekKicker(next)!.year}` : next} →
+                {nextIsLatest
+                  ? 'Latest'
+                  : weekKicker(next)
+                    ? `Week ${weekKicker(next)!.week}, ${weekKicker(next)!.year}`
+                    : next} →
               </Link>
             ) : (
               <Link
