@@ -39,7 +39,11 @@ export function TrackerSummaryCard({
       <h3 className="font-serif text-h3 text-text">{row.name}</h3>
       <div className="flex items-center gap-3">
         <span className={TONE_CLASS[row.direction]}>
-          <TrendDirectionGlyph dir={row.direction} size={14} />
+          <TrendDirectionGlyph
+            dir={row.direction}
+            size={14}
+            ariaLabel={`${row.direction} trend`}
+          />
         </span>
         <span
           className={`font-mono text-h3 font-medium ${TONE_CLASS[row.direction]}`}

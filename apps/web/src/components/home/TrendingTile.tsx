@@ -85,7 +85,7 @@ export function TrendingTile({
         <span
           className={`flex items-center gap-1 font-mono text-small ${DIR_COLOR[dir]}`}
         >
-          <TrendDirectionGlyph dir={dir} size={12} />
+          <TrendDirectionGlyph dir={dir} size={12} ariaLabel={`${dir} trend`} />
           {deltaText}
         </span>
         <span className={DIR_COLOR[dir]}>

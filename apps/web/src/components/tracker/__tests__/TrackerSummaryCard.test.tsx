@@ -43,4 +43,18 @@ describe('<TrackerSummaryCard>', () => {
     expect(card.getAttribute('data-kind')).toBe('faller')
     expect(card).toHaveTextContent('-22%')
   })
+
+  it('gives the direction glyph an accessible label beyond the bare direction word', () => {
+    render(
+      <TrackerSummaryCard
+        kind="riser"
+        kicker="biggest riser"
+        row={row({ direction: 'up', score: 42 })}
+      />,
+    )
+    expect(screen.getByTestId('trend-direction-glyph')).toHaveAttribute(
+      'aria-label',
+      'up trend',
+    )
+  })
 })
