@@ -22,6 +22,12 @@ describe('VendorCard', () => {
     expect(link).toHaveAttribute('href', '/vendor/cannonkeys')
   })
 
+  it('renders the vendor name inside a real h2, not a plain link', () => {
+    render(<VendorCard vendor={VENDOR} />)
+    const link = screen.getByTestId('vendor-card-name')
+    expect(link.parentElement?.tagName).toBe('H2')
+  })
+
   it('renders country label', () => {
     render(<VendorCard vendor={VENDOR} />)
     expect(screen.getByTestId('vendor-card-country')).toHaveTextContent('United States')

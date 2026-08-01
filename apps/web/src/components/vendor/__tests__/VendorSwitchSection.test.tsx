@@ -54,6 +54,12 @@ describe('VendorSwitchSection', () => {
     expect(heading.tagName).toBe('H2')
   })
 
+  it('renders the switch name inside a real h3, not a plain link', () => {
+    render(<VendorSwitchSection vendorName="NovelKeys" switches={[BASE_SWITCH]} />)
+    const link = screen.getByRole('link', { name: 'Kailh Box White' })
+    expect(link.parentElement?.tagName).toBe('H3')
+  })
+
   it('truncates description longer than 100 chars', () => {
     const longDesc = 'A'.repeat(150) + ' extra words'
     render(

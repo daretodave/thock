@@ -20,13 +20,15 @@ export function VendorCard({ vendor }: VendorCardProps): ReactElement {
       className="py-8 flex flex-col gap-3 border-b border-border last:border-b-0"
     >
       <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
-        <Link
-          href={`/vendor/${vendor.slug}`}
-          data-testid="vendor-card-name"
-          className="font-serif text-h2 text-text hover:text-accent transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
-        >
-          {vendor.name}
-        </Link>
+        <h2 className="font-serif text-h2 text-text">
+          <Link
+            href={`/vendor/${vendor.slug}`}
+            data-testid="vendor-card-name"
+            className="hover:text-accent transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+          >
+            {vendor.name}
+          </Link>
+        </h2>
         <span
           data-testid="vendor-card-country"
           className="font-mono text-micro uppercase tracking-[0.08em] text-text-2"

@@ -53,6 +53,12 @@ describe('VendorBoardSection', () => {
     expect(heading.tagName).toBe('H2')
   })
 
+  it('renders the board name inside a real h3, not a plain link', () => {
+    render(<VendorBoardSection vendorName="CannonKeys" boards={[BASE_BOARD]} />)
+    const link = screen.getByRole('link', { name: 'Mode Sonnet' })
+    expect(link.parentElement?.tagName).toBe('H3')
+  })
+
   it('truncates description longer than 100 chars', () => {
     const longDesc = 'A'.repeat(150) + ' extra words'
     render(

@@ -53,12 +53,14 @@ export function VendorKeycapSetSection({
                 className="py-4 flex flex-col gap-1"
               >
                 <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-                  <Link
-                    href={`/part/keycap-set/${k.slug}`}
-                    className="font-serif text-h3 text-text hover:text-accent transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
-                  >
-                    {k.name}
-                  </Link>
+                  <h3 className="font-serif text-h3 text-text">
+                    <Link
+                      href={`/part/keycap-set/${k.slug}`}
+                      className="hover:text-accent transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+                    >
+                      {k.name}
+                    </Link>
+                  </h3>
                   <span className="font-mono text-micro uppercase tracking-[0.08em] text-text-2">
                     {specLabel(KEYCAP_PROFILE_LABEL, k.profile)}
                   </span>

@@ -112,9 +112,9 @@ export default function PartsPage(): ReactElement {
               className="group py-8 flex flex-col gap-3 rounded-sm hover:bg-surface-hi -mx-4 px-4 sm:-mx-6 sm:px-6 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
             >
               <div className="flex items-baseline gap-3">
-                <span className="font-serif text-h2 text-text group-hover:text-accent transition-colors">
+                <h2 className="font-serif text-h2 text-text group-hover:text-accent transition-colors">
                   {s.heading}
-                </span>
+                </h2>
                 <span className="font-mono text-small text-text-2">
                   {s.count}
                 </span>

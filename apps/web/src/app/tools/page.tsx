@@ -114,9 +114,9 @@ export default function ToolsPage(): ReactElement {
               data-testid={tool.testId}
               className="group flex flex-col gap-3 rounded-sm border border-border p-6 hover:border-border-hi hover:bg-surface-hi transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
             >
-              <span className="font-serif text-h2 text-text group-hover:text-accent transition-colors">
+              <h2 className="font-serif text-h2 text-text group-hover:text-accent transition-colors">
                 {tool.heading}
-              </span>
+              </h2>
               <p className="text-body text-text-2 flex-1">{tool.description}</p>
               <span className="font-mono text-small uppercase tracking-[0.08em] text-text-2 group-hover:text-text transition-colors">
                 {tool.cta} →
