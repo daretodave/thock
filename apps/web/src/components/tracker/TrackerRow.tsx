@@ -80,7 +80,8 @@ export function TrackerRow({
       <span
         className={`flex items-center gap-2 font-mono text-small md:justify-self-start ${TONE_CLASS[row.direction]}`}
       >
-        <TrendDirectionGlyph dir={row.direction} size={12} />
+        <span className="sr-only">Score change: </span>
+        <TrendDirectionGlyph dir={row.direction} size={12} ariaLabel={`${row.direction} trend`} />
         {delta}
       </span>
       <span className={`hidden md:block ${TONE_CLASS[row.direction]}`}>

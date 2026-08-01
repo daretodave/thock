@@ -197,4 +197,14 @@ describe('<TrackerRow>', () => {
       screen.getByTestId('tracker-row').getAttribute('data-direction'),
     ).toBe('down')
   })
+
+  it('gives the score delta an accessible label independent of the mobile-hidden header row (a11y — closes #697)', () => {
+    render(<TrackerRow rank={1} row={row({ direction: 'up', score: 42 })} />)
+    const r = screen.getByTestId('tracker-row')
+    expect(r).toHaveTextContent('Score change:')
+    expect(screen.getByTestId('trend-direction-glyph')).toHaveAttribute(
+      'aria-label',
+      'up trend',
+    )
+  })
 })
