@@ -65,13 +65,14 @@ function buildDatasetJsonLd(
   snapshot: NonNullable<ReturnType<typeof getTrendSnapshot>>,
   week: string,
   description: string,
+  isLatest: boolean,
 ) {
   return {
     '@context': 'https://schema.org' as const,
     '@type': 'Dataset' as const,
     name: 'Trends Tracker',
     description,
-    url: canonicalUrl(`/trends/tracker/${week}`),
+    url: canonicalUrl(isLatest ? '/trends/tracker' : `/trends/tracker/${week}`),
     temporalCoverage: snapshot.isoWeek,
     dateModified: snapshot.publishedAt,
     publisher: siteConfig.publisher,
@@ -106,7 +107,7 @@ export default async function TrackerWeekPage({
     { name: 'Tracker', path: '/trends/tracker' },
     {
       name: wk ? `Week ${wk.week}, ${wk.year}` : week,
-      path: `/trends/tracker/${week}`,
+      path: isLatest ? '/trends/tracker' : `/trends/tracker/${week}`,
     },
   ]
 
@@ -116,10 +117,10 @@ export default async function TrackerWeekPage({
     buildCollectionPageJsonLd({
       name: wk ? `Trends Tracker — Week ${wk.week}, ${wk.year}` : 'Trends Tracker',
       description: weekDescription,
-      path: `/trends/tracker/${week}`,
+      path: isLatest ? '/trends/tracker' : `/trends/tracker/${week}`,
     }),
     buildBreadcrumbListJsonLd(breadcrumbs),
-    buildDatasetJsonLd(snapshot, week, weekDescription),
+    buildDatasetJsonLd(snapshot, week, weekDescription, isLatest),
   ]
 
   return (

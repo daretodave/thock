@@ -1,4 +1,6 @@
 import { expect, test } from '@playwright/test'
+import { canonicalUrl } from '@thock/seo'
+import { getCanonicalUrls } from '../src/fixtures/canonical-urls'
 
 test.describe('tracker archive — phase 27', () => {
   test('GET /trends/tracker/2026-W19 → 200 with tracker heading', async ({
@@ -81,5 +83,23 @@ test.describe('tracker archive — phase 27', () => {
     await page.goto('/trends/tracker/2026-W19')
     const main = page.locator('main')
     await expect(main).toHaveCount(1)
+  })
+
+  test('latest week emits Dataset + CollectionPage JSON-LD pointing at the canonical /trends/tracker path, not its own', async ({
+    page,
+  }) => {
+    const latest = getCanonicalUrls().find(
+      (u) => u.pattern === '/trends/tracker/[week]' && u.canonicalPath,
+    )
+    if (!latest) throw new Error('no canonicalized latest trend week found in fixture')
+
+    await page.goto(latest.path)
+    const scripts = await page
+      .locator('script[type="application/ld+json"]')
+      .allTextContents()
+    const flat = scripts.join('\n')
+
+    expect(flat).toContain(`"url":"${canonicalUrl('/trends/tracker')}"`)
+    expect(flat).not.toContain(`"url":"${canonicalUrl(latest.path)}"`)
   })
 })
