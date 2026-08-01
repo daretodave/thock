@@ -64,4 +64,11 @@ describe('<NewsletterArchive>', () => {
     const link = screen.getByTestId('newsletter-archive-link')
     expect(link.className).toContain('focus-visible:ring-2')
   })
+
+  it('renders the publish date formatted with dateStyle: medium in a <time> element', () => {
+    render(<NewsletterArchive newsletters={[fixture()]} />)
+    const date = screen.getByText('May 15, 2026')
+    expect(date.tagName).toBe('TIME')
+    expect(date).toHaveAttribute('dateTime', '2026-05-15T08:00:00.000Z')
+  })
 })

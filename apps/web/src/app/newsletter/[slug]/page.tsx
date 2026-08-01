@@ -12,6 +12,11 @@ import { getAllNewsletters, getNewsletterBySlug } from '@/lib/data-runtime'
 import { ArticleBody } from '@/components/article/ArticleBody'
 import { PageSectionKicker } from '@/components/ui/PageSectionKicker'
 
+const PUBLISHED_FORMATTER = new Intl.DateTimeFormat('en-US', {
+  dateStyle: 'medium',
+  timeZone: 'UTC',
+})
+
 export const dynamicParams = false
 
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
@@ -85,9 +90,12 @@ export default async function NewsletterDetailPage({
             >
               {fm.title}
             </h1>
-            <p className="font-mono text-micro uppercase tracking-[0.08em] text-text-2">
-              {fm.publishedAt.slice(0, 10)}
-            </p>
+            <time
+              dateTime={fm.publishedAt}
+              className="font-mono text-micro uppercase tracking-[0.08em] text-text-2"
+            >
+              {PUBLISHED_FORMATTER.format(new Date(fm.publishedAt))}
+            </time>
             <p className="max-w-[60ch] font-serif text-h3 text-text-2">
               {fm.lede}
             </p>

@@ -2,6 +2,11 @@ import type { ReactElement } from 'react'
 import Link from 'next/link'
 import type { Newsletter } from '@thock/content'
 
+const PUBLISHED_FORMATTER = new Intl.DateTimeFormat('en-US', {
+  dateStyle: 'medium',
+  timeZone: 'UTC',
+})
+
 export type NewsletterArchiveProps = {
   newsletters: Newsletter[]
 }
@@ -52,9 +57,12 @@ export function NewsletterArchive({
             <span className="font-mono text-micro uppercase tracking-[0.08em] text-text-2">
               issue {String(n.frontmatter.issue).padStart(2, '0')}
             </span>
-            <span className="font-mono text-micro uppercase tracking-[0.08em] text-text-2">
-              {n.frontmatter.publishedAt.slice(0, 10)}
-            </span>
+            <time
+              dateTime={n.frontmatter.publishedAt}
+              className="font-mono text-micro uppercase tracking-[0.08em] text-text-2"
+            >
+              {PUBLISHED_FORMATTER.format(new Date(n.frontmatter.publishedAt))}
+            </time>
           </div>
           <Link
             href={`/newsletter/${n.slug}`}

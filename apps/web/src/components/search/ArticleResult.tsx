@@ -5,6 +5,11 @@ import { TagChip, type TagChipCategory } from '@thock/ui'
 import { pillarLabel } from '@thock/seo'
 import type { SearchHit } from '@/lib/search/runtime'
 
+const PUBLISHED_FORMATTER = new Intl.DateTimeFormat('en-US', {
+  dateStyle: 'medium',
+  timeZone: 'UTC',
+})
+
 export type ArticleResultProps = {
   hit: SearchHit
   tagsBySlug?: Map<string, Tag>
@@ -33,7 +38,13 @@ export function ArticleResult({
         <span aria-hidden="true" className="font-mono text-micro text-text-4">
           ·
         </span>
-        <span data-testid="search-result-date" className="font-mono text-micro text-text-2">{hit.publishedAt.slice(0, 10)}</span>
+        <time
+          dateTime={hit.publishedAt}
+          data-testid="search-result-date"
+          className="font-mono text-micro text-text-2"
+        >
+          {PUBLISHED_FORMATTER.format(new Date(hit.publishedAt))}
+        </time>
       </div>
       <h2 className="mt-1 font-serif text-h3 text-text">
         <Link

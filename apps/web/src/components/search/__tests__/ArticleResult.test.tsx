@@ -47,9 +47,12 @@ describe('<ArticleResult>', () => {
     expect(screen.getByTestId('search-result-eyebrow')).toHaveTextContent('Deep Dives')
   })
 
-  it('renders the date as the first 10 chars of publishedAt', () => {
+  it('renders the date formatted with dateStyle: medium', () => {
     render(<ArticleResult hit={makeHit({ publishedAt: '2026-04-15T00:00:00.000Z' })} />)
-    expect(screen.getByTestId('search-result-date')).toHaveTextContent('2026-04-15')
+    const date = screen.getByTestId('search-result-date')
+    expect(date).toHaveTextContent('Apr 15, 2026')
+    expect(date.tagName).toBe('TIME')
+    expect(date).toHaveAttribute('dateTime', '2026-04-15T00:00:00.000Z')
   })
 
   it('renders the title in an h2 linking to /article/[slug]', () => {
