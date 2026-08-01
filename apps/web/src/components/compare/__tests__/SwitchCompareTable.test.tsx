@@ -61,6 +61,12 @@ describe('<SwitchCompareTable>', () => {
     expect(linkB).toHaveAttribute('href', '/part/switch/switch-b')
   })
 
+  it('renders both switch names inside real h2s, not plain links', () => {
+    render(<SwitchCompareTable switchA={SWITCH_A} switchB={SWITCH_B} />)
+    expect(screen.getByTestId('compare-switch-a-name').tagName).toBe('H2')
+    expect(screen.getByTestId('compare-switch-b-name').tagName).toBe('H2')
+  })
+
   it('renders the spec table with the correct number of rows', () => {
     render(<SwitchCompareTable switchA={SWITCH_A} switchB={SWITCH_B} />)
     const rows = screen.getAllByTestId('compare-spec-row')

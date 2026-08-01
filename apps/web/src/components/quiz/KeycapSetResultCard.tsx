@@ -50,12 +50,17 @@ export function KeycapSetResultCard({ keycapSet: ks, score, maxScore, rank }: Pr
             {rank}
           </span>
           <div>
-            <Link
-              href={`/part/keycap-set/${ks.slug}`}
-              className="font-serif text-h3 text-text hover:text-accent transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+            <h3
+              data-testid="keycap-result-card-name"
+              className="font-serif text-h3 text-text"
             >
-              {ks.name}
-            </Link>
+              <Link
+                href={`/part/keycap-set/${ks.slug}`}
+                className="hover:text-accent transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+              >
+                {ks.name}
+              </Link>
+            </h3>
             <p className="text-small text-text-2 mt-0.5">
               <Mono>
                 {profileLabel} · {materialLabel}

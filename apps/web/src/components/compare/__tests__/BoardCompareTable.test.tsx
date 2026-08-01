@@ -59,6 +59,12 @@ describe('<BoardCompareTable>', () => {
     expect(linkB).toHaveAttribute('href', '/part/board/board-b')
   })
 
+  it('renders both board names inside real h2s, not plain links', () => {
+    render(<BoardCompareTable boardA={BOARD_A} boardB={BOARD_B} />)
+    expect(screen.getByTestId('compare-board-a-name').tagName).toBe('H2')
+    expect(screen.getByTestId('compare-board-b-name').tagName).toBe('H2')
+  })
+
   it('renders the spec table with 8 rows', () => {
     render(<BoardCompareTable boardA={BOARD_A} boardB={BOARD_B} />)
     const rows = screen.getAllByTestId('compare-spec-row')

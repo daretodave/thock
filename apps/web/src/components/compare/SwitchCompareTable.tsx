@@ -65,22 +65,26 @@ export function SwitchCompareTable({
       <div className="grid grid-cols-[14ch_1fr_1fr] gap-x-8 mb-4 pb-3 border-b border-border-hi">
         <div />
         <div>
-          <Link
-            href={`/part/switch/${switchA.slug}`}
-            data-testid="compare-switch-a-link"
-            className="font-serif text-h3 text-text hover:text-accent transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
-          >
-            {switchA.name}
-          </Link>
+          <h2 data-testid="compare-switch-a-name" className="font-serif text-h3 text-text">
+            <Link
+              href={`/part/switch/${switchA.slug}`}
+              data-testid="compare-switch-a-link"
+              className="hover:text-accent transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+            >
+              {switchA.name}
+            </Link>
+          </h2>
         </div>
         <div>
-          <Link
-            href={`/part/switch/${switchB.slug}`}
-            data-testid="compare-switch-b-link"
-            className="font-serif text-h3 text-text hover:text-accent transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
-          >
-            {switchB.name}
-          </Link>
+          <h2 data-testid="compare-switch-b-name" className="font-serif text-h3 text-text">
+            <Link
+              href={`/part/switch/${switchB.slug}`}
+              data-testid="compare-switch-b-link"
+              className="hover:text-accent transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+            >
+              {switchB.name}
+            </Link>
+          </h2>
         </div>
       </div>
 

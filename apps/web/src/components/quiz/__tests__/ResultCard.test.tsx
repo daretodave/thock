@@ -32,6 +32,11 @@ describe('<ResultCard>', () => {
     expect(link).toHaveAttribute('href', '/part/switch/gateron-oil-king')
   })
 
+  it('renders the switch name inside a real h3, not a plain link', () => {
+    render(<ResultCard sw={SWITCH} score={20} maxScore={30} rank={1} />)
+    expect(screen.getByTestId('result-card-name').tagName).toBe('H3')
+  })
+
   it('match percentage uses text-text-2 (not text-text-3) for WCAG AA contrast', () => {
     render(<ResultCard sw={SWITCH} score={20} maxScore={30} rank={1} />)
     const pct = screen.getByTestId('result-card-pct')

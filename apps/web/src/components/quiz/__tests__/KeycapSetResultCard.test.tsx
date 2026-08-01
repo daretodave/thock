@@ -31,6 +31,11 @@ describe('<KeycapSetResultCard>', () => {
     expect(link).toHaveAttribute('href', '/part/keycap-set/domikey-wob')
   })
 
+  it('renders the keycap set name inside a real h3, not a plain link', () => {
+    render(<KeycapSetResultCard keycapSet={KEYCAP} score={20} maxScore={30} rank={1} />)
+    expect(screen.getByTestId('keycap-result-card-name').tagName).toBe('H3')
+  })
+
   it('shows correct match percentage', () => {
     render(<KeycapSetResultCard keycapSet={KEYCAP} score={15} maxScore={30} rank={2} />)
     expect(screen.getByTestId('keycap-result-card-pct')).toHaveTextContent('50% match')
