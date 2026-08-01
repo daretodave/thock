@@ -77,7 +77,7 @@
     {
       "name": "Cherry MX2A",
       "category": "switch",
-      "direction": "flat",
+      "direction": "up",
       "score": -30,
       "spark": [
         -8,

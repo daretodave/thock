@@ -2609,7 +2609,7 @@
         {
           "name": "Cherry MX2A",
           "category": "switch",
-          "direction": "flat",
+          "direction": "up",
           "score": -30,
           "spark": [
             -8,
@@ -8727,5 +8727,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-07-31T14:57:23.329Z"
+  "generatedAt": "2026-08-01T01:48:50.007Z"
 }
