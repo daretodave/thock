@@ -37,6 +37,11 @@ describe('<PartIndexCard>', () => {
     )
   })
 
+  it('renders the part name inside a real h2, not a plain span', () => {
+    render(<PartIndexCard part={FAKE_SWITCH} />)
+    expect(screen.getByTestId('part-index-name').tagName).toBe('H2')
+  })
+
   it('truncates a long description with an ellipsis', () => {
     render(<PartIndexCard part={FAKE_SWITCH} />)
     const card = screen.getByTestId('part-index-card')

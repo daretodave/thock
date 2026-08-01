@@ -38,9 +38,12 @@ export function PartIndexCard({ part }: PartIndexCardProps): ReactElement {
       className="group flex flex-col gap-2 border-t border-border py-5 transition-colors hover:border-border-hi focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
     >
       <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-        <Mono className="text-h3 text-text group-hover:text-accent transition-colors">
-          {part.record.name}
-        </Mono>
+        <h2
+          data-testid="part-index-name"
+          className="text-h3 text-text group-hover:text-accent transition-colors"
+        >
+          <Mono>{part.record.name}</Mono>
+        </h2>
         <span
           data-testid="part-index-status"
           className={`font-mono uppercase tracking-[0.08em] text-micro ${statusTint(status)}`}
