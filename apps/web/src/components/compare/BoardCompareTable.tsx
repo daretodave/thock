@@ -104,9 +104,11 @@ export function BoardCompareTable({
                 {rowA.label}
               </dt>
               <dd className={`text-body ${differs ? 'text-text font-medium' : 'text-text-2'}`}>
+                <span className="sr-only">{boardA.name}: </span>
                 <Mono>{rowA.value}</Mono>
               </dd>
               <dd className={`text-body ${differs ? 'text-text font-medium' : 'text-text-2'}`}>
+                <span className="sr-only">{boardB.name}: </span>
                 <Mono>{rowB.value}</Mono>
               </dd>
             </div>

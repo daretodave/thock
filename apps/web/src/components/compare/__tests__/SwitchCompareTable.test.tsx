@@ -116,4 +116,13 @@ describe('<SwitchCompareTable>', () => {
     expect(screen.getByText('Vendor X Studio')).toBeInTheDocument()
     expect(screen.getByText('vendor-y')).toBeInTheDocument()
   })
+
+  it('prefixes each spec value with a visually-hidden label naming its switch, so a screen reader can tell the two dd values apart', () => {
+    render(<SwitchCompareTable switchA={SWITCH_A} switchB={SWITCH_B} />)
+    const rows = screen.getAllByTestId('compare-spec-row')
+    const typeRow = rows.find((r) => r.textContent?.includes('Linear'))!
+    const dds = typeRow.querySelectorAll('dd')
+    expect(dds[0]!.querySelector('.sr-only')?.textContent).toBe('Switch A: ')
+    expect(dds[1]!.querySelector('.sr-only')?.textContent).toBe('Switch B: ')
+  })
 })

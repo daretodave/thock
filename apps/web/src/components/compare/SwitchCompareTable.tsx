@@ -104,9 +104,11 @@ export function SwitchCompareTable({
                 {rowA.label}
               </dt>
               <dd className={`text-body ${differs ? 'text-text font-medium' : 'text-text-2'}`}>
+                <span className="sr-only">{switchA.name}: </span>
                 <Mono>{rowA.value}</Mono>
               </dd>
               <dd className={`text-body ${differs ? 'text-text font-medium' : 'text-text-2'}`}>
+                <span className="sr-only">{switchB.name}: </span>
                 <Mono>{rowB.value}</Mono>
               </dd>
             </div>

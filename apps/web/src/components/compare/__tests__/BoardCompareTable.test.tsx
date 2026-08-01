@@ -115,4 +115,13 @@ describe('<BoardCompareTable>', () => {
     expect(screen.getByText('Top mount')).toBeInTheDocument()
     expect(screen.queryByText('top-mount')).not.toBeInTheDocument()
   })
+
+  it('prefixes each spec value with a visually-hidden label naming its board, so a screen reader can tell the two dd values apart', () => {
+    render(<BoardCompareTable boardA={BOARD_A} boardB={BOARD_B} />)
+    const rows = screen.getAllByTestId('compare-spec-row')
+    const layoutRow = rows.find((r) => r.textContent?.includes('TKL'))!
+    const dds = layoutRow.querySelectorAll('dd')
+    expect(dds[0]!.querySelector('.sr-only')?.textContent).toBe('Board A: ')
+    expect(dds[1]!.querySelector('.sr-only')?.textContent).toBe('Board B: ')
+  })
 })
