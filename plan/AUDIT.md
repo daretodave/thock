@@ -84,6 +84,17 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [seo] [4.8] /trends/tracker/[week] JSON-LD contradicts the canonical fix shipped alongside it — addressed in this commit, closes #692
+- category: seo
+- filed: 2026-08-01 by cloud /iterate audit (fresh general-purpose sweep, angle: scrutinize the just-shipped 41bbda4a tracker-canonical commit for regressions/half-fixes), mirrored to issue #692
+- impact: 6 (41bbda4a canonicalized the latest week's `<link rel="canonical">` to `/trends/tracker`, closing #691's duplicate-content problem — but the same page's own `CollectionPage`/`BreadcrumbList`/`Dataset` JSON-LD still self-referenced `/trends/tracker/<week>` for the latest week, so the rendered structured data directly contradicted the canonical tag on the exact route the prior commit targeted)
+- ease: 8 (the default export already computes the same `isLatest` flag `generateMetadata` uses — line 97 — just never threaded it into the three JSON-LD call sites; no schema/data change)
+- score: 4.8 (impact × ease / 10)
+- evidence: `apps/web/src/app/trends/tracker/[week]/page.tsx:56-60` (`generateMetadata`, correctly swaps `path` when `isLatest`) vs lines 64-79 (`buildDatasetJsonLd`, hardcoded `/trends/tracker/${week}`), 107-110 (breadcrumb last crumb, hardcoded), 116-120 (`buildCollectionPageJsonLd` call, hardcoded).
+- issue: #692
+> **Resolved (2026-08-01):** threaded `isLatest` into `buildDatasetJsonLd`, the `buildCollectionPageJsonLd` call, and the last breadcrumb crumb's `path` — all three now resolve to `/trends/tracker` for the latest week, matching `generateMetadata`. New e2e assertion in `tracker-archive.spec.ts` confirms the latest week's rendered JSON-LD carries the canonical URL, not its own path. `pnpm verify` full gate green: typecheck, lint, 753 unit tests, 175 script tests, data:validate, build, size, 1106/1106 e2e.
+> Picked as the top signal this tick: no unlabeled GitHub issues (triage gate); not Monday (W31 snapshot already existed); no pending phases/data/content-gap work (all 7 mechanical surveys re-ran clean, no rows filed); march's own expand Step 3c gate not met (12 commits/~9.3h since pass 268's anchor `883bed69`, threshold 20 commits/48h). AUDIT.md's only other Pending row remains the standing non-autonomous `[engineering] [4.0]` Lighthouse-CI-disabled item; CRITIQUE.md's only Pending row remains the non-actionable `[needs-user-call]` GA-beacon item. Dispatched a fresh general-purpose sweep specifically pointed at commit 41bbda4a (the tick's own immediately-prior ship) for regressions or half-fixes, plus a few genuinely fresh angles (error-boundary coverage on newer routes, quiz/compare a11y on radio/select interactions, `relatedArticle` render coverage, orphaned components) — the JSON-LD/canonical contradiction on the just-shipped route was the one finding that cleared the 3.0 bar; every other angle came back clean.
+
 ### [x] [seo] [4.8] /trends/tracker and /trends/tracker/<latest-week> duplicate title/description/JSON-LD with no canonical resolving it — addressed in 41bbda4a, closes #691
 - category: seo
 - filed: 2026-08-01 by cloud /iterate audit (fresh general-purpose sweep, angle: recently-shipped-code re-inspection + duplicate title/meta-description census across near-identical route families)
