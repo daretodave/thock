@@ -43,6 +43,23 @@ describe('ArchiveMonthGroup', () => {
     expect(link).toHaveTextContent('Switch Deep Dive')
   })
 
+  it('renders the article title inside a real h3, not a plain span', () => {
+    const articles = [
+      makeArticle({
+        slug: 'switch-deep-dive',
+        frontmatter: {
+          ...DEFAULT_FM,
+          slug: 'switch-deep-dive',
+          title: 'Switch Deep Dive',
+        },
+      }),
+    ]
+    const group = makeGroup('2026-05', 'May 2026', articles)
+    render(<ArchiveMonthGroup group={group} />)
+    const heading = screen.getByRole('heading', { level: 3, name: 'Switch Deep Dive' })
+    expect(heading.tagName).toBe('H3')
+  })
+
   it('shows the pillar label in the article row', () => {
     const articles = [
       makeArticle({

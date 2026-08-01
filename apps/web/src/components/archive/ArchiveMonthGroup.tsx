@@ -47,9 +47,9 @@ export function ArchiveMonthGroup({
               >
                 {PILLAR_LABELS[article.frontmatter.pillar] ?? article.frontmatter.pillar}
               </span>
-              <span className="font-serif text-body text-text group-hover:text-accent transition-colors">
+              <h3 className="font-serif text-body text-text group-hover:text-accent transition-colors">
                 {article.frontmatter.title}
-              </span>
+              </h3>
               <span
                 data-testid="archive-read-time"
                 className="font-mono text-micro text-text-2 shrink-0 ml-auto"
