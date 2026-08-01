@@ -109,7 +109,7 @@ export function SwitchCompareSelector({
             id="compare-same-selection-hint"
             role="status"
             aria-live="polite"
-            className="font-mono text-micro text-text-3"
+            className="font-mono text-micro text-text-2"
           >
             Pick two different switches to compare
           </p>
