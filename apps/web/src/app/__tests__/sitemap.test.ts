@@ -9,6 +9,7 @@ import {
   getAllTags,
   getAllTrendSnapshots,
   getArticlesByTag,
+  getLatestTrendSnapshot,
 } from '@/lib/data-runtime'
 
 describe('sitemap', () => {
@@ -80,9 +81,14 @@ describe('sitemap', () => {
     }
   })
 
-  it('includes every tracker archive week (phase 27)', () => {
+  it('includes every archived tracker week, but not the latest week under its own path (it canonicalizes to /trends/tracker)', () => {
+    const latestIsoWeek = getLatestTrendSnapshot()?.isoWeek
     for (const s of getAllTrendSnapshots()) {
-      expect(urls).toContain(canonicalUrl(`/trends/tracker/${s.isoWeek}`))
+      if (s.isoWeek === latestIsoWeek) {
+        expect(urls).not.toContain(canonicalUrl(`/trends/tracker/${s.isoWeek}`))
+      } else {
+        expect(urls).toContain(canonicalUrl(`/trends/tracker/${s.isoWeek}`))
+      }
     }
   })
 

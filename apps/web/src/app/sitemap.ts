@@ -9,6 +9,7 @@ import {
   getAllTrendSnapshots,
   getAllVendors,
   getArticlesByTag,
+  getLatestTrendSnapshot,
 } from '@/lib/data-runtime'
 import { canonicalUrl, PILLARS } from '@thock/seo'
 
@@ -101,13 +102,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }))
 
-  const trackerWeekEntries: MetadataRoute.Sitemap = getAllTrendSnapshots().map(
-    (s) => ({
+  // The latest week canonicalizes to the evergreen /trends/tracker
+  // dashboard (already a static entry above) — see [week]/page.tsx
+  // generateMetadata. Listing it again under its own path here would
+  // put a non-canonical URL in the sitemap.
+  const latestIsoWeek = getLatestTrendSnapshot()?.isoWeek
+  const trackerWeekEntries: MetadataRoute.Sitemap = getAllTrendSnapshots()
+    .filter((s) => s.isoWeek !== latestIsoWeek)
+    .map((s) => ({
       url: canonicalUrl(`/trends/tracker/${s.isoWeek}`),
       lastModified: s.publishedAt,
       priority: 0.7,
-    }),
-  )
+    }))
 
   const vendorEntries: MetadataRoute.Sitemap = getAllVendors().map((v) => ({
     url: canonicalUrl(`/vendor/${v.slug}`),

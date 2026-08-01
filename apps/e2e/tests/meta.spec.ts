@@ -3,6 +3,13 @@ import { getCanonicalUrls } from '../src/fixtures/canonical-urls'
 
 const CANONICAL = getCanonicalUrls()
 const HTML_PATHS = CANONICAL.filter((u) => u.kind === 'html').map((u) => u.path)
+// A URL with a `canonicalPath` override (e.g. the latest trend week,
+// which canonicalizes to the evergreen /trends/tracker dashboard) is
+// expected in the sitemap under its canonical target, not its own
+// path — the sitemap should only ever list canonical URLs.
+const SITEMAP_EXPECTED_HTML_PATHS = CANONICAL.filter(
+  (u) => u.kind === 'html',
+).map((u) => u.canonicalPath ?? u.path)
 
 const ARTICLE_SLUGS_IN_FIXTURE = CANONICAL.filter((u) =>
   u.path.startsWith('/article/'),
@@ -45,7 +52,7 @@ test.describe('phase 17 — sitemap completeness', () => {
 
     const missing: string[] = []
     for (const path of [
-      ...HTML_PATHS,
+      ...SITEMAP_EXPECTED_HTML_PATHS,
       ...ARTICLE_SLUGS_IN_FIXTURE,
       ...TAG_SLUGS_IN_FIXTURE,
     ]) {
