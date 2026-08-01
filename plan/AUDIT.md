@@ -84,6 +84,17 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [seo] [4.8] /trends/tracker and /trends/tracker/<latest-week> duplicate title/description/JSON-LD with no canonical resolving it — addressed in 41bbda4a, closes #691
+- category: seo
+- filed: 2026-08-01 by cloud /iterate audit (fresh general-purpose sweep, angle: recently-shipped-code re-inspection + duplicate title/meta-description census across near-identical route families)
+- impact: 6 (`/trends/tracker` and `/trends/tracker/<isoWeek>` for whichever week is currently newest rendered byte-identical `<title>`, meta description, and JSON-LD `Dataset` name/description; both routes independently self-canonicalized via `buildMetadata({path})` and both are submitted to `sitemap.xml` — `/trends/tracker` at priority 0.8, `trackerWeekEntries` at 0.7 — so search engines see two competing "authoritative" URLs for the same content every single week, in perpetuity, on the site's signature dashboard)
+- ease: 8 (the page body already computes `isLatest` via `getAdjacentWeeks(week).next === null`; `generateMetadata` just needed to reuse that check and swap `path` to `/trends/tracker` for the latest week — ~5 lines. The e2e smoke walker's `has-canonical-link` assertion hard-codes self-referencing canonical for every fixture entry, so the fix required a small fixture extension (`canonicalPath` override) rather than a pure one-liner)
+- score: 4.8 (impact × ease / 10)
+- evidence: `apps/web/src/app/trends/tracker/[week]/page.tsx:40-57` (`generateMetadata`, unconditionally used `path: /trends/tracker/${week}`) vs `apps/web/src/app/trends/tracker/page.tsx:35-46` (identical title/description algorithm for the latest snapshot); sitemap entries at `apps/web/src/app/sitemap.ts:26-31` and `:104-110`.
+- issue: #691
+> **Resolved (2026-08-01):** `[week]/page.tsx`'s `generateMetadata` now canonicalizes the latest week to `/trends/tracker` instead of self-referencing; `canonical-urls.ts` fixture gained an optional `canonicalPath` override (defaults to `path`) so the smoke walker expects the new target for the latest-week entry; new unit test covers both the latest-week and archived-week branches. `pnpm verify` full gate green (run as sequential foreground legs): typecheck, lint, 753 unit tests, 175 script tests, data:validate, build, size, 1105/1105 e2e.
+> Picked as the top signal this tick: no unlabeled GitHub issues (triage gate); not Monday (W31 snapshot already existed); no pending phases/data/content-gap work (all 7 mechanical surveys re-ran clean, no rows filed); march's own expand Step 3c gate not met (10 commits/~7.7h since pass 268, threshold 20 commits/48h). Dispatched a fresh general-purpose sweep with angles disjoint from passes 260-268 (recent-commit regression re-inspection, RSS/Atom edge cases, manifest/favicon completeness, mentionedParts cross-reference on the 5 newest articles, TODO/FIXME census, env-var-gating audit, date-formatter duplication re-check, focus-trap spot-check) — every other angle came back clean; this tracker canonical duplication was the one finding that cleared the 3.0 bar.
+
 ### [x] [enhancement] [3.6] RelatedArticleCard date format diverges from sibling ArticleCard/SuggestedArticles — addressed in 5318a703, closes #676
 - category: enhancement
 - filed: 2026-07-30 by cloud /iterate audit (fresh general-purpose sweep, angle: date-format-token consistency + semantic `<time>` markup coverage across all date-bearing UI components)
