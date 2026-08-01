@@ -71,6 +71,22 @@ describe('ArticleFrontmatterSchema', () => {
     }
   })
 
+  it('accepts a description at exactly the 160-char SERP limit', () => {
+    const result = ArticleFrontmatterSchema.safeParse({
+      ...VALID,
+      description: 'x'.repeat(160),
+    })
+    expect(result.success).toBe(true)
+  })
+
+  it('rejects a description one character past the 160-char SERP limit', () => {
+    const result = ArticleFrontmatterSchema.safeParse({
+      ...VALID,
+      description: 'x'.repeat(161),
+    })
+    expect(result.success).toBe(false)
+  })
+
   it('rejects a too-short title', () => {
     expect(ArticleFrontmatterSchema.safeParse({ ...VALID, title: 'hi' }).success).toBe(
       false,
