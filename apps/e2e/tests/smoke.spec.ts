@@ -31,7 +31,7 @@ const runHtmlAssertion = async (
       return
     }
     case 'has-canonical-link': {
-      const expected = canonicalUrl(url.path)
+      const expected = canonicalUrl(url.canonicalPath ?? url.path)
       const href = await page
         .locator('link[rel="canonical"]')
         .first()

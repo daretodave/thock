@@ -49,10 +49,15 @@ export async function generateMetadata({
   const title = wk
     ? `Trends Tracker — Week ${wk.week}, ${wk.year}`
     : 'Trends Tracker'
+  // The latest week renders byte-identical title/description/JSON-LD
+  // to the evergreen /trends/tracker page — canonicalize to that path
+  // instead of self-referencing so the two URLs don't compete as
+  // duplicate content once next week's snapshot supersedes this one.
+  const isLatest = getAdjacentWeeks(week).next === null
   return buildMetadata({
     title,
     description: describeTrackerWeek(snapshot, wk),
-    path: `/trends/tracker/${week}`,
+    path: isLatest ? '/trends/tracker' : `/trends/tracker/${week}`,
   })
 }
 

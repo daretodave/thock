@@ -15,6 +15,13 @@ export type CanonicalUrl = {
    * non-HTML (asserts content-type only).
    */
   kind: 'html' | 'xml' | 'text'
+  /**
+   * Overrides the expected `<link rel="canonical">` target when a
+   * route intentionally canonicalizes to a different path than the
+   * one it's served at (e.g. the latest trend-tracker week mirrors
+   * the evergreen `/trends/tracker` page). Defaults to `path`.
+   */
+  canonicalPath?: string
 }
 
 const STATIC: CanonicalUrl[] = [
@@ -209,13 +216,19 @@ export function getCanonicalUrls(): CanonicalUrl[] {
       kind: 'xml',
     })
   }
-  for (const week of listTrendWeeks(root)) {
+  const trendWeeks = listTrendWeeks(root)
+  trendWeeks.forEach((week, i) => {
     dynamic.push({
       path: `/trends/tracker/${week}`,
       pattern: '/trends/tracker/[week]',
       kind: 'html',
+      // Latest week (last after the ascending sort) canonicalizes
+      // to the evergreen dashboard — see [week]/page.tsx generateMetadata.
+      ...(i === trendWeeks.length - 1
+        ? { canonicalPath: '/trends/tracker' }
+        : {}),
     })
-  }
+  })
   for (const slug of listVendorSlugs(root)) {
     dynamic.push({
       path: `/vendor/${slug}`,
