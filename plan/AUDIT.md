@@ -84,6 +84,18 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [seo] [4.5] trends tracker next-week link skips the latest-week canonical redirect — addressed in commit `fede9337`, closes #694
+- category: seo
+- filed: 2026-08-01 by cloud /march tick → /iterate audit (fresh general-purpose sub-agent sweep, angle: residual gaps in today's own tracker-canonical fix chain #691/#692/#693)
+- impact: 5 (commits `41bbda4a`/`2ddc387f`/`81d3b78c`, earlier this same tick, canonicalized the latest tracker week's metadata, JSON-LD, and sitemap entry to the evergreen `/trends/tracker` dashboard — but the page's own "Next week →" internal nav link still built its href from the raw `next` isoWeek with no `isLatest` check, so the second-newest archive week always linked straight at the latest week's own non-canonical path. Recurs every week in perpetuity as the snapshot rolls forward; the sibling `TrackerArchiveStrip` component already guards this exact case for its own latest-cell link.)
+- ease: 9 (one conditional reusing the already-imported `getAdjacentWeeks` helper; no schema/data change)
+- score: 4.5 (impact × ease / 10)
+- evidence: live `curl -s https://thock.xyz/trends/tracker/2026-W30 | grep -oE 'tracker-next-week[^>]*href="[^"]*"'` → `href="/trends/tracker/2026-W31"`, while `curl -s https://thock.xyz/trends/tracker/2026-W31 | grep -oE '<link rel="canonical"[^>]*>'` → `href="https://thock.xyz/trends/tracker"`. `apps/e2e/tests/tracker-archive.spec.ts` only asserted next-link behavior for an interior archive pair (W19→W20), never the second-newest→latest boundary.
+- next: (addressed this tick)
+- issue: #694
+> **Resolved (2026-08-01):** added `nextIsLatest` (`next !== null && getAdjacentWeeks(next).next === null`) in `[week]/page.tsx`; the Next link now resolves to `/trends/tracker` labelled "Latest →" whenever `next` is itself the latest week. New e2e assertion in `tracker-archive.spec.ts` derives the second-newest week from the `canonical-urls` fixture and asserts its Next link targets `/trends/tracker`. `pnpm verify` full gate green: typecheck, lint, 753 unit tests, 175 script tests, data:validate, build, size, 1107/1107 e2e.
+> Picked as the top signal this tick: no unlabeled GitHub issues (triage gate); not Monday (W31 snapshot already existed); no pending phases/data/content-gap work (all 7 mechanical surveys re-ran clean, no rows filed); march's own expand Step 3c gate not met (16 commits/~9.7h since pass 268's anchor `883bed69`, threshold 20 commits/48h). AUDIT.md's only other Pending rows remained the four standing non-autonomous items; CRITIQUE.md's only Pending row remained the non-actionable `[needs-user-call]` GA-beacon item. Dispatched a fresh general-purpose sweep explicitly steered at residual gaps in this same tick's own #691/#692/#693 tracker-canonical fix chain — this Next-link gap was the one finding that cleared the 3.0 bar; the sweep also checked vendor/part/tag/group-buy JSON-LD, RSS/feed escaping, compare/quiz a11y, and image/bundle size, all clean.
+
 ### [x] [seo] [4.5] sitemap.xml lists the latest tracker week under its own non-canonical URL — addressed in this commit, closes #693
 - category: seo
 - filed: 2026-08-01 by cloud /iterate audit (fresh general-purpose sweep, angle: re-check today's own earlier tracker-canonical fixes for residual gaps), mirrored to issue #693
