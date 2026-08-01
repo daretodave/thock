@@ -5240,7 +5240,7 @@
         "slug": "buckling-spring-deep-dive",
         "title": "How buckling-spring switches actually work",
         "lede": "thock has already reached for the buckling-spring snap twice — once to describe a Topre dome, once to describe a click-bar's sharpness — without ever explaining what a buckling spring actually is. The mechanism predates both, and it is stranger and more mechanically honest than either.",
-        "description": "A coil spring compressed past its critical load, kinking sideways and flicking a hammer at a sense layer below. Not a dome collapsing — an actual mechanical failure event, engineered on purpose.",
+        "description": "A coil spring compressed past critical load, kinking sideways to flick a hammer at a sense layer — not a dome collapsing, but engineered mechanical failure.",
         "author": "thock",
         "pillar": "deep-dives",
         "tags": [
@@ -5509,7 +5509,7 @@
         "slug": "keychron-nova-socket-hybrid",
         "title": "Nova Socket: Keychron's bet on not choosing a switch technology",
         "lede": "A single hot-swap socket that accepts a standard mechanical switch or a TMR magnetic switch, decided per key, is a strange thing for a mainstream prebuilt brand to ship. It's also exactly the move Keychron has been building toward all year.",
-        "description": "The V6 Ultra HE's Nova Socket lets one hot-swap PCB run either a standard mechanical switch or a TMR magnetic switch, per key. Set against the Orca Echo split board's record crowdfunding run, it reads as Keychron hedging the switch-tech question rather than settling it.",
+        "description": "The V6 Ultra HE's Nova Socket lets one PCB run mechanical or TMR magnetic switches per key — Keychron hedging the switch-tech question rather than settling it.",
         "author": "thock",
         "pillar": "trends",
         "tags": [
@@ -5959,7 +5959,7 @@
         "slug": "keychron-quiet-takeover",
         "title": "Keychron's Quiet Takeover: How One Brand Became the Mechanical Keyboard Default",
         "lede": "Ask almost anyone — a forum regular, a YouTube comment section, a Discord server for people who just bought their first mechanical keyboard — what board to get, and you'll hear the same answer. This is how that happened.",
-        "description": "The thock trends tracker shows Keychron brand momentum at score 55 and rising. Here's the product ladder, firmware strategy, and community effect that built the new default.",
+        "description": "The thock trends tracker shows Keychron brand momentum at score 55 and rising — the product ladder, firmware strategy, and community effect behind it.",
         "author": "thock",
         "pillar": "trends",
         "tags": [
@@ -6054,7 +6054,7 @@
         "slug": "optical-switches-explained",
         "title": "How optical switches actually sense a keypress",
         "lede": "An optical switch replaces the metal contact with a beam of light. That one change eliminates contact bounce entirely, reshapes the latency math, and is why some optical boards can offer per-key actuation at 0.1mm granularity. The mechanism is simpler than the marketing makes it sound.",
-        "description": "The beam-interrupt mechanism eliminates contact bounce entirely — here's what that actually means for actuation, latency, and the firmware pipeline that makes rapid trigger possible.",
+        "description": "The beam-interrupt mechanism eliminates contact bounce entirely — what that means for actuation, latency, and the firmware pipeline behind rapid trigger.",
         "author": "thock",
         "pillar": "deep-dives",
         "tags": [
@@ -8026,7 +8026,7 @@
         "slug": "clicky-switches-deep-dive",
         "title": "Why clicky switches still have a constituency",
         "lede": "Linears and tactiles dominate the modern build conversation, and clickies barely appear in it. The reason is not that clicky switches have aged out — it is that the people who want them really want them, and the manufacturers know it.",
-        "description": "Click-jacket and click-bar mechanisms make different sounds and serve different ears. The market for both has stayed roughly flat for a decade — and that is the story.",
+        "description": "Click-jacket and click-bar mechanisms make different sounds and serve different ears — and the market for both has stayed roughly flat for a decade.",
         "author": "thock",
         "pillar": "deep-dives",
         "tags": [
@@ -8174,7 +8174,7 @@
         "slug": "magnetic-switches-deep-dive",
         "title": "How Hall-effect switches actually sense a keypress",
         "lede": "A Hall-effect switch is not a faster MX switch. It is a different sensing lineage — a magnet in the stem, a sensor on the PCB, and an analog voltage where contact closure used to be. The features the marketing pages lead with all unwind from that one architectural fact.",
-        "description": "Magnetic switches replace the contact closure with an analog field reading — a sensing lineage that quietly sits beside MX, Topre, and optical, with different consequences at every layer of the build.",
+        "description": "Magnetic switches replace the contact closure with an analog field reading — a sensing lineage beside MX, Topre, and optical, with real build consequences.",
         "author": "thock",
         "pillar": "deep-dives",
         "tags": [
@@ -8727,5 +8727,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-08-01T05:18:41.068Z"
+  "generatedAt": "2026-08-01T11:44:28.311Z"
 }
