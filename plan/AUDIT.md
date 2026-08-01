@@ -84,6 +84,18 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [a11y] [5.4] part-kind index pages (/part/switch, /part/keycap-set, /part/board) render item names as plain spans, not headings — addressed in this commit, closes #700
+- category: a11y
+- filed: 2026-08-01 by cloud /march tick → /iterate audit (fresh general-purpose sweep, angle: sibling catalog surfaces to today's earlier heading-semantics fix), mirrored to issue #700
+- impact: 6 (three route templates — `/part/switch` 18 items, `/part/keycap-set` 10 items, `/part/board` 10 items — the entire item list below the page's only h1 is styled-span text; a screen-reader user navigating by heading hears one heading per page and none of the ~38 catalog items across the three routes)
+- ease: 9 (same one-line pattern already proven in #696: wrap the item name in a real heading nested inside the whole-card Link, one component file)
+- score: 5.4 (impact × ease / 10)
+- evidence: `apps/web/src/components/part/PartIndexCard.tsx:41-43` — item name wrapped in `<Mono className="text-h3 ...">`, a bare `<span>`, no heading element, direct descendant of `/part/[kind]/page.tsx`'s only `<h1 data-testid="part-index-h1">`.
+- next: (addressed this tick)
+- issue: #700
+> **Resolved (2026-08-01):** wrapped the item name in a real `<h2>` (direct child of the page's h1), keeping the `Mono` styling nested inside — heading-wraps-link, mirroring the `/parts/page.tsx` fix from #696. Added a tagName-pin regression test to `PartIndexCard.test.tsx`. `pnpm verify` full gate green: typecheck, lint, 762 web unit tests (+1), 175 script tests, data:validate (75 records), build, size (108.7 KB/200 KB budget), 1107/1107 e2e.
+> Picked as the top signal this tick: no unlabeled GitHub issues (triage gate); not Monday-relevant (W31 snapshot already existed); no pending phases/data/content-gap work (all 7 mechanical surveys re-ran clean, no rows filed); march's own expand Step 3c gate not met (9 commits/~6.5h since pass 269's anchor, threshold 20 commits/48h). AUDIT.md's only other Pending rows remained the standing non-autonomous items (`[4.0]` Lighthouse-CI `/oversight` item, `[needs-user-call] [4.2]` soft-404 item, two `[blocked-cloud-permission]` items); CRITIQUE.md's only Pending row remained the non-actionable GA-beacon item. A fresh general-purpose sweep scoped to angles disjoint from the last ~30 recorded passes (quiz recommender edge cases, group-buy countdown math, compare-table/PartSpec parity, external fact-checks, InlineViz asset integrity, security headers, sitemap/RSS validity, and — the one that hit — sibling surfaces of today's own heading-semantics fix) found the `/part/[kind]` gap as the one finding above the 3.0 bar; every other angle came back clean.
+
 ### [x] [a11y] [4.8] catalog list pages (/vendors, /parts, /tools, /vendor/[slug]) render item titles as styled spans/links instead of heading elements — addressed in this commit, closes #696
 - category: a11y
 - filed: 2026-08-01 by cloud /march tick → /iterate audit (fresh general-purpose sweep, angle: catalog list-page heading semantics), mirrored to issue #696
