@@ -59,6 +59,12 @@ describe('<NewsletterArchive>', () => {
     expect(link).toHaveTextContent('thock weekly — issue 001')
   })
 
+  it('renders the title link inside a real h3, not a plain link (a11y)', () => {
+    render(<NewsletterArchive newsletters={[fixture()]} />)
+    const link = screen.getByTestId('newsletter-archive-link')
+    expect(link.closest('h3')).not.toBeNull()
+  })
+
   it('has a focus-visible ring on the title link for keyboard navigation', () => {
     render(<NewsletterArchive newsletters={[fixture()]} />)
     const link = screen.getByTestId('newsletter-archive-link')

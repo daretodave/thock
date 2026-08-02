@@ -134,14 +134,16 @@ export function CitationIndex({ citations }: CitationIndexProps): ReactElement {
             className="flex flex-col gap-2 py-5 sm:grid sm:grid-cols-[1fr_auto] sm:gap-x-8 sm:items-baseline"
           >
             <div className="flex flex-col gap-1 min-w-0">
-              <a
-                href={href}
-                rel="noopener"
-                target="_blank"
-                className="font-serif text-h3 text-text underline decoration-border-hi underline-offset-4 hover:text-accent hover:decoration-accent transition-colors break-words rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
-              >
-                {display}
-              </a>
+              <h3 className="font-serif text-h3 text-text break-words">
+                <a
+                  href={href}
+                  rel="noopener"
+                  target="_blank"
+                  className="underline decoration-border-hi underline-offset-4 hover:text-accent hover:decoration-accent transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+                >
+                  {display}
+                </a>
+              </h3>
               <span
                 data-testid="citation-index-host"
                 className="font-mono text-micro uppercase tracking-[0.08em] text-text-2 break-all"

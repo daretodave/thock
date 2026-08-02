@@ -198,6 +198,32 @@ describe('<TrackerRow>', () => {
     ).toBe('down')
   })
 
+  it('renders the row name inside a real h3, not a plain span (a11y)', () => {
+    render(<TrackerRow rank={1} row={row({ name: 'Lonesome Switch' })} />)
+    const nameText = screen.getByTestId('tracker-row-name-text')
+    expect(nameText.closest('h3')).not.toBeNull()
+  })
+
+  it('renders the linked row name inside a real h3, not a plain link (a11y)', () => {
+    const article = makeArticle({
+      slug: 'oil-king-deep-dive',
+      frontmatter: {
+        ...makeArticle().frontmatter,
+        slug: 'oil-king-deep-dive',
+        title: 'Why the Oil King',
+      },
+    })
+    render(
+      <TrackerRow
+        rank={1}
+        row={row({ name: 'Oil King', articleSlug: 'oil-king-deep-dive' })}
+        article={article}
+      />,
+    )
+    const nameLink = screen.getByTestId('tracker-row-name-link')
+    expect(nameLink.closest('h3')).not.toBeNull()
+  })
+
   it('gives the score delta an accessible label independent of the mobile-hidden header row (a11y — closes #697)', () => {
     render(<TrackerRow rank={1} row={row({ direction: 'up', score: 42 })} />)
     const r = screen.getByTestId('tracker-row')

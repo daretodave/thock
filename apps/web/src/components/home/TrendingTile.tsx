@@ -78,9 +78,9 @@ export function TrendingTile({
           {category}
         </span>
       </div>
-      <div className="flex-1 font-serif text-h3 text-text leading-tight">
+      <h3 className="flex-1 font-serif text-h3 text-text leading-tight">
         {label}
-      </div>
+      </h3>
       <div className="flex items-end justify-between gap-2">
         <span
           className={`flex items-center gap-1 font-mono text-small ${DIR_COLOR[dir]}`}

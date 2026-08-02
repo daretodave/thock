@@ -176,6 +176,19 @@ describe('<CitationIndex>', () => {
     expect(hosts[0]!.textContent).toMatch(/kbdfans\.com/)
   })
 
+  it('renders the citation title link inside a real h3, not a plain link (a11y)', () => {
+    const citations: CitationRecord[] = [
+      {
+        href: 'https://example.com/',
+        text: 'Example',
+        articles: [articleFixture()],
+      },
+    ]
+    render(<CitationIndex citations={citations} />)
+    const link = screen.getByRole('link', { name: 'Example' })
+    expect(link.closest('h3')).not.toBeNull()
+  })
+
   it('renders article links pointing to /article/<slug>', () => {
     const citations: CitationRecord[] = [
       {

@@ -64,13 +64,15 @@ export function NewsletterArchive({
               {PUBLISHED_FORMATTER.format(new Date(n.frontmatter.publishedAt))}
             </time>
           </div>
-          <Link
-            href={`/newsletter/${n.slug}`}
-            data-testid="newsletter-archive-link"
-            className="font-serif text-h3 text-text hover:text-accent rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
-          >
-            {n.frontmatter.title}
-          </Link>
+          <h3 className="font-serif text-h3 text-text">
+            <Link
+              href={`/newsletter/${n.slug}`}
+              data-testid="newsletter-archive-link"
+              className="hover:text-accent rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+            >
+              {n.frontmatter.title}
+            </Link>
+          </h3>
           <p className="text-small text-text-2 line-clamp-2">
             {n.frontmatter.lede}
           </p>

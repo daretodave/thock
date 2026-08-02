@@ -86,6 +86,21 @@ describe('<TrendingTile>', () => {
     expect(screen.getByTestId('trending-tile')).toHaveTextContent('flat')
   })
 
+  it('renders the label inside a real h3, not a plain div (a11y)', () => {
+    render(
+      <TrendingTile
+        category="switch"
+        label="Gateron Oil King"
+        delta={42}
+        dir="up"
+        spark={[1, 2, 3, 4]}
+      />,
+    )
+    expect(
+      screen.getByText('Gateron Oil King').tagName,
+    ).toBe('H3')
+  })
+
   it('gives the direction glyph an accessible label beyond the bare direction word', () => {
     render(
       <TrendingTile
