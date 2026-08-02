@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import type { ReactElement } from 'react'
-import type { Article, Tag } from '@thock/content'
+import type { Article } from '@thock/content'
 import { pillarLabel } from '@thock/seo'
 
 export type ArticleCardVariant = 'hero' | 'large' | 'row' | 'compact'
@@ -9,17 +9,6 @@ export type ArticleCardVariant = 'hero' | 'large' | 'row' | 'compact'
 export type ArticleCardProps = {
   article: Article
   variant: ArticleCardVariant
-  /**
-   * Reserved — currently unused on every variant. Hero stopped
-   * rendering chips with critique pass-12 [LOW] drain (card-density
-   * mismatch vs. the chip-less archive `row` variant); other variants
-   * never rendered them. Kept in the type so callers don't churn;
-   * future variants can re-introduce a chip rail without a signature
-   * change.
-   */
-  tagsBySlug?: Map<string, Tag>
-  /** Reserved — see `tagsBySlug` above. */
-  maxTags?: number
   /**
    * Heading level for the hero variant's title. Defaults to `h1`
    * (home page hero, the page's only H1). Pillar pages that render

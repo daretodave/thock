@@ -1,5 +1,5 @@
 import type { ReactElement } from 'react'
-import type { Article, Tag } from '@thock/content'
+import type { Article } from '@thock/content'
 import type { Pillar } from '@thock/seo'
 import { ArticleCard } from './ArticleCard'
 
@@ -21,7 +21,6 @@ const HOME_PILLAR_SET: readonly Pillar[] = [
 export type LatestByPillarProps = {
   /** All articles, already sorted by publishedAt desc by the page. */
   articles: Article[]
-  tagsBySlug?: Map<string, Tag>
   /**
    * Slugs to exclude from both the per-pillar match AND the fallback
    * pool. Use case: home page passes the hero article's slug so the
@@ -83,7 +82,6 @@ export function resolveLatestByPillar(
  */
 export function LatestByPillar({
   articles,
-  tagsBySlug,
   excludeSlugs,
 }: LatestByPillarProps): ReactElement | null {
   const picks = resolveLatestByPillar(articles, HOME_PILLAR_SET, excludeSlugs)
@@ -100,11 +98,7 @@ export function LatestByPillar({
           data-testid="latest-by-pillar-card"
           className="contents"
         >
-          <ArticleCard
-            article={article}
-            variant="large"
-            tagsBySlug={tagsBySlug}
-          />
+          <ArticleCard article={article} variant="large" />
         </div>
       ))}
     </div>

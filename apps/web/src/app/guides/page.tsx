@@ -8,8 +8,7 @@ import {
   JsonLd,
   pillarLabel,
 } from '@thock/seo'
-import type { Tag } from '@thock/content'
-import { getAllTags, getArticlesByPillar } from '@/lib/data-runtime'
+import { getArticlesByPillar } from '@/lib/data-runtime'
 import { ArticleCard } from '@/components/home/ArticleCard'
 import { HomeSectionHeading } from '@/components/home/HomeSectionHeading'
 import { PageSectionKicker } from '@/components/ui/PageSectionKicker'
@@ -38,8 +37,6 @@ export const metadata = buildMetadata({
 export default function GuidesPage(): ReactElement {
   const all = getArticlesByPillar(PILLAR)
   const groups = groupGuidesBySection(all)
-  const allTags = getAllTags()
-  const tagsBySlug = new Map<string, Tag>(allTags.map((t) => [t.slug, t]))
 
   const itemListItems = groups.flatMap((g) =>
     g.articles.map((a) => ({
@@ -98,12 +95,7 @@ export default function GuidesPage(): ReactElement {
             <HomeSectionHeading kicker="Section" title={group.label} />
             <div data-testid={`guide-section-${group.key}`} className="flex flex-col">
               {group.articles.map((article) => (
-                <ArticleCard
-                  key={article.slug}
-                  article={article}
-                  variant="row"
-                  tagsBySlug={tagsBySlug}
-                />
+                <ArticleCard key={article.slug} article={article} variant="row" />
               ))}
             </div>
           </Container>

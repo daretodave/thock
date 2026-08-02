@@ -1,11 +1,10 @@
 import type { ReactElement } from 'react'
-import type { Article, Tag } from '@thock/content'
+import type { Article } from '@thock/content'
 import { ArticleCard } from '@/components/home/ArticleCard'
 
 export type PillarArchiveListProps = {
   /** Articles to render — already pre-filtered to the pillar by the caller. */
   articles: Article[]
-  tagsBySlug?: Map<string, Tag>
   /** Optional cap; defaults to 25 per the pillar brief. */
   max?: number
 }
@@ -18,7 +17,6 @@ export type PillarArchiveListProps = {
  */
 export function PillarArchiveList({
   articles,
-  tagsBySlug,
   max = 25,
 }: PillarArchiveListProps): ReactElement | null {
   if (articles.length === 0) return null
@@ -27,12 +25,7 @@ export function PillarArchiveList({
   return (
     <div data-testid="pillar-archive-list" className="flex flex-col">
       {capped.map((article) => (
-        <ArticleCard
-          key={article.slug}
-          article={article}
-          variant="row"
-          tagsBySlug={tagsBySlug}
-        />
+        <ArticleCard key={article.slug} article={article} variant="row" />
       ))}
     </div>
   )

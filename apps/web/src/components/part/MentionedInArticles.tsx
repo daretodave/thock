@@ -1,12 +1,11 @@
 import type { ReactElement } from 'react'
 import { Container, Stack } from '@thock/ui'
-import type { Article, Tag } from '@thock/content'
+import type { Article } from '@thock/content'
 import { ArticleCard } from '@/components/home/ArticleCard'
 
 export type MentionedInArticlesProps = {
   partName: string
   articles: Article[]
-  tagsBySlug: Map<string, Tag>
 }
 
 /**
@@ -19,7 +18,6 @@ export type MentionedInArticlesProps = {
 export function MentionedInArticles({
   partName,
   articles,
-  tagsBySlug,
 }: MentionedInArticlesProps): ReactElement {
   if (articles.length === 0) {
     return (
@@ -49,12 +47,7 @@ export function MentionedInArticles({
         </h2>
         <div data-testid="part-mentioned-list" className="flex flex-col">
           {articles.map((article) => (
-            <ArticleCard
-              key={article.slug}
-              article={article}
-              variant="row"
-              tagsBySlug={tagsBySlug}
-            />
+            <ArticleCard key={article.slug} article={article} variant="row" />
           ))}
         </div>
         <p

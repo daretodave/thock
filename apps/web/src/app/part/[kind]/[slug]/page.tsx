@@ -8,12 +8,10 @@ import {
   canonicalUrl,
   JsonLd,
 } from '@thock/seo'
-import type { Tag } from '@thock/content'
 import {
   getAllBoards,
   getAllKeycapSets,
   getAllSwitches,
-  getAllTags,
   getArticlesMentioningPart,
   getBoardBySlug,
   getKeycapSetBySlug,
@@ -135,9 +133,6 @@ export default async function PartDetailPage({
   if (!part) notFound()
 
   const articles = getArticlesMentioningPart(part.kind, part.slug)
-  const tagsBySlug = new Map<string, Tag>(
-    getAllTags().map((t) => [t.slug, t]),
-  )
   const path = `/part/${part.kind}/${part.slug}`
   const kindHuman = KIND_HUMAN[part.kind]
 
@@ -211,11 +206,7 @@ export default async function PartDetailPage({
           </Link>
         </Stack>
       </Container>
-      <MentionedInArticles
-        partName={part.record.name}
-        articles={articles}
-        tagsBySlug={tagsBySlug}
-      />
+      <MentionedInArticles partName={part.record.name} articles={articles} />
     </main>
   )
 }

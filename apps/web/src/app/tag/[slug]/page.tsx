@@ -91,8 +91,6 @@ export default async function TagPage({
 
   const articles = sortArticlesForTagArchive(getArticlesByTag(tag.slug), tag)
   const path = `/tag/${tag.slug}`
-  const allTags = getAllTags()
-  const tagsBySlug = new Map<string, Tag>(allTags.map((t) => [t.slug, t]))
   const tint = CATEGORY_TINT[tag.category] ?? CATEGORY_TINT.misc
   // Chrome renders the lowercase #slug form (critique pass 8 — avoids
   // Title-Cased names looking wrong as a hashtag). That breaks for the
@@ -165,12 +163,7 @@ export default async function TagPage({
           />
           <div data-testid="tag-archive-list" className="flex flex-col">
             {articles.map((article) => (
-              <ArticleCard
-                key={article.slug}
-                article={article}
-                variant="row"
-                tagsBySlug={tagsBySlug}
-              />
+              <ArticleCard key={article.slug} article={article} variant="row" />
             ))}
           </div>
         </Container>

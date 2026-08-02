@@ -11,7 +11,6 @@ import {
 import {
   getActiveGroupBuys,
   getAllArticles,
-  getAllTags,
   getAllVendors,
   getLatestTrendSnapshot,
 } from '@/lib/data-runtime'
@@ -25,7 +24,7 @@ import {
 } from '@/components/home/LatestByPillar'
 import { TrendingStrip } from '@/components/home/TrendingStrip'
 import { PageSectionKicker } from '@/components/ui/PageSectionKicker'
-import type { Article, Tag } from '@thock/content'
+import type { Article } from '@thock/content'
 
 export const metadata = buildMetadata({
   title: siteConfig.tagline,
@@ -61,8 +60,6 @@ function isoWeekKicker(snapshotIsoWeek: string): string {
 export default function HomePage(): ReactElement {
   const articles = getAllArticles()
   const heroArticle = pickHero(articles)
-  const allTags = getAllTags()
-  const tagsBySlug = new Map<string, Tag>(allTags.map((t) => [t.slug, t]))
   const trendSnapshot = getLatestTrendSnapshot()
   const activeGroupBuys = getActiveGroupBuys()
   const vendors = getAllVendors()
@@ -128,11 +125,7 @@ export default function HomePage(): ReactElement {
       {/* Hero */}
       <Container as="section" className="py-12 sm:py-16">
         {heroArticle ? (
-          <ArticleCard
-            article={heroArticle}
-            variant="hero"
-            tagsBySlug={tagsBySlug}
-          />
+          <ArticleCard article={heroArticle} variant="hero" />
         ) : (
           <Stack gap={4}>
             <PageSectionKicker>{siteConfig.tagline}</PageSectionKicker>
@@ -166,7 +159,6 @@ export default function HomePage(): ReactElement {
         <HomeSectionHeading kicker="Latest" title="By pillar" />
         <LatestByPillar
           articles={latestByPillar}
-          tagsBySlug={tagsBySlug}
           excludeSlugs={heroExcludeSlugs}
         />
       </Container>
@@ -189,7 +181,6 @@ export default function HomePage(): ReactElement {
                 />
                 <HomeDeepDivesRail
                   articles={articles}
-                  tagsBySlug={tagsBySlug}
                   excludeSlugs={longReadsExcludeSlugs}
                 />
               </div>

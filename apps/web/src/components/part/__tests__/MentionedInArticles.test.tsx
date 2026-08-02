@@ -1,18 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import { MentionedInArticles } from '../MentionedInArticles'
-import type { Article, Tag } from '@thock/content'
-
-const FAKE_TAGS: Map<string, Tag> = new Map([
-  [
-    'gateron',
-    {
-      slug: 'gateron',
-      name: 'Gateron',
-      category: 'brand',
-    } as Tag,
-  ],
-])
+import type { Article } from '@thock/content'
 
 const FAKE_ARTICLE = {
   slug: 'gateron-oil-king-deep-dive',
@@ -44,7 +33,6 @@ describe('<MentionedInArticles>', () => {
       <MentionedInArticles
         partName="Gateron Oil King"
         articles={[FAKE_ARTICLE]}
-        tagsBySlug={FAKE_TAGS}
       />,
     )
     const list = screen.getByTestId('part-mentioned-list')
@@ -60,7 +48,6 @@ describe('<MentionedInArticles>', () => {
       <MentionedInArticles
         partName="Akko V3 Cream Blue Pro"
         articles={[]}
-        tagsBySlug={FAKE_TAGS}
       />,
     )
     expect(screen.getByTestId('part-mentioned-empty')).toHaveTextContent(
@@ -73,7 +60,6 @@ describe('<MentionedInArticles>', () => {
       <MentionedInArticles
         partName="Gateron Oil King"
         articles={[FAKE_ARTICLE]}
-        tagsBySlug={FAKE_TAGS}
       />,
     )
     expect(screen.getByText(/Mentioned in 1 article$/i)).toBeInTheDocument()
@@ -82,7 +68,6 @@ describe('<MentionedInArticles>', () => {
       <MentionedInArticles
         partName="Gateron Oil King"
         articles={[FAKE_ARTICLE, { ...FAKE_ARTICLE, slug: 'a2' } as Article]}
-        tagsBySlug={FAKE_TAGS}
       />,
     )
     expect(screen.getByText(/Mentioned in 2 articles$/i)).toBeInTheDocument()

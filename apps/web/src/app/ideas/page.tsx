@@ -8,8 +8,7 @@ import {
   JsonLd,
   pillarLabel,
 } from '@thock/seo'
-import type { Tag } from '@thock/content'
-import { getAllTags, getArticlesByPillar, getArticlesByTag } from '@/lib/data-runtime'
+import { getArticlesByPillar, getArticlesByTag } from '@/lib/data-runtime'
 import { ArticleCard } from '@/components/home/ArticleCard'
 import { HomeSectionHeading } from '@/components/home/HomeSectionHeading'
 import { PageSectionKicker } from '@/components/ui/PageSectionKicker'
@@ -46,8 +45,6 @@ export const metadata = buildMetadata({
 export default function IdeasPage(): ReactElement {
   const all = getArticlesByPillar(PILLAR)
   const sorted = sortArticlesForArchive(all)
-  const allTags = getAllTags()
-  const tagsBySlug = new Map<string, Tag>(allTags.map((t) => [t.slug, t]))
 
   const buildPickFromTag = pickBuildOfTheWeek(getArticlesByTag(BUILD_OF_THE_WEEK_TAG))
   const buildPick =
@@ -96,19 +93,14 @@ export default function IdeasPage(): ReactElement {
             )}`}
             title="The build we keep coming back to"
           />
-          <ArticleCard
-            article={buildPick}
-            variant="hero"
-            titleAs="h2"
-            tagsBySlug={tagsBySlug}
-          />
+          <ArticleCard article={buildPick} variant="hero" titleAs="h2" />
         </Container>
       )}
 
       {lead ? (
         <Container as="section" className="py-12 sm:py-16">
           <HomeSectionHeading kicker="Latest" title="Newest from the workbench" />
-          <ArticleCard article={lead} variant="hero" titleAs="h2" tagsBySlug={tagsBySlug} />
+          <ArticleCard article={lead} variant="hero" titleAs="h2" />
         </Container>
       ) : !buildPick ? (
         <Container as="section" className="py-16">
@@ -125,11 +117,7 @@ export default function IdeasPage(): ReactElement {
       {archive.length > 0 && (
         <Container as="section" className="pb-12 sm:pb-16">
           <HomeSectionHeading kicker="Archive" title="More Ideas pieces" />
-          <PillarArchiveList
-            articles={archive}
-            tagsBySlug={tagsBySlug}
-            max={ARCHIVE_MAX - 1}
-          />
+          <PillarArchiveList articles={archive} max={ARCHIVE_MAX - 1} />
         </Container>
       )}
     </main>

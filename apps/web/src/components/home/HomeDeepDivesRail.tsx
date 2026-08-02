@@ -1,11 +1,10 @@
 import type { ReactElement } from 'react'
-import type { Article, Tag } from '@thock/content'
+import type { Article } from '@thock/content'
 import { ArticleCard } from './ArticleCard'
 
 export type HomeDeepDivesRailProps = {
   /** All articles, already sorted by publishedAt desc by the page. */
   articles: Article[]
-  tagsBySlug?: Map<string, Tag>
   /** Cap at 3 by default — matches the design composition. */
   max?: number
   /**
@@ -24,7 +23,6 @@ export type HomeDeepDivesRailProps = {
  */
 export function HomeDeepDivesRail({
   articles,
-  tagsBySlug,
   max = 3,
   excludeSlugs,
 }: HomeDeepDivesRailProps): ReactElement | null {
@@ -41,12 +39,7 @@ export function HomeDeepDivesRail({
   return (
     <div data-testid="home-deep-dives-rail" className="flex flex-col">
       {picks.map((article) => (
-        <ArticleCard
-          key={article.slug}
-          article={article}
-          variant="row"
-          tagsBySlug={tagsBySlug}
-        />
+        <ArticleCard key={article.slug} article={article} variant="row" />
       ))}
     </div>
   )

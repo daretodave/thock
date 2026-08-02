@@ -8,8 +8,7 @@ import {
   JsonLd,
   pillarLabel,
 } from '@thock/seo'
-import type { Tag } from '@thock/content'
-import { getAllTags, getArticlesByPillar } from '@/lib/data-runtime'
+import { getArticlesByPillar } from '@/lib/data-runtime'
 import { ArticleCard } from '@/components/home/ArticleCard'
 import { HomeSectionHeading } from '@/components/home/HomeSectionHeading'
 import { PageSectionKicker } from '@/components/ui/PageSectionKicker'
@@ -40,8 +39,6 @@ export const metadata = buildMetadata({
  */
 export default function NewsPage(): ReactElement {
   const all = sortArticlesForArchive(getArticlesByPillar(PILLAR))
-  const allTags = getAllTags()
-  const tagsBySlug = new Map<string, Tag>(allTags.map((t) => [t.slug, t]))
 
   const lead = all[0] ?? null
   const archive = all.slice(1)
@@ -83,12 +80,7 @@ export default function NewsPage(): ReactElement {
 
       {lead ? (
         <Container as="section" className="py-12 sm:py-16">
-          <ArticleCard
-            article={lead}
-            variant="hero"
-            titleAs="h2"
-            tagsBySlug={tagsBySlug}
-          />
+          <ArticleCard article={lead} variant="hero" titleAs="h2" />
         </Container>
       ) : (
         <Container as="section" className="py-16">
@@ -108,11 +100,7 @@ export default function NewsPage(): ReactElement {
       {archive.length > 0 && (
         <Container as="section" className="pb-12 sm:pb-16">
           <HomeSectionHeading kicker="Archive" title="More News pieces" />
-          <PillarArchiveList
-            articles={archive}
-            tagsBySlug={tagsBySlug}
-            max={ARCHIVE_MAX - 1}
-          />
+          <PillarArchiveList articles={archive} max={ARCHIVE_MAX - 1} />
         </Container>
       )}
     </main>
