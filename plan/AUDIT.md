@@ -9339,3 +9339,15 @@ passes accumulate signals.)
 - issue: #704
 > **Resolved (2026-08-01):** added `<span className="sr-only">{switchA.name}: </span>` / `{switchB.name}: ` (and the board equivalents) inside each spec row's `<dd>`, ahead of the `<Mono>` value, in both `SwitchCompareTable.tsx` and `BoardCompareTable.tsx`. New regression test in each component's `__tests__` file asserts the sr-only prefix names the correct switch/board per `<dd>`. `pnpm verify` full gate green: typecheck, lint, 768 web unit tests (+2), 175 script tests, data:validate (75 records), build, size (108.7 KB/200 KB budget), 1107/1107 e2e.
 > Picked as the top signal this tick (cloud `/march`): no unlabeled GitHub issues (triage gate); not Monday-relevant (W31 snapshot already existed at tick start); no pending phases/data/content-gap work (all 7 mechanical surveys re-ran clean, no rows filed); march's own expand Step 3c gate not met (17 commits/~11.5h since pass 269's anchor `9328ecad`, threshold 20 commits/48h). AUDIT.md's only other Pending row remains the standing non-autonomous `[engineering] [4.0]` Lighthouse-CI-disabled item (needs `/oversight` call). CRITIQUE.md's only Pending row remains the non-actionable `[needs-user-call]` GA-beacon item. A fresh general-purpose sweep dispatched with the tail of AUDIT.md as an implicit avoid-list (passes 253-271) and steered toward recently-shipped code (today's a11y heading-semantics series, SEO canonical-link series) for regressions/incomplete follow-through — heading hierarchy, tracker direction/spark consistency, CSS orphan classes, mechanical surveys, `pnpm audit`, and dead-frontmatter cleanup all came back clean; the compare-table `dd` semantic-mapping gap was the one finding that cleared the 3.0 bar.
+
+### [HOT PURSUIT] [content-gap] [7] deep-dives pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 6 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: deep-dives
+- window-count: 1
+- window-start: 2026-07-03
+- score: 7
+- next: /ship-content → deep-dives pillar article
+> Filed 2026-08-02 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
