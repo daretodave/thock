@@ -10,7 +10,11 @@ import {
   JsonLd,
 } from '@thock/seo'
 import type { Vendor } from '@thock/data'
-import { getAllClosedGroupBuys, getAllVendors } from '@/lib/data-runtime'
+import {
+  getAllClosedGroupBuys,
+  getAllVendors,
+  getArticleBySlug,
+} from '@/lib/data-runtime'
 import { HomeSectionHeading } from '@/components/home/HomeSectionHeading'
 import { PageSectionKicker } from '@/components/ui/PageSectionKicker'
 import { GroupBuyRow } from '@/components/group-buys/GroupBuyRow'
@@ -41,7 +45,7 @@ export default function PastGroupBuysPage(): ReactElement {
   const itemListItems = past.map((gb) => ({
     name: gb.name,
     url: gb.url,
-    ...(gb.relatedArticle
+    ...(gb.relatedArticle && getArticleBySlug(gb.relatedArticle)
       ? { sameAs: canonicalUrl(`/article/${gb.relatedArticle}`) }
       : {}),
   }))

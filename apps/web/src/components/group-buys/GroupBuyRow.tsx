@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import type { ReactElement } from 'react'
 import type { GroupBuy, Vendor } from '@thock/data'
+import { getArticleBySlug } from '@/lib/data-runtime'
 
 export type GroupBuyRowVariant = 'live' | 'announced' | 'ended'
 
@@ -66,6 +67,12 @@ export function GroupBuyRow({
   const region = REGION_LABEL[groupBuy.region]
   const kind = KIND_LABEL[groupBuy.productKind]
   const vendorName = vendor?.name ?? groupBuy.vendorSlug
+  // Guards against a stale/typo'd relatedArticle slug leaking a dead
+  // link into a live page — no cross-package schema validation covers
+  // this field (@thock/data can't see @thock/content's articles).
+  const relatedArticle = groupBuy.relatedArticle
+    ? getArticleBySlug(groupBuy.relatedArticle)
+    : null
 
   let countdown: string
   if (variant === 'live') {
@@ -166,10 +173,10 @@ export function GroupBuyRow({
             view at vendor →
           </a>
         )}
-        {groupBuy.relatedArticle && (
+        {relatedArticle && (
           <Link
             data-testid="group-buy-coverage-link"
-            href={`/article/${groupBuy.relatedArticle}`}
+            href={`/article/${relatedArticle.slug}`}
             className="rounded-sm font-mono text-micro uppercase tracking-[0.08em] text-text-2 hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
           >
             read our coverage →

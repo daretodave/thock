@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import type { ReactElement } from 'react'
 import type { GroupBuy, Vendor } from '@thock/data'
+import { getArticleBySlug } from '@/lib/data-runtime'
 
 export type GroupBuyCountdownRowProps = {
   groupBuy: GroupBuy
@@ -62,11 +63,18 @@ export function isAnnouncedNotStarted(
  * `<GroupBuyRow>` already offers on /group-buys (coverage article,
  * then catalog spec page), falling back to the row's anchor on the
  * canonical index when neither exists. Every render is clickable.
+ *
+ * `relatedArticle` is resolved against the real article catalog
+ * before use — no schema cross-check covers this field (@thock/data
+ * can't see @thock/content's articles), so a stale/typo'd slug would
+ * otherwise link the homepage's highest-urgency CTA to a 404.
  */
 export function countdownRowHref(
   groupBuy: Pick<GroupBuy, 'slug' | 'relatedArticle' | 'productSlug' | 'productKind'>,
 ): string {
-  if (groupBuy.relatedArticle) return `/article/${groupBuy.relatedArticle}`
+  if (groupBuy.relatedArticle && getArticleBySlug(groupBuy.relatedArticle)) {
+    return `/article/${groupBuy.relatedArticle}`
+  }
   if (groupBuy.productSlug) {
     return `/part/${groupBuy.productKind}/${groupBuy.productSlug}`
   }

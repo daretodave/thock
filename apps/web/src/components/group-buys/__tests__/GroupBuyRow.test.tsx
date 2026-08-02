@@ -236,6 +236,23 @@ describe('<GroupBuyRow>', () => {
     ).not.toBeInTheDocument()
   })
 
+  it('does not render coverage link when relatedArticle does not resolve to a real article (stale/typo\'d slug)', () => {
+    // Regression guard: relatedArticle has no schema-level cross-ref
+    // check against the article catalog (@thock/data can't see
+    // @thock/content), so a stale slug must not render a dead link.
+    render(
+      <GroupBuyRow
+        groupBuy={gb({ relatedArticle: 'this-article-does-not-exist' })}
+        vendor={vendor}
+        variant="live"
+        now={NOW}
+      />,
+    )
+    expect(
+      screen.queryByTestId('group-buy-coverage-link'),
+    ).not.toBeInTheDocument()
+  })
+
   it('renders coverage link on ended variant (phase 37 — closed buy links to coverage)', () => {
     render(
       <GroupBuyRow

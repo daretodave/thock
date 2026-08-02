@@ -9,18 +9,33 @@ import {
 import { makeGroupBuy, makeVendor } from './testFixtures'
 
 describe('countdownRowHref', () => {
-  it('prefers the related article when set', () => {
+  it('prefers the related article when set and it resolves to a real article', () => {
     const gb = makeGroupBuy({
-      relatedArticle: 'some-group-buy',
+      relatedArticle: 'mode-sonnet-r2-group-buy-coverage',
       productSlug: 'some-board',
       productKind: 'board',
     })
-    expect(countdownRowHref(gb)).toBe('/article/some-group-buy')
+    expect(countdownRowHref(gb)).toBe(
+      '/article/mode-sonnet-r2-group-buy-coverage',
+    )
   })
 
   it('falls back to the catalog spec page when no article is set', () => {
     const gb = makeGroupBuy({
       relatedArticle: undefined,
+      productSlug: 'some-board',
+      productKind: 'board',
+    })
+    expect(countdownRowHref(gb)).toBe('/part/board/some-board')
+  })
+
+  it('falls back to the catalog spec page when relatedArticle does not resolve to a real article (stale/typo\'d slug)', () => {
+    // Regression guard: relatedArticle has no schema-level cross-ref
+    // check against the article catalog (@thock/data can't see
+    // @thock/content), so a stale slug must degrade gracefully rather
+    // than link the homepage's highest-urgency CTA to a 404.
+    const gb = makeGroupBuy({
+      relatedArticle: 'this-article-does-not-exist',
       productSlug: 'some-board',
       productKind: 'board',
     })
@@ -126,7 +141,9 @@ describe('<GroupBuyCountdownRow>', () => {
   })
 
   it('renders the row as a link to its coverage article', () => {
-    const gb = makeGroupBuy({ relatedArticle: 'some-group-buy' })
+    const gb = makeGroupBuy({
+      relatedArticle: 'mode-sonnet-r2-group-buy-coverage',
+    })
     render(
       <GroupBuyCountdownRow
         groupBuy={gb}
@@ -136,7 +153,7 @@ describe('<GroupBuyCountdownRow>', () => {
     )
     expect(screen.getByTestId('group-buy-row')).toHaveAttribute(
       'href',
-      '/article/some-group-buy',
+      '/article/mode-sonnet-r2-group-buy-coverage',
     )
   })
 
