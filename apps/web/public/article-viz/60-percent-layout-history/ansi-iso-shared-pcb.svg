@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>One 60% PCB, two bottom-row footprints — ANSI and ISO switch positions sharing the same board, unused positions left unpopulated</title>
+
+  <!-- Shared-PCB bounding box -->
+  <rect x="90" y="80" width="1020" height="300" rx="6" stroke="oklch(0.80 0.135 75)" stroke-width="2" stroke-dasharray="6 6" stroke-opacity="0.6"/>
+  <text x="600" y="60" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.80 0.135 75)" stroke="none" text-anchor="middle" opacity="0.9">one PCB &#8212; shared switch-position footprint</text>
+
+  <!-- ANSI schematic (left) -->
+  <text x="290" y="118" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">ANSI</text>
+
+  <!-- shift row -->
+  <rect x="150" y="150" width="90" height="40" fill="oklch(0.80 0.135 75 / 0.18)" stroke="oklch(0.80 0.135 75)" stroke-width="2.5"/>
+  <text x="195" y="174" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.80 0.135 75)" stroke="none" text-anchor="middle">shift 2.25u</text>
+  <g stroke-opacity="0.75">
+    <rect x="248" y="150" width="34" height="40"/>
+    <rect x="286" y="150" width="34" height="40"/>
+    <rect x="324" y="150" width="34" height="40"/>
+    <rect x="362" y="150" width="34" height="40"/>
+    <rect x="400" y="150" width="34" height="40"/>
+  </g>
+
+  <!-- bottom row -->
+  <g stroke-opacity="0.75">
+    <rect x="150" y="200" width="34" height="40"/>
+    <rect x="188" y="200" width="34" height="40"/>
+    <rect x="226" y="200" width="34" height="40"/>
+  </g>
+  <rect x="264" y="200" width="170" height="40" fill="oklch(0.78 0.005 90 / 0.05)" stroke-opacity="0.75"/>
+  <text x="349" y="224" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">space 6.25u</text>
+
+  <text x="290" y="280" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">one wide left-shift position</text>
+
+  <!-- Divider -->
+  <line x1="600" y1="100" x2="600" y2="360" stroke-opacity="0.3" stroke-dasharray="4 6"/>
+
+  <!-- ISO schematic (right) -->
+  <text x="900" y="118" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">ISO</text>
+
+  <!-- shift row -->
+  <rect x="760" y="150" width="52" height="40" fill="oklch(0.80 0.135 75 / 0.18)" stroke="oklch(0.80 0.135 75)" stroke-width="2.5"/>
+  <text x="786" y="174" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.80 0.135 75)" stroke="none" text-anchor="middle">1.25u</text>
+  <rect x="816" y="150" width="34" height="40" fill="oklch(0.80 0.135 75 / 0.18)" stroke="oklch(0.80 0.135 75)" stroke-width="2.5"/>
+  <text x="833" y="248" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.80 0.135 75)" stroke="none" text-anchor="middle">extra key</text>
+  <g stroke-opacity="0.75">
+    <rect x="854" y="150" width="34" height="40"/>
+    <rect x="892" y="150" width="34" height="40"/>
+    <rect x="930" y="150" width="34" height="40"/>
+    <rect x="968" y="150" width="34" height="40"/>
+  </g>
+
+  <!-- ANSI-only position now unpopulated on the ISO build -->
+  <rect x="1006" y="150" width="24" height="40" stroke-dasharray="3 4" stroke-opacity="0.4"/>
+  <text x="1018" y="280" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">unpopulated</text>
+
+  <!-- bottom row -->
+  <g stroke-opacity="0.75">
+    <rect x="760" y="200" width="34" height="40"/>
+    <rect x="798" y="200" width="34" height="40"/>
+    <rect x="836" y="200" width="34" height="40"/>
+  </g>
+  <rect x="874" y="200" width="170" height="40" fill="oklch(0.78 0.005 90 / 0.05)" stroke-opacity="0.75"/>
+  <text x="959" y="224" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">space 6.25u</text>
+
+  <text x="900" y="280" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">narrower shift + one extra switch position</text>
+
+  <!-- Caption line -->
+  <text x="600" y="420" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">the positions that don&#8217;t apply to a given build simply go unpopulated</text>
+
+  <!-- Theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

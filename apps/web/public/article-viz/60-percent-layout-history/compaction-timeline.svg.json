@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-29T14:20:00.000Z",
+  "commit": "ae484166",
+  "kind": "inline-viz",
+  "article_slug": "60-percent-layout-history",
+  "article_pillar": "deep-dives",
+  "section_anchor": "the-first-cut-full-size-to-tenkeyless",
+  "brief_summary": "Three-panel horizontal timeline showing the two compaction moves the article traces: full-size to tenkeyless (numpad removed, function row/nav/arrows retained) and tenkeyless to 60% (function row, nav cluster, and arrow cluster all additionally removed, leaving only alpha block and modifiers). Bronze arrows label each subtraction.",
+  "target": "apps/web/public/article-viz/60-percent-layout-history/compaction-timeline.svg",
+  "splash_color": { "name": "bronze", "oklch": "oklch(0.80 0.135 75)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "60-percent-layout-history.mdx § 'The first cut: full-size to tenkeyless' — 'A full-size board carries roughly 104–105 keys... The first widely adopted cut removed exactly one of those blocks — the numpad — and nothing else... Function row, nav cluster, and arrows all survived the cut.'",
+    "60-percent-layout-history.mdx § 'The first cut: full-size to tenkeyless' — 'TKL was one subtraction: the numpad. 60% is a second, much larger subtraction made a generation later, by a different community, for a different reason.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/60-percent-layout-history/compaction-timeline.svg"],
+  "warnings": []
+}

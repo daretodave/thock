@@ -1,0 +1,114 @@
+---
+slug: 60-percent-layout-history
+title: "How the 60% became the default custom-keyboard layout"
+description: "The 60% custom-keyboard footprint traces to a 2013 geekhack PCB, GH60 — and every 65%/75%/TKL derivative since inherited its case-and-plate tooling logic."
+lede: "Every custom-keyboard buyer's guide since the mid-2010s opens with the same four-term vocabulary — 60%, 65%, 75%, TKL — as though it always existed. It didn't. One open-source PCB out of a geekhack thread is most of the reason that taxonomy exists at all."
+author: thock
+pillar: deep-dives
+tags: [layout, "65", "75", deep-dive, modding]
+publishedAt: '2026-07-29T14:00:00.000Z'
+updatedAt: '2026-07-29T14:00:00.000Z'
+heroImage: /hero-art/60-percent-layout-history.svg
+heroImageAlt: "Line-drawing comparison of five keyboard case silhouettes shrinking left to right — full-size with numpad, tenkeyless, 75%, 65%, and 60% — arranged like a family tree with a bronze accent dot marking the 60% case as the root the other compact sizes branch from."
+featured: false
+popularityScore: 0
+mentionedParts:
+  - id: wooting-60he
+    kind: board
+    slug: wooting-60he
+  - id: bakeneko65
+    kind: board
+    slug: bakeneko65
+  - id: ikki68-aurora
+    kind: board
+    slug: ikki68-aurora
+  - id: kbd75v3
+    kind: board
+    slug: kbd75v3
+  - id: mammoth75
+    kind: board
+    slug: mammoth75
+  - id: qk75
+    kind: board
+    slug: qk75
+  - id: mode-sonnet
+    kind: board
+    slug: mode-sonnet
+  - id: class80
+    kind: board
+    slug: class80
+  - id: drop-ctrl
+    kind: board
+    slug: drop-ctrl
+---
+
+A reader picking a first custom keyboard today gets handed a vocabulary before they get handed a single spec sheet: 60%, 65%, 75%, TKL. It reads like a settled taxonomy, the way "small, medium, large" reads settled. It isn't nearly that old, and it isn't the product of any standards body. It is the accumulated residue of one specific decision a small group of hobbyists made in the early 2010s about which PCB to build — and the reason the whole family still shares its DNA more than a decade later.
+
+## The first cut: full-size to tenkeyless
+
+The compaction story starts before the custom scene existed at all. A full-size board carries roughly 104–105 keys: the alpha block, a function row, a navigation cluster (Insert, Home, Page Up/Down, Delete, End), an arrow cluster, and a full numeric keypad bolted to the right edge. The first widely adopted cut removed exactly one of those blocks — the numpad — and nothing else. <Source href="https://deskthority.net/wiki/Tenkeyless_keyboard">Deskthority's wiki traces the tenkeyless layout's most likely origin to IBM's Space Saving Keyboard</Source>, the compact counterpart to IBM's Enhanced Keyboard sold alongside it from the mid-1980s through the late 1990s. The pitch was narrow: right-handed users could pull their mouse in by the width of a numpad, and the rest of the layout stayed untouched. Function row, nav cluster, and arrows all survived. That is still the definition of TKL today — everything except the numpad.
+
+TKL was a hardware edit made by a keyboard manufacturer for a mainstream office buyer. The next cut down was a different kind of decision, made by a different kind of person, for a different reason entirely.
+
+<InlineViz
+  src="/article-viz/60-percent-layout-history/compaction-timeline.svg"
+  alt="Horizontal timeline with three keyboard-case silhouettes shrinking left to right: full-size with a numpad block on the right edge, tenkeyless with the numpad removed but function row, navigation cluster, and arrow cluster intact, and 60% with the function row, navigation cluster, arrow cluster, and numpad all removed, leaving only the alpha block and modifiers. A bronze arrow connects each stage with a label naming what was removed."
+  caption="TKL was one subtraction: the numpad. 60% is a second, much larger subtraction made a generation later, by a different community, for a different reason."
+  accent="bronze"
+/>
+
+## GH60: the geekhack PCB that set the reference footprint
+
+The 60% footprint the modern custom scene treats as a baseline is widely credited to a single open-source project: GH60, a keyboard PCB designed for and by the geekhack.org forum community. <Source href="https://komar.blog/posts/introducing-the-gh60-keyboard-project/">Komar's project writeup, published in January 2013</Source>, states the idea was first proposed by a forum member going by jdcarpe, with the PCB itself designed by komar007. The goal was narrow and practical: a portable, fully programmable mechanical keyboard that fit cases already circulating in the hobby rather than one needing its own bespoke case tooled from scratch. The PCB was built to drop into the KBC Poker's plastic case and the custom Poker-style cases already being machined around it — an existing footprint the project inherited rather than invented.
+
+That inheritance is the detail that matters. GH60 did not set out to define "the" 60% layout; it set out to be compatible with a case shape a prebuilt board — the Poker — had already put into circulation. What GH60 added was the PCB half of the equation, built open-source rather than locked to one vendor's product. <Source href="https://wiki.geekhack.org/index.php?title=GH60">The GeekHack wiki's GH60 page</Source> documents the spec directly: ANSI and ISO support across multiple bottom-row width variants, compatibility with both plate-mounted and PCB-mounted Cherry MX-style switches, and — the wiki notes specifically — the first ISO 60% mechanical keyboard PCB to exist. <Source href="https://github.com/komar007/gh60">The project's GitHub repository</Source> shows the arc that followed: a Rev A prototype cycle with community betatesting, a Rev B round fixing what that testing surfaced, a group buy that put boards in hobbyists' hands, and a later Rev C "plain edition" once the layout itself had stopped being the open question.
+
+<Callout type="note" title="Why 'credited to,' not 'invented by'">
+GH60 wasn't the first keyboard anyone had ever built at 60% dimensions — the Poker it targeted predates it as a prebuilt product. What GH60 did was turn that footprint into an open, replicable, DIY-buildable standard: a PCB anyone could source, populate, and drop into a compatible case without negotiating with a single vendor. That's the part the modern group-buy and case-maker ecosystem actually inherited.
+</Callout>
+
+## Why 60% specifically won
+
+Plenty of other compaction points were mechanically possible — a board that kept the arrow cluster but dropped the function row, or one that kept a numpad but shrank everything else. 60% won out over those alternatives for three reasons that have nothing to do with typing feel and everything to do with the economics of building keyboards in small batches.
+
+**Tooling cost.** A case-maker cutting or casting keyboard shells in runs of a few hundred, not a few hundred thousand, cannot afford to design a new external footprint and mounting-hole grid for every project. Once GH60 fixed a PCB shape compatible with an existing case family, every subsequent case-maker building around that PCB reused the same screw-post positions, plate cutout, and overall dimensions rather than starting from a blank sheet. A single case tooling investment could be amortized across an entire catalog of PCB variants and vendors instead of one company's proprietary board. That reusability is what let a hobbyist-scale group-buy economy exist at all — a market of one-off custom footprints, each needing its own case tooling, could never have supported the volume of small vendors that showed up through the 2010s.
+
+**ANSI/ISO flexibility on one PCB.** GH60 supported both ANSI and ISO layouts from the same board by including switch-position footprints for both bottom-row conventions and leaving whichever set didn't apply unpopulated. An ANSI build gets a single wide left shift and a 2.25u right shift; an ISO build gets a narrower left shift, an extra key beside it, and a taller ISO enter — different key counts and different hole positions in the same physical region of the plate. One PCB tooled to cover both markets meant a vendor didn't have to run two separate manufacturing lines to sell into North America and Europe. That flexibility became the template every layout after it copied.
+
+<InlineViz
+  src="/article-viz/60-percent-layout-history/ansi-iso-shared-pcb.svg"
+  alt="Diagram of a single 60% PCB's bottom-left corner showing two overlapping switch-position footprints. The ANSI configuration is marked with filled bronze squares showing a single wide left-shift position; the ISO configuration is marked with filled squares showing a narrower left-shift position plus one additional switch position and a taller enter key, with the unused ANSI-only or ISO-only positions shown as open dashed outlines. A caption notes both layouts share one physical PCB."
+  caption="One PCB, two bottom rows. The positions that don't apply to a given build simply go unpopulated — no separate tooling run required."
+  accent="bronze"
+/>
+
+**Portability and desk real estate.** A 60% board strips the function row, navigation cluster, arrow cluster, and numpad down to the alpha block and modifiers alone, accessing everything else through a firmware-level Fn layer rather than dedicated keys. For hobbyists already comfortable configuring their own firmware, that trade was an easy one — a board small enough to carry, small enough to leave room for a mouse on either side, at a footprint dense enough that the missing keys cost nothing once they were remapped into a layer.
+
+None of those three reasons is about how a 60% keyboard sounds or feels to type on. They are all about what a small manufacturer could tool once and sell many times, and what a technically fluent buyer was willing to relearn in exchange. That is the actual answer to "why 60% and not some other size" — it is a manufacturing-economics answer wearing an ergonomics costume.
+
+## From endpoint to family
+
+If GH60 had stayed a single fixed layout, this would be a shorter piece. What actually happened is that 60% became a floor other footprints got built on top of, inheriting the same case-and-plate manufacturing logic rather than starting fresh each time.
+
+<InlineViz
+  src="/article-viz/60-percent-layout-history/family-ladder.svg"
+  alt="Four-column breakdown strip labelled 60%, 65%, 75%, and TKL. The 60% column shows only an alpha block and modifiers with the label 'the root'. The 65% column adds a narrow right-side arrow-and-nav column, listing Bakeneko65, Ikki68 Aurora, and Mode Sonnet underneath. The 75% column adds a compressed function row on top of the 65% shape, listing KBD75 v3, Mammoth75, and QK75. The TKL column shows a full function row plus a separated navigation cluster and arrow block, listing MM Studio Class80 and Drop CTRL. A bronze connecting line runs beneath all four columns to show the shared case-and-plate lineage."
+  caption="Each size adds one cluster back onto the one before it. None of the three derivatives started from a blank case."
+  accent="bronze"
+/>
+
+**65%** adds a narrow right-side column — typically an arrow cluster plus two or three keys like Delete, Home, or Page Up/Down — onto the same alpha-and-modifier core. <PartReference id="bakeneko65">The Bakeneko65</PartReference> shows how far that inherited logic stretched: CannonKeys built it around a perimeter o-ring "burger mount" rather than the foam-strip gasket other 65% boards use — a genuinely different gasket implementation on the same underlying case-and-plate grid the family shares, covered in [what gasket mount actually delivers](/article/gasket-mount-reality). The <PartReference id="ikki68-aurora">Ikki68 Aurora</PartReference> takes the same 65% skeleton into a frosted polycarbonate case with per-key RGB diffusion, and <PartReference id="mode-sonnet">the Mode Sonnet</PartReference> occupies the mid-tier aluminum slot the category treats as its reference typing feel. None of the three needed a new footprint — they inherited one and varied the material and the mount.
+
+**75%** adds a full function row back on top of the 65% shape, tighter and more vertically compressed than TKL uses for the same row. <PartReference id="kbd75v3">The KBD75 v3</PartReference>, <PartReference id="mammoth75">the Mammoth75</PartReference>, and <PartReference id="qk75">the QK75</PartReference> sit in that bracket, and thock's own coverage of [how 75% became the default custom layout](/article/75-percent-default) tracks the more recent turn: 75% has overtaken 65% as the size vendor configurators lead with, precisely because the family's shared manufacturing grid made it cheap for case-makers who'd already tooled 60% and 65% cases to add a function-row variant rather than design one from nothing. The 60% didn't lose that fight so much as hand off the reference role — it's still the footprint the tooling logic traces back to, even as 75% takes more of the purchase volume.
+
+**TKL** is the oldest cut of the five, but the boards shipping under that name today mostly aren't running on the mount conventions TKL originated with in the 1980s office-keyboard era. <PartReference id="class80">MM Studio's Class80</PartReference> offers gasket-mount configurations borrowed directly from the custom scene's 65%/75% playbook, on a TKL chassis — the foam-channel machining and floating-plate engineering gasket mount requires is the same manufacturing move the 60%/65%/75% family standardized on, applied to the largest of the four sizes rather than invented separately for it. <PartReference id="drop-ctrl">The Drop CTRL</PartReference> keeps the earlier top-mount tradition alive at an accessible aluminum price point with hot-swap built in. For how gasket, top-mount, tray-mount, and integrated-plate approaches differ across all four sizes, see [mounting styles, compared](/article/mounting-styles-compared) — the point worth holding onto is that TKL rejoined the family's manufacturing conventions rather than the family adopting TKL's.
+
+<PullQuote>60% didn't win the custom scene because it's the best size to type on. It won because one PCB made it the cheapest size to build many variants of — and every derivative since has been an argument about which cluster to add back, never about starting over.</PullQuote>
+
+The <PartReference id="wooting-60he">Wooting 60HE</PartReference> is the cleanest evidence the origin footprint is still a live product, not a historical curiosity. It runs Hall-effect analog switches and per-key rapid-trigger tuning — hardware GH60's designers never anticipated — inside dimensions a 2013 PCB would still recognize. A reader shopping today reaches for that same four-term vocabulary — 60%, 65%, 75%, TKL — as the very first filter in [choosing a first custom keyboard kit](/article/custom-keyboard-kit-buyers-guide), which is exactly the sign that a manufacturing accident from a 2013 forum thread became the default taxonomy of an entire hobby.
+
+## What to watch
+
+The family described here is a single lineage: start small, add clusters back one at a time, keep the underlying case-and-plate grid. It is not the only branch the compaction story produced. Split and ergonomic boards solved the same desk-real-estate and portability problems the 60%/65%/75%/TKL family solved — by cutting the board in half and separating the two pieces, rather than by removing key clusters from a single monoblock case. That's a genuinely different fork with its own manufacturing logic and its own learning curve, covered in full in [the split and ergonomic buyer's guide](/article/split-ergo-buyers-guide); it's worth knowing the two stories are siblings, not competitors, answering different parts of the same original question.
+
+Inside the family itself, the open question is what happens as hall-effect and magnetic-switch hardware — the kind the 60HE already carries — pushes further into boards that need different PCB real estate than a simple mechanical switch matrix. Analog sensing adds circuitry a plain matrix never needed. Whether that hardware keeps riding the same case-and-plate tooling the GH60 lineage established, or eventually forces its own footprint fork the way GH60 itself forked away from full-size, is the next test of a manufacturing logic that has already outlasted one full switch-technology generation.

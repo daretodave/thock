@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-29T14:35:00.000Z",
+  "commit": "ae484166",
+  "kind": "inline-viz",
+  "article_slug": "60-percent-layout-history",
+  "article_pillar": "deep-dives",
+  "section_anchor": "why-60-specifically-won",
+  "brief_summary": "Diagram of a single 60% PCB's bottom-left corner showing the ANSI and ISO switch-position footprints side by side within one shared dashed bounding box. ANSI shows a wide 2.25u left-shift position; ISO shows a narrower 1.25u shift plus one additional switch position, with the position that doesn't apply to a given build shown as a dashed, unpopulated outline. Illustrates the article's claim that one PCB tooling run covered both bottom-row conventions.",
+  "target": "apps/web/public/article-viz/60-percent-layout-history/ansi-iso-shared-pcb.svg",
+  "splash_color": { "name": "bronze", "oklch": "oklch(0.80 0.135 75)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "60-percent-layout-history.mdx § 'Why 60% specifically won' — 'GH60 supported both ANSI and ISO layouts from the same board by including switch-position footprints for both bottom-row conventions and leaving whichever set didn't apply unpopulated... a single PCB tooled to cover both markets meant a vendor didn't have to run two separate manufacturing lines to sell into North America and Europe.'",
+    "GeekHack wiki GH60 page (cited in article via <Source>) — documents ANSI and ISO layout variants including 1.50x and 1.25x bottom-row widths, describing GH60 as 'the first ISO 60% mechanical keyboard.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/60-percent-layout-history/ansi-iso-shared-pcb.svg"],
+  "warnings": []
+}

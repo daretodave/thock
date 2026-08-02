@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Two compaction moves: full-size to tenkeyless to 60% — three shrinking keyboard-case silhouettes with labeled removals</title>
+
+  <!-- Panel 1: full-size -->
+  <text x="245" y="112" font-family="Newsreader, serif" font-size="24" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">full-size</text>
+  <rect x="40" y="132" width="420" height="18" rx="3" stroke-opacity="0.85"/>
+  <text x="60" y="145" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">F-row</text>
+  <rect x="40" y="150" width="420" height="150" rx="4" stroke-opacity="0.9"/>
+  <rect x="56" y="164" width="212" height="122" stroke-opacity="0.8"/>
+  <text x="162" y="300" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">alpha + mods</text>
+  <rect x="280" y="164" width="38" height="122" stroke-opacity="0.8"/>
+  <text x="299" y="300" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">nav</text>
+  <rect x="330" y="164" width="38" height="122" stroke-opacity="0.8"/>
+  <text x="349" y="300" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">arrows</text>
+  <rect x="380" y="164" width="68" height="122" stroke-opacity="0.8"/>
+  <text x="414" y="300" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">numpad</text>
+
+  <!-- Arrow 1: full-size to TKL -->
+  <line x1="472" y1="215" x2="548" y2="215" stroke="oklch(0.80 0.135 75)" stroke-width="2.5"/>
+  <path d="M 538 207 L 548 215 L 538 223" stroke="oklch(0.80 0.135 75)" stroke-width="2.5" fill="none"/>
+  <text x="510" y="196" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.80 0.135 75)" stroke="none" text-anchor="middle">&#8211; numpad</text>
+
+  <!-- Panel 2: tenkeyless -->
+  <text x="705" y="112" font-family="Newsreader, serif" font-size="24" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">tenkeyless</text>
+  <rect x="560" y="132" width="330" height="18" rx="3" stroke-opacity="0.85"/>
+  <text x="580" y="145" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">F-row</text>
+  <rect x="560" y="150" width="330" height="150" rx="4" stroke-opacity="0.9"/>
+  <rect x="576" y="164" width="212" height="122" stroke-opacity="0.8"/>
+  <text x="682" y="300" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">alpha + mods</text>
+  <rect x="800" y="164" width="38" height="122" stroke-opacity="0.8"/>
+  <text x="819" y="300" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">nav</text>
+  <rect x="850" y="164" width="38" height="122" stroke-opacity="0.8"/>
+  <text x="869" y="300" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">arrows</text>
+
+  <!-- Arrow 2: TKL to 60% -->
+  <line x1="902" y1="215" x2="978" y2="215" stroke="oklch(0.80 0.135 75)" stroke-width="2.5"/>
+  <path d="M 968 207 L 978 215 L 968 223" stroke="oklch(0.80 0.135 75)" stroke-width="2.5" fill="none"/>
+  <text x="940" y="188" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.80 0.135 75)" stroke="none" text-anchor="middle">&#8211; F-row</text>
+  <text x="940" y="204" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.80 0.135 75)" stroke="none" text-anchor="middle">&#8211; nav &#8211; arrows</text>
+
+  <!-- Panel 3: 60% -->
+  <text x="1075" y="112" font-family="Newsreader, serif" font-size="24" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">60%</text>
+  <rect x="1000" y="150" width="150" height="150" rx="4" stroke="oklch(0.80 0.135 75)" stroke-width="2.5" stroke-opacity="0.95"/>
+  <text x="1075" y="230" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">alpha</text>
+  <text x="1075" y="248" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">+ mods</text>
+  <text x="1075" y="270" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.80 0.135 75)" stroke="none" text-anchor="middle" opacity="0.9">only</text>
+
+  <!-- Baseline -->
+  <line x1="40" y1="340" x2="1150" y2="340" stroke-opacity="0.35"/>
+  <text x="600" y="368" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">TKL was one subtraction. 60% is a second, larger one — made by a different community, for a different reason.</text>
+
+  <!-- Theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

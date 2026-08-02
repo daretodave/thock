@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — five keyboard case silhouettes shrinking left to right: full-size with numpad, TKL, 75%, 65%, and 60%, arranged as a family tree with a bronze root dot marking the 60% case as the shared ancestor the other compact sizes branch from</title>
+
+  <!-- ════════════════════════════════════════════════════════════════════════
+       COMPOSITION: five top-down keyboard-case silhouettes on a shared
+       baseline (y=560), bottom-aligned, shrinking left → right:
+         full-size (with numpad) → TKL → 75% → 65% → 60%
+       Beneath the row, a root/branch "family tree" connects the four larger
+       cases back to a single bronze root dot anchored at the 60% case —
+       the article's thesis made visual: 60% isn't just the smallest case,
+       it's the shared tooling ancestor the compact family branches from.
+       ════════════════════════════════════════════════════════════════════════ -->
+
+  <!-- Wide stage wash — faint bronze, sets the row off from the canvas -->
+  <path
+    d="M 70 380 L 1130 380 L 1130 690 L 70 690 Z"
+    fill="oklch(0.80 0.135 75 / 0.05)" stroke="none"/>
+
+  <!-- Concentrated wash behind the 60% case and its root/tree — the
+       visual point of origin the eye should settle on -->
+  <ellipse cx="1060" cy="540" rx="150" ry="175" fill="oklch(0.80 0.135 75 / 0.10)" stroke="none"/>
+
+  <!-- ── FAMILY TREE — trunk + branches, drawn beneath the case row ────────────
+       Root sits at the 60% case's base; four branches sweep out and up to the
+       base of every other case, reading as "the others grow out of this one." -->
+  <g stroke="oklch(0.80 0.135 75)" stroke-opacity="0.42">
+    <!-- Trunk: root dot down to the branch-fan base -->
+    <line x1="1082.5" y1="580" x2="1082.5" y2="614"/>
+    <!-- Branch → 65% (case 4, landing x=917.5) -->
+    <path d="M 1082.5 614 Q 1000 600 917.5 572" fill="none"/>
+    <!-- Branch → 75% (case 3, landing x=720) -->
+    <path d="M 1082.5 614 Q 901 610 720 572" fill="none"/>
+    <!-- Branch → TKL (case 2, landing x=482.5) -->
+    <path d="M 1082.5 614 Q 782.5 625 482.5 572" fill="none"/>
+    <!-- Branch → full-size (case 1, landing x=200) -->
+    <path d="M 1082.5 614 Q 641.25 645 200 572" fill="none"/>
+  </g>
+
+  <!-- Branch landing ticks — short vertical stubs connecting each branch
+       endpoint up into its case's bottom edge, with a small muted node -->
+  <g stroke-opacity="0.5">
+    <line x1="917.5" y1="572" x2="917.5" y2="560"/>
+    <circle cx="917.5" cy="572" r="3"/>
+    <line x1="720" y1="572" x2="720" y2="560"/>
+    <circle cx="720" cy="572" r="3"/>
+    <line x1="482.5" y1="572" x2="482.5" y2="560"/>
+    <circle cx="482.5" cy="572" r="3"/>
+    <line x1="200" y1="572" x2="200" y2="560"/>
+    <circle cx="200" cy="572" r="3"/>
+  </g>
+
+  <!-- ── CASE 1 — FULL-SIZE (with numpad) ───────────────────────────────────── -->
+  <g>
+    <!-- Main alpha block -->
+    <rect x="60" y="428" width="221" height="132" rx="10" ry="10"/>
+    <rect x="72" y="440" width="197" height="108" rx="7" ry="7" stroke-opacity="0.3"/>
+    <g stroke-opacity="0.35">
+      <line x1="72" y1="458" x2="269" y2="458"/>
+      <line x1="72" y1="476" x2="269" y2="476"/>
+      <line x1="72" y1="494" x2="269" y2="494"/>
+      <line x1="72" y1="512" x2="269" y2="512"/>
+      <line x1="72" y1="530" x2="269" y2="530"/>
+    </g>
+    <!-- Numpad block, separated by a gap — the full-size's defining tell -->
+    <rect x="289" y="428" width="51" height="132" rx="8" ry="8"/>
+    <rect x="297" y="440" width="35" height="108" rx="4" ry="4" stroke-opacity="0.3"/>
+    <g stroke-opacity="0.35">
+      <line x1="297" y1="458" x2="332" y2="458"/>
+      <line x1="297" y1="476" x2="332" y2="476"/>
+      <line x1="297" y1="494" x2="332" y2="494"/>
+      <line x1="297" y1="512" x2="332" y2="512"/>
+      <line x1="297" y1="530" x2="332" y2="530"/>
+    </g>
+  </g>
+
+  <!-- ── CASE 2 — TKL (tenkeyless) ───────────────────────────────────────────── -->
+  <g>
+    <rect x="365" y="428" width="235" height="132" rx="10" ry="10"/>
+    <rect x="377" y="440" width="211" height="108" rx="7" ry="7" stroke-opacity="0.3"/>
+    <g stroke-opacity="0.35">
+      <line x1="377" y1="458" x2="588" y2="458"/>
+      <line x1="377" y1="476" x2="588" y2="476"/>
+      <line x1="377" y1="494" x2="588" y2="494"/>
+      <line x1="377" y1="512" x2="588" y2="512"/>
+      <line x1="377" y1="530" x2="588" y2="530"/>
+    </g>
+    <!-- Nav column (6-key cluster) — full function row already implied by the
+         top row line; nav present, numpad gone -->
+    <g stroke-opacity="0.55">
+      <rect x="549" y="486" width="28" height="8" rx="1.5" ry="1.5"/>
+      <rect x="549" y="496" width="28" height="8" rx="1.5" ry="1.5"/>
+      <rect x="549" y="506" width="28" height="8" rx="1.5" ry="1.5"/>
+    </g>
+    <!-- Arrow cluster -->
+    <g stroke-opacity="0.7">
+      <rect x="563" y="522" width="10" height="10" rx="2" ry="2"/>
+      <rect x="551" y="534" width="10" height="10" rx="2" ry="2"/>
+      <rect x="563" y="534" width="10" height="10" rx="2" ry="2"/>
+      <rect x="575" y="534" width="10" height="10" rx="2" ry="2"/>
+    </g>
+  </g>
+
+  <!-- ── CASE 3 — 75% ────────────────────────────────────────────────────────── -->
+  <g>
+    <rect x="625" y="442" width="190" height="118" rx="9" ry="9"/>
+    <rect x="637" y="452" width="166" height="96" rx="6" ry="6" stroke-opacity="0.3"/>
+    <g stroke-opacity="0.35">
+      <line x1="637" y1="468.3" x2="803" y2="468.3"/>
+      <line x1="637" y1="484.6" x2="803" y2="484.6"/>
+      <line x1="637" y1="500.9" x2="803" y2="500.9"/>
+      <line x1="637" y1="517.2" x2="803" y2="517.2"/>
+      <line x1="637" y1="533.5" x2="803" y2="533.5"/>
+    </g>
+    <!-- Same clusters as TKL, compressed tight against the case edge —
+         the 75%'s tell: no gaps between function row, nav, and arrows -->
+    <g stroke-opacity="0.55">
+      <rect x="766" y="488" width="22" height="6" rx="1.2" ry="1.2"/>
+      <rect x="766" y="496" width="22" height="6" rx="1.2" ry="1.2"/>
+      <rect x="766" y="504" width="22" height="6" rx="1.2" ry="1.2"/>
+    </g>
+    <g stroke-opacity="0.7">
+      <rect x="778" y="518" width="8" height="8" rx="1.5" ry="1.5"/>
+      <rect x="768" y="528" width="8" height="8" rx="1.5" ry="1.5"/>
+      <rect x="778" y="528" width="8" height="8" rx="1.5" ry="1.5"/>
+      <rect x="788" y="528" width="8" height="8" rx="1.5" ry="1.5"/>
+    </g>
+  </g>
+
+  <!-- ── CASE 4 — 65% ────────────────────────────────────────────────────────── -->
+  <g>
+    <rect x="840" y="458" width="155" height="102" rx="8" ry="8"/>
+    <rect x="849" y="468" width="137" height="82" rx="5" ry="5" stroke-opacity="0.3"/>
+    <!-- Five rows — no function row -->
+    <g stroke-opacity="0.35">
+      <line x1="849" y1="484.4" x2="986" y2="484.4"/>
+      <line x1="849" y1="500.8" x2="986" y2="500.8"/>
+      <line x1="849" y1="517.2" x2="986" y2="517.2"/>
+      <line x1="849" y1="533.6" x2="986" y2="533.6"/>
+    </g>
+    <!-- Slim nav column + arrow cluster survive without the F-row -->
+    <g stroke-opacity="0.55">
+      <rect x="948" y="490" width="18" height="5" rx="1" ry="1"/>
+      <rect x="948" y="497" width="18" height="5" rx="1" ry="1"/>
+      <rect x="948" y="504" width="18" height="5" rx="1" ry="1"/>
+    </g>
+    <g stroke-opacity="0.7">
+      <rect x="958" y="520" width="7" height="7" rx="1.2" ry="1.2"/>
+      <rect x="949" y="529" width="7" height="7" rx="1.2" ry="1.2"/>
+      <rect x="958" y="529" width="7" height="7" rx="1.2" ry="1.2"/>
+      <rect x="967" y="529" width="7" height="7" rx="1.2" ry="1.2"/>
+    </g>
+  </g>
+
+  <!-- ── CASE 5 — 60% — the root ─────────────────────────────────────────────── -->
+  <g>
+    <rect x="1020" y="458" width="125" height="102" rx="8" ry="8"/>
+    <rect x="1029" y="468" width="107" height="82" rx="5" ry="5" stroke-opacity="0.3"/>
+    <!-- Five plain rows — no function row, no nav column, no arrow cluster.
+         The cleanest silhouette in the row: everything else in the family
+         is this case plus one more cluster bolted on. -->
+    <g stroke-opacity="0.35">
+      <line x1="1029" y1="484.4" x2="1136" y2="484.4"/>
+      <line x1="1029" y1="500.8" x2="1136" y2="500.8"/>
+      <line x1="1029" y1="517.2" x2="1136" y2="517.2"/>
+      <line x1="1029" y1="533.6" x2="1136" y2="533.6"/>
+    </g>
+  </g>
+
+  <!-- ── ROOT MARKER — bronze focal dot at the 60% case's base ──────────────── -->
+  <circle cx="1082.5" cy="572" r="7" fill="oklch(0.80 0.135 75 / 0.95)" stroke="oklch(0.80 0.135 75)"/>
+  <circle cx="1082.5" cy="572" r="14" stroke="oklch(0.80 0.135 75)" stroke-opacity="0.45" fill="none"/>
+  <line x1="1096" y1="576" x2="1108" y2="580" stroke="oklch(0.80 0.135 75)" stroke-opacity="0.5" stroke-width="1"/>
+  <text x="1112" y="584" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.80 0.135 75)" fill-opacity="0.85" stroke="none" letter-spacing="0.05em">ROOT</text>
+
+  <!-- ── SIZE LABELS ─────────────────────────────────────────────────────────── -->
+  <g font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" fill-opacity="0.6" stroke="none" text-anchor="middle" letter-spacing="0.02em">
+    <text x="200" y="660">100%</text>
+    <text x="482.5" y="660">TKL</text>
+    <text x="720" y="660">75%</text>
+    <text x="917.5" y="660">65%</text>
+    <text x="1082.5" y="660" fill="oklch(0.80 0.135 75)" fill-opacity="0.9">60%</text>
+  </g>
+
+  <!-- ── JetBrains Mono technical caption ────────────────────────────────────── -->
+  <text x="200" y="710" font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace" font-size="10" fill="oklch(0.78 0.005 90)" fill-opacity="0.38" stroke="none" letter-spacing="0.03em">60% — FROM THE 2013 GEEKHACK GH60 PCB — SHARED TOOLING ACROSS 65% / 75% / TKL</text>
+
+  <!-- ── BRONZE THEME DOT — family ornamental anchor, upper-right margin ────── -->
+  <circle cx="1148" cy="92" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

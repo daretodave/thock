@@ -1,0 +1,25 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-29T14:45:00.000Z",
+  "commit": "ae484166",
+  "kind": "inline-viz",
+  "article_slug": "60-percent-layout-history",
+  "article_pillar": "deep-dives",
+  "section_anchor": "from-endpoint-to-family",
+  "brief_summary": "Four-column breakdown strip showing 60%, 65%, 75%, and TKL as a lineage rather than four independent designs. 60% is labeled 'the root' with only alpha block and modifiers. 65% adds a nav-and-arrow column, listing Bakeneko65, Ikki68 Aurora, and Mode Sonnet. 75% adds a compressed function row, listing KBD75 v3, Mammoth75, and QK75. TKL adds a full function row plus a separated nav block, listing MM Studio Class80 and Drop CTRL. A dashed bronze line beneath all four columns marks the shared case-and-plate manufacturing lineage the article argues each size inherited rather than redesigned.",
+  "target": "apps/web/public/article-viz/60-percent-layout-history/family-ladder.svg",
+  "splash_color": { "name": "bronze", "oklch": "oklch(0.80 0.135 75)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "60-percent-layout-history.mdx § 'From endpoint to family' — '65% adds a narrow right-side column... The Bakeneko65 is a useful case study... The Ikki68 Aurora takes the same 65% skeleton... the Mode Sonnet occupies the mid-tier aluminum slot.'",
+    "60-percent-layout-history.mdx § 'From endpoint to family' — '75% adds a full function row back on top of the 65% shape... The KBD75 v3, the Mammoth75, and the QK75 all sit in that bracket.'",
+    "60-percent-layout-history.mdx § 'From endpoint to family' — 'MM Studio's Class80 offers gasket-mount configurations borrowed directly from the custom scene's 65%/75% playbook, on a TKL chassis... The Drop CTRL keeps the earlier top-mount tradition alive.'",
+    "60-percent-layout-history.mdx § 'From endpoint to family' — 'What actually happened is that 60% became a floor other footprints got built on top of, inheriting the same case-and-plate manufacturing logic rather than starting fresh each time.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/60-percent-layout-history/family-ladder.svg"],
+  "warnings": []
+}

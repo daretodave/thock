@@ -1,0 +1,30 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored SVG (no raster pipeline)",
+  "at": "2026-08-02T00:00:00.000Z",
+  "commit": "ae4841668476444b4dcfc166e15299657c0980be",
+  "kind": "hero-art",
+  "source": null,
+  "template": "plan/bearings.md § Article hero art — colorful keyboard SVGs",
+  "tokens_snapshot": "design/tokens.css (sha1 f79eb6c04b4a9d2e0e3e083f8aeb6bc57586d849)",
+  "fonts": ["IBM Plex Sans", "JetBrains Mono"],
+  "article_slug": "60-percent-layout-history",
+  "article_pillar": "deep-dives",
+  "subject": "Five top-down keyboard-case silhouettes on a shared baseline, shrinking left to right — full-size (with a separated numpad block), TKL, 75%, 65%, 60% — with a bronze root/branch tree structure beneath the row connecting the four larger cases back to a single bronze focal dot anchored at the 60% case's base, marking it as the shared tooling ancestor the rest of the compact family branches from.",
+  "motif": "layout-size comparison row, family-tree root/branch connector",
+  "splashHue": "bronze (matches the family theme accent — chosen per brief for cross-piece consistency with this article's inline-viz diagrams)",
+  "splashColor": "oklch(0.80 0.135 75)",
+  "accent_color": {
+    "name": "warm-bronze (theme accent)",
+    "oklch": "oklch(0.80 0.135 75)"
+  },
+  "canvas": "1200x750",
+  "strokeWeight": "2px",
+  "strokeColor": "oklch(0.78 0.005 90)",
+  "outputs": [
+    "apps/web/public/hero-art/60-percent-layout-history.svg",
+    "apps/web/public/hero-art/60-percent-layout-history.svg.json"
+  ],
+  "warnings": [],
+  "notes": "Cases are bottom-aligned on a shared baseline (y=560) and shrink left to right, each differentiated structurally rather than by size alone: full-size gets a separated numpad block (the era's defining tell); TKL and 75% both carry a 6-key nav cluster + 4-key arrow cluster, distinguished from each other mainly by overall proportion (75% drawn tighter/smaller, echoing its compressed real-world spacing vs. TKL's gapped clusters); 65% keeps the nav+arrow clusters but drops to 5 rows (no function row); 60% is the cleanest silhouette — 5 plain rows, no nav column, no arrow cluster — visually reading as the 'base unit' the other four build on top of. Below the row, a bronze root/branch tree (drawn at reduced opacity, family-accent-only per the single-splash rule) fans four curved branches from a trunk at the 60% case's base out to the bottom edge of every other case, each landing on a small muted node; the root itself is marked with the family's standard focal-dot convention (filled core + outer ring) in full-chroma bronze, labeled 'ROOT' via a short leader line — directly staging the alt text's 'family tree ... bronze accent dot marking the 60% case as the root.' Splash color is bronze rather than a distinct per-article hue: the brief asked for consistency with this article's inline-viz diagrams, which already use bronze, so the hero's splash and the family's ornamental theme dot (upper-right corner, standing convention) intentionally coincide here — both drawn at oklch(0.80 0.135 75). Size labels (100% / TKL / 75% / 65% / 60%) sit beneath each case in IBM Plex Sans; the 60% label is set in bronze to match its root status. One JetBrains Mono caption at the bottom margin names the historical anchor (2013 geekhack GH60 PCB) already established in the article body — descriptive naming only, no fabricated figures. Background transparent, light-mode safe per the warm-grey stroke on a wash of low-opacity bronze."
+}

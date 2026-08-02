@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Four-column family breakdown — 60%, 65%, 75%, and TKL, each inheriting the case-and-plate shape of the one before it</title>
+
+  <!-- Column 1: 60% -->
+  <text x="140" y="70" font-family="Newsreader, serif" font-size="26" font-style="italic" fill="oklch(0.80 0.135 75)" stroke="none" text-anchor="middle">60%</text>
+  <rect x="80" y="100" width="120" height="110" rx="4" stroke="oklch(0.80 0.135 75)" stroke-width="2.5" stroke-opacity="0.95"/>
+  <text x="140" y="160" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">alpha</text>
+  <text x="140" y="178" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">+ mods</text>
+  <text x="140" y="238" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.80 0.135 75)" stroke="none" text-anchor="middle">the root</text>
+
+  <!-- Column 2: 65% -->
+  <text x="440" y="70" font-family="Newsreader, serif" font-size="26" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">65%</text>
+  <rect x="360" y="100" width="120" height="110" rx="4" stroke-opacity="0.85"/>
+  <rect x="484" y="100" width="32" height="110" rx="3" stroke="oklch(0.80 0.135 75)" stroke-opacity="0.85"/>
+  <text x="500" y="160" font-family="IBM Plex Sans, sans-serif" font-size="10" fill="oklch(0.80 0.135 75)" stroke="none" text-anchor="middle">nav +</text>
+  <text x="500" y="172" font-family="IBM Plex Sans, sans-serif" font-size="10" fill="oklch(0.80 0.135 75)" stroke="none" text-anchor="middle">arrows</text>
+  <text x="440" y="238" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">+ nav column</text>
+  <text x="440" y="280" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">Bakeneko65</text>
+  <text x="440" y="300" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">Ikki68 Aurora</text>
+  <text x="440" y="320" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">Mode Sonnet</text>
+
+  <!-- Column 3: 75% -->
+  <text x="740" y="70" font-family="Newsreader, serif" font-size="26" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">75%</text>
+  <rect x="660" y="92" width="152" height="18" rx="3" stroke="oklch(0.80 0.135 75)" stroke-opacity="0.85"/>
+  <text x="736" y="105" font-family="IBM Plex Sans, sans-serif" font-size="10" fill="oklch(0.80 0.135 75)" stroke="none" text-anchor="middle">compressed F-row</text>
+  <rect x="660" y="112" width="120" height="98" rx="4" stroke-opacity="0.85"/>
+  <rect x="784" y="112" width="32" height="98" rx="3" stroke-opacity="0.85"/>
+  <text x="740" y="238" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">+ function row</text>
+  <text x="740" y="280" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">KBD75 v3</text>
+  <text x="740" y="300" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">Mammoth75</text>
+  <text x="740" y="320" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">QK75</text>
+
+  <!-- Column 4: TKL -->
+  <text x="1050" y="70" font-family="Newsreader, serif" font-size="26" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">TKL</text>
+  <rect x="940" y="92" width="220" height="18" rx="3" stroke-opacity="0.85"/>
+  <text x="1050" y="105" font-family="IBM Plex Sans, sans-serif" font-size="10" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">full F-row</text>
+  <rect x="940" y="112" width="120" height="98" rx="4" stroke-opacity="0.85"/>
+  <rect x="1064" y="112" width="32" height="98" rx="3" stroke-opacity="0.85"/>
+  <rect x="1100" y="112" width="32" height="98" rx="3" stroke="oklch(0.80 0.135 75)" stroke-opacity="0.85"/>
+  <text x="1116" y="160" font-family="IBM Plex Sans, sans-serif" font-size="9" fill="oklch(0.80 0.135 75)" stroke="none" text-anchor="middle">separated</text>
+  <text x="1116" y="171" font-family="IBM Plex Sans, sans-serif" font-size="9" fill="oklch(0.80 0.135 75)" stroke="none" text-anchor="middle">nav block</text>
+  <text x="1050" y="238" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">separated nav + arrows</text>
+  <text x="1050" y="280" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">MM Studio Class80</text>
+  <text x="1050" y="300" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">Drop CTRL</text>
+
+  <!-- Shared lineage line -->
+  <line x1="60" y1="380" x2="1160" y2="380" stroke="oklch(0.80 0.135 75)" stroke-width="2" stroke-dasharray="2 6" stroke-opacity="0.6"/>
+  <text x="600" y="410" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">shared case-and-plate manufacturing lineage &#8212; each size adds one cluster to the one before it</text>
+
+  <!-- connecting arrows between columns -->
+  <path d="M 210 155 L 350 155" stroke-opacity="0.4" stroke-dasharray="4 5"/>
+  <path d="M 520 155 L 650 155" stroke-opacity="0.4" stroke-dasharray="4 5"/>
+  <path d="M 820 155 L 930 155" stroke-opacity="0.4" stroke-dasharray="4 5"/>
+
+  <!-- Theme dot -->
+  <circle cx="1170" cy="30" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>
