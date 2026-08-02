@@ -27,7 +27,6 @@ const BOARD_A: Board = {
   wireless: false,
   releasedAt: '2022-01-01',
   status: 'in-stock',
-  imageUrl: null,
   description: 'A test 65% board for comparison.',
   updatedAt: '2026-01-01T00:00:00.000Z',
 }
@@ -43,7 +42,6 @@ const BOARD_B: Board = {
   wireless: true,
   releasedAt: '2021-06-01',
   status: 'discontinued',
-  imageUrl: null,
   description: 'A test TKL board for comparison.',
   updatedAt: '2026-01-01T00:00:00.000Z',
 }

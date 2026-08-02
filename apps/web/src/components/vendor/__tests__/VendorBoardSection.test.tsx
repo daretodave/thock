@@ -14,7 +14,6 @@ const BASE_BOARD: Board = {
   wireless: false,
   releasedAt: '2026-05-01',
   status: 'in-stock',
-  imageUrl: null,
   description: 'A premium 65% gasket-mount board with polycarbonate weight and stainless steel switch plate.',
   updatedAt: '2026-05-01T00:00:00.000Z',
 }

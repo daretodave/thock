@@ -13,7 +13,6 @@ const BASE_KEYCAP_SET: KeycapSet = {
   designer: 'Team Ramune',
   releasedAt: '2026-02-01',
   status: 'in-stock',
-  imageUrl: null,
   description: 'A soda-blue GMK set with a cyan-and-white colorway inspired by ramune bottles.',
   updatedAt: '2026-05-01T00:00:00.000Z',
 }

@@ -24,7 +24,6 @@ const BOARD = {
   wireless: false,
   releasedAt: '2024-09-01',
   status: 'in-stock' as const,
-  imageUrl: null,
   description: '65 percent gasket-mounted aluminum board.',
   updatedAt: NOW,
 }

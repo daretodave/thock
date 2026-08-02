@@ -16,7 +16,6 @@ const STUB: Omit<Board, 'slug' | 'name'> = {
   wireless: false,
   releasedAt: null,
   status: 'in-stock',
-  imageUrl: null,
   description: 'Test stub board.',
   updatedAt: '2026-01-01T00:00:00.000Z',
 }

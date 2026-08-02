@@ -14,8 +14,7 @@ const KEYCAP_SETS: KeycapSet[] = [
     designer: 'Olivia',
     releasedAt: '2018-04-01',
     status: 'discontinued',
-    imageUrl: null,
-    description: 'Soft pink-and-cream Cherry-profile set with black accents from GMK.',
+      description: 'Soft pink-and-cream Cherry-profile set with black accents from GMK.',
     updatedAt: '2026-05-08T00:00:00.000Z',
   },
   {
@@ -28,8 +27,7 @@ const KEYCAP_SETS: KeycapSet[] = [
     designer: 'MiTo',
     releasedAt: '2019-01-01',
     status: 'in-stock',
-    imageUrl: null,
-    description: 'Tall cylindrical MT3 profile keycap set with a retro terminal aesthetic.',
+      description: 'Tall cylindrical MT3 profile keycap set with a retro terminal aesthetic.',
     updatedAt: '2026-05-08T00:00:00.000Z',
   },
 ]

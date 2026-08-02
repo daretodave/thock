@@ -13,7 +13,6 @@ const KEYCAP: KeycapSet = {
   designer: null,
   releasedAt: '2020-01-01',
   status: 'in-stock',
-  imageUrl: null,
   description:
     'Evergreen white-on-black Cherry-profile PBT doubleshot set from Domikey, praised for tight legend registration and minimal shine over extended use.',
   updatedAt: '2026-05-21T00:00:00.000Z',

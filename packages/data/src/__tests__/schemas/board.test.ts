@@ -12,7 +12,6 @@ const VALID = {
   wireless: false,
   releasedAt: '2024-09-01',
   status: 'in-stock' as const,
-  imageUrl: null,
   description:
     '65 percent gasket-mounted aluminum board from Mode Designs with hotswap PCBs and a soft, balanced typing feel.',
   updatedAt: '2026-05-08T00:00:00.000Z',

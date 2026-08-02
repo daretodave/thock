@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { DateOnlySchema, IsoDateSchema, SlugSchema, UrlSchema } from './shared'
+import { DateOnlySchema, IsoDateSchema, SlugSchema } from './shared'
 
 export const KeycapSetSchema = z.object({
   slug: SlugSchema,
@@ -11,7 +11,6 @@ export const KeycapSetSchema = z.object({
   designer: z.string().min(1).nullable(),
   releasedAt: DateOnlySchema.nullable(),
   status: z.enum(['in-stock', 'sold-out', 'group-buy', 'discontinued']),
-  imageUrl: UrlSchema.nullable(),
   description: z.string().min(20).max(800),
   updatedAt: IsoDateSchema,
 })

@@ -24,17 +24,6 @@
         "hotswap": {
           "type": "boolean"
         },
-        "imageUrl": {
-          "anyOf": [
-            {
-              "format": "uri",
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ]
-        },
         "layout": {
           "enum": [
             "tkl",
@@ -110,7 +99,6 @@
         "wireless",
         "releasedAt",
         "status",
-        "imageUrl",
         "description",
         "updatedAt"
       ],

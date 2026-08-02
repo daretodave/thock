@@ -21,17 +21,6 @@
             }
           ]
         },
-        "imageUrl": {
-          "anyOf": [
-            {
-              "format": "uri",
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ]
-        },
         "legendType": {
           "enum": [
             "doubleshot",
@@ -111,7 +100,6 @@
         "designer",
         "releasedAt",
         "status",
-        "imageUrl",
         "description",
         "updatedAt"
       ],

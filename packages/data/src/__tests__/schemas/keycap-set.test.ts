@@ -11,7 +11,6 @@ const VALID = {
   designer: 'Olivia',
   releasedAt: '2018-04-01',
   status: 'discontinued' as const,
-  imageUrl: null,
   description:
     'Soft pink-and-cream Cherry-profile set with black accents. Designed by Olivia and produced by GMK.',
   updatedAt: '2026-05-08T00:00:00.000Z',

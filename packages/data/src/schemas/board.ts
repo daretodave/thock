@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { DateOnlySchema, IsoDateSchema, SlugSchema, UrlSchema } from './shared'
+import { DateOnlySchema, IsoDateSchema, SlugSchema } from './shared'
 
 export const BoardSchema = z.object({
   slug: SlugSchema,
@@ -26,7 +26,6 @@ export const BoardSchema = z.object({
   wireless: z.boolean(),
   releasedAt: DateOnlySchema.nullable(),
   status: z.enum(['in-stock', 'group-buy', 'discontinued']),
-  imageUrl: UrlSchema.nullable(),
   description: z.string().min(20).max(800),
   updatedAt: IsoDateSchema,
 })

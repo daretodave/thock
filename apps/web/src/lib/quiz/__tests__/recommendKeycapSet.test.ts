@@ -12,7 +12,6 @@ function makeSet(overrides: Partial<KeycapSet> & { slug: string }): KeycapSet {
     designer: null,
     releasedAt: null,
     status: 'in-stock',
-    imageUrl: null,
     description: 'A test keycap set with adequate length for the schema validator.',
     updatedAt: '2026-01-01T00:00:00.000Z',
     ...overrides,
