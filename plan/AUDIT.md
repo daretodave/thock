@@ -9354,7 +9354,7 @@ passes accumulate signals.)
 > Filed 2026-08-02 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 > **Resolved (2026-08-02):** shipped "How the 60% became the default custom-keyboard layout" (`60-percent-layout-history.mdx`) — a history-of-layouts deep dive tracing full-size → TKL → the 2013 geekhack GH60 project → why 60% became the reference footprint → the 65%/75%/TKL derivative family. publishedAt gap-filled to 2026-07-29 (largest 30-day-window gap). 9 boards referenced via mentionedParts; 5 cross-links to existing articles. Language + mentionedParts gates clean. `pnpm verify` full gate green.
 
-### [ ] [cross-links] [4.5] 60-percent-layout-history ↔ drop-holy-panda-x-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, modding)
+### [x] [cross-links] [4.5] 60-percent-layout-history ↔ drop-holy-panda-x-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, modding) — addressed in cae27df4, closes #706
 - category: cross-links
 - filed: 2026-08-02 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -9364,8 +9364,9 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/60-percent-layout-history.mdx
 - article-b: apps/web/src/content/articles/drop-holy-panda-x-deep-dive.mdx
 - action: add [drop-holy-panda-x-deep-dive](/article/drop-holy-panda-x-deep-dive) to 60-percent-layout-history body, or vice versa
+> **Resolved (2026-08-02):** linked from the Drop CTRL hot-swap clause in the TKL section — "the same socket a modder would use to drop in something like [the Drop Holy Panda X]... without touching a soldering iron." `cae27df4`
 
-### [ ] [cross-links] [4.5] 60-percent-layout-history ↔ keyboard-acoustics-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, modding)
+### [x] [cross-links] [4.5] 60-percent-layout-history ↔ keyboard-acoustics-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, modding) — addressed in cae27df4, closes #706
 - category: cross-links
 - filed: 2026-08-02 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -9375,8 +9376,9 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/60-percent-layout-history.mdx
 - article-b: apps/web/src/content/articles/keyboard-acoustics-deep-dive.mdx
 - action: add [keyboard-acoustics-deep-dive](/article/keyboard-acoustics-deep-dive) to 60-percent-layout-history body, or vice versa
+> **Resolved (2026-08-02):** linked from the "why 60% won" closing sentence, which already disclaimed "not about how a 60% keyboard sounds or feels to type on" — now points to [the physics of thock](/article/keyboard-acoustics-deep-dive). `cae27df4`
 
-### [ ] [cross-links] [4.5] 60-percent-layout-history ↔ plate-materials-explained — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, modding)
+### [x] [cross-links] [4.5] 60-percent-layout-history ↔ plate-materials-explained — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, modding) — addressed in cae27df4, closes #706
 - category: cross-links
 - filed: 2026-08-02 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -9386,3 +9388,4 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/60-percent-layout-history.mdx
 - article-b: apps/web/src/content/articles/plate-materials-explained.mdx
 - action: add [plate-materials-explained](/article/plate-materials-explained) to 60-percent-layout-history body, or vice versa
+> **Resolved (2026-08-02):** linked from the tooling-cost paragraph, which already discussed the shared plate cutout — extended to name [plate materials, explained](/article/plate-materials-explained). `cae27df4`
