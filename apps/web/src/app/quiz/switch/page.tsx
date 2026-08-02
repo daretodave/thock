@@ -24,6 +24,12 @@ const WEB_APP_JSON_LD = {
     'A 4-question quiz that finds your ideal mechanical keyboard switch.',
   url: canonicalUrl('/quiz/switch'),
   applicationCategory: 'UtilityApplication',
+  operatingSystem: 'Any',
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'USD',
+  },
 }
 
 export default function QuizSwitchPage(): ReactElement {
