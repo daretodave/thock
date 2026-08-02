@@ -9340,7 +9340,7 @@ passes accumulate signals.)
 > **Resolved (2026-08-01):** added `<span className="sr-only">{switchA.name}: </span>` / `{switchB.name}: ` (and the board equivalents) inside each spec row's `<dd>`, ahead of the `<Mono>` value, in both `SwitchCompareTable.tsx` and `BoardCompareTable.tsx`. New regression test in each component's `__tests__` file asserts the sr-only prefix names the correct switch/board per `<dd>`. `pnpm verify` full gate green: typecheck, lint, 768 web unit tests (+2), 175 script tests, data:validate (75 records), build, size (108.7 KB/200 KB budget), 1107/1107 e2e.
 > Picked as the top signal this tick (cloud `/march`): no unlabeled GitHub issues (triage gate); not Monday-relevant (W31 snapshot already existed at tick start); no pending phases/data/content-gap work (all 7 mechanical surveys re-ran clean, no rows filed); march's own expand Step 3c gate not met (17 commits/~11.5h since pass 269's anchor `9328ecad`, threshold 20 commits/48h). AUDIT.md's only other Pending row remains the standing non-autonomous `[engineering] [4.0]` Lighthouse-CI-disabled item (needs `/oversight` call). CRITIQUE.md's only Pending row remains the non-actionable `[needs-user-call]` GA-beacon item. A fresh general-purpose sweep dispatched with the tail of AUDIT.md as an implicit avoid-list (passes 253-271) and steered toward recently-shipped code (today's a11y heading-semantics series, SEO canonical-link series) for regressions/incomplete follow-through — heading hierarchy, tracker direction/spark consistency, CSS orphan classes, mechanical surveys, `pnpm audit`, and dead-frontmatter cleanup all came back clean; the compare-table `dd` semantic-mapping gap was the one finding that cleared the 3.0 bar.
 
-### [HOT PURSUIT] [content-gap] [7] deep-dives pillar — 1 of ≥2 articles in last 30d
+### [x] [HOT PURSUIT] [content-gap] [7] deep-dives pillar — 1 of ≥2 articles in last 30d — addressed in 039b053e, closes #705
 - category: content-gaps
 - impact: 6 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -9352,3 +9352,37 @@ passes accumulate signals.)
 - next: /ship-content → deep-dives pillar article
 - issue: #705
 > Filed 2026-08-02 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+> **Resolved (2026-08-02):** shipped "How the 60% became the default custom-keyboard layout" (`60-percent-layout-history.mdx`) — a history-of-layouts deep dive tracing full-size → TKL → the 2013 geekhack GH60 project → why 60% became the reference footprint → the 65%/75%/TKL derivative family. publishedAt gap-filled to 2026-07-29 (largest 30-day-window gap). 9 boards referenced via mentionedParts; 5 cross-links to existing articles. Language + mentionedParts gates clean. `pnpm verify` full gate green.
+
+### [ ] [cross-links] [4.5] 60-percent-layout-history ↔ drop-holy-panda-x-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, modding)
+- category: cross-links
+- filed: 2026-08-02 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: deep-dive, modding
+- article-a: apps/web/src/content/articles/60-percent-layout-history.mdx
+- article-b: apps/web/src/content/articles/drop-holy-panda-x-deep-dive.mdx
+- action: add [drop-holy-panda-x-deep-dive](/article/drop-holy-panda-x-deep-dive) to 60-percent-layout-history body, or vice versa
+
+### [ ] [cross-links] [4.5] 60-percent-layout-history ↔ keyboard-acoustics-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, modding)
+- category: cross-links
+- filed: 2026-08-02 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: deep-dive, modding
+- article-a: apps/web/src/content/articles/60-percent-layout-history.mdx
+- article-b: apps/web/src/content/articles/keyboard-acoustics-deep-dive.mdx
+- action: add [keyboard-acoustics-deep-dive](/article/keyboard-acoustics-deep-dive) to 60-percent-layout-history body, or vice versa
+
+### [ ] [cross-links] [4.5] 60-percent-layout-history ↔ plate-materials-explained — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, modding)
+- category: cross-links
+- filed: 2026-08-02 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: deep-dive, modding
+- article-a: apps/web/src/content/articles/60-percent-layout-history.mdx
+- article-b: apps/web/src/content/articles/plate-materials-explained.mdx
+- action: add [plate-materials-explained](/article/plate-materials-explained) to 60-percent-layout-history body, or vice versa
