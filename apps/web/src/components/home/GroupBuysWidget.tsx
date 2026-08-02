@@ -113,19 +113,3 @@ export function GroupBuysWidget({
     </aside>
   )
 }
-
-/**
- * Sort + cap helper — exported for unit tests so we can assert
- * stable order without rendering the full widget.
- */
-export function sortGroupBuysForWidget(
-  groupBuys: GroupBuy[],
-  max = 4,
-): GroupBuy[] {
-  return [...groupBuys]
-    .sort((a, b) => {
-      if (a.endDate !== b.endDate) return a.endDate.localeCompare(b.endDate)
-      return a.name.localeCompare(b.name)
-    })
-    .slice(0, max)
-}
