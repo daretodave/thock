@@ -7100,7 +7100,7 @@
           "linear"
         ],
         "publishedAt": "2026-05-10T19:00:00.000Z",
-        "updatedAt": "2026-06-17T00:00:00.000Z",
+        "updatedAt": "2026-07-05T00:00:00.000Z",
         "heroImage": "/hero-art/cherry-mx2a-revision.svg",
         "heroImageAlt": "Cherry MX2A switch cross-section, side view — top housing with stem hole, cruciform-mount POM stem column drawn in cherry-red splash, 5-coil spring, bent-leaf contact, and bottom housing with pin contacts; a thin dashed callout traces from the stem-housing interface to a magnified circular inset showing the new factory grease ring with scattered lube dots.",
         "featured": false,
@@ -7234,7 +7234,7 @@
           "trends-2026"
         ],
         "publishedAt": "2026-05-10T10:30:00.000Z",
-        "updatedAt": "2026-06-09T00:00:00.000Z",
+        "updatedAt": "2026-07-05T00:00:00.000Z",
         "heroImage": "/hero-art/hmx-cloud-deep-dive.svg",
         "heroImageAlt": "Exploded-axonometric silhouette of a mechanical keyboard switch on a dark background — top housing, stem, spring, and lower housing separated by thin gap lines, with a single pale-cyan accent dot anchoring the stem.",
         "featured": false,
@@ -7327,7 +7327,7 @@
           "pom"
         ],
         "publishedAt": "2026-05-09T14:00:00.000Z",
-        "updatedAt": "2026-06-09T00:00:00.000Z",
+        "updatedAt": "2026-07-11T00:00:00.000Z",
         "heroImage": "/hero-art/plate-materials-explained.svg",
         "heroImageAlt": "Side-view of five stacked keyboard-plate cross-sections — brass, aluminium, FR4, POM, polycarbonate — drawn as parallel horizontal layers in muted tones with a single warm-terracotta splash on the FR4 band at the centre of the stack.",
         "featured": false,
@@ -8407,7 +8407,7 @@
           "polycarbonate"
         ],
         "publishedAt": "2026-04-19T10:00:00.000Z",
-        "updatedAt": "2026-06-16T00:00:00.000Z",
+        "updatedAt": "2026-07-22T00:00:00.000Z",
         "heroImage": "/hero-art/gasket-mount-reality.svg",
         "heroImageAlt": "Cross-section silhouette of a keyboard showing a floating plate held by four gasket pads, with a fine amber accent line tracing the separation between plate and case top.",
         "featured": false,
@@ -9142,5 +9142,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-08-03T21:45:06.924Z"
+  "generatedAt": "2026-08-03T22:34:08.211Z"
 }
