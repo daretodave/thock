@@ -9486,7 +9486,7 @@ passes accumulate signals.)
 > **Resolved (2026-08-02):** deleted `imageUrl` from both schemas, dropped the now-unused `UrlSchema` import, regenerated `data/schemas/board.schema.json` and `keycap-set.schema.json`, stripped the field from all 20 data records, and updated the schema/crossrefs tests plus every Board/KeycapSet-typed component test fixture carrying the field (left `GroupBuySchema.imageUrl` untouched — that field has a documented, distinct rationale). `pnpm verify` full gate green: typecheck, lint, unit tests, data:validate, build, 1110/1110 e2e.
 > Picked as the top signal this tick (cloud `/march`): no unlabeled GitHub issues (triage gate, 0 unlabeled); not Monday-relevant (W31 snapshot already existed at tick start); no pending phases/data/content-gap work (all 7 mechanical surveys re-ran clean, no rows filed); march's own expand Step 3c gate not met (5 commits/~3.3h since pass 277's anchor `fabdeaf6`, threshold 20 commits/48h). AUDIT.md's only other Pending rows remained the standing non-autonomous items (`[engineering] [4.0]` Lighthouse-CI item, `[needs-user-call] [4.2]` soft-404 item, two `[blocked-cloud-permission]` workflow-file items). CRITIQUE.md's only Pending row remains the non-actionable `[needs-user-call]` GA-beacon item. A fresh general-purpose sweep, scoped away from the extensive already-confirmed-clean angle list from prior passes (heading semantics, JSON-LD completeness, stale-tracker-claim class, quiz/tracker/compare-table logic, cross-links, content-gap/group-buy/newsletter/OG/a11y mechanical surveys, link-rot, numeric-fact checks, dead prop-drilling), found this dead-schema-field gap — a fresh instance of the recurring dead-plumbing defect class — as the one finding that cleared the 3.0 bar.
 
-### [ ] [content-gaps] [5.5] GMK CYL TA Neo — Rule 2 tracker linkage missing
+### [x] [content-gaps] [5.5] GMK CYL TA Neo — Rule 2 tracker linkage missing — addressed in 17a38a94, closes #715
 - category: content-gaps
 - filed: 2026-08-03 by tracker-linkage-survey.mjs
 - impact: 6 (non-flat trend row "GMK CYL TA Neo" unlinked for 14 days; no companion deep-dive)
@@ -9496,3 +9496,47 @@ passes accumulate signals.)
 - rule: Rule 2
 - action: ship companion article for "GMK CYL TA Neo", set articleSlug in relevant trend snapshot(s)
 - issue: #715
+
+### [ ] [cross-links] [4.5] gmk-cyl-ta-neo-production-tracking ↔ dcs-grass-valley-decline — no prose cross-link (same pillar, ≥2 shared tags: keycaps, group-buy, trends-2026)
+- category: cross-links
+- filed: 2026-08-03 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: keycaps, group-buy, trends-2026
+- article-a: apps/web/src/content/articles/gmk-cyl-ta-neo-production-tracking.mdx
+- article-b: apps/web/src/content/articles/dcs-grass-valley-decline.mdx
+- action: add [dcs-grass-valley-decline](/article/dcs-grass-valley-decline) to gmk-cyl-ta-neo-production-tracking body, or vice versa
+
+### [ ] [cross-links] [4.5] gmk-cyl-ta-neo-production-tracking ↔ dcs-olivetti-comeback — no prose cross-link (same pillar, ≥2 shared tags: keycaps, cherry-profile, trends-2026)
+- category: cross-links
+- filed: 2026-08-03 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: keycaps, cherry-profile, trends-2026
+- article-a: apps/web/src/content/articles/gmk-cyl-ta-neo-production-tracking.mdx
+- article-b: apps/web/src/content/articles/dcs-olivetti-comeback.mdx
+- action: add [dcs-olivetti-comeback](/article/dcs-olivetti-comeback) to gmk-cyl-ta-neo-production-tracking body, or vice versa
+
+### [ ] [cross-links] [4.5] gmk-cyl-ta-neo-production-tracking ↔ gmk-cyl-og-extensions-interest-check — no prose cross-link (same pillar, ≥2 shared tags: gmk, keycaps, cherry-profile, trends-2026)
+- category: cross-links
+- filed: 2026-08-03 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: gmk, keycaps, cherry-profile, trends-2026
+- article-a: apps/web/src/content/articles/gmk-cyl-ta-neo-production-tracking.mdx
+- article-b: apps/web/src/content/articles/gmk-cyl-og-extensions-interest-check.mdx
+- action: add [gmk-cyl-og-extensions-interest-check](/article/gmk-cyl-og-extensions-interest-check) to gmk-cyl-ta-neo-production-tracking body, or vice versa
+
+### [ ] [cross-links] [4.5] gmk-cyl-ta-neo-production-tracking ↔ prototypist-vendor-spotlight — no prose cross-link (same pillar, ≥2 shared tags: group-buy, trends-2026)
+- category: cross-links
+- filed: 2026-08-03 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: group-buy, trends-2026
+- article-a: apps/web/src/content/articles/gmk-cyl-ta-neo-production-tracking.mdx
+- article-b: apps/web/src/content/articles/prototypist-vendor-spotlight.mdx
+- action: add [prototypist-vendor-spotlight](/article/prototypist-vendor-spotlight) to gmk-cyl-ta-neo-production-tracking body, or vice versa
