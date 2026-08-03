@@ -92,4 +92,26 @@ describe('<MobileNav>', () => {
     expect(screen.queryByTestId('mobile-nav-menu')).toBeNull()
     expect(document.activeElement).toBe(toggle)
   })
+
+  it('wraps Tab from the last drawer link back to the toggle button', () => {
+    render(<MobileNav />)
+    const toggle = screen.getByTestId('mobile-nav-toggle')
+    fireEvent.click(toggle)
+    const toolsLink = screen.getByTestId('mobile-nav-tools-link')
+    toolsLink.focus()
+    expect(document.activeElement).toBe(toolsLink)
+    fireEvent.keyDown(document, { key: 'Tab' })
+    expect(document.activeElement).toBe(toggle)
+  })
+
+  it('wraps Shift+Tab from the toggle button back to the last drawer link', () => {
+    render(<MobileNav />)
+    const toggle = screen.getByTestId('mobile-nav-toggle')
+    fireEvent.click(toggle)
+    toggle.focus()
+    expect(document.activeElement).toBe(toggle)
+    fireEvent.keyDown(document, { key: 'Tab', shiftKey: true })
+    const toolsLink = screen.getByTestId('mobile-nav-tools-link')
+    expect(document.activeElement).toBe(toolsLink)
+  })
 })

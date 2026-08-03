@@ -24,6 +24,7 @@ export function MobileNav(): ReactElement {
   const [open, setOpen] = useState(false)
   const menuId = useId()
   const toggleRef = useRef<HTMLButtonElement>(null)
+  const navRef = useRef<HTMLElement>(null)
   const pathname = usePathname()
 
   useEffect(() => {
@@ -32,6 +33,23 @@ export function MobileNav(): ReactElement {
       if (e.key === 'Escape') {
         setOpen(false)
         toggleRef.current?.focus()
+        return
+      }
+      if (e.key === 'Tab') {
+        const focusable = [
+          toggleRef.current,
+          ...Array.from(navRef.current?.querySelectorAll('a') ?? []),
+        ].filter((el): el is HTMLButtonElement | HTMLAnchorElement => el !== null)
+        const first = focusable[0]
+        const last = focusable[focusable.length - 1]
+        if (!first || !last) return
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault()
+          last.focus()
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault()
+          first.focus()
+        }
       }
     }
     document.addEventListener('keydown', onKey)
@@ -96,6 +114,7 @@ export function MobileNav(): ReactElement {
 
       {open && (
         <nav
+          ref={navRef}
           id={menuId}
           aria-label="Primary mobile"
           data-testid="mobile-nav-menu"
