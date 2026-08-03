@@ -9495,3 +9495,4 @@ passes accumulate signals.)
 - first-seen: 2026-W30
 - rule: Rule 2
 - action: ship companion article for "GMK CYL TA Neo", set articleSlug in relevant trend snapshot(s)
+- issue: #715
