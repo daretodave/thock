@@ -77,7 +77,7 @@ function expectedTypesFor(path: string): ExpectedTypes {
   // Home is the canonical site root; emits WebSite + ItemList (no BreadcrumbList).
   if (path === '/') return ['WebSite', 'ItemList']
   if (path === '/about') return ['WebSite', 'BreadcrumbList']
-  if (path === '/sources') return ['WebSite', 'BreadcrumbList']
+  if (path === '/sources') return ['WebSite', 'BreadcrumbList', 'ItemList']
   if (path === '/newsletter') return ['WebSite', 'BreadcrumbList', 'ItemList']
   if (path === '/search') return ['BreadcrumbList']
   if (path === '/group-buys') return ['CollectionPage', 'BreadcrumbList']

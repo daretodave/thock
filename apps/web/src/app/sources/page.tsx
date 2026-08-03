@@ -1,6 +1,7 @@
 import type { ReactElement } from 'react'
 import {
   buildBreadcrumbListJsonLd,
+  buildItemListJsonLd,
   buildMetadata,
   buildWebSiteJsonLd,
   JsonLd,
@@ -55,6 +56,13 @@ export default function SourcesPage(): ReactElement {
             { name: 'Home', path: '/' },
             { name: TITLE, path: PATH },
           ]),
+          buildItemListJsonLd({
+            name: 'Articles',
+            items: rows.map((row) => ({
+              name: row.article.frontmatter.title,
+              path: `/article/${row.article.slug}`,
+            })),
+          }),
         ]}
       />
 
