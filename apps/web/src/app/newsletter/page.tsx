@@ -15,7 +15,7 @@ import { getAllNewsletters } from '@/lib/data-runtime'
 const PATH = '/newsletter'
 const TITLE = 'Newsletter'
 const LEDE =
-  'A weekly digest of the best of thock — trends, deep dives, and the group buys you should know about.'
+  'A regular digest of the best of thock — trends, deep dives, and the group buys you should know about.'
 
 export const metadata = buildMetadata({
   title: TITLE,

@@ -11,7 +11,7 @@ export default function OpenGraphImage() {
   return new ImageResponse(
     <PillarOGContent
       pillarLabel="Newsletter"
-      tagline="Weekly signal from the mechanical keyboard world, delivered."
+      tagline="Signal from the mechanical keyboard world, delivered."
     />,
     size,
   )

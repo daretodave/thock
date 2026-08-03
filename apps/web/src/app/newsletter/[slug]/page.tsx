@@ -44,7 +44,7 @@ export async function generateMetadata({
 /**
  * Digest detail page. Newsletters share the article MDX body
  * renderer (`ArticleBody`) but carry no tags/parts/related-articles
- * — the digest is a standalone weekly roundup, not a catalog entry.
+ * — the digest is a standalone roundup, not a catalog entry.
  */
 export default async function NewsletterDetailPage({
   params,
