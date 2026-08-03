@@ -2,6 +2,7 @@ import { ImageResponse } from 'next/og'
 import { siteConfig } from '@thock/seo'
 import { getPartForOg } from '@/lib/data-runtime/og-runtime'
 import { PillarOGContent } from '@/components/og/PillarOG'
+import { OG_PALETTE } from '@/components/og/palette'
 
 export const runtime = 'edge'
 export const size = { width: 1200, height: 630 }
@@ -44,8 +45,8 @@ export default async function OpenGraphImage({
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            background: '#1a1c20',
-            color: '#e8e6e1',
+            background: OG_PALETTE.bg,
+            color: OG_PALETTE.text,
             fontFamily: 'serif',
             fontSize: 64,
           }}
