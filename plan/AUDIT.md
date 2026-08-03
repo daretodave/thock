@@ -9497,7 +9497,7 @@ passes accumulate signals.)
 - action: ship companion article for "GMK CYL TA Neo", set articleSlug in relevant trend snapshot(s)
 - issue: #715
 
-### [ ] [cross-links] [4.5] gmk-cyl-ta-neo-production-tracking ↔ dcs-grass-valley-decline — no prose cross-link (same pillar, ≥2 shared tags: keycaps, group-buy, trends-2026)
+### [x] [cross-links] [4.5] gmk-cyl-ta-neo-production-tracking ↔ dcs-grass-valley-decline — addressed in 58a9392d, closes #716
 - category: cross-links
 - filed: 2026-08-03 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -9508,7 +9508,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/dcs-grass-valley-decline.mdx
 - action: add [dcs-grass-valley-decline](/article/dcs-grass-valley-decline) to gmk-cyl-ta-neo-production-tracking body, or vice versa
 
-### [ ] [cross-links] [4.5] gmk-cyl-ta-neo-production-tracking ↔ dcs-olivetti-comeback — no prose cross-link (same pillar, ≥2 shared tags: keycaps, cherry-profile, trends-2026)
+### [x] [cross-links] [4.5] gmk-cyl-ta-neo-production-tracking ↔ dcs-olivetti-comeback — addressed in 58a9392d, closes #716
 - category: cross-links
 - filed: 2026-08-03 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -9519,7 +9519,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/dcs-olivetti-comeback.mdx
 - action: add [dcs-olivetti-comeback](/article/dcs-olivetti-comeback) to gmk-cyl-ta-neo-production-tracking body, or vice versa
 
-### [ ] [cross-links] [4.5] gmk-cyl-ta-neo-production-tracking ↔ gmk-cyl-og-extensions-interest-check — no prose cross-link (same pillar, ≥2 shared tags: gmk, keycaps, cherry-profile, trends-2026)
+### [x] [cross-links] [4.5] gmk-cyl-ta-neo-production-tracking ↔ gmk-cyl-og-extensions-interest-check — addressed in 58a9392d, closes #716
 - category: cross-links
 - filed: 2026-08-03 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -9530,7 +9530,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/gmk-cyl-og-extensions-interest-check.mdx
 - action: add [gmk-cyl-og-extensions-interest-check](/article/gmk-cyl-og-extensions-interest-check) to gmk-cyl-ta-neo-production-tracking body, or vice versa
 
-### [ ] [cross-links] [4.5] gmk-cyl-ta-neo-production-tracking ↔ prototypist-vendor-spotlight — no prose cross-link (same pillar, ≥2 shared tags: group-buy, trends-2026)
+### [x] [cross-links] [4.5] gmk-cyl-ta-neo-production-tracking ↔ prototypist-vendor-spotlight — addressed in 58a9392d, closes #716
 - category: cross-links
 - filed: 2026-08-03 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
