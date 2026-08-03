@@ -563,7 +563,7 @@
           "group-buy",
           "trends-2026"
         ],
-        "publishedAt": "2026-07-31T14:00:00.000Z"
+        "publishedAt": "2026-08-03T14:00:00.000Z"
       },
       "1": {
         "slug": "60-percent-layout-history",
@@ -111431,7 +111431,7 @@
         "group-buy",
         "trends-2026"
       ],
-      "publishedAt": "2026-07-31T14:00:00.000Z"
+      "publishedAt": "2026-08-03T14:00:00.000Z"
     },
     {
       "id": "60-percent-layout-history",
@@ -113104,6 +113104,6 @@
       "href": "/trends/tracker/2026-W32"
     }
   ],
-  "generatedAt": "2026-08-03T17:07:06.436Z",
+  "generatedAt": "2026-08-03T17:46:11.777Z",
   "count": 76
 }
