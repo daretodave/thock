@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="#9c9286" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — GMK CYL TA Neo production-tracking cooldown, a descending sparkline tracing the trends-tracker score settling from a close-of-buy peak of 70 to 40 over eight weekly readings</title>
+
+  <!-- ── FOCAL WASH — dusty-rose glow behind the settling zone ─────────────────
+       Soft low-opacity ellipse seated behind the lower-right region where the
+       sparkline settles. Reads as "this is where attention is landing now" —
+       calmer, not alarmed.
+  -->
+  <ellipse cx="1000" cy="480" rx="150" ry="150" fill="#B67C7C" fill-opacity="0.08" stroke="none"/>
+
+  <!-- ── BASELINE ──────────────────────────────────────────────────────────────
+       Faint horizontal ground line — implies "week zero" without a literal
+       axis. Dashed, low opacity, consistent with the family convention. The
+       final reading is deliberately kept well above this floor so the piece
+       reads as "cooling and settling," not "crashing to zero."
+  -->
+  <line x1="100" y1="620" x2="1100" y2="620" stroke="#9c9286" stroke-opacity="0.18" stroke-dasharray="4 8"/>
+
+  <!-- ── WEEK TICKS ────────────────────────────────────────────────────────────
+       Eight faint register ticks under the baseline, one per weekly reading.
+       No numerals — the geometry carries the cadence.
+  -->
+  <g stroke="#9c9286" stroke-opacity="0.25" stroke-width="1">
+    <line x1="140"  y1="620" x2="140"  y2="630"/>
+    <line x1="271"  y1="620" x2="271"  y2="630"/>
+    <line x1="403"  y1="620" x2="403"  y2="630"/>
+    <line x1="534"  y1="620" x2="534"  y2="630"/>
+    <line x1="666"  y1="620" x2="666"  y2="630"/>
+    <line x1="797"  y1="620" x2="797"  y2="630"/>
+    <line x1="929"  y1="620" x2="929"  y2="630"/>
+    <line x1="1060" y1="620" x2="1060" y2="630"/>
+  </g>
+
+  <!-- ── UNDER-CURVE WASH ──────────────────────────────────────────────────────
+       Low-opacity dusty-rose fill beneath the descending sparkline — the
+       "region under the line" reading that makes the cooldown legible as
+       receding attention, not just a stroke.
+
+       Data grounding: thock trends-tracker weekly score readings for
+       "GMK CYL TA Neo", spark = [70, 66, 62, 58, 54, 52, 50, 40]
+       (data/trends/2026-W32.json). The most recent three readings — 62
+       (2026-W30), 50 (2026-W31), 40 (2026-W32) — mark the cooldown since
+       the group buy closed July 17, 2026, now in production tracking
+       toward a November 2026 ship estimate.
+       Mapped linearly: y = 520 - (score - 40) / 30 * 300, leaving 100px of
+       headroom above the baseline so the final reading settles rather than
+       bottoms out.
+  -->
+  <path d="M 140 220 L 271 260 L 403 300 L 534 340 L 666 380 L 797 400 L 929 420 L 1060 520 L 1060 620 L 140 620 Z"
+        fill="#B67C7C" fill-opacity="0.12" stroke="none"/>
+
+  <!-- ── "NOW" GUIDE ───────────────────────────────────────────────────────────
+       Faint vertical dashed marker at the latest reading — echoes the
+       "current snapshot" convention used on other trends hero pieces.
+  -->
+  <line x1="1060" y1="80" x2="1060" y2="650" stroke="#9c9286" stroke-opacity="0.15" stroke-dasharray="4 4"/>
+
+  <!-- ── DESCENDING SPARKLINE ─────────────────────────────────────────────────
+       The primary motif. Straight segments, round joins — a clean,
+       illustrative line rather than a plotted chart. Dusty-rose splash,
+       trending down-and-right from the close-of-buy peak toward a calmer,
+       settled current reading.
+  -->
+  <polyline
+    points="140,220 271,260 403,300 534,340 666,380 797,400 929,420 1060,520"
+    stroke="#B67C7C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- ── WEEKLY READING DOTS ───────────────────────────────────────────────────
+       Opacity and radius recede with each reading — the peak week reads as
+       the loud current signal, the latest weeks read as the quiet murmur
+       attention has settled into. Inverse of the ascending-climb convention.
+  -->
+  <circle cx="140"  cy="220" r="7"   fill="#B67C7C" fill-opacity="0.90" stroke="none"/>
+  <circle cx="271"  cy="260" r="6.5" fill="#B67C7C" fill-opacity="0.82" stroke="none"/>
+  <circle cx="403"  cy="300" r="6"   fill="#B67C7C" fill-opacity="0.75" stroke="none"/>
+  <circle cx="534"  cy="340" r="5.5" fill="#B67C7C" fill-opacity="0.65" stroke="none"/>
+  <circle cx="666"  cy="380" r="5"   fill="#B67C7C" fill-opacity="0.55" stroke="none"/>
+  <circle cx="797"  cy="400" r="4.5" fill="#B67C7C" fill-opacity="0.45" stroke="none"/>
+  <circle cx="929"  cy="420" r="4.5" fill="#B67C7C" fill-opacity="0.40" stroke="none"/>
+
+  <!-- ── FOCAL DOT — latest reading, score 40 ──────────────────────────────────
+       The visual anchor point: a muted filled dot with a soft, quiet halo
+       ring — smaller and calmer than the family's usual bold focal dot, in
+       keeping with the "settling, not crashing" editorial framing.
+  -->
+  <circle cx="1060" cy="520" r="13" stroke="#B67C7C" stroke-width="1.5" stroke-opacity="0.28" fill="none"/>
+  <circle cx="1060" cy="520" r="7" fill="#B67C7C" fill-opacity="0.85" stroke="none"/>
+
+  <!-- ── BRONZE THEME DOT — ornamental family anchor ───────────────────────────
+       Small warm-bronze filled circle at the upper-right margin.
+       Color approximates oklch(0.80 0.135 75).
+  -->
+  <circle cx="1148" cy="88" r="9" fill="#BFA67A" fill-opacity="0.88" stroke="none"/>
+
+  <!-- ── SECONDARY ACCENT CONSTELLATION ────────────────────────────────────────
+       Two tiny satellite dots flanking the theme dot — family micro-ornament,
+       one echoing bronze, one echoing the dusty-rose splash for cohesion.
+  -->
+  <circle cx="1129" cy="103" r="3.5" fill="#BFA67A" fill-opacity="0.45" stroke="none"/>
+  <circle cx="1148" cy="107" r="2.5" fill="#B67C7C" fill-opacity="0.50" stroke="none"/>
+
+</svg>

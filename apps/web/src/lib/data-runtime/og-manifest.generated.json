@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "slug": "gmk-cyl-ta-neo-production-tracking",
+      "readTime": 6,
+      "frontmatter": {
+        "title": "GMK CYL TA Neo's group buy is closed — here's what a November 2026 ship estimate actually means",
+        "lede": "GMK CYL TA Neo closed its group buy July 17, 2026 after a June 19 open, and the thock trends tracker has logged two straight weeks of cooling attention since. That's not a warning sign — it's what every closed keycap buy looks like while it waits on production.",
+        "pillar": "trends",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "60-percent-layout-history",
       "readTime": 10,
       "frontmatter": {
@@ -5585,7 +5595,7 @@
             50,
             40
           ],
-          "articleSlug": null
+          "articleSlug": "gmk-cyl-ta-neo-production-tracking"
         },
         {
           "name": "Divinikey DCS Dolch",
@@ -5777,5 +5787,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-08-03T00:41:07.139Z"
+  "generatedAt": "2026-08-03T03:18:00.839Z"
 }

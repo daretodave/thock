@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-31T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "gmk-cyl-ta-neo-production-tracking",
+  "article_pillar": "trends",
+  "section_anchor": "The arc: open, close, peak, cooldown",
+  "brief_summary": "Four-stage horizontal timeline for GMK CYL TA Neo: Opened (June 19, 2026, per KeebFinder), Closed — peak (July 17, 2026, W30 tracker score 62, bordeaux-focal), Cooling (W31 to W32, score 50 to 40, bordeaux outline), and a dashed, hedged final stage for Production (tracking toward a November 2026 ship estimate per Oblotzky and zFrontier).",
+  "target": "apps/web/public/article-viz/gmk-cyl-ta-neo-production-tracking/buy-to-production-arc.svg",
+  "splash_color": { "name": "bordeaux (dusty-rose)", "oklch": "oklch(0.62 0.13 25)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "data/trends/2026-W30.json — \"GMK CYL TA Neo\": score 62, direction up, note 'GMK CYL TA Neo group buy closed July 17, 2026 after a June 19 open per KeebFinder tracking; final-week pledges pushed interest to a close-of-buy peak.'",
+    "data/trends/2026-W31.json — \"GMK CYL TA Neo\": score 50, direction down, note 'GB closed July 17; set now in production with Nov 2026 ship estimate per Oblotzky/zFrontier, live chatter cooled.'",
+    "data/trends/2026-W32.json — \"GMK CYL TA Neo\": score 40, direction down, note 'Production tracking toward Nov 2026 ship per Oblotzky/zFrontier; community chatter cools further as attention shifts to the OG Extensions close.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gmk-cyl-ta-neo-production-tracking/buy-to-production-arc.svg"],
+  "warnings": []
+}

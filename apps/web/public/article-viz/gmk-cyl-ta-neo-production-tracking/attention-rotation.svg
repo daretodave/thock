@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Two line charts sharing the same three-week axis, W30 through W32. GMK CYL TA Neo starts ahead at 62 and declines to 50 then 40. GMK CYL OG Extensions starts behind at 58 and climbs to 62 then 70, crossing TA Neo's line between W30 and W31 and pulling further ahead by W32.</title>
+
+  <!-- Title -->
+  <text x="600" y="42" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Same three weeks, opposite directions</text>
+
+  <!-- Baseline -->
+  <line x1="150" y1="330" x2="1080" y2="330" stroke-opacity="0.5"/>
+  <text x="138" y="334" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.45">0</text>
+
+  <!-- Gridlines -->
+  <line x1="150" y1="270" x2="1080" y2="270" stroke-opacity="0.1"/>
+  <text x="138" y="274" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.4">20</text>
+  <line x1="150" y1="210" x2="1080" y2="210" stroke-opacity="0.1"/>
+  <text x="138" y="214" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.4">40</text>
+  <line x1="150" y1="150" x2="1080" y2="150" stroke-opacity="0.1"/>
+  <text x="138" y="154" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.4">60</text>
+  <line x1="150" y1="90" x2="1080" y2="90" stroke-opacity="0.1"/>
+  <text x="138" y="94" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.4">80</text>
+
+  <!-- Crossover marker -->
+  <line x1="300" y1="90" x2="300" y2="330" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.15" stroke-dasharray="4 6"/>
+  <circle cx="300" cy="153" r="5" fill="oklch(0.78 0.005 90)" fill-opacity="0.4" stroke="none"/>
+  <text x="300" y="365" font-family="Newsreader, serif" font-size="12" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">lines cross here</text>
+
+  <!-- OG EXTENSIONS: 58 -> 62 -> 70, climbing, muted grey -->
+  <g>
+    <polyline points="200,156 600,144 1000,120" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55" stroke-width="2.5"/>
+    <circle cx="200" cy="156" r="5" fill="oklch(0.78 0.005 90)" fill-opacity="0.55" stroke="none"/>
+    <circle cx="600" cy="144" r="5" fill="oklch(0.78 0.005 90)" fill-opacity="0.6" stroke="none"/>
+    <circle cx="1000" cy="120" r="7" fill="oklch(0.78 0.005 90)" fill-opacity="0.75" stroke="none"/>
+    <text x="1018" y="116" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">OG Extensions  70</text>
+  </g>
+
+  <!-- TA NEO: 62 -> 50 -> 40, declining, bordeaux -->
+  <g>
+    <polyline points="200,144 600,180 1000,210" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.95" stroke-width="3"/>
+    <circle cx="200" cy="144" r="6" fill="oklch(0.62 0.13 25)" stroke="none"/>
+    <circle cx="600" cy="180" r="6" fill="oklch(0.62 0.13 25)" stroke="none"/>
+    <circle cx="1000" cy="210" r="9" fill="oklch(0.62 0.13 25)" stroke="none"/>
+    <text x="1018" y="214" font-family="IBM Plex Sans, sans-serif" font-size="14" font-weight="600" fill="oklch(0.62 0.13 25)" stroke="none">TA Neo  40</text>
+  </g>
+
+  <!-- X-axis week labels -->
+  <text x="200" y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">W30</text>
+  <text x="600" y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">W31</text>
+  <text x="1000" y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.85">W32</text>
+
+  <!-- Section caption -->
+  <text x="600" y="435" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">attention rotates to whichever buy is still open for orders</text>
+
+  <!-- Bronze theme dot -->
+  <circle cx="1170" cy="30" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

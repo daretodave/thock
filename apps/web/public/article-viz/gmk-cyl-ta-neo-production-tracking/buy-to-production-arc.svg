@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Four-stage horizontal timeline: opened June 19 2026, closed July 17 2026 at a peak tracker score of 62, two cooling weeks at scores of 50 and 40, and a dashed final stage for production tracking toward a November 2026 ship estimate</title>
+
+  <!-- Title -->
+  <text x="600" y="42" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">GMK CYL TA Neo — from open order book to production wait</text>
+
+  <!-- Connecting arrows (drawn first, under boxes) -->
+  <g stroke="oklch(0.78 0.005 90)" stroke-opacity="0.35" stroke-width="2">
+    <line x1="288" y1="205" x2="316" y2="205"/>
+    <line x1="578" y1="205" x2="606" y2="205"/>
+    <line x1="868" y1="205" x2="896" y2="205"/>
+  </g>
+  <g fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none">
+    <path d="M 316 205 L 304 198 L 304 212 Z"/>
+    <path d="M 606 205 L 594 198 L 594 212 Z"/>
+    <path d="M 896 205 L 884 198 L 884 212 Z"/>
+  </g>
+
+  <!-- Box 1: Opened — neutral, past -->
+  <rect x="20" y="130" width="268" height="150" rx="6" fill="oklch(0.78 0.005 90)" fill-opacity="0.05" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.4" stroke-dasharray="6 5"/>
+  <text x="154" y="180" font-family="IBM Plex Sans, sans-serif" font-size="15" font-weight="600" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Opened</text>
+  <text x="154" y="205" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.8">June 19, 2026</text>
+  <text x="154" y="233" font-family="Newsreader, serif" font-size="11" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">per KeebFinder tracking</text>
+
+  <!-- Box 2: Closed — peak — bordeaux, focal -->
+  <rect x="310" y="130" width="268" height="150" rx="6" fill="oklch(0.62 0.13 25)" fill-opacity="0.18" stroke="oklch(0.62 0.13 25)" stroke-width="2"/>
+  <text x="444" y="178" font-family="IBM Plex Sans, sans-serif" font-size="15" font-weight="600" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle">Closed — peak</text>
+  <text x="444" y="203" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.9">July 17, 2026</text>
+  <text x="444" y="228" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.95" font-weight="600">W30 score: 62</text>
+  <text x="444" y="252" font-family="Newsreader, serif" font-size="11" font-style="italic" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.7">final-week pledges</text>
+
+  <!-- Box 3: Cooling — bordeaux outline -->
+  <rect x="600" y="130" width="268" height="150" rx="6" fill="oklch(0.62 0.13 25)" fill-opacity="0.06" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.55" stroke-width="2"/>
+  <text x="734" y="178" font-family="IBM Plex Sans, sans-serif" font-size="15" font-weight="600" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.9">Cooling</text>
+  <text x="734" y="203" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.85">W31 → W32</text>
+  <text x="734" y="228" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.9" font-weight="600">score: 50 → 40</text>
+  <text x="734" y="252" font-family="Newsreader, serif" font-size="11" font-style="italic" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.65">chatter recedes, orders locked</text>
+
+  <!-- Box 4: Production — hedged/unconfirmed -->
+  <rect x="890" y="130" width="290" height="150" rx="6" fill="oklch(0.78 0.005 90)" fill-opacity="0.04" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.28" stroke-dasharray="3 5"/>
+  <text x="1035" y="178" font-family="IBM Plex Sans, sans-serif" font-size="15" font-weight="600" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">Production</text>
+  <text x="1035" y="203" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">tracking toward</text>
+  <text x="1035" y="224" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">Nov 2026 ship est.</text>
+  <text x="1035" y="250" font-family="Newsreader, serif" font-size="11" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">per Oblotzky / zFrontier</text>
+
+  <!-- Caption -->
+  <text x="600" y="345" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">two stages are dates already on the calendar; the last is an early-production estimate</text>
+
+  <!-- Bronze theme dot -->
+  <circle cx="1170" cy="30" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

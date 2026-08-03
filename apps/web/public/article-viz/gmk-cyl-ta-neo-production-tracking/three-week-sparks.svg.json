@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-31T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "gmk-cyl-ta-neo-production-tracking",
+  "article_pillar": "trends",
+  "section_anchor": "The arc: open, close, peak, cooldown",
+  "brief_summary": "Three small line-chart panels, one per weekly tracker snapshot for GMK CYL TA Neo. W30 panel plots the eight-week pre-close spark trail rising to a close-of-buy peak. W31 panel plots the spark trail rising through most of the week then dropping sharply at the final read, the first cooldown. W32 panel, bordeaux-emphasized as the current/focal read, plots a spark trail declining throughout, the continued cooldown.",
+  "target": "apps/web/public/article-viz/gmk-cyl-ta-neo-production-tracking/three-week-sparks.svg",
+  "splash_color": { "name": "bordeaux (dusty-rose)", "oklch": "oklch(0.62 0.13 25)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "data/trends/2026-W30.json — \"GMK CYL TA Neo\": score 62, direction up, spark [10, 18, 26, 34, 42, 50, 57, 62]",
+    "data/trends/2026-W31.json — \"GMK CYL TA Neo\": score 50, direction down, spark [34, 40, 46, 52, 58, 60, 62, 50]",
+    "data/trends/2026-W32.json — \"GMK CYL TA Neo\": score 40, direction down, spark [70, 66, 62, 58, 54, 52, 50, 40]"
+  ],
+  "outputs": ["apps/web/public/article-viz/gmk-cyl-ta-neo-production-tracking/three-week-sparks.svg"],
+  "warnings": []
+}

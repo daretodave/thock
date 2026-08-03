@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Three small line-chart panels for GMK CYL TA Neo's weekly tracker snapshots. W30 panel: spark trail 10, 18, 26, 34, 42, 50, 57, 62, rising steadily into a close-of-buy peak. W31 panel: spark trail 34, 40, 46, 52, 58, 60, 62, 50, rising then dropping sharply at the end, the first cooldown. W32 panel: spark trail 70, 66, 62, 58, 54, 52, 50, 40, declining throughout, continued cooldown.</title>
+
+  <!-- Title -->
+  <text x="600" y="42" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Three consecutive weekly tracker snapshots</text>
+
+  <!-- Panel divider guides -->
+  <line x1="400" y1="60" x2="400" y2="260" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.15" stroke-dasharray="4 6"/>
+  <line x1="800" y1="60" x2="800" y2="260" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.15" stroke-dasharray="4 6"/>
+
+  <!-- Panel 1 — W30, muted grey, rising into peak -->
+  <g>
+    <line x1="40" y1="250" x2="360" y2="250" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.3" stroke-width="1.5"/>
+    <polyline points="40,226.25 85.71,207.25 131.43,188.25 177.14,169.25 222.86,150.25 268.57,131.25 314.29,114.625 360,102.75" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.6" stroke-width="2.5"/>
+    <circle cx="40" cy="226.25" r="3.5" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none"/>
+    <circle cx="85.71" cy="207.25" r="3.5" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none"/>
+    <circle cx="131.43" cy="188.25" r="3.5" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none"/>
+    <circle cx="177.14" cy="169.25" r="3.5" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none"/>
+    <circle cx="222.86" cy="150.25" r="3.5" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none"/>
+    <circle cx="268.57" cy="131.25" r="3.5" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none"/>
+    <circle cx="314.29" cy="114.625" r="3.5" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none"/>
+    <circle cx="360" cy="102.75" r="8" fill="oklch(0.62 0.13 25)" stroke="none"/>
+    <text x="360" y="90" font-family="JetBrains Mono, monospace" font-size="16" font-weight="600" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle">62</text>
+    <text x="200" y="285" font-family="IBM Plex Sans, sans-serif" font-size="14" font-weight="600" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">W30</text>
+    <text x="200" y="305" font-family="Newsreader, serif" font-size="12" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">close-of-buy peak</text>
+  </g>
+
+  <!-- Panel 2 — W31, muted grey, rising then dropping -->
+  <g>
+    <line x1="440" y1="250" x2="760" y2="250" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.3" stroke-width="1.5"/>
+    <polyline points="440,169.25 485.71,155 531.43,140.75 577.14,126.5 622.86,112.25 668.57,107.5 714.29,102.75 760,131.25" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.6" stroke-width="2.5"/>
+    <circle cx="440" cy="169.25" r="3.5" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none"/>
+    <circle cx="485.71" cy="155" r="3.5" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none"/>
+    <circle cx="531.43" cy="140.75" r="3.5" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none"/>
+    <circle cx="577.14" cy="126.5" r="3.5" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none"/>
+    <circle cx="622.86" cy="112.25" r="3.5" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none"/>
+    <circle cx="668.57" cy="107.5" r="3.5" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none"/>
+    <circle cx="714.29" cy="102.75" r="3.5" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none"/>
+    <circle cx="760" cy="131.25" r="8" fill="oklch(0.62 0.13 25)" stroke="none"/>
+    <text x="760" y="118" font-family="JetBrains Mono, monospace" font-size="16" font-weight="600" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle">50</text>
+    <text x="600" y="285" font-family="IBM Plex Sans, sans-serif" font-size="14" font-weight="600" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">W31</text>
+    <text x="600" y="305" font-family="Newsreader, serif" font-size="12" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">first cooldown</text>
+  </g>
+
+  <!-- Panel 3 — W32, bordeaux-emphasized, declining throughout, current/focal -->
+  <g>
+    <line x1="840" y1="250" x2="1160" y2="250" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.3" stroke-width="1.5"/>
+    <polyline points="840,83.75 885.71,93.25 931.43,102.75 977.14,112.25 1022.86,121.75 1068.57,126.5 1114.29,131.25 1160,155" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.95" stroke-width="3"/>
+    <circle cx="840" cy="83.75" r="4" fill="oklch(0.62 0.13 25)" fill-opacity="0.55" stroke="none"/>
+    <circle cx="885.71" cy="93.25" r="4" fill="oklch(0.62 0.13 25)" fill-opacity="0.6" stroke="none"/>
+    <circle cx="931.43" cy="102.75" r="4" fill="oklch(0.62 0.13 25)" fill-opacity="0.65" stroke="none"/>
+    <circle cx="977.14" cy="112.25" r="4" fill="oklch(0.62 0.13 25)" fill-opacity="0.7" stroke="none"/>
+    <circle cx="1022.86" cy="121.75" r="4" fill="oklch(0.62 0.13 25)" fill-opacity="0.75" stroke="none"/>
+    <circle cx="1068.57" cy="126.5" r="4" fill="oklch(0.62 0.13 25)" fill-opacity="0.8" stroke="none"/>
+    <circle cx="1114.29" cy="131.25" r="4" fill="oklch(0.62 0.13 25)" fill-opacity="0.85" stroke="none"/>
+    <circle cx="1160" cy="155" r="9" fill="oklch(0.62 0.13 25)" stroke="none"/>
+    <text x="1160" y="180" font-family="JetBrains Mono, monospace" font-size="17" font-weight="700" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle">40</text>
+    <text x="1000" y="285" font-family="IBM Plex Sans, sans-serif" font-size="14" font-weight="600" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle">W32</text>
+    <text x="1000" y="305" font-family="Newsreader, serif" font-size="12" font-style="italic" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.75">continued cooldown</text>
+  </g>
+
+  <!-- Caption -->
+  <text x="600" y="440" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">the climb into close, then two weeks of the ordinary post-buy cooldown</text>
+
+  <!-- Bronze theme dot -->
+  <circle cx="1170" cy="20" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

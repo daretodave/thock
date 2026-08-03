@@ -1,0 +1,46 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-03T00:00:00.000Z",
+  "commit": "b12648e37f41fceab1691a6e1b51440c6704cd55",
+  "kind": "hero-art",
+  "source": null,
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": [],
+  "outputs": [
+    "apps/web/public/hero-art/gmk-cyl-ta-neo-production-tracking.svg"
+  ],
+  "warnings": [
+    "Target filename fixed at gmk-cyl-ta-neo-production-tracking per brief; verify the sibling content-curator agent's chosen article slug matches this exact string, or rename both this SVG and its provenance JSON to match."
+  ],
+  "article_slug": "gmk-cyl-ta-neo-production-tracking",
+  "article_pillar": "trends",
+  "subject": "Descending sparkline silhouette tracing the thock trends-tracker score cooldown for GMK CYL TA Neo, from a close-of-buy peak of 70 down to a settled 40 over eight weekly readings. Under-curve wash + weekly reading dots that recede in opacity/radius toward the current (focal) point — the inverse of the ascending-climb convention used for rising-interest stories (e.g. gmk-cyl-og-extensions-interest-check.svg). The final reading is kept 100px above the canvas baseline so the piece reads as settling/cooling rather than crashing.",
+  "splash_color": {
+    "name": "dusty rose",
+    "oklch": "approx oklch(0.64 0.085 20)",
+    "hex": "#B67C7C"
+  },
+  "accent_color": {
+    "name": "warm-bronze theme dot",
+    "oklch": "oklch(0.80 0.135 75)",
+    "hex": "#BFA67A"
+  },
+  "canvas": "1200x750",
+  "stroke_weight": "2px (sparkline itself rendered at 3px for legibility as the focal motif)",
+  "background": "transparent",
+  "data_sources": [
+    "data/trends/2026-W32.json — \"GMK CYL TA Neo\": spark [70, 66, 62, 58, 54, 52, 50, 40], score 40, note: \"Production tracking toward Nov 2026 ship per Oblotzky/zFrontier; community chatter cools further as attention shifts to the OG Extensions close.\"",
+    "data/trends/2026-W31.json — \"GMK CYL TA Neo\": score 50, note: \"GB closed July 17; set now in production with Nov 2026 ship estimate per Oblotzky/zFrontier, live chatter cooled.\"",
+    "data/trends/2026-W30.json — \"GMK CYL TA Neo\": score 62, note: \"GMK CYL TA Neo group buy closed July 17, 2026 after a June 19 open per KeebFinder tracking; final-week pledges pushed interest to a close-of-buy peak.\""
+  ],
+  "design_notes": {
+    "motif": "abstract descending sparkline, not a literal chart-with-axes — no numeral labels, no plotted axis lines beyond one faint dashed baseline",
+    "point_mapping": "y = 520 - (score - 40) / 30 * 300, x evenly spaced 140..1060 across 8 weekly readings; 100px of headroom left above the 620 baseline so the final point settles rather than touches the floor",
+    "focal_point": "final reading (score 40) at (1060, 520) — deliberately smaller/muted dot + soft halo, calmer than the family's usual bold focal-dot treatment, signaling cooldown rather than alarm",
+    "opacity_direction": "recedes across the series (peak week boldest, latest week quietest) — inverse of the ascending-climb convention, reinforcing the cooling narrative",
+    "wash_technique": "low-opacity dusty-rose ellipse behind the settling zone + low-opacity fill under the polyline, same family technique as gmk-cyl-og-extensions-interest-check.svg's focal ellipse wash",
+    "theme_dot_position": "cx=1148 cy=88 r=9, with two satellite micro-dots (bronze + dusty rose) for family cohesion",
+    "hue_choice": "dusty rose (hue ~20) chosen over terracotta (hue ~35, used by the sibling ascending-interest piece) to differentiate the two GMK CYL trends pieces visually and to read as 'cooling' rather than 'alarming' per the brief"
+  }
+}
