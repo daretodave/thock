@@ -9485,3 +9485,13 @@ passes accumulate signals.)
 - issue: #714
 > **Resolved (2026-08-02):** deleted `imageUrl` from both schemas, dropped the now-unused `UrlSchema` import, regenerated `data/schemas/board.schema.json` and `keycap-set.schema.json`, stripped the field from all 20 data records, and updated the schema/crossrefs tests plus every Board/KeycapSet-typed component test fixture carrying the field (left `GroupBuySchema.imageUrl` untouched — that field has a documented, distinct rationale). `pnpm verify` full gate green: typecheck, lint, unit tests, data:validate, build, 1110/1110 e2e.
 > Picked as the top signal this tick (cloud `/march`): no unlabeled GitHub issues (triage gate, 0 unlabeled); not Monday-relevant (W31 snapshot already existed at tick start); no pending phases/data/content-gap work (all 7 mechanical surveys re-ran clean, no rows filed); march's own expand Step 3c gate not met (5 commits/~3.3h since pass 277's anchor `fabdeaf6`, threshold 20 commits/48h). AUDIT.md's only other Pending rows remained the standing non-autonomous items (`[engineering] [4.0]` Lighthouse-CI item, `[needs-user-call] [4.2]` soft-404 item, two `[blocked-cloud-permission]` workflow-file items). CRITIQUE.md's only Pending row remains the non-actionable `[needs-user-call]` GA-beacon item. A fresh general-purpose sweep, scoped away from the extensive already-confirmed-clean angle list from prior passes (heading semantics, JSON-LD completeness, stale-tracker-claim class, quiz/tracker/compare-table logic, cross-links, content-gap/group-buy/newsletter/OG/a11y mechanical surveys, link-rot, numeric-fact checks, dead prop-drilling), found this dead-schema-field gap — a fresh instance of the recurring dead-plumbing defect class — as the one finding that cleared the 3.0 bar.
+
+### [ ] [content-gaps] [5.5] GMK CYL TA Neo — Rule 2 tracker linkage missing
+- category: content-gaps
+- filed: 2026-08-03 by tracker-linkage-survey.mjs
+- impact: 6 (non-flat trend row "GMK CYL TA Neo" unlinked for 14 days; no companion deep-dive)
+- ease: 9 (one article fills it; topic already editorially curated in tracker)
+- score: 5.5 (impact × ease / 10, rounded)
+- first-seen: 2026-W30
+- rule: Rule 2
+- action: ship companion article for "GMK CYL TA Neo", set articleSlug in relevant trend snapshot(s)
