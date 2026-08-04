@@ -339,6 +339,23 @@ This files `tests` AUDIT rows (score 3.2) for any static canonical route
 suite. Prevents the "route ships without a11y coverage" class that required
 4 reactive commits across phases 43–49. Deduplicates against existing AUDIT
 rows. If it exits non-zero, log and continue — the check is best-effort.
+
+Then run the article mentionedParts corpus scan (pass-284 candidate, shipped
+via iterate):
+
+```bash
+node scripts/article-parts-check.mjs --write
+```
+
+This files `mentionedParts` AUDIT rows (score 3.6) for any article whose body
+mentions a catalog entity (switch, keycap-set, board) not declared in its
+`mentionedParts` frontmatter. Previously only ran at ship-time on the specific
+new/touched file in `skills/ship-content.md` Step 7b and the iterate cross-link
+drain — nothing scanned the full corpus periodically, so a manual edit or any
+path outside those two skill steps could introduce a gap with no mechanism to
+catch it. This is the same recurring defect class responsible for 17+ reactive
+AUDIT fixes historically. Deduplicates against existing AUDIT rows. If it
+exits non-zero, log and continue — the check is best-effort.
 Then fall through to Step 3c (expand).
 
 #### 3c. Expand due (rate-limited, posture-gated)?

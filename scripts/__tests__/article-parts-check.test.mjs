@@ -16,6 +16,7 @@ const {
   parseMentionedParts,
   checkFile,
   escapeRegex,
+  alreadyFiled,
 } = __test
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
@@ -213,6 +214,36 @@ mentionedParts:
     } finally {
       cleanup(filePath)
     }
+  })
+})
+
+// ── alreadyFiled ──────────────────────────────────────────────────────────────
+
+describe('alreadyFiled — deduplication', () => {
+  test('returns true when pending row exists for slug', () => {
+    const audit = `### [ ] [mentionedParts] [3.6] test-article — 1 catalog entity mentioned in prose but absent from mentionedParts
+- category: mentionedParts
+- filed: 2026-06-21 by article-parts-check.mjs — test-article
+`
+    assert.equal(alreadyFiled(audit, 'test-article'), true)
+  })
+
+  test('returns false when no row exists for slug', () => {
+    const audit = `### [ ] [mentionedParts] [3.6] other-article — 1 catalog entity mentioned in prose but absent from mentionedParts
+- filed: 2026-06-21 by article-parts-check.mjs — other-article
+`
+    assert.equal(alreadyFiled(audit, 'test-article'), false)
+  })
+
+  test('returns false when row is already completed ([x])', () => {
+    const audit = `### [x] [mentionedParts] [3.6] test-article — 1 catalog entity mentioned in prose but absent from mentionedParts
+- filed: 2026-06-21 by article-parts-check.mjs — test-article
+`
+    assert.equal(alreadyFiled(audit, 'test-article'), false)
+  })
+
+  test('returns false on empty AUDIT.md content', () => {
+    assert.equal(alreadyFiled('', 'test-article'), false)
   })
 })
 

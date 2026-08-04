@@ -23,7 +23,7 @@
 //   0 → clean (gate mode) or scan complete (--write / --json mode)
 //   1 → violations found (gate mode) or error (any mode)
 
-import { readFileSync, readdirSync, appendFileSync } from 'node:fs'
+import { readFileSync, readdirSync, appendFileSync, existsSync } from 'node:fs'
 import { join, dirname, basename } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -185,6 +185,25 @@ function checkFile(filePath, catalog) {
 
 // ── AUDIT.md row formatting ───────────────────────────────────────────────────
 
+// Mirrors og-coverage-check.mjs / a11y-spec-coverage-check.mjs: only match
+// rows still pending ([ ]), not ones already addressed ([x]), so a repeat
+// --write scan (e.g. from skills/march.md's recurring survey chain) doesn't
+// re-file a duplicate row for a violation that's already queued.
+function alreadyFiled(auditContent, slug) {
+  const marker = `article-parts-check.mjs — ${slug}`
+  const lines = auditContent.split('\n')
+  for (let i = 0; i < lines.length; i++) {
+    if (lines[i].includes(marker)) {
+      for (let j = i; j >= 0; j--) {
+        if (lines[j].startsWith('### ')) {
+          return lines[j].startsWith('### [ ]')
+        }
+      }
+    }
+  }
+  return false
+}
+
 function formatAuditRow(slug, violations, today) {
   const todayStr = today.toISOString().slice(0, 10)
   const count = violations.length
@@ -199,7 +218,7 @@ function formatAuditRow(slug, violations, today) {
 
   return `\n### [ ] [mentionedParts] [3.6] ${slug} — ${count} catalog ${noun} mentioned in prose but absent from mentionedParts
 - category: mentionedParts
-- filed: ${todayStr} by article-parts-check.mjs corpus scan
+- filed: ${todayStr} by article-parts-check.mjs — ${slug}
 - impact: 4 (missing mentionedParts entries break the /part/[kind]/[slug] "mentioned in" rail)
 - ease: 9 (frontmatter edit — no code or schema change needed)
 - score: 3.6 (impact × ease / 10)
@@ -218,6 +237,7 @@ export const __test = {
   parseMentionedParts,
   checkFile,
   escapeRegex,
+  alreadyFiled,
 }
 
 // ── CLI entry (only runs when this file is invoked directly) ──────────────────
@@ -293,18 +313,39 @@ if (doWrite) {
     process.exit(0)
   }
 
+  let auditContent = ''
+  try {
+    if (existsSync(AUDIT_MD)) {
+      auditContent = readFileSync(AUDIT_MD, 'utf8')
+    }
+  } catch (err) {
+    console.error(`article-parts-check: failed to read plan/AUDIT.md — ${err.message}`)
+    process.exit(1)
+  }
+
   const today = new Date()
   const rows = []
+  let filed = 0
   for (const [slug, violations] of bySlug) {
+    if (alreadyFiled(auditContent, slug)) {
+      console.log(`article-parts-check: ${slug}.mdx already pending in AUDIT.md — skipped`)
+      continue
+    }
     rows.push(formatAuditRow(slug, violations, today))
     console.log(
       `article-parts-check: ${violations.length} gap(s) in ${slug}.mdx — filing AUDIT row`,
     )
+    filed++
+  }
+
+  if (rows.length === 0) {
+    console.log('article-parts-check: no new AUDIT rows — all violations already pending.')
+    process.exit(0)
   }
 
   try {
     appendFileSync(AUDIT_MD, rows.join(''))
-    console.log(`article-parts-check: filed ${bySlug.size} AUDIT row(s) → plan/AUDIT.md`)
+    console.log(`article-parts-check: filed ${filed} AUDIT row(s) → plan/AUDIT.md`)
   } catch (err) {
     console.error(`article-parts-check: failed to write plan/AUDIT.md — ${err.message}`)
     process.exit(1)
