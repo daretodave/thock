@@ -349,7 +349,17 @@ For each category, default delegation:
   ```
   Fix all N pairs in a single commit — for each pair (X, sibling),
   add a markdown link in whichever article body has the cleaner
-  insertion point (prefer X's body when both work equally). Commit
+  insertion point (prefer X's body when both work equally). Before
+  committing, run the mentionedParts gate (Phase 38) on every
+  article body touched by the drain — an inserted cross-link
+  sentence routinely names the linked article's subject entity,
+  which is exactly what the gate exists to catch:
+  ```bash
+  node scripts/article-parts-check.mjs <each touched .mdx path>
+  ```
+  Exit 1 → add the flagged entities to that article's
+  `mentionedParts` frontmatter before proceeding (same reconciliation
+  `skills/ship-content.md` Step 7b does for new articles). Commit
   subject: `content: <X> cross-links — N pairs drained`. Tick all
   addressed rows in a single `audit:` follow-up commit (not one per
   pair). This drains per-article rather than per-pair, collapsing
