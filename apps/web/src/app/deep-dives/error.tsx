@@ -12,7 +12,7 @@ export default function DeepDivesError({
 }) {
   return (
     <main id="main" className="flex-1">
-    <Container as="section" className="py-24">
+    <Container as="section" role="alert" className="py-24">
       <Stack gap={4}>
         <span className="font-mono uppercase tracking-[0.12em] text-micro text-down">
           error · deep dives
