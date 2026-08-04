@@ -151,3 +151,25 @@ test.describe('/sources — phase 16', () => {
     expect(flat).toContain('"@type":"BreadcrumbList"')
   })
 })
+
+test.describe('case-normalization redirect — /article + /tag', () => {
+  test('/Article/<slug> 308-redirects to the lowercase canonical path', async ({
+    page,
+  }) => {
+    const response = await page.goto(
+      '/Article/60-percent-layout-history',
+    )
+    expect(response?.status()).toBe(200)
+    expect(new URL(page.url()).pathname).toBe(
+      '/article/60-percent-layout-history',
+    )
+  })
+
+  test('/TAG/<slug> 308-redirects to the lowercase canonical path', async ({
+    page,
+  }) => {
+    const response = await page.goto('/TAG/abs')
+    expect(response?.status()).toBe(200)
+    expect(new URL(page.url()).pathname).toBe('/tag/abs')
+  })
+})
