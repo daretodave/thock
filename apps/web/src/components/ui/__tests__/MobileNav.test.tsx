@@ -104,14 +104,14 @@ describe('<MobileNav>', () => {
     expect(document.activeElement).toBe(toggle)
   })
 
-  it('wraps Shift+Tab from the toggle button back to the last drawer link', () => {
+  it('leaves Shift+Tab from the toggle button unhandled so it reaches the preceding header control', () => {
     render(<MobileNav />)
     const toggle = screen.getByTestId('mobile-nav-toggle')
     fireEvent.click(toggle)
     toggle.focus()
     expect(document.activeElement).toBe(toggle)
-    fireEvent.keyDown(document, { key: 'Tab', shiftKey: true })
-    const toolsLink = screen.getByTestId('mobile-nav-tools-link')
-    expect(document.activeElement).toBe(toolsLink)
+    const event = new KeyboardEvent('keydown', { key: 'Tab', shiftKey: true, bubbles: true, cancelable: true })
+    document.dispatchEvent(event)
+    expect(event.defaultPrevented).toBe(false)
   })
 })

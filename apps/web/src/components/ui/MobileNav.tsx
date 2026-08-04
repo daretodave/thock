@@ -35,7 +35,7 @@ export function MobileNav(): ReactElement {
         toggleRef.current?.focus()
         return
       }
-      if (e.key === 'Tab') {
+      if (e.key === 'Tab' && !e.shiftKey) {
         const focusable = [
           toggleRef.current,
           ...Array.from(navRef.current?.querySelectorAll('a') ?? []),
@@ -43,10 +43,7 @@ export function MobileNav(): ReactElement {
         const first = focusable[0]
         const last = focusable[focusable.length - 1]
         if (!first || !last) return
-        if (e.shiftKey && document.activeElement === first) {
-          e.preventDefault()
-          last.focus()
-        } else if (!e.shiftKey && document.activeElement === last) {
+        if (document.activeElement === last) {
           e.preventDefault()
           first.focus()
         }
