@@ -12,7 +12,7 @@
     },
     {
       "slug": "60-percent-layout-history",
-      "readTime": 10,
+      "readTime": 11,
       "frontmatter": {
         "title": "How the 60% became the default custom-keyboard layout",
         "lede": "Every custom-keyboard buyer's guide since the mid-2010s opens with the same four-term vocabulary — 60%, 65%, 75%, TKL — as though it always existed. It didn't. One open-source PCB out of a geekhack thread is most of the reason that taxonomy exists at all.",
@@ -5787,5 +5787,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-08-04T12:53:22.863Z"
+  "generatedAt": "2026-08-04T13:50:12.413Z"
 }
