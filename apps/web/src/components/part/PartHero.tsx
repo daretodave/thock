@@ -65,6 +65,17 @@ export function PartHero({ part }: PartHeroProps): ReactElement {
             · {STATUS_LABEL[status] ?? status}
           </span>
         </div>
+        {part.vendorUrl ? (
+          <a
+            href={part.vendorUrl}
+            data-testid="part-hero-vendor-link"
+            rel="sponsored noopener"
+            target="_blank"
+            className="w-fit font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+          >
+            View at vendor →
+          </a>
+        ) : null}
       </Stack>
     </Container>
   )

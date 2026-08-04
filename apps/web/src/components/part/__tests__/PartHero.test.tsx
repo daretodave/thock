@@ -26,6 +26,7 @@ const FAKE_SWITCH = {
     vendorSlug: 'novelkeys',
     status: 'in-production',
   },
+  vendorUrl: 'https://novelkeys.com',
 } as unknown as ResolvedPart
 
 const FAKE_BOARD = {
@@ -38,6 +39,7 @@ const FAKE_BOARD = {
     vendorSlug: 'unknown-vendor',
     status: 'discontinued',
   },
+  vendorUrl: null,
 } as unknown as ResolvedPart
 
 describe('<PartHero>', () => {
@@ -89,5 +91,18 @@ describe('<PartHero>', () => {
     expect(screen.getByTestId('part-hero-vendor').className).toContain(
       'focus-visible:ring-2',
     )
+  })
+
+  it('renders an outbound "view at vendor" link when vendorUrl is set', () => {
+    render(<PartHero part={FAKE_SWITCH} />)
+    const link = screen.getByTestId('part-hero-vendor-link')
+    expect(link).toHaveAttribute('href', 'https://novelkeys.com')
+    expect(link).toHaveAttribute('target', '_blank')
+    expect(link).toHaveAttribute('rel', 'sponsored noopener')
+  })
+
+  it('omits the "view at vendor" link when vendorUrl is null', () => {
+    render(<PartHero part={FAKE_BOARD} />)
+    expect(screen.queryByTestId('part-hero-vendor-link')).not.toBeInTheDocument()
   })
 })
