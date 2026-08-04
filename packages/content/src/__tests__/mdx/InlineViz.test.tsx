@@ -63,6 +63,27 @@ describe('InlineViz — MDX inline visualization component', () => {
   })
 })
 
+describe('InlineViz — aspect-ratio (CLS reservation)', () => {
+  it('sets no aspect-ratio style for a src not in the generated manifest', () => {
+    const { container } = render(
+      <InlineViz src="/article-viz/test/chart.svg" alt="A test chart" />,
+    )
+    const img = container.querySelector('img')
+    expect(img?.style.aspectRatio).toBe('')
+  })
+
+  it('sets aspect-ratio from the generated manifest for a known diagram', () => {
+    const { container } = render(
+      <InlineViz
+        src="/article-viz/60-percent-layout-history/family-ladder.svg"
+        alt="A test chart"
+      />,
+    )
+    const img = container.querySelector('img')
+    expect(img?.style.aspectRatio).toBe('1200 / 640')
+  })
+})
+
 describe('resolveAccent', () => {
   it('returns OKLCH value for named alias "coral"', () => {
     expect(resolveAccent('coral')).toBe('oklch(0.68 0.165 28)')

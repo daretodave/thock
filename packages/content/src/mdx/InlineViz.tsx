@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState, type ReactElement } from 'react'
+import vizAspectRatios from './viz-aspect-ratio.generated.json'
 
 /**
  * Accent palette aliases. Each maps to an OKLCH value used elsewhere
@@ -94,6 +95,7 @@ export function InlineViz({
   accent,
 }: InlineVizProps): ReactElement {
   const accentColor = resolveAccent(accent)
+  const aspectRatio = (vizAspectRatios as Record<string, string>)[src]
   const [zoomed, setZoomed] = useState(false)
   const triggerRef = useRef<HTMLButtonElement | null>(null)
   const closeRef = useRef<HTMLButtonElement | null>(null)
@@ -207,6 +209,7 @@ export function InlineViz({
           alt={alt}
           loading="lazy"
           decoding="async"
+          style={aspectRatio ? { aspectRatio } : undefined}
           className="block w-full"
         />
       </button>
