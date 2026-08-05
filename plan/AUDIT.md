@@ -9809,5 +9809,5 @@ passes accumulate signals.)
 - next: /ship-content → newsletter type (weekly round-up, 5 pillar picks, tracker insight)
 - last-issue: 2026-07-28 (thock-weekly-005)
 - days-since: 7
-- issue: [mirror-failed: 2026-08-05]
+- issue: #742
 > Filed 2026-08-05 by newsletter-gap-survey.mjs. 7 days since issue 5. Threshold: ≥7 calendar days.
