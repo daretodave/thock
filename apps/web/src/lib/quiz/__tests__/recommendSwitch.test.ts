@@ -67,13 +67,14 @@ describe('recommendSwitch', () => {
   })
 
   it('G: ranks a lighter silent-linear switch above a heavier plain linear switch for smooth + gaming + light answers', () => {
+    const silentLighter = makeSwitch({ slug: 'silent-lighter', type: 'silent-linear', springGrams: { actuation: 38, bottomOut: 50 } })
     const answers: QuizAnswers = {
       soundProfile: 'neutral',
       actuationFeel: 'smooth',
       springWeight: 'light',
       primaryUse: 'gaming',
     }
-    const results = recommendSwitch(answers, [LINEAR_MED, SILENT_LINEAR])
+    const results = recommendSwitch(answers, [LINEAR_MED, silentLighter])
     expect(results[0]?.switch.type).toBe('silent-linear')
   })
 
@@ -157,5 +158,31 @@ describe('recommendSwitch', () => {
     }
     const results = recommendSwitch(answers, catalog)
     expect(results.length).toBeLessThanOrEqual(3)
+  })
+
+  it('K: a switch at exactly 45g (the displayed light/medium boundary) scores as a full medium match, not a near-miss', () => {
+    const atBoundary = makeSwitch({ slug: 'at-45', springGrams: { actuation: 45, bottomOut: 60 } })
+    const belowBoundary = makeSwitch({ slug: 'at-44', springGrams: { actuation: 44, bottomOut: 60 } })
+    const answers: QuizAnswers = {
+      soundProfile: 'neutral',
+      actuationFeel: 'smooth',
+      springWeight: 'medium',
+      primaryUse: 'typing',
+    }
+    const results = recommendSwitch(answers, [belowBoundary, atBoundary])
+    expect(results[0]?.switch.slug).toBe('at-45')
+  })
+
+  it('L: a switch at exactly 60g (the displayed medium/heavy boundary) scores as a full medium match, not a near-miss', () => {
+    const atBoundary = makeSwitch({ slug: 'at-60', springGrams: { actuation: 60, bottomOut: 68 } })
+    const aboveBoundary = makeSwitch({ slug: 'at-61', springGrams: { actuation: 61, bottomOut: 68 } })
+    const answers: QuizAnswers = {
+      soundProfile: 'neutral',
+      actuationFeel: 'smooth',
+      springWeight: 'medium',
+      primaryUse: 'typing',
+    }
+    const results = recommendSwitch(answers, [aboveBoundary, atBoundary])
+    expect(results[0]?.switch.slug).toBe('at-60')
   })
 })
