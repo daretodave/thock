@@ -1,6 +1,33 @@
 import type { ReactElement } from 'react'
 import { OG_BACKGROUND, OG_PALETTE } from './palette'
 
+export type ArticleOgLayout = {
+  titleFontSize: number
+  lede: string
+}
+
+/**
+ * Title font size + lede truncation, tuned by character count so short
+ * titles look punchy while long ones still fit without overlapping the
+ * footer row. Breakpoints cover the full corpus range (28–106 chars) —
+ * the >90 tier exists because the longest titles (group-buy close-outs,
+ * which run long by convention) wrap to 4 lines at the 58px size tuned
+ * for the ~72-90 char range, crowding the lede against the byline row.
+ */
+export function computeArticleOgLayout(title: string, lede: string): ArticleOgLayout {
+  const titleFontSize =
+    title.length <= 36 ? 88 :
+    title.length <= 56 ? 76 :
+    title.length <= 72 ? 66 :
+    title.length <= 90 ? 58 : 48
+
+  const ledeMax = title.length > 90 ? 130 : 180
+  const truncatedLede =
+    lede.length > ledeMax ? `${lede.slice(0, ledeMax - 3).trimEnd()}…` : lede
+
+  return { titleFontSize, lede: truncatedLede }
+}
+
 export type ArticleOGContentProps = {
   /** Pillar display label rendered as the kicker. */
   pillarLabel: string

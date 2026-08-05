@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og'
 import { pillarLabel, siteConfig } from '@thock/seo'
 import { getArticleForOg } from '@/lib/data-runtime/og-runtime'
-import { ArticleOGContent } from '@/components/og/ArticleOG'
+import { ArticleOGContent, computeArticleOgLayout } from '@/components/og/ArticleOG'
 import { OG_PALETTE } from '@/components/og/palette'
 
 // Edge runtime — matches the home and pillar OG routes and is the
@@ -71,17 +71,7 @@ export default async function OpenGraphImage({
 
   const fm = article.frontmatter
   const title = fm.title
-
-  // Title font size — tuned by character count so 4-word titles look
-  // punchy while 12-word titles still fit two lines without ellipsis.
-  // Empirical breakpoints from the article corpus (longest title is
-  // ~78 chars; shortest is ~28 chars).
-  const titleFontSize =
-    title.length <= 36 ? 88 : title.length <= 56 ? 76 : title.length <= 72 ? 66 : 58
-
-  // Truncate lede to ~180 chars so it fits two italic lines at 28px
-  // without overflowing the card.
-  const lede = fm.lede.length > 180 ? `${fm.lede.slice(0, 177).trimEnd()}…` : fm.lede
+  const { titleFontSize, lede } = computeArticleOgLayout(title, fm.lede)
 
   return new ImageResponse(
     (
