@@ -75,6 +75,18 @@ describe('sitemap', () => {
     }
   })
 
+  it('derives tag lastModified from the newest tagged article, not the build timestamp', () => {
+    for (const t of getAllTags()) {
+      const articles = getArticlesByTag(t.slug)
+      if (articles.length === 0) continue
+      const expected = articles
+        .map((a) => a.frontmatter.updatedAt ?? a.frontmatter.publishedAt)
+        .reduce((latest, d) => (d > latest ? d : latest))
+      const entry = map.find((e) => e.url === canonicalUrl(`/tag/${t.slug}`))
+      expect(entry?.lastModified).toBe(expected)
+    }
+  })
+
   it('includes /tags, /quiz/switch, /quiz/keycap-set, /group-buys/past, /parts (phases 28, 33, 47, 29, 35)', () => {
     for (const path of ['/tags', '/quiz/switch', '/quiz/keycap-set', '/group-buys/past', '/parts']) {
       expect(urls).toContain(canonicalUrl(path))

@@ -67,10 +67,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }))
 
   const tagEntries: MetadataRoute.Sitemap = getAllTags()
-    .filter((t) => getArticlesByTag(t.slug).length > 0)
-    .map((t) => ({
-      url: canonicalUrl(`/tag/${t.slug}`),
-      lastModified: now,
+    .map((t) => ({ tag: t, articles: getArticlesByTag(t.slug) }))
+    .filter(({ articles }) => articles.length > 0)
+    .map(({ tag, articles }) => ({
+      url: canonicalUrl(`/tag/${tag.slug}`),
+      lastModified: articles
+        .map((a) => a.frontmatter.updatedAt ?? a.frontmatter.publishedAt)
+        .reduce((latest, d) => (d > latest ? d : latest)),
       priority: 0.5,
     }))
 
