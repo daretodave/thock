@@ -42,12 +42,16 @@ function walkSvgFiles(dir: string): string[] {
 const VIEW_BOX_RE = /viewBox="0 0 (\d+(?:\.\d+)?) (\d+(?:\.\d+)?)"/
 
 const manifest: Record<string, string> = {}
+const unparsed: string[] = []
 const svgFiles = walkSvgFiles(publicDir).sort()
 
 for (const filePath of svgFiles) {
   const contents = readFileSync(filePath, 'utf-8')
   const match = VIEW_BOX_RE.exec(contents)
-  if (!match) continue
+  if (!match) {
+    unparsed.push(relative(publicDir, filePath))
+    continue
+  }
   const [, width, height] = match
   const src = `/article-viz/${relative(publicDir, filePath).split('\\').join('/')}`
   manifest[src] = `${width} / ${height}`
@@ -58,3 +62,13 @@ writeFileSync(outFile, `${JSON.stringify(manifest, null, 2)}\n`, 'utf-8')
 
 console.log(`[viz-manifest] wrote ${outFile}`)
 console.log(`  diagrams: ${Object.keys(manifest).length}`)
+
+// A diagram whose viewBox this regex can't parse silently loses its
+// reserved aspect-ratio (InlineViz falls back to unset height), which
+// is exactly the CLS regression this manifest exists to prevent — so
+// treat it as a build failure rather than a silent skip.
+if (unparsed.length > 0) {
+  console.error(`[viz-manifest] unparsable viewBox — reintroduces CLS for:`)
+  for (const file of unparsed) console.error(`  ${file}`)
+  process.exitCode = 1
+}
