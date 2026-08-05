@@ -25,9 +25,10 @@ export default function ArchivePage(): ReactElement {
   const articles = getAllArticles()
   const groups = groupArticlesByMonth(articles)
 
-  const itemListItems = articles
-    .slice(0, 50)
-    .map((a) => ({ name: a.frontmatter.title, path: `/article/${a.slug}` }))
+  const itemListItems = articles.map((a) => ({
+    name: a.frontmatter.title,
+    path: `/article/${a.slug}`,
+  }))
 
   return (
     <main id="main" className="flex-1">
