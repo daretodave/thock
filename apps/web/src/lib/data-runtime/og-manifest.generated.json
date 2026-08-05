@@ -1419,6 +1419,13 @@
   ],
   "newsletters": [
     {
+      "slug": "thock-weekly-006",
+      "title": "thock weekly — issue 06",
+      "lede": "A GMK keycap set's group buy closes and its tracker score keeps dropping for two straight weeks — that's not decline, it's the shape every closed buy takes. Plus a firmware fork, a keycap-mixing map, OpenAI's macro pad, and the geekhack thread that built the 60% taxonomy.",
+      "issue": 6,
+      "readTime": 5
+    },
+    {
       "slug": "thock-weekly-005",
       "title": "thock weekly — issue 05",
       "lede": "Cherry's XTRFY sub-brand pulls the parent brand back from its worst lows on the tracker, CannonKeys hedges a TKL group buy across three mount systems at once, and the Durock T1 finally gets the deep-dive other reviews kept borrowing it for.",
@@ -5787,5 +5794,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-08-04T16:58:11.524Z"
+  "generatedAt": "2026-08-05T00:41:13.103Z"
 }
