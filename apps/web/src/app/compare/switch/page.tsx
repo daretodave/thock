@@ -21,11 +21,18 @@ export async function generateMetadata({
   const switchB = b && b !== a ? getSwitchBySlug(b) : null
 
   if (switchA && switchB) {
-    return buildMetadata({
-      title: `${switchA.name} vs ${switchB.name}`,
-      description: `Compare ${switchA.name} and ${switchB.name} side by side — type, housing, spring weight, travel, and more.`,
-      path: '/compare/switch',
-    })
+    return {
+      ...buildMetadata({
+        title: `${switchA.name} vs ${switchB.name}`,
+        description: `Compare ${switchA.name} and ${switchB.name} side by side — type, housing, spring weight, travel, and more.`,
+        path: '/compare/switch',
+      }),
+      // Populated ?a=&b= states render unique content but every pair
+      // would otherwise share the bare page's canonical — noindex
+      // keeps the canonical/content contradiction out of the index
+      // (mirrors /search?q=… — see apps/web/src/app/search/page.tsx).
+      robots: { index: false, follow: true },
+    }
   }
 
   return buildMetadata({

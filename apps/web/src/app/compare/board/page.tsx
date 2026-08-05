@@ -21,11 +21,18 @@ export async function generateMetadata({
   const boardB = b && b !== a ? getBoardBySlug(b) : null
 
   if (boardA && boardB) {
-    return buildMetadata({
-      title: `${boardA.name} vs ${boardB.name}`,
-      description: `Compare ${boardA.name} and ${boardB.name} side by side — layout, mount style, case material, hotswap, and more.`,
-      path: '/compare/board',
-    })
+    return {
+      ...buildMetadata({
+        title: `${boardA.name} vs ${boardB.name}`,
+        description: `Compare ${boardA.name} and ${boardB.name} side by side — layout, mount style, case material, hotswap, and more.`,
+        path: '/compare/board',
+      }),
+      // Populated ?a=&b= states render unique content but every pair
+      // would otherwise share the bare page's canonical — noindex
+      // keeps the canonical/content contradiction out of the index
+      // (mirrors /search?q=… — see apps/web/src/app/search/page.tsx).
+      robots: { index: false, follow: true },
+    }
   }
 
   return buildMetadata({

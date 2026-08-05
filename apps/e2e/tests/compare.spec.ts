@@ -94,6 +94,20 @@ test.describe('/compare/switch — phase 44', () => {
     expect(flat).toContain('"@type":"ListItem"')
   })
 
+  test('populated compare state is noindex; bare route stays indexable', async ({
+    page,
+  }) => {
+    await page.goto(
+      '/compare/switch?a=gateron-oil-king&b=cherry-mx2a-red',
+    )
+    await expect(page.locator('meta[name="robots"]')).toHaveAttribute(
+      'content',
+      /noindex/,
+    )
+    await page.goto('/compare/switch')
+    await expect(page.locator('meta[name="robots"]')).toHaveCount(0)
+  })
+
   test('part detail page for a switch shows "Compare →" affordance', async ({
     page,
   }) => {
@@ -213,6 +227,18 @@ test.describe('/compare/board — phase 48', () => {
     const flat = scripts.join('\n')
     expect(flat).toContain('"@type":"ItemList"')
     expect(flat).toContain('"@type":"ListItem"')
+  })
+
+  test('populated compare state is noindex; bare route stays indexable', async ({
+    page,
+  }) => {
+    await page.goto('/compare/board?a=mode-sonnet&b=class80')
+    await expect(page.locator('meta[name="robots"]')).toHaveAttribute(
+      'content',
+      /noindex/,
+    )
+    await page.goto('/compare/board')
+    await expect(page.locator('meta[name="robots"]')).toHaveCount(0)
   })
 
   test('part detail page for a board shows "Compare this board →" affordance', async ({
