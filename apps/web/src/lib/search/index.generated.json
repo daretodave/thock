@@ -342,7 +342,7 @@
       "42": [
         9,
         8,
-        37,
+        39,
         909
       ],
       "43": [
@@ -547,7 +547,7 @@
     "averageFieldLength": [
       9.828947368421053,
       5.855263157894737,
-      38.44736842105262,
+      38.47368421052632,
       670.3026315789473
     ],
     "storedFields": {
@@ -1125,7 +1125,7 @@
       "42": {
         "slug": "hmx-cloud-deep-dive",
         "title": "How HMX took over the mid-tier linear slot",
-        "lede": "Two years ago HMX was a name on a vendor page nobody pronounced confidently. In W19, the Cloud sat second on our tracker and landed in half the $120 prebuilts the scene argues about. The rise wasn't an accident.",
+        "lede": "Two years ago HMX was a name on a vendor page nobody pronounced confidently. In W19, the Cloud sat second among switches on our tracker and landed in half the $120 prebuilts the scene argues about. The rise wasn't an accident.",
         "pillar": "deep-dives",
         "tags": [
           "linear",
@@ -81317,6 +81317,9 @@
       [
         "among",
         {
+          "2": {
+            "42": 1
+          },
           "3": {
             "5": 1,
             "6": 1,
@@ -100039,6 +100042,7 @@
           "2": {
             "8": 1,
             "12": 1,
+            "42": 1,
             "46": 1,
             "52": 1,
             "56": 1,
@@ -112078,7 +112082,7 @@
       "id": "hmx-cloud-deep-dive",
       "slug": "hmx-cloud-deep-dive",
       "title": "How HMX took over the mid-tier linear slot",
-      "lede": "Two years ago HMX was a name on a vendor page nobody pronounced confidently. In W19, the Cloud sat second on our tracker and landed in half the $120 prebuilts the scene argues about. The rise wasn't an accident.",
+      "lede": "Two years ago HMX was a name on a vendor page nobody pronounced confidently. In W19, the Cloud sat second among switches on our tracker and landed in half the $120 prebuilts the scene argues about. The rise wasn't an accident.",
       "pillar": "deep-dives",
       "tags": [
         "linear",
@@ -113154,6 +113158,6 @@
       "href": "/trends/tracker/2026-W32"
     }
   ],
-  "generatedAt": "2026-08-05T10:18:32.338Z",
+  "generatedAt": "2026-08-05T11:47:54.898Z",
   "count": 76
 }

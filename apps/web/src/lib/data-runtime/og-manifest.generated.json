@@ -425,7 +425,7 @@
       "readTime": 12,
       "frontmatter": {
         "title": "How HMX took over the mid-tier linear slot",
-        "lede": "Two years ago HMX was a name on a vendor page nobody pronounced confidently. In W19, the Cloud sat second on our tracker and landed in half the $120 prebuilts the scene argues about. The rise wasn't an accident.",
+        "lede": "Two years ago HMX was a name on a vendor page nobody pronounced confidently. In W19, the Cloud sat second among switches on our tracker and landed in half the $120 prebuilts the scene argues about. The rise wasn't an accident.",
         "pillar": "deep-dives",
         "author": "thock"
       }
@@ -5794,5 +5794,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-08-05T10:18:31.465Z"
+  "generatedAt": "2026-08-05T11:47:53.727Z"
 }
