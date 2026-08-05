@@ -635,7 +635,7 @@
       "readTime": 5,
       "frontmatter": {
         "title": "How 75 percent became the default custom layout",
-        "lede": "Two years ago a custom-board recommendation defaulted to 65% with a polite note about 75% as the next step up. The Sonnet 2026 refresh, the QK75, and a crowded mid-tier have flipped that order. 75% is now the layout customs reach for first.",
+        "lede": "Two years ago a custom-board recommendation defaulted to 65% with a polite note about 75% as the next step up. The KBD75 v3's staying power as a default recommendation, the QK75, and a crowded mid-tier have flipped that order. 75% is now the layout customs reach for first.",
         "pillar": "trends",
         "author": "thock"
       }
@@ -5794,5 +5794,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-08-05T03:16:01.564Z"
+  "generatedAt": "2026-08-05T10:18:31.465Z"
 }

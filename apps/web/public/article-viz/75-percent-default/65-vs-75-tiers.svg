@@ -28,7 +28,7 @@
   <!-- 75% column -->
   <line x1="850" y1="140" x2="850" y2="380" stroke-opacity="0.4"/>
   <circle cx="850" cy="170" r="14" fill="oklch(0.62 0.10 230 / 0.25)" stroke="oklch(0.62 0.10 230)" stroke-opacity="0.95" stroke-width="3"/>
-  <text x="880" y="174" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">Sonnet 2026 · flagship</text>
+  <text x="880" y="174" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">KBD75 v3 · flagship</text>
   <circle cx="850" cy="240" r="13" fill="oklch(0.62 0.10 230 / 0.25)" stroke="oklch(0.62 0.10 230)" stroke-opacity="0.95" stroke-width="3"/>
   <text x="880" y="244" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">QK75 · mid-wireless</text>
   <circle cx="850" cy="310" r="13" fill="oklch(0.62 0.10 230 / 0.25)" stroke="oklch(0.62 0.10 230)" stroke-opacity="0.95" stroke-width="3"/>

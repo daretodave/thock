@@ -31,10 +31,10 @@
 
   <!-- Filled rung markers (steel-blue ~ accent oklch(0.62 0.10 230)) -->
   <!-- I'll use bordeaux for the steel-blue equivalent since steel-blue isn't in our palette. Actually let me invent: use a colder oklch for steel. -->
-  <!-- Sonnet 2026 — flagship -->
+  <!-- KBD75 v3 — flagship -->
   <g>
     <circle cx="500" cy="180" r="11" fill="oklch(0.62 0.10 230 / 0.20)" stroke="oklch(0.62 0.10 230)" stroke-opacity="0.95" stroke-width="3"/>
-    <text x="520" y="184" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.62 0.10 230)" stroke="none" opacity="0.95">Sonnet 2026</text>
+    <text x="520" y="184" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.62 0.10 230)" stroke="none" opacity="0.95">KBD75 v3</text>
   </g>
   <!-- QK75 — wireless mid -->
   <g>
