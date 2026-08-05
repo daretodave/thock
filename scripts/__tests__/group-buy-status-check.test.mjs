@@ -14,6 +14,10 @@ const { findStaleRecords, alreadyFiled } = __test
 const PAST_DATE = '2026-01-01'
 const FUTURE_DATE = '2099-12-31'
 const TODAY = new Date('2026-06-11')
+// A same-day check running later in the day (not midnight) — reproduces the
+// off-by-one bug where a full Date `today` compared against a date-only
+// endDate flagged the buy as stale on its own last valid day.
+const TODAY_AFTERNOON = new Date('2026-06-11T14:32:00.000Z')
 
 function makeRecord(slug, status, endDate) {
   const data = { slug, status, name: slug, vendorSlug: 'test-vendor' }
@@ -54,6 +58,25 @@ describe('findStaleRecords — no violation (future endDate)', () => {
     const records = [makeRecord('future-ann', 'announced', FUTURE_DATE)]
     const stale = findStaleRecords(records, TODAY)
     assert.equal(stale.length, 0)
+  })
+
+  test('does not flag live record whose endDate is today, checked later in the day', () => {
+    const records = [makeRecord('today-buy', 'live', '2026-06-11')]
+    const stale = findStaleRecords(records, TODAY_AFTERNOON)
+    assert.equal(stale.length, 0)
+  })
+
+  test('does not flag announced record whose endDate is today, checked later in the day', () => {
+    const records = [makeRecord('today-ann', 'announced', '2026-06-11')]
+    const stale = findStaleRecords(records, TODAY_AFTERNOON)
+    assert.equal(stale.length, 0)
+  })
+
+  test('flags live record whose endDate was yesterday, checked later in the day', () => {
+    const records = [makeRecord('yesterday-buy', 'live', '2026-06-10')]
+    const stale = findStaleRecords(records, TODAY_AFTERNOON)
+    assert.equal(stale.length, 1)
+    assert.equal(stale[0].slug, 'yesterday-buy')
   })
 })
 

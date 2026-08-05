@@ -54,13 +54,21 @@ function loadGroupBuys() {
 // Returns records that are stale:
 //   - status is 'live' or 'announced'
 //   - endDate is set and is in the past (< today)
+//
+// endDate is a date-only string ("2026-08-09"); comparing it against a full
+// Date timestamp (new Date()) via `new Date(endDate) < cutoff` flags a group
+// buy as stale a day early — on its final valid day, midnight UTC is already
+// behind "now". Compare as date-only ISO strings instead, matching the site's
+// own single-source-of-truth predicate (`isGroupBuyEnded` in
+// packages/data/src/loaders/group-buys.ts), which treats endDate as inclusive
+// through the whole day.
 function findStaleRecords(records, today) {
-  const cutoff = today instanceof Date ? today : new Date(today)
+  const todayIso = today instanceof Date ? today.toISOString().slice(0, 10) : String(today).slice(0, 10)
   return records
     .filter(({ data }) => {
       if (!['live', 'announced'].includes(data.status)) return false
       if (!data.endDate) return false
-      return new Date(data.endDate) < cutoff
+      return data.endDate < todayIso
     })
     .map(({ file, data }) => ({
       slug: data.slug || basename(file, '.json'),
