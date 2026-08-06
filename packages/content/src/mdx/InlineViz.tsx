@@ -62,19 +62,20 @@ export type InlineVizProps = {
  * sitting on the page background with no chrome.
  *
  * **Desktop (≥ xl, 1280px):** figure floats into the right-side
- * whitespace, centered between the article column's right edge and
- * the viewport's right edge. Width scales via clamp(28rem, 40vw,
- * 42rem) — graceful at narrow xl, 1.3× the prior baseline at wide
- * viewports including 4K. An SVG step-shape connector arm spans
- * exactly the gap between the column edge and the figure's left edge
- * (no bleed, so it never overlaps article text). The arm and a dot
- * on the figure's left edge take the viz's accent color so each
- * floated viz tags itself to its own data lineage.
+ * whitespace, anchored to the viewport's right edge with a fixed
+ * gutter (not centered in the column/viewport whitespace). Width
+ * scales uncapped via `max(28rem, 50vw - 80px)` — grows with the
+ * viewport, no upper bound, so it keeps widening past 4K. An SVG
+ * step-shape connector arm spans exactly the gap between the column
+ * edge and the figure's left edge (no bleed, so it never overlaps
+ * article text). The arm and a dot on the figure's left edge take
+ * the viz's accent color so each floated viz tags itself to its own
+ * data lineage.
  *
  * Desktop layout math lives in `apps/web/src/styles/components.css`
  * under `.thock-inline-viz` — see that file for the derivation. The
  * single `--thock-viz-width` CSS variable keeps the figure width and
- * the connector-arm width in lockstep through the clamp.
+ * the connector-arm width in lockstep.
  *
  * **Zoom:** click/tap opens a fixed full-viewport modal showing the
  * SVG scaled to fit. Closes on Escape, backdrop click, or the ×
