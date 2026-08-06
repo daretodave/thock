@@ -6125,6 +6125,11 @@
             "slug": "gazzew-boba-u4t"
           },
           {
+            "id": "gazzew-boba-u4",
+            "kind": "switch",
+            "slug": "gazzew-boba-u4"
+          },
+          {
             "id": "durock-t1",
             "kind": "switch",
             "slug": "durock-t1"
@@ -9208,5 +9213,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-08-06T01:41:26.805Z"
+  "generatedAt": "2026-08-06T03:14:55.569Z"
 }
