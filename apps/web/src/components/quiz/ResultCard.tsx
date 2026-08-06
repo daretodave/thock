@@ -11,7 +11,8 @@ type Props = {
 }
 
 export function ResultCard({ sw, score, maxScore, rank }: Props) {
-  const pct = maxScore > 0 ? Math.round((score / maxScore) * 100) : 0
+  const hasSignal = maxScore > 0
+  const pct = hasSignal ? Math.round((score / maxScore) * 100) : 0
   const typeLabel = specLabel(SWITCH_TYPE_LABEL, sw.type)
   const excerpt = sw.description.length > 80 ? sw.description.slice(0, 80).trimEnd() + '…' : sw.description
 
@@ -48,20 +49,28 @@ export function ResultCard({ sw, score, maxScore, rank }: Props) {
       </div>
       <p className="text-small text-text-2">{excerpt}</p>
       <div className="flex items-center gap-3">
-        <div
-          role="progressbar"
-          aria-valuenow={pct}
-          aria-valuemin={0}
-          aria-valuemax={100}
-          aria-label={`match score ${pct}%`}
-          className="flex-1 h-1.5 bg-bg-2 rounded-full overflow-hidden"
-        >
-          <div
-            className="h-full bg-accent-mu rounded-full transition-all"
-            style={{ width: `${pct}%` }}
-          />
-        </div>
-        <span data-testid="result-card-pct" className="text-small font-mono text-text-2 shrink-0">{pct}% match</span>
+        {hasSignal ? (
+          <>
+            <div
+              role="progressbar"
+              aria-valuenow={pct}
+              aria-valuemin={0}
+              aria-valuemax={100}
+              aria-label={`match score ${pct}%`}
+              className="flex-1 h-1.5 bg-bg-2 rounded-full overflow-hidden"
+            >
+              <div
+                className="h-full bg-accent-mu rounded-full transition-all"
+                style={{ width: `${pct}%` }}
+              />
+            </div>
+            <span data-testid="result-card-pct" className="text-small font-mono text-text-2 shrink-0">{pct}% match</span>
+          </>
+        ) : (
+          <span data-testid="result-card-pct" className="text-small font-mono text-text-2">
+            Popular pick — no strong signal in your answers
+          </span>
+        )}
       </div>
     </div>
   )

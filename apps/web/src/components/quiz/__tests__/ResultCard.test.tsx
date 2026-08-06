@@ -43,4 +43,11 @@ describe('<ResultCard>', () => {
     expect(pct.className).toContain('text-text-2')
     expect(pct.className).not.toContain('text-text-3')
   })
+
+  it('renders a neutral "popular pick" label instead of "0% match" when maxScore is 0', () => {
+    render(<ResultCard sw={SWITCH} score={0} maxScore={0} rank={3} />)
+    expect(screen.getByTestId('result-card-pct')).toHaveTextContent('Popular pick')
+    expect(screen.queryByText(/0% match/)).not.toBeInTheDocument()
+    expect(screen.queryByRole('progressbar')).not.toBeInTheDocument()
+  })
 })
