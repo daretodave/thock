@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Bar chart comparing installation time across four acoustic mods — tape mod, PE foam mod, O-ring mod, and the Holee mod</title>
+
+  <!-- Baseline -->
+  <line x1="330" y1="90" x2="330" y2="400" stroke-opacity="0.4"/>
+
+  <!-- Tape mod bar: 5-8 min, whole board -->
+  <rect x="330" y="105" width="26" height="34" fill="oklch(0.78 0.10 80 / 0.35)" stroke="oklch(0.78 0.10 80)" stroke-width="2"/>
+  <text x="370" y="118" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none">tape mod</text>
+  <text x="370" y="136" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none" opacity="0.95">5&#8211;8 min &#183; whole board, once</text>
+
+  <!-- PE foam bar: ~10 min, whole board -->
+  <rect x="330" y="165" width="34" height="34" fill="oklch(0.78 0.10 80 / 0.35)" stroke="oklch(0.78 0.10 80)" stroke-width="2"/>
+  <text x="370" y="178" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none">PE foam mod</text>
+  <text x="370" y="196" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none" opacity="0.95">~10 min &#183; whole board, once</text>
+
+  <!-- O-ring bar: ~30 min, whole board -->
+  <rect x="330" y="225" width="72" height="34" fill="oklch(0.78 0.10 80 / 0.35)" stroke="oklch(0.78 0.10 80)" stroke-width="2"/>
+  <text x="370" y="238" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none">O-ring mod</text>
+  <text x="370" y="256" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none" opacity="0.95">~30 min &#183; whole board, once</text>
+
+  <!-- Holee mod bar: 3-6 hours, 65% board -->
+  <rect x="330" y="300" width="700" height="46" fill="oklch(0.62 0.13 25 / 0.20)" stroke="oklch(0.62 0.13 25)" stroke-width="2.5"/>
+  <text x="370" y="325" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none">Holee mod</text>
+  <text x="370" y="345" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.62 0.13 25)" stroke="none" opacity="0.95">3&#8211;5 min per switch &#215; ~68 switches &#8776; 3&#8211;6 hrs</text>
+
+  <!-- break mark on the Holee bar to signal scale change -->
+  <g stroke-opacity="0.6">
+    <line x1="405" y1="290" x2="415" y2="356"/>
+    <line x1="415" y1="290" x2="425" y2="356"/>
+  </g>
+
+  <!-- axis note -->
+  <text x="330" y="425" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">three of these are a single teardown &#8212; one is priced per switch</text>
+
+  <!-- top label -->
+  <text x="600" y="55" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">hands-on time to install, per mod</text>
+
+  <!-- Bronze theme dot -->
+  <circle cx="1170" cy="42" r="4" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

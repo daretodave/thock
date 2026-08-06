@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-31T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "holee-mod-explained",
+  "article_pillar": "ideas",
+  "section_anchor": "the-time-cost-is-the-whole-story",
+  "brief_summary": "Horizontal bar chart comparing hands-on installation time for four mods. Tape mod, PE foam mod, and the O-ring mod each show a short amber bar labeled as a fixed one-time whole-board cost (5-8 min, ~10 min, ~30 min respectively). The Holee mod shows a much longer bordeaux-highlighted bar with a scale-break mark, labeled as a per-switch cost of 3-5 minutes multiplied across roughly 68 switches on a 65 percent board, totaling an estimated 3-6 hours.",
+  "target": "apps/web/public/article-viz/holee-mod-explained/time-cost-comparison.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "JetBrains Mono", "Newsreader"],
+  "data_sources": [
+    "holee-mod-explained.mdx § 'The time cost is the whole story' — 'the tape mod runs five to eight minutes total, the PE foam mod about ten minutes, the O-ring mod roughly thirty' (each cited from their own published thock articles)",
+    "holee-mod-explained.mdx § 'The time cost is the whole story' — 'somewhere around three to five minutes per switch ... A 65% board with roughly 68 switches lands at somewhere between three and six hours of hands-on time'"
+  ],
+  "outputs": ["apps/web/public/article-viz/holee-mod-explained/time-cost-comparison.svg"],
+  "warnings": []
+}

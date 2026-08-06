@@ -1,0 +1,106 @@
+---
+slug: holee-mod-explained
+title: "The Holee mod: what foam inside the switch actually buys you"
+pillar: ideas
+publishedAt: '2026-07-31T14:00:00.000Z'
+updatedAt: '2026-07-31T14:00:00.000Z'
+author: thock
+lede: "Small pads of polyurethane foam cut and wedged inside the switch housing itself — not under the PCB, not behind it, not under the keycap. The Holee mod works at a smaller scale than every other foam mod in the hobby, and it costs proportionally more time."
+heroImage: /hero-art/holee-mod-explained.svg
+heroImageAlt: "MX-style switch exploded cross-section: a keycap lifted above the top housing, the stem crown showing through the housing's opening, the stem shaft descending through a slotted foam pad wrapped around it at mid-housing height, spring coils beneath the pad, and a PCB strip below."
+tags: [modding, acoustic, lubing, switches]
+mentionedParts:
+  - id: oil-king
+    kind: switch
+    slug: gateron-oil-king
+  - id: mx2a-red
+    kind: switch
+    slug: cherry-mx2a-red
+featured: false
+popularityScore: 0
+---
+
+Every switch encloses a small volume of empty air — around the stem, around the leaf, around the spring at full compression. Normally that volume is just air. The Holee mod fills part of it with foam.
+
+## What it physically is
+
+The Holee mod is a small cut pad — or several — of thin polyurethane foam, inserted directly inside the switch housing during a full teardown. Open the switch, pull the stem, and seat foam somewhere in the cavity: most often around the base of the stem near the leaf contact, sometimes along the bottom-housing wall, occasionally around the spring's lower coils. Stem back in, housing snapped shut, switch reinstalled.
+
+The name is used loosely enough to need clarifying. It is not PE foam, which sits below the PCB. It is not the tape mod, on the back of the PCB. It is not [thock's O-ring mod](/article/o-ring-mod), which cushions the PCB-to-standoff joint in a tray-mount board — nor the older, separate under-keycap O-ring mod, which cushions downstroke travel at the keycap and never goes near the housing. The Holee mod is the only one of these that requires opening the switch itself.
+
+<Callout type="note" title="Terminology collision">
+  Forum threads sometimes call this the "foam mod," also an informal name for PE foam and case foam. When the term comes up unqualified, ask which layer is meant — under the PCB, on the PCB, or inside the switch.
+</Callout>
+
+<InlineViz
+  src="/article-viz/holee-mod-explained/mod-layer-stack.svg"
+  alt="Vertical cross-section labeled stack, top to bottom: keycap with the under-keycap O-ring mod noted as a separate technique, switch housing with the Holee mod highlighted in amber inside the cavity around the stem and spring, PCB back labeled with the tape mod, the cavity beneath the PCB labeled with PE foam, and the case standoff labeled with thock's own O-ring mod."
+  caption="Five foam and dampening mods, five different layers of the stack."
+  accent="amber"
+/>
+
+## What changes acoustically
+
+A switch housing is a small rigid shell, and every keystroke — stem impact, the leaf's snap, the spring compressing and releasing — sets that shell and the air pocket inside it resonating, the way any small hollow chamber resonates when struck. That internal resonance is part of what gives a thin-walled or unlubed housing its higher-pitched, slightly hollow character, independent of anything happening at the PCB or case. PE foam and the tape mod cannot reach it, because neither is inside the switch.
+
+Foam seated inside the housing damps that resonance at the source. Where it registers, the audible result is a small reduction in the higher-pitched ring layered on top of the switch's baseline sound — not a different switch, a quieter one. Builders often describe a slightly more muted note on bottom-out, the same direction PE foam pushes a board's sound, just at a much smaller scale.
+
+## What changes tactilely
+
+Two effects, both modest and placement-dependent. Foam near where the stem's foot lands can add a very slight cushioning at bottom-out — a softer stop rather than a harder one. Foam near the spring's lower coils can reduce spring ping, the faint metallic ring some springs produce on rebound, by damping the coil's ability to vibrate freely.
+
+Neither effect is large, and both are easy to overdo. Foam that is too thick changes travel distance, alters actuation force, or keeps the stem from resetting cleanly. This is not a mod where more foam means more effect — past a small threshold, more foam means a switch that doesn't work.
+
+<Callout type="warn" title="If the switch binds after reassembly">
+  A switch that feels scratchy, doesn't reset, or won't seat the housing flush almost always means the pad is too thick or sitting against the leaf's travel path. Cut thinner and reposition before concluding the mod doesn't work on that switch.
+</Callout>
+
+## How it differs from the mods thock has already covered
+
+[PE foam](/article/pe-foam-mod) and the [tape mod](/article/tape-mod) both target case-level resonance and install once, for the whole board. [Thock's O-ring mod](/article/o-ring-mod) targets the PCB-to-standoff contact in a tray-mount board — also whole-board, single-pass. [Switch films](/article/switch-films-worth-it) get closest, since they also require opening every switch, but films sit in the seam between top and bottom housing and address wobble — a mechanical looseness problem, not the internal resonant chamber the Holee mod targets. A switch with tight housing tolerances, like the retooled <PartReference id="mx2a-red">Cherry MX2A Red</PartReference>, still encloses the same empty acoustic volume around the stem that a looser-toleranced switch does; a film closing the seam gap never touches that air pocket at all.
+
+## Materials and the procedure
+
+| What you need | Notes |
+|---|---|
+| Thin polyurethane foam sheet | Craft-foam-adjacent stock, well under 1mm in most cuts |
+| Switch opener | Required — cannot be done hot-swap-in-place |
+| Fine scissors, hobby knife, or small punch | Precision matters more here than in any other foam mod |
+| Tweezers | For seating small pads without touching adhesive or oils |
+| A tray or mat | To keep stems, springs, and housings sorted per switch |
+
+Per switch: open the housing, lift the stem aside, cut a small pad to size, seat it with tweezers, replace the stem, snap the housing closed. Test by hand — full travel, clean return, no scratchiness — before moving to the next one.
+
+<InlineViz
+  src="/article-viz/holee-mod-explained/process-steps.svg"
+  alt="Four numbered panels showing the Holee mod procedure: opening the switch housing with a switch opener, cutting a small foam pad, seating the pad around the stem base with tweezers, and closing and hand-testing the reassembled switch."
+  caption="Per switch. Every switch."
+  accent="amber"
+/>
+
+## The time cost is the whole story
+
+The other mods thock has covered are priced per board: the tape mod runs [five to eight minutes](/article/tape-mod) total, [PE foam](/article/pe-foam-mod) about ten minutes, [the O-ring mod](/article/o-ring-mod) roughly thirty. Each is a single teardown, done once.
+
+The Holee mod is priced per switch — roughly three to five minutes each once a builder has settled on a cut pattern, longer for the first dozen. A 65% board with about 68 switches lands somewhere between three and six hours of hands-on time; a full-size board pushes past that. There is no version of this mod that is a quick afternoon project on a whole keyboard, and it realistically only pencils out for a builder who already has every switch open on the bench for another reason — most commonly a full [lubing pass](/article/lubing-switches-guide). Folded into an existing lube station, it adds a fixed few minutes per switch rather than a second teardown later.
+
+<InlineViz
+  src="/article-viz/holee-mod-explained/time-cost-comparison.svg"
+  alt="Horizontal bar comparison of installation time for four mods. Tape mod, PE foam mod, and the O-ring mod each show a short bar labeled as a one-time whole-board cost of five to thirty minutes. The Holee mod shows a much longer bar labeled as a per-switch cost of three to five minutes multiplied across the board, totaling three to six hours for a 65 percent board."
+  caption="Three of these are a single teardown. One is priced per switch."
+  accent="amber"
+/>
+
+## Honest tradeoffs
+
+The effect is real but switch-dependent, and easy to overstate. Housings with more internal air volume and thinner walls — common on budget nylon housings — have more resonance to damp, so the mod has more room to do something audible. Switches that ship factory-lubed have already solved half the equation: the <PartReference id="oil-king">Gateron Oil King</PartReference>'s factory grease damps spring behavior, and Cherry's factory lube on the <Mono>MX2A Red</Mono> does similar work at the stem-leaf interface. Foam on a switch that is already lubed and quiet buys less than the same foam on a dry, unlubed switch.
+
+Reversible, technically — the foam pulls back out — but reversal means reopening the switch, the same cost as installing it. That is a different kind of "reversible" than peeling tape off a PCB in five seconds.
+
+It is not a universal recommendation, and not a first mod. A board with an actual acoustic problem — unlubed stabilizers, an unaddressed hollow case cavity, a genuinely scratchy switch — has larger, cheaper fixes available first. This is a last-ten-percent tool for a builder who already likes their switches and wants the smallest available increment of housing-level quiet. Applied to the wrong problem, it is hours spent on a change nobody will hear next to the stabilizer rattle three keys over.
+
+## Verdict
+
+Do this if the switches are already open on the bench for a lube pass and a few extra minutes per switch is genuinely free time, not borrowed time. Skip it if the plan is to open a board specifically to do this mod alone — [the tape mod](/article/tape-mod), [PE foam](/article/pe-foam-mod), and [the O-ring mod](/article/o-ring-mod) all deliver a larger, more consistently audible change for a fraction of the hands-on time, and [servicing the stabilizers](/article/stabilizer-servicing-guide) fixes a louder problem than housing resonance on most boards that have one. The Holee mod's honest place in the [sound-dampening stack](/article/sound-dampening-compared) is at the very end of it — for someone who has already done everything else and is chasing a smaller and smaller remainder.
+
+Small-batch listings for pre-cut foam pads sized to popular switch housings turn up occasionally from switch-mod vendors, saving the cutting step. They do not save the install time. The bottleneck was never the material — it is the hundred-odd times a builder has to open a housing, place something inside it by hand, and close it again.

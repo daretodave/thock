@@ -1,0 +1,31 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored SVG (no raster pipeline)",
+  "at": "2026-08-06T00:00:00.000Z",
+  "commit": "2390ecb71a00c851a19d038e509d8caec183b2b6",
+  "kind": "hero-art",
+  "source": null,
+  "template": "plan/bearings.md § Article hero art — colorful keyboard SVGs",
+  "tokens_snapshot": "design/tokens.css (sha1 f79eb6c04b4a9d2e0e3e083f8aeb6bc57586d849)",
+  "fonts": ["JetBrains Mono", "IBM Plex Mono"],
+  "article_slug": "holee-mod-explained",
+  "article_pillar": "ideas",
+  "subject": "MX-style switch exploded cross-section — keycap lifted above a top housing shell, stem crown poking through the housing's crown opening, stem shaft descending through a slotted foam pad wrapped around the shaft at mid-housing height, spring coils beneath the pad seated on the bottom housing floor, contact leaves at the floor, and a PCB strip below.",
+  "motif": "single switch cross-section, exploded vertical tiers, foam washer around stem shaft",
+  "splashHue": "dusty rose",
+  "splashColor": "oklch(0.66 0.085 12)",
+  "accent_color": {
+    "name": "warm-bronze (theme accent)",
+    "oklch": "oklch(0.80 0.135 75)"
+  },
+  "canvas": "1200x750",
+  "strokeWeight": "2px",
+  "strokeColor": "#4A4540",
+  "background": "#F9F4EF (warm paper, light-mode safe)",
+  "outputs": [
+    "apps/web/public/hero-art/holee-mod-explained.svg",
+    "apps/web/public/hero-art/holee-mod-explained.svg.json"
+  ],
+  "warnings": [],
+  "notes": "Deliberately distinct placement from the two nearest family pieces: pe-foam-mod.svg puts its foam layer at the plate/PCB gap (full-width case-level sheet, coral splash); o-ring-mod.svg puts its callout ring at the keycap-stem/standoff interface (bare-PCB top-down view, ochre splash). This piece is a single switch's exploded cross-section — the foam pad is a small slotted washer centered around the stem shaft mid-housing, seated directly atop the spring coils, matching the wire/foam-in-housing mechanism the article describes rather than either reference's location. Splash hue chosen as dusty rose (oklch(0.66 0.085 12)) specifically to avoid collision with pe-foam-mod's coral and o-ring-mod's ochre, per brief. Background is warm-paper (#F9F4EF) with a dark warm-grey stroke (#4A4540) rather than the family's on-dark warm-grey stroke convention, so the piece stays legible in light mode per the bearings.md directive. Bronze theme dot at upper-right per family ornamental convention; bronze bracket + leader callout labels the foam pad. Dashed explode-gap ticks mark the keycap-to-housing and housing-to-PCB separations consistent with the family's exploded-view language (see beginners-switch-buying-guide.svg, buckling-spring-deep-dive.svg)."
+}

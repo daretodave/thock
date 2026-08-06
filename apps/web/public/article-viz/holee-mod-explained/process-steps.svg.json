@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-31T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "holee-mod-explained",
+  "article_pillar": "ideas",
+  "section_anchor": "materials-and-the-actual-procedure",
+  "brief_summary": "Four-panel numbered process strip showing the per-switch Holee mod procedure: opening the switch housing with a switch opener, cutting a small foam pad, seating the pad with tweezers around the stem base, and closing the housing followed by a hand test of the stroke. Caption emphasizes the procedure repeats once per switch with no batch step.",
+  "target": "apps/web/public/article-viz/holee-mod-explained/process-steps.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "holee-mod-explained.mdx § 'Materials and the actual procedure' — 'The procedure, per switch: open the housing with a switch opener, lift the stem out and set it aside with the spring still seated if possible, cut a small foam pad sized to the target zone, seat the pad with tweezers, replace the stem, and snap the housing closed. Test the switch by hand'",
+    "holee-mod-explained.mdx § 'The time cost is the whole story' — 'There is no version of this mod that is a quick afternoon project on a whole keyboard.' (grounds the 'repeat once per switch — there is no batch step' caption)"
+  ],
+  "outputs": ["apps/web/public/article-viz/holee-mod-explained/process-steps.svg"],
+  "warnings": []
+}

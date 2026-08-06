@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-31T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "holee-mod-explained",
+  "article_pillar": "ideas",
+  "section_anchor": "what-it-physically-is",
+  "brief_summary": "Vertical labeled cross-section of a keyboard's foam/dampening mods mapped to the layer each occupies. A zoomed switch cutaway in the middle band shows the Holee mod's amber foam pad seated inside the housing around the stem base, distinct from the keycap band (under-keycap O-ring, noted as a separate mod), the PCB band (tape mod), the cavity beneath the PCB (PE foam), and the case/standoff band (thock's own O-ring mod).",
+  "target": "apps/web/public/article-viz/holee-mod-explained/mod-layer-stack.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "holee-mod-explained.mdx § 'What it physically is' — 'The Holee mod is a small cut pad ... of thin polyurethane foam, inserted directly inside the switch housing ... most commonly wrapped loosely around the base of the stem near where the leaf makes contact'",
+    "holee-mod-explained.mdx § 'What it physically is' — 'It is not PE foam, which sits below the PCB ... It is not the tape mod, which lives on the back of the PCB ... It is not the O-ring mod thock has already covered, which cushions the PCB-to-standoff joint ... nor is it the older, separate under-keycap O-ring mod'"
+  ],
+  "outputs": ["apps/web/public/article-viz/holee-mod-explained/mod-layer-stack.svg"],
+  "warnings": []
+}
