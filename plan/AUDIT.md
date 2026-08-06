@@ -9949,7 +9949,7 @@ passes accumulate signals.)
 > Filed 2026-08-06 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 > **Resolved (2026-08-06):** shipped "The Holee mod: what foam inside the switch actually buys you" — content-curator drafted ~1300 words with 3 InlineViz diagrams, brander rendered hero art (dusty rose splash). publishedAt 2026-07-31 via gap-fill. Tags modding/acoustic/lubing/switches (all pre-existing, no tags.json change). mentionedParts: gateron-oil-king, cherry-mx2a-red. Language gate + mentionedParts gate clean. Cross-link survey (non-gating) filed 4 new AUDIT rows for this article against brass-weight-mod, gasket-mount-reality, spring-swaps-explained, typing-tests-lie. `pnpm verify` full gate green (sequential foreground legs): typecheck, lint, 789 unit tests, 182 script tests, data:validate (76 records), build, size (108.7 KB/200 KB budget), 1128/1128 e2e.
 
-### [ ] [cross-links] [4.5] holee-mod-explained ↔ brass-weight-mod — no prose cross-link (same pillar, ≥2 shared tags: modding, acoustic)
+### [x] [cross-links] [4.5] holee-mod-explained ↔ brass-weight-mod — no prose cross-link (same pillar, ≥2 shared tags: modding, acoustic) — addressed in commit `823b0a2e`, closes #754
 - category: cross-links
 - filed: 2026-08-06 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -9960,7 +9960,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/brass-weight-mod.mdx
 - action: add [brass-weight-mod](/article/brass-weight-mod) to holee-mod-explained body, or vice versa
 
-### [ ] [cross-links] [4.5] holee-mod-explained ↔ gasket-mount-reality — no prose cross-link (same pillar, ≥2 shared tags: modding, acoustic)
+### [x] [cross-links] [4.5] holee-mod-explained ↔ gasket-mount-reality — no prose cross-link (same pillar, ≥2 shared tags: modding, acoustic) — addressed in commit `823b0a2e`, closes #754
 - category: cross-links
 - filed: 2026-08-06 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -9971,7 +9971,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/gasket-mount-reality.mdx
 - action: add [gasket-mount-reality](/article/gasket-mount-reality) to holee-mod-explained body, or vice versa
 
-### [ ] [cross-links] [4.5] holee-mod-explained ↔ spring-swaps-explained — no prose cross-link (same pillar, ≥2 shared tags: modding, switches)
+### [x] [cross-links] [4.5] holee-mod-explained ↔ spring-swaps-explained — no prose cross-link (same pillar, ≥2 shared tags: modding, switches) — addressed in commit `823b0a2e`, closes #754
 - category: cross-links
 - filed: 2026-08-06 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -9982,7 +9982,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/spring-swaps-explained.mdx
 - action: add [spring-swaps-explained](/article/spring-swaps-explained) to holee-mod-explained body, or vice versa
 
-### [ ] [cross-links] [4.5] holee-mod-explained ↔ typing-tests-lie — no prose cross-link (same pillar, ≥2 shared tags: modding, switches)
+### [x] [cross-links] [4.5] holee-mod-explained ↔ typing-tests-lie — no prose cross-link (same pillar, ≥2 shared tags: modding, switches) — addressed in commit `823b0a2e`, closes #754
 - category: cross-links
 - filed: 2026-08-06 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
