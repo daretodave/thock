@@ -12,7 +12,7 @@
     },
     {
       "slug": "holee-mod-explained",
-      "readTime": 7,
+      "readTime": 8,
       "frontmatter": {
         "title": "The Holee mod: what foam inside the switch actually buys you",
         "lede": "Small pads of polyurethane foam cut and wedged inside the switch housing itself — not under the PCB, not behind it, not under the keycap. The Holee mod works at a smaller scale than every other foam mod in the hobby, and it costs proportionally more time.",
@@ -5804,5 +5804,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-08-06T00:45:29.150Z"
+  "generatedAt": "2026-08-06T01:41:26.805Z"
 }
