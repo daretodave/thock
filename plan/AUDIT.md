@@ -9992,3 +9992,13 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/holee-mod-explained.mdx
 - article-b: apps/web/src/content/articles/typing-tests-lie.mdx
 - action: add [typing-tests-lie](/article/typing-tests-lie) to holee-mod-explained body, or vice versa
+
+### [x] [content] [5.4] gazzew-boba-u4t-deep-dive missing mentionedParts entry for Boba U4 — addressed in bb24a5ea, closes #755
+- category: content
+- filed: 2026-08-06 by cloud /iterate audit (fresh general-purpose sweep)
+- impact: 6 (article's whole thesis is a Boba U4-vs-U4T comparison — "Boba U4" named 5+ times in prose, including a `<Mono>Boba U4</Mono>` span — but `mentionedParts` omitted it, so `/part/switch/gazzew-boba-u4`'s "Mentioned in" rail silently missed its most relevant citation. Same bug class already fixed twice in this repo — `article-parts-check.mjs` regex-matches the catalog's full name "Gazzew Boba U4" verbatim, but the prose always uses the colloquial short form without the "Gazzew" prefix, a documented blind spot in the gate script)
+- ease: 9 (one-entry frontmatter addition, no schema/component/route change)
+- score: 5.4 (impact × ease / 10)
+- issue: #755
+> **Resolved (2026-08-06):** added `gazzew-boba-u4` to `mentionedParts` frontmatter in `gazzew-boba-u4t-deep-dive.mdx`, matching the existing `id`/`kind`/`slug` convention for the other five entries. `pnpm verify` full gate green: typecheck, unit + script tests, data:validate, build, size, 1128/1128 e2e.
+> Picked as the top signal this tick: no unlabeled GitHub issues (triage gate); not Monday (weekly snapshot gate skipped); AUDIT.md's only other Pending row is the `[4.0]` Lighthouse-CI `/oversight` item (non-autonomous); CRITIQUE.md's only Pending row remains the non-actionable GA-beacon item; all 7 mechanical surveys clean; no pending phases/data/content-gap work; march's expand Step 3c gate not met (15 commits/~8h since pass 288's anchor, threshold 20 commits/48h). A fresh general-purpose sweep (steered away from the extensive already-checked-clean angle list built up over ~288 passes, toward: regressions in the last 15 commits' own changes, per-route bundle weight, older-corpus fact-checks, untested edge cases in newer vendor components, cross-surface consistency) found this mentionedParts gap — the same short-name blind-spot pattern already fixed twice this week — as the one finding above the 3.0 bar; every other angle came back clean.
