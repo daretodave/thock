@@ -24,6 +24,7 @@ import {
   getAllVendors,
   getAllGroupBuys,
   getAllTrendSnapshots,
+  getLatestTrendSnapshot,
   isGroupBuyEnded,
 } from '@thock/data'
 
@@ -136,7 +137,10 @@ const parts: PartDoc[] = [
     slug: t.isoWeek,
     kind: 'tracker-week' as const,
     name: trackerWeekLabel(t.isoWeek),
-    href: `/trends/tracker/${t.isoWeek}`,
+    href:
+      t.isoWeek === getLatestTrendSnapshot()?.isoWeek
+        ? '/trends/tracker'
+        : `/trends/tracker/${t.isoWeek}`,
   })),
 ]
 

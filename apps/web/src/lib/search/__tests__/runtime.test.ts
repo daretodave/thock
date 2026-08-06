@@ -128,12 +128,14 @@ describe('searchParts', () => {
     }
   })
 
-  it('surfaces Trends Tracker weeks, each linking to its archive page', () => {
-    const weekHits = searchParts('tracker-week')
+  it('surfaces Trends Tracker weeks, each linking to its archive page — except the latest week, which canonicalizes to /trends/tracker', () => {
+    const weekHits = searchParts('tracker-week', 100)
     expect(weekHits.length).toBeGreaterThanOrEqual(1)
     for (const h of weekHits) {
       expect(h.kind).toBe('tracker-week')
-      expect(h.href).toMatch(/^\/trends\/tracker\/\d{4}-W\d{2}$/)
+      expect(h.href).toMatch(/^\/trends\/tracker(\/\d{4}-W\d{2})?$/)
     }
+    const latestHits = weekHits.filter((h) => h.href === '/trends/tracker')
+    expect(latestHits.length).toBe(1)
   })
 })
