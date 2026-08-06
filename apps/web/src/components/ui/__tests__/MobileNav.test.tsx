@@ -63,6 +63,19 @@ describe('<MobileNav>', () => {
     expect(screen.getByTestId('mobile-nav-tools-link')).toHaveAttribute('aria-current', 'page')
   })
 
+  it('marks Tools current on /quiz/keycap-set and /compare/switch, which link out from /tools but do not nest under it', () => {
+    vi.mocked(usePathname).mockReturnValue('/quiz/keycap-set')
+    const { unmount } = render(<MobileNav />)
+    fireEvent.click(screen.getByTestId('mobile-nav-toggle'))
+    expect(screen.getByTestId('mobile-nav-tools-link')).toHaveAttribute('aria-current', 'page')
+    unmount()
+
+    vi.mocked(usePathname).mockReturnValue('/compare/switch')
+    render(<MobileNav />)
+    fireEvent.click(screen.getByTestId('mobile-nav-toggle'))
+    expect(screen.getByTestId('mobile-nav-tools-link')).toHaveAttribute('aria-current', 'page')
+  })
+
   it('closes the drawer when a link inside it is clicked', () => {
     render(<MobileNav />)
     fireEvent.click(screen.getByTestId('mobile-nav-toggle'))

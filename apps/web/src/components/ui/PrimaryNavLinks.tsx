@@ -21,6 +21,15 @@ function isActive(pathname: string, href: string): boolean {
   return pathname === href || pathname.startsWith(`${href}/`)
 }
 
+// The /tools index links out to /quiz/* and /compare/* pages, which don't
+// nest under /tools — so the Tools nav item needs to match those prefixes
+// too, unlike pillar items whose sub-routes genuinely nest under their href.
+const TOOLS_ACTIVE_PREFIXES = ['/tools', '/quiz', '/compare']
+
+function isToolsActive(pathname: string): boolean {
+  return TOOLS_ACTIVE_PREFIXES.some((prefix) => isActive(pathname, prefix))
+}
+
 /**
  * Desktop primary-nav links. Split out as a client component (unlike the
  * rest of `Header`) because `aria-current`/active styling needs the live
@@ -32,7 +41,7 @@ export function PrimaryNavLinks(): ReactElement {
   return (
     <>
       {NAV_ITEMS.map((item) => {
-        const active = isActive(pathname, item.href)
+        const active = item.key === 'tools' ? isToolsActive(pathname) : isActive(pathname, item.href)
         return (
           <Link
             key={item.key}

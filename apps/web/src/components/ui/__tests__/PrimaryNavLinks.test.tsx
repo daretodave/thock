@@ -37,4 +37,15 @@ describe('<PrimaryNavLinks>', () => {
     expect(screen.getByRole('link', { name: 'Tools' })).toHaveAttribute('aria-current', 'page')
     expect(screen.getByTestId('header-tools-link')).toHaveAttribute('href', '/tools')
   })
+
+  it('marks Tools current on /quiz/switch and /compare/board, which link out from /tools but do not nest under it', () => {
+    vi.mocked(usePathname).mockReturnValue('/quiz/switch')
+    const { unmount } = render(<PrimaryNavLinks />)
+    expect(screen.getByRole('link', { name: 'Tools' })).toHaveAttribute('aria-current', 'page')
+    unmount()
+
+    vi.mocked(usePathname).mockReturnValue('/compare/board')
+    render(<PrimaryNavLinks />)
+    expect(screen.getByRole('link', { name: 'Tools' })).toHaveAttribute('aria-current', 'page')
+  })
 })

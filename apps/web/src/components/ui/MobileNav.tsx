@@ -10,6 +10,15 @@ function isActive(pathname: string, href: string): boolean {
   return pathname === href || pathname.startsWith(`${href}/`)
 }
 
+// The /tools index links out to /quiz/* and /compare/* pages, which don't
+// nest under /tools — so the Tools nav item needs to match those prefixes
+// too, unlike pillar items whose sub-routes genuinely nest under their href.
+const TOOLS_ACTIVE_PREFIXES = ['/tools', '/quiz', '/compare']
+
+function isToolsActive(pathname: string): boolean {
+  return TOOLS_ACTIVE_PREFIXES.some((prefix) => isActive(pathname, prefix))
+}
+
 /**
  * Mobile primary-nav toggle. Renders a hamburger button at `<md`
  * widths and a slide-down drawer holding the 5 pillar links.
@@ -140,9 +149,9 @@ export function MobileNav(): ReactElement {
                 href="/tools"
                 data-testid="mobile-nav-tools-link"
                 onClick={() => setOpen(false)}
-                aria-current={isActive(pathname, '/tools') ? 'page' : undefined}
+                aria-current={isToolsActive(pathname) ? 'page' : undefined}
                 className={`block py-3 font-serif text-h3 transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu ${
-                  isActive(pathname, '/tools') ? 'text-accent' : 'text-text hover:text-accent'
+                  isToolsActive(pathname) ? 'text-accent' : 'text-text hover:text-accent'
                 }`}
               >
                 Tools
