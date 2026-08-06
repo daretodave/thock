@@ -84,6 +84,15 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [engineering] [3.6] brace-expansion pnpm override stale — new DoS advisory (GHSA-rgw5-rvv9-x895) bypasses the CVE-2026-14257 pin — addressed in this commit, closes #760
+- category: engineering
+- filed: 2026-08-06 by cloud /iterate audit (fresh general-purpose sweep, angle: `pnpm audit` re-check)
+- impact: 4 (real high-severity GHSA advisory sitting unaddressed in the tree; the existing `pnpm.overrides` ceiling for `brace-expansion` was set for the prior CVE-2026-14257 mitigation and the installed version, 5.0.8, is exactly the version the new advisory says bypasses it. All 37+ dependency paths run through devDependencies only (`eslint`, `eslint-config-next` → `minimatch` → `brace-expansion`), never the production bundle — no reader-facing risk, but a real advisory left unpatched)
+- ease: 9 (single `pnpm.overrides` entry in root `package.json`; consolidated the two prior range-scoped overrides into one unconditional `"brace-expansion": ">=5.0.9"` after discovering the ranged-key form didn't match `minimatch@3.1.5`'s declared `^1.1.7` specifier — `pnpm audit` confirms 0 vulnerabilities post-fix)
+- score: 3.6 (impact × ease / 10)
+- issue: #760
+> **Resolved (2026-08-06):** replaced the two range-scoped `brace-expansion` overrides in root `package.json` with one unconditional `"brace-expansion": ">=5.0.9"`; ran `pnpm install --no-frozen-lockfile` to sync `pnpm-lock.yaml` (all instances now resolve to 5.0.9, was 5.0.8). `pnpm audit` reports 0 vulnerabilities (was 1 high).
+
 ### [x] [a11y] [5.4] part-kind index pages (/part/switch, /part/keycap-set, /part/board) render item names as plain spans, not headings — addressed in this commit, closes #700
 - category: a11y
 - filed: 2026-08-01 by cloud /march tick → /iterate audit (fresh general-purpose sweep, angle: sibling catalog surfaces to today's earlier heading-semantics fix), mirrored to issue #700
