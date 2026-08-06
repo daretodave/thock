@@ -16,7 +16,7 @@ const PATH = '/vendors'
 export const metadata = buildMetadata({
   title: 'Vendors',
   description:
-    'Browse all keyboard vendors in the thock catalog — group buys, boards, and editorial coverage from each.',
+    'Browse all keyboard vendors in the thock catalog — group buys, boards, switches, and keycap sets from each.',
   path: PATH,
 })
 
