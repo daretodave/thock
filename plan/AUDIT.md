@@ -9935,7 +9935,7 @@ passes accumulate signals.)
 > **Resolved (2026-08-05):** Dropped the `.slice(0, 50)` cap so `itemListItems` maps over the full `articles` array, matching what `<ArchiveList>` already renders. `pnpm verify` full gate green (run as sequential foreground legs — the combined `pnpm verify` call exceeded the 10-minute single-call cap): typecheck, lint, unit tests (789), script tests (182), data:validate (76 records), build, size (108.7 KB / 200 KB budget), 1125/1125 e2e.
 > Picked as the top signal this tick (cloud `/march`): no unlabeled GitHub issues (triage gate, 0 unlabeled); not Monday (W32 snapshot already existed); no pending phases/data/content-gap work (all 7 mechanical surveys re-ran clean, no rows filed); march's own expand Step 3c gate not met (7 commits/~5.5h since pass 291's anchor `bb2fdb50`, well below the 20-commit/48h threshold). AUDIT.md's only other Pending rows remained the standing non-autonomous items (`[engineering] [4.0]` Lighthouse-CI-disabled, `[needs-user-call] [4.2]` soft-404, two `[blocked-cloud-permission]` workflow-permission items). CRITIQUE.md's only Pending row remained the non-actionable `[needs-user-call]` GA-beacon item. A fresh general-purpose sweep (delegated to a sub-agent, steered toward /tools blurb accuracy, ARIA live regions, tracker spark-array consistency, JSON-LD ItemList count accuracy, recent-commit regression check, newsletter archive integrity, and vendor page freshness — angles disjoint from the ~291-pass checked-clean history) found this ItemList undercount; every other angle it checked came back clean (/tools blurbs match implementations word-for-word, ARIA live regions correct on search/compare, tracker spark[7] matches score across all 52 W30–W32 rows, no sibling regression from the two most recent fix commits).
 
-### [HOT PURSUIT] [content-gap] [7] ideas pillar — 1 of ≥2 articles in last 30d
+### [x] [HOT PURSUIT] [content-gap] [7] ideas pillar — 1 of ≥2 articles in last 30d — addressed in 99d331bc, closes #753
 - category: content-gaps
 - impact: 7 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -9947,3 +9947,48 @@ passes accumulate signals.)
 - next: /ship-content → ideas pillar article
 - issue: #753
 > Filed 2026-08-06 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+> **Resolved (2026-08-06):** shipped "The Holee mod: what foam inside the switch actually buys you" — content-curator drafted ~1300 words with 3 InlineViz diagrams, brander rendered hero art (dusty rose splash). publishedAt 2026-07-31 via gap-fill. Tags modding/acoustic/lubing/switches (all pre-existing, no tags.json change). mentionedParts: gateron-oil-king, cherry-mx2a-red. Language gate + mentionedParts gate clean. Cross-link survey (non-gating) filed 4 new AUDIT rows for this article against brass-weight-mod, gasket-mount-reality, spring-swaps-explained, typing-tests-lie. `pnpm verify` full gate green (sequential foreground legs): typecheck, lint, 789 unit tests, 182 script tests, data:validate (76 records), build, size (108.7 KB/200 KB budget), 1128/1128 e2e.
+
+### [ ] [cross-links] [4.5] holee-mod-explained ↔ brass-weight-mod — no prose cross-link (same pillar, ≥2 shared tags: modding, acoustic)
+- category: cross-links
+- filed: 2026-08-06 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: modding, acoustic
+- article-a: apps/web/src/content/articles/holee-mod-explained.mdx
+- article-b: apps/web/src/content/articles/brass-weight-mod.mdx
+- action: add [brass-weight-mod](/article/brass-weight-mod) to holee-mod-explained body, or vice versa
+
+### [ ] [cross-links] [4.5] holee-mod-explained ↔ gasket-mount-reality — no prose cross-link (same pillar, ≥2 shared tags: modding, acoustic)
+- category: cross-links
+- filed: 2026-08-06 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: modding, acoustic
+- article-a: apps/web/src/content/articles/holee-mod-explained.mdx
+- article-b: apps/web/src/content/articles/gasket-mount-reality.mdx
+- action: add [gasket-mount-reality](/article/gasket-mount-reality) to holee-mod-explained body, or vice versa
+
+### [ ] [cross-links] [4.5] holee-mod-explained ↔ spring-swaps-explained — no prose cross-link (same pillar, ≥2 shared tags: modding, switches)
+- category: cross-links
+- filed: 2026-08-06 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: modding, switches
+- article-a: apps/web/src/content/articles/holee-mod-explained.mdx
+- article-b: apps/web/src/content/articles/spring-swaps-explained.mdx
+- action: add [spring-swaps-explained](/article/spring-swaps-explained) to holee-mod-explained body, or vice versa
+
+### [ ] [cross-links] [4.5] holee-mod-explained ↔ typing-tests-lie — no prose cross-link (same pillar, ≥2 shared tags: modding, switches)
+- category: cross-links
+- filed: 2026-08-06 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: modding, switches
+- article-a: apps/web/src/content/articles/holee-mod-explained.mdx
+- article-b: apps/web/src/content/articles/typing-tests-lie.mdx
+- action: add [typing-tests-lie](/article/typing-tests-lie) to holee-mod-explained body, or vice versa
