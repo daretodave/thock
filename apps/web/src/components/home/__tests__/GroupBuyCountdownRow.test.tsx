@@ -242,6 +242,28 @@ describe('<GroupBuyCountdownRow>', () => {
     expect(screen.getByTestId('group-buy-countdown')).toHaveTextContent('10d')
   })
 
+  it('renders the authored heroImageAlt on the thumbnail, not an empty alt', () => {
+    // Regression guard: GroupBuyRow.tsx (the /group-buys page) already
+    // read groupBuy.heroImageAlt; this homepage sibling hardcoded alt=""
+    // instead, so every screen-reader user lost the authored description
+    // on the site's highest-traffic page.
+    const gb = makeGroupBuy({
+      heroImage: '/group-buy-art/some-gb.svg',
+      heroImageAlt: 'F12 TKL aluminum keyboard kit, terracotta colorway',
+    })
+    render(
+      <GroupBuyCountdownRow
+        groupBuy={gb}
+        vendor={makeVendor()}
+        now={new Date('2026-05-10T00:00:00Z')}
+      />,
+    )
+    expect(screen.getByTestId('group-buy-row-hero').querySelector('img')).toHaveAttribute(
+      'alt',
+      'F12 TKL aluminum keyboard kit, terracotta colorway',
+    )
+  })
+
   it('treats a stale-announced buy (startDate already passed) as a live countdown', () => {
     // Same stale-status class fixed for VendorGroupBuySection (99aeaf5):
     // a record can still say status:'announced' after its startDate

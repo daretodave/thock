@@ -118,7 +118,7 @@ export function GroupBuyCountdownRow({
         >
           <Image
             src={groupBuy.heroImage}
-            alt=""
+            alt={groupBuy.heroImageAlt ?? ''}
             fill
             sizes="40px"
             className="object-cover"
