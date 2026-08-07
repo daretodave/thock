@@ -84,6 +84,18 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [docs] [4.8] README.md Skills section undocuments 4 of 13 skills + brander agent — addressed in d74041db, closes #777
+- category: docs
+- filed: 2026-08-07 by cloud /iterate audit (fresh general-purpose sweep, angle: README.md accuracy vs actual skills/ inventory)
+- impact: 6 (documentation is the project's public face; this is a portable-methodology repo where README accuracy is part of the product — a cold reader gets an inaccurate picture of the loop's capabilities)
+- ease: 8 (purely additive — four more subsections following the exact template already used for the other 9 skills, plus one Sub-agents table row)
+- score: 4.8 (impact × ease / 10)
+- observation: README.md's Skills section documented 9 of the repo's 13 skills. Missing: `/ship-content` (the actual content-shipping engine that `/iterate` and `/march` delegate to for every content-gap finding), `/ship-asset`, `/jot`, and `/digest` (nightly, `.github/workflows/night.yml`). The Sub-agents table also omitted `brander` (`.claude/agents/brander.md`, invoked by `/ship-asset`). The `/march` bullet list was also missing the content-gap dispatch lane.
+- evidence: `ls skills/` → 13 files; README.md pre-fix Skills section covered only `ship-a-phase`, `ship-data`, `plan-a-phase`, `iterate`, `critique`, `triage`, `expand`, `march`, `oversight`.
+- issue: #777
+> **Resolved (2026-08-07):** added `### /ship-content`, `### /ship-asset`, `### /jot`, `### /digest` sections mirroring the existing per-skill template; added `brander` to the Sub-agents table; added the content-gap dispatch line to `/march`'s bullet list. `pnpm verify` full gate green: typecheck, lint, unit tests, test:scripts, data:validate, build, size, 1131/1131 e2e.
+> Picked as the top signal this tick: no unlabeled GitHub issues (triage gate); not Monday (weekly snapshot gate skipped, W32 already existed); no pending phases/data/content-gap work (all 7 mechanical surveys re-ran clean, no rows filed); march's own expand Step 3c gate not met (1 commit/~1.7h since pass 297's anchor `197d3963`, threshold 20 commits/48h). AUDIT.md's only other Pending rows remained the standing non-autonomous items; CRITIQUE.md's only Pending row remains the non-actionable GA-beacon item. Dispatched a fresh general-purpose sweep briefed on the extensive already-checked-clean angle list through pass 297 — this README staleness was the one finding that cleared the 3.0 bar.
+
 ### [x] [engineering] [3.2] GroupBuySchema.imageUrl is a dead, unrendered field — addressed in a33bfa9a, closes #770
 - category: engineering
 - filed: 2026-08-07 by cloud /iterate audit (fresh general-purpose sweep)
