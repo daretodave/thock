@@ -84,6 +84,17 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [engineering] [3.2] GroupBuySchema.imageUrl is a dead, unrendered field — addressed in a33bfa9a, closes #770
+- category: engineering
+- filed: 2026-08-07 by cloud /iterate audit (fresh general-purpose sweep)
+- impact: 3.5 (`imageUrl` is a nullable URL field on all 16 `data/group-buys/*.json` records, Zod-validated on every `data:validate` run, but read by zero rendering code anywhere in `apps/web` — not `GroupBuyRow.tsx`, `GroupBuyCountdownRow.tsx`, `VendorGroupBuySection.tsx`, the OG image routes, JSON-LD, RSS, or sitemap; every render surface uses the separate `heroImage` generated-SVG field instead. `kbdfans-gmk-cyl-selene.json` carried a real vendor photo URL in this field, silently discarded; the other 15 records carried `null`. Same defect class already fixed for `BoardSchema`/`KeycapSetSchema.imageUrl` in `75f0722a`, whose commit message explicitly left `GroupBuySchema.imageUrl` untouched as "documented, distinct field" — but documented isn't consumed)
+- ease: 9 (mechanical: drop the field from the schema, regenerate the JSON Schema, strip it from all 16 records, update the 9 affected test fixtures — the exact pattern `75f0722a` already proved out)
+- score: 3.2 (impact × ease / 10, rounds to match the `75f0722a` precedent's [3.2])
+- evidence: `packages/data/src/schemas/group-buy.ts:15` (field) + comment distinguishing it from `heroImage`; `grep -rn imageUrl apps/web/src` returned zero non-test consumers pre-fix; `data/group-buys/kbdfans-gmk-cyl-selene.json` had `"imageUrl": "https://kbdfans.com/cdn/shop/files/dase.jpg?v=1779237617"`.
+- issue: #770
+> **Resolved (2026-08-07):** dropped `imageUrl` from `GroupBuySchema` in `packages/data/src/schemas/group-buy.ts`; regenerated `data/schemas/group-buy.schema.json` via `data:validate`; stripped the field from all 16 `data/group-buys/*.json` records; updated the 9 affected test fixtures (group-buy component/page/loader/schema/crossrefs tests); regenerated derived manifests (data-runtime, og-manifest, search index) that embed the group-buy record shape. `pnpm verify` full gate green: typecheck, lint, 793 unit tests, 182 script tests, data:validate (78 records), build, size (108.7 KB/200 KB budget), 1131/1131 e2e.
+> Picked as the top signal this tick (cloud `/march`): no unlabeled GitHub issues (triage gate, 0 unlabeled); not Monday (weekly snapshot gate skipped, W32 already existed); no pending phases/data/content-gap work (all 9 mechanical surveys re-ran clean, no rows filed); march's own expand Step 3c gate not met (13 commits/~7.6h since pass 293's anchor `f582a46d`, threshold 20 commits/48h). AUDIT.md's only other Pending rows remained the four standing non-autonomous items, unchanged. CRITIQUE.md's only Pending row remains the non-actionable GA-beacon item. Dispatched a fresh general-purpose sweep steered toward cross-surface consistency on the two brand-new group-buy records and dead-field/schema-drift angles disjoint from the exhausted already-checked-clean list — found this `GroupBuySchema.imageUrl` dead field as the one finding clearing the 3.0 bar; the two new records' cross-surface rendering, tracker-score citations, and cross-linked article slugs all checked out clean.
+
 ### [x] [a11y] [4.5] homepage group-buy thumbnails render alt="" instead of authored heroImageAlt — addressed in this commit, closes #769
 - category: a11y
 - filed: 2026-08-07 by cloud /iterate audit (fresh general-purpose sweep)
