@@ -8152,7 +8152,8 @@
           "acoustic",
           "aluminum",
           "polycarbonate",
-          "beginner"
+          "beginner",
+          "tray-mount"
         ],
         "publishedAt": "2026-04-25T13:00:00.000Z",
         "updatedAt": "2026-07-28T00:00:00.000Z",
@@ -9213,5 +9214,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-08-06T10:12:25.239Z"
+  "generatedAt": "2026-08-07T04:48:18.494Z"
 }
