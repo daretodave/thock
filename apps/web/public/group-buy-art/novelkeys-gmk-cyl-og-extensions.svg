@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1200 750"
+     preserveAspectRatio="xMidYMid meet"
+     fill="none"
+     stroke="oklch(0.78 0.005 90)"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     role="img"
+     aria-label="thock group-buy card art for NovelKeys GMK CYL OG Extensions — a bottom-row extension cluster centered on a wide focal spacebar, terracotta splash">
+  <title>thock group-buy hero — GMK CYL OG Extensions (NovelKeys), bottom-row extension kit: two back-row modifiers, two front-row modifiers flanking a focal spacebar, terracotta splash</title>
+
+  <!--
+    Composition: an "extensions" kit ships bottom-row and spacebar
+    replacement keys for an existing GMK CYL colorway, not a full
+    alpha set. The cluster reflects that identity directly — no
+    alpha keys at all, just modifiers and one wide spacebar.
+
+    Back row: two 1.25u modifier caps (Ctrl-analog left, Alt-analog
+    right), drawn smaller and set back, implying "the rest of the
+    bottom row."
+    Front row: two 1.25u modifier caps (Win/Fn-analogs) flanking a
+    single wide focal spacebar (~6.25u), the clear visual anchor —
+    this is the piece an extension kit is built around.
+
+    Splash matches the sibling article's own hero art palette
+    (apps/web/public/hero-art/gmk-cyl-og-extensions-interest-check.svg):
+    muted terracotta, applied only to the focal spacebar + one
+    accent pip, per the single-splash convention.
+
+    Splash: oklch(0.62 0.13  35)   (muted terracotta — #B5603F approx)
+    Accent: oklch(0.80 0.135 75)   (warm bronze — #BFA67A approx; theme dot)
+    Stroke base: oklch(0.78 0.005 90)  (warm grey)
+  -->
+
+  <!-- ── Splash wash: a diffuse terracotta ellipse behind the cluster ───────────────────── -->
+  <ellipse cx="620" cy="410" rx="510" ry="205"
+           fill="oklch(0.62 0.13 35 / 0.09)" stroke="none"/>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       BACK ROW — two 1.25u modifier caps, set back and smaller,
+       implying "the rest of the bottom row" without drawing it all.
+       Back row baseline: top edge y=200, body bottom y=330
+  ════════════════════════════════════════════════════════════════ -->
+
+  <!-- Back row: LEFT cap — 1.25u modifier (Ctrl-analog) -->
+  <g>
+    <!-- Cap body -->
+    <path d="
+      M 265 200
+      L 430 200
+      L 437 328
+      L 258 328
+      Z"/>
+    <!-- Cherry inset dish -->
+    <path d="
+      M 283 216
+      L 412 216
+      L 416 296
+      L 279 296
+      Z" stroke-opacity="0.55"/>
+    <!-- Front lip band -->
+    <path d="M 279 296 L 416 296 L 423 320 L 272 320 Z" stroke-opacity="0.38"/>
+    <!-- Row-sculpt centerline -->
+    <path d="M 287 250 Q 348 241 408 250" stroke-opacity="0.28"/>
+  </g>
+
+  <!-- Back row: RIGHT cap — 1.25u modifier (Alt-analog) -->
+  <g>
+    <!-- Cap body -->
+    <path d="
+      M 775 200
+      L 940 200
+      L 947 328
+      L 768 328
+      Z"/>
+    <!-- Cherry inset dish -->
+    <path d="
+      M 793 216
+      L 922 216
+      L 926 296
+      L 789 296
+      Z" stroke-opacity="0.55"/>
+    <!-- Front lip -->
+    <path d="M 789 296 L 926 296 L 933 320 L 782 320 Z" stroke-opacity="0.38"/>
+    <!-- Row-sculpt centerline -->
+    <path d="M 797 250 Q 858 241 918 250" stroke-opacity="0.28"/>
+  </g>
+
+  <!-- ════════════════════════════════════════════════════════════════
+       FRONT ROW — two 1.25u modifiers flanking the focal spacebar
+       Front row baseline: top edge y=390, body bottom y=530
+       Modifier L (1.25u): x=140..320   (width 180)
+       Spacebar FOCAL:     x=350..950   (width 600)
+       Modifier R (1.25u): x=980..1160  (width 180)
+  ════════════════════════════════════════════════════════════════ -->
+
+  <!-- Front row: LEFT cap — 1.25u modifier (Win/GUI-analog) -->
+  <g>
+    <!-- Cap body -->
+    <path d="
+      M 140 390
+      L 320 390
+      L 327 528
+      L 133 528
+      Z"/>
+    <!-- Cherry inset dish -->
+    <path d="
+      M 158 407
+      L 300 407
+      L 303 494
+      L 154 494
+      Z" stroke-opacity="0.55"/>
+    <!-- Front lip -->
+    <path d="M 154 494 L 303 494 L 310 520 L 147 520 Z" stroke-opacity="0.38"/>
+    <!-- Row-sculpt centerline -->
+    <path d="M 162 450 Q 230 440 296 450" stroke-opacity="0.28"/>
+  </g>
+
+  <!-- Front row: CENTER cap — wide spacebar FOCAL (terracotta splash) -->
+  <g>
+    <!-- Focal cap body — terracotta fill -->
+    <path d="
+      M 350 390
+      L 950 390
+      L 958 528
+      L 342 528
+      Z"
+      fill="oklch(0.62 0.13 35 / 0.88)"
+      stroke="oklch(0.62 0.13 35)"/>
+    <!-- Inset dish — lighter terracotta wash, long and shallow like a real spacebar dish -->
+    <path d="
+      M 372 410
+      L 928 410
+      L 932 480
+      L 368 480
+      Z"
+      fill="oklch(0.70 0.10 35 / 0.70)"
+      stroke="oklch(0.62 0.13 35)"
+      stroke-opacity="0.80"/>
+    <!-- Front lip -->
+    <path d="M 368 480 L 932 480 L 940 512 L 360 512 Z"
+      fill="oklch(0.62 0.13 35 / 0.55)"
+      stroke="oklch(0.62 0.13 35)"
+      stroke-opacity="0.65"/>
+    <!-- Row-sculpt centerline, long and gentle across the full spacebar span -->
+    <path d="M 384 444 Q 650 434 916 444"
+          stroke="oklch(0.62 0.13 35)"
+          stroke-opacity="0.30"
+          stroke-dasharray="3 5"/>
+  </g>
+
+  <!-- Front row: RIGHT cap — 1.25u modifier (Fn-analog, warm-grey stroke) -->
+  <g>
+    <!-- Cap body -->
+    <path d="
+      M 980 390
+      L 1160 390
+      L 1167 528
+      L 973 528
+      Z"/>
+    <!-- Cherry inset dish -->
+    <path d="
+      M 998 407
+      L 1140 407
+      L 1143 494
+      L 994 494
+      Z" stroke-opacity="0.55"/>
+    <!-- Front lip -->
+    <path d="M 994 494 L 1143 494 L 1150 520 L 987 520 Z" stroke-opacity="0.38"/>
+    <!-- Row-sculpt centerline -->
+    <path d="M 1002 450 Q 1070 440 1136 450" stroke-opacity="0.28"/>
+  </g>
+
+  <!-- ── Quiet ground anchor: dashed line beneath the cluster ──────────────────────────── -->
+  <line x1="120" y1="610" x2="980" y2="610"
+        stroke-opacity="0.15" stroke-dasharray="3 9"/>
+
+  <!-- ── Measurement ticks at left margin — bracket the cluster height ─────────────────── -->
+  <g stroke-opacity="0.22">
+    <line x1="95" y1="390" x2="109" y2="390"/>
+    <line x1="95" y1="528" x2="109" y2="528"/>
+    <line x1="102" y1="390" x2="102" y2="528" stroke-opacity="0.15"/>
+  </g>
+
+  <!-- ── Bronze theme dot, upper-right — family ornamental anchor ──────────────────────── -->
+  <!-- Inner pip: warm bronze fill -->
+  <circle cx="1058" cy="150" r="5"
+          fill="oklch(0.80 0.135 75 / 0.90)"
+          stroke="none"/>
+  <!-- Outer halo ring in bronze -->
+  <circle cx="1058" cy="150" r="16"
+          stroke="oklch(0.80 0.135 75)"
+          stroke-opacity="0.32"
+          fill="none"/>
+
+  <!-- ── Secondary terracotta accent pip — echoes the focal splash color ────────────────── -->
+  <circle cx="1050" cy="628" r="5"
+          fill="oklch(0.62 0.13 35 / 0.88)"
+          stroke="none"/>
+  <circle cx="1050" cy="628" r="14"
+          stroke="oklch(0.62 0.13 35)"
+          stroke-opacity="0.38"
+          fill="none"/>
+</svg>

@@ -1,0 +1,23 @@
+{
+  "asset": "/group-buy-art/novelkeys-gmk-cyl-og-extensions.svg",
+  "type": "group-buy-hero",
+  "entity": "novelkeys-gmk-cyl-og-extensions",
+  "subject": "keycap-cluster",
+  "generated": "2026-08-07",
+  "splash": "#B5603F",
+  "accent": "#BFA67A",
+  "notes": "GMK CYL OG Extensions is a bottom-row/spacebar replacement kit for existing GMK CYL colorways, not a full alpha set — cluster deliberately omits alphas and centers on a wide focal spacebar flanked by four 1.25u modifier caps. Terracotta splash + bronze accent match the sibling article's own hero art (apps/web/public/hero-art/gmk-cyl-og-extensions-interest-check.svg) for cross-piece consistency.",
+  "kind": "group-buy-hero-art",
+  "target": "apps/web/public/group-buy-art/novelkeys-gmk-cyl-og-extensions.svg",
+  "source": "plan/bearings.md § Group-buy hero art — colorful SVGs",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject",
+  "size": [1200, 750],
+  "splash_color": "oklch(0.62 0.13 35)",
+  "accent_color": "oklch(0.80 0.135 75)",
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": [],
+  "composition": "Four Cherry-profile modifier caps (1.25u each) framing one wide focal spacebar (~6.25u): back row — two smaller modifiers set back (Ctrl-analog left, Alt-analog right), implying the rest of the bottom row without drawing it in full; front row — a modifier left (Win/GUI-analog), the focal spacebar center, a modifier right (Fn-analog). The composition intentionally excludes any alpha keycaps to signal 'extension kit, not full set' at a glance. Focal spacebar carries the terracotta splash fill across body, inset dish, and front lip, with a long gentle dashed row-sculpt centerline spanning its full width. Bronze theme dot (upper-right) and terracotta accent pip (lower-right) provide the two color anchors per the single-splash convention, positioned to echo the sibling gmk-cyl-og-extensions-interest-check.svg hero art's palette.",
+  "generated_by": "brander (sub-agent)",
+  "generated_at": "2026-08-07",
+  "commit_at_render": "f07c9a7f8c51f68d029470903f82d028581af22f"
+}

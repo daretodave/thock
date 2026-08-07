@@ -113979,6 +113979,13 @@
       "href": "/group-buys/past#kbdfans-gsk-sweet-nightmare"
     },
     {
+      "id": "novelkeys-gmk-cyl-og-extensions",
+      "slug": "novelkeys-gmk-cyl-og-extensions",
+      "kind": "group-buy",
+      "name": "GMK CYL OG Extensions",
+      "href": "/group-buys#novelkeys-gmk-cyl-og-extensions"
+    },
+    {
       "id": "wuque-studio-paper80-whatever-studio",
       "slug": "wuque-studio-paper80-whatever-studio",
       "kind": "group-buy",
@@ -114084,6 +114091,6 @@
       "href": "/trends/tracker"
     }
   ],
-  "generatedAt": "2026-08-07T06:38:23.709Z",
+  "generatedAt": "2026-08-07T07:48:08.980Z",
   "count": 77
 }
