@@ -115,6 +115,52 @@ Posture is set to **bold** in `bearings.md`. Rate-limited (≥20 commits or ≥4
 
 Source: [`skills/expand.md`](./skills/expand.md)
 
+### `/ship-content`
+
+The **content-velocity engine**. Reads the top content-gap row from `plan/AUDIT.md`, computes a publish date via the rolling-30-day gap-fill algorithm, spawns `content-curator` + `brander` in parallel, extends `tags.json` if needed, verifies, commits, pushes. `/iterate` and `/march` both delegate here for every content-gap finding rather than drafting articles inline.
+
+```
+/ship-content                       # dispatch from the content-gap queue
+```
+
+Source: [`skills/ship-content.md`](./skills/ship-content.md)
+
+### `/ship-asset`
+
+**Demand-pull only.** Renders and ships one brand asset (OG image, favicon, social card, SVG → PNG, wordmark variant) via the `brander` sub-agent. Hard-gated on `Surface: site` in `plan/bearings.md` — self-disables if the surface ever changes. Never called proactively by `/march`; fires only when `/critique`, `/iterate`, or a phase brief names an asset deliverable.
+
+```
+/ship-asset                         # next asset finding from CRITIQUE/AUDIT
+/ship-asset og <route-path>         # render OG for one route
+/ship-asset favicon                 # (re)render the favicon set
+/ship-asset social <route-path>     # render social card variants
+/ship-asset svg2png <design-path>   # convert one SVG → PNG (+ provenance)
+```
+
+Source: [`skills/ship-asset.md`](./skills/ship-asset.md)
+
+### `/jot`
+
+The **user's quickfire**. Spotted something on the live site? Drop a free-text note — the skill writes one row to `plan/CRITIQUE.md`, commits, pushes, and exits in seconds. No questions back. The next `/iterate` tick scores it against everything else (user-source findings carry a `+0.5` bump) and almost always ships it first.
+
+```
+/jot <free-text observation>
+/jot --url <path> <text>            # attach the URL you were on
+/jot --severity high <text>         # jumps the iterate queue
+```
+
+Source: [`skills/jot.md`](./skills/jot.md)
+
+### `/digest`
+
+The **night shift**. One tick a day: takes the loop's pulse, runs the full verify gate as a breadth check, writes the morning briefing to `plan/DIGEST.md`, and proposes gate tunings as candidates (never applies them). Runs from `.github/workflows/night.yml`; never dispatched by `/march`.
+
+```
+/digest                             # the full nightly pass
+```
+
+Source: [`skills/digest.md`](./skills/digest.md)
+
 ### `/march`
 
 The outer dispatcher. Picks the right thing to do automatically:
@@ -123,6 +169,7 @@ The outer dispatcher. Picks the right thing to do automatically:
 - critique due (rate-limited) → behaves as `/critique`
 - pending phase → behaves as `/ship-a-phase`
 - pending data → behaves as `/ship-data`
+- content-gap queue ≥ 3.0 → behaves as `/ship-content`
 - expand due + bold posture → behaves as `/expand`
 - else → behaves as `/iterate`
 
@@ -164,6 +211,7 @@ Each skill delegates aggressively to specialist sub-agents (definitions in [`.cl
 | `content-curator` | Drafting MDX articles in thock's editorial voice. |
 | `data-steward` | Schema-heavy data work — new entity types, mass cross-ref repair, normalize passes. |
 | `reader` | Fresh-eyes external observer of the live site (used by `/critique`). |
+| `brander` | Renders brand assets — OG images, favicons, social cards, wordmark variants, SVG → PNG (used by `/ship-asset`). |
 
 ---
 
