@@ -55,7 +55,6 @@ export function makeGroupBuy(over: Partial<GroupBuy> = {}): GroupBuy {
     endDate: '2026-05-30',
     region: 'global',
     url: 'https://example.com/gb',
-    imageUrl: null,
     heroImage: null,
     heroImageAlt: null,
     status: 'live',

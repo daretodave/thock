@@ -49,7 +49,6 @@ const groupBuy = (
   endDate: '2026-06-15',
   region: 'global',
   url: 'https://example.com/gb',
-  imageUrl: null,
   heroImage: null,
   heroImageAlt: null,
   status: 'live',

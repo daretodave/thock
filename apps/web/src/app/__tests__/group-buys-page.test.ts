@@ -14,7 +14,6 @@ function gb(over: Partial<GroupBuy> & Pick<GroupBuy, 'slug'>): GroupBuy {
     endDate: '2026-06-01',
     region: 'global',
     url: 'https://example.com/gb',
-    imageUrl: null,
     heroImage: null,
     heroImageAlt: null,
     status: 'live',

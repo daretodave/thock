@@ -30,16 +30,6 @@
             }
           ]
         },
-        "imageUrl": {
-          "anyOf": [
-            {
-              "$ref": "#/definitions/group-buy/properties/url"
-            },
-            {
-              "type": "null"
-            }
-          ]
-        },
         "name": {
           "minLength": 2,
           "type": "string"
@@ -117,7 +107,6 @@
         "endDate",
         "region",
         "url",
-        "imageUrl",
         "heroImage",
         "heroImageAlt",
         "status",

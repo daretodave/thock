@@ -11,7 +11,6 @@ const VALID = {
   endDate: '2026-05-17',
   region: 'global' as const,
   url: 'https://cannonkeys.com/products/nyawice',
-  imageUrl: null,
   heroImage: '/group-buy-art/cannonkeys-nyawice.svg',
   heroImageAlt: 'Top-down Alice-layout keyboard silhouette with focal cat-ear silhouettes.',
   status: 'live' as const,

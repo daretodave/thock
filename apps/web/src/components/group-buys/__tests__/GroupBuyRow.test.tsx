@@ -16,7 +16,6 @@ function gb(over: Partial<GroupBuy> = {}): GroupBuy {
     endDate: '2026-06-15',
     region: 'global',
     url: 'https://cannonkeys.com/products/mode-sonnet',
-    imageUrl: null,
     heroImage: null,
     heroImageAlt: null,
     status: 'live',

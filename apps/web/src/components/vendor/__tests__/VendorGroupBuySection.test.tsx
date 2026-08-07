@@ -23,7 +23,6 @@ const BASE_GB: GroupBuy = {
   endDate: '2026-06-30',
   region: 'global',
   url: 'https://cannonkeys.com/mode-sonnet-r2',
-  imageUrl: null,
   heroImage: null,
   heroImageAlt: null,
   status: 'live',

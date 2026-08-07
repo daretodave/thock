@@ -10,7 +10,6 @@ function makeGroupBuy(overrides: Partial<GroupBuy> & { slug: string; status: Gro
     productKind: 'board',
     region: 'global',
     url: 'https://example.com',
-    imageUrl: null,
     heroImage: null,
     heroImageAlt: null,
     description: 'A test group buy for unit testing purposes only.',

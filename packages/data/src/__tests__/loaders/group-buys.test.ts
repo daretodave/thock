@@ -48,7 +48,6 @@ describe('group-buys loader', () => {
         endDate: '2026-07-15',
         region: 'global',
         url: 'https://example.com',
-        imageUrl: null,
         heroImage: null,
         heroImageAlt: null,
         status: 'live',
