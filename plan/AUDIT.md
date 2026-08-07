@@ -84,6 +84,17 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [content] [3.6] tray-mount tag has zero article usage despite mounting-styles-compared carrying a dedicated section on it — addressed in this commit, closes #764
+- category: content
+- filed: 2026-08-07 by cloud /iterate audit (fresh general-purpose sweep, angle: dead-tag scan across tags.json vs. article frontmatter usage)
+- impact: 4 (`tags.json` defines 82 tags; `tray-mount` was the only one with zero article usage across all 77 articles' frontmatter, even though `mounting-styles-compared.mdx` has a full section, "Tray-mount and the 'no plate fixing' family" (lines 72–113), substantively covering the exact topic. `/tag/[slug]/page.tsx` builds all 82 tags unfiltered via `generateStaticParams()`, so `/tag/tray-mount` was a crawlable, indexable page carrying CollectionPage/BreadcrumbList/ItemList JSON-LD that rendered "0 articles tagged #tray-mount" — a real content-taxonomy gap, though narrow exposure since the tag was already excluded from `/tags` index and `sitemap.ts` (both filter on `length > 0`))
+- ease: 9 (one-line frontmatter edit — add `tray-mount` to the existing tags array; no schema/component change)
+- score: 3.6 (impact × ease / 10)
+- evidence: `grep -n "^tags:" apps/web/src/content/articles/*.mdx | grep tray-mount` returned nothing before the fix.
+- issue: #764
+> **Resolved (2026-08-07):** added `tray-mount` to `mounting-styles-compared.mdx`'s frontmatter tags array. `article-parts-check.mjs` confirmed clean on the touched file. `pnpm verify` full gate green: typecheck, lint, unit tests, script tests, data:validate, build, size, 1131/1131 e2e.
+> Picked as the top signal this tick: no unlabeled GitHub issues (triage gate); not Monday (weekly snapshot gate skipped, W32 already existed); no pending phases/data/content-gap work (all 7 mechanical surveys re-ran clean, no rows filed); march's own expand Step 3c gate not met (1 commit/~1.3h since pass 293's anchor `f582a46d`, well below the 20-commit/48h threshold). AUDIT.md's only other Pending rows remained the standing non-autonomous items (`[blocked-cloud-permission]` march.yml/heartbeat.yml items, `[engineering] [4.0]` Lighthouse-CI `/oversight` item, `[needs-user-call] [4.2]` soft-404 item); CRITIQUE.md's only Pending row remains the non-actionable GA-beacon item. A fresh general-purpose sweep (angles disjoint from passes 249–293: robots.txt vs. actual disallow list, sitemap lastmod accuracy, rel=noopener coverage on target=_blank links, BreadcrumbList JSON-LD shape on nested routes, /search canonical handling with query params, MiniSearch boost/stopword tuning, dead-tag scan) found this tray-mount gap as the one finding clearing the 3.0 bar; every other angle came back clean.
+
 ### [x] [engineering] [3.6] brace-expansion pnpm override stale — new DoS advisory (GHSA-rgw5-rvv9-x895) bypasses the CVE-2026-14257 pin — addressed in this commit, closes #760
 - category: engineering
 - filed: 2026-08-06 by cloud /iterate audit (fresh general-purpose sweep, angle: `pnpm audit` re-check)
