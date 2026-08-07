@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1200 750"
+     preserveAspectRatio="xMidYMid meet"
+     fill="none"
+     stroke="oklch(0.78 0.005 90)"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     role="img"
+     aria-label="thock group-buy card art for Divinikey GMK CYL TA Neo — six CYL-profile keycaps in a two-row cluster, cool slate alphas with one focal neon-cyan cap evoking the returning-classic TA Neo colorway">
+  <title>thock group-buy hero — GMK CYL TA Neo (Divinikey), six CYL-profile keycaps, slate alpha cluster, focal neon-cyan modifier with terminal-cursor motif</title>
+
+  <!--
+    Composition: six CYL-profile keycaps in two staggered rows of three,
+    near-top-down with the cylindrical scoop hinted at, matching the
+    established group-buy card grid (see sibling kbdfans-gmk-cyl-ramune.svg
+    and kbdfans-gmk-cyl-greg-2.svg for the shared cap template + layout).
+
+    TA Neo colorway translation to OKLCH:
+      slate alpha    oklch(0.40 0.025 250)  = cool dark slate-blue-grey,
+                      the "returning classic" dark alpha body
+      neon cyan      oklch(0.74 0.12  195)  = vivid cool accent, the "Neo"
+                      pop against the muted slate — verified in-gamut
+                      (max chroma at L0.74/H195 is ~0.123; 0.12 sits
+                      inside with margin, no sRGB clipping)
+
+    Two caps carry the slate treatment (back-middle, front-right) to read
+    as the dominant "returning-classic" character of the set. One focal
+    cap (front-middle) carries the neon-cyan splash plus a small hollow
+    terminal-cursor rect on its dish — a quiet nod to TA's retro-terminal
+    lineage without being literal or kitsch. The remaining three caps are
+    warm-grey stroke only, per the single-family-of-color convention
+    (this record explicitly departs from a single flat hue toward a
+    cool slate+neon pairing, per brief — mirrors the established
+    kbdfans-gmk-cyl-ramune.svg precedent for a two-tone colorway kit).
+
+    Bronze theme dot: oklch(0.80 0.135 75) — the fixed family ornamental
+    anchor, present regardless of a record's own splash palette (see
+    novelkeys-gmk-cyl-og-extensions.svg, divinikey-dcs-dolch.svg).
+  -->
+
+  <!-- Splash wash: neon-cyan tinted ellipse behind the cluster (very low opacity) -->
+  <ellipse cx="600" cy="395" rx="520" ry="225"
+           fill="oklch(0.74 0.12 195 / 0.08)" stroke="none"/>
+
+  <!-- ============================================================
+       6 GMK CYL keycaps, two staggered rows of three.
+       Each cap:
+         outer silhouette path (base footprint with rounded corners)
+         inset top surface path (the CYL dish)
+         scoop arc(s)
+       Cap template + grid inherited from kbdfans-gmk-cyl-ramune.svg.
+  ============================================================ -->
+
+  <!-- ============================================================
+       Row 1: back row, three 1u caps
+  ============================================================ -->
+
+  <!-- Back-left — warm-grey -->
+  <g transform="translate(295 235)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          stroke-opacity="0.70"/>
+    <path d="M 38 90 Q 88 76 138 90" stroke-opacity="0.45"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke-opacity="0.30"/>
+  </g>
+
+  <!-- Back-middle — slate alpha fill -->
+  <g transform="translate(515 235)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"
+          fill="oklch(0.40 0.025 250 / 0.86)" stroke="oklch(0.34 0.03 250)"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          fill="oklch(0.48 0.03 248 / 0.65)" stroke="oklch(0.60 0.015 245)" stroke-opacity="0.55"/>
+    <path d="M 38 90 Q 88 76 138 90" stroke="oklch(0.70 0.02 240)" stroke-opacity="0.50"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke="oklch(0.70 0.02 240)" stroke-opacity="0.32"/>
+  </g>
+
+  <!-- Back-right — warm-grey -->
+  <g transform="translate(735 235)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          stroke-opacity="0.70"/>
+    <path d="M 38 90 Q 88 76 138 90" stroke-opacity="0.45"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke-opacity="0.30"/>
+  </g>
+
+  <!-- ============================================================
+       Row 2: front row, three 1u caps, shifted half-cap right
+  ============================================================ -->
+
+  <!-- Front-left — warm-grey -->
+  <g transform="translate(405 435)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          stroke-opacity="0.70"/>
+    <path d="M 38 90 Q 88 76 138 90" stroke-opacity="0.45"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke-opacity="0.30"/>
+  </g>
+
+  <!-- Front-middle — FOCAL neon-cyan cap with terminal-cursor motif -->
+  <g transform="translate(625 435)">
+    <!-- Neon-cyan cap body -->
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"
+          fill="oklch(0.74 0.12 195 / 0.90)" stroke="oklch(0.60 0.135 195)"/>
+    <!-- Lighter top surface so the scoop reads -->
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          fill="oklch(0.82 0.09 195 / 0.75)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.45"/>
+    <!-- CYL scoop arcs, cool near-white highlight -->
+    <path d="M 38 90 Q 88 74 138 90" stroke="oklch(0.96 0.02 195)" stroke-opacity="0.60"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke="oklch(0.96 0.02 195)" stroke-opacity="0.38"/>
+    <!-- Terminal-cursor motif: small hollow block, retro-terminal nod for "Neo" -->
+    <rect x="72" y="68" width="32" height="14"
+          fill="none" stroke="oklch(0.30 0.05 195)" stroke-width="2.5" stroke-opacity="0.85"/>
+  </g>
+
+  <!-- Front-right — slate alpha fill (second slate cap, echoes back-middle) -->
+  <g transform="translate(845 435)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"
+          fill="oklch(0.44 0.028 252 / 0.82)" stroke="oklch(0.38 0.03 250)"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          fill="oklch(0.52 0.03 248 / 0.60)" stroke="oklch(0.60 0.015 245)" stroke-opacity="0.50"/>
+    <path d="M 38 90 Q 88 76 138 90" stroke="oklch(0.70 0.02 240)" stroke-opacity="0.45"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke="oklch(0.70 0.02 240)" stroke-opacity="0.28"/>
+  </g>
+
+  <!-- ── Quiet ground anchor: dashed line beneath the cluster ──────────────────────────── -->
+  <line x1="150" y1="628" x2="1010" y2="628"
+        stroke-opacity="0.15" stroke-dasharray="3 9"/>
+
+  <!-- ── Measurement ticks at left margin — bracket the cluster height ─────────────────── -->
+  <g stroke-opacity="0.22">
+    <line x1="120" y1="235" x2="134" y2="235"/>
+    <line x1="120" y1="599" x2="134" y2="599"/>
+    <line x1="127" y1="235" x2="127" y2="599" stroke-opacity="0.15"/>
+  </g>
+
+  <!-- ============================================================
+       NEON-CYAN ACCENT PIP: focal dot below the cluster, echoing
+       the neon splash. Mirrors the accent-pip convention in the
+       ramune / og-extensions siblings.
+  ============================================================ -->
+  <circle cx="770" cy="640" r="6"
+          fill="oklch(0.74 0.12 195 / 0.92)"
+          stroke="oklch(0.60 0.135 195)"/>
+  <circle cx="770" cy="640" r="13"
+          stroke="oklch(0.74 0.12 195)"
+          stroke-opacity="0.40"
+          fill="none"/>
+
+  <!-- ── Bronze theme dot, upper-right — family ornamental anchor (fixed) ───────────────── -->
+  <circle cx="1058" cy="118" r="6"
+          fill="oklch(0.80 0.135 75 / 0.90)"
+          stroke="none"/>
+  <circle cx="1058" cy="118" r="15"
+          stroke="oklch(0.80 0.135 75)"
+          stroke-opacity="0.34"
+          fill="none"/>
+</svg>

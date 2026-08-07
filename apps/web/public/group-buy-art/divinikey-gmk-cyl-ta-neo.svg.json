@@ -1,0 +1,34 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-07T00:00:00.000Z",
+  "commit": "89972cf57d042a61ddf5d0b0a4965c5677d1810b",
+  "kind": "group-buy-hero",
+  "source": null,
+  "template": "group-buy-six-cap-cluster",
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": [],
+  "outputs": [
+    "apps/web/public/group-buy-art/divinikey-gmk-cyl-ta-neo.svg"
+  ],
+  "entity": "divinikey-gmk-cyl-ta-neo",
+  "subject": "keycap-cluster",
+  "size": [1200, 750],
+  "splash_color": {
+    "name": "ta-neo-slate",
+    "oklch": "oklch(0.40 0.025 250)"
+  },
+  "secondary_splash": {
+    "name": "ta-neo-neon-cyan",
+    "oklch": "oklch(0.74 0.12 195)"
+  },
+  "accent_pip": {
+    "name": "ta-neo-neon-cyan",
+    "oklch": "oklch(0.74 0.12 195)"
+  },
+  "bronze_accent": "oklch(0.80 0.135 75)",
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "notes": "GMK CYL TA Neo is a keycap-set group buy (productKind: keycap-set) — six CYL-profile keycaps in two staggered rows of three, matching the shared cap template/grid from kbdfans-gmk-cyl-ramune.svg. Two caps (back-middle, front-right) carry a cool dark slate-blue-grey fill for the 'returning classic' alpha character; one focal cap (front-middle) carries a vivid neon-cyan splash plus a small hollow terminal-cursor rect motif on its dish, a quiet nod to TA's retro-terminal lineage. Remaining three caps are warm-grey stroke only. Palette chosen to honor heroImageAlt ('cool slate-and-neon TA Neo colorway') and to read distinctly from the warm-bronze/terracotta novelkeys-gmk-cyl-og-extensions.svg sibling per the brief. The neon-cyan value (oklch 0.74 0.12 195) was numerically verified in-gamut for sRGB (max in-gamut chroma at L0.74/H195 is ~0.123, computed via manual OKLab->linear-sRGB conversion) before use, since 'neon' hues at high lightness clip easily. Bronze theme dot (oklch 0.80 0.135 75) retained as the fixed family ornamental anchor per novelkeys-gmk-cyl-og-extensions.svg and divinikey-dcs-dolch.svg precedent, independent of this record's own splash palette. Two-tone slate+neon treatment mirrors the established multi-hue exception already used in kbdfans-gmk-cyl-ramune.svg for a similarly two-tone colorway kit.",
+  "data_sources": [],
+  "warnings": []
+}
