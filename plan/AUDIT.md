@@ -84,6 +84,17 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [engineering] [5.4] content-gap-survey.mjs missing isMain guard — its own 17 unit tests silently never ran — addressed in this commit, closes #783
+- category: engineering
+- filed: 2026-08-08 by cloud /iterate audit (fresh general-purpose sweep, angle: recently-touched scripts/*.mjs for regressions)
+- impact: 6 (not user-facing, but it's the autonomous loop's own content-gap audit pipeline — every other `scripts/*.mjs` file with a `__test` export uses the `isMain` guard pattern; this one didn't, so its dedup logic added just hours earlier in commit 99a0fe89 shipped with zero real regression protection despite green CI)
+- ease: 9 (one-line-pattern fix, already proven correct by the sibling `scripts/newsletter-gap-survey.mjs`)
+- score: 5.4 (impact × ease / 10)
+- observation: `scripts/content-gap-survey.mjs`'s CLI body ran unconditionally at module-eval time and ended with `process.exit(0)`. `scripts/__tests__/content-gap-survey.test.mjs` imports `__test` from the module as its first statement — ES module evaluation runs the imported module's top level first, so the import executed the full survey and called `process.exit(0)` before any of the file's 17 `test()`/`describe()` cases ever ran. The file collapsed to one opaque "ok" in `node --test` output instead of the 7 nested `describe()` subtests every sibling script shows.
+- evidence: `grep -n "isMain" scripts/content-gap-survey.mjs scripts/newsletter-gap-survey.mjs` — 0 matches in content-gap-survey.mjs, 2 in newsletter-gap-survey.mjs. `node --test scripts/__tests__/content-gap-survey.test.mjs` before the fix showed a single collapsed "ok" with no nested subtests; after the fix, 17/17 tests pass across 7 suites.
+- issue: #783
+> **Resolved (2026-08-08):** moved the `__test` export above the CLI section and wrapped the CLI body (args parsing, article read, survey, write/dry-run branches, all `process.exit()` calls) in `const isMain = fileURLToPath(import.meta.url) === process.argv[1]` / `if (!isMain) { ... } else { ... }`, mirroring `scripts/newsletter-gap-survey.mjs` exactly. Verified `node --test scripts/__tests__/content-gap-survey.test.mjs` now runs and passes all 17 real subtests, and the CLI itself (`node scripts/content-gap-survey.mjs` / `--json`) still behaves identically.
+
 ### [x] [docs] [4.8] README.md Skills section undocuments 4 of 13 skills + brander agent — addressed in d74041db, closes #777
 - category: docs
 - filed: 2026-08-07 by cloud /iterate audit (fresh general-purpose sweep, angle: README.md accuracy vs actual skills/ inventory)
