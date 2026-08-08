@@ -21,7 +21,7 @@
 //   0 → success (comfortable → no-op, or row found / written)
 //   1 → error (filesystem read failure, malformed frontmatter)
 
-import { readFileSync, readdirSync, appendFileSync } from 'node:fs'
+import { readFileSync, readdirSync, appendFileSync, existsSync } from 'node:fs'
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -119,6 +119,20 @@ function formatAuditRow(candidate, today) {
 > Filed ${todayStr} by content-gap-survey.mjs (auto-refill). ${stateDesc}\n`
 }
 
+// ── Deduplication ─────────────────────────────────────────────────────────────
+// Only matches still-PENDING rows for this pillar (`### [HOT PURSUIT] ...` /
+// `### [CRITICAL HOT PURSUIT] ...`) — an already-addressed row is re-prefixed
+// `### [x] [HOT PURSUIT] ...`, which this pattern deliberately does not match,
+// since pillar gaps are recurring (unlike one-and-done record fixes) and must
+// be able to re-file once a prior gap for the same pillar has been resolved.
+function alreadyFiled(auditContent, pillar) {
+  const pendingPattern = new RegExp(
+    `^### \\[(?:HOT PURSUIT|CRITICAL HOT PURSUIT)\\] \\[content-gap\\] \\[[0-9.]+\\] ${pillar} pillar — `,
+    'm'
+  )
+  return pendingPattern.test(auditContent)
+}
+
 // ── Inline frontmatter parser (no gray-matter dep needed)
 // Reads the YAML block between the first --- and second --- markers.
 // Only extracts `pillar` and `publishedAt` — the two fields we need.
@@ -177,6 +191,22 @@ const row = formatAuditRow(candidate, today)
 if (doJson) {
   console.log(JSON.stringify({ status: 'candidate', candidate, row }))
 } else if (doWrite) {
+  let existingContent = ''
+  try {
+    if (existsSync(AUDIT_MD)) {
+      existingContent = readFileSync(AUDIT_MD, 'utf8')
+    }
+  } catch {
+    // proceed without dedup
+  }
+
+  if (alreadyFiled(existingContent, candidate.pillar)) {
+    console.log(
+      `content-gap-survey: ${candidate.pillar} gap already has a pending AUDIT.md row — no duplicate filed.`
+    )
+    process.exit(0)
+  }
+
   try {
     appendFileSync(AUDIT_MD, row)
     console.log(
@@ -198,6 +228,7 @@ export const __test = {
   surveyContentGaps,
   formatAuditRow,
   extractFrontmatter,
+  alreadyFiled,
   PILLARS,
   PILLAR_IMPACT,
   PROMINENCE,

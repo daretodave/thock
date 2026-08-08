@@ -11,6 +11,7 @@ const {
   surveyContentGaps,
   formatAuditRow,
   extractFrontmatter,
+  alreadyFiled,
   PILLARS,
   PILLAR_IMPACT,
 } = __test
@@ -178,5 +179,32 @@ describe('formatAuditRow', () => {
     assert.ok(row.includes('CRITICAL HOT PURSUIT'))
     assert.ok(row.includes('9.5'))
     assert.ok(row.includes('critical hot pursuit'))
+  })
+})
+
+// ── alreadyFiled ─────────────────────────────────────────────────────────────
+describe('alreadyFiled', () => {
+  test('detects a pending hot-pursuit row for the same pillar', () => {
+    const content = `\n### [HOT PURSUIT] [content-gap] [7.0] guides pillar — 1 of ≥2 articles in last 30d\n- category: content-gaps\n`
+    assert.equal(alreadyFiled(content, 'guides'), true)
+  })
+
+  test('detects a pending critical-hot-pursuit row for the same pillar', () => {
+    const content = `\n### [CRITICAL HOT PURSUIT] [content-gap] [9.5] news pillar — 0 of ≥2 articles in last 30d\n`
+    assert.equal(alreadyFiled(content, 'news'), true)
+  })
+
+  test('does not match an already-addressed row for the same pillar', () => {
+    const content = `\n### [x] [HOT PURSUIT] [content-gap] [7] ideas pillar — 1 of ≥2 articles in last 30d — addressed in 99d331bc, closes #753\n`
+    assert.equal(alreadyFiled(content, 'ideas'), false)
+  })
+
+  test('does not match a pending row for a different pillar', () => {
+    const content = `\n### [HOT PURSUIT] [content-gap] [7.0] guides pillar — 1 of ≥2 articles in last 30d\n`
+    assert.equal(alreadyFiled(content, 'news'), false)
+  })
+
+  test('empty content → no match', () => {
+    assert.equal(alreadyFiled('', 'trends'), false)
   })
 })
