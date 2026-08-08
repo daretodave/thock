@@ -35,6 +35,14 @@ export function VendorCard({ vendor }: VendorCardProps): ReactElement {
         >
           {country}
         </span>
+        {vendor.status === 'inactive' && (
+          <span
+            data-testid="vendor-card-status"
+            className="font-mono text-micro uppercase tracking-[0.08em] text-text-3"
+          >
+            inactive
+          </span>
+        )}
       </div>
       <p
         data-testid="vendor-card-description"

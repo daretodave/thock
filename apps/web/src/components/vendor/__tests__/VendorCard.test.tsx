@@ -65,4 +65,14 @@ describe('VendorCard', () => {
     const link = screen.getByTestId('vendor-card-detail-link')
     expect(link).toHaveAttribute('href', '/vendor/cannonkeys')
   })
+
+  it('renders no status badge for an active vendor', () => {
+    render(<VendorCard vendor={VENDOR} />)
+    expect(screen.queryByTestId('vendor-card-status')).not.toBeInTheDocument()
+  })
+
+  it('renders an inactive badge for a vendor with status "inactive"', () => {
+    render(<VendorCard vendor={{ ...VENDOR, status: 'inactive' }} />)
+    expect(screen.getByTestId('vendor-card-status')).toHaveTextContent('inactive')
+  })
 })
