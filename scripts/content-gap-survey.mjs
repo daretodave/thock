@@ -149,81 +149,8 @@ function extractFrontmatter(content) {
   }
 }
 
-// ── CLI entry ────────────────────────────────────────────────────────────────
-
-const args = process.argv.slice(2)
-const doWrite = args.includes('--write')
-const doJson = args.includes('--json')
-
-let articles
-try {
-  const files = readdirSync(ARTICLES_DIR).filter((f) => f.endsWith('.mdx'))
-  articles = []
-  for (const file of files) {
-    const content = readFileSync(join(ARTICLES_DIR, file), 'utf8')
-    const fm = extractFrontmatter(content)
-    if (fm && fm.pillar && fm.publishedAt) {
-      articles.push({ pillar: fm.pillar, publishedAt: fm.publishedAt })
-    }
-  }
-} catch (err) {
-  console.error(`content-gap-survey: failed to read articles — ${err.message}`)
-  process.exit(1)
-}
-
-const today = new Date()
-today.setUTCHours(0, 0, 0, 0)
-
-const result = surveyContentGaps(articles, today)
-
-if (result.status === 'comfortable') {
-  if (doJson) {
-    console.log(JSON.stringify({ status: 'comfortable' }))
-  } else {
-    console.log('content-gap-survey: all pillars comfortable — no row filed.')
-  }
-  process.exit(0)
-}
-
-const { candidate } = result
-const row = formatAuditRow(candidate, today)
-
-if (doJson) {
-  console.log(JSON.stringify({ status: 'candidate', candidate, row }))
-} else if (doWrite) {
-  let existingContent = ''
-  try {
-    if (existsSync(AUDIT_MD)) {
-      existingContent = readFileSync(AUDIT_MD, 'utf8')
-    }
-  } catch {
-    // proceed without dedup
-  }
-
-  if (alreadyFiled(existingContent, candidate.pillar)) {
-    console.log(
-      `content-gap-survey: ${candidate.pillar} gap already has a pending AUDIT.md row — no duplicate filed.`
-    )
-    process.exit(0)
-  }
-
-  try {
-    appendFileSync(AUDIT_MD, row)
-    console.log(
-      `content-gap-survey: filed [${candidate.state}] row for ${candidate.pillar} (score ${candidate.score}) → plan/AUDIT.md`
-    )
-  } catch (err) {
-    console.error(`content-gap-survey: failed to write plan/AUDIT.md — ${err.message}`)
-    process.exit(1)
-  }
-} else {
-  // Dry-run: print the row
-  console.log(row)
-}
-
-process.exit(0)
-
 // ── __test export (for scripts/__tests__/content-gap-survey.test.mjs) ─────────
+
 export const __test = {
   surveyContentGaps,
   formatAuditRow,
@@ -232,4 +159,83 @@ export const __test = {
   PILLARS,
   PILLAR_IMPACT,
   PROMINENCE,
+}
+
+// ── CLI entry (only runs when this file is invoked directly) ──────────────────
+
+const isMain = fileURLToPath(import.meta.url) === process.argv[1]
+if (!isMain) {
+  // Exported as a library — do nothing.
+} else {
+  const args = process.argv.slice(2)
+  const doWrite = args.includes('--write')
+  const doJson = args.includes('--json')
+
+  let articles
+  try {
+    const files = readdirSync(ARTICLES_DIR).filter((f) => f.endsWith('.mdx'))
+    articles = []
+    for (const file of files) {
+      const content = readFileSync(join(ARTICLES_DIR, file), 'utf8')
+      const fm = extractFrontmatter(content)
+      if (fm && fm.pillar && fm.publishedAt) {
+        articles.push({ pillar: fm.pillar, publishedAt: fm.publishedAt })
+      }
+    }
+  } catch (err) {
+    console.error(`content-gap-survey: failed to read articles — ${err.message}`)
+    process.exit(1)
+  }
+
+  const today = new Date()
+  today.setUTCHours(0, 0, 0, 0)
+
+  const result = surveyContentGaps(articles, today)
+
+  if (result.status === 'comfortable') {
+    if (doJson) {
+      console.log(JSON.stringify({ status: 'comfortable' }))
+    } else {
+      console.log('content-gap-survey: all pillars comfortable — no row filed.')
+    }
+    process.exit(0)
+  }
+
+  const { candidate } = result
+  const row = formatAuditRow(candidate, today)
+
+  if (doJson) {
+    console.log(JSON.stringify({ status: 'candidate', candidate, row }))
+  } else if (doWrite) {
+    let existingContent = ''
+    try {
+      if (existsSync(AUDIT_MD)) {
+        existingContent = readFileSync(AUDIT_MD, 'utf8')
+      }
+    } catch {
+      // proceed without dedup
+    }
+
+    if (alreadyFiled(existingContent, candidate.pillar)) {
+      console.log(
+        `content-gap-survey: ${candidate.pillar} gap already has a pending AUDIT.md row — no duplicate filed.`
+      )
+      process.exit(0)
+    }
+
+    try {
+      appendFileSync(AUDIT_MD, row)
+      console.log(
+        `content-gap-survey: filed [${candidate.state}] row for ${candidate.pillar} (score ${candidate.score}) → plan/AUDIT.md`
+      )
+    } catch (err) {
+      console.error(`content-gap-survey: failed to write plan/AUDIT.md — ${err.message}`)
+      process.exit(1)
+    }
+  } else {
+    // Dry-run: print the row
+    console.log(row)
+  }
+
+  process.exit(0)
 }
