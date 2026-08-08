@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
-import { PILLAR_OG_TAGLINES, PillarOGContent } from '../PillarOG'
+import { computePillarLabelFontSize, PILLAR_OG_TAGLINES, PillarOGContent } from '../PillarOG'
 
 describe('<PillarOGContent>', () => {
   it('renders the pillar label as eyebrow + headline', () => {
@@ -20,6 +20,30 @@ describe('<PillarOGContent>', () => {
     const text = container.textContent ?? ''
     expect(text).toContain('thock · Deep Dives')
     expect(text).toContain('Long-form')
+  })
+})
+
+describe('computePillarLabelFontSize', () => {
+  it('keeps the original 156px size for the short pillar words', () => {
+    expect(computePillarLabelFontSize('News')).toBe(156)
+    expect(computePillarLabelFontSize('Deep Dives')).toBe(156)
+  })
+
+  it('steps down for longer static labels ("Find Your Keycap Set", "Group Buys · Archive")', () => {
+    expect(computePillarLabelFontSize('Find Your Keycap Set')).toBeLessThan(156)
+    expect(computePillarLabelFontSize('Group Buys · Archive')).toBeLessThan(156)
+  })
+
+  it('steps down further for the longest catalog entity names (vendor/tag/part-detail OG cards)', () => {
+    const longest = computePillarLabelFontSize('Drop + Matt3o MT3 /dev/tty')
+    const medium = computePillarLabelFontSize('Find Your Keycap Set')
+    expect(longest).toBeLessThan(medium)
+  })
+
+  it('never returns a size below the safety-net floor', () => {
+    expect(
+      computePillarLabelFontSize('An implausibly long vendor or tag name that keeps going'),
+    ).toBe(68)
   })
 })
 

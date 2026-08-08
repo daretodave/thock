@@ -9,6 +9,29 @@ export type PillarOGContentProps = {
 }
 
 /**
+ * Headline font size tuned by character count. The template was
+ * originally sized for the 5 short pillar words (max 10 chars,
+ * "Deep Dives") at a fixed 156px, but is now reused as-is for
+ * vendor/tag/part-detail OG cards (`vendor.name`, `tag.name`,
+ * `part.name` — up to 26 chars in the current catalog) and a few
+ * longer static labels ("Find Your Keycap Set", "Group Buys ·
+ * Archive"). Those overrun a single line at 156px, so the size
+ * steps down as length grows — same tiering approach as
+ * `ArticleOG.tsx`'s `computeArticleOgLayout`.
+ */
+export function computePillarLabelFontSize(label: string): number {
+  return label.length <= 14
+    ? 156
+    : label.length <= 18
+      ? 128
+      : label.length <= 22
+        ? 104
+        : label.length <= 27
+          ? 84
+          : 68
+}
+
+/**
  * Per-pillar OG card body. Same chrome as the site-default
  * `app/opengraph-image.tsx`: dark radial-gradient bg, brass-dot
  * accent, italic ductus on the headline. The pillar label is
@@ -56,7 +79,7 @@ export function PillarOGContent({
         <div style={{ display: 'flex', alignItems: 'baseline', gap: 8 }}>
           <span
             style={{
-              fontSize: 156,
+              fontSize: computePillarLabelFontSize(pillarLabel),
               fontWeight: 500,
               letterSpacing: '-0.022em',
               fontStyle: 'italic',
