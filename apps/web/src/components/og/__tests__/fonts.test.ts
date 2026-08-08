@@ -7,16 +7,10 @@ import { OG_FONT_MANIFEST } from '../fonts'
 const fontsDir = join(dirname(fileURLToPath(import.meta.url)), '..', 'fonts')
 
 describe('OG_FONT_MANIFEST', () => {
-  it('covers exactly the serif/mono weight+style combinations PillarOG/ArticleOG use', () => {
+  it('covers one file per serif/mono style so every fontFamily/fontStyle used by PillarOG/ArticleOG has a real match', () => {
     const triples = OG_FONT_MANIFEST.map((f) => `${f.name}/${f.weight}/${f.style}`).sort()
     expect(triples).toEqual(
-      [
-        'serif/400/normal',
-        'serif/500/normal',
-        'serif/400/italic',
-        'serif/500/italic',
-        'monospace/400/normal',
-      ].sort(),
+      ['serif/400/normal', 'serif/400/italic', 'monospace/400/normal'].sort(),
     )
   })
 
