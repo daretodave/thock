@@ -115,7 +115,7 @@ export default async function VendorDetailPage({
               {vendor.url.replace(/^https?:\/\//, '')} ↗
             </a>
             {vendor.status === 'inactive' && (
-              <span data-testid="vendor-detail-status" className="text-text-3">
+              <span data-testid="vendor-detail-status" className="text-text-2">
                 inactive
               </span>
             )}

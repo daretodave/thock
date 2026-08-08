@@ -38,7 +38,7 @@ export function VendorCard({ vendor }: VendorCardProps): ReactElement {
         {vendor.status === 'inactive' && (
           <span
             data-testid="vendor-card-status"
-            className="font-mono text-micro uppercase tracking-[0.08em] text-text-3"
+            className="font-mono text-micro uppercase tracking-[0.08em] text-text-2"
           >
             inactive
           </span>

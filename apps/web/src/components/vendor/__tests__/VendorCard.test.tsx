@@ -75,4 +75,11 @@ describe('VendorCard', () => {
     render(<VendorCard vendor={{ ...VENDOR, status: 'inactive' }} />)
     expect(screen.getByTestId('vendor-card-status')).toHaveTextContent('inactive')
   })
+
+  it('renders the inactive badge at AA-passing contrast (text-text-2, not text-text-3)', () => {
+    render(<VendorCard vendor={{ ...VENDOR, status: 'inactive' }} />)
+    const badge = screen.getByTestId('vendor-card-status')
+    expect(badge.className).toContain('text-text-2')
+    expect(badge.className).not.toContain('text-text-3')
+  })
 })
