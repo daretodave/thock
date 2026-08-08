@@ -1,4 +1,5 @@
 import { ImageResponse } from 'next/og'
+import { getOgFonts } from '@/components/og/fonts'
 import { siteConfig } from '@thock/seo'
 import { getTagForOg } from '@/lib/data-runtime/og-runtime'
 import { PillarOGContent } from '@/components/og/PillarOG'
@@ -57,7 +58,7 @@ export default async function OpenGraphImage({
           {siteConfig.name}
         </div>
       ),
-      size,
+      { ...size, fonts: await getOgFonts() },
     )
   }
 
@@ -66,6 +67,6 @@ export default async function OpenGraphImage({
 
   return new ImageResponse(
     <PillarOGContent pillarLabel={tag.name} tagline={tagline} />,
-    size,
+    { ...size, fonts: await getOgFonts() },
   )
 }

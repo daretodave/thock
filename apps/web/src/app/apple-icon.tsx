@@ -1,4 +1,5 @@
 import { ImageResponse } from 'next/og'
+import { getOgFonts } from '@/components/og/fonts'
 import { OG_PALETTE } from '@/components/og/palette'
 
 export const runtime = 'edge'
@@ -18,7 +19,7 @@ export const contentType = 'image/png'
  * this route, so the upstream failure surfaced as console-error
  * noise on every route in the e2e smoke walker.
  */
-export default function AppleIcon() {
+export default async function AppleIcon() {
   return new ImageResponse(
     (
       <div
@@ -58,6 +59,6 @@ export default function AppleIcon() {
         />
       </div>
     ),
-    size,
+    { ...size, fonts: await getOgFonts() },
   )
 }

@@ -1,4 +1,5 @@
 import { ImageResponse } from 'next/og'
+import { getOgFonts } from '@/components/og/fonts'
 import { PILLARS, siteConfig } from '@thock/seo'
 import { OG_BACKGROUND, OG_PALETTE } from '@/components/og/palette'
 
@@ -26,7 +27,7 @@ export const contentType = 'image/png'
  * Vercel cached for a year. Hex palette comes from
  * `@/components/og/palette` — see that file for the rationale.
  */
-export default function OpenGraphImage() {
+export default async function OpenGraphImage() {
   return new ImageResponse(
     (
       <div
@@ -152,6 +153,6 @@ export default function OpenGraphImage() {
         </div>
       </div>
     ),
-    size,
+    { ...size, fonts: await getOgFonts() },
   )
 }

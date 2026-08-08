@@ -1,4 +1,5 @@
 import { ImageResponse } from 'next/og'
+import { getOgFonts } from '@/components/og/fonts'
 import { siteConfig } from '@thock/seo'
 import { PillarOGContent } from '@/components/og/PillarOG'
 
@@ -38,5 +39,5 @@ export default async function OpenGraphImage({
   const label = KIND_LABEL[kind] ?? 'Parts'
   const tagline = KIND_TAGLINE[kind] ?? 'Browse parts on thock.'
 
-  return new ImageResponse(<PillarOGContent pillarLabel={label} tagline={tagline} />, size)
+  return new ImageResponse(<PillarOGContent pillarLabel={label} tagline={tagline} />, { ...size, fonts: await getOgFonts() })
 }

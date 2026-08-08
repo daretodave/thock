@@ -1,4 +1,5 @@
 import { ImageResponse } from 'next/og'
+import { getOgFonts } from '@/components/og/fonts'
 import { siteConfig } from '@thock/seo'
 import { getTrendSnapshotForOg } from '@/lib/data-runtime/og-runtime'
 import { PillarOGContent } from '@/components/og/PillarOG'
@@ -39,7 +40,7 @@ export default async function OpenGraphImage({
           tagline="Historical weekly snapshots of the mechanical keyboard trend stream."
         />
       ),
-      size,
+      { ...size, fonts: await getOgFonts() },
     )
   }
 
@@ -50,6 +51,6 @@ export default async function OpenGraphImage({
 
   return new ImageResponse(
     <PillarOGContent pillarLabel={pillarLabel} tagline={tagline} />,
-    size,
+    { ...size, fonts: await getOgFonts() },
   )
 }

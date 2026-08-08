@@ -1,4 +1,5 @@
 import { ImageResponse } from 'next/og'
+import { getOgFonts } from '@/components/og/fonts'
 import { siteConfig } from '@thock/seo'
 import { getNewsletterForOg } from '@/lib/data-runtime/og-runtime'
 import { PillarOGContent } from '@/components/og/PillarOG'
@@ -37,7 +38,7 @@ export default async function OpenGraphImage({
           tagline="Signal from the mechanical keyboard world, delivered."
         />
       ),
-      size,
+      { ...size, fonts: await getOgFonts() },
     )
   }
 
@@ -61,6 +62,6 @@ export default async function OpenGraphImage({
         titleFontSize={titleFontSize}
       />
     ),
-    size,
+    { ...size, fonts: await getOgFonts() },
   )
 }
