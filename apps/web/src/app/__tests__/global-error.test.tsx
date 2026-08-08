@@ -30,4 +30,9 @@ describe('<GlobalError>', () => {
     fireEvent.click(screen.getByRole('button', { name: /try again/i }))
     expect(reset).toHaveBeenCalledTimes(1)
   })
+
+  it('exposes the fallback as an alert region for assistive tech', () => {
+    render(<GlobalError error={new Error('boom')} reset={vi.fn()} />)
+    expect(screen.getByRole('alert')).toBeInTheDocument()
+  })
 })

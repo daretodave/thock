@@ -37,53 +37,63 @@ export default function GlobalError({
             '-apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
         }}
       >
-        <span
+        <div
+          role="alert"
           style={{
-            fontFamily: 'monospace',
-            textTransform: 'uppercase',
-            letterSpacing: '0.12em',
-            fontSize: '0.75rem',
-            color: '#b45050',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            gap: '1rem',
           }}
         >
-          error
-        </span>
-        <h1 style={{ fontSize: '1.75rem', fontWeight: 600, margin: 0 }}>
-          Something went wrong.
-        </h1>
-        <p style={{ maxWidth: '40ch', color: '#b7b8ba', margin: 0 }}>
-          The page itself failed to load. The incident has a digest you can
-          quote when reporting.
-        </p>
-        {error.digest && (
           <span
             style={{
               fontFamily: 'monospace',
-              fontSize: '0.85rem',
+              textTransform: 'uppercase',
+              letterSpacing: '0.12em',
+              fontSize: '0.75rem',
               color: '#b45050',
             }}
           >
-            digest: {error.digest}
+            error
           </span>
-        )}
-        <button
-          type="button"
-          onClick={reset}
-          style={{
-            marginTop: '0.5rem',
-            border: '1px solid #4a4d51',
-            background: 'transparent',
-            color: '#f2f2f0',
-            padding: '0.5rem 1rem',
-            fontFamily: 'monospace',
-            textTransform: 'uppercase',
-            letterSpacing: '0.08em',
-            fontSize: '0.85rem',
-            cursor: 'pointer',
-          }}
-        >
-          Try again
-        </button>
+          <h1 style={{ fontSize: '1.75rem', fontWeight: 600, margin: 0 }}>
+            Something went wrong.
+          </h1>
+          <p style={{ maxWidth: '40ch', color: '#b7b8ba', margin: 0 }}>
+            The page itself failed to load. The incident has a digest you can
+            quote when reporting.
+          </p>
+          {error.digest && (
+            <span
+              style={{
+                fontFamily: 'monospace',
+                fontSize: '0.85rem',
+                color: '#b45050',
+              }}
+            >
+              digest: {error.digest}
+            </span>
+          )}
+          <button
+            type="button"
+            onClick={reset}
+            style={{
+              marginTop: '0.5rem',
+              border: '1px solid #4a4d51',
+              background: 'transparent',
+              color: '#f2f2f0',
+              padding: '0.5rem 1rem',
+              fontFamily: 'monospace',
+              textTransform: 'uppercase',
+              letterSpacing: '0.08em',
+              fontSize: '0.85rem',
+              cursor: 'pointer',
+            }}
+          >
+            Try again
+          </button>
+        </div>
       </body>
     </html>
   )
