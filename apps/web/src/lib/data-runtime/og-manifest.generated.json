@@ -2240,7 +2240,7 @@
           "articleSlug": "vendor-first-customs"
         },
         {
-          "name": "Cherry (GMK parent)",
+          "name": "Cherry (MX + XTRFY)",
           "category": "brand",
           "direction": "down",
           "score": -20,
@@ -2604,7 +2604,7 @@
           "articleSlug": "vendor-first-customs"
         },
         {
-          "name": "Cherry (GMK parent)",
+          "name": "Cherry (MX + XTRFY)",
           "category": "brand",
           "direction": "down",
           "score": -23,
@@ -2917,7 +2917,7 @@
           "articleSlug": null
         },
         {
-          "name": "Cherry (GMK parent)",
+          "name": "Cherry (MX + XTRFY)",
           "category": "brand",
           "direction": "down",
           "score": -28,
@@ -3247,7 +3247,7 @@
           "articleSlug": null
         },
         {
-          "name": "Cherry (GMK parent)",
+          "name": "Cherry (MX + XTRFY)",
           "category": "brand",
           "direction": "flat",
           "score": -27,
@@ -3594,7 +3594,7 @@
           "articleSlug": null
         },
         {
-          "name": "Cherry (GMK parent)",
+          "name": "Cherry (MX + XTRFY)",
           "category": "brand",
           "direction": "flat",
           "score": -27,
@@ -3941,7 +3941,7 @@
           "articleSlug": null
         },
         {
-          "name": "Cherry (GMK parent)",
+          "name": "Cherry (MX + XTRFY)",
           "category": "brand",
           "direction": "flat",
           "score": -27,
@@ -4271,7 +4271,7 @@
           "articleSlug": null
         },
         {
-          "name": "Cherry (GMK parent)",
+          "name": "Cherry (MX + XTRFY)",
           "category": "brand",
           "direction": "flat",
           "score": -28,
@@ -4567,7 +4567,7 @@
           "articleSlug": "cherry-mx2a-revision"
         },
         {
-          "name": "Cherry (GMK parent)",
+          "name": "Cherry (MX + XTRFY)",
           "category": "brand",
           "direction": "down",
           "score": -30,
@@ -4863,7 +4863,7 @@
           "articleSlug": "cherry-mx2a-revision"
         },
         {
-          "name": "Cherry (GMK parent)",
+          "name": "Cherry (MX + XTRFY)",
           "category": "brand",
           "direction": "up",
           "score": -24,
@@ -5159,7 +5159,7 @@
           "articleSlug": "keychron-nova-socket-hybrid"
         },
         {
-          "name": "Cherry (GMK parent)",
+          "name": "Cherry (MX + XTRFY)",
           "category": "brand",
           "direction": "up",
           "score": -18,
@@ -5455,7 +5455,7 @@
           "articleSlug": "keychron-quiet-takeover"
         },
         {
-          "name": "Cherry (GMK parent)",
+          "name": "Cherry (MX + XTRFY)",
           "category": "brand",
           "direction": "up",
           "score": -10,
@@ -5768,7 +5768,7 @@
           "articleSlug": "keychron-quiet-takeover"
         },
         {
-          "name": "Cherry (GMK parent)",
+          "name": "Cherry (MX + XTRFY)",
           "category": "brand",
           "direction": "up",
           "score": -6,
@@ -5804,5 +5804,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-08-08T08:32:05.125Z"
+  "generatedAt": "2026-08-08T13:35:39.715Z"
 }

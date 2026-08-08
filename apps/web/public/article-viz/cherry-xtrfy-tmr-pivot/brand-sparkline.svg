@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <title>Coral line chart showing the Cherry (GMK parent) brand tracker score moving from -23 in W22 2026 to -24 in W29 2026, still net negative but its best weekly reading since W22, recovering from a six-week slide to -30</title>
+  <title>Coral line chart showing the Cherry brand tracker score moving from -23 in W22 2026 to -24 in W29 2026, still net negative but its best weekly reading since W22, recovering from a six-week slide to -30</title>
 
   <!-- Axes -->
   <line x1="140" y1="105" x2="140" y2="330" stroke-opacity="0.30"/>
@@ -56,7 +56,7 @@
   <line x1="966" y1="130" x2="966" y2="215" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.30" stroke-width="1.5" stroke-dasharray="5 5"/>
 
   <!-- Chart title -->
-  <text x="600" y="42" font-family="Newsreader, serif" font-size="17" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">Cherry (GMK parent) brand tracker — W22 through W29 2026</text>
+  <text x="600" y="42" font-family="Newsreader, serif" font-size="17" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">Cherry brand tracker — W22 through W29 2026</text>
 
   <!-- Brass theme dot -->
   <circle cx="1170" cy="30" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>

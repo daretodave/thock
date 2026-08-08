@@ -16,7 +16,7 @@
   "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
   "data_sources": [
     "data/trends/2026-W29.json § rows[14] 'Cherry MX2A' — direction: down, score: -50, spark: [-31,-33,-30,-32,-36,-39,-42,-50] (corrected 2026-07-25 — see brand-sparkline.svg.json), note: 'No new SKUs since April's MX2A Dummy release; buzz keeps ceding ground to magnetic/TMR switches with little fresh MX2A-specific discussion this week.'",
-    "data/trends/2026-W29.json § rows[15] 'Cherry (GMK parent)' — direction: up, score: -24, spark: [-23,-28,-27,-27,-27,-28,-30,-24] (corrected 2026-07-25)"
+    "data/trends/2026-W29.json § rows[15] 'Cherry (MX + XTRFY)' (renamed 2026-08-08 from 'Cherry (GMK parent)' — that label was factually wrong; see plan/AUDIT.md) — direction: up, score: -24, spark: [-23,-28,-27,-27,-27,-28,-30,-24] (corrected 2026-07-25)"
   ],
   "outputs": ["apps/web/public/article-viz/cherry-xtrfy-tmr-pivot/switch-vs-brand-divergence.svg"],
   "warnings": []
