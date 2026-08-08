@@ -10383,3 +10383,15 @@ passes accumulate signals.)
 - fix: swapped the `<PartReference id="hmx-cloud" />` example for `<PartReference id="gateron-ink-v2-yellow" />` (genuine all-PC linear per its catalog record), rewrote the sentence to describe its real acoustic profile, dropped the now-inapplicable "HMX Cloud deep dive" link, and updated the `mentionedParts` frontmatter entry to match. `article-parts-check.mjs` clean on the touched file.
 - issue: #790
 > **Resolved (2026-08-08):** `pnpm verify` full gate green: typecheck, lint, 804 web unit tests, 198 script tests, data:validate (78 records), build, size (108.7 KB/200 KB budget), 1131/1131 e2e.
+
+### [x] [content] [3.6] cherry-xtrfy-tmr-pivot mischaracterizes Cherry brand tracker score shape as monotonic decline — addressed in 3eb6993c, closes #791
+- category: content
+- filed: 2026-08-08 by cloud /iterate audit (fresh general-purpose sweep)
+- impact: 4 (`cherry-xtrfy-tmr-pivot.mdx`'s core narrative claim — prose at line 28 and the InlineViz alt text at line 23 — described the brand's W22→W28 move from -23 to -30 as "six straight weeks of erosion" / "a six-week slide." `data/trends/2026-W22..W28.json`'s Cherry (MX + XTRFY) row: scores -23, -28, -27, -27, -27, -28, -30 with `direction` down, down, flat, flat, flat, flat, down. W24's own note explicitly says "Slight score recovery from -28" — an improvement, not erosion — and 4 of the 6 weeks are flat. Cross-linked from newsletter issue 005 and from `cherry-mx2a-revision`, so the mischaracterized claim has multiple entry points.)
+- ease: 9 (two prose-passage rewrites in one MDX file, no schema/data/component change)
+- score: 3.6 (impact × ease / 10)
+- observation: found via a fresh general-purpose sweep dispatched by cloud `/march` (iterate Step 3d — no actionable Pending AUDIT/CRITIQUE rows beyond the four standing non-autonomous items and the non-actionable GA-beacon item, all 7 mechanical surveys clean, expand gate not met at 12 commits/~7h since pass 299's anchor `5f38a374`). The sub-agent's brief steered away from the exhaustive already-checked-clean angle list toward numeric fact-checks of article prose against tracker data — this was the one finding above the 3.0 bar, verified directly against the eight weekly snapshot files before shipping. Same mischaracterization class as the prior thock-weekly-001 W24 tracker-reversal fix (`72c723ee`).
+- evidence: `data/trends/2026-W22.json` through `2026-W28.json` Cherry (MX + XTRFY) brand row scores/directions/notes (see observation); `cherry-xtrfy-tmr-pivot.mdx:23,28` (pre-fix) — "recovering from a six-week slide to -30" / "just before six straight weeks of erosion."
+- fix: reworded both passages to describe the real shape — two sharp drops (W23, W28) bookending a four-week flat stretch (W24-W27) — instead of monotonic erosion.
+- issue: #791
+> **Resolved (2026-08-08):** `pnpm verify` full gate green: typecheck, lint, unit + script tests, data:validate, build, size, 1131/1131 e2e.
