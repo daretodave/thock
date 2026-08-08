@@ -26,7 +26,7 @@ export function computePillarLabelFontSize(label: string): number {
       ? 128
       : label.length <= 22
         ? 104
-        : label.length <= 27
+        : label.length <= 24
           ? 84
           : 68
 }

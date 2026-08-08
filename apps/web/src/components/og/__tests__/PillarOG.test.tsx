@@ -40,6 +40,10 @@ describe('computePillarLabelFontSize', () => {
     expect(longest).toBeLessThan(medium)
   })
 
+  it('keeps the longest real catalog name (26 chars, digits + symbols) at the safety-net floor — the 84px tier wraps it to two lines in the real satori renderer', () => {
+    expect(computePillarLabelFontSize('Drop + Matt3o MT3 /dev/tty')).toBe(68)
+  })
+
   it('never returns a size below the safety-net floor', () => {
     expect(
       computePillarLabelFontSize('An implausibly long vendor or tag name that keeps going'),
