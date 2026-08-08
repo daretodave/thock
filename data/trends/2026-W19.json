@@ -129,13 +129,13 @@
       "note": "Q Ultra ZMK series with 660h battery announced at CES is now reaching reviewers; Q1 HE 8K Marble in April pushed Keychron deeper into the prebuilt-premium tier."
     },
     {
-      "name": "Cherry (GMK manufacturer)",
+      "name": "Cherry (MX + XTRFY)",
       "category": "brand",
       "direction": "down",
       "score": -14,
       "spark": [-2, -4, -6, -8, -10, -12, -13, -14],
       "articleSlug": "cherry-mx2a-revision",
-      "note": "MX2A buzz has cooled and the top esports keyboards moved to Hall-effect/optical (Wooting, Razer V3 Pro); Cherry's relevance now lives mostly through GMK doubleshot runs."
+      "note": "MX2A buzz has cooled and the top esports keyboards moved to Hall-effect/optical (Wooting, Razer V3 Pro); with HMX and Gateron eating the mid-tier linear slot, Cherry brand sentiment is sliding on switch fundamentals alone."
     }
   ],
   "updatedAt": "2026-05-10T01:30:00.000Z"

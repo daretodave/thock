@@ -129,13 +129,13 @@
       "note": "Q6 Ultra 8K and V5 Ultra 8K review cycle remains active at Tom's Hardware and AppleInsider into May; the ZMK wireless story draws 'first mass-produced ZMK keyboard' framing with no competitors matching the 660-hour battery claim."
     },
     {
-      "name": "Cherry (GMK manufacturer)",
+      "name": "Cherry (MX + XTRFY)",
       "category": "brand",
       "direction": "down",
       "score": -15,
       "spark": [-4, -6, -8, -10, -12, -13, -14, -15],
       "articleSlug": "cherry-mx2a-revision",
-      "note": "A GeekHack IC for the YuRui HE switch posted May 10 signals new HE entrants beyond Cherry's orbit; Cherry's enthusiast footprint narrows to GMK manufacturing as MX2A stays categorized as an entry-level option."
+      "note": "A GeekHack IC for the YuRui HE switch posted May 10 signals new HE entrants beyond Cherry's orbit; MX2A stays categorized as an entry-level option while HMX and Gateron continue winning the mid-tier linear conversation."
     }
   ],
   "updatedAt": "2026-05-11T12:00:00.000Z"

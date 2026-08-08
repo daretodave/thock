@@ -1240,7 +1240,7 @@
           "note": "Q Ultra ZMK series with 660h battery announced at CES is now reaching reviewers; Q1 HE 8K Marble in April pushed Keychron deeper into the prebuilt-premium tier."
         },
         {
-          "name": "Cherry (GMK manufacturer)",
+          "name": "Cherry (MX + XTRFY)",
           "category": "brand",
           "direction": "down",
           "score": -14,
@@ -1255,7 +1255,7 @@
             -14
           ],
           "articleSlug": "cherry-mx2a-revision",
-          "note": "MX2A buzz has cooled and the top esports keyboards moved to Hall-effect/optical (Wooting, Razer V3 Pro); Cherry's relevance now lives mostly through GMK doubleshot runs."
+          "note": "MX2A buzz has cooled and the top esports keyboards moved to Hall-effect/optical (Wooting, Razer V3 Pro); with HMX and Gateron eating the mid-tier linear slot, Cherry brand sentiment is sliding on switch fundamentals alone."
         }
       ],
       "updatedAt": "2026-05-10T01:30:00.000Z"
@@ -1517,7 +1517,7 @@
           "note": "Q6 Ultra 8K and V5 Ultra 8K review cycle remains active at Tom's Hardware and AppleInsider into May; the ZMK wireless story draws 'first mass-produced ZMK keyboard' framing with no competitors matching the 660-hour battery claim."
         },
         {
-          "name": "Cherry (GMK manufacturer)",
+          "name": "Cherry (MX + XTRFY)",
           "category": "brand",
           "direction": "down",
           "score": -15,
@@ -1532,7 +1532,7 @@
             -15
           ],
           "articleSlug": "cherry-mx2a-revision",
-          "note": "A GeekHack IC for the YuRui HE switch posted May 10 signals new HE entrants beyond Cherry's orbit; Cherry's enthusiast footprint narrows to GMK manufacturing as MX2A stays categorized as an entry-level option."
+          "note": "A GeekHack IC for the YuRui HE switch posted May 10 signals new HE entrants beyond Cherry's orbit; MX2A stays categorized as an entry-level option while HMX and Gateron continue winning the mid-tier linear conversation."
         }
       ],
       "updatedAt": "2026-05-11T12:00:00.000Z"
@@ -9234,5 +9234,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-08-08T19:27:27.386Z"
+  "generatedAt": "2026-08-08T23:15:52.849Z"
 }

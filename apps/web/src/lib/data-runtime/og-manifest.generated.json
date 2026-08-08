@@ -1716,7 +1716,7 @@
           "articleSlug": "keychron-q-ultra-zmk"
         },
         {
-          "name": "Cherry (GMK manufacturer)",
+          "name": "Cherry (MX + XTRFY)",
           "category": "brand",
           "direction": "down",
           "score": -14,
@@ -1978,7 +1978,7 @@
           "articleSlug": "keychron-q-ultra-zmk"
         },
         {
-          "name": "Cherry (GMK manufacturer)",
+          "name": "Cherry (MX + XTRFY)",
           "category": "brand",
           "direction": "down",
           "score": -15,
@@ -5804,5 +5804,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-08-08T19:27:27.386Z"
+  "generatedAt": "2026-08-08T23:15:52.849Z"
 }
