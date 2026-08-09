@@ -84,6 +84,18 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [content] [4.8] 2026-W32 trend snapshot overcounts the live Keychron V6 Ultra HE Kickstarter's week — "week three" / "three weeks post-launch" — addressed in 666be6e1
+
+- category: content
+- filed: 2026-08-09 by cloud /iterate audit (fresh general-purpose sweep, angle: latest trend snapshot cross-checked against the articles it links to via articleSlug)
+- impact: 6 (both notes sit on the currently-live trends snapshot, rendered on `/trends/tracker/2026-W32` and homepage trend excerpts, on the site's signature feature; a plainly checkable/verifiable factual claim. Same defect class as the already-fixed `[3.6]` HE tracker streak miscount — a recurring temporal-counting failure mode in trend notes, worth re-checking each pass rather than assumed clean after one fix)
+- ease: 8 (two one-line string edits, mirroring the exact fix pattern of `e2337ae9`/`1c4246b0`; manifests/search index regenerate automatically via `prebuild`)
+- score: 4.8 (impact × ease / 10)
+- evidence: `data/trends/2026-W32.json:12` and `:147` both referenced "week three" / "three weeks post-launch." The Kickstarter launched 2026-07-22 (confirmed by `keychron-nova-socket-hybrid.mdx` and W31's own "live since July 22" note). W32 `publishedAt` is 2026-08-03 — 12 days after launch, its second week, not its third.
+- issue: (none filed — fresh-sweep finding shipped same-tick per established pattern; no pre-existing Pending row to mirror)
+> **Resolved (2026-08-09):** reworded both notes to "in its second week" / "in its second week post-launch." Verified no propagation into article prose (both referencing articles cite only through W31) and no other W32 row carries the same miscount. `pnpm verify` full gate green: typecheck, unit tests, data:validate, build, 1131/1131 e2e.
+> Picked as the top signal this tick: no unlabeled GitHub issues (triage gate); not Monday (W32 snapshot already existed); no pending phases/data/content-gap work (all 9 mechanical surveys re-ran clean, no rows filed); AUDIT.md's only other non-`[x]` row is the standing non-autonomous `[engineering] [4.0]` Lighthouse-CI-disabled `/oversight` item; CRITIQUE.md's only Pending row remains the non-actionable `[needs-user-call]` GA-beacon item; march's own expand Step 3c gate not met (3 commits/~2.9h since pass 301's anchor `42a1b799`, threshold 20 commits/48h). A fresh general-purpose sweep (angles: most-recently-changed content for factual accuracy, latest trend snapshot cross-referenced against linked articles, robots/sitemap vs current route list, component duplication/simplification, interactive-surface keyboard a11y, recently-added scripts for logic bugs, vendor countryCode spot-check, stale year/date strings in copy, catalog-page pagination against current record counts) found this week-count overcount as the one finding clearing the 3.0 bar; every other angle came back clean.
+
 ### [x] [engineering] [5.4] content-gap-survey.mjs missing isMain guard — its own 17 unit tests silently never ran — addressed in this commit, closes #783
 - category: engineering
 - filed: 2026-08-08 by cloud /iterate audit (fresh general-purpose sweep, angle: recently-touched scripts/*.mjs for regressions)
