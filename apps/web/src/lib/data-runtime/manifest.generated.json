@@ -5507,6 +5507,24 @@
           "note": "Paper 65 GB kit still tracking toward Q4 2026 per Prototypist's own listing; steady incremental Geekhack interest, no date change this week."
         },
         {
+          "name": "CannonKeys",
+          "category": "vendor",
+          "direction": "up",
+          "score": 64,
+          "spark": [
+            20,
+            26,
+            34,
+            42,
+            50,
+            56,
+            60,
+            64
+          ],
+          "articleSlug": "cannonkeys-blaine-v2-se-group-buy",
+          "note": "Blaine V2: SE closes today after its five-week run; the triple-mount F12 TKL kit was CannonKeys' first new GB since the Nyawice quiet window and holds steady closing-week interest."
+        },
+        {
           "name": "Keychron",
           "category": "brand",
           "direction": "up",
@@ -9234,5 +9252,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-08-09T11:22:54.239Z"
+  "generatedAt": "2026-08-09T13:28:20.100Z"
 }

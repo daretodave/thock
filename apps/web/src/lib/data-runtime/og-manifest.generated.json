@@ -5751,6 +5751,23 @@
           "articleSlug": "prototypist-vendor-spotlight"
         },
         {
+          "name": "CannonKeys",
+          "category": "vendor",
+          "direction": "up",
+          "score": 64,
+          "spark": [
+            20,
+            26,
+            34,
+            42,
+            50,
+            56,
+            60,
+            64
+          ],
+          "articleSlug": "cannonkeys-blaine-v2-se-group-buy"
+        },
+        {
           "name": "Keychron",
           "category": "brand",
           "direction": "up",
@@ -5804,5 +5821,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-08-09T11:22:54.239Z"
+  "generatedAt": "2026-08-09T13:28:20.100Z"
 }
