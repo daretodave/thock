@@ -243,4 +243,28 @@ describe('alreadyFiled', () => {
   test('returns false for empty content', () => {
     assert.equal(alreadyFiled('', 'Any Topic'), false)
   })
+
+  test('matches a filed row despite spelling drift (slash spacing)', () => {
+    // Reproduces the AUDIT.md dedup gap: a row filed under one spelling
+    // must still be recognized when the survey re-runs with a drifted
+    // spelling of the same normalized topic (see findMissingLinks' own
+    // spelling-drift regression block above).
+    const content = '### [ ] [content-gaps] [5.5] Hall Effect / Rapid Trigger — Rule 2 tracker linkage missing\n'
+    assert.equal(alreadyFiled(content, 'Hall Effect/Rapid Trigger'), true)
+  })
+
+  test('matches a filed row despite spelling drift (case)', () => {
+    const content = '### [ ] [content-gaps] [5.5] 75% layout — Rule 2 tracker linkage missing\n'
+    assert.equal(alreadyFiled(content, '75% Layout'), true)
+  })
+
+  test('matches an already-addressed row (has trailing "— addressed in ..." suffix)', () => {
+    const content = '### [x] [content-gaps] [5.5] Gateron Lanes — Rule 2 tracker linkage missing — addressed in 2f59b43, closes #373\n'
+    assert.equal(alreadyFiled(content, 'Gateron Lanes'), true)
+  })
+
+  test('does not false-positive on an unrelated row mentioning the topic name', () => {
+    const content = '### [ ] [content-gaps] [4.5] some other finding mentions Gateron Lanes in passing\n'
+    assert.equal(alreadyFiled(content, 'Gateron Lanes'), false)
+  })
 })

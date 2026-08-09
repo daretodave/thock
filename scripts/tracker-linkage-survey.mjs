@@ -184,7 +184,13 @@ function formatAuditRow(record, today) {
 // ── Deduplication ─────────────────────────────────────────────────────────────
 
 function alreadyFiled(auditContent, name) {
-  return auditContent.includes(`${name} — Rule 2 tracker linkage missing`)
+  const targetKey = normalizeTopicKey(name)
+  const rowPattern = /^### \[[ x]\] \[content-gaps\] \[[\d.]+\] (.+) — Rule 2 tracker linkage missing/gm
+  let match
+  while ((match = rowPattern.exec(auditContent)) !== null) {
+    if (normalizeTopicKey(match[1]) === targetKey) return true
+  }
+  return false
 }
 
 // ── __test export (for scripts/__tests__/tracker-linkage-survey.test.mjs) ────
