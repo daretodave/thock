@@ -677,9 +677,9 @@
       "name": "NovelKeys",
       "url": "https://novelkeys.com",
       "countryCode": "US",
-      "description": "Indianapolis-based vendor that runs in-house switches (Cream, Silk) and partners on group buys for keycaps and boards. One of the most-cited NA storefronts for enthusiast switch SKUs.",
+      "description": "Morgantown, West Virginia-based vendor that runs in-house switches (Cream, Silk) and partners on group buys for keycaps and boards. One of the most-cited NA storefronts for enthusiast switch SKUs.",
       "status": "active",
-      "updatedAt": "2026-05-09T20:00:00.000Z"
+      "updatedAt": "2026-08-09T04:00:00.000Z"
     },
     {
       "slug": "qwertykeys",
@@ -9234,5 +9234,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-08-09T02:57:22.238Z"
+  "generatedAt": "2026-08-09T04:52:20.952Z"
 }
