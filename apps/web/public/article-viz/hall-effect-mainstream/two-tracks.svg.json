@@ -6,7 +6,7 @@
   "article_slug": "hall-effect-mainstream",
   "article_pillar": "trends",
   "section_anchor": "the-counter-evidence-feel-and-configurator-gravity",
-  "brief_summary": "Two horizontal tracks separated by a faint rule. Top track (linear-mechanical mid-tier, warm-grey outline): HMX Cloud, Oil King, Tecsee Sapphire — audience: typists who listen. Bottom track (Hall-effect mid-tier, coral-emphasized): Wooting 60 HE, Razer V3 Pro, Q1 HE 8K Marble, Mode Sonnet R2 HE — audience: performance. Caption frames the partition: two tiers, two audiences, out of the same configurators.",
+  "brief_summary": "Two horizontal tracks separated by a faint rule. Top track (linear-mechanical mid-tier, warm-grey outline): HMX Cloud, Oil King, Tecsee Sapphire — audience: typists who listen. Bottom track (Hall-effect mid-tier, coral-emphasized): Wooting 60 HE, Razer V3 Pro, Q1 HE 8K Marble — audience: performance. Caption frames the partition: two tiers, two audiences, out of the same configurators.",
   "target": "apps/web/public/article-viz/hall-effect-mainstream/two-tracks.svg",
   "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
   "stroke_color": "oklch(0.78 0.005 90)",
@@ -15,6 +15,8 @@
     "hall-effect-mainstream.mdx § 'Who's driving it' — 'The HMX-dominated mid-tier linear slot for enthusiasts and the HE-dominated mid-tier performance slot are now two different tiers serving two different audiences out of the same prebuilt configurators. That partition is the structural fact this whole piece is about.'",
     "hall-effect-mainstream.mdx § 'The counter-evidence' — 'the bench of switches that the boutique linear crowd actually argues about — the Oil King, the HMX Cloud lineage, the Tecsee Sapphire on the tactile side — are not a fight HE is structured to enter'"
   ],
+  "corrected_at": "2026-08-09T00:00:00.000Z",
+  "correction_note": "Original version incorrectly included 'Mode Sonnet R2 HE' as a fourth Hall-effect board; the Mode Sonnet R2 group buy and rapid-trigger-gaming-crossover.mdx both confirm the board is contact-mechanical only, not Hall-effect. Bottom track reduced to the 3 real HE boards.",
   "outputs": ["apps/web/public/article-viz/hall-effect-mainstream/two-tracks.svg"],
   "warnings": []
 }
