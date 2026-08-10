@@ -10762,7 +10762,7 @@ passes accumulate signals.)
 - issue: #808
 - resolved: status flipped to 'closed', updatedAt bumped to 2026-08-10; manifests regenerated. `61f0ae14`
 
-### [ ] [content] [3.2] gmk-cyl-just-beachy-group-buy-opens claims "widest spread of this year's tracked CYL buys" but gmk-cyl-ramune-group-buy documents a wider one
+### [x] [content] [3.2] gmk-cyl-just-beachy-group-buy-opens claims "widest spread of this year's tracked CYL buys" but gmk-cyl-ramune-group-buy documents a wider one — addressed in `f3c1b0e4`, closes #809
 - category: content
 - filed: 2026-08-10 by cloud /iterate audit (surfaced while cross-link-drain research read both articles' vendor-spread claims)
 - impact: 4 (`gmk-cyl-just-beachy-group-buy-opens.mdx`'s "How that stacks up against this year's other CYL buys" section and its accompanying `vendor-spread-comparison.svg` InlineViz caption both claim Just Beachy's 5 simultaneous vendors are "the widest spread of this year's tracked CYL buys," comparing only against GMK CYL OG Extensions (2) and GMK CYL TA Neo (4). `gmk-cyl-ramune-group-buy.mdx` — already published 2026-05-15, well before Just Beachy — documents Ramune opening across 10 regional vendors simultaneously ("the broadest multi-vendor launch in the CYL sub-line's history," per its own lede and a dedicated "The vendor structure is the other story" section), a genuinely wider concurrent spread. The new cross-link round-up added to Just Beachy this tick deliberately avoided restating the superlative next to the Ramune link to sidestep amplifying the contradiction, but the original claim + InlineViz caption are unchanged and still incorrect)
@@ -10770,3 +10770,4 @@ passes accumulate signals.)
 - score: 3.2 (impact × ease / 10)
 - evidence: `gmk-cyl-just-beachy-group-buy-opens.mdx` "How that stacks up..." section + `vendor-spread-comparison.svg` caption vs. `gmk-cyl-ramune-group-buy.mdx` lede + "The vendor structure is the other story" section + `vendor-structure-comparison.svg`.
 - next: qualify or drop the "widest spread" superlative in Just Beachy's prose and InlineViz caption/alt text; re-render the SVG if its baked-in caption text needs to change.
+- issue: #809
