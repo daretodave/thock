@@ -2,6 +2,7 @@ import type { ReactElement } from 'react'
 import Link from 'next/link'
 import { Container, Stack } from '@thock/ui'
 import type { Board } from '@thock/data'
+import { truncate } from '@/lib/truncate'
 
 const SECTION_HEADING_CLASS =
   'font-mono uppercase tracking-[0.12em] text-micro text-text-2'
@@ -81,9 +82,7 @@ export function VendorBoardSection({
                   </span>
                 </div>
                 <p className="max-w-[60ch] text-small text-text-2">
-                  {board.description.length > 100
-                    ? board.description.slice(0, 100).replace(/\s\S*$/, '').trimEnd() + '…'
-                    : board.description}
+                  {truncate(board.description, 100)}
                 </p>
               </div>
             ))}

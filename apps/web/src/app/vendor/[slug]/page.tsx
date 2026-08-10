@@ -16,6 +16,7 @@ import {
   getVendorBySlug,
 } from '@/lib/data-runtime'
 import { countryLabel } from '@/lib/vendor-country'
+import { truncate } from '@/lib/truncate'
 import { partitionVendorGroupBuys } from './helpers'
 import { PageSectionKicker } from '@/components/ui/PageSectionKicker'
 import { VendorGroupBuySection } from '@/components/vendor/VendorGroupBuySection'
@@ -41,10 +42,7 @@ export async function generateMetadata({
   const { slug } = await params
   const vendor = getVendorBySlug(slug)
   if (!vendor) return {}
-  const short =
-    vendor.description.length > 160
-      ? vendor.description.slice(0, 160).replace(/\s\S*$/, '').trimEnd() + '…'
-      : vendor.description
+  const short = truncate(vendor.description, 160)
   return buildMetadata({
     title: vendor.name,
     description: short,

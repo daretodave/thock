@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { Mono } from '@thock/ui'
 import type { Switch } from '@thock/data'
 import { SWITCH_TYPE_LABEL, specLabel } from '@/lib/spec-labels'
+import { truncate } from '@/lib/truncate'
 
 type Props = {
   sw: Switch
@@ -14,7 +15,7 @@ export function ResultCard({ sw, score, maxScore, rank }: Props) {
   const hasSignal = maxScore > 0
   const pct = hasSignal ? Math.round((score / maxScore) * 100) : 0
   const typeLabel = specLabel(SWITCH_TYPE_LABEL, sw.type)
-  const excerpt = sw.description.length > 80 ? sw.description.slice(0, 80).trimEnd() + '…' : sw.description
+  const excerpt = truncate(sw.description, 80)
 
   return (
     <div

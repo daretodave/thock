@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Container, Stack } from '@thock/ui'
 import type { Switch } from '@thock/data'
 import { specLabel, SWITCH_TYPE_LABEL } from '@/lib/spec-labels'
+import { truncate } from '@/lib/truncate'
 
 const SECTION_HEADING_CLASS =
   'font-mono uppercase tracking-[0.12em] text-micro text-text-2'
@@ -70,9 +71,7 @@ export function VendorSwitchSection({
                   </span>
                 </div>
                 <p className="max-w-[60ch] text-small text-text-2">
-                  {s.description.length > 100
-                    ? s.description.slice(0, 100).replace(/\s\S*$/, '').trimEnd() + '…'
-                    : s.description}
+                  {truncate(s.description, 100)}
                 </p>
               </div>
             ))}

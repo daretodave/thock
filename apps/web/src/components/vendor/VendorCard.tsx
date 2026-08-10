@@ -2,11 +2,7 @@ import type { ReactElement } from 'react'
 import Link from 'next/link'
 import type { Vendor } from '@thock/data'
 import { countryLabel } from '@/lib/vendor-country'
-
-function truncate(text: string, max = 130): string {
-  if (text.length <= max) return text
-  return text.slice(0, max).replace(/\s\S*$/, '').trimEnd() + '…'
-}
+import { truncate } from '@/lib/truncate'
 
 export type VendorCardProps = {
   vendor: Vendor
@@ -48,7 +44,7 @@ export function VendorCard({ vendor }: VendorCardProps): ReactElement {
         data-testid="vendor-card-description"
         className="max-w-[60ch] text-body text-text-2"
       >
-        {truncate(vendor.description)}
+        {truncate(vendor.description, 130)}
       </p>
       <div className="flex flex-wrap gap-4 font-mono text-small uppercase tracking-[0.08em]">
         <Link

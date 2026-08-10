@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Mono } from '@thock/ui'
 import type { KeycapSet } from '@thock/data'
+import { truncate } from '@/lib/truncate'
 
 const PROFILE_LABEL: Record<string, string> = {
   cherry: 'Cherry',
@@ -32,10 +33,7 @@ export function KeycapSetResultCard({ keycapSet: ks, score, maxScore, rank }: Pr
   const pct = hasSignal ? Math.round((score / maxScore) * 100) : 0
   const profileLabel = PROFILE_LABEL[ks.profile] ?? ks.profile
   const materialLabel = MATERIAL_LABEL[ks.material] ?? ks.material
-  const excerpt =
-    ks.description.length > 80
-      ? ks.description.slice(0, 80).trimEnd() + '…'
-      : ks.description
+  const excerpt = truncate(ks.description, 80)
 
   return (
     <div

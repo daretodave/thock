@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Container, Stack } from '@thock/ui'
 import type { KeycapSet } from '@thock/data'
 import { KEYCAP_PROFILE_LABEL, specLabel } from '@/lib/spec-labels'
+import { truncate } from '@/lib/truncate'
 
 const SECTION_HEADING_CLASS =
   'font-mono uppercase tracking-[0.12em] text-micro text-text-2'
@@ -71,9 +72,7 @@ export function VendorKeycapSetSection({
                   </span>
                 </div>
                 <p className="max-w-[60ch] text-small text-text-2">
-                  {k.description.length > 100
-                    ? k.description.slice(0, 100).replace(/\s\S*$/, '').trimEnd() + '…'
-                    : k.description}
+                  {truncate(k.description, 100)}
                 </p>
               </div>
             ))}
