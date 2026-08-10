@@ -1,6 +1,7 @@
 import { describe, expect, it, vi } from 'vitest'
 import type { Article } from '@thock/content'
 import { FEED_ITEM_LIMIT } from '@/lib/rss/buildRss'
+import { validateRssXml } from '@/lib/rss/validate'
 
 const makeArticle = (n: number): Article => ({
   slug: `article-${n}`,
@@ -40,6 +41,10 @@ describe('global feed.xml', () => {
     expect(xml).toContain('<rss version="2.0">')
     expect(xml).toContain('<channel>')
     expect(xml).toContain('<item>')
+    const result = validateRssXml(xml)
+    expect(result.itemCount).toBeGreaterThan(0)
+    expect(result.channelTitle).toBeTruthy()
+    expect(result.channelLink).toBeTruthy()
   })
 })
 
@@ -57,6 +62,9 @@ describe('pillar feed.xml', () => {
     expect(res.status).toBe(200)
     const xml = await xmlOf(res)
     expect(xml).toContain('<rss version="2.0">')
+    const result = validateRssXml(xml)
+    expect(result.itemCount).toBeGreaterThan(0)
+    expect(result.channelTitle).toBeTruthy()
   })
 
   it('returns RSS without the .xml suffix too', async () => {
