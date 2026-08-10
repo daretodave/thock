@@ -1,0 +1,37 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-10T18:29:01.000Z",
+  "commit": "17176bc56489e3fd1d2643d681c4d43a4126fb68",
+  "kind": "group-buy-hero",
+  "source": null,
+  "template": "group-buy-six-cap-cluster",
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": [],
+  "outputs": [
+    "apps/web/public/group-buy-art/divinikey-gmk-cyl-just-beachy.svg"
+  ],
+  "entity": "divinikey-gmk-cyl-just-beachy",
+  "subject": "keycap-cluster",
+  "size": [1200, 750],
+  "splash_color": {
+    "name": "just-beachy-warm-bronze-wash",
+    "oklch": "oklch(0.74 0.11 78)"
+  },
+  "secondary_splash": {
+    "name": "just-beachy-coral",
+    "oklch": "oklch(0.68 0.165 28)"
+  },
+  "accent_pip": {
+    "name": "just-beachy-coral",
+    "oklch": "oklch(0.68 0.165 28)"
+  },
+  "bronze_accent": "oklch(0.80 0.135 75)",
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "notes": "GMK CYL Just Beachy is a keycap-set group buy (productKind: keycap-set) — six CYL-profile keycaps in two staggered rows of three, matching the shared cap template/grid from divinikey-gmk-cyl-ta-neo.svg and kbdfans-gmk-cyl-ramune.svg, per plan/ship-data.md Phase-23 rule (keycap-set -> cap cluster visual). Two center caps (back-middle, front-middle) carry a coral wash + fill for the 'coastal-toned' colorway's focal alpha treatment, matching the article's own heroImageAlt text ('warm-grey line stroke with a coral wash across the two center alpha caps, evoking a coastal-toned GMK CYL colorway') and the coral value already established for this article's inline-viz (apps/web/public/article-viz/gmk-cyl-just-beachy-group-buy-opens/vendor-map.svg, oklch(0.68 0.165 28)). Remaining four caps are warm-grey stroke only, single-splash convention (unlike ta-neo's two-tone slate+neon exception). Background wash uses a warm-bronze/sandy tone (oklch(0.74 0.11 78)) echoing the sandy-ochre splash and warm-paper field of the sibling hero-art asset for this record (apps/web/public/hero-art/gmk-cyl-just-beachy-group-buy-opens.svg). A faint dune-wave echo beneath the ground line nods to the same 'beachy' motif established in that hero-art SVG, kept abstract and low-opacity. Bronze theme dot (oklch 0.80 0.135 75) retained as the fixed family ornamental anchor per novelkeys-gmk-cyl-og-extensions.svg and divinikey-dcs-dolch.svg precedent, independent of this record's own splash palette.",
+  "data_sources": [
+    "apps/web/src/content/articles/gmk-cyl-just-beachy-group-buy-opens.mdx frontmatter heroImageAlt — 'A row of five Cherry-profile keycaps in graduated row-sculpt order, rendered in a warm-grey line stroke with a coral wash across the two center alpha caps, evoking a coastal-toned GMK CYL colorway, on a transparent warm-paper field with a small warm-bronze theme dot in the upper right margin.'",
+    "apps/web/public/article-viz/gmk-cyl-just-beachy-group-buy-opens/vendor-map.svg.json — splash_color coral oklch(0.68 0.165 28)"
+  ],
+  "warnings": []
+}

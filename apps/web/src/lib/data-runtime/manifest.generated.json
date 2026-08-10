@@ -796,6 +796,23 @@
       "updatedAt": "2026-07-03T18:30:00.000Z"
     },
     {
+      "slug": "divinikey-gmk-cyl-just-beachy",
+      "name": "GMK Just Beachy",
+      "vendorSlug": "divinikey",
+      "productSlug": null,
+      "productKind": "keycap-set",
+      "startDate": "2026-08-18",
+      "endDate": "2026-09-22",
+      "region": "global",
+      "url": "https://divinikey.com",
+      "heroImage": "/group-buy-art/divinikey-gmk-cyl-just-beachy.svg",
+      "heroImageAlt": "Six CYL-profile keycaps in a two-row cluster, rendered in a warm-grey line stroke with a coral wash across the two center alpha caps, evoking the coastal-toned GMK CYL Just Beachy colorway, with a small warm-bronze theme dot in the upper right margin.",
+      "relatedArticle": "gmk-cyl-just-beachy-group-buy-opens",
+      "status": "announced",
+      "description": "GMK Just Beachy — a Cherry-profile keycap set in GMK's CYL mold family, opening simultaneously across five vendors on five continents: Keebz N Cables (Oceania), Divinikey (US), Prototypist (UK), KBDfans (China), and Unikeys (Canada). Running August 18–September 22, 2026; base kit pricing and full kitting list not yet announced.",
+      "updatedAt": "2026-08-10T00:00:00.000Z"
+    },
+    {
       "slug": "divinikey-gmk-cyl-ta-neo",
       "name": "GMK CYL TA Neo",
       "vendorSlug": "divinikey",
@@ -9618,5 +9635,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-08-10T09:40:26.063Z"
+  "generatedAt": "2026-08-10T18:31:34.159Z"
 }

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1200 750"
+     preserveAspectRatio="xMidYMid meet"
+     fill="none"
+     stroke="oklch(0.78 0.005 90)"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     role="img"
+     aria-label="thock group-buy card art for GMK CYL Just Beachy (Divinikey) — six CYL-profile keycaps in a two-row cluster, warm-grey alpha caps with a coral wash across the two center alphas, evoking the coastal-toned Just Beachy colorway">
+  <title>thock group-buy hero — GMK CYL Just Beachy (Divinikey), six CYL-profile keycaps, warm-grey cluster, coral splash on the two center alphas, warm-bronze wash</title>
+
+  <!--
+    Composition: six CYL-profile keycaps in two staggered rows of three,
+    near-top-down with the cylindrical scoop hinted at, matching the
+    established group-buy card grid (see sibling divinikey-gmk-cyl-ta-neo.svg
+    and kbdfans-gmk-cyl-ramune.svg for the shared cap template + layout).
+
+    Just Beachy colorway translation to OKLCH, held consistent with the
+    article's own hero art (apps/web/public/hero-art/
+    gmk-cyl-just-beachy-group-buy-opens.svg) and heroImageAlt text
+    ("warm-grey line stroke with a coral wash across the two center
+    alpha caps, evoking a coastal-toned GMK CYL colorway"), and with the
+    article's own inline-viz coral (apps/web/public/article-viz/
+    gmk-cyl-just-beachy-group-buy-opens/vendor-map.svg):
+      coral         oklch(0.68 0.165 28)  = the article's established
+                     coral accent, applied here as a wash + fill across
+                     the two center alpha caps (back-middle, front-middle)
+      warm bronze    oklch(0.74 0.11 78)   = sandy/warm-bronze background
+                     wash, echoing the "warm-paper field" + sandy-ochre
+                     splash of the sibling hero-art asset for this record
+
+    Two center caps (back-middle, front-middle) carry the coral splash
+    per the heroImageAlt's "two center alpha caps" description — a
+    single-hue accent, not a two-tone kit (distinct from the ta-neo
+    slate+neon two-tone treatment). The remaining four caps are
+    warm-grey stroke only, per the single-family-of-color convention.
+
+    A faint dune-wave echo beneath the ground line nods to the same
+    quiet "beachy" motif established in the sibling hero-art SVG,
+    kept abstract and low-opacity per family discipline.
+
+    Bronze theme dot: oklch(0.80 0.135 75) — the fixed family ornamental
+    anchor, present regardless of a record's own splash palette (see
+    novelkeys-gmk-cyl-og-extensions.svg, divinikey-dcs-dolch.svg).
+  -->
+
+  <!-- Splash wash: warm-bronze/sandy tinted ellipse behind the cluster (very low opacity) -->
+  <ellipse cx="600" cy="395" rx="520" ry="225"
+           fill="oklch(0.74 0.11 78 / 0.08)" stroke="none"/>
+
+  <!-- ============================================================
+       6 GMK CYL keycaps, two staggered rows of three.
+       Each cap:
+         outer silhouette path (base footprint with rounded corners)
+         inset top surface path (the CYL dish)
+         scoop arc(s)
+       Cap template + grid inherited from kbdfans-gmk-cyl-ramune.svg.
+  ============================================================ -->
+
+  <!-- ============================================================
+       Row 1: back row, three 1u caps
+  ============================================================ -->
+
+  <!-- Back-left — warm-grey -->
+  <g transform="translate(295 235)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          stroke-opacity="0.70"/>
+    <path d="M 38 90 Q 88 76 138 90" stroke-opacity="0.45"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke-opacity="0.30"/>
+  </g>
+
+  <!-- Back-middle — FOCAL coral cap -->
+  <g transform="translate(515 235)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"
+          fill="oklch(0.68 0.165 28 / 0.20)" stroke="oklch(0.62 0.16 28)"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          fill="oklch(0.68 0.165 28 / 0.12)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.55"/>
+    <path d="M 38 90 Q 88 76 138 90" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.50"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.32"/>
+  </g>
+
+  <!-- Back-right — warm-grey -->
+  <g transform="translate(735 235)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          stroke-opacity="0.70"/>
+    <path d="M 38 90 Q 88 76 138 90" stroke-opacity="0.45"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke-opacity="0.30"/>
+  </g>
+
+  <!-- ============================================================
+       Row 2: front row, three 1u caps, shifted half-cap right
+  ============================================================ -->
+
+  <!-- Front-left — warm-grey -->
+  <g transform="translate(405 435)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          stroke-opacity="0.70"/>
+    <path d="M 38 90 Q 88 76 138 90" stroke-opacity="0.45"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke-opacity="0.30"/>
+  </g>
+
+  <!-- Front-middle — FOCAL coral cap (second center alpha, echoes back-middle) -->
+  <g transform="translate(625 435)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"
+          fill="oklch(0.68 0.165 28 / 0.20)" stroke="oklch(0.62 0.16 28)"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          fill="oklch(0.68 0.165 28 / 0.12)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.55"/>
+    <path d="M 38 90 Q 88 76 138 90" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.50"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.32"/>
+  </g>
+
+  <!-- Front-right — warm-grey -->
+  <g transform="translate(845 435)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          stroke-opacity="0.70"/>
+    <path d="M 38 90 Q 88 76 138 90" stroke-opacity="0.45"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke-opacity="0.30"/>
+  </g>
+
+  <!-- ── Quiet ground anchor: dashed line beneath the cluster ──────────────────────────── -->
+  <line x1="150" y1="628" x2="1010" y2="628"
+        stroke-opacity="0.15" stroke-dasharray="3 9"/>
+
+  <!-- ── Faint dune-wave echo beneath the ground line — quiet "beachy" nod, kept abstract,
+       consistent with the sibling hero-art asset for this record ────────────────────── -->
+  <path d="M 150 646 Q 260 638 370 646 Q 480 654 590 646 Q 700 638 810 646 Q 920 654 1010 646"
+        stroke-opacity="0.12"/>
+
+  <!-- ── Measurement ticks at left margin — bracket the cluster height ─────────────────── -->
+  <g stroke-opacity="0.22">
+    <line x1="120" y1="235" x2="134" y2="235"/>
+    <line x1="120" y1="599" x2="134" y2="599"/>
+    <line x1="127" y1="235" x2="127" y2="599" stroke-opacity="0.15"/>
+  </g>
+
+  <!-- ============================================================
+       CORAL ACCENT PIP: focal dot below the cluster, echoing
+       the coral splash. Mirrors the accent-pip convention in the
+       ta-neo / ramune / og-extensions siblings.
+  ============================================================ -->
+  <circle cx="770" cy="640" r="6"
+          fill="oklch(0.68 0.165 28 / 0.92)"
+          stroke="oklch(0.62 0.16 28)"/>
+  <circle cx="770" cy="640" r="13"
+          stroke="oklch(0.68 0.165 28)"
+          stroke-opacity="0.40"
+          fill="none"/>
+
+  <!-- ── Bronze theme dot, upper-right — family ornamental anchor (fixed) ───────────────── -->
+  <circle cx="1058" cy="118" r="6"
+          fill="oklch(0.80 0.135 75 / 0.90)"
+          stroke="none"/>
+  <circle cx="1058" cy="118" r="15"
+          stroke="oklch(0.80 0.135 75)"
+          stroke-opacity="0.34"
+          fill="none"/>
+</svg>
