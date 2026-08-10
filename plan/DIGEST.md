@@ -6,174 +6,194 @@
 
 ## Headline
 
-**A clean ~23.8h window — 24/24 `march` runs succeeded — 16
-substantive ticks (13 shipped fixes + 3 `expand` passes) for 29
-commits total.** Since the last digest (`495d281c`,
-2026-08-08T10:59:21 UTC) the loop drained 13 `plan/AUDIT.md`
-findings, all self-discovered by fresh `/iterate` audit sweeps (no
-pending build-plan phase, data backlog, or cross-link work exists to
-draw from). The window's dominant defect class was a single tangled
-factual error — the Cherry/GMK ownership claim — and its cleanup: a
-same-tick correction across 2 articles + the then-current 12 weeks
-of trends data (`72ddac23`), then three separate follow-up ticks
-found the fix's own stated scope was incomplete and mopped up
-residue one slice at a time (W21-W28, then W19-W20, each catching
-trend-snapshot weeks the original commit's stated range hadn't
-covered). A second recurring class: numeric week-count overcounts on
-the live V6 Ultra HE Kickstarter, fixed on the trends snapshot itself
-(`666be6e1`) then found stale a second time in the newsletter archive
-prose minutes later (`747a6b79`) — the same propagation-lag shape as
-the Cherry/GMK cleanup, just smaller. Other fixes: a WCAG-AA contrast
-miss on the vendor "inactive" status badge; a false claim that the
-HMX Cloud is "an all-PC switch" contradicting the site's own
-dedicated deep dive; a mischaracterized "monotonic decline" for a
-tracker score shape that actually recovered mid-window; a missing
-`role="alert"` on `global-error.tsx` (the one crash boundary a prior
-10-file sweep's own `find` pattern structurally couldn't match); a
-false claim that the Mode Sonnet R2 ships a Hall-effect switch
-option, contradicted by two sibling articles and the board's own
-data record; a wrong vendor HQ city (NovelKeys is Morgantown, WV,
-not Indianapolis); and a 2-week undercount of the HE tracker streak
-in `computex-2026-keyboard-highlights`. `/expand` ran 3 passes
-(299-301) — all zero-new-candidate, though passes 300 and 301 each
-strengthened an existing candidate's scope note (trend-snapshot
-quality gate; article internal-consistency checker) using this
-window's fresh fact-check evidence rather than filing duplicates.
-This tick's own fresh `pnpm verify` is green across all eight legs,
-run as sequential foreground blocking calls: typecheck (9 packages),
-lint (all lintable workspaces), 805 unit tests site-wide (805 web /
-107 files, up from 803/107), 198 script tests / 72 suites
-(unchanged), 78 data records / cross-refs resolve (unchanged), a
-clean build across all canonical routes, homepage bundle 108.7 KB /
-200 KB (unchanged), and 1131/1131 e2e (unchanged). Deploy is `READY`
-at HEAD (`54a125f3`, `dpl_DYh5bVuZ`).
+**A clean ~24.0h window — 24/24 `march` runs succeeded — 21
+substantive ticks (16 shipped fixes/content + 2 `expand` passes +
+1 weekly trend snapshot + 1 content-gap dispatch + 1 mirror-only
+tick) for 37 commits total.** Since the last digest (`d5e70487`,
+2026-08-09T11:02:51 UTC) the loop drained **26** `plan/AUDIT.md`
+findings (961 → 987 `[x]` rows), all self-discovered by fresh
+`/iterate` audit sweeps except one content-gap dispatch and one
+10-pair cross-link batch. The window's shape: a long tail of small,
+independent factual/data corrections rather than one dominant defect
+class — week-count off-by-ones (W31 Gateron Lanes, W23 Ramune, W32
+Blaine V2 SE, cherry-xtrfy-tmr-pivot MX2A), stale/missing trend-row
+state (CannonKeys tracker dropout restored, GMK Beachy row linked to
+its companion article, cannonkeys-blaine-v2-se flipped to closed
+status), a self-contradicting install-time figure in pe-foam-mod (10
+vs 15 minutes), a missing citation link on gmk-cyl-og-extensions, a
+regressed cross-link on hmx-cloud-deep-dive, and a fabricated third
+vendor invented in the W33 OG Extensions trend note. A distinct
+late-window cluster (5 ticks, 05:56-09:49 UTC) worked the same
+article family — `gmk-cyl-just-beachy-group-buy-opens` and its
+sibling trend rows — fixing an overreaching "widest spread" claim,
+an unqualified vendor count, and the fabricated-vendor note in
+succession, alongside the article's own content-gap dispatch (filed
+`#806`, shipped same window) and a 10-pair cross-link drain
+(`#807`). A non-content fix also shipped: `tracker-linkage-survey
+.mjs`'s dedup logic ignored topic spelling drift (`d1045963`),
+closing `#801`. Two issues cited by last night's digest as evidence
+for a standing process gap — `#776` (pe-foam-mod, open since
+2026-08-07) and `#799` (W23 Ramune, open since 2026-08-09) — were
+both drained this window. `/expand` ran 2 passes (302-303), both
+zero-new-candidate; pass 302 reinforced the numeric-spec-audit
+candidate to `7.5`. This tick's own fresh `pnpm verify` is green
+across all eight legs, run as sequential foreground blocking calls:
+typecheck (9 packages), lint (all lintable workspaces), 805 unit
+tests site-wide (unchanged from yesterday), 202 script tests / 72
+suites (up from 198 — new dedup-drift coverage from `d1045963`), 79
+data records / cross-refs resolve (up from 78 — the W33 snapshot),
+a clean build across all canonical routes, homepage bundle 108.7 KB
+/ 200 KB (unchanged), and 1137/1137 e2e (up from 1131 — new
+canonical URLs for the just-shipped article). Deploy is `READY` at
+HEAD (`e1256f3c`, `dpl_E5ZMpgqP`).
 
-`plan/CRITIQUE.md` is now **91 days / 2130 commits** since its last
+`plan/CRITIQUE.md` is now **92 days / 2168 commits** since its last
 pass (11, 2026-05-10T20:35 UTC at commit `931c8a7`). Diagnosis
 unchanged: cloud mode architecturally cannot reach `/critique` (no
-Chrome MCP on the runner; `.github/workflows/march.yml` explicitly
-skips it), and every commit this window again carries the
-`Cloud-Run:` trailer. `plan/PHASE_CANDIDATES.md` holds **23 pending
-rows + 1 needs-user-call**, unchanged in count (passes 300/301
-edited existing rows' scope notes rather than adding new ones),
-**56 days** since the last promotion (2026-06-14, phases 46-49).
-`plan/AUDIT.md` carries **1 open row** (the standing `[4.0]`
-Lighthouse-CI row) plus **3 more `/oversight`-gated or blocked
-rows**, unchanged from yesterday. Two fresh loop-opened GitHub
-issues from this window's audit sweeps — `#789` (CannonKeys tracker
-dropout) and `#799` (Ramune week-count) — were mirrored to GitHub
-but not picked for a same-tick fix and carry **no corresponding
-`plan/AUDIT.md` Pending row**; see "Needs you" below.
+Chrome MCP on the runner); every commit this window again carries
+the `Cloud-Run:` trailer. `plan/PHASE_CANDIDATES.md` holds **23
+pending rows + 1 needs-user-call**, unchanged in count (both this
+window's expand passes were zero-new-candidate), **57 days** since
+the last promotion (2026-06-14, phases 46-49). `plan/AUDIT.md`
+carries **1 open row** (the standing `[4.0]` Lighthouse-CI row) plus
+**4 more `/oversight`-gated or blocked rows** — one new since
+yesterday: a `[needs-user-call] [3.0]` meta-finding (filed this
+window, `bbde6417`) diagnosing that mirrored `loop:opened` GitHub
+issues can go permanently un-drained if not picked the same tick
+they're filed. That row cites `#776`/`#799` as its evidence — both
+now closed — but a **fresh instance landed this morning**: `#813`
+(RSS `validateRssXml` dead code, filed 10:33 UTC by the final march
+run of this window) was mirrored to GitHub with no fix shipped and,
+consistent with the diagnosed gap, carries no `plan/AUDIT.md`
+Pending row of its own. See "Needs you" below.
 
 ## While you were out
 
 | When (UTC) | Tick | Outcome |
 |---|---|---|
-| 08-08 11:12 | expand | pass 299 — no candidates (`70091d28`) |
-| 08-08 12:27 | iterate | a11y — vendor "inactive" badge WCAG-AA contrast `[3.6]` (`1619b9ac`/`29109a54`, closes #786) |
-| 08-08 13:44 | iterate | content — Cherry/GMK ownership claim, 2 articles + 12 weeks trends `[4.0]` (`72ddac23`/`90329819`, closes #787) |
-| 08-08 14:31 | iterate | data — trends W31 GMK CYL TA Neo tracker linkage `[4.0]` (`55fa6096`/`361d5e4e`, closes #788) |
-| 08-08 15:17 | audit | issue #789 mirrored (CannonKeys tracker dropout) — not picked for a fix this window |
-| 08-08 16:28 | iterate | content — keyboard-acoustics-deep-dive HMX Cloud "all-PC" claim `[5.4]` (`a6c6c4fb`/`0b4032a6`, closes #790) |
-| 08-08 18:30 | iterate | content — cherry-xtrfy-tmr-pivot tracker score mischaracterized as monotonic decline `[3.6]` (`3eb6993c`/`6ebc4ae1`, closes #791) |
-| 08-08 19:33 | iterate | content/data — trends W21-W28 Cherry brand notes still attributed to GMK `[6.3]` (`149ae289`/`8530ac6a`, closes #792) |
-| 08-08 22:33 | iterate | a11y — global-error.tsx crash boundary missing role="alert" `[3.6]` (`943b36eb`/`3c2224cd`, closes #793) |
-| 08-08 23:24 | iterate | content/data — trends W19-W20 Cherry brand row same residue `[5.4]` (`8c0695b7`/`e9e6062e`, closes #794) |
-| 08-09 00:23 | expand | pass 300 — no new candidates; strengthened trend-snapshot quality-gate candidate (`1dd77058`) |
-| 08-09 03:05 | iterate | content — hall-effect-mainstream false Mode Sonnet R2 HE claim `[4.55]` (`672b1703`/`3a23ba2b`, closes #795) |
-| 08-09 05:00 | iterate | data — novelkeys vendor HQ Indianapolis → Morgantown, WV `[5.4]` (`1c4246b0`/`42a1b799`, closes #796) |
-| 08-09 06:33 | expand | pass 301 — no new candidates; strengthened internal-consistency-checker candidate (`c362c91a`) |
-| 08-09 07:54 | iterate | content — computex-2026-keyboard-highlights HE streak undercounted 2 weeks `[3.6]` (`e2337ae9`/`effd0d8d`, closes #797) |
-| 08-09 08:29 | iterate | data — 2026-W32 trend snapshot Kickstarter week-count overcount `[4.8]` (`666be6e1`/`4d9c8612`, closes #798) |
-| 08-09 09:30 | iterate | content — thock-weekly-006 stale "third week" Kickstarter overcount `[3.6]` (`747a6b79`/`54a125f3`, same fact as #798, second surface) |
-| 08-09 10:18 | audit | issue #799 mirrored (Ramune week-count miscount) — not picked for a fix this window |
+| 08-09 11:31 | iterate | data — W31 Gateron Lanes week-count + `[2.4]` manifest hygiene, 2 findings (`48de69cd`/`c0fc6913`, closes #800) |
+| 08-09 12:30 | fix | tracker-linkage-survey dedup ignores topic spelling drift `[3.5]` (`d1045963`/`c2d249fc`, closes #801) |
+| 08-09 13:36 | iterate | data — W32 CannonKeys tracker dropout restored `[4.2]` (`0fd5e963`/`a962153c`, closes #789) |
+| 08-09 14:39 | iterate | content — cherry-xtrfy-tmr-pivot MX2A week-count off-by-one `[5.4]` (`7bb15759`/`ba063579`, closes #802) |
+| 08-09 15:35 | iterate | content — gmk-cyl-og-extensions W30 citation gap `[4.5]` (`c0afce24`/`5c2e1703`, closes #803) |
+| 08-09 16:26 | iterate | cross-links — hmx-cloud-deep-dive ↔ keyboard-acoustics-deep-dive regressed link restored `[4.5]` (`25319866`/`474a235e`, closes #804) |
+| 08-09 17:15 | expand | pass 302 — 0 new candidates, numeric-spec audit reinforced to 7.5 (`bfa6f505`) |
+| 08-09 18:28 | iterate | content — pe-foam-mod self-contradicting install time (10 vs 15 min) `[4.8]` (`4b8b667e`/`bbde6417`, closes #776) |
+| 08-09 19:28 | iterate | data — W23 Ramune week-count undercount `[4.5]` (`a4179926`/`a2fa3569`, closes #799) |
+| 08-09 21:26 | iterate | data — W32 Blaine V2 SE closing-week note fixed `[5.4]` (`51d21dbf`/`ed55ab4b`, closes #805) |
+| 08-09 22:14 | expand | pass 303 — 0 new candidates, two candidates reinforced in place (`b2dcd442`) |
+| 08-10 00:30 | weekly | 2026-W33 trend snapshot generated (`2aecc8a9`) |
+| 08-10 01:34 | audit | content-gap row auto-filed by content-gap-survey.mjs; issue #806 opened (`1a353ecb`/`fe0f6750`) |
+| 08-10 03:55 | ship-content | news — "GMK Just Beachy's group buy opens August 18 across five vendors on five continents" (`eda11aed`/`a0a74d63`, closes #806) |
+| 08-10 04:48 | iterate | cross-links — gmk-cyl-just-beachy-group-buy-opens, 10 pairs drained (`fc877cfd`/`8fe793a2`, closes #807) |
+| 08-10 05:56 | iterate | data — cannonkeys-blaine-v2-se status stale → closed `[3.6]` (`61f0ae14`/`63ebab21`, closes #808) |
+| 08-10 06:45 | iterate | content — gmk-cyl-just-beachy "widest spread" claim qualified `[3.2]` (`f3c1b0e4`/`8fd0f077`, closes #809) |
+| 08-10 07:49 | iterate | data — GMK Beachy trend rows linked to companion article `[6.3]` (`71325662`/`4ef5233f`, closes #810) |
+| 08-10 09:03 | iterate | content — gmk-cyl-just-beachy TA Neo vendor count qualified `[4.2]` (`300475aa`/`0a9c278a`, closes #811) |
+| 08-10 09:48 | iterate | data — W33 OG Extensions fabricated third vendor dropped `[6.3]` (`b0cc43d4`/`e1256f3c`, closes #812) |
+| 08-10 10:28 | audit | issue #813 mirrored (RSS validateRssXml dead code) — not picked for a fix this window |
 
-24 `march`-workflow runs since 2026-08-08T10:59:21 UTC: **24
+24 `march`-workflow runs since 2026-08-09T11:02:51 UTC: **24
 `success`, 0 `failure`, 0 `cancelled`** — a fully clean window, no
-GH Actions infra hiccups. `heartbeat` (4 runs) and `night` (1 prior
-run) both green throughout, no wedged-run alerts. 16 ticks produced
-a commit (13 fixes + 3 expand passes); the remaining 8 runs were
-no-ops.
+GH Actions infra hiccups. `heartbeat` (4 runs) all green throughout,
+no wedged-run alerts. `night` (1 prior run, 2026-08-09) green; this
+tick is the current `night` run. 21 ticks produced a commit or
+opened an issue; 3 of the 24 runs were silent no-ops.
 
 ## Shipped
 
-- **content fact-checks (7)**: Cherry/GMK ownership claim corrected
-  across 2 articles + the then-current 12 weeks of trends data, then
-  found incomplete twice more (W21-W28, then W19-W20 — the original
-  fix's stated week range didn't cover the row's full appearance
-  window, the same "fix understated its own scope" shape seen
-  earlier this week on other clusters); keyboard-acoustics-deep-dive
-  called the HMX Cloud "an all-PC switch" against the catalog and
-  the site's own dedicated HMX Cloud deep dive; cherry-xtrfy-tmr-pivot
-  mischaracterized a tracker score's recovery-after-dip shape as a
-  monotonic decline; hall-effect-mainstream falsely claimed the Mode
-  Sonnet R2 has a Hall-effect option, contradicted by two sibling
-  articles and the board's own data record; computex-2026-keyboard-
-  highlights undercounted the HE tracker streak by 2 weeks;
-  thock-weekly-006 still said "third week" for the V6 Ultra HE
-  Kickstarter after the same fact had already been corrected to
-  "second week" on the trends snapshot earlier the same window.
-- **data (2)**: trends W31 — linked the GMK CYL TA Neo row to its
-  companion article; novelkeys vendor description — wrong HQ city
-  (Indianapolis, real HQ Morgantown, WV) rendered verbatim across 4
-  live surfaces including JSON-LD.
-- **a11y (2)**: vendor "inactive" status badge failed WCAG AA
-  contrast; `global-error.tsx` — the one crash boundary a prior
-  10-file `role="alert"` sweep's own `find apps/web/src/app
-  -name "error.tsx"` pattern structurally couldn't match (the
-  root-layout boundary is named `global-error.tsx`, not
-  `error.tsx`).
-- **expand**: 3 passes (299-301), all zero-new-candidate. Passes 300
-  and 301 each used this window's fresh fact-check evidence to
-  strengthen an existing candidate's scope note (trend-snapshot
-  data-quality gate; article internal-consistency checker) rather
-  than filing duplicates — the meta-loop reading its own commit
-  pattern correctly instead of over-firing.
+- **content fact-checks (6)**: cherry-xtrfy-tmr-pivot's MX2A
+  week-count off-by-one (eight vs actual seven); gmk-cyl-og
+  -extensions-interest-check's missing W30 tracker citation link;
+  pe-foam-mod's self-contradicting install-time figure (10 min at
+  one point, 15 at another, with a sibling article depending on the
+  10-minute figure); gmk-cyl-just-beachy's overreaching "widest
+  spread of this year's tracked CYL buys" claim (Ramune's buy is
+  wider) qualified; the same article's TA Neo vendor count converted
+  from an unsupported exact "four vendors" + ranking claim to
+  "four named vendors."
+- **content (1, ship-content)**: news pillar article "GMK Just
+  Beachy's group buy opens August 18 across five vendors on five
+  continents" (970 words, 5 sections, 3 InlineViz), filling the news
+  pillar's hot-pursuit content-gap window.
+- **data (7)**: W31 trend snapshot Gateron Lanes week-count
+  off-by-one; W32 trend snapshot CannonKeys tracker row restored
+  after a dropout; W23 trend snapshot Ramune week-count undercount;
+  W32 trend snapshot Blaine V2 SE closing-week note (fixed a
+  "closes today" claim six days off plus a week-count miscount, the
+  defect having been introduced by an *earlier* fix's author-time
+  text leaking into snapshot-fixed prose); cannonkeys-blaine-v2-se
+  group-buy record status flipped from live to closed (`endDate`
+  had passed); GMK Beachy trend rows (W32, W33) linked to their
+  already-live companion article; W33 trend snapshot's OG Extensions
+  note had a fabricated third vendor ("Sandkeys Middle East",
+  appearing in no data record) dropped.
+- **cross-links (1 batch, 10 pairs)**:
+  `gmk-cyl-just-beachy-group-buy-opens` linked to 10 same-pillar/
+  shared-tag sibling articles; plus a separate regressed link
+  restored between `hmx-cloud-deep-dive` and
+  `keyboard-acoustics-deep-dive`.
+- **engineering (1)**: `tracker-linkage-survey.mjs`'s dedup check
+  ignored topic spelling/spacing drift between a filed row's topic
+  string and a newly-discovered instance, risking duplicate rows for
+  the same underlying defect; now normalizes before comparing.
+- **manifest hygiene (1)**: a prior tick's content fix
+  (`747a6b79`) had shipped without regenerating the committed
+  data-runtime/search manifests — resolved as a byproduct of the W31
+  fix's own regeneration step, no dedicated commit needed.
+- **expand**: 2 passes (302-303), both zero-new-candidate. Pass 302
+  used this window's pe-foam-mod contradiction as fresh evidence to
+  reinforce the numeric-spec-audit candidate from 7.0 to 7.5; pass
+  303 reinforced two existing candidates in place with this window's
+  week-count-fix evidence rather than filing duplicates.
 
 ## Queues now
 
 - **Build plan**: 0 pending phases (51 shipped), unchanged.
-- **Cross-link drain**: 0 pending rows, unchanged.
-- **`plan/AUDIT.md`**: **1 open row** (961 `[x]` rows now, up from
-  948 — 13 findings closed this window) plus 3 more standing
-  `/oversight`-gated or blocked rows, unchanged from yesterday:
+- **Cross-link drain**: 0 pending rows, unchanged (the 10-pair batch
+  and the 1 regressed link both drained same-window as filed).
+- **`plan/AUDIT.md`**: **1 open row** (987 `[x]` rows now, up from
+  961 — 26 findings closed this window) plus **4 more**
+  `/oversight`-gated or blocked rows, **one new since yesterday**:
   `[6.3]` march.yml crash-gate (blocked-cloud-permission, issue
   #395, filed 2026-07-05); `[4.0]` Lighthouse-CI disabled (filed
   2026-07-18, still `disabled_manually`); `[needs-user-call] [4.2]`
   soft-404 structurally blocked (issue #533, filed 2026-07-18);
   `[4.0]` heartbeat.yml dedup (blocked-cloud-permission, issue #620,
-  filed 2026-07-26).
+  filed 2026-07-26); **new** `[needs-user-call] [3.0]` mirrored
+  `loop:opened` issues can go permanently un-drained (filed this
+  window, `bbde6417`, citing `#776`/`#799` — both since closed, but
+  reinforced this morning by a fresh instance, `#813`).
 - **`plan/CRITIQUE.md`**: pass 11, last pass 2026-05-10T20:35 UTC at
-  commit `931c8a7`. **91 days / 2130 commits stale.** Diagnosis
+  commit `931c8a7`. **92 days / 2168 commits stale.** Diagnosis
   unchanged: cloud mode architecturally cannot reach `/critique` (no
   Chrome MCP; every commit this window again carries `Cloud-Run:`).
   One `[needs-user-call]` row remains Pending (GA `/g/collect`
   503s, filed pass 8) — outside the repo, not actionable by a
   shipping skill.
 - **`plan/PHASE_CANDIDATES.md`**: **23 pending rows + 1
-  needs-user-call**, unchanged in count from yesterday. **56 days**
+  needs-user-call**, unchanged in count from yesterday. **57 days**
   since the last promotion (2026-06-14, phases 46-49). Top of the
-  cluster remains three `7.0`s (trend-snapshot data-quality gate,
-  automated content-fact-vs-catalog numeric-spec audit, article
-  internal-consistency checker) — this window's 7 content
-  fact-checks are fresh, repeated evidence for the first two of
-  those three.
+  cluster remains three `7.5`s and `7.0`s (numeric-spec audit just
+  reinforced to 7.5 this window; trend-snapshot data-quality gate at
+  7.5; article internal-consistency checker at 7.0) — this window's
+  content fact-checks are fresh, repeated evidence for all three.
 - **`data/BACKLOG.md`**: 0 pending rows, unchanged.
-- **Triage**: **19 open issues**, 0 unlabeled — up from 17. Net +2:
-  13 issues opened and closed same-window for this window's 13
-  fixes, plus 2 new issues opened by audit sweeps but not drained
-  (`#789`, `#799` — see "Needs you"). Four `triage:needs-user`
-  issues remain standing, ages unchanged in kind: `#756` (3 days
-  old), `#639` (12 days old), `#499` (24 days old), `#434` (30 days
-  old). Orphaned duplicate `#719` (MobileNav focus-containment,
-  fixed weeks ago by `6ef381e3`) remains open, unchanged. The
-  8-issue `deep-dives` content-gap cluster (`#414`-`#422`, filed
-  2026-07-08) remains open and unchanged — already routed to
-  existing Pending candidates per prior expand-pass audits, not a
-  fresh finding.
-- **Expand cadence**: 3 passes this window (299-301), all
-  zero-new-candidate (2 of 3 strengthened existing rows instead).
-  Normal cadence, no starvation signal.
+- **Triage**: **17 open issues**, 0 unlabeled — down from 19. Net
+  -2: this window's fixes closed more issues (including 2 carried
+  over from before last digest, `#776` and `#799`) than the 1 new
+  mirror-gap issue (`#813`, not picked) plus the 1 content-gap issue
+  that opened and closed same-window (`#806`) added. Four
+  `triage:needs-user` issues remain standing, ages up by 1 day each:
+  `#756` (4 days old), `#639` (13 days old), `#499` (25 days old),
+  `#434` (31 days old). Orphaned duplicate `#719` (MobileNav
+  focus-containment, fixed weeks ago by `6ef381e3`) remains open,
+  unchanged. The 8-issue `deep-dives` content-gap cluster
+  (`#414`-`#422`, filed 2026-07-08) remains open and unchanged —
+  already routed to existing Pending candidates.
+- **Expand cadence**: 2 passes this window (302-303), both
+  zero-new-candidate but both strengthened existing rows with fresh
+  evidence. Normal cadence, no starvation signal.
 
 ## Breadth verdict
 
@@ -186,62 +206,60 @@ data:validate → build → size → e2e) — all green:
   lint` — still flags its own deprecation ahead of Next.js 16
   removal, a future-maintenance note rather than a defect;
   `packages/*` via `eslint`).
-- `test:run` — green, 805 web unit tests (107 test files, up from
-  803/107 — the new global-error.tsx role="alert" assertion).
-- `test:scripts` — green, 198 tests / 72 suites, unchanged.
-- `data:validate` — green, 78 records walked, cross-refs resolve (10
-  vendors, 18 switches, 10 keycap-sets, 10 boards, 16 group-buys, 14
-  trends) — unchanged, no new catalog entries this window.
+- `test:run` — green, 805 web unit tests / 107 test files,
+  unchanged from yesterday.
+- `test:scripts` — green, **202 tests / 72 suites**, up from 198 —
+  new coverage for `tracker-linkage-survey.mjs`'s spelling-drift
+  dedup fix (`d1045963`).
+- `data:validate` — green, **79 records** walked, cross-refs
+  resolve (10 vendors, 18 switches, 10 keycap-sets, 10 boards, 16
+  group-buys, **15 trends**, up from 14 — the W33 snapshot).
 - `build` — green, all canonical routes generated, unchanged.
 - `size` — green, homepage gzip 108.7 KB / 200 KB budget, unchanged.
-- `e2e` — green, **1131/1131** (~7.8m, single worker), unchanged.
+- `e2e` — green, **1137/1137** (~7.7m, single worker), up from 1131
+  — new canonical URLs for the news article shipped this window.
   Server stderr again logged `NoFallbackError` several dozen times
   against the five `dynamicParams = false` routes (`/part/[kind]`,
   `/part/[kind]/[slug]`, `/vendor/[slug]`, `/trends/tracker/[week]`,
   `/newsletter/[slug]`) — same non-blocking shape flagged in recent
   digests, Next's expected internal log for not-found-page e2e tests
   hitting a param outside the pre-generated set. Every one of the
-  1131 tests still passed.
-- `pnpm deploy:check` at HEAD (`54a125f3`) — deploy `READY`
-  (`dpl_DYh5bVuZ`).
+  1137 tests still passed.
+- `pnpm deploy:check` at HEAD (`e1256f3c`) — deploy `READY`
+  (`dpl_E5ZMpgqP`).
 - `lighthouse` — `gh run list --workflow lighthouse` still can't
   resolve the disabled workflow by display name (known quirk, use
-  `--workflow lighthouse.yml` or `gh workflow list` instead); state
-  remains `disabled_manually`, same standing `[4.0]` AUDIT row, no
-  new signal this window.
+  `--workflow lighthouse.yml`); state remains `disabled_manually`,
+  same standing `[4.0]` AUDIT row, no new signal this window.
 
 No red `pnpm verify` legs, and no new breadth-check finding this
 tick.
 
 ## Needs you
 
-1. **New this window: two loop-opened GitHub issues with no
-   `plan/AUDIT.md` Pending row.** `#789` (CannonKeys tracker
-   dropout — the tracker stopped rowing CannonKeys after W27 despite
-   a live, editorially-covered group buy running W28-W32) and `#799`
-   (2026-W23 GMK CYL Ramune row miscounts a five-week buy window as
-   four weeks) were both mirrored to GitHub during this window's
-   audit sweeps but weren't the tick's top-scored pick, so no fix
-   shipped and — unlike every other finding this window — neither
-   left a durable `plan/AUDIT.md` row behind. Since `/iterate`'s
-   Step 1 reads `plan/AUDIT.md` for pending work (not open GitHub
-   issues directly), these two will only get drained if a future
-   sweep happens to rediscover the same defect independently.
-   Cheap to fix by hand (both have a stated one-line "suggested
-   fix" in the issue body), or worth a small process note so
-   mirrored-but-unpicked findings leave a Pending row too.
-2. **Standing: `/critique` is 91 days / 2130 commits stale.** The
+1. **New this window: a fresh instance of the mirror-gap process
+   finding.** `#813` (RSS `validateRssXml` dead code, filed 10:33
+   UTC by this window's final march run) was mirrored to GitHub with
+   a stated one-line suggested fix but wasn't the tick's top-scored
+   pick, so no fix shipped and — same as `#776`/`#799` before it —
+   it left no `plan/AUDIT.md` Pending row behind. The diagnosing
+   `[needs-user-call] [3.0]` row already exists (filed this window,
+   `bbde6417`) and explicitly frames this as a loop-bookkeeping
+   decision for `/oversight` or `/plan-a-phase`, not something an
+   autonomous tick should resolve unilaterally. `#813` is now the
+   third live example — worth weighing when that call gets made.
+2. **Standing: `/critique` is 92 days / 2168 commits stale.** The
    diagnosis has been unchanged for weeks — cloud mode
    architecturally cannot reach `/critique` (no Chrome MCP on the
    runner). Needs a decision: accept `/critique` as local-only
    ritual, find a cloud-compatible path, or retire the gate
-   formally.
+   formally. A matching `[needs-user-call] [score 6.5]` candidate
+   already sits in `plan/PHASE_CANDIDATES.md`.
 3. **Standing, growing: the `/oversight` promotion backlog.** 23
-   pending candidates + 1 needs-user-call, now **56 days** since the
-   last promotion. Three candidates sit at `7.0`; this window's 7
-   content fact-checks are fresh, repeated evidence for two of them
-   (trend-snapshot data-quality gate, content-fact-vs-catalog
-   numeric-spec audit).
+   pending candidates + 1 needs-user-call, now **57 days** since the
+   last promotion. Three candidates cluster at 7.0-7.5; this
+   window's fact-checks are fresh, repeated evidence for the
+   numeric-spec-audit and trend-snapshot-quality-gate candidates.
 4. **Standing, unclosed: orphaned duplicate GitHub issue `#719`.**
    Still open; the MobileNav focus-containment defect it names was
    fixed weeks ago by `6ef381e3` (closed via a different issue,
@@ -249,8 +267,8 @@ tick.
 5. **Standing: Lighthouse CI has been disabled and failing for 8+
    weeks** — `/oversight` call needed. Unchanged since last digest.
 6. **Standing: four unresolved `triage:needs-user` GitHub issues.**
-   `#756` (3 days old), `#639` (12 days old), `#499` (24 days old,
-   not self-resolved), `#434` (30 days old, not self-resolved).
+   `#756` (4 days old), `#639` (13 days old), `#499` (25 days old,
+   not self-resolved), `#434` (31 days old, not self-resolved).
 7. **Standing: two blocked-cloud-permission rows** (march.yml `[6.3]`
    issue #395, heartbeat.yml `[4.0]` issue #620) — both fixes
    written and verified, neither can ship because the cloud push
@@ -265,35 +283,35 @@ tick.
 
 No pending build-plan phase, no data backlog, no cross-link backlog,
 no autonomously-actionable `plan/AUDIT.md` row (the one open row is
-`/oversight`-gated). The two mirrored-but-undrained issues (`#789`,
-`#799`) are the most concrete near-term targets — either lands as a
-one-line data fix if a tick picks it up, or the `/oversight` pass
-below can knock both out by hand in minutes. Otherwise the next
-`/march` tick will most likely repeat this window's pattern: a fresh
-reactive `/iterate` fix off a general-purpose sweep, or another
-`/expand` pass. The highest-leverage next move isn't a new fix —
-it's an `/oversight` pass covering, in one sitting: the two orphaned
-issues above, the standing 23-row candidate cluster (three `7.0`s,
-now 56 days stale, with fresh evidence from this window), the
-Critique-gate decision (now past 90 days), the Lighthouse re-enable
-decision, the two blocked workflow-permission fixes, and (small)
-closing the orphaned `#719` duplicate issue by hand.
+`/oversight`-gated). `#813` is the most concrete near-term target —
+either lands as a one-line test-coverage fix if a tick picks it up,
+or the `/oversight` pass below can knock it out by hand in minutes.
+Otherwise the next `/march` tick will most likely repeat this
+window's pattern: a fresh reactive `/iterate` fix off a
+general-purpose sweep, or another `/expand` pass. The
+highest-leverage next move isn't a new fix — it's an `/oversight`
+pass covering, in one sitting: the mirror-gap process decision (now
+with three live examples), the standing 23-row candidate cluster
+(three 7.0-7.5s, now 57 days stale, with fresh evidence from this
+window), the Critique-gate decision (now past 90 days), the
+Lighthouse re-enable decision, the two blocked workflow-permission
+fixes, and (small) closing the orphaned `#719` duplicate issue by
+hand.
 
 ## Tuning proposals
 
 None new this pass. 24/24 `march` runs succeeded this window — a
 fully clean stretch, no infra incidents to weigh against a ceiling
-or ratio. `/expand`'s 3 passes (299-301, all zero-new-candidate but
-2 of 3 strengthened existing rows with fresh evidence) is within
-normal cadence, not starvation, and shows the meta-loop correctly
-avoiding duplicate filings. The one new process observation this
-window — mirrored-but-unpicked GitHub issues (`#789`, `#799`)
-leaving no `plan/AUDIT.md` trace — is filed under "Needs you" as a
-concrete, small fix rather than a gate-tuning proposal; it's a
-one-off procedural gap in how Step 2.5's issue-mirroring interacts
-with a tick that doesn't ship the mirrored finding, not evidence of
-a mistuned cadence, ceiling, or posture. The critique-gate
-staleness (now 91 days), the 23-row `/oversight` backlog, and the
-four standing `triage:needs-user` issues remain standing,
-already-diagnosed decisions awaiting a human call, not new tuning
-signals — all covered under Needs you rather than re-proposed here.
+or ratio. `/expand`'s 2 passes (302-303, both zero-new-candidate but
+both strengthened existing rows with fresh evidence) is within
+normal cadence, not starvation. The one process observation this
+window — a third live instance (`#813`) of the mirrored-but-unpicked
+GitHub issue gap — is filed under "Needs you" rather than as a new
+tuning proposal, since the diagnosing `[needs-user-call]` AUDIT row
+already exists (filed this same window) and explicitly defers the
+fix shape to `/oversight`; a second candidate would just duplicate
+it. The critique-gate staleness (now 92 days), the 23-row
+`/oversight` backlog, and the four standing `triage:needs-user`
+issues remain standing, already-diagnosed decisions awaiting a human
+call, not new tuning signals — all covered under Needs you rather
+than re-proposed here.
