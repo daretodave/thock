@@ -10751,7 +10751,7 @@ passes accumulate signals.)
 
 > **Resolved (2026-08-10):** cluster-aware drain (Phase 46) added a new "Where Just Beachy sits in the 2026 CYL calendar" section to `gmk-cyl-just-beachy-group-buy-opens.mdx` with two round-up paragraphs linking all 10 companion articles. `node scripts/article-crosslink-survey.mjs --json --slug gmk-cyl-just-beachy-group-buy-opens` reported 0 pairs after the fix. `pnpm verify` full gate green: typecheck, unit tests, data:validate, build, 1137/1137 e2e.
 
-### [ ] [data] [3.6] cannonkeys-blaine-v2-se — status stale, endDate 2026-08-09 passed
+### [x] [data] [3.6] cannonkeys-blaine-v2-se — status stale, endDate 2026-08-09 passed — addressed in 61f0ae14, closes #808
 - category: data
 - filed: 2026-08-10 by group-buy-status-check.mjs
 - impact: 4 (buy shows status "live" but endDate 2026-08-09 has passed — data hygiene gap)
@@ -10759,6 +10759,8 @@ passes accumulate signals.)
 - score: 3.6 (impact × ease / 10)
 - group-buy: data/group-buys/cannonkeys-blaine-v2-se.json
 - action: update status from 'live' to 'closed' in data/group-buys/cannonkeys-blaine-v2-se.json
+- issue: #808
+- resolved: status flipped to 'closed', updatedAt bumped to 2026-08-10; manifests regenerated. `61f0ae14`
 
 ### [ ] [content] [3.2] gmk-cyl-just-beachy-group-buy-opens claims "widest spread of this year's tracked CYL buys" but gmk-cyl-ramune-group-buy documents a wider one
 - category: content
