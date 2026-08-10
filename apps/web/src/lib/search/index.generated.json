@@ -113973,7 +113973,7 @@
       "slug": "cannonkeys-blaine-v2-se",
       "kind": "group-buy",
       "name": "Blaine V2: SE",
-      "href": "/group-buys#cannonkeys-blaine-v2-se"
+      "href": "/group-buys/past#cannonkeys-blaine-v2-se"
     },
     {
       "id": "cannonkeys-mode-sonnet-r2",
@@ -114176,9 +114176,16 @@
       "slug": "2026-W32",
       "kind": "tracker-week",
       "name": "Week 32 / 2026",
+      "href": "/trends/tracker/2026-W32"
+    },
+    {
+      "id": "2026-W33",
+      "slug": "2026-W33",
+      "kind": "tracker-week",
+      "name": "Week 33 / 2026",
       "href": "/trends/tracker"
     }
   ],
-  "generatedAt": "2026-08-09T21:18:48.331Z",
+  "generatedAt": "2026-08-10T00:24:13.868Z",
   "count": 77
 }
