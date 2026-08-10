@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-06T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "gmk-cyl-just-beachy-group-buy-opens",
+  "article_pillar": "news",
+  "section_anchor": "Eight weeks of climbing interest",
+  "brief_summary": "Coral line chart plotting GMK Just Beachy's Trends Tracker score across eight consecutive weekly reads, values 8, 12, 16, 20, 24, 27, 30, 40. No flat or down week appears in the run. The terminal point is a filled coral circle labelled 40, with a dashed marker noting the August 18, 2026 group-buy open just past the final read.",
+  "target": "apps/web/public/article-viz/gmk-cyl-just-beachy-group-buy-opens/tracker-climb.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "data/trends/2026-W33.json — \"GMK Beachy\": category keycap, direction up, score 40, spark [8, 12, 16, 20, 24, 27, 30, 40]",
+    "apps/web/src/content/articles/gmk-cyl-just-beachy-group-buy-opens.mdx:Eight weeks of climbing interest — 'Its score has climbed for eight straight weekly reads without a single flat or down week: 8, 12, 16, 20, 24, 27, 30, 40'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gmk-cyl-just-beachy-group-buy-opens/tracker-climb.svg"],
+  "warnings": []
+}

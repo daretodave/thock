@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Three-bar comparison of launch-day storefront counts across 2026 GMK CYL group buys: GMK CYL OG Extensions at two storefronts, GMK CYL TA Neo at four storefronts, and GMK Just Beachy at five storefronts, the tallest bar, with an annotation that Just Beachy is the only one of the three to open all storefronts on the same calendar day</title>
+
+  <!-- Title -->
+  <text x="600" y="48" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Launch-day storefront count — 2026's tracked GMK CYL buys</text>
+
+  <!-- Baseline -->
+  <line x1="180" y1="360" x2="1020" y2="360" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.4" stroke-width="1.5"/>
+
+  <!-- Gridlines at 0,1,2,3,4,5 storefronts; baseline 360, top 100, scale 52px/unit -->
+  <line x1="180" y1="308" x2="1020" y2="308" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.1"/>
+  <line x1="180" y1="256" x2="1020" y2="256" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.1"/>
+  <line x1="180" y1="204" x2="1020" y2="204" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.1"/>
+  <line x1="180" y1="152" x2="1020" y2="152" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.1"/>
+  <line x1="180" y1="100" x2="1020" y2="100" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.1"/>
+
+  <text x="168" y="364" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.45">0</text>
+  <text x="168" y="260" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.4">2</text>
+  <text x="168" y="156" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.4">4</text>
+
+  <!-- Bar 1: OG Extensions — 2 storefronts. Bar height = 2*52 = 104, top y = 360-104 = 256 -->
+  <rect x="260" y="256" width="180" height="104" rx="4" fill="oklch(0.78 0.005 90)" fill-opacity="0.12" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.5"/>
+  <text x="350" y="240" font-family="IBM Plex Sans, sans-serif" font-size="16" font-weight="600" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">2</text>
+
+  <!-- Bar 2: TA Neo — 4 storefronts. Bar height = 4*52 = 208, top y = 360-208 = 152 -->
+  <rect x="510" y="152" width="180" height="208" rx="4" fill="oklch(0.78 0.005 90)" fill-opacity="0.12" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.5"/>
+  <text x="600" y="136" font-family="IBM Plex Sans, sans-serif" font-size="16" font-weight="600" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">4</text>
+
+  <!-- Bar 3: Just Beachy — 5 storefronts, coral, tallest. Bar height = 5*52 = 260, top y = 360-260 = 100 -->
+  <rect x="760" y="100" width="180" height="260" rx="4" fill="oklch(0.68 0.165 28)" fill-opacity="0.22" stroke="oklch(0.68 0.165 28)" stroke-width="2.5"/>
+  <text x="850" y="84" font-family="IBM Plex Sans, sans-serif" font-size="18" font-weight="700" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">5</text>
+
+  <!-- X-axis labels -->
+  <text x="350" y="388" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">OG Extensions</text>
+  <text x="600" y="388" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">TA Neo</text>
+  <text x="850" y="388" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">Just Beachy</text>
+
+  <!-- Annotation callout for Just Beachy -->
+  <text x="850" y="410" font-family="Newsreader, serif" font-size="12" font-style="italic" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.8">only one opening same-day</text>
+
+  <!-- Caption -->
+  <text x="600" y="440" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">widest storefront count of the three — and the only simultaneous open</text>
+
+  <!-- Bronze theme dot -->
+  <circle cx="1170" cy="38" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

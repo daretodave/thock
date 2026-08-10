@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-06T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "gmk-cyl-just-beachy-group-buy-opens",
+  "article_pillar": "news",
+  "section_anchor": "Five storefronts, five regions, one open date",
+  "brief_summary": "Five-box glyph strip, one box per vendor/region pairing, all rendered in the same coral fill to signal a simultaneous launch rather than a staggered regional rollout: Keebz N Cables (Oceania), Divinikey (United States), Prototypist (United Kingdom), KBDfans (China), Unikeys (Canada), each labelled with the shared August 18, 2026 open date.",
+  "target": "apps/web/public/article-viz/gmk-cyl-just-beachy-group-buy-opens/vendor-map.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "data/trends/2026-W33.json — \"GMK Beachy\" note: 'GB opens Aug 18 across Keebz N Cables (Oceania), Divinikey (US), Prototypist (UK), KBDfans (China), Unikeys (Canada)'",
+    "apps/web/src/content/articles/gmk-cyl-just-beachy-group-buy-opens.mdx:Five storefronts, five regions, one open date — 'Keebz N Cables covering Oceania, Divinikey covering the US, Prototypist covering the UK, KBDfans covering China, and Unikeys covering Canada'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gmk-cyl-just-beachy-group-buy-opens/vendor-map.svg"],
+  "warnings": []
+}

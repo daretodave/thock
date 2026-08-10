@@ -1,0 +1,24 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-10T00:00:00.000Z",
+  "commit": "fe0f6750d57806a474beb067fa3a3d04c84f68b6",
+  "kind": "hero-art",
+  "article_slug": "gmk-cyl-just-beachy-group-buy-opens",
+  "article_pillar": "news",
+  "source": null,
+  "template": "directive: plan/bearings.md § Article hero art — keycap piece maps to keycap profile silhouette (Cherry/OEM/SA), applied literally as the Cherry/CYL profile row per brief override for this vendor group-buy piece",
+  "tokens_snapshot": "f79eb6c04b4a9d2e0e3e083f8aeb6bc57586d849",
+  "fonts": ["IBM Plex Sans", "JetBrains Mono"],
+  "outputs": [
+    "apps/web/public/hero-art/gmk-cyl-just-beachy-group-buy-opens.svg"
+  ],
+  "subject": "Cherry/CYL keycap profile row: five sculpted cap side-profiles (R1 function row through R5 spacebar row) standing on a shared baseline, heights forming the family's concave ergonomic scoop (tall at the ends, shortest at R3 home row). A dashed curve traces the dome apexes to make the row-profile silhouette legible at a glance. Home-row cap (R3) carries the sandy-ochre splash fill as the focal 'Just Beachy' colorway cap. Faint undulating dune-wave line beneath the baseline is the only literal nod to the set's beach theme, kept abstract per family discipline.",
+  "splash_color": { "name": "sandy ochre", "oklch": "oklch(0.74 0.11 78)" },
+  "secondary_accent": { "name": "warm bronze theme dot", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "canvas": "1200x750",
+  "stroke_weight": "2px",
+  "data_sources": [],
+  "warnings": []
+}

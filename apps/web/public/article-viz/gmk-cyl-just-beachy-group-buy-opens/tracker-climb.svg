@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>GMK Just Beachy Trends Tracker score across eight consecutive weekly reads — values 8, 12, 16, 20, 24, 27, 30, 40 — a steady climb with no flat or down week, heading into the August 18, 2026 group-buy open</title>
+
+  <!-- Title -->
+  <text x="600" y="50" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">GMK Just Beachy — Trends Tracker, eight-week pre-GB climb</text>
+
+  <!-- Chart area: x 200 to 1040, y 100 (score 40) to 370 (score 0) -->
+  <!-- Horizontal grid lines: 0, 10, 20, 30, 40 -->
+  <line x1="180" y1="370" x2="1120" y2="370" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.4" stroke-width="1.5"/>
+  <line x1="180" y1="302.5" x2="1120" y2="302.5" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.12"/>
+  <line x1="180" y1="235" x2="1120" y2="235" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.12"/>
+  <line x1="180" y1="167.5" x2="1120" y2="167.5" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.12"/>
+  <line x1="180" y1="100" x2="1120" y2="100" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.12"/>
+
+  <!-- Y-axis labels -->
+  <text x="168" y="374" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.45">0</text>
+  <text x="168" y="306.5" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.4">10</text>
+  <text x="168" y="239" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.4">20</text>
+  <text x="168" y="171.5" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.4">30</text>
+  <text x="168" y="104" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.4">40</text>
+
+  <!-- Subtle fill below line -->
+  <polygon
+    points="200,316 320,289 440,262 560,235 680,208 800,187.75 920,167.5 1040,100 1040,370 200,370"
+    fill="oklch(0.68 0.165 28)"
+    fill-opacity="0.10"
+    stroke="none"
+  />
+
+  <!-- Coral data line -->
+  <polyline
+    points="200,316 320,289 440,262 560,235 680,208 800,187.75 920,167.5 1040,100"
+    stroke="oklch(0.68 0.165 28)"
+    stroke-width="3"
+    stroke-opacity="0.95"
+    fill="none"
+  />
+
+  <!-- Data dots — non-terminal reads -->
+  <circle cx="200" cy="316" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.45"/>
+  <circle cx="320" cy="289" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.45"/>
+  <circle cx="440" cy="262" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.45"/>
+  <circle cx="560" cy="235" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.45"/>
+  <circle cx="680" cy="208" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.45"/>
+  <circle cx="800" cy="187.75" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.45"/>
+  <circle cx="920" cy="167.5" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.45"/>
+
+  <!-- Terminal dot — read 8, score 40 -->
+  <circle cx="1040" cy="100" r="10" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.9"/>
+  <text x="1060" y="96" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.68 0.165 28)" stroke="none" font-weight="600">40</text>
+  <text x="1060" y="113" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">latest read</text>
+
+  <!-- Dashed marker past the last point -->
+  <line x1="1040" y1="100" x2="1040" y2="60" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.35" stroke-dasharray="4 4"/>
+  <text x="1040" y="46" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">Aug 18 — GB opens</text>
+
+  <!-- Read labels along x-axis -->
+  <text x="200"  y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">week 1</text>
+  <text x="320"  y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">week 2</text>
+  <text x="440"  y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">week 3</text>
+  <text x="560"  y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">week 4</text>
+  <text x="680"  y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">week 5</text>
+  <text x="800"  y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">week 6</text>
+  <text x="920"  y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">week 7</text>
+  <text x="1040" y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">week 8</text>
+
+  <!-- Caption annotation -->
+  <text x="600" y="432" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">eight to forty, zero flat or down reads — sharpest jump lands the week the buy opens</text>
+
+  <!-- Bronze theme dot -->
+  <circle cx="1170" cy="38" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

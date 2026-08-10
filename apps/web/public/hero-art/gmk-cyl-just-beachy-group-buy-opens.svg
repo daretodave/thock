@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1200 750"
+     preserveAspectRatio="xMidYMid meet"
+     fill="none"
+     stroke="oklch(0.78 0.005 90)"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     role="img"
+     aria-label="thock hero art for GMK CYL Just Beachy group buy — Cherry/CYL keycap profile row silhouette, five sculpted caps forming the ergonomic scoop, sandy-ochre splash on the home-row cap">
+  <title>thock hero — GMK CYL Just Beachy group buy, Cherry/CYL profile row silhouette (five sculpted keycaps, R1 to R5, forming the family's concave scoop), sandy-ochre splash on the home-row cap, faint dune-wave baseline</title>
+
+  <!-- Splash wash behind the row — sandy ochre, low alpha, sets the "beachy" stage -->
+  <ellipse cx="600" cy="520" rx="480" ry="150" fill="oklch(0.74 0.11 78 / 0.09)" stroke="none"/>
+
+  <!-- Baseline — the case/board plane the row sits on -->
+  <line x1="140" y1="580" x2="1060" y2="580" stroke-opacity="0.55"/>
+
+  <!-- Faint dune/wave echo beneath the baseline — quiet "beachy" nod, kept abstract -->
+  <path d="M 140 605 Q 250 596 360 605 Q 470 614 580 605 Q 690 596 800 605 Q 910 614 1020 605 Q 1040 603 1060 601"
+        stroke-opacity="0.15"/>
+
+  <!-- Dashed profile-row curve through each cap's dome apex — the scoop that names the motif -->
+  <path d="M 220 479 C 300 483 330 489 410 491 C 480 493 520 498 600 500 C 680 498 720 493 790 493 C 860 493 900 483 980 481"
+        stroke-dasharray="4 6" stroke-opacity="0.5"/>
+
+  <!-- ── R1 — function row: tallest, most reclined ── -->
+  <g>
+    <path d="M 152 580 L 168 492 L 272 492 L 288 580 Z"/>
+    <path d="M 168 492 Q 194 485 220 485 Q 246 485 272 492"/>
+    <path d="M 197 489 Q 220 479 243 489" stroke-opacity="0.55"/>
+    <line x1="152" y1="580" x2="158" y2="577" stroke-opacity="0.4"/>
+    <line x1="288" y1="580" x2="282" y2="577" stroke-opacity="0.4"/>
+  </g>
+
+  <!-- ── R2 — number row ── -->
+  <g>
+    <path d="M 342 580 L 358 504 L 462 504 L 478 580 Z"/>
+    <path d="M 358 504 Q 384 497 410 497 Q 436 497 462 504"/>
+    <path d="M 387 501 Q 410 491 433 501" stroke-opacity="0.55"/>
+    <line x1="342" y1="580" x2="348" y2="577" stroke-opacity="0.4"/>
+    <line x1="478" y1="580" x2="472" y2="577" stroke-opacity="0.4"/>
+  </g>
+
+  <!-- ── R3 — home row: shortest, the family's ergonomic floor. Focal / splash cap. ── -->
+  <g>
+    <path d="M 532 580 L 548 518 L 652 518 L 668 580 Z"
+          fill="oklch(0.74 0.11 78 / 0.16)" stroke="oklch(0.62 0.115 78)"/>
+    <path d="M 548 518 Q 574 511 600 511 Q 626 511 652 518" stroke="oklch(0.62 0.115 78)"/>
+    <path d="M 574 514 Q 600 500 626 514" stroke="oklch(0.74 0.11 78)" stroke-width="2.5"/>
+    <line x1="532" y1="580" x2="538" y2="577" stroke-opacity="0.4"/>
+    <line x1="668" y1="580" x2="662" y2="577" stroke-opacity="0.4"/>
+  </g>
+
+  <!-- ── R4 — bottom letter row ── -->
+  <g>
+    <path d="M 722 580 L 738 506 L 842 506 L 858 580 Z"/>
+    <path d="M 738 506 Q 764 499 790 499 Q 816 499 842 506"/>
+    <path d="M 767 503 Q 790 493 813 503" stroke-opacity="0.55"/>
+    <line x1="722" y1="580" x2="728" y2="577" stroke-opacity="0.4"/>
+    <line x1="858" y1="580" x2="852" y2="577" stroke-opacity="0.4"/>
+  </g>
+
+  <!-- ── R5 — spacebar / bottom-mod row: tall again, leans forward ── -->
+  <g>
+    <path d="M 912 580 L 928 494 L 1032 494 L 1048 580 Z"/>
+    <path d="M 928 494 Q 954 487 980 487 Q 1006 487 1032 494"/>
+    <path d="M 957 491 Q 980 481 1003 491" stroke-opacity="0.55"/>
+    <line x1="912" y1="580" x2="918" y2="577" stroke-opacity="0.4"/>
+    <line x1="1048" y1="580" x2="1042" y2="577" stroke-opacity="0.4"/>
+  </g>
+
+  <!-- Row labels — small monospace tags beneath each cap -->
+  <g font-family="'JetBrains Mono', ui-monospace, monospace" font-size="13" fill="oklch(0.78 0.005 90)" fill-opacity="0.55" stroke="none" letter-spacing="1.5" text-anchor="middle">
+    <text x="220" y="598">R1</text>
+    <text x="410" y="598">R2</text>
+    <text x="600" y="598">R3</text>
+    <text x="790" y="598">R4</text>
+    <text x="980" y="598">R5</text>
+  </g>
+
+  <!-- Focal accent — ochre cursor at the home-row cap's dome apex, the visual anchor -->
+  <circle cx="600" cy="500" r="6" fill="oklch(0.74 0.11 78)" fill-opacity="0.9" stroke="none"/>
+  <circle cx="600" cy="500" r="11" stroke="oklch(0.74 0.11 78)" stroke-opacity="0.4"/>
+
+  <!-- CAPTION TEXT -->
+  <text
+    x="600" y="655"
+    font-family="'IBM Plex Sans', system-ui, sans-serif"
+    font-size="12"
+    font-weight="500"
+    letter-spacing="0.16em"
+    text-anchor="middle"
+    fill="oklch(0.78 0.005 90)"
+    fill-opacity="0.72"
+    stroke="none">GMK CYL &#183; JUST BEACHY</text>
+  <text
+    x="600" y="676"
+    font-family="'JetBrains Mono', ui-monospace, monospace"
+    font-size="11"
+    letter-spacing="0.12em"
+    text-anchor="middle"
+    fill="oklch(0.74 0.11 78)"
+    fill-opacity="0.85"
+    stroke="none">GROUP BUY OPENS 2026-08-18</text>
+
+  <!-- Bronze theme dot — upper-right ornamental anchor -->
+  <circle cx="1140" cy="142" r="5" fill="oklch(0.80 0.135 75)" fill-opacity="0.90" stroke="none"/>
+  <circle cx="1140" cy="142" r="10" stroke="oklch(0.80 0.135 75)" stroke-opacity="0.30" stroke-width="1.5"/>
+</svg>

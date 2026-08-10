@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "slug": "gmk-cyl-just-beachy-group-buy-opens",
+      "readTime": 5,
+      "frontmatter": {
+        "title": "GMK Just Beachy's group buy opens August 18 across five vendors on five continents",
+        "lede": "GMK Just Beachy opens for orders August 18, 2026 at five vendors spanning five regions at once — Keebz N Cables, Divinikey, Prototypist, KBDfans, and Unikeys — capping an eight-week climb on thock's Trends Tracker that hasn't logged a single down week.",
+        "pillar": "news",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "gmk-cyl-ta-neo-production-tracking",
       "readTime": 6,
       "frontmatter": {
@@ -6134,5 +6144,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-08-10T00:24:13.124Z"
+  "generatedAt": "2026-08-10T03:46:54.458Z"
 }

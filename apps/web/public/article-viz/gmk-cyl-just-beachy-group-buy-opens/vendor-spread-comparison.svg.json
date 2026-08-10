@@ -1,0 +1,25 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-06T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "gmk-cyl-just-beachy-group-buy-opens",
+  "article_pillar": "news",
+  "section_anchor": "How that stacks up against this year's other CYL buys",
+  "brief_summary": "Three-bar comparison chart of launch-day storefront counts across 2026's tracked GMK CYL group buys: GMK CYL OG Extensions at two storefronts, GMK CYL TA Neo at four storefronts, and GMK Just Beachy at five storefronts, the tallest bar and rendered in coral, annotated as the only one of the three opening all storefronts on the same calendar day.",
+  "target": "apps/web/public/article-viz/gmk-cyl-just-beachy-group-buy-opens/vendor-spread-comparison.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "data/group-buys/novelkeys-gmk-cyl-og-extensions.json — 'kitted through NovelKeys (NA) and Prototypist (UK)' — two storefronts",
+    "data/group-buys/divinikey-gmk-cyl-ta-neo.json — 'via Divinikey (NA), Oblotzky Industries (EU), Prototypist (UK), and other regional vendors including zFrontier (China)' — four named storefronts",
+    "data/trends/2026-W33.json — \"GMK Beachy\" note: five vendors (Keebz N Cables, Divinikey, Prototypist, KBDfans, Unikeys) opening Aug 18",
+    "apps/web/src/content/articles/gmk-cyl-just-beachy-group-buy-opens.mdx:How that stacks up against this year's other CYL buys — 'GMK CYL OG Extensions kitted through two storefronts ... GMK CYL TA Neo ran wider ... four vendors ... Just Beachy's five vendors edge past even TA Neo's spread'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gmk-cyl-just-beachy-group-buy-opens/vendor-spread-comparison.svg"],
+  "warnings": []
+}
