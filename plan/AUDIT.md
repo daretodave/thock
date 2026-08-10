@@ -10639,7 +10639,7 @@ passes accumulate signals.)
 > Filed 2026-08-10 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 > **Resolved (2026-08-10):** shipped `gmk-cyl-just-beachy-group-buy-opens.mdx` (news pillar), publishedAt 2026-08-06 (gap-fill), 970 words, 5 sections, 3 InlineViz. `pnpm verify` full gate green: typecheck, lint, unit tests, script tests, data:validate, build, size, 1137/1137 e2e.
 
-### [ ] [cross-links] [4.5] gmk-cyl-just-beachy-group-buy-opens ↔ divinikey-dcs-dolch-group-buy — no prose cross-link (same pillar, ≥2 shared tags: keycaps, group-buy)
+### [x] [cross-links] [4.5] gmk-cyl-just-beachy-group-buy-opens ↔ divinikey-dcs-dolch-group-buy — addressed in commit `fc877cfd`, closes #807 (same pillar, ≥2 shared tags: keycaps, group-buy)
 - category: cross-links
 - filed: 2026-08-10 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -10650,7 +10650,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/divinikey-dcs-dolch-group-buy.mdx
 - action: add [divinikey-dcs-dolch-group-buy](/article/divinikey-dcs-dolch-group-buy) to gmk-cyl-just-beachy-group-buy-opens body, or vice versa
 
-### [ ] [cross-links] [4.5] gmk-cyl-just-beachy-group-buy-opens ↔ gmk-cyl-greg-2-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, cherry-profile, group-buy)
+### [x] [cross-links] [4.5] gmk-cyl-just-beachy-group-buy-opens ↔ gmk-cyl-greg-2-group-buy — addressed in commit `fc877cfd`, closes #807 (same pillar, ≥2 shared tags: gmk, cherry-profile, group-buy)
 - category: cross-links
 - filed: 2026-08-10 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -10661,7 +10661,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/gmk-cyl-greg-2-group-buy.mdx
 - action: add [gmk-cyl-greg-2-group-buy](/article/gmk-cyl-greg-2-group-buy) to gmk-cyl-just-beachy-group-buy-opens body, or vice versa
 
-### [ ] [cross-links] [4.5] gmk-cyl-just-beachy-group-buy-opens ↔ gmk-cyl-ishtar-r2-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, cherry-profile, group-buy)
+### [x] [cross-links] [4.5] gmk-cyl-just-beachy-group-buy-opens ↔ gmk-cyl-ishtar-r2-group-buy — addressed in commit `fc877cfd`, closes #807 (same pillar, ≥2 shared tags: gmk, cherry-profile, group-buy)
 - category: cross-links
 - filed: 2026-08-10 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -10672,7 +10672,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/gmk-cyl-ishtar-r2-group-buy.mdx
 - action: add [gmk-cyl-ishtar-r2-group-buy](/article/gmk-cyl-ishtar-r2-group-buy) to gmk-cyl-just-beachy-group-buy-opens body, or vice versa
 
-### [ ] [cross-links] [4.5] gmk-cyl-just-beachy-group-buy-opens ↔ gmk-cyl-king-of-the-seas-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, cherry-profile, group-buy)
+### [x] [cross-links] [4.5] gmk-cyl-just-beachy-group-buy-opens ↔ gmk-cyl-king-of-the-seas-group-buy — addressed in commit `fc877cfd`, closes #807 (same pillar, ≥2 shared tags: gmk, cherry-profile, group-buy)
 - category: cross-links
 - filed: 2026-08-10 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -10683,7 +10683,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/gmk-cyl-king-of-the-seas-group-buy.mdx
 - action: add [gmk-cyl-king-of-the-seas-group-buy](/article/gmk-cyl-king-of-the-seas-group-buy) to gmk-cyl-just-beachy-group-buy-opens body, or vice versa
 
-### [ ] [cross-links] [4.5] gmk-cyl-just-beachy-group-buy-opens ↔ gmk-cyl-masterpiece-r2-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, keycaps, cherry-profile, group-buy)
+### [x] [cross-links] [4.5] gmk-cyl-just-beachy-group-buy-opens ↔ gmk-cyl-masterpiece-r2-group-buy — addressed in commit `fc877cfd`, closes #807 (same pillar, ≥2 shared tags: gmk, keycaps, cherry-profile, group-buy)
 - category: cross-links
 - filed: 2026-08-10 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -10694,7 +10694,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/gmk-cyl-masterpiece-r2-group-buy.mdx
 - action: add [gmk-cyl-masterpiece-r2-group-buy](/article/gmk-cyl-masterpiece-r2-group-buy) to gmk-cyl-just-beachy-group-buy-opens body, or vice versa
 
-### [ ] [cross-links] [4.5] gmk-cyl-just-beachy-group-buy-opens ↔ gmk-cyl-pandemonium-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, keycaps, cherry-profile, group-buy)
+### [x] [cross-links] [4.5] gmk-cyl-just-beachy-group-buy-opens ↔ gmk-cyl-pandemonium-group-buy — addressed in commit `fc877cfd`, closes #807 (same pillar, ≥2 shared tags: gmk, keycaps, cherry-profile, group-buy)
 - category: cross-links
 - filed: 2026-08-10 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -10705,7 +10705,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/gmk-cyl-pandemonium-group-buy.mdx
 - action: add [gmk-cyl-pandemonium-group-buy](/article/gmk-cyl-pandemonium-group-buy) to gmk-cyl-just-beachy-group-buy-opens body, or vice versa
 
-### [ ] [cross-links] [4.5] gmk-cyl-just-beachy-group-buy-opens ↔ gmk-cyl-prussian-alert — no prose cross-link (same pillar, ≥2 shared tags: gmk, keycaps, cherry-profile, group-buy)
+### [x] [cross-links] [4.5] gmk-cyl-just-beachy-group-buy-opens ↔ gmk-cyl-prussian-alert — addressed in commit `fc877cfd`, closes #807 (same pillar, ≥2 shared tags: gmk, keycaps, cherry-profile, group-buy)
 - category: cross-links
 - filed: 2026-08-10 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -10716,7 +10716,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/gmk-cyl-prussian-alert.mdx
 - action: add [gmk-cyl-prussian-alert](/article/gmk-cyl-prussian-alert) to gmk-cyl-just-beachy-group-buy-opens body, or vice versa
 
-### [ ] [cross-links] [4.5] gmk-cyl-just-beachy-group-buy-opens ↔ gmk-cyl-ramune-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, cherry-profile, group-buy)
+### [x] [cross-links] [4.5] gmk-cyl-just-beachy-group-buy-opens ↔ gmk-cyl-ramune-group-buy — addressed in commit `fc877cfd`, closes #807 (same pillar, ≥2 shared tags: gmk, cherry-profile, group-buy)
 - category: cross-links
 - filed: 2026-08-10 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -10727,7 +10727,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/gmk-cyl-ramune-group-buy.mdx
 - action: add [gmk-cyl-ramune-group-buy](/article/gmk-cyl-ramune-group-buy) to gmk-cyl-just-beachy-group-buy-opens body, or vice versa
 
-### [ ] [cross-links] [4.5] gmk-cyl-just-beachy-group-buy-opens ↔ gmk-cyl-selene-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, keycaps, cherry-profile, group-buy)
+### [x] [cross-links] [4.5] gmk-cyl-just-beachy-group-buy-opens ↔ gmk-cyl-selene-group-buy — addressed in commit `fc877cfd`, closes #807 (same pillar, ≥2 shared tags: gmk, keycaps, cherry-profile, group-buy)
 - category: cross-links
 - filed: 2026-08-10 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -10738,7 +10738,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/gmk-cyl-selene-group-buy.mdx
 - action: add [gmk-cyl-selene-group-buy](/article/gmk-cyl-selene-group-buy) to gmk-cyl-just-beachy-group-buy-opens body, or vice versa
 
-### [ ] [cross-links] [4.5] gmk-cyl-just-beachy-group-buy-opens ↔ gsk-sweet-nightmare-group-buy — no prose cross-link (same pillar, ≥2 shared tags: keycaps, group-buy)
+### [x] [cross-links] [4.5] gmk-cyl-just-beachy-group-buy-opens ↔ gsk-sweet-nightmare-group-buy — addressed in commit `fc877cfd`, closes #807 (same pillar, ≥2 shared tags: keycaps, group-buy)
 - category: cross-links
 - filed: 2026-08-10 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -10749,6 +10749,8 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/gsk-sweet-nightmare-group-buy.mdx
 - action: add [gsk-sweet-nightmare-group-buy](/article/gsk-sweet-nightmare-group-buy) to gmk-cyl-just-beachy-group-buy-opens body, or vice versa
 
+> **Resolved (2026-08-10):** cluster-aware drain (Phase 46) added a new "Where Just Beachy sits in the 2026 CYL calendar" section to `gmk-cyl-just-beachy-group-buy-opens.mdx` with two round-up paragraphs linking all 10 companion articles. `node scripts/article-crosslink-survey.mjs --json --slug gmk-cyl-just-beachy-group-buy-opens` reported 0 pairs after the fix. `pnpm verify` full gate green: typecheck, unit tests, data:validate, build, 1137/1137 e2e.
+
 ### [ ] [data] [3.6] cannonkeys-blaine-v2-se — status stale, endDate 2026-08-09 passed
 - category: data
 - filed: 2026-08-10 by group-buy-status-check.mjs
@@ -10757,3 +10759,12 @@ passes accumulate signals.)
 - score: 3.6 (impact × ease / 10)
 - group-buy: data/group-buys/cannonkeys-blaine-v2-se.json
 - action: update status from 'live' to 'closed' in data/group-buys/cannonkeys-blaine-v2-se.json
+
+### [ ] [content] [3.2] gmk-cyl-just-beachy-group-buy-opens claims "widest spread of this year's tracked CYL buys" but gmk-cyl-ramune-group-buy documents a wider one
+- category: content
+- filed: 2026-08-10 by cloud /iterate audit (surfaced while cross-link-drain research read both articles' vendor-spread claims)
+- impact: 4 (`gmk-cyl-just-beachy-group-buy-opens.mdx`'s "How that stacks up against this year's other CYL buys" section and its accompanying `vendor-spread-comparison.svg` InlineViz caption both claim Just Beachy's 5 simultaneous vendors are "the widest spread of this year's tracked CYL buys," comparing only against GMK CYL OG Extensions (2) and GMK CYL TA Neo (4). `gmk-cyl-ramune-group-buy.mdx` — already published 2026-05-15, well before Just Beachy — documents Ramune opening across 10 regional vendors simultaneously ("the broadest multi-vendor launch in the CYL sub-line's history," per its own lede and a dedicated "The vendor structure is the other story" section), a genuinely wider concurrent spread. The new cross-link round-up added to Just Beachy this tick deliberately avoided restating the superlative next to the Ramune link to sidestep amplifying the contradiction, but the original claim + InlineViz caption are unchanged and still incorrect)
+- ease: 8 (qualify the claim in prose — e.g. "widest spread of this year's KBDfans/proxy-model CYL buys" or drop the superlative and let the numbers speak — plus regenerate the `vendor-spread-comparison.svg` caption/InlineViz alt text to match; no schema/component change, brander re-render only if the SVG's own caption text needs to change)
+- score: 3.2 (impact × ease / 10)
+- evidence: `gmk-cyl-just-beachy-group-buy-opens.mdx` "How that stacks up..." section + `vendor-spread-comparison.svg` caption vs. `gmk-cyl-ramune-group-buy.mdx` lede + "The vendor structure is the other story" section + `vendor-structure-comparison.svg`.
+- next: qualify or drop the "widest spread" superlative in Just Beachy's prose and InlineViz caption/alt text; re-render the SVG if its baked-in caption text needs to change.
