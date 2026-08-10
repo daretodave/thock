@@ -10635,4 +10635,5 @@ passes accumulate signals.)
 - window-start: 2026-07-11
 - score: 7
 - next: /ship-content → news pillar article
+- issue: #806
 > Filed 2026-08-10 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
