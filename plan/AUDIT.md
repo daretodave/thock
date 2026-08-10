@@ -10625,7 +10625,7 @@ passes accumulate signals.)
 > **Resolved (2026-08-09):** reworded the note to "enters its final week before an Aug 9 close after a four-week run" — matches the companion article and the group-buy record's actual date range. Regenerated `manifest.generated.json`/`og-manifest.generated.json`/`index.generated.json`. `pnpm verify` full gate green: typecheck, unit tests, script tests, data:validate, build, size, 1131/1131 e2e.
 > Picked as the top signal this tick (cloud `/march`): no unlabeled GitHub issues (triage gate, 0 unlabeled); not Monday (weekly snapshot gate skipped, W32 already existed); no pending phases/data/content-gap work (all 9 mechanical surveys re-ran clean, no rows filed); march's own expand Step 3c gate not met (5 commits/~4.7h since pass 302's anchor `474a235e`, threshold 20 commits/48h). AUDIT.md's only other Pending rows remained the standing non-autonomous items (the `[ ] [engineering] [4.0]` Lighthouse-CI-disabled item is explicitly flagged as needing an `/oversight` call before re-enabling, so treated as non-autonomous per the precedent set by prior ticks that passed over it); CRITIQUE.md's only Pending row remained the non-actionable GA-beacon item. A fresh general-purpose sweep (external link rot, content-fact-vs-catalog checks across 5 recently-touched articles, JSON-LD on /compare /tools /quiz, vendor-page data-vs-render cross-reference, dead-code grep, stale group-buy prose, and a systematic pass over every trend-snapshot note mentioning "week" across W19-W32) surfaced this as the one genuinely new, scoreable defect — introduced by this same finding class's own prior fix commit.
 
-### [HOT PURSUIT] [content-gap] [7] news pillar — 1 of ≥2 articles in last 30d
+### [x] [HOT PURSUIT] [content-gap] [7] news pillar — 1 of ≥2 articles in last 30d — addressed in eda11aed, closes #806
 - category: content-gaps
 - impact: 7 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -10637,3 +10637,123 @@ passes accumulate signals.)
 - next: /ship-content → news pillar article
 - issue: #806
 > Filed 2026-08-10 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+> **Resolved (2026-08-10):** shipped `gmk-cyl-just-beachy-group-buy-opens.mdx` (news pillar), publishedAt 2026-08-06 (gap-fill), 970 words, 5 sections, 3 InlineViz. `pnpm verify` full gate green: typecheck, lint, unit tests, script tests, data:validate, build, size, 1137/1137 e2e.
+
+### [ ] [cross-links] [4.5] gmk-cyl-just-beachy-group-buy-opens ↔ divinikey-dcs-dolch-group-buy — no prose cross-link (same pillar, ≥2 shared tags: keycaps, group-buy)
+- category: cross-links
+- filed: 2026-08-10 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: keycaps, group-buy
+- article-a: apps/web/src/content/articles/gmk-cyl-just-beachy-group-buy-opens.mdx
+- article-b: apps/web/src/content/articles/divinikey-dcs-dolch-group-buy.mdx
+- action: add [divinikey-dcs-dolch-group-buy](/article/divinikey-dcs-dolch-group-buy) to gmk-cyl-just-beachy-group-buy-opens body, or vice versa
+
+### [ ] [cross-links] [4.5] gmk-cyl-just-beachy-group-buy-opens ↔ gmk-cyl-greg-2-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, cherry-profile, group-buy)
+- category: cross-links
+- filed: 2026-08-10 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: gmk, cherry-profile, group-buy
+- article-a: apps/web/src/content/articles/gmk-cyl-just-beachy-group-buy-opens.mdx
+- article-b: apps/web/src/content/articles/gmk-cyl-greg-2-group-buy.mdx
+- action: add [gmk-cyl-greg-2-group-buy](/article/gmk-cyl-greg-2-group-buy) to gmk-cyl-just-beachy-group-buy-opens body, or vice versa
+
+### [ ] [cross-links] [4.5] gmk-cyl-just-beachy-group-buy-opens ↔ gmk-cyl-ishtar-r2-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, cherry-profile, group-buy)
+- category: cross-links
+- filed: 2026-08-10 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: gmk, cherry-profile, group-buy
+- article-a: apps/web/src/content/articles/gmk-cyl-just-beachy-group-buy-opens.mdx
+- article-b: apps/web/src/content/articles/gmk-cyl-ishtar-r2-group-buy.mdx
+- action: add [gmk-cyl-ishtar-r2-group-buy](/article/gmk-cyl-ishtar-r2-group-buy) to gmk-cyl-just-beachy-group-buy-opens body, or vice versa
+
+### [ ] [cross-links] [4.5] gmk-cyl-just-beachy-group-buy-opens ↔ gmk-cyl-king-of-the-seas-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, cherry-profile, group-buy)
+- category: cross-links
+- filed: 2026-08-10 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: gmk, cherry-profile, group-buy
+- article-a: apps/web/src/content/articles/gmk-cyl-just-beachy-group-buy-opens.mdx
+- article-b: apps/web/src/content/articles/gmk-cyl-king-of-the-seas-group-buy.mdx
+- action: add [gmk-cyl-king-of-the-seas-group-buy](/article/gmk-cyl-king-of-the-seas-group-buy) to gmk-cyl-just-beachy-group-buy-opens body, or vice versa
+
+### [ ] [cross-links] [4.5] gmk-cyl-just-beachy-group-buy-opens ↔ gmk-cyl-masterpiece-r2-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, keycaps, cherry-profile, group-buy)
+- category: cross-links
+- filed: 2026-08-10 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: gmk, keycaps, cherry-profile, group-buy
+- article-a: apps/web/src/content/articles/gmk-cyl-just-beachy-group-buy-opens.mdx
+- article-b: apps/web/src/content/articles/gmk-cyl-masterpiece-r2-group-buy.mdx
+- action: add [gmk-cyl-masterpiece-r2-group-buy](/article/gmk-cyl-masterpiece-r2-group-buy) to gmk-cyl-just-beachy-group-buy-opens body, or vice versa
+
+### [ ] [cross-links] [4.5] gmk-cyl-just-beachy-group-buy-opens ↔ gmk-cyl-pandemonium-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, keycaps, cherry-profile, group-buy)
+- category: cross-links
+- filed: 2026-08-10 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: gmk, keycaps, cherry-profile, group-buy
+- article-a: apps/web/src/content/articles/gmk-cyl-just-beachy-group-buy-opens.mdx
+- article-b: apps/web/src/content/articles/gmk-cyl-pandemonium-group-buy.mdx
+- action: add [gmk-cyl-pandemonium-group-buy](/article/gmk-cyl-pandemonium-group-buy) to gmk-cyl-just-beachy-group-buy-opens body, or vice versa
+
+### [ ] [cross-links] [4.5] gmk-cyl-just-beachy-group-buy-opens ↔ gmk-cyl-prussian-alert — no prose cross-link (same pillar, ≥2 shared tags: gmk, keycaps, cherry-profile, group-buy)
+- category: cross-links
+- filed: 2026-08-10 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: gmk, keycaps, cherry-profile, group-buy
+- article-a: apps/web/src/content/articles/gmk-cyl-just-beachy-group-buy-opens.mdx
+- article-b: apps/web/src/content/articles/gmk-cyl-prussian-alert.mdx
+- action: add [gmk-cyl-prussian-alert](/article/gmk-cyl-prussian-alert) to gmk-cyl-just-beachy-group-buy-opens body, or vice versa
+
+### [ ] [cross-links] [4.5] gmk-cyl-just-beachy-group-buy-opens ↔ gmk-cyl-ramune-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, cherry-profile, group-buy)
+- category: cross-links
+- filed: 2026-08-10 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: gmk, cherry-profile, group-buy
+- article-a: apps/web/src/content/articles/gmk-cyl-just-beachy-group-buy-opens.mdx
+- article-b: apps/web/src/content/articles/gmk-cyl-ramune-group-buy.mdx
+- action: add [gmk-cyl-ramune-group-buy](/article/gmk-cyl-ramune-group-buy) to gmk-cyl-just-beachy-group-buy-opens body, or vice versa
+
+### [ ] [cross-links] [4.5] gmk-cyl-just-beachy-group-buy-opens ↔ gmk-cyl-selene-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, keycaps, cherry-profile, group-buy)
+- category: cross-links
+- filed: 2026-08-10 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: gmk, keycaps, cherry-profile, group-buy
+- article-a: apps/web/src/content/articles/gmk-cyl-just-beachy-group-buy-opens.mdx
+- article-b: apps/web/src/content/articles/gmk-cyl-selene-group-buy.mdx
+- action: add [gmk-cyl-selene-group-buy](/article/gmk-cyl-selene-group-buy) to gmk-cyl-just-beachy-group-buy-opens body, or vice versa
+
+### [ ] [cross-links] [4.5] gmk-cyl-just-beachy-group-buy-opens ↔ gsk-sweet-nightmare-group-buy — no prose cross-link (same pillar, ≥2 shared tags: keycaps, group-buy)
+- category: cross-links
+- filed: 2026-08-10 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: keycaps, group-buy
+- article-a: apps/web/src/content/articles/gmk-cyl-just-beachy-group-buy-opens.mdx
+- article-b: apps/web/src/content/articles/gsk-sweet-nightmare-group-buy.mdx
+- action: add [gsk-sweet-nightmare-group-buy](/article/gsk-sweet-nightmare-group-buy) to gmk-cyl-just-beachy-group-buy-opens body, or vice versa
+
+### [ ] [data] [3.6] cannonkeys-blaine-v2-se — status stale, endDate 2026-08-09 passed
+- category: data
+- filed: 2026-08-10 by group-buy-status-check.mjs
+- impact: 4 (buy shows status "live" but endDate 2026-08-09 has passed — data hygiene gap)
+- ease: 9 (update status field to 'closed' in data/group-buys/cannonkeys-blaine-v2-se.json)
+- score: 3.6 (impact × ease / 10)
+- group-buy: data/group-buys/cannonkeys-blaine-v2-se.json
+- action: update status from 'live' to 'closed' in data/group-buys/cannonkeys-blaine-v2-se.json
