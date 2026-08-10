@@ -59,15 +59,20 @@ describe('computeArticleOgLayout', () => {
   })
 
   it('truncates the lede for titles at or under 90 chars (180-char cap)', () => {
-    const lede = 'x'.repeat(200)
+    const lede =
+      'A frankenswitch built from a Drop Holy Panda X housing and a Gateron Ink stem shows up on every enthusiast bench this quarter, and the reasons why say more about the market than the switch itself.'
     const result = computeArticleOgLayout('a normal title', lede)
     expect(result.lede.length).toBeLessThanOrEqual(180)
     expect(result.lede.endsWith('…')).toBe(true)
+    const withoutEllipsis = result.lede.slice(0, -1)
+    expect(lede.startsWith(withoutEllipsis)).toBe(true)
+    expect(lede[withoutEllipsis.length]).toMatch(/\s/)
   })
 
   it('truncates the lede tighter when the title exceeds 90 chars (130-char cap)', () => {
     const longTitle = 'x'.repeat(95)
-    const lede = 'x'.repeat(200)
+    const lede =
+      'A frankenswitch built from a Drop Holy Panda X housing and a Gateron Ink stem shows up on every enthusiast bench this quarter, and the reasons why say more about the market than the switch itself.'
     const result = computeArticleOgLayout(longTitle, lede)
     expect(result.lede.length).toBeLessThanOrEqual(130)
     expect(result.lede.length).toBeLessThan(

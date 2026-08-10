@@ -1,4 +1,5 @@
 import type { ReactElement } from 'react'
+import { truncate } from '@/lib/truncate'
 import { OG_BACKGROUND, OG_PALETTE } from './palette'
 
 export type ArticleOgLayout = {
@@ -22,10 +23,8 @@ export function computeArticleOgLayout(title: string, lede: string): ArticleOgLa
     title.length <= 90 ? 58 : 48
 
   const ledeMax = title.length > 90 ? 130 : 180
-  const truncatedLede =
-    lede.length > ledeMax ? `${lede.slice(0, ledeMax - 3).trimEnd()}…` : lede
 
-  return { titleFontSize, lede: truncatedLede }
+  return { titleFontSize, lede: truncate(lede, ledeMax) }
 }
 
 export type ArticleOGContentProps = {
