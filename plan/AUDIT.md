@@ -10771,3 +10771,14 @@ passes accumulate signals.)
 - evidence: `gmk-cyl-just-beachy-group-buy-opens.mdx` "How that stacks up..." section + `vendor-spread-comparison.svg` caption vs. `gmk-cyl-ramune-group-buy.mdx` lede + "The vendor structure is the other story" section + `vendor-structure-comparison.svg`.
 - next: qualify or drop the "widest spread" superlative in Just Beachy's prose and InlineViz caption/alt text; re-render the SVG if its baked-in caption text needs to change.
 - issue: #809
+
+### [x] [data-gaps] [6.3] GMK Beachy trend row unlinked despite its companion article already being live — addressed in `71325662`, closes #810
+- category: data-gaps
+- filed: 2026-08-10 by cloud /iterate audit (fresh general-purpose sweep, angle: manifest/data staleness)
+- impact: 7 (GMK Beachy is the current week's top-scoring keycap row on the signature Trends Tracker page — `data/trends/2026-W32.json` and `2026-W33.json` both carry it with `articleSlug: null`, rendering "article pending" instead of a link to the live companion article. Every other non-flat row in the same two snapshots with a matching article has `articleSlug` populated; this one was simply missed when the article shipped. Not caught by `tracker-linkage-survey.mjs` because that script's Rule 2 only flags rows unlinked for >14 days — these rows are only 1-2 weeks old, a genuine blind spot distinct from the mechanical check's coverage)
+- ease: 9 (one-field data edit in two JSON files — no schema/code change)
+- score: 6.3 (impact × ease / 10)
+- observation: `apps/web/src/content/articles/gmk-cyl-just-beachy-group-buy-opens.mdx` (publishedAt 2026-08-06, most recent article in the repo) is the companion piece for the "GMK Beachy" trend row — its body is a near-verbatim echo of the row's own editorial note ("GB opens Aug 18 across Keebz N Cables (Oceania), Divinikey (US), Prototypist (UK), KBDfans (China), Unikeys (Canada)").
+- evidence: `grep -rli "beachy" data/ apps/web/src/content/` → `gmk-cyl-just-beachy-group-buy-opens.mdx`, `data/trends/2026-W32.json`, `data/trends/2026-W33.json`. `data/trends/2026-W33.json` GMK Beachy row: `"articleSlug": null`. `apps/web/src/components/tracker/TrackerRow.tsx:44-45,96-98` — row only renders a link when `article && row.articleSlug` are both truthy.
+- next: add `"articleSlug": "gmk-cyl-just-beachy-group-buy-opens"` to the GMK Beachy row in both `data/trends/2026-W32.json` and `data/trends/2026-W33.json`.
+- issue: #810
