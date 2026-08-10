@@ -10624,3 +10624,15 @@ passes accumulate signals.)
 - issue: #805
 > **Resolved (2026-08-09):** reworded the note to "enters its final week before an Aug 9 close after a four-week run" — matches the companion article and the group-buy record's actual date range. Regenerated `manifest.generated.json`/`og-manifest.generated.json`/`index.generated.json`. `pnpm verify` full gate green: typecheck, unit tests, script tests, data:validate, build, size, 1131/1131 e2e.
 > Picked as the top signal this tick (cloud `/march`): no unlabeled GitHub issues (triage gate, 0 unlabeled); not Monday (weekly snapshot gate skipped, W32 already existed); no pending phases/data/content-gap work (all 9 mechanical surveys re-ran clean, no rows filed); march's own expand Step 3c gate not met (5 commits/~4.7h since pass 302's anchor `474a235e`, threshold 20 commits/48h). AUDIT.md's only other Pending rows remained the standing non-autonomous items (the `[ ] [engineering] [4.0]` Lighthouse-CI-disabled item is explicitly flagged as needing an `/oversight` call before re-enabling, so treated as non-autonomous per the precedent set by prior ticks that passed over it); CRITIQUE.md's only Pending row remained the non-actionable GA-beacon item. A fresh general-purpose sweep (external link rot, content-fact-vs-catalog checks across 5 recently-touched articles, JSON-LD on /compare /tools /quiz, vendor-page data-vs-render cross-reference, dead-code grep, stale group-buy prose, and a systematic pass over every trend-snapshot note mentioning "week" across W19-W32) surfaced this as the one genuinely new, scoreable defect — introduced by this same finding class's own prior fix commit.
+
+### [HOT PURSUIT] [content-gap] [7] news pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 7 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: news
+- window-count: 1
+- window-start: 2026-07-11
+- score: 7
+- next: /ship-content → news pillar article
+> Filed 2026-08-10 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
