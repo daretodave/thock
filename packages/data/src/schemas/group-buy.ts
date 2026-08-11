@@ -46,6 +46,7 @@ export const GroupBuySchema = z
     description: z.string().min(20).max(800),
     updatedAt: IsoDateSchema,
   })
+  .strict()
   .refine((g) => g.endDate >= g.startDate, {
     message: 'endDate must be on or after startDate',
     path: ['endDate'],

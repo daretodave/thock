@@ -11,17 +11,20 @@ export const TagCategorySchema = z.enum([
 ])
 export type TagCategory = z.infer<typeof TagCategorySchema>
 
-export const TagSchema = z.object({
-  slug: SlugSchema,
-  name: z.string().min(1).max(60),
-  category: TagCategorySchema,
-})
+export const TagSchema = z
+  .object({
+    slug: SlugSchema,
+    name: z.string().min(1).max(60),
+    category: TagCategorySchema,
+  })
+  .strict()
 export type Tag = z.infer<typeof TagSchema>
 
 export const TagsConfigSchema = z
   .object({
     tags: z.array(TagSchema).min(1),
   })
+  .strict()
   .superRefine((cfg, ctx) => {
     const seen = new Set<string>()
     for (const t of cfg.tags) {
