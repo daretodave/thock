@@ -57,6 +57,10 @@ const SUFFIXED = (title: string): string => {
 /** Google's practical SERP snippet truncation point. */
 const META_DESCRIPTION_LIMIT = 160
 
+// Widest realistic overrun tolerated when extending past `limit` to reach a
+// word boundary — mirrors apps/web/src/lib/truncate.ts's WORD_EXTENSION_BUDGET.
+const WORD_EXTENSION_BUDGET = 40
+
 /**
  * Clamp a description to `limit` characters for SERP-facing meta
  * fields (meta description, og:description, twitter:description).
@@ -65,6 +69,12 @@ const META_DESCRIPTION_LIMIT = 160
  * already within the limit passes through unchanged. JSON-LD and
  * on-page copy are unaffected — this only trims the three
  * length-constrained SERP slots.
+ *
+ * When the leading token itself exceeds the limit (no space in the
+ * truncation window — a long compound term or pasted URL), extends
+ * to the next word boundary instead of hard-cutting mid-word, unless
+ * that token is pathologically long, in which case it falls back to
+ * a hard cut.
  */
 export function truncateForMeta(
   text: string,
@@ -73,8 +83,13 @@ export function truncateForMeta(
   if (text.length <= limit) return text
   const cut = text.slice(0, limit - 1)
   const lastSpace = cut.lastIndexOf(' ')
-  const trimmed = lastSpace > 0 ? cut.slice(0, lastSpace) : cut
-  return `${trimmed}…`
+  if (lastSpace > 0) return `${cut.slice(0, lastSpace)}…`
+  const nextSpace = text.indexOf(' ', limit - 1)
+  if (nextSpace === -1) return text
+  if (nextSpace - (limit - 1) <= WORD_EXTENSION_BUDGET) {
+    return `${text.slice(0, nextSpace)}…`
+  }
+  return `${cut}…`
 }
 
 /**

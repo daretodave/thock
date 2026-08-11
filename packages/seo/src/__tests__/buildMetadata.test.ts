@@ -166,4 +166,18 @@ describe('truncateForMeta', () => {
     const withoutEllipsis = result.slice(0, -1)
     expect(withoutEllipsis.endsWith('word')).toBe(true)
   })
+
+  it('extends past the limit to the next word boundary when no space exists in the truncation window', () => {
+    // Leading token itself exceeds the limit — no space anywhere before it.
+    const text = 'a'.repeat(170) + ' rest of the sentence continues here'
+    const result = truncateForMeta(text, 160)
+    expect(result).not.toContain('…a')
+    expect(result.slice(0, -1).endsWith('a')).toBe(true)
+    expect(result.length).toBeGreaterThan(160)
+  })
+
+  it('falls back to the unmodified text when the leading token has no word boundary at all', () => {
+    const text = 'a'.repeat(300)
+    expect(truncateForMeta(text, 160)).toBe(text)
+  })
 })
