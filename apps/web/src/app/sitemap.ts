@@ -27,10 +27,12 @@ function latestOf(dates: string[]): string | undefined {
  * registers automatically — no manual sitemap edits.
  *
  * `lastModified` is derived from real content-change data wherever
- * a listing page has underlying records driving it. Pages with no
- * backing data (interactive tools, static prose) omit the field
- * rather than stamping build-time "now" — a build-time timestamp on
- * an unchanged page reports a false "just updated" signal on every
+ * a page has underlying records driving it — including interactive
+ * tools (quiz, compare) that render the switch/keycap-set/board
+ * catalog. Only genuinely static prose pages with no backing data
+ * (`/about`, `/search`, `/tools`) omit the field rather than
+ * stamping build-time "now" — a build-time timestamp on an
+ * unchanged page reports a false "just updated" signal on every
  * deploy, which search engines can discount site-wide once detected.
  */
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -101,8 +103,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: latestOf(closedGroupBuys.map((g) => g.updatedAt)),
       priority: 0.5,
     },
-    { url: canonicalUrl('/quiz/switch'), priority: 0.7 },
-    { url: canonicalUrl('/quiz/keycap-set'), priority: 0.7 },
+    {
+      url: canonicalUrl('/quiz/switch'),
+      lastModified: latestOf(switches.map((s) => s.updatedAt)),
+      priority: 0.7,
+    },
+    {
+      url: canonicalUrl('/quiz/keycap-set'),
+      lastModified: latestOf(keycapSets.map((k) => k.updatedAt)),
+      priority: 0.7,
+    },
     { url: canonicalUrl('/about'), priority: 0.4 },
     {
       url: canonicalUrl('/newsletter'),
@@ -134,8 +144,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ]),
       priority: 0.6,
     },
-    { url: canonicalUrl('/compare/switch'), priority: 0.6 },
-    { url: canonicalUrl('/compare/board'), priority: 0.6 },
+    {
+      url: canonicalUrl('/compare/switch'),
+      lastModified: latestOf(switches.map((s) => s.updatedAt)),
+      priority: 0.6,
+    },
+    {
+      url: canonicalUrl('/compare/board'),
+      lastModified: latestOf(boards.map((b) => b.updatedAt)),
+      priority: 0.6,
+    },
     { url: canonicalUrl('/tools'), priority: 0.7 },
     {
       url: canonicalUrl('/vendors'),

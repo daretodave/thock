@@ -151,19 +151,38 @@ describe('sitemap', () => {
     }
   })
 
-  it('omits lastModified on genuinely static tool/prose pages (no build-time timestamp)', () => {
-    for (const path of [
-      '/quiz/switch',
-      '/quiz/keycap-set',
-      '/about',
-      '/search',
-      '/compare/switch',
-      '/compare/board',
-      '/tools',
-    ]) {
+  it('omits lastModified on genuinely static prose pages (no build-time timestamp)', () => {
+    for (const path of ['/about', '/search', '/tools']) {
       const entry = map.find((e) => e.url === canonicalUrl(path))
       expect(entry?.lastModified).toBeUndefined()
     }
+  })
+
+  it('derives quiz/compare lastModified from the catalog they render, not the build timestamp', () => {
+    const expectedSwitches = getAllSwitches()
+      .map((s) => s.updatedAt)
+      .reduce((latest, d) => (d > latest ? d : latest))
+    const expectedKeycapSets = getAllKeycapSets()
+      .map((k) => k.updatedAt)
+      .reduce((latest, d) => (d > latest ? d : latest))
+    const expectedBoards = getAllBoards()
+      .map((b) => b.updatedAt)
+      .reduce((latest, d) => (d > latest ? d : latest))
+
+    expect(
+      map.find((e) => e.url === canonicalUrl('/quiz/switch'))?.lastModified,
+    ).toBe(expectedSwitches)
+    expect(
+      map.find((e) => e.url === canonicalUrl('/compare/switch'))
+        ?.lastModified,
+    ).toBe(expectedSwitches)
+    expect(
+      map.find((e) => e.url === canonicalUrl('/quiz/keycap-set'))
+        ?.lastModified,
+    ).toBe(expectedKeycapSets)
+    expect(
+      map.find((e) => e.url === canonicalUrl('/compare/board'))?.lastModified,
+    ).toBe(expectedBoards)
   })
 
   it('is stable across calls for static pages (no Date.now() drift)', () => {
