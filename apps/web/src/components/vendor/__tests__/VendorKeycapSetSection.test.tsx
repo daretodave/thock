@@ -58,7 +58,8 @@ describe('VendorKeycapSetSection', () => {
   })
 
   it('truncates description longer than 100 chars', () => {
-    const longDesc = 'A'.repeat(150) + ' extra words'
+    const longDesc =
+      'A cylindrical profile set known for a tall sculpted feel, a saturated colorway, and consistent doubleshot legends across every kit shipped.'
     render(
       <VendorKeycapSetSection
         vendorName="KBDfans"

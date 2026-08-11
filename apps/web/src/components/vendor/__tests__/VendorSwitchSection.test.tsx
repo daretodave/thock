@@ -61,7 +61,8 @@ describe('VendorSwitchSection', () => {
   })
 
   it('truncates description longer than 100 chars', () => {
-    const longDesc = 'A'.repeat(150) + ' extra words'
+    const longDesc =
+      'A boutique switch known for a smooth linear downstroke, a satisfying thock, and consistent factory lubrication across every unit shipped.'
     render(
       <VendorSwitchSection
         vendorName="NovelKeys"

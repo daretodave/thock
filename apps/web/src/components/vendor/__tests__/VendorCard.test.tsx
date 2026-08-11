@@ -45,7 +45,8 @@ describe('VendorCard', () => {
   })
 
   it('truncates description longer than 130 chars', () => {
-    const longDesc = 'A'.repeat(200)
+    const longDesc =
+      'A boutique keyboard vendor known for stocking switches, keycaps, and boards, and for running in-house and partnered group buys for accessories year round.'
     render(<VendorCard vendor={{ ...VENDOR, description: longDesc }} />)
     const desc = screen.getByTestId('vendor-card-description')
     expect((desc.textContent ?? '').length).toBeLessThan(200)

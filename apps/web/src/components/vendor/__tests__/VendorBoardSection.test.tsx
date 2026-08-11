@@ -59,7 +59,8 @@ describe('VendorBoardSection', () => {
   })
 
   it('truncates description longer than 100 chars', () => {
-    const longDesc = 'A'.repeat(150) + ' extra words'
+    const longDesc =
+      'A compact board known for a stiff aluminum chassis, a deep gasket-mounted flex, and consistent factory tuning across every unit shipped.'
     render(
       <VendorBoardSection
         vendorName="CannonKeys"
