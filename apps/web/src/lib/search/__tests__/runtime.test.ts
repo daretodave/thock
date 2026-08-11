@@ -65,6 +65,14 @@ describe('searchArticles', () => {
     const hits = searchArticles('swich')
     expect(hits.length).toBeGreaterThanOrEqual(1)
   })
+
+  it('returns the same top hit for "hotswap" and "hot swap" — the site label vs. majority prose spelling', () => {
+    const bareWord = searchArticles('hotswap')
+    const twoWords = searchArticles('hot swap')
+    expect(bareWord.length).toBeGreaterThanOrEqual(1)
+    expect(twoWords.length).toBeGreaterThanOrEqual(1)
+    expect(bareWord[0]?.slug).toBe(twoWords[0]?.slug)
+  })
 })
 
 describe('searchParts', () => {

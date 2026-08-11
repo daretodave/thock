@@ -1,5 +1,6 @@
 import MiniSearch from 'minisearch'
 import payload from './index.generated.json'
+import { normalizeHotswapSpelling } from './normalize'
 
 export type SearchDocument = {
   id: string
@@ -39,7 +40,7 @@ function load(): IndexBundle {
   const index = MiniSearch.loadJSON<SearchDocument>(
     JSON.stringify(payload.serialized),
     {
-      fields: ['title', 'tags', 'lede', 'body'],
+      fields: ['searchTitle', 'searchTags', 'searchLede', 'searchBody'],
       storeFields: ['slug', 'title', 'lede', 'pillar', 'tags', 'publishedAt'],
     },
   )
@@ -61,7 +62,7 @@ const STOPWORDS = new Set([
   'of', 'on', 'or', 'the', 'to',
 ])
 const SEARCH_OPTIONS = {
-  boost: { title: 4, tags: 3, lede: 2, body: 1 },
+  boost: { searchTitle: 4, searchTags: 3, searchLede: 2, searchBody: 1 },
   fuzzy: (term: string) => (term.length >= MIN_EXPANSION_LENGTH ? 0.2 : false),
   prefix: (term: string) => term.length >= MIN_EXPANSION_LENGTH,
 } as const
@@ -82,7 +83,7 @@ export function searchArticles(
   query: string,
   limit: number = DEFAULT_LIMIT,
 ): SearchHit[] {
-  const trimmed = stripStopwords(query.trim())
+  const trimmed = stripStopwords(normalizeHotswapSpelling(query.trim()))
   if (trimmed.length === 0) return []
   const { index, documents } = load()
   const raw = index.search(trimmed, SEARCH_OPTIONS)

@@ -12,6 +12,7 @@
  * index before Next.js touches it.
  */
 import { mkdirSync, writeFileSync } from 'node:fs'
+import { createRequire } from 'node:module'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import MiniSearch from 'minisearch'
@@ -32,6 +33,15 @@ const here = dirname(fileURLToPath(import.meta.url))
 const outDir = resolve(here, '..', 'src', 'lib', 'search')
 const outFile = resolve(outDir, 'index.generated.json')
 
+// tsx's ESM/CJS named-export interop for local relative .ts imports drops
+// the named export (only `default` survives) on the pinned tsx@4.21.0 —
+// fixed upstream in later releases, but `require` sidesteps it entirely
+// since it reads the CJS exports object directly.
+const require = createRequire(import.meta.url)
+const { normalizeHotswapSpelling } = require('../src/lib/search/normalize') as {
+  normalizeHotswapSpelling: (text: string) => string
+}
+
 type SearchDoc = {
   id: string
   slug: string
@@ -41,6 +51,10 @@ type SearchDoc = {
   tags: string[]
   publishedAt: string
   body: string
+  searchTitle: string
+  searchLede: string
+  searchBody: string
+  searchTags: string[]
 }
 
 type PartDoc = {
@@ -61,13 +75,20 @@ const documents: SearchDoc[] = articles.map((a) => ({
   tags: a.frontmatter.tags,
   publishedAt: a.frontmatter.publishedAt,
   body: a.body,
+  searchTitle: normalizeHotswapSpelling(a.frontmatter.title),
+  searchLede: normalizeHotswapSpelling(a.frontmatter.lede),
+  searchBody: normalizeHotswapSpelling(a.body),
+  searchTags: a.frontmatter.tags.map(normalizeHotswapSpelling),
 }))
 
+// Index normalized copies of title/tags/lede/body (see normalize.ts) but
+// store the original, unnormalized fields — search-result cards must
+// render the article's actual title/lede, not the canonicalized copy.
 const ms = new MiniSearch<SearchDoc>({
-  fields: ['title', 'tags', 'lede', 'body'],
+  fields: ['searchTitle', 'searchTags', 'searchLede', 'searchBody'],
   storeFields: ['slug', 'title', 'lede', 'pillar', 'tags', 'publishedAt'],
   searchOptions: {
-    boost: { title: 4, tags: 3, lede: 2, body: 1 },
+    boost: { searchTitle: 4, searchTags: 3, searchLede: 2, searchBody: 1 },
     fuzzy: 0.2,
     prefix: true,
   },
@@ -146,7 +167,10 @@ const parts: PartDoc[] = [
 
 const payload = {
   serialized: JSON.parse(JSON.stringify(ms.toJSON())),
-  documents: documents.map(({ body: _body, ...rest }) => rest),
+  documents: documents.map(
+    ({ body: _body, searchTitle: _st, searchLede: _sl, searchBody: _sb, searchTags: _stg, ...rest }) =>
+      rest,
+  ),
   parts,
   generatedAt: new Date().toISOString(),
   count: documents.length,
