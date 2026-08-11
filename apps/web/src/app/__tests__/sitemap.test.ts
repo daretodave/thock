@@ -4,10 +4,12 @@ import { canonicalUrl, PILLARS } from '@thock/seo'
 import {
   getAllArticles,
   getAllBoards,
+  getAllGroupBuys,
   getAllKeycapSets,
   getAllSwitches,
   getAllTags,
   getAllTrendSnapshots,
+  getAllVendors,
   getArticlesByTag,
   getLatestTrendSnapshot,
 } from '@/lib/data-runtime'
@@ -126,5 +128,92 @@ describe('sitemap', () => {
     for (const e of map) {
       expect(e.url).toMatch(/^https?:\/\//)
     }
+  })
+
+  it('derives home/pillar/feed lastModified from the newest article, not the build timestamp', () => {
+    const articles = getAllArticles()
+    const articleDate = (a: (typeof articles)[number]) =>
+      a.frontmatter.updatedAt ?? a.frontmatter.publishedAt
+    const expectedLatest = articles
+      .map(articleDate)
+      .reduce((latest, d) => (d > latest ? d : latest))
+    for (const path of ['/', '/sources', '/archive', '/tags', '/feed.xml']) {
+      const entry = map.find((e) => e.url === canonicalUrl(path))
+      expect(entry?.lastModified).toBe(expectedLatest)
+    }
+    for (const p of PILLARS) {
+      const expected = articles
+        .filter((a) => a.frontmatter.pillar === p.slug)
+        .map(articleDate)
+        .reduce((latest, d) => (d > latest ? d : latest))
+      const entry = map.find((e) => e.url === canonicalUrl(p.href))
+      expect(entry?.lastModified).toBe(expected)
+    }
+  })
+
+  it('omits lastModified on genuinely static tool/prose pages (no build-time timestamp)', () => {
+    for (const path of [
+      '/quiz/switch',
+      '/quiz/keycap-set',
+      '/about',
+      '/search',
+      '/compare/switch',
+      '/compare/board',
+      '/tools',
+    ]) {
+      const entry = map.find((e) => e.url === canonicalUrl(path))
+      expect(entry?.lastModified).toBeUndefined()
+    }
+  })
+
+  it('is stable across calls for static pages (no Date.now() drift)', () => {
+    const second = sitemap()
+    const about = map.find((e) => e.url === canonicalUrl('/about'))
+    const aboutAgain = second.find((e) => e.url === canonicalUrl('/about'))
+    expect(about?.lastModified).toBe(aboutAgain?.lastModified)
+    const home = map.find((e) => e.url === canonicalUrl('/'))
+    const homeAgain = second.find((e) => e.url === canonicalUrl('/'))
+    expect(home?.lastModified).toBe(homeAgain?.lastModified)
+  })
+
+  it('derives /group-buys, /group-buys/past, /vendors, /parts lastModified from their own records', () => {
+    const groupBuys = getAllGroupBuys()
+    const active = groupBuys.filter(
+      (g) => g.status === 'live' || g.status === 'announced',
+    )
+    const closed = groupBuys.filter(
+      (g) => g.status === 'closed' || g.status === 'shipped',
+    )
+    const expectedActive = active
+      .map((g) => g.updatedAt)
+      .reduce((latest, d) => (d > latest ? d : latest), '')
+    const expectedClosed = closed
+      .map((g) => g.updatedAt)
+      .reduce((latest, d) => (d > latest ? d : latest), '')
+    expect(
+      map.find((e) => e.url === canonicalUrl('/group-buys'))?.lastModified,
+    ).toBe(expectedActive || undefined)
+    expect(
+      map.find((e) => e.url === canonicalUrl('/group-buys/past'))
+        ?.lastModified,
+    ).toBe(expectedClosed || undefined)
+
+    const vendors = getAllVendors()
+    const expectedVendor = vendors
+      .map((v) => v.updatedAt)
+      .reduce((latest, d) => (d > latest ? d : latest))
+    expect(
+      map.find((e) => e.url === canonicalUrl('/vendors'))?.lastModified,
+    ).toBe(expectedVendor)
+
+    const parts = [
+      ...getAllSwitches().map((s) => s.updatedAt),
+      ...getAllKeycapSets().map((k) => k.updatedAt),
+      ...getAllBoards().map((b) => b.updatedAt),
+    ]
+    const expectedParts = parts.reduce((latest, d) => (d > latest ? d : latest))
+    expect(
+      map.find((e) => e.url === canonicalUrl('/parts'))?.lastModified,
+    ).toBe(expectedParts)
   })
 })
