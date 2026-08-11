@@ -7,7 +7,7 @@ import { test, describe } from 'node:test'
 import assert from 'node:assert/strict'
 import { __test } from '../article-crosslink-survey.mjs'
 
-const { parseFrontmatter, extractBody, hasLinkTo, findUnlinkedPairs } = __test
+const { parseFrontmatter, extractBody, hasLinkTo, findUnlinkedPairs, alreadyFiled } = __test
 
 // ── helpers ───────────────────────────────────────────────────────────────────
 
@@ -210,5 +210,25 @@ describe('findUnlinkedPairs — scope slug', () => {
     assert.ok(xPairs.every((p) => p.slugA === 'hub-x' || p.slugB === 'hub-x'))
     // Y↔Z pair is not included
     assert.ok(xPairs.every((p) => p.slugA !== 'unrelated-y' && p.slugB !== 'unrelated-y'))
+  })
+})
+
+// ── alreadyFiled — dedup respects [x] vs [ ] ─────────────────────────────────
+
+describe('alreadyFiled', () => {
+  test('returns true for a pending [ ] row on the pair', () => {
+    const audit = `\n### [ ] [cross-links] [4.5] article-a ↔ article-b — no prose cross-link\n- category: cross-links\n`
+    assert.ok(alreadyFiled(audit, 'article-a', 'article-b'))
+    assert.ok(alreadyFiled(audit, 'article-b', 'article-a'))
+  })
+
+  test('returns false once the row is ticked [x] — regression can be re-detected', () => {
+    const audit = `\n### [x] [cross-links] [4.5] article-a ↔ article-b — addressed in abc1234\n- category: cross-links\n`
+    assert.ok(!alreadyFiled(audit, 'article-a', 'article-b'))
+  })
+
+  test('returns false when the pair has never been filed', () => {
+    const audit = `\n### [ ] [cross-links] [4.5] article-c ↔ article-d — no prose cross-link\n`
+    assert.ok(!alreadyFiled(audit, 'article-a', 'article-b'))
   })
 })

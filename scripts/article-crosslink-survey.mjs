@@ -217,10 +217,19 @@ function formatAuditRow(pair, today) {
 // ── Deduplication ─────────────────────────────────────────────────────────────
 
 function alreadyFiled(auditContent, slugA, slugB) {
-  return (
-    auditContent.includes(`${slugA} ↔ ${slugB}`) ||
-    auditContent.includes(`${slugB} ↔ ${slugA}`)
-  )
+  const markerA = `${slugA} ↔ ${slugB}`
+  const markerB = `${slugB} ↔ ${slugA}`
+  // Only match pending rows ([ ]), not completed ones ([x]) — otherwise a
+  // pair whose fix later regresses (e.g. the cross-link is removed in a
+  // rewrite) can never be re-detected once the original row is ticked.
+  for (const line of auditContent.split('\n')) {
+    if (line.startsWith('### ') && (line.includes(markerA) || line.includes(markerB))) {
+      if (line.startsWith('### [ ]')) {
+        return true
+      }
+    }
+  }
+  return false
 }
 
 // ── __test export (for scripts/__tests__/article-crosslink-survey.test.mjs) ──
@@ -230,6 +239,7 @@ export const __test = {
   extractBody,
   hasLinkTo,
   findUnlinkedPairs,
+  alreadyFiled,
 }
 
 // ── CLI entry (only runs when this file is invoked directly) ──────────────────
