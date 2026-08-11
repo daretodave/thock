@@ -4,6 +4,7 @@ import { siteConfig } from '@thock/seo'
 import { getTrendSnapshotForOg } from '@/lib/data-runtime/og-runtime'
 import { PillarOGContent } from '@/components/og/PillarOG'
 import { describeTrackerWeek, weekKicker } from '@/lib/tracker'
+import { truncate } from '@/lib/truncate'
 
 export const runtime = 'edge'
 export const size = { width: 1200, height: 630 }
@@ -47,7 +48,7 @@ export default async function OpenGraphImage({
   const wk = weekKicker(snapshot.isoWeek)
   const pillarLabel = wk ? `Week ${wk.week}, ${wk.year}` : snapshot.isoWeek
   const summary = describeTrackerWeek(snapshot, wk)
-  const tagline = summary.length > 90 ? `${summary.slice(0, 87).trimEnd()}…` : summary
+  const tagline = truncate(summary, 90)
 
   return new ImageResponse(
     <PillarOGContent pillarLabel={pillarLabel} tagline={tagline} />,

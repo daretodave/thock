@@ -4,6 +4,7 @@ import { siteConfig } from '@thock/seo'
 import { getNewsletterForOg } from '@/lib/data-runtime/og-runtime'
 import { PillarOGContent } from '@/components/og/PillarOG'
 import { ArticleOGContent } from '@/components/og/ArticleOG'
+import { truncate } from '@/lib/truncate'
 
 export const runtime = 'edge'
 export const size = { width: 1200, height: 630 }
@@ -46,10 +47,7 @@ export default async function OpenGraphImage({
   const title = newsletter.title
   const titleFontSize =
     title.length <= 36 ? 88 : title.length <= 56 ? 76 : title.length <= 72 ? 66 : 58
-  const lede =
-    newsletter.lede.length > 180
-      ? `${newsletter.lede.slice(0, 177).trimEnd()}…`
-      : newsletter.lede
+  const lede = truncate(newsletter.lede, 180)
 
   return new ImageResponse(
     (
