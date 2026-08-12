@@ -728,3 +728,34 @@ describe('checkFile — unfulfillable-worth-revisiting pattern', () => {
     )
   })
 })
+
+describe('checkFile — at-time-of-writing pattern', () => {
+  const patterns = loadPatterns()
+
+  test('flags "at the time of writing" as a self-referential temporal hedge', () => {
+    const content = makeMdx(
+      'slug: test\ntitle: Test\nauthor: thock\npillar: deep-dives\npublishedAt: 2026-05-10',
+      '\nCloud sells for $0.45 on CannonKeys at the time of writing.\n'
+    )
+    const filePath = tmpMdx(content)
+    const violations = checkFile(filePath, patterns)
+    assert.ok(
+      violations.some((v) => v.patternId === 'at-time-of-writing'),
+      'expected at-time-of-writing violation'
+    )
+  })
+
+  test('"as of this piece\'s publish date" absolute anchor does not trigger the pattern', () => {
+    const content = makeMdx(
+      'slug: test\ntitle: Test\nauthor: thock\npillar: deep-dives\npublishedAt: 2026-05-10',
+      "\nCloud sells for $0.45 on CannonKeys as of this piece's publish date.\n"
+    )
+    const filePath = tmpMdx(content)
+    const violations = checkFile(filePath, patterns)
+    assert.equal(
+      violations.filter((v) => v.patternId === 'at-time-of-writing').length,
+      0,
+      '"as of this piece\'s publish date" should not trigger at-time-of-writing'
+    )
+  })
+})

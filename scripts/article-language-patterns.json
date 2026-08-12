@@ -129,6 +129,11 @@
       "id": "relative-as-of-this-week",
       "match": "as of this week",
       "description": "Relative 'as of this week' framing decays after the week of publication. Replace with the specific ISO week anchor: 'as of the W19 snapshot'."
+    },
+    {
+      "id": "at-time-of-writing",
+      "match": "at the time of writing",
+      "description": "Self-referential 'at the time of writing' hedge decays the moment the reader isn't reading it at that moment — static MDX has no 'writing' present tense to anchor to. Replace with the established idiom: 'as of this piece's publish date'."
     }
   ]
 }
