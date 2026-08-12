@@ -4489,34 +4489,34 @@
           "name": "GMK CYL Masterpiece R2",
           "category": "keycap",
           "direction": "down",
-          "score": -30,
+          "score": 15,
           "spark": [
-            -5,
-            -10,
-            -15,
-            -19,
-            -22,
-            -25,
-            -27,
-            -30
+            0,
+            18,
+            30,
+            38,
+            46,
+            33,
+            24,
+            15
           ],
           "articleSlug": "gmk-cyl-masterpiece-r2-group-buy",
-          "note": "No group-buy activity tracked this week; hobbyist attention has shifted to newer GMK CYL interest checks like OG Extensions and Classic."
+          "note": "Continued post-close fade; hobbyist attention has shifted to newer GMK CYL interest checks like OG Extensions and Classic."
         },
         {
           "name": "GMK CYL Pandemonium",
           "category": "keycap",
           "direction": "down",
-          "score": -27,
+          "score": 16,
           "spark": [
-            -5,
-            -9,
-            -13,
-            -17,
-            -20,
-            -22,
-            -25,
-            -27
+            14,
+            22,
+            29,
+            32,
+            33,
+            29,
+            22,
+            16
           ],
           "articleSlug": "gmk-cyl-pandemonium-group-buy",
           "note": "Set remains in the post-GB fulfillment queue with no fresh updates; community focus has moved to newly opened 2026 CYL interest checks."
@@ -4525,16 +4525,16 @@
           "name": "DCS Dolch",
           "category": "keycap",
           "direction": "down",
-          "score": -23,
+          "score": 12,
           "spark": [
-            -3,
-            -7,
-            -11,
-            -14,
-            -16,
-            -18,
-            -21,
-            -23
+            20,
+            28,
+            35,
+            35,
+            34,
+            28,
+            19,
+            12
           ],
           "articleSlug": "divinikey-dcs-dolch-group-buy",
           "note": "Overshadowed by concurrent DCS group buys - Handarbeit (closes July 19) and Mudbeam (closed July 16) - pulling DCS-profile attention elsewhere this week."
@@ -9656,5 +9656,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-08-12T22:29:14.396Z"
+  "generatedAt": "2026-08-12T23:24:40.706Z"
 }
