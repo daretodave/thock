@@ -7,7 +7,7 @@
       "category": "switch",
       "direction": "flat",
       "score": 97,
-      "spark": [66, 72, 79, 85, 90, 95, 97, 97],
+      "spark": [81, 85, 87, 91, 94, 95, 97, 97],
       "articleSlug": "keychron-nova-socket-hybrid",
       "note": "Keychron V6 Ultra HE Kickstarter enters week 3 near funding plateau; Gamakay Q2 and XTRFY MK Crystal TMR keep magnetic switches the dominant switch story."
     },
@@ -16,7 +16,7 @@
       "category": "switch",
       "direction": "flat",
       "score": -46,
-      "spark": [-40, -42, -44, -46, -45, -45, -45, -46],
+      "spark": [-37, -42, -46, -50, -46, -45, -45, -46],
       "articleSlug": "cherry-mx2a-revision",
       "note": "Still shipping as default across mainstream boards, but Cherry's own XTRFY TMR push continues to pull spec-sheet attention away from MX2A."
     },
@@ -25,7 +25,7 @@
       "category": "switch",
       "direction": "flat",
       "score": 40,
-      "spark": [38, 40, 41, 40, 39, 40, 40, 40],
+      "spark": [37, 38, 38, 39, 40, 40, 40, 40],
       "articleSlug": "gateron-oil-king-deep-dive",
       "note": "Lineup and stock unchanged at Gateron, KBDfans, Divinikey since the early-2026 four-switch expansion; no new SKUs or restocks this week."
     },
@@ -43,7 +43,7 @@
       "category": "keycap",
       "direction": "up",
       "score": 80,
-      "spark": [36, 42, 48, 55, 60, 62, 70, 80],
+      "spark": [34, 42, 49, 55, 58, 62, 70, 80],
       "articleSlug": "gmk-cyl-og-extensions-interest-check",
       "note": "Geekhack GB closes Wed Aug 12; final-days push unlocks higher MOQ tiers across Prototypist and NovelKeys kittings."
     },
@@ -52,7 +52,7 @@
       "category": "keycap",
       "direction": "down",
       "score": 32,
-      "spark": [66, 62, 58, 54, 52, 50, 40, 32],
+      "spark": [34, 42, 50, 57, 62, 50, 40, 32],
       "articleSlug": "gmk-cyl-ta-neo-production-tracking",
       "note": "Production still tracking toward Nov 2026 ship per Oblotzky/zFrontier; community attention fully diverted to the OG Extensions close this week."
     },
@@ -61,7 +61,7 @@
       "category": "keycap",
       "direction": "down",
       "score": 26,
-      "spark": [44, 42, 40, 39, 38, 38, 34, 26],
+      "spark": [28, 32, 35, 37, 38, 38, 34, 26],
       "articleSlug": "divinikey-dcs-dolch-group-buy",
       "note": "Kitting/MOQ chatter on Divinikey's GB page keeps thinning out; Oct 2026 ship estimate unchanged, five weeks post-close."
     },
@@ -79,7 +79,7 @@
       "category": "layout",
       "direction": "up",
       "score": 87,
-      "spark": [64, 68, 72, 76, 79, 82, 85, 87],
+      "spark": [67, 70, 74, 77, 80, 82, 85, 87],
       "articleSlug": "split-ergo-cohort",
       "note": "Split boards (Glove80, ZSA Voyager, Kinesis Advantage360 Pro) remain 2026's dominant keyboard search trend per continuing ergo-roundup coverage."
     },
@@ -88,7 +88,7 @@
       "category": "layout",
       "direction": "down",
       "score": -62,
-      "spark": [-28, -34, -40, -45, -49, -52, -58, -62],
+      "spark": [-31, -34, -40, -44, -48, -52, -58, -62],
       "articleSlug": "alice-layout-decline",
       "note": "Decline deepens as buyers keep favoring full split boards; no new Alice-format releases or GBs surfaced this week."
     },
@@ -97,7 +97,7 @@
       "category": "layout",
       "direction": "up",
       "score": 58,
-      "spark": [34, 38, 41, 44, 47, 50, 55, 58],
+      "spark": [44, 44, 45, 46, 47, 50, 55, 58],
       "articleSlug": "75-percent-default",
       "note": "Mode's Encore 2026 refresh and KBD75 v3 keep 75% boards in the spotlight; steady incremental interest, no new triggers this week."
     },
@@ -106,7 +106,7 @@
       "category": "vendor",
       "direction": "flat",
       "score": 94,
-      "spark": [55, 70, 85, 92, 97, 97, 95, 94],
+      "spark": [61, 68, 80, 94, 96, 97, 95, 94],
       "articleSlug": "work-louder-openai-codex-micro",
       "note": "Resale still holding near $700-800 on eBay; Work Louder has not announced a restock date, interest cooling slightly from peak."
     },
@@ -115,7 +115,7 @@
       "category": "vendor",
       "direction": "up",
       "score": 76,
-      "spark": [36, 42, 48, 54, 58, 62, 70, 76],
+      "spark": [41, 44, 48, 53, 58, 62, 70, 76],
       "articleSlug": "mode-sonnet-r2-group-buy-coverage",
       "note": "Mode's own Summer 2026 Update details Sonnet/Encore fulfillment progress, Prologue development status, and an Envoy final-stock announcement."
     },
@@ -124,7 +124,7 @@
       "category": "vendor",
       "direction": "up",
       "score": 31,
-      "spark": [14, 17, 19, 21, 22, 24, 28, 31],
+      "spark": [33, 28, 25, 15, 20, 24, 28, 31],
       "articleSlug": "prototypist-vendor-spotlight",
       "note": "Paper 65 GB kit still tracking toward Q4 2026; Prototypist's role kitting the closing GMK CYL OG Extensions GB adds modest traffic this week."
     },
@@ -142,7 +142,7 @@
       "category": "brand",
       "direction": "up",
       "score": 97,
-      "spark": [62, 68, 75, 82, 88, 94, 96, 97],
+      "spark": [76, 80, 83, 86, 90, 94, 96, 97],
       "articleSlug": "keychron-quiet-takeover",
       "note": "V6 Ultra HE Kickstarter holds dominant keyboard-news momentum entering week 3; continued hybrid Nova Socket coverage across tech press."
     },
@@ -151,7 +151,7 @@
       "category": "brand",
       "direction": "up",
       "score": -2,
-      "spark": [-26, -22, -18, -14, -12, -10, -6, -2],
+      "spark": [-30, -28, -26, -24, -18, -10, -6, -2],
       "articleSlug": "cherry-xtrfy-tmr-pivot",
       "note": "XTRFY MK Crystal TMR keeps closing the gap in spec-comparison threads even as core MX2A production stays unchanged."
     },
@@ -160,7 +160,7 @@
       "category": "brand",
       "direction": "flat",
       "score": -2,
-      "spark": [6, 2, -1, -3, -4, -4, -8, -2],
+      "spark": [-10, -8, -6, -4, -3, -4, -8, -2],
       "articleSlug": null,
       "note": "Wuque's July 26 product-update blog post and an active Ikki68 Aurora listing resurface in searches; still no new GB or Mammoth V2/Promise V2 confirmation."
     }
