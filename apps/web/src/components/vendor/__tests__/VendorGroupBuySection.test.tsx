@@ -139,4 +139,55 @@ describe('VendorGroupBuySection', () => {
       '29d left',
     )
   })
+
+  // Regression: a vendor whose only "active" buy hasn't opened yet used to
+  // render under an "active group buys" heading while the row itself said
+  // "opens in Xd" — a heading/row contradiction (e.g. /vendor/divinikey
+  // with the GMK Just Beachy buy, startDate 2026-08-18 read against a
+  // 2026-08-12 render date).
+  it('relabels the heading when the only active buy has not started yet', () => {
+    const notYetStarted: GroupBuy = {
+      ...BASE_GB,
+      slug: 'not-yet-started',
+      name: 'Not Yet Started Buy',
+      startDate: '2026-06-20',
+      endDate: '2026-07-30',
+      status: 'announced',
+    }
+    render(
+      <VendorGroupBuySection
+        vendorName="CannonKeys"
+        active={[notYetStarted]}
+        past={[]}
+        vendor={VENDOR}
+        now={new Date('2026-06-01')}
+      />,
+    )
+    expect(screen.getByTestId('vendor-active-buys-kicker')).toHaveTextContent(
+      'upcoming group buys',
+    )
+  })
+
+  it('keeps the "active" heading when at least one buy is live', () => {
+    const notYetStarted: GroupBuy = {
+      ...BASE_GB,
+      slug: 'not-yet-started-2',
+      name: 'Not Yet Started Buy 2',
+      startDate: '2026-06-20',
+      endDate: '2026-07-30',
+      status: 'announced',
+    }
+    render(
+      <VendorGroupBuySection
+        vendorName="CannonKeys"
+        active={[BASE_GB, notYetStarted]}
+        past={[]}
+        vendor={VENDOR}
+        now={new Date('2026-06-01')}
+      />,
+    )
+    expect(screen.getByTestId('vendor-active-buys-kicker')).toHaveTextContent(
+      'active group buys',
+    )
+  })
 })

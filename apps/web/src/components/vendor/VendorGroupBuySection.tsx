@@ -36,12 +36,22 @@ export function VendorGroupBuySection({
   vendor,
   now = new Date(),
 }: VendorGroupBuySectionProps): ReactElement {
+  // `active` bundles both live and not-yet-started ("announced") buys — see
+  // partitionVendorGroupBuys(). A vendor whose only active buy hasn't opened
+  // yet (e.g. divinikey-gmk-cyl-just-beachy, startDate 2026-08-18 while this
+  // page renders "opens in 6d" rows) would otherwise sit under a heading
+  // that reads "active" while every row says "opens in Xd" — the same
+  // heading/row contradiction critique already fixed on /group-buys via
+  // its distinct "Live now" / "On the horizon" headings.
+  const hasLive = active.some((gb) => sectionVariant(gb, now) === 'live')
+  const kickerText = active.length > 0 && !hasLive ? 'upcoming group buys' : 'active group buys'
+
   return (
     <>
       <Container as="section" className="pb-12">
         <Stack gap={6}>
           <h2 data-testid="vendor-active-buys-kicker" className={SECTION_HEADING_CLASS}>
-            active group buys
+            {kickerText}
           </h2>
           {active.length === 0 ? (
             <p
