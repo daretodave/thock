@@ -70,10 +70,24 @@ export function GroupBuysWidget({
         )
         .slice(0, max)
     : sortedAll.slice(0, max)
+  // When nothing is urgent, the capped list can still be entirely
+  // not-yet-started buys (e.g. every live buy just closed, leaving only
+  // an "announced" record whose startDate hasn't arrived) — the same
+  // heading/row contradiction already fixed on /vendor/[slug] via
+  // VendorGroupBuySection's hasLive check. Without this, "Currently
+  // running" would sit above a row reading "opens in Xd."
+  const allUpcoming =
+    !anyUrgent && sorted.every((gb) => isAnnouncedNotStarted(gb, todayIso))
   const kicker = anyUrgent
     ? 'group buys · closing soon'
-    : 'group buys · open now'
-  const heading = anyUrgent ? "Don't miss the close" : 'Currently running'
+    : allUpcoming
+      ? 'group buys · opening soon'
+      : 'group buys · open now'
+  const heading = anyUrgent
+    ? "Don't miss the close"
+    : allUpcoming
+      ? 'Opening soon'
+      : 'Currently running'
 
   return (
     <aside

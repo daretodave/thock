@@ -145,15 +145,71 @@ describe('<GroupBuysWidget>', () => {
         now={new Date('2026-05-09T00:00:00Z')}
       />,
     )
-    expect(
-      screen.getByRole('heading', { name: /Currently running/i }),
-    ).toBeTruthy()
     const row = screen.getByTestId('group-buy-row')
     expect(row.getAttribute('data-announced')).toBe('true')
     expect(row.getAttribute('data-urgent')).toBe('false')
     expect(screen.getByTestId('group-buy-countdown')).toHaveTextContent(
       'opens in 6d',
     )
+  })
+
+  // Regression guard: the widget must not repeat the /vendor/[slug]
+  // heading/row contradiction (plan/AUDIT.md [enhancement] [4.0], commit
+  // 2f0ecb86) — a "Currently running" heading over a row that reads
+  // "opens in Xd" when every capped, non-urgent row is a not-yet-started
+  // announced buy (e.g. the only live buy just closed).
+  it('relabels to "Opening soon" when every non-urgent row is not-yet-started', () => {
+    const notStarted = makeGroupBuy({
+      slug: 'not-started',
+      status: 'announced',
+      startDate: '2026-05-15',
+      endDate: '2026-05-20',
+      name: 'Not Started GB',
+    })
+    const { container } = render(
+      <GroupBuysWidget
+        groupBuys={[notStarted]}
+        vendors={[makeVendor()]}
+        now={new Date('2026-05-09T00:00:00Z')}
+      />,
+    )
+    expect(container.querySelector('aside')?.getAttribute('data-urgent')).toBe(
+      'false',
+    )
+    expect(screen.getByText(/group buys · opening soon/i)).toBeTruthy()
+    expect(
+      screen.getByRole('heading', { name: /Opening soon/i }),
+    ).toBeTruthy()
+    expect(screen.queryByText(/Currently running/i)).toBeNull()
+  })
+
+  // Companion case: a live, non-urgent buy alongside a not-yet-started
+  // one keeps the "Currently running" framing — the relabel only fires
+  // when the entire capped list is upcoming.
+  it('keeps "Currently running" when at least one non-urgent row is already live', () => {
+    const live = makeGroupBuy({
+      slug: 'live',
+      endDate: '2026-06-15',
+      name: 'Live GB',
+    })
+    const notStarted = makeGroupBuy({
+      slug: 'not-started',
+      status: 'announced',
+      startDate: '2026-05-15',
+      endDate: '2026-05-20',
+      name: 'Not Started GB',
+    })
+    render(
+      <GroupBuysWidget
+        groupBuys={[live, notStarted]}
+        vendors={[makeVendor()]}
+        now={new Date('2026-05-09T00:00:00Z')}
+      />,
+    )
+    expect(
+      screen.getByRole('heading', { name: /Currently running/i }),
+    ).toBeTruthy()
+    expect(screen.getByText(/group buys · open now/i)).toBeTruthy()
   })
 
   it('shows the full sorted list (capped at max) when no buy is urgent', () => {
