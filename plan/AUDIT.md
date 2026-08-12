@@ -11018,7 +11018,7 @@ passes accumulate signals.)
 - next: either (a) bump the article's `updatedAt` to 2026-08-10 or later and treat the score citation as an update, or (b) replace the score sequence with W32's actual spark (ending at 30, not 40) and adjust the surrounding "sharpest single-week move" language. Not shipped this tick — one-fix-per-tick rule; the Ramune close-date finding above scored higher and was picked instead.
 - issue: (none filed yet — next tick that picks this row up opens one per Step 2.5)
 
-### [ ] [newsletter] [4.0] Weekly digest — issue 007 due (7 days since issue 6)
+### [x] [newsletter] [4.0] Weekly digest — issue 007 due (7 days since issue 6) — addressed in commit `10bf942f`, closes #832
 - category: content-gaps
 - filed: 2026-08-12 by newsletter-gap-survey.mjs
 - impact: 5 (newsletter archive going stale reduces /newsletter value and reader trust in cadence)
@@ -11029,3 +11029,4 @@ passes accumulate signals.)
 - days-since: 7
 - issue: #832
 > Filed 2026-08-12 by newsletter-gap-survey.mjs. 7 days since issue 6. Threshold: ≥7 calendar days.
+> **Resolved (2026-08-12):** shipped `thock-weekly-007.mdx` — 5 pillar picks (guides/ideas/trends/news/deep-dives, each the most recent article in that pillar) plus a W33 tracker snapshot section leading with the GMK CYL OG Extensions group-buy close. `pnpm verify` full gate green: typecheck, lint, unit + script tests, data:validate, build, size, 1140/1140 e2e.
