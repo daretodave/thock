@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Newsreader, IBM_Plex_Sans, JetBrains_Mono } from 'next/font/google'
+import localFont from 'next/font/local'
 import { Header } from '@/components/ui/Header'
 import { Footer } from '@/components/ui/Footer'
 import { GoogleTagManager } from '@/components/analytics/GoogleTagManager'
@@ -9,25 +9,26 @@ import { OG_PALETTE } from '@/components/og/palette'
 import { siteConfig } from '@thock/seo'
 import './globals.css'
 
-const serif = Newsreader({
-  subsets: ['latin'],
+const serif = localFont({
+  src: [
+    { path: './fonts/newsreader-variable-normal.woff2', style: 'normal', weight: '400 700' },
+    { path: './fonts/newsreader-variable-italic.woff2', style: 'italic', weight: '400 700' },
+  ],
   variable: '--thock-serif',
-  weight: ['400', '500', '600', '700'],
-  style: ['normal', 'italic'],
   display: 'swap',
 })
 
-const sans = IBM_Plex_Sans({
-  subsets: ['latin'],
+const sans = localFont({
+  src: './fonts/ibm-plex-sans-variable.woff2',
   variable: '--thock-sans',
-  weight: ['300', '400', '500', '600', '700'],
+  weight: '300 700',
   display: 'swap',
 })
 
-const mono = JetBrains_Mono({
-  subsets: ['latin'],
+const mono = localFont({
+  src: './fonts/jetbrains-mono-variable.woff2',
   variable: '--thock-mono',
-  weight: ['400', '500', '600'],
+  weight: '400 600',
   display: 'swap',
 })
 
