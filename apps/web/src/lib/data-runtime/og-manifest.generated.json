@@ -1439,6 +1439,13 @@
   ],
   "newsletters": [
     {
+      "slug": "thock-weekly-007",
+      "title": "thock weekly — issue 07",
+      "lede": "ZMK's wireless case, foam sealed inside a switch housing, a closed GMK buy's honest cooldown, a five-region launch that doesn't stagger, and the 60% layout's improbable origin — plus GMK CYL OG Extensions closes its Geekhack buy today as attention fully rotates away from TA Neo.",
+      "issue": 7,
+      "readTime": 4
+    },
+    {
       "slug": "thock-weekly-006",
       "title": "thock weekly — issue 06",
       "lede": "A GMK keycap set's group buy closes and its tracker score keeps dropping for two straight weeks — that's not decline, it's the shape every closed buy takes. Plus a firmware fork, a keycap-mixing map, OpenAI's macro pad, and the geekhack thread that built the 60% taxonomy.",
@@ -6144,5 +6151,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-08-11T23:35:45.989Z"
+  "generatedAt": "2026-08-12T00:28:48.509Z"
 }
