@@ -84,6 +84,19 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [content] [4.8] hmx-cloud-deep-dive — "at the time of writing" temporal hedge slips the article-language-check gate — addressed in commit `6bd30f54`, closes #838
+
+- category: content
+- filed: 2026-08-12 by cloud /iterate audit (fresh general-purpose sweep, angle: editorial-voice constraints against `plan/bearings.md`)
+- impact: 6 (closes a real gap in a purpose-built, machine-checked enforcement mechanism — prevents recurrence sitewide — plus fixes one live decaying/off-voice claim)
+- ease: 8 (one new pattern-list entry, one test case, one clause reworded, `updatedAt` bump)
+- score: 4.8 (impact × ease / 10)
+- observation: `hmx-cloud-deep-dive.mdx` (line 75) cited a CannonKeys price "at the time of writing" — a self-referential temporal hedge with no fixed anchor, the same anti-pattern class `scripts/article-language-patterns.json` exists to catch, but the pattern list had no rule matching this exact phrase. Sole offender in the full MDX corpus (articles + newsletters). The corpus already carries an established idiom for this situation — "as of this piece's publish date" — used in `gmk-cyl-just-beachy-group-buy-opens.mdx` and `work-louder-openai-codex-micro.mdx`.
+- evidence: `grep -rn "at the time of writing" apps/web/src/content/` — one hit, `hmx-cloud-deep-dive.mdx:75`.
+- issue: #838
+> **Resolved (2026-08-12):** added `at-time-of-writing` pattern to `scripts/article-language-patterns.json` + two test cases to `scripts/__tests__/article-language-check.test.mjs`; reworded the clause to the corpus's established idiom; bumped `updatedAt`. `pnpm verify` full gate green: typecheck, lint, unit + script tests, data:validate, build, size, 1140/1140 e2e.
+> Picked as the top signal this tick (cloud `/march`): no unlabeled GitHub issues (triage gate, 0 unlabeled); not Monday (W33 snapshot already existed); no pending phases/data/content-gap work (all 7 mechanical surveys re-ran clean, no rows filed — content-gap, cross-link, group-buy-companion, group-buy-status, newsletter-gap, og-coverage, a11y-spec-coverage, article-parts). AUDIT.md's/CRITIQUE.md's only other Pending rows remained the standing non-autonomous items (blocked-cloud-permission ×2, needs-user-call ×2, the `[4.0]` Lighthouse-CI `/oversight` item). march's own expand Step 3c gate not met (1 commit since pass 312's anchor `05aca84c`). Dispatched a fresh general-purpose sweep (cross-reference integrity, component reuse/consistency across route families, JSON-LD spot-checks, data hygiene sampling, test coverage on recently-added components, editorial-voice constraints) — this language-gate gap was the one finding that cleared the 3.0 bar; a group-buy status/releasedAt lead was chased and ruled out as an intentional Wuque product-line pattern, everything else came back clean.
+
 ### [x] [content] [4.8] 2026-W32 trend snapshot overcounts the live Keychron V6 Ultra HE Kickstarter's week — "week three" / "three weeks post-launch" — addressed in 666be6e1
 
 - category: content
