@@ -10996,7 +10996,7 @@ passes accumulate signals.)
 > **Resolved (2026-08-11):** corrected W24/W25 to accurate pre-close framing (buy still open, cooling attention ahead of the June 20 close, final-week framing) and W26 (published June 22, genuinely after the real close) to the correct 2026-06-20 close date with matching post-close framing. Regenerated data-runtime manifest, OG manifest, and search index. `pnpm verify` full gate green: typecheck, lint, unit + script tests, data:validate, build, size, 1137/1137 e2e.
 > Picked as the top signal this tick (cloud `/march`): no unlabeled GitHub issues (triage gate, 0 unlabeled); not Monday (W33 snapshot already existed); no pending phases/data/content-gap work (all 8 mechanical surveys re-ran clean, no rows filed); march's own expand Step 3c gate not met (5 commits/~6.7h since pass 311's anchor `d434f577`, threshold 20 commits/48h). AUDIT.md's/CRITIQUE.md's only other Pending rows remained the standing non-autonomous items. Dispatched a fresh general-purpose sweep steered at residue in the two most-recent commits (hotswap search normalization, Selene fulfillment-date fix) plus fresh angles (spelling-variant scan across the corpus, full GMK-CYL trend-note-vs-article cross-reference, referential-integrity scan, article-publishedAt-vs-cited-trend-week temporal check) — this Ramune close-date contradiction was the top-scoring finding (a second, lower-scoring [6.4] Prussian Alert fulfillment-date mismatch and a [4.8] Just Beachy forward-cited-trend-week issue were also found and remain queued for a future tick per the one-fix-per-tick rule).
 
-### [ ] [content] [6.4] trends tracker W25 GMK CYL Prussian Alert fulfillment date contradicts article — Q4 2026 vs article's Q1-Q2 2027
+### [x] [content] [6.4] trends tracker W25 GMK CYL Prussian Alert fulfillment date contradicts article — Q4 2026 vs article's Q1-Q2 2027 — addressed in 990c7dc0, closes #833
 - category: content
 - filed: 2026-08-11 by cloud /iterate audit (fresh general-purpose sweep, same pass that found and shipped the W24/W25/W26 Ramune close-date fix above)
 - impact: 8 (same bug class as the just-fixed Selene and Ramune findings — a trends-tracker note directly contradicts its own companion article's explicit fulfillment-date math)
@@ -11005,7 +11005,8 @@ passes accumulate signals.)
 - observation: `data/trends/2026-W25.json`'s "GMK CYL Prussian Alert" row `note` states "Estimated fulfillment Q4 2026," but the companion article (`gmk-cyl-prussian-alert.mdx:43`) explicitly computes "A close in mid-June 2026 puts estimated delivery in the Q1–Q2 2027 window" — a full 1-2 quarters later. No fulfillment field exists on the group-buy record to arbitrate, so the article (which shows its work) is the source of truth.
 - evidence: `data/trends/2026-W25.json`: "...Estimated fulfillment Q4 2026; drop expected to steepen in W26." vs `gmk-cyl-prussian-alert.mdx:43`: "...puts estimated delivery in the Q1–Q2 2027 window..."
 - next: change W25's note to "Estimated fulfillment Q1-Q2 2027," matching the Selene/Ramune fix phrasing convention. Not shipped this tick — one-fix-per-tick rule; the Ramune close-date finding above scored higher and was picked instead.
-- issue: (none filed yet — next tick that picks this row up opens one per Step 2.5)
+- issue: #833
+> **Resolved (2026-08-12):** changed W25's note to "Estimated fulfillment Q1-Q2 2027," matching the companion article's math and the Selene/Ramune fix phrasing convention. No other trend week references a Prussian Alert fulfillment estimate. `pnpm verify` full gate green: typecheck, unit, data:validate, build, 1140/1140 e2e.
 
 ### [ ] [data] [4.8] gmk-cyl-just-beachy-group-buy-opens.mdx cites trend-tracker data published after the article's own updatedAt
 - category: data
