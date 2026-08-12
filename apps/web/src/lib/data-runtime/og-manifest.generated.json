@@ -1422,6 +1422,11 @@
       "description": "Morgantown, West Virginia-based vendor that runs in-house switches (Cream, Silk) and partners on group buys for keycaps and boards. One of the most-cited NA storefronts for enthusiast switch SKUs."
     },
     {
+      "slug": "prototypist",
+      "name": "Prototypist",
+      "description": "UK-based mechanical keyboard vendor handling regional fulfillment and customs for GMK and DCS keycap-set group buys hosted by other studios, alongside its own in-house kit and colorway group buys."
+    },
+    {
       "slug": "qwertykeys",
       "name": "Qwertykeys",
       "description": "China-based custom mechanical keyboard manufacturer and direct-to-consumer storefront, based in Guangdong. Best known for the QK65/QK75/QK80/QK100 board line; ships direct with wireless and hot-swap PCB options as standard configurator choices rather than group-buy upsell tiers."
@@ -6151,5 +6156,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-08-12T09:37:20.885Z"
+  "generatedAt": "2026-08-12T15:41:28.776Z"
 }

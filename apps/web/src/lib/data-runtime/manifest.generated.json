@@ -682,6 +682,15 @@
       "updatedAt": "2026-08-09T04:00:00.000Z"
     },
     {
+      "slug": "prototypist",
+      "name": "Prototypist",
+      "url": "https://prototypist.net",
+      "countryCode": "GB",
+      "description": "UK-based mechanical keyboard vendor handling regional fulfillment and customs for GMK and DCS keycap-set group buys hosted by other studios, alongside its own in-house kit and colorway group buys.",
+      "status": "active",
+      "updatedAt": "2026-08-12T00:00:00.000Z"
+    },
+    {
       "slug": "qwertykeys",
       "name": "Qwertykeys",
       "url": "https://www.qwertykeys.com",
@@ -9647,5 +9656,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-08-12T09:37:20.885Z"
+  "generatedAt": "2026-08-12T15:41:28.776Z"
 }
