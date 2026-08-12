@@ -11017,3 +11017,15 @@ passes accumulate signals.)
 - evidence: `data/trends/2026-W33.json` "GMK Beachy" row: `"score": 40, "spark": [8, 12, 16, 20, 24, 27, 30, 40]`, file `publishedAt: "2026-08-10T00:00:00.000Z"`. Article quote: "8, 12, 16, 20, 24, 27, 30, 40" at `publishedAt`/`updatedAt` `2026-08-06T14:00:00.000Z`.
 - next: either (a) bump the article's `updatedAt` to 2026-08-10 or later and treat the score citation as an update, or (b) replace the score sequence with W32's actual spark (ending at 30, not 40) and adjust the surrounding "sharpest single-week move" language. Not shipped this tick — one-fix-per-tick rule; the Ramune close-date finding above scored higher and was picked instead.
 - issue: (none filed yet — next tick that picks this row up opens one per Step 2.5)
+
+### [ ] [newsletter] [4.0] Weekly digest — issue 007 due (7 days since issue 6)
+- category: content-gaps
+- filed: 2026-08-12 by newsletter-gap-survey.mjs
+- impact: 5 (newsletter archive going stale reduces /newsletter value and reader trust in cadence)
+- ease: 8 (content-curator weekly round-up: 5 pillar picks + tracker insight)
+- score: 4.0 (impact × ease / 10)
+- next: /ship-content → newsletter type (weekly round-up, 5 pillar picks, tracker insight)
+- last-issue: 2026-08-04 (thock-weekly-006)
+- days-since: 7
+- issue: #832
+> Filed 2026-08-12 by newsletter-gap-survey.mjs. 7 days since issue 6. Threshold: ≥7 calendar days.
