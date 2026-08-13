@@ -16,7 +16,7 @@
       "category": "switch",
       "direction": "flat",
       "score": 56,
-      "spark": [61, 60, 59, 58, 58, 57, 57, 56],
+      "spark": [53, 64, 62, 61, 60, 58, 57, 56],
       "articleSlug": "hmx-cloud-deep-dive",
       "note": "No fresh coverage this week; HMX Cloud V2 discussion holds steady as a budget hot-swap linear pick per KeebFinder listings, momentum essentially plateaued."
     },
@@ -25,7 +25,7 @@
       "category": "switch",
       "direction": "flat",
       "score": 40,
-      "spark": [35, 36, 37, 37, 38, 38, 39, 40],
+      "spark": [41, 40, 40, 39, 39, 37, 39, 40],
       "articleSlug": "gateron-oil-king-deep-dive",
       "note": "Oil King catalog (linear, silent linear, silent tactile, heavy tactile) stays steady in vendor listings; no new SKUs or reviews surfaced this week per gateron.com."
     },
@@ -34,7 +34,7 @@
       "category": "switch",
       "direction": "up",
       "score": 50,
-      "spark": [30, 33, 35, 38, 41, 44, 46, 50],
+      "spark": [33, 38, 39, 38, 36, 35, 46, 50],
       "articleSlug": "gateron-lanes-tactile-deep-dive",
       "note": "ThereminGoat posted a new Gateron Lanes switch review on Patreon this month, reviving tactile-switch chatter after the initial spring launch buzz cooled."
     },
@@ -43,7 +43,7 @@
       "category": "switch",
       "direction": "up",
       "score": -46,
-      "spark": [-18, -25, -32, -37, -42, -46, -50, -46],
+      "spark": [-33, -30, -32, -36, -39, -42, -50, -46],
       "articleSlug": "cherry-mx2a-revision",
       "note": "MKBGuide's 2026 Cherry MX guide notes virtually every new Cherry switch now ships as MX2A, repositioning Cherry against Gateron even as ThereminGoat's dummy-switch review keeps hobbyist skepticism alive."
     },
@@ -88,7 +88,7 @@
       "category": "layout",
       "direction": "down",
       "score": -48,
-      "spark": [-16, -22, -27, -31, -34, -40, -44, -48],
+      "spark": [-27, -26, -28, -31, -33, -36, -44, -48],
       "articleSlug": "alice-layout-decline",
       "note": "Ergonomic buyers increasingly skip Alice as a stepping stone and jump straight to full split, per MKBGuide's split-keyboard guide, continuing Alice's slow fade in enthusiast threads."
     },
@@ -97,7 +97,7 @@
       "category": "layout",
       "direction": "flat",
       "score": 47,
-      "spark": [41, 42, 43, 44, 44, 45, 46, 47],
+      "spark": [43, 44, 44, 43, 43, 43, 46, 47],
       "articleSlug": "75-percent-default",
       "note": "75% remains the default custom form factor in vendor catalogs with no major new releases this week; interest holding at a steady plateau."
     },
@@ -106,7 +106,7 @@
       "category": "vendor",
       "direction": "up",
       "score": 96,
-      "spark": [40, 48, 55, 61, 68, 80, 94, 96],
+      "spark": [0, 8, 22, 40, 58, 68, 94, 96],
       "articleSlug": "work-louder-openai-codex-micro",
       "note": "OpenAI's Codex Micro macro pad, built on Work Louder's Creator Micro platform, fully launched July 15, 2026 at $230 per TechCrunch and Engadget coverage of OpenAI's first hardware."
     },
@@ -115,7 +115,7 @@
       "category": "vendor",
       "direction": "up",
       "score": 58,
-      "spark": [26, 32, 37, 41, 44, 48, 53, 58],
+      "spark": [40, 38, 42, 41, 42, 45, 53, 58],
       "articleSlug": "mode-sonnet-r2-group-buy-coverage",
       "note": "Mode Designs posted a Summer 2026 update covering Sonnet/Encore shipping status, Prologue 98% progress, and an Envoy final-stock announcement, per green-keys.info."
     },
@@ -124,7 +124,7 @@
       "category": "vendor",
       "direction": "up",
       "score": 20,
-      "spark": [20, 29, 27, 33, 28, 25, 15, 20],
+      "spark": [24, 29, 27, 33, 28, 25, 15, 20],
       "articleSlug": "prototypist-vendor-spotlight",
       "note": "Prototypist's Paper 65 kit group buy (opened earlier this month) continues toward Q4 2026 delivery while its GMK CYL Midnight Rainbow R2 project and 2026 relaunch push keep the vendor visible."
     },
@@ -133,7 +133,7 @@
       "category": "brand",
       "direction": "up",
       "score": 90,
-      "spark": [60, 66, 71, 76, 80, 83, 86, 90],
+      "spark": [44, 51, 55, 72, 77, 80, 86, 90],
       "articleSlug": "keychron-nova-socket-hybrid",
       "note": "Keychron opened $5 deposits for the V6 Ultra HE ahead of a July 22 Kickstarter, the first board mixing mechanical and TMR magnetic switches via its new Nova Socket PCB, per Notebookcheck and TechPowerUp."
     },
@@ -142,7 +142,7 @@
       "category": "brand",
       "direction": "up",
       "score": -18,
-      "spark": [-40, -36, -33, -30, -28, -26, -24, -18],
+      "spark": [-28, -27, -27, -27, -28, -30, -24, -18],
       "articleSlug": "cherry-xtrfy-tmr-pivot",
       "note": "Cherry's brand score keeps climbing (-24 to -18) while the MX2A switch line falls further behind (-46) — the widening gap this piece tracks: XTRFY's TMR pivot, not the mainline switch business, is what's pulling Cherry's aggregate score off its floor."
     },
@@ -151,7 +151,7 @@
       "category": "brand",
       "direction": "flat",
       "score": -3,
-      "spark": [-20, -16, -13, -10, -8, -6, -4, -3],
+      "spark": [17, 17, 14, 13, 12, 10, -4, -3],
       "articleSlug": null,
       "note": "Wuque Studio stays quiet this week; its NAMA group buy (closed December 2025, delivery est. March 2026) has cycled out of active discussion per CannonKeys listings."
     }

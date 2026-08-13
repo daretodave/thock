@@ -7,16 +7,7 @@
       "category": "switch",
       "direction": "up",
       "score": 76,
-      "spark": [
-        52,
-        55,
-        59,
-        55,
-        60,
-        66,
-        72,
-        76
-      ],
+      "spark": [46, 49, 52, 55, 60, 66, 72, 76],
       "articleSlug": "rapid-trigger-gaming-crossover",
       "note": "Corsair CLIPPER PRO Mini 60 (IP57, 8000Hz) drawing mainstream coverage week three post-launch. IQUNIX EC75 Computex debut still generating post-show content. Hall Effect now treated as baseline expectation for new gaming boards per multiple W25 roundups."
     },
@@ -25,16 +16,7 @@
       "category": "switch",
       "direction": "flat",
       "score": 62,
-      "spark": [
-        30,
-        38,
-        44,
-        50,
-        55,
-        60,
-        64,
-        62
-      ],
+      "spark": [35, 38, 40, 44, 49, 53, 64, 62],
       "articleSlug": "hmx-cloud-deep-dive",
       "note": "Post-launch plateau: stocked at Milktooth, SwitchOddities, iLumkb, UniKeys, and Eloquent Clicks. Community reception positive \u2014 L4 mold praised for smoothness \u2014 but shelf-arrival excitement from W24 is settling. No new review drops this week."
     },
@@ -43,16 +25,7 @@
       "category": "switch",
       "direction": "flat",
       "score": 40,
-      "spark": [
-        42,
-        41,
-        40,
-        40,
-        41,
-        40,
-        40,
-        40
-      ],
+      "spark": [38, 42, 41, 40, 41, 41, 40, 40],
       "articleSlug": "gateron-oil-king-deep-dive",
       "note": "No new catalysts. Stable mid-tier benchmark presence. Gateron's magnetic Lanes and HE Jade lines pulling community attention toward their newer offerings rather than Oil King in W25."
     },
@@ -61,16 +34,7 @@
       "category": "switch",
       "direction": "flat",
       "score": 39,
-      "spark": [
-        18,
-        24,
-        30,
-        34,
-        36,
-        38,
-        38,
-        39
-      ],
+      "spark": [0, 0, 12, 22, 30, 33, 38, 39],
       "articleSlug": "gateron-lanes-tactile-deep-dive",
       "note": "Widely restocked across Prototypist, Bowl Keyboards, Delta Key Co, Keybay, and Pantheon Keys. Post-ThereminGoat-review sell-out cycles stabilizing; demand holding but initial urgency has normalized into steady mid-range enthusiasm."
     },
@@ -79,16 +43,7 @@
       "category": "switch",
       "direction": "down",
       "score": -32,
-      "spark": [
-        -22,
-        -24,
-        -26,
-        -27,
-        -28,
-        -29,
-        -30,
-        -32
-      ],
+      "spark": [-20, -23, -25, -28, -31, -33, -30, -32],
       "articleSlug": "cherry-mx2a-revision",
       "note": "No new product news. Enthusiast comparisons favor Gateron and HMX options for stock smoothness; MX2A lubrication benefits only materializing past 50k keystrokes cited repeatedly as a liability in W25 community threads."
     },
@@ -97,16 +52,7 @@
       "category": "keycap",
       "direction": "down",
       "score": 56,
-      "spark": [
-        40,
-        45,
-        52,
-        58,
-        62,
-        68,
-        74,
-        56
-      ],
+      "spark": [35, 38, 46, 54, 59, 63, 74, 56],
       "articleSlug": "gmk-cyl-prussian-alert",
       "note": "GB closed June 12 at Prototypist, Geonworks, Oblotzky, KBDfans. Post-close score drop: community shifting from purchase urgency to production wait mode. Estimated fulfillment Q1-Q2 2027; drop expected to steepen in W26."
     },
@@ -115,16 +61,7 @@
       "category": "keycap",
       "direction": "up",
       "score": 37,
-      "spark": [
-        18,
-        20,
-        24,
-        27,
-        30,
-        31,
-        33,
-        37
-      ],
+      "spark": [18, 21, 24, 27, 29, 31, 33, 37],
       "articleSlug": "gmk-cyl-selene-group-buy",
       "note": "Closing June 19 \u2014 final days of the May 15\u2013June 19 window driving last-call urgency at iLumkb, KBDfans, Delta Key Co, Duckeebs, MechanicalKeyboards, and Prototypist. Base kit $160 USD; Q1-Q2 2027 fulfillment estimated."
     },
@@ -133,16 +70,7 @@
       "category": "keycap",
       "direction": "up",
       "score": 32,
-      "spark": [
-        0,
-        0,
-        0,
-        0,
-        14,
-        22,
-        29,
-        32
-      ],
+      "spark": [0, 0, 0, 0, 0, 18, 29, 32],
       "articleSlug": "gmk-cyl-pandemonium-group-buy",
       "note": "Active GB June 1\u2013July 1 via Prototypist, Delta Key Co, Bowl Keyboards, Swagkeys, Pantheon Keys, Typist Club, Keybay. Berserk eclipse-themed translucent GMK set with steady mid-run engagement building toward July close."
     },
@@ -169,16 +97,7 @@
       "category": "keycap",
       "direction": "flat",
       "score": 35,
-      "spark": [
-        0,
-        0,
-        0,
-        10,
-        20,
-        28,
-        35,
-        35
-      ],
+      "spark": [10, 15, 19, 23, 26, 29, 35, 35],
       "articleSlug": "divinikey-dcs-dolch-group-buy",
       "note": "Active GB June 1\u2013July 1 via Divinikey. Mid-run plateau typical for DCS profile sets; Signature Plastics manufacture and Dolch colorway maintain niche but loyal following with pricing-tier refund mechanic still attracting late orders."
     },
@@ -187,16 +106,7 @@
       "category": "keycap",
       "direction": "down",
       "score": 24,
-      "spark": [
-        45,
-        42,
-        38,
-        36,
-        34,
-        30,
-        28,
-        24
-      ],
+      "spark": [22, 28, 33, 38, 44, 43, 28, 24],
       "articleSlug": "gmk-cyl-ramune-group-buy",
       "note": "Final week before the 2026-06-20 close. Discussion has quieted from the launch peak; last-call reminders expected as the window narrows."
     },
@@ -205,16 +115,7 @@
       "category": "layout",
       "direction": "up",
       "score": 55,
-      "spark": [
-        38,
-        40,
-        42,
-        44,
-        46,
-        48,
-        52,
-        55
-      ],
+      "spark": [22, 28, 32, 37, 40, 42, 52, 55],
       "articleSlug": "split-ergo-cohort",
       "note": "Keychron Orca Echo crowdfunding opens June 19 on Gizmart \u2014 49-key split with 19mm trackball and encoder, Computex-revealed June 2. CannonKeys Link closes today June 15, adding post-close community reflection. Two simultaneous split narratives sustaining category momentum."
     },
@@ -223,16 +124,7 @@
       "category": "layout",
       "direction": "flat",
       "score": 44,
-      "spark": [
-        42,
-        43,
-        43,
-        44,
-        44,
-        44,
-        44,
-        44
-      ],
+      "spark": [27, 30, 32, 35, 38, 43, 44, 44],
       "articleSlug": "75-percent-default",
       "note": "IQUNIX EC75 Computex debut sustaining mild interest in 75% HE boards into W25. No new independent 75% launches this week. Remains dominant enthusiast form factor by volume but generating little directional movement without a fresh headline."
     },
@@ -241,16 +133,7 @@
       "category": "layout",
       "direction": "down",
       "score": -28,
-      "spark": [
-        -18,
-        -20,
-        -22,
-        -23,
-        -24,
-        -25,
-        -26,
-        -28
-      ],
+      "spark": [-16, -18, -19, -23, -26, -27, -26, -28],
       "articleSlug": "alice-layout-decline",
       "note": "Continued slow bleed as ergo interest concentrates around split and columnar designs rather than the Alice form factor. No new Alice GB announcements or notable community builds surfacing in W25 discussion."
     },
@@ -259,16 +142,7 @@
       "category": "vendor",
       "direction": "up",
       "score": 42,
-      "spark": [
-        28,
-        30,
-        32,
-        34,
-        35,
-        36,
-        38,
-        42
-      ],
+      "spark": [23, 24, 26, 34, 37, 40, 38, 42],
       "articleSlug": "mode-sonnet-r2-group-buy-coverage",
       "note": "Prologue 98% keyboard prototype testing update surfaced on Mode's social \u2014 first numpad-layout board in their lineup, summer 2026 target. Crown Mounting System commentary still drawing engagement; Encore 2026 in-stock availability keeping brand visible."
     },
@@ -277,16 +151,7 @@
       "category": "vendor",
       "direction": "flat",
       "score": 28,
-      "spark": [
-        18,
-        20,
-        22,
-        24,
-        25,
-        26,
-        30,
-        28
-      ],
+      "spark": [18, 18, 18, 18, 18, 22, 30, 28],
       "articleSlug": "cannonkeys-nyawice-group-buy",
       "note": "Link split ergo GB closed June 15; post-close score eases as purchase momentum converts to production wait. GMK Spark (June 21 close) provides secondary engagement this week. No new GB announcement to replace Link in W25."
     },
@@ -295,16 +160,7 @@
       "category": "vendor",
       "direction": "flat",
       "score": 27,
-      "spark": [
-        10,
-        12,
-        14,
-        16,
-        18,
-        20,
-        29,
-        27
-      ],
+      "spark": [14, 14, 16, 18, 21, 24, 29, 27],
       "articleSlug": null,
       "note": "Post-Prussian-Alert-close dip in headline traffic. Still hosting GMK Pandemonium (through July 1), GMK Selene (closing June 19), and newly-active Masterpiece R2 (opened June 5) — three concurrent GBs, unchanged from last week; cadence eases as the highest-traffic buy goes quiet."
     },
@@ -313,16 +169,7 @@
       "category": "brand",
       "direction": "up",
       "score": 55,
-      "spark": [
-        36,
-        38,
-        40,
-        42,
-        44,
-        46,
-        51,
-        55
-      ],
+      "spark": [29, 30, 32, 38, 44, 44, 51, 55],
       "articleSlug": "keychron-quiet-takeover",
       "note": "Orca Echo crowdfunding opens June 19 on Gizmart \u2014 prototype hands-on at Tenkey Vol.11 generated mixed-but-sustained discussion on thumb-trackball placement. Q3 Ultra 8K review coverage also active, keeping brand in the W25 news cycle."
     },
@@ -331,16 +178,7 @@
       "category": "brand",
       "direction": "down",
       "score": 14,
-      "spark": [
-        16,
-        16,
-        17,
-        17,
-        17,
-        18,
-        17,
-        14
-      ],
+      "spark": [8, 8, 8, 16, 17, 17, 17, 14],
       "articleSlug": null,
       "note": "6th Anniversary Special Return sale ended June 14 \u2014 event ran June 8\u201314 with discontinued board returns and mystery boxes. Post-event dip typical; no new product announcement to sustain W25 engagement."
     },
@@ -349,16 +187,7 @@
       "category": "brand",
       "direction": "flat",
       "score": -27,
-      "spark": [
-        -6,
-        -10,
-        -14,
-        -18,
-        -22,
-        -24,
-        -28,
-        -27
-      ],
+      "spark": [-13, -14, -15, -20, -23, -28, -27, -27],
       "articleSlug": "cherry-mx2a-revision",
       "note": "No new brand-level Cherry news in W25. MX2A sentiment stays flat as enthusiast comparisons continue favoring Gateron and HMX for stock smoothness. Score holds near W24 level \u2014 no positive or negative catalyst this week."
     }

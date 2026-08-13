@@ -16,7 +16,7 @@
       "category": "switch",
       "direction": "flat",
       "score": 40,
-      "spark": [44, 46, 43, 42, 41, 41, 41, 40],
+      "spark": [22, 28, 30, 35, 38, 42, 41, 40],
       "articleSlug": "gateron-oil-king-deep-dive",
       "note": "No new drops or reviews this week; long-tail vendor stock keeps it visible but search and social volume unchanged from W20. Slight single-point erosion as HMX Cloud V2 comparison posts pull some discovery traffic."
     },
@@ -43,7 +43,7 @@
       "category": "keycap",
       "direction": "up",
       "score": 54,
-      "spark": [10, 18, 26, 32, 38, 46, 50, 54],
+      "spark": [18, 22, 28, 32, 35, 38, 46, 54],
       "articleSlug": "gmk-cyl-prussian-alert",
       "note": "GB live May 15 – June 12 across 10 regional vendors including KBDfans, Yushakobo, Prototypist. GeekHack IC thread actively moderated; OG Icon modifiers and custom grey/white base generating strong aesthetic buzz mid-GB window."
     },
@@ -88,7 +88,7 @@
       "category": "layout",
       "direction": "flat",
       "score": 34,
-      "spark": [20, 23, 26, 28, 30, 33, 34, 34],
+      "spark": [18, 22, 25, 28, 30, 32, 34, 34],
       "articleSlug": "split-ergo-cohort",
       "note": "Steady baseline; Glove80 community Discord remains highly active, Voyager still recommended in beginner ergo guides. No new hardware or firmware release this week to spike signal. Holds W20 score as structural RSI-awareness demand stays consistent."
     },
@@ -97,7 +97,7 @@
       "category": "layout",
       "direction": "down",
       "score": -23,
-      "spark": [-4, -7, -10, -13, -16, -19, -21, -23],
+      "spark": [-8, -10, -12, -15, -16, -18, -19, -23],
       "articleSlug": "alice-layout-decline",
       "note": "Community debate sharpens around Alice offering less wrist freedom than true splits; competitive-gaming coverage continues to cast doubt on ergonomic claims. Keychron B11 Pro foldable Alice launch noted but seen as mass-market rather than enthusiast signal."
     },
@@ -106,7 +106,7 @@
       "category": "vendor",
       "direction": "up",
       "score": 34,
-      "spark": [10, 14, 17, 20, 22, 26, 30, 34],
+      "spark": [15, 18, 20, 22, 23, 24, 26, 34],
       "articleSlug": "vendor-first-customs",
       "note": "Encore 2026 pre-orders (opened Apr 16, shipping Jul 2026) entering peak word-of-mouth window; Crown Mounting System coverage in PC Gamer and Green-Keys this week. Prologue 98% teaser sustaining anticipation in background."
     },
@@ -115,7 +115,7 @@
       "category": "brand",
       "direction": "up",
       "score": 38,
-      "spark": [18, 22, 24, 26, 28, 32, 35, 38],
+      "spark": [20, 23, 26, 28, 29, 30, 32, 38],
       "articleSlug": "keychron-q-ultra-zmk",
       "note": "Tom's Hardware Q6 Ultra 8K review published; 660-hour battery and 8K ZMK story generating mainstream press pickup. V Ultra lineup launch window imminent. Silk POM switch praised in roundups. Strongest brand momentum in the tracker this week."
     },
@@ -124,7 +124,7 @@
       "category": "brand",
       "direction": "up",
       "score": 16,
-      "spark": [4, 5, 6, 7, 7, 8, 12, 16],
+      "spark": [9, 10, 8, 9, 8, 8, 8, 16],
       "articleSlug": "vendor-first-customs",
       "note": "Paper80 TKL clearing positive YouTube review cycle via Whatever Studio collab; Original Aspiration switch stocked at CannonKeys attracting budget-premium linear buyers. Minor positive uptick from W20's flat-8 as brand visibility improves."
     },
@@ -133,7 +133,7 @@
       "category": "brand",
       "direction": "down",
       "score": -20,
-      "spark": [-2, -4, -6, -9, -11, -15, -17, -20],
+      "spark": [-6, -8, -10, -12, -13, -14, -15, -20],
       "articleSlug": "cherry-mx2a-revision",
       "note": "No new Cherry news this week; MX2A tactility complaints resurface in comment threads following a widely-shared 'sick of Hall Effect hype' piece. Cherry brand sentiment continues its structural slide as HMX and Gateron alternatives dominate recommendation threads."
     },
@@ -142,7 +142,7 @@
       "category": "vendor",
       "direction": "flat",
       "score": 18,
-      "spark": [14, 16, 18, 19, 19, 18, 18, 18],
+      "spark": [10, 13, 15, 17, 18, 18, 18, 18],
       "articleSlug": null,
       "note": "Steady in-stock rotation including Wuque Studio OA switch and various GB extras. No major new GB opened this week; community trust baseline solid but nothing to spike discourse. Holds near W20 flat score."
     },
@@ -151,7 +151,7 @@
       "category": "vendor",
       "direction": "flat",
       "score": 18,
-      "spark": [8, 10, 12, 14, 15, 16, 17, 18],
+      "spark": [8, 10, 11, 13, 14, 14, 16, 18],
       "articleSlug": null,
       "note": "DCS Grass Valley GB mid-run and GMK CYL Ramune and Prussian Alert as regional vendor keeps pipeline busy, but no new GB opened specifically from Prototypist this week. Slight deceleration from W20's active-window spike; trend settles to flat carry."
     },

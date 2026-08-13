@@ -25,16 +25,7 @@
       "category": "switch",
       "direction": "flat",
       "score": -45,
-      "spark": [
-        -25,
-        -32,
-        -37,
-        -42,
-        -46,
-        -50,
-        -46,
-        -45
-      ],
+      "spark": [-30, -32, -36, -39, -42, -50, -46, -45],
       "articleSlug": "cherry-mx2a-revision",
       "note": "MKB Guide's 2026 Cherry MX guide confirms MX2A remains default for nearly all new Cherry switches; no new SKUs this week."
     },
@@ -43,16 +34,7 @@
       "category": "switch",
       "direction": "flat",
       "score": 40,
-      "spark": [
-        36,
-        37,
-        37,
-        38,
-        38,
-        39,
-        40,
-        40
-      ],
+      "spark": [40, 40, 39, 39, 37, 39, 40, 40],
       "articleSlug": "gateron-oil-king-deep-dive",
       "note": "No new Oil King SKUs since early-2026 expansion; lineup steady across Gateron, KBDfans, Divinikey listings."
     },
@@ -61,16 +43,7 @@
       "category": "switch",
       "direction": "up",
       "score": 54,
-      "spark": [
-        33,
-        35,
-        38,
-        41,
-        44,
-        46,
-        50,
-        54
-      ],
+      "spark": [38, 39, 38, 36, 35, 46, 50, 54],
       "articleSlug": "gateron-lanes-tactile-deep-dive",
       "note": "ThereminGoat's Lanes review keeps driving KeebTalk and Geekhack tactile-chatter discussion two weeks after posting."
     },
@@ -79,16 +52,7 @@
       "category": "switch",
       "direction": "flat",
       "score": 55,
-      "spark": [
-        60,
-        59,
-        58,
-        58,
-        57,
-        57,
-        56,
-        55
-      ],
+      "spark": [64, 62, 61, 60, 58, 57, 56, 55],
       "articleSlug": "hmx-cloud-deep-dive",
       "note": "Budget hot-swap linear remains widely stocked at UniKeys, Milktooth, SwitchOddities; no new revision announced."
     },
@@ -169,16 +133,7 @@
       "category": "layout",
       "direction": "down",
       "score": -52,
-      "spark": [
-        -22,
-        -27,
-        -31,
-        -34,
-        -40,
-        -44,
-        -48,
-        -52
-      ],
+      "spark": [-26, -28, -31, -33, -36, -44, -48, -52],
       "articleSlug": "alice-layout-decline",
       "note": "MKB Guide frames Alice as an 'ergonomic compromise' as buyers keep favoring full split boards like the Q13 Max."
     },
@@ -187,16 +142,7 @@
       "category": "layout",
       "direction": "up",
       "score": 50,
-      "spark": [
-        42,
-        43,
-        44,
-        44,
-        45,
-        46,
-        47,
-        50
-      ],
+      "spark": [44, 44, 43, 43, 43, 46, 47, 50],
       "articleSlug": "75-percent-default",
       "note": "Mode Designs' Summer 2026 update pushes Sonnet (75%) into fulfillment and Encore (75%) shipping late July."
     },
@@ -205,16 +151,7 @@
       "category": "vendor",
       "direction": "up",
       "score": 97,
-      "spark": [
-        48,
-        55,
-        61,
-        68,
-        80,
-        94,
-        96,
-        97
-      ],
+      "spark": [8, 22, 40, 58, 68, 94, 96, 97],
       "articleSlug": "work-louder-openai-codex-micro",
       "note": "Sold out in under 24 hours; eBay resale hit $700-800+ per Resell Calendar and eWeek, despite mixed developer reviews."
     },
@@ -223,16 +160,7 @@
       "category": "vendor",
       "direction": "up",
       "score": 62,
-      "spark": [
-        32,
-        37,
-        41,
-        44,
-        48,
-        53,
-        58,
-        62
-      ],
+      "spark": [38, 42, 41, 42, 45, 53, 58, 62],
       "articleSlug": "mode-sonnet-r2-group-buy-coverage",
       "note": "Summer 2026 update: Sonnet in fulfillment, Encore ships late July, Prologue/Lotus-Obscura caps teased for late summer."
     },
@@ -259,16 +187,7 @@
       "category": "brand",
       "direction": "up",
       "score": 94,
-      "spark": [
-        66,
-        71,
-        76,
-        80,
-        83,
-        86,
-        90,
-        94
-      ],
+      "spark": [51, 55, 72, 77, 80, 86, 90, 94],
       "articleSlug": "keychron-quiet-takeover",
       "note": "V6 Ultra HE Kickstarter launch (July 22) dominates keyboard-news coverage from Gizmochina to Notebookcheck this week."
     },
@@ -277,16 +196,7 @@
       "category": "brand",
       "direction": "up",
       "score": -10,
-      "spark": [
-        -36,
-        -33,
-        -30,
-        -28,
-        -26,
-        -24,
-        -18,
-        -10
-      ],
+      "spark": [-27, -27, -27, -28, -30, -24, -18, -10],
       "articleSlug": "cherry-xtrfy-tmr-pivot",
       "note": "Cherry XTRFY's TMR magnetic line (MX 8.2 Pro TMR, K5 Pro TMR Compact) keeps drawing coverage, offsetting MX2A stagnation."
     },
@@ -295,16 +205,7 @@
       "category": "brand",
       "direction": "flat",
       "score": -4,
-      "spark": [
-        -16,
-        -13,
-        -10,
-        -8,
-        -6,
-        -4,
-        -3,
-        -4
-      ],
+      "spark": [17, 14, 13, 12, 10, -4, -3, -4],
       "articleSlug": null,
       "note": "No new product or GB announcements on Wuque's official news blog this week; quiet since June product updates."
     }

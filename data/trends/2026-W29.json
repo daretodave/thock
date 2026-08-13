@@ -16,7 +16,7 @@
       "category": "brand",
       "direction": "up",
       "score": 86,
-      "spark": [55, 60, 66, 71, 76, 80, 83, 86],
+      "spark": [44, 44, 51, 55, 72, 77, 80, 86],
       "articleSlug": "keychron-quiet-takeover",
       "note": "V6 Ultra HE Kickstarter VIP reservation window (through July 21, 2026), the new 14-in-1 Thunderbolt 5 dock (launched July 6), and K5 Ultra 8K keep Keychron's release cadence at a brand-defining pace."
     },
@@ -34,7 +34,7 @@
       "category": "switch",
       "direction": "flat",
       "score": 57,
-      "spark": [62, 61, 60, 59, 58, 58, 57, 57],
+      "spark": [49, 53, 64, 62, 61, 60, 58, 57],
       "articleSlug": "hmx-cloud-deep-dive",
       "note": "No new SKUs or reviews surfaced this week; Cloud V2 remains a steady catalog staple as attention shifts toward Gateron Lanes and newer linears."
     },
@@ -43,7 +43,7 @@
       "category": "vendor",
       "direction": "up",
       "score": 94,
-      "spark": [30, 40, 48, 55, 61, 68, 80, 94],
+      "spark": [0, 0, 8, 22, 40, 58, 68, 94],
       "articleSlug": "work-louder-openai-codex-micro",
       "note": "OpenAI's first branded hardware, Codex Micro (built by Work Louder off the $199 Creator Micro 2), ships July 15, 2026; pre-launch teasers drove a discussion spike this week."
     },
@@ -52,7 +52,7 @@
       "category": "vendor",
       "direction": "up",
       "score": 53,
-      "spark": [20, 26, 32, 37, 41, 44, 48, 53],
+      "spark": [37, 40, 38, 42, 41, 42, 45, 53],
       "articleSlug": "mode-sonnet-r2-group-buy-coverage",
       "note": "Mode's Summer 2026 update: Sonnet/Encore return to in-stock after preorder fulfillment, Envoy gets a final-stock notice, and the Prologue 98% is teased for late summer."
     },
@@ -61,7 +61,7 @@
       "category": "layout",
       "direction": "flat",
       "score": 46,
-      "spark": [40, 41, 42, 43, 44, 44, 45, 46],
+      "spark": [38, 43, 44, 44, 43, 43, 43, 46],
       "articleSlug": "75-percent-default",
       "note": "Buyer guides this week peg 75% at roughly 42% of compact-layout preference for 2026, with rotary-knob boards cementing it as the default first custom build."
     },
@@ -70,7 +70,7 @@
       "category": "layout",
       "direction": "down",
       "score": -44,
-      "spark": [-10, -16, -22, -27, -31, -34, -40, -44],
+      "spark": [-26, -27, -26, -28, -31, -33, -36, -44],
       "articleSlug": "alice-layout-decline",
       "note": "Coverage now frames Alice as fully mainstream ('no longer exotic') with sub-$100 budget clones saturating the category, cooling novelty-driven hobbyist discussion."
     },
@@ -79,7 +79,7 @@
       "category": "switch",
       "direction": "flat",
       "score": 39,
-      "spark": [34, 35, 36, 37, 37, 38, 38, 39],
+      "spark": [41, 41, 40, 40, 39, 39, 37, 39],
       "articleSlug": "gateron-oil-king-deep-dive",
       "note": "Four-switch Oil King lineup (linear, silent linear, silent tactile, heavy tactile) holds flagship status in Gateron's 2026 catalog; no new SKUs announced this week."
     },
@@ -88,7 +88,7 @@
       "category": "switch",
       "direction": "up",
       "score": 46,
-      "spark": [28, 30, 33, 35, 38, 41, 44, 46],
+      "spark": [30, 33, 38, 39, 38, 36, 35, 46],
       "articleSlug": "gateron-lanes-tactile-deep-dive",
       "note": "ThereminGoat published a fresh Gateron Lanes switch review this week, reviving community discussion after a quiet stretch."
     },
@@ -106,7 +106,7 @@
       "category": "keycap",
       "direction": "down",
       "score": 16,
-      "spark": [14, 22, 29, 32, 33, 29, 22, 16],
+      "spark": [0, 18, 29, 32, 33, 29, 22, 16],
       "articleSlug": "gmk-cyl-pandemonium-group-buy",
       "note": "Set remains in the post-GB fulfillment queue with no fresh updates; community focus has moved to newly opened 2026 CYL interest checks."
     },
@@ -115,7 +115,7 @@
       "category": "keycap",
       "direction": "down",
       "score": 12,
-      "spark": [20, 28, 35, 35, 34, 28, 19, 12],
+      "spark": [26, 29, 35, 35, 34, 28, 19, 12],
       "articleSlug": "divinikey-dcs-dolch-group-buy",
       "note": "Overshadowed by concurrent DCS group buys - Handarbeit (closes July 19) and Mudbeam (closed July 16) - pulling DCS-profile attention elsewhere this week."
     },
@@ -124,7 +124,7 @@
       "category": "vendor",
       "direction": "down",
       "score": 15,
-      "spark": [18, 20, 29, 27, 33, 28, 25, 15],
+      "spark": [21, 24, 29, 27, 33, 28, 25, 15],
       "articleSlug": "vendor-first-customs",
       "note": "Hosting the KeyBoy Advance group buy (Game Boy Advance-shaped 50%, closes July 22, 2026) and teasing the Paper 65 kit, continuing last week's pullback."
     },
