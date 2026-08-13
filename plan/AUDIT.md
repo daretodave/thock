@@ -84,6 +84,19 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [content] [5.4] hall-effect-keyboard-guide self-contradicts the MX reset-point delta (0.5mm vs 1.5-2mm) — addressed in a0902ff3, closes #850
+
+- category: content
+- filed: 2026-08-13 by cloud /iterate audit (fresh general-purpose sweep, angle: numeric/factual claims vs catalog + internal consistency)
+- impact: 6 (`hall-effect-keyboard-guide.mdx` line 35 sits inside the guides pillar's dedicated Hall-effect/rapid-trigger buyer's guide, and the contradiction sits inside the article's central technical claim — why rapid trigger on Hall-effect boards beats standard MX)
+- ease: 9 (single-clause numeric correction in one file, no schema/code change)
+- score: 5.4 (impact × ease / 10)
+- observation: the sentence first states the standard-MX reset point is "fixed 0.5mm above" the actuation point, then three clauses later, describing the identical quantity, states "compared to 1.5–2mm on a standard MX." No other article resolves which figure is correct — the companion `rapid-trigger-gaming-crossover.mdx` only gives MX actuation depth, not its own reset-delta figure.
+- evidence: pre-fix `apps/web/src/content/articles/hall-effect-keyboard-guide.mdx:35` — "the reset point is fixed 0.5mm above that. ... as small as 0.1mm to 0.4mm in practice, compared to 1.5–2mm on a standard MX." Found by a dedicated sub-agent that cross-checked ~26 deep-dive/guide articles' numeric specs against `/data/switches/*.json`, `/data/boards/*.json`, `/data/keycap-sets/*.json`, `/data/group-buys/*.json` — every other gram-weight/travel-mm/price/date claim checked out exactly against the catalog; this sentence was the sole defect found.
+- issue: #850
+> **Resolved (2026-08-13):** reconciled the second mention to the first, more precise figure (0.5mm), consistent with common rapid-trigger comparison framing. `pnpm verify` full gate green (run as sequential foreground legs): typecheck, lint, 1359 unit/script tests, data:validate, build, size, 1143/1143 e2e.
+> Picked as the top signal this tick: no unlabeled GitHub issues (triage gate); not Monday (W33 snapshot already existed); no pending phases/data/content-gap work (all 8 mechanical surveys re-ran clean this tick, no rows filed). AUDIT.md's only other Pending rows remained the standing non-autonomous items (`[blocked-cloud-permission] [6.3]` march.yml item, `[engineering] [4.0]` Lighthouse-CI-disabled item, `[needs-user-call] [4.2]` soft-404 item, `[blocked-cloud-permission] [4.0]` heartbeat.yml item, `[needs-user-call] [3.0]` mirror-gap item); CRITIQUE.md's only Pending row remains the non-actionable GA-beacon item. march's own expand Step 3c gate did not fire (6 commits/~2.8h since pass 313, threshold 20 commits/48h). Dispatched a fresh general-purpose sweep with angles disjoint from recent passes (numeric/factual claims vs catalog, article/newsletter internal consistency, less-traveled surfaces, dead code, schema looseness, recently-touched-file residue, data cross-reference integrity, tool/landing copy accuracy) — this MX reset-point self-contradiction was the one finding that cleared the 3.0 bar; a newsletter cross-issue date-framing finding (~4.0-4.5, 7th instance of an already heavily-mined paragraph) scored lower novelty and was passed over; a `mammoth75.json` group-buy-status-without-record candidate was investigated and confirmed already ruled intentional (AUDIT.md line 6645).
+
 ### [x] [content] [4.8] hmx-cloud-deep-dive — "at the time of writing" temporal hedge slips the article-language-check gate — addressed in commit `6bd30f54`, closes #838
 
 - category: content
