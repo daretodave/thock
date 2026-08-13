@@ -6,134 +6,101 @@
 
 ## Headline
 
-**A clean ~23.6h window — 23/23 completed `march` runs succeeded,
-0 failures — 17 substantive ticks (13 shipped fix/data/content
-pairs + 4 `expand` zero-candidate passes) for 31 commits total, the
-other 6 completed runs landing as silent no-ops.** Since the last
-digest (`e5375751`, 2026-08-11T11:22:11 UTC) the loop drained **13**
-findings, all self-discovered by fresh `/iterate` audit sweeps or
-mechanical surveys. The window's dominant shape is a **trend-snapshot
-data-quality cluster**: 3 of the 13 fixes correct week-over-week
-fulfillment/close-date contradictions in `data/trends/*.json` records
-(GMK CYL Selene, Ramune, Prussian Alert) — the 13th, 14th, and 15th
-instances of the already-Pending `[7.5]` "Trend-snapshot data-quality
-gate" candidate, reinforced in place by `/expand` pass 312, no new
-candidate needed. A second, smaller shape: two independent
-"heading contradicts row content" bugs on group-buy surfaces
-(`/vendor/[slug]` and the home `GroupBuysWidget`, one explicitly
-citing the other's fix in its commit message) — `/expand` pass 312
-checked for a third instance, found none, and correctly left it as a
-2-instance watch item rather than filing a new candidate (below the
-3+ bar). The rest: a sitemap `lastModified` fix (two passes, real-data
-derivation then extended to quiz/compare pages), a Zod `.strict()`
-hardening pass closing a recurring dead-key gap, a search
-hotswap/hot-swap/hot swap tokenization fix, the newsletter
-content-velocity cycle (issue 07 shipped end-to-end, closing #832),
-a same-document self-contradiction in that newsletter's own TA Neo
-tracker-score narrative (9th instance of the already-Pending `[7.0]`
-"Article internal-consistency checker" candidate), a metadata-staleness
-fix (`gmk-cyl-just-beachy` article `updatedAt` not covering its own
-cited trend data), and a fresh "at the time of writing" temporal hedge
-caught by a general sweep and folded into the Phase-36 language-check
-gate as a new forbidden pattern.
+**A clean ~23.6h window — 24/24 completed `march` runs succeeded, 0
+failures — 10 substantive ticks (9 shipped fix/data/content pairs +
+1 `expand` zero-candidate pass) for 19 commits total, the other 14
+completed runs landing as silent no-ops.** Since the last digest
+(`3d924a87`, 2026-08-12T11:11:33 UTC) the loop drained **9** findings.
+The window closes out yesterday's top "Needs you" item first thing:
+`c1a17004` vendors Newsreader/IBM Plex Sans/JetBrains Mono locally in
+`layout.tsx`, matching the OG-render path's existing precedent — the
+`next/font/google` fetch fragility flagged in the last digest is now
+hardened, and (see Breadth verdict) this tick's build had zero
+retries as a result. The dominant shape of the rest of the window is
+a **trends-tracker sparkline data-quality cluster**: 4 of the 9
+fix/data ticks (`a9f41545` W31/W32 shift-and-append repair,
+`6b9500b3` W29 GMK CYL/DCS post-close fabricated-decline repair,
+`59a4b2bc` a full origin-to-present recomputation after realizing the
+two spot-fixes earlier in this *same window* had each cascaded from
+an already-wrong predecessor, and `a6d2fd84` a 4-entity-rename
+join-gap repair found by re-auditing that "full repair" for scope)
+are all instances of the already-Pending `[7.5]` "Trend-snapshot
+data-quality gate" candidate — see "Needs you," this is now urgent.
+Smaller shape: a real data-hygiene gap (missing vendor `prototypist`,
+closes #839) surfaced a same-vendor cross-week note self-contradiction
+(`725e81e5`, closes #840, W31 said "Aug/Sept 2026" then W32 reverted
+to "Q4 2026" while claiming "no date change this week" — a new
+cross-week sub-shape of the same sparkline-cluster candidate); a
+mechanical stale-group-buy-status catch (`8f2be166`, closes #844); and
+a newsletter plateau-week miscount (`95bef593`, closes #846, the
+recurring "newest newsletter issue contradicts its own cited tracker
+data" pattern).
 
-**This tick's own fresh `pnpm verify` had one real story: the `build`
-leg failed on its first attempt** — `next/font/google`'s build-time
-fetch of a hashed Newsreader italic-400 file from `fonts.gstatic.com`
-returned `404` after 3 retries, failing the whole compile. Two
-immediate retries with zero code changes both succeeded (confirmed:
-Next.js's bundled font manifest has drifted from Google's current
-file hosting for that one weight/style — a live `curl` returns a
-*different* hash for the same family/style/weight than the one
-`next build` requested). Filed as a new `[4.2]` `plan/AUDIT.md` row
-per the red-leg rule even though the leg is green again — see
-"Needs you." Every other leg was clean on the first pass: typecheck
-(9 packages), lint (all workspaces, `next lint`'s Next-16-deprecation
-notice is cosmetic), 1198 unit tests across 7 workspaces (828 web +
-157 content + 129 data + 44 seo + 31 ui + 6 e2e + 3 tokens — all
-green, all new since the last digest's 811-web baseline), 207 script
-tests / 74 suites (up from 205 — the two new `at-time-of-writing`
-pattern cases), 80 data records / cross-refs resolve (unchanged),
-homepage bundle 108.7 KB / 200 KB (unchanged), and 1140/1140 e2e
-(benign `NoFallbackError` stderr noise on the five intentional
-not-found probes — known, not a regression). Deploy is `READY` at
-HEAD (`55727096`, `dpl_3viTCSAq`).
+**This tick's own fresh `pnpm verify` was clean start to finish — all
+8 legs green on the first attempt, no retries, no new `plan/AUDIT.md`
+row needed.** typecheck (9 packages), lint (all workspaces, `next
+lint`'s Next-16-deprecation notice is cosmetic), 1198 unit tests
+across 7 workspaces (828 web + 157 content + 129 data + 44 seo + 31
+ui + 6 e2e + 3 tokens — unchanged from the last digest), 207 script
+tests / 74 suites (unchanged), 81 data records / cross-refs resolve
+(up from 80 — the new Prototypist vendor record), homepage bundle
+108.7 KB / 200 KB (unchanged), and 1143/1143 e2e (up from 1140).
+Deploy is `READY` at HEAD (`70b3635f`, `dpl_CsNvF4A4`).
 
-`plan/CRITIQUE.md` is now **93 days / 2228 commits** since its last
-pass (11, 2026-05-10T20:35 UTC at commit `931c8a7`) — architecturally
-stuck, not neglected: cloud mode has no Chrome MCP to run the
-external-observer pass, and every commit in this window again carries
-the `Cloud-Run:` trailer. `plan/PHASE_CANDIDATES.md` holds **24
-pending rows**, unchanged count this window (all instance-count
-reinforcements landed in-place, no new candidate filed), **59 days**
-since the last promotion (2026-06-14, phases 46-49). `plan/AUDIT.md`
-carries **6 open rows** (5 standing non-autonomous items + this
-tick's new `[4.2]` font-fetch row) — the Lighthouse-CI row is now
-**~60 days** disabled with no autonomous path forward. See "Needs
-you" below.
+`plan/CRITIQUE.md` is now **95 days / 2248 commits** since its last
+pass (11, 2026-05-10T20:28 UTC at commit `931c8a7`) — unchanged
+architectural diagnosis (no Chrome MCP on the cloud runner).
+`plan/PHASE_CANDIDATES.md` holds **24 pending rows**, unchanged count
+this window, **61 days** since the last promotion (2026-06-14, phases
+46-49). `plan/AUDIT.md` carries **5 open rows**, all standing
+non-autonomous items, unchanged — this tick's breadth check filed no
+new row. Confirmed via the GitHub API this tick: `lighthouse.yml` is
+still `disabled_manually` (disabled 2026-06-14T23:59:43 UTC, ~60 days
+now).
 
 ## While you were out
 
 | When (UTC) | Tick | Outcome |
 |---|---|---|
-| 08-11 11:34 | expand | pass 309 — 0 new candidates (`e9df19e8`) |
-| 08-11 12:30 | expand | pass 310 — 0 new candidates (`44cd669b`) |
-| 08-11 14:03 | seo | sitemap.ts `lastModified` derived from real data, not build-time `now()` `[4.0]` (`7326999f`/`9241fd20`) |
-| 08-11 14:51 | fix | harden content/data Zod schemas with `.strict()` — closes recurring dead-key gap `[4.8]` (`5a86fae7`/`cfe221c2`) |
-| 08-11 16:37 | seo | sitemap.ts derives `lastModified` for quiz/compare tool pages `[4.0]` (`0866a77f`/`d434f577`) |
-| 08-11 20:25 | expand | pass 311 — 0 new candidates (`d60f59be`) |
-| 08-11 21:48 | fix | search normalizes hotswap/hot swap/hot-swap to one indexed token `[3.5]` (`0e7d785f`/`eb3771a5`) |
-| 08-11 22:38 | data | trends tracker W23/W25/W26 GMK CYL Selene fulfillment date corrected `[5.4]` (`6c974fe9`/`f0b4a8b4`) |
-| 08-11 23:43 | data | trends tracker W24/W25/W26 Ramune close date corrected `[7.2]` (`cc029f5c`/`ffe62d86`) |
-| 08-12 00:24 | content | newsletter "thock weekly — issue 07" — content-gap dispatch, ship, closure `[4.0]` (`9e7361ea`/`10bf942f`/`879fe9d5`, closes #832) |
-| 08-12 01:45 | data | trends tracker W25 Prussian Alert fulfillment date corrected `[6.4]` (`990c7dc0`/`a436a51e`) |
-| 08-12 04:01 | content | gmk-cyl-just-beachy `updatedAt` bumped to cover its own cited trend data `[4.8]` (`51fc2b8c`/`3ab3dd80`) |
-| 08-12 05:54 | fix | vendor page — relabel heading when only upcoming group buys are active `[4.0]` (`2f0ecb86`/`a3e2138b`, closes #835) |
-| 08-12 06:48 | fix | home group-buys widget — relabel heading when every non-urgent row is upcoming `[5.25]` (`9c7040d2`/`7c1b17d9`, closes #836) |
-| 08-12 07:59 | content | newsletter issue 07 — TA Neo tracker score self-contradiction fixed `[4.8]` (`b271ba57`/`05aca84c`, closes #837) |
-| 08-12 08:36 | expand | pass 312 — 0 candidates filed, 2 instance counts reinforced in place (`b1aa5332`) |
-| 08-12 09:46 | fix | hmx-cloud-deep-dive — "at the time of writing" temporal hedge `[4.8]` (`6bd30f54`/`55727096`, closes #838) |
+| 08-12 13:48 | fix | layout.tsx fonts — vendor Newsreader/IBM Plex Sans/JetBrains Mono locally, closes last digest's `[4.2]` AUDIT row (`c1a17004`/`1b1ab665`) |
+| 08-12 15:49 | data | add vendor prototypist `[4.8]` (`9f1c1740`/`68ad5c34`, closes #839) |
+| 08-12 17:35 | content | prototypist trend-note/article date contradiction `[5.5]` (`725e81e5`/`1a02b510`, closes #840) |
+| 08-12 22:38 | data | trends tracker W31/W32 sparkline shift-and-append repair `[3.5]` (`a9f41545`/`87c11556`, closes #841) |
+| 08-12 23:32 | data | trends tracker W29 GMK CYL/DCS post-close score repair `[4.2]` (`6b9500b3`/`1ae5c353`, closes #842) |
+| 08-13 01:46 | data | novelkeys-gmk-cyl-og-extensions status stale — flip to closed `[3.6]` (`8f2be166`/`89406205`, closes #844) |
+| 08-13 04:55 | content | newsletter issue 07 — Hall Effect/Rapid Trigger plateau-week miscount `[4.0]` (`95bef593`/`5d273313`, closes #846) |
+| 08-13 08:53 | data | trends tracker sparkline convention — full origin-to-present repair `[3.5]` (`59a4b2bc`/`91a10a35`, closes #847) |
+| 08-13 09:32 | expand | pass 313 — 0 candidates filed (`4ccd77a9`) |
+| 08-13 10:48 | data | trends tracker sparkline — repair 4 entity-rename join gaps `[3.5]` (`a6d2fd84`/`70b3635f`, closes #848) |
 
-23 `march`-workflow runs since 2026-08-11T11:22:11 UTC (window start
-12:17 UTC after the digest's own commit landed): **23 completed, all
-`success`, 0 `failure`, 0 `cancelled`** — a fully clean window, no GH
-Actions infra hiccups. `night` (1 prior run, 2026-08-11, success)
-green; this tick is the current `night` run. 17 of the 23 completed
-runs produced a commit (13 fix/data/content ticks — 12 two-commit
-pairs + 1 three-commit newsletter-dispatch chain — plus 4 expand
-passes = 31 commits); the other 6 completed runs were silent no-ops —
-a fresh `/iterate` sweep or mechanical survey ran and found nothing
-scoring ≥3.0.
+24 `march`-workflow runs since 2026-08-12T11:11:33 UTC: **24
+completed, all `success`, 0 `failure`, 0 `cancelled`** — a fully
+clean window. `night` (prior run 2026-08-12, success) green; this
+tick is the current `night` run. 10 of the 24 completed runs produced
+a commit (9 fix/data/content ticks, each a two-commit audit+fix pair,
+plus 1 expand pass = 19 commits); the other 14 completed runs were
+silent no-ops.
 
 ## Shipped
 
-- **Trend-snapshot data-quality cluster (3 fixes)**: GMK CYL Selene,
-  Ramune, and Prussian Alert fulfillment/close-date contradictions in
-  `data/trends/*.json` corrected — the 13th–15th instances of the
-  already-Pending `[7.5]` data-quality-gate candidate, reinforced in
-  place, no score change.
-- **Group-buy heading/row contradiction (2 fixes)**: `/vendor/[slug]`
-  and the home `GroupBuysWidget` both mislabeled not-yet-started
-  buys under an "active"/"currently running" heading; both now
-  relabel to "upcoming"/"opening soon" when nothing in the bucket has
-  actually started, mirroring the canonical `/group-buys` index's
-  existing Live-now/On-the-horizon split.
-- **Newsletter issue 07 shipped + self-corrected**: weekly digest
-  (5 pillar picks + W33 tracker snapshot) shipped end to end from the
-  content-velocity queue (closes #832), then its own Trends-pillar
-  blurb was caught contradicting its own later tracker-snapshot
-  section on TA Neo's score sequence and fixed same-day (9th instance
-  of the article-internal-consistency-checker candidate).
-- **SEO/data hygiene**: `sitemap.ts` `lastModified` now derives from
-  real record data instead of build-time `now()` (landed in two
-  passes — core routes, then quiz/compare tool pages); content/data
-  Zod schemas hardened with `.strict()` site-wide, closing a
-  recurring silent-dead-key gap; search normalizes
-  hotswap/hot-swap/"hot swap" spelling variants to one indexed token;
-  `gmk-cyl-just-beachy`'s `updatedAt` bumped to cover the trend data
-  its own chart cites; a fresh "at the time of writing" temporal
-  hedge on `hmx-cloud-deep-dive` reworded and folded into the
-  Phase-36 language-check gate as a new pattern.
+- **Font-fetch fragility hardened**: `layout.tsx`'s three
+  `next/font/google` bindings now vendor their font files locally,
+  closing out the `[4.2]` row the last digest filed after its own
+  build leg flaked on a live Google-fonts fetch.
+- **Trends-tracker sparkline cluster (4 fixes)**: W31/W32
+  shift-and-append repair, W29 GMK CYL/DCS post-close fabricated-decline
+  repair, a full origin-to-present recomputation (after finding the
+  window's own earlier spot-fixes had each cascaded from an
+  already-wrong predecessor), and a 4-entity-rename join-gap repair
+  found by re-auditing that "full repair" for scope. All four are
+  instances of the already-Pending `[7.5]` data-quality-gate
+  candidate — see "Needs you."
+- **Catalog + content hygiene**: added the missing `prototypist`
+  vendor record (closes #839), then caught and fixed a cross-week
+  note self-contradiction on that same vendor's tracker rows (W31 vs
+  W32 fulfillment-date framing); flipped a stale `novelkeys-gmk-cyl-og-extensions`
+  group-buy status past its `endDate`; corrected a newsletter
+  plateau-week miscount against the tracker's own W31-W33 data.
 
 ## Queues now
 
@@ -141,23 +108,22 @@ scoring ≥3.0.
   queued.
 - **Cross-link drain**: 0 open `[cross-links] [4.5]` rows — fully
   drained.
-- **Critique**: pass 11, 2026-05-10 — **93 days / 2228 commits**
+- **Critique**: pass 11, 2026-05-10 — **95 days / 2248 commits**
   stale. Diagnosed as architectural (no Chrome MCP on the cloud
   runner), not neglect. Unchanged from prior digests.
 - **Phase candidates**: 24 pending in `plan/PHASE_CANDIDATES.md`,
-  unchanged count this window. 59 days since the last `/oversight`
-  promotion (2026-06-14, phases 46–49).
-- **Data backlog**: `data/BACKLOG.md`'s "Pending" section lists 3
-  rows, but all 3 are already checked `[x]` and their records already
-  exist in `/data` (gateron-lanes switch, keychron vendor,
-  keychron-q1-he board) — stale bookkeeping, not real pending work;
-  the file was never moved to "## Done". Cosmetic only; `/ship-data`
-  already treats this as an empty queue (no `[ ]` rows) and runs its
-  own audit pass. Worth a one-line tidy next time `/ship-data` runs.
-- **Open GitHub issues**: 18 open, 0 unlabeled (triage gate clean).
-  4 labeled `triage:needs-user` (#756, #639, #499, #434 — all
-  historical cloud-march/deploy-check or digest-crash reports, no new
-  ones this window).
+  unchanged count this window. 61 days since the last `/oversight`
+  promotion (2026-06-14, phases 46-49). The `[7.5]` trend-snapshot
+  data-quality candidate is now the most-reinforced Pending row in
+  the queue (6+ expand passes, ~20 instances) — see "Needs you."
+- **Data backlog**: unchanged bookkeeping quirk noted in prior
+  digests — `data/BACKLOG.md`'s "Pending" section lists 3 rows, all
+  already `[x]`-checked with records already shipped; never moved to
+  "## Done." Cosmetic only, `/ship-data` already treats it as empty.
+- **Open GitHub issues**: 20 open (up from 18), 0 unlabeled (triage
+  gate clean). 4 labeled `triage:needs-user` (#756, #639, #499, #434
+  — all historical cloud-march/deploy-check or digest-crash reports,
+  no new ones this window).
 
 ## Breadth verdict
 
@@ -169,52 +135,50 @@ standing rule — never backgrounded):
   Next-16 deprecation notice; cosmetic, not a failure).
 - `test:run` — green, **1198 tests / 173 files** across 7 workspaces
   (828 web + 157 content + 129 data + 44 seo + 31 ui + 6 e2e + 3
-  tokens).
-- `test:scripts` — green, **207 tests / 74 suites** (up from 205 —
-  the two new `at-time-of-writing` language-check cases).
-- `data:validate` — green, 80 records, all cross-refs resolve.
-- `build` — **red on first attempt**, green on 2 immediate retries.
-  `next/font/google` failed to fetch a hashed Newsreader
-  italic-400 `.woff2` from `fonts.gstatic.com` (`404` after 3
-  retries) — Next.js 15.5.21's bundled font manifest has drifted from
-  Google's current file hosting for that file. New `[4.2]`
-  `plan/AUDIT.md` row filed per the red-leg rule; see "Needs you."
-- `size` — green, homepage bundle 108.7 KB / 200 KB budget.
-- `e2e` — green, **1140/1140**. Benign `NoFallbackError` stderr noise
-  mid-run on the five intentional not-found probes
-  (`/part/[kind]`, `/part/[kind]/[slug]`, `/vendor/[slug]`,
-  `/trends/tracker/[week]`, `/newsletter/[slug]`) — known, not a
-  regression.
-- `pnpm deploy:check` at HEAD (`55727096`) — deploy `READY`
-  (`dpl_3viTCSAq`).
+  tokens) — unchanged from the last digest.
+- `test:scripts` — green, **207 tests / 74 suites** — unchanged.
+- `data:validate` — green, **81 records** (up from 80 — the new
+  Prototypist vendor record), all cross-refs resolve.
+- `build` — green, **first attempt, no retries** — the font-vendoring
+  fix that shipped earlier this window resolved the fragility the
+  last digest flagged.
+- `size` — green, homepage bundle 108.7 KB / 200 KB budget —
+  unchanged.
+- `e2e` — green, **1143/1143** (up from 1140). Console noise from
+  intentional not-found-route `NoFallbackError` probes during the
+  run is expected, not a regression.
+- `pnpm deploy:check` at HEAD (`70b3635f`) — deploy `READY`
+  (`dpl_CsNvF4A4`).
 
-One red leg this tick (the `build` font-fetch flake), self-resolved
-on retry — new `[4.2]` `plan/AUDIT.md` finding filed, not shipped
-(breadth-check findings become AUDIT rows, not fixes, per
-`skills/digest.md` §4.2).
+Zero red legs this tick — nothing new filed to `plan/AUDIT.md`.
 
 ## Needs you
 
-1. **New: `pnpm build`'s font-fetch fragility** (`[4.2]`
-   `plan/AUDIT.md` row, filed this tick). `next/font/google`'s live
-   fetch of Newsreader italic-400 404'd on this tick's first build
-   attempt, then succeeded twice on retry with zero code changes —
-   Next.js's bundled font manifest has drifted from Google's current
-   file hosting. Not broken right now, but not proactively hardened
-   either: the OG-image render path already vendors its font binaries
-   locally for exactly this class of fragility
-   (`apps/web/src/components/og/fonts.ts`); `layout.tsx`'s three
-   `next/font/google` bindings (Newsreader, IBM Plex Sans, JetBrains
-   Mono) don't. `/oversight` or the next `/iterate` tick should decide:
-   vendor the three layout fonts now (proactive, matches precedent)
-   or wait and see if the drift recurs.
-2. **Standing: `/critique` is 93 days / 2228 commits stale.**
+1. **Escalating: the Pending `[7.5]` "Trend-snapshot data-quality
+   gate" candidate is now overdue for promotion.** It picked up its
+   16th-19th instances at expand pass 313 this morning, and a 20th
+   (`a6d2fd84`, the entity-rename join-gap repair) landed *after*
+   that pass ran — so even pass 313's count already undersells the
+   current total. Four of this window's nine ticks alone were this
+   same defect class, including a "full origin-to-present repair"
+   that itself needed a follow-up fix hours later. The candidate's
+   proposed scope is fully drafted (`scripts/trend-snapshot-quality-check.mjs`,
+   including a spark-array-vs-direction/score consistency check that
+   would have caught 3 of this window's 4 instances mechanically) and
+   has sat Pending since 2026-07-21 (pass 207), reinforced at 6+
+   subsequent passes without promotion. This is the strongest
+   candidate in the queue for the next `/oversight` promotion pass —
+   the site's signature feature keeps shipping schema-valid-but-wrong
+   data on an unattended weekly cron, and reactive spot-fixing has
+   visibly hit diminishing returns (each fix needing its own
+   follow-up fix, twice this window).
+2. **Standing: `/critique` is 95 days / 2248 commits stale.**
    Diagnosis unchanged — cloud mode architecturally cannot reach
    `/critique` (no Chrome MCP on the runner).
 3. **Standing: Lighthouse CI disabled ~60 days**, `[4.0]`
    `plan/AUDIT.md` row, `needs: /oversight call` on whether to
    re-enable now or investigate the original disable reason first.
-   Unchanged.
+   Confirmed still `disabled_manually` via the GitHub API this tick.
 4. **Standing: cloud loop cannot push `.github/workflows/*.yml`
    changes** (`[blocked-cloud-permission] [6.3]`/`[4.0]` AUDIT rows,
    companion `[5.5]` candidate, open issue `#395`). No PAT/App scope
@@ -223,35 +187,30 @@ on retry — new `[4.2]` `plan/AUDIT.md` finding filed, not shipped
    (`[4.2]`) and **mirrored `loop:opened` issue drain gap** (`[3.0]`)
    — both non-autonomous, unchanged.
 6. **Standing, growing: the `/oversight` promotion backlog.** 24
-   candidates pending, flat this window (no new filed, none
-   promoted), 59 days since the last promotion. Not a code defect —
-   the supply of well-diagnosed candidates keeps outpacing promotion
-   cadence.
+   candidates pending, flat this window, 61 days since the last
+   promotion. Item 1 above is the clearest single candidate to act on
+   next.
 
 ## Today's intent
 
 No pending build-plan phase — the loop stays in maintenance mode.
-`plan/AUDIT.md`'s new `[4.2]` font-fetch row is now the
-highest-scored *autonomously actionable* open finding (the other 5
-open rows are explicitly blocked-cloud-permission or needs-user-call)
-— expect the next `/iterate` tick to either pick it up (vendor the
-layout fonts) or, if a fresher general-purpose sweep turns up a
-higher-scoring defect, ship that instead and carry the font row
-forward. `/expand`'s pass-312 note shows the queue is genuinely
-clean: 8 mechanical surveys green, no pending phase/data/content-gap
-work, 24 stable candidates. Watch for a third instance of the
-group-buy heading/row contradiction shape (currently a 2-instance,
-below-threshold watch item) — a third surface would clear the
-promotion bar for a dedicated coverage check.
+This tick's breadth check was fully clean, so there's no fresh
+autonomously-actionable AUDIT.md row to point the next `/iterate`
+tick at; expect it to keep running fresh general-purpose sweeps, and
+given this window's rate, a 21st sparkline-cluster instance surfacing
+before `/oversight` promotes the data-quality gate (item 1 above)
+would be the clearest possible signal that spot-fixing alone is no
+longer sufficient for this surface.
 
 ## Tuning proposals
 
-None this tick. The pulse shows no mistuned gate: `/expand` is
-running its own instance-count discipline correctly (13th–15th
-trend-snapshot instances reinforced in place, 2-instance heading bug
-correctly left unfiled), the ceiling isn't hibernating (23/23 clean
-march runs, 17 substantive ticks), and the critique-staleness note is
-an already-diagnosed architectural constant, not a fresh signal. The
-new `[4.2]` AUDIT row from this tick's own breadth check is a defect
-finding, not a gate/cadence tuning, so it's filed to `plan/AUDIT.md`
-above rather than proposed here.
+None filed this tick. The one gate-shaped issue in the pulse — the
+trends-tracker sparkline cluster's escalating recurrence — already
+has a fully-scoped Pending candidate in `plan/PHASE_CANDIDATES.md`
+(reinforced by `/expand` pass 313 this morning); flagging its
+promotion urgency belongs in "Needs you" above, not a duplicate
+candidate. Everything else in the pulse reads as expected: `/expand`
+filed 0 new candidates and correctly reinforced existing ones in
+place, the ceiling isn't hibernating (24/24 clean march runs, 10
+substantive ticks), and `/digest`'s own breadth check needed no
+follow-up.
