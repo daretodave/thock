@@ -93,18 +93,18 @@
       "note": "GB closed July 17; set now in production with Nov 2026 ship estimate per Oblotzky/zFrontier, live chatter cooled."
     },
     {
-      "name": "Divinikey DCS Dolch",
+      "name": "DCS Dolch",
       "category": "keycap",
       "direction": "flat",
       "score": 38,
       "spark": [
-        20,
-        24,
-        28,
-        32,
+        12,
+        10,
+        9,
+        14,
+        22,
+        29,
         35,
-        37,
-        38,
         38
       ],
       "articleSlug": "divinikey-dcs-dolch-group-buy",

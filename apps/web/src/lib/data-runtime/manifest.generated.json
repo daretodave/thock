@@ -5076,18 +5076,18 @@
           "note": "GB closed July 17; set now in production with Nov 2026 ship estimate per Oblotzky/zFrontier, live chatter cooled."
         },
         {
-          "name": "Divinikey DCS Dolch",
+          "name": "DCS Dolch",
           "category": "keycap",
           "direction": "flat",
           "score": 38,
           "spark": [
-            20,
-            24,
-            28,
-            32,
+            12,
+            10,
+            9,
+            14,
+            22,
+            29,
             35,
-            37,
-            38,
             38
           ],
           "articleSlug": "divinikey-dcs-dolch-group-buy",
@@ -5389,7 +5389,7 @@
           "note": "Production tracking toward Nov 2026 ship per Oblotzky/zFrontier; community chatter cools further as attention shifts to the OG Extensions close."
         },
         {
-          "name": "Divinikey DCS Dolch",
+          "name": "DCS Dolch",
           "category": "keycap",
           "direction": "down",
           "score": 34,
@@ -5720,7 +5720,7 @@
           "note": "Production still tracking toward Nov 2026 ship per Oblotzky/zFrontier; community attention fully diverted to the OG Extensions close this week."
         },
         {
-          "name": "Divinikey DCS Dolch",
+          "name": "DCS Dolch",
           "category": "keycap",
           "direction": "down",
           "score": 26,
@@ -9656,5 +9656,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-08-13T10:39:20.502Z"
+  "generatedAt": "2026-08-13T11:31:31.486Z"
 }

@@ -5341,18 +5341,18 @@
           "articleSlug": "gmk-cyl-ta-neo-production-tracking"
         },
         {
-          "name": "Divinikey DCS Dolch",
+          "name": "DCS Dolch",
           "category": "keycap",
           "direction": "flat",
           "score": 38,
           "spark": [
-            20,
-            24,
-            28,
-            32,
+            12,
+            10,
+            9,
+            14,
+            22,
+            29,
             35,
-            37,
-            38,
             38
           ],
           "articleSlug": "divinikey-dcs-dolch-group-buy"
@@ -5637,7 +5637,7 @@
           "articleSlug": "gmk-cyl-ta-neo-production-tracking"
         },
         {
-          "name": "Divinikey DCS Dolch",
+          "name": "DCS Dolch",
           "category": "keycap",
           "direction": "down",
           "score": 34,
@@ -5950,7 +5950,7 @@
           "articleSlug": "gmk-cyl-ta-neo-production-tracking"
         },
         {
-          "name": "Divinikey DCS Dolch",
+          "name": "DCS Dolch",
           "category": "keycap",
           "direction": "down",
           "score": 26,
@@ -6156,5 +6156,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-08-13T10:39:20.502Z"
+  "generatedAt": "2026-08-13T11:31:31.486Z"
 }
