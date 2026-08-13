@@ -70,7 +70,7 @@
       "category": "keycap",
       "direction": "flat",
       "score": 4,
-      "spark": [7, 6, 5, 5, 4, 4, 4, 4],
+      "spark": [4, 6, 5, 4, 4, 4, 4, 4],
       "articleSlug": "keycap-profiles-compared",
       "note": "MT3 profile sees no new W22 group buys or notable releases. Steady in profile comparison threads but no momentum spikes. Score holds flat as MT3 maintains its niche following without new supply events this week."
     },
@@ -79,7 +79,7 @@
       "category": "layout",
       "direction": "up",
       "score": 38,
-      "spark": [18, 22, 24, 27, 30, 32, 35, 38],
+      "spark": [20, 22, 25, 27, 28, 30, 35, 38],
       "articleSlug": "75-percent-default",
       "note": "75% layout consolidates as the dominant 2026 form factor. KBD75 v3 and Keychron Q11 Ultra 8K both target the 75% audience. Buyer guides updated in May 2026 name 75% the golden-ratio layout; new hardware launches continue reinforcing the category."
     },
@@ -88,7 +88,7 @@
       "category": "layout",
       "direction": "up",
       "score": 39,
-      "spark": [22, 24, 26, 28, 30, 34, 36, 39],
+      "spark": [22, 25, 28, 30, 32, 34, 34, 39],
       "articleSlug": "split-ergo-cohort",
       "note": "Keychron Q11 Ultra 8K (May 8) generated 50k+ social impressions — biggest mainstream split news in months. Z11 Ultra 8K Alice split also launched mid-May. MoErgo Glove80 remains top ergonomic pick in 2026 roundups. W22 is the highest-signal week for split/ergo in months."
     },

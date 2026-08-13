@@ -70,7 +70,7 @@
       "category": "keycap",
       "direction": "flat",
       "score": 4,
-      "spark": [8, 7, 6, 5, 5, 4, 4, 4],
+      "spark": [3, 4, 6, 5, 4, 4, 4, 4],
       "articleSlug": null,
       "note": "No new MT3 GB opened this week; existing sets moving through production pipeline without notable community event. Drop.com stock-drop cadence unchanged. Flat trend continues from W20 as Cherry-profile GMK sets dominate mindshare."
     },
@@ -79,7 +79,7 @@
       "category": "layout",
       "direction": "up",
       "score": 35,
-      "spark": [16, 18, 22, 24, 27, 30, 32, 35],
+      "spark": [17, 20, 22, 25, 27, 28, 30, 35],
       "articleSlug": "75-percent-default",
       "note": "Keychron Q1 Ultra 75% receiving highest volume of Q Ultra review traffic this week; MKBGuide and UniKeys round-up articles both crown 75% the 'golden ratio' layout for 2026. Rotary knob standard across form factor reinforces recommendation dominance."
     },

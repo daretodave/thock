@@ -115,7 +115,7 @@
       "category": "layout",
       "direction": "flat",
       "score": 44,
-      "spark": [24, 27, 30, 32, 35, 38, 43, 44],
+      "spark": [25, 27, 28, 30, 35, 38, 43, 44],
       "articleSlug": "75-percent-default",
       "note": "IQUNIX EC75 Computex halo effect continues into W24. Corsair CLIPPER PRO MINI 60 counters with a 60% narrative, but 75% remains the dominant launch form factor. Score holds near prior week with minimal fresh catalyst."
     },
@@ -125,12 +125,12 @@
       "direction": "up",
       "score": 52,
       "spark": [
-        18,
-        22,
         28,
+        30,
         32,
-        37,
-        40,
+        34,
+        34,
+        39,
         42,
         52
       ],

@@ -7,7 +7,7 @@
       "category": "switch",
       "direction": "up",
       "score": 94,
-      "spark": [64, 70, 76, 81, 85, 87, 91, 94],
+      "spark": [66, 72, 76, 82, 85, 87, 91, 94],
       "articleSlug": "keychron-nova-socket-hybrid",
       "note": "Keychron's V6 Ultra HE opens Kickstarter July 22 with hybrid Nova Socket TMR+mechanical PCB; PC Gamer and others now call HE/rapid trigger baseline for 2026 gaming boards."
     },
@@ -79,7 +79,7 @@
       "category": "layout",
       "direction": "up",
       "score": 80,
-      "spark": [52, 58, 63, 67, 70, 74, 77, 80],
+      "spark": [42, 52, 55, 66, 69, 72, 77, 80],
       "articleSlug": "split-ergo-cohort",
       "note": "MKBGuide and Engadget both flag 2025-2026 as the moment split layouts went mainstream, citing Keychron Q13 Max and Dygma as reference boards for the shift."
     },
