@@ -987,9 +987,9 @@
       "heroImage": "/group-buy-art/novelkeys-gmk-cyl-og-extensions.svg",
       "heroImageAlt": "A cluster of four warm-bronze 1.25u modifier caps framing one wide terracotta spacebar, reflecting a bottom-row extensions kit rather than a full set",
       "relatedArticle": "gmk-cyl-og-extensions-interest-check",
-      "status": "live",
+      "status": "closed",
       "description": "An R4 extensions kit adding bottom-row and spacebar options for existing GMK CYL colorways, kitted through NovelKeys (NA) and Prototypist (UK). Climbed eight straight interest-check weeks on the thock trends tracker before opening a group buy of its own July 15, 2026, running through an August 12 close.",
-      "updatedAt": "2026-08-07T00:00:00.000Z"
+      "updatedAt": "2026-08-13T00:00:00.000Z"
     },
     {
       "slug": "wuque-studio-paper80-whatever-studio",
@@ -9656,5 +9656,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-08-12T23:24:40.706Z"
+  "generatedAt": "2026-08-13T01:38:11.876Z"
 }
