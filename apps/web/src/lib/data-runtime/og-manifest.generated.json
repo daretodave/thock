@@ -6139,7 +6139,7 @@
         {
           "name": "Wuque Studio",
           "category": "brand",
-          "direction": "flat",
+          "direction": "up",
           "score": -2,
           "spark": [
             13,
@@ -6156,5 +6156,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-08-13T20:24:40.680Z"
+  "generatedAt": "2026-08-13T22:24:42.360Z"
 }

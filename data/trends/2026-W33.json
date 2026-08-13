@@ -158,7 +158,7 @@
     {
       "name": "Wuque Studio",
       "category": "brand",
-      "direction": "flat",
+      "direction": "up",
       "score": -2,
       "spark": [13, 12, 10, -4, -3, -4, -8, -2],
       "articleSlug": null,
