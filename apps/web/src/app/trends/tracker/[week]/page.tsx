@@ -74,7 +74,7 @@ function buildDatasetJsonLd(
     description,
     url: canonicalUrl(isLatest ? '/trends/tracker' : `/trends/tracker/${week}`),
     temporalCoverage: snapshot.isoWeek,
-    dateModified: snapshot.publishedAt,
+    dateModified: snapshot.updatedAt,
     publisher: siteConfig.publisher,
   }
 }

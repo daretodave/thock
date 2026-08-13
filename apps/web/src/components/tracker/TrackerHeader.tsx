@@ -30,7 +30,7 @@ export function TrackerHeader({
 }: TrackerHeaderProps): ReactElement {
   const week = snapshot ? weekKicker(snapshot.isoWeek) : null
   const updatedCopy = snapshot
-    ? `Updated ${PUBLISHED_FORMATTER.format(new Date(snapshot.publishedAt))}.`
+    ? `Updated ${PUBLISHED_FORMATTER.format(new Date(snapshot.updatedAt))}.`
     : 'Snapshot not yet published.'
 
   const heading =

@@ -75,7 +75,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: canonicalUrl('/trends/tracker'),
-      lastModified: getLatestTrendSnapshot()?.publishedAt,
+      lastModified: getLatestTrendSnapshot()?.updatedAt,
       priority: 0.8,
     },
     {
@@ -232,7 +232,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .filter((s) => s.isoWeek !== latestIsoWeek)
     .map((s) => ({
       url: canonicalUrl(`/trends/tracker/${s.isoWeek}`),
-      lastModified: s.publishedAt,
+      lastModified: s.updatedAt,
       priority: 0.7,
     }))
 

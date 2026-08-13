@@ -56,7 +56,7 @@ function buildDatasetJsonLd(
     description,
     url: canonicalUrl(PATH),
     temporalCoverage: snapshot.isoWeek,
-    dateModified: snapshot.publishedAt,
+    dateModified: snapshot.updatedAt,
     publisher: siteConfig.publisher,
   }
 }

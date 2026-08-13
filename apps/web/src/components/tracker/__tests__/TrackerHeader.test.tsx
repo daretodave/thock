@@ -51,11 +51,25 @@ describe('<TrackerHeader>', () => {
   it('formats the "Updated" copy using dateStyle: medium', () => {
     render(
       <TrackerHeader
-        snapshot={makeTrendSnapshot({ publishedAt: '2026-07-30T00:00:00.000Z' })}
+        snapshot={makeTrendSnapshot({ updatedAt: '2026-07-30T00:00:00.000Z' })}
         lede="Lede."
       />,
     )
     expect(screen.getByText(/Updated Jul 30, 2026\./)).toBeInTheDocument()
+  })
+
+  it('drives the "Updated" copy from updatedAt, not publishedAt — a snapshot edited after publish shows the edit date', () => {
+    render(
+      <TrackerHeader
+        snapshot={makeTrendSnapshot({
+          publishedAt: '2026-07-20T00:00:00.000Z',
+          updatedAt: '2026-07-30T00:00:00.000Z',
+        })}
+        lede="Lede."
+      />,
+    )
+    expect(screen.getByText(/Updated Jul 30, 2026\./)).toBeInTheDocument()
+    expect(screen.queryByText(/Updated Jul 20, 2026\./)).toBeNull()
   })
 
   it('swaps to past-tense copy for an archived (non-latest) week', () => {

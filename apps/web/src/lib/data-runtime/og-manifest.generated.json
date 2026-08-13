@@ -5845,7 +5845,7 @@
     {
       "isoWeek": "2026-W33",
       "publishedAt": "2026-08-10T00:00:00.000Z",
-      "updatedAt": "2026-08-10T00:35:00.000Z",
+      "updatedAt": "2026-08-13T17:30:00.000Z",
       "rows": [
         {
           "name": "Hall Effect/Rapid Trigger",
@@ -6156,5 +6156,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-08-13T15:41:39.976Z"
+  "generatedAt": "2026-08-13T17:36:22.026Z"
 }
