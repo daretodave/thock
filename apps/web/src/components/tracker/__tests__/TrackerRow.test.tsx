@@ -233,4 +233,17 @@ describe('<TrackerRow>', () => {
       'up trend',
     )
   })
+
+  it('gives the sparkline an accessible label naming the item, not a generic description (a11y — closes #868)', () => {
+    render(
+      <TrackerRow
+        rank={1}
+        row={row({ name: 'Oil King', direction: 'down' })}
+      />,
+    )
+    expect(screen.getByTestId('sparkline')).toHaveAttribute(
+      'aria-label',
+      'Oil King: down trend',
+    )
+  })
 })

@@ -51,7 +51,13 @@ export function TrackerSummaryCard({
           {delta}
         </span>
         <span className={TONE_CLASS[row.direction]}>
-          <Sparkline values={row.spark} tone={row.direction} w={70} h={22} />
+          <Sparkline
+            values={row.spark}
+            tone={row.direction}
+            w={70}
+            h={22}
+            ariaLabel={`${row.name}: ${row.direction} trend`}
+          />
         </span>
       </div>
     </div>

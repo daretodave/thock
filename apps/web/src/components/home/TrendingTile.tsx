@@ -89,7 +89,13 @@ export function TrendingTile({
           {deltaText}
         </span>
         <span className={DIR_COLOR[dir]}>
-          <Sparkline values={spark} tone={dir} w={70} h={20} />
+          <Sparkline
+            values={spark}
+            tone={dir}
+            w={70}
+            h={20}
+            ariaLabel={`${label}: ${dir} trend`}
+          />
         </span>
       </div>
     </div>

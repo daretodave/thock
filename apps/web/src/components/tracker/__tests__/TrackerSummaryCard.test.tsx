@@ -57,4 +57,18 @@ describe('<TrackerSummaryCard>', () => {
       'up trend',
     )
   })
+
+  it('gives the sparkline an accessible label naming the item, not a generic description (a11y — closes #868)', () => {
+    render(
+      <TrackerSummaryCard
+        kind="riser"
+        kicker="biggest riser"
+        row={row({ name: 'Oil King', direction: 'up' })}
+      />,
+    )
+    expect(screen.getByTestId('sparkline')).toHaveAttribute(
+      'aria-label',
+      'Oil King: up trend',
+    )
+  })
 })

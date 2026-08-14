@@ -116,4 +116,20 @@ describe('<TrendingTile>', () => {
       'up trend',
     )
   })
+
+  it('gives the sparkline an accessible label naming the item, not a generic description (a11y — closes #868)', () => {
+    render(
+      <TrendingTile
+        category="switch"
+        label="Gateron Oil King"
+        delta={42}
+        dir="up"
+        spark={[1, 2, 3, 4]}
+      />,
+    )
+    expect(screen.getByTestId('sparkline')).toHaveAttribute(
+      'aria-label',
+      'Gateron Oil King: up trend',
+    )
+  })
 })
