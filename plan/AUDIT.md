@@ -11283,3 +11283,15 @@ passes accumulate signals.)
 > **Resolved (2026-08-13):** changed `data/trends/2026-W33.json`'s Wuque Studio row `direction` from `"flat"` to `"up"`. Regenerated data-runtime/OG manifests and search index. `pnpm verify` full gate green: typecheck, lint, unit tests, script tests, data:validate, build, size, 1143/1143 e2e.
 > Picked as the top signal this tick (cloud `/march`): no unlabeled GitHub issues (triage gate, 0 unlabeled); not Monday (W33 snapshot already existed, weekly gate skipped); no pending phases/data/content-gap work — all 7 mechanical surveys re-ran clean this tick, no rows filed. AUDIT.md's only other Pending rows remained the standing non-autonomous items (`[6.3]` blocked-cloud-permission march.yml item, `[4.0]` Lighthouse-CI-disabled needs-oversight item, `[4.2]` needs-user-call soft-404 item, `[3.0]` needs-user-call mirror-gap item). march's own expand Step 3c gate not met (9 commits/~8.5h since pass 314's anchor `1b14880d`, threshold 20 commits/48h). A fresh general-purpose sweep (numeric self-consistency on recently-touched articles/trend data, `/compare/switch` and `/compare/board` edge cases, recently-added component test coverage, newsletter archive cross-checks, TODO/dead-code residue, vendor-page catalog counts, current-week snapshot internal consistency) found this direction/spark mismatch as the one defect clearing the 3.0 bar; all other angles came back clean.
 
+
+### [HOT PURSUIT] [content-gap] [7] news pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 7 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: news
+- window-count: 1
+- window-start: 2026-07-15
+- score: 7
+- next: /ship-content → news pillar article
+> Filed 2026-08-14 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
