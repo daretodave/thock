@@ -84,6 +84,18 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [content] [4.9] gmk-cyl-ta-neo-production-tracking — W31/W32 spark chart data fabricated, contradicts its own cited trend snapshots — addressed in commit `5755d884`, closes #863
+
+- category: content
+- filed: 2026-08-14 by cloud /iterate audit (fresh general-purpose sweep, angle: trend-snapshot data quality applied to article InlineViz chart data, not just data/trends/*.json rows directly)
+- impact: 7 (the article's "three-week-sparks" chart explicitly cites `data/trends/2026-W30.json` through `2026-W32.json` as its data sources in the alt text, SVG `<title>`, and provenance JSON; the W31 and W32 panels' spark trails were fabricated at generation time and only coincidentally matched the real published score at the final point — a reader or search engine reading the alt text sees numbers that contradict the canonical trend data the same article's prose correctly summarizes)
+- ease: 7 (three files to correct — MDX alt text, hand-authored SVG polyline/circle geometry + title, provenance JSON `data_sources` — using the same y=250-2.375*value scale already established by the correct W30 panel; no schema/component change)
+- score: 4.9 (impact × ease / 10)
+- evidence: `data/trends/2026-W31.json` `"GMK CYL TA Neo"` spark is `[18, 26, 34, 42, 50, 57, 62, 50]`; `data/trends/2026-W32.json` spark is `[26, 34, 42, 50, 57, 62, 50, 40]`. The article's alt text (before fix) claimed W31 `[34, 40, 46, 52, 58, 60, 62, 50]` and W32 `[70, 66, 62, 58, 54, 52, 50, 40]` — neither array matches the real snapshot data except at the shared final value. W30's panel was already correct (`[10, 18, 26, 34, 42, 50, 57, 62]`, exact match).
+- issue: #863
+> **Resolved (2026-08-14):** corrected the SVG polyline/circle coordinates, `<title>`, MDX `alt` text, and provenance JSON `data_sources` to the real spark arrays. The corrected W32 trail actually rises through most of the rolling window before dropping at the final two reads (not "declining throughout" as the fabricated version claimed) — updated the panel description text to match. `pnpm verify` full gate green: 1150/1150 e2e.
+> Picked as the top signal this tick: no unlabeled GitHub issues (triage gate, 0 unlabeled); not Monday (W33 snapshot already existed, weekly gate skipped); no pending phases/data/content-gap work (all 7 mechanical surveys re-ran clean this tick, no rows filed); march's own expand Step 3c gate not met (13 commits/~12h since pass 315's anchor `bc6764f6`, below the 20-commit/48h threshold). `plan/AUDIT.md`'s only other Pending row remained the non-autonomous `[engineering] [4.0]` Lighthouse-CI-disabled item. A fresh general-purpose sweep (recent trend snapshots for spark continuity/note contradictions, the 3 most-recently-published articles read in full for internal consistency, numeric specs in those articles cross-checked against their cited catalog records, `/tools` blurb accuracy, one free-choice angle) found this fabricated-chart-data defect as the one finding scoring above 3.0 — a new sub-shape of the well-established "trend-snapshot data-quality" recurring defect class, this time surfacing inside an article's generated chart rather than the `data/trends/*.json` row itself.
+
 ### [x] [content] [5.4] hall-effect-keyboard-guide self-contradicts the MX reset-point delta (0.5mm vs 1.5-2mm) — addressed in a0902ff3, closes #850
 
 - category: content
