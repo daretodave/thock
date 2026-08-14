@@ -54,11 +54,23 @@ export function sparkSlope(row: TrendRow): number {
  * Order of selection (each draws from the remaining unused rows):
  *  1. riser   = direction='up' row with the steepest spark slope (the
  *               row that moved the most this week); drops the slot if
- *               no up row remains.
+ *               no up row remains, or if the steepest candidate's full
+ *               spark slope isn't actually positive (see below).
  *  2. faller  = direction='down' row with the steepest negative spark
- *               slope; drops the slot if no down row remains.
+ *               slope; drops the slot if no down row remains, or if
+ *               the steepest candidate's full spark slope isn't
+ *               actually negative.
  *  3. breakout = direction='up' row with the next-steepest spark slope
- *               among those left after riser is drawn.
+ *               among those left after riser is drawn; same
+ *               slope-sign guard as riser.
+ *
+ *  `direction` reflects only the latest week-over-week move, while
+ *  `sparkSlope` is the full 8-week trend — they can disagree (e.g. a
+ *  row that climbed for 6 weeks then dipped once is `direction:
+ *  'down'` but still has a positive `sparkSlope`). Picking such a row
+ *  for riser/faller/breakout would crown it with a label its own
+ *  trend contradicts, so each pick is dropped (not mislabeled) when
+ *  the winning candidate's `sparkSlope` sign doesn't match the slot.
  *  4. sleeper = smallest abs(score) non-flat row (under-the-radar mover);
  *               drops the slot if no non-flat row remains.
  *
@@ -86,20 +98,23 @@ export function pickSummarySlots(rows: readonly TrendRow[]): SummarySlot[] {
   const pickRiser = () => {
     const ups = remaining().filter((r) => r.direction === 'up')
     if (ups.length === 0) return null
-    return ups.reduce((acc, r) => (sparkSlope(r) > sparkSlope(acc) ? r : acc), ups[0]!)
+    const winner = ups.reduce((acc, r) => (sparkSlope(r) > sparkSlope(acc) ? r : acc), ups[0]!)
+    return sparkSlope(winner) > 0 ? winner : null
   }
   const pickFaller = () => {
     const downs = remaining().filter((r) => r.direction === 'down')
     if (downs.length === 0) return null
-    return downs.reduce((acc, r) => (sparkSlope(r) < sparkSlope(acc) ? r : acc), downs[0]!)
+    const winner = downs.reduce((acc, r) => (sparkSlope(r) < sparkSlope(acc) ? r : acc), downs[0]!)
+    return sparkSlope(winner) < 0 ? winner : null
   }
   const pickBreakout = () => {
     const candidates = remaining().filter((r) => r.direction === 'up')
     if (candidates.length === 0) return null
-    return candidates.reduce(
+    const winner = candidates.reduce(
       (acc, r) => (sparkSlope(r) > sparkSlope(acc) ? r : acc),
       candidates[0]!,
     )
+    return sparkSlope(winner) > 0 ? winner : null
   }
   const pickSleeper = () => {
     const candidates = remaining().filter((r) => r.direction !== 'flat')

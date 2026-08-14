@@ -146,6 +146,36 @@ describe('pickSummarySlots', () => {
     expect(slots.find((s) => s.kind === 'sleeper')).toBeUndefined()
     expect(slots).toHaveLength(3)
   })
+
+  it('drops the faller slot instead of crowning a lone down-direction row whose full spark slope is actually positive', () => {
+    // Reproduces data/trends/2026-W24.json's "GMK CYL Ramune": direction
+    // reflects only the last week-over-week dip (43→28), but the full
+    // 8-week spark climbed from 16 to 28 — a net positive slope. Labelling
+    // it "biggest faller" would contradict its own sparkline.
+    const rows: TrendRow[] = [
+      makeRow('GMK CYL Ramune', {
+        direction: 'down',
+        score: 28,
+        spark: [16, 22, 28, 33, 38, 44, 43, 28],
+      }),
+      makeRow('B', { category: 'keycap', direction: 'up', score: 30, spark: [5, 30] }),
+    ]
+    const slots = pickSummarySlots(rows)
+    expect(slots.find((s) => s.kind === 'faller')).toBeUndefined()
+  })
+
+  it('drops the riser slot instead of crowning a lone up-direction row whose full spark slope is actually negative', () => {
+    const rows: TrendRow[] = [
+      makeRow('A', {
+        direction: 'up',
+        score: 28,
+        spark: [44, 38, 33, 28, 22, 16, 17, 28],
+      }),
+      makeRow('B', { category: 'layout', direction: 'down', score: -20, spark: [20, -20] }),
+    ]
+    const slots = pickSummarySlots(rows)
+    expect(slots.find((s) => s.kind === 'riser')).toBeUndefined()
+  })
 })
 
 describe('groupByCategory', () => {
