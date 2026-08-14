@@ -11284,7 +11284,7 @@ passes accumulate signals.)
 > Picked as the top signal this tick (cloud `/march`): no unlabeled GitHub issues (triage gate, 0 unlabeled); not Monday (W33 snapshot already existed, weekly gate skipped); no pending phases/data/content-gap work — all 7 mechanical surveys re-ran clean this tick, no rows filed. AUDIT.md's only other Pending rows remained the standing non-autonomous items (`[6.3]` blocked-cloud-permission march.yml item, `[4.0]` Lighthouse-CI-disabled needs-oversight item, `[4.2]` needs-user-call soft-404 item, `[3.0]` needs-user-call mirror-gap item). march's own expand Step 3c gate not met (9 commits/~8.5h since pass 314's anchor `1b14880d`, threshold 20 commits/48h). A fresh general-purpose sweep (numeric self-consistency on recently-touched articles/trend data, `/compare/switch` and `/compare/board` edge cases, recently-added component test coverage, newsletter archive cross-checks, TODO/dead-code residue, vendor-page catalog counts, current-week snapshot internal consistency) found this direction/spark mismatch as the one defect clearing the 3.0 bar; all other angles came back clean.
 
 
-### [HOT PURSUIT] [content-gap] [7] news pillar — 1 of ≥2 articles in last 30d
+### [x] [content-gap] [7] news pillar — 1 of ≥2 articles in last 30d — addressed in commit `54df3d26`, closes #857
 - category: content-gaps
 - impact: 7 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -11296,3 +11296,15 @@ passes accumulate signals.)
 - next: /ship-content → news pillar article
 - issue: #857
 > Filed 2026-08-14 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+> **Resolved (2026-08-14):** shipped `wuque-studio-summer-update.mdx` (publishedAt 2026-08-10, gap-fill midpoint of the 8-day gap between `gmk-cyl-just-beachy-group-buy-opens` on 2026-08-06 and today) — "Wuque Studio's summer update, and the Ikki68 Aurora holdover," directly following up on this week's trends-tracker Wuque Studio row. News pillar now carries a fresh anchor inside the 30-day window. `pnpm verify` full gate green: typecheck, lint, unit tests, script tests, data:validate, build, size, 1149/1149 e2e.
+
+### [ ] [cross-links] [4.5] wuque-studio-summer-update ↔ mode-sonnet-r2-group-buy-coverage — no prose cross-link (same pillar, ≥2 shared tags: 65, group-buy)
+- category: cross-links
+- filed: 2026-08-14 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: 65, group-buy
+- article-a: apps/web/src/content/articles/wuque-studio-summer-update.mdx
+- article-b: apps/web/src/content/articles/mode-sonnet-r2-group-buy-coverage.mdx
+- action: add [mode-sonnet-r2-group-buy-coverage](/article/mode-sonnet-r2-group-buy-coverage) to wuque-studio-summer-update body, or vice versa
