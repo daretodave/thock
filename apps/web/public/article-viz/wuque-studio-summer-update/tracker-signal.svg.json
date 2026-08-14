@@ -1,0 +1,22 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-14T00:00:00.000Z",
+  "commit": "c8cc0c6ad3d9265eeb40e0d27766fecbe26dbd38",
+  "kind": "inline-viz",
+  "article_slug": "wuque-studio-summer-update",
+  "article_pillar": "news",
+  "section_anchor": "reading-the-tracker-line",
+  "brief_summary": "Line chart plotting Wuque Studio's eight-week vendor tracker signal, W26 through W33 of 2026, using the spark array from the W33 row: [13, 12, 10, -4, -3, -4, -8, -2]. Visualizes the decline from 13 in W26 through a trough of -8 in W32 and the recovery to -2 in W33, matching the row's 'up' direction and score of -2.",
+  "target": "apps/web/public/article-viz/wuque-studio-summer-update/tracker-signal.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "data/trends/2026-W33.json — row 'Wuque Studio', category 'brand', direction 'up', score -2, spark: [13, 12, 10, -4, -3, -4, -8, -2]"
+  ],
+  "outputs": ["apps/web/public/article-viz/wuque-studio-summer-update/tracker-signal.svg"],
+  "warnings": []
+}

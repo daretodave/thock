@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Two-column breakdown of what's confirmed versus what's rumored about Wuque Studio's summer 2026 activity</title>
+
+  <text x="600" y="46" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Confirmed, versus rumored</text>
+
+  <!-- LEFT card: confirmed -->
+  <rect x="170" y="90" width="380" height="290" rx="10" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.85"/>
+  <text x="360" y="128" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">Confirmed</text>
+  <line x1="190" y1="144" x2="530" y2="144" stroke-opacity="0.25"/>
+
+  <circle cx="200" cy="176" r="3" fill="oklch(0.68 0.165 28)" stroke="none"/>
+  <text x="212" y="180" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.9">product-update blog post</text>
+  <text x="212" y="198" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.9">published July 26, 2026</text>
+
+  <circle cx="200" cy="232" r="3" fill="oklch(0.68 0.165 28)" stroke="none"/>
+  <text x="212" y="236" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.9">renewed Ikki68 Aurora search</text>
+  <text x="212" y="254" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.9">and listing interest</text>
+
+  <circle cx="200" cy="288" r="3" fill="oklch(0.68 0.165 28)" stroke="none"/>
+  <text x="212" y="292" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.9">Ikki68 Aurora remains in</text>
+  <text x="212" y="310" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.9">stock, listing unchanged</text>
+
+  <!-- RIGHT card: unconfirmed -->
+  <rect x="650" y="90" width="380" height="290" rx="10" stroke-dasharray="4 5" stroke-opacity="0.6"/>
+  <text x="840" y="128" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">Unconfirmed</text>
+  <text x="840" y="150" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">community speculation only</text>
+  <line x1="670" y1="164" x2="1010" y2="164" stroke-opacity="0.2" stroke-dasharray="4 5"/>
+
+  <circle cx="680" cy="196" r="3" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55"/>
+  <text x="692" y="200" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">Mammoth V2 follow-up</text>
+
+  <circle cx="680" cy="232" r="3" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55"/>
+  <text x="692" y="236" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">Promise V2 follow-up</text>
+
+  <circle cx="680" cy="268" r="3" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55"/>
+  <text x="692" y="272" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">any new group buy or</text>
+  <text x="692" y="290" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">interest check date</text>
+
+  <text x="600" y="420" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.9">the adjacency of a vendor name and a rumored sequel is not evidence for the rumor</text>
+
+  <!-- Bronze theme dot -->
+  <circle cx="1170" cy="30" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

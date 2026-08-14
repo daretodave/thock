@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Timeline of three events: the July 26 2026 product-update post, renewed Ikki68 Aurora search interest in the weeks after, and the unconfirmed status of any new group buy or Mammoth V2 or Promise V2 as of August 14 2026</title>
+
+  <text x="600" y="46" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Wuque Studio: what's confirmed so far</text>
+
+  <!-- spine -->
+  <line x1="140" y1="200" x2="1060" y2="200" stroke-opacity="0.3"/>
+
+  <!-- node 1: confirmed -->
+  <circle cx="220" cy="200" r="10" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)"/>
+  <text x="220" y="160" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">Jul 26, 2026</text>
+  <text x="220" y="244" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">product-update</text>
+  <text x="220" y="266" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">blog post published</text>
+
+  <!-- node 2: confirmed -->
+  <circle cx="600" cy="200" r="10" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)"/>
+  <text x="600" y="160" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.9">the weeks after</text>
+  <text x="600" y="244" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">renewed Ikki68 Aurora</text>
+  <text x="600" y="266" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">search interest resurfaces</text>
+
+  <!-- node 3: unconfirmed -->
+  <circle cx="980" cy="200" r="10" fill="none" stroke="oklch(0.78 0.005 90)" stroke-dasharray="3 4"/>
+  <text x="980" y="160" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Aug 14, 2026 (today)</text>
+  <text x="980" y="244" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">no group buy, no Mammoth V2</text>
+  <text x="980" y="266" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">or Promise V2 confirmation</text>
+
+  <text x="600" y="340" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.9">two confirmed data points bracket several weeks of speculation</text>
+
+  <!-- Bronze theme dot -->
+  <circle cx="1170" cy="30" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

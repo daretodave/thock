@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "slug": "wuque-studio-summer-update",
+      "readTime": 6,
+      "frontmatter": {
+        "title": "Wuque Studio's summer update, and the Ikki68 Aurora holdover",
+        "lede": "A July 26 product-update post from Wuque Studio sent buyers back to the Ikki68 Aurora's listing page. Mammoth V2 and Promise V2 remain forum speculation, and no group buy has opened.",
+        "pillar": "news",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "gmk-cyl-just-beachy-group-buy-opens",
       "readTime": 6,
       "frontmatter": {
@@ -1185,6 +1195,11 @@
     {
       "slug": "work-louder",
       "name": "Work Louder",
+      "category": "brand"
+    },
+    {
+      "slug": "wuque-studio",
+      "name": "Wuque Studio",
       "category": "brand"
     },
     {
@@ -6156,5 +6171,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-08-13T22:24:42.360Z"
+  "generatedAt": "2026-08-14T04:47:45.390Z"
 }

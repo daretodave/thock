@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1200 750"
+     preserveAspectRatio="xMidYMid meet"
+     fill="none"
+     stroke="oklch(0.78 0.005 90)"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     role="img"
+     aria-label="thock article hero art for the Wuque Studio Ikki68 Aurora renewed-interest piece — a 65% keyboard layout silhouette (compact alpha block, narrow right-side nav column, arrow cluster) rendered with a frosted, translucent polycarbonate case treatment: soft diffuse haze, gradient milk-glass fill, light-grain texture, and diagonal refraction bands, in a muted terracotta accent">
+  <title>thock hero — Wuque Studio Ikki68 Aurora, 65% layout outline with frosted/translucent polycarbonate case treatment</title>
+
+  <!--
+    Article hero (news/vendor piece) for renewed interest in the Wuque
+    Studio Ikki68 Aurora. Per bearings.md "Article hero art" directive,
+    a news/vendor piece maps to a layout silhouette — this renders a
+    top-down 65% keyboard outline as the primary subject: a compact
+    alpha block (no F-row) plus the narrow right-side nav column and
+    arrow cluster that read as the 65% layout's defining silhouette.
+
+    The case itself carries this article's central material thesis —
+    the Ikki68 Aurora's translucent/frosted polycarbonate shell — via
+    four restrained, family-consistent additions (not a flat opaque
+    case fill):
+
+      1. Haze glow — a blurred, splash-tinted field sitting behind the
+         case outline, evoking soft light diffusion around a frosted
+         edge.
+      2. Milk-glass gradient fill — the case interior fill is a
+         low-opacity gradient (warm-white to splash-tinted), never a
+         flat opaque fill, so the case reads as translucent rather
+         than solid.
+      3. Frost-grain texture — a fine scattered-dot pattern across the
+         case fill, suggesting the matte diffusion of frosted plastic.
+      4. Refraction bands — soft, blurred diagonal light bands crossing
+         the case interior at low opacity, literalizing light passing
+         through a translucent shell.
+
+    A closing "aurora" glyph — three concentric arcs fading outward to
+    a single focal dot — sits beneath the case, nodding to the Aurora
+    finish name and the renewed-spotlight framing of the piece, while
+    keeping to the one-splash-plus-bronze discipline.
+
+    Single-splash discipline: muted terracotta is the only per-piece
+    accent hue. The bronze theme dot is the fixed family ornament.
+    Stroke and key dots stay neutral warm-grey.
+
+    Palette:
+      splash (muted terracotta)  oklch(0.62 0.10 44)
+      bronze theme dot           oklch(0.80 0.135 75)   (fixed, upper-right)
+      stroke / key dots          oklch(0.78 0.005 90)   (family default)
+  -->
+
+  <defs>
+    <filter id="frost-haze" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+    <filter id="soft-blur" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <linearGradient id="frost-fill" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="oklch(0.94 0.01 90 / 0.26)"/>
+      <stop offset="45%" stop-color="oklch(0.85 0.02 85 / 0.13)"/>
+      <stop offset="100%" stop-color="oklch(0.62 0.10 44 / 0.09)"/>
+    </linearGradient>
+    <pattern id="frost-grain" width="9" height="9" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="0.6" fill="oklch(0.78 0.005 90)" fill-opacity="0.20"/>
+      <circle cx="6" cy="4" r="0.5" fill="oklch(0.78 0.005 90)" fill-opacity="0.15"/>
+      <circle cx="3.5" cy="7" r="0.55" fill="oklch(0.78 0.005 90)" fill-opacity="0.17"/>
+    </pattern>
+  </defs>
+
+  <!-- ============================================================
+       BACKGROUND WARM WASH — barely-there terracotta field.
+  ============================================================ -->
+  <rect x="60" y="50" width="1080" height="650"
+        fill="oklch(0.62 0.10 44 / 0.045)" stroke="none"/>
+
+  <!-- ============================================================
+       BRONZE THEME DOT — upper-right margin, fixed family
+       ornamental anchor, independent of this piece's splash hue.
+  ============================================================ -->
+  <circle cx="1104" cy="90" r="8"
+          fill="oklch(0.80 0.135 75 / 0.92)"
+          stroke="oklch(0.80 0.135 75)"/>
+  <circle cx="1104" cy="90" r="16"
+          stroke="oklch(0.80 0.135 75)"
+          stroke-opacity="0.32"
+          fill="none"/>
+
+  <!-- ============================================================
+       HAZE GLOW — blurred splash field behind the case, evoking
+       soft diffusion around a frosted, translucent shell.
+  ============================================================ -->
+  <rect x="140" y="110" width="920" height="410" rx="70" ry="70"
+        fill="oklch(0.62 0.10 44 / 0.30)"
+        filter="url(#frost-haze)" stroke="none"/>
+
+  <!-- ============================================================
+       OUTER CASE — 65% board, top-down outline. Frosted/translucent
+       polycarbonate treatment: gradient milk-glass fill + grain
+       texture, never a flat opaque fill.
+       Case bounding box: x=190..1010, y=160..460 (820 x 300).
+  ============================================================ -->
+  <rect x="190" y="160" width="820" height="300" rx="18" ry="18"
+        fill="url(#frost-fill)" stroke="none"/>
+  <rect x="190" y="160" width="820" height="300" rx="18" ry="18"
+        fill="url(#frost-grain)" stroke="none"/>
+  <rect x="190" y="160" width="820" height="300" rx="18" ry="18"
+        stroke-opacity="0.90"/>
+
+  <!-- Inner bezel inset — plate frame, visible through the frosted shell -->
+  <rect x="206" y="176" width="788" height="268" rx="12" ry="12"
+        stroke-opacity="0.30"/>
+
+  <!-- Top bezel band — machined edge, terracotta wash -->
+  <rect x="190" y="160" width="820" height="34" rx="18" ry="18"
+        fill="oklch(0.62 0.10 44 / 0.16)" stroke="none"/>
+  <line x1="206" y1="194" x2="994" y2="194"
+        stroke="oklch(0.62 0.10 44)" stroke-opacity="0.55" stroke-width="1.5"/>
+
+  <!-- Nameplate outline — engraved-plate suggestion, shape only, no text -->
+  <rect x="560" y="168" width="80" height="16" rx="2" ry="2"
+        stroke="oklch(0.62 0.10 44)" stroke-opacity="0.35"
+        stroke-width="1" fill="none"/>
+
+  <!-- ============================================================
+       REFRACTION BANDS — soft blurred diagonal light passing
+       through the translucent shell. Splash-tinted, low opacity.
+  ============================================================ -->
+  <g filter="url(#soft-blur)">
+    <line x1="240" y1="182" x2="360" y2="436"
+          stroke="oklch(0.62 0.10 44)" stroke-opacity="0.22" stroke-width="26"/>
+    <line x1="520" y1="172" x2="640" y2="446"
+          stroke="oklch(0.62 0.10 44)" stroke-opacity="0.15" stroke-width="20"/>
+    <line x1="760" y1="186" x2="900" y2="428"
+          stroke="oklch(0.62 0.10 44)" stroke-opacity="0.13" stroke-width="30"/>
+  </g>
+
+  <!-- ============================================================
+       KEY DOT GRID — 65% alpha block, no F-row.
+       Columns (11, pitch 54): 232,286,340,394,448,502,556,610,
+                                 664,718,772
+  ============================================================ -->
+
+  <!-- Faint vertical column guides across the alpha block -->
+  <g stroke-opacity="0.10" stroke-width="1">
+    <line x1="232" y1="220" x2="232" y2="392"/>
+    <line x1="286" y1="220" x2="286" y2="392"/>
+    <line x1="340" y1="220" x2="340" y2="392"/>
+    <line x1="394" y1="220" x2="394" y2="392"/>
+    <line x1="448" y1="220" x2="448" y2="392"/>
+    <line x1="502" y1="220" x2="502" y2="392"/>
+    <line x1="556" y1="220" x2="556" y2="392"/>
+    <line x1="610" y1="220" x2="610" y2="392"/>
+    <line x1="664" y1="220" x2="664" y2="392"/>
+    <line x1="718" y1="220" x2="718" y2="392"/>
+    <line x1="772" y1="220" x2="772" y2="392"/>
+  </g>
+
+  <!-- === Number row === -->
+  <g fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">
+    <circle cx="232" cy="234" r="3"/>
+    <circle cx="286" cy="234" r="3"/>
+    <circle cx="340" cy="234" r="3"/>
+    <circle cx="394" cy="234" r="3"/>
+    <circle cx="448" cy="234" r="3"/>
+    <circle cx="502" cy="234" r="3"/>
+    <circle cx="556" cy="234" r="3"/>
+    <circle cx="610" cy="234" r="3"/>
+    <circle cx="664" cy="234" r="3"/>
+    <circle cx="718" cy="234" r="3"/>
+    <circle cx="772" cy="234" r="3"/>
+  </g>
+  <!-- Backspace — wide key -->
+  <rect x="800" y="221" width="54" height="26" rx="4" ry="4" stroke-opacity="0.75"/>
+
+  <!-- === QWERTY row === -->
+  <g fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">
+    <circle cx="232" cy="282" r="3"/>
+    <circle cx="286" cy="282" r="3"/>
+    <circle cx="340" cy="282" r="3"/>
+    <circle cx="394" cy="282" r="3"/>
+    <circle cx="448" cy="282" r="3"/>
+    <circle cx="502" cy="282" r="3"/>
+    <circle cx="556" cy="282" r="3"/>
+    <circle cx="610" cy="282" r="3"/>
+    <circle cx="664" cy="282" r="3"/>
+    <circle cx="718" cy="282" r="3"/>
+    <circle cx="772" cy="282" r="3"/>
+  </g>
+
+  <!-- === Home row === -->
+  <g fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">
+    <circle cx="232" cy="330" r="3"/>
+    <circle cx="286" cy="330" r="3"/>
+    <circle cx="340" cy="330" r="3"/>
+    <circle cx="394" cy="330" r="3"/>
+    <circle cx="448" cy="330" r="3"/>
+    <circle cx="502" cy="330" r="3"/>
+    <circle cx="556" cy="330" r="3"/>
+    <circle cx="610" cy="330" r="3"/>
+    <circle cx="664" cy="330" r="3"/>
+    <circle cx="718" cy="330" r="3"/>
+    <circle cx="772" cy="330" r="3"/>
+  </g>
+  <!-- Enter — wide key -->
+  <rect x="800" y="317" width="60" height="26" rx="4" ry="4" stroke-opacity="0.75"/>
+
+  <!-- === Bottom row === -->
+  <g fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">
+    <circle cx="232" cy="378" r="3"/>
+    <circle cx="286" cy="378" r="3"/>
+    <circle cx="340" cy="378" r="3"/>
+    <circle cx="394" cy="378" r="3"/>
+    <circle cx="448" cy="378" r="3"/>
+    <circle cx="502" cy="378" r="3"/>
+    <circle cx="556" cy="378" r="3"/>
+    <circle cx="610" cy="378" r="3"/>
+    <circle cx="664" cy="378" r="3"/>
+    <circle cx="718" cy="378" r="3"/>
+    <circle cx="772" cy="378" r="3"/>
+  </g>
+
+  <!-- === Mod / spacebar row === -->
+  <g fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.70">
+    <circle cx="232" cy="422" r="3"/>
+    <circle cx="286" cy="422" r="3"/>
+    <circle cx="340" cy="422" r="3"/>
+  </g>
+  <rect x="394" y="409" width="330" height="26" rx="4" ry="4" stroke-opacity="0.75" fill="none"/>
+  <rect x="736" y="409" width="26" height="26" rx="3" ry="3" stroke-opacity="0.75"/>
+  <rect x="794" y="409" width="26" height="26" rx="3" ry="3" stroke-opacity="0.75"/>
+
+  <!-- ============================================================
+       NARROW RIGHT-SIDE NAV COLUMN — the 65% layout's defining
+       tell: a single narrow column of four keys separated from the
+       main alpha block, standing in for the compact Del/Home/PgUp/
+       PgDn cluster.
+  ============================================================ -->
+  <g stroke-opacity="0.85">
+    <rect x="881" y="221" width="26" height="26" rx="3" ry="3"/>
+    <rect x="881" y="269" width="26" height="26" rx="3" ry="3"/>
+    <rect x="881" y="317" width="26" height="26" rx="3" ry="3"/>
+    <rect x="881" y="365" width="26" height="26" rx="3" ry="3"/>
+  </g>
+
+  <!-- ============================================================
+       ARROW CLUSTER — inverted-T, bottom-right, seated below the
+       nav column as on the physical 65% board.
+  ============================================================ -->
+  <g stroke-opacity="0.85">
+    <rect x="875" y="399" width="22" height="22" rx="3" ry="3"/>
+    <rect x="849" y="425" width="22" height="22" rx="3" ry="3"/>
+    <rect x="875" y="425" width="22" height="22" rx="3" ry="3"/>
+    <rect x="901" y="425" width="22" height="22" rx="3" ry="3"/>
+  </g>
+
+  <!-- ============================================================
+       AURORA GLYPH — three concentric arcs fading outward to a
+       single focal dot beneath the case, nodding to the Aurora
+       finish name and the renewed-spotlight framing of the piece.
+       The splash's low-opacity wash + focal-dot convention.
+  ============================================================ -->
+  <g>
+    <path d="M 510 620 A 90 90 0 0 1 690 620"
+          stroke="oklch(0.62 0.10 44)" stroke-opacity="0.18" fill="none"/>
+    <path d="M 540 620 A 60 60 0 0 1 660 620"
+          stroke="oklch(0.62 0.10 44)" stroke-opacity="0.34" fill="none"/>
+    <path d="M 568 620 A 32 32 0 0 1 632 620"
+          stroke="oklch(0.62 0.10 44)" stroke-opacity="0.58" fill="none"/>
+    <circle cx="600" cy="620" r="5" fill="oklch(0.62 0.10 44 / 0.92)" stroke="none"/>
+  </g>
+</svg>

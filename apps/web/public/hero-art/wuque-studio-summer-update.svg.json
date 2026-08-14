@@ -1,0 +1,24 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-14T00:00:00Z",
+  "commit": "c8cc0c6ad3d9265eeb40e0d27766fecbe26dbd38",
+  "kind": "hero-art",
+  "article_slug": "wuque-studio-summer-update",
+  "article_pillar": "news",
+  "target": "apps/web/public/hero-art/wuque-studio-summer-update.svg",
+  "source": "plan/bearings.md § Article hero art — colorful keyboard SVGs",
+  "template": "directive: news/vendor piece -> keyboard outline / layout silhouette",
+  "size": [1200, 750],
+  "subject": "Top-down 65% keyboard layout outline for the Wuque Studio Ikki68 Aurora renewed-interest piece. The compact alpha block (no F-row), a narrow right-side four-key nav column, and an inverted-T arrow cluster together read as the 65% layout's defining silhouette. The case fill departs from the family's usual flat opaque case: a blurred splash-tinted haze sits behind the outline, the interior fill is a low-opacity milk-glass gradient rather than a flat fill, a fine scattered-dot grain pattern covers the case, and three soft blurred diagonal bands cross the interior — together evoking the Ikki68 Aurora's translucent/frosted polycarbonate shell. A closing glyph beneath the case (three concentric arcs fading outward to a single focal dot) nods to the Aurora finish name and the article's renewed-spotlight framing.",
+  "brief_summary": "News/vendor piece hero for the Wuque Studio Ikki68 Aurora renewed-interest article. Layout silhouette (65% case, narrow nav column, arrow cluster) per the news/vendor mapping in bearings.md, distinguished by a frosted/translucent case-material treatment (haze + gradient + grain + refraction bands) rather than the family's usual opaque case fill, since case material is this article's subject.",
+  "splash_color": { "name": "muted terracotta", "oklch": "oklch(0.62 0.10 44)" },
+  "secondary_accent": "oklch(0.80 0.135 75)",
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "2fc8f9a4",
+  "fonts": [],
+  "outputs": [
+    "apps/web/public/hero-art/wuque-studio-summer-update.svg"
+  ],
+  "warnings": []
+}

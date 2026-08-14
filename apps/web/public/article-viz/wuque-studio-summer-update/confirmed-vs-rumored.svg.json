@@ -1,0 +1,25 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-14T00:00:00.000Z",
+  "commit": "c8cc0c6ad3d9265eeb40e0d27766fecbe26dbd38",
+  "kind": "inline-viz",
+  "article_slug": "wuque-studio-summer-update",
+  "article_pillar": "news",
+  "section_anchor": "confirmed-versus-rumored",
+  "brief_summary": "Two-column breakdown separating what Wuque Studio's summer 2026 activity actually confirms (the product-update post, renewed Ikki68 Aurora interest, unchanged in-stock listing) from what remains community speculation only (Mammoth V2, Promise V2, any new group buy or interest check date).",
+  "target": "apps/web/public/article-viz/wuque-studio-summer-update/confirmed-vs-rumored.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "apps/web/src/content/articles/wuque-studio-summer-update.mdx — 'Confirmed: Wuque Studio published a general product-update post on July 26, 2026. Search and listing interest in the Ikki68 Aurora has picked up in the weeks since. The board itself remains available through the vendor's existing storefront, unchanged.'",
+    "apps/web/src/content/articles/wuque-studio-summer-update.mdx — 'Not confirmed: a Mammoth V2. Not confirmed: a Promise V2. Not confirmed: any new group buy or interest check tied to either.'",
+    "data/boards/ikki68-aurora.json — status: 'in-stock'",
+    "data/trends/2026-W33.json — row 'Wuque Studio', note: 'still no new GB or Mammoth V2/Promise V2 confirmation.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/wuque-studio-summer-update/confirmed-vs-rumored.svg"],
+  "warnings": []
+}

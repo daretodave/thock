@@ -1,0 +1,25 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-14T00:00:00.000Z",
+  "commit": "c8cc0c6ad3d9265eeb40e0d27766fecbe26dbd38",
+  "kind": "inline-viz",
+  "article_slug": "wuque-studio-summer-update",
+  "article_pillar": "news",
+  "section_anchor": "the-post-itself",
+  "brief_summary": "Three-node horizontal timeline showing the two confirmed events (the July 26 2026 product-update post, and renewed Ikki68 Aurora search interest in the weeks after) bracketing an unconfirmed present state as of August 14 2026 — no new group buy, no Mammoth V2 or Promise V2 confirmation.",
+  "target": "apps/web/public/article-viz/wuque-studio-summer-update/update-timeline.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "apps/web/src/content/articles/wuque-studio-summer-update.mdx — 'Wuque Studio published a product-update post to its blog on July 26, 2026'",
+    "apps/web/src/content/articles/wuque-studio-summer-update.mdx — 'Confirmed: Wuque Studio published a general product-update post on July 26, 2026. Search and listing interest in the Ikki68 Aurora has picked up in the weeks since.'",
+    "apps/web/src/content/articles/wuque-studio-summer-update.mdx — 'Not confirmed: a Mammoth V2. Not confirmed: a Promise V2. Not confirmed: any new group buy or interest check tied to either.'",
+    "data/trends/2026-W33.json — row 'Wuque Studio', note: 'Wuque's July 26 product-update blog post and an active Ikki68 Aurora listing resurface in searches; still no new GB or Mammoth V2/Promise V2 confirmation.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/wuque-studio-summer-update/update-timeline.svg"],
+  "warnings": []
+}

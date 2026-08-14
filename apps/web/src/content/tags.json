@@ -86,6 +86,7 @@
     { "slug": "work-louder", "name": "Work Louder", "category": "brand" },
     { "slug": "tmr", "name": "TMR", "category": "switch" },
     { "slug": "cables", "name": "Cables", "category": "misc" },
-    { "slug": "usb-c", "name": "USB-C", "category": "misc" }
+    { "slug": "usb-c", "name": "USB-C", "category": "misc" },
+    { "slug": "wuque-studio", "name": "Wuque Studio", "category": "brand" }
   ]
 }
