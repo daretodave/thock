@@ -47,4 +47,36 @@ test.describe('ideas pillar — phase 9', () => {
     expect(flat).toContain('"@type":"CollectionPage"')
     expect(flat).toContain('"@type":"ItemList"')
   })
+
+  test('ItemList JSON-LD matches the rendered build-pick + lead + archive order', async ({
+    page,
+  }) => {
+    // Regression guard: the ItemList used to be an independent
+    // publishedAt-desc sort over every Ideas article, while the page
+    // renders build-of-the-week first, then the lead, then the archive
+    // (which excludes both) — the two orders diverged whenever the
+    // build pick wasn't also the most recent article (audit finding).
+    await page.goto('/ideas')
+    const graph = await page
+      .locator('script[type="application/ld+json"]')
+      .allTextContents()
+    expect(graph.length).toBeGreaterThanOrEqual(1)
+    const itemList = JSON.parse(graph[0] as string).find(
+      (node: { '@type': string }) => node['@type'] === 'ItemList',
+    )
+    const jsonLdPaths = (
+      itemList.itemListElement as Array<{ url: string }>
+    ).map((el) => new URL(el.url).pathname)
+
+    const cards = page.locator(
+      '[data-testid="hero-card"], [data-testid="article-card-row"]',
+    )
+    const renderedHrefs: string[] = []
+    for (const card of await cards.all()) {
+      const href = await card.getAttribute('href')
+      if (href) renderedHrefs.push(href)
+    }
+
+    expect(jsonLdPaths).toEqual(renderedHrefs)
+  })
 })

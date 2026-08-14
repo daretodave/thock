@@ -58,7 +58,13 @@ export default function IdeasPage(): ReactElement {
   const lead = remaining[0] ?? null
   const archive = remaining.slice(1)
 
-  const itemListItems = sorted.slice(0, ARCHIVE_MAX).map((a) => ({
+  const renderedArticles = [
+    ...(buildPick ? [buildPick] : []),
+    ...(lead ? [lead] : []),
+    ...archive.slice(0, ARCHIVE_MAX - 1),
+  ]
+
+  const itemListItems = renderedArticles.map((a) => ({
     name: a.frontmatter.title,
     path: `/article/${a.slug}`,
   }))
