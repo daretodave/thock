@@ -37,6 +37,34 @@ test.describe('home page family — phase 6', () => {
     expect(flat).toContain('"@type":"ItemList"')
   })
 
+  test('ItemList JSON-LD "Latest by pillar" matches the rendered by-pillar cards', async ({
+    page,
+  }) => {
+    // Regression guard: the ItemList used to be an independent top-4
+    // most-recent-overall sort that drifted from what <LatestByPillar>
+    // actually rendered (audit finding, iterate pass 316).
+    await page.goto('/')
+    const graph = await page
+      .locator('script[type="application/ld+json"]')
+      .allTextContents()
+    expect(graph.length).toBeGreaterThanOrEqual(1)
+    const itemList = JSON.parse(graph[0] as string).find(
+      (node: { '@type': string }) => node['@type'] === 'ItemList',
+    )
+    const jsonLdPaths = (
+      itemList.itemListElement as Array<{ url: string }>
+    ).map((el) => new URL(el.url).pathname)
+
+    const cards = page.getByTestId('latest-by-pillar-card')
+    const renderedHrefs: string[] = []
+    for (const card of await cards.all()) {
+      const href = await card.locator('a').first().getAttribute('href')
+      if (href) renderedHrefs.push(href)
+    }
+
+    expect(jsonLdPaths).toEqual(renderedHrefs)
+  })
+
   test('group-buys widget renders rows when an active buy exists', async ({
     page,
   }) => {

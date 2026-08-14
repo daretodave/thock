@@ -101,11 +101,10 @@ export default function HomePage(): ReactElement {
       !longReadsExcludeSlugs.has(a.slug),
   )
   const groupBuysHasContent = activeGroupBuys.length > 0
-  const itemListPaths = [...articles]
-    .sort((a, b) =>
-      b.frontmatter.publishedAt.localeCompare(a.frontmatter.publishedAt),
-    )
-    .slice(0, 4)
+  // The ItemList JSON-LD is named "Latest by pillar" — it must mirror
+  // exactly what <LatestByPillar> renders (byPillarPicks), not an
+  // independent top-N-recent sort that drifts from the rendered grid.
+  const itemListPaths = byPillarPicks
 
   return (
     <main id="main" className="flex-1">
