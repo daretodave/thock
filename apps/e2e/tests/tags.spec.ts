@@ -48,6 +48,35 @@ test.describe('tags index — phase 28', () => {
     expect(flat).toContain('"@type":"ItemList"')
   })
 
+  test('ItemList JSON-LD order matches the rendered grouped-chip order', async ({
+    page,
+  }) => {
+    // Regression guard: the ItemList used to be built from the raw
+    // alphabetical tags array while <TagsIndex> renders tags grouped by
+    // category — the two orders diverged (audit finding, same class as
+    // the home-page ac241f7e fix).
+    await page.goto('/tags')
+    const graph = await page
+      .locator('script[type="application/ld+json"]')
+      .allTextContents()
+    expect(graph.length).toBeGreaterThanOrEqual(1)
+    const itemList = JSON.parse(graph[0] as string).find(
+      (node: { '@type': string }) => node['@type'] === 'ItemList',
+    )
+    const jsonLdPaths = (
+      itemList.itemListElement as Array<{ url: string }>
+    ).map((el) => new URL(el.url).pathname)
+
+    const chips = page.locator('a[data-testid="tag-chip"]')
+    const renderedHrefs: string[] = []
+    for (const chip of await chips.all()) {
+      const href = await chip.getAttribute('href')
+      if (href) renderedHrefs.push(href)
+    }
+
+    expect(jsonLdPaths).toEqual(renderedHrefs)
+  })
+
   test('/tag/[slug] back-link now points to /tags', async ({ page }) => {
     await page.goto('/tag/linear')
     const backLink = page.getByTestId('tag-page-back-link')

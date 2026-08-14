@@ -9,7 +9,11 @@ import {
   JsonLd,
 } from '@thock/seo'
 import { getAllTags, getArticlesByTag } from '@/lib/data-runtime'
-import { TagsIndex, CATEGORY_ORDER } from '@/components/tags/TagsIndex'
+import {
+  TagsIndex,
+  CATEGORY_ORDER,
+  groupTagsByCategory,
+} from '@/components/tags/TagsIndex'
 
 const PATH = '/tags'
 
@@ -23,7 +27,13 @@ export const metadata = buildMetadata({
 export default function TagsPage(): ReactElement {
   const tags = getAllTags().filter((t) => getArticlesByTag(t.slug).length > 0)
 
-  const itemListItems = tags.map((t) => ({
+  // The ItemList JSON-LD must mirror exactly what <TagsIndex> renders —
+  // grouped by category in CATEGORY_ORDER, not the raw alphabetical
+  // `tags` array (audit finding, same class as the ac241f7e home fix).
+  const groups = groupTagsByCategory(tags)
+  const itemListItems = CATEGORY_ORDER.flatMap(
+    (cat) => groups.get(cat) ?? [],
+  ).map((t) => ({
     name: t.name,
     path: `/tag/${t.slug}`,
   }))
