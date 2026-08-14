@@ -5957,7 +5957,7 @@
           "group-buy"
         ],
         "publishedAt": "2026-08-10T14:00:00.000Z",
-        "updatedAt": "2026-08-10T14:00:00.000Z",
+        "updatedAt": "2026-08-14T09:00:00.000Z",
         "heroImage": "/hero-art/wuque-studio-summer-update.svg",
         "heroImageAlt": "Editorial illustration of a 65% keyboard silhouette in translucent polycarbonate, evoking the Ikki68 Aurora's case material.",
         "featured": false,
@@ -6032,7 +6032,7 @@
           "trends-2026"
         ],
         "publishedAt": "2026-08-03T14:00:00.000Z",
-        "updatedAt": "2026-08-03T14:00:00.000Z",
+        "updatedAt": "2026-08-14T10:41:00.000Z",
         "heroImage": "/hero-art/gmk-cyl-ta-neo-production-tracking.svg",
         "heroImageAlt": "A downward-sloping sparkline silhouette rendered in a muted terracotta or dusty-rose accent, tracing a keycap set's tracker score as it cools from a close-of-buy peak down through two subsequent weeks, on a transparent field with a warm-bronze theme dot in the upper right margin.",
         "featured": false,
@@ -6180,7 +6180,7 @@
           "deep-dive"
         ],
         "publishedAt": "2026-07-26T14:00:00.000Z",
-        "updatedAt": "2026-07-26T14:00:00.000Z",
+        "updatedAt": "2026-08-13T15:48:00.000Z",
         "heroImage": "/hero-art/buckling-spring-deep-dive.svg",
         "heroImageAlt": "Line-drawing cross-section of an IBM Model M buckling-spring keyswitch, shown mid-buckle: a coil spring bowing sideways inside its guide barrel, handing off to a pivoting hammer/flipper on a fixed pivot, which strikes a raised contact pucker on a membrane sheet below — an amber focal dot and ring mark the strike point.",
         "featured": false,
@@ -7198,7 +7198,7 @@
           "polling-rate"
         ],
         "publishedAt": "2026-05-30T12:00:00.000Z",
-        "updatedAt": "2026-06-07T00:00:00.000Z",
+        "updatedAt": "2026-08-13T12:50:00.000Z",
         "heroImage": "/hero-art/hall-effect-keyboard-guide.svg",
         "heroImageAlt": "Annotated cross-section of a Hall-effect key position — a stem with a small embedded magnet descending toward a Hall sensor on the PCB, with four labeled callout lines (magnet, Hall sensor, analog voltage, firmware threshold) and an ochre accent on the sensor pad, drawn in a single warm-grey stroke on a warm-paper field.",
         "featured": false,
@@ -9701,5 +9701,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-08-14T19:41:21.083Z"
+  "generatedAt": "2026-08-14T21:18:04.298Z"
 }
