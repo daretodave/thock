@@ -150,6 +150,36 @@ test.describe('/sources — phase 16', () => {
     expect(flat).toContain('"@type":"WebSite"')
     expect(flat).toContain('"@type":"BreadcrumbList"')
   })
+
+  test('ItemList JSON-LD matches the rendered cited-article rows', async ({
+    page,
+  }) => {
+    // Regression guard: the ItemList used to be built from every
+    // article unfiltered, while <SourceCounts> renders only articles
+    // with sourceCount > 0 — the JSON-LD listed articles that never
+    // appear as a link on the page (audit finding, same class as the
+    // ac241f7e home / 9ebbd294 tags / a850625d ideas ItemList bugs).
+    await page.goto('/sources')
+    const graph = await page
+      .locator('script[type="application/ld+json"]')
+      .allTextContents()
+    expect(graph.length).toBeGreaterThanOrEqual(1)
+    const itemList = JSON.parse(graph[0] as string).find(
+      (node: { '@type': string }) => node['@type'] === 'ItemList',
+    )
+    const jsonLdPaths = (
+      itemList.itemListElement as Array<{ url: string }>
+    ).map((el) => new URL(el.url).pathname)
+
+    const rows = page.locator('[data-testid="source-counts-row"] a')
+    const renderedHrefs: string[] = []
+    for (const row of await rows.all()) {
+      const href = await row.getAttribute('href')
+      if (href) renderedHrefs.push(href)
+    }
+
+    expect(jsonLdPaths).toEqual(renderedHrefs)
+  })
 })
 
 test.describe('case-normalization redirect — /article + /tag', () => {

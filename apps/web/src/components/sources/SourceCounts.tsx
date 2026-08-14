@@ -21,6 +21,33 @@ const PILLAR_LABEL: Record<Pillar, string> = {
 }
 
 /**
+ * Cited rows (`sourceCount > 0`), grouped by pillar in `PILLARS` order
+ * and sorted `publishedAt` desc within each group — the exact flat
+ * order `<SourceCounts>` renders. Exported so `/sources`'s ItemList
+ * JSON-LD can mirror this instead of drifting from it independently.
+ */
+export function getSortedCitedRows(
+  rows: ArticleSourceCount[],
+): ArticleSourceCount[] {
+  const cited = rows.filter((r) => r.sourceCount > 0)
+  const byPillar = new Map<Pillar, ArticleSourceCount[]>()
+  for (const row of cited) {
+    const p = row.article.frontmatter.pillar
+    const existing = byPillar.get(p) ?? []
+    existing.push(row)
+    byPillar.set(p, existing)
+  }
+  for (const list of byPillar.values()) {
+    list.sort((a, b) =>
+      b.article.frontmatter.publishedAt.localeCompare(
+        a.article.frontmatter.publishedAt,
+      ),
+    )
+  }
+  return PILLARS.flatMap((p) => byPillar.get(p) ?? [])
+}
+
+/**
  * Per-article aggregate of citation counts. Articles with zero
  * `<Source>` tags are omitted so the page surfaces only what's
  * actually cited. Rows are grouped by pillar to mirror the rest
@@ -56,19 +83,13 @@ export function SourceCounts({ rows }: SourceCountsProps): ReactElement {
   const isUniform = uniqueCounts.size === 1
   const uniformValue = isUniform ? cited[0]!.sourceCount : null
 
+  const sorted = getSortedCitedRows(rows)
   const byPillar = new Map<Pillar, ArticleSourceCount[]>()
-  for (const row of cited) {
+  for (const row of sorted) {
     const p = row.article.frontmatter.pillar
     const existing = byPillar.get(p) ?? []
     existing.push(row)
     byPillar.set(p, existing)
-  }
-  for (const list of byPillar.values()) {
-    list.sort((a, b) =>
-      b.article.frontmatter.publishedAt.localeCompare(
-        a.article.frontmatter.publishedAt,
-      ),
-    )
   }
 
   return (

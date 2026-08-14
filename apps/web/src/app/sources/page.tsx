@@ -15,6 +15,7 @@ import {
 import { getAllArticles } from '@/lib/data-runtime'
 import {
   SourceCounts,
+  getSortedCitedRows,
   type ArticleSourceCount,
 } from '@/components/sources/SourceCounts'
 import {
@@ -58,7 +59,12 @@ export default function SourcesPage(): ReactElement {
           ]),
           buildItemListJsonLd({
             name: 'Articles',
-            items: rows.map((row) => ({
+            // Must mirror exactly what <SourceCounts> renders — grouped
+            // by pillar, sorted publishedAt desc within each group, and
+            // filtered to sourceCount > 0 — not the raw unfiltered
+            // `rows` array (audit finding, same class as the ac241f7e
+            // home / 9ebbd294 tags / a850625d ideas ItemList bugs).
+            items: getSortedCitedRows(rows).map((row) => ({
               name: row.article.frontmatter.title,
               path: `/article/${row.article.slug}`,
             })),
