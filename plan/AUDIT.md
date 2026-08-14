@@ -11298,7 +11298,7 @@ passes accumulate signals.)
 > Filed 2026-08-14 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 > **Resolved (2026-08-14):** shipped `wuque-studio-summer-update.mdx` (publishedAt 2026-08-10, gap-fill midpoint of the 8-day gap between `gmk-cyl-just-beachy-group-buy-opens` on 2026-08-06 and today) — "Wuque Studio's summer update, and the Ikki68 Aurora holdover," directly following up on this week's trends-tracker Wuque Studio row. News pillar now carries a fresh anchor inside the 30-day window. `pnpm verify` full gate green: typecheck, lint, unit tests, script tests, data:validate, build, size, 1149/1149 e2e.
 
-### [ ] [cross-links] [4.5] wuque-studio-summer-update ↔ mode-sonnet-r2-group-buy-coverage — no prose cross-link (same pillar, ≥2 shared tags: 65, group-buy)
+### [x] [cross-links] [4.5] wuque-studio-summer-update ↔ mode-sonnet-r2-group-buy-coverage — no prose cross-link (same pillar, ≥2 shared tags: 65, group-buy) — addressed in commit `dee2405e`, closes #859
 - category: cross-links
 - filed: 2026-08-14 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -11308,3 +11308,5 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/wuque-studio-summer-update.mdx
 - article-b: apps/web/src/content/articles/mode-sonnet-r2-group-buy-coverage.mdx
 - action: add [mode-sonnet-r2-group-buy-coverage](/article/mode-sonnet-r2-group-buy-coverage) to wuque-studio-summer-update body, or vice versa
+- issue: #859
+> **Resolved (2026-08-14):** added a sentence to wuque-studio-summer-update's "The board it revived" section contrasting the Ikki68 Aurora's no-buy longevity against the Mode Sonnet R2's completed CannonKeys group buy, linking to the sibling article. `pnpm verify` full gate green: typecheck, lint, 829/829 unit tests, 207/207 script tests, data:validate, build, size, 1149/1149 e2e.
