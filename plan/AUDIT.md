@@ -1254,6 +1254,17 @@
 
 ## Open findings
 
+### [x] [seo] [4.5] /tags ItemList JSON-LD order doesn't match rendered tag grid — addressed in 9ebbd294, closes #864
+- category: seo
+- filed: 2026-08-14 by cloud /iterate audit (fresh general-purpose sweep, following ac241f7e home ItemList JSON-LD fix)
+- impact: 5 (same defect class as the just-fixed home-page bug — the CollectionPage's ItemList structured data misrepresents the actual page layout, which is exactly the kind of JSON-LD/DOM drift Google's structured-data validators flag)
+- ease: 9 (trivial, mechanical fix mirroring the just-shipped home-page pattern: rebuild `itemListItems` from the already-exported `groupTagsByCategory`/`CATEGORY_ORDER` instead of the raw alphabetical `tags` array)
+- score: 4.5 (impact × ease / 10)
+- evidence: `apps/web/src/app/tags/page.tsx` built `itemListItems` straight from `getAllTags()` (alphabetical by slug), while `TagsIndex` (the component actually rendering the grid) regroups those same tags by `CATEGORY_ORDER = ['switch','layout','brand','material','profile','misc']`. Verified against real data: JSON-LD order started `65, 75, abs, acoustic, alice, ...`; rendered order started `buckling-spring, clicky, electrocapacitive, factory-lubed, hall-effect, ...` — zero match in the first 15. Confirmed isolated to this one route; every other `buildItemListJsonLd` caller already builds from the same array/order the render path consumes.
+- issue: #864
+> **Resolved (2026-08-14):** Rebuilt `itemListItems` in `apps/web/src/app/tags/page.tsx` from `groupTagsByCategory(tags)` flattened over `CATEGORY_ORDER`, so the JSON-LD mirrors exactly what `<TagsIndex>` renders. New e2e regression guard in `apps/e2e/tests/tags.spec.ts` (mirroring the home-page `ac241f7e` guard) asserts ItemList paths equal the rendered tag-chip hrefs in order. `pnpm verify` full gate green: typecheck, lint, unit + script tests, data:validate, build, size, 1151/1151 e2e.
+> Picked as the top signal this tick: no unlabeled GitHub issues (triage gate); not Monday (W33 snapshot already existed); AUDIT.md's only other Pending row is the `[4.0]` Lighthouse-CI-disabled item which explicitly defers to `/oversight`; CRITIQUE.md's only Pending row is the non-actionable `[needs-user-call]` GA-beacon item; all 7 mechanical surveys clean (content-gap, crosslink, group-buy-companion, group-buy-status, newsletter-gap, OG-coverage, a11y-spec-coverage, article-parts); no pending phases/data/content-gap work; march's expand Step 3c gate not met (16 commits/~13h since pass 269, threshold 20 commits/48h). A fresh general-purpose sweep (content-fact accuracy, stale group-buy prose, JSON-LD across `/compare`/`/quiz`/`/vendor`/`/archive`/`/tags`/`/tools`, broken links, dead code, test coverage, a11y on newer interactive surfaces) found this ItemList/render drift as the one finding above the 3.0 threshold — the same defect class as the home-page fix shipped earlier the same day, on a different route.
+
 ### [x] [data-gaps] [3.5] Trends Tracker sparkline shift-and-append convention broken across 10 week-transitions (W20→W30) — addressed in this commit, closes #847
 - category: data-gaps
 - filed: 2026-08-13 by cloud /iterate audit (fresh general-purpose sweep, residue review of the 18 commits since pass 312, angle: trends-tracker sparkline convention)
