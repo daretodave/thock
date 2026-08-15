@@ -45,4 +45,20 @@ describe('computeReadTime', () => {
     expect(computeReadTime(body)).toBe(2) // 199 + 5 = 204 -> ceil(204/200) = 2
     expect(computeReadTime(filler)).toBe(1) // without the attribution words, stays at 1
   })
+
+  it('strips table pipes and separator rows without dropping cell text', () => {
+    const filler = Array.from({ length: 195 }).map(() => 'word').join(' ')
+    const table = '| Alpha beta | Gamma delta |\n|---|---|\n| Five real words here now | Six more words right here |'
+    // cell text: "Alpha beta" + "Gamma delta" + "Five real words here now" + "Six more words right here" = 21 words
+    const body = `${filler} ${table}`
+    expect(computeReadTime(body)).toBe(2) // 195 + 21 = 216 -> ceil(216/200) = 2
+    expect(computeReadTime(filler)).toBe(1) // without the table, stays at 1
+  })
+
+  it('does not count the separator row itself as words', () => {
+    const filler = Array.from({ length: 200 }).map(() => 'word').join(' ')
+    const body = `${filler}\n\n|---|---|---|\n`
+    // separator row alone (no header/body cells) must contribute zero words
+    expect(computeReadTime(body)).toBe(1)
+  })
 })

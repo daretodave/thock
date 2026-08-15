@@ -9,15 +9,20 @@
  * components like <InlineViz>, <KeyboardImage>, <Callout>, and
  * <PullQuote> render these as a visible <figcaption>/<h2>/<footer>,
  * not decoration, so they should count toward reading time even
- * though their tag gets stripped.
+ * though their tag gets stripped. Markdown table separator rows
+ * (`|---|---|`) are dropped entirely — they render as an invisible
+ * grid divider, not text — and remaining `|` cell delimiters are
+ * stripped so they don't get counted as one-character "words"
+ * while real cell text still counts.
  */
 export function computeReadTime(body: string): number {
   const noFences = body.replace(/```[\s\S]*?```/g, ' ')
-  const visibleAttrText = [...noFences.matchAll(/\b(?:caption|title|attribution)="([^"]*)"/g)]
+  const noTableSeparators = noFences.replace(/^[ \t]*\|?(?:[ \t]*:?-+:?[ \t]*\|)+[ \t]*:?-+:?[ \t]*\|?[ \t]*$/gm, ' ')
+  const visibleAttrText = [...noTableSeparators.matchAll(/\b(?:caption|title|attribution)="([^"]*)"/g)]
     .map((m) => m[1])
     .join(' ')
-  const noTags = noFences.replace(/<\/?[A-Za-z][^>]*>/g, ' ')
-  const text = `${noTags} ${visibleAttrText}`.replace(/[#>*_`~[\](){}]/g, ' ')
+  const noTags = noTableSeparators.replace(/<\/?[A-Za-z][^>]*>/g, ' ')
+  const text = `${noTags} ${visibleAttrText}`.replace(/[#>*_`~[\](){}|]/g, ' ')
   const words = text
     .split(/\s+/)
     .map((w) => w.trim())

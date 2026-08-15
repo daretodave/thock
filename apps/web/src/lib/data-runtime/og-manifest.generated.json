@@ -782,7 +782,7 @@
     },
     {
       "slug": "switch-films-worth-it",
-      "readTime": 9,
+      "readTime": 8,
       "frontmatter": {
         "title": "Switch films: do they actually do anything?",
         "lede": "Thin POM shims between your switch housings cost five dollars and promise a tighter, better-sounding switch. The mechanism is real. Whether it matters on your specific switches is a separate question.",
@@ -6166,10 +6166,10 @@
             -8,
             -2
           ],
-          "articleSlug": null
+          "articleSlug": "wuque-studio-summer-update"
         }
       ]
     }
   ],
-  "generatedAt": "2026-08-15T10:13:38.075Z"
+  "generatedAt": "2026-08-15T14:20:24.746Z"
 }
