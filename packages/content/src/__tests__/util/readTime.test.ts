@@ -21,4 +21,12 @@ describe('computeReadTime', () => {
     const body = '<PartReference id="x" /><Mono>NK87</Mono> a real word here.'
     expect(computeReadTime(body)).toBe(1)
   })
+
+  it('counts caption="..." text since it renders as a visible figcaption', () => {
+    const filler = Array.from({ length: 199 }).map(() => 'word').join(' ')
+    const captionWords = Array.from({ length: 5 }).map(() => 'more').join(' ')
+    const body = `${filler} <InlineViz caption="${captionWords}" data={data} description="d" />`
+    expect(computeReadTime(body)).toBe(2) // 199 + 5 = 204 -> ceil(204/200) = 2
+    expect(computeReadTime(filler)).toBe(1) // without the caption words, stays at 1
+  })
 })

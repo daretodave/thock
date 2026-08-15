@@ -112,7 +112,7 @@
     },
     {
       "slug": "cherry-xtrfy-tmr-pivot",
-      "readTime": 6,
+      "readTime": 7,
       "frontmatter": {
         "title": "Cherry bets on magnetic: the XTRFY pivot",
         "lede": "Cherry's mainline MX switches have spent the better part of a year losing ground on the tracker. On July 3, 2026, Cherry's gaming sub-brand XTRFY answered not with another MX revision but with a magnetic-sensing switch — and gave the parent brand its first positive tracker signal in months.",
@@ -192,7 +192,7 @@
     },
     {
       "slug": "retrobrighting-keycaps",
-      "readTime": 6,
+      "readTime": 7,
       "frontmatter": {
         "title": "Retrobrighting: what UV and peroxide actually reverse in yellowed ABS",
         "lede": "Vintage ABS keycaps go the color of weak tea, and the hobby's fix is a jar of hair developer and a sunny windowsill. The chemistry behind that fix is real — but it reverses one specific kind of damage, and builders regularly aim it at problems it cannot touch.",
@@ -232,7 +232,7 @@
     },
     {
       "slug": "gateron-lanes-tactile-deep-dive",
-      "readTime": 11,
+      "readTime": 12,
       "frontmatter": {
         "title": "Gateron Lanes: The Alps-Inspired Tactile Taking Over the Mid-Range",
         "lede": "Gateron's Lanes draws its DNA from the Alps SKCM Orange — one of the most loved tactile mechanisms of the 1980s — and arrived in June 2026 with enough community conviction to sell out on first drop.",
@@ -352,7 +352,7 @@
     },
     {
       "slug": "dcs-grass-valley-decline",
-      "readTime": 8,
+      "readTime": 9,
       "frontmatter": {
         "title": "DCS Grass Valley closes: what the profile's 2026 run tells us",
         "lede": "Grass Valley's group buy closed 2026-06-01 and the tracker dropped -18 that same week — but DCS Dolch opened the same day at +29. The momentum didn't dissipate; it transferred.",
@@ -362,7 +362,7 @@
     },
     {
       "slug": "gmk-cyl-ramune-group-buy",
-      "readTime": 7,
+      "readTime": 8,
       "frontmatter": {
         "title": "GMK CYL Ramune is the pastel pivot the CYL catalog needed",
         "lede": "GMK CYL Ramune opened on 2026-05-15 across ten regional vendors simultaneously — the broadest multi-vendor launch in the CYL sub-line's history. The pastel dual-blue and pink colorway is a deliberate break from the darker European-influenced palettes that have defined CYL since its first runs.",
@@ -422,7 +422,7 @@
     },
     {
       "slug": "cherry-mx2a-revision",
-      "readTime": 7,
+      "readTime": 8,
       "frontmatter": {
         "title": "What Cherry's MX2A revision actually changed",
         "lede": "Cherry's MX2A landed in 2023 with a real engineering update — factory lube, tighter tolerances, the same 100M-press lifespan. The reason the discourse cooled isn't that the switch failed; it's that the enthusiast slot it aimed at was already claimed by the time it arrived.",
@@ -452,7 +452,7 @@
     },
     {
       "slug": "hmx-cloud-deep-dive",
-      "readTime": 12,
+      "readTime": 13,
       "frontmatter": {
         "title": "How HMX took over the mid-tier linear slot",
         "lede": "Two years ago HMX was a name on a vendor page nobody pronounced confidently. In W19, the Cloud sat second among switches on our tracker and landed in half the $120 prebuilts the scene argues about. The rise wasn't an accident.",
@@ -522,7 +522,7 @@
     },
     {
       "slug": "alice-layout-decline",
-      "readTime": 4,
+      "readTime": 5,
       "frontmatter": {
         "title": "The slow fade of Alice layouts",
         "lede": "Alice mounts had a clear moment between 2021 and 2023 — the splayed alphas, the angled bar, the promise of a typing posture that didn't twist your wrists. The thock trends snapshot for 2026-W19 pegs Alice movement at -18 and trending down. The layout still has loyal users, but the curve has bent.",
@@ -592,7 +592,7 @@
     },
     {
       "slug": "lubing-101",
-      "readTime": 8,
+      "readTime": 9,
       "frontmatter": {
         "title": "Lubing 101: what matters, what doesn't, and where to stop",
         "lede": "Lube moves the sound and feel of a switch in ways nothing else in the build can. It also chews up a Saturday and ruins switches when applied with the enthusiasm the rabbit-hole crowd recommends. Here is the version that earns its keep.",
@@ -632,7 +632,7 @@
     },
     {
       "slug": "sound-dampening-compared",
-      "readTime": 8,
+      "readTime": 9,
       "frontmatter": {
         "title": "Sound dampening, compared: case foam, plate foam, PE foam, and the tape mod",
         "lede": "Four layers, four very different jobs. Here is what each sound mod actually changes, where it sits in the build stack, and the order to stack them in if you only have time for one or two.",
@@ -672,7 +672,7 @@
     },
     {
       "slug": "pe-foam-mod",
-      "readTime": 9,
+      "readTime": 10,
       "frontmatter": {
         "title": "The PE foam mod: the two-dollar upgrade that actually works",
         "lede": "PE foam is one of the most accessible mods in the hobby — a $2 sheet between your PCB and case can noticeably reduce hollow resonance. Here is what it actually does, when to use it, and when to skip it.",
@@ -752,7 +752,7 @@
     },
     {
       "slug": "topre-electrocapacitive-deep-dive",
-      "readTime": 11,
+      "readTime": 12,
       "frontmatter": {
         "title": "How Topre's electrocapacitive switches actually work",
         "lede": "Topre is not just another switch — it is a third sensing lineage, parallel to the MX-style contact switches and the Hall-effect newcomers. Understanding why HHKB and Realforce typists pay what they pay starts with the fact that a Topre keypress does not close a circuit at all.",
@@ -782,7 +782,7 @@
     },
     {
       "slug": "switch-films-worth-it",
-      "readTime": 8,
+      "readTime": 9,
       "frontmatter": {
         "title": "Switch films: do they actually do anything?",
         "lede": "Thin POM shims between your switch housings cost five dollars and promise a tighter, better-sounding switch. The mechanism is real. Whether it matters on your specific switches is a separate question.",
@@ -6171,5 +6171,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-08-15T04:22:31.135Z"
+  "generatedAt": "2026-08-15T08:17:43.065Z"
 }
