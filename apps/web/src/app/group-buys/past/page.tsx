@@ -22,7 +22,7 @@ import { GroupBuyRow } from '@/components/group-buys/GroupBuyRow'
 const PATH = '/group-buys/past'
 const TITLE = 'Past group buys'
 const LEDE =
-  'Every group buy that has closed or shipped. The live index keeps only the freshest four in its rail; this is the full history.'
+  'Every group buy that has closed or shipped. The live index keeps only the freshest six in its rail; this is the full history.'
 
 export const metadata = buildMetadata({
   title: TITLE,
