@@ -95,7 +95,7 @@
     {
       "name": "DCS Dolch",
       "category": "keycap",
-      "direction": "flat",
+      "direction": "up",
       "score": 38,
       "spark": [
         12,

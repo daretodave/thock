@@ -1864,7 +1864,7 @@
         {
           "name": "DCS Olivetti",
           "category": "keycap",
-          "direction": "flat",
+          "direction": "down",
           "score": 16,
           "spark": [
             6,
@@ -5358,7 +5358,7 @@
         {
           "name": "DCS Dolch",
           "category": "keycap",
-          "direction": "flat",
+          "direction": "up",
           "score": 38,
           "spark": [
             12,
@@ -6171,5 +6171,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-08-15T14:20:24.746Z"
+  "generatedAt": "2026-08-15T15:15:05.813Z"
 }

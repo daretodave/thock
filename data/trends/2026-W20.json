@@ -50,7 +50,7 @@
     {
       "name": "DCS Olivetti",
       "category": "keycap",
-      "direction": "flat",
+      "direction": "down",
       "score": 16,
       "spark": [6, 9, 12, 14, 16, 17, 18, 16],
       "articleSlug": "dcs-olivetti-comeback",
