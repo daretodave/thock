@@ -37,4 +37,12 @@ describe('computeReadTime', () => {
     expect(computeReadTime(body)).toBe(2) // 199 + 5 = 204 -> ceil(204/200) = 2
     expect(computeReadTime(filler)).toBe(1) // without the title words, stays at 1
   })
+
+  it('counts PullQuote attribution="..." text since it renders as a visible footer', () => {
+    const filler = Array.from({ length: 199 }).map(() => 'word').join(' ')
+    const attributionWords = Array.from({ length: 5 }).map(() => 'more').join(' ')
+    const body = `${filler} <PullQuote attribution="${attributionWords}">quote</PullQuote>`
+    expect(computeReadTime(body)).toBe(2) // 199 + 5 = 204 -> ceil(204/200) = 2
+    expect(computeReadTime(filler)).toBe(1) // without the attribution words, stays at 1
+  })
 })

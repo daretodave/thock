@@ -4,15 +4,16 @@
  *
  * Strips MDX/JSX component tags and fenced code blocks before
  * counting so a paragraph-heavy article doesn't get inflated by
- * markup or example code. `caption="..."` / `title="..."` attribute
- * text is preserved first — components like <InlineViz>,
- * <KeyboardImage>, and <Callout> render these as a visible
- * <figcaption>/<h2>, not decoration, so they should count toward
- * reading time even though their tag gets stripped.
+ * markup or example code. `caption="..."` / `title="..."` /
+ * `attribution="..."` attribute text is preserved first —
+ * components like <InlineViz>, <KeyboardImage>, <Callout>, and
+ * <PullQuote> render these as a visible <figcaption>/<h2>/<footer>,
+ * not decoration, so they should count toward reading time even
+ * though their tag gets stripped.
  */
 export function computeReadTime(body: string): number {
   const noFences = body.replace(/```[\s\S]*?```/g, ' ')
-  const visibleAttrText = [...noFences.matchAll(/\b(?:caption|title)="([^"]*)"/g)]
+  const visibleAttrText = [...noFences.matchAll(/\b(?:caption|title|attribution)="([^"]*)"/g)]
     .map((m) => m[1])
     .join(' ')
   const noTags = noFences.replace(/<\/?[A-Za-z][^>]*>/g, ' ')
