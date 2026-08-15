@@ -14,15 +14,21 @@
  * grid divider, not text — and remaining `|` cell delimiters are
  * stripped so they don't get counted as one-character "words"
  * while real cell text still counts.
+ *
+ * `extraVisibleText` covers visible text that isn't in the raw MDX
+ * at all — namely `<PartReference id="...">`, which renders the
+ * resolved part's name (e.g. "Gazzew Boba U4T") from `@thock/data`,
+ * not from the tag itself. The article loader resolves those names
+ * and passes them in here since this util has no data-layer access.
  */
-export function computeReadTime(body: string): number {
+export function computeReadTime(body: string, extraVisibleText = ''): number {
   const noFences = body.replace(/```[\s\S]*?```/g, ' ')
   const noTableSeparators = noFences.replace(/^[ \t]*\|?(?:[ \t]*:?-+:?[ \t]*\|)+[ \t]*:?-+:?[ \t]*\|?[ \t]*$/gm, ' ')
   const visibleAttrText = [...noTableSeparators.matchAll(/\b(?:caption|title|attribution)="([^"]*)"/g)]
     .map((m) => m[1])
     .join(' ')
   const noTags = noTableSeparators.replace(/<\/?[A-Za-z][^>]*>/g, ' ')
-  const text = `${noTags} ${visibleAttrText}`.replace(/[#>*_`~[\](){}|]/g, ' ')
+  const text = `${noTags} ${visibleAttrText} ${extraVisibleText}`.replace(/[#>*_`~[\](){}|]/g, ' ')
   const words = text
     .split(/\s+/)
     .map((w) => w.trim())

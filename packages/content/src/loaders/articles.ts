@@ -1,7 +1,9 @@
 import matter from 'gray-matter'
+import { getBoardBySlug, getKeycapSetBySlug, getSwitchBySlug } from '@thock/data'
 import {
   ArticleFrontmatterSchema,
   type ArticleFrontmatter,
+  type ArticlePartReference,
   type Pillar,
 } from '../schema/frontmatter'
 import {
@@ -13,6 +15,35 @@ import {
 import { computeReadTime } from '../util/readTime'
 import { memo } from './memo'
 import { getAllTags } from './tags'
+
+/**
+ * Resolves each `<PartReference id="...">` occurrence in the body
+ * against `mentionedParts` to the part's rendered name — the text
+ * `computeReadTime` can't see on its own (see its JSDoc). Repeated
+ * occurrences of the same id count once per occurrence, matching
+ * how the name actually renders each time.
+ */
+function resolveMentionedPartNames(
+  content: string,
+  mentionedParts: ArticlePartReference[],
+): string {
+  if (mentionedParts.length === 0) return ''
+  const nameById = new Map<string, string>()
+  for (const ref of mentionedParts) {
+    const name =
+      ref.kind === 'switch'
+        ? getSwitchBySlug(ref.slug)?.name
+        : ref.kind === 'keycap-set'
+          ? getKeycapSetBySlug(ref.slug)?.name
+          : getBoardBySlug(ref.slug)?.name
+    if (name) nameById.set(ref.id, name)
+  }
+  if (nameById.size === 0) return ''
+  const occurrences = [...content.matchAll(/<PartReference\s+id="([^"]+)"/g)]
+  return occurrences
+    .map((m) => nameById.get(m[1] as string) ?? '')
+    .join(' ')
+}
 
 export type Article = {
   slug: string
@@ -51,7 +82,10 @@ const loadAll = memo<Article[]>('articles', () => {
       slug: parsed.data.slug,
       frontmatter: parsed.data,
       body: content,
-      readTime: computeReadTime(content),
+      readTime: computeReadTime(
+        content,
+        resolveMentionedPartNames(content, parsed.data.mentionedParts),
+      ),
       filePath: toRepoRelativePosix(file),
     })
   }

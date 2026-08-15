@@ -51,4 +51,14 @@ describe('articles loader', () => {
       expect(Number.isInteger(a.readTime)).toBe(true)
     }
   })
+
+  it('counts PartReference-resolved names toward readTime', () => {
+    // gazzew-boba-u4t-deep-dive's 4 PartReference tags ("Gazzew Boba
+    // U4T", "Drop Holy Panda X", "Durock T1", "Durock T1") add 11
+    // words to the raw body's 1992, crossing the 2000-word boundary
+    // (ceil(1992/200)=10 vs. ceil(2003/200)=11) — a real, verified
+    // undercount before the resolved names were counted.
+    const a = getArticleBySlug('gazzew-boba-u4t-deep-dive')
+    expect(a?.readTime).toBe(11)
+  })
 })

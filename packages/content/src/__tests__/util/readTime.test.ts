@@ -61,4 +61,11 @@ describe('computeReadTime', () => {
     // separator row alone (no header/body cells) must contribute zero words
     expect(computeReadTime(body)).toBe(1)
   })
+
+  it('counts extraVisibleText since it covers PartReference-resolved names not present in the raw body', () => {
+    const filler = Array.from({ length: 199 }).map(() => 'word').join(' ')
+    const body = `${filler} <PartReference id="x" />`
+    expect(computeReadTime(body)).toBe(1) // id="x" alone isn't real content
+    expect(computeReadTime(body, 'Gazzew Boba U4T')).toBe(2) // 199 + 3 = 202 -> ceil(202/200) = 2
+  })
 })
