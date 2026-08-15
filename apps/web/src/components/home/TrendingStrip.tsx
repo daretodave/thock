@@ -17,6 +17,15 @@ export type TrendingStripProps = {
  * or contains zero moving rows — matches `phase_6_home.md` "No
  * latest trend snapshot" empty state and respects the rail's "what's
  * moving on the tracker" framing (critique pass 9 #7).
+ *
+ * `direction` reflects only the latest week-over-week move while
+ * `sparkSlope` is the full 8-week trend — they can disagree (a row
+ * that climbed for 6 weeks then dipped once is `direction: 'down'`
+ * with a positive slope). A sign-mismatched row must never be
+ * crowned: its glyph, delta sign, and sparkline tone all key off
+ * `direction`, so a mismatch renders a down-red tile whose sparkline
+ * visibly climbs. Same guard as `pickRiser`/`pickFaller` in
+ * `tracker/index.ts`.
  */
 export function TrendingStrip({
   snapshot,
@@ -25,6 +34,9 @@ export function TrendingStrip({
 
   const tiles = snapshot.rows
     .filter((row) => row.direction !== 'flat')
+    .filter((row) =>
+      row.direction === 'up' ? sparkSlope(row) > 0 : sparkSlope(row) < 0,
+    )
     .slice()
     .sort((a, b) => Math.abs(sparkSlope(b)) - Math.abs(sparkSlope(a)))
     .slice(0, 6)

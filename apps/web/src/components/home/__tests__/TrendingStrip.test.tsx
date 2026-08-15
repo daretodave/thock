@@ -92,14 +92,42 @@ describe('<TrendingStrip>', () => {
       ...snapshot.rows[0]!,
       name: 'LowLevelBigMove',
       score: -10,
-      spark: [-40, -10], // slope 30
-      direction: 'down' as const,
+      spark: [-40, -10], // slope 30, i.e. rising (still net-negative score)
+      direction: 'up' as const,
     }
     snapshot.rows = [highLevelLowMove, lowLevelBigMove]
     render(<TrendingStrip snapshot={snapshot} />)
     const tiles = screen.getAllByTestId('trending-tile')
     expect(tiles[0]).toHaveTextContent('LowLevelBigMove')
     expect(tiles[1]).toHaveTextContent('HighLevelLowMove')
+  })
+
+  it('excludes rows whose direction sign disagrees with their spark slope', () => {
+    // Regression guard: a row that climbed for most of the window but
+    // dipped on the latest reading is `direction: 'down'` with a
+    // positive sparkSlope. TrendingTile keys its glyph, delta sign, and
+    // sparkline tone off `direction`, so crowning such a row renders a
+    // red "down" tile whose sparkline visibly climbs — the same
+    // sign-mismatch failure mode already guarded in `pickRiser`/
+    // `pickFaller` (tracker/index.ts, commit e1687134).
+    const snapshot = makeTrendSnapshot()
+    const mismatched = {
+      ...snapshot.rows[0]!,
+      name: 'Mismatched',
+      direction: 'down' as const,
+      spark: [26, 34, 42, 50, 56, 60, 64, 52], // slope +26, still up
+    }
+    const clean = {
+      ...snapshot.rows[0]!,
+      name: 'Clean',
+      direction: 'up' as const,
+      spark: [10, 15], // slope +5
+    }
+    snapshot.rows = [mismatched, clean]
+    render(<TrendingStrip snapshot={snapshot} />)
+    const tiles = screen.getAllByTestId('trending-tile')
+    expect(tiles).toHaveLength(1)
+    expect(tiles[0]).toHaveTextContent('Clean')
   })
 
   it('excludes rows with direction `flat` (rail header commits to movement)', () => {
