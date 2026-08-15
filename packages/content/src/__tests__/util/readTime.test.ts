@@ -29,4 +29,12 @@ describe('computeReadTime', () => {
     expect(computeReadTime(body)).toBe(2) // 199 + 5 = 204 -> ceil(204/200) = 2
     expect(computeReadTime(filler)).toBe(1) // without the caption words, stays at 1
   })
+
+  it('counts Callout title="..." text since it renders as a visible heading', () => {
+    const filler = Array.from({ length: 199 }).map(() => 'word').join(' ')
+    const titleWords = Array.from({ length: 5 }).map(() => 'more').join(' ')
+    const body = `${filler} <Callout type="note" title="${titleWords}">body</Callout>`
+    expect(computeReadTime(body)).toBe(2) // 199 + 5 = 204 -> ceil(204/200) = 2
+    expect(computeReadTime(filler)).toBe(1) // without the title words, stays at 1
+  })
 })
