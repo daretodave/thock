@@ -2,6 +2,7 @@ import type { ReactElement } from 'react'
 import Link from 'next/link'
 import { Mono } from '@thock/ui'
 import type { ResolvedPart } from '@/lib/data-runtime'
+import { truncate } from '@/lib/truncate'
 
 const STATUS_LABEL: Record<string, string> = {
   'in-production': 'in production',
@@ -16,12 +17,6 @@ function statusTint(status: string): string {
   if (status === 'in-production' || status === 'in-stock') return 'text-accent'
   if (status === 'group-buy' || status === 'limited') return 'text-text-2'
   return 'text-text-2'
-}
-
-function summarize(description: string, max = 140): string {
-  if (description.length <= max) return description
-  const cut = description.slice(0, max).split(' ').slice(0, -1).join(' ')
-  return cut.trimEnd() + '…'
 }
 
 export type PartIndexCardProps = {
@@ -52,7 +47,7 @@ export function PartIndexCard({ part }: PartIndexCardProps): ReactElement {
         </span>
       </div>
       <p className="max-w-[70ch] text-body text-text-2">
-        {summarize(part.record.description)}
+        {truncate(part.record.description, 140)}
       </p>
     </Link>
   )

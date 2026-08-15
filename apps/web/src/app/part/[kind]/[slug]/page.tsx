@@ -19,6 +19,7 @@ import {
   getVendorBySlug,
   type ResolvedPart,
 } from '@/lib/data-runtime'
+import { truncate } from '@/lib/truncate'
 import { PartHero } from '@/components/part/PartHero'
 import { PartSpec } from '@/components/part/PartSpec'
 import { PartBody } from '@/components/part/PartBody'
@@ -80,12 +81,6 @@ function resolvePart(kind: ValidKind, slug: string): ResolvedPart | null {
     : null
 }
 
-function shortDescription(description: string, max = 150): string {
-  if (description.length <= max) return description
-  const cut = description.slice(0, max).split(' ').slice(0, -1).join(' ')
-  return cut.trimEnd() + '…'
-}
-
 export const dynamicParams = false
 
 export async function generateStaticParams(): Promise<
@@ -109,7 +104,7 @@ export async function generateMetadata({
   if (!part) return {}
   return buildMetadata({
     title: part.record.name,
-    description: shortDescription(part.record.description),
+    description: truncate(part.record.description, 150),
     path: `/part/${part.kind}/${part.slug}`,
   })
 }
@@ -144,7 +139,7 @@ export default async function PartDetailPage({
             '@context': 'https://schema.org',
             '@type': 'Thing',
             name: part.record.name,
-            description: shortDescription(part.record.description),
+            description: truncate(part.record.description, 150),
             url: canonicalUrl(path),
           },
           buildBreadcrumbListJsonLd([
