@@ -11563,7 +11563,7 @@ passes accumulate signals.)
 > **Resolved (2026-08-15):** imported `truncate` from `@/lib/truncate` at both call sites, replacing `shortDescription()`/`summarize()`. `pnpm verify` full gate green: typecheck, lint, unit + script tests, data:validate, build, size, 1153/1153 e2e.
 > Picked as the top signal this tick (cloud `/march`): no unlabeled GitHub issues (triage gate, 0 unlabeled); not Monday (W33 snapshot already existed, weekly gate skipped); no pending phases/data/content-gap work — all 7 mechanical surveys re-ran clean this tick, no rows filed. AUDIT.md's and CRITIQUE.md's only other Pending rows remained the standing non-autonomous `needs-user-call`/`/oversight`-gated items. march's own expand Step 3c gate not met (1 commit/~1h54m since pass 326's anchor `4011ed75`, threshold 20 commits/48h). A delegated general-purpose sweep steered toward fresh angles (typecheck cleanliness re-check, component test-coverage gaps, stray console.log/TODO grep, open-GitHub-issue-vs-AUDIT.md cross-check) found this reopened-but-unfixed issue as the one finding clearing the 3.0 floor — the underlying defect was independently re-confirmed live in source before shipping, not just trusted from the stale issue body.
 
-### [HOT PURSUIT] [content-gap] [7] guides pillar — 1 of ≥2 articles in last 30d
+### [x] [content-gap] [7] guides pillar — 1 of ≥2 articles in last 30d — addressed in 36011843, closes #881
 - category: content-gaps
 - impact: 5 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -11575,3 +11575,37 @@ passes accumulate signals.)
 - next: /ship-content → guides pillar article
 - issue: #881
 > Filed 2026-08-16 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+
+### [ ] [cross-links] [4.5] ansi-iso-jis-keyboard-layout-guide ↔ keycap-materials-compared — no prose cross-link (same pillar, ≥2 shared tags: keycaps, beginner)
+- category: cross-links
+- filed: 2026-08-20 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: keycaps, beginner
+- article-a: apps/web/src/content/articles/ansi-iso-jis-keyboard-layout-guide.mdx
+- article-b: apps/web/src/content/articles/keycap-materials-compared.mdx
+- action: add [keycap-materials-compared](/article/keycap-materials-compared) to ansi-iso-jis-keyboard-layout-guide body, or vice versa
+
+### [ ] [cross-links] [4.5] ansi-iso-jis-keyboard-layout-guide ↔ keycap-profiles-compared — no prose cross-link (same pillar, ≥2 shared tags: keycaps, beginner)
+- category: cross-links
+- filed: 2026-08-20 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: keycaps, beginner
+- article-a: apps/web/src/content/articles/ansi-iso-jis-keyboard-layout-guide.mdx
+- article-b: apps/web/src/content/articles/keycap-profiles-compared.mdx
+- action: add [keycap-profiles-compared](/article/keycap-profiles-compared) to ansi-iso-jis-keyboard-layout-guide body, or vice versa
+
+### [HOT PURSUIT] [content-gap] [7] ideas pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 7 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: ideas
+- window-count: 1
+- window-start: 2026-07-21
+- score: 7
+- next: /ship-content → ideas pillar article
+> Filed 2026-08-20 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
