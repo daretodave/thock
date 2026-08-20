@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Five-row by three-column matrix comparing ANSI, ISO, and JIS keyboard layouts across Enter key shape, Left Shift width, spacebar width, extra key count, and total key count</title>
+
+  <!-- Column headers -->
+  <text x="380" y="45" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" font-weight="700" letter-spacing="0.06em" text-anchor="middle">ANSI</text>
+  <text x="700" y="45" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.10 80)" stroke="none" font-weight="700" letter-spacing="0.06em" text-anchor="middle">ISO</text>
+  <text x="1020" y="45" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.10 80)" stroke="none" font-weight="700" letter-spacing="0.06em" text-anchor="middle">JIS</text>
+  <line x1="40" y1="62" x2="1160" y2="62" stroke-opacity="0.25"/>
+
+  <!-- Row 1: Enter key -->
+  <text x="40" y="100" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none" font-weight="600" letter-spacing="0.03em">ENTER KEY</text>
+  <rect x="230" y="80" width="300" height="55" rx="8" stroke-opacity="0.4"/>
+  <text x="380" y="108" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Wide rectangle</text>
+  <text x="380" y="126" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">1 row tall</text>
+  <rect x="550" y="80" width="300" height="55" rx="8" fill="oklch(0.78 0.10 80)" fill-opacity="0.12" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.85"/>
+  <text x="700" y="108" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Tall L-shape</text>
+  <text x="700" y="126" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">2 rows</text>
+  <rect x="870" y="80" width="300" height="55" rx="8" fill="oklch(0.78 0.10 80)" fill-opacity="0.12" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.85"/>
+  <text x="1020" y="108" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Tall L-shape</text>
+  <text x="1020" y="126" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">2 rows</text>
+
+  <!-- Row 2: Left Shift width -->
+  <text x="40" y="170" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none" font-weight="600" letter-spacing="0.03em">LEFT SHIFT</text>
+  <rect x="230" y="150" width="300" height="55" rx="8" stroke-opacity="0.4"/>
+  <text x="380" y="183" font-family="JetBrains Mono, monospace" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.9">2.25u</text>
+  <rect x="550" y="150" width="300" height="55" rx="8" fill="oklch(0.78 0.10 80)" fill-opacity="0.12" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.85"/>
+  <text x="700" y="183" font-family="JetBrains Mono, monospace" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">1.25u</text>
+  <rect x="870" y="150" width="300" height="55" rx="8" fill="oklch(0.78 0.10 80)" fill-opacity="0.12" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.85"/>
+  <text x="1020" y="183" font-family="JetBrains Mono, monospace" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">1.25u</text>
+
+  <!-- Row 3: Spacebar width -->
+  <text x="40" y="240" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none" font-weight="600" letter-spacing="0.03em">SPACEBAR</text>
+  <rect x="230" y="220" width="300" height="55" rx="8" stroke-opacity="0.4"/>
+  <text x="380" y="253" font-family="JetBrains Mono, monospace" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.9">6.25u</text>
+  <rect x="550" y="220" width="300" height="55" rx="8" stroke-opacity="0.4"/>
+  <text x="700" y="253" font-family="JetBrains Mono, monospace" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.9">6.25u</text>
+  <rect x="870" y="220" width="300" height="55" rx="8" fill="oklch(0.78 0.10 80)" fill-opacity="0.12" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.85"/>
+  <text x="1020" y="248" font-family="JetBrains Mono, monospace" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">~4u</text>
+  <text x="1020" y="265" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">+ thumb keys</text>
+
+  <!-- Row 4: Extra keys -->
+  <text x="40" y="310" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none" font-weight="600" letter-spacing="0.03em">EXTRA KEYS</text>
+  <rect x="230" y="290" width="300" height="55" rx="8" stroke-opacity="0.4"/>
+  <text x="380" y="323" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">None</text>
+  <rect x="550" y="290" width="300" height="55" rx="8" fill="oklch(0.78 0.10 80)" fill-opacity="0.12" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.85"/>
+  <text x="700" y="323" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">+1 (ISO key)</text>
+  <rect x="870" y="290" width="300" height="55" rx="8" fill="oklch(0.78 0.10 80)" fill-opacity="0.12" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.85"/>
+  <text x="1020" y="318" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">+5 (ISO key,</text>
+  <text x="1020" y="335" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Yen, Ro, x2)</text>
+
+  <!-- Row 5: Total keys -->
+  <text x="40" y="380" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none" font-weight="600" letter-spacing="0.03em">TOTAL (FULL-SIZE)</text>
+  <rect x="230" y="360" width="300" height="55" rx="8" stroke-opacity="0.4"/>
+  <text x="380" y="393" font-family="JetBrains Mono, monospace" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.9">104</text>
+  <rect x="550" y="360" width="300" height="55" rx="8" fill="oklch(0.78 0.10 80)" fill-opacity="0.12" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.85"/>
+  <text x="700" y="393" font-family="JetBrains Mono, monospace" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">105</text>
+  <rect x="870" y="360" width="300" height="55" rx="8" fill="oklch(0.78 0.10 80)" fill-opacity="0.12" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.85"/>
+  <text x="1020" y="393" font-family="JetBrains Mono, monospace" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">109</text>
+
+  <!-- Footnote -->
+  <text x="40" y="450" font-family="Newsreader, serif" font-style="italic" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">ANSI is the plain baseline column here — ISO and JIS are marked where each diverges from it.</text>
+
+  <!-- Brass-bronze theme dot -->
+  <circle cx="1170" cy="25" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

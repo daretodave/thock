@@ -1,0 +1,25 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-20T00:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "ansi-iso-jis-keyboard-layout-guide",
+  "article_pillar": "guides",
+  "section_anchor": "why-this-gates-keycap-set-compatibility",
+  "brief_summary": "Horizontal strip of six small keycap glyphs naming the extra key positions ISO and JIS layouts carry that ANSI does not: the ISO extra key (shared by ISO and JIS), and four JIS-only keys — Yen, Ro, Muhenkan, Henkan, and Kana. Each glyph is marked amber and labeled with which layout(s) require it, illustrating that an ANSI keycap set has no keycap for any of these positions.",
+  "target": "apps/web/public/article-viz/ansi-iso-jis-keyboard-layout-guide/extra-keys-strip.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "ansi-iso-jis-keyboard-layout-guide.mdx § 'The three layouts, physically' — 'use the freed-up space for an extra key between Left Shift and Z — a key ANSI simply doesn't have'",
+    "ansi-iso-jis-keyboard-layout-guide.mdx § 'The three layouts, physically' — 'JIS also splits the area near Backspace and the right-hand Shift to add a Yen key ... and a Ro key beside the right Shift'",
+    "ansi-iso-jis-keyboard-layout-guide.mdx § 'The three layouts, physically' — 'commonly labeled Muhenkan, Henkan, and Kana on a JP legend set'",
+    "ansi-iso-jis-keyboard-layout-guide.mdx § 'Why this gates keycap-set compatibility' — 'there's no ANSI keycap at all for the extra ISO key, because ANSI doesn't have that key position'"
+  ],
+  "outputs": ["apps/web/public/article-viz/ansi-iso-jis-keyboard-layout-guide/extra-keys-strip.svg"],
+  "warnings": []
+}

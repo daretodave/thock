@@ -1,0 +1,86 @@
+---
+slug: ansi-iso-jis-keyboard-layout-guide
+title: "ANSI, ISO, or JIS: a practical layout buying guide"
+lede: "Two boards can look nearly identical in a listing photo and still take entirely different keycap sets. Here's how to read Enter key shape, bottom-row widths, and spec-sheet shorthand before ordering — not after a set arrives that doesn't fit."
+author: thock
+pillar: guides
+guideSection: 'keycaps'
+tags: [layout, keycaps, beginner]
+publishedAt: '2026-08-15T14:00:00.000Z'
+updatedAt: '2026-08-15T14:00:00.000Z'
+heroImage: /hero-art/ansi-iso-jis-keyboard-layout-guide.svg
+heroImageAlt: "An annotated top-down strip of a keyboard's bottom two rows, drawn in warm-grey stroke, with the Enter key and Left Shift key outlined and labeled in amber to show where ANSI, ISO, and JIS physical layouts diverge."
+featured: false
+popularityScore: 0
+mentionedParts: []
+---
+
+A keyboard listing says "hot-swap," "gasket-mount," "aluminum" — all things a buyer checks reflexively by now. It rarely says, in plain language, which of three physical layouts the board actually uses, and that's the spec most likely to leave a beginner with a keycap set that doesn't fit.
+
+This guide is for anyone about to buy a keycap set for a board they didn't already build, or a board for a keycap set they've already picked out. It's a compatibility problem before it's an aesthetic one, and it's solvable in under a minute once the differences are clear.
+
+## The three layouts, physically
+
+<Mono>ANSI</Mono>, <Mono>ISO</Mono>, and <Mono>JIS</Mono> are physical layout standards — they describe key shapes and unit widths, not what's printed on the keycaps or which language the board types. A US English board and a US International board can both be ANSI. A UK board and a German board can both be ISO. The standard is about the geometry underneath the legends.
+
+The clearest tell is the Enter key. ANSI uses a wide horizontal rectangle, one row tall. ISO and JIS both use a tall, L-shaped Enter that spans two rows, with a narrower top lobe cut into the row above. That shape difference cascades downward: to make room for the L-shaped Enter, ISO and JIS shrink the Left Shift key from ANSI's <Mono>2.25u</Mono> down to <Mono>1.25u</Mono>, and use the freed-up space for an extra key between Left Shift and <Mono>Z</Mono> — a key ANSI simply doesn't have.
+
+<InlineViz
+  src="/article-viz/ansi-iso-jis-keyboard-layout-guide/layout-anatomy.svg"
+  alt="A five-row by three-column matrix comparing ANSI, ISO, and JIS keyboard layouts across Enter key shape, Left Shift width, spacebar width, extra key count, and total key count on a full-size board. ANSI is marked as the plain baseline column; ISO and JIS are outlined in amber to show where each diverges from it."
+  caption="ISO and JIS both trade Left Shift width for an L-shaped Enter and an extra key — JIS goes further."
+  accent="amber"
+/>
+
+JIS carries every ISO difference and adds its own. Because Japanese input needs dedicated keys for switching between character sets, JIS shrinks the spacebar from the standard <Mono>6.25u</Mono> down to roughly <Mono>4u</Mono> and fills the freed width with three extra thumb-row keys — commonly labeled Muhenkan, Henkan, and Kana on a JP legend set. JIS also splits the area near Backspace and the right-hand Shift to add a <Mono>Yen</Mono> key (replacing the ANSI backslash position near Backspace on some boards) and a <Mono>Ro</Mono> key beside the right Shift. A full-size ANSI board runs 104 keys; ISO runs 105; JIS runs 109 <Source href="https://switchandclick.com/ansi-vs-iso-layout/">— five more than ANSI, four more than ISO</Source>. None of those extra keys are decorative. Each one occupies real board space that a keycap set has to account for.
+
+## Why this gates keycap-set compatibility
+
+This is the part that trips up almost everyone buying their first keycap set separately from their board: a set sculpted for ANSI physical layout does not fit an ISO or JIS board, and the reverse is also true. It's not a legend mismatch that a keycap puller and some patience can fix — it's a size mismatch. The Enter keycap sculpted for ANSI's wide rectangle physically cannot cover ISO's tall L-shape. The 2.25u Left Shift keycap that ships in an ANSI kit is the wrong length for ISO's 1.25u Shift, and there's no ANSI keycap at all for the extra ISO key, because ANSI doesn't have that key position.
+
+<InlineViz
+  src="/article-viz/ansi-iso-jis-keyboard-layout-guide/extra-keys-strip.svg"
+  alt="A horizontal strip of six small keycap glyphs, each a rounded rectangle with a legend and a label beneath naming which physical layout requires it: the ISO extra key shared by ISO and JIS, then four JIS-only keys — Yen, Ro, Muhenkan/Henkan, and Kana — each marked in amber as keys an ANSI keycap set does not include."
+  caption="Every one of these is a real key position a matching keycap kit has to cover — an ANSI set simply has nothing for them."
+  accent="amber"
+/>
+
+Vendors solved this the same way for both directions: most keycap sets sold for customs ship a base kit plus a separate **ISO kit** and, less universally, a **JIS kit** — add-on packs containing the tall Enter, the short Left Shift, the extra ISO key, and, for JIS, the shrunk spacebar and the extra bottom-row keycaps. Buying the base kit alone for an ISO or JIS board leaves those positions uncovered — either bare switches with no cap, or a cap borrowed from elsewhere on the board that doesn't quite sit right. Buying an ISO kit for an ANSI board is the same mistake run in reverse: keycaps that are the wrong shape for the switches underneath them.
+
+<Callout type="warn" title="The most common first-keycap-set mistake">
+  Checking a board's physical layout takes under a minute. Skipping that check is the single most common reason a first keycap-set order arrives and doesn't fully fit — not a defective set, just the wrong one for the board. Confirm the layout before adding anything to a cart.
+</Callout>
+
+## Regional defaults — and why they're defaults, not rules
+
+Geography predicts physical layout more reliably than almost anything else about a board, which is useful shorthand but not a substitute for actually checking. <Mono>ANSI</Mono> is the default across North America — it's what most domestic vendors ship unless a listing says otherwise. <Mono>ISO</Mono> is the default across most of continental Europe and the UK, though the UK carries its own ISO variant with a repositioned backslash key and different legends from a German or Nordic ISO board, so "ISO" alone doesn't guarantee two European boards match each other either. <Mono>JIS</Mono> is the standard in Japan, and it's rare to see outside boards actually sold there or by vendors specifically targeting the JP market.
+
+None of this is a rule a specific board has to follow. Global group-buy vendors routinely offer the same case in both ANSI and ISO PCB options, aimed squarely at buyers outside the vendor's home region, and a European buyer ordering from a US-based group buy needs to actively select ISO rather than assume it. The region a board ships from is a hint. The PCB the vendor actually built is the fact that matters.
+
+## How to check before you buy
+
+<InlineViz
+  src="/article-viz/ansi-iso-jis-keyboard-layout-guide/check-before-buying.svg"
+  alt="A horizontal strip of four numbered panels describing a pre-purchase check: one, look at the Enter key shape in listing photos; two, count the keys beside the spacebar; three, read the vendor's layout field on the spec sheet; four, match that designation exactly to the keycap set's kit options."
+  caption="Four checks, under a minute, before either the board or the keycap set goes in the cart."
+  accent="amber"
+/>
+
+1. **Look at the Enter key in the listing photos.** A wide horizontal rectangle is ANSI. A tall L-shape spanning two rows is ISO or JIS. This is the fastest single tell and it's visible in almost every product photo.
+2. **Count the keys around the spacebar.** A spacebar that runs nearly the full width of the bottom row, flanked by a normal set of modifiers, points to ANSI or ISO. A noticeably shorter spacebar with two or three unlabeled keys packed in beside it is JIS.
+3. **Read the vendor's spec sheet, not just the render.** Reputable board and case vendors state the physical layout explicitly — usually as a PCB or case option labeled ANSI, ISO, or JIS, sometimes bundled with a region label like "UK ISO." If a listing doesn't say, that's worth asking about before ordering rather than assuming from the photo alone.
+4. **Match that exact designation against the keycap set's kit list.** A keycap set's product page will list which kits it ships — base kit, ISO kit, JIS kit — as separate add-ons or bundle options. The designation on the board's spec sheet and the kit selected for the keycap set need to be the same word.
+
+<Callout type="note" title="Measuring an existing board">
+  For a board already in hand rather than one still in a cart, a keycap puller and a ruler settle it directly: pull the Left Shift keycap and measure it. Right at 2.25u (about 45mm edge to edge) is ANSI. Noticeably shorter, close to 1.25u (about 25mm), is ISO or JIS — and the Enter key's shape settles which of those two it is.
+</Callout>
+
+## What happens if you get it wrong
+
+Ordering the wrong kit doesn't damage anything — no switch gets forced into the wrong socket, no plate gets cut wrong — but it does leave a build visibly, annoyingly incomplete. An ANSI keycap set on an ISO board leaves the tall Enter switch and the extra ISO-key switch bare, with no keycap in the set that fits either one, and the Left Shift keycap sits noticeably short of its switch stem's neighbors, either overhanging awkwardly or left off entirely. Running a JIS board with an ANSI-only or ISO-only set is worse: the shrunk JIS spacebar switch and its neighboring thumb-key switches have nothing in a non-JIS kit that comes close to fitting.
+
+The fix afterward is the same purchase that should have happened the first time — the correct add-on kit, bought separately, usually at a fraction of the base set's price since it's a handful of keycaps rather than the full set. Most keycap-set vendors sell ISO and JIS kits exactly for this reason, including as a standalone add-on for someone who already owns the base set and only needs the missing pieces. It's a recoverable mistake, just a second order and a second wait that a one-minute check upfront would have skipped entirely.
+
+## What to watch for next
+
+The keycap side of this problem has gotten more forgiving over the past few years — ISO kits are close to universal on group-buy sets now, and JIS kits, while still less common, show up on a growing share of listings as more vendors sell directly into the Japanese market rather than treating it as an afterthought. The gap that hasn't closed is on the board side: barebones kit vendors are inconsistent about stating physical layout as clearly as they state hot-swap or mount style, and that inconsistency is exactly what leaves the burden of checking on the buyer. Until spec sheets standardize on stating ANSI, ISO, or JIS as plainly as they now state switch pin count, reading the Enter key shape in the listing photo remains the fastest, most reliable check a buyer has.

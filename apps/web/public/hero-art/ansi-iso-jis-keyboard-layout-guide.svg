@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — annotated bottom-right key cluster shown three times: ANSI's wide single-row Enter, ISO's tall hooked Enter that climbs into the row above, and JIS's narrower Enter crowded by an extra yen-key column</title>
+
+  <!-- ════════════════════════════════════════════════════════════════════════
+       COMPOSITION: the same bottom-right corner of a keyboard (three keys
+       above Enter, Enter itself, three-to-four keys and Shift below) redrawn
+       three times side by side — ANSI, ISO, JIS — so the Enter-key silhouette
+       does the explaining. Rows share a coordinate frame across all three
+       panels so the eye can compare shapes at a glance. Coral marks the
+       Enter key itself in every panel — the one shape that changes.
+       ════════════════════════════════════════════════════════════════════════ -->
+
+  <!-- Wide coral stage wash behind the whole comparison -->
+  <ellipse cx="600" cy="300" rx="560" ry="170" fill="oklch(0.68 0.165 28 / 0.07)" stroke="none"/>
+
+  <!-- Top framing caption -->
+  <text x="600" y="150" font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.4" stroke="none" text-anchor="middle" letter-spacing="0.06em">SAME CORNER OF THE BOARD, THREE STANDARDS</text>
+
+  <!-- ── PANEL 1 — ANSI ─────────────────────────────────────────────────────── -->
+  <g transform="translate(36,110) scale(0.78)" stroke-width="2.564">
+    <!-- Row above Enter -->
+    <rect x="246" y="172" width="56" height="56" rx="6"/>
+    <rect x="310" y="172" width="56" height="56" rx="6"/>
+    <rect x="374" y="172" width="56" height="56" rx="6"/>
+    <!-- Home row -->
+    <rect x="88" y="236" width="56" height="56" rx="6"/>
+    <rect x="152" y="236" width="56" height="56" rx="6"/>
+    <rect x="216" y="236" width="56" height="56" rx="6"/>
+    <!-- Enter — wide, single row, ANSI's signature -->
+    <rect x="280" y="236" width="150" height="56" rx="6" fill="oklch(0.68 0.165 28 / 0.16)" stroke="oklch(0.68 0.165 28)"/>
+    <!-- Bottom / shift row -->
+    <rect x="48" y="300" width="56" height="56" rx="6"/>
+    <rect x="112" y="300" width="56" height="56" rx="6"/>
+    <rect x="176" y="300" width="56" height="56" rx="6"/>
+    <rect x="240" y="300" width="190" height="56" rx="6" stroke-opacity="0.85"/>
+  </g>
+
+  <!-- ── PANEL 2 — ISO ──────────────────────────────────────────────────────── -->
+  <g transform="translate(431,110) scale(0.78)" stroke-width="2.564">
+    <!-- Row above Enter — one key shorter, Enter's top hook sits here -->
+    <rect x="148" y="172" width="56" height="56" rx="6"/>
+    <rect x="212" y="172" width="56" height="56" rx="6"/>
+    <rect x="276" y="172" width="56" height="56" rx="6"/>
+    <!-- Enter — tall hook, narrow on top, wider where it drops into the row below -->
+    <path d="M 340 172 L 430 172 L 430 292 L 290 292 L 290 236 L 340 236 Z"
+      fill="oklch(0.68 0.165 28 / 0.16)" stroke="oklch(0.68 0.165 28)"/>
+    <!-- Home row -->
+    <rect x="98" y="236" width="56" height="56" rx="6"/>
+    <rect x="162" y="236" width="56" height="56" rx="6"/>
+    <rect x="226" y="236" width="56" height="56" rx="6"/>
+    <!-- Bottom / shift row — right shift is shorter to make room -->
+    <rect x="44" y="300" width="56" height="56" rx="6"/>
+    <rect x="108" y="300" width="56" height="56" rx="6"/>
+    <rect x="172" y="300" width="56" height="56" rx="6"/>
+    <rect x="236" y="300" width="56" height="56" rx="6"/>
+    <rect x="300" y="300" width="130" height="56" rx="6" stroke-opacity="0.85"/>
+  </g>
+
+  <!-- ── PANEL 3 — JIS ──────────────────────────────────────────────────────── -->
+  <g transform="translate(827,110) scale(0.78)" stroke-width="2.564">
+    <!-- Row above Enter -->
+    <rect x="246" y="172" width="56" height="56" rx="6"/>
+    <rect x="310" y="172" width="56" height="56" rx="6"/>
+    <rect x="374" y="172" width="56" height="56" rx="6"/>
+    <!-- Home row -->
+    <rect x="90" y="236" width="56" height="56" rx="6"/>
+    <rect x="154" y="236" width="56" height="56" rx="6"/>
+    <rect x="218" y="236" width="56" height="56" rx="6"/>
+    <!-- Extra yen/backslash column — squeezes Enter narrower than ANSI's -->
+    <rect x="282" y="236" width="40" height="56" rx="5" stroke-opacity="0.85"/>
+    <!-- Enter — single row like ANSI, but noticeably narrower -->
+    <rect x="330" y="236" width="100" height="56" rx="6" fill="oklch(0.68 0.165 28 / 0.16)" stroke="oklch(0.68 0.165 28)"/>
+    <!-- Bottom row -->
+    <rect x="74" y="300" width="56" height="56" rx="6"/>
+    <rect x="138" y="300" width="56" height="56" rx="6"/>
+    <rect x="202" y="300" width="56" height="56" rx="6"/>
+    <!-- Extra key crowding right shift shorter still -->
+    <rect x="266" y="300" width="46" height="56" rx="5" stroke-opacity="0.85"/>
+    <rect x="320" y="300" width="110" height="56" rx="6" stroke-opacity="0.85"/>
+  </g>
+
+  <!-- Focal dot — the ISO hook's inner corner, the single most information-
+       dense point in the comparison: where the shape breaks from the others -->
+  <circle cx="657" cy="294" r="6" fill="oklch(0.68 0.165 28 / 0.95)" stroke="oklch(0.68 0.165 28)"/>
+
+  <!-- Dashed baseline tying the three panels together as one comparison -->
+  <line x1="36" y1="400" x2="1164" y2="400" stroke-opacity="0.28" stroke-dasharray="4 6"/>
+
+  <!-- Panel labels -->
+  <g font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" fill-opacity="0.75" stroke="none" text-anchor="middle" letter-spacing="0.05em">
+    <text x="204" y="430">ANSI</text>
+    <text x="599" y="430">ISO</text>
+    <text x="995" y="430">JIS</text>
+  </g>
+
+  <!-- Per-panel mono descriptors -->
+  <g font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace" font-size="10" fill="oklch(0.78 0.005 90)" fill-opacity="0.42" stroke="none" text-anchor="middle" letter-spacing="0.02em">
+    <text x="204" y="452">2.25U · SINGLE ROW</text>
+    <text x="599" y="452">HOOKS INTO ROW ABOVE</text>
+    <text x="995" y="452">NARROWER · YEN COLUMN</text>
+  </g>
+
+  <!-- Bottom technical caption -->
+  <text x="36" y="706" font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace" font-size="10" fill="oklch(0.78 0.005 90)" fill-opacity="0.35" stroke="none" letter-spacing="0.03em">THE ENTER KEY IS THE FASTEST TELL — ITS WIDTH, ITS HEIGHT, AND WHAT SITS NEXT TO IT</text>
+
+  <!-- Bronze theme dot — family ornamental anchor, upper-right margin -->
+  <circle cx="1148" cy="92" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

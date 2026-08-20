@@ -1,0 +1,25 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-20T00:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "ansi-iso-jis-keyboard-layout-guide",
+  "article_pillar": "guides",
+  "section_anchor": "the-three-layouts-physically",
+  "brief_summary": "Five-row by three-column matrix comparing ANSI, ISO, and JIS physical keyboard layouts across Enter key shape, Left Shift width, spacebar width, extra key count, and total key count on a full-size board. ANSI renders as a plain baseline column; ISO and JIS cells are outlined in amber wherever they diverge from ANSI.",
+  "target": "apps/web/public/article-viz/ansi-iso-jis-keyboard-layout-guide/layout-anatomy.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "ansi-iso-jis-keyboard-layout-guide.mdx § 'The three layouts, physically' — 'ANSI uses a wide horizontal rectangle, one row tall. ISO and JIS both use a tall, L-shaped Enter that spans two rows'",
+    "ansi-iso-jis-keyboard-layout-guide.mdx § 'The three layouts, physically' — 'ISO and JIS shrink the Left Shift key from ANSI's 2.25u down to 1.25u'",
+    "ansi-iso-jis-keyboard-layout-guide.mdx § 'The three layouts, physically' — 'JIS shrinks the spacebar from the standard 6.25u down to roughly 4u and fills the freed width with three extra thumb-row keys'",
+    "ansi-iso-jis-keyboard-layout-guide.mdx § 'The three layouts, physically' — 'A full-size ANSI board runs 104 keys; ISO runs 105; JIS runs 109' citing switchandclick.com/ansi-vs-iso-layout/"
+  ],
+  "outputs": ["apps/web/public/article-viz/ansi-iso-jis-keyboard-layout-guide/layout-anatomy.svg"],
+  "warnings": []
+}

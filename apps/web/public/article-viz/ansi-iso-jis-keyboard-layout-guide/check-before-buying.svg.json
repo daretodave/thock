@@ -1,0 +1,25 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-20T00:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "ansi-iso-jis-keyboard-layout-guide",
+  "article_pillar": "guides",
+  "section_anchor": "how-to-check-before-you-buy",
+  "brief_summary": "Horizontal strip of four numbered process panels describing the pre-purchase check: look at the Enter key shape in listing photos, count the keys beside the spacebar, read the vendor's layout field on the spec sheet, and match that exact designation to the keycap set's kit options. The fourth panel is highlighted amber as the decisive step.",
+  "target": "apps/web/public/article-viz/ansi-iso-jis-keyboard-layout-guide/check-before-buying.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "ansi-iso-jis-keyboard-layout-guide.mdx § 'How to check before you buy' — 'Look at the Enter key in the listing photos. A wide horizontal rectangle is ANSI. A tall L-shape spanning two rows is ISO or JIS.'",
+    "ansi-iso-jis-keyboard-layout-guide.mdx § 'How to check before you buy' — 'Count the keys around the spacebar... A noticeably shorter spacebar with two or three unlabeled keys packed in beside it is JIS.'",
+    "ansi-iso-jis-keyboard-layout-guide.mdx § 'How to check before you buy' — 'Read the vendor's spec sheet, not just the render... stated explicitly — usually as a PCB or case option labeled ANSI, ISO, or JIS'",
+    "ansi-iso-jis-keyboard-layout-guide.mdx § 'How to check before you buy' — 'Match that exact designation against the keycap set's kit list... need to be the same word.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/ansi-iso-jis-keyboard-layout-guide/check-before-buying.svg"],
+  "warnings": []
+}

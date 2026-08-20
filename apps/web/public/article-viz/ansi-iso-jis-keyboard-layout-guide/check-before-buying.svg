@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Four numbered panels describing how to check a board's physical layout before buying a keycap set: look at the Enter key shape, count the keys beside the spacebar, read the vendor spec sheet, and match that designation to the keycap set's kit options</title>
+
+  <text x="40" y="45" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" font-weight="600" letter-spacing="0.03em" opacity="0.85">BEFORE EITHER GOES IN THE CART</text>
+  <line x1="40" y1="60" x2="1160" y2="60" stroke-opacity="0.2"/>
+
+  <!-- Panel 1 -->
+  <rect x="40" y="90" width="260" height="290" rx="10" stroke-opacity="0.4"/>
+  <circle cx="80" cy="130" r="18" fill="oklch(0.78 0.10 80)" fill-opacity="0.15" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.9"/>
+  <text x="80" y="136" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" font-weight="700">1</text>
+  <!-- enter-key glyph, wide rect vs L-shape -->
+  <rect x="65" y="170" width="80" height="24" rx="4" stroke-opacity="0.7"/>
+  <path d="M 165 170 h 60 v 48 h -40 v -24 h -20 z" stroke-opacity="0.7"/>
+  <text x="65" y="235" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" font-weight="600">Look at the Enter key</text>
+  <text x="65" y="258" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">Wide rectangle = ANSI.</text>
+  <text x="65" y="276" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">Tall L-shape = ISO/JIS.</text>
+  <text x="65" y="298" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">Visible in listing photos.</text>
+
+  <!-- Panel 2 -->
+  <rect x="320" y="90" width="260" height="290" rx="10" stroke-opacity="0.4"/>
+  <circle cx="360" cy="130" r="18" fill="oklch(0.78 0.10 80)" fill-opacity="0.15" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.9"/>
+  <text x="360" y="136" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" font-weight="700">2</text>
+  <!-- spacebar glyph, short bar plus extra keys -->
+  <rect x="345" y="180" width="90" height="18" rx="4" stroke-opacity="0.7"/>
+  <rect x="440" y="180" width="18" height="18" rx="3" stroke-opacity="0.7"/>
+  <rect x="463" y="180" width="18" height="18" rx="3" stroke-opacity="0.7"/>
+  <text x="345" y="235" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" font-weight="600">Count spacebar keys</text>
+  <text x="345" y="258" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">Extra unlabeled keys</text>
+  <text x="345" y="276" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">beside a shortened</text>
+  <text x="345" y="294" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">spacebar means JIS.</text>
+
+  <!-- Panel 3 -->
+  <rect x="600" y="90" width="260" height="290" rx="10" stroke-opacity="0.4"/>
+  <circle cx="640" cy="130" r="18" fill="oklch(0.78 0.10 80)" fill-opacity="0.15" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.9"/>
+  <text x="640" y="136" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" font-weight="700">3</text>
+  <!-- spec sheet glyph, lines of text -->
+  <rect x="625" y="170" width="120" height="45" rx="4" stroke-opacity="0.5"/>
+  <line x1="635" y1="182" x2="720" y2="182" stroke-opacity="0.6"/>
+  <line x1="635" y1="194" x2="735" y2="194" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.9"/>
+  <line x1="635" y1="206" x2="700" y2="206" stroke-opacity="0.6"/>
+  <text x="625" y="235" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" font-weight="600">Read the spec sheet</text>
+  <text x="625" y="258" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">Find the layout field —</text>
+  <text x="625" y="276" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">ANSI, ISO, or JIS should</text>
+  <text x="625" y="294" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">be stated explicitly.</text>
+
+  <!-- Panel 4 -->
+  <rect x="880" y="90" width="260" height="290" rx="10" fill="oklch(0.78 0.10 80)" fill-opacity="0.08" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.85"/>
+  <circle cx="920" cy="130" r="18" fill="oklch(0.78 0.10 80)" fill-opacity="0.2" stroke="oklch(0.78 0.10 80)" stroke-opacity="1"/>
+  <text x="920" y="136" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" font-weight="700">4</text>
+  <!-- match glyph, two labels joined -->
+  <rect x="905" y="175" width="60" height="24" rx="4" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.9"/>
+  <path d="M 968 187 h 20" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.9"/>
+  <rect x="991" y="175" width="60" height="24" rx="4" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.9"/>
+  <text x="905" y="235" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" font-weight="600">Match the keycap kit</text>
+  <text x="905" y="258" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">Buy the ISO or JIS kit</text>
+  <text x="905" y="276" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">only if the board's spec</text>
+  <text x="905" y="294" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">sheet says the same word.</text>
+
+  <!-- Connecting arrows between panels -->
+  <path d="M 300 235 h 20" stroke-opacity="0.4"/>
+  <path d="M 580 235 h 20" stroke-opacity="0.4"/>
+  <path d="M 860 235 h 20" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.7"/>
+
+  <!-- Brass-bronze theme dot -->
+  <circle cx="1170" cy="25" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>
