@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-12T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "hot-swap-sockets-tradeoffs",
+  "article_pillar": "ideas",
+  "section_anchor": "what-a-socket-actually-is",
+  "brief_summary": "Side-by-side cross-section diptych. Left panel ('soldered') shows a switch's two legs fused into plated PCB through-holes with a coral solder fillet, labelled fused / permanent — no removal. Right panel ('hot-swap') shows the same switch legs sliding into a coral-outlined spring-contact socket receptacle above the PCB, with a second switch shown lifted free beside it, labelled spring-held / removable — no iron needed.",
+  "target": "apps/web/public/article-viz/hot-swap-sockets-tradeoffs/socket-cross-section.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "hot-swap-sockets-tradeoffs.mdx § 'What a socket actually is' — 'A hot-swap socket is a small spring-contact receptacle soldered to the PCB in the same footprint a switch's legs would otherwise be soldered into directly. Instead of a switch's two metal legs going straight into plated through-holes and getting flowed with solder, the legs slide into a receptacle that grips them under spring tension.'",
+    "hot-swap-sockets-tradeoffs.mdx § 'What a socket actually is' — 'A full-board switch trial that used to be an evening with an iron is now closer to ten minutes with a switch puller.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/hot-swap-sockets-tradeoffs/socket-cross-section.svg"],
+  "warnings": []
+}

@@ -11,6 +11,16 @@
       }
     },
     {
+      "slug": "hot-swap-sockets-tradeoffs",
+      "readTime": 8,
+      "frontmatter": {
+        "title": "Hot-swap sockets: what you actually give up for the convenience",
+        "lede": "Tool-free switch swapping turned hot-swap PCBs into the default spec across the hobby, and the default is earned. Here is the honest, specific list of what a socket costs against a soldered joint — and the two cases where soldering is still the right call.",
+        "pillar": "ideas",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "wuque-studio-summer-update",
       "readTime": 7,
       "frontmatter": {
@@ -6181,5 +6191,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-08-20T16:20:06.040Z"
+  "generatedAt": "2026-08-20T17:33:54.826Z"
 }

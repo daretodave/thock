@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Two-column ledger comparing hot-swap sockets and soldered PCBs, listing what each side gains and what each side gives up</title>
+
+  <text x="600" y="56" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">neither column is empty</text>
+
+  <!-- Column divider -->
+  <line x1="600" y1="90" x2="600" y2="520" stroke-opacity="0.18" stroke-dasharray="6 4"/>
+
+  <!-- ============ LEFT COLUMN — hot-swap ============ -->
+  <text x="300" y="110" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">hot-swap</text>
+  <line x1="180" y1="122" x2="420" y2="122" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.5"/>
+
+  <!-- Card 1 -->
+  <rect x="140" y="145" width="420" height="70" rx="8" fill="oklch(0.68 0.165 28 / 0.07)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.6"/>
+  <text x="165" y="172" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none">Tool-free switch swapping</text>
+  <text x="165" y="194" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">pull and push, minutes not an evening</text>
+
+  <!-- Card 2 -->
+  <rect x="140" y="230" width="420" height="70" rx="8" fill="oklch(0.68 0.165 28 / 0.07)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.6"/>
+  <text x="165" y="257" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none">Marginal stack-height cost</text>
+  <text x="165" y="279" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">roughly a millimeter or two of socket clearance</text>
+
+  <!-- Card 3 -->
+  <rect x="140" y="315" width="420" height="70" rx="8" fill="oklch(0.68 0.165 28 / 0.07)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.6"/>
+  <text x="165" y="342" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none">Rare-but-real contact wear</text>
+  <text x="165" y="364" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">spring tension can loosen after years of cycles</text>
+
+  <!-- Card 4 -->
+  <rect x="140" y="400" width="420" height="70" rx="8" fill="oklch(0.68 0.165 28 / 0.07)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.6"/>
+  <text x="165" y="427" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none">Bent-pin risk from careless removal</text>
+  <text x="165" y="449" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">fixed by a puller and a straight pull</text>
+
+  <!-- ============ RIGHT COLUMN — soldered ============ -->
+  <text x="900" y="110" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">soldered</text>
+  <line x1="780" y1="122" x2="1020" y2="122" stroke-opacity="0.4"/>
+
+  <!-- Card 1 -->
+  <rect x="740" y="145" width="420" height="70" rx="8" stroke-opacity="0.5" fill="oklch(0.78 0.005 90 / 0.04)"/>
+  <text x="765" y="172" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none">Permanent, low-failure-surface joint</text>
+  <text x="765" y="194" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">no spring contact to fatigue, ever</text>
+
+  <!-- Card 2 -->
+  <rect x="740" y="230" width="420" height="70" rx="8" stroke-opacity="0.5" fill="oklch(0.78 0.005 90 / 0.04)"/>
+  <text x="765" y="257" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none">No swapping without desoldering</text>
+  <text x="765" y="279" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">an iron and a desoldering pump, minimum</text>
+
+  <!-- Card 3 -->
+  <rect x="740" y="315" width="420" height="70" rx="8" stroke-opacity="0.5" fill="oklch(0.78 0.005 90 / 0.04)"/>
+  <text x="765" y="342" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none">Zero tolerance for experimentation</text>
+  <text x="765" y="364" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">the switch you solder is the switch you keep</text>
+
+  <!-- Card 4 -->
+  <rect x="740" y="400" width="420" height="70" rx="8" stroke-opacity="0.5" fill="oklch(0.78 0.005 90 / 0.04)"/>
+  <text x="765" y="427" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none">One dead switch is a full repair job</text>
+  <text x="765" y="449" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">rare, but not a nonexistent event</text>
+
+  <!-- Bottom caption -->
+  <text x="600" y="508" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">four rows each — the argument is which four you'd rather live with</text>
+
+  <!-- Bronze theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

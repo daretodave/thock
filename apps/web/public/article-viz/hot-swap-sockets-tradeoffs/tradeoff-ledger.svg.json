@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-12T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "hot-swap-sockets-tradeoffs",
+  "article_pillar": "ideas",
+  "section_anchor": "two-absolutist-takes-both-wrong",
+  "brief_summary": "Two-column ledger, four cards per column. Left column ('hot-swap', coral-filled cards) lists: tool-free switch swapping; marginal stack-height cost; rare-but-real contact wear; bent-pin risk from careless removal. Right column ('soldered', neutral-outlined cards) lists: permanent low-failure-surface joint; no swapping without desoldering; zero tolerance for experimentation; one dead switch is a full repair job. Caption frames it as a genuine tradeoff rather than a one-sided win.",
+  "target": "apps/web/public/article-viz/hot-swap-sockets-tradeoffs/tradeoff-ledger.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "hot-swap-sockets-tradeoffs.mdx § 'What the socket costs, physically' — 'A hot-swap socket sits proud of the PCB by roughly a millimeter or two...'; 'a socket connection... can, very slowly, loosen or develop contact resistance across years of insertion cycles...'; 'Pulling a switch out at an angle... can bend the socket's spring contact.'",
+    "hot-swap-sockets-tradeoffs.mdx § 'The soldered side of the ledger' — 'A soldered joint has a marginally lower failure surface than a socket... What a soldered PCB gives up in exchange is total: no swapping, no trying a new switch on a whim, no fixing one bad switch without an iron and a desoldering pump on hand. If a switch on a soldered board fails years into ownership... replacing it is a desoldering job.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/hot-swap-sockets-tradeoffs/tradeoff-ledger.svg"],
+  "warnings": []
+}

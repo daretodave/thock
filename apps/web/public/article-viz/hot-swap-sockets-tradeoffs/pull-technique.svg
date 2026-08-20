@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Do and don't diagram for removing a switch from a hot-swap socket — straight pull with a puller versus levering at an angle with a screwdriver</title>
+
+  <text x="600" y="54" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">the one habit that prevents bent sockets</text>
+
+  <!-- ============ LEFT PANEL — do ============ -->
+  <circle cx="150" cy="100" r="16" stroke="oklch(0.68 0.165 28)" stroke-width="2.5"/>
+  <path d="M 142 100 L 148 107 L 160 92" stroke="oklch(0.68 0.165 28)" stroke-width="2.5" fill="none"/>
+  <text x="300" y="106" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">puller, straight up, even pressure</text>
+
+  <!-- PCB -->
+  <rect x="140" y="360" width="320" height="24" stroke-opacity="0.7" fill="oklch(0.78 0.005 90 / 0.05)"/>
+  <!-- Socket -->
+  <rect x="272" y="330" width="56" height="30" rx="4" stroke-opacity="0.75"/>
+
+  <!-- Switch housing, level, being pulled straight up -->
+  <rect x="240" y="200" width="120" height="90" rx="8" stroke-width="2.5"/>
+
+  <!-- Switch legs, straight and even -->
+  <line x1="286" y1="290" x2="286" y2="330" stroke-width="2"/>
+  <line x1="314" y1="290" x2="314" y2="330" stroke-width="2"/>
+
+  <!-- Puller jaws hooked under housing lip, both sides symmetric -->
+  <path d="M 210 260 L 240 260 L 240 280" stroke="oklch(0.68 0.165 28)" stroke-width="2.5" fill="none"/>
+  <path d="M 390 260 L 360 260 L 360 280" stroke="oklch(0.68 0.165 28)" stroke-width="2.5" fill="none"/>
+  <line x1="210" y1="180" x2="210" y2="260" stroke="oklch(0.68 0.165 28)" stroke-width="2.5"/>
+  <line x1="390" y1="180" x2="390" y2="260" stroke="oklch(0.68 0.165 28)" stroke-width="2.5"/>
+  <path d="M 210 180 L 390 180" stroke="oklch(0.68 0.165 28)" stroke-width="2.5"/>
+
+  <!-- Even vertical lift arrows, both sides -->
+  <path d="M 210 170 L 210 130" stroke="oklch(0.68 0.165 28)" stroke-width="2.5"/>
+  <polygon points="210,118 203,134 217,134" fill="oklch(0.68 0.165 28)" stroke="none"/>
+  <path d="M 390 170 L 390 130" stroke="oklch(0.68 0.165 28)" stroke-width="2.5"/>
+  <polygon points="390,118 383,134 397,134" fill="oklch(0.68 0.165 28)" stroke="none"/>
+
+  <text x="300" y="410" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">legs exit the socket straight — contact arms stay true</text>
+
+  <!-- ============ DIVIDER ============ -->
+  <line x1="600" y1="80" x2="600" y2="420" stroke-opacity="0.18" stroke-dasharray="6 4"/>
+
+  <!-- ============ RIGHT PANEL — don't ============ -->
+  <circle cx="750" cy="100" r="16" stroke="oklch(0.62 0.13 25)" stroke-width="2.5"/>
+  <path d="M 743 93 L 757 107 M 757 93 L 743 107" stroke="oklch(0.62 0.13 25)" stroke-width="2.5"/>
+  <text x="900" y="106" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.95">screwdriver, levered at an angle</text>
+
+  <!-- PCB right -->
+  <rect x="740" y="360" width="320" height="24" stroke-opacity="0.7" fill="oklch(0.78 0.005 90 / 0.05)"/>
+  <!-- Socket right, one side visibly splayed -->
+  <rect x="872" y="330" width="56" height="30" rx="4" stroke-opacity="0.75"/>
+  <path d="M 928 332 L 942 322" stroke="oklch(0.62 0.13 25)" stroke-width="2.5"/>
+
+  <!-- Switch housing right, tilted -->
+  <g transform="rotate(-18 900 245)">
+    <rect x="840" y="200" width="120" height="90" rx="8" stroke-width="2.5"/>
+    <line x1="886" y1="290" x2="882" y2="330" stroke-width="2"/>
+    <line x1="914" y1="290" x2="922" y2="330" stroke-width="2"/>
+  </g>
+
+  <!-- Screwdriver prying against one edge -->
+  <line x1="972" y1="286" x2="1020" y2="240" stroke="oklch(0.62 0.13 25)" stroke-width="3"/>
+  <path d="M 960 296 L 976 280 L 984 292 L 968 308 Z" fill="oklch(0.62 0.13 25 / 0.3)" stroke="oklch(0.62 0.13 25)" stroke-width="2"/>
+
+  <!-- Side-load / bend callout -->
+  <path d="M 940 320 Q 955 305 948 292" stroke="oklch(0.62 0.13 25)" stroke-width="2" fill="none" stroke-dasharray="3 3"/>
+  <text x="1010" y="345" font-family="Newsreader, serif" font-size="13" font-style="italic" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle">bent contact</text>
+
+  <text x="900" y="410" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.75">side-load bends the receptacle — next switch seats loose</text>
+
+  <!-- Bronze theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

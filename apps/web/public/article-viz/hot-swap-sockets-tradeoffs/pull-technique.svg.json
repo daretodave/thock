@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-12T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "hot-swap-sockets-tradeoffs",
+  "article_pillar": "ideas",
+  "section_anchor": "what-the-socket-costs-physically",
+  "brief_summary": "Do/don't diagram split into two panels. Left panel, marked with a coral check, shows a switch puller's jaws hooked symmetrically under the switch housing lip pulling straight upward with even arrows on both sides, captioned 'legs exit the socket straight — contact arms stay true.' Right panel, marked with a warm-red X, shows a screwdriver levering one side of a tilted switch housing at an angle against the socket, with a bent/splayed contact arm called out, captioned 'side-load bends the receptacle — next switch seats loose.'",
+  "target": "apps/web/public/article-viz/hot-swap-sockets-tradeoffs/pull-technique.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "caution_color": { "name": "warm-red (down token)", "oklch": "oklch(0.62 0.13 25)" },
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "hot-swap-sockets-tradeoffs.mdx § 'What the socket costs, physically' — 'Pulling a switch out at an angle, or levering it out against the housing edge with a fingernail or a flathead screwdriver instead of using a proper puller, puts side-load on the legs and can bend the socket's spring contact — sometimes badly enough that the socket stops gripping the next switch reliably.'",
+    "hot-swap-sockets-tradeoffs.mdx § 'What the socket costs, physically' — 'seat a switch puller's jaws under the switch housing, not the stem, and pull straight up with even pressure. No rocking, no prying at an angle... A switch puller is built to apply vertical force evenly across both sides of the housing at once; fingers and screwdrivers are not.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/hot-swap-sockets-tradeoffs/pull-technique.svg"],
+  "warnings": []
+}
