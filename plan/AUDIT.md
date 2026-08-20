@@ -11598,7 +11598,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/keycap-profiles-compared.mdx
 - action: add [keycap-profiles-compared](/article/keycap-profiles-compared) to ansi-iso-jis-keyboard-layout-guide body, or vice versa
 
-### [HOT PURSUIT] [content-gap] [7] ideas pillar — 1 of ≥2 articles in last 30d
+### [x] [HOT PURSUIT] [content-gap] [7] ideas pillar — 1 of ≥2 articles in last 30d — addressed in d702feb9, closes #884
 - category: content-gaps
 - impact: 7 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -11609,4 +11609,61 @@ passes accumulate signals.)
 - score: 7
 - next: /ship-content → ideas pillar article
 - issue: #884
+> Filed 2026-08-20 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+> **Resolved (2026-08-20):** shipped `hot-swap-sockets-tradeoffs.mdx` (publishedAt 2026-08-12, gap-fill midpoint of the 5-day gap between `brass-weight-mod`-adjacent corpus dates 08-10 and 08-15) — "Hot-swap sockets: what you actually give up for the convenience," a myth-busting mod-format piece on hot-swap PCB sockets vs. soldered joints. Ideas pillar now carries a fresh anchor inside the 30-day window. `pnpm verify` full gate green: typecheck, lint, 835+164 unit tests, 207 script tests, data:validate (81 records), build, size (108.7 KB/200 KB budget), 1159/1159 e2e.
+
+### [ ] [cross-links] [4.5] hot-swap-sockets-tradeoffs ↔ pe-foam-mod — no prose cross-link (same pillar, ≥2 shared tags: modding, beginner)
+- category: cross-links
+- filed: 2026-08-20 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: modding, beginner
+- article-a: apps/web/src/content/articles/hot-swap-sockets-tradeoffs.mdx
+- article-b: apps/web/src/content/articles/pe-foam-mod.mdx
+- action: add [pe-foam-mod](/article/pe-foam-mod) to hot-swap-sockets-tradeoffs body, or vice versa
+
+### [ ] [cross-links] [4.5] hot-swap-sockets-tradeoffs ↔ stabilizer-servicing-guide — no prose cross-link (same pillar, ≥2 shared tags: modding, beginner)
+- category: cross-links
+- filed: 2026-08-20 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: modding, beginner
+- article-a: apps/web/src/content/articles/hot-swap-sockets-tradeoffs.mdx
+- article-b: apps/web/src/content/articles/stabilizer-servicing-guide.mdx
+- action: add [stabilizer-servicing-guide](/article/stabilizer-servicing-guide) to hot-swap-sockets-tradeoffs body, or vice versa
+
+### [ ] [cross-links] [4.5] hot-swap-sockets-tradeoffs ↔ tape-mod — no prose cross-link (same pillar, ≥2 shared tags: modding, beginner)
+- category: cross-links
+- filed: 2026-08-20 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: modding, beginner
+- article-a: apps/web/src/content/articles/hot-swap-sockets-tradeoffs.mdx
+- article-b: apps/web/src/content/articles/tape-mod.mdx
+- action: add [tape-mod](/article/tape-mod) to hot-swap-sockets-tradeoffs body, or vice versa
+
+### [ ] [cross-links] [4.5] hot-swap-sockets-tradeoffs ↔ typing-tests-lie — no prose cross-link (same pillar, ≥2 shared tags: modding, beginner)
+- category: cross-links
+- filed: 2026-08-20 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: modding, beginner
+- article-a: apps/web/src/content/articles/hot-swap-sockets-tradeoffs.mdx
+- article-b: apps/web/src/content/articles/typing-tests-lie.mdx
+- action: add [typing-tests-lie](/article/typing-tests-lie) to hot-swap-sockets-tradeoffs body, or vice versa
+
+### [HOT PURSUIT] [content-gap] [7] trends pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 8 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: trends
+- window-count: 1
+- window-start: 2026-07-21
+- score: 7
+- next: /ship-content → trends pillar article
 > Filed 2026-08-20 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
