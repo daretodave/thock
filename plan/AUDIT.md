@@ -11670,7 +11670,7 @@ passes accumulate signals.)
 > Filed 2026-08-20 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 > **Resolved (2026-08-21):** shipped `hall-effect-rapid-trigger-plateau.mdx` (publishedAt 2026-08-12, gap-fill midpoint of the 18-day gap between `gmk-cyl-ta-neo-production-tracking` on 2026-08-03 and today's sentinel) — "Hall-effect stopped climbing. That's not the same as cooling off," reading the tracker's flat-at-97 score as market saturation rather than fading interest. Trends now carries a fresh anchor well inside the 30-day window. `pnpm verify` full gate green: typecheck, unit tests, data:validate, build, 1165/1165 e2e.
 
-### [ ] [cross-links] [4.5] hall-effect-rapid-trigger-plateau ↔ keychron-nova-socket-hybrid — no prose cross-link (same pillar, ≥2 shared tags: magnetic, trends-2026)
+### [x] [cross-links] [4.5] hall-effect-rapid-trigger-plateau ↔ keychron-nova-socket-hybrid — addressed in commit `3e65b13e`, closes #890
 - category: cross-links
 - filed: 2026-08-21 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -11680,6 +11680,8 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/hall-effect-rapid-trigger-plateau.mdx
 - article-b: apps/web/src/content/articles/keychron-nova-socket-hybrid.mdx
 - action: add [keychron-nova-socket-hybrid](/article/keychron-nova-socket-hybrid) to hall-effect-rapid-trigger-plateau body, or vice versa
+- issue: #890
+> **Resolved (2026-08-21):** linked the existing unlinked "Keychron's V6 Ultra HE Kickstarter" mention in hall-effect-rapid-trigger-plateau's "What to watch" section to keychron-nova-socket-hybrid, extending the sentence to name the Nova Socket hybrid design. mentionedParts gate clean. `pnpm verify` full gate green: 1168/1168 e2e.
 
 ### [x] [newsletter] [4.0] Weekly digest — issue 008 due (8 days since issue 7) — addressed in 3fa0b851, closes #888
 - category: content-gaps
