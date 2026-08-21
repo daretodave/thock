@@ -11612,7 +11612,7 @@ passes accumulate signals.)
 > Filed 2026-08-20 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 > **Resolved (2026-08-20):** shipped `hot-swap-sockets-tradeoffs.mdx` (publishedAt 2026-08-12, gap-fill midpoint of the 5-day gap between `brass-weight-mod`-adjacent corpus dates 08-10 and 08-15) — "Hot-swap sockets: what you actually give up for the convenience," a myth-busting mod-format piece on hot-swap PCB sockets vs. soldered joints. Ideas pillar now carries a fresh anchor inside the 30-day window. `pnpm verify` full gate green: typecheck, lint, 835+164 unit tests, 207 script tests, data:validate (81 records), build, size (108.7 KB/200 KB budget), 1159/1159 e2e.
 
-### [ ] [cross-links] [4.5] hot-swap-sockets-tradeoffs ↔ pe-foam-mod — no prose cross-link (same pillar, ≥2 shared tags: modding, beginner)
+### [x] [cross-links] [4.5] hot-swap-sockets-tradeoffs ↔ pe-foam-mod — addressed in commit `84d1ffb2`
 - category: cross-links
 - filed: 2026-08-20 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -11623,7 +11623,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/pe-foam-mod.mdx
 - action: add [pe-foam-mod](/article/pe-foam-mod) to hot-swap-sockets-tradeoffs body, or vice versa
 
-### [ ] [cross-links] [4.5] hot-swap-sockets-tradeoffs ↔ stabilizer-servicing-guide — no prose cross-link (same pillar, ≥2 shared tags: modding, beginner)
+### [x] [cross-links] [4.5] hot-swap-sockets-tradeoffs ↔ stabilizer-servicing-guide — addressed in commit `84d1ffb2`
 - category: cross-links
 - filed: 2026-08-20 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -11634,7 +11634,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/stabilizer-servicing-guide.mdx
 - action: add [stabilizer-servicing-guide](/article/stabilizer-servicing-guide) to hot-swap-sockets-tradeoffs body, or vice versa
 
-### [ ] [cross-links] [4.5] hot-swap-sockets-tradeoffs ↔ tape-mod — no prose cross-link (same pillar, ≥2 shared tags: modding, beginner)
+### [x] [cross-links] [4.5] hot-swap-sockets-tradeoffs ↔ tape-mod — addressed in commit `84d1ffb2`
 - category: cross-links
 - filed: 2026-08-20 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -11645,7 +11645,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/tape-mod.mdx
 - action: add [tape-mod](/article/tape-mod) to hot-swap-sockets-tradeoffs body, or vice versa
 
-### [ ] [cross-links] [4.5] hot-swap-sockets-tradeoffs ↔ typing-tests-lie — no prose cross-link (same pillar, ≥2 shared tags: modding, beginner)
+### [x] [cross-links] [4.5] hot-swap-sockets-tradeoffs ↔ typing-tests-lie — addressed in commit `84d1ffb2`
 - category: cross-links
 - filed: 2026-08-20 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
