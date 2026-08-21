@@ -11,6 +11,16 @@
       }
     },
     {
+      "slug": "hall-effect-rapid-trigger-plateau",
+      "readTime": 6,
+      "frontmatter": {
+        "title": "Hall-effect stopped climbing. That's not the same as cooling off.",
+        "lede": "The Hall Effect/Rapid Trigger category has held flat at 97 on thock's trends tracker for two straight weeks, after climbing from 82 in early July. A flat line at the top of the chart looks like fading interest if you're reading it as a stock ticker. Read as a market snapshot, it says something closer to the opposite.",
+        "pillar": "trends",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "hot-swap-sockets-tradeoffs",
       "readTime": 8,
       "frontmatter": {
@@ -1116,6 +1126,11 @@
       "slug": "qwertykeys",
       "name": "Qwertykeys",
       "category": "brand"
+    },
+    {
+      "slug": "rapid-trigger",
+      "name": "Rapid Trigger",
+      "category": "switch"
     },
     {
       "slug": "retrobrighting",
@@ -6191,5 +6206,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-08-20T17:33:54.826Z"
+  "generatedAt": "2026-08-21T06:23:21.895Z"
 }

@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-12T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "hall-effect-rapid-trigger-plateau",
+  "article_pillar": "trends",
+  "section_anchor": "What \"flat\" means at different altitudes",
+  "brief_summary": "Horizontal bar chart comparing three Trends Tracker rows all marked 'flat' in the same W33 snapshot: Hall Effect/Rapid Trigger at 97 (climbed from 82 over the prior seven weeks), Gateron Oil King at 40 (near-unchanged for eight straight weeks), and Cherry MX2A at -46 (oscillating between -36 and -50). The bars sit on a shared score axis from -50 to 100 to show that 'flat' means a different thing at each altitude.",
+  "target": "apps/web/public/article-viz/hall-effect-rapid-trigger-plateau/three-flats-comparison.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "data/trends/2026-W33.json:rows[0] 'Hall Effect/Rapid Trigger' — direction: 'flat', score: 97, spark: [82, 85, 87, 91, 94, 95, 97, 97]",
+    "data/trends/2026-W33.json:rows[2] 'Gateron Oil King' — direction: 'flat', score: 40, spark: [39, 39, 37, 39, 40, 40, 40, 40], note: 'Lineup and stock unchanged at Gateron, KBDfans, Divinikey since the early-2026 four-switch expansion; no new SKUs or restocks this week.'",
+    "data/trends/2026-W33.json:rows[1] 'Cherry MX2A' — direction: 'flat', score: -46, spark: [-36, -39, -42, -50, -46, -45, -45, -46], note: \"Still shipping as default across mainstream boards, but Cherry's own XTRFY TMR push continues to pull spec-sheet attention away from MX2A.\""
+  ],
+  "outputs": ["apps/web/public/article-viz/hall-effect-rapid-trigger-plateau/three-flats-comparison.svg"],
+  "warnings": []
+}

@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-12T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "hall-effect-rapid-trigger-plateau",
+  "article_pillar": "trends",
+  "section_anchor": "The next axis wasn't going to be actuation forever",
+  "brief_summary": "Four-panel conceptual strip. The first panel (dimmed, checkmarked) is 'Adjustable actuation point — table stakes now'. The remaining three panels, in the article's coral splash, name the emerging differentiation axes: 'Sensor precision — TMR' against XTRFY MK Crystal TMR, 'Housing material & feel' against the Gateron Magnetic Jade, and 'Per-key curve software' against configurator depth.",
+  "target": "apps/web/public/article-viz/hall-effect-rapid-trigger-plateau/next-axis-strip.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "data/trends/2026-W33.json:rows[0] note — 'Keychron V6 Ultra HE Kickstarter enters week 3 near funding plateau; Gamakay Q2 and XTRFY MK Crystal TMR keep magnetic switches the dominant switch story.'",
+    "data/switches/gateron-magnetic-jade.json — 'Hall-effect magnetic linear using a rare-earth magnet in the stem rather than a physical leaf spring for actuation sensing... the actuation point can be adjusted digitally in supporting keyboards; the jade coloring mirrors the Box Jade but the mechanism is entirely distinct.'",
+    "apps/web/src/content/articles/hall-effect-rapid-trigger-plateau.mdx:'The next axis wasn't going to be actuation forever' — naming sensor precision (TMR), housing material and feel, and per-key curve software as the three axes filling the gap left by adjustable actuation becoming table stakes"
+  ],
+  "outputs": ["apps/web/public/article-viz/hall-effect-rapid-trigger-plateau/next-axis-strip.svg"],
+  "warnings": []
+}

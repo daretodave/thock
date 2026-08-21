@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Hall Effect / Rapid Trigger Trends Tracker score, W26 through W33 — values 82, 85, 87, 91, 94, 95, 97, 97 — a steady climb through July flattening into a two-week plateau one point short of the tracker's visible ceiling</title>
+
+  <!-- Title -->
+  <text x="600" y="54" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Hall Effect / Rapid Trigger — Trends Tracker, W26 → W33</text>
+
+  <!-- Chart area: x from 180 to 1080, y from 100 (score 100) to 370 (score 0) -->
+  <!-- Scale: 2.7px per score point. y = 370 - (score * 2.7) -->
+  <!-- 82 -> 149 / 85 -> 141 / 87 -> 135 / 91 -> 124 / 94 -> 116 / 95 -> 114 / 97 -> 108 / 97 -> 108 -->
+  <!-- x positions, 8 weeks equally spaced: 200, 320, 440, 560, 680, 800, 920, 1040 -->
+
+  <!-- Horizontal grid lines -->
+  <line x1="180" y1="370" x2="1080" y2="370" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.4" stroke-width="1.5"/>
+  <line x1="180" y1="289" x2="1080" y2="289" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.12"/>
+  <line x1="180" y1="208" x2="1080" y2="208" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.12"/>
+  <line x1="180" y1="127" x2="1080" y2="127" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.12"/>
+
+  <!-- Ceiling marker near score 100 -->
+  <line x1="180" y1="100" x2="1080" y2="100" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.25" stroke-width="1.5" stroke-dasharray="4 5"/>
+  <text x="1080" y="93" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.5">tracker ceiling ~100</text>
+
+  <!-- Y-axis labels -->
+  <text x="168" y="374" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.45">0</text>
+  <text x="168" y="293" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.4">30</text>
+  <text x="168" y="212" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.4">60</text>
+  <text x="168" y="131" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.4">90</text>
+
+  <!-- Subtle fill below line -->
+  <polygon
+    points="200,149 320,141 440,135 560,124 680,116 800,114 920,108 1040,108 1040,370 200,370"
+    fill="oklch(0.68 0.165 28 / 0.08)"
+    stroke="none"
+  />
+
+  <!-- Plateau bracket over the flat W32-W33 segment -->
+  <line x1="920" y1="90" x2="1040" y2="90" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.6" stroke-width="2"/>
+  <line x1="920" y1="90" x2="920" y2="98" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.6" stroke-width="2"/>
+  <line x1="1040" y1="90" x2="1040" y2="98" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.6" stroke-width="2"/>
+  <text x="980" y="78" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.85">two weeks flat</text>
+
+  <!-- Coral data line -->
+  <polyline
+    points="200,149 320,141 440,135 560,124 680,116 800,114 920,108 1040,108"
+    stroke="oklch(0.68 0.165 28)"
+    stroke-width="3"
+    stroke-opacity="0.95"
+    fill="none"
+  />
+
+  <!-- Data dots — small grey for non-terminal weeks -->
+  <circle cx="200" cy="149" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.45"/>
+  <circle cx="320" cy="141" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.45"/>
+  <circle cx="440" cy="135" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.45"/>
+  <circle cx="560" cy="124" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.45"/>
+  <circle cx="680" cy="116" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.45"/>
+  <circle cx="800" cy="114" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.45"/>
+  <circle cx="920" cy="108" r="4.5" fill="oklch(0.68 0.165 28 / 0.55)" stroke="oklch(0.68 0.165 28)" opacity="0.75"/>
+
+  <!-- Terminal dot W33 — filled coral, labelled -->
+  <circle cx="1040" cy="108" r="10" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.9"/>
+  <text x="1060" y="104" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.68 0.165 28)" stroke="none" font-weight="600">97</text>
+  <text x="1060" y="121" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">flat, W32-W33</text>
+
+  <!-- X-axis week labels -->
+  <text x="200"  y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">W26</text>
+  <text x="320"  y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">W27</text>
+  <text x="440"  y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">W28</text>
+  <text x="560"  y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">W29</text>
+  <text x="680"  y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">W30</text>
+  <text x="800"  y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">W31</text>
+  <text x="920"  y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.75">W32</text>
+  <text x="1040" y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">W33</text>
+
+  <!-- Caption annotation -->
+  <text x="600" y="432" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">a category that finished converting, not one that started losing</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

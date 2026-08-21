@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Four-panel strip: adjustable actuation point, dimmed and checked off as table stakes; sensor precision via TMR named against XTRFY MK Crystal TMR; housing material and feel named against Gateron Magnetic Jade; and per-key curve software as the open configurator-depth axis</title>
+
+  <!-- Title -->
+  <text x="600" y="46" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">What used to be the pitch. What's competing for it now.</text>
+
+  <!-- Panel 1: Adjustable actuation — achieved / commodity -->
+  <rect x="50" y="90" width="245" height="230" rx="10" fill="oklch(0.78 0.005 90 / 0.06)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.5"/>
+  <circle cx="172" cy="150" r="34" fill="none" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55"/>
+  <path d="M 156 150 L 168 163 L 190 137" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.75" stroke-width="4" fill="none"/>
+  <text x="172" y="215" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" font-weight="600" opacity="0.75">Adjustable</text>
+  <text x="172" y="234" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" font-weight="600" opacity="0.75">actuation point</text>
+  <text x="172" y="266" font-family="Newsreader, serif" font-size="13" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">table stakes now</text>
+
+  <!-- Panel 2: Sensor precision — TMR -->
+  <rect x="325" y="90" width="245" height="230" rx="10" fill="oklch(0.68 0.165 28 / 0.08)" stroke="oklch(0.68 0.165 28)" stroke-width="2"/>
+  <rect x="415" y="135" width="65" height="30" rx="4" fill="none" stroke="oklch(0.68 0.165 28)" stroke-width="2"/>
+  <path d="M 400 150 Q 415 130 430 150 Q 445 170 460 150 Q 475 130 490 150" stroke="oklch(0.68 0.165 28)" stroke-width="2" fill="none" opacity="0.85"/>
+  <text x="447" y="215" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" font-weight="600">Sensor precision</text>
+  <text x="447" y="234" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" font-weight="600">— TMR</text>
+  <text x="447" y="266" font-family="Newsreader, serif" font-size="13" font-style="italic" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.8">XTRFY MK Crystal TMR</text>
+
+  <!-- Panel 3: Housing material & feel -->
+  <rect x="600" y="90" width="245" height="230" rx="10" fill="oklch(0.68 0.165 28 / 0.08)" stroke="oklch(0.68 0.165 28)" stroke-width="2"/>
+  <rect x="686" y="128" width="72" height="30" rx="3" fill="none" stroke="oklch(0.68 0.165 28)" stroke-width="2"/>
+  <rect x="700" y="158" width="44" height="34" fill="none" stroke="oklch(0.68 0.165 28)" stroke-width="2"/>
+  <circle cx="722" cy="175" r="6" fill="oklch(0.68 0.165 28)" opacity="0.7" stroke="none"/>
+  <text x="722" y="215" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" font-weight="600">Housing material</text>
+  <text x="722" y="234" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" font-weight="600">&amp; feel</text>
+  <text x="722" y="266" font-family="Newsreader, serif" font-size="13" font-style="italic" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.8">Gateron Magnetic Jade</text>
+
+  <!-- Panel 4: Per-key curve software -->
+  <rect x="875" y="90" width="245" height="230" rx="10" fill="oklch(0.68 0.165 28 / 0.08)" stroke="oklch(0.68 0.165 28)" stroke-width="2"/>
+  <polyline points="925,165 950,140 975,175 1000,130 1025,155 1050,145" stroke="oklch(0.68 0.165 28)" stroke-width="2.5" fill="none"/>
+  <line x1="925" y1="180" x2="1050" y2="180" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.3" stroke-width="1.5"/>
+  <text x="997" y="215" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" font-weight="600">Per-key curve</text>
+  <text x="997" y="234" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" font-weight="600">software</text>
+  <text x="997" y="266" font-family="Newsreader, serif" font-size="13" font-style="italic" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.8">configurator depth</text>
+
+  <!-- Connective arrow across the strip -->
+  <path d="M 300 200 L 320 200" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.35" stroke-width="2"/>
+  <path d="M 314 194 L 320 200 L 314 206" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.35" stroke-width="2" fill="none"/>
+
+  <!-- Caption annotation -->
+  <text x="600" y="392" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">actuation adjustability closed the "will this catch on" question — these three didn't</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

@@ -5968,6 +5968,50 @@
       "filePath": "apps/web/src/content/articles/ansi-iso-jis-keyboard-layout-guide.mdx"
     },
     {
+      "slug": "hall-effect-rapid-trigger-plateau",
+      "frontmatter": {
+        "slug": "hall-effect-rapid-trigger-plateau",
+        "title": "Hall-effect stopped climbing. That's not the same as cooling off.",
+        "lede": "The Hall Effect/Rapid Trigger category has held flat at 97 on thock's trends tracker for two straight weeks, after climbing from 82 in early July. A flat line at the top of the chart looks like fading interest if you're reading it as a stock ticker. Read as a market snapshot, it says something closer to the opposite.",
+        "description": null,
+        "author": "thock",
+        "pillar": "trends",
+        "tags": [
+          "hall-effect",
+          "rapid-trigger",
+          "magnetic",
+          "trends-2026"
+        ],
+        "publishedAt": "2026-08-12T14:00:00.000Z",
+        "updatedAt": "2026-08-12T14:00:00.000Z",
+        "heroImage": "/hero-art/hall-effect-rapid-trigger-plateau.svg",
+        "heroImageAlt": "A coral sparkline climbing steadily across six data points before leveling into a flat plateau across the final two, plotted against a warm-grey keyboard silhouette, with a small warm-bronze theme dot in the upper-right margin.",
+        "featured": false,
+        "popularityScore": 0,
+        "guideSection": null,
+        "mentionedParts": [
+          {
+            "id": "gateron-magnetic-jade",
+            "kind": "switch",
+            "slug": "gateron-magnetic-jade"
+          },
+          {
+            "id": "kailh-box-jade",
+            "kind": "switch",
+            "slug": "kailh-box-jade"
+          },
+          {
+            "id": "gateron-oil-king",
+            "kind": "switch",
+            "slug": "gateron-oil-king"
+          }
+        ]
+      },
+      "body": "\nEight weeks of tracker data tell a clean story up to a point: 82, 85, 87, 91, 94, 95, 97, 97. The Hall Effect/Rapid Trigger row climbed hard through July and then, in the last two weeks, stopped. Two flat readings at 97 look, on a chart, exactly like the top of a bell curve about to tip over. They're not. They're the top of a market that's finished converting.\n\n## The signal: flat at the ceiling isn't the same as flat in a trough\n\n<InlineViz\n  src=\"/article-viz/hall-effect-rapid-trigger-plateau/he-rt-plateau-sparkline.svg\"\n  alt=\"Coral line chart plotting the Hall Effect/Rapid Trigger tracker score across eight weeks, values 82, 85, 87, 91, 94, 95, 97, 97, climbing steadily before flattening into a two-week plateau at the terminal point. A dashed horizontal line marks the tracker's approximate ceiling near 100, with the flat segment sitting just beneath it.\"\n  caption=\"Six weeks of climb, two weeks flat, one point short of the visible ceiling.\"\n  accent=\"coral\"\n/>\n\nA tracker score is a proxy for how much of the week's coverage, launches, and buyer attention orbit a category relative to everything else being tracked. When that number is climbing from the 80s toward the high 90s, it's measuring a category converting skeptics — every week, some slice of the audience that hadn't already priced in Hall-effect switches encounters a new reason to. Per the [2026-W33 Trends Tracker](/trends/tracker/2026-W33), that conversion has run its course: the note for this week credits <Mono>Keychron</Mono>'s V6 Ultra HE Kickstarter entering its third week near a funding plateau, alongside <Mono>Gamakay</Mono>'s Q2 and <Mono>XTRFY</Mono>'s MK Crystal TMR, for keeping magnetic switches \"the dominant switch story.\" None of those are signs of a category losing the room. They're three different vendors, at three different price tiers, all still actively shipping into it.\n\n<Callout type=\"note\" title=\"A tracker score near 100 is a scale artifact as much as a market fact\">\n  Once a category shows up in nearly every relevant roundup, prebuilt configurator, and group-buy comparison thread, there's less headroom left for the week-over-week number to keep growing — not because attention stopped growing, but because the tracker is measuring share of a finite conversation, and Hall-effect now occupies most of it. A flat 97 is what \"already won\" looks like on a 0–100 scale, not what \"starting to lose\" looks like.\n</Callout>\n\n## What \"flat\" means at different altitudes\n\nThe tracker logs several rows as directionally flat this week, and they are not telling the same story. Sitting them next to each other is more informative than reading any one of them alone.\n\n<InlineViz\n  src=\"/article-viz/hall-effect-rapid-trigger-plateau/three-flats-comparison.svg\"\n  alt=\"Horizontal bar chart comparing three tracker rows all marked flat this week. Hall Effect/Rapid Trigger extends far right to a score of 97, having climbed from 82 over the prior seven weeks. Gateron Oil King extends modestly right to a score of 40, essentially unchanged from 39 eight weeks earlier. Cherry MX2A extends left of a zero line to a score of negative 46, having declined from negative 36 before leveling off near the bottom of its range.\"\n  caption=\"Three rows marked 'flat.' Three different stories underneath the label.\"\n  accent=\"coral\"\n/>\n\nHall Effect/Rapid Trigger is flat at 97 after climbing 15 points in seven weeks — a category that arrived and stayed. The <PartReference id=\"gateron-oil-king\">Gateron Oil King</PartReference> is flat at 40, and has been within a single point of 40 for eight straight weeks, because — per the tracker's own note — the lineup and stock at Gateron, KBDfans, and Divinikey haven't changed since an early-2026 expansion. That's a genuinely quiet week for a switch with nothing new to say. Cherry MX2A is flat at -46, having spent the same eight weeks oscillating in a band between -36 and -50 while, per the tracker note, \"Cherry's own XTRFY TMR push continues to pull spec-sheet attention away from MX2A.\" That's a switch line still shipping as the default across mainstream boards, but losing the attention argument every week to its own sibling's magnetic pivot — a dynamic [thock covered in detail when the XTRFY TMR pivot first moved the Cherry brand line](/article/cherry-xtrfy-tmr-pivot). A flat score at 97, a flat score at 40, and a flat score at -46 are three different kinds of stillness. Only one of them is a category that just finished winning.\n\n## The next axis wasn't going to be actuation forever\n\nThe reason adjustable actuation stopped being a differentiator is the same reason it became one in the first place: it was easy to copy once the supply chain matured. [thock's coverage of Hall-effect's move into the mid-premium tier](/article/hall-effect-mainstream) tracked that maturation directly — a vendor that wants an HE variant in 2026 doesn't need to design a sensor PCB from scratch, and [the gaming-crossover piece](/article/rapid-trigger-gaming-crossover) showed a gaming-mainstream board and a boutique-adjacent enthusiast board converging on identical sensor specs from opposite starting points. Once every major vendor ships some version of a digitally adjustable actuation point, \"our switch is adjustable\" stops being a pitch. It's a checkbox.\n\n<InlineViz\n  src=\"/article-viz/hall-effect-rapid-trigger-plateau/next-axis-strip.svg\"\n  alt=\"Four-panel horizontal strip. The first panel, dimmed grey with a checkmark, is labelled adjustable actuation point, table stakes. The remaining three panels, outlined in coral, are labelled sensor precision — TMR, named against XTRFY MK Crystal TMR; housing material and feel, named against Gateron Magnetic Jade; and per-key curve software, referencing configurator depth.\"\n  caption=\"What used to be the pitch. What's competing for it now.\"\n  accent=\"coral\"\n/>\n\nThree axes are visibly filling the gap. The first is sensor precision itself: tunneling magnetoresistance, the sensing method behind <Mono>XTRFY</Mono>'s MK Crystal TMR, reads the stem magnet's field through a different physical effect than a standard Hall sensor, and Cherry has been routing its own magnetic bet through that architecture rather than the Hall-effect approach the rest of the field standardized on. The second is housing material and switch feel — the axis magnetic switches were weakest on when the category was new. The <PartReference id=\"gateron-magnetic-jade\">Gateron Magnetic Jade</PartReference> is a useful example of the shift: a rare-earth magnet sits in the stem in place of a leaf spring, the actuation point adjusts digitally in supporting boards, and the switch is built and marketed on the same PC-top, nylon-bottom feel vocabulary the mechanical linear bench already argues in, down to a jade colorway that deliberately echoes the <PartReference id=\"kailh-box-jade\">Kailh Box Jade</PartReference>. That's a magnetic switch competing on bottom-out character and smoothness, not just on whether the actuation point moves. The third axis is software — per-key curve tuning, the depth of the configurator behind the sensor. Whether that tooling stays behind proprietary stacks or lands in open firmware is the same open question raised when Hall-effect first crossed into gaming boards, and it still hasn't been answered.\n\n## What to watch\n\nTwo things would tell whether the plateau is a resting point or the actual ceiling. The first is whether the Cherry brand line — which the tracker put at -2 this week, up from deeply negative readings earlier in the summer, on the strength of the same TMR story — keeps closing the gap toward positive territory as sensor precision becomes a marketed feature rather than an engineering footnote. The second is whether Keychron's V6 Ultra HE Kickstarter, sitting near its own funding plateau in week three, converts into a shipped product distinctive enough on feel or software to give the tracker something new to climb on. A category that's already table stakes doesn't need a new entrant to survive. It needs one to be interesting again.\n",
+      "readTime": 6,
+      "filePath": "apps/web/src/content/articles/hall-effect-rapid-trigger-plateau.mdx"
+    },
+    {
       "slug": "hot-swap-sockets-tradeoffs",
       "frontmatter": {
         "slug": "hot-swap-sockets-tradeoffs",
@@ -9645,6 +9689,11 @@
       "category": "brand"
     },
     {
+      "slug": "rapid-trigger",
+      "name": "Rapid Trigger",
+      "category": "switch"
+    },
+    {
       "slug": "retrobrighting",
       "name": "Retrobrighting",
       "category": "misc"
@@ -9755,5 +9804,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-08-20T17:33:54.826Z"
+  "generatedAt": "2026-08-21T06:23:21.895Z"
 }

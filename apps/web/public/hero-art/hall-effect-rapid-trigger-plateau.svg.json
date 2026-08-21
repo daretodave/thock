@@ -1,0 +1,34 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-21T06:14:47.000Z",
+  "commit": "8da8be9fbf608fd5715479970b9ae0b10e9ed478",
+  "kind": "hero-art",
+  "article_slug": "hall-effect-rapid-trigger-plateau",
+  "article_pillar": "trends",
+  "brief_summary": "Hero art for the Trends pillar piece on the Hall-effect/rapid-trigger tracker score plateauing at its ceiling: a 2px warm-grey chart silhouette with a terracotta sparkline climbing steeply through 6 weekly points then flattening across the final two identical points (score 97), a low-opacity terracotta wash under the plateau, a haloed terracotta focal dot at the latest flat point, a dashed ceiling reference line, and the family's warm-bronze theme dot in the upper-right margin.",
+  "target": "apps/web/public/hero-art/hall-effect-rapid-trigger-plateau.svg",
+  "source": "plan/bearings.md § Article hero art — colorful keyboard SVGs (locked 2026-05-09), trends piece -> sparkline silhouette directive",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject",
+  "size": [1200, 750],
+  "subject": "Sparkline silhouette: 8 weekly tracker points climbing hard (82 -> 97) then flattening flat across the final two points, rendered as the article's plateau-after-a-climb thesis; dashed ceiling line above the plateau, chart-axis baseline with per-point ticks, terracotta wash + haloed focal dot at the latest flat point.",
+  "splash_color": {
+    "name": "muted terracotta",
+    "oklch": "oklch(0.62 0.12 45)",
+    "hex_approx": "#c16d45"
+  },
+  "accent_color": {
+    "name": "warm-bronze (theme accent)",
+    "oklch": "oklch(0.80 0.135 75)"
+  },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": [],
+  "outputs": [
+    "apps/web/public/hero-art/hall-effect-rapid-trigger-plateau.svg"
+  ],
+  "warnings": [],
+  "data_sources": [
+    "data/trends/2026-W33.json \"Hall Effect/Rapid Trigger\" row — score 97, direction flat, spark [82, 85, 87, 91, 94, 95, 97, 97]"
+  ]
+}
