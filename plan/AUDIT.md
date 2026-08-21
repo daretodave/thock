@@ -11695,3 +11695,16 @@ passes accumulate signals.)
 - issue: #888
 > Filed 2026-08-21 by newsletter-gap-survey.mjs. 8 days since issue 7. Threshold: ≥7 calendar days.
 > **Resolved (2026-08-21):** shipped `thock-weekly-008.mdx` — 5 pillar picks (guides/ideas/trends/news/deep-dives) plus a tracker check-in. The automated Monday W34 snapshot refresh was missed during the 2026-08-16–20 cloud-loop outage, so no fresher trend data exists yet; the tracker section reuses `data/trends/2026-W33.json` but is framed honestly as a check-in on the same week (not a new-week claim) and surfaces different rows (Keychron, Mode Designs, GMK Beachy) than issue 07 already covered. `pnpm verify` full gate green: typecheck, unit tests, data:validate, build, 1168/1168 e2e.
+
+### [x] [3.6] hot-swap-sockets-tradeoffs verdict paragraph reads as a non-sequitur — addressed in commit `3ae38750`, closes #891
+- category: content
+- filed: 2026-08-21 by cloud /iterate audit (fresh general-purpose sweep, angle: fact/consistency check on the two most-recently-touched content pieces)
+- impact: 4 (published, high-traffic evergreen guide; hurts editorial polish, no functional breakage)
+- ease: 9 (one-paragraph reorder, no schema/code/link changes)
+- score: 3.6 (impact × ease / 10)
+- observation: commit `84d1ffb2` (cross-link drain) inserted the `typing-tests-lie` sentence between the paragraph's premise and its conclusion ("That is why hot-swap PCBs have become the standard spec..."), leaving "That is why" dangling across an unrelated intervening sentence instead of its actual antecedent.
+- evidence: `apps/web/src/content/articles/hot-swap-sockets-tradeoffs.mdx:76` (pre-fix)
+- next: reorder the paragraph so the conclusion directly follows its premise; move the typing-tests-lie caveat to the paragraph's close.
+- issue: #891
+> Picked as the top signal this tick: no unlabeled GitHub issues (triage gate, 0 unlabeled); not Monday (W34 snapshot not yet due); no pending phases/data/content-gap work (all 7 mechanical surveys re-ran clean, no rows filed); march's own expand Step 3c gate not met (11 commits/~7h since pass 328, threshold 20 commits/48h). AUDIT.md's and CRITIQUE.md's only other Pending rows remained the standing non-autonomous items. A delegated general-purpose sweep (angles: full read + fact-check of the two newest content pieces against their cited data, W34 snapshot-gap disclosure honesty, TODO/FIXME grep, OG-image handler null-safety, cross-link target/mentionedParts sanity on the last 3 touched articles, dependency staleness) found this dangling-referent prose bug as the one finding clearing the 3.0 floor; every other angle came back clean.
+> **Resolved (2026-08-21):** reordered the verdict paragraph so "That is why hot-swap PCBs have become the standard spec..." directly follows its premise sentence, moving the typing-tests-lie caveat to the paragraph's close. `pnpm verify` full gate green: typecheck, unit tests, data:validate, build, 1168/1168 e2e.
