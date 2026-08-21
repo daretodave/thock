@@ -11656,7 +11656,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/typing-tests-lie.mdx
 - action: add [typing-tests-lie](/article/typing-tests-lie) to hot-swap-sockets-tradeoffs body, or vice versa
 
-### [HOT PURSUIT] [content-gap] [7] trends pillar — 1 of ≥2 articles in last 30d
+### [x] [content-gap] [7] trends pillar — 1 of ≥2 articles in last 30d — addressed in commit `6b67670a`, closes #885
 - category: content-gaps
 - impact: 8 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -11668,3 +11668,15 @@ passes accumulate signals.)
 - next: /ship-content → trends pillar article
 - issue: #885
 > Filed 2026-08-20 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+> **Resolved (2026-08-21):** shipped `hall-effect-rapid-trigger-plateau.mdx` (publishedAt 2026-08-12, gap-fill midpoint of the 18-day gap between `gmk-cyl-ta-neo-production-tracking` on 2026-08-03 and today's sentinel) — "Hall-effect stopped climbing. That's not the same as cooling off," reading the tracker's flat-at-97 score as market saturation rather than fading interest. Trends now carries a fresh anchor well inside the 30-day window. `pnpm verify` full gate green: typecheck, unit tests, data:validate, build, 1165/1165 e2e.
+
+### [ ] [cross-links] [4.5] hall-effect-rapid-trigger-plateau ↔ keychron-nova-socket-hybrid — no prose cross-link (same pillar, ≥2 shared tags: magnetic, trends-2026)
+- category: cross-links
+- filed: 2026-08-21 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: magnetic, trends-2026
+- article-a: apps/web/src/content/articles/hall-effect-rapid-trigger-plateau.mdx
+- article-b: apps/web/src/content/articles/keychron-nova-socket-hybrid.mdx
+- action: add [keychron-nova-socket-hybrid](/article/keychron-nova-socket-hybrid) to hall-effect-rapid-trigger-plateau body, or vice versa
