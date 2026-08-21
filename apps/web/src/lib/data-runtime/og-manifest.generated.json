@@ -2,7 +2,7 @@
   "articles": [
     {
       "slug": "ansi-iso-jis-keyboard-layout-guide",
-      "readTime": 8,
+      "readTime": 9,
       "frontmatter": {
         "title": "ANSI, ISO, or JIS: a practical layout buying guide",
         "lede": "Two boards can look nearly identical in a listing photo and still take entirely different keycap sets. Here's how to read Enter key shape, bottom-row widths, and spec-sheet shorthand before ordering — not after a set arrives that doesn't fit.",
@@ -6206,5 +6206,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-08-21T09:18:08.271Z"
+  "generatedAt": "2026-08-21T10:13:59.251Z"
 }
