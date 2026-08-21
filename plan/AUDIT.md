@@ -11680,3 +11680,15 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/hall-effect-rapid-trigger-plateau.mdx
 - article-b: apps/web/src/content/articles/keychron-nova-socket-hybrid.mdx
 - action: add [keychron-nova-socket-hybrid](/article/keychron-nova-socket-hybrid) to hall-effect-rapid-trigger-plateau body, or vice versa
+
+### [ ] [newsletter] [4.0] Weekly digest — issue 008 due (8 days since issue 7)
+- category: content-gaps
+- filed: 2026-08-21 by newsletter-gap-survey.mjs
+- impact: 5 (newsletter archive going stale reduces /newsletter value and reader trust in cadence)
+- ease: 8 (content-curator weekly round-up: 5 pillar picks + tracker insight)
+- score: 4.0 (impact × ease / 10)
+- next: /ship-content → newsletter type (weekly round-up, 5 pillar picks, tracker insight)
+- last-issue: 2026-08-12 (thock-weekly-007)
+- days-since: 8
+- issue: [mirror-failed: 2026-08-21]
+> Filed 2026-08-21 by newsletter-gap-survey.mjs. 8 days since issue 7. Threshold: ≥7 calendar days.
