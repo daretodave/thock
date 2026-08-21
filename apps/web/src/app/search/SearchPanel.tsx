@@ -11,9 +11,11 @@ import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 import type { Tag } from '@thock/content'
 import { Container, Stack } from '@thock/ui'
-import { searchArticles, searchParts, type SearchHit, type PartSearchHit } from '@/lib/search/runtime'
+import type { SearchHit, PartSearchHit } from '@/lib/search/runtime'
 import { ArticleResult } from '@/components/search/ArticleResult'
 import { PartResult } from '@/components/search/PartResult'
+
+type SearchRuntime = typeof import('@/lib/search/runtime')
 
 const DEBOUNCE_MS = 120
 
@@ -30,10 +32,12 @@ const PILLAR_FALLBACKS: { label: string; href: string }[] = [
 ]
 
 /**
- * Phase 14 search UI. Owns the input + results state. The
- * MiniSearch index is loaded the first time `searchArticles`
- * runs; subsequent queries are sub-millisecond. Reads `?q=` on
- * mount so deep-links (e.g. from phase 16's 404-soft) populate
+ * Phase 14 search UI. Owns the input + results state. The runtime
+ * module (MiniSearch + the generated index payload) is dynamically
+ * imported on mount rather than statically, so its ~200 KB gzipped
+ * payload ships as its own chunk instead of inflating /search's
+ * First Load JS; subsequent queries are sub-millisecond. Reads `?q=`
+ * on mount so deep-links (e.g. from phase 16's 404-soft) populate
  * the input.
  */
 export function SearchPanel({ allTags }: SearchPanelProps): ReactElement {
@@ -41,7 +45,21 @@ export function SearchPanel({ allTags }: SearchPanelProps): ReactElement {
   const urlQ = params?.get('q') ?? ''
   const [query, setQuery] = useState(urlQ)
   const [debouncedQuery, setDebouncedQuery] = useState(urlQ)
+  const [runtime, setRuntime] = useState<SearchRuntime | null>(null)
   const inputRef = useRef<HTMLInputElement | null>(null)
+
+  // The MiniSearch payload embeds full tokenized article bodies (~200 KB
+  // gzipped) — split it into its own chunk fetched after hydration instead
+  // of bundling it into /search's initial First Load JS.
+  useEffect(() => {
+    let cancelled = false
+    import('@/lib/search/runtime').then((mod) => {
+      if (!cancelled) setRuntime(mod)
+    })
+    return () => {
+      cancelled = true
+    }
+  }, [])
 
   useEffect(() => {
     // Coarse-pointer (touch) visits skip autofocus — stealing focus on
@@ -69,12 +87,14 @@ export function SearchPanel({ allTags }: SearchPanelProps): ReactElement {
   )
 
   const results: SearchHit[] = useMemo(() => {
-    return searchArticles(debouncedQuery)
-  }, [debouncedQuery])
+    if (!runtime) return []
+    return runtime.searchArticles(debouncedQuery)
+  }, [runtime, debouncedQuery])
 
   const partResults: PartSearchHit[] = useMemo(() => {
-    return searchParts(debouncedQuery)
-  }, [debouncedQuery])
+    if (!runtime) return []
+    return runtime.searchParts(debouncedQuery)
+  }, [runtime, debouncedQuery])
 
   const trimmed = debouncedQuery.trim()
   const showHint = trimmed.length === 0

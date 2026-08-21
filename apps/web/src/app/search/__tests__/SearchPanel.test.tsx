@@ -39,8 +39,9 @@ describe('<SearchPanel>', () => {
     vi.unstubAllGlobals()
   })
 
-  it('shows the empty-query hint when no query is present', () => {
+  it('shows the empty-query hint when no query is present', async () => {
     render(<SearchPanel allTags={ALL_TAGS} />)
+    await act(async () => {}) // flush the dynamic import of the runtime module
     expect(screen.getByTestId('search-empty-query')).toBeInTheDocument()
     expect(screen.queryByTestId('search-results')).not.toBeInTheDocument()
   })
@@ -50,6 +51,7 @@ describe('<SearchPanel>', () => {
     vi.mocked(searchArticles).mockReturnValue([FAKE_HIT])
 
     render(<SearchPanel allTags={ALL_TAGS} />)
+    await act(async () => {}) // flush the dynamic import of the runtime module
     const input = screen.getByRole('searchbox')
     fireEvent.change(input, { target: { value: 'oil king' } })
 
@@ -65,6 +67,7 @@ describe('<SearchPanel>', () => {
     vi.mocked(searchArticles).mockReturnValue([])
 
     render(<SearchPanel allTags={ALL_TAGS} />)
+    await act(async () => {}) // flush the dynamic import of the runtime module
     const input = screen.getByRole('searchbox')
     fireEvent.change(input, { target: { value: 'zzznomatch' } })
 
@@ -85,8 +88,9 @@ describe('<SearchPanel>', () => {
     expect(hrefs).toContain('/guides')
   })
 
-  it('announces the empty-query hint as blank in the aria-live region', () => {
+  it('announces the empty-query hint as blank in the aria-live region', async () => {
     render(<SearchPanel allTags={ALL_TAGS} />)
+    await act(async () => {}) // flush the dynamic import of the runtime module
     expect(screen.getByRole('status')).toHaveTextContent('')
   })
 
@@ -95,6 +99,7 @@ describe('<SearchPanel>', () => {
     vi.mocked(searchArticles).mockReturnValue([FAKE_HIT])
 
     render(<SearchPanel allTags={ALL_TAGS} />)
+    await act(async () => {}) // flush the dynamic import of the runtime module
     const input = screen.getByRole('searchbox')
     fireEvent.change(input, { target: { value: 'oil king' } })
 
@@ -108,6 +113,7 @@ describe('<SearchPanel>', () => {
     vi.mocked(searchArticles).mockReturnValue([])
 
     render(<SearchPanel allTags={ALL_TAGS} />)
+    await act(async () => {}) // flush the dynamic import of the runtime module
     const input = screen.getByRole('searchbox')
     fireEvent.change(input, { target: { value: 'zzznomatch' } })
 
@@ -124,6 +130,7 @@ describe('<SearchPanel>', () => {
     vi.mocked(searchArticles).mockReturnValue([FAKE_HIT])
 
     render(<SearchPanel allTags={ALL_TAGS} />)
+    await act(async () => {}) // flush the dynamic import of the runtime module
 
     act(() => { vi.advanceTimersByTime(120) })
 
@@ -132,18 +139,20 @@ describe('<SearchPanel>', () => {
     expect(screen.getByTestId('search-results')).toBeInTheDocument()
   })
 
-  it('autofocuses the input on a fine-pointer (desktop) visit', () => {
+  it('autofocuses the input on a fine-pointer (desktop) visit', async () => {
     vi.stubGlobal('matchMedia', vi.fn().mockReturnValue({ matches: false }))
 
     render(<SearchPanel allTags={ALL_TAGS} />)
+    await act(async () => {}) // flush the dynamic import of the runtime module
 
     expect(document.activeElement).toBe(screen.getByRole('searchbox'))
   })
 
-  it('does not steal focus on a coarse-pointer (touch) visit', () => {
+  it('does not steal focus on a coarse-pointer (touch) visit', async () => {
     vi.stubGlobal('matchMedia', vi.fn().mockReturnValue({ matches: true }))
 
     render(<SearchPanel allTags={ALL_TAGS} />)
+    await act(async () => {}) // flush the dynamic import of the runtime module
 
     expect(document.activeElement).not.toBe(screen.getByRole('searchbox'))
   })
