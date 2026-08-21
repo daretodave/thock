@@ -6,250 +6,191 @@
 
 ## Headline
 
-**The loop went fully dark for ~96 hours — the first multi-day
-outage this project has recorded — and this digest is the first
-successful `night` tick since it started.** The last commit before
-the outage was `8ecfd869` (2026-08-16T00:15Z). `march` then failed
-84 of the next 97 scheduled runs (13 more were cancelled), every
-inspected failure showing `is_error: true` / `api_error_status: 403`
-(a rejected Claude API call) from the first failure at
-2026-08-16T09:07Z through the last at 2026-08-20T09:11Z. `night`
-(this workflow) failed the same way on 08-16, 08-17, 08-18, and
-08-19 — four straight missed digests. The very next scheduled `march`
-tick (2026-08-20T10:08Z) ran clean end to end but shipped nothing
-(nothing was pending); this `night` tick, running now, is the
-recovery.
+**Quiet, healthy night — the loop's first fully clean 24h since the
+403 outage.** All 25 `march` ticks since the last digest
+(`9d5b936b`, 2026-08-20T11:01:52Z) ran green, zero failures, zero
+cancellations. The prior digest's top ask — confirm the Claude Code
+OAuth credential behind `march.yml`/`night.yml` — now has a full
+day of clean hourly ticks as supporting evidence; worth treating
+that watch item as resolved unless another 403 cluster shows up.
 
-**Nobody's fault visible in the repo — this reads as an external
-auth/access hiccup, not a code regression.** No commit in the outage
-window touches auth, secrets, or CI config; the failure signature
-(403 on every single call, for exactly this window, self-clearing
-with no code change) is consistent with an expired or rotated
-credential rather than a bug this loop introduced. **Needs you**
-below has the specific ask: verify the Claude Code OAuth token
-backing `march.yml`/`night.yml` isn't due to rotate again soon — this
-is the fourth cloud-infra incident of this general shape in the
-`triage:needs-user` queue (`#756`, `#639`, `#499`, `#434`), and this
-one was by far the longest.
-
-**Automated detection was thinner than expected.** `march.yml`'s own
-per-run crash-issue gate has a known bug (`[6.3]` AUDIT row, open
-since 2026-07-05, blocked on a workflow-file push-permission gap) —
-it never fires on an action-level failure, so none of the 84 failed
-runs this window filed their own issue. The only backstop was
-`heartbeat.yml`'s independent 6-hourly flatline check, and it took
-~75h to fire (issue `#883`, 2026-08-19T12:24Z) with a body claiming
-"308h" since the last completed tick — a figure that doesn't
-reconcile with the observed hourly failure cadence. Filed as a new
-tuning proposal below (heartbeat measures *last completed* run, not
-*last successful* one, which structurally can't catch a fail-fast
-loop — plus the 308h number itself needs tracing).
-
-**One concrete casualty: a content dispatch stranded mid-flight.**
-At 2026-08-16T00:15Z, 9 minutes before the outage's first failure,
-`march` opened issue `#881` for the guides-pillar hot-pursuit
-article (Rule 1 sliding-window, ANSI/ISO/JIS layout buying guide) and
-handed off to `/ship-content` — which never got a tick to run. The
-issue is still open, no MDX file exists for it, and it's still the
-single `[HOT PURSUIT]` row in `plan/AUDIT.md`. It's the obvious next
-action once the loop resumes ticking on its normal cadence.
+**Six of those ticks shipped work; the rest were no-ops.** Three
+content pieces landed (guides ANSI/ISO/JIS layout guide, ideas
+hot-swap-sockets tradeoffs, trends Hall-effect plateau), each with
+its audit-closure pair; two content dispatches opened mirror issues
+(`#884`, `#885`); one `/expand` pass (328) reinforced the standing
+mirror-drain-gap candidate with a 5th confirmed subsystem instance;
+and two audit ticks drained cross-link clusters (hot-swap-sockets:
+4 pairs, ansi-iso-jis: 2 pairs). The cross-link queue is now down to
+a single open row — the closest it's been to fully drained.
 
 **This tick's own fresh `pnpm verify` is fully clean** — all 8 legs
-green on the first attempt, no retries, nothing new filed to
-`plan/AUDIT.md`. Deploy is `READY` at HEAD (`8ecfd869`,
-`dpl_8Lr9zrGV`).
+green, run as sequential foreground legs per the standing rule
+(the full command timed out past 10 minutes as one call and was
+split; every leg passed on its own). Deploy is `READY` at HEAD
+(`17ec13fe`, `dpl_4jFtuQPJ`).
 
-`plan/CRITIQUE.md` is **102 days / 2333 commits** since its last pass
-(11, 2026-05-10T20:35 UTC at commit `931c8a7`) — unchanged
-architectural diagnosis (no Chrome MCP on the cloud runner).
-`plan/PHASE_CANDIDATES.md` holds **27 live pending rows** (up 1 —
-pass 322's read-time regression-guard candidate; this tick adds a
-28th, the heartbeat tuning proposal above), **67 days** since the
-last `/oversight` promotion (2026-06-14, phases 46-49). `plan/AUDIT.md`
-carries **6 open rows** — 5 standing non-autonomous items plus the
-`[HOT PURSUIT]` content-gap row — unchanged by this tick's clean
-breadth check.
+`plan/CRITIQUE.md` is **still 102 days / 2347 commits** since its
+last pass (11, 2026-05-10T20:35 UTC at commit `931c8a7`) —
+unchanged architectural diagnosis (no Chrome MCP on the cloud
+runner), called out loudly again since it's the loop's longest-
+running blind spot. `plan/PHASE_CANDIDATES.md` holds **30 live
+pending rows**, **68 days** since the last `/oversight` promotion
+(2026-06-14, phases 46-49). `plan/AUDIT.md` carries **7 open rows**
+— 5 standing non-autonomous items, the single remaining cross-link
+row, and a fresh routine newsletter-cadence row.
 
 ## While you were out
 
 | When (UTC) | Tick | Outcome |
 |---|---|---|
-| 08-15 11:29 | fix | readTime doesn't count PullQuote attribution text `[2.8]` (`35c0c2a2`/`11f032df`) |
-| 08-15 12:24 | data | link Wuque Studio W33 tracker row to its companion article `[4.5]` (`3a4dba88`/`0e0f3adc`) |
-| 08-15 14:27 | fix | readTime doesn't strip markdown table syntax `[4.5]` (`8bf441a0`/`352c3644`) |
-| 08-15 15:23 | data | trend snapshots W20 + W31 — direction contradicts same-file diff `[4.2]` (`69824664`/`a1989a19`) |
-| 08-15 16:22 | fix | readTime doesn't count PartReference-rendered part names `[3.5]` (`d2d2720f`/`ab30875a`) |
-| 08-15 17:41 | expand | pass 322 — 1 candidate filed (read-time regression guard, `[6.0]`) |
-| 08-15 18:11 | expand | pass 323 — no candidates |
-| 08-15 19:14 | expand | pass 324 — no candidates |
-| 08-15 20:11 | expand | pass 325 — no candidates |
-| 08-15 21:30 | expand | pass 326 — 0 new, 2 reinforced |
-| 08-15 22:21 | fix | part pages — two truncation call sites missed the shared `truncate()` migration `[3.6]` (`089c0511`/`0039e0b0`, closes `#827`) |
-| 08-15 23:13 | expand | pass 327 — 0 new, mirror-drain-gap candidate's `#827` instance resolved |
-| 08-16 00:13 | audit | content-gap row auto-filed by `content-gap-survey.mjs` |
-| 08-16 00:15 | content-dispatch | guides pillar hot-pursuit — issue `#881` opened, `/ship-content` handoff queued |
-| **08-16 09:07 → 08-20 09:11** | **OUTAGE** | **84 failed + 13 cancelled `march` runs, 0 commits, ~96h — see Headline** |
-| 08-20 10:08 | march | recovery tick — clean run, 0 commits (nothing pending, `#881` not yet picked up) |
+| 08-20 10:08 → 08-20 15:11 | march ×5 | clean, no-op (nothing pending) |
+| 08-20 16:08 | content | guides — "ANSI, ISO, or JIS: a practical layout buying guide" (`36011843`/`408f493e`) |
+| 08-20 17:08 | content-dispatch + content | issue `#884` opened; ideas — "Hot-swap sockets: what you actually give up for the convenience" (`5b5434c6`/`d702feb9`/`b0998f54`) |
+| 08-20 18:08 | content-dispatch | issue `#885` opened, no ship this tick (`8da8be9f`) |
+| 08-20 19:13 → 08-21 05:11 | march ×10 | clean, no-op |
+| 08-21 06:10 | content | trends — "Hall-effect stopped climbing. That's not the same as cooling off." (`6b67670a`/`f9faf6e0`) |
+| 08-21 07:18 | expand | pass 328 — 0 new candidates, mirror-drain-gap reinforced (5th subsystem instance) |
+| 08-21 08:13 | march | clean, no-op |
+| 08-21 09:13 | audit | hot-swap-sockets-tradeoffs cross-link cluster addressed, 4 pairs drained (`84d1ffb2`/`9be93a50`) |
+| 08-21 10:08 | audit | ansi-iso-jis-keyboard-layout-guide cross-link cluster addressed, 2 pairs drained (`c1a9e71a`/`17ec13fe`) |
 
-120 `march`-workflow runs since the last digest (`bf811fc0`,
-2026-08-15T10:55:14 UTC): **23 success, 84 failure, 13 cancelled.**
-22 of the 23 successes landed in the first ~21h (the active window
-above); the 23rd is this window's lone recovery no-op. `night` ran
-success (08-15, the last digest) then **failure ×4** (08-16 through
-08-19, same 403 signature) before this tick.
+25 `march`-workflow runs since the last digest: **25 success, 0
+failure, 0 cancelled.** `night` ran success this tick — first
+attempt after the prior digest, no missed days.
 
 ## Shipped
 
-- **readTime undercount, 3 more instances (5 total across this
-  window and the prior one)**: `computeReadTime()` now also folds in
-  `<PullQuote attribution="...">` text, strips markdown table
-  syntax it was previously mis-counting as words, and resolves
-  `<PartReference id="...">` to the referenced part's real name
-  before counting. Expand pass 322 audited the full `mdxComponents`
-  map afterward and confirmed the bug class is now corpus-clean —
-  filed a regression-guard candidate instead of a 6th reactive fix.
-- **Two data fixes**: a W33 tracker row linked to its companion
-  article (Wuque Studio); two trend-snapshot `direction` fields
-  corrected where they contradicted their own same-file diff (W20,
-  W31).
-- **Part-page truncation, closing a 4-day-old gap**: two call sites
-  (`page.tsx`'s `shortDescription()`, `PartIndexCard.tsx`'s
-  `summarize()`) had hand-rolled the pre-`truncate()` slicing pattern
-  and missed the shared-helper migration — filed publicly as `#827`
-  on 2026-08-11, sat unfixed until this tick, which pass 326's notes
-  had already flagged as a confirming instance of the standing
-  mirror-drain-gap candidate.
-- **6 expand passes** (322–327), 1 new candidate filed.
+- **Three content pieces**, each with its audit-closure pair: guides
+  pillar "ANSI, ISO, or JIS: a practical layout buying guide"
+  (closing the outage-stranded `#881` hot-pursuit gap flagged in the
+  last digest), ideas pillar "Hot-swap sockets: what you actually
+  give up for the convenience," trends pillar "Hall-effect stopped
+  climbing. That's not the same as cooling off."
+- **Cross-link drain, 6 pairs across 2 articles**: hot-swap-sockets-
+  tradeoffs (4 pairs) and ansi-iso-jis-keyboard-layout-guide
+  (2 pairs) each got their prose cross-links written and their
+  `[cross-links] [4.5]` AUDIT rows closed. `plan/AUDIT.md` now
+  carries just one open cross-link row.
+- **One `/expand` pass** (328): 0 new candidates, but confirmed a
+  5th subsystem instance of the standing mirror-drain-gap candidate
+  (`loop:opened` issues that survive the ship that should have
+  closed them) — reinforcement, not a new finding.
 
 ## Queues now
 
 - **Build plan**: all phases shipped, 0 pending. No phase work
   queued.
-- **Cross-link drain**: 0 open `[cross-links]` rows — unchanged.
-- **Critique**: pass 11, 2026-05-10 — **102 days / 2333 commits**
+- **Cross-link drain**: **1 open `[cross-links]` row** —
+  `hall-effect-rapid-trigger-plateau ↔ keychron-nova-socket-hybrid`
+  (same pillar, ≥2 shared tags: magnetic, trends-2026). Down from 6
+  open rows this morning; the closest the queue has been to fully
+  drained.
+- **Critique**: pass 11, 2026-05-10 — **102 days / 2347 commits**
   stale. Diagnosed as architectural (no Chrome MCP on the cloud
-  runner), not neglect. Unchanged from prior digests.
-- **Phase candidates**: **27 live pending** rows in
-  `plan/PHASE_CANDIDATES.md` (up 1 from the last digest's 28... note:
-  this digest recount used a stricter method that excludes the
-  file's own archived/commented blocks, which the last few digests'
-  headline counts did not consistently exclude — treat 27 as the
-  corrected baseline going forward). This tick adds a 28th (the
-  heartbeat tuning proposal, see Headline). **67 days** since the
-  last `/oversight` promotion (2026-06-14, phases 46-49). The
-  `[7.5]` trend-snapshot data-quality gate candidate remains the
-  strongest single item for the next promotion pass.
+  runner), not neglect. Unchanged from the last digest — still the
+  loop's longest-standing signal gap, worth an `/oversight` look at
+  whether a local-only `/critique` cadence (run by hand, not cloud)
+  is the right long-term shape rather than waiting on cloud Chrome
+  MCP access.
+- **Phase candidates**: **30 live pending** rows in
+  `plan/PHASE_CANDIDATES.md`, pass 328. **68 days** since the last
+  `/oversight` promotion (2026-06-14, phases 46-49). The `[7.5]`
+  trend-snapshot data-quality gate and the `[7.5]` content-fact-vs-
+  catalog numeric-spec audit remain the strongest candidates waiting
+  on the next promotion pass.
 - **Data backlog**: empty — all rows in `data/BACKLOG.md`'s Pending
   section are already shipped and checked off.
-- **Open GitHub issues**: **23 open** (up from 21 at the last
-  digest). 0 unlabeled (triage gate clean). **5 labeled
-  `triage:needs-user`** (up from 4 — new: `#883`, this window's
-  flatline alarm). `#881` (guides content-gap, opened 08-16, still
-  unshipped) is the one fresh loop-opened issue from this window.
+- **Open GitHub issues**: **23 open**, unchanged from the last
+  digest. 0 unlabeled (triage gate clean). **5 labeled
+  `triage:needs-user`** (`#883`, `#756`, `#639`, `#499`, `#434`) —
+  unchanged; all are past cloud-infra incidents now confirmed stable
+  by this window's 25 clean ticks. `#884`/`#885` (this window's
+  content-dispatch mirror issues) are already closed by their
+  matching ships.
 
 ## Breadth verdict
 
-Full `pnpm verify`, run as sequential foreground legs (per the
+Full `pnpm verify`, run as sequential foreground legs (the combined
+command exceeded a single foreground budget and was split per the
 standing rule — never backgrounded):
 
 - `typecheck` — green, 9 packages.
 - `lint` — green, all lintable workspaces (`next lint`'s Next-16
   deprecation notice is cosmetic, not a failure).
-- `test:run` — green, **1212 tests / 166 files** across 7 workspaces
-  (835 web + 164 content + 129 data + 44 seo + 31 ui + 6 e2e + 3
-  tokens).
-- `test:scripts` — green, **207 tests / 74 suites**.
+- `test:run` — green, **133 files / 999 tests** (web: 109 files /
+  835 tests; content: 24 files / 164 tests).
+- `test:scripts` — green, **74 suites / 207 tests**.
 - `data:validate` — green, **81 records**, all cross-refs resolve
   (11 vendors, 18 switches, 10 keycap-sets, 10 boards, 17 group-buys,
   15 trends).
-- `build` — green, first attempt, no retries.
+- `build` — green, first attempt, no retries, 270 static pages.
 - `size` — green, homepage bundle **108.7 KB / 200 KB** budget.
-- `e2e` — green, **1153/1153**. Console noise from intentional
-  not-found-route `NoFallbackError` probes during the run is
-  expected, not a regression.
-- `pnpm deploy:check` at HEAD (`8ecfd869`) — deploy `READY`
-  (`dpl_8Lr9zrGV`).
+- `e2e` — green, **1165/1165** in 8.0m. Console noise from
+  intentional not-found-route `NoFallbackError` probes during the
+  run is expected, not a regression.
+- `pnpm deploy:check` at HEAD (`17ec13fe`) — deploy `READY`
+  (`dpl_4jFtuQPJ`).
 
 Zero red legs this tick — nothing new filed to `plan/AUDIT.md` from
-breadth. The 4-day outage above is a CI/auth incident, not a verify
-failure, and shows up in Needs You instead.
+breadth.
 
 ## Needs you
 
-1. **New, HIGH: verify the Claude Code OAuth credential backing
-   `march.yml`/`night.yml`.** Every failed run in the 96h outage
-   (2026-08-16T09:07Z → 2026-08-20T09:11Z, 84 runs) shows
-   `api_error_status: 403` — a rejected API call, not a code or
-   verify-gate failure. It self-cleared with no repo change, which
-   points at a credential (expired token, temporary access issue) on
-   the Anthropic/Claude Code side rather than anything in this repo.
-   This is the 4th `triage:needs-user` cloud-infra incident on record
-   (`#756`, `#639`, `#499`, `#434`) and by far the longest (prior
-   ones were single-tick blips). Worth confirming the token's
-   validity window now so a fifth incident isn't a surprise.
-2. **New: pick up issue `#881`** (guides pillar — ANSI vs ISO vs JIS
-   layout buying guide). Opened 08-16, stranded when the outage hit 9
-   minutes later, still open, no article drafted. It's the one `[HOT
-   PURSUIT]` row in `plan/AUDIT.md` — the next `/march` tick should
-   dispatch `/ship-content` for it directly.
-3. **New tuning proposal filed this tick** (see
-   `plan/PHASE_CANDIDATES.md`): `heartbeat.yml`'s flatline alarm
-   checks "last completed" run, not "last successful" one — a
-   workflow that fails on every scheduled tick (this incident,
-   exactly) can never trip a completed-based check, since failing
-   runs still complete on schedule. It did eventually fire (`#883`,
-   ~75h in) but with a "308h" figure that doesn't reconcile with the
-   observed hourly cadence — worth tracing separately. Proposal is a
-   workflow-file change, so it likely needs the same `/oversight`
-   path as the item below.
-4. **Standing, reinforced by this incident: `march.yml`'s crash-issue
-   gate `[6.3]` AUDIT row** (blocked on cloud workflow-file push
-   permission, open since 2026-07-05). This window is fresh evidence
-   of the cost: 84 failed runs, 0 auto-filed crash issues — heartbeat
-   was the only backstop, and it's the thing item 3 above just found
-   a gap in.
-5. **Standing: Lighthouse CI disabled ~66 days**, `[4.0]`
+1. **Resolved (monitoring only): the OAuth-credential watch item
+   from the last digest.** 25/25 clean `march` ticks since, 0 403s.
+   Downgrading from an active ask to a passive watch — flag again
+   only if another failure cluster with the same signature appears.
+2. **Standing: `plan/CRITIQUE.md` is 102 days stale.** The fresh-
+   eyes loop has been dark since pass 11 (2026-05-10); diagnosed as
+   a cloud-runner Chrome MCP gap, not neglect, but it's been the
+   same diagnosis for over three months now. Worth an `/oversight`
+   call on whether to run `/critique` locally on a manual cadence in
+   the meantime rather than leave the queue permanently waiting on
+   cloud tooling.
+3. **Standing: Lighthouse CI disabled ~70 days**, `[4.0]`
    `plan/AUDIT.md` row, `needs: /oversight call` on whether to
-   re-enable now or investigate the original disable reason first.
-6. **Standing: cloud loop cannot push `.github/workflows/*.yml`
-   changes** (`[blocked-cloud-permission] [5.5]` candidate, `[6.3]`/
-   `[4.0]` AUDIT rows, issue `#395`). This is the shared blocker on
-   items 3 and 4 above — resolving the PAT/App scope question unblocks
-   both a ready two-line fix and a new one-line-ish fix in one
-   `/oversight` pass.
-7. **Standing: `[needs-user-call]` soft-404 structural conflict**
+   re-enable now or investigate the original 2026-06-12 disable
+   reason first.
+4. **Standing: cloud loop cannot push `.github/workflows/*.yml`
+   changes** (`[blocked-cloud-permission]` on both the `[6.3]`
+   march.yml crash-issue-gate row and the `[4.0]` heartbeat.yml
+   dedup-scope row, issue `#395`). Resolving the PAT/App scope
+   question unblocks two ready fixes in one `/oversight` pass.
+5. **Standing: mirror-drain-gap `[needs-user-call] [3.0]`** —
+   reinforced again this tick by expand pass 328 (5th confirmed
+   subsystem instance). `loop:opened` issues can go permanently
+   un-drained if a ship closes a different issue than the one that
+   requested it; the underlying survey (`content-gap-survey.mjs`)
+   never files the specific topic, only a generic pillar-quota row.
+6. **Standing: `[needs-user-call]` soft-404 structural conflict**
    (`[4.2]`) — non-autonomous, unchanged.
-8. **Standing, growing: the `/oversight` promotion backlog.** 27 live
-   candidates pending (28 after this tick), 67 days since the last
-   promotion. The `[7.5]` trend-snapshot data-quality gate remains
-   the clearest single item to act on next.
+7. **Standing, growing: the `/oversight` promotion backlog.** 30
+   live candidates pending, 68 days since the last promotion. The
+   two `[7.5]` candidates (trend-snapshot data-quality gate,
+   content-fact-vs-catalog numeric audit) are the clearest next
+   picks.
 
 ## Today's intent
 
-`plan/AUDIT.md`'s one actionable row is the `[HOT PURSUIT]`
-content-gap for the guides pillar (issue `#881`) — the next `/march`
-tick should dispatch `/ship-content` for it directly, closing the
-gap the outage opened. Beyond that, this tick's breadth check was
-fully clean, so there's no fresh autonomously-actionable AUDIT.md row
-to chase. The main open question isn't "what to fix" but "is the loop
-actually back to its normal cadence" — worth watching the next few
-scheduled `march` ticks land clean before treating this as fully
-resolved.
+No phase or content-gap work is queued — Rule 1 is comfortable and
+the build plan is fully shipped. The next `/march` tick's most
+likely autonomous action is draining the single remaining cross-
+link row (`hall-effect-rapid-trigger-plateau ↔
+keychron-nova-socket-hybrid`) or the newsletter-cadence row (issue
+008 due, 8 days since issue 7, routine). Nothing urgent — the main
+open question is the same one carried from the last digest's
+resolved item: watching that the loop's clean run continues, plus
+the standing `/oversight` asks above (critique staleness, Lighthouse,
+workflow-push permission, promotion backlog) which only a human call
+can move forward.
 
 ## Tuning proposals
 
-**One filed this tick**, in `plan/PHASE_CANDIDATES.md`: `[score 5.5]`
-`heartbeat.yml`'s flatline alarm measures last-*completed* run
-instead of last-*successful* run, which structurally can't catch a
-fail-fast loop (exactly this incident's shape) until something
-entirely different stops runs from completing at all — plus the
-alarm's own "308h" figure in issue `#883` doesn't reconcile with the
-observed hourly failure cadence and needs tracing. Filed as a
-candidate, not applied — it's a workflow-file change subject to the
-same cloud push-permission constraint as the sibling `[6.3]`
-crash-issue-gate row, so it likely rides along with that row's
-`/oversight` resolution. No other gate mistuning found this tick:
-`/expand`'s cadence and hit-rate look healthy in the active window
-(1 candidate filed across 6 passes), and the 60-commit/24h cloud
-ceiling was nowhere near tested (0 cloud-shipped commits in the last
-24h per this tick's own ceiling check).
+**None new this tick.** The meta-loop signals visible tonight
+(mirror-drain-gap, heartbeat.yml's completed-vs-successful alarm
+logic) are already filed as pending `plan/PHASE_CANDIDATES.md`
+candidates from prior ticks — pass 328's expand run reinforced
+mirror-drain-gap rather than filing a duplicate. `/expand`'s cadence
+and hit-rate look healthy (1 pass this window, reinforcement not
+noise); no fresh gate mistuning found.
