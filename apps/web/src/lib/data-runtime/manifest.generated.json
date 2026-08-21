@@ -5955,7 +5955,7 @@
           "beginner"
         ],
         "publishedAt": "2026-08-15T14:00:00.000Z",
-        "updatedAt": "2026-08-15T14:00:00.000Z",
+        "updatedAt": "2026-08-21T10:22:00.000Z",
         "heroImage": "/hero-art/ansi-iso-jis-keyboard-layout-guide.svg",
         "heroImageAlt": "An annotated top-down strip of a keyboard's bottom two rows, drawn in warm-grey stroke, with the Enter key and Left Shift key outlined and labeled in amber to show where ANSI, ISO, and JIS physical layouts diverge.",
         "featured": false,
@@ -5983,7 +5983,7 @@
           "trends-2026"
         ],
         "publishedAt": "2026-08-12T14:00:00.000Z",
-        "updatedAt": "2026-08-12T14:00:00.000Z",
+        "updatedAt": "2026-08-21T13:30:00.000Z",
         "heroImage": "/hero-art/hall-effect-rapid-trigger-plateau.svg",
         "heroImageAlt": "A coral sparkline climbing steadily across six data points before leveling into a flat plateau across the final two, plotted against a warm-grey keyboard silhouette, with a small warm-bronze theme dot in the upper-right margin.",
         "featured": false,
@@ -6026,7 +6026,7 @@
           "beginner"
         ],
         "publishedAt": "2026-08-12T14:00:00.000Z",
-        "updatedAt": "2026-08-12T14:00:00.000Z",
+        "updatedAt": "2026-08-21T14:30:00.000Z",
         "heroImage": "/hero-art/hot-swap-sockets-tradeoffs.svg",
         "heroImageAlt": "Cross-section illustration of a keyboard switch's legs seated in a spring-contact hot-swap socket above a PCB, with a second switch shown lifted free beside it, coral line-drawing style",
         "featured": false,
@@ -9816,5 +9816,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-08-21T14:20:52.195Z"
+  "generatedAt": "2026-08-21T19:19:46.603Z"
 }
