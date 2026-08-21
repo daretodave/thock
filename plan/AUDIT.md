@@ -11576,7 +11576,7 @@ passes accumulate signals.)
 - issue: #881
 > Filed 2026-08-16 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 
-### [ ] [cross-links] [4.5] ansi-iso-jis-keyboard-layout-guide ↔ keycap-materials-compared — no prose cross-link (same pillar, ≥2 shared tags: keycaps, beginner)
+### [x] [cross-links] [4.5] ansi-iso-jis-keyboard-layout-guide ↔ keycap-materials-compared — addressed in commit `c1a9e71a`
 - category: cross-links
 - filed: 2026-08-20 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -11587,7 +11587,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/keycap-materials-compared.mdx
 - action: add [keycap-materials-compared](/article/keycap-materials-compared) to ansi-iso-jis-keyboard-layout-guide body, or vice versa
 
-### [ ] [cross-links] [4.5] ansi-iso-jis-keyboard-layout-guide ↔ keycap-profiles-compared — no prose cross-link (same pillar, ≥2 shared tags: keycaps, beginner)
+### [x] [cross-links] [4.5] ansi-iso-jis-keyboard-layout-guide ↔ keycap-profiles-compared — addressed in commit `c1a9e71a`
 - category: cross-links
 - filed: 2026-08-20 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
