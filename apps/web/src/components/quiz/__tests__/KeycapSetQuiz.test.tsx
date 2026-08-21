@@ -151,4 +151,14 @@ describe('<KeycapSetQuiz>', () => {
       screen.getByRole('heading', { name: /what keycap profile height appeals to you/i })
     ).toHaveFocus()
   })
+
+  it('clears the pending advance timeout on unmount so it cannot fire after navigation', () => {
+    const clearTimeoutSpy = vi.spyOn(window, 'clearTimeout')
+    const { unmount } = render(<KeycapSetQuiz keycapSets={KEYCAP_SETS} />)
+    fireEvent.click(screen.getByText('Low and uniform — Cherry / OEM / XDA'))
+    unmount()
+    expect(clearTimeoutSpy).toHaveBeenCalled()
+    expect(() => act(() => { vi.advanceTimersByTime(200) })).not.toThrow()
+    clearTimeoutSpy.mockRestore()
+  })
 })

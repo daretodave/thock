@@ -170,4 +170,14 @@ describe('<SwitchQuiz>', () => {
       screen.getByRole('heading', { name: /how do you want your switches to sound/i })
     ).toHaveFocus()
   })
+
+  it('clears the pending advance timeout on unmount so it cannot fire after navigation', () => {
+    const clearTimeoutSpy = vi.spyOn(window, 'clearTimeout')
+    const { unmount } = render(<SwitchQuiz switches={SWITCHES} />)
+    fireEvent.click(screen.getByText('Deep and thocky'))
+    unmount()
+    expect(clearTimeoutSpy).toHaveBeenCalled()
+    expect(() => act(() => { vi.advanceTimersByTime(200) })).not.toThrow()
+    clearTimeoutSpy.mockRestore()
+  })
 })

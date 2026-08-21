@@ -78,6 +78,12 @@ export function SwitchQuiz({ switches }: Props) {
     }
   }, [isDone])
 
+  useEffect(() => {
+    return () => {
+      if (pendingAdvance.current) clearTimeout(pendingAdvance.current)
+    }
+  }, [])
+
   function handleSelect(value: string) {
     if (!currentQ) return
     const next = { ...answers, [currentQ.key]: value }
