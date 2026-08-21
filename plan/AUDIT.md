@@ -11681,7 +11681,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/keychron-nova-socket-hybrid.mdx
 - action: add [keychron-nova-socket-hybrid](/article/keychron-nova-socket-hybrid) to hall-effect-rapid-trigger-plateau body, or vice versa
 
-### [ ] [newsletter] [4.0] Weekly digest — issue 008 due (8 days since issue 7)
+### [x] [newsletter] [4.0] Weekly digest — issue 008 due (8 days since issue 7) — addressed in 3fa0b851, closes #888
 - category: content-gaps
 - filed: 2026-08-21 by newsletter-gap-survey.mjs
 - impact: 5 (newsletter archive going stale reduces /newsletter value and reader trust in cadence)
@@ -11692,3 +11692,4 @@ passes accumulate signals.)
 - days-since: 8
 - issue: #888
 > Filed 2026-08-21 by newsletter-gap-survey.mjs. 8 days since issue 7. Threshold: ≥7 calendar days.
+> **Resolved (2026-08-21):** shipped `thock-weekly-008.mdx` — 5 pillar picks (guides/ideas/trends/news/deep-dives) plus a tracker check-in. The automated Monday W34 snapshot refresh was missed during the 2026-08-16–20 cloud-loop outage, so no fresher trend data exists yet; the tracker section reuses `data/trends/2026-W33.json` but is framed honestly as a check-in on the same week (not a new-week claim) and surfaces different rows (Keychron, Mode Designs, GMK Beachy) than issue 07 already covered. `pnpm verify` full gate green: typecheck, unit tests, data:validate, build, 1168/1168 e2e.
