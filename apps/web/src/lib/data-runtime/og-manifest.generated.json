@@ -1494,6 +1494,13 @@
   ],
   "newsletters": [
     {
+      "slug": "thock-weekly-008",
+      "title": "thock weekly — issue 08",
+      "lede": "A layout guide for reading Enter key shape before a keycap set doesn't fit, the honest cost list behind hot-swap sockets, a Hall-effect tracker line that's flat but not cooling off, Wuque Studio's quiet update, and the buckling-spring mechanism thock kept borrowing without explaining — plus a tracker check-in on Keychron, Mode Designs, and GMK Beachy.",
+      "issue": 8,
+      "readTime": 4
+    },
+    {
       "slug": "thock-weekly-007",
       "title": "thock weekly — issue 07",
       "lede": "ZMK's wireless case, foam sealed inside a switch housing, a closed GMK buy's honest cooldown, a five-region launch that doesn't stagger, and the 60% layout's improbable origin — plus GMK CYL OG Extensions closes its Geekhack buy today as attention fully rotates away from TA Neo.",
@@ -6206,5 +6213,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-08-21T10:13:59.251Z"
+  "generatedAt": "2026-08-21T11:18:03.963Z"
 }
