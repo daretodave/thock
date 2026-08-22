@@ -5,6 +5,7 @@ describe('countryLabel', () => {
   it('resolves known country codes to display names', () => {
     expect(countryLabel('US')).toBe('United States')
     expect(countryLabel('FR')).toBe('France')
+    expect(countryLabel('GB')).toBe('United Kingdom')
   })
 
   it('falls back to the raw code for unknown countries', () => {

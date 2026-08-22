@@ -3,7 +3,7 @@ export const COUNTRY_LABEL: Record<string, string> = {
   CN: 'China',
   JP: 'Japan',
   DE: 'Germany',
-  UK: 'United Kingdom',
+  GB: 'United Kingdom',
   HK: 'Hong Kong',
   NL: 'Netherlands',
   KR: 'South Korea',
