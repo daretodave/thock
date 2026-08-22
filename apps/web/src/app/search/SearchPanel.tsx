@@ -8,7 +8,7 @@ import {
   type ReactElement,
 } from 'react'
 import Link from 'next/link'
-import { useSearchParams } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import type { Tag } from '@thock/content'
 import { Container, Stack } from '@thock/ui'
 import type { SearchHit, PartSearchHit } from '@/lib/search/runtime'
@@ -38,9 +38,11 @@ const PILLAR_FALLBACKS: { label: string; href: string }[] = [
  * payload ships as its own chunk instead of inflating /search's
  * First Load JS; subsequent queries are sub-millisecond. Reads `?q=`
  * on mount so deep-links (e.g. from phase 16's 404-soft) populate
- * the input.
+ * the input, and writes it back after each debounced change so the
+ * URL stays shareable and survives a refresh or back-navigation.
  */
 export function SearchPanel({ allTags }: SearchPanelProps): ReactElement {
+  const router = useRouter()
   const params = useSearchParams()
   const urlQ = params?.get('q') ?? ''
   const [query, setQuery] = useState(urlQ)
@@ -80,6 +82,14 @@ export function SearchPanel({ allTags }: SearchPanelProps): ReactElement {
     const id = window.setTimeout(() => setDebouncedQuery(query), DEBOUNCE_MS)
     return () => window.clearTimeout(id)
   }, [query])
+
+  // Keep the URL in sync with the debounced query so a refresh, a
+  // copied address bar, or the back button all restore the same search.
+  useEffect(() => {
+    const trimmedQuery = debouncedQuery.trim()
+    const url = trimmedQuery ? `/search?q=${encodeURIComponent(trimmedQuery)}` : '/search'
+    router.replace(url, { scroll: false })
+  }, [debouncedQuery, router])
 
   const tagsBySlug = useMemo(
     () => new Map<string, Tag>(allTags.map((t) => [t.slug, t])),

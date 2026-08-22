@@ -3,8 +3,11 @@ import { render, screen, fireEvent, act } from '@testing-library/react'
 import type { Tag } from '@thock/content'
 import { SearchPanel } from '../SearchPanel'
 
+const mockRouterReplace = vi.fn()
+
 vi.mock('next/navigation', () => ({
   useSearchParams: vi.fn(() => ({ get: (_key: string) => null })),
+  useRouter: vi.fn(() => ({ replace: mockRouterReplace })),
 }))
 
 vi.mock('@/lib/search/runtime', () => ({
@@ -137,6 +140,32 @@ describe('<SearchPanel>', () => {
     const input = screen.getByRole('searchbox') as HTMLInputElement
     expect(input.value).toBe('gateron')
     expect(screen.getByTestId('search-results')).toBeInTheDocument()
+  })
+
+  it('writes the debounced query back to the URL so refresh/back/share all restore it', async () => {
+    const { searchArticles } = await import('@/lib/search/runtime')
+    vi.mocked(searchArticles).mockReturnValue([FAKE_HIT])
+
+    render(<SearchPanel allTags={ALL_TAGS} />)
+    await act(async () => {}) // flush the dynamic import of the runtime module
+    const input = screen.getByRole('searchbox')
+    fireEvent.change(input, { target: { value: 'oil king' } })
+
+    act(() => { vi.advanceTimersByTime(120) })
+
+    expect(mockRouterReplace).toHaveBeenCalledWith('/search?q=oil%20king', { scroll: false })
+  })
+
+  it('replaces the URL back to the bare path when the query is cleared', async () => {
+    render(<SearchPanel allTags={ALL_TAGS} />)
+    await act(async () => {}) // flush the dynamic import of the runtime module
+    const input = screen.getByRole('searchbox')
+    fireEvent.change(input, { target: { value: 'oil king' } })
+    act(() => { vi.advanceTimersByTime(120) })
+    fireEvent.change(input, { target: { value: '' } })
+    act(() => { vi.advanceTimersByTime(120) })
+
+    expect(mockRouterReplace).toHaveBeenLastCalledWith('/search', { scroll: false })
   })
 
   it('autofocuses the input on a fine-pointer (desktop) visit', async () => {
