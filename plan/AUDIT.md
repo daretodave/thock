@@ -84,6 +84,19 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [content] [4.5] hall-effect-rapid-trigger-plateau overstates Gateron Oil King spark-data stability — addressed in commit `de71b610`, closes #901
+
+- category: content
+- filed: 2026-08-22 by cloud /iterate audit (fresh general-purpose sweep, angle: re-check a numeric claim flagged-but-deferred by the 2026-08-21 pass that shipped #894)
+- impact: 5 (published, currently-live article makes a specific numeric claim about the site's own trend-tracker data that is directly falsifiable against `data/trends/2026-W33.json`; same defect class the site has fixed repeatedly across the trends corpus, and this exact instance was already surfaced once by the 2026-08-21 audit pass but deliberately deferred, not fixed)
+- ease: 9 (single clause of prose in one file; no schema, data, or code change — the underlying data record is correct, only the descriptive text overclaimed precision)
+- score: 4.5 (impact × ease / 10)
+- observation: the article's closing-comparison paragraph claimed the Gateron Oil King "has been within a single point of 40 for eight straight weeks." The backing trend-tracker record for that exact week (W33) shows the switch's 8-week spark history as `[39, 39, 37, 39, 40, 40, 40, 40]` — a value of 37 sits 3 points below 40, not within 1.
+- evidence: `apps/web/src/content/articles/hall-effect-rapid-trigger-plateau.mdx:54` (pre-fix) — "The Gateron Oil King is flat at 40, and has been within a single point of 40 for eight straight weeks..."; `data/trends/2026-W33.json` Gateron Oil King row — `"spark": [39, 39, 37, 39, 40, 40, 40, 40]` (min 37, max 40 → spread of 3, not 1).
+- issue: #901
+> **Resolved (2026-08-22):** reworded the clause to "has held in a tight 37-to-40 band for eight straight weeks," matching the real data spread. Bumped `updatedAt`; regenerated data-runtime/OG manifests and search index via prebuild. `pnpm verify` full gate green: typecheck, lint, unit + script tests, data:validate, build, size, 1168/1168 e2e.
+> Picked as the top signal this tick (cloud `/march`): no unlabeled GitHub issues (triage gate, 0 unlabeled); not Monday (W34 snapshot already existed, weekly gate skipped); no pending phases/data/content-gap work (all 7 mechanical surveys re-ran clean this tick, no rows filed); march's own expand Step 3c gate not met (3 commits/~2.7h since pass 337's anchor `fa5700d1`, below the 20-commit/48h threshold). `plan/CRITIQUE.md`'s only Pending row remained the non-actionable `[needs-user-call]` GA-beacon item. A fresh general-purpose sweep (angles: vendor countryCode re-verification across all records, updatedAt staleness on recently-touched articles, and a re-check of a numeric claim the 2026-08-21 pass explicitly logged but didn't pursue) found this Gateron Oil King spark-spread overclaim as the one finding clearing the 3.0 bar and confirmed still unfixed; every other angle came back clean.
+
 ### [x] [seo] [4.5] /ideas ItemList JSON-LD drifts from rendered build-pick order — addressed in commit `a850625d`, closes #865
 
 - category: seo
