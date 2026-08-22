@@ -10,6 +10,21 @@ vi.mock('next/navigation', () => ({
   useRouter: vi.fn(() => ({ replace: mockRouterReplace })),
 }))
 
+// A router.replace stub that actually updates what useSearchParams()
+// returns, mirroring real App Router behavior (the committed mocks above
+// stay static after replace, which can't reproduce a self-triggered
+// URL round-trip clobbering live state).
+function mockReflectiveRouter() {
+  let currentQ: string | null = null
+  return {
+    replace: vi.fn((url: string) => {
+      const match = /[?&]q=([^&]*)/.exec(url)
+      currentQ = match?.[1] ? decodeURIComponent(match[1]) : null
+    }),
+    getQ: () => currentQ,
+  }
+}
+
 vi.mock('@/lib/search/runtime', () => ({
   searchArticles: vi.fn(() => []),
   searchParts: vi.fn(() => []),
@@ -166,6 +181,39 @@ describe('<SearchPanel>', () => {
     act(() => { vi.advanceTimersByTime(120) })
 
     expect(mockRouterReplace).toHaveBeenLastCalledWith('/search', { scroll: false })
+  })
+
+  it('does not strip a trailing space mid-typing when the URL round-trip reflects the trimmed query back', async () => {
+    const { useRouter, useSearchParams } = await import('next/navigation')
+    const reflective = mockReflectiveRouter()
+    vi.mocked(useRouter).mockReturnValue(reflective as unknown as ReturnType<typeof useRouter>)
+    vi.mocked(useSearchParams).mockImplementation(
+      () => ({ get: (key: string) => (key === 'q' ? reflective.getQ() : null) }) as ReturnType<typeof useSearchParams>,
+    )
+
+    const { searchArticles } = await import('@/lib/search/runtime')
+    vi.mocked(searchArticles).mockReturnValue([])
+
+    const { rerender } = render(<SearchPanel allTags={ALL_TAGS} />)
+    await act(async () => {}) // flush the dynamic import of the runtime module
+
+    const input = screen.getByRole('searchbox') as HTMLInputElement
+    fireEvent.change(input, { target: { value: 'gateron' } })
+    act(() => { vi.advanceTimersByTime(120) })
+    expect(reflective.getQ()).toBe('gateron')
+
+    // Re-render so the component observes the reflected (trimmed) urlQ,
+    // mimicking a real App Router re-render after router.replace() lands.
+    rerender(<SearchPanel allTags={ALL_TAGS} />)
+
+    // The reader keeps typing a trailing space before the next word settles.
+    fireEvent.change(input, { target: { value: 'gateron ' } })
+    expect(input.value).toBe('gateron ')
+
+    act(() => { vi.advanceTimersByTime(120) }) // debounce → URL-sync effect fires, trims to 'gateron'
+    rerender(<SearchPanel allTags={ALL_TAGS} />) // observe the reflected urlQ
+
+    expect(input.value).toBe('gateron ')
   })
 
   it('autofocuses the input on a fine-pointer (desktop) visit', async () => {

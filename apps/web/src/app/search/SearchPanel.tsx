@@ -49,6 +49,7 @@ export function SearchPanel({ allTags }: SearchPanelProps): ReactElement {
   const [debouncedQuery, setDebouncedQuery] = useState(urlQ)
   const [runtime, setRuntime] = useState<SearchRuntime | null>(null)
   const inputRef = useRef<HTMLInputElement | null>(null)
+  const lastWrittenQuery = useRef(urlQ)
 
   // The MiniSearch payload embeds full tokenized article bodies (~200 KB
   // gzipped) — split it into its own chunk fetched after hydration instead
@@ -73,9 +74,14 @@ export function SearchPanel({ allTags }: SearchPanelProps): ReactElement {
 
   // Sync when the URL `?q=` changes after mount (the page is
   // statically generated, so the first server render sees no
-  // params; the real value arrives at hydration).
+  // params; the real value arrives at hydration) — but only for
+  // external changes (back/forward nav), not the trimmed value
+  // this component just wrote itself below, which would otherwise
+  // clobber a trailing space the reader is still typing past.
   useEffect(() => {
-    setQuery(urlQ)
+    if (urlQ !== lastWrittenQuery.current) {
+      setQuery(urlQ)
+    }
   }, [urlQ])
 
   useEffect(() => {
@@ -88,6 +94,7 @@ export function SearchPanel({ allTags }: SearchPanelProps): ReactElement {
   useEffect(() => {
     const trimmedQuery = debouncedQuery.trim()
     const url = trimmedQuery ? `/search?q=${encodeURIComponent(trimmedQuery)}` : '/search'
+    lastWrittenQuery.current = trimmedQuery
     router.replace(url, { scroll: false })
   }, [debouncedQuery, router])
 
