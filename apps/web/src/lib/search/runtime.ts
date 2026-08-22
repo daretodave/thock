@@ -1,4 +1,4 @@
-import MiniSearch from 'minisearch'
+import MiniSearch, { type MatchInfo, type SearchResult } from 'minisearch'
 import payload from './index.generated.json'
 import { normalizeHotswapSpelling } from './normalize'
 
@@ -67,6 +67,15 @@ const SEARCH_OPTIONS = {
   prefix: (term: string) => term.length >= MIN_EXPANSION_LENGTH,
 } as const
 
+// A matched term this short (e.g. "one", "3") is too generic to trust as a
+// standalone relevance signal — it inflates scores on documents that share
+// no real topical overlap with the query. Below this length, a match only
+// counts toward `hasStrongMatch` if paired with a longer matched term.
+const MIN_STRONG_MATCH_TERM_LENGTH = 4
+// Fields worth trusting as evidence the query is actually *about* this
+// document, as opposed to a term that happens to appear once in body prose.
+const STRONG_MATCH_FIELDS = new Set(['searchTitle', 'searchTags'])
+
 function stripStopwords(query: string): string {
   return query
     .split(/\s+/)
@@ -75,21 +84,44 @@ function stripStopwords(query: string): string {
 }
 
 /**
+ * True when at least one matched term (post fuzzy/prefix expansion) landed
+ * in the title or tags — the fields that indicate the query is actually
+ * about this document, not an incidental body mention. Used to gate
+ * "did you mean" suggestions, where a plausible-looking but topically
+ * unrelated top hit is worse than no suggestion at all.
+ */
+function hasStrongMatch(match: MatchInfo): boolean {
+  return Object.entries(match).some(
+    ([term, fields]) =>
+      term.length >= MIN_STRONG_MATCH_TERM_LENGTH &&
+      fields.some((field) => STRONG_MATCH_FIELDS.has(field)),
+  )
+}
+
+/**
  * Run a query against the precomputed MiniSearch index. Returns
  * up to `limit` ranked hits, each enriched with the canonical
  * stored document fields.
+ *
+ * `requireStrongMatch` filters out hits whose only evidence is a weak
+ * body/lede mention (see `hasStrongMatch`) — intended for "did you mean"
+ * style suggestions rather than the explicit `/search` results page,
+ * where a body-only match is still a legitimate result the reader asked
+ * for.
  */
 export function searchArticles(
   query: string,
   limit: number = DEFAULT_LIMIT,
+  options?: { requireStrongMatch?: boolean },
 ): SearchHit[] {
   const trimmed = stripStopwords(normalizeHotswapSpelling(query.trim()))
   if (trimmed.length === 0) return []
   const { index, documents } = load()
-  const raw = index.search(trimmed, SEARCH_OPTIONS)
+  const raw: SearchResult[] = index.search(trimmed, SEARCH_OPTIONS)
   const hits: SearchHit[] = []
   for (const r of raw) {
     if (hits.length >= limit) break
+    if (options?.requireStrongMatch && !hasStrongMatch(r.match)) continue
     const doc = documents[r.id]
     if (!doc) continue
     hits.push({ ...doc, score: r.score })

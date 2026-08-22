@@ -41,7 +41,7 @@ export function SuggestedArticles({
   const query = slugToQuery(slug)
   if (query.length === 0) return null
 
-  const hits = searchArticles(query, limit)
+  const hits = searchArticles(query, limit, { requireStrongMatch: true })
   if (hits.length === 0) return null
 
   return (

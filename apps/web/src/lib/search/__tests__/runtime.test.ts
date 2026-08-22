@@ -73,6 +73,47 @@ describe('searchArticles', () => {
     expect(twoWords.length).toBeGreaterThanOrEqual(1)
     expect(bareWord[0]?.slug).toBe(twoWords[0]?.slug)
   })
+
+  describe('requireStrongMatch', () => {
+    it('drops a multi-word query for an off-catalog product whose only overlap is an incidental body mention of a common short word', () => {
+      // No article covers this product; MiniSearch's default OR-combine still
+      // returns hits purely off a body-only mention of a short, generic term
+      // ("one"), which reads as a confidently wrong "did you mean" suggestion.
+      const loose = searchArticles('razer huntsman v3')
+      const strong = searchArticles('razer huntsman v3', undefined, {
+        requireStrongMatch: true,
+      })
+      expect(loose.length).toBeGreaterThanOrEqual(1)
+      expect(strong).toEqual([])
+    })
+
+    it('drops results for a nonsense query even though the loose search returns a body-only hit', () => {
+      const loose = searchArticles('xyzzy quux plugh')
+      const strong = searchArticles('xyzzy quux plugh', undefined, {
+        requireStrongMatch: true,
+      })
+      expect(loose.length).toBeGreaterThanOrEqual(1)
+      expect(strong).toEqual([])
+    })
+
+    it('still surfaces a genuine typo of a real article title', () => {
+      // "gaetron" doesn't fuzzy-match "gateron" (edit distance 2, over the
+      // fuzzy budget) but "oil"/"king" landing in the title is strong
+      // enough evidence on its own.
+      const strong = searchArticles('gaetron oil king', undefined, {
+        requireStrongMatch: true,
+      })
+      expect(strong.length).toBeGreaterThanOrEqual(1)
+      expect(strong[0]?.slug).toBe('gateron-oil-king-deep-dive')
+    })
+
+    it('still surfaces a genuine single-word typo of a tag/title term', () => {
+      const strong = searchArticles('silnt', undefined, {
+        requireStrongMatch: true,
+      })
+      expect(strong.length).toBeGreaterThanOrEqual(1)
+    })
+  })
 })
 
 describe('searchParts', () => {
