@@ -80,6 +80,20 @@ describe('<SearchPanel>', () => {
     expect(screen.queryByTestId('search-no-results')).not.toBeInTheDocument()
   })
 
+  it('shows a loading state instead of false no-results while the runtime chunk is still loading', () => {
+    render(<SearchPanel allTags={ALL_TAGS} />)
+    // Deliberately do not flush the dynamic import — this is the window
+    // (SSR + pre-hydration-settle on a direct/shared ?q= link) where
+    // results/partResults are still [] because runtime hasn't resolved yet.
+    const input = screen.getByRole('searchbox')
+    fireEvent.change(input, { target: { value: 'gateron' } })
+    act(() => { vi.advanceTimersByTime(120) })
+
+    expect(screen.getByTestId('search-loading')).toBeInTheDocument()
+    expect(screen.queryByTestId('search-no-results')).not.toBeInTheDocument()
+    expect(screen.getByRole('status')).toHaveTextContent('')
+  })
+
   it('shows no-results state with five pillar fallback links for a non-matching query', async () => {
     const { searchArticles } = await import('@/lib/search/runtime')
     vi.mocked(searchArticles).mockReturnValue([])

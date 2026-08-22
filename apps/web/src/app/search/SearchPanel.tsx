@@ -115,7 +115,8 @@ export function SearchPanel({ allTags }: SearchPanelProps): ReactElement {
 
   const trimmed = debouncedQuery.trim()
   const showHint = trimmed.length === 0
-  const showEmpty = !showHint && results.length === 0 && partResults.length === 0
+  const showLoading = !showHint && !runtime
+  const showEmpty = !showHint && !!runtime && results.length === 0 && partResults.length === 0
 
   return (
     <Container as="section" className="pb-16">
@@ -142,15 +143,22 @@ export function SearchPanel({ allTags }: SearchPanelProps): ReactElement {
         <div role="status" aria-live="polite" aria-atomic="true" className="sr-only">
           {showHint
             ? ''
-            : showEmpty
-              ? `No matches for "${trimmed}"`
-              : `${results.length + partResults.length} result${
-                  results.length + partResults.length === 1 ? '' : 's'
-                } for "${trimmed}"`}
+            : showLoading
+              ? ''
+              : showEmpty
+                ? `No matches for "${trimmed}"`
+                : `${results.length + partResults.length} result${
+                    results.length + partResults.length === 1 ? '' : 's'
+                  } for "${trimmed}"`}
         </div>
         {showHint && (
           <div data-testid="search-empty-query" className="font-serif text-h3 text-text-2">
             Type a switch name, brand, or tag. Hit slowly — the index is local.
+          </div>
+        )}
+        {showLoading && (
+          <div data-testid="search-loading" className="font-serif text-h3 text-text-2">
+            Loading the index…
           </div>
         )}
         {showEmpty && (
