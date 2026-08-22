@@ -35,6 +35,26 @@ describe('<ArticleCard>', () => {
     expect(screen.getByTestId('article-card-placeholder')).toBeInTheDocument()
   })
 
+  it('hero variant defaults to priority-loading its image (LCP candidate)', () => {
+    const article = makeArticle({
+      frontmatter: { ...makeArticle().frontmatter, heroImage: '/hero-art/a.svg' },
+    })
+    const { container } = render(<ArticleCard article={article} variant="hero" />)
+    const img = container.querySelector('img')
+    expect(img).not.toHaveAttribute('loading', 'lazy')
+  })
+
+  it('hero variant lazy-loads its image when priority={false} (a second same-page hero card is never the LCP element)', () => {
+    const article = makeArticle({
+      frontmatter: { ...makeArticle().frontmatter, heroImage: '/hero-art/a.svg' },
+    })
+    const { container } = render(
+      <ArticleCard article={article} variant="hero" priority={false} />,
+    )
+    const img = container.querySelector('img')
+    expect(img).toHaveAttribute('loading', 'lazy')
+  })
+
   it('hero variant links to the article path', () => {
     const article = makeArticle({ slug: 'foo' })
     article.frontmatter.slug = 'foo'

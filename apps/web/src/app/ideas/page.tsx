@@ -106,7 +106,12 @@ export default function IdeasPage(): ReactElement {
       {lead ? (
         <Container as="section" className="py-12 sm:py-16">
           <HomeSectionHeading kicker="Latest" title="Newest from the workbench" />
-          <ArticleCard article={lead} variant="hero" titleAs="h2" />
+          <ArticleCard
+            article={lead}
+            variant="hero"
+            titleAs="h2"
+            priority={!buildPick}
+          />
         </Container>
       ) : !buildPick ? (
         <Container as="section" className="py-16">

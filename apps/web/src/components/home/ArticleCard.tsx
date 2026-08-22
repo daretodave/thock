@@ -16,6 +16,16 @@ export type ArticleCardProps = {
    * pass `h2` to avoid a duplicate H1.
    */
   titleAs?: 'h1' | 'h2'
+  /**
+   * Hero variant only. Whether the hero image is the page's LCP
+   * candidate and should eager-load. Defaults to `true`; pass
+   * `false` on any hero card that isn't the first one rendered on
+   * a page (e.g. `/ideas`' second "lead" hero below "build of the
+   * week") — `next/image` warns that using `priority` on more
+   * than one image competes for bandwidth and can delay the real
+   * LCP element.
+   */
+  priority?: boolean
 }
 
 const PUBLISHED_FORMATTER = new Intl.DateTimeFormat('en-US', {
@@ -66,6 +76,7 @@ export function ArticleCard({
   article,
   variant,
   titleAs = 'h1',
+  priority = true,
 }: ArticleCardProps): ReactElement {
   const fm = article.frontmatter
   const path = `/article/${article.slug}`
@@ -102,7 +113,7 @@ export function ArticleCard({
               src={fm.heroImage}
               alt={fm.heroImageAlt ?? ''}
               fill
-              priority
+              priority={priority}
               sizes="(min-width: 1024px) 60vw, 100vw"
               className="object-cover"
             />
