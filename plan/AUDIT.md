@@ -144,7 +144,7 @@
 - evidence: `apps/web/src/content/articles/plate-materials-explained.mdx` "Combinations" section (POM+gasket-mount caution) vs. this tick's scout research confirming Mode's Sonnet ships POM as its stock/no-upcharge plate on a block-mount system the hobby files as gasket-mount
 - next: `/iterate` — scout research on whether Mode's block-mount compliance budget differs meaningfully from a foam-strip gasket (which would resolve the tension without contradicting either claim), then a small prose reconciliation pass
 
-### [ ] [data-gaps] [5.6] `data/switches/gazzew-boba-lt.json` describes a 37g/45g silent linear from April 2021 — vendors list the Boba LT as a non-silent 55g/65g long-pole linear
+### [x] [data-gaps] [5.6] `data/switches/gazzew-boba-lt.json` describes a 37g/45g silent linear from April 2021 — vendors list the Boba LT as a non-silent 55g/65g long-pole linear — addressed in `d81dd797`, closes #912
 - category: data-gaps
 - filed: 2026-08-23 by /oversight (content-curator primary-source check while drafting gazzew-boba-family-deep-dive)
 - impact: 7 (record feeds `/part/switch/gazzew-boba-lt`, the quiz's silent-linear bucket, and the new family deep-dive's comparison matrix, which follows the vendor figures and now disagrees with the catalog card on the same page)
@@ -152,6 +152,18 @@
 - score: 5.6 (impact × ease / 10)
 - evidence: Pantheon Keys and RNDKBD "Boba LT (Linear Thock)" listings: 55g actuation / 65g bottom-out, not silenced; flagged in `apps/web/public/article-viz/gazzew-boba-family-deep-dive/family-matrix.svg.json` warnings
 - next: `/ship-data` correction; re-check `type` (silent-linear → linear) and the quiz scoring impact
+- issue: #912
+> **Resolved (2026-08-23):** corrected `data/switches/gazzew-boba-lt.json` (`type` silent-linear → linear, `springGrams` 37/45 → 55/65, rewritten `description` dropping the "silent"/"dampened" framing) to match RNDKBD's primary listing already cited in `gazzew-boba-family-deep-dive.mdx`. Cleared the now-resolved `warnings` field from `family-matrix.svg.json`. `recommendSwitch.ts`'s quiz logic already branches on `type` generically (`'linear' || 'silent-linear'`) with a separate silent-specific branch — no code change needed, the type flip alone correctly drops the LT out of "I want it quiet" recommendations. Also corrected `beginners-switch-buying-guide.mdx`, which repeated the same wrong 37g/silent framing and mis-paired the LT with the U4 (silent) rather than the U4T (full-sound) — rewrote to correctly pair LT↔U4T and name the Bobagum (not in the data catalog) as the family's actual silent linear. Deferred `silent-switch-damping-deep-dive.mdx`'s use of the LT as a "light spring on an elastomer floor" example — that example's premise breaks now that LT is undamped, and fixing it means picking a new example, not a word/number swap (see new AUDIT row below). `article-parts-check.mjs` clean on the touched article. Full `pnpm verify` green.
+> Picked as the top signal this tick (cloud `/march`): no unlabeled GitHub issues; not Monday (W34 snapshot exists); no pending phases/data/content-gap work (all 8 mechanical surveys re-ran clean except `article-crosslink-survey.mjs`, which filed one new `[cross-links] [4.5]` row, left pending); march's own expand Step 3c gate checked against the header's stated anchor (`aa79a7dd`, 30 commits) but that anchor is stale — cross-referencing the pass notes shows pass 345's own resulting commit was `934fb1dc`, only 2 commits/~1.2h prior, well under both thresholds (same stale-anchor pattern already caught and fixed once this window, see the mode-sonnet `[6.4]` resolution note above). Corrected course to `/iterate`, which picked this tick's top-scored Pending row: this one, tied at `[5.6]` with the gateron-magnetic-jade row but earlier in file order (filed in the same `/oversight` batch).
+
+### [ ] [content] [3.4] `silent-switch-damping-deep-dive.mdx`'s "light spring on an elastomer floor" example uses the Boba LT, which is now correctly undamped (no elastomer floor at all)
+- category: content
+- filed: 2026-08-23 by /iterate (drain of `[5.6]` gazzew-boba-lt catalog correction)
+- impact: 6 ("The second is the floor" paragraph's whole point is contrasting a heavy-spring damped switch (Cherry MX2A Silent Black) against a light-spring damped switch, using the Boba LT at "37g actuation and 45g bottom-out" as the light-spring case. Now that the LT is correctly undamped, it has no elastomer floor to be "most exposed" on — the example's premise is false, not just its numbers)
+- ease: 6 (needs a replacement light-sprung *damped* example rather than a number swap; the Bobagum — Gazzew's actual light silent linear at 52g — isn't in the data catalog yet, so either add a minimal Bobagum record first or pick a different in-catalog damped switch for the contrast)
+- score: 3.4 (impact × ease / 10)
+- evidence: `apps/web/src/content/articles/silent-switch-damping-deep-dive.mdx` "The second is the floor" paragraph, `<PartReference id="gazzew-boba-lt" />` at "37g actuation and 45g bottom-out"; corrected record now `data/switches/gazzew-boba-lt.json` `type: "linear"`, `55`/`65`
+- next: `/iterate` — either `/ship-data` a `gazzew-boba-lt` sibling Bobagum record (scout: splitkb.com/products/gazzew-bobagum-silent-linear-switch, 52/62/68g offered, dampened) then swap the example, or pick an existing in-catalog damped switch and rewrite the sentence around it
 
 ### [ ] [data-gaps] [5.6] `data/switches/gateron-magnetic-jade.json` lists 45g/55g/4.0mm — Wooting, RNDKBD, and hlplanet all give 30±7gf initial / 50gf bottom-out / 3.5±0.2mm
 - category: data-gaps
@@ -12184,3 +12196,14 @@ passes accumulate signals.)
 - entities:
   - Ikki68 Aurora (board `ikki68-aurora`) — prose line 73
 - action: add each entity to the article's mentionedParts frontmatter with the correct slug and kind
+
+### [ ] [cross-links] [4.5] building-mode-sonnet-with-oil-kings ↔ gasket-mount-reality — no prose cross-link (same pillar, ≥2 shared tags: 75, mode)
+- category: cross-links
+- filed: 2026-08-23 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: 75, mode
+- article-a: apps/web/src/content/articles/building-mode-sonnet-with-oil-kings.mdx
+- article-b: apps/web/src/content/articles/gasket-mount-reality.mdx
+- action: add [gasket-mount-reality](/article/gasket-mount-reality) to building-mode-sonnet-with-oil-kings body, or vice versa
