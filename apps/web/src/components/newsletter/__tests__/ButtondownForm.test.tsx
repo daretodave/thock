@@ -75,6 +75,16 @@ describe('<ButtondownForm>', () => {
     expect(link).toHaveAttribute('target', '_blank')
   })
 
+  it('marks the Buttondown attribution link as external with an aria-hidden arrow', () => {
+    render(<ButtondownForm variant="full" />)
+    const attribution = screen.getByText(/powered by buttondown/i)
+    const link = attribution.closest('a') as HTMLAnchorElement
+    const arrow = link.querySelector('span[aria-hidden="true"]')
+    expect(arrow).not.toBeNull()
+    expect(arrow!.textContent).toBe(' ↗')
+    expect(link.textContent).toBe('Powered by Buttondown. ↗')
+  })
+
   it('gives the Subscribe submit button a visible focus ring on both variants', () => {
     for (const variant of ['footer', 'full'] as const) {
       render(<ButtondownForm variant={variant} />)

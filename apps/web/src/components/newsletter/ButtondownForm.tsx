@@ -98,6 +98,7 @@ export function ButtondownForm({
           className="rounded-sm hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
         >
           Powered by Buttondown.
+          <span aria-hidden="true"> ↗</span>
         </a>
       </p>
     </form>
