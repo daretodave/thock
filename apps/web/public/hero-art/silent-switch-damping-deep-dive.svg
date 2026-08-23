@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — silent switch damping, split cross-section: left, a stem with elastomer pads on its legs (stem-integrated dampener); right, a housing floor with a foam ring (housing dampener)</title>
+
+  <!-- Dusty-rose splash: two small washes, one per dampener family, same hue.
+       oklch(0.66 0.085 12) is the dusty rose already in family rotation; chroma
+       kept low so the pads read as soft material, not as a highlight. -->
+  <ellipse cx="360" cy="498" rx="150" ry="40" fill="oklch(0.66 0.085 12 / 0.16)" stroke="none"/>
+  <ellipse cx="835" cy="520" rx="190" ry="40" fill="oklch(0.66 0.085 12 / 0.16)" stroke="none"/>
+
+  <!-- ════════════════════════════════════════════════════════════════════════════
+       COMPOSITION: the canvas is split at x 600 by a dashed divider.
+         LEFT (x 150 to 560): a silent stem in profile, cruciform head at the top,
+           body below, two legs descending from the body. Elastomer pads sit at
+           the leg feet (bottom-out) and at the leg shoulders (top-out).
+         RIGHT (x 640 to 1050): a bottom housing in section, center post, and a
+           foam ring on the floor, which in section reads as two pads either side
+           of the post. The stem above it is drawn as a faint ghost so the eye
+           knows what lands on the foam.
+       Both dampener elements carry the dusty-rose wash. Nothing else does.
+       ════════════════════════════════════════════════════════════════════════════ -->
+
+  <!-- ══ DIVIDER ══ -->
+  <line x1="600" y1="150" x2="600" y2="620" stroke-dasharray="4 8" stroke-opacity="0.3"/>
+  <circle cx="600" cy="150" r="2.5" stroke-opacity="0.5"/>
+  <circle cx="600" cy="620" r="2.5" stroke-opacity="0.5"/>
+
+  <!-- ══ LEFT: STEM-INTEGRATED DAMPENER ══ -->
+
+  <!-- Cruciform head -->
+  <path d="
+    M 338 190
+    L 382 190
+    L 382 204
+    L 396 204
+    L 396 220
+    L 324 220
+    L 324 204
+    L 338 204
+    Z" />
+
+  <!-- Stem body -->
+  <path d="
+    M 318 220
+    L 402 220
+    L 402 410
+    L 318 410
+    Z" />
+  <line x1="360" y1="236" x2="360" y2="400" stroke-opacity="0.4" stroke-dasharray="3 5"/>
+
+  <!-- Travel chevron -->
+  <path d="M 354 160 L 360 168 L 366 160" stroke-opacity="0.45"/>
+
+  <!-- Legs (slider rails) descending from the body -->
+  <path d="
+    M 318 410
+    L 318 480
+    L 336 480
+    L 336 410" />
+  <path d="
+    M 384 410
+    L 384 480
+    L 402 480
+    L 402 410" />
+
+  <!-- Top-out pads, at the leg shoulders, where the stem hits the top housing on return -->
+  <g fill="oklch(0.66 0.085 12 / 0.5)" stroke="oklch(0.66 0.085 12)">
+    <rect x="300" y="400" width="18" height="16" rx="3"/>
+    <rect x="402" y="400" width="18" height="16" rx="3"/>
+  </g>
+
+  <!-- Bottom-out pads, at the leg feet -->
+  <g fill="oklch(0.66 0.085 12 / 0.55)" stroke="oklch(0.66 0.085 12)">
+    <rect x="314" y="480" width="26" height="18" rx="4"/>
+    <rect x="380" y="480" width="26" height="18" rx="4"/>
+  </g>
+  <!-- Elastomer hatch on the pads -->
+  <g stroke="oklch(0.66 0.085 12)" stroke-opacity="0.45" stroke-width="1">
+    <line x1="320" y1="494" x2="328" y2="484"/>
+    <line x1="328" y1="496" x2="336" y2="486"/>
+    <line x1="386" y1="494" x2="394" y2="484"/>
+    <line x1="394" y1="496" x2="402" y2="486"/>
+  </g>
+
+  <!-- Ground line the feet land on (the housing floor, implied) -->
+  <line x1="250" y1="520" x2="470" y2="520" stroke-opacity="0.35"/>
+  <line x1="250" y1="520" x2="250" y2="512" stroke-opacity="0.35"/>
+  <line x1="470" y1="520" x2="470" y2="512" stroke-opacity="0.35"/>
+
+  <!-- Focal anchor on the left foot pad -->
+  <circle cx="327" cy="498" r="6" fill="oklch(0.66 0.085 12 / 0.95)" stroke="oklch(0.66 0.085 12)"/>
+  <circle cx="327" cy="498" r="11.5" stroke="oklch(0.66 0.085 12)" stroke-opacity="0.5"/>
+
+  <!-- ══ RIGHT: HOUSING DAMPENER ══ -->
+
+  <!-- Ghost stem above, landing into the housing -->
+  <g stroke-opacity="0.28" stroke-dasharray="4 5">
+    <path d="
+      M 800 190
+      L 870 190
+      L 870 330
+      L 800 330
+      Z" />
+    <path d="M 829 160 L 835 168 L 841 160" stroke-dasharray="none"/>
+  </g>
+
+  <!-- Bottom housing outer shell -->
+  <path d="
+    M 660 330
+    L 1010 330
+    L 1010 560
+    L 660 560
+    Z" />
+  <!-- Inner wall -->
+  <path d="
+    M 676 330
+    L 994 330
+    L 994 548
+    L 676 548
+    Z" stroke-opacity="0.38"/>
+  <!-- Center post (spring seat) -->
+  <path d="
+    M 815 548
+    L 815 400
+    L 855 400
+    L 855 548" />
+  <!-- Spring, two zigzag columns around the post -->
+  <g stroke-opacity="0.7">
+    <path d="M 775 400 L 803 412 L 775 424 L 803 436 L 775 448 L 803 460 L 775 472 L 803 484 L 775 496" />
+    <path d="M 895 400 L 867 412 L 895 424 L 867 436 L 895 448 L 867 460 L 895 472 L 867 484 L 895 496" />
+  </g>
+
+  <!-- Foam ring on the floor, seen in section as two blocks flanking the post -->
+  <g fill="oklch(0.66 0.085 12 / 0.5)" stroke="oklch(0.66 0.085 12)">
+    <rect x="700" y="518" width="108" height="30" rx="5"/>
+    <rect x="862" y="518" width="108" height="30" rx="5"/>
+  </g>
+  <!-- Open-cell dots on the foam -->
+  <g fill="oklch(0.66 0.085 12 / 0.6)" stroke="none">
+    <circle cx="720" cy="528" r="1.6"/><circle cx="740" cy="538" r="1.6"/><circle cx="760" cy="527" r="1.6"/><circle cx="780" cy="539" r="1.6"/><circle cx="796" cy="530" r="1.6"/>
+    <circle cx="880" cy="530" r="1.6"/><circle cx="900" cy="539" r="1.6"/><circle cx="920" cy="527" r="1.6"/><circle cx="940" cy="538" r="1.6"/><circle cx="958" cy="529" r="1.6"/>
+  </g>
+  <!-- Dashed arc hinting the ring is continuous around the post -->
+  <path d="M 700 518 Q 835 496 970 518" stroke="oklch(0.66 0.085 12)" stroke-opacity="0.4" stroke-dasharray="3 5"/>
+
+  <!-- PCB pins -->
+  <circle cx="740" cy="556" r="5"/>
+  <circle cx="930" cy="556" r="5"/>
+
+  <!-- Focal anchor on the right foam pad -->
+  <circle cx="916" cy="533" r="6" fill="oklch(0.66 0.085 12 / 0.95)" stroke="oklch(0.66 0.085 12)"/>
+  <circle cx="916" cy="533" r="11.5" stroke="oklch(0.66 0.085 12)" stroke-opacity="0.5"/>
+
+  <!-- ══ LEFT MARGIN TIER TICKS ══ -->
+  <g stroke-opacity="0.28">
+    <line x1="200" y1="205" x2="212" y2="205"/>
+    <line x1="200" y1="315" x2="212" y2="315"/>
+    <line x1="200" y1="489" x2="212" y2="489"/>
+  </g>
+  <line x1="206" y1="205" x2="206" y2="489" stroke-opacity="0.14" stroke-dasharray="2 6"/>
+
+  <!-- ══ LABELS ══ -->
+  <text x="250" y="134" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none" letter-spacing="0.05em">STEM-INTEGRATED DAMPENER</text>
+  <text x="660" y="134" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none" letter-spacing="0.05em">HOUSING DAMPENER</text>
+  <text x="430" y="412" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.66 0.085 12)" fill-opacity="0.8" stroke="none" letter-spacing="0.05em">TOP-OUT PAD</text>
+  <text x="430" y="494" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.66 0.085 12)" fill-opacity="0.8" stroke="none" letter-spacing="0.05em">BOTTOM-OUT PAD</text>
+  <text x="250" y="300" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none" letter-spacing="0.05em">STEM</text>
+  <text x="690" y="360" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none" letter-spacing="0.05em">BOTTOM HOUSING</text>
+  <text x="700" y="590" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.66 0.085 12)" fill-opacity="0.8" stroke="none" letter-spacing="0.05em">FOAM RING ON THE FLOOR</text>
+  <!-- Leaders -->
+  <line x1="428" y1="408" x2="422" y2="408" stroke-opacity="0.35" stroke-width="1"/>
+  <line x1="428" y1="490" x2="410" y2="490" stroke-opacity="0.35" stroke-width="1"/>
+
+  <!-- ══ JetBrains Mono technical value ══ -->
+  <text x="250" y="738" font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace" font-size="10" fill="oklch(0.78 0.005 90)" fill-opacity="0.38" stroke="none" letter-spacing="0.03em">SILENT SWITCH DAMPING — STEM PADS VS HOUSING FOAM, SAME JOB, DIFFERENT PLACE IN THE STROKE</text>
+
+  <!-- ══ BRONZE THEME DOT, upper-right margin ══ -->
+  <circle cx="1148" cy="92" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

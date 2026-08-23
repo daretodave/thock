@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Bar chart — Gazzew Boba U4 at 67.7 dBA versus Gazzew Boba U4T at 81.5 dBA on one tester's rig, a 13.8 dB gap attributable to the stem pads</title>
+
+  <!-- Axis: 60–85 dBA across x 260–1060 (32 px per dB) -->
+  <line x1="260" y1="300" x2="1060" y2="300" stroke-opacity="0.4"/>
+  <g stroke-opacity="0.4">
+    <line x1="260" y1="300" x2="260" y2="308"/>
+    <line x1="420" y1="300" x2="420" y2="308"/>
+    <line x1="580" y1="300" x2="580" y2="308"/>
+    <line x1="740" y1="300" x2="740" y2="308"/>
+    <line x1="900" y1="300" x2="900" y2="308"/>
+    <line x1="1060" y1="300" x2="1060" y2="308"/>
+  </g>
+  <g font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">
+    <text x="260" y="326">60</text>
+    <text x="420" y="326">65</text>
+    <text x="580" y="326">70</text>
+    <text x="740" y="326">75</text>
+    <text x="900" y="326">80</text>
+    <text x="1060" y="326">85 dBA</text>
+  </g>
+
+  <!-- Gridlines (faint) -->
+  <g stroke-opacity="0.1" stroke-dasharray="2 6">
+    <line x1="420" y1="100" x2="420" y2="296"/>
+    <line x1="580" y1="100" x2="580" y2="296"/>
+    <line x1="740" y1="100" x2="740" y2="296"/>
+    <line x1="900" y1="100" x2="900" y2="296"/>
+  </g>
+
+  <!-- Row 1: Gazzew Boba U4 — 67.7 dBA → x = 260 + 7.7*32 = 506.4 -->
+  <text x="240" y="146" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.85">Gazzew Boba U4</text>
+  <text x="240" y="164" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.5">silicone pads on the stem</text>
+  <rect x="260" y="128" width="246" height="36" rx="3" fill="oklch(0.78 0.005 90 / 0.12)"/>
+  <text x="520" y="152" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">67.7 dBA</text>
+
+  <!-- Row 2: Gazzew Boba U4T — 81.5 dBA → x = 260 + 21.5*32 = 948 -->
+  <text x="240" y="236" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.85">Gazzew Boba U4T</text>
+  <text x="240" y="254" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.5">same stem and housing, pads left off</text>
+  <rect x="260" y="218" width="246" height="36" rx="3" fill="oklch(0.78 0.005 90 / 0.12)"/>
+  <rect x="506" y="218" width="442" height="36" rx="3" stroke="oklch(0.62 0.13 25)" fill="oklch(0.62 0.13 25 / 0.35)"/>
+  <text x="962" y="242" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.62 0.13 25)" stroke="none">81.5 dBA</text>
+
+  <!-- Bracket over the pad-attributable segment -->
+  <g stroke="oklch(0.62 0.13 25)">
+    <line x1="506" y1="200" x2="506" y2="192"/>
+    <line x1="506" y1="192" x2="948" y2="192"/>
+    <line x1="948" y1="200" x2="948" y2="192"/>
+  </g>
+  <text x="727" y="186" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle">13.8 dB — pads present vs absent</text>
+
+  <!-- Footnote -->
+  <text x="260" y="370" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">same tester, same full-keyboard setup — meter distance not published, so read the gap, not the absolutes</text>
+  <text x="260" y="390" font-family="Newsreader, serif" font-style="italic" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">a 10 dB step reads as roughly half the perceived loudness</text>
+
+  <!-- Bronze theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Three stems compared — Cherry MX2A Silent Black with molded TPE pads, Gazzew Boba U4 with fitted silicone pads, Gazzew Boba U4T with the pad seats left empty</title>
+
+  <!-- Panel dividers -->
+  <line x1="410" y1="60" x2="410" y2="540" stroke-opacity="0.18" stroke-dasharray="3 6"/>
+  <line x1="790" y1="60" x2="790" y2="540" stroke-opacity="0.18" stroke-dasharray="3 6"/>
+
+  <!-- ══════════════════ PANEL 1: Cherry MX2A Silent Black — molded ══════════════════ -->
+  <text x="220" y="70" font-family="IBM Plex Sans, sans-serif" font-size="18" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Cherry MX2A Silent Black — molded</text>
+
+  <!-- Stem -->
+  <rect x="208" y="100" width="24" height="50"/>
+  <rect x="170" y="150" width="100" height="140" rx="3"/>
+  <rect x="178" y="290" width="18" height="60"/>
+  <rect x="244" y="290" width="18" height="60"/>
+
+  <!-- TPE pads: fused bands, no gap, filled -->
+  <g stroke="oklch(0.62 0.13 25)" fill="oklch(0.62 0.13 25 / 0.45)">
+    <path d="M 170 150 L 170 142 Q 170 140 172 140 L 206 140 L 206 150 Z"/>
+    <path d="M 270 150 L 270 142 Q 270 140 268 140 L 234 140 L 234 150 Z"/>
+    <path d="M 178 350 L 178 358 Q 178 360 180 360 L 194 360 Q 196 360 196 358 L 196 350 Z"/>
+    <path d="M 244 350 L 244 358 Q 244 360 246 360 L 260 360 Q 262 360 262 358 L 262 350 Z"/>
+  </g>
+
+  <text x="220" y="400" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">two-component stem — TPE over POM</text>
+  <text x="220" y="420" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle">permanent — cannot shift or be removed</text>
+
+  <!-- Travel bar: 200px = 4.0 mm; 3.7 mm fill = 185px; 1.9 mm tick = 95px -->
+  <line x1="120" y1="470" x2="320" y2="470" stroke-opacity="0.4"/>
+  <line x1="120" y1="470" x2="305" y2="470" stroke="oklch(0.62 0.13 25)" stroke-width="6"/>
+  <line x1="215" y1="462" x2="215" y2="478" stroke-opacity="0.7"/>
+  <line x1="320" y1="462" x2="320" y2="478" stroke-opacity="0.4"/>
+  <text x="215" y="494" font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">1.9 mm pre-travel</text>
+  <text x="120" y="520" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.62 0.13 25)" stroke="none">3.7 mm total</text>
+  <text x="320" y="520" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.55">4.0 standard</text>
+
+  <!-- ══════════════════ PANEL 2: Gazzew Boba U4 — fitted ══════════════════ -->
+  <text x="600" y="70" font-family="IBM Plex Sans, sans-serif" font-size="18" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Gazzew Boba U4 — fitted</text>
+
+  <rect x="588" y="100" width="24" height="50"/>
+  <rect x="550" y="150" width="100" height="140" rx="3"/>
+  <rect x="558" y="290" width="18" height="60"/>
+  <rect x="624" y="290" width="18" height="60"/>
+
+  <!-- Silicone pads: separate caps seated with a hairline gap -->
+  <g stroke="oklch(0.62 0.13 25)" fill="oklch(0.62 0.13 25 / 0.2)">
+    <rect x="552" y="137" width="34" height="9" rx="2"/>
+    <rect x="614" y="137" width="34" height="9" rx="2"/>
+    <rect x="558" y="354" width="18" height="9" rx="2"/>
+    <rect x="624" y="354" width="18" height="9" rx="2"/>
+  </g>
+
+  <text x="600" y="400" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">discrete silicone pads seated on a POM stem</text>
+  <text x="600" y="420" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle">removable — lift the top pad and pre-travel appears</text>
+
+  <text x="600" y="494" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">top pad sets the rest position: bump at the very start of the downstroke</text>
+  <text x="600" y="520" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">stem stops on silicone before it would stop on nylon</text>
+
+  <!-- ══════════════════ PANEL 3: Gazzew Boba U4T — bare ══════════════════ -->
+  <text x="980" y="70" font-family="IBM Plex Sans, sans-serif" font-size="18" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Gazzew Boba U4T — bare</text>
+
+  <rect x="968" y="100" width="24" height="50"/>
+  <rect x="930" y="150" width="100" height="140" rx="3"/>
+  <rect x="938" y="290" width="18" height="60"/>
+  <rect x="1004" y="290" width="18" height="60"/>
+
+  <!-- Ghost pad seats: dashed, empty -->
+  <g stroke-opacity="0.35" stroke-dasharray="3 4">
+    <rect x="932" y="137" width="34" height="9" rx="2"/>
+    <rect x="994" y="137" width="34" height="9" rx="2"/>
+    <rect x="938" y="354" width="18" height="9" rx="2"/>
+    <rect x="1004" y="354" width="18" height="9" rx="2"/>
+  </g>
+
+  <text x="980" y="400" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">same POM stem, same housing — pads left off</text>
+  <text x="980" y="420" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">the control</text>
+
+  <!-- Travel bar: full 4.0 mm, grey -->
+  <line x1="880" y1="470" x2="1080" y2="470" stroke-opacity="0.4"/>
+  <line x1="880" y1="470" x2="1080" y2="470" stroke-opacity="0.55" stroke-width="6"/>
+  <line x1="1080" y1="462" x2="1080" y2="478" stroke-opacity="0.4"/>
+  <text x="880" y="520" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">4.0 mm travel</text>
+
+  <!-- Footer -->
+  <text x="600" y="570" font-family="Newsreader, serif" font-style="italic" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">same two surfaces on the stem — rail tops and leg feet — three answers</text>
+
+  <!-- Bronze theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

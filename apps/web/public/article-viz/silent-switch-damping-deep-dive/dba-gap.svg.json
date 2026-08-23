@@ -1,0 +1,27 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-23T00:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "silent-switch-damping-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "what-the-pads-buy-the-u4t-control",
+  "brief_summary": "Two-row horizontal bar chart on a shared 60–85 dBA axis. Row one, Gazzew Boba U4, ends at 67.7 dBA in warm-grey. Row two, Gazzew Boba U4T, ends at 81.5 dBA with the final 13.8 dB segment filled in the dusty-rose splash and bracketed as the pads-present-vs-absent gap. Footnotes flag that the two readings come from one tester on one full-keyboard rig with no published meter distance, and state the 10 dB ≈ half-perceived-loudness rule of thumb used in the body.",
+  "target": "apps/web/public/article-viz/silent-switch-damping-deep-dive/dba-gap.svg",
+  "splash_color": { "name": "bordeaux (dusty-rose)", "oklch": "oklch(0.62 0.13 25)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "https://www.clickandthock.com/silent-switches-1/gazzew-boba-u4 — noise level '67.7dBA'",
+    "https://www.clickandthock.com/tactile-switches-1/gazzew-boba-u4t — noise level '81.5dBA'; tested 'on a full keyboard, using SA, MT3, and GMK keycaps'",
+    "silent-switch-damping-deep-dive.mdx § 'What the pads buy: the U4T control' — 'That is a 13.8 dB gap. Meter distance and room are not published, so treat the absolute figures loosely'",
+    "silent-switch-damping-deep-dive.mdx § 'What the pads buy: the U4T control' — 'By the rule of thumb that a 10 dB step reads as roughly half the perceived loudness'"
+  ],
+  "outputs": ["apps/web/public/article-viz/silent-switch-damping-deep-dive/dba-gap.svg"],
+  "warnings": [
+    "Source readings are single-reviewer meter values with unpublished distance/room; the viz presents them as a relative gap between two switches on one rig, not as absolute loudness."
+  ]
+}

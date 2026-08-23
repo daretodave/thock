@@ -1,0 +1,30 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-23T00:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "silent-switch-damping-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "molded-versus-fitted",
+  "brief_summary": "Three-panel strip of stem silhouettes. Left: Cherry MX2A Silent Black with TPE pads drawn as bands fused to the rail tops and leg feet in the dusty-rose splash, plus a travel bar showing 3.7 mm total and 1.9 mm pre-travel against a 4.0 mm standard. Centre: Gazzew Boba U4 with separate silicone pads seated on the same two surfaces with a hairline gap, annotated as removable and as setting the stem's rest position. Right: Gazzew Boba U4T with both pad seats drawn as dashed ghosts and a full 4.0 mm travel bar — the control.",
+  "target": "apps/web/public/article-viz/silent-switch-damping-deep-dive/molded-vs-fitted.svg",
+  "splash_color": { "name": "bordeaux (dusty-rose)", "oklch": "oklch(0.62 0.13 25)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "https://www.cherry.de/en-us/product/mx2a-silent-black — 'The stem of MX Silent switches is made of two components and contains integrated, patented noise reduction technology.'",
+    "https://omnitype.com/products/cherry-mx2a-silent-black-linear-switches — 'TPE dampeners on stems'; 'Stem material: POM'",
+    "https://www.cherry.de/en-gb/product/mx2a-silent-red — '1.9 mm pre travel'; '3.7 mm total travel'",
+    "silent-switch-damping-deep-dive.mdx § 'Molded versus fitted' — 'lists 1.9mm pre-travel and 3.7mm total travel against the 4.0mm of a standard MX2A such as the Cherry MX2A Red'",
+    "https://switchandclick.com/gazzews-boba-u4-silent-tactile-switch-review-silent-uprising/ — 'The dampeners are removeable'; removing them 'adds a bit of pretravel before the bump'",
+    "https://www.theremingoat.com/blog/boba-u4-switch-review — bump 'at the very start of the downstroke'",
+    "gazzew-boba-u4t-deep-dive.mdx § 'What to watch next' — 'The U4T has held its spec — 62g/68g, nylon/nylon, POM, 4.0mm'"
+  ],
+  "outputs": ["apps/web/public/article-viz/silent-switch-damping-deep-dive/molded-vs-fitted.svg"],
+  "warnings": [
+    "Pad geometry (band vs seated cap) is schematic, drawn from the molded/fitted distinction in the cited sources; exact pad dimensions are not published by either maker."
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored SVG (no raster pipeline)",
+  "at": "2026-08-23T12:28:07Z",
+  "commit": "427fc90ae42c7faf494e850af16b8ff0d20bc294",
+  "kind": "hero-art",
+  "article_pillar": "deep-dives",
+  "source": null,
+  "tokens_snapshot": "51fdae8368c1eee844850352ec620acd2f822555",
+  "fonts": [
+    "IBM Plex Sans",
+    "JetBrains Mono"
+  ],
+  "slug": "silent-switch-damping-deep-dive",
+  "subject": "Split cross-section of the two silent-switch damping strategies: left, a stem in profile with small elastomer pads at the shoulders (top-out) and feet (bottom-out) of its legs, the stem-integrated dampener; right, a bottom housing in section with a center post, spring, and a foam ring on the floor seen as two pads flanking the post, the housing dampener. A ghost stem above the housing shows what lands on the foam.",
+  "motif": "split cross-section, two dampener families side by side",
+  "splashHue": "dusty rose",
+  "splashColor": "oklch(0.66 0.085 12)",
+  "canvas": "1200x750",
+  "strokeWeight": "2px",
+  "strokeColor": "oklch(0.78 0.005 90)",
+  "background": "transparent (light-mode safe; previewed on the charcoal oklch(0.175 0.006 250) and legible)",
+  "notes": "Canvas divided at x 600 by a dashed divider with end dots. Left bay: cruciform head y 190 to 220, stem body x 318 to 402, y 220 to 410, two legs descending to y 480, small rounded-rect pads at the leg shoulders (top-out, 18x16) and leg feet (bottom-out, 26x18) with light hatch, an implied floor line at y 520. Right bay: bottom housing x 660 to 1010, y 330 to 560 with inner wall, center post x 815 to 855, zigzag spring either side, foam ring as two rounded rects 108x30 at y 518 with open-cell dots and a dashed arc hinting the ring is continuous around the post, PCB pins, and a dashed ghost stem above. Dusty rose applied as two wash ellipses (one per dampener), the pad and foam fills at 0.5 to 0.55 opacity, focal dot+ring on the left foot pad (327,498) and a second on the right foam pad (916,533), and the dampener labels. Hue 12 is the dusty rose already in rotation (topre piece); the split-ergo piece in this batch uses hue 18 to stay distinct. Bronze theme dot at (1148,92); three left-margin ticks. All XML comments use '==' separator runs (no '--' runs) per the svg-validity.test.ts regression guard.",
+  "outputs": [
+    "apps/web/public/hero-art/silent-switch-damping-deep-dive.svg",
+    "apps/web/public/hero-art/silent-switch-damping-deep-dive.svg.json"
+  ],
+  "warnings": [
+    "Labels reference IBM Plex Sans / JetBrains Mono by family name with system fallbacks; the SVG does not embed font files (family convention, matches prior hero-art).",
+    "Preview rasters were rendered with the repo's existing Playwright/Chromium install into the session scratchpad for visual QA only; nothing rasterized was written into the repo."
+  ]
+}

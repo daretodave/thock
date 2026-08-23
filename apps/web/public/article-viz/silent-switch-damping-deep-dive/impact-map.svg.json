@@ -1,0 +1,25 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-23T00:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "silent-switch-damping-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "two-impacts-one-moving-part",
+  "brief_summary": "Side-view cross-section of an MX-style switch with the stem drawn mid-stroke. The two collision sites a silent switch intercepts are marked in the article's dusty-rose splash — top-out where the rail shoulders meet the underside of the top housing, bottom-out where the leg feet meet the bottom-housing floor — with the elastomer pads drawn on the stem at both sites. The leaf is drawn between them in plain warm-grey and labelled as reached by neither pad, setting up the silent-tactile section.",
+  "target": "apps/web/public/article-viz/silent-switch-damping-deep-dive/impact-map.svg",
+  "splash_color": { "name": "bordeaux (dusty-rose)", "oklch": "oklch(0.62 0.13 25)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "silent-switch-damping-deep-dive.mdx § 'Two impacts, one moving part' — 'On the downstroke, the feet of the stem's legs reach the floor of the bottom housing; on the upstroke, the spring drives the stem back until the shoulders of its rails strike the underside of the top housing.'",
+    "silent-switch-damping-deep-dive.mdx § 'Two impacts, one moving part' — 'The pad goes on the stem because the stem is the one body that touches both impact surfaces: one moving part, two pads, both collisions covered.'",
+    "silent-switch-damping-deep-dive.mdx § 'Why silent tactiles are harder' — 'That snap is a third transient inside the housing, and neither pad can reach it — it occurs in the metal, between the two surfaces the pads cover.'",
+    "https://www.cherry.de/en-us/product/mx2a-silent-black — 'The stem of MX Silent switches is made of two components and contains integrated, patented noise reduction technology.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/silent-switch-damping-deep-dive/impact-map.svg"],
+  "warnings": []
+}
