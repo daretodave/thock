@@ -1,0 +1,25 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-23T12:00:00.000Z",
+  "commit": "4bc3af6",
+  "kind": "inline-viz",
+  "article_slug": "why-stabilizers-rattle-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "three-sources-three-sounds",
+  "brief_summary": "Three-column glyph strip. Each column names one rattle source (wire-in-stem slop, stem-in-housing play, housing-to-plate/PCB movement), gives its sound in coral serif italic (rattle / tick or scrape / clunk), a one-line descriptor, a small mechanism glyph, and a vertical travel bar from top-out to bottom-out with coral shading where in the stroke the sound lands: both ends for rattle, a single point near bottom-out for tick, bottom-out only for clunk. Serif italic title 'where it sounds tells you which gap'.",
+  "target": "apps/web/public/article-viz/why-stabilizers-rattle-deep-dive/three-sounds.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "why-stabilizers-rattle-deep-dive.mdx § 'Three sources, three sounds' — 'Wire-in-stem slop is rattle proper' … 'Steel on plastic: bright, metallic, and present at both reversals'",
+    "why-stabilizers-rattle-deep-dive.mdx § 'Three sources, three sounds' — 'Stem-in-housing play produces a scrape or a tick' … 'the stem cocks in the bore, catches, then snaps square' … 'discrete, plastic-on-plastic, at one point in the stroke'",
+    "why-stabilizers-rattle-deep-dive.mdx § 'Three sources, three sounds' — 'Housing-to-plate or PCB movement is a clunk' … 'A low, hollow sound under the keystroke that survives any amount of wire and stem lube'",
+    "why-stabilizers-rattle-deep-dive.mdx § 'Tick is not rattle' — 'Rattle is distributed … throughout the stroke'; 'Tick is positional — something catches at a specific point'"
+  ],
+  "outputs": ["apps/web/public/article-viz/why-stabilizers-rattle-deep-dive/three-sounds.svg"],
+  "warnings": []
+}

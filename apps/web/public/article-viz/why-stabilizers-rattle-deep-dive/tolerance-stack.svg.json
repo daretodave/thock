@@ -1,0 +1,26 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-23T12:00:00.000Z",
+  "commit": "4bc3af6",
+  "kind": "inline-viz",
+  "article_slug": "why-stabilizers-rattle-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "tolerance-stacking-three-gaps-that-have-to-exist",
+  "brief_summary": "Cross-section of a single stabilizer tower seated through a plate cutout onto a PCB. The stem sits in the housing bore and the wire leg (seen end-on) sits in the slot at the stem base. Three coral-filled slivers mark the three required clearances, each with a numbered coral callout: ① wire leg to stem slot (rattle; Norbauer's 0.3mm clearance figure), ② stem to housing bore (tick/scrape), ③ housing to plate cutout / PCB (clunk). Serif italic title 'three clearances · all required · all audible'.",
+  "target": "apps/web/public/article-viz/why-stabilizers-rattle-deep-dive/tolerance-stack.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "why-stabilizers-rattle-deep-dive.mdx § 'Tolerance stacking: three gaps that have to exist' — 'every sliding or rotating pair in it needs clearance: stem in housing bore, wire leg in the slot at the base of the stem, housing in its plate cutout or on the PCB'",
+    "why-stabilizers-rattle-deep-dive.mdx § 'Tolerance stacking' — Norbauer quote: '0.3mm clearance between wire and housing to prevent binding' (https://ryan.norbauer.com/journal/the-stabilizer-problem/)",
+    "why-stabilizers-rattle-deep-dive.mdx § 'Tolerance stacking' — 'Every mod either shrinks a gap slightly or softens what happens when it closes'",
+    "why-stabilizers-rattle-deep-dive.mdx § 'Three sources, three sounds' — rattle / tick or scrape / clunk labels per gap",
+    "why-stabilizers-rattle-deep-dive.mdx § 'Screw-in, clip-in, plate-mount' — source three 'largest' on plate-mount; screw-in housing 'cannot lift'"
+  ],
+  "outputs": ["apps/web/public/article-viz/why-stabilizers-rattle-deep-dive/tolerance-stack.svg"],
+  "warnings": []
+}

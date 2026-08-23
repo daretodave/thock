@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="Three horizontal bars drawn to scale showing stabilizer stem spacing for 2u at 23.8mm, 6.25u at 100mm, and 7u at 114.3mm, each with a switch marker at centre and stem markers at the ends, with a coral annotation that torsional compliance scales with span.">
+  <title>Stabilizer stem spacing to scale — 2u, 6.25u, 7u — and why span sets how much the wire twists</title>
+
+  <!-- Title -->
+  <text x="600" y="74" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">same wire · four times the span</text>
+
+  <!-- Scale: 7.874 px per mm, origin x=150 -->
+
+  <!-- Row 1: 2u · 23.8mm → 187px -->
+  <g>
+    <text x="112" y="175" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end">2u</text>
+    <line x1="150" y1="170" x2="337" y2="170" stroke-opacity="0.85"/>
+    <rect x="143" y="161" width="14" height="18" stroke-opacity="0.85"/>
+    <rect x="330" y="161" width="14" height="18" stroke-opacity="0.85"/>
+    <rect x="235.5" y="162" width="16" height="16" fill="oklch(0.68 0.165 28 / 0.25)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.9"/>
+    <text x="358" y="175" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">23.8mm</text>
+    <text x="430" y="175" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.5">stems 11.9mm from the switch — the switch carries most of an off-centre press</text>
+  </g>
+
+  <!-- Row 2: 6.25u · 100mm → 787px -->
+  <g>
+    <text x="112" y="255" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end">6.25u</text>
+    <line x1="150" y1="250" x2="937" y2="250" stroke-opacity="0.85"/>
+    <rect x="143" y="241" width="14" height="18" stroke-opacity="0.85"/>
+    <rect x="930" y="241" width="14" height="18" stroke-opacity="0.85"/>
+    <rect x="535.5" y="242" width="16" height="16" fill="oklch(0.68 0.165 28 / 0.25)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.9"/>
+    <!-- half-span dimension: switch centre to stem = 50mm -->
+    <g stroke="oklch(0.68 0.165 28)" stroke-opacity="0.7">
+      <line x1="551.5" y1="228" x2="930" y2="228"/>
+      <line x1="551.5" y1="223" x2="551.5" y2="233"/>
+      <line x1="930" y1="223" x2="930" y2="233"/>
+    </g>
+    <text x="740" y="222" font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">50mm moment arm</text>
+    <text x="958" y="255" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">100mm</text>
+  </g>
+
+  <!-- Row 3: 7u · 114.3mm → 900px -->
+  <g>
+    <text x="112" y="335" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end">7u</text>
+    <line x1="150" y1="330" x2="1050" y2="330" stroke-opacity="0.85"/>
+    <rect x="143" y="321" width="14" height="18" stroke-opacity="0.85"/>
+    <rect x="1043" y="321" width="14" height="18" stroke-opacity="0.85"/>
+    <rect x="592" y="322" width="16" height="16" fill="oklch(0.68 0.165 28 / 0.25)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.9"/>
+    <text x="1068" y="335" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">114.3mm</text>
+  </g>
+
+  <!-- Coral annotation -->
+  <text x="600" y="396" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">torsional compliance scales with span — the 6.25u wire twists about 4.2× as far as the 2u wire under the same torque</text>
+  <text x="600" y="416" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">stem spacing per HilPCB's Cherry-pattern footprint guide · bars to scale</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

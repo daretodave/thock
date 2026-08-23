@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-23T12:00:00.000Z",
+  "commit": "4bc3af6",
+  "kind": "inline-viz",
+  "article_slug": "why-stabilizers-rattle-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "why-2u-and-625u-are-different-keys",
+  "brief_summary": "Three horizontal bars drawn to scale (7.874 px per mm) showing Cherry-pattern stabilizer stem spacing: 2u at 23.8mm, 6.25u at 100mm, 7u at 114.3mm. Each bar has stem-housing markers at the ends and a coral-outlined switch square at centre; the 6.25u row carries a coral dimension line for the 50mm moment arm from switch centre to stem. Coral annotation beneath: torsional compliance scales with span, so the 6.25u wire twists about 4.2x as far as the 2u wire under the same torque (100 / 23.8 = 4.2).",
+  "target": "apps/web/public/article-viz/why-stabilizers-rattle-deep-dive/span-ladder.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "JetBrains Mono", "Newsreader"],
+  "data_sources": [
+    "why-stabilizers-rattle-deep-dive.mdx § 'Why 2u and 6.25u are different keys' — 'Stem spacing on a Cherry-pattern PCB is 23.8mm for 2u keys, 100mm for a 6.25u spacebar, and 114.3mm for a 7u' (https://hilpcb.com/en/blog/keyboard-pcb-layout/)",
+    "why-stabilizers-rattle-deep-dive.mdx § 'Why 2u and 6.25u are different keys' — 'the 6.25u wire twists a little over four times as far as the 2u wire under the same torque' (derived: 100 / 23.8 = 4.2)",
+    "why-stabilizers-rattle-deep-dive.mdx § 'Why 2u and 6.25u are different keys' — 'On a 2u the stems sit 11.9mm from the switch centre, so the switch carries most of an off-centre press. On a 6.25u the corner is 50mm out'"
+  ],
+  "outputs": ["apps/web/public/article-viz/why-stabilizers-rattle-deep-dive/span-ladder.svg"],
+  "warnings": []
+}

@@ -1,0 +1,32 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored SVG (no raster pipeline)",
+  "at": "2026-08-23T12:28:07Z",
+  "commit": "427fc90ae42c7faf494e850af16b8ff0d20bc294",
+  "kind": "hero-art",
+  "article_pillar": "deep-dives",
+  "source": null,
+  "tokens_snapshot": "51fdae8368c1eee844850352ec620acd2f822555",
+  "fonts": [
+    "IBM Plex Sans",
+    "JetBrains Mono"
+  ],
+  "slug": "why-stabilizers-rattle-deep-dive",
+  "subject": "Exploded side view of a 2u stabilizer: a straight wire with its ends bent down into two stems, the two stems below with the wire hole at each base, and the two housings below those with clip arms and wire channel, over a plate reference line. Coral vibration arcs radiate from the left wire-to-stem joint and more faintly from the right.",
+  "motif": "exploded three-tier side view with vibration arcs",
+  "splashHue": "coral",
+  "splashColor": "oklch(0.66 0.16 30)",
+  "canvas": "1200x750",
+  "strokeWeight": "2px",
+  "strokeColor": "oklch(0.78 0.005 90)",
+  "background": "transparent (light-mode safe; previewed on the charcoal oklch(0.175 0.006 250) and legible)",
+  "notes": "Side view along the key's front edge so the wire reads as a single horizontal line (y 250, x 300 to 900) with short bent legs at each end (x 288 and 912, down to y 286) and a dashed true-straight reference above it. Explode lines at y 306 and y 495 with center dots. Stems centered x 300 and x 900, cruciform heads y 340 to 366, bodies y 366 to 470; the left stem's wire hole (288,446) is stroked in coral and oversized, with a dashed off-center wire-leg ghost inside it, naming the clearance. Housings x 246 to 354 and 846 to 954, y 520 to 660, with stem slot, outer-wall wire channel and clip arms; plate line at y 680. Coral applied as a wash ellipse on the left joint, four concentric arcs opening left from the left wire-leg end (288,286), short lateral chatter ticks on the leg, two fainter echo arcs at the right joint, the focal dot+ring at (288,286), the WIRE HOLE CLEARANCE label and the joint callout. Coral value oklch(0.66 0.16 30) sits a step deeper than the Jade and U4T corals so the three coral deep-dives stay distinct. Bronze theme dot at (1148,92); three left-margin tier ticks. All XML comments use '==' separator runs (no '--' runs) per the svg-validity.test.ts regression guard.",
+  "outputs": [
+    "apps/web/public/hero-art/why-stabilizers-rattle-deep-dive.svg",
+    "apps/web/public/hero-art/why-stabilizers-rattle-deep-dive.svg.json"
+  ],
+  "warnings": [
+    "Labels reference IBM Plex Sans / JetBrains Mono by family name with system fallbacks; the SVG does not embed font files (family convention, matches prior hero-art).",
+    "Preview rasters were rendered with the repo's existing Playwright/Chromium install into the session scratchpad for visual QA only; nothing rasterized was written into the repo."
+  ]
+}

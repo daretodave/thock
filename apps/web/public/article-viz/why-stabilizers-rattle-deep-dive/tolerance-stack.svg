@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="Cross-section of a single stabilizer tower seated in a plate above a PCB, with three coral callouts marking the required clearances: wire leg to stem slot, stem to housing bore, and housing to plate cutout and PCB.">
+  <title>Three clearances in a stabilizer tower — wire-to-stem, stem-to-housing, housing-to-plate/PCB — all required, all audible</title>
+
+  <!-- Title -->
+  <text x="600" y="86" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">three clearances · all required · all audible</text>
+
+  <!-- PCB baseline -->
+  <line x1="150" y1="440" x2="1050" y2="440" stroke-opacity="0.85"/>
+  <text x="150" y="464" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.5">PCB</text>
+
+  <!-- Plate (two bands with a cutout for the housing) -->
+  <g stroke-opacity="0.7">
+    <line x1="150" y1="300" x2="470" y2="300"/>
+    <line x1="150" y1="315" x2="470" y2="315"/>
+    <line x1="470" y1="300" x2="470" y2="315"/>
+    <line x1="630" y1="300" x2="1050" y2="300"/>
+    <line x1="630" y1="315" x2="1050" y2="315"/>
+    <line x1="630" y1="300" x2="630" y2="315"/>
+  </g>
+  <text x="150" y="292" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.5">plate</text>
+
+  <!-- Gap 3: housing ↔ plate cutout (coral fill either side) -->
+  <rect x="470" y="300" width="10" height="15" fill="oklch(0.68 0.165 28 / 0.35)" stroke="none"/>
+  <rect x="620" y="300" width="10" height="15" fill="oklch(0.68 0.165 28 / 0.35)" stroke="none"/>
+
+  <!-- Housing outer body -->
+  <path d="M 480 250 L 510 250 L 510 420 L 590 420 L 590 250 L 620 250 L 620 440 L 480 440 Z" stroke-opacity="0.9"/>
+  <text x="605" y="432" font-family="IBM Plex Sans, sans-serif" font-size="10" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.45" text-anchor="end">housing</text>
+
+  <!-- Gap 2: stem ↔ housing bore (coral slivers either side of the stem) -->
+  <rect x="510" y="262" width="8" height="140" fill="oklch(0.68 0.165 28 / 0.30)" stroke="none"/>
+  <rect x="582" y="262" width="8" height="140" fill="oklch(0.68 0.165 28 / 0.30)" stroke="none"/>
+
+  <!-- Stem -->
+  <rect x="518" y="200" width="64" height="210" stroke-opacity="0.85"/>
+  <!-- Stem cross mount (keycap interface) -->
+  <line x1="550" y1="200" x2="550" y2="186" stroke-opacity="0.6"/>
+  <line x1="540" y1="186" x2="560" y2="186" stroke-opacity="0.6"/>
+  <text x="550" y="230" font-family="IBM Plex Sans, sans-serif" font-size="10" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.45" text-anchor="middle">stem</text>
+
+  <!-- Wire slot at the stem base -->
+  <rect x="530" y="378" width="40" height="24" stroke-opacity="0.7"/>
+  <!-- Gap 1: slot clearance around the wire leg (coral) -->
+  <rect x="531" y="379" width="38" height="22" fill="oklch(0.68 0.165 28 / 0.28)" stroke="none"/>
+  <!-- Wire leg seen end-on -->
+  <circle cx="550" cy="390" r="7" fill="oklch(0.175 0.006 250 / 0.0)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.95"/>
+
+  <!-- Callout 1: wire leg ↔ stem slot -->
+  <g stroke="oklch(0.68 0.165 28)" stroke-opacity="0.8">
+    <line x1="534" y1="396" x2="340" y2="486"/>
+  </g>
+  <text x="330" y="489" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="end">① wire leg ↔ stem slot</text>
+  <text x="330" y="507" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.6">rattle · Norbauer: 0.3mm clearance to prevent binding</text>
+
+  <!-- Callout 2: stem ↔ housing bore -->
+  <g stroke="oklch(0.68 0.165 28)" stroke-opacity="0.8">
+    <line x1="514" y1="300" x2="340" y2="226"/>
+  </g>
+  <text x="330" y="222" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="end">② stem ↔ housing bore</text>
+  <text x="330" y="240" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.6">tick / scrape</text>
+
+  <!-- Callout 3: housing ↔ plate cutout / PCB -->
+  <g stroke="oklch(0.68 0.165 28)" stroke-opacity="0.8">
+    <line x1="626" y1="307" x2="790" y2="206"/>
+  </g>
+  <text x="800" y="202" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.68 0.165 28)" stroke="none">③ housing ↔ plate cutout / PCB</text>
+  <text x="800" y="220" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">clunk · largest on plate-mount, smallest on screw-in</text>
+
+  <!-- Footer -->
+  <text x="600" y="530" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">every mod either shrinks a gap slightly or softens what happens when it closes</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

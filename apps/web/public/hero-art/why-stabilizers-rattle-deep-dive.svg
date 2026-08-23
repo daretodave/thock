@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — why stabilizers rattle: exploded side view of a 2u stabilizer, straight wire above two stems above two housings, with vibration arcs radiating from the wire-to-stem joint</title>
+
+  <!-- Coral splash wash on the left wire-to-stem joint, where the rattle lives.
+       oklch(0.66 0.16 30): coral, a touch deeper than the U4T and Jade corals so
+       the three coral deep-dives stay distinguishable at gallery size. -->
+  <ellipse cx="310" cy="310" rx="140" ry="60" fill="oklch(0.66 0.16 30 / 0.16)" stroke="none"/>
+
+  <!-- ════════════════════════════════════════════════════════════════════════════
+       COMPOSITION: three exploded tiers, read top to bottom, side view looking
+       along the key's front edge so the wire is a straight horizontal line.
+         Tier A (y 250): the wire. Straight bar from x 300 to 900, each end bent
+           down into a short leg that hooks into a stem.
+         Tier B (y 340 to 470): two stems, one under each wire leg. The wire hole
+           at the stem's base is drawn oversized on the left stem, the clearance
+           the vibration arcs are radiating from.
+         Tier C (y 520 to 660): two housings, with clip arms and the slot the
+           stem rides in.
+       Explode lines at y 300 and y 495. Vibration arcs radiate from the left
+       joint (wire leg to stem hole) and more faintly from the right one.
+       ════════════════════════════════════════════════════════════════════════════ -->
+
+  <!-- ══ TIER A: WIRE ══ -->
+  <line x1="300" y1="250" x2="900" y2="250"/>
+  <!-- Wire legs bending down into the stems -->
+  <path d="M 300 250 Q 288 250 288 262 L 288 286" />
+  <path d="M 900 250 Q 912 250 912 262 L 912 286" />
+  <!-- Wire end hooks -->
+  <line x1="288" y1="286" x2="300" y2="286" stroke-opacity="0.7"/>
+  <line x1="912" y1="286" x2="900" y2="286" stroke-opacity="0.7"/>
+  <!-- Straightness reference: a dashed true line just above the wire -->
+  <line x1="330" y1="232" x2="870" y2="232" stroke-dasharray="2 8" stroke-opacity="0.22"/>
+  <line x1="600" y1="226" x2="600" y2="238" stroke-opacity="0.3"/>
+
+  <!-- ══ EXPLODE LINE A ══ -->
+  <line x1="200" y1="306" x2="1000" y2="306" stroke-dasharray="4 6" stroke-opacity="0.3"/>
+  <circle cx="600" cy="306" r="2.5" stroke-opacity="0.5"/>
+
+  <!-- ══ TIER B: STEMS ══ -->
+  <!-- Left stem -->
+  <g>
+    <!-- Cruciform head -->
+    <path d="
+      M 280 340
+      L 320 340
+      L 320 352
+      L 332 352
+      L 332 366
+      L 268 366
+      L 268 352
+      L 280 352
+      Z" />
+    <!-- Body -->
+    <path d="
+      M 264 366
+      L 336 366
+      L 336 470
+      L 264 470
+      Z" />
+    <line x1="300" y1="380" x2="300" y2="460" stroke-opacity="0.35" stroke-dasharray="3 5"/>
+    <!-- Wire hole, oversized: the clearance that rattles -->
+    <circle cx="288" cy="446" r="9" stroke="oklch(0.66 0.16 30)"/>
+    <circle cx="288" cy="446" r="3.5" stroke-opacity="0.6"/>
+    <!-- Wire leg ghost sitting in the hole, off-center -->
+    <line x1="292" y1="428" x2="292" y2="446" stroke-opacity="0.5" stroke-dasharray="3 3"/>
+  </g>
+  <!-- Right stem -->
+  <g>
+    <path d="
+      M 880 340
+      L 920 340
+      L 920 352
+      L 932 352
+      L 932 366
+      L 868 366
+      L 868 352
+      L 880 352
+      Z" />
+    <path d="
+      M 864 366
+      L 936 366
+      L 936 470
+      L 864 470
+      Z" />
+    <line x1="900" y1="380" x2="900" y2="460" stroke-opacity="0.35" stroke-dasharray="3 5"/>
+    <circle cx="912" cy="446" r="9" stroke-opacity="0.7"/>
+    <circle cx="912" cy="446" r="3.5" stroke-opacity="0.6"/>
+  </g>
+
+  <!-- ══ EXPLODE LINE B ══ -->
+  <line x1="200" y1="495" x2="1000" y2="495" stroke-dasharray="4 6" stroke-opacity="0.3"/>
+  <circle cx="600" cy="495" r="2.5" stroke-opacity="0.5"/>
+
+  <!-- ══ TIER C: HOUSINGS ══ -->
+  <!-- Left housing -->
+  <g>
+    <path d="
+      M 246 520
+      L 354 520
+      L 354 660
+      L 246 660
+      Z" />
+    <!-- Stem slot -->
+    <path d="
+      M 262 520
+      L 338 520
+      L 338 646
+      L 262 646
+      Z" stroke-opacity="0.38"/>
+    <!-- Wire channel opening on the outer wall -->
+    <path d="M 246 600 L 258 600 L 258 614 L 246 614" stroke-opacity="0.55"/>
+    <!-- Clip arms -->
+    <path d="M 246 640 L 230 640 L 230 660" stroke-opacity="0.6"/>
+    <path d="M 354 640 L 370 640 L 370 660" stroke-opacity="0.6"/>
+  </g>
+  <!-- Right housing -->
+  <g>
+    <path d="
+      M 846 520
+      L 954 520
+      L 954 660
+      L 846 660
+      Z" />
+    <path d="
+      M 862 520
+      L 938 520
+      L 938 646
+      L 862 646
+      Z" stroke-opacity="0.38"/>
+    <path d="M 954 600 L 942 600 L 942 614 L 954 614" stroke-opacity="0.55"/>
+    <path d="M 846 640 L 830 640 L 830 660" stroke-opacity="0.6"/>
+    <path d="M 954 640 L 970 640 L 970 660" stroke-opacity="0.6"/>
+  </g>
+
+  <!-- Plate / PCB reference line under the housings -->
+  <line x1="200" y1="680" x2="1000" y2="680" stroke-opacity="0.3"/>
+
+  <!-- ══ VIBRATION ARCS, radiating from the left wire-to-stem joint ══ -->
+  <g stroke="oklch(0.66 0.16 30)">
+    <!-- Centered on the wire leg end at (288, 286); arcs open to the upper-left
+         and lower-left so they read as the leg chattering in its hole -->
+    <path d="M 262 270 A 30 30 0 0 0 262 302" stroke-opacity="0.6"/>
+    <path d="M 248 260 A 46 46 0 0 0 248 312" stroke-opacity="0.4"/>
+    <path d="M 234 250 A 62 62 0 0 0 234 322" stroke-opacity="0.25"/>
+    <path d="M 220 240 A 78 78 0 0 0 220 332" stroke-opacity="0.14"/>
+    <!-- Short lateral chatter ticks on the leg -->
+    <line x1="276" y1="274" x2="270" y2="274" stroke-opacity="0.7"/>
+    <line x1="300" y1="274" x2="306" y2="274" stroke-opacity="0.7"/>
+    <line x1="276" y1="280" x2="272" y2="280" stroke-opacity="0.45"/>
+    <line x1="300" y1="280" x2="304" y2="280" stroke-opacity="0.45"/>
+  </g>
+  <!-- Fainter echo at the right joint -->
+  <g stroke="oklch(0.66 0.16 30)">
+    <path d="M 938 270 A 30 30 0 0 1 938 302" stroke-opacity="0.3"/>
+    <path d="M 952 260 A 46 46 0 0 1 952 312" stroke-opacity="0.18"/>
+  </g>
+
+  <!-- Focal anchor at the left joint -->
+  <circle cx="288" cy="286" r="6.5" fill="oklch(0.66 0.16 30 / 0.95)" stroke="oklch(0.66 0.16 30)"/>
+  <circle cx="288" cy="286" r="12" stroke="oklch(0.66 0.16 30)" stroke-opacity="0.5"/>
+
+  <!-- ══ LEFT MARGIN TIER TICKS ══ -->
+  <g stroke-opacity="0.28">
+    <line x1="150" y1="250" x2="162" y2="250"/>
+    <line x1="150" y1="405" x2="162" y2="405"/>
+    <line x1="150" y1="590" x2="162" y2="590"/>
+  </g>
+  <line x1="156" y1="250" x2="156" y2="590" stroke-opacity="0.14" stroke-dasharray="2 6"/>
+
+  <!-- ══ LABELS ══ -->
+  <text x="560" y="272" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none" letter-spacing="0.05em">WIRE</text>
+  <text x="500" y="420" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none" letter-spacing="0.05em">STEMS · 2U, ONE PER WIRE LEG</text>
+  <text x="534" y="596" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none" letter-spacing="0.05em">HOUSINGS</text>
+  <text x="360" y="450" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.66 0.16 30)" fill-opacity="0.8" stroke="none" letter-spacing="0.05em">WIRE HOLE CLEARANCE</text>
+  <text x="150" y="200" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.66 0.16 30)" fill-opacity="0.75" stroke="none" letter-spacing="0.05em">WIRE-TO-STEM JOINT · WHERE THE RATTLE STARTS</text>
+  <!-- Leaders -->
+  <line x1="356" y1="446" x2="300" y2="446" stroke-opacity="0.35" stroke-width="1"/>
+  <line x1="236" y1="206" x2="282" y2="272" stroke-opacity="0.3" stroke-width="1"/>
+
+  <!-- ══ JetBrains Mono technical value ══ -->
+  <text x="200" y="738" font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace" font-size="10" fill="oklch(0.78 0.005 90)" fill-opacity="0.38" stroke="none" letter-spacing="0.03em">2U STABILIZER, EXPLODED — WIRE, TWO STEMS, TWO HOUSINGS. RATTLE = FREE PLAY AT THE WIRE-TO-STEM JOINT</text>
+
+  <!-- ══ BRONZE THEME DOT, upper-right margin ══ -->
+  <circle cx="1148" cy="92" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>
