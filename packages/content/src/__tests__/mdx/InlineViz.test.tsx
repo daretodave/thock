@@ -49,6 +49,15 @@ describe('InlineViz — MDX inline visualization component', () => {
     expect(document.activeElement).toBe(closeButton)
   })
 
+  it('applies the site focus-visible ring to the zoom trigger button', () => {
+    const { getByRole } = render(
+      <InlineViz src="/article-viz/test/chart.svg" alt="A test chart" />,
+    )
+    const trigger = getByRole('button', { name: 'Zoom diagram: A test chart' })
+    expect(trigger.className).toContain('focus-visible:ring-2')
+    expect(trigger.className).toContain('focus-visible:ring-accent-mu')
+  })
+
   it('renders a caption in both the inline figure and the zoomed dialog', () => {
     const { getAllByText, getByRole } = render(
       <InlineViz

@@ -203,7 +203,7 @@ export function InlineViz({
         type="button"
         onClick={() => setZoomed(true)}
         aria-label={`Zoom diagram: ${alt}`}
-        className="block w-full cursor-zoom-in p-0 m-0 bg-transparent border-0 text-left appearance-none"
+        className="block w-full cursor-zoom-in p-0 m-0 bg-transparent border-0 text-left appearance-none rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
       >
         <img
           src={src}
