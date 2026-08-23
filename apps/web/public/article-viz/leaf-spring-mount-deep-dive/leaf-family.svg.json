@@ -1,0 +1,26 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-04T14:00:00.000Z",
+  "commit": "4bc3af6",
+  "kind": "inline-viz",
+  "article_slug": "leaf-spring-mount-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "four-implementations-one-name",
+  "brief_summary": "Four side-by-side cross-section panels of boards the hobby has shipped under the leaf-spring banner. Owlab Spring: separate beryllium-copper leaves fixed to the case walls with the plate resting on them. Geonworks F1-8X: aluminium plate with integral tabs resting on an o-ring gasket. Exclusive E7-V2 GML: plate with slotted regions beside its gasket support points and foam between plate and PCB. Mode Sonnet: plate tabs captured inside EPU41 polymer mounting blocks. The spring element in each panel is bordeaux; a serif footnote names each board's damping element.",
+  "target": "apps/web/public/article-viz/leaf-spring-mount-deep-dive/leaf-family.svg",
+  "splash_color": { "name": "bordeaux", "oklch": "oklch(0.62 0.13 25)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "leaf-spring-mount-deep-dive.mdx § 'Four implementations, one name' — 'Owlab's Spring, sold in-stock from February 2022 at $355, suspended its plate on eight leaf springs made of beryllium copper, with the plate offered in aluminium, FR4, polycarbonate, and POM' (https://nextrift.com/the-owlab-spring-keyboard-looks-amazing-in-stock-sale-in-february-2022-from-355/)",
+    "leaf-spring-mount-deep-dive.mdx § 'Four implementations, one name' — 'aluminium \"Leaf Spring\" plates in V1.1, V3, and V4 revisions at 1.0 mm and 1.5 mm ... the tabs sit on an o-ring ... the FR4 plate in the same catalogue ships \"with Poron Gasket\"' (https://geon.works/products/f1-8x-plate)",
+    "leaf-spring-mount-deep-dive.mdx § 'Four implementations, one name' — 'slots cut \"next to the 7 gasket supporting points at top and bottom of the plate\" ... with foam between plate and PCB' (https://exclusive.works/blogs/news/e7-v2-gml-isolated-gasket-muted-plate-leaf-spring-structure)",
+    "leaf-spring-mount-deep-dive.mdx § 'Four implementations, one name' — 'the blocks \"slide over tabs extending from the edge of the Plate,\" and the blocks are Carbon-printed EPU41 lattice' (https://modedesigns.com/products/sonnet-mounting-blocks)",
+    "leaf-spring-mount-deep-dive.mdx § 'Bending against squashing' — 'Owlab's shipped units carried case foam, PE foam, and plate foam'"
+  ],
+  "outputs": ["apps/web/public/article-viz/leaf-spring-mount-deep-dive/leaf-family.svg"],
+  "warnings": []
+}

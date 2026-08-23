@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — leaf-spring mount: keyboard case side-section, plate and PCB sandwich resting on short cantilevered metal tabs from the case wall, the left tab shown deflected under load with the flex point picked out in terracotta</title>
+
+  <!-- Muted terracotta splash wash at the left tab's root, the flex point.
+       oklch(0.62 0.10 45) is the muted terracotta already in family rotation. -->
+  <ellipse cx="262" cy="404" rx="110" ry="46" fill="oklch(0.62 0.10 45 / 0.18)" stroke="none"/>
+
+  <!-- ════════════════════════════════════════════════════════════════════════════
+       COMPOSITION: a case cut through its width, seen from the side.
+         Case: a U in section. Walls x 200 to 240 and 960 to 1000, y 240 to 600,
+           floor y 560 to 600. Outer faces rounded at the top lip.
+         Tabs: short cantilevers rooted in each inner wall at y 396 to 406,
+           reaching ~80 px into the cavity. The right tab is straight (unloaded
+           reference). The left tab is deflected: its tip drops ~15 px, and the
+           unloaded position is ghosted as a dashed outline.
+         Plate + PCB sandwich: plate y 380 to 392, PCB y 412 to 428, spanning
+           x 300 to 900, rotated 1.5 degrees about the right tab tip so the
+           left end sits on the deflected left tab. Three switch + keycap
+           silhouettes ride on the plate.
+         A load arrow pushes down on the left end of the plate.
+       ════════════════════════════════════════════════════════════════════════════ -->
+
+  <!-- ══ CASE SECTION ══ -->
+  <path d="
+    M 200 250
+    Q 200 240 210 240
+    L 230 240
+    Q 240 240 240 250
+    L 240 560
+    L 960 560
+    L 960 250
+    Q 960 240 970 240
+    L 990 240
+    Q 1000 240 1000 250
+    L 1000 600
+    L 200 600
+    Z" />
+  <!-- Section hatch on the walls and floor, sparse -->
+  <g stroke-opacity="0.22" stroke-width="1">
+    <line x1="204" y1="300" x2="236" y2="268"/>
+    <line x1="204" y1="360" x2="236" y2="328"/>
+    <line x1="204" y1="480" x2="236" y2="448"/>
+    <line x1="204" y1="540" x2="236" y2="508"/>
+    <line x1="964" y1="300" x2="996" y2="268"/>
+    <line x1="964" y1="360" x2="996" y2="328"/>
+    <line x1="964" y1="480" x2="996" y2="448"/>
+    <line x1="964" y1="540" x2="996" y2="508"/>
+    <line x1="300" y1="596" x2="336" y2="564"/>
+    <line x1="460" y1="596" x2="496" y2="564"/>
+    <line x1="620" y1="596" x2="656" y2="564"/>
+    <line x1="780" y1="596" x2="816" y2="564"/>
+  </g>
+  <!-- Case feet -->
+  <path d="M 260 600 L 260 612 L 300 612 L 300 600" stroke-opacity="0.5"/>
+  <path d="M 900 600 L 900 612 L 940 612 L 940 600" stroke-opacity="0.5"/>
+
+  <!-- ══ RIGHT TAB, unloaded reference ══ -->
+  <path d="
+    M 960 396
+    L 880 396
+    L 880 406
+    L 960 406" />
+  <!-- Tab root fillet -->
+  <path d="M 960 392 Q 956 396 960 400" stroke-opacity="0.4"/>
+
+  <!-- ══ LEFT TAB, deflected ══ -->
+  <!-- Ghost: unloaded position -->
+  <path d="
+    M 240 396
+    L 320 396
+    L 320 406
+    L 240 406" stroke-dasharray="3 4" stroke-opacity="0.3"/>
+  <!-- Deflected tab -->
+  <path d="
+    M 240 396
+    Q 290 397 320 411
+    L 320 421
+    Q 290 407 240 406" />
+  <!-- Deflection ticks at the tip -->
+  <line x1="334" y1="396" x2="334" y2="411" stroke="oklch(0.62 0.10 45)" stroke-opacity="0.6"/>
+  <path d="M 330 400 L 334 396 L 338 400" stroke="oklch(0.62 0.10 45)" stroke-opacity="0.6"/>
+  <path d="M 330 407 L 334 411 L 338 407" stroke="oklch(0.62 0.10 45)" stroke-opacity="0.6"/>
+
+  <!-- Strain arcs at the flex point, splash hue -->
+  <g stroke="oklch(0.62 0.10 45)">
+    <path d="M 250 376 A 26 26 0 0 1 250 426" stroke-opacity="0.5"/>
+    <path d="M 256 362 A 40 40 0 0 1 256 440" stroke-opacity="0.3"/>
+    <path d="M 262 348 A 54 54 0 0 1 262 454" stroke-opacity="0.16"/>
+  </g>
+  <!-- Focal anchor at the flex point -->
+  <circle cx="242" cy="401" r="6.5" fill="oklch(0.62 0.10 45 / 0.95)" stroke="oklch(0.62 0.10 45)"/>
+  <circle cx="242" cy="401" r="12" stroke="oklch(0.62 0.10 45)" stroke-opacity="0.5"/>
+
+  <!-- ══ PLATE + PCB SANDWICH, tilted onto the deflected tab ══ -->
+  <g transform="rotate(-1.5 880 396)">
+    <!-- Plate -->
+    <path d="
+      M 300 384
+      L 900 384
+      L 900 396
+      L 300 396
+      Z" />
+    <!-- PCB -->
+    <path d="
+      M 310 416
+      L 890 416
+      L 890 430
+      L 310 430
+      Z" />
+    <line x1="310" y1="423" x2="890" y2="423" stroke-opacity="0.22" stroke-dasharray="6 8"/>
+    <!-- Standoffs between plate and PCB -->
+    <g stroke-opacity="0.45">
+      <line x1="360" y1="396" x2="360" y2="416"/>
+      <line x1="600" y1="396" x2="600" y2="416"/>
+      <line x1="840" y1="396" x2="840" y2="416"/>
+    </g>
+    <!-- Switch silhouettes on the plate -->
+    <g>
+      <path d="M 392 384 L 392 340 L 448 340 L 448 384" />
+      <path d="M 572 384 L 572 340 L 628 340 L 628 384" />
+      <path d="M 752 384 L 752 340 L 808 340 L 808 384" />
+      <!-- Stems -->
+      <line x1="420" y1="340" x2="420" y2="326" stroke-opacity="0.6"/>
+      <line x1="600" y1="340" x2="600" y2="326" stroke-opacity="0.6"/>
+      <line x1="780" y1="340" x2="780" y2="326" stroke-opacity="0.6"/>
+      <!-- Keycaps -->
+      <path d="M 384 326 L 392 300 Q 420 296 448 300 L 456 326 Z" />
+      <path d="M 564 326 L 572 300 Q 600 296 628 300 L 636 326 Z" />
+      <path d="M 744 326 L 752 300 Q 780 296 808 300 L 816 326 Z" />
+      <!-- Plate cutouts under switches, hinted -->
+      <line x1="392" y1="390" x2="448" y2="390" stroke-opacity="0.25"/>
+      <line x1="572" y1="390" x2="628" y2="390" stroke-opacity="0.25"/>
+      <line x1="752" y1="390" x2="808" y2="390" stroke-opacity="0.25"/>
+    </g>
+  </g>
+
+  <!-- Load arrow on the left end of the plate -->
+  <line x1="330" y1="300" x2="330" y2="360" stroke-opacity="0.6"/>
+  <path d="M 322 350 L 330 360 L 338 350" stroke-opacity="0.6"/>
+
+  <!-- ══ LEFT MARGIN TIER TICKS ══ -->
+  <g stroke-opacity="0.28">
+    <line x1="130" y1="312" x2="142" y2="312"/>
+    <line x1="130" y1="390" x2="142" y2="390"/>
+    <line x1="130" y1="401" x2="142" y2="401"/>
+    <line x1="130" y1="580" x2="142" y2="580"/>
+  </g>
+  <line x1="136" y1="312" x2="136" y2="580" stroke-opacity="0.14" stroke-dasharray="2 6"/>
+
+  <!-- ══ LABELS ══ -->
+  <text x="340" y="470" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none" letter-spacing="0.05em">PLATE + PCB</text>
+  <text x="720" y="470" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none" letter-spacing="0.05em">LEAF TAB · UNLOADED</text>
+  <text x="270" y="520" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.62 0.10 45)" fill-opacity="0.85" stroke="none" letter-spacing="0.05em">LEAF TAB · DEFLECTED</text>
+  <text x="270" y="538" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.62 0.10 45)" fill-opacity="0.7" stroke="none" letter-spacing="0.05em">FLEX POINT AT THE ROOT</text>
+  <text x="348" y="312" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none" letter-spacing="0.05em">LOAD</text>
+  <text x="1016" y="420" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none" letter-spacing="0.05em">CASE WALL</text>
+  <!-- Leaders -->
+  <line x1="266" y1="508" x2="300" y2="420" stroke-opacity="0.3" stroke-width="1"/>
+  <line x1="716" y1="466" x2="880" y2="410" stroke-opacity="0.3" stroke-width="1"/>
+
+  <!-- ══ JetBrains Mono technical value ══ -->
+  <text x="200" y="738" font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace" font-size="10" fill="oklch(0.78 0.005 90)" fill-opacity="0.38" stroke="none" letter-spacing="0.03em">LEAF-SPRING MOUNT — PLATE SITS ON CANTILEVERED METAL TABS, THE TAB FLEXES, THE CASE DOES NOT</text>
+
+  <!-- ══ BRONZE THEME DOT, upper-right margin ══ -->
+  <circle cx="1148" cy="92" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Four implementations shipped under the leaf-spring name — Owlab Spring, Geonworks F1-8X, Exclusive E7-V2 GML, Mode Sonnet — each with its spring element in bordeaux and its damping element labelled</title>
+
+  <text x="600" y="48" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">four implementations, one name</text>
+
+  <!-- ═════ Panel 1 — Owlab Spring: separate BeCu leaves ═════ -->
+  <g transform="translate(60, 90)">
+    <text x="120" y="0" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.9">Owlab Spring · 2022</text>
+    <!-- case walls -->
+    <path d="M 20 40 L 20 200 L 220 200 L 220 40" stroke-opacity="0.85"/>
+    <!-- separate leaves: short cantilevers fixed to the walls -->
+    <path d="M 20 110 L 70 110 Q 84 110 90 118" stroke="oklch(0.62 0.13 25)" stroke-width="3" stroke-opacity="0.95"/>
+    <path d="M 220 110 L 170 110 Q 156 110 150 118" stroke="oklch(0.62 0.13 25)" stroke-width="3" stroke-opacity="0.95"/>
+    <!-- plate resting on the leaves -->
+    <rect x="60" y="92" width="120" height="10" stroke-opacity="0.85"/>
+    <!-- PCB -->
+    <rect x="60" y="112" width="120" height="5" stroke-opacity="0.55"/>
+    <!-- labels -->
+    <text x="120" y="240" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle">8 beryllium-copper leaves</text>
+    <text x="120" y="260" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">spring separate from plate</text>
+    <text x="120" y="280" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">plate: Al · FR4 · PC · POM</text>
+    <text x="120" y="320" font-family="Newsreader, serif" font-size="13" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">damping: case · PE · plate foam</text>
+  </g>
+
+  <!-- ═════ Panel 2 — Geonworks F1-8X: integral tabs on an o-ring ═════ -->
+  <g transform="translate(340, 90)">
+    <text x="120" y="0" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.9">Geonworks F1-8X</text>
+    <path d="M 20 40 L 20 200 L 220 200 L 220 40" stroke-opacity="0.85"/>
+    <!-- case ledges -->
+    <line x1="20" y1="124" x2="50" y2="124" stroke-opacity="0.85"/>
+    <line x1="220" y1="124" x2="190" y2="124" stroke-opacity="0.85"/>
+    <!-- o-ring on ledges -->
+    <circle cx="42" cy="116" r="6" stroke-opacity="0.8"/>
+    <circle cx="198" cy="116" r="6" stroke-opacity="0.8"/>
+    <!-- plate with integral tabs (tabs in bordeaux) resting on o-ring -->
+    <rect x="70" y="92" width="100" height="10" stroke-opacity="0.85"/>
+    <path d="M 70 97 L 50 97 Q 40 97 36 108" stroke="oklch(0.62 0.13 25)" stroke-width="3" stroke-opacity="0.95"/>
+    <path d="M 170 97 L 190 97 Q 200 97 204 108" stroke="oklch(0.62 0.13 25)" stroke-width="3" stroke-opacity="0.95"/>
+    <rect x="70" y="112" width="100" height="5" stroke-opacity="0.55"/>
+    <text x="120" y="240" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle">tabs cut into the Al plate</text>
+    <text x="120" y="260" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">1.0 mm / 1.5 mm · V1.1 → V4</text>
+    <text x="120" y="280" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">FR4 option ships with Poron</text>
+    <text x="120" y="320" font-family="Newsreader, serif" font-size="13" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">damping: o-ring gasket</text>
+  </g>
+
+  <!-- ═════ Panel 3 — Exclusive E7-V2 GML: slotted plate ═════ -->
+  <g transform="translate(620, 90)">
+    <text x="120" y="0" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.9">Exclusive E7-V2 GML</text>
+    <path d="M 20 40 L 20 200 L 220 200 L 220 40" stroke-opacity="0.85"/>
+    <!-- gasket support points -->
+    <rect x="26" y="104" width="24" height="8" stroke-opacity="0.8"/>
+    <rect x="190" y="104" width="24" height="8" stroke-opacity="0.8"/>
+    <!-- plate spanning, with slotted regions beside the gasket points -->
+    <rect x="30" y="92" width="180" height="10" stroke-opacity="0.85"/>
+    <line x1="58" y1="92" x2="58" y2="102" stroke="oklch(0.62 0.13 25)" stroke-width="3" stroke-opacity="0.95"/>
+    <line x1="66" y1="92" x2="66" y2="102" stroke="oklch(0.62 0.13 25)" stroke-width="3" stroke-opacity="0.95"/>
+    <line x1="174" y1="92" x2="174" y2="102" stroke="oklch(0.62 0.13 25)" stroke-width="3" stroke-opacity="0.95"/>
+    <line x1="182" y1="92" x2="182" y2="102" stroke="oklch(0.62 0.13 25)" stroke-width="3" stroke-opacity="0.95"/>
+    <!-- foam between plate and PCB -->
+    <rect x="70" y="104" width="100" height="6" fill="oklch(0.78 0.005 90 / 0.15)" stroke-opacity="0.5" stroke-dasharray="3 4"/>
+    <rect x="70" y="112" width="100" height="5" stroke-opacity="0.55"/>
+    <text x="120" y="240" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle">slots beside 7 gasket points</text>
+    <text x="120" y="260" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">spring = slotted plate region</text>
+    <text x="120" y="280" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">plate never touches case</text>
+    <text x="120" y="320" font-family="Newsreader, serif" font-size="13" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">damping: foam plate-to-PCB</text>
+  </g>
+
+  <!-- ═════ Panel 4 — Mode Sonnet: tab inside EPU41 block ═════ -->
+  <g transform="translate(900, 90)">
+    <text x="120" y="0" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.9">Mode Sonnet</text>
+    <path d="M 20 40 L 20 200 L 220 200 L 220 40" stroke-opacity="0.85"/>
+    <!-- polymer blocks captured between top and bottom case -->
+    <rect x="24" y="84" width="34" height="34" rx="4" fill="oklch(0.78 0.005 90 / 0.12)" stroke-opacity="0.8"/>
+    <rect x="182" y="84" width="34" height="34" rx="4" fill="oklch(0.78 0.005 90 / 0.12)" stroke-opacity="0.8"/>
+    <!-- lattice hint inside blocks -->
+    <path d="M 30 96 L 40 106 M 40 90 L 52 102 M 30 110 L 38 116" stroke-opacity="0.35"/>
+    <path d="M 188 96 L 198 106 M 198 90 L 210 102 M 188 110 L 196 116" stroke-opacity="0.35"/>
+    <!-- plate with tabs that slide into the blocks (tabs in bordeaux) -->
+    <rect x="70" y="92" width="100" height="10" stroke-opacity="0.85"/>
+    <line x1="70" y1="97" x2="40" y2="97" stroke="oklch(0.62 0.13 25)" stroke-width="3" stroke-opacity="0.95"/>
+    <line x1="170" y1="97" x2="200" y2="97" stroke="oklch(0.62 0.13 25)" stroke-width="3" stroke-opacity="0.95"/>
+    <rect x="70" y="112" width="100" height="5" stroke-opacity="0.55"/>
+    <text x="120" y="240" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle">blocks slide over plate tabs</text>
+    <text x="120" y="260" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">compliance in the EPU41 block</text>
+    <text x="120" y="280" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">not called leaf spring by Mode</text>
+    <text x="120" y="320" font-family="Newsreader, serif" font-size="13" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">damping: the block itself</text>
+  </g>
+
+  <!-- bracket / legend -->
+  <line x1="80" y1="470" x2="1120" y2="470" stroke-opacity="0.3"/>
+  <line x1="80" y1="478" x2="104" y2="478" stroke="oklch(0.62 0.13 25)" stroke-width="3" stroke-opacity="0.95"/>
+  <text x="114" y="483" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">spring element</text>
+  <text x="1120" y="483" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.6">every one adds a lossy element the name omits</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-04T14:00:00.000Z",
+  "commit": "4bc3af6",
+  "kind": "inline-viz",
+  "article_slug": "leaf-spring-mount-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "bending-against-squashing",
+  "brief_summary": "Two cross-sections side by side under identical load arrows. Left, gasket-mount: plate sandwiched between foam strips drawn compressed against top and bottom case, annotated as polymer in compression that turns part of the stroke into heat, with a short ring-out waveform. Right, leaf-spring mount: the same plate resting on thin metal tabs from the case walls, tabs drawn deflected in bordeaux with a dashed undeflected ghost and a bordeaux splash at each flex point, annotated as metal in bending that stores and returns the stroke, with a longer bordeaux ring-out waveform.",
+  "target": "apps/web/public/article-viz/leaf-spring-mount-deep-dive/bend-vs-compress.svg",
+  "splash_color": { "name": "bordeaux", "oklch": "oklch(0.62 0.13 25)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "leaf-spring-mount-deep-dive.mdx § 'Bending against squashing' — 'A Poron or silicone gasket is a viscoelastic solid loaded in compression: it squashes under the stroke, returns some of the energy, and turns the rest into heat. That lost fraction is damping, and it is why gasket boards read as rounded and short in the tail.'",
+    "leaf-spring-mount-deep-dive.mdx § 'Bending against squashing' — 'A metal tab in bending is nearly a perfect spring by comparison — it stores the stroke and gives almost all of it back. The typist feels that as bounce; the microphone hears it as sustain.'",
+    "leaf-spring-mount-deep-dive.mdx § 'Bending against squashing' — 'Gasket-mount and leaf-spring mount both decouple the plate from the case.' / 'A leaf spring on its own damps nothing.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/leaf-spring-mount-deep-dive/bend-vs-compress.svg"],
+  "warnings": ["The two ring-out waveforms are qualitative illustrations of 'short tail' vs 'sustain' — not measured spectrograms."]
+}

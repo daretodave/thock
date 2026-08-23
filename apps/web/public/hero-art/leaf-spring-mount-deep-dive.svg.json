@@ -1,0 +1,32 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored SVG (no raster pipeline)",
+  "at": "2026-08-23T12:28:07Z",
+  "commit": "427fc90ae42c7faf494e850af16b8ff0d20bc294",
+  "kind": "hero-art",
+  "article_pillar": "deep-dives",
+  "source": null,
+  "tokens_snapshot": "51fdae8368c1eee844850352ec620acd2f822555",
+  "fonts": [
+    "IBM Plex Sans",
+    "JetBrains Mono"
+  ],
+  "slug": "leaf-spring-mount-deep-dive",
+  "subject": "Keyboard case side-section: a U-shaped case with sparse section hatch and feet, a plate + PCB sandwich carrying three switch and keycap silhouettes, resting on short cantilevered metal tabs that protrude from each inner case wall. The right tab is straight (unloaded reference); the left tab is deflected under a load arrow, its unloaded position ghosted, with terracotta strain arcs and the focal dot at the flex point where the tab roots into the wall.",
+  "motif": "case side-section with a deflected cantilever callout",
+  "splashHue": "muted terracotta",
+  "splashColor": "oklch(0.62 0.10 45)",
+  "canvas": "1200x750",
+  "strokeWeight": "2px",
+  "strokeColor": "oklch(0.78 0.005 90)",
+  "background": "transparent (light-mode safe; previewed on the charcoal oklch(0.175 0.006 250) and legible)",
+  "notes": "Case outline x 200 to 1000, y 240 to 600 with rounded lips, walls 40 wide, floor 40 deep, diagonal section hatch at 1px / 0.22 opacity, two feet. Tabs root at y 396 to 406 and reach 80 px into the cavity; right tab straight from x 960 to 880; left tab from x 240 curves to a tip at x 320 dropped 15 px (y 411 to 421), with the straight unloaded outline dashed above it and a splash-hue deflection dimension at x 334. The plate (y 384 to 396) and PCB (y 416 to 430), standoffs, three switch bodies and keycaps are grouped and rotated by minus 1.5 degrees about the right tab tip (880,396) so the left end of the sandwich sits on the deflected tab. Load arrow at x 330, y 300 to 360. Terracotta oklch(0.62 0.10 45) is the muted terracotta already in rotation (magnetic-switches-deep-dive); applied as a wash ellipse at the left tab root, three strain arcs opening right from the root, the deflection dimension, the focal dot+ring at (242,401), and the DEFLECTED / FLEX POINT labels. Bronze theme dot at (1148,92); four left-margin ticks (keycaps, plate, flex point, floor). All XML comments use '==' separator runs (no '--' runs) per the svg-validity.test.ts regression guard.",
+  "outputs": [
+    "apps/web/public/hero-art/leaf-spring-mount-deep-dive.svg",
+    "apps/web/public/hero-art/leaf-spring-mount-deep-dive.svg.json"
+  ],
+  "warnings": [
+    "Labels reference IBM Plex Sans / JetBrains Mono by family name with system fallbacks; the SVG does not embed font files (family convention, matches prior hero-art).",
+    "Preview rasters were rendered with the repo's existing Playwright/Chromium install into the session scratchpad for visual QA only; nothing rasterized was written into the repo."
+  ]
+}

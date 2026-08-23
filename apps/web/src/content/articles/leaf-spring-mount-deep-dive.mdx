@@ -1,0 +1,101 @@
+---
+slug: leaf-spring-mount-deep-dive
+title: "Leaf-spring mounts, explained: what a bending metal tab does that a foam strip cannot"
+lede: "The Nyawice's spec line and Mode's plate-tab mounting blocks both lean on one old idea — let a thin tab bend instead of a foam strip squash. The physics is textbook; the keyboard implementations are not, and the name covers more than one mechanism."
+author: thock
+pillar: deep-dives
+tags: [deep-dive, gasket-mount, mode, cannonkeys, "65"]
+publishedAt: '2026-08-04T14:00:00.000Z'
+updatedAt: '2026-08-04T14:00:00.000Z'
+heroImage: /hero-art/leaf-spring-mount-deep-dive.svg
+heroImageAlt: "Side-section line drawing of a keyboard case with the plate resting on cantilevered metal tabs reaching in from the case walls, drawn in a 2px warm-grey stroke on warm paper; the right-hand tab is deflected downward under a keypress, with a single muted-terracotta splash at the flex point where the tab bends and a small warm-bronze dot in the upper margin."
+featured: false
+popularityScore: 0
+mentionedParts:
+  - id: mode-sonnet
+    kind: board
+    slug: mode-sonnet
+  - id: bakeneko65
+    kind: board
+    slug: bakeneko65
+  - id: class80
+    kind: board
+    slug: class80
+  - id: drop-ctrl
+    kind: board
+    slug: drop-ctrl
+  - id: qk75
+    kind: board
+    slug: qk75
+---
+
+CannonKeys' spec sheet for the <Mono>Nyawice</Mono> gave its mount four words — "Leaf spring F1 mount" — and no further explanation. That is typical of the family: a line item, a promise of flex, and a name that different designers have attached to noticeably different hardware. One mechanical idea under the marketing explains why these boards feel springier than a gasket build, why some of them ring, and why almost every shipped example quietly adds a damping element the name does not mention.
+
+## A tab that bends on purpose
+
+A leaf spring is a cantilever: a thin strip fixed at one end and free at the other, loaded so that it bends rather than stretches or compresses. In a keyboard that means a short metal tab, either cut into the plate's outline or fixed to the case, that the plate-and-PCB assembly rests on. The tab is the spring element, and the plate rides on it.
+
+<InlineViz
+  src="/article-viz/leaf-spring-mount-deep-dive/cantilever-stiffness.svg"
+  alt="A ladder of three cantilever tabs of increasing thickness — 1.0 mm, 1.5 mm, 2.0 mm — each drawn fixed at the left with a downward load arrow at the free end; beside each a terracotta bar shows relative stiffness of 1x, 3.4x, and 8x, with the caption that stiffness scales with thickness cubed and falls with length cubed."
+  caption="Same material, same length: a tab half a millimetre thicker is more than three times stiffer."
+  accent="bordeaux"
+/>
+
+The behaviour of a cantilever under an end load is one of the first results in any strength-of-materials course: deflection is proportional to the load times the length cubed, divided by the material's modulus and the beam's second moment of area — <Source href="https://en.wikipedia.org/wiki/Deflection_(engineering)">the standard cantilever formula</Source>. For a rectangular tab, that second moment goes with the width times the thickness cubed. Flip it around and the spring rate of the tab rises with the cube of its thickness, rises linearly with its width and the material's modulus, and falls with the cube of its length.
+
+The cube is what makes leaf-spring design so sensitive. A 1.0 mm tab and a 1.5 mm tab in the same alloy and the same length differ in stiffness by a factor of about 3.4. A 2.0 mm tab is eight times stiffer than the 1.0 mm one. That is why Geonworks ships its F1-8X leaf-spring plates at both 1.0 mm and 1.5 mm — the designer is tuning a cubic, not a dial.
+
+Material matters by the same arithmetic, only linearly. Aluminium sits around 69 GPa modulus; beryllium copper and spring steels sit roughly two to three times higher. A tab cut from the plate inherits the plate's material, so an aluminium leaf-spring plate is a softer spring than a steel one of identical geometry — and a polymer plate is out of the question as its own spring. POM at about 3 GPa is more than twenty times softer than aluminium, and no tab geometry rescues that. It is the first structural fact about the family: either the tab is metal and part of the plate, or the spring is a separate metal part and the plate is free to be anything.
+
+## Four implementations, one name
+
+<InlineViz
+  src="/article-viz/leaf-spring-mount-deep-dive/leaf-family.svg"
+  alt="Four panels in a row, each a small cross-section. Panel one: separate beryllium-copper leaves fixed to the case with the plate resting on top, labelled Owlab Spring, eight leaves. Panel two: an aluminium plate with integral tabs resting on an o-ring, labelled Geonworks F1-8X, leaf-spring plate plus o-ring gasket. Panel three: a plate with slots cut beside seven gasket support points, labelled Exclusive E7-V2 GML, with foam between plate and PCB. Panel four: plate tabs captured inside EPU41 polymer blocks, labelled Mode Sonnet, mounting block over tab. The spring element in each panel is drawn in terracotta."
+  caption="What the hobby has shipped under the leaf-spring banner since 2022 — and what each one added to stop the ring."
+  accent="bordeaux"
+/>
+
+The cleanest example is the board that named itself after the idea. Owlab's <Mono>Spring</Mono>, sold in-stock from February 2022 at $355, suspended its plate on <Source href="https://nextrift.com/the-owlab-spring-keyboard-looks-amazing-in-stock-sale-in-february-2022-from-355/">eight leaf springs made of beryllium copper</Source>, with the plate offered in aluminium, FR4, polycarbonate, and POM. The leaves were separate parts the plate rested on, and that separation is what let Owlab offer polymer plates at all: the spring rate lived in the copper, not the plate.
+
+Geonworks went the other way on the <Mono>F1-8X</Mono>. Its <Source href="https://geon.works/products/f1-8x-plate">plate catalogue</Source> lists aluminium "Leaf Spring" plates in V1.1, V3, and V4 revisions at 1.0 mm and 1.5 mm. The leaf springs here are the plate's own tabs, and the board's spec calls the mount a gasket o-ring — the tabs sit on an o-ring, so the design is a metal spring resting on a rubber one. Tellingly, the FR4 plate in the same catalogue ships "with Poron Gasket," because FR4 at roughly 22 GPa cannot carry the tab geometry aluminium can.
+
+Exclusive's <Mono>E7-V2</Mono> called its version GML — isolated Gasket, Muted plate, Leaf spring — and <Source href="https://exclusive.works/blogs/news/e7-v2-gml-isolated-gasket-muted-plate-leaf-spring-structure">described it</Source> as slots cut "next to the 7 gasket supporting points at top and bottom of the plate, to optimize the pressure on the plate," with foam between plate and PCB. Here the leaf spring is a slotted region of the plate beside each gasket point, not a protruding tab.
+
+Then there is Mode, which does not use the phrase at all. The <Source href="https://modedesigns.com/pages/sixtyfive-guide">SixtyFive build guide</Source> described its "Isolated Top Mount" as "custom-molded silicone plate caps" that "isolate the plate and screws from the top case." The <PartReference id="mode-sonnet" /> pushed that into a Mounting Block System: <Source href="https://modedesigns.com/products/sonnet-mounting-blocks">the blocks</Source> "slide over tabs extending from the edge of the Plate," and the blocks are Carbon-printed EPU41 lattice in two densities plus an "Isolated Top Mount" block. The plate has tabs and the tabs are the load path, but the compliance lives in the polymer block, not in tab bending. The hobby files the Sonnet under gasket-mount — thock's own catalogue does — and that is a fair label for the feel, but the geometry is the leaf-spring family's with the spring swapped for a cushion.
+
+The <Mono>Nyawice</Mono> sits somewhere in this spread. <Source href="https://cannonkeys.com/products/nyawice">CannonKeys' page</Source> lists "Leaf spring F1 mount," plates in aluminium, polycarbonate, carbon fibre, and FR4, and a buy that ran 2026-04-17 through 2026-05-17. The page defines neither the F1 nor whether the polymer plate options ride on their own tabs or on a separate spring. The polycarbonate and FR4 plates almost certainly need a different load path than the aluminium one — the honest position is that the vendor has not published it.
+
+## Bending against squashing
+
+<InlineViz
+  src="/article-viz/leaf-spring-mount-deep-dive/bend-vs-compress.svg"
+  alt="Two side-by-side cross-sections. Left, gasket-mount: a plate sandwiched between foam strips against the case, the strips drawn compressed under a downward arrow, with the note that foam squashes and damps. Right, leaf-spring mount: the same plate resting on a thin metal tab from the case wall, the tab drawn deflected in terracotta under the same arrow, with the note that metal bends and returns the energy. A small ring-out waveform beside the leaf-spring panel is longer than the one beside the gasket panel."
+  caption="A gasket strip absorbs the stroke; a leaf spring stores it and hands it back."
+  accent="bordeaux"
+/>
+
+Gasket-mount and leaf-spring mount both decouple the plate from the case. The difference is what the compliant element does with the energy. A Poron or silicone gasket is a viscoelastic solid loaded in compression: it squashes under the stroke, returns some of the energy, and turns the rest into heat. That lost fraction is damping, and it is why gasket boards read as rounded and short in the tail. A metal tab in bending is nearly a perfect spring by comparison — it stores the stroke and gives almost all of it back. The typist feels that as bounce; the microphone hears it as sustain.
+
+That is the acoustic consequence the name leaves out. A leaf spring on its own damps nothing. It isolates the plate from the case the way a gasket does, so the shell stops contributing its own ring, but the plate-and-PCB assembly is left to resonate on an undamped spring. Every one of the four implementations above adds a lossy element for exactly that reason: Geonworks sets its leaf-spring plates on an o-ring, Exclusive packs foam between plate and PCB, Mode makes the whole block out of an elastomer, and Owlab's shipped units carried case foam, PE foam, and plate foam. A pure leaf-spring board with nothing else in the cavity is a design that exists mostly in the name.
+
+The geometry also explains why leaf-spring flex reads as uniform where tray-mount flex reads as patchy: a tray-mount's stiffness spikes at every standoff, while a leaf-spring assembly moves as one body on matched springs at the perimeter. The <PartReference id="qk75" />'s PCB-mount bounce and the <PartReference id="bakeneko65" />'s o-ring cushion both put the give at the key; a leaf spring puts it at the edge and lets the whole deck travel.
+
+## Against top-mount, and against flex cuts
+
+A top-mount is what a leaf-spring mount becomes when the tabs are too short and thick to bend. The <PartReference id="drop-ctrl" /> is the clean reference: plate bolted to the top case, every stroke transmitted into the shell. Lengthen the tab, thin it, let the cube law work, and the same screw-to-tab geometry turns into a spring. That is the lineage Mode's Isolated Top Mount makes explicit — a top-mount whose tabs are wrapped in silicone — and it is why a board like the <PartReference id="class80" /> can offer top-mount and gasket-mount from a single plate outline. The tabs are the same; what changes is whether they are clamped hard, cushioned, or allowed to flex.
+
+Flex-cut plates are the other thing people confuse with leaf springs, and the distinction is where the compliance lives. A flex cut is a slot milled between key rows so the plate bends locally under the key being pressed. A leaf spring is compliance at the boundary, so the plate as a whole moves on its supports. Flex cuts soften the key; leaf springs soften the deck. Geonworks lists a "Sandwich Flex Cut" plate separately from its leaf-spring plates because they are different tools.
+
+## Feel, service, and the honest downsides
+
+The serviceability case is real. Gasket strips take compression set — foam squeezed for three years does not return to its original height — and they tear, shift, and go missing on disassembly. A metal tab that stays inside its elastic range is the same part after a million strokes as on day one.
+
+The caveats are just as concrete. First, fatigue: aluminium alloys have no true endurance limit, so an aluminium tab cycled hard near a sharp corner can eventually crack — one reason Owlab chose beryllium copper. Second, plate lock-in: if the spring is the plate's own tab, the plate material is part of the spring rate, and the polymer plates enthusiasts like for their sound need a different load path; Geonworks' Poron-gasketed FR4 is the tell. Third, the ring: without a damping element the tail is long, and adding foam to fix it erodes the bounce that justified the mount. Fourth, the label does not specify the hardware. "Leaf spring" on a spec sheet might mean eight copper leaves, a slotted plate on seven gasket points, or a tab inside an elastomer block, and those three feel nothing alike.
+
+## Verdict, and what to watch
+
+A leaf-spring mount is a top-mount that learned to bend, tuned by a cubic law that rewards obsessive revision and punishes guesswork. It offers the most uniform, springiest deck the hobby has produced, without the consumable foam a gasket build depends on. It also ships, in every real case on record, with some damping bolted back on. Read the family that way: not a replacement for gasket-mount but a different place to put the spring, with the damping added back by hand.
+
+Two things decide whether the family grows past the boutique tier. The first is whether CannonKeys or any vendor publishes tab geometry the way Mode publishes its block materials, so buyers can compare a 1.0 mm aluminium tab against a 1.5 mm one instead of comparing adjectives. The second is whether polymer-plate options on leaf-spring boards get a separate spring, as Owlab did it, or keep falling back to gaskets, as Geonworks did. If the <Mono>Nyawice</Mono> ships with a published answer to either question, it will have done more for the mount than its spec line did.

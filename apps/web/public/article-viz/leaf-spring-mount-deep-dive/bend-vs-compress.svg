@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Gasket-mount (foam strip in compression, damps) beside leaf-spring mount (metal tab in bending, returns energy) — with a shorter ring-out beside the gasket and a longer one beside the leaf spring</title>
+
+  <!-- ═════ Left — gasket-mount: foam in compression ═════ -->
+  <g transform="translate(80, 60)">
+    <text x="220" y="0" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">gasket · squashes</text>
+    <!-- top case -->
+    <path d="M 40 40 L 400 40 L 400 70 L 40 70 Z" stroke-opacity="0.85"/>
+    <!-- top gasket strips, drawn compressed (shorter than nominal) -->
+    <rect x="60" y="70" width="60" height="6" fill="oklch(0.78 0.005 90 / 0.18)" stroke-opacity="0.85"/>
+    <rect x="320" y="70" width="60" height="6" fill="oklch(0.78 0.005 90 / 0.18)" stroke-opacity="0.85"/>
+    <!-- plate -->
+    <rect x="50" y="76" width="340" height="12" stroke-opacity="0.85"/>
+    <!-- bottom gasket strips, compressed -->
+    <rect x="60" y="88" width="60" height="6" fill="oklch(0.78 0.005 90 / 0.18)" stroke-opacity="0.85"/>
+    <rect x="320" y="88" width="60" height="6" fill="oklch(0.78 0.005 90 / 0.18)" stroke-opacity="0.85"/>
+    <!-- compression ticks on the strips -->
+    <path d="M 66 73 L 114 73 M 66 91 L 114 91" stroke-opacity="0.4" stroke-dasharray="2 3"/>
+    <path d="M 326 73 L 374 73 M 326 91 L 374 91" stroke-opacity="0.4" stroke-dasharray="2 3"/>
+    <!-- PCB -->
+    <rect x="50" y="98" width="340" height="6" stroke-opacity="0.55"/>
+    <!-- bottom case -->
+    <path d="M 40 112 L 400 112 L 400 142 L 40 142 Z" stroke-opacity="0.85"/>
+    <!-- load arrow -->
+    <line x1="220" y1="8" x2="220" y2="36" stroke-opacity="0.8"/>
+    <path d="M 212 28 L 220 38 L 228 28" stroke-opacity="0.8"/>
+    <!-- notes -->
+    <text x="220" y="180" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">polymer in compression · viscoelastic</text>
+    <text x="220" y="200" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">part of the stroke becomes heat</text>
+    <!-- ring-out waveform: short decay -->
+    <path d="M 60 260 L 80 260 L 88 236 L 100 284 L 112 244 L 124 274 L 136 252 L 148 266 L 160 257 L 172 262 L 184 259 L 200 260 L 380 260" stroke-opacity="0.7"/>
+    <text x="220" y="300" font-family="Newsreader, serif" font-size="13" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">rounded · short tail</text>
+  </g>
+
+  <!-- ═════ Right — leaf-spring: metal tab in bending ═════ -->
+  <g transform="translate(680, 60)">
+    <text x="220" y="0" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle">leaf spring · bends</text>
+    <!-- top case -->
+    <path d="M 40 40 L 400 40 L 400 70 L 40 70 Z" stroke-opacity="0.85"/>
+    <!-- case walls extending down -->
+    <path d="M 40 70 L 40 112 M 400 70 L 400 112" stroke-opacity="0.85"/>
+    <!-- tabs from the walls, deflected downward under load (bordeaux) -->
+    <path d="M 40 84 L 80 84 Q 100 84 110 94" stroke="oklch(0.62 0.13 25)" stroke-width="3" stroke-opacity="0.95"/>
+    <path d="M 400 84 L 360 84 Q 340 84 330 94" stroke="oklch(0.62 0.13 25)" stroke-width="3" stroke-opacity="0.95"/>
+    <!-- undeflected ghost of the tabs -->
+    <path d="M 40 84 L 112 84 M 400 84 L 328 84" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.3" stroke-dasharray="2 4"/>
+    <!-- plate, resting on the deflected tabs (so sits a few px lower) -->
+    <rect x="80" y="82" width="280" height="12" stroke-opacity="0.85"/>
+    <!-- PCB -->
+    <rect x="80" y="104" width="280" height="6" stroke-opacity="0.55"/>
+    <!-- bottom case -->
+    <path d="M 40 112 L 400 112 L 400 142 L 40 142 Z" stroke-opacity="0.85"/>
+    <!-- load arrow -->
+    <line x1="220" y1="8" x2="220" y2="36" stroke-opacity="0.8"/>
+    <path d="M 212 28 L 220 38 L 228 28" stroke-opacity="0.8"/>
+    <!-- flex-point splash -->
+    <circle cx="96" cy="86" r="7" fill="oklch(0.62 0.13 25 / 0.25)" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.9"/>
+    <circle cx="344" cy="86" r="7" fill="oklch(0.62 0.13 25 / 0.25)" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.9"/>
+    <!-- notes -->
+    <text x="220" y="180" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.95">metal in bending · near-perfect spring</text>
+    <text x="220" y="200" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">stores the stroke, hands it back</text>
+    <!-- ring-out waveform: long decay -->
+    <path d="M 60 260 L 80 260 L 88 234 L 100 286 L 112 238 L 124 282 L 136 242 L 148 278 L 160 246 L 172 274 L 184 249 L 196 271 L 208 252 L 220 268 L 232 254 L 244 266 L 256 256 L 268 264 L 280 257 L 292 263 L 304 258 L 316 262 L 328 259 L 340 261 L 380 260" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.85"/>
+    <text x="220" y="300" font-family="Newsreader, serif" font-size="13" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">bounce · sustain unless damped</text>
+  </g>
+
+  <!-- divider -->
+  <line x1="600" y1="80" x2="600" y2="380" stroke-opacity="0.2" stroke-dasharray="4 8"/>
+
+  <!-- footnote -->
+  <text x="600" y="430" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">both decouple the plate from the case · only one of them damps</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

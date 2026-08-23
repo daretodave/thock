@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Cantilever tab stiffness ladder — 1.0 mm, 1.5 mm, 2.0 mm tabs at 1x, 3.4x, 8x relative spring rate</title>
+
+  <text x="600" y="52" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">spring rate of a cantilever tab rises with thickness cubed</text>
+
+  <!-- ═════ Row 1 — 1.0 mm tab ═════ -->
+  <g>
+    <!-- case wall (fixed end) -->
+    <rect x="120" y="100" width="40" height="90" stroke-opacity="0.85"/>
+    <line x1="126" y1="108" x2="154" y2="182" stroke-opacity="0.35"/>
+    <line x1="126" y1="130" x2="154" y2="182" stroke-opacity="0.25"/>
+    <!-- tab, 1.0 mm (thin), slightly deflected -->
+    <path d="M 160 140 L 360 140 Q 440 140 480 168" stroke="oklch(0.62 0.13 25)" stroke-width="3" stroke-opacity="0.95"/>
+    <!-- load arrow at free end -->
+    <line x1="480" y1="118" x2="480" y2="156" stroke-opacity="0.8"/>
+    <path d="M 472 148 L 480 158 L 488 148" stroke-opacity="0.8"/>
+    <!-- label -->
+    <text x="180" y="124" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">1.0 mm</text>
+    <!-- relative-stiffness bar -->
+    <rect x="620" y="130" width="50" height="20" fill="oklch(0.62 0.13 25 / 0.35)" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.95"/>
+    <text x="684" y="145" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.62 0.13 25)" stroke="none">1×</text>
+    <text x="760" y="145" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">baseline · softest</text>
+  </g>
+
+  <!-- ═════ Row 2 — 1.5 mm tab ═════ -->
+  <g transform="translate(0, 130)">
+    <rect x="120" y="100" width="40" height="90" stroke-opacity="0.85"/>
+    <line x1="126" y1="108" x2="154" y2="182" stroke-opacity="0.35"/>
+    <line x1="126" y1="130" x2="154" y2="182" stroke-opacity="0.25"/>
+    <path d="M 160 140 L 380 140 Q 450 140 480 152" stroke="oklch(0.62 0.13 25)" stroke-width="4.5" stroke-opacity="0.95"/>
+    <line x1="480" y1="112" x2="480" y2="142" stroke-opacity="0.8"/>
+    <path d="M 472 134 L 480 144 L 488 134" stroke-opacity="0.8"/>
+    <text x="180" y="124" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">1.5 mm</text>
+    <rect x="620" y="130" width="170" height="20" fill="oklch(0.62 0.13 25 / 0.35)" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.95"/>
+    <text x="804" y="145" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.62 0.13 25)" stroke="none">3.4×</text>
+    <text x="870" y="145" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">1.5³</text>
+  </g>
+
+  <!-- ═════ Row 3 — 2.0 mm tab ═════ -->
+  <g transform="translate(0, 260)">
+    <rect x="120" y="100" width="40" height="90" stroke-opacity="0.85"/>
+    <line x1="126" y1="108" x2="154" y2="182" stroke-opacity="0.35"/>
+    <line x1="126" y1="130" x2="154" y2="182" stroke-opacity="0.25"/>
+    <path d="M 160 140 L 420 140 Q 460 140 480 145" stroke="oklch(0.62 0.13 25)" stroke-width="6" stroke-opacity="0.95"/>
+    <line x1="480" y1="106" x2="480" y2="134" stroke-opacity="0.8"/>
+    <path d="M 472 126 L 480 136 L 488 126" stroke-opacity="0.8"/>
+    <text x="180" y="124" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">2.0 mm</text>
+    <rect x="620" y="130" width="400" height="20" fill="oklch(0.62 0.13 25 / 0.35)" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.95"/>
+    <text x="1034" y="145" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.62 0.13 25)" stroke="none">8×</text>
+    <text x="1080" y="145" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">2³</text>
+  </g>
+
+  <!-- footnote -->
+  <text x="120" y="490" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">same alloy, same length, same width · rate ∝ E · b · t³ / L³ · longer tab → softer by the cube of length</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

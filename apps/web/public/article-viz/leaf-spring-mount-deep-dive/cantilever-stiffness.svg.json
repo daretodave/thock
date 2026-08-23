@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-04T14:00:00.000Z",
+  "commit": "4bc3af6",
+  "kind": "inline-viz",
+  "article_slug": "leaf-spring-mount-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "a-tab-that-bends-on-purpose",
+  "brief_summary": "Three-row ladder of cantilever tabs fixed to a case wall at the left, each loaded at the free end. Tab stroke weight and deflection scale with thickness (1.0 mm, 1.5 mm, 2.0 mm). Beside each tab a bordeaux bar shows relative spring rate: 1x, 3.4x, 8x — the cube of thickness. A footnote states the proportionality (E · b · t³ / L³) and that a longer tab is softer by the cube of length.",
+  "target": "apps/web/public/article-viz/leaf-spring-mount-deep-dive/cantilever-stiffness.svg",
+  "splash_color": { "name": "bordeaux", "oklch": "oklch(0.62 0.13 25)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "leaf-spring-mount-deep-dive.mdx § 'A tab that bends on purpose' — 'the spring rate of the tab rises with the cube of its thickness, rises linearly with its width and the material's modulus, and falls with the cube of its length'",
+    "leaf-spring-mount-deep-dive.mdx § 'A tab that bends on purpose' — 'A 1.0 mm tab and a 1.5 mm tab in the same alloy and the same length differ in stiffness by a factor of about 3.4. A 2.0 mm tab is eight times stiffer than the 1.0 mm one.'",
+    "https://en.wikipedia.org/wiki/Deflection_(engineering) — cantilever end-load deflection δ = P·L³ / (3·E·I), with I = b·t³/12 for a rectangular section"
+  ],
+  "outputs": ["apps/web/public/article-viz/leaf-spring-mount-deep-dive/cantilever-stiffness.svg"],
+  "warnings": []
+}
