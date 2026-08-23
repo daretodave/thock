@@ -21,8 +21,12 @@ export function SwitchCompareSelector({
   const [a, setA] = useState(validate(initialA))
   const [b, setB] = useState(validate(initialB))
 
-  useEffect(() => setA(validate(initialA)), [initialA, switches])
-  useEffect(() => setB(validate(initialB)), [initialB, switches])
+  useEffect(() => {
+    setA(switches.some((s) => s.slug === initialA) ? initialA : '')
+  }, [initialA, switches])
+  useEffect(() => {
+    setB(switches.some((s) => s.slug === initialB) ? initialB : '')
+  }, [initialB, switches])
 
   const canCompare = a !== '' && b !== '' && a !== b
   const showSameSelectionHint = a !== '' && b !== '' && a === b

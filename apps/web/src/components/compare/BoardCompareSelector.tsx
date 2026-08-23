@@ -21,8 +21,12 @@ export function BoardCompareSelector({
   const [a, setA] = useState(validate(initialA))
   const [b, setB] = useState(validate(initialB))
 
-  useEffect(() => setA(validate(initialA)), [initialA, boards])
-  useEffect(() => setB(validate(initialB)), [initialB, boards])
+  useEffect(() => {
+    setA(boards.some((board) => board.slug === initialA) ? initialA : '')
+  }, [initialA, boards])
+  useEffect(() => {
+    setB(boards.some((board) => board.slug === initialB) ? initialB : '')
+  }, [initialB, boards])
 
   const canCompare = a !== '' && b !== '' && a !== b
   const showSameSelectionHint = a !== '' && b !== '' && a === b
