@@ -12152,3 +12152,14 @@ passes accumulate signals.)
 - score: 3.6 (impact × ease / 10)
 - trend-row: 2026-W29 / 75% Layout
 - action: direction "flat" but last spark delta is 3 (tolerance 2)
+
+### [ ] [mentionedParts] [3.6] mode-sonnet-r2-group-buy-coverage — 1 catalog entity mentioned in prose but absent from mentionedParts
+- category: mentionedParts
+- filed: 2026-08-23 by article-parts-check.mjs — mode-sonnet-r2-group-buy-coverage
+- impact: 4 (missing mentionedParts entries break the /part/[kind]/[slug] "mentioned in" rail)
+- ease: 9 (frontmatter edit — no code or schema change needed)
+- score: 3.6 (impact × ease / 10)
+- file: apps/web/src/content/articles/mode-sonnet-r2-group-buy-coverage.mdx
+- entities:
+  - Ikki68 Aurora (board `ikki68-aurora`) — prose line 73
+- action: add each entity to the article's mentionedParts frontmatter with the correct slug and kind
