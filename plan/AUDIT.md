@@ -165,7 +165,7 @@
 - evidence: `apps/web/src/content/articles/silent-switch-damping-deep-dive.mdx` "The second is the floor" paragraph, `<PartReference id="gazzew-boba-lt" />` at "37g actuation and 45g bottom-out"; corrected record now `data/switches/gazzew-boba-lt.json` `type: "linear"`, `55`/`65`
 - next: `/iterate` — either `/ship-data` a `gazzew-boba-lt` sibling Bobagum record (scout: splitkb.com/products/gazzew-bobagum-silent-linear-switch, 52/62/68g offered, dampened) then swap the example, or pick an existing in-catalog damped switch and rewrite the sentence around it
 
-### [ ] [data-gaps] [5.6] `data/switches/gateron-magnetic-jade.json` lists 45g/55g/4.0mm — Wooting, RNDKBD, and hlplanet all give 30±7gf initial / 50gf bottom-out / 3.5±0.2mm
+### [x] [data-gaps] [5.6] `data/switches/gateron-magnetic-jade.json` lists 45g/55g/4.0mm — Wooting, RNDKBD, and hlplanet all give 30±7gf initial / 50gf bottom-out / 3.5±0.2mm — addressed in `5b4bdfca`
 - category: data-gaps
 - filed: 2026-08-23 by /oversight (content-curator primary-source check while drafting gateron-magnetic-jade-deep-dive)
 - impact: 7 (the record feeds `/part/switch/gateron-magnetic-jade`, `/compare/switch`, and the quiz; the new deep-dive cites the vendor figures. Same article also establishes that the Keychron Q1 HE does **not** accept the Jade — if any board record or prose lists it as compatible, that is wrong too)
@@ -173,6 +173,8 @@
 - score: 5.6 (impact × ease / 10)
 - evidence: Wooting Jade listing, RNDKBD, hlplanet force table — all cited in `gateron-magnetic-jade-deep-dive.mdx`
 - next: `/ship-data` correction to `actuationG`/`bottomOutG`/`travelMm`
+> **Resolved (2026-08-23):** corrected `data/switches/gateron-magnetic-jade.json` `springGrams.actuation` 45→30, `springGrams.bottomOut` 55→50, `travelMm` 4.0→3.5, matching Wooting/RNDKBD/hlplanet figures already cited in `gateron-magnetic-jade-deep-dive.mdx`. No board record references this switch (checked `data/boards/`), so the Keychron Q1 HE compatibility concern in the row's impact note doesn't apply — nothing to fix there. No other article prose cites the old numeric figures. `pnpm verify` full gate green: typecheck, lint, unit tests, data:validate, build, size, 1189/1189 e2e.
+> Picked as the top signal this tick (cloud `/march`): no unlabeled GitHub issues (triage gate, 0 unlabeled); not Monday (W34 snapshot already exists, weekly snapshot gate skipped); no pending phases/data/content-gap work (Rule 1 comfortable, content-gap-survey filed no row, all 7 remaining mechanical surveys re-ran clean); march's own expand Step 3c gate not met (0 commits / ~2h since the pass-346 expand tick that's current HEAD at dispatch time, well under the 20-commit/48h threshold). This was the highest-scored Pending row in `plan/AUDIT.md` (`[5.6]`, ahead of the `[4.8]` cherry-mx2a-silent-black and Boba-U4-dampener rows, the `[4.5]` cross-link cluster, and the `[4.5]` a11y/Lighthouse row); `plan/CRITIQUE.md`'s only Pending row remains the non-actionable `[needs-user-call]` GA-beacon item.
 
 ### [ ] [data-gaps] [4.8] `data/switches/cherry-mx2a-silent-black.json` lists 4.0mm travel and 45/60g — Cherry lists 3.7mm total travel for the MX Silent line and 60cN operating force
 - category: data-gaps
