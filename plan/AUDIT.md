@@ -84,6 +84,18 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [a11y] [3.6] footer Buttondown attribution link missing external-link indicator — addressed in commit `d28efd63`, closes #908
+
+- category: a11y
+- filed: 2026-08-23 by cloud /iterate audit (delegated general-purpose sweep, angle: remaining outbound-link indicator gap after issue #903's site-wide sweep — not previously sampled)
+- impact: 4 (`ButtondownForm.tsx`'s "Powered by Buttondown." link — `target="_blank"`, rendered on every page via `Footer.tsx` → root `layout.tsx` — was the one remaining outbound link site-wide without the visual/AT-safe external indicator established by the #903 fix pass (`VendorCard.tsx`'s `↗` glyph, since applied to `PartHero.tsx`, `GroupBuyRow.tsx`, and `CitationIndex.tsx`). Every-page reach, though a low-traffic footer attribution link rather than a primary CTA.)
+- ease: 9 (one-line JSX addition mirroring `CitationIndex.tsx`'s existing `aria-hidden` arrow-span pattern; no test churn — `getByText(/powered by buttondown/i)` regex substring match already tolerates it)
+- score: 3.6 (impact × ease / 10)
+- evidence: grepped every `target="_blank"` site in `apps/web/src` — `vendor/[slug]/page.tsx`, `VendorCard.tsx`, `CitationIndex.tsx`, `PartHero.tsx`, `GroupBuyRow.tsx` all carried the `↗` indicator; `ButtondownForm.tsx` lines 94-101 (pre-fix) was the sole holdout.
+- issue: #908
+> **Resolved (2026-08-23):** added `<span aria-hidden="true"> ↗</span>` after the link text in `ButtondownForm.tsx`. New regression test asserts the arrow span and full accessible text. `pnpm verify` full gate green: typecheck, lint, 850 web unit tests (1 new), data:validate, build, size, 1168/1168 e2e.
+> Picked as the top signal this tick (cloud `/march`): no unlabeled GitHub issues (triage gate, 0 unlabeled); not Monday (W34 snapshot already exists, weekly snapshot gate skipped); no pending phases/data/content-gap work (Rule 1 comfortable, all 7 mechanical surveys re-ran clean, no rows filed); AUDIT.md's and CRITIQUE.md's only other Pending rows remain the standing non-autonomous items (Lighthouse-CI `[4.0]`, march.yml crash-gate `[6.3]`, heartbeat.yml dedup-scope `[4.0]`, soft-404 structural-block `[needs-user-call]`, mirrored-issue-drain `[needs-user-call]`) plus CRITIQUE.md's GA-beacon `[needs-user-call]`; march's own expand Step 3c gate not met (8 commits/same-day since pass 344's anchor `fd76f051`, threshold 20 commits/48h). A delegated general-purpose sweep — told explicitly which ~60 angles recent passes (300-344) already exhausted, and pointed at recently-shipped code as the most likely source of an undiscovered gap — found this remaining outbound-link indicator holdout as the one verified, scoreable defect; a second sub-threshold observation (`PartReference.tsx`'s 98 inline mid-sentence part-name mentions also lack the indicator, but that's a genuine visual-noise design trade-off in body prose rather than a clear-cut gap, and its test asserts exact `textContent` equality) was noted for awareness, not pursued.
+
 ### [x] [engineering] [3.6] compare selectors — fresh react-hooks/exhaustive-deps lint warnings from the #904 fix — addressed in commit `fa9a76ca`, closes #907
 
 - category: engineering
