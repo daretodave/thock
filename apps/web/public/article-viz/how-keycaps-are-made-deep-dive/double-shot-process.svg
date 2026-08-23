@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Double-shot molding in three panels: legend insert, body shot, finished wall</title>
+
+  <!-- Panel 1: shot 1 — legend insert in the legend cavity -->
+  <g transform="translate(60, 60)">
+    <text x="0" y="0" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55" letter-spacing="1.5">SHOT 1</text>
+    <text x="0" y="26" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none">legend insert</text>
+
+    <!-- mold block outline (legend cavity) -->
+    <rect x="20" y="60" width="260" height="150" rx="4"/>
+    <!-- cavity floor line -->
+    <line x1="40" y1="180" x2="260" y2="180" opacity="0.45"/>
+    <!-- backing plate (thin, ochre) -->
+    <rect x="60" y="166" width="180" height="12" fill="oklch(0.78 0.10 80)" stroke="oklch(0.78 0.10 80)"/>
+    <!-- the letter A as a solid ochre plug standing on the backing plate -->
+    <path d="M 118 166 L 150 92 L 182 166 L 168 166 L 161 148 L 139 148 L 132 166 Z M 143 136 L 157 136 L 150 116 Z" fill="oklch(0.78 0.10 80)" stroke="oklch(0.78 0.10 80)" fill-rule="evenodd"/>
+    <!-- sprue / gate arrow into cavity -->
+    <line x1="150" y1="60" x2="150" y2="80" opacity="0.6"/>
+    <path d="M 144 74 L 150 80 L 156 74" opacity="0.6"/>
+
+    <text x="20" y="240" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">cavity is the character itself</text>
+    <text x="20" y="258" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">one cavity per distinct legend</text>
+  </g>
+
+  <!-- arrow 1 -> 2 -->
+  <g opacity="0.5">
+    <line x1="360" y1="200" x2="410" y2="200"/>
+    <path d="M 402 194 L 410 200 L 402 206"/>
+  </g>
+
+  <!-- Panel 2: shot 2 — body floods around the insert -->
+  <g transform="translate(440, 60)">
+    <text x="0" y="0" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55" letter-spacing="1.5">SHOT 2</text>
+    <text x="0" y="26" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none">body floods around it</text>
+
+    <!-- cap-shaped cavity (side cross-section, Cherry-ish trapezoid) -->
+    <path d="M 40 200 L 70 80 L 230 80 L 260 200 Z"/>
+    <!-- body plastic hatch fill -->
+    <g opacity="0.35">
+      <line x1="60" y1="120" x2="250" y2="120"/>
+      <line x1="54" y1="140" x2="254" y2="140"/>
+      <line x1="50" y1="160" x2="258" y2="160"/>
+      <line x1="46" y1="180" x2="260" y2="180"/>
+    </g>
+    <!-- hollow interior (core) -->
+    <path d="M 80 200 L 100 110 L 200 110 L 220 200 Z" fill="oklch(0.175 0.006 250)" stroke="oklch(0.78 0.005 90)" opacity="0.9"/>
+    <!-- legend insert carried over, seated at the top face -->
+    <rect x="110" y="80" width="80" height="30" fill="oklch(0.78 0.10 80)" stroke="oklch(0.78 0.10 80)"/>
+    <text x="150" y="102" font-family="JetBrains Mono, monospace" font-size="20" font-weight="600" text-anchor="middle" fill="oklch(0.175 0.006 250)" stroke="none">A</text>
+    <!-- second gate arrow -->
+    <line x1="40" y1="60" x2="55" y2="80" opacity="0.6"/>
+    <path d="M 46 78 L 55 80 L 53 71" opacity="0.6"/>
+
+    <text x="20" y="240" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">second cavity shaped like the cap</text>
+    <text x="20" y="258" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">body colour fuses to the insert</text>
+  </g>
+
+  <!-- arrow 2 -> 3 -->
+  <g opacity="0.5">
+    <line x1="740" y1="200" x2="790" y2="200"/>
+    <path d="M 782 194 L 790 200 L 782 206"/>
+  </g>
+
+  <!-- Panel 3: finished wall cross-section — legend runs the full thickness -->
+  <g transform="translate(820, 60)">
+    <text x="0" y="0" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55" letter-spacing="1.5">RESULT</text>
+    <text x="0" y="26" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none">legend runs the whole wall</text>
+
+    <!-- zoomed top-wall slab -->
+    <rect x="30" y="90" width="260" height="60"/>
+    <!-- ochre legend column through the full slab thickness -->
+    <rect x="130" y="90" width="60" height="60" fill="oklch(0.78 0.10 80)" stroke="oklch(0.78 0.10 80)"/>
+    <!-- thickness bracket -->
+    <line x1="310" y1="90" x2="310" y2="150" opacity="0.6"/>
+    <line x1="304" y1="90" x2="316" y2="90" opacity="0.6"/>
+    <line x1="304" y1="150" x2="316" y2="150" opacity="0.6"/>
+    <text x="322" y="124" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">1.5 mm</text>
+    <!-- wear line: top surface sanded down, legend still there -->
+    <line x1="30" y1="112" x2="290" y2="112" stroke-dasharray="4 6" opacity="0.5"/>
+    <text x="30" y="178" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">— wear line: more legend underneath</text>
+
+    <text x="20" y="240" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">the character is the cap, not a layer on it</text>
+    <text x="20" y="258" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none">"the doubleshot legends will never fade" — GMK</text>
+  </g>
+
+  <!-- footer note -->
+  <text x="60" y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.45">ABS for both shots: amorphous, shrinks isotropically, so shot 2 lands where the mold expects shot 1.</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

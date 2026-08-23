@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-23T00:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "how-keycaps-are-made-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "double-shot-the-legend-is-a-second-shot",
+  "brief_summary": "Three-panel process strip for double-shot molding. Panel one shows the legend cavity with an ochre 'A' plug on a thin backing plate (shot 1). Panel two shows a cap-shaped cross-section cavity with hatched body plastic flooding around the carried-over ochre insert (shot 2). Panel three zooms on the finished top wall with the ochre legend column running the full 1.5 mm thickness and a dashed wear line showing more legend beneath the surface.",
+  "target": "apps/web/public/article-viz/how-keycaps-are-made-deep-dive/double-shot-process.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "how-keycaps-are-made-deep-dive.mdx § 'Double-shot: the legend is a second shot' — 'Shot one fills a mold whose cavity is the legend: a solid plug of, say, white ABS in the shape of an \"A\", sitting on a thin backing plate. Shot two moves that insert into a second cavity shaped like the finished cap and floods it with the body colour.'",
+    "how-keycaps-are-made-deep-dive.mdx § 'Double-shot: the legend is a second shot' — 'The character runs the full thickness of the wall' / 'GMK's CYL caps come out at 1.5 mm wall thickness'",
+    "https://www.gmk.net/en/products/keycaps-keyboards-accessories/cyl-keycaps — 'the doubleshot legends will never fade'; '1.5mm thick keycaps'",
+    "how-keycaps-are-made-deep-dive.mdx § 'Double-shot: the legend is a second shot' — 'ABS is the natural double-shot material because it is amorphous ... it shrinks the same amount in every direction'"
+  ],
+  "outputs": ["apps/web/public/article-viz/how-keycaps-are-made-deep-dive/double-shot-process.svg"],
+  "warnings": []
+}

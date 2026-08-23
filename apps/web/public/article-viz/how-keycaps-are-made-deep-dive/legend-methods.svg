@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Five legend methods compared: where the legend lives, the colour rule, and how it wears</title>
+
+  <!-- Column headers -->
+  <g font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55" letter-spacing="1.5">
+    <text x="60" y="70">METHOD</text>
+    <text x="330" y="70">WHERE THE LEGEND LIVES</text>
+    <text x="660" y="70">COLOUR RULE</text>
+    <text x="920" y="70">WEAR</text>
+  </g>
+  <line x1="60" y1="84" x2="1140" y2="84" opacity="0.35"/>
+
+  <!-- Row 1: double-shot -->
+  <g transform="translate(0, 130)">
+    <text x="60" y="0" font-family="Newsreader, serif" font-size="19" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none">double-shot</text>
+    <!-- glyph: slab with legend column through full depth -->
+    <g transform="translate(330, -18)">
+      <rect x="0" y="0" width="60" height="22"/>
+      <rect x="22" y="0" width="16" height="22" fill="oklch(0.78 0.10 80)" stroke="oklch(0.78 0.10 80)"/>
+    </g>
+    <text x="410" y="0" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.10 80)" stroke="none" font-weight="500">in the plastic</text>
+    <text x="660" y="0" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none">any colour</text>
+    <text x="920" y="0" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none">never fades</text>
+  </g>
+  <line x1="60" y1="158" x2="1140" y2="158" opacity="0.18"/>
+
+  <!-- Row 2: dye-sub -->
+  <g transform="translate(0, 212)">
+    <text x="60" y="0" font-family="Newsreader, serif" font-size="19" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none">dye-sub</text>
+    <!-- glyph: slab with shallow ochre stain at the top surface -->
+    <g transform="translate(330, -18)">
+      <rect x="0" y="0" width="60" height="22"/>
+      <rect x="22" y="0" width="16" height="7" fill="oklch(0.78 0.10 80)" stroke="oklch(0.78 0.10 80)"/>
+    </g>
+    <text x="410" y="0" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.10 80)" stroke="none" font-weight="500">in the surface</text>
+    <text x="660" y="0" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none">darker than the cap</text>
+    <text x="660" y="20" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">reverse dye-sub for dark sets</text>
+    <text x="920" y="0" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none">permanent</text>
+  </g>
+  <line x1="60" y1="248" x2="1140" y2="248" opacity="0.18"/>
+
+  <!-- Row 3: pad print -->
+  <g transform="translate(0, 302)">
+    <text x="60" y="0" font-family="Newsreader, serif" font-size="19" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none">pad print</text>
+    <!-- glyph: slab with ink film sitting above the surface -->
+    <g transform="translate(330, -18)">
+      <rect x="0" y="0" width="60" height="22"/>
+      <rect x="22" y="-4" width="16" height="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.7"/>
+    </g>
+    <text x="410" y="0" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none">on the surface</text>
+    <text x="660" y="0" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none">any colour</text>
+    <text x="920" y="0" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.62 0.13 25)" stroke="none" font-weight="500">wears off</text>
+    <text x="920" y="20" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">months on the home row</text>
+  </g>
+  <line x1="60" y1="338" x2="1140" y2="338" opacity="0.18"/>
+
+  <!-- Row 4: UV print -->
+  <g transform="translate(0, 392)">
+    <text x="60" y="0" font-family="Newsreader, serif" font-size="19" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none">UV print</text>
+    <g transform="translate(330, -18)">
+      <rect x="0" y="0" width="60" height="22"/>
+      <rect x="22" y="-4" width="16" height="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.7"/>
+    </g>
+    <text x="410" y="0" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none">on the surface</text>
+    <text x="660" y="0" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none">full colour</text>
+    <text x="660" y="20" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">novelties over double-shot bodies</text>
+    <text x="920" y="0" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.62 0.13 25)" stroke="none" font-weight="500">wears off</text>
+  </g>
+  <line x1="60" y1="428" x2="1140" y2="428" opacity="0.18"/>
+
+  <!-- Row 5: laser -->
+  <g transform="translate(0, 482)">
+    <text x="60" y="0" font-family="Newsreader, serif" font-size="19" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none">laser</text>
+    <!-- glyph: slab with a notch cut into the surface -->
+    <g transform="translate(330, -18)">
+      <path d="M 0 0 L 22 0 L 22 7 L 38 7 L 38 0 L 60 0 L 60 22 L 0 22 Z"/>
+    </g>
+    <text x="410" y="0" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none">recess in the surface</text>
+    <text x="660" y="0" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none">lighter mark, or filled</text>
+    <text x="920" y="0" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none">recess stays</text>
+    <text x="920" y="20" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.62 0.13 25)" stroke="none" opacity="0.85">fill wears like pad print</text>
+  </g>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

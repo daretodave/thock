@@ -1,0 +1,26 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-23T00:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "how-keycaps-are-made-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "shrinkage-warping-and-the-double-shot-pbt-problem",
+  "brief_summary": "Two-part figure. Left: horizontal bar chart of mold shrinkage on a 0-2% axis — ABS at 0.6% in warm-grey, unfilled PBT at 2% in ochre, annotated amorphous/isotropic versus semi-crystalline/anisotropic. Right: two side-view 6.25u spacebars — an ABS bar sitting flat on three stabiliser stems, and a PBT bar bowed so the ends lift off the baseline, with an ochre centre gate and outward flow arrows, warm-red dashed gaps at the outer stems, and the label 'banana spacebar'. Footer names the fix: glass-filled PBT compounds, thicker walls, centre gating.",
+  "target": "apps/web/public/article-viz/how-keycaps-are-made-deep-dive/shrinkage-and-warp.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "caution_color": "oklch(0.62 0.13 25)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "how-keycaps-are-made-deep-dive.mdx § 'Shrinkage, warping, and the double-shot PBT problem' — 'For ABS the figure is about 0.6 percent; for unfilled PBT it is roughly 2 percent.'",
+    "https://www.plastikcity.co.uk/useful-stuff/material-shrinkage-rates — ABS '0.6', PBT '2' (percent)",
+    "https://www.ptonline.com/articles/hitting-the-numbers-part-2 — amorphous materials 'shrink isotropically'; semi-crystalline materials 'shrink anisotropically — more parallel to the direction of flow and less perpendicular to the direction of flow'",
+    "how-keycaps-are-made-deep-dive.mdx § 'Shrinkage, warping, and the double-shot PBT problem' — 'A 6.25u spacebar cannot. Plastic enters at a gate, flows the length of the bar, and the long axis shrinks more than the short one ... thin walls cool faster outside than inside and lock in stress. The result is the banana spacebar, and the reason good PBT spacebars are molded thicker, gated nearer the centre, or cooled on a fixture.'",
+    "https://keyreative.store/blogs/news/introducing-kat-profile-keycaps-by-keyreative — '85% PBT + 15% GF (Glass Fiber)'"
+  ],
+  "outputs": ["apps/web/public/article-viz/how-keycaps-are-made-deep-dive/shrinkage-and-warp.svg"],
+  "warnings": []
+}

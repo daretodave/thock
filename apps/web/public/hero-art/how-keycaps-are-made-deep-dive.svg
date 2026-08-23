@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — how keycaps are made: two injection-mold halves opening with a single keycap profile between them, the legend cavity in the upper half picked out in ochre</title>
+
+  <!-- Ochre splash wash behind the legend cavity in the upper mold half.
+       oklch(0.72 0.13 80) is the ochre already in family rotation. -->
+  <ellipse cx="600" cy="226" rx="150" ry="42" fill="oklch(0.72 0.13 80 / 0.16)" stroke="none"/>
+
+  <!-- ════════════════════════════════════════════════════════════════════════════
+       COMPOSITION: a vertical mold stack, read top to bottom.
+         Sprue funnel at the top (y 60 to 110) feeding the cavity.
+         Upper mold half (y 110 to 300): a block whose underside carries the
+           negative of the keycap's outer shell. The legend cavity is a small
+           recess in the cavity ceiling, ochre-filled. This is the one detail
+           the article turns on, so it gets the splash.
+         Keycap profile (y 350 to 440): a Cherry-style side silhouette, hollow
+           underside with a center stem tube, a faint legend on its top face
+           linked by a dashed leader to the cavity it was formed by.
+         Lower mold half (y 500 to 680): a block whose top carries the core,
+           the positive of the keycap's inner void.
+       Opening chevrons on both halves. Parting line at the keycap's base.
+       ════════════════════════════════════════════════════════════════════════════ -->
+
+  <!-- ══ SPRUE ══ -->
+  <path d="M 580 62 L 620 62 L 608 96 L 592 96 Z" stroke-opacity="0.6"/>
+  <line x1="600" y1="96" x2="600" y2="110" stroke-opacity="0.6"/>
+  <!-- Runner path through the block into the cavity -->
+  <line x1="600" y1="110" x2="600" y2="206" stroke-dasharray="3 5" stroke-opacity="0.35"/>
+
+  <!-- ══ UPPER MOLD HALF ══ -->
+  <path d="
+    M 320 110
+    L 880 110
+    L 880 300
+    L 730 300
+    L 712 232
+    Q 600 214 488 232
+    L 470 300
+    L 320 300
+    Z" />
+  <!-- Guide pins on the outer faces -->
+  <line x1="360" y1="300" x2="360" y2="326" stroke-opacity="0.5"/>
+  <line x1="840" y1="300" x2="840" y2="326" stroke-opacity="0.5"/>
+  <!-- Cavity wall thickness hint -->
+  <path d="M 488 232 L 478 268" stroke-opacity="0.25"/>
+  <path d="M 712 232 L 722 268" stroke-opacity="0.25"/>
+
+  <!-- Legend cavity: a recess up into the cavity ceiling, ochre filled -->
+  <path d="
+    M 566 222
+    L 566 206
+    L 634 206
+    L 634 222
+    Q 600 216 566 222
+    Z" fill="oklch(0.72 0.13 80 / 0.55)" stroke="oklch(0.72 0.13 80)"/>
+  <!-- Legend stroke forms inside the recess -->
+  <g stroke="oklch(0.72 0.13 80)" stroke-opacity="0.8" stroke-width="1.5">
+    <line x1="582" y1="210" x2="582" y2="218"/>
+    <line x1="582" y1="210" x2="592" y2="210"/>
+    <line x1="604" y1="210" x2="604" y2="218"/>
+    <line x1="604" y1="214" x2="614" y2="214"/>
+    <line x1="614" y1="210" x2="614" y2="218"/>
+  </g>
+
+  <!-- Focal anchor at the legend cavity -->
+  <circle cx="600" cy="214" r="6.5" fill="oklch(0.72 0.13 80 / 0.95)" stroke="oklch(0.72 0.13 80)"/>
+  <circle cx="600" cy="214" r="12" stroke="oklch(0.72 0.13 80)" stroke-opacity="0.5"/>
+
+  <!-- Opening chevrons, upper half moving up -->
+  <g stroke-opacity="0.45">
+    <path d="M 412 96 L 420 86 L 428 96"/>
+    <path d="M 412 84 L 420 74 L 428 84" stroke-opacity="0.5"/>
+    <path d="M 772 96 L 780 86 L 788 96"/>
+    <path d="M 772 84 L 780 74 L 788 84" stroke-opacity="0.5"/>
+  </g>
+
+  <!-- ══ KEYCAP PROFILE, between the halves ══ -->
+  <!-- Outer shell: Cherry-style side silhouette with a dished top -->
+  <path d="
+    M 470 440
+    L 488 368
+    Q 600 350 712 368
+    L 730 440
+    Z" />
+  <!-- Hollow underside, inner wall -->
+  <path d="
+    M 486 440
+    L 500 382
+    Q 600 366 700 382
+    L 714 440" stroke-opacity="0.4"/>
+  <!-- Center stem tube -->
+  <path d="
+    M 586 440
+    L 586 376
+    M 614 440
+    L 614 376" stroke-opacity="0.6"/>
+  <line x1="586" y1="420" x2="614" y2="420" stroke-opacity="0.3"/>
+  <!-- Legend on the top face, ghosted in the splash hue -->
+  <path d="M 566 366 Q 600 360 634 366" stroke="oklch(0.72 0.13 80)" stroke-opacity="0.6"/>
+  <!-- Leader: cavity to legend -->
+  <line x1="600" y1="226" x2="600" y2="356" stroke="oklch(0.72 0.13 80)" stroke-opacity="0.35" stroke-dasharray="3 5"/>
+
+  <!-- Parting line -->
+  <line x1="300" y1="440" x2="900" y2="440" stroke-dasharray="4 6" stroke-opacity="0.3"/>
+  <circle cx="300" cy="440" r="2.5" stroke-opacity="0.5"/>
+  <circle cx="900" cy="440" r="2.5" stroke-opacity="0.5"/>
+
+  <!-- ══ LOWER MOLD HALF ══ -->
+  <path d="
+    M 320 500
+    L 486 500
+    L 500 452
+    Q 600 436 700 452
+    L 714 500
+    L 880 500
+    L 880 680
+    L 320 680
+    Z" />
+  <!-- Core: stem-tube slot -->
+  <path d="M 586 500 L 586 462 L 614 462 L 614 500" stroke-opacity="0.55"/>
+  <!-- Core shoulder hint -->
+  <path d="M 500 452 L 510 488" stroke-opacity="0.25"/>
+  <path d="M 700 452 L 690 488" stroke-opacity="0.25"/>
+  <!-- Ejector pins -->
+  <g stroke-opacity="0.4">
+    <line x1="530" y1="680" x2="530" y2="640"/>
+    <line x1="670" y1="680" x2="670" y2="640"/>
+    <line x1="524" y1="640" x2="536" y2="640"/>
+    <line x1="664" y1="640" x2="676" y2="640"/>
+  </g>
+  <!-- Guide pin bores -->
+  <path d="M 350 500 L 350 526 L 370 526 L 370 500" stroke-opacity="0.5"/>
+  <path d="M 830 500 L 830 526 L 850 526 L 850 500" stroke-opacity="0.5"/>
+
+  <!-- Opening chevrons, lower half moving down -->
+  <g stroke-opacity="0.45">
+    <path d="M 412 694 L 420 704 L 428 694"/>
+    <path d="M 412 706 L 420 716 L 428 706" stroke-opacity="0.5"/>
+    <path d="M 772 694 L 780 704 L 788 694"/>
+    <path d="M 772 706 L 780 716 L 788 706" stroke-opacity="0.5"/>
+  </g>
+
+  <!-- ══ LEFT MARGIN TIER TICKS ══ -->
+  <g stroke-opacity="0.28">
+    <line x1="250" y1="205" x2="262" y2="205"/>
+    <line x1="250" y1="395" x2="262" y2="395"/>
+    <line x1="250" y1="590" x2="262" y2="590"/>
+  </g>
+  <line x1="256" y1="205" x2="256" y2="590" stroke-opacity="0.14" stroke-dasharray="2 6"/>
+
+  <!-- ══ LABELS ══ -->
+  <text x="340" y="150" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none" letter-spacing="0.05em">UPPER MOLD HALF · CAVITY</text>
+  <text x="760" y="232" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.72 0.13 80)" fill-opacity="0.85" stroke="none" letter-spacing="0.05em">LEGEND CAVITY</text>
+  <text x="760" y="400" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none" letter-spacing="0.05em">KEYCAP · SIDE PROFILE</text>
+  <text x="340" y="640" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none" letter-spacing="0.05em">LOWER MOLD HALF · CORE</text>
+  <text x="630" y="82" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none" letter-spacing="0.05em">SPRUE</text>
+  <text x="906" y="444" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.45" stroke="none" letter-spacing="0.05em">PARTING LINE</text>
+  <!-- Leaders -->
+  <line x1="756" y1="228" x2="640" y2="214" stroke-opacity="0.35" stroke-width="1"/>
+  <line x1="756" y1="396" x2="726" y2="396" stroke-opacity="0.35" stroke-width="1"/>
+
+  <!-- ══ JetBrains Mono technical value ══ -->
+  <text x="300" y="738" font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace" font-size="10" fill="oklch(0.78 0.005 90)" fill-opacity="0.38" stroke="none" letter-spacing="0.03em">INJECTION MOLD, TWO HALVES — CAVITY FORMS THE SHELL, CORE FORMS THE VOID, LEGEND CUT INTO THE CAVITY CEILING</text>
+
+  <!-- ══ BRONZE THEME DOT, upper-right margin ══ -->
+  <circle cx="1148" cy="92" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

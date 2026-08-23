@@ -1,0 +1,25 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-23T00:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "how-keycaps-are-made-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "pad-printing-uv-printing-laser",
+  "brief_summary": "Five-row comparison table of legend methods (double-shot, dye-sub, pad print, UV print, laser) across three columns: where the legend lives, colour rule, wear. Each row carries a small slab glyph showing the legend's depth — full-thickness column (double-shot, ochre), shallow stain (dye-sub, ochre), film above the surface (pad/UV), notch cut into the surface (laser). 'In the plastic' and 'in the surface' are emphasised in ochre; 'wears off' in the warm-red caution token.",
+  "target": "apps/web/public/article-viz/how-keycaps-are-made-deep-dive/legend-methods.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "caution_color": "oklch(0.62 0.13 25)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "how-keycaps-are-made-deep-dive.mdx § 'Double-shot: the legend is a second shot' — 'makes the legend out of plastic rather than putting it on plastic' / 'the doubleshot legends will never fade'",
+    "how-keycaps-are-made-deep-dive.mdx § 'Dye-sublimation: the legend is a stain' — 'A legend can only be darker than the cap beneath it' / 'The workaround is reverse dye-sub' / 'The legend cannot flake, and it wears at the same rate as the cap around it'",
+    "how-keycaps-are-made-deep-dive.mdx § 'Pad printing, UV printing, laser' — 'handles any colour on any base, and it wears through within months on the home row because the ink is a film sitting on the plastic' / 'UV-cured ink in full colour, which is how multicolour novelties get made on top of double-shot bodies'",
+    "how-keycaps-are-made-deep-dive.mdx § 'Pad printing, UV printing, laser' — 'a pale mark on black ABS, a lighter recess on dark PBT — and laser-filled variants ablate a recess and flood it with paint. The recess is permanent; the fill wears like pad print.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/how-keycaps-are-made-deep-dive/legend-methods.svg"],
+  "warnings": []
+}
