@@ -142,6 +142,7 @@ export function CitationIndex({ citations }: CitationIndexProps): ReactElement {
                   className="underline decoration-border-hi underline-offset-4 hover:text-accent hover:decoration-accent transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
                 >
                   {display}
+                  <span aria-hidden="true"> ↗</span>
                 </a>
               </h3>
               <span

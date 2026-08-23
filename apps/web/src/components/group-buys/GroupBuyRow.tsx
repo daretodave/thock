@@ -170,7 +170,7 @@ export function GroupBuyRow({
             target="_blank"
             className="border border-border-hi px-3 py-1.5 font-mono text-micro uppercase tracking-[0.08em] text-text-2 hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
           >
-            view at vendor →
+            view at vendor ↗
           </a>
         )}
         {relatedArticle && (
