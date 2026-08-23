@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — Gateron Magnetic Jade Hall-effect linear switch cross-section: housing, stem with a magnet block at its base, spring, and a PCB strip below carrying the Hall sensor; the magnet-to-sensor gap is the switching event</title>
+
+  <!-- Coral splash wash, centered on the magnet-to-sensor gap. Single splash,
+       single hue, reused for the focal dot, the flux field arcs and the sensor
+       pad fill. Hue 26 / chroma 0.15 sits slightly off the U4T coral
+       (oklch(0.68 0.165 28)) so the two pieces stay distinct in the gallery. -->
+  <ellipse cx="600" cy="470" rx="210" ry="48" fill="oklch(0.70 0.15 26 / 0.18)" stroke="none"/>
+
+  <!-- ════════════════════════════════════════════════════════════════════════════
+       COMPOSITION: single assembled Hall-effect switch in profile, not exploded.
+         Stem head above the housing (y 130 to 180)
+         Top housing (y 180 to 300), bottom housing (y 300 to 466)
+         Stem body descends to y 420, magnet block y 420 to 444 at its base
+         Spring drawn as two zigzag columns flanking the stem (y 300 to 432)
+         Thin housing floor y 456 to 466, then an open air gap
+         PCB strip y 496 to 518 with the Hall sensor pad at y 484 to 496
+       There is no contact leaf anywhere in the drawing. That absence is the point.
+       ════════════════════════════════════════════════════════════════════════════ -->
+
+  <!-- ══ STEM HEAD (cruciform, above the housing) ══ -->
+  <path d="
+    M 578 130
+    L 622 130
+    L 622 144
+    L 636 144
+    L 636 160
+    L 564 160
+    L 564 144
+    L 578 144
+    Z" />
+  <line x1="600" y1="160" x2="600" y2="180" stroke-opacity="0.5"/>
+
+  <!-- Travel chevrons, stem head moving down -->
+  <path d="M 594 106 L 600 114 L 606 106" stroke-opacity="0.45"/>
+  <path d="M 594 96 L 600 104 L 606 96" stroke-opacity="0.25"/>
+
+  <!-- ══ TOP HOUSING ══ -->
+  <path d="
+    M 420 180
+    L 780 180
+    L 806 300
+    L 394 300
+    Z" />
+  <path d="
+    M 438 194
+    L 762 194
+    L 786 290
+    L 414 290
+    Z" stroke-opacity="0.38"/>
+  <!-- Stem aperture walls -->
+  <line x1="556" y1="180" x2="556" y2="214" stroke-opacity="0.6"/>
+  <line x1="644" y1="180" x2="644" y2="214" stroke-opacity="0.6"/>
+  <!-- LED / diffuser notch -->
+  <path d="M 690 180 L 740 180 L 734 190 L 696 190 Z" stroke-opacity="0.5"/>
+  <!-- Plate-mount clip nubs -->
+  <line x1="394" y1="262" x2="382" y2="262" stroke-opacity="0.5"/>
+  <line x1="806" y1="262" x2="818" y2="262" stroke-opacity="0.5"/>
+
+  <!-- ══ BOTTOM HOUSING ══ -->
+  <path d="
+    M 410 300
+    L 790 300
+    L 790 466
+    L 410 466
+    Z" />
+  <path d="
+    M 426 300
+    L 774 300
+    L 774 456
+    L 426 456
+    Z" stroke-opacity="0.38"/>
+  <!-- Housing seam -->
+  <line x1="394" y1="300" x2="806" y2="300" stroke-opacity="0.55"/>
+
+  <!-- ══ STEM BODY ══ -->
+  <path d="
+    M 564 180
+    L 636 180
+    L 636 420
+    L 564 420
+    Z" />
+  <line x1="600" y1="200" x2="600" y2="410" stroke-opacity="0.4" stroke-dasharray="3 5"/>
+  <!-- Linear stem: straight flanks, no bump. Slide rails. -->
+  <line x1="556" y1="214" x2="556" y2="404" stroke-opacity="0.3"/>
+  <line x1="644" y1="214" x2="644" y2="404" stroke-opacity="0.3"/>
+
+  <!-- ══ MAGNET BLOCK at the stem base ══ -->
+  <path d="
+    M 574 420
+    L 626 420
+    L 626 444
+    L 574 444
+    Z" stroke="oklch(0.70 0.15 26)"/>
+  <line x1="574" y1="432" x2="626" y2="432" stroke="oklch(0.70 0.15 26)" stroke-opacity="0.6"/>
+  <text x="582" y="429" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="8" fill="oklch(0.70 0.15 26)" fill-opacity="0.9" stroke="none" letter-spacing="0.08em">N</text>
+  <text x="583" y="442" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="8" fill="oklch(0.70 0.15 26)" fill-opacity="0.9" stroke="none" letter-spacing="0.08em">S</text>
+
+  <!-- ══ SPRING, two zigzag columns flanking the stem ══ -->
+  <g stroke-opacity="0.8">
+    <path d="
+      M 478 300
+      L 516 312 L 478 324 L 516 336 L 478 348 L 516 360
+      L 478 372 L 516 384 L 478 396 L 516 408 L 478 420 L 516 432" />
+    <path d="
+      M 722 300
+      L 684 312 L 722 324 L 684 336 L 722 348 L 684 360
+      L 722 372 L 684 384 L 722 396 L 684 408 L 722 420 L 684 432" />
+  </g>
+  <line x1="478" y1="432" x2="516" y2="432" stroke-opacity="0.4"/>
+  <line x1="684" y1="432" x2="722" y2="432" stroke-opacity="0.4"/>
+  <!-- Spring seats on the stem shoulders -->
+  <line x1="516" y1="300" x2="564" y2="300" stroke-opacity="0.4"/>
+  <line x1="636" y1="300" x2="684" y2="300" stroke-opacity="0.4"/>
+
+  <!-- ══ PCB STRIP with Hall sensor pad ══ -->
+  <path d="
+    M 300 496
+    L 900 496
+    L 900 518
+    L 300 518
+    Z" />
+  <line x1="300" y1="507" x2="900" y2="507" stroke-opacity="0.22" stroke-dasharray="6 8"/>
+  <!-- Sensor pad, splash filled, directly beneath the magnet -->
+  <path d="
+    M 576 484
+    L 624 484
+    L 624 496
+    L 576 496
+    Z" fill="oklch(0.70 0.15 26 / 0.55)" stroke="oklch(0.70 0.15 26)"/>
+  <!-- Sensor leads into the board -->
+  <g stroke-opacity="0.5">
+    <line x1="584" y1="496" x2="584" y2="504"/>
+    <line x1="595" y1="496" x2="595" y2="504"/>
+    <line x1="605" y1="496" x2="605" y2="504"/>
+    <line x1="616" y1="496" x2="616" y2="504"/>
+  </g>
+  <!-- Sense traces leaving the pad, left and right -->
+  <path d="M 576 490 L 540 490 L 528 502 L 360 502" stroke-opacity="0.35"/>
+  <path d="M 624 490 L 660 490 L 672 502 L 840 502" stroke-opacity="0.35"/>
+
+  <!-- ══ THE GAP: magnet to sensor ══ -->
+  <g stroke="oklch(0.70 0.15 26)">
+    <!-- Flux lines through the housing floor into the sensor plane -->
+    <path d="M 574 444 Q 548 470 576 484" stroke-opacity="0.55"/>
+    <path d="M 626 444 Q 652 470 624 484" stroke-opacity="0.55"/>
+    <path d="M 574 436 Q 520 470 560 500" stroke-opacity="0.28"/>
+    <path d="M 626 436 Q 680 470 640 500" stroke-opacity="0.28"/>
+    <!-- Gap dimension ticks -->
+    <line x1="660" y1="444" x2="660" y2="484" stroke-opacity="0.45" stroke-dasharray="2 3"/>
+    <path d="M 656 450 L 660 444 L 664 450" stroke-opacity="0.45"/>
+    <path d="M 656 478 L 660 484 L 664 478" stroke-opacity="0.45"/>
+  </g>
+  <!-- Focal anchor at the gap midpoint -->
+  <circle cx="600" cy="464" r="6.5" fill="oklch(0.70 0.15 26 / 0.95)" stroke="oklch(0.70 0.15 26)"/>
+  <circle cx="600" cy="464" r="12" stroke="oklch(0.70 0.15 26)" stroke-opacity="0.5"/>
+
+  <!-- ══ SENSOR CALLOUT ══ -->
+  <line x1="624" y1="488" x2="760" y2="560" stroke-opacity="0.35" stroke-width="1"/>
+  <line x1="760" y1="560" x2="792" y2="560" stroke-opacity="0.35" stroke-width="1"/>
+  <text x="800" y="564" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.70 0.15 26)" fill-opacity="0.8" stroke="none" letter-spacing="0.05em">HALL SENSOR · READS FLUX, NOT CONTACT</text>
+
+  <!-- ══ LEFT MARGIN TIER TICKS ══ -->
+  <g stroke-opacity="0.28">
+    <line x1="350" y1="240" x2="362" y2="240"/>
+    <line x1="350" y1="380" x2="362" y2="380"/>
+    <line x1="350" y1="432" x2="362" y2="432"/>
+    <line x1="350" y1="507" x2="362" y2="507"/>
+  </g>
+  <line x1="356" y1="240" x2="356" y2="507" stroke-opacity="0.14" stroke-dasharray="2 6"/>
+
+  <!-- ══ LABELS ══ -->
+  <text x="440" y="214" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none" letter-spacing="0.05em">TOP HOUSING</text>
+  <text x="440" y="330" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none" letter-spacing="0.05em">BOTTOM HOUSING</text>
+  <text x="736" y="330" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none" letter-spacing="0.05em">SPRING</text>
+  <text x="646" y="414" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.70 0.15 26)" fill-opacity="0.78" stroke="none" letter-spacing="0.05em">MAGNET</text>
+  <text x="306" y="536" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none" letter-spacing="0.05em">PCB</text>
+  <text x="676" y="470" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.70 0.15 26)" fill-opacity="0.7" stroke="none" letter-spacing="0.05em">GAP</text>
+
+  <!-- ══ JetBrains Mono technical value ══ -->
+  <text x="300" y="738" font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace" font-size="10" fill="oklch(0.78 0.005 90)" fill-opacity="0.38" stroke="none" letter-spacing="0.03em">GATERON MAGNETIC JADE — HALL-EFFECT LINEAR, STEM-MOUNTED MAGNET, SENSOR ON PCB, NO CONTACT LEAF</text>
+
+  <!-- ══ BRONZE THEME DOT, upper-right margin ══ -->
+  <circle cx="1148" cy="92" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

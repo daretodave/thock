@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Comparison table of five Gateron magnetic switches — KS-20 White, Magnetic Jade, Jade Pro, Jade Mini E, KS-37B — across initial force, total travel, bottom-out flux, rated lifetime, and bottom style, with the Magnetic Jade row highlighted in coral and the KS-20 and KS-37 families bracketed in the left margin</title>
+
+  <!-- Title -->
+  <text x="600" y="44" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Where the Jade sits in Gateron's magnetic catalog</text>
+
+  <!-- Header row -->
+  <text x="200" y="100" font-family="IBM Plex Sans, sans-serif" font-size="13" font-weight="600" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">switch</text>
+  <text x="470" y="100" font-family="IBM Plex Sans, sans-serif" font-size="13" font-weight="600" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">initial force</text>
+  <text x="625" y="100" font-family="IBM Plex Sans, sans-serif" font-size="13" font-weight="600" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">total travel</text>
+  <text x="790" y="100" font-family="IBM Plex Sans, sans-serif" font-size="13" font-weight="600" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">bottom-out flux</text>
+  <text x="920" y="100" font-family="IBM Plex Sans, sans-serif" font-size="13" font-weight="600" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">lifetime</text>
+  <text x="1060" y="100" font-family="IBM Plex Sans, sans-serif" font-size="13" font-weight="600" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">bottom style</text>
+  <line x1="190" y1="114" x2="1140" y2="114" stroke-opacity="0.4"/>
+
+  <!-- Row 1: KS-20 White -->
+  <text x="200" y="158" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none">KS-20 White</text>
+  <text x="470" y="158" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">30gf</text>
+  <text x="625" y="158" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">4.1±0.2mm</text>
+  <text x="790" y="158" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">905±80Gs</text>
+  <text x="920" y="158" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">100M</text>
+  <text x="1060" y="158" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">open, on rails</text>
+  <line x1="190" y1="180" x2="1140" y2="180" stroke-opacity="0.18"/>
+
+  <!-- Row 2: Magnetic Jade (focal, coral) -->
+  <rect x="190" y="194" width="950" height="52" rx="8" fill="oklch(0.68 0.165 28 / 0.10)" stroke="oklch(0.68 0.165 28)"/>
+  <circle cx="178" cy="220" r="4" fill="oklch(0.68 0.165 28)" stroke="none"/>
+  <text x="200" y="225" font-family="IBM Plex Sans, sans-serif" font-size="15" font-weight="600" fill="oklch(0.68 0.165 28)" stroke="none">Magnetic Jade (KS-20T)</text>
+  <text x="470" y="225" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">30±7gf</text>
+  <text x="625" y="225" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">3.5±0.2mm</text>
+  <text x="790" y="225" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">800±80Gs</text>
+  <text x="920" y="225" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">100M</text>
+  <text x="1060" y="225" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">closed, on pole</text>
+
+  <!-- Row 3: Jade Pro -->
+  <text x="200" y="290" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none">Jade Pro</text>
+  <text x="470" y="290" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">36±5gf</text>
+  <text x="625" y="290" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">3.5±0.1mm</text>
+  <text x="790" y="290" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">700±30Gs</text>
+  <text x="920" y="290" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">100M</text>
+  <text x="1060" y="290" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">closed, side latches</text>
+  <line x1="190" y1="314" x2="1140" y2="314" stroke-opacity="0.4" stroke-dasharray="6 6"/>
+
+  <!-- Row 4: Jade Mini E -->
+  <text x="200" y="358" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none">Jade Mini E</text>
+  <text x="470" y="358" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">30gf</text>
+  <text x="625" y="358" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">3.5mm</text>
+  <text x="790" y="358" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">not published</text>
+  <text x="920" y="358" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">150M</text>
+  <text x="1060" y="358" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">dual rail, 15mm spring</text>
+  <line x1="190" y1="380" x2="1140" y2="380" stroke-opacity="0.18"/>
+
+  <!-- Row 5: KS-37B -->
+  <text x="200" y="424" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none">KS-37B</text>
+  <text x="470" y="424" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">30gf</text>
+  <text x="625" y="424" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">4.0±0.2mm</text>
+  <text x="790" y="424" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">800±80Gs</text>
+  <text x="920" y="424" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">150M</text>
+  <text x="1060" y="424" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">other magnet family</text>
+
+  <!-- Family brackets, left margin -->
+  <path d="M 150 136 L 140 136 L 140 300 L 150 300" stroke-opacity="0.6"/>
+  <text x="118" y="218" font-family="IBM Plex Sans, sans-serif" font-size="12" font-weight="600" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75" transform="rotate(-90 118 218)">KS-20 family — Wooting side</text>
+  <path d="M 150 332 L 140 332 L 140 436 L 150 436" stroke-opacity="0.6"/>
+  <text x="118" y="384" font-family="IBM Plex Sans, sans-serif" font-size="12" font-weight="600" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75" transform="rotate(-90 118 384)">KS-37 family — Keychron side</text>
+
+  <!-- Footnote -->
+  <text x="600" y="500" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">every tolerance band on the Pro is roughly half the width of the base Jade's</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

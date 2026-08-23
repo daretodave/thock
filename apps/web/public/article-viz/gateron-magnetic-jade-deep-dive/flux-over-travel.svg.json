@@ -1,0 +1,25 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-21T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "gateron-magnetic-jade-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "What the magnet does in this particular stem",
+  "brief_summary": "Line chart of magnetic flux at the Hall sensor against stem travel for the Gateron Magnetic Jade. A coral curve starts at 120±15Gs at rest and rises, steepening, to 800±80Gs at the 3.5±0.2mm bottom-out. A dashed coral vertical with a double-headed arrow marks the firmware-set actuation point ('freely setting'); a coral bracket on the release side marks the rapid-trigger reset delta. Annotations note the curve is flat and least precise near rest, steep and most precise near the pole bottom-out.",
+  "target": "apps/web/public/article-viz/gateron-magnetic-jade-deep-dive/flux-over-travel.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "apps/web/src/content/articles/gateron-magnetic-jade-deep-dive.mdx:'What the magnet does in this particular stem' — 'an initial magnetic flux of 120±15Gs with the stem at rest, and a bottom-out flux of 800±80Gs at the end of 3.5±0.2mm of travel' (cited to https://wooting.io/product/gateron-magnetic-jade-switches)",
+    "apps/web/src/content/articles/gateron-magnetic-jade-deep-dive.mdx:'What the magnet does in this particular stem' — 'the pre-travel line on every Jade listing reads \"freely setting\" rather than a millimetre figure'",
+    "apps/web/src/content/articles/gateron-magnetic-jade-deep-dive.mdx:'What the magnet does in this particular stem' — 'the firmware watches the flux fall on release and resets the key after a configured delta of lift'",
+    "apps/web/src/content/articles/gateron-magnetic-jade-deep-dive.mdx:'What the magnet does in this particular stem' — 'the curve is flat near the top of the travel and steep near the bottom ... deep actuation is where its sensing is most exact'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gateron-magnetic-jade-deep-dive/flux-over-travel.svg"],
+  "warnings": ["Curve shape between the two published endpoints is illustrative of the stated flat-then-steep relationship; intermediate flux values are not published by Gateron and are not labelled."]
+}

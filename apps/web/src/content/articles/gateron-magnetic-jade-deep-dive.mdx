@@ -1,0 +1,111 @@
+---
+slug: gateron-magnetic-jade-deep-dive
+title: "Gateron Magnetic Jade: the Hall-effect linear built to be argued about like a mechanical one"
+lede: "Pull a Magnetic Jade apart and the parts list reads like a mid-tier mechanical linear: polycarbonate top, nylon bottom, POM stem, factory lube. Where the leaf would be, there is a magnet. That one substitution explains the feel, the sound, and why it will not fit half the Hall-effect boards on the market."
+author: thock
+pillar: deep-dives
+tags: [hall-effect, magnetic, rapid-trigger, gateron, deep-dive]
+publishedAt: "2026-08-21T14:00:00.000Z"
+updatedAt: "2026-08-21T14:00:00.000Z"
+heroImage: /hero-art/gateron-magnetic-jade-deep-dive.svg
+heroImageAlt: "Cross-section of a Gateron Magnetic Jade switch drawn in a single warm-grey stroke — polycarbonate top housing over a closed nylon bottom, a POM stem with a small rare-earth magnet seated in its base, descending toward a Hall sensor pad on the PCB below. A coral callout line picks out the magnet and the sensor, with faint coral field lines tightening between them, and a small warm-bronze theme dot sits in the upper-right margin."
+featured: false
+popularityScore: 0
+mentionedParts:
+  - id: magnetic-jade
+    kind: switch
+    slug: gateron-magnetic-jade
+  - id: oil-king
+    kind: switch
+    slug: gateron-oil-king
+  - id: ink-v2-yellow
+    kind: switch
+    slug: gateron-ink-v2-yellow
+  - id: hmx-cloud
+    kind: switch
+    slug: hmx-cloud
+  - id: box-jade
+    kind: switch
+    slug: kailh-box-jade
+  - id: wooting-60he
+    kind: board
+    slug: wooting-60he
+  - id: keychron-q1-he
+    kind: board
+    slug: keychron-q1-he
+---
+
+Most Hall-effect switches are sold as a feature list with a housing around it. The <PartReference id="magnetic-jade">Gateron Magnetic Jade</PartReference> is the first one that got argued about the way mechanical linears get argued about — bottom-out pitch, stem wobble, which bottom resin, whether the factory lube is too much. That is not a marketing accident. Gateron built the Jade out of the same resin vocabulary as its contact-closure bench and swapped exactly one part: the leaf is gone, and a small rare-earth magnet sits in the base of the stem instead. Everything else about the switch, including the compatibility headaches, unwinds from there.
+
+This piece assumes the general mechanism is familiar. [How Hall-effect switches actually sense a keypress](/article/magnetic-switches-deep-dive) covers the sensor physics; [the rapid-trigger plateau piece](/article/hall-effect-rapid-trigger-plateau) covers why the category stopped competing on adjustable actuation and started competing on feel. What follows is the Jade specifically: its numbers, its siblings, its materials, and the two boards in thock's catalog it does and does not fit.
+
+## What the magnet does in this particular stem
+
+<InlineViz
+  src="/article-viz/gateron-magnetic-jade-deep-dive/flux-over-travel.svg"
+  alt="Line chart of magnetic flux at the sensor against stem travel for the Gateron Magnetic Jade. The horizontal axis runs from 0 to 3.5 millimetres; the vertical axis from 0 to 800 gauss. A coral curve starts at 120 gauss at rest and rises, steepening, to 800 gauss at bottom-out. A dashed vertical band labelled 'actuation — set in firmware' sits partway along the travel, and a short coral bracket labelled 'rapid-trigger reset' marks a small delta on the release side."
+  caption="The sensor never sees a click. It sees this curve, and the firmware draws the lines."
+  accent="coral"
+/>
+
+The spec sheet on <Source href="https://wooting.io/product/gateron-magnetic-jade-switches">Wooting's Jade listing</Source> gives two numbers that describe the whole mechanism: an initial magnetic flux of <Mono>120±15Gs</Mono> with the stem at rest, and a bottom-out flux of <Mono>800±80Gs</Mono> at the end of <Mono>3.5±0.2mm</Mono> of travel. The Hall sensor under the stem reports a voltage proportional to that field. At rest the magnet is far away and the field is weak; as the stem descends the field climbs, steeply, toward the bottom-out figure. There is no contact event anywhere in the stroke. The firmware samples the voltage, compares it against a threshold it owns, and calls the key pressed when the reading crosses it.
+
+That is why the pre-travel line on every Jade listing reads "freely setting" rather than a millimetre figure. Actuation is a firmware number, not a feature of the switch. A board with per-key thresholds can put WASD at a shallow trigger and the number row deep, on the same bag of Jades, with nothing physically different between the two groups. Rapid trigger is the same curve read in the other direction: the firmware watches the flux fall on release and resets the key after a configured delta of lift rather than waiting for the stem to rise through a fixed point.
+
+One nuance matters for the Jade. Field strength falls off sharply with distance, so the curve is flat near the top of the travel and steep near the bottom. The sensor can resolve 3.0mm from 3.1mm far more reliably than 0.3mm from 0.4mm, and the <Mono>±15Gs</Mono> tolerance on the rest reading is proportionally largest exactly where the fastest gaming thresholds live. Shallow actuation on a Jade is real; deep actuation is where its sensing is most exact.
+
+## Where the Jade sits in Gateron's magnetic catalog
+
+The Jade is not a standalone product. It belongs to Gateron's <Mono>KS-20</Mono> family — the <Source href="https://rndkbd.com/products/gateron-magnetic-jade-he-switch">retail listing</Source> calls it the KS-20 Magnetic Jade, and comparison tables refer to it as the <Mono>KS-20T</Mono>. The family code matters more than the name, because it determines magnet orientation and therefore which boards the switch fits.
+
+<InlineViz
+  src="/article-viz/gateron-magnetic-jade-deep-dive/jade-family-ladder.svg"
+  alt="Comparison table of five Gateron magnetic switches with columns for initial force, total travel, bottom-out flux, rated lifetime, and bottom style. KS-20 White: 30 grams, 4.1 millimetres, 905 gauss, 100 million, open bottom on rails. Magnetic Jade, highlighted in coral: 30 plus or minus 7 grams, 3.5 millimetres, 800 gauss, 100 million, closed bottom on pole. Jade Pro: 36 plus or minus 5 grams, 3.5 plus or minus 0.1 millimetres, 700 plus or minus 30 gauss, 100 million, closed bottom with side latches. Jade Mini E: 30 grams, 3.5 millimetres, flux not published, 150 million, dual rail on a 15 millimetre spring. KS-37B: 30 grams, 4.0 millimetres, 800 gauss, 150 million, other magnet family. Left-margin brackets group the first three rows as the KS-20 family, Wooting side, and the last two as the KS-37 family, Keychron side."
+  caption="Same resin vocabulary across the line. The differences are travel, tolerance, and which way the magnet faces."
+  accent="coral"
+/>
+
+The base <Mono>KS-20</Mono> switches — White at 30gf initial, Orange at 38gf — are full-travel parts at <Mono>4.1±0.2mm</Mono> with a flux window of <Mono>102±15Gs</Mono> to <Mono>905±80Gs</Mono>, per the <Source href="https://www.hlplanet.com/gateron-magnetic-switches/">comparison table hlplanet compiled from Gateron's listings</Source>. They have an open bottom housing, an LED diffuser, and bottom out on the stem rails. The Jade keeps the magnet family and changes the bottom of the stroke: travel drops to 3.5mm, the bottom housing is closed, and the stem bottoms out on its centre pole rather than its rails. That is an acoustic decision, covered in the next section.
+
+The Jade Pro is the tolerance edition. Gateron's own <Source href="https://www.gateron.com/blog/detail/gateron-magnetic-switches-gateron-magnetic-jade-pro-switch-vs-gateron-magnetic-jade-pro-switch-vs-gateron-magnetic-jade-max-switch">comparison post</Source> lists the upgrades as a customised 20mm spring with faster rebound, a revised light-guide diffuser, and strengthened pull-out force via side latches for more stable hot-swap seating. The spec sheet tells the rest: initial force tightens from <Mono>30±7gf</Mono> to <Mono>36±5gf</Mono>, travel tolerance from <Mono>±0.2mm</Mono> to <Mono>±0.1mm</Mono>, rest flux from <Mono>±15Gs</Mono> to <Mono>±8Gs</Mono>, bottom-out flux from <Mono>800±80Gs</Mono> to <Mono>700±30Gs</Mono>. Every band on the Pro is roughly half the width of the base Jade's. For an architecture where per-key consistency is the product, that is the upgrade; the spring and latches are the packaging. The Jade Max is the Pro without side latches and with a polycarbonate stem in place of POM, which reads slightly sharper and pops harder on top-out.
+
+The Jade Mini E is a different animal despite the name. It is a dual-rail switch on a 15mm spring — still 30gf initial, 50gf bottom-out, 3.5mm travel — rated to 150 million keystrokes, and the E suffix denotes a magnet orientation with the north pole facing the LED, per the <Source href="https://keeb-finder.com/switches/gateron-magnetic-jade-mini-e-switch">Jade Mini E listing</Source>. That puts it on the other side of Gateron's catalog: the <Mono>KS-37</Mono> family, which uses differently weighted magnets and ships into Keychron, Meletrix, and Melgeek boards rather than Wooting's. Two switches share the Jade name, the colourway, and the 30/50 force curve, and they fit mutually exclusive sets of keyboards.
+
+## Materials and feel: the mechanical vocabulary, minus the leaf
+
+The Jade's stack is a polycarbonate top, a PA66 nylon bottom, and a POM stem, factory lubed. A builder who has handled a <PartReference id="oil-king">Gateron Oil King</PartReference> will recognise that recipe — PC top for upstroke clarity, nylon bottom for a lower, fuller bottom-out, self-lubricating POM on the rails — and that is the point. Gateron did not design a gaming switch and then tune it; it took the mixed-resin formula the mechanical bench already rates and removed the only metal part that made noise. There is no leaf to ping, no spring-to-leaf contact to scratch, and on the closed-bottom Jade there is no open floor for the bottom-out to disperse through.
+
+The consequences show up against the Jade's own sibling. A <Source href="https://lumekeebs.com/blogs/blog/gateron-magnetic-jade-vs-gateron-ks-20-dual-rail-magnetic-orange">side-by-side with the KS-20 Dual-Rail Orange</Source> describes the Jade as "a shorter travel switch where the bottom out occurs on the pole of the stem" against the KS-20's rail bottom-out, and puts the sound difference down to exactly that: pole bottoming "yields a louder and slightly higher pitched sound," the closed housing "a fuller and louder sound," while the open-bottom KS-20 reads "thinner and quieter." On feel, the Jade "feels tighter and clean" with "minimal stem wobble" where the KS-20 "feels looser and rattlier" from its extra plastic-to-plastic contact point. Wooting's listing, less clinically, says the switches "are designed to sound just like a game of Mahjong" — tiles on a hard table, which is an honest description of a pole-bottoming closed-nylon housing at 50gf.
+
+<Callout type="note" title="The 30±7gf line is wider than it looks">
+  A seven-gram tolerance on a thirty-gram initial force means a bag of Jades can legitimately span 23gf to 37gf at the top of the stroke. On a mechanical linear the leaf absorbs that variance; on a Hall-effect switch it lands on the rest-position reading the firmware calibrates against. That is one reason the Pro's ±5gf band earns its premium for anyone who needs uniform behaviour across a cluster.
+</Callout>
+
+Where the Jade lands on the feel ladder is the honest question. At 30gf initial it is light — lighter than the 35g all-polycarbonate <PartReference id="ink-v2-yellow">Gateron Ink V2 Yellow</PartReference>, itself a speed-tuned linear — and the 3.5mm travel feels shorter than the number because the pole stops the stem abruptly rather than letting the rails cushion it. It is smooth: the same comparison reports "no noticeable scratch or leaf/spring ping," and with no leaf in the housing there is structurally nothing to ping. What it is not is a boutique linear. The tuning depth an <PartReference id="hmx-cloud">HMX Cloud Linear</PartReference> carries — years of iteration on rail geometry, resin blends, and lubricant pairing — has not been spent here, and the sharp pole bottom-out is a gaming-first choice a typist may read as harsh over a long session. The colourway is the one thing borrowed from outside Gateron: the translucent green is a deliberate echo of the <PartReference id="box-jade">Kailh Box Jade</PartReference>, a clicky switch it shares nothing with mechanically.
+
+## Compatibility: the part the colourway does not tell you
+
+<InlineViz
+  src="/article-viz/gateron-magnetic-jade-deep-dive/board-compatibility-map.svg"
+  alt="Two-column fit map. Left column headed Wooting 60HE, KS-20 family, with coral ticks beside KS-20 White, KS-20 Orange, Magnetic Jade, and Magnetic Jade Pro. Right column headed Keychron Q1 HE, KS-37 family, with coral ticks beside Gateron Double-Rail Magnetic (stock) and Jade Mini E. Between the columns, a warm-red crossed dashed line labelled 'Magnetic Jade: not supported, per Keychron's Q1 HE listing' points toward the Keychron column, and a matching warm-red crossed line labelled 'KS-37 series: not compatible with Wooting's PCB' points toward the Wooting column."
+  caption="Same brand, same colour, two magnet families. Check the family code before the bag is open."
+  accent="coral"
+/>
+
+A mechanical switch with an MX footprint fits an MX socket. A magnetic switch with an MX footprint fits the socket and may still be the wrong part, because the board's sensor is calibrated to a specific magnet strength and orientation. Gateron ships two orientations, and the two Hall-effect boards in thock's catalog sit on opposite sides of that line.
+
+The <PartReference id="wooting-60he">Wooting 60HE</PartReference> is the KS-20 side. Wooting sells the Jade directly as a drop-in for its own Lekker switches, and hlplanet's <Source href="https://www.hlplanet.com/wooting-compability-guide/">60HE compatibility guide</Source> lists the KS-20 White, the KS-20T Magnetic Jade, and the Jade Pro as tested fits while noting the KS-37 series is not compatible with Wooting's PCB. For a 60HE owner the Jade is the obvious feel upgrade over stock: same magnet family, tighter stem, closed-bottom acoustics, nothing required beyond a recalibration pass.
+
+The <PartReference id="keychron-q1-he">Keychron Q1 HE</PartReference> is the other side. Keychron's <Source href="https://www.keychron.com/products/keychron-q1-he-qmk-wireless-custom-keyboard">product page</Source> states the board "is compatible exclusively with the Gateron Double-Rail Magnetic Switch" and "does not support other magnetic switches such as the Gateron Magnetic Jade or Gateron KS-20 Magnetic switches." That is a vendor saying, in its own words, that the switch this article is about does not belong in its board. The Jade that does belong there is the Jade Mini E — dual-rail, 15mm spring, north-pole-to-LED — which is why the name overlap costs buyers real money.
+
+<Callout type="warn" title="Wrong-family magnets are a PCB problem, not a feel problem">
+  Retailer compatibility notes for both families carry the same warning: a switch from the wrong family produces readings outside the sensor's calibrated window, and several listings state outright that an incompatible switch "may damage the HE PCB." Whether the risk is electrical or simply a board that never calibrates, the rule is identical. Match the family code — KS-20 for Wooting-side boards, KS-37 for Keychron-side boards — before matching the colour.
+</Callout>
+
+## Verdict
+
+The Magnetic Jade proved a Hall-effect linear could be reviewed on the same terms as a contact-closure one, and it mostly earns the treatment. The PC-over-nylon housing and POM stem put it in the feel family of Gateron's best mechanical linears; the closed bottom and pole bottom-out give it a clear tile-clack signature the open-bottom KS-20 lacks; and the absence of a leaf removes the ping and scratch that factory lube on a mechanical switch exists to mask. Inside a Wooting 60HE it is the straightforward upgrade.
+
+It is not the last word. The ±7gf initial-force band and ±15Gs rest tolerance are wide for an architecture whose pitch is per-key consistency, and the Jade Pro exists because Gateron knew it. The 30gf weight and abrupt pole stop are tuned for re-press speed, not a long writing session. And the Jade name now spans two magnet families that will not interchange.
+
+What to watch is whether Gateron collapses those two families or keeps them split. The Jade Mini E shipping into the KS-37 side with the same colourway and force curve suggests the company wants one Jade identity across every HE board regardless of magnet orientation. If the next revision of the base Jade arrives with the Pro's tolerance bands as standard, the switch stops being a good Hall-effect linear and becomes a good linear, full stop. Until then, the Pro is the one to buy for a cluster that has to behave identically, and the base Jade is the one to buy for a 60HE that needs to sound better than stock.

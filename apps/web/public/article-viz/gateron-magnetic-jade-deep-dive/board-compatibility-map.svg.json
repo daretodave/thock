@@ -1,0 +1,27 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-21T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "gateron-magnetic-jade-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "Compatibility: the part the colourway does not tell you",
+  "brief_summary": "Two-column do/don't fit map. The Wooting 60HE column (KS-20 family) lists KS-20 White, KS-20 Orange, Magnetic Jade (coral-emphasised), and Magnetic Jade Pro with coral ticks. The Keychron Q1 HE column (KS-37 family) lists Gateron Double-Rail Magnetic (stock) and Jade Mini E. Two warm-red crossed dashed lines between the columns mark 'Magnetic Jade: not supported — per Keychron's Q1 HE listing' and 'KS-37 series: not compatible with Wooting's PCB'.",
+  "target": "apps/web/public/article-viz/gateron-magnetic-jade-deep-dive/board-compatibility-map.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "caution_color": "oklch(0.62 0.13 25)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "apps/web/src/content/articles/gateron-magnetic-jade-deep-dive.mdx:'Compatibility' — 'hlplanet's 60HE compatibility guide lists the KS-20 White, the KS-20T Magnetic Jade, and the Jade Pro as tested fits while noting the KS-37 series is not compatible with Wooting's PCB' (cited to https://www.hlplanet.com/wooting-compability-guide/)",
+    "https://www.hlplanet.com/gateron-magnetic-switches/ — 'Wooting 60HE+/80HE supports Gateron KS-20 models' (White and Orange); 'KS-37 model uses different weighted magnets which are not compatible with Wooting'",
+    "apps/web/src/content/articles/gateron-magnetic-jade-deep-dive.mdx:'Compatibility' — Keychron product page quoted: 'is compatible exclusively with the Gateron Double-Rail Magnetic Switch' and 'does not support other magnetic switches such as the Gateron Magnetic Jade or Gateron KS-20 Magnetic switches' (cited to https://www.keychron.com/products/keychron-q1-he-qmk-wireless-custom-keyboard)",
+    "apps/web/src/content/articles/gateron-magnetic-jade-deep-dive.mdx:'Where the Jade sits in Gateron's magnetic catalog' — 'the E suffix denotes a magnet orientation with the north pole facing the LED ... That puts it on the other side of Gateron's catalog: the KS-37 family' (cited to https://keeb-finder.com/switches/gateron-magnetic-jade-mini-e-switch)",
+    "apps/web/src/content/articles/gateron-magnetic-jade-deep-dive.mdx:'Compatibility' — 'The Jade that does belong there is the Jade Mini E'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gateron-magnetic-jade-deep-dive/board-compatibility-map.svg"],
+  "warnings": []
+}

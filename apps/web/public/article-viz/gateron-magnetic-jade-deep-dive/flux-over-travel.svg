@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Magnetic flux at the Hall sensor against stem travel for the Gateron Magnetic Jade: 120 gauss at rest rising, steepening, to 800 gauss at 3.5 millimetre bottom-out, with a firmware-set actuation line and a rapid-trigger reset delta marked in coral</title>
+
+  <!-- Title -->
+  <text x="600" y="44" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">What the PCB sees when a Jade is pressed</text>
+
+  <!-- Axes -->
+  <line x1="140" y1="390" x2="1110" y2="390"/>
+  <line x1="140" y1="390" x2="140" y2="70"/>
+
+  <!-- X ticks: travel -->
+  <line x1="140" y1="390" x2="140" y2="398"/>
+  <line x1="414" y1="390" x2="414" y2="398"/>
+  <line x1="689" y1="390" x2="689" y2="398"/>
+  <line x1="963" y1="390" x2="963" y2="398"/>
+  <line x1="1100" y1="390" x2="1100" y2="398"/>
+  <text x="140" y="418" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.8">0mm</text>
+  <text x="414" y="418" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.8">1mm</text>
+  <text x="689" y="418" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.8">2mm</text>
+  <text x="963" y="418" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.8">3mm</text>
+  <text x="1100" y="418" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.8">3.5±0.2mm</text>
+  <text x="625" y="448" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">stem travel</text>
+
+  <!-- Y ticks: flux -->
+  <line x1="132" y1="345" x2="140" y2="345"/>
+  <line x1="132" y1="90" x2="140" y2="90"/>
+  <text x="124" y="349" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.8">120±15Gs</text>
+  <text x="124" y="94" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.8">800±80Gs</text>
+  <text x="60" y="218" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7" transform="rotate(-90 60 218)">flux at sensor</text>
+
+  <!-- Rest / bottom-out guide lines -->
+  <line x1="140" y1="345" x2="1100" y2="345" stroke-opacity="0.18" stroke-dasharray="4 6"/>
+  <line x1="140" y1="90" x2="1100" y2="90" stroke-opacity="0.18" stroke-dasharray="4 6"/>
+
+  <!-- Flux curve: flat near rest, steep near bottom-out -->
+  <path d="M 140 345 C 480 340, 840 290, 1100 90" stroke="oklch(0.68 0.165 28)" stroke-width="3" fill="none"/>
+  <circle cx="140" cy="345" r="5" fill="oklch(0.68 0.165 28)" stroke="none"/>
+  <circle cx="1100" cy="90" r="5" fill="oklch(0.68 0.165 28)" stroke="none"/>
+  <text x="160" y="330" font-family="Newsreader, serif" font-size="13" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">at rest — flat, least precise</text>
+  <text x="1086" y="78" font-family="Newsreader, serif" font-size="13" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.65">bottom-out on the pole — steep, most precise</text>
+
+  <!-- Actuation: firmware-set, slidable -->
+  <line x1="551" y1="390" x2="551" y2="120" stroke="oklch(0.68 0.165 28)" stroke-dasharray="6 6" stroke-opacity="0.8"/>
+  <path d="M 470 130 L 632 130" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.7"/>
+  <path d="M 478 124 L 470 130 L 478 136" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.7" fill="none"/>
+  <path d="M 624 124 L 632 130 L 624 136" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.7" fill="none"/>
+  <text x="551" y="112" font-family="IBM Plex Sans, sans-serif" font-size="13" font-weight="600" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">actuation — set in firmware</text>
+  <text x="551" y="152" font-family="Newsreader, serif" font-size="12" font-style="italic" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.8">"freely setting"</text>
+
+  <!-- Rapid-trigger reset delta bracket on the release side -->
+  <line x1="826" y1="390" x2="826" y2="262" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.45" stroke-dasharray="3 5"/>
+  <line x1="770" y1="390" x2="770" y2="262" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.45" stroke-dasharray="3 5"/>
+  <path d="M 770 250 L 770 242 L 826 242 L 826 250" stroke="oklch(0.68 0.165 28)" fill="none"/>
+  <path d="M 820 246 L 812 240" stroke="oklch(0.68 0.165 28)" fill="none"/>
+  <text x="798" y="228" font-family="IBM Plex Sans, sans-serif" font-size="13" font-weight="600" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">rapid-trigger reset</text>
+  <text x="798" y="210" font-family="Newsreader, serif" font-size="12" font-style="italic" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.8">a configured delta of lift</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

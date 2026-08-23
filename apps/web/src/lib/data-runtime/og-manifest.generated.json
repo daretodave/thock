@@ -1,6 +1,36 @@
 {
   "articles": [
     {
+      "slug": "gateron-magnetic-jade-deep-dive",
+      "readTime": 11,
+      "frontmatter": {
+        "title": "Gateron Magnetic Jade: the Hall-effect linear built to be argued about like a mechanical one",
+        "lede": "Pull a Magnetic Jade apart and the parts list reads like a mid-tier mechanical linear: polycarbonate top, nylon bottom, POM stem, factory lube. Where the leaf would be, there is a magnet. That one substitution explains the feel, the sound, and why it will not fit half the Hall-effect boards on the market.",
+        "pillar": "deep-dives",
+        "author": "thock"
+      }
+    },
+    {
+      "slug": "silent-switch-damping-deep-dive",
+      "readTime": 10,
+      "frontmatter": {
+        "title": "What a silent switch actually silences — and what it can't",
+        "lede": "Every keystroke lands twice — once on the floor, once on the ceiling. Cherry molds an elastomer pad onto the stem to catch both; Gazzew fits a silicone one. The undamped Boba U4T shows what either approach is buying — about 14 dB on one tester's meter — and what it costs in travel, rebound, and a bump with nowhere left to go.",
+        "pillar": "deep-dives",
+        "author": "thock"
+      }
+    },
+    {
+      "slug": "why-stabilizers-rattle-deep-dive",
+      "readTime": 9,
+      "frontmatter": {
+        "title": "Why stabilizers rattle: the engineering behind a smooth stab",
+        "lede": "A stabilizer has to be loose enough to slide and tight enough to stay quiet, and those two requirements contradict each other at three separate interfaces. Every rattle, tick, and clunk on a spacebar is one of those interfaces losing the argument.",
+        "pillar": "deep-dives",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "ansi-iso-jis-keyboard-layout-guide",
       "readTime": 9,
       "frontmatter": {
@@ -41,6 +71,16 @@
       }
     },
     {
+      "slug": "how-keycaps-are-made-deep-dive",
+      "readTime": 10,
+      "frontmatter": {
+        "title": "How keycaps are actually made: double-shot, dye-sub, and the processes in between",
+        "lede": "Material and profile get the attention. The mold, the second shot, the transfer press, and the shrinkage table are what set the price, the lead time, and whether the legend is still there in ten years.",
+        "pillar": "deep-dives",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "gmk-cyl-just-beachy-group-buy-opens",
       "readTime": 6,
       "frontmatter": {
@@ -51,12 +91,32 @@
       }
     },
     {
+      "slug": "leaf-spring-mount-deep-dive",
+      "readTime": 10,
+      "frontmatter": {
+        "title": "Leaf-spring mounts, explained: what a bending metal tab does that a foam strip cannot",
+        "lede": "The Nyawice's spec line and Mode's plate-tab mounting blocks both lean on one old idea — let a thin tab bend instead of a foam strip squash. The physics is textbook; the keyboard implementations are not, and the name covers more than one mechanism.",
+        "pillar": "deep-dives",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "gmk-cyl-ta-neo-production-tracking",
       "readTime": 7,
       "frontmatter": {
         "title": "GMK CYL TA Neo's group buy is closed — here's what a November 2026 ship estimate actually means",
         "lede": "GMK CYL TA Neo closed its group buy July 17, 2026 after a June 19 open, and the thock trends tracker has logged two straight weeks of cooling attention since. That's not a warning sign — it's what every closed keycap buy looks like while it waits on production.",
         "pillar": "trends",
+        "author": "thock"
+      }
+    },
+    {
+      "slug": "split-ergo-mechanics-deep-dive",
+      "readTime": 10,
+      "frontmatter": {
+        "title": "What a split keyboard actually changes: the mechanics",
+        "lede": "A conventional keyboard bends the wrist three separate ways, and every ergonomic geometry on the market is a fix for exactly one of them. Sorting out which fix does what — and which claims the research backs — is the difference between buying a posture and buying a story.",
+        "pillar": "deep-dives",
         "author": "thock"
       }
     },
@@ -76,6 +136,16 @@
       "frontmatter": {
         "title": "How the 60% became the default custom-keyboard layout",
         "lede": "Every custom-keyboard buyer's guide since the mid-2010s opens with the same four-term vocabulary — 60%, 65%, 75%, TKL — as though it always existed. It didn't. One open-source PCB out of a geekhack thread is most of the reason that taxonomy exists at all.",
+        "pillar": "deep-dives",
+        "author": "thock"
+      }
+    },
+    {
+      "slug": "gazzew-boba-family-deep-dive",
+      "readTime": 10,
+      "frontmatter": {
+        "title": "The Boba Family: One Housing Blend, Five Switches, and the Sound thock Is Named For",
+        "lede": "Gazzew designs, Outemu molds, and a plastic softer than nylon does the rest. Every Boba is the same chamber with something deliberately left out — and the pattern of subtractions is the whole family tree.",
         "pillar": "deep-dives",
         "author": "thock"
       }
@@ -6213,5 +6283,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-08-22T16:11:37.435Z"
+  "generatedAt": "2026-08-23T12:51:46.179Z"
 }

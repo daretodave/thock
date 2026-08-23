@@ -1,0 +1,27 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-21T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "gateron-magnetic-jade-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "Where the Jade sits in Gateron's magnetic catalog",
+  "brief_summary": "Five-row comparison table of Gateron magnetic switches — KS-20 White, Magnetic Jade (KS-20T, coral-highlighted), Jade Pro, Jade Mini E, KS-37B — across initial force, total travel, bottom-out flux, rated lifetime, and bottom style. Left-margin brackets group the first three as the KS-20 (Wooting-side) family and the last two as the KS-37 (Keychron-side) family. Footnote restates that the Pro's tolerance bands are roughly half the base Jade's.",
+  "target": "apps/web/public/article-viz/gateron-magnetic-jade-deep-dive/jade-family-ladder.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "apps/web/src/content/articles/gateron-magnetic-jade-deep-dive.mdx:'Where the Jade sits in Gateron's magnetic catalog' — 'The base KS-20 switches — White at 30gf initial, Orange at 38gf — are full-travel parts at 4.1±0.2mm with a flux window of 102±15Gs to 905±80Gs ... open bottom housing ... bottom out on the stem rails' (cited to https://www.hlplanet.com/gateron-magnetic-switches/)",
+    "apps/web/src/content/articles/gateron-magnetic-jade-deep-dive.mdx:'What the magnet does in this particular stem' — 'initial magnetic flux of 120±15Gs ... bottom-out flux of 800±80Gs at the end of 3.5±0.2mm of travel' (cited to https://wooting.io/product/gateron-magnetic-jade-switches)",
+    "apps/web/src/content/articles/gateron-magnetic-jade-deep-dive.mdx:'Where the Jade sits in Gateron's magnetic catalog' — 'initial force tightens from 30±7gf to 36±5gf, travel tolerance from ±0.2mm to ±0.1mm, rest flux from ±15Gs to ±8Gs, bottom-out flux from 800±80Gs to 700±30Gs ... side latches' (Jade Pro; cited to Gateron comparison post and hlplanet table)",
+    "apps/web/src/content/articles/gateron-magnetic-jade-deep-dive.mdx:'Where the Jade sits in Gateron's magnetic catalog' — 'dual-rail switch on a 15mm spring — still 30gf initial, 50gf bottom-out, 3.5mm travel — rated to 150 million keystrokes' (Jade Mini E; cited to https://keeb-finder.com/switches/gateron-magnetic-jade-mini-e-switch)",
+    "https://www.hlplanet.com/gateron-magnetic-switches/ — KS-37B row: 'Initial Force: 30gf ... Total Travel: 4.0±0.2mm ... Bottom Magnetic Flux: 800±80Gs ... Lifetime: 150 million keystrokes'; KS-20 'Lifetime: 100 million keystrokes'; Jade Pro 'Lifetime: 100 million keystrokes'",
+    "apps/web/src/content/articles/gateron-magnetic-jade-deep-dive.mdx:'Where the Jade sits in Gateron's magnetic catalog' — 'the KS-37 family, which uses differently weighted magnets and ships into Keychron, Meletrix, and Melgeek boards rather than Wooting's'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gateron-magnetic-jade-deep-dive/jade-family-ladder.svg"],
+  "warnings": ["Jade Mini E bottom-out flux is not published on the cited listing; the cell is rendered as 'not published' rather than estimated."]
+}
