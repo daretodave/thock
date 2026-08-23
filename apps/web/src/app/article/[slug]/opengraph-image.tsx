@@ -11,7 +11,9 @@ import { OG_PALETTE } from '@/components/og/palette'
 // is incompatible with edge runtime, so the OG image is generated on
 // first request and cached for one year via the immutable
 // `Cache-Control` header that Next.js attaches automatically.
-export const runtime = 'edge'
+// Node.js runtime: Next 16 rejects `runtime = 'edge'` on routes that
+// export `generateImageMetadata` (it is treated as static-param
+// generation). `next/og` renders fine on the Node runtime.
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 

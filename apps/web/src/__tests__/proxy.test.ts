@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { NextRequest } from 'next/server'
-import { caseNormalizeRedirect } from '../middleware'
+import { caseNormalizeRedirect } from '../proxy'
 
 describe('caseNormalizeRedirect', () => {
   it('redirects a mixed-case /Article/<slug> path to lowercase', () => {

@@ -13,11 +13,11 @@
     "@thock/seo": "workspace:*"
   },
   "devDependencies": {
-    "@axe-core/playwright": "^4.11.3",
-    "@playwright/test": "^1.48.2",
+    "@axe-core/playwright": "^4.13.0",
+    "@playwright/test": "^1.62.1",
     "@thock/tsconfig": "workspace:*",
     "@types/node": "^20.17.6",
     "typescript": "^5.6.3",
-    "vitest": "^3.0.0"
+    "vitest": "^3.2.6"
   }
 }

@@ -32,7 +32,7 @@ export function caseNormalizeRedirect(
  * sibling tag not-found page to render "did you mean…?" search
  * suggestions when an unknown slug 404s.
  */
-export function middleware(request: NextRequest): NextResponse {
+export function proxy(request: NextRequest): NextResponse {
   const redirect = caseNormalizeRedirect(request)
   if (redirect) return redirect
 
@@ -45,7 +45,7 @@ export const config = {
   matcher: [
     /*
      * Match every path except API, _next internals, and static
-     * assets. Keeps middleware overhead off image / font / chunk
+     * assets. Keeps proxy overhead off image / font / chunk
      * fetches.
      */
     '/((?!api|_next/static|_next/image|favicon.ico|hero-art|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico|woff|woff2)$).*)',

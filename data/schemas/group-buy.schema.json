@@ -1,119 +1,125 @@
 {
-  "$ref": "#/definitions/group-buy",
-  "$schema": "http://json-schema.org/draft-07/schema#",
-  "definitions": {
-    "group-buy": {
-      "additionalProperties": false,
-      "properties": {
-        "description": {
-          "maxLength": 800,
-          "minLength": 20,
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "description": {
+      "maxLength": 800,
+      "minLength": 20,
+      "type": "string"
+    },
+    "endDate": {
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+      "type": "string"
+    },
+    "heroImage": {
+      "anyOf": [
+        {
           "type": "string"
         },
-        "endDate": {
-          "$ref": "#/definitions/group-buy/properties/startDate"
-        },
-        "heroImage": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "heroImageAlt": {
-          "anyOf": [
-            {
-              "minLength": 2,
-              "type": "string"
-            },
-            {
-              "type": "null"
-            }
-          ]
-        },
-        "name": {
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "heroImageAlt": {
+      "anyOf": [
+        {
           "minLength": 2,
           "type": "string"
         },
-        "productKind": {
-          "enum": [
-            "board",
-            "keycap-set",
-            "switch",
-            "other"
-          ],
-          "type": "string"
-        },
-        "productSlug": {
-          "anyOf": [
-            {
-              "$ref": "#/definitions/group-buy/properties/slug"
-            },
-            {
-              "type": "null"
-            }
-          ]
-        },
-        "region": {
-          "enum": [
-            "global",
-            "us",
-            "eu",
-            "asia",
-            "oceania",
-            "mena"
-          ],
-          "type": "string"
-        },
-        "relatedArticle": {
-          "type": "string"
-        },
-        "slug": {
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "name": {
+      "minLength": 2,
+      "type": "string"
+    },
+    "productKind": {
+      "enum": [
+        "board",
+        "keycap-set",
+        "switch",
+        "other"
+      ],
+      "type": "string"
+    },
+    "productSlug": {
+      "anyOf": [
+        {
           "minLength": 2,
           "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
           "type": "string"
         },
-        "startDate": {
-          "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
-          "type": "string"
-        },
-        "status": {
-          "enum": [
-            "announced",
-            "live",
-            "closed",
-            "shipped"
-          ],
-          "type": "string"
-        },
-        "updatedAt": {
-          "format": "date-time",
-          "type": "string"
-        },
-        "url": {
-          "format": "uri",
-          "type": "string"
-        },
-        "vendorSlug": {
-          "$ref": "#/definitions/group-buy/properties/slug"
+        {
+          "type": "null"
         }
-      },
-      "required": [
-        "slug",
-        "name",
-        "vendorSlug",
-        "productSlug",
-        "productKind",
-        "startDate",
-        "endDate",
-        "region",
-        "url",
-        "heroImage",
-        "heroImageAlt",
-        "status",
-        "description",
-        "updatedAt"
+      ]
+    },
+    "region": {
+      "enum": [
+        "global",
+        "us",
+        "eu",
+        "asia",
+        "oceania",
+        "mena"
       ],
-      "type": "object"
+      "type": "string"
+    },
+    "relatedArticle": {
+      "type": "string"
+    },
+    "slug": {
+      "minLength": 2,
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "type": "string"
+    },
+    "startDate": {
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "announced",
+        "live",
+        "closed",
+        "shipped"
+      ],
+      "type": "string"
+    },
+    "updatedAt": {
+      "format": "date-time",
+      "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z|([+-](?:[01]\\d|2[0-3]):[0-5]\\d)))$",
+      "type": "string"
+    },
+    "url": {
+      "format": "uri",
+      "type": "string"
+    },
+    "vendorSlug": {
+      "minLength": 2,
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "type": "string"
     }
-  }
+  },
+  "required": [
+    "slug",
+    "name",
+    "vendorSlug",
+    "productSlug",
+    "productKind",
+    "startDate",
+    "endDate",
+    "region",
+    "url",
+    "heroImage",
+    "heroImageAlt",
+    "status",
+    "description",
+    "updatedAt"
+  ],
+  "title": "group-buy",
+  "type": "object"
 }

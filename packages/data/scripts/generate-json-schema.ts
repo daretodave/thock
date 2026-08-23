@@ -1,6 +1,6 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
-import { zodToJsonSchema } from 'zod-to-json-schema'
+import { z } from 'zod'
 import { findRepoRoot } from '../src/loaders/paths'
 import { SwitchSchema } from '../src/schemas/switch'
 import { KeycapSetSchema } from '../src/schemas/keycap-set'
@@ -39,7 +39,7 @@ export async function generateAll(): Promise<{ diffs: string[] }> {
 
   const diffs: string[] = []
   for (const { name, schema } of TARGETS) {
-    const json = zodToJsonSchema(schema, name)
+    const json = { title: name, ...z.toJSONSchema(schema) }
     const text = stableStringify(json)
     const file = join(outDir, `${name}.schema.json`)
     const existing = existsSync(file) ? readFileSync(file, 'utf-8') : null

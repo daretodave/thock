@@ -1,7 +1,8 @@
 /**
  * Bundle-size budget gate.
  *
- * Reads `.next/app-build-manifest.json`, identifies the JS chunks
+ * Reads the prerendered HTML (or the client-reference manifest for
+ * dynamic routes — see `resolveRouteChunks`), identifies the JS chunks
  * loaded by each budgeted route ("/page", "/search/page" in App
  * Router conventions), gzips each via node:zlib, and sums the
  * result per route. Fails non-zero if any route's gzipped JS
@@ -31,13 +32,14 @@ import { gzipSync } from 'node:zlib'
 
 const here = dirname(fileURLToPath(import.meta.url))
 const webDir = resolve(here, '..')
-const manifestPath = resolve(webDir, '.next', 'app-build-manifest.json')
+const nextDir = resolve(webDir, '.next')
+const buildManifestPath = join(nextDir, 'build-manifest.json')
 
 const DEFAULT_MAX_KB = 200
 const SEARCH_MAX_KB = 150
 
-type AppBuildManifest = {
-  pages: Record<string, string[]>
+type BuildManifest = {
+  rootMainFiles?: string[]
 }
 
 type RouteBudget = {
@@ -63,12 +65,63 @@ function fmt(bytes: number): string {
   return `${(bytes / 1024).toFixed(1)} KB`
 }
 
-function checkRoute(manifest: AppBuildManifest, budget: RouteBudget): boolean {
-  const chunks = manifest.pages[budget.key]
-  if (!chunks || chunks.length === 0) {
-    console.error(
-      `[size] expected manifest.pages["${budget.key}"] to list chunks; got ${JSON.stringify(chunks)}.`,
-    )
+/**
+ * Resolve the client JS chunks a route ships. Next 16 dropped
+ * `.next/app-build-manifest.json` (both Turbopack and `--webpack`
+ * builds), so the gate reads two sources instead:
+ *
+ * 1. The prerendered HTML (`.next/server/app/<route>.html`) when the
+ *    route is static — its `<script src>` tags are exactly what the
+ *    browser loads.
+ * 2. Otherwise the route's client-reference manifest
+ *    (`page_client-reference-manifest.js`) — the union of every
+ *    client module's `chunks` plus `build-manifest.rootMainFiles`.
+ *    This is a superset of what the route actually loads (shared
+ *    modules from sibling routes appear too), which errs on the
+ *    strict side for a budget gate.
+ */
+function resolveRouteChunks(key: string): string[] {
+  const routeDir = key.replace(/\/page$/, '') // "/page" → "", "/search/page" → "/search"
+  const htmlPath = join(nextDir, 'server', 'app', routeDir === '' ? 'index.html' : `${routeDir.slice(1)}.html`)
+  if (existsSync(htmlPath)) {
+    const html = readFileSync(htmlPath, 'utf-8')
+    const found = new Set<string>()
+    for (const m of html.matchAll(/<script\b([^>]*)>/g)) {
+      const attrs = m[1] ?? ''
+      // `noModule` scripts (the legacy polyfill bundle) never load in
+      // a modern browser; they are not part of the shipped payload.
+      if (/\bnoModule\b/i.test(attrs)) continue
+      const src = /src="\/_next\/(static\/[^"]+\.js)"/.exec(attrs)
+      if (src?.[1]) found.add(src[1])
+    }
+    if (found.size > 0) return [...found]
+  }
+
+  const rscPath = join(nextDir, 'server', 'app', ...routeDir.split('/').filter(Boolean), 'page_client-reference-manifest.js')
+  if (!existsSync(rscPath)) {
+    console.error(`[size] neither ${htmlPath} nor ${rscPath} exists for "${key}" — run \`pnpm --filter @thock/web build\` first.`)
+    process.exit(2)
+  }
+  const g = globalThis as unknown as { __RSC_MANIFEST?: Record<string, { clientModules?: Record<string, { chunks?: string[] }> }> }
+  // The manifest file assigns into globalThis.__RSC_MANIFEST[key].
+  new Function(readFileSync(rscPath, 'utf-8'))()
+  const rsc = g.__RSC_MANIFEST?.[key]
+  const chunks = new Set<string>()
+  const buildManifest = existsSync(buildManifestPath)
+    ? (JSON.parse(readFileSync(buildManifestPath, 'utf-8')) as BuildManifest)
+    : {}
+  for (const f of buildManifest.rootMainFiles ?? []) chunks.add(f)
+  for (const mod of Object.values(rsc?.clientModules ?? {})) {
+    // Turbopack prefixes chunk paths with `_next/`; webpack does not.
+    for (const c of mod.chunks ?? []) chunks.add(c.replace(/^\/?_next\//, ''))
+  }
+  return [...chunks].filter((c) => c.endsWith('.js'))
+}
+
+function checkRoute(budget: RouteBudget): boolean {
+  const chunks = resolveRouteChunks(budget.key)
+  if (chunks.length === 0) {
+    console.error(`[size] no client chunks resolved for "${budget.key}".`)
     process.exit(2)
   }
 
@@ -99,20 +152,12 @@ function checkRoute(manifest: AppBuildManifest, budget: RouteBudget): boolean {
 }
 
 function main(): void {
-  if (!existsSync(manifestPath)) {
-    console.error(
-      `[size] missing ${manifestPath} — run \`pnpm --filter @thock/web build\` first.`,
-    )
-    process.exit(2)
-  }
-
-  const manifest = JSON.parse(readFileSync(manifestPath, 'utf-8')) as AppBuildManifest
   const budgets: RouteBudget[] = [
     { key: '/page', maxKb: parseMaxKb(process.argv.slice(2)) },
     { key: '/search/page', maxKb: SEARCH_MAX_KB },
   ]
 
-  const results = budgets.map((b) => checkRoute(manifest, b))
+  const results = budgets.map((b) => checkRoute(b))
   if (results.some((ok) => !ok)) {
     process.exit(1)
   }

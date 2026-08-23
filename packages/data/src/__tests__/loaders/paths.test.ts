@@ -1,3 +1,4 @@
+import { resolve } from 'node:path'
 import { afterEach, describe, expect, it } from 'vitest'
 import {
   dataDir,
@@ -30,12 +31,12 @@ describe('dataDir and entityDir', () => {
 
   it('dataDir() is /data under the injected repo root', () => {
     setRepoRootForTests('/fake/root')
-    expect(dataDir().replace(/\\/g, '/')).toBe('/fake/root/data')
+    expect(dataDir().replace(/\\/g, '/')).toBe(resolve('/fake/root', 'data').replace(/\\/g, '/'))
   })
 
   it('entityDir() is the entity subdirectory under /data', () => {
     setRepoRootForTests('/fake/root')
-    expect(entityDir('switches').replace(/\\/g, '/')).toBe('/fake/root/data/switches')
+    expect(entityDir('switches').replace(/\\/g, '/')).toBe(resolve('/fake/root', 'data', 'switches').replace(/\\/g, '/'))
   })
 })
 

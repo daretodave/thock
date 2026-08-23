@@ -5,7 +5,9 @@ import { getVendorForOg } from '@/lib/data-runtime/og-runtime'
 import { PillarOGContent } from '@/components/og/PillarOG'
 import { truncate } from '@/lib/truncate'
 
-export const runtime = 'edge'
+// Node.js runtime: Next 16 rejects `runtime = 'edge'` on routes that
+// export `generateImageMetadata` (it is treated as static-param
+// generation). `next/og` renders fine on the Node runtime.
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
