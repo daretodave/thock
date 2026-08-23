@@ -96,6 +96,69 @@
 > **Resolved (2026-08-23):** added `{isExternal && <span aria-hidden="true"> ↗</span>}` after `{children}` in `packages/content/src/mdx/Source.tsx`. Two new regression tests assert the indicator on external hrefs and its absence on internal relative hrefs. `pnpm verify` full gate green: typecheck, lint, 850 web unit tests, 167 content tests (2 new), 129 data tests, data:validate, build, size, 1168/1168 e2e.
 > Picked as the top signal this tick (cloud `/march`): no unlabeled GitHub issues (triage gate, 0 unlabeled); not Monday (W34 snapshot already exists, weekly snapshot gate skipped); no pending phases/data/content-gap work (Rule 1 comfortable, all 7 mechanical surveys re-ran clean, no rows filed); AUDIT.md's and CRITIQUE.md's only other Pending rows remain the standing non-autonomous items (Lighthouse-CI `[4.0]`, march.yml crash-gate `[6.3]`, heartbeat.yml dedup-scope `[4.0]`, soft-404 structural-block `[needs-user-call]`, mirrored-issue-drain `[needs-user-call]`) plus CRITIQUE.md's GA-beacon `[needs-user-call]`; march's own expand Step 3c gate not met (10 commits/~7h since pass 344's anchor `fd76f051`, threshold 20 commits/48h). A delegated general-purpose sweep — told explicitly which angles recent passes already exhausted (including the very outbound-link-indicator initiative this gap slipped through) — found this remaining `<Source>` holdout as the one verified, scoreable defect; a noted sub-threshold observation (`AutoLink`'s raw-markdown-link path has the same gap in principle but zero raw external markdown links currently exist in any article body, so it's dead code in practice) was not pursued.
 
+### [ ] [perf] [4.2] `/search` client JS sits at 144.4 KB of its 150 KB budget after the Next 16 upgrade — 6 KB of headroom before `pnpm size` goes red
+- category: perf
+- filed: 2026-08-23 by /oversight (observed while porting `apps/web/scripts/measure-bundle.mts` to Next 16 output)
+- impact: 6 (Next 16's client runtime is larger than 15's — homepage moved from ~110 KB to 147 KB gzipped against a 200 KB budget, `/search` to 144.4 KB against 150 KB. Any client-side addition to the search surface — a filter, a new MiniSearch field, an analytics wrapper — now trips the gate and blocks whichever unrelated commit happens to carry it)
+- ease: 7 (two options, either is a single-file change: (a) raise `SEARCH_MAX_KB` to 175 with a comment recording the Next 16 baseline; (b) check whether the MiniSearch index chunk can be deferred further or the index trimmed — `apps/web/src/lib/search/index.generated.json` is the largest route-specific payload)
+- score: 4.2 (impact × ease / 10)
+- evidence: `pnpm size` on 2026-08-23 after `next@16.3.2` (Turbopack): `/page` 147.1 KB / 200 KB, `/search/page` 144.4 KB / 150 KB. The gate now reads the prerendered HTML `<script>` list (static routes) or the client-reference manifest ∪ `rootMainFiles` (dynamic routes) — the latter is a superset, so `/search` may measure a few KB high
+- next: `/iterate` — prefer (b) if the index can be shrunk without losing recall; otherwise (a) with the measured baseline recorded in the script header
+
+### [ ] [data-gaps] [6.4] `data/boards/mode-sonnet.json` describes the Sonnet as a 65% gasket-mount board at 9 degrees — Mode's own page says 75%, 5.5 degrees, Mounting Block System
+- category: data-gaps
+- filed: 2026-08-23 by /oversight (content-curator primary-source check while drafting leaf-spring-mount-deep-dive)
+- impact: 8 (the record feeds `/part/board/mode-sonnet`, `/compare/board`, the quiz, and two prior articles — `mode-sonnet-r2-group-buy-coverage` and `building-mode-sonnet*` — all of which repeat "65%", "gasket-mount", "9-degree", "PC/brass/FR4 plates". Mode's product page lists a 75% layout, 5.5-degree angle, a tab + EPU41 "Mounting Block System" rather than a gasket strip, and POM/aluminium/carbon-fibre/copper plates. Leaf-spring article deliberately avoids stating layout/angle to not compound it)
+- ease: 8 (scout verifies against mode.design; one record edit plus a prose pass on the two companion articles; no schema change)
+- score: 6.4 (impact × ease / 10)
+- evidence: `data/boards/mode-sonnet.json` vs Mode Sonnet product page (cited in `leaf-spring-mount-deep-dive.mdx`); Mode's SixtyFive guide is the one that describes "Isolated Top Mount", not the Sonnet
+- next: `/ship-data` correction + prose pass on the two Sonnet articles; confirm whether the catalog record was built from R1 (2021) specs that R2 changed
+
+### [ ] [data-gaps] [5.6] `data/switches/gazzew-boba-lt.json` describes a 37g/45g silent linear from April 2021 — vendors list the Boba LT as a non-silent 55g/65g long-pole linear
+- category: data-gaps
+- filed: 2026-08-23 by /oversight (content-curator primary-source check while drafting gazzew-boba-family-deep-dive)
+- impact: 7 (record feeds `/part/switch/gazzew-boba-lt`, the quiz's silent-linear bucket, and the new family deep-dive's comparison matrix, which follows the vendor figures and now disagrees with the catalog card on the same page)
+- ease: 8 (single record; scout confirms against Pantheon Keys / RNDKBD listings, both cited in the article)
+- score: 5.6 (impact × ease / 10)
+- evidence: Pantheon Keys and RNDKBD "Boba LT (Linear Thock)" listings: 55g actuation / 65g bottom-out, not silenced; flagged in `apps/web/public/article-viz/gazzew-boba-family-deep-dive/family-matrix.svg.json` warnings
+- next: `/ship-data` correction; re-check `type` (silent-linear → linear) and the quiz scoring impact
+
+### [ ] [data-gaps] [5.6] `data/switches/gateron-magnetic-jade.json` lists 45g/55g/4.0mm — Wooting, RNDKBD, and hlplanet all give 30±7gf initial / 50gf bottom-out / 3.5±0.2mm
+- category: data-gaps
+- filed: 2026-08-23 by /oversight (content-curator primary-source check while drafting gateron-magnetic-jade-deep-dive)
+- impact: 7 (the record feeds `/part/switch/gateron-magnetic-jade`, `/compare/switch`, and the quiz; the new deep-dive cites the vendor figures. Same article also establishes that the Keychron Q1 HE does **not** accept the Jade — if any board record or prose lists it as compatible, that is wrong too)
+- ease: 8 (single record; three independent sources already cited in the article)
+- score: 5.6 (impact × ease / 10)
+- evidence: Wooting Jade listing, RNDKBD, hlplanet force table — all cited in `gateron-magnetic-jade-deep-dive.mdx`
+- next: `/ship-data` correction to `actuationG`/`bottomOutG`/`travelMm`
+
+### [ ] [data-gaps] [4.8] `data/switches/cherry-mx2a-silent-black.json` lists 4.0mm travel and 45/60g — Cherry lists 3.7mm total travel for the MX Silent line and 60cN operating force
+- category: data-gaps
+- filed: 2026-08-23 by /oversight (content-curator primary-source check while drafting silent-switch-damping-deep-dive)
+- impact: 6 (record feeds `/part/switch/cherry-mx2a-silent-black` and `/compare/switch`; the 0.3mm travel reduction is literally the dampener mechanism the new article explains, so the catalog contradicts the article on its own page)
+- ease: 8 (single record; Cherry product page cited in the article)
+- score: 4.8 (impact × ease / 10)
+- evidence: Cherry MX2A Silent Black and MX Silent Red product pages (cited in `silent-switch-damping-deep-dive.mdx`)
+- next: `/ship-data` correction
+
+### [ ] [content] [4.8] Boba U4 dampener is on the stem (removable silicone pads), not "foam in the housing" — `gazzew-boba-u4t-deep-dive.mdx` and the U4/LT catalog descriptions repeat the housing-foam framing
+- category: content
+- filed: 2026-08-23 by /oversight (content-curator primary-source check while drafting silent-switch-damping-deep-dive; the new article carries a short "correction to the record" Callout)
+- impact: 6 (two articles now disagree on the mechanism; the sibling deep-dive and both catalog descriptions also say Gazzew "pre-lubes the rails" — vendor listings say leaf + spring bottoms are lubed, rails are dry. Travel figures differ too: Pantheon lists 3.2mm long-pole for U4T/LT vs 4.0mm in catalog + sibling)
+- ease: 8 (prose edits to one article + two record `description` fields; sources already cited)
+- score: 4.8 (impact × ease / 10)
+- evidence: Switch and Click U4 review; Gazzew sold the silenced U4 stem standalone before the Boba housing existed; Pantheon Keys U4T/LT listings — all cited in `silent-switch-damping-deep-dive.mdx` and `gazzew-boba-family-deep-dive.mdx`
+- next: content pass on `gazzew-boba-u4t-deep-dive.mdx` (dampener location, lube wording, travel) + `/ship-data` description edits on `gazzew-boba-u4.json` / `gazzew-boba-lt.json` / `gazzew-boba-u4t.json`
+
+### [ ] [data-gaps] [4.0] `data/keycap-sets/mt3-devtty.json` describes the set as doubleshot ABS — Matt3o's launch writeup says the 2017 /dev/tty run was dye-sub PBT; later Drop MT3 runs are double-shot ABS
+- category: data-gaps
+- filed: 2026-08-23 by /oversight (content-curator primary-source check while drafting how-keycaps-are-made-deep-dive)
+- impact: 5 (record feeds `/part/keycap-set/mt3-devtty`, `/quiz/keycap-set` material scoring, and contradicts the new deep-dive's cited history on its own page)
+- ease: 8 (single record; decide whether the record represents the original run or the Drop re-run and say so in `description`)
+- score: 4.0 (impact × ease / 10)
+- evidence: matt3o.com /dev/tty writeup (cited in `how-keycaps-are-made-deep-dive.mdx`)
+- next: `/ship-data` correction
+
 ### [x] [a11y] [3.6] footer Buttondown attribution link missing external-link indicator — addressed in commit `d28efd63`, closes #908
 
 - category: a11y
@@ -7750,7 +7813,7 @@ passes accumulate signals.)
 > **Resolved (2026-07-18):** `filterByAvailability`'s `'group-buy'` branch now excludes `sold-out` the same way it already excludes `discontinued`, falling back to the unfiltered catalog only if that would empty the eligible set (matching the existing fallback pattern). Added regression test L in `recommendKeycapSet.test.ts` mirroring tests H/K, asserting sold-out sets don't dominate top-3 under `'group-buy'` preference. `pnpm verify` full gate green: typecheck, 649 web unit tests (+1), data:validate (72 records), build, size (108.6 KB/200 KB budget), 1033/1033 e2e.
 > Picked as the top signal this tick: no unlabeled GitHub issues (triage gate); not Monday (weekly snapshot gate skipped); AUDIT.md's only other Pending row remains the known-blocked `[6.3]` march.yml crash-issue-gate item; CRITIQUE.md's only Pending row remains the non-actionable `[needs-user-call]` GA-beacon item; all 7 mechanical surveys clean; no pending phases/data/content-gap work; march's own expand Step 3c gate not met (3 commits/~2.6h since pass 204, threshold 20 commits/48h). A fresh general-purpose sweep (`/compare/*`/`/quiz/*` edge cases, numeric fact-checks against the catalog, orphaned routes, copy-vs-implementation drift on other surfaces, test coverage gaps, dead code, TODOs, JSON-LD spot-checks, recently-shipped soft-404 follow-up consistency) found this as the one finding above the 3.0 threshold — the third and final branch of the same sold-out-surfacing bug class already fixed twice before in sibling branches of the same function.
 
-### [ ] [engineering] [4.0] Lighthouse CI silently disabled + failing on every recorded run since ~2026-06-12 — the site's only automated a11y/perf/SEO regression gate has been dark for 5+ weeks with no trail explaining why
+### [x] [engineering] [4.0] Lighthouse CI silently disabled + failing on every recorded run since ~2026-06-12 — the site's only automated a11y/perf/SEO regression gate has been dark for 5+ weeks with no trail explaining why — addressed via /oversight 2026-08-23: `.lighthouserc.json` drops the `lighthouse:no-pwa` preset (whose per-audit assertions on Lighthouse 12 insight audits were structurally red) for category-level gates + warn-level real hits; `gh workflow enable lighthouse`
 - category: engineering
 - filed: 2026-07-18 by /digest nightly breadth pass
 - impact: 8 (`.github/workflows/lighthouse.yml` is the only automated check on production a11y/performance/SEO scores — every other gate in this repo checks internal correctness, not real Lighthouse audits. Step 2's `gh run list --workflow lighthouse -L 2 --json conclusion` pulse command has been erroring "could not find any workflows named lighthouse" on every digest run since at least 2026-07-15, and each prior digest logged that error as "nothing to report" and moved on. It does not mean the workflow doesn't exist: `gh api repos/daretodave/thock/actions/workflows` shows `{"name":"lighthouse","path":".github/workflows/lighthouse.yml","state":"disabled_manually"}` — `gh run list` silently can't resolve a disabled workflow by display name (`--workflow lighthouse.yml`, by filename, works fine and returns real history). Of the last 100 recorded runs, 98 are `failure` and 2 are `skipped` — zero recorded successes in that window. The most recent run before it went dark (`27515188524`, 2026-06-14T23:15:49Z) failed on a real regression (`categories.seo` 0.92, required ≥0.95) and a real a11y hit (`label-content-name-mismatch` — visible text labels without matching accessible names, scored 0), plus a batch of `minScore` failures against newer Lighthouse "Insight" audits (`lcp-discovery-insight`, `network-dependency-tree-insight`, `legacy-javascript-insight`) that don't appear to emit conventional 0–1 category scores under the pinned `treosh/lighthouse-ci-action` version — so at least part of the failure signal is `.lighthouserc.json` assertion drift against a newer Lighthouse audit catalog, not all real regressions. `disabled_manually` (as opposed to GitHub's `disabled_inactivity` auto-disable state) means a human or an out-of-band API call explicitly turned this off — there is no commit, AUDIT.md row, or PHASE_CANDIDATES.md note in this repo's history documenting that action or its reasoning.)
@@ -11910,3 +11973,146 @@ passes accumulate signals.)
 - issue: #906
 > **Resolved (2026-08-23):** added `rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu` to the zoom-trigger button's className. New regression test asserts the trigger carries the ring classes. `pnpm verify` full gate green: typecheck, lint, unit + script tests, data:validate, build, size, 1168/1168 e2e.
 > Picked as the top signal this tick (cloud `/march`): no unlabeled GitHub issues (triage gate, 0 unlabeled); not Monday (W34 snapshot already exists, weekly snapshot gate skipped); no pending phases/data/content-gap work (Rule 1 comfortable, all 7 mechanical surveys re-ran clean, no rows filed); AUDIT.md's and CRITIQUE.md's only other Pending rows remain the standing non-autonomous items (Lighthouse-CI `[4.0]`, march.yml crash-gate `[6.3]`, heartbeat.yml dedup-scope `[4.0]`, soft-404 structural-block `[needs-user-call]`, mirrored-issue-drain `[needs-user-call]`) plus CRITIQUE.md's GA-beacon `[needs-user-call]`; march's own expand Step 3c gate not met (0 commits since pass 344's anchor `aa79a7dd`, same tick). A delegated general-purpose sweep across 18 angles disjoint from recent passes (sitemap route coverage, robots.txt, TOC/heading-anchor correctness, duplicate JSON-LD `@id` collisions, search index staleness, tag taxonomy mapping, archive pagination, quiz recommender tie-breaks, compare-tool edge cases, group-buy status/date transitions, trends-tracker sparkline/archive integrity, tracker direction/slope logic, full `/data` schema conformance, RSS correctness, canonical URL edge cases, future-dated content, broken image references, OG image generation on tool pages) found this focus-visible gap as the one verified, scoreable defect; every other angle traced back clean.
+
+### [ ] [cross-links] [4.5] gateron-magnetic-jade-deep-dive ↔ gateron-lanes-tactile-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: gateron, deep-dive)
+- category: cross-links
+- filed: 2026-08-23 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: gateron, deep-dive
+- article-a: apps/web/src/content/articles/gateron-magnetic-jade-deep-dive.mdx
+- article-b: apps/web/src/content/articles/gateron-lanes-tactile-deep-dive.mdx
+- action: add [gateron-lanes-tactile-deep-dive](/article/gateron-lanes-tactile-deep-dive) to gateron-magnetic-jade-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] gateron-magnetic-jade-deep-dive ↔ gateron-oil-king-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: gateron, deep-dive)
+- category: cross-links
+- filed: 2026-08-23 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: gateron, deep-dive
+- article-a: apps/web/src/content/articles/gateron-magnetic-jade-deep-dive.mdx
+- article-b: apps/web/src/content/articles/gateron-oil-king-deep-dive.mdx
+- action: add [gateron-oil-king-deep-dive](/article/gateron-oil-king-deep-dive) to gateron-magnetic-jade-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] silent-switch-damping-deep-dive ↔ cherry-mx2a-revision — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, mx2a, cherry)
+- category: cross-links
+- filed: 2026-08-23 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: deep-dive, mx2a, cherry
+- article-a: apps/web/src/content/articles/silent-switch-damping-deep-dive.mdx
+- article-b: apps/web/src/content/articles/cherry-mx2a-revision.mdx
+- action: add [cherry-mx2a-revision](/article/cherry-mx2a-revision) to silent-switch-damping-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] silent-switch-damping-deep-dive ↔ clicky-switches-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, cherry)
+- category: cross-links
+- filed: 2026-08-23 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: deep-dive, cherry
+- article-a: apps/web/src/content/articles/silent-switch-damping-deep-dive.mdx
+- article-b: apps/web/src/content/articles/clicky-switches-deep-dive.mdx
+- action: add [clicky-switches-deep-dive](/article/clicky-switches-deep-dive) to silent-switch-damping-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] why-stabilizers-rattle-deep-dive ↔ 60-percent-layout-history — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, modding)
+- category: cross-links
+- filed: 2026-08-23 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: deep-dive, modding
+- article-a: apps/web/src/content/articles/why-stabilizers-rattle-deep-dive.mdx
+- article-b: apps/web/src/content/articles/60-percent-layout-history.mdx
+- action: add [60-percent-layout-history](/article/60-percent-layout-history) to why-stabilizers-rattle-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] why-stabilizers-rattle-deep-dive ↔ drop-holy-panda-x-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, modding)
+- category: cross-links
+- filed: 2026-08-23 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: deep-dive, modding
+- article-a: apps/web/src/content/articles/why-stabilizers-rattle-deep-dive.mdx
+- article-b: apps/web/src/content/articles/drop-holy-panda-x-deep-dive.mdx
+- action: add [drop-holy-panda-x-deep-dive](/article/drop-holy-panda-x-deep-dive) to why-stabilizers-rattle-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] why-stabilizers-rattle-deep-dive ↔ keyboard-acoustics-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: stabilizers, deep-dive, acoustic, modding)
+- category: cross-links
+- filed: 2026-08-23 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: stabilizers, deep-dive, acoustic, modding
+- article-a: apps/web/src/content/articles/why-stabilizers-rattle-deep-dive.mdx
+- article-b: apps/web/src/content/articles/keyboard-acoustics-deep-dive.mdx
+- action: add [keyboard-acoustics-deep-dive](/article/keyboard-acoustics-deep-dive) to why-stabilizers-rattle-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] why-stabilizers-rattle-deep-dive ↔ plate-materials-explained — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, acoustic, modding)
+- category: cross-links
+- filed: 2026-08-23 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: deep-dive, acoustic, modding
+- article-a: apps/web/src/content/articles/why-stabilizers-rattle-deep-dive.mdx
+- article-b: apps/web/src/content/articles/plate-materials-explained.mdx
+- action: add [plate-materials-explained](/article/plate-materials-explained) to why-stabilizers-rattle-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] leaf-spring-mount-deep-dive ↔ 60-percent-layout-history — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, 65)
+- category: cross-links
+- filed: 2026-08-23 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: deep-dive, 65
+- article-a: apps/web/src/content/articles/leaf-spring-mount-deep-dive.mdx
+- article-b: apps/web/src/content/articles/60-percent-layout-history.mdx
+- action: add [60-percent-layout-history](/article/60-percent-layout-history) to leaf-spring-mount-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] gazzew-boba-family-deep-dive ↔ buckling-spring-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: tactile, deep-dive)
+- category: cross-links
+- filed: 2026-08-23 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: tactile, deep-dive
+- article-a: apps/web/src/content/articles/gazzew-boba-family-deep-dive.mdx
+- article-b: apps/web/src/content/articles/buckling-spring-deep-dive.mdx
+- action: add [buckling-spring-deep-dive](/article/buckling-spring-deep-dive) to gazzew-boba-family-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] gazzew-boba-family-deep-dive ↔ drop-holy-panda-x-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: tactile, deep-dive)
+- category: cross-links
+- filed: 2026-08-23 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: tactile, deep-dive
+- article-a: apps/web/src/content/articles/gazzew-boba-family-deep-dive.mdx
+- article-b: apps/web/src/content/articles/drop-holy-panda-x-deep-dive.mdx
+- action: add [drop-holy-panda-x-deep-dive](/article/drop-holy-panda-x-deep-dive) to gazzew-boba-family-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] gazzew-boba-family-deep-dive ↔ durock-t1-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: tactile, nylon, deep-dive)
+- category: cross-links
+- filed: 2026-08-23 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: tactile, nylon, deep-dive
+- article-a: apps/web/src/content/articles/gazzew-boba-family-deep-dive.mdx
+- article-b: apps/web/src/content/articles/durock-t1-deep-dive.mdx
+- action: add [durock-t1-deep-dive](/article/durock-t1-deep-dive) to gazzew-boba-family-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] gazzew-boba-family-deep-dive ↔ gateron-lanes-tactile-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: tactile, deep-dive)
+- category: cross-links
+- filed: 2026-08-23 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: tactile, deep-dive
+- article-a: apps/web/src/content/articles/gazzew-boba-family-deep-dive.mdx
+- article-b: apps/web/src/content/articles/gateron-lanes-tactile-deep-dive.mdx
+- action: add [gateron-lanes-tactile-deep-dive](/article/gateron-lanes-tactile-deep-dive) to gazzew-boba-family-deep-dive body, or vice versa
