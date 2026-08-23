@@ -4,7 +4,7 @@
   "source": "plan/bearings.md § Article hero art — colorful keyboard SVGs",
   "template": "directive: simple line drawing + single splash of color illustrative of subject",
   "size": [1200, 750],
-  "subject": "65% keyboard top-down outline (Mode Sonnet form factor) with a callout arrow leading from the upper-right to the home row; bronze theme dot at the callout origin",
+  "subject": "keyboard top-down outline (Mode Sonnet form factor) with a callout arrow leading from the upper-right to the home row; bronze theme dot at the callout origin",
   "splash_color": "oklch(0.66 0.11 35)",
   "stroke_color": "oklch(0.78 0.005 90)",
   "fonts": [],

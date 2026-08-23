@@ -2,13 +2,13 @@
   "slug": "mode-sonnet",
   "name": "Mode Sonnet",
   "vendorSlug": "cannonkeys",
-  "layout": "65",
+  "layout": "75",
   "caseMaterial": "aluminum",
   "mountStyle": "gasket",
   "hotswap": true,
   "wireless": false,
   "releasedAt": "2024-09-01",
   "status": "in-stock",
-  "description": "65 percent gasket-mounted aluminum board from Mode Designs with hotswap PCBs and a soft, balanced typing feel. Mid-priced for the segment; ships with a brass weight option.",
-  "updatedAt": "2026-05-08T00:00:00.000Z"
+  "description": "75 percent aluminum board from Mode Designs with hotswap PCBs and a 5.5-degree typing angle. Mode's Mounting Block System captures plate tabs in EPU41 polymer blocks rather than a silicone gasket strip, though the hobby (and this catalog) files it under gasket-mount for the soft, balanced feel it produces. Plate options run POM (stock), aluminum, carbon fiber, and copper. Mid-priced for the segment; ships with a brass weight option.",
+  "updatedAt": "2026-08-23T00:00:00.000Z"
 }

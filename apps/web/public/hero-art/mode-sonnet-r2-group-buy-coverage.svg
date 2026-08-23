@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <title>thock hero — Mode Sonnet R2, 65% top-down with accent-weight finish</title>
+  <title>thock hero — Mode Sonnet R2, top-down with accent-weight finish</title>
 
   <!-- Splash: warm bronze wash framing the case (the article's subject is the finish) -->
   <ellipse cx="600" cy="395" rx="490" ry="200" fill="oklch(0.80 0.135 75 / 0.16)" stroke="none"/>

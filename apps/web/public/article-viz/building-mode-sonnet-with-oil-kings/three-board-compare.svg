@@ -32,7 +32,7 @@
   <g>
     <rect x="820" y="170" width="200" height="90" rx="8" fill="oklch(0.62 0.13 25 / 0.12)" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.95" stroke-width="3"/>
     <text x="920" y="200" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Mode Sonnet</text>
-    <text x="920" y="225" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">leaf gasket · soft mount</text>
+    <text x="920" y="225" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">mounting block · soft mount</text>
     <text x="920" y="245" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.95">deeper · half-octave lower</text>
     <circle cx="920" cy="270" r="11" fill="oklch(0.62 0.13 25 / 0.25)" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.95" stroke-width="3"/>
   </g>

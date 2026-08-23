@@ -18,12 +18,12 @@
   <!-- Plate -->
   <g>
     <rect x="380" y="250" width="440" height="22" rx="4" stroke-opacity="0.85"/>
-    <text x="600" y="266" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">1.5mm polycarbonate plate</text>
+    <text x="600" y="266" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">1.5mm POM plate</text>
   </g>
-  <!-- Leaf gasket -->
+  <!-- Mounting block -->
   <g>
     <rect x="380" y="280" width="440" height="14" rx="2" fill="oklch(0.62 0.13 25 / 0.18)" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.95" stroke-width="2"/>
-    <text x="600" y="291" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.95">silicone leaf gasket — the soft mount</text>
+    <text x="600" y="291" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.95">EPU41 mounting block — the soft mount</text>
   </g>
   <!-- PE foam -->
   <g>

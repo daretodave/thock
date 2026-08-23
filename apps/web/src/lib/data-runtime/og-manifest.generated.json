@@ -605,7 +605,7 @@
       "readTime": 5,
       "frontmatter": {
         "title": "Pairing Oil Kings with the Mode Sonnet",
-        "lede": "This pairing has been on the bench for months, and a free Sunday finally made it happen. The Sonnet is a soft 65 with a gasket mount, and Oil Kings are a heavy factory-lubed linear — together they hit a register worth coming back to.",
+        "lede": "This pairing has been on the bench for months, and a free Sunday finally made it happen. The Sonnet is a soft 75 with a block mount, and Oil Kings are a heavy factory-lubed linear — together they hit a register worth coming back to.",
         "pillar": "ideas",
         "author": "thock"
       }
@@ -615,7 +615,7 @@
       "readTime": 5,
       "frontmatter": {
         "title": "Mode Sonnet R2 opened at CannonKeys",
-        "lede": "Mode's second round of its 65% Sonnet board ran at CannonKeys from 2026-06-01 through 2026-07-15 after a vendor-side timeline shift. See the in-article update for the dates and accent-weight color options; the closed entry is archived at /group-buys/past.",
+        "lede": "Mode's second round of its 75% Sonnet board ran at CannonKeys from 2026-06-01 through 2026-07-15 after a vendor-side timeline shift. See the in-article update for the dates and accent-weight color options; the closed entry is archived at /group-buys/past.",
         "pillar": "news",
         "author": "thock"
       }
@@ -6283,5 +6283,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-08-23T12:51:46.179Z"
+  "generatedAt": "2026-08-23T15:25:57.199Z"
 }

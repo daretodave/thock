@@ -18,7 +18,6 @@
   <text x="440" y="238" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">+ nav column</text>
   <text x="440" y="280" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">Bakeneko65</text>
   <text x="440" y="300" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">Ikki68 Aurora</text>
-  <text x="440" y="320" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">Mode Sonnet</text>
 
   <!-- Column 3: 75% -->
   <text x="740" y="70" font-family="Newsreader, serif" font-size="26" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">75%</text>
@@ -30,6 +29,7 @@
   <text x="740" y="280" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">KBD75 v3</text>
   <text x="740" y="300" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">Mammoth75</text>
   <text x="740" y="320" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">QK75</text>
+  <text x="740" y="340" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">Mode Sonnet</text>
 
   <!-- Column 4: TKL -->
   <text x="1050" y="70" font-family="Newsreader, serif" font-size="26" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">TKL</text>
