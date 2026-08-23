@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Passage completion time at trial five for four alternative keyboards against a 40-second QWERTY baseline, from Anderson, Mirka, Joines and Kaber, Human Factors 2009 — split fixed-angle 42 s, contoured split 69 s, Dvorak 181 s, chord 346 s — with each design's learning percentage listed alongside</title>
+
+  <!-- Scale: 2 px per second. Bars start at x=330. 346 s = 692 px. -->
+
+  <!-- Column headers -->
+  <text x="60" y="52" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6" letter-spacing="0.08em">KEYBOARD</text>
+  <text x="330" y="52" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6" letter-spacing="0.08em">COMPLETION TIME, TRIAL FIVE (s)</text>
+  <text x="1140" y="52" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6" letter-spacing="0.08em" text-anchor="end">LEARNING %</text>
+
+  <!-- Baseline reference line at 40 s -->
+  <line x1="410" y1="80" x2="410" y2="470" stroke-opacity="0.35" stroke-dasharray="3 6"/>
+  <text x="410" y="488" font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">40 s baseline</text>
+
+  <!-- ══ ROW 1: QWERTY baseline ═══════════════════════════════════ -->
+  <text x="60" y="112" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">QWERTY (baseline)</text>
+  <rect x="330" y="96" width="80" height="22" rx="3" stroke-opacity="0.6"/>
+  <text x="420" y="112" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">40</text>
+  <text x="1140" y="112" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.5">—</text>
+
+  <!-- ══ ROW 2: Split fixed-angle ═════════════════════════════════ -->
+  <text x="60" y="186" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.70 0.09 18)" stroke="none">Split fixed-angle</text>
+  <rect x="330" y="170" width="84" height="22" rx="3" fill="oklch(0.70 0.09 18)" fill-opacity="0.85" stroke="none"/>
+  <text x="424" y="186" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.70 0.09 18)" stroke="none">42</text>
+  <text x="1140" y="186" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.70 0.09 18)" stroke="none" text-anchor="end">90.4</text>
+
+  <!-- ══ ROW 3: Contoured split ═══════════════════════════════════ -->
+  <text x="60" y="260" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.70 0.09 18)" stroke="none">Contoured split</text>
+  <rect x="330" y="244" width="138" height="22" rx="3" fill="oklch(0.70 0.09 18)" fill-opacity="0.85" stroke="none"/>
+  <text x="478" y="260" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.70 0.09 18)" stroke="none">69</text>
+  <text x="1140" y="260" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.70 0.09 18)" stroke="none" text-anchor="end">76.9</text>
+
+  <!-- ══ ROW 4: Dvorak ════════════════════════════════════════════ -->
+  <text x="60" y="334" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">Dvorak</text>
+  <rect x="330" y="318" width="362" height="22" rx="3" stroke-opacity="0.85"/>
+  <text x="702" y="334" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">181</text>
+  <text x="1140" y="334" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.85">79.1</text>
+
+  <!-- ══ ROW 5: Chord ═════════════════════════════════════════════ -->
+  <text x="60" y="408" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">Chord</text>
+  <rect x="330" y="392" width="692" height="22" rx="3" stroke-opacity="0.85"/>
+  <text x="1032" y="408" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">346</text>
+  <text x="1140" y="408" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.85">77.3</text>
+
+  <!-- Physical vs cognitive bracket annotation -->
+  <g stroke="oklch(0.70 0.09 18)" stroke-opacity="0.7">
+    <path d="M 310 166 L 302 166 L 302 270 L 310 270"/>
+  </g>
+  <text x="296" y="214" font-family="Newsreader, serif" font-style="italic" font-size="13" fill="oklch(0.70 0.09 18)" stroke="none" text-anchor="end">physical</text>
+  <text x="296" y="230" font-family="Newsreader, serif" font-style="italic" font-size="13" fill="oklch(0.70 0.09 18)" stroke="none" text-anchor="end">relearning</text>
+
+  <g stroke-opacity="0.4">
+    <path d="M 310 314 L 302 314 L 302 418 L 310 418"/>
+  </g>
+  <text x="296" y="362" font-family="Newsreader, serif" font-style="italic" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.7">cognitive</text>
+  <text x="296" y="378" font-family="Newsreader, serif" font-style="italic" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.7">relearning</text>
+
+  <!-- Source line -->
+  <text x="60" y="488" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.5">Anderson, Mirka, Joines, Kaber — Human Factors 51(1), 2009. n = 16.</text>
+
+  <!-- Brass-bronze theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

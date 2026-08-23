@@ -1,0 +1,27 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-01T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "split-ergo-mechanics-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "three-deviations-three-fixes",
+  "brief_summary": "Three-row matrix pairing each wrist deviation a flat row-staggered keyboard forces (ulnar deviation, pronation, extension) with the single geometry that corrects it (split opening angle, tenting gable, zero/negative slope plus low profile). Left column carries a small line-drawn hand glyph with the deviated angle marked in the caution colour; right column carries a matching board glyph with the corrected posture marked in dusty rose. The numbers on the correction side are the ranges the article cites from Rempel 2007/2009 and the Glove80 spec.",
+  "target": "apps/web/public/article-viz/split-ergo-mechanics-deep-dive/three-deviations.svg",
+  "splash_color": { "name": "dusty rose", "oklch": "oklch(0.70 0.09 18)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "caution_color": "oklch(0.62 0.13 25)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "split-ergo-mechanics-deep-dive.mdx § 'Three deviations, three fixes' — 'Ulnar deviation is the sideways bend toward the pinky... Pronation is the forearm rotation that turns the palms to face the desk... Extension is the upward bend at the wrist'",
+    "split-ergo-mechanics-deep-dive.mdx § 'Three deviations, three fixes' — 'brought mean ulnar deviation from roughly 12 degrees to within 5 degrees of neutral' (Marklin and Simoneau, Human Factors 2000)",
+    "split-ergo-mechanics-deep-dive.mdx § 'Three deviations, three fixes' — 'a mid-range opening angle of about 15 degrees was the best trade' (Rempel 2009)",
+    "split-ergo-mechanics-deep-dive.mdx § 'How much of this is evidence-backed' — 'the 12-degree split, 14-degree gable, zero-slope configuration; the negative slope did best on pronation' and '0 or -7 degrees of slope' (Rempel 2007)",
+    "split-ergo-mechanics-deep-dive.mdx § 'Choc versus MX spacing' — 'lowest key sits 20 mm from the desk to the top of the keycap' (Glove80 technical specification)"
+  ],
+  "outputs": ["apps/web/public/article-viz/split-ergo-mechanics-deep-dive/three-deviations.svg"],
+  "warnings": []
+}

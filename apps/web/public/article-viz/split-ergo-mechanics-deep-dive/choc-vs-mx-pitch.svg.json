@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-01T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "split-ergo-mechanics-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "choc-versus-mx-spacing",
+  "brief_summary": "Side-by-side comparison of two three-by-three key grids drawn at the same scale (4.4 px per mm): MX spacing at 19.05 by 19.05 mm pitch on the left, Choc spacing at 18 by 17 mm pitch on the right. Dimension lines carry the pitch values; a dashed ghost line shows where the MX third row would end over the Choc grid, and a dusty-rose bracket marks the roughly 2 mm per-row vertical saving the article argues is a flat-plate travel reduction.",
+  "target": "apps/web/public/article-viz/split-ergo-mechanics-deep-dive/choc-vs-mx-pitch.svg",
+  "splash_color": { "name": "dusty rose", "oklch": "oklch(0.70 0.09 18)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "split-ergo-mechanics-deep-dive.mdx § 'Choc versus MX spacing' — 'MX-spaced boards place switches on a 19.05 mm pitch in both directions'",
+    "split-ergo-mechanics-deep-dive.mdx § 'Choc versus MX spacing' — 'Choc-spaced boards... tighten that to 18 mm by 17 mm, with keycaps around 17.5 by 16.5 mm so they do not touch' (PandaKB spacing guide)",
+    "split-ergo-mechanics-deep-dive.mdx § 'Choc versus MX spacing' — 'Two millimetres per row is a travel reduction in the same direction the key well is chasing, achieved on a flat plate'"
+  ],
+  "outputs": ["apps/web/public/article-viz/split-ergo-mechanics-deep-dive/choc-vs-mx-pitch.svg"],
+  "warnings": ["The 38.1 mm and 34 mm vertical dimensions are derived arithmetic (two row pitches of 19.05 and 17 mm respectively), not figures quoted verbatim in the body."]
+}

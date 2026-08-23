@@ -1,0 +1,25 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-01T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "split-ergo-mechanics-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "the-learning-curve-is-measurable",
+  "brief_summary": "Horizontal bar chart of passage completion time at trial five from the 2009 Human Factors learning-curve study, against a 40-second QWERTY baseline: split fixed-angle 42 s, contoured split 69 s, Dvorak 181 s, chord 346 s. The two split designs are filled in dusty rose and bracketed as 'physical relearning'; Dvorak and chord are outlined in warm-grey and bracketed as 'cognitive relearning'. A right-hand column lists each design's learning percentage (90.4, 76.9, 79.1, 77.3).",
+  "target": "apps/web/public/article-viz/split-ergo-mechanics-deep-dive/learning-curve.svg",
+  "splash_color": { "name": "dusty rose", "oklch": "oklch(0.70 0.09 18)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "split-ergo-mechanics-deep-dive.mdx § 'The learning curve is measurable' — 'sixteen participants repeatedly type a standard passage on four alternative keyboards and measured completion time against a 40-second QWERTY baseline'",
+    "split-ergo-mechanics-deep-dive.mdx § 'The learning curve is measurable' — 'By the fifth trial the split fixed-angle keyboard was at 42 seconds... The contoured split... was at 69. Dvorak was at 181 and a chord keyboard at 346.'",
+    "split-ergo-mechanics-deep-dive.mdx § 'The learning curve is measurable' — 'the split fixed-angle board demanded only physical relearning, while the other three layered cognitive relearning on top'",
+    "Anderson, Mirka, Joines, Kaber, 'Analysis of Alternative Keyboards Using Learning Curves', Human Factors 51(1):35-45, 2009 (https://journals.sagepub.com/doi/10.1177/0018720808329844) — learning percentages: split fixed-angle 90.4, contoured split 76.9, Dvorak 79.1, chord 77.3"
+  ],
+  "outputs": ["apps/web/public/article-viz/split-ergo-mechanics-deep-dive/learning-curve.svg"],
+  "warnings": ["Learning percentages (90.4 / 76.9 / 79.1 / 77.3) appear in the InlineViz alt text and the cited source but are not repeated in the prose body."]
+}
