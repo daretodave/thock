@@ -237,7 +237,7 @@ jobs:
           printf "%s" "$reasons"
 
       - name: Upload Claude execution transcript (only when problematic)
-        if: steps.inspect.outputs.has_issues == 'true' && steps.inspect.outputs.has_transcript == 'true'
+        if: always() && steps.inspect.outputs.has_issues == 'true' && steps.inspect.outputs.has_transcript == 'true'
         uses: actions/upload-artifact@v4
         with:
           name: claude-execution-${{ github.run_id }}
@@ -246,7 +246,7 @@ jobs:
           if-no-files-found: warn
 
       - name: Open GitHub issue for problematic execution
-        if: steps.inspect.outputs.has_issues == 'true'
+        if: always() && steps.inspect.outputs.has_issues == 'true'
         env:
           GH_TOKEN: ${{ secrets.ACTIONS_PAT }}
           RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}

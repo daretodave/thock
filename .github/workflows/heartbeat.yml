@@ -38,7 +38,7 @@ jobs:
               if [ "$age" -gt 120 ]; then
                 echo "Cancelling wedged $wf run $id (${age}m old)"
                 gh run cancel "$id"
-                gh issue list --search "in:title \"Heartbeat: cancelled wedged run\" state:open" --json number --jq 'length' | grep -q '^0$' &&
+                gh issue list --search "in:title \"Heartbeat: cancelled wedged run ($wf\" state:open" --json number --jq 'length' | grep -q '^0$' &&
                 gh issue create \
                   --title "Heartbeat: cancelled wedged run ($wf, $(date -u +%Y-%m-%dT%H:%MZ))" \
                   --body "Run $id sat in_progress for ${age}m (honest ticks finish well inside 60m). Cancelled so the concurrency group unblocks; the next cron firing resumes. If the log stalls right after a green gate, that is the post-result exit hang — the gate was backgrounded, which agents.md forbids."
