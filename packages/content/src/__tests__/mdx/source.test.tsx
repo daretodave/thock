@@ -52,4 +52,20 @@ describe('Source — citation link component', () => {
     expect(a?.getAttribute('rel')).toBeNull()
     expect(a?.getAttribute('target')).toBeNull()
   })
+
+  it('adds an aria-hidden external-link indicator for https:// URLs', () => {
+    const { container, getByText } = render(
+      <Source href="https://example.com">external</Source>,
+    )
+    expect(getByText('external')).not.toBeNull()
+    const indicator = container.querySelector('a > span[aria-hidden="true"]')
+    expect(indicator?.textContent).toBe(' ↗')
+  })
+
+  it('does NOT add an external-link indicator for internal relative URLs', () => {
+    const { container } = render(
+      <Source href="/article/gateron-oil-king-deep-dive">internal</Source>,
+    )
+    expect(container.querySelector('a > span[aria-hidden="true"]')).toBeNull()
+  })
 })

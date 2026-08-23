@@ -19,6 +19,7 @@ export function Source({ href, children }: SourceProps): ReactElement {
       {...(isExternal ? { rel: 'noopener', target: '_blank' } : {})}
     >
       {children}
+      {isExternal && <span aria-hidden="true"> ↗</span>}
     </a>
   )
 }
