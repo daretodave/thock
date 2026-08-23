@@ -44,7 +44,7 @@ jobs:
       id-token: write   # Claude Code Action's OIDC handshake
     steps:
       - name: Checkout (full history for /march dispatch)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: 0
           # PAT (not GITHUB_TOKEN) so git push commits as you, not as
@@ -52,10 +52,10 @@ jobs:
           token: ${{ secrets.ACTIONS_PAT }}
 
       - name: Set up pnpm
-        uses: pnpm/action-setup@v4
+        uses: pnpm/action-setup@v6
 
       - name: Set up Node 22
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: 22
           cache: pnpm
@@ -64,7 +64,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Cache Playwright browsers
-        uses: actions/cache@v4
+        uses: actions/cache@v6
         with:
           path: ~/.cache/ms-playwright
           key: playwright-${{ runner.os }}-${{ hashFiles('apps/e2e/package.json', 'pnpm-lock.yaml') }}
@@ -238,7 +238,7 @@ jobs:
 
       - name: Upload Claude execution transcript (only when problematic)
         if: always() && steps.inspect.outputs.has_issues == 'true' && steps.inspect.outputs.has_transcript == 'true'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: claude-execution-${{ github.run_id }}
           path: ${{ steps.claude_run.outputs.execution_file }}
