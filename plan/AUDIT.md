@@ -84,6 +84,18 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [engineering] [3.6] compare selectors — fresh react-hooks/exhaustive-deps lint warnings from the #904 fix — addressed in commit `fa9a76ca`, closes #907
+
+- category: engineering
+- filed: 2026-08-23 by cloud /iterate audit (fresh general-purpose sweep, angle: lint/build-output hygiene check on the loop's own most recent shipped fix — not previously sampled)
+- impact: 4 (`pnpm --filter web lint` emitted 4 `react-hooks/exhaustive-deps` warnings — the only lint noise in the entire monorepo — from `SwitchCompareSelector.tsx:24-25` and `BoardCompareSelector.tsx:24-25`, both introduced by commit `e96e3671` (#904). Functionally harmless (the `validate` closure only reads `switches`/`boards`, already in the deps arrays), but `next lint` exits 0 on warnings so it slipped past "pnpm verify full gate green" in that commit's own message)
+- ease: 9 (inline the membership check directly inside each `useEffect` instead of calling the outer closure; one line change per file, no behavior change, no schema/route/component signature changes)
+- score: 3.6 (impact × ease / 10)
+- evidence: `pnpm --filter web lint` — 4 warnings before, 0 after.
+- issue: #907
+> **Resolved (2026-08-23):** inlined the slug-membership check inside each of the four `useEffect` calls across both selector components, removing the `validate` closure reference. `pnpm --filter web lint` now reports "No ESLint warnings or errors". `pnpm verify` full gate green: typecheck, lint, unit tests, script tests, data:validate, build, size, 1168/1168 e2e.
+> Picked as the top signal this tick (cloud `/march`): no unlabeled GitHub issues (triage gate, 0 unlabeled); not Monday (W34 already existed, weekly snapshot gate skipped); no pending phases/data/content-gap work (Rule 1 comfortable at exactly 2/pillar in the trailing 30 days, all 7 mechanical surveys re-ran clean, no rows filed); march's own expand Step 3c gate not met (5 commits/~4.8h since pass 341, threshold 20 commits/48h); AUDIT.md's only other Pending row remains the standing non-autonomous `[4.0]` Lighthouse-CI item. A delegated general-purpose sweep (search-index staleness, /tools logic, newsletter signup validation, loading/error/not-found route coverage, quiz scoring/empty-state, MobileNav focus-trap, InlineViz zoom modal, sitemap.ts, /feed/[pillar] unknown-pillar handling, middleware case-normalization, not-found "did you mean" suggestions) found this fresh lint regression as the one finding clearing the 3.0 bar; everything else traced back clean.
+
 ### [x] [bug] [3.6] compare selectors accept unknown slugs from query params — dead-click Compare button — addressed in commit `e96e3671`, closes #904
 
 - category: bug
