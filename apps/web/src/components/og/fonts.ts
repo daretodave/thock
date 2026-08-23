@@ -32,30 +32,17 @@ export const OG_FONT_MANIFEST: OgFontManifestEntry[] = [
   { filename: 'jetbrains-mono-400-normal.woff', name: 'monospace', weight: 400, style: 'normal' },
 ]
 
-type OgFont = OgFontManifestEntry & { data: ArrayBuffer }
+export type OgFont = OgFontManifestEntry & { data: ArrayBuffer }
 
 /**
- * Edge routes get an `http(s):` asset URL the runtime can `fetch`.
- * Node-runtime routes (the seven dynamic OG routes that export
- * `generateImageMetadata` — Next 16 forbids `runtime = 'edge'` there)
- * get a `file:` URL, which Next's patched Node `fetch` rejects with
- * "not implemented... yet". Read those from disk instead. The import
- * is dynamic and bundler-ignored so the edge bundles never see
- * `node:fs`.
+ * Edge routes only. The seven Node-runtime OG routes (the ones that
+ * export `generateImageMetadata`, which Next 16 forbids on edge) must
+ * import from `./fonts-node` instead: Next's patched Node `fetch`
+ * rejects the `file:` URL this resolves to, and Vercel refuses to
+ * build an edge function whose bundle references `node:fs` — so the
+ * two loaders live in separate modules.
  */
-async function loadFont(url: URL): Promise<ArrayBuffer> {
-  if (url.protocol === 'file:') {
-    // Non-literal specifiers keep the edge bundles from seeing a
-    // `node:` import at all (a literal one is a build warning).
-    const fsSpecifier = 'node:fs/promises'
-    const urlSpecifier = 'node:url'
-    const [{ readFile }, { fileURLToPath }] = (await Promise.all([
-      import(/* webpackIgnore: true */ /* turbopackIgnore: true */ fsSpecifier),
-      import(/* webpackIgnore: true */ /* turbopackIgnore: true */ urlSpecifier),
-    ])) as [typeof import('node:fs/promises'), typeof import('node:url')]
-    const buf = await readFile(fileURLToPath(url))
-    return buf.buffer.slice(buf.byteOffset, buf.byteOffset + buf.byteLength) as ArrayBuffer
-  }
+function loadFont(url: URL): Promise<ArrayBuffer> {
   return fetch(url).then((res) => res.arrayBuffer())
 }
 

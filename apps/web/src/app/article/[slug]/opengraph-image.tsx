@@ -1,5 +1,5 @@
 import { ImageResponse } from 'next/og'
-import { getOgFonts } from '@/components/og/fonts'
+import { getOgFonts } from '@/components/og/fonts-node'
 import { pillarLabel, siteConfig } from '@thock/seo'
 import { getArticleForOg } from '@/lib/data-runtime/og-runtime'
 import { ArticleOGContent, computeArticleOgLayout } from '@/components/og/ArticleOG'
