@@ -1,0 +1,25 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-27T14:00:00.000Z",
+  "commit": "4bc3af6",
+  "kind": "inline-viz",
+  "article_slug": "gazzew-boba-family-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "what-gazzew-already-lubed-and-what-films-cannot-fix",
+  "brief_summary": "Side-view cross-section of one Boba switch. The contact leaf and the bottom coils of the spring render in coral with callouts 'leaf — factory lubed' and 'spring bottom — donut-dipped'. The stem slide rails are dashed warm-grey, called out as 'slide rails — dry'. The top/bottom housing seam carries a 'seam — no give / films have little to fix' annotation. A footer line distinguishes the later factory-lubed runs from the 2020 pre-production run that shipped dry.",
+  "target": "apps/web/public/article-viz/gazzew-boba-family-deep-dive/factory-lube-map.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "gazzew-boba-family-deep-dive.mdx § 'What Gazzew already lubed' — splitkb U4Tx/Bobagum: 'factory-lubed leaves and spring bottoms' while 'the slide rails are not lubed' (https://splitkb.com/products/gazzew-bobagum-silent-linear-switch)",
+    "gazzew-boba-family-deep-dive.mdx § 'What Gazzew already lubed' — RNDKBD LT: springs 'donut-dipped in lube to prevent ping,' leaves 'lightly lubed,' sliders 'completely dry' (https://rndkbd.com/products/gazzew-linear-thocky-lt-switches)",
+    "gazzew-boba-family-deep-dive.mdx § 'What Gazzew already lubed' — 'The 2020 pre-production U4s shipped dry' (Switch and Click)",
+    "gazzew-boba-family-deep-dive.mdx § 'What Gazzew already lubed' — ThereminGoat: tops have 'absolutely no give'; 'A switch film exists to take up slack between the top and bottom housing; the Boba tops have none.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gazzew-boba-family-deep-dive/factory-lube-map.svg"],
+  "warnings": []
+}

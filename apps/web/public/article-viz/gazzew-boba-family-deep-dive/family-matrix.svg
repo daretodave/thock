@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Five Boba switches as a grid of stem, dampening, spring weight, and voice, sharing one housing blend</title>
+
+  <!-- Column headers -->
+  <g font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">
+    <text x="190" y="92">switch</text>
+    <text x="420" y="92">stem</text>
+    <text x="640" y="92">dampening</text>
+    <text x="880" y="92">spring (g)</text>
+    <text x="1040" y="92">voice</text>
+  </g>
+  <line x1="180" y1="104" x2="1150" y2="104" stroke-opacity="0.3"/>
+
+  <!-- Row separators -->
+  <g stroke-opacity="0.14" stroke-dasharray="3 6">
+    <line x1="180" y1="180" x2="1150" y2="180"/>
+    <line x1="180" y1="252" x2="1150" y2="252"/>
+    <line x1="180" y1="324" x2="1150" y2="324"/>
+    <line x1="180" y1="396" x2="1150" y2="396"/>
+  </g>
+
+  <!-- Shared-housing bracket on the left -->
+  <path d="M 150 120 L 136 120 L 136 456 L 150 456" stroke-opacity="0.6"/>
+  <line x1="136" y1="288" x2="122" y2="288" stroke-opacity="0.6"/>
+  <text x="104" y="284" font-family="Newsreader, serif" font-style="italic" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.75">one</text>
+  <text x="104" y="302" font-family="Newsreader, serif" font-style="italic" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.75">housing blend</text>
+
+  <!-- Row 1: U4T -->
+  <g font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none">
+    <text x="190" y="148" font-family="JetBrains Mono, monospace" font-size="16" opacity="0.95">Boba U4T</text>
+    <text x="420" y="148" opacity="0.8">tactile D-bump</text>
+    <text x="640" y="148" opacity="0.8">none</text>
+    <text x="880" y="148" font-family="JetBrains Mono, monospace" opacity="0.8">62 · 68</text>
+  </g>
+  <rect x="1030" y="126" width="110" height="30" rx="4" stroke="oklch(0.68 0.165 28)" fill="oklch(0.68 0.165 28 / 0.10)"/>
+  <text x="1085" y="147" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">full thud</text>
+
+  <!-- Row 2: U4 -->
+  <g font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none">
+    <text x="190" y="220" font-family="JetBrains Mono, monospace" font-size="16" opacity="0.95">Boba U4</text>
+    <text x="420" y="220" opacity="0.8">tactile D-bump</text>
+    <text x="640" y="220" opacity="0.8">pads, top + bottom</text>
+    <text x="880" y="220" font-family="JetBrains Mono, monospace" opacity="0.8">62 · 68</text>
+    <text x="1085" y="220" font-size="14" text-anchor="middle" opacity="0.55">near silent</text>
+  </g>
+
+  <!-- Row 3: U4Tx -->
+  <g font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none">
+    <text x="190" y="292" font-family="JetBrains Mono, monospace" font-size="16" opacity="0.95">Boba U4Tx</text>
+    <text x="420" y="292" opacity="0.8">tactile D-bump</text>
+    <text x="640" y="292" opacity="0.8">silent rails, upstroke only</text>
+    <text x="880" y="292" font-family="JetBrains Mono, monospace" opacity="0.8">65</text>
+  </g>
+  <rect x="1022" y="270" width="126" height="30" rx="4" stroke="oklch(0.68 0.165 28)" fill="oklch(0.68 0.165 28 / 0.10)"/>
+  <text x="1085" y="291" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">bottom-out only</text>
+
+  <!-- Row 4: LT -->
+  <g font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none">
+    <text x="190" y="364" font-family="JetBrains Mono, monospace" font-size="16" opacity="0.95">Boba LT</text>
+    <text x="420" y="364" opacity="0.8">linear, long-pole</text>
+    <text x="640" y="364" opacity="0.8">none</text>
+    <text x="880" y="364" font-family="JetBrains Mono, monospace" opacity="0.8">55 · 65</text>
+  </g>
+  <rect x="1030" y="342" width="110" height="30" rx="4" stroke="oklch(0.68 0.165 28)" fill="oklch(0.68 0.165 28 / 0.10)"/>
+  <text x="1085" y="363" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">linear thock</text>
+
+  <!-- Row 5: Bobagum -->
+  <g font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none">
+    <text x="190" y="436" font-family="JetBrains Mono, monospace" font-size="16" opacity="0.95">Bobagum</text>
+    <text x="420" y="436" opacity="0.8">linear</text>
+    <text x="640" y="436" opacity="0.8">dampened</text>
+    <text x="880" y="436" font-family="JetBrains Mono, monospace" opacity="0.8">52 · 62 · 68</text>
+    <text x="1085" y="436" font-size="14" text-anchor="middle" opacity="0.55">near silent</text>
+  </g>
+
+  <line x1="180" y1="470" x2="1150" y2="470" stroke-opacity="0.3"/>
+  <text x="665" y="510" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">coral marks the members left to ring — the housing is the constant, everything else is a subtraction</text>
+
+  <!-- Bronze theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

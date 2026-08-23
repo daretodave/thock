@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — Gazzew Boba family: three switch silhouettes in a row sharing one continuous housing outline, a tactile stem, a silent tactile stem with a foam ring, and a linear stem, coral splash under the middle silhouette</title>
+
+  <!-- Coral splash wash under the middle (silent tactile) silhouette. Reuses the
+       U4T deep-dive's coral oklch(0.68 0.165 28) on purpose: this is the family
+       piece, and the tie back to the single-switch article is the point. -->
+  <ellipse cx="600" cy="500" rx="170" ry="52" fill="oklch(0.68 0.165 28 / 0.18)" stroke="none"/>
+
+  <!-- ════════════════════════════════════════════════════════════════════════════
+       COMPOSITION: one housing, three stems. The top housing (y 250 to 340) and
+       bottom housing (y 340 to 560) are drawn as a single continuous outline
+       spanning x 150 to 1050, with dashed internal partitions at x 450 and 750
+       so the three bays read as one family rather than three switches.
+         Bay 1, x 300: tactile stem, D-shaped plateau on the flanks, no foam.
+         Bay 2, x 600: silent tactile stem, same plateau, foam ring at the base.
+         Bay 3, x 900: linear stem, straight flanks.
+       Each bay has a spring stack and a center post. The middle bay gets the
+       splash; the other two carry only the warm-grey stroke.
+       ════════════════════════════════════════════════════════════════════════════ -->
+
+  <!-- ══ SHARED HOUSING OUTLINE ══ -->
+  <!-- Top housing, one long trapezoid -->
+  <path d="
+    M 176 250
+    L 1024 250
+    L 1050 340
+    L 150 340
+    Z" />
+  <path d="
+    M 192 262
+    L 1008 262
+    L 1030 332
+    L 170 332
+    Z" stroke-opacity="0.36"/>
+  <!-- Bottom housing -->
+  <path d="
+    M 166 340
+    L 1034 340
+    L 1034 560
+    L 166 560
+    Z" />
+  <path d="
+    M 182 340
+    L 1018 340
+    L 1018 548
+    L 182 548
+    Z" stroke-opacity="0.36"/>
+  <!-- Housing seam -->
+  <line x1="150" y1="340" x2="1050" y2="340" stroke-opacity="0.55"/>
+  <!-- Bay partitions -->
+  <line x1="450" y1="262" x2="450" y2="548" stroke-dasharray="4 8" stroke-opacity="0.28"/>
+  <line x1="750" y1="262" x2="750" y2="548" stroke-dasharray="4 8" stroke-opacity="0.28"/>
+  <!-- Plate-mount clip nubs at the ends -->
+  <line x1="150" y1="312" x2="138" y2="312" stroke-opacity="0.5"/>
+  <line x1="1050" y1="312" x2="1062" y2="312" stroke-opacity="0.5"/>
+  <!-- PCB pins, one pair per bay -->
+  <g>
+    <circle cx="264" cy="556" r="5"/><circle cx="336" cy="556" r="5"/>
+    <circle cx="564" cy="556" r="5"/><circle cx="636" cy="556" r="5"/>
+    <circle cx="864" cy="556" r="5"/><circle cx="936" cy="556" r="5"/>
+  </g>
+
+  <!-- ══ BAY 1: TACTILE ══ -->
+  <g>
+    <!-- Cruciform head -->
+    <path d="
+      M 278 200
+      L 322 200
+      L 322 214
+      L 336 214
+      L 336 230
+      L 264 230
+      L 264 214
+      L 278 214
+      Z" />
+    <line x1="300" y1="230" x2="300" y2="250" stroke-opacity="0.5"/>
+    <!-- Stem body with D-shaped plateau on the flanks -->
+    <path d="
+      M 264 250
+      L 336 250
+      L 336 296
+      L 358 296
+      Q 362 296 362 300
+      L 362 328
+      Q 362 332 358 332
+      L 336 338
+      L 336 460
+      L 264 460
+      L 264 338
+      L 242 332
+      Q 238 332 238 328
+      L 238 300
+      Q 238 296 242 296
+      L 264 296
+      Z" />
+    <line x1="300" y1="264" x2="300" y2="450" stroke-opacity="0.35" stroke-dasharray="3 5"/>
+    <!-- Leaf contact the plateau rides over -->
+    <line x1="372" y1="300" x2="372" y2="380" stroke-opacity="0.5"/>
+    <circle cx="372" cy="312" r="2.5" stroke-opacity="0.6"/>
+    <!-- Center post + spring -->
+    <path d="M 282 548 L 282 500 L 318 500 L 318 548" stroke-opacity="0.55"/>
+    <ellipse cx="300" cy="472" rx="26" ry="5"/>
+    <ellipse cx="300" cy="483" rx="26" ry="5"/>
+    <ellipse cx="300" cy="494" rx="26" ry="5"/>
+    <!-- No foam: ghost ring, empty -->
+    <ellipse cx="300" cy="536" rx="42" ry="7" stroke-dasharray="3 4" stroke-opacity="0.26"/>
+  </g>
+
+  <!-- ══ BAY 2: SILENT TACTILE with foam ring ══ -->
+  <g>
+    <path d="
+      M 578 200
+      L 622 200
+      L 622 214
+      L 636 214
+      L 636 230
+      L 564 230
+      L 564 214
+      L 578 214
+      Z" />
+    <line x1="600" y1="230" x2="600" y2="250" stroke-opacity="0.5"/>
+    <path d="
+      M 564 250
+      L 636 250
+      L 636 296
+      L 658 296
+      Q 662 296 662 300
+      L 662 328
+      Q 662 332 658 332
+      L 636 338
+      L 636 460
+      L 564 460
+      L 564 338
+      L 542 332
+      Q 538 332 538 328
+      L 538 300
+      Q 538 296 542 296
+      L 564 296
+      Z" />
+    <line x1="600" y1="264" x2="600" y2="450" stroke-opacity="0.35" stroke-dasharray="3 5"/>
+    <line x1="672" y1="300" x2="672" y2="380" stroke-opacity="0.5"/>
+    <circle cx="672" cy="312" r="2.5" stroke-opacity="0.6"/>
+    <path d="M 582 548 L 582 500 L 618 500 L 618 548" stroke-opacity="0.55"/>
+    <ellipse cx="600" cy="472" rx="26" ry="5" stroke-opacity="0.7"/>
+    <ellipse cx="600" cy="483" rx="26" ry="5" stroke-opacity="0.7"/>
+    <ellipse cx="600" cy="494" rx="26" ry="5" stroke-opacity="0.7"/>
+    <!-- Foam ring on the floor, the thing the stem lands on -->
+    <ellipse cx="600" cy="536" rx="44" ry="8" fill="oklch(0.68 0.165 28 / 0.45)" stroke="oklch(0.68 0.165 28)"/>
+    <ellipse cx="600" cy="536" rx="20" ry="4" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.6"/>
+    <!-- Silent stem: small pads at the leg feet too -->
+    <g fill="oklch(0.68 0.165 28 / 0.5)" stroke="oklch(0.68 0.165 28)">
+      <rect x="560" y="456" width="16" height="8" rx="2"/>
+      <rect x="624" y="456" width="16" height="8" rx="2"/>
+    </g>
+  </g>
+
+  <!-- Focal anchor on the foam ring -->
+  <circle cx="600" cy="536" r="6.5" fill="oklch(0.68 0.165 28 / 0.95)" stroke="oklch(0.68 0.165 28)"/>
+  <circle cx="600" cy="536" r="12" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.5"/>
+
+  <!-- ══ BAY 3: LINEAR ══ -->
+  <g>
+    <path d="
+      M 878 200
+      L 922 200
+      L 922 214
+      L 936 214
+      L 936 230
+      L 864 230
+      L 864 214
+      L 878 214
+      Z" />
+    <line x1="900" y1="230" x2="900" y2="250" stroke-opacity="0.5"/>
+    <!-- Straight flanks, no plateau -->
+    <path d="
+      M 864 250
+      L 936 250
+      L 936 460
+      L 864 460
+      Z" />
+    <line x1="900" y1="264" x2="900" y2="450" stroke-opacity="0.35" stroke-dasharray="3 5"/>
+    <!-- Flank reference: where a plateau would be, left empty -->
+    <line x1="946" y1="296" x2="946" y2="332" stroke-dasharray="2 4" stroke-opacity="0.25"/>
+    <line x1="972" y1="300" x2="972" y2="380" stroke-opacity="0.5"/>
+    <circle cx="972" cy="312" r="2.5" stroke-opacity="0.6"/>
+    <path d="M 882 548 L 882 500 L 918 500 L 918 548" stroke-opacity="0.55"/>
+    <ellipse cx="900" cy="472" rx="26" ry="5"/>
+    <ellipse cx="900" cy="483" rx="26" ry="5"/>
+    <ellipse cx="900" cy="494" rx="26" ry="5"/>
+    <ellipse cx="900" cy="536" rx="42" ry="7" stroke-dasharray="3 4" stroke-opacity="0.26"/>
+  </g>
+
+  <!-- ══ LEFT MARGIN TIER TICKS ══ -->
+  <g stroke-opacity="0.28">
+    <line x1="100" y1="295" x2="112" y2="295"/>
+    <line x1="100" y1="400" x2="112" y2="400"/>
+    <line x1="100" y1="536" x2="112" y2="536"/>
+  </g>
+  <line x1="106" y1="295" x2="106" y2="536" stroke-opacity="0.14" stroke-dasharray="2 6"/>
+
+  <!-- ══ LABELS ══ -->
+  <text x="262" y="606" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none" letter-spacing="0.05em">TACTILE</text>
+  <text x="540" y="606" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.68 0.165 28)" fill-opacity="0.85" stroke="none" letter-spacing="0.05em">SILENT TACTILE</text>
+  <text x="872" y="606" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none" letter-spacing="0.05em">LINEAR</text>
+  <text x="190" y="286" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none" letter-spacing="0.05em">ONE HOUSING</text>
+  <text x="386" y="318" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none" letter-spacing="0.05em">PLATEAU</text>
+  <text x="686" y="318" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none" letter-spacing="0.05em">PLATEAU</text>
+  <text x="680" y="540" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.68 0.165 28)" fill-opacity="0.8" stroke="none" letter-spacing="0.05em">FOAM RING</text>
+  <line x1="676" y1="536" x2="648" y2="536" stroke-opacity="0.35" stroke-width="1"/>
+
+  <!-- ══ JetBrains Mono technical value ══ -->
+  <text x="150" y="738" font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace" font-size="10" fill="oklch(0.78 0.005 90)" fill-opacity="0.38" stroke="none" letter-spacing="0.03em">GAZZEW BOBA FAMILY — TACTILE · SILENT TACTILE · LINEAR, ONE HOUSING PLATFORM, THREE STEMS</text>
+
+  <!-- ══ BRONZE THEME DOT, upper-right margin ══ -->
+  <circle cx="1148" cy="92" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

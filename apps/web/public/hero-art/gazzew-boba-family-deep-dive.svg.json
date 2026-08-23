@@ -1,0 +1,32 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored SVG (no raster pipeline)",
+  "at": "2026-08-23T12:28:07Z",
+  "commit": "427fc90ae42c7faf494e850af16b8ff0d20bc294",
+  "kind": "hero-art",
+  "article_pillar": "deep-dives",
+  "source": null,
+  "tokens_snapshot": "51fdae8368c1eee844850352ec620acd2f822555",
+  "fonts": [
+    "IBM Plex Sans",
+    "JetBrains Mono"
+  ],
+  "slug": "gazzew-boba-family-deep-dive",
+  "subject": "Three switch silhouettes in a row sharing one continuous housing outline: a single long top-housing trapezoid and bottom housing spanning all three bays with dashed partitions, a tactile stem with a D-shaped plateau on its flanks, a silent tactile stem with the same plateau plus a foam ring on the housing floor and small pads at its feet, and a linear stem with straight flanks. Each bay has a leaf contact, spring stack and center post. Coral splash under the middle silhouette.",
+  "motif": "three-bay shared-housing family lineup",
+  "splashHue": "coral",
+  "splashColor": "oklch(0.68 0.165 28)",
+  "canvas": "1200x750",
+  "strokeWeight": "2px",
+  "strokeColor": "oklch(0.78 0.005 90)",
+  "background": "transparent (light-mode safe; previewed on the charcoal oklch(0.175 0.006 250) and legible)",
+  "notes": "Housing: top trapezoid x 176 to 1024 at y 250 widening to x 150 to 1050 at y 340, bottom housing x 166 to 1034, y 340 to 560, both with inner walls, dashed bay partitions at x 450 and 750, clip nubs at the ends, a pair of PCB pins per bay. Stems centered x 300 / 600 / 900: cruciform heads y 200 to 230, bodies 72 wide from y 250 to 460. Tactile and silent tactile stems carry the flat-topped rounded-corner plateau on both flanks at y 296 to 338 (the family's D-shaped bump per the U4T piece); the linear stem is a plain rectangle with a dashed flank reference where the plateau would be. Leaf contact stubs to the right of each stem, three-ellipse spring stacks y 472 to 494, center posts y 500 to 548. Tactile and linear bays carry an empty dashed ghost ring on the floor; the silent bay carries a solid foam ring (ellipse rx 44 ry 8 at y 536) filled in coral with an inner ring, plus two small coral foot pads at y 456. Coral oklch(0.68 0.165 28) reuses the U4T deep-dive's value deliberately as the family tie; applied as a wash ellipse under the middle bay (600,500), the foam ring and pad fills, the focal dot+ring on the ring (600,536), the SILENT TACTILE and FOAM RING labels. Bronze theme dot at (1148,92); three left-margin ticks. All XML comments use '==' separator runs (no '--' runs) per the svg-validity.test.ts regression guard.",
+  "outputs": [
+    "apps/web/public/hero-art/gazzew-boba-family-deep-dive.svg",
+    "apps/web/public/hero-art/gazzew-boba-family-deep-dive.svg.json"
+  ],
+  "warnings": [
+    "Labels reference IBM Plex Sans / JetBrains Mono by family name with system fallbacks; the SVG does not embed font files (family convention, matches prior hero-art).",
+    "Preview rasters were rendered with the repo's existing Playwright/Chromium install into the session scratchpad for visual QA only; nothing rasterized was written into the repo."
+  ]
+}

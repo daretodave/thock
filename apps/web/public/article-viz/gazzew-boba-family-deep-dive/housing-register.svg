@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Three switch housings on a stiffness axis — polycarbonate, nylon, and the Boba blend — with the Boba blend ringing lowest and shortest</title>
+
+  <!-- Axis -->
+  <line x1="110" y1="330" x2="1090" y2="330" stroke-opacity="0.45"/>
+  <path d="M 1078 322 L 1090 330 L 1078 338" stroke-opacity="0.45"/>
+  <path d="M 122 322 L 110 330 L 122 338" stroke-opacity="0.45"/>
+  <text x="110" y="362" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">stiffer — brighter, longer ring</text>
+  <text x="1090" y="362" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.6">softer — deeper, shorter ring</text>
+
+  <!-- ── Polycarbonate ── -->
+  <g>
+    <path d="M 180 190 L 320 190 L 332 250 L 168 250 Z"/>
+    <line x1="168" y1="250" x2="332" y2="250" stroke-opacity="0.5"/>
+    <!-- tall narrow arcs -->
+    <g stroke-opacity="0.45">
+      <path d="M 240 186 A 10 10 0 0 1 260 186"/>
+      <path d="M 230 186 A 20 36 0 0 1 270 186"/>
+      <path d="M 220 186 A 30 62 0 0 1 280 186"/>
+      <path d="M 212 186 A 38 88 0 0 1 288 186"/>
+    </g>
+    <text x="250" y="285" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Polycarbonate</text>
+    <text x="250" y="306" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">stiff, acoustically transparent</text>
+  </g>
+
+  <!-- ── Nylon ── -->
+  <g>
+    <path d="M 530 190 L 670 190 L 682 250 L 518 250 Z"/>
+    <line x1="518" y1="250" x2="682" y2="250" stroke-opacity="0.5"/>
+    <g stroke-opacity="0.45">
+      <path d="M 588 186 A 12 12 0 0 1 612 186"/>
+      <path d="M 574 186 A 26 30 0 0 1 626 186"/>
+      <path d="M 560 186 A 40 46 0 0 1 640 186"/>
+    </g>
+    <text x="600" y="285" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Nylon</text>
+    <text x="600" y="306" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">absorbs more — the premium bottom-housing default</text>
+  </g>
+
+  <!-- ── Boba blend (coral) ── -->
+  <g stroke="oklch(0.68 0.165 28)">
+    <path d="M 880 190 L 1020 190 L 1032 250 L 868 250 Z" fill="oklch(0.68 0.165 28 / 0.08)"/>
+    <line x1="868" y1="250" x2="1032" y2="250" stroke-opacity="0.6"/>
+    <!-- short wide arcs -->
+    <path d="M 920 186 A 30 12 0 0 1 980 186" stroke-opacity="0.7"/>
+    <path d="M 900 186 A 50 20 0 0 1 1000 186" stroke-opacity="0.4"/>
+  </g>
+  <text x="950" y="285" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">Boba blend</text>
+  <text x="950" y="306" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.85">softer than nylon</text>
+
+  <!-- Annotation above the Boba housing -->
+  <text x="950" y="96" font-family="Newsreader, serif" font-style="italic" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">higher melting point than PC —</text>
+  <text x="950" y="116" font-family="Newsreader, serif" font-style="italic" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">composition unpublished</text>
+  <line x1="950" y1="126" x2="950" y2="160" stroke-opacity="0.3" stroke-dasharray="3 5"/>
+
+  <!-- Bronze theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

@@ -1,0 +1,25 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-27T14:00:00.000Z",
+  "commit": "4bc3af6",
+  "kind": "inline-viz",
+  "article_slug": "gazzew-boba-family-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "the-housing-is-the-instrument",
+  "brief_summary": "Three top-housing outlines on a single stiffness axis — polycarbonate, nylon, Boba blend — each with sound arcs above it. Arcs get shorter and wider moving right; the Boba housing and its arcs render in coral. Annotations carry the two sourced material claims: softer than nylon, higher melting point than polycarbonate, composition unpublished.",
+  "target": "apps/web/public/article-viz/gazzew-boba-family-deep-dive/housing-register.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "gazzew-boba-family-deep-dive.mdx § 'The housing is the instrument' — ThereminGoat quote: 'softer than Nylon' with 'a higher melting point temperature than Polycarbonate' (https://www.theremingoat.com/blog/boba-u4-switch-review)",
+    "gazzew-boba-family-deep-dive.mdx § 'The housing is the instrument' — Switch and Click quote: 'a soft proprietary plastic blend that makes it softer than Nylon-66'",
+    "gazzew-boba-family-deep-dive.mdx § 'The housing is the instrument' — 'Gazzew has never published what it is'",
+    "keyboard-acoustics-deep-dive.mdx § 'Switch acoustics' — 'A polycarbonate (PC) top housing is acoustically transparent ... A nylon bottom housing is acoustically absorptive'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gazzew-boba-family-deep-dive/housing-register.svg"],
+  "warnings": ["Ordering on the axis is qualitative (sourced descriptions), not a measured stiffness scale; no numeric values are shown."]
+}

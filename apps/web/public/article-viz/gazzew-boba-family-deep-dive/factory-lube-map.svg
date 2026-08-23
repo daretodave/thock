@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Cross-section of a Boba switch marking which surfaces Gazzew lubes at the factory (leaf, spring bottom) and which ship dry (slide rails), with the housing seam annotated as having no give</title>
+
+  <!-- ── Switch cross-section, centred around x=420 ── -->
+  <!-- Top housing -->
+  <path d="M 330 80 L 510 80 L 522 130 L 318 130 Z"/>
+  <!-- Seam line (top/bottom housing join) -->
+  <line x1="318" y1="130" x2="522" y2="130" stroke-opacity="0.9"/>
+  <!-- Housing walls -->
+  <line x1="318" y1="130" x2="318" y2="300" stroke-opacity="0.7"/>
+  <line x1="522" y1="130" x2="522" y2="300" stroke-opacity="0.7"/>
+  <!-- Bottom housing -->
+  <path d="M 318 300 L 522 300 L 522 400 L 318 400 Z"/>
+
+  <!-- Stem -->
+  <path d="M 402 92 L 438 92 L 438 150 L 402 150 Z"/>
+  <path d="M 386 150 L 454 150 L 454 250 L 386 250 Z"/>
+  <!-- Stem pole -->
+  <line x1="420" y1="250" x2="420" y2="340" stroke-opacity="0.6"/>
+
+  <!-- Slide rails — dashed, dry -->
+  <g stroke-opacity="0.5" stroke-dasharray="4 5">
+    <line x1="380" y1="150" x2="380" y2="250"/>
+    <line x1="460" y1="150" x2="460" y2="250"/>
+  </g>
+
+  <!-- Spring coils: upper coils grey, bottom coils coral -->
+  <g stroke-opacity="0.55">
+    <path d="M 404 262 L 436 268 L 404 276 L 436 284 L 404 292 L 436 300 L 404 308 L 436 316"/>
+  </g>
+  <g stroke="oklch(0.68 0.165 28)">
+    <path d="M 436 316 L 404 324 L 436 332 L 404 340 L 436 348 L 404 356"/>
+    <!-- bottom-of-spring blob -->
+    <ellipse cx="420" cy="366" rx="22" ry="6" fill="oklch(0.68 0.165 28 / 0.18)"/>
+  </g>
+
+  <!-- Leaf — coral, on the right side of the cavity -->
+  <g stroke="oklch(0.68 0.165 28)">
+    <path d="M 496 150 L 496 220 L 482 250 L 496 280 L 496 330" fill="none"/>
+    <path d="M 506 150 L 506 330" stroke-opacity="0.5"/>
+    <rect x="478" y="236" width="12" height="28" rx="3" fill="oklch(0.68 0.165 28 / 0.18)"/>
+  </g>
+
+  <!-- ── Callouts ── -->
+  <!-- leaf -->
+  <line x1="512" y1="250" x2="640" y2="250" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.6"/>
+  <circle cx="640" cy="250" r="3" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)"/>
+  <text x="656" y="246" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.68 0.165 28)" stroke="none">leaf — factory lubed</text>
+  <text x="656" y="266" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">the surface that generates leaf ping</text>
+
+  <!-- spring bottom -->
+  <line x1="444" y1="366" x2="640" y2="366" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.6"/>
+  <circle cx="640" cy="366" r="3" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)"/>
+  <text x="656" y="362" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.68 0.165 28)" stroke="none">spring bottom — donut-dipped</text>
+  <text x="656" y="382" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">"to prevent ping" — the other metallic surface</text>
+
+  <!-- slide rails -->
+  <line x1="376" y1="200" x2="230" y2="200" stroke-opacity="0.45" stroke-dasharray="4 5"/>
+  <circle cx="230" cy="200" r="3" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.6"/>
+  <text x="214" y="196" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.8">slide rails — dry</text>
+  <text x="214" y="216" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.55">from the factory — left to the builder</text>
+
+  <!-- seam -->
+  <line x1="318" y1="130" x2="230" y2="130" stroke-opacity="0.45"/>
+  <circle cx="230" cy="130" r="3" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.6"/>
+  <text x="214" y="126" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.8">seam — no give</text>
+  <text x="214" y="146" font-family="Newsreader, serif" font-style="italic" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.6">films have little to fix</text>
+
+  <text x="600" y="448" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">coral = treated at the factory on later runs · dashed = ships dry · the 2020 pre-production run shipped with no lube at all</text>
+
+  <!-- Bronze theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

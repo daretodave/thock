@@ -1,0 +1,26 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-07-27T14:00:00.000Z",
+  "commit": "4bc3af6",
+  "kind": "inline-viz",
+  "article_slug": "gazzew-boba-family-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "five-switches-from-one-housing",
+  "brief_summary": "Five-row, four-column grid — one row per Boba member (U4T, U4, U4Tx, LT, Bobagum), columns for stem, dampening, spring weight, and voice — with a left-margin bracket labelled 'one housing blend' spanning all rows. The three undampened-floor members (U4T, U4Tx, LT) get coral voice cells; the two silent members read 'near silent' in warm grey. Renders the article's 'matrix of subtractions' framing literally.",
+  "target": "apps/web/public/article-viz/gazzew-boba-family-deep-dive/family-matrix.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "gazzew-boba-family-deep-dive.mdx § 'The stem most of them share' — 'Two springs carry the tactile line: 62g and 68g bottom-out'",
+    "gazzew-boba-family-deep-dive.mdx § 'Five switches from one housing' — U4T 'tactile stem, no dampeners'; U4 'silicone dampening pads at top-out and bottom-out'",
+    "gazzew-boba-family-deep-dive.mdx § 'Five switches from one housing' — splitkb U4Tx: 'silent rails which dampen the upstroke, so only the bottoming out will make sound' on 'a single 65g spring' (https://splitkb.com/products/gazzew-boba-u4tx-thocky-tactile-switch)",
+    "gazzew-boba-family-deep-dive.mdx § 'Five switches from one housing' — LT 'smooth long-pole POM stem in the same housing, undampened, at 55g or 65g' (https://rndkbd.com/products/gazzew-linear-thocky-lt-switches)",
+    "gazzew-boba-family-deep-dive.mdx § 'Five switches from one housing' — Bobagum 'dampened, and offered at 52g, 62g and 68g' (https://splitkb.com/products/gazzew-bobagum-silent-linear-switch)"
+  ],
+  "outputs": ["apps/web/public/article-viz/gazzew-boba-family-deep-dive/family-matrix.svg"],
+  "warnings": ["data/switches/gazzew-boba-lt.json records the LT as a 37g/45g silent linear; primary vendor listings (Pantheon Keys, RNDKBD) describe a non-silent 55g/65g long-pole linear. The viz follows the primary sources."]
+}
