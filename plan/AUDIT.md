@@ -84,6 +84,18 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [a11y] [5.4] Source citation links (67x across 42 articles) lack external-link indicator — addressed in commit `b00f94d2`, closes #909
+
+- category: a11y
+- filed: 2026-08-23 by cloud /iterate audit (delegated general-purpose sweep, angle: recently-shipped-code regression check plus a fresh angle disjoint from the extensive checked-clean list)
+- impact: 6 (the `<Source>` MDX component renders every inline citation link in article body prose — 67 instances across 42 of 82 articles, all confirmed `https://` external URLs, e.g. `apps/web/src/content/articles/gateron-oil-king-deep-dive.mdx:34`. This is the highest-volume external-link surface on the site — larger than VendorCard, PartHero, GroupBuyRow, and CitationIndex combined, all of which were fixed in the last several audit passes (#903, #906, #908) specifically for this gap. `<Source>` was missed because the fix passes targeted the `/sources` aggregator (`CitationIndex.tsx`) rather than the primary in-body link readers actually click.)
+- ease: 9 (one-line JSX addition mirroring the existing `<span aria-hidden="true"> ↗</span>` pattern already shipped in `CitationIndex.tsx`/`VendorCard.tsx`/`PartHero.tsx`/`GroupBuyRow.tsx`/`ButtondownForm.tsx`; no schema/route changes)
+- score: 5.4 (impact × ease / 10)
+- evidence: `packages/content/src/mdx/Source.tsx` (pre-fix) external branch set `rel="noopener"`/`target="_blank"` but had no accompanying indicator span. Confirmed 67 `<Source href="https://...">` usages across 42 `.mdx` files via `grep -rhoE '<Source href="[^"]+"' apps/web/src/content/articles/*.mdx | wc -l`.
+- issue: #909
+> **Resolved (2026-08-23):** added `{isExternal && <span aria-hidden="true"> ↗</span>}` after `{children}` in `packages/content/src/mdx/Source.tsx`. Two new regression tests assert the indicator on external hrefs and its absence on internal relative hrefs. `pnpm verify` full gate green: typecheck, lint, 850 web unit tests, 167 content tests (2 new), 129 data tests, data:validate, build, size, 1168/1168 e2e.
+> Picked as the top signal this tick (cloud `/march`): no unlabeled GitHub issues (triage gate, 0 unlabeled); not Monday (W34 snapshot already exists, weekly snapshot gate skipped); no pending phases/data/content-gap work (Rule 1 comfortable, all 7 mechanical surveys re-ran clean, no rows filed); AUDIT.md's and CRITIQUE.md's only other Pending rows remain the standing non-autonomous items (Lighthouse-CI `[4.0]`, march.yml crash-gate `[6.3]`, heartbeat.yml dedup-scope `[4.0]`, soft-404 structural-block `[needs-user-call]`, mirrored-issue-drain `[needs-user-call]`) plus CRITIQUE.md's GA-beacon `[needs-user-call]`; march's own expand Step 3c gate not met (10 commits/~7h since pass 344's anchor `fd76f051`, threshold 20 commits/48h). A delegated general-purpose sweep — told explicitly which angles recent passes already exhausted (including the very outbound-link-indicator initiative this gap slipped through) — found this remaining `<Source>` holdout as the one verified, scoreable defect; a noted sub-threshold observation (`AutoLink`'s raw-markdown-link path has the same gap in principle but zero raw external markdown links currently exist in any article body, so it's dead code in practice) was not pursued.
+
 ### [x] [a11y] [3.6] footer Buttondown attribution link missing external-link indicator — addressed in commit `d28efd63`, closes #908
 
 - category: a11y
