@@ -21,6 +21,5 @@
     "gazzew-boba-family-deep-dive.mdx § 'Five switches from one housing' — LT 'smooth long-pole POM stem in the same housing, undampened, at 55g or 65g' (https://rndkbd.com/products/gazzew-linear-thocky-lt-switches)",
     "gazzew-boba-family-deep-dive.mdx § 'Five switches from one housing' — Bobagum 'dampened, and offered at 52g, 62g and 68g' (https://splitkb.com/products/gazzew-bobagum-silent-linear-switch)"
   ],
-  "outputs": ["apps/web/public/article-viz/gazzew-boba-family-deep-dive/family-matrix.svg"],
-  "warnings": ["data/switches/gazzew-boba-lt.json records the LT as a 37g/45g silent linear; primary vendor listings (Pantheon Keys, RNDKBD) describe a non-silent 55g/65g long-pole linear. The viz follows the primary sources."]
+  "outputs": ["apps/web/public/article-viz/gazzew-boba-family-deep-dive/family-matrix.svg"]
 }
