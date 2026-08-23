@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <title>thock hero — Gazzew Boba U4T switch cross-section: nylon top and bottom housing, POM stem with a D-shaped tactile plateau positioned high in the stroke, no foam dampeners — top-out and bottom-out ring freely</title>
+  <title>thock hero — Gazzew Boba U4T switch cross-section: nylon top and bottom housing, POM stem with a D-shaped tactile plateau positioned high in the stroke, no dampening pads — top-out and bottom-out ring freely</title>
 
   <!-- Coral splash wash — centered on the tactile-plateau zone. Single splash,
        single hue, reused for the plateau contact dot+ring and the top-out /
@@ -234,7 +234,7 @@
   <line x1="686" y1="352" x2="662" y2="332" stroke-opacity="0.35" stroke-width="1"/>
 
   <!-- ── JetBrains Mono technical value ───────────────────────────────────────── -->
-  <text x="420" y="738" font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace" font-size="10" fill="oklch(0.78 0.005 90)" fill-opacity="0.38" stroke="none" letter-spacing="0.03em">GAZZEW BOBA U4T — NYLON/NYLON/POM, D-SHAPED PLATEAU, NO FOAM DAMPENERS</text>
+  <text x="420" y="738" font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace" font-size="10" fill="oklch(0.78 0.005 90)" fill-opacity="0.38" stroke="none" letter-spacing="0.03em">GAZZEW BOBA U4T — NYLON/NYLON/POM, D-SHAPED PLATEAU, NO DAMPENING PADS</text>
 
   <!-- ── BRONZE THEME DOT — family ornamental anchor, upper-right margin ───────── -->
   <circle cx="1148" cy="92" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>

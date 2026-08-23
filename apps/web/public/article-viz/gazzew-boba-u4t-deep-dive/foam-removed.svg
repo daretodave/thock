@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <title>Two switch cross-sections comparing the Gazzew Boba U4 (foam dampeners) and Boba U4T (dampeners removed)</title>
+  <title>Two switch cross-sections comparing the Gazzew Boba U4 (silicone dampening pads on the stem) and Boba U4T (pads removed)</title>
 
   <!-- Center divider -->
   <line x1="600" y1="60" x2="600" y2="500" stroke-opacity="0.18" stroke-dasharray="3 6"/>
 
-  <!-- ══════════════════ LEFT PANEL: Boba U4 — foam dampeners ══════════════════ -->
-  <text x="300" y="58" font-family="IBM Plex Sans, sans-serif" font-size="18" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Boba U4 — foam dampeners</text>
+  <!-- ══════════════════ LEFT PANEL: Boba U4 — silicone dampening pads ══════════════════ -->
+  <text x="300" y="58" font-family="IBM Plex Sans, sans-serif" font-size="18" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Boba U4 — dampening pads</text>
 
   <!-- Top housing -->
   <path d="M 210 100 L 390 100 L 402 150 L 198 150 Z"/>

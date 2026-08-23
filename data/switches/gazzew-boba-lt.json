@@ -10,10 +10,10 @@
     "actuation": 55,
     "bottomOut": 65
   },
-  "travelMm": 4.0,
+  "travelMm": 3.2,
   "factoryLubed": true,
   "releasedAt": "2021-04-01",
   "status": "in-production",
-  "description": "Long-pole linear using the same Boba housing as the U4 family but with a smooth POM stem and no top/bottom dampening — the housing without the silencing. Offered at 55g or 65g bottom-out; pre-lubed on the rails. Popular with typists who want the Boba stem feel and thock without the U4's muted voice.",
+  "description": "Long-pole linear using the same Boba housing as the U4 family but with a smooth POM stem and no top/bottom dampening — the housing without the silencing. The long-pole stem shortens total travel versus the standard-pole U4. Offered at 55g or 65g bottom-out; lubed at the leaf and spring bottom, slide rails ship dry. Popular with typists who want the Boba stem feel and thock without the U4's muted voice.",
   "updatedAt": "2026-08-23T00:00:00.000Z"
 }

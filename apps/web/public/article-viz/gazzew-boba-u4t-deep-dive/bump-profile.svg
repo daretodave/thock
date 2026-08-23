@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <title>Force-travel diagram of the Gazzew Boba U4T downstroke, 0mm to 4.0mm</title>
+  <title>Force-travel diagram of the Gazzew Boba U4T downstroke, 0mm to 3.2mm</title>
 
   <!-- Axis -->
   <line x1="120" y1="400" x2="1080" y2="400" stroke-opacity="0.35"/>
   <line x1="120" y1="80" x2="120" y2="400" stroke-opacity="0.35"/>
 
-  <!-- Travel ticks along the x-axis: 0, 1.0, 1.8, 4.0mm -->
+  <!-- Travel ticks along the x-axis: 0, 1.0, 1.8, 3.2mm -->
   <g stroke-opacity="0.3">
     <line x1="120" y1="400" x2="120" y2="410"/>
     <line x1="360" y1="400" x2="360" y2="410"/>
@@ -16,7 +16,7 @@
   <text x="120" y="432" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55" text-anchor="middle">0mm</text>
   <text x="360" y="432" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55" text-anchor="middle">1.0mm</text>
   <text x="504" y="432" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55" text-anchor="middle">1.8mm</text>
-  <text x="1080" y="432" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55" text-anchor="middle">4.0mm</text>
+  <text x="1080" y="432" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55" text-anchor="middle">3.2mm</text>
   <text x="600" y="460" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.45" text-anchor="middle">travel →</text>
 
   <!-- Force curve: gentle rise, steep climb into plateau, flat plateau, steep

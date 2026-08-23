@@ -76,11 +76,11 @@
   <text x="980" y="400" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">same POM stem, same housing — pads left off</text>
   <text x="980" y="420" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">the control</text>
 
-  <!-- Travel bar: full 4.0 mm, grey -->
+  <!-- Travel bar: full 3.2 mm, grey -->
   <line x1="880" y1="470" x2="1080" y2="470" stroke-opacity="0.4"/>
   <line x1="880" y1="470" x2="1080" y2="470" stroke-opacity="0.55" stroke-width="6"/>
   <line x1="1080" y1="462" x2="1080" y2="478" stroke-opacity="0.4"/>
-  <text x="880" y="520" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">4.0 mm travel</text>
+  <text x="880" y="520" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">3.2 mm travel</text>
 
   <!-- Footer -->
   <text x="600" y="570" font-family="Newsreader, serif" font-style="italic" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">same two surfaces on the stem — rail tops and leg feet — three answers</text>
