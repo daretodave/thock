@@ -12132,7 +12132,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/60-percent-layout-history.mdx
 - action: add [60-percent-layout-history](/article/60-percent-layout-history) to leaf-spring-mount-deep-dive body, or vice versa
 
-### [ ] [cross-links] [4.5] gazzew-boba-family-deep-dive ↔ buckling-spring-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: tactile, deep-dive)
+### [x] [cross-links] [4.5] gazzew-boba-family-deep-dive ↔ buckling-spring-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: tactile, deep-dive) — addressed in commit `05ff2d1c`
 - category: cross-links
 - filed: 2026-08-23 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -12143,7 +12143,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/buckling-spring-deep-dive.mdx
 - action: add [buckling-spring-deep-dive](/article/buckling-spring-deep-dive) to gazzew-boba-family-deep-dive body, or vice versa
 
-### [ ] [cross-links] [4.5] gazzew-boba-family-deep-dive ↔ drop-holy-panda-x-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: tactile, deep-dive)
+### [x] [cross-links] [4.5] gazzew-boba-family-deep-dive ↔ drop-holy-panda-x-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: tactile, deep-dive) — addressed in commit `05ff2d1c`
 - category: cross-links
 - filed: 2026-08-23 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -12154,7 +12154,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/drop-holy-panda-x-deep-dive.mdx
 - action: add [drop-holy-panda-x-deep-dive](/article/drop-holy-panda-x-deep-dive) to gazzew-boba-family-deep-dive body, or vice versa
 
-### [ ] [cross-links] [4.5] gazzew-boba-family-deep-dive ↔ durock-t1-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: tactile, nylon, deep-dive)
+### [x] [cross-links] [4.5] gazzew-boba-family-deep-dive ↔ durock-t1-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: tactile, nylon, deep-dive) — addressed in commit `05ff2d1c`
 - category: cross-links
 - filed: 2026-08-23 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -12165,7 +12165,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/durock-t1-deep-dive.mdx
 - action: add [durock-t1-deep-dive](/article/durock-t1-deep-dive) to gazzew-boba-family-deep-dive body, or vice versa
 
-### [ ] [cross-links] [4.5] gazzew-boba-family-deep-dive ↔ gateron-lanes-tactile-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: tactile, deep-dive)
+### [x] [cross-links] [4.5] gazzew-boba-family-deep-dive ↔ gateron-lanes-tactile-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: tactile, deep-dive) — addressed in commit `05ff2d1c`
 - category: cross-links
 - filed: 2026-08-23 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -12175,6 +12175,8 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/gazzew-boba-family-deep-dive.mdx
 - article-b: apps/web/src/content/articles/gateron-lanes-tactile-deep-dive.mdx
 - action: add [gateron-lanes-tactile-deep-dive](/article/gateron-lanes-tactile-deep-dive) to gazzew-boba-family-deep-dive body, or vice versa
+> **Resolved (2026-08-23, cluster drain of all 4 pairs above in commit `05ff2d1c`):** `gazzew-boba-family-deep-dive` was tied with `why-stabilizers-rattle-deep-dive` at 4 pending pairs each (confirmed via `article-crosslink-survey.mjs --json --slug <hub>` for both); picked as hub by the alphabetically-earlier tie-break. Added deep-dive links alongside the existing `<PartReference>` callouts in the stem-shoulder-geometry paragraph for `durock-t1-deep-dive`, `drop-holy-panda-x-deep-dive`, and `gateron-lanes-tactile-deep-dive`; added a new linking sentence in "The arc, and the caveats" for `buckling-spring-deep-dive` (no prior mention existed), contrasting the Boba housing's soft-chamber approach with the Model M's snap-through actuation. `article-crosslink-survey.mjs --json --slug gazzew-boba-family-deep-dive` now returns 0 pairs. `article-parts-check.mjs` clean on the touched file. `pnpm verify` full gate green: typecheck, lint, unit tests, data:validate, build, 1189/1189 e2e.
+> Picked as the top signal this tick (cloud `/march`): no unlabeled GitHub issues (triage gate, 0 unlabeled); not Monday (W34 snapshot already exists, weekly snapshot gate skipped); no pending phases/data/content-gap work (Rule 1 comfortable, all 7 mechanical surveys re-ran clean except `article-crosslink-survey.mjs`, which reported 14 pairs already tracked in AUDIT.md — no new rows); march's own expand Step 3c gate not met (11 commits/~7h since pass 345's anchor `934fb1dc`, threshold 20 commits/48h). Tied at the top of Pending: this cross-links cluster at `[4.5]` and the a11y Lighthouse `label-content-name-mismatch` row also at `[4.5]`. Tie-broken on age — `git log -S` on each row's introducing commit showed the cross-links row landed at `c069ae63` (08:54:25) vs. the Lighthouse row at `8fadb388` (09:04:08), roughly 10 minutes earlier — so the cross-links cluster won per the "older findings" tie-break. Applied the Phase 46 cluster-aware drain to ship all 4 pending pairs sharing the `gazzew-boba-family-deep-dive` hub in one commit rather than one row per tick.
 
 ### [ ] [data] [3.6] 2026-W19 CannonKeys — direction/spark contradiction
 - category: data
