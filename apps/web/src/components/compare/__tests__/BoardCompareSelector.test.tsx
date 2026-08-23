@@ -109,6 +109,19 @@ describe('<BoardCompareSelector>', () => {
     )
   })
 
+  it('ignores an unknown slug in initialA/initialB (stale or crafted query param) — falls back to the empty option and keeps the compare button disabled', () => {
+    render(
+      <BoardCompareSelector
+        boards={BOARDS}
+        initialA="not-a-real-board"
+        initialB="bakeneko65"
+      />,
+    )
+    expect(screen.getByTestId('compare-select-a')).toHaveValue('')
+    expect(screen.getByTestId('compare-select-b')).toHaveValue('bakeneko65')
+    expect(screen.getByTestId('compare-button')).toBeDisabled()
+  })
+
   it('resyncs selected values when initialA/initialB change on rerender (back/forward nav)', () => {
     const { rerender } = render(
       <BoardCompareSelector

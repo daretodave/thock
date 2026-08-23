@@ -16,11 +16,13 @@ export function SwitchCompareSelector({
   initialB,
 }: SwitchCompareSelectorProps): ReactElement {
   const router = useRouter()
-  const [a, setA] = useState(initialA)
-  const [b, setB] = useState(initialB)
+  const validate = (slug: string): string =>
+    switches.some((s) => s.slug === slug) ? slug : ''
+  const [a, setA] = useState(validate(initialA))
+  const [b, setB] = useState(validate(initialB))
 
-  useEffect(() => setA(initialA), [initialA])
-  useEffect(() => setB(initialB), [initialB])
+  useEffect(() => setA(validate(initialA)), [initialA, switches])
+  useEffect(() => setB(validate(initialB)), [initialB, switches])
 
   const canCompare = a !== '' && b !== '' && a !== b
   const showSameSelectionHint = a !== '' && b !== '' && a === b

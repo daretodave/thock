@@ -111,6 +111,19 @@ describe('<SwitchCompareSelector>', () => {
     )
   })
 
+  it('ignores an unknown slug in initialA/initialB (stale or crafted query param) — falls back to the empty option and keeps the compare button disabled', () => {
+    render(
+      <SwitchCompareSelector
+        switches={SWITCHES}
+        initialA="not-a-real-switch"
+        initialB="cherry-mx2a-red"
+      />,
+    )
+    expect(screen.getByTestId('compare-select-a')).toHaveValue('')
+    expect(screen.getByTestId('compare-select-b')).toHaveValue('cherry-mx2a-red')
+    expect(screen.getByTestId('compare-button')).toBeDisabled()
+  })
+
   it('resyncs selected values when initialA/initialB change on rerender (back/forward nav)', () => {
     const { rerender } = render(
       <SwitchCompareSelector
