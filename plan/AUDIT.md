@@ -12125,3 +12125,30 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/gazzew-boba-family-deep-dive.mdx
 - article-b: apps/web/src/content/articles/gateron-lanes-tactile-deep-dive.mdx
 - action: add [gateron-lanes-tactile-deep-dive](/article/gateron-lanes-tactile-deep-dive) to gazzew-boba-family-deep-dive body, or vice versa
+
+### [ ] [data] [3.6] 2026-W19 CannonKeys — direction/spark contradiction
+- category: data
+- filed: 2026-08-23 by trend-snapshot-quality-check.mjs
+- impact: 4 (direction "up" contradicts last spark delta 0)
+- ease: 9 (correct the field in data/trends/2026-W19.json)
+- score: 3.6 (impact × ease / 10)
+- trend-row: 2026-W19 / CannonKeys
+- action: direction "up" contradicts last spark delta 0
+
+### [ ] [data] [3.6] 2026-W19 Prototypist — direction/spark contradiction
+- category: data
+- filed: 2026-08-23 by trend-snapshot-quality-check.mjs
+- impact: 4 (direction "up" contradicts last spark delta 0)
+- ease: 9 (correct the field in data/trends/2026-W19.json)
+- score: 3.6 (impact × ease / 10)
+- trend-row: 2026-W19 / Prototypist
+- action: direction "up" contradicts last spark delta 0
+
+### [ ] [data] [3.6] 2026-W29 75% Layout — direction/spark contradiction
+- category: data
+- filed: 2026-08-23 by trend-snapshot-quality-check.mjs
+- impact: 4 (direction "flat" but last spark delta is 3 (tolerance 2))
+- ease: 9 (correct the field in data/trends/2026-W29.json)
+- score: 3.6 (impact × ease / 10)
+- trend-row: 2026-W29 / 75% Layout
+- action: direction "flat" but last spark delta is 3 (tolerance 2)

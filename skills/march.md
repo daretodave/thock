@@ -92,6 +92,25 @@ If `IS_MONDAY=yes` AND `SNAPSHOT_EXISTS=no`:
    the schema. The e2e smoke walker covers `/trends/tracker/<week>`
    automatically via `generateStaticParams`.
 
+3.5. **Trend-snapshot quality gate** (Phase 50 amendment) — **hard gate**,
+   not a survey:
+
+   ```bash
+   node scripts/trend-snapshot-quality-check.mjs --file "data/trends/${CURRENT_WEEK}.json"
+   ```
+
+   Checks the newly-written file for name-casing drift against
+   `data/vendors`/`data/group-buys`, `articleSlug` topical relevance,
+   note-vs-record status agreement, and direction/spark mathematical
+   consistency (see `scripts/trend-snapshot-quality-check.mjs` header
+   for the full check list). Non-zero exit **blocks the snapshot
+   commit** — read the violations, patch the file's `note` /
+   `direction` / `articleSlug` fields directly (this is a same-tick
+   data fix, since the file hasn't committed yet — not a follow-up
+   AUDIT row), and re-run. Up to 3 iterations on the same root cause;
+   beyond that, stop and report per `skills/ship-a-phase.md` §10
+   shape (cite the check, the row, what was tried).
+
 4. **Commit** via `ship-data` conventions — do **not** push yet;
    Step 4.5's follow-up commit (if any) ships in the same push (two
    rapid-fire pushes seconds apart can drop the Vercel
@@ -446,6 +465,7 @@ plan/AUDIT.md                        # content-gap queue (Step 3b.5)
 # Weekly snapshot (Step 0.5)
 node scripts/iso-week.mjs            # prints current ISO week, e.g. 2026-W21
 data/trends/<YYYY-WNN>.json          # snapshot file (must exist by end of each Monday tick)
+node scripts/trend-snapshot-quality-check.mjs --file data/trends/<week>.json  # Step 3.5 hard gate
 
 # External signals
 gh issue list --repo $GH_REPO --search "-label:triage:..." --json number  # unlabeled count
