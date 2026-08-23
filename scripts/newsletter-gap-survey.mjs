@@ -73,6 +73,7 @@ function surveyNewsletter(newsletters, today) {
   newsletters.sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))
   const latest = newsletters[0]
   const latestDate = new Date(latest.publishedAt)
+  latestDate.setUTCHours(0, 0, 0, 0)
   const todayMs = today.getTime()
   const daysSince = Math.floor((todayMs - latestDate.getTime()) / (1000 * 60 * 60 * 24))
   const lastIssue = latest.issue ?? newsletters.length

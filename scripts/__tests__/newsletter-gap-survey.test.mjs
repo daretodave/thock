@@ -89,6 +89,24 @@ describe('surveyNewsletter — current', () => {
     const result = surveyNewsletter(newsletters, today())
     assert.equal(result.status, 'current')
   })
+
+  test('counts calendar days correctly when publishedAt carries a non-midnight time (real newsletters publish at 09:00:00Z)', () => {
+    // Every real newsletter's publishedAt is time-stamped (e.g. 09:00:00.000Z),
+    // while `today` is always truncated to UTC midnight by the CLI entry point.
+    // daysSince must reflect calendar days elapsed, not be thrown off by that
+    // time-of-day mismatch.
+    const newsletters = [makeNewsletter(1, '2026-08-21T09:00:00.000Z')]
+
+    const sevenCalendarDaysLater = new Date('2026-08-28T00:00:00.000Z')
+    const gapResult = surveyNewsletter(newsletters, sevenCalendarDaysLater)
+    assert.equal(gapResult.status, 'gap')
+    assert.equal(gapResult.daysSince, 7)
+
+    const sixCalendarDaysLater = new Date('2026-08-27T00:00:00.000Z')
+    const currentResult = surveyNewsletter(newsletters, sixCalendarDaysLater)
+    assert.equal(currentResult.status, 'current')
+    assert.equal(currentResult.daysSince, 6)
+  })
 })
 
 // ── extractFrontmatter ────────────────────────────────────────────────────────
