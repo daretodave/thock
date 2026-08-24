@@ -12225,7 +12225,7 @@ passes accumulate signals.)
   - Ikki68 Aurora (board `ikki68-aurora`) — prose line 73
 - action: add each entity to the article's mentionedParts frontmatter with the correct slug and kind
 
-### [ ] [cross-links] [4.5] building-mode-sonnet-with-oil-kings ↔ gasket-mount-reality — no prose cross-link (same pillar, ≥2 shared tags: 75, mode)
+### [x] [cross-links] [4.5] building-mode-sonnet-with-oil-kings ↔ gasket-mount-reality — no prose cross-link (same pillar, ≥2 shared tags: 75, mode) — addressed in dd91c85c, closes #919
 - category: cross-links
 - filed: 2026-08-23 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -12235,6 +12235,8 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/building-mode-sonnet-with-oil-kings.mdx
 - article-b: apps/web/src/content/articles/gasket-mount-reality.mdx
 - action: add [gasket-mount-reality](/article/gasket-mount-reality) to building-mode-sonnet-with-oil-kings body, or vice versa
+- issue: #919
+> **Resolved (2026-08-24):** linked the "silicone gaskets" mention in building-mode-sonnet-with-oil-kings's "Why this pairing" section to `/article/gasket-mount-reality`. `article-crosslink-survey.mjs --json --slug building-mode-sonnet-with-oil-kings` now returns 0 pairs. `pnpm verify` full gate green: typecheck, unit tests, data:validate, build, size, 1201/1201 e2e.
 
 ### [x] [HOT PURSUIT] [content-gap] [7] guides pillar — 1 of ≥2 articles in last 30d — addressed in c53bc774, closes #916
 - category: content-gaps
