@@ -36,7 +36,17 @@ const nextDir = resolve(webDir, '.next')
 const buildManifestPath = join(nextDir, 'build-manifest.json')
 
 const DEFAULT_MAX_KB = 200
-const SEARCH_MAX_KB = 150
+// Raised from 150 after the Next 16 upgrade lifted the shared framework
+// chunks every route carries (see homepage baseline above) — /search
+// measured 144.4 KB against the old 150 KB budget, 5.6 KB of headroom,
+// tripping the gate on any unrelated client-side addition to the search
+// surface. The MiniSearch index itself is not in this number (it's
+// deferred behind a dynamic import in `SearchPanel.tsx`, confirmed by
+// inspecting the resolved chunk list — no index-sized chunk appears);
+// the near-full reading is entirely shared-framework weight, so trimming
+// the index would not move it. 175 KB restores comparable proportional
+// headroom to the homepage's 200 KB / 147.1 KB baseline.
+const SEARCH_MAX_KB = 175
 
 type BuildManifest = {
   rootMainFiles?: string[]
