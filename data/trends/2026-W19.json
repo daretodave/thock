@@ -95,7 +95,7 @@
     {
       "name": "CannonKeys",
       "category": "vendor",
-      "direction": "up",
+      "direction": "flat",
       "score": 18,
       "spark": [4, 7, 10, 13, 15, 17, 18, 18],
       "articleSlug": "vendor-first-customs",

@@ -1196,7 +1196,7 @@
         {
           "name": "CannonKeys",
           "category": "vendor",
-          "direction": "up",
+          "direction": "flat",
           "score": 18,
           "spark": [
             4,
@@ -10560,5 +10560,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-08-24T21:14:45.332Z"
+  "generatedAt": "2026-08-24T22:12:07.930Z"
 }
