@@ -6,7 +6,7 @@ author: thock
 pillar: deep-dives
 tags: [stabilizers, deep-dive, acoustic, modding, lubing]
 publishedAt: "2026-08-17T14:00:00.000Z"
-updatedAt: "2026-08-17T14:00:00.000Z"
+updatedAt: "2026-08-24T00:00:00.000Z"
 heroImage: /hero-art/why-stabilizers-rattle-deep-dive.svg
 heroImageAlt: "Exploded side view of a 2u stabilizer drawn in a single warm-grey line — the bent steel wire in the centre, the two stems lifted above it, and the two housings beneath — with coral vibration arcs radiating from the joint where each wire leg enters its stem, and a small brass-bronze dot at the upper right."
 featured: false
@@ -17,7 +17,7 @@ mentionedParts:
     slug: gateron-oil-king
 ---
 
-Pull the spacebar off any board and press the bare switch under it. It sounds fine. Put the cap back on and the same key is louder, brighter, and more metallic — and the switch did not change. The keycap is now driving two stabilizers, and a stabilizer is a small machine with more moving interfaces than the switch it flanks. A spacebar over a factory-lubed <PartReference id="gateron-oil-king" /> still sounds like its stabilizers. This piece is not a servicing walkthrough — [the servicing guide](/article/stabilizer-servicing-guide) and [the explainer](/article/stabilizers-explained) cover the how. This is the why.
+Pull the spacebar off any board and press the bare switch under it. It sounds fine. Put the cap back on and the same key is louder, brighter, and more metallic — and the switch did not change. The keycap is now driving two stabilizers, and a stabilizer is a small machine with more moving interfaces than the switch it flanks. A spacebar over a factory-lubed <PartReference id="gateron-oil-king" /> still sounds like its stabilizers. This piece is not a servicing walkthrough — [the servicing guide](/article/stabilizer-servicing-guide) and [the explainer](/article/stabilizers-explained) cover the how. This is the why. For how stabilizers fit into the keyboard's full acoustic stack — switch, plate, case, desk — see [the keyboard acoustics deep dive](/article/keyboard-acoustics-deep-dive).
 
 ## The wire is a torsion bar
 
@@ -66,7 +66,7 @@ Norbauer's split is the useful one: rattle is the wire striking inside the slide
 
 A 2u shift and a 6.25u spacebar share wire gauge, stems, and housings, and do not behave the same. The difference is span. Stem spacing on a Cherry-pattern PCB is 23.8mm for 2u keys, 100mm for a 6.25u spacebar, and 114.3mm for a 7u, per <Source href="https://hilpcb.com/en/blog/keyboard-pcb-layout/">HilPCB's footprint guide</Source>.
 
-Torsional compliance grows with length, so the 6.25u wire twists a little over four times as far as the 2u wire under the same torque before the far stem follows — the far corner of a spacebar arrives a beat late in a way a 2u never shows. The moment arm compounds it. On a 2u the stems sit 11.9mm from the switch centre, so the switch carries most of an off-centre press. On a 6.25u the corner is 50mm out and the stabilizer carries the whole press — harder strikes across every gap, from a heavier wire. The 7u is the same story with 14.3mm more span. A bow that is invisible across 23.8mm is a visible rock across 100mm, which is why wire balancing matters on a spacebar and rarely on a shift.
+Torsional compliance grows with length, so the 6.25u wire twists a little over four times as far as the 2u wire under the same torque before the far stem follows — the far corner of a spacebar arrives a beat late in a way a 2u never shows. The moment arm compounds it. On a 2u the stems sit 11.9mm from the switch centre, so the switch carries most of an off-centre press. On a 6.25u the corner is 50mm out and the stabilizer carries the whole press — harder strikes across every gap, from a heavier wire. The 7u is the same story with 14.3mm more span. A bow that is invisible across 23.8mm is a visible rock across 100mm, which is why wire balancing matters on a spacebar and rarely on a shift. Layout choice decides how many of these long spans a board carries in the first place — a 60% keyboard carries exactly one 6.25u spacebar and no 7u key at all; see [the 60% layout history piece](/article/60-percent-layout-history) for how that footprint became the default.
 
 ## What each mod actually changes
 
@@ -82,7 +82,7 @@ Each common mod acts on one of the three gaps. Knowing which is the difference b
 
 ## Screw-in, clip-in, plate-mount
 
-Mount geometry decides how big source three is allowed to be. A screw-in housing is clamped to the PCB through a threaded boss; it cannot lift, so the only remaining path is the plastic foot on the board surface. A clip-in is retained by two barbs — retention, not clamping — so the housing can lift a fraction on the upstroke and land again at bottom-out. A plate-mount housing hangs in a cutout whose fit is in the plate maker's hands, in a plate that flexes under the press — the geometry where source three is largest and the stabilizer maker can do the least about it.
+Mount geometry decides how big source three is allowed to be. A screw-in housing is clamped to the PCB through a threaded boss; it cannot lift, so the only remaining path is the plastic foot on the board surface. A clip-in is retained by two barbs — retention, not clamping — so the housing can lift a fraction on the upstroke and land again at bottom-out. A plate-mount housing hangs in a cutout whose fit is in the plate maker's hands, in a plate that flexes under the press — the geometry where source three is largest and the stabilizer maker can do the least about it. How much that same plate flexes — brass, aluminium, FR4, POM — is its own argument; see [the plate materials deep dive](/article/plate-materials-explained) for what each material actually changes.
 
 ## Why the good ones rattle less out of the box
 
@@ -96,7 +96,7 @@ Owlab's <Mono>Owlstab V3</Mono> shrank the gaps directly — "reducing wire entr
 
 <Mono>Durock V2</Mono> is the baseline the others are measured against: pre-clipped stems, gold-plated wires, and "patent designed V2 wire hooks to prevent wire popping," per <Source href="https://omnitype.com/products/durock-stabilizers-v2">Omnitype</Source> — the set that made pre-clipped the default rather than a mod.
 
-None of them removed the clearances; they shrank some and softened others. Removing them is what Norbauer's design does — hinge leaves on "precision metal pins" with "zero clearance at all interfaces," in 21 parts per tower — and the part count is why nobody else has.
+None of them removed the clearances; they shrank some and softened others. Removing them is what Norbauer's design does — hinge leaves on "precision metal pins" with "zero clearance at all interfaces," in 21 parts per tower — and the part count is why nobody else has. Switches went through the same shift from hobbyist mod to factory spec — [the Holy Panda X deep dive](/article/drop-holy-panda-x-deep-dive) covers a tactile switch that spent six years as a frankenswitch before Drop moulded the mod in.
 
 ## Verdict
 

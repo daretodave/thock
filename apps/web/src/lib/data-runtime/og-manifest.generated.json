@@ -32,7 +32,7 @@
     },
     {
       "slug": "why-stabilizers-rattle-deep-dive",
-      "readTime": 9,
+      "readTime": 10,
       "frontmatter": {
         "title": "Why stabilizers rattle: the engineering behind a smooth stab",
         "lede": "A stabilizer has to be loose enough to slide and tight enough to stay quiet, and those two requirements contradict each other at three separate interfaces. Every rattle, tick, and clunk on a spacebar is one of those interfaces losing the argument.",
@@ -6616,5 +6616,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-08-24T06:26:04.349Z"
+  "generatedAt": "2026-08-24T07:30:39.441Z"
 }
