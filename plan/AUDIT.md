@@ -12227,7 +12227,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/gasket-mount-reality.mdx
 - action: add [gasket-mount-reality](/article/gasket-mount-reality) to building-mode-sonnet-with-oil-kings body, or vice versa
 
-### [HOT PURSUIT] [content-gap] [7] guides pillar — 1 of ≥2 articles in last 30d
+### [x] [HOT PURSUIT] [content-gap] [7] guides pillar — 1 of ≥2 articles in last 30d — addressed in c53bc774, closes #916
 - category: content-gaps
 - impact: 5 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -12239,3 +12239,4 @@ passes accumulate signals.)
 - next: /ship-content → guides pillar article
 - issue: #916
 > Filed 2026-08-24 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+> **Resolved (2026-08-24):** Shipped "Keyboard layout sizes, compared: 60% to full-size, which fits your desk" at `/article/keyboard-layout-sizes-buying-guide`, publishedAt 2026-08-22 (gap-fill). Practical buying-guide angle distinct from the existing historical (`60-percent-layout-history`) and market-trend (`75-percent-default`) pieces. `c53bc774`
