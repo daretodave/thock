@@ -12226,3 +12226,15 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/building-mode-sonnet-with-oil-kings.mdx
 - article-b: apps/web/src/content/articles/gasket-mount-reality.mdx
 - action: add [gasket-mount-reality](/article/gasket-mount-reality) to building-mode-sonnet-with-oil-kings body, or vice versa
+
+### [HOT PURSUIT] [content-gap] [7] guides pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 5 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: guides
+- window-count: 1
+- window-start: 2026-07-25
+- score: 7
+- next: /ship-content → guides pillar article
+> Filed 2026-08-24 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
