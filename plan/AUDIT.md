@@ -12077,7 +12077,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/clicky-switches-deep-dive.mdx
 - action: add [clicky-switches-deep-dive](/article/clicky-switches-deep-dive) to silent-switch-damping-deep-dive body, or vice versa
 
-### [ ] [cross-links] [4.5] why-stabilizers-rattle-deep-dive ↔ 60-percent-layout-history — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, modding)
+### [x] [cross-links] [4.5] why-stabilizers-rattle-deep-dive ↔ 60-percent-layout-history — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, modding) — addressed in commit `69ea1906`
 - category: cross-links
 - filed: 2026-08-23 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -12088,7 +12088,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/60-percent-layout-history.mdx
 - action: add [60-percent-layout-history](/article/60-percent-layout-history) to why-stabilizers-rattle-deep-dive body, or vice versa
 
-### [ ] [cross-links] [4.5] why-stabilizers-rattle-deep-dive ↔ drop-holy-panda-x-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, modding)
+### [x] [cross-links] [4.5] why-stabilizers-rattle-deep-dive ↔ drop-holy-panda-x-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, modding) — addressed in commit `69ea1906`
 - category: cross-links
 - filed: 2026-08-23 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -12099,7 +12099,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/drop-holy-panda-x-deep-dive.mdx
 - action: add [drop-holy-panda-x-deep-dive](/article/drop-holy-panda-x-deep-dive) to why-stabilizers-rattle-deep-dive body, or vice versa
 
-### [ ] [cross-links] [4.5] why-stabilizers-rattle-deep-dive ↔ keyboard-acoustics-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: stabilizers, deep-dive, acoustic, modding)
+### [x] [cross-links] [4.5] why-stabilizers-rattle-deep-dive ↔ keyboard-acoustics-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: stabilizers, deep-dive, acoustic, modding) — addressed in commit `69ea1906`
 - category: cross-links
 - filed: 2026-08-23 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -12110,7 +12110,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/keyboard-acoustics-deep-dive.mdx
 - action: add [keyboard-acoustics-deep-dive](/article/keyboard-acoustics-deep-dive) to why-stabilizers-rattle-deep-dive body, or vice versa
 
-### [ ] [cross-links] [4.5] why-stabilizers-rattle-deep-dive ↔ plate-materials-explained — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, acoustic, modding)
+### [x] [cross-links] [4.5] why-stabilizers-rattle-deep-dive ↔ plate-materials-explained — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, acoustic, modding) — addressed in commit `69ea1906`
 - category: cross-links
 - filed: 2026-08-23 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -12120,6 +12120,8 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/why-stabilizers-rattle-deep-dive.mdx
 - article-b: apps/web/src/content/articles/plate-materials-explained.mdx
 - action: add [plate-materials-explained](/article/plate-materials-explained) to why-stabilizers-rattle-deep-dive body, or vice versa
+> **Resolved (2026-08-24, cluster drain of all 4 pairs above in commit `69ea1906`):** `why-stabilizers-rattle-deep-dive` was the largest pending hub at 4 pairs (confirmed via `article-crosslink-survey.mjs --json --slug why-stabilizers-rattle-deep-dive`), tied at `[4.5]` with the a11y Lighthouse row but older (filed same batch as the already-tie-broken gazzew-boba-family cluster, `c069ae63`). Added one inline link per sibling at a natural insertion point: `keyboard-acoustics-deep-dive` in the intro (full acoustic-stack framing), `60-percent-layout-history` at the end of "Why 2u and 6.25u are different keys" (span-per-layout framing), `plate-materials-explained` at the end of "Screw-in, clip-in, plate-mount" (plate-flex framing), and `drop-holy-panda-x-deep-dive` at the end of "Why the good ones rattle less out of the box" (hobbyist-mod-to-factory-spec parallel). `article-crosslink-survey.mjs --json --slug why-stabilizers-rattle-deep-dive` now returns 0 pairs. `article-parts-check.mjs` clean on the touched file. `pnpm verify` full gate green: typecheck, lint, unit + script tests, data:validate, build, size, 1201/1201 e2e.
+> Picked as the top signal this tick (cloud `/march`): no unlabeled GitHub issues (triage gate, 0 unlabeled); today is Monday but the W35 snapshot already existed (weekly snapshot gate skipped); no pending phases/data/content-gap work (Rule 1 comfortable, all 8 mechanical surveys re-ran clean, no new rows); march's own expand Step 3c gate not met (13 commits/~13.4h since pass 346's own anchor `4771f736`, threshold 20 commits/48h). Tied at the top of Pending: this cross-links cluster at `[4.5]` (10 remaining pairs across 5 hub articles) and the a11y Lighthouse `label-content-name-mismatch` row also at `[4.5]`. Tie-broken on age, consistent with the immediately preceding tick's resolution of the same tie for the gazzew-boba-family hub. Applied the Phase 46 cluster-aware drain to the largest remaining hub (`why-stabilizers-rattle-deep-dive`, 4 pairs) in one commit.
 
 ### [ ] [cross-links] [4.5] leaf-spring-mount-deep-dive ↔ 60-percent-layout-history — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, 65)
 - category: cross-links
