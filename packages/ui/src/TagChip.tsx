@@ -70,13 +70,20 @@ export function TagChip({
     isStatic ? '' : 'hover:bg-surface'
   }`
   const prefix = CATEGORY_PREFIX[category]
-  const ariaLabel = prefix ? `${prefix} tag: ${name}` : `tag: ${name}`
 
+  // No `aria-label` override here — axe's `label-content-name-mismatch`
+  // flags any accessible name that doesn't contain the visible text
+  // (e.g. "switch tag: Linear" vs. the rendered "SWITCH · Linear").
+  // The "tag" context instead rides along as `sr-only` text woven into
+  // the visible content, so the accessible name is derived from — and
+  // therefore always matches — what's on screen (same pattern as
+  // `TrackerRow.tsx`'s "Score change: " span).
   const inner = prefix ? (
     <>
       <span data-testid="tag-chip-category">
         {prefix}
       </span>
+      <span className="sr-only"> tag:</span>
       <span aria-hidden="true" className="opacity-50">
         ·
       </span>
@@ -85,6 +92,7 @@ export function TagChip({
   ) : (
     <>
       <span aria-hidden="true">#</span>
+      <span className="sr-only">tag: </span>
       <span data-testid="tag-chip-name">{name}</span>
     </>
   )
@@ -95,7 +103,6 @@ export function TagChip({
         className={className}
         data-testid="tag-chip"
         data-category={category}
-        aria-label={ariaLabel}
       >
         {inner}
       </span>
@@ -108,7 +115,6 @@ export function TagChip({
       className={className}
       data-testid="tag-chip"
       data-category={category}
-      aria-label={ariaLabel}
     >
       {inner}
     </a>

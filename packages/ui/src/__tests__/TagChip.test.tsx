@@ -11,7 +11,18 @@ describe('<TagChip>', () => {
     const chip = screen.getByTestId('tag-chip')
     expect(chip).toHaveTextContent(/layout/i)
     expect(chip).toHaveTextContent(/alice/i)
-    expect(chip.getAttribute('aria-label')).toBe('layout tag: Alice')
+  })
+
+  it('derives its accessible name from visible content, not a diverging aria-label', () => {
+    // Regression guard for plan/AUDIT.md a11y [4.5] — Lighthouse's
+    // axe-core `label-content-name-mismatch` flagged the old
+    // `aria-label="layout tag: Alice"` because it didn't contain the
+    // rendered text ("LAYOUT · Alice"). No aria-label at all now —
+    // the accessible name is computed straight from the DOM content.
+    render(<TagChip slug="alice" name="Alice" category="layout" />)
+    const chip = screen.getByTestId('tag-chip')
+    expect(chip.hasAttribute('aria-label')).toBe(false)
+    expect(chip).toHaveAccessibleName('layout tag: Alice')
   })
 
   it('falls back to the legacy #name shape for misc-category chips', () => {
@@ -19,7 +30,8 @@ describe('<TagChip>', () => {
     // visual distinct from a typed category.
     render(<TagChip slug="x" name="X" category="misc" />)
     const chip = screen.getByTestId('tag-chip')
-    expect(chip).toHaveTextContent(/#x/i)
+    expect(chip.querySelector('[aria-hidden="true"]')).toHaveTextContent('#')
+    expect(chip).toHaveTextContent(/x/i)
     expect(chip.querySelector('[data-testid="tag-chip-category"]')).toBeNull()
   })
 
