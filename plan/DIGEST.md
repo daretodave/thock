@@ -6,192 +6,229 @@
 
 ## Headline
 
-**A quiet, clean 23h35m — eight mechanical fixes drained back to
-back, all seven mirrored issues closed same-tick, zero march
-failures.** 24 `march` ticks since the last digest (`5f8ec03c`,
-2026-08-22T10:51:10Z) ran green, zero failures, zero cancellations.
-8 of those ticks shipped a fix; 9 more were `/expand` passes
-(336–344) that filed no new candidates (routine reinforcement, no
-thrash); the rest were clean no-ops.
+**The busiest window in recent digest history — a big local
+`/oversight` session landed mid-window on top of a full 24 cloud
+`march` ticks, all green.** Since the last digest (`a3a2ed55`,
+2026-08-23T10:54Z), 24 `march`-workflow runs completed: **24
+success, 0 failure, 0 cancelled.** Interleaved with those, a local
+`/oversight` session (commits `126c45bc`…`8fadb388`, ~12:18–13:04Z)
+drained **11 open PRs → 0** and **19 open issues → 1** (`#898`,
+still needs the user's PAT regen), promoted **phase 50**
+(trend-snapshot data-quality gate) into the build plan, shipped 7
+deep-dive articles, re-enabled Lighthouse CI, and bumped Next to
+16.3 (+ zod 4.4, react 19.2.8, vitest 3.2.6, playwright 1.62).
 
-**Nothing structurally new tonight.** No phase or content-gap work
-queued, cross-link drain still fully empty, data backlog still
-empty, `plan/AUDIT.md` still carries exactly the same 5 standing
-non-autonomous rows as last digest. The loop spent the window on
-its steady-state job: finding and shipping one sub-5.0 defect per
-tick from fresh general-purpose sweeps.
+**Cloud `march` then shipped phase 50 itself**, ran two `/expand`
+passes, corrected 5 catalog records against primary sources
+(closing `#911`, `#912`, `#914`), drained 12 cross-link pairs
+across 4 hub articles, shipped the Monday `2026-W35` trend
+snapshot, and shipped one guides-pillar content-gap article. Net:
+**17 of 24 cloud ticks shipped something**, 7 were clean no-ops.
 
 **This tick's own fresh `pnpm verify` is fully clean** — all 8 legs
 green, run as sequential foreground legs per the standing rule.
-Deploy is `READY` at HEAD (`19cdb509`, `dpl_2fDwhUkM`).
+Deploy is `READY` at HEAD (`92cff507`, `dpl_3jDqZkFV`).
 
-`plan/CRITIQUE.md` is **still 105 days / 2,404 commits** since its
+**One live mirror-drain-gap instance surfaced this window**: issue
+`#915` (why-stabilizers-rattle-deep-dive cross-links) was opened at
+07:38Z and the fix shipped one minute later (`69ea1906`/`89099a9a`
+at 07:38–07:39Z) — but the commit carried no `Closes #915` trailer,
+so the issue is still open despite the underlying finding being
+fully drained. Concrete new evidence for the standing `[needs-user-call]
+[3.0]` mirror-drain-gap row in `plan/AUDIT.md`.
+
+`plan/CRITIQUE.md` is now **106 days / ~2,460 commits** since its
 last pass (11, 2026-05-10T20:35 UTC at commit `931c8a7`) — same
 diagnosis as every digest since (no Chrome MCP on the cloud
-runner), and unlike the last several nights, this diagnosis is now
-**already filed** as a `[score 6.5] [needs-user-call]` candidate in
-`plan/PHASE_CANDIDATES.md` ("Critique gate diagnostic — ROOT CAUSE
-CONFIRMED"), waiting on the next `/oversight` promotion pass rather
-than needing a fresh tuning proposal tonight.
-`plan/PHASE_CANDIDATES.md` holds **30 live pending rows** (plus 1
-`needs-user-call`), **70 days** since the last `/oversight`
-promotion (2026-06-14, phases 46-49) — unchanged from last digest.
+runner), still filed as a `[score 6.5] [needs-user-call]` candidate
+in `plan/PHASE_CANDIDATES.md` awaiting `/oversight` promotion.
+`plan/PHASE_CANDIDATES.md` holds **31 live pending rows** (plus 1
+`needs-user-call`) — but the promotion clock itself just reset:
+the local `/oversight` session promoted phase 50 **within this
+window** (`c069ae63`, 2026-08-23T12:54Z), so the backlog is 31
+rows / ~1 day since last promotion, not the 70-day gap the last
+several digests flagged.
 
 ## While you were out
 
 | When (UTC) | Tick | Outcome |
 |---|---|---|
-| 08-22 13:22 | expand | pass 336 — 0 new candidates, mirror-drain-gap unchanged |
-| 08-22 14:11 | expand | pass 337 — 0 new candidates, mirror-drain-gap unchanged |
-| 08-22 15:20 → 15:21 | audit | vendor countryCode GB display label fixed, closes `#900` (`51ac7372`/`66ea8edb`) |
-| 08-22 16:18 → 16:19 | audit | hall-effect-rapid-trigger-plateau — Gateron Oil King spark-spread overclaim corrected (`de71b610`/`49d22e02`) |
-| 08-22 17:16 | expand | pass 338 — 0 new candidates, mirror-drain-gap unchanged |
-| 08-22 18:26 | audit | `/ideas` double-priority hero images LCP fix, closes `#902` (`f8b3684f`/`7ad4bb1d`) |
-| 08-22 21:20 | expand | pass 339 — 0 new candidates, sub-threshold observations re-verified |
-| 08-22 22:27 | expand | pass 340 — 0 new candidates, signals unchanged |
-| 08-22 23:12 | expand | pass 341 — 0 new candidates, unchanged |
-| 08-23 02:49 → 02:50 | audit | outbound links — visual/AT-safe external indicator added, closes `#903` (`70e0be63`/`681ffe01`) |
-| 08-23 03:49 | audit | compare selectors — accept unknown slugs from query params, dead-click Compare button fixed, closes `#904` (`e96e3671`/`de23e438`) |
-| 08-23 04:20 → 05:17 | march ×2 | expand pass 342, 343 — 0 new candidates, unchanged |
-| 08-23 06:24 → 06:25 | audit | newsletter-gap-survey off-by-one from truncated/untruncated date mismatch fixed, closes `#905` (`b3cde795`/`c5d9b83c`) |
-| 08-23 07:36 | expand | pass 344 — 0 new candidates, unchanged |
-| 08-23 09:28 | audit | InlineViz zoom-trigger button missing focus-visible ring fixed, closes `#906` (`bcd49546`/`aa34158f`) |
-| 08-23 10:25 | audit | compare selectors — `react-hooks/exhaustive-deps` lint warnings cleared, closes `#907` (`fa9a76ca`/`19cdb509`) |
+| 08-23 11:05→11:31 | cloud march | a11y: footer Buttondown attribution external-link indicator, closes `#908` (`d28efd63`/`3e58ceae`) |
+| 08-23 12:06→12:30 | cloud march | a11y: Source citation link external-link indicator, closes `#909` (`ffc4c681`/`9a7d5d53`) |
+| 08-23 12:18→13:04 | **local /oversight** | drained 11 PRs → 0, 19 issues → 19→1; march crash-gate + heartbeat dedup fix; GH Actions bump; deps major bump (Next 16.3 + 4 more); 7 deep-dive articles; Lighthouse CI re-enabled + first green run (files `[4.5]` label-content-name-mismatch); OG font loader hotfix; **promoted phase 50** |
+| 08-23 13:13→13:36 | cloud march | phase 50 shipped — trend-snapshot data-quality gate (`fbae462a`/`620d2f2b`), one-time corpus scan files 3 `[data] [3.6]` direction/spark contradiction rows on old W19/W29 snapshots |
+| 08-23 14:05→14:23 | cloud march | expand pass 345 — 1 candidate filed: `[6.0]` catalog primary-source verification pass |
+| 08-23 15:05→15:37 | cloud march | data: mode-sonnet catalog correction — 75%/5.5°/Mounting Block System, closes `#911` |
+| 08-23 16:04→16:24 | cloud march | data: gazzew-boba-lt correction — linear not silent-linear, 55g/65g, closes `#912` |
+| 08-23 17:05→17:14 | cloud march | expand pass 346 — 0 candidates, catalog-verification candidate draining as expected |
+| 08-23 18:04→18:12 | cloud march | no-op |
+| 08-23 19:06→19:22 | cloud march | data: gateron-magnetic-jade correction — 30g/50g, 3.5mm travel |
+| 08-23 20:03→20:21 | cloud march | data: cherry-mx2a-silent-black correction — 60g/100g, 3.7mm travel |
+| 08-23 21:04→21:26 | cloud march | content: gazzew boba u4t — dampener location/lube wording/travel fix, closes `#914` |
+| 08-23 22:04→22:20 | cloud march | cross-links: gazzew-boba-family-deep-dive hub, 4 pairs drained |
+| 08-23 23:04→23:09 | cloud march | no-op |
+| 08-24 00:11→00:13 | cloud march | no-op |
+| 08-24 01:30→01:33 | cloud march | no-op |
+| 08-24 02:29→02:31 | cloud march | no-op |
+| 08-24 03:22→03:24 | cloud march | no-op |
+| 08-24 04:16→04:18 | cloud march | no-op |
+| 08-24 05:15→05:55 | cloud march | data: Monday trend snapshot `2026-W35` |
+| 08-24 06:14→06:36 | cloud march | content-gap row auto-filed + issue `#916` opened; guides pillar article shipped same tick — "Keyboard layout sizes, compared" |
+| 08-24 07:24→07:40 | cloud march | cross-links: why-stabilizers-rattle-deep-dive hub, 4 pairs drained — issue `#915` opened but **not auto-closed** (no `Closes` trailer; mirror-drain-gap instance) |
+| 08-24 08:16→08:34 | cloud march | expand pass 347 — 0 new candidates, cascade evidence appended to 2 pending candidates |
+| 08-24 09:17→09:33 | cloud march | cross-links: gateron-magnetic-jade-deep-dive hub, 2 pairs drained |
+| 08-24 10:14→10:27 | cloud march | cross-links: silent-switch-damping-deep-dive hub, 2 pairs drained |
 
 24 `march`-workflow runs since the last digest: **24 success, 0
 failure, 0 cancelled.** `night` ran success on its prior attempt
-(2026-08-22); this tick's run is in progress as this file writes.
+(2026-08-23); this tick's own run is in progress as this file
+writes. `lighthouse` ran twice since re-enable, both green.
 
 ## Shipped
 
-- **Eight mechanical fixes, all same-tick issue closes**: compare
-  selectors accepting unknown slugs from query params (dead-click
-  Compare button, `#904`), compare selectors' `react-hooks/exhaustive-deps`
-  lint warnings (`#907`), InlineViz zoom-trigger missing
-  focus-visible ring (`#906`), outbound links missing a visual/AT-safe
-  external indicator (`#903`), `/ideas` double-priority hero images
-  hurting LCP (`#902`), vendor `countryCode` GB display label broken
-  (`#900`), a newsletter-gap-survey off-by-one from a
-  truncated/untruncated date mismatch (`#905`), and a content
-  accuracy correction to the Gateron Oil King spark-spread claim in
-  `hall-effect-rapid-trigger-plateau` (no mirrored issue — content-only
-  fix).
-- **Seven GitHub issues closed** (`#900`, `#902`, `#903`, `#904`,
-  `#905`, `#906`, `#907`) — one fix (the Gateron content correction)
-  had no mirrored issue to close.
-- **Nine `/expand` passes** (336–344): 0 new candidates each, all
-  routine reinforcement or sub-threshold re-verification. No thrash,
-  nothing promoted or newly filed.
-- **No content shipped this window** — Rule 1 stayed comfortable
-  throughout; content-gap-survey filed nothing.
+- **5 catalog corrections against primary sources**, closing
+  `#911`, `#912`, `#914` (2 more had no mirrored issue):
+  mode-sonnet (layout/angle/mount), gazzew-boba-lt (weight/silence
+  classification), gateron-magnetic-jade (force/travel),
+  cherry-mx2a-silent-black (travel/force), gazzew boba u4t
+  (dampener location/lube/travel). 5 of the original 6 rows filed
+  by the 2026-08-23 `/oversight` fact-check are now drained; only
+  `mt3-devtty` (doubleshot vs. dye-sub) remains.
+- **12 cross-link pairs drained across 4 hub articles**:
+  gazzew-boba-family-deep-dive (4), why-stabilizers-rattle-deep-dive
+  (4, `#915` still open — mirror gap), gateron-magnetic-jade-deep-dive
+  (2), silent-switch-damping-deep-dive (2).
+- **2 a11y fixes**, both closing mirrored issues: footer Buttondown
+  attribution external-link indicator (`#908`), Source citation
+  external-link indicator (`#909`).
+- **1 content-gap article**: guides pillar, "Keyboard layout sizes,
+  compared: 60% to full-size, which fits your desk."
+- **1 Monday trend snapshot**: `2026-W35`.
+- **1 phase shipped**: phase 50, trend-snapshot data-quality gate —
+  promoted and shipped in the same window; its own first corpus
+  scan immediately found 3 pre-existing direction/spark
+  contradictions in older snapshots (now `[data] [3.6]` AUDIT rows).
+- **2 `/expand` passes** (345 filed 1 candidate — `[6.0]` catalog
+  primary-source verification; 346–347 filed 0 new, both
+  reinforcing already-Pending candidates with cascade evidence).
+- **Local `/oversight` session**: 11 PRs closed, 19→1 open issues,
+  march.yml crash-issue gate fixed, heartbeat.yml dedup scoped,
+  GitHub Actions bumped, a 5-package dependency major bump, 7
+  deep-dive articles, Lighthouse CI re-enabled, an OG font-loader
+  edge-bundle hotfix, and phase 50 promoted.
 
 ## Queues now
 
-- **Build plan**: all 51 phases shipped, 0 pending.
-- **Cross-link drain**: **0 open `[cross-links]` rows** — still
-  fully drained, unchanged from last digest.
-- **Critique**: pass 11, 2026-05-10 — **105 days / 2,404 commits**
-  stale. Diagnosed as architectural (no Chrome MCP on the cloud
-  runner); the diagnosis itself is now a filed `[score 6.5]
-  [needs-user-call]` `plan/PHASE_CANDIDATES.md` candidate awaiting
-  `/oversight` promotion — see Needs You below.
-- **Phase candidates**: **30 live pending** rows in
-  `plan/PHASE_CANDIDATES.md` (plus 1 `needs-user-call`), pass 344.
-  **70 days** since the last `/oversight` promotion (2026-06-14,
-  phases 46-49), unchanged. The `[7.5]` trend-snapshot data-quality
-  gate and the `[7.5]` content-fact-vs-catalog numeric-spec audit
-  remain the strongest candidates waiting on the next promotion.
+- **Build plan**: all 51 phases shipped (phase 50 landed this
+  window), 0 pending.
+- **Cross-link drain**: **2 open `[cross-links]` rows** — new pairs
+  surfaced from this window's content bursts (`leaf-spring-mount-deep-dive`
+  ↔ `60-percent-layout-history`; `building-mode-sonnet-with-oil-kings`
+  ↔ `gasket-mount-reality`), after 12 pairs drained the same window.
+- **Critique**: pass 11, 2026-05-10 — **106 days / ~2,460 commits**
+  stale. Diagnosis (no Chrome MCP on the cloud runner) remains
+  filed as a `[score 6.5] [needs-user-call]`
+  `plan/PHASE_CANDIDATES.md` candidate awaiting `/oversight`
+  promotion — see Needs You below.
+- **Phase candidates**: **31 live pending** rows (plus 1
+  `needs-user-call`), pass 347. Promotion clock reset **this
+  window** — phase 50 promoted 2026-08-23T12:54Z via local
+  `/oversight` (was 70 days stale as of last digest). The `[7.5]`
+  content-fact-vs-catalog numeric-spec audit (now 19 confirmed
+  instances) and the `[6.0]` catalog-verification pass (5/6 rows
+  self-drained this window) are the strongest remaining candidates.
 - **Data backlog**: empty — `data/BACKLOG.md`'s Pending section is
   fully checked off.
-- **Open GitHub issues**: **19 open**, unchanged. 0 unlabeled
-  (triage gate clean). **6 labeled `triage:needs-user`** (`#898`,
-  `#883`, `#756`, `#639`, `#499`, `#434`) — `#898` (`ACTIONS_PAT`
-  workflow-scope gap) is still open and still the highest-leverage
-  `/oversight` action available. 2 labeled `triage:reviewed`
-  (`#882`, `#437`, no action needed). 11 remaining `loop:opened`
-  issues are the standing mirror-drain-gap set, unchanged.
+- **Open GitHub issues**: **2 open** (down from 19 at the start of
+  this window). `#898` (`ACTIONS_PAT` workflow-scope gap) —
+  standing, needs the user's PAT regen. `#915` (why-stabilizers-rattle
+  cross-links) — fix already shipped (`69ea1906`/`89099a9a`) but the
+  issue never auto-closed; a live mirror-drain-gap instance, see
+  Needs You.
+- **`plan/AUDIT.md`**: **13 open rows**, up from 5 last digest — 2
+  cross-link pairs (above), 3 `[data] [3.6]` direction/spark
+  contradictions on old trend snapshots (phase 50's first corpus
+  scan), 1 `[mentionedParts] [3.6]`, 4 cascade rows from this
+  window's catalog corrections not yet propagated to dependent
+  prose/art (`content [3.4]`, `content [3.5]`, `seo [2.7]`, `content
+  [2.4]`), 1 `[data-gaps] [4.0]` (mt3-devtty, last of the original
+  6), 1 `[a11y] [4.5]` (Lighthouse label-content-name-mismatch), 1
+  `[perf] [4.2]` (`/search` JS at 144.4/150 KB, confirmed again in
+  this tick's own `size` leg at 144.5 KB).
 
 ## Breadth verdict
 
 Full `pnpm verify`, run as sequential foreground legs (per the
 standing rule — never backgrounded):
 
-- `typecheck` — green, 9 packages.
-- `lint` — green, all lintable workspaces (`next lint`'s Next-16
-  deprecation notice is cosmetic, not a failure).
-- `test:run` — green, **166 files / 1,227 tests** (web: 109 files /
-  849 tests; content: 24 files / 165 tests; data: 19 files / 129
-  tests; seo: 5 files / 44 tests; ui: 7 files / 31 tests; e2e-unit:
-  1 file / 6 tests; tokens: 1 file / 3 tests).
-- `test:scripts` — green, **74 suites / 208 tests**.
-- `data:validate` — green, **81 records**, all cross-refs resolve
-  (11 vendors, 18 switches, 10 keycap-sets, 10 boards, 17 group-buys,
-  15 trends).
+- `typecheck` — green, 9 workspace projects.
+- `lint` — green, all lintable workspaces.
+- `test:run` — green, **166 files / 1,230 tests** (web: 109/850;
+  content: 24/167; data: 19/129; seo: 5/44; ui: 7/31; e2e-unit:
+  1/6; tokens: 1/3).
+- `test:scripts` — green, **95 suites / 223 tests**.
+- `data:validate` — green, **82 records**, all cross-refs resolve
+  (11 vendors, 18 switches, 10 keycap-sets, 10 boards, 17
+  group-buys, 16 trends).
 - `build` — green, first attempt, no retries.
-- `size` — green, homepage bundle **108.8 KB / 200 KB** budget;
-  `/search` **106.5 KB / 150 KB** budget, unchanged.
-- `e2e` — green, **1,168/1,168** in ~7.9m. Console noise from
-  intentional not-found-route `NoFallbackError` probes during the
-  run is expected, not a regression (documented in prior digests).
-- `pnpm deploy:check` at HEAD (`19cdb509`) — deploy `READY`
-  (`dpl_2fDwhUkM`).
+- `size` — green, homepage bundle **147.1 KB / 200 KB** budget;
+  `/search` **144.5 KB / 150 KB** budget — the standing `[perf]
+  [4.2]` AUDIT row's 5.5 KB headroom holds, unchanged since flagged.
+- `e2e` — green, **1,201/1,201** in ~6.9m. Console `NoFallbackError`
+  noise during the run is from intentional not-found-route probes,
+  expected and non-blocking (same as prior digests).
+- `pnpm deploy:check` at HEAD (`92cff507`) — deploy `READY`
+  (`dpl_3jDqZkFV`).
 
 Zero red legs this tick — nothing new filed to `plan/AUDIT.md` from
-breadth. `plan/AUDIT.md` still carries exactly **5 open rows**, all
-the same standing non-autonomous items as last digest (Lighthouse-CI
-`[4.0]`, march.yml crash-issue-gate `[6.3]`, soft-404 structural-block
-`[needs-user-call]`, heartbeat.yml dedup-scope `[4.0]`, mirrored-issue-drain
-`[needs-user-call]`).
+breadth itself.
 
 ## Needs you
 
-1. **Standing, highest-leverage: `ACTIONS_PAT` lacks the
-   `workflows` PAT scope (`#898`).** Still unresolved. No cloud tick
-   can push a change to `.github/workflows/*.yml` until this is
-   fixed. Unblocks `#395` (march.yml crash-issue gate, `[6.3]`) and
-   `#620` (heartbeat.yml dedup scope, `[4.0]`) — a 5-minute token
-   change clears two standing AUDIT rows at once.
-2. **Standing: `plan/CRITIQUE.md` is 105 days stale.** Dark since
-   pass 11 (2026-05-10). The root cause (no Chrome MCP on the cloud
-   runner) is now formally filed as a `[score 6.5]
-   [needs-user-call]` candidate in `plan/PHASE_CANDIDATES.md` — the
-   next `/oversight` pass can act on it directly (e.g., decide
-   whether to run `/critique` locally on a manual cadence) rather
-   than needing fresh diagnosis.
-3. **Standing: Lighthouse CI disabled ~72 days**, `[4.0]`
-   `plan/AUDIT.md` row, `needs: /oversight call` on whether to
-   re-enable now or investigate the original 2026-06-12 disable
-   reason first.
-4. **Standing: mirror-drain-gap `[needs-user-call] [3.0]`** — still
-   at 11 open `loop:opened` issues, unchanged this window. No new
-   instances surfaced, but none drained either.
+1. **New this window: mirror-drain-gap live instance, `#915`.**
+   The why-stabilizers-rattle-deep-dive cross-link fix shipped
+   (`69ea1906`/`89099a9a`) but the commit carried no `Closes #915`
+   trailer, so the issue is still open with its fix already live.
+   Concrete evidence for the standing `[needs-user-call] [3.0]`
+   `plan/AUDIT.md` row — worth a manual `gh issue close 915` and,
+   longer-term, promoting that row so ship-time tooling verifies
+   the trailer before commit.
+2. **Standing, highest-leverage: `ACTIONS_PAT` lacks the
+   `workflows` PAT scope (`#898`).** Still unresolved. No cloud
+   tick can push a change to `.github/workflows/*.yml` until this
+   is fixed — the local `/oversight` session had to fix
+   `march.yml`/`heartbeat.yml` by hand this window because of it.
+3. **Standing: `plan/CRITIQUE.md` is 106 days stale.** Root cause
+   (no Chrome MCP on the cloud runner) is filed as a `[score 6.5]
+   [needs-user-call]` candidate, ready for the next `/oversight`
+   pass to act on directly.
+4. **Good news, not an ask: the `/oversight` promotion backlog
+   reset this window** (phase 50 promoted 2026-08-23T12:54Z,
+   1 day ago vs. 70 days at last digest). 31 pending candidates
+   remain; the `[7.5]` content-fact-vs-catalog audit (19 confirmed
+   instances) is the clearest next pick.
 5. **Standing: `[needs-user-call]` soft-404 structural conflict**
-   (`[4.2]`) — non-autonomous, unchanged.
-6. **Standing, growing: the `/oversight` promotion backlog.** 30
-   live candidates pending, 70 days since the last promotion. The
-   two `[7.5]` candidates (trend-snapshot data-quality gate,
-   content-fact-vs-catalog numeric audit) are the clearest next
-   picks, alongside the critique-gate diagnostic candidate above.
+   (`plan/AUDIT.md`, `[4.2]`) — non-autonomous, unchanged.
 
 ## Today's intent
 
-No phase or content-gap work is queued — Rule 1 is comfortable, the
-build plan is fully shipped, and the cross-link queue stays fully
-drained. The next `/march` tick's most likely autonomous action is
-another fresh audit sweep turning up one more sub-5.0 defect, the
-same steady-state pattern as this entire window (8 fixes in 24
-ticks, one qualifying finding roughly every 3 ticks). The open
-questions are unchanged from last digest: the `#898` PAT-scope fix
-remains the single highest-leverage `/oversight` action in the
-queue, alongside the standing asks above (critique staleness now
-with a filed candidate ready to act on, Lighthouse, the growing
-promotion backlog).
+No phase or content-gap work is queued — the build plan is fully
+shipped through phase 50, Rule 1 is comfortable. The 2 open
+cross-link pairs and the 4-row catalog-correction-cascade cluster
+in `plan/AUDIT.md` are the most likely next `/iterate` picks: both
+are exactly the reactive-discovery pattern the `[6.0]`
+catalog-verification and `[7.5]` content-fact-vs-catalog candidates
+already name, so draining them by hand keeps adding evidence to
+those candidates rather than closing the loop that keeps
+re-finding them. `#915` is the one item that needs a human hand
+today — a 10-second `gh issue close`.
 
 ## Tuning proposals
 
-**None new this tick.** The meta-loop signals visible tonight
-(mirror-drain-gap holding steady at 11, `/expand` cycling cleanly
-through 9 no-candidate passes with no thrash) are already filed as
-pending `plan/PHASE_CANDIDATES.md` candidates or GitHub issues from
-prior ticks. `/expand`'s cadence and hit-rate continue to look
-healthy; no fresh gate mistuning found.
+**None new this tick.** The mirror-drain-gap instance on `#915` is
+fresh *evidence*, not a new mechanism — it's already the exact
+shape the standing `[needs-user-call] [3.0]` `plan/AUDIT.md` row
+and the `[6.0]` "loop:opened issue mirror-drain gap" `plan/PHASE_CANDIDATES.md`
+candidate both name. No fresh candidate filed; the existing one
+gets this instance as its next confirmation the next time `/expand`
+runs its count.
