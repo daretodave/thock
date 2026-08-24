@@ -11,9 +11,9 @@
     "bottomOut": 67
   },
   "travelMm": 4.0,
-  "factoryLubed": false,
+  "factoryLubed": true,
   "releasedAt": "2020-03-01",
   "status": "in-production",
-  "description": "Heavy premium tactile with a sharp, pronounced bump near the top of the stroke. The nylon housing keeps sound muted and deep; the wide actuation-to-bottom-out spread gives deliberate feedback that builders often compare to the Topre experience at a fraction of the cost. Commonly paired with 205g0 lube on housing rails only — over-lubing kills the bump.",
+  "description": "Heavy premium tactile with a sharp, pronounced bump near the top of the stroke, shipped factory pre-lubed. The nylon housing keeps sound muted and deep; the wide actuation-to-bottom-out spread gives deliberate feedback that builders often compare to the Topre experience at a fraction of the cost. Any supplemental lube should stay on the housing rails only — over-lubing the bump face flattens the switch's signature bump.",
   "updatedAt": "2026-07-17T00:00:00.000Z"
 }
