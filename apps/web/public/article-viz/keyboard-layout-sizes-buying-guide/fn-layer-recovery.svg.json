@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-24T00:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "keyboard-layout-sizes-buying-guide",
+  "article_pillar": "guides",
+  "section_anchor": "what-a-firmware-layer-buys-back",
+  "brief_summary": "Three side-by-side panels, each showing a base-layer key row in warm-grey above an amber Fn-layer remap of the same physical positions: the number row remapped to F1-F12, the IJKL cluster remapped to arrow keys, and a corner of the alpha block remapped to Home/End/Page Up/Page Down. Illustrates that a 60% board's physical key count is unchanged; only the layer assignment differs.",
+  "target": "apps/web/public/article-viz/keyboard-layout-sizes-buying-guide/fn-layer-recovery.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "JetBrains Mono", "Newsreader"],
+  "data_sources": [
+    "keyboard-layout-sizes-buying-guide.mdx § 'What a firmware layer buys back' — 'A 60% board running QMK or VIA has those same keys one layer press away ... remapping the number row to F1-F12, or IJKL (or similar) to arrows, or a corner of the alpha block to Home/End/Page Up/Page Down'",
+    "keyboard-layout-sizes-buying-guide.mdx § 'What a firmware layer buys back' — 'The physical key count didn't change. What changed is where the second function of a key lives.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/keyboard-layout-sizes-buying-guide/fn-layer-recovery.svg"],
+  "warnings": []
+}

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — five keyboard-shape outlines at ascending width, left to right: 60%, 65%, 75%, TKL, and full-size, with ochre-marked arrow/nav clusters and a detached numpad block showing what each size step adds back</title>
+
+  <!-- ════════════════════════════════════════════════════════════════════════
+       COMPOSITION: a row of five abstract keyboard-footprint outlines,
+       narrowest to widest, left to right. Height is held constant across
+       all five so width alone carries the size story. What each step adds
+       is marked in ochre — the arrow cluster (65% on), the nav-cluster dots
+       (TKL on), and the detached numpad block (full-size only). 60% is the
+       only footprint with no ochre marks at all, since it drops the arrow
+       cluster entirely — the single most-cited fact about that size.
+       ════════════════════════════════════════════════════════════════════════ -->
+
+  <!-- Ochre wash behind the whole comparison -->
+  <ellipse cx="600" cy="390" rx="580" ry="190" fill="oklch(0.72 0.13 88 / 0.08)" stroke="none"/>
+
+  <!-- Top framing caption -->
+  <text x="600" y="150" font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.4" stroke="none" text-anchor="middle" letter-spacing="0.06em">SAME DESK, FIVE FOOTPRINTS</text>
+
+  <!-- ── BOARD 1 — 60% (w=130, no function row, no arrow cluster) ────────────── -->
+  <g transform="translate(40,310)">
+    <rect x="0" y="0" width="130" height="130" rx="8"/>
+    <g stroke-width="1.2" stroke-opacity="0.22">
+      <line x1="6" y1="33" x2="124" y2="33"/>
+      <line x1="6" y1="65" x2="124" y2="65"/>
+      <line x1="6" y1="98" x2="124" y2="98"/>
+    </g>
+  </g>
+
+  <!-- ── BOARD 2 — 65% (w=165, arrow cluster appears — ochre) ─────────────────── -->
+  <g transform="translate(198,310)">
+    <rect x="0" y="0" width="165" height="130" rx="8"/>
+    <g stroke-width="1.2" stroke-opacity="0.22">
+      <line x1="6" y1="33" x2="159" y2="33"/>
+      <line x1="6" y1="65" x2="159" y2="65"/>
+      <line x1="6" y1="98" x2="159" y2="98"/>
+    </g>
+    <!-- Arrow cluster — up key, then left/down/right row -->
+    <g fill="oklch(0.72 0.13 88 / 0.18)" stroke="oklch(0.72 0.13 88)" stroke-width="1.3">
+      <rect x="134" y="98" width="8" height="8" rx="1.5"/>
+      <rect x="125" y="108" width="8" height="8" rx="1.5"/>
+      <rect x="134" y="108" width="8" height="8" rx="1.5"/>
+      <rect x="143" y="108" width="8" height="8" rx="1.5"/>
+    </g>
+  </g>
+
+  <!-- ── BOARD 3 — 75% (w=200, function row returns) ──────────────────────────── -->
+  <g transform="translate(391,310)">
+    <rect x="0" y="-26" width="200" height="18" rx="4" stroke-opacity="0.85"/>
+    <rect x="0" y="0" width="200" height="130" rx="8"/>
+    <g stroke-width="1.2" stroke-opacity="0.22">
+      <line x1="6" y1="33" x2="194" y2="33"/>
+      <line x1="6" y1="65" x2="194" y2="65"/>
+      <line x1="6" y1="98" x2="194" y2="98"/>
+    </g>
+    <g fill="oklch(0.72 0.13 88 / 0.18)" stroke="oklch(0.72 0.13 88)" stroke-width="1.3">
+      <rect x="169" y="98" width="8" height="8" rx="1.5"/>
+      <rect x="160" y="108" width="8" height="8" rx="1.5"/>
+      <rect x="169" y="108" width="8" height="8" rx="1.5"/>
+      <rect x="178" y="108" width="8" height="8" rx="1.5"/>
+    </g>
+  </g>
+
+  <!-- ── BOARD 4 — TKL (w=235, nav-cluster dots join the arrow cluster) ───────── -->
+  <g transform="translate(619,310)">
+    <rect x="0" y="-26" width="235" height="18" rx="4" stroke-opacity="0.85"/>
+    <rect x="0" y="0" width="235" height="130" rx="8"/>
+    <g stroke-width="1.2" stroke-opacity="0.22">
+      <line x1="6" y1="33" x2="229" y2="33"/>
+      <line x1="6" y1="65" x2="229" y2="65"/>
+      <line x1="6" y1="98" x2="229" y2="98"/>
+    </g>
+    <!-- Nav cluster — 3x2 grid, ins/home/pgup over del/end/pgdn -->
+    <g fill="oklch(0.72 0.13 88 / 0.18)" stroke="oklch(0.72 0.13 88)" stroke-width="1.2">
+      <rect x="197" y="10" width="6" height="6" rx="1.5"/>
+      <rect x="206" y="10" width="6" height="6" rx="1.5"/>
+      <rect x="215" y="10" width="6" height="6" rx="1.5"/>
+      <rect x="197" y="19" width="6" height="6" rx="1.5"/>
+      <rect x="206" y="19" width="6" height="6" rx="1.5"/>
+      <rect x="215" y="19" width="6" height="6" rx="1.5"/>
+    </g>
+    <!-- Arrow cluster -->
+    <g fill="oklch(0.72 0.13 88 / 0.18)" stroke="oklch(0.72 0.13 88)" stroke-width="1.3">
+      <rect x="204" y="98" width="8" height="8" rx="1.5"/>
+      <rect x="195" y="108" width="8" height="8" rx="1.5"/>
+      <rect x="204" y="108" width="8" height="8" rx="1.5"/>
+      <rect x="213" y="108" width="8" height="8" rx="1.5"/>
+    </g>
+  </g>
+
+  <!-- ── BOARD 5 — full-size (w=235 alpha block, same nav+arrow treatment as TKL,
+       plus a detached numpad block — the widest footprint, ochre focal dot) ──── -->
+  <g transform="translate(880,310)">
+    <rect x="0" y="-26" width="235" height="18" rx="4" stroke-opacity="0.85"/>
+    <rect x="0" y="0" width="235" height="130" rx="8"/>
+    <g stroke-width="1.2" stroke-opacity="0.22">
+      <line x1="6" y1="33" x2="229" y2="33"/>
+      <line x1="6" y1="65" x2="229" y2="65"/>
+      <line x1="6" y1="98" x2="229" y2="98"/>
+    </g>
+    <g fill="oklch(0.72 0.13 88 / 0.18)" stroke="oklch(0.72 0.13 88)" stroke-width="1.2">
+      <rect x="197" y="10" width="6" height="6" rx="1.5"/>
+      <rect x="206" y="10" width="6" height="6" rx="1.5"/>
+      <rect x="215" y="10" width="6" height="6" rx="1.5"/>
+      <rect x="197" y="19" width="6" height="6" rx="1.5"/>
+      <rect x="206" y="19" width="6" height="6" rx="1.5"/>
+      <rect x="215" y="19" width="6" height="6" rx="1.5"/>
+    </g>
+    <g fill="oklch(0.72 0.13 88 / 0.18)" stroke="oklch(0.72 0.13 88)" stroke-width="1.3">
+      <rect x="204" y="98" width="8" height="8" rx="1.5"/>
+      <rect x="195" y="108" width="8" height="8" rx="1.5"/>
+      <rect x="204" y="108" width="8" height="8" rx="1.5"/>
+      <rect x="213" y="108" width="8" height="8" rx="1.5"/>
+    </g>
+  </g>
+
+  <!-- Detached numpad block — full-size only, spans the same total height as
+       the function row + main body above (y 284 → 440), ochre outline+wash -->
+  <rect x="1100" y="284" width="60" height="156" rx="6" fill="oklch(0.72 0.13 88 / 0.10)" stroke="oklch(0.72 0.13 88)"/>
+  <g stroke-width="1.1" stroke-opacity="0.22">
+    <line x1="1120" y1="284" x2="1120" y2="440"/>
+    <line x1="1140" y1="284" x2="1140" y2="440"/>
+    <line x1="1100" y1="323" x2="1160" y2="323"/>
+    <line x1="1100" y1="362" x2="1160" y2="362"/>
+    <line x1="1100" y1="401" x2="1160" y2="401"/>
+  </g>
+
+  <!-- Focal dot — the numpad, the single largest addition across the five
+       sizes and the anchor point of the whole comparison -->
+  <circle cx="1130" cy="362" r="6" fill="oklch(0.72 0.13 88 / 0.95)" stroke="oklch(0.72 0.13 88)"/>
+
+  <!-- Size scale rail — dashed baseline under the row with a tick per board
+       center and an arrowhead marking the direction of growth -->
+  <line x1="40" y1="520" x2="1150" y2="520" stroke-opacity="0.28" stroke-dasharray="4 6"/>
+  <g stroke-opacity="0.32">
+    <line x1="105" y1="515" x2="105" y2="525"/>
+    <line x1="272" y1="515" x2="272" y2="525"/>
+    <line x1="475" y1="515" x2="475" y2="525"/>
+    <line x1="712" y1="515" x2="712" y2="525"/>
+    <line x1="1005" y1="515" x2="1005" y2="525"/>
+  </g>
+  <path d="M 1150 512 L 1162 520 L 1150 528" stroke-opacity="0.5"/>
+
+  <!-- Panel labels -->
+  <g font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="18" font-weight="600" fill="oklch(0.78 0.005 90)" fill-opacity="0.85" stroke="none" text-anchor="middle">
+    <text x="105" y="472">60%</text>
+    <text x="272" y="472">65%</text>
+    <text x="475" y="472">75%</text>
+    <text x="712" y="472">TKL</text>
+    <text x="1005" y="472">FULL-SIZE</text>
+  </g>
+
+  <!-- Per-panel mono descriptors — approximate, widely-cited key counts -->
+  <g font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace" font-size="10" fill="oklch(0.78 0.005 90)" fill-opacity="0.42" stroke="none" text-anchor="middle" letter-spacing="0.02em">
+    <text x="105" y="492">~61 KEYS</text>
+    <text x="272" y="492">~68 KEYS</text>
+    <text x="475" y="492">~84 KEYS</text>
+    <text x="712" y="492">~87 KEYS</text>
+    <text x="1005" y="492">~104 KEYS</text>
+  </g>
+
+  <!-- Bottom technical caption -->
+  <text x="40" y="706" font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace" font-size="10" fill="oklch(0.78 0.005 90)" fill-opacity="0.35" stroke="none" letter-spacing="0.03em">WIDTH GROWS AS THE NAV CLUSTER, ARROWS, AND NUMPAD COME BACK</text>
+
+  <!-- Bronze theme dot — family ornamental anchor, upper-right margin -->
+  <circle cx="1148" cy="92" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

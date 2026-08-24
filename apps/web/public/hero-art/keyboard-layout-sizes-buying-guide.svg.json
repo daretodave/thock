@@ -1,0 +1,31 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-24T00:00:00Z",
+  "commit": "1ca0d74493dc6414945a5ec43f1451b1d3410891",
+  "kind": "hero-art",
+  "article_slug": "keyboard-layout-sizes-buying-guide",
+  "article_pillar": "guides",
+  "brief_summary": "Hero art for the guides-pillar buying guide comparing keyboard layout sizes (60%, 65%, 75%, TKL, full-size). Motif: five abstract keyboard-footprint outlines at graduated width, left to right, ascending from 60% to full-size, height held constant so width alone carries the size story.",
+  "target": "apps/web/public/hero-art/keyboard-layout-sizes-buying-guide.svg",
+  "source": "plan/bearings.md § Article hero art — colorful keyboard SVGs, guide-pillar convention (annotated keyboard-row / layout silhouette treatment)",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject; guide default reinterpreted here as a size-comparison row of five silhouettes since the article's literal subject is layout footprints",
+  "size": [1200, 750],
+  "subject": "Five keyboard-shape outlines at ascending width, left to right — 60%, 65%, 75%, TKL, full-size. Height is constant across all five so width alone tells the size story. Ochre marks what each size step adds back: the arrow cluster appears at 65%, the function-row strip returns at 75%, a small nav-cluster dot grid joins at TKL, and a detached numpad block (the widest addition) appears only at full-size, carrying the focal dot. 60% is the only footprint with no ochre marks — it drops the arrow cluster entirely, the single most-cited fact distinguishing that size.",
+  "splash_color": {
+    "name": "ochre",
+    "oklch": "oklch(0.72 0.13 88)"
+  },
+  "accent_color": {
+    "name": "warm-bronze (theme accent)",
+    "oklch": "oklch(0.80 0.135 75)"
+  },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "tokens_sha256": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": ["IBM Plex Sans", "JetBrains Mono"],
+  "outputs": [
+    "apps/web/public/hero-art/keyboard-layout-sizes-buying-guide.svg"
+  ],
+  "warnings": []
+}

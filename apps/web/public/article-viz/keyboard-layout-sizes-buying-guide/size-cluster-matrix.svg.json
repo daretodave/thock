@@ -1,0 +1,26 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-24T00:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "keyboard-layout-sizes-buying-guide",
+  "article_pillar": "guides",
+  "section_anchor": "the-five-sizes-and-what-each-one-removes",
+  "brief_summary": "Five-row by five-column matrix comparing full-size, TKL, 75%, 65%, and 60% keyboard layouts across numpad, function row, navigation cluster, arrow cluster presence, and approximate key count. Filled amber dots mark dedicated-key clusters, half-filled dots mark compressed/partial clusters, open dashed circles mark clusters removed entirely and pushed to a firmware layer.",
+  "target": "apps/web/public/article-viz/keyboard-layout-sizes-buying-guide/size-cluster-matrix.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "JetBrains Mono", "Newsreader"],
+  "data_sources": [
+    "keyboard-layout-sizes-buying-guide.mdx § 'The five sizes, and what each one removes' — 'A full-size board runs roughly 104 keys — the alpha block, a function row, a navigation cluster ... a dedicated arrow cluster, and a full numeric keypad'",
+    "keyboard-layout-sizes-buying-guide.mdx § 'The five sizes, and what each one removes' — '**TKL** removes only the numpad, landing around 87 keys'",
+    "keyboard-layout-sizes-buying-guide.mdx § 'The five sizes, and what each one removes' — '**75%** removes the numpad and compresses the function row, nav cluster, and arrows ... typically landing in the low-to-mid 80s'",
+    "keyboard-layout-sizes-buying-guide.mdx § 'The five sizes, and what each one removes' — '**65%** removes the function row entirely, along with most of the navigation cluster ... around 66-68 keys'",
+    "keyboard-layout-sizes-buying-guide.mdx § 'The five sizes, and what each one removes' — '**60%** removes the function row, the full navigation cluster, and the arrow cluster ... around 61 keys'"
+  ],
+  "outputs": ["apps/web/public/article-viz/keyboard-layout-sizes-buying-guide/size-cluster-matrix.svg"],
+  "warnings": []
+}

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Five reader profiles mapped to a recommended keyboard size: programmer without heavy layer habits to 75% or TKL, gamer to 65% or TKL, spreadsheet-heavy work to full-size or TKL plus numpad, minimalist or travel to 65% or 60%, and a reader already fluent with layers to 60%</title>
+
+  <!-- Panel 1: Programmer -->
+  <rect x="40" y="60" width="208" height="300" rx="10" stroke-opacity="0.85"/>
+  <circle cx="80" cy="100" r="16" fill="none" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.9"/>
+  <text x="80" y="106" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" font-weight="600">1</text>
+  <text x="62" y="145" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" font-weight="600">Programmer,</text>
+  <text x="62" y="164" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" font-weight="600">no layer habit</text>
+  <text x="62" y="200" font-family="IBM Plex Sans, sans-serif" font-size="12.5" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">Function row and</text>
+  <text x="62" y="219" font-family="IBM Plex Sans, sans-serif" font-size="12.5" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">IDE shortcuts stay</text>
+  <text x="62" y="238" font-family="IBM Plex Sans, sans-serif" font-size="12.5" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">dedicated keys.</text>
+  <line x1="62" y1="270" x2="226" y2="270" stroke-opacity="0.25"/>
+  <text x="62" y="300" font-family="Newsreader, serif" font-style="italic" font-size="17" fill="oklch(0.78 0.10 80)" stroke="none">75% or TKL</text>
+
+  <!-- Panel 2: Gamer -->
+  <rect x="268" y="60" width="208" height="300" rx="10" stroke-opacity="0.85"/>
+  <circle cx="308" cy="100" r="16" fill="none" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.9"/>
+  <text x="308" y="106" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" font-weight="600">2</text>
+  <text x="290" y="145" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" font-weight="600">Gamer</text>
+  <text x="290" y="200" font-family="IBM Plex Sans, sans-serif" font-size="12.5" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">Dedicated arrows,</text>
+  <text x="290" y="219" font-family="IBM Plex Sans, sans-serif" font-size="12.5" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">desk room for a</text>
+  <text x="290" y="238" font-family="IBM Plex Sans, sans-serif" font-size="12.5" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">wide mouse swing.</text>
+  <line x1="290" y1="270" x2="454" y2="270" stroke-opacity="0.25"/>
+  <text x="290" y="300" font-family="Newsreader, serif" font-style="italic" font-size="17" fill="oklch(0.78 0.10 80)" stroke="none">65% or TKL</text>
+
+  <!-- Panel 3: Spreadsheet-heavy -->
+  <rect x="496" y="60" width="208" height="300" rx="10" stroke-opacity="0.85"/>
+  <circle cx="536" cy="100" r="16" fill="none" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.9"/>
+  <text x="536" y="106" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" font-weight="600">3</text>
+  <text x="518" y="145" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" font-weight="600">Spreadsheet-</text>
+  <text x="518" y="164" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" font-weight="600">heavy work</text>
+  <text x="518" y="200" font-family="IBM Plex Sans, sans-serif" font-size="12.5" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">A layer can't match</text>
+  <text x="518" y="219" font-family="IBM Plex Sans, sans-serif" font-size="12.5" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">a real numpad's</text>
+  <text x="518" y="238" font-family="IBM Plex Sans, sans-serif" font-size="12.5" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">touch-typing speed.</text>
+  <line x1="518" y1="270" x2="682" y2="270" stroke-opacity="0.25"/>
+  <text x="518" y="292" font-family="Newsreader, serif" font-style="italic" font-size="15" fill="oklch(0.78 0.10 80)" stroke="none">Full-size or TKL</text>
+  <text x="518" y="312" font-family="Newsreader, serif" font-style="italic" font-size="15" fill="oklch(0.78 0.10 80)" stroke="none">+ numpad</text>
+
+  <!-- Panel 4: Minimalist / travel -->
+  <rect x="724" y="60" width="208" height="300" rx="10" stroke-opacity="0.85"/>
+  <circle cx="764" cy="100" r="16" fill="none" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.9"/>
+  <text x="764" y="106" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" font-weight="600">4</text>
+  <text x="746" y="145" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" font-weight="600">Minimalist</text>
+  <text x="746" y="164" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" font-weight="600">or travel</text>
+  <text x="746" y="200" font-family="IBM Plex Sans, sans-serif" font-size="12.5" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">Desk and bag space</text>
+  <text x="746" y="219" font-family="IBM Plex Sans, sans-serif" font-size="12.5" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">outweigh a week of</text>
+  <text x="746" y="238" font-family="IBM Plex Sans, sans-serif" font-size="12.5" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">layer muscle memory.</text>
+  <line x1="746" y1="270" x2="910" y2="270" stroke-opacity="0.25"/>
+  <text x="746" y="300" font-family="Newsreader, serif" font-style="italic" font-size="17" fill="oklch(0.78 0.10 80)" stroke="none">65% or 60%</text>
+
+  <!-- Panel 5: Layer-fluent -->
+  <rect x="952" y="60" width="208" height="300" rx="10" stroke-opacity="0.85"/>
+  <circle cx="992" cy="100" r="16" fill="none" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.9"/>
+  <text x="992" y="106" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" font-weight="600">5</text>
+  <text x="974" y="145" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" font-weight="600">Already layer-</text>
+  <text x="974" y="164" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" font-weight="600">fluent (e.g. Vim)</text>
+  <text x="974" y="200" font-family="IBM Plex Sans, sans-serif" font-size="12.5" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">The Fn-press habit</text>
+  <text x="974" y="219" font-family="IBM Plex Sans, sans-serif" font-size="12.5" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">already exists;</text>
+  <text x="974" y="238" font-family="IBM Plex Sans, sans-serif" font-size="12.5" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">nothing new to learn.</text>
+  <line x1="974" y1="270" x2="1138" y2="270" stroke-opacity="0.25"/>
+  <text x="974" y="300" font-family="Newsreader, serif" font-style="italic" font-size="17" fill="oklch(0.78 0.10 80)" stroke="none">60%</text>
+
+  <!-- Brass-bronze theme dot -->
+  <circle cx="1170" cy="30" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "slug": "keyboard-layout-sizes-buying-guide",
+      "readTime": 8,
+      "frontmatter": {
+        "title": "Keyboard layout sizes, compared: 60% to full-size, which fits your desk",
+        "lede": "60%, 65%, 75%, TKL, full-size — the names read like a settled taxonomy, but each cut trades away a specific cluster of keys for a specific amount of desk space. Here's what a reader actually keeps and gives up at each size, and how a firmware layer changes the math.",
+        "pillar": "guides",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "gateron-magnetic-jade-deep-dive",
       "readTime": 11,
       "frontmatter": {
@@ -893,6 +903,11 @@
   ],
   "tags": [
     {
+      "slug": "60",
+      "name": "60%",
+      "category": "layout"
+    },
+    {
       "slug": "65",
       "name": "65%",
       "category": "layout"
@@ -1241,6 +1256,11 @@
       "slug": "tactile",
       "name": "Tactile",
       "category": "switch"
+    },
+    {
+      "slug": "tkl",
+      "name": "TKL",
+      "category": "layout"
     },
     {
       "slug": "tmr",
@@ -6596,5 +6616,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-08-24T05:45:32.905Z"
+  "generatedAt": "2026-08-24T06:26:04.349Z"
 }

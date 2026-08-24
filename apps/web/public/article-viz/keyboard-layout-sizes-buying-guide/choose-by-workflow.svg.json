@@ -1,0 +1,26 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-24T00:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "keyboard-layout-sizes-buying-guide",
+  "article_pillar": "guides",
+  "section_anchor": "how-to-actually-choose",
+  "brief_summary": "Five numbered panels mapping reader workflow profiles to a recommended keyboard size: programmer without a heavy layer habit to 75% or TKL, gamer to 65% or TKL, spreadsheet-heavy work to full-size or TKL plus numpad, minimalist/travel buyer to 65% or 60%, and a reader already fluent with layers (e.g. Vim) to 60%. Recommendations are drawn directly from the article's 'Matching the size to the actual workflow' section.",
+  "target": "apps/web/public/article-viz/keyboard-layout-sizes-buying-guide/choose-by-workflow.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "JetBrains Mono", "Newsreader"],
+  "data_sources": [
+    "keyboard-layout-sizes-buying-guide.mdx § 'Matching the size to the actual workflow' — 'That combination makes 75% or TKL the more defensible default' (programmers)",
+    "keyboard-layout-sizes-buying-guide.mdx § 'Matching the size to the actual workflow' — '65% or TKL both serve that well' (gamers)",
+    "keyboard-layout-sizes-buying-guide.mdx § 'Matching the size to the actual workflow' — 'Readers who genuinely touch-type numbers all day are shopping for full-size or a TKL-plus-separate-numpad combo' (spreadsheet-heavy work)",
+    "keyboard-layout-sizes-buying-guide.mdx § 'Matching the size to the actual workflow' — 'Minimalists and travel-focused buyers are the group 60% and 65% were built for'",
+    "keyboard-layout-sizes-buying-guide.mdx § 'What a firmware layer buys back' — 'A programmer who's already fluent in a heavily-layered editor (Vim-style modal navigation, for instance) is the exception that makes 65% or even 60% work well'"
+  ],
+  "outputs": ["apps/web/public/article-viz/keyboard-layout-sizes-buying-guide/choose-by-workflow.svg"],
+  "warnings": []
+}

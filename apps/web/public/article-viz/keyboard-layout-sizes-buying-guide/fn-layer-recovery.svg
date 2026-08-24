@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Three panels showing what a 60% board's Fn layer recovers: the number row remapped to F1 through F12, IJKL remapped to arrow keys, and a corner of the alpha block remapped to Home, End, Page Up, and Page Down</title>
+
+  <!-- ══ PANEL 1: NUMBER ROW → F-ROW ═══════════════════════════════ -->
+  <text x="60" y="46" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" font-weight="600" letter-spacing="0.05em" opacity="0.8">NUMBER ROW</text>
+
+  <g stroke-opacity="0.75">
+    <rect x="60" y="60" width="34" height="34" rx="5"/>
+    <rect x="100" y="60" width="34" height="34" rx="5"/>
+    <rect x="140" y="60" width="34" height="34" rx="5"/>
+    <rect x="180" y="60" width="34" height="34" rx="5"/>
+    <rect x="220" y="60" width="34" height="34" rx="5"/>
+    <rect x="260" y="60" width="34" height="34" rx="5"/>
+  </g>
+  <g font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.8">
+    <text x="77" y="82">1</text><text x="117" y="82">2</text><text x="157" y="82">3</text>
+    <text x="197" y="82">4</text><text x="237" y="82">5</text><text x="277" y="82">6</text>
+  </g>
+  <text x="60" y="128" font-family="Newsreader, serif" font-style="italic" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">base layer</text>
+
+  <line x1="177" y1="150" x2="177" y2="205" stroke-opacity="0.5"/>
+  <path d="M 168 197 L 177 207 L 186 197" stroke-opacity="0.5"/>
+  <text x="190" y="182" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.10 80)" stroke="none" opacity="0.9">Fn held</text>
+
+  <g stroke="oklch(0.78 0.10 80)" stroke-opacity="0.9">
+    <rect x="60" y="215" width="34" height="34" rx="5"/>
+    <rect x="100" y="215" width="34" height="34" rx="5"/>
+    <rect x="140" y="215" width="34" height="34" rx="5"/>
+    <rect x="180" y="215" width="34" height="34" rx="5"/>
+    <rect x="220" y="215" width="34" height="34" rx="5"/>
+    <rect x="260" y="215" width="34" height="34" rx="5"/>
+  </g>
+  <g font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.95">
+    <text x="77" y="236">F1</text><text x="117" y="236">F2</text><text x="157" y="236">F3</text>
+    <text x="197" y="236">F4</text><text x="237" y="236">F5</text><text x="277" y="236">F6</text>
+  </g>
+  <text x="60" y="283" font-family="Newsreader, serif" font-style="italic" font-size="14" fill="oklch(0.78 0.10 80)" stroke="none" opacity="0.95">Fn layer &#8212; F1&#8211;F12</text>
+
+  <!-- ══ PANEL 2: IJKL → ARROWS ═════════════════════════════════════ -->
+  <line x1="420" y1="30" x2="420" y2="410" stroke-opacity="0.15" stroke-dasharray="3 7"/>
+
+  <text x="460" y="46" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" font-weight="600" letter-spacing="0.05em" opacity="0.8">I J K L</text>
+  <g stroke-opacity="0.75">
+    <rect x="460" y="60" width="34" height="34" rx="5"/>
+    <rect x="500" y="60" width="34" height="34" rx="5"/>
+    <rect x="540" y="60" width="34" height="34" rx="5"/>
+    <rect x="580" y="60" width="34" height="34" rx="5"/>
+  </g>
+  <g font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.8">
+    <text x="477" y="82">I</text><text x="517" y="82">J</text><text x="557" y="82">K</text><text x="597" y="82">L</text>
+  </g>
+  <text x="460" y="128" font-family="Newsreader, serif" font-style="italic" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">base layer</text>
+
+  <line x1="527" y1="150" x2="527" y2="205" stroke-opacity="0.5"/>
+  <path d="M 518 197 L 527 207 L 536 197" stroke-opacity="0.5"/>
+  <text x="540" y="182" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.10 80)" stroke="none" opacity="0.9">Fn held</text>
+
+  <g stroke="oklch(0.78 0.10 80)" stroke-opacity="0.9">
+    <rect x="460" y="215" width="34" height="34" rx="5"/>
+    <rect x="500" y="215" width="34" height="34" rx="5"/>
+    <rect x="540" y="215" width="34" height="34" rx="5"/>
+    <rect x="580" y="215" width="34" height="34" rx="5"/>
+  </g>
+  <g stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" fill="none">
+    <path d="M 477 234 L 477 224 M 471 230 L 477 224 L 483 230" stroke-width="1.6"/>
+    <path d="M 517 232 L 507 232 M 511 226 L 505 232 L 511 238" stroke-width="1.6"/>
+    <path d="M 557 234 L 557 244 M 551 238 L 557 244 L 563 238" stroke-width="1.6"/>
+    <path d="M 597 232 L 607 232 M 601 226 L 607 232 L 601 238" stroke-width="1.6"/>
+  </g>
+  <text x="460" y="283" font-family="Newsreader, serif" font-style="italic" font-size="14" fill="oklch(0.78 0.10 80)" stroke="none" opacity="0.95">Fn layer &#8212; arrows</text>
+
+  <!-- ══ PANEL 3: CORNER → NAV CLUSTER ══════════════════════════════ -->
+  <line x1="820" y1="30" x2="820" y2="410" stroke-opacity="0.15" stroke-dasharray="3 7"/>
+
+  <text x="860" y="46" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" font-weight="600" letter-spacing="0.05em" opacity="0.8">U I O P</text>
+  <g stroke-opacity="0.75">
+    <rect x="860" y="60" width="34" height="34" rx="5"/>
+    <rect x="900" y="60" width="34" height="34" rx="5"/>
+    <rect x="940" y="60" width="34" height="34" rx="5"/>
+    <rect x="980" y="60" width="34" height="34" rx="5"/>
+  </g>
+  <g font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.8">
+    <text x="877" y="82">U</text><text x="917" y="82">I</text><text x="957" y="82">O</text><text x="997" y="82">P</text>
+  </g>
+  <text x="860" y="128" font-family="Newsreader, serif" font-style="italic" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">base layer</text>
+
+  <line x1="927" y1="150" x2="927" y2="205" stroke-opacity="0.5"/>
+  <path d="M 918 197 L 927 207 L 936 197" stroke-opacity="0.5"/>
+  <text x="940" y="182" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.10 80)" stroke="none" opacity="0.9">Fn held</text>
+
+  <g stroke="oklch(0.78 0.10 80)" stroke-opacity="0.9">
+    <rect x="860" y="215" width="34" height="34" rx="5"/>
+    <rect x="900" y="215" width="34" height="34" rx="5"/>
+    <rect x="940" y="215" width="34" height="34" rx="5"/>
+    <rect x="980" y="215" width="34" height="34" rx="5"/>
+  </g>
+  <g font-family="JetBrains Mono, monospace" font-size="10.5" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.95">
+    <text x="877" y="235">Home</text><text x="917" y="235">End</text><text x="957" y="235">PgUp</text><text x="997" y="235">PgDn</text>
+  </g>
+  <text x="860" y="283" font-family="Newsreader, serif" font-style="italic" font-size="14" fill="oklch(0.78 0.10 80)" stroke="none" opacity="0.95">Fn layer &#8212; nav</text>
+
+  <!-- Footer note -->
+  <text x="60" y="400" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">Physical key count is unchanged. QMK/VIA/VIAL define which function each position holds while Fn is held.</text>
+
+  <!-- Brass-bronze theme dot -->
+  <circle cx="1170" cy="30" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>
