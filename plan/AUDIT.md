@@ -12322,3 +12322,14 @@ passes accumulate signals.)
 - next: rewrite the "same stem" framing in all three articles to acknowledge two variables (dampening pads + stem pole length) while keeping the acoustic thesis (pads drive the sound difference) intact
 - issue: #932
 > **Resolved (2026-08-25):** Rewrote the lede, intro, and "One stem, two finishes" section (renamed "What's shared, what isn't") in `gazzew-boba-u4t-deep-dive.mdx`; corrected "the U4's stem and housing" → "the U4's housing" in `silent-switch-damping-deep-dive.mdx`; corrected the intro framing, "share a POM stem" claim, and "the same switch with the dampeners left out" line in `gazzew-boba-family-deep-dive.mdx`. All three now state the U4T's longer-pole stem as a second, travel-affecting variable alongside the dampening pads, while keeping the acoustic mechanism (pads drive the sound difference, not the pole length) unchanged. `pnpm verify` full gate green: typecheck, lint, unit tests, test:scripts, data:validate, build, size, 1201/1201 e2e.
+
+### [x] [content] [5.4] silent-switch-damping-deep-dive inverts the Gazzew Boba U4 factory-lube footprint — addressed in `704f62f5`, closes #933
+- category: content
+- filed: 2026-08-25 by cloud /iterate audit (delegated general-purpose sweep, angle: cross-article factual consistency on entities with recent corrections)
+- impact: 6 (a factory-lube claim in a heavily cross-linked deep-dive directly contradicts the canonical data record and two sibling articles, and contradicts its own follow-on clause about what fixes the "leathery scratch")
+- ease: 9 (one-sentence prose edit, no schema/data change)
+- score: 5.4 (impact × ease / 10)
+- evidence: `apps/web/src/content/articles/silent-switch-damping-deep-dive.mdx:109` stated "Gazzew lubes the U4's rails and leaves the spring dry"; `data/switches/gazzew-boba-u4.json` and `data/switches/gazzew-boba-u4t.json` both state "lubed at the leaf and spring bottom; slide rails ship dry"; `gazzew-boba-family-deep-dive.mdx` confirms the same footprint ("treats... the leaf and the spring... leaves the rail surfaces for the builder"). The article's own next clause — a "light rail lube" clears up the "leathery scratch" — only makes sense if the rails ship dry, so the sentence was internally contradictory as well as contradicting three other sources.
+- next: swap the clause to match the canonical footprint (leaf + spring bottom lubed, rails dry)
+- issue: #933
+> **Resolved (2026-08-25):** Rewrote `silent-switch-damping-deep-dive.mdx:109` to "Gazzew lubes the U4's leaf and spring bottom and leaves the rails dry" — matching the canonical data record and sibling articles, and resolving the internal contradiction with the following "light rail lube" clause. No other lube references in the article needed changes. `pnpm verify` full gate green: typecheck, lint, unit tests, test:scripts, data:validate, build, size, 1201/1201 e2e.
