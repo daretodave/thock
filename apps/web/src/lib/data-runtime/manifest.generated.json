@@ -1214,7 +1214,7 @@
         {
           "name": "Prototypist",
           "category": "vendor",
-          "direction": "up",
+          "direction": "flat",
           "score": 14,
           "spark": [
             4,
@@ -10560,5 +10560,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-08-24T22:12:07.930Z"
+  "generatedAt": "2026-08-25T00:17:29.569Z"
 }

@@ -104,7 +104,7 @@
     {
       "name": "Prototypist",
       "category": "vendor",
-      "direction": "up",
+      "direction": "flat",
       "score": 14,
       "spark": [4, 6, 8, 10, 11, 13, 14, 14],
       "articleSlug": "vendor-first-customs",
