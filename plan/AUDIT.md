@@ -84,6 +84,27 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [bug] [4.2] quiz recommender: explicit clicky selection can lose to tactile switches on incidental cross-axis credit — addressed in `ce0be957`, closes #934
+- category: bug
+- filed: 2026-08-25 by cloud /iterate audit (fresh general-purpose sweep, angle: quiz recommender scoring edge cases)
+- impact: 6 (`recommendSwitch.ts` powers the sole `/quiz/switch` result surface; the bug silently drops the user's most explicit signal — the specific feel they clicked — for a non-trivial fraction of realistic answer combinations)
+- ease: 7 (single constant change in a pure helper module, plus one regression test; no schema/route change)
+- score: 4.2 (impact × ease / 10)
+- evidence: simulated all 108 realistic `{soundProfile, actuationFeel, springWeight, primaryUse}` combinations against the live `data/switches/*.json` catalog (18 records) — 39/108 returned a top-1 result whose type didn't match the explicitly-selected `actuationFeel` even when a matching, in-production switch existed. Concrete repro: `{thocky, clicky, medium, typing}` scores both clicky switches at 20, tied with three tactile switches, then loses the alphabetical tie-break.
+- next: raise `ACTUATION_FEEL_WEIGHT` past the other three axes' max combined credit (26); add regression test
+- issue: #934
+> **Resolved (2026-08-25):** raised `ACTUATION_FEEL_WEIGHT` from 8 to 30 in `apps/web/src/lib/quiz/recommendSwitch.ts` (comfortably clears the 26-point ceiling: soundProfile max 10 + springWeight max 8 + primaryUse max 8). Re-ran the 108-combination simulation at the new weight: 0 mismatches. New regression test (case M) reproduces the exact reported tie. `pnpm verify` full gate green: typecheck, lint, unit tests (13 quiz-recommender cases), script tests, data:validate, build, size, 1201/1201 e2e.
+> Picked as the top signal this tick (cloud `/march`): no unlabeled GitHub issues; not Monday (W35 snapshot exists); no pending phases/data/content-gap work (all 8 mechanical surveys re-ran clean); march's own expand Step 3c gate not due (1 commit/~1h43m since pass 355, threshold 20 commits/48h). Dispatched a fresh general-purpose sweep with angles disjoint from pass 355 (sitemap lastmod accuracy, image CLS/raw-`<img>` discipline, external-link `rel`/`target` discipline, canonical-URL correctness on dynamic routes, newest-5-articles proofread, compare-table null handling, quiz recommender logic, search-index/manifest freshness, robots.txt, TODO/console.log sweep, trends-tracker archive internal consistency) — this quiz-recommender scoring bug and a missing-week gap in the trends tracker archive (filed below, sub-3.0-adjacent, needs an editorial call) were the only two findings clearing the bar; this one scored higher and is a pure mechanical fix.
+
+### [ ] [data] [3.5] Trends Tracker archive has a silent missing week (2026-W34) — contradicts the page's own "weekly" framing
+- category: data
+- filed: 2026-08-25 by cloud /iterate audit (fresh general-purpose sweep, angle: trends-tracker archive internal consistency)
+- impact: 7 (every ISO week from W19 through W33 is present with exact 7-day spacing — 15 consecutive weeks, zero gaps — then the archive jumps straight from W33 to W35, a 14-day gap with no W34 file. `trends/tracker/page.tsx` and `[week]/page.tsx` copy explicitly bills this as "a weighted **weekly** score," and the week-detail OG image calls it "**Historical weekly snapshots**." The spark arrays weren't backfilled for the gap either — every category's W35 spark is a one-value shift-and-append from W33, identical in shape to every other consecutive week-pair, even though two calendar weeks actually elapsed — so the skip is invisible rather than surfaced)
+- ease: 5 (requires a real editorial/data decision, not a pure mechanical edit: either scout-research and backfill a genuine W34 snapshot for archive completeness, or if the cadence intentionally changed, update the "weekly" copy site-wide to match reality)
+- score: 3.5 (impact × ease / 10)
+- evidence: `data/trends/2026-W33.json` through `data/trends/2026-W35.json` — no `2026-W34.json` file exists; `apps/web/src/app/trends/tracker/page.tsx:33` and `[week]/page.tsx:32` "weighted weekly score" copy; `[week]/opengraph-image.tsx:43` "Historical weekly snapshots" copy
+- next: `/oversight` or a future `/iterate` tick — decide backfill vs. copy correction, then execute
+
 ### [x] [a11y] [5.4] Source citation links (67x across 42 articles) lack external-link indicator — addressed in commit `b00f94d2`, closes #909
 
 - category: a11y
