@@ -5,7 +5,7 @@
   "type": "linear",
   "housingTop": "pc",
   "housingBottom": "nylon",
-  "stem": "mixed",
+  "stem": "pom",
   "springGrams": {
     "actuation": 30,
     "bottomOut": 50
@@ -15,5 +15,5 @@
   "releasedAt": "2022-09-01",
   "status": "in-production",
   "description": "Hall-effect magnetic linear using a rare-earth magnet in the stem rather than a physical leaf spring for actuation sensing. The linear travel is smooth and the actuation point can be adjusted digitally in supporting keyboards; the jade coloring mirrors the Box Jade but the mechanism is entirely distinct. Suited to rapid-fire gaming and endurance typing where metal-contact fatigue matters.",
-  "updatedAt": "2026-08-23T19:09:46.000Z"
+  "updatedAt": "2026-08-25T00:00:00.000Z"
 }
