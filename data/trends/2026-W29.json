@@ -59,7 +59,7 @@
     {
       "name": "75% Layout",
       "category": "layout",
-      "direction": "flat",
+      "direction": "up",
       "score": 46,
       "spark": [38, 43, 44, 44, 43, 43, 43, 46],
       "articleSlug": "75-percent-default",

@@ -4864,7 +4864,7 @@
         {
           "name": "75% Layout",
           "category": "layout",
-          "direction": "flat",
+          "direction": "up",
           "score": 46,
           "spark": [
             38,
@@ -6616,5 +6616,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-08-25T00:17:29.569Z"
+  "generatedAt": "2026-08-25T01:35:58.060Z"
 }
