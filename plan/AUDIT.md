@@ -12228,7 +12228,7 @@ passes accumulate signals.)
 > **Resolved (2026-08-25):** corrected `data/trends/2026-W19.json` Prototypist row `direction` "up" → "flat" to match the last spark delta of 0 (14 → 14, plateaued). `trend-snapshot-quality-check.mjs --file data/trends/2026-W19.json` now reports clean. `pnpm verify` full gate green: typecheck, lint, unit tests, script tests, data:validate, build, size, 1201/1201 e2e.
 > Picked as the top signal this tick (cloud `/march`): no unlabeled GitHub issues (triage gate, 0 unlabeled); not Monday-relevant (W35 snapshot already existed); no pending phases/data-backlog/content-gap work (all 8 mechanical surveys re-ran clean, no rows filed); march's own expand Step 3c gate not met (15 commits/~13h since pass 349's anchor `e5eb933c`, threshold 20 commits/48h). Top-scored Pending row tied at `[3.6]` among two remaining `[data]` direction/spark rows and one `[mentionedParts]` row (all filed 2026-08-23); the two data rows won the age tie-break, and this one (Prototypist) won file order after the sibling CannonKeys row drained in the immediately preceding tick.
 
-### [ ] [data] [3.6] 2026-W29 75% Layout — direction/spark contradiction
+### [x] [data] [3.6] 2026-W29 75% Layout — direction/spark contradiction — addressed in `6f23bd4c`, closes #925
 - category: data
 - filed: 2026-08-23 by trend-snapshot-quality-check.mjs
 - impact: 4 (direction "flat" but last spark delta is 3 (tolerance 2))
@@ -12236,6 +12236,9 @@ passes accumulate signals.)
 - score: 3.6 (impact × ease / 10)
 - trend-row: 2026-W29 / 75% Layout
 - action: direction "flat" but last spark delta is 3 (tolerance 2)
+- issue: #925
+> **Resolved (2026-08-25):** corrected `data/trends/2026-W29.json` 75% Layout row `direction` "flat" → "up" to match the last spark delta of 3 (43 → 46), which exceeds the ±2 flat tolerance. `trend-snapshot-quality-check.mjs --file data/trends/2026-W29.json` now reports clean. `pnpm verify` full gate green: typecheck, lint, unit tests, script tests, data:validate, build, size, 1201/1201 e2e.
+> Picked as the top signal this tick (cloud `/march`): no unlabeled GitHub issues (triage gate, 0 unlabeled); not Monday-relevant (W35 snapshot already existed); no pending phases/data-backlog/content-gap work (all 8 mechanical surveys re-ran clean, no rows filed); march's own expand Step 3c gate not met (17 commits/~13h since pass 349's anchor `e5eb933c`, threshold 20 commits/48h). This was the sole remaining `[3.6]` `[data]` row after the CannonKeys and Prototypist siblings drained in the two preceding ticks — the established tie-break (data rows before the one `[mentionedParts] [3.6]` row) still applies, and with no other `[data]` row left, this one was the unambiguous top scored Pending finding.
 
 ### [ ] [mentionedParts] [3.6] mode-sonnet-r2-group-buy-coverage — 1 catalog entity mentioned in prose but absent from mentionedParts
 - category: mentionedParts
