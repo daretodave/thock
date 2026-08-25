@@ -720,7 +720,7 @@
       "5": {
         "slug": "hall-effect-rapid-trigger-plateau",
         "title": "Hall-effect stopped climbing. That's not the same as cooling off.",
-        "lede": "The Hall Effect/Rapid Trigger category has held flat at 97 on thock's trends tracker for two straight weeks, after climbing from 82 in early July. A flat line at the top of the chart looks like fading interest if you're reading it as a stock ticker. Read as a market snapshot, it says something closer to the opposite.",
+        "lede": "The Hall Effect/Rapid Trigger category has held flat at 97 on thock's trends tracker for two straight weeks, after climbing from 82 in late June. A flat line at the top of the chart looks like fading interest if you're reading it as a stock ticker. Read as a market snapshot, it says something closer to the opposite.",
         "pillar": "trends",
         "tags": [
           "hall-effect",
@@ -8022,31 +8022,6 @@
         }
       ],
       [
-        "june",
-        {
-          "2": {
-            "11": 1,
-            "31": 1,
-            "32": 1,
-            "34": 1
-          },
-          "3": {
-            "7": 3,
-            "11": 3,
-            "21": 2,
-            "24": 4,
-            "27": 2,
-            "29": 2,
-            "31": 4,
-            "32": 8,
-            "34": 3,
-            "46": 3,
-            "48": 2,
-            "54": 1
-          }
-        }
-      ],
-      [
         "jul",
         {
           "3": {
@@ -8058,7 +8033,6 @@
         "july",
         {
           "2": {
-            "5": 1,
             "7": 1,
             "11": 1,
             "21": 1,
@@ -8078,6 +8052,32 @@
             "46": 3,
             "53": 1,
             "61": 1
+          }
+        }
+      ],
+      [
+        "june",
+        {
+          "2": {
+            "5": 1,
+            "11": 1,
+            "31": 1,
+            "32": 1,
+            "34": 1
+          },
+          "3": {
+            "7": 3,
+            "11": 3,
+            "21": 2,
+            "24": 4,
+            "27": 2,
+            "29": 2,
+            "31": 4,
+            "32": 8,
+            "34": 3,
+            "46": 3,
+            "48": 2,
+            "54": 1
           }
         }
       ],
@@ -72043,9 +72043,6 @@
       [
         "early",
         {
-          "2": {
-            "5": 1
-          },
           "3": {
             "5": 1,
             "7": 1,
@@ -111697,6 +111694,9 @@
       [
         "late",
         {
+          "2": {
+            "5": 1
+          },
           "3": {
             "3": 2,
             "7": 2,
@@ -128320,7 +128320,7 @@
       "id": "hall-effect-rapid-trigger-plateau",
       "slug": "hall-effect-rapid-trigger-plateau",
       "title": "Hall-effect stopped climbing. That's not the same as cooling off.",
-      "lede": "The Hall Effect/Rapid Trigger category has held flat at 97 on thock's trends tracker for two straight weeks, after climbing from 82 in early July. A flat line at the top of the chart looks like fading interest if you're reading it as a stock ticker. Read as a market snapshot, it says something closer to the opposite.",
+      "lede": "The Hall Effect/Rapid Trigger category has held flat at 97 on thock's trends tracker for two straight weeks, after climbing from 82 in late June. A flat line at the top of the chart looks like fading interest if you're reading it as a stock ticker. Read as a market snapshot, it says something closer to the opposite.",
       "pillar": "trends",
       "tags": [
         "hall-effect",
@@ -130197,6 +130197,6 @@
       "href": "/trends/tracker"
     }
   ],
-  "generatedAt": "2026-08-25T04:21:45.608Z",
+  "generatedAt": "2026-08-25T06:20:48.673Z",
   "count": 90
 }
