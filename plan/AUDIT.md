@@ -12311,3 +12311,14 @@ passes accumulate signals.)
 - next: reword `heroImageAlt` to ascending 60% → full-size, "adding back" not "shrinking by"
 - issue: #931
 > **Resolved (2026-08-25):** Corrected `heroImageAlt` in `apps/web/src/content/articles/keyboard-layout-sizes-buying-guide.mdx` to match the SVG's actual left-to-right ascending order (60% → full-size, "adding back" a cluster per step). `pnpm verify` full gate green. `ca60b893`
+
+### [x] [content] [4.2] Boba U4/U4T "same stem" framing contradicts the corrected travel data across 3 articles — addressed in `96987f07`, closes #932
+- category: content
+- filed: 2026-08-25 by cloud /iterate audit (delegated general-purpose sweep, angle: cross-check recently-corrected data records against article prose for propagation gaps)
+- impact: 6 (central thesis of a heavily cross-linked deep-dive — cited from Durock T1, Drop HPX, gateron-lanes, beginners-buying-guide, and silent-switch-damping-deep-dive — is internally contradictory on close reading)
+- ease: 7 (prose edits across 3 files, no schema/data change needed)
+- score: 4.2 (impact × ease / 10)
+- evidence: `data/switches/gazzew-boba-u4t.json` (corrected 2026-08-23, commit `839554d9`, closes #914) states the U4T's "longer-pole stem... also shortens total travel versus the U4"; `data/switches/gazzew-boba-u4.json` confirms `travelMm: 4.0` against the U4T's `travelMm: 3.2`. That correction updated every numeric 4.0mm→3.2mm reference in `gazzew-boba-u4t-deep-dive.mdx` and `silent-switch-damping-deep-dive.mdx` but left the "same stem" / "the only variable Gazzew changed" prose framing untouched in those two articles plus a third, `gazzew-boba-family-deep-dive.mdx` ("share a POM stem", "the same switch with the dampeners left out") — a travel change requires a different stem, so the "single variable" claim was already false the moment the travel numbers were corrected.
+- next: rewrite the "same stem" framing in all three articles to acknowledge two variables (dampening pads + stem pole length) while keeping the acoustic thesis (pads drive the sound difference) intact
+- issue: #932
+> **Resolved (2026-08-25):** Rewrote the lede, intro, and "One stem, two finishes" section (renamed "What's shared, what isn't") in `gazzew-boba-u4t-deep-dive.mdx`; corrected "the U4's stem and housing" → "the U4's housing" in `silent-switch-damping-deep-dive.mdx`; corrected the intro framing, "share a POM stem" claim, and "the same switch with the dampeners left out" line in `gazzew-boba-family-deep-dive.mdx`. All three now state the U4T's longer-pole stem as a second, travel-affecting variable alongside the dampening pads, while keeping the acoustic mechanism (pads drive the sound difference, not the pole length) unchanged. `pnpm verify` full gate green: typecheck, lint, unit tests, test:scripts, data:validate, build, size, 1201/1201 e2e.
