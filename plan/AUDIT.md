@@ -12279,3 +12279,13 @@ passes accumulate signals.)
 - issue: #916
 > Filed 2026-08-24 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 > **Resolved (2026-08-24):** Shipped "Keyboard layout sizes, compared: 60% to full-size, which fits your desk" at `/article/keyboard-layout-sizes-buying-guide`, publishedAt 2026-08-22 (gap-fill). Practical buying-guide angle distinct from the existing historical (`60-percent-layout-history`) and market-trend (`75-percent-default`) pieces. `c53bc774`
+
+### [x] [content] [4.0] hall-effect-rapid-trigger-plateau — "82 in early July" misdates the tracker climb's actual start (late June) — addressed in 060535f8, closes #927
+- category: content
+- filed: 2026-08-25 by cloud /iterate audit (general-purpose sweep, angle: trends/group-buy internal consistency)
+- impact: 5 (appears on two indexed canonical pages — the article's frontmatter lede, which feeds meta description/OG copy, and newsletter issue 08's Trends blurb, a near-verbatim quote of the same sentence; same recurring temporal-framing-vs-tracker-data mismatch class already fixed 4+ times this window, issues #601/#637/#759/#846)
+- ease: 8 (two short text edits, no schema/data/cascade changes)
+- score: 4.0 (impact × ease / 10)
+- evidence: `data/trends/2026-W26.json` has `isoWeek: "2026-W26"`, `publishedAt: "2026-06-22T00:00:00.000Z"`, and its Hall Effect/Rapid Trigger row scores 82 — the climb chain's starting point. Late June, not early July.
+- issue: #927
+> **Resolved (2026-08-25):** Changed "82 in early July" → "82 in late June" in `apps/web/src/content/articles/hall-effect-rapid-trigger-plateau.mdx` frontmatter lede and `apps/web/src/content/newsletters/thock-weekly-008.mdx`'s Trends blurb. `pnpm verify` full gate green: typecheck, lint, unit tests, script tests, data:validate, build, size, 1201/1201 e2e. `060535f8`
