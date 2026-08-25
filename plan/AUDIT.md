@@ -12300,3 +12300,14 @@ passes accumulate signals.)
 - next: `/ship-data` correction — flip `stem` to `"pom"`, bump `updatedAt`
 - issue: #930
 > **Resolved (2026-08-25):** Corrected `data/switches/gateron-magnetic-jade.json` `stem` from `"mixed"` to `"pom"`, matching the article's explicit prose and the catalog's own precedent for composite POM-plus-dampener stems. Regenerated data-runtime manifest/search-index. `pnpm verify` full gate green. `fa0b7b60`
+
+### [x] [a11y] [3.6] `keyboard-layout-sizes-buying-guide` hero `heroImageAlt` describes the size progression backwards — addressed in ca60b893, closes #931
+- category: a11y
+- filed: 2026-08-25 by cloud /iterate audit (delegated general-purpose sweep, angle: alt-text accuracy on recently-published hero art)
+- impact: 4 (screen-reader users get an inverted spatial description of the diagram; `heroImageAlt` renders verbatim via `<img alt>` in `ArticleHero.tsx` and `ArticleCard.tsx`, on the most recently-published guides-pillar article)
+- ease: 9 (one-sentence frontmatter text edit, no code/schema/asset change)
+- score: 3.6 (impact × ease / 10)
+- evidence: `apps/web/src/content/articles/keyboard-layout-sizes-buying-guide.mdx:12` `heroImageAlt` claimed silhouettes run "left to right from full-size down to 60%, each shrinking by one key cluster"; the SVG (`apps/web/public/hero-art/keyboard-layout-sizes-buying-guide.svg`) places labels 60% → 65% → 75% → TKL → FULL-SIZE at ascending x-positions with caption "WIDTH GROWS AS THE NAV CLUSTER, ARROWS, AND NUMPAD COME BACK"; the SVG's own `<title>` and the provenance JSON (`keyboard-layout-sizes-buying-guide.svg.json` `subject` field) both independently confirm the intended order is ascending 60% → full-size — only the MDX alt text had it backwards
+- next: reword `heroImageAlt` to ascending 60% → full-size, "adding back" not "shrinking by"
+- issue: #931
+> **Resolved (2026-08-25):** Corrected `heroImageAlt` in `apps/web/src/content/articles/keyboard-layout-sizes-buying-guide.mdx` to match the SVG's actual left-to-right ascending order (60% → full-size, "adding back" a cluster per step). `pnpm verify` full gate green. `ca60b893`
