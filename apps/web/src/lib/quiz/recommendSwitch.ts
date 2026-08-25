@@ -31,10 +31,17 @@ function scoreSoundProfile(sw: Switch, profile: QuizAnswers['soundProfile']): nu
   }
 }
 
+// Must exceed the maximum combined credit the other three axes can hand a
+// non-matching type (soundProfile 10 + springWeight 8 + primaryUse 8 = 26),
+// otherwise an explicit actuationFeel answer (esp. "clicky", which the other
+// axes never reward) can be outscored by an unrelated type on cross-axis
+// coincidence alone — see plan/AUDIT.md quiz-recommender clicky finding.
+const ACTUATION_FEEL_WEIGHT = 30
+
 function scoreActuationFeel(sw: Switch, feel: QuizAnswers['actuationFeel']): number {
-  if (feel === 'smooth') return sw.type === 'linear' || sw.type === 'silent-linear' ? 8 : 0
-  if (feel === 'tactile') return sw.type === 'tactile' || sw.type === 'silent-tactile' ? 8 : 0
-  if (feel === 'clicky') return sw.type === 'clicky' ? 8 : 0
+  if (feel === 'smooth') return sw.type === 'linear' || sw.type === 'silent-linear' ? ACTUATION_FEEL_WEIGHT : 0
+  if (feel === 'tactile') return sw.type === 'tactile' || sw.type === 'silent-tactile' ? ACTUATION_FEEL_WEIGHT : 0
+  if (feel === 'clicky') return sw.type === 'clicky' ? ACTUATION_FEEL_WEIGHT : 0
   return 0
 }
 

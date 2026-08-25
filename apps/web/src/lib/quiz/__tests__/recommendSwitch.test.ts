@@ -173,6 +173,33 @@ describe('recommendSwitch', () => {
     expect(results[0]?.switch.slug).toBe('at-45')
   })
 
+  it('M: an explicit clicky selection outranks a tactile switch that only wins on incidental sound-profile and primary-use credit', () => {
+    const clickyLoud = makeSwitch({
+      slug: 'clicky-loud',
+      type: 'clicky',
+      housingTop: 'pc',
+      housingBottom: 'pc',
+      stem: 'pom',
+      springGrams: { actuation: 50, bottomOut: 65 },
+    })
+    const tactileRival = makeSwitch({
+      slug: 'tactile-rival',
+      type: 'tactile',
+      housingTop: 'pc',
+      housingBottom: 'nylon',
+      stem: 'pom',
+      springGrams: { actuation: 55, bottomOut: 65 },
+    })
+    const answers: QuizAnswers = {
+      soundProfile: 'thocky',
+      actuationFeel: 'clicky',
+      springWeight: 'medium',
+      primaryUse: 'typing',
+    }
+    const results = recommendSwitch(answers, [clickyLoud, tactileRival])
+    expect(results[0]?.switch.type).toBe('clicky')
+  })
+
   it('L: a switch at exactly 60g (the displayed medium/heavy boundary) scores as a full medium match, not a near-miss', () => {
     const atBoundary = makeSwitch({ slug: 'at-60', springGrams: { actuation: 60, bottomOut: 68 } })
     const aboveBoundary = makeSwitch({ slug: 'at-61', springGrams: { actuation: 61, bottomOut: 68 } })
