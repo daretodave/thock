@@ -12216,7 +12216,7 @@ passes accumulate signals.)
 > **Resolved (2026-08-24):** corrected `data/trends/2026-W19.json` CannonKeys row `direction` "up" → "flat" to match the last spark delta of 0 (18 → 18, plateaued). `trend-snapshot-quality-check.mjs --file data/trends/2026-W19.json` now reports only the still-pending Prototypist row (separate AUDIT row, same file, left untouched per one-fix-per-tick). `pnpm verify` full gate green: typecheck, lint, unit tests, script tests, data:validate, build, size, 1201/1201 e2e.
 > Picked as the top signal this tick (cloud `/march`): no unlabeled GitHub issues (triage gate, 0 unlabeled); Monday W35 snapshot already existed (Step 0.5 no-op); no pending phases/data-backlog/content-gap work (all 8 mechanical surveys re-ran clean, no rows filed); march's own expand Step 3c gate not met (18 commits/~13h since pass 348's anchor `66ceac2d`, threshold 20 commits/48h). Top-scored Pending row tied at `[3.6]` among three `[data]` direction/spark rows (all filed 2026-08-23T13:34:27Z) and one `[mentionedParts]` row (filed later, 2026-08-23T14:22:27Z) — the three data rows won the age tie-break; among those, picked by file order (CannonKeys first).
 
-### [ ] [data] [3.6] 2026-W19 Prototypist — direction/spark contradiction
+### [x] [data] [3.6] 2026-W19 Prototypist — direction/spark contradiction — addressed in `17ff7959`, closes #924
 - category: data
 - filed: 2026-08-23 by trend-snapshot-quality-check.mjs
 - impact: 4 (direction "up" contradicts last spark delta 0)
@@ -12224,6 +12224,9 @@ passes accumulate signals.)
 - score: 3.6 (impact × ease / 10)
 - trend-row: 2026-W19 / Prototypist
 - action: direction "up" contradicts last spark delta 0
+- issue: #924
+> **Resolved (2026-08-25):** corrected `data/trends/2026-W19.json` Prototypist row `direction` "up" → "flat" to match the last spark delta of 0 (14 → 14, plateaued). `trend-snapshot-quality-check.mjs --file data/trends/2026-W19.json` now reports clean. `pnpm verify` full gate green: typecheck, lint, unit tests, script tests, data:validate, build, size, 1201/1201 e2e.
+> Picked as the top signal this tick (cloud `/march`): no unlabeled GitHub issues (triage gate, 0 unlabeled); not Monday-relevant (W35 snapshot already existed); no pending phases/data-backlog/content-gap work (all 8 mechanical surveys re-ran clean, no rows filed); march's own expand Step 3c gate not met (15 commits/~13h since pass 349's anchor `e5eb933c`, threshold 20 commits/48h). Top-scored Pending row tied at `[3.6]` among two remaining `[data]` direction/spark rows and one `[mentionedParts]` row (all filed 2026-08-23); the two data rows won the age tie-break, and this one (Prototypist) won file order after the sibling CannonKeys row drained in the immediately preceding tick.
 
 ### [ ] [data] [3.6] 2026-W29 75% Layout — direction/spark contradiction
 - category: data
