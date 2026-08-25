@@ -12240,7 +12240,7 @@ passes accumulate signals.)
 > **Resolved (2026-08-25):** corrected `data/trends/2026-W29.json` 75% Layout row `direction` "flat" → "up" to match the last spark delta of 3 (43 → 46), which exceeds the ±2 flat tolerance. `trend-snapshot-quality-check.mjs --file data/trends/2026-W29.json` now reports clean. `pnpm verify` full gate green: typecheck, lint, unit tests, script tests, data:validate, build, size, 1201/1201 e2e.
 > Picked as the top signal this tick (cloud `/march`): no unlabeled GitHub issues (triage gate, 0 unlabeled); not Monday-relevant (W35 snapshot already existed); no pending phases/data-backlog/content-gap work (all 8 mechanical surveys re-ran clean, no rows filed); march's own expand Step 3c gate not met (17 commits/~13h since pass 349's anchor `e5eb933c`, threshold 20 commits/48h). This was the sole remaining `[3.6]` `[data]` row after the CannonKeys and Prototypist siblings drained in the two preceding ticks — the established tie-break (data rows before the one `[mentionedParts] [3.6]` row) still applies, and with no other `[data]` row left, this one was the unambiguous top scored Pending finding.
 
-### [ ] [mentionedParts] [3.6] mode-sonnet-r2-group-buy-coverage — 1 catalog entity mentioned in prose but absent from mentionedParts
+### [x] [mentionedParts] [3.6] mode-sonnet-r2-group-buy-coverage — 1 catalog entity mentioned in prose but absent from mentionedParts — already resolved as a side effect of `7738a94b`
 - category: mentionedParts
 - filed: 2026-08-23 by article-parts-check.mjs — mode-sonnet-r2-group-buy-coverage
 - impact: 4 (missing mentionedParts entries break the /part/[kind]/[slug] "mentioned in" rail)
@@ -12250,6 +12250,8 @@ passes accumulate signals.)
 - entities:
   - Ikki68 Aurora (board `ikki68-aurora`) — prose line 73
 - action: add each entity to the article's mentionedParts frontmatter with the correct slug and kind
+> **Resolved (2026-08-25):** this tick picked the row as the top-scored Pending finding and found it already fixed — `ikki68-aurora` is present in `mode-sonnet-r2-group-buy-coverage.mdx`'s `mentionedParts` frontmatter (`board`/`ikki68-aurora`), added as a collateral edit inside the unrelated `[6.4]` mode-sonnet catalog-correction commit (`7738a94b`, which rewrote this article's prose alongside six others and reported `article-parts-check.mjs` clean on every touched file, but never linked back to close this pre-existing row). `node scripts/article-parts-check.mjs apps/web/src/content/articles/mode-sonnet-r2-group-buy-coverage.mdx` confirms clean now. No further edit needed; ticking the row so the next tick doesn't re-pick stale work.
+> Picked as the top signal this tick (cloud `/march`): no unlabeled GitHub issues (triage gate, 0 unlabeled); not Monday-relevant (W35 snapshot already existed); no pending phases/data-backlog/content-gap work (all 8 mechanical surveys re-ran clean, no rows filed); march's own expand Step 3c gate not met (4 commits/~2.5h since pass 349's own anchor `5df9fc51`, threshold 20 commits/48h). This was the highest-scored remaining Pending row (`[3.6]`, ahead of the `[3.5]`/`[3.4]` silent-switch-damping-deep-dive Boba LT content rows and the `[2.7]`/`[2.4]` Mode Sonnet hero-art/plate-materials rows).
 
 ### [x] [cross-links] [4.5] building-mode-sonnet-with-oil-kings ↔ gasket-mount-reality — no prose cross-link (same pillar, ≥2 shared tags: 75, mode) — addressed in dd91c85c, closes #919
 - category: cross-links
