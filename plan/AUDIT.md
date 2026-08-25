@@ -12289,3 +12289,14 @@ passes accumulate signals.)
 - evidence: `data/trends/2026-W26.json` has `isoWeek: "2026-W26"`, `publishedAt: "2026-06-22T00:00:00.000Z"`, and its Hall Effect/Rapid Trigger row scores 82 — the climb chain's starting point. Late June, not early July.
 - issue: #927
 > **Resolved (2026-08-25):** Changed "82 in early July" → "82 in late June" in `apps/web/src/content/articles/hall-effect-rapid-trigger-plateau.mdx` frontmatter lede and `apps/web/src/content/newsletters/thock-weekly-008.mdx`'s Trends blurb. `pnpm verify` full gate green: typecheck, lint, unit tests, script tests, data:validate, build, size, 1201/1201 e2e. `060535f8`
+
+### [x] [data] [5.4] `gateron-magnetic-jade.json` stem field says "mixed" — the record's own deep-dive article says POM — addressed in fa0b7b60, closes #930
+- category: data
+- filed: 2026-08-25 by cloud /iterate audit (delegated general-purpose sweep, angle: cascade check on today's Boba LT / hall-effect corrections + fresh corpus sweep)
+- impact: 6 (visible spec/prose contradiction on a currently-promoted, heavily cross-linked article — `/part/switch/gateron-magnetic-jade` renders "Stem: Mixed" one click from the article's own `<PartReference>`, contradicting its lede/alt-text/body which state POM three times; also a real quiz-scoring miss — `recommendSwitch.ts` only awards the "thocky" sound-profile point when `stem === 'pom'`)
+- ease: 9 (single-field JSON change, no schema or downstream code changes — catalog precedent already settles the classification: composite POM+dampener stems like Cherry MX2A Silent Black and Gazzew Boba U4 are correctly "pom"; "mixed" is reserved for genuinely non-POM base materials like Tecsee Sapphire V2's UHMWPE and HMX Cloud's LY/PA12)
+- score: 5.4 (impact × ease / 10)
+- evidence: `data/switches/gateron-magnetic-jade.json:8` `"stem": "mixed"` vs. `apps/web/src/content/articles/gateron-magnetic-jade-deep-dive.mdx` lede/alt-text/line-76 "POM stem" (3+ mentions); `data/switches/cherry-mx2a-silent-black.json:8` and `data/switches/gazzew-boba-u4.json:8` both "pom" despite composite stems, confirming the catalog convention
+- next: `/ship-data` correction — flip `stem` to `"pom"`, bump `updatedAt`
+- issue: #930
+> **Resolved (2026-08-25):** Corrected `data/switches/gateron-magnetic-jade.json` `stem` from `"mixed"` to `"pom"`, matching the article's explicit prose and the catalog's own precedent for composite POM-plus-dampener stems. Regenerated data-runtime manifest/search-index. `pnpm verify` full gate green. `fa0b7b60`
