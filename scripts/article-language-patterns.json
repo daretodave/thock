@@ -114,6 +114,12 @@
       "description": "Bare relative-month promise decays a month after publication and never resolves in a static article. Rewrite as a past-tense observation once the window has closed, or an absolute date anchor if still forward-looking."
     },
     {
+      "id": "relative-this-month",
+      "match": "\\bthis month\\b",
+      "regex": true,
+      "description": "Bare 'this month' reference decays the month after publication and misleads readers who arrive later. Replace with an absolute month anchor (e.g., 'in July 2026') derived from the article's publishedAt or the tracker week being cited."
+    },
+    {
       "id": "relative-tracker-this-week-variant",
       "match": "this week's (?:row|reading|snapshot|data)",
       "regex": true,

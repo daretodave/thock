@@ -253,7 +253,7 @@ describe('checkFile — relative-tracker-this-week pattern', () => {
   test('"the W21 tracker" absolute form does not trigger the pattern', () => {
     const content = makeMdx(
       'slug: test\ntitle: Test\nauthor: thock\npillar: trends\npublishedAt: 2026-05-20',
-      '\nHall Effect was at +55 on the W21 tracker this month.\n'
+      '\nHall Effect was at +55 on the W21 tracker in May 2026.\n'
     )
     const filePath = tmpMdx(content)
     const violations = checkFile(filePath, patterns)
@@ -582,6 +582,39 @@ describe('checkFile — relative-next-month pattern', () => {
       violations.filter((v) => v.patternId === 'relative-next-month').length,
       0,
       'past-tense rewrite should not trigger relative-next-month'
+    )
+  })
+})
+
+// ── relative-this-month ───────────────────────────────────────────────────────
+
+describe('checkFile — relative-this-month pattern', () => {
+  const patterns = loadPatterns()
+
+  test('flags bare "this month" as a relative temporal reference', () => {
+    const content = makeMdx(
+      'slug: test\ntitle: Test\nauthor: thock\npillar: trends\npublishedAt: 2026-07-18',
+      '\nThe house kit that opened this month continued moving toward its Q4 2026 date.\n'
+    )
+    const filePath = tmpMdx(content)
+    const violations = checkFile(filePath, patterns)
+    assert.ok(
+      violations.some((v) => v.patternId === 'relative-this-month'),
+      'expected relative-this-month violation for bare "this month"'
+    )
+  })
+
+  test('absolute month anchor "in July 2026" does not trigger the pattern', () => {
+    const content = makeMdx(
+      'slug: test\ntitle: Test\nauthor: thock\npillar: trends\npublishedAt: 2026-07-18',
+      '\nThe house kit that opened in July 2026 continued moving toward its Q4 2026 date.\n'
+    )
+    const filePath = tmpMdx(content)
+    const violations = checkFile(filePath, patterns)
+    assert.equal(
+      violations.filter((v) => v.patternId === 'relative-this-month').length,
+      0,
+      '"in July 2026" absolute month anchor should not trigger relative-this-month'
     )
   })
 })

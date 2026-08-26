@@ -219,7 +219,7 @@
         7,
         5,
         45,
-        518
+        519
       ],
       "20": [
         11,
@@ -237,7 +237,7 @@
         7,
         4,
         44,
-        528
+        527
       ],
       "23": [
         17,
@@ -913,7 +913,7 @@
       "19": {
         "slug": "prototypist-vendor-spotlight",
         "title": "Prototypist and the multi-project vendor model",
-        "lede": "Prototypist rarely carries just one thing at a time. The UK vendor's tracker signal has spent 2026 rising and falling with how many group buys it's running at once — and this month it's climbing again on the strength of its own pipeline rather than someone else's.",
+        "lede": "Prototypist rarely carries just one thing at a time. The UK vendor's tracker signal has spent 2026 rising and falling with how many group buys it's running at once — and in July 2026 it's climbing again on the strength of its own pipeline rather than someone else's.",
         "pillar": "trends",
         "tags": [
           "vendor",
@@ -6994,7 +6994,7 @@
           "2": {
             "9": 1,
             "11": 1,
-            "19": 1,
+            "19": 2,
             "21": 1,
             "22": 1,
             "34": 1,
@@ -7024,9 +7024,9 @@
             "10": 2,
             "11": 15,
             "15": 1,
-            "19": 15,
+            "19": 18,
             "21": 9,
-            "22": 10,
+            "22": 11,
             "23": 4,
             "24": 11,
             "26": 2,
@@ -8040,6 +8040,7 @@
           "2": {
             "7": 1,
             "11": 1,
+            "19": 1,
             "21": 1,
             "22": 1,
             "32": 1
@@ -8049,8 +8050,9 @@
             "7": 8,
             "11": 5,
             "15": 2,
+            "19": 3,
             "21": 11,
-            "22": 3,
+            "22": 4,
             "24": 6,
             "29": 4,
             "32": 6,
@@ -47564,6 +47566,7 @@
             "5": 1,
             "8": 1,
             "13": 1,
+            "19": 1,
             "22": 1,
             "23": 1,
             "25": 2,
@@ -47612,10 +47615,10 @@
             "16": 31,
             "17": 23,
             "18": 8,
-            "19": 27,
+            "19": 30,
             "20": 21,
             "21": 16,
-            "22": 26,
+            "22": 27,
             "23": 16,
             "24": 21,
             "25": 14,
@@ -56858,12 +56861,10 @@
         "month",
         {
           "2": {
-            "19": 1,
             "50": 1
           },
           "3": {
-            "19": 4,
-            "22": 1,
+            "19": 1,
             "42": 1,
             "44": 1,
             "46": 4,
@@ -119801,7 +119802,6 @@
         {
           "2": {
             "17": 1,
-            "19": 1,
             "35": 1,
             "60": 1,
             "61": 1,
@@ -119827,10 +119827,10 @@
             "16": 3,
             "17": 16,
             "18": 6,
-            "19": 7,
+            "19": 4,
             "20": 12,
             "21": 7,
-            "22": 10,
+            "22": 9,
             "23": 6,
             "24": 4,
             "25": 2,
@@ -128581,7 +128581,7 @@
       "id": "prototypist-vendor-spotlight",
       "slug": "prototypist-vendor-spotlight",
       "title": "Prototypist and the multi-project vendor model",
-      "lede": "Prototypist rarely carries just one thing at a time. The UK vendor's tracker signal has spent 2026 rising and falling with how many group buys it's running at once — and this month it's climbing again on the strength of its own pipeline rather than someone else's.",
+      "lede": "Prototypist rarely carries just one thing at a time. The UK vendor's tracker signal has spent 2026 rising and falling with how many group buys it's running at once — and in July 2026 it's climbing again on the strength of its own pipeline rather than someone else's.",
       "pillar": "trends",
       "tags": [
         "vendor",
@@ -130251,6 +130251,6 @@
       "href": "/trends/tracker"
     }
   ],
-  "generatedAt": "2026-08-26T18:50:16.069Z",
+  "generatedAt": "2026-08-26T19:45:27.340Z",
   "count": 90
 }
