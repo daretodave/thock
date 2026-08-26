@@ -114,7 +114,7 @@ export function ArticleCard({
               alt={fm.heroImageAlt ?? ''}
               fill
               priority={priority}
-              sizes="(min-width: 1024px) 60vw, 100vw"
+              sizes="(min-width: 1280px) 700px, (min-width: 1024px) 60vw, 100vw"
               className="object-cover"
             />
           </div>
@@ -187,7 +187,7 @@ export function ArticleCard({
               src={fm.heroImage}
               alt={fm.heroImageAlt ?? ''}
               fill
-              sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+              sizes="(min-width: 1280px) 225px, (min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
               className="object-cover"
             />
           </div>
