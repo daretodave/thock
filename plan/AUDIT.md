@@ -84,6 +84,19 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [perf] [4.8] Homepage hero/large-grid image `sizes` hints ignore the 1280px container cap — addressed in commit `2b189d97`, closes #937
+- category: perf
+- filed: 2026-08-26 by cloud /iterate audit (fresh general-purpose sweep, angle: `next/image` `sizes` correctness vs. `Container`'s max-width cap)
+- impact: 6 (the hero variant's image is the homepage's `priority`-flagged LCP candidate; the large variant renders 5x in the homepage's `LatestByPillar` grid. Both used unbounded `vw`-based `sizes` strings that keep growing past 1280px even though `Container` freezes rendered width there, causing `next/image` to serve an oversized candidate — at 1920px, `60vw` evaluates to 1152px against a true ~681px rendered width — to the majority of common desktop/laptop viewports)
+- ease: 8 (two one-line `sizes` string edits adding a `(min-width: 1280px) <fixed-px>` bucket; no schema/API/test changes — confirmed no test pins the literal string)
+- score: 4.8 (impact × ease / 10)
+- observation: `ArticleCard.tsx`'s hero (`:117`) and large (`:190`) variants used `60vw` / `25vw` unbounded hints; `Container` (`packages/ui/src/Container.tsx:23`) caps at `max-w-[1280px]` with 40px side padding (1200px inner width at desktop). True rendered widths computed by hand: hero column `(1200-32)/2.4*1.4` ≈ 681px (`lg:grid-cols-[1.4fr_1fr] lg:gap-8`); large-grid column `(1200-4×24)/5` = 220.8px (`LatestByPillar.tsx:93`, `xl:grid-cols-5 gap-6`, `xl` breakpoint = 1280px — coincides exactly with the cap engaging).
+- evidence: `apps/web/src/components/home/ArticleCard.tsx:117,190`; `packages/ui/src/Container.tsx:23`; `apps/web/src/components/home/LatestByPillar.tsx:93`
+- next: add `(min-width: 1280px)` fixed-px buckets — 700px hero, 225px large
+- issue: #937
+> **Resolved (2026-08-26):** added `(min-width: 1280px) 700px` to the hero variant's `sizes` and `(min-width: 1280px) 225px` to the large variant's, both ahead of the existing `vw`-based fallbacks. `pnpm verify` full gate green: typecheck, lint, unit tests, script tests, data:validate, build, size, 1201/1201 e2e.
+> Picked as the top signal this tick (cloud `/march`): no unlabeled GitHub issues; not Monday (W35 snapshot exists); no pending phases/data/content-gap work (Rule 1 comfortable, all 7 mechanical surveys re-ran clean); march's own expand Step 3c gate not due (2 commits/~3.5h since pass 360's anchor `87660ca0`, threshold 20 commits/48h). Dispatched a fresh general-purpose sweep with angles disjoint from the extensive prior-360-pass checked-clean list (error/loading boundaries, robots.txt vs. route tree, `/tools`/`/sources` prose accuracy, nav link validity, ISR/revalidate config, TS non-null/`as`-cast audit, date/timezone formatting, duplicate slugs/titles, JSON Schema drift, env-var runtime config) — every angle came back clean except this one, which cleared the 3.0 bar.
+
 ### [x] [bug] [4.2] quiz recommender: explicit clicky selection can lose to tactile switches on incidental cross-axis credit — addressed in `ce0be957`, closes #934
 - category: bug
 - filed: 2026-08-25 by cloud /iterate audit (fresh general-purpose sweep, angle: quiz recommender scoring edge cases)
