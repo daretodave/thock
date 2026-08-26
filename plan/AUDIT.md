@@ -12424,3 +12424,15 @@ passes accumulate signals.)
 - next: add `relative-this-month` to `scripts/article-language-patterns.json`, add matching tests, reword the 5 instances to "in July 2026"
 - issue: #940
 > **Resolved (2026-08-26):** Added `relative-this-month` pattern (mirroring `relative-next-month`/`relative-this-quarter`); 2 new Vitest cases; reworded all 5 live instances to "in July 2026"; fixed one pre-existing test fixture that incidentally matched the new pattern. Full corpus scan confirms zero remaining hits. `pnpm verify` full gate green: typecheck, lint, unit tests (incl. new cases), test:scripts, data:validate, build, size, 1201/1201 e2e. `b1af9b4e`
+
+### [x] [enhancement] [4.9] Homepage "Trending" strip tiles were not clickable despite most rows carrying a valid articleSlug — addressed in `5dd9b46d`, closes #941
+- category: enhancement
+- filed: 2026-08-26 by cloud /iterate audit (delegated general-purpose sweep, angle: fresh disjoint sweep — external links, favicon/manifest, OG/Twitter meta, tag pagination, 404 links, TOC anchors, sparkline a11y, group-buy date math, search edge cases, related-articles dedup)
+- impact: 7 (homepage is the highest-traffic surface; all 6 tiles per view affected, every week's snapshot; blocks the natural next click on the trends product's core purpose of driving readers to `/article/*` — not a data-correctness bug, hence not higher)
+- ease: 7 (small, well-scoped prop-threading change across two components with an existing sibling implementation, `TrackerRow.tsx`, to mirror nearly verbatim)
+- score: 4.9 (impact × ease / 10)
+- observation: `apps/web/src/components/home/TrendingTile.tsx` rendered a plain `<div>` with no `Link`/`<a>` anywhere and no slug prop at all; a stale comment read "no link target yet (phase 8 wires tiles to tracker rows)" — that phase never landed. `TrendingStrip.tsx` mapped `TrendSnapshot.rows` into tiles but dropped `row.articleSlug` entirely. Verified against the live latest snapshot (`data/trends/2026-W35.json`): 15 of 16 rows had a non-null `articleSlug`.
+- evidence: `apps/web/src/components/home/TrendingTile.tsx:49-52` (stale comment, no href prop); `apps/web/src/components/home/TrendingStrip.tsx:50-59` (dropped `row.articleSlug`); sibling correct pattern at `apps/web/src/components/tracker/TrackerRow.tsx:44-45`
+- next: thread `articleSlug` through `TrendingStrip` into `TrendingTile`, resolve against the article catalog, wrap in `next/link` when resolved
+- issue: #941
+> **Resolved (2026-08-26):** threaded `articleSlug` from `TrendRow` through `TrendingStrip` into `TrendingTile`; resolved against `articlesBySlug` built in `apps/web/src/app/page.tsx` from `getAllArticles()`, mirroring `TrackerRow`'s `noteHref` pattern. Whole tile becomes the click target (`ArticleCard` hero-variant pattern) when the slug resolves to a real article, else renders as before (plain div). 4 new unit tests. `pnpm verify` full gate green: typecheck, lint, unit tests, test:scripts, data:validate, build, size, 1201/1201 e2e. `5dd9b46d`
