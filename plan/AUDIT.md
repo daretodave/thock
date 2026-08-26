@@ -84,6 +84,18 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [content] [4.5] Boba U4/U4T deep-dives: 4 residual "same stem" claims commit 96987f07 missed — addressed in commit `52522b0c`, closes #939
+- category: content
+- filed: 2026-08-26 by cloud /iterate audit (fresh general-purpose sweep, angle: recent-commit follow-on consistency check)
+- impact: 5 (screen-reader-facing alt text and prose in two published deep-dives contradicted the pole-length correction shipped one commit prior in the same finding's own follow-up, `96987f07`; site brand is citation/fact honesty, so a stale claim reappearing right next to its own correction commit is a visible miss)
+- ease: 9 (four one-to-two-sentence edits, fix pattern already established by the sibling commit; no schema/test changes)
+- score: 4.5 (impact × ease / 10)
+- evidence: `gazzew-boba-u4t-deep-dive.mdx:62` (alt "identical stem and housing outline"); `silent-switch-damping-deep-dive.mdx:63` (alt "the same stem outline"), `:72` ("one POM stem line, two products, no second tooling"), `:113` ("a builder with tweezers can convert one into the other")
+- next: drop/soften the "same stem" claim in all four instances, consistent with `gazzew-boba-family-deep-dive.mdx`'s already-correct longer-pole framing
+- issue: #939
+> **Resolved (2026-08-26):** all four instances rewritten — two alt texts dropped the "identical/same stem" claim, the "no second tooling" sentence now credits only the housing as shared tooling, and the "tweezers convert one into the other" sentence now says pad removal only approximates the U4T's pretravel character. `article-parts-check.mjs` and `article-language-check.mjs` both clean on both files. `pnpm verify` full gate green: typecheck, lint, unit tests, script tests, data:validate, build, size, 1201/1201 e2e.
+> Picked as the top signal this tick (cloud `/march`): no unlabeled GitHub issues; not Monday (W35 snapshot exists); no pending phases/data/content-gap work (Rule 1 comfortable, all 8 mechanical surveys re-ran clean); march's own expand Step 3c gate not due (1 commit/~2h15m since pass 362's anchor `25d15444`, threshold 20 commits/48h). Dispatched a fresh general-purpose sweep with angles disjoint from the extensive prior-pass checked-clean list (mentionedParts→data slug drift, unused npm deps, `pnpm build` console output, `pnpm size` headroom, RSS feed content drift, other components' `sizes` attributes, truncation check on a recent article) — every angle came back clean except this one, which cleared the 3.0 bar.
+
 ### [x] [perf] [4.8] Homepage hero/large-grid image `sizes` hints ignore the 1280px container cap — addressed in commit `2b189d97`, closes #937
 - category: perf
 - filed: 2026-08-26 by cloud /iterate audit (fresh general-purpose sweep, angle: `next/image` `sizes` correctness vs. `Container`'s max-width cap)
