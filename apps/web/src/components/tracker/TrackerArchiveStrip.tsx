@@ -41,11 +41,11 @@ export function TrackerArchiveStrip({
   return (
     <section
       data-testid="tracker-archive-strip"
-      aria-label="Weekly archive"
+      aria-label="Snapshot archive"
     >
       <div className="flex items-baseline justify-between gap-4 mb-4">
         <h2 className="font-mono uppercase tracking-[0.12em] text-small text-text-2">
-          Weekly archive
+          Snapshot archive
         </h2>
       </div>
       <div className="grid grid-cols-2 gap-px border border-border bg-border sm:grid-cols-4 lg:grid-cols-8">

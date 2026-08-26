@@ -160,7 +160,7 @@ export default function TrendsTrackerPage(): ReactElement {
         />
       ))}
 
-      {/* Weekly archive strip — links to older snapshots */}
+      {/* Snapshot archive strip — links to older snapshots */}
       {allSnapshots.length > 1 && (
         <Container as="section" className="py-12 border-t border-border">
           <TrackerArchiveStrip

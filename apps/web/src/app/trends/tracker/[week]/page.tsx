@@ -174,7 +174,7 @@ export default async function TrackerWeekPage({
       ))}
 
       {/* Prev / Next week navigation */}
-      <Container as="section" aria-label="Weekly archive navigation" className="py-8 border-t border-border">
+      <Container as="section" aria-label="Snapshot archive navigation" className="py-8 border-t border-border">
         <div className="flex items-center justify-between gap-4">
           <div>
             {prev ? (

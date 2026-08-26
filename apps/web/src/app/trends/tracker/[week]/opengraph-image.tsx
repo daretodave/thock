@@ -40,7 +40,7 @@ export default async function OpenGraphImage({
       (
         <PillarOGContent
           pillarLabel="Tracker Archive"
-          tagline="Historical weekly snapshots of the mechanical keyboard trend stream."
+          tagline="Historical snapshots of the mechanical keyboard trend stream."
         />
       ),
       { ...size, fonts: await getOgFonts() },
