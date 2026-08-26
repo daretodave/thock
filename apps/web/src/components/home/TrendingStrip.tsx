@@ -1,10 +1,13 @@
 import type { ReactElement } from 'react'
+import type { Article } from '@thock/content'
 import type { TrendSnapshot } from '@thock/data'
 import { sparkSlope } from '@/lib/tracker'
 import { TrendingTile } from './TrendingTile'
 
 export type TrendingStripProps = {
   snapshot: TrendSnapshot | null
+  /** Resolved articles keyed by slug, for wiring row → tile links. */
+  articlesBySlug?: Map<string, Article>
 }
 
 /**
@@ -29,6 +32,7 @@ export type TrendingStripProps = {
  */
 export function TrendingStrip({
   snapshot,
+  articlesBySlug,
 }: TrendingStripProps): ReactElement | null {
   if (!snapshot || snapshot.rows.length === 0) return null
 
@@ -47,16 +51,22 @@ export function TrendingStrip({
       data-testid="trending-strip"
       className="grid grid-cols-1 gap-px border border-border bg-border sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6"
     >
-      {tiles.map((row) => (
-        <TrendingTile
-          key={row.name}
-          category={row.category}
-          label={row.name}
-          delta={row.score}
-          dir={row.direction}
-          spark={row.spark}
-        />
-      ))}
+      {tiles.map((row) => {
+        const article = row.articleSlug
+          ? (articlesBySlug?.get(row.articleSlug) ?? null)
+          : null
+        return (
+          <TrendingTile
+            key={row.name}
+            category={row.category}
+            label={row.name}
+            delta={row.score}
+            dir={row.direction}
+            spark={row.spark}
+            href={article ? `/article/${article.slug}` : null}
+          />
+        )
+      })}
     </div>
   )
 }

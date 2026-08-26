@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import type { ReactElement } from 'react'
 import { Sparkline, TrendDirectionGlyph, type TrendDirection } from '@thock/ui'
 
@@ -17,6 +18,13 @@ export type TrendingTileProps = {
   delta: number | null
   dir: TrendDirection
   spark: number[]
+  /**
+   * Resolved `/article/[slug]` href for this row, or `null` when the
+   * row has no `articleSlug` or it doesn't resolve to a real article
+   * (same resolve-then-link pattern as `TrackerRow`'s `noteHref`).
+   * The whole tile becomes the click target when present.
+   */
+  href?: string | null
 }
 
 export type TrendingTileCategory =
@@ -47,10 +55,11 @@ function formatDelta(delta: number | null, dir: TrendDirection): string {
 }
 
 /**
- * Single tile in the home page Trending strip. Pure presentational —
- * no link target yet (phase 8 wires tiles to tracker rows). Kept
- * deliberately small so the strip fits 6 across at desktop without
- * squeezing.
+ * Single tile in the home page Trending strip. Wraps the whole tile
+ * in a `Link` to the row's article when `href` resolves (same
+ * whole-card-is-the-target pattern as `ArticleCard`); renders as a
+ * plain `div` otherwise. Kept deliberately small so the strip fits
+ * 6 across at desktop without squeezing.
  */
 export function TrendingTile({
   category,
@@ -58,14 +67,13 @@ export function TrendingTile({
   delta,
   dir,
   spark,
+  href = null,
 }: TrendingTileProps): ReactElement {
   const deltaText = formatDelta(delta, dir)
-  return (
-    <div
-      data-testid="trending-tile"
-      data-dir={dir}
-      className="flex min-h-[110px] flex-col gap-2 bg-bg p-4"
-    >
+  const className =
+    'flex min-h-[110px] flex-col gap-2 bg-bg p-4 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu'
+  const content = (
+    <>
       <div className="flex items-center gap-2">
         <span
           aria-hidden="true"
@@ -98,6 +106,25 @@ export function TrendingTile({
           />
         </span>
       </div>
+    </>
+  )
+
+  if (href) {
+    return (
+      <Link
+        href={href}
+        data-testid="trending-tile"
+        data-dir={dir}
+        className={className}
+      >
+        {content}
+      </Link>
+    )
+  }
+
+  return (
+    <div data-testid="trending-tile" data-dir={dir} className={className}>
+      {content}
     </div>
   )
 }

@@ -132,4 +132,35 @@ describe('<TrendingTile>', () => {
       'Gateron Oil King: up trend',
     )
   })
+
+  it('renders as a link to the article when href resolves', () => {
+    render(
+      <TrendingTile
+        category="switch"
+        label="Gateron Oil King"
+        delta={42}
+        dir="up"
+        spark={[1, 2, 3, 4]}
+        href="/article/gateron-oil-king-review"
+      />,
+    )
+    const tile = screen.getByTestId('trending-tile')
+    expect(tile.tagName).toBe('A')
+    expect(tile).toHaveAttribute('href', '/article/gateron-oil-king-review')
+  })
+
+  it('renders as a plain div (no link) when href is null', () => {
+    render(
+      <TrendingTile
+        category="switch"
+        label="Gateron Oil King"
+        delta={42}
+        dir="up"
+        spark={[1, 2, 3, 4]}
+      />,
+    )
+    const tile = screen.getByTestId('trending-tile')
+    expect(tile.tagName).toBe('DIV')
+    expect(tile).not.toHaveAttribute('href')
+  })
 })

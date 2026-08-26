@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import { TrendingStrip } from '../TrendingStrip'
-import { makeTrendSnapshot } from './testFixtures'
+import { makeArticle, makeTrendSnapshot } from './testFixtures'
 
 describe('<TrendingStrip>', () => {
   it('hides itself when the snapshot is null', () => {
@@ -156,5 +156,32 @@ describe('<TrendingStrip>', () => {
     }))
     const { container } = render(<TrendingStrip snapshot={snapshot} />)
     expect(container.firstChild).toBeNull()
+  })
+
+  it('links a tile to its article when the row articleSlug resolves', () => {
+    const article = makeArticle({ slug: 'gateron-oil-king-review' })
+    const snapshot = makeTrendSnapshot()
+    snapshot.rows = [
+      { ...snapshot.rows[0]!, articleSlug: 'gateron-oil-king-review' },
+    ]
+    render(
+      <TrendingStrip
+        snapshot={snapshot}
+        articlesBySlug={new Map([[article.slug, article]])}
+      />,
+    )
+    const tile = screen.getByTestId('trending-tile')
+    expect(tile.tagName).toBe('A')
+    expect(tile).toHaveAttribute('href', '/article/gateron-oil-king-review')
+  })
+
+  it('leaves a tile unlinked when the row articleSlug does not resolve to a real article', () => {
+    const snapshot = makeTrendSnapshot()
+    snapshot.rows = [
+      { ...snapshot.rows[0]!, articleSlug: 'does-not-exist' },
+    ]
+    render(<TrendingStrip snapshot={snapshot} articlesBySlug={new Map()} />)
+    const tile = screen.getByTestId('trending-tile')
+    expect(tile.tagName).toBe('DIV')
   })
 })

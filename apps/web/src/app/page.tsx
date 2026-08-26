@@ -61,6 +61,9 @@ export default function HomePage(): ReactElement {
   const articles = getAllArticles()
   const heroArticle = pickHero(articles)
   const trendSnapshot = getLatestTrendSnapshot()
+  const articlesBySlug = new Map<string, Article>(
+    articles.map((a) => [a.slug, a]),
+  )
   const activeGroupBuys = getActiveGroupBuys()
   const vendors = getAllVendors()
 
@@ -149,7 +152,10 @@ export default function HomePage(): ReactElement {
               href: '/trends/tracker',
             }}
           />
-          <TrendingStrip snapshot={trendSnapshot} />
+          <TrendingStrip
+            snapshot={trendSnapshot}
+            articlesBySlug={articlesBySlug}
+          />
         </Container>
       )}
 
