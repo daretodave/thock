@@ -12357,3 +12357,23 @@ passes accumulate signals.)
 - next: swap the clause to match the canonical footprint (leaf + spring bottom lubed, rails dry)
 - issue: #933
 > **Resolved (2026-08-25):** Rewrote `silent-switch-damping-deep-dive.mdx:109` to "Gazzew lubes the U4's leaf and spring bottom and leaves the rails dry" — matching the canonical data record and sibling articles, and resolving the internal contradiction with the following "light rail lube" clause. No other lube references in the article needed changes. `pnpm verify` full gate green: typecheck, lint, unit tests, test:scripts, data:validate, build, size, 1201/1201 e2e.
+
+### [x] [data] [5.4] cannonkeys-mode-sonnet-r2 group-buy record still said 65%/polycarbonate after the board correction — addressed in `2e4aaead`, closes #936
+- category: data
+- filed: 2026-08-26 by cloud /iterate audit (delegated general-purpose sweep, angles: vendor pages, loading-skeleton parity, News/Guides pillar catalog cross-checks — two independent sub-agents both surfaced this one)
+- impact: 6 (`data/boards/mode-sonnet.json` was corrected to `layout: "75"` / POM stock / aluminum-carbon fiber-copper upgrades on 2026-08-23, issue #911, and both companion articles already reflect the corrected facts — but this group-buy record's `description`/`heroImageAlt` were missed in that pass, so the two catalog records for the same physical product disagreed with each other on layout, plate material, and upgrade options)
+- ease: 9 (text-only edit to `description`/`heroImageAlt`, no schema change; board record and both articles already establish the correct facts)
+- score: 5.4 (impact × ease / 10)
+- evidence: `data/boards/mode-sonnet.json` (`layout: "75"`, POM/aluminum/carbon-fiber/copper) vs. `data/group-buys/cannonkeys-mode-sonnet-r2.json` (pre-fix: "65% ... polycarbonate ... brass/FR4"); `mode-sonnet-r2-group-buy-coverage.mdx:66` ("75% aluminum case ... default plate ... POM ... aluminum, carbon fiber, and copper plates as paid upgrades") and `wuque-studio-summer-update.mdx:46` ("a 75% board") both already correct
+- next: `/ship-data` correction; also soften the hero SVG's false "65%" accessibility text (full grid redraw deferred — see new AUDIT row below)
+- issue: #936
+> **Resolved (2026-08-26):** Corrected `description`/`heroImageAlt` on `data/group-buys/cannonkeys-mode-sonnet-r2.json` to 75%/POM/aluminum-carbon fiber-copper, matching the board record and both articles; bumped `updatedAt`. Softened the hero SVG's `aria-label`/`<title>` to drop the false "65%" claim (same treatment the two dedicated-article SVGs got in the original correction pass); the visual grid still depicts a 65% shape (no F-row) — full redraw deferred to a follow-up row, `brander`'s job, not a text edit. Regenerated data-runtime manifest, OG manifest, and search index. `pnpm verify` full gate green: typecheck, lint, unit tests, test:scripts, data:validate, build, size, 1201/1201 e2e. `2e4aaead`
+
+### [ ] [seo] [2.0] `cannonkeys-mode-sonnet-r2.svg` hero art still visually depicts a 65% layout after the group-buy record's text was corrected to 75%
+- category: seo
+- filed: 2026-08-26 by /iterate (drain of `[5.4]` cannonkeys-mode-sonnet-r2 data correction, same class as the existing `[2.7]` row above for the two dedicated Mode Sonnet articles)
+- impact: 5 (`apps/web/public/group-buy-art/cannonkeys-mode-sonnet-r2.svg` is a hand-authored key-layout illustration drawn with a genuine 65% row/column count — the `aria-label`/`<title>` were softened this tick to drop the false "65%" claim, but the visible artwork itself, and its internal composition comments, still read as a 65% silhouette; the group-buy is closed/archived on `/group-buys/past`, lower traffic than an active listing, hence impact 5 rather than 6)
+- ease: 4 (requires `brander` to redraw the key-layout grid to a 75% shape — add a compressed function row and rebalance proportions — rather than a text-only edit; also update the provenance JSON `subject`/`prompt` fields once redrawn)
+- score: 2.0 (impact × ease / 10)
+- evidence: `apps/web/public/group-buy-art/cannonkeys-mode-sonnet-r2.svg` comments "65% layout" / "No F-row (the defining 65% tell vs. 75%)" / "65% at ~13.5u wide × ~5.5u tall"; `apps/web/public/group-buy-art/cannonkeys-mode-sonnet-r2.json` provenance `subject`/`prompt` fields both still describe a 65% board
+- next: `/ship-asset` — brander redraws the hero SVG with a 75%-shaped key grid (add a compressed function row); update the provenance JSON `subject`/`prompt` fields to match once redrawn
