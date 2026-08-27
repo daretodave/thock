@@ -6,124 +6,100 @@
 
 ## Headline
 
-**Another quiet, steady 24-hour window — 24 cloud `march` ticks, 22
-green, 2 red-but-harmless.** Since the last digest (`3752a00c`,
-2026-08-25T10:58Z), 6 of 24 ticks shipped a substantive fix, 10 were
-`/expand` passes (351–360, all 0 new candidates), 6 were clean
-no-ops, and 2 failed back-to-back.
-
-**Both failures** (13:19–13:20Z and 14:16–14:17Z, runs
-`32852651031`/`32858441384`) carry the same signal —
-`result.is_error: true`, `api_error_status: 429` — a transient
-Anthropic API rate limit, not a code or gate defect. Neither
-attempted to open a fresh issue: both found the standing "Cloud
-march execution had issues" issue (`#929`, opened by an unrelated
-08-25 08:15Z failure with no `429` code, since labeled
-`triage:reviewed`) already open and skipped. No pattern links the
-three failures beyond the generic transcript signal; none happened
-again after 14:17Z.
+**A clean, steady ~27-hour window — 16 cloud `march` ticks, all 16
+green, zero failures.** Since the last digest (`e95901f3`,
+2026-08-26T10:59Z), 5 of 16 ticks shipped a substantive fix, 6 were
+`/expand` passes (361–366, all 0 new candidates), and 5 were clean
+no-ops. No `march` failures this window at all — a clear contrast
+with the prior window's two transient 429s.
 
 **This tick's own fresh `pnpm verify` is fully clean** — all 8 legs
 green, run as sequential foreground legs per the standing rule.
-Deploy is `READY` at HEAD (`fe6fbee4`).
+Deploy is `READY` at HEAD (`2e6e0059`).
 
-**`plan/AUDIT.md` is at 3 open rows**, up from 2 last digest — the
-two standing cascade rows from the mode-sonnet layout correction
-(`[seo] [2.7]` hero-art, `[content] [2.4]` plate-materials framing)
-plus one new same-class row filed this window: `[seo] [2.0]`
-`cannonkeys-mode-sonnet-r2.svg` hero art still depicts the pre-fix
-65% layout after the group-buy record's own 65%→75% data correction
-(`f27775f0`/`2e4aaead`, closes `#936`). All three are low-score,
-`/ship-asset`-shaped hero-art redraws; none blocked this window.
+**`plan/AUDIT.md` holds the same 3 open rows as last digest** — no
+new standing findings this window; every audit finding filed this
+window (5 of them) was resolved same-tick, filed-and-closed in one
+commit pair. The 3 standing rows are all low-score, same-class
+hero-art cascade findings from the mode-sonnet layout correction
+(`[seo] [2.7]`, `[content] [2.4]`, `[seo] [2.0]`) — unchanged, still
+`/ship-asset`-shaped.
 
-`plan/CRITIQUE.md` is now **108 days / ~2,500 commits** since its
+`plan/CRITIQUE.md` is now **109 days / ~2,522 commits** since its
 last pass (11, 2026-05-10T20:35 UTC at commit `931c8a7`) — one day
 older than last digest, same diagnosis (no Chrome MCP on the cloud
 runner), still filed as a `[score 6.5] [needs-user-call]` candidate
 in `plan/PHASE_CANDIDATES.md` awaiting `/oversight` promotion.
-`plan/PHASE_CANDIDATES.md` holds **31 live pending rows**, pass 360,
-now 3 days since the last promotion (phase 50, 2026-08-23T12:54Z via
-local `/oversight`).
+`plan/PHASE_CANDIDATES.md` holds **31 live pending rows**, unchanged
+in count, pass 366, now 4 days since the last promotion (phase 50,
+2026-08-23T12:54Z via local `/oversight`).
 
 ## While you were out
 
 | When (UTC) | Tick | Outcome |
 |---|---|---|
-| 08-25 11:07→11:10 | cloud march | no-op |
-| 08-25 12:08→12:30 | cloud march | content: keyboard-layout-sizes-buying-guide — fix reversed hero alt-text size order, closes `#931` |
-| 08-25 13:19→13:20 | cloud march | **failure** — `result.is_error: true`, `api_error_status: 429`; standing issue `#929` already open, skipped |
-| 08-25 14:16→14:17 | cloud march | **failure** — same signal (429); `#929` already open, skipped |
-| 08-25 15:17→15:26 | cloud march | expand pass 351 — no candidates, no new signal since pass 350 |
-| 08-25 16:12→16:18 | cloud march | expand pass 352 — no candidates, no new signal since pass 351 |
-| 08-25 17:11→17:26 | cloud march | expand pass 353 — no candidates, no new signal since pass 352 |
-| 08-25 18:09→18:14 | cloud march | expand pass 354 — no candidates, no new signal since pass 353 |
-| 08-25 19:12→19:32 | cloud march | content: fix Boba U4/U4T "same stem" framing across 3 articles, closes `#932` |
-| 08-25 20:06→20:10 | cloud march | no-op |
-| 08-25 21:07→21:27 | cloud march | content: fix inverted Gazzew Boba U4 factory-lube footprint in silent-switch-damping-deep-dive, closes `#933` |
-| 08-25 22:05→22:27 | cloud march | expand pass 355 — no candidates, no new signal since pass 354 |
-| 08-25 23:06→23:28 | cloud march | fix: quiz recommender — explicit clicky selection could lose to tactile switches, closes `#934` |
-| 08-26 00:12→00:17 | cloud march | no-op |
-| 08-26 01:30→01:47 | cloud march | seo: trends tracker archive copy no longer overclaims unbroken weekly continuity, closes `#935` |
-| 08-26 02:31→02:58 | cloud march | data: cannonkeys-mode-sonnet-r2 group-buy record corrected 65%/polycarbonate → 75%/POM, closes `#936` |
-| 08-26 03:22→03:25 | cloud march | no-op |
-| 08-26 04:14→04:23 | cloud march | expand pass 356 — no candidates, no new signal since pass 355 |
-| 08-26 05:11→05:27 | cloud march | expand pass 357 — no candidates, no new signal since pass 356 |
-| 08-26 06:10→06:17 | cloud march | expand pass 358 — no candidates, no new signal since pass 357 |
-| 08-26 07:18→07:29 | cloud march | expand pass 359 — no candidates, no new signal since pass 358 |
-| 08-26 08:14→08:18 | cloud march | no-op |
-| 08-26 09:15→09:29 | cloud march | no-op |
-| 08-26 10:12→10:17 | cloud march | expand pass 360 — no candidates, no new signal since pass 359 |
+| 08-26 11:08→11:29 | cloud march | perf: homepage hero/grid image sizes ignore 1280px container cap, closes AUDIT `[4.8]` |
+| 08-26 12:09→12:12 | cloud march | no-op |
+| 08-26 13:21→13:25 | cloud march | no-op |
+| 08-26 14:16→14:33 | cloud march | content: thock-weekly-005 Durock T1 blurb no longer says "ships dry", closes `#938`'s residual AUDIT `[6.3]` |
+| 08-26 15:46→15:52 | cloud march | expand pass 361 — no candidates, no new signal since pass 360 |
+| 08-26 16:28→16:31 | cloud march | no-op |
+| 08-26 17:57→18:07 | cloud march | expand pass 362 — no new candidates, 3 stale Considered entries cleaned up |
+| 08-26 18:40→18:59 | cloud march | content: fix 4 residual Boba U4/U4T "same stem" claims commit 96987f07 missed |
+| 08-26 19:33→19:56 | cloud march | content: relative-this-month pattern gap — 2 trends articles drifted stale |
+| 08-26 20:47→20:57 | cloud march | expand pass 363 — no new candidates |
+| 08-26 21:56→22:12 | cloud march | expand pass 364 — no new candidates |
+| 08-26 23:05→23:30 | cloud march | fix: homepage trending tiles link to their articles, closes `#941` |
+| 08-27 01:29→01:38 | cloud march | expand pass 365 — no new candidates |
+| 08-27 03:44→03:47 | cloud march | no-op |
+| 08-27 06:05→06:20 | cloud march | expand pass 366 — no new candidates |
+| 08-27 10:17→10:21 | cloud march | no-op |
 
-24 `march`-workflow runs since the last digest: **22 success, 2
+16 `march`-workflow runs since the last digest: **16 success, 0
 failure, 0 cancelled.** `night` ran success on its prior attempt
-(2026-08-25T10:41Z); this tick's own run (started 10:42:03Z) is in
-progress as this file writes. `lighthouse` ran twice since last
-digest (07:28Z, 10:17Z), both green.
+(2026-08-26T10:42Z); this tick's own run is in progress as this file
+writes. `lighthouse` ran 5 times since last digest, all green.
 
 ## Shipped
 
-- **1 content fix**: keyboard-layout-sizes-buying-guide's reversed
-  hero alt-text size order.
-- **2 catalog-fact corrections**: Boba U4/U4T "same stem" framing
-  fixed across 3 articles; the inverted Boba U4 factory-lube
-  footprint in silent-switch-damping-deep-dive.
-- **1 logic fix**: quiz recommender — an explicit clicky selection
-  could previously lose to tactile switches in scoring.
-- **1 seo/copy fix**: trends tracker archive copy no longer implies
-  an unbroken weekly continuity it doesn't have.
-- **1 data correction**: cannonkeys-mode-sonnet-r2 group-buy record
-  still read 65%/polycarbonate after the board record itself was
-  corrected to 75%/POM three days ago — this window's fix brings the
-  group-buy record's `description`/`heroImageAlt` in line with the
-  board record and both companion articles. Filed a same-class
-  follow-up hero-art row (`[seo] [2.0]`, see Headline) since the
-  visual SVG grid still depicts the old 65% shape.
-- **10 `/expand` passes** (351–360): 0 new candidates across all
-  ten — the last actual candidate filed was pass 345 (2026-08-23);
-  this window extends that streak to 15 consecutive no-candidate
-  passes with no new signal in any of the eight tracked categories.
+- **1 perf fix**: homepage hero/grid image sizes now respect the
+  1280px container cap instead of requesting oversized art.
+- **1 content fix**: `thock-weekly-005`'s Durock T1 Deep Dive teaser
+  no longer contradicts the corrected "ships factory pre-lubed"
+  premise.
+- **1 catalog-fact correction**: 4 residual Boba U4/U4T "same stem"
+  claims that an earlier fix (`96987f07`) missed.
+- **1 content-language fix**: added a `relative-this-month` pattern
+  rule and reworded 5 live instances across 2 trends articles that
+  had drifted stale relative to their July 2026 publish dates.
+- **1 enhancement**: homepage "Trending" strip tiles now link to
+  their articles — the same class of fix as the prior window's
+  cross-link work, closing `#941`.
+- **6 `/expand` passes** (361–366): 0 new candidates across all
+  six — the last actual candidate filed was still pass 345
+  (2026-08-23); this window extends that streak to 21 consecutive
+  no-candidate passes (346–366, spanning ~4 days).
 
 ## Queues now
 
 - **Build plan**: all 51 phases shipped, 0 pending — unchanged.
 - **Cross-link drain**: 0 open `[cross-links]` `plan/AUDIT.md` rows
   — unchanged from last digest.
-- **Critique**: pass 11, 2026-05-10 — **108 days / ~2,500 commits**
+- **Critique**: pass 11, 2026-05-10 — **109 days / ~2,522 commits**
   stale, one day older than last digest. Diagnosis (no Chrome MCP on
   the cloud runner) remains filed as a `[score 6.5]
   [needs-user-call]` `plan/PHASE_CANDIDATES.md` candidate awaiting
-  `/oversight` promotion — see Needs You below. Still the single
-  largest age gap tracked in this file, growing one day at a time
-  with no mechanism to close it short of `/oversight`.
+  `/oversight` promotion — see Needs You below.
 - **Phase candidates**: **31 live pending rows** (plus 1
-  `needs-user-call`), pass 360, now 3 days since phase 50's
-  promotion (2026-08-23T12:54Z). `/expand` itself has gone 15
-  consecutive passes (346–360, spanning ~3 days) without filing a
-  new one — see Tuning proposals below for why this isn't yet a
-  tuning trigger. The `[7.5]` content-fact-vs-catalog numeric-spec
-  audit and the two `[6.5]` candidates (truncation-boundary
-  mechanical survey, OG render-verification gate) remain the
-  strongest by evidence density.
+  `needs-user-call`), pass 366, unchanged in count from last digest,
+  now 4 days since phase 50's promotion (2026-08-23T12:54Z).
+  `/expand` itself has now gone 21 consecutive passes (346–366,
+  ~4 days) without filing a new one — see Tuning proposals below for
+  why this still isn't a tuning trigger. The `[7.5]`
+  content-fact-vs-catalog numeric-spec audit and the two `[6.5]`
+  candidates (truncation-boundary mechanical survey, OG
+  render-verification gate) remain the strongest by evidence
+  density.
 - **Data backlog**: empty — `data/BACKLOG.md`'s Pending section is
   fully checked off. Record counts unchanged: 18 switches, 10
   boards, 10 keycap-sets, 11 vendors, 17 group-buys, 16 trends (82
@@ -134,17 +110,15 @@ digest (07:28Z, 10:17Z), both green.
   fix already shipped in an earlier window, issue never
   auto-closed, same mirror-drain-gap instance as last digest.
   `#928` (seven hero-art SVGs use stock blue/cyan, violating the
-  warm-palette rule) — open, unpicked, `severity:med`. `#929` (the
-  08-25 08:15Z march failure) — labeled `triage:reviewed`, no action
-  needed; the two new 429 failures this window found it already open
-  and did not duplicate it.
-- **`plan/AUDIT.md`**: **3 open `[ ]` Pending rows** — up from 2 last
-  digest (see Headline for the new `[2.0]` row). All three are
-  low-score cascade findings from the mode-sonnet layout correction
-  chain. Plus **2 standing `[needs-user-call]` rows**, unchanged,
-  non-autonomous by design: soft-404 structural block (`[bug]
-  [4.2]`) and the mirror-drain-gap mechanism (`[engineering] [3.0]`,
-  evidenced again by `#915`).
+  warm-palette rule) — open, unpicked for a third digest running,
+  `severity:med`. `#929` (the 08-25 08:15Z march failure) — labeled
+  `triage:reviewed`, no action needed.
+- **`plan/AUDIT.md`**: **3 open `[ ]` Pending rows**, unchanged from
+  last digest — all three are low-score cascade findings from the
+  mode-sonnet layout correction chain. Plus **2 standing
+  `[needs-user-call]` rows**, unchanged, non-autonomous by design:
+  soft-404 structural block (`[bug] [4.2]`) and the mirror-drain-gap
+  mechanism (`[engineering] [3.0]`, evidenced again by `#915`).
 
 ## Breadth verdict
 
@@ -153,10 +127,10 @@ standing rule — never backgrounded):
 
 - `typecheck` — green, 9 workspace projects.
 - `lint` — green, all lintable workspaces.
-- `test:run` — green, **166 files / 1,232 tests** (web: 109/851;
+- `test:run` — green, **166 files / 1,236 tests** (web: 109/855;
   content: 24/167; data: 19/129; seo: 5/44; ui: 7/32; e2e-unit:
   1/6; tokens: 1/3).
-- `test:scripts` — green, **80 suites / 223 tests**.
+- `test:scripts` — green, **81 suites / 225 tests**.
 - `data:validate` — green, **82 records**, all cross-refs resolve
   (11 vendors, 18 switches, 10 keycap-sets, 10 boards, 17
   group-buys, 16 trends).
@@ -165,10 +139,10 @@ standing rule — never backgrounded):
 - `size` — green, homepage bundle **147.1 KB / 200 KB** budget;
   `/search` **144.4 KB / 175 KB** budget — same comfortable headroom
   as last digest.
-- `e2e` — green, **1,201/1,201** in ~7.9m. Console `NoFallbackError`
+- `e2e` — green, **1,201/1,201** in ~7.7m. Console `NoFallbackError`
   noise during the run is from intentional not-found-route probes,
   expected and non-blocking (same as prior digests).
-- `pnpm deploy:check` at HEAD (`fe6fbee4`) — deploy `READY`.
+- `pnpm deploy:check` at HEAD (`2e6e0059`) — deploy `READY`.
 
 Zero red legs this tick — nothing new filed to `plan/AUDIT.md` from
 breadth itself.
@@ -176,22 +150,22 @@ breadth itself.
 ## Needs you
 
 1. **Standing, highest-leverage: `ACTIONS_PAT` lacks the
-   `workflows` PAT scope (`#898`).** Still unresolved. No cloud
-   tick can push a change to `.github/workflows/*.yml` until this
-   is fixed.
-2. **Standing: `plan/CRITIQUE.md` is 108 days stale**, one day
-   older than last digest, with no mechanism to self-correct. Root
-   cause (no Chrome MCP on the cloud runner) is filed as a
-   `[score 6.5] [needs-user-call]` candidate, ready for the next
-   `/oversight` pass to act on directly.
+   `workflows` PAT scope (`#898`).** Still unresolved, now 5 days
+   open. No cloud tick can push a change to `.github/workflows/*.yml`
+   until this is fixed.
+2. **Standing: `plan/CRITIQUE.md` is 109 days stale**, one day older
+   than last digest, with no mechanism to self-correct. Root cause
+   (no Chrome MCP on the cloud runner) is filed as a `[score 6.5]
+   [needs-user-call]` candidate, ready for the next `/oversight`
+   pass to act on directly.
 3. **Standing: `#915` mirror-drain-gap instance, unchanged.** The
    why-stabilizers-rattle-deep-dive cross-link fix has been live
-   for three days; the issue itself never closed. A 10-second
+   for four days; the issue itself never closed. A 10-second
    `gh issue close 915` clears it; the underlying tooling gap is
    already tracked as a `[needs-user-call] [3.0]` `plan/AUDIT.md`
    row and a `[6.0]` `plan/PHASE_CANDIDATES.md` candidate.
 4. **Standing: `#928`, seven hero-art SVGs use stock blue/cyan**,
-   violating the warm-palette rule — open, unpicked for two
+   violating the warm-palette rule — open, unpicked for three
    digests running, `severity:med`. Worth a look next `/iterate` or
    `/ship-asset` tick if it isn't already the top-scored finding —
    it's now sitting alongside three related hero-art `[seo]` rows
@@ -210,26 +184,25 @@ No phase or content-gap work is queued — the build plan is fully
 shipped through phase 50, Rule 1 is comfortable. `plan/AUDIT.md`'s 3
 open rows are all low-score hero-art redraws from the same
 mode-sonnet cascade; `#928`'s palette violation is the most
-concrete unpicked signal sitting in GitHub issues and, given its
-overlap with the three cascade rows, is a reasonable single
-`/ship-asset` pick to clear the whole hero-art backlog in one pass
-if nothing higher-scored surfaces from a fresh audit sweep.
+concrete unpicked signal sitting in GitHub issues for a third
+digest running and, given its overlap with the three cascade rows,
+is a reasonable single `/ship-asset` pick to clear the whole
+hero-art backlog in one pass if nothing higher-scored surfaces from
+a fresh audit sweep.
 
 ## Tuning proposals
 
-**None new this tick.** `/expand` has now gone 15 consecutive
-passes (346–360, ~3 days) without a new candidate — worth watching,
-but still short of the "dozens of passes" stall threshold that
-would warrant a proposal, and the pass notes show real (if
-negative) audit work each time, not a mechanism silently idling.
-The ceiling shows no hibernation (18 of 24 ticks this window either
-shipped or ran a genuine expand pass; only 6 were plain no-ops).
-Critique staleness is already captured as a promotion-ready
-candidate, not a fresh proposal. The standing mirror-drain-gap and
-OG-render-verification candidates already on file cover this
-window's only recurring signals (`#915`, `NoFallbackError` noise)
-with no new evidence shape. If the no-candidate streak reaches
-"dozens" (roughly pass 375+ at the current cadence) without a
-change in shipped-tick density, the next digest should propose
-either widening `/expand`'s signal categories or lengthening its
-dispatch interval.
+**None new this tick.** `/expand` has now gone 21 consecutive
+passes (346–366, ~4 days) without a new candidate — closer to the
+"dozens of passes" stall threshold flagged as a watch item in the
+last two digests, but still short of it, and pass notes continue to
+show real (if negative) audit work each time (Considered-entry
+cleanup at pass 362, cascade-evidence checks), not a mechanism
+silently idling. The ceiling shows no hibernation (11 of 16 ticks
+this window either shipped or ran a genuine expand pass; only 5 were
+plain no-ops, a healthier ratio than last window's 6/24). Critique
+staleness is already captured as a promotion-ready candidate, not a
+fresh proposal. If the no-candidate streak reaches pass 375+ (the
+threshold flagged last digest) without a change in shipped-tick
+density, the next digest should propose either widening `/expand`'s
+signal categories or lengthening its dispatch interval.
