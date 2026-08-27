@@ -12436,3 +12436,24 @@ passes accumulate signals.)
 - next: thread `articleSlug` through `TrendingStrip` into `TrendingTile`, resolve against the article catalog, wrap in `next/link` when resolved
 - issue: #941
 > **Resolved (2026-08-26):** threaded `articleSlug` from `TrendRow` through `TrendingStrip` into `TrendingTile`; resolved against `articlesBySlug` built in `apps/web/src/app/page.tsx` from `getAllArticles()`, mirroring `TrackerRow`'s `noteHref` pattern. Whole tile becomes the click target (`ArticleCard` hero-variant pattern) when the slug resolves to a real article, else renders as before (plain div). 4 new unit tests. `pnpm verify` full gate green: typecheck, lint, unit tests, test:scripts, data:validate, build, size, 1201/1201 e2e. `5dd9b46d`
+
+### [x] [tests] [4.8] trend-snapshot-quality-check.mjs reports "clean" over a real missing weekly snapshot — addressed in fe7519de, closes #942
+- category: tests
+- filed: 2026-08-27 by cloud /iterate audit (fresh general-purpose sweep, angle: Trends Tracker sparkline continuity across weekly snapshot files)
+- impact: 6 (permanent, invisible gap in the flagship feature's historical data plus a false-negative in its own dedicated Phase 50 "hard gate" that `skills/march.md` Step 0.5 relies on to trust)
+- ease: 8 (small, self-contained addition to an already-well-structured checker script; templated shift-and-append pattern already established by the sibling D-continuity check)
+- score: 4.8 (impact × ease / 10)
+- observation: `data/trends/2026-W34.json` was never written (the Monday 2026-08-17 snapshot gate silently skipped a week; archive jumps W33 → W35). `node scripts/trend-snapshot-quality-check.mjs` reported "clean — no violations" over this exact gap: Check D only diffs a snapshot's spark arrays against whichever file precedes it *alphabetically on disk*, never against the ISO week that file should be preceded by, so a skipped week still produces an array shaped like a valid one-week shift and passes silently.
+- evidence: `ls data/trends/` — W33.json then W35.json, no W34.json; pre-fix `node scripts/trend-snapshot-quality-check.mjs` exit 0 "clean — no violations".
+- next: addressed this tick.
+- issue: #942
+> **Resolved (2026-08-27):** added a snapshot-level "D-missing-week" check to `scripts/trend-snapshot-quality-check.mjs` — consecutive files on disk must cover consecutive ISO weeks (via a new `nextIsoWeek` helper that inverts `isoWeekString`); flags the gap by name when they don't. Gated `scripts/iso-week.mjs`'s CLI print behind an `isMain` check so the new cross-import doesn't pollute stdout. 7 new unit tests. Running `--write` against the live corpus filed the follow-up `[4.8]` row below for the actual `data/trends/2026-W34.json` backfill (a separate ship-data task). `pnpm verify` full gate green: typecheck, lint, unit tests (855), test:scripts (230, 20 new), data:validate, build, size, 1201/1201 e2e. `fe7519de`
+
+### [ ] [data] [4.8] 2026-W35 snapshot-gap — missing weekly snapshot (ISO-week gap)
+- category: data
+- filed: 2026-08-27 by trend-snapshot-quality-check.mjs
+- impact: 6 (expected ISO week 2026-W34 to follow 2026-W33, found 2026-W35 — a snapshot for 2026-W34 is missing)
+- ease: 8 (research + write the missing data/trends/2026-W34.json snapshot (scout + ship-data, templated shape))
+- score: 4.8 (impact × ease / 10)
+- trend-row: 2026-W35 / snapshot-gap
+- action: expected ISO week 2026-W34 to follow 2026-W33, found 2026-W35 — a snapshot for 2026-W34 is missing
