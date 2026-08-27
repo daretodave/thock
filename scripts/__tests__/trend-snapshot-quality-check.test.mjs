@@ -13,6 +13,8 @@ const {
   checkStatusClaims,
   checkDirectionSign,
   checkContinuity,
+  checkMissingWeek,
+  nextIsoWeek,
   buildGroupBuyByArticle,
   canonicalNames,
   alreadyFiled,
@@ -165,6 +167,47 @@ describe('checkContinuity', () => {
     const violations = checkContinuity(prev, curr)
     assert.equal(violations.length, 1)
     assert.equal(violations[0].check, 'D-continuity')
+  })
+})
+
+// ── D-missing-week — snapshot-level ISO-week gap ──────────────────────────────
+
+describe('nextIsoWeek', () => {
+  test('steps forward one week within a year', () => {
+    assert.equal(nextIsoWeek('2026-W33'), '2026-W34')
+  })
+
+  test('rolls over a year boundary', () => {
+    // 2026 has 53 ISO weeks; W53 is the last one before 2027-W01.
+    assert.equal(nextIsoWeek('2026-W53'), '2027-W01')
+  })
+})
+
+describe('checkMissingWeek', () => {
+  test('does not flag consecutive ISO weeks', () => {
+    const prev = makeSnapshot('2026-W33', [makeRow()])
+    const curr = makeSnapshot('2026-W34', [makeRow()])
+    assert.equal(checkMissingWeek(prev, curr).length, 0)
+  })
+
+  test('flags a skipped ISO week even when spark arrays still look shift-and-append valid', () => {
+    const prev = makeSnapshot('2026-W33', [makeRow({ name: 'Topic', spark: [1, 2, 3, 4] })])
+    // W34 was never written; this file (W35) still shift-and-appends cleanly
+    // against W33 on disk, which is exactly why the per-row check misses it.
+    const curr = makeSnapshot('2026-W35', [makeRow({ name: 'Topic', spark: [2, 3, 4, 5] })])
+    const violations = checkMissingWeek(prev, curr)
+    assert.equal(violations.length, 1)
+    assert.equal(violations[0].check, 'D-missing-week')
+    assert.equal(violations[0].missingWeek, '2026-W34')
+    assert.match(violations[0].detail, /2026-W34/)
+
+    // Confirm the blind spot: per-row continuity passes on the same pair.
+    assert.equal(checkContinuity(prev, curr).length, 0)
+  })
+
+  test('does not flag the first snapshot on disk (no prior file to compare)', () => {
+    const curr = makeSnapshot('2026-W01', [makeRow()])
+    assert.equal(checkMissingWeek(null, curr).length, 0)
   })
 })
 

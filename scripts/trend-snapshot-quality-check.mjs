@@ -15,11 +15,16 @@
 //   D. direction/spark consistency — `direction` must agree with the
 //      sign of the last spark delta (tolerant for 'flat'), and
 //      week-over-week spark arrays for the same topic must be
-//      shift-and-append continuous.
+//      shift-and-append continuous. Also: consecutive snapshot files on
+//      disk must cover consecutive ISO weeks — a skipped week produces a
+//      shift-and-append-*shaped* spark array (each snapshot's rows still
+//      pass D-continuity against whichever file precedes them on disk)
+//      that silently compresses N calendar weeks into N-1 plotted points.
 //
-// Phase 50. skills/march.md Step 0.5 runs this as a HARD GATE against
-// the newly-written snapshot file (--file); a corpus-wide --write scan
-// is a best-effort survey like every other scripts/*-survey.mjs.
+// Phase 50 (checks A-D). skills/march.md Step 0.5 runs this as a HARD
+// GATE against the newly-written snapshot file (--file); a corpus-wide
+// --write scan is a best-effort survey like every other
+// scripts/*-survey.mjs.
 //
 // Usage:
 //   node scripts/trend-snapshot-quality-check.mjs [--file <path>]
@@ -42,6 +47,7 @@
 import { readFileSync, readdirSync, appendFileSync, existsSync } from 'node:fs'
 import { join, dirname, basename } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { isoWeekString } from './iso-week.mjs'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const REPO_ROOT = join(__dirname, '..')
@@ -270,6 +276,53 @@ function checkDirectionSign(snapshot) {
   return violations
 }
 
+// Monday of the ISO week identified by a "YYYY-WNN" string — the inverse
+// of isoWeekString's own week-1-Monday computation, so date math round-trips.
+function mondayOfIsoWeek(isoWeek) {
+  const [yearStr, weekStr] = isoWeek.split('-W')
+  const year = Number(yearStr)
+  const week = Number(weekStr)
+
+  const jan4 = new Date(year, 0, 4)
+  const jan4Day = jan4.getDay() === 0 ? 7 : jan4.getDay()
+  const weekOneMonday = new Date(jan4)
+  weekOneMonday.setDate(jan4.getDate() - (jan4Day - 1))
+
+  const monday = new Date(weekOneMonday)
+  monday.setDate(weekOneMonday.getDate() + (week - 1) * 7)
+  return monday
+}
+
+function nextIsoWeek(isoWeek) {
+  const monday = mondayOfIsoWeek(isoWeek)
+  const next = new Date(monday)
+  next.setDate(monday.getDate() + 7)
+  return isoWeekString(next)
+}
+
+// Snapshot-level (not per-row) check: the file preceding `snapshot` on disk
+// must cover the calendar week immediately before it. Per-row D-continuity
+// only checks that a spark array is *a* shift-and-append of the prior
+// file's — it can't tell a skipped week from a normal one, since a missed
+// week still produces an array shaped like a valid one-week shift relative
+// to whichever file happens to be alphabetically/chronologically previous.
+function checkMissingWeek(prevSnapshot, snapshot) {
+  const violations = []
+  if (!prevSnapshot) return violations
+
+  const expected = nextIsoWeek(prevSnapshot.isoWeek)
+  if (snapshot.isoWeek !== expected) {
+    violations.push({
+      check: 'D-missing-week',
+      isoWeek: snapshot.isoWeek,
+      missingWeek: expected,
+      row: 'snapshot-gap',
+      detail: `expected ISO week ${expected} to follow ${prevSnapshot.isoWeek}, found ${snapshot.isoWeek} — a snapshot for ${expected} is missing`,
+    })
+  }
+  return violations
+}
+
 function checkContinuity(prevSnapshot, snapshot) {
   const violations = []
   if (!prevSnapshot) return violations
@@ -301,6 +354,7 @@ const SCORES = {
   C: { score: '4.8', impact: 6, ease: 8, label: 'status-claim mismatch' },
   'D-sign': { score: '3.6', impact: 4, ease: 9, label: 'direction/spark contradiction' },
   'D-continuity': { score: '3.5', impact: 7, ease: 5, label: 'spark continuity break' },
+  'D-missing-week': { score: '4.8', impact: 6, ease: 8, label: 'missing weekly snapshot (ISO-week gap)' },
 }
 
 function rowSignature(v) {
@@ -310,11 +364,15 @@ function rowSignature(v) {
 function formatAuditRow(v, today) {
   const meta = SCORES[v.check]
   const todayStr = today.toISOString().slice(0, 10)
+  const easeNote =
+    v.check === 'D-missing-week'
+      ? `research + write the missing data/trends/${v.missingWeek}.json snapshot (scout + ship-data, templated shape)`
+      : `correct the field in data/trends/${v.isoWeek}.json`
   return `\n### [ ] [data] [${meta.score}] ${rowSignature(v)}
 - category: data
 - filed: ${todayStr} by trend-snapshot-quality-check.mjs
 - impact: ${meta.impact} (${v.detail})
-- ease: ${meta.ease} (correct the field in data/trends/${v.isoWeek}.json)
+- ease: ${meta.ease} (${easeNote})
 - score: ${meta.score} (impact × ease / 10)
 - trend-row: ${v.isoWeek} / ${v.row}
 - action: ${v.detail}\n`
@@ -346,6 +404,7 @@ function runAllChecks({ scopeFile } = {}) {
     const idx = files.indexOf(file)
     const prevSnapshot = idx > 0 ? loadSnapshot(files[idx - 1]) : null
     violations.push(...checkContinuity(prevSnapshot, snapshot))
+    violations.push(...checkMissingWeek(prevSnapshot, snapshot))
   }
   return violations
 }
@@ -358,6 +417,8 @@ export const __test = {
   checkStatusClaims,
   checkDirectionSign,
   checkContinuity,
+  checkMissingWeek,
+  nextIsoWeek,
   buildGroupBuyByArticle,
   canonicalNames,
   alreadyFiled,

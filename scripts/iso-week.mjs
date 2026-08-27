@@ -3,6 +3,8 @@
 // Used by skills/march.md Step 0.5 (weekly snapshot gate) to determine
 // whether a trends snapshot exists for the current week.
 
+import { fileURLToPath } from 'node:url'
+
 /**
  * Pure ISO 8601 week string for any Date. Exported via __test for unit tests.
  * The ISO week year is defined by the Thursday of the week; this means
@@ -33,5 +35,11 @@ export function isoWeekString(date = new Date()) {
 // Exported for unit tests — mirrors the pattern in content-gap-survey.mjs.
 export const __test = { isoWeekString }
 
-// CLI entry point: print the current ISO week.
-console.log(isoWeekString())
+// CLI entry point: print the current ISO week. Gated behind isMain so
+// other scripts can `import { isoWeekString }` without the side-effecting
+// print firing on every import (it would otherwise pollute stdout,
+// including --json output, for any importer).
+const isMain = fileURLToPath(import.meta.url) === process.argv[1]
+if (isMain) {
+  console.log(isoWeekString())
+}
