@@ -12457,3 +12457,15 @@ passes accumulate signals.)
 - score: 4.8 (impact × ease / 10)
 - trend-row: 2026-W35 / snapshot-gap
 - action: expected ISO week 2026-W34 to follow 2026-W33, found 2026-W35 — a snapshot for 2026-W34 is missing
+
+### [ ] [newsletter] [4.0] Weekly digest — issue 009 due (7 days since issue 8)
+- category: content-gaps
+- filed: 2026-08-28 by newsletter-gap-survey.mjs
+- impact: 5 (newsletter archive going stale reduces /newsletter value and reader trust in cadence)
+- ease: 8 (content-curator weekly round-up: 5 pillar picks + tracker insight)
+- score: 4.0 (impact × ease / 10)
+- next: /ship-content → newsletter type (weekly round-up, 5 pillar picks, tracker insight)
+- last-issue: 2026-08-21 (thock-weekly-008)
+- days-since: 7
+- issue: #943
+> Filed 2026-08-28 by newsletter-gap-survey.mjs. 7 days since issue 8. Threshold: ≥7 calendar days.
