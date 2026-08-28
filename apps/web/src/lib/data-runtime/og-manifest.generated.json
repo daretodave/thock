@@ -1584,6 +1584,13 @@
   ],
   "newsletters": [
     {
+      "slug": "thock-weekly-009",
+      "title": "thock weekly — issue 09",
+      "lede": "A layout-size guide for matching board to desk, the real chemistry behind retrobrighting yellowed ABS, Keychron's Nova Socket hedge revisited, GMK Just Beachy's group buy now underway across five vendors, and Gateron Magnetic Jade's one-part swap from mechanical to Hall-effect — plus a tracker check-in on Keychron, Hall Effect/Rapid Trigger, and GMK CYL Orange Alert.",
+      "issue": 9,
+      "readTime": 4
+    },
+    {
       "slug": "thock-weekly-008",
       "title": "thock weekly — issue 08",
       "lede": "A layout guide for reading Enter key shape before a keycap set doesn't fit, the honest cost list behind hot-swap sockets, a Hall-effect tracker line that's flat but not cooling off, Wuque Studio's quiet update, and the buckling-spring mechanism thock kept borrowing without explaining — plus a tracker check-in on Keychron, Mode Designs, and GMK Beachy.",
@@ -6616,5 +6623,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-08-26T19:45:26.217Z"
+  "generatedAt": "2026-08-28T16:15:28.749Z"
 }
