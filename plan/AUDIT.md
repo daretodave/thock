@@ -12449,7 +12449,7 @@ passes accumulate signals.)
 - issue: #942
 > **Resolved (2026-08-27):** added a snapshot-level "D-missing-week" check to `scripts/trend-snapshot-quality-check.mjs` — consecutive files on disk must cover consecutive ISO weeks (via a new `nextIsoWeek` helper that inverts `isoWeekString`); flags the gap by name when they don't. Gated `scripts/iso-week.mjs`'s CLI print behind an `isMain` check so the new cross-import doesn't pollute stdout. 7 new unit tests. Running `--write` against the live corpus filed the follow-up `[4.8]` row below for the actual `data/trends/2026-W34.json` backfill (a separate ship-data task). `pnpm verify` full gate green: typecheck, lint, unit tests (855), test:scripts (230, 20 new), data:validate, build, size, 1201/1201 e2e. `fe7519de`
 
-### [ ] [data] [4.8] 2026-W35 snapshot-gap — missing weekly snapshot (ISO-week gap)
+### [x] [data] [4.8] 2026-W35 snapshot-gap — missing weekly snapshot (ISO-week gap) — addressed in 57162340, closes #949
 - category: data
 - filed: 2026-08-27 by trend-snapshot-quality-check.mjs
 - impact: 6 (expected ISO week 2026-W34 to follow 2026-W33, found 2026-W35 — a snapshot for 2026-W34 is missing)
