@@ -12458,7 +12458,7 @@ passes accumulate signals.)
 - trend-row: 2026-W35 / snapshot-gap
 - action: expected ISO week 2026-W34 to follow 2026-W33, found 2026-W35 — a snapshot for 2026-W34 is missing
 
-### [ ] [newsletter] [4.0] Weekly digest — issue 009 due (7 days since issue 8)
+### [x] [newsletter] [4.0] Weekly digest — issue 009 due (7 days since issue 8) — addressed in ea4b2797, closes #943
 - category: content-gaps
 - filed: 2026-08-28 by newsletter-gap-survey.mjs
 - impact: 5 (newsletter archive going stale reduces /newsletter value and reader trust in cadence)
@@ -12469,3 +12469,4 @@ passes accumulate signals.)
 - days-since: 7
 - issue: #943
 > Filed 2026-08-28 by newsletter-gap-survey.mjs. 7 days since issue 8. Threshold: ≥7 calendar days.
+> **Resolved (2026-08-28):** shipped `thock-weekly-009.mdx` — 5 pillar picks (keyboard-layout-sizes-buying-guide, retrobrighting-keycaps, keychron-nova-socket-hybrid, gmk-cyl-just-beachy-group-buy-opens, gateron-magnetic-jade-deep-dive) + a tracker check-in sourced from `data/trends/2026-W35.json`. `pnpm verify` full gate green: typecheck, lint, unit tests, test:scripts, data:validate, build, size, 1204/1204 e2e.
