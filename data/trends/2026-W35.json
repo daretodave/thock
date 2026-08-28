@@ -7,7 +7,7 @@
       "category": "switch",
       "direction": "flat",
       "score": 96,
-      "spark": [85, 87, 91, 94, 95, 97, 97, 96],
+      "spark": [87, 91, 94, 95, 97, 97, 97, 96],
       "articleSlug": "hall-effect-mainstream",
       "note": "Hall effect keeps expanding beyond gaming boards; IQUNIX's EC75 and Keychron's magnetic-mechanical hybrid Kickstarter both launched this week, reinforcing HE as a baseline feature."
     },
@@ -16,7 +16,7 @@
       "category": "switch",
       "direction": "down",
       "score": -50,
-      "spark": [-39, -42, -50, -46, -45, -45, -46, -50],
+      "spark": [-42, -50, -46, -45, -45, -46, -49, -50],
       "articleSlug": "cherry-mx2a-revision",
       "note": "MX2A is now the default across nearly all retail Cherry switches, but the new Lumina Browns made at Cherry's China facility are drawing mixed community reaction."
     },
@@ -34,7 +34,7 @@
       "category": "switch",
       "direction": "up",
       "score": 44,
-      "spark": [14, 18, 22, 26, 30, 34, 38, 44],
+      "spark": [18, 22, 26, 30, 34, 38, 41, 44],
       "articleSlug": "durock-t1-deep-dive",
       "note": "Durock T1 variants remain a staple tactile pick in 2026 roundups, with Sunflower T1 still cited as a top mid-range recommendation."
     },
@@ -43,7 +43,7 @@
       "category": "switch",
       "direction": "flat",
       "score": 40,
-      "spark": [39, 37, 39, 40, 40, 40, 40, 40],
+      "spark": [37, 39, 40, 40, 40, 40, 40, 40],
       "articleSlug": "gateron-oil-king-deep-dive",
       "note": "Lineup and stock unchanged at Gateron, KBDfans, Divinikey since the early-2026 four-switch expansion; still the steady mid-range linear default."
     },
@@ -61,7 +61,7 @@
       "category": "keycap",
       "direction": "down",
       "score": 20,
-      "spark": [42, 50, 57, 62, 50, 40, 32, 20],
+      "spark": [50, 57, 62, 50, 40, 32, 25, 20],
       "articleSlug": "gmk-cyl-ta-neo-production-tracking",
       "note": "TA Neo's group buy closed July 17 and the set has moved into production tracking, cooling week-over-week chatter as attention shifts to newer buys."
     },
@@ -79,7 +79,7 @@
       "category": "keycap",
       "direction": "down",
       "score": 45,
-      "spark": [42, 49, 55, 58, 62, 70, 80, 45],
+      "spark": [49, 55, 58, 62, 70, 80, 63, 45],
       "articleSlug": "gmk-cyl-og-extensions-interest-check",
       "note": "OG Extensions' group buy closed Aug 12 and the set is now in-stock at zFrontier, the usual post-buy interest cooldown after a strong run."
     },
@@ -88,7 +88,7 @@
       "category": "layout",
       "direction": "up",
       "score": 90,
-      "spark": [69, 72, 77, 80, 82, 85, 87, 90],
+      "spark": [72, 77, 80, 82, 85, 87, 89, 90],
       "articleSlug": "split-ergo-cohort",
       "note": "Split/ergo keeps consolidating as the enthusiast default, reinforced by Keychron's wireless Q11 Ultra and continued Glove80 coverage in 2026 roundups."
     },
@@ -97,7 +97,7 @@
       "category": "layout",
       "direction": "down",
       "score": -66,
-      "spark": [-33, -36, -44, -48, -52, -58, -62, -66],
+      "spark": [-36, -44, -48, -52, -58, -62, -64, -66],
       "articleSlug": "alice-layout-decline",
       "note": "Alice still gets cited as the top ergonomic starter layout, but full split boards keep pulling advanced hobbyists further along the ergo path."
     },
@@ -106,7 +106,7 @@
       "category": "layout",
       "direction": "up",
       "score": 62,
-      "spark": [43, 43, 46, 47, 50, 55, 58, 62],
+      "spark": [43, 46, 47, 50, 55, 58, 60, 62],
       "articleSlug": "75-percent-default",
       "note": "75% remains the default form factor across new releases from Keychron's Q/V Ultra lines and most custom-kit group buys this cycle."
     },
@@ -115,7 +115,7 @@
       "category": "vendor",
       "direction": "up",
       "score": 80,
-      "spark": [42, 45, 53, 58, 62, 70, 76, 80],
+      "spark": [45, 53, 58, 62, 70, 76, 78, 80],
       "articleSlug": "mode-sonnet-r2-group-buy-coverage",
       "note": "The 2026 Sonnet and Encore have fully transitioned from pre-order to in-stock, with new Black Sesame and Forest Mocha colorways now shipping."
     },
@@ -124,7 +124,7 @@
       "category": "vendor",
       "direction": "down",
       "score": 40,
-      "spark": [34, 42, 50, 56, 60, 64, 52, 40],
+      "spark": [42, 50, 56, 60, 64, 52, 46, 40],
       "articleSlug": "cannonkeys-blaine-v2-se-group-buy",
       "note": "Blaine V2: SE's group buy (July 10-Aug 9) sold out and addons are gone too, so attention now shifts to CannonKeys' next project update."
     },
@@ -133,7 +133,7 @@
       "category": "vendor",
       "direction": "up",
       "score": 40,
-      "spark": [28, 25, 15, 20, 24, 28, 31, 40],
+      "spark": [25, 15, 20, 24, 28, 31, 35, 40],
       "articleSlug": "prototypist-vendor-spotlight",
       "note": "Prototypist's SF60 HE group buy and VS06 kit remain in the pipeline, and it was tapped as a launch vendor for the HyperFuse keyset."
     },
@@ -142,7 +142,7 @@
       "category": "brand",
       "direction": "up",
       "score": 98,
-      "spark": [77, 80, 86, 90, 94, 96, 97, 98],
+      "spark": [80, 86, 90, 94, 96, 97, 97, 98],
       "articleSlug": "keychron-quiet-takeover",
       "note": "Keychron launched the V6 Ultra Hybrid on Kickstarter Aug 18, mixing mechanical and magnetic switches on one board with $149 early-bird pricing."
     },
@@ -151,7 +151,7 @@
       "category": "brand",
       "direction": "down",
       "score": -15,
-      "spark": [-28, -30, -24, -18, -10, -6, -2, -15],
+      "spark": [-30, -24, -18, -10, -6, -2, -8, -15],
       "articleSlug": "cherry-xtrfy-tmr-pivot",
       "note": "MX2A's near-total takeover of Cherry's catalog is tempered by community debate over the China-made Lumina Brown, the first switch off that line."
     },

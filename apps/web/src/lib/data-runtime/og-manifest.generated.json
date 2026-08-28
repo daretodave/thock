@@ -6310,6 +6310,319 @@
       ]
     },
     {
+      "isoWeek": "2026-W34",
+      "publishedAt": "2026-08-17T00:00:00.000Z",
+      "updatedAt": "2026-08-17T16:40:00.000Z",
+      "rows": [
+        {
+          "name": "Hall Effect/Rapid Trigger",
+          "category": "switch",
+          "direction": "flat",
+          "score": 97,
+          "spark": [
+            85,
+            87,
+            91,
+            94,
+            95,
+            97,
+            97,
+            97
+          ],
+          "articleSlug": "keychron-nova-socket-hybrid"
+        },
+        {
+          "name": "Cherry MX2A",
+          "category": "switch",
+          "direction": "down",
+          "score": -49,
+          "spark": [
+            -39,
+            -42,
+            -50,
+            -46,
+            -45,
+            -45,
+            -46,
+            -49
+          ],
+          "articleSlug": "cherry-mx2a-revision"
+        },
+        {
+          "name": "Gateron Oil King",
+          "category": "switch",
+          "direction": "flat",
+          "score": 40,
+          "spark": [
+            39,
+            37,
+            39,
+            40,
+            40,
+            40,
+            40,
+            40
+          ],
+          "articleSlug": "gateron-oil-king-deep-dive"
+        },
+        {
+          "name": "Durock T1",
+          "category": "switch",
+          "direction": "up",
+          "score": 41,
+          "spark": [
+            14,
+            18,
+            22,
+            26,
+            30,
+            34,
+            38,
+            41
+          ],
+          "articleSlug": "durock-t1-deep-dive"
+        },
+        {
+          "name": "GMK CYL OG Extensions",
+          "category": "keycap",
+          "direction": "down",
+          "score": 63,
+          "spark": [
+            42,
+            49,
+            55,
+            58,
+            62,
+            70,
+            80,
+            63
+          ],
+          "articleSlug": "gmk-cyl-og-extensions-interest-check"
+        },
+        {
+          "name": "GMK CYL TA Neo",
+          "category": "keycap",
+          "direction": "down",
+          "score": 25,
+          "spark": [
+            42,
+            50,
+            57,
+            62,
+            50,
+            40,
+            32,
+            25
+          ],
+          "articleSlug": "gmk-cyl-ta-neo-production-tracking"
+        },
+        {
+          "name": "DCS Dolch",
+          "category": "keycap",
+          "direction": "flat",
+          "score": 25,
+          "spark": [
+            14,
+            22,
+            29,
+            35,
+            38,
+            34,
+            26,
+            25
+          ],
+          "articleSlug": "divinikey-dcs-dolch-group-buy"
+        },
+        {
+          "name": "GMK Beachy",
+          "category": "keycap",
+          "direction": "up",
+          "score": 48,
+          "spark": [
+            12,
+            16,
+            20,
+            24,
+            27,
+            30,
+            40,
+            48
+          ],
+          "articleSlug": "gmk-cyl-just-beachy-group-buy-opens"
+        },
+        {
+          "name": "Split/Ergo layout",
+          "category": "layout",
+          "direction": "up",
+          "score": 89,
+          "spark": [
+            69,
+            72,
+            77,
+            80,
+            82,
+            85,
+            87,
+            89
+          ],
+          "articleSlug": "split-ergo-cohort"
+        },
+        {
+          "name": "Alice layout",
+          "category": "layout",
+          "direction": "down",
+          "score": -64,
+          "spark": [
+            -33,
+            -36,
+            -44,
+            -48,
+            -52,
+            -58,
+            -62,
+            -64
+          ],
+          "articleSlug": "alice-layout-decline"
+        },
+        {
+          "name": "75% Layout",
+          "category": "layout",
+          "direction": "up",
+          "score": 60,
+          "spark": [
+            43,
+            43,
+            46,
+            47,
+            50,
+            55,
+            58,
+            60
+          ],
+          "articleSlug": "75-percent-default"
+        },
+        {
+          "name": "Work Louder x OpenAI Codex Micro",
+          "category": "vendor",
+          "direction": "flat",
+          "score": 92,
+          "spark": [
+            58,
+            68,
+            94,
+            96,
+            97,
+            95,
+            94,
+            92
+          ],
+          "articleSlug": "work-louder-openai-codex-micro"
+        },
+        {
+          "name": "Mode Designs",
+          "category": "vendor",
+          "direction": "up",
+          "score": 78,
+          "spark": [
+            42,
+            45,
+            53,
+            58,
+            62,
+            70,
+            76,
+            78
+          ],
+          "articleSlug": "mode-sonnet-r2-group-buy-coverage"
+        },
+        {
+          "name": "Prototypist",
+          "category": "vendor",
+          "direction": "up",
+          "score": 35,
+          "spark": [
+            28,
+            25,
+            15,
+            20,
+            24,
+            28,
+            31,
+            35
+          ],
+          "articleSlug": "prototypist-vendor-spotlight"
+        },
+        {
+          "name": "CannonKeys",
+          "category": "vendor",
+          "direction": "down",
+          "score": 46,
+          "spark": [
+            34,
+            42,
+            50,
+            56,
+            60,
+            64,
+            52,
+            46
+          ],
+          "articleSlug": "cannonkeys-blaine-v2-se-group-buy"
+        },
+        {
+          "name": "Keychron",
+          "category": "brand",
+          "direction": "flat",
+          "score": 97,
+          "spark": [
+            77,
+            80,
+            86,
+            90,
+            94,
+            96,
+            97,
+            97
+          ],
+          "articleSlug": "keychron-quiet-takeover"
+        },
+        {
+          "name": "Cherry (MX + XTRFY)",
+          "category": "brand",
+          "direction": "down",
+          "score": -8,
+          "spark": [
+            -28,
+            -30,
+            -24,
+            -18,
+            -10,
+            -6,
+            -2,
+            -8
+          ],
+          "articleSlug": "cherry-xtrfy-tmr-pivot"
+        },
+        {
+          "name": "Wuque Studio",
+          "category": "brand",
+          "direction": "flat",
+          "score": -1,
+          "spark": [
+            12,
+            10,
+            -4,
+            -3,
+            -4,
+            -8,
+            -2,
+            -1
+          ],
+          "articleSlug": "wuque-studio-summer-update"
+        }
+      ]
+    },
+    {
       "isoWeek": "2026-W35",
       "publishedAt": "2026-08-24T00:00:00.000Z",
       "updatedAt": "2026-08-24T05:20:50.000Z",
@@ -6320,11 +6633,11 @@
           "direction": "flat",
           "score": 96,
           "spark": [
-            85,
             87,
             91,
             94,
             95,
+            97,
             97,
             97,
             96
@@ -6337,13 +6650,13 @@
           "direction": "down",
           "score": -50,
           "spark": [
-            -39,
             -42,
             -50,
             -46,
             -45,
             -45,
             -46,
+            -49,
             -50
           ],
           "articleSlug": "cherry-mx2a-revision"
@@ -6371,13 +6684,13 @@
           "direction": "up",
           "score": 44,
           "spark": [
-            14,
             18,
             22,
             26,
             30,
             34,
             38,
+            41,
             44
           ],
           "articleSlug": "durock-t1-deep-dive"
@@ -6388,9 +6701,9 @@
           "direction": "flat",
           "score": 40,
           "spark": [
-            39,
             37,
             39,
+            40,
             40,
             40,
             40,
@@ -6422,13 +6735,13 @@
           "direction": "down",
           "score": 20,
           "spark": [
-            42,
             50,
             57,
             62,
             50,
             40,
             32,
+            25,
             20
           ],
           "articleSlug": "gmk-cyl-ta-neo-production-tracking"
@@ -6456,13 +6769,13 @@
           "direction": "down",
           "score": 45,
           "spark": [
-            42,
             49,
             55,
             58,
             62,
             70,
             80,
+            63,
             45
           ],
           "articleSlug": "gmk-cyl-og-extensions-interest-check"
@@ -6473,13 +6786,13 @@
           "direction": "up",
           "score": 90,
           "spark": [
-            69,
             72,
             77,
             80,
             82,
             85,
             87,
+            89,
             90
           ],
           "articleSlug": "split-ergo-cohort"
@@ -6490,13 +6803,13 @@
           "direction": "down",
           "score": -66,
           "spark": [
-            -33,
             -36,
             -44,
             -48,
             -52,
             -58,
             -62,
+            -64,
             -66
           ],
           "articleSlug": "alice-layout-decline"
@@ -6508,12 +6821,12 @@
           "score": 62,
           "spark": [
             43,
-            43,
             46,
             47,
             50,
             55,
             58,
+            60,
             62
           ],
           "articleSlug": "75-percent-default"
@@ -6524,13 +6837,13 @@
           "direction": "up",
           "score": 80,
           "spark": [
-            42,
             45,
             53,
             58,
             62,
             70,
             76,
+            78,
             80
           ],
           "articleSlug": "mode-sonnet-r2-group-buy-coverage"
@@ -6541,13 +6854,13 @@
           "direction": "down",
           "score": 40,
           "spark": [
-            34,
             42,
             50,
             56,
             60,
             64,
             52,
+            46,
             40
           ],
           "articleSlug": "cannonkeys-blaine-v2-se-group-buy"
@@ -6558,13 +6871,13 @@
           "direction": "up",
           "score": 40,
           "spark": [
-            28,
             25,
             15,
             20,
             24,
             28,
             31,
+            35,
             40
           ],
           "articleSlug": "prototypist-vendor-spotlight"
@@ -6575,12 +6888,12 @@
           "direction": "up",
           "score": 98,
           "spark": [
-            77,
             80,
             86,
             90,
             94,
             96,
+            97,
             97,
             98
           ],
@@ -6592,13 +6905,13 @@
           "direction": "down",
           "score": -15,
           "spark": [
-            -28,
             -30,
             -24,
             -18,
             -10,
             -6,
             -2,
+            -8,
             -15
           ],
           "articleSlug": "cherry-xtrfy-tmr-pivot"
@@ -6623,5 +6936,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-08-28T16:15:28.749Z"
+  "generatedAt": "2026-08-28T21:08:21.870Z"
 }

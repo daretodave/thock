@@ -1,0 +1,169 @@
+{
+  "isoWeek": "2026-W34",
+  "publishedAt": "2026-08-17T00:00:00.000Z",
+  "rows": [
+    {
+      "name": "Hall Effect/Rapid Trigger",
+      "category": "switch",
+      "direction": "flat",
+      "score": 97,
+      "spark": [85, 87, 91, 94, 95, 97, 97, 97],
+      "articleSlug": "keychron-nova-socket-hybrid",
+      "note": "Rapid trigger remains the default on new HE boards; no single flashpoint this week, momentum holding right at its recent ceiling."
+    },
+    {
+      "name": "Cherry MX2A",
+      "category": "switch",
+      "direction": "down",
+      "score": -49,
+      "spark": [-39, -42, -50, -46, -45, -45, -46, -49],
+      "articleSlug": "cherry-mx2a-revision",
+      "note": "Early reports of stem wobble and inconsistent acoustics surface on the new China-made Lumina Brown; not yet a mainstream complaint."
+    },
+    {
+      "name": "Gateron Oil King",
+      "category": "switch",
+      "direction": "flat",
+      "score": 40,
+      "spark": [39, 37, 39, 40, 40, 40, 40, 40],
+      "articleSlug": "gateron-oil-king-deep-dive",
+      "note": "Lineup and stock unchanged at Gateron, KBDfans, Divinikey since the early-2026 four-switch expansion; still the steady mid-range linear default."
+    },
+    {
+      "name": "Durock T1",
+      "category": "switch",
+      "direction": "up",
+      "score": 41,
+      "spark": [14, 18, 22, 26, 30, 34, 38, 41],
+      "articleSlug": "durock-t1-deep-dive",
+      "note": "Durock T1 keeps building steady tactile-thread interest as reviewers compare it against Gateron Lanes; incremental climb continues week over week."
+    },
+    {
+      "name": "GMK CYL OG Extensions",
+      "category": "keycap",
+      "direction": "down",
+      "score": 63,
+      "spark": [42, 49, 55, 58, 62, 70, 80, 63],
+      "articleSlug": "gmk-cyl-og-extensions-interest-check",
+      "note": "Group buy closed Aug 12; interest stays elevated as buyers await NovelKeys' production and shipping timeline."
+    },
+    {
+      "name": "GMK CYL TA Neo",
+      "category": "keycap",
+      "direction": "down",
+      "score": 25,
+      "spark": [42, 50, 57, 62, 50, 40, 32, 25],
+      "articleSlug": "gmk-cyl-ta-neo-production-tracking",
+      "note": "TA Neo's group buy closed July 17 and the set continues in production tracking, with attention drifting toward newer keycap launches this week."
+    },
+    {
+      "name": "DCS Dolch",
+      "category": "keycap",
+      "direction": "flat",
+      "score": 25,
+      "spark": [14, 22, 29, 35, 38, 34, 26, 25],
+      "articleSlug": "divinikey-dcs-dolch-group-buy",
+      "note": "Sibling set DCS Molch enters its final days of group buy, closing Aug 23; Dolch interest itself holds steady heading into next week."
+    },
+    {
+      "name": "GMK Beachy",
+      "category": "keycap",
+      "direction": "up",
+      "score": 48,
+      "spark": [12, 16, 20, 24, 27, 30, 40, 48],
+      "articleSlug": "gmk-cyl-just-beachy-group-buy-opens",
+      "note": "Group buy opened Aug 18 across Divinikey, Prototypist, KBDfans, and UniKeys kittings; first-week sign-ups tracking above typical CYL openers."
+    },
+    {
+      "name": "Split/Ergo layout",
+      "category": "layout",
+      "direction": "up",
+      "score": 89,
+      "spark": [69, 72, 77, 80, 82, 85, 87, 89],
+      "articleSlug": "split-ergo-cohort",
+      "note": "Split/ergo continues consolidating as the enthusiast default, with steady incremental interest and no single new trigger this week."
+    },
+    {
+      "name": "Alice layout",
+      "category": "layout",
+      "direction": "down",
+      "score": -64,
+      "spark": [-33, -36, -44, -48, -52, -58, -62, -64],
+      "articleSlug": "alice-layout-decline",
+      "note": "Alice keeps losing ground to full split boards; still the common ergonomic entry point but no new Alice-format releases surfaced this week."
+    },
+    {
+      "name": "75% Layout",
+      "category": "layout",
+      "direction": "up",
+      "score": 60,
+      "spark": [43, 43, 46, 47, 50, 55, 58, 60],
+      "articleSlug": "75-percent-default",
+      "note": "75% remains the default form factor across new releases and most custom-kit group buys this cycle; steady incremental climb continues."
+    },
+    {
+      "name": "Work Louder x OpenAI Codex Micro",
+      "category": "vendor",
+      "direction": "flat",
+      "score": 92,
+      "spark": [58, 68, 94, 96, 97, 95, 94, 92],
+      "articleSlug": "work-louder-openai-codex-micro",
+      "note": "Resale still holding well above the $230 launch price with no restock confirmed; chatter cooling further as the device settles into scarcity."
+    },
+    {
+      "name": "Mode Designs",
+      "category": "vendor",
+      "direction": "up",
+      "score": 78,
+      "spark": [42, 45, 53, 58, 62, 70, 76, 78],
+      "articleSlug": "mode-sonnet-r2-group-buy-coverage",
+      "note": "Sonnet and Encore continue their pre-order-to-in-stock transition per Mode's Summer 2026 update, with new colorways trickling into stock."
+    },
+    {
+      "name": "Prototypist",
+      "category": "vendor",
+      "direction": "up",
+      "score": 35,
+      "spark": [28, 25, 15, 20, 24, 28, 31, 35],
+      "articleSlug": "prototypist-vendor-spotlight",
+      "note": "Paper 65 GB still tracking toward its Q4 2026 window; Prototypist's ongoing CYL kitting work keeps steady incremental traffic flowing this week."
+    },
+    {
+      "name": "CannonKeys",
+      "category": "vendor",
+      "direction": "down",
+      "score": 46,
+      "spark": [34, 42, 50, 56, 60, 64, 52, 46],
+      "articleSlug": "cannonkeys-blaine-v2-se-group-buy",
+      "note": "Blaine V2: SE group buy remains closed and sold out; addon interest keeps fading as attention shifts to CannonKeys' next project update."
+    },
+    {
+      "name": "Keychron",
+      "category": "brand",
+      "direction": "flat",
+      "score": 97,
+      "spark": [77, 80, 86, 90, 94, 96, 97, 97],
+      "articleSlug": "keychron-quiet-takeover",
+      "note": "Launched the V6 Ultra Hybrid on Kickstarter Aug 18, pairing the Nova Socket hybrid PCB with magnetic and mechanical switches on one board."
+    },
+    {
+      "name": "Cherry (MX + XTRFY)",
+      "category": "brand",
+      "direction": "down",
+      "score": -8,
+      "spark": [-28, -30, -24, -18, -10, -6, -2, -8],
+      "articleSlug": "cherry-xtrfy-tmr-pivot",
+      "note": "Quality complaints begin circulating over the new China-made Lumina Brown even as XTRFY MK Crystal TMR keeps closing the spec-sheet gap."
+    },
+    {
+      "name": "Wuque Studio",
+      "category": "brand",
+      "direction": "flat",
+      "score": -1,
+      "spark": [12, 10, -4, -3, -4, -8, -2, -1],
+      "articleSlug": "wuque-studio-summer-update",
+      "note": "No new group buy or Mammoth V2/Promise V2 confirmation this week; the July 26 product-update post continues to surface in searches."
+    }
+  ],
+  "updatedAt": "2026-08-17T16:40:00.000Z"
+}
