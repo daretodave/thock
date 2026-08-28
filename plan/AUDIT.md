@@ -12468,5 +12468,16 @@ passes accumulate signals.)
 - last-issue: 2026-08-21 (thock-weekly-008)
 - days-since: 7
 - issue: #943
+
+### [x] [data] [5.4] `data/trends/2026-W35.json` "DCS Dolch / Molch" spark array fabricated, not a continuation of W34's — addressed in 4d3819e1, closes #950
+- category: data
+- filed: 2026-08-28 by cloud /iterate audit (fresh general-purpose sweep, angle: downstream consistency of the last 8 commits' newsletter-009 + W34 backfill + W35 snapshot-gap fix)
+- impact: 6 (signature Trends Tracker sparkline shows a fabricated, discontinuous trajectory for a row that is the same tracked topic as W31-W34's "DCS Dolch" — same articleSlug, note narrates continuation — misleading readers about actual weekly movement)
+- ease: 9 (single spark-array field edit, no schema change)
+- score: 5.4 (impact × ease / 10)
+- observation: the W35 row was renamed "DCS Dolch" → "DCS Dolch / Molch" to reflect DCS Molch's group-buy closing into the family. `trend-snapshot-quality-check.mjs`'s D-continuity check matches rows by normalized name across weeks, so the rename changed the topic key and the check silently skipped verifying the spark array — which turned out to be an unrelated fabricated trajectory rather than a true shift-and-append of W34's `[14, 22, 29, 35, 38, 34, 26, 25]`.
+- evidence: `node scripts/trend-snapshot-quality-check.mjs --file data/trends/2026-W35.json` reported "clean — no violations" over the discontinuous array (rename-blind-spot in D-continuity's name-keyed matching). Manual normalized-name diff against W34 confirmed every other overlapping row's spark array was a correct shift-and-append; this was the sole exception, corroborated by matching `articleSlug` and the note's own "fresh bump" framing implying continuation from the prior week's score of 25.
+- resolution: corrected `spark` to `[22, 29, 35, 38, 34, 26, 25, 38]` — true continuation of W34's array with this week's score (38) appended. `direction: "up"` and `score: 38` were already correct. `pnpm verify` full gate green (1207/1207 e2e). The D-continuity check's rename-blind-spot itself is not fixed here (would need an alias/fuzzy-match mechanism) — noted for a future harden pass if the pattern recurs.
+- issue: #950
 > Filed 2026-08-28 by newsletter-gap-survey.mjs. 7 days since issue 8. Threshold: ≥7 calendar days.
 > **Resolved (2026-08-28):** shipped `thock-weekly-009.mdx` — 5 pillar picks (keyboard-layout-sizes-buying-guide, retrobrighting-keycaps, keychron-nova-socket-hybrid, gmk-cyl-just-beachy-group-buy-opens, gateron-magnetic-jade-deep-dive) + a tracker check-in sourced from `data/trends/2026-W35.json`. `pnpm verify` full gate green: typecheck, lint, unit tests, test:scripts, data:validate, build, size, 1204/1204 e2e.
