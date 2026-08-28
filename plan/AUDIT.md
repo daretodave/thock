@@ -12481,3 +12481,13 @@ passes accumulate signals.)
 - issue: #950
 > Filed 2026-08-28 by newsletter-gap-survey.mjs. 7 days since issue 8. Threshold: ≥7 calendar days.
 > **Resolved (2026-08-28):** shipped `thock-weekly-009.mdx` — 5 pillar picks (keyboard-layout-sizes-buying-guide, retrobrighting-keycaps, keychron-nova-socket-hybrid, gmk-cyl-just-beachy-group-buy-opens, gateron-magnetic-jade-deep-dive) + a tracker check-in sourced from `data/trends/2026-W35.json`. `pnpm verify` full gate green: typecheck, lint, unit tests, test:scripts, data:validate, build, size, 1204/1204 e2e.
+
+### [ ] [data] [2.4] committed `apps/web/src/lib/data-runtime/*.generated.json` + search index drift from `/data` after data-only commits
+- category: data
+- filed: 2026-08-28 by cloud /iterate → /expand tick (side effect of running `pnpm verify`)
+- impact: 3 (dev-mode only — `next dev` has no `predev` regen step, so a stale committed manifest shows stale data locally; production is unaffected because `apps/web/package.json`'s `prebuild` script regenerates `manifest.generated.json` / `og-manifest.generated.json` / `search/index.generated.json` fresh from `/data` + content before every `next build`, and Vercel always runs a full build)
+- ease: 8 (`pnpm --filter @thock/web build:manifest && pnpm --filter @thock/web build:search && pnpm --filter @thock/web build:viz-manifest`, then commit the 3 regenerated files)
+- score: 2.4 (impact × ease / 10)
+- observation: `git diff` after a routine `pnpm verify` run showed `apps/web/src/lib/data-runtime/manifest.generated.json` picking up the `4d3819e1` DCS Dolch/Molch spark-array fix that had landed several commits earlier — none of the data-only commits since then (`4d3819e1`, `57162340`) had regenerated + committed the derived manifests in the same commit. `skills/ship-data.md` doesn't mention the generated manifests at all.
+- evidence: `pnpm verify` (build leg) regenerated `apps/web/src/lib/data-runtime/manifest.generated.json`, `og-manifest.generated.json`, and `apps/web/src/lib/search/index.generated.json` with real content diffs (not just `generatedAt` timestamp) relative to the committed versions at HEAD.
+- suggested fix: either (a) add a `git add` of the 3 generated files to `skills/ship-data.md`'s commit step so data fixes stay in sync, or (b) `.gitignore` the generated files entirely and rely solely on `prebuild` (removes the sync problem at the cost of losing them from `next dev`'s zero-build startup path — would need a `predev` script added first). Not urgent: no production impact observed.
