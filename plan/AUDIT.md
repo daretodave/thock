@@ -12503,3 +12503,12 @@ passes accumulate signals.)
 - next: reword to past-tense/snapshot-anchored phrasing matching the corpus idiom
 - issue: #951
 > **Resolved (2026-08-29):** reworded the sentence to "tracked on thock's Trends Tracker under the shorthand 'GMK Beachy' through its pre-launch run, climbing from 30 to a 48 close on the [W34 snapshot](/trends/tracker/2026-W34)" — past-tense, dated, and linked, matching the established corpus idiom. `pnpm verify` full gate green.
+
+### [x] [content-gaps] [3.0] `/vendor/prototypist` is a five-way empty-state dead end despite a dedicated article — addressed in 67dc6415, closes #952
+- category: content-gaps
+- filed: 2026-08-29 by cloud /iterate audit (fresh general-purpose sweep, angle: vendor page cross-linking)
+- impact: 5 (`/vendor/prototypist` is live, linked from `/vendors`, and in `sitemap.xml`, but renders zero catalog records — 5 stacked "No X yet" empty states — despite thock having a dedicated trends-pillar article about the vendor; no article on the site linked to any `/vendor/[slug]` page)
+- ease: 6 (two small, well-scoped edits: one inline MDX link + a consolidated-empty-state branch in `VendorDetailPage`, no schema change)
+- score: 3.0 (impact × ease / 10)
+- issue: #952
+> **Resolved (2026-08-29):** linked the Prototypist article's first vendor mention to `/vendor/prototypist`; `VendorDetailPage` now renders one consolidated "No catalog records yet" message when a vendor has zero group buys, switches, keycap sets, and boards (was 5 separate empty-state blocks). New e2e case covers the all-empty path. `pnpm verify` full gate green (1208/1208 e2e). `67dc6415`
