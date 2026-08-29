@@ -70,6 +70,12 @@ export default async function VendorDetailPage({
   const keycapSets = getKeycapSetsByVendor(slug)
   const path = `/vendor/${slug}`
   const country = countryLabel(vendor.countryCode)
+  const hasAnyCatalogData =
+    activeGroupBuys.length > 0 ||
+    pastGroupBuys.length > 0 ||
+    boards.length > 0 ||
+    switches.length > 0 ||
+    keycapSets.length > 0
 
   return (
     <main id="main" className="flex-1">
@@ -134,19 +140,35 @@ export default async function VendorDetailPage({
         </Stack>
       </Container>
 
-      <VendorGroupBuySection
-        vendorName={vendor.name}
-        active={activeGroupBuys}
-        past={pastGroupBuys}
-        vendor={vendor}
-        now={now}
-      />
+      {hasAnyCatalogData ? (
+        <>
+          <VendorGroupBuySection
+            vendorName={vendor.name}
+            active={activeGroupBuys}
+            past={pastGroupBuys}
+            vendor={vendor}
+            now={now}
+          />
 
-      <VendorSwitchSection vendorName={vendor.name} switches={switches} />
+          <VendorSwitchSection vendorName={vendor.name} switches={switches} />
 
-      <VendorKeycapSetSection vendorName={vendor.name} keycapSets={keycapSets} />
+          <VendorKeycapSetSection vendorName={vendor.name} keycapSets={keycapSets} />
 
-      <VendorBoardSection vendorName={vendor.name} boards={boards} />
+          <VendorBoardSection vendorName={vendor.name} boards={boards} />
+        </>
+      ) : (
+        <Container as="section" className="pb-12">
+          <Stack gap={6}>
+            <p
+              data-testid="vendor-detail-empty-catalog"
+              className="text-body text-text-2"
+            >
+              No catalog records for {vendor.name} in thock&rsquo;s database
+              yet — check back as coverage grows.
+            </p>
+          </Stack>
+        </Container>
+      )}
     </main>
   )
 }

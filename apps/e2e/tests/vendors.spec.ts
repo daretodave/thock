@@ -143,4 +143,16 @@ test.describe('/vendor/[slug] detail', () => {
     await expect(page.getByTestId('vendor-switches-empty')).toBeVisible()
     await expect(page.getByTestId('vendor-keycap-sets-empty')).toBeVisible()
   })
+
+  test('vendor with no catalog records at all renders one consolidated empty state, not four separate ones', async ({
+    page,
+  }) => {
+    await page.goto('/vendor/prototypist')
+    await expect(page.getByTestId('vendor-detail-empty-catalog')).toBeVisible()
+    await expect(page.getByTestId('vendor-active-buys-empty')).toHaveCount(0)
+    await expect(page.getByTestId('vendor-past-buys-empty')).toHaveCount(0)
+    await expect(page.getByTestId('vendor-switches-empty')).toHaveCount(0)
+    await expect(page.getByTestId('vendor-keycap-sets-empty')).toHaveCount(0)
+    await expect(page.getByTestId('vendor-boards-empty')).toHaveCount(0)
+  })
 })
