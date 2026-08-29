@@ -12523,3 +12523,36 @@ passes accumulate signals.)
 - score: 3.0 (impact × ease / 10)
 - issue: #952
 > **Resolved (2026-08-29):** linked the Prototypist article's first vendor mention to `/vendor/prototypist`; `VendorDetailPage` now renders one consolidated "No catalog records yet" message when a vendor has zero group buys, switches, keycap sets, and boards (was 5 separate empty-state blocks). New e2e case covers the all-empty path. `pnpm verify` full gate green (1208/1208 e2e). `67dc6415`
+
+### [x] [content] [5.6] `GMK CYL Orange Alert` — live in trends + newsletter, no `data/group-buys` record — addressed same-tick, closes #953
+- category: content
+- filed: 2026-08-29 by cloud /iterate audit (delegated general-purpose sweep, angle: content-data cross-reference between trend snapshot/newsletter and `/data/group-buys`)
+- impact: 7 (`data/trends/2026-W35.json` and the just-shipped `thock-weekly-009.mdx` both name "GMK CYL Orange Alert" as a currently-live group buy across four named vendors; with no matching `data/group-buys/*.json` record, the buy is absent from `/group-buys`, both named vendor detail pages, and the search index — a reader following this week's newsletter or tracker hits a dead end)
+- ease: 8 (templated group-buy JSON record + bundled `brander` hero art per the phase-23 group-buy hero-art rule; no schema change)
+- score: 5.6 (impact × ease / 10)
+- observation: `data/trends/2026-W35.json`'s "GMK CYL Orange Alert" row (score 72, note: "opened for group buy Aug 14, running through Sep 14 across Divinikey, KBDfans, UniKeys and Keebz N Cables") and `thock-weekly-009.mdx`'s tracker check-in repeat the same claim, but `ls data/group-buys/` had no matching file. This orphaned-GH-issue class (mirrored `loop:opened` issue never picked up because the finding never got written back to `plan/AUDIT.md`) is the same standing pattern flagged by the `[needs-user-call] [engineering] [3.0]` row above — issues #953, #928, and #915 were all discovered this tick sitting open on GitHub with real (#953, #928) or already-fixed-but-unclosed (#915) underlying work and no AUDIT.md row to route through the normal drain.
+- evidence: `data/trends/2026-W35.json` "GMK CYL Orange Alert" row; `apps/web/src/content/newsletters/thock-weekly-009.mdx` tracker paragraph; `data/group-buys/` (17 files, none matching) prior to this fix.
+- next: add `data/group-buys/divinikey-gmk-cyl-orange-alert.json` (status: live, startDate 2026-08-14, endDate 2026-09-14, vendorSlug: divinikey — matching the multi-vendor-buy naming precedent set by `divinikey-gmk-cyl-just-beachy.json`), scout-verified against the real Divinikey/KBDfans/UniKeys/Keebz-N-Cables/Geekhack listings for accurate URL, colorway (orange/beige/gray, GMK Alert series, Katakana accents), and Feb 2027 ship estimate; bundle `brander` hero art (coral-orange splash, no blue/cyan hues — see the sibling `[seo][4.2]` finding on issue #928 for why that matters).
+- issue: #953
+> **Resolved (2026-08-29):** added `data/group-buys/divinikey-gmk-cyl-orange-alert.json` + bundled `apps/web/public/group-buy-art/divinikey-gmk-cyl-orange-alert.svg`(.json) hero art (coral-orange splash, warm-grey stroke, no blue/cyan hues). `pnpm data:validate` clean (84 records, cross-refs resolve). Companion article and the two other orphaned issues (#928, #915) are separate findings — not fixed in this same commit (one-fix-per-tick).
+
+### [ ] [content-gaps] [7.0] divinikey-gmk-cyl-orange-alert — Rule 3 companion article missing
+- category: content-gaps
+- filed: 2026-08-29 by group-buy-companion-survey.mjs
+- impact: 7 (live group buy "GMK CYL Orange Alert" has no thock companion piece; /group-buys card has no "Read our coverage →" link)
+- ease: 5 (one companion article + relatedArticle field update in the group-buy record)
+- score: 7.0 (impact × ease / 10)
+- group-buy: data/group-buys/divinikey-gmk-cyl-orange-alert.json
+- rule: Rule 3
+- action: ship companion article for GMK CYL Orange Alert, then set relatedArticle field in data/group-buys/divinikey-gmk-cyl-orange-alert.json
+
+### [ ] [seo] [4.2] seven hero-art SVGs use stock blue/cyan, violating the locked warm-palette rule
+- category: seo
+- filed: 2026-08-25 by cloud /iterate audit (originally mirrored to GitHub as issue #928 but never written back to this file — the exact orphaned-`loop:opened`-issue gap the standing `[needs-user-call] [engineering] [3.0]` row above describes; recovered this tick while investigating open issues for signal)
+- impact: 6 (`plan/bearings.md` "Article hero art" / "Group-buy hero art" sections lock a warm-only palette rule via `/oversight` 2026-05-09/05-10; each `heroImage` also feeds the article's per-article OG image, so the violation is visible both on-page and in social-share previews; 7 files postdate the lock, none grandfathered)
+- ease: 7 (mechanical `oklch(...)` hue swap inside existing fill/stroke values on 7 files, plus matching `<title>`/`heroImageAlt` text edits dropping "blue"/"cyan"/"steel-blue" language — no shape redraw)
+- score: 4.2 (impact × ease / 10)
+- observation: `keychron-q-ultra-zmk.svg` (`oklch(0.7 0.13 240)`, own `<title>` calls it "vivid blue"), `hmx-cloud-deep-dive.svg` (`oklch(0.78 0.085 235)`, own comment calls it "pale-cyan"), `typing-tests-lie.svg` (`oklch(0.74 0.085 195)`), `75-percent-default.svg` (`oklch(0.74 0.085 215)`, alt text calls it "steel-blue"), `gmk-cyl-ishtar-r2-group-buy.svg`, `gmk-cyl-masterpiece-r2-group-buy.svg`, `gmk-cyl-ramune-group-buy.svg` (hues 228/255/262) all sit in the stock blue/cyan band (~195-265) instead of an approved warm hue.
+- evidence: verified this tick with `grep -o 'oklch([^)]*)' apps/web/public/hero-art/<file>.svg` / `apps/web/public/group-buy-art/<file>.svg` on all 7 files — hues unchanged from the original issue #928 report.
+- next: swap each file's splash `oklch(...)` hue to an approved warm value (coral ~15-25, ochre ~60-75, dusty rose ~350, terracotta ~40-50), update the matching `<title>`/`heroImageAlt` copy, re-run `pnpm data:validate` + visual spot-check.
+- issue: #928
