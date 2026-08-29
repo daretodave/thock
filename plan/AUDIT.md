@@ -12545,6 +12545,7 @@ passes accumulate signals.)
 - group-buy: data/group-buys/divinikey-gmk-cyl-orange-alert.json
 - rule: Rule 3
 - action: ship companion article for GMK CYL Orange Alert, then set relatedArticle field in data/group-buys/divinikey-gmk-cyl-orange-alert.json
+- issue: #955
 
 ### [ ] [seo] [4.2] seven hero-art SVGs use stock blue/cyan, violating the locked warm-palette rule
 - category: seo
