@@ -12504,6 +12504,17 @@ passes accumulate signals.)
 - issue: #951
 > **Resolved (2026-08-29):** reworded the sentence to "tracked on thock's Trends Tracker under the shorthand 'GMK Beachy' through its pre-launch run, climbing from 30 to a 48 close on the [W34 snapshot](/trends/tracker/2026-W34)" — past-tense, dated, and linked, matching the established corpus idiom. `pnpm verify` full gate green.
 
+### [x] [content] [5.4] trends W35 DCS Molch note invents a "mint-and-cream" colorway that contradicts the row's own linked article — addressed in `e08b4e99`, closes #954
+- category: content
+- filed: 2026-08-29 by cloud /iterate audit (delegated general-purpose sweep, angle: recently-shipped data-note factual accuracy)
+- impact: 6 (self-contradicting factual claim on a live, linked page pair — the tracker note vs. its own `articleSlug`-cited article — same failure class as this pass's other two shipped tracker/article-family fixes)
+- ease: 9 (one-line text edit to the `note` field in `data/trends/2026-W35.json`, no schema/code change)
+- score: 5.4 (impact × ease / 10)
+- observation: the "DCS Dolch / Molch" row's note claims Molch shares Dolch's "mint-and-cream colorway," but the row's own `articleSlug` (`divinikey-dcs-dolch-group-buy`) describes Dolch as a two-tone grey palette (WS1 dark modifier grey, WS2 medium-light grey), explicitly "not a colorway that photographs dramatically." No other reference to "mint-and-cream" or a dedicated Molch article exists anywhere in the corpus — the claim is both uncorroborated and directly contradicts its own cited source. Predates the `4d3819e1` spark-discontinuity fix (which only touched the `spark` array, not `note`).
+- evidence: `data/trends/2026-W35.json` note field (also present verbatim in `data/trends/2026-W34.json`'s antecedent Molch mention, though that one doesn't name a color) vs. `apps/web/src/content/articles/divinikey-dcs-dolch-group-buy.mdx:34-39`
+- next: reword to drop the invented colorway claim
+- issue: #954
+
 ### [x] [content-gaps] [3.0] `/vendor/prototypist` is a five-way empty-state dead end despite a dedicated article — addressed in 67dc6415, closes #952
 - category: content-gaps
 - filed: 2026-08-29 by cloud /iterate audit (fresh general-purpose sweep, angle: vendor page cross-linking)
