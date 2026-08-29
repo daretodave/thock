@@ -12536,7 +12536,7 @@ passes accumulate signals.)
 - issue: #953
 > **Resolved (2026-08-29):** added `data/group-buys/divinikey-gmk-cyl-orange-alert.json` + bundled `apps/web/public/group-buy-art/divinikey-gmk-cyl-orange-alert.svg`(.json) hero art (coral-orange splash, warm-grey stroke, no blue/cyan hues). `pnpm data:validate` clean (84 records, cross-refs resolve). Companion article and the two other orphaned issues (#928, #915) are separate findings — not fixed in this same commit (one-fix-per-tick).
 
-### [ ] [content-gaps] [7.0] divinikey-gmk-cyl-orange-alert — Rule 3 companion article missing
+### [x] [content-gaps] [7.0] divinikey-gmk-cyl-orange-alert — Rule 3 companion article missing — addressed in 946b88f3 + 887d4fb6, closes #955
 - category: content-gaps
 - filed: 2026-08-29 by group-buy-companion-survey.mjs
 - impact: 7 (live group buy "GMK CYL Orange Alert" has no thock companion piece; /group-buys card has no "Read our coverage →" link)
@@ -12546,6 +12546,7 @@ passes accumulate signals.)
 - rule: Rule 3
 - action: ship companion article for GMK CYL Orange Alert, then set relatedArticle field in data/group-buys/divinikey-gmk-cyl-orange-alert.json
 - issue: #955
+> **Resolved (2026-08-29):** shipped "GMK CYL Orange Alert opens at Divinikey, the second Alert-series set to reach group buy this year" at `/article/divinikey-gmk-cyl-orange-alert-group-buy` (news pillar, ~1050 words, publishedAt 2026-08-14 per Rule 3 group-buy startDate exception). Hero SVG + 2 InlineViz SVGs (Alert-series palette comparison, tracker score climb 10→72 sourced from `data/trends/2026-W35.json`). `relatedArticle` set on `data/group-buys/divinikey-gmk-cyl-orange-alert.json`. Language gate clean after 1-violation fix (forward-looking "tracker will" promise). 1211 e2e green. `946b88f3` + `887d4fb6`
 
 ### [ ] [seo] [4.2] seven hero-art SVGs use stock blue/cyan, violating the locked warm-palette rule
 - category: seo
@@ -12557,3 +12558,124 @@ passes accumulate signals.)
 - evidence: verified this tick with `grep -o 'oklch([^)]*)' apps/web/public/hero-art/<file>.svg` / `apps/web/public/group-buy-art/<file>.svg` on all 7 files — hues unchanged from the original issue #928 report.
 - next: swap each file's splash `oklch(...)` hue to an approved warm value (coral ~15-25, ochre ~60-75, dusty rose ~350, terracotta ~40-50), update the matching `<title>`/`heroImageAlt` copy, re-run `pnpm data:validate` + visual spot-check.
 - issue: #928
+
+### [ ] [cross-links] [4.5] divinikey-gmk-cyl-orange-alert-group-buy ↔ divinikey-dcs-dolch-group-buy — no prose cross-link (same pillar, ≥2 shared tags: group-buy, keycaps, divinikey)
+- category: cross-links
+- filed: 2026-08-29 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: group-buy, keycaps, divinikey
+- article-a: apps/web/src/content/articles/divinikey-gmk-cyl-orange-alert-group-buy.mdx
+- article-b: apps/web/src/content/articles/divinikey-dcs-dolch-group-buy.mdx
+- action: add [divinikey-dcs-dolch-group-buy](/article/divinikey-dcs-dolch-group-buy) to divinikey-gmk-cyl-orange-alert-group-buy body, or vice versa
+
+### [ ] [cross-links] [4.5] divinikey-gmk-cyl-orange-alert-group-buy ↔ gmk-cyl-greg-2-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, cherry-profile, group-buy)
+- category: cross-links
+- filed: 2026-08-29 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: gmk, cherry-profile, group-buy
+- article-a: apps/web/src/content/articles/divinikey-gmk-cyl-orange-alert-group-buy.mdx
+- article-b: apps/web/src/content/articles/gmk-cyl-greg-2-group-buy.mdx
+- action: add [gmk-cyl-greg-2-group-buy](/article/gmk-cyl-greg-2-group-buy) to divinikey-gmk-cyl-orange-alert-group-buy body, or vice versa
+
+### [ ] [cross-links] [4.5] divinikey-gmk-cyl-orange-alert-group-buy ↔ gmk-cyl-ishtar-r2-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, cherry-profile, group-buy)
+- category: cross-links
+- filed: 2026-08-29 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: gmk, cherry-profile, group-buy
+- article-a: apps/web/src/content/articles/divinikey-gmk-cyl-orange-alert-group-buy.mdx
+- article-b: apps/web/src/content/articles/gmk-cyl-ishtar-r2-group-buy.mdx
+- action: add [gmk-cyl-ishtar-r2-group-buy](/article/gmk-cyl-ishtar-r2-group-buy) to divinikey-gmk-cyl-orange-alert-group-buy body, or vice versa
+
+### [ ] [cross-links] [4.5] divinikey-gmk-cyl-orange-alert-group-buy ↔ gmk-cyl-just-beachy-group-buy-opens — no prose cross-link (same pillar, ≥2 shared tags: gmk, cherry-profile, group-buy, keycaps)
+- category: cross-links
+- filed: 2026-08-29 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: gmk, cherry-profile, group-buy, keycaps
+- article-a: apps/web/src/content/articles/divinikey-gmk-cyl-orange-alert-group-buy.mdx
+- article-b: apps/web/src/content/articles/gmk-cyl-just-beachy-group-buy-opens.mdx
+- action: add [gmk-cyl-just-beachy-group-buy-opens](/article/gmk-cyl-just-beachy-group-buy-opens) to divinikey-gmk-cyl-orange-alert-group-buy body, or vice versa
+
+### [ ] [cross-links] [4.5] divinikey-gmk-cyl-orange-alert-group-buy ↔ gmk-cyl-king-of-the-seas-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, cherry-profile, group-buy)
+- category: cross-links
+- filed: 2026-08-29 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: gmk, cherry-profile, group-buy
+- article-a: apps/web/src/content/articles/divinikey-gmk-cyl-orange-alert-group-buy.mdx
+- article-b: apps/web/src/content/articles/gmk-cyl-king-of-the-seas-group-buy.mdx
+- action: add [gmk-cyl-king-of-the-seas-group-buy](/article/gmk-cyl-king-of-the-seas-group-buy) to divinikey-gmk-cyl-orange-alert-group-buy body, or vice versa
+
+### [ ] [cross-links] [4.5] divinikey-gmk-cyl-orange-alert-group-buy ↔ gmk-cyl-masterpiece-r2-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, cherry-profile, group-buy, keycaps)
+- category: cross-links
+- filed: 2026-08-29 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: gmk, cherry-profile, group-buy, keycaps
+- article-a: apps/web/src/content/articles/divinikey-gmk-cyl-orange-alert-group-buy.mdx
+- article-b: apps/web/src/content/articles/gmk-cyl-masterpiece-r2-group-buy.mdx
+- action: add [gmk-cyl-masterpiece-r2-group-buy](/article/gmk-cyl-masterpiece-r2-group-buy) to divinikey-gmk-cyl-orange-alert-group-buy body, or vice versa
+
+### [ ] [cross-links] [4.5] divinikey-gmk-cyl-orange-alert-group-buy ↔ gmk-cyl-pandemonium-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, cherry-profile, group-buy, keycaps)
+- category: cross-links
+- filed: 2026-08-29 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: gmk, cherry-profile, group-buy, keycaps
+- article-a: apps/web/src/content/articles/divinikey-gmk-cyl-orange-alert-group-buy.mdx
+- article-b: apps/web/src/content/articles/gmk-cyl-pandemonium-group-buy.mdx
+- action: add [gmk-cyl-pandemonium-group-buy](/article/gmk-cyl-pandemonium-group-buy) to divinikey-gmk-cyl-orange-alert-group-buy body, or vice versa
+
+### [ ] [cross-links] [4.5] divinikey-gmk-cyl-orange-alert-group-buy ↔ gmk-cyl-prussian-alert — no prose cross-link (same pillar, ≥2 shared tags: gmk, cherry-profile, group-buy, keycaps)
+- category: cross-links
+- filed: 2026-08-29 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: gmk, cherry-profile, group-buy, keycaps
+- article-a: apps/web/src/content/articles/divinikey-gmk-cyl-orange-alert-group-buy.mdx
+- article-b: apps/web/src/content/articles/gmk-cyl-prussian-alert.mdx
+- action: add [gmk-cyl-prussian-alert](/article/gmk-cyl-prussian-alert) to divinikey-gmk-cyl-orange-alert-group-buy body, or vice versa
+
+### [ ] [cross-links] [4.5] divinikey-gmk-cyl-orange-alert-group-buy ↔ gmk-cyl-ramune-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, cherry-profile, group-buy)
+- category: cross-links
+- filed: 2026-08-29 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: gmk, cherry-profile, group-buy
+- article-a: apps/web/src/content/articles/divinikey-gmk-cyl-orange-alert-group-buy.mdx
+- article-b: apps/web/src/content/articles/gmk-cyl-ramune-group-buy.mdx
+- action: add [gmk-cyl-ramune-group-buy](/article/gmk-cyl-ramune-group-buy) to divinikey-gmk-cyl-orange-alert-group-buy body, or vice versa
+
+### [ ] [cross-links] [4.5] divinikey-gmk-cyl-orange-alert-group-buy ↔ gmk-cyl-selene-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, cherry-profile, group-buy, keycaps)
+- category: cross-links
+- filed: 2026-08-29 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: gmk, cherry-profile, group-buy, keycaps
+- article-a: apps/web/src/content/articles/divinikey-gmk-cyl-orange-alert-group-buy.mdx
+- article-b: apps/web/src/content/articles/gmk-cyl-selene-group-buy.mdx
+- action: add [gmk-cyl-selene-group-buy](/article/gmk-cyl-selene-group-buy) to divinikey-gmk-cyl-orange-alert-group-buy body, or vice versa
+
+### [ ] [cross-links] [4.5] divinikey-gmk-cyl-orange-alert-group-buy ↔ gsk-sweet-nightmare-group-buy — no prose cross-link (same pillar, ≥2 shared tags: group-buy, keycaps)
+- category: cross-links
+- filed: 2026-08-29 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: group-buy, keycaps
+- article-a: apps/web/src/content/articles/divinikey-gmk-cyl-orange-alert-group-buy.mdx
+- article-b: apps/web/src/content/articles/gsk-sweet-nightmare-group-buy.mdx
+- action: add [gsk-sweet-nightmare-group-buy](/article/gsk-sweet-nightmare-group-buy) to divinikey-gmk-cyl-orange-alert-group-buy body, or vice versa
