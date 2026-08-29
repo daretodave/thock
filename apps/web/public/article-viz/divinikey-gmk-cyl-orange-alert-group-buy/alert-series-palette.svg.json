@@ -1,0 +1,35 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-29T00:00:00.000Z",
+  "commit": "ff9fccadeffe04f0b780ff879f8a79b5ee2969ae",
+  "kind": "inline-viz",
+  "article_slug": "divinikey-gmk-cyl-orange-alert-group-buy",
+  "article_pillar": "news",
+  "section_anchor": "What's in the run",
+  "source": "template: family-locked inline-viz palette-comparison layout (see apps/web/public/article-viz/gmk-cyl-prussian-alert/ic-momentum.svg for stat-block sibling)",
+  "brief_summary": "Two labeled color-swatch rows stacked vertically. Top row, GMK CYL Prussian Alert (3 colors): a deep Prussian-red swatch, an unbleached-cream swatch, and a small ochre accent swatch. Bottom row, GMK CYL Orange Alert (3 colors): a coral-orange swatch, a beige swatch, and a small gray swatch. A vertical bracket between the rows carries the label 'Alert series: three-color discipline.'",
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "splash_color": { "name": "coral-orange", "oklch": "oklch(0.68 0.16 45)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "colors_used": {
+    "prussian_red": "oklch(0.50 0.18 25)",
+    "unbleached_cream": "oklch(0.92 0.025 85)",
+    "ochre_accent": "oklch(0.72 0.13 80)",
+    "coral_orange": "oklch(0.68 0.16 45)",
+    "beige": "oklch(0.94 0.018 85)",
+    "gray": "oklch(0.62 0.010 90)",
+    "bronze_theme_dot": "oklch(0.80 0.135 75)"
+  },
+  "data_sources": [
+    "divinikey-gmk-cyl-orange-alert-group-buy.mdx § 'What's in the run' — 'the Divinikey listing pairs a GMK Orenji-matched orange with beige and gray ... GMK CYL Prussian Alert ... paired a deep Prussian red against unbleached cream with an ochre modifier accent ... Orange Alert follows the same discipline with a different palette: three colors doing the work (orange, beige, gray)'",
+    "apps/web/public/hero-art/divinikey-gmk-cyl-orange-alert-group-buy.svg.json — splash_color coral-orange oklch(0.68 0.165 28) and secondary_colors beige_body oklch(0.94 0.018 85) / industrial_grey_body oklch(0.62 0.010 90)",
+    "apps/web/public/hero-art/gmk-cyl-prussian-alert.svg.json — splash_color oklch(0.5 0.16 22) (Prussian red) and cream wash oklch(0.92 0.025 85)",
+    "apps/web/public/hero-art/clicky-switches-deep-dive.svg.json — ochre reference oklch(0.72 0.13 80)"
+  ],
+  "outputs": [
+    "apps/web/public/article-viz/divinikey-gmk-cyl-orange-alert-group-buy/alert-series-palette.svg"
+  ],
+  "warnings": []
+}

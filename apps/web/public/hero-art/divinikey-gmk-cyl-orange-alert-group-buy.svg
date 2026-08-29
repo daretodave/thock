@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1200 750"
+     preserveAspectRatio="xMidYMid meet"
+     fill="none"
+     stroke="oklch(0.78 0.005 90)"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     role="img"
+     aria-label="thock article hero — GMK CYL Orange Alert group-buy coverage, four CYL-profile keycaps in a cluster, warm-grey line strokes with a coral-orange wash across two center alpha caps and small abstracted Katakana-style accent glyphs, evoking the industrial orange-beige-gray palette">
+  <title>thock hero — GMK CYL Orange Alert group-buy piece, four CYL-profile keycaps, beige/gray cluster, coral-orange splash on two center caps with Katakana-style accent glyphs</title>
+
+  <!--
+    Article hero for the Divinikey GMK CYL Orange Alert group-buy
+    companion piece (Rule 3 companion, News pillar). Subject mapping:
+    keycap piece -> keycap profile / cluster silhouette, following
+    the family vocabulary set by gmk-cyl-prussian-alert.svg (article
+    hero-art) and divinikey-gmk-cyl-orange-alert.svg (group-buy-art
+    card for the same record) — same product, two surfaces.
+
+    Composition: four CYL-profile keycaps in a staggered 2x2 cluster,
+    two back-row and two front-row offset half a cap-width to the
+    right. The two INNER caps (back-right, front-left), nearest the
+    horizontal centre of the cluster, carry the full coral-orange
+    splash — the "two center alpha caps" of the record's
+    heroImageAlt. The two OUTER caps (back-left, front-right) carry
+    the set's other two body colours: an unbleached beige and a
+    muted industrial grey, together reading as the "orange, beige,
+    gray" three-colour GMK CYL Orange Alert palette.
+
+    Orange Alert colourway translation to OKLCH:
+      coral-orange splash   oklch(0.68 0.165 28)   = focal accent
+      beige body            oklch(0.94 0.018 85)   = unbleached alpha body
+      industrial grey body  oklch(0.62 0.010 90)   = muted warm-neutral grey body
+      warm-grey stroke      oklch(0.78 0.005 90)   = default line stroke
+      bronze theme dot      oklch(0.80 0.135 75)   = fixed family ornamental anchor
+
+    Hard palette rule: no hue in this file falls in the blue/cyan
+    band (~195-265) flagged by the AUDIT.md [4.2] hero-art finding.
+    Every accent here sits in the warm band: 28 (coral-orange), 75
+    (bronze), 85 (beige), 90 (near-achromatic warm grey).
+
+    Katakana-style accent: GMK Alert-family sets carry small Katakana
+    legends on their accent keys as an industrial/technical motif.
+    Real Katakana glyphs are not rendered as text (no CJK-capable
+    font in the locked family: Newsreader / IBM Plex Sans / JetBrains
+    Mono); instead each of the two focal caps carries a small
+    ABSTRACTED angular glyph mark (three short strokes, not a
+    literal character) that reads as a legend-style accent without
+    claiming to spell a specific word.
+  -->
+
+  <!-- ============================================================
+       SPLASH WASH: coral-orange ellipse behind the cluster, very
+       low alpha, single-splash convention.
+  ============================================================ -->
+  <ellipse cx="600" cy="427" rx="480" ry="205"
+           fill="oklch(0.68 0.165 28 / 0.09)" stroke="none"/>
+
+  <!-- ============================================================
+       KEYCAP TEMPLATE (CYL-profile, near-top-down):
+         outer footprint 176 x 168, inset top surface ~18px inset,
+         two scoop arcs. Same path vocabulary as the article-hero
+         siblings (gmk-cyl-prussian-alert.svg) and this record's own
+         group-buy-art card.
+  ============================================================ -->
+
+  <!-- ===== ROW 1 — back row, two caps ===== -->
+
+  <!-- Back-left — OUTER cap, beige body -->
+  <g transform="translate(302 245)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"
+          fill="oklch(0.94 0.018 85 / 0.80)" stroke="oklch(0.78 0.005 90)"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          fill="oklch(0.97 0.010 88 / 0.68)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.65"/>
+    <path d="M 38 90 Q 88 76 138 90" stroke-opacity="0.42"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke-opacity="0.28"/>
+  </g>
+
+  <!-- Back-right — INNER / FOCAL cap, full coral-orange splash -->
+  <g transform="translate(582 245)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"
+          fill="oklch(0.68 0.165 28 / 0.92)" stroke="oklch(0.62 0.16 28)"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          fill="oklch(0.60 0.15 30 / 0.78)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.50"/>
+    <path d="M 38 90 Q 88 74 138 90" stroke="oklch(0.92 0.025 85)" stroke-opacity="0.62"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke="oklch(0.92 0.025 85)" stroke-opacity="0.40"/>
+    <!-- Katakana-style accent glyph (abstracted, not a literal character) -->
+    <g stroke="oklch(0.92 0.025 85)" stroke-width="2.5" stroke-opacity="0.80">
+      <path d="M 52 40 L 52 60"/>
+      <path d="M 46 48 L 66 36"/>
+      <path d="M 60 60 Q 66 64 62 70"/>
+    </g>
+  </g>
+
+  <!-- ===== ROW 2 — front row, two caps, offset half a cap right ===== -->
+
+  <!-- Front-left — INNER / FOCAL cap, full coral-orange splash -->
+  <g transform="translate(442 445)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"
+          fill="oklch(0.68 0.165 28 / 0.92)" stroke="oklch(0.62 0.16 28)"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          fill="oklch(0.60 0.15 30 / 0.78)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.50"/>
+    <path d="M 38 90 Q 88 74 138 90" stroke="oklch(0.92 0.025 85)" stroke-opacity="0.62"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke="oklch(0.92 0.025 85)" stroke-opacity="0.40"/>
+    <!-- Katakana-style accent glyph (abstracted, not a literal character) -->
+    <g stroke="oklch(0.92 0.025 85)" stroke-width="2.5" stroke-opacity="0.80">
+      <path d="M 52 40 L 52 60"/>
+      <path d="M 46 48 L 66 36"/>
+      <path d="M 60 60 Q 66 64 62 70"/>
+    </g>
+  </g>
+
+  <!-- Front-right — OUTER cap, industrial grey body -->
+  <g transform="translate(722 445)">
+    <path d="M 8 14 Q 0 8 14 4 L 162 4 Q 176 8 168 14 L 168 154 Q 176 160 162 164 L 14 164 Q 0 160 8 154 Z"
+          fill="oklch(0.62 0.010 90 / 0.55)" stroke="oklch(0.78 0.005 90)"/>
+    <path d="M 30 28 Q 24 22 36 20 L 140 20 Q 152 22 146 28 L 146 138 Q 152 144 140 146 L 36 146 Q 24 144 30 138 Z"
+          fill="oklch(0.70 0.008 90 / 0.55)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.60"/>
+    <path d="M 38 90 Q 88 76 138 90" stroke-opacity="0.40"/>
+    <path d="M 38 102 Q 88 90 138 102" stroke-opacity="0.26"/>
+  </g>
+
+  <!-- ── Quiet ground anchor: dashed line beneath the cluster ──────────────────────────── -->
+  <line x1="150" y1="632" x2="1010" y2="632"
+        stroke-opacity="0.15" stroke-dasharray="3 9"/>
+
+  <!-- ── Measurement ticks at left margin — bracket the cluster height ─────────────────── -->
+  <g stroke-opacity="0.22">
+    <line x1="120" y1="245" x2="134" y2="245"/>
+    <line x1="120" y1="609" x2="134" y2="609"/>
+    <line x1="127" y1="245" x2="127" y2="609" stroke-opacity="0.15"/>
+  </g>
+
+  <!-- ============================================================
+       CORAL-ORANGE ACCENT PIP: focal dot below the cluster, echoing
+       the splash. Mirrors the accent-pip convention in the
+       prussian-alert / just-beachy article-hero siblings.
+  ============================================================ -->
+  <circle cx="700" cy="646" r="6"
+          fill="oklch(0.68 0.165 28 / 0.92)"
+          stroke="oklch(0.62 0.16 28)"/>
+  <circle cx="700" cy="646" r="13"
+          stroke="oklch(0.68 0.165 28)"
+          stroke-opacity="0.40"
+          fill="none"/>
+
+  <!-- ── Bronze theme dot, upper-right — family ornamental anchor (fixed) ───────────────── -->
+  <circle cx="1058" cy="102" r="7"
+          fill="oklch(0.80 0.135 75 / 0.90)"
+          stroke="oklch(0.80 0.135 75)"/>
+  <circle cx="1058" cy="102" r="15"
+          stroke="oklch(0.80 0.135 75)"
+          stroke-opacity="0.34"
+          fill="none"/>
+</svg>

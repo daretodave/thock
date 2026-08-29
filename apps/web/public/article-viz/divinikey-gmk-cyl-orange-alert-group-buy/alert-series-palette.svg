@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Two labeled color-swatch rows for the GMK CYL Alert series. Top row, GMK CYL Prussian Alert, three colors: a deep Prussian-red swatch, an unbleached-cream swatch, and a small ochre accent swatch. Bottom row, GMK CYL Orange Alert, three colors: a coral-orange swatch, a beige swatch, and a small gray swatch. A bracket between the two rows reads "Alert series: three-color discipline."</title>
+
+  <!-- Title -->
+  <text x="600" y="50" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">GMK CYL Alert series — palette comparison</text>
+
+  <!-- Row 1: Prussian Alert -->
+  <text x="600" y="95" font-family="IBM Plex Sans, sans-serif" font-size="15" font-weight="600" fill="oklch(0.50 0.18 25)" stroke="none" text-anchor="middle" opacity="0.95">GMK CYL Prussian Alert · 3 colors</text>
+
+  <rect x="370" y="115" width="160" height="80" rx="6" fill="oklch(0.50 0.18 25)" stroke="oklch(0.50 0.18 25)" stroke-opacity="0.9"/>
+  <rect x="560" y="115" width="160" height="80" rx="6" fill="oklch(0.92 0.025 85)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.5"/>
+  <rect x="750" y="115" width="80" height="80" rx="6" fill="oklch(0.72 0.13 80)" stroke="oklch(0.72 0.13 80)" stroke-opacity="0.9"/>
+
+  <text x="450" y="212" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Prussian red</text>
+  <text x="450" y="228" font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">oklch .50 .18 25</text>
+
+  <text x="640" y="212" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">unbleached cream</text>
+  <text x="640" y="228" font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">oklch .92 .025 85</text>
+
+  <text x="790" y="212" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">ochre accent</text>
+  <text x="790" y="228" font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">oklch .72 .13 80</text>
+
+  <!-- Bracket connecting the two rows -->
+  <path d="M 560,248 L 560,258 L 640,258 L 640,248" stroke="oklch(0.68 0.16 45)" stroke-opacity="0.75" stroke-width="2" fill="none"/>
+  <path d="M 560,302 L 560,292 L 640,292 L 640,302" stroke="oklch(0.68 0.16 45)" stroke-opacity="0.75" stroke-width="2" fill="none"/>
+  <line x1="600" y1="258" x2="600" y2="292" stroke="oklch(0.68 0.16 45)" stroke-opacity="0.75" stroke-width="2"/>
+  <text x="660" y="279" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.68 0.16 45)" stroke="none" text-anchor="start" opacity="0.95">Alert series: three-color discipline</text>
+
+  <!-- Row 2: Orange Alert -->
+  <text x="600" y="320" font-family="IBM Plex Sans, sans-serif" font-size="15" font-weight="600" fill="oklch(0.68 0.16 45)" stroke="none" text-anchor="middle" opacity="0.95">GMK CYL Orange Alert · 3 colors</text>
+
+  <rect x="370" y="340" width="160" height="80" rx="6" fill="oklch(0.68 0.16 45)" stroke="oklch(0.68 0.16 45)" stroke-opacity="0.9"/>
+  <rect x="560" y="340" width="160" height="80" rx="6" fill="oklch(0.94 0.018 85)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.5"/>
+  <rect x="750" y="340" width="80" height="80" rx="6" fill="oklch(0.62 0.010 90)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.6"/>
+
+  <text x="450" y="437" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">coral-orange</text>
+  <text x="450" y="453" font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">oklch .68 .16 45</text>
+
+  <text x="640" y="437" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">beige</text>
+  <text x="640" y="453" font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">oklch .94 .018 85</text>
+
+  <text x="790" y="437" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">gray</text>
+  <text x="790" y="453" font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">oklch .62 .010 90</text>
+
+  <!-- Caption -->
+  <text x="600" y="500" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">two palettes, the same three-color restraint</text>
+
+  <!-- Bronze theme dot -->
+  <circle cx="1170" cy="24" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

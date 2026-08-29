@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>An eight-point line chart of GMK CYL Orange Alert's trends tracker score, rising left to right from 10 to 72 across the weeks leading into August 24, 2026, plotted in coral-orange against a warm-grey baseline grid. The final point is marked and labeled 72, direction up.</title>
+
+  <!-- Title -->
+  <text x="600" y="42" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Orange Alert — trends tracker score, first weeks open</text>
+  <text x="600" y="66" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">Aug 7 – Aug 24, 2026</text>
+
+  <!-- Gridlines + y-axis labels (score) -->
+  <line x1="100" y1="380" x2="1100" y2="380" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.35" stroke-width="1.5"/>
+  <line x1="100" y1="305" x2="1100" y2="305" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.15" stroke-dasharray="4 6" stroke-width="1"/>
+  <line x1="100" y1="230" x2="1100" y2="230" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.15" stroke-dasharray="4 6" stroke-width="1"/>
+  <line x1="100" y1="155" x2="1100" y2="155" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.15" stroke-dasharray="4 6" stroke-width="1"/>
+  <line x1="100" y1="80" x2="1100" y2="80" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.15" stroke-dasharray="4 6" stroke-width="1"/>
+
+  <text x="82" y="384" font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.5">0</text>
+  <text x="82" y="309" font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.5">20</text>
+  <text x="82" y="234" font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.5">40</text>
+  <text x="82" y="159" font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.5">60</text>
+  <text x="82" y="84" font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.5">80</text>
+
+  <!-- Data line: spark [10, 20, 32, 44, 55, 62, 68, 72] -->
+  <polyline points="100,342.5 242.86,305 385.71,260 528.57,215 671.43,173.75 814.29,147.5 957.14,125 1100,110"
+            stroke="oklch(0.68 0.16 45)" stroke-opacity="0.95" stroke-width="3" fill="none"/>
+
+  <circle cx="100" cy="342.5" r="4" fill="oklch(0.68 0.16 45)" fill-opacity="0.55" stroke="none"/>
+  <circle cx="242.86" cy="305" r="4" fill="oklch(0.68 0.16 45)" fill-opacity="0.6" stroke="none"/>
+  <circle cx="385.71" cy="260" r="4" fill="oklch(0.68 0.16 45)" fill-opacity="0.65" stroke="none"/>
+  <circle cx="528.57" cy="215" r="4" fill="oklch(0.68 0.16 45)" fill-opacity="0.7" stroke="none"/>
+  <circle cx="671.43" cy="173.75" r="4" fill="oklch(0.68 0.16 45)" fill-opacity="0.75" stroke="none"/>
+  <circle cx="814.29" cy="147.5" r="4" fill="oklch(0.68 0.16 45)" fill-opacity="0.8" stroke="none"/>
+  <circle cx="957.14" cy="125" r="4" fill="oklch(0.68 0.16 45)" fill-opacity="0.85" stroke="none"/>
+  <circle cx="1100" cy="110" r="9" fill="oklch(0.68 0.16 45)" stroke="none"/>
+
+  <!-- Open marker (first point) -->
+  <text x="100" y="410" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">open · 10</text>
+
+  <!-- Final point label -->
+  <text x="1100" y="94" font-family="JetBrains Mono, monospace" font-size="20" font-weight="700" fill="oklch(0.68 0.16 45)" stroke="none" text-anchor="middle">72</text>
+  <text x="1030" y="112" font-family="IBM Plex Sans, sans-serif" font-size="13" font-weight="600" fill="oklch(0.68 0.16 45)" stroke="none" text-anchor="end" opacity="0.95">direction up</text>
+
+  <!-- Caption -->
+  <text x="600" y="450" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">a steady climb, not a single-day spike</text>
+
+  <!-- Bronze theme dot -->
+  <circle cx="1170" cy="20" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

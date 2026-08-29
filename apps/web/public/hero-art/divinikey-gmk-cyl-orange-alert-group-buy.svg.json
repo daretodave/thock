@@ -1,0 +1,44 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-29T22:12:08.000Z",
+  "commit": "ff9fccadeffe04f0b780ff879f8a79b5ee2969ae",
+  "kind": "hero-art",
+  "source": "plan/bearings.md § Article hero art — colorful keyboard SVGs (locked 2026-05-09 via /oversight)",
+  "template": "directive: simple line drawing + single splash of color, subject mapped to keycap piece -> keycap profile / cluster silhouette",
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": [],
+  "size": [1200, 750],
+  "article_slug": "divinikey-gmk-cyl-orange-alert-group-buy",
+  "article_pillar": "news",
+  "subject": "Four CYL-profile keycaps in a staggered 2x2 cluster. The two INNER caps (back-right, front-left) carry the full coral-orange splash fill plus a small abstracted Katakana-style accent glyph (three strokes, not a literal character). The two OUTER caps (back-left, front-right) carry the set's other two body colours: an unbleached beige (back-left) and a muted industrial grey (front-right), together reading as the orange/beige/gray GMK CYL Orange Alert palette. Bronze theme dot at upper-right margin. Composition mirrors the sibling group-buy-art card for the same record (apps/web/public/group-buy-art/divinikey-gmk-cyl-orange-alert.svg) and the article hero-art vocabulary set by apps/web/public/hero-art/gmk-cyl-prussian-alert.svg.",
+  "splash_color": {
+    "name": "coral-orange",
+    "oklch": "oklch(0.68 0.165 28)"
+  },
+  "secondary_colors": {
+    "beige_body": "oklch(0.94 0.018 85)",
+    "industrial_grey_body": "oklch(0.62 0.010 90)"
+  },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "bronze_theme_dot": "oklch(0.80 0.135 75)",
+  "product": "GMK CYL Orange Alert",
+  "vendor": "Divinikey",
+  "product_kind": "keycap-set",
+  "keycap_profile": "CYL",
+  "cluster": "2-back-2-front staggered (2x2)",
+  "focal_caps": "back-right and front-left (the two inner/center caps) — full coral-orange splash, each with an abstracted Katakana-style accent glyph",
+  "hues_used": {
+    "coral_orange": 28,
+    "beige": 85,
+    "industrial_grey": 90,
+    "bronze_theme_dot": 75
+  },
+  "hue_safety_note": "AUDIT.md [seo][4.2] flagged prior hero-art drift into stock blue/cyan hues (~195-265). No hue in this file falls in that range; all accents sit in the warm 28/75/85/90 band, matching the group-buy-art sibling for the same record.",
+  "related_data_record": "data/group-buys/divinikey-gmk-cyl-orange-alert.json",
+  "outputs": [
+    "apps/web/public/hero-art/divinikey-gmk-cyl-orange-alert-group-buy.svg"
+  ],
+  "heroImageAlt_recommended": "Four CYL-profile keycaps in a cluster, warm-grey line strokes with a coral-orange wash across two center alpha caps and small abstracted Katakana-style accent glyphs, evoking GMK CYL Orange Alert's industrial orange-beige-gray palette",
+  "warnings": []
+}

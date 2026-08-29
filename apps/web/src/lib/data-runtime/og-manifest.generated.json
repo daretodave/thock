@@ -51,6 +51,16 @@
       }
     },
     {
+      "slug": "divinikey-gmk-cyl-orange-alert-group-buy",
+      "readTime": 5,
+      "frontmatter": {
+        "title": "GMK CYL Orange Alert opens at Divinikey, the second Alert-series set to reach group buy this year",
+        "lede": "GMK CYL Orange Alert opened August 14 and runs through September 14, 2026, hosted by Divinikey with KBDfans, UniKeys, and Keebz N Cables running alongside — an orange-beige-gray Cherry-profile doubleshot set with Katakana accent legends and an estimated February 2027 ship.",
+        "pillar": "news",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "hall-effect-rapid-trigger-plateau",
       "readTime": 6,
       "frontmatter": {
@@ -6936,5 +6946,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-08-29T17:22:29.433Z"
+  "generatedAt": "2026-08-29T22:20:57.837Z"
 }

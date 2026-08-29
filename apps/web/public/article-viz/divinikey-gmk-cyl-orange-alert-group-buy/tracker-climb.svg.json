@@ -1,0 +1,25 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-29T00:00:00.000Z",
+  "commit": "ff9fccadeffe04f0b780ff879f8a79b5ee2969ae",
+  "kind": "inline-viz",
+  "article_slug": "divinikey-gmk-cyl-orange-alert-group-buy",
+  "article_pillar": "news",
+  "section_anchor": "Why this is on the radar",
+  "source": "template: family-locked inline-viz line-chart layout (see apps/web/public/article-viz/gmk-cyl-ta-neo-production-tracking/three-week-sparks.svg for sibling line-chart panel style)",
+  "brief_summary": "Eight-point line chart of GMK CYL Orange Alert's trends tracker score rising left to right from 10 to 72, plotted in coral-orange against a warm-grey baseline grid with dashed 20/40/60/80 gridlines, labeled with the date range leading into August 24, 2026. First point marked 'open · 10'; final point marked larger and labeled '72' / 'direction up.'",
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "splash_color": { "name": "coral-orange", "oklch": "oklch(0.68 0.16 45)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "bronze_theme_dot": "oklch(0.80 0.135 75)",
+  "data_sources": [
+    "data/trends/2026-W35.json — \"GMK CYL Orange Alert\": category keycap, direction up, score 72, spark [10, 20, 32, 44, 55, 62, 68, 72], note 'GMK CYL Orange Alert opened for group buy Aug 14, running through Sep 14 across Divinikey, KBDfans, UniKeys and Keebz N Cables.'",
+    "divinikey-gmk-cyl-orange-alert-group-buy.mdx § 'Why this is on the radar' — 'GMK CYL Orange Alert was tracking at +72 on the 2026-W35 Trends Tracker (week of August 24), direction up ... climbs steadily from the low teens the week before open to 72 by the week of August 24'"
+  ],
+  "outputs": [
+    "apps/web/public/article-viz/divinikey-gmk-cyl-orange-alert-group-buy/tracker-climb.svg"
+  ],
+  "warnings": []
+}
