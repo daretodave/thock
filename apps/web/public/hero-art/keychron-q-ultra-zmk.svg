@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <title>thock hero — Keychron Q Ultra ZMK, 75% top-down silhouette with a wireless / battery indicator in vivid blue at the upper-right</title>
+  <title>thock hero — Keychron Q Ultra ZMK, 75% top-down silhouette with a wireless / battery indicator in warm terracotta at the upper-right</title>
 
-  <!-- Splash: a soft vivid-blue wash framing the case (the article's subject is wireless ZMK + 660h battery) -->
-  <ellipse cx="600" cy="395" rx="500" ry="210" fill="oklch(0.7 0.13 240 / 0.16)" stroke="none"/>
+  <!-- Splash: a soft warm-terracotta wash framing the case (the article's subject is wireless ZMK + 660h battery) -->
+  <ellipse cx="600" cy="395" rx="500" ry="210" fill="oklch(0.7 0.13 45 / 0.16)" stroke="none"/>
 
   <!-- ============================================================
        75% case outline (Keychron Q3 / Q5 family — Ultra line).
@@ -171,35 +171,35 @@
        ============================================================ -->
   <g>
     <!-- Soft halo behind the indicator cluster -->
-    <ellipse cx="930" cy="170" rx="120" ry="44" fill="oklch(0.7 0.13 240 / 0.18)" stroke="none"/>
+    <ellipse cx="930" cy="170" rx="120" ry="44" fill="oklch(0.7 0.13 45 / 0.18)" stroke="none"/>
 
     <!-- Bluetooth glyph (left of battery) -->
     <!-- Classic BT rune: a vertical bar crossed by two diagonals forming bow-tie -->
-    <g stroke="oklch(0.7 0.13 240)" stroke-width="2.5">
+    <g stroke="oklch(0.7 0.13 45)" stroke-width="2.5">
       <path d="M 858 152 L 882 172 L 870 182 L 870 158 L 882 168 L 858 188" fill="none" stroke-linejoin="round"/>
     </g>
     <!-- BT glyph fill ring -->
-    <circle cx="870" cy="170" r="22" stroke="oklch(0.7 0.13 240 / 0.85)" stroke-width="2" fill="oklch(0.7 0.13 240 / 0.12)"/>
+    <circle cx="870" cy="170" r="22" stroke="oklch(0.7 0.13 45 / 0.85)" stroke-width="2" fill="oklch(0.7 0.13 45 / 0.12)"/>
 
     <!-- Battery body — horizontal pill -->
     <rect x="906" y="150" width="100" height="40" rx="6"
-          fill="oklch(0.7 0.13 240 / 0.10)" stroke="oklch(0.7 0.13 240)" stroke-width="2.5"/>
+          fill="oklch(0.7 0.13 45 / 0.10)" stroke="oklch(0.7 0.13 45)" stroke-width="2.5"/>
     <!-- Battery terminal (positive nub) -->
     <rect x="1006" y="160" width="8" height="20" rx="2"
-          fill="oklch(0.7 0.13 240 / 0.85)" stroke="oklch(0.7 0.13 240)"/>
+          fill="oklch(0.7 0.13 45 / 0.85)" stroke="oklch(0.7 0.13 45)"/>
     <!-- Battery fill segments — three bars, full charge read for the 660h headline -->
     <rect x="912" y="156" width="28" height="28" rx="2"
-          fill="oklch(0.7 0.13 240 / 0.85)" stroke="none"/>
+          fill="oklch(0.7 0.13 45 / 0.85)" stroke="none"/>
     <rect x="944" y="156" width="28" height="28" rx="2"
-          fill="oklch(0.7 0.13 240 / 0.85)" stroke="none"/>
+          fill="oklch(0.7 0.13 45 / 0.85)" stroke="none"/>
     <rect x="976" y="156" width="24" height="28" rx="2"
-          fill="oklch(0.7 0.13 240 / 0.85)" stroke="none"/>
+          fill="oklch(0.7 0.13 45 / 0.85)" stroke="none"/>
   </g>
 
   <!-- Single splash-hue dot accent on the case lower-right —
        same conceptual move as the brass dot on the Sonnet hero
        and the alert-pip on the Prussian Alert hero. Reads as the
        indicator LED on the Q Ultra. -->
-  <circle cx="985" cy="615" r="9" fill="oklch(0.7 0.13 240 / 0.95)" stroke="oklch(0.7 0.13 240)"/>
-  <circle cx="985" cy="615" r="14" stroke-opacity="0.5" stroke="oklch(0.7 0.13 240)" fill="none"/>
+  <circle cx="985" cy="615" r="9" fill="oklch(0.7 0.13 45 / 0.95)" stroke="oklch(0.7 0.13 45)"/>
+  <circle cx="985" cy="615" r="14" stroke-opacity="0.5" stroke="oklch(0.7 0.13 45)" fill="none"/>
 </svg>

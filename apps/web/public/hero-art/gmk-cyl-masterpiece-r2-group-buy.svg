@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <title>thock hero — GMK CYL Masterpiece R2, Cherry-profile keycap row silhouette in deep indigo with white legend marks and a muted terracotta accent, seigaiha wave pattern suggested in the background</title>
+  <title>thock hero — GMK CYL Masterpiece R2, Cherry-profile keycap row silhouette in deep umber with white legend marks and a muted terracotta accent, seigaiha wave pattern suggested in the background</title>
 
-  <!-- Editorial hook: GMK CYL Masterpiece R2 is a deep-blue keycap set with
+  <!-- Editorial hook: GMK CYL Masterpiece R2 is a deep-blue keycap set in
+       real life, but thock's warm-only hero palette re-reads its rich,
+       saturated character as a deep umber instead. It ships with
        white legends and a shokunin (Japanese artisan/craftsman) aesthetic.
        The Wave deskmat features a seigaiha overlapping wave-scale pattern.
        This hero shows six Cherry-profile keycap side silhouettes in a
        horizontal row — the R1 (top-row) sculpt, slight backward tilt and
-       a low cylindrical scoop — in Masterpiece's rich deep indigo. Three
+       a low cylindrical scoop — in Masterpiece's rich deep umber. Three
        caps carry faint near-white legend marks (WS1 white legends). The
        muted terracotta splash appears as a thin accent edge on the first
        and last cap and a soft focal dot at the visual anchor. A very faint
@@ -16,8 +18,8 @@
        convention: warm-bronze theme dot at upper-right margin. -->
 
   <defs>
-    <!-- Deep indigo body fill — Masterpiece R2 rich blue, RAL 240 40 40 character -->
-    <!-- oklch(0.32 0.12 262) — deep cool navy, slightly violet-leaning -->
+    <!-- Deep umber body fill — stands in for Masterpiece R2's real RAL 240 40 40 blue character -->
+    <!-- oklch(0.32 0.12 50) — deep warm umber, terracotta-leaning -->
 
     <!-- Terracotta accent low-opacity wash behind row center -->
     <radialGradient id="terra-wash" cx="50%" cy="60%" r="42%">
@@ -26,22 +28,22 @@
       <stop offset="100%" stop-color="oklch(0.62 0.10 35)" stop-opacity="0"/>
     </radialGradient>
 
-    <!-- Body fill gradient — deep indigo with subtle top-face lighting -->
+    <!-- Body fill gradient — deep umber with subtle top-face lighting -->
     <linearGradient id="cap-body-fill" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"   stop-color="oklch(0.36 0.11 262)" stop-opacity="1"/>
-      <stop offset="100%" stop-color="oklch(0.26 0.13 264)" stop-opacity="1"/>
+      <stop offset="0%"   stop-color="oklch(0.36 0.11 50)" stop-opacity="1"/>
+      <stop offset="100%" stop-color="oklch(0.26 0.13 50)" stop-opacity="1"/>
     </linearGradient>
 
     <!-- Top face fill — lighter, suggests the cylindrical top surface -->
     <linearGradient id="cap-top-fill" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"   stop-color="oklch(0.44 0.10 258)" stop-opacity="1"/>
-      <stop offset="100%" stop-color="oklch(0.34 0.12 262)" stop-opacity="1"/>
+      <stop offset="0%"   stop-color="oklch(0.44 0.10 55)" stop-opacity="1"/>
+      <stop offset="100%" stop-color="oklch(0.34 0.12 50)" stop-opacity="1"/>
     </linearGradient>
   </defs>
 
   <!-- ============================================================
        SEIGAIHA BACKGROUND — overlapping wave-scale pattern
-       Very faint, top half of canvas, hue matches the indigo keys.
+       Very faint, top half of canvas, hue matches the umber keys.
        Seigaiha = overlapping semicircles arranged in a fish-scale/
        wave pattern. Rows offset by half a unit.
        Scale radius r=54, pitch 108 wide × 54 tall.
@@ -63,7 +65,7 @@
     ...continuing to y=416
   -->
 
-  <g stroke="oklch(0.42 0.09 262)" stroke-width="1" stroke-opacity="0.12" fill="oklch(0.38 0.08 262)" fill-opacity="0.05">
+  <g stroke="oklch(0.42 0.09 50)" stroke-width="1" stroke-opacity="0.12" fill="oklch(0.38 0.08 50)" fill-opacity="0.05">
     <!-- Row 0 y=52 -->
     <path d="M 0 52 A 52 52 0 0 1 104 52 Z"/>
     <path d="M 104 52 A 52 52 0 0 1 208 52 Z"/>
@@ -169,7 +171,7 @@
   <!-- ============================================================
        TERRACOTTA WASH — soft radial behind the key row center
        Very low opacity; pulls the eye to the composition center
-       without competing with the indigo keycaps.
+       without competing with the umber keycaps.
        ============================================================ -->
   <ellipse cx="600" cy="500" rx="520" ry="180" fill="url(#terra-wash)" stroke="none"/>
 
@@ -236,7 +238,7 @@
 
        ============================================================ -->
 
-  <!-- ── CAP 1 (x_L=188) — deep indigo, NO legend, terracotta right-edge accent ── -->
+  <!-- ── CAP 1 (x_L=188) — deep umber, NO legend, terracotta right-edge accent ── -->
   <g id="cap-1">
     <!-- Main body -->
     <path d="M 190 598
@@ -260,13 +262,13 @@
           stroke-opacity="0.6"/>
     <!-- CYL scoop arc across top face interior -->
     <path d="M 202 460 Q 251 451 300 460"
-          stroke="oklch(0.68 0.08 258)" stroke-width="1.5" stroke-opacity="0.55" fill="none"/>
+          stroke="oklch(0.68 0.08 55)" stroke-width="1.5" stroke-opacity="0.55" fill="none"/>
     <!-- Terracotta accent right edge — thin bright line on the right shoulder -->
     <line x1="306" y1="454" x2="310" y2="598"
           stroke="oklch(0.62 0.10 35)" stroke-width="2" stroke-opacity="0.70"/>
   </g>
 
-  <!-- ── CAP 2 (x_L=328) — deep indigo, white legend marks (2 horizontal bars) ── -->
+  <!-- ── CAP 2 (x_L=328) — deep umber, white legend marks (2 horizontal bars) ── -->
   <g id="cap-2">
     <path d="M 330 598
              L 450 598
@@ -287,7 +289,7 @@
           stroke-width="1.2"
           stroke-opacity="0.6"/>
     <path d="M 342 460 Q 391 451 440 460"
-          stroke="oklch(0.68 0.08 258)" stroke-width="1.5" stroke-opacity="0.55" fill="none"/>
+          stroke="oklch(0.68 0.08 55)" stroke-width="1.5" stroke-opacity="0.55" fill="none"/>
     <!-- White legend marks — two short horizontal bars suggesting a numeral or letter -->
     <line x1="364" y1="504" x2="418" y2="504"
           stroke="oklch(0.94 0.004 85)" stroke-width="2.5" stroke-opacity="0.80" stroke-linecap="round"/>
@@ -295,7 +297,7 @@
           stroke="oklch(0.94 0.004 85)" stroke-width="2.5" stroke-opacity="0.60" stroke-linecap="round"/>
   </g>
 
-  <!-- ── CAP 3 (x_L=468) — deep indigo, NO legend ── -->
+  <!-- ── CAP 3 (x_L=468) — deep umber, NO legend ── -->
   <g id="cap-3">
     <path d="M 470 598
              L 590 598
@@ -316,10 +318,10 @@
           stroke-width="1.2"
           stroke-opacity="0.6"/>
     <path d="M 482 460 Q 531 451 580 460"
-          stroke="oklch(0.68 0.08 258)" stroke-width="1.5" stroke-opacity="0.55" fill="none"/>
+          stroke="oklch(0.68 0.08 55)" stroke-width="1.5" stroke-opacity="0.55" fill="none"/>
   </g>
 
-  <!-- ── CAP 4 (x_L=608) — deep indigo, white legend marks — CENTRAL CAP ── -->
+  <!-- ── CAP 4 (x_L=608) — deep umber, white legend marks — CENTRAL CAP ── -->
   <g id="cap-4">
     <path d="M 610 598
              L 730 598
@@ -340,7 +342,7 @@
           stroke-width="1.2"
           stroke-opacity="0.6"/>
     <path d="M 622 460 Q 671 451 720 460"
-          stroke="oklch(0.68 0.08 258)" stroke-width="1.5" stroke-opacity="0.55" fill="none"/>
+          stroke="oklch(0.68 0.08 55)" stroke-width="1.5" stroke-opacity="0.55" fill="none"/>
     <!-- White legend marks — single centered horizontal bar, suggesting a key glyph -->
     <line x1="640" y1="512" x2="702" y2="512"
           stroke="oklch(0.94 0.004 85)" stroke-width="2.5" stroke-opacity="0.82" stroke-linecap="round"/>
@@ -356,7 +358,7 @@
             stroke="oklch(0.62 0.10 35)" stroke-width="1" stroke-opacity="0.35"/>
   </g>
 
-  <!-- ── CAP 5 (x_L=748) — deep indigo, white legend marks ── -->
+  <!-- ── CAP 5 (x_L=748) — deep umber, white legend marks ── -->
   <g id="cap-5">
     <path d="M 750 598
              L 870 598
@@ -377,7 +379,7 @@
           stroke-width="1.2"
           stroke-opacity="0.6"/>
     <path d="M 762 460 Q 811 451 860 460"
-          stroke="oklch(0.68 0.08 258)" stroke-width="1.5" stroke-opacity="0.55" fill="none"/>
+          stroke="oklch(0.68 0.08 55)" stroke-width="1.5" stroke-opacity="0.55" fill="none"/>
     <!-- White legend marks — two bars, different widths -->
     <line x1="770" y1="498" x2="852" y2="498"
           stroke="oklch(0.94 0.004 85)" stroke-width="2.5" stroke-opacity="0.78" stroke-linecap="round"/>
@@ -387,7 +389,7 @@
           stroke="oklch(0.94 0.004 85)" stroke-width="1.8" stroke-opacity="0.40" stroke-linecap="round"/>
   </g>
 
-  <!-- ── CAP 6 (x_L=888) — deep indigo, NO legend, terracotta left-edge accent ── -->
+  <!-- ── CAP 6 (x_L=888) — deep umber, NO legend, terracotta left-edge accent ── -->
   <g id="cap-6">
     <path d="M 890 598
              L 1010 598
@@ -408,7 +410,7 @@
           stroke-width="1.2"
           stroke-opacity="0.6"/>
     <path d="M 902 460 Q 951 451 1000 460"
-          stroke="oklch(0.68 0.08 258)" stroke-width="1.5" stroke-opacity="0.55" fill="none"/>
+          stroke="oklch(0.68 0.08 55)" stroke-width="1.5" stroke-opacity="0.55" fill="none"/>
     <!-- Terracotta accent left edge — mirrors cap 1 right edge -->
     <line x1="896" y1="454" x2="890" y2="598"
           stroke="oklch(0.62 0.10 35)" stroke-width="2" stroke-opacity="0.70"/>

@@ -2,10 +2,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <title>thock hero — 75% default, layout silhouette as sparkline</title>
 
-  <!-- Splash band: faint steel-blue wash setting the stage for the sparkline -->
+  <!-- Splash band: faint ochre wash setting the stage for the sparkline -->
   <path
     d="M 70 90 L 1130 90 L 1130 660 L 70 660 Z"
-    fill="oklch(0.74 0.085 215 / 0.08)" stroke="none"/>
+    fill="oklch(0.74 0.085 65 / 0.08)" stroke="none"/>
 
   <!-- 75% layout silhouette — top-down outline, ~85% width × ~44% height,
        seated in the lower-mid canvas. Proportions echo a real 75%
@@ -124,11 +124,11 @@
       L 1110 660
       L 90 660
       Z"
-    fill="oklch(0.74 0.085 215 / 0.16)" stroke="none"/>
+    fill="oklch(0.74 0.085 65 / 0.16)" stroke="none"/>
 
   <!-- The sparkline trend curve — single continuous polyline crossing the
        layout silhouette from lower-left to upper-right. 8 points, peaks at right.
-       Colored in the per-article splash hue (steel-blue), 2.5px stroke for emphasis. -->
+       Colored in the per-article splash hue (ochre), 2.5px stroke for emphasis. -->
   <polyline
     points="
       90,560
@@ -139,7 +139,7 @@
       818,304
       964,210
       1110,110"
-    stroke="oklch(0.74 0.085 215)" stroke-width="2.5"/>
+    stroke="oklch(0.74 0.085 65)" stroke-width="2.5"/>
 
   <!-- Subtle interior data-point dots on the sparkline (warm-grey, low-key) -->
   <g stroke-opacity="0.55">
@@ -152,8 +152,8 @@
     <circle cx="964" cy="210" r="3.5"/>
   </g>
 
-  <!-- Focal accent dot at the sparkline peak — steel-blue,
+  <!-- Focal accent dot at the sparkline peak — ochre,
        filled core + soft outer ring (mirrors canonical Trends cursor) -->
-  <circle cx="1110" cy="110" r="9"  fill="oklch(0.74 0.085 215 / 0.95)" stroke="oklch(0.74 0.085 215)"/>
-  <circle cx="1110" cy="110" r="16" stroke="oklch(0.74 0.085 215)" stroke-opacity="0.45" fill="none"/>
+  <circle cx="1110" cy="110" r="9"  fill="oklch(0.74 0.085 65 / 0.95)" stroke="oklch(0.74 0.085 65)"/>
+  <circle cx="1110" cy="110" r="16" stroke="oklch(0.74 0.085 65)" stroke-opacity="0.45" fill="none"/>
 </svg>

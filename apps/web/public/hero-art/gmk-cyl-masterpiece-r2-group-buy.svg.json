@@ -12,9 +12,9 @@
   "template": "directive: simple line drawing + single splash of color illustrative of subject",
   "size": [1200, 750],
   "canvas": "1200x750",
-  "subject": "Six Cherry-profile keycap side silhouettes in a horizontal row, R1 (top-row) sculpt. Bodies filled in deep indigo navy matching the Masterpiece R2 rich blue (RAL 240 40 40 character, oklch(0.32 0.12 262) via gradient). Three caps carry near-white WS1-suggesting legend marks (short horizontal bars). Muted terracotta accent appears on the outer right edge of cap 1 and the outer left edge of cap 6, plus a focal dot at the top shoulder of the central cap 4. A very faint seigaiha (overlapping wave-scale) pattern fills the upper two-thirds of the canvas at ~5% opacity, suggesting the Wave deskmat. A soft terracotta radial wash sits behind the row center. Baseline hairline with a thin terracotta shadow below. Bronze theme dot at upper-right margin.",
-  "hue": "deep indigo navy (oklch(0.32 0.12 262)) — matching GMK CYL Masterpiece R2 RAL 240 40 40",
-  "motif": "seigaiha (Japanese overlapping wave-scale) — very faint background texture referencing the Wave deskmat, ~5% opacity indigo stroke",
+  "subject": "Six Cherry-profile keycap side silhouettes in a horizontal row, R1 (top-row) sculpt. Bodies filled in deep umber standing in for the Masterpiece R2 rich blue (RAL 240 40 40 character, oklch(0.32 0.12 50) via gradient). Three caps carry near-white WS1-suggesting legend marks (short horizontal bars). Muted terracotta accent appears on the outer right edge of cap 1 and the outer left edge of cap 6, plus a focal dot at the top shoulder of the central cap 4. A very faint seigaiha (overlapping wave-scale) pattern fills the upper two-thirds of the canvas at ~5% opacity, suggesting the Wave deskmat. A soft terracotta radial wash sits behind the row center. Baseline hairline with a thin terracotta shadow below. Bronze theme dot at upper-right margin.",
+  "hue": "deep umber (oklch(0.32 0.12 50)) — standing in for GMK CYL Masterpiece R2's real RAL 240 40 40 blue",
+  "motif": "seigaiha (Japanese overlapping wave-scale) — very faint background texture referencing the Wave deskmat, ~5% opacity umber stroke",
   "generatedAt": "2026-06-23",
   "splash_color": {
     "name": "muted terracotta",
@@ -30,13 +30,13 @@
     "rationale": "Muted terracotta chosen over coral and dusty rose: it is warm without competing with the deep indigo bodies, maintains the shokunin (artisan) calm aesthetic, and recalls the warm clay / lacquerware tones common in Japanese craft objects. Coral would have been too loud against the deep navy; dusty rose too pink for the masculine craftsman theme."
   },
   "keycap_color": {
-    "name": "deep indigo navy",
-    "oklch_body_gradient_top": "oklch(0.36 0.11 262)",
-    "oklch_body_gradient_bottom": "oklch(0.26 0.13 264)",
-    "oklch_top_face_gradient_top": "oklch(0.44 0.10 258)",
-    "oklch_top_face_gradient_bottom": "oklch(0.34 0.12 262)",
-    "oklch_scoop_arc": "oklch(0.68 0.08 258)",
-    "rationale": "Deep cool violet-leaning navy keyed to RAL 240 40 40, the rich blue of GMK CYL Masterpiece R2. Body gradient adds subtle depth (lighter top → darker base) to read as a physical object without shadow rendering."
+    "name": "deep umber",
+    "oklch_body_gradient_top": "oklch(0.36 0.11 50)",
+    "oklch_body_gradient_bottom": "oklch(0.26 0.13 50)",
+    "oklch_top_face_gradient_top": "oklch(0.44 0.10 55)",
+    "oklch_top_face_gradient_bottom": "oklch(0.34 0.12 50)",
+    "oklch_scoop_arc": "oklch(0.68 0.08 55)",
+    "rationale": "originally shipped as deep cool violet-leaning navy keyed to RAL 240 40 40, GMK CYL Masterpiece R2's real rich blue. Hue swapped to deep umber 2026-08-30 to comply with the warm-only hero-art rule (plan/AUDIT.md [seo][4.2]) — mechanical hue swap only (262/264 → 50, 258 → 55), same lightness/chroma per tone; body gradient depth unchanged."
   },
   "legend_marks": {
     "color": "oklch(0.94 0.004 85)",
@@ -50,7 +50,7 @@
     "radius_px": 52,
     "fill_opacity": 0.05,
     "stroke_opacity": 0.12,
-    "color": "oklch(0.42 0.09 262)",
+    "color": "oklch(0.42 0.09 50)",
     "canvas_coverage": "y=0 to y=416 (upper ~55% of 750px canvas), full width",
     "rows": 8,
     "notes": "Standard seigaiha geometry: semicircles of radius r, alternating rows offset by r horizontally, stacked every r vertically. At 5% fill and 12% stroke the pattern reads as suggestion, not illustration."

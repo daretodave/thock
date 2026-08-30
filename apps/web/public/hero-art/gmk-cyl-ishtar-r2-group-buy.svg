@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <title>thock hero — GMK CYL Ishtar R2, top-down 75% board silhouette with a lapis-blue splash across the alpha cluster recalling the glazed brickwork of the Ishtar Gate, a sandstone-tinted spacebar nodding to the cream reliefs of the original set, warm-bronze hairlines on top and bottom case edges</title>
+  <title>thock hero — GMK CYL Ishtar R2, top-down 75% board silhouette with a coral splash across the alpha cluster nodding to the fired-brick warmth of the Ishtar Gate's reliefs, a sandstone-tinted spacebar nodding to the cream reliefs of the original set, warm-bronze hairlines on top and bottom case edges</title>
 
   <!-- Editorial hook: the article is the GMK CYL Ishtar R2 group-buy
        companion piece. Ishtar draws from the Ishtar Gate of Babylon —
-       glazed brickwork in deep lapis with cream sandstone reliefs of
-       lions and aurochs. R2 is the second round; palette unchanged.
-       The hero reads as "a CYL companion piece, but lapis-and-sandstone
-       instead of coral": lapis splash on a contiguous block of alphas
-       and the spacebar tinted sandstone for the secondary cream tone.
-       Warm-bronze hairlines hug the top and bottom case edges only.
-       Everything else is the project standard warm-grey stroke on a
-       transparent canvas. -->
+       glazed brickwork with cream sandstone reliefs of lions and
+       aurochs. R2 is the second round; palette unchanged. thock's
+       warm-only hero palette re-reads the gate's fired-brick warmth
+       as coral rather than the source glaze's blue: a coral splash on
+       a contiguous block of alphas, and the spacebar tinted sandstone
+       for the secondary cream tone. Warm-bronze hairlines hug the top
+       and bottom case edges only. Everything else is the project
+       standard warm-grey stroke on a transparent canvas. -->
 
   <!-- ============================================================
        BOARD OUTLINE — 75% top-down silhouette
@@ -112,26 +112,26 @@
   <!-- Tab 1.5u -->
   <rect x="118" y="346" width="92" height="56" rx="5" ry="5"/>
   <rect x="126" y="356" width="76" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
-  <!-- Q (lapis 1 of 8) -->
+  <!-- Q (coral 1 of 8) -->
   <rect x="214" y="346" width="60" height="56" rx="5" ry="5"
-        fill="oklch(0.42 0.115 255 / 0.86)" stroke="oklch(0.34 0.125 255)"/>
+        fill="oklch(0.42 0.115 20 / 0.86)" stroke="oklch(0.34 0.125 20)"/>
   <rect x="222" y="356" width="44" height="36" rx="3" ry="3"
-        fill="oklch(0.56 0.10 255 / 0.55)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55"/>
-  <!-- W (lapis 2 of 8) -->
+        fill="oklch(0.56 0.10 20 / 0.55)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55"/>
+  <!-- W (coral 2 of 8) -->
   <rect x="278" y="346" width="60" height="56" rx="5" ry="5"
-        fill="oklch(0.42 0.115 255 / 0.86)" stroke="oklch(0.34 0.125 255)"/>
+        fill="oklch(0.42 0.115 20 / 0.86)" stroke="oklch(0.34 0.125 20)"/>
   <rect x="286" y="356" width="44" height="36" rx="3" ry="3"
-        fill="oklch(0.56 0.10 255 / 0.55)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55"/>
-  <!-- E (lapis 3 of 8) -->
+        fill="oklch(0.56 0.10 20 / 0.55)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55"/>
+  <!-- E (coral 3 of 8) -->
   <rect x="342" y="346" width="60" height="56" rx="5" ry="5"
-        fill="oklch(0.42 0.115 255 / 0.86)" stroke="oklch(0.34 0.125 255)"/>
+        fill="oklch(0.42 0.115 20 / 0.86)" stroke="oklch(0.34 0.125 20)"/>
   <rect x="350" y="356" width="44" height="36" rx="3" ry="3"
-        fill="oklch(0.56 0.10 255 / 0.55)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55"/>
-  <!-- R (lapis 4 of 8) -->
+        fill="oklch(0.56 0.10 20 / 0.55)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55"/>
+  <!-- R (coral 4 of 8) -->
   <rect x="406" y="346" width="60" height="56" rx="5" ry="5"
-        fill="oklch(0.42 0.115 255 / 0.86)" stroke="oklch(0.34 0.125 255)"/>
+        fill="oklch(0.42 0.115 20 / 0.86)" stroke="oklch(0.34 0.125 20)"/>
   <rect x="414" y="356" width="44" height="36" rx="3" ry="3"
-        fill="oklch(0.56 0.10 255 / 0.55)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55"/>
+        fill="oklch(0.56 0.10 20 / 0.55)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55"/>
   <!-- T -->
   <rect x="470" y="346" width="60" height="56" rx="5" ry="5"/>
   <rect x="478" y="356" width="44" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
@@ -164,26 +164,26 @@
   <!-- Caps 1.75u -->
   <rect x="118" y="410" width="108" height="56" rx="5" ry="5"/>
   <rect x="126" y="420" width="92" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
-  <!-- A (lapis 5 of 8) -->
+  <!-- A (coral 5 of 8) -->
   <rect x="230" y="410" width="60" height="56" rx="5" ry="5"
-        fill="oklch(0.42 0.115 255 / 0.86)" stroke="oklch(0.34 0.125 255)"/>
+        fill="oklch(0.42 0.115 20 / 0.86)" stroke="oklch(0.34 0.125 20)"/>
   <rect x="238" y="420" width="44" height="36" rx="3" ry="3"
-        fill="oklch(0.56 0.10 255 / 0.55)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55"/>
-  <!-- S (lapis 6 of 8) -->
+        fill="oklch(0.56 0.10 20 / 0.55)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55"/>
+  <!-- S (coral 6 of 8) -->
   <rect x="294" y="410" width="60" height="56" rx="5" ry="5"
-        fill="oklch(0.42 0.115 255 / 0.86)" stroke="oklch(0.34 0.125 255)"/>
+        fill="oklch(0.42 0.115 20 / 0.86)" stroke="oklch(0.34 0.125 20)"/>
   <rect x="302" y="420" width="44" height="36" rx="3" ry="3"
-        fill="oklch(0.56 0.10 255 / 0.55)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55"/>
-  <!-- D (lapis 7 of 8) -->
+        fill="oklch(0.56 0.10 20 / 0.55)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55"/>
+  <!-- D (coral 7 of 8) -->
   <rect x="358" y="410" width="60" height="56" rx="5" ry="5"
-        fill="oklch(0.42 0.115 255 / 0.86)" stroke="oklch(0.34 0.125 255)"/>
+        fill="oklch(0.42 0.115 20 / 0.86)" stroke="oklch(0.34 0.125 20)"/>
   <rect x="366" y="420" width="44" height="36" rx="3" ry="3"
-        fill="oklch(0.56 0.10 255 / 0.55)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55"/>
-  <!-- F (lapis 8 of 8) -->
+        fill="oklch(0.56 0.10 20 / 0.55)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55"/>
+  <!-- F (coral 8 of 8) -->
   <rect x="422" y="410" width="60" height="56" rx="5" ry="5"
-        fill="oklch(0.42 0.115 255 / 0.86)" stroke="oklch(0.34 0.125 255)"/>
+        fill="oklch(0.42 0.115 20 / 0.86)" stroke="oklch(0.34 0.125 20)"/>
   <rect x="430" y="420" width="44" height="36" rx="3" ry="3"
-        fill="oklch(0.56 0.10 255 / 0.55)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55"/>
+        fill="oklch(0.56 0.10 20 / 0.55)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55"/>
   <!-- G -->
   <rect x="486" y="410" width="60" height="56" rx="5" ry="5"/>
   <rect x="494" y="420" width="44" height="36" rx="3" ry="3" stroke-opacity="0.5"/>
@@ -285,12 +285,12 @@
   <!-- Subtle CYL scoop arcs across each accent cap to reinforce the cylindrical
        profile read. Drawn last so they sit on top. -->
   <g stroke="oklch(0.92 0.025 85)" stroke-opacity="0.45" stroke-width="1.5">
-    <!-- Top-alpha lapis cluster scoops (Q W E R) -->
+    <!-- Top-alpha coral cluster scoops (Q W E R) -->
     <path d="M 224 376 Q 244 370 264 376"/>
     <path d="M 288 376 Q 308 370 328 376"/>
     <path d="M 352 376 Q 372 370 392 376"/>
     <path d="M 416 376 Q 436 370 456 376"/>
-    <!-- Home-row lapis cluster scoops (A S D F) -->
+    <!-- Home-row coral cluster scoops (A S D F) -->
     <path d="M 240 440 Q 260 434 280 440"/>
     <path d="M 304 440 Q 324 434 344 440"/>
     <path d="M 368 440 Q 388 434 408 440"/>

@@ -2,9 +2,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <title>thock hero — HMX Cloud, exploded-axonometric switch silhouette</title>
 
-  <!-- Splash: pale-cyan wash centered on the stem tier — the "Cloud" name + POK stem profile,
+  <!-- Splash: soft-coral wash centered on the stem tier — the "Cloud" name + POK stem profile,
        which is the article's load-bearing technical claim. Single splash, single hue. -->
-  <ellipse cx="600" cy="345" rx="220" ry="120" fill="oklch(0.78 0.085 235 / 0.15)" stroke="none"/>
+  <ellipse cx="600" cy="345" rx="220" ry="120" fill="oklch(0.78 0.085 20 / 0.15)" stroke="none"/>
 
   <!-- Right-leaning axonometric skew: each tier's top edge is offset +18px to the right
        relative to its bottom edge, giving every part a parallelogram silhouette. The
@@ -53,7 +53,7 @@
   <circle cx="600" cy="258" r="2.5" stroke-opacity="0.55"/>
 
   <!-- ── TIER 2 — STEM (POK, cruciform head + body) ── -->
-  <!-- The splash-cyan accent dot anchors at the cruciform head, naming HMX's POK profile. -->
+  <!-- The splash-coral accent dot anchors at the cruciform head, naming HMX's POK profile. -->
   <g>
     <!-- Cruciform head (the + that the keycap mounts onto) -->
     <path d="
@@ -85,10 +85,10 @@
     <line x1="628" y1="392" x2="626" y2="408" stroke-opacity="0.5"/>
   </g>
 
-  <!-- Splash anchor — single pale-cyan accent dot at the cruciform head.
+  <!-- Splash anchor — single soft-coral accent dot at the cruciform head.
        The "POK stem" focal point. Family convention: filled core + outer ring at the focal piece. -->
-  <circle cx="600" cy="295" r="6.5" fill="oklch(0.78 0.085 235 / 0.95)" stroke="oklch(0.78 0.085 235)"/>
-  <circle cx="600" cy="295" r="12" stroke="oklch(0.78 0.085 235)" stroke-opacity="0.45" fill="none"/>
+  <circle cx="600" cy="295" r="6.5" fill="oklch(0.78 0.085 20 / 0.95)" stroke="oklch(0.78 0.085 20)"/>
+  <circle cx="600" cy="295" r="12" stroke="oklch(0.78 0.085 20)" stroke-opacity="0.45" fill="none"/>
 
   <!-- Gap line 2 + explode marker -->
   <line x1="370" y1="430" x2="830" y2="430" stroke-dasharray="4 6" stroke-opacity="0.35"/>
@@ -149,6 +149,6 @@
   </g>
 
   <!-- Brass-bronze theme dot — small ornamental anchor (family convention).
-       Tucked at the upper-right margin, well clear of the focal cyan accent. -->
+       Tucked at the upper-right margin, well clear of the focal coral accent. -->
   <circle cx="1148" cy="160" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
 </svg>

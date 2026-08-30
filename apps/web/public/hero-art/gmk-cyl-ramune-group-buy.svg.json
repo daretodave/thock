@@ -13,16 +13,17 @@
   ],
   "article_slug": "gmk-cyl-ramune-group-buy",
   "splash_color": {
-    "name": "ramune-sky-blue",
-    "oklch": "oklch(0.82 0.085 228)"
+    "name": "ochre",
+    "oklch": "oklch(0.82 0.085 65)"
   },
   "secondary_splash": {
-    "name": "ramune-periwinkle",
-    "oklch": "oklch(0.68 0.10 255)"
+    "name": "terracotta",
+    "oklch": "oklch(0.68 0.10 45)"
   },
   "accent_pip": {
     "name": "ramune-pink",
     "oklch": "oklch(0.85 0.075 350)"
   },
+  "palette_fix": "2026-08-30 cloud /iterate: modifier splash originally shipped as ramune-sky-blue (oklch(0.82 0.085 228)) and alpha splash as ramune-periwinkle (oklch(0.68 0.10 255)), violating the warm-only hero-art rule locked in bearings.md. Hues swapped to ochre (228 → 65) and terracotta (255 → 45) respectively; the pink accent pip was already warm and is unchanged. No shape or layout change. See plan/AUDIT.md [seo][4.2].",
   "warnings": []
 }
