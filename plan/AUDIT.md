@@ -12691,3 +12691,14 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/gsk-sweet-nightmare-group-buy.mdx
 - action: add [gsk-sweet-nightmare-group-buy](/article/gsk-sweet-nightmare-group-buy) to divinikey-gmk-cyl-orange-alert-group-buy body, or vice versa
 - addressed: 9377ffd2 (cross-link added to divinikey-gmk-cyl-orange-alert-group-buy's sibling gsk-sweet-nightmare-group-buy article body)
+
+### [x] [content] [3.6] holee-mod-explained.mdx capitalizes the site's own name mid-sentence — "Thock's O-ring mod" instead of "thock's O-ring mod" — addressed same-tick
+- category: content
+- filed: 2026-08-30 by cloud /iterate audit (fresh disjoint sweep, angle: agents.md Rule 6 lowercase-thock grep across all content/code)
+- impact: 4 (voice-consistency violation of agents.md Rule 6 "Site name is lowercase thock. Always" — the same sentence correctly uses lowercase "thock's acoustic pieces" two clauses later, so this is an internal inconsistency within one article, not a one-off)
+- ease: 9 (single-word capitalization fix, one line, no schema/route/test impact)
+- score: 3.6 (impact × ease / 10)
+- observation: `apps/web/src/content/articles/holee-mod-explained.mdx` line 60 read "[Thock's O-ring mod](/article/o-ring-mod)" — capital T referring to the site's own prior coverage, not an external brand (unlike the many correctly-capitalized "Thock King" / "Click and Thock" external-site references elsewhere in the corpus, confirmed by a full-corpus grep for "Thock" with those two known external names filtered out).
+- evidence: `grep -rn 'Thock' --include='*.mdx' apps/web/src/content/articles | grep -v 'Click and Thock' | grep -v clickandthock` surfaced exactly one true positive against the site's own name; all other hits were external-site names (Thock King, Click and Thock), the quoted acoustic term "Thock" in acoustic-spec-rise.mdx, or the switch nickname "Linear Thock".
+- next: lowercase the one instance to match agents.md Rule 6 and the rest of the same sentence.
+- addressed: same-tick fix — `[Thock's O-ring mod]` → `[thock's O-ring mod]` in `apps/web/src/content/articles/holee-mod-explained.mdx:60`.
