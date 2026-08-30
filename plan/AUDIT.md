@@ -12548,7 +12548,7 @@ passes accumulate signals.)
 - issue: #955
 > **Resolved (2026-08-29):** shipped "GMK CYL Orange Alert opens at Divinikey, the second Alert-series set to reach group buy this year" at `/article/divinikey-gmk-cyl-orange-alert-group-buy` (news pillar, ~1050 words, publishedAt 2026-08-14 per Rule 3 group-buy startDate exception). Hero SVG + 2 InlineViz SVGs (Alert-series palette comparison, tracker score climb 10→72 sourced from `data/trends/2026-W35.json`). `relatedArticle` set on `data/group-buys/divinikey-gmk-cyl-orange-alert.json`. Language gate clean after 1-violation fix (forward-looking "tracker will" promise). 1211 e2e green. `946b88f3` + `887d4fb6`
 
-### [ ] [seo] [4.2] seven hero-art SVGs use stock blue/cyan, violating the locked warm-palette rule
+### [x] [seo] [4.2] seven hero-art SVGs use stock blue/cyan, violating the locked warm-palette rule — addressed in 28055b64, closes #928
 - category: seo
 - filed: 2026-08-25 by cloud /iterate audit (originally mirrored to GitHub as issue #928 but never written back to this file — the exact orphaned-`loop:opened`-issue gap the standing `[needs-user-call] [engineering] [3.0]` row above describes; recovered this tick while investigating open issues for signal)
 - impact: 6 (`plan/bearings.md` "Article hero art" / "Group-buy hero art" sections lock a warm-only palette rule via `/oversight` 2026-05-09/05-10; each `heroImage` also feeds the article's per-article OG image, so the violation is visible both on-page and in social-share previews; 7 files postdate the lock, none grandfathered)
@@ -12558,6 +12558,7 @@ passes accumulate signals.)
 - evidence: verified this tick with `grep -o 'oklch([^)]*)' apps/web/public/hero-art/<file>.svg` / `apps/web/public/group-buy-art/<file>.svg` on all 7 files — hues unchanged from the original issue #928 report.
 - next: swap each file's splash `oklch(...)` hue to an approved warm value (coral ~15-25, ochre ~60-75, dusty rose ~350, terracotta ~40-50), update the matching `<title>`/`heroImageAlt` copy, re-run `pnpm data:validate` + visual spot-check.
 - issue: #928
+> **Resolved (2026-08-30):** mechanical `oklch(...)` hue swap on all 7 files (240→45, 235→20, 195→350, 215→65, 255→20, 262/264/258→50/55, 228→65 + 255→45), same lightness/chroma per tone. Matching `<title>`/comment prose in each SVG, each article's `heroImageAlt` frontmatter, and the sibling `.svg.json` provenance color fields updated to match. Where the art nods to a real product's actual colorway (Ishtar Gate lapis, Masterpiece R2's RAL 240 40 40 blue, Ramune's dual-blue-plus-pink set), prose now explains the stylized warm re-read instead of misdescribing the art's own rendered colors. `pnpm verify` full gate green: typecheck, unit tests, data:validate, build, 1211/1211 e2e. `28055b64`
 
 ### [x] [cross-links] [4.5] divinikey-gmk-cyl-orange-alert-group-buy ↔ divinikey-dcs-dolch-group-buy — no prose cross-link (same pillar, ≥2 shared tags: group-buy, keycaps, divinikey)
 - category: cross-links
