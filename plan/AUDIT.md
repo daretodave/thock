@@ -12704,6 +12704,16 @@ passes accumulate signals.)
 - addressed: same-tick fix — `[Thock's O-ring mod]` → `[thock's O-ring mod]` in `apps/web/src/content/articles/holee-mod-explained.mdx:60`.
 
 ### [x] [data] [4.0] `data/trends/2026-W34.json` GMK Beachy row drops a vendor its own linked article and the W33/W35 corpus confirm — addressed in `dfc080a4`, closes #956
+
+### [ ] [seo] [1.8] `apps/web/public/favicon.svg` is a byte-identical, fully unreferenced duplicate of `apps/web/src/app/icon.svg`
+- category: seo
+- filed: 2026-08-30 by cloud /iterate audit (fresh sweep — icon/manifest asset reference-graph check, disjoint from pass 396's favicon/apple-icon/manifest presence check)
+- impact: 2 (zero user-facing effect — Next.js auto-serves `<link rel="icon">` from `app/icon.svg`'s build-time convention, so browsers never request `/favicon.svg`; the file is inert, not broken)
+- ease: 9 (one `git rm`, no other file references it — not in `manifest.ts`, not in `layout.tsx` metadata, not in any component)
+- score: 1.8 (impact × ease / 10)
+- observation: `diff apps/web/public/favicon.svg apps/web/src/app/icon.svg` is byte-identical (5 lines each). `git log --follow` shows `public/favicon.svg` was added at the phase-1 monorepo bootstrap (`3ffa51c6`), before the `app/icon.svg` App Router convention existed. `manifest.ts`'s `icons` array lists `/icon.svg` and `/apple-icon`, never `/favicon.svg`; `layout.tsx`'s `metadata` object has no `icons` field either. Grepped `apps/web/src` and `packages/*/src` for `favicon.svg` — zero hits outside the file itself.
+- evidence: `apps/web/public/favicon.svg` (5 lines) vs `apps/web/src/app/icon.svg` (5 lines), `diff` exit 0. `manifest.test.ts` only asserts the manifest object's shape, never touches the public file — pass 396's "confirmed present" note checked existence, not reachability.
+- suggested fix: `git rm apps/web/public/favicon.svg` — no code or config references it, so removal is a zero-risk repo-hygiene cleanup. Not urgent: no production impact observed.
 - category: data
 - filed: 2026-08-30 by cloud /iterate audit (fresh disjoint sweep, angle: recently-shipped data vs. sibling-article cross-reference)
 - impact: 5 (user-visible factual contradiction between the tracker note and the article it links to via `articleSlug` — `/trends/tracker/2026-W34`'s own note says the GMK Just Beachy buy opened across four vendors, but the linked article `gmk-cyl-just-beachy-group-buy-opens.mdx`'s entire thesis is a simultaneous five-vendor, five-region launch, and the prior week's own row (`2026-W33.json`) and the group-buy data record both list all five)
