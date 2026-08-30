@@ -12702,3 +12702,14 @@ passes accumulate signals.)
 - evidence: `grep -rn 'Thock' --include='*.mdx' apps/web/src/content/articles | grep -v 'Click and Thock' | grep -v clickandthock` surfaced exactly one true positive against the site's own name; all other hits were external-site names (Thock King, Click and Thock), the quoted acoustic term "Thock" in acoustic-spec-rise.mdx, or the switch nickname "Linear Thock".
 - next: lowercase the one instance to match agents.md Rule 6 and the rest of the same sentence.
 - addressed: same-tick fix — `[Thock's O-ring mod]` → `[thock's O-ring mod]` in `apps/web/src/content/articles/holee-mod-explained.mdx:60`.
+
+### [x] [data] [4.0] `data/trends/2026-W34.json` GMK Beachy row drops a vendor its own linked article and the W33/W35 corpus confirm — addressed in `dfc080a4`, closes #956
+- category: data
+- filed: 2026-08-30 by cloud /iterate audit (fresh disjoint sweep, angle: recently-shipped data vs. sibling-article cross-reference)
+- impact: 5 (user-visible factual contradiction between the tracker note and the article it links to via `articleSlug` — `/trends/tracker/2026-W34`'s own note says the GMK Just Beachy buy opened across four vendors, but the linked article `gmk-cyl-just-beachy-group-buy-opens.mdx`'s entire thesis is a simultaneous five-vendor, five-region launch, and the prior week's own row (`2026-W33.json`) and the group-buy data record both list all five)
+- ease: 8 (one-line JSON string edit to the `note` field, no schema/route/component change; W33 and W35 already correct, only W34 is the outlier)
+- score: 4.0 (impact × ease / 10)
+- observation: `data/trends/2026-W34.json`'s GMK Beachy row `note` reads "Group buy opened Aug 18 across Divinikey, Prototypist, KBDfans, and UniKeys kittings; first-week sign-ups tracking above typical CYL openers." — omits Keebz N Cables (Oceania). `data/trends/2026-W33.json`'s antecedent row: "GB opens Aug 18 across Keebz N Cables (Oceania), Divinikey (US), Prototypist (UK), KBDfans (China), Unikeys (Canada)." `data/group-buys/divinikey-gmk-cyl-just-beachy.json` description and the linked article's title/lede/body/hero-art alt text all confirm five vendors across five regions, naming Keebz N Cables for Oceania. Newsletter issues 007 and 009 also list all five.
+- evidence: `data/trends/2026-W33.json`, `data/trends/2026-W34.json`, `data/group-buys/divinikey-gmk-cyl-just-beachy.json:15`, `apps/web/src/content/articles/gmk-cyl-just-beachy-group-buy-opens.mdx` (lede + body + hero alt)
+- next: restore Keebz N Cables to the W34 row's `note` field, matching the corpus-wide five-vendor framing
+- issue: #956
