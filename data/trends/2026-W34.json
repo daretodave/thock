@@ -61,7 +61,7 @@
       "category": "keycap",
       "direction": "flat",
       "score": 25,
-      "spark": [14, 22, 29, 35, 38, 34, 26, 25],
+      "spark": [28, 19, 12, 12, 38, 34, 26, 25],
       "articleSlug": "divinikey-dcs-dolch-group-buy",
       "note": "Sibling set DCS Molch enters its final days of group buy, closing Aug 23; Dolch interest itself holds steady heading into next week."
     },
@@ -133,7 +133,7 @@
       "category": "vendor",
       "direction": "down",
       "score": 46,
-      "spark": [34, 42, 50, 56, 60, 64, 52, 46],
+      "spark": [20, 20, 20, 20, 20, 64, 52, 46],
       "articleSlug": "cannonkeys-blaine-v2-se-group-buy",
       "note": "Blaine V2: SE group buy remains closed and sold out; addon interest keeps fading as attention shifts to CannonKeys' next project update."
     },
