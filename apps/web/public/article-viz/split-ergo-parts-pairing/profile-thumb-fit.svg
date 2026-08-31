@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Three sculpted keycap profiles compared for thumb-cluster fit — MT3 Dasher's gentler taper reads as workable, Cherry/CYL Ramune's more angular row-to-row steps read as riskier, and a uniform profile with no row sculpt reads as safest — each shown as a stepped-height glyph across four rows</title>
+
+  <!-- Column headers -->
+  <text x="60" y="50" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6" letter-spacing="0.08em">PROFILE</text>
+  <text x="578" y="50" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6" letter-spacing="0.08em">ROW-TO-ROW SHAPE</text>
+  <text x="900" y="50" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none" opacity="0.95" letter-spacing="0.08em">THUMB-CLUSTER FIT</text>
+
+  <!-- Row dividers -->
+  <g stroke-opacity="0.2" stroke-dasharray="4 6">
+    <line x1="60" y1="220" x2="1140" y2="220"/>
+    <line x1="60" y1="370" x2="1140" y2="370"/>
+  </g>
+
+  <!-- ══ ROW 1: MT3 (DASHER) ══════════════════════════════════════ -->
+  <text x="60" y="110" font-family="Newsreader, serif" font-style="italic" font-size="20" fill="oklch(0.78 0.005 90)" stroke="none">MT3 (Dasher)</text>
+  <text x="60" y="133" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">Large, but with a gentler top-to-bottom taper</text>
+
+  <!-- glyph: gentle staircase, 4 rows, warm-grey -->
+  <g transform="translate(578 0)" stroke-opacity="0.85">
+    <rect x="0"   y="125" width="30" height="70" rx="3"/>
+    <rect x="38"  y="137" width="30" height="58" rx="3"/>
+    <rect x="76"  y="147" width="30" height="48" rx="3"/>
+    <rect x="114" y="155" width="30" height="40" rx="3"/>
+  </g>
+  <polyline points="593,125 631,137 669,147 707,155" transform="translate(0 0)" stroke-opacity="0.5"/>
+  <g font-family="JetBrains Mono, monospace" font-size="10" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.5" text-anchor="middle">
+    <text x="593" y="213">R1</text>
+    <text x="631" y="213">R2</text>
+    <text x="669" y="213">R3</text>
+    <text x="707" y="213">R4</text>
+  </g>
+
+  <!-- verdict -->
+  <text x="900" y="110" font-family="Newsreader, serif" font-style="italic" font-size="22" fill="oklch(0.78 0.005 90)" stroke="none">Workable</text>
+  <g font-family="IBM Plex Sans, sans-serif" font-size="11.5" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">
+    <text x="900" y="133">a mid-depth row sculpt</text>
+    <text x="900" y="148">(R3/R4) reads close enough</text>
+    <text x="900" y="163">to neutral under the thumb</text>
+  </g>
+
+  <!-- ══ ROW 2: CHERRY / CYL (RAMUNE) ═════════════════════════════ -->
+  <text x="60" y="260" font-family="Newsreader, serif" font-style="italic" font-size="20" fill="oklch(0.78 0.005 90)" stroke="none">Cherry / CYL (Ramune)</text>
+  <text x="60" y="283" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">Large and more angular between adjacent rows</text>
+
+  <!-- glyph: steep, angular staircase, splash amber -->
+  <g transform="translate(578 0)" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.9" fill="oklch(0.78 0.10 80)" fill-opacity="0.16">
+    <rect x="0"   y="270" width="30" height="75" rx="3"/>
+    <rect x="38"  y="290" width="30" height="55" rx="3"/>
+    <rect x="76"  y="310" width="30" height="35" rx="3"/>
+    <rect x="114" y="327" width="30" height="18" rx="3"/>
+  </g>
+  <polyline points="593,270 631,290 669,310 707,327" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.9"/>
+  <g font-family="JetBrains Mono, monospace" font-size="10" fill="oklch(0.78 0.10 80)" stroke="none" opacity="0.7" text-anchor="middle">
+    <text x="593" y="363">R1</text>
+    <text x="631" y="363">R2</text>
+    <text x="669" y="363">R3</text>
+    <text x="707" y="363">R4</text>
+  </g>
+
+  <!-- verdict -->
+  <text x="900" y="260" font-family="Newsreader, serif" font-style="italic" font-size="22" fill="oklch(0.78 0.10 80)" stroke="none">Riskier</text>
+  <g font-family="IBM Plex Sans, sans-serif" font-size="11.5" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">
+    <text x="900" y="283">the wrong row's angle sits</text>
+    <text x="900" y="298">noticeably wrong under a thumb</text>
+    <text x="900" y="313">pressing straight down rather</text>
+    <text x="900" y="328">than curling in</text>
+  </g>
+
+  <!-- ══ ROW 3: UNIFORM PROFILES ══════════════════════════════════ -->
+  <text x="60" y="410" font-family="Newsreader, serif" font-style="italic" font-size="20" fill="oklch(0.78 0.005 90)" stroke="none">Uniform profiles</text>
+  <text x="60" y="433" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">No row-to-row sculpt</text>
+
+  <!-- glyph: flat, no steps -->
+  <g transform="translate(578 0)" stroke-opacity="0.85">
+    <rect x="0"   y="455" width="30" height="40" rx="3"/>
+    <rect x="38"  y="455" width="30" height="40" rx="3"/>
+    <rect x="76"  y="455" width="30" height="40" rx="3"/>
+    <rect x="114" y="455" width="30" height="40" rx="3"/>
+  </g>
+  <polyline points="593,455 631,455 669,455 707,455" stroke-opacity="0.5"/>
+  <g font-family="JetBrains Mono, monospace" font-size="10" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.5" text-anchor="middle">
+    <text x="593" y="513">R1</text>
+    <text x="631" y="513">R2</text>
+    <text x="669" y="513">R3</text>
+    <text x="707" y="513">R4</text>
+  </g>
+
+  <!-- verdict -->
+  <text x="900" y="410" font-family="Newsreader, serif" font-style="italic" font-size="22" fill="oklch(0.78 0.005 90)" stroke="none">Safest</text>
+  <g font-family="IBM Plex Sans, sans-serif" font-size="11.5" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">
+    <text x="900" y="433">for the cluster, at the cost</text>
+    <text x="900" y="448">of losing the sculpt</text>
+    <text x="900" y="463">everywhere else</text>
+  </g>
+
+  <!-- Brass-bronze theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

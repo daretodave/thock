@@ -1,0 +1,26 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-31T03:21:23.000Z",
+  "commit": "6f48d3946e3d5af88fd55e91f5609c2350afa5c8",
+  "kind": "inline-viz",
+  "article_slug": "split-ergo-parts-pairing",
+  "article_pillar": "ideas",
+  "section_anchor": "sculpted-keycap-profiles-assume-a-row-that-the-thumb-cluster-doesnt-have",
+  "brief_summary": "Three-row comparison of sculpted keycap profiles against thumb-cluster fit. Each row pairs the profile name with a stepped-height glyph (R1 through R4) showing relative sculpt aggressiveness, a row-to-row height delta description, and a verdict. MT3 Dasher renders as a gentle taper (Workable, warm-grey), Cherry/CYL Ramune as a steep, angular staircase (Riskier, amber splash — the row the article flags as highest-risk), and uniform profiles as a flat line (Safest, warm-grey).",
+  "target": "apps/web/public/article-viz/split-ergo-parts-pairing/profile-thumb-fit.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "f79eb6c04b4a9d2e0e3e083f8aeb6bc57586d849",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "apps/web/src/content/articles/split-ergo-parts-pairing.mdx § 'Sculpted keycap profiles assume a row that the thumb cluster doesn't have' — table row: 'MT3 (Dasher) | Large, but with a gentler top-to-bottom taper | Workable — a mid-depth row sculpt (R3/R4) reads close enough to neutral under the thumb'",
+    "apps/web/src/content/articles/split-ergo-parts-pairing.mdx § 'Sculpted keycap profiles assume a row that the thumb cluster doesn't have' — table row: 'Cherry / CYL (Ramune) | Large and more angular between adjacent rows | Riskier — the wrong row's angle sits noticeably wrong under a thumb pressing straight down rather than curling in'",
+    "apps/web/src/content/articles/split-ergo-parts-pairing.mdx § 'Sculpted keycap profiles assume a row that the thumb cluster doesn't have' — table row: 'Uniform profiles (no row-to-row sculpt) | None | Safest for the cluster, at the cost of losing the sculpt everywhere else'"
+  ],
+  "outputs": ["apps/web/public/article-viz/split-ergo-parts-pairing/profile-thumb-fit.svg"],
+  "warnings": [
+    "The stepped-height glyph bar heights are a schematic illustration of relative sculpt aggressiveness (gentle taper vs. angular vs. flat), not measured row-height figures — no such figures appear in the article body."
+  ]
+}

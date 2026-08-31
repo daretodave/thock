@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>A number line of switch retail pack sizes — 10, 45, 90, 110 — with the 20 to 30 switch per-half need of a 40-to-60-key split board shaded twice, once for each half, showing that rounding up to cover a half happens twice instead of once per board</title>
+
+  <text x="60" y="50" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6" letter-spacing="0.08em">RETAIL PACK SIZES (SWITCHES PER PACK)</text>
+  <text x="60" y="85" font-family="Newsreader, serif" font-style="italic" font-size="19" fill="oklch(0.78 0.005 90)" stroke="none">A split board in the 40-to-60-key range needs 20 to 30 switches per half</text>
+
+  <!-- number line -->
+  <line x1="100" y1="150" x2="1060" y2="150" stroke-opacity="0.5"/>
+  <text x="580" y="178" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55" text-anchor="middle">pack size (switches per order)</text>
+
+  <!-- pack size ticks: 10, 45, 90, 110 (scale: 8px per switch, origin x=100) -->
+  <g stroke-opacity="0.7">
+    <line x1="180" y1="143" x2="180" y2="157"/>
+    <line x1="460" y1="143" x2="460" y2="157"/>
+    <line x1="820" y1="143" x2="820" y2="157"/>
+    <line x1="980" y1="143" x2="980" y2="157"/>
+  </g>
+  <g font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">
+    <text x="180" y="130">10</text>
+    <text x="460" y="130">45</text>
+    <text x="820" y="130">90</text>
+    <text x="980" y="130">110</text>
+  </g>
+
+  <!-- 20 and 30 marks, amber, per-half range boundary on the line itself -->
+  <g stroke="oklch(0.78 0.10 80)" stroke-opacity="0.8">
+    <line x1="260" y1="145" x2="260" y2="155"/>
+    <line x1="340" y1="145" x2="340" y2="155"/>
+  </g>
+  <g font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.9">
+    <text x="260" y="130">20</text>
+    <text x="340" y="130">30</text>
+  </g>
+
+  <!-- dashed guides from the 20/30 marks down to the per-half bands -->
+  <g stroke="oklch(0.78 0.10 80)" stroke-opacity="0.35" stroke-dasharray="3 5">
+    <line x1="260" y1="157" x2="260" y2="215"/>
+    <line x1="340" y1="157" x2="340" y2="215"/>
+  </g>
+
+  <!-- dashed diagonals: each half rounds up independently to the 45-pack -->
+  <g stroke="oklch(0.78 0.10 80)" stroke-opacity="0.4" stroke-dasharray="3 5">
+    <line x1="300" y1="215" x2="460" y2="157"/>
+    <line x1="300" y1="273" x2="460" y2="157"/>
+  </g>
+
+  <!-- Half A band -->
+  <rect x="260" y="215" width="80" height="38" rx="6" fill="oklch(0.78 0.10 80)" fill-opacity="0.16" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.8"/>
+  <text x="356" y="239" font-family="IBM Plex Sans, sans-serif" font-size="13" font-weight="600" fill="oklch(0.78 0.10 80)" stroke="none">HALF A</text>
+
+  <!-- Half B band -->
+  <rect x="260" y="273" width="80" height="38" rx="6" fill="oklch(0.78 0.10 80)" fill-opacity="0.16" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.8"/>
+  <text x="356" y="297" font-family="IBM Plex Sans, sans-serif" font-size="13" font-weight="600" fill="oklch(0.78 0.10 80)" stroke="none">HALF B</text>
+
+  <!-- bracket spanning both halves -->
+  <g stroke="oklch(0.78 0.10 80)">
+    <path d="M 1000 215 L 1020 215 L 1020 311 L 1000 311"/>
+  </g>
+  <circle cx="1020" cy="263" r="4" fill="oklch(0.78 0.10 80)" stroke="none"/>
+  <text x="1034" y="248" font-family="Newsreader, serif" font-style="italic" font-size="16" fill="oklch(0.78 0.10 80)" stroke="none">rounded up</text>
+  <text x="1034" y="268" font-family="Newsreader, serif" font-style="italic" font-size="16" fill="oklch(0.78 0.10 80)" stroke="none">twice, per half</text>
+  <text x="1034" y="286" font-family="IBM Plex Sans, sans-serif" font-size="11.5" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">not once per board</text>
+
+  <!-- Brass-bronze theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

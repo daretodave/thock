@@ -1,0 +1,25 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-31T03:21:23.000Z",
+  "commit": "6f48d3946e3d5af88fd55e91f5609c2350afa5c8",
+  "kind": "inline-viz",
+  "article_slug": "split-ergo-parts-pairing",
+  "article_pillar": "ideas",
+  "section_anchor": "the-procurement-math-is-genuinely-different",
+  "brief_summary": "A number line of switch retail pack sizes (10, 45, 90, 110) with the 20-to-30-switch per-half need of a 40-to-60-key split board marked twice — once per half, as two stacked amber bands — with dashed diagonals showing each half independently rounds up to the same 45-pack, and a bracket calling out that the rounding happens twice, per half, rather than once, per board.",
+  "target": "apps/web/public/article-viz/split-ergo-parts-pairing/procurement-math.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "f79eb6c04b4a9d2e0e3e083f8aeb6bc57586d849",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "apps/web/src/content/articles/split-ergo-parts-pairing.mdx § 'The procurement math is genuinely different' — 'most retail packs are sized for whole-board convenience — 10, 45, 90, 110 — not for two half-populated PCBs'",
+    "apps/web/src/content/articles/split-ergo-parts-pairing.mdx § 'The procurement math is genuinely different' — 'A split board in the roughly 40-to-60-key total range needs 20 to 30 switches per half; ordering one pack covers the board, but keeping leftovers matched for a future repair means rounding up per half rather than per board, and that rounding error is now paid twice'"
+  ],
+  "outputs": ["apps/web/public/article-viz/split-ergo-parts-pairing/procurement-math.svg"],
+  "warnings": [
+    "The number-line scale (8px per switch, origin at 0) and the diagonal lines pointing both halves to the 45-pack tick are a schematic illustration of the rounding argument, not a quoted figure — the article does not specify which pack size a builder would round up to."
+  ]
+}
