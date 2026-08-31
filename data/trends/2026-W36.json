@@ -1,0 +1,169 @@
+{
+  "isoWeek": "2026-W36",
+  "publishedAt": "2026-08-31T00:00:00.000Z",
+  "rows": [
+    {
+      "name": "Hall Effect/Rapid Trigger",
+      "category": "switch",
+      "direction": "up",
+      "score": 98,
+      "spark": [91, 94, 95, 97, 97, 97, 96, 98],
+      "articleSlug": "hall-effect-mainstream",
+      "note": "Keychron's V6 Ultra Hybrid Kickstarter (mechanical + magnetic switches on one board) launched Aug 18 and hit 569% of its $30k goal within 48 hours, reinforcing HE's mainstream pull."
+    },
+    {
+      "name": "Cherry MX2A",
+      "category": "switch",
+      "direction": "down",
+      "score": -54,
+      "spark": [-50, -46, -45, -45, -46, -49, -50, -54],
+      "articleSlug": "cherry-mx2a-revision",
+      "note": "MX2A remains the default across Cherry's retail lineup, but the China-made Lumina Browns keep drawing stem-wobble and consistency complaints with no official response yet."
+    },
+    {
+      "name": "Gateron Magnetic Jade Emerald",
+      "category": "switch",
+      "direction": "up",
+      "score": 58,
+      "spark": [18, 26, 34, 40, 46, 50, 55, 58],
+      "articleSlug": "gateron-magnetic-jade-deep-dive",
+      "note": "The first tactile magnetic switch keeps its strong reception into a second week, with reviewers citing a crisp bump and software-adjustable actuation point."
+    },
+    {
+      "name": "Durock T1",
+      "category": "switch",
+      "direction": "flat",
+      "score": 45,
+      "spark": [22, 26, 30, 34, 38, 41, 44, 45],
+      "articleSlug": "durock-t1-deep-dive",
+      "note": "No fresh catalyst this week — T1 remains the default stepped-tactile pick, still cited alongside Holy Pandas in mid-2026 buyer's guides."
+    },
+    {
+      "name": "Gateron Oil King",
+      "category": "switch",
+      "direction": "up",
+      "score": 44,
+      "spark": [39, 40, 40, 40, 40, 40, 40, 44],
+      "articleSlug": "gateron-oil-king-deep-dive",
+      "note": "Oil King grew from a single linear switch into a full series — Linear Silent, Tactile Silent, and Heavy Tactile variants — with some retailers still on backorder."
+    },
+    {
+      "name": "GMK CYL Orange Alert",
+      "category": "keycap",
+      "direction": "up",
+      "score": 75,
+      "spark": [20, 32, 44, 55, 62, 68, 72, 75],
+      "articleSlug": "divinikey-gmk-cyl-orange-alert-group-buy",
+      "note": "Group buy remains mid-run through Sep 14 across Divinikey, KBDfans, UniKeys and Keebz N Cables, with estimated shipping now pegged to February 2027."
+    },
+    {
+      "name": "GMK CYL TA Neo",
+      "category": "keycap",
+      "direction": "down",
+      "score": 17,
+      "spark": [57, 62, 50, 40, 32, 25, 20, 17],
+      "articleSlug": "gmk-cyl-ta-neo-production-tracking",
+      "note": "Fully in post-buy production tracking with estimated ship pushed to Nov-Dec; chatter keeps cooling as attention shifts to newer GMK CYL buys."
+    },
+    {
+      "name": "DCS Dolch / Molch",
+      "category": "keycap",
+      "direction": "down",
+      "score": 34,
+      "spark": [29, 35, 38, 34, 26, 25, 38, 34],
+      "articleSlug": "divinikey-dcs-dolch-group-buy",
+      "note": "With sibling set Molch's buy also closed, the Dolch family has moved into a quieter post-buy holding pattern and lost last week's fresh-close bump."
+    },
+    {
+      "name": "GMK CYL OG Extensions",
+      "category": "keycap",
+      "direction": "flat",
+      "score": 44,
+      "spark": [55, 58, 62, 70, 80, 63, 45, 44],
+      "articleSlug": "gmk-cyl-og-extensions-interest-check",
+      "note": "Availability is split rather than cleanly restocked — NovelKeys shows sold out with a restock signup, while Prototypist and zFrontier list it in stock."
+    },
+    {
+      "name": "Split/Ergo layout",
+      "category": "layout",
+      "direction": "up",
+      "score": 93,
+      "spark": [77, 80, 82, 85, 87, 89, 90, 93],
+      "articleSlug": "split-ergo-cohort",
+      "note": "Keychron's fully wireless Q11 Ultra is drawing strong reviews this week, with a 300-hour battery claim and 8K polling praised as a step forward for split boards."
+    },
+    {
+      "name": "Alice layout",
+      "category": "layout",
+      "direction": "up",
+      "score": -50,
+      "spark": [-44, -48, -52, -58, -62, -64, -66, -50],
+      "articleSlug": "alice-layout-decline",
+      "note": "Keychron shipped two new Alice boards this week, the B40 75% and B39 1800 with numpad, both scissor-switch and ZMK — a concrete bounce after weeks of ground lost to full split."
+    },
+    {
+      "name": "75% Layout",
+      "category": "layout",
+      "direction": "flat",
+      "score": 63,
+      "spark": [46, 47, 50, 55, 58, 60, 62, 63],
+      "articleSlug": "75-percent-default",
+      "note": "Still the dominant form factor for hybrid WFH/gaming setups, cited near 42% share of custom-keyboard community preference; no new catalyst this week."
+    },
+    {
+      "name": "Mode Designs",
+      "category": "vendor",
+      "direction": "up",
+      "score": 84,
+      "spark": [53, 58, 62, 70, 76, 78, 80, 84],
+      "articleSlug": "mode-sonnet-r2-group-buy-coverage",
+      "note": "Encore's refresh brings a new crown mounting system co-designed with Matthew Encina, Monterey and Cacao colorways are fulfilling, and Prologue keeps moving."
+    },
+    {
+      "name": "CannonKeys",
+      "category": "vendor",
+      "direction": "flat",
+      "score": 39,
+      "spark": [50, 56, 60, 64, 52, 46, 40, 39],
+      "articleSlug": "cannonkeys-blaine-v2-se-group-buy",
+      "note": "Picture stays mixed rather than simply declining — Blaine V2: SE is closed and sold out, but GMK Finer Things R2 and MW Norse buys wrapped alongside new preorders opening."
+    },
+    {
+      "name": "Prototypist",
+      "category": "vendor",
+      "direction": "flat",
+      "score": 41,
+      "spark": [15, 20, 24, 28, 31, 35, 40, 41],
+      "articleSlug": "prototypist-vendor-spotlight",
+      "note": "SF60 HE group buy continues tracking toward a Q1 2027 ship; no new milestone this week, still the vendor's flagship item in the pipeline."
+    },
+    {
+      "name": "Keychron",
+      "category": "brand",
+      "direction": "up",
+      "score": 100,
+      "spark": [86, 90, 94, 96, 97, 97, 98, 100],
+      "articleSlug": "keychron-quiet-takeover",
+      "note": "V6 Ultra Hybrid's Kickstarter hit 569% of goal in 48 hours, the B39/B40 Alice boards shipped, and Q11 Ultra reviews are glowing — the broadest single-week brand presence on the tracker."
+    },
+    {
+      "name": "Cherry (MX + XTRFY)",
+      "category": "brand",
+      "direction": "down",
+      "score": -20,
+      "spark": [-24, -18, -10, -6, -2, -8, -15, -20],
+      "articleSlug": "cherry-xtrfy-tmr-pivot",
+      "note": "Lumina Brown quality complaints persist without an official response, further eroding goodwill built by MX2A's smoother, more consistent switches."
+    },
+    {
+      "name": "Topre / HHKB",
+      "category": "brand",
+      "direction": "flat",
+      "score": 54,
+      "spark": [22, 28, 34, 40, 46, 50, 55, 54],
+      "articleSlug": "topre-electrocapacitive-deep-dive",
+      "note": "Realforce R4's dual-mode USB-C/Bluetooth model is an established SKU from its Japan launch, not an upcoming one as previously framed; no fresh R4 news this week."
+    }
+  ],
+  "updatedAt": "2026-08-31T05:00:00.000Z"
+}
