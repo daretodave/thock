@@ -6951,6 +6951,65 @@
   ],
   "articles": [
     {
+      "slug": "split-ergo-parts-pairing",
+      "frontmatter": {
+        "slug": "split-ergo-parts-pairing",
+        "title": "Parts pairing for a split build: two independent halves, two independent decisions",
+        "lede": "A split board is two keyboards that happen to share a keymap. Most builders still buy parts for it like it's one — matching switches, ordering a single sculpted keycap set, and never touching the left half's tuning differently from the right's.",
+        "description": null,
+        "author": "thock",
+        "pillar": "ideas",
+        "tags": [
+          "split",
+          "ergo",
+          "layout",
+          "hot-swap"
+        ],
+        "publishedAt": "2026-08-26T14:00:00.000Z",
+        "updatedAt": "2026-08-26T14:00:00.000Z",
+        "heroImage": "/hero-art/split-ergo-parts-pairing.svg",
+        "heroImageAlt": "Top-down silhouette of two column-staggered, tented split keyboard halves connected by a dashed centerline. The left half's keys are plain outlined circles; the right half's keys and thumb cluster are filled ochre squares, with a dashed arc linking one key on each half labeled 'half a' and 'half b, asymmetric pairing' — emphasizing that the two halves are independently configurable.",
+        "featured": false,
+        "popularityScore": 0,
+        "guideSection": null,
+        "mentionedParts": [
+          {
+            "id": "oil-king",
+            "kind": "switch",
+            "slug": "gateron-oil-king"
+          },
+          {
+            "id": "t1",
+            "kind": "switch",
+            "slug": "durock-t1"
+          },
+          {
+            "id": "boba-u4t",
+            "kind": "switch",
+            "slug": "gazzew-boba-u4t"
+          },
+          {
+            "id": "mx2a-red",
+            "kind": "switch",
+            "slug": "cherry-mx2a-red"
+          },
+          {
+            "id": "dasher",
+            "kind": "keycap-set",
+            "slug": "mt3-dasher"
+          },
+          {
+            "id": "ramune",
+            "kind": "keycap-set",
+            "slug": "gmk-cyl-ramune"
+          }
+        ]
+      },
+      "body": "\nEvery part-pairing decision on a standard board gets made once, for the whole keyboard. On a split board, the same decision gets made twice — once per half — and nothing in the hardware forces the two answers to match. [Thock's mechanics deep dive](/article/split-ergo-mechanics-deep-dive) covers what column stagger and tenting do to the wrist; [the buyer's guide](/article/split-ergo-buyers-guide) covers which board to buy. This is about what happens after the board arrives: the switch, keycap, and tuning choices that only exist because the PCB is cut in half.\n\n## Do the two halves need to match\n\nNothing electrical requires it. Each half runs its own matrix (or, on some designs, its own microcontroller), talking to the other over a cable or radio link — there's no shared circuit that cares whether the switch under the left pinky and the switch under the right pinky have the same spring inside them. The habit of matching anyway comes from single-PCB boards, where every switch shares one plate and one acoustic chamber and a mismatch would be audible as inconsistency. A split board doesn't have one acoustic chamber. It has two, several inches apart, usually already sounding slightly different from cable routing and case rigidity alone.\n\nThat opens two genuinely useful asymmetries, not just a novelty.\n\n**Different switches on the thumb cluster than on the alphas.** The thumb cluster carries a different job than the finger columns — fewer total actuations, but each one is often a commit action: space, enter, backspace, a layer-shift held for the duration of a chord. A sharp, well-defined tactile bump earns its keep there in a way it doesn't always on a fast alpha run. <PartReference id=\"t1\">Durock T1</PartReference>, a heavy tactile with a pronounced bump near the top of the stroke, gives a thumb key a distinct \"yes, that registered\" feel that a linear alpha block doesn't need to share. Running <PartReference id=\"oil-king\">Gateron Oil King</PartReference> — a factory-lubed 55g linear, deep and smooth out of the box — under the fingers and T1 under the thumbs isn't mixing for its own sake; it's assigning the switch suited to high-repetition travel to the columns that do high-repetition travel, and the switch suited to deliberate confirmation to the cluster that does deliberate confirmation. <PartReference id=\"boba-u4t\">Gazzew Boba U4T</PartReference> is the other common thumb-cluster pick, with a rounder, fuller bump than T1's sharp one and no dampening pads muting the bottom-out — a different flavor of \"confirmed,\" worth bench-testing against T1 before ordering either in bulk.\n\n**Different actuation force per hand**, for builders who feel a real difference in fatigue between their dominant and non-dominant side. <PartReference id=\"mx2a-red\">Cherry MX2A Red</PartReference> actuates at 45g against the Oil King's 55g — ten grams stacked across a full workday, a difference some typists notice and most don't. A split board is the only form factor where testing this costs nothing extra: swap one half's switches, leave the other as the control, type on both for a week before committing either way.\n\n<Callout type=\"warn\" title=\"Don't asymmetry the parts that matter for chords\">\n  Home-row mods and thumb-held layer shifts depend on consistent actuation timing between the key being held and the key being tapped against it. If a build leans on chorded input, keep the switches inside any single chord's key set matched, even while varying switches across clusters that never chord together. Asymmetry between hands is fine; asymmetry inside one hand's chord vocabulary invites misfires.\n</Callout>\n\n## Sculpted keycap profiles assume a row that the thumb cluster doesn't have\n\nSculpted profiles — <PartReference id=\"dasher\">MT3 Dasher</PartReference>'s deep doubleshot ABS scoop, <PartReference id=\"ramune\">GMK CYL Ramune</PartReference>'s Cherry-profile cylindrical sculpt — are built on a row-identity assumption: the physical key sitting at the top of a column is always an R1 cap, the row below is always R2, and so on down to the spacebar. On a row-staggered board that assumption holds everywhere. On a column-staggered split it holds for the finger columns, which still stack in the expected row order top to bottom, but it breaks completely at the thumb cluster. Thumb keys don't occupy any traditional row — they sit off to the side, at whatever height the case designer angled them, doing the job a bottom row and a modifier row used to split between them.\n\n[Thock's piece on mixing profiles](/article/mixing-keycap-profiles) lays out where a profile mismatch reads as intentional versus sloppy on a standard board — an accent key, the modifier row, the spacebar. A split thumb cluster is effectively a fourth zone, and it's an unavoidable one: whichever row-sculpt a builder assigns to the thumb keys, it's a guess dressed up as a choice, because there's no \"correct\" row for a key that never had one.\n\nCherry-profile sets sculpt more aggressively per row than MT3 does, which raises the stakes on getting that guess right:\n\n| Profile | Row-to-row height delta | Thumb-cluster fit |\n|---|---|---|\n| MT3 (<Mono>Dasher</Mono>) | Large, but with a gentler top-to-bottom taper | Workable — a mid-depth row sculpt (R3/R4) reads close enough to neutral under the thumb |\n| Cherry / CYL (<Mono>Ramune</Mono>) | Large and more angular between adjacent rows | Riskier — the wrong row's angle sits noticeably wrong under a thumb pressing straight down rather than curling in |\n| Uniform profiles (no row-to-row sculpt) | None | Safest for the cluster, at the cost of losing the sculpt everywhere else |\n\nThe workable middle ground most split builders land on without necessarily naming it: pull the thumb caps from whichever row of the sculpted set sits closest to flat — usually R3 or R4 in a five-row set — rather than from the tallest or most angled row, and treat it the same way [thock's mixing-profiles piece](/article/mixing-keycap-profiles) treats any other placed accent: pick the row that already reads as close to neutral, and don't put the steepest sculpt anywhere near a key that gets pressed from an unusual angle.\n\n<Callout type=\"note\" title=\"The spacebar problem disappears, a smaller one replaces it\">\n  Split boards mostly don't have a 6.25u spacebar — space is usually a 1u or 1.25u key on the thumb cluster, sometimes split into two half-width keys, one per hand. That removes the stabilizer-clearance question a tall sculpted spacebar raises on a standard board — see [switch films and stabilizer work](/article/stabilizer-servicing-guide) for why that clearance matters there — but it also means most of the oddball spacebar options a keycap set ships with go straight into the spares box unused.\n</Callout>\n\n## The procurement math is genuinely different\n\nA row-staggered board's keycap set and switch order are sized around one number: total key count. A split board's is sized around two numbers that don't split evenly, and around a keycap set's row inventory that was never designed with a two-piece board in mind.\n\nOn the switch side, most retail packs are sized for whole-board convenience — 10, 45, 90, 110 — not for two half-populated PCBs. A split board in the roughly 40-to-60-key total range needs 20 to 30 switches per half; ordering one pack covers the board, but keeping leftovers matched for a future repair means rounding up per half rather than per board, and that rounding error is now paid twice.\n\nOn the keycap side, the math runs the other way. A full sculpted set built for a standard TKL or 60% ships enough wide modifiers and spacebar options for a board no split layout needs in full. A split build uses a fraction of the set's oddball widths — no 2.75u right shift, no 6.25u spacebar, often nothing numpad-adjacent — leaving alphas and homerow caps fully consumed while entire rows of modifier widths never touch the board. Builders who keep a second, non-split board running are the only ones who get real use out of that leftover pile.\n\n## Tuning the two halves on purpose, not by accident\n\nOnce the switches are in, [lubing](/article/lubing-switches-guide) and [switch films](/article/switch-films-worth-it) are both per-switch operations already — nothing about doing them unevenly across two halves is harder than doing them evenly, it's just a decision nobody makes by default. A builder who bottoms out harder with one hand, or who finds one wrist tires faster over a long session, can run a lighter film-and-lube pass on that half specifically — less lube for a crisper, lower-friction feel where speed matters, a slightly heavier film-and-lube combination on the other half where a firmer, more deliberate stroke reduces mis-taps. This is the same toolkit as any single-board tuning pass; the only thing split hardware adds is a legitimate reason to run two different settings instead of forcing one compromise value across both hands.\n\n<Callout type=\"note\" title=\"Test before committing to asymmetry\">\n  Everything above is a real option, not a mandate. Most typists do fine with identical switches, identical films, and identical lube across both halves — plenty of split builders report zero benefit from asymmetric tuning and prefer the simplicity of one recipe. The case for asymmetry is for the builder who already notices a per-hand difference in feel or fatigue, not a default to chase because the hardware technically allows it.\n</Callout>\n\n## Verdict\n\nBuy the switches and keycaps for a split build as two separate small orders, not one order cut in half. Match switches across both halves by default — it's the right call for most typists and every chorded key — but treat the thumb cluster as its own zone, both for switch choice and for which row of a sculpted keycap set lands on it, because it is structurally unlike anything on a row-staggered board. Expect real leftover keycap volume from any sculpted set bought for a split board, and expect switch-pack rounding to be paid per half instead of per board. None of this is a reason to avoid a sculpted set or a fixed asymmetric switch choice — [why split/ergo is rising](/article/split-ergo-cohort) notes the category now has real supply at every price point, including hot-swap boards that make testing an asymmetric switch pairing a five-minute experiment instead of a soldering commitment. The parts list just needs to be built for two boards that happen to ship as one, not for one board that happens to arrive in two boxes.\n",
+      "readTime": 9,
+      "filePath": "apps/web/src/content/articles/split-ergo-parts-pairing.mdx"
+    },
+    {
       "slug": "keyboard-layout-sizes-buying-guide",
       "frontmatter": {
         "slug": "keyboard-layout-sizes-buying-guide",
@@ -11286,5 +11345,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-08-31T00:44:01.489Z"
+  "generatedAt": "2026-08-31T01:36:03.270Z"
 }

@@ -1,0 +1,32 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-31T00:00:00.000Z",
+  "commit": "75d859d06ad689a540a3cfac1de50e90d2236abb",
+  "kind": "hero-art",
+  "article_slug": "split-ergo-parts-pairing",
+  "article_pillar": "Ideas & Builds",
+  "source": null,
+  "template": null,
+  "size": [1200, 750],
+  "title": null,
+  "subtitle": null,
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": ["JetBrains Mono"],
+  "subject": "Top-down silhouettes of two split keyboard halves, each column-staggered (five columns by four rows) with an angled three-key thumb cluster, tented slightly apart from each other (rotated -8 and +8 degrees) with a dashed centerline marking the physical split. The left half is rendered in plain neutral warm-grey. The right half's main-field keys and thumb cluster are rendered as small ochre-filled squares instead of the left half's plain circles, standing in for a different switch/keycap pairing chosen for that hand. A dashed arc with a hollow terminator on the left and a filled ochre terminator on the right ties one key from each half together, labeled 'half a' / 'half b' with an 'asymmetric pairing' caption at the arc's apex, making the article's central idea (the two halves don't have to be paired the same) explicit without drawing literal switch cross-sections.",
+  "composition": "build / mod motif per bearings.md Article hero art directive: keyboard outline + callout style, reinterpreted for a two-part-independent-halves subject.",
+  "splash_color": {
+    "name": "ochre",
+    "oklch": "oklch(0.72 0.13 80)"
+  },
+  "accent_color": {
+    "name": "warm-bronze (theme accent)",
+    "oklch": "oklch(0.80 0.135 75)"
+  },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "callout_color": "oklch(0.58 0.006 90)",
+  "outputs": [
+    "apps/web/public/hero-art/split-ergo-parts-pairing.svg"
+  ],
+  "warnings": []
+}

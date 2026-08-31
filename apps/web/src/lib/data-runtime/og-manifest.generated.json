@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "slug": "split-ergo-parts-pairing",
+      "readTime": 9,
+      "frontmatter": {
+        "title": "Parts pairing for a split build: two independent halves, two independent decisions",
+        "lede": "A split board is two keyboards that happen to share a keymap. Most builders still buy parts for it like it's one — matching switches, ordering a single sculpted keycap set, and never touching the left half's tuning differently from the right's.",
+        "pillar": "ideas",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "keyboard-layout-sizes-buying-guide",
       "readTime": 8,
       "frontmatter": {
@@ -7259,5 +7269,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-08-31T00:44:01.489Z"
+  "generatedAt": "2026-08-31T01:36:03.270Z"
 }

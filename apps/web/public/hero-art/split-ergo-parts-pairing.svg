@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Two split keyboard halves tented apart, each column-staggered with a thumb cluster; the left half rendered plain and the right half filled with an ochre accent on its keys and thumb cluster, with a dashed arc connecting one key on each half to show the two halves can be paired with different parts.">
+  <title>thock hero — split keyboard halves paired asymmetrically</title>
+
+  <!-- ================================================================
+       Canvas:  1200 × 750
+       Subject: top-down silhouettes of two split keyboard halves,
+                tented slightly apart, column-staggered main fields +
+                angled thumb clusters. Left half rendered plain
+                (neutral warm-grey); right half's keys and thumb
+                cluster carry the ochre splash — the asymmetry stands
+                in for "these two halves don't have to be paired the
+                same." A dashed arc ties one key on each half together
+                to make the pairing idea explicit without literal
+                switch cross-sections.
+       Palette:
+         Stroke   oklch(0.78 0.005 90)  warm-grey, 2px
+         Callout  oklch(0.58 0.006 90)  muted warm-grey (leader + labels)
+         Splash   oklch(0.72 0.13 80)   ochre (right half only)
+         Bronze   oklch(0.80 0.135 75)  theme accent (top-right ornament)
+       Background: transparent (light-mode safe per house style).
+  ================================================================ -->
+
+  <!-- Faint canvas-wide wash, ochre, sets the stage -->
+  <path
+    d="M 70 90 L 1130 90 L 1130 660 L 70 660 Z"
+    fill="oklch(0.72 0.13 80 / 0.05)" stroke="none"/>
+
+  <!-- Center divider — the physical split between independent halves -->
+  <line x1="600" y1="250" x2="600" y2="630" stroke-opacity="0.25" stroke-dasharray="3 6"/>
+
+  <!-- ============ LEFT HALF (plain / neutral) ============
+       Tented outward by rotating the whole half -8deg about its
+       visual center, so the two halves read as splayed apart. -->
+  <g transform="rotate(-8 315 465)">
+
+    <!-- Left half outer case -->
+    <path
+      d="
+        M 104 300
+        L 526 300
+        L 540 332
+        L 540 528
+        L 460 560
+        L 104 560
+        Q 90 560 90 546
+        L 90 314
+        Q 90 300 104 300
+        Z"/>
+
+    <!-- Left half inset bezel hint -->
+    <path
+      d="
+        M 110 316
+        L 522 316
+        L 524 334
+        L 524 522
+        L 456 544
+        L 110 544
+        Q 106 544 106 540
+        L 106 320
+        Q 106 316 110 316
+        Z"
+      stroke-opacity="0.35"/>
+
+    <!-- Left half: 5 columns x 4 rows, column-staggered, plain neutral switches -->
+    <g stroke-opacity="0.7">
+      <circle cx="146" cy="346" r="3"/>
+      <circle cx="146" cy="396" r="3"/>
+      <circle cx="146" cy="446" r="3"/>
+      <circle cx="146" cy="496" r="3"/>
+      <circle cx="226" cy="338" r="3"/>
+      <circle cx="226" cy="388" r="3"/>
+      <circle cx="226" cy="438" r="3"/>
+      <circle cx="226" cy="488" r="3"/>
+      <circle cx="306" cy="332" r="3"/>
+      <circle cx="306" cy="382" r="3"/>
+      <circle cx="306" cy="432" r="3"/>
+      <circle cx="306" cy="482" r="3"/>
+      <circle cx="386" cy="338" r="3"/>
+      <circle cx="386" cy="388" r="3"/>
+      <circle cx="386" cy="438" r="3"/>
+      <circle cx="386" cy="488" r="3"/>
+      <circle cx="466" cy="346" r="3"/>
+      <circle cx="466" cy="396" r="3"/>
+      <circle cx="466" cy="446" r="3"/>
+      <circle cx="466" cy="496" r="3"/>
+    </g>
+
+    <!-- Left thumb cluster — plain outline, no splash -->
+    <g stroke-opacity="0.85">
+      <rect x="380" y="582" width="32" height="24" rx="3" ry="3" transform="rotate(-12 396 594)"/>
+      <rect x="420" y="592" width="32" height="24" rx="3" ry="3" transform="rotate(-12 436 604)"/>
+      <rect x="460" y="602" width="32" height="24" rx="3" ry="3" transform="rotate(-12 476 614)"/>
+    </g>
+
+    <!-- Faint column guide lines -->
+    <g stroke-opacity="0.18">
+      <line x1="186" y1="320" x2="186" y2="540"/>
+      <line x1="266" y1="320" x2="266" y2="540"/>
+      <line x1="346" y1="320" x2="346" y2="540"/>
+      <line x1="426" y1="320" x2="426" y2="540"/>
+    </g>
+  </g>
+
+  <!-- ============ RIGHT HALF (ochre-splashed) ============
+       Mirror of the left, tented outward by +8deg. Keys rendered as
+       small filled squares (not circles) and the thumb cluster is
+       filled — a different keycap/switch pairing chosen for this
+       hand, without drawing a literal switch cross-section. -->
+  <g transform="rotate(8 885 465)">
+
+    <!-- Right half outer case -->
+    <path
+      d="
+        M 1096 300
+        L 674 300
+        L 660 332
+        L 660 528
+        L 740 560
+        L 1096 560
+        Q 1110 560 1110 546
+        L 1110 314
+        Q 1110 300 1096 300
+        Z"/>
+
+    <!-- Right half inset bezel hint -->
+    <path
+      d="
+        M 1090 316
+        L 678 316
+        L 676 334
+        L 676 522
+        L 744 544
+        L 1090 544
+        Q 1094 544 1094 540
+        L 1094 320
+        Q 1094 316 1090 316
+        Z"
+      stroke-opacity="0.35"/>
+
+    <!-- Right half: 5 columns x 4 rows, column-staggered, ochre-filled switches
+         (small rounded squares instead of the left half's circles — a
+         different part, not a mirror of the left). -->
+    <g fill="oklch(0.72 0.13 80)" stroke="oklch(0.72 0.13 80)" stroke-opacity="0.85">
+      <rect x="731" y="343" width="6" height="6" rx="1.5"/>
+      <rect x="731" y="393" width="6" height="6" rx="1.5"/>
+      <rect x="731" y="443" width="6" height="6" rx="1.5"/>
+      <rect x="731" y="493" width="6" height="6" rx="1.5"/>
+      <rect x="811" y="335" width="6" height="6" rx="1.5"/>
+      <rect x="811" y="385" width="6" height="6" rx="1.5"/>
+      <rect x="811" y="435" width="6" height="6" rx="1.5"/>
+      <rect x="811" y="485" width="6" height="6" rx="1.5"/>
+      <rect x="891" y="329" width="6" height="6" rx="1.5"/>
+      <rect x="891" y="379" width="6" height="6" rx="1.5"/>
+      <rect x="891" y="429" width="6" height="6" rx="1.5"/>
+      <rect x="891" y="479" width="6" height="6" rx="1.5"/>
+      <rect x="971" y="335" width="6" height="6" rx="1.5"/>
+      <rect x="971" y="385" width="6" height="6" rx="1.5"/>
+      <rect x="971" y="435" width="6" height="6" rx="1.5"/>
+      <rect x="971" y="485" width="6" height="6" rx="1.5"/>
+      <rect x="1051" y="343" width="6" height="6" rx="1.5"/>
+      <rect x="1051" y="393" width="6" height="6" rx="1.5"/>
+      <rect x="1051" y="443" width="6" height="6" rx="1.5"/>
+      <rect x="1051" y="493" width="6" height="6" rx="1.5"/>
+    </g>
+
+    <!-- Right thumb cluster — ochre filled, mirrored angle -->
+    <g fill="oklch(0.72 0.13 80 / 0.28)" stroke="oklch(0.72 0.13 80)" stroke-opacity="0.9">
+      <rect x="708" y="602" width="32" height="24" rx="3" ry="3" transform="rotate(12 724 614)"/>
+      <rect x="748" y="592" width="32" height="24" rx="3" ry="3" transform="rotate(12 764 604)"/>
+      <rect x="788" y="582" width="32" height="24" rx="3" ry="3" transform="rotate(12 804 594)"/>
+    </g>
+
+    <!-- Faint column guide lines -->
+    <g stroke="oklch(0.78 0.005 90)" stroke-opacity="0.18">
+      <line x1="774" y1="320" x2="774" y2="540"/>
+      <line x1="854" y1="320" x2="854" y2="540"/>
+      <line x1="934" y1="320" x2="934" y2="540"/>
+      <line x1="1014" y1="320" x2="1014" y2="540"/>
+    </g>
+  </g>
+
+  <!-- ================================================================
+       PAIRING ARC — dashed leader tying one key on each half together.
+       Hollow terminator on the left (plain part), filled ochre
+       terminator on the right (the differently-chosen part).
+  ================================================================ -->
+  <path
+    d="M 300 296 Q 600 186 900 296"
+    stroke="oklch(0.58 0.006 90)" stroke-width="1.4" stroke-dasharray="2 6" stroke-opacity="0.85" fill="none"/>
+
+  <circle cx="300" cy="296" r="4" fill="none" stroke="oklch(0.58 0.006 90)" stroke-opacity="0.9"/>
+  <circle cx="900" cy="296" r="4" fill="oklch(0.72 0.13 80)" stroke="oklch(0.72 0.13 80)"/>
+
+  <text x="300" y="272" font-family="'JetBrains Mono','IBM Plex Mono',ui-monospace,monospace"
+    font-size="12" fill="oklch(0.58 0.006 90)" letter-spacing="0.03em"
+    text-anchor="middle" stroke="none">half a</text>
+  <text x="900" y="272" font-family="'JetBrains Mono','IBM Plex Mono',ui-monospace,monospace"
+    font-size="12" fill="oklch(0.58 0.006 90)" letter-spacing="0.03em"
+    text-anchor="middle" stroke="none">half b</text>
+
+  <text x="600" y="176" font-family="'JetBrains Mono','IBM Plex Mono',ui-monospace,monospace"
+    font-size="13" fill="oklch(0.58 0.006 90)" letter-spacing="0.03em"
+    text-anchor="middle" stroke="none">asymmetric</text>
+  <text x="600" y="192" font-family="'JetBrains Mono','IBM Plex Mono',ui-monospace,monospace"
+    font-size="13" fill="oklch(0.58 0.006 90)" letter-spacing="0.03em"
+    text-anchor="middle" stroke="none">pairing</text>
+
+  <!-- ================================================================
+       BRASS / BRONZE THEME DOT — upper-right ornamental anchor
+       (family convention, present in every thock hero)
+  ================================================================ -->
+  <circle cx="1148" cy="70" r="3.5" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>
