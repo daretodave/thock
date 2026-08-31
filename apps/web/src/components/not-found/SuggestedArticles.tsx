@@ -30,6 +30,18 @@ function slugToQuery(slug: string): string {
   return slug.replace(/[-_]/g, ' ').trim()
 }
 
+// `requireStrongMatch` (see `suggestions.ts`) means most 404 slugs
+// resolve to zero hits, not to suggestions — the common case. If the
+// skeleton painted immediately, that common case would flash a
+// reserved-height skeleton and then collapse it to nothing, shifting
+// the "back to home" link that follows this component (the exact
+// class of CLS the skeleton itself was added to prevent, just on the
+// empty-result path instead of the hits path). Delaying the
+// skeleton's first paint means near-instant resolutions (typical for
+// a same-origin Server Action call) never paint it at all, so there's
+// nothing to collapse.
+const SKELETON_DELAY_MS = 150
+
 /**
  * Renders up to `limit` "did you mean…?" article suggestions
  * based on the slug a reader was trying to reach. Backed by the
@@ -40,11 +52,14 @@ function slugToQuery(slug: string): string {
  * edge-cache fix), and a static import of the search runtime here
  * would otherwise bundle its ~750 KB payload into every 404 hit.
  *
- * Renders a skeleton while the lookup is in flight (reserving
- * layout space so results don't shift surrounding content) and
- * announces arrival via an `aria-live` region. Returns `null` if
- * the slug is empty or the lookup yields no hits, so the host page
- * can render its plain not-found copy without a stranded heading.
+ * Renders a skeleton if the lookup is still pending after
+ * `SKELETON_DELAY_MS` (reserving layout space so a slow resolution
+ * to real hits doesn't shift surrounding content) and announces
+ * arrival via an `aria-live` region. Returns `null` before that
+ * delay elapses, once the slug is empty, or once the lookup yields
+ * no hits, so the host page can render its plain not-found copy
+ * without a stranded heading or a skeleton that has nothing to
+ * resolve into.
  */
 export function SuggestedArticles({
   slug,
@@ -56,26 +71,34 @@ export function SuggestedArticles({
   const [status, setStatus] = useState<'loading' | 'empty' | 'hits'>(
     query.length === 0 ? 'empty' : 'loading',
   )
+  const [showSkeleton, setShowSkeleton] = useState(false)
 
   useEffect(() => {
     let cancelled = false
+    setShowSkeleton(false)
     if (query.length === 0) {
       setHits([])
       setStatus('empty')
       return
     }
     setStatus('loading')
+    const skeletonTimer = window.setTimeout(() => {
+      if (!cancelled) setShowSkeleton(true)
+    }, SKELETON_DELAY_MS)
     getSuggestedArticles(query, limit).then((result) => {
       if (cancelled) return
+      window.clearTimeout(skeletonTimer)
       setHits(result)
       setStatus(result.length > 0 ? 'hits' : 'empty')
     })
     return () => {
       cancelled = true
+      window.clearTimeout(skeletonTimer)
     }
   }, [query, limit])
 
   if (status === 'empty') return null
+  if (status === 'loading' && !showSkeleton) return null
 
   return (
     <section

@@ -1,6 +1,7 @@
-import { describe, expect, it, vi } from 'vitest'
-import { render, screen, waitFor } from '@testing-library/react'
+import { afterEach, describe, expect, it, vi } from 'vitest'
+import { act, render, screen, waitFor } from '@testing-library/react'
 import { SuggestedArticles, pathnameToSlug } from '../SuggestedArticles'
+import { getSuggestedArticles } from '@/lib/search/suggestions'
 
 const FAKE_HIT = {
   id: 'gateron-oil-king-deep-dive',
@@ -17,10 +18,51 @@ vi.mock('@/lib/search/suggestions', () => ({
 }))
 
 describe('<SuggestedArticles>', () => {
-  it('renders a skeleton (no data-testid results) while the lookup is in flight', () => {
+  afterEach(() => {
+    vi.useRealTimers()
+  })
+
+  it('renders nothing immediately after mount, before the skeleton delay elapses', async () => {
     render(<SuggestedArticles slug="gateron-oil-king" />)
+    expect(screen.queryByTestId('not-found-suggestions')).not.toBeInTheDocument()
+    // Let the mocked lookup's microtask settle before the test ends, so its
+    // state update lands inside this test's act() scope instead of leaking
+    // a warning into whichever test runs next.
+    await waitFor(() =>
+      expect(screen.getByTestId('not-found-suggestion')).toBeInTheDocument(),
+    )
+  })
+
+  it('shows a skeleton only once the lookup outlasts the flash-guard delay', async () => {
+    vi.useFakeTimers()
+    let resolveHits: (hits: (typeof FAKE_HIT)[]) => void = () => {}
+    vi.mocked(getSuggestedArticles).mockReturnValueOnce(
+      new Promise((resolve) => {
+        resolveHits = resolve
+      }),
+    )
+    render(<SuggestedArticles slug="gateron-oil-king" />)
+    expect(screen.queryByTestId('not-found-suggestions')).not.toBeInTheDocument()
+
+    act(() => {
+      vi.advanceTimersByTime(150)
+    })
     expect(screen.getByTestId('not-found-suggestions')).toBeInTheDocument()
     expect(screen.queryByTestId('not-found-suggestion')).not.toBeInTheDocument()
+
+    await act(async () => {
+      resolveHits([FAKE_HIT])
+      await Promise.resolve()
+    })
+    vi.useRealTimers()
+  })
+
+  it('never flashes a skeleton for a resolution that lands before the delay (the common empty-hit path)', async () => {
+    render(<SuggestedArticles slug="zzzzz-no-match" />)
+    expect(screen.queryByTestId('not-found-suggestions')).not.toBeInTheDocument()
+    await waitFor(() =>
+      expect(screen.queryByTestId('not-found-suggestions')).not.toBeInTheDocument(),
+    )
   })
 
   it('announces arrival via the aria-live status region once hits resolve', async () => {

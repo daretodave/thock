@@ -13,9 +13,9 @@ test.describe('per-route 404 — search-suggestion path', () => {
     const suggestions = page.getByTestId('not-found-suggestions')
     await expect(suggestions).toBeVisible()
     const items = page.getByTestId('not-found-suggestion')
-    // The suggestions wrapper renders immediately with a loading skeleton,
-    // then swaps to real items once the async lookup resolves — wait for
-    // the first item rather than racing the fetch.
+    // The suggestions wrapper stays absent until the async lookup either
+    // resolves or outlasts a short flash-guard delay (skeleton only past
+    // that point) — wait for the first item rather than racing the fetch.
     await expect(items.first()).toBeVisible()
     expect(await items.count()).toBeGreaterThanOrEqual(1)
     expect(await items.count()).toBeLessThanOrEqual(3)
