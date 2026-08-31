@@ -40,9 +40,11 @@ function slugToQuery(slug: string): string {
  * edge-cache fix), and a static import of the search runtime here
  * would otherwise bundle its ~750 KB payload into every 404 hit.
  *
- * Returns `null` until the lookup resolves or yields no hits, so
- * the host page can render its plain not-found copy without a
- * stranded heading.
+ * Renders a skeleton while the lookup is in flight (reserving
+ * layout space so results don't shift surrounding content) and
+ * announces arrival via an `aria-live` region. Returns `null` if
+ * the slug is empty or the lookup yields no hits, so the host page
+ * can render its plain not-found copy without a stranded heading.
  */
 export function SuggestedArticles({
   slug,
@@ -51,59 +53,86 @@ export function SuggestedArticles({
 }: SuggestedArticlesProps): ReactElement | null {
   const query = slugToQuery(slug)
   const [hits, setHits] = useState<SuggestionHit[]>([])
+  const [status, setStatus] = useState<'loading' | 'empty' | 'hits'>(
+    query.length === 0 ? 'empty' : 'loading',
+  )
 
   useEffect(() => {
     let cancelled = false
     if (query.length === 0) {
       setHits([])
+      setStatus('empty')
       return
     }
+    setStatus('loading')
     getSuggestedArticles(query, limit).then((result) => {
-      if (!cancelled) setHits(result)
+      if (cancelled) return
+      setHits(result)
+      setStatus(result.length > 0 ? 'hits' : 'empty')
     })
     return () => {
       cancelled = true
     }
   }, [query, limit])
 
-  if (hits.length === 0) return null
+  if (status === 'empty') return null
 
   return (
     <section
       data-testid="not-found-suggestions"
       className="flex flex-col gap-4"
     >
+      <div role="status" aria-live="polite" aria-atomic="true" className="sr-only">
+        {status === 'hits'
+          ? `${hits.length} suggested article${hits.length === 1 ? '' : 's'} found`
+          : ''}
+      </div>
       <h2
         data-testid="not-found-suggestion-eyebrow"
         className="font-mono uppercase tracking-[0.12em] text-micro text-text-2"
       >
         {eyebrow}
       </h2>
-      <ul className="flex flex-col gap-3">
-        {hits.map((hit) => (
-          <li key={hit.id}>
-            <Link
-              href={`/article/${hit.slug}`}
-              data-testid="not-found-suggestion"
-              data-slug={hit.slug}
-              className="group flex flex-col gap-1 rounded-sm border-t border-border py-3 first:border-t-0 first:pt-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+      {status === 'loading' ? (
+        <ul className="flex flex-col gap-3" aria-hidden="true">
+          {Array.from({ length: limit }).map((_, i) => (
+            <li
+              key={i}
+              className="flex flex-col gap-2 border-t border-border py-3 first:border-t-0 first:pt-0"
             >
-              <span className="font-mono uppercase tracking-[0.1em] text-micro text-accent">
-                {pillarLabel(hit.pillar)}
-              </span>
-              <span className="font-serif text-h3 text-text group-hover:text-accent transition-colors">
-                {hit.title}
-              </span>
-              <span
-                data-testid="not-found-suggestion-date"
-                className="text-small text-text-2"
+              <div className="h-4 w-1/4 animate-pulse bg-surface" />
+              <div className="h-6 w-3/4 animate-pulse bg-surface" />
+              <div className="h-4 w-1/3 animate-pulse bg-surface" />
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <ul className="flex flex-col gap-3">
+          {hits.map((hit) => (
+            <li key={hit.id}>
+              <Link
+                href={`/article/${hit.slug}`}
+                data-testid="not-found-suggestion"
+                data-slug={hit.slug}
+                className="group flex flex-col gap-1 rounded-sm border-t border-border py-3 first:border-t-0 first:pt-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
               >
-                {PUBLISHED_FORMATTER.format(new Date(hit.publishedAt))}
-              </span>
-            </Link>
-          </li>
-        ))}
-      </ul>
+                <span className="font-mono uppercase tracking-[0.1em] text-micro text-accent">
+                  {pillarLabel(hit.pillar)}
+                </span>
+                <span className="font-serif text-h3 text-text group-hover:text-accent transition-colors">
+                  {hit.title}
+                </span>
+                <span
+                  data-testid="not-found-suggestion-date"
+                  className="text-small text-text-2"
+                >
+                  {PUBLISHED_FORMATTER.format(new Date(hit.publishedAt))}
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
     </section>
   )
 }

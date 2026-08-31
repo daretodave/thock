@@ -13,6 +13,10 @@ test.describe('per-route 404 — search-suggestion path', () => {
     const suggestions = page.getByTestId('not-found-suggestions')
     await expect(suggestions).toBeVisible()
     const items = page.getByTestId('not-found-suggestion')
+    // The suggestions wrapper renders immediately with a loading skeleton,
+    // then swaps to real items once the async lookup resolves — wait for
+    // the first item rather than racing the fetch.
+    await expect(items.first()).toBeVisible()
     expect(await items.count()).toBeGreaterThanOrEqual(1)
     expect(await items.count()).toBeLessThanOrEqual(3)
     // First suggestion should link to a real article slug.
@@ -42,6 +46,7 @@ test.describe('per-route 404 — search-suggestion path', () => {
     const suggestions = page.getByTestId('not-found-suggestions')
     await expect(suggestions).toBeVisible()
     const items = page.getByTestId('not-found-suggestion')
+    await expect(items.first()).toBeVisible()
     expect(await items.count()).toBeGreaterThanOrEqual(1)
   })
 
