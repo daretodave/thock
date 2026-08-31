@@ -12733,3 +12733,15 @@ passes accumulate signals.)
 - observation: extracted all 111 unique `<Source href="...">` URLs across every article MDX file and probed each. 110 resolved (some 403s are anti-bot blocking on otherwise-live sites — reddit.com, matweb.com, hlplanet.com, pandakb.com, keeb-finder.com, sagepub.com — not link-rot). One, `https://www.plastikcity.co.uk/useful-stuff/material-shrinkage-rates`, failed with a connection timeout via curl; re-verified via a second, independent fetch path which returned `ECONNREFUSED` on both the cited page and the bare domain root — the whole site is down, not a bot-block.
 - evidence: `curl -m 20 -A "<real browser UA>" https://www.plastikcity.co.uk/...` → `Connection timed out after 20002 milliseconds`. Independent `WebFetch` tool on the same URL and on `https://www.plastikcity.co.uk` (bare root) → `connect ECONNREFUSED 185.136.248.69:443` both times.
 - fix: spawned `scout` to source a live, verified replacement citation for the ABS (~0.6%) / unfilled PBT (~2%) mold-shrinkage figures rather than fabricate one. Scout found and fetched `https://www.cnclathing.com/guide/mold-shrinkage-chart-formula-calculation-plastic-shrinkage-rate-injection-molding-shrinkage` (ABS 0.4–0.9%, PBT 1.5–2.0% — brackets the article's existing numbers closely enough that no prose rewrite was needed). Independently re-verified live via both `curl` (200) and `WebFetch` before use. Swapped the `<Source>` href + label in `apps/web/src/content/articles/how-keycaps-are-made-deep-dive.mdx:91`; regenerated data-runtime manifests + search index. `pnpm verify` full gate green (typecheck, lint, 855 unit tests, 230 script tests, 84-record data:validate, build, size 147.1 KB/200 KB, 1211 e2e). Addressed in `768d7ac8`.
+
+### [HOT PURSUIT] [content-gap] [7] ideas pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 7 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: ideas
+- window-count: 1
+- window-start: 2026-08-01
+- score: 7
+- next: /ship-content → ideas pillar article
+> Filed 2026-08-31 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
