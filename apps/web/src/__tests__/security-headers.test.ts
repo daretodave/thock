@@ -3,6 +3,7 @@ import nextConfig from '../../next.config.mjs'
 
 describe('next.config.mjs — security headers', () => {
   const REQUIRED_HEADERS = [
+    'Strict-Transport-Security',
     'X-Frame-Options',
     'X-Content-Type-Options',
     'Referrer-Policy',
@@ -31,5 +32,15 @@ describe('next.config.mjs — security headers', () => {
     expect(permissionsPolicy?.value).toContain('camera=()')
     expect(permissionsPolicy?.value).toContain('microphone=()')
     expect(permissionsPolicy?.value).toContain('geolocation=()')
+  })
+
+  it('Strict-Transport-Security covers subdomains and is preload-eligible', async () => {
+    const rules = await nextConfig.headers!()
+    const siteWide = rules.find((rule) => rule.source === '/(.*)')
+    const hsts = siteWide!.headers.find((h) => h.key === 'Strict-Transport-Security')
+
+    expect(hsts?.value).toContain('max-age=63072000')
+    expect(hsts?.value).toContain('includeSubDomains')
+    expect(hsts?.value).toContain('preload')
   })
 })
