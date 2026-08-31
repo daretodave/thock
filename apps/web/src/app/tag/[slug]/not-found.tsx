@@ -1,14 +1,15 @@
+'use client'
+
 import Link from 'next/link'
-import { headers } from 'next/headers'
+import { usePathname } from 'next/navigation'
 import { Container, Stack } from '@thock/ui'
 import {
   SuggestedArticles,
   pathnameToSlug,
 } from '@/components/not-found/SuggestedArticles'
 
-export default async function TagNotFound() {
-  const headerList = await headers()
-  const pathname = headerList.get('x-pathname')
+export default function TagNotFound() {
+  const pathname = usePathname()
   const slug = pathnameToSlug(pathname)
 
   return (

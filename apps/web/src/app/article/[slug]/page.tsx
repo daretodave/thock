@@ -22,11 +22,13 @@ import { MentionedPartsRail } from '@/components/article/MentionedPartsRail'
 import { RelatedArticlesRail } from '@/components/article/RelatedArticlesRail'
 
 // `dynamicParams` stays at the Next.js default (true) here, unlike
-// the other five entity routes fixed alongside this one — this
-// route's `not-found.tsx` reads `headers()` (for "did you mean"
-// slug suggestions), which forces dynamic rendering of the 404
-// boundary and is incompatible with `dynamicParams = false`'s
-// build-time rejection. See AUDIT.md for the follow-up.
+// the other five entity routes fixed alongside this one — the
+// sibling `not-found.tsx` now reads the pathname client-side, but
+// `dynamicParams = false` still bypasses that segment's own
+// not-found boundary entirely (falls back to the root one, losing
+// "did you mean" suggestions), a routing-layer behavior independent
+// of how the pathname is read. Confirmed via local build+start;
+// see AUDIT.md for the investigation trail.
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
   return getAllArticles().map((a) => ({ slug: a.slug }))
 }
