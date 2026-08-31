@@ -1,7 +1,12 @@
+'use client'
+
 import Link from 'next/link'
-import type { ReactElement } from 'react'
+import { useEffect, useState, type ReactElement } from 'react'
 import { pillarLabel } from '@thock/seo'
-import { searchArticles } from '@/lib/search/runtime'
+import {
+  getSuggestedArticles,
+  type SuggestionHit,
+} from '@/lib/search/suggestions'
 
 export type SuggestedArticlesProps = {
   /**
@@ -28,10 +33,16 @@ function slugToQuery(slug: string): string {
 /**
  * Renders up to `limit` "did you mean…?" article suggestions
  * based on the slug a reader was trying to reach. Backed by the
- * MiniSearch index built at compile time (phase 14).
+ * MiniSearch index built at compile time (phase 14), queried via
+ * a Server Action (`getSuggestedArticles`) so the index itself
+ * never ships to the browser — this component renders inside the
+ * client-side article/tag not-found boundary (phase 4b-adjacent
+ * edge-cache fix), and a static import of the search runtime here
+ * would otherwise bundle its ~750 KB payload into every 404 hit.
  *
- * Returns `null` when the slug yields no hits, so the host page
- * can render its plain not-found copy without a stranded heading.
+ * Returns `null` until the lookup resolves or yields no hits, so
+ * the host page can render its plain not-found copy without a
+ * stranded heading.
  */
 export function SuggestedArticles({
   slug,
@@ -39,9 +50,22 @@ export function SuggestedArticles({
   eyebrow = 'did you mean',
 }: SuggestedArticlesProps): ReactElement | null {
   const query = slugToQuery(slug)
-  if (query.length === 0) return null
+  const [hits, setHits] = useState<SuggestionHit[]>([])
 
-  const hits = searchArticles(query, limit, { requireStrongMatch: true })
+  useEffect(() => {
+    let cancelled = false
+    if (query.length === 0) {
+      setHits([])
+      return
+    }
+    getSuggestedArticles(query, limit).then((result) => {
+      if (!cancelled) setHits(result)
+    })
+    return () => {
+      cancelled = true
+    }
+  }, [query, limit])
+
   if (hits.length === 0) return null
 
   return (
