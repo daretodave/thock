@@ -5,15 +5,11 @@ import { getArticleForOg } from '@/lib/data-runtime/og-runtime'
 import { ArticleOGContent, computeArticleOgLayout } from '@/components/og/ArticleOG'
 import { OG_PALETTE } from '@/components/og/palette'
 
-// Edge runtime — matches the home and pillar OG routes and is the
-// supported path for `next/og`'s Satori renderer (the Node.js runtime
-// hangs on the JSX render at server start). `generateStaticParams`
-// is incompatible with edge runtime, so the OG image is generated on
-// first request and cached for one year via the immutable
-// `Cache-Control` header that Next.js attaches automatically.
-// Node.js runtime: Next 16 rejects `runtime = 'edge'` on routes that
-// export `generateImageMetadata` (it is treated as static-param
-// generation). `next/og` renders fine on the Node runtime.
+// Node.js runtime (the default) — Next 16 rejects `runtime = 'edge'`
+// on routes that export `generateImageMetadata` (it is treated as
+// static-param generation). `next/og` renders fine on the Node
+// runtime, and every other OG image / icon route in the app has
+// migrated to it too, so prerendering works uniformly.
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 

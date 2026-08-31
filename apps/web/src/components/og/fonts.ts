@@ -20,10 +20,10 @@ export type OgFontManifestEntry = {
  * the 500-weight wordmark/title spans still render in serif, just
  * without a distinct medium weight.
  *
- * Order must match the literal `fetch(new URL(...))` calls in
- * `getOgFonts` below — webpack's `import.meta.url` asset resolution
- * only works with statically-analyzable literal paths, so the file
- * list can't be driven by this manifest at runtime; it's zipped back
+ * Order must match the literal `readFile` calls in `./fonts-node`'s
+ * `getOgFonts` — webpack's `import.meta.url` asset resolution only
+ * works with statically-analyzable literal paths, so the file list
+ * can't be driven by this manifest at runtime; it's zipped back
  * together by index instead.
  */
 export const OG_FONT_MANIFEST: OgFontManifestEntry[] = [
@@ -33,32 +33,3 @@ export const OG_FONT_MANIFEST: OgFontManifestEntry[] = [
 ]
 
 export type OgFont = OgFontManifestEntry & { data: ArrayBuffer }
-
-/**
- * Edge routes only. The seven Node-runtime OG routes (the ones that
- * export `generateImageMetadata`, which Next 16 forbids on edge) must
- * import from `./fonts-node` instead: Next's patched Node `fetch`
- * rejects the `file:` URL this resolves to, and Vercel refuses to
- * build an edge function whose bundle references `node:fs` — so the
- * two loaders live in separate modules.
- */
-function loadFont(url: URL): Promise<ArrayBuffer> {
-  return fetch(url).then((res) => res.arrayBuffer())
-}
-
-let cached: Promise<OgFont[]> | undefined
-
-export function getOgFonts(): Promise<OgFont[]> {
-  if (!cached) {
-    cached = Promise.all([
-      loadFont(new URL('./fonts/newsreader-400-normal.woff', import.meta.url)),
-      loadFont(new URL('./fonts/newsreader-400-italic.woff', import.meta.url)),
-      loadFont(new URL('./fonts/jetbrains-mono-400-normal.woff', import.meta.url)),
-    ]).then((data) => OG_FONT_MANIFEST.map((entry, i) => ({ ...entry, data: data[i]! })))
-    // A rejected load must not poison every later request.
-    cached.catch(() => {
-      cached = undefined
-    })
-  }
-  return cached
-}

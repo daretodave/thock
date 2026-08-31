@@ -1,8 +1,7 @@
 import { ImageResponse } from 'next/og'
-import { getOgFonts } from '@/components/og/fonts'
+import { getOgFonts } from '@/components/og/fonts-node'
 import { OG_PALETTE } from '@/components/og/palette'
 
-export const runtime = 'edge'
 export const size = { width: 180, height: 180 }
 export const contentType = 'image/png'
 

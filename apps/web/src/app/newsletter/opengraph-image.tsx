@@ -1,9 +1,8 @@
 import { ImageResponse } from 'next/og'
-import { getOgFonts } from '@/components/og/fonts'
+import { getOgFonts } from '@/components/og/fonts-node'
 import { siteConfig } from '@thock/seo'
 import { PillarOGContent } from '@/components/og/PillarOG'
 
-export const runtime = 'edge'
 export const alt = `Newsletter — ${siteConfig.name}`
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'

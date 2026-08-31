@@ -3,13 +3,11 @@ import { fileURLToPath } from 'node:url'
 import { OG_FONT_MANIFEST, type OgFont } from './fonts'
 
 /**
- * Node-runtime twin of `fonts.ts#getOgFonts`. Used by the seven
- * dynamic OG routes that export `generateImageMetadata` (Next 16
- * refuses `runtime = 'edge'` there). `new URL(..., import.meta.url)`
- * resolves to a `file:` asset URL on the Node runtime, which Next's
- * patched `fetch` rejects — read it from disk instead. Keep this
- * module out of every edge route: Vercel rejects edge bundles that
- * reference `node:fs`.
+ * Font loader for every OG image / icon route (all now Node
+ * runtime — see `fonts.ts` for why the manifest lives separately).
+ * `new URL(..., import.meta.url)` resolves to a `file:` asset URL on
+ * the Node runtime, which Next's patched `fetch` rejects — read it
+ * from disk instead.
  */
 async function loadFont(url: URL): Promise<ArrayBuffer> {
   const buf = await readFile(fileURLToPath(url))
