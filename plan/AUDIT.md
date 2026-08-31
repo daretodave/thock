@@ -84,6 +84,19 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [perf] [4.2] 23 static OG image / icon routes never hit the edge cache — addressed in commit `f396e554`, closes #966
+- category: perf
+- filed: 2026-08-31 by cloud /iterate audit (fresh general-purpose sweep, angle: OG image / icon route static-generation eligibility, prompted by the immediately-preceding article/tag edge-cache fix)
+- impact: 6 (23 of the site's 30 OG-image-family routes — home, all 5 pillars, `/about`, `/archive`, `/compare/board`, `/compare/switch`, `/group-buys`, `/group-buys/past`, `/newsletter`, `/parts`, `/quiz/switch`, `/quiz/keycap-set`, `/search`, `/sources`, `/tags`, `/tools`, `/trends/tracker`, plus `/apple-icon` — rendered dynamically on every request despite content that never varies per-request. Root cause: all 23 used `runtime = 'edge'` with the `fetch()`-based font loader in `components/og/fonts.ts`, which Next.js cannot statically prerender. The 7 parameterized OG routes already use Node runtime + the disk-read `fonts-node.ts` loader and correctly SSG)
+- ease: 7 (mechanical, uniform across all 23 files — drop `runtime = 'edge'`, swap the font import to the already-existing `fonts-node` loader, no new code; pattern proven on `/about` first, then applied to the rest; `pnpm build` flips all 23 from ƒ to ○; `next start` + `curl -I` confirms `x-nextjs-cache: HIT`)
+- score: 4.2 (impact × ease / 10)
+- observation: the article/tag edge-cache fix shipped one commit prior (`b5a7bbc5`) fixed the HTML-page layer for 2 dynamic-param routes; this is the same static-generation-eligibility gap one layer down, in the OG-image sibling routes, but affecting the majority (23/30) of the OG-image family because the *non*-parameterized routes were the ones still on the old edge-runtime pattern.
+- evidence: `pnpm --filter web build` before fix listed `ƒ /about/opengraph-image`, `ƒ /apple-icon`, `ƒ /opengraph-image` (root) + 20 more; `grep -rl "og/fonts'" apps/web/src/app --include="*.tsx" | grep -v fonts-node` found exactly these 23 files.
+- next: for each of the 23 files, remove `export const runtime = 'edge'` and change the font import from `@/components/og/fonts` to `@/components/og/fonts-node`; clean up the now-dead edge-only `getOgFonts`/`loadFont` in `fonts.ts` once nothing imports it.
+- issue: #966
+> **Resolved (2026-08-31):** all 23 files migrated to the Node runtime + `fonts-node` loader; `fonts.ts` trimmed to just the shared manifest/types (its edge-only `getOgFonts`/`loadFont` had zero remaining importers); the `article/[slug]` OG route's stale comment (which still described the old "matches home and pillar OG routes" edge pattern) rewritten to match reality. `pnpm build` confirms all 23 routes flip ƒ → ○; `next start` + `curl -I` confirms `x-nextjs-cache: HIT` on sampled routes. `pnpm verify` full gate green: typecheck, lint, unit tests, script tests, data:validate, build, size, 1217/1217 e2e.
+> Picked as the top signal this tick (cloud `/march`): no unlabeled GitHub issues; Monday but `data/trends/2026-W36.json` already existed; no pending phases/data/content-gap work (Rule 1 comfortable, all 7 mechanical surveys re-ran clean); march's own expand Step 3c gate not due (10 commits/~6.25h since pass 402's anchor `e80dae4f`, threshold 20 commits/48h). Investigated the OG-image layer as a fresh angle prompted directly by the immediately-preceding article/tag edge-cache commit (`b5a7bbc5`) — asked whether the same static-generation gap existed one layer down in the OG-image sibling routes, confirmed it did for the 23 non-parameterized ones, and shipped the fix.
+
 ### [x] [content] [4.5] Boba U4/U4T deep-dives: 4 residual "same stem" claims commit 96987f07 missed — addressed in commit `52522b0c`, closes #939
 - category: content
 - filed: 2026-08-26 by cloud /iterate audit (fresh general-purpose sweep, angle: recent-commit follow-on consistency check)
