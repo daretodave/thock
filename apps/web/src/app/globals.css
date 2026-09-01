@@ -82,6 +82,17 @@
     color: #000 !important;
     background: transparent !important;
   }
+
+  /* InlineViz diagram SVGs (packages/content/src/mdx/InlineViz.tsx) are
+   * drawn with light strokes on a transparent background, meant to sit
+   * on the dark-mode-first page background (--thock-bg). The blanket
+   * `background: transparent !important` above strips that backdrop on
+   * print, where the paper is white — the near-white strokes vanish.
+   * Restore the dark backdrop for just the diagram images so the ~92
+   * articles using InlineViz stay legible printed/exported to PDF. */
+  .thock-inline-viz img {
+    background: var(--thock-bg) !important;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
