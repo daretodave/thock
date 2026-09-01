@@ -3,9 +3,12 @@ import { render, screen } from '@testing-library/react'
 import { Footer } from '../Footer'
 
 describe('<Footer>', () => {
-  it('renders the copyright line', () => {
+  it('renders the copyright line with the current year', () => {
     render(<Footer />)
-    expect(screen.getByText(/© 2026 thock/i)).toBeInTheDocument()
+    const year = new Date().getFullYear()
+    expect(
+      screen.getByText(new RegExp(`© ${year} thock`, 'i')),
+    ).toBeInTheDocument()
   })
 
   it('renders the Buttondown footer form (phase 15 retrofit)', () => {

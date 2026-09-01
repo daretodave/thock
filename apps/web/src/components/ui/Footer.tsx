@@ -10,6 +10,8 @@ const FOOTER_NAV = [
 ] as const
 
 export function Footer() {
+  const year = new Date().getFullYear()
+
   return (
     <footer className="border-t border-border bg-bg-2">
       <Container as="div" className="py-10">
@@ -33,7 +35,7 @@ export function Footer() {
               data-testid="footer-copyright"
               className="font-mono text-micro uppercase tracking-[0.08em] text-text-2"
             >
-              © 2026 thock
+              © {year} thock
             </span>
             <nav aria-label="Footer" className="flex flex-wrap gap-5">
               {FOOTER_NAV.map((item) => (
