@@ -170,7 +170,7 @@ description. Read it once.
 ## Repo shape
 
 ```
-apps/web         Next.js 15 App Router site (the published product)
+apps/web         Next.js 16 App Router site (the published product)
 apps/e2e         Playwright workspace (hermetic against next start :4173)
 packages/*       Shared TS packages (@thock/tokens, ui, content,
                  data, seo, tsconfig)
@@ -257,7 +257,7 @@ Spawn sub-agents aggressively for everything else.
 
 `plan/bearings.md` holds the always-relevant context:
 
-- **Stack pins** — Next.js 15, TypeScript strict, Tailwind, MDX,
+- **Stack pins** — Next.js 16, TypeScript strict, Tailwind, MDX,
   Vitest, Playwright, pnpm 9.
 - **URL contract** — every URL the site will ever serve, locked.
 - **Visual defaults** — palette, type, dark-mode-first, mono accent

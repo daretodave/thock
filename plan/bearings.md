@@ -56,7 +56,7 @@ and ask.
 | Layer | Choice | Why |
 |---|---|---|
 | Repo | **pnpm workspaces** monorepo | apps + packages share types; one install root |
-| Framework | **Next.js 15 App Router** | Editorial-site primitives, RSC, ISR, image pipeline, OG image routes |
+| Framework | **Next.js 16 App Router** | Editorial-site primitives, RSC, ISR, image pipeline, OG image routes |
 | Language | **TypeScript** strict, `noUncheckedIndexedAccess` | Standard |
 | Styling | **Tailwind CSS** | Fast iteration; one-off layout in utilities, repeated patterns in `components.css` |
 | Content | **MDX-in-repo** under `apps/web/src/content/` | Git-as-CMS — no auth, no API, no rate limits |
