@@ -6,22 +6,36 @@
 
 ## Headline
 
-**A fully green ~19-hour window — 19 cloud `march` ticks, all 19
-success, zero no-ops.** Since the last digest (`18ee70ac`,
-2026-08-31T10:46:22Z), every tick either shipped an AUDIT-drain fix
-or ran a fresh `/expand` pass — 10 substantive fixes landed (perf,
-a11y, seo, docs), plus one self-correcting AUDIT.md marker fix, plus
-9 `/expand` passes (402–410), all no-candidate.
+**A quiet ~24-hour window after yesterday's 19-tick, 10-fix run —
+that quiet is itself the information.** Since the last digest
+(`78e116f2`, 2026-09-01T10:50:20Z), 7 cloud `march` ticks ran: 2 true
+no-ops (nothing to dispatch), 4 more `/expand` no-candidate passes
+(411–414), and one substantive tick that shipped a real data fix
+plus its own audit close-out marker.
 
 **This tick's own fresh `pnpm verify` is fully clean** — all 8 legs
 green (typecheck, lint, test:run, test:scripts, data:validate,
 build, size, e2e — 862 unit + 230 script + 1217 e2e, all passing),
-run as sequential foreground legs per the standing rule. The e2e
-run again logged the same benign, previously-noted `Error: Internal:
-NoFallbackError` stderr noise during dynamic OG-image route
-requests — not attached to any failing test (1217/1217 passed
-clean), unchanged shape from prior digests. Not re-filing. Deploy is
-`READY` at HEAD (`63b44bbc`).
+run as sequential foreground legs per the standing rule. The e2e run
+again logged the same benign, previously-noted `Error: Internal:
+NoFallbackError` stderr noise during dynamic route requests — not
+attached to any failing test (1217/1217 passed clean), unchanged
+shape from prior digests. Not re-filing. Deploy is `READY` at HEAD
+(`5a4f8367`).
+
+**The one shipped fix is worth a second look.** `ac9539fa` repaired
+a fabricated spark-continuity break in "DCS Dolch / Molch"'s W35/W36
+trend rows — the same defect class the phase-50 `trend-snapshot
+data-quality gate` was built to catch, and the same "rename defeats
+the name-based join" meta-sub-shape already logged dozens of times
+against that gate's own `## Promoted` entry (passes 207–319). The
+checker ran clean on HEAD pre-fix (0 violations) because the entity
+was renamed mid-window ("DCS Dolch" → "DCS Dolch / Molch"), the
+identical blind spot documented repeatedly before phase 50 shipped
+and evidently not closed by it. Not filing a new candidate — this is
+additional evidence for an already-extensively-documented, already-
+promoted-and-shipped gate, not a new gap — but worth a look if
+`/oversight` revisits phase 50's coverage.
 
 **Queues stay essentially drained.** The 52-phase build plan is
 fully shipped (0 pending); `data/BACKLOG.md` is empty (0 pending);
@@ -30,83 +44,54 @@ sub-3.0 items carried since the last digest (two Mode Sonnet
 hero-art 65%→75% redraws `[2.7]`/`[2.0]`, a plate-materials
 content-tension item `[2.4]`, a generated-manifest-drift observation
 `[2.4]`, the unreferenced-`favicon.svg` duplicate `[1.8]`) — no new
-rows filed this window, and none of the day's 10 shipped fixes
-touched these five.
+rows filed this window beyond the DCS Dolch/Molch row, which was
+opened and closed same-tick.
 
 **Two mistuned-gate signals remain flagged and unaddressed, both
 already filed as pending `plan/PHASE_CANDIDATES.md` rows awaiting
 `/oversight` — calling them out again, per the digest's own job:**
 
-1. **`plan/CRITIQUE.md` is now ~113 days stale** — last real pass
+1. **`plan/CRITIQUE.md` is now ~114 days stale** — last real pass
    (pass 11) landed 2026-05-11T01:01:38Z at commit `1c4f6da5`. Root
    cause diagnosed and filed since 2026-07-03: `[needs-user-call]
    [score 6.5] Critique gate diagnostic` — cloud mode categorically
    skips `/critique` (no Chrome MCP on the cloud runner). Still
    unpromoted.
 2. **`/expand` cadence** — the no-candidate streak since pass 399's
-   asset-hygiene filing now stands at 11 consecutive passes (400–410).
-   Nowhere near the 31–43-pass range that triggered the last
-   cadence-flag cycle, so not re-escalating the score, but the
-   underlying `[score 3.6] /expand dispatch cadence` candidate is
-   still on record and still unpromoted — worth a look whenever
-   `/oversight` next runs regardless of where the streak currently
-   sits.
+   asset-hygiene filing now stands at 15 consecutive passes
+   (400–414). Still well under the 31–43-pass range that triggered
+   the last cadence-flag cycle, so not re-escalating the score, but
+   the underlying `[score 3.6] /expand dispatch cadence` candidate is
+   still on record and still unpromoted.
 
 No new tuning proposal filed this tick — both signals are already on
 record; this digest is reinforcing status, not duplicating rows.
 
 ## While you were out
 
-| When (UTC, 08-31/09-01) | Tick | Outcome |
+| When (UTC, 09-01/09-02) | Tick | Outcome |
 |---|---|---|
-| 11:07→11:37 | cloud march | perf: article/tag routes now hit the edge cache, closes finding `[3.6]` |
-| 12:14→12:40 | cloud march | perf: not-found suggestions no longer ship the search index to the client, closes finding `[4.2]` |
-| 13:10→13:23 | cloud march | expand pass 402 — no new candidates |
-| 14:10→14:44 | cloud march | a11y: 404 suggestions — restored aria-live announcement + CLS guard, closes finding `[4.2]` |
-| 15:09→15:30 | cloud march | perf: static OG image / icon routes now hit the edge cache, closes finding `[4.2]` |
-| 16:09→16:33 | cloud march | a11y: 404 suggestions — guarded the empty-hit CLS collapse too, closes finding `[4.0]` |
-| 17:07→17:23 | cloud march | expand pass 403 — no new candidates |
-| 18:11→18:35 | cloud march | perf: per-pillar RSS feeds now hit the edge cache, closes finding `[4.0]` |
-| 19:06→19:24 | cloud march | fix: site-wide HSTS header now covers subdomains and is preload-eligible, closes finding `[4.05]` |
-| 20:09→20:21 | cloud march | expand pass 404 — no new candidates |
-| 21:08→21:15 | cloud march | expand pass 405 — no new candidates |
-| 22:08→22:21 | cloud march | expand pass 406 — no new candidates |
-| 23:07→23:15 | cloud march | expand pass 407 — no new candidates |
-| 00:29→00:45 | cloud march | docs: bearings.md/agents.md Next.js 15 → 16, closes finding `[3.6]` |
-| 01:27→01:46 | cloud march | perf: InlineViz diagrams stay legible when printed, closes finding `[4.8]` |
-| 02:14→02:37 | cloud march | expand pass 408 — no new candidates |
-| 03:11→03:27 | cloud march | fix: footer copyright year computed instead of hardcoded, closes finding `[3.6]` (+ self-corrected an earlier AUDIT.md marker) |
-| 04:10→04:19 | cloud march | expand pass 409 — no new candidates |
-| 05:09→05:15 | cloud march | expand pass 410 — no new candidates |
+| 11:01→11:04 | cloud march | no-op — nothing to dispatch |
+| 15:59→16:17 | cloud march | expand pass 411 — no new candidates |
+| 19:20→19:23 | cloud march | no-op — nothing to dispatch |
+| 22:20→22:27 | cloud march | expand pass 412 — no new candidates |
+| 00:47→00:53 | cloud march | expand pass 413 — no new candidates |
+| 05:24→05:42 | cloud march | expand pass 414 — no new candidates |
+| 10:32→11:04 | cloud march | data: DCS Dolch/Molch spark-continuity fix, closes finding `[3.5]` + #973 |
 
-19 `march`-workflow runs since the last digest: **19 success, 0
-failure, 0 cancelled, 0 no-ops.** `lighthouse` ran success on its
-latest 3 completed attempts. `night` ran success on its prior
-attempt (2026-08-31T10:32:51Z); this tick's own run is in progress
+7 `march`-workflow runs since the last digest: **7 success, 0
+failure, 0 cancelled, 2 no-ops.** `lighthouse` ran success on both of
+its latest 2 completed attempts. `night` ran success on its prior
+attempt (2026-09-01T10:34:17Z); this tick's own run is in progress
 as this file writes.
 
 ## Shipped
 
-- **perf**: article/tag routes now hit the edge cache (`b5a7bbc5`,
-  closes finding `[3.6]`).
-- **perf**: not-found suggestions no longer ship the search index to
-  the client bundle (`1db33fba`, closes finding `[4.2]`).
-- **a11y**: 404 suggestions — restored aria-live announcement + CLS
-  guard (`1f07c70d`, closes finding `[4.2]`).
-- **perf**: static OG image / icon routes now hit the edge cache
-  (`f396e554`, closes finding `[4.2]`).
-- **a11y**: 404 suggestions — guarded the empty-hit CLS collapse too
-  (`4eb185ef`, closes finding `[4.0]`).
-- **perf**: per-pillar RSS feeds now hit the edge cache (`0651e52b`,
-  closes finding `[4.0]`).
-- **fix**: site-wide HSTS header now covers subdomains and is
-  preload-eligible (`dcced76a`, closes finding `[4.05]`).
-- **docs**: `bearings.md`/`agents.md` corrected from Next.js 15 to
-  16 (`b5bc8e13`, closes finding `[3.6]`).
-- **perf**: `InlineViz` diagrams stay legible when printed
-  (`bf6bdf1b`, closes finding `[4.8]`).
-- **fix**: footer copyright year now computed instead of hardcoded
-  (`6946a679`, closes finding `[3.6]`, closes #972).
+- **data**: DCS Dolch / Molch spark continuity in W35/W36 trend
+  snapshots repaired — corrected shift-and-append spark arrays
+  derived by hand from the phase-34-corrected W34 baseline
+  (`ac9539fa`, closes finding `[3.5]`, closes #973). Audit row
+  closed same-tick (`5a4f8367`).
 
 ## Queues now
 
@@ -120,12 +105,13 @@ as this file writes.
   undispatched pending `/oversight` on the asset-hygiene dispatch-gap
   candidate.
 - **`plan/CRITIQUE.md`**: last real pass 2026-05-11T01:01:38Z
-  (pass 11, `1c4f6da5`) — **~113 days stale**. Only Pending row is
+  (pass 11, `1c4f6da5`) — **~114 days stale**. Only Pending row is
   the standing non-actionable `[needs-user-call]` GA-beacon 503 item.
-- **`plan/PHASE_CANDIDATES.md`**: pass 410, 33 pending rows. Last
-  promotion: phase 50, 2026-08-23 via local `/oversight`. Highest-
-  scored pending row is `[7.5]` Automated content-fact-vs-catalog
-  numeric-spec audit.
+- **`plan/PHASE_CANDIDATES.md`**: pass 414, 33 pending `[ ]` rows
+  (plus 1 standing `[needs-user-call]` row). Last promotion: phase
+  50, 2026-08-23 via local `/oversight`. Highest-scored pending row
+  is still `[7.5]` Automated content-fact-vs-catalog numeric-spec
+  audit.
 - **`data/BACKLOG.md`**: 0 pending, unchanged.
 - **GitHub issues**: 2 open — `#929` (`triage:reviewed`,
   informational) and `#898` (`bug` + `triage:needs-user`, the
@@ -148,16 +134,16 @@ foreground calls:
 - `build` — clean production build, all routes compile
 - `size` — `/page` 146.7 KB gz (budget 200 KB), `/search/page`
   144.0 KB gz (budget 175 KB) — both comfortably under budget
-- `e2e` — 1217/1217 passed (8.1m), against `next start :4173`
+- `e2e` — 1217/1217 passed (8.7m), against `next start :4173`
 
 No HIGH AUDIT row filed — nothing red. `deploy:check` at HEAD
-(`63b44bbc`) reports `READY`.
+(`5a4f8367`) reports `READY`.
 
 ## Needs you
 
 1. **Promote or reject the `/critique` cloud-skip diagnostic**
    (`[needs-user-call] [score 6.5]` in `PHASE_CANDIDATES.md`) — the
-   fresh-eyes loop has been silent for ~113 days and the root cause
+   fresh-eyes loop has been silent for ~114 days and the root cause
    (no Chrome MCP on the cloud runner) has been confirmed since
    expand pass 218.
 2. **Look at the asset-hygiene dispatch-gap candidate**
@@ -177,10 +163,10 @@ No HIGH AUDIT row filed — nothing red. `deploy:check` at HEAD
 No pending phase — the loop stays in `/iterate` mode. With AUDIT.md's
 actionable queue empty and CRITIQUE.md's queue empty, the next
 `/iterate`/`/march` ticks will most likely keep alternating between
-fresh general-purpose audit sweeps (as most of this window's ticks
-did) and `/expand` passes. Worth watching whether the 11-pass
-no-candidate streak since pass 399 continues climbing back toward
-flag territory or breaks again soon.
+fresh general-purpose audit sweeps and `/expand` passes, same shape
+as this window. Worth watching whether the 15-pass no-candidate
+streak since pass 399 continues climbing back toward flag territory
+or breaks again soon.
 
 ## Tuning proposals
 
