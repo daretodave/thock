@@ -1577,6 +1577,17 @@
 
 ## Open findings
 
+### [x] [content] [3.5] divinikey-gmk-cyl-orange-alert-group-buy miscalculates its own shipping-duration figure and contradicts itself in the same sentence — addressed in this commit, closes #974
+- category: content
+- filed: 2026-09-02T18:32:03Z by cloud /iterate audit (mirrored as issue #974 by an earlier cloud march tick; no AUDIT.md row was ever written for it, so it sat un-drained — the exact orphaned-`loop:opened`-issue pattern documented in the standing `[needs-user-call] [3.0]` engineering row below)
+- impact: 5 (the "Timing" section's shipping-estimate paragraph is load-bearing prose a buyer reads to set delivery expectations; it mislabeled its own duration figure and then described the 9-to-12-month reference range as "close-to-delivery" while also saying it's "measured from group-buy open rather than close" — contradicting itself in the same breath, and six months doesn't fall inside a 9-to-12 range under either anchor)
+- ease: 7 (single-paragraph prose rewrite, no schema/data change; cross-checked against the two precedent articles — `gmk-cyl-prussian-alert.mdx` and `gmk-cyl-selene-group-buy.mdx` — which both consistently define the reference range as close-to-delivery, confirming the source of the error was an anchor-point mix-up, not a made-up range)
+- score: 3.5 (impact × ease / 10)
+- evidence: `data/group-buys/divinikey-gmk-cyl-orange-alert.json` — startDate 2026-08-14 (open), endDate 2026-09-14 (close). Estimated shipping February 2027: Aug 14 → Feb 14 is six months (open-to-delivery); Sep 14 → Feb 14 is five months (close-to-delivery) — the article had called the six-month figure "close to delivery," which is wrong on its own terms.
+- issue: #974
+> **Resolved (2026-09-02):** Rewrote the Timing section's shipping-estimate sentence to name both reference points plainly (six months from the August 14 open, five months from the September 14 close) and note honestly that the five-month close-to-delivery span runs shorter than the 9-to-12-month range Prussian Alert and Selene logged, framing the gap as something to watch rather than asserting a false "inside the range" claim. `updatedAt` bumped to 2026-09-02. `pnpm verify` full gate run this tick.
+> Picked as the top signal this tick: no unlabeled GitHub issues (triage gate, 0 unlabeled); not Monday-relevant (W36 snapshot already existed); no pending phases/data/content-gap work (all 7 mechanical surveys re-ran clean, no rows filed); march's own expand Step 3c gate not met (3 commits/~23h since pass 414's own commit, threshold 20 commits/48h). Before dispatching a fresh general-purpose sweep, checked open GitHub issues directly and found `#974` (`loop:opened`, filed 2026-09-02T18:32:03Z by an earlier tick today) with no matching AUDIT.md row — confirming it was mirrored but never drained. Verified the claim independently against the group-buy record's own dates and two precedent CYL articles before shipping the fix.
+
 ### [x] [perf] [3.6] /article/[slug] and /tag/[slug] never hit the edge cache — headers() in not-found.tsx forces the whole segment dynamic — addressed in this commit, closes #963
 - category: perf
 - filed: 2026-08-31 by cloud /iterate audit (fresh general-purpose sweep, angle: live production HTTP header inspection)
