@@ -12949,3 +12949,15 @@ passes accumulate signals.)
 - fix: corrected `data/trends/2026-W35.json` "DCS Dolch / Molch" spark to `[19, 12, 12, 38, 34, 26, 25, 38]` (true shift-and-append of the corrected W34 array + W35's real score 38); corrected `data/trends/2026-W36.json`'s spark to `[12, 12, 38, 34, 26, 25, 38, 34]` (shift-and-append of the corrected W35 array + W36's real score 34). Regenerated the data manifests + search index. `pnpm verify` full gate green: typecheck, lint, 862 unit tests, 230 script tests, data:validate, build, size (146.7 KB/144.0 KB), 1217/1217 e2e — run as sequential foreground legs per the cloud loop's gate-backgrounding rule.
 - issue: #973
 > Picked as the top signal this tick (cloud `/march`): no unlabeled GitHub issues (triage gate, 0 unlabeled; same 2 known open issues `#929`/`#898` unchanged). Not Monday (W36 snapshot already exists, weekly snapshot gate skipped). No pending phases/data work (`01_build_plan.md`/`BACKLOG.md` both 0 `[ ]` rows); content-gap queue empty (Rule 1 comfortable, `content-gap-survey.mjs` filed nothing) and all 7 mechanical surveys re-ran clean this tick, no new rows filed. march's own expand Step 3c gate not met (0 commits/~5h since pass 414's own commit `25cd1dd3`, well under the 20-commit/48h threshold). AUDIT.md's only other Pending rows remained the five standing sub-3.0 items (unchanged) plus the two standing `[needs-user-call]` rows; `plan/CRITIQUE.md`'s only Pending row remains the non-actionable GA-beacon item. Dispatched a fresh general-purpose sweep with an extensive exclusion list drawn from passes 397-414's exhaustive coverage (workflow YAML pinning, README/script accuracy, tag taxonomy orphans, duplicate slugs, group-buy date-math edge cases, quiz/compare edge-case copy, search index freshness, robots.txt) — this spark-continuity seam, checked by hand rather than via the tool the repo already has (which structurally cannot see it), was the one finding that cleared the 3.0 bar.
+
+### [HOT PURSUIT] [content-gap] [7] trends pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 8 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: trends
+- window-count: 1
+- window-start: 2026-08-04
+- score: 7
+- next: /ship-content → trends pillar article
+> Filed 2026-09-03 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
