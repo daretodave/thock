@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Cherry brand and Cherry MX2A switch Trends Tracker scores, W33 through W36 — brand falls from -2 to -20, MX2A falls from -46 to -54, both declining at a similar rate roughly 40 to 45 points apart</title>
+
+  <!-- Title -->
+  <text x="600" y="54" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Cherry — Trends Tracker, W33 → W36</text>
+
+  <!-- Chart area: x from 220 to 1000, y from 100 (score 0) downward -->
+  <!-- Scale: 4px per score point. y = 100 + (abs(score) * 4) -->
+  <!-- Brand: -2->108, -8->132, -15->160, -20->180 -->
+  <!-- MX2A:  -46->284, -49->296, -50->300, -54->316 -->
+
+  <!-- Zero line -->
+  <line x1="180" y1="100" x2="1080" y2="100" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.4" stroke-width="1.5"/>
+  <text x="168" y="104" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.5">0</text>
+
+  <!-- Grid lines at -20, -40, -60 -->
+  <line x1="180" y1="180" x2="1080" y2="180" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.12"/>
+  <text x="168" y="184" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.4">-20</text>
+
+  <line x1="180" y1="260" x2="1080" y2="260" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.12"/>
+  <text x="168" y="264" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.4">-40</text>
+
+  <line x1="180" y1="340" x2="1080" y2="340" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.12"/>
+  <text x="168" y="344" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.4">-60</text>
+
+  <!-- Brand line (upper, brighter coral) -->
+  <polyline points="220,108 480,132 740,160 1000,180" stroke="oklch(0.68 0.165 28)" stroke-width="3" stroke-opacity="0.95" fill="none"/>
+  <circle cx="220" cy="108" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.45"/>
+  <circle cx="480" cy="132" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.45"/>
+  <circle cx="740" cy="160" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.45"/>
+  <circle cx="1000" cy="180" r="10" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.9"/>
+  <text x="1020" y="176" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.68 0.165 28)" stroke="none" font-weight="600">-20</text>
+  <text x="230" y="98" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.85">Cherry brand</text>
+
+  <!-- MX2A line (lower, dimmer coral) -->
+  <polyline points="220,284 480,296 740,300 1000,316" stroke="oklch(0.68 0.165 28)" stroke-width="3" stroke-opacity="0.55" fill="none"/>
+  <circle cx="220" cy="284" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.45"/>
+  <circle cx="480" cy="296" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.45"/>
+  <circle cx="740" cy="300" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.45"/>
+  <circle cx="1000" cy="316" r="10" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.55"/>
+  <text x="1020" y="320" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.68 0.165 28)" stroke="none" font-weight="600" opacity="0.85">-54</text>
+  <text x="230" y="274" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.65">Cherry MX2A switch</text>
+
+  <!-- Lumina Brown marker at W34 -->
+  <line x1="480" y1="132" x2="480" y2="296" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.3" stroke-width="1.5" stroke-dasharray="3 5"/>
+  <text x="490" y="215" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.62 0.13 25)" stroke="none" opacity="0.75">Lumina Brown complaints surface, W34</text>
+
+  <!-- X-axis week labels -->
+  <text x="220"  y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">W33</text>
+  <text x="480"  y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">W34</text>
+  <text x="740"  y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">W35</text>
+  <text x="1000" y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">W36</text>
+
+  <!-- Caption annotation -->
+  <text x="600" y="432" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">one unresolved complaint, two rows falling together</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

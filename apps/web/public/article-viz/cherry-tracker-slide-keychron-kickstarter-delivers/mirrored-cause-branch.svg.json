@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-30T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "cherry-tracker-slide-keychron-kickstarter-delivers",
+  "article_pillar": "trends",
+  "section_anchor": "One cause on each side",
+  "brief_summary": "Mirrored branch diagram. Left half shows one unaddressed complaint (Lumina Brown) branching into two declining tracker rows, Cherry brand (-2 to -20) and Cherry MX2A (-46 to -54). Right half shows one Kickstarter launch (V6 Ultra Hybrid) branching into two climbing tracker rows, Keychron brand (97 to 100) and Hall Effect/Rapid Trigger category (97 to 98). Visualizes the article's connective thread that both trajectories share a single-cause, double-row mechanism.",
+  "target": "apps/web/public/article-viz/cherry-tracker-slide-keychron-kickstarter-delivers/mirrored-cause-branch.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "data/trends/2026-W33.json and data/trends/2026-W36.json — Cherry brand -2 to -20, Cherry MX2A -46 to -54, Keychron brand 97 to 100, Hall Effect/Rapid Trigger 97 to 98",
+    "apps/web/src/content/articles/cherry-tracker-slide-keychron-kickstarter-delivers.mdx:section 'One cause on each side' — 'one narrow, specific, unaddressed problem... quietly dragged down both the switch-level row it originated on and the brand-level row sitting above it' and 'one broad, well-timed launch did the identical job in reverse'"
+  ],
+  "outputs": ["apps/web/public/article-viz/cherry-tracker-slide-keychron-kickstarter-delivers/mirrored-cause-branch.svg"],
+  "warnings": []
+}

@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "slug": "cherry-tracker-slide-keychron-kickstarter-delivers",
+      "readTime": 7,
+      "frontmatter": {
+        "title": "Cherry's tracker slide continues. Keychron's Kickstarter delivered.",
+        "lede": "Three weeks ago thock closed a piece with two open questions: would Cherry's brand line keep closing the gap toward positive territory, and would Keychron's V6 Ultra HE Kickstarter give the tracker something new to climb on. Both questions have answers now, and they point in opposite directions for a related reason.",
+        "pillar": "trends",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "split-ergo-parts-pairing",
       "readTime": 9,
       "frontmatter": {
@@ -7269,5 +7279,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-09-02T23:54:25.940Z"
+  "generatedAt": "2026-09-03T19:49:10.141Z"
 }

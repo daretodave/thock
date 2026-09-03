@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Keychron brand and Hall Effect / Rapid Trigger category Trends Tracker scores, W33 through W36 — Keychron brand climbs from 97 to 100, the HE/RT category dips to 96 in W35 before climbing to 98 in W36, both compressed near the top of the scale</title>
+
+  <!-- Title -->
+  <text x="600" y="54" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Keychron — Trends Tracker, W33 → W36</text>
+
+  <!-- Chart area: x from 220 to 1000, y from 340 (score 60) to 100 (score 100) -->
+  <!-- Scale: 6px per score point. y = 340 - ((score - 60) * 6) -->
+  <!-- Brand:    97->118, 97->118, 98->112, 100->100 -->
+  <!-- Category: 97->118, 97->118, 96->124, 98->112 -->
+
+  <!-- Ceiling marker near score 100 -->
+  <line x1="180" y1="100" x2="1080" y2="100" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.25" stroke-width="1.5" stroke-dasharray="4 5"/>
+  <text x="1080" y="93" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.5">tracker ceiling ~100</text>
+
+  <!-- Grid lines -->
+  <line x1="180" y1="160" x2="1080" y2="160" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.12"/>
+  <text x="168" y="164" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.4">90</text>
+
+  <line x1="180" y1="220" x2="1080" y2="220" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.12"/>
+  <text x="168" y="224" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.4">80</text>
+
+  <line x1="180" y1="280" x2="1080" y2="280" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.12"/>
+  <text x="168" y="284" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.4">70</text>
+
+  <!-- V6 Ultra Hybrid Kickstarter marker at W34 -->
+  <line x1="480" y1="90" x2="480" y2="340" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.25" stroke-width="1.5" stroke-dasharray="3 5"/>
+  <text x="490" y="360" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.75">V6 Ultra Hybrid Kickstarter launches Aug 18</text>
+
+  <!-- Keychron brand line (upper, brighter coral) -->
+  <polyline points="220,118 480,118 740,112 1000,100" stroke="oklch(0.68 0.165 28)" stroke-width="3" stroke-opacity="0.95" fill="none"/>
+  <circle cx="220" cy="118" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.45"/>
+  <circle cx="480" cy="118" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.45"/>
+  <circle cx="740" cy="112" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.45"/>
+  <circle cx="1000" cy="100" r="10" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.9"/>
+  <text x="1020" y="96" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.68 0.165 28)" stroke="none" font-weight="600">100</text>
+  <text x="230" y="106" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.85">Keychron brand</text>
+
+  <!-- HE/RT category line (lower, dimmer coral) -->
+  <polyline points="220,118 480,118 740,124 1000,112" stroke="oklch(0.68 0.165 28)" stroke-width="3" stroke-opacity="0.55" fill="none"/>
+  <circle cx="220" cy="118" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.45"/>
+  <circle cx="480" cy="118" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.45"/>
+  <circle cx="740" cy="124" r="4" fill="oklch(0.78 0.005 90)" stroke="oklch(0.78 0.005 90)" opacity="0.45"/>
+  <circle cx="1000" cy="112" r="10" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.55"/>
+  <text x="1020" y="128" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.68 0.165 28)" stroke="none" font-weight="600" opacity="0.85">98</text>
+  <text x="230" y="140" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.65">Hall Effect / Rapid Trigger category</text>
+
+  <!-- X-axis week labels -->
+  <text x="220"  y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">W33</text>
+  <text x="480"  y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">W34</text>
+  <text x="740"  y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">W35</text>
+  <text x="1000" y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">W36</text>
+
+  <!-- Caption annotation -->
+  <text x="600" y="432" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">569 percent of goal in 48 hours, felt on two rows at once</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

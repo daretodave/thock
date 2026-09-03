@@ -1,0 +1,26 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-30T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "cherry-tracker-slide-keychron-kickstarter-delivers",
+  "article_pillar": "trends",
+  "section_anchor": "Cherry's line reversed inside a week",
+  "brief_summary": "Two declining coral lines across four weeks (W33-W36): the Cherry brand row falling from -2 to -20, and the Cherry MX2A switch row falling from -46 to -54 across the same window, with a dashed marker at W34 noting when Lumina Brown complaints first surfaced.",
+  "target": "apps/web/public/article-viz/cherry-tracker-slide-keychron-kickstarter-delivers/cherry-decline-dual-line.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "data/trends/2026-W33.json:rows — 'Cherry (MX + XTRFY)' score -2; 'Cherry MX2A' score -46",
+    "data/trends/2026-W34.json:rows — 'Cherry (MX + XTRFY)' score -8; 'Cherry MX2A' score -49, note: 'Early reports of stem wobble and inconsistent acoustics surface on the new China-made Lumina Brown'",
+    "data/trends/2026-W35.json:rows — 'Cherry (MX + XTRFY)' score -15; 'Cherry MX2A' score -50",
+    "data/trends/2026-W36.json:rows — 'Cherry (MX + XTRFY)' score -20; 'Cherry MX2A' score -54, note: 'no official response yet'",
+    "apps/web/src/content/articles/cherry-tracker-slide-keychron-kickstarter-delivers.mdx:section 'Cherry's line reversed inside a week' — 'the row sat at -20, erasing three months of the goodwill the XTRFY MK Crystal TMR pivot had built'"
+  ],
+  "outputs": ["apps/web/public/article-viz/cherry-tracker-slide-keychron-kickstarter-delivers/cherry-decline-dual-line.svg"],
+  "warnings": []
+}

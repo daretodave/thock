@@ -1,0 +1,26 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-30T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "cherry-tracker-slide-keychron-kickstarter-delivers",
+  "article_pillar": "trends",
+  "section_anchor": "The V6 Ultra Hybrid did more than fund",
+  "brief_summary": "Two climbing coral lines across four weeks (W33-W36), compressed near the top of the scale: the Keychron brand row rising from 97 to 100, and the Hall Effect/Rapid Trigger category row dipping to 96 in W35 before climbing to 98 in W36, with a dashed marker at W34 noting the V6 Ultra Hybrid Kickstarter launch date.",
+  "target": "apps/web/public/article-viz/cherry-tracker-slide-keychron-kickstarter-delivers/keychron-climb-dual-line.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "data/trends/2026-W33.json:rows — 'Keychron' score 97; 'Hall Effect/Rapid Trigger' score 97",
+    "data/trends/2026-W34.json:rows — 'Keychron' score 97, note: 'Launched the V6 Ultra Hybrid on Kickstarter Aug 18'; 'Hall Effect/Rapid Trigger' score 97",
+    "data/trends/2026-W35.json:rows — 'Keychron' score 98, note: '$149 early-bird pricing'; 'Hall Effect/Rapid Trigger' score 96",
+    "data/trends/2026-W36.json:rows — 'Keychron' score 100, note: 'V6 Ultra Hybrid Kickstarter hit 569% of goal in 48 hours'; 'Hall Effect/Rapid Trigger' score 98, note: 'hit 569% of its $30k goal within 48 hours, reinforcing HE's mainstream pull'",
+    "apps/web/src/content/articles/cherry-tracker-slide-keychron-kickstarter-delivers.mdx:section 'The V6 Ultra Hybrid did more than fund' — '569 percent of its $30,000 goal inside 48 hours'"
+  ],
+  "outputs": ["apps/web/public/article-viz/cherry-tracker-slide-keychron-kickstarter-delivers/keychron-climb-dual-line.svg"],
+  "warnings": []
+}

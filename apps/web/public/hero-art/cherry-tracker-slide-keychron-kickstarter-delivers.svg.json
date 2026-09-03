@@ -1,0 +1,35 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-09-03T00:00:00.000Z",
+  "commit": "4210accab617f0a8c11695701486da8bc143463c",
+  "kind": "hero-art",
+  "article_slug": "cherry-tracker-slide-keychron-kickstarter-delivers",
+  "article_pillar": "trends",
+  "brief_summary": "Hero art for the Trends pillar piece on two diverging brand-tracker trajectories across W33-W36 (Aug 2026): Cherry's score sliding -2 -> -8 -> -15 -> -20 on unaddressed switch-quality complaints, rendered as a warm-grey (de-emphasized) sparkline, against Keychron's score climbing to an all-time-high of 100 on a hit Kickstarter campaign, rendered as the coral (splash) focal sparkline with a haloed terminus dot. Both lines start near a shared origin in W33 (flagged by a faint dashed bracket) and diverge sharply by W36. A dashed zero-score reference line and a dashed all-time-high reference line frame the two trajectories. A faint warm-grey keyboard case + key-row silhouette sits behind the chart as background texture. Family warm-bronze theme dot in the upper-right margin.",
+  "source": "plan/bearings.md § Article hero art — colorful keyboard SVGs (locked 2026-05-09), trends piece -> sparkline silhouette directive",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject",
+  "size": [1200, 750],
+  "subject": "Dual sparkline silhouette over a faint keyboard case backdrop: Cherry's brand-tracker score declining across 4 weekly points (-2, -8, -15, -20) in warm-grey, Keychron's brand-tracker score climbing across 4 weekly points to an all-time-high of 100 in coral, both starting near a shared origin in W33 and diverging through W36. Dashed zero-score and all-time-high reference lines; chart-axis baseline with per-week ticks; coral wash + haloed focal dot at Keychron's W36 peak.",
+  "splash_color": {
+    "name": "coral",
+    "oklch": "oklch(0.68 0.165 28)"
+  },
+  "accent_color": {
+    "name": "warm-bronze (theme accent)",
+    "oklch": "oklch(0.80 0.135 75)"
+  },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": [],
+  "outputs": [
+    "apps/web/public/hero-art/cherry-tracker-slide-keychron-kickstarter-delivers.svg"
+  ],
+  "warnings": [
+    "Cherry's four weekly values (-2, -8, -15, -20) are the exact brief-sourced tracker readings for W33-W36. Keychron's terminal value (100, all-time high, W36) is brief-sourced; the three preceding weekly values (4, 22, 58 for W33-W35) are stylized interpolation chosen for a plausible accelerating-climb read and are illustrative, not literal tracker data points."
+  ],
+  "data_sources": [
+    "brief: Cherry brand-tracker score W33-W36 = -2, -8, -15, -20 (unaddressed switch-quality complaints)",
+    "brief: Keychron brand-tracker score W36 = 100, all-time high (hit Kickstarter campaign)"
+  ]
+}

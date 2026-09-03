@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — two brand-tracker sparklines diverging from a near-crossing start: Cherry sliding into negative territory (-2 to -20) in warm-grey, Keychron rocketing to an all-time-high 100 in coral, both plotted over a faint keyboard silhouette</title>
+
+  <!-- ==========================================================
+       BACKGROUND — faint keyboard silhouette, very low opacity.
+       Outer case + five simplified key-row bars (not individual
+       keycaps) so the chart lines stay legible on top.
+       ========================================================== -->
+  <g opacity="0.16">
+    <path d="
+      M 146 220
+      L 1054 220
+      L 1070 236
+      L 1070 624
+      L 1054 640
+      L 146 640
+      L 130 624
+      L 130 236
+      Z" />
+  </g>
+  <g opacity="0.13">
+    <rect x="160" y="250" width="880" height="46" rx="8"/>
+    <rect x="160" y="320" width="880" height="46" rx="8"/>
+    <rect x="160" y="390" width="880" height="46" rx="8"/>
+    <rect x="160" y="460" width="880" height="46" rx="8"/>
+    <rect x="340" y="530" width="520" height="46" rx="8"/>
+  </g>
+
+  <!-- Coral wash behind the Keychron terminus — focal region, all-time high -->
+  <ellipse cx="1040" cy="165" rx="230" ry="145" fill="oklch(0.68 0.165 28 / 0.10)" stroke="none"/>
+
+  <!-- All-time-high reference line: dashed, sits just above the Keychron peak -->
+  <line x1="110" y1="125" x2="1090" y2="125" stroke-dasharray="4 5" stroke-opacity="0.35"/>
+  <line x1="110" y1="117" x2="110" y2="133" stroke-opacity="0.35"/>
+  <line x1="1090" y1="117" x2="1090" y2="133" stroke-opacity="0.35"/>
+
+  <!-- Zero-score reference line: dashed, marks the neutral tracker baseline both brands cross away from -->
+  <line x1="110" y1="575" x2="1090" y2="575" stroke-dasharray="4 5" stroke-opacity="0.30"/>
+  <line x1="110" y1="567" x2="110" y2="583" stroke-opacity="0.30"/>
+  <line x1="1090" y1="567" x2="1090" y2="583" stroke-opacity="0.30"/>
+
+  <!-- Baseline axis with per-week tick marks (chart-silhouette convention) -->
+  <line x1="110" y1="660" x2="1090" y2="660" stroke-opacity="0.3"/>
+  <g stroke-opacity="0.3">
+    <line x1="150"  y1="655" x2="150"  y2="665"/>
+    <line x1="450"  y1="655" x2="450"  y2="665"/>
+    <line x1="750"  y1="655" x2="750"  y2="665"/>
+    <line x1="1050" y1="655" x2="1050" y2="665"/>
+  </g>
+
+  <!-- Near-crossing marker: faint dashed bracket flagging how close the two trackers start in W33 -->
+  <line x1="150" y1="558" x2="150" y2="584" stroke-dasharray="3 4" stroke-opacity="0.28"/>
+
+  <!-- ==========================================================
+       CHERRY sparkline — 4 weekly points, W33-W36, score
+       -2, -8, -15, -20. Rendered in the family's default
+       warm-grey (de-emphasized, the losing trajectory).
+       Domain: -20 to 100 mapped to y 660 (low) .. 150 (high).
+       ========================================================== -->
+  <polyline
+    points="150,584 450,609 750,639 1050,660"
+    stroke="oklch(0.78 0.005 90)"
+    stroke-width="3"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+  />
+  <circle cx="150"  cy="584" r="5" fill="oklch(0.78 0.005 90)" stroke="none"/>
+  <circle cx="450"  cy="609" r="5" fill="oklch(0.78 0.005 90)" stroke="none"/>
+  <circle cx="750"  cy="639" r="5" fill="oklch(0.78 0.005 90)" stroke="none"/>
+  <circle cx="1050" cy="660" r="5" fill="oklch(0.78 0.005 90)" stroke="none"/>
+
+  <!-- ==========================================================
+       KEYCHRON sparkline — 4 weekly points, W33-W36, climbing
+       to an all-time-high score of 100 on the Kickstarter hit.
+       Coral splash, the focal trajectory.
+       ========================================================== -->
+  <polyline
+    points="150,558 450,482 750,329 1050,150"
+    stroke="oklch(0.68 0.165 28)"
+    stroke-width="3"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+  />
+  <circle cx="150" cy="558" r="5" fill="oklch(0.68 0.165 28)" stroke="none"/>
+  <circle cx="450" cy="482" r="5" fill="oklch(0.68 0.165 28)" stroke="none"/>
+  <circle cx="750" cy="329" r="5" fill="oklch(0.68 0.165 28)" stroke="none"/>
+
+  <!-- Focal dot: Keychron's all-time-high close, W36, score 100 -->
+  <circle cx="1050" cy="150" r="9" fill="oklch(0.68 0.165 28)" stroke="none"/>
+  <circle cx="1050" cy="150" r="17" fill="none" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.35" stroke-width="1.5"/>
+
+  <!-- Bronze theme dot: upper-right ornamental anchor -->
+  <circle cx="1140" cy="55" r="7" fill="oklch(0.80 0.135 75)" stroke="none" opacity="0.9"/>
+</svg>
