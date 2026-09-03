@@ -12950,7 +12950,7 @@ passes accumulate signals.)
 - issue: #973
 > Picked as the top signal this tick (cloud `/march`): no unlabeled GitHub issues (triage gate, 0 unlabeled; same 2 known open issues `#929`/`#898` unchanged). Not Monday (W36 snapshot already exists, weekly snapshot gate skipped). No pending phases/data work (`01_build_plan.md`/`BACKLOG.md` both 0 `[ ]` rows); content-gap queue empty (Rule 1 comfortable, `content-gap-survey.mjs` filed nothing) and all 7 mechanical surveys re-ran clean this tick, no new rows filed. march's own expand Step 3c gate not met (0 commits/~5h since pass 414's own commit `25cd1dd3`, well under the 20-commit/48h threshold). AUDIT.md's only other Pending rows remained the five standing sub-3.0 items (unchanged) plus the two standing `[needs-user-call]` rows; `plan/CRITIQUE.md`'s only Pending row remains the non-actionable GA-beacon item. Dispatched a fresh general-purpose sweep with an extensive exclusion list drawn from passes 397-414's exhaustive coverage (workflow YAML pinning, README/script accuracy, tag taxonomy orphans, duplicate slugs, group-buy date-math edge cases, quiz/compare edge-case copy, search index freshness, robots.txt) — this spark-continuity seam, checked by hand rather than via the tool the repo already has (which structurally cannot see it), was the one finding that cleared the 3.0 bar.
 
-### [HOT PURSUIT] [content-gap] [7] trends pillar — 1 of ≥2 articles in last 30d
+### [x] [content-gap] [7] trends pillar — 1 of ≥2 articles in last 30d — addressed by `3cacac26`, closes #975
 - category: content-gaps
 - impact: 8 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -12962,3 +12962,15 @@ passes accumulate signals.)
 - next: /ship-content → trends pillar article
 - issue: #975
 > Filed 2026-09-03 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+> Addressed 2026-09-03 (cloud /march): shipped "Cherry's tracker slide continues. Keychron's Kickstarter delivered." (`cherry-tracker-slide-keychron-kickstarter-delivers.mdx`, trends pillar, publishedAt 2026-08-30) — a three-week tracker-data follow-up to the two open questions `hall-effect-rapid-trigger-plateau.mdx` raised on 2026-08-12, sourced entirely from `data/trends/2026-W33.json` through `2026-W36.json` and thock's own prior coverage. No scout research needed.
+
+### [ ] [cross-links] [4.5] cherry-tracker-slide-keychron-kickstarter-delivers ↔ zmk-mainstream-shift — no prose cross-link (same pillar, ≥2 shared tags: keychron, trends-2026)
+- category: cross-links
+- filed: 2026-09-03 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: keychron, trends-2026
+- article-a: apps/web/src/content/articles/cherry-tracker-slide-keychron-kickstarter-delivers.mdx
+- article-b: apps/web/src/content/articles/zmk-mainstream-shift.mdx
+- action: add [zmk-mainstream-shift](/article/zmk-mainstream-shift) to cherry-tracker-slide-keychron-kickstarter-delivers body, or vice versa
