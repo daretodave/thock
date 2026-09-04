@@ -12964,7 +12964,7 @@ passes accumulate signals.)
 > Filed 2026-09-03 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 > Addressed 2026-09-03 (cloud /march): shipped "Cherry's tracker slide continues. Keychron's Kickstarter delivered." (`cherry-tracker-slide-keychron-kickstarter-delivers.mdx`, trends pillar, publishedAt 2026-08-30) — a three-week tracker-data follow-up to the two open questions `hall-effect-rapid-trigger-plateau.mdx` raised on 2026-08-12, sourced entirely from `data/trends/2026-W33.json` through `2026-W36.json` and thock's own prior coverage. No scout research needed.
 
-### [ ] [cross-links] [4.5] cherry-tracker-slide-keychron-kickstarter-delivers ↔ zmk-mainstream-shift — no prose cross-link (same pillar, ≥2 shared tags: keychron, trends-2026)
+### [x] [cross-links] [4.5] cherry-tracker-slide-keychron-kickstarter-delivers ↔ zmk-mainstream-shift — no prose cross-link (same pillar, ≥2 shared tags: keychron, trends-2026) — addressed in commit `716e028d`
 - category: cross-links
 - filed: 2026-09-03 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -12974,3 +12974,17 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/cherry-tracker-slide-keychron-kickstarter-delivers.mdx
 - article-b: apps/web/src/content/articles/zmk-mainstream-shift.mdx
 - action: add [zmk-mainstream-shift](/article/zmk-mainstream-shift) to cherry-tracker-slide-keychron-kickstarter-delivers body, or vice versa
+- issue: [mirror-failed: 2026-09-04]
+> Addressed 2026-09-04 (cloud /march): added an inline link to zmk-mainstream-shift in cherry-tracker-slide-keychron-kickstarter-delivers' "V6 Ultra Hybrid did more than fund" section, connecting the Q Ultra ZMK firmware story to the same Keychron product-ladder momentum. `pnpm verify` full gate green: typecheck, lint, 862 unit tests, 230 script tests, data:validate, build, size, 1220/1220 e2e.
+
+### [ ] [newsletter] [4.0] Weekly digest — issue 010 due (7 days since issue 9)
+- category: content-gaps
+- filed: 2026-09-04 by newsletter-gap-survey.mjs
+- impact: 5 (newsletter archive going stale reduces /newsletter value and reader trust in cadence)
+- ease: 8 (content-curator weekly round-up: 5 pillar picks + tracker insight)
+- score: 4.0 (impact × ease / 10)
+- next: /ship-content → newsletter type (weekly round-up, 5 pillar picks, tracker insight)
+- last-issue: 2026-08-28 (thock-weekly-009)
+- days-since: 7
+- issue: [mirror-failed: 2026-09-04]
+> Filed 2026-09-04 by newsletter-gap-survey.mjs. 7 days since issue 9. Threshold: ≥7 calendar days.
