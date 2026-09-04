@@ -12977,7 +12977,7 @@ passes accumulate signals.)
 - issue: [mirror-failed: 2026-09-04]
 > Addressed 2026-09-04 (cloud /march): added an inline link to zmk-mainstream-shift in cherry-tracker-slide-keychron-kickstarter-delivers' "V6 Ultra Hybrid did more than fund" section, connecting the Q Ultra ZMK firmware story to the same Keychron product-ladder momentum. `pnpm verify` full gate green: typecheck, lint, 862 unit tests, 230 script tests, data:validate, build, size, 1220/1220 e2e.
 
-### [ ] [newsletter] [4.0] Weekly digest — issue 010 due (7 days since issue 9)
+### [x] [newsletter] [4.0] Weekly digest — issue 010 due (7 days since issue 9) — addressed in 47ddea6e, closes #977
 - category: content-gaps
 - filed: 2026-09-04 by newsletter-gap-survey.mjs
 - impact: 5 (newsletter archive going stale reduces /newsletter value and reader trust in cadence)
