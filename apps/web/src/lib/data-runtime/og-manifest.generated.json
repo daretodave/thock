@@ -1614,6 +1614,13 @@
   ],
   "newsletters": [
     {
+      "slug": "thock-weekly-010",
+      "title": "thock weekly — issue 10",
+      "lede": "A layout compatibility guide before the keycap set arrives, split-build parts pairing as two decisions instead of one, Cherry's tracker slide against Keychron's delivered Kickstarter, GMK CYL Orange Alert's group buy at Divinikey, and what a silent switch's damping actually silences — plus a tracker check-in on Keychron's all-time high and Cherry's renewed slide.",
+      "issue": 10,
+      "readTime": 5
+    },
+    {
       "slug": "thock-weekly-009",
       "title": "thock weekly — issue 09",
       "lede": "A layout-size guide for matching board to desk, the real chemistry behind retrobrighting yellowed ABS, Keychron's Nova Socket hedge revisited, GMK Just Beachy's group buy now underway across five vendors, and Gateron Magnetic Jade's one-part swap from mechanical to Hall-effect — plus a tracker check-in on Keychron, Hall Effect/Rapid Trigger, and GMK CYL Orange Alert.",
@@ -7279,5 +7286,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-09-04T00:57:44.587Z"
+  "generatedAt": "2026-09-04T05:34:26.168Z"
 }
