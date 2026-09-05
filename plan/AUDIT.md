@@ -84,6 +84,18 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
+### [x] [enhancement] [5.4] empty-state copy diverges from locked template on 12 of 13 surfaces — addressed in this commit, closes #980
+- category: enhancement
+- filed: 2026-09-05 by cloud /iterate audit (fresh general-purpose sweep, angle: empty-state copy consistency across list/archive pages)
+- impact: 6 (reader-visible inconsistency across nearly every list/archive page on the site; undermines the "one voice" editorial polish the loop has been grinding toward)
+- ease: 9 (pure copy edits, no logic changes; 3 sibling unit tests pin exact strings and needed matching updates)
+- score: 5.4 (impact × ease / 10)
+- evidence: `plan/bearings.md` "Standing decisions" locks the empty-state copy template: `"No <noun> yet — check back soon."` Only `apps/web/src/components/archive/ArchiveList.tsx:15` matched it exactly. 12 other surfaces diverged: `apps/web/src/app/page.tsx:138` ("...the editorial side warms up shortly."), `news/page.tsx:90` ("No news yet." — no tail), `ideas/page.tsx:120`, `trends/page.tsx:99`, `trends/tracker/page.tsx:100`, `deep-dives/page.tsx:88`, `guides/page.tsx:82`, `group-buys/page.tsx:127` ("No active group buys right now." — no "yet" at all), `group-buys/past/page.tsx:103`, `tag/[slug]/page.tsx:177`, the three vendor part sections (`VendorSwitchSection.tsx`/`VendorBoardSection.tsx`/`VendorKeycapSetSection.tsx`), `SourceCounts.tsx`/`CitationIndex.tsx`, `NewsletterArchive.tsx:31`.
+- next: standardize every listed empty-state headline to end with "— check back soon.", preserving each page's noun and any secondary flavor text below it
+- issue: #980
+> **Resolved (2026-09-05):** appended "— check back soon." to all 12 divergent empty-state strings (each page's existing noun and any secondary flavor paragraph left untouched — e.g. `trends/tracker/page.tsx`'s specific "Check back next Monday at 09:00 EST." still follows the now-standardized headline). Updated the 3 vendor-section unit tests (`VendorSwitchSection.test.tsx`, `VendorBoardSection.test.tsx`, `VendorKeycapSetSection.test.tsx`) that pinned the old exact strings. No e2e coverage asserted these strings, so no e2e changes needed. `pnpm verify` full gate green: typecheck, lint, unit tests (with the 3 updated assertions), test:scripts, data:validate, build, size, 1223/1223 e2e.
+> Picked as the top signal this tick (cloud `/march`): no unlabeled GitHub issues (0 unlabeled); not Monday (Saturday), W36 snapshot already existed; no pending phases (`01_build_plan.md` 0 `[ ]` rows) or data work (`BACKLOG.md` 0 `[ ]` rows); content-gap queue empty (comfortable) and all 7 mechanical surveys re-ran clean, no rows filed; march's own expand Step 3c gate not met (3 commits/~11.9h since pass 419's own commit `925568f0`, well under the 20-commit/48h threshold). `plan/CRITIQUE.md`'s only Pending row remains the standing `[needs-user-call]` GA-beacon item. Dispatched a fresh general-purpose sweep across angles disjoint from the exhaustive list covered by passes 397-419 (feeds/sitemap/robots, OG/Twitter Card, 404/500/empty-states, caching/PWA/dark-mode/print, newsletter/analytics/search) — this empty-state template violation was the clear top scorer (5.4) among 4 qualifying findings; the others (GTM consent-gate-vs-bearings.md documentation mismatch [3.6], RSS feeds missing `atom:link rel="self"` [3.2], partial 404 "did you mean" coverage [~3.0 borderline]) remain for future ticks.
+
 ### [x] [security-headers] [4.05] site-wide HSTS header missing `includeSubDomains`/`preload` — addressed in commit `dcced76a`, closes #969
 - category: security-headers
 - filed: 2026-08-31 by cloud /iterate audit (fresh general-purpose sweep, angle: HTTP security header full correctness — header *presence* was spot-checked pass 402, but not per-header completeness/value correctness)
@@ -234,6 +246,24 @@
 - score: 2.4 (impact × ease / 10)
 - evidence: `apps/web/src/content/articles/plate-materials-explained.mdx` "Combinations" section (POM+gasket-mount caution) vs. this tick's scout research confirming Mode's Sonnet ships POM as its stock/no-upcharge plate on a block-mount system the hobby files as gasket-mount
 - next: `/iterate` — scout research on whether Mode's block-mount compliance budget differs meaningfully from a foam-strip gasket (which would resolve the tension without contradicting either claim), then a small prose reconciliation pass
+
+### [ ] [engineering] [3.6] GTM analytics ships with no consent gate; `bearings.md` still documents the originally-planned cookieless Plausible tag
+- category: engineering
+- filed: 2026-09-05 by cloud /iterate audit (fresh general-purpose sweep, angle: analytics/consent)
+- impact: 6 (`apps/web/src/components/analytics/GoogleTagManager.tsx:18-20`'s own code comment reads "No consent gate yet — thock collects no PII; GTM is page-level pageview tracking only" — but GDPR/PECR consent requirements for non-essential cookies turn on cookie use, not PII collection, so the reasoning doesn't actually clear the compliance bar. Rendered unconditionally from `apps/web/src/app/layout.tsx:70`, gated only by a `DISABLE_ANALYTICS` bot-suppression flag, not user consent. `plan/bearings.md:73` still states `Analytics | Plausible (script tag, eventual) | Privacy-respecting` — docs were never reconciled after the GTM pivot locked via `/oversight 2026-05-09`, so this is an undocumented architecture change plus an unaddressed compliance gap, not a one-off bug)
+- ease: 6 (either add a lightweight consent gate around the existing `next/script` call, or drop GTM for the originally-planned cookieless Plausible tag — either way `bearings.md:73` needs updating to match reality)
+- score: 3.6 (impact × ease / 10)
+- evidence: `apps/web/src/components/analytics/GoogleTagManager.tsx:18-20`; `apps/web/src/app/layout.tsx:70`; `plan/bearings.md:73`
+- next: `/oversight` call — pick consent-gate-GTM vs. revert-to-Plausible, then implement + reconcile bearings.md
+
+### [ ] [seo] [3.2] RSS feeds omit `atom:link rel="self"` channel self-reference
+- category: seo
+- filed: 2026-09-05 by cloud /iterate audit (fresh general-purpose sweep, angle: feed spec completeness)
+- impact: 4 (feed-validator / aggregator best practice for canonicalizing a feed regardless of fetch URL; not a rendering break but a real spec gap on both `apps/web/src/app/feed.xml/route.ts` (global) and `apps/web/src/app/feed/[pillar]/route.ts` (per-pillar))
+- ease: 8 (one line per channel; the feed URL is already in scope at both call sites via `canonicalUrl()`; neither `buildRss.test.ts` nor `feed.test.ts` currently assert this, so it's a genuinely untested gap)
+- score: 3.2 (impact × ease / 10)
+- evidence: `apps/web/src/lib/rss/buildRss.ts:49-58` — no `xmlns:atom` namespace on `<rss version="2.0">` and no `<atom:link href="..." rel="self" type="application/rss+xml" />` in the channel block
+- next: add the atom namespace + self-link element to `buildRss.ts`, using `canonicalUrl('/feed.xml')` / `canonicalUrl('/feed/${pillar}.xml')`; extend `buildRss.test.ts`/`feed.test.ts` to assert it
 
 ### [x] [data-gaps] [5.6] `data/switches/gazzew-boba-lt.json` describes a 37g/45g silent linear from April 2021 — vendors list the Boba LT as a non-silent 55g/65g long-pole linear — addressed in `d81dd797`, closes #912
 - category: data-gaps
