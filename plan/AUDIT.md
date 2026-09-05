@@ -247,7 +247,7 @@
 - evidence: `apps/web/src/content/articles/plate-materials-explained.mdx` "Combinations" section (POM+gasket-mount caution) vs. this tick's scout research confirming Mode's Sonnet ships POM as its stock/no-upcharge plate on a block-mount system the hobby files as gasket-mount
 - next: `/iterate` — scout research on whether Mode's block-mount compliance budget differs meaningfully from a foam-strip gasket (which would resolve the tension without contradicting either claim), then a small prose reconciliation pass
 
-### [ ] [engineering] [3.6] GTM analytics ships with no consent gate; `bearings.md` still documents the originally-planned cookieless Plausible tag
+### [needs-user-call] [engineering] [3.6] GTM analytics ships with no consent gate; `bearings.md` still documents the originally-planned cookieless Plausible tag
 - category: engineering
 - filed: 2026-09-05 by cloud /iterate audit (fresh general-purpose sweep, angle: analytics/consent)
 - impact: 6 (`apps/web/src/components/analytics/GoogleTagManager.tsx:18-20`'s own code comment reads "No consent gate yet — thock collects no PII; GTM is page-level pageview tracking only" — but GDPR/PECR consent requirements for non-essential cookies turn on cookie use, not PII collection, so the reasoning doesn't actually clear the compliance bar. Rendered unconditionally from `apps/web/src/app/layout.tsx:70`, gated only by a `DISABLE_ANALYTICS` bot-suppression flag, not user consent. `plan/bearings.md:73` still states `Analytics | Plausible (script tag, eventual) | Privacy-respecting` — docs were never reconciled after the GTM pivot locked via `/oversight 2026-05-09`, so this is an undocumented architecture change plus an unaddressed compliance gap, not a one-off bug)
@@ -256,7 +256,7 @@
 - evidence: `apps/web/src/components/analytics/GoogleTagManager.tsx:18-20`; `apps/web/src/app/layout.tsx:70`; `plan/bearings.md:73`
 - next: `/oversight` call — pick consent-gate-GTM vs. revert-to-Plausible, then implement + reconcile bearings.md
 
-### [ ] [seo] [3.2] RSS feeds omit `atom:link rel="self"` channel self-reference
+### [x] [seo] [3.2] RSS feeds omit `atom:link rel="self"` channel self-reference — addressed in 533751c9, closes #981
 - category: seo
 - filed: 2026-09-05 by cloud /iterate audit (fresh general-purpose sweep, angle: feed spec completeness)
 - impact: 4 (feed-validator / aggregator best practice for canonicalizing a feed regardless of fetch URL; not a rendering break but a real spec gap on both `apps/web/src/app/feed.xml/route.ts` (global) and `apps/web/src/app/feed/[pillar]/route.ts` (per-pillar))
@@ -264,6 +264,10 @@
 - score: 3.2 (impact × ease / 10)
 - evidence: `apps/web/src/lib/rss/buildRss.ts:49-58` — no `xmlns:atom` namespace on `<rss version="2.0">` and no `<atom:link href="..." rel="self" type="application/rss+xml" />` in the channel block
 - next: add the atom namespace + self-link element to `buildRss.ts`, using `canonicalUrl('/feed.xml')` / `canonicalUrl('/feed/${pillar}.xml')`; extend `buildRss.test.ts`/`feed.test.ts` to assert it
+- issue: #981
+> **Resolved (2026-09-05):** Added `xmlns:atom` to the `<rss>` root and an `<atom:link href="..." rel="self" type="application/rss+xml" />` line to the channel block in `buildRss.ts`, sourced from a new required `RssChannel.selfUrl` field passed by both route handlers via `canonicalUrl()`. Extended `buildRss.test.ts`, `validate.test.ts`, and `feed.test.ts` to assert the new element; updated the e2e `page-reads.ts` fixture needle to drop the trailing `>` so the existing `<rss version="2.0">` body check still matches with the namespace attribute present. `pnpm verify` full gate green: typecheck, lint, 862 web unit tests, 223 script tests, data:validate, build, size, 1223/1223 e2e. `533751c9`
+> Picked as the top signal this tick (cloud `/march`): no unlabeled GitHub issues (0 unlabeled); not Monday (Saturday), W36 snapshot already existed; no pending phases (`01_build_plan.md` 0 `[ ]` rows) or data work (`BACKLOG.md` 0 `[ ]` rows); content-gap queue empty and all 7 mechanical surveys re-ran fresh this tick, no rows filed; march's own expand Step 3c gate not met (7 commits/~14.8h since pass 419's own commit `925568f0`, well under the 20-commit/48h threshold). This was the highest-scoring actionable Pending row in `plan/AUDIT.md` — the `[engineering][3.6]` GTM consent-gate row scored higher but was retagged `[needs-user-call]` this tick (its own "next" field already called for an `/oversight` decision between consent-gating GTM vs. reverting to Plausible); the remaining Pending rows (`seo [2.7]` stale Mode Sonnet hero-art, `content [2.4]` plate-materials tension, `seo [2.0]` cannonkeys-mode-sonnet-r2 hero-art, `data [2.4]` generated-file drift, `seo [1.8]` orphaned favicon.svg) all scored below the 3.0 bar.
+- issue: #981
 
 ### [x] [data-gaps] [5.6] `data/switches/gazzew-boba-lt.json` describes a 37g/45g silent linear from April 2021 — vendors list the Boba LT as a non-silent 55g/65g long-pole linear — addressed in `d81dd797`, closes #912
 - category: data-gaps
