@@ -84,7 +84,7 @@
 > through `/ship-asset` directly — that lane stays demand-pull
 > per `skills/ship-asset.md` §1.
 
-### [x] [enhancement] [5.4] empty-state copy diverges from locked template on 12 of 13 surfaces — addressed in this commit, closes #980
+### [x] [enhancement] [5.4] empty-state copy diverges from locked template on 12 of 13 surfaces — addressed in commit `9a063ce6`, closes #980
 - category: enhancement
 - filed: 2026-09-05 by cloud /iterate audit (fresh general-purpose sweep, angle: empty-state copy consistency across list/archive pages)
 - impact: 6 (reader-visible inconsistency across nearly every list/archive page on the site; undermines the "one voice" editorial polish the loop has been grinding toward)
