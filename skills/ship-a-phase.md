@@ -322,7 +322,7 @@ not whole pages. One retro-fit commit per family is fine.
 pnpm verify
 ```
 
-Runs: `typecheck && test:run && data:validate && build && e2e`.
+Runs: `typecheck && lint && test:run && test:scripts && data:validate && build && size && e2e`.
 Iterate up to 3 times on the same root cause. If still failing,
 stop per §10.
 

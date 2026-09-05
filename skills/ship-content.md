@@ -284,7 +284,7 @@ step (no file change needed).
 pnpm verify
 ```
 
-Full gate: `typecheck → test:run → data:validate → build → e2e`.
+Full gate: `typecheck → lint → test:run → test:scripts → data:validate → build → size → e2e`.
 
 **Serial fallback for e2e flake:** if the e2e step fails, before
 treating it as a real failure, retry once with:

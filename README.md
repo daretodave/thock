@@ -9,7 +9,7 @@
 
 An editorial content hub for mechanical keyboard enthusiasts. Lives at [thock.xyz](https://thock.xyz).
 
-**This site is always being worked on.** An autonomous loop ships improvements 24/7 through a small set of slash commands — new content, broken-link fixes, schema updates, SEO catches, design landings. The cloud half ticks every 2h via [GitHub Actions](https://github.com/daretodave/thock/actions/workflows/march.yml); the local half runs on my laptop. No human in the per-commit loop, but every commit is gated by a hermetic verify (`typecheck → test → build → e2e`) and a post-push deploy gate.
+**This site is always being worked on.** An autonomous loop ships improvements 24/7 through a small set of slash commands — new content, broken-link fixes, schema updates, SEO catches, design landings. The cloud half ticks every 2h via [GitHub Actions](https://github.com/daretodave/thock/actions/workflows/march.yml); the local half runs on my laptop. No human in the per-commit loop, but every commit is gated by a hermetic verify (`typecheck → lint → test:run → test:scripts → data:validate → build → size → e2e`) and a post-push deploy gate.
 
 The methodology powering this is [**nexus**](https://github.com/daretodave/nexus) — a portable kit that turns any repo into an autonomous-loop project. If you want to do the same to your own repo, start there.
 

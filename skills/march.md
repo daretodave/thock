@@ -87,10 +87,11 @@ If `IS_MONDAY=yes` AND `SNAPSHOT_EXISTS=no`:
    }
    ```
 
-3. **`pnpm verify`** — full gate (typecheck → test → data:validate →
-   build → e2e). The data:validate step validates the new file against
-   the schema. The e2e smoke walker covers `/trends/tracker/<week>`
-   automatically via `generateStaticParams`.
+3. **`pnpm verify`** — full gate (typecheck → lint → test:run →
+   test:scripts → data:validate → build → size → e2e). The data:validate
+   step validates the new file against the schema. The e2e smoke walker
+   covers `/trends/tracker/<week>` automatically via
+   `generateStaticParams`.
 
 3.5. **Trend-snapshot quality gate** (Phase 50 amendment) — **hard gate**,
    not a survey:
