@@ -21,10 +21,10 @@
   "devDependencies": {
     "@thock/eslint-config": "workspace:*",
     "@thock/tsconfig": "workspace:*",
-    "@types/node": "^20.17.6",
-    "eslint": "^8.57.1",
-    "tsx": "^4.23.12",
-    "typescript": "^5.6.3",
-    "vitest": "^3.2.6"
+    "@types/node": "^26.4.1",
+    "eslint": "^10.9.1",
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.11"
   }
 }
