@@ -5,7 +5,13 @@ import { RootNotFound } from '@/components/not-found/RootNotFound'
 export const metadata: Metadata = {
   title: { absolute: `Page not found — ${siteConfig.name}` },
   description: 'That URL doesn’t match anything on thock.',
-  robots: { index: false, follow: false },
+  // No explicit `robots` field: Next.js auto-injects
+  // `<meta name="robots" content="noindex">` for every notFound()
+  // render (next/dist/server/app-render/make-get-server-inserted-html.js,
+  // unconditional on HTTPAccessFallbackError). Declaring our own
+  // `robots` here would render a second, conflicting meta tag
+  // alongside the framework's — confirmed live on every 404 across
+  // the site before this fix.
 }
 
 /**

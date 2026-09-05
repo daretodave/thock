@@ -41,10 +41,14 @@ export async function generateMetadata({
   const { slug } = await params
   const article = getArticleBySlug(slug)
   if (!article) {
+    // No explicit `robots` field: Next.js auto-injects
+    // `<meta name="robots" content="noindex">` for every notFound()
+    // render below — declaring our own here would render a second,
+    // conflicting meta tag alongside the framework's (see
+    // `app/not-found.tsx` for the full explanation).
     return {
       title: { absolute: `Page not found — ${siteConfig.name}` },
       description: 'That URL doesn’t match anything on thock.',
-      robots: { index: false, follow: false },
     }
   }
 
