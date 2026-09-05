@@ -35,6 +35,7 @@ describe('validateRssXml', () => {
     const xml = buildRssXml({
       title: 'thock — News',
       link: 'https://thock.xyz/news',
+      selfUrl: 'https://thock.xyz/feed/news.xml',
       description: 'News stories from thock.',
       articles: [article(), article({ slug: 'second', title: 'Second piece' })],
     })

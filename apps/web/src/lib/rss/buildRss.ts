@@ -16,6 +16,8 @@ export type RssChannel = {
   title: string
   /** Link back to an HTML index page (`/`, `/news`, etc.). */
   link: string
+  /** Canonical URL of this feed document itself, e.g. `/feed.xml` or `/feed/news.xml`. */
+  selfUrl: string
   /** Channel description. */
   description: string
   articles: Article[]
@@ -46,10 +48,11 @@ export function buildRssXml(channel: RssChannel): string {
 
   return [
     '<?xml version="1.0" encoding="UTF-8" ?>',
-    '<rss version="2.0">',
+    '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">',
     '  <channel>',
     `    <title>${escape(channel.title)}</title>`,
     `    <link>${channel.link}</link>`,
+    `    <atom:link href="${channel.selfUrl}" rel="self" type="${RSS_CONTENT_TYPE.split(';')[0]}" />`,
     `    <description>${escape(channel.description)}</description>`,
     `    <language>en</language>`,
     `    <lastBuildDate>${lastBuild}</lastBuildDate>`,

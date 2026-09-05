@@ -32,12 +32,13 @@ describe('buildRssXml', () => {
     const xml = buildRssXml({
       title: 'thock',
       link: 'https://thock.xyz',
+      selfUrl: 'https://thock.xyz/feed.xml',
       description: 'desc',
       articles: [makeArticle()],
     })
 
     expect(xml).toContain('<?xml version="1.0" encoding="UTF-8" ?>')
-    expect(xml).toContain('<rss version="2.0">')
+    expect(xml).toContain('<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">')
     expect(xml).toContain('<channel>')
     expect(xml).toContain('</channel>')
     expect(xml).toContain('</rss>')
@@ -47,6 +48,9 @@ describe('buildRssXml', () => {
     expect(xml).toContain(
       '<link>https://thock.xyz/article/foo</link>',
     )
+    expect(xml).toContain(
+      '<atom:link href="https://thock.xyz/feed.xml" rel="self" type="application/rss+xml" />',
+    )
     expect(xml).toContain('<guid isPermaLink="true">')
     expect(xml).toContain('<pubDate>')
   })
@@ -55,6 +59,7 @@ describe('buildRssXml', () => {
     const xml = buildRssXml({
       title: 't',
       link: 'https://x',
+      selfUrl: 'https://x/feed.xml',
       description: 'A & B',
       articles: [],
     })
@@ -65,6 +70,7 @@ describe('buildRssXml', () => {
     const xml = buildRssXml({
       title: 't',
       link: 'https://x',
+      selfUrl: 'https://x/feed.xml',
       description: 'd',
       articles: [],
     })
@@ -94,6 +100,7 @@ describe('buildRssXml', () => {
     const xml = buildRssXml({
       title: 't',
       link: 'https://x',
+      selfUrl: 'https://x/feed.xml',
       description: 'd',
       articles: [b, a],
     })

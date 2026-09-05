@@ -9,6 +9,7 @@ export function GET() {
   const xml = buildRssXml({
     title: `${siteConfig.name} — ${siteConfig.tagline}`,
     link: canonicalUrl('/'),
+    selfUrl: canonicalUrl('/feed.xml'),
     description: siteConfig.description,
     articles,
   })

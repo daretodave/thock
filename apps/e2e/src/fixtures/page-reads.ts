@@ -319,7 +319,7 @@ export const pageReads: Record<string, PageRead> = {
     isHtml: false,
     assertions: [
       { kind: 'response-content-type', matcher: /application\/rss\+xml/ },
-      { kind: 'body-contains', needle: '<rss version="2.0">' },
+      { kind: 'body-contains', needle: '<rss version="2.0"' },
     ],
   },
   '/feed/[pillar].xml': {
@@ -327,7 +327,7 @@ export const pageReads: Record<string, PageRead> = {
     isHtml: false,
     assertions: [
       { kind: 'response-content-type', matcher: /application\/rss\+xml/ },
-      { kind: 'body-contains', needle: '<rss version="2.0">' },
+      { kind: 'body-contains', needle: '<rss version="2.0"' },
     ],
   },
 }

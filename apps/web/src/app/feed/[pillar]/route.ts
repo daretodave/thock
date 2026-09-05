@@ -38,6 +38,7 @@ export async function GET(
   const xml = buildRssXml({
     title: `${pillarLabel(pillar)} — ${siteConfig.name}`,
     link: canonicalUrl(pillarHref(pillar)),
+    selfUrl: canonicalUrl(`/feed/${pillar}.xml`),
     description: `${pillarLabel(pillar)} stories from ${siteConfig.name}.`,
     articles,
   })

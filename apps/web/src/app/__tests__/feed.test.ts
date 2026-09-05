@@ -38,9 +38,12 @@ describe('global feed.xml', () => {
   it('returns RSS 2.0 with at least one item', async () => {
     const { GET: getGlobalFeed } = await import('../feed.xml/route')
     const xml = await xmlOf(getGlobalFeed())
-    expect(xml).toContain('<rss version="2.0">')
+    expect(xml).toContain('<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">')
     expect(xml).toContain('<channel>')
     expect(xml).toContain('<item>')
+    expect(xml).toContain(
+      '<atom:link href="https://thock.xyz/feed.xml" rel="self" type="application/rss+xml" />',
+    )
     const result = validateRssXml(xml)
     expect(result.itemCount).toBeGreaterThan(0)
     expect(result.channelTitle).toBeTruthy()
@@ -61,7 +64,10 @@ describe('pillar feed.xml', () => {
     const res = await call('news.xml')
     expect(res.status).toBe(200)
     const xml = await xmlOf(res)
-    expect(xml).toContain('<rss version="2.0">')
+    expect(xml).toContain('<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">')
+    expect(xml).toContain(
+      '<atom:link href="https://thock.xyz/feed/news.xml" rel="self" type="application/rss+xml" />',
+    )
     const result = validateRssXml(xml)
     expect(result.itemCount).toBeGreaterThan(0)
     expect(result.channelTitle).toBeTruthy()
