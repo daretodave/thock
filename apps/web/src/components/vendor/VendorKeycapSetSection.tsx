@@ -40,7 +40,7 @@ export function VendorKeycapSetSection({
             data-testid="vendor-keycap-sets-empty"
             className="text-body text-text-2"
           >
-            No keycap sets from {vendorName} in the catalog yet.
+            No keycap sets from {vendorName} in the catalog yet — check back soon.
           </p>
         ) : (
           <div

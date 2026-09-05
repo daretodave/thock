@@ -100,7 +100,7 @@ export default function PastGroupBuysPage(): ReactElement {
           <Stack gap={4}>
             <PageSectionKicker>empty archive</PageSectionKicker>
             <h2 className="font-serif text-h2 text-text">
-              No closed buys yet.
+              No closed buys yet — check back soon.
             </h2>
             <p className="max-w-[60ch] font-serif text-h3 text-text-2">
               The archive fills as buys close. Check back later.

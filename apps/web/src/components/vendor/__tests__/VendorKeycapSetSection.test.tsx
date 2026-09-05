@@ -21,7 +21,7 @@ describe('VendorKeycapSetSection', () => {
   it('shows empty state when no keycap sets', () => {
     render(<VendorKeycapSetSection vendorName="KBDfans" keycapSets={[]} />)
     expect(screen.getByTestId('vendor-keycap-sets-empty')).toHaveTextContent(
-      'No keycap sets from KBDfans in the catalog yet.',
+      'No keycap sets from KBDfans in the catalog yet — check back soon.',
     )
     expect(screen.queryByTestId('vendor-keycap-sets-list')).toBeNull()
   })

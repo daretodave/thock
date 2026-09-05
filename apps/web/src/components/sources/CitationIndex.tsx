@@ -110,7 +110,7 @@ export function CitationIndex({ citations }: CitationIndexProps): ReactElement {
         className="border border-border bg-surface p-8 max-w-[60ch]"
       >
         <p className="font-serif text-h3 text-text-2">
-          No external citations yet.
+          No external citations yet — check back soon.
         </p>
         <p className="mt-3 text-body text-text-2">
           As articles add cited sources, the per-citation index lands here.

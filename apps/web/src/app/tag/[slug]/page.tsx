@@ -174,7 +174,7 @@ export default async function TagPage({
           <Stack gap={4}>
             <PageSectionKicker>empty tag</PageSectionKicker>
             <h2 className="font-serif text-h2 text-text">
-              No articles tagged #{visibleLabel} yet.
+              No articles tagged #{visibleLabel} yet — check back soon.
             </h2>
             <p className="max-w-[60ch] font-serif text-h3 text-text-2">
               When something lands under this tag, it shows up here first.

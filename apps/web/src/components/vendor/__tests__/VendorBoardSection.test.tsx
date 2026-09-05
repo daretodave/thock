@@ -22,7 +22,7 @@ describe('VendorBoardSection', () => {
   it('shows empty state when no boards', () => {
     render(<VendorBoardSection vendorName="CannonKeys" boards={[]} />)
     expect(screen.getByTestId('vendor-boards-empty')).toHaveTextContent(
-      'No boards from CannonKeys in the catalog yet.',
+      'No boards from CannonKeys in the catalog yet — check back soon.',
     )
     expect(screen.queryByTestId('vendor-boards-list')).toBeNull()
   })

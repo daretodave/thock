@@ -39,7 +39,7 @@ export function VendorSwitchSection({
             data-testid="vendor-switches-empty"
             className="text-body text-text-2"
           >
-            No switches from {vendorName} in the catalog yet.
+            No switches from {vendorName} in the catalog yet — check back soon.
           </p>
         ) : (
           <div

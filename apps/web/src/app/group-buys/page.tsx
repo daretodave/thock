@@ -124,7 +124,7 @@ export default function GroupBuysPage(): ReactElement {
           <Stack gap={4}>
             <PageSectionKicker>quiet week</PageSectionKicker>
             <h2 className="font-serif text-h2 text-text">
-              No active group buys right now.
+              No active group buys yet — check back soon.
             </h2>
             <p className="max-w-[60ch] font-serif text-h3 text-text-2">
               Check back weekly. We track every credible vendor.

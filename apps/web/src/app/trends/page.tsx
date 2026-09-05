@@ -96,7 +96,7 @@ export default function TrendsPage(): ReactElement {
           <Stack gap={4}>
             <PageSectionKicker>empty pillar</PageSectionKicker>
             <h2 className="font-serif text-h2 text-text">
-              No trends pieces yet.
+              No trends pieces yet — check back soon.
             </h2>
             <p className="max-w-[60ch] font-serif text-h3 text-text-2">
               The tracker dashboard is still live — open it to see the

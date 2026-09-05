@@ -28,7 +28,7 @@ export function NewsletterArchive({
         className="border border-border bg-surface p-8"
       >
         <p className="font-serif text-h3 text-text-2">
-          No digests yet.
+          No digests yet — check back soon.
         </p>
         <p className="mt-3 text-body text-text-2" data-testid="newsletter-empty-body">
           The first issue lands soon. Subscribe above and we&apos;ll send you

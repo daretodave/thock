@@ -97,7 +97,7 @@ export default function TrendsTrackerPage(): ReactElement {
           <Stack gap={4}>
             <PageSectionKicker>tracker · empty</PageSectionKicker>
             <h2 className="font-serif text-h2 text-text">
-              No tracker snapshot has shipped yet.
+              No tracker snapshot has shipped yet — check back soon.
             </h2>
             <p className="max-w-[60ch] font-serif text-h3 text-text-2">
               Check back next Monday at 09:00 EST.

@@ -135,7 +135,7 @@ export default function HomePage(): ReactElement {
               {siteConfig.name}
             </h1>
             <p className="max-w-[60ch] font-serif text-h3 text-text-2">
-              No articles yet — the editorial side warms up shortly.
+              No articles yet — check back soon.
             </p>
           </Stack>
         )}

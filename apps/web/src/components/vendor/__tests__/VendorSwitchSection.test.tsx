@@ -24,7 +24,7 @@ describe('VendorSwitchSection', () => {
   it('shows empty state when no switches', () => {
     render(<VendorSwitchSection vendorName="NovelKeys" switches={[]} />)
     expect(screen.getByTestId('vendor-switches-empty')).toHaveTextContent(
-      'No switches from NovelKeys in the catalog yet.',
+      'No switches from NovelKeys in the catalog yet — check back soon.',
     )
     expect(screen.queryByTestId('vendor-switches-list')).toBeNull()
   })
