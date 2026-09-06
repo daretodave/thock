@@ -15,23 +15,19 @@ const TITLE = 'Search'
 const LEDE =
   'Search every article, tag, and part across thock. Built locally — no third-party indexing.'
 
-export async function generateMetadata({
-  searchParams,
-}: {
-  searchParams: Promise<{ q?: string }>
-}) {
-  const { q } = await searchParams
-  return {
-    ...buildMetadata({
-      title: TITLE,
-      description: LEDE,
-      path: PATH,
-    }),
-    // /search?q=… variants don't add value to the index; the bare
-    // /search page stays indexable.
-    robots: { index: !q, follow: true },
-  }
-}
+// Static export (not generateMetadata) — the self-referencing
+// `alternates.canonical: '/search'` below already consolidates every
+// `/search?q=…` variant onto the bare page for search engines, so a
+// per-request `robots` branch keyed on `searchParams` isn't needed.
+// Reading `searchParams` in generateMetadata forces the whole route
+// out of static rendering (no edge caching on any `/search*` request,
+// including the bare page) for a signal the canonical tag already
+// carries.
+export const metadata = buildMetadata({
+  title: TITLE,
+  description: LEDE,
+  path: PATH,
+})
 
 /**
  * Phase 14 — search landing. Header shell + client-only
