@@ -1,0 +1,169 @@
+{
+  "isoWeek": "2026-W37",
+  "publishedAt": "2026-09-07T00:00:00.000Z",
+  "rows": [
+    {
+      "name": "Hall Effect/Rapid Trigger",
+      "category": "switch",
+      "direction": "flat",
+      "score": 98,
+      "spark": [94, 95, 97, 97, 97, 96, 98, 98],
+      "articleSlug": "hall-effect-mainstream",
+      "note": "HE/rapid trigger is now treated as baseline for 2026 gaming keyboard launches per buying-guide roundups; growth is plateauing near saturation."
+    },
+    {
+      "name": "Cherry MX2A",
+      "category": "switch",
+      "direction": "down",
+      "score": -58,
+      "spark": [-46, -45, -45, -46, -49, -50, -54, -58],
+      "articleSlug": "cherry-mx2a-revision",
+      "note": "MX2A's early scratch complaints are largely resolved, but Cherry's classic MX line keeps ceding mindshare to Gateron and HE magnetic switches."
+    },
+    {
+      "name": "Gateron Magnetic Jade Emerald",
+      "category": "switch",
+      "direction": "up",
+      "score": 62,
+      "spark": [26, 34, 40, 46, 50, 55, 58, 62],
+      "articleSlug": "gateron-magnetic-jade-deep-dive",
+      "note": "The 150M-cycle magnetic tactile with adjustable actuation keeps gaining vendor stocking momentum since its Gamescom debut."
+    },
+    {
+      "name": "Durock T1",
+      "category": "switch",
+      "direction": "flat",
+      "score": 45,
+      "spark": [26, 30, 34, 38, 41, 44, 45, 45],
+      "articleSlug": "durock-t1-deep-dive",
+      "note": "No fresh catalyst this week; T1 holds steady as a budget-tactile staple with no new vendor or group-buy activity."
+    },
+    {
+      "name": "Gateron Oil King",
+      "category": "switch",
+      "direction": "up",
+      "score": 47,
+      "spark": [40, 40, 40, 40, 40, 40, 44, 47],
+      "articleSlug": "gateron-oil-king-deep-dive",
+      "note": "The silent/tactile trio sees steady restocks, remaining a top silent-switch pick amid 2026's quieter-setups demand wave."
+    },
+    {
+      "name": "GMK CYL Orange Alert",
+      "category": "keycap",
+      "direction": "up",
+      "score": 79,
+      "spark": [32, 44, 55, 62, 68, 72, 75, 79],
+      "articleSlug": "divinikey-gmk-cyl-orange-alert-group-buy",
+      "note": "The group buy enters its final week before an estimated Sep 14 close, driving last-call urgency at Divinikey, KBDfans, and Geonworks."
+    },
+    {
+      "name": "GMK CYL TA Neo",
+      "category": "keycap",
+      "direction": "down",
+      "score": 10,
+      "spark": [62, 50, 40, 32, 25, 20, 17, 10],
+      "articleSlug": "gmk-cyl-ta-neo-production-tracking",
+      "note": "Now firmly in quiet post-buy production tracking ahead of a Nov-Dec ship, with attention shifted to newer GMK CYL runs."
+    },
+    {
+      "name": "DCS Dolch / Molch",
+      "category": "keycap",
+      "direction": "down",
+      "score": 26,
+      "spark": [12, 38, 34, 26, 25, 38, 34, 26],
+      "articleSlug": "divinikey-dcs-dolch-group-buy",
+      "note": "With sibling set Molch's buy wrapped toward a Q1 2027 ship, the Dolch family has settled into a quiet post-buy holding pattern."
+    },
+    {
+      "name": "GMK CYL OG Extensions",
+      "category": "keycap",
+      "direction": "flat",
+      "score": 43,
+      "spark": [58, 62, 70, 80, 63, 45, 44, 43],
+      "articleSlug": "gmk-cyl-og-extensions-interest-check",
+      "note": "Niche interest holds steady as an add-on kit for Hineybeige/Dolch R5 builds, with no new developments this week."
+    },
+    {
+      "name": "Split/Ergo layout",
+      "category": "layout",
+      "direction": "up",
+      "score": 96,
+      "spark": [80, 82, 85, 87, 89, 90, 93, 96],
+      "articleSlug": "split-ergo-cohort",
+      "note": "Split/ergo demand keeps climbing, with market trackers citing steady growth through 2033 and Keychron's Q11/Q13 Max named category leaders."
+    },
+    {
+      "name": "Alice layout",
+      "category": "layout",
+      "direction": "up",
+      "score": -40,
+      "spark": [-48, -52, -58, -62, -64, -66, -50, -40],
+      "articleSlug": "alice-layout-decline",
+      "note": "Recovery continues into a second week; 2026 buying guides now call Alice plus full-split the era's biggest layout trend, led by Keychron's Q13 Max."
+    },
+    {
+      "name": "75% Layout",
+      "category": "layout",
+      "direction": "flat",
+      "score": 64,
+      "spark": [47, 50, 55, 58, 60, 62, 63, 64],
+      "articleSlug": "75-percent-default",
+      "note": "Holds its lead at roughly 42% share of the custom-keyboard community's preference; still the default recommendation with no new catalyst."
+    },
+    {
+      "name": "Mode Designs",
+      "category": "vendor",
+      "direction": "up",
+      "score": 89,
+      "spark": [58, 62, 70, 76, 78, 80, 84, 89],
+      "articleSlug": "mode-sonnet-r2-group-buy-coverage",
+      "note": "Mode teased Prologue, a new 98% board with pre-orders opening Sep 17, on top of its Encore/Sonnet refresh and new crown mounting system."
+    },
+    {
+      "name": "CannonKeys",
+      "category": "vendor",
+      "direction": "flat",
+      "score": 39,
+      "spark": [20, 20, 64, 52, 46, 40, 39, 39],
+      "articleSlug": "cannonkeys-blaine-v2-se-group-buy",
+      "note": "Blaine V2: SE closed its group buy and moved into production; no new group buy launched from the vendor this week."
+    },
+    {
+      "name": "Prototypist",
+      "category": "vendor",
+      "direction": "flat",
+      "score": 42,
+      "spark": [20, 24, 28, 31, 35, 40, 41, 42],
+      "articleSlug": "prototypist-vendor-spotlight",
+      "note": "The Finn 60XT kit keeps tracking toward its ship window with the Paper 65 kit still in the coming-soon queue; steady vendor cadence, no surprises."
+    },
+    {
+      "name": "Keychron",
+      "category": "brand",
+      "direction": "flat",
+      "score": 100,
+      "spark": [90, 94, 96, 97, 97, 98, 100, 100],
+      "articleSlug": "keychron-quiet-takeover",
+      "note": "Multi-front momentum continues with a ceramic-TMR Q16 HE 8K Kickstarter and the V6 Ultra Hybrid pre-launch both live, reinforcing category-dominant cadence."
+    },
+    {
+      "name": "Cherry (MX + XTRFY)",
+      "category": "brand",
+      "direction": "down",
+      "score": -25,
+      "spark": [-18, -10, -6, -2, -8, -15, -20, -25],
+      "articleSlug": "cherry-xtrfy-tmr-pivot",
+      "note": "Cherry keeps losing coverage share to magnetic and TMR rivals, with Keychron's ceramic-TMR Q16 HE and Gateron's magnetic lineup dominating this week's headlines instead."
+    },
+    {
+      "name": "Topre / HHKB",
+      "category": "brand",
+      "direction": "up",
+      "score": 57,
+      "spark": [28, 34, 40, 46, 50, 55, 54, 57],
+      "articleSlug": "topre-electrocapacitive-deep-dive",
+      "note": "HHKB's Back to School promo through Sep 30 keeps Topre boards in budget shopping guides, nudging brand sentiment up a notch."
+    }
+  ],
+  "updatedAt": "2026-09-07T05:00:00.000Z"
+}
