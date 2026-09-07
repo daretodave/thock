@@ -13102,3 +13102,15 @@ passes accumulate signals.)
 - observation: `apps/web/package.json` pins `"next": "^16.2.12"` (built at `next@16.3.2`). `packages/content/package.json` and `packages/seo/package.json` still declare `peerDependencies.next: "^15.0.0"` and a `devDependencies.next: "^15.5.21"`, so the workspace resolves two separate `next` installs (`packages/content/node_modules/next` → 15.5.21, `packages/seo/node_modules/next` → 15.5.21, vs. `apps/web/node_modules/next` → 16.3.2). Both packages have real runtime `next` imports (`packages/content/src/mdx/components.tsx` imports `next/link`, used by every article's inline links via `AutoLink`; `packages/seo/src/buildMetadata.ts` imports the `Metadata` type).
 - evidence: `pnpm-lock.yaml` + `node_modules` symlink inspection confirms the dual install; `plan/AUDIT.md` has a precedented "bump `next` in package.json" pattern already used for a prior patch bump.
 - next: bump `next` to `^16.2.12` (or a `^16.0.0` peer floor) in `packages/content/package.json` and `packages/seo/package.json`, `pnpm install`, `pnpm -r test:run` to confirm nothing regresses under v16.
+
+### [x] [seo] [4.8] two articles have stale `updatedAt` after factual corrections — addressed in this commit, closes #986
+- category: seo
+- filed: 2026-09-06 by cloud /iterate audit (pass 423) — mirrored to GitHub as #986 but the tick that opened it never wrote a formal `AUDIT.md` row or shipped the fix, leaving it un-drained for a full day (the exact gap the standing `[needs-user-call] [3.0]` mirror/row-gap meta-finding above describes; same recovery pattern used previously for #799)
+- impact: 6 (`Article.dateModified` JSON-LD is visibly stale relative to real correction dates on two live articles — a structured-data trust signal search engines and readers both rely on)
+- ease: 8 (two frontmatter date edits, no schema/logic change)
+- score: 4.8 (impact × ease / 10)
+- observation: `packages/seo/src/buildJsonLd.ts:57` — `dateModified: input.updatedAt ?? input.publishedAt` — makes `updatedAt` the sole source of the visible freshness signal. Two prior `fix:` commits that corrected real article prose skipped bumping it: `gateron-oil-king-deep-dive.mdx` corrected in `4e36fb49` (2026-08-11, removed a fabricated "Wuque Studio review notes" quote attribution) still read `updatedAt: '2026-06-09T00:00:00.000Z'`, 63 days stale; `custom-keyboard-kit-buyers-guide.mdx` corrected in `a5e5bf8e` (2026-07-14, fixed a misattributed vendor sentence) still read `updatedAt: '2026-06-27T14:00:00.000Z'`, 17 days stale.
+- evidence: `gh issue view 986` body, filed 2026-09-06; confirmed against the live frontmatter and correction-commit dates at drain time.
+- next: bump both `updatedAt` fields to their respective correction-commit dates.
+- issue: #986
+> **Resolved (2026-09-07):** set `gateron-oil-king-deep-dive.mdx` `updatedAt` to `2026-08-11T00:00:00.000Z` and `custom-keyboard-kit-buyers-guide.mdx` `updatedAt` to `2026-07-14T00:00:00.000Z`, matching their real correction-commit dates. `pnpm verify` full gate run this tick.

@@ -8608,7 +8608,7 @@
           "prebuilt"
         ],
         "publishedAt": "2026-06-27T14:00:00.000Z",
-        "updatedAt": "2026-06-27T14:00:00.000Z",
+        "updatedAt": "2026-07-14T00:00:00.000Z",
         "heroImage": "/hero-art/custom-keyboard-kit-buyers-guide.svg",
         "heroImageAlt": "An exploded side-profile diagram of a keyboard kit's three core layers — case shell, plate, and PCB — stacked with dashed explode-lines and an amber splash marking the hot-swap sockets on the PCB layer.",
         "featured": false,
@@ -10125,7 +10125,7 @@
           "deep-dive"
         ],
         "publishedAt": "2026-05-04T15:00:00.000Z",
-        "updatedAt": "2026-06-09T00:00:00.000Z",
+        "updatedAt": "2026-08-11T00:00:00.000Z",
         "heroImage": "/hero-art/gateron-oil-king-deep-dive.svg",
         "heroImageAlt": "Detailed vertical exploded-stack of a mechanical switch with stem skirt rails, an LED notch, an 11-coil spring on a dashed center axis, and pin contacts on the bottom housing — drawn in a single warm-grey stroke with a coral splash and a brass LED-notch hit.",
         "featured": false,
@@ -11722,5 +11722,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-09-07T08:00:25.601Z"
+  "generatedAt": "2026-09-07T14:16:53.724Z"
 }
