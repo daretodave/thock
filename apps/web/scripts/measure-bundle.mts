@@ -24,6 +24,13 @@
  *
  * Wired into `pnpm verify` after `next build`. Reads from `.next/`,
  * does not invoke the build itself.
+ *
+ * The quiz + compare tool routes (`/quiz/switch`, `/quiz/keycap-set`,
+ * `/compare/switch`, `/compare/board`) were never added to `budgets`
+ * despite each already carrying more client JS (~142-145 KB gzipped)
+ * than the actual homepage (~147 KB) — an iterate audit caught the
+ * gap (score 4.8) and extended the gate here, reusing the `/search`
+ * precedent's 175 KB ceiling for comparable headroom.
  */
 import { existsSync, readFileSync, statSync } from 'node:fs'
 import { dirname, join, resolve } from 'node:path'
@@ -47,6 +54,9 @@ const DEFAULT_MAX_KB = 200
 // the index would not move it. 175 KB restores comparable proportional
 // headroom to the homepage's 200 KB / 147.1 KB baseline.
 const SEARCH_MAX_KB = 175
+// Same ceiling as SEARCH_MAX_KB — the quiz/compare tool routes measure
+// within a few KB of /search's baseline, so the same headroom applies.
+const TOOL_ROUTE_MAX_KB = 175
 
 type BuildManifest = {
   rootMainFiles?: string[]
@@ -165,6 +175,10 @@ function main(): void {
   const budgets: RouteBudget[] = [
     { key: '/page', maxKb: parseMaxKb(process.argv.slice(2)) },
     { key: '/search/page', maxKb: SEARCH_MAX_KB },
+    { key: '/quiz/switch/page', maxKb: TOOL_ROUTE_MAX_KB },
+    { key: '/quiz/keycap-set/page', maxKb: TOOL_ROUTE_MAX_KB },
+    { key: '/compare/switch/page', maxKb: TOOL_ROUTE_MAX_KB },
+    { key: '/compare/board/page', maxKb: TOOL_ROUTE_MAX_KB },
   ]
 
   const results = budgets.map((b) => checkRoute(b))
