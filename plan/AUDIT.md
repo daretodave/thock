@@ -13123,3 +13123,15 @@ passes accumulate signals.)
 - score: 1.3 (impact × ease / 10, honestly re-scored after independently verifying the fix's true blast radius — an initial estimate of ease 6 assumed a "2-line bump" before checking how much lightness change 3:1 actually requires)
 - evidence: `packages/tokens/src/tokens.css:15-16` (dark-mode `--thock-border`/`--thock-border-hi`); contrast independently recomputed via OKLCH→linear-sRGB→WCAG relative luminance (Björn Ottosson's oklab conversion matrices + W3C contrast formula), confirming 1.42/1.24/2.24/1.97:1 exactly; light-mode values (`--thock-border: oklch(0.88 0.004 85)` against `--thock-bg: oklch(0.965 0.004 85)`) not yet computed — worth checking in the same pass if this is ever picked up.
 - next: `/oversight` call — decide whether to accept a visibly heavier border weight in dark mode for WCAG 1.4.11 compliance, or a lighter-touch alternative (e.g. a subtle background-fill or shadow cue instead of raising border lightness); then implement + re-verify contrast across all bordered components in one pass.
+
+### [HOT PURSUIT] [content-gap] [7] news pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 7 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: news
+- window-count: 1
+- window-start: 2026-08-11
+- score: 7
+- next: /ship-content → news pillar article
+> Filed 2026-09-10 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
