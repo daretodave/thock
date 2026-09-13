@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-29T14:00:00.000Z",
+  "commit": "ab1f87330b48164a70c67be38e5d40cf9aa426d8",
+  "kind": "inline-viz",
+  "article_slug": "mt3-devtty-restock",
+  "article_pillar": "news",
+  "section_anchor": "The set that built the profile",
+  "brief_summary": "Three-milestone horizontal timeline: solid amber marker at the original 2017-04-01 dye-sub PBT release, a dashed undated marker noting that later Drop MT3 runs moved to double-shot ABS, and a solid amber marker at the 2026-08-24 catalog restock to in-stock status.",
+  "target": "apps/web/public/article-viz/mt3-devtty-restock/devtty-timeline.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "data/keycap-sets/mt3-devtty.json — releasedAt: '2017-04-01', updatedAt: '2026-08-24T21:10:46.000Z', status: 'in-stock'",
+    "mt3-devtty-restock.mdx § 'The set that built the profile' — 'Double-shot ABS retooling came later, on other Drop MT3 releases'"
+  ],
+  "outputs": ["apps/web/public/article-viz/mt3-devtty-restock/devtty-timeline.svg"],
+  "warnings": ["The exact date of the first double-shot ABS MT3 run is not in the catalog record; the timeline marks it as undated by design rather than inventing a year."]
+}

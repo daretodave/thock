@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-29T14:00:00.000Z",
+  "commit": "ab1f87330b48164a70c67be38e5d40cf9aa426d8",
+  "kind": "inline-viz",
+  "article_slug": "mt3-devtty-restock",
+  "article_pillar": "news",
+  "section_anchor": "The catalog record",
+  "brief_summary": "A two-row, six-chip fact strip pulling the catalog record's fields directly: profile MT3, material dye-sub PBT, colorway cream/charcoal, designer Matt3o, original release 2017-04-01, and catalog status in-stock as of 2026-08-24 (highlighted chip).",
+  "target": "apps/web/public/article-viz/mt3-devtty-restock/spec-strip.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "data/keycap-sets/mt3-devtty.json — name: 'Drop + Matt3o MT3 /dev/tty', profile: 'mt3', material: 'pbt', legendType: 'dye-sub', designer: 'Matt3o', releasedAt: '2017-04-01', status: 'in-stock', updatedAt: '2026-08-24T21:10:46.000Z'",
+    "mt3-devtty-restock.mdx § 'The catalog record' — 'dye-sub PBT in cream and charcoal, modeled on IBM beamspring caps'"
+  ],
+  "outputs": ["apps/web/public/article-viz/mt3-devtty-restock/spec-strip.svg"],
+  "warnings": []
+}

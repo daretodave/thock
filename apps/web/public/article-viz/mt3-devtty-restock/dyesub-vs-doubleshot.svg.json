@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-08-29T14:00:00.000Z",
+  "commit": "ab1f87330b48164a70c67be38e5d40cf9aa426d8",
+  "kind": "inline-viz",
+  "article_slug": "mt3-devtty-restock",
+  "article_pillar": "news",
+  "section_anchor": "Why dye-sub, not double-shot",
+  "brief_summary": "Two-panel cross-section: left panel shows the /dev/tty dye-sub PBT construction as a single mold cavity with dye sublimated into the surface, paired with a short 'lower tooling cost' bar; right panel shows a generic double-shot ABS construction with a dedicated second-shot legend cavity, paired with a taller 'higher tooling cost' bar in the caution color. Illustrates the article's stated reason the 2017 run shipped dye-sub rather than double-shot.",
+  "target": "apps/web/public/article-viz/mt3-devtty-restock/dyesub-vs-doubleshot.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "data/keycap-sets/mt3-devtty.json — description: 'Double-shot ABS retooling came later, on other Drop MT3 releases — the 2017 /dev/tty run itself shipped dye-sub to avoid the far higher tooling cost of double-shot legends.'",
+    "mt3-devtty-restock.mdx § 'Why dye-sub, not double-shot' — restates the tooling-cost tradeoff qualitatively; no specific cost figures are asserted, per the no-fabrication rule."
+  ],
+  "outputs": ["apps/web/public/article-viz/mt3-devtty-restock/dyesub-vs-doubleshot.svg"],
+  "warnings": ["Cost bars are qualitative (relative height only, no dollar figures) since the catalog record and article give no numeric tooling-cost figure."]
+}

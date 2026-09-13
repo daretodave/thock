@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="#9c9286" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — MT3 /dev/tty keycap set restock, side-profile row showing the MT3 sculpt curve</title>
+
+  <!-- Splash: muted-terracotta wash behind the row, low-alpha, anchors the sculpt-curve band -->
+  <ellipse cx="600" cy="500" rx="470" ry="150" fill="#b5603f" fill-opacity="0.09" stroke="none"/>
+
+  <!-- Baseline beneath the row — family rhythm anchor -->
+  <line x1="100" y1="580" x2="1080" y2="580" stroke-opacity="0.55"/>
+
+  <!-- Faint vertical guide ticks on the baseline -->
+  <g stroke-opacity="0.3">
+    <line x1="100"  y1="580" x2="100"  y2="588"/>
+    <line x1="325"  y1="580" x2="325"  y2="588"/>
+    <line x1="550"  y1="580" x2="550"  y2="588"/>
+    <line x1="775"  y1="580" x2="775"  y2="588"/>
+    <line x1="1080" y1="580" x2="1080" y2="588"/>
+  </g>
+
+  <!-- Faint dashed reference arc echoing the physical cylindrical curvature a sculpted row sits on -->
+  <path d="M 100 460 Q 600 400 1080 460" stroke-dasharray="3 7" stroke-opacity="0.22"/>
+
+  <g>
+    <!-- R1: base+sides -->
+    <path d="M 140 580 L 140 435 L 240 435 L 280 580 Z"/>
+    <!-- top rim bevel -->
+    <path d="M 140 435 L 155 432 L 225 432 L 240 435" stroke="#9c9286"/>
+    <!-- deep scooped dish -->
+    <path d="M 155 432 Q 190 483 225 432" stroke="#9c9286"/>
+    <!-- terracotta accent tracing dish floor -->
+    <path d="M 161 437 Q 190 480 219 437" stroke="#b5603f" stroke-width="2.5"/>
+    <!-- inner dish shadow -->
+    <path d="M 167 442 Q 190 470 213 442" stroke="#9c9286" stroke-opacity="0.45"/>
+    <line x1="140" y1="580" x2="147" y2="575" stroke-opacity="0.4"/>
+    <line x1="280" y1="580" x2="273" y2="575" stroke-opacity="0.4"/>
+  </g>
+
+  <g>
+    <!-- R2: base+sides -->
+    <path d="M 320 580 L 332 448 L 432 448 L 460 580 Z"/>
+    <!-- top rim bevel -->
+    <path d="M 332 448 L 347 445 L 417 445 L 432 448" stroke="#9c9286"/>
+    <!-- deep scooped dish -->
+    <path d="M 347 445 Q 382 492 417 445" stroke="#9c9286"/>
+    <!-- terracotta accent tracing dish floor -->
+    <path d="M 353 450 Q 382 489 411 450" stroke="#b5603f" stroke-width="2.5"/>
+    <!-- inner dish shadow -->
+    <path d="M 359 455 Q 382 479 405 455" stroke="#9c9286" stroke-opacity="0.45"/>
+    <line x1="320" y1="580" x2="327" y2="575" stroke-opacity="0.4"/>
+    <line x1="460" y1="580" x2="453" y2="575" stroke-opacity="0.4"/>
+  </g>
+
+  <g>
+    <!-- R3: base+sides -->
+    <path d="M 500 580 L 520 425 L 620 425 L 640 580 Z"/>
+    <!-- top rim bevel -->
+    <path d="M 520 425 L 535 422 L 605 422 L 620 425" stroke="#9c9286"/>
+    <!-- deep scooped dish -->
+    <path d="M 535 422 Q 570 476 605 422" stroke="#9c9286"/>
+    <!-- terracotta accent tracing dish floor -->
+    <path d="M 541 427 Q 570 473 599 427" stroke="#b5603f" stroke-width="2.5"/>
+    <!-- inner dish shadow -->
+    <path d="M 547 432 Q 570 463 593 432" stroke="#9c9286" stroke-opacity="0.45"/>
+    <line x1="500" y1="580" x2="507" y2="575" stroke-opacity="0.4"/>
+    <line x1="640" y1="580" x2="633" y2="575" stroke-opacity="0.4"/>
+  </g>
+
+  <g>
+    <!-- R4: base+sides -->
+    <path d="M 680 580 L 710 450 L 810 450 L 820 580 Z"/>
+    <!-- top rim bevel -->
+    <path d="M 710 450 L 725 447 L 795 447 L 810 450" stroke="#9c9286"/>
+    <!-- deep scooped dish -->
+    <path d="M 725 447 Q 760 493 795 447" stroke="#9c9286"/>
+    <!-- terracotta accent tracing dish floor -->
+    <path d="M 731 452 Q 760 490 789 452" stroke="#b5603f" stroke-width="2.5"/>
+    <!-- inner dish shadow -->
+    <path d="M 737 457 Q 760 480 783 457" stroke="#9c9286" stroke-opacity="0.45"/>
+    <line x1="680" y1="580" x2="687" y2="575" stroke-opacity="0.4"/>
+    <line x1="820" y1="580" x2="813" y2="575" stroke-opacity="0.4"/>
+  </g>
+
+  <g>
+    <!-- R5: base+sides -->
+    <path d="M 860 580 L 902 472 L 1002 472 L 1000 580 Z"/>
+    <!-- top rim bevel -->
+    <path d="M 902 472 L 917 469 L 987 469 L 1002 472" stroke="#9c9286"/>
+    <!-- deep scooped dish -->
+    <path d="M 917 469 Q 952 508 987 469" stroke="#9c9286"/>
+    <!-- terracotta accent tracing dish floor -->
+    <path d="M 923 474 Q 952 505 981 474" stroke="#b5603f" stroke-width="2.5"/>
+    <!-- inner dish shadow -->
+    <path d="M 929 479 Q 952 495 975 479" stroke="#9c9286" stroke-opacity="0.45"/>
+    <line x1="860" y1="580" x2="867" y2="575" stroke-opacity="0.4"/>
+    <line x1="1000" y1="580" x2="993" y2="575" stroke-opacity="0.4"/>
+  </g>
+
+  <!-- Row labels — small-caps mono, family convention from keycap-profiles-compared -->
+  <g font-family="ui-monospace, 'JetBrains Mono', monospace" font-size="15" fill="#9c9286" stroke="none" letter-spacing="2" text-anchor="middle">
+    <text x="210" y="622">R1</text>
+    <text x="390" y="622">R2</text>
+    <text x="570" y="622">R3</text>
+    <text x="750" y="622">R4</text>
+    <text x="930" y="622">R5</text>
+  </g>
+
+  <!-- Product print — MT3 /dev/tty, beamspring-inspired teletype naming, mono set small below the row -->
+  <g font-family="ui-monospace, 'JetBrains Mono', monospace" font-size="20" fill="#9c9286" stroke="none" letter-spacing="3" text-anchor="middle">
+    <text x="600" y="672">MT3 /DEV/TTY</text>
+  </g>
+  <line x1="500" y1="685" x2="700" y2="685" stroke-opacity="0.3"/>
+
+  <!-- Focal accent — terracotta cursor at the R3 home-row crown, the tallest point of the sculpt curve -->
+  <circle cx="570" cy="425" r="6" fill="#b5603f" fill-opacity="0.9" stroke="#b5603f"/>
+  <circle cx="570" cy="425" r="11" stroke="#b5603f" stroke-opacity="0.4"/>
+
+  <!-- Brass-bronze theme dot — small ornamental anchor (family convention), upper-right margin -->
+  <circle cx="1148" cy="184" r="3" fill="#b88a2e" stroke="#b88a2e"/>
+</svg>
