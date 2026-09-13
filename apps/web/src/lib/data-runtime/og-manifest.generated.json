@@ -11,6 +11,16 @@
       }
     },
     {
+      "slug": "mt3-devtty-restock",
+      "readTime": 6,
+      "frontmatter": {
+        "title": "Drop restocks /dev/tty, the 2017 set that built the MT3 profile",
+        "lede": "Drop's catalog listing for Matt3o's original MT3 /dev/tty set flipped to in-stock in late August 2026, returning the dye-sub PBT run that defined the profile.",
+        "pillar": "news",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "split-ergo-parts-pairing",
       "readTime": 9,
       "frontmatter": {
@@ -7599,5 +7609,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-09-07T22:05:43.648Z"
+  "generatedAt": "2026-09-13T13:47:40.887Z"
 }

@@ -7316,6 +7316,40 @@
       "filePath": "apps/web/src/content/articles/cherry-tracker-slide-keychron-kickstarter-delivers.mdx"
     },
     {
+      "slug": "mt3-devtty-restock",
+      "frontmatter": {
+        "slug": "mt3-devtty-restock",
+        "title": "Drop restocks /dev/tty, the 2017 set that built the MT3 profile",
+        "lede": "Drop's catalog listing for Matt3o's original MT3 /dev/tty set flipped to in-stock in late August 2026, returning the dye-sub PBT run that defined the profile.",
+        "description": null,
+        "author": "thock",
+        "pillar": "news",
+        "tags": [
+          "mt3",
+          "drop",
+          "pbt",
+          "keycaps"
+        ],
+        "publishedAt": "2026-08-29T14:00:00.000Z",
+        "updatedAt": "2026-08-29T14:00:00.000Z",
+        "heroImage": "/hero-art/mt3-devtty-restock.svg",
+        "heroImageAlt": "Side-profile silhouette of a tall MT3 keycap with a deep cylindrical scoop, rendered in a warm-grey stroke with an amber dye-band near the cap's top surface standing in for the dye-sub cream-and-charcoal legend of /dev/tty.",
+        "featured": false,
+        "popularityScore": 0,
+        "guideSection": null,
+        "mentionedParts": [
+          {
+            "id": "mt3-devtty",
+            "kind": "keycap-set",
+            "slug": "mt3-devtty"
+          }
+        ]
+      },
+      "body": "\nDrop's catalog record for the Matt3o MT3 <PartReference id=\"mt3-devtty\">/dev/tty</PartReference> keycap set updated to <Mono>in-stock</Mono> on 2026-08-24. Nothing about that sentence looks like news at first glance — vendor stock levels flip constantly, and a nine-year-old SKU coming back doesn't usually earn a headline. But <Mono>/dev/tty</Mono> isn't an ordinary catalog line. It's the set that put the MT3 profile on the map, and the way it was manufactured still explains a real split in how the MT3 catalog is built today.\n\n## The catalog record\n\n<InlineViz\n  src=\"/article-viz/mt3-devtty-restock/spec-strip.svg\"\n  alt=\"Two-row, six-chip fact strip listing the catalog record's fields: profile MT3, material dye-sub PBT, colorway cream / charcoal, designer Matt3o, original release 2017-04-01, and catalog status in-stock as of 2026-08-24, with the status chip highlighted in amber.\"\n  caption=\"What the catalog record actually says, restated as a strip.\"\n  accent=\"amber\"\n/>\n\nThe set itself: dye-sub PBT in cream and charcoal, designed by Matt3o and produced by Drop, modeled on the legend layout and general bearing of IBM's beamspring caps rather than any specific reissue of them. It first shipped 2017-04-01. The listing had been sitting in a sold-out state for a stretch before the record refreshed to in-stock on 2026-08-24 — a restock, not a new production run or a reissue with changed specs. Same tooling, same colorway, same material. The only thing that changed is availability.\n\nThat distinction matters for anyone tempted to read this as a relaunch. It isn't one. Drop has not announced a new colorway, a new material, or a revised legend set under the <Mono>/dev/tty</Mono> name. This is inventory catching up to a set that has apparently kept enough standing demand to justify another production pass nine years after it first shipped.\n\n## The set that built the profile\n\n<InlineViz\n  src=\"/article-viz/mt3-devtty-restock/devtty-timeline.svg\"\n  alt=\"Horizontal timeline with a solid amber marker at the 2017-04-01 original release, a dashed undated marker labeled 'later Drop MT3 runs' noting the shift to double-shot ABS, and a second solid amber marker at the 2026-08-24 catalog restock to in-stock status.\"\n  caption=\"Same shape, two manufacturing eras, one restock nine years apart.\"\n  accent=\"amber\"\n/>\n\nMT3 as a named profile exists because Drop and Matt3o developed it together, and <Mono>/dev/tty</Mono> was the vehicle that introduced it. Before 2017, \"tall sculpted\" mostly meant SA — spherical tops, dramatic row angling, a lineage running back through Signature Plastics to typewriter-era originals. MT3 offered a different sculpt: a deep cylindrical dish rather than a spherical one, with row differentiation pushed even further than SA's. <Mono>/dev/tty</Mono> was the set that put that shape in front of the enthusiast market for the first time, dressed in a cream-and-charcoal palette that read as deliberately utilitarian — a developer's terminal aesthetic, not a novelty colorway. It worked. MT3 is now the dominant tall profile in the enthusiast scene, and most builders who own a set in it can trace their first exposure back to this one.\n\nThat history is also why the set still gets recommended as a reference build. A profile only becomes legible once enough people have typed on the canonical example of it, and for MT3, <Mono>/dev/tty</Mono> has been that example for most of the profile's existence.\n\n## Why dye-sub, not double-shot\n\n<InlineViz\n  src=\"/article-viz/mt3-devtty-restock/dyesub-vs-doubleshot.svg\"\n  alt=\"Two-panel cap cross-section. Left panel: /dev/tty's dye-sub PBT construction, a single mold cavity with dye sublimated into the surface, paired with a short amber 'lower tooling cost' bar. Right panel: a generic double-shot ABS construction with a dedicated second-shot legend cavity, paired with a taller warm-red 'higher tooling cost' bar.\"\n  caption=\"One mold cavity versus two — the cost driver behind the material choice.\"\n  accent=\"amber\"\n/>\n\nThe material choice is the part of this story that gets skipped most often. <Mono>/dev/tty</Mono> shipped as dye-sub PBT, not double-shot ABS — and that wasn't an aesthetic preference, it was a cost decision. Double-shot legends require a dedicated second mold cavity shaped to the exact legend geometry for every keycap in the set, injected in a second plastic color after the base cap is formed. That tooling is expensive, and it has to be paid for before a single unit ships. Dye-sub sidesteps it: the cap is molded once in PBT, then the legend is sublimated into the surface with heat and pressure, adding no second cavity and no second plastic shot.\n\nIn 2017, MT3 was an unproven shape. Drop and Matt3o were introducing a new sculpt to a market that had no track record of buying it, and betting on double-shot tooling for a profile nobody had validated yet would have meant absorbing that upfront cost against a completely unknown sales forecast. Dye-sub let the set ship at a lower cost basis while the shape itself did the work of proving there was demand. The double-shot ABS MT3 runs that followed came later, once Drop had a shape people were already buying in quantity to justify the heavier tooling investment.\n\n<Callout type=\"note\" title=\"Dye-sub and double-shot aren't a quality hierarchy\">\n  It's tempting to read double-shot as the \"upgraded\" version of a dye-sub set, but that's not quite right. Double-shot legends are typically thicker and can carry more color separation on a single cap. Dye-sub PBT tends to resist shine better over years of heavy use and keeps the same matte hand-feel the whole time. The choice on <Mono>/dev/tty</Mono> was driven by manufacturing economics at the time, not a quality shortfall in the dye-sub process itself.\n</Callout>\n\n## Who this restock is actually for\n\nA restock of a nine-year-old dye-sub set is a different kind of event than a new group buy, and it appeals to a different buyer. It's not a novelty colorway drop chasing a Discord hype cycle — the cream-and-charcoal palette has been available in some form for most of the last decade, and anyone who wanted specifically that look has had years to find a secondhand set. What the restock actually offers is a lower-friction entry point into MT3 at large: a builder curious about the profile who doesn't want to commit to a pricier double-shot ABS set sight-unseen now has the original reference build back in Drop's regular catalog instead of the aftermarket.\n\nIt also appeals to a specific kind of completionist — the buyer who already owns other MT3 sets and wants the one that started the lineage, still in its original spec, rather than a modern reissue with updated tooling. For that buyer, the fact that nothing changed between 2017 and this restock is the entire point.\n\n## What to watch\n\nThe open question isn't whether <Mono>/dev/tty</Mono> is a good set — the nine years of MT3's rise since it shipped already answered that. It's whether this restock behaves like a one-time inventory catch-up or turns into a recurring pattern where Drop keeps the original dye-sub tooling in rotation alongside its newer double-shot MT3 lines. A vendor generally doesn't run a production pass on nine-year-old tooling unless the standing demand justifies it, so the more interesting signal here isn't the restock itself — it's whether Drop treats <Mono>/dev/tty</Mono> as a permanent catalog fixture going forward or lets it lapse back to sold-out once this batch clears.\n",
+      "readTime": 6,
+      "filePath": "apps/web/src/content/articles/mt3-devtty-restock.mdx"
+    },
+    {
       "slug": "split-ergo-parts-pairing",
       "frontmatter": {
         "slug": "split-ergo-parts-pairing",
@@ -11722,5 +11756,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-09-07T22:05:43.648Z"
+  "generatedAt": "2026-09-13T13:47:40.887Z"
 }
