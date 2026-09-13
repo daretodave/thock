@@ -13124,7 +13124,7 @@ passes accumulate signals.)
 - evidence: `packages/tokens/src/tokens.css:15-16` (dark-mode `--thock-border`/`--thock-border-hi`); contrast independently recomputed via OKLCH→linear-sRGB→WCAG relative luminance (Björn Ottosson's oklab conversion matrices + W3C contrast formula), confirming 1.42/1.24/2.24/1.97:1 exactly; light-mode values (`--thock-border: oklch(0.88 0.004 85)` against `--thock-bg: oklch(0.965 0.004 85)`) not yet computed — worth checking in the same pass if this is ever picked up.
 - next: `/oversight` call — decide whether to accept a visibly heavier border weight in dark mode for WCAG 1.4.11 compliance, or a lighter-touch alternative (e.g. a subtle background-fill or shadow cue instead of raising border lightness); then implement + re-verify contrast across all bordered components in one pass.
 
-### [HOT PURSUIT] [content-gap] [7] news pillar — 1 of ≥2 articles in last 30d
+### [x] [7] news pillar — 1 of ≥2 articles in last 30d — addressed in 3520811a (closes #989)
 - category: content-gaps
 - impact: 7 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -13136,3 +13136,16 @@ passes accumulate signals.)
 - next: /ship-content → news pillar article
 - issue: #989
 > Filed 2026-09-10 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+> **Resolved (2026-09-13):** shipped "Drop restocks /dev/tty, the 2017 set that built the MT3 profile" at `/article/mt3-devtty-restock`, publishedAt 2026-08-29 (gap-fill midpoint of the 30-day window). `3520811a`
+
+### [HOT PURSUIT] [content-gap] [7] ideas pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 7 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: ideas
+- window-count: 1
+- window-start: 2026-08-14
+- score: 7
+- next: /ship-content → ideas pillar article
+> Filed 2026-09-13 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
