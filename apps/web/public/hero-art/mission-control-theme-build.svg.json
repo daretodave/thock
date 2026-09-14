@@ -1,0 +1,38 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-09-14T05:52:15.000Z",
+  "commit": "3c707b84cad390cde1b8c8b109310c58c083e653",
+  "kind": "hero-art",
+  "article_slug": "mission-control-theme-build",
+  "article_pillar": "Ideas & Builds",
+  "source": "plan/bearings.md § Article hero art — colorful keyboard SVGs (build / mod piece → keyboard outline with a mod callout)",
+  "template": null,
+  "size": [1200, 750],
+  "title": null,
+  "subtitle": null,
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": ["JetBrains Mono"],
+  "subject": "Theme-spotlight build pairing three named parts into one composition. Top-left: a retro TKL case top-down outline (700x290, rx24) with a thick inset bezel band, a dashed gasket channel between outer shell and bezel, and two dashed gasket-mount tabs on the left/right walls at mid-height, standing in for the MM Studio Class80's CNC-aluminum gasket-mount construction. Inside the bezel: a simplified 12x4 main key field, a variable-width bottom row (ctrl/win/alt/space/alt/fn/ctrl), a 3x2 nav cluster, and an inverted-T arrow cluster, separated by the TKL nav gap. A dashed dusty-rose leader with a hollow origin dot and an arrowhead runs from the case's upper-right toward a switch cross-section on the right: a Kailh Box White diagram showing the top housing, the visible stem above the box, the signature raised 'box' wall around the stem (the BOX series dust/moisture seal), a hidden dashed stem segment inside the box, a click-bar leaf shown at both its pre-click ghost position and its resting contact position against the stem, a dusty-rose contact burst (dot + three radiating ticks) marking the audible click, two small dusty-rose sound arcs off the housing's right shoulder, a three-ellipse spring, a bottom housing, PCB pins and a PCB strip, captioned 'kailh box white' with a small 'click' label in dusty rose at the contact point. Below both: a row of six tall SA-profile keycap side silhouettes (steep shoulders, narrow flat crown, taller than a Cherry-profile silhouette) resting on a shared desk line, alternating between a light neutral 'cream' wash fill and a plain 'steel' outline to hint at the Godspeed set's two-tone space-exploration colorway without introducing a second hue. The middle cap is the hero accent: dusty-rose wash fill, dusty-rose outline, and a tiny star mark (cross + dot) on its top surface referencing the set's novelty space-exploration legends. A dashed dusty-rose connector with a hollow origin dot and a filled terminus ties the case's spacebar down to the hero cap, and the row is captioned 'sa godspeed'. A small 'class80 tkl' label sits at the case's lower-left margin. Bronze theme dot at the upper-right margin (1148,70) with a small dusty-rose satellite dot for family cohesion.",
+  "composition": "build / mod motif per bearings.md Article hero art directive: keyboard outline + callout style, extended to three paired parts (case, switch, keycap set) tied together with dashed dusty-rose leaders/connectors rather than a single mod callout, so the piece reads as one cohesive theme-spotlight build rather than three unrelated diagrams.",
+  "splash_color": {
+    "name": "dusty rose",
+    "oklch": "oklch(0.64 0.085 14)",
+    "rotation_note": "Chosen for palette rotation — recent hero-art pieces used ochre, muted terracotta, and coral; dusty rose had not appeared in the last several pieces. Hue 14 kept distinct from other dusty-rose values already in rotation across the corpus (hues 12, 15, 18, 20)."
+  },
+  "accent_color": {
+    "name": "warm-bronze (theme accent)",
+    "oklch": "oklch(0.80 0.135 75)"
+  },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "callout_color": "oklch(0.58 0.006 90)",
+  "parts_referenced": {
+    "board": "MM Studio Class80 (retro CNC-aluminum TKL, thick bezels, gasket mount)",
+    "keycap_set": "SA Godspeed (tall sculpted SA profile, steel-blue / cream space-exploration colorway)",
+    "switch": "Kailh Box White (clicky, box-stem click-bar mechanism)"
+  },
+  "outputs": [
+    "apps/web/public/hero-art/mission-control-theme-build.svg"
+  ],
+  "warnings": []
+}

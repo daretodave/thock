@@ -1,0 +1,26 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-09-14T00:00:00.000Z",
+  "commit": "3c707b84cad390cde1b8c8b109310c58c083e653",
+  "kind": "inline-viz",
+  "article_slug": "mission-control-theme-build",
+  "article_pillar": "ideas",
+  "section_anchor": "the-case-that-makes-room-for-the-caps",
+  "brief_summary": "Side-by-side cross-section comparison of a thin modern gasket TKL case against the thick-bezel MM Studio Class80, each shown with the same tall SA keycap silhouette. On the thin case the cap crowds the case's visual sightline (marked with a caution squiggle); on the Class80 the deeper bezel gives the same cap comfortable headroom (marked with a dusty-rose clearance check).",
+  "target": "apps/web/public/article-viz/mission-control-theme-build/bezel-clearance.svg",
+  "splash_color": { "name": "dusty-rose", "oklch": "oklch(0.66 0.08 20)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "apps/web/src/content/articles/mission-control-theme-build.mdx § 'The case that makes room for the caps' — 'A low-profile gasket build optimized for a slim silhouette often has shallow plate standoffs and a shallow case lip... Stack a full SA set on a board like that and the tallest row can crowd the case's sightline'",
+    "apps/web/src/content/articles/mission-control-theme-build.mdx § 'The case that makes room for the caps' — 'Its bezels are thick by design... that same thickness gives the plate generous headroom relative to the case walls'",
+    "apps/web/src/content/articles/mission-control-theme-build.mdx frontmatter — MM Studio Class80: 'Retro-styled CNC aluminum TKL, thick bezels, ~3.5kg, gasket mount'"
+  ],
+  "outputs": ["apps/web/public/article-viz/mission-control-theme-build/bezel-clearance.svg"],
+  "warnings": [
+    "Case-wall heights and cap heights in this diagram are a schematic illustration of relative headroom, not measured millimeter figures — no such figures appear in the article body."
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-09-14T00:00:00.000Z",
+  "commit": "3c707b84cad390cde1b8c8b109310c58c083e653",
+  "kind": "inline-viz",
+  "article_slug": "mission-control-theme-build",
+  "article_pillar": "ideas",
+  "section_anchor": "a-click-that-matches-the-console-fantasy",
+  "brief_summary": "Annotated cross-section of a Kailh Box White switch, showing the box-stem housing enclosing the stem, the click bar positioned at the tactile bump where it snaps against the stem, a sound-wave glyph marking the click firing at the 45g actuation point, and a separate bottom-out line at 60g to show the click fires well before bottom-out.",
+  "target": "apps/web/public/article-viz/mission-control-theme-build/click-bar-mechanism.svg",
+  "splash_color": { "name": "dusty-rose", "oklch": "oklch(0.66 0.08 20)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "apps/web/src/content/articles/mission-control-theme-build.mdx § 'A click that matches the console fantasy' — 'Box White is a click-bar switch: a separate plastic jacket clicks against the stem as it passes the tactile bump, giving a sharp, audible report right at actuation'",
+    "apps/web/src/content/articles/mission-control-theme-build.mdx § 'A click that matches the console fantasy' — 'At 45g actuation and 60g bottom-out, it's light enough that a typist isn't fighting the spring to get that click'",
+    "apps/web/src/content/articles/mission-control-theme-build.mdx § 'A click that matches the console fantasy' — 'Kailh's box design encloses the stem to resist dust and debris intrusion better than an open-stem switch'"
+  ],
+  "outputs": ["apps/web/public/article-viz/mission-control-theme-build/click-bar-mechanism.svg"],
+  "warnings": []
+}

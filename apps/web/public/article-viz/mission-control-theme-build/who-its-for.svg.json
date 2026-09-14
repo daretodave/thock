@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-09-14T00:00:00.000Z",
+  "commit": "3c707b84cad390cde1b8c8b109310c58c083e653",
+  "kind": "inline-viz",
+  "article_slug": "mission-control-theme-build",
+  "article_pillar": "ideas",
+  "section_anchor": "who-should-skip-this-build",
+  "brief_summary": "A do/don't two-column map. The dusty-rose 'Good fit for' column lists quiet-tolerant desk, boxy retro aesthetic, and patient secondhand hunting. The warm-red 'Skip it for' column lists shared quiet office, minimalist low-profile look, and wants it ordered today — directly mirroring the article's who-should-skip-this-build paragraph.",
+  "target": "apps/web/public/article-viz/mission-control-theme-build/who-its-for.svg",
+  "splash_color": { "name": "dusty-rose", "oklch": "oklch(0.66 0.08 20)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "apps/web/src/content/articles/mission-control-theme-build.mdx § 'Who should skip this build' — 'This pairing is not for a typist who wants quiet... in a shared office or a thin-walled apartment, that's a real cost'",
+    "apps/web/src/content/articles/mission-control-theme-build.mdx § 'Who should skip this build' — 'not for anyone chasing a minimalist modern desk: thick bezels, a dense aluminum shell, and SA's tall sculpt are the opposite of the low-profile, low-visual-mass boards'",
+    "apps/web/src/content/articles/mission-control-theme-build.mdx § 'Who should skip this build' — 'not a build for someone who wants a board they can order complete tomorrow — the Class80's discontinued status means patience on the secondhand market is part of the build'"
+  ],
+  "outputs": ["apps/web/public/article-viz/mission-control-theme-build/who-its-for.svg"],
+  "warnings": []
+}

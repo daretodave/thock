@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Annotated cross-section of a Kailh Box White switch showing the box-stem housing enclosing the stem, a click bar positioned at the tactile bump, and a sound-wave glyph at the actuation point labeled click at 45g, with a separate bottom-out line labeled 60g.</title>
+
+  <text x="60" y="50" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6" letter-spacing="0.08em">KAILH BOX WHITE — CROSS-SECTION</text>
+
+  <!-- outer switch housing -->
+  <rect x="120" y="100" width="340" height="320" rx="14" stroke-opacity="0.85"/>
+  <text x="140" y="130" font-family="IBM Plex Sans, sans-serif" font-size="11.5" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">housing</text>
+
+  <!-- box-stem enclosure around the stem -->
+  <rect x="230" y="140" width="120" height="200" rx="8" stroke="oklch(0.66 0.08 20)" stroke-opacity="0.85" fill="oklch(0.66 0.08 20)" fill-opacity="0.08"/>
+  <text x="240" y="128" font-family="IBM Plex Sans, sans-serif" font-size="11.5" fill="oklch(0.66 0.08 20)" stroke="none" opacity="0.95">box-stem enclosure</text>
+
+  <!-- stem -->
+  <line x1="290" y1="150" x2="290" y2="330" stroke-width="6" stroke-opacity="0.9"/>
+
+  <!-- click bar, positioned at the bump -->
+  <path d="M 350 210 q 30 0 30 30 q 0 30 -30 30" stroke="oklch(0.66 0.08 20)" stroke-opacity="0.95" stroke-width="3"/>
+  <circle cx="350" cy="240" r="5" fill="oklch(0.66 0.08 20)" stroke="none"/>
+  <text x="400" y="200" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.66 0.08 20)" stroke="none" opacity="0.95">click bar</text>
+  <text x="400" y="216" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">snaps against the stem</text>
+  <text x="400" y="230" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">at the tactile bump</text>
+
+  <!-- actuation line + sound glyph -->
+  <line x1="120" y1="250" x2="60" y2="250" stroke-opacity="0.5" stroke-dasharray="4 6"/>
+  <g transform="translate(560 250)" stroke="oklch(0.66 0.08 20)" stroke-opacity="0.9">
+    <path d="M 0 -8 L 0 8" stroke-width="3"/>
+    <path d="M 18 -22 A 28 28 0 0 1 18 22"/>
+    <path d="M 40 -34 A 46 46 0 0 1 40 34"/>
+  </g>
+  <text x="540" y="150" font-family="Newsreader, serif" font-style="italic" font-size="20" fill="oklch(0.66 0.08 20)" stroke="none">click at actuation</text>
+  <text x="540" y="172" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">45g actuation force</text>
+
+  <!-- bottom-out marker -->
+  <line x1="120" y1="410" x2="460" y2="410" stroke-opacity="0.4" stroke-dasharray="4 6"/>
+  <text x="540" y="360" font-family="Newsreader, serif" font-style="italic" font-size="18" fill="oklch(0.78 0.005 90)" stroke="none">bottom-out</text>
+  <text x="540" y="382" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">60g</text>
+  <text x="540" y="405" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">click already fired well before this point</text>
+
+  <!-- Brass-bronze theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

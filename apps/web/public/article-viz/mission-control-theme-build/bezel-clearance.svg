@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Cross-section comparison of a thin modern TKL case against the thick-bezel MM Studio Class80, each shown with the same tall SA keycap silhouette. On the thin case the cap crowds the case's visual sightline; on the Class80 the thicker bezel gives the same cap comfortable headroom.</title>
+
+  <!-- Column headers -->
+  <text x="60" y="50" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6" letter-spacing="0.08em">CASE PROFILE</text>
+  <text x="660" y="50" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6" letter-spacing="0.08em">CASE PROFILE</text>
+
+  <!-- ══ LEFT: THIN MODERN CASE ══════════════════════════════════ -->
+  <text x="60" y="100" font-family="Newsreader, serif" font-style="italic" font-size="20" fill="oklch(0.78 0.005 90)" stroke="none">Thin modern gasket case</text>
+  <text x="60" y="123" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">Shallow bezel, shallow standoffs</text>
+
+  <!-- ground / plate line -->
+  <line x1="80" y1="470" x2="480" y2="470" stroke-opacity="0.6"/>
+  <text x="86" y="490" font-family="JetBrains Mono, monospace" font-size="10" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.5">PLATE</text>
+
+  <!-- thin case walls (short collar) -->
+  <path d="M 100 470 L 100 380 L 130 380" stroke-opacity="0.85"/>
+  <path d="M 460 470 L 460 380 L 430 380" stroke-opacity="0.85"/>
+  <line x1="130" y1="380" x2="430" y2="380" stroke-dasharray="4 6" stroke-opacity="0.4"/>
+  <text x="290" y="368" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55" text-anchor="middle">case sightline</text>
+
+  <!-- tall SA cap silhouette, crowding above the sightline -->
+  <path d="M 250 470 L 230 300 L 330 300 L 310 470 Z" fill="oklch(0.66 0.08 20)" fill-opacity="0.14" stroke="oklch(0.66 0.08 20)" stroke-opacity="0.9"/>
+
+  <!-- caution squiggle marking the crowd -->
+  <path d="M 340 320 q 10 -14 20 0 q 10 14 20 0" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.9" stroke-width="2.5"/>
+  <text x="345" y="290" font-family="IBM Plex Sans, sans-serif" font-size="11.5" fill="oklch(0.62 0.13 25)" stroke="none" opacity="0.95">crowds the sightline</text>
+
+  <!-- ══ RIGHT: CLASS80 ══════════════════════════════════════════ -->
+  <text x="660" y="100" font-family="Newsreader, serif" font-style="italic" font-size="20" fill="oklch(0.66 0.08 20)" stroke="none">Class80 (thick bezel)</text>
+  <text x="660" y="123" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">Deep bezel, generous plate headroom</text>
+
+  <!-- ground / plate line -->
+  <line x1="680" y1="470" x2="1080" y2="470" stroke-opacity="0.6"/>
+  <text x="686" y="490" font-family="JetBrains Mono, monospace" font-size="10" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.5">PLATE</text>
+
+  <!-- thick case walls (tall collar) -->
+  <path d="M 700 470 L 700 290 L 730 290" stroke-opacity="0.9" stroke-width="3"/>
+  <path d="M 1060 470 L 1060 290 L 1030 290" stroke-opacity="0.9" stroke-width="3"/>
+  <line x1="730" y1="290" x2="1030" y2="290" stroke-dasharray="4 6" stroke-opacity="0.4"/>
+  <text x="890" y="278" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55" text-anchor="middle">case sightline</text>
+
+  <!-- same tall SA cap silhouette, now within headroom -->
+  <path d="M 850 470 L 830 300 L 930 300 L 910 470 Z" fill="oklch(0.66 0.08 20)" fill-opacity="0.16" stroke="oklch(0.66 0.08 20)" stroke-opacity="0.9"/>
+
+  <!-- clearance mark -->
+  <line x1="930" y1="300" x2="930" y2="290" stroke="oklch(0.66 0.08 20)" stroke-opacity="0.8" stroke-dasharray="3 4"/>
+  <path d="M 945 300 l 8 -8 m -8 0 l 8 8" stroke="oklch(0.66 0.08 20)" stroke-opacity="0.9" stroke-width="2.5"/>
+  <text x="960" y="308" font-family="IBM Plex Sans, sans-serif" font-size="11.5" fill="oklch(0.66 0.08 20)" stroke="none" opacity="0.95">clears with headroom</text>
+
+  <!-- Brass-bronze theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

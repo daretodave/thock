@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="A retro TKL keyboard case with thick bezels and gasket-mount tabs, a dashed leader connecting it to a Kailh Box White click-bar switch cross-section, and a row of tall SA-profile keycap side silhouettes below with one dusty-rose accent cap bearing a tiny star mark, all tied together as a single theme-spotlight build.">
+  <title>thock hero — mission control theme build: Class80 TKL, SA Godspeed keycaps, Kailh Box White switches</title>
+
+  <!-- ================================================================
+       Canvas:  1200 x 750
+       Subject: theme-spotlight build pairing three parts — a retro
+                CNC-aluminum TKL case (thick bezels, gasket mount),
+                a Kailh Box White click-bar switch cross-section, and
+                a row of tall SA-profile keycap side silhouettes in a
+                two-tone (outline vs washed-fill) rhythm standing in
+                for the steel-blue / cream space-exploration colorway.
+       Palette:
+         Stroke   oklch(0.78 0.005 90)  warm-grey, 2px
+         Splash   oklch(0.64 0.085 14)  dusty rose (click + hero cap)
+         Bronze   oklch(0.80 0.135 75)  theme accent (top-right dot)
+       Background: transparent (light-mode safe per house style).
+  ================================================================ -->
+
+  <!-- Faint wide washes behind the two splash anchors -->
+  <ellipse cx="990" cy="248" rx="95" ry="78" fill="oklch(0.64 0.085 14 / 0.06)" stroke="none"/>
+  <ellipse cx="505" cy="610" rx="115" ry="95" fill="oklch(0.64 0.085 14 / 0.05)" stroke="none"/>
+
+  <!-- ================================================================
+       CASE — retro TKL, thick bezel, gasket mount
+       ================================================================ -->
+  <g>
+    <!-- Outer shell -->
+    <rect x="110" y="70" width="700" height="290" rx="24"/>
+    <!-- Gasket channel (dashed ring between outer shell and inner bezel) -->
+    <rect x="127" y="87" width="666" height="256" rx="18" stroke-dasharray="2 6" stroke-opacity="0.22"/>
+    <!-- Thick inner bezel -->
+    <rect x="144" y="104" width="632" height="222" rx="12" stroke-opacity="0.45"/>
+
+    <!-- Gasket mount tabs, left and right, mid-height -->
+    <rect x="90" y="200" width="20" height="30" rx="4" stroke-dasharray="2 4" stroke-opacity="0.55"/>
+    <rect x="800" y="200" width="20" height="30" rx="4" stroke-dasharray="2 4" stroke-opacity="0.55"/>
+
+    <!-- Main field: 12 columns x 4 rows -->
+    <g stroke-opacity="0.75">
+      <rect x="158" y="118" width="34" height="34" rx="3"/>
+      <rect x="196" y="118" width="34" height="34" rx="3"/>
+      <rect x="234" y="118" width="34" height="34" rx="3"/>
+      <rect x="272" y="118" width="34" height="34" rx="3"/>
+      <rect x="310" y="118" width="34" height="34" rx="3"/>
+      <rect x="348" y="118" width="34" height="34" rx="3"/>
+      <rect x="386" y="118" width="34" height="34" rx="3"/>
+      <rect x="424" y="118" width="34" height="34" rx="3"/>
+      <rect x="462" y="118" width="34" height="34" rx="3"/>
+      <rect x="500" y="118" width="34" height="34" rx="3"/>
+      <rect x="538" y="118" width="34" height="34" rx="3"/>
+      <rect x="576" y="118" width="34" height="34" rx="3"/>
+
+      <rect x="158" y="160" width="34" height="34" rx="3"/>
+      <rect x="196" y="160" width="34" height="34" rx="3"/>
+      <rect x="234" y="160" width="34" height="34" rx="3"/>
+      <rect x="272" y="160" width="34" height="34" rx="3"/>
+      <rect x="310" y="160" width="34" height="34" rx="3"/>
+      <rect x="348" y="160" width="34" height="34" rx="3"/>
+      <rect x="386" y="160" width="34" height="34" rx="3"/>
+      <rect x="424" y="160" width="34" height="34" rx="3"/>
+      <rect x="462" y="160" width="34" height="34" rx="3"/>
+      <rect x="500" y="160" width="34" height="34" rx="3"/>
+      <rect x="538" y="160" width="34" height="34" rx="3"/>
+      <rect x="576" y="160" width="34" height="34" rx="3"/>
+
+      <rect x="158" y="202" width="34" height="34" rx="3"/>
+      <rect x="196" y="202" width="34" height="34" rx="3"/>
+      <rect x="234" y="202" width="34" height="34" rx="3"/>
+      <rect x="272" y="202" width="34" height="34" rx="3"/>
+      <rect x="310" y="202" width="34" height="34" rx="3"/>
+      <rect x="348" y="202" width="34" height="34" rx="3"/>
+      <rect x="386" y="202" width="34" height="34" rx="3"/>
+      <rect x="424" y="202" width="34" height="34" rx="3"/>
+      <rect x="462" y="202" width="34" height="34" rx="3"/>
+      <rect x="500" y="202" width="34" height="34" rx="3"/>
+      <rect x="538" y="202" width="34" height="34" rx="3"/>
+      <rect x="576" y="202" width="34" height="34" rx="3"/>
+
+      <rect x="158" y="244" width="34" height="34" rx="3"/>
+      <rect x="196" y="244" width="34" height="34" rx="3"/>
+      <rect x="234" y="244" width="34" height="34" rx="3"/>
+      <rect x="272" y="244" width="34" height="34" rx="3"/>
+      <rect x="310" y="244" width="34" height="34" rx="3"/>
+      <rect x="348" y="244" width="34" height="34" rx="3"/>
+      <rect x="386" y="244" width="34" height="34" rx="3"/>
+      <rect x="424" y="244" width="34" height="34" rx="3"/>
+      <rect x="462" y="244" width="34" height="34" rx="3"/>
+      <rect x="500" y="244" width="34" height="34" rx="3"/>
+      <rect x="538" y="244" width="34" height="34" rx="3"/>
+      <rect x="576" y="244" width="34" height="34" rx="3"/>
+    </g>
+
+    <!-- Bottom row: modifiers + spacebar, variable widths -->
+    <g stroke-opacity="0.75">
+      <rect x="158" y="286" width="46" height="34" rx="3"/>
+      <rect x="208" y="286" width="34" height="34" rx="3"/>
+      <rect x="246" y="286" width="34" height="34" rx="3"/>
+      <rect x="284" y="286" width="214" height="34" rx="3"/>
+      <rect x="502" y="286" width="34" height="34" rx="3"/>
+      <rect x="540" y="286" width="34" height="34" rx="3"/>
+      <rect x="578" y="286" width="46" height="34" rx="3"/>
+    </g>
+
+    <!-- Nav cluster: 3 x 2, separated by the TKL gap -->
+    <g stroke-opacity="0.75">
+      <rect x="650" y="118" width="34" height="34" rx="3"/>
+      <rect x="688" y="118" width="34" height="34" rx="3"/>
+      <rect x="726" y="118" width="34" height="34" rx="3"/>
+      <rect x="650" y="160" width="34" height="34" rx="3"/>
+      <rect x="688" y="160" width="34" height="34" rx="3"/>
+      <rect x="726" y="160" width="34" height="34" rx="3"/>
+    </g>
+
+    <!-- Arrow cluster: inverted-T -->
+    <g stroke-opacity="0.75">
+      <rect x="688" y="244" width="34" height="34" rx="3"/>
+      <rect x="650" y="286" width="34" height="34" rx="3"/>
+      <rect x="688" y="286" width="34" height="34" rx="3"/>
+      <rect x="726" y="286" width="34" height="34" rx="3"/>
+    </g>
+  </g>
+
+  <text x="120" y="382" font-family="'JetBrains Mono','IBM Plex Mono',ui-monospace,monospace"
+    font-size="12" fill="oklch(0.58 0.006 90)" letter-spacing="0.03em" stroke="none">class80 tkl</text>
+
+  <!-- ================================================================
+       LEADER — case to switch callout (dusty rose)
+       ================================================================ -->
+  <g stroke="oklch(0.64 0.085 14)" stroke-width="1.6" stroke-dasharray="2 6" stroke-opacity="0.8" fill="none">
+    <path d="M 706 128 L 760 128 L 820 158 L 870 174"/>
+  </g>
+  <circle cx="706" cy="128" r="4" fill="none" stroke="oklch(0.64 0.085 14)" stroke-opacity="0.9"/>
+  <path d="M 870 174 L 858 168 M 870 174 L 862 182" stroke="oklch(0.64 0.085 14)" stroke-width="1.6" stroke-opacity="0.85"/>
+
+  <!-- ================================================================
+       SWITCH CALLOUT — Kailh Box White, click-bar cross-section
+       ================================================================ -->
+  <g>
+    <!-- Top housing -->
+    <rect x="900" y="150" width="180" height="70" rx="8" stroke-opacity="0.85"/>
+    <!-- Stem, visible segment above the box -->
+    <line x1="990" y1="150" x2="990" y2="220" stroke-opacity="0.55"/>
+
+    <!-- Box wall — the Kailh BOX signature dust/moisture seal around the stem -->
+    <rect x="955" y="220" width="70" height="46" rx="4" stroke-opacity="0.9"/>
+    <!-- Stem, hidden segment inside the box -->
+    <line x1="990" y1="220" x2="990" y2="266" stroke-opacity="0.3" stroke-dasharray="2 5"/>
+
+    <!-- Click bar — ghost (pre-click) and resting (post-click) positions -->
+    <path d="M 962 232 L 978 224" stroke-opacity="0.3" stroke-dasharray="2 4"/>
+    <path d="M 962 232 L 990 248" stroke="oklch(0.64 0.085 14)" stroke-opacity="0.9"/>
+    <circle cx="962" cy="232" r="2.4" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7"/>
+
+    <!-- Click contact burst -->
+    <circle cx="990" cy="248" r="3.2" fill="oklch(0.64 0.085 14)" stroke="none"/>
+    <g stroke="oklch(0.64 0.085 14)" stroke-width="1.4" stroke-opacity="0.85">
+      <line x1="998" y1="240" x2="1006" y2="235"/>
+      <line x1="1002" y1="248" x2="1011" y2="248"/>
+      <line x1="998" y1="256" x2="1006" y2="261"/>
+    </g>
+
+    <!-- Sound arcs — audible click, off the housing's right shoulder -->
+    <g stroke="oklch(0.64 0.085 14)" stroke-opacity="0.55" stroke-width="1.4">
+      <path d="M 1096 178 Q 1108 190 1096 202"/>
+      <path d="M 1108 174 Q 1124 190 1108 206"/>
+    </g>
+
+    <!-- Stem below the box, toward the spring -->
+    <line x1="990" y1="266" x2="990" y2="330" stroke-opacity="0.5"/>
+
+    <!-- Spring -->
+    <g stroke-opacity="0.6">
+      <ellipse cx="990" cy="300" rx="14" ry="5"/>
+      <ellipse cx="990" cy="312" rx="14" ry="5"/>
+      <ellipse cx="990" cy="324" rx="14" ry="5"/>
+    </g>
+
+    <!-- Bottom housing -->
+    <rect x="930" y="330" width="120" height="50" rx="6" stroke-opacity="0.85"/>
+
+    <!-- PCB pins + strip -->
+    <line x1="960" y1="380" x2="960" y2="404" stroke-opacity="0.6"/>
+    <line x1="1020" y1="380" x2="1020" y2="404" stroke-opacity="0.6"/>
+    <rect x="940" y="404" width="100" height="16" rx="2" stroke-opacity="0.55"/>
+  </g>
+
+  <text x="990" y="450" font-family="'JetBrains Mono','IBM Plex Mono',ui-monospace,monospace"
+    font-size="12" fill="oklch(0.58 0.006 90)" letter-spacing="0.03em" text-anchor="middle" stroke="none">kailh box white</text>
+  <text x="1035" y="245" font-family="'JetBrains Mono','IBM Plex Mono',ui-monospace,monospace"
+    font-size="11" fill="oklch(0.64 0.085 14)" fill-opacity="0.9" letter-spacing="0.03em" stroke="none">click</text>
+
+  <!-- ================================================================
+       SA GODSPEED — row of tall sculpted keycap side silhouettes
+       ================================================================ -->
+  <g>
+    <!-- cap 0 — cream wash -->
+    <path d="M 150 660 L 150 650 L 166 588 L 176 574 L 194 574 L 204 588 L 220 650 L 220 660 Z"
+      fill="oklch(0.78 0.005 90 / 0.10)" stroke-opacity="0.75"/>
+
+    <!-- cap 1 — plain steel outline -->
+    <path d="M 310 660 L 310 650 L 326 588 L 336 574 L 354 574 L 364 588 L 380 650 L 380 660 Z"
+      stroke-opacity="0.9"/>
+
+    <!-- cap 2 — hero cap, dusty-rose accent -->
+    <path d="M 470 660 L 470 650 L 486 588 L 496 574 L 514 574 L 524 588 L 540 650 L 540 660 Z"
+      fill="oklch(0.64 0.085 14 / 0.16)" stroke="oklch(0.64 0.085 14)" stroke-opacity="0.95"/>
+    <!-- tiny star mark on the hero cap's top surface -->
+    <g stroke="oklch(0.64 0.085 14)" stroke-width="1.4" stroke-opacity="0.9">
+      <line x1="505" y1="576" x2="505" y2="586"/>
+      <line x1="500" y1="581" x2="510" y2="581"/>
+    </g>
+    <circle cx="505" cy="581" r="1.6" fill="oklch(0.64 0.085 14)" stroke="none"/>
+
+    <!-- cap 3 — plain steel outline -->
+    <path d="M 630 660 L 630 650 L 646 588 L 656 574 L 674 574 L 684 588 L 700 650 L 700 660 Z"
+      stroke-opacity="0.9"/>
+
+    <!-- cap 4 — cream wash -->
+    <path d="M 790 660 L 790 650 L 806 588 L 816 574 L 834 574 L 844 588 L 860 650 L 860 660 Z"
+      fill="oklch(0.78 0.005 90 / 0.10)" stroke-opacity="0.75"/>
+
+    <!-- cap 5 — plain steel outline -->
+    <path d="M 950 660 L 950 650 L 966 588 L 976 574 L 994 574 L 1004 588 L 1020 650 L 1020 660 Z"
+      stroke-opacity="0.9"/>
+
+    <!-- desk line under the row -->
+    <line x1="130" y1="660" x2="1040" y2="660" stroke-opacity="0.18"/>
+  </g>
+
+  <!-- Connector — case bottom row to the hero keycap -->
+  <path d="M 391 320 Q 440 430 505 572" stroke="oklch(0.64 0.085 14)" stroke-width="1.4" stroke-dasharray="2 6" stroke-opacity="0.55" fill="none"/>
+  <circle cx="391" cy="320" r="3" fill="none" stroke="oklch(0.64 0.085 14)" stroke-opacity="0.8"/>
+  <circle cx="505" cy="572" r="3" fill="oklch(0.64 0.085 14)" stroke="none"/>
+
+  <text x="600" y="702" font-family="'JetBrains Mono','IBM Plex Mono',ui-monospace,monospace"
+    font-size="12" fill="oklch(0.58 0.006 90)" letter-spacing="0.03em" text-anchor="middle" stroke="none">sa godspeed</text>
+
+  <!-- ================================================================
+       BRONZE THEME DOT — upper-right ornamental anchor (family convention)
+       ================================================================ -->
+  <circle cx="1148" cy="70" r="4" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+  <circle cx="1132" cy="80" r="2.2" fill="oklch(0.64 0.085 14)" stroke="none" opacity="0.8"/>
+</svg>

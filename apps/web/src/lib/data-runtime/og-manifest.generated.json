@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "slug": "mission-control-theme-build",
+      "readTime": 7,
+      "frontmatter": {
+        "title": "Build of the week: the mission control desk, in Class80, Godspeed, and Box White",
+        "lede": "A retro TKL, a steel-blue-and-cream SA set, and a clicky box-stem switch aren't three separate purchases here — they're one decision, made three times, that only works because each part solves a problem the other two create.",
+        "pillar": "ideas",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "cherry-tracker-slide-keychron-kickstarter-delivers",
       "readTime": 7,
       "frontmatter": {
@@ -7922,5 +7932,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-09-14T00:49:51.035Z"
+  "generatedAt": "2026-09-14T05:54:57.204Z"
 }
