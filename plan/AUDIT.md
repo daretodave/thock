@@ -13138,7 +13138,7 @@ passes accumulate signals.)
 > Filed 2026-09-10 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 > **Resolved (2026-09-13):** shipped "Drop restocks /dev/tty, the 2017 set that built the MT3 profile" at `/article/mt3-devtty-restock`, publishedAt 2026-08-29 (gap-fill midpoint of the 30-day window). `3520811a`
 
-### [HOT PURSUIT] [content-gap] [7] ideas pillar — 1 of ≥2 articles in last 30d
+### [x] [HOT PURSUIT] [content-gap] [7] ideas pillar — 1 of ≥2 articles in last 30d — addressed in f6a70ca3, closes #993
 - category: content-gaps
 - impact: 7 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -13150,3 +13150,16 @@ passes accumulate signals.)
 - next: /ship-content → ideas pillar article
 - issue: #993
 > Filed 2026-09-13 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+> **Resolved (2026-09-14):** shipped "Build of the week: the mission control desk, in Class80, Godspeed, and Box White" at `/article/mission-control-theme-build`, publishedAt 2026-09-06 (gap-fill midpoint of the 30-day window). A theme-spotlight parts-pairing piece — MM Studio Class80 + SA Godspeed + Kailh Box White. `f6a70ca3`
+
+### [HOT PURSUIT] [content-gap] [7] news pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 7 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: news
+- window-count: 1
+- window-start: 2026-08-15
+- score: 7
+- next: /ship-content → news pillar article
+> Filed 2026-09-14 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
