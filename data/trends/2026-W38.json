@@ -1,0 +1,169 @@
+{
+  "isoWeek": "2026-W38",
+  "publishedAt": "2026-09-14T00:00:00.000Z",
+  "rows": [
+    {
+      "name": "Hall Effect/Rapid Trigger",
+      "category": "switch",
+      "direction": "flat",
+      "score": 97,
+      "spark": [95, 97, 97, 97, 96, 98, 98, 97],
+      "articleSlug": "hall-effect-mainstream",
+      "note": "Still the competitive-play default with no league bans in force; buzz plateauing as attention shifts toward TMR switches."
+    },
+    {
+      "name": "Cherry MX2A",
+      "category": "switch",
+      "direction": "up",
+      "score": -50,
+      "spark": [-45, -45, -46, -49, -50, -54, -58, -50],
+      "articleSlug": "cherry-mx2a-revision",
+      "note": "No fresh QC complaints this week; reviewers now frame MX2A as the premium traditionalist pick against Gateron's value tier."
+    },
+    {
+      "name": "Gateron Magnetic Jade Emerald",
+      "category": "switch",
+      "direction": "up",
+      "score": 71,
+      "spark": [34, 40, 46, 50, 55, 58, 62, 71],
+      "articleSlug": "gateron-magnetic-jade-deep-dive",
+      "note": "The first tactile Hall Effect switch on the market is drawing strongly positive reviews for its bump feel and adjustable actuation."
+    },
+    {
+      "name": "Durock T1",
+      "category": "switch",
+      "direction": "flat",
+      "score": 45,
+      "spark": [30, 34, 38, 41, 44, 45, 45, 45],
+      "articleSlug": "durock-t1-deep-dive",
+      "note": "No new developments this week; T1 holds steady as a budget-tactile staple with no fresh vendor or group-buy activity."
+    },
+    {
+      "name": "Gateron Oil King",
+      "category": "switch",
+      "direction": "up",
+      "score": 52,
+      "spark": [40, 40, 40, 40, 40, 44, 47, 52],
+      "articleSlug": "gateron-oil-king-deep-dive",
+      "note": "Backordered at some vendors but in stock at others; the scarcity is keeping Oil King in active hunt conversations."
+    },
+    {
+      "name": "GMK CYL Orange Alert",
+      "category": "keycap",
+      "direction": "up",
+      "score": 88,
+      "spark": [44, 55, 62, 68, 72, 75, 79, 88],
+      "articleSlug": "divinikey-gmk-cyl-orange-alert-group-buy",
+      "note": "The group buy's final day lands today, Sept 14, via Divinikey and KBDfans — peak-week buzz before it closes."
+    },
+    {
+      "name": "DCS Dolch / Molch",
+      "category": "keycap",
+      "direction": "down",
+      "score": 20,
+      "spark": [38, 34, 26, 25, 38, 34, 26, 20],
+      "articleSlug": "divinikey-dcs-dolch-group-buy",
+      "note": "Both Dolch and sibling Molch have moved past group-buy buzz into quiet post-buy production tracking."
+    },
+    {
+      "name": "GMK CYL OG Extensions",
+      "category": "keycap",
+      "direction": "down",
+      "score": 40,
+      "spark": [62, 70, 80, 63, 45, 44, 43, 40],
+      "articleSlug": "gmk-cyl-og-extensions-interest-check",
+      "note": "Evergreen extension kit remains in stock across vendors with no new interest-check activity this cycle."
+    },
+    {
+      "name": "Split/Ergo layout",
+      "category": "layout",
+      "direction": "up",
+      "score": 98,
+      "spark": [82, 85, 87, 89, 90, 93, 96, 98],
+      "articleSlug": "split-ergo-cohort",
+      "note": "Market growth data plus fresh product pushes keep split/ergo the strongest structural trend in the tracker."
+    },
+    {
+      "name": "Alice layout",
+      "category": "layout",
+      "direction": "up",
+      "score": -30,
+      "spark": [-52, -58, -62, -64, -66, -50, -40, -30],
+      "articleSlug": "alice-layout-decline",
+      "note": "Enthusiast guides now frame Alice as a gateway ergo layout rather than a decline; sentiment keeps recovering."
+    },
+    {
+      "name": "75% Layout",
+      "category": "layout",
+      "direction": "up",
+      "score": 68,
+      "spark": [50, 55, 58, 60, 62, 63, 64, 68],
+      "articleSlug": "75-percent-default",
+      "note": "Cited as the fastest-growing form factor of the last three years, now a plurality favorite for hybrid work-and-gaming setups."
+    },
+    {
+      "name": "Mode Designs",
+      "category": "vendor",
+      "direction": "up",
+      "score": 93,
+      "spark": [62, 70, 76, 78, 80, 84, 89, 93],
+      "articleSlug": "mode-sonnet-r2-group-buy-coverage",
+      "note": "The 2026 Sonnet and Encore refresh is moving from preorder into in-stock sales, sustaining strong momentum."
+    },
+    {
+      "name": "CannonKeys",
+      "category": "vendor",
+      "direction": "up",
+      "score": 44,
+      "spark": [20, 64, 52, 46, 40, 39, 39, 44],
+      "articleSlug": "cannonkeys-blaine-v2-se-group-buy",
+      "note": "Blaine V2: SE closed Aug 9, but steady vendor chatter keeps the board in conversation."
+    },
+    {
+      "name": "Prototypist",
+      "category": "vendor",
+      "direction": "flat",
+      "score": 42,
+      "spark": [24, 28, 31, 35, 40, 41, 42, 42],
+      "articleSlug": "prototypist-vendor-spotlight",
+      "note": "Carbon-neutral shipping messaging and steady UK distribution keep Prototypist a stable operator with no volatility this week."
+    },
+    {
+      "name": "Keychron",
+      "category": "brand",
+      "direction": "flat",
+      "score": 100,
+      "spark": [94, 96, 97, 97, 98, 100, 100, 100],
+      "articleSlug": "keychron-quiet-takeover",
+      "note": "Continued CES-era press and a well-funded crowdfunding campaign keep Keychron's ubiquity intact."
+    },
+    {
+      "name": "Cherry (MX + XTRFY)",
+      "category": "brand",
+      "direction": "up",
+      "score": -8,
+      "spark": [-10, -6, -2, -8, -15, -20, -25, -8],
+      "articleSlug": "cherry-xtrfy-tmr-pivot",
+      "note": "A new TMR switch launch is landing as a genuine redemption arc after the MX2A-era slump, with sentiment turning upward."
+    },
+    {
+      "name": "Topre / HHKB",
+      "category": "brand",
+      "direction": "up",
+      "score": 64,
+      "spark": [34, 40, 46, 50, 55, 54, 57, 64],
+      "articleSlug": "topre-electrocapacitive-deep-dive",
+      "note": "Vendor commentary points to electrocapacitive growth outpacing MX this year, with a Pro Hybrid promo sustaining interest."
+    },
+    {
+      "name": "TMR (Tunnel Magnetoresistance) switches",
+      "category": "switch",
+      "direction": "up",
+      "score": 55,
+      "spark": [10, 15, 22, 30, 37, 44, 50, 55],
+      "articleSlug": null,
+      "note": "A new magnetic sensing tech is emerging across several brands, pitched as Hall Effect's successor with finer resolution and lower power draw."
+    }
+  ],
+  "updatedAt": "2026-09-14T12:00:00.000Z"
+}
