@@ -13164,3 +13164,14 @@ passes accumulate signals.)
 - next: /ship-content → news pillar article
 - issue: #994
 > Filed 2026-09-14 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+
+### [ ] [engineering] [7.2] `next@16.3.2` has 2 unpatched critical RCE advisories; `sharp@0.35.3` has 1 unpatched high libheif advisory
+- category: engineering
+- filed: 2026-09-14 by cloud /digest breadth pass — surfaced via a GitHub push-time Dependabot notice on the digest commit push (not part of the standard `pnpm verify` gate, which doesn't run `pnpm audit`), confirmed independently with `pnpm audit`
+- impact: 8 (2 critical, unauthenticated RCE advisories against `next@16.3.2`, the exact version deployed to production at thock.xyz — GHSA-p293-qw3h-jr36 windows-hosted RCE, GHSA-2xp9-vwfh-vxw4 Image Optimization API AVIF RCE — plus 1 high libheif RCE in `sharp@0.35.3`, transitive via `next`'s image pipeline, also live in prod)
+- ease: 9 (`apps/web/package.json` already pins `"next": "^16.2.12"` — the patched `16.3.3` is within the existing semver range, so this is a lockfile refresh, not a version-pin change: `pnpm update next` + `pnpm install` + full `pnpm verify`; sharp likely resolves automatically as next's transitive tree refreshes)
+- score: 7.2 (impact × ease / 10)
+- evidence: `pnpm audit` — 2 critical (`next<16.3.3`: GHSA-p293-qw3h-jr36, GHSA-2xp9-vwfh-vxw4), 2 high (`sharp<0.35.4`: GHSA-g89c-p67h-r497 + GHSA-2jg2-4ch7-h545 libheif; `js-yaml<3.15.2` via `gray-matter`: GHSA-2883-xcg3-v3hh CPU-exhaustion, first-party MDX only, lower real exploitability), 2 moderate (`vitest<4.1.11` / `@vitest/mocker<4.1.11`: GHSA-82fw-gwwq-j7x9 path traversal, dev/test-only, not shipped to production)
+- next: `pnpm update next && pnpm install`, confirm sharp resolves to `>=0.35.4` in the same pass, re-run full `pnpm verify`. The vitest bump (3.2.7 → 4.1.11) is a major-version jump and lower urgency (dev/test-only) — worth splitting into a separate tick if it doesn't drop out cleanly alongside the next/sharp fix.
+- issue: #995
+> Filed 2026-09-14. Same shape as #979 (closed 2026-09-05, `pnpm.overrides` for browserslist/postcss-selector-parser) — next `/iterate` tick should pick this up given the critical severity and trivial fix.
