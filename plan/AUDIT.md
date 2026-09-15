@@ -13165,7 +13165,7 @@ passes accumulate signals.)
 - issue: #994
 > Filed 2026-09-14 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 
-### [ ] [engineering] [7.2] `next@16.3.2` has 2 unpatched critical RCE advisories; `sharp@0.35.3` has 1 unpatched high libheif advisory
+### [x] [engineering] [7.2] `next@16.3.2` has 2 unpatched critical RCE advisories; `sharp@0.35.3` has 1 unpatched high libheif advisory — addressed in dcb8ca63, closes #995
 - category: engineering
 - filed: 2026-09-14 by cloud /digest breadth pass — surfaced via a GitHub push-time Dependabot notice on the digest commit push (not part of the standard `pnpm verify` gate, which doesn't run `pnpm audit`), confirmed independently with `pnpm audit`
 - impact: 8 (2 critical, unauthenticated RCE advisories against `next@16.3.2`, the exact version deployed to production at thock.xyz — GHSA-p293-qw3h-jr36 windows-hosted RCE, GHSA-2xp9-vwfh-vxw4 Image Optimization API AVIF RCE — plus 1 high libheif RCE in `sharp@0.35.3`, transitive via `next`'s image pipeline, also live in prod)
@@ -13175,3 +13175,4 @@ passes accumulate signals.)
 - next: `pnpm update next && pnpm install`, confirm sharp resolves to `>=0.35.4` in the same pass, re-run full `pnpm verify`. The vitest bump (3.2.7 → 4.1.11) is a major-version jump and lower urgency (dev/test-only) — worth splitting into a separate tick if it doesn't drop out cleanly alongside the next/sharp fix.
 - issue: #995
 > Filed 2026-09-14. Same shape as #979 (closed 2026-09-05, `pnpm.overrides` for browserslist/postcss-selector-parser) — next `/iterate` tick should pick this up given the critical severity and trivial fix.
+> **Resolved (2026-09-15):** `pnpm update next` bumped 16.3.2 → 16.3.5 within the existing `^16.2.12` range; `sharp` auto-resolved to 0.35.4 in the same lockfile refresh. `pnpm audit` now shows 0 critical (was 2), 1 high (was 2, remaining is js-yaml via gray-matter — dev-time parse of first-party MDX only). The vitest moderate advisory (major-version bump) is left for a separate tick per this row's own guidance. 1235 e2e green. `dcb8ca63`
