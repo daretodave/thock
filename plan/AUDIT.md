@@ -13176,3 +13176,15 @@ passes accumulate signals.)
 - issue: #995
 > Filed 2026-09-14. Same shape as #979 (closed 2026-09-05, `pnpm.overrides` for browserslist/postcss-selector-parser) — next `/iterate` tick should pick this up given the critical severity and trivial fix.
 > **Resolved (2026-09-15):** `pnpm update next` bumped 16.3.2 → 16.3.5 within the existing `^16.2.12` range; `sharp` auto-resolved to 0.35.4 in the same lockfile refresh. `pnpm audit` now shows 0 critical (was 2), 1 high (was 2, remaining is js-yaml via gray-matter — dev-time parse of first-party MDX only). The vitest moderate advisory (major-version bump) is left for a separate tick per this row's own guidance. 1235 e2e green. `dcb8ca63`
+
+### [HOT PURSUIT] [content-gap] [7] guides pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 5 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: guides
+- window-count: 1
+- window-start: 2026-08-16
+- score: 7
+- next: /ship-content → guides pillar article
+> Filed 2026-09-15 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
