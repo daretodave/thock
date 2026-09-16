@@ -13152,7 +13152,7 @@ passes accumulate signals.)
 > Filed 2026-09-13 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 > **Resolved (2026-09-14):** shipped "Build of the week: the mission control desk, in Class80, Godspeed, and Box White" at `/article/mission-control-theme-build`, publishedAt 2026-09-06 (gap-fill midpoint of the 30-day window). A theme-spotlight parts-pairing piece — MM Studio Class80 + SA Godspeed + Kailh Box White. `f6a70ca3`
 
-### [HOT PURSUIT] [content-gap] [7] news pillar — 1 of ≥2 articles in last 30d
+### [x] [HOT PURSUIT] [content-gap] [7] news pillar — 1 of ≥2 articles in last 30d — addressed in 9e349b39, closes #994
 - category: content-gaps
 - impact: 7 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -13164,6 +13164,7 @@ passes accumulate signals.)
 - next: /ship-content → news pillar article
 - issue: #994
 > Filed 2026-09-14 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+> **Resolved (2026-09-16):** shipped "Keychron launches Q16 HE 8K with ceramic-TMR magnetic switches" at `/article/keychron-q16-he-8k-ceramic-tmr`, publishedAt 2026-09-07 (gap-fill, aligned with the W37 tracker snapshot that broke the news). Reports Keychron's Kickstarter launch for a ceramic-TMR magnetic-switch board, contrasted against Cherry/XTRFY's earlier TMR bet. `9e349b39`
 
 ### [x] [engineering] [7.2] `next@16.3.2` has 2 unpatched critical RCE advisories; `sharp@0.35.3` has 1 unpatched high libheif advisory — addressed in dcb8ca63, closes #995
 - category: engineering
