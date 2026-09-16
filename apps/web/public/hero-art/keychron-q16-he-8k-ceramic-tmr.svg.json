@@ -1,0 +1,32 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-09-16T00:00:00Z",
+  "commit": "a3e272b2435e582fadc1fdc8a108b97ddc759c21",
+  "kind": "hero-art",
+  "article_slug": "keychron-q16-he-8k-ceramic-tmr",
+  "article_pillar": "news",
+  "brief_summary": "Hero art for the News pillar launch report on Keychron's Q16 HE 8K Kickstarter — a gasket-mount aluminum Q-series board using ceramic-TMR (tunnel magnetoresistance) magnetic switches marketed under Keychron's existing 'HE' (Hall-effect) naming even though the sensing technology is TMR, not Hall-effect. Per bearings.md, a news/vendor piece calls for a layout silhouette or vendor glyph motif rather than the Trends-pillar sparkline, so this piece deliberately omits any sparkline device.",
+  "target": "apps/web/public/hero-art/keychron-q16-he-8k-ceramic-tmr.svg",
+  "source": "plan/bearings.md § Article hero art — colorful keyboard SVGs (locked 2026-05-09), news/vendor piece -> vendor wordmark glyph or layout silhouette",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject; visual family positioned alongside apps/web/public/hero-art/keychron-nova-socket-hybrid.svg and apps/web/public/hero-art/cherry-xtrfy-tmr-pivot.svg but deliberately not reusing their sparkline composition",
+  "size": [1200, 750],
+  "subject": "An abstract gasket-mount Q-series board silhouette (outer case, inset bezel, side gasket-mount channel lines, function row + 4 main rows + a right-edge nav column) with two ochre-highlighted keys marking the ceramic-TMR switch positions. A dashed callout connects those keys to a compact magnified cross-section (ceramic top housing, stem, magnet-on-stem, TMR sensor pad, PCB) rather than a full exploded diagram, since this is a launch report, not a switch deep-dive. Above the board, a naming-mismatch glyph pair stands in for the article's actual news hook without any rendered text: a muted, dashed horseshoe-magnet icon (the Hall-effect shorthand as marketed) handed off via a bent ochre arrow to a solid ochre tunnel-junction icon (concentric rings pierced by a straight through-path, representing tunnel magnetoresistance as actually built).",
+  "splash_color": {
+    "name": "ochre",
+    "oklch": "oklch(0.75 0.115 85)"
+  },
+  "accent_color": {
+    "name": "warm-bronze (theme accent)",
+    "oklch": "oklch(0.80 0.135 75)"
+  },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": [],
+  "notes": "No rendered text anywhere in the file (the naming-mismatch story is carried entirely by the horseshoe-magnet vs. tunnel-junction icon pair + rename arrow, per the brief's 'non-literal, no logos, no text' constraint). Ochre hue 85 chosen to sit clear of the ochre family already in rotation across the corpus (75, 76, 78, 80, 82, 88) while staying inside the warm-only palette rule, and clear of the coral (28) and muted-terracotta (40) splashes already used by the two adjacent Keychron/TMR sibling pieces. All XML comments use '=' separator runs only (no '--' runs) per the svg-validity.test.ts regression guard at apps/web/src/__tests__/svg-validity.test.ts (verified locally: 2/2 tests pass). Board composition and key-grid geometry are original to this piece, not reused from keychron-q-ultra-zmk.svg or either sparkline sibling.",
+  "outputs": [
+    "apps/web/public/hero-art/keychron-q16-he-8k-ceramic-tmr.svg",
+    "apps/web/public/hero-art/keychron-q16-he-8k-ceramic-tmr.svg.json"
+  ],
+  "warnings": []
+}

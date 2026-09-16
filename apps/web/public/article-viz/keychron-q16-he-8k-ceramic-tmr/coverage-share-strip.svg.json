@@ -1,0 +1,22 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-09-07T14:00:00.000Z",
+  "commit": "pending",
+  "kind": "inline-viz",
+  "article_slug": "keychron-q16-he-8k-ceramic-tmr",
+  "article_pillar": "news",
+  "section_anchor": "Cherry's coverage keeps shrinking",
+  "brief_summary": "Three-glyph strip, sized qualitatively per the 2026-W37 tracker's Cherry-row note, showing Keychron's ceramic-TMR Q16 HE and Gateron's magnetic lineup as the two entities dominating this week's coverage, against a visibly smaller glyph for Cherry (MX + XTRFY), the brand the note says is losing coverage share to both.",
+  "target": "apps/web/public/article-viz/keychron-q16-he-8k-ceramic-tmr/coverage-share-strip.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "data/trends/2026-W37.json:rows[Cherry (MX + XTRFY)].note — 'Cherry keeps losing coverage share to magnetic and TMR rivals, with Keychron's ceramic-TMR Q16 HE and Gateron's magnetic lineup dominating this week's headlines instead.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/keychron-q16-he-8k-ceramic-tmr/coverage-share-strip.svg"],
+  "warnings": ["Glyph sizes are a qualitative rendering of the tracker note's language ('dominating' vs 'losing coverage share'), not derived from a numeric coverage-share metric — no such metric is published."]
+}

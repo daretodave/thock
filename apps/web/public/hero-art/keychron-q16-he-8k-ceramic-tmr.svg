@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — Keychron Q16 HE 8K, a Q-series aluminum case top-down silhouette with one key on the right side split open in coral to reveal a magnet-over-sensor TMR switch stem, and a coral 8K polling badge above the case's upper-right corner</title>
+
+  <!-- Coral wash behind the polling badge — upper-right, the "current news" focal region -->
+  <ellipse cx="985" cy="150" rx="200" ry="110" fill="oklch(0.68 0.165 28 / 0.12)" stroke="none"/>
+
+  <!-- Coral wash behind the switch cutaway — the actual news hook -->
+  <ellipse cx="900" cy="470" rx="200" ry="190" fill="oklch(0.68 0.165 28 / 0.07)" stroke="none"/>
+
+  <!-- ============================================================
+       Q-series case outline — aluminum block top-down, gasket-
+       mount chamfer language matching the family's other hero art
+       (keychron-q-ultra-zmk, keychron-nova-socket-hybrid).
+       ============================================================ -->
+  <g>
+    <path d="
+      M 168 260
+      L 940 260
+      L 954 274
+      L 954 606
+      L 940 620
+      L 168 620
+      L 154 606
+      L 154 274
+      Z" />
+    <path d="
+      M 184 280
+      L 934 280
+      L 942 288
+      L 942 592
+      L 934 600
+      L 184 600
+      L 176 592
+      L 176 288
+      Z" stroke-opacity="0.5"/>
+    <line x1="168" y1="606" x2="940" y2="606" stroke-opacity="0.4"/>
+    <line x1="168" y1="614" x2="940" y2="614" stroke-opacity="0.3"/>
+  </g>
+
+  <!-- ============================================================
+       Compact key grid — abstract, no legends. One key on the
+       right side glows coral and is "split open" with a callout
+       line to the magnified switch cutaway below.
+       ============================================================ -->
+  <g opacity="0.85">
+    <rect x="204" y="298" width="36" height="32" rx="3"/>
+    <rect x="246" y="298" width="36" height="32" rx="3"/>
+    <rect x="288" y="298" width="36" height="32" rx="3"/>
+    <rect x="330" y="298" width="36" height="32" rx="3"/>
+    <rect x="372" y="298" width="36" height="32" rx="3"/>
+    <rect x="414" y="298" width="36" height="32" rx="3"/>
+    <rect x="456" y="298" width="36" height="32" rx="3"/>
+    <rect x="498" y="298" width="36" height="32" rx="3"/>
+    <rect x="540" y="298" width="36" height="32" rx="3"/>
+    <rect x="582" y="298" width="36" height="32" rx="3"/>
+    <rect x="624" y="298" width="36" height="32" rx="3"/>
+    <rect x="666" y="298" width="36" height="32" rx="3"/>
+    <rect x="708" y="298" width="36" height="32" rx="3"/>
+    <rect x="750" y="298" width="36" height="32" rx="3"/>
+    <rect x="792" y="298" width="36" height="32" rx="3"/>
+    <rect x="834" y="298" width="36" height="32" rx="3"/>
+    <rect x="876" y="298" width="36" height="32" rx="3"/>
+  </g>
+  <g opacity="0.85">
+    <rect x="204" y="342" width="36" height="32" rx="3"/>
+    <rect x="246" y="342" width="36" height="32" rx="3"/>
+    <rect x="288" y="342" width="36" height="32" rx="3"/>
+    <rect x="330" y="342" width="36" height="32" rx="3"/>
+    <rect x="372" y="342" width="36" height="32" rx="3"/>
+    <rect x="414" y="342" width="36" height="32" rx="3"/>
+    <rect x="456" y="342" width="36" height="32" rx="3"/>
+    <rect x="498" y="342" width="36" height="32" rx="3"/>
+    <rect x="540" y="342" width="36" height="32" rx="3"/>
+    <rect x="582" y="342" width="36" height="32" rx="3"/>
+    <rect x="624" y="342" width="36" height="32" rx="3"/>
+    <rect x="666" y="342" width="36" height="32" rx="3"/>
+    <rect x="708" y="342" width="36" height="32" rx="3"/>
+    <rect x="750" y="342" width="36" height="32" rx="3"/>
+    <rect x="792" y="342" width="36" height="32" rx="3"/>
+    <rect x="834" y="342" width="36" height="32" rx="3"/>
+  </g>
+  <!-- The split-open key -->
+  <rect x="876" y="342" width="36" height="32" rx="3" fill="oklch(0.68 0.165 28 / 0.22)" stroke="oklch(0.68 0.165 28)" stroke-width="1.8"/>
+  <g opacity="0.85">
+    <rect x="204" y="386" width="36" height="32" rx="3"/>
+    <rect x="246" y="386" width="36" height="32" rx="3"/>
+    <rect x="288" y="386" width="36" height="32" rx="3"/>
+    <rect x="330" y="386" width="36" height="32" rx="3"/>
+    <rect x="372" y="386" width="36" height="32" rx="3"/>
+    <rect x="414" y="386" width="36" height="32" rx="3"/>
+    <rect x="456" y="386" width="36" height="32" rx="3"/>
+    <rect x="498" y="386" width="36" height="32" rx="3"/>
+    <rect x="540" y="386" width="36" height="32" rx="3"/>
+    <rect x="582" y="386" width="36" height="32" rx="3"/>
+    <rect x="624" y="386" width="36" height="32" rx="3"/>
+    <rect x="666" y="386" width="36" height="32" rx="3"/>
+    <rect x="708" y="386" width="36" height="32" rx="3"/>
+    <rect x="750" y="386" width="36" height="32" rx="3"/>
+    <rect x="792" y="386" width="36" height="32" rx="3"/>
+    <rect x="834" y="386" width="36" height="32" rx="3"/>
+    <rect x="876" y="386" width="36" height="32" rx="3"/>
+  </g>
+  <rect x="204" y="430" width="620" height="32" rx="3" opacity="0.85"/>
+
+  <!-- Callout — dashed connector from the split-open key to the magnified cutaway -->
+  <line x1="900" y1="374" x2="900" y2="490" stroke-width="1.4" stroke-dasharray="4 5" stroke-opacity="0.55"/>
+  <circle cx="900" cy="374" r="3" fill="oklch(0.68 0.165 28)"/>
+
+  <!-- ============================================================
+       MAGNIFIED SWITCH CUTAWAY — the news hook. A stem with a
+       ceramic-toned housing outline sitting above a TMR sensor
+       pad, field lines rendered as short coral dashes, echoing the
+       magnetic-switch cross-section motif used across the site
+       (cherry-xtrfy-tmr-pivot, keychron-nova-socket-hybrid).
+       ============================================================ -->
+  <circle cx="900" cy="560" r="130" stroke-width="1.6" stroke-opacity="0.5"/>
+
+  <!-- Ceramic housing outline -->
+  <rect x="850" y="500" width="100" height="70" rx="10" stroke-width="2" stroke-opacity="0.75"/>
+
+  <!-- Magnet-over-sensor TMR stem, coral -->
+  <rect x="892" y="530" width="16" height="60" rx="2" stroke="oklch(0.68 0.165 28)"/>
+  <circle cx="900" cy="518" r="18" fill="oklch(0.68 0.165 28 / 0.85)" stroke="oklch(0.68 0.165 28)" stroke-width="1.6"/>
+  <path d="M 872 500 L 858 486" stroke="oklch(0.68 0.165 28)" stroke-width="1.4" stroke-opacity="0.6"/>
+  <path d="M 900 490 L 900 470" stroke="oklch(0.68 0.165 28)" stroke-width="1.4" stroke-opacity="0.6"/>
+  <path d="M 928 500 L 942 486" stroke="oklch(0.68 0.165 28)" stroke-width="1.4" stroke-opacity="0.6"/>
+  <!-- Sensor pad -->
+  <rect x="875" y="592" width="50" height="10" rx="3" fill="oklch(0.68 0.165 28 / 0.4)" stroke="oklch(0.68 0.165 28)" stroke-width="1.4"/>
+
+  <!-- ============================================================
+       8K POLLING BADGE — focal accent, upper-right margin.
+       ============================================================ -->
+  <g>
+    <ellipse cx="985" cy="150" rx="110" ry="46" fill="oklch(0.68 0.165 28 / 0.14)" stroke="none"/>
+    <rect x="925" y="128" width="120" height="44" rx="8" fill="oklch(0.68 0.165 28 / 0.12)" stroke="oklch(0.68 0.165 28)" stroke-width="2.2"/>
+    <text x="985" y="157" font-family="JetBrains Mono, monospace" font-size="22" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">8K</text>
+  </g>
+
+  <!-- Bronze theme dot — family ornamental anchor, upper-right margin -->
+  <circle cx="1148" cy="62" r="7" fill="oklch(0.80 0.135 75)" opacity="0.9"/>
+</svg>

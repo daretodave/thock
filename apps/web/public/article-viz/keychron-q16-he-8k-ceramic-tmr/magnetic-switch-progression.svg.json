@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-09-07T14:00:00.000Z",
+  "commit": "pending",
+  "kind": "inline-viz",
+  "article_slug": "keychron-q16-he-8k-ceramic-tmr",
+  "article_pillar": "news",
+  "section_anchor": "A second sensing generation, not a repeat",
+  "brief_summary": "Three-panel timeline showing Keychron's sequence of magnetic-switch bets in 2026: the Q1 HE (Hall-effect, ZMK, April), the V6 Ultra HE's Nova Socket (mechanical-or-TMR per key, July), and the Q16 HE 8K (full ceramic-TMR commitment, Kickstarter live, September), highlighted in coral as the article's subject.",
+  "target": "apps/web/public/article-viz/keychron-q16-he-8k-ceramic-tmr/magnetic-switch-progression.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "apps/web/src/content/articles/keychron-q16-he-8k-ceramic-tmr.mdx:A second sensing generation, not a repeat — 'The Q1 HE, which reached reviewers in April 2026, committed fully to Hall-effect sensing on ZMK firmware'",
+    "apps/web/src/content/articles/keychron-nova-socket-hybrid.mdx:What Nova Socket actually changes — 'the V6 Ultra HE's Nova Socket hot-swap footprint, launched in July, that accepts either a standard mechanical switch or a TMR magnetic switch in the same socket, decided per key'",
+    "apps/web/src/content/articles/keychron-q16-he-8k-ceramic-tmr.mdx:What launched — 'a magnetic-sensing design that reads stem position through a tunnel-magnetoresistance sensor... with a housing Keychron is marketing as ceramic', Kickstarter live per the same section"
+  ],
+  "outputs": ["apps/web/public/article-viz/keychron-q16-he-8k-ceramic-tmr/magnetic-switch-progression.svg"],
+  "warnings": []
+}

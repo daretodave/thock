@@ -1,0 +1,25 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-09-07T14:00:00.000Z",
+  "commit": "pending",
+  "kind": "inline-viz",
+  "article_slug": "keychron-q16-he-8k-ceramic-tmr",
+  "article_pillar": "news",
+  "section_anchor": "Cherry's coverage keeps shrinking",
+  "brief_summary": "Two eight-week tracker sparklines ending at the 2026-W37 snapshot: Keychron's brand score climbing from 90 to 100 and flattening at the tracker's ceiling, against Cherry (MX + XTRFY)'s brand score falling from -18 to -25 over the same window. Both spark arrays are the literal per-week values published in the single 2026-W37 tracker row for each brand.",
+  "target": "apps/web/public/article-viz/keychron-q16-he-8k-ceramic-tmr/tracker-divergence.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "data/trends/2026-W37.json:rows[Keychron].score — 100, direction flat, spark — [90, 94, 96, 97, 97, 98, 100, 100]",
+    "data/trends/2026-W37.json:rows[Cherry (MX + XTRFY)].score — -25, direction down, spark — [-18, -10, -6, -2, -8, -15, -20, -25]",
+    "data/trends/2026-W37.json:rows[Keychron].note — 'Multi-front momentum continues with a ceramic-TMR Q16 HE 8K Kickstarter and the V6 Ultra Hybrid pre-launch both live, reinforcing category-dominant cadence.'",
+    "data/trends/2026-W37.json:rows[Cherry (MX + XTRFY)].note — 'Cherry keeps losing coverage share to magnetic and TMR rivals, with Keychron's ceramic-TMR Q16 HE and Gateron's magnetic lineup dominating this week's headlines instead.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/keychron-q16-he-8k-ceramic-tmr/tracker-divergence.svg"],
+  "warnings": []
+}

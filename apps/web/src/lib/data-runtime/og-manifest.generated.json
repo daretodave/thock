@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "slug": "keychron-q16-he-8k-ceramic-tmr",
+      "readTime": 6,
+      "frontmatter": {
+        "title": "Keychron launches Q16 HE 8K with ceramic-TMR magnetic switches",
+        "lede": "Keychron's Q-series just picked up a Kickstarter campaign, a ceramic-housed TMR magnetic switch, and an 8000Hz polling claim in one launch. It's the brand's first bet on tunnel-magnetoresistance sensing rather than the Hall-effect tech it already made the category default.",
+        "pillar": "news",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "mission-control-theme-build",
       "readTime": 7,
       "frontmatter": {
@@ -7932,5 +7942,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-09-15T05:50:29.745Z"
+  "generatedAt": "2026-09-16T18:12:26.729Z"
 }

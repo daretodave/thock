@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Two eight-week tracker sparklines ending at the 2026-W37 snapshot. The Keychron brand line, in coral, climbs from 90 to 100 and flattens at the ceiling. The Cherry (MX plus XTRFY) brand line, in warm-red, falls from -18 to -25, staying negative throughout and dropping further in the final two weeks.</title>
+
+  <!-- Bronze theme dot -->
+  <circle cx="1170" cy="30" r="6" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+
+  <text x="600" y="42" font-family="Newsreader, serif" font-style="italic" font-size="19" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">Brand tracker scores, eight weeks to 2026-W37</text>
+
+  <!-- Zero baseline -->
+  <line x1="90" y1="300" x2="1110" y2="300" stroke-dasharray="4 6" opacity="0.3"/>
+  <text x="70" y="305" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.5">0</text>
+
+  <!-- Ceiling line at 100 -->
+  <line x1="90" y1="100" x2="1110" y2="100" stroke-dasharray="4 6" opacity="0.2"/>
+  <text x="70" y="105" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.5">100</text>
+
+  <!-- Keychron line: 90, 94, 96, 97, 97, 98, 100, 100 mapped across x=140..1060, y scaled 0-100 -> 300..100 -->
+  <polyline points="140,238 271,214 402,202 533,196 664,196 795,190 926,178 1057,178" stroke="oklch(0.68 0.165 28)" stroke-width="3"/>
+  <circle cx="140" cy="238" r="4" fill="oklch(0.68 0.165 28)"/>
+  <circle cx="271" cy="214" r="4" fill="oklch(0.68 0.165 28)"/>
+  <circle cx="402" cy="202" r="4" fill="oklch(0.68 0.165 28)"/>
+  <circle cx="533" cy="196" r="4" fill="oklch(0.68 0.165 28)"/>
+  <circle cx="664" cy="196" r="4" fill="oklch(0.68 0.165 28)"/>
+  <circle cx="795" cy="190" r="4" fill="oklch(0.68 0.165 28)"/>
+  <circle cx="926" cy="178" r="4" fill="oklch(0.68 0.165 28)"/>
+  <circle cx="1057" cy="178" r="7" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)"/>
+  <circle cx="1057" cy="178" r="14" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.4" fill="none"/>
+  <text x="1057" y="155" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">100</text>
+  <text x="140" y="222" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.8">Keychron</text>
+
+  <!-- Cherry line: -18, -10, -6, -2, -8, -15, -20, -25 mapped y = 300 - score*2 -->
+  <polyline points="140,336 271,320 402,312 533,304 664,316 795,330 926,340 1057,350" stroke="oklch(0.62 0.13 25)" stroke-width="3"/>
+  <circle cx="140" cy="336" r="4" fill="oklch(0.62 0.13 25)"/>
+  <circle cx="271" cy="320" r="4" fill="oklch(0.62 0.13 25)"/>
+  <circle cx="402" cy="312" r="4" fill="oklch(0.62 0.13 25)"/>
+  <circle cx="533" cy="304" r="4" fill="oklch(0.62 0.13 25)"/>
+  <circle cx="664" cy="316" r="4" fill="oklch(0.62 0.13 25)"/>
+  <circle cx="795" cy="330" r="4" fill="oklch(0.62 0.13 25)"/>
+  <circle cx="926" cy="340" r="4" fill="oklch(0.62 0.13 25)"/>
+  <circle cx="1057" cy="350" r="7" fill="oklch(0.62 0.13 25)" stroke="oklch(0.62 0.13 25)"/>
+  <text x="1057" y="375" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle">-25</text>
+  <text x="140" y="358" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.85">Cherry (MX + XTRFY)</text>
+
+  <text x="600" y="440" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">Keychron pinned at the tracker's ceiling. Cherry still sliding.</text>
+</svg>
