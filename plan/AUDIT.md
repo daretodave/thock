@@ -13178,7 +13178,7 @@ passes accumulate signals.)
 > Filed 2026-09-14. Same shape as #979 (closed 2026-09-05, `pnpm.overrides` for browserslist/postcss-selector-parser) — next `/iterate` tick should pick this up given the critical severity and trivial fix.
 > **Resolved (2026-09-15):** `pnpm update next` bumped 16.3.2 → 16.3.5 within the existing `^16.2.12` range; `sharp` auto-resolved to 0.35.4 in the same lockfile refresh. `pnpm audit` now shows 0 critical (was 2), 1 high (was 2, remaining is js-yaml via gray-matter — dev-time parse of first-party MDX only). The vitest moderate advisory (major-version bump) is left for a separate tick per this row's own guidance. 1235 e2e green. `dcb8ca63`
 
-### [HOT PURSUIT] [content-gap] [7] guides pillar — 1 of ≥2 articles in last 30d
+### [x] [content-gap] [7] guides pillar — 1 of ≥2 articles in last 30d — addressed in 53c04e3a, closes #997
 - category: content-gaps
 - impact: 5 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -13190,6 +13190,7 @@ passes accumulate signals.)
 - next: /ship-content → guides pillar article
 - issue: #997
 > Filed 2026-09-15 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+> **Resolved (2026-09-19):** Shipped "How to clean and maintain a mechanical keyboard" at `/article/keyboard-cleaning-maintenance-guide`, publishedAt 2026-09-05 (gap-fill, largest gap in the 30-day window). Evergreen maintenance/care reference distinct from `lubing-101.mdx` (build-time lubrication) and `stabilizer-servicing-guide.mdx` (stabilizer-specific). `53c04e3a`
 
 ### [HOT PURSUIT] [content-gap] [7] deep-dives pillar — 1 of ≥2 articles in last 30d
 - category: content-gaps
@@ -13202,3 +13203,47 @@ passes accumulate signals.)
 - score: 7
 - next: /ship-content → deep-dives pillar article
 > Filed 2026-09-19 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+
+### [ ] [cross-links] [4.5] keyboard-cleaning-maintenance-guide ↔ keyboard-cables-compared — no prose cross-link (same pillar, ≥2 shared tags: beginner, modding)
+- category: cross-links
+- filed: 2026-09-19 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: beginner, modding
+- article-a: apps/web/src/content/articles/keyboard-cleaning-maintenance-guide.mdx
+- article-b: apps/web/src/content/articles/keyboard-cables-compared.mdx
+- action: add [keyboard-cables-compared](/article/keyboard-cables-compared) to keyboard-cleaning-maintenance-guide body, or vice versa
+
+### [ ] [cross-links] [4.5] keyboard-cleaning-maintenance-guide ↔ mounting-styles-compared — no prose cross-link (same pillar, ≥2 shared tags: beginner, modding)
+- category: cross-links
+- filed: 2026-09-19 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: beginner, modding
+- article-a: apps/web/src/content/articles/keyboard-cleaning-maintenance-guide.mdx
+- article-b: apps/web/src/content/articles/mounting-styles-compared.mdx
+- action: add [mounting-styles-compared](/article/mounting-styles-compared) to keyboard-cleaning-maintenance-guide body, or vice versa
+
+### [ ] [cross-links] [4.5] keyboard-cleaning-maintenance-guide ↔ sound-dampening-compared — no prose cross-link (same pillar, ≥2 shared tags: beginner, modding)
+- category: cross-links
+- filed: 2026-09-19 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: beginner, modding
+- article-a: apps/web/src/content/articles/keyboard-cleaning-maintenance-guide.mdx
+- article-b: apps/web/src/content/articles/sound-dampening-compared.mdx
+- action: add [sound-dampening-compared](/article/sound-dampening-compared) to keyboard-cleaning-maintenance-guide body, or vice versa
+
+### [ ] [cross-links] [4.5] keyboard-cleaning-maintenance-guide ↔ stabilizers-explained — no prose cross-link (same pillar, ≥2 shared tags: beginner, modding)
+- category: cross-links
+- filed: 2026-09-19 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: beginner, modding
+- article-a: apps/web/src/content/articles/keyboard-cleaning-maintenance-guide.mdx
+- article-b: apps/web/src/content/articles/stabilizers-explained.mdx
+- action: add [stabilizers-explained](/article/stabilizers-explained) to keyboard-cleaning-maintenance-guide body, or vice versa
