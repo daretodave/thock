@@ -13202,6 +13202,7 @@ passes accumulate signals.)
 - window-start: 2026-08-20
 - score: 7
 - next: /ship-content → deep-dives pillar article
+- issue: #998
 > Filed 2026-09-19 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 
 ### [ ] [cross-links] [4.5] keyboard-cleaning-maintenance-guide ↔ keyboard-cables-compared — no prose cross-link (same pillar, ≥2 shared tags: beginner, modding)
