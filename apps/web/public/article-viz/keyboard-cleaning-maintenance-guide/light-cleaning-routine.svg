@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>The weekly light-cleaning routine — duster, brush into switch gaps, spot-pull a keycap, microfiber wipe-down</title>
+
+  <!-- Faint baseline + tick rhythm running across all four panels -->
+  <line x1="80" y1="380" x2="1120" y2="380" stroke-opacity="0.4"/>
+  <g stroke-opacity="0.3">
+    <line x1="80"   y1="380" x2="80"   y2="388"/>
+    <line x1="340"  y1="380" x2="340"  y2="388"/>
+    <line x1="600"  y1="380" x2="600"  y2="388"/>
+    <line x1="860"  y1="380" x2="860"  y2="388"/>
+    <line x1="1120" y1="380" x2="1120" y2="388"/>
+  </g>
+
+  <!-- ══════ STEP 1: MANUAL DUSTER ═══════════════════════════════════════ -->
+  <g>
+    <!-- Bulb duster: rounded bulb body + tapered nozzle pointed at the keys -->
+    <path d="M 105 210 C 105 185 130 170 155 170 C 180 170 200 185 200 210 C 200 230 185 240 175 245 L 235 260 L 175 260 C 165 258 105 235 105 210 Z" stroke-opacity="0.85"/>
+    <!-- Nozzle tip -->
+    <line x1="200" y1="212" x2="238" y2="215" stroke-opacity="0.85"/>
+    <!-- Air-burst lines fanning from the nozzle toward a small key row below -->
+    <g stroke-opacity="0.5" stroke-dasharray="3 5">
+      <line x1="238" y1="215" x2="270" y2="235"/>
+      <line x1="238" y1="220" x2="270" y2="255"/>
+      <line x1="238" y1="226" x2="262" y2="270"/>
+    </g>
+    <!-- Small key row being cleared -->
+    <g stroke-opacity="0.7">
+      <rect x="130" y="285" width="34" height="30" rx="4"/>
+      <rect x="172" y="285" width="34" height="30" rx="4"/>
+      <rect x="214" y="285" width="34" height="30" rx="4"/>
+    </g>
+  </g>
+  <circle cx="185" cy="80" r="22" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.85" stroke-width="2.5"/>
+  <text x="185" y="89" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle">1</text>
+  <text x="185" y="345" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">duster — loose debris</text>
+
+  <!-- Connector arrow → step 2 -->
+  <g stroke-opacity="0.4">
+    <line x1="265" y1="230" x2="305" y2="230"/>
+    <path d="M 297 224 L 305 230 L 297 236"/>
+  </g>
+
+  <!-- ══════ STEP 2: BRUSH INTO SWITCH GAP / STAB WELL ═══════════════════ -->
+  <g>
+    <!-- Two adjacent keycaps with a gap between them -->
+    <g stroke-opacity="0.8">
+      <rect x="385" y="230" width="60" height="60" rx="5"/>
+      <rect x="460" y="230" width="60" height="60" rx="5"/>
+    </g>
+    <!-- Amber dotted highlight in the gap — the target zone -->
+    <line x1="452" y1="235" x2="452" y2="285" stroke="oklch(0.78 0.10 80)" stroke-width="2.5" stroke-dasharray="1 4" stroke-opacity="0.95"/>
+    <!-- Brush tip working into the gap from above -->
+    <g stroke-opacity="0.7">
+      <path d="M 415 145 L 445 180 L 458 198 L 445 212 L 428 190 Z"/>
+      <line x1="415" y1="145" x2="405" y2="130"/>
+    </g>
+  </g>
+  <circle cx="440" cy="80" r="22" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.85" stroke-width="2.5"/>
+  <text x="440" y="89" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle">2</text>
+  <text x="440" y="345" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">brush — gaps + stab wells</text>
+
+  <!-- Connector arrow → step 3 -->
+  <g stroke-opacity="0.4">
+    <line x1="520" y1="230" x2="560" y2="230"/>
+    <path d="M 552 224 L 560 230 L 552 236"/>
+  </g>
+
+  <!-- ══════ STEP 3: SPOT-PULL A KEYCAP ══════════════════════════════════ -->
+  <g>
+    <!-- Housing block, seated on the panel baseline -->
+    <path d="M 655 270 L 755 270 L 755 300 L 655 300 Z" stroke-opacity="0.6"/>
+    <!-- Exposed stem -->
+    <path d="M 685 235 L 725 235 L 725 270 L 685 270 Z" stroke-opacity="0.8"/>
+    <!-- Lifted keycap, hovering above the stem -->
+    <path d="M 665 165 L 745 165 L 755 210 L 655 210 Z" stroke-opacity="0.9"/>
+    <!-- Puller hook wires from the keycap underside down to the stem -->
+    <g stroke-opacity="0.5" stroke-dasharray="3 5">
+      <line x1="668" y1="208" x2="668" y2="235"/>
+      <line x1="742" y1="208" x2="742" y2="235"/>
+    </g>
+    <!-- Lift arrow -->
+    <g stroke="oklch(0.78 0.10 80)" stroke-opacity="0.85" stroke-width="2.5">
+      <line x1="705" y1="160" x2="705" y2="128"/>
+      <path d="M 693 140 L 705 128 L 717 140"/>
+    </g>
+  </g>
+  <circle cx="705" cy="80" r="22" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.85" stroke-width="2.5"/>
+  <text x="705" y="89" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle">3</text>
+  <text x="705" y="345" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">spot-pull — check underneath</text>
+
+  <!-- Connector arrow → step 4 -->
+  <g stroke-opacity="0.4">
+    <line x1="790" y1="230" x2="830" y2="230"/>
+    <path d="M 822 224 L 830 230 L 822 236"/>
+  </g>
+
+  <!-- ══════ STEP 4: MICROFIBER WIPE-DOWN ═════════════════════════════════ -->
+  <g>
+    <!-- Case top surface, a long flat plane -->
+    <line x1="900" y1="290" x2="1080" y2="290" stroke-opacity="0.6" stroke-width="2.5"/>
+    <!-- Folded microfiber cloth, a soft wavy rounded shape -->
+    <path d="M 945 230 C 935 210 955 195 980 200 C 1005 195 1025 210 1015 230 C 1025 245 1005 255 980 250 C 955 255 935 245 945 230 Z" stroke-opacity="0.85"/>
+    <!-- Motion arcs suggesting the wipe sweep -->
+    <g stroke-opacity="0.45" stroke-dasharray="3 5">
+      <path d="M 900 265 C 930 275 950 275 975 265"/>
+      <path d="M 940 278 C 965 286 990 286 1015 278"/>
+    </g>
+  </g>
+  <circle cx="970" cy="80" r="22" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.85" stroke-width="2.5"/>
+  <text x="970" y="89" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle">4</text>
+  <text x="970" y="345" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">microfiber — case wipe</text>
+
+  <!-- Brass-bronze theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Deep-cleaning methods that are safe versus methods to avoid — a bowl soak on the left, an ultrasonic tank crossed out on the right</title>
+
+  <!-- Faint baseline + family rhythm -->
+  <line x1="90" y1="580" x2="1110" y2="580" stroke-opacity="0.4"/>
+  <g stroke-opacity="0.3">
+    <line x1="90"   y1="580" x2="90"   y2="588"/>
+    <line x1="345"  y1="580" x2="345"  y2="588"/>
+    <line x1="600"  y1="580" x2="600"  y2="588"/>
+    <line x1="855"  y1="580" x2="855"  y2="588"/>
+    <line x1="1110" y1="580" x2="1110" y2="588"/>
+  </g>
+
+  <!-- Vertical divider between the two columns -->
+  <line x1="600" y1="60" x2="600" y2="560" stroke-opacity="0.25" stroke-dasharray="4 6"/>
+
+  <!-- ══════ LEFT COLUMN: DO ═══════════════════════════════════════════ -->
+  <text x="150" y="95" font-family="IBM Plex Sans, sans-serif" font-size="20" font-weight="600" letter-spacing="0.05em" fill="oklch(0.78 0.10 80)" stroke="none">DO</text>
+  <line x1="150" y1="106" x2="230" y2="106" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.7" stroke-width="2"/>
+
+  <!-- Soft amber wash behind the bowl -->
+  <ellipse cx="300" cy="290" rx="180" ry="140" fill="oklch(0.78 0.10 80 / 0.08)" stroke="none"/>
+
+  <!-- Bowl / basin: front rim ellipse + body sides + bottom ellipse -->
+  <g stroke-opacity="0.85">
+    <ellipse cx="300" cy="260" rx="150" ry="40"/>
+    <path d="M 150 260 L 175 350"/>
+    <path d="M 450 260 L 425 350"/>
+    <ellipse cx="300" cy="352" rx="125" ry="28"/>
+  </g>
+  <!-- Amber dotted highlight tracing the rim — the "safe zone" -->
+  <ellipse cx="300" cy="260" rx="150" ry="40" fill="none" stroke="oklch(0.78 0.10 80)" stroke-width="2.5" stroke-dasharray="1 4" stroke-opacity="0.95"/>
+
+  <!-- Water wave lines inside the bowl -->
+  <g stroke-opacity="0.5">
+    <path d="M 195 275 C 225 265 255 285 285 275 C 315 265 345 285 375 275"/>
+    <path d="M 205 300 C 235 290 265 310 295 300 C 325 290 355 310 385 300"/>
+  </g>
+  <!-- Bubbles -->
+  <g stroke-opacity="0.5" fill="none">
+    <circle cx="235" cy="240" r="4"/>
+    <circle cx="360" cy="235" r="3"/>
+    <circle cx="320" cy="320" r="3.5"/>
+  </g>
+  <!-- Three tilted keycaps soaking in the bowl -->
+  <g stroke-opacity="0.85">
+    <path d="M 220 300 L 260 292 L 268 320 L 228 328 Z"/>
+    <path d="M 280 310 L 320 305 L 326 332 L 286 337 Z" transform="rotate(6 300 320)"/>
+    <path d="M 340 296 L 380 290 L 386 316 L 346 322 Z" transform="rotate(-4 360 305)"/>
+  </g>
+
+  <!-- DO list, three lines under the illustration -->
+  <g font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none">
+    <text x="300" y="430" text-anchor="middle">mild soap + water soak</text>
+    <text x="300" y="458" text-anchor="middle">isopropyl alcohol for legends</text>
+    <text x="300" y="486" text-anchor="middle">pull switches via hot-swap sockets</text>
+  </g>
+
+  <!-- ══════ RIGHT COLUMN: NEVER ═══════════════════════════════════════ -->
+  <text x="870" y="95" font-family="IBM Plex Sans, sans-serif" font-size="20" font-weight="600" letter-spacing="0.05em" fill="oklch(0.62 0.13 25)" stroke="none">NEVER</text>
+  <line x1="870" y1="106" x2="985" y2="106" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.7" stroke-width="2"/>
+
+  <!-- Ultrasonic tank: rounded rectangular body + lid line -->
+  <g stroke-opacity="0.85">
+    <rect x="770" y="230" width="220" height="130" rx="8"/>
+    <line x1="770" y1="250" x2="990" y2="250" stroke-opacity="0.5"/>
+  </g>
+  <!-- Jagged high-frequency wave lines inside the tank, suggesting cavitation -->
+  <g stroke-opacity="0.55">
+    <path d="M 795 280 L 815 265 L 835 295 L 855 270 L 875 300 L 895 268 L 915 296 L 935 272 L 965 292"/>
+    <path d="M 795 325 L 815 310 L 835 335 L 855 312 L 875 338 L 895 314 L 915 336 L 935 315 L 965 332"/>
+  </g>
+  <!-- Big red X crossing the whole tank -->
+  <g stroke="oklch(0.62 0.13 25)" stroke-opacity="0.9" stroke-width="3">
+    <line x1="770" y1="230" x2="990" y2="360"/>
+    <line x1="990" y1="230" x2="770" y2="360"/>
+  </g>
+
+  <!-- NEVER list, three lines under the illustration -->
+  <g font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none">
+    <text x="880" y="430" text-anchor="middle">ultrasonic bath with switches installed</text>
+    <text x="880" y="458" text-anchor="middle">direct heat to force-dry</text>
+    <text x="880" y="486" text-anchor="middle">reinstalling keycaps while damp</text>
+  </g>
+
+  <!-- Brass-bronze theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

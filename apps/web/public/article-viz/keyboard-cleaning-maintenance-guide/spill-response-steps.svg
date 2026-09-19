@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Liquid spill response, five steps — power off, flip and remove keycaps, blot, isopropyl flush, full dry-out before power-on</title>
+
+  <!-- Faint baseline + tick rhythm running across all five panels -->
+  <line x1="50" y1="380" x2="1150" y2="380" stroke-opacity="0.4"/>
+  <g stroke-opacity="0.3">
+    <line x1="50"   y1="380" x2="50"   y2="388"/>
+    <line x1="260"  y1="380" x2="260"  y2="388"/>
+    <line x1="470"  y1="380" x2="470"  y2="388"/>
+    <line x1="680"  y1="380" x2="680"  y2="388"/>
+    <line x1="890"  y1="380" x2="890"  y2="388"/>
+    <line x1="1100" y1="380" x2="1100" y2="388"/>
+  </g>
+
+  <!-- ══════ STEP 1: POWER OFF / UNPLUG ═══════════════════════════════════ -->
+  <g>
+    <!-- Board edge with a port notch -->
+    <path d="M 65 260 L 165 260 L 165 300 L 65 300 Z" stroke-opacity="0.8"/>
+    <rect x="150" y="272" width="16" height="16" rx="2" stroke-opacity="0.6"/>
+    <!-- Cable pulled away, with a gap -->
+    <path d="M 210 280 L 190 280" stroke-opacity="0.8"/>
+    <path d="M 210 268 L 240 268 L 240 292 L 210 292 Z" stroke-opacity="0.8"/>
+    <!-- Small motion tick marking the disconnect -->
+    <line x1="180" y1="270" x2="180" y2="290" stroke-opacity="0.5" stroke-dasharray="2 4"/>
+  </g>
+  <circle cx="150" cy="80" r="20" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.85" stroke-width="2.5"/>
+  <text x="150" y="88" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle">1</text>
+  <text x="150" y="345" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">unplug / power off</text>
+
+  <!-- Connector -->
+  <g stroke-opacity="0.4">
+    <line x1="260" y1="270" x2="292" y2="270"/>
+    <path d="M 285 264 L 292 270 L 285 276"/>
+  </g>
+
+  <!-- ══════ STEP 2: FLIP + REMOVE KEYCAPS ════════════════════════════════ -->
+  <g>
+    <!-- Tilted board (parallelogram) -->
+    <path d="M 330 300 L 460 280 L 480 320 L 350 340 Z" stroke-opacity="0.8"/>
+    <!-- Keycaps coming loose off the tilted surface -->
+    <rect x="360" y="230" width="26" height="26" rx="4" stroke-opacity="0.7" transform="rotate(-12 373 243)"/>
+    <rect x="405" y="215" width="26" height="26" rx="4" stroke-opacity="0.7" transform="rotate(8 418 228)"/>
+    <!-- Motion lines from board to loose keycaps -->
+    <g stroke-opacity="0.45" stroke-dasharray="2 4">
+      <line x1="380" y1="290" x2="373" y2="256"/>
+      <line x1="420" y1="285" x2="418" y2="241"/>
+    </g>
+  </g>
+  <circle cx="405" cy="80" r="20" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.85" stroke-width="2.5"/>
+  <text x="405" y="88" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle">2</text>
+  <text x="405" y="345" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">flip + remove keycaps</text>
+
+  <!-- Connector -->
+  <g stroke-opacity="0.4">
+    <line x1="470" y1="270" x2="502" y2="270"/>
+    <path d="M 495 264 L 502 270 L 495 276"/>
+  </g>
+
+  <!-- ══════ STEP 3: BLOT STANDING LIQUID ═════════════════════════════════ -->
+  <g>
+    <!-- Puddle blob -->
+    <path d="M 590 330 C 575 315 590 295 615 298 C 630 285 655 290 655 308 C 670 312 665 330 650 332 C 640 342 605 342 590 330 Z" stroke-opacity="0.55"/>
+    <!-- Folded cloth pressed down onto it -->
+    <path d="M 595 250 C 588 235 605 225 622 230 C 640 225 655 235 648 250 C 655 262 640 270 622 266 C 605 270 588 262 595 250 Z" stroke-opacity="0.85"/>
+    <!-- Inward absorb arrows -->
+    <g stroke-opacity="0.5" stroke-dasharray="2 4">
+      <path d="M 600 275 L 615 290"/>
+      <path d="M 645 275 L 630 290"/>
+      <path d="M 622 278 L 622 296"/>
+    </g>
+  </g>
+  <circle cx="622" cy="80" r="20" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.85" stroke-width="2.5"/>
+  <text x="622" y="88" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle">3</text>
+  <text x="622" y="345" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">blot standing liquid</text>
+
+  <!-- Connector -->
+  <g stroke-opacity="0.4">
+    <line x1="680" y1="270" x2="712" y2="270"/>
+    <path d="M 705 264 L 712 270 L 705 276"/>
+  </g>
+
+  <!-- ══════ STEP 4: ISOPROPYL FLUSH ══════════════════════════════════════ -->
+  <g>
+    <!-- Dropper bottle, tipped -->
+    <path d="M 815 220 L 845 230 L 855 260 L 835 300 L 815 300 L 805 260 Z" stroke-opacity="0.85" transform="rotate(18 830 260)"/>
+    <line x1="815" y1="220" x2="805" y2="205" stroke-opacity="0.6" transform="rotate(18 830 260)"/>
+    <!-- Droplets falling toward a small switch below -->
+    <g fill="oklch(0.78 0.10 80 / 0.85)" stroke="oklch(0.78 0.10 80)">
+      <circle cx="862" cy="300" r="3"/>
+      <circle cx="875" cy="315" r="2.5"/>
+      <circle cx="868" cy="330" r="2.5"/>
+    </g>
+    <!-- Small switch / stem rectangle receiving the flush -->
+    <path d="M 850 345 L 895 345 L 895 375 L 850 375 Z" stroke-opacity="0.75"/>
+  </g>
+  <circle cx="855" cy="80" r="20" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.85" stroke-width="2.5"/>
+  <text x="855" y="88" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle">4</text>
+  <text x="855" y="345" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" dy="0">isopropyl flush residue</text>
+
+  <!-- Connector -->
+  <g stroke-opacity="0.4">
+    <line x1="890" y1="270" x2="922" y2="270"/>
+    <path d="M 915 264 L 922 270 L 915 276"/>
+  </g>
+
+  <!-- ══════ STEP 5: FULL DRY-OUT BEFORE POWER-ON ═════════════════════════ -->
+  <g>
+    <!-- Upright board -->
+    <rect x="1015" y="255" width="120" height="55" rx="6" stroke-opacity="0.85"/>
+    <!-- Short radiating dash marks suggesting air-drying -->
+    <g stroke-opacity="0.5" stroke-dasharray="3 5">
+      <line x1="1005" y1="240" x2="985" y2="220"/>
+      <line x1="1030" y1="230" x2="1020" y2="205"/>
+      <line x1="1075" y1="225" x2="1075" y2="198"/>
+      <line x1="1120" y1="230" x2="1130" y2="205"/>
+      <line x1="1145" y1="240" x2="1165" y2="220"/>
+      <line x1="1005" y1="325" x2="985" y2="345"/>
+      <line x1="1145" y1="325" x2="1165" y2="345"/>
+    </g>
+  </g>
+  <circle cx="1075" cy="80" r="20" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.85" stroke-width="2.5"/>
+  <text x="1075" y="88" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle">5</text>
+  <text x="1075" y="345" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">full dry-out, then power on</text>
+
+  <!-- Brass-bronze theme dot -->
+  <circle cx="1178" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

@@ -1,0 +1,22 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-09-19T00:00:00.000Z",
+  "commit": "e80be31c",
+  "kind": "inline-viz",
+  "article_slug": "keyboard-cleaning-maintenance-guide",
+  "article_pillar": "guides",
+  "section_anchor": "a-regular-light-cleaning-routine",
+  "brief_summary": "Four-panel numbered process strip for the H2 'A regular light-cleaning routine'. Panel 1: a bulb-style manual duster aimed at a small key row with dashed air-burst lines. Panel 2: two adjacent keycaps with an amber dotted highlight in the gap between them and a brush tip working into that gap. Panel 3: a keycap lifted clear of its housing by a puller, exposed stem below, with an amber lift arrow. Panel 4: a folded microfiber cloth wiping a flat case-top line with motion arcs. Each panel gets a numbered amber chip and a sans caption. Matches the body's four practices verbatim — duster, brush for switch gaps and stabilizer wells, keycap-puller spot checks, microfiber wipe — no fabricated steps.",
+  "target": "apps/web/public/article-viz/keyboard-cleaning-maintenance-guide/light-cleaning-routine.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "apps/web/src/content/articles/keyboard-cleaning-maintenance-guide.mdx — 'A regular light-cleaning routine' section: 'A manual pump duster, or compressed air used carefully... A soft brush for switch gaps and stabilizer wells... Keycap puller technique... A microfiber wipe for the case.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/keyboard-cleaning-maintenance-guide/light-cleaning-routine.svg"],
+  "warnings": []
+}

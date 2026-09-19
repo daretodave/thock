@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — keyboard cleaning and maintenance, a row of keycaps with one lifted mid-pull and a dust cluster called out</title>
+
+  <!-- Splash: warm-amber wash behind the row, echoing the guide's care/process hue -->
+  <ellipse cx="600" cy="470" rx="480" ry="150" fill="oklch(0.78 0.10 80 / 0.10)" stroke="none"/>
+
+  <!-- Family baseline + tick rhythm -->
+  <line x1="90" y1="690" x2="1110" y2="690" stroke-opacity="0.45"/>
+  <g stroke-opacity="0.3">
+    <line x1="90"   y1="690" x2="90"   y2="698"/>
+    <line x1="236"  y1="690" x2="236"  y2="698"/>
+    <line x1="381"  y1="690" x2="381"  y2="698"/>
+    <line x1="527"  y1="690" x2="527"  y2="698"/>
+    <line x1="673"  y1="690" x2="673"  y2="698"/>
+    <line x1="818"  y1="690" x2="818"  y2="698"/>
+    <line x1="964"  y1="690" x2="964"  y2="698"/>
+    <line x1="1110" y1="690" x2="1110" y2="698"/>
+  </g>
+
+  <!-- ══════ ROW OF FIVE KEYCAPS ON SWITCH HOUSINGS ═══════════════════════
+       Centers at x = 200, 400, 600, 800, 1000. Each unit: keycap trapezoid
+       (wider at bottom) sitting on a switch-housing block, which sits on
+       two short pins down to the baseline. The center unit (x=600) is
+       lifted, exposing its stem, with a keycap-puller hook and a lift
+       arrow above it. ═══════════════════════════════════════════════════ -->
+
+  <!-- Housing + pins, all five positions (drawn first, so the lifted
+       keycap's stem reads as "exposed" above an otherwise-identical row) -->
+  <g>
+    <!-- Housing 1 -->
+    <path d="M 145 600 L 255 600 L 255 660 L 145 660 Z"/>
+    <line x1="165" y1="660" x2="165" y2="690" stroke-opacity="0.6"/>
+    <line x1="235" y1="660" x2="235" y2="690" stroke-opacity="0.6"/>
+    <!-- Housing 2 -->
+    <path d="M 345 600 L 455 600 L 455 660 L 345 660 Z"/>
+    <line x1="365" y1="660" x2="365" y2="690" stroke-opacity="0.6"/>
+    <line x1="435" y1="660" x2="435" y2="690" stroke-opacity="0.6"/>
+    <!-- Housing 3 (under the lifted keycap) -->
+    <path d="M 545 600 L 655 600 L 655 660 L 545 660 Z"/>
+    <line x1="565" y1="660" x2="565" y2="690" stroke-opacity="0.6"/>
+    <line x1="635" y1="660" x2="635" y2="690" stroke-opacity="0.6"/>
+    <!-- Housing 4 -->
+    <path d="M 745 600 L 855 600 L 855 660 L 745 660 Z"/>
+    <line x1="765" y1="660" x2="765" y2="690" stroke-opacity="0.6"/>
+    <line x1="835" y1="660" x2="835" y2="690" stroke-opacity="0.6"/>
+    <!-- Housing 5 -->
+    <path d="M 945 600 L 1055 600 L 1055 660 L 945 660 Z"/>
+    <line x1="965" y1="660" x2="965" y2="690" stroke-opacity="0.6"/>
+    <line x1="1035" y1="660" x2="1035" y2="690" stroke-opacity="0.6"/>
+  </g>
+
+  <!-- Seated keycaps (1, 2, 4, 5) — trapezoid, narrower top, wider bottom skirt -->
+  <g stroke-opacity="0.85">
+    <path d="M 155 530 L 245 530 L 260 600 L 140 600 Z"/>
+    <path d="M 355 530 L 445 530 L 460 600 L 340 600 Z"/>
+    <path d="M 755 530 L 845 530 L 860 600 L 740 600 Z"/>
+    <path d="M 955 530 L 1045 530 L 1060 600 L 940 600 Z"/>
+  </g>
+  <!-- Faint top-face crossbar on each seated keycap, suggesting a molded texture line -->
+  <g stroke-opacity="0.35">
+    <line x1="170" y1="555" x2="230" y2="555"/>
+    <line x1="370" y1="555" x2="430" y2="555"/>
+    <line x1="770" y1="555" x2="830" y2="555"/>
+    <line x1="970" y1="555" x2="1030" y2="555"/>
+  </g>
+
+  <!-- Exposed stem under the lifted (center) keycap — visible now that the
+       cap has been pulled clear -->
+  <g stroke-opacity="0.8">
+    <path d="M 578 600 L 622 600 L 622 560 L 578 560 Z"/>
+    <line x1="600" y1="565" x2="600" y2="595" stroke-opacity="0.4"/>
+  </g>
+
+  <!-- Lifted keycap (center), pulled clear above the row -->
+  <g stroke-opacity="0.95">
+    <path d="M 555 400 L 645 400 L 660 470 L 540 470 Z"/>
+    <line x1="570" y1="425" x2="630" y2="425" stroke-opacity="0.35"/>
+  </g>
+
+  <!-- Keycap-puller hook: two thin wires from the lifted keycap's underside
+       down to where the housing rim was, suggesting the pull just happened -->
+  <g stroke-opacity="0.55" stroke-dasharray="4 5">
+    <path d="M 552 468 L 552 560"/>
+    <path d="M 648 468 L 648 560"/>
+  </g>
+
+  <!-- Lift arrow above the lifted keycap, amber, with the focal dot at its
+       tip — the family "where it matters" anchor -->
+  <g stroke="oklch(0.78 0.10 80)" stroke-opacity="0.85" stroke-width="2.5">
+    <line x1="600" y1="395" x2="600" y2="320"/>
+    <path d="M 585 335 L 600 320 L 615 335"/>
+  </g>
+  <circle cx="600" cy="312" r="9" fill="oklch(0.78 0.10 80 / 0.95)" stroke="oklch(0.78 0.10 80)"/>
+  <circle cx="600" cy="312" r="16" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.45" fill="none"/>
+
+  <!-- Dust cluster in the gap between keycap 1 and keycap 2, with an amber
+       dotted highlight ring calling it out -->
+  <g fill="oklch(0.78 0.005 90 / 0.6)" stroke="none">
+    <circle cx="290" cy="648" r="3"/>
+    <circle cx="300" cy="656" r="2.5"/>
+    <circle cx="282" cy="658" r="2"/>
+    <circle cx="296" cy="640" r="2"/>
+    <circle cx="308" cy="646" r="2.5"/>
+  </g>
+  <ellipse cx="296" cy="649" rx="34" ry="22" fill="none" stroke="oklch(0.78 0.10 80)" stroke-width="2" stroke-dasharray="1 4" stroke-opacity="0.9"/>
+
+  <!-- Brass-bronze theme dot — upper-right margin -->
+  <circle cx="1148" cy="184" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

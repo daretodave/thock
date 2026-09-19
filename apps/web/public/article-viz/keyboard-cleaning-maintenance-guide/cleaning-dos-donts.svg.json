@@ -1,0 +1,25 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-09-19T00:00:00.000Z",
+  "commit": "e80be31c",
+  "kind": "inline-viz",
+  "article_slug": "keyboard-cleaning-maintenance-guide",
+  "article_pillar": "guides",
+  "section_anchor": "deep-cleaning",
+  "brief_summary": "Two-column do/don't map for the H2 'Deep cleaning'. Left column, headed DO in amber, shows a bowl with an amber dotted rim highlight containing three tilted keycaps in wavy water lines with bubbles, captioned with the three safe practices from the body. Right column, headed NEVER in warm red, shows a rectangular ultrasonic tank with jagged internal wave lines crossed by a large red X, captioned with the three cautions drawn directly from the body's ultrasonic-cleaner callout, hairdryer callout, and the keycap-drying paragraph. A dashed vertical divider separates the two columns.",
+  "target": "apps/web/public/article-viz/keyboard-cleaning-maintenance-guide/cleaning-dos-donts.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans"],
+  "data_sources": [
+    "apps/web/src/content/articles/keyboard-cleaning-maintenance-guide.mdx — 'Keycap soak. Pull the set and soak in mild soap and water... a cotton swab dampened with isopropyl alcohol works well for spot-cleaning'; 'Hot-swap sockets versus desoldering. Hot-swap lets a single contaminated or scratchy switch come out in seconds with no soldering'",
+    "apps/web/src/content/articles/keyboard-cleaning-maintenance-guide.mdx — Callout 'Skip the ultrasonic cleaner': 'Ultrasonic cleaners work well on keycaps alone but are a poor fit for switches... Keeping switches out of the bath entirely is the fix'",
+    "apps/web/src/content/articles/keyboard-cleaning-maintenance-guide.mdx — Callout 'Skip the hairdryer': 'Direct heat can warp keycaps and case plastic, and blowing hot air across residual liquid risks baking it onto the contact leaf'",
+    "apps/web/src/content/articles/keyboard-cleaning-maintenance-guide.mdx — 'Dry completely before reinstalling. ... reinstalling while damp invites a musty smell days later'"
+  ],
+  "outputs": ["apps/web/public/article-viz/keyboard-cleaning-maintenance-guide/cleaning-dos-donts.svg"],
+  "warnings": []
+}

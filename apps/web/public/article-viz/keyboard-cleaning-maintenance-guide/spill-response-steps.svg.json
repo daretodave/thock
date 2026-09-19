@@ -1,0 +1,26 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-09-19T00:00:00.000Z",
+  "commit": "e80be31c",
+  "kind": "inline-viz",
+  "article_slug": "keyboard-cleaning-maintenance-guide",
+  "article_pillar": "guides",
+  "section_anchor": "liquid-spill-response",
+  "brief_summary": "Five-panel numbered process strip for the H2 'Liquid spill response'. Panel 1: a board edge with its cable pulled away, gap between plug and port. Panel 2: a tilted board with keycaps coming loose. Panel 3: a folded cloth pressed onto a puddle blob with inward absorb arrows. Panel 4: a tipped dropper bottle releasing droplets onto a small switch rectangle. Panel 5: an upright board surrounded by short radiating dash marks suggesting air-drying. Each panel matches one of the five bolded steps in the article body verbatim — power down, flip and pull keycaps, blot, isopropyl flush, full dry-out before reassembly.",
+  "target": "apps/web/public/article-viz/keyboard-cleaning-maintenance-guide/spill-response-steps.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "apps/web/src/content/articles/keyboard-cleaning-maintenance-guide.mdx — 'Power down and disconnect immediately. Unplug the cable, or hold a wireless board's power switch off.'",
+    "apps/web/src/content/articles/keyboard-cleaning-maintenance-guide.mdx — 'Flip the board and pull keycaps. Tipping it lets standing liquid drain away from the switches instead of pooling, and removing keycaps... exposes the stems and stabilizer wells'",
+    "apps/web/src/content/articles/keyboard-cleaning-maintenance-guide.mdx — 'Blot, don't wipe. A cloth pressed straight down onto standing liquid pulls it up'",
+    "apps/web/src/content/articles/keyboard-cleaning-maintenance-guide.mdx — 'Isopropyl flush for sticky residue. ... A swab or syringe with 90%+ isopropyl alcohol, worked into the switch stems and stabilizer wells, cuts through it.'",
+    "apps/web/src/content/articles/keyboard-cleaning-maintenance-guide.mdx — 'Full dry-out before reassembly. Measured in days, not hours... A fan on the open board, or a sealed container with desiccant, speeds the process without adding heat.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/keyboard-cleaning-maintenance-guide/spill-response-steps.svg"],
+  "warnings": []
+}

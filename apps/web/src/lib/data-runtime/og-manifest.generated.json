@@ -21,6 +21,16 @@
       }
     },
     {
+      "slug": "keyboard-cleaning-maintenance-guide",
+      "readTime": 8,
+      "frontmatter": {
+        "title": "How to clean and maintain a mechanical keyboard",
+        "lede": "Dust, oil, and crumbs collect on every keyboard whether anyone notices or not. A light routine on a fixed cadence keeps a board feeling and sounding like day one — no teardown required.",
+        "pillar": "guides",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "cherry-tracker-slide-keychron-kickstarter-delivers",
       "readTime": 7,
       "frontmatter": {
@@ -1201,6 +1211,11 @@
       "slug": "magnetic",
       "name": "Magnetic",
       "category": "switch"
+    },
+    {
+      "slug": "maintenance",
+      "name": "Maintenance",
+      "category": "misc"
     },
     {
       "slug": "modding",
@@ -7942,5 +7957,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-09-16T18:12:26.729Z"
+  "generatedAt": "2026-09-19T15:37:13.755Z"
 }
