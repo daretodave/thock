@@ -7609,6 +7609,355 @@
         }
       ],
       "updatedAt": "2026-09-14T12:00:00.000Z"
+    },
+    {
+      "isoWeek": "2026-W39",
+      "publishedAt": "2026-09-21T00:00:00.000Z",
+      "rows": [
+        {
+          "name": "Hall Effect/Rapid Trigger",
+          "category": "switch",
+          "direction": "flat",
+          "score": 98,
+          "spark": [
+            97,
+            97,
+            97,
+            96,
+            98,
+            98,
+            97,
+            98
+          ],
+          "articleSlug": "hall-effect-mainstream",
+          "note": "Wooting 80HE+ and Akko's IFA 2026 magnetic lineup keep hall-effect/rapid-trigger the dominant switch category, with attention holding steady near its ceiling."
+        },
+        {
+          "name": "Cherry MX2A",
+          "category": "switch",
+          "direction": "up",
+          "score": -42,
+          "spark": [
+            -45,
+            -46,
+            -49,
+            -50,
+            -54,
+            -58,
+            -50,
+            -42
+          ],
+          "articleSlug": "cherry-mx2a-revision",
+          "note": "No fresh controversy this week; reviewers continue citing the 2024 retooling favorably against Gateron rivals, nudging sentiment further out of negative territory."
+        },
+        {
+          "name": "Gateron Magnetic Jade Emerald",
+          "category": "switch",
+          "direction": "up",
+          "score": 79,
+          "spark": [
+            40,
+            46,
+            50,
+            55,
+            58,
+            62,
+            71,
+            79
+          ],
+          "articleSlug": "gateron-magnetic-jade-deep-dive",
+          "note": "Fresh reviews and expanded vendor stock push continued momentum for this adjustable-actuation tactile Hall Effect switch."
+        },
+        {
+          "name": "Durock T1",
+          "category": "switch",
+          "direction": "flat",
+          "score": 46,
+          "spark": [
+            34,
+            38,
+            41,
+            44,
+            45,
+            45,
+            45,
+            46
+          ],
+          "articleSlug": "durock-t1-deep-dive",
+          "note": "Reviews remain consistently positive on smoothness and value versus Holy Panda; no new catalyst this week, sentiment holds steady."
+        },
+        {
+          "name": "TMR (Tunnel Magnetoresistance) switches",
+          "category": "switch",
+          "direction": "up",
+          "score": 63,
+          "spark": [
+            15,
+            22,
+            30,
+            37,
+            44,
+            50,
+            55,
+            63
+          ],
+          "articleSlug": "keychron-q16-he-8k-ceramic-tmr",
+          "note": "Keychron's Q16 HE 8K ceramic-TMR launch and Cherry XTRFY's K5 Pro push TMR further into mainstream adoption, positioning it as Hall Effect's successor."
+        },
+        {
+          "name": "Gateron Oil King",
+          "category": "switch",
+          "direction": "up",
+          "score": 58,
+          "spark": [
+            40,
+            40,
+            40,
+            40,
+            44,
+            47,
+            52,
+            58
+          ],
+          "articleSlug": "gateron-oil-king-deep-dive",
+          "note": "Backorders continue at several vendors while others restock, keeping Oil King in active hunt conversations this week."
+        },
+        {
+          "name": "GMK CYL Orange Alert",
+          "category": "keycap",
+          "direction": "down",
+          "score": 65,
+          "spark": [
+            55,
+            62,
+            68,
+            72,
+            75,
+            79,
+            88,
+            65
+          ],
+          "articleSlug": "divinikey-gmk-cyl-orange-alert-group-buy",
+          "note": "Sits deep into its order window with no fresh vendor push this week; estimated February 2027 shipping keeps buyer attention in a holding pattern."
+        },
+        {
+          "name": "DCS Dolch / Molch",
+          "category": "keycap",
+          "direction": "down",
+          "score": 16,
+          "spark": [
+            34,
+            26,
+            25,
+            38,
+            34,
+            26,
+            20,
+            16
+          ],
+          "articleSlug": "divinikey-dcs-dolch-group-buy",
+          "note": "DCS Dolch's group buy closed 2026-07-01 with shipping estimated October 2026; the design remains a steady post-buy discussion topic with no fresh catalyst this week."
+        },
+        {
+          "name": "GMK CYL OG Extensions",
+          "category": "keycap",
+          "direction": "down",
+          "score": 36,
+          "spark": [
+            70,
+            80,
+            63,
+            45,
+            44,
+            43,
+            40,
+            36
+          ],
+          "articleSlug": "gmk-cyl-og-extensions-interest-check",
+          "note": "Continues a steady decline in mentions with no new accent-pack or restock news this week."
+        },
+        {
+          "name": "Split/Ergo layout",
+          "category": "layout",
+          "direction": "up",
+          "score": 99,
+          "spark": [
+            85,
+            87,
+            89,
+            90,
+            93,
+            96,
+            98,
+            99
+          ],
+          "articleSlug": "split-ergo-cohort",
+          "note": "Keychron x Yusha Kobo's 'Valkey Orb' split-trackball board announcement reinforces near-ceiling split/ergo interest."
+        },
+        {
+          "name": "Alice layout",
+          "category": "layout",
+          "direction": "up",
+          "score": -18,
+          "spark": [
+            -58,
+            -62,
+            -64,
+            -66,
+            -50,
+            -40,
+            -30,
+            -18
+          ],
+          "articleSlug": "alice-layout-decline",
+          "note": "Continues recovering from its trough as 2026 buyer guides cite Alice picks favorably, though sentiment remains net-negative."
+        },
+        {
+          "name": "75% Layout",
+          "category": "layout",
+          "direction": "up",
+          "score": 71,
+          "spark": [
+            55,
+            58,
+            60,
+            62,
+            63,
+            64,
+            68,
+            71
+          ],
+          "articleSlug": "75-percent-default",
+          "note": "Cited this week as the largest compact-layout segment by share, reinforcing its position as the default hybrid work-and-gaming form factor."
+        },
+        {
+          "name": "Mode Designs",
+          "category": "vendor",
+          "direction": "up",
+          "score": 97,
+          "spark": [
+            70,
+            76,
+            78,
+            80,
+            84,
+            89,
+            93,
+            97
+          ],
+          "articleSlug": "mode-sonnet-r2-group-buy-coverage",
+          "note": "Opened preorders for the Prologue 98% board on 2026-09-17, debuting a new Crown mounting system, extending the vendor's hot streak after Sonnet R2's group buy."
+        },
+        {
+          "name": "CannonKeys",
+          "category": "vendor",
+          "direction": "up",
+          "score": 52,
+          "spark": [
+            64,
+            52,
+            46,
+            40,
+            39,
+            39,
+            44,
+            52
+          ],
+          "articleSlug": "cannonkeys-blaine-v2-se-group-buy",
+          "note": "Touchstone preorder's limited-time pricing deadline on 2026-09-28 is driving renewed urgency and traffic this week."
+        },
+        {
+          "name": "Prototypist",
+          "category": "vendor",
+          "direction": "flat",
+          "score": 43,
+          "spark": [
+            28,
+            31,
+            35,
+            40,
+            41,
+            42,
+            42,
+            43
+          ],
+          "articleSlug": "prototypist-vendor-spotlight",
+          "note": "Stable week with ongoing UK-market keycap and case distribution; no major new announcement."
+        },
+        {
+          "name": "Keychron",
+          "category": "brand",
+          "direction": "flat",
+          "score": 100,
+          "spark": [
+            96,
+            97,
+            97,
+            98,
+            100,
+            100,
+            100,
+            100
+          ],
+          "articleSlug": "keychron-quiet-takeover",
+          "note": "The Valkey Orb split-trackball collab and V6 Ultra Hybrid TMR Kickstarter keep the brand at peak attention, holding at its ceiling score."
+        },
+        {
+          "name": "Cherry (MX + XTRFY)",
+          "category": "brand",
+          "direction": "up",
+          "score": 5,
+          "spark": [
+            -6,
+            -2,
+            -8,
+            -15,
+            -20,
+            -25,
+            -8,
+            5
+          ],
+          "articleSlug": "cherry-xtrfy-tmr-pivot",
+          "note": "XTRFY's TMR-equipped K5 Pro Compact turns sentiment positive for the first time in eight weeks."
+        },
+        {
+          "name": "Topre / HHKB",
+          "category": "brand",
+          "direction": "up",
+          "score": 72,
+          "spark": [
+            40,
+            46,
+            50,
+            55,
+            54,
+            57,
+            64,
+            72
+          ],
+          "articleSlug": "topre-electrocapacitive-deep-dive",
+          "note": "A 30th Anniversary HHKB model is now in stock alongside a Back to School discount, sustaining renewed interest in electrocapacitive boards."
+        },
+        {
+          "name": "Wooting",
+          "category": "brand",
+          "direction": "up",
+          "score": 80,
+          "spark": [
+            40,
+            45,
+            52,
+            58,
+            63,
+            68,
+            74,
+            80
+          ],
+          "articleSlug": null,
+          "note": "80HE+ preorders opened 2026-09-17 with a split spacebar and new knob accessory, alongside a Wootility 5.0 software release."
+        }
+      ],
+      "updatedAt": "2026-09-21T12:00:00.000Z"
     }
   ],
   "articles": [
@@ -12190,5 +12539,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-09-19T15:37:13.755Z"
+  "generatedAt": "2026-09-21T12:15:46.687Z"
 }
