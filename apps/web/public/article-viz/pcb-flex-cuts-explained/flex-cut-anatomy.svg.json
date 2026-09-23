@@ -1,0 +1,33 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored SVG (no raster pipeline)",
+  "at": "2026-09-23T22:18:17Z",
+  "commit": "5ebed353f518feba8088cb3b9300ec4cb2b24c8d",
+  "kind": "inline-viz",
+  "source": null,
+  "tokens_snapshot": "f79eb6c04b4a9d2e0e3e083f8aeb6bc57586d849",
+  "fonts": [
+    "IBM Plex Sans",
+    "JetBrains Mono"
+  ],
+  "article_slug": "pcb-flex-cuts-explained",
+  "article_pillar": "deep-dives",
+  "section_anchor": "What is actually being cut (first InlineViz, directly after the paragraph introducing the bridge and slot geometry)",
+  "splash_color": { "name": "bordeaux/terracotta", "oklch": "primary splash oklch(0.62 0.10 45), caution accent oklch(0.62 0.13 25)" },
+  "data_sources": [
+    "pcb-flex-cuts-explained.mdx § 'What is actually being cut' — 'The manufacturer routes two slots that nearly meet around a switch's mounting holes, leaving a narrow bridge of PCB material connecting the switch position to the rest of the board. Press the key, and that bridge — not the whole board — is what flexes.'",
+    "pcb-flex-cuts-explained.mdx § 'What the cut trades away' — 'The slot ends are stress concentrators. Wherever a routed cut terminates, the material around that point sees load funneled into a smaller cross-section than the surrounding board, and that geometry is the textbook setup for fatigue cracking under cyclic loading.'"
+  ],
+  "canvas": "1200x600",
+  "strokeWeight": "2px",
+  "strokeColor": "oklch(0.78 0.005 90)",
+  "background": "transparent, matches hero-art/pcb-flex-cuts-explained.svg and hero-art/leaf-spring-mount-deep-dive.svg family",
+  "subject": "Top-down crop of a PCB switch position: one large mounting hole with two small pin holes at center, encircled by two curved routed slots (annular sectors around the hole) that nearly meet — a 4-degree unlabeled gap at the top, a 30-degree bridge gap at the bottom. The bridge gap is filled with a muted-terracotta wedge. The two slot ends flanking that bridge are marked with caution-red circles and a shared 'stress concentration' label. A downward arrow above the hole marks the keystroke deflection direction.",
+  "outputs": [
+    "apps/web/public/article-viz/pcb-flex-cuts-explained/flex-cut-anatomy.svg"
+  ],
+  "warnings": [
+    "Rendered as hand-authored SVG geometry (arcs computed by hand from polar coordinates around the switch hole), not satori/resvg — matches the existing hero-art rendering path for this article and the family's other inline-viz assets.",
+    "No local raster preview was available in this session; geometry was hand-verified (arc endpoint math, mirror symmetry, sweep-flag direction) and the file was checked for XML well-formedness (no double-hyphen runs in comments; parses cleanly with xml.dom.minidom) before delivery."
+  ]
+}

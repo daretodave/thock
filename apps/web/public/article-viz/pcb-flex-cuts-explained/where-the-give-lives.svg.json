@@ -1,0 +1,36 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored SVG (no raster pipeline)",
+  "at": "2026-09-23T22:18:17Z",
+  "commit": "5ebed353f518feba8088cb3b9300ec4cb2b24c8d",
+  "kind": "inline-viz",
+  "source": null,
+  "tokens_snapshot": "f79eb6c04b4a9d2e0e3e083f8aeb6bc57586d849",
+  "fonts": [
+    "IBM Plex Sans",
+    "Newsreader",
+    "JetBrains Mono"
+  ],
+  "article_slug": "pcb-flex-cuts-explained",
+  "article_pillar": "deep-dives",
+  "section_anchor": "Why bother, when the case already has a mount style (second InlineViz, after the QK75 / Bakeneko65 / KBD75 V3 comparison paragraph)",
+  "splash_color": { "name": "bordeaux/terracotta", "oklch": "primary splash oklch(0.62 0.10 45), secondary amber oklch(0.78 0.10 80)" },
+  "data_sources": [
+    "pcb-flex-cuts-explained.mdx § 'Why bother, when the case already has a mount style' — 'That is the situation on a PCB-mount or top-mount board: the PCB is screwed rigidly to the plate, and the plate is screwed rigidly to the case, with no compressible layer anywhere in the stack. Every joint in that chain is a hard joint.'",
+    "pcb-flex-cuts-explained.mdx § 'Why bother, when the case already has a mount style' — 'QK75 ... There's no gasket ring, no foam strip, no leaf-spring tab anywhere in the stack. Whatever give a typist feels on that board either comes from the switch itself or from flex engineered into the PCB — there's no third place for it to come from.'",
+    "pcb-flex-cuts-explained.mdx § 'Why bother, when the case already has a mount style' — 'The Bakeneko65 clamshells its case around a single perimeter o-ring, giving the whole plate-and-PCB assembly a few tenths of a millimeter of travel before anything gets stiff. ... a flex cut at the PCB level would be additive rather than foundational — a small, local softening layered on top of a mount that was already going to feel soft.'"
+  ],
+  "canvas": "1200x410",
+  "strokeWeight": "2px",
+  "strokeColor": "oklch(0.78 0.005 90)",
+  "background": "transparent, matches hero-art/pcb-flex-cuts-explained.svg and hero-art/leaf-spring-mount-deep-dive.svg family",
+  "subject": "Two stacked horizontal bars of identical total width, sharing one 'total flex budget' heading bracket. Bar 1 (QK75 / PCB-mount): a small terracotta 'PCB flex cut (if present)' segment against a long grey 'rigid joints, no give' segment. Bar 2 (Bakeneko65 / gasket mount): a larger amber 'o-ring gasket travel' segment, a smaller terracotta 'PCB flex cut, additive' segment, and a shorter unlabeled grey remainder (left unlabeled — the article does not quantify that remainder, so no number or name was invented for it).",
+  "outputs": [
+    "apps/web/public/article-viz/pcb-flex-cuts-explained/where-the-give-lives.svg"
+  ],
+  "warnings": [
+    "No percentage or numeric proportions are printed on the bars — segment widths are illustrative ordering only (small vs. long, larger vs. smaller vs. shorter, per the article's qualitative language), not measured figures, per the no-fabricated-numbers rule.",
+    "The grey remainder on bar 2 is intentionally left without a text label since the brief's quoted labels do not cover it and the article does not quantify it.",
+    "No local raster preview was available in this session; the file was checked for XML well-formedness (no double-hyphen runs in comments; parses cleanly with xml.dom.minidom) before delivery."
+  ]
+}

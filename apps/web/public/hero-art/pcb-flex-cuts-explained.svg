@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — PCB flex cut: a rectangular circuit board with a grid of switch mounting holes, a routed slot near one switch position isolating a small corner tab of the board, the tab shown slightly deflected outward with the slot's rounded terminus, the flex point, picked out in muted terracotta</title>
+
+  <!-- Muted terracotta wash over the isolated tab and its hinge, the flex point.
+       oklch(0.62 0.10 45) is the muted terracotta already in family rotation
+       (leaf-spring-mount-deep-dive, magnetic-switches-deep-dive). -->
+  <ellipse cx="905" cy="545" rx="80" ry="100" fill="oklch(0.62 0.10 45 / 0.18)" stroke="none"/>
+
+  <!-- ════════════════════════════════════════════════════════════════════════════
+       COMPOSITION: a PCB seen face-on.
+         Board: a rounded rectangle x 250 to 950 (right edge bulges to ~966 across
+           y 484 to 600), y 140 to 610.
+         Grid: 3x3 switch mounting holes at x 340/520/700, y 230/380/530.
+         Flex cut: a routed slot at x 866 to 884, running from the bottom edge
+           (y 610) up to a rounded terminus apex at y 475 — the flex point. The
+           slot separates a small corner tab (x 884 to 966, y 484 to 610) that
+           carries one more mounting hole and is shown flexed slightly outward,
+           its unflexed reference position ghosted as a dashed line.
+         Traces: sparse faint lines hint at copper routing; the trace nearest
+           the cut stops short on each side, since copper does not cross a
+           flex slot.
+       ════════════════════════════════════════════════════════════════════════════ -->
+
+  <!-- ══ BOARD OUTLINE, including the flex-cut notch as a real break in the edge ══ -->
+  <path d="
+    M 260 140
+    L 940 140
+    Q 950 140 950 150
+    L 950 484
+    C 966 504 966 580 950 600
+    Q 950 610 940 610
+    L 884 610
+    L 884 484
+    A 9 9 0 0 0 866 484
+    L 866 610
+    L 260 610
+    Q 250 610 250 600
+    L 250 150
+    Q 250 140 260 140
+    Z" />
+
+  <!-- Ghost: unflexed reference position of the right edge across the tab span -->
+  <line x1="950" y1="484" x2="950" y2="600" stroke-dasharray="3 4" stroke-opacity="0.3"/>
+
+  <!-- ══ SWITCH MOUNTING HOLE GRID, 3x3 in the main body ══ -->
+  <g>
+    <circle cx="340" cy="230" r="15"/>
+    <circle cx="520" cy="230" r="15"/>
+    <circle cx="700" cy="230" r="15"/>
+    <circle cx="340" cy="380" r="15"/>
+    <circle cx="520" cy="380" r="15"/>
+    <circle cx="700" cy="380" r="15"/>
+    <circle cx="340" cy="530" r="15"/>
+    <circle cx="520" cy="530" r="15"/>
+    <circle cx="700" cy="530" r="15"/>
+  </g>
+
+  <!-- ══ ISOLATED MOUNTING HOLE, on the flexing corner tab ══ -->
+  <circle cx="915" cy="545" r="15"/>
+
+  <!-- ══ TRACE HINTS, sparse. The one nearest the cut stops short on both sides ══ -->
+  <g stroke-opacity="0.16">
+    <line x1="355" y1="230" x2="505" y2="230"/>
+    <line x1="535" y1="230" x2="685" y2="230"/>
+    <line x1="355" y1="380" x2="505" y2="380"/>
+    <line x1="535" y1="380" x2="685" y2="380"/>
+    <line x1="340" y1="245" x2="340" y2="365"/>
+    <line x1="520" y1="245" x2="520" y2="365"/>
+    <line x1="700" y1="245" x2="700" y2="365"/>
+    <line x1="340" y1="395" x2="340" y2="515"/>
+    <line x1="520" y1="395" x2="520" y2="515"/>
+  </g>
+  <g stroke-opacity="0.18">
+    <line x1="715" y1="533" x2="850" y2="540"/>
+    <line x1="884" y1="542" x2="899" y2="544"/>
+  </g>
+
+  <!-- ══ STRAIN ARCS AT THE FLEX POINT, opening downward into the tab, splash hue ══ -->
+  <g stroke="oklch(0.62 0.10 45)">
+    <path d="M 851 475 A 24 24 0 0 0 899 475" stroke-opacity="0.5"/>
+    <path d="M 837 475 A 38 38 0 0 0 913 475" stroke-opacity="0.3"/>
+    <path d="M 823 475 A 52 52 0 0 0 927 475" stroke-opacity="0.16"/>
+  </g>
+  <!-- Focal anchor at the slot's rounded terminus, the flex point -->
+  <circle cx="875" cy="475" r="6.5" fill="oklch(0.62 0.10 45 / 0.95)" stroke="oklch(0.62 0.10 45)"/>
+  <circle cx="875" cy="475" r="12" stroke="oklch(0.62 0.10 45)" stroke-opacity="0.5"/>
+
+  <!-- Deflection dimension at the tab's flexed edge -->
+  <line x1="950" y1="548" x2="966" y2="548" stroke="oklch(0.62 0.10 45)" stroke-opacity="0.6"/>
+  <path d="M 954 544 L 950 548 L 954 552" stroke="oklch(0.62 0.10 45)" stroke-opacity="0.6"/>
+  <path d="M 962 544 L 966 548 L 962 552" stroke="oklch(0.62 0.10 45)" stroke-opacity="0.6"/>
+
+  <!-- ══ LEFT MARGIN TIER TICKS ══ -->
+  <g stroke-opacity="0.28">
+    <line x1="130" y1="150" x2="142" y2="150"/>
+    <line x1="130" y1="230" x2="142" y2="230"/>
+    <line x1="130" y1="475" x2="142" y2="475"/>
+    <line x1="130" y1="610" x2="142" y2="610"/>
+  </g>
+  <line x1="136" y1="150" x2="136" y2="610" stroke-opacity="0.14" stroke-dasharray="2 6"/>
+
+  <!-- ══ LABELS ══ -->
+  <text x="300" y="660" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none" letter-spacing="0.05em">PCB — SWITCH FOOTPRINT GRID</text>
+  <text x="760" y="655" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.62 0.10 45)" fill-opacity="0.85" stroke="none" letter-spacing="0.05em">FLEX CUT</text>
+  <text x="760" y="673" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.62 0.10 45)" fill-opacity="0.7" stroke="none" letter-spacing="0.05em">RELIEF HOLE · FLEX POINT</text>
+  <text x="930" y="660" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none" letter-spacing="0.05em">ISOLATED SWITCH</text>
+  <text x="1016" y="300" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none" letter-spacing="0.05em">BOARD EDGE</text>
+  <!-- Leaders -->
+  <line x1="350" y1="650" x2="510" y2="548" stroke-opacity="0.3" stroke-width="1"/>
+  <line x1="790" y1="648" x2="875" y2="592" stroke-opacity="0.3" stroke-width="1"/>
+  <line x1="940" y1="648" x2="915" y2="562" stroke-opacity="0.3" stroke-width="1"/>
+
+  <!-- ══ JetBrains Mono technical value ══ -->
+  <text x="200" y="738" font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace" font-size="10" fill="oklch(0.78 0.005 90)" fill-opacity="0.38" stroke="none" letter-spacing="0.03em">FLEX CUT — A ROUTED SLOT NEAR ONE SWITCH LETS THAT CORNER OF THE PCB DEFLECT, THE REST OF THE BOARD DOES NOT</text>
+
+  <!-- ══ BRONZE THEME DOT, upper-right margin ══ -->
+  <circle cx="1148" cy="92" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

@@ -1,0 +1,32 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored SVG (no raster pipeline)",
+  "at": "2026-09-23T00:00:00Z",
+  "commit": "5ebed353f518feba8088cb3b9300ec4cb2b24c8d",
+  "kind": "hero-art",
+  "article_pillar": "deep-dives",
+  "source": null,
+  "tokens_snapshot": "f79eb6c04b4a9d2e0e3e083f8aeb6bc57586d849",
+  "fonts": [
+    "IBM Plex Sans",
+    "JetBrains Mono"
+  ],
+  "slug": "pcb-flex-cuts-explained",
+  "subject": "A PCB seen face-on: a rounded rectangle board with a 3x3 grid of switch mounting holes in the main body, sparse faint trace hints, and a routed flex-cut slot near the bottom-right corner. The slot runs from the board's bottom edge up to a rounded terminus (the flex point) and isolates a small corner tab carrying one more mounting hole. The tab is drawn slightly bowed outward (deflected) against a dashed ghost line showing its unflexed reference position, with terracotta strain arcs, a focal dot, and a deflection dimension at the tab edge. A trace stub stops short on each side of the slot to show copper does not cross a flex cut.",
+  "motif": "PCB face with a routed flex-cut slot and deflected corner tab callout",
+  "splashHue": "muted terracotta",
+  "splashColor": "oklch(0.62 0.10 45)",
+  "canvas": "1200x750",
+  "strokeWeight": "2px",
+  "strokeColor": "oklch(0.78 0.005 90)",
+  "background": "transparent (light-mode safe; same warm-grey stroke family as leaf-spring-mount-deep-dive, legible on both charcoal oklch(0.175 0.006 250) and light paper)",
+  "notes": "Board outline is a single closed path (x 250-950, y 140-610, corner radius 10) with the flex-cut slot cut directly into the boundary as a real notch: right edge runs straight to y 484, bulges outward via a cubic curve to ~x 966 across y 484-600 (the deflected tab), rounds into the bottom edge, then instead of continuing straight left the path turns up the slot's right wall (x 884, y 610 to 484), arcs across a 9px-radius rounded terminus apex at (875,475) with sweep-flag 0 so the cap curves up into the board, then down the slot's left wall (x 866, y 484 to 610), and continues the bottom edge left to the bottom-left corner. Nine switch mounting holes (r 15) sit in a 3x3 grid at x 340/520/700, y 230/380/530; a tenth sits alone at (915,545) on the isolated corner tab. Muted terracotta oklch(0.62 0.10 45) (in rotation via leaf-spring-mount-deep-dive, magnetic-switches-deep-dive) is applied as: a wash ellipse over the tab, three downward-opening strain arcs centered on the terminus apex (875,475), a focal dot+ring at that same point, a horizontal deflection dimension with chevrons at the tab's bulged edge (950-966 @ y548), and the FLEX CUT / RELIEF HOLE labels. Sparse trace-hint lines connect grid holes at low opacity; the trace nearest the cut is drawn as two separate stubs that stop short on each side of the slot walls (x 850 and x 884-899) to show copper is interrupted by the cut. Left-margin tier ticks at y 150/230/475/610 with a dashed guide line; bronze theme dot at (1148,92) matching the family anchor. All XML comments use '==' separator runs (no '--' runs) per the svg-validity.test.ts regression guard; verified with a Node double-hyphen scan and python xml.dom.minidom parse before delivery.",
+  "outputs": [
+    "apps/web/public/hero-art/pcb-flex-cuts-explained.svg",
+    "apps/web/public/hero-art/pcb-flex-cuts-explained.svg.json"
+  ],
+  "warnings": [
+    "Labels reference IBM Plex Sans / JetBrains Mono by family name with system fallbacks; the SVG does not embed font files (family convention, matches prior hero-art).",
+    "No local Playwright/resvg preview render was available in this session to visually QA the composition; geometry was hand-verified (arc sweep-flag direction, path continuity, coordinate bounds) and the file was checked for XML well-formedness before delivery."
+  ]
+}

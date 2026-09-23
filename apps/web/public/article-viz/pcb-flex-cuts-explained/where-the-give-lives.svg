@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 410" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock inline viz — where the give lives: two stacked horizontal bars on the same total flex-budget scale. The QK75 PCB-mount bar is almost entirely a long rigid-joints segment with one small terracotta PCB-flex-cut segment. The Bakeneko65 gasket-mount bar splits its budget between a larger amber o-ring-gasket-travel segment, a smaller terracotta PCB-flex-cut segment, and a shorter rigid remainder.</title>
+
+  <!-- ════════════════════════════════════════════════════════════════════════════
+       COMPOSITION: two horizontal stacked bars, same total width (x 150 to 1050),
+       read left-to-right as "how much of this board's flex budget is spent, and
+       on what". Both bars share one heading bracket, "total flex budget", since
+       the comparison only works because both scales are equal.
+         Bar 1 — QK75 / PCB-mount, y 75 to 125:
+           terracotta 150-222 (flex cut, if present)
+           grey       222-1050 (rigid joints, no give)
+         Bar 2 — Bakeneko65 / gasket mount, y 207 to 257:
+           amber      150-420 (o-ring gasket travel)
+           terracotta 420-528 (flex cut, additive)
+           grey       528-1050 (rigid remainder, unlabeled — no article figure
+             quantifies it, so no label is invented for it)
+       ════════════════════════════════════════════════════════════════════════════ -->
+
+  <!-- ══ SHARED HEADING + SPAN BRACKET ══ -->
+  <text x="600" y="34" font-family="Newsreader, serif" font-size="17" font-style="italic" fill="oklch(0.78 0.005 90)" fill-opacity="0.75" stroke="none" text-anchor="middle">total flex budget</text>
+  <line x1="150" y1="55" x2="1050" y2="55" stroke-opacity="0.32"/>
+  <line x1="150" y1="55" x2="150" y2="63" stroke-opacity="0.32"/>
+  <line x1="1050" y1="55" x2="1050" y2="63" stroke-opacity="0.32"/>
+  <line x1="600" y1="55" x2="600" y2="61" stroke-opacity="0.2"/>
+
+  <!-- ══ BAR 1 — QK75 / PCB-MOUNT ══ -->
+  <text x="150" y="68" font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace" font-size="12" fill="oklch(0.78 0.005 90)" fill-opacity="0.85" stroke="none">QK75</text>
+  <text x="198" y="68" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" fill-opacity="0.6" stroke="none"> · PCB-mount</text>
+
+  <rect x="150" y="75" width="72" height="50" fill="oklch(0.62 0.10 45 / 0.45)" stroke="oklch(0.62 0.10 45)" stroke-width="2"/>
+  <rect x="222" y="75" width="828" height="50" fill="oklch(0.78 0.005 90 / 0.10)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.5" stroke-width="2"/>
+  <text x="636" y="105" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" fill-opacity="0.75" stroke="none" text-anchor="middle">rigid joints, no give</text>
+
+  <!-- Leader label for the narrow terracotta segment, too small to hold inline text -->
+  <line x1="186" y1="127" x2="186" y2="150" stroke="oklch(0.62 0.10 45)" stroke-opacity="0.6" stroke-width="1"/>
+  <text x="186" y="168" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" fill="oklch(0.62 0.10 45)" fill-opacity="0.92" stroke="none" text-anchor="middle">PCB flex cut</text>
+  <text x="186" y="184" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.62 0.10 45)" fill-opacity="0.7" stroke="none" text-anchor="middle">(if present)</text>
+
+  <!-- ══ BAR 2 — BAKENEKO65 / GASKET MOUNT ══ -->
+  <text x="150" y="200" font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace" font-size="12" fill="oklch(0.78 0.005 90)" fill-opacity="0.85" stroke="none">Bakeneko65</text>
+  <text x="266" y="200" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" fill-opacity="0.6" stroke="none"> · gasket mount</text>
+
+  <rect x="150" y="207" width="270" height="50" fill="oklch(0.78 0.10 80 / 0.32)" stroke="oklch(0.78 0.10 80)" stroke-width="2"/>
+  <rect x="420" y="207" width="108" height="50" fill="oklch(0.62 0.10 45 / 0.45)" stroke="oklch(0.62 0.10 45)" stroke-width="2"/>
+  <rect x="528" y="207" width="522" height="50" fill="oklch(0.78 0.005 90 / 0.10)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.5" stroke-width="2"/>
+
+  <text x="285" y="237" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="13" fill="oklch(0.78 0.10 80)" fill-opacity="0.95" stroke="none" text-anchor="middle">o-ring gasket travel</text>
+
+  <!-- Leader label for the smaller terracotta segment on bar 2 -->
+  <line x1="474" y1="259" x2="474" y2="282" stroke="oklch(0.62 0.10 45)" stroke-opacity="0.6" stroke-width="1"/>
+  <text x="474" y="300" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" fill="oklch(0.62 0.10 45)" fill-opacity="0.92" stroke="none" text-anchor="middle">PCB flex cut,</text>
+  <text x="474" y="316" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" fill="oklch(0.62 0.10 45)" fill-opacity="0.92" stroke="none" text-anchor="middle">additive</text>
+
+  <!-- ══ TAKEAWAY CAPTION ══ -->
+  <text x="600" y="352" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.62 0.10 45)" fill-opacity="0.9" stroke="none" text-anchor="middle">same total scale — the split within it is what differs</text>
+
+  <!-- ══ JetBrains Mono technical caption ══ -->
+  <text x="150" y="382" font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace" font-size="10" fill="oklch(0.78 0.005 90)" fill-opacity="0.4" stroke="none" letter-spacing="0.03em">BOTH BARS SHARE ONE WIDTH — ONLY THE INTERNAL SPLIT CHANGES BOARD TO BOARD</text>
+
+  <!-- ══ BRONZE THEME DOT, upper-right margin ══ -->
+  <circle cx="1180" cy="18" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

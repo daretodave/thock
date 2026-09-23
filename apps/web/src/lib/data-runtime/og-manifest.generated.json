@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "slug": "pcb-flex-cuts-explained",
+      "readTime": 9,
+      "frontmatter": {
+        "title": "PCB flex cuts, explained: a flex budget milled straight into the board",
+        "lede": "No plate change, no gasket, no case redesign — just a slot routed through the fiberglass near a switch hole. Flex cuts are the cheapest lever a designer has for adding give to a board that otherwise has none, and the cheapness is exactly why they show up where they do.",
+        "pillar": "deep-dives",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "keychron-q16-he-8k-ceramic-tmr",
       "readTime": 6,
       "frontmatter": {
@@ -1256,6 +1266,11 @@
       "slug": "pbt",
       "name": "PBT",
       "category": "material"
+    },
+    {
+      "slug": "pcb",
+      "name": "PCB",
+      "category": "misc"
     },
     {
       "slug": "polling-rate",
@@ -8287,5 +8302,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-09-21T12:15:46.687Z"
+  "generatedAt": "2026-09-23T22:32:52.176Z"
 }

@@ -7962,6 +7962,51 @@
   ],
   "articles": [
     {
+      "slug": "pcb-flex-cuts-explained",
+      "frontmatter": {
+        "slug": "pcb-flex-cuts-explained",
+        "title": "PCB flex cuts, explained: a flex budget milled straight into the board",
+        "lede": "No plate change, no gasket, no case redesign — just a slot routed through the fiberglass near a switch hole. Flex cuts are the cheapest lever a designer has for adding give to a board that otherwise has none, and the cheapness is exactly why they show up where they do.",
+        "description": null,
+        "author": "thock",
+        "pillar": "deep-dives",
+        "tags": [
+          "deep-dive",
+          "pcb",
+          "hot-swap",
+          "qwertykeys",
+          "modding"
+        ],
+        "publishedAt": "2026-09-15T14:00:00.000Z",
+        "updatedAt": "2026-09-15T14:00:00.000Z",
+        "heroImage": "/hero-art/pcb-flex-cuts-explained.svg",
+        "heroImageAlt": "Top-down line drawing of a rectangular PCB outline with a row of circular switch-mounting holes along its upper edge, drawn in 2px warm-grey stroke on a warm-paper background. Beside one switch position, two thin curved slots are routed through the board material, framing a narrow tongue of PCB between them. That tongue and the gap between the slot ends are picked out in a single muted-terracotta splash. A small warm-bronze dot sits in the upper-right margin.",
+        "featured": false,
+        "popularityScore": 0,
+        "guideSection": null,
+        "mentionedParts": [
+          {
+            "id": "qk75",
+            "kind": "board",
+            "slug": "qk75"
+          },
+          {
+            "id": "bakeneko65",
+            "kind": "board",
+            "slug": "bakeneko65"
+          },
+          {
+            "id": "kbd75v3",
+            "kind": "board",
+            "slug": "kbd75v3"
+          }
+        ]
+      },
+      "body": "\nOpen the design files for almost any board that advertises \"flex cut PCB\" and the feature is easy to miss: a pair of thin slots, usually shaped like a stretched C or a bracket, routed through the copper-clad fiberglass a few millimeters from a switch's mounting holes. No moving parts, no added material, no interface with the case. Just fiberglass with less of itself left near the switch than the rest of the board has. That absence is the entire mechanism.\n\n## What is actually being cut\n\nA mechanical keyboard's PCB is a rigid, layered composite, almost always <Mono>FR4</Mono> — woven fiberglass cloth bonded with epoxy resin, copper-clad and etched into traces. FR4 is stiff by design; the same rigidity that keeps traces from cracking under thermal cycling also makes the board resist bending under a keystroke. A flex cut interrupts that rigidity locally. The manufacturer routes two slots that nearly meet around a switch's mounting holes, leaving a narrow bridge of PCB material connecting the switch position to the rest of the board. Press the key, and that bridge — not the whole board — is what flexes.\n\nThis is a PCB-level intervention, not a plate or case one, and that distinction is worth holding onto because the vocabulary around keyboard \"flex\" gets sloppy fast. A [gasket mount](/article/gasket-mount-reality) floats the plate-and-PCB assembly on compressible pads inside the case, so the whole deck moves as one body relative to the shell. A [leaf-spring mount](/article/leaf-spring-mount-deep-dive) puts a bending cantilever tab at the case-to-plate boundary, so the deck moves on matched springs at its edges. A flex cut does neither. It doesn't touch the case, it doesn't touch the plate, and it doesn't move the assembly as a unit. It carves a deliberately weak path into the PCB itself, right where a single switch or a small cluster of switches sits, so that one part of the board can deflect independently of the rest.\n\n<InlineViz\n  src=\"/article-viz/pcb-flex-cuts-explained/flex-cut-anatomy.svg\"\n  alt=\"Top-down diagram of a section of PCB around one switch's mounting holes. Two curved slots are routed through the board, nearly meeting to leave a narrow bridge of material between them. A downward arrow at the switch position shows the local deflection direction. The two rounded ends of each slot are circled and labelled 'stress concentration' in a caution-red tone, while the bridge itself is filled in muted-terracotta.\"\n  caption=\"The slot ends carry the fatigue risk; the bridge between them carries the flex.\"\n  accent=\"bordeaux\"\n/>\n\n## Why bother, when the case already has a mount style\n\nEvery keyboard has some amount of \"flex budget\" — the total give available to a keystroke before it bottoms out against something unyielding. On a gasket-mount board, most of that budget lives in the gasket material and the case-to-plate interface, and the PCB itself barely needs to contribute. On a board with no gasket and no leaf spring, the budget has to come from somewhere else, or it doesn't exist at all.\n\nThat is the situation on a [PCB-mount or top-mount board](/article/mounting-styles-compared): the PCB is screwed rigidly to the plate, and the plate is screwed rigidly to the case, with no compressible layer anywhere in the stack. Every joint in that chain is a hard joint. Absent a flex cut, the only give available to the keystroke is whatever the switch itself provides internally, plus whatever the PCB's own bulk stiffness allows across its full unsupported span — which, screwed down every few centimeters, is close to none.\n\n<PartReference id=\"qk75\" /> is a clean example of a board sitting in exactly that gap. Qwertykeys' 75% ships in a PCB-mount configuration: the PCB sits on standoffs in the bottom case, and depending on the build, the plate is either fastened rigidly alongside it or omitted in favor of a plateless build. There's no gasket ring, no foam strip, no leaf-spring tab anywhere in the stack. Whatever give a typist feels on that board either comes from the switch itself or from flex engineered into the PCB — there's no third place for it to come from. A flex-cut revision of a board in that mounting family is doing real, load-bearing work, because it is the only source of \"give\" the design has budgeted for anywhere in the stack.\n\nCompare that to a board that already has a compliant mount elsewhere. The <PartReference id=\"bakeneko65\" /> clamshells its case around a single perimeter o-ring, giving the whole plate-and-PCB assembly a few tenths of a millimeter of travel before anything gets stiff. The <PartReference id=\"kbd75v3\" /> uses a conventional gasket-mount arrangement with foam strips top and bottom. On either board, a flex cut at the PCB level would be additive rather than foundational — a small, local softening layered on top of a mount that was already going to feel soft. It's the difference between a flex cut being the only lever in the design and a flex cut being one more turn of a knob that was already partway open.\n\n<InlineViz\n  src=\"/article-viz/pcb-flex-cuts-explained/where-the-give-lives.svg\"\n  alt=\"Two stacked horizontal bars labelled 'total flex budget'. The top bar, labelled QK75 / PCB-mount, is divided into a single small terracotta segment labelled 'PCB flex cut (if present)' against a long grey segment labelled 'rigid joints, no give'. The bottom bar, labelled Bakeneko65 / gasket mount, is divided into a larger amber segment labelled 'o-ring gasket travel' plus a smaller terracotta segment labelled 'PCB flex cut, additive' against a shorter grey remainder.\"\n  caption=\"On a PCB-mount board, a flex cut is most of the available give. On a gasket board, it's one more layer on top of give that already exists.\"\n  accent=\"bordeaux\"\n/>\n\nThe economics explain why this shows up where it does. Adding a full gasket system to a case means retooling the case halves, sourcing a gasket material, and validating the compression behavior — the kind of investment that shows up in a board's price tier. Adding a flex cut means changing the PCB's routing file. It's a design decision that costs a manufacturer almost nothing beyond the CAD time, which is exactly why it turns up on budget and mid-tier PCB-mount and top-mount boards that were never going to get a gasket redesign in the first place. A flex cut is what a designer reaches for when the case tooling is fixed and the PCB is the only part of the bill of materials still open for revision.\n\n## What the cut trades away\n\nNone of this is free, and the tradeoffs are specific enough to name individually.\n\nThe slot ends are stress concentrators. Wherever a routed cut terminates, the material around that point sees load funneled into a smaller cross-section than the surrounding board, and that geometry is the textbook setup for fatigue cracking under cyclic loading — which is precisely what a keystroke is, repeated tens of thousands of times over a board's life. A flex cut that works exactly as intended on day one can, after years of typing, develop a hairline crack at a slot's rounded end and change how that key feels, or worse, damage a trace running near the cut.\n\n<Callout type=\"warn\" title=\"Cuts near hotswap sockets\">\nA flex cut routed too close to a hotswap socket reduces the PCB material anchoring that socket in place. Hotswap sockets already rely on solder joints and plated through-holes for mechanical retention, not just electrical contact, and a flex cut that removes copper-backed fiberglass from beside a socket can loosen that retention over repeated switch insertions and removals — the exact maintenance activity a hotswap board exists to make easy. A board that pairs flex cuts with hotswap sockets has to route the cuts far enough from the socket footprint that the two features don't compete for the same few millimeters of board.\n</Callout>\n\nFlex cuts also don't fix what's upstream of the PCB. If the case is a thick, unyielding aluminum shell and the plate is a rigid, fully-screwed sheet of steel, a slot cut into the PCB softens only the PCB's own contribution to the stack — it cannot make the plate bend or the case give. A flex cut on a board with a genuinely stiff plate and case produces a smaller improvement than the same cut on a board with a thinner plate, because the PCB's flex has to work against whatever resistance the layers above it still provide.\n\nAnd compared to the mounts that inspired the feature in the first place, the effect is subtle. A well-executed gasket mount gives a typist something in the range of half a millimeter to over a millimeter of perceptible plate travel. A leaf-spring mount, tuned by the cube law that governs cantilever stiffness, can offer a similarly springy deck. A flex cut, working on a single small bridge of FR4 a few millimeters wide, gives back a fraction of that. It changes a PCB-mount board from feeling like typing on a countertop to feeling like typing on a countertop with a slightly softer corner — noticeable in a side-by-side, not transformative on its own.\n\n## A tuning knob, not a mount style\n\nThat's the honest way to place flex cuts in the broader mounting-feel conversation: they're a feature of the PCB, not a competitor to gasket-mount or leaf-spring mount as a category. A board doesn't choose between \"gasket-mount\" and \"flex-cut PCB\" the way it chooses between mount styles in the [mounting styles comparison](/article/mounting-styles-compared) — a flex cut can sit inside a tray-mount board, a PCB-mount board, or, additively, inside a gasket board that already has plenty of give elsewhere. It's a local modifier to one layer of the stack, sized to matter most exactly where every other layer in that stack is locked rigid.\n\nThat's also why flex cuts are most interesting as a design signal rather than a spec-sheet selling point. A vendor putting flex cuts into a PCB-mount or top-mount board is acknowledging, implicitly, that the mount style they chose has no flex budget anywhere else — and is spending the cheapest possible fix on the problem rather than the most effective one. Watch for two things going forward: whether more PCB-mount boards in <Mono>QK75</Mono>'s price tier start publishing where their cuts sit relative to hotswap sockets, and whether any manufacturer starts specifying flex-cut geometry — bridge width, slot radius, material thickness at the cut — with the same rigor Geonworks and other leaf-spring plate makers have started applying to tab thickness. Right now, \"flex cut PCB\" is a label with almost no published geometry behind it, on a feature whose entire effect is determined by that geometry. The parallel to where gasket-mount specs stood a few years ago is not a coincidence.\n",
+      "readTime": 9,
+      "filePath": "apps/web/src/content/articles/pcb-flex-cuts-explained.mdx"
+    },
+    {
       "slug": "keychron-q16-he-8k-ceramic-tmr",
       "frontmatter": {
         "slug": "keychron-q16-he-8k-ceramic-tmr",
@@ -12389,6 +12434,11 @@
       "category": "material"
     },
     {
+      "slug": "pcb",
+      "name": "PCB",
+      "category": "misc"
+    },
+    {
       "slug": "polling-rate",
       "name": "Polling rate",
       "category": "misc"
@@ -12539,5 +12589,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-09-21T12:15:46.687Z"
+  "generatedAt": "2026-09-23T22:32:52.176Z"
 }

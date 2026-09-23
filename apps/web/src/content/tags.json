@@ -91,6 +91,7 @@
     { "slug": "cables", "name": "Cables", "category": "misc" },
     { "slug": "usb-c", "name": "USB-C", "category": "misc" },
     { "slug": "wuque-studio", "name": "Wuque Studio", "category": "brand" },
-    { "slug": "maintenance", "name": "Maintenance", "category": "misc" }
+    { "slug": "maintenance", "name": "Maintenance", "category": "misc" },
+    { "slug": "pcb", "name": "PCB", "category": "misc" }
   ]
 }

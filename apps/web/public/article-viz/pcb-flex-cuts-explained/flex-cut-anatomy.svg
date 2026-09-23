@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock inline viz — anatomy of a PCB flex cut: top-down view of a switch mounting hole nearly encircled by two curved routed slots, leaving one narrow bridge of material at the bottom. The bridge is filled in muted terracotta and the two slot ends flanking it are circled and labelled stress concentration in caution red. A downward arrow marks the switch's deflection direction.</title>
+
+  <!-- ════════════════════════════════════════════════════════════════════════════
+       COMPOSITION: a cropped top-down section of PCB around one switch position.
+         Crop frame: dashed rounded rect, signals "this is a zoomed section", not
+           a full board edge.
+         Switch hole: one large mounting hole plus two small pin holes, centered
+           at (600,230).
+         Flex cut: two concentric slots (annular sectors, r 122 to 138, centered
+           on the switch hole) each sweeping about 167 degrees, meeting almost
+           edge to edge at the top (a 4 degree gap, unlabeled) and separated by a
+           30 degree gap at the bottom — the bridge — between angle 75 and 105
+           degrees measured from the hole center.
+         Bridge fill: a terracotta wedge from r 100 to r 160 across that same
+           75 to 105 degree gap, showing the uncut material that carries the flex.
+         Stress markers: small circles at the two slot ends nearest the bridge
+           (the narrowest, most loaded points), caution red, with a shared label.
+         Deflection arrow: vertical, above the hole, pointing down into it.
+       ════════════════════════════════════════════════════════════════════════════ -->
+
+  <!-- ══ CROP FRAME — dashed, signals a zoomed section rather than a full board edge ══ -->
+  <rect x="90" y="50" width="1020" height="500" rx="14" stroke-opacity="0.22" stroke-dasharray="3 6"/>
+
+  <!-- ══ BRIDGE FILL — the uncut wedge of PCB material, muted terracotta ══ -->
+  <path d="
+    M 625.9 326.6
+    A 100 100 0 0 1 574.1 326.6
+    L 558.6 384.5
+    A 160 160 0 0 0 641.4 384.5
+    Z" fill="oklch(0.62 0.10 45 / 0.42)" stroke="oklch(0.62 0.10 45)" stroke-opacity="0.6" stroke-width="1.5"/>
+
+  <!-- ══ FLEX-CUT SLOTS — two annular sectors around the switch hole ══ -->
+  <!-- Right slot: sweeps from just past the top (268 degrees) down the right
+       side to 75 degrees, the near-bridge end. -->
+  <path d="
+    M 595.2 92.1
+    A 138 138 0 0 1 635.7 363.3
+    L 631.6 347.8
+    A 122 122 0 0 0 595.7 108.1
+    Z"/>
+  <!-- Left slot: exact mirror of the right slot across x = 600. -->
+  <path d="
+    M 604.8 92.1
+    A 138 138 0 0 0 564.3 363.3
+    L 568.4 347.8
+    A 122 122 0 0 1 604.3 108.1
+    Z"/>
+
+  <!-- Upper slot termini — rounded relief ends, plain (not stress-flagged) -->
+  <circle cx="595.5" cy="100.9" r="6"/>
+  <circle cx="604.5" cy="100.9" r="6"/>
+
+  <!-- ══ SWITCH MOUNTING HOLES ══ -->
+  <circle cx="600" cy="230" r="42"/>
+  <circle cx="583" cy="252" r="5"/>
+  <circle cx="617" cy="252" r="5"/>
+
+  <!-- ══ DEFLECTION ARROW — downward, at the switch position ══ -->
+  <line x1="600" y1="138" x2="600" y2="252"/>
+  <path d="M 590 240 L 600 252 L 610 240"/>
+
+  <!-- ══ STRESS-CONCENTRATION MARKERS — caution red, at the two near-bridge slot ends ══ -->
+  <g stroke="oklch(0.62 0.13 25)">
+    <circle cx="633.6" cy="355.6" r="11" stroke-opacity="0.9"/>
+    <circle cx="566.4" cy="355.6" r="11" stroke-opacity="0.9"/>
+    <circle cx="633.6" cy="355.6" r="3" fill="oklch(0.62 0.13 25 / 0.9)" stroke="none"/>
+    <circle cx="566.4" cy="355.6" r="3" fill="oklch(0.62 0.13 25 / 0.9)" stroke="none"/>
+    <!-- Leaders down to the shared label -->
+    <line x1="633.6" y1="366" x2="618" y2="418" stroke-opacity="0.55" stroke-width="1"/>
+    <line x1="566.4" y1="366" x2="582" y2="418" stroke-opacity="0.55" stroke-width="1"/>
+  </g>
+  <text x="600" y="438" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="12" fill="oklch(0.62 0.13 25)" fill-opacity="0.92" stroke="none" letter-spacing="0.05em" text-anchor="middle">STRESS CONCENTRATION</text>
+  <text x="600" y="456" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.62 0.13 25)" fill-opacity="0.65" stroke="none" letter-spacing="0.03em" text-anchor="middle">SLOT ENDS NEAREST THE BRIDGE</text>
+
+  <!-- ══ LABELS ══ -->
+  <text x="856" y="150" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.55" stroke="none" letter-spacing="0.05em">FLEX CUT — ROUTED SLOT</text>
+  <line x1="856" y1="160" x2="726" y2="222" stroke-opacity="0.3" stroke-width="1"/>
+
+  <text x="856" y="200" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.55" stroke="none" letter-spacing="0.05em">SWITCH MOUNTING HOLE</text>
+  <line x1="856" y1="210" x2="640" y2="222" stroke-opacity="0.3" stroke-width="1"/>
+
+  <text x="360" y="150" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.55" stroke="none" letter-spacing="0.05em" text-anchor="end">DEFLECTION — KEYSTROKE LOAD</text>
+  <line x1="365" y1="160" x2="595" y2="185" stroke-opacity="0.3" stroke-width="1"/>
+
+  <text x="856" y="392" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.62 0.10 45)" fill-opacity="0.85" stroke="none" letter-spacing="0.05em">BRIDGE — UNCUT MATERIAL</text>
+  <text x="856" y="410" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.62 0.10 45)" fill-opacity="0.7" stroke="none" letter-spacing="0.03em">CARRIES ALL THE LOCAL FLEX</text>
+  <line x1="856" y1="380" x2="642" y2="358" stroke-opacity="0.3" stroke-width="1"/>
+
+  <!-- ══ JetBrains Mono technical caption ══ -->
+  <text x="130" y="522" font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace" font-size="10" fill="oklch(0.78 0.005 90)" fill-opacity="0.4" stroke="none" letter-spacing="0.03em">TWO SLOTS NEARLY MEET AROUND THE SWITCH — ONE NARROW BRIDGE OF FR4 IS ALL THAT IS LEFT TO FLEX</text>
+
+  <!-- ══ BRONZE THEME DOT, upper-right margin ══ -->
+  <circle cx="1170" cy="28" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>
