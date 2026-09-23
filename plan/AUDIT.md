@@ -13192,7 +13192,7 @@ passes accumulate signals.)
 > Filed 2026-09-15 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 > **Resolved (2026-09-19):** Shipped "How to clean and maintain a mechanical keyboard" at `/article/keyboard-cleaning-maintenance-guide`, publishedAt 2026-09-05 (gap-fill, largest gap in the 30-day window). Evergreen maintenance/care reference distinct from `lubing-101.mdx` (build-time lubrication) and `stabilizer-servicing-guide.mdx` (stabilizer-specific). `53c04e3a`
 
-### [HOT PURSUIT] [content-gap] [7] deep-dives pillar — 1 of ≥2 articles in last 30d
+### [x] [HOT PURSUIT] [content-gap] [7] deep-dives pillar — 1 of ≥2 articles in last 30d — addressed in 7876a215, closes #998
 - category: content-gaps
 - impact: 6 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -13204,6 +13204,7 @@ passes accumulate signals.)
 - next: /ship-content → deep-dives pillar article
 - issue: #998
 > Filed 2026-09-19 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+> **Resolved (2026-09-23):** Shipped "PCB flex cuts, explained: a flex budget milled straight into the board" at `/article/pcb-flex-cuts-explained`, publishedAt 2026-09-15 (gap-fill, largest gap in the 30-day window). Explains flex-cut PCBs as a PCB-level flex source on rigid mount styles (QK75 as running example), contrasted with gasket-mount (Bakeneko65) and leaf-spring mounts covered in prior deep dives. `7876a215`
 
 ### [ ] [cross-links] [4.5] keyboard-cleaning-maintenance-guide ↔ keyboard-cables-compared — no prose cross-link (same pillar, ≥2 shared tags: beginner, modding)
 - category: cross-links
@@ -13248,3 +13249,70 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/keyboard-cleaning-maintenance-guide.mdx
 - article-b: apps/web/src/content/articles/stabilizers-explained.mdx
 - action: add [stabilizers-explained](/article/stabilizers-explained) to keyboard-cleaning-maintenance-guide body, or vice versa
+
+### [ ] [cross-links] [4.5] pcb-flex-cuts-explained ↔ 60-percent-layout-history — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, modding)
+- category: cross-links
+- filed: 2026-09-23 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: deep-dive, modding
+- article-a: apps/web/src/content/articles/pcb-flex-cuts-explained.mdx
+- article-b: apps/web/src/content/articles/60-percent-layout-history.mdx
+- action: add [60-percent-layout-history](/article/60-percent-layout-history) to pcb-flex-cuts-explained body, or vice versa
+
+### [ ] [cross-links] [4.5] pcb-flex-cuts-explained ↔ drop-holy-panda-x-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, modding)
+- category: cross-links
+- filed: 2026-09-23 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: deep-dive, modding
+- article-a: apps/web/src/content/articles/pcb-flex-cuts-explained.mdx
+- article-b: apps/web/src/content/articles/drop-holy-panda-x-deep-dive.mdx
+- action: add [drop-holy-panda-x-deep-dive](/article/drop-holy-panda-x-deep-dive) to pcb-flex-cuts-explained body, or vice versa
+
+### [ ] [cross-links] [4.5] pcb-flex-cuts-explained ↔ keyboard-acoustics-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, modding)
+- category: cross-links
+- filed: 2026-09-23 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: deep-dive, modding
+- article-a: apps/web/src/content/articles/pcb-flex-cuts-explained.mdx
+- article-b: apps/web/src/content/articles/keyboard-acoustics-deep-dive.mdx
+- action: add [keyboard-acoustics-deep-dive](/article/keyboard-acoustics-deep-dive) to pcb-flex-cuts-explained body, or vice versa
+
+### [ ] [cross-links] [4.5] pcb-flex-cuts-explained ↔ plate-materials-explained — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, modding)
+- category: cross-links
+- filed: 2026-09-23 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: deep-dive, modding
+- article-a: apps/web/src/content/articles/pcb-flex-cuts-explained.mdx
+- article-b: apps/web/src/content/articles/plate-materials-explained.mdx
+- action: add [plate-materials-explained](/article/plate-materials-explained) to pcb-flex-cuts-explained body, or vice versa
+
+### [ ] [cross-links] [4.5] pcb-flex-cuts-explained ↔ why-stabilizers-rattle-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, modding)
+- category: cross-links
+- filed: 2026-09-23 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: deep-dive, modding
+- article-a: apps/web/src/content/articles/pcb-flex-cuts-explained.mdx
+- article-b: apps/web/src/content/articles/why-stabilizers-rattle-deep-dive.mdx
+- action: add [why-stabilizers-rattle-deep-dive](/article/why-stabilizers-rattle-deep-dive) to pcb-flex-cuts-explained body, or vice versa
+
+### [HOT PURSUIT] [content-gap] [7] trends pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 8 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: trends
+- window-count: 1
+- window-start: 2026-08-24
+- score: 7
+- next: /ship-content → trends pillar article
+> Filed 2026-09-23 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
