@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-09-19T14:00:00.000Z",
+  "commit": "415d9b1e0f3783c94997148c7674587f9bc6f59a",
+  "kind": "inline-viz",
+  "article_slug": "wooting-rapid-trigger-head-start",
+  "article_pillar": "trends",
+  "section_anchor": "Hardware parity arrived first",
+  "brief_summary": "Horizontal bar chart comparing months in market as of September 2026 for three Hall-effect and magnetic boards: Wooting 60HE at roughly 53 months (mass production since April 2022), Keychron Q1 HE 8K at roughly 5 months (reviewers' hands since April 2026), and Keychron Q16 HE 8K at zero months, marked as a Kickstarter preorder that had not shipped as of its September 2026 campaign opening.",
+  "target": "apps/web/public/article-viz/wooting-rapid-trigger-head-start/months-in-market.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "data/boards/wooting-60he.json:releasedAt — '2022-04-01', description — 'Entered mass production in April 2022 and remains the fixed point reviewers measure newer HE and TMR boards against for rapid-trigger tuning depth and configurator maturity.'",
+    "data/boards/keychron-q1-he.json:releasedAt — '2026-04-01', description — 'The HE variant reached reviewers in April 2026 as the headline SKU of the Q Ultra launch.'",
+    "apps/web/src/content/articles/wooting-rapid-trigger-head-start.mdx:'Hardware parity arrived first' section — 'Keychron had opened a Kickstarter for the Q16 HE 8K ... The Q16 HE 8K hadn't shipped at all — Keychron opened its Kickstarter campaign in September 2026, with the board still at the preorder stage.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/wooting-rapid-trigger-head-start/months-in-market.svg"],
+  "warnings": ["Months-in-market figures (~53, ~5, 0) are calculated from the cited releasedAt dates against the article's September 2026 publish window, not independently published vendor figures."]
+}

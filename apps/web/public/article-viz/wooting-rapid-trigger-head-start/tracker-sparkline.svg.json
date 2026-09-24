@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-09-19T14:00:00.000Z",
+  "commit": "415d9b1e0f3783c94997148c7674587f9bc6f59a",
+  "kind": "inline-viz",
+  "article_slug": "wooting-rapid-trigger-head-start",
+  "article_pillar": "trends",
+  "section_anchor": "The mover: a hardware refresh, not a hardware first",
+  "brief_summary": "Coral line chart plotting Wooting's Trends Tracker score across eight weeks (W32-W39), values 40, 45, 52, 58, 63, 68, 74, 80 — an unbroken climb with a bracket marking the full +40 swing and the terminal point labelled as the tracker's top mover for the period.",
+  "target": "apps/web/public/article-viz/wooting-rapid-trigger-head-start/tracker-sparkline.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "data/trends/2026-W39.json:rows — 'Wooting' — direction: 'up', score: 80, spark: [40, 45, 52, 58, 63, 68, 74, 80], note: '80HE+ preorders opened 2026-09-17 with a split spacebar and new knob accessory, alongside a Wootility 5.0 software release.'",
+    "apps/web/src/content/articles/wooting-rapid-trigger-head-start.mdx:opening paragraph — 'Eight straight weeks of climb — 40, 45, 52, 58, 63, 68, 74, 80 — made Wooting the top mover on the 2026-W39 trends tracker'"
+  ],
+  "outputs": ["apps/web/public/article-viz/wooting-rapid-trigger-head-start/tracker-sparkline.svg"],
+  "warnings": []
+}

@@ -1,0 +1,28 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored SVG (no raster pipeline)",
+  "at": "2026-09-24T00:00:00Z",
+  "commit": "415d9b1e0f3783c94997148c7674587f9bc6f59a",
+  "kind": "hero-art",
+  "article_pillar": "trends",
+  "source": null,
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": [],
+  "slug": "wooting-rapid-trigger-head-start",
+  "subject": "Abstract sparkline-silhouette motif, no axes or numbers. Two flowing signal lines on an otherwise empty canvas. A coral line starts earliest (furthest left) and climbs steadily and confidently the full width of the canvas, ending in a focal dot with a halo ring at the upper right, the 80HE+ preorder moment. A muted warm-grey dashed line enters later, close to where the coral line already sits mid-climb (hardware has nearly caught up), then flattens out, so the vertical gap between the two signals widens left to right instead of closing, the firmware/software maturity gap. A low-opacity coral wash fills the wedge between the two lines, the widening gap itself as the visual subject.",
+  "motif": "sparkline silhouette, twin ascending signal lines with a widening gap wash",
+  "splashHue": "coral",
+  "splashColor": "oklch(0.68 0.165 28)",
+  "canvas": "1200x750",
+  "strokeWeight": "2px (3px on the primary coral signal line)",
+  "strokeColor": "oklch(0.78 0.005 90)",
+  "background": "transparent (light-mode safe; warm-grey stroke family legible on both charcoal oklch(0.175 0.006 250) and light paper)",
+  "notes": "Per bearings.md 'Article hero art', trends pieces get a sparkline silhouette mapped to the Trends Tracker's score-over-time visual language. Deliberately avoids the axis-tick/baseline convention used in earlier trend hero art (e.g. hall-effect-rapid-trigger-plateau.svg) per this brief's explicit instruction to keep it an abstract silhouette shape, not a literal chart. Coral line node points (110,520) (280,460) (450,380) (620,320) (790,260) (960,210) (1090,175) rendered as a single smooth cubic-bezier path with S-command continuation; three sparse release-cadence dots at the interior nodes; focal dot + halo ring at the terminal node. Muted line node points (380,430) (520,410) (680,390) (830,372) (980,358) (1090,345), same bezier technique, dash-dotted stroke, open-ring entry marker, muted trailing dot. Gap wash is a straight-line polygon sampling both curves at x = 380/520/680/830/980/1090 (Wooting curve y-values interpolated piecewise-linearly between its bezier node points for this sampling only; the stroked curve itself is the smooth bezier), coral fill at 9% opacity, sits beneath both strokes. Bronze theme dot at (1132,60) matches the family ornamental anchor. All XML comments use single hyphens only (no '- -' runs), verified with a Node double-hyphen scan and a python xml.dom.minidom parse before delivery, per the svg-validity.test.ts regression guard.",
+  "outputs": [
+    "apps/web/public/hero-art/wooting-rapid-trigger-head-start.svg",
+    "apps/web/public/hero-art/wooting-rapid-trigger-head-start.svg.json"
+  ],
+  "warnings": [
+    "No local Playwright/resvg preview render was available in this session to visually QA the composition; geometry was hand-verified (bezier continuity, coordinate bounds, wash polygon closure) and the file was checked for XML well-formedness before delivery."
+  ]
+}

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Four-panel strip: adjustable actuation point, sensor precision, and hardware accessories, each dimmed grey and checked off as converged axes; per-key curve software depth, outlined in coral with an open circle instead of a checkmark, marking the axis that hasn't converged</title>
+
+  <!-- Title -->
+  <text x="600" y="46" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Three axes converged. One hasn't.</text>
+
+  <!-- Panel 1: Adjustable actuation point — converged -->
+  <rect x="40" y="90" width="250" height="230" rx="10" fill="oklch(0.78 0.005 90 / 0.06)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.5"/>
+  <line x1="105" y1="150" x2="225" y2="150" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55" stroke-width="3"/>
+  <circle cx="180" cy="150" r="11" fill="oklch(0.78 0.005 90 / 0.5)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.7"/>
+  <circle cx="260" cy="110" r="16" fill="none" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.5"/>
+  <path d="M 252 110 L 258 117 L 270 102" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.75" stroke-width="3" fill="none"/>
+  <text x="165" y="215" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" font-weight="600" opacity="0.75">Adjustable</text>
+  <text x="165" y="234" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" font-weight="600" opacity="0.75">actuation point</text>
+  <text x="165" y="266" font-family="Newsreader, serif" font-size="13" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">table stakes since 2022</text>
+
+  <!-- Panel 2: Sensor precision — converged -->
+  <rect x="328" y="90" width="250" height="230" rx="10" fill="oklch(0.78 0.005 90 / 0.06)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.5"/>
+  <rect x="418" y="135" width="65" height="30" rx="4" fill="none" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.6" stroke-width="2"/>
+  <path d="M 403 150 Q 418 130 433 150 Q 448 170 463 150 Q 478 130 493 150" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55" stroke-width="2" fill="none"/>
+  <circle cx="548" cy="110" r="16" fill="none" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.5"/>
+  <path d="M 540 110 L 546 117 L 558 102" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.75" stroke-width="3" fill="none"/>
+  <text x="453" y="215" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" font-weight="600" opacity="0.75">Sensor precision</text>
+  <text x="453" y="234" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" font-weight="600" opacity="0.75">— TMR</text>
+  <text x="453" y="266" font-family="Newsreader, serif" font-size="13" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">Keychron, Cherry XTRFY</text>
+
+  <!-- Panel 3: Hardware accessories — converged -->
+  <rect x="616" y="90" width="250" height="230" rx="10" fill="oklch(0.78 0.005 90 / 0.06)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.5"/>
+  <rect x="671" y="160" width="24" height="16" rx="3" fill="none" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55" stroke-width="2"/>
+  <rect x="705" y="160" width="24" height="16" rx="3" fill="none" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.55" stroke-width="2"/>
+  <circle cx="741" cy="135" r="15" fill="none" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.6" stroke-width="2"/>
+  <line x1="741" y1="135" x2="741" y2="123" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.6" stroke-width="2"/>
+  <circle cx="836" cy="110" r="16" fill="none" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.5"/>
+  <path d="M 828 110 L 834 117 L 846 102" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.75" stroke-width="3" fill="none"/>
+  <text x="741" y="215" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" font-weight="600" opacity="0.75">Hardware</text>
+  <text x="741" y="234" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" font-weight="600" opacity="0.75">accessories</text>
+  <text x="741" y="266" font-family="Newsreader, serif" font-size="13" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">split spacebar, tuning knob</text>
+
+  <!-- Panel 4: Per-key curve software — still open -->
+  <rect x="904" y="90" width="250" height="230" rx="10" fill="oklch(0.68 0.165 28 / 0.08)" stroke="oklch(0.68 0.165 28)" stroke-width="2"/>
+  <polyline points="954,165 979,140 1004,175 1029,130 1054,155 1079,145" stroke="oklch(0.68 0.165 28)" stroke-width="2.5" fill="none"/>
+  <line x1="954" y1="180" x2="1079" y2="180" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.3" stroke-width="1.5"/>
+  <circle cx="1124" cy="110" r="16" fill="none" stroke="oklch(0.68 0.165 28)" stroke-width="2"/>
+  <text x="1029" y="215" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" font-weight="600">Per-key curve</text>
+  <text x="1029" y="234" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" font-weight="600">software</text>
+  <text x="1029" y="266" font-family="Newsreader, serif" font-size="13" font-style="italic" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.8">Wootility's multi-year lead</text>
+
+  <!-- Connective arrow between panel 3 and panel 4 -->
+  <path d="M 872 200 L 898 200" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.35" stroke-width="2"/>
+  <path d="M 892 194 L 898 200 L 892 206" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.35" stroke-width="2" fill="none"/>
+
+  <!-- Caption annotation -->
+  <text x="600" y="392" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">hardware closed the gap on three axes — configurator depth is the one it hasn't</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

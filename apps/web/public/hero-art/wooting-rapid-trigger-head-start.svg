@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero, abstract sparkline silhouette. Coral signal starts early on the left and climbs steadily, a muted warm grey signal enters later and climbs nearly flat, the vertical gap between the two widens left to right</title>
+
+  <!-- Gap wash. Filled wedge between the two signal lines, coral, very low
+       opacity. This is the visual subject: the widening space between an
+       early confident climb and a later near-flat one. Points sampled
+       along each curve, not a literal chart. -->
+  <path
+    d="M380,413 L520,355 L680,299 L830,248 L980,205 L1090,175
+       L1090,345 L980,358 L830,372 L680,390 L520,410 L380,430 Z"
+    fill="oklch(0.68 0.165 28 / 0.09)"
+    stroke="none"
+  />
+
+  <!-- Coral signal. Starts earliest, furthest left, and climbs steadily
+       and confidently across the full canvas width, the head start. -->
+  <path
+    d="M110,520
+       C190,500 220,470 280,460
+       S380,400 450,380
+       S540,340 620,320
+       S710,280 790,260
+       S870,230 960,210
+       S1020,185 1090,175"
+    stroke="oklch(0.68 0.165 28)"
+    stroke-width="3"
+  />
+
+  <!-- Release-cadence markers along the coral signal, sparse, not a
+       full data-point grid. -->
+  <circle cx="280" cy="460" r="4" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.7"/>
+  <circle cx="620" cy="320" r="4" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.7"/>
+  <circle cx="960" cy="210" r="4" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.7"/>
+
+  <!-- Focal point. The latest coral data point, the 80HE+ preorder
+       moment, with a soft halo ring. -->
+  <circle cx="1090" cy="175" r="8" fill="oklch(0.68 0.165 28)" stroke="none"/>
+  <circle cx="1090" cy="175" r="16" fill="none" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.35" stroke-width="1.5"/>
+
+  <!-- Muted signal. Enters later, near where the coral signal is
+       already mid climb, meaning hardware has nearly caught up. It
+       then flattens, so the vertical distance to the coral signal
+       keeps widening rather than closing, the firmware gap. -->
+  <path
+    d="M380,430
+       C440,425 460,415 520,410
+       S610,398 680,390
+       S770,378 830,372
+       S910,362 980,358
+       S1040,350 1090,345"
+    stroke="oklch(0.78 0.005 90)"
+    stroke-width="2.5"
+    stroke-dasharray="1 9"
+  />
+
+  <!-- Entry marker, an open ring, where the muted signal begins. -->
+  <circle cx="380" cy="430" r="6" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2"/>
+
+  <!-- Trailing marker, small and muted, where the flattened signal
+       currently sits. -->
+  <circle cx="1090" cy="345" r="5" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6"/>
+
+  <!-- Bronze theme dot, upper right ornamental anchor. -->
+  <circle cx="1132" cy="60" r="7" fill="oklch(0.80 0.135 75)" stroke="none" opacity="0.9"/>
+</svg>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Horizontal bar chart comparing months in market as of September 2026 for three Hall-effect and magnetic boards: Wooting 60HE at roughly 53 months since its April 2022 mass production start, Keychron Q1 HE 8K at roughly 5 months since its April 2026 launch, and Keychron Q16 HE 8K at zero months, still at Kickstarter preorder stage as of its September 2026 campaign opening</title>
+
+  <!-- Title -->
+  <text x="600" y="54" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Months in market, as of September 2026</text>
+
+  <!-- Month axis ticks: 0, 10, 20, 30, 40, 50, mapped at x = 400 + months*12.83 -->
+  <line x1="400" y1="100" x2="400" y2="500" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.4" stroke-width="1.5"/>
+  <line x1="528" y1="100" x2="528" y2="500" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.1"/>
+  <line x1="657" y1="100" x2="657" y2="500" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.1"/>
+  <line x1="785" y1="100" x2="785" y2="500" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.1"/>
+  <line x1="913" y1="100" x2="913" y2="500" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.1"/>
+  <line x1="1042" y1="100" x2="1042" y2="500" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.1"/>
+
+  <text x="400"  y="518" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">0</text>
+  <text x="528"  y="518" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">10</text>
+  <text x="657"  y="518" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">20</text>
+  <text x="785"  y="518" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">30</text>
+  <text x="913"  y="518" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">40</text>
+  <text x="1042" y="518" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">50 months</text>
+
+  <!-- Row 1: Wooting 60HE — 53 months, bar to x = 400 + 53*12.83 = 1080 -->
+  <text x="120" y="122" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="start" font-weight="600" opacity="0.9">Wooting 60HE</text>
+  <rect x="400" y="140" width="680" height="50" rx="4" fill="oklch(0.68 0.165 28 / 0.22)" stroke="oklch(0.68 0.165 28)" stroke-width="2"/>
+  <text x="1090" y="171" font-family="JetBrains Mono, monospace" font-size="15" fill="oklch(0.68 0.165 28)" stroke="none" font-weight="600">~53 months</text>
+  <text x="120" y="152" font-family="Newsreader, serif" font-size="13" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">mass production since April 2022</text>
+
+  <!-- Row 2: Keychron Q1 HE 8K — 5 months, bar to x = 400 + 5*12.83 = 464 -->
+  <text x="120" y="282" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="start" font-weight="600" opacity="0.9">Keychron Q1 HE 8K</text>
+  <rect x="400" y="300" width="64" height="50" rx="4" fill="oklch(0.78 0.005 90 / 0.1)" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-opacity="0.7"/>
+  <text x="480" y="331" font-family="JetBrains Mono, monospace" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" font-weight="600" opacity="0.85">~5 months</text>
+  <text x="120" y="312" font-family="Newsreader, serif" font-size="13" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">reached reviewers April 2026</text>
+
+  <!-- Row 3: Keychron Q16 HE 8K — 0 months, marker only, not yet shipped -->
+  <text x="120" y="442" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="start" font-weight="600" opacity="0.9">Keychron Q16 HE 8K</text>
+  <line x1="400" y1="460" x2="400" y2="510" stroke="oklch(0.78 0.005 90)" stroke-width="3" stroke-dasharray="3 5" stroke-opacity="0.6"/>
+  <circle cx="400" cy="485" r="7" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-opacity="0.7"/>
+  <text x="420" y="491" font-family="JetBrains Mono, monospace" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" font-weight="600" opacity="0.75">0 — preorder stage</text>
+  <text x="120" y="472" font-family="Newsreader, serif" font-size="13" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">Kickstarter opened September 2026</text>
+
+  <!-- Caption annotation -->
+  <text x="600" y="546" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">the same actuation-point pitch, ten times the field time behind the firmware tuning it</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

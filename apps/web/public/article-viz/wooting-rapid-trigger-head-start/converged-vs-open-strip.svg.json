@@ -1,0 +1,26 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-09-19T14:00:00.000Z",
+  "commit": "415d9b1e0f3783c94997148c7674587f9bc6f59a",
+  "kind": "inline-viz",
+  "article_slug": "wooting-rapid-trigger-head-start",
+  "article_pillar": "trends",
+  "section_anchor": "The axis that's still open",
+  "brief_summary": "Four-panel horizontal strip contrasting three hardware axes now treated as converged across the Hall-effect category — adjustable actuation point, TMR sensor precision, and hardware accessories like split spacebars and tuning knobs — each marked with a dimmed checkmark, against the one axis the article argues hasn't converged: per-key curve software depth, outlined in coral with an open circle instead of a checkmark.",
+  "target": "apps/web/public/article-viz/wooting-rapid-trigger-head-start/converged-vs-open-strip.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "data/switches/gateron-magnetic-jade.json:description — 'the actuation point can be adjusted digitally in supporting keyboards'",
+    "data/boards/keychron-q1-he.json:description — 'Ships with magnetic Hall-effect switches and ZMK firmware'",
+    "apps/web/src/content/articles/wooting-rapid-trigger-head-start.mdx:'Hardware parity arrived first' section — 'Keychron had opened a Kickstarter for the Q16 HE 8K, built around a ceramic-housed TMR (tunnel magnetoresistance) sensor ... Cherry's gaming sub-brand XTRFY shipped its own TMR switch, the MK Crystal TMR'",
+    "apps/web/src/content/articles/wooting-rapid-trigger-head-start.mdx:lede — '80HE+ preorders opened 2026-09-17 with a split spacebar and new knob accessory'",
+    "data/vendors/wooting.json:description — 'Wooting's software has a multi-year head start on configurator depth that newer HE entrants are actively closing.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/wooting-rapid-trigger-head-start/converged-vs-open-strip.svg"],
+  "warnings": []
+}
