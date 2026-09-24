@@ -13305,7 +13305,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/why-stabilizers-rattle-deep-dive.mdx
 - action: add [why-stabilizers-rattle-deep-dive](/article/why-stabilizers-rattle-deep-dive) to pcb-flex-cuts-explained body, or vice versa
 
-### [HOT PURSUIT] [content-gap] [7] trends pillar — 1 of ≥2 articles in last 30d
+### [x] [HOT PURSUIT] [content-gap] [7] trends pillar — 1 of ≥2 articles in last 30d — addressed in a03bbee3, closes #999
 - category: content-gaps
 - impact: 8 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -13317,3 +13317,26 @@ passes accumulate signals.)
 - next: /ship-content → trends pillar article
 - issue: #999
 > Filed 2026-09-23 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+
+### [ ] [cross-links] [4.5] wooting-rapid-trigger-head-start ↔ hall-effect-rapid-trigger-plateau — no prose cross-link (same pillar, ≥2 shared tags: hall-effect, rapid-trigger)
+- category: cross-links
+- filed: 2026-09-24 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: hall-effect, rapid-trigger
+- article-a: apps/web/src/content/articles/wooting-rapid-trigger-head-start.mdx
+- article-b: apps/web/src/content/articles/hall-effect-rapid-trigger-plateau.mdx
+- action: add [hall-effect-rapid-trigger-plateau](/article/hall-effect-rapid-trigger-plateau) to wooting-rapid-trigger-head-start body, or vice versa
+
+### [HOT PURSUIT] [content-gap] [7] guides pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 5 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: guides
+- window-count: 1
+- window-start: 2026-08-25
+- score: 7
+- next: /ship-content → guides pillar article
+> Filed 2026-09-24 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
