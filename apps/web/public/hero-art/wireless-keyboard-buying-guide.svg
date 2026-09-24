@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — keyboard silhouette with a 2.4GHz USB dongle radiating a signal fan, wired cable left grey for contrast</title>
+
+  <!-- ================================================================
+       Canvas:  1200 × 750
+       Subject: top-down keyboard outline, a small USB dongle floating
+                to its upper right with a dashed radio-wave fan
+                emanating from the dongle toward the keyboard (2.4GHz
+                link), and a subdued wired USB-C cable in the lower
+                margin as the neutral point of comparison.
+       Palette:
+         Stroke   oklch(0.78 0.005 90)  warm-grey, 2px
+         Label    oklch(0.58 0.006 90)  muted warm-grey (mono labels)
+         Splash   oklch(0.68 0.09  16)  dusty rose (dongle + signal fan)
+         Bronze   oklch(0.80 0.135 75)  theme accent (top-right ornament only)
+       Background: transparent (light-mode safe per house style).
+  ================================================================ -->
+
+  <!-- Faint canvas-wide wash over the keyboard-to-dongle corridor -->
+  <rect x="90" y="200" width="900" height="380" fill="oklch(0.68 0.09 16 / 0.04)" stroke="none"/>
+
+  <!-- Spotlight wash behind the dongle + signal fan — the visual anchor -->
+  <ellipse cx="878" cy="395" rx="190" ry="148" fill="oklch(0.68 0.09 16 / 0.07)" stroke="none"/>
+
+  <!-- ============ KEYBOARD ============
+       Top-down silhouette, case x=110→760, y=230→560. 12 columns of
+       key-dots across 4 rows, plus a bottom row hinting modifiers
+       and a spacebar — neutral warm-grey, no per-key highlighting. -->
+
+  <!-- Outer case -->
+  <rect x="110" y="230" width="650" height="330" rx="16" ry="16"/>
+
+  <!-- Inset bezel hint -->
+  <rect x="126" y="246" width="618" height="298" rx="10" stroke-opacity="0.35"/>
+
+  <!-- Key grid: 12 columns × 4 rows -->
+  <g stroke-opacity="0.65">
+    <circle cx="155" cy="278" r="3"/><circle cx="205" cy="278" r="3"/><circle cx="255" cy="278" r="3"/><circle cx="305" cy="278" r="3"/><circle cx="355" cy="278" r="3"/><circle cx="405" cy="278" r="3"/><circle cx="455" cy="278" r="3"/><circle cx="505" cy="278" r="3"/><circle cx="555" cy="278" r="3"/><circle cx="605" cy="278" r="3"/><circle cx="655" cy="278" r="3"/><circle cx="705" cy="278" r="3"/>
+    <circle cx="155" cy="322" r="3"/><circle cx="205" cy="322" r="3"/><circle cx="255" cy="322" r="3"/><circle cx="305" cy="322" r="3"/><circle cx="355" cy="322" r="3"/><circle cx="405" cy="322" r="3"/><circle cx="455" cy="322" r="3"/><circle cx="505" cy="322" r="3"/><circle cx="555" cy="322" r="3"/><circle cx="605" cy="322" r="3"/><circle cx="655" cy="322" r="3"/><circle cx="705" cy="322" r="3"/>
+    <circle cx="155" cy="366" r="3"/><circle cx="205" cy="366" r="3"/><circle cx="255" cy="366" r="3"/><circle cx="305" cy="366" r="3"/><circle cx="355" cy="366" r="3"/><circle cx="405" cy="366" r="3"/><circle cx="455" cy="366" r="3"/><circle cx="505" cy="366" r="3"/><circle cx="555" cy="366" r="3"/><circle cx="605" cy="366" r="3"/><circle cx="655" cy="366" r="3"/><circle cx="705" cy="366" r="3"/>
+    <circle cx="155" cy="410" r="3"/><circle cx="205" cy="410" r="3"/><circle cx="255" cy="410" r="3"/><circle cx="305" cy="410" r="3"/><circle cx="355" cy="410" r="3"/><circle cx="405" cy="410" r="3"/><circle cx="455" cy="410" r="3"/><circle cx="505" cy="410" r="3"/><circle cx="555" cy="410" r="3"/><circle cx="605" cy="410" r="3"/><circle cx="655" cy="410" r="3"/><circle cx="705" cy="410" r="3"/>
+  </g>
+
+  <!-- Bottom row: two modifier keys flanking a spacebar -->
+  <g stroke-opacity="0.6">
+    <rect x="270" y="454" width="48" height="30" rx="5"/>
+    <rect x="330" y="454" width="250" height="30" rx="6"/>
+    <rect x="590" y="454" width="48" height="30" rx="5"/>
+  </g>
+
+  <!-- ============ 2.4GHz USB DONGLE + SIGNAL FAN ============
+       Dongle floats free of the keyboard case, upper right. Three
+       dashed concentric arcs fan out from its connector tip toward
+       the keyboard — the wireless link this article is about. -->
+
+  <!-- Signal fan, dashed, dusty rose, fading outward -->
+  <g stroke="oklch(0.68 0.09 16)" stroke-width="2" fill="none" stroke-dasharray="5 6">
+    <path d="M 898.3 425.6 A 40 40 0 0 1 898.3 364.4" stroke-opacity="0.9"/>
+    <path d="M 875.8 452.5 A 75 75 0 0 1 875.8 337.6" stroke-opacity="0.55"/>
+    <path d="M 853.3 479.3 A 110 110 0 0 1 853.3 310.7" stroke-opacity="0.32"/>
+  </g>
+
+  <!-- Dongle body -->
+  <rect x="946" y="362" width="30" height="66" rx="6" ry="6"
+    stroke="oklch(0.68 0.09 16)" fill="oklch(0.68 0.09 16 / 0.12)"/>
+  <!-- Dongle connector tab, pointing toward the keyboard -->
+  <rect x="924" y="386" width="22" height="18" rx="2"
+    stroke="oklch(0.68 0.09 16)" fill="oklch(0.68 0.09 16 / 0.2)"/>
+  <!-- Transmit LED -->
+  <circle cx="961" cy="378" r="3" fill="oklch(0.68 0.09 16)" stroke="oklch(0.68 0.09 16)"/>
+
+  <text x="961" y="452" font-family="'JetBrains Mono','IBM Plex Mono',ui-monospace,monospace"
+    font-size="13" fill="oklch(0.68 0.09 16)" letter-spacing="0.03em"
+    text-anchor="middle" stroke="none">2.4GHz</text>
+
+  <!-- ============ WIRED CABLE ============
+       Subdued USB-C cable + plug, lower-left margin — the neutral
+       point of comparison against the dongle's wireless link. -->
+  <path d="M 128 618 C 150 636, 138 656, 165 660" stroke-opacity="0.4"/>
+  <rect x="165" y="650" width="30" height="18" rx="3" stroke-opacity="0.5"/>
+  <line x1="172" y1="655" x2="172" y2="663" stroke-opacity="0.5"/>
+  <line x1="182" y1="655" x2="182" y2="663" stroke-opacity="0.5"/>
+
+  <text x="180" y="694" font-family="'JetBrains Mono','IBM Plex Mono',ui-monospace,monospace"
+    font-size="13" fill="oklch(0.58 0.006 90)" letter-spacing="0.03em"
+    text-anchor="middle" stroke="none">wired</text>
+
+  <!-- ================================================================
+       BRASS / BRONZE THEME DOT — upper-right ornamental anchor
+       (family convention, present in every thock hero)
+  ================================================================ -->
+  <circle cx="1148" cy="70" r="3.5" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

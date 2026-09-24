@@ -1,0 +1,37 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-09-24T00:00:00Z",
+  "commit": "0b883548fec35473b40c4df11a2acc00b55d6106",
+  "kind": "hero-art",
+  "article_slug": "wireless-keyboard-buying-guide",
+  "article_pillar": "guides",
+  "brief_summary": "Hero art for the guides-pillar wireless keyboard buying guide (Bluetooth vs 2.4GHz dongle vs wired, latency focus). bearings.md's guide default (annotated keycap row) was adapted per an explicit brief instruction to a topic-specific motif: a top-down keyboard silhouette with a floating 2.4GHz USB dongle radiating a dashed signal fan toward the keyboard, plus a subdued wired USB-C cable in the lower margin as the neutral point of comparison — mirrors the split-ergo precedent of reinterpreting the keycap-row default when the topic calls for a more literal subject.",
+  "target": "apps/web/public/hero-art/wireless-keyboard-buying-guide.svg",
+  "source": "plan/bearings.md § Article hero art — colorful keyboard SVGs (locked 2026-05-09)",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject; guide subjects default to an annotated motif — reinterpreted here per explicit brief instruction as a keyboard + USB dongle + radiating signal-wave motif rather than a keycap row",
+  "size": [1200, 750],
+  "subject": "Top-down keyboard silhouette (12-column x 4-row key grid, bottom row with two modifier keys flanking a spacebar) in neutral warm-grey stroke, x=110-760. A small USB dongle (body + connector tab + transmit LED) floats free at upper right, dusty-rose stroke/fill, with three dashed concentric arcs fanning out from its connector tip toward the keyboard — the 2.4GHz wireless link, labeled '2.4GHz' in JetBrains Mono. Lower-left margin carries a subdued (opacity ~0.4-0.5), un-splashed USB-C cable + plug glyph labeled 'wired' in neutral warm-grey, the neutral point of comparison against the dongle's wireless link. No Bluetooth glyph included — the dongle specifically denotes the 2.4GHz-vs-BLE latency distinction that is the article's core claim.",
+  "splash_color": {
+    "name": "dusty rose",
+    "oklch": "oklch(0.68 0.09 16)",
+    "hex_approx": "#c88d89"
+  },
+  "accent_color": {
+    "name": "warm-bronze (theme accent)",
+    "oklch": "oklch(0.80 0.135 75)"
+  },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "label_color": "oklch(0.58 0.006 90)",
+  "stroke_weight": "2px",
+  "canvas": "1200x750",
+  "background": "transparent (light-mode safe per house style)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["JetBrains Mono", "IBM Plex Mono", "ui-monospace"],
+  "alt": "A top-down keyboard outline with a small USB dongle floating at its upper right corner, radiating a dashed fan of signal arcs toward the keyboard, labeled 2.4GHz. A subdued wired USB-C cable and plug sit in the lower-left margin, labeled wired, as the point of comparison.",
+  "data_sources": [],
+  "outputs": [
+    "apps/web/public/hero-art/wireless-keyboard-buying-guide.svg"
+  ],
+  "warnings": []
+}

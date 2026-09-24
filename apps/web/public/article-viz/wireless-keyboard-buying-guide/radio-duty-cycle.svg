@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Two horizontal timelines comparing radio wake frequency. The top timeline, labeled 2.4GHz dongle mode, shows closely and evenly spaced radio-wake ticks along its full length. The bottom timeline, labeled Bluetooth mode, shows far fewer ticks with long gaps between them, with one gap bracketed in amber and labeled longer sleep between connection intervals.</title>
+
+  <!-- ══ TOP TIMELINE: 2.4GHz ═══════════════════════════════════════ -->
+  <text x="60" y="70" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" font-weight="600" opacity="0.85">2.4GHz dongle mode</text>
+
+  <line x1="60" y1="140" x2="1140" y2="140" stroke-opacity="0.5"/>
+  <g stroke-opacity="0.7">
+    <line x1="80" y1="128" x2="80" y2="152"/>
+    <line x1="128" y1="128" x2="128" y2="152"/>
+    <line x1="176" y1="128" x2="176" y2="152"/>
+    <line x1="224" y1="128" x2="224" y2="152"/>
+    <line x1="272" y1="128" x2="272" y2="152"/>
+    <line x1="320" y1="128" x2="320" y2="152"/>
+    <line x1="368" y1="128" x2="368" y2="152"/>
+    <line x1="416" y1="128" x2="416" y2="152"/>
+    <line x1="464" y1="128" x2="464" y2="152"/>
+    <line x1="512" y1="128" x2="512" y2="152"/>
+    <line x1="560" y1="128" x2="560" y2="152"/>
+    <line x1="608" y1="128" x2="608" y2="152"/>
+    <line x1="656" y1="128" x2="656" y2="152"/>
+    <line x1="704" y1="128" x2="704" y2="152"/>
+    <line x1="752" y1="128" x2="752" y2="152"/>
+    <line x1="800" y1="128" x2="800" y2="152"/>
+    <line x1="848" y1="128" x2="848" y2="152"/>
+    <line x1="896" y1="128" x2="896" y2="152"/>
+    <line x1="944" y1="128" x2="944" y2="152"/>
+    <line x1="992" y1="128" x2="992" y2="152"/>
+    <line x1="1040" y1="128" x2="1040" y2="152"/>
+    <line x1="1088" y1="128" x2="1088" y2="152"/>
+    <line x1="1120" y1="128" x2="1120" y2="152"/>
+  </g>
+  <text x="60" y="185" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">radio wakes on nearly every polling interval, key pressed or not</text>
+
+  <!-- divider -->
+  <line x1="60" y1="220" x2="1140" y2="220" stroke-opacity="0.12" stroke-dasharray="3 7"/>
+
+  <!-- ══ BOTTOM TIMELINE: BLUETOOTH ═════════════════════════════════ -->
+  <text x="60" y="260" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.10 80)" stroke="none" font-weight="600" opacity="0.95">Bluetooth mode</text>
+
+  <line x1="60" y1="330" x2="1140" y2="330" stroke-opacity="0.5"/>
+  <g stroke-opacity="0.8">
+    <line x1="80" y1="318" x2="80" y2="342"/>
+    <line x1="160" y1="318" x2="160" y2="342"/>
+    <line x1="440" y1="318" x2="440" y2="342"/>
+    <line x1="820" y1="318" x2="820" y2="342"/>
+    <line x1="1120" y1="318" x2="1120" y2="342"/>
+  </g>
+
+  <!-- amber bracket over the long gap -->
+  <path d="M 440 362 L 440 372 L 820 372 L 820 362" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.9"/>
+  <circle cx="440" cy="372" r="3.5" fill="oklch(0.78 0.10 80)" stroke="none"/>
+  <text x="630" y="395" font-family="Newsreader, serif" font-style="italic" font-size="14" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.95">longer sleep between connection intervals</text>
+
+  <!-- Brass-bronze theme dot -->
+  <circle cx="1170" cy="30" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

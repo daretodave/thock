@@ -1,0 +1,25 @@
+{
+  "generated_by": "content-curator-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-09-24T00:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "wireless-keyboard-buying-guide",
+  "article_pillar": "guides",
+  "section_anchor": "the-latency-number-that-actually-matters",
+  "brief_summary": "Two-panel bar chart. Top panel, zoomed to 0-20ms, compares wired, 2.4GHz dongle, and Bluetooth input latency ranges. Bottom panel, scaled to 0-250ms, shows the same three connection types compressed into a near-zero cluster against an amber bar marking human reaction time, visualizing the article's point that all three sit well under perceptible reaction time.",
+  "target": "apps/web/public/article-viz/wireless-keyboard-buying-guide/latency-ladder.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "JetBrains Mono", "Newsreader"],
+  "data_sources": [
+    "wireless-keyboard-buying-guide.mdx § 'The latency number that actually matters' — 'Wired keyboards typically measure in the range of 1–4ms of total input latency; well-implemented 2.4GHz dongles land close behind, often 1–5ms'",
+    "wireless-keyboard-buying-guide.mdx § 'The latency number that actually matters' — 'Bluetooth boards commonly measure in the 8–20ms range rather than matching wired'",
+    "wireless-keyboard-buying-guide.mdx § 'The latency number that actually matters' — 'the entire ladder above sits so far under human reaction time — roughly 150–250ms — that none of it is perceptible'",
+    "https://www.rtings.com/keyboard/tests/latency — RTINGS's keyboard latency testing methodology and results, cited inline as the source for the wired/2.4GHz/Bluetooth latency ranges"
+  ],
+  "outputs": ["apps/web/public/article-viz/wireless-keyboard-buying-guide/latency-ladder.svg"],
+  "warnings": []
+}

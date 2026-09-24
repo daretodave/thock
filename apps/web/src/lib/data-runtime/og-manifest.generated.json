@@ -21,6 +21,16 @@
       }
     },
     {
+      "slug": "wireless-keyboard-buying-guide",
+      "readTime": 9,
+      "frontmatter": {
+        "title": "Wireless keyboard buying guide: Bluetooth, 2.4GHz, and the latency that actually matters",
+        "lede": "\"Wireless\" on a spec sheet hides three different radios with three different latency numbers, battery habits, and ways to lose the thing. Here's how to pick the one that matches an actual desk instead of a marketing slide.",
+        "pillar": "guides",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "keychron-q16-he-8k-ceramic-tmr",
       "readTime": 6,
       "frontmatter": {
@@ -8317,5 +8327,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-09-24T07:17:10.782Z"
+  "generatedAt": "2026-09-24T18:17:28.105Z"
 }

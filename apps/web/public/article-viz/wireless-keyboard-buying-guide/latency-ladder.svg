@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Two-panel latency chart. Top panel, zoomed to 0-20 milliseconds, shows three bars: wired at 1 to 4 milliseconds, 2.4GHz dongle at 1 to 5 milliseconds, and Bluetooth at 8 to 20 milliseconds. Bottom panel, scaled to 0-250 milliseconds, shows all three connection types compressed into one small cluster near zero against a much longer amber bar marking human reaction time at 150 to 250 milliseconds.</title>
+
+  <!-- ══ TOP PANEL: ZOOMED CONNECTION LATENCY ══════════════════════ -->
+  <text x="40" y="40" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" font-weight="600" letter-spacing="0.05em" opacity="0.8">CONNECTION LATENCY &#8212; ZOOMED, 0&#8211;20ms</text>
+
+  <!-- axis -->
+  <line x1="260" y1="230" x2="1120" y2="230" stroke-opacity="0.4"/>
+  <g stroke-opacity="0.3">
+    <line x1="260" y1="225" x2="260" y2="235"/>
+    <line x1="475" y1="225" x2="475" y2="235"/>
+    <line x1="690" y1="225" x2="690" y2="235"/>
+    <line x1="905" y1="225" x2="905" y2="235"/>
+    <line x1="1120" y1="225" x2="1120" y2="235"/>
+  </g>
+  <g font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">
+    <text x="260" y="252">0</text>
+    <text x="475" y="252">5ms</text>
+    <text x="690" y="252">10ms</text>
+    <text x="905" y="252">15ms</text>
+    <text x="1120" y="252">20ms</text>
+  </g>
+
+  <!-- wired: 1-4ms -->
+  <text x="245" y="98" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.85">wired</text>
+  <rect x="303" y="80" width="129" height="26" rx="6" stroke-opacity="0.85"/>
+  <text x="440" y="98" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">1&#8211;4ms</text>
+
+  <!-- 2.4GHz: 1-5ms -->
+  <text x="245" y="148" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.85">2.4GHz dongle</text>
+  <rect x="303" y="130" width="172" height="26" rx="6" stroke-opacity="0.85"/>
+  <text x="483" y="148" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">1&#8211;5ms</text>
+
+  <!-- Bluetooth: 8-20ms -->
+  <text x="245" y="198" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="end" opacity="0.95">Bluetooth</text>
+  <rect x="604" y="180" width="516" height="26" rx="6" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.9"/>
+  <text x="1046" y="198" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="end" opacity="0.9">8&#8211;20ms</text>
+
+  <!-- divider -->
+  <line x1="40" y1="290" x2="1160" y2="290" stroke-opacity="0.15" stroke-dasharray="3 7"/>
+
+  <!-- ══ BOTTOM PANEL: AGAINST HUMAN REACTION TIME ═════════════════ -->
+  <text x="40" y="320" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" font-weight="600" letter-spacing="0.05em" opacity="0.8">SAME THREE, AGAINST HUMAN REACTION TIME &#8212; 0&#8211;250ms</text>
+
+  <!-- axis -->
+  <line x1="260" y1="430" x2="1120" y2="430" stroke-opacity="0.4"/>
+  <g stroke-opacity="0.3">
+    <line x1="260" y1="425" x2="260" y2="435"/>
+    <line x1="432" y1="425" x2="432" y2="435"/>
+    <line x1="604" y1="425" x2="604" y2="435"/>
+    <line x1="776" y1="425" x2="776" y2="435"/>
+    <line x1="948" y1="425" x2="948" y2="435"/>
+    <line x1="1120" y1="425" x2="1120" y2="435"/>
+  </g>
+  <g font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">
+    <text x="260" y="452">0</text>
+    <text x="432" y="452">50</text>
+    <text x="604" y="452">100</text>
+    <text x="776" y="452">150</text>
+    <text x="948" y="452">200</text>
+    <text x="1120" y="452">250ms</text>
+  </g>
+
+  <!-- all three, compressed to a cluster near zero (1-20ms at this scale) -->
+  <rect x="260" y="345" width="69" height="26" rx="6" stroke-opacity="0.85"/>
+  <line x1="329" y1="358" x2="420" y2="358" stroke-opacity="0.4" stroke-dasharray="2 6"/>
+  <text x="425" y="363" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">wired / 2.4GHz / Bluetooth &#8212; 1&#8211;20ms</text>
+
+  <!-- human reaction time -->
+  <rect x="776" y="395" width="344" height="26" rx="6" fill="oklch(0.78 0.10 80)" fill-opacity="0.15" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.9"/>
+  <circle cx="776" cy="408" r="4" fill="oklch(0.78 0.10 80)" stroke="none"/>
+  <text x="948" y="380" font-family="Newsreader, serif" font-style="italic" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.95">human reaction time, 150&#8211;250ms</text>
+
+  <!-- Brass-bronze theme dot -->
+  <circle cx="1170" cy="30" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

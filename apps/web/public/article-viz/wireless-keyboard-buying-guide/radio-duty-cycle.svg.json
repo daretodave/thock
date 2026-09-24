@@ -1,0 +1,23 @@
+{
+  "generated_by": "content-curator-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-09-24T00:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "wireless-keyboard-buying-guide",
+  "article_pillar": "guides",
+  "section_anchor": "battery-life-is-a-duty-cycle-question-not-a-marketing-one",
+  "brief_summary": "Mechanism diagram: two horizontal timelines showing radio wake-event frequency. The 2.4GHz dongle timeline shows dense, evenly spaced wake ticks; the Bluetooth timeline shows sparse ticks with an amber bracket over one gap, illustrating why Bluetooth Low Energy's longer sleep between connection intervals produces longer battery life than a 2.4GHz dongle's higher-frequency polling.",
+  "target": "apps/web/public/article-viz/wireless-keyboard-buying-guide/radio-duty-cycle.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "wireless-keyboard-buying-guide.mdx § 'Battery life is a duty-cycle question, not a marketing one' — 'Bluetooth Low Energy is built to let the radio go quiet between the negotiated connection intervals and wake only to check in or send an event'",
+    "wireless-keyboard-buying-guide.mdx § 'Battery life is a duty-cycle question, not a marketing one' — 'a 2.4GHz dongle link... is built to keep that polling rate high and consistent, which means the radio wakes far more often regardless of whether a key was actually pressed'"
+  ],
+  "outputs": ["apps/web/public/article-viz/wireless-keyboard-buying-guide/radio-duty-cycle.svg"],
+  "warnings": []
+}

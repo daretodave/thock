@@ -1,0 +1,25 @@
+{
+  "generated_by": "content-curator-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-09-24T00:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "wireless-keyboard-buying-guide",
+  "article_pillar": "guides",
+  "section_anchor": "how-to-actually-choose",
+  "brief_summary": "Four numbered decision panels, one per reader profile, each naming the recommended connection mode: competitive gaming/rhythm games recommend wired or 2.4GHz, general desk work recommends Bluetooth, multi-device switching recommends Bluetooth, and a single non-traveling desktop recommends 2.4GHz. Mirrors the article's closing decision-framework paragraph one-for-one.",
+  "target": "apps/web/public/article-viz/wireless-keyboard-buying-guide/decision-panels.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "JetBrains Mono", "Newsreader"],
+  "data_sources": [
+    "wireless-keyboard-buying-guide.mdx § 'How to actually choose' — 'Competitive gaming or rhythm games... want wired first and 2.4GHz second'",
+    "wireless-keyboard-buying-guide.mdx § 'How to actually choose' — 'General desk work and typing should default to Bluetooth'",
+    "wireless-keyboard-buying-guide.mdx § 'How to actually choose' — 'Anyone splitting time across a laptop, a tablet, and a phone should treat Bluetooth's profile switching as close to a hard requirement'",
+    "wireless-keyboard-buying-guide.mdx § 'How to actually choose' — 'A single dedicated desktop that never travels is the case where 2.4GHz's latency edge is free to take, as long as the dongle has somewhere to live'"
+  ],
+  "outputs": ["apps/web/public/article-viz/wireless-keyboard-buying-guide/decision-panels.svg"],
+  "warnings": []
+}
