@@ -13329,7 +13329,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/hall-effect-rapid-trigger-plateau.mdx
 - action: add [hall-effect-rapid-trigger-plateau](/article/hall-effect-rapid-trigger-plateau) to wooting-rapid-trigger-head-start body, or vice versa
 
-### [HOT PURSUIT] [content-gap] [7] guides pillar — 1 of ≥2 articles in last 30d
+### [x] [content-gap] [7] guides pillar — 1 of ≥2 articles in last 30d — addressed in a03d26b0, closes #1000
 - category: content-gaps
 - impact: 5 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -13340,4 +13340,39 @@ passes accumulate signals.)
 - score: 7
 - next: /ship-content → guides pillar article
 - issue: #1000
+> Filed 2026-09-24 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+> **Resolved (2026-09-24):** shipped "Wireless keyboard buying guide: Bluetooth, 2.4GHz, and the latency that actually matters" at `/article/wireless-keyboard-buying-guide`, publishedAt 2026-09-11 (gap-fill midpoint of the 09-07 → 09-15 8-day gap, the largest in the rolling 30-day window). Guides pillar now carries 2 articles in the last 30 days — window satisfied. `a03d26b0`
+
+### [ ] [cross-links] [4.5] wireless-keyboard-buying-guide ↔ keyboard-firmware-compared — no prose cross-link (same pillar, ≥2 shared tags: beginner, firmware)
+- category: cross-links
+- filed: 2026-09-24 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: beginner, firmware
+- article-a: apps/web/src/content/articles/wireless-keyboard-buying-guide.mdx
+- article-b: apps/web/src/content/articles/keyboard-firmware-compared.mdx
+- action: add [keyboard-firmware-compared](/article/keyboard-firmware-compared) to wireless-keyboard-buying-guide body, or vice versa
+
+### [ ] [cross-links] [4.5] wireless-keyboard-buying-guide ↔ split-ergo-buyers-guide — no prose cross-link (same pillar, ≥2 shared tags: wireless, beginner)
+- category: cross-links
+- filed: 2026-09-24 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: wireless, beginner
+- article-a: apps/web/src/content/articles/wireless-keyboard-buying-guide.mdx
+- article-b: apps/web/src/content/articles/split-ergo-buyers-guide.mdx
+- action: add [split-ergo-buyers-guide](/article/split-ergo-buyers-guide) to wireless-keyboard-buying-guide body, or vice versa
+
+### [HOT PURSUIT] [content-gap] [7] deep-dives pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 6 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: deep-dives
+- window-count: 1
+- window-start: 2026-08-25
+- score: 7
+- next: /ship-content → deep-dives pillar article
 > Filed 2026-09-24 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
