@@ -13376,3 +13376,14 @@ passes accumulate signals.)
 - score: 7
 - next: /ship-content → deep-dives pillar article
 > Filed 2026-09-24 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+
+### [user-issue #1001] [ci] [4.8] heartbeat.yml's flatline alarm fired on a false positive (reported 1205h gap; run history shows no gap)
+- category: ci
+- impact: 6 (a false alarm that goes unaddressed erodes trust in the heartbeat signal — the next *real* flatline may get dismissed as "probably another blip")
+- ease: 8 (single-file change to `.github/workflows/heartbeat.yml`'s alarm step)
+- score: 4.8 (impact × ease / 10)
+- issue: #1001
+- evidence: at issue-creation time (2026-09-24T21:28:19Z) `gh run list --workflow march --status completed -L 20` showed unbroken hourly-ish successful ticks back through 2026-09-21, most recently `18:07:56Z → 18:26:10Z` — a ~3h gap, not the reported 1205h (~50 days).
+- hypothesis: heartbeat.yml's "Alarm if march has not completed a tick in 14h" step runs on `secrets.GITHUB_TOKEN` (not the loop's PAT) and takes `gh run list --workflow march --status completed -L 1` at face value; a single transient/incomplete read against the Actions API produced a stale result with no corroborating second read.
+- action: add a debounce — require the flatline condition to hold across two consecutive heartbeat firings (~6h apart, e.g. persist last-seen-healthy state via a marker, or re-query once more with a short retry before creating the issue) before opening a "march has flatlined" issue. Close #1001 in the fix commit.
+- next: /iterate picks this up; reference #1001 in the commit body.
