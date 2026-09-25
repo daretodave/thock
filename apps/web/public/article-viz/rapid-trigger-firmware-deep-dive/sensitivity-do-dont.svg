@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Do/don't map of rapid-trigger sensitivity by key role. Left column, coral: shallow reset-delta sensitivity on WASD and other rapid re-press keys is the intended use. Right column, warm-red: the same shallow sensitivity on keys a resting hand touches, such as left control, risks reading ordinary tremor or desk vibration as a full press-release cycle</title>
+
+  <!-- Divider -->
+  <line x1="600" y1="60" x2="600" y2="420" stroke-opacity="0.2"/>
+
+  <!-- LEFT: do -->
+  <text x="300" y="90" font-family="Newsreader, serif" font-style="italic" font-size="24" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">do</text>
+  <rect x="120" y="120" width="360" height="130" rx="10" stroke="oklch(0.68 0.165 28)" fill="oklch(0.68 0.165 28 / 0.08)"/>
+  <circle cx="150" cy="150" r="14" fill="oklch(0.68 0.165 28 / 0.2)" stroke="oklch(0.68 0.165 28)"/>
+  <path d="M 143 150 L 148 156 L 158 143" stroke="oklch(0.68 0.165 28)" stroke-width="2.5" fill="none"/>
+  <text x="300" y="152" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" font-weight="600">WASD / rapid re-press keys</text>
+  <text x="300" y="180" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.85">shallow sensitivity, down toward</text>
+  <text x="300" y="200" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.85">Wooting's 0.1mm floor — this is</text>
+  <text x="300" y="220" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.85">the entire point of the feature</text>
+
+  <rect x="120" y="280" width="360" height="130" rx="10" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.5" stroke-dasharray="5 5"/>
+  <text x="300" y="315" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.85" font-weight="600">per-key configuration</text>
+  <text x="300" y="345" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.7">separate downstroke and</text>
+  <text x="300" y="365" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.7">upstroke sliders, tuned per</text>
+  <text x="300" y="385" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.7">key rather than board-wide</text>
+
+  <!-- RIGHT: avoid -->
+  <text x="900" y="90" font-family="Newsreader, serif" font-style="italic" font-size="24" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle">avoid</text>
+  <rect x="720" y="120" width="360" height="130" rx="10" stroke="oklch(0.62 0.13 25)" fill="oklch(0.62 0.13 25 / 0.08)"/>
+  <circle cx="750" cy="150" r="14" fill="oklch(0.62 0.13 25 / 0.2)" stroke="oklch(0.62 0.13 25)"/>
+  <path d="M 744 144 L 756 156 M 756 144 L 744 156" stroke="oklch(0.62 0.13 25)" stroke-width="2.5"/>
+  <text x="900" y="152" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" font-weight="600">keys a resting hand touches</text>
+  <text x="900" y="180" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.85">left control, thumb keys, any</text>
+  <text x="900" y="200" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.85">palm-adjacent key — same shallow</text>
+  <text x="900" y="220" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.85">sensitivity risks a double-fire</text>
+
+  <rect x="720" y="280" width="360" height="130" rx="10" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.5" stroke-dasharray="5 5"/>
+  <text x="900" y="315" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.85" font-weight="600">why it happens</text>
+  <text x="900" y="345" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.7">tremor and desk vibration are</text>
+  <text x="900" y="365" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.7">real analog motion — the sensor</text>
+  <text x="900" y="385" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.7">can't tell noise from intent</text>
+
+  <text x="600" y="455" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">Wooting's own setup guide names left control by name as a heavier-setting candidate for exactly this reason</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

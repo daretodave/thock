@@ -1,0 +1,22 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-09-02T13:30:00.000Z",
+  "commit": "4939542059459b98f1d154974cbfb93c35b5c34c",
+  "kind": "inline-viz",
+  "article_slug": "rapid-trigger-firmware-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "the-loop-tracking-the-peak-not-a-fixed-point",
+  "brief_summary": "Four-panel process strip showing the firmware decision loop that reruns on every poll: poll (sample analog travel distance), track (update the running peak reached since the last release), compare (coral-emphasized — current distance vs. peak minus the reset delta, the only real decision), emit (actuate or release event to the host).",
+  "target": "apps/web/public/article-viz/rapid-trigger-firmware-deep-dive/poll-track-decide.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "rapid-trigger-firmware-deep-dive.mdx § 'The loop: tracking the peak, not a fixed point' — 'the firmware keeps exactly one extra piece of state beyond the current position: the deepest point that key has reached since it last registered a release — the running peak of the current stroke. Every poll runs the same three-step comparison.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/rapid-trigger-firmware-deep-dive/poll-track-decide.svg"],
+  "warnings": []
+}

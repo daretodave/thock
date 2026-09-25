@@ -61,6 +61,16 @@
       }
     },
     {
+      "slug": "rapid-trigger-firmware-deep-dive",
+      "readTime": 9,
+      "frontmatter": {
+        "title": "Rapid trigger is a firmware algorithm, not a switch spec",
+        "lede": "A rapid-trigger switch is not a special switch. It is an ordinary analog sensor wired to a polling loop that redraws its own actuation point every cycle — and that loop, not the sensor, is where the real engineering happens.",
+        "pillar": "deep-dives",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "cherry-tracker-slide-keychron-kickstarter-delivers",
       "readTime": 7,
       "frontmatter": {
@@ -8327,5 +8337,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-09-24T18:17:28.105Z"
+  "generatedAt": "2026-09-25T11:16:43.803Z"
 }

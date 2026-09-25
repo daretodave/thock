@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Travel distance plotted against time for a single keystroke, showing a peak-tracking rapid-trigger curve that resets on a partial lift and re-actuates mid-stroke without returning to rest, against a dashed fixed actuation line that a contact-closure switch would use instead</title>
+
+  <!-- Axes -->
+  <line x1="100" y1="70" x2="100" y2="520" stroke-opacity="0.6"/>
+  <line x1="100" y1="520" x2="1150" y2="520" stroke-opacity="0.6"/>
+  <text x="60" y="80" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">rest</text>
+  <text x="60" y="515" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">bottom-out</text>
+  <text x="625" y="555" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">time →</text>
+  <text x="42" y="300" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7" transform="rotate(-90 42 300)">travel depth</text>
+
+  <!-- Fixed actuation reference (contact-closure comparison) -->
+  <line x1="100" y1="260" x2="1150" y2="260" stroke-dasharray="6 6" stroke-opacity="0.5"/>
+  <text x="1150" y="252" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.65">fixed actuation point — a contact-closure switch commits here and nowhere else</text>
+
+  <!-- The rapid-trigger travel curve -->
+  <polyline points="100,80 220,460 280,480 360,400 440,470 560,300 680,150 760,80 1150,80"
+    stroke="oklch(0.68 0.165 28)" stroke-width="3" fill="none"/>
+
+  <!-- Actuates on first downward crossing -->
+  <circle cx="138" cy="200" r="6" fill="oklch(0.68 0.165 28)" stroke="none"/>
+  <text x="138" y="185" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">actuates</text>
+
+  <!-- Peak marker -->
+  <circle cx="280" cy="480" r="6" fill="oklch(0.68 0.165 28)" stroke="none"/>
+  <text x="280" y="500" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">peak — deepest</text>
+  <text x="280" y="516" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">point this stroke</text>
+
+  <!-- Reset delta bracket -->
+  <line x1="330" y1="480" x2="330" y2="400" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.7"/>
+  <line x1="322" y1="480" x2="338" y2="480" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.7"/>
+  <line x1="322" y1="400" x2="338" y2="400" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.7"/>
+  <text x="345" y="445" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="start">reset delta —</text>
+  <text x="345" y="461" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="start">a configured</text>
+  <text x="345" y="477" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="start">distance, not a</text>
+  <text x="345" y="493" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="start">fixed point</text>
+
+  <!-- Reset point marker -->
+  <circle cx="360" cy="400" r="6" fill="oklch(0.68 0.165 28)" stroke="none"/>
+
+  <!-- Re-actuation mid-stroke marker -->
+  <circle cx="440" cy="470" r="6" fill="oklch(0.68 0.165 28)" stroke="none"/>
+  <text x="470" y="465" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="start">re-actuates mid-stroke —</text>
+  <text x="470" y="481" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="start">never returned to rest</text>
+
+  <!-- Full release marker -->
+  <circle cx="760" cy="80" r="6" fill="oklch(0.68 0.165 28)" stroke="none"/>
+  <text x="800" y="70" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="start">back to rest</text>
+
+  <!-- Caption strip -->
+  <text x="600" y="590" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.8">the dashed line is fixed. the coral line is redrawn against its own peak, every poll.</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

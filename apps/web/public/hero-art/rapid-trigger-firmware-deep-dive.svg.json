@@ -1,0 +1,35 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-09-25T00:00:00Z",
+  "commit": "4939542059459b98f1d154974cbfb93c35b5c34c",
+  "kind": "hero-art",
+  "article_slug": "rapid-trigger-firmware-deep-dive",
+  "article_pillar": "deep-dive",
+  "source": "plan/bearings.md § Article hero art — colorful keyboard SVGs (locked 2026-05-09)",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject",
+  "size": [1200, 750],
+  "brief_summary": "Hero art for the deep-dive piece on rapid-trigger firmware (continuous key-travel sampling, actuation-point-follows-peak logic, reset distance). Rendered as an oscilloscope-style key-travel-distance-vs-time trace rather than a physical switch cross-section, since this article's subject is the firmware decision loop, not switch anatomy. The terracotta trace presses to a peak, releases just far enough to cross a peak-trailing reset threshold (the reset-distance bracket is drawn explicitly as a dashed vertical gap at the peak), and re-presses to fire a second actuation after only a short reversal from the new local peak — visually contrasted against a fixed dashed actuation-threshold reference line near the top that a traditional switch would require crossing every time. The reactuation point is the focal dot (largest, haloed).",
+  "subject": "Key-travel-distance-vs-time trace, oscilloscope/travel-sensor readout convention. A single terracotta polyline traces: rest, fast press through a fixed actuation threshold (small event dot), full press to a travel peak, a brief partial release that crosses the peak-trailing reset threshold (event dot) and continues to a shallow local apex, then an immediate re-press that fires a second actuation after only a short reversal from that new local peak (the focal dot, largest with a halo ring) — well short of the fixed threshold depth used on the first press — before a full press to a second peak and release back to rest. Two dashed warm-grey reference lines mark the fixed actuation threshold (full width, near the top) and the peak-trailing reset threshold (shorter, centered on the peak); a small dashed bracket at the peak makes the reset-distance gap between the two literal. A low-opacity terracotta wash sits behind the reset-to-reactuation cluster, the piece's focal region.",
+  "splash_color": {
+    "name": "muted terracotta",
+    "oklch": "oklch(0.60 0.11 42)"
+  },
+  "accent_color": {
+    "name": "warm-bronze (theme accent)",
+    "oklch": "oklch(0.80 0.135 75)"
+  },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "stroke_weight": "2px",
+  "canvas": "1200x750",
+  "background": "transparent (light-mode safe per house style)",
+  "tokens_snapshot": "f79eb6c04b4a9d2e0e3e083f8aeb6bc57586d849",
+  "fonts": [],
+  "alt": "An oscilloscope-style trace of key travel over time: the line presses down to a peak, lifts just enough to cross a threshold that trails the peak (a reset event), then presses down again and fires a second, highlighted actuation after only a short reversal — far short of a fixed threshold line shown near the top — illustrating rapid-trigger firmware's actuation-follows-peak logic and reset distance.",
+  "prompt": "Deep-dive pillar piece on the firmware algorithm behind rapid trigger (continuous travel sampling, actuation-follows-peak, reset distance) on Hall-effect/optical switches. Per the brief's explicit instruction, avoided the switch-cross-section motif already established for physical-mechanism deep dives (durock-t1-deep-dive.svg, gateron-oil-king-deep-dive.svg, magnetic-switches-deep-dive.svg) since this article is about a signal/decision loop, not switch anatomy. Reused the established chart-silhouette sparkline convention (hall-effect-rapid-trigger-plateau.svg's dashed ceiling-reference-line + tick-marked baseline; wooting-rapid-trigger-head-start.svg's focal-dot-with-halo idiom) but applied it to a travel-vs-time oscilloscope trace instead of a weekly tracker score, and added a second, peak-relative dashed reference line plus an explicit dashed bracket to make the reset-distance concept literal rather than implied. Splash hue is muted terracotta oklch(0.60 0.11 42), reused from the family's established terracotta value (brass-weight-mod.svg, zmk-wireless-split-firmware-guide.svg) since the brief called for a hue that reads technical/signal while staying inside the warm palette; ochre and coral are both in recent concurrent use on adjacent rapid-trigger/firmware pieces (hall-effect-rapid-trigger-plateau.svg, wooting-rapid-trigger-head-start.svg) so terracotta keeps this piece visually distinct within the cluster. Brass-bronze theme dot at (1132, 60) per family convention.",
+  "revision": 1,
+  "outputs": [
+    "apps/web/public/hero-art/rapid-trigger-firmware-deep-dive.svg"
+  ],
+  "warnings": []
+}

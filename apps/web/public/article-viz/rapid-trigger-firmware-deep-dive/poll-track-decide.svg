@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Four-step firmware loop rerun on every poll: sample the analog travel distance, track the deepest point reached since the last release, compare the current reading against a trailing reset threshold, then emit an actuate or release event to the host</title>
+
+  <!-- Panel 1: poll -->
+  <rect x="40" y="90" width="250" height="230" rx="10" stroke-opacity="0.7"/>
+  <circle cx="72" cy="122" r="16" stroke-opacity="0.8"/>
+  <text x="72" y="127" font-family="JetBrains Mono, monospace" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">1</text>
+  <text x="165" y="172" font-family="Newsreader, serif" font-style="italic" font-size="24" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">poll</text>
+  <text x="165" y="208" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">sample the analog</text>
+  <text x="165" y="228" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">travel distance —</text>
+  <text x="165" y="248" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">thousands of times</text>
+  <text x="165" y="268" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">per second, per key</text>
+
+  <line x1="292" y1="205" x2="336" y2="205" stroke-opacity="0.6"/>
+  <path d="M 336 205 L 322 197 L 322 213 Z" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6"/>
+
+  <!-- Panel 2: track -->
+  <rect x="340" y="90" width="250" height="230" rx="10" stroke-opacity="0.7"/>
+  <circle cx="372" cy="122" r="16" stroke-opacity="0.8"/>
+  <text x="372" y="127" font-family="JetBrains Mono, monospace" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">2</text>
+  <text x="465" y="172" font-family="Newsreader, serif" font-style="italic" font-size="24" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">track</text>
+  <text x="465" y="208" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">update the deepest</text>
+  <text x="465" y="228" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">point reached since</text>
+  <text x="465" y="248" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">the last release —</text>
+  <text x="465" y="268" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">the running peak</text>
+
+  <line x1="592" y1="205" x2="636" y2="205" stroke-opacity="0.6"/>
+  <path d="M 636 205 L 622 197 L 622 213 Z" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6"/>
+
+  <!-- Panel 3: compare (coral-emphasized — this is the decision) -->
+  <rect x="640" y="90" width="250" height="230" rx="10" fill="oklch(0.68 0.165 28 / 0.08)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.9" stroke-width="2.5"/>
+  <circle cx="672" cy="122" r="16" fill="oklch(0.68 0.165 28 / 0.15)" stroke="oklch(0.68 0.165 28)"/>
+  <text x="672" y="127" font-family="JetBrains Mono, monospace" font-size="15" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">3</text>
+  <text x="765" y="172" font-family="Newsreader, serif" font-style="italic" font-size="24" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">compare</text>
+  <text x="765" y="208" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.9">current distance vs.</text>
+  <text x="765" y="228" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.9">peak minus the reset</text>
+  <text x="765" y="248" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.9">delta — the only</text>
+  <text x="765" y="268" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.9">decision that matters</text>
+
+  <line x1="892" y1="205" x2="936" y2="205" stroke-opacity="0.6"/>
+  <path d="M 936 205 L 922 197 L 922 213 Z" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6"/>
+
+  <!-- Panel 4: emit -->
+  <rect x="940" y="90" width="220" height="230" rx="10" stroke-opacity="0.7"/>
+  <circle cx="972" cy="122" r="16" stroke-opacity="0.8"/>
+  <text x="972" y="127" font-family="JetBrains Mono, monospace" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">4</text>
+  <text x="1050" y="172" font-family="Newsreader, serif" font-style="italic" font-size="24" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">emit</text>
+  <text x="1050" y="208" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">actuate or release —</text>
+  <text x="1050" y="228" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">a firmware call, not</text>
+  <text x="1050" y="248" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">a fixed depth cut</text>
+  <text x="1050" y="268" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">into the switch</text>
+
+  <!-- Caption strip -->
+  <text x="600" y="372" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.8">every step reruns on every poll — there is no travel depth the loop treats as "home"</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

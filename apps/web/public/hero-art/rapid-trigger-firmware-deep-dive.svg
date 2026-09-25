@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — rapid-trigger firmware deep dive: an oscilloscope-style key-travel trace showing the actuation point crossing a fixed threshold, a reset event trailing the travel peak by the reset distance, and a fast terracotta-highlighted re-actuation firing after only a short reversal — the follow-the-peak logic at the algorithm's core</title>
+
+  <!-- ================================================================
+       Canvas:  1200 × 750
+       Subject: key-travel-distance-vs-time trace, oscilloscope/
+                travel-sensor readout convention (not a switch
+                cross-section — this piece is about the firmware
+                decision loop, not the physical switch).
+       Palette:
+         Stroke   oklch(0.78 0.005 90)  warm-grey, 2px (axes, refs)
+         Splash   oklch(0.60 0.11 42)   muted terracotta (the trace
+                                         + every actuation/reset event)
+         Bronze   oklch(0.80 0.135 75)  theme accent (top-right only)
+       Background: transparent (light-mode safe per house style).
+  ================================================================ -->
+
+  <!-- Terracotta wash behind the fast re-trigger cluster — the
+       reset-then-instant-reactuate sequence is the focal story -->
+  <ellipse cx="430" cy="460" rx="190" ry="120" fill="oklch(0.60 0.11 42 / 0.09)" stroke="none"/>
+
+  <!-- Baseline (time axis) with sparse tick marks -->
+  <line x1="110" y1="620" x2="1090" y2="620" stroke-opacity="0.3"/>
+  <g stroke-opacity="0.3">
+    <line x1="180" y1="615" x2="180" y2="625"/>
+    <line x1="320" y1="615" x2="320" y2="625"/>
+    <line x1="460" y1="615" x2="460" y2="625"/>
+    <line x1="600" y1="615" x2="600" y2="625"/>
+    <line x1="740" y1="615" x2="740" y2="625"/>
+    <line x1="880" y1="615" x2="880" y2="625"/>
+    <line x1="1020" y1="615" x2="1020" y2="625"/>
+  </g>
+
+  <!-- Fixed actuation-threshold reference — the depth-from-rest a
+       traditional switch would require before firing -->
+  <line x1="110" y1="230" x2="1090" y2="230" stroke-dasharray="4 5" stroke-opacity="0.35"/>
+  <line x1="110" y1="222" x2="110" y2="238" stroke-opacity="0.35"/>
+  <line x1="1090" y1="222" x2="1090" y2="238" stroke-opacity="0.35"/>
+
+  <!-- Follow-the-peak reset threshold — trails the travel peak by a
+       fixed reset distance rather than sitting at a fixed depth -->
+  <line x1="260" y1="470" x2="700" y2="470" stroke-dasharray="4 5" stroke-opacity="0.4"/>
+
+  <!-- Reset-distance bracket — the vertical gap between the peak and
+       the trailing reset threshold, made explicit -->
+  <line x1="330" y1="540" x2="330" y2="470" stroke-dasharray="3 4" stroke-opacity="0.55"/>
+  <line x1="322" y1="540" x2="338" y2="540" stroke-opacity="0.55"/>
+  <line x1="322" y1="470" x2="338" y2="470" stroke-opacity="0.55"/>
+
+  <!-- ================================================================
+       KEY-TRAVEL TRACE — press to peak, quick partial release that
+       fires reset, brief reversal, then a re-press that reactuates
+       after only a short travel from the new local peak (far short of
+       the fixed threshold above) — the firmware's core advantage.
+  ================================================================ -->
+  <polyline
+    points="110,160 180,160 202,230 300,540 402,470 460,430 511,460 680,560 820,320 1090,160"
+    stroke="oklch(0.60 0.11 42)"
+    stroke-width="3"
+    fill="none"
+  />
+
+  <!-- Sample points at the travel extremes, subtle -->
+  <circle cx="300" cy="540" r="3" fill="oklch(0.60 0.11 42)" stroke="none" opacity="0.5"/>
+  <circle cx="460" cy="430" r="3" fill="oklch(0.60 0.11 42)" stroke="none" opacity="0.5"/>
+  <circle cx="680" cy="560" r="3" fill="oklch(0.60 0.11 42)" stroke="none" opacity="0.5"/>
+
+  <!-- Actuation event — first press crosses the fixed threshold -->
+  <circle cx="202" cy="230" r="5" fill="oklch(0.60 0.11 42)" stroke="none"/>
+  <circle cx="202" cy="230" r="10" fill="none" stroke="oklch(0.60 0.11 42)" stroke-opacity="0.4" stroke-width="1.5"/>
+
+  <!-- Reset event — travel rises past the peak-trailing threshold -->
+  <circle cx="402" cy="470" r="5" fill="oklch(0.60 0.11 42)" stroke="none"/>
+  <circle cx="402" cy="470" r="10" fill="none" stroke="oklch(0.60 0.11 42)" stroke-opacity="0.4" stroke-width="1.5"/>
+
+  <!-- Focal point — the reactuation, firing after a short reversal
+       from the new local peak instead of the full fixed threshold -->
+  <circle cx="511" cy="460" r="8" fill="oklch(0.60 0.11 42)" stroke="none"/>
+  <circle cx="511" cy="460" r="16" fill="none" stroke="oklch(0.60 0.11 42)" stroke-opacity="0.35" stroke-width="1.5"/>
+
+  <!-- ================================================================
+       BRASS / BRONZE THEME DOT — upper-right ornamental anchor
+       (family convention, present in every thock hero)
+  ================================================================ -->
+  <circle cx="1132" cy="60" r="7" fill="oklch(0.80 0.135 75)" stroke="none" opacity="0.9"/>
+</svg>

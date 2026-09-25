@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-09-02T13:30:00.000Z",
+  "commit": "4939542059459b98f1d154974cbfb93c35b5c34c",
+  "kind": "inline-viz",
+  "article_slug": "rapid-trigger-firmware-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "reset-distance-is-the-whole-feature",
+  "brief_summary": "Line chart of travel depth over time for a single keystroke. A coral curve descends to a peak, marks an actuation crossing, rises partway (marked with a reset-delta bracket), re-actuates mid-stroke without returning to rest, then fully releases. A dashed grey horizontal line marks a fixed actuation point for comparison, labeled as where a contact-closure switch commits and nowhere else.",
+  "target": "apps/web/public/article-viz/rapid-trigger-firmware-deep-dive/travel-distance-curve.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans"],
+  "data_sources": [
+    "rapid-trigger-firmware-deep-dive.mdx § 'Reset distance is the whole feature' — 'a partial release that doesn't cross back past the actuation point never registers at all... On a rapid-trigger switch, the same partial lift clears the reset delta long before the stem gets anywhere near the top of the stroke, the key releases, and a re-press a fraction of a millimetre later re-actuates immediately.'",
+    "rapid-trigger-firmware-deep-dive.mdx § 'Why a contact closure can't run this loop at all' — 'The leaf snaps against the terminal at a fixed point in the stem's travel — the actuation point cut into the housing.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/rapid-trigger-firmware-deep-dive/travel-distance-curve.svg"],
+  "warnings": ["Curve geometry is schematic (illustrative stroke shape), not measured sensor data — no specific mm/gauss values are plotted, consistent with the no-fabrication discipline."]
+}
