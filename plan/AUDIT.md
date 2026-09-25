@@ -13365,7 +13365,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/split-ergo-buyers-guide.mdx
 - action: add [split-ergo-buyers-guide](/article/split-ergo-buyers-guide) to wireless-keyboard-buying-guide body, or vice versa
 
-### [HOT PURSUIT] [content-gap] [7] deep-dives pillar — 1 of ≥2 articles in last 30d
+### [x] [content-gap] [7] deep-dives pillar — 1 of ≥2 articles in last 30d — addressed in 55f2bbd0, closes #1002
 - category: content-gaps
 - impact: 6 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
