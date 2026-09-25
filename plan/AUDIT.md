@@ -13388,3 +13388,33 @@ passes accumulate signals.)
 - hypothesis: heartbeat.yml's "Alarm if march has not completed a tick in 14h" step runs on `secrets.GITHUB_TOKEN` (not the loop's PAT) and takes `gh run list --workflow march --status completed -L 1` at face value; a single transient/incomplete read against the Actions API produced a stale result with no corroborating second read.
 - action: add a debounce — require the flatline condition to hold across two consecutive heartbeat firings (~6h apart, e.g. persist last-seen-healthy state via a marker, or re-query once more with a short retry before creating the issue) before opening a "march has flatlined" issue. Close #1001 in the fix commit.
 - next: /iterate picks this up; reference #1001 in the commit body.
+
+### [ ] [data] [3.6] divinikey-gmk-cyl-just-beachy — status stale, endDate 2026-09-22 passed
+- category: data
+- filed: 2026-09-25 by group-buy-status-check.mjs
+- impact: 4 (buy shows status "announced" but endDate 2026-09-22 has passed — data hygiene gap)
+- ease: 9 (update status field to 'closed' in data/group-buys/divinikey-gmk-cyl-just-beachy.json)
+- score: 3.6 (impact × ease / 10)
+- group-buy: data/group-buys/divinikey-gmk-cyl-just-beachy.json
+- action: update status from 'announced' to 'closed' in data/group-buys/divinikey-gmk-cyl-just-beachy.json
+
+### [ ] [data] [3.6] divinikey-gmk-cyl-orange-alert — status stale, endDate 2026-09-14 passed
+- category: data
+- filed: 2026-09-25 by group-buy-status-check.mjs
+- impact: 4 (buy shows status "live" but endDate 2026-09-14 has passed — data hygiene gap)
+- ease: 9 (update status field to 'closed' in data/group-buys/divinikey-gmk-cyl-orange-alert.json)
+- score: 3.6 (impact × ease / 10)
+- group-buy: data/group-buys/divinikey-gmk-cyl-orange-alert.json
+- action: update status from 'live' to 'closed' in data/group-buys/divinikey-gmk-cyl-orange-alert.json
+
+### [ ] [newsletter] [4.0] Weekly digest — issue 011 due (21 days since issue 10)
+- category: content-gaps
+- filed: 2026-09-25 by newsletter-gap-survey.mjs
+- impact: 5 (newsletter archive going stale reduces /newsletter value and reader trust in cadence)
+- ease: 8 (content-curator weekly round-up: 5 pillar picks + tracker insight)
+- score: 4.0 (impact × ease / 10)
+- next: /ship-content → newsletter type (weekly round-up, 5 pillar picks, tracker insight)
+- last-issue: 2026-09-04 (thock-weekly-010)
+- days-since: 21
+- issue: [mirror-failed: 2026-09-25]
+> Filed 2026-09-25 by newsletter-gap-survey.mjs. 21 days since issue 10. Threshold: ≥7 calendar days.
