@@ -13375,6 +13375,7 @@ passes accumulate signals.)
 - window-start: 2026-08-25
 - score: 7
 - next: /ship-content → deep-dives pillar article
+- issue: #1002
 > Filed 2026-09-24 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 
 ### [user-issue #1001] [ci] [4.8] heartbeat.yml's flatline alarm fired on a false positive (reported 1205h gap; run history shows no gap)
