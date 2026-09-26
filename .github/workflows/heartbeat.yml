@@ -48,20 +48,38 @@ jobs:
 
       - name: Alarm if march has not completed a tick in 14h
         run: |
-          last=$(gh run list --workflow march --status completed -L 1 \
-            --json updatedAt --jq '.[0].updatedAt // empty')
-          if [ -z "$last" ]; then
+          check_hours_since_last_march() {
+            local last
+            last=$(gh run list --workflow march --status completed -L 1 \
+              --json updatedAt --jq '.[0].updatedAt // empty')
+            if [ -z "$last" ]; then
+              echo ""
+              return
+            fi
+            local now then_s
+            now=$(date -u +%s); then_s=$(date -u -d "$last" +%s)
+            echo $(( (now - then_s) / 3600 ))
+          }
+
+          hours=$(check_hours_since_last_march)
+          if [ -z "$hours" ]; then
             echo "No completed march runs yet - nothing to measure."
             exit 0
           fi
-          now=$(date -u +%s); then_s=$(date -u -d "$last" +%s)
-          hours=$(( (now - then_s) / 3600 ))
           echo "Last completed march tick: ${hours}h ago"
           if [ "$hours" -ge 14 ]; then
+            echo "Provisional flatline (${hours}h) - re-checking after a short delay to rule out a transient Actions API read before alarming."
+            sleep 60
+            hours2=$(check_hours_since_last_march)
+            if [ -z "$hours2" ] || [ "$hours2" -lt 14 ]; then
+              echo "Re-check came back healthy (${hours2:-no data}h) - discarding as a transient read, not alarming this firing."
+              exit 0
+            fi
+            echo "Re-check confirms flatline: ${hours2}h ago"
             existing=$(gh issue list --search 'in:title "Heartbeat: march has flatlined" state:open' --json number --jq 'length')
             if [ "$existing" -eq 0 ]; then
               gh issue create \
                 --title "Heartbeat: march has flatlined ($(date -u +%Y-%m-%d))" \
-                --body "No completed march tick in ${hours}h (cadence is hourly). Likely causes: workflow disabled and forgotten, cron auto-paused, or auth expiry. Check: gh workflow list; gh run list --workflow march -L 5."
+                --body "No completed march tick in ${hours2}h (cadence is hourly), confirmed across two reads ~60s apart. Likely causes: workflow disabled and forgotten, cron auto-paused, or auth expiry. Check: gh workflow list; gh run list --workflow march -L 5."
             fi
           fi
