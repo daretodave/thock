@@ -13407,7 +13407,7 @@ passes accumulate signals.)
 - group-buy: data/group-buys/divinikey-gmk-cyl-orange-alert.json
 - action: update status from 'live' to 'closed' in data/group-buys/divinikey-gmk-cyl-orange-alert.json
 
-### [ ] [newsletter] [4.0] Weekly digest — issue 011 due (21 days since issue 10)
+### [x] [newsletter] [4.0] Weekly digest — issue 011 due (21 days since issue 10) — addressed in commit `be76bd99`, closes #1004
 - category: content-gaps
 - filed: 2026-09-25 by newsletter-gap-survey.mjs
 - impact: 5 (newsletter archive going stale reduces /newsletter value and reader trust in cadence)
@@ -13418,3 +13418,16 @@ passes accumulate signals.)
 - days-since: 21
 - issue: #1004
 > Filed 2026-09-25 by newsletter-gap-survey.mjs. 21 days since issue 10. Threshold: ≥7 calendar days.
+> Shipped 2026-09-26: `apps/web/src/content/newsletters/thock-weekly-011.mdx` — 5 pillar picks (wireless-keyboard-buying-guide, mission-control-theme-build, wooting-rapid-trigger-head-start, keychron-q16-he-8k-ceramic-tmr, pcb-flex-cuts-explained) + tracker check-in from data/trends/2026-W39.json. No hero image/tags for newsletter type per skill convention.
+
+### [HOT PURSUIT] [content-gap] [7] ideas pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 7 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: ideas
+- window-count: 1
+- window-start: 2026-08-27
+- score: 7
+- next: /ship-content → ideas pillar article
+> Filed 2026-09-26 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
