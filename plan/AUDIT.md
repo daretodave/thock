@@ -13420,7 +13420,7 @@ passes accumulate signals.)
 > Filed 2026-09-25 by newsletter-gap-survey.mjs. 21 days since issue 10. Threshold: ≥7 calendar days.
 > Shipped 2026-09-26: `apps/web/src/content/newsletters/thock-weekly-011.mdx` — 5 pillar picks (wireless-keyboard-buying-guide, mission-control-theme-build, wooting-rapid-trigger-head-start, keychron-q16-he-8k-ceramic-tmr, pcb-flex-cuts-explained) + tracker check-in from data/trends/2026-W39.json. No hero image/tags for newsletter type per skill convention.
 
-### [HOT PURSUIT] [content-gap] [7] ideas pillar — 1 of ≥2 articles in last 30d
+### [x] [HOT PURSUIT] [content-gap] [7] ideas pillar — 1 of ≥2 articles in last 30d — addressed in fd309b0a, closes #1005
 - category: content-gaps
 - impact: 7 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -13432,3 +13432,4 @@ passes accumulate signals.)
 - next: /ship-content → ideas pillar article
 - issue: #1005
 > Filed 2026-09-26 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+> Shipped 2026-09-26: `apps/web/src/content/articles/bento-box-theme-build.mdx` — "Build of the week" parts-pairing piece (Bakeneko65 + GMK Bentō R2 + Tecsee Sapphire V2), publishedAt 2026-09-22 (gap-fill midpoint of the 09-19 → 09-26 7-day gap, the largest in the rolling 30-day window). Ideas pillar now carries 2 articles in the last 30 days — window satisfied. `fd309b0a`
