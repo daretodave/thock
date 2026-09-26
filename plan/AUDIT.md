@@ -13378,7 +13378,7 @@ passes accumulate signals.)
 - issue: #1002
 > Filed 2026-09-24 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 
-### [user-issue #1001] [ci] [4.8] heartbeat.yml's flatline alarm fired on a false positive (reported 1205h gap; run history shows no gap)
+### [x] [user-issue #1001] [ci] [4.8] heartbeat.yml's flatline alarm fired on a false positive (reported 1205h gap; run history shows no gap) — addressed in `1e225605`, closes #1001
 - category: ci
 - impact: 6 (a false alarm that goes unaddressed erodes trust in the heartbeat signal — the next *real* flatline may get dismissed as "probably another blip")
 - ease: 8 (single-file change to `.github/workflows/heartbeat.yml`'s alarm step)
@@ -13387,7 +13387,8 @@ passes accumulate signals.)
 - evidence: at issue-creation time (2026-09-24T21:28:19Z) `gh run list --workflow march --status completed -L 20` showed unbroken hourly-ish successful ticks back through 2026-09-21, most recently `18:07:56Z → 18:26:10Z` — a ~3h gap, not the reported 1205h (~50 days).
 - hypothesis: heartbeat.yml's "Alarm if march has not completed a tick in 14h" step runs on `secrets.GITHUB_TOKEN` (not the loop's PAT) and takes `gh run list --workflow march --status completed -L 1` at face value; a single transient/incomplete read against the Actions API produced a stale result with no corroborating second read.
 - action: add a debounce — require the flatline condition to hold across two consecutive heartbeat firings (~6h apart, e.g. persist last-seen-healthy state via a marker, or re-query once more with a short retry before creating the issue) before opening a "march has flatlined" issue. Close #1001 in the fix commit.
-- next: /iterate picks this up; reference #1001 in the commit body.
+> **Resolved (2026-09-26):** extracted the last-completed-tick lookup into a reusable shell function and added a second confirming read 60s after the first ≥14h reading — the issue only opens if both reads agree the gap is real. No new permissions or persisted state needed; the retry lives entirely within one heartbeat job run. `pnpm verify` full gate green: typecheck, lint, 862/862 unit tests, 230/230 script tests, data:validate (88 records), build, size, 1271/1271 e2e.
+> Picked as the top signal this tick: no unlabeled GitHub issues beyond this already-queued one (`#1001` `triage:loop-queued`); not Monday-relevant (W39 snapshot already existed); no pending phases/data work; content-gap queue empty (`content-gap-survey.mjs` — "all pillars comfortable") and all 6 other mechanical surveys re-ran clean, no rows filed. March's own expand Step 3c gate not met (9 commits/~23h since pass 432, under the 20-commit/48h threshold). This row was the highest-scoring Pending AUDIT row (4.8, above the two `[3.6]` stale-group-buy-status rows and the sub-3.0 standing items).
 
 ### [ ] [data] [3.6] divinikey-gmk-cyl-just-beachy — status stale, endDate 2026-09-22 passed
 - category: data
