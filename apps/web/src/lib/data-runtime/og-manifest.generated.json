@@ -1709,6 +1709,13 @@
   ],
   "newsletters": [
     {
+      "slug": "thock-weekly-011",
+      "title": "thock weekly — issue 11",
+      "lede": "A wireless buying guide sorted by the radio inside the board, a Class80 build where three parts solve each other's problems, Wooting's tracker climb outpacing its own firmware, Keychron's first TMR switch launch, and what a flex cut actually buys a board with no gasket — plus a tracker check-in on Keychron's ceiling and Wooting's eight-week run.",
+      "issue": 11,
+      "readTime": 4
+    },
+    {
       "slug": "thock-weekly-010",
       "title": "thock weekly — issue 10",
       "lede": "A layout compatibility guide before the keycap set arrives, split-build parts pairing as two decisions instead of one, Cherry's tracker slide against Keychron's delivered Kickstarter, GMK CYL Orange Alert's group buy at Divinikey, and what a silent switch's damping actually silences — plus a tracker check-in on Keychron's all-time high and Cherry's renewed slide.",
@@ -8337,5 +8344,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-09-25T11:16:43.803Z"
+  "generatedAt": "2026-09-26T03:26:06.673Z"
 }

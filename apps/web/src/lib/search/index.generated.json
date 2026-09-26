@@ -140176,6 +140176,13 @@
       "href": "/vendor/wuque-studio"
     },
     {
+      "id": "thock-weekly-011",
+      "slug": "thock-weekly-011",
+      "kind": "newsletter",
+      "name": "thock weekly — issue 11",
+      "href": "/newsletter/thock-weekly-011"
+    },
+    {
       "id": "thock-weekly-010",
       "slug": "thock-weekly-010",
       "kind": "newsletter",
@@ -140519,6 +140526,6 @@
       "href": "/trends/tracker"
     }
   ],
-  "generatedAt": "2026-09-25T11:16:44.729Z",
+  "generatedAt": "2026-09-26T03:26:07.357Z",
   "count": 101
 }
