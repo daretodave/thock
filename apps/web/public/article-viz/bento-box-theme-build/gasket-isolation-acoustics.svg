@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Side-by-side cross-section comparing a rigid tray-mount case with the plate bolted directly to the case wall against the Bakeneko65's gasket-mount case with an o-ring gasket strip separating the plate from the case wall. The tray-mount side shows a sound-wave glyph and a caution mark labeled resonance transmits to case. The gasket-mount side shows the same sound-wave glyph absorbed at the o-ring boundary, labeled o-ring gasket breaks the resonance path.</title>
+
+  <!-- Column headers -->
+  <text x="60" y="50" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6" letter-spacing="0.08em">MOUNTING STYLE</text>
+  <text x="660" y="50" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6" letter-spacing="0.08em">MOUNTING STYLE</text>
+
+  <!-- ══ LEFT: RIGID TRAY-MOUNT ══════════════════════════════════ -->
+  <text x="60" y="100" font-family="Newsreader, serif" font-style="italic" font-size="20" fill="oklch(0.78 0.005 90)" stroke="none">Rigid tray-mount case</text>
+  <text x="60" y="123" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">Plate bolted directly to case wall</text>
+
+  <!-- case shell -->
+  <path d="M 90 470 L 90 200 L 470 200 L 470 470" stroke-opacity="0.85"/>
+  <!-- plate, bolted flush to the wall -->
+  <line x1="90" y1="290" x2="470" y2="290" stroke-width="4" stroke-opacity="0.9"/>
+  <line x1="120" y1="290" x2="120" y2="200" stroke-dasharray="3 5" stroke-opacity="0.5"/>
+  <line x1="440" y1="290" x2="440" y2="200" stroke-dasharray="3 5" stroke-opacity="0.5"/>
+  <text x="150" y="280" font-family="JetBrains Mono, monospace" font-size="10" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">PLATE — bolted flush</text>
+
+  <!-- switch housing on plate -->
+  <rect x="245" y="240" width="70" height="50" rx="6" stroke-opacity="0.85"/>
+  <text x="238" y="230" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">PC housing</text>
+
+  <!-- resonance path straight into case wall -->
+  <path d="M 315 265 L 470 265" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.9" stroke-dasharray="5 5"/>
+  <g transform="translate(490 265)" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.9">
+    <path d="M 0 -8 L 0 8" stroke-width="3"/>
+    <path d="M 14 -18 A 22 22 0 0 1 14 18"/>
+    <path d="M 30 -28 A 36 36 0 0 1 30 28"/>
+  </g>
+  <path d="M 320 320 q 10 -14 20 0 q 10 14 20 0" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.9" stroke-width="2.5"/>
+  <text x="90" y="400" font-family="IBM Plex Sans, sans-serif" font-size="12.5" fill="oklch(0.62 0.13 25)" stroke="none" opacity="0.95">resonance transmits</text>
+  <text x="90" y="418" font-family="IBM Plex Sans, sans-serif" font-size="12.5" fill="oklch(0.62 0.13 25)" stroke="none" opacity="0.95">straight to case</text>
+
+  <!-- ══ RIGHT: BAKENEKO65 GASKET MOUNT ══════════════════════════ -->
+  <text x="660" y="100" font-family="Newsreader, serif" font-style="italic" font-size="20" fill="oklch(0.66 0.12 350)" stroke="none">Bakeneko65 (gasket mount)</text>
+  <text x="660" y="123" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">O-ring gasket isolates plate from case</text>
+
+  <!-- case shell -->
+  <path d="M 690 470 L 690 200 L 1070 200 L 1070 470" stroke-opacity="0.85"/>
+  <!-- plate, floating, with o-ring gasket gap -->
+  <line x1="750" y1="290" x2="1010" y2="290" stroke-width="4" stroke-opacity="0.9"/>
+  <rect x="715" y="278" width="24" height="24" rx="6" fill="oklch(0.66 0.12 350)" fill-opacity="0.18" stroke="oklch(0.66 0.12 350)" stroke-opacity="0.9"/>
+  <rect x="1021" y="278" width="24" height="24" rx="6" fill="oklch(0.66 0.12 350)" fill-opacity="0.18" stroke="oklch(0.66 0.12 350)" stroke-opacity="0.9"/>
+  <text x="700" y="330" font-family="IBM Plex Sans, sans-serif" font-size="10.5" fill="oklch(0.66 0.12 350)" stroke="none" opacity="0.95">o-ring gasket</text>
+  <text x="750" y="280" font-family="JetBrains Mono, monospace" font-size="10" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">PLATE — floating</text>
+
+  <!-- switch housing on plate -->
+  <rect x="845" y="240" width="70" height="50" rx="6" stroke-opacity="0.85"/>
+  <text x="838" y="230" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">PC housing</text>
+
+  <!-- resonance path, stopped at the gasket boundary -->
+  <path d="M 915 265 L 1010 265" stroke="oklch(0.66 0.12 350)" stroke-opacity="0.9" stroke-dasharray="5 5"/>
+  <g transform="translate(940 265)" stroke="oklch(0.66 0.12 350)" stroke-opacity="0.9">
+    <path d="M 0 -8 L 0 8" stroke-width="3"/>
+    <path d="M 14 -18 A 22 22 0 0 1 14 18"/>
+  </g>
+  <path d="M 1010 250 l 10 20 m 0 -20 l -10 20" stroke="oklch(0.66 0.12 350)" stroke-opacity="0.95" stroke-width="2.5"/>
+  <text x="690" y="400" font-family="IBM Plex Sans, sans-serif" font-size="12.5" fill="oklch(0.66 0.12 350)" stroke="none" opacity="0.95">o-ring gasket breaks</text>
+  <text x="690" y="418" font-family="IBM Plex Sans, sans-serif" font-size="12.5" fill="oklch(0.66 0.12 350)" stroke="none" opacity="0.95">the resonance path</text>
+
+  <!-- Brass-bronze theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

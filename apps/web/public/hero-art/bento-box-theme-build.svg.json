@@ -1,0 +1,42 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-09-26T14:10:15.000Z",
+  "commit": "1a54e4cea426679c6aed0a168d7c116ab2a74599",
+  "kind": "hero-art",
+  "article_slug": "bento-box-theme-build",
+  "article_pillar": "Ideas & Builds",
+  "source": "plan/bearings.md § Article hero art — colorful keyboard SVGs (build / mod piece → keyboard outline with a mod callout); pattern mirrored from apps/web/public/hero-art/mission-control-theme-build.svg per calling-agent instruction",
+  "template": null,
+  "size": [1200, 750],
+  "title": null,
+  "subtitle": null,
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": ["JetBrains Mono"],
+  "subject": "Build-of-the-week parts-pairing composition following the mission-control-theme-build.svg convention, reworked for three real catalog parts. Left: a compact 65% aluminum case (700x290 shrunk to 672x290) with a thick inset bezel, a dashed gasket-channel seam between outer shell and bezel (the 'o-ring' cue), two dashed gasket-mount tabs with a tiny o-ring cross-section circle inside each, standing in for the Bakeneko65's cast-aluminum o-ring gasket mount. Inside: a simplified 13x4 main key field, a variable-width bottom row, and — instead of a separate TKL nav cluster plus a gapped arrow block — a compact 3-key right nav column (del/pgup/pgdn) sitting directly against an inverted-T arrow cluster with no gap, signaling the no-numpad, no-F-row, tightly-packed 65% layout. A dashed terracotta leader with a hollow origin dot and an arrowhead runs from the case's upper-right to the switch callout. Center: a row of six short Cherry-profile keycap side silhouettes (shallow trapezoid body, concave-dish top via a quadratic top curve, shorter and less steeply sculpted than an SA silhouette) resting on a shared desk line, alternating cream-wash and plain-outline caps to hint at the doubleshot ABS base colors without over-committing hue. The middle cap is the hero accent: terracotta wash fill and outline, with a small rounded-rect 'bento box' compartment grid drawn on its top surface — an outer doubleshot ring, one vertical and one horizontal divider splitting it into four cells, three of which are filled (terracotta, desaturated navy, soft pink) referencing the GMK Bento R2 colorway and its doubleshot legend construction, with the fourth cell left as plain outline. A dashed terracotta connector with a hollow origin dot and a filled terminus ties the case's bottom row to the hero cap. Right: an assembled (non-exploded) switch cross-section — top housing, cruciform stem aperture, stem descending into a bump shaped as a smooth outward bulge positioned near the TOP of the stem's travel (matching the Tecsee Sapphire V2's 'bump sits at the top of the stroke' spec) with a terracotta focal dot and a 'bump' label on a dashed travel-reference ruler along the right margin, a three-ellipse spring, and a bottom housing with PCB pins and strip. Both housings carry scattered sparkle flecks (small dots, mostly warm-grey at varied low opacity plus two terracotta glints per housing) as the 'sparkly polycarbonate' texture cue called out in the brief. Captions 'bakeneko65', 'gmk bento r2', and 'tecsee sapphire v2' in JetBrains Mono at family-convention positions. Bronze theme dot at the upper-right margin (1148,70) with a small terracotta satellite dot for family cohesion.",
+  "composition": "build / mod motif per bearings.md Article hero art directive: keyboard outline + callout style, extended to three paired parts (case, keycap set, switch) tied together with dashed terracotta leaders/connectors, mirroring mission-control-theme-build.svg's exact structural pattern (case top-left, callout leader to switch top-right, keycap row bottom-center, bronze dot top-right) per this task's explicit brief to reuse that composition.",
+  "splash_color": {
+    "name": "muted terracotta",
+    "oklch": "oklch(0.63 0.12 38)",
+    "rotation_note": "Chosen from the brief's allowed set {dusty rose, muted terracotta, ochre}. mission-control-theme-build.svg (the piece immediately preceding this one in the hero-art directory) used dusty rose (hue 14) and split-ergo-parts-pairing.svg used ochre (hue 80), so terracotta keeps this piece visually distinct from its nearest siblings. Hue/chroma/lightness (0.63 0.12 38) picked to sit clear of the several existing terracotta values already in rotation across the corpus (0.60 0.11 42, 0.62 0.10 45, 0.64 0.12 46, 0.66 0.11 35, 0.66 0.13 45)."
+  },
+  "secondary_colors": [
+    { "name": "desaturated navy", "oklch": "oklch(0.34 0.05 255)", "use": "one cell of the hero cap's bento compartment grid, referencing GMK Bento R2's dark-blue colorway element. Deliberately low-chroma and small so it never competes with the terracotta splash for dominance, per brief instruction." },
+    { "name": "soft pink", "oklch": "oklch(0.75 0.09 350)", "use": "one cell of the hero cap's bento compartment grid, referencing GMK Bento R2's pink accent. Same non-dominant, secondary-only treatment as the navy cell." }
+  ],
+  "accent_color": {
+    "name": "warm-bronze (theme accent)",
+    "oklch": "oklch(0.80 0.135 75)"
+  },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "callout_color": "oklch(0.58 0.006 90)",
+  "parts_referenced": {
+    "board": "Bakeneko65 (CannonKeys, cast-aluminum 65% gasket-mount, hotswap, evergreen first-custom board)",
+    "keycap_set": "GMK Bento R2 (Cherry-profile doubleshot ABS, white / dark-blue / pink bento-box colorway, designer biip)",
+    "switch": "Tecsee Sapphire V2 (mid-tactile, sparkly PC-on-PC housings, UHMWPE stem, bump at top of stroke, 3.8mm travel, 55g actuation / 63.5g bottom-out)"
+  },
+  "outputs": [
+    "apps/web/public/hero-art/bento-box-theme-build.svg"
+  ],
+  "warnings": []
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>A do and don't map for the bento box build. The dusty-pink do column lists first custom build, moderate desk sound, and patient secondhand hunting. The warm-red don't column lists lightest possible sound, SA-scale visual drama, and wants it in stock today.</title>
+
+  <!-- divider -->
+  <line x1="600" y1="70" x2="600" y2="380" stroke-opacity="0.25" stroke-dasharray="4 6"/>
+
+  <!-- DO column -->
+  <circle cx="90" cy="80" r="16" stroke="oklch(0.66 0.12 350)" stroke-opacity="0.9" fill="oklch(0.66 0.12 350)" fill-opacity="0.12"/>
+  <path d="M 82 80 l 6 7 l 12 -14" stroke="oklch(0.66 0.12 350)" stroke-opacity="0.95" stroke-width="2.5"/>
+  <text x="120" y="88" font-family="Newsreader, serif" font-style="italic" font-size="22" fill="oklch(0.66 0.12 350)" stroke="none">Good fit for</text>
+
+  <g font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.9">
+    <text x="90" y="150">first custom build</text>
+    <text x="90" y="200">moderate desk sound</text>
+    <text x="90" y="250">patient secondhand hunting</text>
+  </g>
+  <g fill="oklch(0.66 0.12 350)" stroke="none" opacity="0.7">
+    <circle cx="70" cy="145" r="4"/>
+    <circle cx="70" cy="195" r="4"/>
+    <circle cx="70" cy="245" r="4"/>
+  </g>
+
+  <!-- DON'T column -->
+  <circle cx="690" cy="80" r="16" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.9" fill="oklch(0.62 0.13 25)" fill-opacity="0.1"/>
+  <path d="M 682 72 l 16 16 m 0 -16 l -16 16" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.95" stroke-width="2.5"/>
+  <text x="720" y="88" font-family="Newsreader, serif" font-style="italic" font-size="22" fill="oklch(0.62 0.13 25)" stroke="none">Skip it for</text>
+
+  <g font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.9">
+    <text x="690" y="150">lightest possible sound</text>
+    <text x="690" y="200">SA-scale visual drama</text>
+    <text x="690" y="250">wants it in stock today</text>
+  </g>
+  <g fill="oklch(0.62 0.13 25)" stroke="none" opacity="0.7">
+    <circle cx="670" cy="145" r="4"/>
+    <circle cx="670" cy="195" r="4"/>
+    <circle cx="670" cy="245" r="4"/>
+  </g>
+
+  <!-- Brass-bronze theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

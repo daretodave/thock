@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-09-26T00:00:00.000Z",
+  "commit": "1a54e4cea426679c6aed0a168d7c116ab2a74599",
+  "kind": "inline-viz",
+  "article_slug": "bento-box-theme-build",
+  "article_pillar": "ideas",
+  "section_anchor": "cherry-profile-and-a-top-of-stroke-bump-are-both-forgiving-choices-for-different-reasons",
+  "brief_summary": "Annotated cross-section of the Tecsee Sapphire V2 switch showing the sparkled polycarbonate-on-polycarbonate housing, the UHMWPE stem, the tactile bump positioned near the top of the 3.8mm travel labeled with its 55g actuation force, and a rounded, softened bottom-out region labeled 63.5g, with a small sound-wave glyph reading 'muted, creamy.'",
+  "target": "apps/web/public/article-viz/bento-box-theme-build/sapphire-bump-profile.svg",
+  "splash_color": { "name": "dusty-pink", "oklch": "oklch(0.66 0.12 350)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "data/switches/tecsee-sapphire-v2.json — 'Mid-tactile with a UHMWPE stem and sparkly polycarbonate housings; the bump sits at the top of the stroke and rounds off into a softened bottom-out. Sound is muted and creamy rather than poppy.'",
+    "data/switches/tecsee-sapphire-v2.json — springGrams actuation 55, bottomOut 63.5, travelMm 3.8",
+    "apps/web/src/content/articles/bento-box-theme-build.mdx § 'Cherry profile and a top-of-stroke bump are both forgiving choices, for different reasons' — 'a mid-tactile with the bump positioned near the top of its 3.8mm travel, rounding off into a softened bottom-out rather than a sharp wall'"
+  ],
+  "outputs": ["apps/web/public/article-viz/bento-box-theme-build/sapphire-bump-profile.svg"],
+  "warnings": []
+}

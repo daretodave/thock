@@ -1,0 +1,26 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-09-26T00:00:00.000Z",
+  "commit": "1a54e4cea426679c6aed0a168d7c116ab2a74599",
+  "kind": "inline-viz",
+  "article_slug": "bento-box-theme-build",
+  "article_pillar": "ideas",
+  "section_anchor": "gasket-isolation-is-why-a-bright-switch-housing-doesnt-sound-cheap-here",
+  "brief_summary": "Side-by-side cross-section comparing a rigid tray-mount case, where the plate is bolted flush to the case wall and switch resonance transmits straight into the shell, against the Bakeneko65's o-ring gasket-mount case, where the plate floats inside a gasket boundary that breaks the resonance path before it reaches the aluminum shell.",
+  "target": "apps/web/public/article-viz/bento-box-theme-build/gasket-isolation-acoustics.svg",
+  "splash_color": { "name": "dusty-pink", "oklch": "oklch(0.66 0.12 350)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "apps/web/src/content/articles/bento-box-theme-build.mdx § 'Gasket isolation is why a bright switch housing doesn't sound cheap here' — 'PC housings have a known acoustic tendency: they read brighter and more resonant than nylon or POM housings on a rigid mounting platform'",
+    "apps/web/src/content/articles/bento-box-theme-build.mdx § 'Gasket isolation is why a bright switch housing doesn't sound cheap here' — 'An o-ring gasket mount decouples the plate-and-PCB assembly from the case wall instead of screwing it down directly, which means high-frequency resonance generated at the switch has to cross a compliant boundary before it reaches the aluminum shell'",
+    "data/boards/bakeneko65.json — 'Cast-aluminum 65% with an o-ring gasket mount, FR4 plate, and a hotswap QMK/VIA PCB'"
+  ],
+  "outputs": ["apps/web/public/article-viz/bento-box-theme-build/gasket-isolation-acoustics.svg"],
+  "warnings": [
+    "The rigid tray-mount case shown for contrast is a generic schematic, not a named competing board — no specific tray-mount board is cited or implicated in the article body."
+  ]
+}

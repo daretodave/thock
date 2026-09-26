@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Annotated cross-section of a Tecsee Sapphire V2 switch showing the sparkled polycarbonate housing, the UHMWPE stem, a tactile bump positioned near the top of the 3.8 millimeter travel labeled 55 grams actuation, and a rounded bottom-out region labeled 63.5 grams and softened bottom-out, with a small sound-wave glyph labeled muted, creamy.</title>
+
+  <text x="60" y="50" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6" letter-spacing="0.08em">TECSEE SAPPHIRE V2 — CROSS-SECTION</text>
+
+  <!-- outer switch housing (PC-on-PC) -->
+  <rect x="120" y="100" width="340" height="320" rx="14" stroke-opacity="0.85"/>
+  <text x="140" y="130" font-family="IBM Plex Sans, sans-serif" font-size="11.5" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">PC-on-PC housing</text>
+  <!-- sparkle marks on the housing to indicate the sparkled polycarbonate finish -->
+  <path d="M 160 180 l 6 6 m -6 0 l 6 -6" stroke-opacity="0.4"/>
+  <path d="M 400 350 l 6 6 m -6 0 l 6 -6" stroke-opacity="0.4"/>
+  <path d="M 150 380 l 5 5 m -5 0 l 5 -5" stroke-opacity="0.4"/>
+
+  <!-- travel column: 3.8mm total, top to bottom -->
+  <line x1="270" y1="140" x2="270" y2="390" stroke-dasharray="3 5" stroke-opacity="0.4"/>
+  <text x="280" y="140" font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">0mm</text>
+  <text x="280" y="394" font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">3.8mm</text>
+
+  <!-- stem, UHMWPE -->
+  <line x1="230" y1="150" x2="230" y2="360" stroke-width="6" stroke-opacity="0.9"/>
+  <text x="176" y="145" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">UHMWPE stem</text>
+
+  <!-- bump near the top of the stroke -->
+  <path d="M 230 175 q 26 6 26 26 q 0 20 -26 26" stroke="oklch(0.66 0.12 350)" stroke-opacity="0.95" stroke-width="3"/>
+  <circle cx="256" cy="201" r="5" fill="oklch(0.66 0.12 350)" stroke="none"/>
+  <text x="320" y="185" font-family="Newsreader, serif" font-style="italic" font-size="19" fill="oklch(0.66 0.12 350)" stroke="none">bump near top</text>
+  <text x="320" y="207" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">of the 3.8mm travel</text>
+  <text x="320" y="227" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.66 0.12 350)" stroke="none" opacity="0.9">55g actuation</text>
+
+  <!-- rounded bottom-out -->
+  <path d="M 230 330 q 0 24 26 30" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.7" stroke-width="3"/>
+  <line x1="150" y1="370" x2="460" y2="370" stroke-opacity="0.4" stroke-dasharray="4 6"/>
+  <text x="320" y="330" font-family="Newsreader, serif" font-style="italic" font-size="17" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">softened bottom-out</text>
+  <text x="320" y="352" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">63.5g</text>
+
+  <!-- sound glyph -->
+  <g transform="translate(560 220)" stroke="oklch(0.66 0.12 350)" stroke-opacity="0.85">
+    <path d="M 0 -8 L 0 8" stroke-width="3"/>
+    <path d="M 16 -16 A 22 22 0 0 1 16 16"/>
+  </g>
+  <text x="540" y="270" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">muted, creamy</text>
+
+  <!-- Brass-bronze theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

@@ -1,0 +1,22 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-09-26T00:00:00.000Z",
+  "commit": "1a54e4cea426679c6aed0a168d7c116ab2a74599",
+  "kind": "inline-viz",
+  "article_slug": "bento-box-theme-build",
+  "article_pillar": "ideas",
+  "section_anchor": "who-should-skip-this-build",
+  "brief_summary": "A two-column do/don't map. The dusty-pink 'Good fit for' column lists first custom build, moderate desk sound, and patient secondhand hunting. The warm-red 'Skip it for' column lists lightest possible sound, SA-scale visual drama, and wants it in stock today, directly mirroring the article's 'Who should skip this build' section.",
+  "target": "apps/web/public/article-viz/bento-box-theme-build/who-its-for.svg",
+  "splash_color": { "name": "dusty-pink", "oklch": "oklch(0.66 0.12 350)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "apps/web/src/content/articles/bento-box-theme-build.mdx § 'Who should skip this build' — 'This isn't a build for someone chasing the lightest possible sound signature... It's also not for someone who wants SA-scale visual drama... And it's not for someone who wants a keycap set they can reorder without friction'"
+  ],
+  "outputs": ["apps/web/public/article-viz/bento-box-theme-build/who-its-for.svg"],
+  "warnings": []
+}
