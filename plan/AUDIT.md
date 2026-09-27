@@ -13344,7 +13344,7 @@ passes accumulate signals.)
 > Filed 2026-09-24 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 > **Resolved (2026-09-24):** shipped "Wireless keyboard buying guide: Bluetooth, 2.4GHz, and the latency that actually matters" at `/article/wireless-keyboard-buying-guide`, publishedAt 2026-09-11 (gap-fill midpoint of the 09-07 → 09-15 8-day gap, the largest in the rolling 30-day window). Guides pillar now carries 2 articles in the last 30 days — window satisfied. `a03d26b0`
 
-### [ ] [cross-links] [4.5] wireless-keyboard-buying-guide ↔ keyboard-firmware-compared — no prose cross-link (same pillar, ≥2 shared tags: beginner, firmware)
+### [x] [cross-links] [4.5] wireless-keyboard-buying-guide ↔ keyboard-firmware-compared — addressed in a4873e46
 - category: cross-links
 - filed: 2026-09-24 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -13355,7 +13355,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/keyboard-firmware-compared.mdx
 - action: add [keyboard-firmware-compared](/article/keyboard-firmware-compared) to wireless-keyboard-buying-guide body, or vice versa
 
-### [ ] [cross-links] [4.5] wireless-keyboard-buying-guide ↔ split-ergo-buyers-guide — no prose cross-link (same pillar, ≥2 shared tags: wireless, beginner)
+### [x] [cross-links] [4.5] wireless-keyboard-buying-guide ↔ split-ergo-buyers-guide — addressed in a4873e46
 - category: cross-links
 - filed: 2026-09-24 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -13365,6 +13365,7 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/wireless-keyboard-buying-guide.mdx
 - article-b: apps/web/src/content/articles/split-ergo-buyers-guide.mdx
 - action: add [split-ergo-buyers-guide](/article/split-ergo-buyers-guide) to wireless-keyboard-buying-guide body, or vice versa
+> Picked as the top signal this tick (cloud `/march` → `/iterate`): no unlabeled GitHub issues; not Monday-relevant (`data/trends/2026-W39.json` already exists); no pending phases/data work; content-gap queue empty (`content-gap-survey.mjs` — "all pillars comfortable") and the other 6 mechanical surveys re-ran clean, no new rows filed. March's own expand Step 3c gate not met (13 commits/~44h since pass 432, under the 20-commit/48h threshold). These 2 rows were the highest-scoring Pending AUDIT rows (4.5, tied with the wooting-rapid-trigger-head-start/hall-effect-rapid-trigger-plateau pair, above the two `[3.6]` stale-group-buy-status rows and the sub-3.0 standing items); `wireless-keyboard-buying-guide` was the hub article (2 pending pairs vs. 1 each for the other pair's slugs), confirmed via `article-crosslink-survey.mjs --json --slug wireless-keyboard-buying-guide`.
 
 ### [x] [content-gap] [7] deep-dives pillar — 1 of ≥2 articles in last 30d — addressed in 55f2bbd0, closes #1002
 - category: content-gaps
