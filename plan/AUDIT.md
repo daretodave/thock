@@ -13436,3 +13436,14 @@ passes accumulate signals.)
 - issue: #1005
 > Filed 2026-09-26 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 > Shipped 2026-09-26: `apps/web/src/content/articles/bento-box-theme-build.mdx` — "Build of the week" parts-pairing piece (Bakeneko65 + GMK Bentō R2 + Tecsee Sapphire V2), publishedAt 2026-09-22 (gap-fill midpoint of the 09-19 → 09-26 7-day gap, the largest in the rolling 30-day window). Ideas pillar now carries 2 articles in the last 30 days — window satisfied. `fd309b0a`
+
+### [x] [process] [2.7] issue #1006 (pcb-flex-cuts-explained cross-links hub) shipped in `8829de53` but the commit omitted the mandatory `Closes #1006` trailer — addressed, closed via /digest 2026-09-27
+- category: process
+- filed: 2026-09-27 by digest pulse review
+- impact: 3 (a shipped-but-open issue misrepresents queue state — the next `/triage` or inbox-zero check sees a stale open item for already-completed work)
+- ease: 9 (single `gh issue close` with a comment pointing at the shipping commit)
+- score: 2.7 (impact × ease / 10)
+- issue: #1006
+- evidence: `#1006` ("cross-links: pcb-flex-cuts-explained hub — 5 pairs unlinked") was opened 2026-09-26T21:52:35Z by that tick's audit-issue flow. The very next `march` tick (00:10→00:25Z) shipped the fix in `8829de53`/`d1ac50a0` ("content: pcb-flex-cuts-explained cross-links — 5 pairs drained") — the commit body has no `- Closes #N` trailer, which `skills/iterate.md` (line 412) documents as **mandatory** whenever a shipped fix addresses an issue-backed finding. `gh issue view 1006` confirms `state: OPEN`, `closedAt: null` as of this digest.
+- action: `gh issue close 1006 --comment "Shipped in 8829de53 — 5 cross-link pairs drained. Closing retroactively; the drain commit omitted the mandatory Closes # trailer."` A future `/iterate` tick (or this digest's own gh-scoped step) can run this directly since it's metadata-only, not a code change.
+> Resolved 2026-09-27 (this digest tick): closed via `gh issue close 1006` with a comment pointing at `8829de53`. Metadata-only action, no code change, no `pnpm verify` needed.
