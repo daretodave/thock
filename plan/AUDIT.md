@@ -13250,7 +13250,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/stabilizers-explained.mdx
 - action: add [stabilizers-explained](/article/stabilizers-explained) to keyboard-cleaning-maintenance-guide body, or vice versa
 
-### [ ] [cross-links] [4.5] pcb-flex-cuts-explained ↔ 60-percent-layout-history — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, modding)
+### [x] [cross-links] [4.5] pcb-flex-cuts-explained ↔ 60-percent-layout-history — addressed in 8829de53
 - category: cross-links
 - filed: 2026-09-23 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -13259,9 +13259,9 @@ passes accumulate signals.)
 - shared-tags: deep-dive, modding
 - article-a: apps/web/src/content/articles/pcb-flex-cuts-explained.mdx
 - article-b: apps/web/src/content/articles/60-percent-layout-history.mdx
-- action: add [60-percent-layout-history](/article/60-percent-layout-history) to pcb-flex-cuts-explained body, or vice versa
+- action: linked via the shared case-tooling-vs-PCB-routing-cost economics argument in pcb-flex-cuts-explained's "economics" paragraph.
 
-### [ ] [cross-links] [4.5] pcb-flex-cuts-explained ↔ drop-holy-panda-x-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, modding)
+### [x] [cross-links] [4.5] pcb-flex-cuts-explained ↔ drop-holy-panda-x-deep-dive — addressed in 8829de53
 - category: cross-links
 - filed: 2026-09-23 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -13270,9 +13270,9 @@ passes accumulate signals.)
 - shared-tags: deep-dive, modding
 - article-a: apps/web/src/content/articles/pcb-flex-cuts-explained.mdx
 - article-b: apps/web/src/content/articles/drop-holy-panda-x-deep-dive.mdx
-- action: add [drop-holy-panda-x-deep-dive](/article/drop-holy-panda-x-deep-dive) to pcb-flex-cuts-explained body, or vice versa
+- action: linked via the hotswap-socket-clearance callout; added drop-holy-panda-x to pcb-flex-cuts-explained's mentionedParts (article-parts-check gate).
 
-### [ ] [cross-links] [4.5] pcb-flex-cuts-explained ↔ keyboard-acoustics-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, modding)
+### [x] [cross-links] [4.5] pcb-flex-cuts-explained ↔ keyboard-acoustics-deep-dive — addressed in 8829de53
 - category: cross-links
 - filed: 2026-09-23 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -13281,9 +13281,9 @@ passes accumulate signals.)
 - shared-tags: deep-dive, modding
 - article-a: apps/web/src/content/articles/pcb-flex-cuts-explained.mdx
 - article-b: apps/web/src/content/articles/keyboard-acoustics-deep-dive.mdx
-- action: add [keyboard-acoustics-deep-dive](/article/keyboard-acoustics-deep-dive) to pcb-flex-cuts-explained body, or vice versa
+- action: linked from pcb-flex-cuts-explained's closing "tuning knob" section — flex affects feel there, sound here.
 
-### [ ] [cross-links] [4.5] pcb-flex-cuts-explained ↔ plate-materials-explained — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, modding)
+### [x] [cross-links] [4.5] pcb-flex-cuts-explained ↔ plate-materials-explained — addressed in 8829de53
 - category: cross-links
 - filed: 2026-09-23 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -13292,9 +13292,9 @@ passes accumulate signals.)
 - shared-tags: deep-dive, modding
 - article-a: apps/web/src/content/articles/pcb-flex-cuts-explained.mdx
 - article-b: apps/web/src/content/articles/plate-materials-explained.mdx
-- action: add [plate-materials-explained](/article/plate-materials-explained) to pcb-flex-cuts-explained body, or vice versa
+- action: linked via the FR4-as-PCB vs FR4-as-plate distinction in pcb-flex-cuts-explained's opening section.
 
-### [ ] [cross-links] [4.5] pcb-flex-cuts-explained ↔ why-stabilizers-rattle-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, modding)
+### [x] [cross-links] [4.5] pcb-flex-cuts-explained ↔ why-stabilizers-rattle-deep-dive — addressed in 8829de53
 - category: cross-links
 - filed: 2026-09-23 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -13303,7 +13303,7 @@ passes accumulate signals.)
 - shared-tags: deep-dive, modding
 - article-a: apps/web/src/content/articles/pcb-flex-cuts-explained.mdx
 - article-b: apps/web/src/content/articles/why-stabilizers-rattle-deep-dive.mdx
-- action: add [why-stabilizers-rattle-deep-dive](/article/why-stabilizers-rattle-deep-dive) to pcb-flex-cuts-explained body, or vice versa
+- action: linked via the PCB-rigidity dependency stabilizer housings share with hotswap sockets, appended to the same hotswap-socket callout.
 
 ### [x] [HOT PURSUIT] [content-gap] [7] trends pillar — 1 of ≥2 articles in last 30d — addressed in a03bbee3, closes #999
 - category: content-gaps
