@@ -7,6 +7,7 @@ pillar: guides
 guideSection: null
 tags: [wireless, beginner, firmware, polling-rate]
 publishedAt: '2026-09-11T13:00:00.000Z'
+updatedAt: '2026-09-27T00:00:00.000Z'
 heroImage: /hero-art/wireless-keyboard-buying-guide.svg
 heroImageAlt: "A keyboard silhouette drawn in warm-grey stroke radiating three signal paths toward a laptop: a solid line for a wired USB-C cable, a short dashed arc to a small USB dongle, and a longer dashed arc reaching directly to the laptop for Bluetooth, with an amber splash marking the dongle as the connection type most likely to go missing."
 featured: false
@@ -21,6 +22,8 @@ A keyboard listing that says "wireless" is describing a connector, not a feature
 **Wired** is the baseline everything else gets measured against: a USB cable, a matrix scan, and a report sent to the host every polling interval with nothing in between to add delay. **2.4GHz** uses a small USB receiver — the dongle — and a proprietary radio link that, because it skips the operating system's Bluetooth stack entirely, can behave almost identically to wired. **Bluetooth** talks to the host's built-in radio directly, no dongle required, at the cost of a protocol that was designed for occasional low-power devices before it was ever adapted for something that fires a report on every keystroke.
 
 Most boards worth buying above entry level now ship two or three of these modes in one chassis — a switch or a key combo moves between them — so the real decision isn't which board to buy but which mode to actually leave it in day to day.
+
+Remapping any of these modes afterward is a firmware question, not a connection one — see [the firmware guide](/article/keyboard-firmware-compared) for how QMK, VIA, and VIAL handle a wired or 2.4GHz board, and why a Bluetooth board usually means ZMK instead.
 
 ## The latency number that actually matters
 
@@ -80,6 +83,8 @@ The dongle is also small enough to travel badly. It rides loose in a laptop bag,
 />
 
 **Competitive gaming or rhythm games**, where frame-perfect timing is part of the skill being tested, want wired first and 2.4GHz second — Bluetooth's connection-interval overhead is the one place on this list where the latency gap is large enough to matter. **General desk work and typing** should default to Bluetooth; the latency difference is imperceptible at typing speed, and the battery and multi-device wins are real. **Anyone splitting time across a laptop, a tablet, and a phone** should treat Bluetooth's profile switching as close to a hard requirement — a 2.4GHz dongle solves none of that problem. **A single dedicated desktop that never travels** is the case where 2.4GHz's latency edge is free to take, as long as the dongle has somewhere to live when the board isn't in use.
+
+That same battery-and-multi-device logic is why most split and ergonomic boards ship Bluetooth as standard rather than an upsell — see [the split and ergo buying guide](/article/split-ergo-buyers-guide) for how the connection choice interacts with the rest of that purchase.
 
 None of these are permanent commitments — most tri-mode boards let a reader flip between all three connections with a key combo, which means the right answer to this guide's title question can change by task rather than by purchase. The board that's wrong for a gaming session can still be the right board for the rest of the day, switched over in the time it takes to hold a function key.
 
