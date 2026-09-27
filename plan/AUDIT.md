@@ -13206,7 +13206,7 @@ passes accumulate signals.)
 > Filed 2026-09-19 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 > **Resolved (2026-09-23):** Shipped "PCB flex cuts, explained: a flex budget milled straight into the board" at `/article/pcb-flex-cuts-explained`, publishedAt 2026-09-15 (gap-fill, largest gap in the 30-day window). Explains flex-cut PCBs as a PCB-level flex source on rigid mount styles (QK75 as running example), contrasted with gasket-mount (Bakeneko65) and leaf-spring mounts covered in prior deep dives. `7876a215`
 
-### [ ] [cross-links] [4.5] keyboard-cleaning-maintenance-guide ↔ keyboard-cables-compared — no prose cross-link (same pillar, ≥2 shared tags: beginner, modding)
+### [x] [cross-links] [4.5] keyboard-cleaning-maintenance-guide ↔ keyboard-cables-compared — addressed in 2a67db98
 - category: cross-links
 - filed: 2026-09-19 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -13217,7 +13217,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/keyboard-cables-compared.mdx
 - action: add [keyboard-cables-compared](/article/keyboard-cables-compared) to keyboard-cleaning-maintenance-guide body, or vice versa
 
-### [ ] [cross-links] [4.5] keyboard-cleaning-maintenance-guide ↔ mounting-styles-compared — no prose cross-link (same pillar, ≥2 shared tags: beginner, modding)
+### [x] [cross-links] [4.5] keyboard-cleaning-maintenance-guide ↔ mounting-styles-compared — addressed in 2a67db98
 - category: cross-links
 - filed: 2026-09-19 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -13228,7 +13228,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/mounting-styles-compared.mdx
 - action: add [mounting-styles-compared](/article/mounting-styles-compared) to keyboard-cleaning-maintenance-guide body, or vice versa
 
-### [ ] [cross-links] [4.5] keyboard-cleaning-maintenance-guide ↔ sound-dampening-compared — no prose cross-link (same pillar, ≥2 shared tags: beginner, modding)
+### [x] [cross-links] [4.5] keyboard-cleaning-maintenance-guide ↔ sound-dampening-compared — addressed in 2a67db98
 - category: cross-links
 - filed: 2026-09-19 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -13239,7 +13239,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/sound-dampening-compared.mdx
 - action: add [sound-dampening-compared](/article/sound-dampening-compared) to keyboard-cleaning-maintenance-guide body, or vice versa
 
-### [ ] [cross-links] [4.5] keyboard-cleaning-maintenance-guide ↔ stabilizers-explained — no prose cross-link (same pillar, ≥2 shared tags: beginner, modding)
+### [x] [cross-links] [4.5] keyboard-cleaning-maintenance-guide ↔ stabilizers-explained — addressed in 2a67db98
 - category: cross-links
 - filed: 2026-09-19 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -13249,6 +13249,7 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/keyboard-cleaning-maintenance-guide.mdx
 - article-b: apps/web/src/content/articles/stabilizers-explained.mdx
 - action: add [stabilizers-explained](/article/stabilizers-explained) to keyboard-cleaning-maintenance-guide body, or vice versa
+> Picked as the top signal this tick (cloud `/march` → `/iterate`): no unlabeled GitHub issues; not Monday-relevant (`data/trends/2026-W39.json` already exists); no pending phases/data work; content-gap queue empty (`content-gap-survey.mjs` — "all pillars comfortable") and the other 6 mechanical surveys re-ran clean, no new rows filed. March's own expand Step 3c gate not met (13 commits/~33h since pass 432, under the 20-commit/48h threshold). These 4 rows were the oldest and highest-scoring Pending AUDIT rows (4.5, above the two `[3.6]` stale-group-buy-status rows and the sub-3.0 standing items); `keyboard-cleaning-maintenance-guide` was the hub article (4 pending pairs, more than any sibling), confirmed via `article-crosslink-survey.mjs --json --slug keyboard-cleaning-maintenance-guide`.
 
 ### [x] [cross-links] [4.5] pcb-flex-cuts-explained ↔ 60-percent-layout-history — addressed in 8829de53
 - category: cross-links
