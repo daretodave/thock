@@ -22,7 +22,7 @@
     },
     {
       "slug": "pcb-flex-cuts-explained",
-      "readTime": 9,
+      "readTime": 10,
       "frontmatter": {
         "title": "PCB flex cuts, explained: a flex budget milled straight into the board",
         "lede": "No plate change, no gasket, no case redesign — just a slot routed through the fiberglass near a switch hole. Flex cuts are the cheapest lever a designer has for adding give to a board that otherwise has none, and the cheapness is exactly why they show up where they do.",
@@ -8354,5 +8354,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-09-26T14:22:29.456Z"
+  "generatedAt": "2026-09-27T00:16:47.395Z"
 }
