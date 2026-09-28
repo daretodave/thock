@@ -1,0 +1,331 @@
+{
+  "isoWeek": "2026-W40",
+  "publishedAt": "2026-09-28T00:00:00.000Z",
+  "rows": [
+    {
+      "name": "Hall Effect/Rapid Trigger",
+      "category": "switch",
+      "direction": "flat",
+      "score": 98,
+      "spark": [
+        97,
+        97,
+        96,
+        98,
+        98,
+        97,
+        98,
+        98
+      ],
+      "articleSlug": "hall-effect-mainstream",
+      "note": "Gateron unveils Magnetic Jade Delta and quiet Oil King switches at TGS 2026 while Wooting 80HE+ preorders continue, keeping hall-effect/rapid-trigger the dominant switch category near its ceiling."
+    },
+    {
+      "name": "Cherry MX2A",
+      "category": "switch",
+      "direction": "up",
+      "score": -35,
+      "spark": [
+        -46,
+        -49,
+        -50,
+        -54,
+        -58,
+        -50,
+        -42,
+        -35
+      ],
+      "articleSlug": "cherry-mx2a-revision",
+      "note": "Reviewers confirm MX2A closes much of the smoothness gap with Gateron stock switches; no new controversy this week, sentiment continues its slow climb out of negative territory."
+    },
+    {
+      "name": "Gateron Magnetic Jade Delta",
+      "category": "switch",
+      "direction": "up",
+      "score": 84,
+      "spark": [
+        55,
+        60,
+        65,
+        70,
+        74,
+        77,
+        79,
+        84
+      ],
+      "articleSlug": "gateron-magnetic-jade-deep-dive",
+      "note": "Gateron debuts Magnetic Jade Delta (Light/Dark) with triangular stems at TGS 2026, extending the adjustable-actuation Hall Effect lineup's momentum."
+    },
+    {
+      "name": "Durock T1",
+      "category": "switch",
+      "direction": "flat",
+      "score": 44,
+      "spark": [
+        38,
+        41,
+        44,
+        45,
+        45,
+        45,
+        46,
+        44
+      ],
+      "articleSlug": "durock-t1-deep-dive",
+      "note": "No new catalyst this week; T1 holds steady in tactile-switch buying guides as a Holy Panda alternative, with mentions ticking slightly down."
+    },
+    {
+      "name": "TMR (Tunnel Magnetoresistance) switches",
+      "category": "switch",
+      "direction": "up",
+      "score": 71,
+      "spark": [
+        22,
+        30,
+        37,
+        44,
+        50,
+        55,
+        63,
+        71
+      ],
+      "articleSlug": "keychron-q16-he-8k-ceramic-tmr",
+      "note": "Gateron and Keychron's TGS 2026 booths lean further into magnetic-sensing tech, reinforcing TMR/Hall Effect as the industry's shared direction post-Cherry XTRFY K5 Pro TMR launch."
+    },
+    {
+      "name": "Gateron Oil King",
+      "category": "switch",
+      "direction": "up",
+      "score": 64,
+      "spark": [
+        40,
+        40,
+        40,
+        44,
+        47,
+        52,
+        58,
+        64
+      ],
+      "articleSlug": "gateron-oil-king-deep-dive",
+      "note": "Gateron shows quieted 'Oil King Quiet' variants at TGS 2026 aimed at reducing bottom-out noise, adding fresh buzz to the already-popular linear."
+    },
+    {
+      "name": "GMK CYL Orange Alert",
+      "category": "keycap",
+      "direction": "down",
+      "score": 58,
+      "spark": [
+        62,
+        68,
+        72,
+        75,
+        79,
+        88,
+        65,
+        58
+      ],
+      "articleSlug": "divinikey-gmk-cyl-orange-alert-group-buy",
+      "note": "Group buy remains deep in its order window with no vendor update this week; estimated February 2027 shipping keeps chatter fading."
+    },
+    {
+      "name": "DCS Dolch / Molch",
+      "category": "keycap",
+      "direction": "up",
+      "score": 24,
+      "spark": [
+        26,
+        25,
+        38,
+        34,
+        26,
+        20,
+        16,
+        24
+      ],
+      "articleSlug": "divinikey-dcs-dolch-group-buy",
+      "note": "DCS Dolch's October 2026 ship estimate draws nearer, reviving pre-shipping anticipation, while sibling set Molch (group buy closed Aug 23) targets Q1 2027."
+    },
+    {
+      "name": "GMK CYL Red Devils R2",
+      "category": "keycap",
+      "direction": "up",
+      "score": 68,
+      "spark": [
+        10,
+        15,
+        22,
+        30,
+        40,
+        52,
+        60,
+        68
+      ],
+      "articleSlug": null,
+      "note": "GMK CYL Red Devils returns after six years with a Sept 14-Oct 10, 2026 group buy via Omnitype and Keebz N Cables, drawing football-fandom crossover buyers; Q1 2027 ship."
+    },
+    {
+      "name": "Split/Ergo layout",
+      "category": "layout",
+      "direction": "up",
+      "score": 100,
+      "spark": [
+        87,
+        89,
+        90,
+        93,
+        96,
+        98,
+        99,
+        100
+      ],
+      "articleSlug": "split-ergo-cohort",
+      "note": "Keychron x GIZMART's Orca echo split-trackball board tops 300 million yen in five days at TGS 2026, a GIZMART crowdfunding record, pushing split/ergo interest to a new ceiling."
+    },
+    {
+      "name": "Alice layout",
+      "category": "layout",
+      "direction": "up",
+      "score": -8,
+      "spark": [
+        -62,
+        -64,
+        -66,
+        -50,
+        -40,
+        -30,
+        -18,
+        -8
+      ],
+      "articleSlug": "alice-layout-decline",
+      "note": "2026 buying guides now call Alice 'the most popular ergonomic stepping stone of the last five years,' continuing its climb out of negative sentiment."
+    },
+    {
+      "name": "75% Layout",
+      "category": "layout",
+      "direction": "up",
+      "score": 76,
+      "spark": [
+        58,
+        60,
+        62,
+        63,
+        64,
+        68,
+        71,
+        76
+      ],
+      "articleSlug": "75-percent-default",
+      "note": "Community polling cited this week puts 75% layouts at 42% share, the largest of any compact form factor, reinforcing its default status."
+    },
+    {
+      "name": "Mode Designs",
+      "category": "vendor",
+      "direction": "flat",
+      "score": 98,
+      "spark": [
+        76,
+        78,
+        80,
+        84,
+        89,
+        93,
+        97,
+        98
+      ],
+      "articleSlug": "mode-sonnet-r2-group-buy-coverage",
+      "note": "Prologue 98% preorders (from $349, Crown Mounting System) continue driving traffic a week after their Sept 17 launch, holding the vendor near its ceiling."
+    },
+    {
+      "name": "CannonKeys",
+      "category": "vendor",
+      "direction": "down",
+      "score": 44,
+      "spark": [
+        52,
+        46,
+        40,
+        39,
+        39,
+        44,
+        52,
+        44
+      ],
+      "articleSlug": "cannonkeys-blaine-v2-se-group-buy",
+      "note": "Touchstone's limited-time group buy pricing window closed Sept 27, 2026 (Q1 2027 ETA); post-deadline urgency cools as attention shifts elsewhere."
+    },
+    {
+      "name": "Prototypist",
+      "category": "vendor",
+      "direction": "up",
+      "score": 49,
+      "spark": [
+        31,
+        35,
+        40,
+        41,
+        42,
+        42,
+        43,
+        49
+      ],
+      "articleSlug": "prototypist-vendor-spotlight",
+      "note": "Vendor touts carbon-neutral shipping and hosts the new DCS SMRT R2 group buy alongside strong customer reviews for fast UK delivery."
+    },
+    {
+      "name": "Keychron",
+      "category": "brand",
+      "direction": "flat",
+      "score": 100,
+      "spark": [
+        97,
+        97,
+        98,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "articleSlug": "keychron-quiet-takeover",
+      "note": "Orca echo (with GIZMART) sets a GIZMART crowdfunding record above 300 million yen in five days at TGS 2026, alongside Nape Pro sales and 20+ products on display, holding peak attention."
+    },
+    {
+      "name": "Cherry (MX + XTRFY)",
+      "category": "brand",
+      "direction": "up",
+      "score": 12,
+      "spark": [
+        -2,
+        -8,
+        -15,
+        -20,
+        -25,
+        -8,
+        5,
+        12
+      ],
+      "articleSlug": "cherry-xtrfy-tmr-pivot",
+      "note": "TGS 2026 presence and continued MX2A praise keep XTRFY's TMR pivot paying sentiment dividends for an eighth straight week."
+    },
+    {
+      "name": "Wooting",
+      "category": "brand",
+      "direction": "up",
+      "score": 83,
+      "spark": [
+        45,
+        52,
+        58,
+        63,
+        68,
+        74,
+        80,
+        83
+      ],
+      "articleSlug": null,
+      "note": "80HE+ preorders progress toward first ABS/Module shipments in late October 2026, with zinc and Lekker Knob Large units following in mid-December."
+    }
+  ],
+  "updatedAt": "2026-09-28T12:00:00.000Z"
+}
