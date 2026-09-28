@@ -12,7 +12,7 @@
     },
     {
       "slug": "wooting-rapid-trigger-head-start",
-      "readTime": 5,
+      "readTime": 6,
       "frontmatter": {
         "title": "Hardware caught up to Wooting. Firmware hasn't.",
         "lede": "Wooting's 80HE+ preorder is the top mover on thock's 2026-W39 trends tracker, climbing from a score of 40 to 80 over eight weeks. The switch hardware behind it isn't the reason — Hall-effect sensing is table stakes across the category by September 2026. The firmware behind it still isn't matched.",
@@ -8667,5 +8667,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-09-28T18:37:43.220Z"
+  "generatedAt": "2026-09-28T23:45:17.387Z"
 }
