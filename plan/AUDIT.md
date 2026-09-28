@@ -13319,7 +13319,7 @@ passes accumulate signals.)
 - issue: #999
 > Filed 2026-09-23 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 
-### [ ] [cross-links] [4.5] wooting-rapid-trigger-head-start ↔ hall-effect-rapid-trigger-plateau — no prose cross-link (same pillar, ≥2 shared tags: hall-effect, rapid-trigger)
+### [x] [cross-links] [4.5] wooting-rapid-trigger-head-start ↔ hall-effect-rapid-trigger-plateau — addressed in 482d0fa8, closes #1008
 - category: cross-links
 - filed: 2026-09-24 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -13329,6 +13329,9 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/wooting-rapid-trigger-head-start.mdx
 - article-b: apps/web/src/content/articles/hall-effect-rapid-trigger-plateau.mdx
 - action: add [hall-effect-rapid-trigger-plateau](/article/hall-effect-rapid-trigger-plateau) to wooting-rapid-trigger-head-start body, or vice versa
+- issue: #1008
+> **Resolved (2026-09-28):** added one inline link from the wooting article's "What 'HE' means has stopped being the differentiator" callout to the plateau piece. `pnpm verify` full gate green: typecheck, lint, unit tests, script tests, data:validate, build, size, 1274/1274 e2e.
+> Picked as the top signal this tick (cloud `/march` → `/iterate`): no unlabeled GitHub issues; Monday snapshot gate already satisfied (`data/trends/2026-W40.json` existed); no pending phases/data work; content-gap queue empty (`content-gap-survey.mjs` — "all pillars comfortable") and the other 6 mechanical surveys re-ran clean, no new rows filed. March's own expand Step 3c gate not met (2 commits/~few h since pass 433's own commit `6747859f`, under the 20-commit/48h threshold). This row was the highest-scoring Pending AUDIT row (4.5, above the `[ci] [4.2]` heartbeat.yml flakiness row and the two `[data] [3.6]` stale-group-buy-status rows).
 
 ### [x] [content-gap] [7] guides pillar — 1 of ≥2 articles in last 30d — addressed in a03d26b0, closes #1000
 - category: content-gaps
