@@ -13462,3 +13462,15 @@ passes accumulate signals.)
 - hypothesis: `--status completed` likely routes through a different (search-indexed, eventually-consistent) backend path than an unfiltered `gh run list`, and that path can return a stale-but-internally-consistent old run instead of erroring or returning nothing. The 2026-09-26 fix (`1e225605`) assumed the failure mode was "a single transient/empty read," so it added a 60s-later retry of the *same* query — but if the flaky path returns the *same* wrong answer on both reads (not implausible at a ~20% single-call miss rate, and plausible if there's any caching behind the search index), the debounce just confirms the false positive instead of catching it, which is exactly what happened here.
 - action: change the query, not just the retry cadence. Options: (a) drop `--status completed` and instead pull `-L 5` unfiltered, sort client-side by `createdAt` descending, and take the newest entry with `conclusion == "success"`; (b) cross-check against a second independent signal (e.g. `gh api repos/{owner}/{repo}/actions/workflows/march.yml/runs?status=completed&per_page=1`); (c) if the flakiness turns out to be time-correlated rather than request-correlated, widen the debounce window (5-10 minutes instead of 60s) — but the live reproduction above was request-correlated (repeat calls seconds apart, no delay), which favors (a). Close #1007 in the fix commit.
 > Filed 2026-09-28 via `/digest` pulse review — `march` was never actually down; this is entirely a monitoring-layer bug. Not autonomously fixable by the digest (notes-only commit); routed to the next `/iterate` tick. Issue `#1007` closed this digest tick with the evidence above so the existing-issue dedupe in `heartbeat.yml` doesn't suppress the next alarm (real or false).
+
+### [HOT PURSUIT] [content-gap] [7] news pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 7 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: news
+- window-count: 1
+- window-start: 2026-08-30
+- score: 7
+- next: /ship-content → news pillar article
+> Filed 2026-09-29 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
