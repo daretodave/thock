@@ -49,9 +49,16 @@ jobs:
       - name: Alarm if march has not completed a tick in 14h
         run: |
           check_hours_since_last_march() {
+            # --status completed routes through a search-indexed,
+            # eventually-consistent backend that can return a stale
+            # run (reproduced: ~20% miss rate on identical back-to-back
+            # calls, see plan/AUDIT.md issue #1007). Pull the last 5 runs
+            # unfiltered instead, sort client-side, and take the newest
+            # one that actually succeeded.
             local last
-            last=$(gh run list --workflow march --status completed -L 1 \
-              --json updatedAt --jq '.[0].updatedAt // empty')
+            last=$(gh run list --workflow march -L 5 \
+              --json updatedAt,conclusion,createdAt \
+              --jq '[.[] | select(.conclusion == "success")] | sort_by(.createdAt) | reverse | .[0].updatedAt // empty')
             if [ -z "$last" ]; then
               echo ""
               return
