@@ -13463,7 +13463,7 @@ passes accumulate signals.)
 - action: change the query, not just the retry cadence. Options: (a) drop `--status completed` and instead pull `-L 5` unfiltered, sort client-side by `createdAt` descending, and take the newest entry with `conclusion == "success"`; (b) cross-check against a second independent signal (e.g. `gh api repos/{owner}/{repo}/actions/workflows/march.yml/runs?status=completed&per_page=1`); (c) if the flakiness turns out to be time-correlated rather than request-correlated, widen the debounce window (5-10 minutes instead of 60s) — but the live reproduction above was request-correlated (repeat calls seconds apart, no delay), which favors (a). Close #1007 in the fix commit.
 > Filed 2026-09-28 via `/digest` pulse review — `march` was never actually down; this is entirely a monitoring-layer bug. Not autonomously fixable by the digest (notes-only commit); routed to the next `/iterate` tick. Issue `#1007` closed this digest tick with the evidence above so the existing-issue dedupe in `heartbeat.yml` doesn't suppress the next alarm (real or false).
 
-### [HOT PURSUIT] [content-gap] [7] news pillar — 1 of ≥2 articles in last 30d
+### [x] [content-gap] [7] news pillar — 1 of ≥2 articles in last 30d — addressed in 742493ee, closes #1009
 - category: content-gaps
 - impact: 7 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -13475,3 +13475,4 @@ passes accumulate signals.)
 - next: /ship-content → news pillar article
 - issue: #1009
 > Filed 2026-09-29 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+> **Resolved (2026-09-29):** shipped `wooting-80he-plus-shipping-update.mdx` (publishedAt 2026-09-18, gap-fill midpoint of the 22-day gap between `keychron-q16-he-8k-ceramic-tmr` on 2026-09-07 and today's sentinel) — hard-news piece on the 80HE+ preorder's two-wave shipping timeline (ABS/Module late October 2026, zinc + Lekker Knob Large mid-December 2026), grounded in Wooting's own blog post and product page plus thock's 2026-W40 tracker "Wooting" brand row. News pillar now carries a fresh anchor well inside the 30-day window. `pnpm verify` full gate green: typecheck, lint, unit tests, script tests, data:validate, build, size, 1277/1277 e2e.
