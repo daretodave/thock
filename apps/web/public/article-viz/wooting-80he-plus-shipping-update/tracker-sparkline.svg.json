@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-09-18T14:00:00.000Z",
+  "commit": "3b7c469e",
+  "kind": "inline-viz",
+  "article_slug": "wooting-80he-plus-shipping-update",
+  "article_pillar": "news",
+  "section_anchor": "What's actually shipping",
+  "brief_summary": "Coral line chart plotting Wooting's brand score on thock's Trends Tracker across eight weeks (W33-W40), values 45, 52, 58, 63, 68, 74, 80, 83 — an unbroken climb with a bracket marking the full +38 swing and the terminal point labelled as the tracker's top mover for the week.",
+  "target": "apps/web/public/article-viz/wooting-80he-plus-shipping-update/tracker-sparkline.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "data/trends/2026-W40.json:rows — 'Wooting' — direction: 'up', score: 83, spark: [45, 52, 58, 63, 68, 74, 80, 83], note: '80HE+ preorders progress toward first ABS/Module shipments in late October 2026, with zinc and Lekker Knob Large units following in mid-December.'",
+    "apps/web/src/content/articles/wooting-80he-plus-shipping-update.mdx:opening paragraph — 'the board is now the top mover on thock's own 2026-W40 trends tracker, climbing from a brand score of 45 to 83 over eight weeks'"
+  ],
+  "outputs": ["apps/web/public/article-viz/wooting-80he-plus-shipping-update/tracker-sparkline.svg"],
+  "warnings": []
+}

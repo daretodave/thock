@@ -1,0 +1,73 @@
+---
+title: "Wooting's 80HE+ preorder starts shipping in two waves this fall"
+slug: wooting-80he-plus-shipping-update
+pillar: news
+publishedAt: '2026-09-18T14:00:00.000Z'
+updatedAt: '2026-09-18T14:00:00.000Z'
+author: thock
+lede: "Preorders for Wooting's 80HE+ opened September 17, 2026, and the first units are headed out the door in two separate waves — ABS and Module boards in late October, the zinc case and Lekker Knob Large accessory in mid-December."
+heroImage: /hero-art/wooting-80he-plus-shipping-update.svg
+heroImageAlt: "Line-drawing silhouette of a Wooting 80HE-style keyboard case with a split spacebar and a rotary knob at its base, rendered in warm-grey stroke with a coral splash marking the knob and a small warm-bronze theme dot in the upper-right margin."
+tags: [wooting, hall-effect, rapid-trigger]
+mentionedParts:
+  - id: wooting-60he
+    kind: board
+    slug: wooting-60he
+featured: false
+popularityScore: 0
+---
+
+Wooting opened preorders for the 80HE+ on September 17, 2026, and the board is now the top mover on thock's own [2026-W40 trends tracker](/trends/tracker/2026-W40), climbing from a brand score of 45 to 83 over eight weeks. The number is a sentiment read, not a shipping manifest — but the shipping manifest is real too, and it splits the preorder into two distinct waves depending on which variant a buyer picked.
+
+## What's actually shipping
+
+The 80HE+ isn't a new keyboard so much as an upgrade pass on one Wooting quietly pulled from sale. <Source href="https://wooting.io/post/where-did-the-wooting-80he-go">Wooting's own account of the transition</Source> is blunt about it: "With many Wooting 80HE variants out of stock, you might be wondering what happened. Well… we upgraded it." Rather than restock the original 80HE, Wooting rolled its running list of hardware changes into a Plus revision and reopened orders under the new name.
+
+What changed: an FR4 switch plate (first introduced on the 60HE V2), <Mono>Lekker Tikken Medium</Mono> switches as the standard hotswap option, a split-spacebar layout exclusive to the Module version, and a 4u <Mono>Lekker Knob Large</Mono> that ships pre-installed on the zinc prebuilt. <Source href="https://wooting.io/wooting-80he-plus">Wooting's product page</Source> lists the Tikken Medium as an analog Hall-effect switch with a closed-bottom housing aimed at a quieter bottom-out, 4mm of travel, and the same 0.1mm-to-4.0mm adjustable actuation range and rapid-trigger support that's been the point of every Wooting board since the original 60HE. Polling runs through Wooting's <Mono>Tachyon Mode</Mono>, claimed at a true 8kHz.
+
+Pricing held steady through the transition. Preassembled 80HE+ units are priced to match what the original 80HE cost, and the <Mono>Module</Mono> — the bare case-and-PCB tier, with no switches or keycaps included — costs less and adds a daughterboard connector for the split-spacebar build, aimed squarely at buyers who already have switches and caps on hand and want the board as a foundation rather than a finished product.
+
+<InlineViz
+  src="/article-viz/wooting-80he-plus-shipping-update/tracker-sparkline.svg"
+  alt="Coral line chart plotting Wooting's brand score on thock's trends tracker across eight weeks, values 45, 52, 58, 63, 68, 74, 80, 83, climbing steadily and ending as the tracker's top mover for the week."
+  caption="The tracker's read on a preorder, not a verdict on the hardware."
+  accent="coral"
+/>
+
+## Two variants, two ship dates
+
+The preorder page doesn't quote one shipping date — it quotes two, split cleanly along the ABS/zinc line. Buyers who ordered an <Mono>ABS</Mono> prebuilt or the barebones <Mono>Module</Mono> are looking at units arriving in late October 2026. Buyers who ordered the <Mono>zinc</Mono> prebuilt, or added the <Mono>Lekker Knob Large</Mono> to an ABS order, are on the mid-December 2026 timeline instead — the knob attaches its later date to whatever order it's bundled into, ABS case or not.
+
+<InlineViz
+  src="/article-viz/wooting-80he-plus-shipping-update/shipping-timeline.svg"
+  alt="Horizontal timeline with three markers. The first, dated September 17 2026, labelled preorder opens. The second, dated late October 2026, labelled ABS and Module ship. The third, dated mid-December 2026, labelled zinc and Lekker Knob Large ship."
+  caption="Same preorder window, two different arrival dates depending on case material and knob."
+  accent="coral"
+/>
+
+<Callout type="note" title="These are Wooting's own estimates">
+  Wooting frames both windows as estimates on the preorder page itself, not guaranteed ship dates — standard hedging language for a hardware preorder, and worth taking at face value rather than reading as a firm commitment. thock's tracker is reporting the estimate as published, not independently confirming a shipping event that hasn't happened yet.
+</Callout>
+
+The two-tier split isn't arbitrary. Zinc is a heavier, more complex case to manufacture than ABS, and Wooting has a specific reason to be cautious about its zinc timeline this round: the company has also revised its zinc-coating process to address durability complaints from earlier zinc runs, which is exactly the kind of process change that tends to push a manufacturing schedule out rather than in. Bundling the knob into the zinc-adjacent date, rather than shipping it alongside every ABS order in October, reads like Wooting building slack into the harder-to-manufacture half of the lineup instead of promising a date it isn't confident in.
+
+## Why the firmware still does the heavy lifting
+
+<Mono>80HE+</Mono>'s headline changes are almost entirely mechanical — a stiffer plate, a quieter switch housing, a case-color refresh, a knob. None of it touches the part of the board that actually earned Wooting its reputation: the <Mono>Wootility</Mono> configurator running underneath it, tuning rapid-trigger sensitivity and per-key actuation curves against the same Hall-effect sensing architecture Wooting has now iterated on since the <PartReference id="wooting-60he">Wooting 60HE</PartReference> entered mass production in April 2022. thock covered that distinction in more depth in [a separate piece arguing Wooting's firmware lead has outlasted its hardware exclusivity](/article/wooting-rapid-trigger-head-start) — competitors have caught up on adjustable actuation and, in some cases, moved to a newer TMR sensing generation Wooting hasn't adopted. The 80HE+ preorder doesn't change that argument either way. It's a hardware refresh riding the same configurator that's carried every Wooting board since 2022, not a new answer to the firmware question.
+
+<InlineViz
+  src="/article-viz/wooting-80he-plus-shipping-update/variant-matrix.svg"
+  alt="Two-column comparison strip. Left column labelled ABS or Module, listing FR4 plate, Lekker Tikken Medium switch, split spacebar on Module, ships late October 2026. Right column labelled Zinc prebuilt, listing the same plate and switch, pre-installed Lekker Knob Large, revised zinc coating process, ships mid-December 2026."
+  caption="Same switch, same plate, same configurator underneath both columns — the case material is what moves the date."
+  accent="coral"
+/>
+
+## What preorder holders should expect
+
+Buyers who already placed an order have little to do beyond watching their confirmation email for a shipping notice — Wooting's checkout flow assigns the estimate automatically based on case material and knob selection, not a separate signup step. Anyone still deciding whether to order should treat the ABS/Module path as the lower-risk pick for an earlier arrival, and the zinc path as a bet on a case material and coating process Wooting is actively revising mid-launch. Neither choice touches the switch, the plate, or the software; the decision is entirely about case weight, finish, and how long a buyer is willing to wait.
+
+Buyers weighing the Module specifically should also account for the parts it doesn't include. A bare case-and-PCB kit only makes sense if switches and keycaps are already sourced separately — the daughterboard connector supports the split-spacebar layout, but it doesn't come with stabilizers or a plate-mounted switch set, and pricing it against a prebuilt without accounting for those extra purchases understates the real cost of the Module path.
+
+## What to watch
+
+The estimate that matters most isn't the tracker's brand score — it's whether Wooting hits its own late-October date for the ABS and Module wave. A vendor's first preorder ship date is the one most likely to slip, and a board with a revised zinc-coating process already baked into its timeline is one where a second slip on the zinc wave wouldn't be surprising. The next real test of this launch is a shipping-confirmation post from Wooting itself, not another week of tracker movement.

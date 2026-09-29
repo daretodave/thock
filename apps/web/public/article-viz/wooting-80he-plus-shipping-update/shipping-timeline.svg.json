@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-09-18T14:00:00.000Z",
+  "commit": "3b7c469e",
+  "kind": "inline-viz",
+  "article_slug": "wooting-80he-plus-shipping-update",
+  "article_pillar": "news",
+  "section_anchor": "Two variants, two ship dates",
+  "brief_summary": "Horizontal timeline with three markers — preorder opening on September 17, 2026 in warm-bronze, and two coral shipping markers: ABS/Module units in late October 2026, and zinc prebuilts plus the Lekker Knob Large in mid-December 2026 — with a note that both windows are Wooting's own stated estimates.",
+  "target": "apps/web/public/article-viz/wooting-80he-plus-shipping-update/shipping-timeline.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "data/trends/2026-W40.json:rows — 'Wooting' — note: '80HE+ preorders progress toward first ABS/Module shipments in late October 2026, with zinc and Lekker Knob Large units following in mid-December.'",
+    "https://wooting.io/post/where-did-the-wooting-80he-go — 'Pre-orders were scheduled to begin September 17th, 2026, with delivery estimates ranging from late October (for ABS models) through mid-December (for zinc variants).'",
+    "apps/web/src/content/articles/wooting-80he-plus-shipping-update.mdx:'Two variants, two ship dates' section"
+  ],
+  "outputs": ["apps/web/public/article-viz/wooting-80he-plus-shipping-update/shipping-timeline.svg"],
+  "warnings": []
+}

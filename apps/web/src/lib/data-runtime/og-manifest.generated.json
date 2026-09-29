@@ -21,6 +21,16 @@
       }
     },
     {
+      "slug": "wooting-80he-plus-shipping-update",
+      "readTime": 6,
+      "frontmatter": {
+        "title": "Wooting's 80HE+ preorder starts shipping in two waves this fall",
+        "lede": "Preorders for Wooting's 80HE+ opened September 17, 2026, and the first units are headed out the door in two separate waves — ABS and Module boards in late October, the zinc case and Lekker Knob Large accessory in mid-December.",
+        "pillar": "news",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "pcb-flex-cuts-explained",
       "readTime": 10,
       "frontmatter": {
@@ -8667,5 +8677,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-09-28T23:45:17.387Z"
+  "generatedAt": "2026-09-29T04:11:14.603Z"
 }

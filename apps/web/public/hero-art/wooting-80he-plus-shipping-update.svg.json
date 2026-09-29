@@ -1,0 +1,29 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored SVG (no raster pipeline)",
+  "at": "2026-09-29T00:00:00Z",
+  "commit": "3b7c469eee1c7913072ec2d9eab55868314afc1c",
+  "kind": "hero-art",
+  "article_pillar": "news",
+  "article_slug": "wooting-80he-plus-shipping-update",
+  "source": null,
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": ["JetBrains Mono"],
+  "slug": "wooting-80he-plus-shipping-update",
+  "subject": "A compact 75%-style keyboard case top-down silhouette (function row, three main rows, spacebar row, and a dedicated nav cluster, matching the 80HE+'s layout) with a coral rotary knob protruding at the case's upper right corner, knurl ticks rendered as short radial coral dashes, callout-lined to a 'LEKKER KNOB / LARGE, DEC 2026' label. Below the case, a two-wave shipping timeline: a filled coral dot with a halo ring for the ABS and Module units (already shipping, late October 2026), a dashed coral progression line, and a hollow coral ring for the zinc and Lekker Knob Large variants following (mid December 2026). Mono labels above/below each marker name the variant and the month.",
+  "motif": "news / vendor piece per bearings.md hero-art directive, layout silhouette (75%-ish keyboard case) with a knob callout, plus a two-marker shipping timeline as the news hook",
+  "splashHue": "coral",
+  "splashColor": "oklch(0.68 0.165 28)",
+  "canvas": "1200x750",
+  "strokeWeight": "2px (2.2px on knob/marker accents, per family convention)",
+  "strokeColor": "oklch(0.78 0.005 90)",
+  "background": "transparent (light-mode safe; warm-grey stroke family legible on both charcoal oklch(0.175 0.006 250) and light paper)",
+  "notes": "Mirrors the case-outline chamfer language and abstract key-grid convention established in keychron-q16-he-8k-ceramic-tmr.svg, and the coral splash + bronze theme-dot convention shared with wooting-rapid-trigger-head-start.svg (same vendor/news pillar). The knob is the 'Lekker Knob Large' variant callout the brief asked for; the two-wave timeline (filled dot = shipping now, hollow ring = later wave) encodes the article's two named ship dates (late Oct 2026 ABS/Module, mid Dec 2026 zinc + Knob L) without inventing any numbers beyond what the brief specified. Verified XML well-formedness via python xml.dom.minidom parse and scanned for stray '--' runs inside comments before delivery, per the svg-validity.test.ts regression guard.",
+  "outputs": [
+    "apps/web/public/hero-art/wooting-80he-plus-shipping-update.svg",
+    "apps/web/public/hero-art/wooting-80he-plus-shipping-update.svg.json"
+  ],
+  "warnings": [
+    "No local Playwright/resvg preview render was available in this session to visually QA the composition; geometry was hand-verified (chamfer coordinates, knob/timeline placement, text anchor positions) and the file was checked for XML well-formedness before delivery."
+  ]
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Two-column comparison of Wooting 80HE+ variants — ABS/Module versus Zinc prebuilt — sharing the same plate, switch, and configurator but differing in case, knob, and ship date</title>
+
+  <text x="600" y="52" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">80HE+ — what changes between variants, what doesn't</text>
+
+  <!-- Column dividers -->
+  <line x1="600" y1="90" x2="600" y2="440" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.25" stroke-dasharray="4 6"/>
+
+  <!-- Column headers -->
+  <rect x="110" y="88" width="420" height="42" rx="6" fill="none" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.4"/>
+  <text x="320" y="115" font-family="IBM Plex Sans, sans-serif" font-size="15" font-weight="600" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">ABS / Module</text>
+
+  <rect x="670" y="88" width="420" height="42" rx="6" fill="none" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.7"/>
+  <text x="880" y="115" font-family="IBM Plex Sans, sans-serif" font-size="15" font-weight="600" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">Zinc prebuilt</text>
+
+  <!-- Shared rows (both columns identical) -->
+  <text x="320" y="168" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">FR4 switch plate</text>
+  <text x="880" y="168" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">FR4 switch plate</text>
+
+  <text x="320" y="204" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">Lekker Tikken Medium</text>
+  <text x="880" y="204" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">Lekker Tikken Medium</text>
+
+  <text x="320" y="240" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">Wootility configurator, Tachyon 8kHz</text>
+  <text x="880" y="240" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">Wootility configurator, Tachyon 8kHz</text>
+
+  <!-- Divergent rows -->
+  <text x="320" y="286" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Split spacebar (Module only)</text>
+  <text x="880" y="286" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">Lekker Knob Large pre-installed</text>
+
+  <text x="320" y="322" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Knob sold separately if wanted</text>
+  <text x="880" y="322" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">Revised zinc-coating process</text>
+
+  <!-- Ship date chips -->
+  <rect x="220" y="358" width="200" height="46" rx="8" fill="oklch(0.68 0.165 28 / 0.1)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.7"/>
+  <text x="320" y="386" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" font-weight="600">late Oct 2026</text>
+
+  <rect x="780" y="358" width="200" height="46" rx="8" fill="oklch(0.68 0.165 28 / 0.1)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.7"/>
+  <text x="880" y="386" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" font-weight="600">mid-Dec 2026</text>
+
+  <text x="600" y="452" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">the switch and the software are identical — case material is what moves the date</text>
+
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

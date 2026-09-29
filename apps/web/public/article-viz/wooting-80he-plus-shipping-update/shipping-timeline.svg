@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Horizontal timeline with three markers: September 17 2026 preorder opens, late October 2026 ABS and Module ship, mid-December 2026 zinc and Lekker Knob Large ship</title>
+
+  <text x="600" y="56" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Wooting 80HE+ — preorder to shipment</text>
+
+  <!-- Main timeline spine -->
+  <line x1="140" y1="220" x2="1080" y2="220" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.5" stroke-width="2.5"/>
+  <!-- arrowhead -->
+  <polyline points="1064,206 1080,220 1064,234" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.5" stroke-width="2.5" fill="none"/>
+
+  <!-- Marker 1: preorder opens -->
+  <circle cx="220" cy="220" r="9" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+  <line x1="220" y1="211" x2="220" y2="150" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.4" stroke-dasharray="3 5"/>
+  <text x="220" y="130" font-family="IBM Plex Sans, sans-serif" font-size="13" font-weight="600" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Preorder opens</text>
+  <text x="220" y="108" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">Sept 17, 2026</text>
+
+  <!-- Marker 2: ABS/Module ship -->
+  <circle cx="600" cy="220" r="11" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)"/>
+  <line x1="600" y1="209" x2="600" y2="270" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.55" stroke-dasharray="3 5"/>
+  <text x="600" y="296" font-family="IBM Plex Sans, sans-serif" font-size="14" font-weight="600" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">ABS / Module ship</text>
+  <text x="600" y="318" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.85">late October 2026</text>
+
+  <!-- Marker 3: zinc/knob ship -->
+  <circle cx="980" cy="220" r="11" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)"/>
+  <line x1="980" y1="211" x2="980" y2="150" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.55" stroke-dasharray="3 5"/>
+  <text x="980" y="130" font-family="IBM Plex Sans, sans-serif" font-size="14" font-weight="600" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">Zinc / Lekker Knob Large ship</text>
+  <text x="980" y="108" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.85">mid-December 2026</text>
+
+  <!-- gap bracket between wave 1 and wave 2 -->
+  <line x1="600" y1="248" x2="980" y2="248" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.35" stroke-width="1.5"/>
+  <line x1="600" y1="248" x2="600" y2="255" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.35" stroke-width="1.5"/>
+  <line x1="980" y1="248" x2="980" y2="255" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.35" stroke-width="1.5"/>
+  <text x="790" y="270" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">roughly six weeks between waves</text>
+
+  <text x="600" y="392" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">both dates are Wooting's own stated estimates, not confirmed shipments</text>
+
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-09-18T14:00:00.000Z",
+  "commit": "3b7c469e",
+  "kind": "inline-viz",
+  "article_slug": "wooting-80he-plus-shipping-update",
+  "article_pillar": "news",
+  "section_anchor": "Why the firmware still does the heavy lifting",
+  "brief_summary": "Two-column comparison strip contrasting the ABS/Module and Zinc prebuilt 80HE+ variants. Shared rows (FR4 plate, Lekker Tikken Medium switch, Wootility configurator with 8kHz Tachyon Mode) sit above divergent rows (split spacebar on Module vs. pre-installed Lekker Knob Large and revised zinc coating on the zinc variant), each column tagged with its ship-date chip.",
+  "target": "apps/web/public/article-viz/wooting-80he-plus-shipping-update/variant-matrix.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "https://wooting.io/wooting-80he-plus — FR4 plate, Lekker Tikken Medium analog Hall-effect switch, 0.1-4.0mm adjustable actuation, Tachyon Mode 8kHz polling",
+    "https://wooting.io/post/where-did-the-wooting-80he-go — 'Updated FR4 switch plate', 'Lekker Tikken medium switches as standard', 'Split spacebar layout for the Module version', 'Pre-installed large knob on the zinc model', revised zinc-coating process, ship windows late October (ABS) / mid-December (zinc)",
+    "apps/web/src/content/articles/wooting-80he-plus-shipping-update.mdx:'What's actually shipping' and 'Two variants, two ship dates' sections"
+  ],
+  "outputs": ["apps/web/public/article-viz/wooting-80he-plus-shipping-update/variant-matrix.svg"],
+  "warnings": []
+}
