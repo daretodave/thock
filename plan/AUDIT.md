@@ -13478,3 +13478,15 @@ passes accumulate signals.)
 - issue: #1009
 > Filed 2026-09-29 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 > **Resolved (2026-09-29):** shipped `wooting-80he-plus-shipping-update.mdx` (publishedAt 2026-09-18, gap-fill midpoint of the 22-day gap between `keychron-q16-he-8k-ceramic-tmr` on 2026-09-07 and today's sentinel) — hard-news piece on the 80HE+ preorder's two-wave shipping timeline (ABS/Module late October 2026, zinc + Lekker Knob Large mid-December 2026), grounded in Wooting's own blog post and product page plus thock's 2026-W40 tracker "Wooting" brand row. News pillar now carries a fresh anchor well inside the 30-day window. `pnpm verify` full gate green: typecheck, lint, unit tests, script tests, data:validate, build, size, 1277/1277 e2e.
+
+### [HOT PURSUIT] [content-gap] [7] trends pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 8 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: trends
+- window-count: 1
+- window-start: 2026-08-31
+- score: 7
+- next: /ship-content → trends pillar article
+> Filed 2026-09-30 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
