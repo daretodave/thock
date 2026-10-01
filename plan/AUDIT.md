@@ -13479,7 +13479,7 @@ passes accumulate signals.)
 > Filed 2026-09-29 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 > **Resolved (2026-09-29):** shipped `wooting-80he-plus-shipping-update.mdx` (publishedAt 2026-09-18, gap-fill midpoint of the 22-day gap between `keychron-q16-he-8k-ceramic-tmr` on 2026-09-07 and today's sentinel) — hard-news piece on the 80HE+ preorder's two-wave shipping timeline (ABS/Module late October 2026, zinc + Lekker Knob Large mid-December 2026), grounded in Wooting's own blog post and product page plus thock's 2026-W40 tracker "Wooting" brand row. News pillar now carries a fresh anchor well inside the 30-day window. `pnpm verify` full gate green: typecheck, lint, unit tests, script tests, data:validate, build, size, 1277/1277 e2e.
 
-### [HOT PURSUIT] [content-gap] [7] trends pillar — 1 of ≥2 articles in last 30d
+### [x] [HOT PURSUIT] [content-gap] [7] trends pillar — 1 of ≥2 articles in last 30d — addressed in 87196ca6, closes #1011
 - category: content-gaps
 - impact: 8 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -13491,3 +13491,59 @@ passes accumulate signals.)
 - next: /ship-content → trends pillar article
 - issue: #1011
 > Filed 2026-09-30 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+> **Resolved (2026-10-01):** shipped `gmk-cyl-red-devils-r2-comeback.mdx` (publishedAt 2026-09-10, gap-fill midpoint of the 18-day gap between the 30-day-window sentinel and `wooting-rapid-trigger-head-start` on 2026-09-19) — trends-analysis piece on GMK CYL Red Devils' six-years-later re-run drawing an unusually sustained eight-week tracker climb (10→68), grounded in the 2026-W40 tracker note's football-fandom-crossover read and the joint Omnitype/Keebz N Cables group buy (Sept 14–Oct 10, 2026, Q1 2027 ship estimate). Trends pillar now carries a fresh anchor well inside the 30-day window. `pnpm verify` full gate green: typecheck, lint, 862/862 unit tests, 230/230 script tests, data:validate, build, size, 1280/1280 e2e.
+
+### [ ] [cross-links] [4.5] gmk-cyl-red-devils-r2-comeback ↔ dcs-grass-valley-decline — no prose cross-link (same pillar, ≥2 shared tags: keycaps, group-buy, trends-2026)
+- category: cross-links
+- filed: 2026-10-01 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: keycaps, group-buy, trends-2026
+- article-a: apps/web/src/content/articles/gmk-cyl-red-devils-r2-comeback.mdx
+- article-b: apps/web/src/content/articles/dcs-grass-valley-decline.mdx
+- action: add [dcs-grass-valley-decline](/article/dcs-grass-valley-decline) to gmk-cyl-red-devils-r2-comeback body, or vice versa
+
+### [ ] [cross-links] [4.5] gmk-cyl-red-devils-r2-comeback ↔ dcs-olivetti-comeback — no prose cross-link (same pillar, ≥2 shared tags: keycaps, cherry-profile, trends-2026)
+- category: cross-links
+- filed: 2026-10-01 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: keycaps, cherry-profile, trends-2026
+- article-a: apps/web/src/content/articles/gmk-cyl-red-devils-r2-comeback.mdx
+- article-b: apps/web/src/content/articles/dcs-olivetti-comeback.mdx
+- action: add [dcs-olivetti-comeback](/article/dcs-olivetti-comeback) to gmk-cyl-red-devils-r2-comeback body, or vice versa
+
+### [ ] [cross-links] [4.5] gmk-cyl-red-devils-r2-comeback ↔ gmk-cyl-og-extensions-interest-check — no prose cross-link (same pillar, ≥2 shared tags: gmk, keycaps, cherry-profile, trends-2026)
+- category: cross-links
+- filed: 2026-10-01 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: gmk, keycaps, cherry-profile, trends-2026
+- article-a: apps/web/src/content/articles/gmk-cyl-red-devils-r2-comeback.mdx
+- article-b: apps/web/src/content/articles/gmk-cyl-og-extensions-interest-check.mdx
+- action: add [gmk-cyl-og-extensions-interest-check](/article/gmk-cyl-og-extensions-interest-check) to gmk-cyl-red-devils-r2-comeback body, or vice versa
+
+### [ ] [cross-links] [4.5] gmk-cyl-red-devils-r2-comeback ↔ gmk-cyl-ta-neo-production-tracking — no prose cross-link (same pillar, ≥2 shared tags: gmk, keycaps, cherry-profile, group-buy, trends-2026)
+- category: cross-links
+- filed: 2026-10-01 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: gmk, keycaps, cherry-profile, group-buy, trends-2026
+- article-a: apps/web/src/content/articles/gmk-cyl-red-devils-r2-comeback.mdx
+- article-b: apps/web/src/content/articles/gmk-cyl-ta-neo-production-tracking.mdx
+- action: add [gmk-cyl-ta-neo-production-tracking](/article/gmk-cyl-ta-neo-production-tracking) to gmk-cyl-red-devils-r2-comeback body, or vice versa
+
+### [ ] [cross-links] [4.5] gmk-cyl-red-devils-r2-comeback ↔ prototypist-vendor-spotlight — no prose cross-link (same pillar, ≥2 shared tags: group-buy, trends-2026)
+- category: cross-links
+- filed: 2026-10-01 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: group-buy, trends-2026
+- article-a: apps/web/src/content/articles/gmk-cyl-red-devils-r2-comeback.mdx
+- article-b: apps/web/src/content/articles/prototypist-vendor-spotlight.mdx
+- action: add [prototypist-vendor-spotlight](/article/prototypist-vendor-spotlight) to gmk-cyl-red-devils-r2-comeback body, or vice versa
