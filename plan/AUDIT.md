@@ -13493,7 +13493,7 @@ passes accumulate signals.)
 > Filed 2026-09-30 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 > **Resolved (2026-10-01):** shipped `gmk-cyl-red-devils-r2-comeback.mdx` (publishedAt 2026-09-10, gap-fill midpoint of the 18-day gap between the 30-day-window sentinel and `wooting-rapid-trigger-head-start` on 2026-09-19) — trends-analysis piece on GMK CYL Red Devils' six-years-later re-run drawing an unusually sustained eight-week tracker climb (10→68), grounded in the 2026-W40 tracker note's football-fandom-crossover read and the joint Omnitype/Keebz N Cables group buy (Sept 14–Oct 10, 2026, Q1 2027 ship estimate). Trends pillar now carries a fresh anchor well inside the 30-day window. `pnpm verify` full gate green: typecheck, lint, 862/862 unit tests, 230/230 script tests, data:validate, build, size, 1280/1280 e2e.
 
-### [ ] [cross-links] [4.5] gmk-cyl-red-devils-r2-comeback ↔ dcs-grass-valley-decline — no prose cross-link (same pillar, ≥2 shared tags: keycaps, group-buy, trends-2026)
+### [x] [cross-links] [4.5] gmk-cyl-red-devils-r2-comeback ↔ dcs-grass-valley-decline — no prose cross-link (same pillar, ≥2 shared tags: keycaps, group-buy, trends-2026) — addressed in commit `c4e78b7a`, closes #1012
 - category: cross-links
 - filed: 2026-10-01 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -13503,8 +13503,10 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/gmk-cyl-red-devils-r2-comeback.mdx
 - article-b: apps/web/src/content/articles/dcs-grass-valley-decline.mdx
 - action: add [dcs-grass-valley-decline](/article/dcs-grass-valley-decline) to gmk-cyl-red-devils-r2-comeback body, or vice versa
+- issue: #1012
+> **Resolved (2026-10-01):** drained as part of the 5-pair cluster for hub `gmk-cyl-red-devils-r2-comeback` (Phase 46 cluster-aware drain). Linked in the "What to watch" section, contrasting Red Devils' still-climbing shape with Grass Valley's clean post-close momentum transfer. See commit `c4e78b7a`.
 
-### [ ] [cross-links] [4.5] gmk-cyl-red-devils-r2-comeback ↔ dcs-olivetti-comeback — no prose cross-link (same pillar, ≥2 shared tags: keycaps, cherry-profile, trends-2026)
+### [x] [cross-links] [4.5] gmk-cyl-red-devils-r2-comeback ↔ dcs-olivetti-comeback — no prose cross-link (same pillar, ≥2 shared tags: keycaps, cherry-profile, trends-2026) — addressed in commit `c4e78b7a`, closes #1012
 - category: cross-links
 - filed: 2026-10-01 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -13514,8 +13516,10 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/gmk-cyl-red-devils-r2-comeback.mdx
 - article-b: apps/web/src/content/articles/dcs-olivetti-comeback.mdx
 - action: add [dcs-olivetti-comeback](/article/dcs-olivetti-comeback) to gmk-cyl-red-devils-r2-comeback body, or vice versa
+- issue: #1012
+> **Resolved (2026-10-01):** drained as part of the 5-pair cluster for hub `gmk-cyl-red-devils-r2-comeback` (Phase 46 cluster-aware drain). Linked in the "Reading the climb" section as a comparable multi-year-gap revival with a sustained climb. See commit `c4e78b7a`.
 
-### [ ] [cross-links] [4.5] gmk-cyl-red-devils-r2-comeback ↔ gmk-cyl-og-extensions-interest-check — no prose cross-link (same pillar, ≥2 shared tags: gmk, keycaps, cherry-profile, trends-2026)
+### [x] [cross-links] [4.5] gmk-cyl-red-devils-r2-comeback ↔ gmk-cyl-og-extensions-interest-check — no prose cross-link (same pillar, ≥2 shared tags: gmk, keycaps, cherry-profile, trends-2026) — addressed in commit `c4e78b7a`, closes #1012
 - category: cross-links
 - filed: 2026-10-01 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -13525,8 +13529,10 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/gmk-cyl-red-devils-r2-comeback.mdx
 - article-b: apps/web/src/content/articles/gmk-cyl-og-extensions-interest-check.mdx
 - action: add [gmk-cyl-og-extensions-interest-check](/article/gmk-cyl-og-extensions-interest-check) to gmk-cyl-red-devils-r2-comeback body, or vice versa
+- issue: #1012
+> **Resolved (2026-10-01):** drained as part of the 5-pair cluster for hub `gmk-cyl-red-devils-r2-comeback` (Phase 46 cluster-aware drain). Linked in the "Reading the climb" section alongside dcs-olivetti-comeback as a matching unbroken-climb precedent. See commit `c4e78b7a`.
 
-### [ ] [cross-links] [4.5] gmk-cyl-red-devils-r2-comeback ↔ gmk-cyl-ta-neo-production-tracking — no prose cross-link (same pillar, ≥2 shared tags: gmk, keycaps, cherry-profile, group-buy, trends-2026)
+### [x] [cross-links] [4.5] gmk-cyl-red-devils-r2-comeback ↔ gmk-cyl-ta-neo-production-tracking — no prose cross-link (same pillar, ≥2 shared tags: gmk, keycaps, cherry-profile, group-buy, trends-2026) — addressed in commit `c4e78b7a`, closes #1012
 - category: cross-links
 - filed: 2026-10-01 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -13536,8 +13542,10 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/gmk-cyl-red-devils-r2-comeback.mdx
 - article-b: apps/web/src/content/articles/gmk-cyl-ta-neo-production-tracking.mdx
 - action: add [gmk-cyl-ta-neo-production-tracking](/article/gmk-cyl-ta-neo-production-tracking) to gmk-cyl-red-devils-r2-comeback body, or vice versa
+- issue: #1012
+> **Resolved (2026-10-01):** drained as part of the 5-pair cluster for hub `gmk-cyl-red-devils-r2-comeback` (Phase 46 cluster-aware drain). Linked in the "What to watch" section, contrasting Red Devils' still-climbing shape with TA Neo's three-week post-close cooldown. See commit `c4e78b7a`.
 
-### [ ] [cross-links] [4.5] gmk-cyl-red-devils-r2-comeback ↔ prototypist-vendor-spotlight — no prose cross-link (same pillar, ≥2 shared tags: group-buy, trends-2026)
+### [x] [cross-links] [4.5] gmk-cyl-red-devils-r2-comeback ↔ prototypist-vendor-spotlight — no prose cross-link (same pillar, ≥2 shared tags: group-buy, trends-2026) — addressed in commit `c4e78b7a`, closes #1012
 - category: cross-links
 - filed: 2026-10-01 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -13547,3 +13555,5 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/gmk-cyl-red-devils-r2-comeback.mdx
 - article-b: apps/web/src/content/articles/prototypist-vendor-spotlight.mdx
 - action: add [prototypist-vendor-spotlight](/article/prototypist-vendor-spotlight) to gmk-cyl-red-devils-r2-comeback body, or vice versa
+- issue: #1012
+> **Resolved (2026-10-01):** drained as part of the 5-pair cluster for hub `gmk-cyl-red-devils-r2-comeback` (Phase 46 cluster-aware drain). Linked in the "joint Omnitype / Keebz N Cables run" section, noting Prototypist's own multi-vendor fulfillment track record as a parallel. See commit `c4e78b7a`.
