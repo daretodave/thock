@@ -1,0 +1,26 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-09-10T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "gmk-cyl-red-devils-r2-comeback",
+  "article_pillar": "trends",
+  "section_anchor": "Who that second audience is",
+  "brief_summary": "Branching diagram: a top node for GMK CYL Red Devils fans down to two cards — a nostalgia stream (2020 original-run buyers, already collect Cherry-profile sets, early tracker read W33-W34 10 to 15) and a crossover stream (football-fandom buyers, discover the set via supporter channels, later tracker read W37-W40 52 to 68) — both converging into a bottom bar labeled the Sept 14-Oct 10, 2026 group buy via Omnitype and Keebz N Cables.",
+  "target": "apps/web/public/article-viz/gmk-cyl-red-devils-r2-comeback/two-audiences.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "thock trends tracker 2026-W40 row — \"GMK CYL Red Devils R2\": note 'GMK CYL Red Devils returns after six years with a Sept 14-Oct 10, 2026 group buy via Omnitype and Keebz N Cables, drawing football-fandom crossover buyers; Q1 2027 ship.', spark [10, 15, 22, 30, 40, 52, 60, 68]",
+    "gmk-cyl-red-devils-r2-comeback.mdx § 'Who that second audience is' — 'nostalgia buyers showing up early, fandom buyers trickling in as the listing gets passed around supporter channels over the following weeks' and the 2020-original-run / Cherry-profile-collector framing",
+    "gmk-cyl-red-devils-r2-comeback.mdx frontmatter — group-buy window 'Sept 14, 2026' to 'Oct 10, 2026' via Omnitype and Keebz N Cables"
+  ],
+  "outputs": ["apps/web/public/article-viz/gmk-cyl-red-devils-r2-comeback/two-audiences.svg"],
+  "warnings": [
+    "The W33-W34 and W37-W40 week-number labels on each card are the article agent's own mapping of the 8-point spark trail onto the thock week-numbering convention ending at W40; the tracker row itself does not publish per-point week numbers for the spark array."
+  ]
+}

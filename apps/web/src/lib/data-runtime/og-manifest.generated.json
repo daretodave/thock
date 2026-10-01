@@ -51,6 +51,16 @@
       }
     },
     {
+      "slug": "gmk-cyl-red-devils-r2-comeback",
+      "readTime": 6,
+      "frontmatter": {
+        "title": "GMK CYL Red Devils is back after six years — and it's climbing the tracker faster than most first runs",
+        "lede": "GMK CYL Red Devils returns after six years for a second run, open Sept 14–Oct 10, 2026 via Omnitype and Keebz N Cables. The thock trends tracker has it up to a score of 68 off one of the steepest eight-week climbs of the season — and the buyer base behind that climb looks nothing like the one that bought the original.",
+        "pillar": "trends",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "keychron-q16-he-8k-ceramic-tmr",
       "readTime": 6,
       "frontmatter": {
@@ -8677,5 +8687,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-09-29T04:11:14.603Z"
+  "generatedAt": "2026-10-01T04:08:12.056Z"
 }

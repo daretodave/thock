@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-09-10T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "gmk-cyl-red-devils-r2-comeback",
+  "article_pillar": "trends",
+  "section_anchor": "Reading the climb",
+  "brief_summary": "Eight-point line chart of GMK CYL Red Devils' trends tracker score rising left to right from 10 to 68 with no flat or declining week, plotted in coral against a warm-grey baseline grid with dashed 20/40/60/80 gridlines. First point marked 'W33 · 10'; final point marked larger and labeled '68' / 'direction up.'",
+  "target": "apps/web/public/article-viz/gmk-cyl-red-devils-r2-comeback/eight-week-climb.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "thock trends tracker 2026-W40 row — \"GMK CYL Red Devils R2\": category keycap, direction up, score 68, spark [10, 15, 22, 30, 40, 52, 60, 68], note 'GMK CYL Red Devils returns after six years with a Sept 14-Oct 10, 2026 group buy via Omnitype and Keebz N Cables, drawing football-fandom crossover buyers; Q1 2027 ship.'",
+    "gmk-cyl-red-devils-r2-comeback.mdx § 'Reading the climb' — 'the tracker's own note for this run points at the answer' and 'every single week higher than the last, with the steepest single jump — 40 to 52 — landing in the middle of the run'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gmk-cyl-red-devils-r2-comeback/eight-week-climb.svg"],
+  "warnings": []
+}

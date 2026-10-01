@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — GMK CYL Red Devils R2, rising sparkline silhouette (trends tracker motif)</title>
+
+  <!-- Splash: coral wash spanning the chart field — the focal teaching object -->
+  <path
+    d="M 70 110 L 1130 110 L 1130 670 L 70 670 Z"
+    fill="oklch(0.68 0.165 28 / 0.08)" stroke="none"/>
+
+  <!-- Area fill that follows the rising trend, single splash hue beneath the line -->
+  <path
+    d="
+      M 90 670
+      L 236 622
+      L 381 554
+      L 527 477
+      L 673 380
+      L 818 265
+      L 964 187
+      L 1110 110
+      L 1110 670
+      L 90 670
+      Z"
+    fill="oklch(0.68 0.165 28 / 0.16)" stroke="none"/>
+
+  <!-- Baseline -->
+  <line x1="90" y1="670" x2="1110" y2="670" stroke-opacity="0.55"/>
+
+  <!-- Faint vertical guide ticks on the baseline (one per data point) -->
+  <g stroke-opacity="0.35">
+    <line x1="90" y1="670" x2="90" y2="678"/>
+    <line x1="236" y1="670" x2="236" y2="678"/>
+    <line x1="381" y1="670" x2="381" y2="678"/>
+    <line x1="527" y1="670" x2="527" y2="678"/>
+    <line x1="673" y1="670" x2="673" y2="678"/>
+    <line x1="818" y1="670" x2="818" y2="678"/>
+    <line x1="964" y1="670" x2="964" y2="678"/>
+    <line x1="1110" y1="670" x2="1110" y2="678"/>
+  </g>
+
+  <!-- The sparkline itself — single continuous polyline, sharp upward trend, 8 points.
+       Values 10, 15, 22, 30, 40, 52, 60, 68 normalized to y=670 (low) .. y=110 (high). -->
+  <polyline
+    points="
+      90,670
+      236,622
+      381,554
+      527,477
+      673,380
+      818,265
+      964,187
+      1110,110" />
+
+  <!-- Subtle open-circle markers at each interior data point -->
+  <g>
+    <circle cx="90" cy="670" r="4"/>
+    <circle cx="236" cy="622" r="4"/>
+    <circle cx="381" cy="554" r="4"/>
+    <circle cx="527" cy="477" r="4"/>
+    <circle cx="673" cy="380" r="4"/>
+    <circle cx="818" cy="265" r="4"/>
+    <circle cx="964" cy="187" r="4"/>
+  </g>
+
+  <!-- The latest point — focal cursor in coral splash -->
+  <circle cx="1110" cy="110" r="9" fill="oklch(0.68 0.165 28 / 0.95)" stroke="oklch(0.68 0.165 28)"/>
+  <circle cx="1110" cy="110" r="16" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.45" fill="none"/>
+
+  <!-- A faint annotation: lead-in tick at the cursor's y-level on the right.
+       Reads as "this value, now." Stays on-palette with the warm grey stroke. -->
+  <g stroke-opacity="0.45">
+    <line x1="1128" y1="110" x2="1152" y2="110"/>
+    <line x1="1152" y1="100" x2="1152" y2="120"/>
+  </g>
+
+  <!-- Bronze theme dot — family ornamental anchor, upper-right margin, distinct from
+       the coral focal cursor below it. -->
+  <circle cx="1165" cy="52" r="9" fill="oklch(0.80 0.135 75)" fill-opacity="0.85" stroke="none"/>
+</svg>

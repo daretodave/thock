@@ -1,0 +1,46 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-10-01T00:00:00.000Z",
+  "commit": "5b982561687d35c076d0235f48f316fdd0f5bad1",
+  "kind": "hero-art",
+  "source": null,
+  "article_slug": "gmk-cyl-red-devils-r2-comeback",
+  "article_pillar": "trends",
+  "splash_color": {
+    "name": "coral",
+    "oklch": "oklch(0.68 0.165 28)"
+  },
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": [],
+  "outputs": [
+    "apps/web/public/hero-art/gmk-cyl-red-devils-r2-comeback.svg"
+  ],
+  "design_notes": {
+    "subject": "Upward-trending sparkline (8 data points) on a baseline with vertical tick guides and a coral area-fill beneath; latest data point rendered as a focal cursor dot in coral splash with an outer ring",
+    "data_mapping": {
+      "normalized_values": [10, 15, 22, 30, 40, 52, 60, 68],
+      "baseline_y": 670,
+      "peak_y": 110,
+      "x_range": "90 to 1110 (8 evenly-spaced points)",
+      "note": "evocative trend shape, not a literal data-viz — no axis labels per brief"
+    },
+    "colorway": {
+      "splash_fill_wash": "oklch(0.68 0.165 28 / 0.08) background band",
+      "area_fill_under_line": "oklch(0.68 0.165 28 / 0.16)",
+      "focal_cursor": "oklch(0.68 0.165 28), filled + outer ring at 45% opacity",
+      "stroke_base": "oklch(0.78 0.005 90) (warm grey, --kh-text-2)",
+      "bronze_theme_dot": "oklch(0.80 0.135 75), upper-right margin, distinct from coral cursor"
+    },
+    "composition": [
+      "Follows the family 'trends piece -> sparkline silhouette' motif locked in plan/bearings.md",
+      "Baseline + 8 vertical guide ticks",
+      "Low-opacity coral wash band behind the chart field",
+      "Coral area-fill sweep beneath the rising line",
+      "Open-circle markers at interior points, filled coral focal cursor at the latest point",
+      "Right-side annotation lead-in tick at cursor y-level",
+      "Bronze theme dot at upper-right margin as the family ornamental anchor"
+    ]
+  },
+  "warnings": []
+}
