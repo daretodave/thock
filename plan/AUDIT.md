@@ -13395,7 +13395,7 @@ passes accumulate signals.)
 > **Resolved (2026-09-26):** extracted the last-completed-tick lookup into a reusable shell function and added a second confirming read 60s after the first ≥14h reading — the issue only opens if both reads agree the gap is real. No new permissions or persisted state needed; the retry lives entirely within one heartbeat job run. `pnpm verify` full gate green: typecheck, lint, 862/862 unit tests, 230/230 script tests, data:validate (88 records), build, size, 1271/1271 e2e.
 > Picked as the top signal this tick: no unlabeled GitHub issues beyond this already-queued one (`#1001` `triage:loop-queued`); not Monday-relevant (W39 snapshot already existed); no pending phases/data work; content-gap queue empty (`content-gap-survey.mjs` — "all pillars comfortable") and all 6 other mechanical surveys re-ran clean, no rows filed. March's own expand Step 3c gate not met (9 commits/~23h since pass 432, under the 20-commit/48h threshold). This row was the highest-scoring Pending AUDIT row (4.8, above the two `[3.6]` stale-group-buy-status rows and the sub-3.0 standing items).
 
-### [ ] [data] [3.6] divinikey-gmk-cyl-just-beachy — status stale, endDate 2026-09-22 passed
+### [x] [data] [3.6] divinikey-gmk-cyl-just-beachy — status stale, endDate 2026-09-22 passed — addressed in commit `7490f7e0`, closes #1013
 - category: data
 - filed: 2026-09-25 by group-buy-status-check.mjs
 - impact: 4 (buy shows status "announced" but endDate 2026-09-22 has passed — data hygiene gap)
@@ -13403,6 +13403,9 @@ passes accumulate signals.)
 - score: 3.6 (impact × ease / 10)
 - group-buy: data/group-buys/divinikey-gmk-cyl-just-beachy.json
 - action: update status from 'announced' to 'closed' in data/group-buys/divinikey-gmk-cyl-just-beachy.json
+- issue: #1013
+> **Resolved (2026-10-01):** flipped status to "closed", bumped updatedAt, regenerated data-runtime/OG manifests + search index. `pnpm verify` full gate green: typecheck, lint, 862/862 unit tests, 230/230 script tests, data:validate (89 records), build, size, 1280/1280 e2e.
+> Picked as the top signal this tick: no unlabeled GitHub issues (triage gate); not Monday-relevant (W40 snapshot already existed); no pending phases/data-backlog work; content-gap queue empty (`content-gap-survey.mjs` — "all pillars comfortable") and all 6 other mechanical surveys re-ran clean, no rows filed. March's own expand Step 3c gate not met (0 commits since pass 435's own commit, well under the 20-commit/48h threshold). This row and its sibling `divinikey-gmk-cyl-orange-alert` row were the only two Pending AUDIT rows scoring ≥ 3.0 (both 3.6, tied); picked this one by file order, one-fix-per-tick rule applies — the sibling remains for the next tick.
 
 ### [ ] [data] [3.6] divinikey-gmk-cyl-orange-alert — status stale, endDate 2026-09-14 passed
 - category: data
