@@ -119,7 +119,7 @@ Z:/keyboard/                              # repo root (will be renamed by user)
 ├── pnpm-workspace.yaml
 ├── pnpm-lock.yaml
 ├── tsconfig.base.json
-├── .nvmrc                                # node 20
+├── .nvmrc                                # node 22
 ├── .editorconfig
 ├── .prettierrc
 ├── .gitignore

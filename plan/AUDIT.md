@@ -13563,3 +13563,14 @@ passes accumulate signals.)
 - action: add [prototypist-vendor-spotlight](/article/prototypist-vendor-spotlight) to gmk-cyl-red-devils-r2-comeback body, or vice versa
 - issue: #1012
 > **Resolved (2026-10-01):** drained as part of the 5-pair cluster for hub `gmk-cyl-red-devils-r2-comeback` (Phase 46 cluster-aware drain). Linked in the "joint Omnitype / Keebz N Cables run" section, noting Prototypist's own multi-vendor fulfillment track record as a parallel. See commit `c4e78b7a`.
+
+### [x] [docs] [2.7] `.nvmrc`/`engines.node` (20) drifted from CI's `node-version` 22 — addressed in this commit, closes #1016
+- category: docs
+- filed: 2026-10-02 by cloud /iterate audit (mirrored as issue #1016; the mirroring tick ended before writing this row or shipping the fix — same orphaned-mirror pattern as the standing `[needs-user-call]` "mirrored-issue drain gap" row; caught this tick while reading open GitHub issues as an `/expand` triage-backlog signal)
+- impact: 3 (`.nvmrc` pins Node 20 and `package.json`'s `engines.node` floor read `>=20.10.0`, but both cloud workflows — `march.yml`, `night.yml` — have pinned `node-version: 22` since the cloud loop was introduced, and every commit shipped through the loop has actually been verified on 22, not 20; a developer running `nvm use` locally gets a different runtime than CI)
+- ease: 9 (three one-line edits: `.nvmrc`, `package.json` engines floor, `bearings.md` tree-comment)
+- score: 2.7 (impact × ease / 10)
+- evidence: `.nvmrc` → `20`; `package.json` → `"node": ">=20.10.0"`; `plan/bearings.md:122` → `# node 20`; `.github/workflows/march.yml:60` and `.github/workflows/night.yml:44` → `node-version: 22`
+- next: bump `.nvmrc` to `22`, `package.json` engines floor to `>=22`, fix the `bearings.md` tree comment
+- issue: #1016
+> **Resolved (2026-10-02):** bumped `.nvmrc` to `22`, `package.json`'s `engines.node` to `>=22`, and `plan/bearings.md:122`'s tree comment to `# node 22` — aligning local dev with the Node version actually battle-tested across hundreds of green CI runs. `march.yml`/`night.yml` untouched (already correct). Also closed duplicate orphaned mirror issue #1014 (same underlying `divinikey-gmk-cyl-orange-alert` stale-status finding as #1015, which the actual fix commit `efc47fa6` already closed — #1014 was a same-day duplicate mirror from an earlier tick that never got the `- issue: #N` field written back before dying, leaving it un-drained).
