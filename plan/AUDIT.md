@@ -13585,6 +13585,7 @@ passes accumulate signals.)
 - window-start: 2026-09-03
 - score: 7
 - next: /ship-content → deep-dives pillar article
+- issue: #1018
 > Filed 2026-10-03 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 
 ### [ ] [newsletter] [4.0] Weekly digest — issue 012 due (7 days since issue 11)
