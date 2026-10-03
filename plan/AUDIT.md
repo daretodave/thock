@@ -13574,3 +13574,27 @@ passes accumulate signals.)
 - next: bump `.nvmrc` to `22`, `package.json` engines floor to `>=22`, fix the `bearings.md` tree comment
 - issue: #1016
 > **Resolved (2026-10-02):** bumped `.nvmrc` to `22`, `package.json`'s `engines.node` to `>=22`, and `plan/bearings.md:122`'s tree comment to `# node 22` — aligning local dev with the Node version actually battle-tested across hundreds of green CI runs. `march.yml`/`night.yml` untouched (already correct). Also closed duplicate orphaned mirror issue #1014 (same underlying `divinikey-gmk-cyl-orange-alert` stale-status finding as #1015, which the actual fix commit `efc47fa6` already closed — #1014 was a same-day duplicate mirror from an earlier tick that never got the `- issue: #N` field written back before dying, leaving it un-drained).
+
+### [HOT PURSUIT] [content-gap] [7] deep-dives pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 6 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: deep-dives
+- window-count: 1
+- window-start: 2026-09-03
+- score: 7
+- next: /ship-content → deep-dives pillar article
+> Filed 2026-10-03 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+
+### [ ] [newsletter] [4.0] Weekly digest — issue 012 due (7 days since issue 11)
+- category: content-gaps
+- filed: 2026-10-03 by newsletter-gap-survey.mjs
+- impact: 5 (newsletter archive going stale reduces /newsletter value and reader trust in cadence)
+- ease: 8 (content-curator weekly round-up: 5 pillar picks + tracker insight)
+- score: 4.0 (impact × ease / 10)
+- next: /ship-content → newsletter type (weekly round-up, 5 pillar picks, tracker insight)
+- last-issue: 2026-09-26 (thock-weekly-011)
+- days-since: 7
+- issue: [mirror-failed: 2026-10-03]
+> Filed 2026-10-03 by newsletter-gap-survey.mjs. 7 days since issue 11. Threshold: ≥7 calendar days.
