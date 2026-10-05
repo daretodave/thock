@@ -8289,6 +8289,337 @@
         }
       ],
       "updatedAt": "2026-09-28T12:00:00.000Z"
+    },
+    {
+      "isoWeek": "2026-W41",
+      "publishedAt": "2026-10-05T00:00:00.000Z",
+      "rows": [
+        {
+          "name": "Hall Effect/Rapid Trigger",
+          "category": "switch",
+          "direction": "up",
+          "score": 99,
+          "spark": [
+            97,
+            96,
+            98,
+            98,
+            97,
+            98,
+            98,
+            99
+          ],
+          "articleSlug": "hall-effect-rapid-trigger-plateau",
+          "note": "Wooting opened 80HE+ preorders (added a rotary knob) and Keychron expanded its Ultra-Fast Lime HE line with Banana/Silent Banana tactiles plus a Silent Red linear this week."
+        },
+        {
+          "name": "Cherry MX2A",
+          "category": "switch",
+          "direction": "up",
+          "score": -20,
+          "spark": [
+            -49,
+            -50,
+            -54,
+            -58,
+            -50,
+            -42,
+            -35,
+            -20
+          ],
+          "articleSlug": "cherry-mx2a-revision",
+          "note": "ThereminGoat's MX2A reviews and buyer threads confirm 2026 Reds/Blacks largely fixed legacy scratch complaints, though testers still flag scratchiness vs. top-tier clones and loud Blues."
+        },
+        {
+          "name": "TMR (Tunnel Magnetoresistance) switches",
+          "category": "switch",
+          "direction": "up",
+          "score": 85,
+          "spark": [
+            30,
+            37,
+            44,
+            50,
+            55,
+            63,
+            71,
+            85
+          ],
+          "articleSlug": "keychron-q16-he-8k-ceramic-tmr",
+          "note": "Keychron's Q16 HE 8K, the first full-ceramic keyboard with TMR Hall-effect switches and 8K polling, fully funded its Kickstarter in 5 minutes ($524,616 from 2,162 backers)."
+        },
+        {
+          "name": "Gateron Magnetic Jade Delta",
+          "category": "switch",
+          "direction": "down",
+          "score": 80,
+          "spark": [
+            60,
+            65,
+            70,
+            74,
+            77,
+            79,
+            84,
+            80
+          ],
+          "articleSlug": "gateron-magnetic-jade-deep-dive",
+          "note": "No new SKU this week; Jade Delta Dark remains Gateron's flagship HE switch in vendor listings as discussion settles after ThereminGoat's deep-dive on its triangular stem design."
+        },
+        {
+          "name": "Gateron Oil King",
+          "category": "switch",
+          "direction": "flat",
+          "score": 62,
+          "spark": [
+            40,
+            40,
+            44,
+            47,
+            52,
+            58,
+            64,
+            62
+          ],
+          "articleSlug": "gateron-oil-king-deep-dive",
+          "note": "No new catalyst this week; Oil King holds steady as a popular quiet linear in buying guides while Gateron's TGS 2026 attention centers on the newer Jade Delta HE line instead."
+        },
+        {
+          "name": "Durock T1",
+          "category": "switch",
+          "direction": "down",
+          "score": 40,
+          "spark": [
+            41,
+            44,
+            45,
+            45,
+            45,
+            46,
+            44,
+            40
+          ],
+          "articleSlug": "durock-t1-deep-dive",
+          "note": "CannonKeys began selling a CannonKeys-exclusive Durock T1 Dark Amber in full-nylon housing (70/90/110 packs) this week, a minor SKU expansion rather than a new story."
+        },
+        {
+          "name": "GMK CYL Red Devils R2",
+          "category": "keycap",
+          "direction": "down",
+          "score": 60,
+          "spark": [
+            15,
+            22,
+            30,
+            40,
+            52,
+            60,
+            68,
+            60
+          ],
+          "articleSlug": "gmk-cyl-red-devils-r2-comeback",
+          "note": "GMK CYL Red Devils R2 group buy (opened Sept 15) closes Oct 9, 2026; attention is cresting into the final-week GB push before the usual post-close falloff."
+        },
+        {
+          "name": "GMK CYL Zombie",
+          "category": "keycap",
+          "direction": "up",
+          "score": 55,
+          "spark": [
+            0,
+            0,
+            5,
+            10,
+            15,
+            25,
+            40,
+            55
+          ],
+          "articleSlug": null,
+          "note": "New GMK CYL Zombie Halloween-themed set opened group buy Oct 2-31, 2026 across KBDfans and KeyAtlas listings, priced from $160 for the base kit with a Q1 2027 ETA."
+        },
+        {
+          "name": "DCS Dolch / Molch",
+          "category": "keycap",
+          "direction": "up",
+          "score": 30,
+          "spark": [
+            25,
+            38,
+            34,
+            26,
+            20,
+            16,
+            24,
+            30
+          ],
+          "articleSlug": "divinikey-dcs-dolch-group-buy",
+          "note": "DCS Dolch keycaps, whose group buy closed earlier in 2026, are now shipping this month per Divinikey's listing, while a related DCS SMRT R2 group buy runs Sept 20-Oct 18, 2026."
+        },
+        {
+          "name": "Split/Ergo layout",
+          "category": "layout",
+          "direction": "flat",
+          "score": 100,
+          "spark": [
+            89,
+            90,
+            93,
+            96,
+            98,
+            99,
+            100,
+            100
+          ],
+          "articleSlug": "split-ergo-cohort",
+          "note": "MoErgo launched the Go60, a travel-friendly ZMK-powered split with built-in tenting and dual touchpads, extending the Glove80 line and sustaining split-ergo's 2026 dominance."
+        },
+        {
+          "name": "Alice layout",
+          "category": "layout",
+          "direction": "up",
+          "score": -5,
+          "spark": [
+            -64,
+            -66,
+            -50,
+            -40,
+            -30,
+            -18,
+            -8,
+            -5
+          ],
+          "articleSlug": "alice-layout-decline",
+          "note": "No major Alice-specific releases or group buys surfaced this week; coverage stays thin relative to split-ergo and 75% layouts, consistent with its slow decline narrative."
+        },
+        {
+          "name": "75% Layout",
+          "category": "layout",
+          "direction": "up",
+          "score": 78,
+          "spark": [
+            60,
+            62,
+            63,
+            64,
+            68,
+            71,
+            76,
+            78
+          ],
+          "articleSlug": "75-percent-default",
+          "note": "Mode's Summer 2026 update confirmed Sonnet (75%) remains in active customer fulfillment, keeping 75% the default layout for premium custom builds shipping this quarter."
+        },
+        {
+          "name": "CannonKeys",
+          "category": "vendor",
+          "direction": "up",
+          "score": 50,
+          "spark": [
+            46,
+            40,
+            39,
+            39,
+            44,
+            52,
+            44,
+            50
+          ],
+          "articleSlug": "cannonkeys-blaine-v2-se-group-buy",
+          "note": "CannonKeys is running the Blaine V2 Seafoam Edition group buy and added a CannonKeys-exclusive Durock T1 Dark Amber switch this week, keeping it one of the most active US GB vendors."
+        },
+        {
+          "name": "Mode Designs",
+          "category": "vendor",
+          "direction": "down",
+          "score": 95,
+          "spark": [
+            78,
+            80,
+            84,
+            89,
+            93,
+            97,
+            98,
+            95
+          ],
+          "articleSlug": "mode-sonnet-r2-group-buy-coverage",
+          "note": "Mode's Summer 2026 update confirmed Sonnet/Encore shipping status, Prologue progress, and a final-stock announcement for Envoy, with Sonnet 2026 units now in customer hands."
+        },
+        {
+          "name": "Prototypist",
+          "category": "vendor",
+          "direction": "up",
+          "score": 52,
+          "spark": [
+            35,
+            40,
+            41,
+            42,
+            42,
+            43,
+            49,
+            52
+          ],
+          "articleSlug": "prototypist-vendor-spotlight",
+          "note": "Prototypist is listing the DCS Dolch group buy alongside a 'coming soon' GMK CYL Rainy Day R3 (expected start Oct 2, 2026), keeping steady GB-pipeline momentum this week."
+        },
+        {
+          "name": "Keychron",
+          "category": "brand",
+          "direction": "flat",
+          "score": 100,
+          "spark": [
+            97,
+            98,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100
+          ],
+          "articleSlug": "keychron-quiet-takeover",
+          "note": "Keychron's Q16 HE 8K ceramic keyboard Kickstarter fully funded in 5 minutes ($524,616/2,162 backers) this week, while its flagship Q Ultra/V Ultra lines continue migrating to ZMK."
+        },
+        {
+          "name": "Wooting",
+          "category": "brand",
+          "direction": "up",
+          "score": 88,
+          "spark": [
+            52,
+            58,
+            63,
+            68,
+            74,
+            80,
+            83,
+            88
+          ],
+          "articleSlug": "wooting-80he-plus-shipping-update",
+          "note": "Wooting opened 80HE+ preorders (adds a rotary knob plus switch/sensor tweaks) and shipped a Wootility beta with 'App Linking' for per-application HE profiles this week."
+        },
+        {
+          "name": "ZMK firmware",
+          "category": "brand",
+          "direction": "up",
+          "score": 65,
+          "spark": [
+            10,
+            15,
+            22,
+            30,
+            38,
+            48,
+            56,
+            65
+          ],
+          "articleSlug": "zmk-mainstream-shift",
+          "note": "Keychron's ZMK-based Q Ultra reportedly hit 660 hours of battery life at 8000Hz polling over 2.4GHz, and MoErgo's new Go60 ships with ZMK from the factory, reinforcing its mainstream shift."
+        }
+      ],
+      "updatedAt": "2026-10-05T12:00:00.000Z"
     }
   ],
   "articles": [
@@ -13160,5 +13491,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-10-02T20:31:49.839Z"
+  "generatedAt": "2026-10-05T08:38:29.213Z"
 }
