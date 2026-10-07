@@ -13599,3 +13599,15 @@ passes accumulate signals.)
 - days-since: 7
 - issue: #1019
 > Filed 2026-10-03 by newsletter-gap-survey.mjs. 7 days since issue 11. Threshold: ≥7 calendar days.
+
+### [HOT PURSUIT] [content-gap] [7] guides pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 5 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: guides
+- window-count: 1
+- window-start: 2026-09-07
+- score: 7
+- next: /ship-content → guides pillar article
+> Filed 2026-10-07 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
