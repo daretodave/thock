@@ -13575,7 +13575,7 @@ passes accumulate signals.)
 - issue: #1016
 > **Resolved (2026-10-02):** bumped `.nvmrc` to `22`, `package.json`'s `engines.node` to `>=22`, and `plan/bearings.md:122`'s tree comment to `# node 22` — aligning local dev with the Node version actually battle-tested across hundreds of green CI runs. `march.yml`/`night.yml` untouched (already correct). Also closed duplicate orphaned mirror issue #1014 (same underlying `divinikey-gmk-cyl-orange-alert` stale-status finding as #1015, which the actual fix commit `efc47fa6` already closed — #1014 was a same-day duplicate mirror from an earlier tick that never got the `- issue: #N` field written back before dying, leaving it un-drained).
 
-### [HOT PURSUIT] [content-gap] [7] deep-dives pillar — 1 of ≥2 articles in last 30d
+### [x] [HOT PURSUIT] [content-gap] [7] deep-dives pillar — 1 of ≥2 articles in last 30d — addressed in c3bce9e7, closes #1018
 - category: content-gaps
 - impact: 6 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -13587,6 +13587,7 @@ passes accumulate signals.)
 - next: /ship-content → deep-dives pillar article
 - issue: #1018
 > Filed 2026-10-03 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+> **Resolved (2026-10-10):** shipped `tmr-switches-deep-dive.mdx` — a mechanism explainer on Tunnel Magnetoresistance switch sensing (tunnel-junction physics vs. standard Hall-effect sensing, sensitivity/noise-floor tradeoffs, and what the headroom buys rapid-trigger firmware), the deep-dive counterpart to the existing Hall-effect deep dive and two TMR product news pieces that never explained the underlying mechanism. `publishedAt` gap-filled to 2026-09-27 (largest gap in the 30-day window, 2026-09-15 to 2026-10-10). Language gate, mentionedParts gate both clean. `pnpm verify` full gate green: typecheck, lint, unit + script tests, data:validate, build, size, 1292/1292 e2e.
 
 ### [ ] [newsletter] [4.0] Weekly digest — issue 012 due (7 days since issue 11)
 - category: content-gaps
@@ -13624,3 +13625,92 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/switch-actuation-weight-buying-guide.mdx
 - article-b: apps/web/src/content/articles/beginners-switch-buying-guide.mdx
 - action: add [beginners-switch-buying-guide](/article/beginners-switch-buying-guide) to switch-actuation-weight-buying-guide body, or vice versa
+
+### [ ] [cross-links] [4.5] tmr-switches-deep-dive ↔ cherry-mx2a-revision — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
+- category: cross-links
+- filed: 2026-10-10 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: switches, deep-dive
+- article-a: apps/web/src/content/articles/tmr-switches-deep-dive.mdx
+- article-b: apps/web/src/content/articles/cherry-mx2a-revision.mdx
+- action: add [cherry-mx2a-revision](/article/cherry-mx2a-revision) to tmr-switches-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] tmr-switches-deep-dive ↔ clicky-switches-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
+- category: cross-links
+- filed: 2026-10-10 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: switches, deep-dive
+- article-a: apps/web/src/content/articles/tmr-switches-deep-dive.mdx
+- article-b: apps/web/src/content/articles/clicky-switches-deep-dive.mdx
+- action: add [clicky-switches-deep-dive](/article/clicky-switches-deep-dive) to tmr-switches-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] tmr-switches-deep-dive ↔ gateron-lanes-tactile-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
+- category: cross-links
+- filed: 2026-10-10 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: switches, deep-dive
+- article-a: apps/web/src/content/articles/tmr-switches-deep-dive.mdx
+- article-b: apps/web/src/content/articles/gateron-lanes-tactile-deep-dive.mdx
+- action: add [gateron-lanes-tactile-deep-dive](/article/gateron-lanes-tactile-deep-dive) to tmr-switches-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] tmr-switches-deep-dive ↔ gateron-magnetic-jade-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: magnetic, deep-dive)
+- category: cross-links
+- filed: 2026-10-10 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: magnetic, deep-dive
+- article-a: apps/web/src/content/articles/tmr-switches-deep-dive.mdx
+- article-b: apps/web/src/content/articles/gateron-magnetic-jade-deep-dive.mdx
+- action: add [gateron-magnetic-jade-deep-dive](/article/gateron-magnetic-jade-deep-dive) to tmr-switches-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] tmr-switches-deep-dive ↔ hmx-cloud-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
+- category: cross-links
+- filed: 2026-10-10 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: switches, deep-dive
+- article-a: apps/web/src/content/articles/tmr-switches-deep-dive.mdx
+- article-b: apps/web/src/content/articles/hmx-cloud-deep-dive.mdx
+- action: add [hmx-cloud-deep-dive](/article/hmx-cloud-deep-dive) to tmr-switches-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] tmr-switches-deep-dive ↔ keyboard-acoustics-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
+- category: cross-links
+- filed: 2026-10-10 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: switches, deep-dive
+- article-a: apps/web/src/content/articles/tmr-switches-deep-dive.mdx
+- article-b: apps/web/src/content/articles/keyboard-acoustics-deep-dive.mdx
+- action: add [keyboard-acoustics-deep-dive](/article/keyboard-acoustics-deep-dive) to tmr-switches-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] tmr-switches-deep-dive ↔ optical-switches-explained — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
+- category: cross-links
+- filed: 2026-10-10 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: switches, deep-dive
+- article-a: apps/web/src/content/articles/tmr-switches-deep-dive.mdx
+- article-b: apps/web/src/content/articles/optical-switches-explained.mdx
+- action: add [optical-switches-explained](/article/optical-switches-explained) to tmr-switches-deep-dive body, or vice versa
+
+### [HOT PURSUIT] [content-gap] [7] news pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 7 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: news
+- window-count: 1
+- window-start: 2026-09-10
+- score: 7
+- next: /ship-content → news pillar article
+> Filed 2026-10-10 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
