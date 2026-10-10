@@ -1,0 +1,25 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-10-01T13:00:00.000Z",
+  "commit": "a1c4b6e76839b9403a702b4f2decd342692cca50",
+  "kind": "inline-viz",
+  "article_slug": "switch-actuation-weight-buying-guide",
+  "article_pillar": "guides",
+  "section_anchor": "Ranges worth shopping by use case",
+  "brief_summary": "Horizontal 0-80g axis with three stacked coral range bands — light/fast typing, general-purpose typing, and gaming with rapid trigger — each marked with dots for the catalog switches whose actuation force anchors that band. A separate dashed caution-colored marker off to the right plots the C3 Equalz Tangerine R2's 67g actuation as a heavy outlier that falls outside all three recommended bands.",
+  "target": "apps/web/public/article-viz/switch-actuation-weight-buying-guide/use-case-ranges.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "switch-actuation-weight-buying-guide.mdx § 'Ranges worth shopping by use case' — 'Light, fast typing. Actuation in the high 20s to mid 40s grams. The Gateron Magnetic Jade's 30g actuation sits at the light end of this band'",
+    "switch-actuation-weight-buying-guide.mdx § 'Ranges worth shopping by use case' — 'General-purpose typing. Actuation in the mid 40s to mid 50s grams ... The Cherry MX2A Red's 45g actuation and the Durock T1's 55g actuation both sit in this band ... The Kailh Box Jade's 50g actuation also lands here'",
+    "switch-actuation-weight-buying-guide.mdx § 'Ranges worth shopping by use case' — 'Gaming with rapid trigger. Actuation at the lighter end of the scale, generally below 45g ... The Gateron Magnetic Jade is again the clearest fit'",
+    "switch-actuation-weight-buying-guide.mdx § 'Ranges worth shopping by use case' — 'the C3 Equalz Tangerine R2, at 67g actuation. That's not a mistake in the catalog ... a switch for a specific preference'"
+  ],
+  "outputs": ["apps/web/public/article-viz/switch-actuation-weight-buying-guide/use-case-ranges.svg"],
+  "warnings": []
+}

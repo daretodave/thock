@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Three recommended actuation-force bands for light typing, general-purpose typing, and gaming, plotted against a 0-80 gram axis with the catalog's own switches marking each band</title>
+
+  <!-- Axis -->
+  <line x1="320" y1="60" x2="1120" y2="60" stroke-opacity="0.3"/>
+  <g stroke-opacity="0.15">
+    <line x1="520" y1="60" x2="520" y2="430"/>
+    <line x1="720" y1="60" x2="720" y2="430"/>
+    <line x1="920" y1="60" x2="920" y2="430"/>
+    <line x1="1120" y1="60" x2="1120" y2="430"/>
+  </g>
+  <g font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55" text-anchor="middle">
+    <text x="320" y="44">0g</text>
+    <text x="520" y="44">20g</text>
+    <text x="720" y="44">40g</text>
+    <text x="920" y="44">60g</text>
+    <text x="1120" y="44">80g</text>
+  </g>
+
+  <!-- Band 1: light / fast typing, 28-46g -> x 600-780 -->
+  <g>
+    <rect x="600" y="90" width="180" height="46" rx="8" fill="oklch(0.68 0.165 28 / 0.12)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.9" stroke-width="2"/>
+    <text x="150" y="105" font-family="Newsreader, serif" font-style="italic" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none">light, fast typing</text>
+    <text x="150" y="124" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">high-20s to mid-40s grams</text>
+    <circle cx="620" cy="113" r="6" fill="oklch(0.68 0.165 28)" stroke="none"/>
+    <text x="620" y="160" font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.8">Gateron Magnetic Jade 30g</text>
+  </g>
+
+  <!-- Band 2: general-purpose typing, 45-58g -> x 770-900 -->
+  <g>
+    <rect x="770" y="190" width="130" height="46" rx="8" fill="oklch(0.68 0.165 28 / 0.12)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.9" stroke-width="2"/>
+    <text x="150" y="205" font-family="Newsreader, serif" font-style="italic" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none">general-purpose typing</text>
+    <text x="150" y="224" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">mid-40s to mid-50s grams</text>
+    <circle cx="770" cy="213" r="6" fill="oklch(0.68 0.165 28)" stroke="none"/>
+    <circle cx="870" cy="213" r="6" fill="oklch(0.68 0.165 28)" stroke="none"/>
+    <circle cx="820" cy="213" r="6" fill="none" stroke="oklch(0.68 0.165 28)" stroke-width="2"/>
+    <text x="770" y="260" font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.8">Cherry MX2A Red 45g</text>
+    <text x="820" y="276" font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.8">Kailh Box Jade 50g</text>
+    <text x="870" y="292" font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.8">Durock T1 55g</text>
+  </g>
+
+  <!-- Band 3: gaming / rapid trigger, 28-45g -> x 600-770 -->
+  <g>
+    <rect x="600" y="320" width="170" height="46" rx="8" fill="oklch(0.68 0.165 28 / 0.12)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.9" stroke-width="2"/>
+    <text x="150" y="335" font-family="Newsreader, serif" font-style="italic" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none">gaming, rapid trigger</text>
+    <text x="150" y="354" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">below ~45g — bottom-out barely matters here</text>
+    <circle cx="620" cy="343" r="6" fill="oklch(0.68 0.165 28)" stroke="none"/>
+    <text x="620" y="390" font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.8">Gateron Magnetic Jade 30g</text>
+  </g>
+
+  <!-- Outlier marker: C3 Equalz Tangerine R2, 67g, outside all three bands -->
+  <g stroke-dasharray="4 4">
+    <circle cx="990" cy="343" r="6" fill="none" stroke="oklch(0.62 0.13 25)" stroke-width="2"/>
+  </g>
+  <text x="990" y="390" font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.85">C3 Equalz Tangerine R2 67g</text>
+  <text x="990" y="406" font-family="Newsreader, serif" font-style="italic" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">heavy outlier — not a default pick</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="30" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

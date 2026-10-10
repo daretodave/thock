@@ -8624,6 +8624,61 @@
   ],
   "articles": [
     {
+      "slug": "switch-actuation-weight-buying-guide",
+      "frontmatter": {
+        "slug": "switch-actuation-weight-buying-guide",
+        "title": "What a switch's gram number actually tells you before you buy",
+        "lede": "Every switch spec sheet carries two gram numbers — actuation and bottom-out — and treating them as one number is the most common mistake in a first switch purchase. Here's what each one measures, what ranges actually suit typing versus gaming, and why the same number can feel completely different depending on switch type.",
+        "description": "A practical guide to reading switch actuation and bottom-out gram weights before buying, with ranges for light typing, general typing, and gaming.",
+        "author": "thock",
+        "pillar": "guides",
+        "tags": [
+          "weight",
+          "linear",
+          "tactile",
+          "clicky",
+          "beginner"
+        ],
+        "publishedAt": "2026-10-01T13:00:00.000Z",
+        "updatedAt": "2026-10-01T13:00:00.000Z",
+        "heroImage": "/hero-art/switch-actuation-weight-buying-guide.svg",
+        "heroImageAlt": "A row of five switch stems rising out of coiled springs of increasing thickness, each paired with a small force-gauge dial marking its actuation weight, rendered in a warm coral line-drawing style.",
+        "featured": false,
+        "popularityScore": 0,
+        "guideSection": null,
+        "mentionedParts": [
+          {
+            "id": "gateron-magnetic-jade",
+            "kind": "switch",
+            "slug": "gateron-magnetic-jade"
+          },
+          {
+            "id": "cherry-mx2a-red",
+            "kind": "switch",
+            "slug": "cherry-mx2a-red"
+          },
+          {
+            "id": "c3-tangerine-r2",
+            "kind": "switch",
+            "slug": "c3-tangerine-r2"
+          },
+          {
+            "id": "durock-t1",
+            "kind": "switch",
+            "slug": "durock-t1"
+          },
+          {
+            "id": "kailh-box-jade",
+            "kind": "switch",
+            "slug": "kailh-box-jade"
+          }
+        ]
+      },
+      "body": "\nEvery switch listing carries a gram number, usually right next to the switch's name, and most first-time buyers treat it as the whole answer to \"how will this feel.\" It isn't. A spec sheet actually reports two separate gram measurements, they describe different parts of the keystroke, and neither one fully predicts feel on its own. Getting this straight before ordering a hundred-plus switches is the cheapest insurance in the hobby.\n\n## Two numbers, not one\n\n**Actuation force** is the resistance the switch presents at the point in its travel where the keystroke registers — the moment the stem trips the contact (or, on a magnetic switch, crosses the sensor's threshold). **Bottom-out force** is the resistance at the floor of travel, when the stem has nowhere further to go. The gap between those two numbers is the resistance the finger still has to push through after the keystroke has already registered, on the way to the bottom of the case.\n\n<InlineViz\n  src=\"/article-viz/switch-actuation-weight-buying-guide/two-numbers.svg\"\n  alt=\"A horizontal bar chart comparing five switches — Gateron Magnetic Jade, Cherry MX2A Red, Durock T1, Kailh Box Jade, and C3 Equalz Tangerine R2 — each with a solid coral bar for actuation force and an outlined bar for bottom-out force, with the gram gap between the two bracketed and labeled for each switch.\"\n  caption=\"Same chart, five switches — the gap between the two bars is the part of the stroke that happens after the keystroke already registered.\"\n  accent=\"coral\"\n/>\n\nThe catalog makes the spread easy to see side by side. The [Gateron Magnetic Jade](/part/switch/gateron-magnetic-jade), a magnetic linear, actuates at 30g and bottoms out at 50g — a 20g spread, light at both ends. The [Cherry MX2A Red](/part/switch/cherry-mx2a-red) actuates at 45g and bottoms out at 75g, a 30g spread — the widest of the five, which means a noticeably firmer ramp between registering the keystroke and finishing it. The [Durock T1](/part/switch/durock-t1), a tactile, actuates at 55g and bottoms out at 67g. The [Kailh Box Jade](/part/switch/kailh-box-jade), a clicky, actuates at 50g and bottoms out at 70g. And the [C3 Equalz Tangerine R2](/part/switch/c3-tangerine-r2) actuates at 67g and bottoms out at 72g — a 5g spread, the tightest of the group, meaning once a finger commits past actuation there is almost nothing left to push through before the floor.\n\nThat last number is worth sitting with. A switch with a wide actuation-to-bottom-out gap, like the Cherry MX2A Red, gives a finger room to register the keystroke and ease off before the floor. A switch with a narrow gap, like the C3 Equalz Tangerine R2, does not offer that room — committing to the keystroke and finishing it are nearly the same motion. Neither is better. They're different shapes of resistance, and the single actuation number doesn't tell a buyer which shape they're getting.\n\n## Why heavier doesn't mean \"harder to type\"\n\nThe instinct is to read a higher gram number as \"more effort,\" full stop. That instinct breaks down once travel distance and typing style enter the picture, because effort is a function of force *and* how far the finger has to carry that force, not force alone.\n\nFor a typist who bottoms out every key — the overwhelming majority of people, whether they realize it or not — the bottom-out number is doing most of the work in determining fatigue over a long session. Two switches with identical actuation force but a 20g difference in bottom-out force will feel meaningfully different by hour three of a workday, even though the spec sheet's first number looked the same on both.\n\nFor a gamer running a low actuation point, particularly on a magnetic or optical switch with an adjustable trip point and rapid-trigger firmware, the bottom-out number barely matters at all, because the finger is never asked to travel anywhere near the floor. What matters is how light and how fast the switch resets from a shallow press — the actuation number, in isolation, is a much better predictor of in-game feel than it is of typing feel. This is the core reason the same gram figure gets read so differently by a typist and a gamer looking at the identical spec sheet: they're weighting the two numbers in opposite proportions without realizing it.\n\n<Callout type=\"note\">\n  A rough rule of thumb: typing feel tracks closer to the bottom-out number, because typing bottoms out. Gaming feel tracks closer to the actuation number, because competitive setups are tuned to avoid bottoming out. Read the spec sheet with that asymmetry in mind.\n</Callout>\n\n## Ranges worth shopping by use case\n\n<InlineViz\n  src=\"/article-viz/switch-actuation-weight-buying-guide/use-case-ranges.svg\"\n  alt=\"A horizontal gram-force axis from 0 to 80 grams with three labeled range bands stacked vertically — light and fast typing, general-purpose typing, and gaming with rapid trigger — each band marked with the actuation-force dots of the switches that anchor it, plus a separate dashed marker off to the right for the C3 Equalz Tangerine R2's 67g actuation, labeled as a heavy outlier rather than a default recommendation.\"\n  caption=\"Three bands, anchored to the catalog's own numbers — not a universal scale, just where these five switches actually land.\"\n  accent=\"coral\"\n/>\n\nWith the actuation/bottom-out distinction in hand, concrete ranges get easier to defend.\n\n**Light, fast typing.** Actuation in the high 20s to mid 40s grams. The Gateron Magnetic Jade's 30g actuation sits at the light end of this band — a switch that registers with very little initial resistance, suited to typists who want a feathery first touch and don't mind that there isn't much cushion before the 50g floor.\n\n**General-purpose typing.** Actuation in the mid 40s to mid 50s grams, which is where a large share of mainstream keyboards ship by default. The Cherry MX2A Red's 45g actuation and the Durock T1's 55g actuation both sit in this band, even though one is a smooth linear and the other has a bump partway down — proof that the actuation number alone doesn't tell a buyer which of those two experiences they're getting (more on that below). The Kailh Box Jade's 50g actuation also lands here, with the added caveat that it's audibly clicking every time.\n\n**Gaming with rapid trigger.** Actuation at the lighter end of the scale, generally below 45g, paired with a switch built for a short, consistent reset rather than a dramatic bottom-out. The Gateron Magnetic Jade is again the clearest fit in this catalog, both for its 30g actuation and because magnetic switches are the ones rapid-trigger firmware is built around. Bottom-out force is close to irrelevant to this use case, since a well-tuned rapid-trigger configuration rarely asks the finger to travel that far.\n\nOutside these three bands sits the C3 Equalz Tangerine R2, at 67g actuation. That's not a mistake in the catalog and it's not a switch to avoid — it's a switch for a specific preference: typists who like a heavy, decisive, no-cushion keystroke and who were never going to be well served by a \"general-purpose\" recommendation anyway. The point of naming ranges is to give most buyers a reasonable starting point, not to rule out everything that falls outside them.\n\n## The same number, three different feelings\n\n<InlineViz\n  src=\"/article-viz/switch-actuation-weight-buying-guide/same-weight-different-feel.svg\"\n  alt=\"Three side-by-side force-over-travel sketches labeled linear, tactile, and clicky, representing the Cherry MX2A Red at 45 grams, the Durock T1 at 55 grams, and the Kailh Box Jade at 50 grams. The linear curve rises smoothly from actuation to bottom-out; the tactile curve shows a bump near the actuation point before continuing to the floor; the clicky curve shows the same bump shape with a small click mark at the actuation point.\"\n  caption=\"Three switches within a 10g actuation band of each other — and three different things happening under the finger at that gram number.\"\n  accent=\"coral\"\n/>\n\nHere is the warning this guide is actually building toward: the gram number says nothing about switch type, and switch type changes the felt experience of that number more than the number itself does.\n\nThe Cherry MX2A Red (45g actuation, linear), the Kailh Box Jade (50g actuation, clicky), and the Durock T1 (55g actuation, tactile) all sit within a single 10g band. A buyer shopping by gram number alone could reasonably expect these three to feel like close siblings. They don't. The Cherry MX2A Red's resistance rises in one smooth line with nothing to mark the actuation point except the keystroke registering. The Durock T1 has a bump built into the stem that the finger feels as a distinct event right around actuation — the \"effort\" of that switch is as much about pushing through a shape as it is about grams. The Kailh Box Jade adds a click leaf on top of a similar bump, so the same gram figure arrives with an audible snap that changes how deliberate the keystroke feels, independent of the force required to produce it.\n\n<Callout type=\"warn\">\n  Do not order a full set of switches based on the actuation number alone, especially across different switch types. A tactile and a linear at the same nominal weight are not interchangeable experiences, and neither is a clicky at a lower nominal weight than a linear that still feels \"heavier\" in practice because of the click leaf's resistance curve. If a tester is available for the switches in question, use it before committing to a full board's worth.\n</Callout>\n\n## Before buying on the number alone\n\nA gram figure is a real, useful piece of information — it just isn't a complete one. Before treating it as a purchase decision on its own, check both numbers on the spec sheet, not just the first one. Work out whether the use case is typing (where bottom-out force dominates feel) or gaming (where actuation force dominates feel). Decide on a switch type — linear, tactile, or clicky — before comparing gram figures across types, since the number only means the same thing within a family. And if a tester is available, buy or borrow one and put a finger on the actual candidates before ordering a hundred of anything. The part pages for each switch carry both numbers side by side for exactly this reason; read them as a pair, not as a headline.\n\nThe catalog will keep adding switches with new gram figures attached, and the two-number habit scales to all of them without modification. A buyer who reads actuation and bottom-out together, and who treats the switch-type label as equally load-bearing as the gram count, will make a better call on the next unfamiliar switch than one who reads a single number and assumes it settled the question.\n",
+      "readTime": 8,
+      "filePath": "apps/web/src/content/articles/switch-actuation-weight-buying-guide.mdx"
+    },
+    {
       "slug": "bento-box-theme-build",
       "frontmatter": {
         "slug": "bento-box-theme-build",
@@ -13466,6 +13521,11 @@
       "category": "brand"
     },
     {
+      "slug": "weight",
+      "name": "Weight",
+      "category": "switch"
+    },
+    {
       "slug": "wireless",
       "name": "Wireless",
       "category": "misc"
@@ -13491,5 +13551,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-10-05T08:38:29.213Z"
+  "generatedAt": "2026-10-10T15:18:14.124Z"
 }

@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-10-01T13:00:00.000Z",
+  "commit": "a1c4b6e76839b9403a702b4f2decd342692cca50",
+  "kind": "inline-viz",
+  "article_slug": "switch-actuation-weight-buying-guide",
+  "article_pillar": "guides",
+  "section_anchor": "The same number, three different feelings",
+  "brief_summary": "Three-panel glyph strip of force-over-travel sketches for a linear, a tactile, and a clicky switch, all within a 10g actuation band of each other: Cherry MX2A Red (45g actuation / 75g bottom-out, smooth rising line), Durock T1 (55g actuation / 67g bottom-out, curve with a bump at actuation), Kailh Box Jade (50g actuation / 70g bottom-out, same bump shape plus a drawn click-mark burst at actuation). Only values present in the article's own table are plotted; no bump-peak force is invented.",
+  "target": "apps/web/public/article-viz/switch-actuation-weight-buying-guide/same-weight-different-feel.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "switch-actuation-weight-buying-guide.mdx § 'The same number, three different feelings' — 'The Cherry MX2A Red (45g actuation, linear), the Kailh Box Jade (50g actuation, clicky), and the Durock T1 (55g actuation, tactile) all sit within a single 10g band'",
+    "switch-actuation-weight-buying-guide.mdx § 'Two numbers, not one' — 75g bottom-out (Cherry MX2A Red), 67g bottom-out (Durock T1), 70g bottom-out (Kailh Box Jade)",
+    "switch-actuation-weight-buying-guide.mdx § 'The same number, three different feelings' — 'The Durock T1 has a bump built into the stem ... The Kailh Box Jade adds a click leaf on top of a similar bump'"
+  ],
+  "outputs": ["apps/web/public/article-viz/switch-actuation-weight-buying-guide/same-weight-different-feel.svg"],
+  "warnings": []
+}

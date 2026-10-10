@@ -4,6 +4,7 @@
     { "slug": "tactile", "name": "Tactile", "category": "switch" },
     { "slug": "clicky", "name": "Clicky", "category": "switch" },
     { "slug": "silent", "name": "Silent", "category": "switch" },
+    { "slug": "weight", "name": "Weight", "category": "switch" },
     { "slug": "lubed", "name": "Lubed", "category": "switch" },
     { "slug": "factory-lubed", "name": "Factory-lubed", "category": "switch" },
 

@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "slug": "switch-actuation-weight-buying-guide",
+      "readTime": 8,
+      "frontmatter": {
+        "title": "What a switch's gram number actually tells you before you buy",
+        "lede": "Every switch spec sheet carries two gram numbers — actuation and bottom-out — and treating them as one number is the most common mistake in a first switch purchase. Here's what each one measures, what ranges actually suit typing versus gaming, and why the same number can feel completely different depending on switch type.",
+        "pillar": "guides",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "bento-box-theme-build",
       "readTime": 7,
       "frontmatter": {
@@ -1461,6 +1471,11 @@
       "slug": "voyager",
       "name": "Voyager",
       "category": "brand"
+    },
+    {
+      "slug": "weight",
+      "name": "Weight",
+      "category": "switch"
     },
     {
       "slug": "wireless",
@@ -9000,5 +9015,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-10-05T08:38:29.213Z"
+  "generatedAt": "2026-10-10T15:18:14.124Z"
 }

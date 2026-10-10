@@ -1,0 +1,35 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-10-10T00:00:00Z",
+  "commit": "a1c4b6e76839b9403a702b4f2decd342692cca50",
+  "kind": "hero-art",
+  "article_slug": "switch-actuation-weight-buying-guide",
+  "article_pillar": "guides",
+  "brief_summary": "Hero art for the guides-pillar switch actuation/bottom-out weight buying guide. Adapts bearings.md's guide default (annotated keycap row) per the brief's explicit subject mapping to the article's own heroImageAlt: five switch stems in a row, each rising out of a coiled spring, the springs drawn with progressively denser coils and thicker wire-gauge stroke left to right to imply increasing spring weight. Each stem is paired with a small force-gauge dial above it, connected by a thin dashed lead; the dial's needle sweeps further clockwise and its coral focal dot grows larger with each successive (heavier) switch, reading the gauge as the weight progression. A left-to-right intensifying coral wash and a faint dashed progression guide behind the dial row reinforce the increasing-weight narrative without any invented numeric labels.",
+  "target": "apps/web/public/hero-art/switch-actuation-weight-buying-guide.svg",
+  "source": "apps/web/src/content/articles/switch-actuation-weight-buying-guide.mdx frontmatter heroImageAlt",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject; guide subjects default to an annotated motif — reinterpreted here per the article's own heroImageAlt field as a switch-stem/spring/force-gauge row rather than a keycap row",
+  "size": [1200, 750],
+  "subject": "Five switch stems in a row, each atop a coiled spring (coil count and stroke weight increasing left to right: 4/1.5px to 8/3.5px, implying increasing spring weight), each paired with a small force-gauge dial above it (tick-marked rim, needle sweeping further clockwise per column) connected by a thin dashed lead; coral focal dot at each needle tip grows larger left to right; bronze theme dot at upper-right margin.",
+  "splash_color": {
+    "name": "coral",
+    "oklch": "oklch(0.68 0.165 28)"
+  },
+  "accent_color": {
+    "name": "warm-bronze (theme accent)",
+    "oklch": "oklch(0.80 0.135 75)"
+  },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "stroke_weight": "2px (spring coils vary 1.5px-3.5px to depict increasing wire gauge)",
+  "canvas": "1200x750",
+  "background": "transparent (light-mode safe per house style)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": [],
+  "alt": "A row of five switch stems rising out of coiled springs of increasing thickness, each paired with a small force-gauge dial marking its actuation weight, rendered in a warm coral line-drawing style.",
+  "data_sources": [],
+  "outputs": [
+    "apps/web/public/hero-art/switch-actuation-weight-buying-guide.svg"
+  ],
+  "warnings": []
+}

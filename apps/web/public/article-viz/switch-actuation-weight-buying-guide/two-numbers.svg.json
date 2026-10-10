@@ -1,0 +1,26 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-10-01T13:00:00.000Z",
+  "commit": "a1c4b6e76839b9403a702b4f2decd342692cca50",
+  "kind": "inline-viz",
+  "article_slug": "switch-actuation-weight-buying-guide",
+  "article_pillar": "guides",
+  "section_anchor": "Two numbers, not one",
+  "brief_summary": "Grouped horizontal bar chart. Five switches (Gateron Magnetic Jade, Cherry MX2A Red, Durock T1, Kailh Box Jade, C3 Equalz Tangerine R2), each with a solid coral bar for actuation force and an outlined bar for bottom-out force on a shared 0-80g axis. Each row is labeled with its gram gap, calling out the Tangerine R2's unusually tight 5g spread and the MX2A Red's wide 30g spread.",
+  "target": "apps/web/public/article-viz/switch-actuation-weight-buying-guide/two-numbers.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "switch-actuation-weight-buying-guide.mdx § 'Two numbers, not one' — 'the Gateron Magnetic Jade ... actuates at 30g and bottoms out at 50g — a 20g spread'",
+    "switch-actuation-weight-buying-guide.mdx § 'Two numbers, not one' — 'the Cherry MX2A Red actuates at 45g and bottoms out at 75g, a 30g spread — the widest of the five'",
+    "switch-actuation-weight-buying-guide.mdx § 'Two numbers, not one' — 'the Durock T1, a tactile, actuates at 55g and bottoms out at 67g'",
+    "switch-actuation-weight-buying-guide.mdx § 'Two numbers, not one' — 'the Kailh Box Jade, a clicky, actuates at 50g and bottoms out at 70g'",
+    "switch-actuation-weight-buying-guide.mdx § 'Two numbers, not one' — 'the C3 Equalz Tangerine R2 actuates at 67g and bottoms out at 72g — a 5g spread, the tightest of the group'"
+  ],
+  "outputs": ["apps/web/public/article-viz/switch-actuation-weight-buying-guide/two-numbers.svg"],
+  "warnings": []
+}

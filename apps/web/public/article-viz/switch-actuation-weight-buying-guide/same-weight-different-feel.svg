@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Three force-over-travel sketches for a linear, a tactile, and a clicky switch within a 10-gram actuation band of each other, showing how differently the stroke behaves at a similar nominal weight</title>
+
+  <text x="600" y="40" font-family="Newsreader, serif" font-style="italic" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">three switches, a 10g actuation band, three different strokes</text>
+
+  <!-- Divider lines -->
+  <line x1="400" y1="80" x2="400" y2="420" stroke-opacity="0.15"/>
+  <line x1="800" y1="80" x2="800" y2="420" stroke-opacity="0.15"/>
+
+  <!-- Column 1: Cherry MX2A Red — linear, 45g actuation, 75g bottom-out -->
+  <g>
+    <text x="200" y="100" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">linear</text>
+    <text x="200" y="118" font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">Cherry MX2A Red</text>
+    <!-- axes -->
+    <line x1="100" y1="370" x2="100" y2="150" stroke-opacity="0.3"/>
+    <line x1="100" y1="370" x2="320" y2="370" stroke-opacity="0.3"/>
+    <!-- smooth rising curve -->
+    <path d="M 100 365 C 140 320, 170 260, 190 220" stroke="oklch(0.68 0.165 28)" stroke-width="2.5"/>
+    <path d="M 190 220 C 220 170, 260 140, 300 155" stroke="oklch(0.78 0.005 90)" stroke-width="2"/>
+    <circle cx="190" cy="220" r="6" fill="oklch(0.68 0.165 28)" stroke="none"/>
+    <text x="205" y="212" font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.68 0.165 28)" stroke="none">45g act.</text>
+    <circle cx="300" cy="155" r="5" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2"/>
+    <text x="300" y="140" font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">75g bottom</text>
+    <text x="200" y="400" font-family="Newsreader, serif" font-style="italic" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">one smooth line, no event</text>
+  </g>
+
+  <!-- Column 2: Durock T1 — tactile, 55g actuation, 67g bottom-out, with bump -->
+  <g>
+    <text x="600" y="100" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">tactile</text>
+    <text x="600" y="118" font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">Durock T1</text>
+    <line x1="500" y1="370" x2="500" y2="150" stroke-opacity="0.3"/>
+    <line x1="500" y1="370" x2="720" y2="370" stroke-opacity="0.3"/>
+    <!-- rising curve with bump then dip then rise -->
+    <path d="M 500 365 C 535 325, 555 270, 575 235" stroke="oklch(0.68 0.165 28)" stroke-width="2.5"/>
+    <path d="M 575 235 C 588 215, 600 215, 610 232" stroke="oklch(0.68 0.165 28)" stroke-width="2.5"/>
+    <path d="M 610 232 C 630 200, 660 155, 700 155" stroke="oklch(0.78 0.005 90)" stroke-width="2"/>
+    <circle cx="575" cy="235" r="6" fill="oklch(0.68 0.165 28)" stroke="none"/>
+    <text x="590" y="227" font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.68 0.165 28)" stroke="none">55g act.</text>
+    <circle cx="700" cy="155" r="5" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2"/>
+    <text x="700" y="140" font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">67g bottom</text>
+    <text x="600" y="400" font-family="Newsreader, serif" font-style="italic" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">a bump the finger feels as a shape</text>
+  </g>
+
+  <!-- Column 3: Kailh Box Jade — clicky, 50g actuation, 70g bottom-out, with bump + click mark -->
+  <g>
+    <text x="1000" y="100" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">clicky</text>
+    <text x="1000" y="118" font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">Kailh Box Jade</text>
+    <line x1="900" y1="370" x2="900" y2="150" stroke-opacity="0.3"/>
+    <line x1="900" y1="370" x2="1120" y2="370" stroke-opacity="0.3"/>
+    <path d="M 900 365 C 935 322, 952 268, 970 233" stroke="oklch(0.68 0.165 28)" stroke-width="2.5"/>
+    <path d="M 970 233 C 982 213, 994 213, 1004 230" stroke="oklch(0.68 0.165 28)" stroke-width="2.5"/>
+    <path d="M 1004 230 C 1024 198, 1054 155, 1100 155" stroke="oklch(0.78 0.005 90)" stroke-width="2"/>
+    <circle cx="970" cy="233" r="6" fill="oklch(0.68 0.165 28)" stroke="none"/>
+    <!-- click mark: small burst -->
+    <g stroke="oklch(0.68 0.165 28)" stroke-width="2">
+      <line x1="970" y1="233" x2="960" y2="200"/>
+      <line x1="970" y1="233" x2="980" y2="198"/>
+      <line x1="970" y1="233" x2="990" y2="212"/>
+    </g>
+    <text x="990" y="227" font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.68 0.165 28)" stroke="none">50g act. + click</text>
+    <circle cx="1100" cy="155" r="5" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2"/>
+    <text x="1100" y="140" font-family="JetBrains Mono, monospace" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">70g bottom</text>
+    <text x="1000" y="400" font-family="Newsreader, serif" font-style="italic" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">the same bump, plus an audible snap</text>
+  </g>
+
+  <!-- Caption -->
+  <text x="600" y="446" font-family="Newsreader, serif" font-style="italic" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">45g, 50g, 55g — one actuation band, three different things happening under the finger</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="30" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>
