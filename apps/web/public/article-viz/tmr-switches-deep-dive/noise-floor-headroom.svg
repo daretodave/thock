@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Split diagram of the same travel-depth signal curve against two different noise-floor bands — Hall-effect's wider band crowding the weak-field top of the stroke, TMR's narrower band leaving headroom there</title>
+
+  <line x1="600" y1="80" x2="600" y2="470" stroke-opacity="0.2"/>
+
+  <!-- ═════ LEFT: Hall-effect ═════ -->
+  <text x="300" y="108" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Hall-effect</text>
+  <text x="300" y="130" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.9">noise floor crowds the shallow end</text>
+
+  <!-- Axes -->
+  <line x1="150" y1="150" x2="150" y2="430" stroke-opacity="0.45"/>
+  <text x="120" y="160" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.6">rest</text>
+  <text x="120" y="430" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.6">bottom-out</text>
+
+  <!-- Noise floor band (wide, warm-red tint) covering weak-field top portion -->
+  <rect x="150" y="150" width="130" height="150" fill="oklch(0.62 0.13 25 / 0.22)" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.6"/>
+  <text x="215" y="325" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.9">noise floor</text>
+  <text x="215" y="340" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.9">&gt;100 nT/√Hz</text>
+
+  <!-- Signal curve: weak at rest, strengthening toward bottom-out -->
+  <path d="M 160 160 C 190 220 230 260 290 300 C 360 340 430 380 440 420" stroke="oklch(0.68 0.165 28)" stroke-width="3" fill="none"/>
+  <text x="300" y="455" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">signal strength →</text>
+
+  <!-- Degraded zone callout -->
+  <circle cx="200" cy="195" r="6" fill="oklch(0.62 0.13 25)" stroke="none"/>
+  <text x="300" y="195" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="start" opacity="0.9">signal sits inside the</text>
+  <text x="300" y="211" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="start" opacity="0.9">noise band here</text>
+
+  <!-- ═════ RIGHT: TMR ═════ -->
+  <text x="900" y="108" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">TMR</text>
+  <text x="900" y="130" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">headroom even near the top</text>
+
+  <line x1="750" y1="150" x2="750" y2="430" stroke-opacity="0.45"/>
+  <text x="720" y="160" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.6">rest</text>
+  <text x="720" y="430" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.6">bottom-out</text>
+
+  <!-- Noise floor band (narrow, coral tint) -->
+  <rect x="750" y="150" width="28" height="280" fill="oklch(0.68 0.165 28 / 0.22)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.7"/>
+  <text x="815" y="300" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="start" opacity="0.9">noise floor</text>
+  <text x="815" y="315" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="start" opacity="0.9">0.1–10 nT/√Hz</text>
+
+  <!-- Signal curve, same shape -->
+  <path d="M 760 160 C 790 220 830 260 890 300 C 960 340 1030 380 1040 420" stroke="oklch(0.68 0.165 28)" stroke-width="3" fill="none"/>
+  <text x="900" y="455" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">signal strength →</text>
+
+  <circle cx="800" cy="195" r="6" fill="oklch(0.68 0.165 28)" stroke="none"/>
+  <text x="900" y="195" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="start" opacity="0.95">same weak field, clear</text>
+  <text x="900" y="211" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="start" opacity="0.95">of the noise band</text>
+
+  <!-- Caption strip -->
+  <text x="600" y="510" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.8">same curve, same weak field near the top of the stroke — the narrower floor is what the numbers buy</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

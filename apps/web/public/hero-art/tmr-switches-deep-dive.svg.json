@@ -1,0 +1,36 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-10-10T00:00:00Z",
+  "commit": "4d1784032f968b3dcd538cc148b72f58c113b65e",
+  "kind": "hero-art",
+  "article_slug": "tmr-switches-deep-dive",
+  "article_pillar": "deep-dives",
+  "source": "plan/bearings.md section Article hero art - colorful keyboard SVGs (locked 2026-05-09)",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject; switch-deep-dive -> switch cross-section / housing exploded view",
+  "size": [1200, 750],
+  "brief_summary": "Hero art for the deep-dive piece on how TMR (tunnel magnetoresistance) switches sense a keypress, a more sensitive alternative to Hall-effect sensing used on boards like the Keychron Q16 HE and Cherry MX8.2 TMR. Per the brief, the cross-section foregrounds the sensing layer (magnet in the stem, sensor on the PCB below) rather than generic spring/stem mechanics, and swaps the Hall-effect sibling's field-arc motif for a layered tunnel-junction stack with electrons tunneling straight through the ultra-thin insulating barrier.",
+  "subject": "MX-style switch housing in profile cutaway (plainer than a full mechanical deep-dive: no LED notch or clip-nub detail, since this piece is about sensing not housing mechanics), with a cruciform stem descending through a compression-spring stack to a small coral magnet mounted on the stem's underside with a visible N/S pole split. Below the housing, a slim PCB substrate carries a three-layer TMR sensor stack directly under the magnet (free layer, ultra-thin tunnel barrier, pinned layer), rendered as three stacked coral rectangles with the barrier drawn thinnest. Small coral dot-and-arrow glyphs thread straight down through the barrier layer, standing in for electrons tunneling through the insulator rather than a field arcing through open air. A dashed sensing-gap bracket between the magnet and the stack gestures at TMR's sensitivity claim (usable signal across a narrower gap than a Hall pad needs). A dashed leader connects the stack to a magnified callout in the open right third of the canvas showing the same three-layer stack enlarged, with tier ticks on its left margin naming the layers by position (free / barrier / pinned) without any rendered text.",
+  "splash_color": {
+    "name": "coral",
+    "oklch": "oklch(0.70 0.15 24)"
+  },
+  "accent_color": {
+    "name": "warm-bronze (theme accent)",
+    "oklch": "oklch(0.80 0.135 75)"
+  },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "stroke_weight": "2px",
+  "canvas": "1200x750",
+  "background": "transparent (light-mode safe per house style)",
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": [],
+  "alt": "A cutaway diagram of a mechanical keyboard switch showing a magnet mounted beneath the stem positioned directly above a three-layer sensor stack on the circuit board, with small arrows showing electrons tunneling straight through the stack's thin middle barrier layer, and a magnified callout of the same layered stack enlarged on the right.",
+  "prompt": "Deep-dive pillar piece on TMR (tunnel magnetoresistance) switch sensing. Per the brief's explicit instruction, the subject is the magnet-and-sensor relationship inside the housing rather than a generic mechanical cross-section, since this article is about the sensing layer, not spring/stem mechanics. Reused the family's established switch-profile silhouette and compression-spring ellipse-stack convention from magnetic-switches-deep-dive.svg (the Hall-effect sibling) for housing/stem/spring geometry, but replaced that piece's open-field magnetic arcs with a layered tunnel-junction stack (free / barrier / pinned layers) and straight-through tunneling-electron glyphs, since TMR's sensitivity story is a stacked thin-film sensor reading flux through a barrier, not a coil reading a field arcing through open space. Added a magnified callout of the stack in the open right third of the canvas (dashed leader from a zoom ring on the inline stack) to make the layer structure legible at hero scale without any rendered text. Splash hue is coral, oklch(0.70 0.15 24), chosen per the brief's explicit instruction to avoid reusing the Hall-effect sibling's exact hue (magnetic-switches-deep-dive.svg, muted terracotta hue 45); coral also keeps this piece distinct from the two other TMR-adjacent pieces already in the gallery, keychron-q16-he-8k-ceramic-tmr.svg (ochre, hue 85) and cherry-xtrfy-tmr-pivot.svg (muted terracotta, hue 40), none of which use coral. Brass-bronze theme dot at (1148, 92) per family convention. All XML comments use '=' separator runs only (no '--' runs); verified locally against the svg-validity.test.ts regression guard logic (python xml.dom.minidom parse + manual double-hyphen scan, both clean).",
+  "revision": 1,
+  "outputs": [
+    "apps/web/public/hero-art/tmr-switches-deep-dive.svg",
+    "apps/web/public/hero-art/tmr-switches-deep-dive.svg.json"
+  ],
+  "warnings": []
+}

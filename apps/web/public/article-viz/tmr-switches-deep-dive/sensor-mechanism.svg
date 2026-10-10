@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Split cross-section — a Hall-effect sensor reading a voltage versus a TMR tunnel junction reading a resistance, from the same magnet</title>
+
+  <!-- Divider -->
+  <line x1="600" y1="80" x2="600" y2="520" stroke-opacity="0.2"/>
+
+  <!-- ═════ LEFT: Hall-effect ═════ -->
+  <text x="300" y="108" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Hall-effect</text>
+  <text x="300" y="130" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">voltage ∝ field strength</text>
+
+  <!-- Magnet -->
+  <rect x="264" y="160" width="72" height="26" fill="oklch(0.68 0.165 28 / 0.9)" stroke="oklch(0.68 0.165 28)"/>
+  <text x="300" y="177" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.15 0.01 90)" stroke="none" text-anchor="middle" opacity="0.85">magnet</text>
+
+  <!-- Field lines straight down -->
+  <g stroke="oklch(0.68 0.165 28)" stroke-opacity="0.55" stroke-width="1.75" fill="none">
+    <path d="M 278 186 C 270 230 270 270 282 300"/>
+    <path d="M 300 186 L 300 300"/>
+    <path d="M 322 186 C 330 230 330 270 318 300"/>
+  </g>
+
+  <!-- Sensor plate -->
+  <rect x="250" y="300" width="100" height="18" stroke-opacity="0.9" stroke-width="2.5"/>
+  <text x="300" y="334" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">flat Hall element</text>
+
+  <!-- Arrow down to voltage out -->
+  <line x1="300" y1="318" x2="300" y2="400" stroke-opacity="0.5"/>
+  <path d="M 292 392 L 300 404 L 308 392" stroke-opacity="0.5"/>
+
+  <text x="300" y="440" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">voltage out</text>
+  <line x1="230" y1="460" x2="370" y2="460" stroke-opacity="0.45"/>
+  <rect x="230" y="452" width="90" height="16" fill="oklch(0.68 0.165 28 / 0.55)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.8"/>
+
+  <text x="300" y="495" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">the field itself</text>
+  <text x="300" y="512" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">generates the signal</text>
+
+  <!-- ═════ RIGHT: TMR ═════ -->
+  <text x="900" y="108" font-family="Newsreader, serif" font-size="22" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">TMR — tunnel junction</text>
+  <text x="900" y="130" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.9">resistance ∝ junction alignment</text>
+
+  <!-- Magnet -->
+  <rect x="864" y="160" width="72" height="26" fill="oklch(0.68 0.165 28 / 0.9)" stroke="oklch(0.68 0.165 28)"/>
+  <text x="900" y="177" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.15 0.01 90)" stroke="none" text-anchor="middle" opacity="0.85">magnet</text>
+
+  <!-- Field lines reaching the stack -->
+  <g stroke="oklch(0.68 0.165 28)" stroke-opacity="0.5" stroke-width="1.5" fill="none">
+    <path d="M 878 186 C 872 215 876 240 886 258"/>
+    <path d="M 922 186 C 928 215 924 240 914 258"/>
+  </g>
+
+  <!-- Free layer -->
+  <rect x="850" y="258" width="100" height="16" fill="oklch(0.68 0.165 28 / 0.25)" stroke="oklch(0.68 0.165 28)" stroke-width="2"/>
+  <path d="M 895 266 L 905 260 M 905 260 L 901 260 M 905 260 L 905 264" stroke="oklch(0.68 0.165 28)" stroke-width="2" fill="none"/>
+  <text x="965" y="270" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="start" opacity="0.6">free layer — rotates</text>
+
+  <!-- Insulating barrier -->
+  <rect x="850" y="276" width="100" height="7" stroke-dasharray="3 3" stroke-opacity="0.9" stroke-width="1.75"/>
+  <text x="965" y="283" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="start" opacity="0.6">MgO barrier — a few nm</text>
+
+  <!-- Pinned layer -->
+  <rect x="850" y="285" width="100" height="16" stroke-opacity="0.9" stroke-width="2"/>
+  <path d="M 895 293 L 905 293 M 901 289 L 905 293 L 901 297" stroke-opacity="0.9" stroke-width="2" fill="none"/>
+  <text x="965" y="297" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="start" opacity="0.6">pinned layer — fixed</text>
+
+  <!-- Arrow down to resistance out -->
+  <line x1="900" y1="301" x2="900" y2="400" stroke-opacity="0.5"/>
+  <path d="M 892 392 L 900 404 L 908 392" stroke-opacity="0.5"/>
+
+  <text x="900" y="440" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">resistance out</text>
+  <line x1="815" y1="460" x2="985" y2="460" stroke-opacity="0.45"/>
+  <rect x="815" y="452" width="170" height="16" fill="oklch(0.68 0.165 28 / 0.55)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.8"/>
+
+  <text x="900" y="495" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">the field rotates an alignment;</text>
+  <text x="900" y="512" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">the alignment changes the signal</text>
+
+  <!-- Caption strip -->
+  <text x="600" y="568" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.8">same magnet, same stem travel — two different physical questions asked of the field</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

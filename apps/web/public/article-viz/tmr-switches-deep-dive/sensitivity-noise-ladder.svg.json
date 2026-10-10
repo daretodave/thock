@@ -1,0 +1,26 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-09-27T14:00:00.000Z",
+  "commit": "4d1784032f968b3dcd538cc148b72f58c113b65e",
+  "kind": "inline-viz",
+  "article_slug": "tmr-switches-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "what-the-bigger-number-buys-and-what-it-costs",
+  "brief_summary": "Four-row comparison ladder of component-level sensor specs, Hall-effect versus TMR: sensitivity, noise floor, dynamic range, and bare-sensor power draw. Three rows highlight the TMR cell in coral (sensitivity, noise floor, power draw); the dynamic-range row highlights the Hall-effect cell instead, since Hall tolerates a wider field range before saturating.",
+  "target": "apps/web/public/article-viz/tmr-switches-deep-dive/sensitivity-noise-ladder.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "tmr-switches-deep-dive.mdx § 'What the bigger number buys, and what it costs' — 'TMR's field sensitivity at roughly 100 mV/V/Oe against roughly 0.05 mV/V/Oe for a standard Hall sensor'",
+    "tmr-switches-deep-dive.mdx § 'What the bigger number buys, and what it costs' — 'Noise floor ... above 100 nT/√Hz for a Hall sensor against roughly 0.1–10 nT/√Hz for TMR'",
+    "tmr-switches-deep-dive.mdx § 'What the bigger number buys, and what it costs' — 'Hall sensors tolerate fields up to roughly 10,000 Oersted before saturating, where TMR junctions saturate around 1,000 Oersted'",
+    "tmr-switches-deep-dive.mdx § 'What the bigger number buys, and what it costs' — '5–20 milliamps for Hall against 0.001–0.01 milliamps for TMR'",
+    "https://wiki.dfrobot.com/tutorial/21072 — source of all four comparison figures, cited inline via <Source> in the preceding section"
+  ],
+  "outputs": ["apps/web/public/article-viz/tmr-switches-deep-dive/sensitivity-noise-ladder.svg"],
+  "warnings": []
+}

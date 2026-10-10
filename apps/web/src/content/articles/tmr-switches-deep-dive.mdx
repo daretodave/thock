@@ -1,0 +1,92 @@
+---
+slug: tmr-switches-deep-dive
+title: "What a TMR sensor is actually measuring under a magnetic switch"
+lede: "Keychron's Q16 HE 8K and Cherry's XTRFY TMR boards get covered as a new switch generation. The real change sits a few millimeters below the magnet — a tunnel junction reading field strength through resistance instead of voltage, with a noise floor low enough to matter at the shallow end of the stroke."
+description: "The physics behind TMR magnetic switches — how a tunnel junction differs from a Hall sensor, and why the gap matters for rapid trigger."
+author: thock
+pillar: deep-dives
+tags: [magnetic, tmr, switches, deep-dive]
+publishedAt: '2026-09-27T14:00:00.000Z'
+updatedAt: '2026-09-27T14:00:00.000Z'
+heroImage: /hero-art/tmr-switches-deep-dive.svg
+heroImageAlt: "Split cross-section in a single warm-grey stroke with coral accents. On the left, a Hall-effect sensor: a magnet above a flat sensor plate with field lines bending straight down into it, labelled voltage out. On the right, a tunnel magnetoresistance sensor: the same magnet above a three-layer stack — free layer, thin insulating barrier, pinned layer — with small arrow glyphs showing the free layer's magnetization rotating to track the magnet, labelled resistance out."
+mentionedParts:
+  - id: gateron-magnetic-jade
+    kind: switch
+    slug: gateron-magnetic-jade
+  - id: keychron-q1-he
+    kind: board
+    slug: keychron-q1-he
+  - id: wooting-60he
+    kind: board
+    slug: wooting-60he
+featured: false
+popularityScore: 0
+---
+
+A TMR switch does not feel different from a Hall-effect switch sitting next to it in the same tray — same stem, same spring, same small magnet riding down the barrel on every press. [How Hall-effect switches actually sense a keypress](/article/magnetic-switches-deep-dive) already covers that half of the mechanism in detail. What changes sits a few millimeters below the magnet: not a Hall sensor reading a voltage, but a magnetic tunnel junction reading a resistance. That's a smaller change than the marketing copy on Keychron's and Cherry's recent launches implies, and a more interesting one than "it's just a better Hall sensor" gives it credit for.
+
+Thock has covered TMR arriving on shipped hardware twice this year — [Cherry's XTRFY-branded K5 Pro Compact in July](/article/cherry-xtrfy-tmr-pivot) and [Keychron's ceramic-housed Q16 HE 8K in September](/article/keychron-q16-he-8k-ceramic-tmr) — without either piece explaining what a tunnel junction is or why it reads a field differently than the Hall sensor the rest of the magnetic-switch market standardized on. This is that piece.
+
+## The same magnet, a different question asked of it
+
+<InlineViz
+  src="/article-viz/tmr-switches-deep-dive/sensor-mechanism.svg"
+  alt="Split cross-section. Left panel, Hall-effect: a magnet above a flat sensor plate, coral field lines passing straight through it, labelled Hall voltage proportional to field strength, arrow to voltage out. Right panel, TMR: the same magnet above a three-layer stack — a free layer with a rotating arrow tracking the magnet, a thin insulating barrier, and a pinned layer with a fixed arrow — labelled resistance proportional to junction alignment, arrow to resistance out."
+  caption="Two sensors reading the same magnet. One measures a voltage the field generates. The other measures a resistance the field changes."
+  accent="coral"
+/>
+
+A Hall-effect sensor — the architecture [covered at length elsewhere on this site](/article/magnetic-switches-deep-dive) — is a flat semiconductor element that develops a small voltage across itself when a magnetic field passes through it at right angles to the current flowing through the element. That's the Hall voltage. It's close to proportional to field strength across the sensor's working range, and a controller reads it directly: field strong, voltage high; field weak, voltage low.
+
+<Mono>TMR</Mono> asks a structurally different question of the same field. Instead of reading a voltage the field generates, it reads the electrical resistance of a device whose resistance the field changes. <Source href="https://wiki.dfrobot.com/tutorial/21072">DFRobot's technical overview</Source> describes the core element — a magnetic tunnel junction: two ultra-thin ferromagnetic layers separated by an insulating barrier a few nanometers thick, thin enough that electrons cross it by quantum tunneling rather than any classical conduction path. One layer is pinned in a fixed orientation as a reference. The other is free to rotate with whatever external field reaches it — in a keyboard switch, the field coming off the magnet descending with the stem.
+
+## Inside the junction
+
+When the free layer's magnetization points the same direction as the pinned layer's, electrons tunnel across the barrier relatively easily and the junction's resistance is low. When the magnet's approach has rotated the free layer to point opposite the pinned layer, tunneling becomes far less probable — majority-spin electrons from one layer have to tunnel into minority-spin states in the other — and resistance rises sharply. The magnet's position doesn't generate a voltage directly; it changes an alignment, and the alignment changes a resistance the controller measures by pushing a known current through the junction and reading the voltage drop across it. DFRobot's overview puts that swing — the magnetoresistance ratio — as high as 100% in a well-built junction, calling it a substantially larger per-unit-field effect than the giant-magnetoresistance and anisotropic-magnetoresistance designs that preceded it, and multiples larger still than the plain Hall effect.
+
+That ratio is the whole reason TMR gets talked about as a precision upgrade rather than a lateral move. The same DFRobot source lists TMR's field sensitivity at roughly <Mono>100 mV/V/Oe</Mono> against roughly <Mono>0.05 mV/V/Oe</Mono> for a standard Hall sensor — on the order of a two-thousand-fold difference in how much signal a given change in field strength produces at the sensor's bare output, before any downstream amplification. In keyboard terms: a switch's magnet produces a field that strengthens as the stem descends and weakens as it retreats, and a TMR junction converts a given step of that approach into a far larger swing in measured resistance than a Hall sensor converts into voltage. More signal per unit of magnet travel is, in the most literal sense, a finer-grained reading of where the stem actually is.
+
+## What the bigger number buys, and what it costs
+
+<InlineViz
+  src="/article-viz/tmr-switches-deep-dive/sensitivity-noise-ladder.svg"
+  alt="Four-row comparison ladder of component-level sensor specs, Hall-effect against TMR. Row one, sensitivity: 0.05 mV/V/Oe versus 100 mV/V/Oe, TMR cell highlighted coral. Row two, noise floor: above 100 nanotesla per root-hertz versus 0.1 to 10 nanotesla per root-hertz, TMR cell highlighted coral, lower is quieter. Row three, dynamic range: about 10,000 Oersted versus about 1,000 Oersted, Hall cell highlighted coral this time, higher tolerates stronger fields. Row four, bare-sensor power draw: 5 to 20 milliamps versus 0.001 to 0.01 milliamps, TMR cell highlighted coral."
+  caption="Sourced to DFRobot's TMR technology overview. TMR doesn't win every row — the dynamic-range tradeoff is real, just not relevant inside a switch."
+  accent="coral"
+/>
+
+Sensitivity alone doesn't settle the argument. DFRobot's comparison lists three more figures, and they don't all point the same way. Noise floor — how much of a sensor's own output is static rather than signal — also favors TMR: above <Mono>100 nT/√Hz</Mono> for a Hall sensor against roughly <Mono>0.1–10 nT/√Hz</Mono> for TMR, meaning a TMR junction's resting output is quieter relative to the field it measures, not just more responsive to it. Dynamic range inverts the advantage: Hall sensors tolerate fields up to roughly 10,000 Oersted before saturating, where TMR junctions saturate around 1,000 Oersted — a tenth of the headroom. Power draw favors TMR by a wide margin at the bare-component level — 5–20 milliamps for Hall against 0.001–0.01 milliamps for TMR — though that gap narrows once a board's signal-processing chain sits on top of the sensor.
+
+None of the dynamic-range gap matters inside a keyboard switch specifically, because switch magnets were never going anywhere near 1,000 Oersted to begin with. Keychron's own comparison of the two technologies puts keyboard switch magnets in the range of roughly 50 to 1,000 Gauss — an order of magnitude or two below either sensor's saturation point. The tradeoff is real in applications that need to read genuinely strong fields; it's close to irrelevant a few millimeters from a small switch magnet. What carries over is the sensitivity and noise-floor advantage, and that pair of numbers is what keyboard makers are actually buying when they switch sensing architectures.
+
+## Where the extra headroom actually shows up
+
+<InlineViz
+  src="/article-viz/tmr-switches-deep-dive/noise-floor-headroom.svg"
+  alt="Split diagram of the same travel-depth signal curve, weak at rest and strengthening toward bottom-out. Left panel, Hall-effect: a wide warm-red tinted noise-floor band crowds the top portion of the curve, labelled signal near the noise floor at the shallow end. Right panel, TMR: a much narrower coral-tinted noise-floor band leaves the same top portion of the curve clearly above it, labelled headroom even near the top."
+  caption="Same curve, same weak field near the top of the stroke. The narrower floor is what the sensitivity and noise-floor numbers actually buy."
+  accent="coral"
+/>
+
+The Hall-effect deep dive flagged a specific weak point in that architecture: because field strength falls off rapidly with distance, the curve a Hall sensor reads is easier to resolve precisely near the bottom of the stroke than near the top, where the magnet is farthest away and the field at the sensor is weakest. That's also exactly where noise floor matters most — a weak signal sitting close to the noise floor is the hardest part of any curve to read cleanly. A sensor with a noise floor an order of magnitude or two lower has more usable signal left at that weak-field, shallow-travel end of the stroke before noise starts crowding out the measurement.
+
+That headroom is exactly what [rapid trigger's firmware loop](/article/rapid-trigger-firmware-deep-dive) is fighting when a sensitivity setting gets pushed toward its shallowest end. That piece described the failure mode directly: a tight reset delta has the firmware "watching for a signal barely larger than the noise floor it's swimming in," which is what produces a false double-fire from nothing more than a resting-hand tremor. A lower noise floor doesn't remove that tradeoff — the firmware still decides how much motion counts as a release — but it pushes the point where noise starts to dominate signal further down the travel. The <PartReference id="gateron-magnetic-jade">Gateron Magnetic Jade</PartReference>, whose flux curve that rapid-trigger piece used as its working example — climbing from roughly 120 Gauss at rest to roughly 800 Gauss at bottom-out — is read today by a Hall sensor. A TMR switch reading the equivalent curve isn't reading a different magnet; it's reading the same field with more room between the signal and its own floor.
+
+## The skeptic's case
+
+Set against all of that: Wooting, whose <PartReference id="wooting-60he">60HE</PartReference> is the board the rapid-trigger category still measures itself against, published a direct rebuttal of the TMR-as-upgrade framing, titled, pointedly, <Source href="https://wooting.io/post/hall-effect-vs-tmr-pause-the-funeral">"Hall Effect vs. TMR: Pause The Funeral."</Source> Its argument isn't that the sensitivity numbers are wrong — it's that raw per-sensor sensitivity isn't finished-keyboard performance. TMR sensors, Wooting notes, are typically mounted off-axis from the magnet rather than directly beneath it the way Hall sensors are, which introduces interference the higher marketed sensitivity has to compensate for in the first place — some of the headline advantage is paying for a harder mounting geometry, not winning outright on physics. Once a sensor of either type is calibrated for the field strengths a keyboard switch actually produces, Wooting argues, "both TMR and Hall effect sensors utilise the same sensitivity" in practice, and both can resolve movement as small as 0.02mm with well-optimized firmware. The company concedes the historical noise-floor gap was real — "pre-2020s Hall effect sensors had measurably worse noise performance than TMR sensors" — but says that gap "has largely closed" in current-generation parts, and that noise a user actually notices more often traces to unstable USB power than to the sensor itself.
+
+<Callout type="note" title="Hall-effect camp, Hall-effect maker">
+  Wooting makes Hall-effect boards, which doesn't make the specific claims wrong, but it's worth naming the interest as plainly as TMR's own boosters rarely name theirs. The honest summary sits between the two camps' marketing: component-level physics genuinely favors TMR on sensitivity and noise floor, by the margins DFRobot's figures describe, and a careless Hall-effect implementation will lose to a careful TMR one. A careful Hall-effect implementation, calibrated well and shielded from USB noise, closes most of that gap in practice.
+</Callout>
+
+The sensor choice is a real engineering decision with a real physical basis — it just isn't, on its own, the whole story a spec sheet wants it to be.
+
+## What's actually shipping
+
+The commercial picture is still catching up to the physics. Keychron's own Hall-effect flagship, the <PartReference id="keychron-q1-he">Q1 HE</PartReference>, reached reviewers in April 2026 running the sensor architecture the company spent most of the year mainstreaming; its TMR counterpart, the ceramic-housed Q16 HE 8K, only opened its Kickstarter in September, and reviewer-verified numbers for the new sensor aren't published yet. Cherry's bet runs wider than the single XTRFY K5 Pro Compact this site covered in July — the company's <Source href="https://www.cherry.de/en-gb/product/mx-8-2-pro-tmr-wireless">MX 8.2 Pro TMR Wireless</Source> ships Cherry's own MK-series magnetic switches on the same TMR sensing family, with the product page claiming <Mono>0.01mm</Mono> capture precision. That's a vendor figure, not an independently measured one, and it deserves the same skepticism thock applied to Keychron's own 8K polling claim at launch: a stated target until a reviewer's bench confirms it.
+
+## What to watch
+
+Two threads matter more than any single board's spec sheet. The first is whether independent reviewers — not vendor pages — can actually measure the sensitivity and noise-floor gap DFRobot's component-level figures describe once it's buried inside a finished keyboard's firmware and calibration routine, the exact test Wooting's rebuttal says hasn't happened yet in TMR's favor. The second, flagged already in [thock's look at the Hall-effect plateau](/article/hall-effect-rapid-trigger-plateau), is whether sensor precision becomes the axis the next generation of magnetic-switch marketing actually competes on, now that adjustable actuation is table stakes everywhere. If TMR's physical advantage holds up on the bench the way it holds up on a datasheet, the Hall-effect default that took over the mid-premium tier this year has a genuine successor waiting. If it doesn't — if careful calibration keeps closing the gap the way Wooting argues it already has — TMR settles into a second architecture competing on price and housing material rather than sensor, and the camps framing the hobby already uses for Hall-effect versus TMR cools into the same kind of settled coexistence MX and Topre reached decades ago.

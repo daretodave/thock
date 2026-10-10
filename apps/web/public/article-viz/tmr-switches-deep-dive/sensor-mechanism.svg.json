@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-09-27T14:00:00.000Z",
+  "commit": "4d1784032f968b3dcd538cc148b72f58c113b65e",
+  "kind": "inline-viz",
+  "article_slug": "tmr-switches-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "the-same-magnet-a-different-question-asked-of-it",
+  "brief_summary": "Split cross-section diagram. Left panel, Hall-effect: a magnet above a flat sensor plate, field lines passing straight through it into a voltage-out readout. Right panel, TMR: the same magnet above a three-layer magnetic tunnel junction stack (free layer with a rotating arrow, thin insulating barrier, pinned layer with a fixed arrow) into a resistance-out readout. Visualizes the article's central distinction: a voltage the field generates versus a resistance the field changes.",
+  "target": "apps/web/public/article-viz/tmr-switches-deep-dive/sensor-mechanism.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "tmr-switches-deep-dive.mdx § 'The same magnet, a different question asked of it' — 'A Hall-effect sensor ... develops a small voltage across itself when a magnetic field passes through it ... TMR asks a structurally different question ... it reads the electrical resistance of a device whose resistance the field changes.'",
+    "tmr-switches-deep-dive.mdx § 'Inside the junction' — 'two ultra-thin ferromagnetic layers separated by an insulating barrier a few nanometers thick ... One layer is pinned in a fixed orientation as a reference. The other is free to rotate with whatever external field reaches it.'",
+    "https://wiki.dfrobot.com/tutorial/21072 — magnetic tunnel junction structure (free layer, insulating barrier, pinned layer) and spin-dependent tunneling mechanism, cited inline via <Source>"
+  ],
+  "outputs": ["apps/web/public/article-viz/tmr-switches-deep-dive/sensor-mechanism.svg"],
+  "warnings": []
+}

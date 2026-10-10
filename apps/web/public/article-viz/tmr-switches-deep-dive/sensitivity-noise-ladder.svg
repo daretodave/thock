@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Four-row comparison ladder of component-level sensor specs: sensitivity, noise floor, dynamic range, and bare-sensor power draw, Hall-effect against TMR</title>
+
+  <text x="600" y="50" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">component-level sensor specs</text>
+
+  <!-- Column headers -->
+  <text x="520" y="92" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">Hall-effect</text>
+  <text x="840" y="92" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">TMR</text>
+  <line x1="60" y1="105" x2="1140" y2="105" stroke-opacity="0.3"/>
+
+  <!-- Row 1: Sensitivity -->
+  <text x="60" y="152" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="start" opacity="0.85">sensitivity</text>
+  <text x="60" y="170" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="start" opacity="0.5">signal per unit field — higher is finer-grained</text>
+  <rect x="420" y="130" width="200" height="34" rx="4" stroke-opacity="0.4"/>
+  <text x="520" y="152" font-family="JetBrains Mono, monospace" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.8">0.05 mV/V/Oe</text>
+  <rect x="740" y="130" width="200" height="34" rx="4" fill="oklch(0.68 0.165 28 / 0.18)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.85"/>
+  <text x="840" y="152" font-family="JetBrains Mono, monospace" font-size="15" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">100 mV/V/Oe</text>
+  <line x1="60" y1="184" x2="1140" y2="184" stroke-opacity="0.12"/>
+
+  <!-- Row 2: Noise floor -->
+  <text x="60" y="226" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="start" opacity="0.85">noise floor</text>
+  <text x="60" y="244" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="start" opacity="0.5">static in the output — lower is quieter</text>
+  <rect x="420" y="204" width="200" height="34" rx="4" stroke-opacity="0.4"/>
+  <text x="520" y="226" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.8">&gt;100 nT/√Hz</text>
+  <rect x="740" y="204" width="200" height="34" rx="4" fill="oklch(0.68 0.165 28 / 0.18)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.85"/>
+  <text x="840" y="226" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">0.1–10 nT/√Hz</text>
+  <line x1="60" y1="258" x2="1140" y2="258" stroke-opacity="0.12"/>
+
+  <!-- Row 3: Dynamic range -->
+  <text x="60" y="300" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="start" opacity="0.85">dynamic range</text>
+  <text x="60" y="318" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="start" opacity="0.5">field before saturation — higher tolerates stronger fields</text>
+  <rect x="420" y="278" width="200" height="34" rx="4" fill="oklch(0.68 0.165 28 / 0.18)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.85"/>
+  <text x="520" y="300" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">~10,000 Oe</text>
+  <rect x="740" y="278" width="200" height="34" rx="4" stroke-opacity="0.4"/>
+  <text x="840" y="300" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.8">~1,000 Oe</text>
+  <text x="1000" y="300" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="start" opacity="0.55">(Hall wins here)</text>
+  <line x1="60" y1="332" x2="1140" y2="332" stroke-opacity="0.12"/>
+
+  <!-- Row 4: Power draw -->
+  <text x="60" y="374" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="start" opacity="0.85">power draw</text>
+  <text x="60" y="392" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="start" opacity="0.5">bare sensor, before signal chain — lower draws less</text>
+  <rect x="420" y="352" width="200" height="34" rx="4" stroke-opacity="0.4"/>
+  <text x="520" y="374" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.8">5–20 mA</text>
+  <rect x="740" y="352" width="200" height="34" rx="4" fill="oklch(0.68 0.165 28 / 0.18)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.85"/>
+  <text x="840" y="374" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.95">0.001–0.01 mA</text>
+
+  <!-- Caption strip -->
+  <text x="600" y="455" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.8">TMR doesn't win every row — dynamic range favors Hall, just not inside a switch</text>
+  <text x="600" y="478" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">source: DFRobot TMR sensor technology overview</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="30" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

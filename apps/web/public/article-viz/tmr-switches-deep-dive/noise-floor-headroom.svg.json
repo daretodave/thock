@@ -1,0 +1,25 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-09-27T14:00:00.000Z",
+  "commit": "4d1784032f968b3dcd538cc148b72f58c113b65e",
+  "kind": "inline-viz",
+  "article_slug": "tmr-switches-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "where-the-extra-headroom-actually-shows-up",
+  "brief_summary": "Split schematic of the same travel-depth signal curve (weak at rest, strengthening toward bottom-out) plotted against two noise-floor bands. The Hall-effect panel shows a wide band crowding the weak-field top portion of the curve; the TMR panel shows the same curve against a much narrower band, leaving clear headroom at the same weak-field point. Visualizes why a lower noise floor specifically helps resolution at the shallow end of the stroke.",
+  "target": "apps/web/public/article-viz/tmr-switches-deep-dive/noise-floor-headroom.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "caution_color": { "name": "warm-red (down token)", "oklch": "oklch(0.62 0.13 25)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "apps/web/src/content/articles/magnetic-switches-deep-dive.mdx § 'How the Hall-effect sensor reads the press' — 'The voltage curve is steeper near the bottom of the press than near the top, because magnetic field strength falls off rapidly with distance ... the sensor can distinguish 2.9mm from 3.0mm more reliably than it can distinguish 0.4mm from 0.5mm.'",
+    "tmr-switches-deep-dive.mdx § 'Where the extra headroom actually shows up' — 'A sensor with a noise floor an order of magnitude or two lower has more usable signal left at that weak-field, shallow-travel end of the stroke before noise starts crowding out the measurement.'",
+    "https://wiki.dfrobot.com/tutorial/21072 — noise floor figures (>100 nT/√Hz Hall, 0.1–10 nT/√Hz TMR) reused from the sensitivity-noise-ladder viz's data_sources"
+  ],
+  "outputs": ["apps/web/public/article-viz/tmr-switches-deep-dive/noise-floor-headroom.svg"],
+  "warnings": []
+}
