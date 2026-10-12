@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Two-line chart, W38 through W42. Hall-effect/Rapid Trigger holds flat near the top at 97, 98, 98, 99, 100. TMR climbs from 55 to 63, 71, 85, 90. The gap between the lines narrows from 42 points at W38 to 10 points at W42.</title>
+
+  <text x="600" y="38" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">TMR vs. Hall-effect/Rapid Trigger — Trends Tracker, W38 &#8594; W42</text>
+
+  <!-- Chart area: x 200-1040, y 100 (score 100) to 370 (score 0) -->
+  <line x1="180" y1="370" x2="1080" y2="370" stroke-opacity="0.4" stroke-width="1.5"/>
+  <line x1="180" y1="289" x2="1080" y2="289" stroke-opacity="0.12"/>
+  <line x1="180" y1="208" x2="1080" y2="208" stroke-opacity="0.12"/>
+  <line x1="180" y1="127" x2="1080" y2="127" stroke-opacity="0.12"/>
+
+  <!-- Y-axis labels -->
+  <text x="168" y="374" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.45">0</text>
+  <text x="168" y="293" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.4">30</text>
+  <text x="168" y="212" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.4">60</text>
+  <text x="168" y="131" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.4">90</text>
+
+  <!-- Hall-effect/Rapid Trigger line: flat near ceiling, warm-grey, dashed -->
+  <polyline points="200,108 410,105 620,105 830,103 1040,100" stroke="oklch(0.78 0.005 90)" stroke-width="2.5" stroke-opacity="0.65" stroke-dasharray="6 5"/>
+  <circle cx="200" cy="108" r="4" fill="oklch(0.78 0.005 90)" opacity="0.55"/>
+  <circle cx="410" cy="105" r="4" fill="oklch(0.78 0.005 90)" opacity="0.55"/>
+  <circle cx="620" cy="105" r="4" fill="oklch(0.78 0.005 90)" opacity="0.55"/>
+  <circle cx="830" cy="103" r="4" fill="oklch(0.78 0.005 90)" opacity="0.55"/>
+  <circle cx="1040" cy="100" r="5" fill="oklch(0.78 0.005 90)" opacity="0.7"/>
+  <text x="1055" y="96" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">100</text>
+
+  <!-- TMR line: climbing, coral, solid -->
+  <polygon points="200,222 410,200 620,178 830,141 1040,127 1040,370 200,370" fill="oklch(0.68 0.165 28 / 0.08)" stroke="none"/>
+  <polyline points="200,222 410,200 620,178 830,141 1040,127" stroke="oklch(0.68 0.165 28)" stroke-width="3.5" fill="none"/>
+  <circle cx="200" cy="222" r="5" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.75"/>
+  <circle cx="410" cy="200" r="5" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.8"/>
+  <circle cx="620" cy="178" r="5" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.85"/>
+  <circle cx="830" cy="141" r="5" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.9"/>
+  <circle cx="1040" cy="127" r="10" fill="oklch(0.68 0.165 28)" stroke="none"/>
+  <text x="1055" y="131" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" font-weight="600">90</text>
+
+  <!-- Gap bracket, W38 -->
+  <line x1="200" y1="108" x2="200" y2="222" stroke-opacity="0.35" stroke-dasharray="3 4"/>
+  <text x="212" y="170" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">42 pts</text>
+
+  <!-- Gap bracket, W42 -->
+  <line x1="1040" y1="100" x2="1040" y2="127" stroke-opacity="0.45" stroke-dasharray="3 4"/>
+  <text x="940" y="118" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.85" text-anchor="end">10 pts</text>
+
+  <!-- X-axis week labels -->
+  <text x="200"  y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">W38</text>
+  <text x="410"  y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">W39</text>
+  <text x="620"  y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">W40</text>
+  <text x="830"  y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">W41</text>
+  <text x="1040" y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.9">W42</text>
+
+  <!-- Legend -->
+  <line x1="420" y1="422" x2="450" y2="422" stroke="oklch(0.78 0.005 90)" stroke-width="2.5" stroke-dasharray="6 5" stroke-opacity="0.65"/>
+  <text x="458" y="426" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">Hall-effect/Rapid Trigger</text>
+  <line x1="700" y1="422" x2="730" y2="422" stroke="oklch(0.68 0.165 28)" stroke-width="3"/>
+  <text x="738" y="426" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.85">TMR</text>
+
+  <!-- Bronze theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

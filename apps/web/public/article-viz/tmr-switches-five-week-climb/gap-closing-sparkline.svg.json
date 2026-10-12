@@ -1,0 +1,27 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-09-30T14:00:00.000Z",
+  "commit": "pending",
+  "kind": "inline-viz",
+  "article_slug": "tmr-switches-five-week-climb",
+  "article_pillar": "trends",
+  "section_anchor": "Five readings, one shrinking gap",
+  "brief_summary": "Two-line chart comparing the TMR and Hall-effect/Rapid Trigger Trends Tracker scores across W38 through W42. Hall-effect holds flat near the top (97, 98, 98, 99, 100); TMR climbs steadily (55, 63, 71, 85, 90). Gap brackets at the first and last weeks show the distance narrowing from 42 points to 10 points.",
+  "target": "apps/web/public/article-viz/tmr-switches-five-week-climb/gap-closing-sparkline.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "data/trends/2026-W38.json:rows — 'Hall Effect/Rapid Trigger' score 97; 'TMR (Tunnel Magnetoresistance) switches' score 55",
+    "data/trends/2026-W39.json:rows — 'Hall Effect/Rapid Trigger' score 98; 'TMR (Tunnel Magnetoresistance) switches' score 63",
+    "data/trends/2026-W40.json:rows — 'Hall Effect/Rapid Trigger' score 98; 'TMR (Tunnel Magnetoresistance) switches' score 71",
+    "data/trends/2026-W41.json:rows — 'Hall Effect/Rapid Trigger' score 99; 'TMR (Tunnel Magnetoresistance) switches' score 85",
+    "data/trends/2026-W42.json:rows — 'Hall Effect/Rapid Trigger' score 100; 'TMR (Tunnel Magnetoresistance) switches' score 90",
+    "apps/web/src/content/articles/tmr-switches-five-week-climb.mdx:Five readings, one shrinking gap — 'The gap is now 10 points... Hall-effect hasn't lost a single point in this window'"
+  ],
+  "outputs": ["apps/web/public/article-viz/tmr-switches-five-week-climb/gap-closing-sparkline.svg"],
+  "warnings": []
+}

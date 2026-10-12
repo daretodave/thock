@@ -1,0 +1,64 @@
+---
+title: "TMR is closing the gap on Hall-effect. It hasn't caught it."
+slug: tmr-switches-five-week-climb
+pillar: trends
+publishedAt: '2026-09-30T14:00:00.000Z'
+updatedAt: '2026-09-30T14:00:00.000Z'
+author: thock
+lede: "TMR switches have climbed every week on thock's trend tracker from W38 through W42 — 55, 63, 71, 85, 90. That's the second-highest score on this week's board, and the gap behind Hall-effect's ceiling has gone from 42 points to 10 in five readings."
+heroImage: /hero-art/tmr-switches-five-week-climb.svg
+heroImageAlt: "A coral sparkline climbing steadily across five data points toward a flat warm-grey ceiling line near the top of the frame, the gap between the two narrowing from left to right, plotted beside a muted cross-section motif of a magnet over a sensor pad, with a small warm-bronze theme dot in the upper-right margin."
+tags: [tmr, magnetic, hall-effect, rapid-trigger, keychron]
+mentionedParts: []
+featured: false
+popularityScore: 0
+---
+
+Five tracker readings in a row, all pointed the same direction, is not noise. On thock's [Trends Tracker](/trends/tracker), TMR (tunnel-magnetoresistance) switches have posted an "up" score every single week from W38 through W42: 55, 63, 71, 85, 90. That last number is the second-highest score on the entire [2026-W42 snapshot](/trends/tracker/2026-W42) — trailing only Hall-effect/Rapid Trigger, which sits at a ceiling-pinned 100. Every one of those five weekly rows has credited its movement to the same single piece of coverage: Keychron's ceramic-TMR Q16 HE 8K launch. That's one product driving a category-wide number for over a month. It's worth asking what's actually moving, and whether TMR is doing anything more than riding one vendor's press cycle.
+
+Hall-effect and rapid-trigger sensing already won the broader magnetic-switch conversation this year, holding a flat score near 100 for weeks running rather than still climbing toward it. TMR arrives into that landscape as the second wave, not the first — a technology trying to carve out room inside a category Hall-effect already defined. The question this piece asks is narrower and more answerable than "will TMR win": is the five-week climb a real second act, or just one brand's launch calendar dressed up as a trend.
+
+## Five readings, one shrinking gap
+
+<InlineViz
+  src="/article-viz/tmr-switches-five-week-climb/gap-closing-sparkline.svg"
+  alt="Two-line chart over five weekly tracker readings, W38 through W42. A flat warm-grey line near the top of the chart represents Hall-effect/Rapid Trigger, holding at 97, 98, 98, 99, and 100. A rising coral line represents TMR, climbing from 55 to 63 to 71 to 85 to 90. Vertical brackets at the first and last weeks mark the gap between the two lines, labelled 42 points at W38 and 10 points at W42."
+  caption="Hall-effect barely moved. TMR closed thirty-two points of distance in five weeks."
+  accent="coral"
+/>
+
+Line the two scores up and the shape of the story gets sharper. Hall-effect/Rapid Trigger was already near its ceiling at W38 — 97 — and has crept up one or two points a week since, landing at 100 in W42 per the same snapshot. TMR started that window at 55, a full 42 points behind, and has gained ground every week since: 63, 71, 85, 90. The gap is now 10 points. That's catching up from behind, not overtaking — Hall-effect hasn't lost a single point in this window, it's simply run out of room to climb further on a 0–100 scale. TMR is the one doing the work.
+
+<Callout type="note" title="One article has been carrying five weeks of tracker movement">
+  The TMR row has pointed at the same news piece — ["Keychron launches Q16 HE 8K with ceramic-TMR magnetic switches"](/article/keychron-q16-he-8k-ceramic-tmr) — through W39, W40, W41, and W42. That's a one-vendor launch doing category-level narrative duty for over a month. This piece is the category-wide read that row has been missing.
+</Callout>
+
+## What a tunneling junction is reading that a Hall sensor isn't
+
+Both Hall-effect and TMR switches work the same way at the mechanical level: a magnet rides down the stem, and a fixed sensor on the PCB reads its approach instead of waiting for a physical contact to close. Where they differ is in what that sensor actually measures. A Hall sensor reads a voltage that the magnetic field generates directly across a semiconductor element. A TMR sensor instead reads the electrical resistance of a tunnel junction — two magnetic layers separated by a barrier a few atoms thick — and that resistance changes as the approaching magnet rotates one of those layers. Vendors marketing TMR switches claim that arrangement resolves smaller changes in magnet position at the same travel distance than a Hall sensor can. That's a vendor-stated claim at this point, not an independently verified one, and thock's own [deep dive into TMR's sensor mechanism](/article/tmr-switches-deep-dive) covers the physics — and a direct rebuttal from Hall-effect's own category leader — in far more depth than belongs in a trends piece.
+
+<InlineViz
+  src="/article-viz/tmr-switches-five-week-climb/sensing-comparison.svg"
+  alt="Two side-by-side labelled boxes. The left box, muted grey, is labelled Hall-effect: magnet approach generates a voltage, sensor reads voltage directly. The right box, coral, is labelled TMR: magnet approach rotates a layer inside a tunnel junction, sensor reads a change in resistance. A small caption beneath both boxes reads vendor-stated finer resolution claim, not yet independently verified."
+  caption="Same magnet, same stem. A different physical property read on the way down."
+  accent="coral"
+/>
+
+## Who's actually moving
+
+A single vendor's launch anchoring every tracker row is a fair reason for skepticism, but TMR isn't a single-vendor story — it's just that the tracker's linkage hasn't caught up to the second data point. Cherry's gaming sub-brand XTRFY got there first: on July 3, 2026, it shipped the <Mono>K5 Pro Compact</Mono> around a <Mono>MK Crystal TMR</Mono> switch, which thock covered at the time as [a legacy MX manufacturer hedging into a category it had already lost ground in](/article/cherry-xtrfy-tmr-pivot). That was a catch-up move from a brand whose mainline MX switch line was bleeding tracker share to magnetic switches generally. Keychron's September 7 Q16 HE 8K launch is a different kind of signal entirely — it's the category's own Hall-effect standard-bearer choosing to bet on the technology that's supposed to supersede the one it built its own dominance on, from a position of strength rather than catch-up.
+
+<InlineViz
+  src="/article-viz/tmr-switches-five-week-climb/brand-timeline.svg"
+  alt="Two-panel horizontal timeline. Panel one, dated July 3 2026, shows Cherry XTRFY K5 Pro Compact, labelled catch-up: trailing brand adopts TMR. Panel two, dated September 7 2026 and highlighted in coral, shows Keychron Q16 HE 8K, labelled category leader adopts TMR, anchors every tracker row since. A dashed arrow runs beneath both panels toward October 2026, labelled W42 tracker score 90."
+  caption="Two different brands, two different reasons to bet on the same sensor technology, nine weeks apart."
+  accent="coral"
+/>
+
+That two brands at opposite ends of the market pressure spectrum both landed on TMR independently is more interesting than either launch alone. It suggests the appeal isn't limited to a vendor trying to manufacture a headline.
+
+## Closing the gap, not crossing it
+
+None of this should read as a call that TMR is about to replace Hall-effect. thock's own [look at the Hall-effect/Rapid Trigger plateau](/article/hall-effect-rapid-trigger-plateau) made the case in August that a flat line at the top of the tracker's scale is what "already won" looks like, not what "starting to lose" looks like — and nothing in the five weeks since has changed that read. Hall-effect hasn't ceded a single point this window; it's gained two, from 98 to 100. A five-week climb on one emerging sensor technology, anchored almost entirely to one brand's launch cycle, is a real signal worth naming. It is not a sustained, multi-brand verdict yet, and the honest version of this piece says so plainly: it's too early to call this a shift away from Hall-effect. Keychron's Kickstarter enthusiasm can cool the way any single-product bump can; XTRFY's TMR bet still hasn't produced a second SKU in the three months since, by this site's own count. The tracker row's reliance on one article is itself evidence the category's coverage is still thin.
+
+What would change that read is a third brand committing to TMR independent of either Keychron's or Cherry's launch cycles, or Keychron following the Q16 HE 8K with a second TMR board the way it did twice over with Hall-effect before that technology became the category default. Either would turn a five-week climb into the start of a pattern instead of one company's press cycle measured five times. The [Trends Tracker](/trends/tracker) carries that row forward week to week; whether the gap keeps closing, stalls short of Hall-effect's ceiling, or reverses is a question the next several snapshots will answer on their own schedule, not one this piece needs to guess at today.

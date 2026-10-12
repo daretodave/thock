@@ -21,6 +21,16 @@
       }
     },
     {
+      "slug": "tmr-switches-five-week-climb",
+      "readTime": 6,
+      "frontmatter": {
+        "title": "TMR is closing the gap on Hall-effect. It hasn't caught it.",
+        "lede": "TMR switches have climbed every week on thock's trend tracker from W38 through W42 — 55, 63, 71, 85, 90. That's the second-highest score on this week's board, and the gap behind Hall-effect's ceiling has gone from 42 points to 10 in five readings.",
+        "pillar": "trends",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "tmr-switches-deep-dive",
       "readTime": 10,
       "frontmatter": {
@@ -9348,5 +9358,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-10-12T07:18:41.985Z"
+  "generatedAt": "2026-10-12T16:52:30.646Z"
 }

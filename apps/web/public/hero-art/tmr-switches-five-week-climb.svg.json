@@ -1,0 +1,39 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-10-12T00:00:00Z",
+  "commit": "c08a738089bf32bed18e774420ee9c5aa6aa3f9d",
+  "kind": "hero-art",
+  "article_slug": "tmr-switches-five-week-climb",
+  "article_pillar": "trends",
+  "brief_summary": "Hero art for the Trends pillar piece on TMR (tunnel-magnetoresistance) switches climbing on the trend tracker for five straight weeks (W38 to W42, scores roughly 55 to 90). A five-point sparkline climbs left to right across the whole canvas in the splash hue, with a small muted magnetic-switch cross-section (stem, magnet, sensing gap, sensor pad on the PCB) kept secondary at upper left per the brief's optional technical-motif pairing.",
+  "target": "apps/web/public/hero-art/tmr-switches-five-week-climb.svg",
+  "source": "plan/bearings.md section Article hero art, colorful keyboard SVGs (locked 2026-05-09), trends piece maps to sparkline silhouette",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject; trends piece -> sparkline silhouette, optionally paired with a secondary technical motif (cf. cherry-xtrfy-tmr-pivot.svg)",
+  "size": [1200, 750],
+  "subject": "A five-point sparkline (W38 through W42) climbing left to right, rendered entirely in the splash hue rather than only at the terminus, since the five-week climb itself is the article's subject: interior points as filled dots, the W42 point enlarged with a halo ring plus a small trajectory chevron signaling the climb continues past the frame, and a low-opacity splash wash filling the area beneath the ascending line down to the baseline. A baseline axis with five per-week tick marks runs beneath the chart. At upper left, out of the sparkline's path, a small muted magnetic-switch cross-section (simplified single-volume housing, a stem descending to a splash-filled magnet, a dashed sensing gap, and a splash-filled sensor pad on a PCB line) sits at reduced group opacity so it reads as a supporting technical cue rather than the piece's subject.",
+  "splash_color": {
+    "name": "dusty rose",
+    "oklch": "oklch(0.63 0.095 9)"
+  },
+  "accent_color": {
+    "name": "warm-bronze (theme accent)",
+    "oklch": "oklch(0.80 0.135 75)"
+  },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "stroke_weight": "2px (3px on the sparkline polyline itself, matching the family's emphasis convention for the focal trajectory, cf. cherry-tracker-slide-keychron-kickstarter-delivers.svg)",
+  "canvas": "1200x750",
+  "background": "transparent (light-mode safe per house style)",
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": [],
+  "alt": "A sparkline chart showing five weekly points climbing steadily upward from lower left to upper right in a dusty-rose color, with a small muted diagram of a magnetic switch cross-section, showing a stem, a magnet, and a sensor pad, in the upper left corner.",
+  "notes": "Splash hue dusty rose chosen from the brief's allowed set {coral, dusty rose, ochre, muted terracotta}: this piece's closest TMR siblings already use coral (tmr-switches-deep-dive.svg, hue 24) and muted terracotta (cherry-xtrfy-tmr-pivot.svg, hue 40), and keychron-q16-he-8k-ceramic-tmr.svg uses ochre (hue 85), so dusty rose keeps this piece visually distinct within the TMR cluster. Value oklch(0.63 0.095 9) chosen to sit clear of the dusty-rose hues already in rotation across the broader corpus (12, 14, 15, 16, 18, 20). All five data points are illustrative of an ascending five-week trend per the brief (W38 through W42, roughly 55 to 90); exact y-coordinates are a stylized smooth climb, not a pixel-literal plot, consistent with family convention for sparkline hero art (cf. cherry-tracker-slide-keychron-kickstarter-delivers.svg's own warning note on stylized interpolation). No rendered text anywhere in the file; the climb and the secondary switch motif carry the subject without labels, per family convention for the trends-pillar sparkline pieces. All XML comments use single-hyphen text only (no double-hyphen runs) per the svg-validity.test.ts regression guard at apps/web/src/__tests__/svg-validity.test.ts; verified locally with a minidom parse plus a manual double-hyphen scan, both clean.",
+  "data_sources": [
+    "brief: TMR switches climbing on the trend tracker for five straight weeks, W38 to W42, scores roughly 55, 63, 71, 85, 90"
+  ],
+  "outputs": [
+    "apps/web/public/hero-art/tmr-switches-five-week-climb.svg",
+    "apps/web/public/hero-art/tmr-switches-five-week-climb.svg.json"
+  ],
+  "warnings": []
+}

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — TMR tracker sparkline climbing toward Hall-effect's flat ceiling, narrowing gap, five weekly readings</title>
+
+  <!-- Coral wash beneath the climbing TMR line, the visual center of gravity -->
+  <ellipse cx="760" cy="300" rx="320" ry="160" fill="oklch(0.68 0.165 28 / 0.09)" stroke="none"/>
+
+  <!-- Ceiling reference line: Hall-effect, flat near the top, dashed -->
+  <line x1="120" y1="180" x2="1080" y2="178" stroke-dasharray="4 5" stroke-opacity="0.45"/>
+  <circle cx="120" cy="180" r="4" fill="oklch(0.78 0.005 90)" opacity="0.5"/>
+  <circle cx="1080" cy="178" r="5" fill="oklch(0.78 0.005 90)" opacity="0.6"/>
+
+  <!-- Baseline axis -->
+  <line x1="120" y1="640" x2="1080" y2="640" stroke-opacity="0.3"/>
+  <g stroke-opacity="0.3">
+    <line x1="160"  y1="635" x2="160"  y2="645"/>
+    <line x1="400"  y1="635" x2="400"  y2="645"/>
+    <line x1="640"  y1="635" x2="640"  y2="645"/>
+    <line x1="880"  y1="635" x2="880"  y2="645"/>
+    <line x1="1040" y1="635" x2="1040" y2="645"/>
+  </g>
+
+  <!-- TMR sparkline: five weekly readings climbing from 55 to 90, narrowing the gap to the ceiling -->
+  <polyline
+    points="160,490 400,430 640,380 880,290 1040,250"
+    stroke="oklch(0.68 0.165 28)"
+    stroke-width="3.5"
+    fill="none"
+  />
+  <circle cx="160"  cy="490" r="5" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.7"/>
+  <circle cx="400"  cy="430" r="5" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.75"/>
+  <circle cx="640"  cy="380" r="5" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.85"/>
+  <circle cx="880"  cy="290" r="5" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.92"/>
+
+  <!-- Focal terminal dot -->
+  <circle cx="1040" cy="250" r="10" fill="oklch(0.68 0.165 28)" stroke="none"/>
+  <circle cx="1040" cy="250" r="18" fill="none" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.35" stroke-width="1.5"/>
+
+  <!-- Narrowing-gap bracket at the terminal point -->
+  <line x1="1040" y1="178" x2="1040" y2="250" stroke-opacity="0.4" stroke-dasharray="3 4"/>
+
+  <!-- Muted cross-section motif: magnet over a sensor pad, lower-left, kept abstract -->
+  <g opacity="0.55">
+    <rect x="150" y="560" width="70" height="40" rx="6"/>
+    <line x1="185" y1="600" x2="185" y2="520"/>
+    <rect x="165" y="495" width="40" height="26" rx="4"/>
+  </g>
+
+  <!-- Bronze theme dot -->
+  <circle cx="1148" cy="62" r="7" fill="oklch(0.80 0.135 75)" opacity="0.9"/>
+</svg>

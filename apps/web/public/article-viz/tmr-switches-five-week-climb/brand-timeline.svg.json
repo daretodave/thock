@@ -1,0 +1,25 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-09-30T14:00:00.000Z",
+  "commit": "pending",
+  "kind": "inline-viz",
+  "article_slug": "tmr-switches-five-week-climb",
+  "article_pillar": "trends",
+  "section_anchor": "Who's actually moving",
+  "brief_summary": "Two-panel horizontal timeline contrasting Cherry XTRFY's July 3, 2026 K5 Pro Compact launch (a catch-up move from a trailing brand) against Keychron's September 7, 2026 Q16 HE 8K launch (the category leader adopting TMR from a position of strength), with an arrow pointing to the W42 tracker score of 90 that the Keychron launch has anchored since.",
+  "target": "apps/web/public/article-viz/tmr-switches-five-week-climb/brand-timeline.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "apps/web/src/content/articles/cherry-xtrfy-tmr-pivot.mdx:frontmatter lede — 'On July 3, 2026, Cherry's gaming sub-brand XTRFY answered... with a magnetic-sensing switch'",
+    "apps/web/src/content/articles/keychron-q16-he-8k-ceramic-tmr.mdx:frontmatter publishedAt '2026-09-07' and lede — 'Keychron's Q-series just picked up a Kickstarter campaign, a ceramic-housed TMR magnetic switch'",
+    "data/trends/2026-W42.json:rows — 'TMR (Tunnel Magnetoresistance) switches' score 90, articleSlug 'keychron-q16-he-8k-ceramic-tmr'",
+    "apps/web/src/content/articles/tmr-switches-five-week-climb.mdx:Who's actually moving — 'Keychron's September 7 Q16 HE 8K launch is a different kind of signal entirely'"
+  ],
+  "outputs": ["apps/web/public/article-viz/tmr-switches-five-week-climb/brand-timeline.svg"],
+  "warnings": []
+}

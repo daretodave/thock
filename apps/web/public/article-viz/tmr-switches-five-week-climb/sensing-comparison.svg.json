@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-09-30T14:00:00.000Z",
+  "commit": "pending",
+  "kind": "inline-viz",
+  "article_slug": "tmr-switches-five-week-climb",
+  "article_pillar": "trends",
+  "section_anchor": "What a tunneling junction is reading that a Hall sensor isn't",
+  "brief_summary": "Two side-by-side labelled boxes contrasting Hall-effect sensing (magnet approach generates a voltage, sensor reads voltage directly) against TMR sensing (magnet approach rotates a layer inside a tunnel junction, sensor reads a resistance change), with a caption flagging the finer-resolution claim as vendor-stated rather than independently verified.",
+  "target": "apps/web/public/article-viz/tmr-switches-five-week-climb/sensing-comparison.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "apps/web/src/content/articles/tmr-switches-five-week-climb.mdx:What a tunneling junction is reading that a Hall sensor isn't — 'A Hall sensor reads a voltage that the magnetic field generates directly... A TMR sensor instead reads the electrical resistance of a tunnel junction... Vendors marketing TMR switches claim that arrangement resolves smaller changes in magnet position... That's a vendor-stated claim at this point, not an independently verified one'",
+    "apps/web/src/content/articles/tmr-switches-deep-dive.mdx:'Inside the junction' — tunnel-junction resistance mechanism, cited for the underlying physics this trends piece summarizes briefly"
+  ],
+  "outputs": ["apps/web/public/article-viz/tmr-switches-five-week-climb/sensing-comparison.svg"],
+  "warnings": []
+}

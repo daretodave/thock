@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Two-panel horizontal timeline. Panel one, dated July 3 2026: Cherry XTRFY K5 Pro Compact, labelled catch-up, trailing brand adopts TMR. Panel two, dated September 7 2026, highlighted in coral: Keychron Q16 HE 8K, labelled category leader adopts TMR, anchors every tracker row since. A dashed arrow runs beneath both panels toward October 2026, labelled W42 tracker score 90.</title>
+
+  <!-- Bronze theme dot -->
+  <circle cx="1170" cy="30" r="6" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+
+  <text x="600" y="42" font-family="Newsreader, serif" font-style="italic" font-size="18" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">Two brands, two different reasons to bet on TMR</text>
+
+  <!-- Panel divider -->
+  <line x1="600" y1="90" x2="600" y2="340" stroke-dasharray="5 5" opacity="0.2"/>
+
+  <!-- Panel 1: Cherry XTRFY, July 3 2026, muted -->
+  <text x="300" y="112" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">JULY 3, 2026</text>
+  <rect x="140" y="128" width="320" height="130" rx="10" opacity="0.75"/>
+  <g opacity="0.65">
+    <rect x="170" y="150" width="14" height="14" rx="2"/>
+    <rect x="192" y="150" width="14" height="14" rx="2"/>
+    <rect x="214" y="150" width="14" height="14" rx="2"/>
+    <rect x="236" y="150" width="14" height="14" rx="2"/>
+    <rect x="258" y="150" width="14" height="14" rx="2"/>
+    <rect x="280" y="150" width="14" height="14" rx="2"/>
+    <rect x="302" y="150" width="14" height="14" rx="2"/>
+    <rect x="324" y="150" width="14" height="14" rx="2"/>
+    <rect x="170" y="174" width="14" height="14" rx="2"/>
+    <rect x="192" y="174" width="14" height="14" rx="2"/>
+    <rect x="214" y="174" width="14" height="14" rx="2"/>
+    <rect x="236" y="174" width="14" height="14" rx="2"/>
+    <rect x="258" y="174" width="14" height="14" rx="2"/>
+    <rect x="280" y="174" width="14" height="14" rx="2"/>
+    <rect x="302" y="174" width="14" height="14" rx="2"/>
+    <rect x="324" y="174" width="14" height="14" rx="2"/>
+  </g>
+  <text x="300" y="220" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.8">Cherry XTRFY K5 Pro Compact</text>
+  <text x="300" y="240" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">catch-up: trailing brand adopts TMR</text>
+
+  <!-- Panel 2: Keychron Q16 HE 8K, September 7 2026, coral -->
+  <text x="900" y="112" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.85">SEPTEMBER 7, 2026</text>
+  <rect x="740" y="128" width="320" height="130" rx="10" stroke="oklch(0.68 0.165 28)" stroke-width="2.4" fill="oklch(0.68 0.165 28 / 0.08)"/>
+  <g>
+    <rect x="770" y="150" width="14" height="14" rx="2" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.85"/>
+    <rect x="792" y="150" width="14" height="14" rx="2" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.85"/>
+    <rect x="814" y="150" width="14" height="14" rx="2" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.85"/>
+    <rect x="836" y="150" width="14" height="14" rx="2" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.85"/>
+    <rect x="858" y="150" width="14" height="14" rx="2" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.85"/>
+    <rect x="880" y="150" width="14" height="14" rx="2" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.85"/>
+    <rect x="902" y="150" width="14" height="14" rx="2" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.85"/>
+    <rect x="924" y="150" width="14" height="14" rx="2" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.85"/>
+    <rect x="770" y="174" width="14" height="14" rx="2" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.85"/>
+    <rect x="792" y="174" width="14" height="14" rx="2" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.85"/>
+    <rect x="814" y="174" width="14" height="14" rx="2" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.85"/>
+    <rect x="836" y="174" width="14" height="14" rx="2" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.85"/>
+    <rect x="858" y="174" width="14" height="14" rx="2" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.85"/>
+    <rect x="880" y="174" width="14" height="14" rx="2" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.85"/>
+    <rect x="902" y="174" width="14" height="14" rx="2" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.85"/>
+    <rect x="924" y="174" width="14" height="14" rx="2" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.85"/>
+  </g>
+  <text x="900" y="220" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" font-weight="600">Keychron Q16 HE 8K</text>
+  <text x="900" y="240" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.85">category leader adopts TMR</text>
+
+  <!-- Arrow beneath both panels -->
+  <line x1="150" y1="300" x2="1050" y2="300" stroke-dasharray="5 5" opacity="0.4"/>
+  <path d="M 1038 292 L 1050 300 L 1038 308" stroke-opacity="0.5"/>
+
+  <text x="600" y="335" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">anchors every TMR tracker row since W39</text>
+  <text x="600" y="358" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.8">October 2026 — W42 tracker score: 90</text>
+</svg>
