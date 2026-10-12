@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-10-06T14:00:00.000Z",
+  "commit": "1f77988dbcbddfa705f2d56bd1a385ddb833d63d",
+  "kind": "inline-viz",
+  "article_slug": "gmk-cyl-zombie-group-buy",
+  "article_pillar": "news",
+  "section_anchor": "A joint listing, open for the full month of October",
+  "brief_summary": "Horizontal calendar timeline from October 2 to October 31, 2026 showing the GMK CYL Zombie group buy window. Three markers: Oct 2 (group buy opens, KBDfans + KeyAtlas), Oct 6 (publish date, emphasized in coral as the 'today' marker, positioned by true calendar fraction near the start of the bar), and Oct 31 (group buy closes). The segment from Oct 2 to Oct 6 is filled in coral to show elapsed time against the full window.",
+  "target": "apps/web/public/article-viz/gmk-cyl-zombie-group-buy/buy-window-timeline.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "gmk-cyl-zombie-group-buy.mdx frontmatter — publishedAt '2026-10-06T14:00:00.000Z'",
+    "gmk-cyl-zombie-group-buy.mdx § lede / intro — 'running jointly through KBDfans and KeyAtlas from October 2 through October 31, 2026' and 'the buy is roughly a third of the way through its run, not winding down'",
+    "gmk-cyl-zombie-group-buy.mdx § 'A joint listing, open for the full month of October' — 'KBDfans and KeyAtlas are running Zombie as a joint listing...open on both pages for the same October 2 to October 31, 2026 window'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gmk-cyl-zombie-group-buy/buy-window-timeline.svg"],
+  "warnings": []
+}

@@ -1,0 +1,22 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-10-06T14:00:00.000Z",
+  "commit": "1f77988dbcbddfa705f2d56bd1a385ddb833d63d",
+  "kind": "inline-viz",
+  "article_slug": "gmk-cyl-zombie-group-buy",
+  "article_pillar": "news",
+  "section_anchor": "Seasonal colorways are a recurring, minor tracker category",
+  "brief_summary": "Four-swatch glyph strip breaking down GMK CYL Zombie's named colorway rows: charcoal base row, pumpkin-orange alpha row, zombie-green accent/modifier row, and a bone-white novelties row illustrated with a small stitched-grin icon. Each swatch is labeled with its row name and color description as given in the article's own description of the set.",
+  "target": "apps/web/public/article-viz/gmk-cyl-zombie-group-buy/colorway-breakdown.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "gmk-cyl-zombie-group-buy.mdx § 'What's in the set' — 'The base row leans into a near-black charcoal, with a pumpkin-orange alpha set carrying most of the legend contrast. The accent and modifier rows shift into a sickly zombie-green...the novelties row leans on the genre's standard iconography: stitched grins, tombstones, a bandaged or bitten-looking Esc cap.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gmk-cyl-zombie-group-buy/colorway-breakdown.svg"],
+  "warnings": []
+}

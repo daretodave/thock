@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1200 750"
+     preserveAspectRatio="xMidYMid meet"
+     fill="none"
+     stroke="oklch(0.78 0.005 90)"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     role="img"
+     aria-label="Line-drawing silhouette of a Cherry-profile keycap row carved into a jagged, jack-o'-lantern-style outline, rendered in warm-grey stroke with a coral splash marking an upward tracker sparkline running across the base of the caps, and a small warm-bronze theme dot in the upper-right margin.">
+  <title>thock hero — GMK CYL Zombie group buy, Cherry-profile keycap row with jagged jack-o'-lantern-carved crowns and a coral upward tracker sparkline across the base</title>
+
+  <!--
+    Article hero for the GMK CYL Zombie group-buy piece (News pillar).
+    Subject mapping follows two family rules at once, since this piece is
+    both a keycap-product story and a trends-climb story:
+      keycap piece  -> keycap profile silhouette (Cherry sculpt, per
+                        bearings.md "Article hero art")
+      trends angle  -> sparkline silhouette (the 2026-W42 spark trail
+                        0,5,10,15,25,40,55,70 that makes this the piece's
+                        actual news hook)
+    Composition reads left to right as a row of eight Cherry-profile
+    keycaps (echoing the article's eight-point spark trail), each crown
+    carved into a jagged two-tooth zigzag instead of Cherry's usual
+    gentle dome — a restrained, abstracted jack-o'-lantern-carved-lid
+    cue for the Halloween colorway, kept geometric rather than
+    illustrative/cartoonish. A coral sparkline threads across the base
+    of the row, rising left to right in step with the real spark trail,
+    standing in for both the "upward climb" news hook and the set's
+    pumpkin-orange alpha colorway (the splash-color choice here matches
+    the coral already locked in the article's committed heroImageAlt
+    text and in the sibling GMK CYL trends-hero gmk-cyl-red-devils-r2-
+    comeback.svg).
+
+    Palette:
+      coral splash      oklch(0.68 0.165 28)   = sparkline + area wash
+      warm-grey stroke   oklch(0.78 0.005 90)   = keycap silhouettes, ticks
+      bronze theme dot   oklch(0.80 0.135 75)   = fixed family ornamental
+                                                   anchor, upper-right
+
+    No green is used anywhere in this file. The MDX body copy mentions
+    a "sickly zombie-green" accent/modifier row as part of the real
+    product's colourway, but thock's hero-art palette rule is warm-only
+    (coral / dusty rose / ochre / muted terracotta plus the bronze
+    accent) — green falls outside that band and was dropped rather than
+    worked around. The jagged carved crown carries the Halloween cue
+    instead.
+  -->
+
+  <!-- ============================================================
+       SPARKLINE AREA WASH — coral, low alpha, sits behind/under the
+       sparkline within the base band. Doubles as the single splash
+       wash per family convention (no separate background ellipse).
+  ============================================================ -->
+  <path
+    d="
+      M 90 600
+      L 90 600
+      L 236 594.3
+      L 381 588.6
+      L 527 582.9
+      L 673 571.4
+      L 818 554.3
+      L 964 537.1
+      L 1110 520
+      L 1110 612
+      L 90 612
+      Z"
+    fill="oklch(0.68 0.165 28 / 0.14)" stroke="none"/>
+
+  <!-- ============================================================
+       KEYCAP ROW — eight Cherry-profile silhouettes, columns aligned
+       to the sparkline's eight x-positions. Tapered trapezoid body,
+       jagged two-tooth zigzag crown standing in for the dome.
+       Drawn first so the sparkline + base ticks sit on top at the
+       base, per the brief's "running across the base of the caps."
+  ============================================================ -->
+  <g stroke-opacity="0.85">
+    <!-- cx = 90 -->
+    <path d="M 35 600 L 47 460 L 69 430 L 90 460 L 112 430 L 133 460 L 145 600 Z"/>
+    <path d="M 47 472 L 59 448 L 81 472 L 103 448 L 121 472" stroke-opacity="0.40"/>
+    <!-- cx = 236 -->
+    <path d="M 181 600 L 193 460 L 215 430 L 236 460 L 258 430 L 279 460 L 291 600 Z"/>
+    <path d="M 193 472 L 205 448 L 227 472 L 249 448 L 267 472" stroke-opacity="0.40"/>
+    <!-- cx = 381 -->
+    <path d="M 326 600 L 338 460 L 360 430 L 381 460 L 403 430 L 424 460 L 436 600 Z"/>
+    <path d="M 338 472 L 350 448 L 372 472 L 394 448 L 412 472" stroke-opacity="0.40"/>
+    <!-- cx = 527 -->
+    <path d="M 472 600 L 484 460 L 506 430 L 527 460 L 549 430 L 570 460 L 582 600 Z"/>
+    <path d="M 484 472 L 496 448 L 518 472 L 540 448 L 558 472" stroke-opacity="0.40"/>
+    <!-- cx = 673 -->
+    <path d="M 618 600 L 630 460 L 652 430 L 673 460 L 695 430 L 716 460 L 728 600 Z"/>
+    <path d="M 630 472 L 642 448 L 664 472 L 686 448 L 704 472" stroke-opacity="0.40"/>
+    <!-- cx = 818 -->
+    <path d="M 763 600 L 775 460 L 797 430 L 818 460 L 840 430 L 861 460 L 873 600 Z"/>
+    <path d="M 775 472 L 787 448 L 809 472 L 831 448 L 849 472" stroke-opacity="0.40"/>
+    <!-- cx = 964 -->
+    <path d="M 909 600 L 921 460 L 943 430 L 964 460 L 986 430 L 1007 460 L 1019 600 Z"/>
+    <path d="M 921 472 L 933 448 L 955 472 L 977 448 L 995 472" stroke-opacity="0.40"/>
+    <!-- cx = 1110, the focal last cap under the sparkline's cursor -->
+    <path d="M 1055 600 L 1067 460 L 1089 430 L 1110 460 L 1132 430 L 1153 460 L 1165 600 Z"/>
+    <path d="M 1067 472 L 1079 448 L 1101 472 L 1123 448 L 1141 472" stroke-opacity="0.40"/>
+  </g>
+
+  <!-- ============================================================
+       BASE LINE + TICKS — family rhythm anchor, matches the sparkline
+       x-positions and sits right at the row's base, under the line.
+  ============================================================ -->
+  <line x1="70" y1="606" x2="1130" y2="606" stroke-opacity="0.30"/>
+  <g stroke-opacity="0.30">
+    <line x1="90" y1="606" x2="90" y2="614"/>
+    <line x1="236" y1="606" x2="236" y2="614"/>
+    <line x1="381" y1="606" x2="381" y2="614"/>
+    <line x1="527" y1="606" x2="527" y2="614"/>
+    <line x1="673" y1="606" x2="673" y2="614"/>
+    <line x1="818" y1="606" x2="818" y2="614"/>
+    <line x1="964" y1="606" x2="964" y2="614"/>
+    <line x1="1110" y1="606" x2="1110" y2="614"/>
+  </g>
+
+  <!-- ============================================================
+       SPARKLINE — coral, eight points mapped from the article's
+       real spark trail (0,5,10,15,25,40,55,70), rising across the
+       base of the keycap row.
+  ============================================================ -->
+  <polyline
+    stroke="oklch(0.68 0.165 28)"
+    stroke-width="2.5"
+    points="
+      90,600
+      236,594.3
+      381,588.6
+      527,582.9
+      673,571.4
+      818,554.3
+      964,537.1
+      1110,520" />
+
+  <!-- Open circle markers at interior points -->
+  <g stroke="oklch(0.68 0.165 28)">
+    <circle cx="90" cy="600" r="4"/>
+    <circle cx="236" cy="594.3" r="4"/>
+    <circle cx="381" cy="588.6" r="4"/>
+    <circle cx="527" cy="582.9" r="4"/>
+    <circle cx="673" cy="571.4" r="4"/>
+    <circle cx="818" cy="554.3" r="4"/>
+    <circle cx="964" cy="537.1" r="4"/>
+  </g>
+
+  <!-- Focal cursor — latest/highest point (score 70), coral splash filled -->
+  <circle cx="1110" cy="520" r="9"
+          fill="oklch(0.68 0.165 28 / 0.95)"
+          stroke="oklch(0.68 0.165 28)"/>
+  <circle cx="1110" cy="520" r="16"
+          stroke="oklch(0.68 0.165 28)"
+          stroke-opacity="0.40"
+          fill="none"/>
+
+  <!-- ============================================================
+       BRONZE THEME DOT — upper-right margin, family ornamental
+       anchor, fixed per convention, distinct from the coral splash.
+  ============================================================ -->
+  <circle cx="1148" cy="86" r="5"
+          fill="oklch(0.80 0.135 75 / 0.90)"
+          stroke="oklch(0.80 0.135 75)"/>
+  <circle cx="1148" cy="86" r="13"
+          stroke="oklch(0.80 0.135 75)"
+          stroke-opacity="0.38"
+          fill="none"/>
+</svg>

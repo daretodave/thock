@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-10-06T14:00:00.000Z",
+  "commit": "1f77988dbcbddfa705f2d56bd1a385ddb833d63d",
+  "kind": "inline-viz",
+  "article_slug": "gmk-cyl-zombie-group-buy",
+  "article_pillar": "news",
+  "section_anchor": "The climb, read against the calendar",
+  "brief_summary": "Eight-point line chart of GMK CYL Zombie's trends tracker score rising left to right from 0 to 70 with no flat or declining week, plotted in coral against a warm-grey baseline grid with dashed 20/40/60/80 gridlines. First point marked 'first read · 0'; final point marked larger and labeled '70' / 'direction up.'",
+  "target": "apps/web/public/article-viz/gmk-cyl-zombie-group-buy/eight-week-climb.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "thock trends tracker 2026-W42 row — \"GMK CYL Zombie\": category keycap, direction up, score 70, spark [0, 5, 10, 15, 25, 40, 55, 70], note 'Halloween-themed group buy (Oct 2-31) is mid-run across KBDfans and KeyAtlas listings, with seasonal interest typically building as the close date approaches.'",
+    "gmk-cyl-zombie-group-buy.mdx § 'The climb, read against the calendar' — 'The 2026-W42 snapshot has it at a score of 70, direction up, off an eight-week spark trail of 0, 5, 10, 15, 25, 40, 55, 70. Every single read is higher than the one before it; there's no plateau anywhere in the sequence'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gmk-cyl-zombie-group-buy/eight-week-climb.svg"],
+  "warnings": []
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>A four-swatch glyph strip showing GMK CYL Zombie's colorway breakdown: a charcoal base-row swatch, a pumpkin-orange alpha-row swatch, a zombie-green accent and modifier swatch, and a bone-white novelties swatch with a small stitched-grin icon, arranged left to right with labels below each.</title>
+
+  <!-- Title -->
+  <text x="600" y="44" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">GMK CYL Zombie — colorway breakdown</text>
+
+  <!-- Swatch 1: charcoal base row -->
+  <rect x="100" y="100" width="200" height="140" rx="10" fill="oklch(0.22 0.01 280)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.4"/>
+  <text x="200" y="270" font-family="IBM Plex Sans, sans-serif" font-size="14" font-weight="600" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">base row</text>
+  <text x="200" y="292" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">charcoal</text>
+
+  <!-- Swatch 2: pumpkin orange alphas -->
+  <rect x="340" y="100" width="200" height="140" rx="10" fill="oklch(0.68 0.165 50)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.4"/>
+  <text x="440" y="270" font-family="IBM Plex Sans, sans-serif" font-size="14" font-weight="600" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">alpha row</text>
+  <text x="440" y="292" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">pumpkin orange</text>
+
+  <!-- Swatch 3: zombie green accents (splash swatch, coral used elsewhere in family but this swatch depicts the set's own green) -->
+  <rect x="580" y="100" width="200" height="140" rx="10" fill="oklch(0.62 0.14 135)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.4"/>
+  <text x="680" y="270" font-family="IBM Plex Sans, sans-serif" font-size="14" font-weight="600" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">accent + mods</text>
+  <text x="680" y="292" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">zombie green</text>
+
+  <!-- Swatch 4: bone-white novelties with stitched-grin icon -->
+  <rect x="820" y="100" width="200" height="140" rx="10" fill="oklch(0.88 0.01 80)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.4"/>
+  <path d="M 870 170 Q 920 200 970 170" stroke="oklch(0.68 0.165 28)" stroke-width="3" fill="none"/>
+  <line x1="880" y1="170" x2="880" y2="185" stroke="oklch(0.68 0.165 28)" stroke-width="2"/>
+  <line x1="900" y1="178" x2="900" y2="193" stroke="oklch(0.68 0.165 28)" stroke-width="2"/>
+  <line x1="920" y1="183" x2="920" y2="198" stroke="oklch(0.68 0.165 28)" stroke-width="2"/>
+  <line x1="940" y1="178" x2="940" y2="193" stroke="oklch(0.68 0.165 28)" stroke-width="2"/>
+  <line x1="960" y1="170" x2="960" y2="185" stroke="oklch(0.68 0.165 28)" stroke-width="2"/>
+  <text x="920" y="270" font-family="IBM Plex Sans, sans-serif" font-size="14" font-weight="600" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">novelties</text>
+  <text x="920" y="292" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">bone white, stitched grin</text>
+
+  <!-- Caption -->
+  <text x="600" y="360" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">four rows, one seasonal palette</text>
+
+  <!-- Bronze theme dot -->
+  <circle cx="1170" cy="20" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

@@ -1,0 +1,31 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-10-12T07:07:19.000Z",
+  "commit": "1f77988dbcbddfa705f2d56bd1a385ddb833d63d",
+  "kind": "hero-art",
+  "source": null,
+  "template": "directive: plan/bearings.md § Article hero art — colorful keyboard SVGs (locked 2026-05-09 via /oversight); subject mapped jointly as keycap piece -> keycap profile silhouette (Cherry sculpt) and trends angle -> sparkline silhouette, following the sibling gmk-cyl-red-devils-r2-comeback.svg",
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": [],
+  "size": [1200, 750],
+  "article_slug": "gmk-cyl-zombie-group-buy",
+  "article_pillar": "news",
+  "subject": "Eight Cherry-profile keycap silhouettes in a row, each crown carved into a jagged two-tooth zigzag (abstracted jack-o'-lantern-carved-lid cue) instead of Cherry's usual dome, columns aligned to an overlaid coral sparkline of eight points that rises across the base of the row in step with the article's real 2026-W42 spark trail (0, 5, 10, 15, 25, 40, 55, 70). Bronze theme dot at upper-right margin.",
+  "splash_color": {
+    "name": "coral",
+    "oklch": "oklch(0.68 0.165 28)"
+  },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "bronze_theme_dot": "oklch(0.80 0.135 75)",
+  "spark_trail_mapped": [0, 5, 10, 15, 25, 40, 55, 70],
+  "spark_trail_source": "data/trends/2026-W42.json row for gmk-cyl-zombie-group-buy (score 70, direction up) — same values quoted in the article body's \"The climb, read against the calendar\" section",
+  "palette_safety_note": "No green used anywhere in this file. The real GMK CYL Zombie set's accent/modifier row is a 'sickly zombie-green' per the article body, but thock's hero-art palette rule is warm-only (coral / dusty rose / ochre / muted terracotta + bronze accent); green falls outside that band per AUDIT.md [seo][4.2] and was dropped rather than worked around. The jagged carved-crown motif carries the Halloween/jack-o'-lantern cue instead, in warm-grey stroke only.",
+  "heroImageAlt_match": "aria-label and MDX frontmatter heroImageAlt are kept identical by design: \"Line-drawing silhouette of a Cherry-profile keycap row carved into a jagged, jack-o'-lantern-style outline, rendered in warm-grey stroke with a coral splash marking an upward tracker sparkline running across the base of the caps, and a small warm-bronze theme dot in the upper-right margin.\"",
+  "related_content": "apps/web/src/content/articles/gmk-cyl-zombie-group-buy.mdx",
+  "related_data_record": "data/trends/2026-W42.json",
+  "outputs": [
+    "apps/web/public/hero-art/gmk-cyl-zombie-group-buy.svg"
+  ],
+  "warnings": []
+}
