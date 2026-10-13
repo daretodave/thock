@@ -13951,4 +13951,5 @@ passes accumulate signals.)
 - window-start: 2026-09-13
 - score: 7
 - next: /ship-content → guides pillar article
+- issue: #1024
 > Filed 2026-10-13 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
