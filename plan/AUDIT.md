@@ -13941,7 +13941,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/mission-control-theme-build.mdx
 - action: add [mission-control-theme-build](/article/mission-control-theme-build) to synthwave-tkl-theme-build body, or vice versa
 
-### [HOT PURSUIT] [content-gap] [7] guides pillar — 1 of ≥2 articles in last 30d
+### [x] [HOT PURSUIT] [content-gap] [7] guides pillar — 1 of ≥2 articles in last 30d — addressed in bad0b566, closes #1024
 - category: content-gaps
 - impact: 5 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -13952,4 +13952,38 @@ passes accumulate signals.)
 - score: 7
 - next: /ship-content → guides pillar article
 - issue: #1024
+> **Resolved (2026-10-13):** shipped `apps/web/src/content/articles/artisan-keycaps-buying-guide.mdx` (~1550 words, guides pillar, publishedAt 2026-10-09T14:00:00.000Z gap-fill — largest gap in the rolling 30-day window). Hero SVG at `/hero-art/artisan-keycaps-buying-guide.svg` (muted terracotta splash, annotated keycap row with the artisan accent cap called out). 3 InlineViz SVGs (mass-produced vs. artisan comparison matrix, MX/Alps/low-profile stem cross-sections, entry/mid/grail pricing ladder). New tag `artisan` (misc) added to tags.json. Language gate + mentionedParts gate clean. `pnpm verify` full gate green: typecheck, lint, unit tests, data:validate, build, size, 1310/1310 e2e.
 > Filed 2026-10-13 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+
+### [ ] [cross-links] [4.5] artisan-keycaps-buying-guide ↔ ansi-iso-jis-keyboard-layout-guide — no prose cross-link (same pillar, ≥2 shared tags: keycaps, beginner)
+- category: cross-links
+- filed: 2026-10-13 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: keycaps, beginner
+- article-a: apps/web/src/content/articles/artisan-keycaps-buying-guide.mdx
+- article-b: apps/web/src/content/articles/ansi-iso-jis-keyboard-layout-guide.mdx
+- action: add [ansi-iso-jis-keyboard-layout-guide](/article/ansi-iso-jis-keyboard-layout-guide) to artisan-keycaps-buying-guide body, or vice versa
+
+### [ ] [cross-links] [4.5] artisan-keycaps-buying-guide ↔ keycap-materials-compared — no prose cross-link (same pillar, ≥2 shared tags: keycaps, beginner)
+- category: cross-links
+- filed: 2026-10-13 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: keycaps, beginner
+- article-a: apps/web/src/content/articles/artisan-keycaps-buying-guide.mdx
+- article-b: apps/web/src/content/articles/keycap-materials-compared.mdx
+- action: add [keycap-materials-compared](/article/keycap-materials-compared) to artisan-keycaps-buying-guide body, or vice versa
+
+### [ ] [cross-links] [4.5] artisan-keycaps-buying-guide ↔ keycap-profiles-compared — no prose cross-link (same pillar, ≥2 shared tags: keycaps, beginner)
+- category: cross-links
+- filed: 2026-10-13 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: keycaps, beginner
+- article-a: apps/web/src/content/articles/artisan-keycaps-buying-guide.mdx
+- article-b: apps/web/src/content/articles/keycap-profiles-compared.mdx
+- action: add [keycap-profiles-compared](/article/keycap-profiles-compared) to artisan-keycaps-buying-guide body, or vice versa
