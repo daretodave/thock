@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Vertical three-rung pricing ladder for artisan keycaps — entry-level, mid-tier, and grail-tier — each annotated with what distinguishes the band</title>
+
+  <!-- Vertical spine -->
+  <line x1="120" y1="90" x2="120" y2="490" stroke-opacity="0.3"/>
+
+  <!-- Grail-tier rung (top) -->
+  <circle cx="120" cy="130" r="10" fill="oklch(0.78 0.10 80)" stroke="none"/>
+  <text x="160" y="118" font-family="IBM Plex Sans, sans-serif" font-size="16" font-weight="700" fill="oklch(0.78 0.005 90)" stroke="none" letter-spacing="0.03em">GRAIL-TIER</text>
+  <text x="160" y="142" font-family="Newsreader, serif" font-size="15" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">Oversubscribed makers; winning at original price is rare</text>
+  <text x="160" y="164" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">most pieces change hands secondhand, at a scarcity premium</text>
+
+  <!-- Mid-tier rung (middle) -->
+  <circle cx="120" cy="300" r="10" fill="oklch(0.78 0.10 80)" fill-opacity="0.55" stroke="none"/>
+  <text x="160" y="288" font-family="IBM Plex Sans, sans-serif" font-size="16" font-weight="700" fill="oklch(0.78 0.005 90)" stroke="none" letter-spacing="0.03em">MID-TIER</text>
+  <text x="160" y="312" font-family="Newsreader, serif" font-size="15" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">Multi-part sculpts, embedded foils or figures, hand-painted detail</text>
+  <text x="160" y="334" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">established makers with a track record and a real crowd per raffle</text>
+
+  <!-- Entry-level rung (bottom) -->
+  <circle cx="120" cy="450" r="10" stroke-opacity="0.6"/>
+  <text x="160" y="438" font-family="IBM Plex Sans, sans-serif" font-size="16" font-weight="700" fill="oklch(0.78 0.005 90)" stroke="none" letter-spacing="0.03em">ENTRY-LEVEL</text>
+  <text x="160" y="462" font-family="Newsreader, serif" font-size="15" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">Simple single-pour casts, one or two colors, no embedded figure</text>
+  <text x="160" y="484" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">newer or less oversubscribed makers — the sane first purchase</text>
+
+  <!-- Bracket marking recommended starting zone -->
+  <path d="M 1080 410 L 1100 410 L 1100 490 L 1080 490" stroke-opacity="0.5"/>
+  <text x="1110" y="455" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.10 80)" stroke="none" opacity="0.9" writing-mode="vertical-rl">start here</text>
+
+  <!-- Theme dot -->
+  <circle cx="1170" cy="30" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

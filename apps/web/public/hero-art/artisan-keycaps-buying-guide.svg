@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — annotated keycap row with one sculpted artisan cap called out among four stock profiles</title>
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       LAYOUT — five keycaps in a row on a shared baseline (y=555):
+         Caps A, B, D, E (x=200,400,800,1000): identical stock OEM-profile
+           silhouettes, top edge at y=470 — the family's default cap shape.
+         Cap C (x=600): the artisan cap. Same base footprint, but the top
+           rises past the stock-cap ruler line into a rounded hand-sculpted
+           dome, apex at y=385 — taller and visually distinct by shape alone.
+         A terracotta wash anchors the composition on Cap C; a dashed
+         leader + "artisan" label calls it out explicitly, matching the
+         family's callout convention (cf. keyboard-cables-compared.svg).
+  ════════════════════════════════════════════════════════════════════ -->
+
+  <!-- Splash: muted-terracotta wash anchoring the composition on the artisan cap -->
+  <ellipse cx="600" cy="460" rx="260" ry="190" fill="oklch(0.65 0.115 40)" fill-opacity="0.09" stroke="none"/>
+
+  <!-- Baseline beneath the row — family rhythm anchor -->
+  <line x1="120" y1="555" x2="1080" y2="555" stroke-opacity="0.55"/>
+
+  <!-- Faint vertical guide ticks on the baseline — family rhythm -->
+  <g stroke-opacity="0.35">
+    <line x1="120"  y1="555" x2="120"  y2="563"/>
+    <line x1="257"  y1="555" x2="257"  y2="563"/>
+    <line x1="394"  y1="555" x2="394"  y2="563"/>
+    <line x1="531"  y1="555" x2="531"  y2="563"/>
+    <line x1="669"  y1="555" x2="669"  y2="563"/>
+    <line x1="806"  y1="555" x2="806"  y2="563"/>
+    <line x1="943"  y1="555" x2="943"  y2="563"/>
+    <line x1="1080" y1="555" x2="1080" y2="563"/>
+  </g>
+
+  <!-- Faint horizontal reference at the stock cap-top height — visual ruler.
+       The artisan cap's dome breaks above this line; the rest of the row sits on it. -->
+  <line x1="120" y1="470" x2="1080" y2="470" stroke-dasharray="3 6" stroke-opacity="0.24"/>
+
+  <!-- ── CAP A — stock OEM profile ───────────────────────────────────────── -->
+  <g>
+    <path d="M 130 555 L 145 470 L 255 470 L 270 555 Z"/>
+    <path d="M 145 470 Q 167 460 200 460 Q 233 460 255 470"/>
+    <line x1="130" y1="555" x2="136" y2="552" stroke-opacity="0.4"/>
+    <line x1="270" y1="555" x2="264" y2="552" stroke-opacity="0.4"/>
+  </g>
+
+  <!-- ── CAP B — stock OEM profile ───────────────────────────────────────── -->
+  <g>
+    <path d="M 330 555 L 345 470 L 455 470 L 470 555 Z"/>
+    <path d="M 345 470 Q 367 460 400 460 Q 433 460 455 470"/>
+    <line x1="330" y1="555" x2="336" y2="552" stroke-opacity="0.4"/>
+    <line x1="470" y1="555" x2="464" y2="552" stroke-opacity="0.4"/>
+  </g>
+
+  <!-- ── CAP C — the artisan cap ─────────────────────────────────────────
+       Same base footprint as its neighbors, but the shoulder sits higher
+       (y=440) and a rounded hand-sculpted dome rises from it to an apex
+       at y=385 — distinctly taller, distinctly shaped, no label needed
+       to read "different" before the callout even draws the eye to it. -->
+  <g>
+    <path d="M 530 555 L 545 440 L 655 440 L 670 555 Z"/>
+    <!-- Rounded sculpted dome — the artisan topper -->
+    <path d="M 545 440 Q 565 395 600 385 Q 635 395 655 440"/>
+    <!-- Inner dome highlight, carried in the splash hue — the one cap in the
+         row that gets a color accent on its own silhouette -->
+    <path d="M 560 420 Q 600 400 640 420" stroke="oklch(0.65 0.115 40)" stroke-width="2.5"/>
+    <line x1="530" y1="555" x2="536" y2="552" stroke-opacity="0.4"/>
+    <line x1="670" y1="555" x2="664" y2="552" stroke-opacity="0.4"/>
+    <!-- Focal accent — apex of the dome, the visual anchor of the whole piece -->
+    <circle cx="600" cy="385" r="6" fill="oklch(0.65 0.115 40)" fill-opacity="0.9" stroke="oklch(0.65 0.115 40)"/>
+    <circle cx="600" cy="385" r="11" stroke="oklch(0.65 0.115 40)" stroke-opacity="0.4"/>
+  </g>
+
+  <!-- ── CAP D — stock OEM profile ───────────────────────────────────────── -->
+  <g>
+    <path d="M 730 555 L 745 470 L 855 470 L 870 555 Z"/>
+    <path d="M 745 470 Q 767 460 800 460 Q 833 460 855 470"/>
+    <line x1="730" y1="555" x2="736" y2="552" stroke-opacity="0.4"/>
+    <line x1="870" y1="555" x2="864" y2="552" stroke-opacity="0.4"/>
+  </g>
+
+  <!-- ── CAP E — stock OEM profile ───────────────────────────────────────── -->
+  <g>
+    <path d="M 930 555 L 945 470 L 1055 470 L 1070 555 Z"/>
+    <path d="M 945 470 Q 967 460 1000 460 Q 1033 460 1055 470"/>
+    <line x1="930" y1="555" x2="936" y2="552" stroke-opacity="0.4"/>
+    <line x1="1070" y1="555" x2="1064" y2="552" stroke-opacity="0.4"/>
+  </g>
+
+  <!-- ════════════════════════════════════════════════════════════════════
+       CALLOUT — dashed leader + lowercase mono label, terracotta,
+       family convention (cf. keyboard-cables-compared.svg)
+  ════════════════════════════════════════════════════════════════════ -->
+  <g stroke="oklch(0.65 0.115 40)" stroke-opacity="0.85" stroke-width="1" stroke-dasharray="2 4" fill="none">
+    <path d="M 820 150 L 700 240 L 640 370"/>
+  </g>
+  <circle cx="820" cy="150" r="2.5" fill="oklch(0.65 0.115 40)" stroke="none"/>
+  <text x="814" y="136"
+    font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace"
+    font-size="14" fill="oklch(0.65 0.115 40)" fill-opacity="0.95"
+    letter-spacing="0.04em" text-anchor="start" stroke="none">artisan</text>
+
+  <!-- Quiet left-edge layer ticks — didactic guide convention, aligned to
+       the dome apex, the stock cap-top ruler, and the baseline -->
+  <g stroke-opacity="0.3">
+    <line x1="85" y1="385" x2="100" y2="385"/>
+    <line x1="85" y1="470" x2="100" y2="470"/>
+    <line x1="85" y1="555" x2="100" y2="555"/>
+  </g>
+
+  <!-- Brass-bronze theme dot — family ornamental anchor -->
+  <circle cx="1150" cy="70" r="6" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

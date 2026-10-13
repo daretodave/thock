@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Three-row comparison matrix contrasting mass-produced keycap sets against artisan keycaps across material, production method, and purpose</title>
+
+  <!-- Column headers -->
+  <text x="620" y="55" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" font-weight="700" letter-spacing="0.05em" text-anchor="middle">MASS-PRODUCED SET</text>
+  <text x="950" y="55" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.10 80)" stroke="none" font-weight="700" letter-spacing="0.05em" text-anchor="middle">ARTISAN CAP</text>
+  <line x1="40" y1="72" x2="1160" y2="72" stroke-opacity="0.25"/>
+
+  <!-- Row labels -->
+  <g font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">
+    <text x="40" y="150">Material</text>
+    <text x="40" y="260">Production</text>
+    <text x="40" y="370">Purpose</text>
+  </g>
+
+  <!-- Row dividers -->
+  <g stroke-opacity="0.12" stroke-dasharray="4 6">
+    <line x1="40" y1="195" x2="1160" y2="195"/>
+    <line x1="40" y1="305" x2="1160" y2="305"/>
+  </g>
+
+  <!-- Row 1: Material -->
+  <rect x="440" y="108" width="360" height="64" rx="8" stroke-opacity="0.4"/>
+  <text x="620" y="135" font-family="Newsreader, serif" font-size="16" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">ABS or PBT</text>
+  <text x="620" y="158" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">molds cleanly at volume</text>
+  <rect x="770" y="108" width="360" height="64" rx="8" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="2.5" fill="oklch(0.78 0.10 80 / 0.08)"/>
+  <text x="950" y="135" font-family="Newsreader, serif" font-size="16" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Resin or ceramic</text>
+  <text x="950" y="158" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">cast or hand-finished</text>
+
+  <!-- Row 2: Production -->
+  <rect x="440" y="218" width="360" height="64" rx="8" stroke-opacity="0.4"/>
+  <text x="620" y="245" font-family="Newsreader, serif" font-size="16" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Injection-molded</text>
+  <text x="620" y="268" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">tooled once, thousands per color</text>
+  <rect x="770" y="218" width="360" height="64" rx="8" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="2.5" fill="oklch(0.78 0.10 80 / 0.08)"/>
+  <text x="950" y="245" font-family="Newsreader, serif" font-size="16" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Hand-cast, small-batch</text>
+  <text x="950" y="268" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">mold degrades after enough pours</text>
+
+  <!-- Row 3: Purpose -->
+  <rect x="440" y="328" width="360" height="64" rx="8" stroke-opacity="0.4"/>
+  <text x="620" y="355" font-family="Newsreader, serif" font-size="16" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Full-layout typing set</text>
+  <text x="620" y="378" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">built to disappear into the board</text>
+  <rect x="770" y="328" width="360" height="64" rx="8" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="2.5" fill="oklch(0.78 0.10 80 / 0.08)"/>
+  <text x="950" y="355" font-family="Newsreader, serif" font-size="16" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Single-key collectible</text>
+  <text x="950" y="378" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">built to be noticed</text>
+
+  <!-- Caption line -->
+  <text x="600" y="440" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">same category of object, two different manufacturing logics</text>
+
+  <!-- Theme dot -->
+  <circle cx="1170" cy="30" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

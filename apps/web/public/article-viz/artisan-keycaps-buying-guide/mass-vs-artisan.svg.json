@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-10-09T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "artisan-keycaps-buying-guide",
+  "article_pillar": "guides",
+  "section_anchor": "what-actually-makes-a-cap-an-artisan",
+  "brief_summary": "Three-row by two-column comparison matrix contrasting mass-produced keycap sets against artisan keycaps across material (ABS/PBT vs resin/ceramic), production method (injection-molded vs hand-cast small-batch), and purpose (full-layout typing set vs single-key collectible accent).",
+  "target": "apps/web/public/article-viz/artisan-keycaps-buying-guide/mass-vs-artisan.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "artisan-keycaps-buying-guide.mdx § 'What actually makes a cap an \"artisan\"' — 'A production set is almost always ABS or PBT, chosen because both mold cleanly at volume and hold up to years of keystrokes. Artisans are more often cast resin ... or, less commonly, ceramic or finished 3D-printed resin.'",
+    "artisan-keycaps-buying-guide.mdx § 'What actually makes a cap an \"artisan\"' — 'a set's tooling is cut once and molded thousands of times per color, while an artisan maker pours a mold by hand, a batch at a time, and the mold itself degrades after enough pours — which caps how many of a given design will ever exist.'",
+    "artisan-keycaps-buying-guide.mdx § 'What actually makes a cap an \"artisan\"' — 'A set is built to disappear into the board, forty-odd keys a typist stops noticing after a week. An artisan is built to be noticed, sitting on the one key a typist's eye lands on first.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/artisan-keycaps-buying-guide/mass-vs-artisan.svg"],
+  "warnings": []
+}

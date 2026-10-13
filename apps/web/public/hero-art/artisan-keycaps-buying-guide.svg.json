@@ -1,0 +1,36 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-10-13T20:07:57Z",
+  "commit": "e4afa07c07be9f6db065ddf4f42ce29c25da668a",
+  "kind": "hero-art",
+  "article_slug": "artisan-keycaps-buying-guide",
+  "article_pillar": "guides",
+  "brief_summary": "Hero art for the guides-pillar artisan-keycaps buying guide. Follows bearings.md's guide default — an annotated keycap row — read literally for this topic: five stock-profile keycaps on a shared baseline, with the third cap breaking the family's own stock-cap-top ruler line via a rounded hand-sculpted dome, reading as a visually distinct artisan cap among a normal row by silhouette alone. A terracotta wash anchors the composition on that cap, its dome carries the only color-accented stroke in the row, and a dashed-leader + 'artisan' mono label (the family's existing callout convention, cf. keyboard-cables-compared.svg) calls it out explicitly.",
+  "target": "apps/web/public/hero-art/artisan-keycaps-buying-guide.svg",
+  "source": null,
+  "template": "directive: guides-pillar annotated keycap row, per-brief subject mapping (artisan accent cap among a normal row, called out with an annotation line)",
+  "size": [1200, 750],
+  "subject": "Five keycaps in a row on a shared baseline. Caps 1, 2, 4, 5 are identical stock OEM-profile silhouettes (top edge at the row's cap-top ruler line). Cap 3 shares the same base footprint but its shoulder sits higher and a rounded sculpted dome rises from it past the ruler line to a taller apex — the one hand-sculpted artisan cap in the row. A terracotta wash anchors the composition on cap 3; its dome gets the row's only color-accented inner highlight stroke and a focal dot at the apex. A dashed leader line runs from an 'artisan' mono label down to the dome, explicitly calling out the distinct cap. Bronze theme dot at the upper-right margin.",
+  "splash_color": {
+    "name": "muted terracotta",
+    "oklch": "oklch(0.65 0.115 40)",
+    "rotation_note": "Chosen from the brief's allowed set {coral, dusty rose, ochre, muted terracotta}. The five most recently shipped hero-art pieces at render time (synthwave-tkl-theme-build: ochre; tmr-switches-five-week-climb: dusty rose; gmk-cyl-zombie-group-buy, tmr-switches-deep-dive, switch-actuation-weight-buying-guide, gmk-cyl-red-devils-r2-comeback: coral) were dominated by coral with ochre used immediately prior, so muted terracotta keeps this piece distinct from its nearest neighbors. Lightness/chroma/hue (0.65 0.115 40) picked to sit clear of the other terracotta values already in rotation across the corpus (0.60 0.11 42, 0.62 0.10 45, 0.63 0.12 38, 0.64 0.12 46, 0.66 0.11 35, 0.66 0.13 45)."
+  },
+  "accent_color": {
+    "name": "warm-bronze (theme accent)",
+    "oklch": "oklch(0.80 0.135 75)"
+  },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "stroke_weight": "2px",
+  "canvas": "1200x750",
+  "background": "transparent (light-mode and dark-mode safe per house style)",
+  "tokens_snapshot": "51fdae8368c1eee844850352ec620acd2f822555",
+  "fonts": ["JetBrains Mono"],
+  "alt": "A row of five side-profile keycap silhouettes on a shared baseline, line-art style. Four share an identical stock cap shape; the third is taller with a rounded hand-sculpted dome rising above the others, accented in muted terracotta and called out by a dashed leader line labeled 'artisan'.",
+  "data_sources": [],
+  "outputs": [
+    "apps/web/public/hero-art/artisan-keycaps-buying-guide.svg"
+  ],
+  "warnings": []
+}

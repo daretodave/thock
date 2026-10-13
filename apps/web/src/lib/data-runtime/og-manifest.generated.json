@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "slug": "artisan-keycaps-buying-guide",
+      "readTime": 9,
+      "frontmatter": {
+        "title": "Artisan keycaps: a practical buying guide",
+        "lede": "A single sculpted cap on the Escape key can cost more than the switches underneath it, and the buying process looks nothing like ordering a keycap set. Here is what an artisan actually is, how the raffles work, and the one check that keeps a buyer from winning a cap their board can't use.",
+        "pillar": "guides",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "gmk-cyl-zombie-group-buy",
       "readTime": 6,
       "frontmatter": {
@@ -1126,6 +1136,11 @@
       "slug": "aluminum",
       "name": "Aluminum",
       "category": "material"
+    },
+    {
+      "slug": "artisan",
+      "name": "Artisan",
+      "category": "misc"
     },
     {
       "slug": "barebones-kit",
@@ -9368,5 +9383,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-10-13T05:32:27.102Z"
+  "generatedAt": "2026-10-13T20:16:59.922Z"
 }

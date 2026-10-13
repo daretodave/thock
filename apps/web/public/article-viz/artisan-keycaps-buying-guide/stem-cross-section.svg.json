@@ -1,0 +1,25 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-10-09T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "artisan-keycaps-buying-guide",
+  "article_pillar": "guides",
+  "section_anchor": "stems-turn-it-over-before-you-buy",
+  "brief_summary": "Three side-by-side cross-sections of keycap stem interiors — MX cruciform post, Alps twin rectangular-blade stem, and low-profile/Choc shortened cruciform post — each labeled with the switch family it fits, closing on the 'turn the cap over and check' annotation.",
+  "target": "apps/web/public/article-viz/artisan-keycaps-buying-guide/stem-cross-section.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "artisan-keycaps-buying-guide.mdx § 'Stems: turn it over before you buy' — 'MX-stem caps have a plus-shaped cruciform post molded into the underside that slots onto the switch's cross-shaped stem — the stem the overwhelming majority of artisan makers sculpt for.'",
+    "artisan-keycaps-buying-guide.mdx § 'Stems: turn it over before you buy' — 'uses Alps-style switches, which take a completely different stem: two narrow rectangular blades rather than a cross.'",
+    "artisan-keycaps-buying-guide.mdx § 'Stems: turn it over before you buy' — 'Low-profile switches ... use a shorter stem geometry of their own, incompatible with full-height MX caps even when the cross shape looks similar at a glance.'",
+    "artisan-keycaps-buying-guide.mdx § 'Stems: turn it over before you buy' — 'turn the cap over and look at the stem, and compare it against a known-compatible cap already on the board.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/artisan-keycaps-buying-guide/stem-cross-section.svg"],
+  "warnings": []
+}

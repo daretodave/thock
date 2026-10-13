@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Three cross-sections of keycap stem geometries — MX cruciform, Alps twin-blade, and low-profile cruciform — not interchangeable despite similar cap shells</title>
+
+  <!-- MX stem -->
+  <g>
+    <rect x="110" y="70" width="220" height="130" rx="10" stroke-opacity="0.5"/>
+    <!-- cruciform post, cross shape -->
+    <path d="M 205 100 L 235 100 L 235 125 L 260 125 L 260 155 L 235 155 L 235 180 L 205 180 L 205 155 L 180 155 L 180 125 L 205 125 Z" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="2.5" fill="oklch(0.78 0.10 80 / 0.1)"/>
+    <text x="220" y="235" font-family="Newsreader, serif" font-size="17" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">MX</text>
+    <text x="220" y="260" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">plus-shaped cruciform post</text>
+    <text x="220" y="280" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">fits Cherry / Gateron / Kailh-style</text>
+  </g>
+
+  <!-- Alps stem -->
+  <g>
+    <rect x="490" y="70" width="220" height="130" rx="10" stroke-opacity="0.5"/>
+    <!-- two narrow rectangular blades -->
+    <rect x="570" y="105" width="18" height="90" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="2.5" fill="oklch(0.78 0.10 80 / 0.1)"/>
+    <rect x="612" y="105" width="18" height="90" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="2.5" fill="oklch(0.78 0.10 80 / 0.1)"/>
+    <text x="600" y="235" font-family="Newsreader, serif" font-size="17" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Alps</text>
+    <text x="600" y="260" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">two narrow rectangular blades</text>
+    <text x="600" y="280" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">vintage boards, some boutique builds</text>
+  </g>
+
+  <!-- Low-profile stem -->
+  <g>
+    <rect x="870" y="70" width="220" height="130" rx="10" stroke-opacity="0.5"/>
+    <!-- shorter, shallower cruciform -->
+    <path d="M 955 118 L 980 118 L 980 135 L 1000 135 L 1000 155 L 980 155 L 980 172 L 955 172 L 955 155 L 935 155 L 935 135 L 955 135 Z" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="2.5" fill="oklch(0.78 0.10 80 / 0.1)"/>
+    <text x="980" y="235" font-family="Newsreader, serif" font-size="15" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Low-profile / Choc</text>
+    <text x="980" y="260" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">shorter, shallower post</text>
+    <text x="980" y="280" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">incompatible with full-height MX</text>
+  </g>
+
+  <!-- Divider -->
+  <line x1="600" y1="340" x2="600" y2="340" stroke-opacity="0"/>
+  <line x1="60" y1="340" x2="1140" y2="340" stroke-opacity="0.18"/>
+
+  <!-- Callout annotation -->
+  <g>
+    <circle cx="600" cy="390" r="6" fill="oklch(0.78 0.10 80)" stroke="none"/>
+    <text x="600" y="420" font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.95">turn the cap over and check before buying</text>
+  </g>
+
+  <!-- Theme dot -->
+  <circle cx="1170" cy="30" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

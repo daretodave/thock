@@ -1,0 +1,25 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-10-09T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "artisan-keycaps-buying-guide",
+  "article_pillar": "guides",
+  "section_anchor": "what-a-sane-budget-looks-like",
+  "brief_summary": "Vertical three-rung ladder ranking artisan pricing bands from entry-level through grail-tier, each rung annotated with the qualitative description of what distinguishes it, and a bracket marking the entry/low-mid-tier band as the recommended starting zone for a first purchase.",
+  "target": "apps/web/public/article-viz/artisan-keycaps-buying-guide/pricing-ladder.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "artisan-keycaps-buying-guide.mdx § 'What a sane budget looks like' — 'Entry-level artisans are simple single-pour casts — one or two colors, a straightforward shape, no embedded figure — from newer or less oversubscribed makers.'",
+    "artisan-keycaps-buying-guide.mdx § 'What a sane budget looks like' — 'Mid-tier covers the bulk of the established maker catalog: multi-part sculpts, embedded foils or figures, hand-painted detailing, from makers with enough of a track record that their raffles draw a real crowd.'",
+    "artisan-keycaps-buying-guide.mdx § 'What a sane budget looks like' — 'Grail-tier sits at the top: pieces from a small number of makers whose raffles are reliably oversubscribed, where winning at the original price is rare enough that most of these caps change hands secondhand, at a premium set by scarcity.'",
+    "artisan-keycaps-buying-guide.mdx § 'What a sane budget looks like' — 'A newcomer's safest first purchase sits in the entry or low mid-tier band — enough to learn whether the category is worth pursuing before paying a collector's premium for the lesson.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/artisan-keycaps-buying-guide/pricing-ladder.svg"],
+  "warnings": []
+}
