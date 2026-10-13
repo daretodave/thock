@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="A rectangular tenkeyless keyboard case on the left with a flush top-mount seam line (no gasket gap), a large Cherry-profile keycap side silhouette in the center whose top surface carries a small sunset-and-perspective-grid inset drawn in a single ochre splash, and a linear switch cross-section on the right with a smooth unbroken stem (no tactile bump, no click bar) and faint diagonal hatching inside both housings suggesting translucent plastic, all three tied together with dashed ochre leaders as one theme-build composition.">
+  <title>thock hero — synthwave tkl theme build: top-mount TKL case, Cherry-profile keycap with sunset motif, linear switch</title>
+
+  <!-- ================================================================
+       Canvas:  1200 x 750
+       Subject: three-part theme-build pairing, left to right —
+                a top-mount (non-gasket) TKL case, a large Cherry-
+                profile keycap silhouette carrying a synthwave
+                sunset/grid inset on its top surface, and a linear
+                switch cross-section with a smooth stem and a
+                translucent-hatched housing.
+       Palette:
+         Stroke   oklch(0.78 0.005 90)  warm-grey, 2px
+         Splash   oklch(0.75 0.115 79)  ochre (single accent)
+         Bronze   oklch(0.80 0.135 75)  theme accent (top-right dot)
+       Background: transparent (light-mode safe per house style).
+  ================================================================ -->
+
+  <!-- Faint wide washes behind the two splash anchors -->
+  <ellipse cx="695" cy="300" rx="100" ry="90" fill="oklch(0.75 0.115 79 / 0.06)" stroke="none"/>
+  <ellipse cx="970" cy="320" rx="110" ry="95" fill="oklch(0.75 0.115 79 / 0.05)" stroke="none"/>
+
+  <!-- ================================================================
+       CASE — rectangular TKL, top-mount (flush seam, no gasket gap)
+       ================================================================ -->
+  <g>
+    <!-- Outer shell -->
+    <rect x="50" y="275" width="460" height="196" rx="14"/>
+    <!-- Top-mount seam — a single flush plate-to-case line, solid (never dashed, no gasket float) -->
+    <rect x="64" y="289" width="432" height="168" rx="10" stroke-opacity="0.45"/>
+
+    <!-- Main field: 10 columns x 3 rows -->
+    <g stroke-opacity="0.75">
+      <rect x="86" y="311" width="28" height="28" rx="3"/>
+      <rect x="118" y="311" width="28" height="28" rx="3"/>
+      <rect x="150" y="311" width="28" height="28" rx="3"/>
+      <rect x="182" y="311" width="28" height="28" rx="3"/>
+      <rect x="214" y="311" width="28" height="28" rx="3"/>
+      <rect x="246" y="311" width="28" height="28" rx="3"/>
+      <rect x="278" y="311" width="28" height="28" rx="3"/>
+      <rect x="310" y="311" width="28" height="28" rx="3"/>
+      <rect x="342" y="311" width="28" height="28" rx="3"/>
+      <rect x="374" y="311" width="28" height="28" rx="3"/>
+
+      <rect x="86" y="343" width="28" height="28" rx="3"/>
+      <rect x="118" y="343" width="28" height="28" rx="3"/>
+      <rect x="150" y="343" width="28" height="28" rx="3"/>
+      <rect x="182" y="343" width="28" height="28" rx="3"/>
+      <rect x="214" y="343" width="28" height="28" rx="3"/>
+      <rect x="246" y="343" width="28" height="28" rx="3"/>
+      <rect x="278" y="343" width="28" height="28" rx="3"/>
+      <rect x="310" y="343" width="28" height="28" rx="3"/>
+      <rect x="342" y="343" width="28" height="28" rx="3"/>
+      <rect x="374" y="343" width="28" height="28" rx="3"/>
+
+      <rect x="86" y="375" width="28" height="28" rx="3"/>
+      <rect x="118" y="375" width="28" height="28" rx="3"/>
+      <rect x="150" y="375" width="28" height="28" rx="3"/>
+      <rect x="182" y="375" width="28" height="28" rx="3"/>
+      <rect x="214" y="375" width="28" height="28" rx="3"/>
+      <rect x="246" y="375" width="28" height="28" rx="3"/>
+      <rect x="278" y="375" width="28" height="28" rx="3"/>
+      <rect x="310" y="375" width="28" height="28" rx="3"/>
+      <rect x="342" y="375" width="28" height="28" rx="3"/>
+      <rect x="374" y="375" width="28" height="28" rx="3"/>
+    </g>
+
+    <!-- Bottom row: modifiers + spacebar, variable widths -->
+    <g stroke-opacity="0.75">
+      <rect x="86" y="407" width="36" height="28" rx="3"/>
+      <rect x="126" y="407" width="24" height="28" rx="3"/>
+      <rect x="154" y="407" width="24" height="28" rx="3"/>
+      <rect x="182" y="407" width="120" height="28" rx="3"/>
+      <rect x="306" y="407" width="24" height="28" rx="3"/>
+      <rect x="334" y="407" width="24" height="28" rx="3"/>
+      <rect x="362" y="407" width="36" height="28" rx="3"/>
+    </g>
+
+    <!-- Nav cluster: 2 x 2, separated from the main field by the TKL gap -->
+    <g stroke-opacity="0.75">
+      <rect x="414" y="311" width="22" height="22" rx="3"/>
+      <rect x="440" y="311" width="22" height="22" rx="3"/>
+      <rect x="414" y="339" width="22" height="22" rx="3"/>
+      <rect x="440" y="339" width="22" height="22" rx="3"/>
+    </g>
+
+    <!-- Arrow cluster: inverted-T -->
+    <g stroke-opacity="0.75">
+      <rect x="440" y="367" width="22" height="22" rx="3"/>
+      <rect x="414" y="393" width="22" height="22" rx="3"/>
+      <rect x="440" y="393" width="22" height="22" rx="3"/>
+      <rect x="466" y="393" width="22" height="22" rx="3"/>
+    </g>
+  </g>
+
+  <text x="58" y="494" font-family="'JetBrains Mono','IBM Plex Mono',ui-monospace,monospace"
+    font-size="12" fill="oklch(0.58 0.006 90)" letter-spacing="0.03em" stroke="none">tkl case — top mount</text>
+
+  <!-- ================================================================
+       LEADER — case to keycap (ochre)
+       ================================================================ -->
+  <path d="M 496 330 Q 550 360 604 408" stroke="oklch(0.75 0.115 79)" stroke-width="1.6" stroke-dasharray="2 6" stroke-opacity="0.8" fill="none"/>
+  <circle cx="496" cy="330" r="4" fill="none" stroke="oklch(0.75 0.115 79)" stroke-opacity="0.9"/>
+  <path d="M 604 408 L 592 402 M 604 408 L 596 416" stroke="oklch(0.75 0.115 79)" stroke-width="1.6" stroke-opacity="0.85"/>
+
+  <!-- ================================================================
+       KEYCAP — Cherry-profile side silhouette, synthwave top inset
+       ================================================================ -->
+  <g>
+    <path d="M 610 471 L 610 459 L 640 330 Q 690 300 740 330 L 770 459 L 770 471 Z"
+      fill="oklch(0.75 0.115 79 / 0.14)" stroke="oklch(0.75 0.115 79)" stroke-opacity="0.95"/>
+
+    <!-- top-surface inset — a small top-down view of the cap's sunset/grid legend -->
+    <rect x="645" y="235" width="100" height="50" rx="4" stroke="oklch(0.75 0.115 79)" stroke-width="1.6" stroke-opacity="0.9"/>
+    <!-- horizon -->
+    <line x1="649" y1="260" x2="741" y2="260" stroke="oklch(0.75 0.115 79)" stroke-width="1.2" stroke-opacity="0.8"/>
+    <!-- sun — concentric upper-half arcs -->
+    <path d="M 687 260 A 8 8 0 0 1 703 260" stroke="oklch(0.75 0.115 79)" stroke-width="1.3" stroke-opacity="0.85"/>
+    <path d="M 681 260 A 14 14 0 0 1 709 260" stroke="oklch(0.75 0.115 79)" stroke-width="1.3" stroke-opacity="0.65"/>
+    <path d="M 675 260 A 20 20 0 0 1 715 260" stroke="oklch(0.75 0.115 79)" stroke-width="1.3" stroke-opacity="0.45"/>
+    <circle cx="695" cy="260" r="2.2" fill="oklch(0.80 0.135 75)" stroke="none"/>
+    <!-- perspective grid below the horizon -->
+    <g stroke="oklch(0.75 0.115 79)" stroke-width="1.1" stroke-opacity="0.6">
+      <line x1="695" y1="260" x2="655" y2="281"/>
+      <line x1="695" y1="260" x2="675" y2="281"/>
+      <line x1="695" y1="260" x2="715" y2="281"/>
+      <line x1="695" y1="260" x2="735" y2="281"/>
+      <line x1="662" y1="268" x2="728" y2="268" stroke-opacity="0.45"/>
+      <line x1="657" y1="276" x2="733" y2="276" stroke-opacity="0.35"/>
+    </g>
+  </g>
+
+  <text x="690" y="500" font-family="'JetBrains Mono','IBM Plex Mono',ui-monospace,monospace"
+    font-size="12" fill="oklch(0.58 0.006 90)" letter-spacing="0.03em" text-anchor="middle" stroke="none">cherry-profile keycap</text>
+
+  <!-- ================================================================
+       LEADER — keycap to switch (ochre)
+       ================================================================ -->
+  <path d="M 772 400 Q 820 340 876 300" stroke="oklch(0.75 0.115 79)" stroke-width="1.6" stroke-dasharray="2 6" stroke-opacity="0.8" fill="none"/>
+  <circle cx="772" cy="400" r="4" fill="none" stroke="oklch(0.75 0.115 79)" stroke-opacity="0.9"/>
+  <path d="M 876 300 L 864 298 M 876 300 L 870 312" stroke="oklch(0.75 0.115 79)" stroke-width="1.6" stroke-opacity="0.85"/>
+
+  <!-- ================================================================
+       SWITCH CALLOUT — linear, smooth stem (no bump, no click bar),
+       translucent housings (hatch lines)
+       ================================================================ -->
+  <g>
+    <!-- Stem, visible segment above the top housing -->
+    <line x1="970" y1="246" x2="970" y2="260" stroke-opacity="0.55"/>
+    <line x1="958" y1="253" x2="982" y2="253" stroke-opacity="0.55"/>
+
+    <!-- Top housing — translucent -->
+    <rect x="880" y="260" width="180" height="130" rx="10" stroke-opacity="0.85"/>
+    <!-- Hatch lines inside the top housing, suggesting translucent plastic -->
+    <g stroke="oklch(0.75 0.115 79)" stroke-width="1.2" stroke-opacity="0.35">
+      <line x1="900" y1="282" x2="916" y2="266"/>
+      <line x1="938" y1="322" x2="954" y2="302"/>
+      <line x1="1000" y1="352" x2="1016" y2="332"/>
+      <line x1="1030" y1="302" x2="1046" y2="282"/>
+    </g>
+
+    <!-- Stem — one smooth unbroken line through the full travel, no bump, no click bar -->
+    <line x1="970" y1="260" x2="970" y2="460" stroke-opacity="0.55"/>
+
+    <!-- Travel ruler — plain, no featured tick, to read as uninterrupted linear travel -->
+    <line x1="1086" y1="260" x2="1086" y2="390" stroke-opacity="0.25" stroke-dasharray="2 5"/>
+    <line x1="1080" y1="260" x2="1092" y2="260" stroke-opacity="0.4"/>
+    <line x1="1080" y1="390" x2="1092" y2="390" stroke-opacity="0.4"/>
+    <text x="1098" y="329" font-family="'JetBrains Mono','IBM Plex Mono',ui-monospace,monospace"
+      font-size="11" fill="oklch(0.75 0.115 79)" fill-opacity="0.9" letter-spacing="0.03em" stroke="none">linear</text>
+
+    <!-- Spring -->
+    <g stroke-opacity="0.6">
+      <ellipse cx="970" cy="468" rx="14" ry="5"/>
+      <ellipse cx="970" cy="480" rx="14" ry="5"/>
+      <ellipse cx="970" cy="492" rx="14" ry="5"/>
+    </g>
+
+    <!-- Bottom housing — translucent -->
+    <rect x="920" y="500" width="100" height="50" rx="8" stroke-opacity="0.85"/>
+    <g stroke="oklch(0.75 0.115 79)" stroke-width="1.1" stroke-opacity="0.3">
+      <line x1="935" y1="516" x2="945" y2="506"/>
+      <line x1="985" y1="536" x2="995" y2="521"/>
+    </g>
+
+    <!-- PCB pins + strip -->
+    <line x1="950" y1="550" x2="950" y2="574" stroke-opacity="0.6"/>
+    <line x1="1010" y1="550" x2="1010" y2="574" stroke-opacity="0.6"/>
+    <rect x="930" y="574" width="100" height="16" rx="2" stroke-opacity="0.55"/>
+  </g>
+
+  <text x="970" y="612" font-family="'JetBrains Mono','IBM Plex Mono',ui-monospace,monospace"
+    font-size="12" fill="oklch(0.58 0.006 90)" letter-spacing="0.03em" text-anchor="middle" stroke="none">linear switch</text>
+
+  <!-- ================================================================
+       BRONZE THEME DOT — upper-right ornamental anchor (family convention)
+       ================================================================ -->
+  <circle cx="1148" cy="70" r="4" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+  <circle cx="1132" cy="80" r="2.2" fill="oklch(0.75 0.115 79)" stroke="none" opacity="0.8"/>
+</svg>

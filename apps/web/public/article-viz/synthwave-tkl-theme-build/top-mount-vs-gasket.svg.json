@@ -1,0 +1,26 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-10-02T14:00:00.000Z",
+  "commit": "d733cdb1",
+  "kind": "inline-viz",
+  "article_slug": "synthwave-tkl-theme-build",
+  "article_pillar": "ideas",
+  "section_anchor": "a-board-built-to-disappear-not-to-glow",
+  "brief_summary": "Side-by-side cross-section comparing a generic gasket-mount case, where the plate floats on an o-ring boundary with room to move against, to the Drop CTRL's top-mount case, where the plate bolts flush and direct to the case wall with no compliant layer, labeled firmer, more direct feel in terracotta.",
+  "target": "apps/web/public/article-viz/synthwave-tkl-theme-build/top-mount-vs-gasket.svg",
+  "splash_color": { "name": "terracotta", "oklch": "oklch(0.70 0.14 45)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "apps/web/src/content/articles/synthwave-tkl-theme-build.mdx § 'A board built to disappear, not to glow' — 'It's top-mounted, not gasket-mounted: the plate bolts straight to the case rather than floating on a compliant gasket boundary'",
+    "apps/web/src/content/articles/synthwave-tkl-theme-build.mdx § 'A board built to disappear, not to glow' — quoting Drop's description of the board: 'a firmer, more direct typing feel than the gasket boards in the same price range'",
+    "data/boards/drop-ctrl.json — 'mountStyle: top-mount' and 'The top-mount gives a firmer, more direct typing feel than the gasket boards in the same price range'"
+  ],
+  "outputs": ["apps/web/public/article-viz/synthwave-tkl-theme-build/top-mount-vs-gasket.svg"],
+  "warnings": [
+    "The gasket-mount case shown for contrast is a generic schematic, not a named competing board — no specific gasket-mount board is cited or implicated in the article body."
+  ]
+}

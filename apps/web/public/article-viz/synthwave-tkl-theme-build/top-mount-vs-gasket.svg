@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Side-by-side cross-section comparing a gasket-mount case, where the plate floats on an o-ring boundary away from the case wall, against the Drop CTRL's top-mount case, where the plate bolts directly and flush to the case wall. The top-mount side is labeled firmer, more direct feel in terracotta.</title>
+
+  <text x="60" y="50" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6" letter-spacing="0.08em">PLATE-TO-CASE CONNECTION</text>
+  <text x="660" y="50" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6" letter-spacing="0.08em">PLATE-TO-CASE CONNECTION</text>
+
+  <!-- ══ LEFT: GASKET MOUNT ══════════════════════════════════ -->
+  <text x="60" y="100" font-family="Newsreader, serif" font-style="italic" font-size="20" fill="oklch(0.78 0.005 90)" stroke="none">Gasket-mount case</text>
+  <text x="60" y="123" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">Plate floats on an o-ring boundary</text>
+
+  <!-- case shell -->
+  <path d="M 90 440 L 90 200 L 470 200 L 470 440" stroke-opacity="0.85"/>
+  <!-- plate, floating, with o-ring gasket gap -->
+  <line x1="150" y1="290" x2="410" y2="290" stroke-width="4" stroke-opacity="0.9"/>
+  <rect x="115" y="278" width="24" height="24" rx="6" stroke-opacity="0.7" fill="none"/>
+  <rect x="421" y="278" width="24" height="24" rx="6" stroke-opacity="0.7" fill="none"/>
+  <text x="90" y="335" font-family="IBM Plex Sans, sans-serif" font-size="10.5" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">o-ring gasket</text>
+  <text x="150" y="280" font-family="JetBrains Mono, monospace" font-size="10" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">PLATE — floating</text>
+
+  <!-- switch + keycap -->
+  <rect x="245" y="240" width="70" height="50" rx="6" stroke-opacity="0.85"/>
+  <path d="M 230 215 L 330 215 L 320 240 L 240 240 Z" stroke-opacity="0.75"/>
+
+  <!-- compliant give arrows -->
+  <g transform="translate(280 350)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.6">
+    <path d="M 0 0 L 0 26" stroke-dasharray="3 5"/>
+    <path d="M -8 18 L 0 26 L 8 18"/>
+  </g>
+  <text x="90" y="400" font-family="IBM Plex Sans, sans-serif" font-size="12.5" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">keystroke has a compliant</text>
+  <text x="90" y="418" font-family="IBM Plex Sans, sans-serif" font-size="12.5" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">boundary to move against</text>
+
+  <!-- ══ RIGHT: DROP CTRL TOP-MOUNT ══════════════════════════ -->
+  <text x="660" y="100" font-family="Newsreader, serif" font-style="italic" font-size="20" fill="oklch(0.70 0.14 45)" stroke="none">Drop CTRL (top-mount)</text>
+  <text x="660" y="123" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">Plate bolts flush to the case wall</text>
+
+  <!-- case shell -->
+  <path d="M 690 440 L 690 200 L 1070 200 L 1070 440" stroke-opacity="0.85"/>
+  <!-- plate, bolted flush -->
+  <line x1="690" y1="290" x2="1070" y2="290" stroke-width="4" stroke-opacity="0.95" stroke="oklch(0.70 0.14 45)"/>
+  <line x1="720" y1="290" x2="720" y2="200" stroke-dasharray="3 5" stroke-opacity="0.5"/>
+  <line x1="1040" y1="290" x2="1040" y2="200" stroke-dasharray="3 5" stroke-opacity="0.5"/>
+  <text x="750" y="280" font-family="JetBrains Mono, monospace" font-size="10" fill="oklch(0.70 0.14 45)" stroke="none" opacity="0.8">PLATE — bolted flush</text>
+
+  <!-- switch + keycap -->
+  <rect x="845" y="240" width="70" height="50" rx="6" stroke-opacity="0.85"/>
+  <path d="M 830 215 L 930 215 L 920 240 L 840 240 Z" stroke-opacity="0.75"/>
+
+  <!-- direct force line, no give -->
+  <g transform="translate(880 350)" stroke="oklch(0.70 0.14 45)" stroke-opacity="0.95">
+    <path d="M 0 0 L 0 26" stroke-width="3"/>
+    <path d="M -8 18 L 0 26 L 8 18" stroke-width="3"/>
+  </g>
+  <text x="690" y="400" font-family="IBM Plex Sans, sans-serif" font-size="12.5" fill="oklch(0.70 0.14 45)" stroke="none" opacity="0.95">firmer, more direct feel —</text>
+  <text x="690" y="418" font-family="IBM Plex Sans, sans-serif" font-size="12.5" fill="oklch(0.70 0.14 45)" stroke="none" opacity="0.95">no compliant layer underneath</text>
+
+  <!-- Brass-bronze theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

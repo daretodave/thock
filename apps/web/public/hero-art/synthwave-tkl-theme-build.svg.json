@@ -1,0 +1,38 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-10-13T00:00:00.000Z",
+  "commit": "d733cdb197d4365a23f4b2954fa268afbbaec80f",
+  "kind": "hero-art",
+  "article_slug": "synthwave-tkl-theme-build",
+  "article_pillar": "Ideas & Builds",
+  "source": "plan/bearings.md § Article hero art — colorful keyboard SVGs (build / mod piece → keyboard outline with a mod callout); composition family mirrored from apps/web/public/hero-art/mission-control-theme-build.svg and apps/web/public/hero-art/bento-box-theme-build.svg per calling-agent instruction, laid out left-to-right instead of stacked per this task's explicit brief",
+  "template": null,
+  "size": [1200, 750],
+  "title": null,
+  "subtitle": null,
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": ["JetBrains Mono"],
+  "subject": "Three-part theme-build composition arranged left to right (distinct from the stacked case-top-left/switch-top-right/keycap-row-bottom arrangement used in the two prior theme-build pieces, per this task's explicit brief). Left: a rectangular TKL case outline (460x196) with a single solid inset seam line standing in for a flush top-mount plate-to-case seam — deliberately no dashed gasket channel and no gasket-mount tabs, distinguishing it from the gasket-mount cases in mission-control-theme-build.svg and bento-box-theme-build.svg. Inside: a simplified 10x3 main key field, a variable-width bottom row, and a 2x2 nav cluster plus an inverted-T arrow cluster separated from the main field by the TKL gap (no numpad). Captioned 'tkl case — top mount'. Center: one large Cherry-profile keycap side silhouette (moderate shoulder slope, slight concave-dish top via a single quadratic curve — shorter and less steeply sculpted than an SA silhouette) filled with a low-opacity ochre wash. Just above its top edge sits a small rounded-rect inset representing a top-down view of the cap's legend: a horizon line, three concentric upper-half arcs forming a sunset with a small bronze dot at its center, and a four-line perspective grid fanning down from the sun's center plus two horizontal grid rows below the horizon — a synthwave sunset/grid motif rendered only in the single ochre splash plus one bronze accent dot, never in the keycap set's actual purple/pink/teal colorway, per the house hero-art rule that the splash is independent of the article subject's own colors. Captioned 'cherry-profile keycap'. Right: a linear switch cross-section — top housing, a stem segment visible above the housing, one single unbroken straight stem line running the switch's full travel with no tactile bump and no click-bar mechanism, a plain dashed travel ruler with no featured tick (contrasting with the tactile/clicky rulers-with-a-tick used in the two prior theme-build pieces) and a small 'linear' label in ochre, a three-ellipse spring, and a bottom housing with PCB pins and strip. Both housings carry a few short diagonal hatch lines in low-opacity ochre to suggest a translucent/semi-transparent housing material. Captioned 'linear switch'. All three parts are tied together by two dashed ochre leaders (case to keycap, keycap to switch), each with a hollow origin dot and a small arrowhead terminus, plus two faint wide ochre washes behind the keycap's sun motif and the switch's stem/hatch area. Bronze theme dot at the upper-right margin (1148,70) with a small ochre satellite dot for family cohesion.",
+  "composition": "build / mod motif per bearings.md Article hero art directive: keyboard outline + callout style, extended to three paired parts (case, keycap, switch) per the mission-control/bento-box theme-build family, but laid out strictly left-to-right with two connecting leaders rather than the prior pieces' stacked arrangement, per this task's explicit brief instruction ('three parts, left to right').",
+  "splash_color": {
+    "name": "ochre",
+    "oklch": "oklch(0.75 0.115 79)",
+    "rotation_note": "Chosen from the brief's allowed set {coral, dusty rose, ochre, muted terracotta}. The two most recent hero-art pieces at render time (tmr-switches-five-week-climb.svg, switch-actuation-weight-buying-guide.svg / tmr-switches-deep-dive.svg) used dusty rose and coral; ochre had not appeared since split-ergo-parts-pairing.svg several pieces back, so it keeps this piece distinct from its immediate neighbors. Lightness/chroma/hue (0.75 0.115 79) picked to sit clear of the other ochre values already in rotation across the corpus (0.78 0.12 75, 0.72 0.13 80, 0.64 0.13 58)."
+  },
+  "accent_color": {
+    "name": "warm-bronze (theme accent)",
+    "oklch": "oklch(0.80 0.135 75)"
+  },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "callout_color": "oklch(0.58 0.006 90)",
+  "parts_referenced": {
+    "board": "generic top-mount TKL case — no specific vendor/model named in the brief, so none was invented",
+    "keycap_set": "generic Cherry-profile synthwave/retro keycap set — the set's own purple/pink/teal colorway is intentionally not rendered; only the single ochre splash + bronze accent appear, per the house hero-art rule that the splash is independent of the article subject's actual colors",
+    "switch": "generic linear switch, translucent housing — no specific vendor/model named in the brief, so none was invented"
+  },
+  "outputs": [
+    "apps/web/public/hero-art/synthwave-tkl-theme-build.svg"
+  ],
+  "warnings": []
+}

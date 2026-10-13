@@ -11,6 +11,16 @@
       }
     },
     {
+      "slug": "synthwave-tkl-theme-build",
+      "readTime": 7,
+      "frontmatter": {
+        "title": "Build of the week: the Drop CTRL goes synthwave under GMK Laser and Ink V2 Yellow",
+        "lede": "A board tuned for directness, a switch tuned for speed, and a keycap set tuned for attention — the gap between the first two and the third is the entire reason this build works.",
+        "pillar": "ideas",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "switch-actuation-weight-buying-guide",
       "readTime": 8,
       "frontmatter": {
@@ -9358,5 +9368,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-10-12T16:52:30.646Z"
+  "generatedAt": "2026-10-13T05:32:27.102Z"
 }
