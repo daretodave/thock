@@ -13615,7 +13615,7 @@ passes accumulate signals.)
 > Filed 2026-10-07 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 > **Resolved (2026-10-10):** shipped `switch-actuation-weight-buying-guide.mdx` — a guides-pillar buying guide explaining actuation vs bottom-out gram weights, grounded in 5 catalog switches (Gateron Magnetic Jade, Cherry MX2A Red, Durock T1, Kailh Box Jade, C3 Equalz Tangerine R2). `publishedAt` gap-filled to 2026-10-01 (largest gap in the 30-day window, 2026-09-22 to 2026-10-10). Language gate, mentionedParts gate both clean. `pnpm verify` full gate green: typecheck, lint, unit + script tests, data:validate, build, size, 1289/1289 e2e.
 
-### [ ] [cross-links] [4.5] switch-actuation-weight-buying-guide ↔ beginners-switch-buying-guide — no prose cross-link (same pillar, ≥2 shared tags: linear, tactile, clicky, beginner)
+### [x] [cross-links] [4.5] switch-actuation-weight-buying-guide ↔ beginners-switch-buying-guide — no prose cross-link (same pillar, ≥2 shared tags: linear, tactile, clicky, beginner)
 - category: cross-links
 - filed: 2026-10-10 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -13625,6 +13625,7 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/switch-actuation-weight-buying-guide.mdx
 - article-b: apps/web/src/content/articles/beginners-switch-buying-guide.mdx
 - action: add [beginners-switch-buying-guide](/article/beginners-switch-buying-guide) to switch-actuation-weight-buying-guide body, or vice versa
+- addressed in: 10f0ee9a (hub-clustered drain, switch-actuation-weight-buying-guide cross-links — 1 pair; the only pending row for this hub)
 
 ### [x] [cross-links] [4.5] tmr-switches-deep-dive ↔ cherry-mx2a-revision — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
 - category: cross-links
