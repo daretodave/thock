@@ -13626,7 +13626,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/beginners-switch-buying-guide.mdx
 - action: add [beginners-switch-buying-guide](/article/beginners-switch-buying-guide) to switch-actuation-weight-buying-guide body, or vice versa
 
-### [ ] [cross-links] [4.5] tmr-switches-deep-dive ↔ cherry-mx2a-revision — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
+### [x] [cross-links] [4.5] tmr-switches-deep-dive ↔ cherry-mx2a-revision — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
 - category: cross-links
 - filed: 2026-10-10 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -13636,8 +13636,9 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/tmr-switches-deep-dive.mdx
 - article-b: apps/web/src/content/articles/cherry-mx2a-revision.mdx
 - action: add [cherry-mx2a-revision](/article/cherry-mx2a-revision) to tmr-switches-deep-dive body, or vice versa
+- addressed in: 6b5fb51e (hub-clustered drain, tmr-switches-deep-dive cross-links — 7 pairs)
 
-### [ ] [cross-links] [4.5] tmr-switches-deep-dive ↔ clicky-switches-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
+### [x] [cross-links] [4.5] tmr-switches-deep-dive ↔ clicky-switches-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
 - category: cross-links
 - filed: 2026-10-10 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -13647,8 +13648,9 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/tmr-switches-deep-dive.mdx
 - article-b: apps/web/src/content/articles/clicky-switches-deep-dive.mdx
 - action: add [clicky-switches-deep-dive](/article/clicky-switches-deep-dive) to tmr-switches-deep-dive body, or vice versa
+- addressed in: 6b5fb51e (hub-clustered drain, tmr-switches-deep-dive cross-links — 7 pairs)
 
-### [ ] [cross-links] [4.5] tmr-switches-deep-dive ↔ gateron-lanes-tactile-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
+### [x] [cross-links] [4.5] tmr-switches-deep-dive ↔ gateron-lanes-tactile-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
 - category: cross-links
 - filed: 2026-10-10 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -13658,8 +13660,9 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/tmr-switches-deep-dive.mdx
 - article-b: apps/web/src/content/articles/gateron-lanes-tactile-deep-dive.mdx
 - action: add [gateron-lanes-tactile-deep-dive](/article/gateron-lanes-tactile-deep-dive) to tmr-switches-deep-dive body, or vice versa
+- addressed in: 6b5fb51e (hub-clustered drain, tmr-switches-deep-dive cross-links — 7 pairs)
 
-### [ ] [cross-links] [4.5] tmr-switches-deep-dive ↔ gateron-magnetic-jade-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: magnetic, deep-dive)
+### [x] [cross-links] [4.5] tmr-switches-deep-dive ↔ gateron-magnetic-jade-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: magnetic, deep-dive)
 - category: cross-links
 - filed: 2026-10-10 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -13669,8 +13672,9 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/tmr-switches-deep-dive.mdx
 - article-b: apps/web/src/content/articles/gateron-magnetic-jade-deep-dive.mdx
 - action: add [gateron-magnetic-jade-deep-dive](/article/gateron-magnetic-jade-deep-dive) to tmr-switches-deep-dive body, or vice versa
+- addressed in: 6b5fb51e (hub-clustered drain, tmr-switches-deep-dive cross-links — 7 pairs)
 
-### [ ] [cross-links] [4.5] tmr-switches-deep-dive ↔ hmx-cloud-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
+### [x] [cross-links] [4.5] tmr-switches-deep-dive ↔ hmx-cloud-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
 - category: cross-links
 - filed: 2026-10-10 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -13680,8 +13684,9 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/tmr-switches-deep-dive.mdx
 - article-b: apps/web/src/content/articles/hmx-cloud-deep-dive.mdx
 - action: add [hmx-cloud-deep-dive](/article/hmx-cloud-deep-dive) to tmr-switches-deep-dive body, or vice versa
+- addressed in: 6b5fb51e (hub-clustered drain, tmr-switches-deep-dive cross-links — 7 pairs)
 
-### [ ] [cross-links] [4.5] tmr-switches-deep-dive ↔ keyboard-acoustics-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
+### [x] [cross-links] [4.5] tmr-switches-deep-dive ↔ keyboard-acoustics-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
 - category: cross-links
 - filed: 2026-10-10 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -13691,8 +13696,9 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/tmr-switches-deep-dive.mdx
 - article-b: apps/web/src/content/articles/keyboard-acoustics-deep-dive.mdx
 - action: add [keyboard-acoustics-deep-dive](/article/keyboard-acoustics-deep-dive) to tmr-switches-deep-dive body, or vice versa
+- addressed in: 6b5fb51e (hub-clustered drain, tmr-switches-deep-dive cross-links — 7 pairs)
 
-### [ ] [cross-links] [4.5] tmr-switches-deep-dive ↔ optical-switches-explained — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
+### [x] [cross-links] [4.5] tmr-switches-deep-dive ↔ optical-switches-explained — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
 - category: cross-links
 - filed: 2026-10-10 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -13702,6 +13708,7 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/tmr-switches-deep-dive.mdx
 - article-b: apps/web/src/content/articles/optical-switches-explained.mdx
 - action: add [optical-switches-explained](/article/optical-switches-explained) to tmr-switches-deep-dive body, or vice versa
+- addressed in: 6b5fb51e (hub-clustered drain, tmr-switches-deep-dive cross-links — 7 pairs)
 
 ### [x] [HOT PURSUIT] [content-gap] [7] news pillar — 1 of ≥2 articles in last 30d — addressed in 65b30e52, closes #1021
 - category: content-gaps
