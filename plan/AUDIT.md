@@ -13716,7 +13716,7 @@ passes accumulate signals.)
 - issue: #1021
 > Filed 2026-10-10 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 
-### [ ] [cross-links] [4.5] gmk-cyl-zombie-group-buy ↔ divinikey-dcs-dolch-group-buy — no prose cross-link (same pillar, ≥2 shared tags: keycaps, group-buy)
+### [x] [cross-links] [4.5] gmk-cyl-zombie-group-buy ↔ divinikey-dcs-dolch-group-buy — no prose cross-link (same pillar, ≥2 shared tags: keycaps, group-buy) — addressed in a31bd8cc
 - category: cross-links
 - filed: 2026-10-12 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -13727,7 +13727,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/divinikey-dcs-dolch-group-buy.mdx
 - action: add [divinikey-dcs-dolch-group-buy](/article/divinikey-dcs-dolch-group-buy) to gmk-cyl-zombie-group-buy body, or vice versa
 
-### [ ] [cross-links] [4.5] gmk-cyl-zombie-group-buy ↔ divinikey-gmk-cyl-orange-alert-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, keycaps, group-buy)
+### [x] [cross-links] [4.5] gmk-cyl-zombie-group-buy ↔ divinikey-gmk-cyl-orange-alert-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, keycaps, group-buy) — addressed in a31bd8cc
 - category: cross-links
 - filed: 2026-10-12 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -13738,7 +13738,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/divinikey-gmk-cyl-orange-alert-group-buy.mdx
 - action: add [divinikey-gmk-cyl-orange-alert-group-buy](/article/divinikey-gmk-cyl-orange-alert-group-buy) to gmk-cyl-zombie-group-buy body, or vice versa
 
-### [ ] [cross-links] [4.5] gmk-cyl-zombie-group-buy ↔ gmk-cyl-greg-2-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, group-buy)
+### [x] [cross-links] [4.5] gmk-cyl-zombie-group-buy ↔ gmk-cyl-greg-2-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, group-buy) — addressed in a31bd8cc
 - category: cross-links
 - filed: 2026-10-12 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -13749,7 +13749,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/gmk-cyl-greg-2-group-buy.mdx
 - action: add [gmk-cyl-greg-2-group-buy](/article/gmk-cyl-greg-2-group-buy) to gmk-cyl-zombie-group-buy body, or vice versa
 
-### [ ] [cross-links] [4.5] gmk-cyl-zombie-group-buy ↔ gmk-cyl-ishtar-r2-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, group-buy)
+### [x] [cross-links] [4.5] gmk-cyl-zombie-group-buy ↔ gmk-cyl-ishtar-r2-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, group-buy) — addressed in a31bd8cc
 - category: cross-links
 - filed: 2026-10-12 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -13760,7 +13760,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/gmk-cyl-ishtar-r2-group-buy.mdx
 - action: add [gmk-cyl-ishtar-r2-group-buy](/article/gmk-cyl-ishtar-r2-group-buy) to gmk-cyl-zombie-group-buy body, or vice versa
 
-### [ ] [cross-links] [4.5] gmk-cyl-zombie-group-buy ↔ gmk-cyl-just-beachy-group-buy-opens — no prose cross-link (same pillar, ≥2 shared tags: gmk, keycaps, group-buy)
+### [x] [cross-links] [4.5] gmk-cyl-zombie-group-buy ↔ gmk-cyl-just-beachy-group-buy-opens — no prose cross-link (same pillar, ≥2 shared tags: gmk, keycaps, group-buy) — addressed in a31bd8cc
 - category: cross-links
 - filed: 2026-10-12 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -13771,7 +13771,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/gmk-cyl-just-beachy-group-buy-opens.mdx
 - action: add [gmk-cyl-just-beachy-group-buy-opens](/article/gmk-cyl-just-beachy-group-buy-opens) to gmk-cyl-zombie-group-buy body, or vice versa
 
-### [ ] [cross-links] [4.5] gmk-cyl-zombie-group-buy ↔ gmk-cyl-king-of-the-seas-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, group-buy)
+### [x] [cross-links] [4.5] gmk-cyl-zombie-group-buy ↔ gmk-cyl-king-of-the-seas-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, group-buy) — addressed in a31bd8cc
 - category: cross-links
 - filed: 2026-10-12 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -13782,7 +13782,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/gmk-cyl-king-of-the-seas-group-buy.mdx
 - action: add [gmk-cyl-king-of-the-seas-group-buy](/article/gmk-cyl-king-of-the-seas-group-buy) to gmk-cyl-zombie-group-buy body, or vice versa
 
-### [ ] [cross-links] [4.5] gmk-cyl-zombie-group-buy ↔ gmk-cyl-masterpiece-r2-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, keycaps, group-buy)
+### [x] [cross-links] [4.5] gmk-cyl-zombie-group-buy ↔ gmk-cyl-masterpiece-r2-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, keycaps, group-buy) — addressed in a31bd8cc
 - category: cross-links
 - filed: 2026-10-12 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -13793,7 +13793,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/gmk-cyl-masterpiece-r2-group-buy.mdx
 - action: add [gmk-cyl-masterpiece-r2-group-buy](/article/gmk-cyl-masterpiece-r2-group-buy) to gmk-cyl-zombie-group-buy body, or vice versa
 
-### [ ] [cross-links] [4.5] gmk-cyl-zombie-group-buy ↔ gmk-cyl-pandemonium-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, keycaps, group-buy)
+### [x] [cross-links] [4.5] gmk-cyl-zombie-group-buy ↔ gmk-cyl-pandemonium-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, keycaps, group-buy) — addressed in a31bd8cc
 - category: cross-links
 - filed: 2026-10-12 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -13804,7 +13804,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/gmk-cyl-pandemonium-group-buy.mdx
 - action: add [gmk-cyl-pandemonium-group-buy](/article/gmk-cyl-pandemonium-group-buy) to gmk-cyl-zombie-group-buy body, or vice versa
 
-### [ ] [cross-links] [4.5] gmk-cyl-zombie-group-buy ↔ gmk-cyl-prussian-alert — no prose cross-link (same pillar, ≥2 shared tags: gmk, keycaps, group-buy)
+### [x] [cross-links] [4.5] gmk-cyl-zombie-group-buy ↔ gmk-cyl-prussian-alert — no prose cross-link (same pillar, ≥2 shared tags: gmk, keycaps, group-buy) — addressed in a31bd8cc
 - category: cross-links
 - filed: 2026-10-12 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -13815,7 +13815,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/gmk-cyl-prussian-alert.mdx
 - action: add [gmk-cyl-prussian-alert](/article/gmk-cyl-prussian-alert) to gmk-cyl-zombie-group-buy body, or vice versa
 
-### [ ] [cross-links] [4.5] gmk-cyl-zombie-group-buy ↔ gmk-cyl-ramune-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, group-buy)
+### [x] [cross-links] [4.5] gmk-cyl-zombie-group-buy ↔ gmk-cyl-ramune-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, group-buy) — addressed in a31bd8cc
 - category: cross-links
 - filed: 2026-10-12 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -13826,7 +13826,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/gmk-cyl-ramune-group-buy.mdx
 - action: add [gmk-cyl-ramune-group-buy](/article/gmk-cyl-ramune-group-buy) to gmk-cyl-zombie-group-buy body, or vice versa
 
-### [ ] [cross-links] [4.5] gmk-cyl-zombie-group-buy ↔ gmk-cyl-selene-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, keycaps, group-buy)
+### [x] [cross-links] [4.5] gmk-cyl-zombie-group-buy ↔ gmk-cyl-selene-group-buy — no prose cross-link (same pillar, ≥2 shared tags: gmk, keycaps, group-buy) — addressed in a31bd8cc
 - category: cross-links
 - filed: 2026-10-12 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -13837,7 +13837,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/gmk-cyl-selene-group-buy.mdx
 - action: add [gmk-cyl-selene-group-buy](/article/gmk-cyl-selene-group-buy) to gmk-cyl-zombie-group-buy body, or vice versa
 
-### [ ] [cross-links] [4.5] gmk-cyl-zombie-group-buy ↔ gsk-sweet-nightmare-group-buy — no prose cross-link (same pillar, ≥2 shared tags: keycaps, group-buy)
+### [x] [cross-links] [4.5] gmk-cyl-zombie-group-buy ↔ gsk-sweet-nightmare-group-buy — no prose cross-link (same pillar, ≥2 shared tags: keycaps, group-buy) — addressed in a31bd8cc
 - category: cross-links
 - filed: 2026-10-12 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
