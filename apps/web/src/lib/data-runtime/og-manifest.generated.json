@@ -52,7 +52,7 @@
     },
     {
       "slug": "tmr-switches-deep-dive",
-      "readTime": 10,
+      "readTime": 11,
       "frontmatter": {
         "title": "What a TMR sensor is actually measuring under a magnetic switch",
         "lede": "Keychron's Q16 HE 8K and Cherry's XTRFY TMR boards get covered as a new switch generation. The real change sits a few millimeters below the magnet — a tunnel junction reading field strength through resistance instead of voltage, with a noise floor low enough to matter at the shallow end of the stroke.",
@@ -9383,5 +9383,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-10-14T06:07:33.582Z"
+  "generatedAt": "2026-10-14T16:33:22.430Z"
 }
