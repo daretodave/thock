@@ -13869,7 +13869,7 @@ passes accumulate signals.)
 - issue: #1022
 > Filed 2026-10-12 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 
-### [ ] [cross-links] [4.5] tmr-switches-five-week-climb ↔ hall-effect-mainstream — no prose cross-link (same pillar, ≥2 shared tags: magnetic, hall-effect)
+### [x] [cross-links] [4.5] tmr-switches-five-week-climb ↔ hall-effect-mainstream — no prose cross-link (same pillar, ≥2 shared tags: magnetic, hall-effect) — addressed in commit `6ef0321b`
 - category: cross-links
 - filed: 2026-10-12 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -13880,7 +13880,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/hall-effect-mainstream.mdx
 - action: add [hall-effect-mainstream](/article/hall-effect-mainstream) to tmr-switches-five-week-climb body, or vice versa
 
-### [ ] [cross-links] [4.5] tmr-switches-five-week-climb ↔ keychron-nova-socket-hybrid — no prose cross-link (same pillar, ≥2 shared tags: tmr, magnetic, keychron)
+### [x] [cross-links] [4.5] tmr-switches-five-week-climb ↔ keychron-nova-socket-hybrid — no prose cross-link (same pillar, ≥2 shared tags: tmr, magnetic, keychron) — addressed in commit `6ef0321b`
 - category: cross-links
 - filed: 2026-10-12 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -13891,7 +13891,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/keychron-nova-socket-hybrid.mdx
 - action: add [keychron-nova-socket-hybrid](/article/keychron-nova-socket-hybrid) to tmr-switches-five-week-climb body, or vice versa
 
-### [ ] [cross-links] [4.5] tmr-switches-five-week-climb ↔ wooting-rapid-trigger-head-start — no prose cross-link (same pillar, ≥2 shared tags: hall-effect, rapid-trigger)
+### [x] [cross-links] [4.5] tmr-switches-five-week-climb ↔ wooting-rapid-trigger-head-start — no prose cross-link (same pillar, ≥2 shared tags: hall-effect, rapid-trigger) — addressed in commit `6ef0321b`
 - category: cross-links
 - filed: 2026-10-12 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
