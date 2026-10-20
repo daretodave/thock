@@ -13589,7 +13589,7 @@ passes accumulate signals.)
 > Filed 2026-10-03 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 > **Resolved (2026-10-10):** shipped `tmr-switches-deep-dive.mdx` — a mechanism explainer on Tunnel Magnetoresistance switch sensing (tunnel-junction physics vs. standard Hall-effect sensing, sensitivity/noise-floor tradeoffs, and what the headroom buys rapid-trigger firmware), the deep-dive counterpart to the existing Hall-effect deep dive and two TMR product news pieces that never explained the underlying mechanism. `publishedAt` gap-filled to 2026-09-27 (largest gap in the 30-day window, 2026-09-15 to 2026-10-10). Language gate, mentionedParts gate both clean. `pnpm verify` full gate green: typecheck, lint, unit + script tests, data:validate, build, size, 1292/1292 e2e.
 
-### [ ] [newsletter] [4.0] Weekly digest — issue 012 due (7 days since issue 11)
+### [x] [newsletter] [4.0] Weekly digest — issue 012 due (7 days since issue 11) — addressed in `600a9ec6`, closes #1019
 - category: content-gaps
 - filed: 2026-10-03 by newsletter-gap-survey.mjs
 - impact: 5 (newsletter archive going stale reduces /newsletter value and reader trust in cadence)
@@ -13600,6 +13600,7 @@ passes accumulate signals.)
 - days-since: 7
 - issue: #1019
 > Filed 2026-10-03 by newsletter-gap-survey.mjs. 7 days since issue 11. Threshold: ≥7 calendar days.
+> **Resolved (2026-10-20, cloud /march):** shipped `thock-weekly-012.mdx` — 5 pillar picks (artisan-keycaps-buying-guide, synthwave-tkl-theme-build, tmr-switches-five-week-climb, gmk-cyl-zombie-group-buy, tmr-switches-deep-dive) plus a 2026-W42 tracker check-in (Hall-effect ceiling, Keychron flat 100, Split/Ergo flat 100, Mode Designs' post-fulfillment dip). `publishedAt` 2026-10-20 — today, the cadence-due date itself, not a gap-fill (newsletter issues anchor to their ship date). Language gate clean; mentionedParts/cross-link gates don't apply to newsletter MDX (strict schema has no `mentionedParts`/`tags` fields). `pnpm verify` full gate green: typecheck, lint, 862 unit tests, 230 script tests, data:validate, build, size, 1313/1313 e2e.
 
 ### [x] [content-gap] [7] guides pillar — 1 of ≥2 articles in last 30d — addressed in c29438f0, closes #1020
 - category: content-gaps
@@ -13995,3 +13996,15 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/artisan-keycaps-buying-guide.mdx
 - article-b: apps/web/src/content/articles/keycap-profiles-compared.mdx
 - action: add [keycap-profiles-compared](/article/keycap-profiles-compared) to artisan-keycaps-buying-guide body, or vice versa
+
+### [HOT PURSUIT] [content-gap] [7] deep-dives pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 6 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: deep-dives
+- window-count: 1
+- window-start: 2026-09-20
+- score: 7
+- next: /ship-content → deep-dives pillar article
+> Filed 2026-10-20 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
