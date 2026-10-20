@@ -1809,6 +1809,13 @@
   ],
   "newsletters": [
     {
+      "slug": "thock-weekly-012",
+      "title": "thock weekly — issue 12",
+      "lede": "An artisan-keycap guide built around flipping a cap over to check its stem, a synthwave Drop CTRL build whose glow comes from inside the switch rather than the legends, TMR's five-week climb toward Hall-effect's ceiling, a Halloween group buy with the tracker's steepest climb yet, and what a TMR sensor actually measures — plus a tracker check-in on Hall-effect's ceiling and Mode Designs' dip.",
+      "issue": 12,
+      "readTime": 5
+    },
+    {
       "slug": "thock-weekly-011",
       "title": "thock weekly — issue 11",
       "lede": "A wireless buying guide sorted by the radio inside the board, a Class80 build where three parts solve each other's problems, Wooting's tracker climb outpacing its own firmware, Keychron's first TMR switch launch, and what a flex cut actually buys a board with no gasket — plus a tracker check-in on Keychron's ceiling and Wooting's eight-week run.",
@@ -9383,5 +9390,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-10-14T20:32:58.605Z"
+  "generatedAt": "2026-10-20T07:25:27.419Z"
 }
