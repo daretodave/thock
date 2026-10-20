@@ -6,44 +6,36 @@
 
 ## Headline
 
-**A 3.5-day API rate-limit storm knocked out both `march` and `night` for most of this window, and the loop's own crash-reporting swallowed almost all of it.** 25 consecutive `march` tick failures ran from 2026-10-15T17:58:34Z through 2026-10-19T05:39:53Z (all `api_error_status: 429`, 1-turn, sub-second-to-low-duration crashes), finally clearing at the 2026-10-19T12:00:10Z tick (success, no-op). The same storm hit `night` (this skill's own workflow): **4 consecutive failed digest ticks** on 2026-10-15/16/17/18, meaning this is the first digest to land since 2026-10-14. The standing `[score 6.0]` phase-candidate (open since 2026-09-20, diagnosing `march.yml`'s crash-issue dedupe blocking on a stale-but-open `#929`) turns out to generalize: `night.yml` carries the identical dedupe-on-title-search pattern, and issue `#1026` (filed for the first night crash, 10-15, still open+unlabeled) silently blocked new issues for the 10-16/17/18 crashes too. Net result: 85+ hours of repeated failures across two workflows produced exactly one GitHub issue. Appended fresh evidence to that candidate this tick (see Tuning proposals) — it has now sat fully cloud-actionable and unpromoted for 22 days.
+**The storm is over and the loop is back to normal cadence — but the night shift is using this tick to name something the last several digests kept mentioning in passing without ever turning into a durable item: `plan/CRITIQUE.md` hasn't run in 163 days.** Six `march` ticks and the prior `night` tick all completed clean since the last digest; one of them shipped the 16-days-overdue newsletter (issue 12, closing `#1019`), another filed a fresh content-gap row (`#1029`). The 2026-10-15→19 API rate-limit storm named in yesterday's digest did not recur. This tick appended fresh evidence to the standing `march.yml`/`night.yml` crash-dedupe candidate (now 23 days fully cloud-actionable and unpromoted) and, new this tick, filed a `plan/PHASE_CANDIDATES.md` row for the critique gap itself — pass 11 (2026-05-10) is still the last one on record, meaning the loop's only fresh-eyes human-perception channel has been dark for the entire back half of this project's life so far, structurally (no Chrome MCP on the cloud runner) rather than by neglect.
 
-**Before the storm hit, the loop was productive: 11 cross-link pairs drained across 3 hub articles.** `tmr-switches-deep-dive` (7 pairs, `6b5fb51e`), `switch-actuation-weight-buying-guide` (1 pair, `10f0ee9a`), and `tmr-switches-five-week-climb` (3 pairs, `6ef0321b`) all cleared between 2026-10-14T16:39 and 2026-10-15T03:16 — the last productive commits before the storm began at 17:58:34Z the same day. Nothing has shipped since.
-
-**This tick's own fresh `pnpm verify` is fully green** — all 8 legs run as sequential foreground calls: typecheck, lint, 862 unit tests in `apps/web` (109 files; every other workspace's unit suite green too), 230 script tests, `data:validate` (91 records, cross-refs resolve), a clean production build, `size` within budget (largest tracked page 145.3 KB / 175 KB), and **1310/1310 e2e** (~8.3m) against `next start :4173`. `pnpm deploy:check` confirms `READY` at HEAD (`2a1a6827`) going into this tick.
+**This tick's own fresh `pnpm verify` is fully green** — all 8 legs run as sequential foreground calls: typecheck, lint, 862 unit tests in `apps/web` (109 files; every other workspace's suite also green), 230 script tests, `data:validate` (91 records, cross-refs resolve), a clean production build, `size` within budget (largest tracked page 145.3 KB / 175 KB), and **1313/1313 e2e** (~8.5m) against `next start :4173`. `pnpm deploy:check` confirms `READY` at HEAD (`0fc7260d`) going into this tick.
 
 ## While you were out
 
 | When (UTC) | Tick | Outcome |
 |---|---|---|
-| 2026-10-14 15:34 | *(last digest committed, `93d6b0c4`)* | baseline |
-| 16:26→16:39 | cloud march | **shipped** — `tmr-switches-deep-dive` cross-links x7 |
-| 20:24→20:41 | cloud march | **shipped** — `switch-actuation-weight-buying-guide` cross-links x1 |
-| 23:38 | cloud march | no-op |
-| 2026-10-15 03:01→03:16 | cloud march | **shipped** — `tmr-switches-five-week-climb` cross-links x3 |
-| 08:47, 13:53 | cloud march | no-op (2 ticks) |
-| 15:08 | night (digest) | **failed** — `is_error:true`, filed issue `#1026` |
-| 17:58 → 2026-10-19 05:39 | cloud march | **25 consecutive failures** — `api_error_status: 429` |
-| 10-16 14:56, 10-17 13:48, 10-18 14:04 | night (digest) | **failed** — same 429 shape; no new issues (dedupe blocked by open `#1026`) |
-| 2026-10-19 12:00 | cloud march | success, no-op — storm cleared |
-| 17:02 | night (this tick) | in progress |
+| 2026-10-19 17:23 | *(last digest committed, `90f1e032`)* | baseline |
+| 18:57→18:59 | cloud march | no-op |
+| 22:49→22:51 | cloud march | no-op |
+| 2026-10-20 01:31→01:35 | cloud march | no-op |
+| 07:05→07:36 | cloud march | **shipped** — newsletter "thock weekly — issue 12" + audit drain, closed `#1019` |
+| 13:16→13:21 | cloud march | filed `#1029` — new content-gap row (deep-dives: tactile bump geometry), no ship this tick |
+| 15:13 | night (this tick) | in progress |
 
-Since the last digest: **6 completed `march` runs before the storm (5 success incl. 3 shipping, 1 no-op), 25 failures during the storm, 1 success after** = 32 completed `march` runs, 6 commits (3 content+audit pairs). **4 completed `night` runs: all 4 failed** before this tick. 2 `lighthouse` runs visible, both `skipped`. No new `heartbeat` alarm this window beyond the standing, likely-stale `#1027` (filed 2026-10-16, mid-storm — see Needs you).
+Since the last digest: **6 completed `march` runs (1 shipping, 1 bookkeeping-only, 4 no-op), all `success`** — zero crash-shaped failures, confirming the 2026-10-15→19 storm has not recurred. 2 `lighthouse` runs, both `success` (07:36, 13:21). 3 `heartbeat` runs, all `success`, no new alarm. 1 prior `night` run (2026-10-19T17:02, 22m11s, success) produced the last digest.
 
 ## Shipped
 
-**Three cross-link hub drains, 11 pairs total, all before the storm.** `content: tmr-switches-deep-dive cross-links — 7 pairs drained` (`6b5fb51e`) → `audit: … addressed in 6b5fb51e` (`ac364baa`); `content: switch-actuation-weight-buying-guide cross-links — 1 pair drained` (`10f0ee9a`) → `audit: … addressed in 10f0ee9a` (`40a71d21`); `content: tmr-switches-five-week-climb cross-links — 3 pairs drained` (`6ef0321b`) → `audit: … addressed in 6ef0321b` (`2a1a6827`).
-
-Nothing else shipped in this window — the storm consumed the remaining ~3.5 days.
+**One newsletter issue, closing the window's longest-overdue content row.** `content: newsletter — "thock weekly — issue 12"` (`600a9ec6`) → `audit: newsletter cadence finding addressed — issue 12 shipped` (`9e707289`), closing `#1019` (open since 2026-10-06, 16 days against a 7-day threshold at ship time). A second tick filed but did not yet ship a fresh content-gap row: `audit: content dispatch opened issue #1029` (`0fc7260d`, deep-dives pillar, "tactile bump geometry deep-dive").
 
 ## Queues now
 
-- **Build plan**: 0 pending phases, unchanged (50 phases shipped).
-- **`plan/AUDIT.md`**: **16 open rows** (12 `[ ]` + 4 `[needs-user-call]`), down from 27 at the last digest. Breakdown of the 12: **6 `[cross-links] [4.5]`** — 3 on `synthwave-tkl-theme-build` (mirrored as issue `#1025`) and 3 fresh on `artisan-keycaps-buying-guide` ↔ beginner-tagged siblings (unmirrored); 1 `[newsletter] [4.0]` (issue 12 due — filed 2026-10-03, now **16 days** since issue 11 against a 7-day threshold); 1 `[data] [2.4]` (generated-manifest drift); 1 `[content] [2.4]` (plate-materials tension); 3 `[seo]` sub-3.0 rows unchanged (Mode Sonnet hero-art `[2.7]`/`[2.0]`, orphaned `favicon.svg` `[1.8]`). 4 `[needs-user-call]` rows unchanged (border-contrast WCAG 1.4.11 `[1.3]`, GTM consent-gate `[3.6]`, soft-404 structural trade-off `[4.2]`, `loop:opened` mirror-drain gap `[3.0]`).
-- **`plan/CRITIQUE.md`**: last real pass still 2026-05-10T20:35:00Z (pass 11, `931c8a7`) — **~162 days stale**. Root cause unchanged (cloud mode categorically cannot run `/critique` — no Chrome MCP on the runner); logging the running count, not re-diagnosing.
-- **`plan/PHASE_CANDIDATES.md`**: last pass 436 (2026-10-01T…, commit `b4d8dafb`) — 18 days since any `/expand` pass ran, consistent with the dispatcher spending most of this window failing rather than reaching Step 3c. 35 `[ ]` + 1 `[needs-user-call]` pending, unchanged as distinct rows (one dated update appended this tick, no new row). Last promotion: phase 50, 2026-08-23 — now **~8.1 weeks**.
+- **Build plan**: 0 pending phases, unchanged (50+ phases shipped).
+- **`plan/AUDIT.md`**: **15 open rows** (11 `[ ]` + 4 `[needs-user-call]`), down from 16 — the newsletter row drained this window. Breakdown of the 11: **6 `[cross-links] [4.5]`** — 3 on `synthwave-tkl-theme-build` (mirrored as issue `#1025`, still open 5 days) and 3 fresh on `artisan-keycaps-buying-guide` ↔ beginner-tagged siblings (unmirrored); 1 `[data] [2.4]` (generated-manifest drift); 1 `[content] [2.4]` (plate-materials/Mode Sonnet tension); 3 `[seo]` sub-3.0 rows unchanged (Mode Sonnet hero-art `[2.7]`/`[2.0]`, orphaned `favicon.svg` `[1.8]`). 4 `[needs-user-call]` rows unchanged (border-contrast WCAG 1.4.11 `[1.3]`, GTM consent-gate `[3.6]`, soft-404 structural trade-off `[4.2]`, `loop:opened` mirror-drain gap `[3.0]`) — all four are `/oversight`-sized taste or process calls, none mechanically fixable.
+- **`plan/CRITIQUE.md`**: last real pass still 2026-05-10T20:35:00Z (pass 11, `931c8a7`) — **163 days stale**. Root cause unchanged (cloud mode categorically cannot run `/critique` — no Chrome MCP on the runner, confirmed again in `/expand` pass 436's own note). New this tick: filed a durable `plan/PHASE_CANDIDATES.md` row (`[score 4.2]`) so this stops being a line that resets at every digest overwrite with nothing to show for it — see Tuning proposals.
+- **`plan/PHASE_CANDIDATES.md`**: last `/expand` pass still 436 (2026-10-01, commit `b4d8dafb`) — 19 days since any pass ran. **36 `[ ]` + 1 `[needs-user-call]`** pending (was 35+1; +1 new row this tick, the critique-staleness candidate). Last promotion: phase 50, 2026-08-23 — now **~8.3 weeks**.
 - **`data/BACKLOG.md`**: 0 pending, unchanged.
-- **GitHub issues**: `#1019` (newsletter dispatch, open since 2026-10-06T17:55, mirrors the 16-days-overdue AUDIT row); `#1025` (cross-link mirror, `synthwave-tkl-theme-build`, open since 2026-10-15T14:01, pre-storm, still undrained); `#1026` (night-crash, open since 2026-10-15T15:10, unlabeled — the dedupe-blocking issue, see Headline); `#1027` (heartbeat flatline alarm, filed 2026-10-16T04:26 mid-storm — likely describes the real failure cluster but with "flatlined" framing that undersells it; `march` was running every ~3h throughout, just failing); `#929` (`triage:reviewed`, standing since 2026-08-25, the original dedupe-blocker). 0 unlabeled issues.
+- **GitHub issues**: `#1025` (cross-link mirror, `synthwave-tkl-theme-build`, open since 2026-10-15, still undrained, 5 days); `#1029` (content-gap, deep-dives, filed today, fresh); `#929` (`triage:reviewed`, standing since 2026-08-25, now 56 days, the original dedupe-blocker). `#1019` closed this window (shipped). `#1027` (heartbeat flatline alarm from the storm) closed `triage:closed` — correctly relabeled as the storm, not a true flatline, per last digest's own watch item. 0 unlabeled issues.
 
 ## Breadth verdict
 
@@ -56,22 +48,24 @@ Nothing else shipped in this window — the storm consumed the remaining ~3.5 da
 - `data:validate` — 91 records valid, cross-refs resolve (vendors 11, switches 18, keycap-sets 10, boards 10, group-buys 18, trends 24)
 - `build` — clean production build, full route manifest generated
 - `size` — all tracked routes within budget (largest tracked: `/quiz/keycap-set` 145.3 KB vs 175 KB budget)
-- `e2e` — **1310/1310 passed** (~8.3m) against `next start :4173`. Benign `Error: Internal: NoFallbackError` stderr noise on dynamic-route fallback lookups during the run — not attached to any failing test, not filing.
+- `e2e` — **1313/1313 passed** (~8.5m) against `next start :4173`. Same benign `Error: Internal: NoFallbackError` stderr noise on dynamic-route fallback lookups seen in prior ticks — not attached to any failing test, not filing.
 
-No HIGH AUDIT row filed from the breadth check — nothing red. Deploy was `READY` at HEAD (`2a1a6827`) going into this tick.
+No HIGH AUDIT row filed from the breadth check — nothing red. Deploy was `READY` at HEAD (`0fc7260d`) going into this tick.
 
 ## Needs you
 
-1. **The march.yml/night.yml crash-issue dedupe bug is now confirmed to generalize across workflows and has sat fully cloud-actionable for 22 days.** This window alone cost 85+ hours of repeated, almost entirely unlogged failures on two separate workflows. The fix is a one-line dedupe-query narrowing, already fully diagnosed and traced in `plan/PHASE_CANDIDATES.md`'s standing `[score 6.0]` row (updated this tick with today's evidence). Recommend promoting at the next `/oversight` pass — this is costing real observability every time the API rate-limits, which just happened for 3.5 days straight.
-2. **`plan/CRITIQUE.md` is ~162 days stale** — the fresh-eyes loop has been off for over five months, root cause unchanged (no Chrome MCP on the cloud runner) and sitting as a standing decision to make, not re-diagnosing further this tick.
-3. **Newsletter cadence (`#1019`/AUDIT row) is now 16 days stale against a 7-day target**, unchanged mechanism to the one flagged in prior digests — worth an `/oversight` call on the bounded-priority-override proposal rather than waiting indefinitely.
-4. **35 pending phase-candidate rows, ~8.1 weeks since the last promotion** — cloud cannot promote by design. Worth a batch `/oversight` pass.
-5. **Issue `#1027` ("heartbeat has flatlined") likely mischaracterizes what was actually a 25-failure `march` storm, not a flatline** — worth a `/triage` look to close or relabel with the correct framing once the fix in item 1 is considered.
+1. **The fresh-eyes critique loop has been dark for 163 days, and that's now a standing candidate, not just a recurring footnote.** `plan/CRITIQUE.md` pass 11 (2026-05-10) predates roughly 30+ shipped phases and the entire interactive-tools surface. The gap is structural — cloud ticks skip `/critique` outright (no Chrome MCP) — so it won't resolve on its own. This is squarely an `/oversight` cadence decision: schedule recurring local `/critique` runs, scope a cloud-compatible substitute, or formally re-rate the gap so it stops reading as news. See the new `[score 4.2]` row in `plan/PHASE_CANDIDATES.md`.
+2. **The march.yml/night.yml crash-issue dedupe bug has now sat fully cloud-actionable and unpromoted for 23 days** (cleared 2026-09-27, still open `[score 6.0]`). It cost 85+ hours of near-silent failures during the just-ended storm; the fix is a one-line dedupe-query narrowing, fully diagnosed. Worth promoting before the next rate-limit event repeats the same blind spot.
+3. **36 pending phase-candidate rows, ~8.3 weeks since the last promotion** — cloud cannot promote by design. Worth a batch `/oversight` pass; several rows (the two above, plus the `/expand` dispatch-cadence backoff `[3.6]`) are well past the point of needing fresh eyes rather than another nightly restatement.
+4. **4 standing `[needs-user-call]` AUDIT rows** (GTM consent gate, soft-404 trade-off, `loop:opened` mirror-drain gap, WCAG border contrast) remain exactly where they were — each is a taste or process call for `/oversight`, none mechanically actionable by an autonomous tick.
 
 ## Today's intent
 
-With the storm cleared and both workflows back to green, the next `march` tick's top signal should be the 6 open cross-link rows (ease 9 each, same cluster-aware drain pattern that cleared 11 pairs just before the storm) unless the newsletter row or a fresh content-gap row wins the dispatch instead. Watch whether `march` resumes its pre-storm cadence and whether `#1019` finally ships now that nothing is actively failing ahead of it.
+With the storm cleared and cadence back to normal, the next `march` tick's top signal is the 6 open cross-link rows (ease 9 each, cluster-aware drain) unless a fresh content-gap dispatch on `#1029` wins instead. Nothing in this window needs an urgent fix — the main ask is the batch of `/oversight`-sized decisions piling up in Needs You above, topped by the critique cadence question.
 
 ## Tuning proposals
 
-**One dated update, no new candidates.** Appended an update to the standing `[score 6.0]` "march.yml crash-issue dedupe" candidate in `plan/PHASE_CANDIDATES.md`, generalizing its diagnosis to `night.yml` with this window's concrete numbers: 25 unlogged `march` failures, 3 unlogged `night` failures (only the first of 4 produced an issue), and the compounding fact that the fix has been fully cloud-actionable since 2026-09-27 (22 days) without promotion. Not re-scoring unilaterally, per the meta-loop rail — logged as evidence for `/oversight`, not a self-promotion.
+**Two items: one dated update, one new candidate.**
+
+- Appended an update to the standing `[score 6.0]` "march.yml crash-issue dedupe" candidate confirming the storm fully cleared this window (zero crash-shaped failures across 6 `march` ticks + 1 `night` tick) and noting the fix has now sat cloud-actionable and unpromoted for 23 days. Not re-scoring — per the meta-loop rail, this is evidence for `/oversight`, not a self-promotion.
+- Filed a new `[score 4.2]` candidate: "The fresh-eyes critique loop has been fully dark for over five months — structurally cloud-incompatible, and no local session has run it since." Traces the root cause (no Chrome MCP on any cloud runner, confirmed via `/expand`'s own pass notes), names why it matters (the loop's only human-perception-shaped feedback channel, with no mechanical substitute), and lays out three `/oversight`-sized options rather than picking one. Filed as a durable row specifically so this stops resetting at every digest overwrite.
