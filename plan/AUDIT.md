@@ -14109,7 +14109,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/tmr-switches-deep-dive.mdx
 - action: add [tmr-switches-deep-dive](/article/tmr-switches-deep-dive) to tactile-stem-geometry-deep-dive body, or vice versa
 
-### [HOT PURSUIT] [content-gap] [7] trends pillar — 1 of ≥2 articles in last 30d
+### [x] [HOT PURSUIT] [content-gap] [7] trends pillar — 1 of ≥2 articles in last 30d — addressed in 415779ea (closes #1030)
 - category: content-gaps
 - impact: 8 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -14120,4 +14120,16 @@ passes accumulate signals.)
 - score: 7
 - next: /ship-content → trends pillar article
 - issue: #1030
+> Filed 2026-10-22 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+
+### [HOT PURSUIT] [content-gap] [7] news pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 7 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: news
+- window-count: 1
+- window-start: 2026-09-22
+- score: 7
+- next: /ship-content → news pillar article
 > Filed 2026-10-22 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
