@@ -95,6 +95,7 @@
     { "slug": "maintenance", "name": "Maintenance", "category": "misc" },
     { "slug": "pcb", "name": "PCB", "category": "misc" },
     { "slug": "wooting", "name": "Wooting", "category": "brand" },
-    { "slug": "artisan", "name": "Artisan", "category": "misc" }
+    { "slug": "artisan", "name": "Artisan", "category": "misc" },
+    { "slug": "stem-geometry", "name": "Stem geometry", "category": "switch" }
   ]
 }

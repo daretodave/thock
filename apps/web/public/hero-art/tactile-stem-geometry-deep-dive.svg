@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — four tactile switch stem-leg profiles (Durock T1, Gazzew Boba U4T, Drop Holy Panda X, Gateron Lanes) each crossing the same fixed contact-leaf line, showing one shared mechanism expressed as four different leg geometries</title>
+
+  <!-- ════════════════════════════════════════════════════════════════════════════
+       COMPOSITION: one shared horizontal "contact leaf" line runs the full width
+       of the canvas at y=400. Four panels, each a narrow switch-stem cross-section,
+       sit side by side; each panel's stem flank (the "leg") bulges outward and
+       crosses that same leaf line with a different profile:
+
+         Panel 1 (x  40–305) — Durock T1        — narrow angular spike
+         Panel 2 (x 325–590) — Gazzew Boba U4T  — rounded flat-D plateau
+         Panel 3 (x 610–875) — Drop Holy Panda X— gentle arc, long blend to baseline
+         Panel 4 (x 895–1160)— Gateron Lanes    — right-angle step, fast snap-back
+
+       Dusty-rose splash wash sits as a single band across the shared leaf line;
+       a small filled dot in the same hue marks each panel's leg/leaf crossing
+       point, so the four geometries read as one family of answers to one
+       mechanical question.
+       ════════════════════════════════════════════════════════════════════════════ -->
+
+  <!-- Single splash wash — spans the shared contact-leaf band, one hue, low alpha -->
+  <ellipse cx="600" cy="400" rx="610" ry="36" fill="oklch(0.66 0.12 24 / 0.08)" stroke="none"/>
+
+  <!-- ── SHARED CONTACT LEAF — the fixed line every leg crosses ───────────────── -->
+  <line x1="20" y1="400" x2="1180" y2="400" stroke-dasharray="5 6" stroke-opacity="0.45"/>
+  <text x="20" y="392" font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace" font-size="10" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none" letter-spacing="0.05em">CONTACT LEAF — FIXED</text>
+
+  <!-- Central thesis annotation — splash-colored, ties the four panels together -->
+  <text x="600" y="108" text-anchor="middle" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="13" fill="oklch(0.66 0.12 24)" fill-opacity="0.85" stroke="none" letter-spacing="0.04em" text-transform="uppercase">one mechanism, four leg geometries</text>
+
+  <!-- ── PANEL DIVIDERS ─────────────────────────────────────────────────────── -->
+  <g stroke-opacity="0.18" stroke-dasharray="3 7">
+    <line x1="315" y1="150" x2="315" y2="650"/>
+    <line x1="600" y1="150" x2="600" y2="650"/>
+    <line x1="885" y1="150" x2="885" y2="650"/>
+  </g>
+
+  <!-- ════════════════════════════════════════════════════════════════════════════
+       PANEL 1 — DUROCK T1 — narrow angular spike (cx = 172)
+       ════════════════════════════════════════════════════════════════════════════ -->
+  <g>
+    <text x="48" y="140" font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace" font-size="12" fill="oklch(0.78 0.005 90)" fill-opacity="0.65" stroke="none" letter-spacing="0.03em">DUROCK T1</text>
+    <text x="48" y="158" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.48" stroke="none">narrow spike</text>
+
+    <!-- housing floor / ceiling ticks -->
+    <line x1="142" y1="200" x2="202" y2="200" stroke-opacity="0.4"/>
+    <line x1="142" y1="600" x2="202" y2="600" stroke-opacity="0.4"/>
+
+    <!-- stem axis -->
+    <line x1="172" y1="210" x2="172" y2="590" stroke-dasharray="3 5" stroke-opacity="0.28"/>
+
+    <!-- left flank (static) -->
+    <path d="M 142 200 L 142 600"/>
+
+    <!-- right flank / leg — sharp symmetric spike, both sides diagonal -->
+    <path d="M 202 200 L 202 368 L 230 396 L 202 424 L 202 600"/>
+
+    <!-- travel direction chevron -->
+    <path d="M 168 238 L 172 244 L 176 238" stroke-opacity="0.5"/>
+
+    <!-- crossing dot -->
+    <circle cx="196" cy="400" r="9" stroke="oklch(0.66 0.12 24)" stroke-opacity="0.4" fill="none"/>
+    <circle cx="196" cy="400" r="5" fill="oklch(0.66 0.12 24)" stroke="oklch(0.66 0.12 24)"/>
+  </g>
+
+  <!-- ════════════════════════════════════════════════════════════════════════════
+       PANEL 2 — GAZZEW BOBA U4T — rounded flat-D plateau (cx = 457)
+       ════════════════════════════════════════════════════════════════════════════ -->
+  <g>
+    <text x="333" y="140" font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace" font-size="12" fill="oklch(0.78 0.005 90)" fill-opacity="0.65" stroke="none" letter-spacing="0.03em">BOBA U4T</text>
+    <text x="333" y="158" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.48" stroke="none">flat plateau, held longer</text>
+
+    <line x1="427" y1="200" x2="487" y2="200" stroke-opacity="0.4"/>
+    <line x1="427" y1="600" x2="487" y2="600" stroke-opacity="0.4"/>
+
+    <line x1="457" y1="210" x2="457" y2="590" stroke-dasharray="3 5" stroke-opacity="0.28"/>
+
+    <path d="M 427 200 L 427 600"/>
+
+    <!-- right flank / leg — rounded shoulders into a flat-top plateau -->
+    <path d="M 487 200 L 487 350 Q 503 362 515 372 L 515 428 Q 503 438 487 450 L 487 600"/>
+
+    <path d="M 453 238 L 457 244 L 461 238" stroke-opacity="0.5"/>
+
+    <circle cx="515" cy="400" r="9" stroke="oklch(0.66 0.12 24)" stroke-opacity="0.4" fill="none"/>
+    <circle cx="515" cy="400" r="5" fill="oklch(0.66 0.12 24)" stroke="oklch(0.66 0.12 24)"/>
+  </g>
+
+  <!-- ════════════════════════════════════════════════════════════════════════════
+       PANEL 3 — DROP HOLY PANDA X — gentle arc, long blend to baseline (cx = 742)
+       ════════════════════════════════════════════════════════════════════════════ -->
+  <g>
+    <text x="618" y="140" font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace" font-size="12" fill="oklch(0.78 0.005 90)" fill-opacity="0.65" stroke="none" letter-spacing="0.03em">HOLY PANDA X</text>
+    <text x="618" y="158" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.48" stroke="none">gentle arc, slow blend</text>
+
+    <line x1="712" y1="200" x2="772" y2="200" stroke-opacity="0.4"/>
+    <line x1="712" y1="600" x2="772" y2="600" stroke-opacity="0.4"/>
+
+    <line x1="742" y1="210" x2="742" y2="590" stroke-dasharray="3 5" stroke-opacity="0.28"/>
+
+    <path d="M 712 200 L 712 600"/>
+
+    <!-- right flank / leg — broad symmetric arc that eases gradually into the
+         straight flank well below the crossing, rather than snapping back -->
+    <path d="M 772 200 L 772 300 C 772 340 796 350 796 400 C 796 452 776 468 772 560 L 772 600"/>
+
+    <path d="M 738 238 L 742 244 L 746 238" stroke-opacity="0.5"/>
+
+    <circle cx="796" cy="400" r="9" stroke="oklch(0.66 0.12 24)" stroke-opacity="0.4" fill="none"/>
+    <circle cx="796" cy="400" r="5" fill="oklch(0.66 0.12 24)" stroke="oklch(0.66 0.12 24)"/>
+  </g>
+
+  <!-- ════════════════════════════════════════════════════════════════════════════
+       PANEL 4 — GATERON LANES — right-angle step, fast snap-back (cx = 1027)
+       ════════════════════════════════════════════════════════════════════════════ -->
+  <g>
+    <text x="903" y="140" font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace" font-size="12" fill="oklch(0.78 0.005 90)" fill-opacity="0.65" stroke="none" letter-spacing="0.03em">GATERON LANES</text>
+    <text x="903" y="158" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.48" stroke="none">stepped, near-instant snap</text>
+
+    <line x1="997" y1="200" x2="1057" y2="200" stroke-opacity="0.4"/>
+    <line x1="997" y1="600" x2="1057" y2="600" stroke-opacity="0.4"/>
+
+    <line x1="1027" y1="210" x2="1027" y2="590" stroke-dasharray="3 5" stroke-opacity="0.28"/>
+
+    <path d="M 997 200 L 997 600"/>
+
+    <!-- right flank / leg — square right-angle riser (front-loaded step), short
+         hold, then a single fast diagonal snap back to the stem -->
+    <path d="M 1057 200 L 1057 372 L 1085 372 L 1085 396 L 1057 422 L 1057 600"/>
+
+    <path d="M 1023 238 L 1027 244 L 1031 238" stroke-opacity="0.5"/>
+
+    <circle cx="1081" cy="400" r="9" stroke="oklch(0.66 0.12 24)" stroke-opacity="0.4" fill="none"/>
+    <circle cx="1081" cy="400" r="5" fill="oklch(0.66 0.12 24)" stroke="oklch(0.66 0.12 24)"/>
+  </g>
+
+  <!-- ── BOTTOM MONO CAPTION — shared mechanism callout ───────────────────────── -->
+  <text x="40" y="718" font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace" font-size="10" fill="oklch(0.78 0.005 90)" fill-opacity="0.38" stroke="none" letter-spacing="0.03em">STEM LEG × FIXED CONTACT LEAF — SAME CROSSING, FOUR GEOMETRIES</text>
+
+  <!-- ── BRONZE THEME DOT — family ornamental anchor, upper-right margin ───────── -->
+  <circle cx="1160" cy="46" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

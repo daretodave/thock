@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" fill="none">
+  <defs>
+    <style>
+      .label { font-family: 'IBM Plex Sans', sans-serif; fill: oklch(0.78 0.005 90); }
+      .title { font-family: 'IBM Plex Sans', sans-serif; font-weight: 600; fill: oklch(0.30 0.01 90); }
+      .note { font-family: 'IBM Plex Sans', sans-serif; font-style: italic; fill: oklch(0.45 0.01 90); }
+    </style>
+  </defs>
+
+  <!-- theme dot -->
+  <circle cx="1160" cy="30" r="8" fill="oklch(0.80 0.135 75)" />
+
+  <!-- divider lines between panels -->
+  <line x1="410" y1="60" x2="410" y2="340" stroke="oklch(0.78 0.005 90)" stroke-width="1" stroke-dasharray="4 8" opacity="0.5" />
+  <line x1="790" y1="60" x2="790" y2="340" stroke="oklch(0.78 0.005 90)" stroke-width="1" stroke-dasharray="4 8" opacity="0.5" />
+
+  <!-- PANEL 1: MX leaf-crossing -->
+  <text x="220" y="48" class="title" font-size="22" text-anchor="middle">MX leaf-crossing</text>
+  <text x="220" y="72" class="label" font-size="14" text-anchor="middle" opacity="0.8">T1 &#183; U4T &#183; HPX &#183; Lanes</text>
+
+  <!-- contact leaf -->
+  <line x1="70" y1="200" x2="370" y2="200" stroke="oklch(0.78 0.005 90)" stroke-width="2.5" stroke-linecap="round" />
+  <!-- stem leg approaching -->
+  <path d="M 110 300 L 210 155 L 240 165 L 300 300" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- contact point highlight -->
+  <circle cx="220" cy="195" r="9" fill="oklch(0.78 0.10 80)" opacity="0.85" />
+  <circle cx="220" cy="195" r="9" stroke="oklch(0.78 0.10 80)" stroke-width="2" />
+
+  <text x="220" y="250" class="note" font-size="14" text-anchor="middle">leg crosses leaf</text>
+
+  <text x="220" y="305" class="label" font-size="15" text-anchor="middle" font-weight="600">one mechanism,</text>
+  <text x="220" y="328" class="label" font-size="15" text-anchor="middle" font-weight="600">four leg shapes</text>
+
+  <!-- PANEL 2: Topre dome-collapse -->
+  <text x="600" y="48" class="title" font-size="22" text-anchor="middle">Topre</text>
+  <text x="600" y="72" class="label" font-size="14" text-anchor="middle" opacity="0.8">capacitive dome-collapse</text>
+
+  <!-- rubber dome -->
+  <path d="M 490 190 Q 600 120 710 190" stroke="oklch(0.78 0.005 90)" stroke-width="2.5" stroke-linecap="round" />
+  <!-- conical spring -->
+  <path d="M 560 195 L 640 195 L 568 215 L 632 215 L 576 235 L 624 235" stroke="oklch(0.78 0.005 90)" stroke-width="1.6" fill="none" />
+  <!-- capacitive PCB pad -->
+  <rect x="540" y="248" width="120" height="20" rx="3" stroke="oklch(0.78 0.005 90)" stroke-width="2" />
+
+  <!-- struck-out "no leaf" marker, aligned with panel 1's leaf line for visual contrast -->
+  <line x1="450" y1="200" x2="750" y2="200" stroke="oklch(0.78 0.005 90)" stroke-width="1.5" stroke-dasharray="3 6" opacity="0.4" />
+  <line x1="585" y1="193" x2="615" y2="207" stroke="oklch(0.62 0.13 25)" stroke-width="2" stroke-linecap="round" opacity="0.7" />
+  <line x1="615" y1="193" x2="585" y2="207" stroke="oklch(0.62 0.13 25)" stroke-width="2" stroke-linecap="round" opacity="0.7" />
+
+  <text x="600" y="305" class="label" font-size="14" text-anchor="middle">no leaf crossing &#8212;</text>
+  <text x="600" y="328" class="label" font-size="14" text-anchor="middle">reads spring position as capacitance</text>
+
+  <!-- PANEL 3: Alps internal snap -->
+  <text x="980" y="48" class="title" font-size="22" text-anchor="middle">Alps SKCM Orange</text>
+  <text x="980" y="72" class="label" font-size="14" text-anchor="middle" opacity="0.8">internal snap</text>
+
+  <!-- slider body with stepped notch -->
+  <path d="M 920 150 L 1040 150 L 1040 185 L 1010 195 L 1010 270 L 950 270 L 950 195 L 920 185 Z" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linejoin="round" />
+  <!-- internal spring -->
+  <path d="M 965 210 L 995 210 L 965 225 L 995 225 L 965 240 L 995 240" stroke="oklch(0.78 0.005 90)" stroke-width="1.6" fill="none" />
+  <!-- snap-point burst -->
+  <g stroke="oklch(0.78 0.005 90)" stroke-width="1.6" stroke-linecap="round" opacity="0.8">
+    <line x1="980" y1="130" x2="980" y2="116" />
+    <line x1="996" y1="136" x2="1006" y2="124" />
+    <line x1="964" y1="136" x2="954" y2="124" />
+  </g>
+
+  <text x="980" y="305" class="label" font-size="14" text-anchor="middle">slider snaps itself &#8212;</text>
+  <text x="980" y="328" class="label" font-size="14" text-anchor="middle">no leaf crossing</text>
+
+  <!-- subject bracket -->
+  <path d="M 100 355 L 100 365 L 340 365 L 340 355" stroke="oklch(0.78 0.10 80)" stroke-width="1.6" fill="none" />
+  <text x="220" y="388" class="note" font-size="14" text-anchor="middle">this article's subject: everything downstream of the leg shape</text>
+</svg>

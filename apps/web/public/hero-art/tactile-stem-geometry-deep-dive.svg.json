@@ -1,0 +1,24 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored SVG (no raster pipeline)",
+  "at": "2026-10-22T05:50:35.000Z",
+  "commit": "ccecea10c1e655776b112c238e9303213a11add3",
+  "kind": "hero-art",
+  "source": null,
+  "tokens_snapshot": "sha256:2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": ["IBM Plex Sans", "JetBrains Mono"],
+  "slug": "tactile-stem-geometry-deep-dive",
+  "subject": "four-panel switch stem cross-section comparison — Durock T1, Gazzew Boba U4T, Drop Holy Panda X, Gateron Lanes — each panel's stem leg crossing the same fixed contact-leaf line with a different leg geometry",
+  "motif": "switch cross-section (multi-panel comparison)",
+  "splashHue": "dusty rose",
+  "splashColor": "oklch(0.66 0.12 24)",
+  "canvas": "1200x750",
+  "strokeWeight": "2px",
+  "strokeColor": "oklch(0.78 0.005 90)",
+  "outputs": [
+    "apps/web/public/hero-art/tactile-stem-geometry-deep-dive.svg",
+    "apps/web/public/hero-art/tactile-stem-geometry-deep-dive.svg.json"
+  ],
+  "warnings": [],
+  "notes": "Four narrow switch-stem cross-section panels (x 40-305, 325-590, 610-875, 895-1160), each with a static left flank and a static top/bottom housing tick, sharing one continuous dashed contact-leaf line at y=400 across the full 1200px width — the visual device that reads 'same mechanism' across the comparison. Each panel's right flank (the stem leg) is drawn with a distinct profile: Durock T1 as a narrow symmetric angular spike (both sides diagonal, sharp apex); Gazzew Boba U4T as a rounded-shoulder flat-top plateau (quarter-round in, flat hold, quarter-round out) depicting contact held longer; Drop Holy Panda X as a broad, smooth cubic-bezier arc whose return leg is drawn long and gradual (blend ends near y=560 rather than snapping back near the crossing) depicting the gentler, slower-blending bump; Gateron Lanes as a right-angle riser (vertical then horizontal — near-instant step) with a short flat hold and a single fast diagonal return, depicting a front-loaded, sharply-snapping tactile event. A single dusty-rose splash wash (oklch(0.66 0.12 24)) spans the shared leaf band as one low-alpha ellipse, and a matching filled dot + faint ring marks each panel's leg/leaf crossing point — chosen distinct from the dusty rose already used on topre-electrocapacitive-deep-dive (oklch(0.65 0.075 20), lower chroma) and the coral used on gazzew-boba-u4t-deep-dive (oklch(0.68 0.165 28), higher chroma) so the family rotation stays varied. Per-panel JetBrains Mono switch-name labels and IBM Plex Sans geometry captions at top; a centered splash-colored thesis line ('one mechanism, four leg geometries') ties the panels together; a JetBrains Mono technical caption runs along the bottom margin. Dashed panel dividers and faint travel-direction chevrons repeat the family's didactic-tick convention. Brass-bronze ornamental dot at top-right (1160, 46) per family convention. No fabricated numeric specs included — captions are descriptive-geometry terms only (spike / plateau / arc / step), not measured values."
+}

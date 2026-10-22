@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "slug": "tactile-stem-geometry-deep-dive",
+      "readTime": 10,
+      "frontmatter": {
+        "title": "Four Switches, One Mechanism: What Stem Geometry Actually Changes",
+        "lede": "The Durock T1, the Boba U4T, the Holy Panda X, and the Gateron Lanes have spent four separate deep-dives citing each other as comparison points. None of those pieces stopped to say the obvious thing: all four generate their bump the same way. The leg geometry is the whole story.",
+        "pillar": "deep-dives",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "artisan-keycaps-buying-guide",
       "readTime": 9,
       "frontmatter": {
@@ -1456,6 +1466,11 @@
       "slug": "stabilizers",
       "name": "Stabilizers",
       "category": "misc"
+    },
+    {
+      "slug": "stem-geometry",
+      "name": "Stem geometry",
+      "category": "switch"
     },
     {
       "slug": "switch-films",
@@ -9390,5 +9405,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-10-20T07:25:27.419Z"
+  "generatedAt": "2026-10-22T06:02:18.482Z"
 }

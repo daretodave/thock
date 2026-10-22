@@ -1,0 +1,26 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-10-15T14:00:00.000Z",
+  "commit": "ccecea10c1e655776b112c238e9303213a11add3",
+  "kind": "inline-viz",
+  "article_slug": "tactile-stem-geometry-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "One mechanism, not four",
+  "brief_summary": "Three-panel cross-section contrasting the MX leaf-crossing mechanism shared by the Durock T1, Boba U4T, Holy Panda X, and Gateron Lanes against two mechanisms that are not leaf-crossing at all: Topre's capacitive dome-collapse and the Alps SKCM Orange's internal slider snap. Establishes that leg geometry, not mechanism family, is the variable the rest of the article examines.",
+  "target": "apps/web/public/article-viz/tactile-stem-geometry-deep-dive/mechanism-family.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "apps/web/src/content/articles/durock-t1-deep-dive.mdx:'A Topre keypress is not a leaf crossing at all ... capacitive PCB pad reads the change in the spring's position as the actuation signal. There is no metal-on-metal contact anywhere in that stack.'",
+    "apps/web/src/content/articles/gateron-lanes-tactile-deep-dive.mdx:'a self-contained mechanism that generates its bump not through a leaf that a stem leg crosses, as every MX-compatible switch does, but through a resonant slider body that physically interrupts its own travel path'",
+    "apps/web/src/content/articles/topre-electrocapacitive-deep-dive.mdx:'a Topre keypress does not close a circuit at all'"
+  ],
+  "outputs": [
+    "apps/web/public/article-viz/tactile-stem-geometry-deep-dive/mechanism-family.svg"
+  ],
+  "warnings": []
+}
