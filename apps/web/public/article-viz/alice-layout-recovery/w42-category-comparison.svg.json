@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-10-18T14:00:00.000Z",
+  "commit": "pending",
+  "kind": "inline-viz",
+  "article_slug": "alice-layout-recovery",
+  "article_pillar": "trends",
+  "section_anchor": "Recovery, not reversal",
+  "brief_summary": "Horizontal bar comparison of three layout categories on the 2026-W42 Trends Tracker snapshot: Split/Ergo layout flat at a ceiling score of 100, 75% Layout up at 82, and Alice layout — after its eight-week climb — at 0. Shows that Alice's recovery lands at neutral, not in the positive-growth territory its competitive alternative already occupies.",
+  "target": "apps/web/public/article-viz/alice-layout-recovery/w42-category-comparison.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "data/trends/2026-W42.json:rows — 'Split/Ergo layout' direction 'flat', score 100",
+    "data/trends/2026-W42.json:rows — '75% Layout' direction 'up', score 82",
+    "data/trends/2026-W42.json:rows — 'Alice layout' direction 'up', score 0"
+  ],
+  "outputs": ["apps/web/public/article-viz/alice-layout-recovery/w42-category-comparison.svg"],
+  "warnings": []
+}

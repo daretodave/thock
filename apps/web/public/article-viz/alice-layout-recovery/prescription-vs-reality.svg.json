@@ -1,0 +1,25 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-10-18T14:00:00.000Z",
+  "commit": "pending",
+  "kind": "inline-viz",
+  "article_slug": "alice-layout-recovery",
+  "article_pillar": "trends",
+  "section_anchor": "The prescription from May",
+  "brief_summary": "Two-column do/don't diagram. Left column shows the two conditions the May 2026 decline piece named as necessary to reverse Alice's fade — a sub-$200 pre-built hot-swap/wireless Alice, and a split-Alice hybrid with adjustable splay angle — both marked NOT SHIPPED in dashed caution-red outline. Right column shows what actually happened instead across W36 through W42: Keychron's B40/B39 launch, buying-guide reframing, and scattered Epomaker/Qwertykeys boutique activity, all in filled coral boxes.",
+  "target": "apps/web/public/article-viz/alice-layout-recovery/prescription-vs-reality.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "apps/web/src/content/articles/alice-layout-decline.mdx:What would reverse this — 'A pre-built Alice at the $200 tier with hot-swap, wireless, and a serious-but-not-precious aesthetic would probably do it... a split-Alice hybrid that lets users adjust the splay angle'",
+    "data/trends/2026-W36.json:rows — 'Alice layout' note — 'Keychron shipped two new Alice boards this week, the B40 75% and B39 1800 with numpad, both scissor-switch and ZMK'",
+    "data/trends/2026-W41.json:rows — 'Alice layout' note — \"2026 buying guides now call Alice 'the most popular ergonomic stepping stone of the last five years'\"",
+    "data/trends/2026-W42.json:rows — 'Alice layout' note — 'Scattered boutique and OEM activity (Epomaker Tide Alice, Qwertykeys QK Alice Duo) nudges sentiment off its floor, though coverage stays thin relative to split-ergo and 75%'"
+  ],
+  "outputs": ["apps/web/public/article-viz/alice-layout-recovery/prescription-vs-reality.svg"],
+  "warnings": []
+}

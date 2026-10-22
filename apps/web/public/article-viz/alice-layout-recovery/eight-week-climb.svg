@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Line chart of Alice layout's Trends Tracker score across eight consecutive weekly readings, W35 through W42: -66, -50, -40, -30, -18, -8, -5, 0. The line climbs every week, reaching the neutral zero baseline at W42.</title>
+
+  <text x="600" y="38" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Alice layout — Trends Tracker, W35 &#8594; W42</text>
+
+  <!-- Zero baseline -->
+  <line x1="180" y1="140" x2="1080" y2="140" stroke-opacity="0.4" stroke-width="1.5"/>
+  <text x="168" y="144" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.6">0</text>
+
+  <!-- Gridlines -->
+  <line x1="180" y1="200" x2="1080" y2="200" stroke-opacity="0.12"/>
+  <line x1="180" y1="260" x2="1080" y2="260" stroke-opacity="0.12"/>
+  <line x1="180" y1="320" x2="1080" y2="320" stroke-opacity="0.12"/>
+  <text x="168" y="204" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.4">-20</text>
+  <text x="168" y="264" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.4">-40</text>
+  <text x="168" y="324" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.4">-60</text>
+
+  <!-- Trough marker -->
+  <line x1="200" y1="338" x2="200" y2="140" stroke-dasharray="3 4" stroke-opacity="0.25"/>
+  <text x="200" y="356" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">W35 trough: -66</text>
+
+  <!-- Area fill under the climb -->
+  <polygon points="200,338 320,290 440,260 560,230 680,194 800,164 920,155 1040,140 1040,338" fill="oklch(0.68 0.165 28 / 0.08)" stroke="none"/>
+
+  <!-- Climb line -->
+  <polyline points="200,338 320,290 440,260 560,230 680,194 800,164 920,155 1040,140" stroke="oklch(0.68 0.165 28)" stroke-width="3.5" fill="none"/>
+
+  <!-- Data points -->
+  <circle cx="200" cy="338" r="5" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.75"/>
+  <circle cx="320" cy="290" r="5" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.78"/>
+  <circle cx="440" cy="260" r="5" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.8"/>
+  <circle cx="560" cy="230" r="5" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.83"/>
+  <circle cx="680" cy="194" r="5" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.86"/>
+  <circle cx="800" cy="164" r="5" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.9"/>
+  <circle cx="920" cy="155" r="5" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.93"/>
+  <circle cx="1040" cy="140" r="9" fill="oklch(0.68 0.165 28)" stroke="none"/>
+  <text x="1055" y="130" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" font-weight="600">0</text>
+  <text x="1055" y="148" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.75">W42 — neutral</text>
+
+  <!-- X-axis week labels -->
+  <text x="200"  y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">W35</text>
+  <text x="320"  y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">W36</text>
+  <text x="440"  y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">W37</text>
+  <text x="560"  y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">W38</text>
+  <text x="680"  y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">W39</text>
+  <text x="800"  y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">W40</text>
+  <text x="920"  y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.45">W41</text>
+  <text x="1040" y="395" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.9">W42</text>
+
+  <text x="600" y="430" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">eight straight weeks up — from -66 to a flat 0</text>
+
+  <!-- Bronze theme dot -->
+  <circle cx="1170" cy="30" r="6" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

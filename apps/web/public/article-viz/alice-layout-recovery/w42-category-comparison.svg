@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Horizontal bar chart of three layout categories on the 2026-W42 Trends Tracker snapshot. Split/Ergo layout holds flat at a ceiling score of 100. 75% Layout is up at 82. Alice layout, after its eight-week climb, sits at 0 — recovered to neutral, not into positive territory.</title>
+
+  <text x="600" y="38" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Layout categories — Trends Tracker, 2026-W42 snapshot</text>
+
+  <!-- Baseline -->
+  <line x1="320" y1="90" x2="320" y2="360" stroke-opacity="0.35"/>
+
+  <!-- Bar: Split/Ergo, 100 -->
+  <text x="300" y="130" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.8">Split/Ergo layout</text>
+  <rect x="320" y="110" width="680" height="40" rx="6" fill="oklch(0.78 0.005 90 / 0.18)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.5"/>
+  <text x="1012" y="136" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.85">100 &#183; flat</text>
+
+  <!-- Bar: 75% Layout, 82 -->
+  <text x="300" y="210" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.8">75% Layout</text>
+  <rect x="320" y="190" width="558" height="40" rx="6" fill="oklch(0.78 0.005 90 / 0.14)" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.45"/>
+  <text x="890" y="216" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">82 &#183; up</text>
+
+  <!-- Bar: Alice, 0 -->
+  <text x="300" y="290" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="end" opacity="0.95" font-weight="600">Alice layout</text>
+  <rect x="320" y="270" width="6" height="40" rx="3" fill="oklch(0.68 0.165 28)"/>
+  <text x="340" y="296" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.68 0.165 28)" stroke="none" font-weight="600">0 &#183; up (from -66)</text>
+
+  <text x="600" y="385" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">recovered to neutral, not into the territory its competitor already owns</text>
+
+  <!-- Bronze theme dot -->
+  <circle cx="1170" cy="30" r="6" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

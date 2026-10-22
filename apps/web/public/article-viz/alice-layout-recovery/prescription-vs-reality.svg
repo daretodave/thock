@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Two-column diagram. Left column, "Called for in May 2026," lists two conditions in dashed caution-red outlined boxes marked NOT SHIPPED: a sub-$200 pre-built Alice with hot-swap and wireless, and a split-Alice hybrid with adjustable splay angle. Right column, "What shipped instead, W36 through W42," lists three coral filled boxes: Keychron B40 75% and B39 1800 scissor-switch boards at W36, 2026 buying guides reframing Alice as a gateway ergo layout across W37 through W41, and scattered boutique and OEM activity from Epomaker Tide Alice and Qwertykeys QK Alice Duo at W42. A caption beneath both columns reads: all three are premium-tier or editorial, not the sub-$200 hot-swap board or the adjustable-splay hybrid.</title>
+
+  <text x="600" y="38" font-family="Newsreader, serif" font-size="18" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">The prescription from May, and what actually showed up</text>
+
+  <!-- Column headers -->
+  <text x="300" y="80" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.85" font-weight="600">CALLED FOR IN MAY 2026</text>
+  <text x="900" y="80" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.9" font-weight="600">WHAT SHIPPED, W36 &#8594; W42</text>
+
+  <!-- Panel divider -->
+  <line x1="600" y1="100" x2="600" y2="480" stroke-dasharray="5 5" opacity="0.2"/>
+
+  <!-- Left: condition 1 -->
+  <rect x="140" y="110" width="320" height="120" rx="10" stroke="oklch(0.62 0.13 25)" stroke-dasharray="6 5" stroke-opacity="0.75" fill="none"/>
+  <text x="300" y="150" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Pre-built Alice, $200 tier</text>
+  <text x="300" y="170" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">hot-swap + wireless,</text>
+  <text x="300" y="190" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">serious-not-precious look</text>
+  <text x="300" y="217" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.9" font-weight="600">NOT SHIPPED</text>
+
+  <!-- Left: condition 2 -->
+  <rect x="140" y="250" width="320" height="120" rx="10" stroke="oklch(0.62 0.13 25)" stroke-dasharray="6 5" stroke-opacity="0.75" fill="none"/>
+  <text x="300" y="290" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Split-Alice hybrid with</text>
+  <text x="300" y="310" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">adjustable splay angle —</text>
+  <text x="300" y="330" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">tunable, not fixed, geometry</text>
+  <text x="300" y="357" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.9" font-weight="600">NOT SHIPPED</text>
+
+  <!-- Right: event 1 -->
+  <rect x="740" y="110" width="320" height="90" rx="10" fill="oklch(0.68 0.165 28 / 0.1)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.8"/>
+  <text x="900" y="140" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.85">W36</text>
+  <text x="900" y="162" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.9">Keychron B40 75% + B39 1800</text>
+  <text x="900" y="182" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">scissor-switch, ZMK</text>
+
+  <!-- Right: event 2 -->
+  <rect x="740" y="215" width="320" height="90" rx="10" fill="oklch(0.68 0.165 28 / 0.1)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.8"/>
+  <text x="900" y="245" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.85">W37&#8211;W41</text>
+  <text x="900" y="267" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.9">Buying guides reframe Alice</text>
+  <text x="900" y="287" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">"gateway ergo layout"</text>
+
+  <!-- Right: event 3 -->
+  <rect x="740" y="320" width="320" height="90" rx="10" fill="oklch(0.68 0.165 28 / 0.1)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.8"/>
+  <text x="900" y="350" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.85">W42</text>
+  <text x="900" y="372" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.9">Epomaker Tide Alice,</text>
+  <text x="900" y="392" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">Qwertykeys QK Alice Duo</text>
+
+  <!-- Caption -->
+  <line x1="150" y1="460" x2="1050" y2="460" stroke-dasharray="5 5" opacity="0.2"/>
+  <text x="600" y="495" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">all three are premium-tier or editorial — not the sub-$200</text>
+  <text x="600" y="518" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">hot-swap board or the adjustable-splay hybrid</text>
+
+  <!-- Bronze theme dot -->
+  <circle cx="1170" cy="30" r="6" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

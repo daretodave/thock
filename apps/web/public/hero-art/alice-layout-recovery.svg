@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero - Alice layout trend-tracker score, eight-reading climb off a deep trough, landing flat at neutral; paired with a small Alice keyboard silhouette, companion to alice-layout-decline</title>
+
+  <!-- Dusty-rose wash behind the terminal region, the visual center of gravity -->
+  <ellipse cx="950" cy="420" rx="300" ry="190" fill="oklch(0.64 0.07 23 / 0.08)" stroke="none"/>
+
+  <!-- Neutral / zero reference line. The climb lands here, not above it:
+       plenty of empty chart space remains above, signaling restraint
+       rather than a move into positive territory. -->
+  <line x1="100" y1="330" x2="1120" y2="330" stroke-dasharray="4 5" stroke-opacity="0.45"/>
+  <circle cx="100" cy="330" r="4" fill="oklch(0.78 0.005 90)" opacity="0.5"/>
+  <circle cx="1120" cy="330" r="5" fill="oklch(0.78 0.005 90)" opacity="0.55"/>
+
+  <!-- Baseline axis -->
+  <line x1="140" y1="670" x2="1078" y2="670" stroke-opacity="0.5"/>
+  <g stroke-opacity="0.35">
+    <line x1="140"  y1="670" x2="140"  y2="678"/>
+    <line x1="274"  y1="670" x2="274"  y2="678"/>
+    <line x1="408"  y1="670" x2="408"  y2="678"/>
+    <line x1="542"  y1="670" x2="542"  y2="678"/>
+    <line x1="676"  y1="670" x2="676"  y2="678"/>
+    <line x1="810"  y1="670" x2="810"  y2="678"/>
+    <line x1="944"  y1="670" x2="944"  y2="678"/>
+    <line x1="1078" y1="670" x2="1078" y2="678"/>
+  </g>
+
+  <!-- Area fill beneath the climb, single splash hue, low opacity -->
+  <path
+    d="
+      M 140 670
+      L 140 620
+      L 274 567
+      L 408 510
+      L 542 457
+      L 676 409
+      L 810 370
+      L 944 343
+      L 1078 330
+      L 1078 670
+      Z"
+    fill="oklch(0.64 0.07 23 / 0.14)" stroke="none"/>
+
+  <!-- The sparkline itself: eight weekly readings climbing from a deep
+       trough back to neutral, decelerating as it approaches the zero
+       line rather than overshooting past it. Values -66, -54, -41, -29,
+       -18, -9, -3, 0. -->
+  <polyline
+    points="
+      140,620
+      274,567
+      408,510
+      542,457
+      676,409
+      810,370
+      944,343
+      1078,330"
+    stroke="oklch(0.64 0.07 23)"
+    stroke-width="3"
+    fill="none"/>
+
+  <!-- Interior readings, filled splash dots, opacity rising toward the
+       present as the recovery gains confidence -->
+  <circle cx="140" cy="620" r="5" fill="oklch(0.64 0.07 23)" stroke="none" opacity="0.55"/>
+  <circle cx="274" cy="567" r="5" fill="oklch(0.64 0.07 23)" stroke="none" opacity="0.62"/>
+  <circle cx="408" cy="510" r="5" fill="oklch(0.64 0.07 23)" stroke="none" opacity="0.70"/>
+  <circle cx="542" cy="457" r="5" fill="oklch(0.64 0.07 23)" stroke="none" opacity="0.78"/>
+  <circle cx="676" cy="409" r="5" fill="oklch(0.64 0.07 23)" stroke="none" opacity="0.85"/>
+  <circle cx="810" cy="370" r="5" fill="oklch(0.64 0.07 23)" stroke="none" opacity="0.90"/>
+  <circle cx="944" cy="343" r="5" fill="oklch(0.64 0.07 23)" stroke="none" opacity="0.95"/>
+
+  <!-- Terminal reading: the present, sitting exactly on the neutral
+       line, not above it -->
+  <circle cx="1078" cy="330" r="10" fill="oklch(0.64 0.07 23)" stroke="none"/>
+  <circle cx="1078" cy="330" r="18" fill="none" stroke="oklch(0.64 0.07 23)" stroke-opacity="0.35" stroke-width="1.5"/>
+
+  <!-- Flat-hold projection stub: a short dashed continuation at the
+       same y, reading "holds here" rather than "keeps climbing" -->
+  <line x1="1090" y1="330" x2="1118" y2="330" stroke-dasharray="3 4" stroke-opacity="0.45"/>
+  <line x1="1118" y1="322" x2="1118" y2="338" stroke-opacity="0.45"/>
+
+  <!-- Bronze theme dot, family ornamental anchor, upper-right margin -->
+  <circle cx="1165" cy="56" r="9" fill="oklch(0.80 0.135 75)" fill-opacity="0.85" stroke="none"/>
+
+  <!-- Secondary motif: a small Alice-layout keyboard top-down silhouette,
+       reduced opacity, tucked clear of the sparkline's path. Visual
+       continuity with the companion piece alice-layout-decline.svg:
+       same split-symmetry case outline with an outward-angled top edge
+       and a center seam, simplified to a bare silhouette since it is
+       secondary here rather than the subject. -->
+  <g opacity="0.5">
+    <path d="
+      M 121.3 85.7
+      L 252.5 70
+      L 260 70.8
+      L 267.5 70
+      L 398.8 85.7
+      L 410 93.6
+      L 410 164.3
+      L 398.8 180
+      L 121.3 180
+      L 110 164.3
+      L 110 93.6
+      Z"/>
+    <line x1="260" y1="70.8" x2="260" y2="180" stroke-opacity="0.4"/>
+    <!-- Spacebar hint, splash-tinted, echoing the accent-keycap move on
+         the companion piece -->
+    <circle cx="265" cy="171" r="4" fill="oklch(0.64 0.07 23)" fill-opacity="0.65" stroke="none"/>
+  </g>
+</svg>

@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-10-18T14:00:00.000Z",
+  "commit": "pending",
+  "kind": "inline-viz",
+  "article_slug": "alice-layout-recovery",
+  "article_pillar": "trends",
+  "section_anchor": "Eight weeks, one direction",
+  "brief_summary": "Single-line chart of Alice layout's Trends Tracker score across eight consecutive weekly readings, W35 through W42. The line climbs every week from a trough of -66 to a flat 0, crossing into neutral territory rather than positive growth.",
+  "target": "apps/web/public/article-viz/alice-layout-recovery/eight-week-climb.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "data/trends/2026-W42.json:rows — 'Alice layout' direction 'up', score 0, spark [-66, -50, -40, -30, -18, -8, -5, 0]",
+    "data/trends/2026-W35.json:rows — 'Alice layout' score -66",
+    "apps/web/src/content/articles/alice-layout-recovery.mdx:Eight weeks, one direction — 'eight consecutive weekly readings through W42: -66, -50, -40, -30, -18, -8, -5, 0'"
+  ],
+  "outputs": ["apps/web/public/article-viz/alice-layout-recovery/eight-week-climb.svg"],
+  "warnings": []
+}

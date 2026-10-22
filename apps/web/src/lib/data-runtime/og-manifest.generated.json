@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "slug": "alice-layout-recovery",
+      "readTime": 6,
+      "frontmatter": {
+        "title": "Alice's tracker score climbed for eight straight weeks. The fix that was supposed to do it still hasn't shipped.",
+        "lede": "Alice layout's score on thock's trend tracker climbed every week for eight consecutive readings, from a trough of -66 at W35 to a flat 0 at W42. Neither of the two products the May 2026 decline piece said would be needed to reverse that slide has shipped.",
+        "pillar": "trends",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "tactile-stem-geometry-deep-dive",
       "readTime": 10,
       "frontmatter": {
@@ -9405,5 +9415,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-10-22T06:02:18.482Z"
+  "generatedAt": "2026-10-22T20:44:00.053Z"
 }

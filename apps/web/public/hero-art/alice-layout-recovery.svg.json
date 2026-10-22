@@ -1,0 +1,40 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-10-22T00:00:00Z",
+  "commit": "7b2222609853a97f78fc9edc2698c702ed8cc78c",
+  "kind": "hero-art",
+  "article_slug": "alice-layout-recovery",
+  "article_pillar": "trends",
+  "brief_summary": "Hero art for the Trends pillar piece on the Alice layout's trend-tracker score climbing for eight straight weekly readings off a deep trough (-66) back to neutral (0), not into positive/growth territory. Primary motif per the trends-pillar sparkline directive: an eight-point sparkline climbing left to right, decelerating as it nears the zero line, landing its terminal point exactly on a dashed neutral reference line with deliberate empty chart space left above it to signal the recovery stopped at flat rather than overshooting into growth. Paired with a small, reduced-opacity top-down Alice-layout keyboard silhouette tucked in the upper-left corner, out of the sparkline's path, for visual continuity with the companion piece alice-layout-decline.svg (same split-symmetry case outline with an outward-angled top edge and a center seam, simplified to a bare silhouette since it is secondary here).",
+  "target": "apps/web/public/hero-art/alice-layout-recovery.svg",
+  "source": "plan/bearings.md section Article hero art, colorful keyboard SVGs (locked 2026-05-09), trends piece maps to sparkline silhouette; companion/follow-up piece to apps/web/public/hero-art/alice-layout-decline.svg",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject; trends piece -> sparkline silhouette, optionally paired with a secondary motif (cf. tmr-switches-five-week-climb.svg)",
+  "size": [1200, 750],
+  "subject": "An eight-point sparkline (eight weekly trend-tracker readings) climbing left to right from a deep trough up to a dashed neutral/zero reference line, decelerating on approach so the terminal point lands exactly on that line rather than above it. Interior points render as filled splash dots with rising opacity toward the present; the terminal point is enlarged with a halo ring. A short dashed flat-hold stub continues past the terminal point at the same height, signaling the score holds at neutral rather than continuing to climb. A low-opacity splash area fill sits beneath the climbing line, and a soft splash wash anchors the terminal region. Secondary, at reduced opacity in the upper-left corner clear of the chart: a simplified top-down Alice-layout keyboard silhouette (split-symmetry case, outward-angled top edge, center seam) with a small splash-tinted spacebar dot, echoing the companion piece's accent-keycap move.",
+  "splash_color": {
+    "name": "dusty rose",
+    "oklch": "oklch(0.64 0.07 23)",
+    "rotation_note": "Chosen from the brief's allowed set {coral, dusty rose, ochre, muted terracotta}. This is a direct companion/follow-up to alice-layout-decline.svg, which used dusty rose at oklch(0.72 0.082 25); keeping the same hue family signals series continuity, but the value here is pulled quieter (lower lightness 0.64 vs 0.72, lower chroma 0.07 vs 0.082) per the brief's steer toward a more restrained tone for a 'recovered to neutral, not to growth' story rather than the companion's already-muted-but-composed wash. Hue 23 sits adjacent to but distinct from the companion's 25 and clear of the other dusty-rose hues already in rotation across the corpus (9, 12, 14, 15, 16, 18, 20)."
+  },
+  "accent_color": {
+    "name": "warm-bronze (theme accent)",
+    "oklch": "oklch(0.80 0.135 75)"
+  },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "stroke_weight": "2px (3px on the sparkline polyline itself, matching the family's emphasis convention for the focal trajectory, cf. tmr-switches-five-week-climb.svg)",
+  "canvas": "1200x750",
+  "background": "transparent (light-mode safe per house style)",
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": [],
+  "alt": "A sparkline chart showing eight weekly readings climbing steadily upward from a deep trough in dusty rose, leveling off exactly at a dashed neutral reference line with empty space left above it. A small, faded top-down Alice-layout keyboard silhouette sits in the upper-left corner.",
+  "notes": "No rendered text anywhere in the file, consistent with family convention for the trends-pillar sparkline pieces; the climb shape, the neutral-line landing, and the secondary Alice silhouette carry the subject without labels. Data points are illustrative of the brief's eight-reading climb from -66 to 0 (values -66, -54, -41, -29, -18, -9, -3, 0); exact y-coordinates are a stylized decelerating curve, not a pixel-literal plot, consistent with family convention (cf. tmr-switches-five-week-climb.svg's own note on stylized interpolation). Terminal point placed exactly on the neutral/zero dashed line rather than above it, and a deliberate band of empty chart space is left above that line, so the piece does not overstate the recovery as growth. All XML comments use single-hyphen text only (no double-hyphen runs) per the svg-validity.test.ts regression guard at apps/web/src/__tests__/svg-validity.test.ts; verified locally with a manual double-hyphen scan, clean.",
+  "data_sources": [
+    "brief: Alice layout's weekly trend score climbed for eight straight readings, from -66 up to 0 (flat/neutral, not positive territory), a reversal off a deep trough landing back at the zero/neutral baseline"
+  ],
+  "outputs": [
+    "apps/web/public/hero-art/alice-layout-recovery.svg",
+    "apps/web/public/hero-art/alice-layout-recovery.svg.json"
+  ],
+  "warnings": []
+}
