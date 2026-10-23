@@ -14134,3 +14134,15 @@ passes accumulate signals.)
 - next: /ship-content → news pillar article
 - issue: #1031
 > Filed 2026-10-22 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+
+### [HOT PURSUIT] [content-gap] [7] ideas pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 7 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: ideas
+- window-count: 1
+- window-start: 2026-09-23
+- score: 7
+- next: /ship-content → ideas pillar article
+> Filed 2026-10-23 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
