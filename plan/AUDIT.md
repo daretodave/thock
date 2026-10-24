@@ -14135,7 +14135,7 @@ passes accumulate signals.)
 - issue: #1031
 > Filed 2026-10-22 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 
-### [HOT PURSUIT] [content-gap] [7] ideas pillar — 1 of ≥2 articles in last 30d
+### [x] [HOT PURSUIT] [content-gap] [7] ideas pillar — 1 of ≥2 articles in last 30d — addressed in e944eaa6, closes #1033
 - category: content-gaps
 - impact: 7 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -14191,3 +14191,69 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/cannonkeys-mass80-extras-restock.mdx
 - article-b: apps/web/src/content/articles/wuque-studio-summer-update.mdx
 - action: add [wuque-studio-summer-update](/article/wuque-studio-summer-update) to cannonkeys-mass80-extras-restock body, or vice versa
+
+### [ ] [cross-links] [4.5] frankenswitching-explained ↔ holee-mod-explained — no prose cross-link (same pillar, ≥2 shared tags: modding, switches)
+- category: cross-links
+- filed: 2026-10-24 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: modding, switches
+- article-a: apps/web/src/content/articles/frankenswitching-explained.mdx
+- article-b: apps/web/src/content/articles/holee-mod-explained.mdx
+- action: add [holee-mod-explained](/article/holee-mod-explained) to frankenswitching-explained body, or vice versa
+
+### [ ] [cross-links] [4.5] frankenswitching-explained ↔ lubing-switches-guide — no prose cross-link (same pillar, ≥2 shared tags: modding, switches, linear, tactile)
+- category: cross-links
+- filed: 2026-10-24 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: modding, switches, linear, tactile
+- article-a: apps/web/src/content/articles/frankenswitching-explained.mdx
+- article-b: apps/web/src/content/articles/lubing-switches-guide.mdx
+- action: add [lubing-switches-guide](/article/lubing-switches-guide) to frankenswitching-explained body, or vice versa
+
+### [ ] [cross-links] [4.5] frankenswitching-explained ↔ stabilizer-servicing-guide — no prose cross-link (same pillar, ≥2 shared tags: modding, linear)
+- category: cross-links
+- filed: 2026-10-24 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: modding, linear
+- article-a: apps/web/src/content/articles/frankenswitching-explained.mdx
+- article-b: apps/web/src/content/articles/stabilizer-servicing-guide.mdx
+- action: add [stabilizer-servicing-guide](/article/stabilizer-servicing-guide) to frankenswitching-explained body, or vice versa
+
+### [ ] [cross-links] [4.5] frankenswitching-explained ↔ switch-films-worth-it — no prose cross-link (same pillar, ≥2 shared tags: modding, switches, linear, tactile)
+- category: cross-links
+- filed: 2026-10-24 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: modding, switches, linear, tactile
+- article-a: apps/web/src/content/articles/frankenswitching-explained.mdx
+- article-b: apps/web/src/content/articles/switch-films-worth-it.mdx
+- action: add [switch-films-worth-it](/article/switch-films-worth-it) to frankenswitching-explained body, or vice versa
+
+### [ ] [cross-links] [4.5] frankenswitching-explained ↔ tape-mod — no prose cross-link (same pillar, ≥2 shared tags: modding, linear)
+- category: cross-links
+- filed: 2026-10-24 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: modding, linear
+- article-a: apps/web/src/content/articles/frankenswitching-explained.mdx
+- article-b: apps/web/src/content/articles/tape-mod.mdx
+- action: add [tape-mod](/article/tape-mod) to frankenswitching-explained body, or vice versa
+
+### [ ] [cross-links] [4.5] frankenswitching-explained ↔ typing-tests-lie — no prose cross-link (same pillar, ≥2 shared tags: modding, switches)
+- category: cross-links
+- filed: 2026-10-24 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: modding, switches
+- article-a: apps/web/src/content/articles/frankenswitching-explained.mdx
+- article-b: apps/web/src/content/articles/typing-tests-lie.mdx
+- action: add [typing-tests-lie](/article/typing-tests-lie) to frankenswitching-explained body, or vice versa
