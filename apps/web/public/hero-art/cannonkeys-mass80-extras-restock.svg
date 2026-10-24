@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1200 750"
+     preserveAspectRatio="xMidYMid meet"
+     fill="none"
+     stroke="oklch(0.78 0.005 90)"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     role="img"
+     aria-label="thock article hero art for the CannonKeys Mass80 extras restock — top-down 80 percent keyboard outline with a coral touchscreen module in the upper-right corner and a small coral restock tag reading EXTRAS, OCT 8 beneath the case">
+  <title>thock hero — CannonKeys Mass80 extras restock, TKL-adjacent 80% outline with touchscreen module and dated restock tag</title>
+
+  <!--
+    News/vendor piece hero. Top-down 80%/TKL-adjacent case silhouette
+    as the primary subject, per family convention. Two restrained
+    narrative additions carry the article's thesis:
+      1. A coral touchscreen module inset at the upper-right corner
+         of the case, standing in for the Mass80's integrated display.
+      2. A small dated "restock tag" beneath the case — a rounded
+         pill with a clock glyph and OCT 8 text — literalizing the
+         fixed-window extras sale rather than a new group buy.
+    Single-splash discipline: coral is the only per-piece accent hue.
+    The warm-bronze theme dot is the fixed family ornament, upper right.
+  -->
+
+  <!-- Case outline: 80%/TKL-adjacent rectangle, slightly inset corners -->
+  <g>
+    <path d="
+      M 200 200
+      L 1000 200
+      L 1000 540
+      L 200 540
+      Z" />
+    <!-- inner bezel inset -->
+    <path d="
+      M 224 222
+      L 976 222
+      L 976 518
+      L 224 518
+      Z" stroke-opacity="0.5"/>
+  </g>
+
+  <!-- Touchscreen module, upper-right — the Mass80's defining feature -->
+  <g>
+    <rect x="860" y="246" width="92" height="92" rx="10"
+          fill="oklch(0.68 0.165 28 / 0.85)"
+          stroke="oklch(0.60 0.17 28)"
+          stroke-width="2"/>
+    <!-- screen glyph lines, paler -->
+    <line x1="876" y1="268" x2="936" y2="268" stroke="oklch(0.90 0.05 28 / 0.6)" stroke-width="2"/>
+    <line x1="876" y1="286" x2="920" y2="286" stroke="oklch(0.90 0.05 28 / 0.6)" stroke-width="2"/>
+    <circle cx="906" cy="312" r="10" stroke="oklch(0.90 0.05 28 / 0.6)" stroke-width="2"/>
+  </g>
+
+  <!-- Key grid, standard 80%-TKL cadence, five rows -->
+  <g>
+    <!-- Row 1: function row, shortened to make room for the screen module -->
+    <g>
+      <rect x="248" y="248" width="36" height="36" rx="4"/>
+      <rect x="292" y="248" width="36" height="36" rx="4"/>
+      <rect x="336" y="248" width="36" height="36" rx="4"/>
+      <rect x="380" y="248" width="36" height="36" rx="4"/>
+      <rect x="424" y="248" width="36" height="36" rx="4"/>
+      <rect x="468" y="248" width="36" height="36" rx="4"/>
+      <rect x="512" y="248" width="36" height="36" rx="4"/>
+      <rect x="556" y="248" width="36" height="36" rx="4"/>
+      <rect x="600" y="248" width="36" height="36" rx="4"/>
+      <rect x="644" y="248" width="36" height="36" rx="4"/>
+      <rect x="688" y="248" width="36" height="36" rx="4"/>
+      <rect x="732" y="248" width="36" height="36" rx="4"/>
+      <rect x="776" y="248" width="36" height="36" rx="4"/>
+    </g>
+    <!-- Row 2 -->
+    <g>
+      <rect x="248" y="300" width="36" height="36" rx="4"/>
+      <rect x="292" y="300" width="36" height="36" rx="4"/>
+      <rect x="336" y="300" width="36" height="36" rx="4"/>
+      <rect x="380" y="300" width="36" height="36" rx="4"/>
+      <rect x="424" y="300" width="36" height="36" rx="4"/>
+      <rect x="468" y="300" width="36" height="36" rx="4"/>
+      <rect x="512" y="300" width="36" height="36" rx="4"/>
+      <rect x="556" y="300" width="36" height="36" rx="4"/>
+      <rect x="600" y="300" width="36" height="36" rx="4"/>
+      <rect x="644" y="300" width="36" height="36" rx="4"/>
+      <rect x="688" y="300" width="36" height="36" rx="4"/>
+      <rect x="732" y="300" width="36" height="36" rx="4"/>
+      <rect x="776" y="300" width="68" height="36" rx="4"/>
+    </g>
+    <!-- Row 3 -->
+    <g>
+      <rect x="248" y="352" width="52" height="36" rx="4"/>
+      <rect x="308" y="352" width="36" height="36" rx="4"/>
+      <rect x="352" y="352" width="36" height="36" rx="4"/>
+      <rect x="396" y="352" width="36" height="36" rx="4"/>
+      <rect x="440" y="352" width="36" height="36" rx="4"/>
+      <rect x="484" y="352" width="36" height="36" rx="4"/>
+      <rect x="528" y="352" width="36" height="36" rx="4"/>
+      <rect x="572" y="352" width="36" height="36" rx="4"/>
+      <rect x="616" y="352" width="36" height="36" rx="4"/>
+      <rect x="660" y="352" width="36" height="36" rx="4"/>
+      <rect x="704" y="352" width="36" height="36" rx="4"/>
+      <rect x="748" y="352" width="60" height="36" rx="4"/>
+    </g>
+    <!-- Row 4 -->
+    <g>
+      <rect x="248" y="404" width="68" height="36" rx="4"/>
+      <rect x="324" y="404" width="36" height="36" rx="4"/>
+      <rect x="368" y="404" width="36" height="36" rx="4"/>
+      <rect x="412" y="404" width="36" height="36" rx="4"/>
+      <rect x="456" y="404" width="36" height="36" rx="4"/>
+      <rect x="500" y="404" width="36" height="36" rx="4"/>
+      <rect x="544" y="404" width="36" height="36" rx="4"/>
+      <rect x="588" y="404" width="36" height="36" rx="4"/>
+      <rect x="632" y="404" width="36" height="36" rx="4"/>
+      <rect x="676" y="404" width="36" height="36" rx="4"/>
+      <rect x="720" y="404" width="88" height="36" rx="4"/>
+    </g>
+    <!-- Row 5: bottom row + spacebar -->
+    <g>
+      <rect x="248" y="456" width="44" height="36" rx="4"/>
+      <rect x="300" y="456" width="44" height="36" rx="4"/>
+      <rect x="352" y="456" width="44" height="36" rx="4"/>
+      <rect x="404" y="456" width="248" height="36" rx="4"/>
+      <rect x="660" y="456" width="44" height="36" rx="4"/>
+      <rect x="712" y="456" width="44" height="36" rx="4"/>
+      <rect x="764" y="456" width="44" height="36" rx="4"/>
+      <rect x="816" y="456" width="44" height="36" rx="4"/>
+    </g>
+  </g>
+
+  <!-- Restock tag beneath the case: a dated pill, coral -->
+  <g>
+    <rect x="490" y="600" width="220" height="56" rx="28"
+          fill="none"
+          stroke="oklch(0.68 0.165 28)"
+          stroke-width="2.5"/>
+    <circle cx="520" cy="628" r="12" stroke="oklch(0.68 0.165 28)" stroke-width="2"/>
+    <line x1="520" y1="628" x2="520" y2="619" stroke="oklch(0.68 0.165 28)" stroke-width="2"/>
+    <line x1="520" y1="628" x2="527" y2="631" stroke="oklch(0.68 0.165 28)" stroke-width="2"/>
+    <text x="548" y="624" font-family="ui-monospace, 'JetBrains Mono', monospace" font-size="16" letter-spacing="2" fill="oklch(0.68 0.165 28)" stroke="none">EXTRAS</text>
+    <text x="548" y="644" font-family="ui-monospace, 'JetBrains Mono', monospace" font-size="14" letter-spacing="2" fill="oklch(0.68 0.165 28)" stroke="none" fill-opacity="0.85">OCT 8 · 3PM ET</text>
+  </g>
+
+  <!-- Warm-bronze theme dot, upper-right margin, fixed family ornament -->
+  <circle cx="1148" cy="64" r="5" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

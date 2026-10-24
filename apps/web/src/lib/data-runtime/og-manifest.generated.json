@@ -21,6 +21,16 @@
       }
     },
     {
+      "slug": "cannonkeys-mass80-extras-restock",
+      "readTime": 5,
+      "frontmatter": {
+        "title": "CannonKeys reopens Mass80 extras sale seven months after group buy",
+        "lede": "CannonKeys opened a fixed-window extras sale for the Mass80 touchscreen keyboard on October 8, 2026 — leftover units from a group buy that closed seven months earlier, not a new run.",
+        "pillar": "news",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "artisan-keycaps-buying-guide",
       "readTime": 9,
       "frontmatter": {
@@ -1451,6 +1461,11 @@
       "slug": "rapid-trigger",
       "name": "Rapid Trigger",
       "category": "switch"
+    },
+    {
+      "slug": "restock",
+      "name": "Restock",
+      "category": "misc"
     },
     {
       "slug": "retrobrighting",
@@ -9415,5 +9430,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-10-22T20:44:00.053Z"
+  "generatedAt": "2026-10-24T05:34:24.636Z"
 }

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock inline viz — group buy versus extras sale, four-row comparison matrix</title>
+
+  <!-- Two column panels -->
+  <rect x="80" y="70" width="460" height="400" rx="14" stroke-opacity="0.6"/>
+  <rect x="660" y="70" width="460" height="400" rx="14" stroke="oklch(0.68 0.165 28)" stroke-width="2.5"/>
+
+  <!-- Column headers -->
+  <text x="310" y="46" font-family="IBM Plex Sans, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="oklch(0.78 0.005 90)" stroke="none">Group buy</text>
+  <text x="890" y="46" font-family="IBM Plex Sans, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="oklch(0.68 0.165 28)" stroke="none">Extras sale</text>
+
+  <!-- Row dividers -->
+  <line x1="80" y1="170" x2="540" y2="170" stroke-opacity="0.35"/>
+  <line x1="80" y1="270" x2="540" y2="270" stroke-opacity="0.35"/>
+  <line x1="80" y1="370" x2="540" y2="370" stroke-opacity="0.35"/>
+  <line x1="660" y1="170" x2="1120" y2="170" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.35"/>
+  <line x1="660" y1="270" x2="1120" y2="270" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.35"/>
+  <line x1="660" y1="370" x2="1120" y2="370" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.35"/>
+
+  <!-- Row labels, left margin -->
+  <g font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" font-weight="600">
+    <text x="40" y="128" text-anchor="start" transform="rotate(0)">preorder risk</text>
+  </g>
+
+  <!-- Row 1: preorder risk -->
+  <text x="130" y="128" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="oklch(0.78 0.005 90)" stroke="none">Pays now, board ships later</text>
+  <text x="710" y="128" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="oklch(0.68 0.165 28)" stroke="none" font-weight="600">Pays now, board ships now</text>
+
+  <!-- Row 2: stock -->
+  <text x="130" y="228" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="oklch(0.78 0.005 90)" stroke="none">Order quantity set by demand</text>
+  <text x="710" y="228" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="oklch(0.68 0.165 28)" stroke="none" font-weight="600">Fixed leftover quantity, capped</text>
+
+  <!-- Row 3: specs / colorways -->
+  <text x="130" y="328" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="oklch(0.78 0.005 90)" stroke="none">New colorways / specs possible</text>
+  <text x="710" y="328" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="oklch(0.68 0.165 28)" stroke="none" font-weight="600">Same spec as closed GB run</text>
+
+  <!-- Row 4: timing -->
+  <text x="130" y="428" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="oklch(0.78 0.005 90)" stroke="none">Multi-week open window</text>
+  <text x="710" y="428" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="oklch(0.68 0.165 28)" stroke="none" font-weight="600">Fixed sale time, first-come-first-served</text>
+
+  <!-- Row icon markers (left margin inside each panel) -->
+  <g>
+    <circle cx="105" cy="118" r="5" fill="none" stroke="oklch(0.78 0.005 90)"/>
+    <circle cx="105" cy="218" r="5" fill="none" stroke="oklch(0.78 0.005 90)"/>
+    <circle cx="105" cy="318" r="5" fill="none" stroke="oklch(0.78 0.005 90)"/>
+    <circle cx="105" cy="418" r="5" fill="none" stroke="oklch(0.78 0.005 90)"/>
+    <circle cx="685" cy="118" r="5" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)"/>
+    <circle cx="685" cy="218" r="5" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)"/>
+    <circle cx="685" cy="318" r="5" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)"/>
+    <circle cx="685" cy="418" r="5" fill="oklch(0.68 0.165 28)" stroke="oklch(0.68 0.165 28)"/>
+  </g>
+
+  <!-- Theme dot -->
+  <circle cx="1168" cy="24" r="5" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

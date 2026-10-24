@@ -1,0 +1,25 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-10-24T00:00:00Z",
+  "commit": "7b62cd11d2b9334476cf863e480c4c0cca5f35bc",
+  "kind": "hero-art",
+  "article_slug": "cannonkeys-mass80-extras-restock",
+  "article_pillar": "news",
+  "target": "apps/web/public/hero-art/cannonkeys-mass80-extras-restock.svg",
+  "source": null,
+  "template": "directive: plan/bearings.md § Article hero art — news/vendor piece maps to keyboard outline / layout silhouette",
+  "size": [1200, 750],
+  "canvas": "1200x750",
+  "subject": "Top-down compact ~80-key keyboard outline (generic Mass80 evocation, not a literal reproduction) with an inset touchscreen module at the upper-right corner — faint UI rows plus a concentric-ring 'live/restocked' pulse glyph — and a dedicated right-side nav/macro key column. Beneath the case: a circular-arrow 'reopening' glyph and a two-point timeline (hollow dot for the original Feb 2026 group buy closing, connected by a dashed line to a filled splash dot for the now-reopened limited extras restock). No text, no dates, no literal screenshot of the touchscreen UI — this is a restock/vendor-news piece, not a product deep-dive, so the art stays at the layout-silhouette level per bearings.",
+  "splash_color": { "name": "muted terracotta", "oklch": "oklch(0.60 0.105 42)" },
+  "secondary_accent": { "name": "bronze theme dot", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "stroke_weight": "2px",
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": [],
+  "outputs": [
+    "apps/web/public/hero-art/cannonkeys-mass80-extras-restock.svg"
+  ],
+  "warnings": []
+}

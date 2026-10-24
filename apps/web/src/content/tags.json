@@ -96,6 +96,7 @@
     { "slug": "pcb", "name": "PCB", "category": "misc" },
     { "slug": "wooting", "name": "Wooting", "category": "brand" },
     { "slug": "artisan", "name": "Artisan", "category": "misc" },
-    { "slug": "stem-geometry", "name": "Stem geometry", "category": "switch" }
+    { "slug": "stem-geometry", "name": "Stem geometry", "category": "switch" },
+    { "slug": "restock", "name": "Restock", "category": "misc" }
   ]
 }

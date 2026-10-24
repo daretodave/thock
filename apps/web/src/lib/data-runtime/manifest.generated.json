@@ -9030,6 +9030,34 @@
       "filePath": "apps/web/src/content/articles/tactile-stem-geometry-deep-dive.mdx"
     },
     {
+      "slug": "cannonkeys-mass80-extras-restock",
+      "frontmatter": {
+        "slug": "cannonkeys-mass80-extras-restock",
+        "title": "CannonKeys reopens Mass80 extras sale seven months after group buy",
+        "lede": "CannonKeys opened a fixed-window extras sale for the Mass80 touchscreen keyboard on October 8, 2026 — leftover units from a group buy that closed seven months earlier, not a new run.",
+        "description": null,
+        "author": "thock",
+        "pillar": "news",
+        "tags": [
+          "cannonkeys",
+          "vendor",
+          "group-buy",
+          "restock"
+        ],
+        "publishedAt": "2026-10-12T14:00:00.000Z",
+        "updatedAt": "2026-10-12T14:00:00.000Z",
+        "heroImage": "/hero-art/cannonkeys-mass80-extras-restock.svg",
+        "heroImageAlt": "Top-down 80-percent keyboard outline with a coral touchscreen module inset at the upper-right corner and a coral pill-shaped tag beneath the case reading EXTRAS, OCT 8, 3PM ET.",
+        "featured": false,
+        "popularityScore": 0,
+        "guideSection": null,
+        "mentionedParts": []
+      },
+      "body": "\nCannonKeys' live product page for the <Mono>Mass80</Mono> now lists an \"Extras October 8th 3PM ET\" sale window. That's the entire announcement, and it's worth reading at exactly that scale. This isn't a new board, a new colorway, or a second group buy — it's CannonKeys clearing leftover units from a <Mono>Mass80</Mono> run that locked its order book back in February.\n\n## What actually happened\n\nThe <Mono>Mass80</Mono> group buy ran at CannonKeys from 2026-02-03 through 2026-02-24, a three-week ordering window typical for the vendor's custom-board buys. Seven months later, the product page updated to advertise a fixed-time extras sale: October 8, 3PM ET, first-come-first-served.\n\n<InlineViz\n  src=\"/article-viz/cannonkeys-mass80-extras-restock/gb-to-extras-timeline.svg\"\n  alt=\"Horizontal timeline with coral markers at 2026-02-03 (group buy opens) and 2026-02-24 (group buy closes), a neutral span marking the September-to-October 2026 estimated delivery window, and a larger coral marker at 2026-10-08 3PM ET labelled Extras sale, connected to the group-buy close by a dashed arc captioned 'seven months between close and extras.'\"\n  caption=\"Seven months separate the order book closing and the leftovers going up for sale.\"\n  accent=\"coral\"\n/>\n\nThe gap between those two dates isn't unusual once the fulfillment math is laid out. CannonKeys' own addons listing for the board — a separate SKU covering spare M-panels, plates, and wrist rests — carries an estimated delivery window of September to October 2026, with the standard group-buy disclaimer that <Mono>\"the estimated date of delivery is just that, an estimate.\"</Mono> Read against that timeline, an extras sale landing in early October tracks almost exactly with when the main production run was expected to finish shipping to backers. Extras typically don't go up for sale until the vendor knows what's left over, and a vendor doesn't know what's left over until the batch has actually been built and allocated.\n\n## Why \"extras\" isn't a relaunch\n\n<Callout type=\"note\" title=\"What an extras sale means for a buyer\">\n  An extras sale is CannonKeys selling off units that already exist — overage from the manufacturing run, or orders that fell through during the group buy — rather than opening a new preorder. For a buyer, that distinction matters in four concrete ways: no preorder risk, since the boards are built and sitting in inventory rather than promised against a future production slot; a fixed and usually small quantity, so the sale can and often does sell out in minutes; the same specification the group buy already locked in, with no new colorway or spec revision bundled in; and a single fixed clock time rather than a multi-week ordering window, which means missing the hour generally means waiting for whatever comes next.\n</Callout>\n\n<InlineViz\n  src=\"/article-viz/cannonkeys-mass80-extras-restock/groupbuy-vs-extras.svg\"\n  alt=\"Two-column comparison matrix. Left column, group buy: pays now board ships later, order quantity set by demand, new colorways or specs possible, multi-week open window. Right column, outlined in coral, extras sale: pays now board ships now, fixed leftover quantity capped, same spec as closed group buy run, fixed sale time first-come-first-served.\"\n  caption=\"Same vendor, same board — a different transaction entirely.\"\n  accent=\"coral\"\n/>\n\nThat framing is worth stating plainly because \"restock\" headlines invite the opposite read. A buyer who skimmed past the February group buy might see \"Mass80 back\" in October and assume a second ordering round is open, with time to decide and configure. It isn't. CannonKeys has not published a new colorway, a revised PCB, or a changed price tier alongside the extras window, and nothing in the product page framing suggests one is coming. The <Mono>Mass80</Mono> extras sale is closer in spirit to a warehouse clearing a shelf than to a brand launching a product.\n\n## The board underneath the headline\n\nThe <Mono>Mass80</Mono> itself is a touchscreen-equipped 80%-class board designed by MWKEYS, marketed in some regions under the Milkyway name, and built around an integrated color touchscreen panel set into the case rather than a status LED or a small OLED readout — a feature set that put the board on keyboard crowdfunding trackers well before CannonKeys picked it up for a North American run. <Source href=\"https://www.kicktraq.com/projects/mwkeys/mass-80-the-1st-and-best-keyboard-with-interactive-screen/\">MWKEYS' own crowdfunding record</Source> for the design predates the February CannonKeys buy, and a parallel regional group buy ran in Japan through a separate distributor around the same close date, which is a reasonable sign the February window was one leg of a multi-market rollout rather than a CannonKeys-exclusive design.\n\n<InlineViz\n  src=\"/article-viz/cannonkeys-mass80-extras-restock/mass80-spec-strip.svg\"\n  alt=\"Six-chip fact strip reading: layout 80% TKL-adjacent, case and mount CNC aluminum gasket, switches hot-swap QMK, designer MWKEYS (Milkyway), North American vendor CannonKeys, and status extras limited stock, with the status chip highlighted in coral and captioned 'same board, same spec sheet — only the status chip changed.'\"\n  caption=\"The restock changes exactly one line on this sheet.\"\n  accent=\"coral\"\n/>\n\nCannonKeys runs the board as a CNC-aluminum, gasket-mounted, hot-swap kit on <Mono>QMK</Mono> firmware, consistent with how the vendor positions most of its custom-board catalog. The company has not published unit counts for either the original run or the October extras batch, and thock did not find a published price specifically for the restocked boards at the time the extras window opened — the only confirmed pricing on CannonKeys' site tied to the <Mono>Mass80</Mono> line is the separate $175 addons kit, which carries an unavailable listing and a limited-stock tag. Readers chasing an exact restock price should treat the vendor's own checkout page as the only reliable source once the window opens; thock is not reproducing a number it can't confirm.\n\n## Routine vendor housekeeping, not a comeback\n\nExtras sales of this shape are a normal late-stage step in how CannonKeys runs group buys generally, not a special accommodation invented for the <Mono>Mass80</Mono>. CannonKeys' own site-refresh notes describe the vendor's order-status tracker ending, after delivery, in a stage reading <Source href=\"https://cannonkeys.com/blogs/news-and-updates/cannonkeys-site-refresh\">\"Complete — units have been delivered to participants and we are awaiting extras information\"</Source>, which frames extras as a scheduled last step of the group-buy lifecycle rather than a reactive restock triggered by demand. Buyers who've followed other CannonKeys buys through to fulfillment will recognize the pattern: close the order book, build to the locked count plus whatever production overage the factory run produces, ship to backers, then clear the remainder in an announced, timed sale once the dust settles.\n\n## What to watch\n\nThe open question isn't whether the <Mono>Mass80</Mono> is worth owning — the board's touchscreen pitch has already found its audience across two regional group buys. It's how fast the October 8 extras batch clears. A sale that sells out in the opening minutes says the February run undershot real demand, and vendors tend to remember that kind of signal when a designer brings them a second board. A batch that lingers past the opening hour says the opposite — that the February order book already captured most of the interest this design was going to generate. Either outcome is a small, useful data point on how touchscreen-equipped custom boards are actually selling in late 2026, independent of how loudly any single launch gets covered.\n",
+      "readTime": 5,
+      "filePath": "apps/web/src/content/articles/cannonkeys-mass80-extras-restock.mdx"
+    },
+    {
       "slug": "artisan-keycaps-buying-guide",
       "frontmatter": {
         "slug": "artisan-keycaps-buying-guide",
@@ -14021,6 +14049,11 @@
       "category": "switch"
     },
     {
+      "slug": "restock",
+      "name": "Restock",
+      "category": "misc"
+    },
+    {
       "slug": "retrobrighting",
       "name": "Retrobrighting",
       "category": "misc"
@@ -14151,5 +14184,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-10-22T20:44:00.053Z"
+  "generatedAt": "2026-10-24T05:34:24.636Z"
 }

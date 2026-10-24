@@ -1,0 +1,25 @@
+{
+  "generated_by": "content-curator-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-10-24T00:00:00.000Z",
+  "commit": "7b62cd11",
+  "kind": "inline-viz",
+  "article_slug": "cannonkeys-mass80-extras-restock",
+  "article_pillar": "news",
+  "section_anchor": "What actually happened",
+  "brief_summary": "Horizontal timeline running from the Mass80 group buy's 2026-02-03 open through its 2026-02-24 close, the Sep-Oct 2026 estimated delivery window, to the 2026-10-08 3PM ET extras sale, with a dashed arc labelled 'seven months between close and extras' tying the headline framing to the dates.",
+  "target": "apps/web/public/article-viz/cannonkeys-mass80-extras-restock/gb-to-extras-timeline.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "article body, 'What actually happened' section — 'The group buy ran February 3 through February 24, 2026'",
+    "article body — 'CannonKeys' own addons listing for the board carries an estimated delivery window of September to October 2026'",
+    "article body — 'CannonKeys' live product page for the Mass80 lists an Extras October 8th 3PM ET sale window'",
+    "article body — 'seven months after a group buy that closed in February'"
+  ],
+  "outputs": ["apps/web/public/article-viz/cannonkeys-mass80-extras-restock/gb-to-extras-timeline.svg"],
+  "warnings": []
+}

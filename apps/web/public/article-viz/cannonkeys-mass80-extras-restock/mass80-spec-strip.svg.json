@@ -1,0 +1,25 @@
+{
+  "generated_by": "content-curator-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-10-24T00:00:00.000Z",
+  "commit": "7b62cd11",
+  "kind": "inline-viz",
+  "article_slug": "cannonkeys-mass80-extras-restock",
+  "article_pillar": "news",
+  "section_anchor": "The board underneath the headline",
+  "brief_summary": "Six-chip fact strip naming the Mass80's layout, case/mount, switch socket, designer, North American vendor, and current restock status. The status chip is highlighted in coral with the caption noting that only that field changed between the group buy and the restock, grounding the article's 'same board, same spec' thesis.",
+  "target": "apps/web/public/article-viz/cannonkeys-mass80-extras-restock/mass80-spec-strip.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "scout/web research, Kicktraq MWKEYS Mass80 campaign page — board designed and crowdfunded by MWKEYS, marketed in some regions as Milkyway",
+    "scout/web research, green-keys.info Japan group-buy listing — 'an 80% TKL-ANSI board with a touchscreen', CNC aluminum gasket-mount case",
+    "scout/web research, cannonkeys.com/products/mass-80-addons — CannonKeys is the named North American vendor running the Mass80 group buy and its addons line",
+    "article body — 'the specs on sale are whatever the group buy already locked in'"
+  ],
+  "outputs": ["apps/web/public/article-viz/cannonkeys-mass80-extras-restock/mass80-spec-strip.svg"],
+  "warnings": ["Display panel technology (IPS vs TFT) and exact key count/weight conflicted across secondary retailer listings and were deliberately omitted from the chip strip rather than asserted."]
+}

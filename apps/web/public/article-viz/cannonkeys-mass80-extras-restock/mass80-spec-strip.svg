@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock inline viz — Mass80 catalog-fact strip, six labelled chips</title>
+
+  <!-- Row 1 of three chips -->
+  <g>
+    <rect x="60" y="60" width="330" height="90" rx="12"/>
+    <text x="80" y="92" font-family="IBM Plex Sans, sans-serif" font-size="14" letter-spacing="1" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">LAYOUT</text>
+    <text x="80" y="122" font-family="ui-monospace, 'JetBrains Mono', monospace" font-size="18" fill="oklch(0.78 0.005 90)" stroke="none">80% TKL-adjacent</text>
+  </g>
+  <g>
+    <rect x="420" y="60" width="330" height="90" rx="12"/>
+    <text x="440" y="92" font-family="IBM Plex Sans, sans-serif" font-size="14" letter-spacing="1" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">CASE / MOUNT</text>
+    <text x="440" y="122" font-family="ui-monospace, 'JetBrains Mono', monospace" font-size="18" fill="oklch(0.78 0.005 90)" stroke="none">CNC aluminum, gasket</text>
+  </g>
+  <g>
+    <rect x="780" y="60" width="330" height="90" rx="12"/>
+    <text x="800" y="92" font-family="IBM Plex Sans, sans-serif" font-size="14" letter-spacing="1" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">SWITCHES</text>
+    <text x="800" y="122" font-family="ui-monospace, 'JetBrains Mono', monospace" font-size="18" fill="oklch(0.78 0.005 90)" stroke="none">Hot-swap, QMK</text>
+  </g>
+
+  <!-- Row 2 of three chips -->
+  <g>
+    <rect x="60" y="180" width="330" height="90" rx="12"/>
+    <text x="80" y="212" font-family="IBM Plex Sans, sans-serif" font-size="14" letter-spacing="1" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">DESIGNER</text>
+    <text x="80" y="242" font-family="ui-monospace, 'JetBrains Mono', monospace" font-size="18" fill="oklch(0.78 0.005 90)" stroke="none">MWKEYS (Milkyway)</text>
+  </g>
+  <g>
+    <rect x="420" y="180" width="330" height="90" rx="12"/>
+    <text x="440" y="212" font-family="IBM Plex Sans, sans-serif" font-size="14" letter-spacing="1" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">NA VENDOR</text>
+    <text x="440" y="242" font-family="ui-monospace, 'JetBrains Mono', monospace" font-size="18" fill="oklch(0.78 0.005 90)" stroke="none">CannonKeys</text>
+  </g>
+  <!-- Highlighted chip: the restock status, coral -->
+  <g>
+    <rect x="780" y="180" width="330" height="90" rx="12" fill="oklch(0.68 0.165 28 / 0.12)" stroke="oklch(0.68 0.165 28)" stroke-width="2.5"/>
+    <text x="800" y="212" font-family="IBM Plex Sans, sans-serif" font-size="14" letter-spacing="1" fill="oklch(0.68 0.165 28)" stroke="none">STATUS</text>
+    <text x="800" y="242" font-family="ui-monospace, 'JetBrains Mono', monospace" font-size="18" fill="oklch(0.68 0.165 28)" stroke="none" font-weight="700">Extras · limited stock</text>
+  </g>
+
+  <!-- Caption line -->
+  <text x="600" y="330" font-family="Newsreader, serif" font-style="italic" font-size="17" text-anchor="middle" fill="oklch(0.78 0.005 90)" stroke="none">Same board, same spec sheet — only the status chip changed.</text>
+
+  <!-- Theme dot -->
+  <circle cx="1168" cy="24" r="5" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

@@ -1,0 +1,25 @@
+{
+  "generated_by": "content-curator-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-10-24T00:00:00.000Z",
+  "commit": "7b62cd11",
+  "kind": "inline-viz",
+  "article_slug": "cannonkeys-mass80-extras-restock",
+  "article_pillar": "news",
+  "section_anchor": "Why \"extras\" isn't a relaunch",
+  "brief_summary": "Two-column comparison matrix contrasting a standard group buy against an extras sale across four rows: preorder risk, stock quantity, spec/colorway variance, and timing. The extras column is outlined in coral to mark it as the subject of the article. All four row claims are restated directly from the article's prose explanation of what an extras sale typically means for buyers.",
+  "target": "apps/web/public/article-viz/cannonkeys-mass80-extras-restock/groupbuy-vs-extras.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans"],
+  "data_sources": [
+    "article body, 'Why \"extras\" isn't a relaunch' section — 'no new preorder risk: the units being sold already exist'",
+    "article body — 'a fixed, usually small quantity left over from the original production run'",
+    "article body — 'the specs on sale are whatever the group buy already locked in'",
+    "article body — 'first-come-first-served at a single fixed clock time, not a multi-week window'"
+  ],
+  "outputs": ["apps/web/public/article-viz/cannonkeys-mass80-extras-restock/groupbuy-vs-extras.svg"],
+  "warnings": []
+}
