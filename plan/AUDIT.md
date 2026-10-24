@@ -13917,7 +13917,7 @@ passes accumulate signals.)
 > Filed 2026-10-12 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 > Resolved (2026-10-13): shipped `synthwave-tkl-theme-build.mdx` (publishedAt 2026-10-02, gap-fill midpoint of the 21-day gap between `bento-box-theme-build` on 2026-09-22 and today) — "Build of the week: the Drop CTRL goes synthwave under GMK Laser and Ink V2 Yellow." Ideas now carries a fresh anchor well inside the 30-day window. `pnpm verify` full gate green: typecheck, lint, unit tests, script tests, data:validate, build, size, 1304/1304 e2e.
 
-### [ ] [cross-links] [4.5] synthwave-tkl-theme-build ↔ bento-box-theme-build — no prose cross-link (same pillar, ≥2 shared tags: build-of-the-week, cherry-profile)
+### [x] [cross-links] [4.5] synthwave-tkl-theme-build ↔ bento-box-theme-build — no prose cross-link (same pillar, ≥2 shared tags: build-of-the-week, cherry-profile) — addressed in 92bc389d, closes #1035
 - category: cross-links
 - filed: 2026-10-13 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -13928,7 +13928,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/bento-box-theme-build.mdx
 - action: add [bento-box-theme-build](/article/bento-box-theme-build) to synthwave-tkl-theme-build body, or vice versa
 
-### [ ] [cross-links] [4.5] synthwave-tkl-theme-build ↔ building-mode-sonnet-with-oil-kings — no prose cross-link (same pillar, ≥2 shared tags: build-of-the-week, linear)
+### [x] [cross-links] [4.5] synthwave-tkl-theme-build ↔ building-mode-sonnet-with-oil-kings — no prose cross-link (same pillar, ≥2 shared tags: build-of-the-week, linear) — addressed in 92bc389d, closes #1035
 - category: cross-links
 - filed: 2026-10-13 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -13939,7 +13939,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/building-mode-sonnet-with-oil-kings.mdx
 - action: add [building-mode-sonnet-with-oil-kings](/article/building-mode-sonnet-with-oil-kings) to synthwave-tkl-theme-build body, or vice versa
 
-### [ ] [cross-links] [4.5] synthwave-tkl-theme-build ↔ mission-control-theme-build — no prose cross-link (same pillar, ≥2 shared tags: build-of-the-week, tkl)
+### [x] [cross-links] [4.5] synthwave-tkl-theme-build ↔ mission-control-theme-build — no prose cross-link (same pillar, ≥2 shared tags: build-of-the-week, tkl) — addressed in 92bc389d, closes #1035
 - category: cross-links
 - filed: 2026-10-13 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
