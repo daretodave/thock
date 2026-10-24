@@ -14122,7 +14122,7 @@ passes accumulate signals.)
 - issue: #1030
 > Filed 2026-10-22 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 
-### [HOT PURSUIT] [content-gap] [7] news pillar — 1 of ≥2 articles in last 30d
+### [x] [HOT PURSUIT] [content-gap] [7] news pillar — 1 of ≥2 articles in last 30d — addressed in 82b1b80e, closes #1031
 - category: content-gaps
 - impact: 7 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -14146,3 +14146,47 @@ passes accumulate signals.)
 - score: 7
 - next: /ship-content → ideas pillar article
 > Filed 2026-10-23 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+
+### [ ] [cross-links] [4.5] cannonkeys-mass80-extras-restock ↔ cannonkeys-blaine-v2-se-group-buy — no prose cross-link (same pillar, ≥2 shared tags: cannonkeys, group-buy)
+- category: cross-links
+- filed: 2026-10-24 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: cannonkeys, group-buy
+- article-a: apps/web/src/content/articles/cannonkeys-mass80-extras-restock.mdx
+- article-b: apps/web/src/content/articles/cannonkeys-blaine-v2-se-group-buy.mdx
+- action: add [cannonkeys-blaine-v2-se-group-buy](/article/cannonkeys-blaine-v2-se-group-buy) to cannonkeys-mass80-extras-restock body, or vice versa
+
+### [ ] [cross-links] [4.5] cannonkeys-mass80-extras-restock ↔ cannonkeys-nyawice-group-buy — no prose cross-link (same pillar, ≥2 shared tags: cannonkeys, group-buy)
+- category: cross-links
+- filed: 2026-10-24 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: cannonkeys, group-buy
+- article-a: apps/web/src/content/articles/cannonkeys-mass80-extras-restock.mdx
+- article-b: apps/web/src/content/articles/cannonkeys-nyawice-group-buy.mdx
+- action: add [cannonkeys-nyawice-group-buy](/article/cannonkeys-nyawice-group-buy) to cannonkeys-mass80-extras-restock body, or vice versa
+
+### [ ] [cross-links] [4.5] cannonkeys-mass80-extras-restock ↔ mode-sonnet-r2-group-buy-coverage — no prose cross-link (same pillar, ≥2 shared tags: cannonkeys, group-buy)
+- category: cross-links
+- filed: 2026-10-24 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: cannonkeys, group-buy
+- article-a: apps/web/src/content/articles/cannonkeys-mass80-extras-restock.mdx
+- article-b: apps/web/src/content/articles/mode-sonnet-r2-group-buy-coverage.mdx
+- action: add [mode-sonnet-r2-group-buy-coverage](/article/mode-sonnet-r2-group-buy-coverage) to cannonkeys-mass80-extras-restock body, or vice versa
+
+### [ ] [cross-links] [4.5] cannonkeys-mass80-extras-restock ↔ wuque-studio-summer-update — no prose cross-link (same pillar, ≥2 shared tags: vendor, group-buy)
+- category: cross-links
+- filed: 2026-10-24 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: vendor, group-buy
+- article-a: apps/web/src/content/articles/cannonkeys-mass80-extras-restock.mdx
+- article-b: apps/web/src/content/articles/wuque-studio-summer-update.mdx
+- action: add [wuque-studio-summer-update](/article/wuque-studio-summer-update) to cannonkeys-mass80-extras-restock body, or vice versa
