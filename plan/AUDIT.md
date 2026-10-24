@@ -14010,7 +14010,7 @@ passes accumulate signals.)
 - issue: #1029
 > Filed 2026-10-20 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 
-### [ ] [cross-links] [4.5] tactile-stem-geometry-deep-dive ↔ buckling-spring-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: tactile, deep-dive)
+### [x] [cross-links] [4.5] tactile-stem-geometry-deep-dive ↔ buckling-spring-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: tactile, deep-dive)
 - category: cross-links
 - filed: 2026-10-22 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -14020,8 +14020,9 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/tactile-stem-geometry-deep-dive.mdx
 - article-b: apps/web/src/content/articles/buckling-spring-deep-dive.mdx
 - action: add [buckling-spring-deep-dive](/article/buckling-spring-deep-dive) to tactile-stem-geometry-deep-dive body, or vice versa
+- addressed in: 412a00c9 (hub-clustered drain, tactile-stem-geometry-deep-dive cross-links — 9 pairs)
 
-### [ ] [cross-links] [4.5] tactile-stem-geometry-deep-dive ↔ cherry-mx2a-revision — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
+### [x] [cross-links] [4.5] tactile-stem-geometry-deep-dive ↔ cherry-mx2a-revision — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
 - category: cross-links
 - filed: 2026-10-22 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -14031,8 +14032,9 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/tactile-stem-geometry-deep-dive.mdx
 - article-b: apps/web/src/content/articles/cherry-mx2a-revision.mdx
 - action: add [cherry-mx2a-revision](/article/cherry-mx2a-revision) to tactile-stem-geometry-deep-dive body, or vice versa
+- addressed in: 412a00c9 (hub-clustered drain, tactile-stem-geometry-deep-dive cross-links — 9 pairs)
 
-### [ ] [cross-links] [4.5] tactile-stem-geometry-deep-dive ↔ clicky-switches-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
+### [x] [cross-links] [4.5] tactile-stem-geometry-deep-dive ↔ clicky-switches-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
 - category: cross-links
 - filed: 2026-10-22 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -14042,8 +14044,9 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/tactile-stem-geometry-deep-dive.mdx
 - article-b: apps/web/src/content/articles/clicky-switches-deep-dive.mdx
 - action: add [clicky-switches-deep-dive](/article/clicky-switches-deep-dive) to tactile-stem-geometry-deep-dive body, or vice versa
+- addressed in: 412a00c9 (hub-clustered drain, tactile-stem-geometry-deep-dive cross-links — 9 pairs)
 
-### [ ] [cross-links] [4.5] tactile-stem-geometry-deep-dive ↔ gazzew-boba-family-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: tactile, deep-dive)
+### [x] [cross-links] [4.5] tactile-stem-geometry-deep-dive ↔ gazzew-boba-family-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: tactile, deep-dive)
 - category: cross-links
 - filed: 2026-10-22 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -14053,8 +14056,9 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/tactile-stem-geometry-deep-dive.mdx
 - article-b: apps/web/src/content/articles/gazzew-boba-family-deep-dive.mdx
 - action: add [gazzew-boba-family-deep-dive](/article/gazzew-boba-family-deep-dive) to tactile-stem-geometry-deep-dive body, or vice versa
+- addressed in: 412a00c9 (hub-clustered drain, tactile-stem-geometry-deep-dive cross-links — 9 pairs)
 
-### [ ] [cross-links] [4.5] tactile-stem-geometry-deep-dive ↔ hmx-cloud-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
+### [x] [cross-links] [4.5] tactile-stem-geometry-deep-dive ↔ hmx-cloud-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
 - category: cross-links
 - filed: 2026-10-22 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -14064,8 +14068,9 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/tactile-stem-geometry-deep-dive.mdx
 - article-b: apps/web/src/content/articles/hmx-cloud-deep-dive.mdx
 - action: add [hmx-cloud-deep-dive](/article/hmx-cloud-deep-dive) to tactile-stem-geometry-deep-dive body, or vice versa
+- addressed in: 412a00c9 (hub-clustered drain, tactile-stem-geometry-deep-dive cross-links — 9 pairs)
 
-### [ ] [cross-links] [4.5] tactile-stem-geometry-deep-dive ↔ keyboard-acoustics-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
+### [x] [cross-links] [4.5] tactile-stem-geometry-deep-dive ↔ keyboard-acoustics-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
 - category: cross-links
 - filed: 2026-10-22 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -14075,8 +14080,9 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/tactile-stem-geometry-deep-dive.mdx
 - article-b: apps/web/src/content/articles/keyboard-acoustics-deep-dive.mdx
 - action: add [keyboard-acoustics-deep-dive](/article/keyboard-acoustics-deep-dive) to tactile-stem-geometry-deep-dive body, or vice versa
+- addressed in: 412a00c9 (hub-clustered drain, tactile-stem-geometry-deep-dive cross-links — 9 pairs)
 
-### [ ] [cross-links] [4.5] tactile-stem-geometry-deep-dive ↔ magnetic-switches-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
+### [x] [cross-links] [4.5] tactile-stem-geometry-deep-dive ↔ magnetic-switches-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
 - category: cross-links
 - filed: 2026-10-22 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -14086,8 +14092,9 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/tactile-stem-geometry-deep-dive.mdx
 - article-b: apps/web/src/content/articles/magnetic-switches-deep-dive.mdx
 - action: add [magnetic-switches-deep-dive](/article/magnetic-switches-deep-dive) to tactile-stem-geometry-deep-dive body, or vice versa
+- addressed in: 412a00c9 (hub-clustered drain, tactile-stem-geometry-deep-dive cross-links — 9 pairs)
 
-### [ ] [cross-links] [4.5] tactile-stem-geometry-deep-dive ↔ optical-switches-explained — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
+### [x] [cross-links] [4.5] tactile-stem-geometry-deep-dive ↔ optical-switches-explained — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
 - category: cross-links
 - filed: 2026-10-22 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -14097,8 +14104,9 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/tactile-stem-geometry-deep-dive.mdx
 - article-b: apps/web/src/content/articles/optical-switches-explained.mdx
 - action: add [optical-switches-explained](/article/optical-switches-explained) to tactile-stem-geometry-deep-dive body, or vice versa
+- addressed in: 412a00c9 (hub-clustered drain, tactile-stem-geometry-deep-dive cross-links — 9 pairs)
 
-### [ ] [cross-links] [4.5] tactile-stem-geometry-deep-dive ↔ tmr-switches-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
+### [x] [cross-links] [4.5] tactile-stem-geometry-deep-dive ↔ tmr-switches-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
 - category: cross-links
 - filed: 2026-10-22 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -14108,6 +14116,7 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/tactile-stem-geometry-deep-dive.mdx
 - article-b: apps/web/src/content/articles/tmr-switches-deep-dive.mdx
 - action: add [tmr-switches-deep-dive](/article/tmr-switches-deep-dive) to tactile-stem-geometry-deep-dive body, or vice versa
+- addressed in: 412a00c9 (hub-clustered drain, tactile-stem-geometry-deep-dive cross-links — 9 pairs)
 
 ### [x] [HOT PURSUIT] [content-gap] [7] trends pillar — 1 of ≥2 articles in last 30d — addressed in 415779ea (closes #1030)
 - category: content-gaps
