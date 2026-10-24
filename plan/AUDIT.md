@@ -14145,6 +14145,7 @@ passes accumulate signals.)
 - window-start: 2026-09-23
 - score: 7
 - next: /ship-content → ideas pillar article
+- issue: #1033
 > Filed 2026-10-23 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 
 ### [ ] [cross-links] [4.5] cannonkeys-mass80-extras-restock ↔ cannonkeys-blaine-v2-se-group-buy — no prose cross-link (same pillar, ≥2 shared tags: cannonkeys, group-buy)
