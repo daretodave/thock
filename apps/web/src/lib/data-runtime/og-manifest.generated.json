@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "slug": "frankenswitching-explained",
+      "readTime": 7,
+      "frontmatter": {
+        "title": "Frankenswitching: building a custom switch out of other switches' parts",
+        "lede": "Four parts, four independent axes, and a mix-and-match history that predates every factory switch that eventually copied it — the original Holy Panda was a pile of parts from two different switches years before anyone sold it as one SKU.",
+        "pillar": "ideas",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "alice-layout-recovery",
       "readTime": 6,
       "frontmatter": {
@@ -12,7 +22,7 @@
     },
     {
       "slug": "tactile-stem-geometry-deep-dive",
-      "readTime": 10,
+      "readTime": 11,
       "frontmatter": {
         "title": "Four Switches, One Mechanism: What Stem Geometry Actually Changes",
         "lede": "The Durock T1, the Boba U4T, the Holy Panda X, and the Gateron Lanes have spent four separate deep-dives citing each other as comparison points. None of those pieces stopped to say the obvious thing: all four generate their bump the same way. The leg geometry is the whole story.",
@@ -1270,6 +1280,11 @@
     {
       "slug": "firmware",
       "name": "Firmware",
+      "category": "misc"
+    },
+    {
+      "slug": "frankenswitching",
+      "name": "Frankenswitching",
       "category": "misc"
     },
     {
@@ -9430,5 +9445,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-10-24T05:34:24.636Z"
+  "generatedAt": "2026-10-24T22:59:27.754Z"
 }
