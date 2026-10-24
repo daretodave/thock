@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-10-21T00:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "frankenswitching-explained",
+  "article_pillar": "ideas",
+  "section_anchor": "caveats",
+  "brief_summary": "Two-column do/don't map. Left column (amber): axes that are usually safe to mix — matched stem-pole spacing, matched spring free length, similar housing tolerance bands. Right column (caution red): the three mismatches that cause problems — stem poles that don't center causing wobble or binding, springs too long or too short changing reset and force-curve timing, and loose-paired-with-tight housing tolerance stacking into rattle or bind.",
+  "target": "apps/web/public/article-viz/frankenswitching-explained/compatibility-map.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "frankenswitching-explained.mdx § 'Caveats' — 'Stem-pole spacing and wobble. Housings are molded around a specific pole shape and spacing ... Test a single switch through full travel by hand before assuming the fit is clean'",
+    "frankenswitching-explained.mdx § 'Caveats' — 'Spring length and weight mismatch. A spring's free length is matched to its housing's compression range at the factory ... a softer or mushier bottom-out than either donor switch had'",
+    "frankenswitching-explained.mdx § 'Caveats' — 'Housing tolerance stack-up. Pairing a loose-tolerance bottom housing with a tight-tolerance top (or the reverse) ... Tolerance doesn't blend across a seam; it stacks'"
+  ],
+  "outputs": ["apps/web/public/article-viz/frankenswitching-explained/compatibility-map.svg"],
+  "warnings": []
+}

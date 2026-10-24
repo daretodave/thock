@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Exploded cross-section of a mechanical keyboard switch, split into four stacked parts. The top housing is outlined in a lighter amber line and the bottom housing in a heavier bronze line to suggest the two housings came from different donor switches, while the stem and spring between them stay in the neutral line weight.</title>
+
+  <!-- Splash: amber wash across the full exploded assembly -->
+  <ellipse cx="600" cy="400" rx="230" ry="160" fill="oklch(0.78 0.10 80 / 0.14)" stroke="none"/>
+
+  <!-- TOP HOUSING — donor line A: amber-tinted, lighter stroke -->
+  <g stroke="oklch(0.78 0.10 80)" stroke-width="1.75" stroke-opacity="0.9">
+    <path d="
+      M 470 145
+      L 730 145
+      L 760 230
+      L 440 230
+      Z" />
+    <!-- top opening where the stem pokes through -->
+    <path d="
+      M 555 145
+      L 645 145
+      L 655 175
+      L 545 175
+      Z" />
+    <!-- inner ribs -->
+    <line x1="470" y1="190" x2="535" y2="190" stroke-opacity="0.45"/>
+    <line x1="665" y1="190" x2="730" y2="190" stroke-opacity="0.45"/>
+  </g>
+
+  <!-- explode gap + focal dot: the conceptual "mix point" between donor parts -->
+  <line x1="430" y1="255" x2="770" y2="255" stroke-dasharray="4 6" stroke-opacity="0.3"/>
+  <circle cx="600" cy="255" r="6" fill="oklch(0.78 0.10 80)" stroke="none"/>
+
+  <!-- STEM — neutral weight, carried through unchanged -->
+  <g>
+    <path d="
+      M 565 290
+      L 635 290
+      L 635 380
+      L 565 380
+      Z" />
+    <!-- cruciform top -->
+    <path d="
+      M 588 268
+      L 612 268
+      L 612 280
+      L 624 280
+      L 624 290
+      L 576 290
+      L 576 280
+      L 588 280
+      Z" />
+    <line x1="600" y1="305" x2="600" y2="370" stroke-opacity="0.5"/>
+  </g>
+
+  <line x1="430" y1="400" x2="770" y2="400" stroke-dasharray="4 6" stroke-opacity="0.3"/>
+
+  <!-- SPRING — neutral weight, carried through unchanged -->
+  <g>
+    <ellipse cx="600" cy="430" rx="38" ry="7"/>
+    <ellipse cx="600" cy="442" rx="38" ry="7"/>
+    <ellipse cx="600" cy="454" rx="38" ry="7"/>
+    <ellipse cx="600" cy="466" rx="38" ry="7"/>
+    <ellipse cx="600" cy="478" rx="38" ry="7"/>
+    <ellipse cx="600" cy="490" rx="38" ry="7"/>
+    <ellipse cx="600" cy="502" rx="38" ry="7"/>
+    <ellipse cx="600" cy="514" rx="38" ry="7"/>
+  </g>
+
+  <line x1="430" y1="540" x2="770" y2="540" stroke-dasharray="4 6" stroke-opacity="0.3"/>
+
+  <!-- BOTTOM HOUSING — donor line B: bronze-tinted, heavier stroke -->
+  <g stroke="oklch(0.80 0.135 75)" stroke-width="2.5">
+    <path d="
+      M 440 565
+      L 760 565
+      L 740 670
+      L 460 670
+      Z" fill="oklch(0.80 0.135 75 / 0.08)"/>
+    <!-- center spring well -->
+    <path d="
+      M 555 565
+      L 645 565
+      L 640 615
+      L 560 615
+      Z" stroke-opacity="0.6"/>
+    <!-- pin holes -->
+    <circle cx="490" cy="640" r="5" />
+    <circle cx="710" cy="640" r="5" />
+    <!-- center mount post -->
+    <circle cx="600" cy="640" r="6" stroke-opacity="0.6"/>
+  </g>
+
+  <!-- Bronze theme dot — family ornamental anchor -->
+  <circle cx="1150" cy="62" r="5" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

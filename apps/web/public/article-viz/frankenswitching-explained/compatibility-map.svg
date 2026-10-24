@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Two-column compatibility map — safe axes to mix on the left in amber, high-risk mismatches on the right in caution red</title>
+
+  <!-- Column headers -->
+  <text x="300" y="60" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.95">usually safe to mix</text>
+  <text x="900" y="60" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.95">check before committing</text>
+
+  <line x1="600" y1="40" x2="600" y2="520" stroke-opacity="0.15" stroke-dasharray="4 6"/>
+
+  <!-- Left column cards -->
+  <rect x="100" y="90" width="400" height="110" rx="6" fill="oklch(0.78 0.10 80 / 0.08)" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.8" stroke-width="2"/>
+  <text x="120" y="120" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.10 80)" stroke="none" opacity="0.95">matched stem-pole spacing</text>
+  <text x="120" y="142" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">stem and host housing built around</text>
+  <text x="120" y="160" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">the same or similar pole geometry</text>
+
+  <rect x="100" y="220" width="400" height="110" rx="6" fill="oklch(0.78 0.10 80 / 0.08)" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.8" stroke-width="2"/>
+  <text x="120" y="250" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.10 80)" stroke="none" opacity="0.95">matched spring free length</text>
+  <text x="120" y="272" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">spring sized for the host housing's</text>
+  <text x="120" y="290" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">own compression range</text>
+
+  <rect x="100" y="350" width="400" height="110" rx="6" fill="oklch(0.78 0.10 80 / 0.08)" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.8" stroke-width="2"/>
+  <text x="120" y="380" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.10 80)" stroke="none" opacity="0.95">similar tolerance bands</text>
+  <text x="120" y="402" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">top and bottom housings from lines</text>
+  <text x="120" y="420" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">built to similar manufacturing tightness</text>
+
+  <!-- Right column cards -->
+  <rect x="700" y="90" width="400" height="110" rx="6" fill="oklch(0.62 0.13 25 / 0.08)" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.8" stroke-width="2"/>
+  <text x="720" y="120" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.62 0.13 25)" stroke="none" opacity="0.95">stem poles that don't center</text>
+  <text x="720" y="142" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">wobble or binding through the stroke</text>
+  <text x="720" y="160" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">when the housing wasn't molded for it</text>
+
+  <rect x="700" y="220" width="400" height="110" rx="6" fill="oklch(0.62 0.13 25 / 0.08)" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.8" stroke-width="2"/>
+  <text x="720" y="250" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.62 0.13 25)" stroke="none" opacity="0.95">spring too long or too short</text>
+  <text x="720" y="272" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">prevents clean reset, or changes</text>
+  <text x="720" y="290" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">where resistance builds in the stroke</text>
+
+  <rect x="700" y="350" width="400" height="110" rx="6" fill="oklch(0.62 0.13 25 / 0.08)" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.8" stroke-width="2"/>
+  <text x="720" y="380" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.62 0.13 25)" stroke="none" opacity="0.95">loose housing paired with tight</text>
+  <text x="720" y="402" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">tolerance doesn't average — it stacks</text>
+  <text x="720" y="420" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">into either a rattle or a bind</text>
+
+  <!-- Caption -->
+  <text x="600" y="505" font-family="Newsreader, serif" font-size="15" font-style="italic" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.9">the three mismatches that turn a frankenswitch into a bin of scrap</text>
+
+  <!-- Bronze theme dot -->
+  <circle cx="1170" cy="30" r="4" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

@@ -1,0 +1,22 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-10-21T00:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "frankenswitching-explained",
+  "article_pillar": "ideas",
+  "section_anchor": "building-one",
+  "brief_summary": "Four numbered panels showing the order of operations for building a frankenswitch: pick the host housing for its acoustic shell, source the donor part, test-fit a single switch for pole spacing and wobble, then bench-test a small batch before scaling to a full board.",
+  "target": "apps/web/public/article-viz/frankenswitching-explained/build-process.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "frankenswitching-explained.mdx § 'Building one' — 'Pick the host housing first, usually for its acoustic shell ... Source the donor part next ... Before opening every switch on the bench, test-fit one donor part into one host housing and check for binding or play ... Only after that single pairing feels right does the swap scale to a full board's worth of switches'"
+  ],
+  "outputs": ["apps/web/public/article-viz/frankenswitching-explained/build-process.svg"],
+  "warnings": []
+}

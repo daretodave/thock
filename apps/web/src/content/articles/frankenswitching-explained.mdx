@@ -1,0 +1,100 @@
+---
+title: "Frankenswitching: building a custom switch out of other switches' parts"
+slug: frankenswitching-explained
+pillar: ideas
+publishedAt: '2026-10-21T00:00:00.000Z'
+updatedAt: '2026-10-21T00:00:00.000Z'
+author: thock
+lede: "Four parts, four independent axes, and a mix-and-match history that predates every factory switch that eventually copied it — the original Holy Panda was a pile of parts from two different switches years before anyone sold it as one SKU."
+heroImage: /hero-art/frankenswitching-explained.svg
+heroImageAlt: "Exploded line-drawing cross-section of a mechanical keyboard switch split into four stacked parts — a top housing outlined in amber, a stem, a coil spring, and a bottom housing outlined in bronze — with a small amber dot marking the gap below the top housing and a bronze dot in the upper right corner."
+tags: [modding, switches, linear, tactile, stem-geometry, frankenswitching]
+mentionedParts:
+  - id: drop-holy-panda-x
+    kind: switch
+    slug: drop-holy-panda-x
+  - id: gateron-oil-king
+    kind: switch
+    slug: gateron-oil-king
+  - id: durock-t1
+    kind: switch
+    slug: durock-t1
+featured: false
+popularityScore: 0
+---
+
+Open any switch and four parts fall out: a top housing, a bottom housing, a stem, and a spring. Nothing requires those four parts to have started life in the same switch. Frankenswitching is the practice of taking the part that does one thing well from one switch line and marrying it to the part that does something else well from another — and it has been going on long enough, and worked well enough often enough, that the most famous result eventually got sold at retail as its own product with its own part number.
+
+## The idea
+
+A switch's feel breaks cleanly into four independent levers, and a builder with a parts bin and a switch opener can pull any one of them loose and swap it.
+
+The **top housing** sets the acoustic shell — the material and wall geometry that the stem and leaf are striking against — and carries part of the pole-fit tolerance. The **bottom housing** sets the base tolerance: rail length, rail width, and where the stem rests before a keystroke begins. The **stem** carries the tactile bump profile (or the absence of one, for a linear) and the pole geometry that rides inside both housings. The **spring** sets actuation weight, bottom-out weight, and the force curve between them — the same three levers [covered in detail elsewhere](/article/spring-swaps-explained).
+
+None of those four has to agree with the other three about which switch it came from. The canonical proof is the original Holy Panda: an Invokim/Everglide Panda top and bottom housing, with a Halo True (sometimes Halo Clear) stem swapped in for the Panda's own. Neither switch alone produced the combination builders wanted — the Panda housing's deep, rounded shell paired with a tactile bump shape neither Invokim nor Halo shipped on its own. Enough builders did the same swap by hand that the combination earned a name, and years later <PartReference id="drop-holy-panda-x">Drop's Holy Panda X</PartReference> shipped as a factory-built switch, available without opening a single housing — the clearest signal the hobby has that a frankenswitch recipe worked.
+
+<InlineViz
+  src="/article-viz/frankenswitching-explained/exploded-parts.svg"
+  alt="Exploded vertical cross-section of a switch split into four labeled pieces stacked with gaps between them — top housing, stem, spring, bottom housing — each outlined in a different shade to show they can originate from four separate switch lines, with a caption noting that the Holy Panda mixed only the top housing and stem."
+  caption="Four parts, four independent donors. The Holy Panda only needed to mix two of them."
+  accent="amber"
+/>
+
+## The parts list
+
+| Component | What it actually controls | What builders usually mix in it for |
+|---|---|---|
+| Top housing | Acoustic shell tone, leaf geometry, part of the pole-fit tolerance | A quieter or deeper shell material without changing anything else |
+| Bottom housing | Base tolerance, rail length/width, resting position of the stem | Tighter tolerance for less wobble, or a specific housing's bottom-out feel |
+| Stem | Tactile bump shape (or none, for linears), pole geometry | Borrowing a bump profile or a smoother pole from a switch with a housing nobody likes |
+| Spring | Actuation weight, bottom-out weight, force curve | The lightest-touch change — swap without opening anything else on the list |
+
+## Why the combination works
+
+The reason frankenswitching is a repeatable technique rather than a lucky one-off is that these four properties genuinely don't interact much. A top housing's acoustic signature doesn't change because a different stem is riding inside it; a stem's bump shape doesn't change because it's seated in an unfamiliar bottom housing. Each part is doing its own job, largely independent of what the other three are made of — the same discipline that makes [spring swaps](/article/spring-swaps-explained) a precision tool rather than a vibes-based one applies here across all four parts at once, not just the spring.
+
+That independence is exactly what the Holy Panda recipe exploited. Builders wanted the Panda housing's rounded, muted shell and did not want the Panda's own stem; they wanted Halo's tactile bump and did not want to give up the housing they already liked the sound of. Mixing solved a problem neither factory switch solved alone.
+
+## Building one
+
+<InlineViz
+  src="/article-viz/frankenswitching-explained/build-process.svg"
+  alt="Four numbered panels showing the frankenswitching build process: picking a host housing for its acoustic shell, sourcing a donor stem or spring, test-fitting the donor part for pole spacing and wobble before fully committing, and bench-testing a small batch before scaling up to a full board."
+  caption="Test-fit before you commit — one bad combo on 90 switches is a long afternoon."
+  accent="amber"
+/>
+
+The order matters. Pick the host housing first, usually for its acoustic shell — the part hardest to change any other way. Source the donor part next: a stem for its bump shape, a bottom housing for its tolerance, a spring for its weight. Before opening every switch on the bench, test-fit one donor part into one host housing and check for binding or play across a full keypress. Only after that single pairing feels right does the swap scale to a full board's worth of switches.
+
+<Callout type="note" title="Not the same as switch films">
+  Films close the seam gap between an existing top and bottom housing to reduce wobble within one switch. Frankenswitching replaces an entire part with a part from a different switch line. Both target housing fit, but films work within a switch; frankenswitching works across switches.
+</Callout>
+
+## Caveats
+
+<InlineViz
+  src="/article-viz/frankenswitching-explained/compatibility-map.svg"
+  alt="A two-column compatibility map. The left column, in amber, lists axes that are usually safe to mix: matched stem-pole spacing, matched spring free length, and housings from switches with similar tolerance bands. The right column, in caution red, lists high-risk mismatches: stem poles that don't center cleanly in a different housing causing wobble or binding, springs too long or too short for the housing's compression range altering bottom-out feel, and loose housing paired with a tight one causing either rattle or bind."
+  caption="Compatible axes on the left; the three mismatches that turn a frankenswitch into a bin of scrap on the right."
+  accent="amber"
+/>
+
+Three things go wrong often enough to name individually.
+
+**Stem-pole spacing and wobble.** Housings are molded around a specific pole shape and spacing. A stem from a different switch line can seat and still wobble more than either donor switch did alone, because the pole fit is now a compromise between two tolerance specs that were never designed to meet. Test a single switch through full travel by hand before assuming the fit is clean.
+
+**Spring length and weight mismatch.** A spring's free length is matched to its housing's compression range at the factory. A spring that's too long for the new housing can prevent the stem from resetting cleanly; one that's too short changes how early in the stroke resistance builds, which shows up as a softer or mushier bottom-out than either donor switch had.
+
+**Housing tolerance stack-up.** Pairing a loose-tolerance bottom housing with a tight-tolerance top (or the reverse) doesn't average out to a medium fit — it produces either a rattly switch or a binding one, depending on which half is tighter. Tolerance doesn't blend across a seam; it stacks.
+
+<Callout type="warn" title="Someone already solved the good combinations">
+  The reason Holy Panda-style recipes get passed around by name rather than reinvented constantly is that hundreds of builders already did the trial-and-error and converged on one pairing that worked. Starting from a documented combination is strictly lower-risk than guessing from scratch across all four axes at once.
+</Callout>
+
+## Variants to try
+
+The safest entry point is a spring-only swap — it touches none of the fit-dependent axes above and is reversible in minutes. Next-safest is a stem swap within the same mold family, where pole geometry is already a close match. Riskier, but where most of the acoustic payoff lives, is a top-housing swap on an otherwise-stock switch, changing shell tone while leaving the bottom housing and stem exactly as they shipped.
+
+A hypothetical worth bench-testing rather than buying in bulk: a <PartReference id="durock-t1">Durock T1</PartReference> top housing, chosen for its sharp bump near the top of the stroke, paired with a <PartReference id="gateron-oil-king">Gateron Oil King</PartReference> bottom housing and stem, chosen for the deep, factory-lubed voicing <Mono>Oil King</Mono> ships with. Nobody has documented that pairing the way the Holy Panda recipe is documented — it is exactly the kind of untested idea this hobby runs on, and it is a single-switch test, not a 90-switch bet.
+
+Full four-way mixes — different top, bottom, stem, and spring all at once — are where the risk compounds fastest, since a bad fit on any one axis is hard to isolate from the others once everything's reassembled. Worth watching: as more vendors follow Drop's lead and productize bench-tested combinations, the trial-and-error that built the Holy Panda recipe gets easier to skip entirely — buy the factory version, or at minimum start from someone else's documented pairing instead of a clean-sheet guess.

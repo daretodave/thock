@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-10-21T00:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "frankenswitching-explained",
+  "article_pillar": "ideas",
+  "section_anchor": "the-idea",
+  "brief_summary": "Exploded vertical cross-section of a switch split into its four parts — top housing, stem, spring, bottom housing — spaced apart with connector lines, each labeled 'from switch A/B/C/D' to show the parts can come from four different donor switch lines. Caption notes the Holy Panda only needed to mix two of the four.",
+  "target": "apps/web/public/article-viz/frankenswitching-explained/exploded-parts.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "frankenswitching-explained.mdx § 'The idea' — 'A switch's feel breaks cleanly into four independent levers ... The top housing sets the acoustic shell ... The bottom housing sets the base tolerance ... The stem carries the tactile bump profile ... The spring sets actuation weight, bottom-out weight, and the force curve'",
+    "frankenswitching-explained.mdx § 'The idea' — 'the original Holy Panda: an Invokim/Everglide Panda top and bottom housing, with a Halo True (sometimes Halo Clear) stem swapped in'"
+  ],
+  "outputs": ["apps/web/public/article-viz/frankenswitching-explained/exploded-parts.svg"],
+  "warnings": []
+}

@@ -1,0 +1,20 @@
+{
+  "generated_by": "brander",
+  "engine": "resvg",
+  "at": "2026-10-24T00:00:00.000Z",
+  "commit": "55520e6b13430e6398e462c19f0f74590262c264",
+  "kind": "hero-art",
+  "source": "plan/bearings.md § Article hero art — colorful keyboard SVGs",
+  "article_slug": "frankenswitching-explained",
+  "article_pillar": "ideas",
+  "subject": "MX-style switch exploded cross-section stacked vertically — top housing, cruciform stem, coil spring, bottom housing — with the top housing drawn in a lighter amber-tinted stroke and the bottom housing drawn in a heavier bronze-tinted stroke to signal the two housings come from different donor switch lines, while stem and spring stay in the neutral warm-grey weight. Amber wash spans the full assembly; a small amber focal dot marks the mix point at the first explode gap; a small bronze dot sits in the upper-right margin as the family ornamental anchor.",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": [],
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "outputs": ["apps/web/public/hero-art/frankenswitching-explained.svg"],
+  "warnings": [
+    "Composition differentiates only the two housing parts by color/weight (amber vs bronze), per the brief's 'single splash + bronze accent, never multi-color' rule. The already-drafted article frontmatter heroImageAlt describes all four parts as 'each rendered in a different color' — that does not match this render; recommend the frontmatter alt text be revised to describe the amber top-housing / bronze bottom-housing split instead."
+  ]
+}
