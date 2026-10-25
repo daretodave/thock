@@ -1,0 +1,331 @@
+{
+  "isoWeek": "2026-W43",
+  "publishedAt": "2026-10-19T00:00:00.000Z",
+  "rows": [
+    {
+      "name": "Hall Effect/Rapid Trigger",
+      "category": "switch",
+      "direction": "flat",
+      "score": 100,
+      "spark": [
+        98,
+        98,
+        97,
+        98,
+        98,
+        99,
+        100,
+        100
+      ],
+      "articleSlug": "hall-effect-rapid-trigger-plateau",
+      "note": "Wooting's own timeline still points to late-October ABS/Module delivery, but no public confirmation of first units shipping has surfaced yet this week."
+    },
+    {
+      "name": "Cherry MX2A",
+      "category": "switch",
+      "direction": "flat",
+      "score": -10,
+      "spark": [
+        -54,
+        -58,
+        -50,
+        -42,
+        -35,
+        -20,
+        -10,
+        -10
+      ],
+      "articleSlug": "cherry-mx2a-revision",
+      "note": "No new MX2A catalyst again this week; the slow sentiment recovery from last year's scratch complaints has stalled without a fresh SKU or review."
+    },
+    {
+      "name": "TMR (Tunnel Magnetoresistance) switches",
+      "category": "switch",
+      "direction": "flat",
+      "score": 90,
+      "spark": [
+        44,
+        50,
+        55,
+        63,
+        71,
+        85,
+        90,
+        90
+      ],
+      "articleSlug": "keychron-q16-he-8k-ceramic-tmr",
+      "note": "Keychron's V6 Ultra Hybrid TMR campaign keeps tracking toward its November 2026 ship window; no new weekly funding milestone confirmed."
+    },
+    {
+      "name": "Gateron Magnetic Jade Delta",
+      "category": "switch",
+      "direction": "flat",
+      "score": 75,
+      "spark": [
+        70,
+        74,
+        77,
+        79,
+        84,
+        80,
+        75,
+        75
+      ],
+      "articleSlug": "gateron-magnetic-jade-deep-dive",
+      "note": "Jade Delta remains a fulfillment-queue item on vendor storefronts with a roughly five-month lead time; no new SKU or colorway surfaced this week."
+    },
+    {
+      "name": "Gateron Oil King",
+      "category": "switch",
+      "direction": "flat",
+      "score": 60,
+      "spark": [
+        44,
+        47,
+        52,
+        58,
+        64,
+        62,
+        60,
+        60
+      ],
+      "articleSlug": "gateron-oil-king-deep-dive",
+      "note": "No restock or vendor push found this week; Oil King holds its spot as a steady budget-flagship linear."
+    },
+    {
+      "name": "Durock T1",
+      "category": "switch",
+      "direction": "flat",
+      "score": 35,
+      "spark": [
+        45,
+        45,
+        45,
+        46,
+        44,
+        40,
+        35,
+        35
+      ],
+      "articleSlug": "durock-t1-deep-dive",
+      "note": "Existing colorway lineup is unchanged this week; no group buy or vendor campaign revived attention."
+    },
+    {
+      "name": "GMK CYL Red Devils R2",
+      "category": "keycap",
+      "direction": "down",
+      "score": 32,
+      "spark": [
+        30,
+        40,
+        52,
+        60,
+        68,
+        60,
+        40,
+        32
+      ],
+      "articleSlug": "gmk-cyl-red-devils-r2-comeback",
+      "note": "Two weeks post-close, the set has dropped off current vendor listings entirely; no secondary-market or extras news surfaced this week."
+    },
+    {
+      "name": "GMK CYL Zombie",
+      "category": "keycap",
+      "direction": "down",
+      "score": 45,
+      "spark": [
+        5,
+        10,
+        15,
+        25,
+        40,
+        55,
+        70,
+        45
+      ],
+      "articleSlug": "gmk-cyl-zombie-group-buy",
+      "note": "Vendor listings still show Zombie at interest-check stage with a waiting list rather than a confirmed live group buy, despite the expected Oct 2-31 window."
+    },
+    {
+      "name": "DCS Dolch / Molch",
+      "category": "keycap",
+      "direction": "up",
+      "score": 50,
+      "spark": [
+        34,
+        26,
+        20,
+        16,
+        24,
+        30,
+        45,
+        50
+      ],
+      "articleSlug": "divinikey-dcs-dolch-group-buy",
+      "note": "Divinikey still lists Dolch as preorder with an October 2026 estimated ship window, while the related Molch run continues pointing to Q1 2027."
+    },
+    {
+      "name": "Split/Ergo layout",
+      "category": "layout",
+      "direction": "flat",
+      "score": 100,
+      "spark": [
+        93,
+        96,
+        98,
+        99,
+        100,
+        100,
+        100,
+        100
+      ],
+      "articleSlug": "split-ergo-cohort",
+      "note": "MoErgo's Go60 adds an exclusive Golden Kiwi switch option, extending the split-ergo cohort's saturation run with no sign of fading interest."
+    },
+    {
+      "name": "Alice layout",
+      "category": "layout",
+      "direction": "up",
+      "score": 5,
+      "spark": [
+        -50,
+        -40,
+        -30,
+        -18,
+        -8,
+        -5,
+        0,
+        5
+      ],
+      "articleSlug": "alice-layout-decline",
+      "note": "Reviews of Epomaker's Tide Alice keep trickling in while Qwertykeys' QK Alice Duo remains sold out, limiting fresh supply even as attention ticks up."
+    },
+    {
+      "name": "75% Layout",
+      "category": "layout",
+      "direction": "flat",
+      "score": 82,
+      "spark": [
+        63,
+        64,
+        68,
+        71,
+        76,
+        78,
+        82,
+        82
+      ],
+      "articleSlug": "75-percent-default",
+      "note": "Mode's own compendium still lists the 2026 Sonnet refresh as in production and fulfilling pre-orders, with no new teaser this week."
+    },
+    {
+      "name": "CannonKeys",
+      "category": "vendor",
+      "direction": "flat",
+      "score": 55,
+      "spark": [
+        39,
+        39,
+        44,
+        52,
+        44,
+        50,
+        55,
+        55
+      ],
+      "articleSlug": "cannonkeys-blaine-v2-se-group-buy",
+      "note": "Blaine V2: SE remains in fulfillment with CannonKeys quoting a Q1 2027 ETA on add-ons; no new SKU surfaced this week."
+    },
+    {
+      "name": "Mode Designs",
+      "category": "vendor",
+      "direction": "flat",
+      "score": 72,
+      "spark": [
+        84,
+        89,
+        93,
+        97,
+        98,
+        95,
+        72,
+        72
+      ],
+      "articleSlug": "mode-sonnet-r2-group-buy-coverage",
+      "note": "Sonnet and Encore remain in a post-group-buy fulfillment lull, with Encore's summer shipment already out the door; no new restock or teaser this week."
+    },
+    {
+      "name": "Prototypist",
+      "category": "vendor",
+      "direction": "up",
+      "score": 65,
+      "spark": [
+        41,
+        42,
+        42,
+        43,
+        49,
+        52,
+        58,
+        65
+      ],
+      "articleSlug": "prototypist-vendor-spotlight",
+      "note": "Geonworks' GMK CYL MONO group buy is confirmed to open Oct 30 through Nov 30, keeping Prototypist's UK-proxy listing volume elevated into next month."
+    },
+    {
+      "name": "Keychron",
+      "category": "brand",
+      "direction": "flat",
+      "score": 100,
+      "spark": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "articleSlug": "keychron-quiet-takeover",
+      "note": "Q16 HE 8K remains in standard two-day fulfillment while the V6 Ultra Hybrid TMR Kickstarter keeps tracking toward its November ship window."
+    },
+    {
+      "name": "Wooting",
+      "category": "brand",
+      "direction": "flat",
+      "score": 92,
+      "spark": [
+        63,
+        68,
+        74,
+        80,
+        83,
+        88,
+        92,
+        92
+      ],
+      "articleSlug": "wooting-80he-plus-shipping-update",
+      "note": "80HE+ ABS/Module deliveries are still slated for late October per Wooting's own timeline, but no public confirmation of first units shipping has surfaced yet."
+    },
+    {
+      "name": "ZMK firmware",
+      "category": "brand",
+      "direction": "flat",
+      "score": 68,
+      "spark": [
+        22,
+        30,
+        38,
+        48,
+        56,
+        65,
+        68,
+        68
+      ],
+      "articleSlug": "zmk-mainstream-shift",
+      "note": "MoErgo's new Golden Kiwi switch option for the ZMK-powered Go60 is the freshest related news; no major ZMK Studio release surfaced this week."
+    }
+  ],
+  "updatedAt": "2026-10-25T14:53:00.000Z"
+}
