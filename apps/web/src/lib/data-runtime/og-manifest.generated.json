@@ -2,7 +2,7 @@
   "articles": [
     {
       "slug": "frankenswitching-explained",
-      "readTime": 7,
+      "readTime": 8,
       "frontmatter": {
         "title": "Frankenswitching: building a custom switch out of other switches' parts",
         "lede": "Four parts, four independent axes, and a mix-and-match history that predates every factory switch that eventually copied it — the original Holy Panda was a pile of parts from two different switches years before anyone sold it as one SKU.",
@@ -9445,5 +9445,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-10-24T22:59:27.754Z"
+  "generatedAt": "2026-10-25T00:53:26.989Z"
 }
