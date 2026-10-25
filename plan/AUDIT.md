@@ -14201,7 +14201,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/wuque-studio-summer-update.mdx
 - action: add [wuque-studio-summer-update](/article/wuque-studio-summer-update) to cannonkeys-mass80-extras-restock body, or vice versa
 
-### [ ] [cross-links] [4.5] frankenswitching-explained ↔ holee-mod-explained — no prose cross-link (same pillar, ≥2 shared tags: modding, switches)
+### [x] [cross-links] [4.5] frankenswitching-explained ↔ holee-mod-explained — no prose cross-link (same pillar, ≥2 shared tags: modding, switches) — addressed in d477e66c, closes #1036
 - category: cross-links
 - filed: 2026-10-24 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -14212,7 +14212,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/holee-mod-explained.mdx
 - action: add [holee-mod-explained](/article/holee-mod-explained) to frankenswitching-explained body, or vice versa
 
-### [ ] [cross-links] [4.5] frankenswitching-explained ↔ lubing-switches-guide — no prose cross-link (same pillar, ≥2 shared tags: modding, switches, linear, tactile)
+### [x] [cross-links] [4.5] frankenswitching-explained ↔ lubing-switches-guide — no prose cross-link (same pillar, ≥2 shared tags: modding, switches, linear, tactile) — addressed in d477e66c, closes #1036
 - category: cross-links
 - filed: 2026-10-24 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -14223,7 +14223,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/lubing-switches-guide.mdx
 - action: add [lubing-switches-guide](/article/lubing-switches-guide) to frankenswitching-explained body, or vice versa
 
-### [ ] [cross-links] [4.5] frankenswitching-explained ↔ stabilizer-servicing-guide — no prose cross-link (same pillar, ≥2 shared tags: modding, linear)
+### [x] [cross-links] [4.5] frankenswitching-explained ↔ stabilizer-servicing-guide — no prose cross-link (same pillar, ≥2 shared tags: modding, linear) — addressed in d477e66c, closes #1036
 - category: cross-links
 - filed: 2026-10-24 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -14234,7 +14234,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/stabilizer-servicing-guide.mdx
 - action: add [stabilizer-servicing-guide](/article/stabilizer-servicing-guide) to frankenswitching-explained body, or vice versa
 
-### [ ] [cross-links] [4.5] frankenswitching-explained ↔ switch-films-worth-it — no prose cross-link (same pillar, ≥2 shared tags: modding, switches, linear, tactile)
+### [x] [cross-links] [4.5] frankenswitching-explained ↔ switch-films-worth-it — no prose cross-link (same pillar, ≥2 shared tags: modding, switches, linear, tactile) — addressed in d477e66c, closes #1036
 - category: cross-links
 - filed: 2026-10-24 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -14245,7 +14245,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/switch-films-worth-it.mdx
 - action: add [switch-films-worth-it](/article/switch-films-worth-it) to frankenswitching-explained body, or vice versa
 
-### [ ] [cross-links] [4.5] frankenswitching-explained ↔ tape-mod — no prose cross-link (same pillar, ≥2 shared tags: modding, linear)
+### [x] [cross-links] [4.5] frankenswitching-explained ↔ tape-mod — no prose cross-link (same pillar, ≥2 shared tags: modding, linear) — addressed in d477e66c, closes #1036
 - category: cross-links
 - filed: 2026-10-24 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -14256,7 +14256,7 @@ passes accumulate signals.)
 - article-b: apps/web/src/content/articles/tape-mod.mdx
 - action: add [tape-mod](/article/tape-mod) to frankenswitching-explained body, or vice versa
 
-### [ ] [cross-links] [4.5] frankenswitching-explained ↔ typing-tests-lie — no prose cross-link (same pillar, ≥2 shared tags: modding, switches)
+### [x] [cross-links] [4.5] frankenswitching-explained ↔ typing-tests-lie — no prose cross-link (same pillar, ≥2 shared tags: modding, switches) — addressed in d477e66c, closes #1036
 - category: cross-links
 - filed: 2026-10-24 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
