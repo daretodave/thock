@@ -14157,7 +14157,7 @@ passes accumulate signals.)
 - issue: #1033
 > Filed 2026-10-23 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 
-### [ ] [cross-links] [4.5] cannonkeys-mass80-extras-restock ↔ cannonkeys-blaine-v2-se-group-buy — no prose cross-link (same pillar, ≥2 shared tags: cannonkeys, group-buy)
+### [x] [cross-links] [4.5] cannonkeys-mass80-extras-restock ↔ cannonkeys-blaine-v2-se-group-buy — no prose cross-link (same pillar, ≥2 shared tags: cannonkeys, group-buy) — addressed in 89dd8a9c, closes #1037
 - category: cross-links
 - filed: 2026-10-24 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -14167,8 +14167,9 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/cannonkeys-mass80-extras-restock.mdx
 - article-b: apps/web/src/content/articles/cannonkeys-blaine-v2-se-group-buy.mdx
 - action: add [cannonkeys-blaine-v2-se-group-buy](/article/cannonkeys-blaine-v2-se-group-buy) to cannonkeys-mass80-extras-restock body, or vice versa
+- issue: #1037
 
-### [ ] [cross-links] [4.5] cannonkeys-mass80-extras-restock ↔ cannonkeys-nyawice-group-buy — no prose cross-link (same pillar, ≥2 shared tags: cannonkeys, group-buy)
+### [x] [cross-links] [4.5] cannonkeys-mass80-extras-restock ↔ cannonkeys-nyawice-group-buy — no prose cross-link (same pillar, ≥2 shared tags: cannonkeys, group-buy) — addressed in 89dd8a9c, closes #1037
 - category: cross-links
 - filed: 2026-10-24 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -14178,8 +14179,9 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/cannonkeys-mass80-extras-restock.mdx
 - article-b: apps/web/src/content/articles/cannonkeys-nyawice-group-buy.mdx
 - action: add [cannonkeys-nyawice-group-buy](/article/cannonkeys-nyawice-group-buy) to cannonkeys-mass80-extras-restock body, or vice versa
+- issue: #1037
 
-### [ ] [cross-links] [4.5] cannonkeys-mass80-extras-restock ↔ mode-sonnet-r2-group-buy-coverage — no prose cross-link (same pillar, ≥2 shared tags: cannonkeys, group-buy)
+### [x] [cross-links] [4.5] cannonkeys-mass80-extras-restock ↔ mode-sonnet-r2-group-buy-coverage — no prose cross-link (same pillar, ≥2 shared tags: cannonkeys, group-buy) — addressed in 89dd8a9c, closes #1037
 - category: cross-links
 - filed: 2026-10-24 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -14189,8 +14191,9 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/cannonkeys-mass80-extras-restock.mdx
 - article-b: apps/web/src/content/articles/mode-sonnet-r2-group-buy-coverage.mdx
 - action: add [mode-sonnet-r2-group-buy-coverage](/article/mode-sonnet-r2-group-buy-coverage) to cannonkeys-mass80-extras-restock body, or vice versa
+- issue: #1037
 
-### [ ] [cross-links] [4.5] cannonkeys-mass80-extras-restock ↔ wuque-studio-summer-update — no prose cross-link (same pillar, ≥2 shared tags: vendor, group-buy)
+### [x] [cross-links] [4.5] cannonkeys-mass80-extras-restock ↔ wuque-studio-summer-update — no prose cross-link (same pillar, ≥2 shared tags: vendor, group-buy) — addressed in 89dd8a9c, closes #1037
 - category: cross-links
 - filed: 2026-10-24 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -14200,6 +14203,7 @@ passes accumulate signals.)
 - article-a: apps/web/src/content/articles/cannonkeys-mass80-extras-restock.mdx
 - article-b: apps/web/src/content/articles/wuque-studio-summer-update.mdx
 - action: add [wuque-studio-summer-update](/article/wuque-studio-summer-update) to cannonkeys-mass80-extras-restock body, or vice versa
+- issue: #1037
 
 ### [x] [cross-links] [4.5] frankenswitching-explained ↔ holee-mod-explained — no prose cross-link (same pillar, ≥2 shared tags: modding, switches) — addressed in d477e66c, closes #1036
 - category: cross-links
