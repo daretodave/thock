@@ -22,7 +22,7 @@
 //                         not personal). See agents.md "Operational secrets"
 //                         for the lookup command.
 //
-// The shipping skills (ship-a-phase, ship-data, iterate) run this as
+// The shipping skills (ship-a-chunk, ship-data, iterate) run this as
 // Step 12 ("Confirm deploy"). A red exit is treated identically to a
 // red verify gate — read the log, patch the root cause, push again.
 

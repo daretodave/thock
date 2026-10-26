@@ -531,7 +531,7 @@ node scripts/loop-issue.mjs close-comment --number N --commit SHA \
 
 ```
 /march
-  Step 3a: pending phase?          → /ship-a-phase
+  Step 3a: pending phase?          → /ship-a-chunk
   Step 3b: pending data?           → /ship-data
   Step 3b.5: content-gap queue ≥3? → /ship-content   ← NEW
   Step 3c: expand due?             → /expand

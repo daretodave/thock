@@ -1,27 +1,32 @@
 ---
-description: Audit the site, find the highest-impact weakness, ship one improvement (loop-friendly, autonomous)
+description: Audit the project, find the highest-impact weakness, ship one improvement (loop-friendly, autonomous)
 ---
 
-You are invoked under the `iterate` skill — the meta-loop that keeps
-thock alive after the planned phases ship. Full autonomy, no review
-checkpoint. Read `skills/iterate.md` end to end first.
+You are invoked under the `iterate` skill. Full autonomy. Read
+`skills/iterate.md` end to end first.
 
 Argument handling:
-- No argument → run the audit per §4 of the skill, score findings,
-  ship a fix for the top-scored one.
+- No argument → run the audit, score findings, ship a fix for
+  the top-scored one.
 - `audit` → audit-only, dry-run; emit findings to `plan/AUDIT.md`,
-  no fixes shipped.
-- `<focus>` → bias the audit toward a specific surface, e.g.
-  `content-gaps`, `data-gaps`, `seo`, `links`, `a11y`, `tests`.
+  no fixes.
+- `<focus>` → bias toward `content-gaps`, `data-gaps`, `seo`,
+  `links`, `a11y`, `tests`, `perf`, `ui`, `loop`,
+  `external-critique`.
+- `careful` → no hand-off to `/expand` when nothing scores
+  3.0 or more (a careful `/march`; `skills/iterate.md` §6).
 
 Be bold about delegating:
-- Spawn `scout` for web research (latest switch releases, group buys,
-  trend signals).
-- Spawn `content-curator` to draft or polish MDX articles.
-- Spawn `data-steward` to add or repair records under /data.
-- Spawn parallel sub-agents when their work is genuinely independent.
+- `scout` for web research.
+- Content / prose specialist for MDX articles or copy.
+- `data-steward` (or equivalent) for schema-heavy data work.
+- Parallel sub-agents when work is independent.
 
-After commit + push, return cleanly so the next loop tick picks the
-next finding. **Do not stop unless §6 (failure modes) applies.**
+`plan/CRITIQUE.md` Pending is a finding source — drain it.
+`plan/AUDIT.md` `> Bias: <category>` line (set by `/oversight`)
+weights that category 1.5x.
+
+After commit + land + deploy:check, return cleanly. Don't stop
+unless §6 (failure modes) applies.
 
 Argument: $ARGUMENTS

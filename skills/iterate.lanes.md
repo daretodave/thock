@@ -1,0 +1,675 @@
+# Iterate lanes
+
+> This project's own `/iterate` audit dimensions. The kit
+> re-syncs `skills/iterate.md` and never touches this file,
+> so a dimension only this project audits lives here.
+
+---
+
+`skills/iterate.md` reads this file at one hook, through
+`node scripts/plan/lanes.mjs iterate dimensions`, after its
+stock dimensions. Each lane is one more dimension, lettered
+back from Y (the first lane is Y, the next X, and so on) so
+it never meets a stock letter. Its findings score on the
+same scale and compete with the stock ones.
+
+One block per lane. `when` is prose (the agent judges it) or
+`script <path>` (exit 0 audits the dimension this tick);
+absent, it always runs. `run` says what the audit reads and
+what a finding looks like. `Lanes off: <name>` in
+`plan/bearings.md` turns one off. No lane blocks here means
+the stock dimensions only.
+
+The example below sits inside a comment, so it is no lane.
+Copy it out of the comment to make it one.
+
+<!--
+## lane: cross-links
+- hook: dimensions
+- when: a page shipped since the last audit
+- run: every new page links to two older ones and is linked from one; each gap is a finding
+- return: continue
+-->
+
+<!-- Moved from the v1 skills/iterate.md by nexus upgrade (2026-10-26): the text the kit never shipped, verbatim. Check each lane's hook and when. -->
+
+## lane: the-audit-notes
+- hook: dimensions
+- when: as the paragraphs below says (moved verbatim from the v1 skills/iterate.md)
+- run: the paragraphs below, which amended the kit's step "4. the audit (run unless /iterate audit is the only ask)"
+- return: continue
+
+## 4. The audit (run unless `/iterate audit` is the only ask)
+
+Score every finding `0–10` for `impact × ease`. Bias the score
+toward shipping cheap wins; the loop favors momentum.
+
+## lane: external-critique-notes
+- hook: dimensions
+- when: as the paragraphs below says (moved verbatim from the v1 skills/iterate.md)
+- run: the paragraphs below, which amended the kit's step "z. external critique (highest priority when present)"
+- return: continue
+
+#### Z. External critique (highest priority when present)
+
+`plan/CRITIQUE.md` `## Pending` section is a finding source —
+fresh-eyes feedback from `/critique` that hasn't been addressed.
+
+- Each Pending row maps to a finding with category
+  `external-critique`.
+- Severity → impact:
+  - `[HIGH]` → impact 8–10
+  - `[MED]`  → impact 5–7
+  - `[LOW]`  → impact 2–4
+- Ease scored from suggested-fix complexity:
+  - one-line edit / token tweak → ease 9
+  - single-component change → ease 6
+  - cross-cutting (multiple files, new component) → ease 4
+  - design-rework or schema-touching → ease 2
+- When you ship a fix for a critique finding, **move the row from
+  `## Pending` to `## Done`** in `plan/CRITIQUE.md`, prefix with
+  `[x]`, and append the addressing commit hash. This is the
+  address-loop contract.
+
+These findings compete fairly with the rest below — a high-severity
+content gap can outrank a low-severity critique nitpick.
+
+## lane: content-gaps-notes
+- hook: dimensions
+- when: as the paragraphs below says (moved verbatim from the v1 skills/iterate.md)
+- run: the paragraphs below, which amended the kit's step "a. content gaps"
+- return: continue
+
+#### A. Content gaps
+
+The four content-velocity rules in `plan/bearings.md` "Content
+velocity & editorial cadence" (locked 2026-05-10 via /oversight)
+are the primary audit signals here. Surface as findings:
+
+- **Rule 1 — Pillar quota.** Pillars with `< 8` articles → content-gap
+  finding. Score by pillar prominence: Trends=9, News=8, Ideas=7,
+  Deep Dives=7, Guides=6 impact; ease=5 (one new article per tick).
+  Replaces the prior `< 5` soft threshold.
+- **Rule 2 — Tracker linkage.** Non-flat `data/trends/<week>.json`
+  rows older than 14 days with no `articleSlug` → content-gap
+  finding. Impact 6, ease 5.
+- **Rule 3 — Group-buy companion.** `data/group-buys/<slug>.json`
+  records with `status ∈ {live, announced}` and no companion
+  editorial article → content-gap finding. Impact 7, ease 5.
+- **Rule 4 — publishedAt staggering.** When picking a publish
+  date for a newly-shipped article, `content-curator` reads the
+  current `publishedAt` distribution across the rolling 30-day
+  window and fills the largest gap (NOT "today"). Group-buy
+  coverage pieces are exempt — date matches the buy's start /
+  announce.
+
+Plus the prior catch-all signals (still active):
+- Tags with `< 3` articles but high cross-link count → score high.
+- Articles with `wordCount < 600` → flag for expansion (delegate
+  to `content-curator`).
+- Articles missing `heroImage` → flag (or defer to design pass).
+
+## lane: data-gaps-notes
+- hook: dimensions
+- when: as the paragraphs below says (moved verbatim from the v1 skills/iterate.md)
+- run: the paragraphs below, which amended the kit's step "b. data gaps"
+- return: continue
+
+#### B. Data gaps
+
+- Run the audit in `skills/ship-data.md` §6 inline, score each
+  finding the same way.
+- Stale `data/trends/<YYYY-WW>.json` (no entry for current ISO
+  week) → score 9; ship-data fix.
+- Group buys past `endDate` not yet archived → score 6; ship-data
+  fix.
+
+## lane: seo-discoverability-notes
+- hook: dimensions
+- when: as the paragraphs below says (moved verbatim from the v1 skills/iterate.md)
+- run: the paragraphs below, which amended the kit's step "c. seo / discoverability"
+- return: continue
+
+#### C. SEO / discoverability
+
+- Articles with default OG image (no per-article art) → score by
+  pageviews (no analytics yet → score by recency).
+- Pages missing JSON-LD or with malformed JSON-LD (run a parse
+  check).
+- Sitemap missing routes that exist in the code.
+- `robots.txt` allowing/disallowing wrong paths.
+- RSS feed validation failures.
+
+## lane: link-integrity-notes
+- hook: dimensions
+- when: as the paragraphs below says (moved verbatim from the v1 skills/iterate.md)
+- run: the paragraphs below, which amended the kit's step "d. link integrity"
+- return: continue
+
+#### D. Link integrity
+
+- `<a href="/...">` to routes that don't exist.
+- `<TagChip slug="...">` to tags not in `tags.json`.
+- `<PartReference id="...">` to parts not in `frontmatter.mentionedParts`
+  or not in `/data`.
+- External vendor links that 404.
+
+## lane: accessibility-notes
+- hook: dimensions
+- when: as the paragraphs below says (moved verbatim from the v1 skills/iterate.md)
+- run: the paragraphs below, which amended the kit's step "e. accessibility"
+- return: continue
+
+#### E. Accessibility
+
+- Images without `alt`.
+- Color contrast failures (run against the design tokens).
+- Headings out of order.
+- Focus-visible missing on interactive elements.
+
+## lane: tests-notes
+- hook: dimensions
+- when: as the paragraphs below says (moved verbatim from the v1 skills/iterate.md)
+- run: the paragraphs below, which amended the kit's step "f. tests"
+- return: continue
+
+#### F. Tests
+
+- Components without colocated `__tests__/`.
+- E2E spec gaps (page family shipped with no e2e file).
+- Untested helpers under `packages/*/src/`.
+
+## lane: performance-notes
+- hook: dimensions
+- when: as the paragraphs below says (moved verbatim from the v1 skills/iterate.md)
+- run: the paragraphs below, which amended the kit's step "g. performance"
+- return: continue
+
+#### G. Performance
+
+- Largest images on homepage (target: ≤ 200KB after Next/Image).
+- Unused CSS classes in `components.css`.
+- Bundle size regressions vs. last shipped phase (if Next.js
+  build output is logged).
+
+## lane: scoring-notes
+- hook: dimensions
+- when: as the paragraphs below says (moved verbatim from the v1 skills/iterate.md)
+- run: the paragraphs below, which amended the kit's step "scoring"
+- return: continue
+
+### Scoring
+
+- Impact 0–10: how many readers / pages / queries does this affect?
+- Ease 0–10: how cheap is the fix? Single edit = 9. New article =
+  4. Schema migration = 1.
+- Score = `impact × ease / 10`, clamped 0–10.
+
+## lane: user-source-bump-notes
+- hook: dimensions
+- when: as the paragraphs below says (moved verbatim from the v1 skills/iterate.md)
+- run: the paragraphs below, which amended the kit's step "user-source bump (from /jot)"
+- return: continue
+
+### User-source bump (from `/jot`)
+
+Rationale: when the user has spotted something with their own
+eyes (footer padding, a confusing CTA, a stranded `<Mono>`
+span), it's almost always more valid than what the audit
+auto-detected. The flat add (rather than a multiplier) means
+high-severity user jots don't blow past everything; they just
+edge ahead of comparable auto-detected findings at the same
+severity. A user MED finding (default `/jot` severity) at
+ease 7 lands around `5×7/10 + 0.5 ≈ 4.0`, beating most
+ambient audit findings; a user HIGH lands around `8×7/10 +
+0.5 ≈ 6.1` and typically wins the next pass.
+
+## lane: user-set-bias-notes
+- hook: dimensions
+- when: as the paragraphs below says (moved verbatim from the v1 skills/iterate.md)
+- run: the paragraphs below, which amended the kit's step "user-set bias (from /oversight)"
+- return: continue
+
+### User-set bias (from `/oversight`)
+
+Before scoring, check the top of `plan/AUDIT.md` for a line of the
+form:
+
+If present, **multiply the score of every finding in that category
+by 1.5** before ranking. The bias is sticky until removed; the user
+clears it by running `/oversight reset` (which prompts to drop the
+bias) or editing `AUDIT.md` directly. Apply this **after** the
+user-source bump above (the multiplier sees the bumped score, but
+the cap at `10` still holds).
+
+Top 1 finding wins. Tie-break by:
+1. Findings that unblock other findings (cascade).
+2. Older findings (don't let things rot in AUDIT.md).
+3. Cheapest-to-ship.
+
+## lane: sync-notes
+- hook: dimensions
+- when: as the paragraphs below says (moved verbatim from the v1 skills/iterate.md)
+- run: the paragraphs below, which amended the kit's step "step 0 — sync"
+- return: continue
+
+### Step 0 — Sync
+
+If divergence, stop per §6.
+
+## lane: audit-notes
+- hook: dimensions
+- when: as the paragraphs below says (moved verbatim from the v1 skills/iterate.md)
+- run: the paragraphs below, which amended the kit's step "step 1 — audit (or read latest audit)"
+- return: continue
+
+### Step 1 — Audit (or read latest audit)
+
+Run §4. Write findings to `plan/AUDIT.md` with this format:
+
+```markdown
+# Site audit — <ISO date>
+
+## Top 5 findings (scored)
+
+### [8.1] Trends pillar has 1 article — needs ≥ 4
+- category: content-gaps
+- impact: 9 (signature pillar)
+- ease: 6 (one article per tick over 4 ticks)
+- next: spawn content-curator → draft "<title>"
+
+### [7.4] data/trends/2026-W19.json missing
+- category: data-gaps
+- impact: 8 (Trends Tracker dashboard)
+- ease: 9 (templated weekly entry)
+- next: /ship-data add trend 2026-W19
+
+[...]
+```
+
+## lane: pick-the-work-notes
+- hook: dimensions
+- when: as the paragraphs below says (moved verbatim from the v1 skills/iterate.md)
+- run: the paragraphs below, which amended the kit's step "step 2 — pick the work"
+- return: continue
+
+### Step 2 — Pick the work
+
+Top scored finding. If `/iterate audit` was the invocation, stop
+here — no fix shipped.
+
+## lane: mirror-to-github-notes
+- hook: dimensions
+- when: as the paragraphs below says (moved verbatim from the v1 skills/iterate.md)
+- run: the paragraphs below, which amended the kit's step "step 2.5 — mirror to github (phase 15a)"
+- return: continue
+
+### Step 2.5 — Mirror to GitHub (phase 15a)
+
+Open a public GitHub issue mirroring the picked finding **before**
+doing the work. The issue tab on `daretodave/thock` becomes a live
+timeline of "what the loop is shipping right now," with the issue
+opening when work starts and auto-closing on the fix commit's
+`Closes #N` trailer.
+
+1. The picked row already has an `- issue: #N` field (a previous
+   tick mirrored it but didn't ship the fix; reuse the same number).
+2. The picked row came from `/triage` routing (an `[user-issue
+   #N]`-prefixed AUDIT.md row, or a `(issue #N)` reference in
+   `data/BACKLOG.md`); the issue already exists publicly. Reuse `#N`.
+
+```bash
+# 1. Build the body file from the finding row.
+cat > /tmp/loop-issue-body.md <<EOF
+**Source:** <pass description, e.g. "/critique pass 2 (reader sub-agent)" or "/jot 2026-05-09" or "/iterate audit 2026-05-09">
+**Severity:** <HIGH|MED|LOW> · **Category:** <category from row> · **URL:** <url-or-"general">
+
+## Observation
+<verbatim from row's "observation" field>
+
+## Evidence
+<verbatim from row's "evidence" field>
+
+## Suggested fix
+<verbatim from row's "suggested fix" field>
+
+---
+_Tracked by the autonomous loop. The fix lands as a commit with \`Closes #<this-issue>\` in the body; this issue auto-closes when the commit pushes to main._
+EOF
+
+# 2. Map row severity → helper flag.
+#    [HIGH] → high · [MED] → med · [LOW] → low
+#
+# 3. Map row "source" field → helper flag.
+#    user → user · browser/reader → reader · audit/iterate → audit · external → external
+#
+# 4. Map row category → helper category.
+#    visual / voice / navigation / mobile / external-critique → enhancement
+#    content (article/data/copy gap) → content
+#    a11y → a11y · seo → seo · perf → perf
+#    bug-shaped (broken link, regression) → bug
+#    Otherwise → enhancement.
+#
+# 5. Open the issue.
+N=$(node scripts/loop-issue.mjs open \
+    --severity <high|med|low> \
+    --category <see mapping above> \
+    --source <user|reader|audit|external> \
+    --title "<one-line summary, ≤ 70 chars, lowercase 'thock'>" \
+    --body-file /tmp/loop-issue-body.md)
+echo "loop-issue: opened #$N"
+```
+
+- Print the stderr to the iterate run log.
+- Note the failure inline in the row as
+  `- issue: [mirror-failed: <ISO timestamp>]` so the next tick
+  knows to retry.
+- Continue with the fix. **The mirror is best-effort, not gating**
+  (Hard rule §7.7).
+
+## lane: delegate-or-implement-notes
+- hook: dimensions
+- when: as the paragraphs below says (moved verbatim from the v1 skills/iterate.md)
+- run: the paragraphs below, which amended the kit's step "step 3 — delegate or implement"
+- return: continue
+
+### Step 3 — Delegate or implement
+
+For each category, default delegation:
+
+- **Content gaps** → delegate to `/ship-content`. Read
+  `skills/ship-content.md` and execute its procedure. The audit row
+  is already selected — jump directly to Step 2 (publishedAt
+  computation), skipping `/ship-content`'s Step 1 queue-read. The
+  `/ship-content` skill owns the full bundle: content-curator (prose),
+  brander (hero SVG), tags.json extension, verify, commit, deploy.
+  Do **not** re-implement the pattern inline here.
+  **Never commit a new article with `heroImage: null`** — see
+  `skills/ship-content.md` §8 failure mode 5 for the only sanctioned
+  exception (brander fails after retry → `heroImage: null` + backfill
+  audit row).
+- **Data gaps** → follow `skills/ship-data.md` §5 inline (or
+  effectively re-enter the ship-data flow within this tick).
+- **Cross-links (cluster-aware, Phase 46)** → when the winning row
+  is `category: cross-links`, extract the "hub article" X: whichever
+  of `article-a` / `article-b` appears in more other pending
+  `[ ] [cross-links]` rows (tie-break: take `article-a`, the
+  alphabetically-earlier slug). Then collect **all** pending
+  `[ ] [cross-links]` rows in `plan/AUDIT.md` where X appears as
+  either slug. Confirm the full set at drain time:
+  ```bash
+  node scripts/article-crosslink-survey.mjs --json --slug X
+  ```
+  Fix all N pairs in a single commit — for each pair (X, sibling),
+  add a markdown link in whichever article body has the cleaner
+  insertion point (prefer X's body when both work equally). Before
+  committing, run the mentionedParts gate (Phase 38) on every
+  article body touched by the drain — an inserted cross-link
+  sentence routinely names the linked article's subject entity,
+  which is exactly what the gate exists to catch:
+  ```bash
+  node scripts/article-parts-check.mjs <each touched .mdx path>
+  ```
+  Exit 1 → add the flagged entities to that article's
+  `mentionedParts` frontmatter before proceeding (same reconciliation
+  `skills/ship-content.md` Step 7b does for new articles). Commit
+  subject: `content: <X> cross-links — N pairs drained`. Tick all
+  addressed rows in a single `audit:` follow-up commit (not one per
+  pair). This drains per-article rather than per-pair, collapsing
+  ~52 same-pillar rows into ~15–20 ticks.
+- **SEO / link integrity / a11y / tests** → main agent implements.
+- **Performance** → main agent investigates; may delegate to
+  `scout` if external benchmarking needed.
+
+For research-heavy fixes (a switch trend article, a vendor profile),
+spawn `scout` in parallel with the implementation work to gather
+context.
+
+## lane: verify-notes
+- hook: dimensions
+- when: as the paragraphs below says (moved verbatim from the v1 skills/iterate.md)
+- run: the paragraphs below, which amended the kit's step "step 4 — verify"
+- return: continue
+
+### Step 4 — Verify
+
+The full gate: typecheck + unit + data:validate + build + e2e.
+Iterate up to 3 times on the same root cause. Stop per §6 if
+unresolvable.
+
+## lane: commit-notes
+- hook: dimensions
+- when: as the paragraphs below says (moved verbatim from the v1 skills/iterate.md)
+- run: the paragraphs below, which amended the kit's step "step 5 — commit"
+- return: continue
+
+### Step 5 — Commit
+
+Commit subject prefixes by category:
+- `content:` — articles, pillar copy, MDX edits.
+- `data:` — anything under `/data`.
+- `seo:` — metadata, JSON-LD, sitemap, robots, RSS.
+- `fix:` — bug fixes, broken links, regressions.
+- `a11y:` — accessibility.
+- `test:` — test additions or fixes only.
+- `perf:` — performance work.
+- `refactor:` — structural cleanup with no behavior change.
+
+Body lists the audit finding ID/score, the fix, and the verify
+result.
+
+```bash
+# Trailer in commit body (GitHub auto-links + auto-closes when pushed to main)
+# - Closes #42
+
+# After push + green deploy, post a follow-up confirmation comment.
+# Step 7 (Confirm deploy) handles this — see below.
+```
+
+The `- Closes #<N>` trailer is **mandatory** in the commit body
+when the row carries an issue number; it is the closing mechanism.
+Multiple issues can be closed in a single commit (rare but supported)
+by listing one trailer line per issue.
+
+```bash
+git add <explicit files>
+git commit -m "$(cat <<'EOF'
+content: trends — "Why low-profile is having a moment"
+
+- Audit finding [8.1]: Trends pillar at 1 article.
+- Drafted via content-curator; ~1100 words across 6 sections.
+- Tagged: low-profile, choc, kailh, trends-2026.
+- Cross-links: 3 switches, 2 boards, 1 vendor.
+
+Decisions:
+- Picked low-profile over Alice ergonomics — lower-volume but more
+  movement vs. Alice which has plateaued (cf. Trends Tracker
+  2026-W17).
+EOF
+)"
+```
+
+Do **not** push yet — Step 6's audit-tick commit ships in the same
+push (see Hard rule §7.8: two rapid-fire pushes seconds apart can
+drop the Vercel git-integration webhook for the second one, leaving
+a pushed commit with no deployment record — see AUDIT.md `[external-issue] [4.2]`, issue #540).
+
+## lane: tick-the-audit-notes
+- hook: dimensions
+- when: as the paragraphs below says (moved verbatim from the v1 skills/iterate.md)
+- run: the paragraphs below, which amended the kit's step "step 6 — tick the audit"
+- return: continue
+
+### Step 6 — Tick the audit
+
+Flip the addressed finding to `[x]` in `plan/AUDIT.md` and append
+the commit hash. Commit, **then push once** — this single push
+covers both this commit and Step 5's fix commit:
+
+```bash
+git add plan/AUDIT.md
+git commit -m "audit: finding [8.1] addressed"
+git push origin main
+```
+
+## lane: confirm-deploy-notes
+- hook: dimensions
+- when: as the paragraphs below says (moved verbatim from the v1 skills/iterate.md)
+- run: the paragraphs below, which amended the kit's step "step 7 — confirm deploy"
+- return: continue
+
+### Step 7 — Confirm deploy
+
+Same contract as `ship-a-chunk` Step 12. A red deploy after an
+iterate fix is treated identically to a red verify gate: read the
+log, patch, push again. Up to 3 same-root-cause iterations.
+
+## lane: done-notes
+- hook: dimensions
+- when: as the paragraphs below says (moved verbatim from the v1 skills/iterate.md)
+- run: the paragraphs below, which amended the kit's step "step 8 — done"
+- return: continue
+
+### Step 8 — Done
+
+Return cleanly. Loop's next tick re-audits and ships the new top.
+
+## Notes from the v1 skills/iterate.md (reference, not lanes)
+
+The v1 skill's own words outside its procedure: what its loop did
+and why. No lane runs them; read them when a lane above needs the
+context.
+
+# Skill: iterate
+
+> **Full autonomy.** When invoked (manually, via `/iterate`, or
+> under `/loop`), you have authority to audit thock, pick the
+> highest-impact weakness, and ship one improvement end-to-end —
+> no review checkpoint. The loop keeps the site alive after planned
+> phases are done.
+
+## 1. Purpose
+
+Phases 1–15 build the structure. After they ship, the site is
+**alive but thin**: 6 seed articles, sparse tags, manual data, no
+weekly trend snapshots. `/iterate` is the loop that fills it in.
+
+`/iterate` is also useful **during** the build phases as a separate
+quality pass on already-shipped surfaces (broken links, missing
+alt text, OG images that didn't render).
+
+## 2. Invocation
+
+```
+/iterate                    # full audit, ship the top finding
+/iterate audit              # audit-only; emit plan/AUDIT.md, no fix shipped
+/iterate content-gaps       # bias audit toward content
+/iterate data-gaps          # bias audit toward /data
+/iterate seo                # bias toward metadata, OG, JSON-LD, sitemap
+/iterate links              # broken-link sweep
+/iterate a11y               # accessibility audit
+/iterate tests              # missing tests, low coverage
+/loop 1h /iterate           # autonomous improvement loop
+```
+
+When invoked under `/loop`, do not pause for review. Ship one
+improvement per tick.
+
+## 3. Autonomy contract
+
+- **Many findings → one shipped fix per tick.** Multi-fix commits
+  are unreviewable. The loop runs again; trust it.
+- **Content gap → write the content.** If "no article tagged
+  `gasket-mount` yet" is the top finding, **draft the article**
+  (delegate to `content-curator`). Don't note the gap and move on.
+- **Data gap → call `/ship-data` internally.** Read
+  `skills/ship-data.md` and follow its procedure for the record
+  fix; then return to iterate-mode for the commit-level work.
+- **Trivial fix → still ships through verify.** Even a typo fix
+  passes `pnpm typecheck && pnpm test:run`. The verify gate
+  protects the loop from accidental regressions.
+
+## 6. Failure modes — when to stop
+
+1. **`pnpm verify` fails ≥3 times on the same root cause.**
+2. **`pnpm deploy:check` fails ≥3 times on the same root cause
+   after a fix shipped.** Read the log; if local + Vercel
+   diverge, that's worth surfacing.
+3. **`VERCEL_TOKEN` missing** (deploy:check exit 3). Stop.
+4. **A finding requires schema migration > 20 records.** Push it
+   to `/plan-a-spec` instead.
+5. **A finding requires user judgment** (e.g. "should we cover
+   this controversial vendor?"). Surface to AUDIT.md as a
+   `[needs-user-call]` row, skip it, ship the next finding.
+6. **No actionable iterate work** (top score < 3.0). Check in order:
+   - **Content-gap rows exist whose raw score ≥ 3.0** (before bias,
+     before bias multiplier was applied): dispatch to `/ship-content`
+     instead of stopping — these rows are ripe even if the bias
+     multiplier pushed everything below 3.0 after normalization.
+     Execute `skills/ship-content.md` procedure end-to-end.
+   - **No content queue either** → read `plan/bearings.md` "Plan
+     expansion posture":
+     - **bold** or **autonomous** (thock's default is bold) →
+       dispatch to `/expand` instead of stopping. "Make things
+       brilliant when delivery is not." Log "no actionable
+       iterate work — handing to expand" and execute
+       `skills/expand.md` procedure end-to-end.
+     - **strict** posture → stop and report. Site is
+       well-iterated; sleep until the user gives new direction.
+7. **`git pull` divergence.**
+
+Everything else: decide, ship, document. The loop continues.
+
+## 7. Hard rules
+
+1. **One fix per tick.** Multi-fix commits don't ship.
+2. **Verify gate must pass.** No `--no-verify`.
+3. **No emojis, no `Co-Authored-By:`.**
+4. **Don't write content yourself if `content-curator` exists** —
+   delegate. The main agent shouldn't be the bottleneck for prose.
+5. **Don't audit blindly when work is queued.** If `data/BACKLOG.md`
+   has rows, prefer running `/ship-data` for one tick over a fresh
+   audit; the audit cost is amortized.
+6. **Never delete shipped content silently.** Archive (move to
+   `apps/web/src/content/articles/archive/`) and update routing.
+7. **Issue mirror is best-effort, not gating.** If
+   `loop-issue.mjs open` fails (auth, rate limit, network), note
+   `- issue: [mirror-failed: <ISO timestamp>]` on the row and ship
+   the fix anyway. Likewise, `close-comment` failures after a
+   green deploy are warnings, not blockers. The mirror is a
+   public timeline, not a verification step.
+8. **One push per tick, not one push per commit.** Step 5's fix
+   commit and Step 6's audit-tick commit both stage locally; push
+   once, at the end of Step 6. Two rapid-fire pushes seconds apart
+   can drop the Vercel git-integration webhook for the second commit
+   — a real commit lands on `main` with no deployment record at all
+   (confirmed reproducing: issue #540). This applies to every
+   trailing follow-up commit in the same tick, not just the audit
+   tick.
+
+## 8. Quick reference
+
+```bash
+# Read
+plan/AUDIT.md                            # latest findings
+plan/bearings.md                         # voice + standing decisions
+data/                                    # GitHub-as-DB
+apps/web/src/content/                    # MDX articles + tags
+
+# Sub-agents
+Agent({ subagent_type: "content-curator", prompt: "..." })
+Agent({ subagent_type: "scout", prompt: "..." })
+Agent({ subagent_type: "data-steward", prompt: "..." })
+
+# Verify + commit
+pnpm verify
+git add <explicit files>
+git commit -m "<category>: <subject>"
+git push origin main
+
+# Issue mirror (phase 15a)
+node scripts/loop-issue.mjs open --severity ... --category ... \
+  --source ... --title "..." --body-file /tmp/loop-issue-body.md
+node scripts/loop-issue.mjs close-comment --number N --commit SHA \
+  --deploy-url https://thock.xyz
+```

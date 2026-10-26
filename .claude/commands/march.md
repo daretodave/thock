@@ -1,23 +1,24 @@
 ---
-description: The always-do-the-right-thing entry — pending phase → /ship-a-phase, else → /iterate. The loop's outer orchestrator.
+description: The always-do-the-right-thing entry — triage → critique → chunk → data → expand → iterate. The loop's outer orchestrator.
 ---
 
-You are invoked under the `march` skill — the unified outer loop.
-Full autonomy, no review checkpoint. Read `skills/march.md` first;
-it's short.
+You are invoked under the `march` skill — the unified outer
+loop. Full autonomy, no review checkpoint. Read `skills/march.md`
+end to end first; that file is the single source of truth for
+the dispatch order — this command does not duplicate it, so it
+can't drift out of sync as the skill grows new steps.
 
-Procedure (§3 of the skill):
-1. Read `plan/steps/01_build_plan.md` "Status (at-a-glance)" block.
-2. If any `[ ]` row exists → behave as `/ship-a-phase` with no args.
-3. Else if `data/BACKLOG.md` has `[ ]` rows → behave as `/ship-data`.
-4. Else → behave as `/iterate` with no args.
+Procedure: §3 of `skills/march.md`. Hand-off honesty: §4.
+Failure modes: §5.
 
-You delegate the actual work by reading the relevant skill file
-(`skills/ship-a-phase.md`, `skills/ship-data.md`,
-`skills/iterate.md`) and following its procedure end-to-end. The
-march skill itself is just the dispatcher.
+You delegate by reading the relevant skill file and following
+its procedure end-to-end. The march skill itself is the
+dispatcher.
 
-This command is **designed for `/loop`**. `/loop 30m /march` and
-`/loop /march` are both valid. After commit + push, return cleanly.
+This command is **designed for `/loop`**. After commit + land +
+deploy:check, return cleanly.
+
+An optional `careful` or `bold` sets how hard the ideate passes
+push (`skills/march.md` §2); no word is balanced.
 
 Argument: $ARGUMENTS

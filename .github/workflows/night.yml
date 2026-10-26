@@ -90,10 +90,10 @@ jobs:
                and still ship the digest; the next dispatcher tick fixes
                it.
             2. The digest's own commit is NOTES-ONLY (plan/DIGEST.md plus
-               any plan/AUDIT.md or plan/PHASE_CANDIDATES.md rows). The
+               any plan/AUDIT.md or plan/CANDIDATES.md rows). The
                /jot carve-out applies to the commit; the verify run above
                is breadth, not the commit's gate.
-            3. Tuning proposals become plan/PHASE_CANDIDATES.md candidates,
+            3. Tuning proposals become plan/CANDIDATES.md candidates,
                never direct edits. Only local /oversight promotes.
             4. Your one commit MUST end with this exact trailer (a blank
                line before it, then the trailer as its own line):
