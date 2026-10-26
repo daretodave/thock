@@ -630,8 +630,10 @@ Why bold for thock:
   when the rate-limit window opens (≥20 commits or ≥48h) AND
   there's no pending phase, OR when `/iterate` has nothing to
   do (no findings score ≥ 3.0).
-- Promotion is gated by `/oversight`; the loop doesn't
-  unilaterally rewrite the build plan.
+- Promotion: `/oversight` promotes or rejects any time; with
+  aged promotion on (the dial at bold, `## Loop knobs`) an aged
+  candidate at the score floor also promotes itself, after a
+  `loop:veto` hold window the owner can use to stop it.
 
 If boldness becomes friction at any point, change this
 section to `Mode: strict` and `/expand` becomes a no-op. The
@@ -809,25 +811,39 @@ pnpm format                     # prettier --write
 
 ## Loop knobs
 
-Written by `nexus upgrade` (2026-10-26) at the values that keep the v1 loop's
-behaviour. Turn them up together with `Improve:` (off, gentle, steady, bold;
-the lines below override it), or each on its own, later: `Support:`
-(`nexus/customization/support.md`), `Promote:` and `stall_action`
-(aged promotion, the motion heartbeat), `loop:` (`/iterate` dimension
-I), `UI:` (the browser walk).
+`Improve: bold` (set 2026-10-26 via the owner): the loop pushes past
+the plan as far as it can justify. Every knob follows the dial
+unless it has its own line below (`nexus/customization/improvement-dial.md`;
+`node scripts/plan/improve.mjs` prints what resolves):
 
-- Improve: gentle
-- Support: triage-only
-- Promote: owner
-- stall_action: alert
-- loop: off
+- Support `fix-all`: a collaborator's bug or small enhancement is fixed
+  in the tick (or plotted Asap), not only triaged.
+- Promote `aged`: a Pending candidate that scores at the floor and has
+  aged promotes itself behind the `loop:veto` hold window.
+- Generators: the kit's three (issue-age, stale-candidate, motion).
+- Research `weekly`: `/march` reads the field on the topics below and
+  files at most 3 `field` candidates a run.
+- UI walk `both`: `/critique`'s reader and `/iterate` dimension H
+  browse the live site.
+- `loop: on`, `stall_action: promote`, cadence eager (the repo
+  variable NEXUS_DAILY_CEILING keeps the v1 ceiling of 60).
 
-**UI:** `none`
+- Improve: bold
+- Research topics: mechanical keyboard switch and keycap trends; group buy and interest check lifecycles; keyboard enthusiast community discussion and buyer questions; interactive comparison and recommender tools on hobby sites; editorial data visualisation for niche product coverage
+
+**UI:** `url https://thock.xyz`
+
+**UI routes:** `/`, `/news`, `/trends/tracker`, `/group-buys`, `/tools`, `/quiz/switch`, `/compare/switch`
 
 ## Generators
 
 When no chunk is ready, `/march`'s stock `refill` lane runs each
-generator listed here (`nexus/concepts/generators.md`). None listed
-means refill is a no-op.
+generator listed here (`nexus/concepts/generators.md`). No list
+line here hands the list to the improvement dial (bold: the kit's
+three, at the lines below, plus any project generator):
 
-- (none)
+<!--
+- issue-age · daily · target 3 · cap 5/wk
+- stale-candidate · weekly · target 2 · cap 2/wk
+- motion · daily · target 1 · cap 1/wk
+-->

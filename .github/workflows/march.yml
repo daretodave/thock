@@ -264,113 +264,6 @@ jobs:
       # to switch to user-author mode — see CLOUD_LOOP.md
       # "Identity choice".
 
-      - name: Inspect execution for problem signals
-        id: inspect
-        if: always() && steps.ceiling.outputs.skip != 'true'
-        run: |
-          transcript="${{ steps.claude_run.outputs.execution_file }}"
-          outcome="${{ steps.claude_run.outcome }}"
-          reasons=""
-
-          if [ -z "$transcript" ] || [ ! -f "$transcript" ]; then
-            # Action crashed before producing a transcript (auth fail,
-            # OOM, runner-side error). Still surface this — but there's
-            # no transcript to attach.
-            if [ "$outcome" = "failure" ]; then
-              reasons="- action crashed before producing a transcript (no artifact available)"
-              echo "has_issues=true"     >> "$GITHUB_OUTPUT"
-              echo "has_transcript=false">> "$GITHUB_OUTPUT"
-            else
-              echo "has_issues=false"    >> "$GITHUB_OUTPUT"
-              echo "has_transcript=false">> "$GITHUB_OUTPUT"
-            fi
-          else
-            # Pull signals from the transcript's result block. The
-            # action writes one entry with type=="result" at end-of-run.
-            denials=$(jq    '[.[] | select(.type=="result") | .permission_denials_count // 0][0] // 0' "$transcript")
-            is_error=$(jq   '[.[] | select(.type=="result") | .is_error // false][0] // false'        "$transcript")
-            api_error=$(jq -r '[.[] | select(.type=="result") | .api_error_status // empty][0] // ""' "$transcript")
-
-            if [ "$denials" != "0" ];      then reasons="${reasons}- permission_denials_count: ${denials}"$'\n'; fi
-            if [ "$is_error" = "true" ];   then reasons="${reasons}- result.is_error: true"$'\n'; fi
-            if [ -n "$api_error" ];        then reasons="${reasons}- api_error_status: ${api_error}"$'\n'; fi
-            if [ "$outcome" = "failure" ]; then reasons="${reasons}- action outcome: failure"$'\n'; fi
-
-            if [ -n "$reasons" ]; then
-              echo "has_issues=true"     >> "$GITHUB_OUTPUT"
-            else
-              echo "has_issues=false"    >> "$GITHUB_OUTPUT"
-            fi
-            echo "has_transcript=true"   >> "$GITHUB_OUTPUT"
-          fi
-
-          {
-            echo "reasons<<EOF_REASONS"
-            printf "%s" "$reasons"
-            echo
-            echo "EOF_REASONS"
-          } >> "$GITHUB_OUTPUT"
-
-          echo "--- inspect summary ---"
-          echo "outcome:        $outcome"
-          echo "has_transcript: $([ -f "$transcript" ] && echo true || echo false)"
-          echo "reasons:"
-          printf "%s" "$reasons"
-
-      - name: Upload Claude execution transcript (only when problematic)
-        if: always() && steps.inspect.outputs.has_issues == 'true' && steps.inspect.outputs.has_transcript == 'true'
-        uses: actions/upload-artifact@v7
-        with:
-          name: claude-execution-${{ github.run_id }}
-          path: ${{ steps.claude_run.outputs.execution_file }}
-          retention-days: 30
-          if-no-files-found: warn
-
-      - name: Open GitHub issue for problematic execution
-        if: always() && steps.inspect.outputs.has_issues == 'true'
-        env:
-          GH_TOKEN: ${{ secrets.ACTIONS_PAT }}
-          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
-          REASONS: ${{ steps.inspect.outputs.reasons }}
-          HAS_TRANSCRIPT: ${{ steps.inspect.outputs.has_transcript }}
-        run: |
-          # Dedupe by title prefix — same posture as before. Once an
-          # open issue exists, subsequent runs won't pile on until
-          # /triage closes/labels it. PAT scope: Issues:write at
-          # content level (no label-management permission needed).
-          existing=$(gh issue list --search 'in:title "Cloud march execution had issues" state:open' --json number --jq 'length')
-          if [ "$existing" != "0" ]; then
-            echo "An open 'Cloud march execution had issues' issue already exists — skipping."
-            exit 0
-          fi
-
-          if [ "$HAS_TRANSCRIPT" = "true" ]; then
-            transcript_line="**Transcript:** download the \`claude-execution-${{ github.run_id }}\` artifact from the run page (Artifacts section). 30-day retention."
-          else
-            transcript_line="**Transcript:** unavailable — action crashed before writing one."
-          fi
-
-          # Build the issue body via a temp file. A here-doc here would
-          # require the body lines to start at column 0 in this YAML,
-          # which terminates the surrounding `run: |` block scalar.
-          # Per-line echo into a file keeps every script line at the
-          # YAML scalar's indent level — no parse ambiguity.
-          body_file="$(mktemp)"
-          {
-            echo "The cloud /march tick at ${RUN_URL} surfaced one or more execution issues."
-            echo
-            echo "**Signals:**"
-            printf '%s\n' "${REASONS}"
-            echo
-            echo "${transcript_line}"
-            echo
-            echo "The next /triage tick will classify and label this issue."
-          } > "$body_file"
-
-          gh issue create \
-            --title "Cloud march execution had issues: $(date -u +%Y-%m-%dT%H:%M:%SZ)" \
-            --body-file "$body_file"
-
       # The runner's checkout is the owner's for this tick: an
       # untracked .owner makes scripts/claims.mjs claim as the
       # owner, scripts/plan/settle.mjs settle and the push policy
@@ -491,6 +384,113 @@ jobs:
           GIT_AUTHOR_EMAIL:    "me@dave.blue"
           GIT_COMMITTER_NAME:  "David Rehmat"
           GIT_COMMITTER_EMAIL: "me@dave.blue"
+
+      - name: Inspect execution for problem signals
+        id: inspect
+        if: always() && steps.ceiling.outputs.skip != 'true'
+        run: |
+          transcript="${{ steps.run_march.outputs.execution_file }}"
+          outcome="${{ steps.run_march.outcome }}"
+          reasons=""
+
+          if [ -z "$transcript" ] || [ ! -f "$transcript" ]; then
+            # Action crashed before producing a transcript (auth fail,
+            # OOM, runner-side error). Still surface this — but there's
+            # no transcript to attach.
+            if [ "$outcome" = "failure" ]; then
+              reasons="- action crashed before producing a transcript (no artifact available)"
+              echo "has_issues=true"     >> "$GITHUB_OUTPUT"
+              echo "has_transcript=false">> "$GITHUB_OUTPUT"
+            else
+              echo "has_issues=false"    >> "$GITHUB_OUTPUT"
+              echo "has_transcript=false">> "$GITHUB_OUTPUT"
+            fi
+          else
+            # Pull signals from the transcript's result block. The
+            # action writes one entry with type=="result" at end-of-run.
+            denials=$(jq    '[.[] | select(.type=="result") | .permission_denials_count // 0][0] // 0' "$transcript")
+            is_error=$(jq   '[.[] | select(.type=="result") | .is_error // false][0] // false'        "$transcript")
+            api_error=$(jq -r '[.[] | select(.type=="result") | .api_error_status // empty][0] // ""' "$transcript")
+
+            if [ "$denials" != "0" ];      then reasons="${reasons}- permission_denials_count: ${denials}"$'\n'; fi
+            if [ "$is_error" = "true" ];   then reasons="${reasons}- result.is_error: true"$'\n'; fi
+            if [ -n "$api_error" ];        then reasons="${reasons}- api_error_status: ${api_error}"$'\n'; fi
+            if [ "$outcome" = "failure" ]; then reasons="${reasons}- action outcome: failure"$'\n'; fi
+
+            if [ -n "$reasons" ]; then
+              echo "has_issues=true"     >> "$GITHUB_OUTPUT"
+            else
+              echo "has_issues=false"    >> "$GITHUB_OUTPUT"
+            fi
+            echo "has_transcript=true"   >> "$GITHUB_OUTPUT"
+          fi
+
+          {
+            echo "reasons<<EOF_REASONS"
+            printf "%s" "$reasons"
+            echo
+            echo "EOF_REASONS"
+          } >> "$GITHUB_OUTPUT"
+
+          echo "--- inspect summary ---"
+          echo "outcome:        $outcome"
+          echo "has_transcript: $([ -f "$transcript" ] && echo true || echo false)"
+          echo "reasons:"
+          printf "%s" "$reasons"
+
+      - name: Upload Claude execution transcript (only when problematic)
+        if: always() && steps.inspect.outputs.has_issues == 'true' && steps.inspect.outputs.has_transcript == 'true'
+        uses: actions/upload-artifact@v7
+        with:
+          name: claude-execution-${{ github.run_id }}
+          path: ${{ steps.run_march.outputs.execution_file }}
+          retention-days: 30
+          if-no-files-found: warn
+
+      - name: Open GitHub issue for problematic execution
+        if: always() && steps.inspect.outputs.has_issues == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.ACTIONS_PAT }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          REASONS: ${{ steps.inspect.outputs.reasons }}
+          HAS_TRANSCRIPT: ${{ steps.inspect.outputs.has_transcript }}
+        run: |
+          # Dedupe by title prefix — same posture as before. Once an
+          # open issue exists, subsequent runs won't pile on until
+          # /triage closes/labels it. PAT scope: Issues:write at
+          # content level (no label-management permission needed).
+          existing=$(gh issue list --search 'in:title "Cloud march execution had issues" state:open' --json number --jq 'length')
+          if [ "$existing" != "0" ]; then
+            echo "An open 'Cloud march execution had issues' issue already exists — skipping."
+            exit 0
+          fi
+
+          if [ "$HAS_TRANSCRIPT" = "true" ]; then
+            transcript_line="**Transcript:** download the \`claude-execution-${{ github.run_id }}\` artifact from the run page (Artifacts section). 30-day retention."
+          else
+            transcript_line="**Transcript:** unavailable — action crashed before writing one."
+          fi
+
+          # Build the issue body via a temp file. A here-doc here would
+          # require the body lines to start at column 0 in this YAML,
+          # which terminates the surrounding `run: |` block scalar.
+          # Per-line echo into a file keeps every script line at the
+          # YAML scalar's indent level — no parse ambiguity.
+          body_file="$(mktemp)"
+          {
+            echo "The cloud /march tick at ${RUN_URL} surfaced one or more execution issues."
+            echo
+            echo "**Signals:**"
+            printf '%s\n' "${REASONS}"
+            echo
+            echo "${transcript_line}"
+            echo
+            echo "The next /triage tick will classify and label this issue."
+          } > "$body_file"
+
+          gh issue create \
+            --title "Cloud march execution had issues: $(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+            --body-file "$body_file"
 
       # The UI walk's screenshots leave as a run artifact only when the
       # repo variable NEXUS_UI_ARTIFACTS is '1': a public repo's run
