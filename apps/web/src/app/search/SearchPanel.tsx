@@ -138,7 +138,7 @@ export function SearchPanel({ allTags }: SearchPanelProps): ReactElement {
           onChange={(e) => setQuery(e.target.value)}
           autoComplete="off"
           spellCheck={false}
-          className="border border-border-hi bg-bg px-4 py-3 font-serif text-h3 text-text placeholder:text-text-2 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent focus:ring-offset-1 focus:ring-offset-bg"
+          className="border border-border-hi bg-bg px-4 py-3 font-serif text-h3 text-text placeholder:text-text-2 focus:outline-hidden focus:border-accent focus:ring-2 focus:ring-accent focus:ring-offset-1 focus:ring-offset-bg"
         />
         <div role="status" aria-live="polite" aria-atomic="true" className="sr-only">
           {showHint
@@ -172,7 +172,7 @@ export function SearchPanel({ allTags }: SearchPanelProps): ReactElement {
                 <Link
                   key={p.href}
                   href={p.href}
-                  className="border border-border px-3 py-1.5 font-mono text-micro uppercase tracking-[0.08em] text-text-2 hover:text-text rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+                  className="border border-border px-3 py-1.5 font-mono text-micro uppercase tracking-[0.08em] text-text-2 hover:text-text rounded-xs focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
                 >
                   {p.label}
                 </Link>

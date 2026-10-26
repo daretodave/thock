@@ -33,7 +33,7 @@ export function TrackerSummaryCard({
       data-kind={kind}
       className="flex flex-col gap-3 bg-bg-2 p-6"
     >
-      <span className="font-mono uppercase tracking-[0.1em] text-micro text-accent">
+      <span className="font-mono uppercase tracking-widest text-micro text-accent">
         {kicker}
       </span>
       <h3 className="font-serif text-h3 text-text">{row.name}</h3>

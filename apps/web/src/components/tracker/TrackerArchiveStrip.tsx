@@ -58,7 +58,7 @@ export function TrackerArchiveStrip({
           const inner = (
             <div className="flex flex-col gap-2 p-3 bg-surface group-hover:bg-surface-hi transition-colors h-full">
               <span
-                className={`font-mono text-micro uppercase tracking-[0.1em] ${
+                className={`font-mono text-micro uppercase tracking-widest ${
                   isCurrent ? 'text-accent' : 'text-text-2'
                 }`}
               >
@@ -95,7 +95,7 @@ export function TrackerArchiveStrip({
               key={snapshot.isoWeek}
               href={`/trends/tracker/${snapshot.isoWeek}`}
               data-testid="tracker-archive-link"
-              className="block h-full group rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+              className="block h-full group rounded-xs focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
             >
               {inner}
             </Link>

@@ -48,7 +48,7 @@ export function PrimaryNavLinks(): ReactElement {
             href={item.href}
             aria-current={active ? 'page' : undefined}
             data-testid={item.testId}
-            className={`font-sans text-small transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu ${
+            className={`font-sans text-small transition-colors rounded-xs focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu ${
               active ? 'text-text' : 'text-text-2 hover:text-text'
             }`}
           >

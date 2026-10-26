@@ -107,7 +107,7 @@ export function GroupBuyRow({
       {groupBuy.heroImage ? (
         <div
           data-testid="group-buy-hero"
-          className="relative aspect-[4/3] overflow-hidden border border-border"
+          className="relative aspect-4/3 overflow-hidden border border-border"
         >
           <Image
             src={groupBuy.heroImage}
@@ -121,7 +121,7 @@ export function GroupBuyRow({
         <div
           aria-hidden="true"
           data-testid="group-buy-hero-placeholder"
-          className="aspect-[4/3] border border-border bg-accent-mu/20"
+          className="aspect-4/3 border border-border bg-accent-mu/20"
         />
       )}
       <div className="flex flex-col gap-2">
@@ -168,7 +168,7 @@ export function GroupBuyRow({
             href={groupBuy.url}
             rel="sponsored noopener"
             target="_blank"
-            className="border border-border-hi px-3 py-1.5 font-mono text-micro uppercase tracking-[0.08em] text-text-2 hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+            className="border border-border-hi px-3 py-1.5 font-mono text-micro uppercase tracking-[0.08em] text-text-2 hover:text-text focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
           >
             view at vendor ↗
           </a>
@@ -177,7 +177,7 @@ export function GroupBuyRow({
           <Link
             data-testid="group-buy-coverage-link"
             href={`/article/${relatedArticle.slug}`}
-            className="rounded-sm font-mono text-micro uppercase tracking-[0.08em] text-text-2 hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+            className="rounded-xs font-mono text-micro uppercase tracking-[0.08em] text-text-2 hover:text-text focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
           >
             read our coverage →
           </Link>
@@ -186,7 +186,7 @@ export function GroupBuyRow({
           <Link
             data-testid="group-buy-product-link"
             href={`/part/${groupBuy.productKind}/${groupBuy.productSlug}`}
-            className="rounded-sm font-mono text-micro uppercase tracking-[0.08em] text-text-2 hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+            className="rounded-xs font-mono text-micro uppercase tracking-[0.08em] text-text-2 hover:text-text focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
           >
             view catalog specs →
           </Link>

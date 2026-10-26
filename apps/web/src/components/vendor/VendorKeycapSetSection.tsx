@@ -57,7 +57,7 @@ export function VendorKeycapSetSection({
                   <h3 className="font-serif text-h3 text-text">
                     <Link
                       href={`/part/keycap-set/${k.slug}`}
-                      className="hover:text-accent transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+                      className="hover:text-accent transition-colors rounded-xs focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
                     >
                       {k.name}
                     </Link>

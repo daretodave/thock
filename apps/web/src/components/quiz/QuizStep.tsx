@@ -31,7 +31,7 @@ export function QuizStep({ question, options, selected, onSelect, autoFocus = fa
       <h2
         ref={headingRef}
         tabIndex={-1}
-        className="text-h3 font-serif text-text mb-6 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu rounded-sm"
+        className="text-h3 font-serif text-text mb-6 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu rounded-xs"
       >
         {question}
       </h2>
@@ -46,7 +46,7 @@ export function QuizStep({ question, options, selected, onSelect, autoFocus = fa
               onClick={() => onSelect(opt.value)}
               className={[
                 'w-full text-left px-5 py-4 rounded-lg border transition-colors',
-                'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu',
+                'focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu',
                 isSelected
                   ? 'border-accent-mu bg-surface text-text'
                   : 'border-border bg-bg-2 text-text-2 hover:border-border-hi hover:text-text',

@@ -167,7 +167,7 @@ Z:/keyboard/                              # repo root (will be renamed by user)
 │   │   │   └── styles/
 │   │   ├── public/
 │   │   ├── next.config.mjs
-│   │   ├── tailwind.config.ts
+│   │   ├── postcss.config.mjs           # Tailwind 4 (theme + @source in src/app/globals.css)
 │   │   └── package.json
 │   └── e2e/                              # Playwright workspace — @thock/e2e
 │       ├── tests/

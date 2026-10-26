@@ -71,7 +71,7 @@ export function TrendingTile({
 }: TrendingTileProps): ReactElement {
   const deltaText = formatDelta(delta, dir)
   const className =
-    'flex min-h-[110px] flex-col gap-2 bg-bg p-4 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu'
+    'flex min-h-[110px] flex-col gap-2 bg-bg p-4 rounded-xs focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu'
   const content = (
     <>
       <div className="flex items-center gap-2">

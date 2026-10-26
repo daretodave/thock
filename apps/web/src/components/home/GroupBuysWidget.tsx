@@ -102,7 +102,7 @@ export function GroupBuysWidget({
         />
         <span
           data-testid="widget-kicker"
-          className="font-mono uppercase tracking-[0.1em] text-micro text-text-2"
+          className="font-mono uppercase tracking-widest text-micro text-text-2"
         >
           {kicker}
         </span>
@@ -120,7 +120,7 @@ export function GroupBuysWidget({
       </div>
       <Link
         href="/group-buys"
-        className="mt-2 rounded-sm font-mono uppercase tracking-[0.08em] text-micro text-accent hover:text-accent-hi focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+        className="mt-2 rounded-xs font-mono uppercase tracking-[0.08em] text-micro text-accent hover:text-accent-hi focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
       >
         all active group buys →
       </Link>

@@ -22,26 +22,26 @@ export default function PartIndexNotFound() {
         <div className="flex flex-wrap gap-x-6 gap-y-2 font-mono text-small uppercase tracking-[0.08em] text-text-2">
           <Link
             href="/part/switch"
-            className="rounded-sm hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+            className="rounded-xs hover:text-text focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
           >
             /part/switch
           </Link>
           <Link
             href="/part/keycap-set"
-            className="rounded-sm hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+            className="rounded-xs hover:text-text focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
           >
             /part/keycap-set
           </Link>
           <Link
             href="/part/board"
-            className="rounded-sm hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+            className="rounded-xs hover:text-text focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
           >
             /part/board
           </Link>
         </div>
         <Link
           href="/"
-          className="rounded-sm font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+          className="rounded-xs font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
         >
           ← back to home
         </Link>

@@ -59,7 +59,7 @@ export function TrackerRow({
             <Link
               data-testid="tracker-row-name-link"
               href={noteHref}
-              className="underline decoration-border-hi underline-offset-4 transition-colors hover:text-accent hover:decoration-accent rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+              className="underline decoration-border-hi underline-offset-4 transition-colors hover:text-accent hover:decoration-accent rounded-xs focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
             >
               {row.name}
             </Link>

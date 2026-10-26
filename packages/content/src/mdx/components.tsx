@@ -69,7 +69,7 @@ function AutoLink({
 function MdxTable({ children }: { children?: ReactNode }): ReactElement {
   return (
     <div className="my-8 -mx-4 overflow-x-auto sm:mx-0">
-      <table className="w-full min-w-[36rem] border-collapse text-left text-body">
+      <table className="w-full min-w-xl border-collapse text-left text-body">
         {children}
       </table>
     </div>

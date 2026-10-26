@@ -134,12 +134,12 @@ export function CitationIndex({ citations }: CitationIndexProps): ReactElement {
             className="flex flex-col gap-2 py-5 sm:grid sm:grid-cols-[1fr_auto] sm:gap-x-8 sm:items-baseline"
           >
             <div className="flex flex-col gap-1 min-w-0">
-              <h3 className="font-serif text-h3 text-text break-words">
+              <h3 className="font-serif text-h3 text-text wrap-break-word">
                 <a
                   href={href}
                   rel="noopener"
                   target="_blank"
-                  className="underline decoration-border-hi underline-offset-4 hover:text-accent hover:decoration-accent transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+                  className="underline decoration-border-hi underline-offset-4 hover:text-accent hover:decoration-accent transition-colors rounded-xs focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
                 >
                   {display}
                   <span aria-hidden="true"> ↗</span>
@@ -162,7 +162,7 @@ export function CitationIndex({ citations }: CitationIndexProps): ReactElement {
                   )}
                   <Link
                     href={`/article/${article.slug}`}
-                    className="text-text-2 hover:text-text transition-colors break-words rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+                    className="text-text-2 hover:text-text transition-colors wrap-break-word rounded-xs focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
                   >
                     {article.frontmatter.title}
                   </Link>

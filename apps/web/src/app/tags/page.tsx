@@ -84,7 +84,7 @@ export default function TagsPage(): ReactElement {
         <Link
           href="/archive"
           data-testid="tags-archive-link"
-          className="rounded-sm font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+          className="rounded-xs font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-accent transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
         >
           Browse by date →
         </Link>

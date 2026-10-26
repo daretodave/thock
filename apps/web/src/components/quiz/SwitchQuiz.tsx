@@ -124,7 +124,7 @@ export function SwitchQuiz({ switches }: Props) {
           <h2
             ref={resultsHeadingRef}
             tabIndex={-1}
-            className="text-h2 font-serif text-text mb-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu rounded-sm"
+            className="text-h2 font-serif text-text mb-2 focus:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu rounded-xs"
           >
             Your top matches
           </h2>
@@ -147,7 +147,7 @@ export function SwitchQuiz({ switches }: Props) {
               <Link
                 href={`/compare/switch?a=${results[0].switch.slug}&b=${results[1].switch.slug}`}
                 data-testid="quiz-compare-top-link"
-                className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+                className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text transition-colors rounded-xs focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
               >
                 Compare top 2 →
               </Link>
@@ -155,21 +155,21 @@ export function SwitchQuiz({ switches }: Props) {
             <Link
               href="/part/switch"
               data-testid="quiz-browse-all-link"
-              className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+              className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text transition-colors rounded-xs focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
             >
               Browse all switches →
             </Link>
             <Link
               href="/parts"
               data-testid="quiz-browse-all-parts-link"
-              className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+              className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text transition-colors rounded-xs focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
             >
               Browse all parts →
             </Link>
             <button
               type="button"
               onClick={handleReset}
-              className="text-small font-mono text-text-2 hover:text-text border border-border px-4 py-2 rounded hover:border-border-hi transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+              className="text-small font-mono text-text-2 hover:text-text border border-border px-4 py-2 rounded-sm hover:border-border-hi transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
             >
               Start over
             </button>

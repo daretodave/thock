@@ -112,7 +112,7 @@ export default function GroupBuysPage(): ReactElement {
           <Link
             href="/vendors"
             data-testid="group-buys-vendors-link"
-            className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+            className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text rounded-xs focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
           >
             Browse vendors →
           </Link>
@@ -182,7 +182,7 @@ export default function GroupBuysPage(): ReactElement {
             <Link
               data-testid="group-buys-archive-link"
               href="/group-buys/past"
-              className="font-mono text-micro uppercase tracking-[0.08em] text-text-2 hover:text-text rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+              className="font-mono text-micro uppercase tracking-[0.08em] text-text-2 hover:text-text rounded-xs focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
             >
               view full archive →
             </Link>

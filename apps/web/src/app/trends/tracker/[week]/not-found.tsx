@@ -18,7 +18,7 @@ export default function TrackerWeekNotFound() {
           </p>
           <Link
             href="/trends/tracker"
-            className="rounded-sm font-mono text-small uppercase tracking-[0.08em] text-accent hover:text-accent-hi focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+            className="rounded-xs font-mono text-small uppercase tracking-[0.08em] text-accent hover:text-accent-hi focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
           >
             ← Back to latest tracker
           </Link>

@@ -51,7 +51,7 @@ export function PartHero({ part }: PartHeroProps): ReactElement {
             <Link
               href={`/vendor/${vendor.slug}`}
               data-testid="part-hero-vendor"
-              className="hover:text-text rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+              className="hover:text-text rounded-xs focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
             >
               by {vendor.name}
             </Link>
@@ -71,7 +71,7 @@ export function PartHero({ part }: PartHeroProps): ReactElement {
             data-testid="part-hero-vendor-link"
             rel="sponsored noopener"
             target="_blank"
-            className="w-fit font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+            className="w-fit font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text rounded-xs focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
           >
             View at vendor ↗
           </a>

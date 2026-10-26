@@ -19,13 +19,13 @@ export default function NewsLoading() {
       </Container>
       <Container as="section" className="pb-12 sm:pb-16">
         <Stack gap={5}>
-          <div className="aspect-[16/10] animate-pulse bg-surface" />
+          <div className="aspect-16/10 animate-pulse bg-surface" />
           {Array.from({ length: 3 }).map((_, i) => (
             <div
               key={i}
               className="grid grid-cols-1 gap-4 border-t border-border py-5 sm:grid-cols-[200px_1fr] sm:gap-6"
             >
-              <div className="aspect-[4/3] animate-pulse bg-surface" />
+              <div className="aspect-4/3 animate-pulse bg-surface" />
               <div className="flex flex-col gap-3">
                 <div className="h-4 w-1/4 animate-pulse bg-surface" />
                 <div className="h-6 w-3/4 animate-pulse bg-surface" />

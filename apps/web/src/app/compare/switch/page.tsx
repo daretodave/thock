@@ -129,7 +129,7 @@ export default async function CompareSwitchPage({
             <Link
               href="/quiz/switch"
               data-testid="compare-quiz-link"
-              className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+              className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text transition-colors rounded-xs focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
             >
               Not sure? Take the quiz →
             </Link>

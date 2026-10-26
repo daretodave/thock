@@ -73,8 +73,8 @@ export function ButtondownForm({
           placeholder="you@example.com"
           className={
             isFooter
-              ? 'flex-1 border border-border bg-surface px-3 py-2 text-small text-text placeholder:text-text-2 focus:outline-none focus:border-border-hi focus:ring-2 focus:ring-accent focus:ring-offset-1 focus:ring-offset-bg'
-              : 'flex-1 border border-border bg-surface px-4 py-3 text-body text-text placeholder:text-text-2 focus:outline-none focus:border-border-hi focus:ring-2 focus:ring-accent focus:ring-offset-1 focus:ring-offset-bg'
+              ? 'flex-1 border border-border bg-surface px-3 py-2 text-small text-text placeholder:text-text-2 focus:outline-hidden focus:border-border-hi focus:ring-2 focus:ring-accent focus:ring-offset-1 focus:ring-offset-bg'
+              : 'flex-1 border border-border bg-surface px-4 py-3 text-body text-text placeholder:text-text-2 focus:outline-hidden focus:border-border-hi focus:ring-2 focus:ring-accent focus:ring-offset-1 focus:ring-offset-bg'
           }
         />
         <input
@@ -82,8 +82,8 @@ export function ButtondownForm({
           value="Subscribe"
           className={
             isFooter
-              ? 'cursor-pointer border border-border-hi px-4 py-2 font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-1 focus:ring-offset-bg'
-              : 'cursor-pointer border border-accent-mu px-6 py-3 font-mono text-small uppercase tracking-[0.08em] text-accent hover:text-accent-hi transition-colors focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-1 focus:ring-offset-bg'
+              ? 'cursor-pointer border border-border-hi px-4 py-2 font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text transition-colors focus:outline-hidden focus:ring-2 focus:ring-accent focus:ring-offset-1 focus:ring-offset-bg'
+              : 'cursor-pointer border border-accent-mu px-6 py-3 font-mono text-small uppercase tracking-[0.08em] text-accent hover:text-accent-hi transition-colors focus:outline-hidden focus:ring-2 focus:ring-accent focus:ring-offset-1 focus:ring-offset-bg'
           }
         />
       </div>
@@ -95,7 +95,7 @@ export function ButtondownForm({
           href={REFER}
           target="_blank"
           rel="noopener"
-          className="rounded-sm hover:text-text focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+          className="rounded-xs hover:text-text focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
         >
           Powered by Buttondown.
           <span aria-hidden="true"> ↗</span>

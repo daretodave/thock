@@ -37,7 +37,7 @@ export function ResultCard({ sw, score, maxScore, rank }: Props) {
             >
               <Link
                 href={`/part/switch/${sw.slug}`}
-                className="hover:text-accent transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+                className="hover:text-accent transition-colors rounded-xs focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
               >
                 {sw.name}
               </Link>

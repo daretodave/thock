@@ -84,7 +84,7 @@ export function ArticleCard({
   const pillar = pillarLabel(fm.pillar)
 
   const eyebrow = (
-    <span className="font-mono uppercase tracking-[0.1em] text-micro text-accent">
+    <span className="font-mono uppercase tracking-widest text-micro text-accent">
       {pillar}
     </span>
   )
@@ -105,10 +105,10 @@ export function ArticleCard({
       <Link
         href={path}
         data-testid="hero-card"
-        className="group flex flex-col gap-5 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu lg:grid lg:grid-cols-[1.4fr_1fr] lg:items-center lg:gap-8"
+        className="group flex flex-col gap-5 rounded-xs focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu lg:grid lg:grid-cols-[1.4fr_1fr] lg:items-center lg:gap-8"
       >
         {fm.heroImage ? (
-          <div className="relative aspect-[16/10] overflow-hidden">
+          <div className="relative aspect-16/10 overflow-hidden">
             <Image
               src={fm.heroImage}
               alt={fm.heroImageAlt ?? ''}
@@ -120,7 +120,7 @@ export function ArticleCard({
           </div>
         ) : (
           <PlaceholderImage
-            className="aspect-[16/10]"
+            className="aspect-16/10"
             label="thock · hero"
           />
         )}
@@ -145,10 +145,10 @@ export function ArticleCard({
       <Link
         href={path}
         data-testid="article-card-row"
-        className="group grid grid-cols-1 items-start gap-4 rounded-sm border-t border-border py-5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu sm:grid-cols-[200px_1fr] sm:gap-6 first:border-t-0 first:pt-0"
+        className="group grid grid-cols-1 items-start gap-4 rounded-xs border-t border-border py-5 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu sm:grid-cols-[200px_1fr] sm:gap-6 first:border-t-0 first:pt-0"
       >
         {fm.heroImage ? (
-          <div className="relative aspect-[4/3] overflow-hidden">
+          <div className="relative aspect-4/3 overflow-hidden">
             <Image
               src={fm.heroImage}
               alt={fm.heroImageAlt ?? ''}
@@ -158,7 +158,7 @@ export function ArticleCard({
             />
           </div>
         ) : (
-          <PlaceholderImage className="aspect-[4/3]" label="row" />
+          <PlaceholderImage className="aspect-4/3" label="row" />
         )}
         <div className="flex flex-col gap-2">
           {eyebrow}
@@ -179,10 +179,10 @@ export function ArticleCard({
       <Link
         href={path}
         data-testid="article-card-large"
-        className="group flex flex-col gap-3 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+        className="group flex flex-col gap-3 rounded-xs focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
       >
         {fm.heroImage ? (
-          <div className="relative aspect-[4/3] overflow-hidden">
+          <div className="relative aspect-4/3 overflow-hidden">
             <Image
               src={fm.heroImage}
               alt={fm.heroImageAlt ?? ''}
@@ -192,7 +192,7 @@ export function ArticleCard({
             />
           </div>
         ) : (
-          <PlaceholderImage className="aspect-[4/3]" label="thock" />
+          <PlaceholderImage className="aspect-4/3" label="thock" />
         )}
         {eyebrow}
         <h3
@@ -210,7 +210,7 @@ export function ArticleCard({
     <Link
       href={path}
       data-testid="article-card-compact"
-      className="group flex flex-col gap-1 rounded-sm border-t border-border py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu first:border-t-0 first:pt-0"
+      className="group flex flex-col gap-1 rounded-xs border-t border-border py-3 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu first:border-t-0 first:pt-0"
     >
       {eyebrow}
       <h3

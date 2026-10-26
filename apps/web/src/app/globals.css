@@ -1,40 +1,111 @@
+/* Unlayered, as under Tailwind 3: tokens.css's :root font stacks
+   ('Newsreader', ...) win over the --thock-serif/-sans/-mono next/font
+   sets on <html>, so the site keeps the faces it has always drawn. In
+   layer(base), next/font's self-hosted faces would win instead. */
 @import '@thock/tokens/tokens.css';
-@import '../styles/components.css';
+@import '../styles/components.css' layer(base);
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-/* Skip-to-main-content link — WCAG 2.4.1 Bypass Blocks (A).
- * Visually hidden at rest; revealed on keyboard focus so sighted
- * keyboard users and screen-reader users can bypass the header. */
-.skip-link {
-  position: absolute;
-  left: -9999px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  z-index: -1;
+@source '../../../../packages/ui/src/**/*.{ts,tsx}';
+@source '../../../../packages/content/src/**/*.{ts,tsx}';
+
+@custom-variant dark (&:is(.thock-light *));
+
+@theme {
+  --color-bg: var(--thock-bg);
+  --color-bg-2: var(--thock-bg-2);
+  --color-surface: var(--thock-surface);
+  --color-surface-hi: var(--thock-surface-hi);
+  --color-border: var(--thock-border);
+  --color-border-hi: var(--thock-border-hi);
+  --color-text: var(--thock-text);
+  --color-text-2: var(--thock-text-2);
+  --color-text-3: var(--thock-text-3);
+  --color-text-4: var(--thock-text-4);
+  --color-accent: var(--thock-accent);
+  --color-accent-hi: var(--thock-accent-hi);
+  --color-accent-mu: var(--thock-accent-mu);
+  --color-up: var(--thock-up);
+  --color-down: var(--thock-down);
+  --color-flat: var(--thock-flat);
+  --color-tag-switch: var(--thock-tag-switch);
+  --color-tag-layout: var(--thock-tag-layout);
+  --color-tag-brand: var(--thock-tag-brand);
+  --color-tag-material: var(--thock-tag-material);
+  --color-tag-profile: var(--thock-tag-profile);
+
+  --font-serif: var(--thock-serif), Newsreader, Iowan Old Style, Georgia, serif;
+  --font-sans: var(--thock-sans), IBM Plex Sans, system-ui, sans-serif;
+  --font-mono: var(--thock-mono), JetBrains Mono, ui-monospace, monospace;
+
+  --text-micro: var(--thock-micro);
+  --text-micro--line-height: 1.4;
+  --text-small: var(--thock-small);
+  --text-small--line-height: 1.45;
+  --text-body: var(--thock-body);
+  --text-body--line-height: 1.55;
+  --text-h3: var(--thock-h3);
+  --text-h3--line-height: 1.3;
+  --text-h2: var(--thock-h2);
+  --text-h2--line-height: 1.2;
+  --text-h1: var(--thock-h1);
+  --text-h1--line-height: 1.1;
+  --text-display: var(--thock-display);
+  --text-display--line-height: 1.02;
+  --text-display--letter-spacing: -0.022em;
 }
 
-.skip-link:focus {
-  position: fixed;
-  left: 1rem;
-  top: 1rem;
-  width: auto;
-  height: auto;
-  overflow: visible;
-  z-index: 9999;
-  padding: 0.5rem 1rem;
-  background: var(--thock-bg);
-  color: var(--thock-text);
-  border: 2px solid var(--thock-accent);
-  border-radius: 4px;
-  font-family: var(--thock-mono);
-  font-size: var(--thock-small);
-  text-decoration: none;
-  white-space: nowrap;
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@layer utilities {
+  /* Skip-to-main-content link — WCAG 2.4.1 Bypass Blocks (A).
+ * Visually hidden at rest; revealed on keyboard focus so sighted
+ * keyboard users and screen-reader users can bypass the header. */
+  .skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -1;
+  }
+
+  .skip-link:focus {
+    position: fixed;
+    left: 1rem;
+    top: 1rem;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    z-index: 9999;
+    padding: 0.5rem 1rem;
+    background: var(--thock-bg);
+    color: var(--thock-text);
+    border: 2px solid var(--thock-accent);
+    border-radius: 4px;
+    font-family: var(--thock-mono);
+    font-size: var(--thock-small);
+    text-decoration: none;
+    white-space: nowrap;
+  }
 }
 
 @layer base {

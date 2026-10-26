@@ -56,14 +56,14 @@ export function ArticleHero({
           }
         >
           {/* TEXT BLOCK — stays in the 60ch column at every breakpoint. */}
-          <div className="flex flex-col gap-5 max-w-[60ch] xl:flex-shrink-0">
+          <div className="flex flex-col gap-5 max-w-[60ch] xl:shrink-0">
             <div
               data-testid="article-hero-eyebrow"
               className="font-mono uppercase tracking-[0.12em] text-micro text-accent"
             >
               <Link
                 href={pillarHref(pillar)}
-                className="rounded-sm hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+                className="rounded-xs hover:text-accent focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
               >
                 {pillarLabel(pillar)}
               </Link>
@@ -91,7 +91,7 @@ export function ArticleHero({
               data-testid="article-hero-image"
               className="w-full max-w-[60ch] xl:max-w-none xl:flex-1"
             >
-              <div className="relative aspect-[16/10] overflow-hidden rounded-md">
+              <div className="relative aspect-16/10 overflow-hidden rounded-md">
                 <Image
                   src={heroImage}
                   alt={heroImageAlt ?? ''}

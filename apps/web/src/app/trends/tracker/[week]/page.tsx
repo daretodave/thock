@@ -133,7 +133,7 @@ export default async function TrackerWeekPage({
         <Link
           href="/trends/tracker"
           data-testid="tracker-back-link"
-          className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+          className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text rounded-xs focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
         >
           ← Back to latest
         </Link>
@@ -181,7 +181,7 @@ export default async function TrackerWeekPage({
               <Link
                 href={`/trends/tracker/${prev}`}
                 data-testid="tracker-prev-week"
-                className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+                className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text rounded-xs focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
               >
                 ← {weekKicker(prev) ? `Week ${weekKicker(prev)!.week}, ${weekKicker(prev)!.year}` : prev}
               </Link>
@@ -199,7 +199,7 @@ export default async function TrackerWeekPage({
               <Link
                 href={nextIsLatest ? '/trends/tracker' : `/trends/tracker/${next}`}
                 data-testid="tracker-next-week"
-                className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+                className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text rounded-xs focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
               >
                 {nextIsLatest
                   ? 'Latest'
@@ -211,7 +211,7 @@ export default async function TrackerWeekPage({
               <Link
                 href="/trends/tracker"
                 data-testid="tracker-next-week"
-                className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+                className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text rounded-xs focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
               >
                 Latest →
               </Link>

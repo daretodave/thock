@@ -109,12 +109,12 @@ export function GroupBuyCountdownRow({
       data-testid="group-buy-row"
       data-urgent={isUrgent ? 'true' : 'false'}
       data-announced={isAnnounced ? 'true' : 'false'}
-      className="grid grid-cols-[1fr_auto] items-baseline gap-1.5 border-t border-border py-3 first:border-t-0 first:pt-0 hover:bg-surface-hi focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu sm:grid-cols-[40px_1fr_auto] sm:gap-x-3"
+      className="grid grid-cols-[1fr_auto] items-baseline gap-1.5 border-t border-border py-3 first:border-t-0 first:pt-0 hover:bg-surface-hi focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu sm:grid-cols-[40px_1fr_auto] sm:gap-x-3"
     >
       {groupBuy.heroImage ? (
         <div
           data-testid="group-buy-row-hero"
-          className="relative hidden aspect-[4/3] overflow-hidden border border-border self-center sm:block"
+          className="relative hidden aspect-4/3 overflow-hidden border border-border self-center sm:block"
         >
           <Image
             src={groupBuy.heroImage}
@@ -128,7 +128,7 @@ export function GroupBuyCountdownRow({
         <div
           aria-hidden="true"
           data-testid="group-buy-row-hero-placeholder"
-          className="hidden aspect-[4/3] border border-border bg-accent-mu/20 self-center sm:block"
+          className="hidden aspect-4/3 border border-border bg-accent-mu/20 self-center sm:block"
         />
       )}
       <div className="flex flex-col gap-0.5">
@@ -156,10 +156,10 @@ export function GroupBuyCountdownRow({
       </span>
       <div
         aria-hidden="true"
-        className="col-span-2 mt-1 h-0.5 rounded-sm bg-border sm:col-span-3"
+        className="col-span-2 mt-1 h-0.5 rounded-xs bg-border sm:col-span-3"
       >
         <div
-          className={`h-full rounded-sm ${
+          className={`h-full rounded-xs ${
             isUrgent ? 'bg-accent' : 'bg-text-2'
           }`}
           style={{ width: `${(fraction * 100).toFixed(2)}%` }}

@@ -203,7 +203,7 @@ export function InlineViz({
         type="button"
         onClick={() => setZoomed(true)}
         aria-label={`Zoom diagram: ${alt}`}
-        className="block w-full cursor-zoom-in p-0 m-0 bg-transparent border-0 text-left appearance-none rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+        className="block w-full cursor-zoom-in p-0 m-0 bg-transparent border-0 text-left appearance-none rounded-xs focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
       >
         <img
           src={src}
@@ -227,7 +227,7 @@ export function InlineViz({
           aria-modal="true"
           aria-label={alt}
           onClick={() => setZoomed(false)}
-          className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-black/90 backdrop-blur-sm animate-[thock-viz-fade_120ms_ease-out]"
+          className="fixed inset-0 z-100 flex flex-col items-center justify-center bg-black/90 backdrop-blur-xs animate-[thock-viz-fade_120ms_ease-out]"
           style={{
             paddingTop: 'max(env(safe-area-inset-top), 1rem)',
             paddingBottom: 'max(env(safe-area-inset-bottom), 1rem)',
@@ -243,7 +243,7 @@ export function InlineViz({
               e.stopPropagation()
               setZoomed(false)
             }}
-            className="absolute top-3 right-3 z-10 inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white text-2xl leading-none hover:bg-white/20 focus:outline-none focus:ring-2 focus:ring-white/60"
+            className="absolute top-3 right-3 z-10 inline-flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white text-2xl leading-none hover:bg-white/20 focus:outline-hidden focus:ring-2 focus:ring-white/60"
             style={{
               top: 'max(env(safe-area-inset-top), 0.75rem)',
               right: 'max(env(safe-area-inset-right), 0.75rem)',

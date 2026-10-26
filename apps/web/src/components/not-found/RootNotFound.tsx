@@ -51,11 +51,11 @@ export function RootNotFound(): ReactElement {
             type="search"
             name="q"
             placeholder="search articles, switches, builds…"
-            className="flex-1 border border-border bg-surface px-4 py-3 text-body text-text placeholder:text-text-2 focus:outline-none focus:border-border-hi focus:ring-2 focus:ring-accent focus:ring-offset-1 focus:ring-offset-bg"
+            className="flex-1 border border-border bg-surface px-4 py-3 text-body text-text placeholder:text-text-2 focus:outline-hidden focus:border-border-hi focus:ring-2 focus:ring-accent focus:ring-offset-1 focus:ring-offset-bg"
           />
           <button
             type="submit"
-            className="border border-accent-mu px-6 py-3 font-mono text-small uppercase tracking-[0.08em] text-accent hover:text-accent-hi transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+            className="border border-accent-mu px-6 py-3 font-mono text-small uppercase tracking-[0.08em] text-accent hover:text-accent-hi transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
           >
             Search
           </button>
@@ -70,7 +70,7 @@ export function RootNotFound(): ReactElement {
             <Link
               key={p.href}
               href={p.href}
-              className="rounded-sm font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+              className="rounded-xs font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-accent transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
             >
               {p.label} →
             </Link>

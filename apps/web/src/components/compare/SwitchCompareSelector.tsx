@@ -44,8 +44,8 @@ export function SwitchCompareSelector({
   }
 
   const selectClass =
-    'bg-surface border border-border rounded px-3 py-2 text-body text-text font-mono ' +
-    'focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-1 focus:ring-offset-bg ' +
+    'bg-surface border border-border rounded-sm px-3 py-2 text-body text-text font-mono ' +
+    'focus:outline-hidden focus:ring-2 focus:ring-accent focus:ring-offset-1 focus:ring-offset-bg ' +
     'min-w-0 flex-1'
 
   return (
@@ -107,8 +107,8 @@ export function SwitchCompareSelector({
           disabled={!canCompare}
           aria-describedby={showSameSelectionHint ? 'compare-same-selection-hint' : undefined}
           className={
-            'px-5 py-2 rounded font-mono text-small uppercase tracking-[0.08em] transition-colors ' +
-            'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu ' +
+            'px-5 py-2 rounded-sm font-mono text-small uppercase tracking-[0.08em] transition-colors ' +
+            'focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu ' +
             (canCompare
               ? 'bg-accent text-bg hover:bg-accent/90 cursor-pointer'
               : 'bg-surface text-text-3 cursor-not-allowed')

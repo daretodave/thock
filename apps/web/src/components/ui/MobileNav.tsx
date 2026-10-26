@@ -82,7 +82,7 @@ export function MobileNav(): ReactElement {
         aria-controls={menuId}
         data-testid="mobile-nav-toggle"
         onClick={() => setOpen((v) => !v)}
-        className="inline-flex h-9 w-9 items-center justify-center border border-border text-text-2 hover:text-text hover:border-border-hi transition-colors md:hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu"
+        className="inline-flex h-9 w-9 items-center justify-center border border-border text-text-2 hover:text-text hover:border-border-hi transition-colors md:hidden focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
       >
         {open ? (
           <svg
@@ -135,7 +135,7 @@ export function MobileNav(): ReactElement {
                     href={pillar.href}
                     onClick={() => setOpen(false)}
                     aria-current={active ? 'page' : undefined}
-                    className={`block py-3 font-serif text-h3 transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu ${
+                    className={`block py-3 font-serif text-h3 transition-colors rounded-xs focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu ${
                       active ? 'text-accent' : 'text-text hover:text-accent'
                     }`}
                   >
@@ -150,7 +150,7 @@ export function MobileNav(): ReactElement {
                 data-testid="mobile-nav-tools-link"
                 onClick={() => setOpen(false)}
                 aria-current={isToolsActive(pathname) ? 'page' : undefined}
-                className={`block py-3 font-serif text-h3 transition-colors rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-mu ${
+                className={`block py-3 font-serif text-h3 transition-colors rounded-xs focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu ${
                   isToolsActive(pathname) ? 'text-accent' : 'text-text hover:text-accent'
                 }`}
               >
