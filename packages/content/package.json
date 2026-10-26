@@ -17,7 +17,7 @@
     "@thock/data": "workspace:*",
     "@thock/ui": "workspace:*",
     "gray-matter": "^4.0.3",
-    "zod": "^4.4.3"
+    "zod": "^4.6.6"
   },
   "peerDependencies": {
     "next": "^16.0.0",
