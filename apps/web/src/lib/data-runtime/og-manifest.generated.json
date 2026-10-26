@@ -9756,7 +9756,320 @@
           "articleSlug": "zmk-mainstream-shift"
         }
       ]
+    },
+    {
+      "isoWeek": "2026-W44",
+      "publishedAt": "2026-10-26T00:00:00.000Z",
+      "updatedAt": "2026-10-26T16:45:17.000Z",
+      "rows": [
+        {
+          "name": "Hall Effect/Rapid Trigger",
+          "category": "switch",
+          "direction": "down",
+          "score": 95,
+          "spark": [
+            98,
+            97,
+            98,
+            98,
+            99,
+            100,
+            100,
+            95
+          ],
+          "articleSlug": "hall-effect-rapid-trigger-plateau"
+        },
+        {
+          "name": "Cherry MX2A",
+          "category": "switch",
+          "direction": "flat",
+          "score": -12,
+          "spark": [
+            -58,
+            -50,
+            -42,
+            -35,
+            -20,
+            -10,
+            -10,
+            -12
+          ],
+          "articleSlug": "cherry-mx2a-revision"
+        },
+        {
+          "name": "TMR (Tunnel Magnetoresistance) switches",
+          "category": "switch",
+          "direction": "flat",
+          "score": 92,
+          "spark": [
+            50,
+            55,
+            63,
+            71,
+            85,
+            90,
+            90,
+            92
+          ],
+          "articleSlug": "keychron-q16-he-8k-ceramic-tmr"
+        },
+        {
+          "name": "Gateron Magnetic Jade Delta",
+          "category": "switch",
+          "direction": "flat",
+          "score": 74,
+          "spark": [
+            74,
+            77,
+            79,
+            84,
+            80,
+            75,
+            75,
+            74
+          ],
+          "articleSlug": "gateron-magnetic-jade-deep-dive"
+        },
+        {
+          "name": "Gateron Oil King",
+          "category": "switch",
+          "direction": "flat",
+          "score": 60,
+          "spark": [
+            47,
+            52,
+            58,
+            64,
+            62,
+            60,
+            60,
+            60
+          ],
+          "articleSlug": "gateron-oil-king-deep-dive"
+        },
+        {
+          "name": "Durock T1",
+          "category": "switch",
+          "direction": "flat",
+          "score": 35,
+          "spark": [
+            45,
+            45,
+            46,
+            44,
+            40,
+            35,
+            35,
+            35
+          ],
+          "articleSlug": "durock-t1-deep-dive"
+        },
+        {
+          "name": "GMK CYL Red Devils R2",
+          "category": "keycap",
+          "direction": "down",
+          "score": 28,
+          "spark": [
+            40,
+            52,
+            60,
+            68,
+            60,
+            40,
+            32,
+            28
+          ],
+          "articleSlug": "gmk-cyl-red-devils-r2-comeback"
+        },
+        {
+          "name": "GMK CYL Zombie",
+          "category": "keycap",
+          "direction": "down",
+          "score": 40,
+          "spark": [
+            10,
+            15,
+            25,
+            40,
+            55,
+            70,
+            45,
+            40
+          ],
+          "articleSlug": "gmk-cyl-zombie-group-buy"
+        },
+        {
+          "name": "DCS Dolch / Molch",
+          "category": "keycap",
+          "direction": "flat",
+          "score": 50,
+          "spark": [
+            26,
+            20,
+            16,
+            24,
+            30,
+            45,
+            50,
+            50
+          ],
+          "articleSlug": "divinikey-dcs-dolch-group-buy"
+        },
+        {
+          "name": "Split/Ergo layout",
+          "category": "layout",
+          "direction": "down",
+          "score": 96,
+          "spark": [
+            96,
+            98,
+            99,
+            100,
+            100,
+            100,
+            100,
+            96
+          ],
+          "articleSlug": "split-ergo-cohort"
+        },
+        {
+          "name": "Alice layout",
+          "category": "layout",
+          "direction": "flat",
+          "score": 5,
+          "spark": [
+            -40,
+            -30,
+            -18,
+            -8,
+            -5,
+            0,
+            5,
+            5
+          ],
+          "articleSlug": "alice-layout-decline"
+        },
+        {
+          "name": "75% Layout",
+          "category": "layout",
+          "direction": "flat",
+          "score": 80,
+          "spark": [
+            64,
+            68,
+            71,
+            76,
+            78,
+            82,
+            82,
+            80
+          ],
+          "articleSlug": "75-percent-default"
+        },
+        {
+          "name": "CannonKeys",
+          "category": "vendor",
+          "direction": "down",
+          "score": 50,
+          "spark": [
+            39,
+            44,
+            52,
+            44,
+            50,
+            55,
+            55,
+            50
+          ],
+          "articleSlug": "cannonkeys-blaine-v2-se-group-buy"
+        },
+        {
+          "name": "Mode Designs",
+          "category": "vendor",
+          "direction": "flat",
+          "score": 70,
+          "spark": [
+            89,
+            93,
+            97,
+            98,
+            95,
+            72,
+            72,
+            70
+          ],
+          "articleSlug": "mode-sonnet-r2-group-buy-coverage"
+        },
+        {
+          "name": "Prototypist",
+          "category": "vendor",
+          "direction": "flat",
+          "score": 66,
+          "spark": [
+            42,
+            42,
+            43,
+            49,
+            52,
+            58,
+            65,
+            66
+          ],
+          "articleSlug": "prototypist-vendor-spotlight"
+        },
+        {
+          "name": "Keychron",
+          "category": "brand",
+          "direction": "down",
+          "score": 97,
+          "spark": [
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            100,
+            97
+          ],
+          "articleSlug": "keychron-quiet-takeover"
+        },
+        {
+          "name": "Wooting",
+          "category": "brand",
+          "direction": "flat",
+          "score": 90,
+          "spark": [
+            68,
+            74,
+            80,
+            83,
+            88,
+            92,
+            92,
+            90
+          ],
+          "articleSlug": "wooting-80he-plus-shipping-update"
+        },
+        {
+          "name": "ZMK firmware",
+          "category": "brand",
+          "direction": "flat",
+          "score": 67,
+          "spark": [
+            30,
+            38,
+            48,
+            56,
+            65,
+            68,
+            68,
+            67
+          ],
+          "articleSlug": "zmk-mainstream-shift"
+        }
+      ]
     }
   ],
-  "generatedAt": "2026-10-26T00:10:44.943Z"
+  "generatedAt": "2026-10-26T16:56:35.243Z"
 }
