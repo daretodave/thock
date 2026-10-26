@@ -7,11 +7,10 @@ review checkpoint. Read `skills/jot.md` end to end before
 touching anything else; that file is the single source of
 truth for this command.
 
-The user has spotted something on https://thock.xyz
-(or in `pnpm dev`, or in the data) and wants to capture it
-before they forget. Your job: file one row to
-`plan/CRITIQUE.md`, commit, push, exit. Target end-to-end
-<10 seconds.
+The user has spotted something on the live site (or in the
+build, or in the data) and wants to capture it before they
+forget. Your job: file one row to `plan/CRITIQUE.md`, commit,
+push, exit. Target end-to-end <10 seconds.
 
 Argument handling:
 - Free-text observation is the body. Required.
@@ -20,22 +19,20 @@ Argument handling:
 - `--category <cat>` → explicit category override (default:
   inferred from observation text per §4 heuristics).
 - `--authenticated` → mark `auth_state: authenticated`
-  (default: `anonymous`; thock's surface is currently public).
+  (default: `anonymous`).
 
 Hard rules:
 - **Never ask questions back.** The user provided the input;
-  decide the rest. Hard rule #6 (only `/oversight` asks)
-  stands.
+  decide the rest. Hard rule #6 (`AskUserQuestion` confined to
+  `/oversight` and `/bootstrap`) stands.
 - **No verify gate, no deploy gate.** No code change; nothing
   to verify or deploy.
-- **Atomic commit + push.** Otherwise the cloud /march tick
-  can't see the new finding.
-- **`source: user`** on the row. Never spoof for non-user
+- **Atomic commit + land.** Otherwise the cloud loop can't
+  see the new finding.
+- **`source: user` on the row.** Never spoof for non-user
   entries.
 - **Commit subject is lowercase `jot:`** followed by a ≤70
   char summary.
-- **Lowercase "thock"** if the summary mentions the project
-  name.
 
 Procedure: §4 of `skills/jot.md`. Failure modes: §7. Hard
 rules: §6.
@@ -46,9 +43,8 @@ row; user-source findings carry a +0.5 score bump (capped at
 10) so they typically beat auto-detected findings at the same
 severity.
 
-If the user wants the jot acted on **right now** (rather than
-waiting for the cloud march cadence), they can follow with
-`/iterate` directly — the new row will almost certainly win
-the next pass.
+If the user wants the jot acted on **right now**, they can
+follow with `/iterate` directly — the new row will almost
+certainly win the next pass.
 
 Argument: $ARGUMENTS

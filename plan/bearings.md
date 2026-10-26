@@ -129,9 +129,9 @@ Z:/keyboard/                              # repo root (will be renamed by user)
 │   └── agents/<name>.md                  # sub-agent definitions
 │
 ├── skills/                               # source-of-truth skill files
-│   ├── ship-a-phase.md
+│   ├── ship-a-chunk.md
 │   ├── ship-data.md
-│   ├── plan-a-phase.md
+│   ├── plan-a-spec.md
 │   ├── iterate.md
 │   └── march.md
 │
@@ -139,7 +139,7 @@ Z:/keyboard/                              # repo root (will be renamed by user)
 │   ├── README.md
 │   ├── bearings.md                       # this file
 │   ├── AUDIT.md                          # latest /iterate findings (rewritten by audit)
-│   ├── steps/01_build_plan.md            # at-a-glance status + per-phase scope
+│   ├── plan/README.md            # at-a-glance status + per-phase scope
 │   └── phases/phase_<N>_<topic>.md       # per-phase briefs
 │
 ├── design/                               # design exports (user-emitted, async)
@@ -252,7 +252,7 @@ parallelize and protect main-agent context.
 | `content-curator` | Need a new MDX article drafted or an existing one polished | A complete MDX file written to `apps/web/src/content/articles/` |
 | `data-steward` | Schema-heavy work (new entity type, schema migration, mass cross-ref repair) | Modified Zod schemas + loaders + validator-passing records |
 | `reader` | Fresh-eyes critique of the live site | Structured JSON findings — drained by `/critique` |
-| `brander` | Render a brand asset (OG image, favicon, social card, SVG → PNG, wordmark variants). Spawned by `/ship-asset` (or inline by `/ship-a-phase` when a phase brief names an asset deliverable); never directly by the main agent | Rendered file paths + sibling provenance JSON |
+| `brander` | Render a brand asset (OG image, favicon, social card, SVG → PNG, wordmark variants). Spawned by `/ship-asset` (or inline by `/ship-a-chunk` when a phase brief names an asset deliverable); never directly by the main agent | Rendered file paths + sibling provenance JSON |
 
 The main agent does not write articles, research the open web,
 or render images itself. Delegate.
@@ -440,7 +440,7 @@ agent. The agent spawns `brander` for any viz it can't
 hand-author directly (multi-resolution, template-driven,
 etc.). The historical-article retrofit shipped 2026-05-14
 across all 40 articles (80 viz total) — see
-`PHASE_CANDIDATES.md` § Promoted. Going forward this rule is
+`CANDIDATES.md` § Promoted. Going forward this rule is
 write-time only; there is no remaining backlog to drain.
 
 ## Content velocity & editorial cadence (locked 2026-05-10 via /oversight)
@@ -508,7 +508,7 @@ the board. In ~20 days the first articles begin aging out; the
 rule will surface its first natural shortfall then.
 
 **Implementation:** the audit-row generator promoted as candidate
-[7.0] in `plan/PHASE_CANDIDATES.md` (`scripts/content-gap-survey.mjs`)
+[7.0] in `plan/CANDIDATES.md` (`scripts/content-gap-survey.mjs`)
 computes the window counts and files the row. Until that helper
 ships, the rule is enforced by manual audit at `/oversight` time.
 
@@ -615,7 +615,7 @@ write?"
 `/expand` reads accumulated signals (audit findings, critique
 findings, GH issues, spec drift, design landings, data growth)
 and proposes new phase candidates to
-`plan/PHASE_CANDIDATES.md`. `/oversight` promotes them to the
+`plan/CANDIDATES.md`. `/oversight` promotes them to the
 build plan (or rejects).
 
 Why bold for thock:
@@ -635,7 +635,7 @@ Why bold for thock:
 
 If boldness becomes friction at any point, change this
 section to `Mode: strict` and `/expand` becomes a no-op. The
-build plan then grows only via manual `/plan-a-phase` or
+build plan then grows only via manual `/plan-a-spec` or
 `/oversight` from then on.
 
 ## Decisions standing for the autonomous loop
@@ -806,3 +806,28 @@ pnpm format                     # prettier --write
 - The deploy gate reads the Vercel REST API. The secrets it
   needs are `VERCEL_TOKEN` and `VERCEL_TEAM_ID`, both in `.env`
   (gitignored). See `agents.md` "Operational secrets" for setup.
+
+## Loop knobs
+
+Written by `nexus upgrade` (2026-10-26) at the values that keep the v1 loop's
+behaviour. Turn them up together with `Improve:` (off, gentle, steady, bold;
+the lines below override it), or each on its own, later: `Support:`
+(`nexus/customization/support.md`), `Promote:` and `stall_action`
+(aged promotion, the motion heartbeat), `loop:` (`/iterate` dimension
+I), `UI:` (the browser walk).
+
+- Improve: gentle
+- Support: triage-only
+- Promote: owner
+- stall_action: alert
+- loop: off
+
+**UI:** `none`
+
+## Generators
+
+When no chunk is ready, `/march`'s stock `refill` lane runs each
+generator listed here (`nexus/concepts/generators.md`). None listed
+means refill is a no-op.
+
+- (none)

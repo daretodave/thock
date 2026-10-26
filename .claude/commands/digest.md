@@ -1,33 +1,22 @@
 ---
-description: The night shift — write the morning briefing (plan/DIGEST.md) from the day's pulse, run the nightly breadth check (full pnpm verify), propose tunings as candidates. Runs nightly via night.yml; never dispatched by /march.
+description: The night shift — morning briefing (plan/DIGEST.md), nightly breadth checks, tuning proposals as candidates.
 ---
 
-You are invoked under the `digest` skill — full autonomy, no
-review checkpoint. Read `skills/digest.md` end to end before
-touching anything else; that file is the single source of
-truth for this command.
+You are invoked under the `digest` skill — the nightly loop
+shape, not a dispatcher verb. Read `skills/digest.md` end to
+end before touching anything else.
 
-Your job: one nightly pass — pull, gather the pulse (git log,
-march/lighthouse/night run lists, queue states, deploy state),
-run the full `pnpm verify` as the breadth check (FOREGROUND;
-red legs become HIGH plan/AUDIT.md rows, not fixes), overwrite
-`plan/DIGEST.md` whole with the morning briefing, file any
-tuning proposals as `plan/PHASE_CANDIDATES.md` candidates,
-then one commit `digest: <YYYY-MM-DD>`, push, and
-`pnpm deploy:check`.
+Argument handling:
+- No argument → the full nightly pass.
 
-Hard rules:
-- **The digest's own commit is notes-only** (`plan/` prose;
-  the `/jot` carve-out). The verify run is breadth, not the
-  commit's gate — a red run files a finding and the digest
-  still ships.
-- **Breadth runs foreground.** Never `run_in_background` —
-  agents.md §3 applies to every gate invocation.
-- **Ship nothing else.** The night shift briefs; the
-  dispatcher ships.
-- **Proposals, never actions.** Only `/oversight` promotes.
-- **Atomic commit + push.** Cloud ticks carry the
-  `Cloud-Run:` trailer.
+Procedure: §3. Hard rules: §4. Failure modes: §5. Two rails
+that matter most: breadth failures become findings (the
+dispatcher fixes them tomorrow), and tuning proposals become
+candidates — the loop does not vote on its own
+constraints.
 
-Procedure: §3 of `skills/digest.md`. Failure modes: §5. Hard
-rules: §4.
+When invoked from the night workflow, the user is not
+present. One commit (`digest: <YYYY-MM-DD>`), push, return
+cleanly.
+
+Argument: $ARGUMENTS

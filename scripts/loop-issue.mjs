@@ -4,64 +4,76 @@
 // "Loop issue mirror" — opens / closes GitHub issues that mirror
 // the autonomous loop's work. Two flavors:
 //
-//   1) /iterate findings (one issue per finding — "open" + "close-comment").
-//      Phase 15a contract.
+//   1) /iterate findings (one issue per finding — "open" + "close-comment")
+//      The shipping commit's `Closes #N` trailer auto-closes.
 //
-//   2) Phases (one issue per phase, find-or-create-or-reopen — "phase-open"
-//      + "phase-close"). Idempotent across ticks: if an issue with the
-//      phase title prefix already exists open, reuse it; if closed,
-//      reopen and log a "phase work resumed" comment; if none, create.
+//   2) Specs (one issue per spec, find-or-create-or-reopen — "spec-open"
+//      + "spec-close"). Idempotent across ticks: if an issue with the
+//      spec title already exists open, reuse it; if closed, reopen and
+//      log a "spec work resumed" comment; if none, create.
+//      "phase-open" / "phase-close" are the deprecated v1 names: they
+//      still work (title "Phase <id> — ", label loop:phase) and warn.
 //
 // Subcommands:
 //
 //   open --severity <high|med|low>
-//        --category <bug|enhancement|content|data|docs|seo|a11y|perf>
+//        --category <bug|enhancement|content|data|docs|seo|a11y|perf|ui>
 //        --source <user|reader|audit|external>
 //        --title "<title>"
 //        --body-file <path>
 //
-//     Creates a new issue. Echoes the issue number to stdout
-//     (just the number, nothing else, for clean shell capture).
-//     Exits 0 on success, 1 on failure (caller falls back to
-//     "no issue, just ship" — mirror is best-effort).
+//     Creates a new issue. Echoes the issue number on stdout (just
+//     the number; clean for shell capture). Exits 0 on success, 1
+//     on failure (caller falls back to "no issue, just ship" — the
+//     mirror is best-effort).
 //
 //   close-comment --number <N>
 //                 --commit <sha>
 //                 --deploy-url <url>
 //
 //     Posts a follow-up comment confirming the deploy. The
-//     `Closes #N` trailer in the commit body auto-closes the
-//     issue when pushed to main; no explicit `gh issue close`
-//     is required. Failures are warnings, not blockers — the
-//     fix has already shipped.
+//     `Closes #N` trailer in the commit body auto-closes the issue
+//     when pushed to main; no explicit `gh issue close` is required.
+//     Failures are warnings, not blockers — the fix has already
+//     shipped.
 //
-//   phase-open --phase <id>
-//              --title "<title>"
-//              --body-file <path>
+//   spec-open --spec <NN>
+//             --title "<spec title>"
+//             --body-file <path>
 //
-//     Find-or-create-or-reopen the phase mirror. Idempotent:
+//     Find-or-create-or-reopen the spec mirror, titled
+//     "Spec <NN> — <spec title>" (a title already carrying that
+//     prefix is kept as is). Idempotent:
 //       * existing open issue with matching title prefix → reuse,
 //       * latest closed issue with matching title prefix → reopen,
 //                                                          comment,
 //       * none → create.
-//     Echoes the issue number on stdout. Best-effort on failure.
+//     Echoes the issue number on stdout. Best-effort on failure
+//     (exit 1, caller continues).
 //
-//   phase-close --phase <id>
-//               --commit <sha>
-//               --deploy-url <url>
+//   spec-close --spec <NN>
+//              --commit <sha>
+//              --deploy-url <url>
 //
-//     Posts a "phase shipped" comment. The commit's `Closes #N`
+//     Posts a "spec shipped" comment. The commit's `Closes #N`
 //     trailer auto-closes the issue. Best-effort.
+//
+//   phase-open --phase <id> ... / phase-close --phase <id> ...
+//
+//     Deprecated aliases kept for adopters whose skills still call
+//     them: same behavior, "Phase <id> — " titles, loop:phase label.
 //
 // Required env (from .env or shell):
 //   GH_TOKEN    repo-scoped PAT
-//   GH_REPO     owner/repo, e.g. daretodave/thock
+//   GH_REPO     owner/repo, e.g. <REPO_SLUG>
 //
-// Reads .env using the same loader as scripts/deploy-check.mjs.
+// Reads .env using a simple loader; matches the shape used by
+// scripts/deploy-check.mjs and skills/triage.md.
 
-import { execSync, spawnSync } from 'node:child_process'
+import { spawnSync } from 'node:child_process'
 import fs from 'node:fs'
 import path from 'node:path'
+import { pathToFileURL } from 'node:url'
 
 // --- load .env if present (Node has no built-in .env loader) ---
 if (fs.existsSync('.env')) {
@@ -84,13 +96,15 @@ const VALID_CATEGORY = new Set([
   'seo',
   'a11y',
   'perf',
+  'ui',
 ])
 
 // Label palette (color hexes — GitHub takes hex without `#`).
 // Created idempotently on first encounter via `gh label create`.
 const LABEL_PALETTE = {
   'loop:opened': { color: '5319e7', description: 'Opened by the autonomous loop' },
-  'loop:phase': { color: '0e8a16', description: 'Phase mirror — opens at phase start, closes on ship' },
+  'loop:spec': { color: '0e8a16', description: 'Spec mirror — opens at spec start, closes on ship' },
+  'loop:phase': { color: '0e8a16', description: 'Phase mirror (deprecated) — opens at phase start, closes on ship' },
   'severity:high': { color: 'b60205', description: 'High severity finding' },
   'severity:med': { color: 'fbca04', description: 'Medium severity finding' },
   'severity:low': { color: 'c5def5', description: 'Low severity finding' },
@@ -106,6 +120,7 @@ const LABEL_PALETTE = {
   seo: { color: 'bfdadc', description: '' },
   a11y: { color: '5319e7', description: '' },
   perf: { color: 'e99695', description: '' },
+  ui: { color: 'f9d0c4', description: 'The GUI as a walk saw it' },
 }
 
 // --- argv parsing -----------------------------------------------------
@@ -161,7 +176,7 @@ function ensureLabel(name, repo) {
 
 function parseIssueNumber(stdout) {
   // gh issue create prints the URL as its last line, e.g.
-  //   https://github.com/daretodave/thock/issues/42
+  //   https://github.com/owner/repo/issues/42
   const lines = stdout.trim().split(/\r?\n/).filter(Boolean)
   for (let i = lines.length - 1; i >= 0; i--) {
     const m = lines[i].match(/\/issues\/(\d+)\s*$/)
@@ -170,33 +185,70 @@ function parseIssueNumber(stdout) {
   return null
 }
 
-// Build the phase title prefix used to find-or-create the phase
-// mirror. Using prefix-match keeps `/triage` from rewriting titles
-// and breaking the lookup; rename the issue body, not the title
-// prefix.
+// The two mirror kinds. `spec` is current; `phase` is the deprecated
+// v1 name, kept so adopters' existing calls keep working.
+//   flag  — the CLI flag carrying the id (--spec / --phase)
+//   word  — the title's leading word ("Spec 35 — …")
+//   label — the label the lookup filters on
+const MIRROR_KINDS = {
+  spec: { flag: 'spec', word: 'Spec', label: 'loop:spec' },
+  phase: { flag: 'phase', word: 'Phase', label: 'loop:phase' },
+}
+
+// subcommand → { action, kind, deprecated } | null
+function resolveSubcommand(sub) {
+  const m = /^(spec|phase)-(open|close)$/.exec(sub ?? '')
+  if (!m) return null
+  return { action: m[2], kind: m[1], deprecated: m[1] === 'phase' }
+}
+
+// Build the title prefix used to find-or-create a mirror. Using
+// prefix-match keeps `/triage` from rewriting titles and breaking the
+// lookup; rename the issue body, not the title prefix.
+function mirrorTitlePrefix(kind, id) {
+  return `${MIRROR_KINDS[kind].word} ${id} — `
+}
+
+function isMirrorMatch(kind, title, id) {
+  // Require `<Word> <id> — ` *as a prefix*, anchored, so `Spec 16` does
+  // not collide with `Spec 16a`.
+  return title.startsWith(mirrorTitlePrefix(kind, id))
+}
+
+// The issue title: a bare title gets the prefix; a prefixed one is kept.
+function buildMirrorTitle(kind, id, title) {
+  return isMirrorMatch(kind, title, id) ? title : `${mirrorTitlePrefix(kind, id)}${title}`
+}
+
+export function specTitlePrefix(specId) {
+  return mirrorTitlePrefix('spec', specId)
+}
+
+function isSpecMatch(title, specId) {
+  return isMirrorMatch('spec', title, specId)
+}
+
 export function phaseTitlePrefix(phaseId) {
-  return `Phase ${phaseId} — `
+  return mirrorTitlePrefix('phase', phaseId)
 }
 
 function isPhaseMatch(title, phaseId) {
-  // Anchored prefix so `Phase 15` does not collide with `Phase 15a`.
-  return title.startsWith(phaseTitlePrefix(phaseId))
+  return isMirrorMatch('phase', title, phaseId)
 }
 
-// Search GitHub for any issue (open or closed) tagged `loop:phase`
-// whose title prefix matches the phase id. Returns
-// { number, state } | null.
+// Search GitHub for any issue (open or closed) whose title prefix
+// matches the mirror id. Returns { number, state } | null.
 //
 // We deliberately do NOT use `--search "<prefix>" in:title` here:
-// GitHub's text-search index is eventually-consistent, so a phase
+// GitHub's text-search index is eventually-consistent, so a mirror
 // issue created seconds ago may not surface in a follow-up search
-// for several minutes. The `--label loop:phase` filter goes through
+// for several minutes. The `--label <mirror label>` filter goes through
 // the issues REST API, which is read-your-writes consistent — every
 // issue tagged with that label appears immediately. We pull all
-// loop:phase issues (both states) and prefix-match the title
+// mirror-label issues (both states) and prefix-match the title
 // client-side, which makes find-or-reuse robust across rapid
 // successive ticks.
-function findPhaseIssue(phaseId, repo) {
+function findMirrorIssue(kind, id, repo) {
   const r = ghCall([
     'issue',
     'list',
@@ -205,7 +257,7 @@ function findPhaseIssue(phaseId, repo) {
     '--state',
     'all',
     '--label',
-    'loop:phase',
+    MIRROR_KINDS[kind].label,
     '--json',
     'number,title,state',
     '--limit',
@@ -220,7 +272,7 @@ function findPhaseIssue(phaseId, repo) {
   } catch (e) {
     return { error: `gh issue list returned non-JSON: ${e.message}` }
   }
-  const matches = arr.filter((row) => isPhaseMatch(row.title ?? '', phaseId))
+  const matches = arr.filter((row) => isMirrorMatch(kind, row.title ?? '', id))
   if (matches.length === 0) return null
   // Prefer an OPEN match; fall back to the most-recent CLOSED. gh
   // returns issues newest-first, so matches[0] is already the most
@@ -340,9 +392,10 @@ export function buildCloseCommentBody({ commit, deployUrl }) {
   ].join('\n')
 }
 
-function cmdPhaseOpen(flags) {
-  const phaseId = flags.phase
-  const title = flags.title
+function cmdMirrorOpen(kind, flags) {
+  const { flag, label } = MIRROR_KINDS[kind]
+  const id = flags[flag]
+  const rawTitle = flags.title
   const bodyFile = flags['body-file']
   const repo = process.env.GH_REPO
 
@@ -354,11 +407,11 @@ function cmdPhaseOpen(flags) {
     process.stderr.write('loop-issue: GH_REPO missing (set in .env)\n')
     process.exit(1)
   }
-  if (!phaseId) {
-    process.stderr.write('loop-issue: --phase is required\n')
+  if (!id || id === 'true') {
+    process.stderr.write(`loop-issue: --${flag} is required\n`)
     process.exit(1)
   }
-  if (!title || !bodyFile) {
+  if (!rawTitle || !bodyFile) {
     process.stderr.write('loop-issue: --title and --body-file are required\n')
     process.exit(1)
   }
@@ -366,15 +419,10 @@ function cmdPhaseOpen(flags) {
     process.stderr.write(`loop-issue: body file not found: ${bodyFile}\n`)
     process.exit(1)
   }
-  if (!isPhaseMatch(title, phaseId)) {
-    process.stderr.write(
-      `loop-issue: --title must start with "${phaseTitlePrefix(phaseId)}" so reuse-by-prefix works\n`,
-    )
-    process.exit(1)
-  }
+  const title = buildMirrorTitle(kind, id, rawTitle)
 
-  // Make sure the phase + provenance labels exist.
-  for (const name of ['loop:phase', 'loop:opened']) {
+  // Make sure the mirror + provenance labels exist.
+  for (const name of [label, 'loop:opened']) {
     const r = ensureLabel(name, repo)
     if (r.error) {
       process.stderr.write(`loop-issue: label ensure failed for ${name}: ${r.error}\n`)
@@ -382,9 +430,9 @@ function cmdPhaseOpen(flags) {
     }
   }
 
-  const found = findPhaseIssue(phaseId, repo)
+  const found = findMirrorIssue(kind, id, repo)
   if (found && found.error) {
-    process.stderr.write(`loop-issue: phase lookup failed: ${found.error}\n`)
+    process.stderr.write(`loop-issue: ${kind} lookup failed: ${found.error}\n`)
     process.exit(1)
   }
 
@@ -399,7 +447,7 @@ function cmdPhaseOpen(flags) {
     const reopen = ghCall(['issue', 'reopen', String(found.number), '--repo', repo])
     if (reopen.status !== 0) {
       process.stderr.write(
-        `loop-issue: phase reopen failed for #${found.number} (status ${reopen.status})\n${reopen.stderr}\n`,
+        `loop-issue: ${kind} reopen failed for #${found.number} (status ${reopen.status})\n${reopen.stderr}\n`,
       )
       process.exit(1)
     }
@@ -410,12 +458,12 @@ function cmdPhaseOpen(flags) {
       '--repo',
       repo,
       '--body',
-      buildPhaseResumeCommentBody({ phaseId }),
+      buildMirrorResumeCommentBody({ kind, id }),
     ])
     if (comment.status !== 0) {
       // Non-fatal: the reopen succeeded, the comment is polish.
       process.stderr.write(
-        `loop-issue: phase resume comment failed for #${found.number} (status ${comment.status})\n${comment.stderr}\n`,
+        `loop-issue: ${kind} resume comment failed for #${found.number} (status ${comment.status})\n${comment.stderr}\n`,
       )
     }
     process.stdout.write(`${found.number}\n`)
@@ -433,10 +481,10 @@ function cmdPhaseOpen(flags) {
     '--body-file',
     path.resolve(bodyFile),
     '--label',
-    'loop:phase,loop:opened',
+    `${label},loop:opened`,
   ])
   if (r.status !== 0) {
-    process.stderr.write(`loop-issue: gh issue create (phase) failed (${r.status})\n${r.stderr}\n`)
+    process.stderr.write(`loop-issue: gh issue create (${kind}) failed (${r.status})\n${r.stderr}\n`)
     process.exit(1)
   }
   const number = parseIssueNumber(r.stdout)
@@ -447,66 +495,75 @@ function cmdPhaseOpen(flags) {
   process.stdout.write(`${number}\n`)
 }
 
-function cmdPhaseClose(flags) {
-  const phaseId = flags.phase
+function cmdMirrorClose(kind, flags) {
+  const { flag } = MIRROR_KINDS[kind]
+  const id = flags[flag]
   const commit = flags.commit
   const deployUrl = flags['deploy-url']
   const number = flags.number // optional override
   const repo = process.env.GH_REPO
 
   if (!process.env.GH_TOKEN || !repo) {
-    process.stderr.write('loop-issue: GH_TOKEN/GH_REPO missing — skipping phase close\n')
+    process.stderr.write(`loop-issue: GH_TOKEN/GH_REPO missing — skipping ${kind} close\n`)
     return // best-effort
   }
   if (!commit || !deployUrl) {
     process.stderr.write('loop-issue: --commit and --deploy-url required\n')
     return
   }
-  if (!number && !phaseId) {
-    process.stderr.write('loop-issue: pass --number or --phase\n')
+  if (!number && !id) {
+    process.stderr.write(`loop-issue: pass --number or --${flag}\n`)
     return
   }
 
   let target = number ? Number(number) : null
   if (!target) {
-    const found = findPhaseIssue(phaseId, repo)
+    const found = findMirrorIssue(kind, id, repo)
     if (found && found.error) {
-      process.stderr.write(`loop-issue: phase lookup failed: ${found.error}\n`)
+      process.stderr.write(`loop-issue: ${kind} lookup failed: ${found.error}\n`)
       return
     }
     if (!found) {
-      process.stderr.write(`loop-issue: no phase issue found for ${phaseId} — nothing to close\n`)
+      process.stderr.write(`loop-issue: no ${kind} issue found for ${id} — nothing to close\n`)
       return
     }
     target = found.number
   }
 
-  const body = buildPhaseShippedCommentBody({ phaseId, commit, deployUrl })
+  const body = buildMirrorShippedCommentBody({ kind, id, commit, deployUrl })
   const r = ghCall(['issue', 'comment', String(target), '--repo', repo, '--body', body])
   if (r.status !== 0) {
     process.stderr.write(
-      `loop-issue: phase comment failed for #${target} (status ${r.status})\n${r.stderr}\n`,
+      `loop-issue: ${kind} comment failed for #${target} (status ${r.status})\n${r.stderr}\n`,
     )
     return
   }
 }
 
-export function buildPhaseResumeCommentBody({ phaseId }) {
+function buildMirrorResumeCommentBody({ kind, id }) {
   return [
-    `Phase ${phaseId} work resumed at ${new Date().toISOString()}.`,
+    `${MIRROR_KINDS[kind].word} ${id} work resumed at ${new Date().toISOString()}.`,
     '',
     '_Reopened by the autonomous loop. The original issue stayed closed too long for the next ship; this run reuses the same number to keep the public timeline consistent._',
   ].join('\n')
 }
 
-export function buildPhaseShippedCommentBody({ phaseId, commit, deployUrl }) {
+function buildMirrorShippedCommentBody({ kind, id, commit, deployUrl }) {
   return [
-    `Phase ${phaseId} shipped in ${commit}.`,
+    `${MIRROR_KINDS[kind].word} ${id} shipped in ${commit}.`,
     '',
     `Live at ${deployUrl} after deploy ready.`,
     '',
     '_The autonomous loop closes this issue via the commit\'s `Closes #N` trailer; no manual close is required._',
   ].join('\n')
+}
+
+export function buildPhaseResumeCommentBody({ phaseId }) {
+  return buildMirrorResumeCommentBody({ kind: 'phase', id: phaseId })
+}
+
+export function buildPhaseShippedCommentBody({ phaseId, commit, deployUrl }) {
+  return buildMirrorShippedCommentBody({ kind: 'phase', id: phaseId, commit, deployUrl })
 }
 
 // --- entry point ------------------------------------------------------
@@ -519,10 +576,18 @@ function main(argv) {
       return cmdOpen(flags)
     case 'close-comment':
       return cmdCloseComment(flags)
+    case 'spec-open':
+    case 'spec-close':
     case 'phase-open':
-      return cmdPhaseOpen(flags)
-    case 'phase-close':
-      return cmdPhaseClose(flags)
+    case 'phase-close': {
+      const { action, kind, deprecated } = resolveSubcommand(sub)
+      if (deprecated) {
+        process.stderr.write(
+          `loop-issue: "${sub}" is deprecated; use "spec-${action} --spec <NN>"\n`,
+        )
+      }
+      return action === 'open' ? cmdMirrorOpen(kind, flags) : cmdMirrorClose(kind, flags)
+    }
     case '--help':
     case '-h':
     case 'help':
@@ -541,7 +606,7 @@ function printHelp() {
 
 Usage:
   node scripts/loop-issue.mjs open --severity <high|med|low> \\
-      --category <bug|enhancement|content|data|docs|seo|a11y|perf> \\
+      --category <bug|enhancement|content|data|docs|seo|a11y|perf|ui> \\
       --source <user|reader|audit|external> \\
       --title "<title>" --body-file <path>
       → echoes the new issue number to stdout
@@ -550,14 +615,18 @@ Usage:
       --commit <sha> --deploy-url <url>
       → posts a follow-up comment; the Closes #N commit trailer auto-closes
 
-  node scripts/loop-issue.mjs phase-open --phase <id> \\
-      --title "Phase <id> — <topic>" --body-file <path>
-      → find-or-create-or-reopen; echoes the issue number
+  node scripts/loop-issue.mjs spec-open --spec <NN> \\
+      --title "<spec title>" --body-file <path>
+      → find-or-create-or-reopen "Spec <NN> — <spec title>";
+        echoes the issue number
 
-  node scripts/loop-issue.mjs phase-close --phase <id> \\
+  node scripts/loop-issue.mjs spec-close --spec <NN> \\
       --commit <sha> --deploy-url <url>
-      → posts a "phase shipped" comment; commit's Closes #N auto-closes
+      → posts a "spec shipped" comment; commit's Closes #N auto-closes
       (alternatively pass --number <N> to skip the lookup)
+
+  phase-open --phase <id> / phase-close --phase <id>
+      → deprecated aliases ("Phase <id> — " titles, loop:phase label)
 
 Env (from .env or shell):
   GH_TOKEN, GH_REPO
@@ -573,6 +642,14 @@ export const __test = {
   buildPhaseShippedCommentBody,
   phaseTitlePrefix,
   isPhaseMatch,
+  MIRROR_KINDS,
+  resolveSubcommand,
+  specTitlePrefix,
+  isSpecMatch,
+  buildMirrorTitle,
+  buildMirrorResumeCommentBody,
+  buildMirrorShippedCommentBody,
+  isMainModule,
   LABEL_PALETTE,
   VALID_SEVERITY,
   VALID_CATEGORY,
@@ -580,14 +657,17 @@ export const __test = {
 }
 
 // Run main only when invoked as a script, not when imported by tests.
-const isMain = (() => {
+// pathToFileURL handles Windows drive letters and percent-encoding,
+// and the full-URL compare never matches a same-named file elsewhere.
+function isMainModule(metaUrl, argv1) {
+  if (!argv1) return false
   try {
-    return import.meta.url === `file://${process.argv[1].replace(/\\/g, '/')}` ||
-      import.meta.url.endsWith(path.basename(process.argv[1] ?? ''))
+    return metaUrl === pathToFileURL(argv1).href
   } catch {
     return false
   }
-})()
-if (isMain) {
+}
+
+if (isMainModule(import.meta.url, process.argv[1])) {
   main(process.argv.slice(2))
 }

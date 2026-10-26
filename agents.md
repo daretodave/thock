@@ -203,13 +203,13 @@ calls go through `/oversight`, not a second interactive skill.
 
 | Skill | Source of truth | What it does |
 |---|---|---|
-| `ship-a-phase` | `skills/ship-a-phase.md` | Ship one phase from the build plan: code + tests + e2e + commit + push. The Vercel deploy follows. |
+| `ship-a-chunk` | `skills/ship-a-chunk.md` | Ship one phase from the build plan: code + tests + e2e + commit + push. The Vercel deploy follows. |
 | `ship-data` | `skills/ship-data.md` | Add or repair one record in `/data/`: validate schema, normalize cross-refs, commit, push. |
-| `plan-a-phase` | `skills/plan-a-phase.md` | Refine the next phase brief without shipping code. Pre-flight for `ship-a-phase`. |
+| `plan-a-spec` | `skills/plan-a-spec.md` | Refine the next phase brief without shipping code. Pre-flight for `ship-a-chunk`. |
 | `iterate` | `skills/iterate.md` | Audit the site, pick the highest-impact weakness, ship one improvement. Drains the `/critique` and `/triage` queues too. Closes GitHub issues when it ships their fix. |
 | `critique` | `skills/critique.md` | External-observer pass — visit the live site as a stranger, file fresh-eyes findings to `plan/CRITIQUE.md`. The feedback half of the address loop. |
 | `triage` | `skills/triage.md` | Issue review — read open GitHub issues, classify, label, comment, route to the right backlog. Cheap fast-exit when 0 unlabeled issues. |
-| `expand` | `skills/expand.md` | Plan-expansion pass — read accumulated signals (audit, critique, triage, spec drift, design landings, data growth) and propose new phase candidates to `plan/PHASE_CANDIDATES.md`. **Posture: bold** (set in bearings); `/oversight` promotes. |
+| `expand` | `skills/expand.md` | Plan-expansion pass — read accumulated signals (audit, critique, triage, spec drift, design landings, data growth) and propose new phase candidates to `plan/CANDIDATES.md`. **Posture: bold** (set in bearings); `/oversight` promotes. |
 | `march` | `skills/march.md` | Outer dispatcher: triage → critique → phase → data → expand → iterate. The autonomous-beast endgame. |
 | `jot` | `skills/jot.md` | **User-input quickfire.** You spotted something on the live site — drop a free-text observation; the skill writes one row to `plan/CRITIQUE.md`, commits, pushes, exits in seconds. Next `/iterate` tick scores it (with a `+0.5` user-source bump) against everything else and ships the fix. No questions back; same shape as `/ship-data add` — input via the slash argument. |
 | `oversight` | `skills/oversight.md` | **User-in-the-loop.** Pause autonomy, brief the user, ask targeted questions, adjust the plan, push the adjustments. **The only skill allowed to use `AskUserQuestion`.** Brand-setup taste calls (mood / accent / wordmark) are an `/oversight` topic too — the locked brief lands in `bearings.md` + `plan/AUDIT.md` rows that `/ship-asset` then drains. |
@@ -218,9 +218,9 @@ calls go through `/oversight`, not a second interactive skill.
 ### Invocation (Claude Code-flavored)
 
 ```
-/ship-a-phase                # ship next pending phase
+/ship-a-chunk                # ship next pending phase
 /ship-data                   # ship next data backlog row
-/plan-a-phase                # refine next phase brief
+/plan-a-spec                # refine next phase brief
 /iterate                     # audit + ship one improvement
 /critique                    # external-observer pass (writes to CRITIQUE.md)
 /triage                      # review unlabeled GitHub issues
@@ -247,7 +247,7 @@ live at `.claude/agents/*.md`:
 | `content-curator` | Drafting MDX articles in the editorial voice | Research the open web (delegates to scout). Modify code. |
 | `data-steward` | Schema additions, mass cross-ref repair, normalize passes | One-record-at-a-time additions (the main agent runs `ship-data` for those). |
 | `reader` | Fresh-eyes external observer of the live site (used by `/critique`) | Write code, content, or data. Returns observations only. |
-| `brander` | Render brand assets — OG images, favicons, social cards, wordmark variants, SVG → PNG (used by `/ship-asset`; also inline by `/ship-a-phase` when a phase brief names an asset deliverable) | Modify source code outside the asset path. Commit. Install dependencies. |
+| `brander` | Render brand assets — OG images, favicons, social cards, wordmark variants, SVG → PNG (used by `/ship-asset`; also inline by `/ship-a-chunk` when a phase brief names an asset deliverable) | Modify source code outside the asset path. Commit. Install dependencies. |
 
 The main agent (you, when invoked at the top level) writes wiring
 code, makes architectural decisions, and runs the verify gate.
@@ -273,8 +273,8 @@ Read it before your first edit.
 |---|---|
 | What thock is | `spec.md` |
 | Stack, conventions, defaults | `plan/bearings.md` |
-| What ships next | `plan/steps/01_build_plan.md` |
-| How a phase is built | `plan/phases/phase_<N>_<topic>.md` |
+| What ships next | `plan/README.md` |
+| How a phase is built | `plan/README.md<N>_<topic>.md` |
 | How a skill works | `skills/<skill>.md` |
 | What a sub-agent does | `.claude/agents/<name>.md` |
 | Latest known weaknesses | `plan/AUDIT.md`, `data/AUDIT.md` |

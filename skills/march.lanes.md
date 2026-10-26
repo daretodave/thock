@@ -1,0 +1,523 @@
+# March lanes
+
+> This project's own `/march` steps. The kit re-syncs
+> `skills/march.md` and never touches this file, so a step
+> that keeps your loop moving lives here, not there.
+
+---
+
+`skills/march.md` reads this file at two hooks, through
+`node scripts/plan/lanes.mjs march <hook>`:
+
+| Hook | Where in the tick | Yields to |
+|---|---|---|
+| `pre` | after Step 0 (sync, veto sweep), before triage | the Asap lane (and support rows): runs only when neither has a ready item |
+| `queue` | after 3a (no ready chunk), before the next queue step | nothing: 3a already found no ready chunk |
+
+One block per lane. `when` is prose (the agent judges it) or
+`script <path>` (exit 0 runs the lane); absent, the lane
+always runs. `return: end-tick` makes the lane the tick's
+work; `continue` (the default) lets the tick go on.
+`Lanes off: <name>, <name>` in `plan/bearings.md` turns a
+lane off by name. No lane blocks here means stock dispatch.
+
+The example below sits inside a comment, so it is no lane.
+Copy it out of the comment to make it one.
+
+<!--
+## lane: weekly-snapshot
+- hook: pre
+- when: script scripts/lanes/snapshot-due.mjs
+- run: node scripts/snapshot.mjs --write, then commit the snapshot
+- return: end-tick
+-->
+
+<!-- Moved from the v1 skills/march.md by nexus upgrade (2026-10-26): the text the kit never shipped, verbatim. Check each lane's hook and when. -->
+
+## lane: weekly-snapshot-gate-phase-31-amendment
+- hook: pre
+- when: as the section below says (moved verbatim from the v1 skills/march.md)
+- run: the section below
+- return: end-tick
+
+### Step 0.5 — Weekly snapshot gate (Phase 31 amendment)
+
+After sync and before triage, check whether a weekly trend snapshot is
+due. This gate fires only on Mondays so it reuses the hourly cloud loop
+with no new workflow, workflow permission, or secret.
+
+```bash
+CURRENT_WEEK=$(node scripts/iso-week.mjs)
+IS_MONDAY=$(node -e "console.log(new Date().getDay()===1?'yes':'no')")
+SNAPSHOT_EXISTS=$(test -f "data/trends/${CURRENT_WEEK}.json" && echo "yes" || echo "no")
+```
+
+If `IS_MONDAY=yes` AND `SNAPSHOT_EXISTS=no`:
+
+1. **Spawn `scout`** to research the current week's mechanical keyboard
+   trends. Prompt: categories switch / keycap / layout / vendor / brand;
+   12–18 rows; score −100..100; direction up/down/flat; 8-point spark
+   array (arc ending at this week's score); articleSlug matching an
+   existing thock.xyz article or null; note 20–280 chars. Reference
+   the prior week's snapshot (`data/trends/<prev-week>.json`) for
+   score continuity.
+
+2. **Write `data/trends/${CURRENT_WEEK}.json`** in `TrendSnapshotSchema`
+   shape:
+   ```json
+   {
+     "isoWeek": "<YYYY-WNN>",
+     "publishedAt": "<Monday of this ISO week>T00:00:00.000Z",
+     "rows": [...],
+     "updatedAt": "<now>"
+   }
+   ```
+
+3. **`pnpm verify`** — full gate (typecheck → lint → test:run →
+   test:scripts → data:validate → build → size → e2e). The data:validate
+   step validates the new file against the schema. The e2e smoke walker
+   covers `/trends/tracker/<week>` automatically via
+   `generateStaticParams`.
+
+3.5. **Trend-snapshot quality gate** (Phase 50 amendment) — **hard gate**,
+   not a survey:
+
+   ```bash
+   node scripts/trend-snapshot-quality-check.mjs --file "data/trends/${CURRENT_WEEK}.json"
+   ```
+
+   Checks the newly-written file for name-casing drift against
+   `data/vendors`/`data/group-buys`, `articleSlug` topical relevance,
+   note-vs-record status agreement, and direction/spark mathematical
+   consistency (see `scripts/trend-snapshot-quality-check.mjs` header
+   for the full check list). Non-zero exit **blocks the snapshot
+   commit** — read the violations, patch the file's `note` /
+   `direction` / `articleSlug` fields directly (this is a same-tick
+   data fix, since the file hasn't committed yet — not a follow-up
+   AUDIT row), and re-run. Up to 3 iterations on the same root cause;
+   beyond that, stop and report per `skills/ship-a-chunk.md` §10
+   shape (cite the check, the row, what was tried).
+
+4. **Commit** via `ship-data` conventions — do **not** push yet;
+   Step 4.5's follow-up commit (if any) ships in the same push (two
+   rapid-fire pushes seconds apart can drop the Vercel
+   git-integration webhook for the second commit, leaving it with
+   no deployment record — see AUDIT.md `[external-issue] [4.2]`,
+   issue #540):
+   ```bash
+   git add data/trends/${CURRENT_WEEK}.json
+   git commit -m "data: trend snapshot ${CURRENT_WEEK}
+
+   Cloud-Run: <run-url>"
+   ```
+
+4.5. **Run tracker linkage survey** (Phase 41 amendment) — after the snapshot
+   commits, enforce Rule 2 on any topics now past the 14-day threshold:
+
+   ```bash
+   node scripts/tracker-linkage-survey.mjs --write
+   ```
+
+   If it files new AUDIT rows, commit them. Then push once — this
+   single push covers both the snapshot commit and this one (if it
+   ran):
+
+   ```bash
+   git add plan/AUDIT.md
+   git commit -m "audit: tracker Rule 2 gaps filed by tracker-linkage-survey.mjs
+
+   Cloud-Run: <run-url>"
+   git push origin main
+   ```
+
+   If it exits clean or non-zero, log and continue (no rows filed —
+   still push the Step 4 commit alone):
+
+   ```bash
+   git push origin main
+   ```
+
+5. **Return.** Skip Steps 1–4 this tick. Next tick re-dispatches normally.
+
+If `IS_MONDAY=no` OR `SNAPSHOT_EXISTS=yes`, fall through to Step 1.
+
+## lane: triage-gate-notes
+- hook: pre
+- when: as the paragraphs below says (moved verbatim from the v1 skills/march.md)
+- run: the paragraphs below, which amended the kit's step "step 1 — triage gate (cheapest check)"
+- return: continue
+
+### Step 1 — Triage gate (cheapest check)
+
+```bash
+export GH_TOKEN=$(awk -F= '/^GH_TOKEN=/ {sub(/^GH_TOKEN=/, ""); print; exit}' .env)
+export GH_REPO=$(awk -F= '/^GH_REPO=/ {sub(/^GH_REPO=/, ""); print; exit}' .env)
+GH_REPO=${GH_REPO:-daretodave/thock}
+
+unlabeled=$(gh issue list --repo "$GH_REPO" --state open \
+  --search "-label:triage:loop-queued -label:triage:needs-user -label:triage:closed -label:triage:reviewed -label:loop:opened" \
+  --json number --jq 'length')
+```
+
+- Read `skills/triage.md`.
+- Execute its procedure (§5) end-to-end.
+- Return.
+
+If `gh` isn't installed or `GH_TOKEN` missing, **don't fail the
+march** — log a warning ("triage skipped: gh/token unavailable")
+and fall through. Triage is non-blocking by design; the loop
+continues.
+
+## lane: critique-gate-notes
+- hook: pre
+- when: as the paragraphs below says (moved verbatim from the v1 skills/march.md)
+- run: the paragraphs below, which amended the kit's step "step 2 — critique gate (pre-dispatch check)"
+- return: continue
+
+### Step 2 — Critique gate (pre-dispatch check)
+
+Before dispatching to one of the three normal lanes, check whether
+a `/critique` pass is due. Read the metadata header at the top of
+`plan/CRITIQUE.md`:
+
+Dispatch to `/critique` instead of the normal flow if **all three**
+hold:
+
+1. The current commit is at least **12 commits after** the `Last
+   pass` commit, OR `Last pass` is more than **24 hours ago**, OR
+   `Last pass` is "never" and at least one page-family phase has
+   shipped (phase 5+).
+2. `pnpm deploy:check` shows a green deploy (no point critiquing a
+   red site — the next tick will re-check).
+3. The next normal dispatch lane (1a/1b/1c below) wouldn't already
+   be addressing a `[HIGH]` critique finding — if `/iterate` is
+   about to drain a `[HIGH]` Pending row, let it; don't pile up
+   more before the existing high gets addressed.
+
+- Read `skills/critique.md`.
+- Execute its procedure (§5) end-to-end.
+- Return. (Next tick re-dispatches normally.)
+
+If any condition fails, fall through to Step 3.
+
+## lane: dispatch-notes
+- hook: pre
+- when: as the paragraphs below says (moved verbatim from the v1 skills/march.md)
+- run: the paragraphs below, which amended the kit's step "step 3 — dispatch"
+- return: continue
+
+### Step 3 — Dispatch
+
+Read state in this order; first match wins.
+
+## lane: pending-phase-notes
+- hook: queue
+- when: as the paragraphs below says (moved verbatim from the v1 skills/march.md)
+- run: the paragraphs below, which amended the kit's step "3a. pending phase?"
+- return: continue
+
+#### 3a. Pending phase?
+
+Open `plan/README.md`. If any `[ ]` row exists in
+the "Status (at-a-glance)" block:
+
+- Read `skills/ship-a-chunk.md`.
+- Execute its procedure (§6 of that file) end-to-end.
+- Return.
+
+## lane: pending-data-notes
+- hook: queue
+- when: as the paragraphs below says (moved verbatim from the v1 skills/march.md)
+- run: the paragraphs below, which amended the kit's step "3b. pending data?"
+- return: continue
+
+#### 3b. Pending data?
+
+Open `data/BACKLOG.md`. If any `[ ]` row exists:
+
+- Read `skills/ship-data.md`.
+- Execute its procedure (§5 of that file) end-to-end.
+- Return.
+
+## lane: content-queue-post-phase-24
+- hook: queue
+- when: as the section below says (moved verbatim from the v1 skills/march.md)
+- run: the section below
+- return: end-tick
+
+#### 3b.5. Content queue? (post-phase-24)
+
+Open `plan/AUDIT.md`. Collect all `Pending` content-gap findings
+(rows with `category: content-gaps`, not prefixed `[x]`). Apply
+the bias multiplier from the AUDIT.md header if present. If any
+row scores ≥ 3.0:
+
+- Read `skills/ship-content.md`.
+- Execute its procedure end-to-end.
+- Return.
+
+This lane fires before `/expand` and before the general `/iterate`
+pass, so content velocity is never deprioritized in favour of
+expansion planning when the quota is unmet.
+
+## lane: empty-queue-refill-post-phase-30
+- hook: queue
+- when: as the section below says (moved verbatim from the v1 skills/march.md)
+- run: the section below
+- return: end-tick
+
+#### 3b.5a. Empty-queue refill (post-phase-30)
+
+If no `Pending` content-gap rows exist (or all score < 3.0), invoke
+the Rule-1 sliding-window helper before falling through:
+
+```bash
+node scripts/content-gap-survey.mjs --write
+```
+
+- If it writes a new row (prints "filed … row" confirmation),
+  commit the update and dispatch `/ship-content`:
+
+  ```bash
+  git add plan/AUDIT.md
+  git commit -m "audit: content-gap row auto-filed by content-gap-survey.mjs
+
+  Cloud-Run: <run-url>"
+  git push origin main
+  ```
+
+  Then re-enter Step 3b.5 (the new row now exists; dispatch
+  `/ship-content`).
+
+- If it prints "all pillars comfortable — no row filed", fall
+  through to the cross-link sweep below.
+
+- If it exits non-zero, log the error and fall through to the
+  cross-link sweep below. The refill is best-effort; the loop
+  continues.
+
+After content-gap-survey completes (regardless of outcome), run the
+companion cross-link survey (Phase 39 amendment):
+
+```bash
+node scripts/article-crosslink-survey.mjs --write
+```
+
+This files AUDIT rows for any article pairs sharing ≥2 tags with no
+prose cross-link. Deduplicates against existing AUDIT rows so repeated
+calls are safe. If it exits non-zero, log and continue — the survey is
+best-effort.
+
+**Phase 46 note — cluster-aware drain:** when `/iterate` picks a
+`cross-links` row as its top finding, its Step 3 logic automatically
+collects and drains **all** pending cross-link pairs involving the
+same hub article in one commit (using `--slug <hub>` on the survey
+script). No additional march-level orchestration is needed — the
+iterate tick handles the clustering itself.
+
+Then run the group-buy companion survey (Phase 40 amendment):
+
+```bash
+node scripts/group-buy-companion-survey.mjs --write
+```
+
+This files AUDIT rows (`content-gaps`, score 7.0) for any `live` or
+`announced` group-buy records with no `relatedArticle` — enforcing
+bearings.md Rule 3 mechanically. Deduplicates against existing AUDIT
+rows. If it exits non-zero, log and continue — the survey is
+best-effort.
+
+Then run the stale group-buy scanner (Phase 42 amendment):
+
+```bash
+node scripts/group-buy-status-check.mjs --write
+```
+
+This files AUDIT rows (`data`, score 3.6) for any `live` or `announced`
+group-buy records whose `endDate` is in the past — enforcing data hygiene
+mechanically. Deduplicates against existing AUDIT rows. If it exits
+non-zero, log and continue — the scanner is best-effort.
+
+Then run the newsletter cadence survey (Phase XX amendment):
+
+```bash
+node scripts/newsletter-gap-survey.mjs --write
+```
+
+This files a `content-gaps` AUDIT row (score 4.0) when ≥7 calendar days
+have elapsed since the most-recent newsletter digest. Deduplicates against
+any existing pending newsletter row. If it exits non-zero, log and continue
+— the survey is best-effort.
+
+Then run the OG image coverage check (iterate-shipped gate):
+
+```bash
+node scripts/og-coverage-check.mjs --write
+```
+
+This files `seo` AUDIT rows (score 4.8) for any `apps/web/src/app/**/page.tsx`
+route directories that lack a sibling `opengraph-image.tsx`. Prevents the
+"route ships without OG handler" class that consumed ~28 iterate ticks across
+passes 127–134. Deduplicates against existing AUDIT rows. If it exits
+non-zero, log and continue — the check is best-effort.
+
+Then run the a11y spec coverage check (expand pass 135 candidate, shipped
+via iterate):
+
+```bash
+node scripts/a11y-spec-coverage-check.mjs --write
+```
+
+This files `tests` AUDIT rows (score 3.2) for any static canonical route
+(from `apps/e2e/src/fixtures/canonical-urls.ts`) missing a `runAxe(page,
+'<route>')` assertion in `apps/e2e/tests/a11y.spec.ts`'s desktop or mobile
+suite. Prevents the "route ships without a11y coverage" class that required
+4 reactive commits across phases 43–49. Deduplicates against existing AUDIT
+rows. If it exits non-zero, log and continue — the check is best-effort.
+
+Then run the article mentionedParts corpus scan (pass-284 candidate, shipped
+via iterate):
+
+```bash
+node scripts/article-parts-check.mjs --write
+```
+
+This files `mentionedParts` AUDIT rows (score 3.6) for any article whose body
+mentions a catalog entity (switch, keycap-set, board) not declared in its
+`mentionedParts` frontmatter. Previously only ran at ship-time on the specific
+new/touched file in `skills/ship-content.md` Step 7b and the iterate cross-link
+drain — nothing scanned the full corpus periodically, so a manual edit or any
+path outside those two skill steps could introduce a gap with no mechanism to
+catch it. This is the same recurring defect class responsible for 17+ reactive
+AUDIT fixes historically. Deduplicates against existing AUDIT rows. If it
+exits non-zero, log and continue — the check is best-effort.
+Then fall through to Step 3c (expand).
+
+## lane: expand-due-notes
+- hook: queue
+- when: as the paragraphs below says (moved verbatim from the v1 skills/march.md)
+- run: the paragraphs below, which amended the kit's step "3c. expand due (rate-limited, posture-gated)?"
+- return: continue
+
+#### 3c. Expand due (rate-limited, posture-gated)?
+
+Read `plan/bearings.md` "Plan expansion posture" section. thock
+defaults to **bold**.
+
+- If posture is **strict**, skip to 3d.
+
+## lane: else-iterate-notes
+- hook: queue
+- when: as the paragraphs below says (moved verbatim from the v1 skills/march.md)
+- run: the paragraphs below, which amended the kit's step "3d. else — iterate."
+- return: continue
+
+#### 3d. Else — iterate.
+
+- Read `skills/iterate.md`.
+- Execute its procedure (§5 of that file) end-to-end.
+- Return.
+
+## lane: done-notes
+- hook: queue
+- when: as the paragraphs below says (moved verbatim from the v1 skills/march.md)
+- run: the paragraphs below, which amended the kit's step "step 4 — done"
+- return: continue
+
+### Step 4 — Done
+
+Return cleanly. The loop's next tick re-dispatches.
+
+## Notes from the v1 skills/march.md (reference, not lanes)
+
+The v1 skill's own words outside its procedure: what its loop did
+and why. No lane runs them; read them when a lane above needs the
+context.
+
+# Skill: march
+
+> **Outer orchestrator.** This skill is a dispatcher — it reads
+> project state and delegates to one of the three shipping skills:
+> `ship-a-chunk`, `ship-data`, `iterate`. Designed for `/loop`.
+
+## 1. Purpose
+
+```
+unlabeled issues exist          →  /triage
+ELSE critique due (rate-lim)    →  /critique
+ELSE pending phase              →  /ship-a-chunk
+ELSE pending data               →  /ship-data
+ELSE content queue ≥ 3.0        →  /ship-content
+ELSE expand due + bold posture  →  /expand
+ELSE                            →  /iterate
+```
+
+Deliveries first: pending phases / data ship before `/expand`
+ever fires. `/expand` only runs when there's no immediate
+delivery, OR when its rate-limit window opens (every ~20
+commits or ~48h) AND `bearings.md` posture is **bold** (thock's
+default — see `plan/bearings.md` "Plan expansion posture").
+
+The triage check is **cheap when idle** — one API call. The
+critique check is rate-limited (≥12 commits + ≥24h spacing,
+green-deploy-only). The expand check is rate-limited +
+posture-gated (≥20 commits + ≥48h, posture ≠ strict).
+
+## 2. Invocation
+
+```
+/march                       # one tick: dispatch + execute
+/loop 30m /march             # autonomous loop
+/loop /march                 # self-paced autonomous loop
+```
+
+## 4. Hand-off honesty
+
+When you dispatch into a child skill, **fully adopt its contract**.
+That means:
+
+- Its hard rules (e.g. ship-a-chunk §7, ship-data §8).
+- Its failure modes (e.g. iterate §6).
+- Its commit-message conventions.
+- Its verify gate.
+
+`/march` itself doesn't add rules; it inherits whichever skill it
+dispatched into. The march tick succeeds iff the child tick
+succeeds.
+
+## 5. Failure modes
+
+1. **`git pull` divergence.**
+2. **State files (build plan, backlog) corrupted or missing.** This
+   is an operational failure — stop and report; don't try to
+   reconstruct silently.
+
+Otherwise the failure modes are inherited from the dispatched skill.
+
+## 6. Quick reference
+
+```bash
+# State files
+plan/README.md          # pending phases
+data/BACKLOG.md                      # pending data work
+plan/CRITIQUE.md                     # critique queue + last-pass metadata
+plan/AUDIT.md                        # content-gap queue (Step 3b.5)
+
+# Weekly snapshot (Step 0.5)
+node scripts/iso-week.mjs            # prints current ISO week, e.g. 2026-W21
+data/trends/<YYYY-WNN>.json          # snapshot file (must exist by end of each Monday tick)
+node scripts/trend-snapshot-quality-check.mjs --file data/trends/<week>.json  # Step 3.5 hard gate
+
+# External signals
+gh issue list --repo $GH_REPO --search "-label:triage:..." --json number  # unlabeled count
+pnpm deploy:check                    # green-deploy condition for /critique
+
+# Skills it dispatches into
+skills/triage.md                     # Step 1 (cheapest)
+skills/critique.md                   # Step 2 (rate-limited)
+skills/ship-a-chunk.md               # Step 3a
+skills/ship-data.md                  # Step 3b
+skills/ship-content.md               # Step 3b.5 (content queue)
+skills/expand.md                     # Step 3c
+skills/iterate.md                    # Step 3d
+```

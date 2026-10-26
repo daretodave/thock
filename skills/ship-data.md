@@ -1,90 +1,121 @@
 # Skill: ship-data
 
-> **Full autonomy.** When invoked (manually, via `/ship-data`, or
-> under `/loop`), you have authority to add, repair, or normalize
-> records in `/data` (the GitHub-as-DB) end-to-end with **no review
-> checkpoint**: derive the JSON, validate against the schema, run
-> `pnpm data:validate`, commit, push.
+> **Full autonomy.** Add, repair, or normalize one entity in the
+> project's data layer. Validate, commit (or upsert), confirm
+> deploy, return.
 >
-> **The bar for asking is high.** If you would have asked, decide.
-> Document the call in the commit body. Stop only on §9.
+> **The data layer pattern varies per project.** This skill
+> describes the **contract**; your project's `bearings.md` and
+> `customization/data-layer.md` choices fill in the storage
+> specifics. Skip this skill entirely if your project has no
+> structured data layer.
 
 ## 1. Purpose
 
-`/data/` is the structured-data layer of thock. Every keyboard
-entity that articles reference lives here as a JSON file:
+The data layer is whatever your project uses for structured
+records the app reads at runtime. Common patterns
+(see `nexus/customization/data-layer.md` for full taxonomy):
 
-```
-data/
-├── README.md
-├── BACKLOG.md                  # [ ] rows ship-data reads next
-├── AUDIT.md                    # latest audit findings (rewritten by audit pass)
-├── schemas/                    # JSON Schema files (Zod-derived)
-│   ├── switch.schema.json
-│   ├── keycap-set.schema.json
-│   ├── board.schema.json
-│   ├── vendor.schema.json
-│   ├── group-buy.schema.json
-│   └── trend.schema.json
-├── switches/<slug>.json
-├── keycap-sets/<slug>.json
-├── boards/<slug>.json
-├── vendors/<slug>.json
-├── group-buys/<slug>.json
-└── trends/<YYYY-WW>.json       # weekly snapshot files
-```
+- **A. GitHub-as-DB** — JSON / YAML / MDX records committed in
+  the repo (e.g. `data/<entity>/<slug>.json`).
+- **B. External DB** — Postgres / SQLite / MongoDB / Firebase /
+  DynamoDB. Schema in code; records via SQL / driver.
+- **C. SaaS data store** — Airtable / Notion / Sanity / Contentful /
+  Supabase. Records via the provider's API.
+- **D. Hybrid** — some data in-repo (slow-changing, design-y);
+  some external (high-volume, user-generated).
+- **E. None** — project has no structured data layer (most CLIs,
+  libraries, single-page tools).
 
-The package `@thock/data` exposes typed loaders for the web app
-(`getSwitch`, `getAllSwitches`, `getActiveGroupBuys`, etc.) plus
-the validate script (`pnpm --filter @thock/data validate`). Every
-JSON file under `/data/` is the database; PRs are migrations; CI
-validates.
+**This skill template applies regardless of pattern.** The
+contract is the same; the bash/code that implements each step
+varies.
+
+If your project is pattern E (none), **delete this skill file**
+and skip `/ship-data` entirely. `/march` handles its absence.
 
 ## 2. Invocation
 
 ```
-/ship-data                          # next [ ] in data/BACKLOG.md, or audit→fix
-/ship-data add switch gateron-oil-king
-/ship-data audit                    # audit-only; rewrites data/AUDIT.md
-/ship-data normalize                # cross-ref + slug repair
+/ship-data                          # next [ ] in the data backlog, or audit→fix
+/ship-data add <entity> <slug>      # add one record
+/ship-data update <entity> <slug>   # repair / extend an existing record
+/ship-data audit                    # audit-only; emit data audit findings
+/ship-data normalize                # cross-ref + slug repair (where applicable)
 /loop 30m /ship-data                # autonomous backlog burndown
 ```
 
-When invoked under `/loop`, do not pause for review.
-
 ## 3. Autonomy contract
 
-- **Missing field → research, don't ask.** Spawn `scout` (sub-agent
-  with WebSearch/WebFetch) to gather the field, then fill it. If the
-  field is genuinely unknowable from public sources, pick the most
-  conservative valid value the schema allows and note in the commit
-  body under "Decisions".
-- **Schema gap → propose an addition.** If a field belongs in the
-  schema but isn't there yet, add it as `optional()` in the Zod
-  source, regenerate the JSON Schema, and proceed. Never invent
-  fields outside the schema.
-- **Cross-reference broken → repair, don't ignore.** If a switch
-  record references `vendor: "novelkeys"` but `data/vendors/novelkeys.json`
-  doesn't exist, create the vendor stub as part of the same commit.
-- **Audit finds 50 problems → ship one fix per phase, not all at
-  once.** A loop tick ships one cohesive change. Multi-fix
-  commits are unreviewable.
+- **Missing field → research, don't ask.** Spawn `scout` for
+  external sourcing.
+- **Schema gap → propose addition** (as `optional()` in the
+  source schema), regenerate / migrate, proceed.
+- **Cross-reference broken → repair, don't ignore.** Create
+  parent / vendor / referenced stubs in the same commit.
+- **Audit finds 50 problems → ship one fix per tick, not all
+  at once.**
 
-## 4. Delegation (be bold)
+## 4. Provenance — AI-generated vs user-sourced
 
-- **`scout` sub-agent** — delegate any web research. Switch specs,
-  vendor URLs, group-buy dates, manufacturer details. Give scout
-  the entity slug + schema fields needed; let it return a populated
-  JSON object you validate.
-- **`data-steward` sub-agent** — delegate schema-heavy work: adding
-  a new entity type, restructuring a schema, mass cross-reference
-  audits.
-- **Parallel calls** when work is independent: e.g. researching 5
-  new switches in parallel before merging the results into one
-  commit (one commit per record is the default; bundle only if all
-  are tightly related).
+Every record this skill writes carries a **provenance marker**
+in its schema (or equivalent metadata for external DBs):
 
-## 5. The procedure
+```
+{
+  ...record fields...,
+  "provenance": {
+    "source": "scout" | "user" | "ai-generated" | "vendor-published" | "manual-import",
+    "verified": true | false,
+    "verified_by": "<actor>" | null,
+    "verified_at": "<ISO date>" | null,
+    "citations": [<url-or-source-id>, ...]
+  }
+}
+```
+
+The trust contract by source:
+
+| Source | Verification needed before publish | Citations required |
+|---|---|---|
+| `vendor-published` (manufacturer spec) | none | URL to vendor page |
+| `user` (user-submitted via API/form) | shape + spam filter | optional |
+| `scout` (open-web research) | cross-source confirmation if claim is high-stakes | yes, ≥1 primary source |
+| `ai-generated` (LLM-drafted prose / summary) | factual claims must be cite-backed; non-factual prose can publish | yes for factual; no for editorial |
+| `manual-import` (you, by hand) | trust your own | optional |
+
+**`ai-generated` records require extra rigor.** When this skill
+writes an AI-generated record (typically content like an
+article, a summary, a description):
+
+1. Every factual claim in the record must trace to a citation
+   in `provenance.citations`. If a claim can't be cited, it
+   must be removed or marked clearly as opinion.
+2. Spawn `scout` to verify any specific factual claim before
+   publish. The `verified` flag is `false` until scout returns
+   confirmation.
+3. Records published with `verified: false` are visible to the
+   site but flagged (e.g. a `[draft]` badge or
+   `noindex` meta). The next `/iterate` tick prioritizes
+   verifying them.
+
+The schema enforces this — see
+`customization/data-layer.md` "Provenance schema" section.
+
+## 5. Delegation
+
+- **`scout`** — sourcing facts, vendor URLs, dates, specs.
+  Required for `ai-generated` records' citation backfill.
+- **`<content-curator>`** — drafting prose for `ai-generated`
+  content records (articles, summaries).
+- **`<data-steward>`** — schema-heavy work (new entity types,
+  mass cross-ref repair, migrations).
+- **Parallel calls** when researching multiple records.
+
+## 6. The procedure
+
+The procedure is the same shape across patterns; bash commands
+vary. Use the variant matching your project's data layer.
 
 ### Step 0 — Re-sync
 
@@ -92,286 +123,200 @@ When invoked under `/loop`, do not pause for review.
 git pull --ff-only
 ```
 
-If divergence, stop per §9.
-
 ### Step 1 — Pick the work
 
-Read `data/BACKLOG.md`. The next item is the first `[ ]` row.
+Pattern A (GitHub-as-DB): read `data/BACKLOG.md`, next `[ ]`
+row.
+Pattern B (DB): read `data/BACKLOG.md` OR query a "to-process"
+queue table.
+Pattern C (SaaS): read `data/BACKLOG.md` OR poll the SaaS API
+for unprocessed records.
+Pattern D (Hybrid): read both sources; pick by priority.
 
-If the backlog is empty (or the user passed `audit`), run the audit
-in §6, write findings to `data/AUDIT.md`, pick the highest-scored
-finding, and append it to `data/BACKLOG.md` as a new `[ ]` row, then
-proceed with that as the work.
-
-If the user passed `add <entity> <slug>`, that's the work. If the
-user passed `normalize`, jump to §7.
+If empty, run audit (§7) and append top finding to backlog.
 
 ### Step 2 — Read the schema
 
-```bash
-cat data/schemas/<entity>.schema.json
-```
+Pattern A: `data/schemas/<entity>.schema.json` (Zod-derived).
+Pattern B: schema-as-code in `<schema-package>/src/schemas/`.
+Pattern C: provider's schema endpoint (`/v0/meta/bases/...` for
+Airtable, schema introspection for Sanity, etc.).
+Pattern D: combination.
 
-This is your contract. The Zod source lives at
-`packages/data/src/schemas/<entity>.ts`. The JSON Schema file is
-generated from it; if you need to edit the schema, edit the Zod
-source and regenerate via `pnpm --filter @thock/data schema:generate`.
+### Step 3 — Research / draft
 
-### Step 3 — Research the record
+If external research needed: spawn `scout`. If AI-generated
+content: spawn `<content-curator>` with the draft requirements.
 
-If the record needs external research (specs, dates, URLs), spawn
-`scout`:
+For `ai-generated`: scout returns citation candidates → curator
+drafts → main agent assembles the record with `provenance.citations`
+populated.
 
-> Agent({ subagent_type: "scout", prompt: "Research <entity> <slug>:
-> fill these fields per schema: ..." })
+### Step 4 — Validate
 
-Scout returns a populated draft. Validate it locally before committing.
+Pattern A: write JSON to `data/<entity>/<slug>.json`,
+`pnpm data:validate`.
+Pattern B: insert/upsert via driver inside a transaction; the
+DB enforces schema; rollback on validation failure.
+Pattern C: dry-run via the provider's validation endpoint where
+available; otherwise post + check response.
+Pattern D: validate per-source; fail if any side fails.
 
-### Step 4 — Write the JSON
+### Step 5 — Wire (only if first record of a new entity type)
 
-```bash
-data/<entity>/<slug>.json
-```
+Pattern A: add a loader at `<schema-package>/src/<entity>.ts`
+plus tests. Re-export.
+Pattern B: add a query helper / model / repository. Migrations
+applied separately.
+Pattern C: add a typed wrapper around the provider's client.
+All patterns: tests for the wire layer.
 
-Use the schema. Slug convention: `kebab-case`, derived from the
-canonical name. No spaces, no underscores, no apostrophes (strip them
-or substitute with `-`).
+### Step 6 — Persist + commit
 
-#### Step 4b — File companion-article AUDIT row when adding a group-buy record (phase 40 rule)
-
-After writing the JSON, run the companion survey to catch Rule 3 gaps
-immediately:
-
-```bash
-node scripts/group-buy-companion-survey.mjs --write
-```
-
-If the new record is `live` or `announced` with no `relatedArticle`,
-the script appends a `content-gaps` AUDIT row (score 7.0) so the next
-`/ship-content` tick produces the companion piece automatically.
-
-Deduplication is built in — repeated runs are safe. If the script exits
-non-zero, log the error and continue; this check is best-effort, not
-blocking.
-
-#### Step 4c — Check for stale status when adding or updating a group-buy record (phase 42 rule)
-
-After writing the JSON (and after Step 4b), run the stale status scanner:
+Pattern A:
 
 ```bash
-node scripts/group-buy-status-check.mjs --write
+git add data/<entity>/<slug>.json [+ schema if changed]
+git commit -m "data: add <entity> <slug>"
+# land per owner mode: skills/next/land.md §6
 ```
 
-If the record has `endDate < today` and `status ∈ {live, announced}`, the
-script appends a `data` AUDIT row (score 3.6) so the next `/ship-data` tick
-corrects the status field.
+Pattern B (external DB):
 
-Deduplication is built in — repeated runs are safe. If the script exits
-non-zero, log the error and continue; this check is best-effort, not
-blocking.
-
-#### Step 4a — Bundle hero art when adding a group-buy record (phase 23 rule)
-
-When `<entity>` is `group-buys`, the new record's `heroImage`
-field MUST be set to a real SVG path under
-`apps/web/public/group-buy-art/<slug>.svg` — not left as
-`null`. Per the bearings.md "Group-buy hero art" durable rule
-(locked 2026-05-10):
-
-1. Spawn `brander` inline with a brief that maps the record's
-   `productKind` to a subject (board → keyboard outline,
-   keycap-set → cap cluster, switch → cross-section).
-2. Pass a single splash hue picked from the kit's character
-   (warm bronze + one accent — never multi-color).
-3. Brander writes the SVG + provenance JSON sibling at
-   `apps/web/public/group-buy-art/<slug>.svg`(.json).
-4. Set `heroImage: "/group-buy-art/<slug>.svg"` in the new
-   record. Bundle the SVG, the provenance JSON, and the
-   record into the same commit.
-
-This mirrors the article-hero rule from phase 5+ (where
-`content-curator` and `brander` ship together for new
-articles). The render surface (`<GroupBuyRow>` and
-`<GroupBuyCountdownRow>`) falls back to a coral-tinted
-placeholder when `heroImage` is null, but the rule is: don't
-ship null. New group buys ship with art.
-
-### Step 5 — Validate
+The record is already inserted (Step 4). Commit the **migration
+or schema change** (if any) to the repo:
 
 ```bash
-pnpm data:validate
+git add <migration-file>
+git commit -m "data: schema <entity> + insert <slug>
+
+Record inserted to DB. Migration: <file>.
+DB ID: <id>.
+"
+# land per owner mode: skills/next/land.md §6
 ```
 
-This runs every record under `/data/` through its schema and checks
-cross-references (e.g. every `switches[].vendorId` must point to an
-existing `vendors/<id>.json`). Iterate up to 3 times on the same
-root cause. If still failing, stop per §9.
+The actual record lives in the DB; the commit captures intent
+and migration.
 
-### Step 6 — Wire (only if first record of a new entity type)
-
-If you just added the first record of a new entity type, also:
-- Add a loader in `packages/data/src/<entity>.ts`
-  (`getAll<Entity>`, `get<Entity>BySlug`).
-- Add the loader's tests under `packages/data/src/__tests__/`.
-- Re-export from `packages/data/src/index.ts`.
-
-For subsequent records of an existing type, skip this — the loader
-already exists.
-
-### Step 7 — Commit
+Pattern C (SaaS): record is in the SaaS provider. Commit a
+**reference / log entry** or a sync manifest to the repo:
 
 ```bash
-git add data/<entity>/<slug>.json [+ schema if changed] [+ loader if new entity]
-git commit -m "$(cat <<'EOF'
-data: add <entity> <slug>
+git add data/sync-log.md   # or similar
+git commit -m "data: synced <entity> <slug> to <provider>
 
-- Source: <where the data came from — vendor site, manufacturer
-  spec sheet, etc.>
-- Cross-refs: <if any — vendors, parent boards, etc.>
-
-Decisions:
-- <judgement call you made>
-EOF
-)"
-git push origin main
+External ID: <id>.
+"
+# land per owner mode: skills/next/land.md §6
 ```
 
-If the backlog had this row, flip its `[ ]` → `[x]` in `data/BACKLOG.md`
-in the same commit.
+Pattern D: combine.
 
-### Step 8 — Confirm deploy
+**Always commit something** — even if the data lives outside
+the repo. The commit is the audit trail. "What did the loop do
+in the last 80 hours?" must be answerable from `git log` alone.
 
-Same as `ship-a-phase` Step 12. Run:
+### Step 7 — Confirm deploy
 
 ```bash
 pnpm deploy:check
 ```
 
-Data-only commits still trip a Netlify rebuild (the site reads
-data at build time). A red deploy after a data ship is a real
-regression — read the log, patch (often: revert the data edit
-that broke validation in production), push again. Up to 3 same-
-root-cause iterations; otherwise stop per §9.
+Pattern A: data lives in the build; deploy rebuild reflects
+changes.
+Pattern B/C: deploy may not change (data is read at runtime),
+but the gate still runs to confirm no regression.
 
-### Step 9 — Done
+### Step 8 — Done
 
-Return cleanly. Loop's next tick picks up the next backlog row.
+Return cleanly.
 
-## 6. Audit pass (when invoked with `audit` or empty backlog)
+## 7. Audit pass
 
-Score each finding 0–10 by impact × ease.
+Score 0–10 by impact × ease:
 
-**Findings to surface:**
+1. **Orphan references.** App / content references a slug not
+   in the data layer.
+2. **Schema drift.** Records validating against an old schema.
+3. **Stale time-bound entries.** Move to archive (Pattern A) or
+   set `archived: true` (Pattern B/C).
+4. **Coverage gaps.** Records mentioned but missing.
+5. **Cross-reference symmetry.** Bidirectional refs that don't
+   agree.
+6. **Provenance hygiene.** Records with `verified: false` for
+   > 7 days. AI-generated records without citations.
+7. **Empty asset fields** (images, etc.).
 
-1. **Orphan references.** Articles or other records reference a
-   slug that doesn't exist in `/data`. Score by reference count.
-2. **Schema drift.** A record validates against an old schema but
-   the schema has new required fields.
-3. **Stale group-buy status.** `status ∈ {live, announced}` with
-   `endDate < today` — the status field wasn't updated when the buy
-   closed. Correct the `status` in place (`closed` or `shipped`);
-   never move the file. `getAllGroupBuys()` is intentionally
-   non-recursive (see `packages/data/src/loaders/paths.ts`) and
-   records stay in the flat `data/group-buys/` folder permanently —
-   `isGroupBuyEnded()` (status- and `endDate`-driven) is what routes
-   a record to `/group-buys/past`, not a physical move. This finding
-   is already automated by `scripts/group-buy-status-check.mjs`
-   (Step 4c); this audit-pass entry exists for the manual/cold-start
-   case.
-4. **Trend snapshot stale.** No new file in `data/trends/` for the
-   current ISO week.
-5. **Switch coverage gaps.** Articles mention switches with no
-   record. (Cross-grep `<Mono>` and `<PartReference>` usages
-   against `data/switches/`.)
-6. **Vendor coverage gaps.** Same idea for vendors.
-7. **Image fields empty.** Records with `image: null` should be
-   filled (delegate to scout for hero image URLs from vendor pages).
-8. **Cross-reference symmetry.** If `switch.vendor === "novelkeys"`,
-   does `vendors/novelkeys.json` list this switch? Both directions
-   should agree (or only one side is canonical — document which in
-   `data/README.md`).
+Write findings to a data-audit file the loop can read next tick.
 
-Write findings to `data/AUDIT.md` with this format:
-
-```markdown
-# Data audit — <ISO date>
-
-## Findings (scored 0–10)
-
-### [9] Orphan reference: switch "drop-holy-panda" mentioned in 3 articles, no record
-- impact: 9 (3 articles, 1 home-page hero)
-- ease: 4 (need to research the rebadge story)
-- next: `add switch drop-holy-panda`
-
-### [7] Stale group buy: keycult-no2-r4
-- ...
-```
-
-## 7. Normalize pass
+## 8. Normalize pass (Pattern A primarily; adaptable)
 
 When invoked with `normalize`:
 
-- **Slug consistency.** Every JSON filename must match its `slug`
-  field. Walk the tree, fix mismatches.
-- **Cross-ref repair.** Walk every record's foreign-keys; if a
-  target doesn't exist, either create a stub (with `status:
-  "stub"`) or remove the orphan ref.
-- **Dedup.** If two records share a `name` or `aliases`, merge.
-- **Archive expired.** Group buys with `endDate < today` move to
-  `archive/`.
-- **Sort numeric arrays.** `aliases`, `tags`, `cross-refs` — sort
-  alphabetically for stable diffs.
+- **Slug consistency.** Filename / primary key matches the
+  `slug` field.
+- **Cross-ref repair.** Every foreign key resolves.
+- **Dedup.** Same name/aliases merged.
+- **Archive expired.** Time-bound entries moved.
+- **Sort string arrays** for stable diffs (Pattern A).
 
-Commit each category as its own commit (`data: normalize slugs`,
-`data: archive expired group buys`, etc.). Many small commits beat
-one mega-commit; the loop can be interrupted between them safely.
+Commit each category as its own commit.
 
-## 8. Hard rules
+## 9. Hard rules
 
-1. **Schema is law.** Never write a JSON file that doesn't validate.
-2. **No `Co-Authored-By:` in commits. No emojis.**
-3. **One record per file.** No giant arrays-as-database files.
-4. **Slugs are URL-safe.** `kebab-case`, `[a-z0-9-]+` only.
-5. **Cross-refs use slugs, not names.** Slugs are forever; names
-   change.
-6. **Never delete records.** Archive (move to `archive/`) or mark
-   `status: "deprecated"`. The DB is append-mostly.
-7. **`pnpm data:validate` must pass before commit.**
+1. **Schema is law.** Never persist a record that doesn't
+   validate.
+2. **No `Co-Authored-By:`. No emojis.**
+3. **Provenance markers required** on every record (§4).
+4. **`ai-generated` records must have citations** for factual
+   claims. Editorial / opinion prose does not need citations
+   but must be marked as such in provenance.
+5. **Slugs / primary keys are stable** — never reuse a deleted
+   slug for a new record.
+6. **Cross-refs use slugs / IDs**, not names.
+7. **Append-mostly.** Archive (don't delete) wherever the
+   pattern allows.
+8. **Validate before persist.** Failure aborts the tick.
 
-## 9. Failure modes — when to stop
+## 10. Failure modes
 
-1. **`pnpm data:validate` fails ≥3 times on the same root cause.**
-2. **`pnpm deploy:check` fails ≥3 times on the same root cause
-   after a data ship.** Often this means the data crossed a
-   schema boundary that local validate didn't catch; fetch the
-   deploy log and surface it.
-3. **`VERCEL_TOKEN` missing** (deploy:check exit 3). Stop
-   and ask the user to populate `.env`.
-4. **Schema change requires migration of >20 existing records.**
-   That's a /plan-a-phase task; don't bundle into a ship-data tick.
-5. **A research task requires login or paid access.** Scout reports
-   the gate; you stop and report.
-6. **`git pull` produces divergence.**
+1. **Validation fails ≥3 times on same root cause.**
+2. **`pnpm deploy:check` fails ≥3 times** after a data ship.
+3. **`<PROVIDER_AUTH_TOKEN>` missing** (deploy:check exit 3).
+4. **External DB / SaaS unreachable.** Surface; the next tick
+   retries.
+5. **Schema change requires migration of >20 records.** That's
+   a `/plan-a-spec` task; not bundled here.
+6. **AI-generated record has unverifiable factual claims** that
+   scout can't cite. Mark `verified: false`, file as
+   `[needs-user-call]` in audit, ship anyway with the unverified
+   flag visible in UI.
+7. **Research requires login or paid access.**
+8. **`git pull` divergence.**
 
-Everything else: decide and ship. The loop continues.
+## 11. Quick reference
 
-## 10. Quick reference
+Replace per your data layer. Pattern A canonical commands:
 
 ```bash
 # Read
-data/BACKLOG.md                          # what to ship next
-data/AUDIT.md                            # latest findings
-data/schemas/<entity>.schema.json        # contract
-packages/data/src/<entity>.ts            # loaders
+data/BACKLOG.md
+data/AUDIT.md
+data/schemas/<entity>.schema.json
+<schema-package>/src/<entity>.ts
 
 # Write
-data/<entity>/<slug>.json                # the record
-packages/data/src/schemas/<entity>.ts    # only if extending the schema
-packages/data/src/<entity>.ts            # only first record of a new type
+data/<entity>/<slug>.json
+<schema-package>/src/schemas/<entity>.ts  # only if extending schema
 
-# Validate + commit + push
+# Validate + commit + land + deploy
 pnpm data:validate
 git add <explicit files>
 git commit -m "..."
-git push origin main
+# land per owner mode: skills/next/land.md §6
+pnpm deploy:check
 ```
+
+For Patterns B/C/D, see `customization/data-layer.md` for the
+equivalent commands.

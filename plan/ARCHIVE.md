@@ -1,0 +1,58 @@
+# Archive
+
+> Append-only: one line per finished chunk, added in the commit
+> that closes it. Never edited or reordered.
+
+---
+- 2026-05-08 · 01 · Monorepo bootstrap · 3ffa51c
+- 2026-05-08 · 02 · `@thock/data` package · fdc3489
+- 2026-05-08 · 03 · `@thock/content` package + seed articles · 21f153e
+- 2026-05-08 · 04 · URL contract + hermetic e2e infrastructure · fc1b0b0
+- 2026-05-08 · 04 · 4b: Production runtime hotfix + content cleanup · d0147cc..1b3944c
+- 2026-05-08 · 05 · Article page · e41499c..15e6617
+- 2026-05-09 · 06 · Home · f41bdeb
+- 2026-05-09 · 07 · News pillar · 80a0290
+- 2026-05-09 · 08 · Trends pillar + Trends Tracker · accb74f
+- 2026-05-09 · 09 · Ideas & Builds pillar · 5597401
+- 2026-05-09 · 10 · Deep Dives pillar · cea650a
+- 2026-05-09 · 11 · Guides pillar · dbb8323
+- 2026-05-09 · 12 · Tag pages · 4612d9b
+- 2026-05-09 · 13 · Group Buys · 16380cd
+- 2026-05-09 · 14 · Search · aa46fed
+- 2026-05-09 · 15 · Newsletter signup + RSS finalize · 5fa4ee4
+- 2026-05-09 · 15 · 15a: Loop issues mirror · 11c0777a
+- 2026-05-09 · 16 · Polish · f3e5bac
+- 2026-05-09 · 17 · Performance + meta · 1f5b33c
+- 2026-05-09 · 18 · Group buys backfill · e3dbac8
+- 2026-05-09 · 19 · Trends backfill + schema additive · 9a0d19e
+- 2026-05-09 · 20 · Switches / keycap-sets / boards backfill · 1f239c2
+- 2026-05-10 · 21 · Per-part pages `/part/[kind]/[slug]` for `kind ∈ {switch, keycap-set, board}` · 3e2dd018
+- 2026-05-10 · 22 · Streaming `<main>` landmark restructure · 3d85c357
+- 2026-05-10 · 23 · Group-buy hero art · d07fc85a
+- 2026-05-11 · 24 · `/ship-content` skill · 8b49296
+- 2026-05-11 · 25 · Cloud autonomous content schedule · 1a26f56
+- 2026-05-11 · 26 · Accessibility audit pass · 7899462
+- 2026-05-11 · 27 · Trends Tracker multi-week archive surface · 4d44b1a
+- 2026-05-12 · 28 · `/tags` index page · c83821e
+- 2026-05-12 · 29 · Group-buy archive `/group-buys/past` · df17423
+- 2026-05-14 · 30 · Content-velocity queue auto-refill · cc1b8ed
+- 2026-05-16 · 31 · Trends Tracker Phase B: automated weekly snapshot cadence · f8006d1
+- 2026-05-16 · 32 · A11y Phase B systematic completion · f41cc25
+- 2026-05-16 · 33 · "Find your switch" interactive recommender · faf99f5
+- 2026-05-21 · 34 · Parts catalog second data pass · cf656ef
+- 2026-05-21 · 35 · /parts root browse landing · 332ae7a
+- 2026-05-23 · 36 · Content language quality gate · 76edbc9
+- 2026-05-23 · 37 · Group-buy relatedArticle schema additive · fc17f19
+- 2026-06-11 · 38 · mentionedParts ship-time enforcement gate · e91eefc
+- 2026-06-11 · 39 · Companion-article prose cross-link auditor · c2977a0
+- 2026-06-11 · 40 · Group-buy Rule 3 companion survey · fa8994e
+- 2026-06-11 · 41 · Tracker Rule 2 linkage survey · 96cc87b
+- 2026-06-11 · 42 · Stale group-buy status scanner · 48efcec
+- 2026-06-11 · 43 · Article date archive `/archive` · 7536ca5
+- 2026-06-11 · 44 · Switch comparison `/compare/switch` · c99834b
+- 2026-06-11 · 45 · Vendor index + detail `/vendors` + `/vendor/[slug]` · 4ed83e7
+- 2026-06-15 · 46 · Cross-link drain efficiency · 073acf2
+- 2026-06-15 · 47 · `/quiz/keycap-set` keycap-set recommender · 2e9b649
+- 2026-06-15 · 48 · `/compare/board` side-by-side comparison · d7e7424d
+- 2026-06-15 · 49 · Interactive-tools discoverability · 6fddc18
+- 2026-08-23 · 50 · Trend-snapshot data-quality gate · fbae462a

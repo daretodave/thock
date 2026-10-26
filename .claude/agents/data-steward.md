@@ -132,7 +132,7 @@ agent's authority — the contract is the same).
 
 1. **A schema change would invalidate many records and you can't
    reach a backward-compatible variant.** Stop, return findings,
-   and let the main agent escalate to `/plan-a-phase` (this is a
+   and let the main agent escalate to `/plan-a-spec` (this is a
    substrate change worth a deliberate plan).
 2. **Cross-reference graph is intractable** (cycles you can't
    resolve, duplicate-merge ambiguities). Surface the specific
