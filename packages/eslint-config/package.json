@@ -1,18 +1,40 @@
 {
+
   "name": "@thock/eslint-config",
+
   "version": "0.0.0",
+
   "private": true,
+
   "main": "index.js",
+
   "files": [
-    "index.js"
+
+  
+  "index.js"
+
   ],
+
   "dependencies": {
-    "@eslint/js": "^9.39.5",
-    "eslint-config-prettier": "^10.1.8",
-    "globals": "^16.4.0",
-    "typescript-eslint": "^8.72.1"
+
+  
+  "@eslint/js": "^9.39.5",
+
+  
+  "eslint-config-prettier": "^10.1.8",
+
+  
+  "globals": "^17.13.0",
+
+  
+  "typescript-eslint": "^8.72.1"
+
   },
+
   "peerDependencies": {
-    "eslint": "^9.39.5"
+
+  
+  "eslint": "^9.39.5"
+
   }
 }
