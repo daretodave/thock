@@ -117,7 +117,6 @@ export function KeycapSetQuiz({ keycapSets }: Props) {
   const topRef = useRef<HTMLDivElement>(null)
   const pendingAdvance = useRef<ReturnType<typeof setTimeout> | null>(null)
   const resultsHeadingRef = useRef<HTMLHeadingElement>(null)
-  const hasCompletedRef = useRef(false)
 
   const totalSteps = QUESTIONS.length
   const currentQ = QUESTIONS[step]
@@ -128,9 +127,12 @@ export function KeycapSetQuiz({ keycapSets }: Props) {
     : []
   const maxScore = results[0]?.score ?? 0
 
+  // Once the results have shown, a retake autofocuses each question.
+  const [hasCompleted, setHasCompleted] = useState(false)
+  if (isDone && !hasCompleted) setHasCompleted(true)
+
   useEffect(() => {
     if (isDone) {
-      hasCompletedRef.current = true
       resultsHeadingRef.current?.focus()
     }
   }, [isDone])
@@ -169,7 +171,7 @@ export function KeycapSetQuiz({ keycapSets }: Props) {
             options={currentQ.options}
             selected={(answers[currentQ.key] as string | undefined) ?? null}
             onSelect={handleSelect}
-            autoFocus={hasCompletedRef.current}
+            autoFocus={hasCompleted}
           />
         </>
       )}

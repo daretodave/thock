@@ -83,16 +83,23 @@ export function TagChip({
       <span data-testid="tag-chip-category">
         {prefix}
       </span>
-      <span className="sr-only"> tag:</span>
+      {/* Space text nodes, not padding inside the spans: the accessible
+          name keeps its word breaks without CSS (a flex container
+          renders no whitespace-only text, so the chip looks the same). */}
+      {' '}
+      <span className="sr-only">tag:</span>
+      {' '}
       <span aria-hidden="true" className="opacity-50">
         ·
       </span>
+      {' '}
       <span data-testid="tag-chip-name">{name}</span>
     </>
   ) : (
     <>
       <span aria-hidden="true">#</span>
-      <span className="sr-only">tag: </span>
+      <span className="sr-only">tag:</span>
+      {' '}
       <span data-testid="tag-chip-name">{name}</span>
     </>
   )

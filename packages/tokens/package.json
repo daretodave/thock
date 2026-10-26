@@ -11,14 +11,14 @@
     "test": "vitest",
     "test:run": "vitest run",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint src --ext .ts,.tsx"
+    "lint": "eslint src"
   },
   "devDependencies": {
     "@thock/eslint-config": "workspace:*",
     "@thock/tsconfig": "workspace:*",
-    "@types/node": "^20.17.6",
-    "eslint": "^8.57.1",
+    "@types/node": "^22.19.0",
+    "eslint": "^9.39.5",
     "typescript": "^5.6.3",
-    "vitest": "^4.1.12"
+    "vitest": "^5.0.5"
   }
 }

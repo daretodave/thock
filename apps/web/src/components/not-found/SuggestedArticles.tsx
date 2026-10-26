@@ -73,15 +73,19 @@ export function SuggestedArticles({
   )
   const [showSkeleton, setShowSkeleton] = useState(false)
 
-  useEffect(() => {
-    let cancelled = false
+  // A new lookup resets the view during render (React's "adjust state
+  // when a prop changes"); the effect below only fetches.
+  const [lookup, setLookup] = useState({ query, limit })
+  if (lookup.query !== query || lookup.limit !== limit) {
+    setLookup({ query, limit })
     setShowSkeleton(false)
-    if (query.length === 0) {
-      setHits([])
-      setStatus('empty')
-      return
-    }
-    setStatus('loading')
+    setHits([])
+    setStatus(query.length === 0 ? 'empty' : 'loading')
+  }
+
+  useEffect(() => {
+    if (query.length === 0) return
+    let cancelled = false
     const skeletonTimer = window.setTimeout(() => {
       if (!cancelled) setShowSkeleton(true)
     }, SKELETON_DELAY_MS)

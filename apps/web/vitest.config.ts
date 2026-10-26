@@ -14,5 +14,8 @@ export default defineConfig({
     globals: true,
     setupFiles: ['./vitest.setup.ts'],
     include: ['src/**/__tests__/**/*.test.{ts,tsx}'],
+    // A test whose first step imports a route or the content set pays that
+    // load inside its own time; 5s (the default) is too tight on a busy machine.
+    testTimeout: 15_000,
   },
 })

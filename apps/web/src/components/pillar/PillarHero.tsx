@@ -68,7 +68,8 @@ export function PillarHero({
   const headingNode = heading ?? <em className="italic">{label}</em>
   const eyebrowText = eyebrow ?? `pillar · ${pillar}`
 
-  const resolvedPills: PillarHeroPill[] = pills ?? []
+  // A copy: the caller's pills array is never written to.
+  const resolvedPills: PillarHeroPill[] = [...(pills ?? [])]
   if (resolvedPills.length === 0 && rssLink) {
     resolvedPills.push({ ...rssLink, testId: 'rss' })
   } else if (resolvedPills.length > 0 && resolvedPills[0] && !resolvedPills[0].testId) {

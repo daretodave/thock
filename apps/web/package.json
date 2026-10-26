@@ -16,7 +16,7 @@
     "test": "vitest",
     "test:run": "vitest run",
     "size": "tsx scripts/measure-bundle.mts",
-    "lint": "eslint src --ext .ts,.tsx"
+    "lint": "eslint src"
   },
   "dependencies": {
     "@thock/content": "workspace:*",
@@ -34,22 +34,22 @@
     "remark-gfm": "^4.0.1"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/jest-dom": "^7.0.1",
     "@testing-library/react": "^16.3.3",
     "@thock/tsconfig": "workspace:*",
-    "@types/node": "^20.17.6",
+    "@types/node": "^22.19.0",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.4",
-    "@vitejs/plugin-react": "^4.7.0",
+    "@vitejs/plugin-react": "^6.1.2",
     "autoprefixer": "^10.6.1",
-    "eslint": "^8.57.1",
-    "eslint-config-next": "^15.0.3",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.4.2",
     "eslint-config-prettier": "^10.1.8",
-    "jsdom": "^25.0.1",
+    "jsdom": "^30.1.3",
     "postcss": "^8.5.31",
     "tailwindcss": "^3.4.15",
     "tsx": "^4.23.15",
     "typescript": "^5.6.3",
-    "vitest": "^4.1.12"
+    "vitest": "^5.0.5"
   }
 }

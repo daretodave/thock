@@ -26,7 +26,6 @@ export function GoogleTagManager() {
       id="gtm-loader"
       data-testid="gtm-loader"
       strategy="afterInteractive"
-      // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{ __html: GTM_SNIPPET }}
     />
   )

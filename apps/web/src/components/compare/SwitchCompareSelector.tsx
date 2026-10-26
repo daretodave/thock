@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState, type ReactElement } from 'react'
+import { useState, type ReactElement } from 'react'
 import { useRouter } from 'next/navigation'
 import type { Switch } from '@thock/data'
 
@@ -21,12 +21,18 @@ export function SwitchCompareSelector({
   const [a, setA] = useState(validate(initialA))
   const [b, setB] = useState(validate(initialB))
 
-  useEffect(() => {
-    setA(switches.some((s) => s.slug === initialA) ? initialA : '')
-  }, [initialA, switches])
-  useEffect(() => {
-    setB(switches.some((s) => s.slug === initialB) ? initialB : '')
-  }, [initialB, switches])
+  // A new URL pair (or list) re-validates that side: React's "adjust state
+  // when a prop changes", set during render rather than in an effect.
+  const [syncedA, setSyncedA] = useState({ slug: initialA, switches })
+  if (syncedA.slug !== initialA || syncedA.switches !== switches) {
+    setSyncedA({ slug: initialA, switches })
+    setA(validate(initialA))
+  }
+  const [syncedB, setSyncedB] = useState({ slug: initialB, switches })
+  if (syncedB.slug !== initialB || syncedB.switches !== switches) {
+    setSyncedB({ slug: initialB, switches })
+    setB(validate(initialB))
+  }
 
   const canCompare = a !== '' && b !== '' && a !== b
   const showSameSelectionHint = a !== '' && b !== '' && a === b

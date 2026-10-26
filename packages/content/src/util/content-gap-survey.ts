@@ -149,7 +149,6 @@ export function surveyContentGaps(articles: SurveyArticle[], today: Date): Surve
   })
 
   // candidates.length > 0 is guaranteed by the guard above
-  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
   return { status: 'candidate', candidate: candidates[0]! }
 }
 

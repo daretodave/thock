@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState, type ReactElement } from 'react'
+import { useState, type ReactElement } from 'react'
 import { useRouter } from 'next/navigation'
 import type { Board } from '@thock/data'
 
@@ -21,12 +21,18 @@ export function BoardCompareSelector({
   const [a, setA] = useState(validate(initialA))
   const [b, setB] = useState(validate(initialB))
 
-  useEffect(() => {
-    setA(boards.some((board) => board.slug === initialA) ? initialA : '')
-  }, [initialA, boards])
-  useEffect(() => {
-    setB(boards.some((board) => board.slug === initialB) ? initialB : '')
-  }, [initialB, boards])
+  // A new URL pair (or list) re-validates that side: React's "adjust state
+  // when a prop changes", set during render rather than in an effect.
+  const [syncedA, setSyncedA] = useState({ slug: initialA, boards })
+  if (syncedA.slug !== initialA || syncedA.boards !== boards) {
+    setSyncedA({ slug: initialA, boards })
+    setA(validate(initialA))
+  }
+  const [syncedB, setSyncedB] = useState({ slug: initialB, boards })
+  if (syncedB.slug !== initialB || syncedB.boards !== boards) {
+    setSyncedB({ slug: initialB, boards })
+    setB(validate(initialB))
+  }
 
   const canCompare = a !== '' && b !== '' && a !== b
   const showSameSelectionHint = a !== '' && b !== '' && a === b
