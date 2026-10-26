@@ -7,6 +7,20 @@ updates:
     groups:
       dev-dependencies:
         dependency-type: "development"
+    # Held back on purpose (2026-10-26). Delete a line once its blocker clears.
+    ignore:
+      # typescript-eslint supports TypeScript below 6.1 only.
+      - dependency-name: "typescript"
+        versions: [">=6.1.0"]
+      # eslint-config-next 16 bundles eslint-plugin-react, -import and
+      # -jsx-a11y, none of which supports ESLint 10 yet.
+      - dependency-name: "eslint"
+        versions: [">=10.0.0"]
+      - dependency-name: "@eslint/js"
+        versions: [">=10.0.0"]
+      # Node types follow the engines' Node (22), not the newest Node.
+      - dependency-name: "@types/node"
+        update-types: ["version-update:semver-major"]
 
   - package-ecosystem: "github-actions"
     directory: "/"
