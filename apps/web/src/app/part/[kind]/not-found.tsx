@@ -13,7 +13,7 @@ export default function PartIndexNotFound() {
           <h1 className="font-serif text-h1 sm:text-display text-text">
             Unknown part kind.
           </h1>
-          <p className="max-w-[60ch] font-serif text-h3 text-text-2">
+          <p className="max-w-60ch font-serif text-h3 text-text-2">
             The catalog is split into <code>switch</code>,{' '}
             <code>keycap-set</code>, and <code>board</code>. Try one of
             those.

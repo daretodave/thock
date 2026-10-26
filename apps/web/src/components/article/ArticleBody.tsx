@@ -58,7 +58,7 @@ export function ArticleBody({
         //   the float-right InlineViz figures don't escape the body's vertical
         //   bounds. Without this, a tall float at the end of an article would
         //   overflow below the article body and overlap the footer.
-        className="thock-prose font-serif text-body text-text leading-[1.7] max-w-[60ch] xl:relative xl:flow-root"
+        className="thock-prose font-serif text-body text-text leading-[1.7] max-w-60ch xl:relative xl:flow-root"
       >
         <MDXRemote source={body} components={components} options={mdxOptions} />
       </div>

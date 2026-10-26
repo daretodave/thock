@@ -57,7 +57,7 @@ export default function SearchPage(): ReactElement {
           <h1 className="font-serif italic text-h1 sm:text-display text-text">
             Search thock
           </h1>
-          <p className="max-w-[60ch] font-serif text-h3 text-text-2">{LEDE}</p>
+          <p className="max-w-60ch font-serif text-h3 text-text-2">{LEDE}</p>
         </Stack>
       </Container>
 

@@ -8,7 +8,7 @@ export default function PartsLoading() {
         <Stack gap={4}>
           <PageSectionKicker>loading · catalog</PageSectionKicker>
           <div className="h-12 w-1/4 animate-pulse bg-surface" />
-          <div className="h-6 w-2/3 max-w-[60ch] animate-pulse bg-surface" />
+          <div className="h-6 w-2/3 max-w-60ch animate-pulse bg-surface" />
         </Stack>
       </Container>
       <Container as="section" className="pb-16">
@@ -16,7 +16,7 @@ export default function PartsLoading() {
           {[0, 1, 2].map((i) => (
             <div key={i} className="py-8 flex flex-col gap-3">
               <div className="h-8 w-1/3 animate-pulse bg-surface" />
-              <div className="h-4 w-2/3 max-w-[60ch] animate-pulse bg-surface" />
+              <div className="h-4 w-2/3 max-w-60ch animate-pulse bg-surface" />
               <div className="h-4 w-24 animate-pulse bg-surface" />
             </div>
           ))}

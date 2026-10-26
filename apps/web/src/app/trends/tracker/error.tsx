@@ -20,7 +20,7 @@ export default function TrackerError({
         <h1 className="font-serif text-h1 sm:text-display text-text">
           The tracker failed to load.
         </h1>
-        <p className="max-w-[60ch] font-serif text-h3 text-text-2">
+        <p className="max-w-60ch font-serif text-h3 text-text-2">
           The latest snapshot may have a malformed row. The incident has a
           digest you can quote when reporting.
         </p>

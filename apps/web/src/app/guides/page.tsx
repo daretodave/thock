@@ -80,7 +80,7 @@ export default function GuidesPage(): ReactElement {
           <Stack gap={4}>
             <PageSectionKicker>empty pillar</PageSectionKicker>
             <h2 className="font-serif text-h2 text-text">No guides yet — check back soon.</h2>
-            <p className="max-w-[60ch] font-serif text-h3 text-text-2">
+            <p className="max-w-60ch font-serif text-h3 text-text-2">
               The reference shelf fills in soon.
             </p>
           </Stack>

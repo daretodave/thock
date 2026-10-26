@@ -126,7 +126,7 @@ export default async function VendorDetailPage({
           </div>
           <p
             data-testid="vendor-detail-description"
-            className="max-w-[66ch] font-serif text-body text-text-2 leading-relaxed"
+            className="max-w-66ch font-serif text-body text-text-2 leading-relaxed"
           >
             {vendor.description}
           </p>

@@ -93,7 +93,7 @@ export function PillarHero({
             <h1 className="font-serif text-h1 sm:text-display text-text">
               {headingNode}
             </h1>
-            <p className="max-w-[60ch] font-serif text-h3 text-text-2">
+            <p className="max-w-60ch font-serif text-h3 text-text-2">
               {lede}
             </p>
           </div>

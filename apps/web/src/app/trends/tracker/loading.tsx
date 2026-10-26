@@ -8,7 +8,7 @@ export default function TrackerLoading() {
         <Stack gap={4}>
           <PageSectionKicker>loading · tracker</PageSectionKicker>
           <div className="h-12 w-3/4 animate-pulse bg-surface" />
-          <div className="h-6 w-2/3 max-w-[60ch] animate-pulse bg-surface" />
+          <div className="h-6 w-2/3 max-w-60ch animate-pulse bg-surface" />
         </Stack>
       </Container>
       <Container as="section" className="pb-12 sm:pb-16">

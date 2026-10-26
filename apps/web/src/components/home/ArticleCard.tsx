@@ -131,7 +131,7 @@ export function ArticleCard({
           >
             {fm.title}
           </HeroTitle>
-          <p className="text-h3 text-text-2 font-serif max-w-[60ch]">
+          <p className="text-h3 text-text-2 font-serif max-w-60ch">
             {fm.lede}
           </p>
           {meta}

@@ -10,7 +10,7 @@ export function PartBody({ description }: PartBodyProps): ReactElement {
     <Container as="section" className="pb-12">
       <p
         data-testid="part-body"
-        className="max-w-[60ch] font-serif text-h3 text-text-2"
+        className="max-w-60ch font-serif text-h3 text-text-2"
       >
         {description}
       </p>

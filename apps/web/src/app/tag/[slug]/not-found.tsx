@@ -23,7 +23,7 @@ export default function TagNotFound() {
           <h1 className="font-serif text-h1 sm:text-display text-text">
             No tag with that name.
           </h1>
-          <p className="max-w-[60ch] font-serif text-h3 text-text-2">
+          <p className="max-w-60ch font-serif text-h3 text-text-2">
             The tag you followed isn&rsquo;t in our taxonomy.
           </p>
         </div>

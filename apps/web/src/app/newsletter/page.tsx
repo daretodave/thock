@@ -47,7 +47,7 @@ export default function NewsletterPage(): ReactElement {
 
       <Container as="section" className="py-12 sm:py-16">
         <Stack gap={6}>
-          <div className="flex flex-col gap-3 max-w-[60ch]">
+          <div className="flex flex-col gap-3 max-w-60ch">
             <span
               data-testid="newsletter-eyebrow"
               className="font-mono text-micro uppercase tracking-[0.12em] text-accent"
@@ -62,7 +62,7 @@ export default function NewsletterPage(): ReactElement {
 
           <div
             data-testid="newsletter-form-card"
-            className="border border-border bg-surface p-6 sm:p-8 max-w-[60ch]"
+            className="border border-border bg-surface p-6 sm:p-8 max-w-60ch"
           >
             <ButtondownForm variant="full" />
           </div>

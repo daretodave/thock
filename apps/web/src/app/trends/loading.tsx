@@ -9,8 +9,8 @@ export default function TrendsLoading() {
           <Stack gap={4}>
             <PageSectionKicker>loading · pillar</PageSectionKicker>
             <div className="h-12 w-1/3 animate-pulse bg-surface" />
-            <div className="h-6 w-2/3 max-w-[60ch] animate-pulse bg-surface" />
-            <div className="h-6 w-1/2 max-w-[60ch] animate-pulse bg-surface" />
+            <div className="h-6 w-2/3 max-w-60ch animate-pulse bg-surface" />
+            <div className="h-6 w-1/2 max-w-60ch animate-pulse bg-surface" />
           </Stack>
           <div className="flex flex-col gap-3">
             <div className="h-[76px] w-56 animate-pulse border border-border bg-surface" />

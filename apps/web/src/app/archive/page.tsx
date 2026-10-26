@@ -61,7 +61,7 @@ export default function ArchivePage(): ReactElement {
           >
             Archive
           </h1>
-          <p className="max-w-[60ch] font-serif text-h3 text-text-2">
+          <p className="max-w-60ch font-serif text-h3 text-text-2">
             {articles.length} articles across {groups.length} month
             {groups.length !== 1 ? 's' : ''}.
           </p>

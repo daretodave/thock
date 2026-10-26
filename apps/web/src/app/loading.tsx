@@ -19,8 +19,8 @@ export default function RootLoading() {
         <PageSectionKicker>loading</PageSectionKicker>
         <div className="flex flex-col gap-3">
           <div className="h-10 w-2/3 animate-pulse bg-surface" />
-          <div className="h-5 w-1/2 max-w-[60ch] animate-pulse bg-surface" />
-          <div className="h-5 w-1/3 max-w-[60ch] animate-pulse bg-surface" />
+          <div className="h-5 w-1/2 max-w-60ch animate-pulse bg-surface" />
+          <div className="h-5 w-1/3 max-w-60ch animate-pulse bg-surface" />
         </div>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {Array.from({ length: 6 }).map((_, i) => (

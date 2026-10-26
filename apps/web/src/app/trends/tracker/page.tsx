@@ -99,7 +99,7 @@ export default function TrendsTrackerPage(): ReactElement {
             <h2 className="font-serif text-h2 text-text">
               No tracker snapshot has shipped yet — check back soon.
             </h2>
-            <p className="max-w-[60ch] font-serif text-h3 text-text-2">
+            <p className="max-w-60ch font-serif text-h3 text-text-2">
               Check back next Monday at 09:00 EST.
             </p>
             <Link
@@ -143,7 +143,7 @@ export default function TrendsTrackerPage(): ReactElement {
         <Container as="section" className="py-16">
           <Stack gap={3}>
             <PageSectionKicker>snapshot · zero rows</PageSectionKicker>
-            <p className="max-w-[60ch] font-serif text-h3 text-text-2">
+            <p className="max-w-60ch font-serif text-h3 text-text-2">
               The latest snapshot has no rows. The next issue should
               fix that.
             </p>

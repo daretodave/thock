@@ -28,7 +28,7 @@ export function MentionedInArticles({
           </span>
           <p
             data-testid="part-mentioned-empty"
-            className="max-w-[60ch] font-serif text-h3 text-text-2"
+            className="max-w-60ch font-serif text-h3 text-text-2"
           >
             Not yet mentioned in any article. Check back as the catalog
             grows.

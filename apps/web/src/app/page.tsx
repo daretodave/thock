@@ -134,7 +134,7 @@ export default function HomePage(): ReactElement {
             <h1 className="font-serif text-h1 sm:text-display text-text">
               {siteConfig.name}
             </h1>
-            <p className="max-w-[60ch] font-serif text-h3 text-text-2">
+            <p className="max-w-60ch font-serif text-h3 text-text-2">
               No articles yet — check back soon.
             </p>
           </Stack>

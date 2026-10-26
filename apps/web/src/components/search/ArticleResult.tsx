@@ -54,7 +54,7 @@ export function ArticleResult({
           {hit.title}
         </Link>
       </h2>
-      <p className="mt-2 max-w-[68ch] text-small text-text-2 line-clamp-2">
+      <p className="mt-2 max-w-68ch text-small text-text-2 line-clamp-2">
         {hit.lede}
       </p>
       {hit.tags.length > 0 && (

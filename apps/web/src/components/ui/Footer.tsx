@@ -21,7 +21,7 @@ export function Footer() {
               <Wordmark size="sm" />
               <p
                 data-testid="footer-tagline"
-                className="max-w-[40ch] text-small text-text-2"
+                className="max-w-40ch text-small text-text-2"
               >
                 editorial content hub for mechanical keyboard enthusiasts.
               </p>

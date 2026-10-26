@@ -93,7 +93,7 @@ export default function PartsPage(): ReactElement {
           >
             Parts
           </h1>
-          <p className="max-w-[60ch] font-serif text-h3 text-text-2">
+          <p className="max-w-60ch font-serif text-h3 text-text-2">
             {totalCount} parts across switches, keycap sets, and boards.
           </p>
         </Stack>
@@ -119,7 +119,7 @@ export default function PartsPage(): ReactElement {
                   {s.count}
                 </span>
               </div>
-              <p className="max-w-[60ch] text-body text-text-2">
+              <p className="max-w-60ch text-body text-text-2">
                 {s.description}
               </p>
               <span className="font-mono text-small uppercase tracking-[0.08em] text-text-2 group-hover:text-text transition-colors">

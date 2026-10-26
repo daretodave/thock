@@ -8,7 +8,7 @@ export default function ArchiveLoading() {
         <Stack gap={4}>
           <PageSectionKicker>browse · by date</PageSectionKicker>
           <div className="h-12 w-1/4 animate-pulse bg-surface" />
-          <div className="h-6 w-2/3 max-w-[60ch] animate-pulse bg-surface" />
+          <div className="h-6 w-2/3 max-w-60ch animate-pulse bg-surface" />
         </Stack>
       </Container>
       <Container as="section" className="pb-16">

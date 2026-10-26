@@ -21,7 +21,7 @@ export type ArticleHeroProps = {
  * optional hero image.
  *
  * **Mobile / tablet (< xl, 1280px):** text block and hero image stack
- * vertically, both constrained to `max-w-[60ch]` so the hero image
+ * vertically, both constrained to `max-w-60ch` so the hero image
  * follows the same column rules as the body prose below it.
  *
  * **Desktop (≥ xl):** text block stays in the 60ch column on the
@@ -56,7 +56,7 @@ export function ArticleHero({
           }
         >
           {/* TEXT BLOCK — stays in the 60ch column at every breakpoint. */}
-          <div className="flex flex-col gap-5 max-w-[60ch] xl:shrink-0">
+          <div className="flex flex-col gap-5 max-w-60ch xl:shrink-0">
             <div
               data-testid="article-hero-eyebrow"
               className="font-mono uppercase tracking-[0.12em] text-micro text-accent"
@@ -89,7 +89,7 @@ export function ArticleHero({
           {heroImage && (
             <div
               data-testid="article-hero-image"
-              className="w-full max-w-[60ch] xl:max-w-none xl:flex-1"
+              className="w-full max-w-60ch xl:max-w-none xl:flex-1"
             >
               <div className="relative aspect-16/10 overflow-hidden rounded-md">
                 <Image

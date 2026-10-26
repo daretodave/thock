@@ -48,7 +48,7 @@ export default function QuizSwitchPage(): ReactElement {
         />
         <div className="mb-4 pt-8">
           <h1 className="text-h1 font-serif text-text mb-3">Find your switch</h1>
-          <p className="text-body text-text-2 max-w-[55ch]">
+          <p className="text-body text-text-2 max-w-55ch">
             Answer four quick questions to find the mechanical keyboard switch that matches
             your typing style — then explore the full spec on its page.
           </p>

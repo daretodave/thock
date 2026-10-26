@@ -62,7 +62,7 @@ export function SwitchCompareTable({
       className="pb-12 overflow-x-auto"
     >
       {/* Column headers */}
-      <div className="grid grid-cols-[14ch_1fr_1fr] gap-x-8 mb-4 pb-3 border-b border-border-hi">
+      <div className="grid grid-cols-[calc(14*var(--ch))_1fr_1fr] gap-x-8 mb-4 pb-3 border-b border-border-hi">
         <div />
         <div>
           <h2 data-testid="compare-switch-a-name" className="font-serif text-h3 text-text">
@@ -89,7 +89,7 @@ export function SwitchCompareTable({
       </div>
 
       {/* Spec rows */}
-      <dl className="grid grid-cols-[14ch_1fr_1fr] gap-x-8 gap-y-3">
+      <dl className="grid grid-cols-[calc(14*var(--ch))_1fr_1fr] gap-x-8 gap-y-3">
         {rowsA.map((rowA, i) => {
           const rowB = rowsB[i]!
           const differs = rowA.value !== rowB.value

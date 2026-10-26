@@ -46,7 +46,7 @@ export function PartIndexCard({ part }: PartIndexCardProps): ReactElement {
           {STATUS_LABEL[status] ?? status}
         </span>
       </div>
-      <p className="max-w-[70ch] text-body text-text-2">
+      <p className="max-w-70ch text-body text-text-2">
         {truncate(part.record.description, 140)}
       </p>
     </Link>

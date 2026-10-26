@@ -266,7 +266,7 @@ export function InlineViz({
               style={{ touchAction: 'pinch-zoom' }}
             />
             {caption && (
-              <figcaption className="mt-3 max-w-[60ch] px-2 text-center font-serif italic text-small text-white/80">
+              <figcaption className="mt-3 max-w-60ch px-2 text-center font-serif italic text-small text-white/80">
                 {caption}
               </figcaption>
             )}

@@ -81,7 +81,7 @@
  * with `position: absolute`.
  *
  * Position math (xl viewport — Container max-w-7xl=1280px, centered;
- * article body max-w-[60ch]=560px, left-aligned inside Container
+ * article body max-w-60ch=560px, left-aligned inside Container
  * with 40px Container padding, so body.right reduces uniformly to
  * `50vw - 40` at all xl widths):
  *   body.right     = 50vw - 40px

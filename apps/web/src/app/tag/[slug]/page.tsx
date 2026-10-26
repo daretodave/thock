@@ -146,7 +146,7 @@ export default async function TagPage({
           </h1>
           <p
             data-testid="tag-page-lede"
-            className="max-w-[60ch] font-serif text-h3 text-text-2"
+            className="max-w-60ch font-serif text-h3 text-text-2"
           >
             {articles.length} {articles.length === 1 ? 'article' : 'articles'}{' '}
             tagged #{visibleLabel}.
@@ -180,7 +180,7 @@ export default async function TagPage({
             <h2 className="font-serif text-h2 text-text">
               No articles tagged #{visibleLabel} yet — check back soon.
             </h2>
-            <p className="max-w-[60ch] font-serif text-h3 text-text-2">
+            <p className="max-w-60ch font-serif text-h3 text-text-2">
               When something lands under this tag, it shows up here first.
             </p>
           </Stack>

@@ -166,7 +166,7 @@ export default async function PartIndexPage({
           >
             {heading}
           </h1>
-          <p className="max-w-[60ch] font-serif text-h3 text-text-2">
+          <p className="max-w-60ch font-serif text-h3 text-text-2">
             {description}
           </p>
           <Link

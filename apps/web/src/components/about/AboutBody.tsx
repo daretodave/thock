@@ -13,7 +13,7 @@ export function AboutBody(): ReactElement {
   return (
     <div
       data-testid="about-body"
-      className="thock-prose flex flex-col gap-10 max-w-[60ch]"
+      className="thock-prose flex flex-col gap-10 max-w-60ch"
     >
       <section data-testid="about-section-pillars">
         <h2 className="font-serif text-h2 text-text">What thock covers</h2>

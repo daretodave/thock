@@ -11,7 +11,7 @@ export default function TrackerWeekNotFound() {
           <h1 className="font-serif text-h1 sm:text-display text-text">
             Week not found.
           </h1>
-          <p className="max-w-[60ch] font-serif text-h3 text-text-2">
+          <p className="max-w-60ch font-serif text-h3 text-text-2">
             That snapshot hasn&apos;t been published yet, or the week identifier
             is malformed. Valid format is{' '}
             <span className="font-mono text-mono text-text">YYYY-WNN</span>.

@@ -157,7 +157,7 @@ export default async function TrackerWeekPage({
         <Container as="section" className="py-16">
           <Stack gap={3}>
             <PageSectionKicker>snapshot · zero rows</PageSectionKicker>
-            <p className="max-w-[60ch] font-serif text-h3 text-text-2">
+            <p className="max-w-60ch font-serif text-h3 text-text-2">
               This snapshot has no rows.
             </p>
           </Stack>

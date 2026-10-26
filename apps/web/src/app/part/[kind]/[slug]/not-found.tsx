@@ -13,7 +13,7 @@ export default function PartDetailNotFound() {
           <h1 className="font-serif text-h1 sm:text-display text-text">
             No part with that slug.
           </h1>
-          <p className="max-w-[60ch] font-serif text-h3 text-text-2">
+          <p className="max-w-60ch font-serif text-h3 text-text-2">
             The part you followed isn&rsquo;t in our catalog yet, or the
             kind doesn&rsquo;t exist.
           </p>

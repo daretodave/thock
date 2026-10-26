@@ -95,7 +95,7 @@ export default function ToolsPage(): ReactElement {
           >
             Tools
           </h1>
-          <p className="max-w-[60ch] font-serif text-h3 text-text-2">
+          <p className="max-w-60ch font-serif text-h3 text-text-2">
             Quizzes that match you to the right gear, and comparison tables that
             put specs side-by-side.
           </p>

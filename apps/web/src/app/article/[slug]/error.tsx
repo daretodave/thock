@@ -20,7 +20,7 @@ export default function ArticleError({
         <h1 className="font-serif text-h1 sm:text-display text-text">
           Something went wrong rendering this article.
         </h1>
-        <p className="max-w-[60ch] font-serif text-h3 text-text-2">
+        <p className="max-w-60ch font-serif text-h3 text-text-2">
           The MDX may have a bad shape, or a referenced part is missing. The
           incident has a digest you can quote when reporting.
         </p>

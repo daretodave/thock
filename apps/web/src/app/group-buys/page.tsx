@@ -94,7 +94,7 @@ export default function GroupBuysPage(): ReactElement {
           <h1 className="font-serif italic text-h1 sm:text-display text-text">
             Group buys
           </h1>
-          <p className="max-w-[60ch] font-serif text-h3 text-text-2">{LEDE}</p>
+          <p className="max-w-60ch font-serif text-h3 text-text-2">{LEDE}</p>
           <div
             data-testid="group-buys-summary"
             className="font-mono uppercase tracking-[0.08em] text-micro text-text-2"
@@ -126,7 +126,7 @@ export default function GroupBuysPage(): ReactElement {
             <h2 className="font-serif text-h2 text-text">
               No active group buys yet — check back soon.
             </h2>
-            <p className="max-w-[60ch] font-serif text-h3 text-text-2">
+            <p className="max-w-60ch font-serif text-h3 text-text-2">
               Check back weekly. We track every credible vendor.
             </p>
           </Stack>

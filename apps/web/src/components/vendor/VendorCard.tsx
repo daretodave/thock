@@ -42,7 +42,7 @@ export function VendorCard({ vendor }: VendorCardProps): ReactElement {
       </div>
       <p
         data-testid="vendor-card-description"
-        className="max-w-[60ch] text-body text-text-2"
+        className="max-w-60ch text-body text-text-2"
       >
         {truncate(vendor.description, 130)}
       </p>

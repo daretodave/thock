@@ -96,7 +96,7 @@ export default async function NewsletterDetailPage({
             >
               {PUBLISHED_FORMATTER.format(new Date(fm.publishedAt))}
             </time>
-            <p className="max-w-[60ch] font-serif text-h3 text-text-2">
+            <p className="max-w-60ch font-serif text-h3 text-text-2">
               {fm.lede}
             </p>
           </Stack>

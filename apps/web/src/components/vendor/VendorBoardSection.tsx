@@ -81,7 +81,7 @@ export function VendorBoardSection({
                     {STATUS_LABEL[board.status]}
                   </span>
                 </div>
-                <p className="max-w-[60ch] text-small text-text-2">
+                <p className="max-w-60ch text-small text-text-2">
                   {truncate(board.description, 100)}
                 </p>
               </div>

@@ -72,7 +72,7 @@ export default function TagsPage(): ReactElement {
           >
             All tags
           </h1>
-          <p className="max-w-[60ch] font-serif text-h3 text-text-2">
+          <p className="max-w-60ch font-serif text-h3 text-text-2">
             {tags.length} tags across {CATEGORY_ORDER.length} categories.
           </p>
         </Stack>

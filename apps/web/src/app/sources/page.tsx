@@ -74,7 +74,7 @@ export default function SourcesPage(): ReactElement {
 
       <Container as="section" className="py-12 sm:py-16">
         <Stack gap={6}>
-          <div className="flex flex-col gap-3 max-w-[60ch]">
+          <div className="flex flex-col gap-3 max-w-60ch">
             <span
               data-testid="sources-eyebrow"
               className="font-mono text-micro uppercase tracking-[0.12em] text-accent"
@@ -87,7 +87,7 @@ export default function SourcesPage(): ReactElement {
             <p className="font-serif text-h3 text-text-2">{LEDE}</p>
           </div>
 
-          <div className="thock-prose max-w-[60ch]">
+          <div className="thock-prose max-w-60ch">
             <p>
               thock cites external references inline as citations, marked
               <code>rel=&quot;noopener&quot;</code>. The &quot;view at
@@ -108,7 +108,7 @@ export default function SourcesPage(): ReactElement {
             >
               Citation index
             </h2>
-            <p className="thock-prose max-w-[60ch] text-body text-text-2">
+            <p className="thock-prose max-w-60ch text-body text-text-2">
               Every external URL cited across thock, deduped and grouped by
               the articles that linked it.
             </p>

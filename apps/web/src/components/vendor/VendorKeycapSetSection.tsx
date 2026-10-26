@@ -71,7 +71,7 @@ export function VendorKeycapSetSection({
                     {STATUS_LABEL[k.status]}
                   </span>
                 </div>
-                <p className="max-w-[60ch] text-small text-text-2">
+                <p className="max-w-60ch text-small text-text-2">
                   {truncate(k.description, 100)}
                 </p>
               </div>

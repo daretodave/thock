@@ -70,7 +70,7 @@ export function VendorSwitchSection({
                     {STATUS_LABEL[s.status]}
                   </span>
                 </div>
-                <p className="max-w-[60ch] text-small text-text-2">
+                <p className="max-w-60ch text-small text-text-2">
                   {truncate(s.description, 100)}
                 </p>
               </div>

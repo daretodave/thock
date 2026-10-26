@@ -1,8 +1,7 @@
-/* Unlayered, as under Tailwind 3: tokens.css's :root font stacks
-   ('Newsreader', ...) win over the --thock-serif/-sans/-mono next/font
-   sets on <html>, so the site keeps the faces it has always drawn. In
-   layer(base), next/font's self-hosted faces would win instead. */
-@import '@thock/tokens/tokens.css';
+/* In layer(base), so the --thock-serif/-sans/-mono next/font sets on
+   <html> (the self-hosted Newsreader, IBM Plex Sans, JetBrains Mono)
+   win over tokens.css's :root stacks, which stay as the fallback. */
+@import '@thock/tokens/tokens.css' layer(base);
 @import '../styles/components.css' layer(base);
 
 @import 'tailwindcss';
@@ -54,6 +53,19 @@
   --text-display: var(--thock-display);
   --text-display--line-height: 1.02;
   --text-display--letter-spacing: -0.022em;
+}
+
+/* Column measures: max-w-60ch is 60 × --ch, not 60ch. A real `ch` is
+   the zero of the element's own font, so swapping faces would move
+   every column; --ch pins it to the zero the layout was drawn with.
+   Inline, so var(--ch) resolves on the element itself. */
+@theme inline {
+  --container-40ch: calc(40 * var(--ch));
+  --container-55ch: calc(55 * var(--ch));
+  --container-60ch: calc(60 * var(--ch));
+  --container-66ch: calc(66 * var(--ch));
+  --container-68ch: calc(68 * var(--ch));
+  --container-70ch: calc(70 * var(--ch));
 }
 
 /*
@@ -125,9 +137,26 @@
     line-height: 1.55;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    /* --ch per face, in em so it scales with the font size like a
+       real ch: the zero of the stack the columns were laid out in
+       (Segoe UI, Georgia, Consolas), not Plex/Newsreader/JetBrains. */
+    --ch: 0.539em;
+  }
+
+  .font-sans {
+    --ch: 0.539em;
+  }
+
+  .font-serif {
+    --ch: 0.614em;
+  }
+
+  .font-mono {
+    --ch: 0.55em;
   }
 
   h1, h2, h3, h4 {
+    --ch: 0.614em;
     font-family: var(--thock-serif);
     font-weight: 500;
     letter-spacing: -0.012em;

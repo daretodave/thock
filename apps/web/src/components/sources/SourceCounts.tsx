@@ -66,7 +66,7 @@ export function SourceCounts({ rows }: SourceCountsProps): ReactElement {
     return (
       <div
         data-testid="source-counts-empty"
-        className="border border-border bg-surface p-8 max-w-[60ch]"
+        className="border border-border bg-surface p-8 max-w-60ch"
       >
         <p className="font-serif text-h3 text-text-2">
           No cited articles yet — check back soon.

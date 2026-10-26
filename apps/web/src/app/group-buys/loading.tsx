@@ -8,7 +8,7 @@ export default function GroupBuysLoading() {
         <Stack gap={4}>
           <PageSectionKicker>loading · group buys</PageSectionKicker>
           <div className="h-12 w-1/3 animate-pulse bg-surface" />
-          <div className="h-6 w-2/3 max-w-[60ch] animate-pulse bg-surface" />
+          <div className="h-6 w-2/3 max-w-60ch animate-pulse bg-surface" />
         </Stack>
       </Container>
       <Container as="section" className="pb-12 sm:pb-16">

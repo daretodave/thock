@@ -107,7 +107,7 @@ export function CitationIndex({ citations }: CitationIndexProps): ReactElement {
     return (
       <div
         data-testid="citation-index-empty"
-        className="border border-border bg-surface p-8 max-w-[60ch]"
+        className="border border-border bg-surface p-8 max-w-60ch"
       >
         <p className="font-serif text-h3 text-text-2">
           No external citations yet — check back soon.

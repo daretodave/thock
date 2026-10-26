@@ -20,7 +20,7 @@ export function RootNotFound(): ReactElement {
   return (
     <Container as="section" className="py-16 sm:py-24">
       <Stack gap={8}>
-        <Stack gap={3} className="max-w-[60ch]">
+        <Stack gap={3} className="max-w-60ch">
           <span
             data-testid="not-found-eyebrow"
             className="font-mono text-micro uppercase tracking-[0.12em] text-accent"
