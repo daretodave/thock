@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-  <title>A horizontal timeline spanning October 2 to October 31, 2026, showing the GMK CYL Zombie group buy window. A marker at October 2 reads group buy opens across KBDfans and KeyAtlas. A marker roughly one seventh of the way along reads October 6, publish date. A marker at the far right reads October 31, group buy closes.</title>
+  <title>A horizontal timeline spanning October 2 to October 31, 2026, showing GMK CYL Zombie's advertised listing window. A marker at October 2 reads interest-check listings go up across KBDfans and KeyAtlas. A marker roughly one seventh of the way along reads October 6, publish date. A marker at the far right reads October 31, advertised close.</title>
 
   <!-- Title -->
-  <text x="600" y="46" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">GMK CYL Zombie — group buy window, Oct 2 to Oct 31, 2026</text>
+  <text x="600" y="46" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">GMK CYL Zombie — advertised listing window, Oct 2 to Oct 31, 2026</text>
 
   <!-- Baseline bar -->
   <line x1="100" y1="200" x2="1100" y2="200" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.3" stroke-width="4"/>
@@ -14,19 +14,19 @@
   <!-- Open marker: Oct 2 -->
   <circle cx="100" cy="200" r="8" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none"/>
   <text x="100" y="150" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Oct 2</text>
-  <text x="100" y="250" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">group buy opens</text>
+  <text x="100" y="250" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">interest check opens</text>
   <text x="100" y="270" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">KBDfans + KeyAtlas</text>
 
   <!-- Publish / "today" marker: Oct 6 -->
   <circle cx="237" cy="200" r="11" fill="oklch(0.68 0.165 28)" stroke="none"/>
   <text x="237" y="140" font-family="JetBrains Mono, monospace" font-size="15" font-weight="700" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">Oct 6</text>
   <text x="237" y="300" font-family="IBM Plex Sans, sans-serif" font-size="13" font-weight="600" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">publish date</text>
-  <text x="237" y="318" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.85">buy is still open</text>
+  <text x="237" y="318" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.85">still interest-check</text>
 
   <!-- Close marker: Oct 31 -->
   <circle cx="1100" cy="200" r="8" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none"/>
   <text x="1100" y="150" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Oct 31</text>
-  <text x="1100" y="250" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">group buy closes</text>
+  <text x="1100" y="250" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">advertised close</text>
 
   <!-- Bronze theme dot -->
   <circle cx="1170" cy="20" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
