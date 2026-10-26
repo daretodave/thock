@@ -1,7 +1,7 @@
 # Critique log
 
-> Last pass: 2026-05-10T20:35:00Z at commit 931c8a7
-> Pass count: 11
+> Last pass: 2026-10-26T18:54:00Z at commit a01a911
+> Pass count: 12
 > Iterate-bias category: external-critique (pass 11 fired 12 commits after pass 10, after the content-velocity directive shipped + 4 new content pieces drained the pillar quotas — Trends now at quota 8/8, News 3→4, group-buy companions 5→4 missing. Reader's pass 11 visited 6 URLs (/, /article/cannonkeys-nyawice-group-buy, /trends, /trends/tracker, /group-buys, /tag/gmk) and surfaced 6 candidates; self-assessment kept 4 (1 duplicate of pass-9 date-staggering finding, 1 self-hedged %-unit nit). Filed: [HIGH] /article/cannonkeys-nyawice-group-buy — body says "roughly one week left as of this column" but the article is dated 2026-04-17 (the buy's startDate per Rule 4 group-buy exemption) and the window runs to 2026-05-17 (4 weeks from publish, not 1 — content-curator wrote present-tense reading-state copy instead of publication-date-relative copy); [HIGH] /group-buys "Just closed" section — Ishtar R2 card carries a "LIVE" status pill despite sitting under the Just-closed band (renderer pulls STATUS_LABEL[record.status] regardless of variant; the data has status:'live' + endDate today so the row's section placement is right but the pill text leaks); [MED] /tag/gmk — only 1 article (Prussian Alert) despite 3 unfinished GMK CYL group-buy companions in the live set; tag will self-fill as the loop ships those companions; [LOW] /article/cannonkeys-nyawice-group-buy — body uses "the W19 movement score" as a metric phrase, reads as internal-dashboard taxonomy. Reader-tool artifact rate: 0% — every finding verified against curl-grep or data inspection.)
 > Pass 10 last pass: 2026-05-10T18:55:00Z at commit 0e2314f
 > Iterate-bias category: external-critique (pass 10 fired 12 commits after pass 9, after a drain that shipped pass-9's [MED] aside-spacing user-jot (#32, a0fdaa8), [MED] /trends/tracker heading-skip a11y (#33, f70b1f3), [MED] / Trending rail flat tile (#34, bb70360), and [MED] /trends/tracker Sleeper card on flat row (#35, bdc2082) — all four pass-9 [MED] findings drained in 4 consecutive iterate ticks. Reader's pass 10 visited 6 URLs (/, /article/lubing-101, /trends, /trends/tracker, /group-buys, /tag/modding) and surfaced 6 candidates; self-assessment kept 6 (none dropped — every reader finding verified against rendered HTML / source). Filed: [HIGH] /article/lubing-101 — malformed sentence "Brushes drift; this is why brushes drift toward the leaves matters." (real copy bug, mdx line 55, surfaces in body prose); [MED] /group-buys — "Last 72h" eyebrow on forward-looking "Closing soon" section reads retrospective; [MED] / — "0d" countdown vs /group-buys "closes today" cross-surface inconsistency on the same buy; [MED] /tag/modding — "TAG · MISC" eyebrow undersells modding (taxonomy gap; same shape will hit /tag/lubing, /tag/firmware); [LOW] /group-buys — "0 announced" segment names a bucket with no corresponding section; [LOW] /trends/tracker — "SIGNATURE" eyebrow reads as in-house marketing voice. Reader-tool artifact rate: 0% this pass — every finding holds up under curl-grep verification.)
@@ -745,3 +745,39 @@ This pattern is informative for future passes: reader's accessibility-tree text 
 - pass: 1 (filed via /oversight 2026-05-09 from user observation)
 - root cause: identical to the [x] above — `.thock-prose` had no styles, so bold-led paragraphs (`**Name.** ...`, `**Type.** ...`) collapsed into a single visual block. Fix: prose-paragraph margin in components.css. The "What we're tracking" h2's mt-12 was already in place via the SerifH2 mdxComponent — what the user perceived as "no top margin" was actually the wall-of-text effect immediately below it making the heading look glued to the next paragraph.
 - follow-up: the user's #ALICE-tag-chip-confusion observation (HIGH, separate finding above) still stands; addressed in a future tick.
+
+### [HIGH] /trends/tracker + / — "This week at a glance" row and home Trending rail each render a blank, unlabeled 4th grid slot
+- pass: 12 (commit a01a911)
+- viewport: desktop
+- category: visual
+- observation: `/trends/tracker`'s "This week at a glance" row shows two populated stat cards ("Biggest Faller" -28%, "Sleeper" -40%) followed by a plain dark rectangle with no heading, metric, or icon — reads as a broken/missing card, not an intentional empty state. The home page's "Trending — what's moving on the tracker" rail shows the same pattern: KEYCAP / SWITCH / BRAND tiles followed by an identical blank 4th box. Both surfaces share the same grid component, which doesn't hide or placeholder its slot when a 4th category/stat has no data.
+- evidence: walk screenshot `url--desktop--trends-tracker.png` — blank ~600px-wide dark box right of the "Sleeper" card. `url--desktop--home.png` — blank dark box right of the BRAND column in the trending rail. (`.nexus/walk/2026-10-26T18-54-00-170Z/`, not committed — cite the walk.json line for re-verification.)
+- suggested fix: either populate the 4th glance stat (e.g. "Biggest Riser") and 4th trending category, or collapse/hide the grid slot entirely when there's no data instead of rendering an empty card shell.
+- source: walk
+
+### [MED] /compare/switch — empty pre-selection state has no preview or suggested pairs, reads unfinished
+- pass: 12 (commit a01a911)
+- viewport: desktop
+- category: comprehension
+- observation: The default state most first-time visitors land on (no switches selected) is almost entirely empty: two selects, a disabled Compare button, one line of helper text, and a "take the quiz" link, then roughly 400px of dead space before the footer. Nothing orients a first-time visitor on what the tool's output looks like or why they'd use it.
+- evidence: walk screenshot `url--desktop--compare-switch.png` — all content sits in the top ~340px of an 800px viewport; the rest is blank.
+- suggested fix: add a sample comparison preview or a short list of popular/suggested switch pairs to fill the empty state and demonstrate the tool's value.
+- source: walk
+
+### [LOW] /group-buys — lede's second sentence fragment reads as SaaS feature-bullet copy, not editorial voice
+- pass: 12 (commit a01a911)
+- viewport: desktop
+- category: voice
+- observation: The lede reads "Active group buys for boards, keycap sets, and switches. Time-aware, region-aware, vendor-linked." The three-term fragment reads like a product feature list, inconsistent with the "knowledgeable peer" voice used elsewhere (e.g. the tracker's conversational "What's actually rising this week").
+- evidence: walk screenshot `url--desktop--group-buys.png`, lede under the "Group buys" H1: "Active group buys for boards, keycap sets, and switches. Time-aware, region-aware, vendor-linked."
+- suggested fix: rewrite the second sentence in plain editorial prose, e.g. "We track start/end dates, region availability, and which vendor is running each one."
+- source: walk
+
+### [LOW] /tools + /group-buys heroes — no illustration, leaving an empty right-hand gap inconsistent with the home hero
+- pass: 12 (commit a01a911)
+- viewport: desktop
+- category: visual
+- observation: Hero treatment is inconsistent across landing pages: the home page hero pairs its text with a line-art switch illustration filling the right half of the section, while the `/tools` and `/group-buys` heroes have no illustration, leaving bare dark space where the art would sit.
+- evidence: walk screenshots `url--desktop--tools.png` and `url--desktop--group-buys.png` (bare space right of hero copy) vs. `url--desktop--home.png` (switch-exploded-view SVG filling the same slot).
+- suggested fix: either add matching illustrations to the other pillar/tool hero sections, or narrow the hero text column so the empty space doesn't read as unfinished.
+- source: walk
