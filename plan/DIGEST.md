@@ -6,76 +6,53 @@
 
 ## Headline
 
-**A clean 24-hour window — 7 `march` ticks, all `success`, 5 of them shipped a cross-link cluster drain, and the AUDIT.md cross-link queue is now fully empty for the first time in months.** Since the last digest (`e87e9f73`, 2026-10-24 14:17 UTC) the loop worked through five hub articles back-to-back — `tactile-stem-geometry-deep-dive` (×9 pairs), `synthwave-tkl-theme-build` (×3), `frankenswitching-explained` (×6), `cannonkeys-mass80-extras-restock` (×4), `artisan-keycaps-buying-guide` (×3) — 25 pairs drained in 5 content+audit commit pairs, leaving **0 pending `[cross-links][4.5]` rows** in `plan/AUDIT.md`. The other 2 ticks were `/expand` no-ops (passes 437, 438; still nothing clears the 3.0 bar). **This tick's own fresh `pnpm verify` is fully green** across all 8 legs, run as sequential foreground calls: typecheck, lint, 862/862 unit tests (109 files), 230/230 script tests, `data:validate` (91 records, cross-refs resolve), a clean production build, `size` within budget (largest tracked page 145.3 KB / 175 KB), and **1334/1334 e2e** (~8.5m) against `next start :4173`. `pnpm deploy:check` confirms `READY` at HEAD (`183bdaa0`). No HIGH AUDIT row filed tonight. One wrinkle worth flagging below: live evidence of the standing mirrored-issue-drain gap caught red-handed — issue `#1025` (10 days old, undrained) has an exact duplicate, `#1035`, that got opened and closed in the very same tick this window.
+**The big event this window: the repo cut over from nexus v1 (phases) to nexus v2 (specs + chunks)** — PR #1040, opened by `npx @usenexus/cli upgrade` and merged directly by the owner (not by a `march` tick) at 10:14 UTC today, rewrote 185 files: every `skills/*.md`, every `.claude/commands/*.md`, `plan/README.md` (phases → specs/chunks table), `plan/CANDIDATES.md` (renamed from `PHASE_CANDIDATES.md`), `plan/AUDIT.md` (restructured into `## Drained findings` + `## Open findings`), and a large new `scripts/plan/*` + `scripts/cloud/*` toolchain (`pulse.mjs`, `promote.mjs`, `support.mjs`, `improve.mjs`, quota/cadence/idle governors). Knobs landed conservative: `Improve: gentle`, `Support: triage-only`, `Promote: owner`, `stall_action: alert`, `loop: off`. **Since the merge, the loop has kept shipping** — the first post-merge `march` tick (16:26→17:06 UTC) shipped today's W44 trend snapshot, confirming v2 dispatch is live despite the PR's own "idle until `NEXUS_LOOP_MODE=owner` is set" caveat. Before the merge, two more cross-link/content items landed: a backfilled W43 trend snapshot and a factual correction to `gmk-cyl-zombie-group-buy` (confirmed-buy claim → interest-check, closing out AUDIT `[4.9]` and issue #1039). **This tick's own fresh `pnpm verify` is fully green**, run as 8 sequential foreground legs: typecheck, lint, 862/862 unit tests (109 files), 269/269 script tests, `data:validate` (93 records, cross-refs resolve), a clean production build, `size` within budget (largest tracked page 145.3 KB / 175 KB), and 1340/1340 e2e (~9.1m) against `next start :4173`. `pnpm deploy:check` confirms `READY` at HEAD. **One real finding filed tonight, not from the breadth check but from the pulse-gathering step itself:** `scripts/pulse.mjs` — the brand-new v2 instrumentation this digest now depends on — has four bugs, the worst of which means the "critique pending" number this and every future digest would print is off by roughly **69x** (67 of CRITIQUE.md's 69 "Pending" rows are already-resolved `[x]` entries that script never filters out; real pending is ~1). Filed as AUDIT `[4.8]` below — not fixed tonight, per digest's own rule that breadth/pulse findings become rows, not fixes.
 
 ## While you were out
 
 | When (UTC) | Tick | Outcome |
 |---|---|---|
-| 2026-10-24 14:17 | *(last digest committed, `e87e9f73`)* | baseline |
-| 14:13→14:25 | cloud march | expand pass 437 — no candidates |
-| 17:47→18:07 | cloud march | **shipped** — `tactile-stem-geometry-deep-dive` cross-links ×9 (`412a00c9`/`a716249d`) |
-| 20:08→20:13 | cloud march | expand pass 438 — no candidates |
-| 22:51→23:09 | cloud march | **shipped** — `synthwave-tkl-theme-build` cross-links ×3 (`92bc389d`/`1688f0e3`) |
-| 10-25 00:46→01:03 | cloud march | **shipped** — `frankenswitching-explained` cross-links ×6 (`d477e66c`/`f170571f`) |
-| 05:37→05:52 | cloud march | **shipped** — `cannonkeys-mass80-extras-restock` cross-links ×4 (`89dd8a9c`/`31fc9490`) |
-| 10:37→10:55 | cloud march | **shipped** — `artisan-keycaps-buying-guide` cross-links ×3 (`48165030`/`183bdaa0`) |
-| 14:27 | night (this tick) | in progress |
+| 2026-10-25 14:43 | *(last digest committed, `00e6af34`)* | baseline |
+| 14:45→15:06 | cloud march | **shipped** — W43 trend snapshot, backfilled (missing Monday run) (`12f810da`) |
+| 18:04→18:10 | cloud march | expand pass 439 — no candidates |
+| 21:22→21:28 | cloud march | expand pass 440 — no candidates |
+| 23:45→00:19 | cloud march | **shipped** — `gmk-cyl-zombie-group-buy` correction + AUDIT close, closes #1039 (`bd42429c`/`7c18cfb4`) |
+| 03:00→03:21 | cloud march | no-op (no commit) |
+| *10:14* | *owner merge, not a march tick* | **nexus v1 → v2 cutover**, PR #1040 (`217f39dc`/`f82707e5`) |
+| 09:37→09:55 | cloud march | no-op (no commit; ran against pre-merge main) |
+| 16:26→17:06 | cloud march | **shipped** — W44 trend snapshot, first post-v2-merge tick (`951de955`) |
+| 16:50→ (now) | night (this tick) | in progress |
 
-Since the last digest: **7 completed `march` runs, all `success`** (5 shipped cross-link drains, 2 expand no-ops). **4 `heartbeat` runs** (15:52, 20:43, 04:34, 11:18), all `success`, no alarm. **2 `lighthouse` runs** (05:45, 10:58), both `success`.
+Since the last digest: **7 completed `march` runs, all `success`** (3 shipped, 2 expand no-ops, 2 no-commit no-ops) plus the owner's direct v2-cutover merge. **4 `heartbeat` runs**, all `success`. **Lighthouse ran on every push** (success, with a few `skipped` concurrency collisions around the merge) — still active, no regression. **2 Dependabot update PRs failed their own CI today** (`next` 16.3.5→16.4.1 and `zod` 4.4.3→4.6.6 both opened fine; two sibling bumps — `vite`, `@vitest/mocker` — failed); 7 Dependabot PRs are open total, the oldest three (#946-948) now ~2 months old. Not a loop concern tonight, just a silting queue nobody's draining — noted, not filed.
 
 ## Shipped
 
-**25 cross-link pairs across 5 hub articles**, each a content-drain + audit-closure commit pair, all mechanical phase-46 cluster drains:
-
-1. `tactile-stem-geometry-deep-dive` — 9 pairs (`412a00c9`/`a716249d`)
-2. `synthwave-tkl-theme-build` — 3 pairs (`92bc389d`/`1688f0e3`)
-3. `frankenswitching-explained` — 6 pairs (`d477e66c`/`f170571f`)
-4. `cannonkeys-mass80-extras-restock` — 4 pairs (`89dd8a9c`/`31fc9490`)
-5. `artisan-keycaps-buying-guide` — 3 pairs (`48165030`/`183bdaa0`)
-
-The queue that fed these (standing since at least pass 397, peaking around 29 pairs across 6 hubs a few editions ago) is now at **zero** — the first time this digest has been able to report a fully drained cross-link queue. Expect it to refill as new content ships and shares ≥2 tags with unlinked same-pillar siblings; this is a steady-state churn metric, not a one-time milestone.
+1. **W43 trend snapshot** (backfilled) — `data/trends/2026-W43.json` (`12f810da`)
+2. **`gmk-cyl-zombie-group-buy` correction** — title/lede/section rewritten from "confirmed open group buy" to "interest check," matching the W43 tracker's own reversal (score 70→45) and the live vendor page; AUDIT `[4.9]` addressed, closes #1039 (`bd42429c`/`7c18cfb4`)
+3. **Nexus v1 → v2 cutover** — owner-merged PR #1040, 185 files (tooling/process, not product code)
+4. **W44 trend snapshot** — `data/trends/2026-W44.json` (`951de955`), first commit dispatched under v2
 
 ## Queues now
 
-- **Build plan**: 0 pending phases, unchanged (fully drained).
-- **`plan/AUDIT.md`**: **5 open `[ ]` sub-3.0 rows**, unchanged (`seo [2.7]` stale Mode Sonnet hero-art ×2 variants, `content [2.4]` plate-materials framing tension, `data [2.4]` generated-manifest drift, `seo [1.8]` orphaned `favicon.svg` duplicate). Plus **4 standing `[needs-user-call]` rows** (GTM consent-gate `[3.6]`, soft-404 structural trade-off `[4.2]`, mirrored `loop:opened` issue-drain gap `[3.0]`, border-contrast WCAG 1.4.11 `[1.3]`) — all four remain `/oversight`-sized, unchanged. **0 `[cross-links][4.5]` rows** — fully drained this window (see Shipped).
-- **`plan/CRITIQUE.md`**: last real pass still 2026-05-10T20:35:00Z (pass 11, `931c8a7`) — **168 days stale**, up from 167. One standing Pending row (`[needs-user-call]` GA-beacon 503s). Dated update appended tonight to the standing `[score 4.2]` `plan/PHASE_CANDIDATES.md` candidate.
-- **`plan/PHASE_CANDIDATES.md`**: pass 438 is now the latest — **42 consecutive no-candidate passes (397–438)**, 36 `[ ]` + 1 `[needs-user-call]` pending, flat vs. the last two editions. Pass 438's own note re-counted the Pending section directly and confirmed 36 is accurate, resolving the pass-numbering inconsistency flagged in last night's edition. Last promotion: phase 50, 2026-08-23 — now **63 days**.
-- **`data/BACKLOG.md`**: 0 truly pending (the 3 rows under "## Pending" are all individually checked `[x]` — file hygiene only).
-- **GitHub issues**: 2 open. `#1025` (cross-link mirror, `synthwave-tkl-theme-build`, open since 2026-10-15 — now **10 days**, still undrained — see Needs You #1); `#929` (`triage:reviewed`, standing since 2026-08-25, now 61 days).
-
-## Breadth verdict
-
-**`pnpm verify` — fully green, all 8 legs**, run as sequential foreground calls per the skill's own instruction:
-
-- `typecheck` — clean
-- `lint` — clean
-- `test:run` — 862/862 unit tests passed (109 files)
-- `test:scripts` — 230/230 script tests passed
-- `data:validate` — 91 records valid, cross-refs resolve (vendors 11, switches 18, keycap-sets 10, boards 10, group-buys 18, trends 24)
-- `build` — clean production build, full route manifest generated
-- `size` — all tracked routes within budget (largest tracked: `/quiz/keycap-set` 145.3 KB vs 175 KB budget)
-- `e2e` — **1334/1334 passed** (~8.5m) against `next start :4173`. Same benign `Error: Internal: NoFallbackError` stderr noise on dynamic-route fallback lookups seen in prior ticks — not attached to any failing test, not filing.
-
-`pnpm deploy:check` confirms `READY` at HEAD (`183bdaa0`) going into this tick.
+**plan:** 0 specs, 0 chunks left, 0 held (v2 spec table starts empty — nothing queued yet for `/plan-a-spec`/`/ship-a-chunk` to pick up).
+**audit:** 5 pending (all parked sub-3.0: `[2.7]` stale Mode Sonnet hero-art ×2 variants, `[2.4]` plate-materials tension, `[2.4]` generated-file drift, `[1.8]` orphaned favicon.svg) + 1 new `[3.2]`-and-up-rated finding filed tonight (see Tuning proposals — actually filed as a straight bug row, not a candidate; see below). Note: `pulse.mjs` itself currently reports "0 pending" for this file — that's the bug, not the truth (see Tuning proposals / AUDIT `[4.8]`).
+**critique:** pulse says 69 pending, last pass "NaNd ago" — both numbers are wrong (see AUDIT `[4.8]`). Real count: ~1 genuine pending item, the standing `[needs-user-call]` GA-beacon row; real last real pass was 2026-05-10 (~165d ago).
+**candidates:** 51 pending (50 >21d), oldest 166d. `Promote: owner` — nothing auto-drains; `/oversight` is the only valve.
+**Support (triage-only):** 1 open user issue · first response none (0 opened in 7d) · close 106.4h mean (1 closed in 7d).
+**Quota:** unknown — no cached `seven_day` reading yet (first day of the v2 quota governor; `.nexus/quota.json` doesn't exist until a run writes it).
 
 ## Needs you
 
-1. **Live evidence of the standing mirrored-issue-drain gap, caught in the act.** Issue `#1025` ("synthwave-tkl-theme-build cross-links — 3 pairs unlinked", opened 2026-10-15, `loop:opened`) is now **10 days old and still open**. This window, a fresh issue `#1035` ("cross-links: synthwave-tkl-theme-build hub — 3 pairs unlinked") — the *identical* finding, re-surfaced by a mechanical survey that didn't recognize `#1025` as the same thing — was opened at 22:54 and closed by the drain commit at 23:08, same tick. So the real work got done and the duplicate closed clean, but the original mirror `#1025` sits stranded open, exactly the failure mode the standing `[needs-user-call] [engineering] [3.0]` AUDIT row describes ("mirrored `loop:opened` GitHub issues can go permanently un-drained if not picked the same tick they're filed"). Worth a direct `/iterate` or `/triage` pick on `#1025` next tick to close it out manually, and worth citing this concrete recurrence the next time `/oversight` looks at that row.
-2. **The fresh-eyes critique loop remains dark at 168 days**, unchanged in substance from prior editions. The standing `[score 4.2]` candidate already covers this; dated update appended tonight.
-3. **36 pending phase-candidate rows, 63 days since the last promotion** (phase 50, 2026-08-23). Cloud cannot promote by design — this is the natural next `/oversight` agenda item alongside #1 and #2 above.
-4. **4 standing `[needs-user-call]` AUDIT rows** (GTM consent gate, soft-404 trade-off, `loop:opened` mirror-drain gap — now with live evidence per #1 above, WCAG border contrast) unchanged — each a taste or process call for `/oversight`.
+- **oversight needed: candidate queue silting (50 pending >21d, oldest 166d)** — `Promote: owner` means this only drains through `/oversight`; it has been accumulating since before this digest's tracking window and nothing changed it tonight.
+- **5 standing `[needs-user-call]` rows awaiting an `/oversight` decision**, unchanged this tick: GTM consent-gate vs. reverting to Plausible (AUDIT `[3.6]`); `/article`/`/tag` soft-404 structural block (AUDIT `[4.2]`); mirrored `loop:opened` GitHub issues that can go permanently un-drained (AUDIT `[3.0]`) — **live example right now: issue #1025 (11 days old) is exactly this, still open**; default-state UI border contrast, needs a global dark-theme lightness call (AUDIT `[1.3]`); production GA `/g/collect` 503s, config lives outside the repo (CRITIQUE, the file's only real pending row).
+- No `escalate #N` lines (no open `triage:needs-user` issue past the 7-day `escalate_days` default) and no `triage:needs-user`/`loop:do` issues open at all.
+- No motion-stalled alert — shipped 10 last full week vs. 6.25 baseline, floor 3.13, reads `ok`.
+- No secrets rotation due (`secrets.mjs audit`: 0 events).
 
 ## Today's intent
 
-Nothing product-facing is broken; the cross-link cluster queue that's occupied the last several editions is fully drained for the first time. With no content-gap row open and the cross-link queue empty, the natural next `/iterate` pick is issue `#1025` (manual close-out) or one of the five standing sub-3.0 AUDIT stragglers if the content-gap queue stays quiet. The real backlog is still process, not product: critique staleness, the phase-candidate promotion gap, and the four standing `[needs-user-call]` rows (one of which just produced live, citable evidence) are all queued for the next `/oversight` pass.
+No ready spec/chunk (v2's table is empty — this is expected the first day after cutover, not a gap). Top actionable finding for the next `/iterate` tick: the new AUDIT `[4.8]` `scripts/pulse.mjs` bug row below — a same-file, four-bug, mechanical fix with no gate/schema implications, scoring above everything else currently open. Runner-up: whatever a fresh general-purpose audit sweep turns up, since all 5 pre-existing AUDIT rows are parked sub-3.0 and CRITIQUE's only real pending row is non-actionable by the loop.
 
 ## Tuning proposals
 
-**Two dated updates, no new rows.** Appended evidence-bearing updates to two existing `plan/PHASE_CANDIDATES.md` rows rather than filing duplicates:
-
-- **`[score 4.2]` critique-loop-dark candidate** — updated the staleness figure to 168 days (pass 11, 2026-05-10, unchanged root cause: cloud mode has no Chrome MCP for the `reader` sub-agent). No new information beyond the day-count; root cause and `next:` call unchanged.
-- **`[score 3.6]` /expand dispatch cadence candidate** — logged pass 438 as the latest (42nd consecutive no-candidate pass), confirmed the 36-pending count is accurate (resolving last night's flagged pass-numbering inconsistency), and the 63-day promotion gap. Also noted this window's cross-link queue drain as routine mechanical output, not a new signal category.
-
-Both rows already existed; `/oversight` still owns promotion. No gate, cadence, or rule touched directly.
+None filed as `plan/CANDIDATES.md` rows tonight. The one instrumentation defect found (`scripts/pulse.mjs` under/over-counting across four separate bugs) is a plain bug in freshly-landed v2 tooling, not a gate/cadence/rule mistuning — filed as AUDIT `[4.8]` instead, per `skills/digest.md` §4.2 ("breadth/pulse-discovered findings become AUDIT rows, not fixes") and the meta-loop rail (proposals only for gate/cadence/rule tuning, never plain bugs). The candidate-queue-silting symptom already has its own dedicated "Needs you" line in this template; no separate tuning candidate needed for it tonight.
