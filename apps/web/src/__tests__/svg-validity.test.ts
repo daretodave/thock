@@ -106,5 +106,7 @@ describe('SVG validity gate', () => {
         .map((o) => `  ${o.file}\n    ${o.preview}`)
         .join('\n')}`,
     ).toEqual([])
-  })
+    // Reads every SVG under public/ (hundreds, growing with each article): past vitest's 5s
+    // default on a slow or busy disk, so it gets its own budget.
+  }, 30_000)
 })
