@@ -14294,3 +14294,15 @@ passes accumulate signals.)
 - next: fix all four string/regex bugs in `scripts/pulse.mjs` directly (no gate/cadence/rule change, so this is a plain bug fix, not an `/oversight`-gated tuning candidate); re-run `node scripts/pulse.mjs` and confirm it reports a real critique-pending count near 1, the real AUDIT pending count, and a finite critique-age value
 - issue: (none filed by this digest — filing GitHub issues is a shipping-skill action, not digest's; the next `/iterate` pass that picks this row up opens one)
 > Discovered while gathering this tick's pulse (`skills/digest.md` Step 2's `node scripts/pulse.mjs` command). The AUDIT-side header mismatch is a fresh regression from the nexus v2 plan-upgrade merge; the countRows `[x]`-counting flaw and the critique header-overcapture are long-standing, just never checked against ground truth before. Not fixed by this digest — breadth/pulse-discovered findings become AUDIT rows, not fixes, per `skills/digest.md` §4.2.
+
+### [ ] [newsletter] [4.0] Weekly digest — issue 013 due (7 days since issue 12)
+- category: content-gaps
+- filed: 2026-10-27 by newsletter-gap-survey.mjs
+- impact: 5 (newsletter archive going stale reduces /newsletter value and reader trust in cadence)
+- ease: 8 (content-curator weekly round-up: 5 pillar picks + tracker insight)
+- score: 4.0 (impact × ease / 10)
+- next: /ship-content → newsletter type (weekly round-up, 5 pillar picks, tracker insight)
+- last-issue: 2026-10-20 (thock-weekly-012)
+- days-since: 7
+- issue: #1051
+> Filed 2026-10-27 by newsletter-gap-survey.mjs. 7 days since issue 12. Threshold: ≥7 calendar days.
