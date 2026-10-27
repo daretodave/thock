@@ -1864,6 +1864,13 @@
   ],
   "newsletters": [
     {
+      "slug": "thock-weekly-013",
+      "title": "thock weekly — issue 13",
+      "lede": "A buying guide on switch gram numbers, a frankenswitching build mixing parts across four switch families, Alice layout's eight-week climb toward a fix that still hasn't shipped, CannonKeys reopening leftover Mass80 units seven months after its group buy, and what four tactile switches share at the stem-leg level — plus a tracker check-in on TMR's narrowing gap and Keychron's scattered stockouts.",
+      "issue": 13,
+      "readTime": 4
+    },
+    {
       "slug": "thock-weekly-012",
       "title": "thock weekly — issue 12",
       "lede": "An artisan-keycap guide built around flipping a cap over to check its stem, a synthwave Drop CTRL build whose glow comes from inside the switch rather than the legends, TMR's five-week climb toward Hall-effect's ceiling, a Halloween group buy with the tracker's steepest climb yet, and what a TMR sensor actually measures — plus a tracker check-in on Hall-effect's ceiling and Mode Designs' dip.",
@@ -10071,5 +10078,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-10-26T16:56:35.243Z"
+  "generatedAt": "2026-10-27T01:13:30.130Z"
 }
