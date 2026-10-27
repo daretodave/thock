@@ -746,7 +746,7 @@ This pattern is informative for future passes: reader's accessibility-tree text 
 - root cause: identical to the [x] above — `.thock-prose` had no styles, so bold-led paragraphs (`**Name.** ...`, `**Type.** ...`) collapsed into a single visual block. Fix: prose-paragraph margin in components.css. The "What we're tracking" h2's mt-12 was already in place via the SerifH2 mdxComponent — what the user perceived as "no top margin" was actually the wall-of-text effect immediately below it making the heading look glued to the next paragraph.
 - follow-up: the user's #ALICE-tag-chip-confusion observation (HIGH, separate finding above) still stands; addressed in a future tick.
 
-### [HIGH] /trends/tracker + / — "This week at a glance" row and home Trending rail each render a blank, unlabeled 4th grid slot
+### [x] [HIGH] /trends/tracker + / — "This week at a glance" row and home Trending rail each render a blank, unlabeled 4th grid slot — addressed in this commit, closes #1052
 - pass: 12 (commit a01a911)
 - viewport: desktop
 - category: visual
@@ -754,6 +754,8 @@ This pattern is informative for future passes: reader's accessibility-tree text 
 - evidence: walk screenshot `url--desktop--trends-tracker.png` — blank ~600px-wide dark box right of the "Sleeper" card. `url--desktop--home.png` — blank dark box right of the BRAND column in the trending rail. (`.nexus/walk/2026-10-26T18-54-00-170Z/`, not committed — cite the walk.json line for re-verification.)
 - suggested fix: either populate the 4th glance stat (e.g. "Biggest Riser") and 4th trending category, or collapse/hide the grid slot entirely when there's no data instead of rendering an empty card shell.
 - source: walk
+- issue: #1052
+- root cause: `TrackerSummaryGrid.tsx` and `TrendingStrip.tsx` both hardcoded a fixed column-count class (`lg:grid-cols-4`, `xl:grid-cols-6`) independent of how many slots/tiles the snapshot actually produced (1-4 and 1-6 respectively); an unfilled grid track paints the container's bare `bg-border` fill, reading as a broken card. Fix: both components now pick their column classes from a literal lookup keyed by the real item count.
 
 ### [MED] /compare/switch — empty pre-selection state has no preview or suggested pairs, reads unfinished
 - pass: 12 (commit a01a911)

@@ -59,4 +59,18 @@ describe('<TrackerSummaryGrid>', () => {
     )
     expect(screen.getByTestId('tracker-summary-grid')).toHaveTextContent('HMX Cloud')
   })
+
+  it('tracks lg:grid-cols to the real slot count, not a fixed 4 (critique #1052)', () => {
+    // Regression guard: a week with only a faller + sleeper (2 slots)
+    // used to render a hardcoded lg:grid-cols-4 track, leaving an
+    // unfilled 3rd/4th cell as a blank bg-border box.
+    const rows: TrendRow[] = [
+      row({ name: 'Faller', direction: 'down', score: -28, spark: [10, 5, 1] }),
+      row({ name: 'Sleeper', direction: 'down', score: -5, spark: [10, 8, 6] }),
+    ]
+    render(<TrackerSummaryGrid snapshot={snapshot(rows)} />)
+    const grid = screen.getByTestId('tracker-summary-grid')
+    expect(grid.className).toContain('lg:grid-cols-2')
+    expect(grid.className).not.toContain('lg:grid-cols-4')
+  })
 })

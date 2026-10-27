@@ -184,4 +184,20 @@ describe('<TrendingStrip>', () => {
     const tile = screen.getByTestId('trending-tile')
     expect(tile.tagName).toBe('DIV')
   })
+
+  it('tracks xl:grid-cols to the real tile count, not a fixed 6 (critique #1052)', () => {
+    // Regression guard: a week with only 3 moving rows used to render
+    // a hardcoded xl:grid-cols-6 track, leaving 3 unfilled cells as
+    // blank bg-border boxes.
+    const snapshot = makeTrendSnapshot()
+    snapshot.rows = [
+      { ...snapshot.rows[0]!, name: 'Keycap', category: 'keycap' as const },
+      { ...snapshot.rows[0]!, name: 'Switch', category: 'switch' as const },
+      { ...snapshot.rows[0]!, name: 'Brand', category: 'brand' as const },
+    ]
+    render(<TrendingStrip snapshot={snapshot} />)
+    const strip = screen.getByTestId('trending-strip')
+    expect(strip.className).toContain('xl:grid-cols-3')
+    expect(strip.className).not.toContain('xl:grid-cols-6')
+  })
 })

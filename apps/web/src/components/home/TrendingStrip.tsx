@@ -10,6 +10,19 @@ export type TrendingStripProps = {
   articlesBySlug?: Map<string, Article>
 }
 
+/** Column classes keyed by tile count — the strip renders 1-6 tiles
+ * depending on how many rows actually moved this week, not a fixed 6,
+ * so the grid track count must track it or an unfilled track renders
+ * as a blank `bg-border` cell (critique pass 12 #1052). */
+const COLS_BY_TILE_COUNT: Record<number, string> = {
+  1: 'sm:grid-cols-1 md:grid-cols-1 xl:grid-cols-1',
+  2: 'sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-2',
+  3: 'sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-3',
+  4: 'sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4',
+  5: 'sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5',
+  6: 'sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6',
+}
+
 /**
  * Six-tile trending strip on the home page. Reads from the most
  * recent `TrendSnapshot` and renders the top 6 actively-moving rows
@@ -49,7 +62,7 @@ export function TrendingStrip({
   return (
     <div
       data-testid="trending-strip"
-      className="grid grid-cols-1 gap-px border border-border bg-border sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-6"
+      className={`grid grid-cols-1 gap-px border border-border bg-border ${COLS_BY_TILE_COUNT[tiles.length] ?? COLS_BY_TILE_COUNT[6]}`}
     >
       {tiles.map((row) => {
         const article = row.articleSlug
