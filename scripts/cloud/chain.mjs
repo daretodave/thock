@@ -236,7 +236,8 @@ export async function decide(facts) {
     ['budget', async () => budgetGuard({ budget: await get('budget'), ceiling: await get('ceiling') })],
     ['night', async () => nightGuard({ crons: await get('nightCrons'), now: await get('now') })],
     ['queue', async () => queueGuard({ runs: await get('runs'), runId: await get('runId') })],
-    ['ready', async () => readyGuard({ ready: await get('ready'), issues: await get('issues') })],
+    // A retry re-runs work the lost tick had already picked (a lane, a critique pass), so it needs no ready chunk.
+    ['ready', async () => (next === 'retry' ? { ok: true, why: 'the retry re-runs the lost work; it needs nothing ready' } : readyGuard({ ready: await get('ready'), issues: await get('issues') }))],
   ];
   for (const [name, check] of steps) {
     let r;
