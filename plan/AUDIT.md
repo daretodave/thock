@@ -14295,7 +14295,7 @@ passes accumulate signals.)
 - issue: (none filed by this digest — filing GitHub issues is a shipping-skill action, not digest's; the next `/iterate` pass that picks this row up opens one)
 > Discovered while gathering this tick's pulse (`skills/digest.md` Step 2's `node scripts/pulse.mjs` command). The AUDIT-side header mismatch is a fresh regression from the nexus v2 plan-upgrade merge; the countRows `[x]`-counting flaw and the critique header-overcapture are long-standing, just never checked against ground truth before. Not fixed by this digest — breadth/pulse-discovered findings become AUDIT rows, not fixes, per `skills/digest.md` §4.2.
 
-### [ ] [newsletter] [4.0] Weekly digest — issue 013 due (7 days since issue 12)
+### [x] [newsletter] [4.0] Weekly digest — issue 013 due (7 days since issue 12)
 - category: content-gaps
 - filed: 2026-10-27 by newsletter-gap-survey.mjs
 - impact: 5 (newsletter archive going stale reduces /newsletter value and reader trust in cadence)
@@ -14305,4 +14305,5 @@ passes accumulate signals.)
 - last-issue: 2026-10-20 (thock-weekly-012)
 - days-since: 7
 - issue: #1051
+- addressed in: d2df27a7 (this tick — ship-content newsletter dispatch)
 > Filed 2026-10-27 by newsletter-gap-survey.mjs. 7 days since issue 12. Threshold: ≥7 calendar days.
