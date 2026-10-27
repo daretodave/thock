@@ -6,53 +6,76 @@
 
 ## Headline
 
-**The big event this window: the repo cut over from nexus v1 (phases) to nexus v2 (specs + chunks)** — PR #1040, opened by `npx @usenexus/cli upgrade` and merged directly by the owner (not by a `march` tick) at 10:14 UTC today, rewrote 185 files: every `skills/*.md`, every `.claude/commands/*.md`, `plan/README.md` (phases → specs/chunks table), `plan/CANDIDATES.md` (renamed from `PHASE_CANDIDATES.md`), `plan/AUDIT.md` (restructured into `## Drained findings` + `## Open findings`), and a large new `scripts/plan/*` + `scripts/cloud/*` toolchain (`pulse.mjs`, `promote.mjs`, `support.mjs`, `improve.mjs`, quota/cadence/idle governors). Knobs landed conservative: `Improve: gentle`, `Support: triage-only`, `Promote: owner`, `stall_action: alert`, `loop: off`. **Since the merge, the loop has kept shipping** — the first post-merge `march` tick (16:26→17:06 UTC) shipped today's W44 trend snapshot, confirming v2 dispatch is live despite the PR's own "idle until `NEXUS_LOOP_MODE=owner` is set" caveat. Before the merge, two more cross-link/content items landed: a backfilled W43 trend snapshot and a factual correction to `gmk-cyl-zombie-group-buy` (confirmed-buy claim → interest-check, closing out AUDIT `[4.9]` and issue #1039). **This tick's own fresh `pnpm verify` is fully green**, run as 8 sequential foreground legs: typecheck, lint, 862/862 unit tests (109 files), 269/269 script tests, `data:validate` (93 records, cross-refs resolve), a clean production build, `size` within budget (largest tracked page 145.3 KB / 175 KB), and 1340/1340 e2e (~9.1m) against `next start :4173`. `pnpm deploy:check` confirms `READY` at HEAD. **One real finding filed tonight, not from the breadth check but from the pulse-gathering step itself:** `scripts/pulse.mjs` — the brand-new v2 instrumentation this digest now depends on — has four bugs, the worst of which means the "critique pending" number this and every future digest would print is off by roughly **69x** (67 of CRITIQUE.md's 69 "Pending" rows are already-resolved `[x]` entries that script never filters out; real pending is ~1). Filed as AUDIT `[4.8]` below — not fixed tonight, per digest's own rule that breadth/pulse findings become rows, not fixes.
+**The nexus kit upgraded to 0.6.2, locally, at 18:51 UTC (`a01a9118`)** — and that one commit explains most of tonight's story. Its own body names: `Support: fix-all`, an aged-candidate auto-promotion valve gated behind a `loop:veto` window, three new generators, weekly field research, and "the UI walk on critique and iterate." One minute later the next cloud `march` tick (18:52→18:59) shipped `critique: pass 12 — 4 findings` (`13bfe66c`, `Cloud-Run:` trailer confirms cloud-shipped) — the **first confirmed cloud-run `/critique` pass**, directly falsifying the standing `plan/CANDIDATES.md` `[needs-user-call] [score 6.5]` row that concluded (pass 218, 2026-07-23) "cloud mode categorically skips `/critique`." Annotated that row tonight rather than closing it myself (`/oversight` promotes/closes). The same upgrade's pulse fix — its body states "pulse counts open rows only (critique read 69 pending for 1, audit 0 for 10)" — also appears to resolve `plan/AUDIT.md`'s own `[4.8]` four-bug report about `scripts/pulse.mjs`; tonight's fresh pulse pull prints `thock` (not `<PROJECT_LOWER>`), `audit 10 pending` (not 0), and `critique 5 pending, last pass 21h ago` (not NaN) — annotated that row too. Separately and locally, the owner also landed a from-scratch dependency/toolchain pass across 6 commits between 19:28 and 21:03 UTC — every open security alert cleared, the full Vitest stack (vitest 5, `@vitejs/plugin-react` 6, jsdom 30, jest-dom 7), ESLint flat config (eslint 9 + `eslint-config-next` 16), Tailwind 4 CSS-first, TypeScript 6.0 + React 19.3, self-hosted fonts (Newsreader/IBM Plex Sans/JetBrains Mono) — each gated leg-by-leg, substantially completing the standing `[score 5.0]` "Dev-toolchain major migration" candidate (annotated; the remaining version gaps — TS 7, ESLint 10, `@types/node` 26 — are now deliberately Dependabot-held per `67490c48`, not forgotten). Two more local kit-fixes landed overnight addressing exactly the kind of cloud-tick fragility this digest's own cloud instructions guard against: `8e01f5a1` stopped a retried tick's push (actor `github-actions[bot]`) from being refused by `allowed_bots`, and `25f97a81` moved the verify gate's e2e leg out from behind the Bash tool's 10-minute foreground ceiling — the same ceiling this very digest tick worked around by running `pnpm verify` as 8 sequential foreground legs. Cloud ticks shipped two more picks overnight: the new weekly field-research generator filed 2 catalog-schema candidates (`a2cf077b`), a content dispatch opened and closed issue #1051 with newsletter issue 13 (`b3ba95c0`/`d2df27a7`/`70745043`), and expand pass 441 used the new aged-promotion valve for the first time — spec 01 (content-fact-vs-catalog numeric audit) promoted with its veto window open until 2026-10-30 (issue #1055), while 5 stale-but-uncompetitive candidates were cut by the pending cap. **This tick's own fresh `pnpm verify` is fully green**, run as 8 sequential foreground legs: typecheck, lint, 1242/1242 unit tests (109+ files across 7 workspaces), 269/269 script tests, `data:validate` (93 records, cross-refs resolve), a clean production build, `size` within budget (largest tracked page 146.3 KB / 175 KB), and 1343/1343 e2e (~8.2m) against `next start :4173`. `pnpm deploy:check` confirmed `READY` at HEAD going in.
 
 ## While you were out
 
 | When (UTC) | Tick | Outcome |
 |---|---|---|
-| 2026-10-25 14:43 | *(last digest committed, `00e6af34`)* | baseline |
-| 14:45→15:06 | cloud march | **shipped** — W43 trend snapshot, backfilled (missing Monday run) (`12f810da`) |
-| 18:04→18:10 | cloud march | expand pass 439 — no candidates |
-| 21:22→21:28 | cloud march | expand pass 440 — no candidates |
-| 23:45→00:19 | cloud march | **shipped** — `gmk-cyl-zombie-group-buy` correction + AUDIT close, closes #1039 (`bd42429c`/`7c18cfb4`) |
-| 03:00→03:21 | cloud march | no-op (no commit) |
-| *10:14* | *owner merge, not a march tick* | **nexus v1 → v2 cutover**, PR #1040 (`217f39dc`/`f82707e5`) |
-| 09:37→09:55 | cloud march | no-op (no commit; ran against pre-merge main) |
-| 16:26→17:06 | cloud march | **shipped** — W44 trend snapshot, first post-v2-merge tick (`951de955`) |
-| 16:50→ (now) | night (this tick) | in progress |
+| 2026-10-26 17:30 | *(last digest committed, `f160b534`)* | baseline |
+| 18:51 | owner, local | nexus kit → 0.6.2: `Support: fix-all`, aged-promotion valve behind `loop:veto`, 3 generators, weekly field research, critique/iterate UI walk (`a01a9118`) |
+| 18:52→18:59 | cloud march | **shipped** — critique pass 12, 4 findings (1 high, 1 medium, 2 low) — first confirmed cloud-run critique pass (`13bfe66c`) |
+| 19:28→21:03 | owner, local | dependency/toolchain majors: every open security alert cleared; vitest 5 + plugin-react 6 + jsdom 30 + jest-dom 7; ESLint flat config + eslint-config-next 16; Tailwind 4 CSS-first; TypeScript 6.0 + React 19.3; Dependabot holds the rest with reasons (`0ce94fdb`/`1ee378ff`/`7d25d7eb`/`67490c48`/`0ad127e4`) |
+| 21:02 | owner, local | ci: `actions/create-github-app-token` v3 + `download-artifact` v8, covers Dependabot #1045/#1046 (`5ae4348b`) |
+| 21:18→21:46 | cloud march | **shipped** — weekly field research, 2 catalog-schema candidates filed (`a2cf077b`) |
+| 23:12 | owner, local | fix: thock.xyz draws its own fonts — Newsreader, IBM Plex Sans, JetBrains Mono (`f170d92d`) |
+| 23:45 | owner, local | fix: ESLint `globals` 17 for the shared config, lands Dependabot #1050 (`968b552d`) |
+| 2026-10-27 01:04→01:22 | cloud march | **shipped** — content dispatch opened + closed issue #1051, newsletter issue 13 published (`b3ba95c0`/`d2df27a7`/`70745043`) |
+| 05:25 | owner, local | fix: a tick lost to background work now retries the lane/pass it had actually picked (`15bee622`) |
+| 07:14→07:30 | cloud march | no-op (clean pass, no commit) |
+| 07:30→07:32 | cloud march retry | **failed** — retry's push read actor `github-actions[bot]`, refused by `allowed_bots` |
+| 10:36 | owner, local | fix: `allowed_bots` lets the github-actions bot's chained retries reach the model (`8e01f5a1`) |
+| 11:06 | owner, local | ci: the verify gate's long leg (e2e) runs foreground; Bash ceiling raised to an hour (`25f97a81`) |
+| 13:54→14:18 | cloud march | **shipped** — expand pass 441: 0 candidates filed, first aged-promotion (spec 01, veto until 2026-10-30, issue #1055), 5 cut (`84a74151`) |
+| 15:55→ (now) | night (this tick) | in progress |
 
-Since the last digest: **7 completed `march` runs, all `success`** (3 shipped, 2 expand no-ops, 2 no-commit no-ops) plus the owner's direct v2-cutover merge. **4 `heartbeat` runs**, all `success`. **Lighthouse ran on every push** (success, with a few `skipped` concurrency collisions around the merge) — still active, no regression. **2 Dependabot update PRs failed their own CI today** (`next` 16.3.5→16.4.1 and `zod` 4.4.3→4.6.6 both opened fine; two sibling bumps — `vite`, `@vitest/mocker` — failed); 7 Dependabot PRs are open total, the oldest three (#946-948) now ~2 months old. Not a loop concern tonight, just a silting queue nobody's draining — noted, not filed.
+Since the last digest: **6 completed `march` runs** (5 `success`, 1 `failure` retry), all cloud-shipped work carrying its `Cloud-Run:` trailer correctly. **12 local commits** landed directly to `main` outside the cloud loop — a toolchain/dependency pass plus 4 nexus-kit reliability fixes — none of them need a digest AUDIT row; they're already clean, verified work.
 
 ## Shipped
 
-1. **W43 trend snapshot** (backfilled) — `data/trends/2026-W43.json` (`12f810da`)
-2. **`gmk-cyl-zombie-group-buy` correction** — title/lede/section rewritten from "confirmed open group buy" to "interest check," matching the W43 tracker's own reversal (score 70→45) and the live vendor page; AUDIT `[4.9]` addressed, closes #1039 (`bd42429c`/`7c18cfb4`)
-3. **Nexus v1 → v2 cutover** — owner-merged PR #1040, 185 files (tooling/process, not product code)
-4. **W44 trend snapshot** — `data/trends/2026-W44.json` (`951de955`), first commit dispatched under v2
+1. **Nexus kit → 0.6.2** (local) — `Support: fix-all`, aged-promotion valve behind a `loop:veto` window, 3 new generators, weekly field research, critique/iterate UI walk; also fixes `march.yml`'s v1 problem-check step ordering and (per this digest's own check) `scripts/pulse.mjs`'s open-row counting (`a01a9118`)
+2. **Critique pass 12** — 4 findings filed to `plan/CRITIQUE.md` (1 high, 1 medium, 2 low); first confirmed cloud-run critique pass (`13bfe66c`)
+3. **Dependency/toolchain majors** — security alerts cleared; vitest 5, `@vitejs/plugin-react` 6, jsdom 30, jest-dom 7; ESLint flat config + eslint-config-next 16; Tailwind 4 CSS-first; TypeScript 6.0 + React 19.3; self-hosted fonts (Newsreader/IBM Plex Sans/JetBrains Mono); `actions/create-github-app-token` v3 + `download-artifact` v8; Dependabot holds on TS 6.1+/ESLint 10/major Node-types with blockers named (`0ce94fdb`, `1ee378ff`, `7d25d7eb`, `67490c48`, `0ad127e4`, `5ae4348b`, `f170d92d`, `968b552d`)
+4. **Weekly field research** — 2 new catalog-schema candidates filed: switch-type enum missing magnetic/hall-effect, group-buy status enum missing delayed/non-fulfilled (`a2cf077b`)
+5. **Content dispatch + newsletter issue 13** — issue #1051 opened and closed, `thock-weekly-013` published (`b3ba95c0`/`d2df27a7`/`70745043`)
+6. **Dispatcher reliability, 3 fixes** — a lost-to-background tick now retries its own picked work (`15bee622`); a retry's `github-actions[bot]` actor is now allowed through (`8e01f5a1`); the verify gate's long leg runs foreground with the Bash ceiling raised to an hour (`25f97a81`)
+7. **Expand pass 441** — first use of the aged-promotion valve: spec 01 (content-fact-vs-catalog numeric audit) promoted, veto open until 2026-10-30 (issue #1055); 5 candidates cut by the pending cap (`84a74151`)
 
 ## Queues now
 
-**plan:** 0 specs, 0 chunks left, 0 held (v2 spec table starts empty — nothing queued yet for `/plan-a-spec`/`/ship-a-chunk` to pick up).
-**audit:** 5 pending (all parked sub-3.0: `[2.7]` stale Mode Sonnet hero-art ×2 variants, `[2.4]` plate-materials tension, `[2.4]` generated-file drift, `[1.8]` orphaned favicon.svg) + 1 new `[3.2]`-and-up-rated finding filed tonight (see Tuning proposals — actually filed as a straight bug row, not a candidate; see below). Note: `pulse.mjs` itself currently reports "0 pending" for this file — that's the bug, not the truth (see Tuning proposals / AUDIT `[4.8]`).
-**critique:** pulse says 69 pending, last pass "NaNd ago" — both numbers are wrong (see AUDIT `[4.8]`). Real count: ~1 genuine pending item, the standing `[needs-user-call]` GA-beacon row; real last real pass was 2026-05-10 (~165d ago).
-**candidates:** 51 pending (50 >21d), oldest 166d. `Promote: owner` — nothing auto-drains; `/oversight` is the only valve.
-**Support (triage-only):** 1 open user issue · first response none (0 opened in 7d) · close 106.4h mean (1 closed in 7d).
-**Quota:** unknown — no cached `seven_day` reading yet (first day of the v2 quota governor; `.nexus/quota.json` doesn't exist until a run writes it).
+**plan:** 1 spec, 0 chunks left, 0 held — spec 01 just aged-promoted and has no chunks defined yet; `/plan-a-spec` is the next step.
+**audit:** 10 pending (4 `[needs-user-call]`, see Needs you). One non-needs-user-call row, `[4.8]` `scripts/pulse.mjs`'s four-bug report, now carries this tick's own annotation that all four symptoms read clean — likely already fixed by tonight's `a01a9118` upgrade, just not marked closed.
+**critique:** 5 pending, last pass 21h ago (tonight's cloud-run pass 12).
+**candidates:** 33 pending (44 >21d — counted across every `- proposed:` line in the Pending section, the same raw scan `pulse.mjs` uses for its oldest-age figure, which still carries a handful of already-`[x]` audit-trail rows kept in place), oldest 167d. `Promote: aged`.
+**Support (fix-all):** 0 open user issues · first response none (1 opened in 7d) · close 750.7h mean (2 closed in 7d).
+**Quota:** unknown — no cached `seven_day` reading.
+**data/BACKLOG.md:** 0 pending (3 rows, all `[x]` already shipped).
 
 ## Needs you
 
-- **oversight needed: candidate queue silting (50 pending >21d, oldest 166d)** — `Promote: owner` means this only drains through `/oversight`; it has been accumulating since before this digest's tracking window and nothing changed it tonight.
-- **5 standing `[needs-user-call]` rows awaiting an `/oversight` decision**, unchanged this tick: GTM consent-gate vs. reverting to Plausible (AUDIT `[3.6]`); `/article`/`/tag` soft-404 structural block (AUDIT `[4.2]`); mirrored `loop:opened` GitHub issues that can go permanently un-drained (AUDIT `[3.0]`) — **live example right now: issue #1025 (11 days old) is exactly this, still open**; default-state UI border contrast, needs a global dark-theme lightness call (AUDIT `[1.3]`); production GA `/g/collect` 503s, config lives outside the repo (CRITIQUE, the file's only real pending row).
-- No `escalate #N` lines (no open `triage:needs-user` issue past the 7-day `escalate_days` default) and no `triage:needs-user`/`loop:do` issues open at all.
-- No motion-stalled alert — shipped 10 last full week vs. 6.25 baseline, floor 3.13, reads `ok`.
-- No secrets rotation due (`secrets.mjs audit`: 0 events).
+- No `escalate #N` lines (0 open `triage:needs-user` issues past the 7-day `escalate_days` default) and no `triage:needs-user`/`loop:do` issues open at all.
+- 6 standing `[needs-user-call]` rows:
+  - AUDIT `[3.6]` GTM analytics ships with no consent gate; `bearings.md` still documents the originally-planned Plausible tag.
+  - AUDIT `[4.2]` `/article`/`/tag` soft-404 fix is structurally blocked (real-404 vs. "did you mean" UX are mutually exclusive under current routing).
+  - AUDIT `[3.0]` mirrored `loop:opened` GitHub issues can go permanently un-drained if not picked the same tick they're filed.
+  - AUDIT `[1.3]` default-state UI-component borders fail WCAG 1.4.11 non-text contrast — needs a global dark-theme lightness call.
+  - CRITIQUE `[MED]` production GA `/g/collect` beacons returning 503 — analytics config sits outside the repo.
+  - CANDIDATES `[score 6.5]` "Critique gate diagnostic" — **now flagged as falsified by tonight's own evidence** (see Headline); recommend `/oversight` close or retitle rather than carry the stale diagnosis forward.
+- **oversight needed: candidate queue silting (44 pending >21d, oldest 167d)** — `Promote: aged` is new as of tonight's kit upgrade but the sweep only acts on `Held` roadmap lines with an open issue, not directly on `CANDIDATES.md`'s own aging Pending rows; the silting is unchanged by it.
+- `Promote: aged` — `node scripts/plan/promote.mjs sweep`: auto-promoted none this sweep, 1 awaiting (spec 01's own veto window, issue #1055, open until 2026-10-30 — already landed by this morning's expand pass 441, not a fresh promotion).
+- Candidates cut by the pending cap since the last digest (`node scripts/plan/promote.mjs cuts --since 2026-10-26`):
+  - cut 2026-10-27 [score 2.5] Dead-prop cleanup residue — `TagChip`'s `static` prop + 1 stray article frontmatter field remain after the schema half shipped
+  - cut 2026-10-27 [score 4] Interactive-tools completion instrumentation gap — `/quiz/*` and `/compare/*` emit zero custom analytics events, only generic pageviews
+  - cut 2026-10-27 [score 4.5] Tracker topic history page `/trends/tracker/topic/[slug]` — longitudinal single-topic view across all snapshots
+  - cut 2026-10-27 [score 5] Tracker 8-week editorial analysis — long-form trends synthesis article covering W19–W25
+  - cut 2026-10-27 [score 5] Accessory parts kind — implement spec §7's `accessory` Part category (`/part/accessory/[slug]`)
+- No motion-stalled alert — shipped 10 last full week vs. 6.25 baseline (floor 3.13, reads `ok`); 9 shipped so far this week (2026-W44).
+- No secrets-rotation note — `secrets.mjs audit` is local-only; this is a cloud run, so it's skipped per the standing rule.
 
 ## Today's intent
 
-No ready spec/chunk (v2's table is empty — this is expected the first day after cutover, not a gap). Top actionable finding for the next `/iterate` tick: the new AUDIT `[4.8]` `scripts/pulse.mjs` bug row below — a same-file, four-bug, mechanical fix with no gate/schema implications, scoring above everything else currently open. Runner-up: whatever a fresh general-purpose audit sweep turns up, since all 5 pre-existing AUDIT rows are parked sub-3.0 and CRITIQUE's only real pending row is non-actionable by the loop.
+No ready spec/chunk — spec 01 was just aged-promoted and has 0 chunks defined yet, so `/plan-a-spec` is the actionable next step there, not `/ship-a-chunk`. Top finding for the next `/iterate`/`/oversight` pass: AUDIT `[4.8]` `scripts/pulse.mjs`'s four-bug report — this digest's own check found all four symptoms already gone, most likely from tonight's `a01a9118` kit upgrade, so confirming and closing it should be a one-line commit, not a re-fix. Runner-up: the two parked `[2.7]`/`[2.0]` stale Mode-Sonnet hero-art rows (`next: /ship-asset`), unchanged and still below the autonomous-pick floor.
 
 ## Tuning proposals
 
-None filed as `plan/CANDIDATES.md` rows tonight. The one instrumentation defect found (`scripts/pulse.mjs` under/over-counting across four separate bugs) is a plain bug in freshly-landed v2 tooling, not a gate/cadence/rule mistuning — filed as AUDIT `[4.8]` instead, per `skills/digest.md` §4.2 ("breadth/pulse-discovered findings become AUDIT rows, not fixes") and the meta-loop rail (proposals only for gate/cadence/rule tuning, never plain bugs). The candidate-queue-silting symptom already has its own dedicated "Needs you" line in this template; no separate tuning candidate needed for it tonight.
+None filed as new `plan/CANDIDATES.md` rows tonight. This tick's two substantive observations — the `[4.8]` pulse.mjs row reading as already-fixed, and the `[score 6.5]` critique-gate-diagnostic row reading as falsified by tonight's own cloud-run critique pass — are evidence updates against rows that already exist, appended directly to `plan/AUDIT.md` and `plan/CANDIDATES.md` as part of this notes-only commit, not new gate/cadence mistunings. Nothing in tonight's pulse (a fully green breadth check, no motion stall, no fresh crash signal) points to a gate that needs retuning.
