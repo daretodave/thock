@@ -16,12 +16,13 @@ line goes; each line is a lock that times out:
 `- **<NN.k>** · <reason> · since: <date> · until: <date or
 condition> · max_age: 14d`, an optional `· fallback: release`):
 
-- (none yet)
+- 01 · auto-promoted, veto until 2026-10-30 (#1055) · max_age: 3d · fallback: release
 
 ## Specs
 
 | # | Initiative | Spec | Status | Progress |
 |---|---|---|---|---|
+| 01 | Content-fact-vs-catalog numeric-spec audit | [01-content-fact-audit.md](01-content-fact-audit.md) | Held | Not chunked yet. |
 
 ## Layout
 
