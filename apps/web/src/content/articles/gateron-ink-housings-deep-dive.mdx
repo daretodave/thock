@@ -1,0 +1,80 @@
+---
+slug: gateron-ink-housings-deep-dive
+title: "Gateron Ink: the dye, the tolerance, and what's actually new"
+description: "Gateron's Ink switches ship in dyed-through plum polycarbonate. What the dye changes, what the V2 tolerancing fixed, and where marketing outruns plastics."
+lede: "Gateron's Ink line is sold on its housing color — a deep, semi-translucent plum unlike anything else in the catalog. The more interesting story is buried in the V2 revision notes: tighter stem-post tolerances and factory lube arrived alongside the dye, not because of it."
+author: thock
+pillar: deep-dives
+tags: [linear, gateron, polycarbonate, deep-dive]
+publishedAt: '2026-10-24T14:00:00.000Z'
+updatedAt: '2026-10-24T14:00:00.000Z'
+heroImage: /hero-art/gateron-ink-housings-deep-dive.svg
+heroImageAlt: "Line-drawing cross-section of a switch housing split along the material seam — one half rendered with a uniform dusty-rose wash marking dyed-through polycarbonate, the other half left in plain warm-grey outline marking an undyed housing, with a warm-bronze theme dot at the upper right margin."
+featured: false
+popularityScore: 0
+mentionedParts:
+  - id: ink-v2-yellow
+    kind: switch
+    slug: gateron-ink-v2-yellow
+  - id: pro-3-yellow
+    kind: switch
+    slug: gateron-pro-3-yellow
+  - id: oil-king
+    kind: switch
+    slug: gateron-oil-king
+---
+
+Gateron's Ink line is sold almost entirely on how it looks: a deep, semi-translucent plum-violet polycarbonate housing, distinct from the clear or opaque defaults that fill the rest of the catalog. That's a real material change, and reviewers reach for sensory language to describe it — "denser," "smoother," "warmer" — that sounds like it's describing the plastic itself. Most of what a builder actually feels in a <PartReference id="ink-v2-yellow" /> traces back to a tolerancing fix that shipped in the same revision as the dye, not to the dye.
+
+## Two ways to put color in plastic
+
+Injection-molded parts get their color one of two ways. The dye can be compounded into the resin before it's melted — colorant pellets blended with virgin polycarbonate stock and run through the extruder barrel together, so the melt that fills the mold cavity is tinted uniformly before the part exists. Or the part can be molded in a base resin color and the color applied afterward, as a dip coat, spray, or cured surface layer sitting on top of the finished geometry.
+
+<InlineViz
+  src="/article-viz/gateron-ink-housings-deep-dive/dye-process.svg"
+  alt="Two-panel process diagram. Left panel, labeled MASS-DYED: dye pellets mixing with resin pellets, an extruder barrel, then a housing shape filled with a uniform amber wash through its full cross-section, captioned 'color runs through the full cross-section.' Right panel, labeled POST-MOLD COATING: a clear molded housing, a dip or spray step, then a housing outlined with a thin dashed surface shell and caution-red tick marks at rail-contact points, captioned 'thin surface layer, wears at rail contact.'"
+  caption="Mass-dyeing puts the colorant in the melt before the part exists. Coating puts it on afterward, as a layer that can wear at the surfaces that see the most friction."
+  accent="amber"
+/>
+
+The tell for which process a part went through is whether the color survives a cross-section. A dip-coated part shows a thin colored skin over a different-colored core when cut; a mass-dyed part is the same color at every depth, because the dye was never a layer — it was part of the melt before the housing took shape. Gateron describes the Ink housing as semi-translucent rather than opaque-with-a-tint, and the plum color reads consistently whether you're looking at a rail wall, a spring well, or a stem channel — the kind of uniformity that's characteristic of a dye carried in the resin, not a coating that would thin out in tight corners and pool in flats.
+
+That distinction matters for one practical reason. A coating sitting on a contact surface wears. Stem rails and leaf-contact faces are exactly the surfaces that see the most repeated friction over a switch's life, and a surface coating on those faces would be the first thing to abrade, exposing the base resin underneath after enough keystrokes. A dye carried in the resin has nothing to wear off — the color is the material, at every depth. That's a genuine, physically grounded advantage of mass-dyeing over coating, and it's the one claim in Ink's marketing that holds up without much hedging.
+
+## The V2 revision: where the feel actually changed
+
+What a buyer is actually reacting to when they describe Ink as "smoother" or "faster," though, is rarely a claim about pigment distribution — it's a claim about feel, and that claim is almost entirely a tolerancing and lube story. The catalog record for the Ink V2 Yellow says so directly: the V2 revision tightens tolerances on the stem post and adds factory lube, changes that have nothing to do with how the resin was colored.
+
+<InlineViz
+  src="/article-viz/gateron-ink-housings-deep-dive/tolerance-ladder.svg"
+  alt="Three-row horizontal chart on a 0-60g-plus axis. Row one, Ink V2 Yellow: an open circle at 35g connected to a filled diamond at 45g, housing icon of two solid amber squares labeled PC/PC, year 2021. Row two, G Pro 3.0 Yellow: open circle at 50g to filled diamond at 67g, housing icon of one solid and one hatched square labeled PC/nylon, year 2023. Row three, Oil King: open circle at 55g to filled diamond at 65g, housing icon of one solid and one hatched square labeled PC/nylon, year 2022."
+  caption="Three Gateron linears, three different housing recipes and spring weights — and tighter tolerances arriving on all three regardless of color."
+  accent="amber"
+/>
+
+Put the Ink V2 Yellow next to two other switches in Gateron's own lineup and the pattern gets clearer. The <PartReference id="pro-3-yellow" /> — a frosted PC-top, nylon-bottom switch with no dyed housing at all — shipped with its own round of tighter housing tolerances, a frosted light-guide top, and cleaner factory lube: the same category of fix the Ink V2 got, applied to a switch that never changed color. The <PartReference id="oil-king" /> runs a heavier spring in a mixed PC-over-nylon housing and earns its reputation on a damping story that's entirely about the nylon bottom housing, not about any dye. Three switches, three different housing recipes, three different spring weights — and the common thread is Gateron tightening stem-post and housing tolerances across its lineup as a generational move, independent of what color any individual switch happens to be.
+
+That pattern is the useful evidence here. If dyeing the resin were itself responsible for a tighter-feeling switch, the improvement should show up only on dyed parts. It doesn't — it shows up on the G Pro 3.0 Yellow, colored nothing like Ink, and it shows up differently again on the Oil King, where the real acoustic lever is a resin pairing that has nothing to do with pigment. The Ink V2's lighter spring and all-PC top-and-bottom housing are themselves a spring and resin-pairing choice Gateron could have made in any color; they just happened to ship in plum.
+
+## What the dye can plausibly change — and what it can't
+
+None of this means the dye does literally nothing. Colorant loading in injection-molded parts is typically a small fraction of the resin's overall weight — enough to carry a strong, even tint through a translucent part, not enough to meaningfully change the base polymer's bulk mechanical behavior. Polycarbonate's density, stiffness, and internal damping are governed by its polymer chain structure and how it's processed; a trace colorant additive riding along in the melt isn't present in a large enough quantity to move those properties in a way a typist could actually feel.
+
+<InlineViz
+  src="/article-viz/gateron-ink-housings-deep-dive/dye-plausible-map.svg"
+  alt="Two-column map. Left column, WHAT THE DYE CAN CHANGE, amber checkmarks: 'Optical tint and translucency — the plum color itself, a real visible change' and 'Color that survives wear — no surface coat on rails or legs to abrade off,' with a dashed note stating colorant load is a small fraction of the resin's weight, not enough to move bulk polymer density or damping. Right column, WHAT'S ACTUALLY TOLERANCING + LUBE, caution-red crosses: 'Denser plastic — pigment load is too small to move bulk density,' 'Better damping — damping is a resin-pairing story, not a tint story,' and 'Smoother glide — tighter stem-post tolerance plus factory lube did this.'"
+  caption="The dye earns credit for optics and wear-resistant color. Everything else attributed to it belongs to the V2 tolerancing and lube pass instead."
+  accent="amber"
+/>
+
+So credit the dye for what it can plausibly do: change the optical property of the housing — translucency and hue — and, because it's dispersed in the melt rather than applied after, survive wear on rail and contact surfaces better than a surface coat would. Don't credit it for "denser plastic," "better damping," or "a warmer sound," claims that circulate in marketing copy and secondhand reviews but have no plausible mechanism tracing back to a pigment at trace-percentage loading. Any acoustic or tactile difference a builder feels between an Ink switch and a same-spec clear-housing switch is far more likely to be the tolerancing, the lube, or the resin pairing doing the work — exactly the variables that changed in the V2 revision alongside the color, not because of it.
+
+## A niche, not a replacement
+
+None of this is an argument that Ink is a bad product — it's an argument that it's a specific one. The Ink V2 Yellow's recipe — a light actuation spring, polycarbonate on both the top and bottom housing, a <Mono>POM</Mono> stem, and factory lube applied over tighter tolerances — adds up to one of the lower-friction, faster-feeling linear recipes in Gateron's range. That's a specific feel aimed at gaming and fast-typing use cases, where the priority is a quick, consistent glide rather than a deep, damped bottom-out. It isn't a substitute for the heavier, nylon-bottomed recipes — the G Pro line, the Oil King — that builders reach for when the goal is acoustic weight instead of speed.
+
+Gateron hasn't moved its whole catalog to dyed, all-PC housings, and the reasoning is straightforward once the dye and the tolerancing are separated. The feel Ink sells is a light-linear niche, not a universal upgrade. A heavier typist chasing a deep thock gets nothing from an Ink housing that a clear PC-top/nylon-bottom switch doesn't already offer, and arguably loses the nylon bottom's damping in the trade. Keeping Ink as a visually distinct, narrowly specced line lets Gateron sell the fast-linear niche without retooling the housing-resin pairings doing real acoustic work elsewhere in its catalog.
+
+## What to watch
+
+The durable change in this story is the tolerancing, and tolerancing is the kind of improvement a manufacturer can quietly carry into other lines without a new color to announce it — the G Pro 3.0 revision is proof Gateron already does this. Watch for whether Gateron extends the dyed-resin treatment to a heavier-spring or tactile variant within the Ink family; that would be the real test of whether the color is building toward a broader line or staying a cosmetic marker on one niche recipe. Watch, too, for whether other factories start shipping their own dyed-through housings with similar "tighter tolerances, factory lube" language attached. If that pattern repeats elsewhere, it confirms what this one does: the dye was always the marketing hook for a QC story, not the other way around.

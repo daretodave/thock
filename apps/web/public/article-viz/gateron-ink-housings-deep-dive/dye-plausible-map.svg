@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>What a trace-percentage colorant can plausibly change in a polycarbonate housing, versus what is actually a tolerancing and lube effect</title>
+
+  <!-- Column divider -->
+  <line x1="600" y1="60" x2="600" y2="400" stroke-opacity="0.25" stroke-dasharray="4 6"/>
+
+  <!-- Column headers -->
+  <text x="300" y="50" font-family="IBM Plex Sans, sans-serif" font-size="19" font-weight="600" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle">WHAT THE DYE CAN CHANGE</text>
+  <text x="900" y="50" font-family="IBM Plex Sans, sans-serif" font-size="19" font-weight="600" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle">WHAT'S ACTUALLY TOLERANCING + LUBE</text>
+
+  <!-- LEFT: plausible, amber checks -->
+  <g>
+    <circle cx="140" cy="135" r="13" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.85"/>
+    <path d="M 134 135 L 139 141 L 148 128" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95"/>
+    <text x="165" y="130" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none">Optical tint and translucency</text>
+    <text x="165" y="150" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">the plum color itself — a real, visible change</text>
+
+    <circle cx="140" cy="215" r="13" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.85"/>
+    <path d="M 134 215 L 139 221 L 148 208" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95"/>
+    <text x="165" y="210" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none">Color that survives wear</text>
+    <text x="165" y="230" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">no surface coat on rails/legs to abrade off</text>
+
+    <rect x="105" y="300" width="380" height="80" rx="6" stroke-opacity="0.3" stroke-dasharray="3 5"/>
+    <text x="125" y="328" font-family="Newsreader, serif" font-style="italic" font-size="14" fill="oklch(0.78 0.10 80)" stroke="none">colorant load is a small fraction of</text>
+    <text x="125" y="350" font-family="Newsreader, serif" font-style="italic" font-size="14" fill="oklch(0.78 0.10 80)" stroke="none">the resin's weight — not enough to move</text>
+    <text x="125" y="372" font-family="Newsreader, serif" font-style="italic" font-size="14" fill="oklch(0.78 0.10 80)" stroke="none">bulk polymer density or damping</text>
+  </g>
+
+  <!-- RIGHT: not plausible, caution x -->
+  <g>
+    <circle cx="740" cy="135" r="13" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.85"/>
+    <line x1="734" y1="129" x2="746" y2="141" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.95"/>
+    <line x1="746" y1="129" x2="734" y2="141" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.95"/>
+    <text x="765" y="130" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none">"Denser plastic"</text>
+    <text x="765" y="150" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">pigment load is too small to move bulk density</text>
+
+    <circle cx="740" cy="215" r="13" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.85"/>
+    <line x1="734" y1="209" x2="746" y2="221" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.95"/>
+    <line x1="746" y1="209" x2="734" y2="221" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.95"/>
+    <text x="765" y="210" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none">"Better damping"</text>
+    <text x="765" y="230" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">damping is a resin-pairing story, not a tint story</text>
+
+    <circle cx="740" cy="295" r="13" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.85"/>
+    <line x1="734" y1="289" x2="746" y2="301" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.95"/>
+    <line x1="746" y1="289" x2="734" y2="301" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.95"/>
+    <text x="765" y="290" font-family="IBM Plex Sans, sans-serif" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none">"Smoother glide"</text>
+    <text x="765" y="310" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">tighter stem-post tolerance + factory lube did this</text>
+  </g>
+
+  <!-- Baseline -->
+  <line x1="90" y1="430" x2="1110" y2="430" stroke-opacity="0.3"/>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="40" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

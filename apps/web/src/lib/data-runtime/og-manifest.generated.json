@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "slug": "gateron-ink-housings-deep-dive",
+      "readTime": 7,
+      "frontmatter": {
+        "title": "Gateron Ink: the dye, the tolerance, and what's actually new",
+        "lede": "Gateron's Ink line is sold on its housing color — a deep, semi-translucent plum unlike anything else in the catalog. The more interesting story is buried in the V2 revision notes: tighter stem-post tolerances and factory lube arrived alongside the dye, not because of it.",
+        "pillar": "deep-dives",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "frankenswitching-explained",
       "readTime": 8,
       "frontmatter": {
@@ -10078,5 +10088,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-10-27T01:13:30.130Z"
+  "generatedAt": "2026-10-28T04:05:21.846Z"
 }

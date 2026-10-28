@@ -1,0 +1,19 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-10-28T14:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "gateron-ink-housings-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "what-the-dye-can-plausibly-change-and-what-it-cant",
+  "brief_summary": "Two-column do/don't map under the H2 'What the dye can plausibly change — and what it can't'. Left column (amber checks): optical tint/translucency, and color that survives wear because it isn't a surface coat. Right column (caution-red crosses): claimed 'denser plastic', claimed 'better damping', and claimed 'smoother glide' — each annotated with the actual mechanism (tolerancing, resin pairing, factory lube). A dashed amber note box states that colorant load is too small a fraction of resin weight to move bulk density or damping.",
+  "target": "apps/web/public/article-viz/gateron-ink-housings-deep-dive/dye-plausible-map.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "gateron-ink-housings-deep-dive.mdx § 'What the dye can plausibly change — and what it can't' — 'Colorant loading in injection-molded parts is typically a small fraction of the resin's weight ... Don't credit it for denser plastic, better damping, or a warmer sound ... Any acoustic or tactile difference ... is far more likely to be the tolerancing, the lube, or the resin pairing doing the work.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gateron-ink-housings-deep-dive/dye-plausible-map.svg"],
+  "warnings": []
+}

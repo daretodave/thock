@@ -1,0 +1,25 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored SVG (no raster pipeline)",
+  "at": "2026-10-28T03:58:45.000Z",
+  "commit": "092d3ceda40cb41cb11fc8404ae88a2020d96394",
+  "kind": "hero-art",
+  "source": null,
+  "tokens_snapshot": "sha256:2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": ["ui-sans-serif (system fallback label text only — no project font embedded)"],
+  "slug": "gateron-ink-housings-deep-dive",
+  "pillar": "deep-dives",
+  "subject": "Single Gateron Ink switch housing cross-section (top housing, stem, spring) split down the centerline — left half is the clear/standard housing rendered as plain outline, right half is the dyed Ink housing rendered with a dusty-rose stipple grain filling the housing walls (dye runs through the material, not a surface coat), plus a tighter stem-post guide clearance on the Ink side versus a wider clearance on the clear side",
+  "motif": "switch cross-section, material/dye boundary split down the centerline",
+  "splashHue": "dusty rose",
+  "splashColor": "oklch(0.66 0.075 12)",
+  "canvas": "1200x750",
+  "strokeWeight": "2px",
+  "strokeColor": "oklch(0.78 0.005 90)",
+  "outputs": [
+    "apps/web/public/hero-art/gateron-ink-housings-deep-dive.svg",
+    "apps/web/public/hero-art/gateron-ink-housings-deep-dive.svg.json"
+  ],
+  "warnings": [],
+  "notes": "One switch silhouette (top housing y150-290, explode gap, bottom housing y310-595, stem floating y158-298 overlapping both, spring y424-586) shared across a dashed vertical centerline at x=600 — the material/dye hinge called out in the brief. Left of the hinge is drawn as plain outline only (clear/standard housing, no fill, no grain) with a 'clear' label leadered outward-left in the neutral grey stroke color. Right of the hinge carries a dusty-rose stipple dot field inside both housing halves (dye introduced pre-mold reads as uniform grain through the material depth, distinct from a thin surface-coat cue) plus a low-alpha dusty-rose wash ellipse and one solid focal dot as the visual anchor, with an 'ink' label leadered outward-right in the splash color. A second, independent detail — two stem-post guide ribs flanking the stem body at y210-270 — shows a wide clearance on the clear side (rib at x505-515, ~53px gap to the stem) versus a narrow clearance on the ink side (rib at x645-655, ~13px gap to the stem), called out with a dashed gap-indicator line and an elbowed leader to a small 'tighter post fit' caption in the splash color — the tighter stem-post tolerance paired with the dye change. Spring and stem body are drawn plain (unaffected by housing material) to keep the dye/tolerance story isolated to the housing walls and the guide-rib clearance. No fabricated numeric specs in the rendered text — the caption is descriptive ('tighter post fit'), not a measured value; the clearance contrast is carried visually by the rib spacing, not by a printed figure. Brass-bronze ornamental dot at upper-right (1148, 184) per family convention. Background transparent, light-mode safe."
+}

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — Gateron Ink switch housing cross-section, split down the centerline: clear/standard housing (left, plain outline) against the dyed Ink housing (right, dusty-rose grain) with a tighter stem-post guide clearance on the Ink side</title>
+
+  <!-- ────────────────────────────────────────────────────────────────────────
+       LAYOUT — single switch cross-section, centerline x = 600 is the
+       material/dye hinge:
+         left of 600  → clear / standard housing: plain outline only
+         right of 600 → Ink housing: same silhouette, dusty-rose stipple
+                        grain filling the housing walls (dye runs through
+                        the material, not a surface coat) + a focal dot
+       Top housing: y 150 → 290. Explode gap 290 → 310. Bottom housing:
+       y 310 → 595. Stem (head/body/skirt) floats y 158 → 298, overlapping
+       the top housing and the explode gap. Spring: y 430 → 580. Baseline:
+       y = 620.
+       Stem-post guide ribs flank the stem body at y 210 → 270: wide
+       clearance on the clear side, narrow clearance on the Ink side —
+       the tighter stem-post tolerance paired with the dye change.
+  ──────────────────────────────────────────────────────────────────────── -->
+
+  <!-- Splash: low-alpha dusty-rose wash over the Ink (right) half only -->
+  <ellipse cx="710" cy="320" rx="260" ry="230" fill="oklch(0.66 0.075 12 / 0.09)" stroke="none"/>
+
+  <!-- Centerline — the material/dye hinge, dashed the full height of the switch -->
+  <line x1="600" y1="135" x2="600" y2="620" stroke-opacity="0.4" stroke-dasharray="3 7"/>
+
+  <!-- Baseline beneath the switch — family rhythm anchor -->
+  <line x1="120" y1="620" x2="1080" y2="620" stroke-opacity="0.55"/>
+  <g stroke-opacity="0.35">
+    <line x1="120"  y1="620" x2="120"  y2="628"/>
+    <line x1="257"  y1="620" x2="257"  y2="628"/>
+    <line x1="394"  y1="620" x2="394"  y2="628"/>
+    <line x1="531"  y1="620" x2="531"  y2="628"/>
+    <line x1="669"  y1="620" x2="669"  y2="628"/>
+    <line x1="806"  y1="620" x2="806"  y2="628"/>
+    <line x1="943"  y1="620" x2="943"  y2="628"/>
+    <line x1="1080" y1="620" x2="1080" y2="628"/>
+  </g>
+
+  <!-- Quiet left-edge layer ticks (family convention) -->
+  <g stroke-opacity="0.3">
+    <line x1="85" y1="150" x2="100" y2="150"/>
+    <line x1="85" y1="310" x2="100" y2="310"/>
+    <line x1="85" y1="595" x2="100" y2="595"/>
+    <line x1="85" y1="620" x2="100" y2="620"/>
+  </g>
+
+  <!-- ── TOP HOUSING — shared silhouette, outline only ──────────────────── -->
+  <path d="
+    M 395 290
+    L 395 220
+    L 415 200
+    L 415 160
+    L 435 150
+    L 765 150
+    L 785 160
+    L 785 200
+    L 805 220
+    L 805 290
+    Z"/>
+
+  <!-- Stem hole notch in the top face (drawn as an overlapping outline, no fill —
+       the overlap itself reads as the window) -->
+  <path d="M 540 150 L 660 150 L 670 185 L 530 185 Z"/>
+
+  <!-- Faint inner cavity ribs, both sides — plain housing wall interior -->
+  <g stroke-opacity="0.4">
+    <line x1="415" y1="200" x2="505" y2="200"/>
+    <line x1="695" y1="200" x2="785" y2="200"/>
+  </g>
+
+  <!-- Ink-side (right) stipple grain inside the top housing — dye runs through
+       the material, not a surface coat. Dots only right of the centerline. -->
+  <g fill="oklch(0.66 0.075 12 / 0.55)" stroke="none">
+    <circle cx="690" cy="178" r="2.4"/>
+    <circle cx="730" cy="178" r="2.4"/>
+    <circle cx="770" cy="178" r="2.4"/>
+    <circle cx="690" cy="205" r="2.4"/>
+    <circle cx="730" cy="205" r="2.4"/>
+    <circle cx="770" cy="205" r="2.4"/>
+    <circle cx="690" cy="232" r="2.4"/>
+    <circle cx="730" cy="232" r="2.4"/>
+    <circle cx="770" cy="232" r="2.4"/>
+    <circle cx="690" cy="259" r="2.4"/>
+    <circle cx="730" cy="259" r="2.4"/>
+    <circle cx="770" cy="259" r="2.4"/>
+  </g>
+
+  <!-- Focal dot — the dye's visual anchor point -->
+  <circle cx="730" cy="218" r="4.5" fill="oklch(0.66 0.075 12)" stroke="none" opacity="0.9"/>
+
+  <!-- Faint explode line between top and bottom housing -->
+  <line x1="350" y1="300" x2="850" y2="300" stroke-dasharray="4 6" stroke-opacity="0.35"/>
+
+  <!-- ── STEM (head / body / skirt) — unaffected by the housing dye ────── -->
+  <g stroke-opacity="0.92">
+    <path d="M 575 158 L 625 158 L 625 178 L 640 178 L 640 198 L 560 198 L 560 178 L 575 178 Z"/>
+    <path d="M 568 198 L 632 198 L 632 268 L 568 268 Z"/>
+    <path d="M 548 268 L 652 268 L 652 298 L 548 298 Z"/>
+    <line x1="600" y1="205" x2="600" y2="260" stroke-opacity="0.3" stroke-width="1.2"/>
+  </g>
+
+  <!-- ── STEM-POST GUIDE RIBS — tighter tolerance on the Ink side ───────
+       Left (clear): wide clearance between rib and stem — standard fit.
+       Right (ink): narrow clearance between stem and rib — tighter fit.
+  ──────────────────────────────────────────────────────────────────── -->
+  <g>
+    <rect x="505" y="210" width="10" height="60" stroke-opacity="0.75"/>
+    <rect x="645" y="210" width="10" height="60" stroke-opacity="0.75"/>
+  </g>
+  <g stroke-opacity="0.5" stroke-width="1.3" stroke-dasharray="2 4">
+    <line x1="515" y1="240" x2="568" y2="240"/>
+    <line x1="632" y1="240" x2="645" y2="240"/>
+  </g>
+  <g stroke-opacity="0.6" stroke-width="1.3">
+    <line x1="515" y1="234" x2="515" y2="246"/>
+    <line x1="568" y1="234" x2="568" y2="246"/>
+    <line x1="632" y1="234" x2="632" y2="246"/>
+    <line x1="645" y1="234" x2="645" y2="246"/>
+  </g>
+
+  <!-- Leader + caption: tighter post fit, called out from the ink-side gap -->
+  <g stroke-opacity="0.5" stroke-width="1.3">
+    <line x1="655" y1="240" x2="655" y2="460"/>
+    <line x1="655" y1="460" x2="830" y2="460"/>
+    <circle cx="655" cy="240" r="2.2" fill="oklch(0.66 0.075 12)" stroke="none" opacity="0.85"/>
+  </g>
+  <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="20" fill="oklch(0.66 0.075 12)" stroke="none" letter-spacing="1.5" font-weight="500">
+    <text x="840" y="466">tighter post fit</text>
+  </g>
+
+  <!-- ── BOTTOM HOUSING — shared silhouette, outline only ───────────────── -->
+  <path d="
+    M 385 310
+    L 385 320
+    L 370 335
+    L 370 580
+    L 385 595
+    L 815 595
+    L 830 580
+    L 830 335
+    L 815 320
+    L 815 310
+    Z"/>
+
+  <!-- Through-hole pin housings, symmetric about the centerline -->
+  <rect x="460" y="595" width="20" height="10" rx="2" stroke-opacity="0.7"/>
+  <rect x="720" y="595" width="20" height="10" rx="2" stroke-opacity="0.7"/>
+
+  <!-- Ink-side (right) stipple grain inside the bottom housing — same dye,
+       same material depth, lower and sparser field away from the spring -->
+  <g fill="oklch(0.66 0.075 12 / 0.5)" stroke="none">
+    <circle cx="680" cy="365" r="2.2"/>
+    <circle cx="720" cy="365" r="2.2"/>
+    <circle cx="760" cy="365" r="2.2"/>
+    <circle cx="795" cy="365" r="2.2"/>
+    <circle cx="680" cy="400" r="2.2"/>
+    <circle cx="720" cy="400" r="2.2"/>
+    <circle cx="760" cy="400" r="2.2"/>
+    <circle cx="795" cy="400" r="2.2"/>
+    <circle cx="680" cy="530" r="2.2"/>
+    <circle cx="720" cy="555" r="2.2"/>
+    <circle cx="760" cy="530" r="2.2"/>
+    <circle cx="795" cy="555" r="2.2"/>
+  </g>
+
+  <!-- ── SPRING (metal — plain, unaffected by housing dye) ───────────────── -->
+  <g stroke-opacity="0.78">
+    <ellipse cx="600" cy="430" rx="38" ry="6"/>
+    <ellipse cx="600" cy="445" rx="38" ry="6"/>
+    <ellipse cx="600" cy="460" rx="38" ry="6"/>
+    <ellipse cx="600" cy="475" rx="38" ry="6"/>
+    <ellipse cx="600" cy="490" rx="38" ry="6"/>
+    <ellipse cx="600" cy="505" rx="38" ry="6"/>
+    <ellipse cx="600" cy="520" rx="38" ry="6"/>
+    <ellipse cx="600" cy="535" rx="38" ry="6"/>
+    <ellipse cx="600" cy="550" rx="38" ry="6"/>
+    <ellipse cx="600" cy="565" rx="38" ry="6"/>
+    <ellipse cx="600" cy="580" rx="38" ry="6"/>
+    <line x1="600" y1="424" x2="600" y2="586" stroke-opacity="0.3" stroke-dasharray="2 4"/>
+  </g>
+
+  <!-- ── MATERIAL LABELS — "clear" outward-left, "ink" outward-right ────── -->
+  <g stroke-opacity="0.55" stroke-width="1.4">
+    <line x1="395" y1="220" x2="260" y2="220"/>
+    <circle cx="395" cy="220" r="2.2" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8"/>
+  </g>
+  <g stroke-opacity="0.55" stroke-width="1.4">
+    <line x1="805" y1="220" x2="940" y2="220"/>
+    <circle cx="805" cy="220" r="2.2" fill="oklch(0.66 0.075 12)" stroke="none" opacity="0.85"/>
+  </g>
+  <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="30" letter-spacing="5" font-weight="500" stroke="none">
+    <text x="250" y="228" text-anchor="end" fill="oklch(0.78 0.005 90)">clear</text>
+    <text x="950" y="228" text-anchor="start" fill="oklch(0.66 0.075 12)">ink</text>
+  </g>
+
+  <!-- Bronze-bronze theme dot — small ornamental anchor (family convention),
+       tucked at the upper-right margin. -->
+  <circle cx="1148" cy="184" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

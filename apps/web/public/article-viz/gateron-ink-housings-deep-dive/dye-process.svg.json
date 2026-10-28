@@ -1,0 +1,19 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-10-28T14:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "gateron-ink-housings-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "two-ways-to-put-color-in-plastic",
+  "brief_summary": "Two-panel process strip under the H2 'Two ways to put color in plastic'. Left panel shows mass-dyeing: dye pellets mixed into resin stock, run through an extruder barrel, molded into a housing shape with uniform amber wash through the full cross-section. Right panel shows post-mold coating: a clear-molded housing, a dip/spray step, and a thin dashed surface shell with caution-red tick marks at rail-contact points marking wear risk.",
+  "target": "apps/web/public/article-viz/gateron-ink-housings-deep-dive/dye-process.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "gateron-ink-housings-deep-dive.mdx § 'Two ways to put color in plastic' — 'The dye can be compounded into the resin before it's melted ... run through the extruder barrel together so the melt that fills the mold cavity is uniformly tinted all the way through ... a coating sitting on a contact surface wears.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gateron-ink-housings-deep-dive/dye-process.svg"],
+  "warnings": []
+}
