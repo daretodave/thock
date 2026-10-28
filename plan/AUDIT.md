@@ -14309,7 +14309,7 @@ passes accumulate signals.)
 - addressed in: d2df27a7 (this tick — ship-content newsletter dispatch)
 > Filed 2026-10-27 by newsletter-gap-survey.mjs. 7 days since issue 12. Threshold: ≥7 calendar days.
 
-### [HOT PURSUIT] [content-gap] [7] deep-dives pillar — 1 of ≥2 articles in last 30d
+### [x] [HOT PURSUIT] [content-gap] [7] deep-dives pillar — 1 of ≥2 articles in last 30d — addressed in 4e478c2c, closes #1056
 - category: content-gaps
 - impact: 6 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -14321,3 +14321,69 @@ passes accumulate signals.)
 - next: /ship-content → deep-dives pillar article
 - issue: #1056
 > Filed 2026-10-28 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+
+### [ ] [cross-links] [4.5] gateron-ink-housings-deep-dive ↔ cherry-mx2a-revision — no prose cross-link (same pillar, ≥2 shared tags: linear, deep-dive)
+- category: cross-links
+- filed: 2026-10-28 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: linear, deep-dive
+- article-a: apps/web/src/content/articles/gateron-ink-housings-deep-dive.mdx
+- article-b: apps/web/src/content/articles/cherry-mx2a-revision.mdx
+- action: add [cherry-mx2a-revision](/article/cherry-mx2a-revision) to gateron-ink-housings-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] gateron-ink-housings-deep-dive ↔ gateron-lanes-tactile-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: gateron, deep-dive)
+- category: cross-links
+- filed: 2026-10-28 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: gateron, deep-dive
+- article-a: apps/web/src/content/articles/gateron-ink-housings-deep-dive.mdx
+- article-b: apps/web/src/content/articles/gateron-lanes-tactile-deep-dive.mdx
+- action: add [gateron-lanes-tactile-deep-dive](/article/gateron-lanes-tactile-deep-dive) to gateron-ink-housings-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] gateron-ink-housings-deep-dive ↔ gateron-magnetic-jade-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: gateron, deep-dive)
+- category: cross-links
+- filed: 2026-10-28 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: gateron, deep-dive
+- article-a: apps/web/src/content/articles/gateron-ink-housings-deep-dive.mdx
+- article-b: apps/web/src/content/articles/gateron-magnetic-jade-deep-dive.mdx
+- action: add [gateron-magnetic-jade-deep-dive](/article/gateron-magnetic-jade-deep-dive) to gateron-ink-housings-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] gateron-ink-housings-deep-dive ↔ gateron-oil-king-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: linear, gateron, polycarbonate, deep-dive)
+- category: cross-links
+- filed: 2026-10-28 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: linear, gateron, polycarbonate, deep-dive
+- article-a: apps/web/src/content/articles/gateron-ink-housings-deep-dive.mdx
+- article-b: apps/web/src/content/articles/gateron-oil-king-deep-dive.mdx
+- action: add [gateron-oil-king-deep-dive](/article/gateron-oil-king-deep-dive) to gateron-ink-housings-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] gateron-ink-housings-deep-dive ↔ hmx-cloud-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: linear, deep-dive)
+- category: cross-links
+- filed: 2026-10-28 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: linear, deep-dive
+- article-a: apps/web/src/content/articles/gateron-ink-housings-deep-dive.mdx
+- article-b: apps/web/src/content/articles/hmx-cloud-deep-dive.mdx
+- action: add [hmx-cloud-deep-dive](/article/hmx-cloud-deep-dive) to gateron-ink-housings-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] gateron-ink-housings-deep-dive ↔ plate-materials-explained — no prose cross-link (same pillar, ≥2 shared tags: polycarbonate, deep-dive)
+- category: cross-links
+- filed: 2026-10-28 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: polycarbonate, deep-dive
+- article-a: apps/web/src/content/articles/gateron-ink-housings-deep-dive.mdx
+- article-b: apps/web/src/content/articles/plate-materials-explained.mdx
+- action: add [plate-materials-explained](/article/plate-materials-explained) to gateron-ink-housings-deep-dive body, or vice versa
