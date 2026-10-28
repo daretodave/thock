@@ -14308,3 +14308,15 @@ passes accumulate signals.)
 - issue: #1051
 - addressed in: d2df27a7 (this tick — ship-content newsletter dispatch)
 > Filed 2026-10-27 by newsletter-gap-survey.mjs. 7 days since issue 12. Threshold: ≥7 calendar days.
+
+### [HOT PURSUIT] [content-gap] [7] deep-dives pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 6 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: deep-dives
+- window-count: 1
+- window-start: 2026-09-28
+- score: 7
+- next: /ship-content → deep-dives pillar article
+> Filed 2026-10-28 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
