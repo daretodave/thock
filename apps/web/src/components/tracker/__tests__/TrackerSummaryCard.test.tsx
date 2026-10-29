@@ -71,4 +71,20 @@ describe('<TrackerSummaryCard>', () => {
       'Oil King: up trend',
     )
   })
+
+  it('renders the sleeper slot with a neutral glyph/color regardless of the row\'s own direction (critique pass 13)', () => {
+    render(
+      <TrackerSummaryCard
+        kind="sleeper"
+        kicker="sleeper"
+        row={row({ name: 'GMK CYL Zombie', direction: 'down', score: -40 })}
+      />,
+    )
+    const glyph = screen.getByTestId('trend-direction-glyph')
+    expect(glyph).toHaveAttribute('data-dir', 'flat')
+    expect(glyph).toHaveAttribute('aria-label', 'sleeper')
+    expect(screen.getByTestId('sparkline')).toHaveAttribute('data-tone', 'flat')
+    // The number itself stays truthful to the row's actual move.
+    expect(screen.getByTestId('tracker-summary-card')).toHaveTextContent('-40%')
+  })
 })

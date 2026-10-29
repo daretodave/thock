@@ -26,6 +26,15 @@ export function TrackerSummaryCard({
   row,
 }: TrackerSummaryCardProps): ReactElement {
   const delta = formatDelta(row.score, row.direction)
+  // Sleeper is picked by magnitude (smallest abs score), not direction —
+  // reusing the row's own up/down tone made it read as a second Riser or
+  // Faller card (critique pass 13). Its glyph/color/spark stay neutral
+  // regardless of which way the row actually moved this week.
+  const tone = kind === 'sleeper' ? 'flat' : row.direction
+  const dir = kind === 'sleeper' ? 'flat' : row.direction
+  const glyphLabel = kind === 'sleeper' ? 'sleeper' : `${row.direction} trend`
+  const sparkLabel =
+    kind === 'sleeper' ? `${row.name}: sleeper` : `${row.name}: ${row.direction} trend`
 
   return (
     <div
@@ -38,25 +47,19 @@ export function TrackerSummaryCard({
       </span>
       <h3 className="font-serif text-h3 text-text">{row.name}</h3>
       <div className="flex items-center gap-3">
-        <span className={TONE_CLASS[row.direction]}>
-          <TrendDirectionGlyph
-            dir={row.direction}
-            size={14}
-            ariaLabel={`${row.direction} trend`}
-          />
+        <span className={TONE_CLASS[tone]}>
+          <TrendDirectionGlyph dir={dir} size={14} ariaLabel={glyphLabel} />
         </span>
-        <span
-          className={`font-mono text-h3 font-medium ${TONE_CLASS[row.direction]}`}
-        >
+        <span className={`font-mono text-h3 font-medium ${TONE_CLASS[tone]}`}>
           {delta}
         </span>
-        <span className={TONE_CLASS[row.direction]}>
+        <span className={TONE_CLASS[tone]}>
           <Sparkline
             values={row.spark}
-            tone={row.direction}
+            tone={tone}
             w={70}
             h={22}
-            ariaLabel={`${row.name}: ${row.direction} trend`}
+            ariaLabel={sparkLabel}
           />
         </span>
       </div>
