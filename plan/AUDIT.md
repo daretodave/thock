@@ -113,6 +113,16 @@
 
 ## Drained findings (kept for audit-trail; do not re-open)
 
+### [x] [external-critique] [voice] [3.6] /tools + /quiz/switch — tools-card description and quiz lede describe the same flow with different framing — addressed in 5dc60b24, closes #1059
+- category: external-critique
+- filed: critique pass 14 (reader sub-agent, scripted walk)
+- impact: 4 (two heavily-linked utility surfaces describing the same feature inconsistently)
+- ease: 9 (single lede string edit, no schema/route/component change)
+- score: 3.6 (impact × ease / 10)
+- evidence: `apps/web/src/app/tools/page.tsx:35` vs. `apps/web/src/app/quiz/switch/page.tsx:52-53`
+- action: `/quiz/switch` lede rewritten to echo the `/tools` card's wording (digit numeral, named dimensions), keeping only its own closing clause
+- issue: #1059
+
 ## Open findings
 
 ### [needs-user-call] [bug] [4.2] `/article/[slug]` and `/tag/[slug]` soft-404 fix is structurally blocked — real 404 status and the "did you mean" not-found UX are mutually exclusive under current Next.js routing
@@ -181,20 +191,6 @@
 - score: 1.3 (impact × ease / 10, honestly re-scored after independently verifying the fix's true blast radius — an initial estimate of ease 6 assumed a "2-line bump" before checking how much lightness change 3:1 actually requires)
 - evidence: `packages/tokens/src/tokens.css:15-16` (dark-mode `--thock-border`/`--thock-border-hi`); contrast independently recomputed via OKLCH→linear-sRGB→WCAG relative luminance (Björn Ottosson's oklab conversion matrices + W3C contrast formula), confirming 1.42/1.24/2.24/1.97:1 exactly; light-mode values (`--thock-border: oklch(0.88 0.004 85)` against `--thock-bg: oklch(0.965 0.004 85)`) not yet computed — worth checking in the same pass if this is ever picked up.
 - next: `/oversight` call — decide whether to accept a visibly heavier border weight in dark mode for WCAG 1.4.11 compliance, or a lighter-touch alternative (e.g. a subtle background-fill or shadow cue instead of raising border lightness); then implement + re-verify contrast across all bordered components in one pass.
-
-### [x] [cross-links] [4.5] wooting-rapid-trigger-head-start ↔ hall-effect-rapid-trigger-plateau — addressed in 482d0fa8, closes #1008
-- category: cross-links
-- filed: 2026-09-24 by article-crosslink-survey.mjs
-- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
-- ease: 9 (add one inline markdown link to either article body)
-- score: 4.5 (impact × ease / 10)
-- shared-tags: hall-effect, rapid-trigger
-- article-a: apps/web/src/content/articles/wooting-rapid-trigger-head-start.mdx
-- article-b: apps/web/src/content/articles/hall-effect-rapid-trigger-plateau.mdx
-- action: add [hall-effect-rapid-trigger-plateau](/article/hall-effect-rapid-trigger-plateau) to wooting-rapid-trigger-head-start body, or vice versa
-- issue: #1008
-> **Resolved (2026-09-28):** added one inline link from the wooting article's "What 'HE' means has stopped being the differentiator" callout to the plateau piece. `pnpm verify` full gate green: typecheck, lint, unit tests, script tests, data:validate, build, size, 1274/1274 e2e.
-> Picked as the top signal this tick (cloud `/march` → `/iterate`): no unlabeled GitHub issues; Monday snapshot gate already satisfied (`data/trends/2026-W40.json` existed); no pending phases/data work; content-gap queue empty (`content-gap-survey.mjs` — "all pillars comfortable") and the other 6 mechanical surveys re-ran clean, no new rows filed. March's own expand Step 3c gate not met (2 commits/~few h since pass 433's own commit `6747859f`, under the 20-commit/48h threshold). This row was the highest-scoring Pending AUDIT row (4.5, above the `[ci] [4.2]` heartbeat.yml flakiness row and the two `[data] [3.6]` stale-group-buy-status rows).
 
 ### [x] [data] [3.6] divinikey-gmk-cyl-just-beachy — status stale, endDate 2026-09-22 passed — addressed in commit `7490f7e0`, closes #1013
 - category: data

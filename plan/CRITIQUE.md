@@ -19,7 +19,7 @@
 
 ## Pending
 
-### [LOW] /tools + /quiz/switch — tools-card description and quiz lede describe the same flow with different framing
+### [x] [LOW] /tools + /quiz/switch — tools-card description and quiz lede describe the same flow with different framing — addressed in 5dc60b24, closes #1059
 - pass: 14 (commit 3f16c84b)
 - viewport: both
 - category: voice
