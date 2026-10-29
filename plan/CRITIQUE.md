@@ -28,7 +28,7 @@
 - suggested fix: share one description string between the `/tools` card and the `/quiz/switch` lede (e.g. export it once from a shared quiz-copy module), or make the card copy a strict, consistently-worded subset of the page's framing.
 - source: walk
 
-### [MED] /trends/tracker — Sleeper summary card reads as a second Biggest Faller (same down-arrow, same declining spark)
+### [x] [MED] /trends/tracker — Sleeper summary card reads as a second Biggest Faller (same down-arrow, same declining spark) — addressed in 07846bf0, closes #1060
 - pass: 13 (commit a03ead8e)
 - viewport: both
 - category: comprehension
