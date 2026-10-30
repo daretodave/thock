@@ -89,7 +89,7 @@ This pattern is informative for future passes: reader's accessibility-tree text 
 - issue: #1061
 > **Resolved (2026-10-30):** added `getSuggestedSwitchPairs` (`apps/web/src/lib/compare/suggested-switch-pairs.ts`) — a deterministic, type-diverse pick of 3 switch pairs from the catalog — and a `SuggestedSwitchPairs` component rendering them as quick-compare links under the existing "take the quiz" link in the empty state. Fills the dead space with an immediate way to see the tool's output. `pnpm verify` full gate green: typecheck, lint, 872/872 unit tests (new coverage: 5 lib tests, 3 component tests), script tests, data:validate, build, size, 1348/1348 e2e (new coverage: 2 compare.spec.ts cases).
 
-### [MED] /group-buys — lede's second sentence fragment reads as SaaS feature-bullet copy, not editorial voice
+### [x] [MED] /group-buys — lede's second sentence fragment reads as SaaS feature-bullet copy, not editorial voice — addressed in this commit, closes #1063
 - pass: 12, re-confirmed pass 15 (commit a01a911; re-confirmed c6df4f89)
 - viewport: desktop
 - category: voice
@@ -97,6 +97,7 @@ This pattern is informative for future passes: reader's accessibility-tree text 
 - evidence: walk screenshot `url--desktop--group-buys.png`, lede under the "Group buys" H1: "Active group buys for boards, keycap sets, and switches. Time-aware, region-aware, vendor-linked." Sibling comparison: `apps/web/src/app/deep-dives/page.tsx:22`, `apps/web/src/app/news/page.tsx:24`, `apps/web/src/app/trends/page.tsx:24`, `apps/web/src/app/guides/page.tsx:21`, `apps/web/src/app/trends/tracker/page.tsx:32` all use full sentences; `apps/web/src/app/group-buys/page.tsx:26` is the outlier.
 - suggested fix: rewrite the second sentence in plain editorial prose, e.g. "We track start/end dates, region availability, and which vendor is running each one."
 - source: walk
+- issue: #1063
 
 ### [LOW] /tools + /group-buys heroes — no illustration, leaving an empty right-hand gap inconsistent with the home hero
 - pass: 12 (commit a01a911)

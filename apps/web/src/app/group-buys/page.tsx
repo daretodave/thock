@@ -23,7 +23,7 @@ import { partitionGroupBuys, splitLiveByUrgency } from './helpers'
 const PATH = '/group-buys'
 const TITLE = 'Group buys'
 const LEDE =
-  'Active group buys for boards, keycap sets, and switches. Time-aware, region-aware, vendor-linked.'
+  'Active group buys for boards, keycap sets, and switches. We track start/end dates, region availability, and which vendor is running each one.'
 
 export const metadata = buildMetadata({
   title: TITLE,
