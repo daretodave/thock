@@ -10,6 +10,8 @@ import {
 import { getAllSwitches, getSwitchBySlug } from '@/lib/data-runtime'
 import { SwitchCompareSelector } from '@/components/compare/SwitchCompareSelector'
 import { SwitchCompareTable } from '@/components/compare/SwitchCompareTable'
+import { SuggestedSwitchPairs } from '@/components/compare/SuggestedSwitchPairs'
+import { getSuggestedSwitchPairs } from '@/lib/compare/suggested-switch-pairs'
 
 export async function generateMetadata({
   searchParams,
@@ -129,10 +131,11 @@ export default async function CompareSwitchPage({
             <Link
               href="/quiz/switch"
               data-testid="compare-quiz-link"
-              className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text transition-colors rounded-xs focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
+              className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text transition-colors rounded-xs focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu mb-6 inline-block"
             >
               Not sure? Take the quiz →
             </Link>
+            <SuggestedSwitchPairs pairs={getSuggestedSwitchPairs(switches)} />
           </div>
         )}
       </Container>

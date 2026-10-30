@@ -19,6 +19,32 @@ test.describe('/compare/switch — phase 44', () => {
     await expect(quizLink).toHaveAttribute('href', '/quiz/switch')
   })
 
+  test('empty state suggests popular switch pairs', async ({ page }) => {
+    await page.goto('/compare/switch')
+    const pairs = page.getByTestId('compare-suggested-pair')
+    await expect(pairs.first()).toBeVisible()
+    const count = await pairs.count()
+    expect(count).toBeGreaterThan(0)
+    for (let i = 0; i < count; i++) {
+      await expect(pairs.nth(i)).toHaveAttribute(
+        'href',
+        /^\/compare\/switch\?a=[^&]+&b=[^&]+$/,
+      )
+    }
+  })
+
+  test('suggested pair link navigates straight to a populated comparison', async ({
+    page,
+  }) => {
+    await page.goto('/compare/switch')
+    const href = await page
+      .getByTestId('compare-suggested-pair')
+      .first()
+      .getAttribute('href')
+    await page.goto(href as string)
+    await expect(page.getByTestId('compare-table')).toBeVisible()
+  })
+
   test('renders comparison table when two valid slugs are in query params', async ({
     page,
   }) => {
