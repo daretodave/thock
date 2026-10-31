@@ -6,7 +6,8 @@
 import { test, describe } from 'node:test'
 import assert from 'node:assert/strict'
 import { writeFileSync, unlinkSync, mkdtempSync } from 'node:fs'
-import { join } from 'node:path'
+import { join, dirname } from 'node:path'
+import { fileURLToPath } from 'node:url'
 import { tmpdir } from 'node:os'
 import { __test } from '../content-fact-audit.mjs'
 
@@ -20,10 +21,19 @@ const {
   detectField,
   findNumericMismatches,
   checkArticle,
+  checkNewsletter,
+  extractNominalYear,
+  findTrendScoreNumbers,
+  findRowNameMentions,
+  findTrendScoreMismatches,
   formatAuditRow,
+  describeMismatch,
   alreadyFiled,
   claimKey,
 } = __test
+
+const __dirname = dirname(fileURLToPath(import.meta.url))
+const REPO_ROOT = join(__dirname, '..', '..')
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
@@ -36,6 +46,19 @@ function tmpMdx(content) {
   const filePath = join(dir, 'test-article.mdx')
   writeFileSync(filePath, content, 'utf8')
   return filePath
+}
+
+function tmpMdxNamed(content, fileName) {
+  const dir = mkdtempSync(join(tmpdir(), 'cfa-test-'))
+  const filePath = join(dir, fileName)
+  writeFileSync(filePath, content, 'utf8')
+  return filePath
+}
+
+// Resolver stub for findTrendScoreMismatches — a plain object keyed by week
+// number, mirroring the shape resolveTrendWeek produces from disk.
+function stubResolveWeek(weeks) {
+  return (weekNum) => weeks[weekNum] || null
 }
 
 function cleanup(filePath) {
@@ -373,5 +396,257 @@ describe('alreadyFiled — deduplication', () => {
 - filed: 2026-10-31 by content-fact-audit.mjs — ${claimKey('test-article', m1)}
 `
     assert.equal(alreadyFiled(audit, 'test-article', m2), false)
+  })
+})
+
+// ── Tracker-score citations (chunk 01.2, acceptance A2) ──────────────────────
+
+const ALICE_W35 = { isoWeek: '2026-W35', rows: [{ name: 'Alice layout', score: -66 }] }
+const ALICE_W42 = { isoWeek: '2026-W42', rows: [{ name: 'Alice layout', score: 0 }] }
+
+describe('findTrendScoreNumbers', () => {
+  test('matches a bare signed/unsigned number', () => {
+    const nums = findTrendScoreNumbers('the score sat at -40 this week, up from 12 last week')
+    assert.deepEqual(nums.map((n) => n.value), [-40, 12])
+  })
+
+  test('excludes a 4-digit year-like number', () => {
+    const nums = findTrendScoreNumbers('the window ending W19 2026 landed at -18 overall')
+    assert.deepEqual(nums.map((n) => n.value), [-18])
+  })
+
+  test('excludes a number immediately followed by "percent" or "%"', () => {
+    const nums = findTrendScoreNumbers('Alice is down 18 percent and Mode Designs is up 24%')
+    assert.deepEqual(nums, [])
+  })
+
+  test('excludes a number embedded in an alphanumeric product token', () => {
+    const nums = findTrendScoreNumbers('Keychron shipped the B40 75% and the QK75 kit at a score of -5')
+    assert.deepEqual(nums.map((n) => n.value), [-5])
+  })
+
+  test('excludes a calendar day-of-month following a month name', () => {
+    const nums = findTrendScoreNumbers('tracking at a score of 72 on the week of August 24')
+    assert.deepEqual(nums.map((n) => n.value), [72])
+  })
+
+  test('excludes a number immediately following "g"/"gram(s)"', () => {
+    const nums = findTrendScoreNumbers('the switch runs 55g actuation, scored at -12 this week')
+    assert.deepEqual(nums.map((n) => n.value), [-12])
+  })
+})
+
+describe('findRowNameMentions', () => {
+  test('finds a case-insensitive literal mention', () => {
+    const body = "Alice layout's score climbed again this week."
+    assert.deepEqual(findRowNameMentions(body, 'Alice layout'), [0])
+  })
+
+  test('does not match a name embedded in a longer word', () => {
+    const body = 'AliceLayoutCustom shipped a new colorway.'
+    assert.deepEqual(findRowNameMentions(body, 'Alice layout'), [])
+  })
+
+  test('excludes a mention that is only a markdown link label to another article', () => {
+    const body =
+      'attention shifts to the [GMK CYL OG Extensions](/article/gmk-cyl-og-extensions-interest-check) interest check'
+    assert.deepEqual(findRowNameMentions(body, 'GMK CYL OG Extensions'), [])
+  })
+
+  test('still matches plain-text mentions outside of a link', () => {
+    const body = 'GMK CYL OG Extensions climbed to 70 from 62 this week.'
+    assert.deepEqual(findRowNameMentions(body, 'GMK CYL OG Extensions'), [0])
+  })
+})
+
+describe('findTrendScoreMismatches — core resolve-then-diff behavior', () => {
+  test('does not flag a correct citation (real-corpus calibration shape)', () => {
+    const body =
+      "Alice layout's score on thock's tracker has climbed every week for eight consecutive readings, from a trough of -66 at W35 to a flat 0 at W42."
+    const mismatches = findTrendScoreMismatches(
+      body,
+      stubResolveWeek({ 35: ALICE_W35, 42: ALICE_W42 }),
+    )
+    assert.deepEqual(mismatches, [])
+  })
+
+  test('flags a mismatched score citation', () => {
+    const body = "Alice layout's score read -40 in W35 this week, a sharp miss from where it had been."
+    const mismatches = findTrendScoreMismatches(body, stubResolveWeek({ 35: ALICE_W35 }))
+    assert.equal(mismatches.length, 1)
+    assert.equal(mismatches[0].isoWeek, '2026-W35')
+    assert.equal(mismatches[0].rowName, 'Alice layout')
+    assert.equal(mismatches[0].foundValue, -40)
+    assert.equal(mismatches[0].expectedValue, -66)
+  })
+
+  test('silently skips an unresolvable week (no matching trend file)', () => {
+    const body = "Alice layout's score sat at a reading of -20 in W99 this week."
+    const mismatches = findTrendScoreMismatches(body, stubResolveWeek({}))
+    assert.deepEqual(mismatches, [])
+  })
+
+  test('skips when no named row resolves nearby (ambiguous — ease of guessing is not worth a false positive)', () => {
+    const body = "The tracker's score sat at a reading of -20 in W35 this week, with no further context given."
+    const mismatches = findTrendScoreMismatches(
+      body,
+      stubResolveWeek({ 35: { isoWeek: '2026-W35', rows: [{ name: 'Mode Designs', score: 10 }] } }),
+    )
+    assert.deepEqual(mismatches, [])
+  })
+
+  test('skips a tight walked-series number list rather than guessing list position', () => {
+    const body =
+      'thock has recorded Alice layout climbing every single week on its score from W35 through W42: -66, -50, -40, -30, -18, -8, -5, 0.'
+    const mismatches = findTrendScoreMismatches(
+      body,
+      stubResolveWeek({ 35: ALICE_W35, 42: ALICE_W42 }),
+    )
+    assert.deepEqual(mismatches, [])
+  })
+
+  test('skips when a sentence has more candidate numbers than distinct weeks (comparison ambiguity)', () => {
+    // Real-corpus shape (thock-weekly-012.mdx): one week token, two
+    // numbers describing different points in time — proximity alone can't
+    // tell which one the token actually anchors.
+    const body = "Mode Designs' score is down to 72 after peaking at 98 two weeks back, in the W42 reading alone."
+    const mismatches = findTrendScoreMismatches(
+      body,
+      stubResolveWeek({ 42: { isoWeek: '2026-W42', rows: [{ name: 'Mode Designs', score: 72 }] } }),
+    )
+    assert.deepEqual(mismatches, [])
+  })
+
+  test('skips a repeated week token within one sentence rather than guessing which occurrence it is', () => {
+    // Real-corpus shape (computex-2026-keyboard-highlights.mdx): the same
+    // week token appears twice in one sentence (once as a citation, once
+    // as a chart-annotation callback), and naive nearest-number-to-token
+    // attribution pulls the wrong number toward the second occurrence.
+    const body =
+      'Hall Effect scores climbed from a score of 55 in W21 to a score of 76 in W25, with a marker at W21 labeled Computex.'
+    const mismatches = findTrendScoreMismatches(
+      body,
+      stubResolveWeek({
+        21: { isoWeek: '2026-W21', rows: [{ name: 'Hall Effect', score: 55 }] },
+        25: { isoWeek: '2026-W25', rows: [{ name: 'Hall Effect', score: 76 }] },
+      }),
+    )
+    assert.deepEqual(mismatches, [])
+  })
+
+  test('requires an explicit "score" cue before attempting a citation', () => {
+    const body = 'Prototypist carried 19 concurrent group buys in W20, the most of any vendor that week.'
+    const mismatches = findTrendScoreMismatches(
+      body,
+      stubResolveWeek({ 20: { isoWeek: '2026-W20', rows: [{ name: 'Prototypist', score: 6 }] } }),
+    )
+    assert.deepEqual(mismatches, [])
+  })
+})
+
+describe('checkNewsletter / checkArticle — tracker-score wiring end to end', () => {
+  test('checkNewsletter finds no mismatch against the real thock-weekly-013.mdx calibration text', () => {
+    // The real shipped newsletter cites Alice layout's score moving from
+    // -66 at W35 to 0 at W42 — both true against the real
+    // data/trends/2026-W35.json and data/trends/2026-W42.json records.
+    // Regression guard: this exact sentence shape is what the chunk 01.2
+    // false-positive guards above were calibrated against.
+    const filePath = join(
+      REPO_ROOT,
+      'apps',
+      'web',
+      'src',
+      'content',
+      'newsletters',
+      'thock-weekly-013.mdx',
+    )
+    const { slug, mismatches } = checkNewsletter(filePath)
+    assert.equal(slug, 'thock-weekly-013')
+    assert.deepEqual(mismatches, [])
+  })
+
+  test('checkArticle finds no mismatch against the real alice-layout-recovery.mdx calibration text', () => {
+    const filePath = join(
+      REPO_ROOT,
+      'apps',
+      'web',
+      'src',
+      'content',
+      'articles',
+      'alice-layout-recovery.mdx',
+    )
+    const { slug, mismatches } = checkArticle(filePath)
+    assert.equal(slug, 'alice-layout-recovery')
+    assert.deepEqual(mismatches, [])
+  })
+
+  test('checkNewsletter tags mismatches with dir: newsletters via a temp fixture', () => {
+    const fm = `slug: test-newsletter
+title: "thock weekly — issue 99"
+issue: 99
+publishedAt: '2026-10-27T09:00:00.000Z'`
+    const body =
+      "Alice layout's score read -40 in W35 this week, a sharp miss from where it had been."
+    const filePath = tmpMdxNamed(makeMdx(fm, body), 'test-newsletter.mdx')
+    try {
+      const { slug, mismatches } = checkNewsletter(filePath)
+      assert.equal(slug, 'test-newsletter')
+      // data/trends/2026-W35.json is a real file with a real Alice layout
+      // row (score -66) — -40 disagrees with it.
+      assert.equal(mismatches.length, 1)
+      assert.equal(mismatches[0].kind, 'trend-score')
+      assert.equal(mismatches[0].dir, 'newsletters')
+      assert.equal(mismatches[0].isoWeek, '2026-W35')
+      assert.equal(mismatches[0].expectedValue, -66)
+    } finally {
+      cleanup(filePath)
+    }
+  })
+})
+
+describe('extractNominalYear', () => {
+  test('parses the year off publishedAt', () => {
+    assert.equal(extractNominalYear("publishedAt: '2026-10-27T09:00:00.000Z'"), 2026)
+  })
+
+  test('parses the year off a bare date field', () => {
+    assert.equal(extractNominalYear('date: 2025-01-02'), 2025)
+  })
+
+  test('returns null when neither field is present', () => {
+    assert.equal(extractNominalYear('slug: foo\ntitle: Bar'), null)
+  })
+})
+
+describe('describeMismatch / claimKey / formatAuditRow — trend-score kind', () => {
+  const trendMismatch = {
+    kind: 'trend-score',
+    dir: 'newsletters',
+    isoWeek: '2026-W35',
+    rowName: 'Alice layout',
+    foundValue: -40,
+    expectedValue: -66,
+  }
+
+  test('describeMismatch names the row, the week, and the real score', () => {
+    const desc = describeMismatch(trendMismatch)
+    assert.match(desc, /Alice layout/)
+    assert.match(desc, /2026-W35/)
+    assert.match(desc, /-40/)
+    assert.match(desc, /-66/)
+  })
+
+  test('claimKey uses a distinct trend shape that cannot collide with a switch-citation key', () => {
+    const switchMismatch = { switchSlug: 'alice layout', field: 'actuation', foundValue: -40 }
+    assert.notEqual(claimKey('slug', trendMismatch), claimKey('slug', switchMismatch))
+    assert.match(claimKey('slug', trendMismatch), /:trend:/)
+  })
+
+  test('formatAuditRow files a content-category row pointing at the newsletters dir', () => {
+    const row = formatAuditRow('test-newsletter', trendMismatch, new Date('2026-10-31'))
+    assert.match(row, /### \[ \] \[content\] \[3\.6\]/)
+    assert.match(row, /tracker-score citation/)
+    assert.match(row, /data\/trends\/2026-W35\.json/)
+    assert.match(row, /apps\/web\/src\/content\/newsletters\/test-newsletter\.mdx/)
   })
 })
