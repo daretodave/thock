@@ -30,6 +30,14 @@ const {
   describeMismatch,
   alreadyFiled,
   claimKey,
+  extractNominalDate,
+  resolveCurrentIsoWeek,
+  subtractIsoWeeks,
+  findWeeksAgoClaims,
+  findStreakClaims,
+  findWeeksAgoMismatches,
+  buildWeekScoreSeries,
+  findStreakMismatches,
 } = __test
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
@@ -59,6 +67,12 @@ function tmpMdxNamed(content, fileName) {
 // number, mirroring the shape resolveTrendWeek produces from disk.
 function stubResolveWeek(weeks) {
   return (weekNum) => weeks[weekNum] || null
+}
+
+// Resolver stub for findWeeksAgoMismatches / findStreakMismatches — keyed by
+// full ISO week string ("2026-W31"), mirroring resolveTrendWeekFile's shape.
+function stubResolveIsoWeek(weeks) {
+  return (isoWeek) => weeks[isoWeek] || null
 }
 
 function cleanup(filePath) {
@@ -648,5 +662,451 @@ describe('describeMismatch / claimKey / formatAuditRow — trend-score kind', ()
     assert.match(row, /tracker-score citation/)
     assert.match(row, /data\/trends\/2026-W35\.json/)
     assert.match(row, /apps\/web\/src\/content\/newsletters\/test-newsletter\.mdx/)
+  })
+})
+
+// ── "N weeks ago" / streak-length sub-shape (chunk 01.3, acceptance A3) ──────
+
+describe('extractNominalDate / resolveCurrentIsoWeek', () => {
+  test('resolves the ISO week off a full publishedAt timestamp', () => {
+    assert.equal(resolveCurrentIsoWeek("publishedAt: '2026-09-26T09:00:00.000Z'"), '2026-W39')
+  })
+
+  test('resolves the ISO week off a bare date field', () => {
+    assert.equal(resolveCurrentIsoWeek('date: 2026-07-20'), '2026-W30')
+  })
+
+  test('returns null when neither field is present', () => {
+    assert.equal(extractNominalDate('slug: foo\ntitle: Bar'), null)
+    assert.equal(resolveCurrentIsoWeek('slug: foo\ntitle: Bar'), null)
+  })
+
+  test('returns null for an unparseable date value', () => {
+    assert.equal(extractNominalDate("publishedAt: 'not-a-date'"), null)
+  })
+})
+
+describe('subtractIsoWeeks', () => {
+  test('subtracts weeks within the same year', () => {
+    assert.equal(subtractIsoWeeks('2026-W39', 8), '2026-W31')
+    assert.equal(subtractIsoWeeks('2026-W30', 8), '2026-W22')
+    assert.equal(subtractIsoWeeks('2026-W31', 1), '2026-W30')
+  })
+
+  test('handles a Dec/Jan year rollover', () => {
+    assert.equal(subtractIsoWeeks('2026-W02', 5), '2025-W49')
+    assert.equal(subtractIsoWeeks('2026-W01', 1), '2025-W52')
+  })
+
+  test('returns null for a malformed ISO week string', () => {
+    assert.equal(subtractIsoWeeks('not-a-week', 4), null)
+  })
+})
+
+describe('findWeeksAgoClaims', () => {
+  test('matches "from <value> <word> weeks ago/back/earlier"', () => {
+    const claims = findWeeksAgoClaims(
+      'up to 94 from 60 eight weeks ago, and separately up from 39 eight weeks earlier, also from 96 eight weeks back',
+    )
+    assert.deepEqual(
+      claims.map((c) => [c.pastValue, c.weeksAgo]),
+      [
+        [60, 8],
+        [39, 8],
+        [96, 8],
+      ],
+    )
+  })
+
+  test('treats "from <value> last week" as a special-cased one-week-ago claim', () => {
+    const claims = findWeeksAgoClaims('ticked up to 82 from 80 last week, with Engadget covering it')
+    assert.equal(claims.length, 1)
+    assert.equal(claims[0].pastValue, 80)
+    assert.equal(claims[0].weeksAgo, 1)
+  })
+
+  test('matches smaller number words too', () => {
+    const claims = findWeeksAgoClaims('up from 91 two weeks ago and up from 55 four weeks ago')
+    assert.deepEqual(
+      claims.map((c) => [c.pastValue, c.weeksAgo]),
+      [
+        [91, 2],
+        [55, 4],
+      ],
+    )
+  })
+
+  test('skips an unresolvable number word rather than guessing', () => {
+    const claims = findWeeksAgoClaims('up sharply from a much lower score just weeks back')
+    assert.deepEqual(claims, [])
+  })
+
+  test('does not match "N weeks ago" without a "from <value>" anchor', () => {
+    const claims = findWeeksAgoClaims(
+      'Three weeks ago thock closed a piece with two open questions about the market.',
+    )
+    assert.deepEqual(claims, [])
+  })
+
+  test('the claim index points at the numeric value, not the word "from"', () => {
+    const body = 'up to 94 from 60 eight weeks ago'
+    const claims = findWeeksAgoClaims(body)
+    assert.equal(claims[0].index, body.indexOf('60'))
+  })
+})
+
+describe('findStreakClaims', () => {
+  test('matches an "up" streak-break claim', () => {
+    const claims = findStreakClaims('still net negative, but its first gain in five weeks — as noted')
+    assert.deepEqual(claims, [{ index: claims[0].index, direction: 'up', weeksClaimed: 5 }])
+  })
+
+  test('matches a "down" streak-break claim', () => {
+    const claims = findStreakClaims('its first drop in three weeks came as a surprise')
+    assert.equal(claims.length, 1)
+    assert.equal(claims[0].direction, 'down')
+    assert.equal(claims[0].weeksClaimed, 3)
+  })
+
+  test('recognizes rise/increase as "up" and decline/fall as "down"', () => {
+    assert.equal(findStreakClaims('its first rise in six weeks')[0].direction, 'up')
+    assert.equal(findStreakClaims('its first increase in six weeks')[0].direction, 'up')
+    assert.equal(findStreakClaims('its first decline in six weeks')[0].direction, 'down')
+    assert.equal(findStreakClaims('its first fall in six weeks')[0].direction, 'down')
+  })
+
+  test('skips an unresolvable number word', () => {
+    assert.deepEqual(findStreakClaims('its first gain in several weeks'), [])
+  })
+})
+
+describe('findWeeksAgoMismatches — core resolve-then-diff behavior', () => {
+  const CURRENT = {
+    isoWeek: '2026-W39',
+    rows: [
+      { name: 'Keychron', score: 100 },
+      { name: 'Cherry (MX + XTRFY)', score: 5 },
+    ],
+  }
+  const PAST_W31 = {
+    isoWeek: '2026-W31',
+    rows: [
+      { name: 'Keychron', score: 94 },
+      { name: 'Cherry (MX + XTRFY)', score: -10 },
+    ],
+  }
+
+  test('flags a mismatched "N weeks ago" citation (real thock-weekly-011 shape)', () => {
+    const body = "Keychron holds the tracker's ceiling this week at a flat 100, up from 96 eight weeks ago, sustained by broad lineup presence."
+    const mismatches = findWeeksAgoMismatches(
+      body,
+      '2026-W39',
+      stubResolveIsoWeek({ '2026-W39': CURRENT, '2026-W31': PAST_W31 }),
+    )
+    assert.equal(mismatches.length, 1)
+    assert.equal(mismatches[0].rowName, 'Keychron')
+    assert.equal(mismatches[0].pastIsoWeek, '2026-W31')
+    assert.equal(mismatches[0].weeksAgo, 8)
+    assert.equal(mismatches[0].foundValue, 96)
+    assert.equal(mismatches[0].expectedValue, 94)
+  })
+
+  test('does not flag a correct "N weeks ago" citation', () => {
+    const body = 'Cherry (MX + XTRFY) continues its slow climb out of the hole, up to 5 from -10 eight weeks ago.'
+    const mismatches = findWeeksAgoMismatches(
+      body,
+      '2026-W39',
+      stubResolveIsoWeek({ '2026-W39': CURRENT, '2026-W31': PAST_W31 }),
+    )
+    assert.deepEqual(mismatches, [])
+  })
+
+  test('returns no claims and does nothing when currentIsoWeek is null', () => {
+    const body = 'Keychron holds the tracker ceiling, up from 96 eight weeks ago.'
+    assert.deepEqual(findWeeksAgoMismatches(body, null, stubResolveIsoWeek({})), [])
+  })
+
+  test('skips when the current week itself is unresolvable', () => {
+    const body = 'Keychron holds the tracker ceiling, up from 96 eight weeks ago.'
+    assert.deepEqual(findWeeksAgoMismatches(body, '2026-W39', stubResolveIsoWeek({})), [])
+  })
+
+  test('skips when the past week file is unresolvable (missing archive)', () => {
+    const body = 'Keychron holds the tracker ceiling, up from 96 eight weeks ago.'
+    const mismatches = findWeeksAgoMismatches(
+      body,
+      '2026-W39',
+      stubResolveIsoWeek({ '2026-W39': CURRENT }),
+    )
+    assert.deepEqual(mismatches, [])
+  })
+
+  test('skips when the row does not resolve in the past week (renamed/missing — real Hall Effect shape)', () => {
+    const body = 'Keychron holds the tracker ceiling, up from 96 eight weeks ago.'
+    const pastWithoutRow = { isoWeek: '2026-W31', rows: [{ name: 'Some Other Row', score: 10 }] }
+    const mismatches = findWeeksAgoMismatches(
+      body,
+      '2026-W39',
+      stubResolveIsoWeek({ '2026-W39': CURRENT, '2026-W31': pastWithoutRow }),
+    )
+    assert.deepEqual(mismatches, [])
+  })
+
+  test('skips an ambiguous sentence mentioning two distinct row names (real "Keychron x Yusha Kobo" shape)', () => {
+    // Real-corpus shape (thock-weekly-011.mdx): "Split/Ergo layout sits at
+    // 99, up from 85 eight weeks ago ... on the strength of the Keychron x
+    // Yusha Kobo 'Valkey Orb' ... announcement" — "Keychron" is a
+    // second current-week row name that happens to also appear in the same
+    // sentence, purely incidentally. Two distinct row-name candidates in
+    // one sentence means the claim can't be safely attributed.
+    const body =
+      'Split/Ergo layout sits at 99, up from 85 eight weeks ago, on the strength of the Keychron x Yusha Kobo announcement.'
+    const current = {
+      isoWeek: '2026-W39',
+      rows: [
+        { name: 'Keychron', score: 100 },
+        { name: 'Split/Ergo layout', score: 99 },
+      ],
+    }
+    const past = { isoWeek: '2026-W31', rows: [{ name: 'Split/Ergo layout', score: 85 }] }
+    const mismatches = findWeeksAgoMismatches(
+      body,
+      '2026-W39',
+      stubResolveIsoWeek({ '2026-W39': current, '2026-W31': past }),
+    )
+    assert.deepEqual(mismatches, [])
+  })
+})
+
+describe('buildWeekScoreSeries', () => {
+  const MX2A_WEEKS = {
+    '2026-W30': { isoWeek: '2026-W30', rows: [{ name: 'Cherry MX2A', score: -46 }] },
+    '2026-W29': { isoWeek: '2026-W29', rows: [{ name: 'Cherry MX2A', score: -50 }] },
+    '2026-W28': { isoWeek: '2026-W28', rows: [{ name: 'Cherry MX2A', score: -42 }] },
+    '2026-W27': { isoWeek: '2026-W27', rows: [{ name: 'Cherry MX2A', score: -39 }] },
+    '2026-W26': { isoWeek: '2026-W26', rows: [{ name: 'Cherry MX2A', score: -36 }] },
+    '2026-W25': { isoWeek: '2026-W25', rows: [{ name: 'Cherry MX2A', score: -32 }] },
+    '2026-W24': { isoWeek: '2026-W24', rows: [{ name: 'Cherry MX2A', score: -30 }] },
+    '2026-W23': { isoWeek: '2026-W23', rows: [{ name: 'Cherry MX2A', score: -33 }] },
+  }
+
+  test('walks backward building a same-row score series until data runs out', () => {
+    const series = buildWeekScoreSeries('2026-W30', 'Cherry MX2A', stubResolveIsoWeek(MX2A_WEEKS), 10)
+    assert.deepEqual(
+      series.map((s) => s.score),
+      [-46, -50, -42, -39, -36, -32, -30, -33],
+    )
+  })
+
+  test('stops early when a week file is missing', () => {
+    const series = buildWeekScoreSeries('2026-W30', 'Cherry MX2A', stubResolveIsoWeek(MX2A_WEEKS), 2)
+    assert.equal(series.length, 3)
+  })
+
+  test('stops when the row is renamed/missing partway through', () => {
+    const partial = {
+      '2026-W30': MX2A_WEEKS['2026-W30'],
+      '2026-W29': { isoWeek: '2026-W29', rows: [{ name: 'A Different Row', score: 1 }] },
+    }
+    const series = buildWeekScoreSeries('2026-W30', 'Cherry MX2A', stubResolveIsoWeek(partial), 10)
+    assert.equal(series.length, 1)
+  })
+})
+
+describe('findStreakMismatches — core resolve-then-diff behavior', () => {
+  const MX2A_WEEKS = {
+    '2026-W30': { isoWeek: '2026-W30', rows: [{ name: 'Cherry MX2A', score: -46 }] },
+    '2026-W29': { isoWeek: '2026-W29', rows: [{ name: 'Cherry MX2A', score: -50 }] },
+    '2026-W28': { isoWeek: '2026-W28', rows: [{ name: 'Cherry MX2A', score: -42 }] },
+    '2026-W27': { isoWeek: '2026-W27', rows: [{ name: 'Cherry MX2A', score: -39 }] },
+    '2026-W26': { isoWeek: '2026-W26', rows: [{ name: 'Cherry MX2A', score: -36 }] },
+    '2026-W25': { isoWeek: '2026-W25', rows: [{ name: 'Cherry MX2A', score: -32 }] },
+    '2026-W24': { isoWeek: '2026-W24', rows: [{ name: 'Cherry MX2A', score: -30 }] },
+    '2026-W23': { isoWeek: '2026-W23', rows: [{ name: 'Cherry MX2A', score: -33 }] },
+  }
+
+  test('does not flag a correct streak-length claim (real thock-weekly-004 shape)', () => {
+    // Real data/trends/ shape: MX2A's last gain before this week's +4 move
+    // was 5 weekly readings earlier — "its first gain in five weeks" is
+    // accurate.
+    const body = 'Cherry MX2A ticked up to -46 this week — still net negative, but its first gain in five weeks.'
+    const mismatches = findStreakMismatches(body, '2026-W30', stubResolveIsoWeek(MX2A_WEEKS))
+    assert.deepEqual(mismatches, [])
+  })
+
+  test('flags a mismatched streak-length claim', () => {
+    const body = 'Cherry MX2A ticked up to -46 this week — still net negative, but its first gain in three weeks.'
+    const mismatches = findStreakMismatches(body, '2026-W30', stubResolveIsoWeek(MX2A_WEEKS))
+    assert.equal(mismatches.length, 1)
+    assert.equal(mismatches[0].rowName, 'Cherry MX2A')
+    assert.equal(mismatches[0].direction, 'up')
+    assert.equal(mismatches[0].foundValue, 3)
+    assert.equal(mismatches[0].expectedValue, 5)
+  })
+
+  test('skips when this week\'s own move does not match the claimed direction', () => {
+    const body = 'Cherry MX2A ticked up to -46 this week — still net negative, but its first drop in five weeks.'
+    const mismatches = findStreakMismatches(body, '2026-W30', stubResolveIsoWeek(MX2A_WEEKS))
+    assert.deepEqual(mismatches, [])
+  })
+
+  test('skips when the archived walk runs out of data before the streak breaks', () => {
+    const shortHistory = {
+      '2026-W30': MX2A_WEEKS['2026-W30'],
+      '2026-W29': MX2A_WEEKS['2026-W29'],
+      '2026-W28': MX2A_WEEKS['2026-W28'],
+    }
+    const body = 'Cherry MX2A ticked up to -46 this week — still net negative, but its first gain in five weeks.'
+    const mismatches = findStreakMismatches(body, '2026-W30', stubResolveIsoWeek(shortHistory))
+    assert.deepEqual(mismatches, [])
+  })
+
+  test('returns no claims when currentIsoWeek is null', () => {
+    const body = 'Cherry MX2A ticked up to -46 this week, its first gain in five weeks.'
+    assert.deepEqual(findStreakMismatches(body, null, stubResolveIsoWeek(MX2A_WEEKS)), [])
+  })
+})
+
+describe('describeMismatch / claimKey / formatAuditRow — trend-weeks-ago kind', () => {
+  const weeksAgoMismatch = {
+    kind: 'trend-weeks-ago',
+    dir: 'newsletters',
+    rowName: 'Keychron',
+    currentIsoWeek: '2026-W39',
+    pastIsoWeek: '2026-W31',
+    weeksAgo: 8,
+    foundValue: 96,
+    expectedValue: 94,
+  }
+
+  test('describeMismatch names the row, the week-count, and the real score', () => {
+    const desc = describeMismatch(weeksAgoMismatch)
+    assert.match(desc, /Keychron/)
+    assert.match(desc, /2026-W31/)
+    assert.match(desc, /96/)
+    assert.match(desc, /94/)
+  })
+
+  test('claimKey uses a distinct shape disjoint from trend-score and switch keys', () => {
+    const trendScoreMismatch = { kind: 'trend-score', isoWeek: '2026-W31', rowName: 'Keychron', foundValue: 96 }
+    const switchMismatch = { switchSlug: 'keychron', field: 'actuation', foundValue: 96 }
+    assert.notEqual(claimKey('slug', weeksAgoMismatch), claimKey('slug', trendScoreMismatch))
+    assert.notEqual(claimKey('slug', weeksAgoMismatch), claimKey('slug', switchMismatch))
+    assert.match(claimKey('slug', weeksAgoMismatch), /:trend-weeks-ago:/)
+  })
+
+  test('formatAuditRow files a content-category row pointing at the newsletters dir', () => {
+    const row = formatAuditRow('test-newsletter', weeksAgoMismatch, new Date('2026-10-31'))
+    assert.match(row, /### \[ \] \[content\] \[3\.6\]/)
+    assert.match(row, /"N weeks ago" citation/)
+    assert.match(row, /data\/trends\/2026-W31\.json/)
+    assert.match(row, /apps\/web\/src\/content\/newsletters\/test-newsletter\.mdx/)
+  })
+})
+
+describe('describeMismatch / claimKey / formatAuditRow — trend-streak kind', () => {
+  const streakMismatch = {
+    kind: 'trend-streak',
+    dir: 'newsletters',
+    rowName: 'Cherry MX2A',
+    currentIsoWeek: '2026-W30',
+    direction: 'up',
+    foundValue: 3,
+    expectedValue: 5,
+  }
+
+  test('describeMismatch names the row, the claimed gap, and the real gap', () => {
+    const desc = describeMismatch(streakMismatch)
+    assert.match(desc, /Cherry MX2A/)
+    assert.match(desc, /first gain/)
+    assert.match(desc, /3 weeks/)
+    assert.match(desc, /5 week/)
+  })
+
+  test('claimKey uses a distinct shape disjoint from trend-weeks-ago and switch keys', () => {
+    const weeksAgoMismatch = { kind: 'trend-weeks-ago', pastIsoWeek: '2026-W22', rowName: 'Cherry MX2A', foundValue: 3 }
+    assert.notEqual(claimKey('slug', streakMismatch), claimKey('slug', weeksAgoMismatch))
+    assert.match(claimKey('slug', streakMismatch), /:trend-streak:/)
+  })
+
+  test('formatAuditRow files a content-category row pointing at the newsletters dir', () => {
+    const row = formatAuditRow('test-newsletter', streakMismatch, new Date('2026-10-31'))
+    assert.match(row, /### \[ \] \[content\] \[3\.6\]/)
+    assert.match(row, /streak-length citation/)
+    assert.match(row, /apps\/web\/src\/content\/newsletters\/test-newsletter\.mdx/)
+  })
+})
+
+describe('checkNewsletter / checkArticle — "N weeks ago" / streak wiring end to end', () => {
+  test('checkNewsletter catches the real thock-weekly-011.mdx "N weeks ago" drift (Keychron + Cherry)', () => {
+    // Real shipped content: both rows cite "eight weeks ago" values that
+    // match that week's own `spark[0]` convenience field but disagree with
+    // the real archived data/trends/2026-W31.json record for that row —
+    // see the comment above findWeeksAgoMismatches for why the archived
+    // file (not spark) is treated as ground truth.
+    const filePath = join(REPO_ROOT, 'apps', 'web', 'src', 'content', 'newsletters', 'thock-weekly-011.mdx')
+    const { slug, mismatches } = checkNewsletter(filePath)
+    assert.equal(slug, 'thock-weekly-011')
+    const weeksAgo = mismatches.filter((m) => m.kind === 'trend-weeks-ago')
+    assert.equal(weeksAgo.length, 2)
+    const byRow = Object.fromEntries(weeksAgo.map((m) => [m.rowName, m]))
+    assert.equal(byRow['Keychron'].foundValue, 96)
+    assert.equal(byRow['Keychron'].expectedValue, 94)
+    assert.equal(byRow['Cherry (MX + XTRFY)'].foundValue, -6)
+    assert.equal(byRow['Cherry (MX + XTRFY)'].expectedValue, -10)
+  })
+
+  test('checkArticle catches the real hall-effect-rapid-trigger-plateau.mdx "N weeks ago" drift', () => {
+    const filePath = join(
+      REPO_ROOT,
+      'apps',
+      'web',
+      'src',
+      'content',
+      'articles',
+      'hall-effect-rapid-trigger-plateau.mdx',
+    )
+    const { slug, mismatches } = checkArticle(filePath)
+    assert.equal(slug, 'hall-effect-rapid-trigger-plateau')
+    const weeksAgo = mismatches.filter((m) => m.kind === 'trend-weeks-ago')
+    assert.equal(weeksAgo.length, 1)
+    assert.equal(weeksAgo[0].rowName, 'Gateron Oil King')
+    assert.equal(weeksAgo[0].foundValue, 39)
+    assert.equal(weeksAgo[0].expectedValue, 40)
+  })
+
+  test('checkNewsletter finds no "N weeks ago" / streak mismatch against the real thock-weekly-004.mdx calibration text', () => {
+    // Real shipped content calibrates both shapes at once: "up to 94 from
+    // 60 eight weeks ago" (Hall Effect/Rapid Trigger) and "its first gain
+    // in five weeks" (Cherry MX2A) are both accurate against the real
+    // archived data/trends/ series.
+    const filePath = join(REPO_ROOT, 'apps', 'web', 'src', 'content', 'newsletters', 'thock-weekly-004.mdx')
+    const { slug, mismatches } = checkNewsletter(filePath)
+    assert.equal(slug, 'thock-weekly-004')
+    const relevant = mismatches.filter((m) => m.kind === 'trend-weeks-ago' || m.kind === 'trend-streak')
+    assert.deepEqual(relevant, [])
+  })
+
+  test('checkNewsletter tags a "trend-weeks-ago" mismatch with dir: newsletters via a temp fixture', () => {
+    const fm = `slug: test-newsletter
+title: "thock weekly — issue 99"
+issue: 99
+publishedAt: '2026-09-26T09:00:00.000Z'`
+    const body =
+      "Keychron holds the tracker's ceiling this week at a flat 100, up from 96 eight weeks ago, sustained by broad lineup presence."
+    const filePath = tmpMdxNamed(makeMdx(fm, body), 'test-newsletter.mdx')
+    try {
+      const { slug, mismatches } = checkNewsletter(filePath)
+      assert.equal(slug, 'test-newsletter')
+      // data/trends/2026-W31.json is a real file with a real Keychron row
+      // (score 94) — 96 disagrees with it.
+      const weeksAgo = mismatches.filter((m) => m.kind === 'trend-weeks-ago')
+      assert.equal(weeksAgo.length, 1)
+      assert.equal(weeksAgo[0].dir, 'newsletters')
+      assert.equal(weeksAgo[0].pastIsoWeek, '2026-W31')
+      assert.equal(weeksAgo[0].expectedValue, 94)
+    } finally {
+      cleanup(filePath)
+    }
   })
 })
