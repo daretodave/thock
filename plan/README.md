@@ -22,7 +22,7 @@ condition> · max_age: 14d`, an optional `· fallback: release`):
 
 | # | Initiative | Spec | Status | Progress |
 |---|---|---|---|---|
-| 01 | Content-fact-vs-catalog numeric-spec audit | [01-content-fact-audit.md](01-content-fact-audit.md) |  | 4 left |
+| 01 | Content-fact-vs-catalog numeric-spec audit | [01-content-fact-audit.md](01-content-fact-audit.md) |  | 3 left |
 
 ## Layout
 
