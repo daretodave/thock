@@ -20,8 +20,15 @@
 // sourced from data/trends/<week>.json's own rows[] rather than frontmatter
 // mentionedParts), and diff against that row's score.
 //
-// The "N weeks ago" / streak-length sub-shape and the march/digest wiring
-// are chunks 01.3/01.4 — out of scope here.
+// Chunk 01.3 scope (acceptance A3): the "N weeks ago" / streak-length
+// sub-shape — "<row> ... from <value> <N> weeks ago/back/earlier" (or
+// "last week" as N=1) and "first <gain|drop> in <N> weeks". Both are
+// anchored to the content file's own nominal "current week" (derived from
+// frontmatter publishedAt/date via iso-week.mjs's isoWeekString), not a
+// same-sentence W\d\d token — see findWeeksAgoMismatches /
+// findStreakMismatches below for why.
+//
+// The march/digest wiring is chunk 01.4 — out of scope here.
 //
 // Usage:
 //   node scripts/content-fact-audit.mjs
@@ -47,6 +54,7 @@
 import { readFileSync, readdirSync, appendFileSync, existsSync } from 'node:fs'
 import { join, dirname, basename } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { isoWeekString } from './iso-week.mjs'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const REPO_ROOT = join(__dirname, '..')
@@ -701,6 +709,332 @@ function findTrendScoreMismatches(body, resolveWeek) {
   return mismatches
 }
 
+// ── "N weeks ago" / streak-length sub-shape (chunk 01.3, acceptance A3) ──────
+//
+// The real corpus writes this shape in English number-words, not digits
+// ("eight weeks ago", not "8 weeks ago"), and — unlike the tracker-score
+// check above — the claim's sentence frequently carries no W\d\d token at
+// all ("Keychron holds the tracker's ceiling this week at a flat 100, up
+// from 96 eight weeks ago" — real text, thock-weekly-011.mdx, no week
+// token anywhere nearby). The anchor instead has to be the content file's
+// own nominal "current week", derived from its publishedAt/date frontmatter
+// field via iso-week.mjs's isoWeekString — see resolveCurrentIsoWeek below.
+//
+// Calibration note: walking the *archived* data/trends/<week>.json series
+// (one JSON file per week, looked up by exact row name) is deliberately
+// used here instead of a row's own `spark` convenience field (the trailing
+// score history embedded in each week's own row object). The two disagree
+// in the real corpus — e.g. thock-weekly-011.mdx's Keychron row claims
+// "up from 96 eight weeks ago", which matches that week's own
+// Keychron.spark[0] (96) but NOT the real archived data/trends/2026-W31.json
+// record (94) for that row eight ISO-weeks before the issue's nominal week.
+// That's exactly the drift this chunk exists to catch — the citation was
+// apparently written off the then-current spark convenience field, and the
+// archived historical record was corrected afterward without the citation
+// catching up. The spec says to walk "the archived data/trends/<week>.json
+// series", so the archived per-week files are treated as ground truth here,
+// not each row's own spark snapshot.
+
+const NUMBER_WORDS = {
+  one: 1,
+  two: 2,
+  three: 3,
+  four: 4,
+  five: 5,
+  six: 6,
+  seven: 7,
+  eight: 8,
+  nine: 9,
+  ten: 10,
+  eleven: 11,
+  twelve: 12,
+  thirteen: 13,
+  fourteen: 14,
+  fifteen: 15,
+  sixteen: 16,
+  seventeen: 17,
+  eighteen: 18,
+  nineteen: 19,
+  twenty: 20,
+}
+
+// Parses the content file's own nominal "current week" off the same
+// publishedAt/date frontmatter field extractNominalYear reads, but keeps
+// the full date (not just the year) so it can be fed through isoWeekString
+// for a precise week. Returns null when the field is absent or unparseable
+// — both finders below treat that as "no anchor, skip everything".
+function extractNominalDate(frontmatterText) {
+  const m = frontmatterText.match(/^(?:publishedAt|date):\s*['"]?(\d{4}-\d{2}-\d{2})/m)
+  if (!m) return null
+  const date = new Date(m[1])
+  return Number.isNaN(date.getTime()) ? null : date
+}
+
+function resolveCurrentIsoWeek(frontmatterText) {
+  const date = extractNominalDate(frontmatterText)
+  return date ? isoWeekString(date) : null
+}
+
+// Monday of the given ISO week year/number — mirrors isoWeekString's own
+// week-1-contains-Jan-4 algorithm (iso-week.mjs) so the two stay in sync by
+// construction rather than by a separately-derived formula.
+function isoWeekMonday(year, week) {
+  const jan4 = new Date(year, 0, 4)
+  const jan4Day = jan4.getDay() === 0 ? 7 : jan4.getDay()
+  const weekOneMonday = new Date(jan4)
+  weekOneMonday.setDate(jan4.getDate() - (jan4Day - 1))
+  const monday = new Date(weekOneMonday)
+  monday.setDate(weekOneMonday.getDate() + (week - 1) * 7)
+  return monday
+}
+
+// Subtracts `n` ISO weeks from `isoWeek` (e.g. "2026-W39", 8 → "2026-W31"),
+// handling a Dec/Jan year-rollover correctly by going through an actual
+// Date (Monday of the given week, minus n*7 days) rather than a bespoke
+// week-number-and-year subtraction — reuses the isoWeekString import per
+// the chunk's own guidance rather than reimplementing ISO-week math.
+function subtractIsoWeeks(isoWeek, n) {
+  const m = isoWeek.match(/^(\d{4})-W(\d{2})$/)
+  if (!m) return null
+  const monday = isoWeekMonday(Number(m[1]), Number(m[2]))
+  monday.setDate(monday.getDate() - n * 7)
+  return isoWeekString(monday)
+}
+
+// Resolves a full "<YYYY>-W<WW>" string straight to its archived trend
+// file — simpler than resolveTrendWeek's 2-digit-week-plus-nominal-year
+// search above, since the ISO-week arithmetic this check does already
+// fully qualifies the year. Best-effort: missing/malformed file → null,
+// caller skips that claim silently (same contract as resolveTrendWeek).
+function resolveTrendWeekFile(isoWeek) {
+  const filePath = join(TRENDS_DIR, `${isoWeek}.json`)
+  if (!existsSync(filePath)) return null
+  try {
+    const data = JSON.parse(readFileSync(filePath, 'utf8'))
+    if (!Array.isArray(data.rows)) return null
+    return { isoWeek, rows: data.rows }
+  } catch {
+    return null
+  }
+}
+
+// "from <value> <N-word> weeks ago/back/earlier" or "from <value> last
+// week" (a special-cased N=1 — "last week" is how the real corpus phrases
+// a one-week-back citation, never "one week ago"). Requires the literal
+// "from" immediately before the value — every real instance of this shape
+// is phrased that way, and requiring it keeps this from firing on an
+// unrelated nearby number in the same sentence. Uses the `d` (indices)
+// flag so the value's own character offset is known precisely, rather than
+// re-deriving it with a second indexOf search that could land on the wrong
+// occurrence of the same digits.
+const WEEKS_AGO_RE =
+  /\bfrom\s+(-?\d+(?:\.\d+)?)\s+(?:(last)\s+week\b|([a-z]+)\s+weeks?\s+(?:ago|back|earlier)\b)/gid
+
+function findWeeksAgoClaims(body) {
+  const claims = []
+  let m
+  WEEKS_AGO_RE.lastIndex = 0
+  while ((m = WEEKS_AGO_RE.exec(body)) !== null) {
+    const pastValue = Number(m[1])
+    const weeksAgo = m[2] ? 1 : NUMBER_WORDS[(m[3] || '').toLowerCase()]
+    if (!weeksAgo) continue // an unresolvable number word ("just weeks back") — skip, don't guess.
+    claims.push({ index: m.indices[1][0], pastValue, weeksAgo })
+  }
+  return claims
+}
+
+// "first gain/rise/increase in <N-word> weeks" (an "up" streak-break claim)
+// or "first drop/decline/fall in <N-word> weeks" (a "down" streak-break
+// claim) — the real corpus's only instance is "its first gain in five
+// weeks" (Cherry MX2A, thock-weekly-004.mdx).
+const STREAK_RE = /\bfirst\s+(gain|rise|increase|drop|decline|fall)\s+in\s+([a-z]+)\s+weeks?\b/gi
+const STREAK_UP_WORDS = new Set(['gain', 'rise', 'increase'])
+
+function findStreakClaims(body) {
+  const claims = []
+  let m
+  STREAK_RE.lastIndex = 0
+  while ((m = STREAK_RE.exec(body)) !== null) {
+    const direction = STREAK_UP_WORDS.has(m[1].toLowerCase()) ? 'up' : 'down'
+    const weeksClaimed = NUMBER_WORDS[m[2].toLowerCase()]
+    if (!weeksClaimed) continue
+    claims.push({ index: m.index, direction, weeksClaimed })
+  }
+  return claims
+}
+
+// Resolves the sole trend row (from `rows`, typically the content's own
+// "current week" rows[]) whose exact name is mentioned in the same
+// sentence as `claimIndex`, within WEEK_SCORE_WINDOW_TOKENS. Returns null
+// when no row resolves, OR when two or more distinct row names both
+// mention-and-qualify — the same "more candidates than anchors" ambiguity
+// guard findTrendScoreMismatches applies, reused here rather than
+// re-derived, since neither of these new claim shapes carries its own
+// SCORE_CUE-style disambiguator.
+function resolveSoleRowMention(body, boundaries, rows, claimIndex) {
+  const claimSentence = sentenceIndexAt(boundaries, claimIndex)
+  const candidates = new Map() // name.toLowerCase() -> { row, distance }
+  for (const row of rows) {
+    if (typeof row.name !== 'string') continue
+    for (const nameIndex of findRowNameMentions(body, row.name)) {
+      if (sentenceIndexAt(boundaries, nameIndex) !== claimSentence) continue
+      const dist = wordDistance(body, claimIndex, nameIndex)
+      if (dist > WEEK_SCORE_WINDOW_TOKENS) continue
+      const key = row.name.toLowerCase()
+      const existing = candidates.get(key)
+      if (!existing || dist < existing.distance) candidates.set(key, { row, distance: dist })
+    }
+  }
+  if (candidates.size !== 1) return null
+  return [...candidates.values()][0].row
+}
+
+// For each "N weeks ago" claim, resolves the cited row (by exact-name
+// mention in the same sentence, from the content file's own *current*
+// week's rows[] — resolving the row's identity off the week the content
+// was actually written for, not the week N weeks back, since a renamed
+// row's old name usually isn't what the prose says), then looks up that
+// exact row name (case-insensitive) in the archived data/trends/<week>.json
+// file N ISO-weeks before the content's nominal current week. A row that
+// was renamed, didn't exist yet, or whose archived file is missing/
+// malformed at that point is skipped silently — same posture as every
+// other finder in this file: no literal-name match found means "can't
+// verify", not "assume unchanged".
+function findWeeksAgoMismatches(body, currentIsoWeek, resolveIsoWeek) {
+  if (!currentIsoWeek) return []
+  const current = resolveIsoWeek(currentIsoWeek)
+  if (!current) return []
+
+  const claims = findWeeksAgoClaims(body)
+  if (claims.length === 0) return []
+
+  const boundaries = segmentSentenceBoundaries(body)
+  const mismatches = []
+
+  for (const claim of claims) {
+    const matchedRow = resolveSoleRowMention(body, boundaries, current.rows, claim.index)
+    if (!matchedRow) continue
+
+    const pastIsoWeek = subtractIsoWeeks(currentIsoWeek, claim.weeksAgo)
+    if (!pastIsoWeek) continue
+    const past = resolveIsoWeek(pastIsoWeek)
+    if (!past) continue // unresolvable archived week — best-effort, skip.
+
+    const pastRow = past.rows.find(
+      (r) => typeof r.name === 'string' && r.name.toLowerCase() === matchedRow.name.toLowerCase(),
+    )
+    if (!pastRow || typeof pastRow.score !== 'number') continue // renamed/missing row at that week — skip, don't guess.
+
+    if (pastRow.score !== claim.pastValue) {
+      mismatches.push({
+        rowName: matchedRow.name,
+        currentIsoWeek,
+        pastIsoWeek,
+        weeksAgo: claim.weeksAgo,
+        foundValue: claim.pastValue,
+        expectedValue: pastRow.score,
+        index: claim.index,
+      })
+    }
+  }
+
+  return mismatches
+}
+
+// How far back buildWeekScoreSeries will walk the archived series looking
+// for the streak-breaking (opposite-direction) week-over-week move before
+// giving up as unresolvable. Generous relative to the real corpus's only
+// instance (a 5-week streak) with headroom for a longer one, while still
+// bounded so a row with an unusually long same-direction run (or a data
+// gap) can't walk back indefinitely.
+const STREAK_WALK_CAP = 60
+
+// Builds a same-row score series walking backward week-by-week from
+// `currentIsoWeek` (index 0) for up to `maxWeeks` additional weeks, via
+// exact (case-insensitive) row-name match against each archived week's
+// rows[]. Stops — returning whatever was collected so far — at the first
+// week whose file is missing/malformed or that row didn't survive to (same
+// "renamed/missing row" skip posture as findWeeksAgoMismatches; here it
+// just means the caller's walk-back can't go any further).
+function buildWeekScoreSeries(currentIsoWeek, rowName, resolveIsoWeek, maxWeeks) {
+  const series = []
+  let isoWeek = currentIsoWeek
+  const lowerName = rowName.toLowerCase()
+  for (let i = 0; i <= maxWeeks; i++) {
+    const resolved = resolveIsoWeek(isoWeek)
+    if (!resolved) break
+    const row = resolved.rows.find((r) => typeof r.name === 'string' && r.name.toLowerCase() === lowerName)
+    if (!row || typeof row.score !== 'number') break
+    series.push({ isoWeek, score: row.score })
+    const prevIsoWeek = subtractIsoWeeks(isoWeek, 1)
+    if (!prevIsoWeek) break
+    isoWeek = prevIsoWeek
+  }
+  return series
+}
+
+// For each "first gain/drop in N weeks" claim, resolves the cited row (same
+// current-week-rows[] + same-sentence-mention technique as
+// findWeeksAgoMismatches), then walks its archived series backward to find
+// the *real* streak length: the current week's own move must match the
+// claimed direction (otherwise the claim doesn't even describe this week —
+// skip, ambiguous), and the real N is how many consecutive prior
+// week-over-week moves ran the opposite direction before the last time a
+// same-direction move happened. If the walk runs out of archived data
+// before finding that prior same-direction move, the real length can't be
+// proven — skip rather than assume the streak started exactly at the data
+// boundary.
+function findStreakMismatches(body, currentIsoWeek, resolveIsoWeek) {
+  if (!currentIsoWeek) return []
+  const current = resolveIsoWeek(currentIsoWeek)
+  if (!current) return []
+
+  const claims = findStreakClaims(body)
+  if (claims.length === 0) return []
+
+  const boundaries = segmentSentenceBoundaries(body)
+  const mismatches = []
+
+  for (const claim of claims) {
+    const matchedRow = resolveSoleRowMention(body, boundaries, current.rows, claim.index)
+    if (!matchedRow) continue
+
+    const maxWeeks = Math.min(STREAK_WALK_CAP, claim.weeksClaimed + 10)
+    const series = buildWeekScoreSeries(currentIsoWeek, matchedRow.name, resolveIsoWeek, maxWeeks)
+    if (series.length < 2) continue
+
+    const matchesDirection = (diff) => (claim.direction === 'up' ? diff > 0 : diff < 0)
+    if (!matchesDirection(series[0].score - series[1].score)) continue // this week's own move doesn't match the claim at all.
+
+    let count = 0
+    let j = 1
+    let resolved = false
+    while (j + 1 < series.length) {
+      const diff = series[j].score - series[j + 1].score
+      if (matchesDirection(diff)) {
+        resolved = true
+        break
+      }
+      count++
+      j++
+    }
+    if (!resolved) continue // ran out of archived data before the streak broke — can't verify, skip.
+
+    if (count !== claim.weeksClaimed) {
+      mismatches.push({
+        rowName: matchedRow.name,
+        currentIsoWeek,
+        direction: claim.direction,
+        foundValue: claim.weeksClaimed,
+        expectedValue: count,
+        index: claim.index,
+      })
+    }
+  }
+
+  return mismatches
+}
+
 // ── Content file resolution (articles + newsletters) ──────────────────────────
 
 // Parses the article's/newsletter's nominal publish year off its
@@ -754,6 +1088,16 @@ function checkContentFile(filePath, dir) {
     mismatches.push({ ...m, kind: 'trend-score', dir })
   }
 
+  const currentIsoWeek = resolveCurrentIsoWeek(frontmatterText)
+  if (currentIsoWeek) {
+    for (const m of findWeeksAgoMismatches(body, currentIsoWeek, resolveTrendWeekFile)) {
+      mismatches.push({ ...m, kind: 'trend-weeks-ago', dir })
+    }
+    for (const m of findStreakMismatches(body, currentIsoWeek, resolveTrendWeekFile)) {
+      mismatches.push({ ...m, kind: 'trend-streak', dir })
+    }
+  }
+
   return { slug, mismatches }
 }
 
@@ -771,6 +1115,13 @@ function describeMismatch(m) {
   if (m.kind === 'trend-score') {
     return `${m.rowName} cited at ${m.foundValue} for ${m.isoWeek}, but data/trends/${m.isoWeek}.json's rows[].score for that row is ${m.expectedValue}`
   }
+  if (m.kind === 'trend-weeks-ago') {
+    return `${m.rowName} cited at ${m.foundValue} from ${m.weeksAgo} weeks ago (${m.pastIsoWeek}), but data/trends/${m.pastIsoWeek}.json's rows[].score for that row is ${m.expectedValue}`
+  }
+  if (m.kind === 'trend-streak') {
+    const verb = m.direction === 'up' ? 'gain' : 'drop'
+    return `${m.rowName} cited as its first ${verb} in ${m.foundValue} weeks (as of ${m.currentIsoWeek}), but walking the archived data/trends/ series puts the real gap at ${m.expectedValue} week(s)`
+  }
   if (m.field === 'unspecified') {
     return `${m.switchName} cited at ${m.foundValue}g, but data/switches/${m.switchSlug}.json has neither actuation (${m.expectedActuation}g) nor bottomOut (${m.expectedBottomOut}g) at that value`
   }
@@ -780,9 +1131,18 @@ function describeMismatch(m) {
 // Trend-score mismatches get their own claimKey shape (prefixed `:trend:`)
 // so they can never collide with a switch-citation dedup key on the same
 // slug, even if the two checks happened to produce the same foundValue.
+// The chunk 01.3 kinds each get their own distinct infix
+// (`:trend-weeks-ago:` / `:trend-streak:`) for the same reason — disjoint
+// from `:trend:` and from the switch shape by construction.
 function claimKey(slug, m) {
   if (m.kind === 'trend-score') {
     return `${slug}:trend:${m.isoWeek}:${m.rowName}:${m.foundValue}`
+  }
+  if (m.kind === 'trend-weeks-ago') {
+    return `${slug}:trend-weeks-ago:${m.pastIsoWeek}:${m.rowName}:${m.foundValue}`
+  }
+  if (m.kind === 'trend-streak') {
+    return `${slug}:trend-streak:${m.currentIsoWeek}:${m.rowName}:${m.direction}:${m.foundValue}`
   }
   return `${slug}:${m.switchSlug}:${m.field}:${m.foundValue}`
 }
@@ -801,6 +1161,30 @@ function formatAuditRow(slug, mismatch, today) {
 - file: apps/web/src/content/${dir}/${slug}.mdx
 - claim: ${describeMismatch(mismatch)}
 - action: correct the prose citation to match data/trends/${mismatch.isoWeek}.json's rows[].score (or correct the data record if the data is the one that's wrong)\n`
+  }
+
+  if (mismatch.kind === 'trend-weeks-ago') {
+    return `\n### [ ] [content] [3.6] ${slug} — ${mismatch.rowName} "N weeks ago" citation disagrees with data/trends/${mismatch.pastIsoWeek}.json
+- category: content
+- filed: ${todayStr} by content-fact-audit.mjs — ${claimKey(slug, mismatch)}
+- impact: 4 (factual-accuracy mismatch on published content)
+- ease: 9 (one-line prose correction once the mismatch is found)
+- score: 3.6 (impact × ease / 10)
+- file: apps/web/src/content/${dir}/${slug}.mdx
+- claim: ${describeMismatch(mismatch)}
+- action: correct the prose citation to match data/trends/${mismatch.pastIsoWeek}.json's rows[].score (or correct the data record if the data is the one that's wrong)\n`
+  }
+
+  if (mismatch.kind === 'trend-streak') {
+    return `\n### [ ] [content] [3.6] ${slug} — ${mismatch.rowName} streak-length citation disagrees with the archived data/trends/ series
+- category: content
+- filed: ${todayStr} by content-fact-audit.mjs — ${claimKey(slug, mismatch)}
+- impact: 4 (factual-accuracy mismatch on published content)
+- ease: 9 (one-line prose correction once the mismatch is found)
+- score: 3.6 (impact × ease / 10)
+- file: apps/web/src/content/${dir}/${slug}.mdx
+- claim: ${describeMismatch(mismatch)}
+- action: correct the claimed week-count to match the real streak length walked from data/trends/ (or correct the data record if the archived series is the one that's wrong)\n`
   }
 
   return `\n### [ ] [content] [3.6] ${slug} — ${mismatch.switchName} spring-weight citation disagrees with data/switches/${mismatch.switchSlug}.json
@@ -854,6 +1238,16 @@ export const __test = {
   findRowNameMentions,
   resolveTrendWeek,
   findTrendScoreMismatches,
+  extractNominalDate,
+  resolveCurrentIsoWeek,
+  subtractIsoWeeks,
+  resolveTrendWeekFile,
+  findWeeksAgoClaims,
+  findStreakClaims,
+  resolveSoleRowMention,
+  findWeeksAgoMismatches,
+  buildWeekScoreSeries,
+  findStreakMismatches,
   formatAuditRow,
   describeMismatch,
   alreadyFiled,
