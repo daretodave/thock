@@ -90,10 +90,6 @@ New `scripts/content-fact-audit.mjs`, mirroring
 
 ## Acceptance
 
-- **A3** The run also catches the "N weeks ago" / streak-length
-  sub-shape — a claimed week-count that disagrees with the real
-  elapsed time walked from the archived `data/trends/` series for
-  the cited row.
 - **A4** The script is wired into `skills/march.lanes.md`'s
   empty-queue-refill survey chain (after `og-coverage-check.mjs`)
   and `skills/digest.md`'s nightly breadth check, both
@@ -110,8 +106,7 @@ from the candidate's own accumulated evidence.
 
 ## Chunks
 
-Measure: 3 open · 2 closed · next A6
+Measure: 2 open · 3 closed · next A6
 
-- [ ] **01.3** "N weeks ago" / streak-length sub-shape · M · closes A3 · needs —
-- [ ] **01.4** Wire into refill chain + digest · S · closes A4 · needs 01.3
+- [ ] **01.4** Wire into refill chain + digest · S · closes A4 · needs —
 - [ ] **01.5** Live-corpus spot-check · S · closes A5 · needs 01.4

@@ -1,10 +1,4 @@
----
-close: 01.3
-date: 2026-10-31
-says: Script catches "N weeks ago" / streak-length citation drift vs archived data/trends
----
 
-## Notes
 
 Walked the archived `data/trends/<week>.json` series as ground truth for
 past-week lookups, not each row's own `spark` convenience field — the two

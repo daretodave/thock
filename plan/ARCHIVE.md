@@ -58,3 +58,4 @@
 - 2026-08-23 · 50 · Trend-snapshot data-quality gate · fbae462a
 - 2026-10-31 · 01.1 · Script catches switch spring-weight citation drift vs data · 5fe9d779..5fe9d779
 - 2026-10-31 · 01.2 · Script catches tracker-score citation drift vs data/trends, articles + newsletters · 15cc4088..15cc4088
+- 2026-10-31 · 01.3 · Script catches "N weeks ago" / streak-length citation drift vs archived data/trends · 56bd3161..7d0c4342
