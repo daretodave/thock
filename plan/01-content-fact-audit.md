@@ -119,4 +119,8 @@ from the candidate's own accumulated evidence.
 
 Measure: 5 open · 0 closed · next A6
 
-Not chunked yet.
+- [ ] **01.1** Core script + switch numeric citations · M · closes A1 · needs —
+- [ ] **01.2** Tracker-score citations (articles + newsletters) · M · closes A2 · needs 01.1
+- [ ] **01.3** "N weeks ago" / streak-length sub-shape · M · closes A3 · needs 01.1, 01.2
+- [ ] **01.4** Wire into refill chain + digest · S · closes A4 · needs 01.1, 01.2, 01.3
+- [ ] **01.5** Live-corpus spot-check · S · closes A5 · needs 01.4
