@@ -90,10 +90,6 @@ New `scripts/content-fact-audit.mjs`, mirroring
 
 ## Acceptance
 
-- **A1** `scripts/content-fact-audit.mjs --write` scans every
-  article's `mentionedParts` switches for spring/actuation-weight
-  citations and files a `content` category `plan/AUDIT.md` row for
-  each one that disagrees with `data/switches/*.json`.
 - **A2** The same run scans tracker-score citations (near `W\d\d`
   tokens) across articles and newsletters against
   `data/trends/<week>.json` and files a row for each mismatch.
@@ -117,10 +113,9 @@ from the candidate's own accumulated evidence.
 
 ## Chunks
 
-Measure: 5 open · 0 closed · next A6
+Measure: 4 open · 1 closed · next A6
 
-- [ ] **01.1** Core script + switch numeric citations · M · closes A1 · needs —
-- [ ] **01.2** Tracker-score citations (articles + newsletters) · M · closes A2 · needs 01.1
-- [ ] **01.3** "N weeks ago" / streak-length sub-shape · M · closes A3 · needs 01.1, 01.2
-- [ ] **01.4** Wire into refill chain + digest · S · closes A4 · needs 01.1, 01.2, 01.3
+- [ ] **01.2** Tracker-score citations (articles + newsletters) · M · closes A2 · needs —
+- [ ] **01.3** "N weeks ago" / streak-length sub-shape · M · closes A3 · needs 01.2
+- [ ] **01.4** Wire into refill chain + digest · S · closes A4 · needs 01.2, 01.3
 - [ ] **01.5** Live-corpus spot-check · S · closes A5 · needs 01.4

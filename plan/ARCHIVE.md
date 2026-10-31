@@ -56,3 +56,4 @@
 - 2026-06-15 · 48 · `/compare/board` side-by-side comparison · d7e7424d
 - 2026-06-15 · 49 · Interactive-tools discoverability · 6fddc18
 - 2026-08-23 · 50 · Trend-snapshot data-quality gate · fbae462a
+- 2026-10-31 · 01.1 · Script catches switch spring-weight citation drift vs data · 5fe9d779..5fe9d779
