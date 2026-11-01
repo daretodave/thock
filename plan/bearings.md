@@ -91,6 +91,7 @@ add new ones via a new phase.
 /group-buys                      Curated active group buys
 /quiz/switch                     Switch recommender quiz (phase 33)
 /quiz/keycap-set                 Keycap-set recommender quiz (phase 47)
+/quiz/board                      Board recommender quiz (spec 02)
 /compare/switch                  Switch side-by-side comparison (phase 44)
 /compare/board                   Board side-by-side comparison (phase 48)
 /tools                           Interactive tools index (phase 49)
@@ -829,6 +830,12 @@ unless it has its own line below (`nexus/customization/improvement-dial.md`;
   variable NEXUS_DAILY_CEILING keeps the v1 ceiling of 60).
 
 - Improve: bold
+- promote_per_week: 3
+- promote_after_days: 7
+- veto_days: 1
+- promote_queue_depth: 2
+- promote_prefer: product
+- Research: 3d
 - Research topics: mechanical keyboard switch and keycap trends; group buy and interest check lifecycles; keyboard enthusiast community discussion and buyer questions; interactive comparison and recommender tools on hobby sites; editorial data visualisation for niche product coverage
 
 **UI:** `url https://thock.xyz`

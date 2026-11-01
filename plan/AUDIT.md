@@ -1,88 +1,20 @@
 # Site audit
 
-> Latest findings from `/iterate audit` and `/oversight`. Open
-> items live here until a shipping skill drains them.
+> Standing rules (Rule 1 sliding window etc.) live in `plan/bearings.md`; past header notes are in git history.
 
-> **Rule 1: sliding window (locked 2026-05-14 — see `plan/bearings.md`
-> § Rule 1).** Each pillar carries ≥2 articles published within the
-> last 30 days, always. The rule is self-replenishing — articles
-> aging out generate new shortfalls without any external priming.
->
-> Three states, codified in bearings.md and emitted by the audit-row
-> generator (phase 30 ships `scripts/content-gap-survey.mjs`):
->
-> - **Comfortable** — every pillar ≥ 2 in 30d. No Rule-1 row files.
-> - **Hot pursuit** — one or more pillars at exactly 1 in 30d. Row
->   files at score **7.0** for that pillar. Loop ships on next tick.
-> - **Critical hot pursuit** — one or more pillars at 0 in 30d. Row
->   files at score **9.5**, above every other priority. Loop drops
->   iterate / polish until the pillar recovers.
->
-> Pillar selection when multiple are cold: oldest most-recent
-> publishedAt wins; tie-breaker is lowest count, then editorial
-> prominence (Trends > News > Ideas > Deep Dives > Guides).
->
-> **Current state (2026-05-14):** all 40 articles aged 1–10 days,
-> all pillars at 8 in 30d → comfortable. First natural shortfall
-> arrives in ~20 days as the oldest articles cross the threshold.
-> No Rule-1 row to file yet.
->
-> Rules 2 / 3 / 4 (tracker linkage, group-buy companion, publishedAt
-> gap-fill) are unchanged. They compete on raw `impact × ease`.
+## Drained findings (kept for audit-trail; do not re-open)
 
-> **PRUNE 2026-06-14 (via `/oversight`):** the 65 open
-> `[cross-links] [3.6]` *adjacent-pillar* rows were deleted in bulk.
-> Rationale: these were the weakest cross-link signal (adjacent
-> pillar, ≥2 shared tags) and were draining 1/tick — ~58% of recent
-> maintenance bandwidth went to them. The 52 stronger
-> `[cross-links] [4.5]` *same-pillar* rows are kept; phase 46
-> (cross-link drain efficiency) makes `/iterate` cluster-aware so
-> those drain per-article instead of 1/tick. Phase 39's
-> `article-crosslink-survey` will re-file adjacent-pillar pairs on
-> the empty-queue path; if the drain re-dominates, raise the
-> survey's adjacent-pillar floor rather than re-pruning by hand.
+### [x] [external-critique] [voice] [3.6] /tools + /quiz/switch — tools-card description and quiz lede describe the same flow with different framing — addressed in 5dc60b24, closes #1059
+- category: external-critique
+- filed: critique pass 14 (reader sub-agent, scripted walk)
+- impact: 4 (two heavily-linked utility surfaces describing the same feature inconsistently)
+- ease: 9 (single lede string edit, no schema/route/component change)
+- score: 3.6 (impact × ease / 10)
+- evidence: `apps/web/src/app/tools/page.tsx:35` vs. `apps/web/src/app/quiz/switch/page.tsx:52-53`
+- action: `/quiz/switch` lede rewritten to echo the `/tools` card's wording (digit numeral, named dimensions), keeping only its own closing clause
+- issue: #1059
 
-> **POSTURE: drained 2026-05-09** — the brand-assets-first
-> posture set at 12:30Z is cleared. All four drain items shipped
-> the same day: (1) favicon — `apps/web/src/app/icon.svg` +
-> `apple-icon.tsx` wired via Next App Router auto-discovery
-> (`0e7c9fd`); (2) default OG — already in place at
-> `apps/web/src/app/opengraph-image.tsx` since phase 4 (`fc1b0b0`);
-> (3) per-pillar OG variants — five `apps/web/src/app/<pillar>/opengraph-image.tsx`
-> handlers + shared `<PillarOGContent>` template (`0dab0a8`);
-> (4) hero placeholders for the six seed articles — SVGs at
-> `apps/web/public/hero-art/<slug>.svg` + provenance JSON siblings
-> + frontmatter `heroImage`/`heroImageAlt` wiring (`0e7c9fd`).
-> `/march` resumes normal dispatch — phase 15 (Newsletter) is the
-> next pending phase.
-
-> **Iterate-bias category: cleared 2026-05-09** along with the
-> posture. Iterate scoring returns to category-neutral.
-
-> **Article hero art directive (locked 2026-05-09 — durable
-> after the posture drained):** every article (current and future)
-> renders a colorful keyboard SVG as its hero placeholder until
-> real photography backfills. Style: simple, single splash of
-> color, line-drawing weight consistent across articles,
-> illustrative of the article's subject (switch cross-section
-> for switch-deep-dives, keycap profile silhouette for keycap
-> pieces, keyboard outline + callout for build pieces, sparkline
-> for trends pieces, layout silhouette for ergonomic pieces).
-> Hero SVGs land under `apps/web/public/hero-art/<slug>.svg` with
-> a sibling `<slug>.svg.json` provenance file. The article
-> frontmatter `heroImage` field references the absolute path.
->
-> **Forward-looking wiring (added 2026-05-09 same drain):** new
-> articles drafted by `/iterate` no longer ship art-less. The
-> iterate skill's content-gap delegation now bundles
-> `content-curator` (prose) + `brander` (hero SVG) + frontmatter
-> wiring as a single commit — see `skills/iterate.md` § Step 3.
-> The audit's "articles missing `heroImage`" finding (§4.A) is
-> reserved for backfilling already-shipped articles, not for
-> letting new ones slip through. Non-article asset findings
-> (broken favicon, missing OG variant, stale render) still go
-> through `/ship-asset` directly — that lane stays demand-pull
-> per `skills/ship-asset.md` §1.
+## Open findings
 
 ### [ ] [seo] [2.7] Hero-art key-layout for the two dedicated Mode Sonnet articles still visually depicts a 65% shape (16-column, no function row) after the layout correction to 75%
 - category: seo
@@ -112,20 +44,6 @@
 - evidence: `apps/web/src/components/analytics/GoogleTagManager.tsx:18-20`; `apps/web/src/app/layout.tsx:70`; `plan/bearings.md:73`
 - next: `/oversight` call — pick consent-gate-GTM vs. revert-to-Plausible, then implement + reconcile bearings.md
 
-## Drained findings (kept for audit-trail; do not re-open)
-
-### [x] [external-critique] [voice] [3.6] /tools + /quiz/switch — tools-card description and quiz lede describe the same flow with different framing — addressed in 5dc60b24, closes #1059
-- category: external-critique
-- filed: critique pass 14 (reader sub-agent, scripted walk)
-- impact: 4 (two heavily-linked utility surfaces describing the same feature inconsistently)
-- ease: 9 (single lede string edit, no schema/route/component change)
-- score: 3.6 (impact × ease / 10)
-- evidence: `apps/web/src/app/tools/page.tsx:35` vs. `apps/web/src/app/quiz/switch/page.tsx:52-53`
-- action: `/quiz/switch` lede rewritten to echo the `/tools` card's wording (digit numeral, named dimensions), keeping only its own closing clause
-- issue: #1059
-
-## Open findings
-
 ### [x] [bug] [4.2] `/article/[slug]` and `/tag/[slug]` soft-404 fix is structurally blocked — real 404 status and the "did you mean" not-found UX are mutually exclusive under current Next.js routing
 - resolved 2026-11-01 via `/oversight` (option: real 404 + root suggestions): both routes set `dynamicParams = false`; root `not-found.tsx` renders `RouteAwareNotFound`, which restores the entity copy + "did you mean" suggestions for /article/* and /tag/*. Segment not-found files removed (bypassed under dynamicParams=false). smoke.spec asserts 404 status.
 - category: bug
@@ -138,7 +56,7 @@
 > Filed same-tick as investigated: the fresh sweep's top finding (score 4.2) matched a standing follow-up gap from #524's partial resolution, was implemented, and failed its own e2e coverage (`polish.spec.ts`'s two "did you mean" assertions) on the first `pnpm verify` pass. Rather than iterate blindly against a gate that was correctly catching a real, structural regression, did a direct local repro (`next build && next start` + curl, both `dynamicParams` states) to confirm the constraint before reverting — this is a routing-layer limitation, not an implementation bug, so further iterate-tick attempts at "just read the pathname differently" would repeat this same dead end. All file changes reverted to a clean working tree; no commit shipped this line of investigation. Falls through to the next candidate finding for this tick.
 
 ### [x] [engineering] [3.0] mirrored `loop:opened` GitHub issues can go permanently un-drained if not picked the same tick they're filed
-- resolved 2026-11-01 via `/oversight` (option: reconciliation step): new `scripts/plan/orphan-issues.mjs` (tested) + `/iterate` Step 1.5 backfills a Pending row for every open mirror issue with no plan reference before work is picked.
+- resolved 2026-11-01 via `/oversight` (option: reconciliation step): upstreamed to nexus (`ca3c79f`) as the stock `mirror-orphan` generator, adopted here via refill; it files a Pending row for every open mirror issue with no plan reference.
 - category: engineering
 - filed: 2026-08-09 by cloud /iterate audit (fresh general-purpose sweep, discovered while investigating why #776 and #799 sat open with no AUDIT.md row)
 - impact: 5 (two MED-severity, fully-verified content bugs — #776 and #799 — sat live and un-actioned for up to 2+ days purely because `skills/iterate.md` §5 Step 2.5 only writes an `- issue: #N` field onto a row that's already in `AUDIT.md`; if a finding is mirrored to GitHub but not picked that same tick, and never gets a formal row, it's invisible to every future audit since `/iterate` reads `AUDIT.md`, not the open-issues list, as its source of truth)
@@ -196,18 +114,6 @@
 - evidence: `packages/tokens/src/tokens.css:15-16` (dark-mode `--thock-border`/`--thock-border-hi`); contrast independently recomputed via OKLCH→linear-sRGB→WCAG relative luminance (Björn Ottosson's oklab conversion matrices + W3C contrast formula), confirming 1.42/1.24/2.24/1.97:1 exactly; light-mode values (`--thock-border: oklch(0.88 0.004 85)` against `--thock-bg: oklch(0.965 0.004 85)`) not yet computed — worth checking in the same pass if this is ever picked up.
 - next: `/oversight` call — decide whether to accept a visibly heavier border weight in dark mode for WCAG 1.4.11 compliance, or a lighter-touch alternative (e.g. a subtle background-fill or shadow cue instead of raising border lightness); then implement + re-verify contrast across all bordered components in one pass.
 
-### [x] [data] [3.6] divinikey-gmk-cyl-just-beachy — status stale, endDate 2026-09-22 passed — addressed in commit `7490f7e0`, closes #1013
-- category: data
-- filed: 2026-09-25 by group-buy-status-check.mjs
-- impact: 4 (buy shows status "announced" but endDate 2026-09-22 has passed — data hygiene gap)
-- ease: 9 (update status field to 'closed' in data/group-buys/divinikey-gmk-cyl-just-beachy.json)
-- score: 3.6 (impact × ease / 10)
-- group-buy: data/group-buys/divinikey-gmk-cyl-just-beachy.json
-- action: update status from 'announced' to 'closed' in data/group-buys/divinikey-gmk-cyl-just-beachy.json
-- issue: #1013
-> **Resolved (2026-10-01):** flipped status to "closed", bumped updatedAt, regenerated data-runtime/OG manifests + search index. `pnpm verify` full gate green: typecheck, lint, 862/862 unit tests, 230/230 script tests, data:validate (89 records), build, size, 1280/1280 e2e.
-> Picked as the top signal this tick: no unlabeled GitHub issues (triage gate); not Monday-relevant (W40 snapshot already existed); no pending phases/data-backlog work; content-gap queue empty (`content-gap-survey.mjs` — "all pillars comfortable") and all 6 other mechanical surveys re-ran clean, no rows filed. March's own expand Step 3c gate not met (0 commits since pass 435's own commit, well under the 20-commit/48h threshold). This row and its sibling `divinikey-gmk-cyl-orange-alert` row were the only two Pending AUDIT rows scoring ≥ 3.0 (both 3.6, tied); picked this one by file order, one-fix-per-tick rule applies — the sibling remains for the next tick.
-
 ### [x] [data] [3.6] divinikey-gmk-cyl-orange-alert — status stale, endDate 2026-09-14 passed — addressed in commit `efc47fa6`, closes #1015
 - category: data
 - filed: 2026-09-25 by group-buy-status-check.mjs
@@ -219,85 +125,6 @@
 - issue: #1015
 > **Resolved (2026-10-02):** flipped status to "closed", bumped updatedAt, regenerated data-runtime/OG manifests + search index. `pnpm verify` full gate green: typecheck, lint, 862/862 unit tests, 230/230 script tests, data:validate (89 records), build, size, 1280/1280 e2e.
 > Picked as the top signal this tick: no unlabeled GitHub issues (triage gate); not Monday-relevant (W40 snapshot already existed); no pending phases/data-backlog work; content-gap queue empty (`content-gap-survey.mjs` — "all pillars comfortable") and all 6 other mechanical surveys re-ran clean, no rows filed. March's own expand Step 3c gate not met (3 commits/~15h since pass 435's own commit, well under the 20-commit/48h threshold). This was the only Pending AUDIT row scoring ≥ 3.0 — the sibling `divinikey-gmk-cyl-just-beachy` row was already drained in the prior tick.
-
-### [x] [HOT PURSUIT] [content-gap] [7] trends pillar — 1 of ≥2 articles in last 30d — addressed in 87196ca6, closes #1011
-- category: content-gaps
-- impact: 8 (Rule 1 sliding window — hot-pursuit)
-- ease: 5 (one new article per tick via /ship-content)
-- rule: Rule 1 — sliding-window freshness
-- pillar: trends
-- window-count: 1
-- window-start: 2026-08-31
-- score: 7
-- next: /ship-content → trends pillar article
-- issue: #1011
-> Filed 2026-09-30 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
-> **Resolved (2026-10-01):** shipped `gmk-cyl-red-devils-r2-comeback.mdx` (publishedAt 2026-09-10, gap-fill midpoint of the 18-day gap between the 30-day-window sentinel and `wooting-rapid-trigger-head-start` on 2026-09-19) — trends-analysis piece on GMK CYL Red Devils' six-years-later re-run drawing an unusually sustained eight-week tracker climb (10→68), grounded in the 2026-W40 tracker note's football-fandom-crossover read and the joint Omnitype/Keebz N Cables group buy (Sept 14–Oct 10, 2026, Q1 2027 ship estimate). Trends pillar now carries a fresh anchor well inside the 30-day window. `pnpm verify` full gate green: typecheck, lint, 862/862 unit tests, 230/230 script tests, data:validate, build, size, 1280/1280 e2e.
-
-### [x] [cross-links] [4.5] gmk-cyl-red-devils-r2-comeback ↔ dcs-grass-valley-decline — no prose cross-link (same pillar, ≥2 shared tags: keycaps, group-buy, trends-2026) — addressed in commit `c4e78b7a`, closes #1012
-- category: cross-links
-- filed: 2026-10-01 by article-crosslink-survey.mjs
-- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
-- ease: 9 (add one inline markdown link to either article body)
-- score: 4.5 (impact × ease / 10)
-- shared-tags: keycaps, group-buy, trends-2026
-- article-a: apps/web/src/content/articles/gmk-cyl-red-devils-r2-comeback.mdx
-- article-b: apps/web/src/content/articles/dcs-grass-valley-decline.mdx
-- action: add [dcs-grass-valley-decline](/article/dcs-grass-valley-decline) to gmk-cyl-red-devils-r2-comeback body, or vice versa
-- issue: #1012
-> **Resolved (2026-10-01):** drained as part of the 5-pair cluster for hub `gmk-cyl-red-devils-r2-comeback` (Phase 46 cluster-aware drain). Linked in the "What to watch" section, contrasting Red Devils' still-climbing shape with Grass Valley's clean post-close momentum transfer. See commit `c4e78b7a`.
-
-### [x] [cross-links] [4.5] gmk-cyl-red-devils-r2-comeback ↔ dcs-olivetti-comeback — no prose cross-link (same pillar, ≥2 shared tags: keycaps, cherry-profile, trends-2026) — addressed in commit `c4e78b7a`, closes #1012
-- category: cross-links
-- filed: 2026-10-01 by article-crosslink-survey.mjs
-- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
-- ease: 9 (add one inline markdown link to either article body)
-- score: 4.5 (impact × ease / 10)
-- shared-tags: keycaps, cherry-profile, trends-2026
-- article-a: apps/web/src/content/articles/gmk-cyl-red-devils-r2-comeback.mdx
-- article-b: apps/web/src/content/articles/dcs-olivetti-comeback.mdx
-- action: add [dcs-olivetti-comeback](/article/dcs-olivetti-comeback) to gmk-cyl-red-devils-r2-comeback body, or vice versa
-- issue: #1012
-> **Resolved (2026-10-01):** drained as part of the 5-pair cluster for hub `gmk-cyl-red-devils-r2-comeback` (Phase 46 cluster-aware drain). Linked in the "Reading the climb" section as a comparable multi-year-gap revival with a sustained climb. See commit `c4e78b7a`.
-
-### [x] [cross-links] [4.5] gmk-cyl-red-devils-r2-comeback ↔ gmk-cyl-og-extensions-interest-check — no prose cross-link (same pillar, ≥2 shared tags: gmk, keycaps, cherry-profile, trends-2026) — addressed in commit `c4e78b7a`, closes #1012
-- category: cross-links
-- filed: 2026-10-01 by article-crosslink-survey.mjs
-- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
-- ease: 9 (add one inline markdown link to either article body)
-- score: 4.5 (impact × ease / 10)
-- shared-tags: gmk, keycaps, cherry-profile, trends-2026
-- article-a: apps/web/src/content/articles/gmk-cyl-red-devils-r2-comeback.mdx
-- article-b: apps/web/src/content/articles/gmk-cyl-og-extensions-interest-check.mdx
-- action: add [gmk-cyl-og-extensions-interest-check](/article/gmk-cyl-og-extensions-interest-check) to gmk-cyl-red-devils-r2-comeback body, or vice versa
-- issue: #1012
-> **Resolved (2026-10-01):** drained as part of the 5-pair cluster for hub `gmk-cyl-red-devils-r2-comeback` (Phase 46 cluster-aware drain). Linked in the "Reading the climb" section alongside dcs-olivetti-comeback as a matching unbroken-climb precedent. See commit `c4e78b7a`.
-
-### [x] [cross-links] [4.5] gmk-cyl-red-devils-r2-comeback ↔ gmk-cyl-ta-neo-production-tracking — no prose cross-link (same pillar, ≥2 shared tags: gmk, keycaps, cherry-profile, group-buy, trends-2026) — addressed in commit `c4e78b7a`, closes #1012
-- category: cross-links
-- filed: 2026-10-01 by article-crosslink-survey.mjs
-- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
-- ease: 9 (add one inline markdown link to either article body)
-- score: 4.5 (impact × ease / 10)
-- shared-tags: gmk, keycaps, cherry-profile, group-buy, trends-2026
-- article-a: apps/web/src/content/articles/gmk-cyl-red-devils-r2-comeback.mdx
-- article-b: apps/web/src/content/articles/gmk-cyl-ta-neo-production-tracking.mdx
-- action: add [gmk-cyl-ta-neo-production-tracking](/article/gmk-cyl-ta-neo-production-tracking) to gmk-cyl-red-devils-r2-comeback body, or vice versa
-- issue: #1012
-> **Resolved (2026-10-01):** drained as part of the 5-pair cluster for hub `gmk-cyl-red-devils-r2-comeback` (Phase 46 cluster-aware drain). Linked in the "What to watch" section, contrasting Red Devils' still-climbing shape with TA Neo's three-week post-close cooldown. See commit `c4e78b7a`.
-
-### [x] [cross-links] [4.5] gmk-cyl-red-devils-r2-comeback ↔ prototypist-vendor-spotlight — no prose cross-link (same pillar, ≥2 shared tags: group-buy, trends-2026) — addressed in commit `c4e78b7a`, closes #1012
-- category: cross-links
-- filed: 2026-10-01 by article-crosslink-survey.mjs
-- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
-- ease: 9 (add one inline markdown link to either article body)
-- score: 4.5 (impact × ease / 10)
-- shared-tags: group-buy, trends-2026
-- article-a: apps/web/src/content/articles/gmk-cyl-red-devils-r2-comeback.mdx
-- article-b: apps/web/src/content/articles/prototypist-vendor-spotlight.mdx
-- action: add [prototypist-vendor-spotlight](/article/prototypist-vendor-spotlight) to gmk-cyl-red-devils-r2-comeback body, or vice versa
-- issue: #1012
-> **Resolved (2026-10-01):** drained as part of the 5-pair cluster for hub `gmk-cyl-red-devils-r2-comeback` (Phase 46 cluster-aware drain). Linked in the "joint Omnitype / Keebz N Cables run" section, noting Prototypist's own multi-vendor fulfillment track record as a parallel. See commit `c4e78b7a`.
 
 ### [x] [docs] [2.7] `.nvmrc`/`engines.node` (20) drifted from CI's `node-version` 22 — addressed in this commit, closes #1016
 - category: docs
