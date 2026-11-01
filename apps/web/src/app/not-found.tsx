@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { siteConfig } from '@thock/seo'
 import { RootNotFound } from '@/components/not-found/RootNotFound'
+import { RouteAwareNotFound } from '@/components/not-found/RouteAwareNotFound'
 
 export const metadata: Metadata = {
   title: { absolute: `Page not found — ${siteConfig.name}` },
@@ -15,15 +16,16 @@ export const metadata: Metadata = {
 }
 
 /**
- * Global root-level 404. Next.js falls back to this page for any
- * URL that doesn't match a route segment. /article/[slug] and
- * /tag/[slug] have their own not-found.tsx so they can show
- * entity-specific copy; this page covers everything else.
+ * Global root-level 404. Next.js renders this for any unmatched URL
+ * and for every `dynamicParams = false` miss. `RouteAwareNotFound`
+ * swaps in entity copy + "did you mean" suggestions for
+ * /article/<slug> and /tag/<slug>; everything else gets the generic
+ * branded page.
  */
 export default function NotFound() {
   return (
     <main id="main" className="flex-1">
-      <RootNotFound />
+      <RouteAwareNotFound fallback={<RootNotFound />} />
     </main>
   )
 }

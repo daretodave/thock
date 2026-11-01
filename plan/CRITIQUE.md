@@ -64,7 +64,8 @@
 - suggested fix: rename the hero stat segment (e.g. `"${ended.length} closed last 30d"`) so it doesn't restate the section kicker word-for-word.
 - source: walk
 
-### [needs-user-call] [MED] / — production GA `/g/collect` beacons returning HTTP 503
+### [x] [MED] / — production GA `/g/collect` beacons returning HTTP 503
+- resolved 2026-11-01 via `/oversight`: moot. GTM/GA4 removed in favor of cookieless Vercel Web Analytics; no GA beacons remain.
 - pass: 8 (commit d34580c)
 - viewport: desktop
 - category: performance

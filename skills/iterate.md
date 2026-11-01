@@ -288,6 +288,25 @@ Audit block shape:
 - next: <action — invocation, sub-agent, or follow-up>
 ```
 
+### Step 1.5 — Reconcile orphaned mirror issues
+
+```bash
+node scripts/plan/orphan-issues.mjs
+```
+
+Lists open `loop:opened` + `source:*` issues whose `#N` appears
+nowhere in `plan/AUDIT.md` or `plan/CRITIQUE.md`: findings
+mirrored by an earlier Step 2.5 whose row never landed or was
+dropped. For each `orphan #N`, read the issue
+(`gh issue view N`) and backfill a Pending row in the file its
+`source:*` label points to (reader → CRITIQUE.md, else
+AUDIT.md), scored as usual, carrying `- issue: #N`. If the issue
+is already fixed on `main`, close it with a comment naming the
+commit instead. Backfilled rows compete in Step 2 like any
+other. Best-effort: exit 3 (gh unreadable) logs and continues.
+Never declare "no actionable iterate work" (§6.6) before this
+step has run. (/oversight 2026-11-01.)
+
 ### Step 2 — Pick the work
 
 Top scored; an I row only while `node scripts/plan/loop-rows.mjs
@@ -547,6 +566,9 @@ plan/CRITIQUE.md                         # external-critique queue
 plan/bearings.md                         # voice + standing decisions
 skills/iterate.lanes.md                  # this project's own dimensions (scripts/plan/lanes.mjs)
 data/                                    # GitHub-as-DB
+
+# Step 1.5
+node scripts/plan/orphan-issues.mjs      # mirrored issues with no plan row
 
 # Dimension H (UI: url <base>, cadence iterate|both)
 node scripts/ui-walk.mjs --knobs         # the UI knobs; walks.iterate

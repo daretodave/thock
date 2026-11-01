@@ -1,14 +1,9 @@
 import { NextResponse, type NextRequest } from 'next/server'
 
 /**
- * `/article/[slug]` and `/tag/[slug]` are the only two entity routes
- * that keep `dynamicParams` at the Next.js default (see the comment
- * at `app/article/[slug]/page.tsx`), which forces dynamic rendering
- * and, as a side effect, makes the literal `article`/`tag` path
- * segment match case-insensitively — `/Article/<slug>` and
- * `/ARTICLE/<slug>` both 200 instead of 404ing or canonicalizing.
- * Every catalog slug in the repo is already lowercase, so redirect
- * any non-lowercase hit on these two segments to its canonical form.
+ * Canonicalizes non-lowercase hits on `/article/*` and `/tag/*`
+ * (e.g. `/Article/<slug>`) to their lowercase form with a 308.
+ * Every catalog slug in the repo is already lowercase.
  */
 export function caseNormalizeRedirect(
   request: NextRequest,
@@ -28,9 +23,8 @@ export function caseNormalizeRedirect(
  * header so Server Components (notably `not-found.tsx` files)
  * can read which slug a reader was trying to reach.
  *
- * Used by `apps/web/src/app/article/[slug]/not-found.tsx` and the
- * sibling tag not-found page to render "did you mean…?" search
- * suggestions when an unknown slug 404s.
+ * Kept for Server Components that need the request path; the 404
+ * pages themselves read it client-side via `RouteAwareNotFound`.
  */
 export function proxy(request: NextRequest): NextResponse {
   const redirect = caseNormalizeRedirect(request)

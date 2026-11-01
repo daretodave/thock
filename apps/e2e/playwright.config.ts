@@ -1,6 +1,9 @@
 import { defineConfig, devices } from '@playwright/test'
 
-const PORT = 4173
+// E2E_PORT overrides the default so a local run never silently
+// reuses another project's server already bound to 4173
+// (reuseExistingServer is on outside CI).
+const PORT = Number(process.env['E2E_PORT'] ?? 4173)
 const BASE_URL = `http://localhost:${PORT}`
 
 export default defineConfig({
@@ -32,16 +35,16 @@ export default defineConfig({
   ],
   webServer: {
     command:
-      'pnpm --filter @thock/web build && pnpm --filter @thock/web start:e2e',
+      `pnpm --filter @thock/web build && pnpm --filter @thock/web exec next start -p ${PORT}`,
     url: BASE_URL,
     reuseExistingServer: !process.env['CI'],
     timeout: 180_000,
     stdout: 'pipe',
     stderr: 'pipe',
     env: {
-      // Suppress GTM/GA in e2e builds — `<GoogleTagManager>` reads
-      // this at SSR time and renders null when set, so Playwright
-      // navigation never fires pageviews to the prod GA property.
+      // Suppress telemetry in e2e builds — `<VercelAnalytics>` and
+      // `<SpeedInsights>` read this at SSR time and render null when
+      // set, so Playwright navigation never pollutes prod datasets.
       DISABLE_ANALYTICS: '1',
     },
   },

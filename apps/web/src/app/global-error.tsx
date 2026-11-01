@@ -5,7 +5,7 @@ import { OG_PALETTE } from '@/components/og/palette'
 /**
  * Root-layout error boundary. `error.tsx` (and every route-family
  * error.tsx) only catches errors thrown by children of layout.tsx —
- * if layout.tsx itself (Header, Footer, GTM, analytics, font
+ * if layout.tsx itself (Header, Footer, analytics, font
  * bindings) throws, only this file's own `<html>`/`<body>` can
  * render a fallback. Kept dependency-free (no @thock/ui, no
  * Tailwind classes) since it must survive whatever broke the rest

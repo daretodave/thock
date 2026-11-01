@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from 'next'
 import localFont from 'next/font/local'
 import { Header } from '@/components/ui/Header'
 import { Footer } from '@/components/ui/Footer'
-import { GoogleTagManager } from '@/components/analytics/GoogleTagManager'
 import { VercelAnalytics } from '@/components/analytics/VercelAnalytics'
 import { SpeedInsights } from '@/components/analytics/SpeedInsights'
 import { OG_PALETTE } from '@/components/og/palette'
@@ -67,7 +66,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <a href="#main" className="skip-link">
           Skip to main content
         </a>
-        <GoogleTagManager />
         <Header />
         {children}
         <Footer />

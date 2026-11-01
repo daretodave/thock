@@ -70,7 +70,7 @@ and ask.
 | Lint | **ESLint** (Next config) + **Prettier** + `prettier-plugin-tailwindcss` | Default |
 | Pkg mgr | **pnpm 9** | Lockfile committed |
 | Hosting | **Vercel** (Hobby tier) | Native Next.js host, auto-deploys on push, generous free tier |
-| Analytics | **Plausible** (script tag, eventual) | Privacy-respecting |
+| Analytics | **Vercel Web Analytics** + **Speed Insights** (`@vercel/analytics`, `@vercel/speed-insights`) | Cookieless, no consent banner needed. GTM/GA4 removed 2026-11-01 (/oversight). Never reintroduce a cookie-setting tracker without a consent gate. |
 | Newsletter | **Buttondown** form embed (eventual) | No SDK / secret needed |
 
 ## URL contract (locked)

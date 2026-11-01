@@ -9,8 +9,12 @@ import { Analytics } from '@vercel/analytics/next'
  * Gated on the `DISABLE_ANALYTICS` env var (read at SSR time, not
  * `NEXT_PUBLIC_*`). Set `DISABLE_ANALYTICS=1` for e2e builds so the
  * production Vercel Analytics dataset doesn't ingest bot pageviews
- * — see `apps/e2e/playwright.config.ts`. Mirrors the GTM gate in
- * `GoogleTagManager.tsx` so a single env var kills both surfaces.
+ * — see `apps/e2e/playwright.config.ts`. Shares the env var with
+ * `SpeedInsights.tsx` so a single flag kills both surfaces.
+ *
+ * Cookieless by design: Vercel Web Analytics sets no cookies and
+ * stores no identifiers, so no consent banner is needed. GTM/GA4
+ * was removed 2026-11-01 (/oversight) for exactly that reason.
  */
 export function VercelAnalytics() {
   if (isAnalyticsDisabled()) return null

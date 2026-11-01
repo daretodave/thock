@@ -263,7 +263,6 @@ needed.
 These are encoded in the brief and in `agents.md`'s standing rules:
 
 - **Will not run `/oversight`.** It's interactive; cloud has no human.
-- **Will not run `/critique`.** Reader sub-agent needs Chrome.
 - **Will not promote `/expand` candidates.** Only local `/oversight` does that.
 - **Will not `--no-verify` or force-push.** Standing rule.
 - **Will not half-commit.** A blocked tick exits without committing.

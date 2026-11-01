@@ -44,7 +44,7 @@ export function BoardCompareSelector({
   }
 
   const selectClass =
-    'bg-surface border border-border rounded-sm px-3 py-2 text-body text-text font-mono ' +
+    'bg-surface border border-border-control rounded-sm px-3 py-2 text-body text-text font-mono ' +
     'focus:outline-hidden focus:ring-2 focus:ring-accent focus:ring-offset-1 focus:ring-offset-bg ' +
     'min-w-0 flex-1'
 

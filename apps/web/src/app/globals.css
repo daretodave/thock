@@ -18,6 +18,7 @@
   --color-surface-hi: var(--thock-surface-hi);
   --color-border: var(--thock-border);
   --color-border-hi: var(--thock-border-hi);
+  --color-border-control: var(--thock-border-control);
   --color-text: var(--thock-text);
   --color-text-2: var(--thock-text-2);
   --color-text-3: var(--thock-text-3);

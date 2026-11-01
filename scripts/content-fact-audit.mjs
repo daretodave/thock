@@ -766,7 +766,9 @@ const NUMBER_WORDS = {
 function extractNominalDate(frontmatterText) {
   const m = frontmatterText.match(/^(?:publishedAt|date):\s*['"]?(\d{4}-\d{2}-\d{2})/m)
   if (!m) return null
-  const date = new Date(m[1])
+  // Local midnight, not `new Date('YYYY-MM-DD')` (UTC midnight): iso-week.mjs
+  // reads local getters, so a UTC parse slips a day west of UTC.
+  const date = new Date(`${m[1]}T00:00:00`)
   return Number.isNaN(date.getTime()) ? null : date
 }
 

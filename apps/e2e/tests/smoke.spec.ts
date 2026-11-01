@@ -137,17 +137,17 @@ test.describe('canonical URL walker — desktop', () => {
 })
 
 test('404 routes render not-found pages', async ({ page }) => {
-  // We assert the rendered not-found UI rather than the HTTP status:
-  // production Vercel correctly returns 404, but `next start` locally
-  // serves the same UI with 200 in Next 15.5 for the article route
-  // specifically. The user-visible behavior is what the e2e here
-  // protects; production deploy:smoke catches any 5xx regression.
-  await page.goto('/article/this-slug-does-not-exist')
+  // Both routes set `dynamicParams = false`, so unknown slugs carry a
+  // real 404 status (no soft-404) while the root boundary still
+  // renders entity-specific copy via RouteAwareNotFound.
+  const articleRes = await page.goto('/article/this-slug-does-not-exist')
+  expect(articleRes?.status()).toBe(404)
   await expect(page.getByRole('heading', { level: 1 })).toContainText(
     /doesn.{1,3}t exist/i,
   )
 
-  await page.goto('/tag/this-tag-does-not-exist')
+  const tagRes = await page.goto('/tag/this-tag-does-not-exist')
+  expect(tagRes?.status()).toBe(404)
   await expect(page.getByRole('heading', { level: 1 })).toContainText(
     /no tag with that name/i,
   )

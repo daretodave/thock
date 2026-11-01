@@ -82,7 +82,7 @@ export function MobileNav(): ReactElement {
         aria-controls={menuId}
         data-testid="mobile-nav-toggle"
         onClick={() => setOpen((v) => !v)}
-        className="inline-flex h-9 w-9 items-center justify-center border border-border text-text-2 hover:text-text hover:border-border-hi transition-colors md:hidden focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
+        className="inline-flex h-9 w-9 items-center justify-center border border-border-control text-text-2 hover:text-text hover:border-text-3 transition-colors md:hidden focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
       >
         {open ? (
           <svg

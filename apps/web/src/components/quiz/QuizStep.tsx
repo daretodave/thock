@@ -49,7 +49,7 @@ export function QuizStep({ question, options, selected, onSelect, autoFocus = fa
                 'focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu',
                 isSelected
                   ? 'border-accent-mu bg-surface text-text'
-                  : 'border-border bg-bg-2 text-text-2 hover:border-border-hi hover:text-text',
+                  : 'border-border-control bg-bg-2 text-text-2 hover:border-text-3 hover:text-text',
               ].join(' ')}
             >
               <span className="block font-medium text-base">{opt.label}</span>

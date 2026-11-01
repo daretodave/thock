@@ -9,9 +9,9 @@ import { SpeedInsights as VercelSpeedInsights } from '@vercel/speed-insights/nex
  * Gated on the `DISABLE_ANALYTICS` env var (read at SSR time, not
  * `NEXT_PUBLIC_*`). Set `DISABLE_ANALYTICS=1` for e2e builds so the
  * production Speed Insights dataset doesn't ingest bot pageviews —
- * see `apps/e2e/playwright.config.ts`. Mirrors the gates in
- * `VercelAnalytics.tsx` and `GoogleTagManager.tsx` so a single env
- * var kills every telemetry surface.
+ * see `apps/e2e/playwright.config.ts`. Mirrors the gate in
+ * `VercelAnalytics.tsx` so a single env var kills every telemetry
+ * surface.
  */
 export function SpeedInsights() {
   if (isAnalyticsDisabled()) return null

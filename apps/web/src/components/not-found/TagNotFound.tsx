@@ -1,19 +1,15 @@
-'use client'
-
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 import { Container, Stack } from '@thock/ui'
-import {
-  SuggestedArticles,
-  pathnameToSlug,
-} from '@/components/not-found/SuggestedArticles'
+import { SuggestedArticles } from './SuggestedArticles'
 
-export default function TagNotFound() {
-  const pathname = usePathname()
-  const slug = pathnameToSlug(pathname)
-
+/**
+ * Entity-specific 404 body for /tag/<unknown-slug>. Rendered by the
+ * root `app/not-found.tsx` via `RouteAwareNotFound` (the route sets
+ * `dynamicParams = false`, so Next serves the root boundary with a
+ * real 404 status; segment-level not-found files are bypassed).
+ */
+export function TagNotFound({ slug }: { slug: string }) {
   return (
-    <main id="main" className="flex-1">
     <Container as="section" className="py-24">
       <Stack gap={6}>
         <div className="flex flex-col gap-4">
@@ -41,6 +37,5 @@ export default function TagNotFound() {
         </Link>
       </Stack>
     </Container>
-    </main>
   )
 }

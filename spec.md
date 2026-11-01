@@ -134,7 +134,7 @@ A web-based content and news hub for mechanical keyboard enthusiasts. thock aggr
 - **Frontend:** Next.js (App Router) on Vercel — strong content site primitives, ISR for freshness, great Lighthouse scores out of the box.
 - **CMS:** Sanity or Payload (developer-friendly, good content modeling).
 - **Search:** Algolia or Meilisearch (Meili if cost-sensitive).
-- **Analytics:** Plausible or Fathom (privacy-respecting, no cookie banner).
+- **Analytics:** Vercel Web Analytics (cookieless, privacy-respecting, no cookie banner).
 - **Email:** Buttondown or ConvertKit for the newsletter.
 - **Hosting/CDN:** Vercel + the CMS's own CDN for assets.
 

@@ -102,7 +102,8 @@
 - evidence: `apps/web/src/content/articles/plate-materials-explained.mdx` "Combinations" section (POM+gasket-mount caution) vs. this tick's scout research confirming Mode's Sonnet ships POM as its stock/no-upcharge plate on a block-mount system the hobby files as gasket-mount
 - next: `/iterate` — scout research on whether Mode's block-mount compliance budget differs meaningfully from a foam-strip gasket (which would resolve the tension without contradicting either claim), then a small prose reconciliation pass
 
-### [needs-user-call] [engineering] [3.6] GTM analytics ships with no consent gate; `bearings.md` still documents the originally-planned cookieless Plausible tag
+### [x] [engineering] [3.6] GTM analytics ships with no consent gate; `bearings.md` still documents the originally-planned cookieless Plausible tag
+- resolved 2026-11-01 via `/oversight`: switched to cookieless. GTM/GA4 removed; Vercel Web Analytics + Speed Insights (already wired) are the only telemetry. `bearings.md` + `spec.md` reconciled; e2e guards against any GTM/GA4 reintroduction.
 - category: engineering
 - filed: 2026-09-05 by cloud /iterate audit (fresh general-purpose sweep, angle: analytics/consent)
 - impact: 6 (`apps/web/src/components/analytics/GoogleTagManager.tsx:18-20`'s own code comment reads "No consent gate yet — thock collects no PII; GTM is page-level pageview tracking only" — but GDPR/PECR consent requirements for non-essential cookies turn on cookie use, not PII collection, so the reasoning doesn't actually clear the compliance bar. Rendered unconditionally from `apps/web/src/app/layout.tsx:70`, gated only by a `DISABLE_ANALYTICS` bot-suppression flag, not user consent. `plan/bearings.md:73` still states `Analytics | Plausible (script tag, eventual) | Privacy-respecting` — docs were never reconciled after the GTM pivot locked via `/oversight 2026-05-09`, so this is an undocumented architecture change plus an unaddressed compliance gap, not a one-off bug)
@@ -125,7 +126,8 @@
 
 ## Open findings
 
-### [needs-user-call] [bug] [4.2] `/article/[slug]` and `/tag/[slug]` soft-404 fix is structurally blocked — real 404 status and the "did you mean" not-found UX are mutually exclusive under current Next.js routing
+### [x] [bug] [4.2] `/article/[slug]` and `/tag/[slug]` soft-404 fix is structurally blocked — real 404 status and the "did you mean" not-found UX are mutually exclusive under current Next.js routing
+- resolved 2026-11-01 via `/oversight` (option: real 404 + root suggestions): both routes set `dynamicParams = false`; root `not-found.tsx` renders `RouteAwareNotFound`, which restores the entity copy + "did you mean" suggestions for /article/* and /tag/*. Segment not-found files removed (bypassed under dynamicParams=false). smoke.spec asserts 404 status.
 - category: bug
 - filed: 2026-07-18 by cloud /iterate audit (fresh general-purpose sweep, then investigated + reverted same tick)
 - impact: 7 (same impact reasoning as the closed-out #524 partial fix: these are the two highest-traffic dynamic route families, and soft-404s risk Search Console flags/wasted crawl budget)
@@ -135,7 +137,8 @@
 - issue: #533 (opened, investigated same tick, closed not-planned — see issue comments for the full local-repro evidence trail)
 > Filed same-tick as investigated: the fresh sweep's top finding (score 4.2) matched a standing follow-up gap from #524's partial resolution, was implemented, and failed its own e2e coverage (`polish.spec.ts`'s two "did you mean" assertions) on the first `pnpm verify` pass. Rather than iterate blindly against a gate that was correctly catching a real, structural regression, did a direct local repro (`next build && next start` + curl, both `dynamicParams` states) to confirm the constraint before reverting — this is a routing-layer limitation, not an implementation bug, so further iterate-tick attempts at "just read the pathname differently" would repeat this same dead end. All file changes reverted to a clean working tree; no commit shipped this line of investigation. Falls through to the next candidate finding for this tick.
 
-### [needs-user-call] [engineering] [3.0] mirrored `loop:opened` GitHub issues can go permanently un-drained if not picked the same tick they're filed
+### [x] [engineering] [3.0] mirrored `loop:opened` GitHub issues can go permanently un-drained if not picked the same tick they're filed
+- resolved 2026-11-01 via `/oversight` (option: reconciliation step): new `scripts/plan/orphan-issues.mjs` (tested) + `/iterate` Step 1.5 backfills a Pending row for every open mirror issue with no plan reference before work is picked.
 - category: engineering
 - filed: 2026-08-09 by cloud /iterate audit (fresh general-purpose sweep, discovered while investigating why #776 and #799 sat open with no AUDIT.md row)
 - impact: 5 (two MED-severity, fully-verified content bugs — #776 and #799 — sat live and un-actioned for up to 2+ days purely because `skills/iterate.md` §5 Step 2.5 only writes an `- issue: #N` field onto a row that's already in `AUDIT.md`; if a finding is mirrored to GitHub but not picked that same tick, and never gets a formal row, it's invisible to every future audit since `/iterate` reads `AUDIT.md`, not the open-issues list, as its source of truth)
@@ -183,7 +186,8 @@
 - next: restore Keebz N Cables to the W34 row's `note` field, matching the corpus-wide five-vendor framing
 - issue: #956
 
-### [needs-user-call] [a11y] [1.3] default-state UI-component borders fail WCAG 1.4.11 non-text contrast (1.42:1 / 2.24:1 vs. 3:1 minimum) — real fix is a global dark-theme lightness call, not a mechanical edit
+### [x] [a11y] [1.3] default-state UI-component borders fail WCAG 1.4.11 non-text contrast (1.42:1 / 2.24:1 vs. 3:1 minimum) — real fix is a global dark-theme lightness call, not a mechanical edit
+- resolved 2026-11-01 via `/oversight` (option: form controls only): new `--thock-border-control` token (dark L0.55, light L0.61; >= 3:1 vs bg/bg-2/surface/surface-hi in both themes, guarded by `packages/tokens/__tests__/contrast.test.ts`) applied to inputs, selects and bordered buttons. Card/divider borders keep the quiet `--thock-border`.
 - category: a11y
 - filed: 2026-09-08 by cloud /iterate audit (pass 424, fresh general-purpose sweep, angle: numeric WCAG contrast computation on tokens.css OKLCH values — text-color contrast was already guarded by existing component tests, but non-text/UI-component border contrast had never been computed)
 - impact: 5 (`--thock-border` (dark-mode `oklch(0.305 0.007 250)`) measures **1.42:1** against `--thock-bg` and **1.24:1** against `--thock-surface`; `--thock-border-hi` measures **2.24:1** / **1.97:1** — both well under the 3:1 minimum SC 1.4.11 requires for a UI component's visual boundary. This is the sole rest-state boundary indicator for every text input, `<select>`, and border-styled button site-wide: `ButtondownForm.tsx:76-77,85-86` (email input + both submit buttons), `SwitchCompareSelector.tsx:41` / `BoardCompareSelector.tsx:41` (compare-tool selects), plus `QuizStep.tsx`, `GroupBuyCountdownRow.tsx`, `GroupBuyRow.tsx`, `MobileNav.tsx`, `RootNotFound.tsx`. Focus state is unaffected (accent ring measures 9.97:1) — this only affects sighted low-vision users scanning the page before interacting.

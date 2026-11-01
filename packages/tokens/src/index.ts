@@ -14,6 +14,7 @@ export const colors = {
   'surface-hi': 'var(--thock-surface-hi)',
   border: 'var(--thock-border)',
   'border-hi': 'var(--thock-border-hi)',
+  'border-control': 'var(--thock-border-control)',
   text: 'var(--thock-text)',
   'text-2': 'var(--thock-text-2)',
   'text-3': 'var(--thock-text-3)',

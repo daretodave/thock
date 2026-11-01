@@ -44,13 +44,11 @@ function describeTag(tag: Tag, count: number): string {
   return `Articles tagged ${tag.name} on thock — ${count} ${noun}.`
 }
 
-// `dynamicParams` stays at the Next.js default (true) here — the
-// sibling `not-found.tsx` now reads the pathname client-side, but
-// `dynamicParams = false` still bypasses that segment's own
-// not-found boundary entirely (falls back to the root one, losing
-// "did you mean" suggestions), a routing-layer behavior independent
-// of how the pathname is read. Confirmed via local build+start;
-// see AUDIT.md for the investigation trail.
+// Unknown slugs get a real HTTP 404. Next then renders the root
+// not-found boundary (not a segment one); `RouteAwareNotFound`
+// restores the entity copy + "did you mean" suggestions there.
+export const dynamicParams = false
+
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
   return getAllTags().map((t) => ({ slug: t.slug }))
 }
