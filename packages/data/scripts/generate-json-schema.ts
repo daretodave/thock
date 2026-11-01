@@ -42,7 +42,9 @@ export async function generateAll(): Promise<{ diffs: string[] }> {
     const json = { title: name, ...z.toJSONSchema(schema) }
     const text = stableStringify(json)
     const file = join(outDir, `${name}.schema.json`)
-    const existing = existsSync(file) ? readFileSync(file, 'utf-8') : null
+    // Line endings are normalized before comparing: a Windows checkout
+    // (core.autocrlf) writes CRLF, which is not schema drift.
+    const existing = existsSync(file) ? readFileSync(file, 'utf-8').replace(/\r\n/g, '\n') : null
     if (existing !== text) {
       writeFileSync(file, text)
       diffs.push(file)
