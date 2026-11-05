@@ -184,21 +184,41 @@ function wordDistance(text, posA, posB) {
 // alias (`id="<alias>"` / `id='<alias>'` in the raw MDX source — the
 // literal rendered name isn't present in source for a self-closing
 // <PartReference id="..." /> tag, so the attribute value is the only
-// reliable textual anchor for that usage).
+// reliable textual anchor for that usage). Returns each mention's `length`
+// alongside its `index` — see wordDistanceToMention below for why the full
+// span (not just the start offset) matters for a multi-word name.
 function findNameMentions(body, part, switchRecord) {
   const mentions = []
   const nameRe = new RegExp(`\\b${escapeRegex(switchRecord.name)}\\b`, 'gi')
   let m
   while ((m = nameRe.exec(body)) !== null) {
-    mentions.push(m.index)
+    mentions.push({ index: m.index, length: m[0].length })
   }
   if (part.id) {
     const aliasRe = new RegExp(`id=["']${escapeRegex(part.id)}["']`, 'g')
     while ((m = aliasRe.exec(body)) !== null) {
-      mentions.push(m.index)
+      mentions.push({ index: m.index, length: m[0].length })
     }
   }
   return mentions
+}
+
+// wordDistance measures the gap between two *points*, so when a mention is
+// a multi-word name (e.g. "Cherry MX2A Red") sitting *before* the number,
+// passing its bare start offset only skips the first word of the match —
+// the rest of the name's own words get miscounted as if they were text
+// "between" the mention and the number. Real-corpus case
+// (switch-actuation-weight-buying-guide.mdx): "the Cherry MX2A Red at 45
+// grams, the Durock T1 at 55 grams" — naive start-offset distance makes
+// "Cherry MX2A Red" (3 words) read as farther from "45" than "Durock T1"
+// (2 words) is, even though "Red" sits only one token before "45" and
+// "Durock T1" sits two tokens after it — misattributing Cherry's own
+// citation to Durock T1. Anchoring on the mention's *end* when it precedes
+// the number (and its start when it follows, same as before) fixes this by
+// construction rather than by name-length-specific casing.
+function wordDistanceToMention(body, numberIndex, mention) {
+  const anchor = mention.index < numberIndex ? mention.index + mention.length : mention.index
+  return wordDistance(body, numberIndex, anchor)
 }
 
 // Matches "<N>g", "<N> gram(s)", "<N>-gram(s)" — but not "<N>g/cm³" (density,
@@ -223,8 +243,17 @@ const BOTTOM_OUT_RE = /bottom[\s-]?out/i
 // the *difference* between actuation and bottom-out, not either absolute
 // weight. Recurring phrasing in the switch-comparison corpus; without this
 // guard the delta value gets diffed against an absolute springGrams field
-// and flagged as a false-positive mismatch.
-const DELTA_RE = /\b(?:spread|delta|gap)\b/i
+// and flagged as a false-positive mismatch. "climbs" and "band" are the
+// same shape phrased differently — real-corpus false positives found
+// during the chunk 01.5 live-corpus spot-check: "the Durock T1 climbs a
+// full 12g after its bump" (silent-switch-damping-deep-dive.mdx,
+// gazzew-boba-u4t-deep-dive.mdx — the 12g is the actuation-to-bottom-out
+// delta, not either absolute weight) and "the Cherry MX2A Red (45g
+// actuation...), the Kailh Box Jade (50g...), and the Durock T1 (55g...)
+// all sit within a single 10g band" (switch-actuation-weight-buying-
+// guide.mdx — the 10g is the spread across three *different* switches'
+// actuation values, not any one switch's own spring-weight field).
+const DELTA_RE = /\b(?:spread|delta|gap|climbs?|band)\b/i
 
 // Looks within FIELD_WINDOW_TOKENS of `numberIndex` for a delta-ish keyword
 // first (see DELTA_RE — a delta phrase like "spread to bottom-out at just
@@ -252,20 +281,109 @@ function detectField(body, numberIndex) {
   }
   if (withinWindow(DELTA_RE)) return 'delta'
 
-  let best = null // { field, distance }
+  let best = null // { field, distance, isAfter }
   const consider = (regex, field) => {
     const re = new RegExp(regex, 'gi')
     let m
     while ((m = re.exec(windowText)) !== null) {
-      const dist = wordDistance(body, numberIndex, windowOffset + m.index)
-      if (dist <= FIELD_WINDOW_TOKENS && (!best || dist < best.distance)) {
-        best = { field, distance: dist }
+      const matchPos = windowOffset + m.index
+      const dist = wordDistance(body, numberIndex, matchPos)
+      if (dist > FIELD_WINDOW_TOKENS) continue
+      const isAfter = matchPos >= numberIndex
+      // On a *tied* distance, prefer the keyword that trails the number
+      // (the corpus's own "<N>g <field>," convention — "62g actuation,
+      // 68g bottom-out") over one that leads it. A tie happens whenever
+      // two numbers and two field words alternate tightly, because an
+      // immediately-adjacent token pair is always distance 0 regardless of
+      // which side it's on: in "62g actuation, 68g bottom-out", "actuation"
+      // sits at distance 0 on *both* sides of 68g (0 after 62g, 0 before
+      // 68g) — but it is 62g's own label, not 68g's. Real-corpus false
+      // positive this fixes: silent-switch-damping-deep-dive.mdx's "<the
+      // U4> arrives at its floor with ... 62g actuation, 68g bottom-out"
+      // was flagging 68g as an *actuation* citation before this guard.
+      if (!best || dist < best.distance || (dist === best.distance && isAfter && !best.isAfter)) {
+        best = { field, distance: dist, isAfter }
       }
     }
   }
   consider(ACTUATION_RE, 'actuation')
   consider(BOTTOM_OUT_RE, 'bottomOut')
   return best ? best.field : null
+}
+
+// "<N>g / <M>g" is an explicit, self-labeling actuation/bottom-out pair —
+// first value is actuation, second is bottom-out, by the corpus's own
+// convention (see the four comparison-ladder rows in
+// durock-t1-deep-dive.mdx's InlineViz alt text, e.g. "62g / 68g"). A field
+// keyword appearing nearby in that same alt text usually describes the
+// *row* as a whole ("62g / 68g — heaviest actuation, long dwell") rather
+// than literally labeling whichever of the two numbers sits closest to it
+// — "heaviest actuation" is a comparison the U4T wins outright (see the
+// deep-dive's own prose: "the U4T's 62g actuation is the heaviest
+// breakpoint"), not a claim that 68g is an actuation value. Real-corpus
+// false positive this guards: durock-t1-deep-dive.mdx flagged the U4T's
+// 68g (bottom-out) as a mismatched *actuation* citation purely because
+// "actuation" was the nearest field word, with no competing "bottom-out"
+// in range. Numbers in a slash pair skip keyword-based field detection
+// entirely and fall through to the matches-neither-recorded-value
+// "unspecified" check instead, which still safely catches a real mismatch
+// (e.g. if neither half of the pair matched the data) without misreading
+// a nearby adjective as a field label.
+function isSlashPairNumber(body, numberIndex) {
+  const before = body.slice(Math.max(0, numberIndex - 20), numberIndex)
+  const after = body.slice(numberIndex, numberIndex + 20)
+  return /\d+(?:\.\d+)?\s*g\s*\/\s*$/i.test(before) || /^\d+(?:\.\d+)?\s*g\s*\/\s*\d/i.test(after)
+}
+
+// A possessive "<Word>'s <N>g" immediately before the number is a strong
+// textual ownership signal — if that word doesn't match the switch the
+// nearest-mention search is about to credit, the citation almost
+// certainly belongs to whatever *that* possessive names instead, not the
+// resolved candidate. Restricted to a capitalized owner word (a proper-
+// noun signal) to avoid false-skipping a generic phrase like "the spring's
+// 55g actuation" where "spring" obviously isn't a separate named switch.
+// Real-corpus false positive this guards: split-ergo-parts-pairing.mdx's
+// "Cherry MX2A Red actuates at 45g against the Oil King's 55g" was
+// crediting the Oil King's own 55g to Cherry MX2A Red, because "the Oil
+// King" (missing its "Gateron" brand prefix) doesn't match the tracked
+// switch's full name and so isn't itself a resolvable mention — leaving
+// Cherry MX2A Red as the only (wrong) candidate in the sentence.
+const POSSESSIVE_OWNER_RE = /([A-Z][\w-]*)['’]s\s*$/
+
+function possessiveOwnerMismatch(body, numberIndex, candidateName) {
+  const before = body.slice(Math.max(0, numberIndex - 30), numberIndex)
+  const m = before.match(POSSESSIVE_OWNER_RE)
+  if (!m) return false
+  return !candidateName.toLowerCase().includes(m[1].toLowerCase())
+}
+
+// "offered at 52g, 62g and 68g" — a list of a product's *own* SKU/variant
+// options, not a single absolute-weight citation attributable to any one
+// named switch. Proximity alone can't tell which (if any) list position is
+// "the" citation once 3+ sibling values are being enumerated — mirrors
+// NUMBER_SEQUENCE_RUN_RE's "walked series" guard in the tracker-score
+// checker below, adapted to the "<N>g" unit-suffixed shape these citations
+// carry instead of bare numbers. Real-corpus false positive this guards:
+// gazzew-boba-family-deep-dive.mdx's "The Bobagum ... offered at 52g, 62g
+// and 68g" (Bobagum's own variant lineup, not a mentionedParts switch) was
+// being misattributed to the next sentence's Cherry MX2A Silent Black
+// mention — the nearest *tracked* switch mention in the article, but not
+// what these numbers are actually about.
+const GRAM_SEQUENCE_RUN_RE =
+  /\d+(?:\.\d+)?\s*g(?:\s*(?:,\s*(?:and\s+)?|\s+and\s+)\d+(?:\.\d+)?\s*g){2,}/gi
+
+function findGramSequenceRunIndices(body) {
+  const skip = new Set()
+  let runMatch
+  GRAM_SEQUENCE_RUN_RE.lastIndex = 0
+  while ((runMatch = GRAM_SEQUENCE_RUN_RE.exec(body)) !== null) {
+    const innerRe = /\d+(?:\.\d+)?\s*g\b/gi
+    let gm
+    while ((gm = innerRe.exec(runMatch[0])) !== null) {
+      skip.add(runMatch.index + gm.index)
+    }
+  }
+  return skip
 }
 
 // Sentence boundary offsets (start-of-sentence positions, including 0),
@@ -332,25 +450,31 @@ function findNumericMismatches(body, switchesWithParts) {
   const mentionsBySlug = switchesWithParts.map(({ part, record }) => ({
     slug: record.slug,
     record,
-    mentions: findNameMentions(body, part, record).map((index) => ({
-      index,
-      sentence: sentenceIndexAt(boundaries, index),
+    mentions: findNameMentions(body, part, record).map((mention) => ({
+      ...mention,
+      sentence: sentenceIndexAt(boundaries, mention.index),
     })),
   }))
 
   const numbers = findGramNumbers(body)
+  const gramRunIndices = findGramSequenceRunIndices(body)
   const mismatches = []
 
   for (const num of numbers) {
+    // "offered at 52g, 62g and 68g" — a variant-option list, not a single
+    // absolute-weight citation. See findGramSequenceRunIndices.
+    if (gramRunIndices.has(num.index)) continue
+
     const numSentence = sentenceIndexAt(boundaries, num.index)
 
     // Prefer the nearest mention within the *same sentence* as the number —
     // this is what resolves the enumeration-boundary misattribution above.
     let nearest = null // { slug, record, distance }
+    let viaFallback = false
     for (const entry of mentionsBySlug) {
       for (const mention of entry.mentions) {
         if (mention.sentence !== numSentence) continue
-        const dist = wordDistance(body, num.index, mention.index)
+        const dist = wordDistanceToMention(body, num.index, mention)
         if (!nearest || dist < nearest.distance) {
           nearest = { slug: entry.slug, record: entry.record, distance: dist }
         }
@@ -360,9 +484,10 @@ function findNumericMismatches(body, switchesWithParts) {
     // No same-sentence mention — fall back to the nearest mention anywhere
     // in the article, still gated by WINDOW_TOKENS.
     if (!nearest) {
+      viaFallback = true
       for (const entry of mentionsBySlug) {
         for (const mention of entry.mentions) {
-          const dist = wordDistance(body, num.index, mention.index)
+          const dist = wordDistanceToMention(body, num.index, mention)
           if (!nearest || dist < nearest.distance) {
             nearest = { slug: entry.slug, record: entry.record, distance: dist }
           }
@@ -372,10 +497,14 @@ function findNumericMismatches(body, switchesWithParts) {
 
     if (!nearest || nearest.distance > WINDOW_TOKENS) continue
 
+    // A possessive naming a *different* entity right next to the number
+    // ("the Oil King's 55g") outranks a resolved-but-wrong nearest mention.
+    if (possessiveOwnerMismatch(body, num.index, nearest.record.name)) continue
+
     const { record } = nearest
     const springGrams = record.springGrams || {}
-    const field = detectField(body, num.index)
-    if (field === 'delta') continue // "N-gram spread/delta/gap" — not an absolute weight claim.
+    const field = isSlashPairNumber(body, num.index) ? null : detectField(body, num.index)
+    if (field === 'delta') continue // "N-gram spread/delta/gap/climbs/band" — not an absolute weight claim.
 
     if (field) {
       const expected = springGrams[field]
@@ -390,10 +519,20 @@ function findNumericMismatches(body, switchesWithParts) {
         })
       }
     } else {
-      // Ambiguous — no "actuation"/"bottom-out" keyword nearby. Only flag
-      // when the cited number matches neither recorded field, to keep the
-      // false-positive rate down for unlabeled mentions (e.g. a generic
-      // "spring weight" aside).
+      // Ambiguous — no "actuation"/"bottom-out" keyword nearby, and no
+      // slash-pair exemption applies. Requiring a same-sentence mention
+      // here (never the cross-sentence fallback) keeps this already-weak
+      // signal from compounding with a second one: an attribution that
+      // crossed a sentence boundary *and* carries no field keyword is too
+      // thin to flag rather than skip. Real-corpus false positive this
+      // guards: switch-actuation-weight-buying-guide.mdx's "Actuation at
+      // the lighter end of the scale, generally below 45g" (a category
+      // description, no switch named in its own sentence) was being
+      // misattributed to the next sentence's Gateron Magnetic Jade mention.
+      if (viaFallback) continue
+      // Only flag when the cited number matches neither recorded field, to
+      // keep the false-positive rate down for unlabeled mentions (e.g. a
+      // generic "spring weight" aside).
       const { actuation, bottomOut } = springGrams
       const matchesEither =
         (typeof actuation === 'number' && actuation === num.value) ||
@@ -1227,8 +1366,12 @@ export const __test = {
   escapeRegex,
   wordDistance,
   findNameMentions,
+  wordDistanceToMention,
   findGramNumbers,
   detectField,
+  isSlashPairNumber,
+  possessiveOwnerMismatch,
+  findGramSequenceRunIndices,
   segmentSentenceBoundaries,
   sentenceIndexAt,
   findNumericMismatches,

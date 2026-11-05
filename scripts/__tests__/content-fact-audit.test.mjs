@@ -17,8 +17,12 @@ const {
   parseMentionedParts,
   wordDistance,
   findNameMentions,
+  wordDistanceToMention,
   findGramNumbers,
   detectField,
+  isSlashPairNumber,
+  possessiveOwnerMismatch,
+  findGramSequenceRunIndices,
   findNumericMismatches,
   checkArticle,
   checkNewsletter,
@@ -163,20 +167,49 @@ describe('findNameMentions', () => {
     const body = 'The Gateron Oil King is a popular linear switch.'
     const mentions = findNameMentions(body, { id: 'oil-king' }, OIL_KING)
     assert.equal(mentions.length, 1)
-    assert.equal(mentions[0], body.indexOf('Gateron Oil King'))
+    assert.equal(mentions[0].index, body.indexOf('Gateron Oil King'))
+    assert.equal(mentions[0].length, 'Gateron Oil King'.length)
   })
 
   test('finds a PartReference id= alias mention even without the name in source', () => {
     const body = 'The <PartReference id="oil-king" /> runs heavier than most.'
     const mentions = findNameMentions(body, { id: 'oil-king' }, OIL_KING)
     assert.equal(mentions.length, 1)
-    assert.equal(mentions[0], body.indexOf('id="oil-king"'))
+    assert.equal(mentions[0].index, body.indexOf('id="oil-king"'))
+    assert.equal(mentions[0].length, 'id="oil-king"'.length)
   })
 
   test('finds both when name and alias both appear', () => {
     const body = 'The <PartReference id="oil-king" /> — Gateron Oil King — runs heavy.'
     const mentions = findNameMentions(body, { id: 'oil-king' }, OIL_KING)
     assert.equal(mentions.length, 2)
+  })
+})
+
+describe('wordDistanceToMention', () => {
+  test('anchors on the mention end (not start) when a multi-word name precedes the number', () => {
+    // Real-corpus shape (switch-actuation-weight-buying-guide.mdx): "the
+    // Cherry MX2A Red at 45 grams, the Durock T1 at 55 grams" — the naive
+    // start-offset distance makes the 3-word "Cherry MX2A Red" mention read
+    // as farther from "45" than it really is (only "at" separates "Red"
+    // from "45"), misattributing the citation to "Durock T1" instead.
+    const body = 'the Cherry MX2A Red at 45 grams, the Durock T1 at 55 grams'
+    const numIdx = body.indexOf('45')
+    const cherryMention = { index: body.indexOf('Cherry MX2A Red'), length: 'Cherry MX2A Red'.length }
+    const durockMention = { index: body.indexOf('Durock T1'), length: 'Durock T1'.length }
+    const cherryDist = wordDistanceToMention(body, numIdx, cherryMention)
+    const durockDist = wordDistanceToMention(body, numIdx, durockMention)
+    assert.ok(
+      cherryDist < durockDist,
+      `expected Cherry's mention (${cherryDist}) to be nearer than Durock's (${durockDist})`,
+    )
+  })
+
+  test('still behaves like plain wordDistance when the mention follows the number', () => {
+    const body = 'runs at 45 grams, the Durock T1 is next'
+    const numIdx = body.indexOf('45')
+    const durockMention = { index: body.indexOf('Durock T1'), length: 'Durock T1'.length }
+    assert.equal(wordDistanceToMention(body, numIdx, durockMention), wordDistance(body, numIdx, durockMention.index))
   })
 })
 
@@ -239,6 +272,105 @@ describe('detectField', () => {
     const body = 'a 12-gram spread to bottom-out, roughly double the other switch\'s own 6-gram spread'
     const idx = body.indexOf('12-gram')
     assert.equal(detectField(body, idx), 'delta')
+  })
+
+  test('returns "delta" for a "climbs a full Ng" phrasing (real-corpus shape, no "spread" word present)', () => {
+    // gazzew-boba-u4t-deep-dive.mdx / silent-switch-damping-deep-dive.mdx:
+    // "a lighter 55g actuation that climbs a full 12 grams by the time the
+    // stroke bottoms out" — the 12 is the actuation-to-bottom-out delta,
+    // not a second absolute weight, even though "actuation" sits closer to
+    // it in raw token distance than any spread/delta/gap word does.
+    const body = 'a lighter 55g actuation that climbs a full 12 grams by the time the stroke bottoms out'
+    const idx = body.indexOf('12 grams')
+    assert.equal(detectField(body, idx), 'delta')
+  })
+
+  test('returns "delta" for a "within a single Ng band" phrasing', () => {
+    // switch-actuation-weight-buying-guide.mdx: "...the Durock T1 (55g
+    // actuation, tactile) all sit within a single 10g band" — the 10g is
+    // the spread across three *different* switches, not Durock T1's own
+    // actuation, even though "actuation" (describing a different switch's
+    // number a few words earlier) is the nearest field keyword.
+    const body = 'the Durock T1 (55g actuation, tactile) all sit within a single 10g band'
+    const idx = body.indexOf('10g')
+    assert.equal(detectField(body, idx), 'delta')
+  })
+
+  test('prefers a trailing field keyword over a leading one on a tied distance', () => {
+    // silent-switch-damping-deep-dive.mdx: "...62g actuation, 68g
+    // bottom-out, well under Cherry's 100cN" — "actuation" sits at
+    // distance 0 on *both* sides of 68g (0 tokens after 62g, 0 tokens
+    // before 68g), tying with "bottom-out" at distance 0 right after 68g.
+    // The trailing match (this corpus's own "<N>g <field>," convention)
+    // must win the tie, not whichever regex happens to be checked first.
+    const body = '62g actuation, 68g bottom-out, well under 100cN'
+    const idx = body.indexOf('68g')
+    assert.equal(detectField(body, idx), 'bottomOut')
+  })
+})
+
+describe('isSlashPairNumber', () => {
+  test('flags the second half of an explicit "Ag / Bg" shorthand pair', () => {
+    const body = "labelled '62g / 68g — heaviest actuation, long dwell, pronounced plateau'"
+    assert.equal(isSlashPairNumber(body, body.indexOf('68g')), true)
+  })
+
+  test('flags the first half too', () => {
+    const body = "labelled '62g / 68g — heaviest actuation'"
+    assert.equal(isSlashPairNumber(body, body.indexOf('62g')), true)
+  })
+
+  test('does not flag an ordinary standalone citation', () => {
+    const body = 'runs at 55g actuation and 67g bottom-out'
+    assert.equal(isSlashPairNumber(body, body.indexOf('55g')), false)
+    assert.equal(isSlashPairNumber(body, body.indexOf('67g')), false)
+  })
+})
+
+describe('possessiveOwnerMismatch', () => {
+  test('flags a possessive naming a different capitalized entity', () => {
+    // split-ergo-parts-pairing.mdx: "...against the Oil King's 55g" — the
+    // nearest-mention search resolved "Cherry MX2A Red" (wrong), but the
+    // number is textually owned by "Oil King".
+    const body = 'Cherry MX2A Red actuates at 45g against the Oil King\'s 55g'
+    const idx = body.indexOf('55g')
+    assert.equal(possessiveOwnerMismatch(body, idx, 'Cherry MX2A Red'), true)
+  })
+
+  test('does not flag when the possessive owner matches the resolved candidate', () => {
+    const body = "the Durock T1's 55g actuation"
+    const idx = body.indexOf('55g')
+    assert.equal(possessiveOwnerMismatch(body, idx, 'Durock T1'), false)
+  })
+
+  test('does not flag a lowercase generic possessive like "the spring\'s"', () => {
+    const body = "the spring's 55g actuation"
+    const idx = body.indexOf('55g')
+    assert.equal(possessiveOwnerMismatch(body, idx, 'Durock T1'), false)
+  })
+
+  test('does not flag when there is no possessive at all', () => {
+    const body = 'runs at 55g actuation'
+    const idx = body.indexOf('55g')
+    assert.equal(possessiveOwnerMismatch(body, idx, 'Durock T1'), false)
+  })
+})
+
+describe('findGramSequenceRunIndices', () => {
+  test('marks every value in a 3+ comma/and-separated gram list', () => {
+    // gazzew-boba-family-deep-dive.mdx: "offered at 52g, 62g and 68g" is
+    // the Bobagum's own variant lineup, not a single citation.
+    const body = 'dampened, and offered at 52g, 62g and 68g. Set next to the Cherry.'
+    const skip = findGramSequenceRunIndices(body)
+    assert.equal(skip.has(body.indexOf('52g')), true)
+    assert.equal(skip.has(body.indexOf('62g')), true)
+    assert.equal(skip.has(body.indexOf('68g')), true)
+  })
+
+  test('does not mark a plain two-value comparison', () => {
+    const body = 'actuates at 45g against the Oil King\'s 55g'
+    const skip = findGramSequenceRunIndices(body)
+    assert.equal(skip.size, 0)
   })
 })
 
@@ -322,6 +454,106 @@ describe('findNumericMismatches', () => {
     const mismatches = findNumericMismatches(body, [{ part: { id: 'oil-king' }, record: OIL_KING }])
     assert.equal(mismatches.length, 1)
     assert.equal(mismatches[0].foundValue, 50)
+  })
+
+  // ── chunk 01.5 live-corpus spot-check regressions ──────────────────────────
+  // Each of these reproduces a real false positive the first production run
+  // filed to plan/AUDIT.md, confirmed by hand against the live article/data
+  // pair before being fixed here.
+
+  test('does not flag the second half of an explicit "Ag / Bg" row label as a wrong field', () => {
+    // durock-t1-deep-dive.mdx: "Row two, Gazzew Boba U4T: ... labelled '62g
+    // / 68g — heaviest actuation, long dwell, pronounced plateau'." 68g is
+    // the U4T's correct bottom-out; "actuation" nearby describes the row's
+    // rank, not a label on 68g specifically.
+    const U4T = { slug: 'gazzew-boba-u4t', name: 'Gazzew Boba U4T', springGrams: { actuation: 62, bottomOut: 68 } }
+    const body =
+      "Row two, Gazzew Boba U4T: a flat-topped D-shaped plateau, labelled '62g / 68g — heaviest actuation, long dwell, pronounced plateau'."
+    const mismatches = findNumericMismatches(body, [{ part: { id: 'boba-u4t' }, record: U4T }])
+    assert.deepEqual(mismatches, [])
+  })
+
+  test('does not flag a comma-separated "Ng actuation, Mg bottom-out" pair via the tie-break', () => {
+    // silent-switch-damping-deep-dive.mdx: "...<U4> arrives at its floor
+    // with less spring behind it — 62g actuation, 68g bottom-out, well
+    // under Cherry's 100cN..."
+    const U4 = { slug: 'gazzew-boba-u4', name: 'Gazzew Boba U4', springGrams: { actuation: 62, bottomOut: 68 } }
+    const body =
+      "The Gazzew Boba U4 arrives at its floor with less spring behind it — 62g actuation, 68g bottom-out, well under Cherry's 100cN."
+    const mismatches = findNumericMismatches(body, [{ part: { id: 'boba-u4' }, record: U4 }])
+    assert.deepEqual(mismatches, [])
+  })
+
+  test('does not flag a "Bobagum ... offered at Ng, Mg and Pg" variant list against an unrelated nearby switch', () => {
+    // gazzew-boba-family-deep-dive.mdx: the Bobagum's own variant weights,
+    // immediately followed by a comparison mention of Cherry MX2A Silent
+    // Black (an untracked-by-this-sentence but mentionedParts switch) —
+    // the numbers were being misattributed to Cherry via the cross-sentence
+    // fallback.
+    const SILENT_BLACK = {
+      slug: 'cherry-mx2a-silent-black',
+      name: 'Cherry MX2A Silent Black',
+      springGrams: { actuation: 60, bottomOut: 100 },
+    }
+    const body =
+      'The Bobagum is the LT\'s silent sibling: pink or clear-top, dampened, and offered at 52g, 62g and 68g. Set next to the Cherry MX2A Silent Black, which quiets its stroke with rubber on the stem inside a conventional nylon housing, the Bobagum starts quieter at the source.'
+    const mismatches = findNumericMismatches(body, [{ part: { id: 'mx2a-silent-black' }, record: SILENT_BLACK }])
+    assert.deepEqual(mismatches, [])
+  })
+
+  test('does not flag a possessive-owned number against the wrong nearby switch', () => {
+    // split-ergo-parts-pairing.mdx: "Cherry MX2A Red actuates at 45g
+    // against the Oil King's 55g" — 55g belongs to "the Oil King" (an
+    // abbreviated mention this article never spells out with its
+    // "Gateron" prefix), not Cherry MX2A Red.
+    const CHERRY_RED = { slug: 'cherry-mx2a-red', name: 'Cherry MX2A Red', springGrams: { actuation: 45, bottomOut: 75 } }
+    const body = "Cherry MX2A Red actuates at 45g against the Oil King's 55g — ten grams stacked across a full workday."
+    const mismatches = findNumericMismatches(body, [{ part: { id: 'mx2a-red' }, record: CHERRY_RED }])
+    assert.deepEqual(mismatches, [])
+  })
+
+  test('does not flag a generic category threshold number that crosses into the next sentence', () => {
+    // switch-actuation-weight-buying-guide.mdx: "Actuation at the lighter
+    // end of the scale, generally below 45g, paired with..." names no
+    // switch in its own sentence; the next sentence's Gateron Magnetic
+    // Jade mention is a different (and correct, 30g) citation.
+    const JADE = { slug: 'gateron-magnetic-jade', name: 'Gateron Magnetic Jade', springGrams: { actuation: 30, bottomOut: 50 } }
+    const body =
+      'Actuation at the lighter end of the scale, generally below 45g, paired with a switch built for a short reset. The Gateron Magnetic Jade is again the clearest fit in this catalog, both for its 30g actuation and because magnetic switches are the ones rapid-trigger firmware is built around.'
+    const mismatches = findNumericMismatches(body, [{ part: { id: 'gateron-magnetic-jade' }, record: JADE }])
+    assert.deepEqual(mismatches, [])
+  })
+
+  test('does not flag a multi-switch spread-band number attributed to the wrong switch via wordDistance bias', () => {
+    // switch-actuation-weight-buying-guide.mdx: "the Cherry MX2A Red (45g
+    // actuation...), the Kailh Box Jade (50g...), and the Durock T1 (55g
+    // actuation, tactile) all sit within a single 10g band." The 10g is
+    // the spread across three switches, not Durock T1's own actuation. All
+    // three switches are tracked (as in the real article's frontmatter),
+    // so 45g/50g correctly resolve to Cherry/Kailh and only the 10g band
+    // value is the one this chunk's fix targets.
+    const T1 = { slug: 'durock-t1', name: 'Durock T1', springGrams: { actuation: 55, bottomOut: 67 } }
+    const CHERRY_RED = { slug: 'cherry-mx2a-red', name: 'Cherry MX2A Red', springGrams: { actuation: 45, bottomOut: 75 } }
+    const KAILH_JADE = { slug: 'kailh-box-jade', name: 'Kailh Box Jade', springGrams: { actuation: 50, bottomOut: 70 } }
+    const body =
+      'The Cherry MX2A Red (45g actuation, linear), the Kailh Box Jade (50g actuation, clicky), and the Durock T1 (55g actuation, tactile) all sit within a single 10g band.'
+    const mismatches = findNumericMismatches(body, [
+      { part: { id: 'mx2a-red' }, record: CHERRY_RED },
+      { part: { id: 'kailh-box-jade' }, record: KAILH_JADE },
+      { part: { id: 't1' }, record: T1 },
+    ])
+    assert.deepEqual(mismatches, [])
+  })
+
+  test('still flags a real cross-sentence field-confirmed mismatch (fallback is not disabled outright)', () => {
+    // The "same-sentence only" guard above applies solely to the ambiguous
+    // "unspecified" path — a keyword-confirmed citation (e.g. "actuation")
+    // can still resolve via the cross-sentence fallback.
+    const body = 'The Gateron Oil King is a popular tactile. Reviewers note a heavier-than-average 60g actuation.'
+    const mismatches = findNumericMismatches(body, [{ part: { id: 'oil-king' }, record: OIL_KING }])
+    assert.equal(mismatches.length, 1)
+    assert.equal(mismatches[0].field, 'actuation')
+    assert.equal(mismatches[0].foundValue, 60)
   })
 })
 
