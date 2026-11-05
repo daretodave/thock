@@ -90,11 +90,6 @@ New `scripts/content-fact-audit.mjs`, mirroring
 
 ## Acceptance
 
-- **A4** The script is wired into `skills/march.lanes.md`'s
-  empty-queue-refill survey chain (after `og-coverage-check.mjs`)
-  and `skills/digest.md`'s nightly breadth check, both
-  `--write`-gated, both best-effort (a non-zero exit is logged,
-  never blocks the tick).
 - **A5** A manual spot-check of the script's first real-world
   mismatch batch against the live corpus confirms zero false
   positives.
@@ -106,7 +101,6 @@ from the candidate's own accumulated evidence.
 
 ## Chunks
 
-Measure: 2 open · 3 closed · next A6
+Measure: 1 open · 4 closed · next A6
 
-- [ ] **01.4** Wire into refill chain + digest · S · closes A4 · needs —
-- [ ] **01.5** Live-corpus spot-check · S · closes A5 · needs 01.4
+- [ ] **01.5** Live-corpus spot-check · S · closes A5 · needs —

@@ -22,7 +22,7 @@ condition> · max_age: 14d`, an optional `· fallback: release`):
 
 | # | Initiative | Spec | Status | Progress |
 |---|---|---|---|---|
-| 01 | Content-fact-vs-catalog numeric-spec audit | [01-content-fact-audit.md](01-content-fact-audit.md) |  | 2 left |
+| 01 | Content-fact-vs-catalog numeric-spec audit | [01-content-fact-audit.md](01-content-fact-audit.md) |  | 1 left |
 | 02 | /quiz/board board recommender | [02-quiz-board.md](02-quiz-board.md) |  | not chunked |
 | 03 | Switch sensing (hall-effect, TMR, optical) | [03-switch-sensing.md](03-switch-sensing.md) |  | not chunked |
 | 04 | Group-buy delays and non-fulfillment | [04-group-buy-delays.md](04-group-buy-delays.md) |  | not chunked |
