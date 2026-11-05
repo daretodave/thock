@@ -667,6 +667,14 @@ time you encounter a recurring class of design ambiguity.)
   wordmark may render with custom weight but never with a
   capital T.
 - **Tagline (default):** "keyboards, deeply." — lowercase.
+- **Content-fact-audit scope:** `scripts/content-fact-audit.mjs`
+  only diffs *numeric* citations (spring/actuation weights,
+  tracker scores, "N weeks ago" week-count arithmetic) in article
+  and newsletter prose against `data/`. Pattern-based or
+  categorical claims (stale "as of this writing" phrasing,
+  categorical HE-switch claims, open-ended vendor-list precision)
+  are intentionally out of scope — only worth a new spec if they
+  keep recurring independently.
 
 ## Hard rules
 
