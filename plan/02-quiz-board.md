@@ -17,21 +17,32 @@ as part of a deliberate shift toward reader-facing features.
 
 ## Design
 
-Mirror `/quiz/keycap-set` (phase 47) exactly:
+Mirror `/quiz/keycap-set` (phase 47) and `/quiz/switch` (phase 33)
+exactly — the switch quiz is the closer sibling here since it also
+links forward into a `/compare/*` page:
 
 - `apps/web/src/app/quiz/board/page.tsx` + `loading.tsx` +
-  `opengraph-image.tsx` (hex palette only; see the Satori/oklch
-  landmine).
+  `opengraph-image.tsx` (reuse `PillarOGContent`, hex palette only;
+  see the Satori/oklch landmine already worked around there).
 - Pure `recommendBoard(answers, catalog)` helper with a weighted
   score map and unit tests; a `BoardQuiz` client component reusing
-  `QuizStep` / `ResultCard` / `QuizProgress`.
-- Questions: layout/size, mounting style (feel), case material,
-  hotswap required, rough budget. Results link to
-  `/part/board/<slug>` and offer `/compare/board` with the top two
-  preselected.
+  `QuizStep` / `QuizProgress`, with a new `BoardResultCard` (mirrors
+  `KeycapSetResultCard`, not the generic `ResultCard`, since the
+  spec/label shape differs).
+- Questions, one per `BoardSchema` field that actually
+  differentiates the 10-board catalog (`packages/data/src/schemas/
+  board.ts`): `layout`, `mountStyle`, `caseMaterial`, `hotswap`,
+  `wireless`. (The spec's original draft named `formFactor` and
+  "rough budget" / `pcbType` — neither exists on `BoardSchema`;
+  `layout` is the real field, and `wireless` is the real fifth
+  differentiator, swapped in during chunking's reality-check.)
+  Results link to `/part/board/<slug>` and, mirroring the switch
+  quiz, a "Compare top 2 →" link to `/compare/board?a=&b=` with the
+  top two results preselected.
 - `WebApplication` JSON-LD; sitemap, canonical URLs, page reads and
-  `quiz.spec.ts` extended; `/tools` gains the card;
-  `/compare/board` gains a "Find your board" link.
+  `quiz.spec.ts` extended; `/tools` gains the card; `/compare/board`
+  gains a "Not sure? Take the quiz →" link (mirrors
+  `compare-quiz-link` on `/compare/switch`).
 - URL contract: `/quiz/board` added to `plan/bearings.md`.
 
 ### Decisions made upfront (do not ask)
@@ -40,6 +51,9 @@ Mirror `/quiz/keycap-set` (phase 47) exactly:
   no new components unless reuse is impossible.
 - Recommendations come only from `data/boards/` via `@thock/data`.
   No hardcoded board copy.
+- Question dimensions are `layout`, `mountStyle`, `caseMaterial`,
+  `hotswap`, `wireless` (5 questions) — not the draft's `formFactor`
+  / budget / `pcbType`, which don't exist on `BoardSchema`.
 
 ## Acceptance
 
@@ -61,4 +75,5 @@ None.
 
 Measure: 3 open · 0 closed · next A4
 
-Not chunked yet.
+- [ ] **02.1** Core: `recommendBoard` + `BoardQuiz` route (page/loading/opengraph-image) · M · closes A1, A2 · needs —
+- [ ] **02.2** Wire into `/tools`, `/compare/board`, sitemap, canonical URLs, bearings, e2e + a11y coverage · S · closes A3 · needs 02.1
