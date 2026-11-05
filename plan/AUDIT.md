@@ -949,3 +949,143 @@
 - article-a: apps/web/src/content/articles/gateron-ink-housings-deep-dive.mdx
 - article-b: apps/web/src/content/articles/plate-materials-explained.mdx
 - action: add [plate-materials-explained](/article/plate-materials-explained) to gateron-ink-housings-deep-dive body, or vice versa
+
+### [ ] [content] [3.6] durock-t1-deep-dive — Gazzew Boba U4T spring-weight citation disagrees with data/switches/gazzew-boba-u4t.json
+- category: content
+- filed: 2026-11-05 by content-fact-audit.mjs — durock-t1-deep-dive:gazzew-boba-u4t:actuation:68
+- impact: 4 (factual-accuracy mismatch on published content)
+- ease: 9 (one-line prose correction once the mismatch is found)
+- score: 3.6 (impact × ease / 10)
+- file: apps/web/src/content/articles/durock-t1-deep-dive.mdx
+- claim: Gazzew Boba U4T actuation cited at 68g, but data/switches/gazzew-boba-u4t.json's springGrams.actuation is 62g
+- action: correct the prose citation to match data/switches/gazzew-boba-u4t.json's springGrams (or correct the data record if the data is the one that's wrong)
+
+### [ ] [content] [3.6] gazzew-boba-family-deep-dive — Cherry MX2A Silent Black spring-weight citation disagrees with data/switches/cherry-mx2a-silent-black.json
+- category: content
+- filed: 2026-11-05 by content-fact-audit.mjs — gazzew-boba-family-deep-dive:cherry-mx2a-silent-black:unspecified:52
+- impact: 4 (factual-accuracy mismatch on published content)
+- ease: 9 (one-line prose correction once the mismatch is found)
+- score: 3.6 (impact × ease / 10)
+- file: apps/web/src/content/articles/gazzew-boba-family-deep-dive.mdx
+- claim: Cherry MX2A Silent Black cited at 52g, but data/switches/cherry-mx2a-silent-black.json has neither actuation (60g) nor bottomOut (100g) at that value
+- action: correct the prose citation to match data/switches/cherry-mx2a-silent-black.json's springGrams (or correct the data record if the data is the one that's wrong)
+
+### [ ] [content] [3.6] gazzew-boba-family-deep-dive — Cherry MX2A Silent Black spring-weight citation disagrees with data/switches/cherry-mx2a-silent-black.json
+- category: content
+- filed: 2026-11-05 by content-fact-audit.mjs — gazzew-boba-family-deep-dive:cherry-mx2a-silent-black:unspecified:62
+- impact: 4 (factual-accuracy mismatch on published content)
+- ease: 9 (one-line prose correction once the mismatch is found)
+- score: 3.6 (impact × ease / 10)
+- file: apps/web/src/content/articles/gazzew-boba-family-deep-dive.mdx
+- claim: Cherry MX2A Silent Black cited at 62g, but data/switches/cherry-mx2a-silent-black.json has neither actuation (60g) nor bottomOut (100g) at that value
+- action: correct the prose citation to match data/switches/cherry-mx2a-silent-black.json's springGrams (or correct the data record if the data is the one that's wrong)
+
+### [ ] [content] [3.6] gazzew-boba-family-deep-dive — Cherry MX2A Silent Black spring-weight citation disagrees with data/switches/cherry-mx2a-silent-black.json
+- category: content
+- filed: 2026-11-05 by content-fact-audit.mjs — gazzew-boba-family-deep-dive:cherry-mx2a-silent-black:unspecified:68
+- impact: 4 (factual-accuracy mismatch on published content)
+- ease: 9 (one-line prose correction once the mismatch is found)
+- score: 3.6 (impact × ease / 10)
+- file: apps/web/src/content/articles/gazzew-boba-family-deep-dive.mdx
+- claim: Cherry MX2A Silent Black cited at 68g, but data/switches/cherry-mx2a-silent-black.json has neither actuation (60g) nor bottomOut (100g) at that value
+- action: correct the prose citation to match data/switches/cherry-mx2a-silent-black.json's springGrams (or correct the data record if the data is the one that's wrong)
+
+### [ ] [content] [3.6] gazzew-boba-u4t-deep-dive — Durock T1 spring-weight citation disagrees with data/switches/durock-t1.json
+- category: content
+- filed: 2026-11-05 by content-fact-audit.mjs — gazzew-boba-u4t-deep-dive:durock-t1:actuation:12
+- impact: 4 (factual-accuracy mismatch on published content)
+- ease: 9 (one-line prose correction once the mismatch is found)
+- score: 3.6 (impact × ease / 10)
+- file: apps/web/src/content/articles/gazzew-boba-u4t-deep-dive.mdx
+- claim: Durock T1 actuation cited at 12g, but data/switches/durock-t1.json's springGrams.actuation is 55g
+- action: correct the prose citation to match data/switches/durock-t1.json's springGrams (or correct the data record if the data is the one that's wrong)
+
+### [ ] [content] [3.6] hall-effect-rapid-trigger-plateau — Gateron Oil King "N weeks ago" citation disagrees with data/trends/2026-W25.json
+- category: content
+- filed: 2026-11-05 by content-fact-audit.mjs — hall-effect-rapid-trigger-plateau:trend-weeks-ago:2026-W25:Gateron Oil King:39
+- impact: 4 (factual-accuracy mismatch on published content)
+- ease: 9 (one-line prose correction once the mismatch is found)
+- score: 3.6 (impact × ease / 10)
+- file: apps/web/src/content/articles/hall-effect-rapid-trigger-plateau.mdx
+- claim: Gateron Oil King cited at 39 from 8 weeks ago (2026-W25), but data/trends/2026-W25.json's rows[].score for that row is 40
+- action: correct the prose citation to match data/trends/2026-W25.json's rows[].score (or correct the data record if the data is the one that's wrong)
+
+### [ ] [content] [3.6] silent-switch-damping-deep-dive — Gazzew Boba U4 spring-weight citation disagrees with data/switches/gazzew-boba-u4.json
+- category: content
+- filed: 2026-11-05 by content-fact-audit.mjs — silent-switch-damping-deep-dive:gazzew-boba-u4:actuation:68
+- impact: 4 (factual-accuracy mismatch on published content)
+- ease: 9 (one-line prose correction once the mismatch is found)
+- score: 3.6 (impact × ease / 10)
+- file: apps/web/src/content/articles/silent-switch-damping-deep-dive.mdx
+- claim: Gazzew Boba U4 actuation cited at 68g, but data/switches/gazzew-boba-u4.json's springGrams.actuation is 62g
+- action: correct the prose citation to match data/switches/gazzew-boba-u4.json's springGrams (or correct the data record if the data is the one that's wrong)
+
+### [ ] [content] [3.6] silent-switch-damping-deep-dive — Durock T1 spring-weight citation disagrees with data/switches/durock-t1.json
+- category: content
+- filed: 2026-11-05 by content-fact-audit.mjs — silent-switch-damping-deep-dive:durock-t1:unspecified:12
+- impact: 4 (factual-accuracy mismatch on published content)
+- ease: 9 (one-line prose correction once the mismatch is found)
+- score: 3.6 (impact × ease / 10)
+- file: apps/web/src/content/articles/silent-switch-damping-deep-dive.mdx
+- claim: Durock T1 cited at 12g, but data/switches/durock-t1.json has neither actuation (55g) nor bottomOut (67g) at that value
+- action: correct the prose citation to match data/switches/durock-t1.json's springGrams (or correct the data record if the data is the one that's wrong)
+
+### [ ] [content] [3.6] split-ergo-parts-pairing — Cherry MX2A Red spring-weight citation disagrees with data/switches/cherry-mx2a-red.json
+- category: content
+- filed: 2026-11-05 by content-fact-audit.mjs — split-ergo-parts-pairing:cherry-mx2a-red:unspecified:55
+- impact: 4 (factual-accuracy mismatch on published content)
+- ease: 9 (one-line prose correction once the mismatch is found)
+- score: 3.6 (impact × ease / 10)
+- file: apps/web/src/content/articles/split-ergo-parts-pairing.mdx
+- claim: Cherry MX2A Red cited at 55g, but data/switches/cherry-mx2a-red.json has neither actuation (45g) nor bottomOut (75g) at that value
+- action: correct the prose citation to match data/switches/cherry-mx2a-red.json's springGrams (or correct the data record if the data is the one that's wrong)
+
+### [ ] [content] [3.6] switch-actuation-weight-buying-guide — Gateron Magnetic Jade spring-weight citation disagrees with data/switches/gateron-magnetic-jade.json
+- category: content
+- filed: 2026-11-05 by content-fact-audit.mjs — switch-actuation-weight-buying-guide:gateron-magnetic-jade:unspecified:45
+- impact: 4 (factual-accuracy mismatch on published content)
+- ease: 9 (one-line prose correction once the mismatch is found)
+- score: 3.6 (impact × ease / 10)
+- file: apps/web/src/content/articles/switch-actuation-weight-buying-guide.mdx
+- claim: Gateron Magnetic Jade cited at 45g, but data/switches/gateron-magnetic-jade.json has neither actuation (30g) nor bottomOut (50g) at that value
+- action: correct the prose citation to match data/switches/gateron-magnetic-jade.json's springGrams (or correct the data record if the data is the one that's wrong)
+
+### [ ] [content] [3.6] switch-actuation-weight-buying-guide — Durock T1 spring-weight citation disagrees with data/switches/durock-t1.json
+- category: content
+- filed: 2026-11-05 by content-fact-audit.mjs — switch-actuation-weight-buying-guide:durock-t1:unspecified:45
+- impact: 4 (factual-accuracy mismatch on published content)
+- ease: 9 (one-line prose correction once the mismatch is found)
+- score: 3.6 (impact × ease / 10)
+- file: apps/web/src/content/articles/switch-actuation-weight-buying-guide.mdx
+- claim: Durock T1 cited at 45g, but data/switches/durock-t1.json has neither actuation (55g) nor bottomOut (67g) at that value
+- action: correct the prose citation to match data/switches/durock-t1.json's springGrams (or correct the data record if the data is the one that's wrong)
+
+### [ ] [content] [3.6] switch-actuation-weight-buying-guide — Durock T1 spring-weight citation disagrees with data/switches/durock-t1.json
+- category: content
+- filed: 2026-11-05 by content-fact-audit.mjs — switch-actuation-weight-buying-guide:durock-t1:actuation:10
+- impact: 4 (factual-accuracy mismatch on published content)
+- ease: 9 (one-line prose correction once the mismatch is found)
+- score: 3.6 (impact × ease / 10)
+- file: apps/web/src/content/articles/switch-actuation-weight-buying-guide.mdx
+- claim: Durock T1 actuation cited at 10g, but data/switches/durock-t1.json's springGrams.actuation is 55g
+- action: correct the prose citation to match data/switches/durock-t1.json's springGrams (or correct the data record if the data is the one that's wrong)
+
+### [ ] [content] [3.6] thock-weekly-011 — Keychron "N weeks ago" citation disagrees with data/trends/2026-W31.json
+- category: content
+- filed: 2026-11-05 by content-fact-audit.mjs — thock-weekly-011:trend-weeks-ago:2026-W31:Keychron:96
+- impact: 4 (factual-accuracy mismatch on published content)
+- ease: 9 (one-line prose correction once the mismatch is found)
+- score: 3.6 (impact × ease / 10)
+- file: apps/web/src/content/newsletters/thock-weekly-011.mdx
+- claim: Keychron cited at 96 from 8 weeks ago (2026-W31), but data/trends/2026-W31.json's rows[].score for that row is 94
+- action: correct the prose citation to match data/trends/2026-W31.json's rows[].score (or correct the data record if the data is the one that's wrong)
+
+### [ ] [content] [3.6] thock-weekly-011 — Cherry (MX + XTRFY) "N weeks ago" citation disagrees with data/trends/2026-W31.json
+- category: content
+- filed: 2026-11-05 by content-fact-audit.mjs — thock-weekly-011:trend-weeks-ago:2026-W31:Cherry (MX + XTRFY):-6
+- impact: 4 (factual-accuracy mismatch on published content)
+- ease: 9 (one-line prose correction once the mismatch is found)
+- score: 3.6 (impact × ease / 10)
+- file: apps/web/src/content/newsletters/thock-weekly-011.mdx
+- claim: Cherry (MX + XTRFY) cited at -6 from 8 weeks ago (2026-W31), but data/trends/2026-W31.json's rows[].score for that row is -10
+- action: correct the prose citation to match data/trends/2026-W31.json's rows[].score (or correct the data record if the data is the one that's wrong)
