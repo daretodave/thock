@@ -361,6 +361,19 @@ route directories that lack a sibling `opengraph-image.tsx`. Prevents the
 passes 127–134. Deduplicates against existing AUDIT rows. If it exits
 non-zero, log and continue — the check is best-effort.
 
+Then run the content-fact audit (spec 01, candidate aged-promoted via
+`/expand` pass 441):
+
+```bash
+node scripts/content-fact-audit.mjs --write
+```
+
+This files `content` AUDIT rows (score 3.6) for numeric citation mismatches
+between article/newsletter prose and the `data/switches` / `data/trends`
+records they cite — switch spring/actuation weights, tracker scores, and
+"N weeks ago" tracker-arithmetic claims. Deduplicates against existing AUDIT
+rows. If it exits non-zero, log and continue — the audit is best-effort.
+
 Then run the a11y spec coverage check (expand pass 135 candidate, shipped
 via iterate):
 
