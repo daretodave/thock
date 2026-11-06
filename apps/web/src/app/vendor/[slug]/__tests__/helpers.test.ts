@@ -85,4 +85,34 @@ describe('partitionVendorGroupBuys', () => {
     expect(active).toHaveLength(1)
     expect(past).toHaveLength(0)
   })
+
+  it('routes a delayed buy with a past endDate to the active bucket', () => {
+    // isGroupBuyEnded() treats 'delayed' as never-ended regardless of
+    // endDate — the old ad hoc `endDate >= today` check would have
+    // misclassified this as past.
+    const delayed = makeGroupBuy({
+      slug: 'delayed',
+      status: 'delayed',
+      startDate: '2026-01-01',
+      endDate: '2026-02-01',
+    })
+    const { active, past } = partitionVendorGroupBuys([delayed], TODAY)
+    expect(active.map((gb) => gb.name)).toEqual(['delayed'])
+    expect(past).toHaveLength(0)
+  })
+
+  it('routes a cancelled buy with a future endDate to the past bucket', () => {
+    // isGroupBuyEnded() treats 'cancelled' as always-ended regardless of
+    // endDate — the old ad hoc check would have misclassified this as
+    // active since only 'closed'/'shipped' were excluded.
+    const cancelled = makeGroupBuy({
+      slug: 'cancelled',
+      status: 'cancelled',
+      startDate: '2026-05-01',
+      endDate: '2099-01-01',
+    })
+    const { active, past } = partitionVendorGroupBuys([cancelled], TODAY)
+    expect(active).toHaveLength(0)
+    expect(past.map((gb) => gb.name)).toEqual(['cancelled'])
+  })
 })

@@ -1,4 +1,4 @@
-import type { GroupBuy } from '@thock/data'
+import { isGroupBuyEnded, type GroupBuy } from '@thock/data'
 
 export type VendorGroupBuyPartition = {
   active: GroupBuy[]
@@ -6,8 +6,7 @@ export type VendorGroupBuyPartition = {
 }
 
 function isActive(gb: GroupBuy, today: string): boolean {
-  if (gb.status === 'closed' || gb.status === 'shipped') return false
-  return gb.endDate >= today
+  return !isGroupBuyEnded(gb, today)
 }
 
 /**
