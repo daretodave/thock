@@ -6,6 +6,13 @@ export const SWITCH_TYPE_LABEL: Record<string, string> = {
   'silent-tactile': 'Silent tactile',
 }
 
+export const SENSING_LABEL: Record<string, string> = {
+  mechanical: 'Mechanical',
+  'hall-effect': 'Hall-effect',
+  tmr: 'TMR',
+  optical: 'Optical',
+}
+
 export const HOUSING_MATERIAL_LABEL: Record<string, string> = {
   pc: 'PC',
   pom: 'POM',

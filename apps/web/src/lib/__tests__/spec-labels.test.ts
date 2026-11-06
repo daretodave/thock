@@ -7,6 +7,7 @@ import {
   KEYCAP_PROFILE_LABEL,
   LEGEND_TYPE_LABEL,
   MOUNT_STYLE_LABEL,
+  SENSING_LABEL,
   specLabel,
   STEM_MATERIAL_LABEL,
   SWITCH_TYPE_LABEL,
@@ -49,5 +50,12 @@ describe('label maps', () => {
 
   it('resolves legend type', () => {
     expect(LEGEND_TYPE_LABEL['dye-sub']).toBe('Dye-sub')
+  })
+
+  it('resolves sensing to human labels', () => {
+    expect(SENSING_LABEL.mechanical).toBe('Mechanical')
+    expect(SENSING_LABEL['hall-effect']).toBe('Hall-effect')
+    expect(SENSING_LABEL.tmr).toBe('TMR')
+    expect(SENSING_LABEL.optical).toBe('Optical')
   })
 })
