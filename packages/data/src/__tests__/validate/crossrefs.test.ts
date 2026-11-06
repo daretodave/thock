@@ -76,6 +76,7 @@ describe('checkCrossRefs', () => {
       stem: 'pom',
       springGrams: { actuation: 50, bottomOut: 60 },
       travelMm: 4,
+      sensing: 'mechanical',
       factoryLubed: false,
       releasedAt: null,
       status: 'in-production',

@@ -2,6 +2,26 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
   "properties": {
+    "actuationRangeMm": {
+      "additionalProperties": false,
+      "properties": {
+        "max": {
+          "exclusiveMinimum": 0,
+          "maximum": 10,
+          "type": "number"
+        },
+        "min": {
+          "exclusiveMinimum": 0,
+          "maximum": 10,
+          "type": "number"
+        }
+      },
+      "required": [
+        "min",
+        "max"
+      ],
+      "type": "object"
+    },
     "description": {
       "maxLength": 800,
       "minLength": 20,
@@ -48,6 +68,16 @@
           "type": "null"
         }
       ]
+    },
+    "sensing": {
+      "default": "mechanical",
+      "enum": [
+        "mechanical",
+        "hall-effect",
+        "tmr",
+        "optical"
+      ],
+      "type": "string"
     },
     "slug": {
       "minLength": 2,
@@ -128,6 +158,7 @@
     "stem",
     "springGrams",
     "travelMm",
+    "sensing",
     "factoryLubed",
     "releasedAt",
     "status",

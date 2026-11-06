@@ -25,6 +25,7 @@ const SWITCH: Switch = {
   stem: 'pom',
   springGrams: { actuation: 45, bottomOut: 55 },
   travelMm: 4,
+  sensing: 'mechanical',
   factoryLubed: true,
   releasedAt: null,
   status: 'in-production',
