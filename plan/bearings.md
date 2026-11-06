@@ -675,6 +675,19 @@ time you encounter a recurring class of design ambiguity.)
   categorical HE-switch claims, open-ended vendor-list precision)
   are intentionally out of scope — only worth a new spec if they
   keep recurring independently.
+- **Switch sensing field (spec 03, absorbed 2026-11-06):** every
+  switch record carries `sensing: 'mechanical' | 'hall-effect' |
+  'tmr' | 'optical'` (default `mechanical`, additive — existing
+  records never need touching) and an optional
+  `actuationRangeMm: { min, max }` for adjustable-actuation
+  switches. Sensing is orthogonal to `type` (feel) — a hall-effect
+  or TMR switch can still be `linear` or `tactile`. `/ship-data`
+  sets `sensing` explicitly (scout-verified against vendor primary
+  sources) whenever adding a non-mechanical switch — never let an
+  HE/TMR/optical switch land as `mechanical` by omission. Rendered
+  on the part page spec sheet, the `/part/switch` index card and
+  `/compare/switch` table; the spring row relabels "Spring" →
+  "Force" whenever `sensing !== 'mechanical'`.
 
 ## Hard rules
 
