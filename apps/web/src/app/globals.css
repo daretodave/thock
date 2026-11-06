@@ -169,6 +169,27 @@
     color: inherit;
     text-decoration: none;
   }
+
+  /* Sitewide :focus-visible default (WCAG 2.4.7) — a fallback outline
+     for any interactive element the component layer doesn't already
+     style with the `focus-visible:ring-accent-mu` Tailwind utilities.
+     Uses --thock-accent, not --thock-accent-mu: --thock-accent-mu is
+     never redefined under .thock-light (packages/tokens/src/tokens.css),
+     so it silently reuses the dark value there, and that dark value
+     falls below the 3:1 WCAG 1.4.11-style floor against dark-theme
+     --thock-surface/--thock-surface-hi. --thock-accent clears 3:1
+     against every --thock-bg/-bg-2/-surface/-surface-hi in both themes.
+     :focus-visible only, never :focus, so mouse clicks stay quiet. */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  summary:focus-visible,
+  [tabindex]:focus-visible {
+    outline: 2px solid var(--thock-accent);
+    outline-offset: 2px;
+  }
 }
 
 @media print {
