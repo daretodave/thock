@@ -12,6 +12,7 @@ const FAKE_SWITCH = {
     name: 'Gateron Oil King',
     vendorSlug: 'cannonkeys',
     type: 'linear',
+    sensing: 'mechanical',
     housingTop: 'pc',
     housingBottom: 'nylon',
     stem: 'pom',
@@ -19,6 +20,28 @@ const FAKE_SWITCH = {
     travelMm: 4,
     factoryLubed: true,
     releasedAt: '2023-09-01',
+    status: 'in-production',
+  },
+} as unknown as ResolvedPart
+
+const FAKE_HE_SWITCH = {
+  id: 'switch:gateron-magnetic-jade',
+  kind: 'switch',
+  slug: 'gateron-magnetic-jade',
+  record: {
+    slug: 'gateron-magnetic-jade',
+    name: 'Gateron Magnetic Jade',
+    vendorSlug: 'kbdfans',
+    type: 'linear',
+    sensing: 'hall-effect',
+    housingTop: 'pc',
+    housingBottom: 'nylon',
+    stem: 'pom',
+    springGrams: { actuation: 30, bottomOut: 50 },
+    actuationRangeMm: { min: 0.1, max: 3.4 },
+    travelMm: 3.5,
+    factoryLubed: true,
+    releasedAt: '2022-09-01',
     status: 'in-production',
   },
 } as unknown as ResolvedPart
@@ -123,5 +146,26 @@ describe('<PartSpec>', () => {
     expect(screen.getByTestId('part-spec-list')).toHaveTextContent(
       /Jan 8, 2022/i,
     )
+  })
+
+  it('renders a Sensing row with "Spring" (not "Force") and no Actuation range row for a mechanical switch', () => {
+    render(<PartSpec part={FAKE_SWITCH} />)
+    const list = screen.getByTestId('part-spec-list')
+    expect(list).toHaveTextContent(/Sensing/i)
+    expect(list).toHaveTextContent('Mechanical')
+    expect(screen.getByText('Spring')).toBeInTheDocument()
+    expect(screen.queryByText('Force')).not.toBeInTheDocument()
+    expect(list).not.toHaveTextContent(/Actuation range/i)
+  })
+
+  it('relabels Spring to Force and renders the Actuation range row for a hall-effect switch', () => {
+    render(<PartSpec part={FAKE_HE_SWITCH} />)
+    const list = screen.getByTestId('part-spec-list')
+    expect(list).toHaveTextContent(/Sensing/i)
+    expect(list).toHaveTextContent('Hall-effect')
+    expect(screen.getByText('Force')).toBeInTheDocument()
+    expect(screen.queryByText('Spring')).not.toBeInTheDocument()
+    expect(list).toHaveTextContent(/Actuation range/i)
+    expect(list).toHaveTextContent('0.1–3.4 mm')
   })
 })

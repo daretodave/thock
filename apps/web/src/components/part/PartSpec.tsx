@@ -10,6 +10,7 @@ import {
   KEYCAP_PROFILE_LABEL,
   LEGEND_TYPE_LABEL,
   MOUNT_STYLE_LABEL,
+  SENSING_LABEL,
   specLabel,
   STEM_MATERIAL_LABEL,
   SWITCH_TYPE_LABEL,
@@ -28,19 +29,29 @@ function formatDate(iso: string | null | undefined): string {
 }
 
 function switchRows(record: Switch): Array<[string, string]> {
-  return [
+  const rows: Array<[string, string]> = [
     ['Type', specLabel(SWITCH_TYPE_LABEL, record.type)],
+    ['Sensing', specLabel(SENSING_LABEL, record.sensing)],
     ['Top housing', specLabel(HOUSING_MATERIAL_LABEL, record.housingTop)],
     ['Bottom housing', specLabel(HOUSING_MATERIAL_LABEL, record.housingBottom)],
     ['Stem', specLabel(STEM_MATERIAL_LABEL, record.stem)],
     [
-      'Spring',
+      record.sensing !== 'mechanical' ? 'Force' : 'Spring',
       `${record.springGrams.actuation}g actuation · ${record.springGrams.bottomOut}g bottom-out`,
     ],
+  ]
+  if (record.actuationRangeMm) {
+    rows.push([
+      'Actuation range',
+      `${record.actuationRangeMm.min}–${record.actuationRangeMm.max} mm`,
+    ])
+  }
+  rows.push(
     ['Travel', `${record.travelMm} mm`],
     ['Factory lubed', record.factoryLubed ? 'yes' : 'no'],
     ['Released', formatDate(record.releasedAt)],
-  ]
+  )
+  return rows
 }
 
 function keycapSetRows(record: KeycapSet): Array<[string, string]> {
