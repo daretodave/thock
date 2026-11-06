@@ -292,6 +292,57 @@ describe('data-runtime adapter', () => {
     }
   })
 
+  it('past group buys includes a cancelled buy even with a future endDate', async () => {
+    // Regression for Spec 04: isGroupBuyEnded() treats 'cancelled' as
+    // always-ended regardless of endDate, so /group-buys/past (fed by
+    // getAllClosedGroupBuys) must route a cancelled record here even
+    // though its endDate hasn't arrived yet.
+    vi.resetModules()
+    vi.doMock('../manifest.generated.json', () => ({
+      default: {
+        switches: [],
+        keycapSets: [],
+        boards: [],
+        vendors: [],
+        groupBuys: [
+          {
+            slug: 'fixture-cancelled-future-buy',
+            name: 'Fixture Cancelled Future Buy',
+            vendorSlug: 'cannonkeys',
+            productSlug: null,
+            productKind: 'other',
+            startDate: '2026-06-01',
+            endDate: '2099-01-01',
+            region: 'global',
+            url: 'https://example.com',
+            heroImage: null,
+            status: 'cancelled',
+            statusNote: {
+              text: 'Vendor cancelled the run.',
+              sourceUrl: 'https://example.com/cancelled',
+              asOf: '2026-05-01',
+            },
+            description: 'Synthetic fixture group buy for cancelled-past-routing tests.',
+            updatedAt: '2026-05-01T00:00:00.000Z',
+          },
+        ],
+        trends: [],
+        articles: [],
+        newsletters: [],
+        tags: [],
+        generatedAt: '2026-06-01T00:00:00.000Z',
+      },
+    }))
+    try {
+      const mod = await import('../index')
+      const past = mod.getAllClosedGroupBuys(new Date('2026-07-15T00:00:00Z'))
+      expect(past.map((g) => g.slug)).toContain('fixture-cancelled-future-buy')
+    } finally {
+      vi.doUnmock('../manifest.generated.json')
+      vi.resetModules()
+    }
+  })
+
   it('returns latest trend snapshot when present', () => {
     const snap = getLatestTrendSnapshot()
     expect(snap).not.toBeNull()
