@@ -101,12 +101,17 @@ export function getGroupBuyBySlug(slug: string): GroupBuy | null {
   return manifest.groupBuys.find((g) => g.slug === slug) ?? null
 }
 
-/** Same semantics as `@thock/data` — not closed/shipped + endDate ≥ today. */
+/**
+ * Same semantics as `@thock/data` — not closed/shipped/cancelled, with
+ * `endDate` today or later — except `delayed`, which is always included
+ * regardless of `endDate` (active-but-late; Spec 04). `cancelled` is
+ * excluded unconditionally.
+ */
 export function getActiveGroupBuys(now: Date = new Date()): GroupBuy[] {
   const today = now.toISOString().slice(0, 10)
   return manifest.groupBuys
-    .filter((g) => g.status !== 'closed' && g.status !== 'shipped')
-    .filter((g) => g.endDate >= today)
+    .filter((g) => g.status !== 'closed' && g.status !== 'shipped' && g.status !== 'cancelled')
+    .filter((g) => g.status === 'delayed' || g.endDate >= today)
     .sort((a, b) => a.endDate.localeCompare(b.endDate))
 }
 

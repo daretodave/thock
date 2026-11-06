@@ -146,6 +146,75 @@ describe('data-runtime adapter', () => {
     expect(slugs).not.toContain('cannonkeys-mode-sonnet-r2')
   })
 
+  it('active group buys includes a delayed buy even past its endDate, and excludes cancelled unconditionally', async () => {
+    vi.resetModules()
+    vi.doMock('../manifest.generated.json', () => ({
+      default: {
+        switches: [],
+        keycapSets: [],
+        boards: [],
+        vendors: [],
+        groupBuys: [
+          {
+            slug: 'fixture-delayed-buy',
+            name: 'Fixture Delayed Buy',
+            vendorSlug: 'cannonkeys',
+            productSlug: null,
+            productKind: 'other',
+            startDate: '2026-01-01',
+            endDate: '2026-02-01',
+            region: 'global',
+            url: 'https://example.com',
+            heroImage: null,
+            status: 'delayed',
+            statusNote: {
+              text: 'Factory delay; no new ship date yet.',
+              sourceUrl: 'https://example.com/update',
+              asOf: '2026-05-01',
+            },
+            description: 'Synthetic fixture group buy for delayed-status filter tests.',
+            updatedAt: '2026-05-01T00:00:00.000Z',
+          },
+          {
+            slug: 'fixture-cancelled-buy',
+            name: 'Fixture Cancelled Buy',
+            vendorSlug: 'cannonkeys',
+            productSlug: null,
+            productKind: 'other',
+            startDate: '2026-06-01',
+            endDate: '2099-01-01',
+            region: 'global',
+            url: 'https://example.com',
+            heroImage: null,
+            status: 'cancelled',
+            statusNote: {
+              text: 'Vendor cancelled the run.',
+              sourceUrl: 'https://example.com/cancelled',
+              asOf: '2026-05-01',
+            },
+            description: 'Synthetic fixture group buy for cancelled-status filter tests.',
+            updatedAt: '2026-05-01T00:00:00.000Z',
+          },
+        ],
+        trends: [],
+        articles: [],
+        newsletters: [],
+        tags: [],
+        generatedAt: '2026-06-01T00:00:00.000Z',
+      },
+    }))
+    try {
+      const mod = await import('../index')
+      const active = mod.getActiveGroupBuys(new Date('2026-07-15T00:00:00Z'))
+      const slugs = active.map((g) => g.slug)
+      expect(slugs).toContain('fixture-delayed-buy')
+      expect(slugs).not.toContain('fixture-cancelled-buy')
+    } finally {
+      vi.doUnmock('../manifest.generated.json')
+      vi.resetModules()
+    }
+  })
+
   it('past group buys includes closed/shipped + lapsed-live and lapsed-announced, sorted endDate desc', () => {
     // Pick a reference date far in the future so every record qualifies as past.
     const farFuture = new Date('2099-12-31T00:00:00Z')
