@@ -55,6 +55,7 @@ describe('<ArticleBody>', () => {
           name: 'Gateron Oil King',
           vendorSlug: 'cannonkeys',
           type: 'linear',
+          sensing: 'mechanical',
           housingTop: 'pc',
           housingBottom: 'nylon',
           stem: 'pom',

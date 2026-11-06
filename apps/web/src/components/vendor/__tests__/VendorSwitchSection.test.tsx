@@ -8,6 +8,7 @@ const BASE_SWITCH: Switch = {
   name: 'Kailh Box White',
   vendorSlug: 'novelkeys',
   type: 'clicky',
+  sensing: 'mechanical',
   housingTop: 'pc',
   housingBottom: 'nylon',
   stem: 'pom',

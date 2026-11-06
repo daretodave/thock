@@ -4,6 +4,7 @@ import { getSuggestedSwitchPairs } from '../suggested-switch-pairs'
 
 const STUB: Omit<Switch, 'slug' | 'name' | 'type'> = {
   vendorSlug: 'vendor-x',
+  sensing: 'mechanical',
   housingTop: 'pc',
   housingBottom: 'nylon',
   stem: 'pom',

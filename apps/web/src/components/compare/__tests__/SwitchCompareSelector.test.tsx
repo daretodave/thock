@@ -10,6 +10,7 @@ vi.mock('next/navigation', () => ({
 const STUB: Omit<Switch, 'slug' | 'name'> = {
   vendorSlug: 'vendor-x',
   type: 'linear',
+  sensing: 'mechanical',
   housingTop: 'pc',
   housingBottom: 'nylon',
   stem: 'pom',

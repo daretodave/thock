@@ -7,6 +7,7 @@ function makeSwitch(overrides: Partial<Switch> & { slug: string }): Switch {
     name: overrides.slug,
     vendorSlug: 'test-vendor',
     type: 'linear',
+    sensing: 'mechanical',
     housingTop: 'nylon',
     housingBottom: 'nylon',
     stem: 'pom',
