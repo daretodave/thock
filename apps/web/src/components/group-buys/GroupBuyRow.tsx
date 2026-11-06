@@ -35,8 +35,6 @@ const STATUS_LABEL: Record<GroupBuy['status'], string> = {
   live: 'LIVE',
   closed: 'CLOSED',
   shipped: 'SHIPPED',
-  // Badge/note rendering for delayed/cancelled lands in chunk 04.2; this
-  // placeholder keeps STATUS_LABEL exhaustive against the widened enum.
   delayed: 'DELAYED',
   cancelled: 'CANCELLED',
 }
@@ -92,8 +90,13 @@ export function GroupBuyRow({
     // [HIGH] issue #44: Ishtar R2 had status:'live' + endDate today,
     // leaking "LIVE" into the Just-closed section pill). Preserve
     // 'SHIPPED' as editorially distinct; collapse everything else
-    // to 'CLOSED'.
-    countdown = groupBuy.status === 'shipped' ? 'SHIPPED' : 'CLOSED'
+    // to 'CLOSED' — except 'cancelled', which gets its own distinct
+    // label (Spec 04: ended without fulfillment, not a normal close).
+    if (groupBuy.status === 'cancelled') {
+      countdown = 'CANCELLED'
+    } else {
+      countdown = groupBuy.status === 'shipped' ? 'SHIPPED' : 'CLOSED'
+    }
   }
 
   const ctaVisible = variant !== 'ended'
@@ -156,6 +159,32 @@ export function GroupBuyRow({
           </span>
           <span>{fmtDateRange(groupBuy.startDate, groupBuy.endDate)}</span>
         </div>
+        {groupBuy.statusNote && (
+          <div
+            data-testid="group-buy-status-note-wrap"
+            className="flex flex-wrap items-baseline gap-2 border border-border-control px-2 py-1.5 font-mono text-micro text-text-2"
+          >
+            {groupBuy.status === 'delayed' && (
+              <span className="uppercase tracking-[0.08em] text-text">
+                {STATUS_LABEL.delayed}
+              </span>
+            )}
+            <span data-testid="group-buy-status-note">
+              {groupBuy.statusNote.text}
+            </span>
+            {groupBuy.statusNote.sourceUrl && (
+              <a
+                data-testid="group-buy-status-source"
+                href={groupBuy.statusNote.sourceUrl}
+                rel="noopener"
+                target="_blank"
+                className="underline tracking-[0.08em] text-text-2 hover:text-text focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
+              >
+                source
+              </a>
+            )}
+          </div>
+        )}
       </div>
       <div className="flex flex-col items-end gap-2">
         <span

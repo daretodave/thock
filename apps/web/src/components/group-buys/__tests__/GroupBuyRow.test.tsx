@@ -288,4 +288,67 @@ describe('<GroupBuyRow>', () => {
       screen.queryByTestId('group-buy-product-link'),
     ).not.toBeInTheDocument()
   })
+
+  it('renders a DELAYED badge, the status note, and a source link, while keeping the live countdown/CTA (Spec 04)', () => {
+    render(
+      <GroupBuyRow
+        groupBuy={gb({
+          status: 'delayed',
+          endDate: '2026-04-01', // already past — delayed stays active-but-late
+          statusNote: {
+            text: 'Factory delay pushed fulfillment back; no new ship date yet.',
+            sourceUrl: 'https://example.com/update',
+            asOf: '2026-05-01',
+          },
+        })}
+        vendor={vendor}
+        variant="live"
+        now={NOW}
+      />,
+    )
+    expect(screen.getByTestId('group-buy-status-note-wrap')).toHaveTextContent(
+      'DELAYED',
+    )
+    expect(screen.getByTestId('group-buy-status-note')).toHaveTextContent(
+      'Factory delay pushed fulfillment back; no new ship date yet.',
+    )
+    const source = screen.getByTestId('group-buy-status-source')
+    expect(source).toHaveAttribute('href', 'https://example.com/update')
+    expect(source).toHaveAttribute('target', '_blank')
+    expect(source).toHaveAttribute('rel', 'noopener')
+    // Countdown/CTA still render per the live variant, unchanged.
+    expect(screen.getByTestId('group-buy-cta')).toBeInTheDocument()
+    expect(screen.getByTestId('group-buy-countdown')).not.toHaveTextContent(
+      /delayed/i,
+    )
+  })
+
+  it('renders CANCELLED with the status note and no CTA for a cancelled buy (Spec 04)', () => {
+    render(
+      <GroupBuyRow
+        groupBuy={gb({
+          status: 'cancelled',
+          statusNote: {
+            text: 'Vendor cancelled the run and is issuing refunds.',
+            sourceUrl: 'https://example.com/cancelled',
+            asOf: '2026-05-01',
+          },
+        })}
+        vendor={vendor}
+        variant="ended"
+        now={NOW}
+      />,
+    )
+    expect(screen.getByTestId('group-buy-countdown')).toHaveTextContent(
+      /^CANCELLED$/i,
+    )
+    expect(screen.getByTestId('group-buy-status-note')).toHaveTextContent(
+      'Vendor cancelled the run and is issuing refunds.',
+    )
+    expect(screen.getByTestId('group-buy-status-source')).toHaveAttribute(
+      'href',
+      'https://example.com/cancelled',
+    )
+    expect(screen.queryByTestId('group-buy-cta')).not.toBeInTheDocument()
+  })
 })
