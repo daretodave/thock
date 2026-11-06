@@ -35,6 +35,10 @@ const STATUS_LABEL: Record<GroupBuy['status'], string> = {
   live: 'LIVE',
   closed: 'CLOSED',
   shipped: 'SHIPPED',
+  // Badge/note rendering for delayed/cancelled lands in chunk 04.2; this
+  // placeholder keeps STATUS_LABEL exhaustive against the widened enum.
+  delayed: 'DELAYED',
+  cancelled: 'CANCELLED',
 }
 
 function dayDelta(fromIso: string, toIso: string): number {
