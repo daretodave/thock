@@ -13,6 +13,7 @@
         "bottomOut": 55
       },
       "travelMm": 3.3,
+      "sensing": "mechanical",
       "factoryLubed": true,
       "releasedAt": "2023-04-01",
       "status": "in-production",
@@ -32,6 +33,7 @@
         "bottomOut": 72
       },
       "travelMm": 4,
+      "sensing": "mechanical",
       "factoryLubed": false,
       "releasedAt": "2020-08-01",
       "status": "in-production",
@@ -51,6 +53,7 @@
         "bottomOut": 75
       },
       "travelMm": 4,
+      "sensing": "mechanical",
       "factoryLubed": true,
       "releasedAt": "2023-08-24",
       "status": "in-production",
@@ -70,6 +73,7 @@
         "bottomOut": 100
       },
       "travelMm": 3.7,
+      "sensing": "mechanical",
       "factoryLubed": true,
       "releasedAt": "2023-08-24",
       "status": "in-production",
@@ -89,6 +93,7 @@
         "bottomOut": 67
       },
       "travelMm": 3.4,
+      "sensing": "mechanical",
       "factoryLubed": true,
       "releasedAt": "2022-04-01",
       "status": "in-production",
@@ -108,6 +113,7 @@
         "bottomOut": 67
       },
       "travelMm": 4,
+      "sensing": "mechanical",
       "factoryLubed": true,
       "releasedAt": "2020-03-01",
       "status": "in-production",
@@ -127,6 +133,7 @@
         "bottomOut": 45
       },
       "travelMm": 4,
+      "sensing": "mechanical",
       "factoryLubed": true,
       "releasedAt": "2021-05-01",
       "status": "in-production",
@@ -146,6 +153,7 @@
         "bottomOut": 62
       },
       "travelMm": 4,
+      "sensing": "mechanical",
       "factoryLubed": true,
       "releasedAt": "2026-06-09",
       "status": "in-production",
@@ -165,6 +173,7 @@
         "bottomOut": 50
       },
       "travelMm": 3.5,
+      "sensing": "mechanical",
       "factoryLubed": true,
       "releasedAt": "2022-09-01",
       "status": "in-production",
@@ -184,6 +193,7 @@
         "bottomOut": 65
       },
       "travelMm": 4,
+      "sensing": "mechanical",
       "factoryLubed": true,
       "releasedAt": "2022-08-01",
       "status": "in-production",
@@ -203,6 +213,7 @@
         "bottomOut": 67
       },
       "travelMm": 4,
+      "sensing": "mechanical",
       "factoryLubed": true,
       "releasedAt": "2023-07-01",
       "status": "in-production",
@@ -222,6 +233,7 @@
         "bottomOut": 65
       },
       "travelMm": 3.2,
+      "sensing": "mechanical",
       "factoryLubed": true,
       "releasedAt": "2021-04-01",
       "status": "in-production",
@@ -241,6 +253,7 @@
         "bottomOut": 68
       },
       "travelMm": 4,
+      "sensing": "mechanical",
       "factoryLubed": true,
       "releasedAt": "2020-06-01",
       "status": "in-production",
@@ -260,6 +273,7 @@
         "bottomOut": 68
       },
       "travelMm": 3.2,
+      "sensing": "mechanical",
       "factoryLubed": true,
       "releasedAt": "2020-06-01",
       "status": "in-production",
@@ -279,6 +293,7 @@
         "bottomOut": 50
       },
       "travelMm": 3.9,
+      "sensing": "mechanical",
       "factoryLubed": true,
       "releasedAt": "2023-09-01",
       "status": "in-production",
@@ -298,6 +313,7 @@
         "bottomOut": 70
       },
       "travelMm": 3.6,
+      "sensing": "mechanical",
       "factoryLubed": false,
       "releasedAt": "2018-03-01",
       "status": "in-production",
@@ -317,6 +333,7 @@
         "bottomOut": 60
       },
       "travelMm": 3.6,
+      "sensing": "mechanical",
       "factoryLubed": false,
       "releasedAt": "2017-06-01",
       "status": "in-production",
@@ -336,6 +353,7 @@
         "bottomOut": 63.5
       },
       "travelMm": 3.8,
+      "sensing": "mechanical",
       "factoryLubed": true,
       "releasedAt": "2023-06-01",
       "status": "in-production",
@@ -14963,5 +14981,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-10-28T21:39:41.381Z"
+  "generatedAt": "2026-11-06T03:54:31.045Z"
 }
