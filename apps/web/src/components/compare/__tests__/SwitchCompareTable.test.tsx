@@ -72,7 +72,7 @@ describe('<SwitchCompareTable>', () => {
   it('renders the spec table with the correct number of rows', () => {
     render(<SwitchCompareTable switchA={SWITCH_A} switchB={SWITCH_B} />)
     const rows = screen.getAllByTestId('compare-spec-row')
-    expect(rows.length).toBe(10)
+    expect(rows.length).toBe(11)
   })
 
   it('marks rows with different values as data-differs="true"', () => {
@@ -126,5 +126,58 @@ describe('<SwitchCompareTable>', () => {
     const dds = typeRow.querySelectorAll('dd')
     expect(dds[0]!.querySelector('.sr-only')?.textContent).toBe('Switch A: ')
     expect(dds[1]!.querySelector('.sr-only')?.textContent).toBe('Switch B: ')
+  })
+
+  it('renders a Sensing row with "Spring" (not "Force") when both switches are mechanical', () => {
+    render(<SwitchCompareTable switchA={SWITCH_A} switchB={SWITCH_B} />)
+    expect(screen.getByTestId('compare-table')).toHaveTextContent(/Sensing/i)
+    expect(screen.getAllByText('Mechanical').length).toBe(2)
+    expect(screen.getByText('Spring')).toBeInTheDocument()
+    expect(screen.queryByText('Force')).not.toBeInTheDocument()
+  })
+
+  it('relabels Spring to Force for a hall-effect switch compared against a mechanical one, marking Sensing as differing', () => {
+    const switchHe: Switch = {
+      ...SWITCH_A,
+      slug: 'switch-he',
+      name: 'Switch HE',
+      sensing: 'hall-effect',
+    }
+    render(<SwitchCompareTable switchA={SWITCH_A} switchB={switchHe} />)
+    const table = screen.getByTestId('compare-table')
+    expect(table).toHaveTextContent(/Sensing/i)
+    expect(screen.getByText('Mechanical')).toBeInTheDocument()
+    expect(screen.getByText('Hall-effect')).toBeInTheDocument()
+    // The Spring/Force row has a single shared label for both columns; it
+    // should read "Force" (not "Spring") as soon as either side is
+    // non-mechanical.
+    expect(screen.getByText('Force')).toBeInTheDocument()
+    expect(screen.queryByText('Spring')).not.toBeInTheDocument()
+
+    const rows = screen.getAllByTestId('compare-spec-row')
+    const sensingRow = rows.find((r) => r.textContent?.includes('Sensing'))!
+    expect(sensingRow.getAttribute('data-differs')).toBe('true')
+  })
+
+  it('renders the Actuation range row when both compared switches carry one', () => {
+    const switchHeA: Switch = {
+      ...SWITCH_A,
+      slug: 'switch-he-a',
+      name: 'Switch HE A',
+      sensing: 'hall-effect',
+      actuationRangeMm: { min: 0.1, max: 3.4 },
+    }
+    const switchHeB: Switch = {
+      ...SWITCH_B,
+      slug: 'switch-he-b',
+      name: 'Switch HE B',
+      sensing: 'hall-effect',
+      actuationRangeMm: { min: 0.4, max: 2 },
+    }
+    render(<SwitchCompareTable switchA={switchHeA} switchB={switchHeB} />)
+    const table = screen.getByTestId('compare-table')
+    expect(table).toHaveTextContent(/Actuation range/i)
+    expect(table).toHaveTextContent('0.1–3.4 mm')
+    expect(table).toHaveTextContent('0.4–2 mm')
   })
 })

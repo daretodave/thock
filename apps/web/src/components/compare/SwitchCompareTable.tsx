@@ -3,7 +3,13 @@ import Link from 'next/link'
 import type { Switch } from '@thock/data'
 import { Container, Mono } from '@thock/ui'
 import { getVendorBySlug } from '@/lib/data-runtime'
-import { HOUSING_MATERIAL_LABEL, specLabel, STEM_MATERIAL_LABEL, SWITCH_TYPE_LABEL } from '@/lib/spec-labels'
+import {
+  HOUSING_MATERIAL_LABEL,
+  SENSING_LABEL,
+  specLabel,
+  STEM_MATERIAL_LABEL,
+  SWITCH_TYPE_LABEL,
+} from '@/lib/spec-labels'
 
 const DATE_FMT = new Intl.DateTimeFormat('en-US', {
   dateStyle: 'medium',
@@ -26,21 +32,31 @@ const STATUS_LABEL: Record<Switch['status'], string> = {
 type SpecRow = { label: string; value: string }
 
 function switchSpecRows(s: Switch): SpecRow[] {
-  return [
+  const rows: SpecRow[] = [
     { label: 'Type', value: specLabel(SWITCH_TYPE_LABEL, s.type) },
+    { label: 'Sensing', value: specLabel(SENSING_LABEL, s.sensing) },
     { label: 'Top housing', value: specLabel(HOUSING_MATERIAL_LABEL, s.housingTop) },
     { label: 'Bottom housing', value: specLabel(HOUSING_MATERIAL_LABEL, s.housingBottom) },
     { label: 'Stem', value: specLabel(STEM_MATERIAL_LABEL, s.stem) },
     {
-      label: 'Spring',
+      label: s.sensing !== 'mechanical' ? 'Force' : 'Spring',
       value: `${s.springGrams.actuation}g actuation · ${s.springGrams.bottomOut}g bottom-out`,
     },
+  ]
+  if (s.actuationRangeMm) {
+    rows.push({
+      label: 'Actuation range',
+      value: `${s.actuationRangeMm.min}–${s.actuationRangeMm.max} mm`,
+    })
+  }
+  rows.push(
     { label: 'Travel', value: `${s.travelMm} mm` },
     { label: 'Factory lubed', value: s.factoryLubed ? 'yes' : 'no' },
     { label: 'Status', value: STATUS_LABEL[s.status] },
     { label: 'Released', value: formatDate(s.releasedAt) },
     { label: 'Vendor', value: getVendorBySlug(s.vendorSlug)?.name ?? s.vendorSlug },
-  ]
+  )
+  return rows
 }
 
 export type SwitchCompareTableProps = {
@@ -93,6 +109,12 @@ export function SwitchCompareTable({
         {rowsA.map((rowA, i) => {
           const rowB = rowsB[i]!
           const differs = rowA.value !== rowB.value
+          // Spring/Force is the one row whose label can differ between A and
+          // B (each side relabels independently based on its own sensing).
+          // Prefer "Force" over the "Spring" default so the shared dt still
+          // reflects a hall-effect/TMR side even when the other side is
+          // mechanical.
+          const label = rowA.label !== rowB.label && rowA.label === 'Spring' ? rowB.label : rowA.label
           return (
             <div
               key={rowA.label}
@@ -101,7 +123,7 @@ export function SwitchCompareTable({
               className="contents"
             >
               <dt className="font-mono uppercase tracking-[0.08em] text-micro text-text-2 self-start pt-0.5">
-                {rowA.label}
+                {label}
               </dt>
               <dd className={`text-body ${differs ? 'text-text font-medium' : 'text-text-2'}`}>
                 <span className="sr-only">{switchA.name}: </span>
