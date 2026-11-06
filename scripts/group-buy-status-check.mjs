@@ -3,8 +3,9 @@
 //
 // Mechanically enforces data hygiene for group-buy records: any record with
 // status 'live' or 'announced' whose endDate is in the past is a staleness
-// violation. Files a 'data' AUDIT row so the next /ship-data tick corrects
-// the status field.
+// violation — most often a delay, not a close. Files a 'data' AUDIT row so
+// the next /ship-data tick sets status to 'delayed' with a sourced
+// statusNote (or 'closed'/'shipped' if the buy is confirmed done).
 //
 // Phase 42 — Stale group-buy status scanner
 //
@@ -89,10 +90,10 @@ function formatAuditRow(record, today) {
 - category: data
 - filed: ${todayStr} by group-buy-status-check.mjs
 - impact: 4 (buy shows status "${record.status}" but endDate ${record.endDate} has passed — data hygiene gap)
-- ease: 9 (update status field to 'closed' in data/group-buys/${basename(record.file)})
+- ease: 9 (update status field in data/group-buys/${basename(record.file)})
 - score: 3.6 (impact × ease / 10)
 - group-buy: ${record.file}
-- action: update status from '${record.status}' to 'closed' in ${record.file}\n`
+- action: likely a delay — set status to 'delayed' in ${record.file} with a sourced statusNote (text, sourceUrl, asOf) explaining the slip; only set status to 'closed' if the buy is confirmed fulfilled/done\n`
 }
 
 // ── Deduplication ─────────────────────────────────────────────────────────────
@@ -202,7 +203,7 @@ for (const record of stale) {
   console.log(`  name:    ${record.name}`)
   console.log(`  endDate: ${record.endDate}`)
   console.log(`  file:    ${record.file}`)
-  console.log(`  fix:     update status to 'closed' in ${record.file}`)
+  console.log(`  fix:     likely a delay — set status to 'delayed' in ${record.file} with a sourced statusNote (or 'closed' if confirmed done)`)
   console.log()
 }
 

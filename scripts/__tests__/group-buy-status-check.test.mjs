@@ -7,7 +7,7 @@ import { test, describe } from 'node:test'
 import assert from 'node:assert/strict'
 import { __test } from '../group-buy-status-check.mjs'
 
-const { findStaleRecords, alreadyFiled } = __test
+const { findStaleRecords, alreadyFiled, formatAuditRow } = __test
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
@@ -103,6 +103,38 @@ describe('findStaleRecords — no violation (closed status)', () => {
     const records = [makeRecord('shipped-buy', 'shipped', PAST_DATE)]
     const stale = findStaleRecords(records, TODAY)
     assert.equal(stale.length, 0)
+  })
+})
+
+// ── formatAuditRow — delay framing ───────────────────────────────────────────
+
+describe('formatAuditRow — delay framing', () => {
+  test('action text recommends delayed status with a sourced statusNote', () => {
+    const record = {
+      slug: 'test-buy',
+      name: 'test-buy',
+      status: 'live',
+      endDate: PAST_DATE,
+      file: 'data/group-buys/test-buy.json',
+    }
+    const row = formatAuditRow(record, TODAY)
+    assert.match(row, /'delayed'/)
+    assert.match(row, /statusNote/)
+  })
+
+  test('action text keeps closed as a fallback, not the primary recommendation', () => {
+    const record = {
+      slug: 'test-buy',
+      name: 'test-buy',
+      status: 'announced',
+      endDate: PAST_DATE,
+      file: 'data/group-buys/test-buy.json',
+    }
+    const row = formatAuditRow(record, TODAY)
+    const actionLine = row.split('\n').find((line) => line.startsWith('- action:'))
+    assert.ok(actionLine, 'expected an action: line in the AUDIT row')
+    assert.doesNotMatch(actionLine, /^- action: update status from '.*' to 'closed'/)
+    assert.match(actionLine, /confirmed fulfilled\/done/)
   })
 })
 
