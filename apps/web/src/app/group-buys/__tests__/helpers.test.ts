@@ -83,6 +83,44 @@ describe('partitionGroupBuys', () => {
     const { ended } = partitionGroupBuys(gbs, NOW)
     expect(ended.map(g => g.slug)).toEqual(['newer', 'older'])
   })
+
+  it('routes a delayed buy whose endDate is in the past to the live bucket (active-but-late)', () => {
+    const gb = makeGroupBuy({
+      slug: 'f-delayed',
+      status: 'delayed',
+      startDate: '2026-04-01',
+      endDate: '2026-04-30',
+      statusNote: {
+        text: 'Factory delay pushed fulfillment back; no new ship date yet.',
+        sourceUrl: 'https://example.com/update',
+        asOf: '2026-05-10',
+      },
+    })
+    const { live, announced, ended } = partitionGroupBuys([gb], NOW)
+    expect(live).toHaveLength(1)
+    expect(live[0]?.slug).toBe('f-delayed')
+    expect(announced).toHaveLength(0)
+    expect(ended).toHaveLength(0)
+  })
+
+  it('routes a cancelled buy to the ended bucket, never live/announced', () => {
+    const gb = makeGroupBuy({
+      slug: 'g-cancelled',
+      status: 'cancelled',
+      startDate: '2026-06-01',
+      endDate: '2026-06-30',
+      statusNote: {
+        text: 'Vendor cancelled the run and is issuing refunds.',
+        sourceUrl: 'https://example.com/cancelled',
+        asOf: '2026-05-01',
+      },
+    })
+    const { live, announced, ended } = partitionGroupBuys([gb], NOW)
+    expect(live).toHaveLength(0)
+    expect(announced).toHaveLength(0)
+    expect(ended).toHaveLength(1)
+    expect(ended[0]?.slug).toBe('g-cancelled')
+  })
 })
 
 describe('splitLiveByUrgency', () => {

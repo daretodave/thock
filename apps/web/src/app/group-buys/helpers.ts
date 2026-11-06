@@ -19,6 +19,8 @@ function todayIso(now: Date): string {
 }
 
 function isLive(gb: GroupBuy, today: string): boolean {
+  // `delayed` is active-but-late regardless of `endDate` — Spec 04.
+  if (gb.status === 'delayed') return true
   const liveOrStarted =
     gb.status === 'live' ||
     (gb.status === 'announced' && gb.startDate <= today)
