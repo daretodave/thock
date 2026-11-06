@@ -54,9 +54,6 @@ Candidate `[6.0]` (research, 2026-10-26), promoted via `/oversight`
 
 ## Acceptance
 
-- **A1** `sensing` exists in the Zod schema and generated JSON
-  Schema with a `mechanical` default; `data:validate` passes and
-  schema tests cover the new field.
 - **A2** Every non-mechanical switch in `data/switches/` carries
   the correct `sensing` value, each verified against a vendor
   primary source.
@@ -70,20 +67,16 @@ None.
 
 ## Chunks
 
-Measure: 3 open · 0 closed · next A4
+Measure: 2 open · 1 closed · next A4
 
-- [ ] **03.1** Add `sensing` enum (default `mechanical`) + optional
-  `actuationRangeMm` to `SwitchSchema`, regenerate
-  `switch.schema.json`, schema tests for the field and its default
-  · S · closes A1 · needs —
 - [ ] **03.2** Backfill `sensing: 'hall-effect'` on
   `data/switches/gateron-magnetic-jade.json` (scout-verified
   against a vendor primary source); `data:validate` green · S ·
-  closes A2 · needs 03.1
+  closes A2 · needs —
 - [ ] **03.3** Surface `sensing`: `SENSING_LABEL` in
   `spec-labels.ts`; a "Sensing" row in `PartSpec.tsx` and
   `SwitchCompareTable.tsx` (relabel "Spring" → "Force" when
   `sensing !== 'mechanical'`, per Design); a sensing tag on
   `PartIndexCard` for switches; unit tests for the relabel/row
   logic plus e2e coverage on the gateron-magnetic-jade part page
-  and compare table · M · closes A3 · needs 03.1, 03.2
+  and compare table · M · closes A3 · needs 03.2
