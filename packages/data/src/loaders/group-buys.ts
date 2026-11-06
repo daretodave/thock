@@ -17,21 +17,30 @@ export function getGroupBuyBySlug(slug: string): GroupBuy | null {
 }
 
 /**
- * "Active" group buys: not closed/shipped, with `endDate` today or later
- * (UTC). Sorted ascending by `endDate` so soonest-ending sits first.
+ * "Active" group buys: not closed/shipped/cancelled, with `endDate` today
+ * or later (UTC) — except `delayed`, which is always included regardless
+ * of `endDate` (active-but-late; Spec 04 "Decisions made upfront"; a delay
+ * keeps its original dates and is explained by `statusNote` instead of a
+ * revised date). `cancelled` is excluded unconditionally (ended without
+ * fulfillment). Sorted ascending by `endDate` so soonest-ending sits
+ * first.
  */
 export function getActiveGroupBuys(now: Date = new Date()): GroupBuy[] {
   const today = now.toISOString().slice(0, 10)
   return getAllGroupBuys()
-    .filter((g) => g.status !== 'closed' && g.status !== 'shipped')
-    .filter((g) => g.endDate >= today)
+    .filter((g) => g.status !== 'closed' && g.status !== 'shipped' && g.status !== 'cancelled')
+    .filter((g) => g.status === 'delayed' || g.endDate >= today)
     .sort((a, b) => a.endDate.localeCompare(b.endDate))
 }
 
 /**
  * Single source of truth for "has this group buy ended?" — closed/shipped
- * by status, or a live/announced record whose `endDate` has passed. Every
- * call site that needs to route a group buy to a "past" surface (the
+ * by status, or a live/announced record whose `endDate` has passed.
+ * `cancelled` is always ended (Spec 04: ended without fulfillment,
+ * regardless of `endDate`); `delayed` is never ended by this predicate
+ * (active-but-late, regardless of whether `endDate` has passed — the
+ * delay is explained by `statusNote`, not a revised date). Every call
+ * site that needs to route a group buy to a "past" surface (the
  * `/group-buys` ended bucket, `/group-buys/past`, the search index) must
  * derive from this predicate rather than re-deriving the status/date logic,
  * so a future status-rule change only needs to land in one place.
@@ -40,6 +49,8 @@ export function isGroupBuyEnded(
   gb: Pick<GroupBuy, 'status' | 'endDate'>,
   todayIso: string,
 ): boolean {
+  if (gb.status === 'cancelled') return true
+  if (gb.status === 'delayed') return false
   if (gb.status === 'closed' || gb.status === 'shipped') return true
   if ((gb.status === 'live' || gb.status === 'announced') && gb.endDate < todayIso) {
     return true

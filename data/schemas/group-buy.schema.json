@@ -81,9 +81,35 @@
         "announced",
         "live",
         "closed",
-        "shipped"
+        "shipped",
+        "delayed",
+        "cancelled"
       ],
       "type": "string"
+    },
+    "statusNote": {
+      "additionalProperties": false,
+      "properties": {
+        "asOf": {
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+          "type": "string"
+        },
+        "sourceUrl": {
+          "format": "uri",
+          "type": "string"
+        },
+        "text": {
+          "maxLength": 280,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "text",
+        "sourceUrl",
+        "asOf"
+      ],
+      "type": "object"
     },
     "updatedAt": {
       "format": "date-time",

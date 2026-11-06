@@ -42,7 +42,25 @@ export const GroupBuySchema = z
      * archive rows; JSON-LD ListItem carries `sameAs` when set.
      */
     relatedArticle: z.string().optional(),
-    status: z.enum(['announced', 'live', 'closed', 'shipped']),
+    status: z.enum(['announced', 'live', 'closed', 'shipped', 'delayed', 'cancelled']),
+    /**
+     * Short, sourced explanation of a `delayed` or `cancelled` status
+     * (Spec 04). Required by the refinement below when `status` is
+     * `delayed` or `cancelled`; optional otherwise — existing
+     * announced/live/closed/shipped records omit it (additive change).
+     * `asOf` is the date the source statement was made/observed, not a
+     * revised `startDate`/`endDate`: a delayed buy keeps its original
+     * dates, and the delay is explained here instead of by a new date
+     * field.
+     */
+    statusNote: z
+      .object({
+        text: z.string().min(1).max(280),
+        sourceUrl: UrlSchema,
+        asOf: DateOnlySchema,
+      })
+      .strict()
+      .optional(),
     description: z.string().min(20).max(800),
     updatedAt: IsoDateSchema,
   })
@@ -54,6 +72,15 @@ export const GroupBuySchema = z
   .refine((g) => !(g.productKind === 'other' && g.productSlug !== null), {
     message: "productSlug must be null when productKind is 'other'",
     path: ['productSlug'],
+  })
+  .superRefine((g, ctx) => {
+    if ((g.status === 'delayed' || g.status === 'cancelled') && !g.statusNote) {
+      ctx.addIssue({
+        code: 'custom',
+        message: `statusNote is required when status is '${g.status}'`,
+        path: ['statusNote'],
+      })
+    }
   })
 
 export type GroupBuy = z.infer<typeof GroupBuySchema>

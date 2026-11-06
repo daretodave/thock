@@ -132,4 +132,87 @@ describe('isGroupBuyEnded', () => {
       isGroupBuyEnded({ status: 'announced', endDate: '2026-08-01' }, TODAY),
     ).toBe(false)
   })
+
+  it('treats a delayed buy past its endDate as never ended (active-but-late, Spec 04)', () => {
+    expect(
+      isGroupBuyEnded({ status: 'delayed', endDate: '2026-01-01' }, TODAY),
+    ).toBe(false)
+  })
+
+  it('treats a delayed buy within its window as not ended', () => {
+    expect(
+      isGroupBuyEnded({ status: 'delayed', endDate: '2026-08-01' }, TODAY),
+    ).toBe(false)
+  })
+
+  it('treats a cancelled buy with a future endDate as always ended (Spec 04)', () => {
+    expect(
+      isGroupBuyEnded({ status: 'cancelled', endDate: '2099-01-01' }, TODAY),
+    ).toBe(true)
+  })
+})
+
+describe('getActiveGroupBuys: delayed/cancelled (Spec 04)', () => {
+  afterEach(() => __resetForTests())
+
+  function writeFixture(dir: string, slug: string, status: string, endDate: string) {
+    writeFileSync(
+      join(dir, 'data', 'group-buys', `${slug}.json`),
+      JSON.stringify({
+        slug,
+        name: 'Fixture Buy',
+        vendorSlug: 'cannonkeys',
+        productSlug: null,
+        productKind: 'other',
+        startDate: '2026-01-01',
+        endDate,
+        region: 'global',
+        url: 'https://example.com',
+        heroImage: null,
+        heroImageAlt: null,
+        status,
+        statusNote:
+          status === 'delayed' || status === 'cancelled'
+            ? {
+                text: 'Vendor pushed the timeline; see source for details.',
+                sourceUrl: 'https://example.com/updates/1',
+                asOf: '2026-06-01',
+              }
+            : undefined,
+        description:
+          'Synthetic fixture record used only to exercise the active-list delayed/cancelled rule in isolation from real editorial data.',
+        updatedAt: '2026-06-01T00:00:00.000Z',
+      }),
+    )
+  }
+
+  it('includes a delayed record even past its endDate', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'thock-group-buys-'))
+    mkdirSync(join(dir, 'data', 'group-buys'), { recursive: true })
+    writeFixture(dir, 'fixture-delayed-past-end', 'delayed', '2026-01-15')
+    try {
+      setRepoRootForTests(dir)
+      __resetForTests()
+      const active = getActiveGroupBuys(new Date('2026-07-15T00:00:00Z'))
+      expect(active.map((g) => g.slug)).toContain('fixture-delayed-past-end')
+    } finally {
+      setRepoRootForTests(null)
+      rmSync(dir, { recursive: true, force: true })
+    }
+  })
+
+  it('excludes a cancelled record even with a future endDate', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'thock-group-buys-'))
+    mkdirSync(join(dir, 'data', 'group-buys'), { recursive: true })
+    writeFixture(dir, 'fixture-cancelled-future-end', 'cancelled', '2099-01-01')
+    try {
+      setRepoRootForTests(dir)
+      __resetForTests()
+      const active = getActiveGroupBuys(new Date('2026-07-15T00:00:00Z'))
+      expect(active.map((g) => g.slug)).not.toContain('fixture-cancelled-future-end')
+    } finally {
+      setRepoRootForTests(null)
+      rmSync(dir, { recursive: true, force: true })
+    }
+  })
 })

@@ -90,3 +90,116 @@ describe('GroupBuySchema', () => {
     expect(result.success).toBe(false)
   })
 })
+
+const STATUS_NOTE = {
+  text: 'Vendor pushed shipping two months citing tariff-driven cost changes.',
+  sourceUrl: 'https://example.com/updates/42',
+  asOf: '2026-06-01',
+}
+
+describe('GroupBuySchema status: delayed / cancelled (Spec 04)', () => {
+  it('accepts a delayed record with a statusNote', () => {
+    const result = GroupBuySchema.safeParse({
+      ...VALID,
+      status: 'delayed',
+      statusNote: STATUS_NOTE,
+    })
+    expect(result.success).toBe(true)
+  })
+
+  it('accepts a cancelled record with a statusNote', () => {
+    const result = GroupBuySchema.safeParse({
+      ...VALID,
+      status: 'cancelled',
+      statusNote: STATUS_NOTE,
+    })
+    expect(result.success).toBe(true)
+  })
+
+  it('rejects a delayed record missing statusNote', () => {
+    const result = GroupBuySchema.safeParse({
+      ...VALID,
+      status: 'delayed',
+    })
+    expect(result.success).toBe(false)
+  })
+
+  it('rejects a cancelled record missing statusNote', () => {
+    const result = GroupBuySchema.safeParse({
+      ...VALID,
+      status: 'cancelled',
+    })
+    expect(result.success).toBe(false)
+  })
+
+  it('accepts statusNote present on an unaffected status (e.g. live)', () => {
+    const result = GroupBuySchema.safeParse({
+      ...VALID,
+      status: 'live',
+      statusNote: STATUS_NOTE,
+    })
+    expect(result.success).toBe(true)
+  })
+
+  it('accepts an existing status with no statusNote (additive, backward compatible)', () => {
+    const result = GroupBuySchema.safeParse({
+      ...VALID,
+      status: 'closed',
+    })
+    expect(result.success).toBe(true)
+  })
+
+  it('rejects an empty statusNote.text', () => {
+    const result = GroupBuySchema.safeParse({
+      ...VALID,
+      status: 'delayed',
+      statusNote: { ...STATUS_NOTE, text: '' },
+    })
+    expect(result.success).toBe(false)
+  })
+
+  it('rejects a statusNote.text longer than 280 characters', () => {
+    const result = GroupBuySchema.safeParse({
+      ...VALID,
+      status: 'delayed',
+      statusNote: { ...STATUS_NOTE, text: 'x'.repeat(281) },
+    })
+    expect(result.success).toBe(false)
+  })
+
+  it('accepts a statusNote.text at exactly 280 characters', () => {
+    const result = GroupBuySchema.safeParse({
+      ...VALID,
+      status: 'delayed',
+      statusNote: { ...STATUS_NOTE, text: 'x'.repeat(280) },
+    })
+    expect(result.success).toBe(true)
+  })
+
+  it('rejects a malformed statusNote.sourceUrl', () => {
+    const result = GroupBuySchema.safeParse({
+      ...VALID,
+      status: 'delayed',
+      statusNote: { ...STATUS_NOTE, sourceUrl: 'not-a-url' },
+    })
+    expect(result.success).toBe(false)
+  })
+
+  it('rejects a statusNote.asOf that is not date-only (e.g. a full datetime)', () => {
+    const result = GroupBuySchema.safeParse({
+      ...VALID,
+      status: 'delayed',
+      statusNote: { ...STATUS_NOTE, asOf: '2026-06-01T00:00:00.000Z' },
+    })
+    expect(result.success).toBe(false)
+  })
+
+  it('rejects a statusNote with an unrecognized extra property (strict)', () => {
+    const result = GroupBuySchema.safeParse({
+      ...VALID,
+      status: 'delayed',
+      statusNote: { ...STATUS_NOTE, extra: 'nope' },
+    })
+    expect(result.success).toBe(false)
+  })
+})
