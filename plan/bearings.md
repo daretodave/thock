@@ -688,6 +688,33 @@ time you encounter a recurring class of design ambiguity.)
   on the part page spec sheet, the `/part/switch` index card and
   `/compare/switch` table; the spring row relabels "Spring" →
   "Force" whenever `sensing !== 'mechanical'`.
+- **Group-buy delayed/cancelled status (spec 04, absorbed
+  2026-11-06):** `status` in `packages/data/src/schemas/group-buy.ts`
+  additionally accepts `delayed` and `cancelled` (cancelled = ended
+  without fulfillment); existing records stay valid. An optional
+  `statusNote: { text, sourceUrl, asOf }` carries the sourced,
+  dated reason — required whenever status is `delayed` or
+  `cancelled`. No new date field: a delayed record keeps its
+  original `startDate`/`endDate`; `isGroupBuyEnded` treats
+  `delayed` as never-ended (active-but-late) regardless of
+  whether `endDate` has passed, and `cancelled` as always-ended
+  regardless of `endDate`. `getActiveGroupBuys` (both the
+  `@thock/data` loader and the duplicate in
+  `apps/web/src/lib/data-runtime/index.ts`) includes `delayed`
+  records even past their `endDate`, and excludes `cancelled`
+  records unconditionally. `cancelled` renders like `ended` (muted,
+  no CTA, no forward-looking countdown) but with a distinct
+  "CANCELLED" label and the `statusNote` text instead of
+  "CLOSED"/"SHIPPED"; `delayed` renders in its current bucket
+  (`live`/`announced`/`ended`, whichever the shared partition logic
+  already placed it in) plus a calm badge carrying the
+  `statusNote` text and, when `sourceUrl` is set, a "source" link.
+  Tone stays editorial and factual — no "scam" language, only what
+  the source says and when. `scripts/group-buy-status-check.mjs`
+  frames an overdue `live`/`announced` record as a delay candidate
+  (recommend `delayed` + a sourced `statusNote`), not a bare
+  "closed" — `closed`/`shipped` is only the fallback once a buy is
+  confirmed fulfilled or definitively over.
 
 ## Hard rules
 

@@ -22,7 +22,6 @@ condition> · max_age: 14d`, an optional `· fallback: release`):
 
 | # | Initiative | Spec | Status | Progress |
 |---|---|---|---|---|
-| 04 | Group-buy delays and non-fulfillment | [04-group-buy-delays.md](04-group-buy-delays.md) |  | 1 left |
 | 05 | Sitewide focus-visible default + coverage check | [05-focus-visible-default.md](05-focus-visible-default.md) |  | not chunked |
 
 ## Layout
