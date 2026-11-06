@@ -173,12 +173,12 @@
         "bottomOut": 50
       },
       "travelMm": 3.5,
-      "sensing": "mechanical",
+      "sensing": "hall-effect",
       "factoryLubed": true,
       "releasedAt": "2022-09-01",
       "status": "in-production",
       "description": "Hall-effect magnetic linear using a rare-earth magnet in the stem rather than a physical leaf spring for actuation sensing. The linear travel is smooth and the actuation point can be adjusted digitally in supporting keyboards; the jade coloring mirrors the Box Jade but the mechanism is entirely distinct. Suited to rapid-fire gaming and endurance typing where metal-contact fatigue matters.",
-      "updatedAt": "2026-08-25T00:00:00.000Z"
+      "updatedAt": "2026-11-06T00:00:00.000Z"
     },
     {
       "slug": "gateron-oil-king",
@@ -14981,5 +14981,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-11-06T03:54:31.045Z"
+  "generatedAt": "2026-11-06T12:00:21.397Z"
 }
