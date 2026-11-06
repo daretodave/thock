@@ -29,10 +29,20 @@ Candidate `[6.0]` (research, 2026-10-26), promoted via `/oversight`
   pass.
 - Backfill: set `sensing` on every existing record that is not
   mechanical (at least `gateron-magnetic-jade`; scout-verify any
-  others against vendor primary sources).
-- Surface it: the switch part page spec table, `/parts` switch
-  filters, a `/compare/switch` row, and a `/quiz/switch` weight if
-  the quiz can absorb it without adding a question.
+  others against vendor primary sources). A corpus grep for
+  hall-effect/TMR/optical language at chunking time (2026-11-06)
+  found only `gateron-magnetic-jade` among the 18 catalog records.
+- Surface it: a "Sensing" row on the switch part page spec table
+  (`PartSpec.tsx`) and the `/compare/switch` table
+  (`SwitchCompareTable.tsx`) — reality-checked at chunking time:
+  neither `/parts` nor `/part/switch` has a filter mechanism today
+  (both are plain sorted lists, see `apps/web/src/app/part/[kind]/
+  page.tsx` and `helpers.ts`), so "switch filters" is corrected to
+  a sensing tag on the `/part/switch` index card (`PartIndexCard`)
+  instead of inventing a filter feature this spec doesn't need. No
+  `/quiz/switch` weight: none of its four existing axes maps to
+  sensing without adding a question, and the Acceptance section
+  below never required it.
 
 ### Decisions made upfront (do not ask)
 
@@ -50,9 +60,9 @@ Candidate `[6.0]` (research, 2026-10-26), promoted via `/oversight`
 - **A2** Every non-mechanical switch in `data/switches/` carries
   the correct `sensing` value, each verified against a vendor
   primary source.
-- **A3** The part page, `/parts` filters and `/compare/switch`
-  render sensing (and actuation range when present), with unit and
-  e2e coverage for an HE record.
+- **A3** The part page spec sheet, the `/part/switch` index card
+  and `/compare/switch` render sensing (and actuation range when
+  present), with unit and e2e coverage for an HE record.
 
 ## Open questions
 
@@ -62,4 +72,18 @@ None.
 
 Measure: 3 open · 0 closed · next A4
 
-Not chunked yet.
+- [ ] **03.1** Add `sensing` enum (default `mechanical`) + optional
+  `actuationRangeMm` to `SwitchSchema`, regenerate
+  `switch.schema.json`, schema tests for the field and its default
+  · S · closes A1 · needs —
+- [ ] **03.2** Backfill `sensing: 'hall-effect'` on
+  `data/switches/gateron-magnetic-jade.json` (scout-verified
+  against a vendor primary source); `data:validate` green · S ·
+  closes A2 · needs 03.1
+- [ ] **03.3** Surface `sensing`: `SENSING_LABEL` in
+  `spec-labels.ts`; a "Sensing" row in `PartSpec.tsx` and
+  `SwitchCompareTable.tsx` (relabel "Spring" → "Force" when
+  `sensing !== 'mechanical'`, per Design); a sensing tag on
+  `PartIndexCard` for switches; unit tests for the relabel/row
+  logic plus e2e coverage on the gateron-magnetic-jade part page
+  and compare table · M · closes A3 · needs 03.1, 03.2
