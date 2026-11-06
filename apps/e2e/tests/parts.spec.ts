@@ -105,6 +105,18 @@ test.describe('per-part pages — phase 21', () => {
       )
     })
 
+    test('switch index card for a hall-effect record shows the sensing tag', async ({
+      page,
+    }) => {
+      await page.goto('/part/switch')
+      const card = page.locator(
+        '[data-testid="part-index-card"][href="/part/switch/gateron-magnetic-jade"]',
+      )
+      await expect(card.getByTestId('part-index-sensing')).toContainText(
+        /Hall-effect/i,
+      )
+    })
+
     test('/part/keycap-set kind-index carries quiz affordance', async ({
       page,
     }) => {
@@ -157,6 +169,17 @@ test.describe('per-part pages — phase 21', () => {
         /part · board/i,
       )
       await expect(page.getByTestId('part-spec-list')).toContainText(/Layout/i)
+    })
+
+    test('switch detail page renders Sensing and relabels Spring to Force for a hall-effect record', async ({
+      page,
+    }) => {
+      await page.goto('/part/switch/gateron-magnetic-jade')
+      await expect(page.getByTestId('part-spec-list')).toContainText(/Sensing/i)
+      await expect(page.getByTestId('part-spec-list')).toContainText(
+        /Hall-effect/i,
+      )
+      await expect(page.getByTestId('part-spec-list')).toContainText(/Force/i)
     })
 
     test('emits BreadcrumbList + Thing JSON-LD', async ({ page }) => {

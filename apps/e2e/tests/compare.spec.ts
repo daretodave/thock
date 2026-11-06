@@ -88,6 +88,17 @@ test.describe('/compare/switch — phase 44', () => {
     expect(await diffRows.count()).toBeGreaterThan(0)
   })
 
+  test('compare table shows Sensing row and relabels Spring to Force for a hall-effect switch', async ({
+    page,
+  }) => {
+    await page.goto('/compare/switch?a=gateron-oil-king&b=gateron-magnetic-jade')
+    await expect(page.getByTestId('compare-table')).toContainText(/Sensing/i)
+    await expect(page.getByTestId('compare-table')).toContainText(
+      /Hall-effect/i,
+    )
+    await expect(page.getByTestId('compare-table')).toContainText(/Force/i)
+  })
+
   test('H1 changes to switch names when both params are provided', async ({
     page,
   }) => {
