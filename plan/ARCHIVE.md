@@ -71,3 +71,4 @@
 - 2026-11-06 · 03 · spec complete: Switch sensing (hall-effect, TMR, optical) · absorbed into plan/bearings.md · deleted in this commit
 - 2026-11-06 · 04.1 · GroupBuySchema accepts delayed/cancelled with sourced note · 8d525a6d..c67dc1f0
 - 2026-11-06 · 04.2 · /group-buys surfaces delayed/cancelled note, badge and source link · 350cc376..db62fa07
+- 2026-11-06 · 04.3 · Vendor page + home widget route and badge delayed/cancelled buys correctly · 16db4118..24a53a85

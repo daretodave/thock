@@ -56,8 +56,6 @@ either. Candidate `[6.0]` (research, 2026-10-26), promoted via
 
 ## Acceptance
 
-- **A2** `/group-buys` and every group-buy surface render the new
-  states and note, with unit + e2e coverage and clean a11y.
 - **A3** `group-buy-status-check.mjs` flags overdue unshipped buys
   as delay candidates, with tests.
 
@@ -67,26 +65,8 @@ None.
 
 ## Chunks
 
-Measure: 2 open · 1 closed · next A4
+Measure: 1 open · 2 closed · next A4
 
-- [ ] **04.3** Remaining surfaces + feeds/a11y · M · closes A2 · needs —
-  - `VendorGroupBuySection`'s `sectionVariant`: delayed stays out of
-    `ended`; cancelled routes to `ended`, same as the canonical
-    page's partition.
-  - `GroupBuyCountdownRow` (home widget) + `isAnnouncedNotStarted`:
-    a delayed buy keeps its countdown/progress sliver (existing
-    `daysLeft`/`progressFraction` clamps already guard a
-    past-endDate input) with a small "delayed" cue; cancelled buys
-    never reach this widget (excluded by `getActiveGroupBuys`).
-  - Regression test: `/group-buys/past` + the search index include
-    a `cancelled` fixture via `getAllClosedGroupBuys` /
-    `isGroupBuyEnded` (no code change expected — confirms 04.1's
-    predicate reaches both without a dedicated change).
-  - Confirm `buildItemListJsonLd` / feed-adjacent code (no status
-    gating today) still typechecks against the widened enum.
-  - a11y: `apps/e2e/tests/a11y.spec.ts` passes for `/group-buys`,
-    `/group-buys/past`, `/`, and one `/vendor/<slug>` route with the
-    new badge markup (visible text, not color-only).
 - [ ] **04.4** group-buy-status-check.mjs delay framing · S · closes A3 · needs —
   - A `live`/`announced` record whose `endDate` has passed is now
     framed as a "delay candidate": update `formatAuditRow()`'s
