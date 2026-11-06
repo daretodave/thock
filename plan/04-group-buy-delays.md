@@ -69,22 +69,7 @@ None.
 
 Measure: 2 open · 1 closed · next A4
 
-- [ ] **04.2** Canonical page + GroupBuyRow · M · partial A2 · needs —
-  - `apps/web/src/lib/data-runtime/index.ts` `getActiveGroupBuys`:
-    mirror the same rule (duplicate implementation, not delegated —
-    keep both in sync).
-  - `apps/web/src/app/group-buys/helpers.ts` `isLive`/`isAnnounced`:
-    a `delayed` buy is live regardless of `endDate`; `cancelled`
-    never reaches `isLive`/`isAnnounced` (falls through to
-    `isGroupBuyEnded` in `partitionGroupBuys`).
-  - `GroupBuyRow` (`apps/web/src/components/group-buys/`): extend
-    `STATUS_LABEL`; render the calm badge + note for `delayed`
-    (keeping the variant's existing countdown/CTA) and the
-    "CANCELLED" treatment for `cancelled` (muted, no CTA, per
-    Decisions).
-  - Unit tests: `GroupBuyRow.test.tsx` and `helpers.test.ts` cover
-    one `delayed` and one `cancelled` fixture each.
-- [ ] **04.3** Remaining surfaces + feeds/a11y · M · closes A2 · needs 04.2
+- [ ] **04.3** Remaining surfaces + feeds/a11y · M · closes A2 · needs —
   - `VendorGroupBuySection`'s `sectionVariant`: delayed stays out of
     `ended`; cancelled routes to `ended`, same as the canonical
     page's partition.

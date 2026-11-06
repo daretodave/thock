@@ -70,3 +70,4 @@
 - 2026-11-06 · 03.3 · Sensing surfaced on part page, index card, compare table · 759e22f0..0401b066
 - 2026-11-06 · 03 · spec complete: Switch sensing (hall-effect, TMR, optical) · absorbed into plan/bearings.md · deleted in this commit
 - 2026-11-06 · 04.1 · GroupBuySchema accepts delayed/cancelled with sourced note · 8d525a6d..c67dc1f0
+- 2026-11-06 · 04.2 · /group-buys surfaces delayed/cancelled note, badge and source link · 350cc376..db62fa07
