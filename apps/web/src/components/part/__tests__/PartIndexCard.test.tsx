@@ -15,8 +15,38 @@ const FAKE_SWITCH = {
     name: 'Gateron Oil King',
     vendorSlug: 'cannonkeys',
     type: 'linear',
+    sensing: 'mechanical',
     description: LONG_DESC,
     status: 'in-production',
+  },
+} as unknown as ResolvedPart
+
+const FAKE_HE_SWITCH = {
+  id: 'switch:gateron-magnetic-jade',
+  kind: 'switch',
+  slug: 'gateron-magnetic-jade',
+  record: {
+    slug: 'gateron-magnetic-jade',
+    name: 'Gateron Magnetic Jade',
+    vendorSlug: 'kbdfans',
+    type: 'linear',
+    sensing: 'hall-effect',
+    description: LONG_DESC,
+    status: 'in-production',
+  },
+} as unknown as ResolvedPart
+
+const FAKE_BOARD = {
+  id: 'board:bakeneko65',
+  kind: 'board',
+  slug: 'bakeneko65',
+  record: {
+    slug: 'bakeneko65',
+    name: 'Bakeneko65',
+    vendorSlug: 'cannonkeys',
+    layout: '65',
+    description: LONG_DESC,
+    status: 'in-stock',
   },
 } as unknown as ResolvedPart
 
@@ -60,5 +90,24 @@ describe('<PartIndexCard>', () => {
     expect(screen.getByTestId('part-index-card').className).toContain(
       'focus-visible:ring-2',
     )
+  })
+
+  it('renders a sensing tag for a switch, labeled from the sensing enum', () => {
+    render(<PartIndexCard part={FAKE_SWITCH} />)
+    expect(screen.getByTestId('part-index-sensing')).toHaveTextContent(
+      /Mechanical/i,
+    )
+  })
+
+  it('renders the hall-effect sensing label for a hall-effect switch', () => {
+    render(<PartIndexCard part={FAKE_HE_SWITCH} />)
+    expect(screen.getByTestId('part-index-sensing')).toHaveTextContent(
+      /Hall-effect/i,
+    )
+  })
+
+  it('does not render a sensing tag for a board', () => {
+    render(<PartIndexCard part={FAKE_BOARD} />)
+    expect(screen.queryByTestId('part-index-sensing')).not.toBeInTheDocument()
   })
 })

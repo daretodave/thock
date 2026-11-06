@@ -2,6 +2,7 @@ import type { ReactElement } from 'react'
 import Link from 'next/link'
 import { Mono } from '@thock/ui'
 import type { ResolvedPart } from '@/lib/data-runtime'
+import { SENSING_LABEL, specLabel } from '@/lib/spec-labels'
 import { truncate } from '@/lib/truncate'
 
 const STATUS_LABEL: Record<string, string> = {
@@ -39,11 +40,21 @@ export function PartIndexCard({ part }: PartIndexCardProps): ReactElement {
         >
           <Mono>{part.record.name}</Mono>
         </h2>
-        <span
-          data-testid="part-index-status"
-          className={`font-mono uppercase tracking-[0.08em] text-micro ${statusTint(status)}`}
-        >
-          {STATUS_LABEL[status] ?? status}
+        <span className="flex items-center gap-2">
+          {part.kind === 'switch' && (
+            <span
+              data-testid="part-index-sensing"
+              className="font-mono uppercase tracking-[0.08em] text-micro text-text-2"
+            >
+              {specLabel(SENSING_LABEL, part.record.sensing)}
+            </span>
+          )}
+          <span
+            data-testid="part-index-status"
+            className={`font-mono uppercase tracking-[0.08em] text-micro ${statusTint(status)}`}
+          >
+            {STATUS_LABEL[status] ?? status}
+          </span>
         </span>
       </div>
       <p className="max-w-70ch text-body text-text-2">
