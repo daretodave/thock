@@ -56,9 +56,6 @@ either. Candidate `[6.0]` (research, 2026-10-26), promoted via
 
 ## Acceptance
 
-- **A1** The schema accepts `delayed` / `cancelled` with a required
-  sourced `statusNote`; schema tests cover valid and invalid cases;
-  `data:validate` passes.
 - **A2** `/group-buys` and every group-buy surface render the new
   states and note, with unit + e2e coverage and clean a11y.
 - **A3** `group-buy-status-check.mjs` flags overdue unshipped buys
@@ -70,23 +67,9 @@ None.
 
 ## Chunks
 
-Measure: 3 open · 0 closed · next A4
+Measure: 2 open · 1 closed · next A4
 
-- [ ] **04.1** Schema + ended/active predicate · S · closes A1 · needs —
-  - `GroupBuySchema` (`packages/data/src/schemas/group-buy.ts`): add
-    `'delayed'` / `'cancelled'` to `status`; add optional
-    `statusNote: { text: string (1-280 chars), sourceUrl: url,
-    asOf: date-only }`; refine so `statusNote` is required when
-    `status` is `delayed` or `cancelled`.
-  - `isGroupBuyEnded` / `getActiveGroupBuys`
-    (`packages/data/src/loaders/group-buys.ts`): apply the
-    delayed/cancelled rule from "Decisions made upfront".
-  - Unit tests: schema valid/invalid cases (missing note, note
-    on an unaffected status, each field's bounds); loader cases
-    for delayed-past-endDate and cancelled-future-endDate.
-  - `pnpm data:validate` passes (regenerates
-    `data/schemas/group-buy.schema.json`).
-- [ ] **04.2** Canonical page + GroupBuyRow · M · partial A2 · needs 04.1
+- [ ] **04.2** Canonical page + GroupBuyRow · M · partial A2 · needs —
   - `apps/web/src/lib/data-runtime/index.ts` `getActiveGroupBuys`:
     mirror the same rule (duplicate implementation, not delegated —
     keep both in sync).
@@ -119,7 +102,7 @@ Measure: 3 open · 0 closed · next A4
   - a11y: `apps/e2e/tests/a11y.spec.ts` passes for `/group-buys`,
     `/group-buys/past`, `/`, and one `/vendor/<slug>` route with the
     new badge markup (visible text, not color-only).
-- [ ] **04.4** group-buy-status-check.mjs delay framing · S · closes A3 · needs 04.1
+- [ ] **04.4** group-buy-status-check.mjs delay framing · S · closes A3 · needs —
   - A `live`/`announced` record whose `endDate` has passed is now
     framed as a "delay candidate": update `formatAuditRow()`'s
     action text to suggest `status: 'delayed'` with a sourced
