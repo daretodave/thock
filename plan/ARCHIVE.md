@@ -66,3 +66,4 @@
 - 2026-11-06 · 03.1 · SwitchSchema sensing field live; typecheck green repo-wide · 492eae77..48853d5b
 - 2026-11-06 · 02.2 · /quiz/board wired into tools, compare, sitemap, canonical URLs, e2e + a11y · 686e5185..686e5185
 - 2026-11-06 · 02 · spec complete: /quiz/board board recommender quiz · URL contract already in plan/bearings.md · deleted in this commit
+- 2026-11-06 · 03.2 · gateron-magnetic-jade sensing backfilled to hall-effect, scout-verified · a8f4f006..a8f4f006

@@ -54,9 +54,6 @@ Candidate `[6.0]` (research, 2026-10-26), promoted via `/oversight`
 
 ## Acceptance
 
-- **A2** Every non-mechanical switch in `data/switches/` carries
-  the correct `sensing` value, each verified against a vendor
-  primary source.
 - **A3** The part page spec sheet, the `/part/switch` index card
   and `/compare/switch` render sensing (and actuation range when
   present), with unit and e2e coverage for an HE record.
@@ -67,16 +64,12 @@ None.
 
 ## Chunks
 
-Measure: 2 open · 1 closed · next A4
+Measure: 1 open · 2 closed · next A4
 
-- [ ] **03.2** Backfill `sensing: 'hall-effect'` on
-  `data/switches/gateron-magnetic-jade.json` (scout-verified
-  against a vendor primary source); `data:validate` green · S ·
-  closes A2 · needs —
 - [ ] **03.3** Surface `sensing`: `SENSING_LABEL` in
   `spec-labels.ts`; a "Sensing" row in `PartSpec.tsx` and
   `SwitchCompareTable.tsx` (relabel "Spring" → "Force" when
   `sensing !== 'mechanical'`, per Design); a sensing tag on
   `PartIndexCard` for switches; unit tests for the relabel/row
   logic plus e2e coverage on the gateron-magnetic-jade part page
-  and compare table · M · closes A3 · needs 03.2
+  and compare table · M · closes A3 · needs —
