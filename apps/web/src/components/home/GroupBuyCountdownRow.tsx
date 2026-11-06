@@ -93,6 +93,7 @@ export function GroupBuyCountdownRow({
 }: GroupBuyCountdownRowProps): ReactElement {
   const todayIso = now.toISOString().slice(0, 10)
   const isAnnounced = isAnnouncedNotStarted(groupBuy, todayIso)
+  const isDelayed = groupBuy.status === 'delayed'
   const left = isAnnounced
     ? daysLeft(groupBuy.startDate, todayIso)
     : daysLeft(groupBuy.endDate, todayIso)
@@ -101,7 +102,10 @@ export function GroupBuyCountdownRow({
     endDate: groupBuy.endDate,
     todayIso,
   })
-  const isUrgent = !isAnnounced && left <= ACCENT_THRESHOLD_DAYS
+  // A delayed buy isn't "closing soon" urgency — it's a different signal
+  // (see the visible "DELAYED" cue below), so it never trips the
+  // accent-color urgency branch even if its endDate has already lapsed.
+  const isUrgent = !isAnnounced && !isDelayed && left <= ACCENT_THRESHOLD_DAYS
 
   return (
     <Link
@@ -109,6 +113,7 @@ export function GroupBuyCountdownRow({
       data-testid="group-buy-row"
       data-urgent={isUrgent ? 'true' : 'false'}
       data-announced={isAnnounced ? 'true' : 'false'}
+      data-delayed={isDelayed ? 'true' : 'false'}
       className="grid grid-cols-[1fr_auto] items-baseline gap-1.5 border-t border-border py-3 first:border-t-0 first:pt-0 hover:bg-surface-hi focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu sm:grid-cols-[40px_1fr_auto] sm:gap-x-3"
     >
       {groupBuy.heroImage ? (
@@ -148,11 +153,13 @@ export function GroupBuyCountdownRow({
           isUrgent ? 'text-accent' : 'text-text-2'
         }`}
       >
-        {isAnnounced
-          ? `opens in ${left}d`
-          : left === 0
-            ? 'today'
-            : `${left}d`}
+        {isDelayed
+          ? 'DELAYED'
+          : isAnnounced
+            ? `opens in ${left}d`
+            : left === 0
+              ? 'today'
+              : `${left}d`}
       </span>
       <div
         aria-hidden="true"

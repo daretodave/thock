@@ -284,4 +284,51 @@ describe('<GroupBuyCountdownRow>', () => {
     expect(row.getAttribute('data-announced')).toBe('false')
     expect(screen.getByTestId('group-buy-countdown')).toHaveTextContent('2d')
   })
+
+  it('renders a visible DELAYED cue (not just color) for a delayed buy', () => {
+    const gb = makeGroupBuy({
+      status: 'delayed',
+      startDate: '2026-04-01',
+      endDate: '2026-05-01',
+      statusNote: {
+        text: 'Factory delay; no new ship date yet.',
+        sourceUrl: 'https://example.com/update',
+        asOf: '2026-05-01',
+      },
+    })
+    render(
+      <GroupBuyCountdownRow
+        groupBuy={gb}
+        vendor={makeVendor()}
+        now={new Date('2026-05-10T00:00:00Z')}
+      />,
+    )
+    const row = screen.getByTestId('group-buy-row')
+    expect(row.getAttribute('data-delayed')).toBe('true')
+    expect(screen.getByTestId('group-buy-countdown')).toHaveTextContent(
+      'DELAYED',
+    )
+  })
+
+  it('does not mark a delayed buy as urgent even with a far-past endDate', () => {
+    const gb = makeGroupBuy({
+      status: 'delayed',
+      startDate: '2026-01-01',
+      endDate: '2026-01-05',
+      statusNote: {
+        text: 'Factory delay; no new ship date yet.',
+        sourceUrl: 'https://example.com/update',
+        asOf: '2026-05-01',
+      },
+    })
+    render(
+      <GroupBuyCountdownRow
+        groupBuy={gb}
+        vendor={makeVendor()}
+        now={new Date('2026-05-10T00:00:00Z')}
+      />,
+    )
+    const row = screen.getByTestId('group-buy-row')
+    expect(row.getAttribute('data-urgent')).toBe('false')
+  })
 })
