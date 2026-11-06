@@ -16,13 +16,14 @@ line goes; each line is a lock that times out:
 `- **<NN.k>** · <reason> · since: <date> · until: <date or
 condition> · max_age: 14d`, an optional `· fallback: release`):
 
-- (none)
+- 06 · auto-promoted, veto until 2026-11-07 (#1067) · max_age: 1d · fallback: release
 
 ## Specs
 
 | # | Initiative | Spec | Status | Progress |
 |---|---|---|---|---|
 | 05 | Sitewide focus-visible default + coverage check | [05-focus-visible-default.md](05-focus-visible-default.md) |  | not chunked |
+| 06 | Article internal-consistency checker | [06-article-internal-consistency.md](06-article-internal-consistency.md) |  | not chunked |
 
 ## Layout
 
