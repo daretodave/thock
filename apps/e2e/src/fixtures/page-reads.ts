@@ -259,9 +259,10 @@ export const pageReads: Record<string, PageRead> = {
   '/tools': {
     pattern: '/tools',
     ...html([
-      // Phase 49: tools index H1 is "Tools"; grid of 4 tool cards.
+      // Spec 02: tools index H1 is "Tools"; grid of 5 tool cards
+      // (switch quiz, keycap-set quiz, board quiz, switch compare, board compare).
       { kind: 'h1-matches', pattern: /^tools$/i },
-      { kind: 'min-link-count', selector: '[data-testid^="tools-card-"]', min: 4 },
+      { kind: 'min-link-count', selector: '[data-testid^="tools-card-"]', min: 5 },
     ]),
   },
   '/quiz/switch': {
@@ -278,6 +279,13 @@ export const pageReads: Record<string, PageRead> = {
     ...html([
       // Phase 47: quiz page renders H1 "Find your keycap set".
       { kind: 'h1-matches', pattern: /find your keycap set/i },
+    ]),
+  },
+  '/quiz/board': {
+    pattern: '/quiz/board',
+    ...html([
+      // Spec 02: quiz page renders H1 "Find your board".
+      { kind: 'h1-matches', pattern: /find your board/i },
     ]),
   },
   '/part/[kind]': {

@@ -79,11 +79,11 @@ async function runAxe(page: Page, url: string) {
 // results state (auto-advance fires ~150ms after each click). Each quiz
 // component names its results container differently (SwitchQuiz uses
 // "quiz-results", KeycapSetQuiz uses "keycap-quiz-results").
-async function completeQuiz(page: Page, url: string, resultsTestId: string) {
+async function completeQuiz(page: Page, url: string, resultsTestId: string, questionCount = 4) {
   await page.goto(url)
   await page.waitForLoadState('networkidle')
 
-  for (let i = 0; i < 4; i++) {
+  for (let i = 0; i < questionCount; i++) {
     const firstOption = page.locator('[data-testid="quiz-option-description"]').first()
     await firstOption.click()
     await page.waitForTimeout(200)
@@ -157,6 +157,10 @@ test.describe('a11y — desktop', () => {
 
   test('keycap-set quiz (/quiz/keycap-set)', async ({ page }) => {
     await runAxe(page, '/quiz/keycap-set')
+  })
+
+  test('board quiz (/quiz/board)', async ({ page }) => {
+    await runAxe(page, '/quiz/board')
   })
 
   // Pillar list pages — closes the a11y coverage gap (issue #383)
@@ -336,6 +340,10 @@ test.describe('a11y — mobile (375px)', () => {
     await runAxe(page, '/quiz/keycap-set')
   })
 
+  test('board quiz — mobile', async ({ page }) => {
+    await runAxe(page, '/quiz/board')
+  })
+
   // Pillar list pages — closes the a11y coverage gap (issue #383)
   test('guides pillar — mobile', async ({ page }) => {
     await runAxe(page, '/guides')
@@ -483,6 +491,11 @@ test.describe('a11y — quiz results (post-completion)', () => {
     await completeQuiz(page, '/quiz/keycap-set', 'keycap-quiz-results')
     await assertAxeClean(page, '/quiz/keycap-set (results state)')
   })
+
+  test('board quiz results (/quiz/board)', async ({ page }) => {
+    await completeQuiz(page, '/quiz/board', 'board-quiz-results', 5)
+    await assertAxeClean(page, '/quiz/board (results state)')
+  })
 })
 
 test.describe('a11y — quiz results (post-completion, mobile 375px)', () => {
@@ -496,6 +509,11 @@ test.describe('a11y — quiz results (post-completion, mobile 375px)', () => {
   test('keycap-set quiz results — mobile', async ({ page }) => {
     await completeQuiz(page, '/quiz/keycap-set', 'keycap-quiz-results')
     await assertAxeClean(page, '/quiz/keycap-set (results state, mobile)')
+  })
+
+  test('board quiz results — mobile', async ({ page }) => {
+    await completeQuiz(page, '/quiz/board', 'board-quiz-results', 5)
+    await assertAxeClean(page, '/quiz/board (results state, mobile)')
   })
 })
 

@@ -113,6 +113,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: latestOf(keycapSets.map((k) => k.updatedAt)),
       priority: 0.7,
     },
+    {
+      url: canonicalUrl('/quiz/board'),
+      lastModified: latestOf(boards.map((b) => b.updatedAt)),
+      priority: 0.7,
+    },
     { url: canonicalUrl('/about'), priority: 0.4 },
     {
       url: canonicalUrl('/newsletter'),

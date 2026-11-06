@@ -133,6 +133,13 @@ export default async function CompareBoardPage({
             >
               Browse all boards →
             </Link>
+            <Link
+              href="/quiz/board"
+              data-testid="compare-quiz-link"
+              className="font-mono text-small uppercase tracking-[0.08em] text-text-2 hover:text-text transition-colors rounded-xs focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu mb-6 inline-block"
+            >
+              Not sure? Take the quiz →
+            </Link>
           </div>
         )}
       </Container>

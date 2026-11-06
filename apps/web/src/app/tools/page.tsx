@@ -45,6 +45,14 @@ const TOOLS: Tool[] = [
     testId: 'tools-card-quiz-keycap-set',
   },
   {
+    href: '/quiz/board',
+    heading: 'Find your board',
+    description:
+      'Answer 5 questions about layout, mount style, case material, hotswap, and wireless — get your top board matches from the thock catalog.',
+    cta: 'Start the quiz',
+    testId: 'tools-card-quiz-board',
+  },
+  {
     href: '/compare/switch',
     heading: 'Compare switches',
     description:

@@ -190,6 +190,13 @@ test.describe('/compare/board — phase 48', () => {
     await expect(browseLink).toHaveAttribute('href', '/part/board')
   })
 
+  test('empty state links to the board quiz', async ({ page }) => {
+    await page.goto('/compare/board')
+    const quizLink = page.getByTestId('compare-quiz-link')
+    await expect(quizLink).toBeVisible()
+    await expect(quizLink).toHaveAttribute('href', '/quiz/board')
+  })
+
   test('renders comparison table when two valid slugs are in query params', async ({
     page,
   }) => {

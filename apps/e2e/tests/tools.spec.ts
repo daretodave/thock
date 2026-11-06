@@ -7,16 +7,17 @@ test.describe('/tools — phase 49', () => {
     await expect(page.getByTestId('tools-eyebrow')).toBeVisible()
   })
 
-  test('renders exactly 4 tool cards', async ({ page }) => {
+  test('renders exactly 5 tool cards', async ({ page }) => {
     await page.goto('/tools')
     const cards = page.locator('[data-testid^="tools-card-"]')
-    await expect(cards).toHaveCount(4)
+    await expect(cards).toHaveCount(5)
   })
 
-  test('all four tool cards link to the correct routes', async ({ page }) => {
+  test('all five tool cards link to the correct routes', async ({ page }) => {
     await page.goto('/tools')
     await expect(page.getByTestId('tools-card-quiz-switch')).toHaveAttribute('href', '/quiz/switch')
     await expect(page.getByTestId('tools-card-quiz-keycap-set')).toHaveAttribute('href', '/quiz/keycap-set')
+    await expect(page.getByTestId('tools-card-quiz-board')).toHaveAttribute('href', '/quiz/board')
     await expect(page.getByTestId('tools-card-compare-switch')).toHaveAttribute('href', '/compare/switch')
     await expect(page.getByTestId('tools-card-compare-board')).toHaveAttribute('href', '/compare/board')
   })

@@ -39,3 +39,23 @@ test.describe('/quiz/switch — mobile (375px) — phase 33', () => {
     await expect(h1).toBeVisible()
   })
 })
+
+test.describe('/quiz/board — mobile (375px) — spec 02', () => {
+  test('no horizontal scroll on board quiz page', async ({ page }) => {
+    await page.goto('/quiz/board')
+    const overflow = await page.evaluate(() => {
+      const root = document.documentElement
+      return root.scrollWidth - root.clientWidth
+    })
+    expect(
+      overflow,
+      `/quiz/board should not scroll horizontally at 375px (overflow=${overflow}px)`,
+    ).toBeLessThanOrEqual(1)
+  })
+
+  test('H1 is visible at 375px viewport', async ({ page }) => {
+    await page.goto('/quiz/board')
+    const h1 = page.getByRole('heading', { level: 1 })
+    await expect(h1).toBeVisible()
+  })
+})
