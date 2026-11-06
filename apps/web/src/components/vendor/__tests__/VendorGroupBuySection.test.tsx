@@ -168,6 +168,64 @@ describe('VendorGroupBuySection', () => {
     )
   })
 
+  it('renders a delayed buy past its endDate as live (not ended/muted)', () => {
+    // isGroupBuyEnded() treats 'delayed' as never-ended regardless of
+    // endDate, so this record should render through GroupBuyRow's
+    // 'live' variant (badge path), not the muted 'ended' variant.
+    const delayed: GroupBuy = {
+      ...BASE_GB,
+      slug: 'cannonkeys-delayed',
+      name: 'Delayed Buy',
+      startDate: '2026-01-01',
+      endDate: '2026-02-01',
+      status: 'delayed',
+      statusNote: {
+        text: 'Factory delay; no new ship date yet.',
+        sourceUrl: 'https://example.com/update',
+        asOf: '2026-05-01',
+      },
+    }
+    render(
+      <VendorGroupBuySection
+        vendorName="CannonKeys"
+        active={[delayed]}
+        past={[]}
+        vendor={VENDOR}
+        now={new Date('2026-06-01')}
+      />,
+    )
+    const row = screen.getByTestId('group-buy-row')
+    expect(row.getAttribute('data-variant')).toBe('live')
+    expect(row.className).not.toContain('opacity-70')
+  })
+
+  it('renders a cancelled buy as ended', () => {
+    const cancelled: GroupBuy = {
+      ...BASE_GB,
+      slug: 'cannonkeys-cancelled',
+      name: 'Cancelled Buy',
+      startDate: '2026-05-01',
+      endDate: '2099-01-01',
+      status: 'cancelled',
+      statusNote: {
+        text: 'Vendor cancelled the run.',
+        sourceUrl: 'https://example.com/cancelled',
+        asOf: '2026-05-01',
+      },
+    }
+    render(
+      <VendorGroupBuySection
+        vendorName="CannonKeys"
+        active={[cancelled]}
+        past={[]}
+        vendor={VENDOR}
+        now={new Date('2026-06-01')}
+      />,
+    )
+    const row = screen.getByTestId('group-buy-row')
+    expect(row.getAttribute('data-variant')).toBe('ended')
+  })
+
   it('keeps the "active" heading when at least one buy is live', () => {
     const notYetStarted: GroupBuy = {
       ...BASE_GB,

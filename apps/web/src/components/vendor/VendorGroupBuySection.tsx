@@ -1,6 +1,6 @@
 import type { ReactElement } from 'react'
 import { Container, Stack } from '@thock/ui'
-import type { GroupBuy, Vendor } from '@thock/data'
+import { isGroupBuyEnded, type GroupBuy, type Vendor } from '@thock/data'
 import { GroupBuyRow } from '@/components/group-buys/GroupBuyRow'
 
 const SECTION_HEADING_CLASS =
@@ -16,8 +16,7 @@ export type VendorGroupBuySectionProps = {
 
 function sectionVariant(gb: GroupBuy, now: Date): 'live' | 'announced' | 'ended' {
   const today = now.toISOString().slice(0, 10)
-  if (gb.status === 'closed' || gb.status === 'shipped') return 'ended'
-  if ((gb.status === 'live' || gb.status === 'announced') && gb.endDate < today) return 'ended'
+  if (isGroupBuyEnded(gb, today)) return 'ended'
   // A record can be left at status:'announced' after its startDate has
   // already passed (the same stale-status class of bug as critique #44
   // on the canonical /group-buys page, see group-buys/helpers.ts#isLive).
