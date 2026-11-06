@@ -1,8 +1,9 @@
 # Critique log
 
-> Last pass: 2026-11-05T16:09:48Z at commit 5ec23cdd
-> Pass count: 17
-> Iterate-bias category: external-critique (pass 17 fired 15 commits after pass 16, >24h elapsed (~4.5 days) too — scripted walk per UI: both, anonymous-only (no Chrome MCP on the cloud runner; ui-walk.mjs scripted walk via CDP, 14 screens, 0 automated findings). Reader visited 7 routes x 2 viewports (/, /news, /trends/tracker, /group-buys, /tools, /quiz/switch, /compare/switch); surfaced 2 candidates, self-assessment kept 2. Filed: [MED] / — the home hero only renders `siteConfig.tagline` ("keyboards, deeply.") in `pickHero`'s dead empty-state branch (`apps/web/src/app/page.tsx:129-141`); the live, populated path renders straight into the latest article's hero card with no site-level tagline or description anywhere above the fold, so a first-time visitor sees nav + an article headline with no cue this is a mechanical-keyboard site; [MED] / — the persistent header nav (`PrimaryNavLinks.tsx`) and footer list every pillar plus Tools but have no Group Buys entry, despite it being a full page with its own data model and a dedicated homepage widget (`GroupBuysWidget.tsx`) — reachable from home but with no path back to it from an article or any other page. Reader-tool artifact rate: 0% this pass — both findings verified against source (`apps/web/src/app/page.tsx`, `PrimaryNavLinks.tsx`, `Footer.tsx`, `apps/web/src/app/tools/page.tsx`) before filing.)
+> Last pass: 2026-11-06T00:16:44Z at commit 113926e9
+> Pass count: 18
+> Iterate-bias category: external-critique (pass 18 fired 16 commits after pass 17 — scripted walk per UI: both, anonymous-only (no Chrome MCP on the cloud runner; ui-walk.mjs scripted walk via CDP, 14 screens, 0 automated findings). Reader visited 7 routes x 2 viewports (/, /news, /trends/tracker, /group-buys, /tools, /quiz/switch, /compare/switch); surfaced 2 candidates, self-assessment kept 2. Filed: [HIGH] /group-buys — every one of the 18 group-buy records in `data/group-buys` carries `status: "closed"` with an `endDate` already past, so `live.length === 0` and `announced.length === 0` for every current visitor; the hero lede promises "Active group buys for boards, keycap sets, and switches" but the only content block a visitor sees is "RECENTLY ENDED — Just closed", contradicting the page's own premise (`apps/web/src/app/group-buys/helpers.ts` `isLive`/`isAnnounced`); [LOW] /quiz/switch — the "Quiet and office-friendly" answer's aside "Dampened — colleagues will thank you" (`SwitchQuiz.tsx:22`) reads quippier than the quiz's otherwise dry, factual tone. Reader-tool artifact rate: 0% this pass — both findings verified against source and data (`data/group-buys/*.json`, `apps/web/src/app/group-buys/helpers.ts`, `SwitchQuiz.tsx`) before filing.)
+> Pass 17 last pass: 2026-11-05T16:09:48Z at commit 5ec23cdd
 > Pass 16 last pass: 2026-10-31T04:11:00Z at commit 6b73abed
 > Pass 13 last pass: 2026-10-27T23:31:41Z at commit a03ead8e
 > Pass 11 last pass: 2026-10-26T18:54:00Z at commit a01a911
@@ -13,12 +14,29 @@
 > Pass 8 last pass: 2026-05-10T14:00:00Z at commit d34580c
 > Pass 7 last pass: 2026-05-10T08:30:00Z at commit e3de21d
 > Pass 6 last pass: 2026-05-10T07:30:00Z at commit dfa5596
-> Pass 5 last pass: 2026-05-10T02:45:00Z at commit 790b415
 
 > External-observer feedback for thock. Populated by `/critique`,
 > drained by `/iterate`. See `skills/critique.md` for the contract.
 
 ## Pending
+
+### [HIGH] /group-buys — every group-buy record is closed; the page's "Active group buys" promise is never true for current visitors
+- pass: 18 (commit 113926e9)
+- viewport: both
+- category: comprehension
+- observation: the hero lede reads "Active group buys for boards, keycap sets, and switches. We track start/end dates, region availability, and which vendor is running each one," but all 18 records in `data/group-buys/*.json` carry `status: "closed"` with an `endDate` already in the past (latest: 2026-09-22). `partitionGroupBuys`'s `isLive`/`isAnnounced` helpers (`apps/web/src/app/group-buys/helpers.ts:20-29`) key off `gb.status`, so `live.length === 0` and `announced.length === 0` for every visitor right now. The page renders only the "RECENTLY ENDED — Just closed" section below the summary line — a first-time visitor's first and only content block directly contradicts the lede's "active" framing.
+- evidence: `data/group-buys/*.json` (18/18 records `status: "closed"`); `apps/web/src/app/group-buys/helpers.ts:20-29` (`isLive`/`isAnnounced`); walk screenshots `url--desktop--group-buys.png` / `url--mobile--group-buys.png` (`.nexus/walk/2026-11-06T00-16-44-961Z/`, not committed — cite this line for re-verification) show "Just closed" as the only visible section.
+- suggested fix: either ship new live/announced group-buy records (a data-content gap — `/ship-data` or a content generator should keep at least one buy open), or, if the real-world lull is expected, swap the lede for state-aware copy ("No live buys right now — here's what just wrapped") instead of an evergreen "active group buys" claim that reads false whenever the live/announced buckets are empty.
+- source: walk
+
+### [LOW] /quiz/switch — one answer's aside reads quippier than the quiz's otherwise dry tone
+- pass: 18 (commit 113926e9)
+- viewport: desktop
+- category: voice
+- observation: the "Quiet and office-friendly" answer option pairs with the aside "Dampened — colleagues will thank you" (`apps/web/src/components/quiz/SwitchQuiz.tsx:22`). The other options on the same question use plain factual descriptors; this one leans toward a quippy aside against bearings' "knowledgeable peer, not breathless hype" voice.
+- evidence: `apps/web/src/components/quiz/SwitchQuiz.tsx:22`; walk screenshot `url--desktop--quiz-switch.png` (`.nexus/walk/2026-11-06T00-16-44-961Z/`, not committed).
+- suggested fix: swap to a factual descriptor matching the other options' tone, e.g. "Dampened — low noise floor, good for shared spaces."
+- source: walk
 
 ### [MED] / — home hero shows no site tagline or description in the live (populated) state, only in the dead empty-state branch
 - pass: 17 (commit 5ec23cdd)
