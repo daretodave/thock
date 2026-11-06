@@ -57,12 +57,6 @@ links forward into a `/compare/*` page:
 
 ## Acceptance
 
-- **A1** `/quiz/board` renders, walks every question, and returns
-  1-3 ranked boards that exist in the catalog, each linking to its
-  part page.
-- **A2** `recommendBoard` is pure and unit-tested, including ties
-  and an answer set no board fully matches (closest match, never an
-  empty result).
 - **A3** `/tools`, `/compare/board`, sitemap, canonical URLs and
   bearings all list the new route; e2e covers the happy path and
   a11y (desktop + mobile).
@@ -73,7 +67,6 @@ None.
 
 ## Chunks
 
-Measure: 3 open · 0 closed · next A4
+Measure: 1 open · 2 closed · next A4
 
-- [ ] **02.1** Core: `recommendBoard` + `BoardQuiz` route (page/loading/opengraph-image) · M · closes A1, A2 · needs —
-- [ ] **02.2** Wire into `/tools`, `/compare/board`, sitemap, canonical URLs, bearings, e2e + a11y coverage · S · closes A3 · needs 02.1
+- [ ] **02.2** Wire into `/tools`, `/compare/board`, sitemap, canonical URLs, bearings, e2e + a11y coverage · S · closes A3 · needs —

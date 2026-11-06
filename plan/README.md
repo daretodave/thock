@@ -22,7 +22,7 @@ condition> · max_age: 14d`, an optional `· fallback: release`):
 
 | # | Initiative | Spec | Status | Progress |
 |---|---|---|---|---|
-| 02 | /quiz/board board recommender | [02-quiz-board.md](02-quiz-board.md) |  | 2 left |
+| 02 | /quiz/board board recommender | [02-quiz-board.md](02-quiz-board.md) |  | 1 left |
 | 03 | Switch sensing (hall-effect, TMR, optical) | [03-switch-sensing.md](03-switch-sensing.md) |  | not chunked |
 | 04 | Group-buy delays and non-fulfillment | [04-group-buy-delays.md](04-group-buy-delays.md) |  | not chunked |
 | 05 | Sitewide focus-visible default + coverage check | [05-focus-visible-default.md](05-focus-visible-default.md) |  | not chunked |

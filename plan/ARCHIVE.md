@@ -62,3 +62,4 @@
 - 2026-11-05 · 01.4 · content-fact-audit now runs from refill chain + nightly digest · c244bb91..c244bb91
 - 2026-11-05 · 01.5 · content-fact-audit false-positive fixes; detector now flags only real mismatches · ed0bf27a..82f879c8
 - 2026-11-05 · 01 · spec complete: Content-fact-vs-catalog numeric-spec audit · absorbed into plan/bearings.md · deleted in this commit
+- 2026-11-05 · 02.1 · /quiz/board core — recommendBoard + BoardQuiz route live · 5ccc7fd8..8329e75c
