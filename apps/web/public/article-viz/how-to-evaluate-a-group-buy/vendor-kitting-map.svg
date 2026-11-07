@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>GMK CYL Ramune vendor-kitting map: one production run feeding ten regional storefronts</title>
+
+  <text x="40" y="48" font-family="IBM Plex Sans, sans-serif" font-size="14" font-weight="700" letter-spacing="0.08em" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">GMK CYL RAMUNE — ONE RUN, TEN STOREFRONTS</text>
+
+  <!-- Top node: production run (amber, the focal accent) -->
+  <rect x="440" y="80" width="320" height="76" rx="10" fill="oklch(0.78 0.10 80)" fill-opacity="0.1" stroke="oklch(0.78 0.10 80)"/>
+  <circle cx="440" cy="118" r="5" fill="oklch(0.78 0.10 80)" stroke="none"/>
+  <text x="600" y="113" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="16" font-weight="700" fill="oklch(0.78 0.10 80)" stroke="none">One production run</text>
+  <text x="600" y="136" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none" opacity="0.85">fulfillment via GMK, Germany</text>
+
+  <!-- Fan-out lines to regional storefronts -->
+  <g stroke="oklch(0.78 0.005 90)" stroke-opacity="0.45">
+    <line x1="480" y1="156" x2="140" y2="260"/>
+    <line x1="520" y1="156" x2="340" y2="260"/>
+    <line x1="580" y1="156" x2="540" y2="260"/>
+    <line x1="620" y1="156" x2="740" y2="260"/>
+    <line x1="680" y1="156" x2="940" y2="260"/>
+    <line x1="720" y1="156" x2="1080" y2="260"/>
+  </g>
+
+  <!-- Regional storefront row -->
+  <g font-family="JetBrains Mono, monospace" font-size="13" stroke="none" fill="oklch(0.78 0.005 90)">
+    <rect x="60" y="260" width="160" height="70" rx="8" fill="none" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.6"/>
+    <text x="140" y="290" text-anchor="middle">Divinikey</text>
+    <text x="140" y="310" text-anchor="middle" opacity="0.7">US</text>
+
+    <rect x="260" y="260" width="160" height="70" rx="8" fill="none" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.6"/>
+    <text x="340" y="290" text-anchor="middle">Prototypist</text>
+    <text x="340" y="310" text-anchor="middle" opacity="0.7">UK</text>
+
+    <rect x="460" y="260" width="160" height="70" rx="8" fill="none" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.6"/>
+    <text x="540" y="290" text-anchor="middle">Geonworks</text>
+    <text x="540" y="310" text-anchor="middle" opacity="0.7">KR</text>
+
+    <rect x="660" y="260" width="160" height="70" rx="8" fill="none" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.6"/>
+    <text x="740" y="290" text-anchor="middle">Yushakobo</text>
+    <text x="740" y="310" text-anchor="middle" opacity="0.7">JP</text>
+
+    <rect x="860" y="260" width="160" height="70" rx="8" fill="none" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.6"/>
+    <text x="940" y="290" text-anchor="middle">KBDfans</text>
+    <text x="940" y="310" text-anchor="middle" opacity="0.7">host, CN</text>
+
+    <rect x="1000" y="260" width="160" height="70" rx="8" fill="none" stroke="oklch(0.78 0.005 90)" stroke-dasharray="4 5" stroke-opacity="0.6"/>
+    <text x="1080" y="290" text-anchor="middle">+6 more</text>
+    <text x="1080" y="310" text-anchor="middle" opacity="0.7">regional vendors</text>
+  </g>
+
+  <!-- Downstream divergence: each storefront has its own shipping/customs leg -->
+  <g stroke="oklch(0.78 0.005 90)" stroke-opacity="0.35" stroke-dasharray="3 6">
+    <line x1="140" y1="330" x2="140" y2="400"/>
+    <line x1="340" y1="330" x2="340" y2="400"/>
+    <line x1="540" y1="330" x2="540" y2="400"/>
+    <line x1="740" y1="330" x2="740" y2="400"/>
+    <line x1="940" y1="330" x2="940" y2="400"/>
+    <line x1="1080" y1="330" x2="1080" y2="400"/>
+  </g>
+  <text x="600" y="430" text-anchor="middle" font-family="Newsreader, serif" font-style="italic" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">Same factory order, ten separate shipping and customs timelines downstream.</text>
+
+  <!-- warm-bronze theme dot -->
+  <circle cx="1170" cy="30" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

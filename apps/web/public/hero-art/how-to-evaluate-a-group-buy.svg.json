@@ -1,0 +1,36 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-11-07T00:00:00Z",
+  "commit": "e7f24575ddd58c77263170c825cd6a916172a277",
+  "kind": "hero-art",
+  "article_slug": "how-to-evaluate-a-group-buy",
+  "article_pillar": "guides",
+  "brief_summary": "Hero art for the guides-pillar article on evaluating a group buy before paying. Adapts bearings.md's guide default (annotated keycap row) per the article's own frontmatter heroImageAlt, which specifies a timeline motif instead: a left-to-right timeline arrow through four checkpoints (announced, live, closed, shipped) with a branch peeling off after 'closed' toward a dimmer, dashed 'delayed' checkpoint, and an ochre splash marking the branch point.",
+  "target": "apps/web/public/hero-art/how-to-evaluate-a-group-buy.svg",
+  "source": "apps/web/src/content/articles/how-to-evaluate-a-group-buy.mdx frontmatter heroImageAlt; plan/bearings.md § Article hero art — colorful keyboard SVGs (locked 2026-05-09)",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject; guide default is an annotated keycap row, reinterpreted here per the article's own heroImageAlt as an annotated timeline since that is the article's literal subject (evaluating a listing's lifecycle before paying)",
+  "size": [1200, 750],
+  "subject": "A horizontal timeline arrow running left to right through four open circular checkpoints labeled ANNOUNCED, LIVE, CLOSED, SHIPPED (JetBrains Mono, uppercase, confident). Just past the CLOSED checkpoint — the point where funding is done but production is not — a dashed branch peels downward toward a dimmer, dashed DELAYED checkpoint labeled in a hushed italic Newsreader lowercase rather than the confident mono of the main line. An ochre focal dot marks the branch point itself, with a soft ochre wash behind the whole delayed region. A few fading dashes trail off past the delayed checkpoint with no arrowhead, standing in for the open-ended wait described in the article's lede rather than a resolved outcome. Bronze theme dot at the upper-right margin.",
+  "splash_color": {
+    "name": "ochre",
+    "oklch": "oklch(0.72 0.13 88)"
+  },
+  "accent_color": {
+    "name": "warm-bronze (theme accent)",
+    "oklch": "oklch(0.80 0.135 75)"
+  },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "stroke_weight": "2px",
+  "canvas": "1200x750",
+  "background": "transparent (light-mode safe per house style)",
+  "tokens_snapshot": "design/tokens.css",
+  "tokens_sha256": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": ["JetBrains Mono", "Newsreader"],
+  "alt": "A hand-drawn timeline arrow running left to right through four labeled checkpoints — announced, live, closed, shipped — with a branch peeling off toward a dimmer, dashed delayed checkpoint, rendered in warm-grey line work with an ochre splash marking the branch point.",
+  "data_sources": [],
+  "outputs": [
+    "apps/web/public/hero-art/how-to-evaluate-a-group-buy.svg"
+  ],
+  "warnings": []
+}

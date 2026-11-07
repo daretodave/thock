@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Two-column checklist: verify before paying, in amber, against caution signs, in warm red</title>
+
+  <!-- Column headers -->
+  <circle cx="60" cy="50" r="5" fill="oklch(0.78 0.10 80)" stroke="none"/>
+  <text x="80" y="55" font-family="IBM Plex Sans, sans-serif" font-size="16" font-weight="700" letter-spacing="0.04em" fill="oklch(0.78 0.10 80)" stroke="none">VERIFY BEFORE PAYING</text>
+
+  <circle cx="660" cy="50" r="5" fill="oklch(0.62 0.13 25)" stroke="none"/>
+  <text x="680" y="55" font-family="IBM Plex Sans, sans-serif" font-size="16" font-weight="700" letter-spacing="0.04em" fill="oklch(0.62 0.13 25)" stroke="none">CAUTION SIGNS</text>
+
+  <line x1="40" y1="75" x2="560" y2="75" stroke-opacity="0.2"/>
+  <line x1="640" y1="75" x2="1160" y2="75" stroke-opacity="0.2"/>
+  <line x1="600" y1="40" x2="600" y2="420" stroke-opacity="0.12" stroke-dasharray="3 7"/>
+
+  <!-- Left column: amber checkmarks -->
+  <g font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none">
+    <path d="M40 120 l8 8 l14 -16" stroke="oklch(0.78 0.10 80)" stroke-width="3" fill="none"/>
+    <text x="75" y="128">A visible prior-buy track record</text>
+
+    <path d="M40 180 l8 8 l14 -16" stroke="oklch(0.78 0.10 80)" stroke-width="3" fill="none"/>
+    <text x="75" y="188">A written refund and cancellation policy</text>
+
+    <path d="M40 240 l8 8 l14 -16" stroke="oklch(0.78 0.10 80)" stroke-width="3" fill="none"/>
+    <text x="75" y="248">A payment method with chargeback protection</text>
+
+    <path d="M40 300 l8 8 l14 -16" stroke="oklch(0.78 0.10 80)" stroke-width="3" fill="none"/>
+    <text x="75" y="308">A dated, sourced explanation for any delay</text>
+  </g>
+
+  <!-- Right column: caution marks -->
+  <g font-family="IBM Plex Sans, sans-serif" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none">
+    <path d="M640 112 l16 16 M656 112 l-16 16" stroke="oklch(0.62 0.13 25)" stroke-width="3"/>
+    <text x="675" y="128">No public run history to check</text>
+
+    <path d="M640 172 l16 16 M656 172 l-16 16" stroke="oklch(0.62 0.13 25)" stroke-width="3"/>
+    <text x="675" y="188">Refunds handled "case by case"</text>
+
+    <path d="M640 232 l16 16 M656 232 l-16 16" stroke="oklch(0.62 0.13 25)" stroke-width="3"/>
+    <text x="675" y="248">Bank-transfer or crypto only, no alternative</text>
+
+    <path d="M640 292 l16 16 M656 292 l-16 16" stroke="oklch(0.62 0.13 25)" stroke-width="3"/>
+    <text x="675" y="308">Months of silence with no explanation</text>
+  </g>
+
+  <text x="40" y="400" font-family="Newsreader, serif" font-style="italic" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">Nothing here guarantees an outcome — it narrows the odds before the money moves.</text>
+
+  <!-- warm-bronze theme dot -->
+  <circle cx="1170" cy="25" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

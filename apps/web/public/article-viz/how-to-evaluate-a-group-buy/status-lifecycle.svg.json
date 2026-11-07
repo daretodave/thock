@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-10-31T13:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "how-to-evaluate-a-group-buy",
+  "article_pillar": "guides",
+  "section_anchor": "check-the-runner-before-the-render",
+  "brief_summary": "Left-to-right process strip showing the group-buy status lifecycle — announced, live, closed, shipped — with a branch point after 'closed' peeling off to a 'delayed' checkpoint (highlighted amber, dashed) and a 'cancelled' checkpoint (outlined in the caution-red token). Illustrates that a listing's status badge is a lifecycle to be read, not a single static label.",
+  "target": "apps/web/public/article-viz/how-to-evaluate-a-group-buy/status-lifecycle.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "how-to-evaluate-a-group-buy.mdx § 'Check the runner before the render' — 'a listing's status badge moves through a known lifecycle, and a vendor's archive of past buys on the vendor directory shows whether prior runs actually closed out and shipped, or whether they're still sitting in a stalled state months past their estimate.'",
+    "packages/data/src/schemas/group-buy.ts — status enum: 'announced', 'live', 'closed', 'shipped', 'delayed', 'cancelled', with statusNote (text, sourceUrl, asOf) required when status is 'delayed' or 'cancelled'.",
+    "how-to-evaluate-a-group-buy.mdx § 'Reading the timeline for red flags' — 'A delayed status that comes with a dated, sourced explanation is a far better sign than a listing that simply never updates and leaves the buyer to guess.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/how-to-evaluate-a-group-buy/status-lifecycle.svg"],
+  "warnings": []
+}

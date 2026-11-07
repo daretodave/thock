@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-10-31T13:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "how-to-evaluate-a-group-buy",
+  "article_pillar": "guides",
+  "section_anchor": "one-factory-run-many-checkout-counters",
+  "brief_summary": "Fan-out diagram showing GMK CYL Ramune's single production run (amber focal node, fulfillment via GMK Germany) branching to a row of ten regional storefront nodes, then diverging again into separate dashed shipping/customs legs per storefront. Grounded in the keycap set's own catalog record, used as a real, non-fabricated illustration of vendor-kitting mechanics rather than a general or invented example.",
+  "target": "apps/web/public/article-viz/how-to-evaluate-a-group-buy/vendor-kitting-map.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "JetBrains Mono", "Newsreader"],
+  "data_sources": [
+    "data/keycap-sets/gmk-cyl-ramune.json — 'Also the first CYL set distributed across ten simultaneous regional storefronts (Divinikey US, Prototypist UK, Geonworks KR, Yushakobo JP, and six others) rather than a single KBDfans-hosted window. ... Q3/Q4 2026 fulfillment via GMK Germany.'",
+    "how-to-evaluate-a-group-buy.mdx § 'One factory run, many checkout counters' — 'it sold through ten simultaneous regional storefronts rather than one checkout — Divinikey handling the US, Prototypist the UK, Geonworks Korea, Yushakobo Japan, and six more regional vendors beyond those, all feeding the same production order.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/how-to-evaluate-a-group-buy/vendor-kitting-map.svg"],
+  "warnings": []
+}

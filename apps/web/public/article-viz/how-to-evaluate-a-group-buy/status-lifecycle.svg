@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Group-buy status lifecycle: announced, live, closed, shipped, with a branch to delayed or cancelled after close</title>
+
+  <text x="40" y="48" font-family="IBM Plex Sans, sans-serif" font-size="14" font-weight="700" letter-spacing="0.08em" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">GROUP-BUY STATUS LIFECYCLE</text>
+
+  <!-- Main row: Announced -> Live -> Closed -> Shipped -->
+  <g font-family="IBM Plex Sans, sans-serif" font-size="16" stroke="none">
+    <rect x="40" y="110" width="220" height="80" rx="10" fill="none" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.7"/>
+    <text x="150" y="156" text-anchor="middle" fill="oklch(0.78 0.005 90)">Announced</text>
+
+    <rect x="330" y="110" width="220" height="80" rx="10" fill="none" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.7"/>
+    <text x="440" y="156" text-anchor="middle" fill="oklch(0.78 0.005 90)">Live</text>
+
+    <rect x="620" y="110" width="220" height="80" rx="10" fill="none" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.7"/>
+    <text x="730" y="156" text-anchor="middle" fill="oklch(0.78 0.005 90)">Closed</text>
+
+    <rect x="910" y="110" width="220" height="80" rx="10" fill="none" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.7"/>
+    <text x="1020" y="156" text-anchor="middle" fill="oklch(0.78 0.005 90)">Shipped</text>
+  </g>
+
+  <!-- Arrows between main row boxes -->
+  <g stroke="oklch(0.78 0.005 90)" stroke-opacity="0.6">
+    <line x1="260" y1="150" x2="325" y2="150"/>
+    <polygon points="325,150 310,143 310,157" fill="oklch(0.78 0.005 90)" fill-opacity="0.6" stroke="none"/>
+    <line x1="550" y1="150" x2="615" y2="150"/>
+    <polygon points="615,150 600,143 600,157" fill="oklch(0.78 0.005 90)" fill-opacity="0.6" stroke="none"/>
+    <line x1="840" y1="150" x2="905" y2="150"/>
+    <polygon points="905,150 890,143 890,157" fill="oklch(0.78 0.005 90)" fill-opacity="0.6" stroke="none"/>
+  </g>
+
+  <!-- Branch point under Closed -->
+  <line x1="730" y1="190" x2="730" y2="230" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.5"/>
+  <line x1="730" y1="230" x2="600" y2="275" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.9"/>
+  <line x1="730" y1="230" x2="870" y2="275" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.85"/>
+
+  <!-- Delayed box (amber, dashed, the focal accent) -->
+  <rect x="470" y="285" width="260" height="80" rx="10" fill="oklch(0.78 0.10 80)" fill-opacity="0.08" stroke="oklch(0.78 0.10 80)" stroke-dasharray="6 6"/>
+  <circle cx="470" cy="325" r="5" fill="oklch(0.78 0.10 80)" stroke="none"/>
+  <text x="600" y="322" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="16" font-weight="700" fill="oklch(0.78 0.10 80)" stroke="none">Delayed</text>
+  <text x="600" y="346" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.10 80)" stroke="none" opacity="0.85">needs a dated, sourced note</text>
+
+  <!-- Cancelled box (caution red) -->
+  <rect x="760" y="285" width="220" height="80" rx="10" fill="none" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.9"/>
+  <text x="870" y="322" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="16" font-weight="700" fill="oklch(0.62 0.13 25)" stroke="none">Cancelled</text>
+  <text x="870" y="346" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.62 0.13 25)" stroke="none" opacity="0.85">rare, worth a written reason</text>
+
+  <text x="40" y="410" font-family="Newsreader, serif" font-style="italic" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">A listing's status badge is a lifecycle, not a label — read what happens after "closed."</text>
+
+  <!-- warm-bronze theme dot -->
+  <circle cx="1170" cy="30" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-10-31T13:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "how-to-evaluate-a-group-buy",
+  "article_pillar": "guides",
+  "section_anchor": "the-checklist",
+  "brief_summary": "Two-column do/caution map: left column (amber checkmarks) lists the four strongest pre-payment signals named in the article's checklist; right column (caution-red marks) lists the inverse warning signs. Every line item is a direct restatement of the article's own numbered checklist, not an invented criterion.",
+  "target": "apps/web/public/article-viz/how-to-evaluate-a-group-buy/verify-vs-caution.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "how-to-evaluate-a-group-buy.mdx § 'The checklist' — items 1 through 6: prior-buy track record, ETA specificity, regional-vendor confirmation, written refund/cancellation policy, payment-method chargeback path, and update cadence over silence.",
+    "how-to-evaluate-a-group-buy.mdx § 'What \"refund policy\" actually means in this hobby' — '\"Refunds handled case by case\" is not a policy; it's the absence of one.'",
+    "how-to-evaluate-a-group-buy.mdx § 'Reading the timeline for red flags' — 'A buy that goes quiet for months after closing ... is a buy giving a backer nothing to evaluate.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/how-to-evaluate-a-group-buy/verify-vs-caution.svg"],
+  "warnings": []
+}
