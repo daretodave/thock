@@ -1,0 +1,25 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-11-07T00:00:00Z",
+  "commit": "ca107c88e775339047347a286c352b53ff524073",
+  "kind": "hero-art",
+  "article_slug": "mm-studio-class80-discontinued",
+  "article_pillar": "news",
+  "target": "apps/web/public/hero-art/mm-studio-class80-discontinued.svg",
+  "source": null,
+  "template": "directive: plan/bearings.md § Article hero art — news/vendor piece maps to keyboard outline / layout silhouette; brief specified a thick-bezeled TKL case with full function row + nav cluster + arrow block proportions, kept consistent with the MDX frontmatter's heroImageAlt text",
+  "size": [1200, 750],
+  "canvas": "1200x750",
+  "subject": "Top-down TKL case outline with a deliberately wide bezel inset (double outline — outer case rect and an inner key-field rect set well inward) literalizing the Class80's thick-bezel retro trait, populated with real TKL proportions: a full-width main block (function row through a bottom row with a long spacebar), a physically separated 3x2 nav cluster (ins/home/pgup over del/end/pgdn), and an arrow cluster (lone up key over left/down/right) — not a 60/65/75% compaction. Three small studs along the bottom bezel band reference the board's three selectable mount modes (top mount, PCB gasket with plate, plateless PCB gasket), with the center stud carrying the splash accent and a focal ring. A smaller side-elevation strip beneath the case shows the case in cross-section — a trapezoid with a visibly thick front/back bezel lip and small feet — literalizing 'side-profile' and the bezel thickness directly. A mono product print ('MM STUDIO · CLASS80') sits below the strip. A hollow, dashed status chip reads 'DISCONTINUED / R2 · NO R3' with a flat off-dash through its indicator circle (deliberately hollow/static rather than filled/live, in contrast to restock-piece status glyphs), grounded in the article's R1-sold-out, R2-succeeded, no-R3 framing.",
+  "splash_color": { "name": "muted terracotta", "oklch": "oklch(0.60 0.105 42)" },
+  "secondary_accent": { "name": "bronze theme dot", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "stroke_weight": "2px",
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": ["JetBrains Mono"],
+  "outputs": [
+    "apps/web/public/hero-art/mm-studio-class80-discontinued.svg"
+  ],
+  "warnings": []
+}

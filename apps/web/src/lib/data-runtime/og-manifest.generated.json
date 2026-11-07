@@ -1,6 +1,26 @@
 {
   "articles": [
     {
+      "slug": "how-to-evaluate-a-group-buy",
+      "readTime": 9,
+      "frontmatter": {
+        "title": "How to evaluate a group buy before you pay",
+        "lede": "A group buy asks for money today and a keyboard, keycap set, or switch run sometime next year. Here's how to read a listing, a vendor, and a timeline before that bet turns into a long, silent wait.",
+        "pillar": "guides",
+        "author": "thock"
+      }
+    },
+    {
+      "slug": "mm-studio-class80-discontinued",
+      "readTime": 5,
+      "frontmatter": {
+        "title": "CannonKeys' catalog record for the MM Studio Class80 flips to discontinued",
+        "lede": "CannonKeys' catalog record for the MM Studio Class80 TKL updated its status field to discontinued on 2026-05-09, closing out a line that ran from a sold-out R1 through a succeeding R2 with no third run announced.",
+        "pillar": "news",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "gateron-ink-housings-deep-dive",
       "readTime": 9,
       "frontmatter": {
@@ -10088,5 +10108,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-11-06T12:00:21.397Z"
+  "generatedAt": "2026-11-07T21:42:14.248Z"
 }

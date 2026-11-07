@@ -1,0 +1,24 @@
+{
+  "generated_by": "content-curator-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-11-07T00:00:00.000Z",
+  "commit": "ca107c88",
+  "kind": "inline-viz",
+  "article_slug": "mm-studio-class80-discontinued",
+  "article_pillar": "news",
+  "section_anchor": "R1, R2, and a status field with no third act",
+  "brief_summary": "Horizontal timeline running from the Class80's 2022-09-01 R1 release through two undated milestones named in the catalog description (R1 sold out, R2 succeeds R1), to the 2026-05-09 catalog status update to discontinued, ending on a dashed question-mark marker labelled 'no R3 confirmed' to show the lineage stopping without a documented successor.",
+  "target": "apps/web/public/article-viz/mm-studio-class80-discontinued/lifecycle-timeline.svg",
+  "splash_color": { "name": "bronze", "oklch": "oklch(0.80 0.135 75)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "data/boards/class80.json — releasedAt: '2022-09-01', status: 'discontinued', updatedAt: '2026-05-09T20:00:00.000Z'",
+    "data/boards/class80.json description — 'R1 sold out; R2 succeeded it'",
+    "article body, 'R1, R2, and a status field with no third act' — 'The catalog record doesn't carry separate dates for when R1 sold out or when R2 took over... now a status field that reads discontinued with nothing scheduled behind it.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/mm-studio-class80-discontinued/lifecycle-timeline.svg"],
+  "warnings": []
+}

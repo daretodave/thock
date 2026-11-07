@@ -1,0 +1,26 @@
+{
+  "generated_by": "content-curator-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-11-07T00:00:00.000Z",
+  "commit": "ca107c88",
+  "kind": "inline-viz",
+  "article_slug": "mm-studio-class80-discontinued",
+  "article_pillar": "news",
+  "section_anchor": "The part of the Class80 worth remembering",
+  "brief_summary": "Three-column comparison card contrasting the Class80's three selectable mount builds — top mount (plate bolted to the case, firm/no-give feel), PCB gasket mount with plate (plate floats on gasket pads, soft/uniform feel, highlighted in bronze as the gasket-mount signature), and plateless PCB gasket (no plate, PCB on gasket pads alone, loose/bouncy feel) — all sold under the same nameplate.",
+  "target": "apps/web/public/article-viz/mm-studio-class80-discontinued/mount-modes.svg",
+  "splash_color": { "name": "bronze", "oklch": "oklch(0.80 0.135 75)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "data/boards/class80.json description — 'a choice of top mount, PCB gasket mount with plate, or plateless PCB gasket'",
+    "mounting-styles-compared.mdx § 'Gasket-mount' — 'The CLASS80 from MM Studio takes the same approach in a TKL chassis — CNC aluminum with both top-mount and gasket-mount configurations available from a single board — and is one of the more studied examples of how a multi-mode mount system changes the shape of the builder's decision.'",
+    "mounting-styles-compared.mdx § 'Top-mount' — 'The feel is firmer and more direct. There is essentially no give.'",
+    "mounting-styles-compared.mdx § 'Gasket-mount' — 'Gasket boards read as deeper, rounder, and more uniform across the board than any of the other three styles.'",
+    "mounting-styles-compared.mdx § 'Tray-mount and the no plate fixing family' — 'The result is a looser, bouncier feel than tray-mount with a fixed plate... Builders who like the sensation describe it as marshmallow.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/mm-studio-class80-discontinued/mount-modes.svg"],
+  "warnings": []
+}

@@ -1,0 +1,24 @@
+{
+  "generated_by": "content-curator-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-11-07T00:00:00.000Z",
+  "commit": "ca107c88",
+  "kind": "inline-viz",
+  "article_slug": "mm-studio-class80-discontinued",
+  "article_pillar": "news",
+  "section_anchor": "What the record says",
+  "brief_summary": "Six-chip fact strip restating the Class80 catalog record verbatim: layout TKL, case material CNC aluminum, mount gasket with three selectable configurations, weight 3.5kg unbuilt, released 2022-09-01, and catalog status discontinued, with the status chip highlighted in bronze to mark the one field that changed.",
+  "target": "apps/web/public/article-viz/mm-studio-class80-discontinued/spec-strip.svg",
+  "splash_color": { "name": "bronze", "oklch": "oklch(0.80 0.135 75)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "data/boards/class80.json — layout: 'tkl', caseMaterial: 'aluminum', mountStyle: 'gasket', hotswap: false, wireless: false, releasedAt: '2022-09-01', status: 'discontinued'",
+    "data/boards/class80.json description — 'a 3.5 kg unbuilt weight'",
+    "article body, 'What the record says' — 'CNC-machined from aluminum... a 3.5 kg unbuilt weight... The only field that moved is status, from whatever active state it carried before to discontinued.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/mm-studio-class80-discontinued/spec-strip.svg"],
+  "warnings": []
+}

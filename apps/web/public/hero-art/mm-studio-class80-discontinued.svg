@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1200 750"
+     preserveAspectRatio="xMidYMid meet"
+     fill="none"
+     stroke="oklch(0.78 0.005 90)"
+     stroke-width="2"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     role="img"
+     aria-label="Side-profile silhouette of a thick-bezeled TKL keyboard case rendered in a bronze stroke, evoking the Class80's retro CNC aluminum shape.">
+  <title>thock hero — MM Studio Class80 discontinued, thick-bezeled TKL layout silhouette with a side-profile case strip and a hollow discontinued status chip</title>
+
+  <!--
+    News piece hero, per plan/bearings.md Article hero art — news/vendor
+    piece maps to "layout silhouette." Primary subject: top-down TKL case
+    outline with a deliberately wide bezel inset (the Class80's defining
+    retro trait) and the three characteristic TKL zones — full-width main
+    block (function row through bottom row), a 3x2 nav cluster, and an
+    arrow-cluster block — laid out with real TKL proportions, not a
+    60/65/75% compaction. A smaller side-elevation strip beneath literalizes
+    "side-profile" and the bezel thickness directly as a case cross-section.
+    Three small studs along the bottom bezel band nod to the board's three
+    selectable mount modes (top mount, PCB gasket w/ plate, plateless PCB
+    gasket); the center one carries the splash accent as the focal point.
+    The status chip is deliberately hollow/dashed with a flat "off" dash
+    through its indicator circle — discontinued, not live — in contrast to
+    filled/solid status glyphs used on restock pieces. Single-splash
+    discipline: muted terracotta is the only per-piece accent hue, paired
+    with the fixed warm-bronze family theme dot upper right.
+  -->
+
+  <!-- Splash wash — muted-terracotta, low-alpha, anchors the lower half -->
+  <ellipse cx="600" cy="560" rx="480" ry="150" fill="oklch(0.60 0.105 42 / 0.08)" stroke="none"/>
+
+  <!-- Outer case outline — thick bezel band -->
+  <rect x="125" y="125" width="978" height="352" rx="14"/>
+  <!-- Inner bezel inset — the wide gap between outer edge and key field is the "thick bezel" -->
+  <rect x="180" y="180" width="868" height="242" rx="8" stroke-opacity="0.5"/>
+
+  <!-- Main block: function row + four typing rows + bottom row -->
+  <g>
+    <!-- Function row -->
+    <g>
+      <rect x="195" y="195" width="40" height="26" rx="3"/>
+      <rect x="240" y="195" width="40" height="26" rx="3"/>
+      <rect x="285" y="195" width="40" height="26" rx="3"/>
+      <rect x="330" y="195" width="40" height="26" rx="3"/>
+      <rect x="375" y="195" width="40" height="26" rx="3"/>
+      <rect x="420" y="195" width="40" height="26" rx="3"/>
+      <rect x="465" y="195" width="40" height="26" rx="3"/>
+      <rect x="510" y="195" width="40" height="26" rx="3"/>
+      <rect x="555" y="195" width="40" height="26" rx="3"/>
+      <rect x="600" y="195" width="40" height="26" rx="3"/>
+      <rect x="645" y="195" width="40" height="26" rx="3"/>
+      <rect x="690" y="195" width="40" height="26" rx="3"/>
+      <rect x="735" y="195" width="40" height="26" rx="3"/>
+      <rect x="780" y="195" width="40" height="26" rx="3"/>
+    </g>
+    <!-- Number row -->
+    <g>
+      <rect x="195" y="233" width="40" height="30" rx="3"/>
+      <rect x="240" y="233" width="40" height="30" rx="3"/>
+      <rect x="285" y="233" width="40" height="30" rx="3"/>
+      <rect x="330" y="233" width="40" height="30" rx="3"/>
+      <rect x="375" y="233" width="40" height="30" rx="3"/>
+      <rect x="420" y="233" width="40" height="30" rx="3"/>
+      <rect x="465" y="233" width="40" height="30" rx="3"/>
+      <rect x="510" y="233" width="40" height="30" rx="3"/>
+      <rect x="555" y="233" width="40" height="30" rx="3"/>
+      <rect x="600" y="233" width="40" height="30" rx="3"/>
+      <rect x="645" y="233" width="40" height="30" rx="3"/>
+      <rect x="690" y="233" width="40" height="30" rx="3"/>
+      <rect x="735" y="233" width="40" height="30" rx="3"/>
+      <rect x="780" y="233" width="40" height="30" rx="3"/>
+    </g>
+    <!-- QWERTY row -->
+    <g>
+      <rect x="195" y="269" width="40" height="30" rx="3"/>
+      <rect x="240" y="269" width="40" height="30" rx="3"/>
+      <rect x="285" y="269" width="40" height="30" rx="3"/>
+      <rect x="330" y="269" width="40" height="30" rx="3"/>
+      <rect x="375" y="269" width="40" height="30" rx="3"/>
+      <rect x="420" y="269" width="40" height="30" rx="3"/>
+      <rect x="465" y="269" width="40" height="30" rx="3"/>
+      <rect x="510" y="269" width="40" height="30" rx="3"/>
+      <rect x="555" y="269" width="40" height="30" rx="3"/>
+      <rect x="600" y="269" width="40" height="30" rx="3"/>
+      <rect x="645" y="269" width="40" height="30" rx="3"/>
+      <rect x="690" y="269" width="40" height="30" rx="3"/>
+      <rect x="735" y="269" width="40" height="30" rx="3"/>
+      <rect x="780" y="269" width="40" height="30" rx="3"/>
+    </g>
+    <!-- Home row, capslock-stagger offset -->
+    <g>
+      <rect x="217" y="305" width="40" height="30" rx="3"/>
+      <rect x="262" y="305" width="40" height="30" rx="3"/>
+      <rect x="307" y="305" width="40" height="30" rx="3"/>
+      <rect x="352" y="305" width="40" height="30" rx="3"/>
+      <rect x="397" y="305" width="40" height="30" rx="3"/>
+      <rect x="442" y="305" width="40" height="30" rx="3"/>
+      <rect x="487" y="305" width="40" height="30" rx="3"/>
+      <rect x="532" y="305" width="40" height="30" rx="3"/>
+      <rect x="577" y="305" width="40" height="30" rx="3"/>
+      <rect x="622" y="305" width="40" height="30" rx="3"/>
+      <rect x="667" y="305" width="40" height="30" rx="3"/>
+      <rect x="712" y="305" width="40" height="30" rx="3"/>
+      <rect x="757" y="305" width="40" height="30" rx="3"/>
+    </g>
+    <!-- Lower row, shift-stagger offset -->
+    <g>
+      <rect x="240" y="341" width="40" height="30" rx="3"/>
+      <rect x="285" y="341" width="40" height="30" rx="3"/>
+      <rect x="330" y="341" width="40" height="30" rx="3"/>
+      <rect x="375" y="341" width="40" height="30" rx="3"/>
+      <rect x="420" y="341" width="40" height="30" rx="3"/>
+      <rect x="465" y="341" width="40" height="30" rx="3"/>
+      <rect x="510" y="341" width="40" height="30" rx="3"/>
+      <rect x="555" y="341" width="40" height="30" rx="3"/>
+      <rect x="600" y="341" width="40" height="30" rx="3"/>
+      <rect x="645" y="341" width="40" height="30" rx="3"/>
+      <rect x="690" y="341" width="40" height="30" rx="3"/>
+      <rect x="735" y="341" width="40" height="30" rx="3"/>
+    </g>
+    <!-- Bottom row + spacebar -->
+    <g>
+      <rect x="195" y="377" width="40" height="30" rx="3"/>
+      <rect x="240" y="377" width="40" height="30" rx="3"/>
+      <rect x="285" y="377" width="40" height="30" rx="3"/>
+      <rect x="330" y="377" width="300" height="30" rx="3"/>
+      <rect x="635" y="377" width="40" height="30" rx="3"/>
+      <rect x="680" y="377" width="40" height="30" rx="3"/>
+      <rect x="725" y="377" width="40" height="30" rx="3"/>
+    </g>
+  </g>
+
+  <!-- Nav cluster: ins/home/pgup over del/end/pgdn, physically separated from the main block -->
+  <g>
+    <rect x="845" y="233" width="24" height="30" rx="3"/>
+    <rect x="875" y="233" width="24" height="30" rx="3"/>
+    <rect x="905" y="233" width="24" height="30" rx="3"/>
+    <rect x="845" y="269" width="24" height="30" rx="3"/>
+    <rect x="875" y="269" width="24" height="30" rx="3"/>
+    <rect x="905" y="269" width="24" height="30" rx="3"/>
+  </g>
+
+  <!-- Arrow cluster: up alone on the upper row, left/down/right below -->
+  <g>
+    <rect x="979" y="341" width="24" height="30" rx="3"/>
+    <rect x="949" y="377" width="24" height="30" rx="3"/>
+    <rect x="979" y="377" width="24" height="30" rx="3"/>
+    <rect x="1009" y="377" width="24" height="30" rx="3"/>
+  </g>
+
+  <!-- Three mount-mode studs along the bottom bezel band: top mount, PCB gasket + plate, plateless PCB gasket -->
+  <g>
+    <circle cx="400" cy="450" r="4" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.6"/>
+    <circle cx="614" cy="450" r="6" fill="oklch(0.60 0.105 42)" fill-opacity="0.9" stroke="oklch(0.60 0.105 42)"/>
+    <circle cx="614" cy="450" r="11" stroke="oklch(0.60 0.105 42)" stroke-opacity="0.4"/>
+    <circle cx="828" cy="450" r="4" stroke="oklch(0.78 0.005 90)" stroke-opacity="0.6"/>
+  </g>
+
+  <!-- Side-profile strip: case cross-section, literalizing the thick front/back bezel lip -->
+  <g>
+    <line x1="340" y1="575" x2="900" y2="575" stroke-opacity="0.35"/>
+    <path d="M 470 575 L 470 520 L 492 503 L 748 503 L 770 520 L 770 575 Z"/>
+    <line x1="510" y1="510" x2="730" y2="510" stroke-opacity="0.5"/>
+    <g stroke-opacity="0.45">
+      <line x1="560" y1="503" x2="560" y2="511"/>
+      <line x1="620" y1="503" x2="620" y2="511"/>
+      <line x1="680" y1="503" x2="680" y2="511"/>
+    </g>
+    <rect x="495" y="575" width="10" height="9" rx="2" stroke-opacity="0.6"/>
+    <rect x="735" y="575" width="10" height="9" rx="2" stroke-opacity="0.6"/>
+  </g>
+
+  <!-- Product print -->
+  <g font-family="ui-monospace, 'JetBrains Mono', monospace" font-size="18" fill="oklch(0.78 0.005 90)" stroke="none" letter-spacing="3" text-anchor="middle">
+    <text x="600" y="616">MM STUDIO · CLASS80</text>
+  </g>
+  <line x1="520" y1="628" x2="680" y2="628" stroke-opacity="0.3"/>
+
+  <!-- Discontinued status chip — hollow, dashed, flat "off" dash through the indicator circle -->
+  <g>
+    <rect x="485" y="640" width="230" height="56" rx="28"
+          fill="none"
+          stroke="oklch(0.60 0.105 42)"
+          stroke-width="2.5"
+          stroke-dasharray="6 5"/>
+    <circle cx="515" cy="668" r="12" stroke="oklch(0.60 0.105 42)" stroke-width="2"/>
+    <line x1="505" y1="668" x2="525" y2="668" stroke="oklch(0.60 0.105 42)" stroke-width="2"/>
+    <text x="540" y="664" font-family="ui-monospace, 'JetBrains Mono', monospace" font-size="15" letter-spacing="2" fill="oklch(0.60 0.105 42)" stroke="none">DISCONTINUED</text>
+    <text x="540" y="684" font-family="ui-monospace, 'JetBrains Mono', monospace" font-size="13" letter-spacing="2" fill="oklch(0.60 0.105 42)" stroke="none" fill-opacity="0.85">R2 · NO R3</text>
+  </g>
+
+  <!-- Warm-bronze theme dot, upper-right margin, fixed family ornament -->
+  <circle cx="1148" cy="64" r="5" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>
