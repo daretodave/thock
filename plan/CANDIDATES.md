@@ -3,6 +3,7 @@
 > Last pass: 2026-10-30 at commit 1d304290
 > Pass count: 444
 > Posture: bold
+> Last field research: 2026-11-07
 
 ## Pending
 
@@ -101,6 +102,8 @@
 - proposed scope: 1 phase — `scripts/itemlist-jsonld-parity-check.mjs` mirroring the sibling survey scripts' shape (dry-run default, `--write`, `--json`): for each of the 19 route files with an `ItemList` JSON-LD block, render (or statically parse, if a full render is too heavy for a mechanical script) the page and extract (a) the JSON-LD `itemListElement[].url` array in order, and (b) the actual rendered anchor hrefs inside that route's corresponding list section; flag order mismatches and set-differences (JSON-LD narrower or wider than rendered) as `seo` category AUDIT rows. Likely needs a lightweight per-route mapping (route file → the list section's boundary) rather than a fully generic diff, since page layouts vary — acceptable one-time authoring cost matching the existing `og-coverage-check.mjs` per-route-convention approach. Wire into `skills/march.md` Step 3b.5a's survey chain and `skills/digest.md`'s nightly breadth check. All 5 known instances now resolved by hand; this phase's value going forward is the 14 unaudited routes plus regression prevention. No schema, component, or URL contract change.
 - estimated phases: 1
 - conflicts: none — pure script addition following the established survey-script pattern; writes only to `plan/AUDIT.md`.
+- re-evidence:
+  - 2026-11-07 · field · +0 · sites that hand-write a schema or structured-data literal separately from the data array a template actually renders let price, stock, and spec values drift out of sync with the visible page; syntax-…
 
 ### [ ] [score 6.5] Stale-`updatedAt` mechanical check — 5 separate reactive fixes across 3 weeks, 14 articles total, no gate catches the class
 - kind: guard
@@ -113,6 +116,8 @@
 - proposed scope: 1 phase — (1) `scripts/stale-updated-at-check.mjs`: for each article MDX file, diff its frontmatter `updatedAt` against the most recent git commit that touched non-generated content in that file (excluding commits that only bump `updatedAt` itself, to avoid self-referential no-op flags); gate mode (single file arg), `--write` (full corpus scan, append AUDIT rows, dedup against existing pending rows), `--json`; (2) a few unit tests (edited-after-updatedAt → flagged; updatedAt already current → clean; the fix-commit-itself is excluded from triggering a re-flag); (3) `skills/march.md` Step 3b.5a amendment: run the check on the empty-queue path alongside the other surveys. No schema, route, or URL-contract change.
 - estimated phases: 1
 - conflicts: none — script only; no route/schema/URL contract change; existing frontmatter and SEO call sites untouched.
+- re-evidence:
+  - 2026-11-07 · field · +0 · two mirror-image failure modes recur across content sites: a displayed last-updated date frozen indefinitely despite real edits, or a date that auto-bumps on any change including trivial ones with no…
 
 ### [ ] [score 6.0] Read-time visible-text regression guard — `computeReadTime()` undercounted five independent visible-text sources, fixed one component at a time across this pass's window
 - kind: guard
@@ -137,6 +142,8 @@
 - proposed scope: 1 phase — scout re-verifies every switch (18), board (10), and keycap-set (10) record's key spec fields (force/travel/weight for switches; layout/angle/mount for boards; material/profile for keycap-sets) against one primary vendor source per record, following the exact citation pattern already proven in the 7 just-shipped deep-dives; `ship-data` (or `data-steward` for the batch) corrects any drift found, plus a prose pass on any already-published article whose copy repeats a corrected field (mirrors the `[4.8]` Boba U4 row's own next-step). The already-filed 6 Pending rows are folded in as the first 6 corrections rather than re-verified from scratch. No schema change — every field being checked already exists on the relevant Zod schema.
 - estimated phases: 1
 - conflicts: none — pure data corrections against existing schemas; no route/schema/URL contract change; agents.md §7 ("data stays in `/data`") already establishes `/data` as the site's database, this only raises its accuracy bar to match the citation rigor the articles above it already carry.
+- re-evidence:
+  - 2026-11-07 · field · +0 · switch and keyboard comparison or recommender tools across the hobby tend not to persist or share results, and separately, group-buy or stock tracker dashboards are side projects whose status fields…
 
 ### [x] [score 4.2] `quota.mjs`'s soft-cap gate has no self-refresh path — once the cached `seven_day` reading lands `allowed_warning` at/above `NEXUS_QUOTA_MAX`, every scheduled/chained run skips forever with no time-based escape — addressed directly in `5ec23cdd` (option (a))
 - kind: guard
