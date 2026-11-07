@@ -988,3 +988,15 @@
 - score: 3.5 (impact × ease / 10)
 - evidence: `grep -rl "ring-accent-mu" apps/web/src --include="*.tsx" | wc -l` → 74; `packages/tokens/__tests__/contrast.test.ts` (the existing `--thock-accent` vs. `--thock-accent-mu` 3:1 guarantee); commit 7a0d7592 (05.2) for the 4 already-fixed instances
 - next: `/iterate` — grep every remaining `ring-accent-mu` usage, resolve each file's actual rendered background (component source or a quick local `next start` probe), swap to `ring-accent` wherever the background isn't `--thock-bg`; leave `bg-accent-mu` (non-ring) usages untouched
+
+### [HOT PURSUIT] [content-gap] [7] guides pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 5 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: guides
+- window-count: 1
+- window-start: 2026-10-08
+- score: 7
+- next: /ship-content → guides pillar article
+> Filed 2026-11-07 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
