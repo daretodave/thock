@@ -75,3 +75,5 @@
 - 2026-11-06 · 04.4 · group-buy-status-check.mjs now frames overdue buys as delay candidates, not closes · bbb02bb9..bbb02bb9
 - 2026-11-06 · 04 · spec complete: Group-buy delays and non-fulfillment · absorbed into plan/bearings.md · deleted in this commit
 - 2026-11-07 · 05.1 · Sitewide :focus-visible base rule ships on the contrast-checked accent token · 0f71c0c8..0f71c0c8
+- 2026-11-07 · 05.2 · Sitewide focus ring now has e2e tab-walk coverage · 7a0d7592..89f194dc
+- 2026-11-07 · 05 · spec complete: Sitewide focus-visible default + coverage check · absorbed into plan/bearings.md · deleted in this commit

@@ -22,7 +22,6 @@ condition> · max_age: 14d`, an optional `· fallback: release`):
 
 | # | Initiative | Spec | Status | Progress |
 |---|---|---|---|---|
-| 05 | Sitewide focus-visible default + coverage check | [05-focus-visible-default.md](05-focus-visible-default.md) |  | 1 left |
 | 06 | Article internal-consistency checker | [06-article-internal-consistency.md](06-article-internal-consistency.md) |  | not chunked |
 
 ## Layout

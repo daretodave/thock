@@ -715,6 +715,22 @@ time you encounter a recurring class of design ambiguity.)
   (recommend `delayed` + a sourced `statusNote`), not a bare
   "closed" — `closed`/`shipped` is only the fallback once a buy is
   confirmed fulfilled or definitively over.
+- **Keyboard focus ring (spec 05, absorbed 2026-11-07):** a global
+  `:focus-visible` default in the base layer
+  (`apps/web/src/app/globals.css`) gives every `a`, `button`,
+  `input`, `select`, `textarea`, `summary` and `[tabindex]` a 2px
+  solid `--thock-accent` outline, 2px offset, as the fallback ring
+  — components that define their own ring keep it. New interactive
+  elements never need their own ring unless they want a different
+  one; if they do, style `:focus-visible` only, never bare `:focus`
+  (so mouse clicks stay quiet), and use `--thock-accent`, not
+  `--thock-accent-mu` — the muted token only clears the 3:1 WCAG
+  1.4.11 floor against `--thock-bg`, not `-bg-2`/`-surface`/
+  `-surface-hi` (`packages/tokens/__tests__/contrast.test.ts`).
+  `apps/e2e/tests/focus-visible.spec.ts` tab-walks 9 representative
+  routes (desktop + mobile) and fails on any focus stop with no
+  visible indicator or under 3:1 contrast — treat a new red there
+  as a real regression, not a test to loosen.
 
 ## Hard rules
 
