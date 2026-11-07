@@ -106,7 +106,7 @@ export function PillarHero({
                   key={`${pill.href}-${i}`}
                   href={pill.href}
                   data-testid={`pillar-hero-${pill.testId ?? `pill-${i}`}`}
-                  className="inline-flex flex-col gap-1 border border-border bg-surface px-5 py-4 transition-colors hover:border-border-hi focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
+                  className="inline-flex flex-col gap-1 border border-border bg-surface px-5 py-4 transition-colors hover:border-border-hi focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent"
                 >
                   <span
                     data-testid="pillar-hero-pill-sublabel"

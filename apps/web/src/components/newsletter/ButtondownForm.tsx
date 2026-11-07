@@ -95,7 +95,7 @@ export function ButtondownForm({
           href={REFER}
           target="_blank"
           rel="noopener"
-          className="rounded-xs hover:text-text focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
+          className="rounded-xs hover:text-text focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent"
         >
           Powered by Buttondown.
           <span aria-hidden="true"> ↗</span>

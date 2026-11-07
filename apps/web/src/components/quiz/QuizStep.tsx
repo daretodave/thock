@@ -46,7 +46,7 @@ export function QuizStep({ question, options, selected, onSelect, autoFocus = fa
               onClick={() => onSelect(opt.value)}
               className={[
                 'w-full text-left px-5 py-4 rounded-lg border transition-colors',
-                'focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu',
+                'focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent',
                 isSelected
                   ? 'border-accent-mu bg-surface text-text'
                   : 'border-border-control bg-bg-2 text-text-2 hover:border-text-3 hover:text-text',
