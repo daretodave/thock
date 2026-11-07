@@ -35,11 +35,8 @@ via `/oversight` 2026-11-01.
 
 ## Acceptance
 
-- **A1** The global default exists and every interactive element on
-  the sampled routes shows a visible focus indicator.
 - **A2** The tab-walk e2e check runs in the verify gate (desktop and
   mobile) and fails on any element without one.
-- **A3** No visual change for mouse users (no ring on click).
 
 ## Open questions
 
@@ -47,32 +44,9 @@ None.
 
 ## Chunks
 
-Measure: 3 open · 0 closed · next A4
+Measure: 1 open · 2 closed · next A4
 
-- [ ] **05.1** Global `:focus-visible` base-layer rule · S · closes A1, A3 · needs —
-  - `apps/web/src/app/globals.css` `@layer base`: one rule
-    targeting `a, button, input, select, textarea, summary,
-    [tabindex]` — `outline: 2px solid var(--thock-accent)` (or
-    `--thock-accent-mu`, whichever hits ≥3:1 contrast against
-    both themes' backgrounds — check `.thock-light`, where
-    `--thock-accent-mu` is not redefined and may silently reuse
-    the dark value) with a 2px offset. `:focus-visible` only,
-    never `:focus`, so mouse clicks stay quiet (A3).
-  - No removal of the ~140 existing per-component
-    `focus-visible:outline-hidden focus-visible:ring-2
-    focus-visible:ring-accent-mu` Tailwind classes in this
-    chunk — the spec treats that as optional cleanup
-    ("may be removed"), not an acceptance requirement; the
-    global rule is additive and acts as the fallback default
-    for anything the component layer doesn't already cover
-    (e.g. a plain `[tabindex]` element with no component
-    styling).
-  - Unit/visual check: confirm the rule's selector list compiles
-    and the token resolves in both `.thock-light` and dark
-    (default) — a quick `pnpm build` + grep of the built CSS is
-    enough; no new test file needed for this chunk (05.2 is the
-    enforcement check).
-- [ ] **05.2** Tab-walk e2e coverage check · M · closes A2 · needs 05.1
+- [ ] **05.2** Tab-walk e2e coverage check · M · closes A2 · needs —
   - New `apps/e2e/tests/focus-visible.spec.ts`, desktop + mobile
     (mirroring `a11y.spec.ts`'s per-route describe shape): for
     each of home, article, pillar, tag, part, compare, quiz,

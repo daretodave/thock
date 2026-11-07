@@ -74,3 +74,4 @@
 - 2026-11-06 · 04.3 · Vendor page + home widget route and badge delayed/cancelled buys correctly · 16db4118..24a53a85
 - 2026-11-06 · 04.4 · group-buy-status-check.mjs now frames overdue buys as delay candidates, not closes · bbb02bb9..bbb02bb9
 - 2026-11-06 · 04 · spec complete: Group-buy delays and non-fulfillment · absorbed into plan/bearings.md · deleted in this commit
+- 2026-11-07 · 05.1 · Sitewide :focus-visible base rule ships on the contrast-checked accent token · 0f71c0c8..0f71c0c8
