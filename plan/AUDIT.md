@@ -979,3 +979,12 @@
 - file: apps/web/src/content/newsletters/thock-weekly-011.mdx
 - claim: Cherry (MX + XTRFY) cited at -6 from 8 weeks ago (2026-W31), but data/trends/2026-W31.json's rows[].score for that row is -10
 - action: correct the prose citation to match data/trends/2026-W31.json's rows[].score (or correct the data record if the data is the one that's wrong)
+
+### [ ] [a11y] [3.5] `focus-visible:ring-accent-mu` focus rings fall under the 3:1 WCAG 1.4.11 floor on dark-theme `bg-bg-2`/`bg-surface`/`bg-surface-hi` backgrounds — 74 files still use the token, only 4 fixed so far
+- category: a11y
+- filed: 2026-11-07 by chunk 05.2's builder (`apps/e2e/tests/focus-visible.spec.ts` tab-walk coverage check, within its 9-route/20-tab scope)
+- impact: 5 (`--thock-accent-mu` only clears 3:1 against `--thock-bg` in dark theme, per `packages/tokens/__tests__/contrast.test.ts`'s existing guarantee for `--thock-accent` vs. `-mu` — any `focus-visible:ring-accent-mu`/`focus:ring-accent-mu` usage sitting on `bg-bg-2`, `bg-surface` or `bg-surface-hi` renders a keyboard focus ring under the accessible-contrast floor. Chunk 05.2 fixed the 4 instances reachable by its 9 canonical routes within 20 Tab presses (`Footer.tsx`, `ButtondownForm.tsx`, `PillarHero.tsx`, `QuizStep.tsx`'s option buttons) but a repo-wide grep (`grep -rl "ring-accent-mu" apps/web/src --include="*.tsx"`) still finds 74 files, most unaudited against their actual background)
+- ease: 7 (same one-line swap, `ring-accent-mu` → `ring-accent`, per file — but needs a per-file background check first, since some usages may already sit on `--thock-bg` and are fine as-is, or use `bg-accent-mu` as text background rather than a ring, which is a different, already-tuned contrast case per `QuizStep.tsx`'s rank-badge regression guard)
+- score: 3.5 (impact × ease / 10)
+- evidence: `grep -rl "ring-accent-mu" apps/web/src --include="*.tsx" | wc -l` → 74; `packages/tokens/__tests__/contrast.test.ts` (the existing `--thock-accent` vs. `--thock-accent-mu` 3:1 guarantee); commit 7a0d7592 (05.2) for the 4 already-fixed instances
+- next: `/iterate` — grep every remaining `ring-accent-mu` usage, resolve each file's actual rendered background (component source or a quick local `next start` probe), swap to `ring-accent` wherever the background isn't `--thock-bg`; leave `bg-accent-mu` (non-ring) usages untouched
