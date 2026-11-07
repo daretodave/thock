@@ -1003,7 +1003,7 @@
 > Filed 2026-11-07 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 > **Resolved (2026-11-07):** shipped `how-to-evaluate-a-group-buy.mdx` — a guides-pillar buyer's guide on judging a group buy's trustworthiness before paying (vendor track record, timeline red flags, region/vendor-kitting mechanics, refund/recourse policy, closing checklist). `publishedAt` gap-filled to 2026-10-31 (midpoint of the 14-day gap between 2026-10-24 and today in the 30-day window). Grounded in real catalog mechanics (GMK CYL Ramune's regional kitting) without inventing any named group-buy failure. Language gate, mentionedParts gate, cross-link survey all clean. `pnpm verify` full gate green: typecheck, lint, 1388/1388 e2e.
 
-### [HOT PURSUIT] [content-gap] [7] news pillar — 1 of ≥2 articles in last 30d
+### [x] [content-gap] [7] news pillar — 1 of ≥2 articles in last 30d — addressed in 0bf491b2, closes #1071
 - category: content-gaps
 - impact: 7 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -1014,4 +1014,28 @@
 - score: 7
 - next: /ship-content → news pillar article
 - issue: #1071
+> Filed 2026-11-07 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+> **Resolved (2026-11-07):** shipped `mm-studio-class80-discontinued.mdx` — a news-pillar lifecycle piece on CannonKeys' catalog record for the MM Studio Class80 flipping to `discontinued` (R1 sold out, R2 succeeded it, no R3 in the record). `publishedAt` gap-filled to 2026-10-25 (midpoint of the 26-day gap between 2026-10-12 and today in the 30-day window). Grounded entirely in `data/boards/class80.json` + prior thock coverage (`mounting-styles-compared.mdx`, `60-percent-layout-history.mdx`); no invented discontinuation reason or vendor statement. Language gate, mentionedParts gate clean. Cross-link survey filed 1 pair (`[4.5]` row above, left pending for a future tick). `pnpm verify` full gate green: typecheck, lint, 1391/1391 e2e.
+
+### [ ] [cross-links] [4.5] mm-studio-class80-discontinued ↔ cannonkeys-blaine-v2-se-group-buy — no prose cross-link (same pillar, ≥2 shared tags: cannonkeys, gasket-mount)
+- category: cross-links
+- filed: 2026-11-07 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: cannonkeys, gasket-mount
+- article-a: apps/web/src/content/articles/mm-studio-class80-discontinued.mdx
+- article-b: apps/web/src/content/articles/cannonkeys-blaine-v2-se-group-buy.mdx
+- action: add [cannonkeys-blaine-v2-se-group-buy](/article/cannonkeys-blaine-v2-se-group-buy) to mm-studio-class80-discontinued body, or vice versa
+
+### [HOT PURSUIT] [content-gap] [7] trends pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 8 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: trends
+- window-count: 1
+- window-start: 2026-10-08
+- score: 7
+- next: /ship-content → trends pillar article
 > Filed 2026-11-07 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
