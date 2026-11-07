@@ -989,7 +989,7 @@
 - evidence: `grep -rl "ring-accent-mu" apps/web/src --include="*.tsx" | wc -l` → 74; `packages/tokens/__tests__/contrast.test.ts` (the existing `--thock-accent` vs. `--thock-accent-mu` 3:1 guarantee); commit 7a0d7592 (05.2) for the 4 already-fixed instances
 - next: `/iterate` — grep every remaining `ring-accent-mu` usage, resolve each file's actual rendered background (component source or a quick local `next start` probe), swap to `ring-accent` wherever the background isn't `--thock-bg`; leave `bg-accent-mu` (non-ring) usages untouched
 
-### [HOT PURSUIT] [content-gap] [7] guides pillar — 1 of ≥2 articles in last 30d
+### [x] [HOT PURSUIT] [content-gap] [7] guides pillar — 1 of ≥2 articles in last 30d — addressed in babf5f3b, closes #1070
 - category: content-gaps
 - impact: 5 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -1000,4 +1000,17 @@
 - score: 7
 - next: /ship-content → guides pillar article
 - issue: #1070
+> Filed 2026-11-07 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+> **Resolved (2026-11-07):** shipped `how-to-evaluate-a-group-buy.mdx` — a guides-pillar buyer's guide on judging a group buy's trustworthiness before paying (vendor track record, timeline red flags, region/vendor-kitting mechanics, refund/recourse policy, closing checklist). `publishedAt` gap-filled to 2026-10-31 (midpoint of the 14-day gap between 2026-10-24 and today in the 30-day window). Grounded in real catalog mechanics (GMK CYL Ramune's regional kitting) without inventing any named group-buy failure. Language gate, mentionedParts gate, cross-link survey all clean. `pnpm verify` full gate green: typecheck, lint, 1388/1388 e2e.
+
+### [HOT PURSUIT] [content-gap] [7] news pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 7 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: news
+- window-count: 1
+- window-start: 2026-10-08
+- score: 7
+- next: /ship-content → news pillar article
 > Filed 2026-11-07 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
