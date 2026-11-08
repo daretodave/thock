@@ -1038,7 +1038,7 @@
 - article-b: apps/web/src/content/articles/cannonkeys-blaine-v2-se-group-buy.mdx
 - action: add [cannonkeys-blaine-v2-se-group-buy](/article/cannonkeys-blaine-v2-se-group-buy) to mm-studio-class80-discontinued body, or vice versa
 
-### [HOT PURSUIT] [content-gap] [7] trends pillar — 1 of ≥2 articles in last 30d
+### [x] [HOT PURSUIT] [content-gap] [7] trends pillar — 1 of ≥2 articles in last 30d — addressed in b4e6964b, closes #1073
 - category: content-gaps
 - impact: 8 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -1050,3 +1050,60 @@
 - next: /ship-content → trends pillar article
 - issue: #1073
 > Filed 2026-11-07 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+> **Resolved (2026-11-08):** shipped `hall-effect-score-dips-wooting-ship-slips.mdx` — a trends-pillar follow-up to `hall-effect-rapid-trigger-plateau.mdx` (Aug), reading the Hall Effect/Rapid Trigger category's first-ever down-tick (100 → 95, 2026-W44) against Wooting's own late-October 80HE+ ABS/Module ship date going unconfirmed for a second straight week. Grounded entirely in `data/trends/2026-W37.json`–`2026-W44.json` score history and the existing `wooting-80he-plus-shipping-update.mdx` article; no invented vendor statements or dates. `publishedAt` gap-filled to 2026-11-04 (largest gap in the 30-day window). Language gate, mentionedParts gate clean. Cross-link survey filed 4 pairs (left pending for a future tick). `pnpm verify` full gate green: typecheck, lint, 1394/1394 e2e.
+
+### [ ] [cross-links] [4.5] hall-effect-score-dips-wooting-ship-slips ↔ hall-effect-mainstream — no prose cross-link (same pillar, ≥2 shared tags: hall-effect, trends-2026)
+- category: cross-links
+- filed: 2026-11-08 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: hall-effect, trends-2026
+- article-a: apps/web/src/content/articles/hall-effect-score-dips-wooting-ship-slips.mdx
+- article-b: apps/web/src/content/articles/hall-effect-mainstream.mdx
+- action: add [hall-effect-mainstream](/article/hall-effect-mainstream) to hall-effect-score-dips-wooting-ship-slips body, or vice versa
+
+### [ ] [cross-links] [4.5] hall-effect-score-dips-wooting-ship-slips ↔ rapid-trigger-gaming-crossover — no prose cross-link (same pillar, ≥2 shared tags: hall-effect, trends-2026)
+- category: cross-links
+- filed: 2026-11-08 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: hall-effect, trends-2026
+- article-a: apps/web/src/content/articles/hall-effect-score-dips-wooting-ship-slips.mdx
+- article-b: apps/web/src/content/articles/rapid-trigger-gaming-crossover.mdx
+- action: add [rapid-trigger-gaming-crossover](/article/rapid-trigger-gaming-crossover) to hall-effect-score-dips-wooting-ship-slips body, or vice versa
+
+### [ ] [cross-links] [4.5] hall-effect-score-dips-wooting-ship-slips ↔ tmr-switches-five-week-climb — no prose cross-link (same pillar, ≥2 shared tags: hall-effect, rapid-trigger)
+- category: cross-links
+- filed: 2026-11-08 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: hall-effect, rapid-trigger
+- article-a: apps/web/src/content/articles/hall-effect-score-dips-wooting-ship-slips.mdx
+- article-b: apps/web/src/content/articles/tmr-switches-five-week-climb.mdx
+- action: add [tmr-switches-five-week-climb](/article/tmr-switches-five-week-climb) to hall-effect-score-dips-wooting-ship-slips body, or vice versa
+
+### [ ] [cross-links] [4.5] hall-effect-score-dips-wooting-ship-slips ↔ wooting-rapid-trigger-head-start — no prose cross-link (same pillar, ≥2 shared tags: hall-effect, rapid-trigger, wooting)
+- category: cross-links
+- filed: 2026-11-08 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: hall-effect, rapid-trigger, wooting
+- article-a: apps/web/src/content/articles/hall-effect-score-dips-wooting-ship-slips.mdx
+- article-b: apps/web/src/content/articles/wooting-rapid-trigger-head-start.mdx
+- action: add [wooting-rapid-trigger-head-start](/article/wooting-rapid-trigger-head-start) to hall-effect-score-dips-wooting-ship-slips body, or vice versa
+
+### [HOT PURSUIT] [content-gap] [7] ideas pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 7 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: ideas
+- window-count: 1
+- window-start: 2026-10-09
+- score: 7
+- next: /ship-content → ideas pillar article
+> Filed 2026-11-08 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
