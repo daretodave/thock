@@ -84,4 +84,7 @@ None.
 
 Measure: 5 open · 0 closed · next A6
 
-Not chunked yet.
+- [ ] **06.1** Core script skeleton + lede/heading/body extraction + count-style diff, with clean-corpus and count-mismatch tests · M · closes A1 · partial A2 · needs —
+- [ ] **06.2** Dollar/gram-style figure diff, with dollar/gram-mismatch test · S · closes A2 · needs 06.1
+- [ ] **06.3** Sibling-citation cross-check (`<Source>`/markdown link resolution + shared-fact diff), with sibling-mismatch test · M · closes A3, A5 · needs 06.1, 06.2
+- [ ] **06.4** Wire into `skills/march.lanes.md`'s survey chain (§3b.5a, after `article-parts-check.mjs`) and `skills/digest.md`'s nightly breadth check, `--write`-gated · S · closes A4 · needs 06.1, 06.2, 06.3
