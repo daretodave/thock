@@ -58,15 +58,10 @@ numeric-spec-audit (shipped as spec 01) cross-checks prose against
 
 ## Acceptance
 
-- **A3** Given an article that links to a sibling via `<Source>`/
-  markdown link and makes a conflicting claim about the same fact,
-  the script files a row naming both articles.
 - **A4** The script is wired into `skills/march.md`'s survey chain
   and `skills/digest.md`'s nightly breadth check, `--write`-gated,
   and never fails the verify gate or the march tick on its own
   (errors degrade to a logged skip).
-- **A5** Unit tests cover: a clean article (no row filed), a count
-  mismatch, a dollar/gram mismatch, and a sibling-citation mismatch.
 
 ## Open questions
 
@@ -74,7 +69,6 @@ None.
 
 ## Chunks
 
-Measure: 3 open · 2 closed · next A6
+Measure: 1 open · 4 closed · next A6
 
-- [ ] **06.3** Sibling-citation cross-check (`<Source>`/markdown link resolution + shared-fact diff), with sibling-mismatch test · M · closes A3, A5 · needs —
-- [ ] **06.4** Wire into `skills/march.lanes.md`'s survey chain (§3b.5a, after `article-parts-check.mjs`) and `skills/digest.md`'s nightly breadth check, `--write`-gated · S · closes A4 · needs 06.3
+- [ ] **06.4** Wire into `skills/march.lanes.md`'s survey chain (§3b.5a, after `article-parts-check.mjs`) and `skills/digest.md`'s nightly breadth check, `--write`-gated · S · closes A4 · needs —

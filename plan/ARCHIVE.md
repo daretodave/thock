@@ -79,3 +79,4 @@
 - 2026-11-07 · 05 · spec complete: Sitewide focus-visible default + coverage check · absorbed into plan/bearings.md · deleted in this commit
 - 2026-11-08 · 06.1 · article-internal-consistency-check.mjs catches lede/body count mismatches · aef49152..aef49152
 - 2026-11-08 · 06.2 · article-internal-consistency-check.mjs now catches lede/body dollar and gram figure contradictions · 7bd1776c..d973b849
+- 2026-11-08 · 06.3 · Sibling-citation dollar/gram cross-check files a row naming both articles · 2c8d913f..d7f27a94
