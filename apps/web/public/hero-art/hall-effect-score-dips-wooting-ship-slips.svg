@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero - Hall effect/rapid trigger tracker sparkline climbing to its ceiling across seven weekly points then posting its first ever down tick on the eighth</title>
+
+  <!-- Keyboard ground silhouette: a quiet side profile case shape beneath the chart, typing tilt front to back, low opacity so it reads as a grounding motif rather than the subject -->
+  <g opacity="0.14">
+    <path d="M100,700 L100,680 L300,655 L900,655 L1100,685 L1100,700 Z"/>
+    <!-- deck row gaps suggesting a row of keycaps along the top edge -->
+    <g stroke-opacity="0.8">
+      <line x1="340" y1="655" x2="340" y2="645"/>
+      <line x1="400" y1="655" x2="400" y2="645"/>
+      <line x1="460" y1="655" x2="460" y2="645"/>
+      <line x1="520" y1="655" x2="520" y2="645"/>
+      <line x1="580" y1="655" x2="580" y2="645"/>
+      <line x1="640" y1="655" x2="640" y2="645"/>
+      <line x1="700" y1="655" x2="700" y2="645"/>
+      <line x1="760" y1="655" x2="760" y2="645"/>
+      <line x1="820" y1="655" x2="820" y2="645"/>
+    </g>
+  </g>
+
+  <!-- Coral wash beneath the plateau the category had just reached, the visual memory of the climb before the crack -->
+  <ellipse cx="850" cy="270" rx="300" ry="140" fill="oklch(0.68 0.165 28 / 0.09)" stroke="none"/>
+
+  <!-- Ceiling reference line: dashed, warm-grey, sits at the score-100 ceiling the category had just pinned -->
+  <line x1="150" y1="220" x2="1050" y2="220" stroke-dasharray="4 5" stroke-opacity="0.4"/>
+  <line x1="150" y1="212" x2="150" y2="228" stroke-opacity="0.4"/>
+  <line x1="1050" y1="212" x2="1050" y2="228" stroke-opacity="0.4"/>
+
+  <!-- Baseline axis with per week tick marks, chart silhouette convention -->
+  <line x1="150" y1="660" x2="1050" y2="660" stroke-opacity="0.3"/>
+  <g stroke-opacity="0.3">
+    <line x1="150"  y1="655" x2="150"  y2="665"/>
+    <line x1="279"  y1="655" x2="279"  y2="665"/>
+    <line x1="407"  y1="655" x2="407"  y2="665"/>
+    <line x1="536"  y1="655" x2="536"  y2="665"/>
+    <line x1="664"  y1="655" x2="664"  y2="665"/>
+    <line x1="793"  y1="655" x2="793"  y2="665"/>
+    <line x1="921"  y1="655" x2="921"  y2="665"/>
+    <line x1="1050" y1="655" x2="1050" y2="665"/>
+  </g>
+
+  <!-- Sparkline: eight weekly tracker readings, 98, 97, 98, 98, 99, 100, 100, 95, climbing to the ceiling then dipping on the final point -->
+  <polyline
+    points="150,292 279,320 407,292 536,292 664,260 793,220 921,220 1050,430"
+    stroke="oklch(0.68 0.165 28)"
+    stroke-width="3"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    fill="none"
+  />
+
+  <!-- Data point dots along the climb -->
+  <circle cx="150" cy="292" r="5" fill="oklch(0.68 0.165 28)" stroke="none"/>
+  <circle cx="279" cy="320" r="5" fill="oklch(0.68 0.165 28)" stroke="none"/>
+  <circle cx="407" cy="292" r="5" fill="oklch(0.68 0.165 28)" stroke="none"/>
+  <circle cx="536" cy="292" r="5" fill="oklch(0.68 0.165 28)" stroke="none"/>
+  <circle cx="664" cy="260" r="5" fill="oklch(0.68 0.165 28)" stroke="none"/>
+  <circle cx="793" cy="220" r="5" fill="oklch(0.68 0.165 28)" stroke="none"/>
+  <circle cx="921" cy="220" r="5" fill="oklch(0.68 0.165 28)" stroke="none"/>
+
+  <!-- Drop bracket: a dashed vertical mark from the ceiling down to the final point, flagging the magnitude of the first ever down tick -->
+  <line x1="1050" y1="220" x2="1050" y2="430" stroke-opacity="0.4" stroke-dasharray="3 4"/>
+
+  <!-- Focal terminal dot: the crack, the category's first down tick, haloed for emphasis -->
+  <circle cx="1050" cy="430" r="9" fill="oklch(0.68 0.165 28)" stroke="none"/>
+  <circle cx="1050" cy="430" r="17" fill="none" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.35" stroke-width="1.5"/>
+
+  <!-- Bronze theme dot: upper right ornamental anchor -->
+  <circle cx="1148" cy="62" r="7" fill="oklch(0.80 0.135 75)" stroke="none" opacity="0.9"/>
+</svg>

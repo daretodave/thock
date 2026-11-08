@@ -1,0 +1,41 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-11-08T00:00:00.000Z",
+  "commit": "6341ad16fdc03d72d589ed4cc74988c75b690fb2",
+  "kind": "hero-art",
+  "article_slug": "hall-effect-score-dips-wooting-ship-slips",
+  "article_pillar": "trends",
+  "brief_summary": "Hero art for the Trends pillar piece on the Hall Effect/Rapid Trigger tracker score climbing to its ceiling across seven weekly points then posting its first ever down tick on the eighth. A coral sparkline over a faint warm-grey keyboard side-profile ground silhouette, a dashed ceiling reference at the score-100 line, a dashed drop bracket flagging the magnitude of the final dip, a haloed focal dot at the terminal point, and the family's warm-bronze theme dot in the upper-right margin.",
+  "target": "apps/web/public/hero-art/hall-effect-score-dips-wooting-ship-slips.svg",
+  "source": "plan/bearings.md section Article hero art, colorful keyboard SVGs (locked 2026-05-09), trends piece maps to sparkline silhouette; cf. apps/web/public/hero-art/hall-effect-rapid-trigger-plateau.svg for the prior entry in this tracker's sparkline sequence",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject; trends piece -> sparkline silhouette, optionally paired with a secondary keyboard motif per brief",
+  "size": [1200, 750],
+  "subject": "An eight-point sparkline (tracker weeks ending in 2026-W44) tracing scores 98, 97, 98, 98, 99, 100, 100, 95: a minor early wobble, a climb into a two-week ceiling plateau at 100, then a sharp final-point drop to 95, the category's first down tick in eight tracked weeks. A coral wash sits under the plateau region as the visual memory of the climb; a dashed ceiling line marks the score-100 line the category had just pinned; a dashed vertical bracket from the ceiling down to the final point flags the magnitude of the drop; the terminal point is enlarged with a halo ring. A low-opacity warm-grey keyboard side-profile silhouette (case body with a typing-angle tilt and a row of keycap deck gaps) sits beneath the chart as a quiet grounding motif, per the article's own heroImageAlt framing.",
+  "splash_color": {
+    "name": "coral",
+    "oklch": "oklch(0.68 0.165 28)"
+  },
+  "accent_color": {
+    "name": "warm-bronze (theme accent)",
+    "oklch": "oklch(0.80 0.135 75)"
+  },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "stroke_weight": "2px (3px on the sparkline polyline itself, matching the family's emphasis convention for the focal trajectory)",
+  "canvas": "1200x750",
+  "background": "transparent (light-mode safe per house style)",
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": [],
+  "alt": "A coral sparkline climbing steadily across seven data points, flattening at a ceiling for two of them, then dipping downward at the final point, plotted against a warm-grey keyboard silhouette, with a small warm-bronze theme dot in the upper-right margin.",
+  "notes": "x coordinates for the eight weekly points (150, 279, 407, 536, 664, 793, 921, 1050) reuse the exact grid from hall-effect-rapid-trigger-plateau.svg, this tracker row's prior hero-art entry, for visual continuity across the series. y coordinates are a stylized plot of the spark array [98, 97, 98, 98, 99, 100, 100, 95] from data/trends/2026-W44.json, not a pixel-literal linear scale, consistent with family convention for sparkline hero art. No rendered text anywhere in the file; the climb, ceiling, and drop carry the subject without labels. All XML comments use single-hyphen text only (no double-hyphen runs) per the svg-validity.test.ts regression guard at apps/web/src/__tests__/svg-validity.test.ts; verified locally with a minidom parse plus a manual double-hyphen scan inside comment bodies, both clean.",
+  "data_sources": [
+    "data/trends/2026-W44.json rows[0] 'Hall Effect/Rapid Trigger' - direction: down, score: 95, spark: [98, 97, 98, 98, 99, 100, 100, 95]",
+    "apps/web/src/content/articles/hall-effect-score-dips-wooting-ship-slips.mdx frontmatter heroImageAlt - 'A coral sparkline climbing steadily across seven data points, flattening at a ceiling for two of them, then dipping downward at the final point, plotted against a warm-grey keyboard silhouette, with a small warm-bronze theme dot in the upper-right margin.'",
+    "apps/web/src/content/articles/hall-effect-score-dips-wooting-ship-slips.mdx body - 'Eight weeks of tracker data for the Hall Effect/Rapid Trigger switch category read, in order: 98, 97, 98, 98, 99, 100, 100, 95.'"
+  ],
+  "outputs": [
+    "apps/web/public/hero-art/hall-effect-score-dips-wooting-ship-slips.svg",
+    "apps/web/public/hero-art/hall-effect-score-dips-wooting-ship-slips.svg.json"
+  ],
+  "warnings": []
+}
