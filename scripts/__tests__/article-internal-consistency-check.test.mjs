@@ -394,6 +394,31 @@ describe('checkContentFile / checkArticle / checkNewsletter', () => {
     assert.match(description, /orange, pink, baby blue/)
   })
 
+  test('checkArticle reports a dollar/gram mismatch via checkContentFile wiring', () => {
+    const content = makeMdx(
+      'slug: mismatch-mod-weight\nlede: "This mod adds 62 grams to the plate overall."',
+      [
+        '',
+        '## Heading',
+        '',
+        'Intro paragraph one with nothing numeric in it.',
+        '',
+        'Intro paragraph two, also unremarkable.',
+        '',
+        'A later callout says the same mod actually adds 67 grams once weighed again.',
+        '',
+      ].join('\n'),
+    )
+    const filePath = tmpMdx(content, 'mismatch-mod-weight.mdx')
+    const result = checkArticle(filePath)
+    assert.equal(result.mismatches.length, 1)
+    const [m] = result.mismatches
+    assert.equal(m.kind, 'gram')
+    assert.equal(m.dir, 'articles')
+    assert.equal(m.claimValue, 62)
+    assert.equal(m.foundValue, 67)
+  })
+
   test('checkNewsletter tags mismatches with dir: newsletters', () => {
     const content = makeMdx(
       'slug: mismatch-newsletter\nlede: "This week\'s roundup covers four colorways of the same trim kit."',
@@ -441,5 +466,45 @@ describe('formatAuditRow', () => {
     assert.match(row, /4 colorways/)
     assert.match(row, /3 colorways/)
     assert.match(row, /orange, pink, baby blue/)
+  })
+
+  test('formats a dollar-mismatch AUDIT row with dollar wording, not count wording', () => {
+    const mismatches = [
+      {
+        kind: 'dollar',
+        tag: 'kit',
+        claimSource: 'lede',
+        claimValue: 150,
+        foundValue: 180,
+        dir: 'articles',
+      },
+    ]
+    const row = formatAuditRow('mismatch-kit-price', 'articles', mismatches, new Date('2026-11-08T00:00:00.000Z'))
+    assert.match(row, /\[content\]/)
+    assert.match(row, /category: content/)
+    assert.match(row, /file: apps\/web\/src\/content\/articles\/mismatch-kit-price\.mdx/)
+    assert.match(row, /\$150 kit/)
+    assert.match(row, /\$180/)
+    assert.doesNotMatch(row, /enumerates/)
+  })
+
+  test('formats a gram-mismatch AUDIT row with gram wording, not count wording', () => {
+    const mismatches = [
+      {
+        kind: 'gram',
+        tag: 'adds',
+        claimSource: 'lede',
+        claimValue: 62,
+        foundValue: 67,
+        dir: 'articles',
+      },
+    ]
+    const row = formatAuditRow('mismatch-mod-weight', 'articles', mismatches, new Date('2026-11-08T00:00:00.000Z'))
+    assert.match(row, /\[content\]/)
+    assert.match(row, /category: content/)
+    assert.match(row, /file: apps\/web\/src\/content\/articles\/mismatch-mod-weight\.mdx/)
+    assert.match(row, /62g/)
+    assert.match(row, /67g/)
+    assert.doesNotMatch(row, /enumerates/)
   })
 })
