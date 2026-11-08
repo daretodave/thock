@@ -78,3 +78,4 @@
 - 2026-11-07 · 05.2 · Sitewide focus ring now has e2e tab-walk coverage · 7a0d7592..89f194dc
 - 2026-11-07 · 05 · spec complete: Sitewide focus-visible default + coverage check · absorbed into plan/bearings.md · deleted in this commit
 - 2026-11-08 · 06.1 · article-internal-consistency-check.mjs catches lede/body count mismatches · aef49152..aef49152
+- 2026-11-08 · 06.2 · article-internal-consistency-check.mjs now catches lede/body dollar and gram figure contradictions · 7bd1776c..d973b849

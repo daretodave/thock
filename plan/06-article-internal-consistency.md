@@ -58,10 +58,6 @@ numeric-spec-audit (shipped as spec 01) cross-checks prose against
 
 ## Acceptance
 
-- **A2** Given an article with a lede/body numeric or count
-  mismatch (count-style or dollar/gram-style), the script files one
-  `content` category row to `plan/AUDIT.md` identifying the file
-  and the conflicting figures.
 - **A3** Given an article that links to a sibling via `<Source>`/
   markdown link and makes a conflicting claim about the same fact,
   the script files a row naming both articles.
@@ -78,8 +74,7 @@ None.
 
 ## Chunks
 
-Measure: 4 open · 1 closed · next A6
+Measure: 3 open · 2 closed · next A6
 
-- [ ] **06.2** Dollar/gram-style figure diff, with dollar/gram-mismatch test · S · closes A2 · needs —
-- [ ] **06.3** Sibling-citation cross-check (`<Source>`/markdown link resolution + shared-fact diff), with sibling-mismatch test · M · closes A3, A5 · needs 06.2
-- [ ] **06.4** Wire into `skills/march.lanes.md`'s survey chain (§3b.5a, after `article-parts-check.mjs`) and `skills/digest.md`'s nightly breadth check, `--write`-gated · S · closes A4 · needs 06.2, 06.3
+- [ ] **06.3** Sibling-citation cross-check (`<Source>`/markdown link resolution + shared-fact diff), with sibling-mismatch test · M · closes A3, A5 · needs —
+- [ ] **06.4** Wire into `skills/march.lanes.md`'s survey chain (§3b.5a, after `article-parts-check.mjs`) and `skills/digest.md`'s nightly breadth check, `--write`-gated · S · closes A4 · needs 06.3

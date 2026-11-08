@@ -22,7 +22,7 @@ condition> · max_age: 14d`, an optional `· fallback: release`):
 
 | # | Initiative | Spec | Status | Progress |
 |---|---|---|---|---|
-| 06 | Article internal-consistency checker | [06-article-internal-consistency.md](06-article-internal-consistency.md) |  | 3 left |
+| 06 | Article internal-consistency checker | [06-article-internal-consistency.md](06-article-internal-consistency.md) |  | 2 left |
 | 07 | Group-buy companion article staleness gate | [07-group-buy-article-staleness-check.md](07-group-buy-article-staleness-check.md) |  | not chunked |
 
 ## Layout
