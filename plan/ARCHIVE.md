@@ -77,3 +77,4 @@
 - 2026-11-07 · 05.1 · Sitewide :focus-visible base rule ships on the contrast-checked accent token · 0f71c0c8..0f71c0c8
 - 2026-11-07 · 05.2 · Sitewide focus ring now has e2e tab-walk coverage · 7a0d7592..89f194dc
 - 2026-11-07 · 05 · spec complete: Sitewide focus-visible default + coverage check · absorbed into plan/bearings.md · deleted in this commit
+- 2026-11-08 · 06.1 · article-internal-consistency-check.mjs catches lede/body count mismatches · aef49152..aef49152
