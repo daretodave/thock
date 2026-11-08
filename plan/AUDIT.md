@@ -2,6 +2,16 @@
 
 > Standing rules (Rule 1 sliding window etc.) live in `plan/bearings.md`; past header notes are in git history.
 
+## Pending
+
+### [user-issue #1068] [HIGH] "Cloud loop: GH_TOKEN/GITHUB_TOKEN invalid in march.yml run, masking triage/critique gh checks" open past the 24h SLA
+- category: external-issue
+- impact: 8
+- ease: 5
+- evidence: issue #1068 opened 2026-11-07, open 42h with no row in the queue; the SLA is 24h (sla_hours in plan/bearings.md).
+- next: /triage routes it (a bug goes to /bug); reference #1068 in the commit body.
+- generator: issue-age · filed 2026-11-08
+
 ## Drained findings (kept for audit-trail; do not re-open)
 
 ### [x] [external-critique] [voice] [3.6] /tools + /quiz/switch — tools-card description and quiz lede describe the same flow with different framing — addressed in 5dc60b24, closes #1059
