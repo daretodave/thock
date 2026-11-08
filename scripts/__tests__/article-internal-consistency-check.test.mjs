@@ -239,6 +239,37 @@ describe('extractGramClaims', () => {
     const claims = extractGramClaims('Weights ran 110-155 grams across the batch.')
     assert.deepEqual(claims, [])
   })
+
+  test('skips an attribution adjective ("published") as a tag — it names the source, not the quantity', () => {
+    const claims = extractGramClaims('the published 45g actuation and 75g bottom-out read heavier than expected.')
+    assert.deepEqual(claims, [])
+  })
+})
+
+// Real false positive this guards: cherry-mx2a-revision.mdx's "the
+// published 45g actuation and 75g bottom-out ... Cherry's published 75g
+// bottom-out" tagged both the 45g actuation and the 75g bottom-out figure
+// as "published" (an attribution adjective naming where the figure came
+// from, not what it measures) and flagged them as the same fact restated
+// with a different value, when they are two different, both-correct specs.
+describe('findFigureMismatches — attribution-adjective tag false positive', () => {
+  test('two different gram figures sharing a "published"/"rated" lead-in are not flagged', () => {
+    const frontmatterText = 'slug: clean-actuation-bottom-out\nlede: "A spec sheet lists actuation and bottom-out weights."'
+    const body = [
+      '',
+      '## Heading',
+      '',
+      'Intro paragraph one with nothing numeric in it.',
+      '',
+      'Intro paragraph two, also unremarkable.',
+      '',
+      'The published 45g actuation and 75g bottom-out read heavier in the hand than the numbers suggest.',
+      '',
+      "Cherry's published 75g bottom-out surprised reviewers, who confirmed the 45g actuation separately.",
+      '',
+    ].join('\n')
+    assert.deepEqual(findFigureMismatches(frontmatterText, body), [])
+  })
 })
 
 // ── findFigureMismatches — the dollar/gram-mismatch A5 case (chunk 06.2) ────

@@ -471,6 +471,18 @@ const RANGE_PRECEDING_RE = /\d+(?:\.\d+)?\s*(?:[-–—]|to|and)\s*$/i
 // Words that can sit immediately before a gram figure but name no useful
 // tag ("is about 62 grams" — the word right before is "about"). Mirrors
 // DOLLAR_TAG_STOPWORDS's reasoning on the opposite side.
+//
+// Attribution adjectives ("published", "rated", "specified", "measured",
+// "listed", "stated", "claimed", "quoted", "reported", "official",
+// "known") are filtered for a sharper reason than the rest: they describe
+// where a figure came from, not what it measures, so the *same* word
+// routinely precedes two genuinely *different* quantities in one
+// sentence — real false positive this guards: cherry-mx2a-revision.mdx's
+// "the published 45g actuation and 75g bottom-out ... Cherry's published
+// 75g bottom-out" tagged both the 45g actuation and the 75g bottom-out
+// figure as "published" and flagged them as the same fact restated
+// differently, when they are two different specs that both happen to be
+// introduced with "published".
 const GRAM_TAG_STOPWORDS = new Set([
   'a',
   'an',
@@ -491,6 +503,17 @@ const GRAM_TAG_STOPWORDS = new Set([
   'around',
   'some',
   'to',
+  'published',
+  'rated',
+  'specified',
+  'measured',
+  'listed',
+  'stated',
+  'claimed',
+  'quoted',
+  'reported',
+  'official',
+  'known',
   'and',
 ])
 
