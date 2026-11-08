@@ -17,12 +17,14 @@ line goes; each line is a lock that times out:
 condition> · max_age: 14d`, an optional `· fallback: release`):
 
 - 07 · auto-promoted, veto until 2026-11-08 (#1069) · max_age: 1d · fallback: release
+- 08 · auto-promoted, veto until 2026-11-09 (#1072) · max_age: 1d · fallback: release
 
 ## Specs
 
 | # | Initiative | Spec | Status | Progress |
 |---|---|---|---|---|
 | 07 | Group-buy companion article staleness gate | [07-group-buy-article-staleness-check.md](07-group-buy-article-staleness-check.md) |  | not chunked |
+| 08 | OG image render-verification gate | [08-og-render-verification-gate.md](08-og-render-verification-gate.md) |  | not chunked |
 
 ## Layout
 
