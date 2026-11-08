@@ -8,7 +8,10 @@
 // cases).
 //
 // Chunk 06.2 scope: dollar/gram-mismatch coverage (acceptance A5's third
-// case). Sibling-citation-mismatch tests are chunk 06.3's job.
+// case).
+//
+// Chunk 06.3 scope: sibling-citation-mismatch coverage (acceptance A5's
+// fourth case, and A3 — a row naming both articles).
 
 import { test, describe } from 'node:test'
 import assert from 'node:assert/strict'
@@ -28,6 +31,7 @@ const {
   extractDollarClaims,
   extractGramClaims,
   findFigureMismatches,
+  findSiblingMismatches,
   checkArticle,
   checkNewsletter,
   checkContentFile,
@@ -370,6 +374,108 @@ describe('findFigureMismatches', () => {
   })
 })
 
+// ── findSiblingMismatches — the sibling-citation-mismatch A5 case (chunk 06.3) ──
+
+describe('findSiblingMismatches', () => {
+  const citingFrontmatter = 'slug: citing-article\nlede: "The kit runs $150 kit at launch."'
+  const citingBodyWithMarkdownLink = [
+    '',
+    '## Heading',
+    '',
+    'See [the group buy writeup](/article/other-slug) for the full configurator details.',
+    '',
+    'Intro paragraph two, also unremarkable.',
+    '',
+  ].join('\n')
+
+  test('markdown-linked sibling with a conflicting dollar claim files a sibling-dollar mismatch naming both values', () => {
+    const resolveSibling = (slug) => {
+      assert.equal(slug, 'other-slug')
+      return {
+        frontmatterText: 'slug: other-slug\nlede: "The same kit now runs $180 kit after a price update."',
+        body: '\n## Sibling heading\n\nNothing else numeric here.\n\nStill nothing numeric.\n',
+      }
+    }
+    const mismatches = findSiblingMismatches(citingFrontmatter, citingBodyWithMarkdownLink, resolveSibling)
+    assert.equal(mismatches.length, 1)
+    const [m] = mismatches
+    assert.equal(m.kind, 'sibling-dollar')
+    assert.equal(m.tag, 'kit')
+    assert.equal(m.claimSource, 'lede')
+    assert.equal(m.claimValue, 150)
+    assert.equal(m.siblingSlug, 'other-slug')
+    assert.equal(m.siblingValue, 180)
+  })
+
+  test('<Source href="/article/<slug>"> form also resolves and diffs a sibling', () => {
+    const body = [
+      '',
+      '## Heading',
+      '',
+      'See <Source href="/article/other-slug">the group buy writeup</Source> for background.',
+      '',
+      'Intro paragraph two, also unremarkable.',
+      '',
+    ].join('\n')
+    const resolveSibling = (slug) => {
+      if (slug !== 'other-slug') return null
+      return {
+        frontmatterText: 'slug: other-slug\nlede: "The same kit now runs $180 kit after a price update."',
+        body: '\n## Sibling heading\n\nNothing else numeric here.\n\nStill nothing numeric.\n',
+      }
+    }
+    const mismatches = findSiblingMismatches(citingFrontmatter, body, resolveSibling)
+    assert.equal(mismatches.length, 1)
+    assert.equal(mismatches[0].kind, 'sibling-dollar')
+    assert.equal(mismatches[0].siblingSlug, 'other-slug')
+  })
+
+  test('clean: sibling link but same value for the shared tag — no mismatch', () => {
+    const resolveSibling = (slug) => {
+      if (slug !== 'other-slug') return null
+      return {
+        frontmatterText: 'slug: other-slug\nlede: "The same kit still runs $150 kit after review."',
+        body: '\n## Sibling heading\n\nNothing else numeric here.\n\nStill nothing numeric.\n',
+      }
+    }
+    assert.deepEqual(findSiblingMismatches(citingFrontmatter, citingBodyWithMarkdownLink, resolveSibling), [])
+  })
+
+  test('clean: sibling link but no shared tag — no mismatch', () => {
+    const resolveSibling = (slug) => {
+      if (slug !== 'other-slug') return null
+      return {
+        frontmatterText: 'slug: other-slug\nlede: "A separate addon costs $55 addon at checkout."',
+        body: '\n## Sibling heading\n\nNothing else numeric here.\n\nStill nothing numeric.\n',
+      }
+    }
+    assert.deepEqual(findSiblingMismatches(citingFrontmatter, citingBodyWithMarkdownLink, resolveSibling), [])
+  })
+
+  test('sibling link that fails to resolve — no crash, no mismatch (best-effort skip)', () => {
+    const body = [
+      '',
+      '## Heading',
+      '',
+      'See [a renamed or deleted article](/article/missing-slug) for background.',
+      '',
+      'Intro paragraph two, also unremarkable.',
+      '',
+    ].join('\n')
+    const resolveSibling = () => null
+    assert.doesNotThrow(() => findSiblingMismatches(citingFrontmatter, body, resolveSibling))
+    assert.deepEqual(findSiblingMismatches(citingFrontmatter, body, resolveSibling), [])
+  })
+
+  test('no sibling link at all — resolver never called, no mismatch', () => {
+    const resolveSibling = () => {
+      throw new Error('resolveSibling should not be called when no sibling link is present')
+    }
+    const body = '\nJust prose with no article links anywhere in it.\n'
+    assert.deepEqual(findSiblingMismatches(citingFrontmatter, body, resolveSibling), [])
+  })
+})
+
 describe('checkContentFile / checkArticle / checkNewsletter', () => {
   test('clean article file reports no mismatches', () => {
     const content = makeMdx(
@@ -536,6 +642,32 @@ describe('formatAuditRow', () => {
     assert.match(row, /file: apps\/web\/src\/content\/articles\/mismatch-mod-weight\.mdx/)
     assert.match(row, /62g/)
     assert.match(row, /67g/)
+    assert.doesNotMatch(row, /enumerates/)
+  })
+
+  // A3: "the script files a row naming both articles" — the citing
+  // article's slug is the row's own subject (asserted via the `file:`
+  // line below); the sibling's slug must also appear in the row text
+  // itself, inside the mismatch description.
+  test('sibling-dollar AUDIT row names both the citing article and the sibling article', () => {
+    const mismatches = [
+      {
+        kind: 'sibling-dollar',
+        tag: 'kit',
+        claimSource: 'lede',
+        claimValue: 150,
+        siblingSlug: 'other-slug',
+        siblingValue: 180,
+        dir: 'articles',
+      },
+    ]
+    const row = formatAuditRow('citing-article', 'articles', mismatches, new Date('2026-11-08T00:00:00.000Z'))
+    assert.match(row, /\[content\]/)
+    assert.match(row, /category: content/)
+    assert.match(row, /file: apps\/web\/src\/content\/articles\/citing-article\.mdx/)
+    assert.match(row, /\$150 kit/)
+    assert.match(row, /other-slug/)
+    assert.match(row, /\$180/)
     assert.doesNotMatch(row, /enumerates/)
   })
 })
