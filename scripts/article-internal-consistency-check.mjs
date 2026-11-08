@@ -604,6 +604,129 @@ function findFigureMismatches(frontmatterText, body) {
   return mismatches
 }
 
+// ── Sibling-citation cross-check (acceptance A3) ─────────────────────────────
+//
+// An article that links to a sibling article and makes a claim about the
+// same tagged dollar/gram fact the sibling also states can drift out of
+// sync with it just as easily as with its own body — e.g. a round-up piece
+// restates a group buy's "$150 kit" price from memory while the group buy's
+// own article has since been corrected to "$180 kit". The real corpus's
+// only shape for this kind of link is a markdown link to `/article/<slug>`;
+// `<Source href="/article/<slug>">` is also matched for robustness (the
+// spec names it explicitly) even though it doesn't occur in practice today
+// — `<Source>` is only ever used for external (https://) citations in the
+// current corpus.
+
+const SIBLING_LINK_PATTERNS = [
+  /\[[^\]]*\]\(\/article\/([a-z0-9-]+)\)/g,
+  /<Source\s+href="\/article\/([a-z0-9-]+)"/g,
+]
+
+// Collects de-duplicated sibling-article slugs referenced anywhere in
+// `body`, excluding a self-reference (an article linking to its own slug
+// can't happen in practice, but it's a one-line guard against a
+// self-vs-self "mismatch" that would otherwise always read as clean
+// anyway, since every claim trivially agrees with itself).
+function extractSiblingSlugs(body, ownSlug) {
+  const slugs = new Set()
+  if (!body) return []
+  for (const re of SIBLING_LINK_PATTERNS) {
+    re.lastIndex = 0
+    let m
+    while ((m = re.exec(body)) !== null) {
+      const slug = m[1]
+      if (slug === ownSlug) continue
+      slugs.add(slug)
+    }
+  }
+  return [...slugs]
+}
+
+// Builds `${kind}:${tag}` -> value for the first dollar/gram claim per
+// tagged quantity across `claimSources` — same "first claim per tag wins"
+// rule findFigureMismatches uses for a single article's own headline
+// claims, reused here for both the citing article and each resolved
+// sibling.
+function collectHeadlineFigureClaims(claimSources) {
+  const claims = new Map()
+  for (const { text } of claimSources) {
+    if (!text) continue
+    for (const claim of [...extractDollarClaims(text), ...extractGramClaims(text)]) {
+      const key = `${claim.kind}:${claim.tag}`
+      if (claims.has(key)) continue
+      claims.set(key, claim.value)
+    }
+  }
+  return claims
+}
+
+// Default sibling resolver: reads `<slug>.mdx` out of the articles corpus
+// (sibling links only ever point into apps/web/src/content/articles/ in
+// the real corpus — confirmed, no newsletter links of this form and no
+// article links into .../newsletters/) and returns its frontmatter/body
+// split, or null on any read error (missing file, renamed slug, etc. — a
+// broken/renamed link is best-effort-skipped, not this script's problem).
+function defaultResolveSibling(slug) {
+  try {
+    const content = readFileSync(join(ARTICLES_DIR, `${slug}.mdx`), 'utf8')
+    return extractBody(content)
+  } catch {
+    return null
+  }
+}
+
+// Diffs the citing article's own headline dollar/gram claims against each
+// resolved sibling's headline dollar/gram claims, for every tagged
+// quantity both sides claim with a differing value. `resolveSibling(slug)`
+// is injected so this is unit-testable without touching the filesystem;
+// the CLI wires `defaultResolveSibling` above. `ownSlug` (optional) guards
+// against a self-link being diffed against itself — see
+// extractSiblingSlugs.
+function findSiblingMismatches(frontmatterText, body, resolveSibling, ownSlug) {
+  const siblingSlugs = extractSiblingSlugs(body, ownSlug)
+  if (siblingSlugs.length === 0) return []
+
+  const ownClaimSources = getHeadlineClaimSources(frontmatterText, body)
+  const ownClaims = collectHeadlineFigureClaims(ownClaimSources)
+  if (ownClaims.size === 0) return []
+
+  // Track which claim source first introduced each tagged quantity, for
+  // the AUDIT row's `claimSource` field (e.g. "lede").
+  const claimSourceByKey = new Map()
+  for (const { source, text } of ownClaimSources) {
+    if (!text) continue
+    for (const claim of [...extractDollarClaims(text), ...extractGramClaims(text)]) {
+      const key = `${claim.kind}:${claim.tag}`
+      if (!claimSourceByKey.has(key)) claimSourceByKey.set(key, source)
+    }
+  }
+
+  const mismatches = []
+  for (const siblingSlug of siblingSlugs) {
+    const sibling = resolveSibling(siblingSlug)
+    if (!sibling) continue // broken/renamed link — best-effort skip.
+
+    const siblingClaimSources = getHeadlineClaimSources(sibling.frontmatterText, sibling.body)
+    const siblingClaims = collectHeadlineFigureClaims(siblingClaimSources)
+
+    for (const [key, claimValue] of ownClaims) {
+      if (!siblingClaims.has(key)) continue
+      const siblingValue = siblingClaims.get(key)
+      if (siblingValue === claimValue) continue
+      const [kind, tag] = key.split(':')
+      mismatches.push({
+        kind: kind === 'dollar' ? 'sibling-dollar' : 'sibling-gram',
+        tag,
+        claimSource: claimSourceByKey.get(key),
+        claimValue,
+        siblingSlug,
+        siblingValue,
+      })
+    }
+  }
+  return mismatches
+}
+
 // ── Content file resolution (articles + newsletters) ────────────────────────
 
 // `dir` is 'articles' or 'newsletters' — carried on each mismatch so
@@ -616,6 +739,7 @@ function checkContentFile(filePath, dir) {
   const mismatches = [
     ...findCountMismatches(frontmatterText, body),
     ...findFigureMismatches(frontmatterText, body),
+    ...findSiblingMismatches(frontmatterText, body, defaultResolveSibling, slug),
   ].map((m) => ({ ...m, dir }))
   return { slug, mismatches }
 }
@@ -636,6 +760,12 @@ function describeMismatch(m) {
   }
   if (m.kind === 'gram') {
     return `${m.claimSource} claims "${m.claimValue}g" (near "${m.tag}") but the body later restates the same "${m.tag}" figure as ${m.foundValue}g`
+  }
+  if (m.kind === 'sibling-dollar') {
+    return `${m.claimSource} claims "$${m.claimValue} ${m.tag}" but the sibling article ${m.siblingSlug} says the ${m.tag} costs $${m.siblingValue}`
+  }
+  if (m.kind === 'sibling-gram') {
+    return `${m.claimSource} claims "${m.claimValue}g" (near "${m.tag}") but the sibling article ${m.siblingSlug} restates the same "${m.tag}" figure as ${m.siblingValue}g`
   }
   return `${m.claimSource} claims "${m.claimNumber} ${m.noun}" but the body enumerates ${m.foundCount} ${m.noun}: ${m.foundItems.join(', ')}`
 }
@@ -665,6 +795,7 @@ export const __test = {
   extractFrontmatterField,
   extractFirstHeading,
   extractFirstParagraphs,
+  getHeadlineClaimSources,
   extractCountClaims,
   mergeShortPrepositionalFragments,
   findEnumeratedListNear,
@@ -673,6 +804,9 @@ export const __test = {
   extractGramClaims,
   findFigureMismatch,
   findFigureMismatches,
+  extractSiblingSlugs,
+  findSiblingMismatches,
+  defaultResolveSibling,
   checkArticle,
   checkNewsletter,
   checkContentFile,
