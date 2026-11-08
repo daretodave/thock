@@ -731,6 +731,21 @@ time you encounter a recurring class of design ambiguity.)
   routes (desktop + mobile) and fails on any focus stop with no
   visible indicator or under 3:1 contrast — treat a new red there
   as a real regression, not a test to loosen.
+- **Article internal-consistency-check scope (spec 06, absorbed
+  2026-11-08):** `scripts/article-internal-consistency-check.mjs`
+  diffs an article's own lede/heading claims — small-integer
+  counts and dollar/gram figures — against its own body (a count
+  claim vs. a later enumerated list; a dollar/gram figure vs. a
+  later restatement of the same tagged quantity) and, where the
+  body links to a sibling article, against that sibling's own
+  headline dollar/gram claims. Only "number before noun" claims
+  are read (never "noun before number"), and sibling comparisons
+  are dollar/gram only (no count-vs-sibling-headline check) —
+  intentionally out of scope unless either recurs independently.
+  Runs via `--write` in `skills/march.lanes.md`'s survey chain and
+  `skills/digest.md`'s nightly breadth check, deduped against
+  existing `plan/AUDIT.md` rows the same way `article-parts-check.mjs`
+  is.
 
 ## Hard rules
 
