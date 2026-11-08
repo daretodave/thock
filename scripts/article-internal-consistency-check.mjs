@@ -11,10 +11,15 @@
 // Chunk 06.1 scope (spec plan/06-article-internal-consistency.md,
 // acceptance A1 + partial A2): count-style claims only — "N boards",
 // "N colorways", "N sizes" — diffed against a comma-separated enumerated
-// list elsewhere in the body (or inside an InlineViz `alt` string). The
-// dollar/gram-figure diff (full A2) is chunk 06.2; the sibling-citation
-// cross-check (A3) is chunk 06.3; march/digest wiring (A4) is chunk 06.4 —
-// all out of scope here.
+// list elsewhere in the body (or inside an InlineViz `alt` string).
+//
+// Chunk 06.2 scope (acceptance A2, now complete): dollar/gram-style figure
+// claims — "$150 kit", "62 grams" — diffed against a *restatement* of the
+// same tagged quantity elsewhere in the body (not an enumeration — a
+// dollar/gram mismatch is the same fact repeated with a different value,
+// not a claimed count vs. a list). The sibling-citation cross-check (A3)
+// is chunk 06.3; march/digest wiring (A4) is chunk 06.4 — out of scope
+// here.
 //
 // Usage:
 //   node scripts/article-internal-consistency-check.mjs <file.mdx> [...]
@@ -364,6 +369,210 @@ function findCountMismatches(frontmatterText, body) {
   return mismatches
 }
 
+// ── Dollar/gram-style figure extraction (acceptance A2, dollar/gram half) ───
+//
+// Unlike the count-style check above (which diffs a claimed number against
+// a body *enumeration*'s item count), a dollar/gram mismatch is the same
+// tagged quantity restated with a *different* value later in the article —
+// e.g. a lede says a mod "adds 62 grams" and a later callout restates the
+// same mod's weight as "67g". The tag (a nearby noun/verb) is what tells
+// two figures of the same kind are the *same* fact rather than two
+// unrelated figures — an article legitimately mentioning "$150 base kit"
+// and "$55 add-on kit" is not a mismatch; they're different things keyed
+// by different tags ("base kit" vs. "add-on kit" — in practice just the
+// word "kit" repeats, but a different number right after a *different*
+// tag is never flagged).
+
+// A dollar amount followed immediately by a range dash/"to"/"and" plus
+// another number ("$110 and $155", "$110–$155") is a single claim about
+// two different things agreeing with itself, not a tagged quantity to diff
+// against a later restatement — real shape seen in group-buy write-ups
+// pricing an early-bird tier against a regular tier in the same sentence.
+const DOLLAR_RE = /\$(\d+(?:\.\d+)?)\b/g
+const RANGE_CONTINUATION_RE = /^\s*(?:[-–—]|to|and)\s*\$?\d/i
+// The *second* half of a range ("$110–$155") needs its own check on the
+// preceding side — RANGE_CONTINUATION_RE above only catches the range's
+// first number (looking forward from it); without this, "$155" in
+// "$110–$155" would be read as a standalone claim just because nothing
+// about its own trailing text looks like a range.
+const RANGE_PRECEDING_DOLLAR_RE = /\$?\d+(?:\.\d+)?\s*(?:[-–—]|to|and)\s*$/i
+
+// Words that can sit immediately after a dollar figure but name no useful
+// tagged thing ("$150, and that's before shipping" — tag would be "and").
+// Without this filter, "$150 and" would be read as tag "and" and (almost
+// certainly) never find a second occurrence, which is harmless on its own,
+// but it is also indistinguishable from a genuine tag by shape alone, so
+// it is filtered the same deliberate way COUNT_NOUN_STOPWORDS filters
+// measurement nouns above rather than left to fail silently later.
+const DOLLAR_TAG_STOPWORDS = new Set([
+  'and',
+  'or',
+  'to',
+  'for',
+  'per',
+  'off',
+  'more',
+  'less',
+  'each',
+  'a',
+  'an',
+  'the',
+  'in',
+  'on',
+  'at',
+  'with',
+  'is',
+  'was',
+  'that',
+  'which',
+  'total',
+  'worth',
+])
+
+// A dollar amount tagged by the noun immediately *following* it — "$150
+// kit", "$62.50 add-on" — same "number before noun" direction as
+// extractCountClaims above, which keeps this extractor's shape consistent
+// with the count-style one. A figure with no following word (end of
+// sentence/clause) or whose only following word is a stopword above is
+// skipped: no tag means nothing to diff against, same philosophy as the
+// count check's "no enumeration found" skip.
+function extractDollarClaims(text) {
+  const claims = []
+  if (!text) return claims
+  DOLLAR_RE.lastIndex = 0
+  let m
+  while ((m = DOLLAR_RE.exec(text)) !== null) {
+    const afterNumber = text.slice(m.index + m[0].length)
+    if (RANGE_CONTINUATION_RE.test(afterNumber)) continue // part of a range — see comment above.
+    const beforeNumber = text.slice(0, m.index)
+    if (RANGE_PRECEDING_DOLLAR_RE.test(beforeNumber)) continue // second half of a range — see comment above.
+    const tagMatch = /^\s+([a-z][a-z'-]*)\b/i.exec(afterNumber)
+    if (!tagMatch) continue
+    const tag = tagMatch[1].toLowerCase()
+    if (DOLLAR_TAG_STOPWORDS.has(tag)) continue
+    claims.push({ kind: 'dollar', tag, value: Number(m[1]), index: m.index, text: m[0] })
+  }
+  return claims
+}
+
+// Matches "<N>g", "<N> gram(s)", "<N>-gram(s)" — but not "<N>g/cm³"
+// (density, not weight). Reused shape from content-fact-audit.mjs's own
+// GRAM_RE.
+const GRAM_RE = /(\d+(?:\.\d+)?)[\s-]*(?:grams?|g)\b(?!\/)/gi
+
+// A gram figure immediately preceded by another number plus a range
+// dash/"to"/"and" ("110-155 grams", "110 to 155 grams") is the second half
+// of a range, not an independent claim — same reasoning as
+// RANGE_CONTINUATION_RE above, just checked on the *preceding* side since
+// GRAM_RE anchors on the trailing "grams"/"g" rather than the leading
+// number.
+const RANGE_PRECEDING_RE = /\d+(?:\.\d+)?\s*(?:[-–—]|to|and)\s*$/i
+
+// Words that can sit immediately before a gram figure but name no useful
+// tag ("is about 62 grams" — the word right before is "about"). Mirrors
+// DOLLAR_TAG_STOPWORDS's reasoning on the opposite side.
+const GRAM_TAG_STOPWORDS = new Set([
+  'a',
+  'an',
+  'the',
+  'is',
+  'was',
+  'about',
+  'nearly',
+  'roughly',
+  'approximately',
+  'at',
+  'of',
+  'than',
+  'over',
+  'under',
+  'just',
+  'only',
+  'around',
+  'some',
+  'to',
+  'and',
+])
+
+// A gram figure tagged by the word immediately *preceding* it — "adds 62
+// grams", "the switch weighs 62 grams" — the opposite direction from the
+// dollar extractor above. Chosen over "noun after" because the real corpus
+// almost always states a weight as the object of a verb ("adds/weighs/
+// gains N grams") rather than as a prenominal modifier of a following noun
+// ("a 62g spring"); best-effort, not exhaustive — a gram figure whose
+// nearest preceding word is a stopword (or there is none) is simply
+// skipped, same "no claim to diff" philosophy as everywhere else in this
+// file.
+function extractGramClaims(text) {
+  const claims = []
+  if (!text) return claims
+  GRAM_RE.lastIndex = 0
+  let m
+  while ((m = GRAM_RE.exec(text)) !== null) {
+    const beforeNumber = text.slice(0, m.index)
+    if (RANGE_PRECEDING_RE.test(beforeNumber)) continue // second half of a range — see comment above.
+    const tagMatch = /([a-z][a-z'-]*)\s*$/i.exec(beforeNumber)
+    if (!tagMatch) continue
+    const tag = tagMatch[1].toLowerCase()
+    if (GRAM_TAG_STOPWORDS.has(tag)) continue
+    claims.push({ kind: 'gram', tag, value: Number(m[1]), index: m.index, text: m[0] })
+  }
+  return claims
+}
+
+// Scans `body` for every dollar/gram claim (depending on `kind`) tagged
+// with the same `tag`, and returns the first one whose value differs from
+// `claimValue` — or null if the tag never recurs in the body, or every
+// recurrence restates the same value (including the claim's own source
+// occurrence, when that source is itself part of the body, e.g. a heading
+// or paragraph claim re-finding itself — harmless, since a figure trivially
+// agrees with itself and this just means "not yet proven inconsistent").
+function findFigureMismatch(body, tag, kind, claimValue) {
+  const extractor = kind === 'dollar' ? extractDollarClaims : extractGramClaims
+  const occurrences = extractor(body).filter((c) => c.tag === tag)
+  if (occurrences.length === 0) return null // no second mention — nothing to diff against.
+  return occurrences.find((c) => c.value !== claimValue) || null
+}
+
+// Extracts dollar/gram claims from the lede, first heading, and first 2
+// body paragraphs, then diffs each against the next *differing*
+// restatement of the same tagged figure anywhere in the body. Mirrors
+// findCountMismatches's shape: first claim per (kind, tag) wins, and a
+// claim with no differing restatement is skipped rather than guessed at.
+function findFigureMismatches(frontmatterText, body) {
+  const lede = extractFrontmatterField(frontmatterText, 'lede')
+  const heading = extractFirstHeading(body)
+  const paragraphs = extractFirstParagraphs(body, 2)
+
+  const claimSources = [
+    { source: 'lede', text: lede },
+    { source: 'first heading', text: heading },
+    ...paragraphs.map((text, i) => ({ source: `body paragraph ${i + 1}`, text })),
+  ]
+
+  const mismatches = []
+  const seenTags = new Set() // keyed `${kind}:${tag}` — first claim per tagged quantity wins.
+  for (const { source, text } of claimSources) {
+    if (!text) continue
+    for (const claim of [...extractDollarClaims(text), ...extractGramClaims(text)]) {
+      const key = `${claim.kind}:${claim.tag}`
+      if (seenTags.has(key)) continue
+      seenTags.add(key)
+
+      const differing = findFigureMismatch(body, claim.tag, claim.kind, claim.value)
+      if (!differing) continue // no differing restatement found — skip, don't guess.
+      mismatches.push({
+        kind: claim.kind,
+        tag: claim.tag,
+        claimSource: source,
+        claimValue: claim.value,
+        foundValue: differing.value,
+      })
+    }
+  }
+  return mismatches
+}
+
 // ── Content file resolution (articles + newsletters) ────────────────────────
 
 // `dir` is 'articles' or 'newsletters' — carried on each mismatch so
@@ -373,7 +582,10 @@ function checkContentFile(filePath, dir) {
   const content = readFileSync(filePath, 'utf8')
   const slug = basename(filePath, '.mdx')
   const { body, frontmatterText } = extractBody(content)
-  const mismatches = findCountMismatches(frontmatterText, body).map((m) => ({ ...m, dir }))
+  const mismatches = [
+    ...findCountMismatches(frontmatterText, body),
+    ...findFigureMismatches(frontmatterText, body),
+  ].map((m) => ({ ...m, dir }))
   return { slug, mismatches }
 }
 
@@ -388,6 +600,12 @@ function checkNewsletter(filePath) {
 // ── AUDIT.md row formatting ───────────────────────────────────────────────────
 
 function describeMismatch(m) {
+  if (m.kind === 'dollar') {
+    return `${m.claimSource} claims "$${m.claimValue} ${m.tag}" but the body later says the ${m.tag} costs $${m.foundValue}`
+  }
+  if (m.kind === 'gram') {
+    return `${m.claimSource} claims "${m.claimValue}g" (near "${m.tag}") but the body later restates the same "${m.tag}" figure as ${m.foundValue}g`
+  }
   return `${m.claimSource} claims "${m.claimNumber} ${m.noun}" but the body enumerates ${m.foundCount} ${m.noun}: ${m.foundItems.join(', ')}`
 }
 
@@ -397,16 +615,16 @@ function formatAuditRow(slug, dir, mismatches, today) {
   const noun = count === 1 ? 'mismatch' : 'mismatches'
   const mismatchLines = mismatches.map((m) => `  - ${describeMismatch(m)}`).join('\n')
 
-  return `\n### [ ] [content] [3.6] ${slug} — ${count} internal count ${noun} detected by article-internal-consistency-check.mjs
+  return `\n### [ ] [content] [3.6] ${slug} — ${count} internal ${noun} detected by article-internal-consistency-check.mjs
 - category: content
 - filed: ${todayStr} by article-internal-consistency-check.mjs corpus scan
-- impact: 4 (a lede/body count contradiction undermines the article's own numbers on every reader visit)
-- ease: 9 (reconcile the count claim with the enumerated list — no code or schema change needed)
+- impact: 4 (a lede/body figure contradiction undermines the article's own numbers on every reader visit)
+- ease: 9 (reconcile the claimed figure with the body's restatement — no code or schema change needed)
 - score: 3.6 (impact × ease / 10)
 - file: apps/web/src/content/${dir}/${slug}.mdx
 - mismatches:
 ${mismatchLines}
-- action: make the lede/heading count agree with the body's enumerated list (or fix the list if it's the one that's wrong)\n`
+- action: make the lede/heading figure agree with the body (or fix the body if it's the one that's wrong)\n`
 }
 
 // ── __test export (for scripts/__tests__/article-internal-consistency-check.test.mjs) ─
@@ -420,6 +638,10 @@ export const __test = {
   mergeShortPrepositionalFragments,
   findEnumeratedListNear,
   findCountMismatches,
+  extractDollarClaims,
+  extractGramClaims,
+  findFigureMismatch,
+  findFigureMismatches,
   checkArticle,
   checkNewsletter,
   checkContentFile,

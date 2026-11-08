@@ -5,8 +5,10 @@
 //
 // Chunk 06.1 scope: clean-corpus and count-mismatch coverage only (spec
 // plan/06-article-internal-consistency.md, acceptance A5's first two
-// cases). Dollar/gram-mismatch and sibling-citation-mismatch tests are
-// chunks 06.2/06.3's job.
+// cases).
+//
+// Chunk 06.2 scope: dollar/gram-mismatch coverage (acceptance A5's third
+// case). Sibling-citation-mismatch tests are chunk 06.3's job.
 
 import { test, describe } from 'node:test'
 import assert from 'node:assert/strict'
@@ -23,6 +25,9 @@ const {
   extractCountClaims,
   findEnumeratedListNear,
   findCountMismatches,
+  extractDollarClaims,
+  extractGramClaims,
+  findFigureMismatches,
   checkArticle,
   checkNewsletter,
   checkContentFile,
@@ -198,6 +203,139 @@ describe('findCountMismatches', () => {
     assert.equal(mismatches[0].claimNumber, 4)
     assert.equal(mismatches[0].foundCount, 3)
     assert.deepEqual(mismatches[0].foundItems, ['orange', 'pink', 'baby blue'])
+  })
+})
+
+// ── extractDollarClaims / extractGramClaims ──────────────────────────────────
+
+describe('extractDollarClaims', () => {
+  test('tags a dollar figure with the noun immediately following it', () => {
+    const claims = extractDollarClaims('The base kit runs $150 kit at launch.')
+    assert.equal(claims.length, 1)
+    assert.equal(claims[0].tag, 'kit')
+    assert.equal(claims[0].value, 150)
+  })
+
+  test('skips a range ("$110 and $155") — not a single claim to diff', () => {
+    const claims = extractDollarClaims('Pricing ran from $110 and $155 at the vendor.')
+    assert.deepEqual(claims, [])
+  })
+
+  test('skips an en-dash range ("$110–$155")', () => {
+    const claims = extractDollarClaims('Early tiers landed at $110–$155 across the run.')
+    assert.deepEqual(claims, [])
+  })
+})
+
+describe('extractGramClaims', () => {
+  test('tags a gram figure with the word immediately preceding it', () => {
+    const claims = extractGramClaims('This mod adds 62 grams to the plate overall.')
+    assert.equal(claims.length, 1)
+    assert.equal(claims[0].tag, 'adds')
+    assert.equal(claims[0].value, 62)
+  })
+
+  test('skips the second half of a range ("110-155 grams")', () => {
+    const claims = extractGramClaims('Weights ran 110-155 grams across the batch.')
+    assert.deepEqual(claims, [])
+  })
+})
+
+// ── findFigureMismatches — the dollar/gram-mismatch A5 case (chunk 06.2) ────
+
+describe('findFigureMismatches', () => {
+  test('clean: a dollar figure restated identically later — no mismatch', () => {
+    const frontmatterText = 'slug: clean-kit-price\nlede: "The kit runs $150 kit at launch."'
+    const body = [
+      '',
+      '## Heading',
+      '',
+      'Intro paragraph one with nothing numeric in it.',
+      '',
+      'Intro paragraph two, also unremarkable.',
+      '',
+      'Later in the piece the vendor reconfirms $150 kit pricing at checkout.',
+      '',
+    ].join('\n')
+    assert.deepEqual(findFigureMismatches(frontmatterText, body), [])
+  })
+
+  test('clean: a gram figure restated identically later — no mismatch', () => {
+    const frontmatterText = 'slug: clean-mod-weight\nlede: "This mod adds 62 grams to the plate overall."'
+    const body = [
+      '',
+      '## Heading',
+      '',
+      'Intro paragraph one with nothing numeric in it.',
+      '',
+      'Intro paragraph two, also unremarkable.',
+      '',
+      'A later callout confirms the same mod adds 62 grams once weighed again.',
+      '',
+    ].join('\n')
+    assert.deepEqual(findFigureMismatches(frontmatterText, body), [])
+  })
+
+  test('dollar mismatch: lede figure disagrees with a later restatement of the same tag', () => {
+    const frontmatterText = 'slug: mismatch-kit-price\nlede: "The kit runs $150 kit at launch."'
+    const body = [
+      '',
+      '## Heading',
+      '',
+      'Intro paragraph one with nothing numeric in it.',
+      '',
+      'Intro paragraph two, also unremarkable.',
+      '',
+      'Later in the piece the vendor says the kit lists for $180 kit once taxes land.',
+      '',
+    ].join('\n')
+    const mismatches = findFigureMismatches(frontmatterText, body)
+    assert.equal(mismatches.length, 1)
+    const [m] = mismatches
+    assert.equal(m.kind, 'dollar')
+    assert.equal(m.tag, 'kit')
+    assert.equal(m.claimSource, 'lede')
+    assert.equal(m.claimValue, 150)
+    assert.equal(m.foundValue, 180)
+  })
+
+  test('gram mismatch: lede figure disagrees with a later restatement of the same tag', () => {
+    const frontmatterText = 'slug: mismatch-mod-weight\nlede: "This mod adds 62 grams to the plate overall."'
+    const body = [
+      '',
+      '## Heading',
+      '',
+      'Intro paragraph one with nothing numeric in it.',
+      '',
+      'Intro paragraph two, also unremarkable.',
+      '',
+      'A later callout says the same mod actually adds 67 grams once weighed again.',
+      '',
+    ].join('\n')
+    const mismatches = findFigureMismatches(frontmatterText, body)
+    assert.equal(mismatches.length, 1)
+    const [m] = mismatches
+    assert.equal(m.kind, 'gram')
+    assert.equal(m.tag, 'adds')
+    assert.equal(m.claimSource, 'lede')
+    assert.equal(m.claimValue, 62)
+    assert.equal(m.foundValue, 67)
+  })
+
+  test('two different dollar amounts for two different tags is not a mismatch', () => {
+    const frontmatterText = 'slug: two-kits\nlede: "The base kit costs $150 kit at launch."'
+    const body = [
+      '',
+      '## Heading',
+      '',
+      'Intro paragraph one with nothing numeric in it.',
+      '',
+      'Intro paragraph two, also unremarkable.',
+      '',
+      'Separately, a $55 addon kit is also available for purchase.',
+      '',
+    ].join('\n')
+    assert.deepEqual(findFigureMismatches(frontmatterText, body), [])
   })
 })
 
