@@ -37,6 +37,7 @@ const {
   checkContentFile,
   describeMismatch,
   formatAuditRow,
+  alreadyFiled,
 } = __test
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
@@ -669,5 +670,35 @@ describe('formatAuditRow', () => {
     assert.match(row, /other-slug/)
     assert.match(row, /\$180/)
     assert.doesNotMatch(row, /enumerates/)
+  })
+})
+
+// ── alreadyFiled ────────────────────────────────────────────────────────────
+
+describe('alreadyFiled — deduplication', () => {
+  test('returns true when pending row exists for slug', () => {
+    const audit = `### [ ] [content] [3.6] test-article — 1 internal mismatch detected by article-internal-consistency-check.mjs
+- category: content
+- filed: 2026-11-08 by article-internal-consistency-check.mjs — test-article
+`
+    assert.equal(alreadyFiled(audit, 'test-article'), true)
+  })
+
+  test('returns false when no row exists for slug', () => {
+    const audit = `### [ ] [content] [3.6] other-article — 1 internal mismatch detected by article-internal-consistency-check.mjs
+- filed: 2026-11-08 by article-internal-consistency-check.mjs — other-article
+`
+    assert.equal(alreadyFiled(audit, 'test-article'), false)
+  })
+
+  test('returns false when row is already completed ([x])', () => {
+    const audit = `### [x] [content] [3.6] test-article — 1 internal mismatch detected by article-internal-consistency-check.mjs
+- filed: 2026-11-08 by article-internal-consistency-check.mjs — test-article
+`
+    assert.equal(alreadyFiled(audit, 'test-article'), false)
+  })
+
+  test('returns false on empty AUDIT.md content', () => {
+    assert.equal(alreadyFiled('', 'test-article'), false)
   })
 })

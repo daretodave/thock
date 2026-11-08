@@ -48,7 +48,7 @@
 // is acceptable; a crash on one bad file is not — each file is wrapped in
 // its own try/catch and skipped (logged) rather than aborting the run.
 
-import { readFileSync, readdirSync, appendFileSync } from 'node:fs'
+import { readFileSync, readdirSync, appendFileSync, existsSync } from 'node:fs'
 import { join, dirname, basename } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -770,6 +770,25 @@ function describeMismatch(m) {
   return `${m.claimSource} claims "${m.claimNumber} ${m.noun}" but the body enumerates ${m.foundCount} ${m.noun}: ${m.foundItems.join(', ')}`
 }
 
+// Mirrors article-parts-check.mjs's alreadyFiled: only match rows still
+// pending ([ ]), not ones already addressed ([x]), so a repeat --write scan
+// (march's recurring survey chain, digest's nightly breadth check) doesn't
+// re-file a duplicate row for a mismatch that's already queued.
+function alreadyFiled(auditContent, slug) {
+  const marker = `article-internal-consistency-check.mjs — ${slug}`
+  const lines = auditContent.split('\n')
+  for (let i = 0; i < lines.length; i++) {
+    if (lines[i].includes(marker)) {
+      for (let j = i; j >= 0; j--) {
+        if (lines[j].startsWith('### ')) {
+          return lines[j].startsWith('### [ ]')
+        }
+      }
+    }
+  }
+  return false
+}
+
 function formatAuditRow(slug, dir, mismatches, today) {
   const todayStr = today.toISOString().slice(0, 10)
   const count = mismatches.length
@@ -778,7 +797,7 @@ function formatAuditRow(slug, dir, mismatches, today) {
 
   return `\n### [ ] [content] [3.6] ${slug} — ${count} internal ${noun} detected by article-internal-consistency-check.mjs
 - category: content
-- filed: ${todayStr} by article-internal-consistency-check.mjs corpus scan
+- filed: ${todayStr} by article-internal-consistency-check.mjs — ${slug}
 - impact: 4 (a lede/body figure contradiction undermines the article's own numbers on every reader visit)
 - ease: 9 (reconcile the claimed figure with the body's restatement — no code or schema change needed)
 - score: 3.6 (impact × ease / 10)
@@ -812,6 +831,7 @@ export const __test = {
   checkContentFile,
   describeMismatch,
   formatAuditRow,
+  alreadyFiled,
 }
 
 // ── CLI entry (only runs when this file is invoked directly) ────────────────
@@ -893,18 +913,39 @@ if (doWrite) {
     bySlug.get(m.slug).mismatches.push(m)
   }
 
+  let auditContent = ''
+  try {
+    if (existsSync(AUDIT_MD)) {
+      auditContent = readFileSync(AUDIT_MD, 'utf8')
+    }
+  } catch (err) {
+    console.error(`article-internal-consistency-check: failed to read plan/AUDIT.md — ${err.message}`)
+    process.exit(1)
+  }
+
   const today = new Date()
   const rows = []
+  let filed = 0
   for (const [slug, { dir, mismatches }] of bySlug) {
+    if (alreadyFiled(auditContent, slug)) {
+      console.log(`article-internal-consistency-check: ${slug}.mdx already pending in AUDIT.md — skipped`)
+      continue
+    }
     rows.push(formatAuditRow(slug, dir, mismatches, today))
     console.log(
       `article-internal-consistency-check: ${mismatches.length} mismatch(es) in ${dir}/${slug}.mdx — filing AUDIT row`,
     )
+    filed++
+  }
+
+  if (filed === 0) {
+    console.log('article-internal-consistency-check: no new AUDIT rows (clean or already pending).')
+    process.exit(0)
   }
 
   try {
     appendFileSync(AUDIT_MD, rows.join(''))
-    console.log(`article-internal-consistency-check: filed ${bySlug.size} AUDIT row(s) → plan/AUDIT.md`)
+    console.log(`article-internal-consistency-check: filed ${filed} AUDIT row(s) → plan/AUDIT.md`)
   } catch (err) {
     console.error(`article-internal-consistency-check: failed to write plan/AUDIT.md — ${err.message}`)
     process.exit(1)
