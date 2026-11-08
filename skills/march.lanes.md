@@ -404,6 +404,20 @@ path outside those two skill steps could introduce a gap with no mechanism to
 catch it. This is the same recurring defect class responsible for 17+ reactive
 AUDIT fixes historically. Deduplicates against existing AUDIT rows. If it
 exits non-zero, log and continue — the check is best-effort.
+
+Then run the article internal-consistency check (spec 06, chunk 06.4):
+
+```bash
+node scripts/article-internal-consistency-check.mjs --write
+```
+
+This files `content` AUDIT rows (score 3.6) for articles whose lede/heading
+claims (small-integer counts, dollar/gram figures) contradict their own body
+paragraphs, enumerated lists, or — where the body cites a sibling article via
+a `<Source>`/markdown link — the sibling's claims about the same fact. Does
+not dedupe against existing AUDIT rows (unlike its sibling surveys above),
+so a repeat scan can re-file a row for a still-unfixed mismatch. If it exits
+non-zero, log and continue — the check is best-effort.
 Then fall through to Step 3c (expand).
 
 ## lane: expand-due-notes

@@ -86,6 +86,7 @@ its own cadence.
    ```bash
    SMOKE_SAMPLE=full pnpm e2e     # every URL, not the sample
    node scripts/content-fact-audit.mjs --write
+   node scripts/article-internal-consistency-check.mjs --write
    ```
 
    Failures become HIGH `plan/AUDIT.md` rows — the digest
@@ -94,6 +95,11 @@ its own cadence.
    mismatch found) becomes a `content` `plan/AUDIT.md` row the
    same way, filed by the script itself (same `--write` contract
    as its per-commit path); it never blocks the digest commit.
+   The article internal-consistency check's non-zero exit (a
+   lede/body or sibling-citation mismatch found) becomes a
+   `content` `plan/AUDIT.md` row the same way, filed by the
+   script itself (same `--write` contract as its per-commit
+   path); it never blocks the digest commit.
 4. **Write `plan/DIGEST.md`** — overwrite entirely; it is a
    snapshot, not a ledger. Sections, in order: `Headline`,
    `While you were out` (pulse table: tick, verb, outcome —
