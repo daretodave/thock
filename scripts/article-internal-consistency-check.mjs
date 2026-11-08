@@ -17,9 +17,14 @@
 // claims — "$150 kit", "62 grams" — diffed against a *restatement* of the
 // same tagged quantity elsewhere in the body (not an enumeration — a
 // dollar/gram mismatch is the same fact repeated with a different value,
-// not a claimed count vs. a list). The sibling-citation cross-check (A3)
-// is chunk 06.3; march/digest wiring (A4) is chunk 06.4 — out of scope
-// here.
+// not a claimed count vs. a list).
+//
+// Chunk 06.3 scope (acceptance A3, now complete): sibling-citation
+// cross-check — a markdown link (or `<Source href="/article/...">`) to a
+// sibling article, diffed against that sibling's own headline dollar/gram
+// claims (count-vs-sibling-headline comparisons are out of scope; the
+// spec's "same fact" concept maps onto the dollar/gram figure extraction
+// only). March/digest wiring (A4) is chunk 06.4 — out of scope here.
 //
 // Usage:
 //   node scripts/article-internal-consistency-check.mjs <file.mdx> [...]
@@ -139,6 +144,25 @@ function extractFirstParagraphs(body, maxParagraphs) {
     paragraphs.push(current.join(' '))
   }
   return paragraphs.slice(0, maxParagraphs)
+}
+
+// Builds the standard "headline claim sources" list shared by every
+// mismatch finder in this file: the lede, the first heading, and the
+// first 2 body paragraphs — the spots a punchy figure gets stated "for
+// effect" before the body's more careful number. Factored out of
+// findCountMismatches/findFigureMismatches (chunk 06.1/06.2 duplicated
+// this inline) so findSiblingMismatches (chunk 06.3) can reuse the exact
+// same shape instead of building its own.
+function getHeadlineClaimSources(frontmatterText, body) {
+  const lede = extractFrontmatterField(frontmatterText, 'lede')
+  const heading = extractFirstHeading(body)
+  const paragraphs = extractFirstParagraphs(body, 2)
+
+  return [
+    { source: 'lede', text: lede },
+    { source: 'first heading', text: heading },
+    ...paragraphs.map((text, i) => ({ source: `body paragraph ${i + 1}`, text })),
+  ]
 }
 
 // ── Count-style claim extraction ─────────────────────────────────────────────
@@ -335,15 +359,7 @@ function findEnumeratedListNear(text, noun) {
 // in, say, both the lede and the first paragraph is the same claim, not a
 // second independent one).
 function findCountMismatches(frontmatterText, body) {
-  const lede = extractFrontmatterField(frontmatterText, 'lede')
-  const heading = extractFirstHeading(body)
-  const paragraphs = extractFirstParagraphs(body, 2)
-
-  const claimSources = [
-    { source: 'lede', text: lede },
-    { source: 'first heading', text: heading },
-    ...paragraphs.map((text, i) => ({ source: `body paragraph ${i + 1}`, text })),
-  ]
+  const claimSources = getHeadlineClaimSources(frontmatterText, body)
 
   const mismatches = []
   const seenNouns = new Set()
@@ -563,15 +579,7 @@ function findFigureMismatch(body, tag, kind, claimValue) {
 // findCountMismatches's shape: first claim per (kind, tag) wins, and a
 // claim with no differing restatement is skipped rather than guessed at.
 function findFigureMismatches(frontmatterText, body) {
-  const lede = extractFrontmatterField(frontmatterText, 'lede')
-  const heading = extractFirstHeading(body)
-  const paragraphs = extractFirstParagraphs(body, 2)
-
-  const claimSources = [
-    { source: 'lede', text: lede },
-    { source: 'first heading', text: heading },
-    ...paragraphs.map((text, i) => ({ source: `body paragraph ${i + 1}`, text })),
-  ]
+  const claimSources = getHeadlineClaimSources(frontmatterText, body)
 
   const mismatches = []
   const seenTags = new Set() // keyed `${kind}:${tag}` — first claim per tagged quantity wins.
