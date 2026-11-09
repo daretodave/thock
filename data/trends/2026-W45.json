@@ -1,0 +1,331 @@
+{
+  "isoWeek": "2026-W45",
+  "publishedAt": "2026-11-02T00:00:00.000Z",
+  "rows": [
+    {
+      "name": "Hall Effect/Rapid Trigger",
+      "category": "switch",
+      "direction": "down",
+      "score": 90,
+      "spark": [
+        97,
+        98,
+        98,
+        99,
+        100,
+        100,
+        95,
+        90
+      ],
+      "articleSlug": "hall-effect-score-dips-wooting-ship-slips",
+      "note": "A third straight week with no public confirmation that Wooting's 80HE+ ABS/Module units have shipped; the order-status page still shows the same late-October estimate it carried last week."
+    },
+    {
+      "name": "Cherry MX2A",
+      "category": "switch",
+      "direction": "flat",
+      "score": -14,
+      "spark": [
+        -50,
+        -42,
+        -35,
+        -20,
+        -10,
+        -10,
+        -12,
+        -14
+      ],
+      "articleSlug": "cherry-mx2a-revision",
+      "note": "Cherry's catalog still lists MX2A only in its original launch colorways; no new SKU, bundle, or press mention surfaced this week to interrupt the slow bleed."
+    },
+    {
+      "name": "TMR (Tunnel Magnetoresistance) switches",
+      "category": "switch",
+      "direction": "up",
+      "score": 95,
+      "spark": [
+        55,
+        63,
+        71,
+        85,
+        90,
+        90,
+        92,
+        95
+      ],
+      "articleSlug": "keychron-q16-he-8k-ceramic-tmr",
+      "note": "Keychron's V6 Ultra Hybrid TMR Kickstarter page shows backer-update traffic picking up as the November ship window nears, with the FAQ still repeating the original delivery estimate."
+    },
+    {
+      "name": "Gateron Magnetic Jade Delta",
+      "category": "switch",
+      "direction": "flat",
+      "score": 73,
+      "spark": [
+        77,
+        79,
+        84,
+        80,
+        75,
+        75,
+        74,
+        73
+      ],
+      "articleSlug": "gateron-magnetic-jade-deep-dive",
+      "note": "Jade Delta remains queued on the same vendor storefronts with lead times unchanged from last week; no colorway or bundle update surfaced."
+    },
+    {
+      "name": "Gateron Oil King",
+      "category": "switch",
+      "direction": "flat",
+      "score": 59,
+      "spark": [
+        52,
+        58,
+        64,
+        62,
+        60,
+        60,
+        60,
+        59
+      ],
+      "articleSlug": "gateron-oil-king-deep-dive",
+      "note": "No restock or bundle push this week; Oil King holds its position as the default budget-flagship linear with no change to availability."
+    },
+    {
+      "name": "Durock T1",
+      "category": "switch",
+      "direction": "flat",
+      "score": 34,
+      "spark": [
+        45,
+        46,
+        44,
+        40,
+        35,
+        35,
+        35,
+        34
+      ],
+      "articleSlug": "durock-t1-deep-dive",
+      "note": "Durock's existing T1 colorway lineup remains the only option on vendor pages; no group buy or swap event has surfaced to lift attention."
+    },
+    {
+      "name": "GMK CYL Red Devils R2",
+      "category": "keycap",
+      "direction": "down",
+      "score": 22,
+      "spark": [
+        52,
+        60,
+        68,
+        60,
+        40,
+        32,
+        28,
+        22
+      ],
+      "articleSlug": "gmk-cyl-red-devils-r2-comeback",
+      "note": "Four weeks post-close, Red Devils R2 still hasn't appeared on vendor listings or secondary-market threads; attention continues to fade without a fulfillment update."
+    },
+    {
+      "name": "GMK CYL Zombie",
+      "category": "keycap",
+      "direction": "down",
+      "score": 33,
+      "spark": [
+        15,
+        25,
+        40,
+        55,
+        70,
+        45,
+        40,
+        33
+      ],
+      "articleSlug": "gmk-cyl-zombie-group-buy",
+      "note": "Vendor listings still show Zombie at interest-check stage a week after its expected Oct 2-31 window closed with no group buy opened; waiting-list signups have slowed."
+    },
+    {
+      "name": "DCS Dolch / Molch",
+      "category": "keycap",
+      "direction": "down",
+      "score": 47,
+      "spark": [
+        20,
+        16,
+        24,
+        30,
+        45,
+        50,
+        50,
+        47
+      ],
+      "articleSlug": "divinikey-dcs-dolch-group-buy",
+      "note": "Divinikey quietly pushed Dolch's estimated ship window from October to November on its preorder page after the original window passed without units going out; Molch still points to Q1 2027."
+    },
+    {
+      "name": "Split/Ergo layout",
+      "category": "layout",
+      "direction": "down",
+      "score": 93,
+      "spark": [
+        98,
+        99,
+        100,
+        100,
+        100,
+        100,
+        96,
+        93
+      ],
+      "articleSlug": "split-ergo-cohort",
+      "note": "MoErgo's Go60 Golden Kiwi order-status page still lists different fulfillment estimates across SKUs than its own FAQ, with no clarifying update this week."
+    },
+    {
+      "name": "Alice layout",
+      "category": "layout",
+      "direction": "flat",
+      "score": 7,
+      "spark": [
+        -30,
+        -18,
+        -8,
+        -5,
+        0,
+        5,
+        5,
+        7
+      ],
+      "articleSlug": "alice-layout-decline",
+      "note": "Epomaker Tide Alice reviews continue posting steadily while Qwertykeys' QK Alice Duo restock status stays listed as limited, leaving the category's momentum essentially unchanged."
+    },
+    {
+      "name": "75% Layout",
+      "category": "layout",
+      "direction": "flat",
+      "score": 79,
+      "spark": [
+        68,
+        71,
+        76,
+        78,
+        82,
+        82,
+        80,
+        79
+      ],
+      "articleSlug": "75-percent-default",
+      "note": "Mode Designs still hasn't addressed the Sonnet 2 supply chatter directly; the only commentary remains unverified third-party marketing content repeating last week's claims."
+    },
+    {
+      "name": "CannonKeys",
+      "category": "vendor",
+      "direction": "down",
+      "score": 46,
+      "spark": [
+        44,
+        52,
+        44,
+        50,
+        55,
+        55,
+        50,
+        46
+      ],
+      "articleSlug": "cannonkeys-blaine-v2-se-group-buy",
+      "note": "CannonKeys still hasn't reconciled the Q4 2026 estimate on its own add-ons page with the Q1 2027 figure circulating on reseller listings for Blaine V2: SE."
+    },
+    {
+      "name": "Mode Designs",
+      "category": "vendor",
+      "direction": "flat",
+      "score": 69,
+      "spark": [
+        93,
+        97,
+        98,
+        95,
+        72,
+        72,
+        70,
+        69
+      ],
+      "articleSlug": "mode-sonnet-r2-group-buy-coverage",
+      "note": "Sonnet and Encore remain in the same post-group-buy lull; Mode's storefront shows no restock, teaser, or new colorway this week."
+    },
+    {
+      "name": "Prototypist",
+      "category": "vendor",
+      "direction": "up",
+      "score": 69,
+      "spark": [
+        42,
+        43,
+        49,
+        52,
+        58,
+        65,
+        66,
+        69
+      ],
+      "articleSlug": "prototypist-vendor-spotlight",
+      "note": "Geonworks' GMK CYL MONO group buy remains open through its Nov 30 close, keeping Prototypist's UK-proxy listing volume elevated for a second week."
+    },
+    {
+      "name": "Keychron",
+      "category": "brand",
+      "direction": "down",
+      "score": 94,
+      "spark": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        97,
+        94
+      ],
+      "articleSlug": "keychron-quiet-takeover",
+      "note": "Q16 HE 8K stockouts have spread to additional color variants this week even as the V6 Ultra Hybrid TMR campaign's backer-update traffic picks up ahead of its November ship window."
+    },
+    {
+      "name": "Wooting",
+      "category": "brand",
+      "direction": "down",
+      "score": 87,
+      "spark": [
+        74,
+        80,
+        83,
+        88,
+        92,
+        92,
+        90,
+        87
+      ],
+      "articleSlug": "wooting-80he-plus-shipping-update",
+      "note": "80HE+ ABS/Module shipping remains unconfirmed for a third straight week; Wooting's order-status page still shows the same late-October estimate with no shipping-email wave visible on community trackers."
+    },
+    {
+      "name": "ZMK firmware",
+      "category": "brand",
+      "direction": "flat",
+      "score": 66,
+      "spark": [
+        38,
+        48,
+        56,
+        65,
+        68,
+        68,
+        67,
+        66
+      ],
+      "articleSlug": "zmk-mainstream-shift",
+      "note": "No dated ZMK firmware release appeared this week; MoErgo's Go60 Golden Kiwi SKU-estimate mismatch remains the most-discussed adjacent story without a firmware angle of its own."
+    }
+  ],
+  "updatedAt": "2026-11-09T00:47:31.309Z"
+}
