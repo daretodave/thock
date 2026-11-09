@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "slug": "hall-effect-score-dips-wooting-ship-slips",
+      "readTime": 6,
+      "frontmatter": {
+        "title": "Hall-effect's tracker score just dipped. Its ship date already had.",
+        "lede": "The Hall Effect/Rapid Trigger category fell from 100 to 95 on thock's trends tracker in the 2026-W44 snapshot — its first down-tick in eight tracked weeks. The dip landed in the same week Wooting's own late-October ship date for the 80HE+ ABS and Module tiers went unconfirmed for a second straight week.",
+        "pillar": "trends",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "how-to-evaluate-a-group-buy",
       "readTime": 9,
       "frontmatter": {
@@ -10108,5 +10118,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-11-07T21:42:14.248Z"
+  "generatedAt": "2026-11-09T00:33:06.169Z"
 }
