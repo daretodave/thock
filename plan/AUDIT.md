@@ -1107,3 +1107,13 @@
 - score: 7
 - next: /ship-content → ideas pillar article
 > Filed 2026-11-08 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+
+### [ ] [content] [3.6] hall-effect-score-dips-wooting-ship-slips — Wooting tracker-score citation disagrees with data/trends/2026-W45.json
+- category: content
+- filed: 2026-11-09 by content-fact-audit.mjs — hall-effect-score-dips-wooting-ship-slips:trend:2026-W45:Wooting:100
+- impact: 4 (factual-accuracy mismatch on published content)
+- ease: 9 (one-line prose correction once the mismatch is found)
+- score: 3.6 (impact × ease / 10)
+- file: apps/web/src/content/articles/hall-effect-score-dips-wooting-ship-slips.mdx
+- claim: Wooting cited at 100 for 2026-W45, but data/trends/2026-W45.json's rows[].score for that row is 87
+- action: correct the prose citation to match data/trends/2026-W45.json's rows[].score (or correct the data record if the data is the one that's wrong)
