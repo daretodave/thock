@@ -16,7 +16,7 @@ line goes; each line is a lock that times out:
 `- **<NN.k>** · <reason> · since: <date> · until: <date or
 condition> · max_age: 14d`, an optional `· fallback: release`):
 
-- 08 · auto-promoted, veto until 2026-11-09 (#1072) · max_age: 1d · fallback: release
+- (none)
 
 ## Specs
 
