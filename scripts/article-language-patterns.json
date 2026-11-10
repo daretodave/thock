@@ -38,6 +38,16 @@
       "description": "Group-buy status phrase becomes stale after the window closes. Use absolute dates: 'the buy opened on YYYY-MM-DD and runs through YYYY-MM-DD'."
     },
     {
+      "id": "stale-buy-is-live-bare",
+      "match": "buy is live",
+      "description": "Present-tense 'buy is live' framing (frontmatter title/lede often drop the leading 'the', e.g. a title-cased 'Group Buy Is Live') becomes stale once the linked group-buy record's status flips to closed/cancelled. Use past tense: 'the buy ran from YYYY-MM-DD through YYYY-MM-DD' or 'the buy closed on YYYY-MM-DD'."
+    },
+    {
+      "id": "stale-buy-opens",
+      "match": "buy opens",
+      "description": "Present-tense 'buy opens' framing (frontmatter titles often read '... Group Buy Opens <date>') becomes stale once the linked group-buy record's status flips to closed/cancelled. Use past tense: 'the buy opened on YYYY-MM-DD'."
+    },
+    {
       "id": "approximate-date-year",
       "match": "approximately \\d{4}",
       "regex": true,
