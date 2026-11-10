@@ -1,5 +1,6 @@
 import { existsSync } from 'node:fs'
 import { join, resolve, dirname } from 'node:path'
+import { crc32, deflateSync } from 'node:zlib'
 import { expect, test } from '@playwright/test'
 import { getCanonicalUrls } from '../src/fixtures/canonical-urls'
 
@@ -92,6 +93,35 @@ const PNG_SIGNATURE_AND_IHDR_HEADER_BYTES = 16 // 8-byte PNG signature + 8-byte 
 // raise this once more routes are observed.
 const MIN_PNG_BYTES = 20_000
 
+/**
+ * The three checks a real OG PNG must pass, factored out of the per-route
+ * loop below so the fixture-regression test (A3, further down this file)
+ * can run the exact same logic against synthetic degenerate buffers —
+ * proving these checks would have caught the historical oklch 0-byte
+ * failure, not just asserting it inline a second time.
+ *
+ * `label` is purely for readable `expect()` failure messages (the route
+ * URL for live checks, a fixture description for the synthetic checks);
+ * it does not change what is asserted.
+ */
+function assertOgPng(
+  buffer: Buffer,
+  contentType: string | undefined,
+  label = 'OG image',
+): void {
+  expect(contentType, `${label} content-type`).toBe('image/png')
+
+  expect(
+    buffer.length,
+    `${label} byte length should clear the degenerate-PNG floor`,
+  ).toBeGreaterThan(MIN_PNG_BYTES)
+
+  const width = buffer.readUInt32BE(PNG_SIGNATURE_AND_IHDR_HEADER_BYTES)
+  const height = buffer.readUInt32BE(PNG_SIGNATURE_AND_IHDR_HEADER_BYTES + 4)
+  expect(width, `${label} IHDR width`).toBe(1200)
+  expect(height, `${label} IHDR height`).toBe(630)
+}
+
 const routes = getCanonicalUrls().filter((u) => u.kind === 'html')
 
 for (const route of routes) {
@@ -108,18 +138,94 @@ for (const route of routes) {
     expect(response.status(), `${ogUrl} status`).toBe(200)
 
     const contentType = response.headers()['content-type']
-    expect(contentType, `${ogUrl} content-type`).toBe('image/png')
-
     const buffer = await response.body()
 
-    expect(
-      buffer.length,
-      `${ogUrl} byte length should clear the degenerate-PNG floor`,
-    ).toBeGreaterThan(MIN_PNG_BYTES)
-
-    const width = buffer.readUInt32BE(PNG_SIGNATURE_AND_IHDR_HEADER_BYTES)
-    const height = buffer.readUInt32BE(PNG_SIGNATURE_AND_IHDR_HEADER_BYTES + 4)
-    expect(width, `${ogUrl} IHDR width`).toBe(1200)
-    expect(height, `${ogUrl} IHDR height`).toBe(630)
+    assertOgPng(buffer, contentType, ogUrl)
   })
 }
+
+// --- Fixture regression guard (A3) -----------------------------------
+//
+// Proves assertOgPng() itself would reject the historical "0-byte oklch
+// PNG" failure shape (and a near-blank/undersized variant of it), without
+// needing a live broken route to reproduce it against. If a future change
+// to assertOgPng ever weakened these checks (e.g. loosening the byte
+// floor or dropping the IHDR dimension check), these tests fail even
+// though every real route still renders a healthy card.
+
+/**
+ * Build one real PNG chunk (length + type + data + CRC-32), per the PNG
+ * spec. CRC-32 is computed over the chunk type + data (not the length
+ * prefix), using Node's built-in `zlib.crc32` — no extra dependency.
+ */
+function buildPngChunk(type: string, data: Buffer): Buffer {
+  const typeBuffer = Buffer.from(type, 'ascii')
+  const length = Buffer.alloc(4)
+  length.writeUInt32BE(data.length, 0)
+  const crc = Buffer.alloc(4)
+  crc.writeUInt32BE(crc32(Buffer.concat([typeBuffer, data])), 0)
+  return Buffer.concat([length, typeBuffer, data, crc])
+}
+
+const PNG_SIGNATURE = Buffer.from([
+  0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a,
+])
+
+/**
+ * Synthesize a small, real, valid solid-fill PNG — signature + IHDR +
+ * (deflated) IDAT + IEND — at the given dimensions. Used to mirror the
+ * spec's "0-byte or near-blank oklch PNG" failure class: a buffer that
+ * genuinely parses as a PNG (so the content-type/IHDR-shape checks are
+ * meaningfully exercised) but is undersized and the wrong dimensions,
+ * the way a flat degenerate render would be.
+ */
+function buildTinySolidFillPng(width: number, height: number): Buffer {
+  const ihdrData = Buffer.alloc(13)
+  ihdrData.writeUInt32BE(width, 0)
+  ihdrData.writeUInt32BE(height, 4)
+  ihdrData[8] = 8 // bit depth
+  ihdrData[9] = 2 // color type: truecolor (RGB)
+  ihdrData[10] = 0 // compression method
+  ihdrData[11] = 0 // filter method
+  ihdrData[12] = 0 // interlace method
+  const ihdr = buildPngChunk('IHDR', ihdrData)
+
+  const rowBytes = 1 + width * 3 // leading per-row filter-type byte + RGB triples
+  const raw = Buffer.alloc(rowBytes * height, 0x80) // solid mid-grey fill
+  for (let y = 0; y < height; y++) {
+    raw[y * rowBytes] = 0 // filter type "None" for every row
+  }
+  const idat = buildPngChunk('IDAT', deflateSync(raw))
+  const iend = buildPngChunk('IEND', Buffer.alloc(0))
+
+  return Buffer.concat([PNG_SIGNATURE, ihdr, idat, iend])
+}
+
+test('assertOgPng rejects a zero-length buffer (historical 0-byte oklch failure shape)', () => {
+  const zeroByteBuffer = Buffer.alloc(0)
+
+  expect(() =>
+    assertOgPng(zeroByteBuffer, 'image/png', 'fixture: zero-byte PNG'),
+  ).toThrow(/byte length/)
+})
+
+test('assertOgPng rejects a tiny, wrong-dimensioned solid-fill PNG under the byte floor', () => {
+  const tinyPng = buildTinySolidFillPng(4, 4)
+
+  // Sanity-check the fixture itself first: it must be a real, parseable
+  // PNG that is genuinely undersized and the wrong dimensions, otherwise
+  // the rejection below would not be proving anything about the
+  // historical failure shape.
+  expect(tinyPng.length).toBeGreaterThan(
+    PNG_SIGNATURE_AND_IHDR_HEADER_BYTES + 8,
+  )
+  expect(tinyPng.length).toBeLessThan(MIN_PNG_BYTES)
+  expect(tinyPng.readUInt32BE(PNG_SIGNATURE_AND_IHDR_HEADER_BYTES)).toBe(4)
+  expect(tinyPng.readUInt32BE(PNG_SIGNATURE_AND_IHDR_HEADER_BYTES + 4)).toBe(
+    4,
+  )
+
+  expect(() =>
+    assertOgPng(tinyPng, 'image/png', 'fixture: tiny solid-fill PNG'),
+  ).toThrow(/byte length/)
+})
