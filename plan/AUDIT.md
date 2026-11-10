@@ -1096,7 +1096,7 @@
 - article-b: apps/web/src/content/articles/wooting-rapid-trigger-head-start.mdx
 - action: add [wooting-rapid-trigger-head-start](/article/wooting-rapid-trigger-head-start) to hall-effect-score-dips-wooting-ship-slips body, or vice versa
 
-### [HOT PURSUIT] [content-gap] [7] ideas pillar — 1 of ≥2 articles in last 30d
+### [x] [HOT PURSUIT] [content-gap] [7] ideas pillar — 1 of ≥2 articles in last 30d — addressed in cab9b0e9, closes #1075
 - category: content-gaps
 - impact: 7 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -1167,3 +1167,48 @@
 - matches:
   - body-paragraph-2: `buy opens` (stale-buy-opens)
 - action: rewrite "buy opens" in gmk-cyl-king-of-the-seas-group-buy.mdx using past-tense phrasing or absolute dates, matching the group-buy record's closed status
+
+### [ ] [cross-links] [4.5] aurora-glow-theme-build ↔ bento-box-theme-build — no prose cross-link (same pillar, ≥2 shared tags: build-of-the-week, 65)
+- category: cross-links
+- filed: 2026-11-10 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: build-of-the-week, 65
+- article-a: apps/web/src/content/articles/aurora-glow-theme-build.mdx
+- article-b: apps/web/src/content/articles/bento-box-theme-build.mdx
+- action: add [bento-box-theme-build](/article/bento-box-theme-build) to aurora-glow-theme-build body, or vice versa
+
+### [ ] [cross-links] [4.5] aurora-glow-theme-build ↔ building-mode-sonnet-with-oil-kings — no prose cross-link (same pillar, ≥2 shared tags: build-of-the-week, linear)
+- category: cross-links
+- filed: 2026-11-10 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: build-of-the-week, linear
+- article-a: apps/web/src/content/articles/aurora-glow-theme-build.mdx
+- article-b: apps/web/src/content/articles/building-mode-sonnet-with-oil-kings.mdx
+- action: add [building-mode-sonnet-with-oil-kings](/article/building-mode-sonnet-with-oil-kings) to aurora-glow-theme-build body, or vice versa
+
+### [ ] [cross-links] [4.5] aurora-glow-theme-build ↔ synthwave-tkl-theme-build — no prose cross-link (same pillar, ≥2 shared tags: build-of-the-week, linear)
+- category: cross-links
+- filed: 2026-11-10 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: build-of-the-week, linear
+- article-a: apps/web/src/content/articles/aurora-glow-theme-build.mdx
+- article-b: apps/web/src/content/articles/synthwave-tkl-theme-build.mdx
+- action: add [synthwave-tkl-theme-build](/article/synthwave-tkl-theme-build) to aurora-glow-theme-build body, or vice versa
+
+### [HOT PURSUIT] [content-gap] [7] guides pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 5 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: guides
+- window-count: 1
+- window-start: 2026-10-11
+- score: 7
+- next: /ship-content → guides pillar article
+> Filed 2026-11-10 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
