@@ -1117,3 +1117,52 @@
 - file: apps/web/src/content/articles/hall-effect-score-dips-wooting-ship-slips.mdx
 - claim: Wooting cited at 100 for 2026-W45, but data/trends/2026-W45.json's rows[].score for that row is 87
 - action: correct the prose citation to match data/trends/2026-W45.json's rows[].score (or correct the data record if the data is the one that's wrong)
+
+### [ ] [content] [3.6] cannonkeys-blaine-v2-se-group-buy — present-tense buy-window language after group-buy closed
+- category: content
+- filed: 2026-11-10 by group-buy-article-staleness-check.mjs
+- impact: 4 (frontmatter title/lede feeding <title>, the OG image, and JSON-LD headline — or early body prose — still reads present-tense after the linked group-buy record's status flipped to closed)
+- ease: 9 (phrase rewrite to past tense or absolute dates — no code or schema change needed)
+- score: 3.6 (impact × ease / 10)
+- group-buy: data/group-buys/cannonkeys-blaine-v2-se.json
+- article: apps/web/src/content/articles/cannonkeys-blaine-v2-se-group-buy.mdx
+- matches:
+  - body-paragraph-1: `runs through 2026-08-09` (stale-buy-runs-through-date)
+- action: rewrite "runs through 2026-08-09" in cannonkeys-blaine-v2-se-group-buy.mdx using past-tense phrasing or absolute dates, matching the group-buy record's closed status
+
+### [ ] [content] [3.6] gmk-cyl-just-beachy-group-buy-opens — present-tense buy-window language after group-buy closed
+- category: content
+- filed: 2026-11-10 by group-buy-article-staleness-check.mjs
+- impact: 4 (frontmatter title/lede feeding <title>, the OG image, and JSON-LD headline — or early body prose — still reads present-tense after the linked group-buy record's status flipped to closed)
+- ease: 9 (phrase rewrite to past tense or absolute dates — no code or schema change needed)
+- score: 3.6 (impact × ease / 10)
+- group-buy: data/group-buys/divinikey-gmk-cyl-just-beachy.json
+- article: apps/web/src/content/articles/gmk-cyl-just-beachy-group-buy-opens.mdx
+- matches:
+  - title: `buy opens` (stale-buy-opens)
+- action: rewrite "buy opens" in gmk-cyl-just-beachy-group-buy-opens.mdx using past-tense phrasing or absolute dates, matching the group-buy record's closed status
+
+### [ ] [content] [3.6] divinikey-gmk-cyl-orange-alert-group-buy — present-tense buy-window language after group-buy closed
+- category: content
+- filed: 2026-11-10 by group-buy-article-staleness-check.mjs
+- impact: 4 (frontmatter title/lede feeding <title>, the OG image, and JSON-LD headline — or early body prose — still reads present-tense after the linked group-buy record's status flipped to closed)
+- ease: 9 (phrase rewrite to past tense or absolute dates — no code or schema change needed)
+- score: 3.6 (impact × ease / 10)
+- group-buy: data/group-buys/divinikey-gmk-cyl-orange-alert.json
+- article: apps/web/src/content/articles/divinikey-gmk-cyl-orange-alert-group-buy.mdx
+- matches:
+  - lede: `runs through September` (stale-buy-runs-through-date)
+  - body-paragraph-1: `runs through September` (stale-buy-runs-through-date)
+- action: rewrite "runs through September" in divinikey-gmk-cyl-orange-alert-group-buy.mdx using past-tense phrasing or absolute dates, matching the group-buy record's closed status
+
+### [ ] [content] [3.6] gmk-cyl-king-of-the-seas-group-buy — present-tense buy-window language after group-buy closed
+- category: content
+- filed: 2026-11-10 by group-buy-article-staleness-check.mjs
+- impact: 4 (frontmatter title/lede feeding <title>, the OG image, and JSON-LD headline — or early body prose — still reads present-tense after the linked group-buy record's status flipped to closed)
+- ease: 9 (phrase rewrite to past tense or absolute dates — no code or schema change needed)
+- score: 3.6 (impact × ease / 10)
+- group-buy: data/group-buys/kbdfans-gmk-cyl-king-of-the-seas.json
+- article: apps/web/src/content/articles/gmk-cyl-king-of-the-seas-group-buy.mdx
+- matches:
+  - body-paragraph-2: `buy opens` (stale-buy-opens)
+- action: rewrite "buy opens" in gmk-cyl-king-of-the-seas-group-buy.mdx using past-tense phrasing or absolute dates, matching the group-buy record's closed status
