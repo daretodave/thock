@@ -22,7 +22,7 @@ condition> · max_age: 14d`, an optional `· fallback: release`):
 
 | # | Initiative | Spec | Status | Progress |
 |---|---|---|---|---|
-| 08 | OG image render-verification gate | [08-og-render-verification-gate.md](08-og-render-verification-gate.md) |  | not chunked |
+| 08 | OG image render-verification gate | [08-og-render-verification-gate.md](08-og-render-verification-gate.md) |  | 2 left |
 
 ## Layout
 
