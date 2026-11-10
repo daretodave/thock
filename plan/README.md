@@ -22,7 +22,6 @@ condition> · max_age: 14d`, an optional `· fallback: release`):
 
 | # | Initiative | Spec | Status | Progress |
 |---|---|---|---|---|
-| 07 | Group-buy companion article staleness gate | [07-group-buy-article-staleness-check.md](07-group-buy-article-staleness-check.md) |  | 1 left |
 | 08 | OG image render-verification gate | [08-og-render-verification-gate.md](08-og-render-verification-gate.md) |  | not chunked |
 
 ## Layout

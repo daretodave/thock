@@ -746,6 +746,20 @@ time you encounter a recurring class of design ambiguity.)
   `skills/digest.md`'s nightly breadth check, deduped against
   existing `plan/AUDIT.md` rows the same way `article-parts-check.mjs`
   is.
+- **Group-buy article staleness check (spec 07, absorbed
+  2026-11-10):** `scripts/group-buy-article-staleness-check.mjs`
+  flags a group-buy companion article whose frontmatter `title`/
+  `lede` or first two body paragraphs still read present-tense
+  ("is live", "runs through <date>") after the linked
+  `data/group-buys/*.json` record's `status` has flipped to
+  `closed` or `cancelled` — resolved one-directionally via the
+  record's existing `relatedArticle` field (no fuzzy matching).
+  `delayed` records are exempt (active-but-late framing stays
+  correct per the spec 04 rule above). Files `content` category
+  `plan/AUDIT.md` rows (score 3.6), deduped the same way the other
+  surveys are; read-only against content and data, writes only to
+  `plan/AUDIT.md`. Runs via `--write` in `skills/march.lanes.md`'s
+  survey chain and `skills/digest.md`'s nightly breadth check.
 
 ## Hard rules
 

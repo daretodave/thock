@@ -83,3 +83,5 @@
 - 2026-11-08 · 06.4 · article-internal-consistency-check now runs via march + digest · 7bd2989c..e82c990c
 - 2026-11-08 · 06 · spec complete: Article internal-consistency checker · absorbed into plan/bearings.md · deleted in this commit
 - 2026-11-10 · 07.1 · Group-buy article staleness scanner files AUDIT rows for stale companions · c1867b13..c1867b13
+- 2026-11-10 · 07.2 · Staleness check now runs via march's survey chain and digest's breadth check · f1ea15ae..f1ea15ae
+- 2026-11-10 · 07 · spec complete: Group-buy companion article staleness gate · absorbed into plan/bearings.md · deleted in this commit
