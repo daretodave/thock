@@ -417,6 +417,19 @@ paragraphs, enumerated lists, or — where the body cites a sibling article via
 a `<Source>`/markdown link — the sibling's claims about the same fact.
 Deduplicates against existing AUDIT rows. If it exits non-zero, log and
 continue — the check is best-effort.
+
+Then run the group-buy companion article staleness check (spec 07, chunk 07.1):
+
+```bash
+node scripts/group-buy-article-staleness-check.mjs --write
+```
+
+This files `content` AUDIT rows (score 3.6) for group-buy companion articles
+whose linked `data/group-buys/*.json` record's status is `closed` or
+`cancelled` but whose frontmatter `title`/`lede` or first two body paragraphs
+still read present-tense ("is live", "runs through <date>"). Deduplicates
+against existing AUDIT rows. If it exits non-zero, log and continue — the
+check is best-effort.
 Then fall through to Step 3c (expand).
 
 ## lane: expand-due-notes

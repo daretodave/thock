@@ -87,6 +87,7 @@ its own cadence.
    SMOKE_SAMPLE=full pnpm e2e     # every URL, not the sample
    node scripts/content-fact-audit.mjs --write
    node scripts/article-internal-consistency-check.mjs --write
+   node scripts/group-buy-article-staleness-check.mjs --write
    ```
 
    Failures become HIGH `plan/AUDIT.md` rows — the digest
@@ -99,7 +100,11 @@ its own cadence.
    lede/body or sibling-citation mismatch found) becomes a
    `content` `plan/AUDIT.md` row the same way, filed by the
    script itself (same `--write` contract as its per-commit
-   path); it never blocks the digest commit.
+   path); it never blocks the digest commit. The group-buy
+   article staleness check's non-zero exit (a stale companion
+   article found) becomes a `content` `plan/AUDIT.md` row the
+   same way, filed by the script itself (same `--write` contract
+   as its per-commit path); it never blocks the digest commit.
 4. **Write `plan/DIGEST.md`** — overwrite entirely; it is a
    snapshot, not a ledger. Sections, in order: `Headline`,
    `While you were out` (pulse table: tick, verb, outcome —
