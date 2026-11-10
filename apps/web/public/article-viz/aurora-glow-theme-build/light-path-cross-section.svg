@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Annotated cross-section showing a per-key RGB LED on the PCB, light rays passing upward through a switch's frosted light-guide top housing into the underside of a pale keycap, and the same light continuing to diffuse sideways through the translucent walls of the Aurora's polycarbonate case.</title>
+
+  <text x="60" y="50" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6" letter-spacing="0.08em">AURORA — LIGHT PATH, LED TO CASE WALL</text>
+
+  <!-- outer case shell, translucent -->
+  <path d="M 150 560 L 150 160 Q 150 120 220 120 L 980 120 Q 1050 120 1050 160 L 1050 560" stroke-opacity="0.55" stroke-dasharray="1 0"/>
+  <text x="870" y="150" font-family="IBM Plex Sans, sans-serif" font-size="11.5" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">frosted PC case wall</text>
+
+  <!-- diffusion lines spreading from the switch toward the case walls -->
+  <g stroke="oklch(0.78 0.10 80)" stroke-opacity="0.5" stroke-dasharray="2 7">
+    <path d="M 480 300 L 230 220"/>
+    <path d="M 480 340 L 200 380"/>
+    <path d="M 480 380 L 230 460"/>
+    <path d="M 720 300 L 970 220"/>
+    <path d="M 720 340 L 1000 380"/>
+    <path d="M 720 380 L 970 460"/>
+  </g>
+  <text x="810" y="500" font-family="Newsreader, serif" font-style="italic" font-size="18" fill="oklch(0.78 0.10 80)" stroke="none">case diffuses what's left</text>
+  <text x="810" y="522" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">ambient wash through the shell</text>
+
+  <!-- PCB -->
+  <line x1="420" y1="500" x2="780" y2="500" stroke-width="4" stroke-opacity="0.85"/>
+  <text x="420" y="524" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">PCB</text>
+
+  <!-- LED -->
+  <circle cx="600" cy="490" r="11" fill="oklch(0.78 0.10 80)" fill-opacity="0.35" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95"/>
+  <text x="630" y="495" font-family="IBM Plex Sans, sans-serif" font-size="11.5" fill="oklch(0.78 0.10 80)" stroke="none" opacity="0.95">per-key RGB LED</text>
+
+  <!-- switch housing, bottom -->
+  <rect x="520" y="400" width="160" height="80" rx="8" stroke-opacity="0.85"/>
+  <text x="730" y="445" font-family="IBM Plex Sans, sans-serif" font-size="11.5" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">nylon bottom housing</text>
+
+  <!-- switch stem -->
+  <line x1="600" y1="400" x2="600" y2="280" stroke-width="6" stroke-opacity="0.9"/>
+
+  <!-- switch housing, frosted light-guide top -->
+  <rect x="520" y="280" width="160" height="90" rx="10" stroke-opacity="0.95" fill="oklch(0.78 0.10 80)" fill-opacity="0.12"/>
+  <text x="520" y="266" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.10 80)" stroke="none" opacity="0.95">frosted light-guide top</text>
+
+  <!-- light rays through the switch -->
+  <g stroke="oklch(0.78 0.10 80)" stroke-opacity="0.85" stroke-dasharray="2 5">
+    <path d="M 600 485 L 570 290"/>
+    <path d="M 600 485 L 600 270"/>
+    <path d="M 600 485 L 630 290"/>
+  </g>
+
+  <!-- keycap above, pale pastel -->
+  <path d="M 490 260 L 710 260 L 685 190 L 515 190 Z" stroke-opacity="0.9" fill="oklch(0.78 0.10 80)" fill-opacity="0.06"/>
+  <text x="730" y="210" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">GMK CYL Ramune keycap</text>
+  <text x="730" y="230" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.8">pale pastel — reflects, doesn't swallow, the glow</text>
+
+  <!-- light continuing into the keycap underside -->
+  <g stroke="oklch(0.78 0.10 80)" stroke-opacity="0.65" stroke-dasharray="2 5">
+    <path d="M 570 260 L 555 220"/>
+    <path d="M 600 260 L 600 210"/>
+    <path d="M 630 260 L 645 220"/>
+  </g>
+
+  <!-- Brass-bronze theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

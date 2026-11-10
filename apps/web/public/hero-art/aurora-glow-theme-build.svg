@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="A translucent 65% keyboard case outline with one key glowing coral and thin rays escaping upward through the case's top wall, a dashed leader running to a simplified switch housing with a frosted light-guide top also emitting rays, and a row of Cherry-profile keycap side silhouettes below with one coral-washed hero cap catching the glow, connected by a dashed line back to the switch, with a small warm-bronze dot at the upper-right margin.">
+  <title>thock hero — aurora glow theme build: Ikki68 Aurora, GMK CYL Ramune keycaps, Gateron Pro 3.0 Yellow switches</title>
+
+  <!-- ================================================================
+       Canvas:  1200 x 750
+       Subject: build/mod theme-spotlight pairing three named parts
+                around a single "glow" throughline — a frosted 65%
+                case outline with one key shown mid-glow (rays
+                escaping through the case's top wall), a simplified
+                switch housing with a frosted light-guide top emitting
+                its own rays, and a row of Cherry-profile keycap side
+                silhouettes with one hero cap catching the glow.
+       Palette:
+         Stroke   oklch(0.78 0.005 90)  warm-grey, 2px
+         Splash   oklch(0.68 0.165 28)  coral (glow accent)
+         Bronze   oklch(0.80 0.135 75)  theme accent (top-right dot)
+       Background: transparent (light-mode safe per house style).
+  ================================================================ -->
+
+  <!-- Faint wide washes behind the three glow anchors -->
+  <ellipse cx="394" cy="160" rx="110" ry="55" fill="oklch(0.68 0.165 28 / 0.07)" stroke="none"/>
+  <ellipse cx="960" cy="186" rx="70" ry="40" fill="oklch(0.68 0.165 28 / 0.06)" stroke="none"/>
+  <ellipse cx="325" cy="615" rx="90" ry="70" fill="oklch(0.68 0.165 28 / 0.05)" stroke="none"/>
+
+  <!-- ================================================================
+       CASE — Ikki68 Aurora, 65% layout, frosted translucent shell
+       ================================================================ -->
+  <g>
+    <!-- Outer shell -->
+    <rect x="90" y="160" width="580" height="270" rx="20"/>
+    <!-- Gasket / shell-seam channel (dashed, standing in for the frosted PC wall) -->
+    <rect x="98" y="168" width="564" height="254" rx="16" stroke-dasharray="2 6" stroke-opacity="0.22"/>
+    <!-- Inner bezel -->
+    <rect x="106" y="176" width="548" height="238" rx="12" stroke-opacity="0.45"/>
+
+    <!-- Main field: 13 columns x 4 rows -->
+    <g stroke-opacity="0.75">
+      <rect x="124" y="196" width="28" height="28" rx="3"/>
+      <rect x="156" y="196" width="28" height="28" rx="3"/>
+      <rect x="188" y="196" width="28" height="28" rx="3"/>
+      <rect x="220" y="196" width="28" height="28" rx="3"/>
+      <rect x="252" y="196" width="28" height="28" rx="3"/>
+      <rect x="284" y="196" width="28" height="28" rx="3"/>
+      <rect x="316" y="196" width="28" height="28" rx="3"/>
+      <rect x="348" y="196" width="28" height="28" rx="3"/>
+      <!-- col 9 omitted here: drawn separately below as the glow key -->
+      <rect x="412" y="196" width="28" height="28" rx="3"/>
+      <rect x="444" y="196" width="28" height="28" rx="3"/>
+      <rect x="476" y="196" width="28" height="28" rx="3"/>
+      <rect x="508" y="196" width="28" height="28" rx="3"/>
+
+      <rect x="124" y="228" width="28" height="28" rx="3"/>
+      <rect x="156" y="228" width="28" height="28" rx="3"/>
+      <rect x="188" y="228" width="28" height="28" rx="3"/>
+      <rect x="220" y="228" width="28" height="28" rx="3"/>
+      <rect x="252" y="228" width="28" height="28" rx="3"/>
+      <rect x="284" y="228" width="28" height="28" rx="3"/>
+      <rect x="316" y="228" width="28" height="28" rx="3"/>
+      <rect x="348" y="228" width="28" height="28" rx="3"/>
+      <rect x="380" y="228" width="28" height="28" rx="3"/>
+      <rect x="412" y="228" width="28" height="28" rx="3"/>
+      <rect x="444" y="228" width="28" height="28" rx="3"/>
+      <rect x="476" y="228" width="28" height="28" rx="3"/>
+      <rect x="508" y="228" width="28" height="28" rx="3"/>
+
+      <rect x="124" y="260" width="28" height="28" rx="3"/>
+      <rect x="156" y="260" width="28" height="28" rx="3"/>
+      <rect x="188" y="260" width="28" height="28" rx="3"/>
+      <rect x="220" y="260" width="28" height="28" rx="3"/>
+      <rect x="252" y="260" width="28" height="28" rx="3"/>
+      <rect x="284" y="260" width="28" height="28" rx="3"/>
+      <rect x="316" y="260" width="28" height="28" rx="3"/>
+      <rect x="348" y="260" width="28" height="28" rx="3"/>
+      <rect x="380" y="260" width="28" height="28" rx="3"/>
+      <rect x="412" y="260" width="28" height="28" rx="3"/>
+      <rect x="444" y="260" width="28" height="28" rx="3"/>
+      <rect x="476" y="260" width="28" height="28" rx="3"/>
+      <rect x="508" y="260" width="28" height="28" rx="3"/>
+
+      <rect x="124" y="292" width="28" height="28" rx="3"/>
+      <rect x="156" y="292" width="28" height="28" rx="3"/>
+      <rect x="188" y="292" width="28" height="28" rx="3"/>
+      <rect x="220" y="292" width="28" height="28" rx="3"/>
+      <rect x="252" y="292" width="28" height="28" rx="3"/>
+      <rect x="284" y="292" width="28" height="28" rx="3"/>
+      <rect x="316" y="292" width="28" height="28" rx="3"/>
+      <rect x="348" y="292" width="28" height="28" rx="3"/>
+      <rect x="380" y="292" width="28" height="28" rx="3"/>
+      <rect x="412" y="292" width="28" height="28" rx="3"/>
+      <rect x="444" y="292" width="28" height="28" rx="3"/>
+      <rect x="476" y="292" width="28" height="28" rx="3"/>
+      <rect x="508" y="292" width="28" height="28" rx="3"/>
+    </g>
+
+    <!-- Bottom row: modifiers + spacebar, variable widths -->
+    <g stroke-opacity="0.75">
+      <rect x="124" y="324" width="38" height="28" rx="3"/>
+      <rect x="166" y="324" width="28" height="28" rx="3"/>
+      <rect x="198" y="324" width="28" height="28" rx="3"/>
+      <rect x="230" y="324" width="160" height="28" rx="3"/>
+      <rect x="394" y="324" width="28" height="28" rx="3"/>
+      <rect x="426" y="324" width="28" height="28" rx="3"/>
+      <rect x="458" y="324" width="38" height="28" rx="3"/>
+    </g>
+
+    <!-- Right-edge column (Del / Home / End) stacked above the arrow cluster — the 65% nav signature -->
+    <g stroke-opacity="0.75">
+      <rect x="552" y="196" width="28" height="28" rx="3"/>
+      <rect x="552" y="228" width="28" height="28" rx="3"/>
+      <rect x="552" y="260" width="28" height="28" rx="3"/>
+    </g>
+
+    <!-- Arrow cluster: inverted-T -->
+    <g stroke-opacity="0.75">
+      <rect x="552" y="292" width="28" height="28" rx="3"/>
+      <rect x="516" y="324" width="28" height="28" rx="3"/>
+      <rect x="552" y="324" width="28" height="28" rx="3"/>
+      <rect x="588" y="324" width="28" height="28" rx="3"/>
+    </g>
+
+    <!-- GLOW KEY — col 9, row 1 — coral fill, LED point source, mid-glow -->
+    <rect x="380" y="196" width="28" height="28" rx="3" fill="oklch(0.68 0.165 28 / 0.18)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.95"/>
+    <circle cx="394" cy="210" r="3" fill="oklch(0.68 0.165 28)" stroke="none"/>
+
+    <!-- Rays escaping upward through the frosted case wall -->
+    <g stroke="oklch(0.68 0.165 28)" stroke-width="1.6">
+      <line x1="394" y1="190" x2="394" y2="95" stroke-opacity="0.5"/>
+      <line x1="394" y1="190" x2="362" y2="100" stroke-opacity="0.35"/>
+      <line x1="394" y1="190" x2="426" y2="100" stroke-opacity="0.35"/>
+      <line x1="394" y1="190" x2="338" y2="122" stroke-opacity="0.2"/>
+      <line x1="394" y1="190" x2="452" y2="122" stroke-opacity="0.2"/>
+    </g>
+  </g>
+
+  <text x="100" y="452" font-family="'JetBrains Mono','IBM Plex Mono',ui-monospace,monospace"
+    font-size="12" fill="oklch(0.58 0.006 90)" letter-spacing="0.03em" stroke="none">ikki68 aurora</text>
+
+  <!-- ================================================================
+       LEADER — case glow key to switch callout (coral)
+       ================================================================ -->
+  <g stroke="oklch(0.68 0.165 28)" stroke-width="1.6" stroke-dasharray="2 6" stroke-opacity="0.8" fill="none">
+    <path d="M 408 210 L 500 210 L 560 232 L 900 240"/>
+  </g>
+  <circle cx="408" cy="210" r="4" fill="none" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.9"/>
+  <path d="M 900 240 L 888 236 M 900 240 L 890 248" stroke="oklch(0.68 0.165 28)" stroke-width="1.6" stroke-opacity="0.85"/>
+
+  <!-- ================================================================
+       SWITCH CALLOUT — Gateron Pro 3.0 Yellow, frosted light-guide top
+       ================================================================ -->
+  <g>
+    <!-- Top housing -->
+    <rect x="900" y="210" width="120" height="60" rx="8" stroke-opacity="0.85"/>
+    <!-- Frosted light-guide inset — lighter, dashed, standing in for the translucent top -->
+    <rect x="916" y="222" width="88" height="36" rx="6" stroke-dasharray="2 5" stroke-opacity="0.45"/>
+    <!-- Stem below housing -->
+    <line x1="960" y1="270" x2="960" y2="310" stroke-opacity="0.5"/>
+    <!-- Bottom housing, simplified -->
+    <rect x="930" y="310" width="60" height="34" rx="6" stroke-opacity="0.8"/>
+
+    <!-- Rays rising from the frosted inset — light about to reach the keycap above -->
+    <g stroke="oklch(0.68 0.165 28)" stroke-width="1.6">
+      <line x1="960" y1="222" x2="960" y2="150" stroke-opacity="0.5"/>
+      <line x1="960" y1="222" x2="932" y2="158" stroke-opacity="0.3"/>
+      <line x1="960" y1="222" x2="988" y2="158" stroke-opacity="0.3"/>
+    </g>
+    <circle cx="960" cy="240" r="2.4" fill="oklch(0.68 0.165 28)" stroke="none"/>
+  </g>
+
+  <text x="960" y="366" font-family="'JetBrains Mono','IBM Plex Mono',ui-monospace,monospace"
+    font-size="12" fill="oklch(0.58 0.006 90)" letter-spacing="0.03em" text-anchor="middle" stroke="none">gateron pro 3.0 yellow</text>
+
+  <!-- ================================================================
+       GMK CYL RAMUNE — row of Cherry-profile keycap side silhouettes
+       (shallower slope + flatter crown than SA, per real profile)
+       ================================================================ -->
+  <g>
+    <!-- cap 0 — pale wash -->
+    <path d="M 150 660 L 150 653 L 164 612 L 172 605 L 198 605 L 206 612 L 220 653 L 220 660 Z"
+      fill="oklch(0.78 0.005 90 / 0.10)" stroke-opacity="0.75"/>
+
+    <!-- cap 1 — hero cap, coral accent, catching the glow -->
+    <path d="M 310 660 L 310 653 L 324 612 L 332 605 L 358 605 L 366 612 L 380 653 L 380 660 Z"
+      fill="oklch(0.68 0.165 28 / 0.16)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.95"/>
+    <!-- tiny sunburst on the hero cap's top surface, echoing the case glow key -->
+    <g stroke="oklch(0.68 0.165 28)" stroke-width="1.4" stroke-opacity="0.9">
+      <line x1="345" y1="596" x2="345" y2="606"/>
+      <line x1="336" y1="601" x2="344" y2="604"/>
+      <line x1="354" y1="601" x2="346" y2="604"/>
+    </g>
+    <circle cx="345" cy="604" r="1.6" fill="oklch(0.68 0.165 28)" stroke="none"/>
+
+    <!-- cap 2 — plain outline -->
+    <path d="M 470 660 L 470 653 L 484 612 L 492 605 L 518 605 L 526 612 L 540 653 L 540 660 Z"
+      stroke-opacity="0.9"/>
+
+    <!-- cap 3 — pale wash -->
+    <path d="M 630 660 L 630 653 L 644 612 L 652 605 L 678 605 L 686 612 L 700 653 L 700 660 Z"
+      fill="oklch(0.78 0.005 90 / 0.10)" stroke-opacity="0.75"/>
+
+    <!-- cap 4 — plain outline -->
+    <path d="M 790 660 L 790 653 L 804 612 L 812 605 L 838 605 L 846 612 L 860 653 L 860 660 Z"
+      stroke-opacity="0.9"/>
+
+    <!-- desk line under the row -->
+    <line x1="130" y1="660" x2="880" y2="660" stroke-opacity="0.18"/>
+  </g>
+
+  <!-- Connector — switch to the hero keycap, light continuing its path down into the set -->
+  <path d="M 960 344 Q 700 480 345 603" stroke="oklch(0.68 0.165 28)" stroke-width="1.4" stroke-dasharray="2 6" stroke-opacity="0.55" fill="none"/>
+  <circle cx="960" cy="344" r="3" fill="none" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.8"/>
+  <circle cx="345" cy="603" r="3" fill="oklch(0.68 0.165 28)" stroke="none"/>
+
+  <text x="515" y="702" font-family="'JetBrains Mono','IBM Plex Mono',ui-monospace,monospace"
+    font-size="12" fill="oklch(0.58 0.006 90)" letter-spacing="0.03em" text-anchor="middle" stroke="none">gmk cyl ramune</text>
+
+  <!-- ================================================================
+       BRONZE THEME DOT — upper-right ornamental anchor (family convention)
+       ================================================================ -->
+  <circle cx="1148" cy="70" r="4" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+  <circle cx="1132" cy="80" r="2.2" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.8"/>
+</svg>

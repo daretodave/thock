@@ -1,0 +1,22 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-11-10T00:00:00.000Z",
+  "commit": "36d420df",
+  "kind": "inline-viz",
+  "article_slug": "aurora-glow-theme-build",
+  "article_pillar": "ideas",
+  "section_anchor": "who-should-skip-this-build",
+  "brief_summary": "A do/don't two-column map. The amber 'Good fit for' column lists wants ambient per-key glow, fine with a 65% layer-tap workflow, and patient secondhand hunting. The warm-red 'Skip it for' column lists wants max aluminum heft and resonance, needs a dedicated function row, and wants every part ordered new today — mirroring the article's who-should-skip-this-build paragraph.",
+  "target": "apps/web/public/article-viz/aurora-glow-theme-build/who-its-for.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "tokens_snapshot": "design/tokens.css",
+  "data_sources": [
+    "apps/web/src/content/articles/aurora-glow-theme-build.mdx § 'Who should skip this build' — 'This isn't for a builder chasing maximum acoustic depth or aluminum heft... It's not for a typist who needs a dedicated function row or arrow cluster; 65% asks for a layer-tap habit... it's not for someone who wants every part ordered new, today — Ramune only exists on the secondhand market now.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/aurora-glow-theme-build/who-its-for.svg"],
+  "warnings": []
+}

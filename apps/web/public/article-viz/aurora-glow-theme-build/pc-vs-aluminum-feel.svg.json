@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-11-10T00:00:00.000Z",
+  "commit": "36d420df",
+  "kind": "inline-viz",
+  "article_slug": "aurora-glow-theme-build",
+  "article_pillar": "ideas",
+  "section_anchor": "the-tradeoff-the-pc-case-is-making-honestly",
+  "brief_summary": "Side-by-side cross-section comparing a dense, solid-shaded aluminum gasket case (labeled heft, resonant low end) against the Ikki68 Aurora's hatched, translucent polycarbonate gasket case (labeled lighter, bouncier, glow-diffusing). Both sides show the same floating gasket-mounted plate to isolate the shell material as the variable.",
+  "target": "apps/web/public/article-viz/aurora-glow-theme-build/pc-vs-aluminum-feel.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "apps/web/src/content/articles/aurora-glow-theme-build.mdx § 'The tradeoff the PC case is making, honestly' — 'Aluminum gasket boards in the same bracket carry more mass and a denser shell, which tends to read as deeper resonance and more of the low thock... The Aurora's PC shell, combined with its gasket mount, produces a softer, bouncier keystroke instead.'",
+    "data/boards/ikki68-aurora.json — 'The PC case and gasket mount combine to produce a softer, bouncier typing feel than aluminum boards in the same bracket.' and 'mountStyle: gasket, caseMaterial: polycarbonate'"
+  ],
+  "outputs": ["apps/web/public/article-viz/aurora-glow-theme-build/pc-vs-aluminum-feel.svg"],
+  "warnings": []
+}

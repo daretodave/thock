@@ -1,0 +1,38 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-11-10T23:00:13.000Z",
+  "commit": "36d420df5446f826ab035db3c11fa65414dbff61",
+  "kind": "hero-art",
+  "article_slug": "aurora-glow-theme-build",
+  "article_pillar": "ideas",
+  "source": "plan/bearings.md § Article hero art — colorful keyboard SVGs (build / mod piece → keyboard outline with a mod callout); visual-language reference apps/web/public/hero-art/mission-control-theme-build.svg",
+  "template": null,
+  "size": [1200, 750],
+  "title": null,
+  "subtitle": null,
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": ["JetBrains Mono"],
+  "subject": "Build/mod theme-spotlight piece organized around the article's single editorial hook — glow traveling up through a switch's frosted top, into a keycap, out through a translucent case wall — rather than three unrelated part diagrams. Left: a 65% keyboard case outline (580x270, rx20) with a dashed gasket/shell-seam channel and an inset bezel, standing in for the Ikki68 Aurora's frosted polycarbonate gasket-mount shell. Inside the bezel: a 13x4 main key field (one key deliberately omitted from the grid loop and redrawn separately), a variable-width bottom row, a slim 3-key right-edge column (Del/Home/End), and an inverted-T arrow cluster — the compact 65% signature with no dedicated nav gap. One key (row 1, column 9) is drawn as the 'glow key': coral fill, coral outline, a small coral dot standing in for the LED point source, and a fan of five coral rays of decreasing opacity rising from the key up through and past the case's outer top edge into the margin above — depicting ambient glow diffusing outward through the translucent shell. A soft coral wash ellipse sits behind the case's top wall at that point for the same reason. A dashed coral leader with a hollow origin dot and an arrowhead runs from the glow key rightward to a switch callout. The switch callout (900-1020 x 210-344) is a simplified housing — top housing, a lighter dashed inset standing in for the switch's frosted light-guide top, a stem, and a simplified bottom housing (no spring or PCB detail, deliberately less literal than a full exploded cross-section per the brief) — with its own fan of three coral rays rising from the frosted inset toward the margin above it, depicting light about to pass into a keycap, captioned 'gateron pro 3.0 yellow'. Below both: a row of five Cherry-profile keycap side silhouettes (shallower slope and flatter crown than the SA profile used in sibling pieces) resting on a shared desk line, alternating between a pale neutral wash fill and a plain outline, standing in for the GMK CYL Ramune set's pastel doubleshot caps without introducing a second hue. The middle cap is the hero accent: coral wash fill, coral outline, and a tiny sunburst mark (three short rays + dot) on its top surface echoing the case's glow key. A dashed coral connector with a hollow origin dot and a filled terminus runs from the switch callout's base down to the hero cap, visually continuing the light's path from switch to keycap. Row captioned 'gmk cyl ramune'; case captioned 'ikki68 aurora'. Bronze theme dot at the upper-right margin (1148,70) with a small coral satellite dot for family cohesion.",
+  "composition": "Build / mod motif per bearings.md Article hero art directive, following the mission-control-theme-build.svg precedent of pairing three named parts with dashed leaders/connectors into one cohesive theme-spotlight piece. Per this brief's explicit guidance, the switch callout is deliberately simplified (housing + frosted inset + stem + bottom housing, no spring/PCB/sound-arc detail) rather than a full exploded cross-section, since the editorial device here is the glow motif (sunburst rays repeated at the case, the switch, and the hero keycap) rather than switch mechanics.",
+  "splash_color": {
+    "name": "coral",
+    "oklch": "oklch(0.68 0.165 28)",
+    "rotation_note": "Selected per brief — coral reads as the warm radiant accent for the article's 'glow' hook. Kept within the mandated warm set (coral / dusty rose / ochre / muted terracotta); no blues despite the real keycap set (GMK CYL Ramune) being pastel blue-and-pink, per bearings.md's house-palette rule against stock blues/greens."
+  },
+  "accent_color": {
+    "name": "warm-bronze (theme accent)",
+    "oklch": "oklch(0.80 0.135 75)"
+  },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "callout_color": "oklch(0.58 0.006 90)",
+  "parts_referenced": {
+    "board": "Wuque Studio Ikki68 Aurora (polycarbonate 65% gasket board, frosted translucent case, per-key RGB)",
+    "keycap_set": "GMK CYL Ramune (pastel sky-blue / lighter blue / blush-pink doubleshot ABS, Cherry profile)",
+    "switch": "Gateron G Pro 3.0 Yellow (medium linear, frosted light-guide top)"
+  },
+  "outputs": [
+    "apps/web/public/hero-art/aurora-glow-theme-build.svg"
+  ],
+  "warnings": []
+}

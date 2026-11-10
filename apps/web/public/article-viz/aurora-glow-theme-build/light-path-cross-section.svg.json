@@ -1,0 +1,26 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-11-10T00:00:00.000Z",
+  "commit": "36d420df",
+  "kind": "inline-viz",
+  "article_slug": "aurora-glow-theme-build",
+  "article_pillar": "ideas",
+  "section_anchor": "a-case-built-to-glow-and-a-switch-most-boards-waste",
+  "brief_summary": "Cross-section of the light path from the PCB-mounted per-key RGB LED, up through a Gateron G Pro 3.0 Yellow switch's frosted light-guide top housing, into the underside of a pale GMK CYL Ramune keycap, continuing sideways as diffusion through the Ikki68 Aurora's translucent polycarbonate case wall. Illustrates the article's three-stage light-chain argument.",
+  "target": "apps/web/public/article-viz/aurora-glow-theme-build/light-path-cross-section.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "apps/web/src/content/articles/aurora-glow-theme-build.mdx § 'A case built to glow, and a switch most boards waste' — 'Its third-generation redesign adds a frosted light-guide top specifically built to carry LED light upward through the switch housing itself, rather than blocking it.'",
+    "apps/web/src/content/articles/aurora-glow-theme-build.mdx § 'A case built to glow, and a switch most boards waste' — 'Wuque Studio built the case out of frosted, translucent polycarbonate specifically so per-key RGB diffuses outward into a soft ambient wash'",
+    "apps/web/src/content/articles/aurora-glow-theme-build.mdx § 'Pastel is doing diffusion work, not just palette work' — 'Pale, light-reflecting tones like that don't swallow ambient glow the way a stark monochrome or a fully saturated dark set would.'",
+    "data/switches/gateron-pro-3-yellow.json — 'housingTop: pc, housingBottom: nylon, stem: pom' and 'Third-gen Gateron Yellow with tighter housing tolerances, frosted light-guide top, and chunkier three-ply pins.'",
+    "data/boards/ikki68-aurora.json — 'Polycarbonate 65-percent gasket board from Wuque Studio with a frosted translucent case that diffuses per-key RGB into a soft glow effect.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/aurora-glow-theme-build/light-path-cross-section.svg"],
+  "warnings": []
+}
