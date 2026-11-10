@@ -112,4 +112,70 @@ None.
 
 Measure: 6 open · 0 closed · next A7
 
-Not chunked yet.
+- [ ] **07.1** Core script: closed/cancelled companion scan, frontmatter + body-callout detection, `delayed` exemption · M · closes A1, A2, A3, A4, A6 · needs —
+  - New `scripts/group-buy-article-staleness-check.mjs`, mirroring
+    `group-buy-companion-survey.mjs`'s load-then-filter shape and
+    `article-language-check.mjs`'s pattern-matching helpers:
+    - `loadGroupBuys()` (same shape as the companion survey) to read
+      every `data/group-buys/*.json` record.
+    - Filter to records with `status: 'closed'` or `status:
+      'cancelled'` and a non-empty `relatedArticle` — `delayed`
+      records are never included (A4), and a record with no
+      `relatedArticle` is skipped (that gap is Rule 3's job, not
+      this script's).
+    - For each surviving record, read
+      `apps/web/src/content/articles/<relatedArticle>.mdx`. Split
+      frontmatter from body with a local parser (inline, no new
+      dependency — follow `article-parts-check.mjs`'s
+      `extractFrontmatterText`/body-split shape rather than
+      `article-language-check.mjs`'s `extractBody`, since this
+      script needs the frontmatter `title`/`lede` fields
+      `extractBody` deliberately skips).
+    - Scan frontmatter `title` + `lede` and the first 2 body
+      paragraphs (paragraphs = text blocks separated by a blank
+      line, skipping headings/JSX) against the present-tense
+      buy-window patterns already in `article-language-patterns.json`
+      (`stale-buy-live` et al.) plus new frontmatter-shaped variants
+      this chunk adds to that same JSON file for phrasing the
+      existing set doesn't cover ("is live", "opens", "runs through
+      <date>" — title-cased forms included, since frontmatter
+      `title` is often title-cased).
+    - A match in frontmatter (A2) or in the first 2 body paragraphs,
+      including a mid-body "Update — ..." callout paragraph (A3), is
+      the same violation shape — one row per article, not per
+      location.
+    - File one `content` category `plan/AUDIT.md` row per flagged
+      article (score band matching `group-buy-companion-survey.mjs`'s
+      row shape: category, filed-by, impact, ease, score, the
+      group-buy file, the matched phrase(s), and the fix action),
+      naming the article slug, the linked `data/group-buys/*.json`
+      record, and the matched phrase(s).
+    - Wrap each article's read + scan in try/catch; a parse miss or
+      missing file logs and skips rather than aborting the run (spec
+      Design: "a script crash is not" acceptable).
+    - `--write` (append AUDIT rows, dedup against existing rows by
+      article slug + matched phrase, same convention as
+      `group-buy-companion-survey.mjs`'s `alreadyFiled`), `--json`
+      (structured output), and no-flag dry-run (print findings, exit
+      1 if any) modes, matching every sibling survey's CLI contract.
+  - `scripts/__tests__/group-buy-article-staleness-check.test.mjs`
+    (A6): a clean article (closed record, past-tense companion, no
+    row filed), a frontmatter-staleness hit (closed record, present-
+    tense `title`/`lede`), a body-callout-staleness hit (closed
+    record, past-tense frontmatter but a present-tense "Update —
+    ..." paragraph in the first two body paragraphs), and a
+    `delayed` record (present-tense companion, never flagged).
+- [ ] **07.2** Wire into march's survey chain and digest's nightly breadth check · S · closes A5 · needs 07.1
+  - `skills/march.lanes.md`: add a call to
+    `node scripts/group-buy-article-staleness-check.mjs --write`
+    to the `content-queue-post-phase-24` lane's survey chain
+    (after the `article-internal-consistency-check.mjs` call, same
+    best-effort contract: non-zero exit logs and continues, never
+    blocks the tick), with the same style of explanatory paragraph
+    the sibling surveys carry.
+  - `skills/digest.md` Step 3 (breadth checks): add the same command
+    alongside `article-internal-consistency-check.mjs --write`,
+    with the same "non-zero exit becomes a `content` AUDIT row,
+    never blocks the digest commit" language.
+  - No script change in this chunk — 07.1's `--write` contract
+    already matches what both call sites expect.
