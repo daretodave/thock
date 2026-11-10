@@ -96,22 +96,10 @@ auto-promoted (aged) `/march` depth promotion, veto #<ISSUE>.
 
 ## Acceptance
 
-- **A1** `apps/e2e/tests/og-render-check.spec.ts` exists and
-  runs as part of `pnpm e2e`, fetching the real rendered PNG for
-  every canonical HTML route that has an `opengraph-image.tsx`
-  handler.
-- **A2** Each fetched response asserts `content-type: image/png`,
-  `IHDR` width/height exactly `1200×630`, and a byte-size floor.
 - **A3** The test suite fails (not silently passes) if a route's
   OG handler returns a 0-byte or otherwise undersized PNG —
   verified by a fixture/mock case that reproduces the historical
   oklch 0-byte failure shape.
-- **A4** The route list is derived from
-  `canonical-urls.ts` + the same route-enumeration logic as
-  `og-coverage-check.mjs`, not a hand-maintained duplicate list,
-  so a new route with an OG handler is covered automatically.
-- **A5** No new `pnpm verify` leg, no new runtime dependency, no
-  schema/component/URL-contract change.
 
 ## Open questions
 
@@ -119,56 +107,9 @@ None.
 
 ## Chunks
 
-Measure: 5 open · 0 closed · next A6
+Measure: 1 open · 4 closed · next A6
 
-- [ ] **08.1** Core test file: route derivation, PNG fetch, content-type + IHDR + byte-floor assertions · M · closes A1, A2, A4, A5 · needs —
-  - New `apps/e2e/tests/og-render-check.spec.ts`, added to the
-    existing hermetic e2e leg (no new `pnpm verify` leg, no new
-    runtime dependency — A5).
-  - Route derivation: import the canonical HTML routes from
-    `apps/e2e/src/fixtures/canonical-urls.ts` (`kind: 'html'`
-    rows), then filter to those with a sibling
-    `opengraph-image.tsx` under `apps/web/src/app` — reuse
-    `og-coverage-check.mjs`'s route-enumeration approach (walk
-    `apps/web/src/app`, map each `page.tsx` directory to its
-    App Router path, excluding the same non-route segments:
-    `api`, `_components`, `_lib`, `_hooks`) rather than
-    re-deriving a second list (A4). Since
-    `og-coverage-check.mjs` is a standalone script (not an
-    importable module), extract its directory-to-path mapping
-    logic into the spec file directly, keeping the exact same
-    exclusion set and walk order so the two enumerations can't
-    drift silently — a comment cross-references the script.
-  - Per route, resolve the OG fetch path:
-    `opengraph-image.tsx` files using `generateImageMetadata`
-    (`grep -rl generateImageMetadata apps/web/src/app` —
-    newsletter, part, part/[kind]/[slug], article, vendor, tag,
-    trends/tracker/[week]) fetch `<path>/opengraph-image/og`;
-    every other `opengraph-image.tsx` fetches
-    `<path>/opengraph-image` directly (same shape confirmed by
-    `apps/e2e/tests/newsletter.spec.ts`'s JSON-LD image-URL
-    assertion). Hard-code which routes are
-    `generateImageMetadata`-based as a small set literal next to
-    the route derivation (the set is the file list above, not
-    expected to churn independent of this review).
-  - One Playwright `test()` per route (A3's "fails that one
-    assertion, not the whole file" shape), each doing:
-    `request.get('<resolved-path>')`, then on the raw response:
-    1. `content-type` header is exactly `image/png`.
-    2. Read the body as a `Buffer`; read width from bytes
-       16–19 and height from bytes 20–23 of the `IHDR` chunk
-       (big-endian `readUInt32BE`, fixed PNG offset, no decoder
-       dependency), assert both equal `1200`/`630`.
-    3. `buffer.length` clears a floor — run the suite once
-       locally against a healthy route first to read a real
-       card's byte size from the test output, then hard-code a
-       floor comfortably below every observed value but well
-       above a few-hundred-byte flat-fill PNG (document the
-       observed sizes in a comment so a future tightening pass
-       has the baseline).
-  - No new dependency: PNG header parsing is 8 lines of buffer
-    math, not a library.
-- [ ] **08.2** Fixture test proving the suite fails on a 0-byte/undersized PNG · S · closes A3 · needs 08.1
+- [ ] **08.2** Fixture test proving the suite fails on a 0-byte/undersized PNG · S · closes A3 · needs —
   - A dedicated `test()` in the same spec file (not a unit test
     elsewhere — this is an e2e-level regression guard) that
     feeds a synthetic degenerate PNG buffer (zero-length, and

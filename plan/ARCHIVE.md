@@ -85,3 +85,4 @@
 - 2026-11-10 · 07.1 · Group-buy article staleness scanner files AUDIT rows for stale companions · c1867b13..c1867b13
 - 2026-11-10 · 07.2 · Staleness check now runs via march's survey chain and digest's breadth check · f1ea15ae..f1ea15ae
 - 2026-11-10 · 07 · spec complete: Group-buy companion article staleness gate · absorbed into plan/bearings.md · deleted in this commit
+- 2026-11-10 · 08.1 · Hermetic e2e now renders every OG image and checks PNG shape/size · 0a5aace9..0a5aace9
