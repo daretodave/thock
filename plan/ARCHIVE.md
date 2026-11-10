@@ -86,3 +86,5 @@
 - 2026-11-10 · 07.2 · Staleness check now runs via march's survey chain and digest's breadth check · f1ea15ae..f1ea15ae
 - 2026-11-10 · 07 · spec complete: Group-buy companion article staleness gate · absorbed into plan/bearings.md · deleted in this commit
 - 2026-11-10 · 08.1 · Hermetic e2e now renders every OG image and checks PNG shape/size · 0a5aace9..0a5aace9
+- 2026-11-10 · 08.2 · Fixture tests prove the OG PNG assertion helper catches a 0-byte/undersized render · edf50a5e..edf50a5e
+- 2026-11-10 · 08 · spec complete: OG image render-verification gate · absorbed into plan/bearings.md · deleted in this commit

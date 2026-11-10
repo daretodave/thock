@@ -760,6 +760,25 @@ time you encounter a recurring class of design ambiguity.)
   surveys are; read-only against content and data, writes only to
   `plan/AUDIT.md`. Runs via `--write` in `skills/march.lanes.md`'s
   survey chain and `skills/digest.md`'s nightly breadth check.
+- **OG image render-verification gate (spec 08, absorbed
+  2026-11-10):** `apps/e2e/tests/og-render-check.spec.ts` runs
+  inside the existing hermetic e2e leg (no new `pnpm verify`
+  leg) and fetches the real rendered PNG, through the booted
+  production server, for every canonical HTML route that has a
+  sibling `opengraph-image.tsx` (route list derived from
+  `canonical-urls.ts` + the same enumeration logic as
+  `og-coverage-check.mjs` — never a hand-maintained second
+  list). Each fetch is checked by a shared `assertOgPng(buffer,
+  contentType, label)` helper: `content-type: image/png`, the
+  `IHDR` chunk reports exactly `1200×630`, and the byte length
+  clears `MIN_PNG_BYTES` (20,000 — comfortably below every
+  observed healthy card, well above a flat-fill degenerate
+  render). Two fixture tests feed that same helper a zero-byte
+  buffer and a synthetic small wrong-dimensioned PNG (built via
+  `node:zlib`, no new dependency) to prove it actually rejects
+  the historical "oklch 0-byte PNG" failure shape, not just
+  pass by construction. A new route's OG handler is covered
+  automatically — no list to update by hand.
 
 ## Hard rules
 
