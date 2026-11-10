@@ -1106,6 +1106,7 @@
 - window-start: 2026-10-09
 - score: 7
 - next: /ship-content → ideas pillar article
+- issue: #1075
 > Filed 2026-11-08 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 
 ### [ ] [content] [3.6] hall-effect-score-dips-wooting-ship-slips — Wooting tracker-score citation disagrees with data/trends/2026-W45.json
