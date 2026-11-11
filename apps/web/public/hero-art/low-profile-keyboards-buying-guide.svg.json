@@ -1,0 +1,33 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-11-11T00:00:00.000Z",
+  "commit": "d6abf2b6c0ece24df969e5209b91661135feac00",
+  "kind": "hero-art",
+  "article_slug": "low-profile-keyboards-buying-guide",
+  "article_pillar": "guides",
+  "brief_summary": "Hero art for the guides-pillar buying guide on low-profile mechanical keyboards (Kailh Choc / Cherry MX Low Profile). Motif: side-profile cut-away comparing a standard-height keyboard stack (left, neutral warm-grey stroke) to a low-profile stack (right, amber stroke), each showing case, plate, switch housing with coil spring, stem travel column, and keycap silhouette (tall sculpted vs low-sloped). Ghost switch outlines on the plate line of each stack read as an implied key row, folding the guide pillar's 'annotated keycap row' default into the same cross-section. Travel brackets read 4.0mm (standard) vs 3.0-3.2mm (low-profile); case-height brackets read 30-40mm vs ~20mm, both figures grounded in the article's own body text rather than invented. A faint diagonal wrist-angle cue under each stack (steeper left, flatter right) visualizes the article's 'flatter typing angle' framing. Replaces the temporary hand-authored stand-in content-curator placed at this path pending a brander render.",
+  "target": "apps/web/public/hero-art/low-profile-keyboards-buying-guide.svg",
+  "source": "apps/web/src/content/articles/low-profile-keyboards-buying-guide.mdx frontmatter heroImageAlt; plan/bearings.md § Article hero art (guide pillar default: annotated keycap row, reinterpreted here as an annotated side-profile cut-away per the article's literal subject)",
+  "template": null,
+  "size": [1200, 750],
+  "subject": "Two side-profile cut-away stacks on a shared dashed desk baseline. Left stack is drawn in neutral warm-grey stroke, labeled 'standard-height', with a tall switch housing (visible coil spring), tall sculpted keycap, deep case, and a travel bracket marked 4.0mm travel plus a case-height bracket marked 30-40mm. Right stack is drawn in amber stroke, labeled 'low-profile', with a visibly shorter switch housing (compressed coil spring), low-profile keycap, shallower case, a travel bracket marked 3.0-3.2mm travel, and a case-height bracket marked ~20mm. A faint wrist-angle guide line under each stack is steeper on the left and flatter on the right.",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "stroke_weight": "2px",
+  "canvas": "1200x750",
+  "background": "transparent (light-mode safe per house style)",
+  "tokens_snapshot": "design/tokens.css",
+  "tokens_snapshot_sha256": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": ["IBM Plex Sans", "JetBrains Mono"],
+  "alt": "A cut-away side profile comparing a standard-height mechanical keyboard stack to a low-profile stack, drawn in warm-grey stroke with the low-profile switch and case rendered noticeably shorter, an amber bracket marking the reduced travel distance between the two.",
+  "data_sources": [
+    "low-profile-keyboards-buying-guide.mdx § 'What low-profile actually means' — 'A standard Cherry MX-style switch travels 4.0mm... Cherry MX Low Profile specs 3.2mm of total travel... Kailh Choc switches land around 3.0mm for the original version and anywhere from 2.8mm to 3.2mm for the second'",
+    "low-profile-keyboards-buying-guide.mdx § 'What low-profile actually means' — 'shrink from the roughly 30-40mm of a standard custom build down to something closer to 20mm or less'"
+  ],
+  "outputs": [
+    "apps/web/public/hero-art/low-profile-keyboards-buying-guide.svg"
+  ],
+  "warnings": []
+}

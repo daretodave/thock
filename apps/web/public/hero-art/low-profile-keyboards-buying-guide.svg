@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — side-profile cut-away comparing a standard-height mechanical keyboard stack to a low-profile stack, drawn in warm-grey stroke with the low-profile switch and case rendered noticeably shorter, an amber bracket marking the reduced travel distance between the two</title>
+
+  <!-- Single splash: amber wash behind the low-profile stack only -->
+  <ellipse cx="860" cy="520" rx="330" ry="190" fill="oklch(0.78 0.10 80 / 0.07)" stroke="none"/>
+
+  <text x="600" y="92" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.4" stroke="none" text-anchor="middle" letter-spacing="0.08em">SIDE-PROFILE STACK COMPARISON</text>
+
+  <!-- Shared desk baseline -->
+  <line x1="60" y1="600" x2="1140" y2="600" stroke-opacity="0.22" stroke-dasharray="5 6"/>
+
+  <!-- ===================== STANDARD STACK (left) ===================== -->
+  <g stroke-opacity="0.85">
+    <!-- Case -->
+    <rect x="190" y="460" width="220" height="140" rx="10"/>
+    <!-- Plate -->
+    <line x1="190" y1="460" x2="410" y2="460" stroke-opacity="0.55"/>
+    <!-- Adjacent ghost switch positions, implying a full row -->
+    <rect x="202" y="460" width="18" height="26" stroke-opacity="0.18" stroke-dasharray="2 3"/>
+    <rect x="380" y="460" width="18" height="26" stroke-opacity="0.18" stroke-dasharray="2 3"/>
+  </g>
+
+  <g stroke-opacity="0.9">
+    <!-- Switch housing, tall -->
+    <rect x="270" y="350" width="60" height="110" rx="6"/>
+    <!-- Coil spring inside housing -->
+    <path d="M 300 448 Q 284 438 300 428 Q 316 418 300 408 Q 284 398 300 388 Q 316 378 300 368" stroke-opacity="0.35"/>
+    <!-- Stem travel column -->
+    <line x1="300" y1="350" x2="300" y2="306" stroke-opacity="0.3" stroke-dasharray="3 4"/>
+    <!-- Keycap, tall sculpted profile -->
+    <path d="M 270 306 L 330 306 L 320 256 L 280 256 Z"/>
+  </g>
+
+  <!-- Travel bracket -->
+  <g stroke-opacity="0.45">
+    <line x1="352" y1="306" x2="372" y2="306"/>
+    <line x1="352" y1="350" x2="372" y2="350"/>
+    <line x1="372" y1="306" x2="372" y2="350"/>
+  </g>
+  <text x="386" y="332" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">4.0mm travel</text>
+
+  <!-- Case-height bracket -->
+  <g stroke-opacity="0.4">
+    <line x1="150" y1="460" x2="170" y2="460"/>
+    <line x1="150" y1="600" x2="170" y2="600"/>
+    <line x1="150" y1="460" x2="150" y2="600"/>
+  </g>
+  <text x="138" y="500" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.5" text-anchor="end">30–40mm</text>
+  <text x="138" y="516" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.5" text-anchor="end">case</text>
+
+  <!-- Wrist-angle cue, steeper -->
+  <line x1="410" y1="600" x2="462" y2="556" stroke-opacity="0.18"/>
+
+  <text x="300" y="644" font-family="IBM Plex Sans, sans-serif" font-size="16" font-weight="600" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">standard-height</text>
+
+  <!-- ===================== LOW-PROFILE STACK (right) ===================== -->
+  <g stroke="oklch(0.78 0.10 80)" stroke-opacity="0.9">
+    <!-- Case, shorter -->
+    <rect x="750" y="540" width="220" height="60" rx="8"/>
+    <!-- Plate -->
+    <line x1="750" y1="540" x2="970" y2="540" stroke-opacity="0.55"/>
+    <!-- Adjacent ghost switch positions -->
+    <rect x="762" y="540" width="16" height="16" stroke-opacity="0.2" stroke-dasharray="2 3"/>
+    <rect x="942" y="540" width="16" height="16" stroke-opacity="0.2" stroke-dasharray="2 3"/>
+  </g>
+
+  <g stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95">
+    <!-- Switch housing, short -->
+    <rect x="830" y="490" width="60" height="50" rx="5"/>
+    <!-- Coil spring, compressed -->
+    <path d="M 860 536 Q 848 530 860 524 Q 872 518 860 512 Q 848 506 860 500" stroke-opacity="0.4"/>
+    <!-- Stem travel column -->
+    <line x1="860" y1="490" x2="860" y2="458" stroke-opacity="0.4" stroke-dasharray="3 4"/>
+    <!-- Keycap, low profile -->
+    <path d="M 830 458 L 890 458 L 884 434 L 836 434 Z"/>
+  </g>
+
+  <!-- Travel bracket -->
+  <g stroke="oklch(0.78 0.10 80)" stroke-opacity="0.6">
+    <line x1="912" y1="458" x2="932" y2="458"/>
+    <line x1="912" y1="490" x2="932" y2="490"/>
+    <line x1="932" y1="458" x2="932" y2="490"/>
+  </g>
+  <text x="946" y="478" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="12" fill="oklch(0.78 0.10 80)" stroke="none">3.0–3.2mm travel</text>
+
+  <!-- Case-height bracket -->
+  <g stroke="oklch(0.78 0.10 80)" stroke-opacity="0.55">
+    <line x1="710" y1="540" x2="730" y2="540"/>
+    <line x1="710" y1="600" x2="730" y2="600"/>
+    <line x1="710" y1="540" x2="710" y2="600"/>
+  </g>
+  <text x="698" y="564" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="oklch(0.78 0.10 80)" stroke="none" opacity="0.75" text-anchor="end">~20mm</text>
+  <text x="698" y="580" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="11" fill="oklch(0.78 0.10 80)" stroke="none" opacity="0.75" text-anchor="end">case</text>
+
+  <!-- Wrist-angle cue, flatter -->
+  <line x1="970" y1="600" x2="1042" y2="585" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.22"/>
+
+  <text x="860" y="644" font-family="IBM Plex Sans, sans-serif" font-size="16" font-weight="600" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.95">low-profile</text>
+
+  <!-- Bottom technical caption -->
+  <text x="60" y="702" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="10" fill="oklch(0.78 0.005 90)" fill-opacity="0.35" stroke="none" letter-spacing="0.03em">SHORTER SWITCH TRAVEL, SHALLOWER CASE, FLATTER WRIST ANGLE</text>
+
+  <!-- Bronze theme dot -->
+  <circle cx="1150" cy="70" r="4" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

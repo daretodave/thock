@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Strip of four cards comparing Kailh Choc v1, Kailh Choc v2, Cherry MX Low Profile, and Logitech GL by stem type, hot-swap status, keycap catalog size, and example boards</title>
+
+  <text x="600" y="44" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">four stems, almost no overlap</text>
+
+  <!-- Card template: x=40,310,580,850 width=250 -->
+
+  <!-- ===================== CARD 1 — Kailh Choc v1 ===================== -->
+  <g transform="translate(40,90)">
+    <rect x="0" y="0" width="250" height="420" rx="10" stroke-opacity="0.5"/>
+    <text x="125" y="34" font-family="IBM Plex Sans, sans-serif" font-size="15" font-weight="600" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Kailh Choc v1</text>
+    <line x1="24" y1="48" x2="226" y2="48" stroke-opacity="0.2"/>
+
+    <!-- Stem glyph: two-prong, proprietary -->
+    <g transform="translate(125,90)" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.8">
+      <circle r="26" fill="oklch(0.78 0.10 80 / 0.1)"/>
+      <line x1="-8" y1="-14" x2="-8" y2="14"/>
+      <line x1="8" y1="-14" x2="8" y2="14"/>
+    </g>
+    <text x="125" y="140" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle">two-prong, proprietary</text>
+
+    <text x="24" y="182" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">STEM</text>
+    <text x="24" y="200" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none">Not MX-compatible</text>
+
+    <text x="24" y="236" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">HOT-SWAP</text>
+    <text x="24" y="254" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none">Choc v1 sockets only</text>
+
+    <text x="24" y="290" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">KEYCAP CATALOG</text>
+    <text x="24" y="308" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none">Choc-specific, narrow</text>
+
+    <text x="24" y="356" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">SEEN ON</text>
+    <text x="24" y="376" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none">ZSA Voyager</text>
+    <text x="24" y="396" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none">some Keychron boards</text>
+  </g>
+
+  <!-- ===================== CARD 2 — Kailh Choc v2 ===================== -->
+  <g transform="translate(310,90)">
+    <rect x="0" y="0" width="250" height="420" rx="10" stroke-opacity="0.5"/>
+    <text x="125" y="34" font-family="IBM Plex Sans, sans-serif" font-size="15" font-weight="600" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Kailh Choc v2</text>
+    <line x1="24" y1="48" x2="226" y2="48" stroke-opacity="0.2"/>
+
+    <!-- Stem glyph: short-skirt cross -->
+    <g transform="translate(125,90)" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.8">
+      <circle r="26" fill="oklch(0.78 0.10 80 / 0.1)"/>
+      <line x1="0" y1="-16" x2="0" y2="16"/>
+      <line x1="-16" y1="0" x2="16" y2="0"/>
+    </g>
+    <text x="125" y="140" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle">short-skirt cross stem</text>
+
+    <text x="24" y="182" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">STEM</text>
+    <text x="24" y="200" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none">MX-style, not v1</text>
+
+    <text x="24" y="236" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">HOT-SWAP</text>
+    <text x="24" y="254" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none">Choc v2 sockets only</text>
+
+    <text x="24" y="290" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">KEYCAP CATALOG</text>
+    <text x="24" y="308" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none">Choc v2 + a few LP sets</text>
+
+    <text x="24" y="356" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">SEEN ON</text>
+    <text x="24" y="376" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none">some Keychron boards</text>
+    <text x="24" y="396" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none">DIY split keyboards</text>
+  </g>
+
+  <!-- ===================== CARD 3 — Cherry MX Low Profile ===================== -->
+  <g transform="translate(580,90)">
+    <rect x="0" y="0" width="250" height="420" rx="10" stroke-opacity="0.5"/>
+    <text x="125" y="34" font-family="IBM Plex Sans, sans-serif" font-size="15" font-weight="600" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Cherry MX Low Profile</text>
+    <line x1="24" y1="48" x2="226" y2="48" stroke-opacity="0.2"/>
+
+    <!-- Stem glyph: full cross, wider housing -->
+    <g transform="translate(125,90)" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.8">
+      <circle r="26" fill="oklch(0.78 0.10 80 / 0.1)"/>
+      <line x1="0" y1="-18" x2="0" y2="18"/>
+      <line x1="-18" y1="0" x2="18" y2="0"/>
+    </g>
+    <text x="125" y="140" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle">full MX cross stem</text>
+
+    <text x="24" y="182" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">STEM</text>
+    <text x="24" y="200" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none">Matches MX shape</text>
+
+    <text x="24" y="236" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">HOT-SWAP</text>
+    <text x="24" y="254" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none">Rare, LP-specific sockets</text>
+
+    <text x="24" y="290" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">KEYCAP CATALOG</text>
+    <text x="24" y="308" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none">Cherry LP-specific only</text>
+
+    <text x="24" y="356" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">SEEN ON</text>
+    <text x="24" y="376" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none">Corsair low-profile boards</text>
+    <text x="24" y="396" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none">some Keychron boards</text>
+  </g>
+
+  <!-- ===================== CARD 4 — Logitech GL ===================== -->
+  <g transform="translate(850,90)">
+    <rect x="0" y="0" width="250" height="420" rx="10" stroke-opacity="0.5"/>
+    <text x="125" y="34" font-family="IBM Plex Sans, sans-serif" font-size="15" font-weight="600" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Logitech GL</text>
+    <line x1="24" y1="48" x2="226" y2="48" stroke-opacity="0.2"/>
+
+    <!-- Stem glyph: split, two-prong fading to cross -->
+    <g transform="translate(125,90)" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.8">
+      <circle r="26" fill="oklch(0.78 0.10 80 / 0.1)"/>
+      <line x1="-8" y1="-14" x2="-8" y2="14" stroke-opacity="0.9"/>
+      <line x1="8" y1="-14" x2="8" y2="14" stroke-dasharray="2 3" stroke-opacity="0.5"/>
+      <line x1="0" y1="0" x2="16" y2="0" stroke-dasharray="2 3" stroke-opacity="0.5"/>
+    </g>
+    <text x="125" y="140" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle">proprietary → cross stem</text>
+
+    <text x="24" y="182" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">STEM</text>
+    <text x="24" y="200" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none">Changed G915 → G515</text>
+
+    <text x="24" y="236" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">HOT-SWAP</text>
+    <text x="24" y="254" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none">No, soldered</text>
+
+    <text x="24" y="290" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">KEYCAP CATALOG</text>
+    <text x="24" y="308" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none">Thin, even post-change</text>
+
+    <text x="24" y="356" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">SEEN ON</text>
+    <text x="24" y="376" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none">Logitech G-series</text>
+    <text x="24" y="396" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none">gaming keyboards</text>
+  </g>
+
+  <!-- Bottom caption -->
+  <text x="600" y="536" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">"low-profile" on a listing names a category, not a single compatible spec</text>
+
+  <!-- Bronze theme dot -->
+  <circle cx="1160" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

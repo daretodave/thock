@@ -1,0 +1,22 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-10-28T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "low-profile-keyboards-buying-guide",
+  "article_pillar": "guides",
+  "section_anchor": "a-practical-buying-checklist",
+  "brief_summary": "Three-panel numbered process strip walking through the article's buying checklist in order: (1) confirm stem type before buying keycaps or switches, illustrated with Choc and Cherry MX-LP stem icons marked not-interchangeable; (2) check hot-swap support explicitly per board, illustrated with a socket icon carrying a question mark rather than a checkmark; (3) decide if the flatter profile is worth a smaller catalog, illustrated with a small stack of options next to a much larger stack labeled standard MX.",
+  "target": "apps/web/public/article-viz/low-profile-keyboards-buying-guide/buying-checklist.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "low-profile-keyboards-buying-guide.mdx § 'A practical buying checklist' — 'Confirm the stem type... before buying a single keycap or switch. The three are not interchangeable...'; 'check hot-swap support explicitly on the specific board being considered; don't assume it from the switch family alone'; 'weigh the actual tradeoff on the table: a flatter case and a laptop-like feel, against a keycap and switch catalog that is a fraction of the size of the standard MX market.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/low-profile-keyboards-buying-guide/buying-checklist.svg"],
+  "warnings": []
+}

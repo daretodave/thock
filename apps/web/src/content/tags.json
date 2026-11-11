@@ -82,6 +82,7 @@
     { "slug": "divinikey", "name": "Divinikey", "category": "brand" },
     { "slug": "optical", "name": "Optical", "category": "switch" },
     { "slug": "tray-mount", "name": "Tray-mount", "category": "layout" },
+    { "slug": "low-profile", "name": "Low-profile", "category": "layout" },
     { "slug": "columnar-stagger", "name": "Columnar stagger", "category": "layout" },
     { "slug": "gasket-mount", "name": "Gasket-mount", "category": "layout" },
     { "slug": "hot-swap", "name": "Hot-swap", "category": "switch" },

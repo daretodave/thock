@@ -1,0 +1,26 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-10-28T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "low-profile-keyboards-buying-guide",
+  "article_pillar": "guides",
+  "section_anchor": "two-ecosystems-not-one",
+  "brief_summary": "Strip of four cards, one per low-profile switch family (Kailh Choc v1, Kailh Choc v2, Cherry MX Low Profile, Logitech GL), each annotated with a stem-shape icon, hot-swap status, relative keycap catalog size, and example boards. Makes literal the claim that 'low-profile' names a category with three-plus incompatible stem shapes rather than one spec.",
+  "target": "apps/web/public/article-viz/low-profile-keyboards-buying-guide/ecosystem-strip.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "low-profile-keyboards-buying-guide.mdx § 'Two ecosystems, not one' — 'Choc v1 uses a proprietary two-prong stem... Choc v2 moved to an MX-style cross stem with a shorter skirt... v1 and v2 switches are not interchangeable with each other'; 'Cherry's own low-profile switches need low-profile keycaps specifically'; 'Logitech... GL switches started as a tweaked, proprietary version of Choc v1 on the original G915, then moved to an MX-style cross stem on newer boards like the G515'",
+    "ZSA, Voyager FAQ (https://www.zsa.io/voyager/faq/what-keyswitches-work-with-the-change-it-yourself-feature) — Voyager ships hot-swappable Kailh Choc v1 switches",
+    "Keeb.io, 'Kailh Choc V2 Switch Comparison' (https://blog.keeb.io/kailh-choc-v2-switch-comparison/) — v1/v2 stem and interchangeability differences",
+    "Tom's Hardware, Cherry MX Low Profile RGB announcement (https://www.tomshardware.com/news/cherry-mx-low-profile-rgb-mechanical-keyboard-switches,36328.html) — low-profile keycaps required for Cherry MX LP",
+    "Tom's Hardware, Logitech G515 Lightspeed TKL review (https://www.tomshardware.com/peripherals/gaming-keyboards/logitech-g515-lightspeed-tkl-review) — GL switch stem change from G915 to G515"
+  ],
+  "outputs": ["apps/web/public/article-viz/low-profile-keyboards-buying-guide/ecosystem-strip.svg"],
+  "warnings": []
+}

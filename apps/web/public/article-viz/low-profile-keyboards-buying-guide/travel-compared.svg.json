@@ -1,0 +1,25 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-10-28T14:00:00.000Z",
+  "commit": "HEAD",
+  "kind": "inline-viz",
+  "article_slug": "low-profile-keyboards-buying-guide",
+  "article_pillar": "guides",
+  "section_anchor": "what-low-profile-actually-means",
+  "brief_summary": "Horizontal bar chart comparing total switch travel across four switch types to scale: standard Cherry MX (4.0mm, neutral bar), Cherry MX Low Profile (3.2mm, amber), Kailh Choc v1 (3.0mm, amber), and Kailh Choc v2 (shown as a 2.8mm-3.2mm range band, amber). Makes the 'low-profile shortens travel by roughly a fifth to a third' claim visually literal.",
+  "target": "apps/web/public/article-viz/low-profile-keyboards-buying-guide/travel-compared.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "low-profile-keyboards-buying-guide.mdx § 'What low-profile actually means' — 'A standard Cherry MX-style switch travels 4.0mm... Cherry MX Low Profile specs 3.2mm of total travel... Kailh Choc switches land around 3.0mm for the original version and anywhere from 2.8mm to 3.2mm for the second, depending on the specific model.'",
+    "Deskthority, 'Cherry MX Low Profile' (https://deskthority.net/wiki/Cherry_MX_Low_Profile) — actuator travel 3.2mm ± 0.25mm",
+    "Deskthority, 'Kailh PG1350 series' (https://deskthority.net/wiki/Kailh_PG1350_series) — Choc v1 total travel ~3.0mm ± 0.5mm",
+    "Keeb.io, 'Kailh Choc V2 Switch Comparison' (https://blog.keeb.io/kailh-choc-v2-switch-comparison/) — Choc v2 total travel ranges 2.8mm-3.2mm depending on model"
+  ],
+  "outputs": ["apps/web/public/article-viz/low-profile-keyboards-buying-guide/travel-compared.svg"],
+  "warnings": []
+}

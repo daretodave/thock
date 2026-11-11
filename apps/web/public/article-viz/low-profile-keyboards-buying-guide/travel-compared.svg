@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Horizontal bar chart comparing total switch travel: standard Cherry MX at 4.0mm, Cherry MX Low Profile at 3.2mm, Kailh Choc v1 at 3.0mm, and Kailh Choc v2 as a range from 2.8mm to 3.2mm</title>
+
+  <text x="600" y="44" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">total travel, to scale</text>
+
+  <!-- Baseline axis -->
+  <line x1="300" y1="90" x2="300" y2="410" stroke-opacity="0.22"/>
+  <!-- Scale ticks every 0.5mm, 150px per mm, origin x=300 -->
+  <g stroke-opacity="0.15">
+    <line x1="375" y1="90" x2="375" y2="410" stroke-dasharray="3 5"/>
+    <line x1="450" y1="90" x2="450" y2="410" stroke-dasharray="3 5"/>
+    <line x1="525" y1="90" x2="525" y2="410" stroke-dasharray="3 5"/>
+    <line x1="600" y1="90" x2="600" y2="410" stroke-dasharray="3 5"/>
+    <line x1="675" y1="90" x2="675" y2="410" stroke-dasharray="3 5"/>
+    <line x1="750" y1="90" x2="750" y2="410" stroke-dasharray="3 5"/>
+    <line x1="825" y1="90" x2="825" y2="410" stroke-dasharray="3 5"/>
+    <line x1="900" y1="90" x2="900" y2="410" stroke-dasharray="3 5"/>
+  </g>
+  <g font-family="'JetBrains Mono', ui-monospace, monospace" font-size="10" fill="oklch(0.78 0.005 90)" fill-opacity="0.4" stroke="none" text-anchor="middle">
+    <text x="300" y="428">0mm</text>
+    <text x="450" y="428">1.0mm</text>
+    <text x="600" y="428">2.0mm</text>
+    <text x="750" y="428">3.0mm</text>
+    <text x="900" y="428">4.0mm</text>
+  </g>
+
+  <!-- Row 1: Standard Cherry MX — 4.0mm — full bar, neutral stroke -->
+  <g>
+    <text x="280" y="124" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.85">Standard Cherry MX</text>
+    <rect x="300" y="108" width="600" height="28" rx="5" fill="oklch(0.78 0.005 90 / 0.06)" stroke-opacity="0.5"/>
+    <text x="912" y="127" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">4.0mm</text>
+  </g>
+
+  <!-- Row 2: Cherry MX Low Profile — 3.2mm — amber -->
+  <g>
+    <text x="280" y="194" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.85">Cherry MX Low Profile</text>
+    <rect x="300" y="178" width="480" height="28" rx="5" fill="oklch(0.78 0.10 80 / 0.16)" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.75"/>
+    <text x="792" y="197" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none">3.2mm</text>
+  </g>
+
+  <!-- Row 3: Kailh Choc v1 — 3.0mm — amber -->
+  <g>
+    <text x="280" y="264" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.85">Kailh Choc v1</text>
+    <rect x="300" y="248" width="450" height="28" rx="5" fill="oklch(0.78 0.10 80 / 0.16)" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.75"/>
+    <text x="462" y="267" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none">3.0mm</text>
+  </g>
+
+  <!-- Row 4: Kailh Choc v2 — range 2.8mm to 3.2mm — amber range band -->
+  <g>
+    <text x="280" y="334" font-family="IBM Plex Sans, sans-serif" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.85">Kailh Choc v2</text>
+    <rect x="300" y="318" width="420" height="28" rx="5" fill="oklch(0.78 0.10 80 / 0.07)" stroke-opacity="0.35" stroke-dasharray="4 4"/>
+    <rect x="720" y="318" width="60" height="28" rx="5" fill="oklch(0.78 0.10 80 / 0.16)" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.75"/>
+    <text x="792" y="337" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="13" fill="oklch(0.78 0.10 80)" stroke="none">2.8–3.2mm</text>
+  </g>
+
+  <!-- Bottom caption -->
+  <text x="40" y="452" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="10" fill="oklch(0.78 0.005 90)" fill-opacity="0.35" stroke="none" letter-spacing="0.03em">LOW-PROFILE SWITCHES RUN 20–30% SHORTER THAN STANDARD MX</text>
+
+  <!-- Bronze theme dot -->
+  <circle cx="1160" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>
