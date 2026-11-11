@@ -1201,7 +1201,7 @@
 - article-b: apps/web/src/content/articles/synthwave-tkl-theme-build.mdx
 - action: add [synthwave-tkl-theme-build](/article/synthwave-tkl-theme-build) to aurora-glow-theme-build body, or vice versa
 
-### [HOT PURSUIT] [content-gap] [7] guides pillar — 1 of ≥2 articles in last 30d
+### [x] [HOT PURSUIT] [content-gap] [7] guides pillar — 1 of ≥2 articles in last 30d — addressed in 3e5b3778, closes #1076
 - category: content-gaps
 - impact: 5 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
