@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-11-09T14:00:00.000Z",
+  "commit": "8c1d852a2862771f61b527b7503b17e640d6bd3d",
+  "kind": "inline-viz",
+  "article_slug": "gateron-magnetic-jade-sensing-backfill",
+  "article_pillar": "news",
+  "section_anchor": "What the commit actually did",
+  "brief_summary": "A list of the Gateron Magnetic Jade's catalog record fields, showing that type, housing, stem, spring/travel, and status all held steady, with one new row — sensing: hall-effect, tagged NEW — highlighted in coral, plus the refreshed updatedAt timestamp.",
+  "target": "apps/web/public/article-viz/gateron-magnetic-jade-sensing-backfill/record-diff.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "data/switches/gateron-magnetic-jade.json — type: 'linear', housingTop: 'pc', housingBottom: 'nylon', stem: 'pom', springGrams: {actuation: 30, bottomOut: 50}, travelMm: 3.5, status: 'in-production', sensing: 'hall-effect', updatedAt: '2026-11-06T00:00:00.000Z'",
+    "gateron-magnetic-jade-sensing-backfill.mdx § 'What the commit actually did' — 'commit a8f4f006 (\"backfill sensing hall-effect on gateron-magnetic-jade\")'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gateron-magnetic-jade-sensing-backfill/record-diff.svg"],
+  "warnings": []
+}

@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-11-09T14:00:00.000Z",
+  "commit": "8c1d852a2862771f61b527b7503b17e640d6bd3d",
+  "kind": "inline-viz",
+  "article_slug": "gateron-magnetic-jade-sensing-backfill",
+  "article_pillar": "news",
+  "section_anchor": "The prose already knew",
+  "brief_summary": "A three-marker timeline running from the switch's 2022-09-01 original release (dashed, de-emphasized), through the 2026-08-21 deep-dive publication that already described hall-effect sensing in prose, to the 2026-11-06 structured sensing-field backfill, with a bracket marking the roughly two-and-a-half-month gap between the two coral milestones.",
+  "target": "apps/web/public/article-viz/gateron-magnetic-jade-sensing-backfill/catchup-timeline.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "data/switches/gateron-magnetic-jade.json — releasedAt: '2022-09-01', updatedAt: '2026-11-06T00:00:00.000Z'",
+    "apps/web/src/content/articles/gateron-magnetic-jade-deep-dive.mdx — publishedAt: '2026-08-21T14:00:00.000Z', description built on hall-effect sensing prose",
+    "gateron-magnetic-jade-sensing-backfill.mdx § 'The prose already knew' — 'description first, structured field more than two months later'"
+  ],
+  "outputs": ["apps/web/public/article-viz/gateron-magnetic-jade-sensing-backfill/catchup-timeline.svg"],
+  "warnings": []
+}

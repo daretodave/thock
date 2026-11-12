@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — switch housing cross-section with a magnet picked out inside the stem and a short field line reaching down to a sensor pad on the PCB, standing in for a catalog sensing field newly recorded as hall-effect</title>
+
+  <!-- Coral wash, centered on the magnet-to-sensor reach. Single splash, single
+       hue, matched exactly to this article's own InlineViz assets
+       (oklch(0.68 0.165 28)) rather than a shifted variant, since all four
+       pieces in this article need to read as one accent. -->
+  <ellipse cx="600" cy="490" rx="170" ry="80" fill="oklch(0.68 0.165 28 / 0.14)" stroke="none"/>
+
+  <!-- ══════════════════════════════════════════════════════════════════════
+       COMPOSITION — single switch housing in cross-section, centered.
+         Stem head, cruciform, above the housing (y 160 to 190)
+         Top housing (y 190 to 300), bottom housing (y 300 to 460)
+         Stem body runs the full housing height; the magnet sits inside
+           the stem body, not at its tip or its base (y 355 to 395)
+         Housing floor (y 460 to 472), then an open air gap
+         Short coral field line crossing the gap (y 472 to 508)
+         PCB strip (y 508 to 530) with the sensor pad at y 496 to 508
+       No leaf spring, no metal contact anywhere in the drawing.
+       ══════════════════════════════════════════════════════════════════════ -->
+
+  <!-- ── STEM HEAD, cruciform, above the housing ── -->
+  <path d="
+    M 582 160
+    L 618 160
+    L 618 172
+    L 630 172
+    L 630 190
+    L 570 190
+    L 570 172
+    L 582 172
+    Z" />
+  <path d="M 594 140 L 600 148 L 606 140" stroke-opacity="0.4"/>
+
+  <!-- ── TOP HOUSING ── -->
+  <path d="
+    M 460 190
+    L 740 190
+    L 760 300
+    L 440 300
+    Z" />
+  <path d="
+    M 476 204
+    L 724 204
+    L 742 290
+    L 458 290
+    Z" stroke-opacity="0.38"/>
+  <!-- Stem aperture walls -->
+  <line x1="570" y1="190" x2="570" y2="220" stroke-opacity="0.55"/>
+  <line x1="630" y1="190" x2="630" y2="220" stroke-opacity="0.55"/>
+  <!-- Mounting clip nubs -->
+  <line x1="440" y1="262" x2="428" y2="262" stroke-opacity="0.5"/>
+  <line x1="760" y1="262" x2="772" y2="262" stroke-opacity="0.5"/>
+
+  <!-- Housing seam, dashed, top half meets bottom half -->
+  <line x1="446" y1="300" x2="754" y2="300" stroke-opacity="0.5" stroke-dasharray="4 6"/>
+
+  <!-- ── BOTTOM HOUSING ── -->
+  <path d="
+    M 450 300
+    L 750 300
+    L 735 460
+    L 465 460
+    Z" />
+  <path d="
+    M 465 312
+    L 735 312
+    L 722 450
+    L 478 450
+    Z" stroke-opacity="0.38"/>
+
+  <!-- ── STEM BODY, descending the full housing ── -->
+  <path d="
+    M 570 190
+    L 630 190
+    L 630 420
+    L 570 420
+    Z" />
+  <line x1="600" y1="210" x2="600" y2="410" stroke-opacity="0.35" stroke-dasharray="3 5"/>
+
+  <!-- ── MAGNET, picked out inside the stem body ──
+       Mid-body, not at the tip and not at the base — the alt text's point
+       is that the sensing element lives inside the moving part, read through
+       the housing rather than bolted to it. -->
+  <rect x="578" y="355" width="44" height="40" fill="oklch(0.68 0.165 28 / 0.30)" stroke="oklch(0.68 0.165 28)"/>
+  <text x="640" y="380" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.68 0.165 28)" fill-opacity="0.85" stroke="none" letter-spacing="0.05em">MAGNET</text>
+
+  <!-- Housing floor, thin -->
+  <line x1="465" y1="460" x2="735" y2="460" stroke-opacity="0.5"/>
+  <line x1="465" y1="472" x2="735" y2="472" stroke-opacity="0.3"/>
+
+  <!-- ── SHORT CORAL FIELD LINE, reaching down from the magnet toward the
+       sensor pad across the open gap. Singular and short — this piece is
+       a catalog-record story, not a field-physics diagram. ── -->
+  <g stroke="oklch(0.68 0.165 28)">
+    <path d="M 600 472 L 600 500" stroke-opacity="0.85"/>
+    <path d="M 594 494 L 600 502 L 606 494" stroke-opacity="0.85"/>
+  </g>
+
+  <!-- ── PCB STRIP with sensor pad ── -->
+  <path d="
+    M 350 508
+    L 850 508
+    L 850 530
+    L 350 530
+    Z" />
+  <line x1="350" y1="519" x2="850" y2="519" stroke-opacity="0.2" stroke-dasharray="6 8"/>
+  <rect x="578" y="496" width="44" height="12" fill="oklch(0.68 0.165 28 / 0.55)" stroke="oklch(0.68 0.165 28)"/>
+  <text x="634" y="510" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.68 0.165 28)" fill-opacity="0.85" stroke="none" letter-spacing="0.05em">SENSOR</text>
+
+  <!-- Focal anchor at the sensor pad, family convention -->
+  <circle cx="600" cy="502" r="5.5" fill="oklch(0.68 0.165 28 / 0.95)" stroke="oklch(0.68 0.165 28)"/>
+  <circle cx="600" cy="502" r="11" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.45"/>
+
+  <!-- ── Left margin tier ticks, family convention, kept sparse for a news piece ── -->
+  <g stroke-opacity="0.26">
+    <line x1="396" y1="245" x2="408" y2="245"/>
+    <line x1="396" y1="375" x2="408" y2="375"/>
+    <line x1="396" y1="519" x2="408" y2="519"/>
+  </g>
+
+  <!-- ── JetBrains Mono technical readout, the catalog-field framing this
+       article is actually about ── -->
+  <text x="350" y="694" font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace" font-size="11" fill="oklch(0.68 0.165 28)" fill-opacity="0.65" stroke="none" letter-spacing="0.04em">SENSING: HALL-EFFECT</text>
+
+  <!-- ── BRONZE THEME DOT, upper-right margin ── -->
+  <circle cx="1148" cy="92" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

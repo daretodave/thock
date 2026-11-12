@@ -1,0 +1,27 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-11-12T00:00:00.000Z",
+  "commit": "8c1d852a2862771f61b527b7503b17e640d6bd3d",
+  "kind": "hero-art",
+  "article_slug": "gateron-magnetic-jade-sensing-backfill",
+  "article_pillar": "news",
+  "brief_summary": "Hero art for the News pillar piece on the Gateron Magnetic Jade's catalog record getting a sensing field backfilled to hall-effect: a single switch-housing cross-section in warm-grey stroke with a coral magnet picked out inside the stem body, a short coral field line reaching down across the housing's open floor gap to a coral sensor pad on the PCB strip below, and a JetBrains Mono 'SENSING: HALL-EFFECT' readout tying the drawing to the catalog field the article is about.",
+  "target": "apps/web/public/hero-art/gateron-magnetic-jade-sensing-backfill.svg",
+  "source": "plan/bearings.md § Article hero art — switch piece -> switch cross-section / housing exploded view, biased toward the hall-effect sensing mechanism per this article's brief",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject; visual family positioned alongside apps/web/public/hero-art/gateron-magnetic-jade-deep-dive.svg and apps/web/public/hero-art/hall-effect-mainstream.svg but deliberately simpler — one assembled housing, one short field line, no flux-arc field diagram, consistent with this being a catalog-record news piece rather than a switch deep-dive",
+  "size": [1200, 750],
+  "subject": "Single MX-style switch housing in side cross-section: cruciform stem head above the housing, top housing trapezoid, dashed housing seam, bottom housing trapezoid, and a stem body running the full housing height with a small magnet rectangle picked out inside the stem's mid-body (not at its tip or base) in coral. Below the housing floor, a short coral field line with an arrowhead crosses the open air gap down to a coral-filled sensor pad on a PCB strip, with a focal dot+ring anchor at the sensor. A JetBrains Mono readout at the foot of the piece reads SENSING: HALL-EFFECT.",
+  "motif": "single-switch cross-section, assembled, magnet-inside-stem with a short field line to a PCB sensor pad",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "f79eb6c04b4a9d2e0e3e083f8aeb6bc57586d849",
+  "fonts": ["IBM Plex Sans", "JetBrains Mono"],
+  "notes": "Coral value matched exactly to oklch(0.68 0.165 28) per brief, rather than the slightly shifted variant gateron-magnetic-jade-deep-dive.svg uses (oklch(0.70 0.15 26)) — this piece needs to read as one accent with its own article's three InlineViz assets (record-diff.svg, catchup-timeline.svg, catalog-coverage.svg), which all use the exact same coral. Composition deliberately lighter-touch than the deep-dive sibling: one field line instead of multiple flux arcs, no N/S pole glyphs, no dimension ticks, sparse 3-tick left margin instead of 4 — matching the news-pillar convention of a lighter diagrammatic touch than a deep-dive gets (cf. keychron-q16-he-8k-ceramic-tmr.svg's note on the same distinction). Matches apps/web/src/content/articles/gateron-magnetic-jade-sensing-backfill.mdx frontmatter heroImageAlt verbatim: cross-section silhouette, magnet picked out inside the stem in a coral-terracotta splash, short coral field line reaching down toward a sensor pad on the PCB below. All XML comments use box-drawing rule characters only (no ASCII '--' runs) per the svg-validity.test.ts regression guard at apps/web/src/__tests__/svg-validity.test.ts; verified locally with a direct double-hyphen scan and an XML well-formedness parse, both clean.",
+  "outputs": [
+    "apps/web/public/hero-art/gateron-magnetic-jade-sensing-backfill.svg",
+    "apps/web/public/hero-art/gateron-magnetic-jade-sensing-backfill.svg.json"
+  ],
+  "warnings": []
+}
