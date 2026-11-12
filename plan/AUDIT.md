@@ -1223,5 +1223,5 @@
 - next: /ship-content → newsletter type (weekly round-up, 5 pillar picks, tracker insight)
 - last-issue: 2026-10-27 (thock-weekly-013)
 - days-since: 15
-- issue: [mirror-failed: 2026-11-11]
+- issue: #1077
 > Filed 2026-11-11 by newsletter-gap-survey.mjs. 15 days since issue 13. Threshold: ≥7 calendar days.
