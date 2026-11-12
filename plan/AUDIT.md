@@ -4,12 +4,13 @@
 
 ## Pending
 
-### [user-issue #1068] [HIGH] "Cloud loop: GH_TOKEN/GITHUB_TOKEN invalid in march.yml run, masking triage/critique gh checks" open past the 24h SLA
+### [needs-user-call] [user-issue #1068] [HIGH] "Cloud loop: GH_TOKEN/GITHUB_TOKEN invalid in march.yml run, masking triage/critique gh checks" open past the 24h SLA
 - category: external-issue
 - impact: 8
 - ease: 5
-- evidence: issue #1068 opened 2026-11-07, open 42h with no row in the queue; the SLA is 24h (sla_hours in plan/bearings.md).
-- next: /triage routes it (a bug goes to /bug); reference #1068 in the commit body.
+- evidence: issue #1068 opened 2026-11-07, open 42h with no row in the queue; the SLA is 24h (sla_hours in plan/bearings.md). Issue already labeled `triage:needs-user` by a prior triage pass — it asks the owner to pick a push-credential strategy (wire `ACTIONS_PAT`, or point `GH_TOKEN`/the git remote at `DEFAULT_WORKFLOW_TOKEN` or equivalent), a repo-secret decision the loop cannot make unilaterally.
+- next: failure mode 5 (iterate §6) — surfaced, not auto-routed; this run's own `gh auth status` succeeded (logged in as `claude[bot]` via `GH_TOKEN`), so the credential picture may already differ from what #1068 described, but closing/resolving it is still the owner's call.
+- lock: issue-1068-credential-call · since: 2026-11-12 · until: owner comments or closes #1068 · max_age: 14d
 - generator: issue-age · filed 2026-11-08
 
 ## Drained findings (kept for audit-trail; do not re-open)
@@ -1052,7 +1053,7 @@
 > Filed 2026-11-07 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 > **Resolved (2026-11-08):** shipped `hall-effect-score-dips-wooting-ship-slips.mdx` — a trends-pillar follow-up to `hall-effect-rapid-trigger-plateau.mdx` (Aug), reading the Hall Effect/Rapid Trigger category's first-ever down-tick (100 → 95, 2026-W44) against Wooting's own late-October 80HE+ ABS/Module ship date going unconfirmed for a second straight week. Grounded entirely in `data/trends/2026-W37.json`–`2026-W44.json` score history and the existing `wooting-80he-plus-shipping-update.mdx` article; no invented vendor statements or dates. `publishedAt` gap-filled to 2026-11-04 (largest gap in the 30-day window). Language gate, mentionedParts gate clean. Cross-link survey filed 4 pairs (left pending for a future tick). `pnpm verify` full gate green: typecheck, lint, 1394/1394 e2e.
 
-### [ ] [cross-links] [4.5] hall-effect-score-dips-wooting-ship-slips ↔ hall-effect-mainstream — no prose cross-link (same pillar, ≥2 shared tags: hall-effect, trends-2026)
+### [x] [cross-links] [4.5] hall-effect-score-dips-wooting-ship-slips ↔ hall-effect-mainstream — no prose cross-link (same pillar, ≥2 shared tags: hall-effect, trends-2026) — addressed in b40abe13
 - category: cross-links
 - filed: 2026-11-08 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -1063,7 +1064,7 @@
 - article-b: apps/web/src/content/articles/hall-effect-mainstream.mdx
 - action: add [hall-effect-mainstream](/article/hall-effect-mainstream) to hall-effect-score-dips-wooting-ship-slips body, or vice versa
 
-### [ ] [cross-links] [4.5] hall-effect-score-dips-wooting-ship-slips ↔ rapid-trigger-gaming-crossover — no prose cross-link (same pillar, ≥2 shared tags: hall-effect, trends-2026)
+### [x] [cross-links] [4.5] hall-effect-score-dips-wooting-ship-slips ↔ rapid-trigger-gaming-crossover — no prose cross-link (same pillar, ≥2 shared tags: hall-effect, trends-2026) — addressed in b40abe13
 - category: cross-links
 - filed: 2026-11-08 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -1074,7 +1075,7 @@
 - article-b: apps/web/src/content/articles/rapid-trigger-gaming-crossover.mdx
 - action: add [rapid-trigger-gaming-crossover](/article/rapid-trigger-gaming-crossover) to hall-effect-score-dips-wooting-ship-slips body, or vice versa
 
-### [ ] [cross-links] [4.5] hall-effect-score-dips-wooting-ship-slips ↔ tmr-switches-five-week-climb — no prose cross-link (same pillar, ≥2 shared tags: hall-effect, rapid-trigger)
+### [x] [cross-links] [4.5] hall-effect-score-dips-wooting-ship-slips ↔ tmr-switches-five-week-climb — no prose cross-link (same pillar, ≥2 shared tags: hall-effect, rapid-trigger) — addressed in b40abe13
 - category: cross-links
 - filed: 2026-11-08 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
@@ -1085,7 +1086,7 @@
 - article-b: apps/web/src/content/articles/tmr-switches-five-week-climb.mdx
 - action: add [tmr-switches-five-week-climb](/article/tmr-switches-five-week-climb) to hall-effect-score-dips-wooting-ship-slips body, or vice versa
 
-### [ ] [cross-links] [4.5] hall-effect-score-dips-wooting-ship-slips ↔ wooting-rapid-trigger-head-start — no prose cross-link (same pillar, ≥2 shared tags: hall-effect, rapid-trigger, wooting)
+### [x] [cross-links] [4.5] hall-effect-score-dips-wooting-ship-slips ↔ wooting-rapid-trigger-head-start — no prose cross-link (same pillar, ≥2 shared tags: hall-effect, rapid-trigger, wooting) — addressed in b40abe13
 - category: cross-links
 - filed: 2026-11-08 by article-crosslink-survey.mjs
 - impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
