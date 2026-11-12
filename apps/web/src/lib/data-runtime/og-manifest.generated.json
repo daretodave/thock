@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "slug": "gateron-magnetic-jade-sensing-backfill",
+      "readTime": 6,
+      "frontmatter": {
+        "title": "The Gateron Magnetic Jade gets a sensing field — and the catalog gets its first one",
+        "lede": "On 2026-11-06, thock's catalog backfilled a sensing field onto the Gateron Magnetic Jade's switch record, reading hall-effect. It's the first structured sensing field anywhere in the switch catalog — and it only just caught up to what the record's own description had been saying since August.",
+        "pillar": "news",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "aurora-glow-theme-build",
       "readTime": 7,
       "frontmatter": {
@@ -10776,5 +10786,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-11-12T09:18:46.770Z"
+  "generatedAt": "2026-11-12T09:51:25.267Z"
 }
