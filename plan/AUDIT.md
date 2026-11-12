@@ -1214,7 +1214,7 @@
 - issue: #1076
 > Filed 2026-11-10 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 
-### [ ] [newsletter] [4.0] Weekly digest — issue 014 due (15 days since issue 13)
+### [x] [newsletter] [4.0] Weekly digest — issue 014 due (15 days since issue 13) — addressed in 0a15e953, closes #1077
 - category: content-gaps
 - filed: 2026-11-11 by newsletter-gap-survey.mjs
 - impact: 5 (newsletter archive going stale reduces /newsletter value and reader trust in cadence)
@@ -1225,3 +1225,16 @@
 - days-since: 15
 - issue: #1077
 > Filed 2026-11-11 by newsletter-gap-survey.mjs. 15 days since issue 13. Threshold: ≥7 calendar days.
+> **Resolved (2026-11-12):** shipped `thock-weekly-014.mdx` — 5 pillar picks (how-to-evaluate-a-group-buy, aurora-glow-theme-build, hall-effect-score-dips-wooting-ship-slips, mm-studio-class80-discontinued, gateron-ink-housings-deep-dive) plus a 2026-W46 tracker check-in (Hall Effect/Rapid Trigger up to 93, TMR flat at 97, Split/Ergo flat at 94, Keychron brand flat at 96, Wooting brand up to 94). `publishedAt` 2026-11-12 — the cadence-due date itself, not a gap-fill (newsletter issues anchor to their ship date). Caught and fixed a temporal-accuracy issue in the content-curator draft before commit: the MM Studio Class80 news pick originally read "flipped to discontinued this week," but the source article's own lede dates that status change to 2026-05-09 — reworded to "a change made back on 2026-05-09." Also trimmed the lede from 676 to 394 chars (schema caps `lede` at 400). `pnpm verify` full gate green: typecheck, lint, 167 unit tests (content package), script tests, data:validate, build, size, 1746/1746 e2e.
+
+### [HOT PURSUIT] [content-gap] [7] news pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 7 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: news
+- window-count: 1
+- window-start: 2026-10-13
+- score: 7
+- next: /ship-content → news pillar article
+> Filed 2026-11-12 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
