@@ -1,7 +1,7 @@
 # Phase candidates
 
-> Last pass: 2026-10-30 at commit 1d304290
-> Pass count: 444
+> Last pass: 2026-11-12 at commit 2b3bc5b7
+> Pass count: 445
 > Posture: bold
 > Last field research: 2026-11-12
 
