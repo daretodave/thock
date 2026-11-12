@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "slug": "aurora-glow-theme-build",
+      "readTime": 7,
+      "frontmatter": {
+        "title": "Build of the week: the Ikki68 Aurora lights up under GMK CYL Ramune and Gateron Pro 3.0 Yellow",
+        "lede": "A translucent case built to diffuse glow, a switch built to carry light into the keycap, and a palette too pale to swallow either one on arrival — pull any one part and the other two stop paying off.",
+        "pillar": "ideas",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "hall-effect-score-dips-wooting-ship-slips",
       "readTime": 6,
       "frontmatter": {
@@ -16,6 +26,16 @@
       "frontmatter": {
         "title": "How to evaluate a group buy before you pay",
         "lede": "A group buy asks for money today and a keyboard, keycap set, or switch run sometime next year. Here's how to read a listing, a vendor, and a timeline before that bet turns into a long, silent wait.",
+        "pillar": "guides",
+        "author": "thock"
+      }
+    },
+    {
+      "slug": "low-profile-keyboards-buying-guide",
+      "readTime": 8,
+      "frontmatter": {
+        "title": "Low-profile mechanical keyboards: a buying guide",
+        "lede": "A low-profile board promises a flatter desk and a laptop-like feel, but it also quietly opts a buyer out of most of the keycap and switch catalog they already know. Here's what actually changes, and how to tell if the trade is worth it.",
         "pillar": "guides",
         "author": "thock"
       }
@@ -1418,6 +1438,11 @@
       "category": "switch"
     },
     {
+      "slug": "low-profile",
+      "name": "Low-profile",
+      "category": "layout"
+    },
+    {
       "slug": "lubed",
       "name": "Lubed",
       "category": "switch"
@@ -1903,6 +1928,13 @@
     }
   ],
   "newsletters": [
+    {
+      "slug": "thock-weekly-014",
+      "title": "thock weekly — issue 14",
+      "lede": "A guide to reading a group buy before the money leaves your account, a build-of-the-week where three parts have to pull together or none pay off, Hall-effect's first tracker down-tick in eight weeks, the MM Studio Class80's quiet discontinuation, and what Gateron Ink's V2 actually changed under the dye — plus a tracker check-in on Wooting's first shipped units and TMR's push toward November.",
+      "issue": 14,
+      "readTime": 4
+    },
     {
       "slug": "thock-weekly-013",
       "title": "thock weekly — issue 13",
@@ -10744,5 +10776,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-11-09T00:48:51.747Z"
+  "generatedAt": "2026-11-12T09:18:46.770Z"
 }

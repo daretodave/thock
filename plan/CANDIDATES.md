@@ -3,7 +3,7 @@
 > Last pass: 2026-10-30 at commit 1d304290
 > Pass count: 444
 > Posture: bold
-> Last field research: 2026-11-07
+> Last field research: 2026-11-12
 
 ## Pending
 
@@ -162,6 +162,24 @@
 - score: 4.0 (impact × ease / 10)
 - evidence: `scripts/pulse.mjs:53-60` (`pendingSection()`); `plan/AUDIT.md` (`## Pending` heading added at `b1df3274`, 2026-11-08, followed by the pre-existing `## Open findings` heading with 14 `### [ ]` rows); this tick's `node scripts/pulse.mjs` output (`audit  1 pending`) vs. hand-count (`grep -c '^### \[ \]' plan/AUDIT.md` → 15); prior digest `a3fe2d8a` (2026-11-07) reporting "11 pending" correctly via the same script before the second heading existed.
 - next: `/oversight` call per the meta-loop rail (agents.md) — this is a fix to the pulse script itself, not a content/data change the loop can apply unilaterally. Either sub-fix above is a small, low-risk script edit once promoted.
+
+### [ ] [score 6.0] Group-buy lifecycle status index
+- proposed: 2026-11-12 (research)
+- source signals: field (2026-11-12): community trackers now aggregate group-buy stage (interest-check, live, closed, in-production, shipped) across vendors into one browsable index instead of scattered per-vendor announcement pages
+- rationale: a longitudinal stage view would complement the existing audit cadence without vendor endorsement, and it reuses existing status data rather than adding a new catalog
+- proposed scope: a derived view over existing group-buy records grouped by lifecycle stage; no new schema fields, just a render surface, maybe a status-history note
+- estimated chunks: unknown until specced
+- conflicts: none known.
+- generator: research · filed 2026-11-12
+
+### [ ] [score 6.0] Recurring reader-questions column
+- proposed: 2026-11-12 (research)
+- source signals: field (2026-11-12): community discussion spaces sustain a recurring megathread that channels first-timer and budget-tier buyer questions into a durable, searchable format rather than one-off posts
+- rationale: recurring buyer confusion over budget tiers and first-board picks could become evergreen explainer content, reinforcing editorial voice without new data or schema
+- proposed scope: a recurring editorial content format drawing from genuinely repeated reader questions; no schema change, just a new content pattern for the content-gap generator to consider
+- estimated chunks: unknown until specced
+- conflicts: none known.
+- generator: research · filed 2026-11-12
 
 ## Considered (below threshold)
 
