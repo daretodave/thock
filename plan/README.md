@@ -16,12 +16,13 @@ line goes; each line is a lock that times out:
 `- **<NN.k>** · <reason> · since: <date> · until: <date or
 condition> · max_age: 14d`, an optional `· fallback: release`):
 
-- (none)
+- 09 · auto-promoted, veto until 2026-11-17 (#1082) · max_age: 1d · fallback: release
 
 ## Specs
 
 | # | Initiative | Spec | Status | Progress |
 |---|---|---|---|---|
+| 09 | Truncation-boundary mechanical survey | [09-truncation-boundary-mechanical-survey.md](09-truncation-boundary-mechanical-survey.md) |  | not chunked |
 
 ## Layout
 
