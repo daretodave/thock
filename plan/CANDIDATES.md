@@ -169,6 +169,7 @@
 - score: 3.2 (impact × ease / 10)
 - evidence: `scripts/pulse.mjs` held-counter (`if (/^- \*\*/.test(l)) held++`); `plan/README.md`'s `**Held**` lane (`- 09 · auto-promoted, veto until 2026-11-17 (#1082) · max_age: 1d · fallback: release`, written by commit `10c7ce4c`); `scripts/plan/promote.mjs:208` (`heldLine()`, the unbolded contract); `scripts/plan-check.mjs:260-262,279-282` (`parseAutoHeld()`, validating the same unbolded shape as correct); this tick's `node scripts/pulse.mjs` output (`1 specs, 0 chunks left, 0 held`) vs. hand-read of `plan/README.md` (1 Held line, active).
 - next: `/oversight` call per the meta-loop rail — a small, low-risk script edit to `pulse.mjs`'s held-counter once promoted; no schema change.
+- **update (2026-11-17, digest pass, nightly)**: second instance confirms the undercount. Commit `680b559f` (cloud `march` depth-promotion) added a second auto-promoted Held line — `- 10 · auto-promoted, veto until 2026-11-18 (#1083) · max_age: 1d · fallback: release` — alongside spec 09's still-open line (`#1082`, veto 2026-11-17). `node scripts/pulse.mjs` tonight still reads `0 held` against a real 2. Not re-scoping; the proposed one-line regex widening is unchanged and now covers two live instances instead of one.
 
 ## Considered (below threshold)
 
