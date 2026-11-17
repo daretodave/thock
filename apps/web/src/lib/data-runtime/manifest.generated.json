@@ -10293,6 +10293,337 @@
         }
       ],
       "updatedAt": "2026-11-09T00:47:31.309Z"
+    },
+    {
+      "isoWeek": "2026-W47",
+      "publishedAt": "2026-11-16T00:00:00.000Z",
+      "rows": [
+        {
+          "name": "Hall Effect/Rapid Trigger",
+          "category": "switch",
+          "direction": "flat",
+          "score": 93,
+          "spark": [
+            98,
+            99,
+            100,
+            100,
+            95,
+            90,
+            93,
+            93
+          ],
+          "articleSlug": "hall-effect-score-dips-wooting-ship-slips",
+          "note": "No fresh batch-update post followed last week's tracking confirmations; Wooting's order-status pages remain in the same confirmed-shipping state entering the back half of November."
+        },
+        {
+          "name": "Cherry MX2A",
+          "category": "switch",
+          "direction": "flat",
+          "score": -15,
+          "spark": [
+            -35,
+            -20,
+            -10,
+            -10,
+            -12,
+            -14,
+            -15,
+            -15
+          ],
+          "articleSlug": "cherry-mx2a-revision",
+          "note": "Cherry still hasn't announced new MX2A colorways or addressed the scratchiness complaints; a multi-month 2026 switch comparison left MX2A out of the smoothest-switch conversation entirely."
+        },
+        {
+          "name": "TMR (Tunnel Magnetoresistance) switches",
+          "category": "switch",
+          "direction": "flat",
+          "score": 97,
+          "spark": [
+            71,
+            85,
+            90,
+            90,
+            92,
+            95,
+            97,
+            97
+          ],
+          "articleSlug": "keychron-q16-he-8k-ceramic-tmr",
+          "note": "Keychron's V6 Ultra Hybrid campaign remains the active TMR vehicle with a November shipping estimate still unconfirmed directly by the brand; no units have shipped yet."
+        },
+        {
+          "name": "Gateron Magnetic Jade Delta",
+          "category": "switch",
+          "direction": "flat",
+          "score": 72,
+          "spark": [
+            84,
+            80,
+            75,
+            75,
+            74,
+            73,
+            72,
+            72
+          ],
+          "articleSlug": "gateron-magnetic-jade-deep-dive",
+          "note": "Retailer listings at Divinikey and KBDfans are unchanged again this week; Jade Delta remains in the same fulfillment-queue holding pattern it has held for over a month."
+        },
+        {
+          "name": "Gateron Oil King",
+          "category": "switch",
+          "direction": "flat",
+          "score": 58,
+          "spark": [
+            64,
+            62,
+            60,
+            60,
+            60,
+            59,
+            58,
+            58
+          ],
+          "articleSlug": "gateron-oil-king-deep-dive",
+          "note": "Still no vendor campaign or SKU refresh surfaced this week; Oil King's steady-state availability holds into a third week unchanged."
+        },
+        {
+          "name": "Durock T1",
+          "category": "switch",
+          "direction": "flat",
+          "score": 33,
+          "spark": [
+            44,
+            40,
+            35,
+            35,
+            35,
+            34,
+            33,
+            33
+          ],
+          "articleSlug": "durock-t1-deep-dive",
+          "note": "No 2026 colorway or bench update emerged this week; T1's slow fade from conversation continues with vendor listings unchanged from two weeks ago."
+        },
+        {
+          "name": "GMK CYL Red Devils R2",
+          "category": "keycap",
+          "direction": "down",
+          "score": 16,
+          "spark": [
+            68,
+            60,
+            40,
+            32,
+            28,
+            22,
+            18,
+            16
+          ],
+          "articleSlug": "gmk-cyl-red-devils-r2-comeback",
+          "note": "No restock, teardown, or shipping update has emerged in six weeks since close; attention keeps fading from the set with nothing from vendors to revive it."
+        },
+        {
+          "name": "GMK CYL Zombie",
+          "category": "keycap",
+          "direction": "flat",
+          "score": 48,
+          "spark": [
+            40,
+            55,
+            70,
+            45,
+            40,
+            33,
+            48,
+            48
+          ],
+          "articleSlug": "gmk-cyl-zombie-group-buy",
+          "note": "No further update followed last week's storefront opening; order confirmations and a shipping timeline haven't yet surfaced from the vendor."
+        },
+        {
+          "name": "DCS Dolch / Molch",
+          "category": "keycap",
+          "direction": "down",
+          "score": 44,
+          "spark": [
+            24,
+            30,
+            45,
+            50,
+            50,
+            47,
+            48,
+            44
+          ],
+          "articleSlug": "divinikey-dcs-dolch-group-buy",
+          "note": "Divinikey's own October 2026 ship estimate for Dolch has now passed with no shipping or delay notice posted; Molch's separate Q1 2027 window is unchanged."
+        },
+        {
+          "name": "Split/Ergo layout",
+          "category": "layout",
+          "direction": "flat",
+          "score": 94,
+          "spark": [
+            100,
+            100,
+            100,
+            100,
+            96,
+            93,
+            94,
+            94
+          ],
+          "articleSlug": "split-ergo-cohort",
+          "note": "No new SKU sync or restock emerged from MoErgo or peers this week; split/ergo's mainstream momentum holds at an unchanged pace."
+        },
+        {
+          "name": "Alice layout",
+          "category": "layout",
+          "direction": "flat",
+          "score": 8,
+          "spark": [
+            -8,
+            -5,
+            0,
+            5,
+            5,
+            7,
+            8,
+            8
+          ],
+          "articleSlug": "alice-layout-decline",
+          "note": "No new Alice-layout board or restock surfaced this week; Tide Alice and QK Alice Duo remain the category's only active listings."
+        },
+        {
+          "name": "75% Layout",
+          "category": "layout",
+          "direction": "flat",
+          "score": 78,
+          "spark": [
+            76,
+            78,
+            82,
+            82,
+            80,
+            79,
+            78,
+            78
+          ],
+          "articleSlug": "75-percent-default",
+          "note": "75% boards hold steady as the default form factor again this week, with vendor content continuing to reinforce rather than challenge that position."
+        },
+        {
+          "name": "CannonKeys",
+          "category": "vendor",
+          "direction": "down",
+          "score": 40,
+          "spark": [
+            44,
+            50,
+            55,
+            55,
+            50,
+            46,
+            42,
+            40
+          ],
+          "articleSlug": "cannonkeys-blaine-v2-se-group-buy",
+          "note": "No CannonKeys-specific news surfaced this week; a Bakeneko65 restock post exists on their blog, but without a date confirming it lands inside this window, and the broader vendor conversation keeps fading."
+        },
+        {
+          "name": "Mode Designs",
+          "category": "vendor",
+          "direction": "up",
+          "score": 71,
+          "spark": [
+            98,
+            95,
+            72,
+            72,
+            70,
+            69,
+            68,
+            71
+          ],
+          "articleSlug": "mode-sonnet-r2-group-buy-coverage",
+          "note": "PC Gamer covered an upcoming Encore refresh built around Mode's new Crown Mounting System — the first concrete Mode product news since the Sonnet/Encore lull began."
+        },
+        {
+          "name": "Prototypist",
+          "category": "vendor",
+          "direction": "flat",
+          "score": 71,
+          "spark": [
+            49,
+            52,
+            58,
+            65,
+            66,
+            69,
+            71,
+            71
+          ],
+          "articleSlug": "prototypist-vendor-spotlight",
+          "note": "GMK CYL MONO's Nov 30 close is now two weeks out; Prototypist's live group-buy roster is otherwise unchanged from last week's listing."
+        },
+        {
+          "name": "Keychron",
+          "category": "brand",
+          "direction": "flat",
+          "score": 96,
+          "spark": [
+            100,
+            100,
+            100,
+            100,
+            97,
+            94,
+            96,
+            96
+          ],
+          "articleSlug": "keychron-quiet-takeover",
+          "note": "Keychron's early-November 8K keyboard and F4 HE keypad launches predate this window; no fresh announcement followed them this week."
+        },
+        {
+          "name": "Wooting",
+          "category": "brand",
+          "direction": "flat",
+          "score": 94,
+          "spark": [
+            83,
+            88,
+            92,
+            92,
+            90,
+            87,
+            94,
+            94
+          ],
+          "articleSlug": "wooting-80he-plus-shipping-update",
+          "note": "No further shipping-wave update followed last week's tracking-number confirmations; order-status pages remain where they left off."
+        },
+        {
+          "name": "ZMK firmware",
+          "category": "brand",
+          "direction": "flat",
+          "score": 67,
+          "spark": [
+            56,
+            65,
+            68,
+            68,
+            67,
+            66,
+            67,
+            67
+          ],
+          "articleSlug": "zmk-mainstream-shift",
+          "note": "Reports of a v0.4.0 release remain unconfirmed and contested by a downstream fork; ZMK still has no dated release on its public roadmap."
+        }
+      ],
+      "updatedAt": "2026-11-16T18:18:26.000Z"
     }
   ],
   "articles": [
@@ -15871,5 +16202,5 @@
       "category": "misc"
     }
   ],
-  "generatedAt": "2026-11-12T23:19:32.799Z"
+  "generatedAt": "2026-11-17T01:39:10.048Z"
 }
