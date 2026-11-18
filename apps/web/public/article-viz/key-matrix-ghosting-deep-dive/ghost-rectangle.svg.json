@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-11-18T00:00:00.000Z",
+  "commit": "438b0cbbd59cde23bfc80622af71d8aead051279",
+  "kind": "inline-viz",
+  "article_slug": "key-matrix-ghosting-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "the-three-key-rectangle-that-creates-a-ghost",
+  "brief_summary": "2x2 matrix sub-grid mechanism diagram. Three switch junctions (row0/col0, row0/col1, row1/col0) are marked as real presses in coral with dashed current-path arrows tracing the backfeed route; the fourth junction (row1/col1) is drawn as a dashed warm-red outline circle labeled 'the ghost' to show the phantom key the controller reads despite no physical press there.",
+  "target": "apps/web/public/article-viz/key-matrix-ghosting-deep-dive/ghost-rectangle.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "key-matrix-ghosting-deep-dive.mdx § 'The three-key rectangle that creates a ghost' — 'Press the switches at row 0/column 0, row 0/column 1, and row 1/column 0 ... The controller, scanning column 1 and reading row 1, now sees a closed connection where no switch was pressed — the fourth corner.'",
+    "https://en.wikipedia.org/wiki/Key_rollover — 'Key ghosting occurs on matrix keyboards for certain combinations of three keys' when 'three corners of a rectangular set of switches are closed.'",
+    "https://develop-docs.qmk.fm/how_a_matrix_works — matrix walkthrough reaching the identical three-key, four-position reading with no diodes present."
+  ],
+  "outputs": ["apps/web/public/article-viz/key-matrix-ghosting-deep-dive/ghost-rectangle.svg"],
+  "warnings": []
+}

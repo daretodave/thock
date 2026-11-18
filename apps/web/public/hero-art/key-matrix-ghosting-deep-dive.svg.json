@@ -1,0 +1,32 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored SVG (no raster pipeline)",
+  "at": "2026-11-18T00:00:00Z",
+  "commit": "438b0cbbd59cde23bfc80622af71d8aead051279",
+  "kind": "hero-art",
+  "article_pillar": "deep-dives",
+  "source": null,
+  "tokens_snapshot": "f79eb6c04b4a9d2e0e3e083f8aeb6bc57586d849",
+  "fonts": [
+    "IBM Plex Sans",
+    "JetBrains Mono"
+  ],
+  "slug": "key-matrix-ghosting-deep-dive",
+  "subject": "An abstract switch matrix schematic: a 5-column by 4-row grid of switch-position nodes joined by row scan lines and column read lines that continue past the grid edges toward an unseen controller. Two plain triangle-and-bar diode glyphs sit in series on ordinary column leads, showing the per-switch convention. Three switches at the corners of an L (top-left, top-right, bottom-left of a rectangle) are drawn pressed (filled nodes) with ochre diode glyphs beneath them. The fourth corner of that rectangle is a dashed ghost node with a focal dot and echo ring, marking the switch that is not actually pressed but would read as pressed if current could sneak across the rectangle. The rectangle itself is outlined as a dashed ochre phantom loop with a wash fill, directional arrows along its top and left legs, and a block mark where the right leg crosses a real diode's reverse-blocked path.",
+  "motif": "row x column switch matrix grid with diode-per-switch glyphs and an L-shaped ghosting / phantom-key callout",
+  "splashHue": "ochre",
+  "splashColor": "oklch(0.72 0.13 80)",
+  "canvas": "1200x750",
+  "strokeWeight": "2px",
+  "strokeColor": "oklch(0.78 0.005 90)",
+  "background": "transparent (light-mode safe; same warm-grey stroke family as other deep-dive heroes, legible on both charcoal oklch(0.175 0.006 250) and light paper)",
+  "notes": "Grid: columns at x 280/440/600/760/920, rows at y 220/340/460/580, 20 switch-position nodes (r 9) at every intersection. 16 are drawn hollow (unpressed); three — (440,220), (760,220), (440,460) — are filled solid (pressed), forming the top-left/top-right/bottom-left corners of a rectangle. The fourth corner (760,460) is the ghost node: dashed ochre outline, a filled focal dot, and a low-opacity echo ring, matching the hero-art focal-point convention. Row lines run x 220-980 and column lines run y 170-640, each ending in a small chevron to suggest the line continuing toward an off-canvas controller. Two plain triangle+bar diode glyphs (fill/stroke = the warm-grey stroke color) sit at (600,400) and (920,610) on ordinary column leads to establish the per-switch diode convention generally. Three ochre diode glyphs sit directly beneath the three pressed nodes at (440,274-285), (760,274-285), (440,514-525) — these are the diodes actually preventing the ghost. The rectangle (440,220)-(760,220)-(760,460)-(440,460) is outlined with a dashed ochre stroke over a low-opacity ochre wash fill (the same rect drawn twice: once early as fill-only wash beneath the grid, once late as stroke-only dashed outline on top, so the grid lines read through the wash but the loop boundary reads crisply above everything). Small ochre chevron arrows on the top leg (pointing right, centered x=600) and left leg (pointing up, centered y=340) suggest the direction current would sneak if the diodes were not there; an ochre X block-mark at (760,340), where the right leg crosses row 340, marks the point the diode orientation stops the reverse path. Left-margin tier ticks at y 170/220/460/640 with a dashed guide line; bronze theme dot at (1148,92) matching the family anchor. All XML comments use '==' separator runs (no '--' runs) per the svg-validity.test.ts regression guard; verified with a Node regex scan matching the test's own double-hyphen check and a python xml.dom.minidom parse before delivery.",
+  "outputs": [
+    "apps/web/public/hero-art/key-matrix-ghosting-deep-dive.svg",
+    "apps/web/public/hero-art/key-matrix-ghosting-deep-dive.svg.json"
+  ],
+  "warnings": [
+    "Labels reference IBM Plex Sans / JetBrains Mono by family name with system fallbacks; the SVG does not embed font files (family convention, matches prior hero-art).",
+    "No local Playwright/resvg preview render was available in this session to visually QA the composition; geometry was hand-verified (node/diode/label coordinate bounds, dash patterns, arrow direction) and the file was checked for XML well-formedness and the double-hyphen comment rule before delivery."
+  ]
+}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Horizontal bar comparison with two rows. Top row, direct wiring, a long warm-grey bar labeled 104 pins, one per switch plus a shared ground. Bottom row, 8-row by 13-column matrix, a short coral bar labeled 21 pins, for the same 104 keys.</title>
+
+  <!-- ================================================================
+       Canvas: 1200 x 420
+       Subject: two-row pin-count ladder comparing direct per-switch
+                wiring against row/column matrix wiring for the same
+                104-key board.
+       Palette:
+         Stroke  oklch(0.78 0.005 90)  warm-grey, 2px
+         Splash  oklch(0.68 0.165 28)  coral (matrix row + bronze dot)
+       Background: transparent.
+  ================================================================ -->
+
+  <!-- Baseline axis -->
+  <line x1="320" y1="90" x2="320" y2="340" stroke-opacity="0.3"/>
+
+  <!-- Row labels -->
+  <text x="110" y="150" font-family="IBM Plex Sans" font-size="20" fill="oklch(0.78 0.005 90)" stroke="none">Direct wiring</text>
+  <text x="110" y="176" font-family="IBM Plex Sans" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">one pin per switch + shared ground</text>
+
+  <text x="110" y="300" font-family="IBM Plex Sans" font-size="20" fill="oklch(0.78 0.005 90)" stroke="none">8-row x 13-column matrix</text>
+  <text x="110" y="326" font-family="IBM Plex Sans" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">8 row pins + 13 column pins</text>
+
+  <!-- Direct-wiring bar: long, warm-grey -->
+  <rect x="320" y="120" width="820" height="46" rx="6" fill="oklch(0.78 0.005 90 / 0.18)" stroke="oklch(0.78 0.005 90)"/>
+  <text x="1160" y="150" font-family="JetBrains Mono" font-size="22" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end">104 pins</text>
+
+  <!-- Matrix bar: short, coral highlight -->
+  <rect x="320" y="270" width="168" height="46" rx="6" fill="oklch(0.68 0.165 28 / 0.22)" stroke="oklch(0.68 0.165 28)"/>
+  <text x="508" y="300" font-family="JetBrains Mono" font-size="22" fill="oklch(0.68 0.165 28)" stroke="none">21 pins</text>
+
+  <!-- Same-104-keys note bracket -->
+  <line x1="320" y1="360" x2="1140" y2="360" stroke-dasharray="4 5" stroke-opacity="0.35"/>
+  <text x="730" y="384" font-family="Newsreader" font-style="italic" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.8">same 104 switches, same unique address apiece</text>
+
+  <!-- Theme dot -->
+  <circle cx="1132" cy="50" r="7" fill="oklch(0.80 0.135 75)" stroke="none" opacity="0.9"/>
+</svg>

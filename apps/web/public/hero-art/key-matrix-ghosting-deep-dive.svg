@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — key matrix mechanism: a 5-column by 4-row grid of switch-position nodes linked by row and column scan lines, with schematic diode symbols (triangle and bar) placed in series below three switches that form an L of pressed keys, the fourth corner of that L shown as a dashed phantom node that would read as pressed without those diodes, the blocked reverse path marked at the intersecting column, picked out in ochre</title>
+
+  <!-- Ochre wash over the phantom-loop bounding box, the three pressed keys and the
+       ghost corner they would falsely close a path to. oklch(0.72 0.13 80) is the
+       ochre already in family rotation (clicky-switches-deep-dive,
+       how-keycaps-are-made-deep-dive, split-ergo-parts-pairing). -->
+  <rect x="440" y="220" width="320" height="240" fill="oklch(0.72 0.13 80 / 0.08)" stroke="none"/>
+
+  <!-- ══════════════════════════════════════════════════════════════════════════
+       COMPOSITION: an abstract switch matrix seen as a schematic.
+         Grid: 5 columns at x 280/440/600/760/920, 4 rows at y 220/340/460/580.
+         Nodes: one circle per row x column intersection, a switch position.
+         Row lines run x 220 to 980; column lines run y 170 to 640, each
+           continuing past the grid as scan/read lines toward an unseen
+           controller, marked with small chevrons at their open ends.
+         Diodes: a triangle-and-bar glyph sits in series on the column lead
+           just beneath a switch node. Two plain ones (grey) at (600,400) and
+           (920,610) show the ordinary per-switch convention. Three ochre
+           ones sit beneath the pressed corner of an L: (440,220), (760,220),
+           (440,460) — those switches are actually down.
+         Ghosting: the fourth corner of that L, (760,460), is not pressed but
+           a dashed phantom node marks where a current sneaking across the
+           rectangle would land without the diodes. A block mark at (760,340)
+           shows the diode orientation stopping that reverse path.
+       ══════════════════════════════════════════════════════════════════════════ -->
+
+  <!-- ══ ROW SCAN LINES ══ -->
+  <g stroke-opacity="0.35">
+    <line x1="220" y1="220" x2="980" y2="220"/>
+    <line x1="220" y1="340" x2="980" y2="340"/>
+    <line x1="220" y1="460" x2="980" y2="460"/>
+    <line x1="220" y1="580" x2="980" y2="580"/>
+  </g>
+
+  <!-- ══ COLUMN READ LINES ══ -->
+  <g stroke-opacity="0.35">
+    <line x1="280" y1="170" x2="280" y2="640"/>
+    <line x1="440" y1="170" x2="440" y2="640"/>
+    <line x1="600" y1="170" x2="600" y2="640"/>
+    <line x1="760" y1="170" x2="760" y2="640"/>
+    <line x1="920" y1="170" x2="920" y2="640"/>
+  </g>
+
+  <!-- ══ OPEN-END CHEVRONS, toward the unseen controller ══ -->
+  <g stroke-opacity="0.3">
+    <path d="M 232 214 L 220 220 L 232 226"/>
+    <path d="M 232 334 L 220 340 L 232 346"/>
+    <path d="M 232 454 L 220 460 L 232 466"/>
+    <path d="M 232 574 L 220 580 L 232 586"/>
+    <path d="M 274 628 L 280 640 L 286 628"/>
+    <path d="M 434 628 L 440 640 L 446 628"/>
+    <path d="M 594 628 L 600 640 L 606 628"/>
+    <path d="M 754 628 L 760 640 L 766 628"/>
+    <path d="M 914 628 L 920 640 L 926 628"/>
+  </g>
+
+  <!-- ══ SWITCH NODES, unpressed ══ -->
+  <g stroke-opacity="0.65">
+    <circle cx="280" cy="220" r="9"/>
+    <circle cx="600" cy="220" r="9"/>
+    <circle cx="920" cy="220" r="9"/>
+    <circle cx="280" cy="340" r="9"/>
+    <circle cx="440" cy="340" r="9"/>
+    <circle cx="600" cy="340" r="9"/>
+    <circle cx="760" cy="340" r="9"/>
+    <circle cx="920" cy="340" r="9"/>
+    <circle cx="280" cy="460" r="9"/>
+    <circle cx="600" cy="460" r="9"/>
+    <circle cx="920" cy="460" r="9"/>
+    <circle cx="280" cy="580" r="9"/>
+    <circle cx="440" cy="580" r="9"/>
+    <circle cx="600" cy="580" r="9"/>
+    <circle cx="760" cy="580" r="9"/>
+    <circle cx="920" cy="580" r="9"/>
+  </g>
+
+  <!-- ══ SWITCH NODES, pressed — filled, the three real keys of the L ══ -->
+  <g fill="oklch(0.78 0.005 90)">
+    <circle cx="440" cy="220" r="9"/>
+    <circle cx="760" cy="220" r="9"/>
+    <circle cx="440" cy="460" r="9"/>
+  </g>
+
+  <!-- ══ DIODES, ordinary convention, plain ══ -->
+  <g fill="oklch(0.78 0.005 90)">
+    <polygon points="594,394 606,394 600,405"/>
+    <line x1="593" y1="405" x2="607" y2="405"/>
+    <polygon points="914,604 926,604 920,615"/>
+    <line x1="913" y1="615" x2="927" y2="615"/>
+  </g>
+
+  <!-- ══ DIODES, in series below the three pressed keys — ochre, the reason
+       the fourth corner cannot also read as pressed ══ -->
+  <g fill="oklch(0.72 0.13 80)" stroke="oklch(0.72 0.13 80)">
+    <polygon points="434,274 446,274 440,285"/>
+    <line x1="433" y1="285" x2="447" y2="285"/>
+    <polygon points="754,274 766,274 760,285"/>
+    <line x1="753" y1="285" x2="767" y2="285"/>
+    <polygon points="434,514 446,514 440,525"/>
+    <line x1="433" y1="525" x2="447" y2="525"/>
+  </g>
+
+  <!-- ══ PHANTOM LOOP, dashed, the rectangle the three pressed keys outline ══ -->
+  <rect x="440" y="220" width="320" height="240" fill="none" stroke="oklch(0.72 0.13 80)" stroke-opacity="0.55" stroke-dasharray="6 5"/>
+
+  <!-- Sneak-path direction arrows along the top and left legs of the loop -->
+  <g stroke="oklch(0.72 0.13 80)" stroke-opacity="0.7">
+    <path d="M 594 214 L 606 220 L 594 226"/>
+    <path d="M 434 346 L 440 334 L 446 346"/>
+  </g>
+
+  <!-- Block mark on the right leg, at (760,340) — the reverse path the diode
+       orientation does not allow -->
+  <g stroke="oklch(0.72 0.13 80)" stroke-opacity="0.8">
+    <line x1="752" y1="332" x2="768" y2="348"/>
+    <line x1="752" y1="348" x2="768" y2="332"/>
+  </g>
+
+  <!-- ══ GHOST NODE, the fourth corner — dashed, never actually pressed ══ -->
+  <circle cx="760" cy="460" r="16" stroke="oklch(0.72 0.13 80)" stroke-opacity="0.35"/>
+  <circle cx="760" cy="460" r="9" stroke="oklch(0.72 0.13 80)" stroke-opacity="0.75" stroke-dasharray="3 3"/>
+  <circle cx="760" cy="460" r="3.5" fill="oklch(0.72 0.13 80 / 0.9)" stroke="none"/>
+
+  <!-- ══ LEFT MARGIN TIER TICKS ══ -->
+  <g stroke-opacity="0.28">
+    <line x1="130" y1="170" x2="142" y2="170"/>
+    <line x1="130" y1="220" x2="142" y2="220"/>
+    <line x1="130" y1="460" x2="142" y2="460"/>
+    <line x1="130" y1="640" x2="142" y2="640"/>
+  </g>
+  <line x1="136" y1="170" x2="136" y2="640" stroke-opacity="0.14" stroke-dasharray="2 6"/>
+
+  <!-- ══ LABELS ══ -->
+  <text x="270" y="655" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none" letter-spacing="0.05em">SWITCH MATRIX — ROW x COLUMN GRID</text>
+  <text x="560" y="655" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" fill-opacity="0.5" stroke="none" letter-spacing="0.05em">DIODE — ONE DIRECTION PER SWITCH</text>
+  <text x="825" y="655" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.72 0.13 80)" fill-opacity="0.85" stroke="none" letter-spacing="0.05em">PHANTOM LOOP</text>
+  <text x="780" y="673" font-family="'IBM Plex Sans', system-ui, sans-serif" font-size="11" fill="oklch(0.72 0.13 80)" fill-opacity="0.7" stroke="none" letter-spacing="0.05em">GHOST KEY — READS AS PRESSED W/O DIODES</text>
+  <!-- Leaders -->
+  <line x1="350" y1="650" x2="440" y2="345" stroke-opacity="0.3" stroke-width="1"/>
+  <line x1="620" y1="648" x2="600" y2="412" stroke-opacity="0.3" stroke-width="1"/>
+  <line x1="870" y1="648" x2="762" y2="468" stroke-opacity="0.3" stroke-width="1"/>
+  <line x1="845" y1="666" x2="760" y2="460" stroke-opacity="0.3" stroke-width="1"/>
+
+  <!-- ══ JetBrains Mono technical value ══ -->
+  <text x="155" y="738" font-family="'JetBrains Mono', 'IBM Plex Mono', ui-monospace, monospace" font-size="10" fill="oklch(0.78 0.005 90)" fill-opacity="0.38" stroke="none" letter-spacing="0.03em">KEY MATRIX — ONE DIODE PER SWITCH MAKES CURRENT ONE-WAY SO THREE PRESSED KEYS IN AN L CANNOT FAKE A FOURTH</text>
+
+  <!-- ══ BRONZE THEME DOT, upper-right margin ══ -->
+  <circle cx="1148" cy="92" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

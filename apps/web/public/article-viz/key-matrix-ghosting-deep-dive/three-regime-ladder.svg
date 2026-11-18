@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Three-row comparison ladder showing the outcome of the identical three-key rectangle press under three regimes. Row one, no diodes, labeled blocking or 2KRO: third key dropped, or a phantom fourth key appears. Row two, full diode matrix with the standard USB boot protocol, labeled 6KRO ceiling: no ghost, but a seventh simultaneous key beyond this report still fails to register. Row three, full diode matrix with NKRO-aware firmware, labeled NKRO: all three register, nothing extra, no ceiling.</title>
+
+  <!-- ================================================================
+       Canvas: 1200 x 480
+       Subject: three-row regime ladder — same three-key press, three
+                hardware/firmware pairings, three different outcomes.
+       Palette:
+         Stroke  oklch(0.78 0.005 90)  warm-grey, 2px
+         Splash  oklch(0.68 0.165 28)  coral (the two diode-protected rows)
+         Caution oklch(0.62 0.13 25)   warm-red (failure outcomes)
+  ================================================================ -->
+
+  <!-- Row dividers -->
+  <line x1="60" y1="150" x2="1140" y2="150" stroke-opacity="0.25"/>
+  <line x1="60" y1="300" x2="1140" y2="300" stroke-opacity="0.25"/>
+
+  <!-- Row 1: no diodes -->
+  <text x="60" y="60" font-family="IBM Plex Sans" font-weight="600" font-size="20" fill="oklch(0.78 0.005 90)" stroke="none">No diodes — blocking / 2KRO</text>
+  <rect x="60" y="80" width="420" height="40" rx="6" fill="none" stroke="oklch(0.62 0.13 25)" stroke-dasharray="3 4"/>
+  <text x="80" y="106" font-family="JetBrains Mono" font-size="15" fill="oklch(0.62 0.13 25)" stroke="none">third key dropped, or a ghost appears</text>
+
+  <!-- Row 2: full diode matrix, boot protocol -->
+  <text x="60" y="210" font-family="IBM Plex Sans" font-weight="600" font-size="20" fill="oklch(0.68 0.165 28)" stroke="none">Full diode matrix — USB boot protocol (6KRO)</text>
+  <rect x="60" y="230" width="520" height="40" rx="6" fill="oklch(0.68 0.165 28 / 0.15)" stroke="oklch(0.68 0.165 28)"/>
+  <text x="80" y="256" font-family="JetBrains Mono" font-size="15" fill="oklch(0.68 0.165 28)" stroke="none">no ghost, but a 7th key beyond the report fails</text>
+
+  <!-- Row 3: full diode matrix + NKRO firmware -->
+  <text x="60" y="360" font-family="IBM Plex Sans" font-weight="600" font-size="20" fill="oklch(0.68 0.165 28)" stroke="none">Full diode matrix + NKRO firmware</text>
+  <rect x="60" y="380" width="520" height="40" rx="6" fill="oklch(0.68 0.165 28 / 0.28)" stroke="oklch(0.68 0.165 28)" stroke-width="2.5"/>
+  <text x="80" y="406" font-family="JetBrains Mono" font-size="15" fill="oklch(0.68 0.165 28)" stroke="none">all three register, nothing extra, no ceiling</text>
+
+  <!-- Right-margin outcome glyphs -->
+  <circle cx="1060" cy="100" r="14" fill="none" stroke="oklch(0.62 0.13 25)" stroke-dasharray="3 4"/>
+  <text x="1060" y="105" font-family="IBM Plex Sans" font-size="14" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle">?</text>
+
+  <circle cx="1060" cy="250" r="14" fill="oklch(0.68 0.165 28 / 0.2)" stroke="oklch(0.68 0.165 28)"/>
+  <text x="1060" y="255" font-family="IBM Plex Sans" font-size="14" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">6</text>
+
+  <circle cx="1060" cy="400" r="14" fill="oklch(0.68 0.165 28 / 0.35)" stroke="oklch(0.68 0.165 28)" stroke-width="2.5"/>
+  <text x="1060" y="405" font-family="IBM Plex Sans" font-size="14" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">N</text>
+
+  <!-- Theme dot -->
+  <circle cx="1132" cy="40" r="7" fill="oklch(0.80 0.135 75)" stroke="none" opacity="0.9"/>
+</svg>

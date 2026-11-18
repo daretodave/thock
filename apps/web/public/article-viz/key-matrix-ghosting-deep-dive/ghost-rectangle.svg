@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>A two-by-two keyboard matrix grid. Three switch positions — row 0 column 0, row 0 column 1, and row 1 column 0 — are filled coral circles marked pressed, connected by dashed current-path arrows along the shared row and column wires. The fourth position, row 1 column 1, is a warm-red dashed outline circle labeled ghost, with a dashed arrow showing current backfeeding into it through the other three switches.</title>
+
+  <!-- ================================================================
+       Canvas: 1200 x 560
+       Subject: 2x2 matrix sub-grid demonstrating the classic
+                three-key ghosting rectangle.
+       Palette:
+         Stroke   oklch(0.78 0.005 90)  warm-grey, 2px (grid wires)
+         Splash   oklch(0.68 0.165 28)  coral (real presses + path)
+         Caution  oklch(0.62 0.13 25)   warm-red (the ghost)
+         Bronze   oklch(0.80 0.135 75)  theme dot
+  ================================================================ -->
+
+  <!-- Column wires (vertical) -->
+  <line x1="420" y1="100" x2="420" y2="460" stroke-opacity="0.45"/>
+  <line x1="760" y1="100" x2="760" y2="460" stroke-opacity="0.45"/>
+  <!-- Row wires (horizontal) -->
+  <line x1="360" y1="200" x2="860" y2="200" stroke-opacity="0.45"/>
+  <line x1="360" y1="380" x2="860" y2="380" stroke-opacity="0.45"/>
+
+  <!-- Column / row labels -->
+  <text x="420" y="70" font-family="JetBrains Mono" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">column 0</text>
+  <text x="760" y="70" font-family="JetBrains Mono" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">column 1</text>
+  <text x="330" y="206" font-family="JetBrains Mono" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end">row 0</text>
+  <text x="330" y="386" font-family="JetBrains Mono" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end">row 1</text>
+
+  <!-- Switch junctions -->
+  <!-- row0/col0 - pressed -->
+  <circle cx="420" cy="200" r="16" fill="oklch(0.68 0.165 28 / 0.25)" stroke="oklch(0.68 0.165 28)"/>
+  <!-- row0/col1 - pressed -->
+  <circle cx="760" cy="200" r="16" fill="oklch(0.68 0.165 28 / 0.25)" stroke="oklch(0.68 0.165 28)"/>
+  <!-- row1/col0 - pressed -->
+  <circle cx="420" cy="380" r="16" fill="oklch(0.68 0.165 28 / 0.25)" stroke="oklch(0.68 0.165 28)"/>
+  <!-- row1/col1 - ghost, dashed outline, no fill -->
+  <circle cx="760" cy="380" r="16" fill="none" stroke="oklch(0.62 0.13 25)" stroke-dasharray="3 4" stroke-width="2.5"/>
+
+  <text x="420" y="205" font-family="IBM Plex Sans" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" dy="2">P</text>
+  <text x="760" y="205" font-family="IBM Plex Sans" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" dy="2">P</text>
+  <text x="420" y="385" font-family="IBM Plex Sans" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" dy="2">P</text>
+
+  <!-- Current path arrows: col0 up into row0, across to col1, down into row1 -->
+  <path d="M420,200 Q420,290 420,380" stroke="oklch(0.68 0.165 28)" stroke-dasharray="5 6" fill="none" marker-end="url(#arrow)"/>
+  <path d="M420,200 L760,200" stroke="oklch(0.68 0.165 28)" stroke-dasharray="5 6" fill="none" marker-end="url(#arrow)"/>
+  <path d="M760,200 L760,380" stroke="oklch(0.62 0.13 25)" stroke-dasharray="5 6" fill="none" marker-end="url(#arrowRed)"/>
+
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8" fill="none" stroke="oklch(0.68 0.165 28)" stroke-width="1.5"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8" fill="none" stroke="oklch(0.62 0.13 25)" stroke-width="1.5"/>
+    </marker>
+  </defs>
+
+  <!-- Labels -->
+  <text x="420" y="500" font-family="IBM Plex Sans" font-size="16" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">three real presses</text>
+  <text x="760" y="430" font-family="Newsreader" font-style="italic" font-size="16" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle">the ghost</text>
+  <text x="600" y="520" font-family="Newsreader" font-style="italic" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.8">current backfeeds through the shared row and column into a switch nobody pressed</text>
+
+  <!-- Theme dot -->
+  <circle cx="1132" cy="50" r="7" fill="oklch(0.80 0.135 75)" stroke="none" opacity="0.9"/>
+</svg>

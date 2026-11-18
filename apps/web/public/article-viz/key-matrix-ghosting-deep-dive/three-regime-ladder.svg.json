@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-11-18T00:00:00.000Z",
+  "commit": "438b0cbbd59cde23bfc80622af71d8aead051279",
+  "kind": "inline-viz",
+  "article_slug": "key-matrix-ghosting-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "a-diode-blocks-the-backflow-and-creates-its-own-tradeoff",
+  "brief_summary": "Three-row comparison ladder showing the outcome of pressing the identical three-key rectangle under three hardware/firmware regimes: no diodes (blocking/2KRO — a key drops or a ghost appears), full diode matrix on the standard USB boot protocol (6KRO ceiling — no ghost, but a 7th simultaneous key still fails to register), and full diode matrix plus NKRO-aware firmware (all keys register, no ceiling). The two diode-protected rows are coral-highlighted; the no-diode row carries a dashed caution outline.",
+  "target": "apps/web/public/article-viz/key-matrix-ghosting-deep-dive/three-regime-ladder.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "JetBrains Mono"],
+  "data_sources": [
+    "key-matrix-ghosting-deep-dive.mdx § 'A diode blocks the backflow — and creates its own tradeoff' — 'A diode matrix alone doesn't guarantee a keyboard can report an unlimited number of simultaneous keys ... The standard USB HID boot protocol can describe at most six non-modifier keys pressed at once ... a condition usually labeled 6KRO.'",
+    "https://deskthority.net/wiki/Rollover,_blocking_and_ghosting — defines 'blocking' as the firmware ignoring keys that could cause ghosting, and NKRO as suffering from neither blocking nor ghosting.",
+    "https://en.wikipedia.org/wiki/Key_rollover — defines jamming/blocking and n-key rollover detecting input from every key regardless of how many others are pressed."
+  ],
+  "outputs": ["apps/web/public/article-viz/key-matrix-ghosting-deep-dive/three-regime-ladder.svg"],
+  "warnings": []
+}

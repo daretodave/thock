@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-11-18T00:00:00.000Z",
+  "commit": "438b0cbbd59cde23bfc80622af71d8aead051279",
+  "kind": "inline-viz",
+  "article_slug": "key-matrix-ghosting-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "wiring-a-grid-instead-of-a-wire-per-key",
+  "brief_summary": "Two-row horizontal bar comparison of pin counts for wiring the same 104-key board: direct per-switch wiring (one pin per switch plus a shared ground) versus an 8-row by 13-column matrix (8 row pins + 13 column pins). The matrix bar is drawn far shorter and coral-highlighted to show the pin-count savings for an identical key count.",
+  "target": "apps/web/public/article-viz/key-matrix-ghosting-deep-dive/pin-count-comparison.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "key-matrix-ghosting-deep-dive.mdx § 'Wiring a grid instead of a wire per key' — 'Lay that same 104-key board out as 8 rows by 13 columns — 8 × 13 = 104, so every switch still gets a unique address — and the controller needs only 21 pins: eight for the rows, thirteen for the columns.'",
+    "https://develop-docs.qmk.fm/how_a_matrix_works — 'Without a matrix circuit, each switch would require its own wire directly to the controller.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/key-matrix-ghosting-deep-dive/pin-count-comparison.svg"],
+  "warnings": []
+}

@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "slug": "key-matrix-ghosting-deep-dive",
+      "readTime": 8,
+      "frontmatter": {
+        "title": "The matrix, the diode, and the three keys that break it",
+        "lede": "A keyboard scans its keys in a grid instead of wiring each one to its own pin — an efficient design choice that opens one specific, well-understood failure mode. A diode per switch closes it. A second piece, NKRO firmware, closes the related failure that diodes alone can't touch.",
+        "pillar": "deep-dives",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "gateron-magnetic-jade-sensing-backfill",
       "readTime": 6,
       "frontmatter": {
@@ -11099,5 +11109,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-11-18T11:12:13.492Z"
+  "generatedAt": "2026-11-18T11:39:26.611Z"
 }
