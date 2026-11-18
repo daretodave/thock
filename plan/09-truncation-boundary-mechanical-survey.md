@@ -158,4 +158,68 @@ None.
 
 Measure: 7 open · 0 closed · next A8
 
-Not chunked yet.
+- [ ] **09.1** Regression-guard fixture tests on `truncate()` and `truncateForMeta()` · M · closes A1, A2, A7 · needs —
+  - `apps/web/src/lib/__tests__/truncate.test.ts` (extend if present,
+    else create): a fixture battery at and around boundary-adjacent
+    lengths — exact `max`, one under, one over, a leading token
+    longer than `max`, a leading token longer than `max +
+    WORD_EXTENSION_BUDGET`, a string with no spaces at all — each
+    asserting the result never ends with a non-whitespace character
+    immediately followed by what would have been a mid-word cut, and
+    always ends in `…` when the input was actually truncated.
+  - `packages/seo/src/__tests__/buildMetadata.test.ts` (extend if
+    present, else create a sibling file): the same fixture shape
+    against `truncateForMeta()`.
+  - Both run under the existing per-workspace `test:run` leg already
+    in `pnpm verify` — no new verify leg for this chunk.
+  - Test-only: no change to `truncate()` or `truncateForMeta()`'s
+    runtime behavior (A7) — both are already boundary-aware; this
+    chunk only proves it with fixtures.
+- [ ] **09.2** `scripts/truncation-call-site-check.mjs` mechanical grep gate · M · closes A3, A4, A5 · needs —
+  - New script mirroring `og-coverage-check.mjs`'s shape (gate /
+    `--write` / `--json` modes, `plan/AUDIT.md` row filing with
+    dedup by `file:line`, same CLI/exit-code contract):
+    - Scans `apps/web/src` and `packages/*/src` (excluding
+      `__tests__`, `*.test.ts(x)`, `node_modules`) for
+      `.slice(0, <number>)` / `.substring(0, <number>)` calls.
+    - Flags a call only when its receiver is a property/variable
+      whose name matches the display-text identifier list
+      `article-language-check.mjs` / `og-coverage-check.mjs` already
+      use for narrowing (`description`, `summary`, `title`, `lede`,
+      `excerpt`, `text`, `body`, `headline`, `name`), the call site
+      is not inside `apps/web/src/lib/truncate.ts` or
+      `packages/seo/src/buildMetadata.ts` (the two vetted helpers),
+      and the result is not immediately `.length`-compared or
+      array-indexed.
+    - Gate mode (no args): exit 1 printing every flagged `file:line`
+      if any hit, exit 0 otherwise.
+    - `--write`: append one `engineering` `plan/AUDIT.md` row per
+      hit, deduplicated by `file:line`, same contract as
+      `og-coverage-check.mjs --write`.
+    - `--json`: `{ hits: [...] }`.
+  - `scripts/__tests__/truncation-call-site-check.test.mjs`
+    (mirroring `scripts/__tests__/og-coverage-check.test.mjs`):
+    a fixture file with a violating `.slice(0, N)` call on a
+    display-named variable outside the two vetted helpers (gate
+    mode exits 1), a clean fixture (gate mode exits 0), and a case
+    proving the two vetted helpers' own internal slicing is never
+    flagged.
+    - Also includes the case that satisfies A3's "wired into `pnpm
+      verify`" requirement without a new top-level script line (no
+      sibling survey script — `og-coverage-check.mjs`,
+      `a11y-spec-coverage-check.mjs`, `article-parts-check.mjs` —
+      adds one; each relies on `test:scripts` already running under
+      `pnpm verify`): a test that runs gate mode against the real
+      `apps/web/src` / `packages/*/src` trees (no fixture) and
+      asserts exit 0 today (A4's "exits 0 against the current
+      codebase" clause) — so a future commit introducing a live
+      violation fails `test:scripts`, already a hard `pnpm verify`
+      leg, with no new package.json script needed.
+- [ ] **09.3** Wire `--write` into digest's nightly breadth check · S · closes A6 · needs 09.2
+  - `skills/digest.md` §3's breadth-check list: add
+    `node scripts/truncation-call-site-check.mjs --write`
+    alongside `article-internal-consistency-check.mjs` and
+    `group-buy-article-staleness-check.mjs`, same "non-zero exit
+    logs and continues, never blocks the digest commit" contract.
+  - No script change in this chunk — 09.2's `--write` contract
+    already matches what the digest call site expects.
