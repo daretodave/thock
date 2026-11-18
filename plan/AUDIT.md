@@ -15,6 +15,14 @@
 
 ## Drained findings (kept for audit-trail; do not re-open)
 
+### [x] [external-issue] [user-issue #1084] [HIGH] "Cloud march failed: 2026-11-17 — verify gate blocked by Next.js agent-upgrade security nudge" open past the 24h SLA — closed this tick, already fixed by 03f0cf4e
+- category: external-issue
+- impact: 8
+- ease: 5
+- evidence: issue #1084 opened 2026-11-17, filed by `issue-age` generator 2026-11-18 as open past the 24h SLA. By the time this row was filed, commit `03f0cf4e` (2026-11-18T02:29:40Z, earlier the same day) had already bumped Next.js to 16.4.6, fixing GHSA-mfr8-8qww-v76h/GHSA-vc7v-qv4w-wrv8 — the exact advisories whose build-time security nudge blocked #1084's gate. `pnpm-lock.yaml` confirms `next@16.4.6`; multiple commits (09.1-09.3 chunks) landed cleanly through the full gate including e2e since.
+- next: closed `gh issue close 1084` with the fix citation this tick; no build work needed.
+- generator: issue-age · filed 2026-11-18
+
 ### [x] [external-critique] [voice] [3.6] /tools + /quiz/switch — tools-card description and quiz lede describe the same flow with different framing — addressed in 5dc60b24, closes #1059
 - category: external-critique
 - filed: critique pass 14 (reader sub-agent, scripted walk)
