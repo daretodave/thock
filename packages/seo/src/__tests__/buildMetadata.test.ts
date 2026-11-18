@@ -152,6 +152,11 @@ describe('truncateForMeta', () => {
     expect(truncateForMeta('short description')).toBe('short description')
   })
 
+  it('returns the text unchanged with no ellipsis when the length is exactly the limit', () => {
+    const text = 'This is a search snippet sized exactly to the limit chars'
+    expect(truncateForMeta(text, text.length)).toBe(text)
+  })
+
   it('cuts long text at a word boundary and appends an ellipsis', () => {
     const text =
       'a'.repeat(50) + ' ' + 'b'.repeat(50) + ' ' + 'c'.repeat(100)
@@ -179,5 +184,11 @@ describe('truncateForMeta', () => {
   it('falls back to the unmodified text when the leading token has no word boundary at all', () => {
     const text = 'a'.repeat(300)
     expect(truncateForMeta(text, 160)).toBe(text)
+  })
+
+  it('falls back to a hard cut when the next boundary is far past the extension budget', () => {
+    const text = 'A'.repeat(100) + ' rest of the sentence follows here'
+    const result = truncateForMeta(text, 10)
+    expect(result).toBe('A'.repeat(9) + '…')
   })
 })

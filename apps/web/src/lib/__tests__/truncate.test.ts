@@ -6,6 +6,11 @@ describe('truncate', () => {
     expect(truncate('short text', 80)).toBe('short text')
   })
 
+  it('returns the text unchanged with no ellipsis when the length is exactly max', () => {
+    const text = 'Cherry MX2A Red switches feel crisp and tactile'
+    expect(truncate(text, text.length)).toBe(text)
+  })
+
   it('trims at the last word boundary before max and appends an ellipsis', () => {
     const text = 'Cherry MX2A Red is functionally similar to Krytox-lubed classics.'
     expect(truncate(text, 40)).toBe('Cherry MX2A Red is functionally similar…')
