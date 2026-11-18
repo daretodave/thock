@@ -89,3 +89,4 @@
 - 2026-11-10 · 08.2 · Fixture tests prove the OG PNG assertion helper catches a 0-byte/undersized render · edf50a5e..edf50a5e
 - 2026-11-10 · 08 · spec complete: OG image render-verification gate · absorbed into plan/bearings.md · deleted in this commit
 - 2026-11-18 · 09.1 · Boundary-adjacent fixtures prove truncate()/truncateForMeta() never cut mid-word · d6eaf1ad..d6eaf1ad
+- 2026-11-18 · 09.2 · Mechanical gate flags raw display-text .slice/.substring bypassing the two vetted truncation helpers · ea394859..ea394859

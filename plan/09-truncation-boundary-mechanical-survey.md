@@ -128,16 +128,6 @@ resurfacing, not a fix for a currently-live defect.)
 
 ## Acceptance
 
-- **A3** `scripts/truncation-call-site-check.mjs` exists,
-  mirrors the `og-coverage-check.mjs` shape (gate / `--write` /
-  `--json`), and its gate mode is wired into `pnpm verify`.
-- **A4** The check's gate mode exits 1 against a fixture file
-  containing a violating `.slice(0, N)` call on a display-named
-  variable outside the two vetted helpers, and exits 0 against
-  the current codebase (no live violations today).
-- **A5** `scripts/__tests__/truncation-call-site-check.test.mjs`
-  exercises both the violation and clean-fixture cases, run via
-  `pnpm test:scripts`.
 - **A6** `skills/digest.md` §3's breadth-check list includes the
   `--write` invocation, same AUDIT-row-filing contract as its
   siblings, never blocking the digest commit.
@@ -148,49 +138,9 @@ None.
 
 ## Chunks
 
-Measure: 4 open · 3 closed · next A8
+Measure: 1 open · 6 closed · next A8
 
-- [ ] **09.2** `scripts/truncation-call-site-check.mjs` mechanical grep gate · M · closes A3, A4, A5 · needs —
-  - New script mirroring `og-coverage-check.mjs`'s shape (gate /
-    `--write` / `--json` modes, `plan/AUDIT.md` row filing with
-    dedup by `file:line`, same CLI/exit-code contract):
-    - Scans `apps/web/src` and `packages/*/src` (excluding
-      `__tests__`, `*.test.ts(x)`, `node_modules`) for
-      `.slice(0, <number>)` / `.substring(0, <number>)` calls.
-    - Flags a call only when its receiver is a property/variable
-      whose name matches the display-text identifier list
-      `article-language-check.mjs` / `og-coverage-check.mjs` already
-      use for narrowing (`description`, `summary`, `title`, `lede`,
-      `excerpt`, `text`, `body`, `headline`, `name`), the call site
-      is not inside `apps/web/src/lib/truncate.ts` or
-      `packages/seo/src/buildMetadata.ts` (the two vetted helpers),
-      and the result is not immediately `.length`-compared or
-      array-indexed.
-    - Gate mode (no args): exit 1 printing every flagged `file:line`
-      if any hit, exit 0 otherwise.
-    - `--write`: append one `engineering` `plan/AUDIT.md` row per
-      hit, deduplicated by `file:line`, same contract as
-      `og-coverage-check.mjs --write`.
-    - `--json`: `{ hits: [...] }`.
-  - `scripts/__tests__/truncation-call-site-check.test.mjs`
-    (mirroring `scripts/__tests__/og-coverage-check.test.mjs`):
-    a fixture file with a violating `.slice(0, N)` call on a
-    display-named variable outside the two vetted helpers (gate
-    mode exits 1), a clean fixture (gate mode exits 0), and a case
-    proving the two vetted helpers' own internal slicing is never
-    flagged.
-    - Also includes the case that satisfies A3's "wired into `pnpm
-      verify`" requirement without a new top-level script line (no
-      sibling survey script — `og-coverage-check.mjs`,
-      `a11y-spec-coverage-check.mjs`, `article-parts-check.mjs` —
-      adds one; each relies on `test:scripts` already running under
-      `pnpm verify`): a test that runs gate mode against the real
-      `apps/web/src` / `packages/*/src` trees (no fixture) and
-      asserts exit 0 today (A4's "exits 0 against the current
-      codebase" clause) — so a future commit introducing a live
-      violation fails `test:scripts`, already a hard `pnpm verify`
-      leg, with no new package.json script needed.
-- [ ] **09.3** Wire `--write` into digest's nightly breadth check · S · closes A6 · needs 09.2
+- [ ] **09.3** Wire `--write` into digest's nightly breadth check · S · closes A6 · needs —
   - `skills/digest.md` §3's breadth-check list: add
     `node scripts/truncation-call-site-check.mjs --write`
     alongside `article-internal-consistency-check.mjs` and
