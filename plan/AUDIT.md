@@ -1249,7 +1249,7 @@
 - issue: #1078
 > Filed 2026-11-12 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
 
-### [HOT PURSUIT] [content-gap] [7] deep-dives pillar — 1 of ≥2 articles in last 30d
+### [x] [HOT PURSUIT] [content-gap] [7] deep-dives pillar — 1 of ≥2 articles in last 30d — addressed in e6e0ae8a, closes #1086
 - category: content-gaps
 - impact: 6 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -1260,4 +1260,137 @@
 - score: 7
 - next: /ship-content → deep-dives pillar article
 - issue: #1086
+> Filed 2026-11-18 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+
+### [ ] [cross-links] [4.5] key-matrix-ghosting-deep-dive ↔ cherry-mx2a-revision — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, switches)
+- category: cross-links
+- filed: 2026-11-18 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: deep-dive, switches
+- article-a: apps/web/src/content/articles/key-matrix-ghosting-deep-dive.mdx
+- article-b: apps/web/src/content/articles/cherry-mx2a-revision.mdx
+- action: add [cherry-mx2a-revision](/article/cherry-mx2a-revision) to key-matrix-ghosting-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] key-matrix-ghosting-deep-dive ↔ clicky-switches-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, switches)
+- category: cross-links
+- filed: 2026-11-18 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: deep-dive, switches
+- article-a: apps/web/src/content/articles/key-matrix-ghosting-deep-dive.mdx
+- article-b: apps/web/src/content/articles/clicky-switches-deep-dive.mdx
+- action: add [clicky-switches-deep-dive](/article/clicky-switches-deep-dive) to key-matrix-ghosting-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] key-matrix-ghosting-deep-dive ↔ gateron-lanes-tactile-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, switches)
+- category: cross-links
+- filed: 2026-11-18 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: deep-dive, switches
+- article-a: apps/web/src/content/articles/key-matrix-ghosting-deep-dive.mdx
+- article-b: apps/web/src/content/articles/gateron-lanes-tactile-deep-dive.mdx
+- action: add [gateron-lanes-tactile-deep-dive](/article/gateron-lanes-tactile-deep-dive) to key-matrix-ghosting-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] key-matrix-ghosting-deep-dive ↔ hmx-cloud-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, switches)
+- category: cross-links
+- filed: 2026-11-18 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: deep-dive, switches
+- article-a: apps/web/src/content/articles/key-matrix-ghosting-deep-dive.mdx
+- article-b: apps/web/src/content/articles/hmx-cloud-deep-dive.mdx
+- action: add [hmx-cloud-deep-dive](/article/hmx-cloud-deep-dive) to key-matrix-ghosting-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] key-matrix-ghosting-deep-dive ↔ keyboard-acoustics-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, switches)
+- category: cross-links
+- filed: 2026-11-18 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: deep-dive, switches
+- article-a: apps/web/src/content/articles/key-matrix-ghosting-deep-dive.mdx
+- article-b: apps/web/src/content/articles/keyboard-acoustics-deep-dive.mdx
+- action: add [keyboard-acoustics-deep-dive](/article/keyboard-acoustics-deep-dive) to key-matrix-ghosting-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] key-matrix-ghosting-deep-dive ↔ magnetic-switches-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, switches)
+- category: cross-links
+- filed: 2026-11-18 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: deep-dive, switches
+- article-a: apps/web/src/content/articles/key-matrix-ghosting-deep-dive.mdx
+- article-b: apps/web/src/content/articles/magnetic-switches-deep-dive.mdx
+- action: add [magnetic-switches-deep-dive](/article/magnetic-switches-deep-dive) to key-matrix-ghosting-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] key-matrix-ghosting-deep-dive ↔ optical-switches-explained — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, switches)
+- category: cross-links
+- filed: 2026-11-18 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: deep-dive, switches
+- article-a: apps/web/src/content/articles/key-matrix-ghosting-deep-dive.mdx
+- article-b: apps/web/src/content/articles/optical-switches-explained.mdx
+- action: add [optical-switches-explained](/article/optical-switches-explained) to key-matrix-ghosting-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] key-matrix-ghosting-deep-dive ↔ pcb-flex-cuts-explained — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, pcb)
+- category: cross-links
+- filed: 2026-11-18 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: deep-dive, pcb
+- article-a: apps/web/src/content/articles/key-matrix-ghosting-deep-dive.mdx
+- article-b: apps/web/src/content/articles/pcb-flex-cuts-explained.mdx
+- action: add [pcb-flex-cuts-explained](/article/pcb-flex-cuts-explained) to key-matrix-ghosting-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] key-matrix-ghosting-deep-dive ↔ rapid-trigger-firmware-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, firmware)
+- category: cross-links
+- filed: 2026-11-18 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: deep-dive, firmware
+- article-a: apps/web/src/content/articles/key-matrix-ghosting-deep-dive.mdx
+- article-b: apps/web/src/content/articles/rapid-trigger-firmware-deep-dive.mdx
+- action: add [rapid-trigger-firmware-deep-dive](/article/rapid-trigger-firmware-deep-dive) to key-matrix-ghosting-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] key-matrix-ghosting-deep-dive ↔ tactile-stem-geometry-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, switches)
+- category: cross-links
+- filed: 2026-11-18 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: deep-dive, switches
+- article-a: apps/web/src/content/articles/key-matrix-ghosting-deep-dive.mdx
+- article-b: apps/web/src/content/articles/tactile-stem-geometry-deep-dive.mdx
+- action: add [tactile-stem-geometry-deep-dive](/article/tactile-stem-geometry-deep-dive) to key-matrix-ghosting-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] key-matrix-ghosting-deep-dive ↔ tmr-switches-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: deep-dive, switches)
+- category: cross-links
+- filed: 2026-11-18 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: deep-dive, switches
+- article-a: apps/web/src/content/articles/key-matrix-ghosting-deep-dive.mdx
+- article-b: apps/web/src/content/articles/tmr-switches-deep-dive.mdx
+- action: add [tmr-switches-deep-dive](/article/tmr-switches-deep-dive) to key-matrix-ghosting-deep-dive body, or vice versa
+
+### [HOT PURSUIT] [content-gap] [7] trends pillar — 1 of ≥2 articles in last 30d
+- category: content-gaps
+- impact: 8 (Rule 1 sliding window — hot-pursuit)
+- ease: 5 (one new article per tick via /ship-content)
+- rule: Rule 1 — sliding-window freshness
+- pillar: trends
+- window-count: 1
+- window-start: 2026-10-19
+- score: 7
+- next: /ship-content → trends pillar article
 > Filed 2026-11-18 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
