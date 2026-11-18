@@ -88,6 +88,7 @@ its own cadence.
    node scripts/content-fact-audit.mjs --write
    node scripts/article-internal-consistency-check.mjs --write
    node scripts/group-buy-article-staleness-check.mjs --write
+   node scripts/truncation-call-site-check.mjs --write
    ```
 
    Failures become HIGH `plan/AUDIT.md` rows — the digest
@@ -105,6 +106,11 @@ its own cadence.
    article found) becomes a `content` `plan/AUDIT.md` row the
    same way, filed by the script itself (same `--write` contract
    as its per-commit path); it never blocks the digest commit.
+   The truncation call-site check's non-zero exit (a raw
+   display-text slice bypassing the vetted helpers found)
+   becomes an `engineering` `plan/AUDIT.md` row the same way,
+   filed by the script itself (same `--write` contract as its
+   per-commit path); it never blocks the digest commit.
 4. **Write `plan/DIGEST.md`** — overwrite entirely; it is a
    snapshot, not a ledger. Sections, in order: `Headline`,
    `While you were out` (pulse table: tick, verb, outcome —
