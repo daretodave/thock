@@ -3,7 +3,7 @@
 > Last pass: 2026-11-12 at commit 2b3bc5b7
 > Pass count: 445
 > Posture: bold
-> Last field research: 2026-11-12
+> Last field research: 2026-11-18
 
 ## Pending
 
@@ -156,6 +156,8 @@
 - estimated chunks: unknown until specced
 - conflicts: none known.
 - generator: research · filed 2026-11-12
+- re-evidence:
+  - 2026-11-18 · field · +0 · Community buyer questions repeatedly stack the same narrow constraints together (noise level, a budget band, and a compatibility requirement) rather than asking about one spec in isolation.
 
 ### [ ] [score 3.2] `pulse.mjs`'s held-line counter only matches the bold human-authored format — tonight's auto-promoted Held line for spec 09 reads "0 held" against a real 1
 - kind: guard
@@ -170,6 +172,24 @@
 - evidence: `scripts/pulse.mjs` held-counter (`if (/^- \*\*/.test(l)) held++`); `plan/README.md`'s `**Held**` lane (`- 09 · auto-promoted, veto until 2026-11-17 (#1082) · max_age: 1d · fallback: release`, written by commit `10c7ce4c`); `scripts/plan/promote.mjs:208` (`heldLine()`, the unbolded contract); `scripts/plan-check.mjs:260-262,279-282` (`parseAutoHeld()`, validating the same unbolded shape as correct); this tick's `node scripts/pulse.mjs` output (`1 specs, 0 chunks left, 0 held`) vs. hand-read of `plan/README.md` (1 Held line, active).
 - next: `/oversight` call per the meta-loop rail — a small, low-risk script edit to `pulse.mjs`'s held-counter once promoted; no schema change.
 - **update (2026-11-17, digest pass, nightly)**: second instance confirms the undercount. Commit `680b559f` (cloud `march` depth-promotion) added a second auto-promoted Held line — `- 10 · auto-promoted, veto until 2026-11-18 (#1083) · max_age: 1d · fallback: release` — alongside spec 09's still-open line (`#1082`, veto 2026-11-17). `node scripts/pulse.mjs` tonight still reads `0 held` against a real 2. Not re-scoping; the proposed one-line regex widening is unchanged and now covers two live instances instead of one.
+
+### [ ] [score 6.0] Customs/duty shifts now affect group-buy landed cost
+- proposed: 2026-11-18 (research)
+- source signals: field (2026-11-18): Cross-border low-value-parcel duty thresholds have tightened in major markets within the last year, raising landed cost for overseas group-buy orders in ways most coverage omits.
+- rationale: thock tracks group-buy lifecycle and status but no surface explains why landed cost varies; a short explainer or a per-region cost-impact note would close a real reader gap as duty rules keep shifting.
+- proposed scope: A guide-pillar article (or a group-buys page callout) explaining how recent low-value-parcel duty changes affect buyer landed cost on overseas group buys, with no per-vendor specifics.
+- estimated chunks: unknown until specced
+- conflicts: none known.
+- generator: research · filed 2026-11-18
+
+### [ ] [score 6.0] Switch comparison tools standardize on force-curve charts
+- proposed: 2026-11-18 (research)
+- source signals: field (2026-11-18): Independent and community switch-comparison tools consistently visualize force-vs-travel as a curve/graph, not just scalar spec numbers, treating the curve shape itself as the unit of comparison.
+- rationale: thock's own compare tool only renders scalar spec values (spring weight, travel) in a table; the catalog schema has no travel-indexed force data to chart, so comparisons can't show the shape difference (e.g. linear vs curved bump) readers actually care about.
+- proposed scope: A 1-2 chunk spec: add an optional force-curve data field (travel/force point array) to the switch schema for switches where it's known, plus a chart on the compare page that renders it when both selected switches have the data, falling back to the current table otherwise.
+- estimated chunks: unknown until specced
+- conflicts: none known.
+- generator: research · filed 2026-11-18
 
 ## Considered (below threshold)
 
