@@ -17,12 +17,14 @@ line goes; each line is a lock that times out:
 condition> · max_age: 14d`, an optional `· fallback: release`):
 
 - 10 · auto-promoted, veto until 2026-11-18 (#1083) · max_age: 1d · fallback: release
+- 11 · auto-promoted, veto until 2026-11-19 (#1087) · max_age: 1d · fallback: release
 
 ## Specs
 
 | # | Initiative | Spec | Status | Progress |
 |---|---|---|---|---|
 | 10 | Stale-`updatedAt` mechanical check | [10-stale-updated-at-mechanical-check.md](10-stale-updated-at-mechanical-check.md) |  | not chunked |
+| 11 | Cloud prompt dispatch-summary lane gap | [11-march-yml-dispatch-summary-lane-gap.md](11-march-yml-dispatch-summary-lane-gap.md) |  | not chunked |
 
 ## Layout
 
