@@ -90,3 +90,5 @@
 - 2026-11-10 · 08 · spec complete: OG image render-verification gate · absorbed into plan/bearings.md · deleted in this commit
 - 2026-11-18 · 09.1 · Boundary-adjacent fixtures prove truncate()/truncateForMeta() never cut mid-word · d6eaf1ad..d6eaf1ad
 - 2026-11-18 · 09.2 · Mechanical gate flags raw display-text .slice/.substring bypassing the two vetted truncation helpers · ea394859..ea394859
+- 2026-11-18 · 09.3 · Digest nightly breadth check now files truncation-call-site hits · 7544a1f6..7544a1f6
+- 2026-11-18 · 09 · spec complete: Truncation-boundary mechanical survey · absorbed into plan/bearings.md · deleted in this commit

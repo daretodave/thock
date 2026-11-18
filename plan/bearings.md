@@ -779,6 +779,24 @@ time you encounter a recurring class of design ambiguity.)
   the historical "oklch 0-byte PNG" failure shape, not just
   pass by construction. A new route's OG handler is covered
   automatically — no list to update by hand.
+- **Truncation-boundary mechanical survey (spec 09, absorbed
+  2026-11-18):** `truncate()` (`apps/web/src/lib/truncate.ts`)
+  and `truncateForMeta()` (`packages/seo/src/buildMetadata.ts`)
+  are the only two vetted boundary-aware truncation helpers —
+  both regression-tested against a boundary-adjacent fixture
+  battery (exact `max`, one under, one over, a leading token
+  longer than `max`/`max + WORD_EXTENSION_BUDGET`, no-space
+  strings) so neither ever again cuts mid-word as it evolves.
+  `scripts/truncation-call-site-check.mjs` mirrors
+  `og-coverage-check.mjs`'s shape (gate / `--write` / `--json`)
+  and flags any `.slice(0, N)` / `.substring(0, N)` call on a
+  display-text-named receiver (`description`, `summary`,
+  `title`, `lede`, `excerpt`, `text`, `body`, `headline`,
+  `name`) outside those two helpers — a per-commit `pnpm verify`
+  gate leg, never deferred to nightly-only. Files `engineering`
+  category `plan/AUDIT.md` rows via `--write`, deduped by
+  `file:line`. Runs via `--write` in `skills/digest.md`'s
+  nightly breadth check alongside its siblings.
 
 ## Hard rules
 
