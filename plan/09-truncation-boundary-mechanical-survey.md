@@ -128,12 +128,6 @@ resurfacing, not a fix for a currently-live defect.)
 
 ## Acceptance
 
-- **A1** `apps/web/src/lib/__tests__/truncate.test.ts` carries a
-  boundary-adjacent fixture battery asserting `truncate()` never
-  returns a mid-word cut, run under `pnpm test:run`.
-- **A2** A sibling fixture battery exists for
-  `truncateForMeta()` in `packages/seo`, same assertion, same
-  leg.
 - **A3** `scripts/truncation-call-site-check.mjs` exists,
   mirrors the `og-coverage-check.mjs` shape (gate / `--write` /
   `--json`), and its gate mode is wired into `pnpm verify`.
@@ -147,8 +141,6 @@ resurfacing, not a fix for a currently-live defect.)
 - **A6** `skills/digest.md` §3's breadth-check list includes the
   `--write` invocation, same AUDIT-row-filing contract as its
   siblings, never blocking the digest commit.
-- **A7** No schema, component, or URL-contract change; no change
-  to `truncate()`/`truncateForMeta()` runtime behavior.
 
 ## Open questions
 
@@ -156,25 +148,8 @@ None.
 
 ## Chunks
 
-Measure: 7 open · 0 closed · next A8
+Measure: 4 open · 3 closed · next A8
 
-- [ ] **09.1** Regression-guard fixture tests on `truncate()` and `truncateForMeta()` · M · closes A1, A2, A7 · needs —
-  - `apps/web/src/lib/__tests__/truncate.test.ts` (extend if present,
-    else create): a fixture battery at and around boundary-adjacent
-    lengths — exact `max`, one under, one over, a leading token
-    longer than `max`, a leading token longer than `max +
-    WORD_EXTENSION_BUDGET`, a string with no spaces at all — each
-    asserting the result never ends with a non-whitespace character
-    immediately followed by what would have been a mid-word cut, and
-    always ends in `…` when the input was actually truncated.
-  - `packages/seo/src/__tests__/buildMetadata.test.ts` (extend if
-    present, else create a sibling file): the same fixture shape
-    against `truncateForMeta()`.
-  - Both run under the existing per-workspace `test:run` leg already
-    in `pnpm verify` — no new verify leg for this chunk.
-  - Test-only: no change to `truncate()` or `truncateForMeta()`'s
-    runtime behavior (A7) — both are already boundary-aware; this
-    chunk only proves it with fixtures.
 - [ ] **09.2** `scripts/truncation-call-site-check.mjs` mechanical grep gate · M · closes A3, A4, A5 · needs —
   - New script mirroring `og-coverage-check.mjs`'s shape (gate /
     `--write` / `--json` modes, `plan/AUDIT.md` row filing with

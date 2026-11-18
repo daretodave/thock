@@ -22,7 +22,7 @@ condition> · max_age: 14d`, an optional `· fallback: release`):
 
 | # | Initiative | Spec | Status | Progress |
 |---|---|---|---|---|
-| 09 | Truncation-boundary mechanical survey | [09-truncation-boundary-mechanical-survey.md](09-truncation-boundary-mechanical-survey.md) |  | 3 left |
+| 09 | Truncation-boundary mechanical survey | [09-truncation-boundary-mechanical-survey.md](09-truncation-boundary-mechanical-survey.md) |  | 2 left |
 | 10 | Stale-`updatedAt` mechanical check | [10-stale-updated-at-mechanical-check.md](10-stale-updated-at-mechanical-check.md) |  | not chunked |
 
 ## Layout
