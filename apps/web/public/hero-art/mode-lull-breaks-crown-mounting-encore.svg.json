@@ -1,0 +1,40 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-11-19T00:00:00.000Z",
+  "commit": "6e8f254e65b0ae09587bfde66247147426548ca1",
+  "kind": "hero-art",
+  "article_slug": "mode-lull-breaks-crown-mounting-encore",
+  "article_pillar": "trends",
+  "brief_summary": "Hero art for the Trends pillar piece on Mode Designs' vendor-attention tracker score: a wave up to 98 (W40), a six-week staircase down to a floor of 68 (W46, a post-group-buy lull), then a small uptick to 71 in the most recent week (W47) on news of an upcoming Encore refresh. A coral sparkline over a faint warm-grey keyboard side-profile silhouette, a dashed ceiling reference at the W40 high, a dashed floor reference at the W46 low, a haloed focal dot at the terminal uptick, and the family's warm-bronze theme dot in the upper-right margin.",
+  "target": "apps/web/public/hero-art/mode-lull-breaks-crown-mounting-encore.svg",
+  "source": "plan/bearings.md section Article hero art, colorful keyboard SVGs (locked 2026-05-09), trends piece maps to sparkline silhouette; cf. apps/web/public/hero-art/hall-effect-score-dips-wooting-ship-slips.svg for the closest prior entry in this family (same coral + keyboard-silhouette-beneath-the-chart treatment)",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject; trends piece -> sparkline silhouette, paired with a secondary grounding keyboard motif per family convention",
+  "size": [1200, 750],
+  "subject": "An eight-point sparkline (tracker weeks 2026-W40 through W47) tracing scores 98, 95, 72, 72, 70, 69, 68, 71: a near-ceiling open, a sharp two-week fall, five more weeks drifting down to a floor, then a small final-point uptick. A coral wash sits under the floor-to-uptick region as the visual anchor, since that uptick is the news event the article covers. A dashed ceiling line marks the W40 high; a dashed floor line marks the W46 low; the terminal point is enlarged with a halo ring to mark the uptick without overstating its size relative to the thirty-point fall that preceded it. A low-opacity warm-grey keyboard side-profile silhouette (case body with a typing-angle wedge and a row of keycap deck gaps) sits beneath the chart, below the baseline, as a quiet grounding motif.",
+  "splash_color": {
+    "name": "coral",
+    "oklch": "oklch(0.68 0.165 28)"
+  },
+  "accent_color": {
+    "name": "warm-bronze (theme accent)",
+    "oklch": "oklch(0.80 0.135 75)"
+  },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "stroke_weight": "2px (3px on the sparkline polyline itself, matching the family's emphasis convention for the focal trajectory)",
+  "canvas": "1200x750",
+  "background": "transparent (light-mode safe per house style)",
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": [],
+  "alt": "A coral sparkline tracing eight weekly points from a high ceiling down a six-week staircase to a floor, then ticking upward on the final point, plotted over a faint warm-grey keyboard silhouette, with a small warm-bronze theme dot in the upper-right margin.",
+  "notes": "x coordinates for the eight weekly points (150, 279, 407, 536, 664, 793, 921, 1050) reuse the exact grid from the hall-effect-score-dips-wooting-ship-slips.svg / hall-effect-rapid-trigger-plateau.svg sparkline sequence for visual continuity across the trends-pillar family. y coordinates are a stylized plot of the score array [98, 95, 72, 72, 70, 69, 68, 71] from the article body's own six-week run recap, not a pixel-literal linear scale, consistent with family convention for sparkline hero art. No rendered text anywhere in the file; the climb, staircase, floor, and uptick carry the subject without labels. All XML comments use single-hyphen text only (no double-hyphen runs) per the svg-validity.test.ts regression guard at apps/web/src/__tests__/svg-validity.test.ts; verified locally with a manual double-hyphen scan inside comment bodies, clean.",
+  "data_sources": [
+    "apps/web/src/content/articles/mode-lull-breaks-crown-mounting-encore.mdx frontmatter heroImageAlt - 'A coral sparkline tracing eight weekly points from a high ceiling down a six-week staircase to a floor, then ticking upward on the final point, plotted over a faint warm-grey keyboard silhouette, with a small warm-bronze theme dot in the upper-right margin.'",
+    "apps/web/src/content/articles/mode-lull-breaks-crown-mounting-encore.mdx body - 'The run, in order: 98 in 2026-W40, 95 in W41, 72 in W42, 72 in W43, 70 in W44, 69 in W45, 68 in W46, 71 in W47.'"
+  ],
+  "outputs": [
+    "apps/web/public/hero-art/mode-lull-breaks-crown-mounting-encore.svg",
+    "apps/web/public/hero-art/mode-lull-breaks-crown-mounting-encore.svg.json"
+  ],
+  "warnings": []
+}

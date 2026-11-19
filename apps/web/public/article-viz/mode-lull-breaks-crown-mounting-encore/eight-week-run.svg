@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Mode Designs tracker score across eight weeks, 2026-W40 through 2026-W47: 98, 95, 72, 72, 70, 69, 68, 71</title>
+
+  <!-- Ceiling reference line at the W40 high of 98 -->
+  <line x1="130" y1="90" x2="1070" y2="90" stroke-dasharray="4 5" stroke-opacity="0.4"/>
+  <text x="1080" y="94" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">98</text>
+
+  <!-- Floor reference line at the W46 low of 68 -->
+  <line x1="130" y1="330" x2="1070" y2="330" stroke-dasharray="4 5" stroke-opacity="0.4"/>
+  <text x="1080" y="334" font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55">68</text>
+
+  <!-- Baseline axis -->
+  <line x1="130" y1="420" x2="1070" y2="420" stroke-opacity="0.3"/>
+
+  <!-- Weekly tick marks and labels: W40..W47 -->
+  <g stroke-opacity="0.3">
+    <line x1="150" y1="415" x2="150" y2="425"/>
+    <line x1="284" y1="415" x2="284" y2="425"/>
+    <line x1="418" y1="415" x2="418" y2="425"/>
+    <line x1="552" y1="415" x2="552" y2="425"/>
+    <line x1="686" y1="415" x2="686" y2="425"/>
+    <line x1="820" y1="415" x2="820" y2="425"/>
+    <line x1="954" y1="415" x2="954" y2="425"/>
+    <line x1="1050" y1="415" x2="1050" y2="425"/>
+  </g>
+  <g font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55" text-anchor="middle">
+    <text x="150" y="445">W40</text>
+    <text x="284" y="445">W41</text>
+    <text x="418" y="445">W42</text>
+    <text x="552" y="445">W43</text>
+    <text x="686" y="445">W44</text>
+    <text x="820" y="445">W45</text>
+    <text x="954" y="445">W46</text>
+    <text x="1050" y="445">W47</text>
+  </g>
+
+  <!-- Coral wash under the W40-W41 ceiling region, visual memory of the fall's start -->
+  <ellipse cx="220" cy="140" rx="180" ry="90" fill="oklch(0.68 0.165 28 / 0.08)" stroke="none"/>
+
+  <!-- Sparkline: 98, 95, 72, 72, 70, 69, 68, 71 mapped onto the 90(=98) to 420(=~65) y-range -->
+  <polyline
+    points="150,90 284,112 418,296 552,296 686,312 820,322 954,330 1050,304"
+    stroke="oklch(0.68 0.165 28)"
+    stroke-width="3"
+    fill="none"
+  />
+
+  <!-- Data point dots -->
+  <circle cx="150" cy="90" r="5" fill="oklch(0.68 0.165 28)" stroke="none"/>
+  <circle cx="284" cy="112" r="5" fill="oklch(0.68 0.165 28)" stroke="none"/>
+  <circle cx="418" cy="296" r="5" fill="oklch(0.68 0.165 28)" stroke="none"/>
+  <circle cx="552" cy="296" r="5" fill="oklch(0.68 0.165 28)" stroke="none"/>
+  <circle cx="686" cy="312" r="5" fill="oklch(0.68 0.165 28)" stroke="none"/>
+  <circle cx="820" cy="322" r="5" fill="oklch(0.68 0.165 28)" stroke="none"/>
+  <circle cx="954" cy="330" r="5" fill="oklch(0.68 0.165 28)" stroke="none"/>
+
+  <!-- Focal terminal dot: the W47 uptick, haloed -->
+  <circle cx="1050" cy="304" r="9" fill="oklch(0.68 0.165 28)" stroke="none"/>
+  <circle cx="1050" cy="304" r="17" fill="none" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.35" stroke-width="1.5"/>
+
+  <!-- Score value labels above each point -->
+  <g font-family="JetBrains Mono, monospace" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7" text-anchor="middle">
+    <text x="150" y="76">98</text>
+    <text x="284" y="98">95</text>
+    <text x="418" y="282">72</text>
+    <text x="552" y="282">72</text>
+    <text x="686" y="298">70</text>
+    <text x="820" y="308">69</text>
+    <text x="954" y="316">68</text>
+    <text x="1050" y="288" fill="oklch(0.68 0.165 28)" opacity="1">71</text>
+  </g>
+
+  <!-- Warm-bronze theme dot: upper right ornamental anchor -->
+  <circle cx="1148" cy="48" r="7" fill="oklch(0.80 0.135 75)" stroke="none" opacity="0.9"/>
+</svg>

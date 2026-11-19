@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Ladder chart comparing Mode Designs tracker scores: the 2026-W40 ceiling of 98, the 2026-W46 floor of 68, and the 2026-W47 reading of 71</title>
+
+  <!-- Baseline at score 0, scale 0-98 mapped across bar widths -->
+  <line x1="260" y1="360" x2="260" y2="70" stroke-opacity="0.3"/>
+
+  <!-- W40 ceiling bar: 98, full length -->
+  <text x="140" y="110" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.65">W40 ceiling</text>
+  <rect x="260" y="90" width="784" height="36" rx="4" stroke-opacity="0.4"/>
+  <text x="1060" y="114" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">98</text>
+
+  <!-- W46 floor bar: 68 -->
+  <text x="140" y="218" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.65">W46 floor</text>
+  <rect x="260" y="198" width="544" height="36" rx="4" stroke-opacity="0.4"/>
+  <text x="820" y="222" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7">68</text>
+
+  <!-- W47 bar: 71, coral, focal -->
+  <text x="140" y="326" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="end" opacity="0.9">W47 reading</text>
+  <rect x="260" y="306" width="568" height="36" rx="4" fill="oklch(0.68 0.165 28 / 0.15)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.85" stroke-width="2.5"/>
+  <text x="844" y="330" font-family="JetBrains Mono, monospace" font-size="14" fill="oklch(0.68 0.165 28)" stroke="none">71</text>
+
+  <!-- Bracket marking the 3-point rise from the floor -->
+  <line x1="804" y1="198" x2="804" y2="306" stroke-dasharray="3 4" stroke-opacity="0.4"/>
+  <text x="818" y="256" font-family="Newsreader, serif" font-style="italic" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">+3</text>
+
+  <!-- Bracket marking the 30-point fall from the ceiling to the floor -->
+  <line x1="1044" y1="90" x2="1044" y2="198" stroke-dasharray="3 4" stroke-opacity="0.4"/>
+  <text x="1058" y="148" font-family="Newsreader, serif" font-style="italic" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.6">-30</text>
+
+  <!-- Caption line -->
+  <text x="600" y="395" font-family="Newsreader, serif" font-style="italic" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">three points back, out of thirty lost</text>
+
+  <!-- Warm-bronze theme dot -->
+  <circle cx="1148" cy="42" r="7" fill="oklch(0.80 0.135 75)" stroke="none" opacity="0.9"/>
+</svg>

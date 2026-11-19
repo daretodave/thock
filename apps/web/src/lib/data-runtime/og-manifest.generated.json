@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "slug": "mode-lull-breaks-crown-mounting-encore",
+      "readTime": 6,
+      "frontmatter": {
+        "title": "Mode's vendor score broke its six-week lull — on news about a different board's mounting system",
+        "lede": "Mode Designs' row on thock's trends tracker rose from 68 to 71 in the 2026-W47 snapshot, its first uptick after six flat-to-falling weeks following the Summer 2026 group buy. The move came on a PC Gamer report that the Crown Mounting System debuting on Mode's Prologue is headed to a refreshed Encore — not on any news about Encore or Sonnet's own fulfillment backlog.",
+        "pillar": "trends",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "key-matrix-ghosting-deep-dive",
       "readTime": 8,
       "frontmatter": {
@@ -11109,5 +11119,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-11-18T11:39:26.611Z"
+  "generatedAt": "2026-11-19T10:03:44.468Z"
 }

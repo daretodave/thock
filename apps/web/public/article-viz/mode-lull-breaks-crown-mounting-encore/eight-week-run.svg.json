@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-11-19T00:00:00.000Z",
+  "commit": "6e8f254e65b0ae09587bfde66247147426548ca1",
+  "kind": "inline-viz",
+  "article_slug": "mode-lull-breaks-crown-mounting-encore",
+  "article_pillar": "trends",
+  "section_anchor": "six-weeks-in-a-row-then-a-tick",
+  "brief_summary": "A coral sparkline of Mode Designs' eight weekly tracker scores from 2026-W40 through 2026-W47, with dashed reference lines at the W40 ceiling (98) and the W46 floor (68), and a haloed focal dot on the final W47 point marking the first uptick in the run.",
+  "target": "apps/web/public/article-viz/mode-lull-breaks-crown-mounting-encore/eight-week-run.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "mode-lull-breaks-crown-mounting-encore.mdx § 'Six weeks in a row, then a tick' — 'The run, in order: 98 in 2026-W40, 95 in W41, 72 in W42, 72 in W43, 70 in W44, 69 in W45, 68 in W46, 71 in W47.'",
+    "data/trends/2026-W47.json — Mode Designs row, score 71, direction up, spark [98, 95, 72, 72, 70, 69, 68, 71]"
+  ],
+  "outputs": ["apps/web/public/article-viz/mode-lull-breaks-crown-mounting-encore/eight-week-run.svg"],
+  "warnings": []
+}

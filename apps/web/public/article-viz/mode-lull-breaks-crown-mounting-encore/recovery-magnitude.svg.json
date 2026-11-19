@@ -1,0 +1,23 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-11-19T00:00:00.000Z",
+  "commit": "6e8f254e65b0ae09587bfde66247147426548ca1",
+  "kind": "inline-viz",
+  "article_slug": "mode-lull-breaks-crown-mounting-encore",
+  "article_pillar": "trends",
+  "section_anchor": "the-charitable-read-the-skeptical-read",
+  "brief_summary": "A three-bar ladder chart comparing the W40 ceiling score (98), the W46 floor score (68), and the W47 reading (71), with dashed brackets labeled +3 (the W46-to-W47 rise) and -30 (the W40-to-W46 fall), making visually explicit how small the W47 recovery is against the preceding drop.",
+  "target": "apps/web/public/article-viz/mode-lull-breaks-crown-mounting-encore/recovery-magnitude.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "mode-lull-breaks-crown-mounting-encore.mdx § 'The charitable read, the skeptical read' — 'a three-point move off a 68 floor is a rounding error measured against the 30-point fall from 98 to 68 that preceded it.'",
+    "data/trends/2026-W40.json — Mode Designs score 98; data/trends/2026-W46.json — Mode Designs score 68; data/trends/2026-W47.json — Mode Designs score 71"
+  ],
+  "outputs": ["apps/web/public/article-viz/mode-lull-breaks-crown-mounting-encore/recovery-magnitude.svg"],
+  "warnings": []
+}

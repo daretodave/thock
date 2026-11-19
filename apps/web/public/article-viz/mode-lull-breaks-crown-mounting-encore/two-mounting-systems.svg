@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Two Mode Designs mounting systems and their board lineage: Mounting Block System on Sonnet, Crown Mounting System debuting on Prologue and headed to a refreshed Encore</title>
+
+  <!-- Left card: Mounting Block System, warm-grey, Sonnet-era -->
+  <rect x="90" y="90" width="460" height="300" rx="10" stroke-opacity="0.45"/>
+  <text x="320" y="140" font-family="IBM Plex Sans, sans-serif" font-size="18" font-weight="600" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">Mounting Block System</text>
+  <text x="320" y="168" font-family="Newsreader, serif" font-style="italic" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">Sonnet-era · in catalog since 2024</text>
+
+  <line x1="140" y1="195" x2="500" y2="195" stroke-opacity="0.25"/>
+
+  <g font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.75">
+    <text x="320" y="230" text-anchor="middle">EPU41 polymer blocks</text>
+    <text x="320" y="254" text-anchor="middle">capture the plate's tabs</text>
+    <text x="320" y="278" text-anchor="middle">in place of a gasket strip</text>
+  </g>
+
+  <rect x="190" y="320" width="260" height="34" rx="17" stroke-opacity="0.4"/>
+  <text x="320" y="342" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">board: Sonnet</text>
+
+  <!-- Right card: Crown Mounting System, coral, Prologue debut, headed to Encore -->
+  <rect x="650" y="90" width="460" height="300" rx="10" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.75" stroke-width="2.5"/>
+  <text x="880" y="140" font-family="IBM Plex Sans, sans-serif" font-size="18" font-weight="600" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">Crown Mounting System</text>
+  <text x="880" y="168" font-family="Newsreader, serif" font-style="italic" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle" opacity="0.8">debuted 2026-09-17 · Prologue launch</text>
+
+  <line x1="700" y1="195" x2="1060" y2="195" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.3"/>
+
+  <g font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.85">
+    <text x="880" y="230" text-anchor="middle">launched on Prologue at</text>
+    <text x="880" y="254" text-anchor="middle">98% preorders, from $349</text>
+    <text x="880" y="278" text-anchor="middle">PC Gamer: headed to Encore next</text>
+  </g>
+
+  <rect x="720" y="320" width="320" height="34" rx="17" fill="oklch(0.68 0.165 28 / 0.12)" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.75"/>
+  <text x="880" y="342" font-family="JetBrains Mono, monospace" font-size="12" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">boards: Prologue -&gt; Encore (reported)</text>
+
+  <!-- Connector showing these are two separate systems, not one lineage -->
+  <line x1="550" y1="240" x2="650" y2="240" stroke-dasharray="3 5" stroke-opacity="0.3"/>
+  <text x="600" y="228" font-family="Newsreader, serif" font-style="italic" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.55">not the same system</text>
+
+  <!-- Warm-bronze theme dot -->
+  <circle cx="1148" cy="40" r="7" fill="oklch(0.80 0.135 75)" stroke="none" opacity="0.9"/>
+</svg>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero - Mode Designs vendor-tracker score sparkline: a high ceiling at W40, a six-week staircase down to a floor at W46, then a small uptick at W47, plotted over a faint warm-grey keyboard side-profile silhouette</title>
+
+  <!-- Coral wash anchoring the visual center of gravity around the floor-to-uptick transition, the news event the piece covers -->
+  <ellipse cx="970" cy="600" rx="230" ry="140" fill="oklch(0.68 0.165 28 / 0.08)" stroke="none"/>
+
+  <!-- Ceiling reference line at the W40 high (score 98) -->
+  <line x1="110" y1="190" x2="1090" y2="190" stroke-dasharray="4 5" stroke-opacity="0.4"/>
+  <circle cx="110" cy="190" r="4" fill="oklch(0.78 0.005 90)" opacity="0.5"/>
+  <circle cx="1090" cy="190" r="4" fill="oklch(0.78 0.005 90)" opacity="0.5"/>
+
+  <!-- Floor reference line at the W46 low (score 68) -->
+  <line x1="110" y1="610" x2="1090" y2="610" stroke-dasharray="4 5" stroke-opacity="0.4"/>
+  <circle cx="110" cy="610" r="4" fill="oklch(0.78 0.005 90)" opacity="0.5"/>
+  <circle cx="1090" cy="610" r="4" fill="oklch(0.78 0.005 90)" opacity="0.5"/>
+
+  <!-- Baseline axis with weekly tick marks under the eight readings -->
+  <line x1="110" y1="670" x2="1090" y2="670" stroke-opacity="0.5"/>
+  <g stroke-opacity="0.35">
+    <line x1="150"  y1="670" x2="150"  y2="678"/>
+    <line x1="279"  y1="670" x2="279"  y2="678"/>
+    <line x1="407"  y1="670" x2="407"  y2="678"/>
+    <line x1="536"  y1="670" x2="536"  y2="678"/>
+    <line x1="664"  y1="670" x2="664"  y2="678"/>
+    <line x1="793"  y1="670" x2="793"  y2="678"/>
+    <line x1="921"  y1="670" x2="921"  y2="678"/>
+    <line x1="1050" y1="670" x2="1050" y2="678"/>
+  </g>
+
+  <!-- Area fill under the sparkline, single splash hue, low opacity -->
+  <path
+    d="
+      M 150 670
+      L 150 190
+      L 279 232
+      L 407 554
+      L 536 554
+      L 664 582
+      L 793 596
+      L 921 610
+      L 1050 568
+      L 1050 670
+      Z"
+    fill="oklch(0.68 0.165 28 / 0.12)" stroke="none"/>
+
+  <!-- The sparkline itself: eight weekly readings (2026-W40 through W47)
+       opening at a near-ceiling high, staircasing down for six weeks to
+       a floor, then ticking up slightly on the final reading. Values
+       98, 95, 72, 72, 70, 69, 68, 71. -->
+  <polyline
+    points="
+      150,190
+      279,232
+      407,554
+      536,554
+      664,582
+      793,596
+      921,610
+      1050,568"
+    stroke="oklch(0.68 0.165 28)"
+    stroke-width="3"
+    fill="none"/>
+
+  <!-- Interior readings, filled splash dots -->
+  <circle cx="150" cy="190" r="6" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.9"/>
+  <circle cx="279" cy="232" r="5" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.75"/>
+  <circle cx="407" cy="554" r="5" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.6"/>
+  <circle cx="536" cy="554" r="5" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.6"/>
+  <circle cx="664" cy="582" r="5" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.6"/>
+  <circle cx="793" cy="596" r="5" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.6"/>
+  <circle cx="921" cy="610" r="5" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.6"/>
+
+  <!-- Terminal reading: the W47 uptick that the piece is about, haloed
+       to mark it as the focal point without overstating its size -->
+  <circle cx="1050" cy="568" r="10" fill="oklch(0.68 0.165 28)" stroke="none"/>
+  <circle cx="1050" cy="568" r="18" fill="none" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.35" stroke-width="1.5"/>
+
+  <!-- Bronze theme dot, family ornamental anchor, upper-right margin -->
+  <circle cx="1165" cy="56" r="9" fill="oklch(0.80 0.135 75)" fill-opacity="0.85" stroke="none"/>
+
+  <!-- Secondary motif: a low, wide keyboard side-profile silhouette
+       grounding the chart, reduced opacity, sitting entirely below the
+       baseline and clear of the sparkline's path. A simplified case
+       body with a typing-angle wedge and a thin row of keycap deck
+       gaps along the top edge. -->
+  <g opacity="0.3">
+    <path d="
+      M 170 740
+      L 170 712
+      L 230 696
+      L 970 696
+      L 1030 712
+      L 1030 740
+      Z"/>
+    <g stroke-opacity="0.7">
+      <line x1="260" y1="687" x2="260" y2="696"/>
+      <line x1="330" y1="687" x2="330" y2="696"/>
+      <line x1="400" y1="687" x2="400" y2="696"/>
+      <line x1="470" y1="687" x2="470" y2="696"/>
+      <line x1="540" y1="687" x2="540" y2="696"/>
+      <line x1="610" y1="687" x2="610" y2="696"/>
+      <line x1="680" y1="687" x2="680" y2="696"/>
+      <line x1="750" y1="687" x2="750" y2="696"/>
+      <line x1="820" y1="687" x2="820" y2="696"/>
+      <line x1="890" y1="687" x2="890" y2="696"/>
+    </g>
+  </g>
+</svg>

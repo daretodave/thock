@@ -1,0 +1,25 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-11-19T00:00:00.000Z",
+  "commit": "6e8f254e65b0ae09587bfde66247147426548ca1",
+  "kind": "inline-viz",
+  "article_slug": "mode-lull-breaks-crown-mounting-encore",
+  "article_pillar": "trends",
+  "section_anchor": "the-feature-isnt-new-its-just-new-to-encore",
+  "brief_summary": "Two side-by-side lineage cards contrasting Mode's two mounting systems: the warm-grey Mounting Block System (Sonnet, EPU41 polymer blocks over plate tabs, in catalog since 2024) and the coral Crown Mounting System (debuted on Prologue 2026-09-17 at 98% preorders from $349, now reported by PC Gamer as headed to a refreshed Encore). A dashed connector between the cards is labeled 'not the same system' to flag that this is not one lineage upgraded but two distinct systems on two different boards.",
+  "target": "apps/web/public/article-viz/mode-lull-breaks-crown-mounting-encore/two-mounting-systems.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "mode-lull-breaks-crown-mounting-encore.mdx § Callout 'Two mounting systems, not one upgraded' — 'Mode now has two distinct mounting technologies in its catalog: the Mounting Block System, which has shipped on Sonnet since 2024, and the Crown Mounting System, which is newer and debuted on Prologue in September 2026.'",
+    "mode-lull-breaks-crown-mounting-encore.mdx § 'The feature isn't new — it's just new to Encore' — 'Mode calls the Mounting Block System: EPU41 polymer blocks that capture the plate's tabs in place of a silicone gasket strip'",
+    "data/trends/2026-W40.json — Mode Designs note: 'Prologue 98% preorders (from $349, Crown Mounting System) continue driving traffic a week after their Sept 17 launch'",
+    "data/trends/2026-W47.json — Mode Designs note: 'PC Gamer covered an upcoming Encore refresh built around Mode's new Crown Mounting System'"
+  ],
+  "outputs": ["apps/web/public/article-viz/mode-lull-breaks-crown-mounting-encore/two-mounting-systems.svg"],
+  "warnings": []
+}
