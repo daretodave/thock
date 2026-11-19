@@ -120,27 +120,10 @@ second+ instance that graduates this past the §4A "3+" bar.
 
 ## Acceptance
 
-- **A1** `scripts/stale-updated-at-check.mjs` exists, mirrors the
-  `og-coverage-check.mjs` shape (gate / `--write` / `--json`).
-- **A2** Gate mode flags a fixture article whose frontmatter
-  `updatedAt` predates its most recent non-self-referential
-  content commit, and passes a fixture article whose `updatedAt`
-  is current.
-- **A3** Gate mode does not re-flag an article whose only
-  post-`updatedAt` commit is a self-referential `updatedAt`-only
-  bump.
-- **A4** `--write` appends a `seo`-category `plan/AUDIT.md` row
-  per hit, deduplicated against existing pending rows.
-- **A5** `scripts/__tests__/stale-updated-at-check.test.mjs`
-  exercises A2/A3's three fixture cases, run via
-  `pnpm test:scripts`.
 - **A6** `skills/march.lanes.md`'s survey chain and
   `skills/digest.md`'s nightly breadth-check list both include
   the `--write` invocation, same best-effort / non-blocking
   contract as their sibling surveys.
-- **A7** No schema, component, route, or URL-contract change; no
-  change to `updatedAt` consumption in `buildJsonLd.ts` or any OG
-  meta call site.
 
 ## Open questions
 
@@ -148,47 +131,9 @@ None.
 
 ## Chunks
 
-Measure: 7 open · 0 closed · next A8
+Measure: 1 open · 6 closed · next A8
 
-- [ ] **10.1** `scripts/stale-updated-at-check.mjs` + fixture tests · M · closes A1, A2, A3, A4, A5, A7 · needs —
-  - New script mirroring `og-coverage-check.mjs`'s shape (gate /
-    `--write` / `--json` modes, dedup against existing pending
-    `plan/AUDIT.md` rows):
-    - For each article MDX file under
-      `apps/web/src/content/articles/`, walk `git log --format=%H%x00%cI
-      -- <path>` from newest to oldest, skipping any commit whose
-      diff on that file touches only the frontmatter `updatedAt`
-      field (a self-referential bump commit), to find the most
-      recent commit that changed the file's actual body or any
-      other frontmatter field. Compare that commit's date (date
-      granularity, not timestamp) against the file's current
-      frontmatter `updatedAt` date.
-    - A drift where the last non-self-referential content commit's
-      date is strictly after the frontmatter `updatedAt` date is a
-      flag.
-    - Gate mode (no args, or called from `pnpm verify`/`test:scripts`):
-      exit 1 printing every flagged `slug` + both dates if any hit,
-      exit 0 otherwise.
-    - `--write`: append one `seo`-category `plan/AUDIT.md` row per
-      hit, deduplicated against existing pending rows, same
-      contract as `og-coverage-check.mjs --write`.
-    - `--json`: `{ stale: [{ slug, updatedAt, lastContentCommitAt }]
-      }`.
-    - No change to `updatedAt` consumption anywhere (`buildJsonLd.ts`,
-      any OG meta call site) — detection only (A7).
-  - `scripts/__tests__/stale-updated-at-check.test.mjs`, mirroring
-    `scripts/__tests__/og-coverage-check.test.mjs`'s fixture-repo
-    approach (a scratch git repo with controlled commits, since the
-    check reads real git history):
-    - A fixture article whose frontmatter `updatedAt` predates a
-      later content-changing commit → flagged (A2).
-    - A fixture article whose `updatedAt` is already current (no
-      content commit after it) → clean (A2).
-    - A fixture article whose only post-`updatedAt` commit is a
-      self-referential `updatedAt`-only bump → not re-flagged (A3).
-    - Runs via the existing `pnpm test:scripts` leg — no new verify
-      leg (A5).
-- [ ] **10.2** Wire `--write` into march's survey chain and digest's nightly breadth check · S · closes A6 · needs 10.1
+- [ ] **10.2** Wire `--write` into march's survey chain and digest's nightly breadth check · S · closes A6 · needs —
   - `skills/march.lanes.md`'s survey chain (the `empty-queue-refill-post-phase-30`
     lane): add `node scripts/stale-updated-at-check.mjs --write`
     alongside `article-internal-consistency-check.mjs` and
