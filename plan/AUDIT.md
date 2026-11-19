@@ -1428,3 +1428,1082 @@
 - article-a: apps/web/src/content/articles/mode-lull-breaks-crown-mounting-encore.mdx
 - article-b: apps/web/src/content/articles/vendor-first-customs.mdx
 - action: add [vendor-first-customs](/article/vendor-first-customs) to mode-lull-breaks-crown-mounting-encore body, or vice versa
+
+### [ ] [newsletter] [4.0] Weekly digest — issue 015 due (7 days since issue 14)
+- category: content-gaps
+- filed: 2026-11-19 by newsletter-gap-survey.mjs
+- impact: 5 (newsletter archive going stale reduces /newsletter value and reader trust in cadence)
+- ease: 8 (content-curator weekly round-up: 5 pillar picks + tracker insight)
+- score: 4.0 (impact × ease / 10)
+- next: /ship-content → newsletter type (weekly round-up, 5 pillar picks, tracker insight)
+- last-issue: 2026-11-12 (thock-weekly-014)
+- days-since: 7
+- issue: [mirror-failed: 2026-11-19]
+> Filed 2026-11-19 by newsletter-gap-survey.mjs. 7 days since issue 14. Threshold: ≥7 calendar days.
+
+### [ ] [seo] [5.4] 75-percent-default frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — 75-percent-default
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-08-05 even though the content last changed 2026-08-30)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/75-percent-default.mdx
+- updatedAt: 2026-08-05
+- lastContentCommitAt: 2026-08-30
+- action: bump updatedAt in 75-percent-default.mdx's frontmatter to 2026-08-30 (or later)
+
+### [ ] [seo] [5.4] acoustic-spec-rise frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — acoustic-spec-rise
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-05-24 even though the content last changed 2026-06-20)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/acoustic-spec-rise.mdx
+- updatedAt: 2026-05-24
+- lastContentCommitAt: 2026-06-20
+- action: bump updatedAt in acoustic-spec-rise.mdx's frontmatter to 2026-06-20 (or later)
+
+### [ ] [seo] [5.4] alice-layout-decline frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — alice-layout-decline
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-06-17 even though the content last changed 2026-06-20)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/alice-layout-decline.mdx
+- updatedAt: 2026-06-17
+- lastContentCommitAt: 2026-06-20
+- action: bump updatedAt in alice-layout-decline.mdx's frontmatter to 2026-06-20 (or later)
+
+### [ ] [seo] [5.4] alice-layout-recovery frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — alice-layout-recovery
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-10-18 even though the content last changed 2026-10-22)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/alice-layout-recovery.mdx
+- updatedAt: 2026-10-18
+- lastContentCommitAt: 2026-10-22
+- action: bump updatedAt in alice-layout-recovery.mdx's frontmatter to 2026-10-22 (or later)
+
+### [ ] [seo] [5.4] artisan-keycaps-buying-guide frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — artisan-keycaps-buying-guide
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-10-09 even though the content last changed 2026-10-25)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/artisan-keycaps-buying-guide.mdx
+- updatedAt: 2026-10-09
+- lastContentCommitAt: 2026-10-25
+- action: bump updatedAt in artisan-keycaps-buying-guide.mdx's frontmatter to 2026-10-25 (or later)
+
+### [ ] [seo] [5.4] aurora-glow-theme-build frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — aurora-glow-theme-build
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-11-07 even though the content last changed 2026-11-10)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/aurora-glow-theme-build.mdx
+- updatedAt: 2026-11-07
+- lastContentCommitAt: 2026-11-10
+- action: bump updatedAt in aurora-glow-theme-build.mdx's frontmatter to 2026-11-10 (or later)
+
+### [ ] [seo] [5.4] beginners-switch-buying-guide frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — beginners-switch-buying-guide
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-06-07 even though the content last changed 2026-08-23)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/beginners-switch-buying-guide.mdx
+- updatedAt: 2026-06-07
+- lastContentCommitAt: 2026-08-23
+- action: bump updatedAt in beginners-switch-buying-guide.mdx's frontmatter to 2026-08-23 (or later)
+
+### [ ] [seo] [5.4] bento-box-theme-build frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — bento-box-theme-build
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-09-22 even though the content last changed 2026-09-26)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/bento-box-theme-build.mdx
+- updatedAt: 2026-09-22
+- lastContentCommitAt: 2026-09-26
+- action: bump updatedAt in bento-box-theme-build.mdx's frontmatter to 2026-09-26 (or later)
+
+### [ ] [seo] [5.4] brass-weight-mod frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — brass-weight-mod
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-07-06 even though the content last changed 2026-07-30)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/brass-weight-mod.mdx
+- updatedAt: 2026-07-06
+- lastContentCommitAt: 2026-07-30
+- action: bump updatedAt in brass-weight-mod.mdx's frontmatter to 2026-07-30 (or later)
+
+### [ ] [seo] [5.4] buckling-spring-deep-dive frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — buckling-spring-deep-dive
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-08-13 even though the content last changed 2026-10-24)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/buckling-spring-deep-dive.mdx
+- updatedAt: 2026-08-13
+- lastContentCommitAt: 2026-10-24
+- action: bump updatedAt in buckling-spring-deep-dive.mdx's frontmatter to 2026-10-24 (or later)
+
+### [ ] [seo] [5.4] cannonkeys-mass80-extras-restock frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — cannonkeys-mass80-extras-restock
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-10-12 even though the content last changed 2026-10-25)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/cannonkeys-mass80-extras-restock.mdx
+- updatedAt: 2026-10-12
+- lastContentCommitAt: 2026-10-25
+- action: bump updatedAt in cannonkeys-mass80-extras-restock.mdx's frontmatter to 2026-10-25 (or later)
+
+### [ ] [seo] [5.4] case-materials-compared frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — case-materials-compared
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-07-08 even though the content last changed 2026-07-30)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/case-materials-compared.mdx
+- updatedAt: 2026-07-08
+- lastContentCommitAt: 2026-07-30
+- action: bump updatedAt in case-materials-compared.mdx's frontmatter to 2026-07-30 (or later)
+
+### [ ] [seo] [5.4] cherry-mx2a-revision frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — cherry-mx2a-revision
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-07-05 even though the content last changed 2026-08-08)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/cherry-mx2a-revision.mdx
+- updatedAt: 2026-07-05
+- lastContentCommitAt: 2026-08-08
+- action: bump updatedAt in cherry-mx2a-revision.mdx's frontmatter to 2026-08-08 (or later)
+
+### [ ] [seo] [5.4] cherry-tracker-slide-keychron-kickstarter-delivers frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — cherry-tracker-slide-keychron-kickstarter-delivers
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-08-30 even though the content last changed 2026-09-04)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/cherry-tracker-slide-keychron-kickstarter-delivers.mdx
+- updatedAt: 2026-08-30
+- lastContentCommitAt: 2026-09-04
+- action: bump updatedAt in cherry-tracker-slide-keychron-kickstarter-delivers.mdx's frontmatter to 2026-09-04 (or later)
+
+### [ ] [seo] [5.4] cherry-xtrfy-tmr-pivot frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — cherry-xtrfy-tmr-pivot
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-07-30 even though the content last changed 2026-08-26)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/cherry-xtrfy-tmr-pivot.mdx
+- updatedAt: 2026-07-30
+- lastContentCommitAt: 2026-08-26
+- action: bump updatedAt in cherry-xtrfy-tmr-pivot.mdx's frontmatter to 2026-08-26 (or later)
+
+### [ ] [seo] [5.4] clicky-switches-deep-dive frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — clicky-switches-deep-dive
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-07-15 even though the content last changed 2026-08-01)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/clicky-switches-deep-dive.mdx
+- updatedAt: 2026-07-15
+- lastContentCommitAt: 2026-08-01
+- action: bump updatedAt in clicky-switches-deep-dive.mdx's frontmatter to 2026-08-01 (or later)
+
+### [ ] [seo] [5.4] computex-2026-keyboard-highlights frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — computex-2026-keyboard-highlights
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-06-17 even though the content last changed 2026-08-09)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/computex-2026-keyboard-highlights.mdx
+- updatedAt: 2026-06-17
+- lastContentCommitAt: 2026-08-09
+- action: bump updatedAt in computex-2026-keyboard-highlights.mdx's frontmatter to 2026-08-09 (or later)
+
+### [ ] [seo] [5.4] custom-keyboard-kit-buyers-guide frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — custom-keyboard-kit-buyers-guide
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-07-14 even though the content last changed 2026-07-30)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/custom-keyboard-kit-buyers-guide.mdx
+- updatedAt: 2026-07-14
+- lastContentCommitAt: 2026-07-30
+- action: bump updatedAt in custom-keyboard-kit-buyers-guide.mdx's frontmatter to 2026-07-30 (or later)
+
+### [ ] [seo] [5.4] dcs-grass-valley-decline frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — dcs-grass-valley-decline
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-07-08 even though the content last changed 2026-07-30)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/dcs-grass-valley-decline.mdx
+- updatedAt: 2026-07-08
+- lastContentCommitAt: 2026-07-30
+- action: bump updatedAt in dcs-grass-valley-decline.mdx's frontmatter to 2026-07-30 (or later)
+
+### [ ] [seo] [5.4] dcs-olivetti-comeback frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — dcs-olivetti-comeback
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-05-24 even though the content last changed 2026-07-30)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/dcs-olivetti-comeback.mdx
+- updatedAt: 2026-05-24
+- lastContentCommitAt: 2026-07-30
+- action: bump updatedAt in dcs-olivetti-comeback.mdx's frontmatter to 2026-07-30 (or later)
+
+### [ ] [seo] [5.4] divinikey-dcs-dolch-group-buy frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — divinikey-dcs-dolch-group-buy
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-08-23 even though the content last changed 2026-10-14)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/divinikey-dcs-dolch-group-buy.mdx
+- updatedAt: 2026-08-23
+- lastContentCommitAt: 2026-10-14
+- action: bump updatedAt in divinikey-dcs-dolch-group-buy.mdx's frontmatter to 2026-10-14 (or later)
+
+### [ ] [seo] [5.4] divinikey-gmk-cyl-orange-alert-group-buy frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — divinikey-gmk-cyl-orange-alert-group-buy
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-09-02 even though the content last changed 2026-10-14)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/divinikey-gmk-cyl-orange-alert-group-buy.mdx
+- updatedAt: 2026-09-02
+- lastContentCommitAt: 2026-10-14
+- action: bump updatedAt in divinikey-gmk-cyl-orange-alert-group-buy.mdx's frontmatter to 2026-10-14 (or later)
+
+### [ ] [seo] [5.4] drop-holy-panda-x-deep-dive frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — drop-holy-panda-x-deep-dive
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-06-17 even though the content last changed 2026-07-21)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/drop-holy-panda-x-deep-dive.mdx
+- updatedAt: 2026-06-17
+- lastContentCommitAt: 2026-07-21
+- action: bump updatedAt in drop-holy-panda-x-deep-dive.mdx's frontmatter to 2026-07-21 (or later)
+
+### [ ] [seo] [5.4] durock-t1-deep-dive frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — durock-t1-deep-dive
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-07-17 even though the content last changed 2026-08-24)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/durock-t1-deep-dive.mdx
+- updatedAt: 2026-07-17
+- lastContentCommitAt: 2026-08-24
+- action: bump updatedAt in durock-t1-deep-dive.mdx's frontmatter to 2026-08-24 (or later)
+
+### [ ] [seo] [5.4] frankenswitching-explained frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — frankenswitching-explained
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-10-21 even though the content last changed 2026-10-25)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/frankenswitching-explained.mdx
+- updatedAt: 2026-10-21
+- lastContentCommitAt: 2026-10-25
+- action: bump updatedAt in frankenswitching-explained.mdx's frontmatter to 2026-10-25 (or later)
+
+### [ ] [seo] [5.4] gateron-ink-housings-deep-dive frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — gateron-ink-housings-deep-dive
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-10-24 even though the content last changed 2026-10-28)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/gateron-ink-housings-deep-dive.mdx
+- updatedAt: 2026-10-24
+- lastContentCommitAt: 2026-10-28
+- action: bump updatedAt in gateron-ink-housings-deep-dive.mdx's frontmatter to 2026-10-28 (or later)
+
+### [ ] [seo] [5.4] gateron-lanes-tactile-deep-dive frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — gateron-lanes-tactile-deep-dive
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-07-08 even though the content last changed 2026-08-23)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/gateron-lanes-tactile-deep-dive.mdx
+- updatedAt: 2026-07-08
+- lastContentCommitAt: 2026-08-23
+- action: bump updatedAt in gateron-lanes-tactile-deep-dive.mdx's frontmatter to 2026-08-23 (or later)
+
+### [ ] [seo] [5.4] gateron-magnetic-jade-deep-dive frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — gateron-magnetic-jade-deep-dive
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-08-21 even though the content last changed 2026-08-24)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/gateron-magnetic-jade-deep-dive.mdx
+- updatedAt: 2026-08-21
+- lastContentCommitAt: 2026-08-24
+- action: bump updatedAt in gateron-magnetic-jade-deep-dive.mdx's frontmatter to 2026-08-24 (or later)
+
+### [ ] [seo] [5.4] gateron-magnetic-jade-sensing-backfill frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — gateron-magnetic-jade-sensing-backfill
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-11-09 even though the content last changed 2026-11-12)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/gateron-magnetic-jade-sensing-backfill.mdx
+- updatedAt: 2026-11-09
+- lastContentCommitAt: 2026-11-12
+- action: bump updatedAt in gateron-magnetic-jade-sensing-backfill.mdx's frontmatter to 2026-11-12 (or later)
+
+### [ ] [seo] [5.4] gazzew-boba-family-deep-dive frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — gazzew-boba-family-deep-dive
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-07-27 even though the content last changed 2026-10-24)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/gazzew-boba-family-deep-dive.mdx
+- updatedAt: 2026-07-27
+- lastContentCommitAt: 2026-10-24
+- action: bump updatedAt in gazzew-boba-family-deep-dive.mdx's frontmatter to 2026-10-24 (or later)
+
+### [ ] [seo] [5.4] gazzew-boba-u4t-deep-dive frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — gazzew-boba-u4t-deep-dive
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-07-23 even though the content last changed 2026-08-26)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/gazzew-boba-u4t-deep-dive.mdx
+- updatedAt: 2026-07-23
+- lastContentCommitAt: 2026-08-26
+- action: bump updatedAt in gazzew-boba-u4t-deep-dive.mdx's frontmatter to 2026-08-26 (or later)
+
+### [ ] [seo] [5.4] gmk-cyl-greg-2-group-buy frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — gmk-cyl-greg-2-group-buy
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-07-17 even though the content last changed 2026-10-14)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/gmk-cyl-greg-2-group-buy.mdx
+- updatedAt: 2026-07-17
+- lastContentCommitAt: 2026-10-14
+- action: bump updatedAt in gmk-cyl-greg-2-group-buy.mdx's frontmatter to 2026-10-14 (or later)
+
+### [ ] [seo] [5.4] gmk-cyl-ishtar-r2-group-buy frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — gmk-cyl-ishtar-r2-group-buy
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-07-17 even though the content last changed 2026-10-14)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/gmk-cyl-ishtar-r2-group-buy.mdx
+- updatedAt: 2026-07-17
+- lastContentCommitAt: 2026-10-14
+- action: bump updatedAt in gmk-cyl-ishtar-r2-group-buy.mdx's frontmatter to 2026-10-14 (or later)
+
+### [ ] [seo] [5.4] gmk-cyl-just-beachy-group-buy-opens frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — gmk-cyl-just-beachy-group-buy-opens
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-08-12 even though the content last changed 2026-10-14)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/gmk-cyl-just-beachy-group-buy-opens.mdx
+- updatedAt: 2026-08-12
+- lastContentCommitAt: 2026-10-14
+- action: bump updatedAt in gmk-cyl-just-beachy-group-buy-opens.mdx's frontmatter to 2026-10-14 (or later)
+
+### [ ] [seo] [5.4] gmk-cyl-king-of-the-seas-group-buy frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — gmk-cyl-king-of-the-seas-group-buy
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-07-17 even though the content last changed 2026-10-14)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/gmk-cyl-king-of-the-seas-group-buy.mdx
+- updatedAt: 2026-07-17
+- lastContentCommitAt: 2026-10-14
+- action: bump updatedAt in gmk-cyl-king-of-the-seas-group-buy.mdx's frontmatter to 2026-10-14 (or later)
+
+### [ ] [seo] [5.4] gmk-cyl-masterpiece-r2-group-buy frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — gmk-cyl-masterpiece-r2-group-buy
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-07-17 even though the content last changed 2026-10-14)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/gmk-cyl-masterpiece-r2-group-buy.mdx
+- updatedAt: 2026-07-17
+- lastContentCommitAt: 2026-10-14
+- action: bump updatedAt in gmk-cyl-masterpiece-r2-group-buy.mdx's frontmatter to 2026-10-14 (or later)
+
+### [ ] [seo] [5.4] gmk-cyl-pandemonium-group-buy frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — gmk-cyl-pandemonium-group-buy
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-07-17 even though the content last changed 2026-10-14)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/gmk-cyl-pandemonium-group-buy.mdx
+- updatedAt: 2026-07-17
+- lastContentCommitAt: 2026-10-14
+- action: bump updatedAt in gmk-cyl-pandemonium-group-buy.mdx's frontmatter to 2026-10-14 (or later)
+
+### [ ] [seo] [5.4] gmk-cyl-prussian-alert frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — gmk-cyl-prussian-alert
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-07-24 even though the content last changed 2026-10-14)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/gmk-cyl-prussian-alert.mdx
+- updatedAt: 2026-07-24
+- lastContentCommitAt: 2026-10-14
+- action: bump updatedAt in gmk-cyl-prussian-alert.mdx's frontmatter to 2026-10-14 (or later)
+
+### [ ] [seo] [5.4] gmk-cyl-ramune-group-buy frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — gmk-cyl-ramune-group-buy
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-07-17 even though the content last changed 2026-10-14)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/gmk-cyl-ramune-group-buy.mdx
+- updatedAt: 2026-07-17
+- lastContentCommitAt: 2026-10-14
+- action: bump updatedAt in gmk-cyl-ramune-group-buy.mdx's frontmatter to 2026-10-14 (or later)
+
+### [ ] [seo] [5.4] gmk-cyl-red-devils-r2-comeback frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — gmk-cyl-red-devils-r2-comeback
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-09-10 even though the content last changed 2026-10-01)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/gmk-cyl-red-devils-r2-comeback.mdx
+- updatedAt: 2026-09-10
+- lastContentCommitAt: 2026-10-01
+- action: bump updatedAt in gmk-cyl-red-devils-r2-comeback.mdx's frontmatter to 2026-10-01 (or later)
+
+### [ ] [seo] [5.4] gmk-cyl-selene-group-buy frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — gmk-cyl-selene-group-buy
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-07-24 even though the content last changed 2026-10-14)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/gmk-cyl-selene-group-buy.mdx
+- updatedAt: 2026-07-24
+- lastContentCommitAt: 2026-10-14
+- action: bump updatedAt in gmk-cyl-selene-group-buy.mdx's frontmatter to 2026-10-14 (or later)
+
+### [ ] [seo] [5.4] gmk-cyl-zombie-group-buy frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — gmk-cyl-zombie-group-buy
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-10-25 even though the content last changed 2026-10-26)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/gmk-cyl-zombie-group-buy.mdx
+- updatedAt: 2026-10-25
+- lastContentCommitAt: 2026-10-26
+- action: bump updatedAt in gmk-cyl-zombie-group-buy.mdx's frontmatter to 2026-10-26 (or later)
+
+### [ ] [seo] [5.4] gsk-sweet-nightmare-group-buy frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — gsk-sweet-nightmare-group-buy
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-07-07 even though the content last changed 2026-10-14)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/gsk-sweet-nightmare-group-buy.mdx
+- updatedAt: 2026-07-07
+- lastContentCommitAt: 2026-10-14
+- action: bump updatedAt in gsk-sweet-nightmare-group-buy.mdx's frontmatter to 2026-10-14 (or later)
+
+### [ ] [seo] [5.4] hall-effect-mainstream frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — hall-effect-mainstream
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-07-17 even though the content last changed 2026-08-09)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/hall-effect-mainstream.mdx
+- updatedAt: 2026-07-17
+- lastContentCommitAt: 2026-08-09
+- action: bump updatedAt in hall-effect-mainstream.mdx's frontmatter to 2026-08-09 (or later)
+
+### [ ] [seo] [5.4] hall-effect-rapid-trigger-plateau frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — hall-effect-rapid-trigger-plateau
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-08-22 even though the content last changed 2026-08-25)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/hall-effect-rapid-trigger-plateau.mdx
+- updatedAt: 2026-08-22
+- lastContentCommitAt: 2026-08-25
+- action: bump updatedAt in hall-effect-rapid-trigger-plateau.mdx's frontmatter to 2026-08-25 (or later)
+
+### [ ] [seo] [5.4] hall-effect-score-dips-wooting-ship-slips frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — hall-effect-score-dips-wooting-ship-slips
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-11-04 even though the content last changed 2026-11-12)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/hall-effect-score-dips-wooting-ship-slips.mdx
+- updatedAt: 2026-11-04
+- lastContentCommitAt: 2026-11-12
+- action: bump updatedAt in hall-effect-score-dips-wooting-ship-slips.mdx's frontmatter to 2026-11-12 (or later)
+
+### [ ] [seo] [5.4] hmx-cloud-deep-dive frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — hmx-cloud-deep-dive
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-08-12 even though the content last changed 2026-10-24)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/hmx-cloud-deep-dive.mdx
+- updatedAt: 2026-08-12
+- lastContentCommitAt: 2026-10-24
+- action: bump updatedAt in hmx-cloud-deep-dive.mdx's frontmatter to 2026-10-24 (or later)
+
+### [ ] [seo] [5.4] holee-mod-explained frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — holee-mod-explained
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-07-31 even though the content last changed 2026-08-30)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/holee-mod-explained.mdx
+- updatedAt: 2026-07-31
+- lastContentCommitAt: 2026-08-30
+- action: bump updatedAt in holee-mod-explained.mdx's frontmatter to 2026-08-30 (or later)
+
+### [ ] [seo] [5.4] how-keycaps-are-made-deep-dive frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — how-keycaps-are-made-deep-dive
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-08-08 even though the content last changed 2026-08-30)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/how-keycaps-are-made-deep-dive.mdx
+- updatedAt: 2026-08-08
+- lastContentCommitAt: 2026-08-30
+- action: bump updatedAt in how-keycaps-are-made-deep-dive.mdx's frontmatter to 2026-08-30 (or later)
+
+### [ ] [seo] [5.4] how-to-evaluate-a-group-buy frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — how-to-evaluate-a-group-buy
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-10-31 even though the content last changed 2026-11-07)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/how-to-evaluate-a-group-buy.mdx
+- updatedAt: 2026-10-31
+- lastContentCommitAt: 2026-11-07
+- action: bump updatedAt in how-to-evaluate-a-group-buy.mdx's frontmatter to 2026-11-07 (or later)
+
+### [ ] [seo] [5.4] key-matrix-ghosting-deep-dive frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — key-matrix-ghosting-deep-dive
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-11-13 even though the content last changed 2026-11-18)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/key-matrix-ghosting-deep-dive.mdx
+- updatedAt: 2026-11-13
+- lastContentCommitAt: 2026-11-18
+- action: bump updatedAt in key-matrix-ghosting-deep-dive.mdx's frontmatter to 2026-11-18 (or later)
+
+### [ ] [seo] [5.4] keyboard-acoustics-deep-dive frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — keyboard-acoustics-deep-dive
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-07-26 even though the content last changed 2026-08-08)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/keyboard-acoustics-deep-dive.mdx
+- updatedAt: 2026-07-26
+- lastContentCommitAt: 2026-08-08
+- action: bump updatedAt in keyboard-acoustics-deep-dive.mdx's frontmatter to 2026-08-08 (or later)
+
+### [ ] [seo] [5.4] keyboard-cables-compared frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — keyboard-cables-compared
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-07-16 even though the content last changed 2026-07-30)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/keyboard-cables-compared.mdx
+- updatedAt: 2026-07-16
+- lastContentCommitAt: 2026-07-30
+- action: bump updatedAt in keyboard-cables-compared.mdx's frontmatter to 2026-07-30 (or later)
+
+### [ ] [seo] [5.4] keyboard-layout-sizes-buying-guide frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — keyboard-layout-sizes-buying-guide
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-08-22 even though the content last changed 2026-08-25)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/keyboard-layout-sizes-buying-guide.mdx
+- updatedAt: 2026-08-22
+- lastContentCommitAt: 2026-08-25
+- action: bump updatedAt in keyboard-layout-sizes-buying-guide.mdx's frontmatter to 2026-08-25 (or later)
+
+### [ ] [seo] [5.4] keycap-profiles-compared frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — keycap-profiles-compared
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-06-09 even though the content last changed 2026-07-31)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/keycap-profiles-compared.mdx
+- updatedAt: 2026-06-09
+- lastContentCommitAt: 2026-07-31
+- action: bump updatedAt in keycap-profiles-compared.mdx's frontmatter to 2026-07-31 (or later)
+
+### [ ] [seo] [5.4] keychron-q-ultra-zmk frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — keychron-q-ultra-zmk
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-06-10 even though the content last changed 2026-08-30)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/keychron-q-ultra-zmk.mdx
+- updatedAt: 2026-06-10
+- lastContentCommitAt: 2026-08-30
+- action: bump updatedAt in keychron-q-ultra-zmk.mdx's frontmatter to 2026-08-30 (or later)
+
+### [ ] [seo] [5.4] keychron-q16-he-8k-ceramic-tmr frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — keychron-q16-he-8k-ceramic-tmr
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-09-07 even though the content last changed 2026-09-16)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/keychron-q16-he-8k-ceramic-tmr.mdx
+- updatedAt: 2026-09-07
+- lastContentCommitAt: 2026-09-16
+- action: bump updatedAt in keychron-q16-he-8k-ceramic-tmr.mdx's frontmatter to 2026-09-16 (or later)
+
+### [ ] [seo] [5.4] leaf-spring-mount-deep-dive frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — leaf-spring-mount-deep-dive
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-08-04 even though the content last changed 2026-08-23)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/leaf-spring-mount-deep-dive.mdx
+- updatedAt: 2026-08-04
+- lastContentCommitAt: 2026-08-23
+- action: bump updatedAt in leaf-spring-mount-deep-dive.mdx's frontmatter to 2026-08-23 (or later)
+
+### [ ] [seo] [5.4] low-profile-keyboards-buying-guide frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — low-profile-keyboards-buying-guide
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-10-28 even though the content last changed 2026-11-11)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/low-profile-keyboards-buying-guide.mdx
+- updatedAt: 2026-10-28
+- lastContentCommitAt: 2026-11-11
+- action: bump updatedAt in low-profile-keyboards-buying-guide.mdx's frontmatter to 2026-11-11 (or later)
+
+### [ ] [seo] [5.4] lubing-101 frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — lubing-101
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-06-07 even though the content last changed 2026-07-30)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/lubing-101.mdx
+- updatedAt: 2026-06-07
+- lastContentCommitAt: 2026-07-30
+- action: bump updatedAt in lubing-101.mdx's frontmatter to 2026-07-30 (or later)
+
+### [ ] [seo] [5.4] lubing-switches-guide frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — lubing-switches-guide
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-06-05 even though the content last changed 2026-07-30)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/lubing-switches-guide.mdx
+- updatedAt: 2026-06-05
+- lastContentCommitAt: 2026-07-30
+- action: bump updatedAt in lubing-switches-guide.mdx's frontmatter to 2026-07-30 (or later)
+
+### [ ] [seo] [5.4] magnetic-switches-deep-dive frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — magnetic-switches-deep-dive
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-06-12 even though the content last changed 2026-10-24)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/magnetic-switches-deep-dive.mdx
+- updatedAt: 2026-06-12
+- lastContentCommitAt: 2026-10-24
+- action: bump updatedAt in magnetic-switches-deep-dive.mdx's frontmatter to 2026-10-24 (or later)
+
+### [ ] [seo] [5.4] mission-control-theme-build frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — mission-control-theme-build
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-09-06 even though the content last changed 2026-09-14)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/mission-control-theme-build.mdx
+- updatedAt: 2026-09-06
+- lastContentCommitAt: 2026-09-14
+- action: bump updatedAt in mission-control-theme-build.mdx's frontmatter to 2026-09-14 (or later)
+
+### [ ] [seo] [5.4] mixing-keycap-profiles frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — mixing-keycap-profiles
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-07-20 even though the content last changed 2026-08-24)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/mixing-keycap-profiles.mdx
+- updatedAt: 2026-07-20
+- lastContentCommitAt: 2026-08-24
+- action: bump updatedAt in mixing-keycap-profiles.mdx's frontmatter to 2026-08-24 (or later)
+
+### [ ] [seo] [5.4] mm-studio-class80-discontinued frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — mm-studio-class80-discontinued
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-10-25 even though the content last changed 2026-11-07)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/mm-studio-class80-discontinued.mdx
+- updatedAt: 2026-10-25
+- lastContentCommitAt: 2026-11-07
+- action: bump updatedAt in mm-studio-class80-discontinued.mdx's frontmatter to 2026-11-07 (or later)
+
+### [ ] [seo] [5.4] mode-lull-breaks-crown-mounting-encore frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — mode-lull-breaks-crown-mounting-encore
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-11-16 even though the content last changed 2026-11-19)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/mode-lull-breaks-crown-mounting-encore.mdx
+- updatedAt: 2026-11-16
+- lastContentCommitAt: 2026-11-19
+- action: bump updatedAt in mode-lull-breaks-crown-mounting-encore.mdx's frontmatter to 2026-11-19 (or later)
+
+### [ ] [seo] [5.4] mounting-styles-compared frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — mounting-styles-compared
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-08-23 even though the content last changed 2026-08-31)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/mounting-styles-compared.mdx
+- updatedAt: 2026-08-23
+- lastContentCommitAt: 2026-08-31
+- action: bump updatedAt in mounting-styles-compared.mdx's frontmatter to 2026-08-31 (or later)
+
+### [ ] [seo] [5.4] mt3-devtty-restock frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — mt3-devtty-restock
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-08-29 even though the content last changed 2026-09-13)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/mt3-devtty-restock.mdx
+- updatedAt: 2026-08-29
+- lastContentCommitAt: 2026-09-13
+- action: bump updatedAt in mt3-devtty-restock.mdx's frontmatter to 2026-09-13 (or later)
+
+### [ ] [seo] [5.4] o-ring-mod frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — o-ring-mod
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-06-11 even though the content last changed 2026-07-30)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/o-ring-mod.mdx
+- updatedAt: 2026-06-11
+- lastContentCommitAt: 2026-07-30
+- action: bump updatedAt in o-ring-mod.mdx's frontmatter to 2026-07-30 (or later)
+
+### [ ] [seo] [5.4] optical-switches-explained frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — optical-switches-explained
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-07-17 even though the content last changed 2026-10-24)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/optical-switches-explained.mdx
+- updatedAt: 2026-07-17
+- lastContentCommitAt: 2026-10-24
+- action: bump updatedAt in optical-switches-explained.mdx's frontmatter to 2026-10-24 (or later)
+
+### [ ] [seo] [5.4] pe-foam-mod frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — pe-foam-mod
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-06-07 even though the content last changed 2026-08-09)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/pe-foam-mod.mdx
+- updatedAt: 2026-06-07
+- lastContentCommitAt: 2026-08-09
+- action: bump updatedAt in pe-foam-mod.mdx's frontmatter to 2026-08-09 (or later)
+
+### [ ] [seo] [5.4] prototypist-vendor-spotlight frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — prototypist-vendor-spotlight
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-08-12 even though the content last changed 2026-08-29)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/prototypist-vendor-spotlight.mdx
+- updatedAt: 2026-08-12
+- lastContentCommitAt: 2026-08-29
+- action: bump updatedAt in prototypist-vendor-spotlight.mdx's frontmatter to 2026-08-29 (or later)
+
+### [ ] [seo] [5.4] rapid-trigger-firmware-deep-dive frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — rapid-trigger-firmware-deep-dive
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-09-02 even though the content last changed 2026-09-25)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/rapid-trigger-firmware-deep-dive.mdx
+- updatedAt: 2026-09-02
+- lastContentCommitAt: 2026-09-25
+- action: bump updatedAt in rapid-trigger-firmware-deep-dive.mdx's frontmatter to 2026-09-25 (or later)
+
+### [ ] [seo] [5.4] rapid-trigger-gaming-crossover frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — rapid-trigger-gaming-crossover
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-06-12 even though the content last changed 2026-07-30)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/rapid-trigger-gaming-crossover.mdx
+- updatedAt: 2026-06-12
+- lastContentCommitAt: 2026-07-30
+- action: bump updatedAt in rapid-trigger-gaming-crossover.mdx's frontmatter to 2026-07-30 (or later)
+
+### [ ] [seo] [5.4] retrobrighting-keycaps frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — retrobrighting-keycaps
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-06-22 even though the content last changed 2026-07-06)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/retrobrighting-keycaps.mdx
+- updatedAt: 2026-06-22
+- lastContentCommitAt: 2026-07-06
+- action: bump updatedAt in retrobrighting-keycaps.mdx's frontmatter to 2026-07-06 (or later)
+
+### [ ] [seo] [5.4] silent-switch-damping-deep-dive frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — silent-switch-damping-deep-dive
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-08-19 even though the content last changed 2026-08-26)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/silent-switch-damping-deep-dive.mdx
+- updatedAt: 2026-08-19
+- lastContentCommitAt: 2026-08-26
+- action: bump updatedAt in silent-switch-damping-deep-dive.mdx's frontmatter to 2026-08-26 (or later)
+
+### [ ] [seo] [5.4] sound-dampening-compared frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — sound-dampening-compared
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-06-08 even though the content last changed 2026-08-11)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/sound-dampening-compared.mdx
+- updatedAt: 2026-06-08
+- lastContentCommitAt: 2026-08-11
+- action: bump updatedAt in sound-dampening-compared.mdx's frontmatter to 2026-08-11 (or later)
+
+### [ ] [seo] [5.4] split-ergo-buyers-guide frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — split-ergo-buyers-guide
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-07-28 even though the content last changed 2026-07-30)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/split-ergo-buyers-guide.mdx
+- updatedAt: 2026-07-28
+- lastContentCommitAt: 2026-07-30
+- action: bump updatedAt in split-ergo-buyers-guide.mdx's frontmatter to 2026-07-30 (or later)
+
+### [ ] [seo] [5.4] split-ergo-cohort frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — split-ergo-cohort
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-05-24 even though the content last changed 2026-07-21)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/split-ergo-cohort.mdx
+- updatedAt: 2026-05-24
+- lastContentCommitAt: 2026-07-21
+- action: bump updatedAt in split-ergo-cohort.mdx's frontmatter to 2026-07-21 (or later)
+
+### [ ] [seo] [5.4] split-ergo-mechanics-deep-dive frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — split-ergo-mechanics-deep-dive
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-08-01 even though the content last changed 2026-08-23)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/split-ergo-mechanics-deep-dive.mdx
+- updatedAt: 2026-08-01
+- lastContentCommitAt: 2026-08-23
+- action: bump updatedAt in split-ergo-mechanics-deep-dive.mdx's frontmatter to 2026-08-23 (or later)
+
+### [ ] [seo] [5.4] split-ergo-parts-pairing frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — split-ergo-parts-pairing
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-08-26 even though the content last changed 2026-08-31)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/split-ergo-parts-pairing.mdx
+- updatedAt: 2026-08-26
+- lastContentCommitAt: 2026-08-31
+- action: bump updatedAt in split-ergo-parts-pairing.mdx's frontmatter to 2026-08-31 (or later)
+
+### [ ] [seo] [5.4] spring-swaps-explained frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — spring-swaps-explained
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-06-08 even though the content last changed 2026-07-14)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/spring-swaps-explained.mdx
+- updatedAt: 2026-06-08
+- lastContentCommitAt: 2026-07-14
+- action: bump updatedAt in spring-swaps-explained.mdx's frontmatter to 2026-07-14 (or later)
+
+### [ ] [seo] [5.4] stabilizer-servicing-guide frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — stabilizer-servicing-guide
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-06-09 even though the content last changed 2026-06-16)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/stabilizer-servicing-guide.mdx
+- updatedAt: 2026-06-09
+- lastContentCommitAt: 2026-06-16
+- action: bump updatedAt in stabilizer-servicing-guide.mdx's frontmatter to 2026-06-16 (or later)
+
+### [ ] [seo] [5.4] stabilizers-explained frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — stabilizers-explained
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-05-31 even though the content last changed 2026-07-30)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/stabilizers-explained.mdx
+- updatedAt: 2026-05-31
+- lastContentCommitAt: 2026-07-30
+- action: bump updatedAt in stabilizers-explained.mdx's frontmatter to 2026-07-30 (or later)
+
+### [ ] [seo] [5.4] switch-actuation-weight-buying-guide frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — switch-actuation-weight-buying-guide
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-10-01 even though the content last changed 2026-10-14)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/switch-actuation-weight-buying-guide.mdx
+- updatedAt: 2026-10-01
+- lastContentCommitAt: 2026-10-14
+- action: bump updatedAt in switch-actuation-weight-buying-guide.mdx's frontmatter to 2026-10-14 (or later)
+
+### [ ] [seo] [5.4] synthwave-tkl-theme-build frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — synthwave-tkl-theme-build
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-10-02 even though the content last changed 2026-10-24)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/synthwave-tkl-theme-build.mdx
+- updatedAt: 2026-10-02
+- lastContentCommitAt: 2026-10-24
+- action: bump updatedAt in synthwave-tkl-theme-build.mdx's frontmatter to 2026-10-24 (or later)
+
+### [ ] [seo] [5.4] tactile-stem-geometry-deep-dive frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — tactile-stem-geometry-deep-dive
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-10-15 even though the content last changed 2026-10-24)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/tactile-stem-geometry-deep-dive.mdx
+- updatedAt: 2026-10-15
+- lastContentCommitAt: 2026-10-24
+- action: bump updatedAt in tactile-stem-geometry-deep-dive.mdx's frontmatter to 2026-10-24 (or later)
+
+### [ ] [seo] [5.4] tape-mod frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — tape-mod
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-06-09 even though the content last changed 2026-06-15)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/tape-mod.mdx
+- updatedAt: 2026-06-09
+- lastContentCommitAt: 2026-06-15
+- action: bump updatedAt in tape-mod.mdx's frontmatter to 2026-06-15 (or later)
+
+### [ ] [seo] [5.4] tmr-switches-deep-dive frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — tmr-switches-deep-dive
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-10-14 even though the content last changed 2026-10-24)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/tmr-switches-deep-dive.mdx
+- updatedAt: 2026-10-14
+- lastContentCommitAt: 2026-10-24
+- action: bump updatedAt in tmr-switches-deep-dive.mdx's frontmatter to 2026-10-24 (or later)
+
+### [ ] [seo] [5.4] tmr-switches-five-week-climb frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — tmr-switches-five-week-climb
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-09-30 even though the content last changed 2026-10-15)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/tmr-switches-five-week-climb.mdx
+- updatedAt: 2026-09-30
+- lastContentCommitAt: 2026-10-15
+- action: bump updatedAt in tmr-switches-five-week-climb.mdx's frontmatter to 2026-10-15 (or later)
+
+### [ ] [seo] [5.4] topre-electrocapacitive-deep-dive frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — topre-electrocapacitive-deep-dive
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-07-15 even though the content last changed 2026-07-30)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/topre-electrocapacitive-deep-dive.mdx
+- updatedAt: 2026-07-15
+- lastContentCommitAt: 2026-07-30
+- action: bump updatedAt in topre-electrocapacitive-deep-dive.mdx's frontmatter to 2026-07-30 (or later)
+
+### [ ] [seo] [5.4] trends-tracker-preview frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — trends-tracker-preview
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-07-16 even though the content last changed 2026-07-21)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/trends-tracker-preview.mdx
+- updatedAt: 2026-07-16
+- lastContentCommitAt: 2026-07-21
+- action: bump updatedAt in trends-tracker-preview.mdx's frontmatter to 2026-07-21 (or later)
+
+### [ ] [seo] [5.4] typing-tests-lie frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — typing-tests-lie
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-06-08 even though the content last changed 2026-08-30)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/typing-tests-lie.mdx
+- updatedAt: 2026-06-08
+- lastContentCommitAt: 2026-08-30
+- action: bump updatedAt in typing-tests-lie.mdx's frontmatter to 2026-08-30 (or later)
+
+### [ ] [seo] [5.4] wooting-80he-plus-shipping-update frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — wooting-80he-plus-shipping-update
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-09-18 even though the content last changed 2026-09-29)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/wooting-80he-plus-shipping-update.mdx
+- updatedAt: 2026-09-18
+- lastContentCommitAt: 2026-09-29
+- action: bump updatedAt in wooting-80he-plus-shipping-update.mdx's frontmatter to 2026-09-29 (or later)
+
+### [ ] [seo] [5.4] wooting-rapid-trigger-head-start frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — wooting-rapid-trigger-head-start
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-09-19 even though the content last changed 2026-09-28)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/wooting-rapid-trigger-head-start.mdx
+- updatedAt: 2026-09-19
+- lastContentCommitAt: 2026-09-28
+- action: bump updatedAt in wooting-rapid-trigger-head-start.mdx's frontmatter to 2026-09-28 (or later)
+
+### [ ] [seo] [5.4] zmk-mainstream-shift frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — zmk-mainstream-shift
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-05-27 even though the content last changed 2026-07-22)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/zmk-mainstream-shift.mdx
+- updatedAt: 2026-05-27
+- lastContentCommitAt: 2026-07-22
+- action: bump updatedAt in zmk-mainstream-shift.mdx's frontmatter to 2026-07-22 (or later)
+
+### [ ] [seo] [5.4] zmk-wireless-split-firmware-guide frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-19 by stale-updated-at-check.mjs — zmk-wireless-split-firmware-guide
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-07-24 even though the content last changed 2026-07-28)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/zmk-wireless-split-firmware-guide.mdx
+- updatedAt: 2026-07-24
+- lastContentCommitAt: 2026-07-28
+- action: bump updatedAt in zmk-wireless-split-firmware-guide.mdx's frontmatter to 2026-07-28 (or later)
