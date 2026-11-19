@@ -430,6 +430,19 @@ whose linked `data/group-buys/*.json` record's status is `closed` or
 still read present-tense ("is live", "runs through <date>"). Deduplicates
 against existing AUDIT rows. If it exits non-zero, log and continue — the
 check is best-effort.
+
+Then run the stale-updatedAt mechanical check (spec 10, chunk 10.2):
+
+```bash
+node scripts/stale-updated-at-check.mjs --write
+```
+
+This files `seo` AUDIT rows (score 5.4) for articles whose frontmatter
+`updatedAt` predates the most recent commit that changed the article's
+actual body or other frontmatter fields — a drift that silently tells
+crawlers (`dateModified` JSON-LD, `article:modified_time` OG meta) that
+nothing changed. Deduplicates against existing AUDIT rows. If it exits
+non-zero, log and continue — the check is best-effort.
 Then fall through to Step 3c (expand).
 
 ## lane: expand-due-notes

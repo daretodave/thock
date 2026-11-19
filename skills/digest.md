@@ -88,6 +88,7 @@ its own cadence.
    node scripts/content-fact-audit.mjs --write
    node scripts/article-internal-consistency-check.mjs --write
    node scripts/group-buy-article-staleness-check.mjs --write
+   node scripts/stale-updated-at-check.mjs --write
    node scripts/truncation-call-site-check.mjs --write
    ```
 
