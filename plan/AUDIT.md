@@ -1383,7 +1383,7 @@
 - article-b: apps/web/src/content/articles/tmr-switches-deep-dive.mdx
 - action: add [tmr-switches-deep-dive](/article/tmr-switches-deep-dive) to key-matrix-ghosting-deep-dive body, or vice versa
 
-### [HOT PURSUIT] [content-gap] [7] trends pillar — 1 of ≥2 articles in last 30d
+### [x] [HOT PURSUIT] [content-gap] [7] trends pillar — 1 of ≥2 articles in last 30d — addressed in 9e9fdf73, closes #1088
 - category: content-gaps
 - impact: 8 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -1395,3 +1395,36 @@
 - next: /ship-content → trends pillar article
 - issue: #1088
 > Filed 2026-11-18 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+
+### [ ] [cross-links] [4.5] mode-lull-breaks-crown-mounting-encore ↔ 75-percent-default — no prose cross-link (same pillar, ≥2 shared tags: mode, trends-2026)
+- category: cross-links
+- filed: 2026-11-19 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: mode, trends-2026
+- article-a: apps/web/src/content/articles/mode-lull-breaks-crown-mounting-encore.mdx
+- article-b: apps/web/src/content/articles/75-percent-default.mdx
+- action: add [75-percent-default](/article/75-percent-default) to mode-lull-breaks-crown-mounting-encore body, or vice versa
+
+### [ ] [cross-links] [4.5] mode-lull-breaks-crown-mounting-encore ↔ prototypist-vendor-spotlight — no prose cross-link (same pillar, ≥2 shared tags: vendor, trends-2026)
+- category: cross-links
+- filed: 2026-11-19 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: vendor, trends-2026
+- article-a: apps/web/src/content/articles/mode-lull-breaks-crown-mounting-encore.mdx
+- article-b: apps/web/src/content/articles/prototypist-vendor-spotlight.mdx
+- action: add [prototypist-vendor-spotlight](/article/prototypist-vendor-spotlight) to mode-lull-breaks-crown-mounting-encore body, or vice versa
+
+### [ ] [cross-links] [4.5] mode-lull-breaks-crown-mounting-encore ↔ vendor-first-customs — no prose cross-link (same pillar, ≥2 shared tags: mode, vendor, trends-2026)
+- category: cross-links
+- filed: 2026-11-19 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: mode, vendor, trends-2026
+- article-a: apps/web/src/content/articles/mode-lull-breaks-crown-mounting-encore.mdx
+- article-b: apps/web/src/content/articles/vendor-first-customs.mdx
+- action: add [vendor-first-customs](/article/vendor-first-customs) to mode-lull-breaks-crown-mounting-encore body, or vice versa
