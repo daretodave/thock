@@ -22,7 +22,7 @@ condition> · max_age: 14d`, an optional `· fallback: release`):
 
 | # | Initiative | Spec | Status | Progress |
 |---|---|---|---|---|
-| 10 | Stale-`updatedAt` mechanical check | [10-stale-updated-at-mechanical-check.md](10-stale-updated-at-mechanical-check.md) |  | not chunked |
+| 10 | Stale-`updatedAt` mechanical check | [10-stale-updated-at-mechanical-check.md](10-stale-updated-at-mechanical-check.md) |  | 2 left |
 | 11 | Cloud prompt dispatch-summary lane gap | [11-march-yml-dispatch-summary-lane-gap.md](11-march-yml-dispatch-summary-lane-gap.md) |  | not chunked |
 
 ## Layout

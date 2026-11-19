@@ -150,4 +150,52 @@ None.
 
 Measure: 7 open · 0 closed · next A8
 
-Not chunked yet.
+- [ ] **10.1** `scripts/stale-updated-at-check.mjs` + fixture tests · M · closes A1, A2, A3, A4, A5, A7 · needs —
+  - New script mirroring `og-coverage-check.mjs`'s shape (gate /
+    `--write` / `--json` modes, dedup against existing pending
+    `plan/AUDIT.md` rows):
+    - For each article MDX file under
+      `apps/web/src/content/articles/`, walk `git log --format=%H%x00%cI
+      -- <path>` from newest to oldest, skipping any commit whose
+      diff on that file touches only the frontmatter `updatedAt`
+      field (a self-referential bump commit), to find the most
+      recent commit that changed the file's actual body or any
+      other frontmatter field. Compare that commit's date (date
+      granularity, not timestamp) against the file's current
+      frontmatter `updatedAt` date.
+    - A drift where the last non-self-referential content commit's
+      date is strictly after the frontmatter `updatedAt` date is a
+      flag.
+    - Gate mode (no args, or called from `pnpm verify`/`test:scripts`):
+      exit 1 printing every flagged `slug` + both dates if any hit,
+      exit 0 otherwise.
+    - `--write`: append one `seo`-category `plan/AUDIT.md` row per
+      hit, deduplicated against existing pending rows, same
+      contract as `og-coverage-check.mjs --write`.
+    - `--json`: `{ stale: [{ slug, updatedAt, lastContentCommitAt }]
+      }`.
+    - No change to `updatedAt` consumption anywhere (`buildJsonLd.ts`,
+      any OG meta call site) — detection only (A7).
+  - `scripts/__tests__/stale-updated-at-check.test.mjs`, mirroring
+    `scripts/__tests__/og-coverage-check.test.mjs`'s fixture-repo
+    approach (a scratch git repo with controlled commits, since the
+    check reads real git history):
+    - A fixture article whose frontmatter `updatedAt` predates a
+      later content-changing commit → flagged (A2).
+    - A fixture article whose `updatedAt` is already current (no
+      content commit after it) → clean (A2).
+    - A fixture article whose only post-`updatedAt` commit is a
+      self-referential `updatedAt`-only bump → not re-flagged (A3).
+    - Runs via the existing `pnpm test:scripts` leg — no new verify
+      leg (A5).
+- [ ] **10.2** Wire `--write` into march's survey chain and digest's nightly breadth check · S · closes A6 · needs 10.1
+  - `skills/march.lanes.md`'s survey chain (the `empty-queue-refill-post-phase-30`
+    lane): add `node scripts/stale-updated-at-check.mjs --write`
+    alongside `article-internal-consistency-check.mjs` and
+    `group-buy-article-staleness-check.mjs`, same best-effort /
+    non-blocking contract (non-zero exit logs and continues, never
+    blocks the march commit).
+  - `skills/digest.md`'s nightly breadth-check list: same
+    `--write` invocation, same contract as its siblings there.
+  - No script change in this chunk — 10.1's `--write` contract
+    already matches what both call sites expect.
