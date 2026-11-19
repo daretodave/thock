@@ -797,6 +797,22 @@ time you encounter a recurring class of design ambiguity.)
   category `plan/AUDIT.md` rows via `--write`, deduped by
   `file:line`. Runs via `--write` in `skills/digest.md`'s
   nightly breadth check alongside its siblings.
+- **Stale-`updatedAt` mechanical check (spec 10, absorbed
+  2026-11-19):** `scripts/stale-updated-at-check.mjs` diffs an
+  article's frontmatter `updatedAt` date against the most recent
+  git commit that changed its own body or other frontmatter
+  (walking back past self-referential `updatedAt`-only bump
+  commits to find the real last content edit), catching the
+  defect shape behind five independent reactive fixes: an edit
+  landing without bumping `updatedAt`, leaving `dateModified`
+  JSON-LD and `article:modified_time` OG meta
+  (`packages/seo/src/buildJsonLd.ts`) telling crawlers nothing
+  changed. Survey-chain only (corpus-wide git-log walk, not a
+  per-commit gate leg) — files `seo` category `plan/AUDIT.md`
+  rows via `--write`, deduped against existing pending rows.
+  Runs via `--write` in `skills/march.lanes.md`'s survey chain
+  and `skills/digest.md`'s nightly breadth check alongside their
+  siblings.
 
 ## Hard rules
 

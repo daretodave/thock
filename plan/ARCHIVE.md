@@ -93,3 +93,5 @@
 - 2026-11-18 · 09.3 · Digest nightly breadth check now files truncation-call-site hits · 7544a1f6..7544a1f6
 - 2026-11-18 · 09 · spec complete: Truncation-boundary mechanical survey · absorbed into plan/bearings.md · deleted in this commit
 - 2026-11-19 · 10.1 · stale-updated-at-check.mjs flags frontmatter updatedAt lagging the last content commit · 7401df32..7401df32
+- 2026-11-19 · 10.2 · Survey chain + digest now run the stale-updatedAt check · dcc8983b..dcc8983b
+- 2026-11-19 · 10 · spec complete: Stale-`updatedAt` mechanical check · absorbed into plan/bearings.md · deleted in this commit
