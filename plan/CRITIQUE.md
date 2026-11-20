@@ -1,18 +1,26 @@
 # Critique log
 
-> Last pass: 2026-11-10T09:45:00Z at commit b056da79
-> Pass count: 19
-> Iterate-bias category: external-critique (pass 19 fired 96 commits after pass 18 — scripted walk per UI: both, anonymous-only (no Chrome MCP on the cloud runner; ui-walk.mjs scripted walk via CDP, 14 screens, 0 automated findings). Reader visited 7 routes x 2 viewports (/, /news, /trends/tracker, /group-buys, /tools, /quiz/switch, /compare/switch); surfaced 1 candidate, self-assessment kept 0 (duplicate of the open pass-16 /trends/tracker Sleeper/Faller-magnitude finding — same root cause, new data; bumped that row's severity MED → HIGH in place instead of filing a new row, since it's now recurred unaddressed across 3 passes with a wider gap). Reader-tool artifact rate: 0% — the duplicate finding verified against component logic and `data/trends/2026-W46.json` row values before the bump.)
+> Last pass: 2026-11-20T08:27:23Z at commit ed0de5df
+> Pass count: 20
+> Pass 19 last pass: 2026-11-10T09:45:00Z at commit b056da79
 > Pass 18 last pass: 2026-11-06T00:16:44Z at commit 113926e9
 > Pass 17 last pass: 2026-11-05T16:09:48Z at commit 5ec23cdd
 > Pass 16 last pass: 2026-10-31T04:11:00Z at commit 6b73abed
 > Pass 13 last pass: 2026-10-27T23:31:41Z at commit a03ead8e
-> Pass 11 last pass: 2026-10-26T18:54:00Z at commit a01a911
 
 > External-observer feedback for thock. Populated by `/critique`,
 > drained by `/iterate`. See `skills/critique.md` for the contract.
 
 ## Pending
+
+### [LOW] /compare/switch — the three "OR TRY A PAIR" suggestions daisy-chain the same switch across adjacent rows
+- pass: 20 (commit ed0de5df)
+- viewport: desktop
+- category: comprehension
+- observation: `getSuggestedSwitchPairs` (`apps/web/src/lib/compare/suggested-switch-pairs.ts:52-60`) builds `representatives` (one switch per type, ordered by `TYPE_PRIORITY`) and pairs `representatives[i]` with `representatives[(i + 1) % representatives.length]` for each of the 3 suggestion slots — a deliberate consecutive-slice pattern (docstring, lines 13-19) chosen to guarantee cross-type diversity. The side effect: pair 0's second switch is always pair 1's first switch (and so on), so a reader scanning the three rows sees the same switch reappear back-to-back twice (e.g. "...vs Akko V3 Cream Blue Pro" then "Akko V3 Cream Blue Pro vs...") rather than three independent comparisons.
+- evidence: `apps/web/src/lib/compare/suggested-switch-pairs.ts:52-60` (the `for` loop pairing `representatives[i]`/`representatives[i+1]`); observed pairs on the live page: "C3 Equalz Tangerine R2 vs Akko V3 Cream Blue Pro", "Akko V3 Cream Blue Pro vs Kailh Box Jade", "Kailh Box Jade vs Cherry MX2A Silent Black"; screenshot `url--desktop--compare-switch.png` (`.nexus/walk/2026-11-20T08-23-20-125Z/`, not committed — cite this line for re-verification).
+- suggested fix: keep the existing cross-type diversity guarantee (don't touch the type-selection logic), but widen the pairing stride so adjacent slots don't share a switch — e.g. pair `representatives[i]` with `representatives[(i + 2) % representatives.length]` instead of `i + 1` — so no switch appears in two consecutive suggestion rows.
+- source: walk
 
 ### [HIGH] /group-buys — every group-buy record is closed; the page's "Active group buys" promise is never true for current visitors
 - pass: 18 (commit 113926e9)
