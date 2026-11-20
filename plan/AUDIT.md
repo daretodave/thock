@@ -1429,7 +1429,7 @@
 - article-b: apps/web/src/content/articles/vendor-first-customs.mdx
 - action: add [vendor-first-customs](/article/vendor-first-customs) to mode-lull-breaks-crown-mounting-encore body, or vice versa
 
-### [ ] [newsletter] [4.0] Weekly digest — issue 015 due (7 days since issue 14)
+### [x] [newsletter] [4.0] Weekly digest — issue 015 due (7 days since issue 14) — addressed in c4cb5464, closes #1091
 - category: content-gaps
 - filed: 2026-11-19 by newsletter-gap-survey.mjs
 - impact: 5 (newsletter archive going stale reduces /newsletter value and reader trust in cadence)
@@ -1440,6 +1440,15 @@
 - days-since: 7
 - issue: #1091
 > Filed 2026-11-19 by newsletter-gap-survey.mjs. 7 days since issue 14. Threshold: ≥7 calendar days.
+
+### [ ] [engineering] [3.6] `article-parts-check.mjs`'s single-file mode fires false-positive violations against every newsletter issue — the fix it suggests is impossible under the strict `NewsletterFrontmatterSchema`
+- category: engineering
+- filed: 2026-11-20 by cloud /ship-content tick (newsletter issue 015 dispatch)
+- impact: 6 (`skills/ship-content.md` Step 7b directs running `node scripts/article-parts-check.mjs <file>` as a blocking gate on every new piece, including newsletters per the "Newsletter cadence note" in Step 4. But `NewsletterFrontmatterSchema` (`packages/content/src/schema/newsletter.ts`) is `.strict()` with exactly 5 fields — `slug`, `title`, `lede`, `issue`, `publishedAt` — no `mentionedParts` field exists or can exist without breaking schema validation. The checker's single-file mode has no newsletter-vs-article branch, so it flags every catalog-entity mention in newsletter prose (verified reproducing against both the just-shipped issue 015 and the pre-existing issue 014: 2-3 violations each) with a "fix" — add to `mentionedParts` — that cannot be applied. Every prior newsletter dispatch either silently skipped Step 7b or ran it and treated the un-fixable violations as blocking noise; this tick proceeded past it rather than block indefinitely on a check the content type cannot pass)
+- ease: 6 (two options: (a) `article-parts-check.mjs`'s single-file mode exits 0 immediately for any file outside `apps/web/src/content/articles/` — mirrors the scan mode's existing `ARTICLES_DIR`-only scope; or (b) `skills/ship-content.md`'s "Newsletter cadence note" explicitly says to skip Step 7b for newsletter rows, same as it already says to skip the brander sub-agent)
+- score: 3.6 (impact × ease / 10)
+- evidence: `scripts/article-parts-check.mjs` (no newsletter-path branch in single-file mode); `packages/content/src/schema/newsletter.ts` (`.strict()`, 5 fields, no `mentionedParts`); reproduced against `apps/web/src/content/newsletters/thock-weekly-014.mdx` (3 violations: MM Studio Class80, GMK CYL Ramune, Ikki68 Aurora) and `thock-weekly-015.mdx` (2 violations: Gateron Magnetic Jade, Bakeneko65)
+- next: `/iterate` or `/plan-a-spec` — add a newsletter-path early-return to `article-parts-check.mjs`'s single-file mode (preferred: keeps the gate meaningful if it's ever pointed at a content type that does support `mentionedParts`), or amend `skills/ship-content.md` Step 7b to skip newsletters explicitly
 
 ### [ ] [seo] [5.4] 75-percent-default frontmatter updatedAt is stale
 - category: seo
