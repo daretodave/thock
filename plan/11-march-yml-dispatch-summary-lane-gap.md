@@ -105,4 +105,5 @@ None.
 
 Measure: 3 open · 0 closed · next A4
 
-Not chunked yet.
+- [ ] **11.1** insert the queue lanes into the cloud prompt's
+  dispatch-order sentence · S · closes A1, A2, A3 · needs —

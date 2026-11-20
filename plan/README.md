@@ -22,7 +22,7 @@ condition> · max_age: 14d`, an optional `· fallback: release`):
 
 | # | Initiative | Spec | Status | Progress |
 |---|---|---|---|---|
-| 11 | Cloud prompt dispatch-summary lane gap | [11-march-yml-dispatch-summary-lane-gap.md](11-march-yml-dispatch-summary-lane-gap.md) |  | not chunked |
+| 11 | Cloud prompt dispatch-summary lane gap | [11-march-yml-dispatch-summary-lane-gap.md](11-march-yml-dispatch-summary-lane-gap.md) |  | 1 left |
 
 ## Layout
 
