@@ -16,7 +16,7 @@ line goes; each line is a lock that times out:
 `- **<NN.k>** · <reason> · since: <date> · until: <date or
 condition> · max_age: 14d`, an optional `· fallback: release`):
 
-- (none)
+- **11.1** · blocked: cloud's `ACTIONS_PAT` push to `.github/workflows/march.yml` was rejected "without `workflows` permission" on 2026-11-20, re-falsifying the spec's premise that the token already carries `workflow` scope (#1092) · since: 2026-11-21 · until: a repo admin confirms the PAT's `workflow` scope is fixed · max_age: 14d
 
 ## Specs
 
