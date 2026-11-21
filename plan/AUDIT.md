@@ -2517,7 +2517,7 @@
 - lastContentCommitAt: 2026-07-28
 - action: bump updatedAt in zmk-wireless-split-firmware-guide.mdx's frontmatter to 2026-07-28 (or later)
 
-### [HOT PURSUIT] [content-gap] [7] ideas pillar — 1 of ≥2 articles in last 30d
+### [x] [content-gap] [7] ideas pillar — 1 of ≥2 articles in last 30d
 - category: content-gaps
 - impact: 7 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -2528,4 +2528,93 @@
 - score: 7
 - next: /ship-content → ideas pillar article
 - issue: #1093
+- addressed: a081072c — "Switch break-in: what running a switch in actually changes" (switch-break-in-myth.mdx, publishedAt 2026-11-18)
 > Filed 2026-11-21 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+
+### [ ] [cross-links] [4.5] switch-break-in-myth ↔ frankenswitching-explained — no prose cross-link (same pillar, ≥2 shared tags: switches, linear, tactile, modding)
+- category: cross-links
+- filed: 2026-11-21 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: switches, linear, tactile, modding
+- article-a: apps/web/src/content/articles/switch-break-in-myth.mdx
+- article-b: apps/web/src/content/articles/frankenswitching-explained.mdx
+- action: add [frankenswitching-explained](/article/frankenswitching-explained) to switch-break-in-myth body, or vice versa
+
+### [ ] [cross-links] [4.5] switch-break-in-myth ↔ holee-mod-explained — no prose cross-link (same pillar, ≥2 shared tags: switches, modding)
+- category: cross-links
+- filed: 2026-11-21 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: switches, modding
+- article-a: apps/web/src/content/articles/switch-break-in-myth.mdx
+- article-b: apps/web/src/content/articles/holee-mod-explained.mdx
+- action: add [holee-mod-explained](/article/holee-mod-explained) to switch-break-in-myth body, or vice versa
+
+### [ ] [cross-links] [4.5] switch-break-in-myth ↔ lubing-switches-guide — no prose cross-link (same pillar, ≥2 shared tags: switches, linear, tactile, modding)
+- category: cross-links
+- filed: 2026-11-21 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: switches, linear, tactile, modding
+- article-a: apps/web/src/content/articles/switch-break-in-myth.mdx
+- article-b: apps/web/src/content/articles/lubing-switches-guide.mdx
+- action: add [lubing-switches-guide](/article/lubing-switches-guide) to switch-break-in-myth body, or vice versa
+
+### [ ] [cross-links] [4.5] switch-break-in-myth ↔ spring-swaps-explained — no prose cross-link (same pillar, ≥2 shared tags: switches, linear, tactile, modding)
+- category: cross-links
+- filed: 2026-11-21 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: switches, linear, tactile, modding
+- article-a: apps/web/src/content/articles/switch-break-in-myth.mdx
+- article-b: apps/web/src/content/articles/spring-swaps-explained.mdx
+- action: add [spring-swaps-explained](/article/spring-swaps-explained) to switch-break-in-myth body, or vice versa
+
+### [ ] [cross-links] [4.5] switch-break-in-myth ↔ stabilizer-servicing-guide — no prose cross-link (same pillar, ≥2 shared tags: linear, modding)
+- category: cross-links
+- filed: 2026-11-21 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: linear, modding
+- article-a: apps/web/src/content/articles/switch-break-in-myth.mdx
+- article-b: apps/web/src/content/articles/stabilizer-servicing-guide.mdx
+- action: add [stabilizer-servicing-guide](/article/stabilizer-servicing-guide) to switch-break-in-myth body, or vice versa
+
+### [ ] [cross-links] [4.5] switch-break-in-myth ↔ switch-films-worth-it — no prose cross-link (same pillar, ≥2 shared tags: switches, linear, tactile, modding)
+- category: cross-links
+- filed: 2026-11-21 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: switches, linear, tactile, modding
+- article-a: apps/web/src/content/articles/switch-break-in-myth.mdx
+- article-b: apps/web/src/content/articles/switch-films-worth-it.mdx
+- action: add [switch-films-worth-it](/article/switch-films-worth-it) to switch-break-in-myth body, or vice versa
+
+### [ ] [cross-links] [4.5] switch-break-in-myth ↔ tape-mod — no prose cross-link (same pillar, ≥2 shared tags: linear, modding)
+- category: cross-links
+- filed: 2026-11-21 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: linear, modding
+- article-a: apps/web/src/content/articles/switch-break-in-myth.mdx
+- article-b: apps/web/src/content/articles/tape-mod.mdx
+- action: add [tape-mod](/article/tape-mod) to switch-break-in-myth body, or vice versa
+
+### [ ] [cross-links] [4.5] switch-break-in-myth ↔ typing-tests-lie — no prose cross-link (same pillar, ≥2 shared tags: switches, modding)
+- category: cross-links
+- filed: 2026-11-21 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: switches, modding
+- article-a: apps/web/src/content/articles/switch-break-in-myth.mdx
+- article-b: apps/web/src/content/articles/typing-tests-lie.mdx
+- action: add [typing-tests-lie](/article/typing-tests-lie) to switch-break-in-myth body, or vice versa
