@@ -2618,3 +2618,14 @@
 - article-a: apps/web/src/content/articles/switch-break-in-myth.mdx
 - article-b: apps/web/src/content/articles/typing-tests-lie.mdx
 - action: add [typing-tests-lie](/article/typing-tests-lie) to switch-break-in-myth body, or vice versa
+
+### [ ] [seo] [5.4] switch-break-in-myth frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-21 by stale-updated-at-check.mjs — switch-break-in-myth
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-11-18 even though the content last changed 2026-11-21)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/switch-break-in-myth.mdx
+- updatedAt: 2026-11-18
+- lastContentCommitAt: 2026-11-21
+- action: bump updatedAt in switch-break-in-myth.mdx's frontmatter to 2026-11-21 (or later)
