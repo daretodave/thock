@@ -1,0 +1,21 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-11-21T00:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "switch-break-in-myth",
+  "article_pillar": "ideas",
+  "section_anchor": "where-the-returns-stop",
+  "brief_summary": "A rising curve plotting perceived smoothness against actuation count, climbing steeply from 0 to roughly 300 actuations before flattening into a near-plateau through 1000+. A dashed vertical marker flags the plateau point, with annotations for burr wear plus lube spread driving the steep early section and spring settling as a smaller, slightly later contribution.",
+  "target": "apps/web/public/article-viz/switch-break-in-myth/break-in-timeline.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "switch-break-in-myth.mdx § 'Where the returns stop' — 'Most of the lube redistribution and most of the burr-wearing happens in the first handful of hundreds of actuations ... A switch run for a thousand cycles on a bulk tester and a switch run for three thousand will feel close to identical.'",
+    "switch-break-in-myth.mdx § 'What's actually moving in there' — 'Springs take a first set ... This is adjacent to break-in rather than break-in itself, and it's a smaller, faster effect than the other two'"
+  ],
+  "outputs": ["apps/web/public/article-viz/switch-break-in-myth/break-in-timeline.svg"],
+  "warnings": []
+}

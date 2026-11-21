@@ -1,0 +1,21 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-11-21T00:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "switch-break-in-myth",
+  "article_pillar": "ideas",
+  "section_anchor": "what-doesnt-change",
+  "brief_summary": "Two-column ledger. Left (amber filled, 'what repeated actuation changes'): three real effects — lube redistribution, molding burrs wearing smooth, spring first-set. Right (warm-red dashed with strikethrough, 'what does not change'): force curve / spring rate, tactile bump geometry, and wobble-caused scratch, each with a short note on the actual cause.",
+  "target": "apps/web/public/article-viz/switch-break-in-myth/changes-doesnt-ledger.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "switch-break-in-myth.mdx § 'What's actually moving in there' — 'Lube redistributes ... Molding artifacts wear down ... Springs take a first set.'",
+    "switch-break-in-myth.mdx § 'What doesn't change' — 'Break-in does not change the switch's designed force curve or spring rate ... It does not change tactile bump geometry ... it does not fix scratch that comes from stem wobble or loose manufacturing tolerance rather than surface friction.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/switch-break-in-myth/changes-doesnt-ledger.svg"],
+  "warnings": []
+}

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero - switch side-profile cross-section with faint ghost outlines of the stem at earlier travel depths, a motion-trail motif for many repeated actuations, and an ochre wear band where the rail contact smooths</title>
+
+  <!-- Ochre wash anchoring the wear zone, the article's actual subject -->
+  <ellipse cx="600" cy="460" rx="230" ry="150" fill="oklch(0.76 0.105 73 / 0.10)" stroke="none"/>
+
+  <!-- Top housing (simplified outer shell with LED notch) -->
+  <path d="
+    M 470 110
+    L 730 110
+    L 760 200
+    L 440 200
+    Z" />
+  <path d="M 575 110 L 625 110 L 618 130 L 582 130 Z" stroke-opacity="0.55"/>
+
+  <!-- Rail channel walls, full travel path -->
+  <line x1="505" y1="200" x2="505" y2="640" stroke-opacity="0.55"/>
+  <line x1="695" y1="200" x2="695" y2="640" stroke-opacity="0.55"/>
+
+  <!-- Ghost echoes of the stem at earlier travel depths, faint, cascading down -->
+  <!-- the family's answer to many repeated actuations: a motion trail, not a number -->
+  <g opacity="0.14">
+    <path d="M 552 390 L 648 390 L 648 420 L 638 420 L 638 500 L 562 500 L 562 420 L 552 420 Z"/>
+  </g>
+  <g opacity="0.22">
+    <path d="M 552 365 L 648 365 L 648 395 L 638 395 L 638 475 L 562 475 L 562 395 L 552 395 Z"/>
+  </g>
+  <g opacity="0.32">
+    <path d="M 552 340 L 648 340 L 648 370 L 638 370 L 638 450 L 562 450 L 562 370 L 552 370 Z"/>
+  </g>
+  <g opacity="0.48">
+    <path d="M 552 315 L 648 315 L 648 345 L 638 345 L 638 425 L 562 425 L 562 345 L 552 345 Z"/>
+  </g>
+
+  <!-- The stem, solid, drawn at rest (up position) - the one real part, cruciform head plus body -->
+  <g>
+    <path d="
+      M 578 250
+      L 622 250
+      L 622 268
+      L 634 268
+      L 634 290
+      L 566 290
+      L 566 268
+      L 578 268
+      Z"/>
+    <path d="M 552 290 L 648 290 L 648 320 L 638 320 L 638 400 L 562 400 L 562 320 L 552 320 Z"/>
+    <line x1="600" y1="300" x2="600" y2="392" stroke-opacity="0.4"/>
+  </g>
+
+  <!-- Spring, grounding this as a switch, unchanged by any of the above -->
+  <g>
+    <ellipse cx="600" cy="560" rx="42" ry="7"/>
+    <ellipse cx="600" cy="574" rx="42" ry="7"/>
+    <ellipse cx="600" cy="588" rx="42" ry="7"/>
+    <ellipse cx="600" cy="602" rx="42" ry="7"/>
+    <ellipse cx="600" cy="616" rx="42" ry="7"/>
+    <line x1="600" y1="552" x2="600" y2="622" stroke-opacity="0.3" stroke-dasharray="2 4"/>
+  </g>
+
+  <!-- Bottom housing + PCB contacts -->
+  <path d="M 440 640 L 760 640 L 740 715 L 460 715 Z"/>
+  <circle cx="520" cy="690" r="5"/>
+  <circle cx="680" cy="690" r="5"/>
+  <circle cx="600" cy="695" r="6" stroke-opacity="0.6"/>
+
+  <!-- Ochre wear band: where the repeated echoes all share the same rail contact, -->
+  <!-- the surface actually changes. The right rail at the lower echo depths. -->
+  <line x1="695" y1="345" x2="695" y2="500" stroke="oklch(0.76 0.105 73)" stroke-opacity="0.85" stroke-width="4"/>
+  <circle cx="695" cy="422" r="8" fill="oklch(0.76 0.105 73)" stroke="none"/>
+  <circle cx="695" cy="422" r="15" fill="none" stroke="oklch(0.76 0.105 73)" stroke-opacity="0.4" stroke-width="1.5"/>
+
+  <!-- Micro label, the only text, naming the one thing that moved -->
+  <text x="760" y="426" font-family="IBM Plex Sans, sans-serif" font-size="13" fill="oklch(0.76 0.105 73)" stroke="none" opacity="0.85">worn smooth</text>
+  <line x1="712" y1="422" x2="755" y2="422" stroke="oklch(0.76 0.105 73)" stroke-opacity="0.5" stroke-dasharray="3 4"/>
+
+  <!-- Caption, italic, the article's thesis in one line -->
+  <text x="600" y="60" font-family="Newsreader, serif" font-size="15" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">the path repeats - what wears is the surface it rubs, not the switch underneath it</text>
+
+  <!-- Bronze theme dot, family ornamental anchor -->
+  <circle cx="1150" cy="50" r="9" fill="oklch(0.80 0.135 75)" fill-opacity="0.85" stroke="none"/>
+</svg>

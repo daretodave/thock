@@ -1,0 +1,77 @@
+---
+slug: switch-break-in-myth
+title: "Switch break-in: what running a switch in actually changes"
+pillar: ideas
+publishedAt: '2026-11-18T14:00:00.000Z'
+updatedAt: '2026-11-18T14:00:00.000Z'
+author: thock
+lede: "Run a switch a few hundred times by hand, or just type on it for a month, and it feels smoother afterward. That part is usually true. The question worth asking is what's actually moving inside the switch, and whether it's the thing a scratchy switch needs fixed."
+heroImage: /hero-art/switch-break-in-myth.svg
+heroImageAlt: "Side-profile cross-section of a switch stem inside its housing rails, drawn in warm-grey line art, with a narrow amber-highlighted contact band tracing the rail surface where repeated actuation smooths the friction path."
+tags: [switches, linear, tactile, modding]
+mentionedParts: []
+featured: false
+---
+
+Ask a few builders whether switches need to be broken in and the answers split along the same fault line every time. One camp runs every switch through a thousand actuations on a bulk tester before it goes anywhere near a build. The other camp calls that superstition — buy it lubed correctly and it should feel right on keystroke one. Both camps have evidence. Both are usually describing a switch that felt different after some number of presses. The disagreement is about why.
+
+## The claim, in its two forms
+
+"Break-in" gets used for two different practices that don't always get separated. The first is deliberate: actuating a switch by hand or with a machine hundreds or thousands of times before it ever gets typed on, on the theory that this pre-conditions the switch the way miles pre-condition a new bicycle chain. The second is incidental: a switch that shipped feeling slightly stiff or faintly scratchy and, a few weeks into normal daily typing, doesn't feel that way anymore. Nobody did anything to it on purpose. It just got used.
+
+Both practices produce the same reported outcome — smoother — which is why they get talked about as the same phenomenon. They're closer to the same phenomenon than the skeptics give them credit for. They're also not the sweeping fix the enthusiasts sometimes claim.
+
+## What's actually moving in there
+
+Three things plausibly change with repeated actuation, and none of them are mysterious once named.
+
+**Lube redistributes.** A factory or hand lube job is rarely a perfectly even film. It sits a little thicker in some spots on the stem rails and housing contact surfaces, a little thinner in others — wherever the brush or the dip process happened to leave it. Every full-travel actuation drags that film across the same contact path. Over a few hundred cycles, an uneven application tends to even out: thick spots get pushed thin, thin spots pick up a little of what migrated off the thick ones. A switch that felt slightly inconsistent on press one can feel meaningfully more even by press three hundred, without a single extra drop of lube being added.
+
+**Molding artifacts wear down.** Injection-molded stems and housings sometimes carry microscopic burrs or tooling marks on the rail surfaces — leftovers from the mold, not design features. A stem with light flash on its rails will catch faintly on the housing wall at a specific point in the stroke, every time, until that flash wears off. It takes surprisingly few cycles for a soft plastic burr to abrade smooth against another plastic surface. This is genuine wear, and it is genuinely one-directional: once the burr is gone, it's gone.
+
+**Springs take a first set.** Coil springs installed fresh sometimes settle very slightly under the first stretches of real use — not a change in the wound force curve, just the coil finding its seated resting position inside the housing. This is adjacent to break-in rather than break-in itself, and it's a smaller, faster effect than the other two, but it gets folded into the same conversation because it happens on the same timeline.
+
+<InlineViz
+  src="/article-viz/switch-break-in-myth/lube-redistribution-cross-section.svg"
+  alt="Side-by-side cross-section of a switch stem inside its housing rails. The left panel, labelled fresh application, shows uneven dark lube blobs clustered unevenly along the rail contact. The right panel, labelled after repeated actuation, shows the same contact band smoothed into a thin, even amber-highlighted strip running the full rail length."
+  caption="Nothing was added. The film that was already there just got pushed around."
+  accent="amber"
+/>
+
+## What doesn't change
+
+The list of things break-in cannot touch is longer, and it's the more important list, because it's where expectation outruns mechanism.
+
+Break-in does not change the switch's designed force curve or spring rate — the spring that came in the box is the spring that's in the box after a thousand cycles, first-set settling aside. It does not change tactile bump geometry — a bump shape is molded into the stem and housing, and friction wear on a rail surface has nothing to do with the leaf-and-bump interaction that produces the tactile event. It does not change housing material or the acoustic signature that comes from it. And critically, it does not fix scratch that comes from stem wobble or loose manufacturing tolerance rather than surface friction. Wobble-driven scratch is a dimensional problem — the stem has room to move off-axis inside the housing and catches intermittently as it does — and no amount of straight-line actuation narrows a gap that's too wide to begin with. A switch that's scratchy because of tolerance will still be scratchy at actuation ten thousand.
+
+<InlineViz
+  src="/article-viz/switch-break-in-myth/changes-doesnt-ledger.svg"
+  alt="Two-column ledger. Left column has three amber-filled cards naming what repeated actuation changes: lube redistribution across rail contact, molding burrs wearing smooth, spring first-set settling. Right column has three dashed warm-red struck-through cards naming what does not change: force curve and spring rate, tactile bump geometry, wobble-caused scratch from manufacturing tolerance."
+  caption="Three real effects. Everything else is the switch's design, not its mileage."
+  accent="amber"
+/>
+
+<Callout type="note" title="A quick diagnostic before blaming the switch">
+  Press the stem down slowly by hand and wiggle it gently side to side partway through the stroke. If the catch happens at a consistent point in the travel regardless of how the stem is angled, that's friction — a break-in or a relube candidate. If the catch comes and goes depending on which direction the stem is nudged, that's wobble — tolerance, not mileage, and no amount of cycling will train it out.
+</Callout>
+
+## Where the returns stop
+
+The honest shape of a break-in curve is steep and then flat, not steadily climbing. Most of the lube redistribution and most of the burr-wearing happens in the first handful of hundreds of actuations — the surfaces that are going to smooth out, smooth out fast, because the asperities doing the catching are microscopic and don't survive many passes. A switch run for a thousand cycles on a bulk tester and a switch run for three thousand will feel close to identical. The switch that's going to feel better from running-in mostly already does by the time a builder is a few days into typing on it.
+
+<InlineViz
+  src="/article-viz/switch-break-in-myth/break-in-timeline.svg"
+  alt="A rising curve plotting perceived smoothness against actuation count, climbing steeply between zero and roughly three hundred actuations before flattening into a near-plateau through one thousand and beyond, with a dashed vertical marker at the plateau point and small annotations reading burr wear and lube spread near the steep section and spring settling as a smaller, slightly later contribution."
+  caption="Most of what break-in does, it does early."
+  accent="amber"
+/>
+
+<PullQuote>Break-in can finish a switch. It can't fix one.</PullQuote>
+
+## The practical take
+
+Hand break-in earns its time on a specific profile: a switch that's lubed reasonably well but feels faintly inconsistent in the first dozens of presses, or one with a <Mono>nylon</Mono> or <Mono>POM</Mono> stem known to carry a little mold flash on the rails. A few hundred actuations on a bulk tester, or just accepting that the first few days of typing will feel slightly different from week two, closes that gap for free. It's a reasonable thing to do with switches that are otherwise sound.
+
+It's the wrong tool the moment the diagnosis is anything else. A switch that's dry — no lube at all — doesn't get smoother from being cycled unlubed; friction with nothing between the surfaces just generates more wear dust, not a polish. A switch that wobbles doesn't get fixed by mileage. And a switch that feels wrong because the spring weight or the tactile bump isn't to a builder's taste will feel exactly as wrong at actuation one thousand as it did at actuation one — that's a part-selection problem, not a seasoning problem.
+
+The simplest way to keep the categories straight: lube application fixes friction, break-in evens it out, and neither one touches geometry. A builder reaching for a bulk tester should be asking whether the switch is already basically right and just needs a few hundred cycles to settle into itself — not hoping four hours of clicking will turn a wobbly or badly-toleranced switch into something it was never built to be. The honest expectation, going forward, is that break-in stays a minor finishing step rather than the diagnostic tool some corners of the hobby treat it as — and that the switches worth breaking in by hand are, not coincidentally, the ones that would have felt fine within a week of normal use anyway.

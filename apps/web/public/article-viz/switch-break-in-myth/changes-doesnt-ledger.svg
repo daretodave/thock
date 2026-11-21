@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>What repeated actuation changes about a switch versus what it does not change</title>
+
+  <!-- Vertical divider -->
+  <line x1="600" y1="90" x2="600" y2="440" stroke-opacity="0.18"/>
+
+  <!-- LEFT: what changes -->
+  <text x="300" y="120" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.95">what repeated actuation changes</text>
+
+  <g>
+    <rect x="90" y="150" width="420" height="80" rx="8" fill="oklch(0.78 0.10 80 / 0.10)" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="2.5"/>
+    <text x="300" y="180" font-family="Newsreader, serif" font-size="17" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">lube redistribution</text>
+    <text x="300" y="206" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">uneven film evens out across rail contact</text>
+  </g>
+
+  <g>
+    <rect x="90" y="250" width="420" height="80" rx="8" fill="oklch(0.78 0.10 80 / 0.10)" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="2.5"/>
+    <text x="300" y="280" font-family="Newsreader, serif" font-size="17" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">molding burrs wear smooth</text>
+    <text x="300" y="306" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">microscopic tooling marks abrade off, one-way</text>
+  </g>
+
+  <g>
+    <rect x="90" y="350" width="420" height="80" rx="8" fill="oklch(0.78 0.10 80 / 0.10)" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.95" stroke-width="2.5"/>
+    <text x="300" y="380" font-family="Newsreader, serif" font-size="17" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">spring first-set</text>
+    <text x="300" y="406" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">coil settles into its seated resting position</text>
+  </g>
+
+  <!-- RIGHT: what doesn't change -->
+  <text x="900" y="120" font-family="Newsreader, serif" font-size="20" font-style="italic" fill="oklch(0.62 0.13 25)" stroke="none" text-anchor="middle" opacity="0.95">what does not change</text>
+
+  <g>
+    <rect x="690" y="150" width="420" height="70" rx="6" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.6" stroke-width="2" stroke-dasharray="5 5"/>
+    <text x="900" y="182" font-family="Newsreader, serif" font-size="16" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">force curve / spring rate</text>
+    <line x1="710" y1="182" x2="1090" y2="182" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.7" stroke-width="2"/>
+    <text x="900" y="202" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">designed into the spring, not the mileage</text>
+  </g>
+
+  <g>
+    <rect x="690" y="238" width="420" height="70" rx="6" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.6" stroke-width="2" stroke-dasharray="5 5"/>
+    <text x="900" y="270" font-family="Newsreader, serif" font-size="16" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">tactile bump geometry</text>
+    <line x1="710" y1="270" x2="1090" y2="270" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.7" stroke-width="2"/>
+    <text x="900" y="290" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">molded into stem and housing, not worn into shape</text>
+  </g>
+
+  <g>
+    <rect x="690" y="326" width="420" height="80" rx="6" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.6" stroke-width="2" stroke-dasharray="5 5"/>
+    <text x="900" y="358" font-family="Newsreader, serif" font-size="16" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">wobble-caused scratch</text>
+    <line x1="710" y1="358" x2="1090" y2="358" stroke="oklch(0.62 0.13 25)" stroke-opacity="0.7" stroke-width="2"/>
+    <text x="900" y="382" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.5">a tolerance gap, not a friction problem — mileage can't close it</text>
+  </g>
+
+  <!-- Caption -->
+  <text x="600" y="470" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">three real effects; everything else is the switch's design, not its mileage</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

@@ -1,0 +1,20 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-11-21T00:00:00.000Z",
+  "kind": "inline-viz",
+  "article_slug": "switch-break-in-myth",
+  "article_pillar": "ideas",
+  "section_anchor": "whats-actually-moving-in-there",
+  "brief_summary": "Side-by-side cross-section of a switch stem inside its housing rails. Left panel ('fresh application') shows uneven amber lube blobs clustered unevenly along the rail contact with a bare patch. Right panel ('after repeated actuation') shows the same contact band redistributed into one thin, even amber-highlighted strip with a focal ring marking the smoothed surface.",
+  "target": "apps/web/public/article-viz/switch-break-in-myth/lube-redistribution-cross-section.svg",
+  "splash_color": { "name": "amber", "oklch": "oklch(0.78 0.10 80)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "switch-break-in-myth.mdx § 'What's actually moving in there' — 'A factory or hand lube job is rarely a perfectly even film ... Over a few hundred cycles, an uneven application tends to even out: thick spots get pushed thin, thin spots pick up a little of what migrated off the thick ones.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/switch-break-in-myth/lube-redistribution-cross-section.svg"],
+  "warnings": []
+}

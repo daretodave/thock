@@ -1,0 +1,40 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored-svg",
+  "at": "2026-11-21T00:00:00.000Z",
+  "commit": "b6ca9a7da9d592c16e362772844f4b7d1b525df3",
+  "kind": "hero-art",
+  "article_slug": "switch-break-in-myth",
+  "article_pillar": "ideas",
+  "brief_summary": "Hero art for the ideas-pillar piece on switch break-in. Pillar/subject mapping per bearings.md is switch deep-dive -> switch cross-section, adapted here with a repetition cue: a side-profile switch cross-section (top housing, rail channel, stem, spring, bottom housing with PCB contacts) where the stem is drawn solid at rest and four faint ghost outlines of the same stem cascade downward at decreasing opacity, standing in for many prior actuations along the same travel path without any literal cycle count. An ochre wear band and focal dot mark the one rail segment all the ghost echoes share contact with - the surface that genuinely changes - labelled 'worn smooth'. Warm-bronze theme dot in the upper-right margin per family convention.",
+  "target": "apps/web/public/hero-art/switch-break-in-myth.svg",
+  "source": "plan/bearings.md section Article hero art, colorful keyboard SVGs (locked 2026-05-09); mod/mechanism piece about repeated actuation maps to the switch-deep-dive cross-section template, adapted with a ghost-stroke motion-trail motif per this brief's steer",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject; switch piece -> cross-section, with faint stacked ghost outlines at decreasing opacity standing in for cycle count instead of numerals",
+  "size": [1200, 750],
+  "subject": "Side-profile cross-section of a switch: top housing with LED notch, a rail channel running the full travel length, a solid cruciform stem at rest with four faint ghost outlines of the same stem cascading downward at progressively lower opacity (a motion-trail standing in for many repeated actuations), a five-coil spring, and a bottom housing with two pin contacts and a center post. An ochre wash anchors the composition on the wear zone; an ochre-highlighted band plus a haloed focal dot mark the one rail segment every ghost echo shares contact with, labelled 'worn smooth' via a dashed leader. A short italic caption states the thesis. Warm-bronze theme dot at the upper-right margin.",
+  "splash_color": {
+    "name": "ochre",
+    "oklch": "oklch(0.76 0.105 73)"
+  },
+  "accent_color": {
+    "name": "warm-bronze (theme accent)",
+    "oklch": "oklch(0.80 0.135 75)"
+  },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "stroke_weight": "2px structural lines; 4px on the ochre wear band to match the family's emphasis convention for the focal element",
+  "canvas": "1200x750",
+  "background": "transparent (light-mode safe per house style)",
+  "tokens_snapshot": "2fc8f9a4d018f5163f5c24cfec035ccd29f23cef214f6caa36c77ab69985c15b",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "alt": "Side-profile cross-section of a switch stem inside its housing rails, drawn in warm-grey line art, with a narrow amber-highlighted contact band tracing the rail surface where repeated actuation smooths the friction path.",
+  "notes": "Alt text copied verbatim from the article frontmatter heroImageAlt field (set by content-curator at draft time) rather than re-authored here, per the a11y contract in bearings.md. Rotation note: splash chosen from the brief's mandated set {coral, dusty rose, ochre, muted terracotta}. Ochre picked over the other three for continuity with the article's own pre-existing assets - the frontmatter heroImageAlt already describes an 'amber-highlighted contact band' and both inline-viz pieces for this article (lube-redistribution-cross-section.svg, changes-doesnt-ledger.svg) use amber at oklch(0.78 0.10 80); ochre is the member of the mandated set that sits in the same warm-yellow hue family as that existing amber, so the hero reads as one cohesive accent with the inline-viz rather than introducing a clashing red/orange. Value oklch(0.76 0.105 73) picked close to but distinct from the existing amber and from the corpus's other ochre entries (0.55-0.82 L, 0.085-0.13 C, hue 58-88 cluster). No concentric-arc or numeral cycle-counter motif used - the brief offered a choice of cues for 'many actuations' and the stacked ghost-stem motion trail was picked as the single, least-cluttered option, consistent with the 'without literal numerals or clutter' instruction. No fabricated specs or numeric claims anywhere in the file.",
+  "data_sources": [
+    "apps/web/src/content/articles/switch-break-in-myth.mdx frontmatter heroImageAlt - 'Side-profile cross-section of a switch stem inside its housing rails, drawn in warm-grey line art, with a narrow amber-highlighted contact band tracing the rail surface where repeated actuation smooths the friction path.'",
+    "apps/web/src/content/articles/switch-break-in-myth.mdx body section 'What's actually moving in there' - 'Lube redistributes... Every full-travel actuation drags that film across the same contact path... a switch that felt slightly inconsistent on press one can feel meaningfully more even by press three hundred.'"
+  ],
+  "outputs": [
+    "apps/web/public/hero-art/switch-break-in-myth.svg",
+    "apps/web/public/hero-art/switch-break-in-myth.svg.json"
+  ],
+  "warnings": []
+}

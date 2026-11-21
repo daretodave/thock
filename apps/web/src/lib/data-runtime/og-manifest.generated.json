@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "slug": "switch-break-in-myth",
+      "readTime": 7,
+      "frontmatter": {
+        "title": "Switch break-in: what running a switch in actually changes",
+        "lede": "Run a switch a few hundred times by hand, or just type on it for a month, and it feels smoother afterward. That part is usually true. The question worth asking is what's actually moving inside the switch, and whether it's the thing a scratchy switch needs fixed.",
+        "pillar": "ideas",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "mode-lull-breaks-crown-mounting-encore",
       "readTime": 6,
       "frontmatter": {
@@ -1958,6 +1968,13 @@
     }
   ],
   "newsletters": [
+    {
+      "slug": "thock-weekly-015",
+      "title": "thock weekly — issue 15",
+      "lede": "A low-profile buying guide honest about the catalog trade-off, Frankenswitching's parts-mixing history, Mode's tracker score breaking a six-week lull on someone else's mounting news, the Gateron Magnetic Jade's catalog catching up to its own spec sheet, and a matrix-ghosting deep dive — plus a tracker check-in on Mode, Hall-effect, and CannonKeys.",
+      "issue": 15,
+      "readTime": 4
+    },
     {
       "slug": "thock-weekly-014",
       "title": "thock weekly — issue 14",
@@ -11119,5 +11136,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-11-19T10:03:44.468Z"
+  "generatedAt": "2026-11-21T14:23:23.659Z"
 }

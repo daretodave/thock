@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Switch stem inside housing rails, before and after repeated actuation — lube goes from uneven to evenly spread</title>
+
+  <!-- Divider -->
+  <line x1="600" y1="80" x2="600" y2="400" stroke-opacity="0.18"/>
+
+  <!-- LEFT PANEL: fresh application -->
+  <text x="300" y="110" font-family="Newsreader, serif" font-size="19" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">fresh application</text>
+
+  <!-- housing walls -->
+  <line x1="150" y1="150" x2="150" y2="370" stroke-opacity="0.6"/>
+  <line x1="450" y1="150" x2="450" y2="370" stroke-opacity="0.6"/>
+  <!-- stem -->
+  <rect x="230" y="150" width="140" height="220" rx="6" stroke-opacity="0.75"/>
+  <!-- rail contact band (left panel, uneven) -->
+  <line x1="150" y1="150" x2="150" y2="370" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.5" stroke-width="3"/>
+  <!-- uneven lube blobs -->
+  <circle cx="150" cy="190" r="10" fill="oklch(0.78 0.10 80 / 0.55)" stroke="none"/>
+  <circle cx="150" cy="205" r="7" fill="oklch(0.78 0.10 80 / 0.4)" stroke="none"/>
+  <circle cx="150" cy="300" r="13" fill="oklch(0.78 0.10 80 / 0.6)" stroke="none"/>
+  <circle cx="150" cy="320" r="6" fill="oklch(0.78 0.10 80 / 0.35)" stroke="none"/>
+  <!-- bare patch label -->
+  <text x="120" y="255" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end" opacity="0.6">bare</text>
+  <line x1="128" y1="255" x2="148" y2="255" stroke-opacity="0.4"/>
+
+  <text x="300" y="400" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.6">thick here, bare there — the brush pass left it uneven</text>
+
+  <!-- RIGHT PANEL: after repeated actuation -->
+  <text x="900" y="110" font-family="Newsreader, serif" font-size="19" font-style="italic" fill="oklch(0.78 0.10 80)" stroke="none" text-anchor="middle" opacity="0.95">after repeated actuation</text>
+
+  <line x1="750" y1="150" x2="750" y2="370" stroke-opacity="0.6"/>
+  <line x1="1050" y1="150" x2="1050" y2="370" stroke-opacity="0.6"/>
+  <rect x="830" y="150" width="140" height="220" rx="6" stroke-opacity="0.75"/>
+
+  <!-- smoothed, even contact band -->
+  <line x1="750" y1="150" x2="750" y2="370" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.9" stroke-width="5"/>
+
+  <!-- focal ring marking the smoothed band -->
+  <circle cx="750" cy="260" r="9" fill="oklch(0.78 0.10 80 / 0.95)" stroke="oklch(0.78 0.10 80)"/>
+  <circle cx="750" cy="260" r="16" stroke="oklch(0.78 0.10 80)" stroke-opacity="0.45" fill="none"/>
+
+  <text x="900" y="400" font-family="IBM Plex Sans, sans-serif" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">same film, redistributed into one even strip</text>
+
+  <!-- Caption -->
+  <text x="600" y="440" font-family="Newsreader, serif" font-size="14" font-style="italic" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.65">nothing was added — the film that was already there just got pushed around</text>
+
+  <!-- Brass theme dot -->
+  <circle cx="1170" cy="42" r="3" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>
