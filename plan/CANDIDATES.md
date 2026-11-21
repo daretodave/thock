@@ -1,11 +1,23 @@
 # Phase candidates
 
-> Last pass: 2026-11-12 at commit 2b3bc5b7
-> Pass count: 445
+> Last pass: 2026-11-21 at commit 165b57cf
+> Pass count: 446
 > Posture: bold
 > Last field research: 2026-11-18
 
 ## Pending
+
+### [ ] [score 5.6] Stale-`updatedAt` backlog has no cluster-drain path — 97 rows filed in one commit the day the check first ran, 101 Pending now, none drained since
+- proposed: 2026-11-21, expand pass 446
+- source signals:
+  - **Audit signal (A — 101 Pending `[seo]` rows, all one category, one mechanism, one fix shape)**: `plan/AUDIT.md` currently carries 101 Pending `[seo]` rows; a hand count of the `frontmatter updatedAt is stale` title shape alone (`grep -c "frontmatter updatedAt is stale"` against non-`[x]` headers) returns 98. Every row's fix is identical: set `updatedAt` to the date `scripts/stale-updated-at-check.mjs` already computed as `lastContentCommitAt` for that article.
+  - **Commit-pattern signal (G — one-shot flood, not a trickle)**: spec 10 shipped the check itself on 2026-11-20 (`feat: stale-updated-at-check script + fixture tests`, then `plan: wire stale-updated-at-check into survey chain + digest`); the very next commit in the same window (`audit: survey chain — newsletter cadence + stale-updatedAt corpus sweep`) ran the check's first full-corpus `--write` pass and filed 97 of these rows at once (per this file's own 2026-11-20 digest note above). A 98th has since joined from newer content. Zero have been drained in the 24+ hours since the first filing (this pass's own `git log` shows no bump-`updatedAt` commit after it).
+  - **Shipped precedent for the identical shape**: `skills/march.lanes.md`'s Phase 46 note already documents a "cluster-aware drain" for cross-link pairs — when `/iterate` picks a `cross-links` row, it drains every pending pair sharing the same hub article in one commit via `article-crosslink-survey.mjs --slug <hub>`. No equivalent exists for stale-`updatedAt`, even though this backlog is denser (98 single-article rows vs. cross-links' incremental per-pair filing) and the fix is simpler (one frontmatter field, to a date the check already computed — no prose to write, no judgment call).
+- rationale: at `[5.4]` each, these rows will outrank most other live mechanical findings (`cross-links` at 4.5, the pending `content` citation mismatches at 3.6) for the foreseeable future — meaning `/iterate`'s next 90+ picks would otherwise be "bump one date" through a full gate run (typecheck → lint → test → build → size → e2e) apiece, rather than the two live `[HIGH]` `plan/CRITIQUE.md` findings or anything else needing actual judgment. This is purely a batching gap, not a detection gap: the data the fix needs is already computed per flagged article by the check script itself.
+- proposed scope: 1 chunk — add a `--fix` mode to `scripts/stale-updated-at-check.mjs` that writes every currently-flagged article's frontmatter `updatedAt` to its already-computed `lastContentCommitAt` in one pass, plus a `skills/march.lanes.md` amendment mirroring Phase 46: when `/iterate` picks a stale-`updatedAt` row as its top finding, run the fix mode once and drain every pending row of this category in the same commit instead of one row per tick.
+- estimated chunks: 1
+- kind: guard
+- conflicts: none — no schema, route, or URL-contract change; the detection script and the AUDIT row format it already writes are unchanged, only a fix mode is added.
 
 ### [ ] [score 6.0] `march.yml`'s crash-issue dedupe permanently disabled itself on 2026-08-25 — every subsequent cloud tick failure since then has gone unlogged
 - kind: guard
