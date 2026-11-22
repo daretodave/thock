@@ -1,7 +1,8 @@
 # Critique log
 
-> Last pass: 2026-11-20T08:27:23Z at commit ed0de5df
-> Pass count: 20
+> Last pass: 2026-11-22T07:49:30Z at commit 91d546f4
+> Pass count: 21
+> Pass 20 last pass: 2026-11-20T08:27:23Z at commit ed0de5df
 > Pass 19 last pass: 2026-11-10T09:45:00Z at commit b056da79
 > Pass 18 last pass: 2026-11-06T00:16:44Z at commit 113926e9
 > Pass 17 last pass: 2026-11-05T16:09:48Z at commit 5ec23cdd
@@ -12,6 +13,42 @@
 > drained by `/iterate`. See `skills/critique.md` for the contract.
 
 ## Pending
+
+### [MED] /trends/tracker — the "SLEEPER" summary card still shows a signed negative delta, reading as a second faller
+- pass: 21 (commit 91d546f4)
+- viewport: desktop
+- category: comprehension
+- observation: `TrackerSummaryCard` (`apps/web/src/components/tracker/TrackerSummaryCard.tsx:28-37`) forces the sleeper slot's glyph, color and sparkline tone to neutral `flat` (fixed at pass 13, per the code comment at lines 29-32) specifically so it wouldn't "read as a second Riser or Faller card" — but `delta` is still computed as `formatDelta(row.score, row.direction)` using the row's real direction, not forced flat. So the card correctly neutralizes color/glyph/spark but still prints a signed number like "-40%" next to the neutral glyph. On the live `/trends/tracker` page this renders "SLEEPER · CannonKeys · -40%" directly beside "BIGGEST FALLER · GMK CYL Red Devils R2 · -16%" — two cards both showing negative percentages, one of which is picked purely by smallest magnitude (not direction) per `pickSummarySlots`'s docstring (`apps/web/src/lib/tracker/index.ts:74`). A reader has no way to tell from the number alone that "sleeper" ignores direction.
+- evidence: `apps/web/src/components/tracker/TrackerSummaryCard.tsx:28` (`delta` not forced flat, unlike `tone`/`dir`/labels on lines 33-37); `apps/web/src/lib/tracker/index.ts:196-204` (`formatDelta` always signs by `direction`); walk screenshot `url--desktop--trends-tracker.png` (`.nexus/walk/2026-11-22T07-45-29-117Z/`, not committed — cite this line for re-verification) shows "SLEEPER" card reading "-40%".
+- suggested fix: either show the sleeper card's magnitude unsigned (e.g. "40% moved" or "±40%") since its selection criterion is magnitude not direction, or add a one-word qualifier next to the number (e.g. "quietly -40%") so the neutral framing already applied to color/glyph extends to the number's read.
+- source: web-fetch
+
+### [MED] /tools, /compare/switch, /quiz/switch — inconsistent or missing eyebrow text breaks the Tools pillar's text trail
+- pass: 21 (commit 91d546f4)
+- viewport: desktop
+- category: navigation
+- observation: `/tools` renders the eyebrow "interactive tools" (`apps/web/src/app/tools/page.tsx:97-99`, `PageSectionKicker`). `/compare/switch` renders a different eyebrow, "catalog · switches" (`apps/web/src/app/compare/switch/page.tsx:108-112`), with no textual mention of Tools at all. `/quiz/switch` has no eyebrow/kicker element above its `<h1>Find your switch</h1>` (`apps/web/src/app/quiz/switch/page.tsx:50`) whatsoever. A reader who lands on `/compare/switch` or `/quiz/switch` via a shared link or search result has no in-page text tying it back to the Tools pillar — only the nav's bolded state, which a deep link bypasses.
+- evidence: `apps/web/src/app/tools/page.tsx:97-99`; `apps/web/src/app/compare/switch/page.tsx:108-112`; `apps/web/src/app/quiz/switch/page.tsx:50` (no kicker present); walk screenshots `url--desktop--tools.png`, `url--desktop--compare-switch.png`, `url--mobile--quiz-switch.png` (`.nexus/walk/2026-11-22T07-45-29-117Z/`, not committed).
+- suggested fix: standardize a shared "tools · <subpage>" eyebrow convention across `/tools`, `/compare/switch` and `/quiz/switch` so the pillar relationship reads in page text, not just in nav highlighting.
+- source: web-fetch
+
+### [MED] home hero — the switch illustration's italic epigraph is close to illegible at render size
+- pass: 21 (commit 91d546f4)
+- viewport: both
+- category: visual
+- observation: `apps/web/public/hero-art/switch-break-in-myth.svg:79` bakes an italic caption directly into the SVG — "the path repeats - what wears is the surface it rubs, not the switch underneath it" — at `font-size="15"` inside a `viewBox="0 0 1200 750"`, with `opacity="0.6"` on an already-pale stroke color (`oklch(0.78 0.005 90)`). At the hero's actual rendered width (well under 1200px) the effective text size is a few pixels tall; combined with the reduced opacity, the line reads as a faint textured smudge rather than legible prose on both desktop and mobile screenshots.
+- evidence: `apps/web/public/hero-art/switch-break-in-myth.svg:79` (the `<text>` element: `font-size="15"`, `opacity="0.6"`); walk screenshots `url--desktop--home.png` and `url--mobile--home.png` (`.nexus/walk/2026-11-22T07-45-29-117Z/`, not committed) show the line at the top of the illustration, same low legibility on both viewports.
+- suggested fix: keep the ghost-echo motif (the stem-echo opacities at 0.14-0.48 elsewhere in the same SVG are intentional and shouldn't change — `UI magic: keep`), but raise just this caption's size and/or opacity enough to read as an intentional epigraph rather than noise, since unlike the echoes it's meant to be read.
+- source: web-fetch
+
+### [LOW] /news — an article teaser lede opens with a raw ISO date instead of editorial date prose
+- pass: 21 (commit 91d546f4)
+- viewport: desktop
+- category: voice
+- observation: The "Gateron Magnetic Jade sensing backfill" article's lede (`apps/web/src/content/articles/gateron-magnetic-jade-sensing-backfill.mdx:4`) opens "On 2026-11-06, thock's catalog backfilled a sensing field onto the Gateron Magnetic Jade's switch record, reading hall-effect...". The raw `YYYY-MM-DD` literal inline in prose reads like a system-log timestamp, not the "knowledgeable peer" voice bearings calls for — bylines elsewhere on the site format the same kind of date as "Nov 18, 2026".
+- evidence: `apps/web/src/content/articles/gateron-magnetic-jade-sensing-backfill.mdx:4`; same string surfaces on `/news`'s teaser card per walk screenshot `url--desktop--news.png` (`.nexus/walk/2026-11-22T07-45-29-117Z/`, not committed).
+- suggested fix: reformat the inline date in prose form ("On Nov 6, 2026, ...") to match the byline date convention used elsewhere.
+- source: web-fetch
 
 ### [LOW] /compare/switch — the three "OR TRY A PAIR" suggestions daisy-chain the same switch across adjacent rows
 - pass: 20 (commit ed0de5df)
