@@ -13,6 +13,14 @@
 - lock: issue-1068-credential-call · since: 2026-11-12 · until: owner comments or closes #1068 · max_age: 14d
 - generator: issue-age · filed 2026-11-08
 
+### [user-issue #1092] [HIGH] "Cloud march failed: 2026-11-20" open past the 24h SLA
+- category: external-issue
+- impact: 8
+- ease: 5
+- evidence: issue #1092 opened 2026-11-21, open 24h with no row in the queue; the SLA is 24h (sla_hours in plan/bearings.md).
+- next: /triage routes it (a bug goes to /bug); reference #1092 in the commit body.
+- generator: issue-age · filed 2026-11-22
+
 ## Drained findings (kept for audit-trail; do not re-open)
 
 ### [x] [external-issue] [user-issue #1084] [HIGH] "Cloud march failed: 2026-11-17 — verify gate blocked by Next.js agent-upgrade security nudge" open past the 24h SLA — closed this tick, already fixed by 03f0cf4e
