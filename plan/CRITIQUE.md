@@ -22,7 +22,7 @@
 - suggested fix: keep the existing cross-type diversity guarantee (don't touch the type-selection logic), but widen the pairing stride so adjacent slots don't share a switch — e.g. pair `representatives[i]` with `representatives[(i + 2) % representatives.length]` instead of `i + 1` — so no switch appears in two consecutive suggestion rows.
 - source: walk
 
-### [HIGH] /group-buys — every group-buy record is closed; the page's "Active group buys" promise is never true for current visitors
+### [x] [HIGH] /group-buys — every group-buy record is closed; the page's "Active group buys" promise is never true for current visitors — addressed in 2f417b1a, closes #1094
 - pass: 18 (commit 113926e9)
 - viewport: both
 - category: comprehension
@@ -30,6 +30,7 @@
 - evidence: `data/group-buys/*.json` (18/18 records `status: "closed"`); `apps/web/src/app/group-buys/helpers.ts:20-29` (`isLive`/`isAnnounced`); walk screenshots `url--desktop--group-buys.png` / `url--mobile--group-buys.png` (`.nexus/walk/2026-11-06T00-16-44-961Z/`, not committed — cite this line for re-verification) show "Just closed" as the only visible section.
 - suggested fix: either ship new live/announced group-buy records (a data-content gap — `/ship-data` or a content generator should keep at least one buy open), or, if the real-world lull is expected, swap the lede for state-aware copy ("No live buys right now — here's what just wrapped") instead of an evergreen "active group buys" claim that reads false whenever the live/announced buckets are empty.
 - source: walk
+- issue: #1094
 
 ### [LOW] /quiz/switch — one answer's aside reads quippier than the quiz's otherwise dry tone
 - pass: 18 (commit 113926e9)
