@@ -24,6 +24,8 @@ const PATH = '/group-buys'
 const TITLE = 'Group buys'
 const LEDE =
   'Active group buys for boards, keycap sets, and switches. We track start/end dates, region availability, and which vendor is running each one.'
+const QUIET_LEDE =
+  'No live group buys right now — here’s what just wrapped. We track start/end dates, region availability, and which vendor is running each one, and update the moment a new buy opens.'
 
 export const metadata = buildMetadata({
   title: TITLE,
@@ -94,7 +96,9 @@ export default function GroupBuysPage(): ReactElement {
           <h1 className="font-serif italic text-h1 sm:text-display text-text">
             Group buys
           </h1>
-          <p className="max-w-60ch font-serif text-h3 text-text-2">{LEDE}</p>
+          <p className="max-w-60ch font-serif text-h3 text-text-2">
+            {totalActive > 0 ? LEDE : QUIET_LEDE}
+          </p>
           <div
             data-testid="group-buys-summary"
             className="font-mono uppercase tracking-[0.08em] text-micro text-text-2"
