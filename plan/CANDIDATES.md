@@ -168,6 +168,19 @@
 - conflicts: none known.
 - generator: research · filed 2026-11-18
 
+### [ ] [score 4.2] `SMOKE_SAMPLE` nightly-breadth split was never wired — per-commit `pnpm e2e` already runs the full 1770-canonical-URL set every tick
+- kind: guard
+- proposed: 2026-11-23, digest pass (nightly)
+- source signals:
+  - **The trigger:** tonight's breadth pass ran the gate's own `pnpm e2e` leg (no env var set) and got `1770 passed (9.5m)` — the identical count `skills/digest.md` describes as the nightly-only `SMOKE_SAMPLE=full` breadth tier. Re-running with that flag would be a no-op: `grep -rln "SMOKE_SAMPLE"` across the repo (excluding `plan/DIGEST.md`/`skills/digest.md` themselves) returns zero hits — `apps/e2e/src/fixtures/canonical-urls.ts`'s `getCanonicalUrls()` and every `*.spec.ts` file that imports it read no env var and always return the complete list.
+  - **The standing rule this violates:** `agents.md` §3 says a gate that's outgrown its foreground budget should "shrink the gate, do not background it — split it into sequential foreground legs and move any O(content) breadth (per-URL crawls) off the per-commit path onto a nightly job." `skills/digest.md` step 3 lists `SMOKE_SAMPLE=full pnpm e2e` as exactly that nightly-only leg, implying a smaller sample runs per-commit the rest of the time — but no such split exists anywhere in code. Every cloud `/march` tick's `pnpm verify` already pays the full crawl, every time.
+  - **Cost signal:** tonight's full `pnpm e2e` took 9.5m, the single largest leg of the eight-leg gate by a wide margin, and it runs at this size on every cloud `march` tick this window (per `gh run list --workflow march`, 3-4 fires/day), not just nightly.
+- impact: 7 (every cloud tick's verify gate runs roughly 9-10 minutes longer than the loop's own standing rule intends — pure velocity cost on the hot per-commit path, not a correctness bug; the full crawl passing is good news on its own)
+- ease: 6 (two direct precedents to mirror the shape from — `og-coverage-check.mjs`/`a11y-spec-coverage-check.mjs`'s route-enumeration pattern — but picking a representative sample set per route family is a judgment call, not pure plumbing, and the alternative fix is a docs-only retire)
+- score: 4.2 (impact × ease / 10)
+- evidence: tonight's `pnpm e2e` (no env var) → `1770 passed (9.5m)`; `grep -rln "SMOKE_SAMPLE"` repo-wide → only `plan/DIGEST.md`, `skills/digest.md`; `apps/e2e/src/fixtures/canonical-urls.ts` (`getCanonicalUrls()`, no env read, no sampling logic anywhere in `apps/e2e`); `agents.md` §3 ("move any O(content) breadth... off the per-commit path onto a nightly job"); `skills/digest.md` step 3 (`SMOKE_SAMPLE=full pnpm e2e` named as the nightly-only leg).
+- next: `/oversight` call — decide between (a) implementing the sample split (`getCanonicalUrls()` reads `SMOKE_SAMPLE`, per-commit defaults to a representative subset, nightly digest passes `=full`) or (b) retiring the stale `SMOKE_SAMPLE` language from `skills/digest.md` so the docs match what actually runs today. Not a change the loop should self-direct since it touches the per-commit gate's own shape.
+
 ## Considered (below threshold)
 
 - ~~[score 5.0] Cross-link bulk drain sprint (pass 127)~~ — **scope evaporated by pass 130 (2026-06-19)**. Originally proposed to drain 126 same-pillar [4.5] cross-link rows in a single phase. All same-pillar pairs are now drained (Phase 46 cluster efficiency + iterate ticks through pass 129). Only 3 adjacent-pillar [3.6] pairs remain — too few for a batched phase; the [6.0] adjacent-pillar floor suppression candidate is the correct resolution if re-domination resumes.
