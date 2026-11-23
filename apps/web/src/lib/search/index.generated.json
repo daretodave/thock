@@ -161464,9 +161464,16 @@
       "slug": "2026-W47",
       "kind": "tracker-week",
       "name": "Week 47 / 2026",
+      "href": "/trends/tracker/2026-W47"
+    },
+    {
+      "id": "2026-W48",
+      "slug": "2026-W48",
+      "kind": "tracker-week",
+      "name": "Week 48 / 2026",
       "href": "/trends/tracker"
     }
   ],
-  "generatedAt": "2026-11-21T14:23:24.973Z",
+  "generatedAt": "2026-11-23T23:26:53.659Z",
   "count": 124
 }
