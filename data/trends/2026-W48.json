@@ -1,0 +1,169 @@
+{
+  "isoWeek": "2026-W48",
+  "publishedAt": "2026-11-23T00:00:00.000Z",
+  "rows": [
+    {
+      "name": "Hall Effect/Rapid Trigger",
+      "category": "switch",
+      "direction": "down",
+      "score": 92,
+      "spark": [99, 100, 100, 95, 90, 93, 93, 92],
+      "articleSlug": "hall-effect-score-dips-wooting-ship-slips",
+      "note": "Wooting's own \"major manufacturing delay\" and \"where did the 80HE go\" posts remain the newest public word on 80HE/80HE+ stock; no dated batch update landed this week."
+    },
+    {
+      "name": "Cherry MX2A",
+      "category": "switch",
+      "direction": "flat",
+      "score": -15,
+      "spark": [-20, -10, -10, -12, -14, -15, -15, -15],
+      "articleSlug": "cherry-mx2a-revision",
+      "note": "Searches this week again surfaced zero new MX2A colorways or scratchiness fixes from Cherry; the XTRFY K5V2 launch remains the only MX2A keyboard news on record."
+    },
+    {
+      "name": "TMR (Tunnel Magnetoresistance) switches",
+      "category": "switch",
+      "direction": "up",
+      "score": 98,
+      "spark": [85, 90, 90, 92, 95, 97, 97, 98],
+      "articleSlug": "keychron-q16-he-8k-ceramic-tmr",
+      "note": "Keychron's V6 Ultra Hybrid 8K campaign page now lists a concrete \"Estimated shipping: December 2026,\" the first dated commitment since the campaign opened."
+    },
+    {
+      "name": "Gateron Magnetic Jade Delta",
+      "category": "switch",
+      "direction": "flat",
+      "score": 72,
+      "spark": [80, 75, 75, 74, 73, 72, 72, 72],
+      "articleSlug": "gateron-magnetic-jade-deep-dive",
+      "note": "Divinikey and KBDfans listings for Jade Delta are unchanged again; MaxGaming shows only light EU stock left, with no restock or SKU news from Gateron."
+    },
+    {
+      "name": "Gateron Oil King",
+      "category": "switch",
+      "direction": "flat",
+      "score": 58,
+      "spark": [62, 60, 60, 60, 59, 58, 58, 58],
+      "articleSlug": "gateron-oil-king-deep-dive",
+      "note": "No vendor campaign or SKU refresh surfaced again this week; Oil King's steady-state availability across retailers holds into a fourth unchanged week."
+    },
+    {
+      "name": "Durock T1",
+      "category": "switch",
+      "direction": "down",
+      "score": 32,
+      "spark": [40, 35, 35, 35, 34, 33, 33, 32],
+      "articleSlug": "durock-t1-deep-dive",
+      "note": "No 2026 colorway or bench update emerged; T1's slow fade from conversation continues as vendor listings stay unchanged from three weeks ago."
+    },
+    {
+      "name": "GMK CYL Red Devils R2",
+      "category": "keycap",
+      "direction": "down",
+      "score": 12,
+      "spark": [60, 40, 32, 28, 22, 18, 16, 12],
+      "articleSlug": "gmk-cyl-red-devils-r2-comeback",
+      "note": "Seven weeks since close with no restock, teardown, or shipping update from any vendor; attention keeps draining from the set with nothing to revive it."
+    },
+    {
+      "name": "GMK CYL Zombie",
+      "category": "keycap",
+      "direction": "flat",
+      "score": 48,
+      "spark": [55, 70, 45, 40, 33, 48, 48, 48],
+      "articleSlug": "gmk-cyl-zombie-group-buy",
+      "note": "KBDfans' Zombie product page still shows no order confirmations or shipping timeline this week; the storefront-opening momentum hasn't carried forward."
+    },
+    {
+      "name": "DCS Dolch / Molch",
+      "category": "keycap",
+      "direction": "down",
+      "score": 41,
+      "spark": [30, 45, 50, 50, 47, 48, 44, 41],
+      "articleSlug": "divinikey-dcs-dolch-group-buy",
+      "note": "Divinikey's Dolch listing still shows its passed October 2026 ship estimate with no update posted; the linked Seal80 Dolch Edition's December 2026 estimate is unchanged."
+    },
+    {
+      "name": "Split/Ergo layout",
+      "category": "layout",
+      "direction": "flat",
+      "score": 94,
+      "spark": [100, 100, 100, 96, 93, 94, 94, 94],
+      "articleSlug": "split-ergo-cohort",
+      "note": "No new SKU sync or restock emerged from MoErgo or peers this week; MoErgo's FAQ still lists Glove80 USA stock as available with no dated November update."
+    },
+    {
+      "name": "Alice layout",
+      "category": "layout",
+      "direction": "flat",
+      "score": 8,
+      "spark": [-5, 0, 5, 5, 7, 8, 8, 8],
+      "articleSlug": "alice-layout-decline",
+      "note": "No new Alice-layout board or restock surfaced again; Tide Alice and QK Alice Duo remain the category's only active listings."
+    },
+    {
+      "name": "75% Layout",
+      "category": "layout",
+      "direction": "flat",
+      "score": 78,
+      "spark": [78, 82, 82, 80, 79, 78, 78, 78],
+      "articleSlug": "75-percent-default",
+      "note": "75% boards hold steady as the default form factor again this week, with Black Friday retail roundups continuing to lead on 75% picks like the V6 Ultra Hybrid."
+    },
+    {
+      "name": "CannonKeys",
+      "category": "vendor",
+      "direction": "down",
+      "score": 39,
+      "spark": [50, 55, 55, 50, 46, 42, 40, 39],
+      "articleSlug": "cannonkeys-blaine-v2-se-group-buy",
+      "note": "CannonKeys' own blog post teasing a Bakeneko65 return still carries no confirmed date; the vendor conversation keeps fading without a dated restock to anchor it."
+    },
+    {
+      "name": "Mode Designs",
+      "category": "vendor",
+      "direction": "up",
+      "score": 75,
+      "spark": [95, 72, 72, 70, 69, 68, 71, 75],
+      "articleSlug": "mode-lull-breaks-crown-mounting-encore",
+      "note": "Mode Designs listed a new top-mount Crown Mounting System SKU, the first concrete CMS product to actually go on sale, compatible with the 2026 Encore."
+    },
+    {
+      "name": "Prototypist",
+      "category": "vendor",
+      "direction": "up",
+      "score": 72,
+      "spark": [52, 58, 65, 66, 69, 71, 71, 72],
+      "articleSlug": "prototypist-vendor-spotlight",
+      "note": "GMK CYL MONO's Nov 30 group-buy close is now one week out; Prototypist's separate in-stock MONO base kit has already sold out, signaling demand ahead of close."
+    },
+    {
+      "name": "Keychron",
+      "category": "brand",
+      "direction": "up",
+      "score": 97,
+      "spark": [100, 100, 100, 97, 94, 96, 96, 97],
+      "articleSlug": "keychron-quiet-takeover",
+      "note": "Keychron's V6 Ultra Hybrid 8K TMR/mechanical hybrid campaign now carries a concrete \"Estimated shipping: December 2026\" storefront date, alongside live BFCM discounts."
+    },
+    {
+      "name": "Wooting",
+      "category": "brand",
+      "direction": "flat",
+      "score": 94,
+      "spark": [88, 92, 92, 90, 87, 94, 94, 94],
+      "articleSlug": "wooting-80he-plus-shipping-update",
+      "note": "No further shipping-wave update followed last week's tracking-number confirmations; Wooting's batch-updates page lists no new dated post this week."
+    },
+    {
+      "name": "ZMK firmware",
+      "category": "brand",
+      "direction": "flat",
+      "score": 67,
+      "spark": [65, 68, 68, 67, 66, 67, 67, 67],
+      "articleSlug": "zmk-mainstream-shift",
+      "note": "Claims of a v0.4.0 release remain contested; a fork's changelog states upstream ZMK has no v0.4 release, with v0.3.0 (Aug 2025) still the last confirmed tag."
+    }
+  ],
+  "updatedAt": "2026-11-23T23:24:17.000Z"
+}
