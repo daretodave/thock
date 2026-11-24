@@ -2410,3 +2410,14 @@
 - article-a: apps/web/src/content/articles/shortened-travel-switches-deep-dive.mdx
 - article-b: apps/web/src/content/articles/tmr-switches-deep-dive.mdx
 - action: add [tmr-switches-deep-dive](/article/tmr-switches-deep-dive) to shortened-travel-switches-deep-dive body, or vice versa
+
+### [ ] [seo] [5.4] shortened-travel-switches-deep-dive frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-24 by stale-updated-at-check.mjs — shortened-travel-switches-deep-dive
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-11-21 even though the content last changed 2026-11-24)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/shortened-travel-switches-deep-dive.mdx
+- updatedAt: 2026-11-21
+- lastContentCommitAt: 2026-11-24
+- action: bump updatedAt in shortened-travel-switches-deep-dive.mdx's frontmatter to 2026-11-24 (or later)
