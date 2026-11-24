@@ -3,7 +3,7 @@
 > Last pass: 2026-11-21 at commit 165b57cf
 > Pass count: 446
 > Posture: bold
-> Last field research: 2026-11-18
+> Last field research: 2026-11-24
 
 ## Pending
 
@@ -122,6 +122,8 @@
 - estimated chunks: unknown until specced
 - conflicts: none known.
 - generator: research · filed 2026-11-12
+- re-evidence:
+  - 2026-11-24 · field · +0 · community trackers log group-buy delay typically as a close-to-delivery window of six to nine months, longer for complex multi-material designs, which a structured lifecycle status view could show pe…
 
 ### [ ] [score 6.0] Recurring reader-questions column
 - proposed: 2026-11-12 (research)
@@ -133,6 +135,7 @@
 - generator: research · filed 2026-11-12
 - re-evidence:
   - 2026-11-18 · field · +0 · Community buyer questions repeatedly stack the same narrow constraints together (noise level, a budget band, and a compatibility requirement) rather than asking about one spec in isolation.
+  - 2026-11-24 · field · +0 · forum buyer questions cluster on a few recurring themes: hot-swap support as a near-default expectation, long-term firmware and replacement-part support, and matching a switch or layout to a stated u…
 
 ### [ ] [score 3.2] `pulse.mjs`'s held-line counter only matches the bold human-authored format — tonight's auto-promoted Held line for spec 09 reads "0 held" against a real 1
 - kind: guard
@@ -167,6 +170,8 @@
 - estimated chunks: unknown until specced
 - conflicts: none known.
 - generator: research · filed 2026-11-18
+- re-evidence:
+  - 2026-11-24 · field · +0 · switch-comparison tools now foreground interactable force-curve graphs and side-by-side spec tables as the default comparison surface, with preference-quiz style finders layered on top rather than re…
 
 ### [ ] [score 4.2] `SMOKE_SAMPLE` nightly-breadth split was never wired — per-commit `pnpm e2e` already runs the full 1770-canonical-URL set every tick
 - kind: guard
