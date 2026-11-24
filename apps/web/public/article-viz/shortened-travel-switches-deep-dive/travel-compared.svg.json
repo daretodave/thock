@@ -1,0 +1,25 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-11-24T00:00:00.000Z",
+  "commit": "f12c606b6bee2b660d3b3837c4e0a02f09d2421f",
+  "kind": "inline-viz",
+  "article_slug": "shortened-travel-switches-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "the-40mm-default-and-what-gets-cut",
+  "brief_summary": "Three-row horizontal bar comparison of total switch travel: Cherry MX2A Red at 4.0mm (warm-grey, longest bar), Akko V3 Cream Blue Pro at 3.3mm (coral), and Gazzew Boba U4T at 3.2mm (coral). Shows that two differently-designed shortened-travel tactiles land close together well under the MX-style 4.0mm default, independent of their spring weights.",
+  "target": "apps/web/public/article-viz/shortened-travel-switches-deep-dive/travel-compared.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "JetBrains Mono"],
+  "data_sources": [
+    "data/switches/cherry-mx2a-red.json — \"travelMm\": 4.0",
+    "data/switches/akko-v3-cream-blue-pro.json — \"travelMm\": 3.3",
+    "data/switches/gazzew-boba-u4t.json — \"travelMm\": 3.2",
+    "shortened-travel-switches-deep-dive.mdx § 'The 4.0mm default, and what gets cut' — 'Two switches, two different vendors, two different ways of getting there, both landing in the same shortened-travel territory below 3.5mm.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/shortened-travel-switches-deep-dive/travel-compared.svg"],
+  "warnings": []
+}

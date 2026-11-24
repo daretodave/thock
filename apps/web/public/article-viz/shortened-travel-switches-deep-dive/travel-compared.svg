@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Horizontal bar chart comparing total switch travel across three switches. Cherry MX2A Red at 4.0 millimeters, drawn as the longest bar in warm-grey. Gazzew Boba U4T at 3.2 millimeters, a shorter coral bar. Akko V3 Cream Blue Pro at 3.3 millimeters, a slightly longer coral bar just above the Boba U4T's.</title>
+
+  <!-- ================================================================
+       Canvas: 1200 x 480
+       Subject: three-row travel-distance comparison, 200px per millimeter,
+                baseline at x=320.
+       Palette:
+         Stroke  oklch(0.78 0.005 90)  warm-grey, 2px
+         Splash  oklch(0.68 0.165 28)  coral (shortened-travel rows + bronze dot)
+       Background: transparent.
+  ================================================================ -->
+
+  <!-- Baseline axis -->
+  <line x1="320" y1="90" x2="320" y2="420" stroke-opacity="0.3"/>
+
+  <!-- Scale ticks: 0mm, 1mm, 2mm, 3mm, 4mm at 200px/mm -->
+  <g stroke-opacity="0.18">
+    <line x1="320" y1="440" x2="320" y2="452"/>
+    <line x1="520" y1="440" x2="520" y2="452"/>
+    <line x1="720" y1="440" x2="720" y2="452"/>
+    <line x1="920" y1="440" x2="920" y2="452"/>
+    <line x1="1120" y1="440" x2="1120" y2="452"/>
+  </g>
+  <g font-family="JetBrains Mono" font-size="12" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.55" text-anchor="middle">
+    <text x="320" y="468">0mm</text>
+    <text x="520" y="468">1mm</text>
+    <text x="720" y="468">2mm</text>
+    <text x="920" y="468">3mm</text>
+    <text x="1120" y="468">4mm</text>
+  </g>
+
+  <!-- Row 1: Cherry MX2A Red, 4.0mm, longest, warm-grey -->
+  <text x="110" y="128" font-family="IBM Plex Sans" font-size="19" fill="oklch(0.78 0.005 90)" stroke="none">Cherry MX2A Red</text>
+  <text x="110" y="152" font-family="IBM Plex Sans" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.65">standard MX-style stroke</text>
+  <rect x="320" y="104" width="800" height="42" rx="6" fill="oklch(0.78 0.005 90 / 0.14)" stroke="oklch(0.78 0.005 90)"/>
+  <text x="1140" y="130" font-family="JetBrains Mono" font-size="20" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="end">4.0mm</text>
+
+  <!-- Row 2: Akko V3 Cream Blue Pro, 3.3mm, coral -->
+  <text x="110" y="248" font-family="IBM Plex Sans" font-size="19" fill="oklch(0.68 0.165 28)" stroke="none">Akko V3 Cream Blue Pro</text>
+  <text x="110" y="272" font-family="IBM Plex Sans" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.7">shortened-travel tactile</text>
+  <rect x="320" y="224" width="660" height="42" rx="6" fill="oklch(0.68 0.165 28 / 0.22)" stroke="oklch(0.68 0.165 28)"/>
+  <text x="1000" y="250" font-family="JetBrains Mono" font-size="20" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="end">3.3mm</text>
+
+  <!-- Row 3: Gazzew Boba U4T, 3.2mm, coral -->
+  <text x="110" y="368" font-family="IBM Plex Sans" font-size="19" fill="oklch(0.68 0.165 28)" stroke="none">Gazzew Boba U4T</text>
+  <text x="110" y="392" font-family="IBM Plex Sans" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.7">shortened-travel tactile, long-pole stem</text>
+  <rect x="320" y="344" width="640" height="42" rx="6" fill="oklch(0.68 0.165 28 / 0.22)" stroke="oklch(0.68 0.165 28)"/>
+  <text x="980" y="370" font-family="JetBrains Mono" font-size="20" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="end">3.2mm</text>
+
+  <!-- Theme dot -->
+  <circle cx="1132" cy="50" r="7" fill="oklch(0.80 0.135 75)" stroke="none" opacity="0.9"/>
+</svg>

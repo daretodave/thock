@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock hero — two switch stem cross-sections sharing one housing-shell height, a dashed actuation line running the same depth through both, identical spring coils, and ochre runway brackets showing the standard switch's long post-actuation stroke against the shortened-travel switch's short one</title>
+
+  <!-- ================================================================
+       Canvas: 1200 x 750   Stroke: 2px warm-grey   Fill: none (line art)
+       Splash: ochre  oklch(0.74 0.125 78)
+       Theme dot: warm-bronze oklch(0.80 0.135 75)
+       Layout: two switch housings of identical outer height, side by
+       side. One continuous dashed line crosses both at the same y —
+       "same depth" actuation point. Each stem bottoms out at a
+       different y below that line (left near the housing floor, right
+       well short of it), and an ochre dimension bracket beside each
+       stem marks that post-actuation runway: long on the left, short
+       on the right. An identical spring-coil icon sits in both
+       cavities, unchanged, to keep the runway difference isolated
+       from spring weight.
+       ================================================================ -->
+
+  <!-- Top caption -->
+  <text x="600" y="68" font-family="IBM Plex Sans" font-size="22" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.85">same housing shell, different stem runway</text>
+
+  <!-- Ochre wash regions — larger behind the long runway, smaller behind the short one -->
+  <ellipse cx="330" cy="460" rx="170" ry="250" fill="oklch(0.74 0.125 78)" fill-opacity="0.06" stroke="none"/>
+  <ellipse cx="850" cy="380" rx="150" ry="150" fill="oklch(0.74 0.125 78)" fill-opacity="0.07" stroke="none"/>
+
+  <!-- ── LEFT HOUSING (standard MX-style, 4.0mm total) ──────────────── -->
+  <g stroke-opacity="0.6" stroke-width="1.8">
+    <rect x="180" y="120" width="300" height="500" rx="24"/>
+    <line x1="180" y1="270" x2="480" y2="270" stroke-opacity="0.8"/>
+    <!-- Stem, bottoms out near the housing floor -->
+    <rect x="300" y="160" width="80" height="430" rx="6" stroke-opacity="0.8"/>
+    <!-- Spring coil, identical to the right-hand panel -->
+    <path d="M 420 380 L 445 400 L 420 420 L 445 440 L 420 460 L 445 480 L 420 500 L 445 520 L 420 540 L 445 560" stroke-opacity="0.45"/>
+  </g>
+
+  <!-- Left runway bracket (long) -->
+  <g stroke="oklch(0.74 0.125 78)" stroke-opacity="0.85" stroke-width="1.8">
+    <path d="M 238 330 H 258"/>
+    <path d="M 248 330 V 590"/>
+    <path d="M 238 590 H 258"/>
+  </g>
+  <text x="150" y="455" font-family="JetBrains Mono" font-size="13" fill="oklch(0.74 0.125 78)" stroke="none" text-anchor="end" opacity="0.9">post-actuation</text>
+  <text x="150" y="472" font-family="JetBrains Mono" font-size="13" fill="oklch(0.74 0.125 78)" stroke="none" text-anchor="end" opacity="0.9">runway ~2.0mm</text>
+
+  <!-- Focal dot at the shared actuation depth -->
+  <circle cx="340" cy="330" r="6" fill="oklch(0.74 0.125 78)" stroke="none" opacity="0.9"/>
+
+  <text x="340" y="615" font-family="JetBrains Mono" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">4.0mm total</text>
+  <text x="330" y="655" font-family="IBM Plex Sans" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.8">standard travel</text>
+  <text x="330" y="678" font-family="JetBrains Mono" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">cherry mx2a red</text>
+
+  <!-- ── RIGHT HOUSING (shortened travel, 3.3mm total) ──────────────── -->
+  <g stroke-opacity="0.6" stroke-width="1.8">
+    <rect x="720" y="120" width="300" height="500" rx="24"/>
+    <line x1="720" y1="270" x2="1020" y2="270" stroke-opacity="0.8"/>
+    <!-- Stem, bottoms out well above the housing floor -->
+    <rect x="820" y="160" width="80" height="270" rx="6" stroke-opacity="0.8"/>
+    <!-- Spring coil, same path as the left-hand panel, unchanged -->
+    <path d="M 960 380 L 985 400 L 960 420 L 985 440 L 960 460 L 985 480 L 960 500 L 985 520 L 960 540 L 985 560" stroke-opacity="0.45"/>
+  </g>
+
+  <!-- Right runway bracket (short) -->
+  <g stroke="oklch(0.74 0.125 78)" stroke-opacity="0.85" stroke-width="1.8">
+    <path d="M 778 330 H 798"/>
+    <path d="M 788 330 V 430"/>
+    <path d="M 778 430 H 798"/>
+  </g>
+  <text x="690" y="368" font-family="JetBrains Mono" font-size="13" fill="oklch(0.74 0.125 78)" stroke="none" text-anchor="end" opacity="0.9">post-actuation</text>
+  <text x="690" y="385" font-family="JetBrains Mono" font-size="13" fill="oklch(0.74 0.125 78)" stroke="none" text-anchor="end" opacity="0.9">runway &#8804;1.3mm</text>
+
+  <!-- Focal dot at the shared actuation depth -->
+  <circle cx="860" cy="330" r="6" fill="oklch(0.74 0.125 78)" stroke="none" opacity="0.9"/>
+
+  <text x="860" y="455" font-family="JetBrains Mono" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">3.3mm total</text>
+  <text x="870" y="655" font-family="IBM Plex Sans" font-size="16" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.8">shortened travel</text>
+  <text x="870" y="678" font-family="JetBrains Mono" font-size="14" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.7">akko v3 cream blue pro</text>
+
+  <!-- Shared dashed actuation-depth line, running through both panels at the same y -->
+  <line x1="150" y1="330" x2="1050" y2="330" stroke-dasharray="4 7" stroke-opacity="0.55"/>
+  <text x="600" y="320" font-family="JetBrains Mono" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.75">actuation point — same depth</text>
+
+  <!-- Theme dot -->
+  <circle cx="1150" cy="90" r="8" fill="oklch(0.80 0.135 75)" stroke="none" opacity="0.9"/>
+</svg>

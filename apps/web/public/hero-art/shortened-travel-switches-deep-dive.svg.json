@@ -1,0 +1,33 @@
+{
+  "generated_by": "brander",
+  "engine": "hand-authored SVG (no raster pipeline)",
+  "at": "2026-11-24T20:17:09.000Z",
+  "commit": "f12c606b6bee2b660d3b3837c4e0a02f09d2421f",
+  "kind": "hero-art",
+  "source": null,
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "JetBrains Mono"],
+  "slug": "shortened-travel-switches-deep-dive",
+  "article_pillar": "deep-dives",
+  "subject": "Two switch-stem cross-sections sharing one housing-shell height — standard MX-style housing on the left, Akko V3 Cream Blue Pro-style shortened-travel housing on the right — each stem bottoming out at a different depth inside the same shell, with a single dashed actuation line running at the same y through both panels and identical spring-coil icons in both cavities.",
+  "motif": "switch cross-section (two-panel runway comparison)",
+  "splash_color": { "name": "ochre", "oklch": "oklch(0.74 0.125 78)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "canvas": "1200x750",
+  "strokeWeight": "2px",
+  "outputs": [
+    "apps/web/public/hero-art/shortened-travel-switches-deep-dive.svg",
+    "apps/web/public/hero-art/shortened-travel-switches-deep-dive.svg.json"
+  ],
+  "notes": "Left housing stem runs from y=160 to y=590 inside a shared y120-620 shell, bottoming out near the floor (standard 4.0mm total travel). Right housing stem, same shell height, runs y160 to y430, bottoming out well above the floor (Akko V3 Cream Blue Pro, 3.3mm total travel). A single continuous dashed line at y=330 crosses both panels at the same depth, labelled 'actuation point — same depth' — the shared-mechanism device also used on tactile-stem-geometry-deep-dive's contact-leaf line. An identical spring-coil zigzag path (translated, not altered) sits in both cavities to signal unchanged spring weight. Ochre dimension brackets beside each stem mark the post-actuation runway: long on the left (~2.0mm, per the 2.0mm pre-travel / 4.0mm total split in Cherry's MX2A Red datasheet, cited in the article body), short on the right (<=1.3mm ceiling, per the article's runway-cut passage on the Akko V3 Cream Blue Pro's unpublished pre-travel). Ochre wash ellipses scale with runway length — larger behind the long left runway, smaller behind the short right one. Brass-bronze ornamental dot at upper-right per family convention.",
+  "data_sources": [
+    "shortened-travel-switches-deep-dive.mdx § 'The 4.0mm default, and what gets cut' — \"the actuation point sitting 2.0mm into that stroke\" / \"4.0mm total travel\"",
+    "shortened-travel-switches-deep-dive.mdx § 'The 4.0mm default, and what gets cut' — \"3.3mm of total travel\" (Akko V3 Cream Blue Pro)",
+    "shortened-travel-switches-deep-dive.mdx § post-actuation-runway paragraph — \"that post-actuation runway is roughly 2.0mm\" / \"the remaining runway cannot exceed 1.3mm\""
+  ],
+  "alt": "A side-by-side cross-section of two switch stems inside identical-height housings. Both are crossed at the same depth by a single dashed actuation line. The left stem continues down to bottom out near the housing floor, its long post-actuation stretch marked with an ochre dimension bracket. The right stem bottoms out well short of the same floor, its much shorter post-actuation stretch marked with a matching, shorter ochre bracket. Identical spring-coil icons sit in both housings to show the spring itself is unchanged.",
+  "warnings": [
+    "Restores the brander-authored composition after a content-curator placeholder (coral, vertical-ruler motif) was written to this same path. The article MDX's heroImageAlt frontmatter field still describes that placeholder's ruler/coral composition and should be updated by content-curator to match this bracket/ochre render; out of scope for brander to edit the MDX."
+  ]
+}

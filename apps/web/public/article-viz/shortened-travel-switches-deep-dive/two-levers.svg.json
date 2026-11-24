@@ -1,0 +1,22 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-11-24T00:00:00.000Z",
+  "commit": "f12c606b6bee2b660d3b3837c4e0a02f09d2421f",
+  "kind": "inline-viz",
+  "article_slug": "shortened-travel-switches-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "two-different-levers-not-one",
+  "brief_summary": "Two conceptual force-versus-travel panels with no plotted numeric values, illustrating the article's central distinction: the spring-weight lever raises the force curve over an identical travel distance (left panel), while the travel lever keeps the same force curve shape but truncates the distance it runs over (right panel, coral cutoff marker). Deliberately unlabeled with specific gram or millimeter figures to avoid implying a measured dataset for a comparison that is structural/conceptual, not a specific product comparison.",
+  "target": "apps/web/public/article-viz/shortened-travel-switches-deep-dive/two-levers.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader"],
+  "data_sources": [
+    "shortened-travel-switches-deep-dive.mdx § 'Two different levers, not one' — 'A heavier spring raises the force required at every point along the stroke... It does not change how far the stem travels to get there.' and 'Shortening travel does the opposite: it changes the distance without necessarily touching the force curve at all.'"
+  ],
+  "outputs": ["apps/web/public/article-viz/shortened-travel-switches-deep-dive/two-levers.svg"],
+  "warnings": ["Conceptual diagram — curves are illustrative mechanism sketches, not plotted from measured force-travel data, consistent with the article's own framing of this as a structural distinction rather than a product comparison."]
+}

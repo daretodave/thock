@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>Two vertical travel rulers side by side. Left ruler, labeled standard 4.0mm total, marked with a tick at 2.0mm for actuation and a warm-grey highlighted segment from 2.0mm to 4.0mm labeled post-actuation runway, about 2.0mm. Right ruler, labeled shortened 3.3mm total, marked with a dashed tick near the top labeled actuation point, pre-travel not published, and a coral highlighted segment below it labeled post-actuation runway, at most 1.3mm, bounded by total travel.</title>
+
+  <!-- ================================================================
+       Canvas: 1200 x 600
+       Subject: two vertical travel rulers, 100px per millimeter,
+                comparing post-actuation runway on a standard 4.0mm
+                stroke versus a shortened 3.3mm stroke.
+       Palette:
+         Stroke  oklch(0.78 0.005 90)  warm-grey, 2px
+         Splash  oklch(0.68 0.165 28)  coral (shortened runway + bronze dot)
+       Background: transparent.
+  ================================================================ -->
+
+  <!-- Column headers -->
+  <text x="420" y="60" font-family="IBM Plex Sans" font-size="20" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle">Standard — 4.0mm total</text>
+  <text x="820" y="60" font-family="IBM Plex Sans" font-size="20" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="middle">Shortened — 3.3mm total</text>
+
+  <!-- LEFT RULER: 0mm at y=100, 100px/mm, total to y=500 (4.0mm) -->
+  <line x1="420" y1="100" x2="420" y2="500" stroke-opacity="0.5"/>
+  <g stroke-opacity="0.35">
+    <line x1="405" y1="100" x2="435" y2="100"/>
+    <line x1="405" y1="300" x2="435" y2="300"/>
+    <line x1="405" y1="500" x2="435" y2="500"/>
+  </g>
+  <g font-family="JetBrains Mono" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7" text-anchor="end">
+    <text x="395" y="105">0.0mm (rest)</text>
+    <text x="395" y="305">2.0mm (actuation)</text>
+    <text x="395" y="505">4.0mm (bottom-out)</text>
+  </g>
+  <!-- Post-actuation runway highlight, warm-grey, wider bar -->
+  <rect x="405" y="300" width="30" height="200" rx="5" fill="oklch(0.78 0.005 90 / 0.20)" stroke="oklch(0.78 0.005 90)" stroke-width="2"/>
+  <text x="470" y="410" font-family="IBM Plex Sans" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none">post-actuation</text>
+  <text x="470" y="430" font-family="IBM Plex Sans" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none">runway: 2.0mm</text>
+
+  <!-- RIGHT RULER: 0mm at y=100, 100px/mm, total to y=430 (3.3mm) -->
+  <line x1="820" y1="100" x2="820" y2="430" stroke-opacity="0.5"/>
+  <g stroke-opacity="0.35">
+    <line x1="805" y1="100" x2="835" y2="100"/>
+    <line x1="805" y1="430" x2="835" y2="430"/>
+  </g>
+  <g font-family="JetBrains Mono" font-size="13" fill="oklch(0.78 0.005 90)" stroke="none" opacity="0.7" text-anchor="end">
+    <text x="795" y="105">0.0mm (rest)</text>
+  </g>
+  <g font-family="JetBrains Mono" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" text-anchor="end">
+    <text x="795" y="435">3.3mm (bottom-out)</text>
+  </g>
+  <!-- Dashed uncertain actuation tick, aligned to same 2.0mm height for comparison -->
+  <line x1="805" y1="300" x2="835" y2="300" stroke-dasharray="4 4" stroke="oklch(0.68 0.165 28)" stroke-opacity="0.7"/>
+  <text x="845" y="296" font-family="IBM Plex Sans" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.9">actuation point</text>
+  <text x="845" y="314" font-family="IBM Plex Sans" font-size="13" fill="oklch(0.68 0.165 28)" stroke="none" opacity="0.7">(pre-travel not published)</text>
+  <!-- Post-actuation runway highlight, coral, shorter bar -->
+  <rect x="805" y="300" width="30" height="130" rx="5" fill="oklch(0.68 0.165 28 / 0.26)" stroke="oklch(0.68 0.165 28)" stroke-width="2"/>
+  <text x="870" y="375" font-family="IBM Plex Sans" font-size="15" fill="oklch(0.68 0.165 28)" stroke="none">post-actuation</text>
+  <text x="870" y="395" font-family="IBM Plex Sans" font-size="15" fill="oklch(0.68 0.165 28)" stroke="none">runway: &#8804;1.3mm</text>
+
+  <!-- Dashed baseline note -->
+  <line x1="420" y1="540" x2="820" y2="540" stroke-dasharray="4 5" stroke-opacity="0.3"/>
+  <text x="620" y="564" font-family="Newsreader" font-style="italic" font-size="15" fill="oklch(0.78 0.005 90)" stroke="none" text-anchor="middle" opacity="0.8">1.3mm is a ceiling set by total travel, not a measured split</text>
+
+  <!-- Theme dot -->
+  <circle cx="1132" cy="50" r="7" fill="oklch(0.80 0.135 75)" stroke="none" opacity="0.9"/>
+</svg>

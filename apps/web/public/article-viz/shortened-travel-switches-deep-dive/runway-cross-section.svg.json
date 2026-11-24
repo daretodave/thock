@@ -1,0 +1,24 @@
+{
+  "generated_by": "main-agent-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-11-24T00:00:00.000Z",
+  "commit": "f12c606b6bee2b660d3b3837c4e0a02f09d2421f",
+  "kind": "inline-viz",
+  "article_slug": "shortened-travel-switches-deep-dive",
+  "article_pillar": "deep-dives",
+  "section_anchor": "the-runway-why-distance-matters-as-much-as-force",
+  "brief_summary": "Two vertical travel rulers comparing post-actuation runway: a standard 4.0mm-travel switch with a 2.0mm actuation point leaving a 2.0mm runway to bottom-out, versus a 3.3mm-travel switch whose pre-travel is not published but whose runway is bounded at 1.3mm or less by the published total. Makes the runway concept concrete without inventing an unpublished pre-travel split for the Akko switch.",
+  "target": "apps/web/public/article-viz/shortened-travel-switches-deep-dive/runway-cross-section.svg",
+  "splash_color": { "name": "coral", "oklch": "oklch(0.68 0.165 28)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "JetBrains Mono", "Newsreader"],
+  "data_sources": [
+    "https://cdn.sparkfun.com/assets/a/9/b/6/2/MX2A_RED-Datasheet-EN_US.pdf — Cherry MX2A Red: 2.0mm pre-travel, 4.0mm total travel",
+    "data/switches/akko-v3-cream-blue-pro.json — \"travelMm\": 3.3 (no separate pre-travel field published)",
+    "shortened-travel-switches-deep-dive.mdx § 'The runway: why distance matters as much as force' — 'the remaining runway cannot exceed 1.3mm, and in practice sits close to it'"
+  ],
+  "outputs": ["apps/web/public/article-viz/shortened-travel-switches-deep-dive/runway-cross-section.svg"],
+  "warnings": ["Right-hand actuation tick position (aligned at the same height as the left ruler's 2.0mm mark) is an illustrative placeholder for comparison, not a measured value — labeled explicitly as unpublished in both the SVG and the caption."]
+}
