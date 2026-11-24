@@ -2233,7 +2233,7 @@
 - lastContentCommitAt: 2026-11-21
 - action: bump updatedAt in switch-break-in-myth.mdx's frontmatter to 2026-11-21 (or later)
 
-### [HOT PURSUIT] [content-gap] [7] deep-dives pillar — 1 of ≥2 articles in last 30d
+### [x] [HOT PURSUIT] [content-gap] [7] deep-dives pillar — 1 of ≥2 articles in last 30d — addressed in c95c61b9, closes #1096
 - category: content-gaps
 - impact: 6 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -2245,3 +2245,168 @@
 - next: /ship-content → deep-dives pillar article
 - issue: #1096
 > Filed 2026-11-24 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+
+### [ ] [cross-links] [4.5] shortened-travel-switches-deep-dive ↔ buckling-spring-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: tactile, deep-dive)
+- category: cross-links
+- filed: 2026-11-24 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: tactile, deep-dive
+- article-a: apps/web/src/content/articles/shortened-travel-switches-deep-dive.mdx
+- article-b: apps/web/src/content/articles/buckling-spring-deep-dive.mdx
+- action: add [buckling-spring-deep-dive](/article/buckling-spring-deep-dive) to shortened-travel-switches-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] shortened-travel-switches-deep-dive ↔ cherry-mx2a-revision — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
+- category: cross-links
+- filed: 2026-11-24 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: switches, deep-dive
+- article-a: apps/web/src/content/articles/shortened-travel-switches-deep-dive.mdx
+- article-b: apps/web/src/content/articles/cherry-mx2a-revision.mdx
+- action: add [cherry-mx2a-revision](/article/cherry-mx2a-revision) to shortened-travel-switches-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] shortened-travel-switches-deep-dive ↔ clicky-switches-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
+- category: cross-links
+- filed: 2026-11-24 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: switches, deep-dive
+- article-a: apps/web/src/content/articles/shortened-travel-switches-deep-dive.mdx
+- article-b: apps/web/src/content/articles/clicky-switches-deep-dive.mdx
+- action: add [clicky-switches-deep-dive](/article/clicky-switches-deep-dive) to shortened-travel-switches-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] shortened-travel-switches-deep-dive ↔ drop-holy-panda-x-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: tactile, deep-dive)
+- category: cross-links
+- filed: 2026-11-24 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: tactile, deep-dive
+- article-a: apps/web/src/content/articles/shortened-travel-switches-deep-dive.mdx
+- article-b: apps/web/src/content/articles/drop-holy-panda-x-deep-dive.mdx
+- action: add [drop-holy-panda-x-deep-dive](/article/drop-holy-panda-x-deep-dive) to shortened-travel-switches-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] shortened-travel-switches-deep-dive ↔ durock-t1-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: tactile, deep-dive)
+- category: cross-links
+- filed: 2026-11-24 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: tactile, deep-dive
+- article-a: apps/web/src/content/articles/shortened-travel-switches-deep-dive.mdx
+- article-b: apps/web/src/content/articles/durock-t1-deep-dive.mdx
+- action: add [durock-t1-deep-dive](/article/durock-t1-deep-dive) to shortened-travel-switches-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] shortened-travel-switches-deep-dive ↔ gateron-lanes-tactile-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: tactile, switches, deep-dive)
+- category: cross-links
+- filed: 2026-11-24 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: tactile, switches, deep-dive
+- article-a: apps/web/src/content/articles/shortened-travel-switches-deep-dive.mdx
+- article-b: apps/web/src/content/articles/gateron-lanes-tactile-deep-dive.mdx
+- action: add [gateron-lanes-tactile-deep-dive](/article/gateron-lanes-tactile-deep-dive) to shortened-travel-switches-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] shortened-travel-switches-deep-dive ↔ gazzew-boba-family-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: tactile, deep-dive)
+- category: cross-links
+- filed: 2026-11-24 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: tactile, deep-dive
+- article-a: apps/web/src/content/articles/shortened-travel-switches-deep-dive.mdx
+- article-b: apps/web/src/content/articles/gazzew-boba-family-deep-dive.mdx
+- action: add [gazzew-boba-family-deep-dive](/article/gazzew-boba-family-deep-dive) to shortened-travel-switches-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] shortened-travel-switches-deep-dive ↔ gazzew-boba-u4t-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: tactile, deep-dive)
+- category: cross-links
+- filed: 2026-11-24 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: tactile, deep-dive
+- article-a: apps/web/src/content/articles/shortened-travel-switches-deep-dive.mdx
+- article-b: apps/web/src/content/articles/gazzew-boba-u4t-deep-dive.mdx
+- action: add [gazzew-boba-u4t-deep-dive](/article/gazzew-boba-u4t-deep-dive) to shortened-travel-switches-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] shortened-travel-switches-deep-dive ↔ hmx-cloud-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
+- category: cross-links
+- filed: 2026-11-24 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: switches, deep-dive
+- article-a: apps/web/src/content/articles/shortened-travel-switches-deep-dive.mdx
+- article-b: apps/web/src/content/articles/hmx-cloud-deep-dive.mdx
+- action: add [hmx-cloud-deep-dive](/article/hmx-cloud-deep-dive) to shortened-travel-switches-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] shortened-travel-switches-deep-dive ↔ key-matrix-ghosting-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
+- category: cross-links
+- filed: 2026-11-24 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: switches, deep-dive
+- article-a: apps/web/src/content/articles/shortened-travel-switches-deep-dive.mdx
+- article-b: apps/web/src/content/articles/key-matrix-ghosting-deep-dive.mdx
+- action: add [key-matrix-ghosting-deep-dive](/article/key-matrix-ghosting-deep-dive) to shortened-travel-switches-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] shortened-travel-switches-deep-dive ↔ keyboard-acoustics-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
+- category: cross-links
+- filed: 2026-11-24 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: switches, deep-dive
+- article-a: apps/web/src/content/articles/shortened-travel-switches-deep-dive.mdx
+- article-b: apps/web/src/content/articles/keyboard-acoustics-deep-dive.mdx
+- action: add [keyboard-acoustics-deep-dive](/article/keyboard-acoustics-deep-dive) to shortened-travel-switches-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] shortened-travel-switches-deep-dive ↔ magnetic-switches-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
+- category: cross-links
+- filed: 2026-11-24 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: switches, deep-dive
+- article-a: apps/web/src/content/articles/shortened-travel-switches-deep-dive.mdx
+- article-b: apps/web/src/content/articles/magnetic-switches-deep-dive.mdx
+- action: add [magnetic-switches-deep-dive](/article/magnetic-switches-deep-dive) to shortened-travel-switches-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] shortened-travel-switches-deep-dive ↔ optical-switches-explained — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
+- category: cross-links
+- filed: 2026-11-24 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: switches, deep-dive
+- article-a: apps/web/src/content/articles/shortened-travel-switches-deep-dive.mdx
+- article-b: apps/web/src/content/articles/optical-switches-explained.mdx
+- action: add [optical-switches-explained](/article/optical-switches-explained) to shortened-travel-switches-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] shortened-travel-switches-deep-dive ↔ tactile-stem-geometry-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: tactile, switches, deep-dive)
+- category: cross-links
+- filed: 2026-11-24 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: tactile, switches, deep-dive
+- article-a: apps/web/src/content/articles/shortened-travel-switches-deep-dive.mdx
+- article-b: apps/web/src/content/articles/tactile-stem-geometry-deep-dive.mdx
+- action: add [tactile-stem-geometry-deep-dive](/article/tactile-stem-geometry-deep-dive) to shortened-travel-switches-deep-dive body, or vice versa
+
+### [ ] [cross-links] [4.5] shortened-travel-switches-deep-dive ↔ tmr-switches-deep-dive — no prose cross-link (same pillar, ≥2 shared tags: switches, deep-dive)
+- category: cross-links
+- filed: 2026-11-24 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: switches, deep-dive
+- article-a: apps/web/src/content/articles/shortened-travel-switches-deep-dive.mdx
+- article-b: apps/web/src/content/articles/tmr-switches-deep-dive.mdx
+- action: add [tmr-switches-deep-dive](/article/tmr-switches-deep-dive) to shortened-travel-switches-deep-dive body, or vice versa
