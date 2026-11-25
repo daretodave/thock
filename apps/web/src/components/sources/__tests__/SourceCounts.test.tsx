@@ -129,4 +129,17 @@ describe('<SourceCounts>', () => {
     const link = screen.getByRole('link', { name: /oil kings/i })
     expect(link).toHaveAttribute('href', '/article/oil-king-deep-dive')
   })
+
+  it('renders the row title inside a real h3, not a plain link (a11y)', () => {
+    const rows: ArticleSourceCount[] = [
+      {
+        article: fixture({ slug: 'oil-king-deep-dive', title: 'Oil Kings' }),
+        sourceCount: 2,
+      },
+    ]
+    render(<SourceCounts rows={rows} />)
+    const titles = screen.getAllByTestId('source-counts-title')
+    expect(titles).toHaveLength(1)
+    expect(titles[0]!.tagName).toBe('H3')
+  })
 })

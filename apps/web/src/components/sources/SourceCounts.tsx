@@ -113,12 +113,17 @@ export function SourceCounts({ rows }: SourceCountsProps): ReactElement {
                   data-testid="source-counts-row"
                   className="flex items-baseline justify-between gap-4 py-4"
                 >
-                  <Link
-                    href={`/article/${article.slug}`}
-                    className="rounded-xs font-serif text-h3 text-text hover:text-accent transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
+                  <h3
+                    data-testid="source-counts-title"
+                    className="font-serif text-h3 text-text"
                   >
-                    {article.frontmatter.title}
-                  </Link>
+                    <Link
+                      href={`/article/${article.slug}`}
+                      className="rounded-xs hover:text-accent transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
+                    >
+                      {article.frontmatter.title}
+                    </Link>
+                  </h3>
                   <span
                     data-testid="source-counts-badge"
                     data-uniform={isUniform ? 'true' : 'false'}
