@@ -149,4 +149,63 @@ None.
 
 Measure: 7 open · 0 closed · next A8
 
-Not chunked yet.
+- [ ] **12.1** `scripts/heading-semantics-coverage-check.mjs` scanner (gate / `--write` / `--json`) · M · closes A1, A2, A3, A7 · needs —
+  - New script mirroring `og-coverage-check.mjs`'s shape (gate /
+    `--write` / `--json` modes, `plan/AUDIT.md` row filing with
+    dedup, same CLI/exit-code contract).
+  - Curated component list, seeded from the four precedent fix
+    commits: `apps/web/src/components/vendor/VendorCard.tsx`,
+    `VendorBoardSection.tsx`, `VendorSwitchSection.tsx`,
+    `VendorKeycapSetSection.tsx`; `apps/web/src/app/parts/page.tsx`;
+    `apps/web/src/app/tools/page.tsx`; `apps/web/src/app/archive/page.tsx`;
+    `apps/web/src/app/part/[kind]/page.tsx`; the quiz result cards
+    (`apps/web/src/components/quiz/ResultCard.tsx`,
+    `BoardResultCard.tsx`, `KeycapSetResultCard.tsx`); the compare
+    tables (`apps/web/src/components/compare/SwitchCompareTable.tsx`,
+    `BoardCompareTable.tsx`) — plus any sibling component under
+    `apps/web/src/components/**` whose props include a
+    `title`/`name`/`label` field rendered as the first text node of
+    a mapped array item (grep-detectable per the spec's Design
+    section).
+  - Per listed file: a regex/string scan (mirroring
+    `truncation-call-site-check.mjs`'s receiver-name heuristic, not
+    a full TSX parser) confirming the title/name expression's
+    nearest enclosing JSX tag — walking outward from the expression
+    to the return statement — is an `h1`–`h6` or a component whose
+    name starts with `H` (e.g. `<Heading as="h3">`), not a bare
+    `span`/`Link`/`div` with no heading ancestor.
+  - Gate mode (no args): exit 1 printing every flagged `file` +
+    prop name if any hit, exit 0 otherwise.
+  - `--write`: append one `a11y` `plan/AUDIT.md` row per hit,
+    deduplicated against existing pending rows, same contract as
+    `og-coverage-check.mjs --write`.
+  - `--json`: `{ flagged: [...] }`.
+  - No change to any component's rendered output — detection only
+    (A7).
+- [ ] **12.2** Unit tests + live-corpus regression gate · S · closes A4, A6 · partial A5 · needs 12.1
+  - `scripts/__tests__/heading-semantics-coverage-check.test.mjs`
+    (mirroring `scripts/__tests__/og-coverage-check.test.mjs`):
+    a fixture component whose title prop renders inside a bare
+    `span`/`Link` (gate mode flags it), a fixture component whose
+    title renders inside an `h2`/`h3` (clean), and a fixture using
+    a `<Heading as="h3">`-style wrapper (clean, component-name
+    heuristic).
+  - A further test with no fixture: runs gate mode against the
+    real `apps/web/src` tree and asserts exit 0 today (A6) — so a
+    future commit introducing a live violation fails
+    `test:scripts`, already a hard `pnpm verify` leg, satisfying
+    A5's "wired into `pnpm verify`" clause with no new top-level
+    script line, the same convention `truncation-call-site-check.mjs`
+    relies on (no sibling survey script adds its own `pnpm verify`
+    entry).
+  - Runs via the existing `pnpm test:scripts` leg.
+- [ ] **12.3** Wire `--write` into the survey chain and nightly digest · S · closes A5 · needs 12.1, 12.2
+  - `skills/march.lanes.md`'s `empty-queue-refill-post-phase-30`
+    survey chain: add `node scripts/heading-semantics-coverage-check.mjs
+    --write` alongside the other mechanical surveys, same
+    "non-zero exit logs and continues, never blocks the commit"
+    contract.
+  - `skills/digest.md`'s nightly breadth-check list: add the same
+    `--write` invocation alongside its siblings.
+  - No script change in this chunk — 12.1's `--write` contract
+    already matches what both call sites expect.
