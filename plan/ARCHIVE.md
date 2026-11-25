@@ -97,4 +97,4 @@
 - 2026-11-19 · 10 · spec complete: Stale-`updatedAt` mechanical check · absorbed into plan/bearings.md · deleted in this commit
 - 2026-11-25 · 12.1 · heading-semantics-coverage-check.mjs scans curated + sibling components for heading-less titles · 5636bdeb..5636bdeb
 - 2026-11-25 · 12.4 · SuggestedSwitchPairs and SourceCounts titles now real h3 headings · 56fdb8a7..bd34f08d
-- 2026-11-25 · 12.2 · Unit tests + live-corpus gate for heading-semantics-coverage-check.mjs · 3a9cdd7f..3a9cdd7f
+- 2026-11-25 · 12.2 · Unit tests + live-corpus gate for heading-semantics-coverage-check.mjs · 7a8905d4..7a8905d4
