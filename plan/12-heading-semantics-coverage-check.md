@@ -138,7 +138,7 @@ None.
 
 Measure: 3 open · 4 closed · next A8
 
-- [ ] **12.2** Unit tests + live-corpus regression gate · S · closes A4, A6 · partial A5 · needs 12.4
+- [ ] **12.2** Unit tests + live-corpus regression gate · S · closes A4, A6 · partial A5 · needs —
   - `scripts/__tests__/heading-semantics-coverage-check.test.mjs`
     (mirroring `scripts/__tests__/og-coverage-check.test.mjs`):
     a fixture component whose title prop renders inside a bare
@@ -165,17 +165,3 @@ Measure: 3 open · 4 closed · next A8
     `--write` invocation alongside its siblings.
   - No script change in this chunk — 12.1's `--write` contract
     already matches what both call sites expect.
-- [ ] **12.4** Wrap `SuggestedSwitchPairs.tsx`'s and `SourceCounts.tsx`'s list-item title text in a heading so gate mode exits 0 on the live corpus · S · partial A6 · needs —
-  - `apps/web/src/components/compare/SuggestedSwitchPairs.tsx:27`:
-    `{a.name} vs {b.name}` renders inside a bare `<Link>` with no
-    heading ancestor.
-  - `apps/web/src/components/sources/SourceCounts.tsx:120`:
-    `{article.frontmatter.title}` renders inside a bare `<Link>`
-    with no heading ancestor, same shape as the already-fixed
-    `/archive` defect (#699).
-  - Wrap each in an `h2`/`h3` (or an `sr-only` heading, matching
-    the surrounding card's existing visual weight) — the same
-    pattern all four precedent fixes already used. No other
-    markup change.
-  - Must land before, or alongside, 12.2's live-corpus exit-0
-    assertion (see this close's Notes).
