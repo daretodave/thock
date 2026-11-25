@@ -443,6 +443,18 @@ actual body or other frontmatter fields — a drift that silently tells
 crawlers (`dateModified` JSON-LD, `article:modified_time` OG meta) that
 nothing changed. Deduplicates against existing AUDIT rows. If it exits
 non-zero, log and continue — the check is best-effort.
+
+Then run the heading-semantics coverage check (spec 12, chunk 12.3):
+
+```bash
+node scripts/heading-semantics-coverage-check.mjs --write
+```
+
+This files `a11y` AUDIT rows (score 4.9) for list/card-rendering components
+whose title/name prop renders with no heading ancestor — a screen-reader
+user navigating by heading landmark finds fewer headings than the page
+visually implies. Deduplicates against existing AUDIT rows. If it exits
+non-zero, log and continue — the check is best-effort.
 Then fall through to Step 3c (expand).
 
 ## lane: expand-due-notes

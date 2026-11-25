@@ -90,6 +90,7 @@ its own cadence.
    node scripts/group-buy-article-staleness-check.mjs --write
    node scripts/stale-updated-at-check.mjs --write
    node scripts/truncation-call-site-check.mjs --write
+   node scripts/heading-semantics-coverage-check.mjs --write
    ```
 
    Failures become HIGH `plan/AUDIT.md` rows — the digest
@@ -111,7 +112,12 @@ its own cadence.
    display-text slice bypassing the vetted helpers found)
    becomes an `engineering` `plan/AUDIT.md` row the same way,
    filed by the script itself (same `--write` contract as its
-   per-commit path); it never blocks the digest commit.
+   per-commit path); it never blocks the digest commit. The
+   heading-semantics coverage check's non-zero exit (a list/card
+   title rendered with no heading ancestor found) becomes an
+   `a11y` `plan/AUDIT.md` row the same way, filed by the script
+   itself (same `--write` contract as its per-commit path); it
+   never blocks the digest commit.
 4. **Write `plan/DIGEST.md`** — overwrite entirely; it is a
    snapshot, not a ledger. Sections, in order: `Headline`,
    `While you were out` (pulse table: tick, verb, outcome —
