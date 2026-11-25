@@ -118,17 +118,12 @@ precedents.
 
 ## Acceptance
 
-- **A4** `scripts/__tests__/heading-semantics-coverage-check.test.mjs`
-  exercises A2's fixture cases, run via `pnpm test:scripts`.
 - **A5** The gate invocation is wired into `pnpm verify` as a new
   script-check leg (mirroring `truncation-call-site-check.mjs`'s
   placement), and the `--write` invocation is added to
   `skills/march.lanes.md`'s survey chain and `skills/digest.md`'s
   nightly breadth-check list, same best-effort / non-blocking
   contract as their sibling surveys.
-- **A6** Running the gate against the current corpus (post the
-  four precedent fixes) exits 0 — no regression on the already-
-  fixed surfaces.
 
 ## Open questions
 
@@ -136,26 +131,9 @@ None.
 
 ## Chunks
 
-Measure: 3 open · 4 closed · next A8
+Measure: 1 open · 6 closed · next A8
 
-- [ ] **12.2** Unit tests + live-corpus regression gate · S · closes A4, A6 · partial A5 · needs —
-  - `scripts/__tests__/heading-semantics-coverage-check.test.mjs`
-    (mirroring `scripts/__tests__/og-coverage-check.test.mjs`):
-    a fixture component whose title prop renders inside a bare
-    `span`/`Link` (gate mode flags it), a fixture component whose
-    title renders inside an `h2`/`h3` (clean), and a fixture using
-    a `<Heading as="h3">`-style wrapper (clean, component-name
-    heuristic).
-  - A further test with no fixture: runs gate mode against the
-    real `apps/web/src` tree and asserts exit 0 today (A6) — so a
-    future commit introducing a live violation fails
-    `test:scripts`, already a hard `pnpm verify` leg, satisfying
-    A5's "wired into `pnpm verify`" clause with no new top-level
-    script line, the same convention `truncation-call-site-check.mjs`
-    relies on (no sibling survey script adds its own `pnpm verify`
-    entry).
-  - Runs via the existing `pnpm test:scripts` leg.
-- [ ] **12.3** Wire `--write` into the survey chain and nightly digest · S · closes A5 · needs 12.2
+- [ ] **12.3** Wire `--write` into the survey chain and nightly digest · S · closes A5 · needs —
   - `skills/march.lanes.md`'s `empty-queue-refill-post-phase-30`
     survey chain: add `node scripts/heading-semantics-coverage-check.mjs
     --write` alongside the other mechanical surveys, same

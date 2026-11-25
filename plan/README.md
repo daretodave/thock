@@ -23,7 +23,7 @@ condition> · max_age: 14d`, an optional `· fallback: release`):
 | # | Initiative | Spec | Status | Progress |
 |---|---|---|---|---|
 | 11 | Cloud prompt dispatch-summary lane gap | [11-march-yml-dispatch-summary-lane-gap.md](11-march-yml-dispatch-summary-lane-gap.md) |  | 1 left |
-| 12 | Heading-semantics coverage check | [12-heading-semantics-coverage-check.md](12-heading-semantics-coverage-check.md) |  | 2 left |
+| 12 | Heading-semantics coverage check | [12-heading-semantics-coverage-check.md](12-heading-semantics-coverage-check.md) |  | 1 left |
 
 ## Layout
 
