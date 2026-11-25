@@ -1,18 +1,36 @@
 # Critique log
 
-> Last pass: 2026-11-22T07:49:30Z at commit 91d546f4
-> Pass count: 21
+> Last pass: 2026-11-25T14:30:33Z at commit 76b1b65e
+> Pass count: 22
+> Pass 21 last pass: 2026-11-22T07:49:30Z at commit 91d546f4
 > Pass 20 last pass: 2026-11-20T08:27:23Z at commit ed0de5df
 > Pass 19 last pass: 2026-11-10T09:45:00Z at commit b056da79
 > Pass 18 last pass: 2026-11-06T00:16:44Z at commit 113926e9
 > Pass 17 last pass: 2026-11-05T16:09:48Z at commit 5ec23cdd
 > Pass 16 last pass: 2026-10-31T04:11:00Z at commit 6b73abed
-> Pass 13 last pass: 2026-10-27T23:31:41Z at commit a03ead8e
 
 > External-observer feedback for thock. Populated by `/critique`,
 > drained by `/iterate`. See `skills/critique.md` for the contract.
 
 ## Pending
+
+### [LOW] / and /news — an orphaned orange dot floats in the hero card's grid gap with no apparent purpose
+- pass: 22 (commit 76b1b65e)
+- viewport: desktop and mobile
+- category: visual
+- observation: the hero-variant `ArticleCard` (`apps/web/src/components/home/ArticleCard.tsx:102-140`) lays out its image and text columns as `lg:grid-cols-[1.4fr_1fr] lg:items-center lg:gap-8`, but no JSX in that component renders a marker in the gap column. A small solid orange dot nonetheless appears vertically centered in that gap on both `/` (next to the "DEEP DIVES" eyebrow) and `/news` (next to the "NEWS" eyebrow for the Gateron Magnetic Jade article) — same relative position on both pages despite otherwise-unrelated hero illustrations (hand-drawn stem-runway diagram vs. magnet-sensor cross-section), so it isn't image content. Reads as leftover/unstyled markup rather than an intentional design element.
+- evidence: walk screenshots `url--desktop--home.png` (dot at ~(693,186)), `url--desktop--news.png` (~(691,525)), `url--mobile--home.png` (~(352,145)), `url--mobile--news.png` (~(348,525)) (`.nexus/walk/2026-11-25T14-25-35-683Z/`, not committed — cite this line for re-verification).
+- suggested fix: inspect the rendered DOM for the hero card's grid gap (likely a stray decorative element shared by both pages, e.g. a leftover timeline/divider marker) and either give it a clear purpose or remove it.
+- source: walk
+
+### [LOW] / vs /trends/tracker — the current week/year label is formatted two different ways across pages citing the same figure
+- pass: 22 (commit 76b1b65e)
+- viewport: desktop
+- category: comprehension
+- observation: home's trending-strip kicker reads "WEEK 48 / 2026" (`isoWeekKicker`, `apps/web/src/app/page.tsx:48-52`: `` `Week ${match[2]} / ${match[1]}` ``), while the full Trends Tracker page's header stat block reads "2026 · WEEK" / "48" / "of 53" stacked vertically (`apps/web/src/components/tracker/TrackerHeader.tsx:53-61`). Same data point, inconsistent order (week-first vs. year-first) and separator (`/` vs. `·`) between the teaser a reader sees first and the full page it links to.
+- evidence: walk screenshots `url--desktop--home.png` (eyebrow "WEEK 48 / 2026" above "Trending — what's moving on the tracker") and `url--desktop--trends-tracker.png` (top-right stat block "2026 · WEEK" / "48" / "of 53") (`.nexus/walk/2026-11-25T14-25-35-683Z/`, not committed — cite this line for re-verification).
+- suggested fix: share one week/year label format (or at least one ordering/separator convention) between `isoWeekKicker` (home) and `TrackerHeader`'s rightRail block, so the same figure reads consistently across both surfaces.
+- source: walk
 
 ### [MED] /trends/tracker — the "SLEEPER" summary card still shows a signed negative delta, reading as a second faller
 - pass: 21 (commit 91d546f4)
