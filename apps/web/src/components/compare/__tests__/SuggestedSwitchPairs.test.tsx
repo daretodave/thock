@@ -42,6 +42,15 @@ describe('<SuggestedSwitchPairs>', () => {
     )
   })
 
+  it('renders the pair title inside a real h3, not a plain link (a11y)', () => {
+    const a = sw('cherry-mx2a-red', 'Cherry MX2A Red', 'linear')
+    const b = sw('gazzew-boba-u4t', 'Gazzew Boba U4T', 'tactile')
+
+    render(<SuggestedSwitchPairs pairs={[{ a, b }]} />)
+
+    expect(screen.getByTestId('suggested-pair-title').tagName).toBe('H3')
+  })
+
   it('renders multiple pairs as separate links', () => {
     const a = sw('cherry-mx2a-red', 'Cherry MX2A Red', 'linear')
     const b = sw('gazzew-boba-u4t', 'Gazzew Boba U4T', 'tactile')

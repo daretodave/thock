@@ -19,13 +19,18 @@ export function SuggestedSwitchPairs({
       <ul className="flex flex-col gap-1">
         {pairs.map(({ a, b }) => (
           <li key={`${a.slug}-${b.slug}`}>
-            <Link
-              href={`/compare/switch?a=${encodeURIComponent(a.slug)}&b=${encodeURIComponent(b.slug)}`}
-              data-testid="compare-suggested-pair"
-              className="font-mono text-small text-text-2 hover:text-text transition-colors rounded-xs focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
+            <h3
+              data-testid="suggested-pair-title"
+              className="font-mono text-small text-text-2"
             >
-              {a.name} vs {b.name} →
-            </Link>
+              <Link
+                href={`/compare/switch?a=${encodeURIComponent(a.slug)}&b=${encodeURIComponent(b.slug)}`}
+                data-testid="compare-suggested-pair"
+                className="hover:text-text transition-colors rounded-xs focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-accent-mu"
+              >
+                {a.name} vs {b.name} →
+              </Link>
+            </h3>
           </li>
         ))}
       </ul>
