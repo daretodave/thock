@@ -95,3 +95,4 @@
 - 2026-11-19 · 10.1 · stale-updated-at-check.mjs flags frontmatter updatedAt lagging the last content commit · 7401df32..7401df32
 - 2026-11-19 · 10.2 · Survey chain + digest now run the stale-updatedAt check · dcc8983b..dcc8983b
 - 2026-11-19 · 10 · spec complete: Stale-`updatedAt` mechanical check · absorbed into plan/bearings.md · deleted in this commit
+- 2026-11-25 · 12.1 · heading-semantics-coverage-check.mjs scans curated + sibling components for heading-less titles · 5636bdeb..5636bdeb

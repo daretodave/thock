@@ -118,15 +118,6 @@ precedents.
 
 ## Acceptance
 
-- **A1** `scripts/heading-semantics-coverage-check.mjs` exists,
-  mirrors the `og-coverage-check.mjs` shape (gate / `--write` /
-  `--json`).
-- **A2** Gate mode flags a fixture component whose title/name
-  prop renders inside a bare `span`/`Link` with no heading
-  ancestor, and passes a fixture component whose title renders
-  inside an `h1`–`h6` (or `<Heading as="hN">`-style wrapper).
-- **A3** `--write` appends an `a11y`-category `plan/AUDIT.md` row
-  per hit, deduplicated against existing pending rows.
 - **A4** `scripts/__tests__/heading-semantics-coverage-check.test.mjs`
   exercises A2's fixture cases, run via `pnpm test:scripts`.
 - **A5** The gate invocation is wired into `pnpm verify` as a new
@@ -138,8 +129,6 @@ precedents.
 - **A6** Running the gate against the current corpus (post the
   four precedent fixes) exits 0 — no regression on the already-
   fixed surfaces.
-- **A7** No schema, component, or URL-contract change; no change
-  to any component's rendered markup.
 
 ## Open questions
 
@@ -147,42 +136,9 @@ None.
 
 ## Chunks
 
-Measure: 7 open · 0 closed · next A8
+Measure: 3 open · 4 closed · next A8
 
-- [ ] **12.1** `scripts/heading-semantics-coverage-check.mjs` scanner (gate / `--write` / `--json`) · M · closes A1, A2, A3, A7 · needs —
-  - New script mirroring `og-coverage-check.mjs`'s shape (gate /
-    `--write` / `--json` modes, `plan/AUDIT.md` row filing with
-    dedup, same CLI/exit-code contract).
-  - Curated component list, seeded from the four precedent fix
-    commits: `apps/web/src/components/vendor/VendorCard.tsx`,
-    `VendorBoardSection.tsx`, `VendorSwitchSection.tsx`,
-    `VendorKeycapSetSection.tsx`; `apps/web/src/app/parts/page.tsx`;
-    `apps/web/src/app/tools/page.tsx`; `apps/web/src/app/archive/page.tsx`;
-    `apps/web/src/app/part/[kind]/page.tsx`; the quiz result cards
-    (`apps/web/src/components/quiz/ResultCard.tsx`,
-    `BoardResultCard.tsx`, `KeycapSetResultCard.tsx`); the compare
-    tables (`apps/web/src/components/compare/SwitchCompareTable.tsx`,
-    `BoardCompareTable.tsx`) — plus any sibling component under
-    `apps/web/src/components/**` whose props include a
-    `title`/`name`/`label` field rendered as the first text node of
-    a mapped array item (grep-detectable per the spec's Design
-    section).
-  - Per listed file: a regex/string scan (mirroring
-    `truncation-call-site-check.mjs`'s receiver-name heuristic, not
-    a full TSX parser) confirming the title/name expression's
-    nearest enclosing JSX tag — walking outward from the expression
-    to the return statement — is an `h1`–`h6` or a component whose
-    name starts with `H` (e.g. `<Heading as="h3">`), not a bare
-    `span`/`Link`/`div` with no heading ancestor.
-  - Gate mode (no args): exit 1 printing every flagged `file` +
-    prop name if any hit, exit 0 otherwise.
-  - `--write`: append one `a11y` `plan/AUDIT.md` row per hit,
-    deduplicated against existing pending rows, same contract as
-    `og-coverage-check.mjs --write`.
-  - `--json`: `{ flagged: [...] }`.
-  - No change to any component's rendered output — detection only
-    (A7).
-- [ ] **12.2** Unit tests + live-corpus regression gate · S · closes A4, A6 · partial A5 · needs 12.1
+- [ ] **12.2** Unit tests + live-corpus regression gate · S · closes A4, A6 · partial A5 · needs 12.4
   - `scripts/__tests__/heading-semantics-coverage-check.test.mjs`
     (mirroring `scripts/__tests__/og-coverage-check.test.mjs`):
     a fixture component whose title prop renders inside a bare
@@ -199,7 +155,7 @@ Measure: 7 open · 0 closed · next A8
     relies on (no sibling survey script adds its own `pnpm verify`
     entry).
   - Runs via the existing `pnpm test:scripts` leg.
-- [ ] **12.3** Wire `--write` into the survey chain and nightly digest · S · closes A5 · needs 12.1, 12.2
+- [ ] **12.3** Wire `--write` into the survey chain and nightly digest · S · closes A5 · needs 12.2
   - `skills/march.lanes.md`'s `empty-queue-refill-post-phase-30`
     survey chain: add `node scripts/heading-semantics-coverage-check.mjs
     --write` alongside the other mechanical surveys, same
@@ -209,3 +165,17 @@ Measure: 7 open · 0 closed · next A8
     `--write` invocation alongside its siblings.
   - No script change in this chunk — 12.1's `--write` contract
     already matches what both call sites expect.
+- [ ] **12.4** Wrap `SuggestedSwitchPairs.tsx`'s and `SourceCounts.tsx`'s list-item title text in a heading so gate mode exits 0 on the live corpus · S · partial A6 · needs —
+  - `apps/web/src/components/compare/SuggestedSwitchPairs.tsx:27`:
+    `{a.name} vs {b.name}` renders inside a bare `<Link>` with no
+    heading ancestor.
+  - `apps/web/src/components/sources/SourceCounts.tsx:120`:
+    `{article.frontmatter.title}` renders inside a bare `<Link>`
+    with no heading ancestor, same shape as the already-fixed
+    `/archive` defect (#699).
+  - Wrap each in an `h2`/`h3` (or an `sr-only` heading, matching
+    the surrounding card's existing visual weight) — the same
+    pattern all four precedent fixes already used. No other
+    markup change.
+  - Must land before, or alongside, 12.2's live-corpus exit-0
+    assertion (see this close's Notes).
