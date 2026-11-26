@@ -2422,7 +2422,7 @@
 - lastContentCommitAt: 2026-11-24
 - action: bump updatedAt in shortened-travel-switches-deep-dive.mdx's frontmatter to 2026-11-24 (or later)
 
-### [HOT PURSUIT] [content-gap] [7] news pillar — 1 of ≥2 articles in last 30d
+### [x] [content-gap] [7] news pillar — 1 of ≥2 articles in last 30d — addressed in abc1e39c, closes #1098
 - category: content-gaps
 - impact: 7 (Rule 1 sliding window — hot-pursuit)
 - ease: 5 (one new article per tick via /ship-content)
@@ -2434,3 +2434,25 @@
 - next: /ship-content → news pillar article
 - issue: #1098
 > Filed 2026-11-26 by content-gap-survey.mjs (auto-refill). One article published in the last 30 days — hot pursuit (score 7.0). Next /march tick dispatches /ship-content for this pillar.
+
+### [ ] [cross-links] [4.5] paper80-whatever-studio-group-buy-wraps ↔ cannonkeys-blaine-v2-se-group-buy — no prose cross-link (same pillar, ≥2 shared tags: group-buy, gasket-mount)
+- category: cross-links
+- filed: 2026-11-26 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: group-buy, gasket-mount
+- article-a: apps/web/src/content/articles/paper80-whatever-studio-group-buy-wraps.mdx
+- article-b: apps/web/src/content/articles/cannonkeys-blaine-v2-se-group-buy.mdx
+- action: add [cannonkeys-blaine-v2-se-group-buy](/article/cannonkeys-blaine-v2-se-group-buy) to paper80-whatever-studio-group-buy-wraps body, or vice versa
+
+### [ ] [cross-links] [4.5] paper80-whatever-studio-group-buy-wraps ↔ cannonkeys-mass80-extras-restock — no prose cross-link (same pillar, ≥2 shared tags: group-buy, vendor)
+- category: cross-links
+- filed: 2026-11-26 by article-crosslink-survey.mjs
+- impact: 5 (same-pillar articles sharing ≥2 tags with no cross-link; reader has no path to sibling)
+- ease: 9 (add one inline markdown link to either article body)
+- score: 4.5 (impact × ease / 10)
+- shared-tags: group-buy, vendor
+- article-a: apps/web/src/content/articles/paper80-whatever-studio-group-buy-wraps.mdx
+- article-b: apps/web/src/content/articles/cannonkeys-mass80-extras-restock.mdx
+- action: add [cannonkeys-mass80-extras-restock](/article/cannonkeys-mass80-extras-restock) to paper80-whatever-studio-group-buy-wraps body, or vice versa
