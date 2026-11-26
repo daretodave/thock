@@ -2456,3 +2456,14 @@
 - article-a: apps/web/src/content/articles/paper80-whatever-studio-group-buy-wraps.mdx
 - article-b: apps/web/src/content/articles/cannonkeys-mass80-extras-restock.mdx
 - action: add [cannonkeys-mass80-extras-restock](/article/cannonkeys-mass80-extras-restock) to paper80-whatever-studio-group-buy-wraps body, or vice versa
+
+### [ ] [seo] [5.4] paper80-whatever-studio-group-buy-wraps frontmatter updatedAt is stale
+- category: seo
+- filed: 2026-11-26 by stale-updated-at-check.mjs — paper80-whatever-studio-group-buy-wraps
+- impact: 6 (dateModified JSON-LD and article:modified_time OG meta both source solely from updatedAt — crawlers are told nothing changed since 2026-11-23 even though the content last changed 2026-11-26)
+- ease: 9 (single frontmatter date bump, no code or schema change)
+- score: 5.4 (impact × ease / 10)
+- article: apps/web/src/content/articles/paper80-whatever-studio-group-buy-wraps.mdx
+- updatedAt: 2026-11-23
+- lastContentCommitAt: 2026-11-26
+- action: bump updatedAt in paper80-whatever-studio-group-buy-wraps.mdx's frontmatter to 2026-11-26 (or later)
