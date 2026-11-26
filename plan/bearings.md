@@ -813,6 +813,24 @@ time you encounter a recurring class of design ambiguity.)
   Runs via `--write` in `skills/march.lanes.md`'s survey chain
   and `skills/digest.md`'s nightly breadth check alongside their
   siblings.
+- **Heading-semantics coverage check (spec 12, absorbed
+  2026-11-25):** `scripts/heading-semantics-coverage-check.mjs`
+  catches the defect shape behind four independent reactive
+  fixes (`/vendors`, `/parts`, `/tools`, `/vendor/[slug]`,
+  `/archive`, part-kind index cards, quiz result cards and
+  compare tables): a list/card item's title/name prop rendered
+  as a styled `span`/`Link` instead of inside an `h1`–`h6` (or
+  `<Heading>`-style) ancestor, so a screen-reader user
+  navigating by heading landmark finds fewer headings than the
+  page visually implies. Mirrors `truncation-call-site-check.mjs`'s
+  shape (gate / `--write` / `--json`, receiver-name-style
+  heuristic) and runs as a per-commit `pnpm verify` leg
+  (`pnpm test:scripts`'s live-corpus assertion) since a new
+  component can introduce the defect at authoring time. Files
+  `a11y` category `plan/AUDIT.md` rows (score 4.9) via
+  `--write`, deduped by `file:line`. Runs via `--write` in
+  `skills/march.lanes.md`'s survey chain and `skills/digest.md`'s
+  nightly breadth check alongside their siblings.
 
 ## Hard rules
 

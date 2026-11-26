@@ -98,3 +98,5 @@
 - 2026-11-25 · 12.1 · heading-semantics-coverage-check.mjs scans curated + sibling components for heading-less titles · 5636bdeb..5636bdeb
 - 2026-11-25 · 12.4 · SuggestedSwitchPairs and SourceCounts titles now real h3 headings · 56fdb8a7..bd34f08d
 - 2026-11-25 · 12.2 · Unit tests + live-corpus gate for heading-semantics-coverage-check.mjs · 7a8905d4..7a8905d4
+- 2026-11-25 · 12.3 · heading-semantics-coverage-check now runs via march's survey chain and digest's breadth check · d06a3ce1..d06a3ce1
+- 2026-11-25 · 12 · spec complete: Heading-semantics coverage check · absorbed into plan/bearings.md · deleted in this commit
