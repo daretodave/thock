@@ -1,6 +1,16 @@
 {
   "articles": [
     {
+      "slug": "paper80-whatever-studio-group-buy-wraps",
+      "readTime": 5,
+      "frontmatter": {
+        "title": "The Paper80 x Whatever Studio group buy wrapped in April. Nobody wrote about it.",
+        "lede": "Wuque Studio's group buy for the Paper80 x Whatever Studio closed April 14, 2026, with no fanfare and no companion coverage. thock is catching up — seven months late, in keeping with how quietly the buy itself wrapped.",
+        "pillar": "news",
+        "author": "thock"
+      }
+    },
+    {
       "slug": "shortened-travel-switches-deep-dive",
       "readTime": 8,
       "frontmatter": {
@@ -11459,5 +11469,5 @@
       ]
     }
   ],
-  "generatedAt": "2026-11-24T20:22:36.804Z"
+  "generatedAt": "2026-11-26T14:57:38.964Z"
 }
