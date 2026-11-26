@@ -1,0 +1,25 @@
+{
+  "generated_by": "content-curator-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-11-26T00:00:00.000Z",
+  "commit": "1dc0eccf",
+  "kind": "inline-viz",
+  "article_slug": "paper80-whatever-studio-group-buy-wraps",
+  "article_pillar": "news",
+  "section_anchor": "What \"wrapped, with limited follow-on stock\" means for a buyer",
+  "brief_summary": "Two-column, four-row comparison matrix contrasting the closed March 31-April 14 2026 group buy (pays now ships later, backer-set quantity, two-week window, now closed) against the vendor-described follow-on stock state (units already built, unpublished quantity/price, no stated restock date, vendor description reads only 'limited').",
+  "target": "apps/web/public/article-viz/paper80-whatever-studio-group-buy-wraps/gb-vs-followon.svg",
+  "splash_color": { "name": "ochre", "oklch": "oklch(0.72 0.10 75)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans"],
+  "data_sources": [
+    "data/group-buys/wuque-studio-paper80-whatever-studio.json — description 'GB has wrapped, with limited follow-on stock.'",
+    "data/group-buys/wuque-studio-paper80-whatever-studio.json — startDate '2026-03-31', endDate '2026-04-14', status 'closed'",
+    "article body, 'What \"wrapped, with limited follow-on stock\" means for a buyer' section — 'units that already exist, sold outside the ordering window, in whatever quantity is left over'",
+    "article body — 'Wuque Studio has not published a unit count for the run, a price for whatever follow-on stock remains, or a date for when that stock becomes available'"
+  ],
+  "outputs": ["apps/web/public/article-viz/paper80-whatever-studio-group-buy-wraps/gb-vs-followon.svg"],
+  "warnings": []
+}

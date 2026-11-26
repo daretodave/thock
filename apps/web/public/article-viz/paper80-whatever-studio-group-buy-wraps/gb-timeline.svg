@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock inline viz — Paper80 x Whatever Studio group-buy timeline, open to close to today</title>
+
+  <!-- Baseline -->
+  <line x1="80" y1="220" x2="1120" y2="220" stroke-opacity="0.55"/>
+
+  <!-- GB opens: 2026-03-31 -->
+  <circle cx="200" cy="220" r="9" fill="oklch(0.72 0.10 75)" stroke="oklch(0.60 0.12 75)" stroke-width="2"/>
+  <line x1="200" y1="220" x2="200" y2="150" stroke-opacity="0.4" stroke-dasharray="3 6"/>
+  <text x="200" y="124" font-family="IBM Plex Sans, sans-serif" font-size="18" text-anchor="middle" fill="oklch(0.78 0.005 90)" stroke="none" font-weight="600">GB opens</text>
+  <text x="200" y="148" font-family="ui-monospace, 'JetBrains Mono', monospace" font-size="15" text-anchor="middle" fill="oklch(0.78 0.005 90)" stroke="none">2026-03-31</text>
+
+  <!-- GB closes: 2026-04-14 -->
+  <circle cx="420" cy="220" r="9" fill="oklch(0.72 0.10 75)" stroke="oklch(0.60 0.12 75)" stroke-width="2"/>
+  <line x1="420" y1="220" x2="420" y2="150" stroke-opacity="0.4" stroke-dasharray="3 6"/>
+  <text x="420" y="124" font-family="IBM Plex Sans, sans-serif" font-size="18" text-anchor="middle" fill="oklch(0.78 0.005 90)" stroke="none" font-weight="600">GB closes</text>
+  <text x="420" y="148" font-family="ui-monospace, 'JetBrains Mono', monospace" font-size="15" text-anchor="middle" fill="oklch(0.78 0.005 90)" stroke="none">2026-04-14 · status: closed</text>
+
+  <!-- Today: 2026-11-23, the focal event this article marks -->
+  <circle cx="1040" cy="220" r="12" fill="oklch(0.72 0.10 75)" stroke="oklch(0.60 0.12 75)" stroke-width="2.5"/>
+  <circle cx="1040" cy="220" r="20" stroke="oklch(0.72 0.10 75)" stroke-opacity="0.4"/>
+  <line x1="1040" y1="220" x2="1040" y2="150" stroke-opacity="0.4" stroke-dasharray="3 6"/>
+  <text x="1040" y="124" font-family="IBM Plex Sans, sans-serif" font-size="19" text-anchor="middle" fill="oklch(0.72 0.10 75)" stroke="none" font-weight="700">Today</text>
+  <text x="1040" y="148" font-family="ui-monospace, 'JetBrains Mono', monospace" font-size="15" text-anchor="middle" fill="oklch(0.72 0.10 75)" stroke="none">2026-11-23 · first coverage</text>
+
+  <!-- Connecting travel arc between GB close and today, labelled with the gap -->
+  <path d="M 420 260 Q 730 340 1040 260" stroke-opacity="0.3" stroke-dasharray="2 8"/>
+  <text x="730" y="372" font-family="Newsreader, serif" font-style="italic" font-size="17" text-anchor="middle" fill="oklch(0.78 0.005 90)" stroke="none">roughly seven months, no fanfare</text>
+
+  <!-- Theme dot -->
+  <circle cx="1168" cy="36" r="5" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>

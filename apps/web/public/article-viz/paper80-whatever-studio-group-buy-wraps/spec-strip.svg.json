@@ -1,0 +1,23 @@
+{
+  "generated_by": "content-curator-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-11-26T00:00:00.000Z",
+  "commit": "1dc0eccf",
+  "kind": "inline-viz",
+  "article_slug": "paper80-whatever-studio-group-buy-wraps",
+  "article_pillar": "news",
+  "section_anchor": "The board underneath the housekeeping note",
+  "brief_summary": "Five-chip fact strip reading layout (80% ANSI/ISO), case material (CNC aluminum), mount (lock-hole gasket), plate (PC or aluminum), and a highlighted signature-feature chip reading 'paper-airplane mid-case fold' in ochre.",
+  "target": "apps/web/public/article-viz/paper80-whatever-studio-group-buy-wraps/spec-strip.svg",
+  "splash_color": { "name": "ochre", "oklch": "oklch(0.72 0.10 75)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "data/group-buys/wuque-studio-paper80-whatever-studio.json — description '80-percent aluminum board with lock-hole gasket mount and a paper-airplane-inspired mid-case fold, supporting ANSI/ISO and PC or aluminum plates'",
+    "article body, 'The board underneath the housekeeping note' section — 'an 80-percent CNC-aluminum case, available in ANSI or ISO, running a lock-hole gasket mount with a choice of PC or aluminum plate'"
+  ],
+  "outputs": ["apps/web/public/article-viz/paper80-whatever-studio-group-buy-wraps/spec-strip.svg"],
+  "warnings": []
+}

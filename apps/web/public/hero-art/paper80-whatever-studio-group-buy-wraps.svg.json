@@ -1,0 +1,22 @@
+{
+  "generated_by": "brander",
+  "engine": "direct-svg",
+  "at": "2026-11-26T14:53:05Z",
+  "commit": "1dc0eccfd841f164d7526821d92058bc0548d691",
+  "kind": "hero-art",
+  "source": "plan/bearings.md § Article hero art — colorful keyboard SVGs",
+  "template": "directive: simple line drawing + single splash of color illustrative of subject",
+  "target": "apps/web/public/hero-art/paper80-whatever-studio-group-buy-wraps.svg",
+  "size": [1200, 750],
+  "article_slug": "paper80-whatever-studio-group-buy-wraps",
+  "article_pillar": "news",
+  "subject": "80% TKL-style keyboard outline with a diagonal paper-airplane mid-case fold filled ochre, mirroring the companion group-buy card art for the same board (group-buy-art/wuque-studio-paper80-whatever-studio.svg) so the two pieces read as one illustrated board; adds a warm-bronze theme dot at the upper-right margin per the hero-art family convention.",
+  "splash_color": { "name": "ochre", "oklch": "oklch(0.72 0.10 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "f79eb6c04b4a9d2e0e3e083f8aeb6bc57586d849",
+  "fonts": [],
+  "outputs": [
+    "apps/web/public/hero-art/paper80-whatever-studio-group-buy-wraps.svg"
+  ],
+  "warnings": []
+}

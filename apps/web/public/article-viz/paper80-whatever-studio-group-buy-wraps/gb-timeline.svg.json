@@ -1,0 +1,24 @@
+{
+  "generated_by": "content-curator-handauthored",
+  "engine": "hand-authored-svg",
+  "at": "2026-11-26T00:00:00.000Z",
+  "commit": "1dc0eccf",
+  "kind": "inline-viz",
+  "article_slug": "paper80-whatever-studio-group-buy-wraps",
+  "article_pillar": "news",
+  "section_anchor": "What actually happened",
+  "brief_summary": "Horizontal timeline running from the Paper80 x Whatever Studio group buy's 2026-03-31 open through its 2026-04-14 close, to 2026-11-23 (this article's publish date), with a dashed arc labelled 'roughly seven months, no fanfare' tying the housekeeping framing to the dates.",
+  "target": "apps/web/public/article-viz/paper80-whatever-studio-group-buy-wraps/gb-timeline.svg",
+  "splash_color": { "name": "ochre", "oklch": "oklch(0.72 0.10 75)" },
+  "accent_color": { "name": "warm-bronze (theme accent)", "oklch": "oklch(0.80 0.135 75)" },
+  "stroke_color": "oklch(0.78 0.005 90)",
+  "tokens_snapshot": "design/tokens.css",
+  "fonts": ["IBM Plex Sans", "Newsreader", "JetBrains Mono"],
+  "data_sources": [
+    "data/group-buys/wuque-studio-paper80-whatever-studio.json — startDate '2026-03-31', endDate '2026-04-14', status 'closed'",
+    "article frontmatter — publishedAt '2026-11-23T14:00:00.000Z'",
+    "article body, 'What actually happened' section — 'Wuque Studio ran the order window globally from March 31 through April 14, 2026'"
+  ],
+  "outputs": ["apps/web/public/article-viz/paper80-whatever-studio-group-buy-wraps/gb-timeline.svg"],
+  "warnings": []
+}

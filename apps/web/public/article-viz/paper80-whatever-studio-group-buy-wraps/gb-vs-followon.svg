@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" preserveAspectRatio="xMidYMid meet" fill="none" stroke="oklch(0.78 0.005 90)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <title>thock inline viz — group buy versus follow-on stock, four-row comparison matrix</title>
+
+  <!-- Two column panels -->
+  <rect x="80" y="70" width="460" height="400" rx="14" stroke-opacity="0.6"/>
+  <rect x="660" y="70" width="460" height="400" rx="14" stroke="oklch(0.72 0.10 75)" stroke-width="2.5"/>
+
+  <!-- Column headers -->
+  <text x="310" y="46" font-family="IBM Plex Sans, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="oklch(0.78 0.005 90)" stroke="none">Group buy · Mar 31–Apr 14</text>
+  <text x="890" y="46" font-family="IBM Plex Sans, sans-serif" font-size="22" font-weight="700" text-anchor="middle" fill="oklch(0.72 0.10 75)" stroke="none">Follow-on stock</text>
+
+  <!-- Row dividers -->
+  <line x1="80" y1="170" x2="540" y2="170" stroke-opacity="0.35"/>
+  <line x1="80" y1="270" x2="540" y2="270" stroke-opacity="0.35"/>
+  <line x1="80" y1="370" x2="540" y2="370" stroke-opacity="0.35"/>
+  <line x1="660" y1="170" x2="1120" y2="170" stroke="oklch(0.72 0.10 75)" stroke-opacity="0.35"/>
+  <line x1="660" y1="270" x2="1120" y2="270" stroke="oklch(0.72 0.10 75)" stroke-opacity="0.35"/>
+  <line x1="660" y1="370" x2="1120" y2="370" stroke="oklch(0.72 0.10 75)" stroke-opacity="0.35"/>
+
+  <!-- Row 1: payment / shipping -->
+  <text x="130" y="128" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="oklch(0.78 0.005 90)" stroke="none">Pays now, board ships later</text>
+  <text x="710" y="128" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="oklch(0.72 0.10 75)" stroke="none" font-weight="600">Units already built, sold from inventory</text>
+
+  <!-- Row 2: quantity -->
+  <text x="130" y="228" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="oklch(0.78 0.005 90)" stroke="none">Quantity set by backer orders</text>
+  <text x="710" y="228" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="oklch(0.72 0.10 75)" stroke="none" font-weight="600">Quantity and price not published</text>
+
+  <!-- Row 3: timing -->
+  <text x="130" y="328" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="oklch(0.78 0.005 90)" stroke="none">Order window open two weeks</text>
+  <text x="710" y="328" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="oklch(0.72 0.10 75)" stroke="none" font-weight="600">No stated restock date</text>
+
+  <!-- Row 4: status -->
+  <text x="130" y="428" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="oklch(0.78 0.005 90)" stroke="none">Status: closed since Apr 14, 2026</text>
+  <text x="710" y="428" font-family="IBM Plex Sans, sans-serif" font-size="17" fill="oklch(0.72 0.10 75)" stroke="none" font-weight="600">Vendor description: "limited" only</text>
+
+  <!-- Row icon markers -->
+  <g>
+    <circle cx="105" cy="118" r="5" fill="none" stroke="oklch(0.78 0.005 90)"/>
+    <circle cx="105" cy="218" r="5" fill="none" stroke="oklch(0.78 0.005 90)"/>
+    <circle cx="105" cy="318" r="5" fill="none" stroke="oklch(0.78 0.005 90)"/>
+    <circle cx="105" cy="418" r="5" fill="none" stroke="oklch(0.78 0.005 90)"/>
+    <circle cx="685" cy="118" r="5" fill="oklch(0.72 0.10 75)" stroke="oklch(0.72 0.10 75)"/>
+    <circle cx="685" cy="218" r="5" fill="oklch(0.72 0.10 75)" stroke="oklch(0.72 0.10 75)"/>
+    <circle cx="685" cy="318" r="5" fill="oklch(0.72 0.10 75)" stroke="oklch(0.72 0.10 75)"/>
+    <circle cx="685" cy="418" r="5" fill="oklch(0.72 0.10 75)" stroke="oklch(0.72 0.10 75)"/>
+  </g>
+
+  <!-- Theme dot -->
+  <circle cx="1168" cy="24" r="5" fill="oklch(0.80 0.135 75)" stroke="oklch(0.80 0.135 75)"/>
+</svg>
