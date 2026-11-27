@@ -32,7 +32,7 @@
 - suggested fix: share one week/year label format (or at least one ordering/separator convention) between `isoWeekKicker` (home) and `TrackerHeader`'s rightRail block, so the same figure reads consistently across both surfaces.
 - source: walk
 
-### [MED] /trends/tracker — the "SLEEPER" summary card still shows a signed negative delta, reading as a second faller
+### [x] [MED] /trends/tracker — the "SLEEPER" summary card still shows a signed negative delta, reading as a second faller — addressed in c9f02e4b
 - pass: 21 (commit 91d546f4)
 - viewport: desktop
 - category: comprehension
@@ -114,7 +114,7 @@
 - suggested fix: add a Group Buys item to the header nav (or, if nav real-estate is a concern, a 5th card on `/tools` and a footer link) so the page has a persistent discovery path independent of the homepage widget.
 - source: walk
 
-### [HIGH] /trends/tracker — "Biggest Faller" summary card can show a smaller-magnitude number than the "Sleeper" card beside it
+### [x] [HIGH] /trends/tracker — "Biggest Faller" summary card can show a smaller-magnitude number than the "Sleeper" card beside it — addressed in c9f02e4b, closes #1101
 - pass: 16 (commit 6b73abed); re-observed pass 19 (commit b056da79), severity bumped MED → HIGH (3 passes unaddressed, current data shows a wider gap than first observed)
 - viewport: desktop
 - category: comprehension
@@ -122,6 +122,7 @@
 - evidence: walk screenshot `url--desktop--trends-tracker.png` (`.nexus/walk/2026-10-31T04-11-47-938Z/`, not committed); `data/trends/2026-W44.json` rows `GMK CYL Red Devils R2` (score 28, down) and `GMK CYL Zombie` (score 40, down). Pass 19: walk screenshot `url--desktop--trends-tracker.png` (`.nexus/walk/2026-11-10T09-41-07-574Z/`, not committed); `data/trends/2026-W46.json` rows `GMK CYL Red Devils R2` (score 18, down, sparkSlope -42) and `CannonKeys` (score 42, down, sparkSlope -10); `apps/web/src/lib/tracker/index.ts` `pickFaller`/`pickSleeper`; `apps/web/src/components/tracker/TrackerSummaryCard.tsx:28-38` (sleeper tone hard-forced to flat).
 - suggested fix: the mismatch is structural (ranking criterion ≠ displayed number, and the sleeper slot's styling actively masks a real decline), not a one-row data bug, so the safe fix is presentational rather than re-deriving the picking logic (which pass 9 deliberately chose for good reason): stop hard-forcing the sleeper's tone to flat when `row.direction` is down/up — use the row's actual direction for tone/glyph — and add a short caption under "This week at a glance" clarifying the cards are picked by this week's movement, not current score level, so a reader scanning left-to-right doesn't read "biggest" as "biggest number shown here."
 - source: walk
+- resolution note: shipped the caption, but kept the sleeper's tone/glyph/spark forced flat rather than switching it to `row.direction` — the pass-21 MED row above found the signed delta itself was the part that undercut the forced-neutral framing ("reads as a second faller"), and reverting the force-flat would have reintroduced exactly what pass 13 set out to avoid. Dropping the delta's sign (`formatSleeperDelta`, `±42%`) resolves both: the number stops reading as a hidden/disguised decline, and the neutral styling stays intentional. Also closes the pass-21 MED row (same commit).
 
 ### [MED] /quiz/switch — no eyebrow kicker or Tools breadcrumb, unlike every sibling tool/pillar page
 - pass: 16 (commit 6b73abed)
@@ -180,17 +181,6 @@
 - #27 [LOW] /tag/* date format — phantom (reader misread May; all dates are medium format)
 
 This pattern is informative for future passes: reader's accessibility-tree text extraction tools systematically miss link/code element content within prose AND can elide adjacent short-text generic elements. Future critique self-assessment should default-verify visual-detail findings against actual rendered HTML (`curl + grep`) before promoting them to Pending.
-
-### [x] [HIGH] /trends/tracker + / — "This week at a glance" row and home Trending rail each render a blank, unlabeled 4th grid slot — addressed in this commit, closes #1052
-- pass: 12 (commit a01a911)
-- viewport: desktop
-- category: visual
-- observation: `/trends/tracker`'s "This week at a glance" row shows two populated stat cards ("Biggest Faller" -28%, "Sleeper" -40%) followed by a plain dark rectangle with no heading, metric, or icon — reads as a broken/missing card, not an intentional empty state. The home page's "Trending — what's moving on the tracker" rail shows the same pattern: KEYCAP / SWITCH / BRAND tiles followed by an identical blank 4th box. Both surfaces share the same grid component, which doesn't hide or placeholder its slot when a 4th category/stat has no data.
-- evidence: walk screenshot `url--desktop--trends-tracker.png` — blank ~600px-wide dark box right of the "Sleeper" card. `url--desktop--home.png` — blank dark box right of the BRAND column in the trending rail. (`.nexus/walk/2026-10-26T18-54-00-170Z/`, not committed — cite the walk.json line for re-verification.)
-- suggested fix: either populate the 4th glance stat (e.g. "Biggest Riser") and 4th trending category, or collapse/hide the grid slot entirely when there's no data instead of rendering an empty card shell.
-- source: walk
-- issue: #1052
-- root cause: `TrackerSummaryGrid.tsx` and `TrendingStrip.tsx` both hardcoded a fixed column-count class (`lg:grid-cols-4`, `xl:grid-cols-6`) independent of how many slots/tiles the snapshot actually produced (1-4 and 1-6 respectively); an unfilled grid track paints the container's bare `bg-border` fill, reading as a broken card. Fix: both components now pick their column classes from a literal lookup keyed by the real item count.
 
 ### [x] [MED] /compare/switch — empty pre-selection state has no preview or suggested pairs, reads unfinished — addressed in this commit, closes #1061
 - pass: 12 (commit a01a911)
