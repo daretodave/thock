@@ -84,7 +84,10 @@ describe('<TrackerSummaryCard>', () => {
     expect(glyph).toHaveAttribute('data-dir', 'flat')
     expect(glyph).toHaveAttribute('aria-label', 'sleeper')
     expect(screen.getByTestId('sparkline')).toHaveAttribute('data-tone', 'flat')
-    // The number itself stays truthful to the row's actual move.
-    expect(screen.getByTestId('tracker-summary-card')).toHaveTextContent('-40%')
+    // The number drops its sign too, so it doesn't undercut the neutral
+    // glyph/tone with a stark directional delta (critique pass 16/19/21).
+    const card = screen.getByTestId('tracker-summary-card')
+    expect(card).toHaveTextContent('±40%')
+    expect(card).not.toHaveTextContent('-40%')
   })
 })

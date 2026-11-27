@@ -3,6 +3,7 @@ import type { TrendRow, TrendSnapshot } from '@thock/data'
 import {
   describeTrackerWeek,
   formatDelta,
+  formatSleeperDelta,
   groupByCategory,
   isoWeeksInYear,
   pickSummarySlots,
@@ -289,6 +290,28 @@ describe('formatDelta', () => {
 
   it('signs from direction, not score, when an up row carries a negative score', () => {
     expect(formatDelta(-24, 'up')).toBe('+24%')
+  })
+})
+
+describe('formatSleeperDelta', () => {
+  it('returns em-dash for null score', () => {
+    expect(formatSleeperDelta(null)).toBe('—')
+  })
+
+  it('returns "flat" for score === 0', () => {
+    expect(formatSleeperDelta(0)).toBe('flat')
+  })
+
+  it('prefixes ± for a negative score, dropping the directional sign', () => {
+    expect(formatSleeperDelta(-40)).toBe('±40%')
+  })
+
+  it('prefixes ± for a positive score', () => {
+    expect(formatSleeperDelta(40)).toBe('±40%')
+  })
+
+  it('rounds fractional scores to the nearest integer', () => {
+    expect(formatSleeperDelta(-34.6)).toBe('±35%')
   })
 })
 

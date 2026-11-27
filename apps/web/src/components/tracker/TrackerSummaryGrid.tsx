@@ -26,20 +26,33 @@ export function TrackerSummaryGrid({
 }: TrackerSummaryGridProps): ReactElement | null {
   const slots = pickSummarySlots(snapshot.rows)
   if (slots.length === 0) return null
+  const hasSleeper = slots.some((s) => s.kind === 'sleeper')
 
   return (
-    <div
-      data-testid="tracker-summary-grid"
-      className={`grid grid-cols-1 gap-px border border-border bg-border ${COLS_BY_SLOT_COUNT[slots.length] ?? COLS_BY_SLOT_COUNT[4]}`}
-    >
-      {slots.map((slot) => (
-        <TrackerSummaryCard
-          key={slot.kind}
-          kind={slot.kind}
-          kicker={slot.kicker}
-          row={slot.row}
-        />
-      ))}
+    <div>
+      <div
+        data-testid="tracker-summary-grid"
+        className={`grid grid-cols-1 gap-px border border-border bg-border ${COLS_BY_SLOT_COUNT[slots.length] ?? COLS_BY_SLOT_COUNT[4]}`}
+      >
+        {slots.map((slot) => (
+          <TrackerSummaryCard
+            key={slot.kind}
+            kind={slot.kind}
+            kicker={slot.kicker}
+            row={slot.row}
+          />
+        ))}
+      </div>
+      {hasSleeper ? (
+        <p
+          data-testid="tracker-summary-criteria-note"
+          className="mt-3 max-w-60ch font-mono text-micro text-text-2"
+        >
+          Riser, faller, and breakout are picked by this week&rsquo;s steepest
+          move; sleeper, by how quiet its current level is — so its number
+          can land bigger than a faller&rsquo;s without it having moved more.
+        </p>
+      ) : null}
     </div>
   )
 }

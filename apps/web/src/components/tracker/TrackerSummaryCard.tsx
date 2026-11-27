@@ -1,7 +1,7 @@
 import type { ReactElement } from 'react'
 import type { TrendRow } from '@thock/data'
 import { Sparkline, TrendDirectionGlyph } from '@thock/ui'
-import { formatDelta, type SummarySlotKind } from '@/lib/tracker'
+import { formatDelta, formatSleeperDelta, type SummarySlotKind } from '@/lib/tracker'
 
 export type TrackerSummaryCardProps = {
   kind: SummarySlotKind
@@ -25,11 +25,13 @@ export function TrackerSummaryCard({
   kicker,
   row,
 }: TrackerSummaryCardProps): ReactElement {
-  const delta = formatDelta(row.score, row.direction)
   // Sleeper is picked by magnitude (smallest abs score), not direction —
   // reusing the row's own up/down tone made it read as a second Riser or
   // Faller card (critique pass 13). Its glyph/color/spark stay neutral
-  // regardless of which way the row actually moved this week.
+  // regardless of which way the row actually moved this week, and its
+  // delta number drops the sign too (critique pass 16/19/21) so a
+  // stark signed "-40%" doesn't undercut that neutral framing.
+  const delta = kind === 'sleeper' ? formatSleeperDelta(row.score) : formatDelta(row.score, row.direction)
   const tone = kind === 'sleeper' ? 'flat' : row.direction
   const dir = kind === 'sleeper' ? 'flat' : row.direction
   const glyphLabel = kind === 'sleeper' ? 'sleeper' : `${row.direction} trend`

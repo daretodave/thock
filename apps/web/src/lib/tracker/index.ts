@@ -203,6 +203,25 @@ export function formatDelta(
   return `${sign}${Math.round(Math.abs(score))}%`
 }
 
+/**
+ * Sleeper-slot variant of `formatDelta`. The sleeper is picked by
+ * smallest current-level magnitude (`abs(score)`, see `pickSleeper`),
+ * not by direction, while `TrackerSummaryCard` deliberately forces
+ * its glyph/tone/spark to neutral so it doesn't read as a second
+ * Riser or Faller card (critique pass 13). A signed delta undercut
+ * that neutral framing — a card styled gray-and-flat still showed a
+ * stark "-40%", reading as a hidden second decline (critique pass 16,
+ * re-observed 19, bumped HIGH) or as a disguised faller beside the
+ * real one (pass 21). `±` keeps the number truthful to the row's real
+ * magnitude without implying a direction the card's styling doesn't
+ * show.
+ */
+export function formatSleeperDelta(score: number | null): string {
+  if (score === null) return '—'
+  if (score === 0) return 'flat'
+  return `±${Math.round(Math.abs(score))}%`
+}
+
 /** Categories present in a snapshot, in canonical order. */
 export function presentCategories(snapshot: TrendSnapshot): TrendCategory[] {
   const grouped = groupByCategory(snapshot.rows)

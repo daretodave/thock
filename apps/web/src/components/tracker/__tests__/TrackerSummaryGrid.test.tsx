@@ -60,6 +60,23 @@ describe('<TrackerSummaryGrid>', () => {
     expect(screen.getByTestId('tracker-summary-grid')).toHaveTextContent('HMX Cloud')
   })
 
+  it('shows the selection-criteria note when a sleeper slot is present (critique pass 16/19)', () => {
+    const rows: TrendRow[] = [
+      row({ name: 'Faller', direction: 'down', score: -18, spark: [10, 5, 1] }),
+      row({ name: 'Sleeper', direction: 'down', score: -42, spark: [10, 8, 6] }),
+    ]
+    render(<TrackerSummaryGrid snapshot={snapshot(rows)} />)
+    expect(screen.getByTestId('tracker-summary-criteria-note')).toHaveTextContent(
+      /picked by this week.s steepest/i,
+    )
+  })
+
+  it('omits the selection-criteria note when no sleeper slot is filled', () => {
+    const rows: TrendRow[] = [row({ name: 'Riser', direction: 'up', score: 30 })]
+    render(<TrackerSummaryGrid snapshot={snapshot(rows)} />)
+    expect(screen.queryByTestId('tracker-summary-criteria-note')).not.toBeInTheDocument()
+  })
+
   it('tracks lg:grid-cols to the real slot count, not a fixed 4 (critique #1052)', () => {
     // Regression guard: a week with only a faller + sleeper (2 slots)
     // used to render a hardcoded lg:grid-cols-4 track, leaving an
