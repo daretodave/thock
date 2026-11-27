@@ -1,26 +1,35 @@
 # Critique log
 
-> Last pass: 2026-11-25T14:30:33Z at commit 76b1b65e
-> Pass count: 22
+> Last pass: 2026-11-27T17:16:18Z at commit 32425c04
+> Pass count: 23
+> Pass 22 last pass: 2026-11-25T14:30:33Z at commit 76b1b65e
 > Pass 21 last pass: 2026-11-22T07:49:30Z at commit 91d546f4
 > Pass 20 last pass: 2026-11-20T08:27:23Z at commit ed0de5df
 > Pass 19 last pass: 2026-11-10T09:45:00Z at commit b056da79
 > Pass 18 last pass: 2026-11-06T00:16:44Z at commit 113926e9
 > Pass 17 last pass: 2026-11-05T16:09:48Z at commit 5ec23cdd
-> Pass 16 last pass: 2026-10-31T04:11:00Z at commit 6b73abed
 
 > External-observer feedback for thock. Populated by `/critique`,
 > drained by `/iterate`. See `skills/critique.md` for the contract.
 
 ## Pending
 
-### [LOW] / and /news — an orphaned orange dot floats in the hero card's grid gap with no apparent purpose
-- pass: 22 (commit 76b1b65e)
+### [MED] / and /news and /group-buys — an orphaned dot artifact recurs across unrelated card illustrations with no apparent purpose
+- pass: 23 (commit 32425c04); re-observed pass 23 (commit 32425c04), severity bumped LOW → MED (now confirmed on a third, unrelated page — a shared-component defect, not an isolated hero quirk)
 - viewport: desktop and mobile
 - category: visual
-- observation: the hero-variant `ArticleCard` (`apps/web/src/components/home/ArticleCard.tsx:102-140`) lays out its image and text columns as `lg:grid-cols-[1.4fr_1fr] lg:items-center lg:gap-8`, but no JSX in that component renders a marker in the gap column. A small solid orange dot nonetheless appears vertically centered in that gap on both `/` (next to the "DEEP DIVES" eyebrow) and `/news` (next to the "NEWS" eyebrow for the Gateron Magnetic Jade article) — same relative position on both pages despite otherwise-unrelated hero illustrations (hand-drawn stem-runway diagram vs. magnet-sensor cross-section), so it isn't image content. Reads as leftover/unstyled markup rather than an intentional design element.
-- evidence: walk screenshots `url--desktop--home.png` (dot at ~(693,186)), `url--desktop--news.png` (~(691,525)), `url--mobile--home.png` (~(352,145)), `url--mobile--news.png` (~(348,525)) (`.nexus/walk/2026-11-25T14-25-35-683Z/`, not committed — cite this line for re-verification).
-- suggested fix: inspect the rendered DOM for the hero card's grid gap (likely a stray decorative element shared by both pages, e.g. a leftover timeline/divider marker) and either give it a clear purpose or remove it.
+- observation: the hero-variant `ArticleCard` (`apps/web/src/components/home/ArticleCard.tsx:102-140`) lays out its image and text columns as `lg:grid-cols-[1.4fr_1fr] lg:items-center lg:gap-8`, but no JSX in that component renders a marker in the gap column. A small solid orange dot nonetheless appears vertically centered in that gap on both `/` (next to the "DEEP DIVES" eyebrow) and `/news` (next to the "NEWS" eyebrow for the Gateron Magnetic Jade article) — same relative position on both pages despite otherwise-unrelated hero illustrations (hand-drawn stem-runway diagram vs. magnet-sensor cross-section), so it isn't image content. Pass 23's mobile walk shows the same motif a third time, on the "GMK Just Beachy" group-buy card: a small orange dot top-right of the card art plus a red/pink dot bottom-center, both floating outside the keycap-grid illustration with no legend. Reads as leftover/unstyled markup shared by multiple card components, not an intentional design element confined to one page.
+- evidence: walk screenshots `url--desktop--home.png` (dot at ~(693,186)), `url--desktop--news.png` (~(691,525)), `url--mobile--home.png` (~(352,145)), `url--mobile--news.png` (~(348,525)) (`.nexus/walk/2026-11-25T14-25-35-683Z/`, not committed); `url--mobile--group-buys.png` ("Just closed" card art, orange dot ~(350,570), red/pink dot ~(252,747)) (`.nexus/walk/2026-11-27T17-13-09-076Z/`, not committed — cite this line for re-verification).
+- suggested fix: inspect the rendered DOM for the recurring dot markup (likely a shared decorative element used by both the hero `ArticleCard` and the group-buy card component, e.g. a leftover timeline/status marker) and either give it a clear purpose or remove it from all callers.
+- source: walk
+
+### [LOW] /trends/tracker — the Sleeper methodology caption is one dense, self-referential sentence
+- pass: 23 (commit 32425c04)
+- viewport: desktop
+- category: comprehension
+- observation: `TrackerSummaryGrid`'s criteria note (`apps/web/src/components/tracker/TrackerSummaryGrid.tsx:46-55`) explains four summary-card metrics in a single run-on sentence: "Riser, faller, and breakout are picked by this week's steepest move; sleeper, by how quiet its current level is — so its number can land bigger than a faller's without it having moved more." The clause defining Sleeper is immediately followed by a caveat about why its number can look misleading, both crammed into one sentence — harder to parse on first read than the page's otherwise restrained, short-sentence editorial voice.
+- evidence: `url--desktop--trends-tracker.png` (the `data-testid="tracker-summary-criteria-note"` caption under the summary card row) (`.nexus/walk/2026-11-27T17-13-09-076Z/`, not committed — cite this line for re-verification); source at `apps/web/src/components/tracker/TrackerSummaryGrid.tsx:51-53`.
+- suggested fix: split into two sentences — one defining how Sleeper is picked, a second stating the "can look bigger than a faller's" caveat separately.
 - source: walk
 
 ### [LOW] / vs /trends/tracker — the current week/year label is formatted two different ways across pages citing the same figure
