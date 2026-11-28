@@ -100,3 +100,4 @@
 - 2026-11-25 · 12.2 · Unit tests + live-corpus gate for heading-semantics-coverage-check.mjs · 7a8905d4..7a8905d4
 - 2026-11-25 · 12.3 · heading-semantics-coverage-check now runs via march's survey chain and digest's breadth check · d06a3ce1..d06a3ce1
 - 2026-11-25 · 12 · spec complete: Heading-semantics coverage check · absorbed into plan/bearings.md · deleted in this commit
+- 2026-11-28 · 13.1 · Scanner flags ItemList JSON-LD vs rendered-list order/set drift · 3ef79fd4..3ef79fd4

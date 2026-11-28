@@ -123,17 +123,6 @@ rendered-DOM parity" class from every currently-shipped survey.
 
 ## Acceptance
 
-- **A1** `scripts/itemlist-jsonld-parity-check.mjs` exists,
-  mirrors the `og-coverage-check.mjs` shape (gate / `--write` /
-  `--json`), with a curated mapping covering all 19 grep-matched
-  `ItemList` route files.
-- **A2** Gate mode flags a fixture route whose JSON-LD
-  `itemListElement` order diverges from its rendered list order
-  (same URL set), and separately flags a fixture route whose
-  JSON-LD URL set is narrower or wider than what's rendered; a
-  fixture route where both match passes clean.
-- **A3** `--write` appends a `seo`-category `plan/AUDIT.md` row
-  per hit, deduplicated against existing pending rows.
 - **A4** `scripts/__tests__/itemlist-jsonld-parity-check.test.mjs`
   exercises A2's fixture cases, run via `pnpm test:scripts`.
 - **A5** The gate invocation is wired into `pnpm verify` as a new
@@ -145,9 +134,6 @@ rendered-DOM parity" class from every currently-shipped survey.
   precedent fixes plus the confirmed-intentional `/group-buys`
   scope) exits 0 — no regression on the already-resolved
   surfaces.
-- **A7** No schema, component, or URL-contract change; no change
-  to any route's rendered markup or JSON-LD content beyond what a
-  follow-up fix tick addresses.
 
 ## Open questions
 
@@ -155,43 +141,9 @@ None.
 
 ## Chunks
 
-Measure: 7 open · 0 closed · next A8
+Measure: 3 open · 4 closed · next A8
 
-- [ ] **13.1** `scripts/itemlist-jsonld-parity-check.mjs` scanner (gate / `--write` / `--json`) · M · closes A1, A2, A3, A7 · needs —
-  - New script mirroring `og-coverage-check.mjs`'s shape (gate /
-    `--write` / `--json` modes, `plan/AUDIT.md` row filing with
-    dedup, same CLI/exit-code contract).
-  - Curated per-route mapping covering all 19 grep-matched route
-    files named in the Why section (`archive`, `compare/board`,
-    `compare/switch`, `deep-dives`, `group-buys`, `group-buys/past`,
-    `guides`, `ideas`, `news`, `newsletter`, home `page.tsx`,
-    `part/[kind]`, `parts`, `sources`, `tag/[slug]`, `tags`,
-    `tools`, `trends`, `vendors`): for each, the file path, the
-    JSON-LD `ItemList` literal's source location, and the rendered
-    list section's component/boundary — seeded from the 5 already-
-    confirmed instances (home's `byPillarPicks`, `/tags`'
-    `groupTagsByCategory`, `/ideas`'
-    buildPick/lead/archive triage, `/sources`'
-    `getSortedCitedRows()`, `/group-buys`' narrower "— active"
-    scope marked intentional) and extended by hand for the
-    remaining 14 unaudited routes.
-  - Static extraction (regex/string scan over each route's source,
-    mirroring `truncation-call-site-check.mjs`'s receiver-name
-    heuristic — no full render): pulls (a) the JSON-LD
-    `itemListElement[].url` array in declared order, and (b) the
-    array variable actually iterated by the rendered list section.
-  - Flags two shapes as `seo`-category findings: an **order
-    mismatch** (same URL set, different sequence) and a **set
-    difference** (JSON-LD narrower or wider than rendered).
-  - Gate mode (no args): exit 1 printing every flagged route (file
-    + mismatch shape) if any hit, exit 0 otherwise.
-  - `--write`: append one `seo` `plan/AUDIT.md` row per hit,
-    deduplicated against existing pending rows, same contract as
-    `og-coverage-check.mjs --write`.
-  - `--json`: `{ flagged: [...] }`.
-  - No change to any route's rendered markup or JSON-LD content —
-    detection only (A7).
-- [ ] **13.2** Unit tests + live-corpus regression gate · S · closes A4, A6 · partial A5 · needs 13.1
+- [ ] **13.2** Unit tests + live-corpus regression gate · S · closes A4, A6 · partial A5 · needs —
   - `scripts/__tests__/itemlist-jsonld-parity-check.test.mjs`
     (mirroring `scripts/__tests__/heading-semantics-coverage-check.test.mjs`):
     a fixture route whose JSON-LD array and rendered array match
@@ -209,7 +161,7 @@ Measure: 7 open · 0 closed · next A8
     verify`" clause with no new top-level script line — the same
     convention `truncation-call-site-check.mjs` relies on.
   - Runs via the existing `pnpm test:scripts` leg.
-- [ ] **13.3** Wire `--write` into the survey chain and nightly digest · S · closes A5 · needs 13.1, 13.2
+- [ ] **13.3** Wire `--write` into the survey chain and nightly digest · S · closes A5 · needs 13.2
   - `skills/march.lanes.md`'s `empty-queue-refill-post-phase-30`
     survey chain: add `node scripts/itemlist-jsonld-parity-check.mjs
     --write` alongside the other mechanical surveys, same

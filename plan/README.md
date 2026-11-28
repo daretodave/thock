@@ -23,7 +23,7 @@ condition> · max_age: 14d`, an optional `· fallback: release`):
 | # | Initiative | Spec | Status | Progress |
 |---|---|---|---|---|
 | 11 | Cloud prompt dispatch-summary lane gap | [11-march-yml-dispatch-summary-lane-gap.md](11-march-yml-dispatch-summary-lane-gap.md) |  | 1 left |
-| 13 | ItemList JSON-LD parity check | [13-itemlist-jsonld-parity-check.md](13-itemlist-jsonld-parity-check.md) |  | 3 left |
+| 13 | ItemList JSON-LD parity check | [13-itemlist-jsonld-parity-check.md](13-itemlist-jsonld-parity-check.md) |  | 2 left |
 | 14 | Read-time visible-text regression guard | [14-readtime-visible-text-regression-guard.md](14-readtime-visible-text-regression-guard.md) |  | 9 left |
 
 ## Layout
