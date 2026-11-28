@@ -831,6 +831,25 @@ time you encounter a recurring class of design ambiguity.)
   `--write`, deduped by `file:line`. Runs via `--write` in
   `skills/march.lanes.md`'s survey chain and `skills/digest.md`'s
   nightly breadth check alongside their siblings.
+- **ItemList JSON-LD parity check (spec 13, absorbed
+  2026-11-28):** `scripts/itemlist-jsonld-parity-check.mjs`
+  catches the defect shape behind four independent reactive
+  fixes (home, `/tags`, `/ideas`, `/sources`): a route's
+  `ItemList` JSON-LD computed from a separately-derived
+  query/sort/filter instead of reusing the exact array already
+  used to render the visible list, so the JSON-LD's
+  `itemListElement[].url` order or set diverges from the
+  rendered anchor hrefs. Uses a curated per-route mapping
+  (route file → JSON-LD literal location → rendered list
+  section), mirroring `og-coverage-check.mjs`'s own
+  route-enumeration tradeoff rather than a full render-and-diff.
+  Runs as a per-commit `pnpm verify` leg (`pnpm test:scripts`'s
+  live-corpus assertion) since a new or edited `ItemList` route
+  can ship with the defect on day one. Files `seo` category
+  `plan/AUDIT.md` rows (score 4.6) via `--write`, deduped
+  against existing pending rows. Runs via `--write` in
+  `skills/march.lanes.md`'s survey chain and `skills/digest.md`'s
+  nightly breadth check alongside their siblings.
 
 ## Hard rules
 

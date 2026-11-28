@@ -102,3 +102,5 @@
 - 2026-11-25 · 12 · spec complete: Heading-semantics coverage check · absorbed into plan/bearings.md · deleted in this commit
 - 2026-11-28 · 13.1 · Scanner flags ItemList JSON-LD vs rendered-list order/set drift · 3ef79fd4..3ef79fd4
 - 2026-11-28 · 13.2 · Fixture + live-corpus tests gate itemlist-jsonld-parity-check.mjs · 01d94239..01d94239
+- 2026-11-28 · 13.3 · Survey chain and nightly digest now run itemlist-jsonld-parity-check --write · d72e6423..d72e6423
+- 2026-11-28 · 13 · spec complete: ItemList JSON-LD parity check · absorbed into plan/bearings.md · deleted in this commit
