@@ -123,17 +123,11 @@ rendered-DOM parity" class from every currently-shipped survey.
 
 ## Acceptance
 
-- **A4** `scripts/__tests__/itemlist-jsonld-parity-check.test.mjs`
-  exercises A2's fixture cases, run via `pnpm test:scripts`.
 - **A5** The gate invocation is wired into `pnpm verify` as a new
   script-check leg, and the `--write` invocation is added to
   `skills/march.lanes.md`'s survey chain and `skills/digest.md`'s
   nightly breadth-check list, same best-effort / non-blocking
   contract as their sibling surveys.
-- **A6** Running the gate against the current corpus (post the 4
-  precedent fixes plus the confirmed-intentional `/group-buys`
-  scope) exits 0 — no regression on the already-resolved
-  surfaces.
 
 ## Open questions
 
@@ -141,27 +135,9 @@ None.
 
 ## Chunks
 
-Measure: 3 open · 4 closed · next A8
+Measure: 1 open · 6 closed · next A8
 
-- [ ] **13.2** Unit tests + live-corpus regression gate · S · closes A4, A6 · partial A5 · needs —
-  - `scripts/__tests__/itemlist-jsonld-parity-check.test.mjs`
-    (mirroring `scripts/__tests__/heading-semantics-coverage-check.test.mjs`):
-    a fixture route whose JSON-LD array and rendered array match
-    exactly (clean), a fixture route whose JSON-LD array has the
-    same URLs in a different order than rendered (order-mismatch
-    flag), and a fixture route whose JSON-LD array omits a URL the
-    rendered array includes, or includes one it doesn't (set-
-    difference flag).
-  - A further test with no fixture: runs gate mode against the
-    real `apps/web/src/app` tree and asserts exit 0 today (A6) —
-    covers the 4 already-fixed instances plus the confirmed-
-    intentional `/group-buys` scope, and makes any future
-    regression on the live corpus fail `test:scripts`, already a
-    hard `pnpm verify` leg, satisfying A5's "wired into `pnpm
-    verify`" clause with no new top-level script line — the same
-    convention `truncation-call-site-check.mjs` relies on.
-  - Runs via the existing `pnpm test:scripts` leg.
-- [ ] **13.3** Wire `--write` into the survey chain and nightly digest · S · closes A5 · needs 13.2
+- [ ] **13.3** Wire `--write` into the survey chain and nightly digest · S · closes A5 · needs —
   - `skills/march.lanes.md`'s `empty-queue-refill-post-phase-30`
     survey chain: add `node scripts/itemlist-jsonld-parity-check.mjs
     --write` alongside the other mechanical surveys, same
