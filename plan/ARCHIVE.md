@@ -104,3 +104,4 @@
 - 2026-11-28 · 13.2 · Fixture + live-corpus tests gate itemlist-jsonld-parity-check.mjs · 01d94239..01d94239
 - 2026-11-28 · 13.3 · Survey chain and nightly digest now run itemlist-jsonld-parity-check --write · d72e6423..d72e6423
 - 2026-11-28 · 13 · spec complete: ItemList JSON-LD parity check · absorbed into plan/bearings.md · deleted in this commit
+- 2026-11-28 · 14.1 · New scanner flags readTime visible-text channels drifting from mdxComponents/readTime.ts · 787b66d6..787b66d6

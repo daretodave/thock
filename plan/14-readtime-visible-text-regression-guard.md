@@ -170,21 +170,6 @@ mapping):
 
 ## Acceptance
 
-- **A1** `scripts/readtime-attribute-coverage-check.mjs` exists,
-  mirrors the `og-coverage-check.mjs` shape (gate / `--write` /
-  `--json`), with a curated allowlist covering all 7 current
-  `mdxComponents` entries' visible-text channels (or explicit
-  "children-only, nothing to allowlist" entries for the rest).
-- **A2** Gate mode flags a fixture `mdxComponents` key not present
-  in the curated allowlist.
-- **A3** Gate mode flags a fixture component whose prop
-  type/interface declares a string prop not recorded in the
-  allowlist for that key.
-- **A4** Gate mode flags a fixture `readTime.ts`-shaped attribute
-  regex that's missing one of the allowlist's recorded attribute
-  names.
-- **A5** `--write` appends a `content`-category `plan/AUDIT.md` row
-  per hit, deduplicated against existing pending rows.
 - **A6** `scripts/__tests__/readtime-attribute-coverage-check.test.mjs`
   exercises A2–A4's fixture cases, run via `pnpm test:scripts`.
 - **A7** The gate invocation is wired into `pnpm verify` as a new
@@ -193,8 +178,6 @@ mapping):
   `packages/content/src/mdx/components.tsx` +
   `packages/content/src/util/readTime.ts`) exits 0 — no regression
   on the already-fixed seven components.
-- **A9** No schema, component, or URL-contract change; no change to
-  `readTime.ts`'s public signature or any `mdxComponents` entry.
 
 ## Open questions
 
@@ -202,46 +185,9 @@ None.
 
 ## Chunks
 
-Measure: 9 open · 0 closed · next A10
+Measure: 3 open · 6 closed · next A10
 
-- [ ] **14.1** `scripts/readtime-attribute-coverage-check.mjs` scanner (gate / `--write` / `--json`) · M · closes A1, A2, A3, A4, A5, A9 · needs —
-  - New script mirroring `og-coverage-check.mjs`'s shape (gate /
-    `--write` / `--json` modes, `plan/AUDIT.md` row filing with
-    dedup, same CLI/exit-code contract).
-  - A curated allowlist, one entry per `mdxComponents` key
-    (`packages/content/src/mdx/components.tsx`): `PullQuote`
-    (`attribution`, attribute channel), `Callout` (`title`,
-    attribute channel), `InlineViz` (`caption`, attribute
-    channel), `KeyboardImage` (`caption`, `alt`, attribute
-    channel), `PartReference` (flagged `extraVisibleText`-resolved,
-    not an attribute), `Caption`/`Source`/`Mono`/`h2`/`h3`/`a`/the
-    six GFM table-cell components (`table`, `thead`, `tbody`,
-    `tr`, `th`, `td`) recorded as children-only — nothing to
-    allowlist.
-  - Parse `mdxComponents`' object-literal key list out of
-    `components.tsx` with a small regex/string scan (mirroring
-    `truncation-call-site-check.mjs`'s receiver-name heuristic —
-    no full TSX parser).
-  - For each live key: flag a key missing from the curated
-    allowlist entirely (an unreviewed component joined the map);
-    for a key already in the allowlist with an attribute-channel
-    or `extraVisibleText`-channel prop, read that component's own
-    prop type/interface in `packages/content/src/mdx/<Name>.tsx`
-    and flag any string-typed prop not already recorded in the
-    allowlist's set for that component.
-  - Read `readTime.ts`'s attribute regex
-    (`/\b(?:caption|title|attribution)="([^"]*)"/g`) and flag a
-    mismatch if the allowlist's attribute-channel prop names
-    aren't a subset of that regex's alternation.
-  - Gate mode (no args): exit 1 printing every flagged
-    key/prop/mismatch with a one-line fix hint, exit 0 otherwise.
-  - `--write`: append one `content` `plan/AUDIT.md` row per hit,
-    deduplicated against existing pending rows, same contract as
-    `og-coverage-check.mjs --write`.
-  - `--json`: `{ flagged: [...] }`.
-  - No change to `readTime.ts`, any `mdxComponents` entry, or any
-    other shipped file — detection only (A9).
-- [ ] **14.2** Unit tests + live-corpus regression gate · S · closes A6, A8 · needs 14.1
+- [ ] **14.2** Unit tests + live-corpus regression gate · S · closes A6, A8 · needs —
   - `scripts/__tests__/readtime-attribute-coverage-check.test.mjs`
     (mirroring `scripts/__tests__/heading-semantics-coverage-check.test.mjs`):
     a fixture `mdxComponents`-shaped map + matching allowlist with
@@ -258,7 +204,7 @@ Measure: 9 open · 0 closed · next A10
     confirmed clean by pass 322's audit, and makes any future
     regression fail `test:scripts`.
   - Runs via the existing `pnpm test:scripts` leg.
-- [ ] **14.3** Wire the gate into `pnpm verify` · S · closes A7 · needs 14.1, 14.2
+- [ ] **14.3** Wire the gate into `pnpm verify` · S · closes A7 · needs 14.2
   - Add the gate invocation (`node
     scripts/readtime-attribute-coverage-check.mjs`) as a new
     script-check leg in `pnpm verify`'s chain, per-commit (not
