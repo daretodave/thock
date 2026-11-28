@@ -455,6 +455,20 @@ whose title/name prop renders with no heading ancestor — a screen-reader
 user navigating by heading landmark finds fewer headings than the page
 visually implies. Deduplicates against existing AUDIT rows. If it exits
 non-zero, log and continue — the check is best-effort.
+
+Then run the ItemList JSON-LD parity check (spec 13, chunk 13.3):
+
+```bash
+node scripts/itemlist-jsonld-parity-check.mjs --write
+```
+
+This files `seo` AUDIT rows (score 4.6) for routes whose `ItemList`
+JSON-LD `itemListElement` URL order or set diverges from the array
+actually iterated by the rendered list section — the same "JSON-LD
+computed separately from what's rendered" defect class fixed four
+independent times per plan/13-itemlist-jsonld-parity-check.md.
+Deduplicates against existing AUDIT rows. If it exits non-zero, log
+and continue — the check is best-effort.
 Then fall through to Step 3c (expand).
 
 ## lane: expand-due-notes

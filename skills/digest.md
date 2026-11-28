@@ -91,6 +91,7 @@ its own cadence.
    node scripts/stale-updated-at-check.mjs --write
    node scripts/truncation-call-site-check.mjs --write
    node scripts/heading-semantics-coverage-check.mjs --write
+   node scripts/itemlist-jsonld-parity-check.mjs --write
    ```
 
    Failures become HIGH `plan/AUDIT.md` rows — the digest
@@ -117,7 +118,12 @@ its own cadence.
    title rendered with no heading ancestor found) becomes an
    `a11y` `plan/AUDIT.md` row the same way, filed by the script
    itself (same `--write` contract as its per-commit path); it
-   never blocks the digest commit.
+   never blocks the digest commit. The ItemList JSON-LD parity
+   check's non-zero exit (a route's JSON-LD order or URL-set
+   diverging from its rendered list found) becomes a `seo`
+   `plan/AUDIT.md` row the same way, filed by the script itself
+   (same `--write` contract as its per-commit path); it never
+   blocks the digest commit.
 4. **Write `plan/DIGEST.md`** — overwrite entirely; it is a
    snapshot, not a ledger. Sections, in order: `Headline`,
    `While you were out` (pulse table: tick, verb, outcome —
