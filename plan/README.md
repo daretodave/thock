@@ -17,8 +17,6 @@ line goes; each line is a lock that times out:
 condition> · max_age: 14d`, an optional `· fallback: release`):
 
 - **11.1** · blocked: cloud's `ACTIONS_PAT` push to `.github/workflows/march.yml` was rejected "without `workflows` permission" on 2026-11-20, re-falsifying the spec's premise that the token already carries `workflow` scope (#1092) · since: 2026-11-21 · until: a repo admin confirms the PAT's `workflow` scope is fixed · max_age: 14d
-- 13 · auto-promoted, veto until 2026-11-27 (#1097) · max_age: 1d · fallback: release
-- 14 · auto-promoted, veto until 2026-11-27 (#1099) · max_age: 1d · fallback: release
 
 ## Specs
 
