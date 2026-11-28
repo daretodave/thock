@@ -1,12 +1,12 @@
 # Critique log
 
-> Last pass: 2026-11-27T17:16:18Z at commit 32425c04
-> Pass count: 23
+> Last pass: 2026-11-28T09:49:41Z at commit 49fc6fae
+> Pass count: 24
+> Pass 23 last pass: 2026-11-27T17:16:18Z at commit 32425c04
 > Pass 22 last pass: 2026-11-25T14:30:33Z at commit 76b1b65e
 > Pass 21 last pass: 2026-11-22T07:49:30Z at commit 91d546f4
 > Pass 20 last pass: 2026-11-20T08:27:23Z at commit ed0de5df
 > Pass 19 last pass: 2026-11-10T09:45:00Z at commit b056da79
-> Pass 18 last pass: 2026-11-06T00:16:44Z at commit 113926e9
 > Pass 17 last pass: 2026-11-05T16:09:48Z at commit 5ec23cdd
 
 > External-observer feedback for thock. Populated by `/critique`,
